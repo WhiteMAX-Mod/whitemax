@@ -122,9 +122,9 @@
     <string name="call_admins_settings_title">Настройки звонка</string>
     <string name="call_admins_settings_waiting_room">Зал ожидания</string>
     <string name="call_admins_settings_waiting_room_desc">Подключение только после вашего разрешения</string>
-    <string name="call_ask_permission_audio_video_denied_description">Выберите WhiteMAX в настройках и включите доступ к камере и микрофону</string>
+    <string name="call_ask_permission_audio_video_denied_description">Выберите MAX в настройках и включите доступ к камере и микрофону</string>
     <string name="call_ask_permission_audio_video_denied_title">Разрешите доступ к камере и микрофону в настройках</string>
-    <string name="call_ask_permission_denied_description">Выберите WhiteMax в настройках и включите доступ к микрофону</string>
+    <string name="call_ask_permission_denied_description">Выберите Max в настройках и включите доступ к микрофону</string>
     <string name="call_ask_permission_denied_title">Разрешите доступ к микрофону в настройках</string>
     <string name="call_ask_permission_description">Вы сможете звонить и записывать аудиосообщения</string>
     <string name="call_cancel">Закрыть</string>
@@ -198,17 +198,17 @@
 с аудио"</string>
     <string name="call_incoming_apply_video_call_description">"Ответить
 с видео"</string>
-    <string name="call_incoming_audio_call">Входящий аудиозвонок WhiteMAX</string>
+    <string name="call_incoming_audio_call">Входящий аудиозвонок MAX</string>
     <string name="call_incoming_call_video_disable">Выключить камеру</string>
     <string name="call_incoming_call_video_enable">Включить камеру</string>
     <string name="call_incoming_cancel_call_description">Отклонить</string>
     <string name="call_incoming_decline_accessibility">Отклонить вызов</string>
     <string name="call_incoming_open_chat_accessibility">Открыть чат</string>
-    <string name="call_incoming_video_call">Входящий видеозвонок WhiteMAX</string>
+    <string name="call_incoming_video_call">Входящий видеозвонок MAX</string>
     <string name="call_item_join_by_link_preview_copy">"Скопировать 
 ссылку"</string>
     <string name="call_item_join_by_link_preview_send">"Отправить 
-в WhiteMAX"</string>
+в MAX"</string>
     <string name="call_item_join_by_link_preview_share">"Поделиться
 ссылкой"</string>
     <string name="call_item_join_by_link_preview_title">Пригласите других участников</string>
@@ -240,7 +240,7 @@
     <string name="call_notification_incoming_call">Входящий аудиозвонок</string>
     <string name="call_notification_incoming_text">Incoming call</string>
     <string name="call_notification_incoming_video_call">Входящий видеозвонок</string>
-    <string name="call_notification_name_temp">Звонок WhiteMax</string>
+    <string name="call_notification_name_temp">Звонок Max</string>
     <string name="call_notification_ongoing_text">Ongoing call</string>
     <string name="call_notification_screening_text">Screening an incoming call</string>
     <string name="call_opponent_failed">Нет сети</string>
@@ -653,8 +653,8 @@
     <string name="fab_transformation_sheet_behavior">com.google.android.material.transformation.FabTransformationSheetBehavior</string>
     <string name="faq_title">Помощь</string>
     <string name="favorite_chats_limit_exceeded">Добавить в избранное можно не более %d чатов и каналов</string>
-    <string name="feedback_subject">WhiteMax Android feedback</string>
-    <string name="feedback_subject_auth" formatted="false">WhiteMax Android feedback from %s (#%s)</string>
+    <string name="feedback_subject">Max Android feedback</string>
+    <string name="feedback_subject_auth" formatted="false">Max Android feedback from %s (#%s)</string>
     <string name="feedback_user_info" formatted="false">"user: %s (#%s)
 "</string>
     <string name="file_deleted">Скачанный файл не найден</string>
@@ -673,8 +673,8 @@
     <string name="folder_new">Новые</string>
     <string name="folder_new_messages_max_exceeded">%d+</string>
     <string name="folder_personal">Личные</string>
-    <string name="force_update_subtitle">Писать и звонить в этой версии не получится. Обновите приложение, чтобы продолжить использовать WhiteMAX</string>
-    <string name="force_update_title">Ваша версия WhiteMAX устарела</string>
+    <string name="force_update_subtitle">Писать и звонить в этой версии не получится. Обновите приложение, чтобы продолжить использовать MAX</string>
+    <string name="force_update_title">Ваша версия MAX устарела</string>
     <string name="forward_message">Переслать сообщение</string>
     <string name="forward_message_hint">Сообщение</string>
     <string name="forward_toolbar_action_cancel_selection">Отменить выбор</string>
@@ -987,7 +987,7 @@
     <string name="notifications_infinite">Навсегда</string>
     <string name="oneme_action_share">Поделиться</string>
     <string name="oneme_action_share_qr_code_error">Не удалось поделиться QR кодом</string>
-    <string name="oneme_app_name">WhiteMAX</string>
+    <string name="oneme_app_name">MAX</string>
     <string name="oneme_appearance_settings_dark_mode">Тёмная</string>
     <string name="oneme_appearance_settings_font_size_reset">Сбросить</string>
     <string name="oneme_appearance_settings_font_size_title">Размер текста</string>
@@ -1083,7 +1083,7 @@
     <string name="oneme_chatmedia_viewer_toolbar_video_title">Видео</string>
     <string name="oneme_chatmedia_viewer_video_download_complete">Сохранили видео</string>
     <string name="oneme_chatmedia_viewer_video_download_error">Не удалось сохранить видео</string>
-    <string name="oneme_connection_server_error_description">Попробуйте перезапустить WhiteMax</string>
+    <string name="oneme_connection_server_error_description">Попробуйте перезапустить Max</string>
     <string name="oneme_connection_server_error_title">Нет ответа от сервера</string>
     <string name="oneme_contact_not_found_bottom_sheet_negative_button">Не сейчас</string>
     <string name="oneme_contact_not_found_bottom_sheet_subtitle">Но вы можете отправить ему приглашение</string>
@@ -1148,11 +1148,11 @@
     <string name="oneme_invite_by_link_action">Пригласить по ссылке</string>
     <string name="oneme_invite_by_phone_action">Найти по номеру</string>
     <string name="oneme_invite_by_phone_continue_button">Продолжить</string>
-    <string name="oneme_invite_by_phone_description">Если владелец уже в WhiteMax, вы сможете сразу начать общаться</string>
+    <string name="oneme_invite_by_phone_description">Если владелец уже в Max, вы сможете сразу начать общаться</string>
     <string name="oneme_invite_by_phone_hint_default">123 456-78-90</string>
     <string name="oneme_invite_by_phone_title">Введите номер телефона</string>
     <string name="oneme_invite_friends_to_max_bottom_sheet_title">"Пригласите своих друзей
-в WhiteMAX по ссылке"</string>
+в MAX по ссылке"</string>
     <string name="oneme_last_message_pinned">Закреплено</string>
     <string name="oneme_login_confirm_description">"Отправили код на %s.
 Если номер неверный, вернитесь назад"</string>
@@ -1558,7 +1558,7 @@
     <string name="oneme_settings_twofa_error_passwords_equals">Пароли не совпадают, попробуйте ещё раз</string>
     <string name="oneme_settings_twofa_forget_password_action">Забыли пароль?</string>
     <string name="oneme_settings_twofa_lost_email_action">Нет доступа к почте?</string>
-    <string name="oneme_settings_twofa_onboarding_description">Дополнительный пароль для каждого нового входа в WhiteMAX. Установите его, чтобы ещё сильнее защитить профиль</string>
+    <string name="oneme_settings_twofa_onboarding_description">Дополнительный пароль для каждого нового входа в MAX. Установите его, чтобы ещё сильнее защитить профиль</string>
     <string name="oneme_settings_twofa_onboarding_set_password">Установить пароль</string>
     <string name="oneme_settings_twofa_onboarding_success_description">Теперь для входа в профиль каждый раз нужно вводить пароль и код из СМС</string>
     <string name="oneme_settings_twofa_onboarding_success_go_settings">Перейти в настройки</string>
@@ -1652,16 +1652,16 @@
     <string name="online_status">в сети</string>
     <string name="open_all_media">Открыть все медиа</string>
     <string name="original">оригинал</string>
-    <string name="overlays_request_explanation">Чтобы смотреть видео в режиме картинка в картинке, разрешите показывать WhiteMax поверх других приложений</string>
+    <string name="overlays_request_explanation">Чтобы смотреть видео в режиме картинка в картинке, разрешите показывать Max поверх других приложений</string>
     <string name="password_toggle_content_description">Show password</string>
     <string name="path_password_eye">M12,4.5C7,4.5 2.73,7.61 1,12c1.73,4.39 6,7.5 11,7.5s9.27,-3.11 11,-7.5c-1.73,-4.39 -6,-7.5 -11,-7.5zM12,17c-2.76,0 -5,-2.24 -5,-5s2.24,-5 5,-5 5,2.24 5,5 -2.24,5 -5,5zM12,9c-1.66,0 -3,1.34 -3,3s1.34,3 3,3 3,-1.34 3,-3 -1.34,-3 -3,-3z</string>
     <string name="path_password_eye_mask_strike_through">M2,4.27 L19.73,22 L22.27,19.46 L4.54,1.73 L4.54,1 L23,1 L23,23 L1,23 L1,4.27 Z</string>
     <string name="path_password_eye_mask_visible">M2,4.27 L2,4.27 L4.54,1.73 L4.54,1.73 L4.54,1 L23,1 L23,23 L1,23 L1,4.27 Z</string>
     <string name="path_password_strike_through">M3.27,4.27 L19.74,20.74</string>
-    <string name="permission_detail_dialog_subtitile">Выберите «WhiteMax» в Настройках, и включите два переключателя</string>
+    <string name="permission_detail_dialog_subtitile">Выберите «Max» в Настройках, и включите два переключателя</string>
     <string name="permission_detail_dialog_title">Разрешите доступ к микрофону и камере в настройках</string>
     <string name="permission_fsi_request">Enable access to the locked screen</string>
-    <string name="permission_fsi_request_rationale">"Without this setting, you won't see an incoming call if someone calls you at WhiteMax"</string>
+    <string name="permission_fsi_request_rationale">"Without this setting, you won't see an incoming call if someone calls you at Max"</string>
     <string name="permissions_allow_access">Разрешить доступ</string>
     <string name="permissions_audio_denied_title">Разрешите доступ к микрофону в настройках</string>
     <string name="permissions_audio_for_video_not_granted">Не удалось получить доступ к микрофону</string>
@@ -1669,14 +1669,14 @@
     <string name="permissions_audio_for_video_request_denied">Для записи видео, разрешите доступ к микрофону в настройках телефона</string>
     <string name="permissions_audio_request_denied">Вы сможете отправлять аудиосообщения в чат</string>
     <string name="permissions_audio_title">Разрешите доступ к микрофону</string>
-    <string name="permissions_background_location_denied">"Вы запретили WhiteMax доступ к местоположению в настройках устройства. Для живой трансляции всегда необходим доступ к местоположению, чтобы отображать ваши перемещения на карте в чате в WhiteMax в реальном времени.
+    <string name="permissions_background_location_denied">"Вы запретили Max доступ к местоположению в настройках устройства. Для живой трансляции всегда необходим доступ к местоположению, чтобы отображать ваши перемещения на карте в чате в Max в реальном времени.
 
-Использование фонового местоположения сервисами в WhiteMax:
+Использование фонового местоположения сервисами в Max:
 - Поиск контактов “Кто рядом” - нет
 - Отправка места в чаты и каналы - нет
 - Живая трансляция местоположения в чаты - да, всегда при использовании, при закрытом и свернутом приложении
 
-Изменить доступы для WhiteMax можно в настройках устройства"</string>
+Изменить доступы для Max можно в настройках устройства"</string>
     <string name="permissions_calls_audio_video_request">Чтобы совершать видеозвонки, разрешите доступ к камере и микрофону.</string>
     <string name="permissions_calls_audio_video_request_title">Разрешите доступ к камере и микрофону</string>
     <string name="permissions_calls_video_preview_request">Чтобы совершать видеозвонки, разрешите доступ к камере.</string>
@@ -1692,14 +1692,14 @@
     <string name="permissions_dialog_open_setting">Перейти в настройки</string>
     <string name="permissions_dialog_yes">Разрешить</string>
     <string name="permissions_fsi_request_positive_button">Allow in settings</string>
-    <string name="permissions_location_denied">"Вы запретили WhiteMax доступ к местоположению в настройках устройства. Доступ к местоположению при использовании WhiteMax необходим, чтобы вы могли поделиться точкой на карте в чатах и каналах.
+    <string name="permissions_location_denied">"Вы запретили Max доступ к местоположению в настройках устройства. Доступ к местоположению при использовании Max необходим, чтобы вы могли поделиться точкой на карте в чатах и каналах.
 
-Использование фонового местоположения сервисами в WhiteMax:
+Использование фонового местоположения сервисами в Max:
 - Поиск контактов “Кто рядом” - нет
 - Отправка места в чаты и каналы - нет
 - Живая трансляция местоположения в чаты - да, всегда при использовании, при закрытом и свернутом приложении
 
-Изменить доступы для WhiteMax можно в настройках устройства"</string>
+Изменить доступы для Max можно в настройках устройства"</string>
     <string name="permissions_location_not_granted">Не удалось получить доступ к местоположению</string>
     <string name="permissions_location_rationale_description">Вы сможете показать, где находитесь, как найти нужное кафе или на какой остановке выйти</string>
     <string name="permissions_location_rationale_open_settings">Разрешить</string>
@@ -1994,8 +1994,8 @@
     <string name="profile_notifications_off_snackbar_title">Уведомления отключены</string>
     <string name="profile_notifications_on_snackbar_title">Уведомления включены</string>
     <string name="profile_phone_number_action_copy">Копировать номер</string>
-    <string name="profile_phone_number_action_tt_video_call">Видеозвонок через WhiteMax</string>
-    <string name="profile_phone_number_action_tt_voice_call">Позвонить через WhiteMax</string>
+    <string name="profile_phone_number_action_tt_video_call">Видеозвонок через Max</string>
+    <string name="profile_phone_number_action_tt_voice_call">Позвонить через Max</string>
     <string name="profile_phone_number_action_voice_call">Позвонить по телефону</string>
     <string name="profile_section_item_action_button_all_members">Все участники</string>
     <string name="profile_unsubscribe_channel_action_unsubscribe">Отписаться</string>
@@ -2056,7 +2056,7 @@
     <string name="share_message_hint">Сообщение</string>
     <string name="share_photo_fail">Не удалось поделиться фотографией</string>
     <string name="share_search_hint">Введите название</string>
-    <string name="share_to_max">Отправить в WhiteMAX</string>
+    <string name="share_to_max">Отправить в MAX</string>
     <string name="share_toolbar_title">Поделиться сообщением</string>
     <string name="share_video_fail">Не удалось поделиться видео</string>
     <string name="shortcut_create_chat">Новое сообщение</string>
@@ -2085,7 +2085,7 @@
     <string name="trim_video__trim">Обрезать</string>
     <string name="tt_active_live_location_in_chat">Вы транслируете местоположение в чат \"%s\"</string>
     <string name="tt_active_live_location_in_chat_dialog">Вы транслируете местоположение в чат c %s</string>
-    <string name="tt_app_name">WhiteMax</string>
+    <string name="tt_app_name">Max</string>
     <string name="tt_at">%1$s в %2$s</string>
     <string name="tt_audio">аудиосообщение</string>
     <string name="tt_blocked_user">Пользователь заблокирован</string>
@@ -2183,7 +2183,7 @@
     <string name="tt_dates_yesterday_format">Вчера, %s</string>
     <string name="tt_dates_yesterday_last_update">Обновлено вчера в %s</string>
     <string name="tt_dates_yesterday_live_location_end">Завершено вчера в %s</string>
-    <string name="tt_email_invite_subject">Ставь WhiteMax!</string>
+    <string name="tt_email_invite_subject">Ставь Max!</string>
     <string name="tt_file_size_unit_b">Б</string>
     <string name="tt_file_size_unit_gb">ГБ</string>
     <string name="tt_file_size_unit_kb">КБ</string>
@@ -2220,7 +2220,7 @@
     <string name="tt_reply">Ответить</string>
     <string name="tt_scheduled_message_send_failure">Сообщение не отправлено: %s</string>
     <string name="tt_scheduled_message_send_success">Сообщение отправлено: %s</string>
-    <string name="tt_sms_invite_text">Я пользуюсь мессенджером WhiteMax. Присоединяйся! %s</string>
+    <string name="tt_sms_invite_text">Я пользуюсь мессенджером Max. Присоединяйся! %s</string>
     <string name="tt_sticker">стикер</string>
     <string name="tt_stop_live_location">Остановить</string>
     <string name="tt_typing">печатает</string>

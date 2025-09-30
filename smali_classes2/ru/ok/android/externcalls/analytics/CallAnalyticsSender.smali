@@ -89,23 +89,113 @@
 # virtual methods
 .method public final forceSendScheduledEvents()V
     .locals 0
+
+    invoke-static {}, Lru/ok/android/externcalls/analytics/internal/event/EventQueueCollector;->flushAll()V
+
     return-void
 .end method
 
 .method public final declared-synchronized initialize(Lru/ok/android/externcalls/analytics/config/CallAnalyticsConfig;)V
-    .locals 0
+    .locals 2
 
     monitor-enter p0
+
+    :try_start_0
+    sget-object v0, Lru/ok/android/externcalls/analytics/internal/config/CallAnalyticsConfigStorage;->INSTANCE:Lru/ok/android/externcalls/analytics/internal/config/CallAnalyticsConfigStorage;
+
+    invoke-virtual {v0}, Lru/ok/android/externcalls/analytics/internal/config/CallAnalyticsConfigStorage;->getConfig()Lru/ok/android/externcalls/analytics/config/CallAnalyticsConfig;
+
+    move-result-object v1
+
+    if-nez v1, :cond_0
+
+    invoke-virtual {v0, p1}, Lru/ok/android/externcalls/analytics/internal/config/CallAnalyticsConfigStorage;->setConfig(Lru/ok/android/externcalls/analytics/config/CallAnalyticsConfig;)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    goto :goto_0
+
+    :catchall_0
+    move-exception p1
+
+    goto :goto_1
+
+    :cond_0
+    :goto_0
     monitor-exit p0
+
     return-void
+
+    :goto_1
+    :try_start_1
+    monitor-exit p0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    throw p1
 .end method
 
 .method public final send(Lru/ok/android/externcalls/analytics/events/CallAnalyticsEvent;)V
-    .locals 0
+    .locals 2
+
+    sget-object p0, Lru/ok/android/externcalls/analytics/internal/config/CallAnalyticsConfigStorage;->INSTANCE:Lru/ok/android/externcalls/analytics/internal/config/CallAnalyticsConfigStorage;
+
+    invoke-virtual {p0}, Lru/ok/android/externcalls/analytics/internal/config/CallAnalyticsConfigStorage;->getConfig()Lru/ok/android/externcalls/analytics/config/CallAnalyticsConfig;
+
+    move-result-object p0
+
+    if-nez p0, :cond_0
+
+    new-instance p0, Lru/ok/android/externcalls/analytics/internal/log/DefaultCallAnalyticsLogger;
+
+    invoke-direct {p0}, Lru/ok/android/externcalls/analytics/internal/log/DefaultCallAnalyticsLogger;-><init>()V
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "CallAnalyticsSender is not initialized, event="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string p1, " is skipped"
+
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    const-string v0, "CallAnalyticsSender"
+
+    invoke-virtual {p0, v0, p1}, Lru/ok/android/externcalls/analytics/internal/log/DefaultCallAnalyticsLogger;->e(Ljava/lang/String;Ljava/lang/String;)V
+
+    return-void
+
+    :cond_0
+    invoke-virtual {p1}, Lru/ok/android/externcalls/analytics/events/CallAnalyticsEvent;->getApiMethodName()Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-static {p0}, Lru/ok/android/externcalls/analytics/internal/event/EventQueueCollector;->getInstance(Ljava/lang/String;)Lru/ok/android/externcalls/analytics/internal/event/EventQueueCollector;
+
+    move-result-object p0
+
+    invoke-virtual {p0, p1}, Lru/ok/android/externcalls/analytics/internal/event/EventQueueCollector;->addEvent(Lru/ok/android/externcalls/analytics/events/CallAnalyticsEvent;)V
+
     return-void
 .end method
 
 .method public final setIdle(Z)V
-    .locals 0
+    .locals 1
+
+    new-instance p0, Lq01;
+
+    const/4 v0, 0x0
+
+    invoke-direct {p0, p1, v0}, Lq01;-><init>(ZI)V
+
+    invoke-static {p0}, Lru/ok/android/externcalls/analytics/internal/event/EventQueueCollector;->setIdleStateProvider(Lru/ok/android/externcalls/analytics/internal/event/EventQueueCollector$IdleStateProvider;)V
+
     return-void
 .end method

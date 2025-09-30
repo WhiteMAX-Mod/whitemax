@@ -49,8 +49,7 @@
 
 # virtual methods
 .method public final init(Lru/ok/android/externcalls/analytics/CallAnalyticsSender;Lru/ok/android/externcalls/sdk/analytics/ConversationAnalyticsConfigurationImpl;Lq8a;Lzb6;)V
-    .locals 0
-    return-void
+    .locals 19
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",

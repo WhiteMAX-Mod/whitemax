@@ -52,7 +52,7 @@
 
 # direct methods
 .method public constructor <init>(Ljavax/inject/Provider;Ljavax/inject/Provider;Ljava/util/concurrent/locks/Lock;Ljava/lang/String;Z)V
-    .locals 0
+    .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -69,6 +69,53 @@
     .end annotation
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    const-wide v0, 0x7fffffffffffffffL
+
+    iput-wide v0, p0, Lru/ok/android/externcalls/analytics/internal/upload/Worker;->millisToUploadAny:J
+
+    new-instance v0, Ljava/util/concurrent/ConcurrentHashMap;
+
+    invoke-direct {v0}, Ljava/util/concurrent/ConcurrentHashMap;-><init>()V
+
+    iput-object v0, p0, Lru/ok/android/externcalls/analytics/internal/upload/Worker;->millisToUpload:Ljava/util/concurrent/ConcurrentHashMap;
+
+    const/4 v0, 0x0
+
+    iput v0, p0, Lru/ok/android/externcalls/analytics/internal/upload/Worker;->itemCount:I
+
+    iput-object p4, p0, Lru/ok/android/externcalls/analytics/internal/upload/Worker;->apiMethod:Ljava/lang/String;
+
+    new-instance p4, Lru/ok/android/externcalls/analytics/internal/storage/FileCacheWriter;
+
+    invoke-direct {p4, p2, p5, p3}, Lru/ok/android/externcalls/analytics/internal/storage/FileCacheWriter;-><init>(Ljavax/inject/Provider;ZLjava/util/concurrent/locks/Lock;)V
+
+    iput-object p4, p0, Lru/ok/android/externcalls/analytics/internal/upload/Worker;->fileCacheWriter:Lru/ok/android/externcalls/analytics/internal/storage/FileCacheWriter;
+
+    new-instance p2, Landroid/os/Handler;
+
+    invoke-interface {p1}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Landroid/os/Looper;
+
+    new-instance p3, Lru/ok/android/externcalls/analytics/internal/upload/Worker$Callback;
+
+    invoke-direct {p3, p0, v0}, Lru/ok/android/externcalls/analytics/internal/upload/Worker$Callback;-><init>(Lru/ok/android/externcalls/analytics/internal/upload/Worker;I)V
+
+    invoke-direct {p2, p1, p3}, Landroid/os/Handler;-><init>(Landroid/os/Looper;Landroid/os/Handler$Callback;)V
+
+    iput-object p2, p0, Lru/ok/android/externcalls/analytics/internal/upload/Worker;->handler:Landroid/os/Handler;
+
+    sget-object p1, Lru/ok/android/externcalls/analytics/internal/config/CallAnalyticsConfigStorage;->INSTANCE:Lru/ok/android/externcalls/analytics/internal/config/CallAnalyticsConfigStorage;
+
+    invoke-virtual {p1}, Lru/ok/android/externcalls/analytics/internal/config/CallAnalyticsConfigStorage;->getLogger()Lru/ok/android/externcalls/analytics/log/CallAnalyticsLogger;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lru/ok/android/externcalls/analytics/internal/upload/Worker;->logger:Lru/ok/android/externcalls/analytics/log/CallAnalyticsLogger;
+
     return-void
 .end method
 
