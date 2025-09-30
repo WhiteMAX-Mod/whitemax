@@ -80,6 +80,9 @@
     move-result-object v12
 
     iget-boolean v13, p0, Lru/ok/tamtam/nano/Tasks$MsgDelete;->notDeleteMessageFromDb:Z
+    if-eqz v11, :cond_keep_local_flag
+    const/4 v13, 0x1
+    :cond_keep_local_flag
 
     invoke-direct/range {v1 .. v13}, Lik9;-><init>(JJJLjava/util/List;Ljava/util/List;Lvb3;ZLel4;Z)V
 
