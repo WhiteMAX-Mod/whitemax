@@ -1,324 +1,419 @@
 .class public final Lmsa;
-.super Lhi0;
+.super Landroid/webkit/WebViewClient;
 .source "SourceFile"
 
-# interfaces
-.implements Ljava/lang/Comparable;
+
+# static fields
+.field public static final synthetic d:I
 
 
 # instance fields
-.field public final X:Ljava/lang/String;
+.field public final a:Ltmg;
 
-.field public final Y:J
+.field public final b:Lqxg;
 
-.field public final Z:Ljava/lang/String;
-
-.field public final c:J
-
-.field public final o:I
-
-.field public final o0:Ljava/lang/String;
-
-.field public final p0:Ljava/lang/String;
-
-.field public final q0:Ljava/lang/String;
-
-.field public final r0:I
+.field public final c:Lzte;
 
 
 # direct methods
-.method public constructor <init>(JJILjava/lang/String;JLjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;I)V
+.method public constructor <init>(Ltmg;Lqxg;)V
     .locals 0
 
-    invoke-direct {p0, p1, p2}, Lhi0;-><init>(J)V
+    invoke-direct {p0}, Landroid/webkit/WebViewClient;-><init>()V
 
-    iput-wide p3, p0, Lmsa;->c:J
+    iput-object p1, p0, Lmsa;->a:Ltmg;
 
-    iput p5, p0, Lmsa;->o:I
+    iput-object p2, p0, Lmsa;->b:Lqxg;
 
-    iput-object p6, p0, Lmsa;->X:Ljava/lang/String;
+    new-instance p1, Lksa;
 
-    iput-wide p7, p0, Lmsa;->Y:J
+    const/4 p2, 0x0
 
-    iput-object p9, p0, Lmsa;->Z:Ljava/lang/String;
+    invoke-direct {p1, p2}, Lksa;-><init>(I)V
 
-    iput-object p10, p0, Lmsa;->o0:Ljava/lang/String;
+    new-instance p2, Lzte;
 
-    iput-object p11, p0, Lmsa;->p0:Ljava/lang/String;
+    invoke-direct {p2, p1}, Lzte;-><init>(Lzb6;)V
 
-    iput-object p12, p0, Lmsa;->q0:Ljava/lang/String;
-
-    invoke-static {p13}, Lp3a;->a(I)I
-
-    move-result p1
-
-    iput p1, p0, Lmsa;->r0:I
+    iput-object p2, p0, Lmsa;->c:Lzte;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final b()Ljava/lang/String;
-    .locals 2
+.method public final onPageCommitVisible(Landroid/webkit/WebView;Ljava/lang/String;)V
+    .locals 9
 
-    iget-object v0, p0, Lmsa;->o0:Ljava/lang/String;
+    if-eqz p1, :cond_6
 
-    invoke-static {v0}, Lxja;->w(Ljava/lang/CharSequence;)Z
+    iget-object v0, p0, Lmsa;->c:Lzte;
 
-    move-result v1
+    invoke-virtual {v0}, Lzte;->getValue()Ljava/lang/Object;
 
-    if-eqz v1, :cond_0
+    move-result-object v0
 
-    iget-object p0, p0, Lmsa;->p0:Ljava/lang/String;
+    check-cast v0, Lofc;
 
-    invoke-static {p0}, Lxja;->w(Ljava/lang/CharSequence;)Z
+    invoke-virtual {p1}, Landroid/view/View;->getContext()Landroid/content/Context;
 
-    move-result v1
+    move-result-object v1
 
-    if-eqz v1, :cond_0
+    sget v2, Losa;->a:I
 
-    new-instance v1, Ljava/lang/StringBuilder;
+    iget-object v3, v0, Lofc;->b:Ljava/lang/ThreadLocal;
 
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+    iget-object v0, v0, Lofc;->a:Ljava/lang/ThreadLocal;
 
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0}, Ljava/lang/ThreadLocal;->get()Ljava/lang/Object;
 
-    const-string v0, " "
+    move-result-object v4
 
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    check-cast v4, [B
 
-    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    if-nez v4, :cond_0
 
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    const/high16 v4, 0x10000
 
-    move-result-object p0
+    new-array v4, v4, [B
 
-    return-object p0
-
-    :cond_0
-    return-object v0
-.end method
-
-.method public final compareTo(Ljava/lang/Object;)I
-    .locals 0
-
-    check-cast p1, Lmsa;
-
-    invoke-virtual {p0}, Lmsa;->b()Ljava/lang/String;
-
-    move-result-object p0
-
-    invoke-virtual {p1}, Lmsa;->b()Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-virtual {p0, p1}, Ljava/lang/String;->compareTo(Ljava/lang/String;)I
-
-    move-result p0
-
-    return p0
-.end method
-
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 7
-
-    const/4 v0, 0x1
-
-    if-ne p0, p1, :cond_0
-
-    return v0
+    invoke-virtual {v0, v4}, Ljava/lang/ThreadLocal;->set(Ljava/lang/Object;)V
 
     :cond_0
-    const/4 v1, 0x0
+    :try_start_0
+    invoke-virtual {v1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
-    if-eqz p1, :cond_b
+    move-result-object v1
 
-    const-class v2, Lmsa;
+    invoke-virtual {v1, v2}, Landroid/content/res/Resources;->openRawResource(I)Ljava/io/InputStream;
 
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    move-result-object v1
 
-    move-result-object v3
+    invoke-virtual {v3}, Ljava/lang/ThreadLocal;->get()Ljava/lang/Object;
 
-    if-eq v2, v3, :cond_1
+    move-result-object v2
+
+    check-cast v2, [B
+
+    if-nez v2, :cond_1
+
+    const/16 v2, 0x1000
+
+    new-array v2, v2, [B
+
+    invoke-virtual {v3, v2}, Ljava/lang/ThreadLocal;->set(Ljava/lang/Object;)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    goto :goto_0
+
+    :catchall_0
+    move-exception v0
 
     goto :goto_4
 
     :cond_1
-    check-cast p1, Lmsa;
+    :goto_0
+    const/4 v3, 0x0
 
-    iget-object v2, p1, Lmsa;->q0:Ljava/lang/String;
-
-    iget-object v3, p1, Lmsa;->p0:Ljava/lang/String;
-
-    iget-object v4, p1, Lmsa;->o0:Ljava/lang/String;
-
-    iget-object v5, p1, Lmsa;->X:Ljava/lang/String;
-
-    iget v6, p0, Lmsa;->o:I
-
-    iget p1, p1, Lmsa;->o:I
-
-    if-eq v6, p1, :cond_2
-
-    return v1
+    move v5, v3
 
     :cond_2
-    iget-object p1, p0, Lmsa;->X:Ljava/lang/String;
-
-    if-eqz p1, :cond_3
-
-    invoke-virtual {p1, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_4
-
-    goto :goto_0
-
-    :cond_3
-    if-eqz v5, :cond_4
-
-    :goto_0
-    return v1
-
-    :cond_4
-    iget-object p1, p0, Lmsa;->o0:Ljava/lang/String;
-
-    if-eqz p1, :cond_5
-
-    invoke-virtual {p1, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_6
-
-    goto :goto_1
-
-    :cond_5
-    if-eqz v4, :cond_6
-
     :goto_1
-    return v1
+    :try_start_1
+    array-length v6, v2
 
-    :cond_6
-    iget-object p1, p0, Lmsa;->p0:Ljava/lang/String;
+    invoke-virtual {v1, v2, v3, v6}, Ljava/io/InputStream;->read([BII)I
 
-    if-eqz p1, :cond_7
+    move-result v6
 
-    invoke-virtual {p1, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    if-ltz v6, :cond_4
 
-    move-result p1
+    array-length v7, v4
 
-    if-nez p1, :cond_8
+    add-int v8, v5, v6
+
+    if-ge v7, v8, :cond_3
+
+    array-length v7, v4
+
+    mul-int/lit8 v7, v7, 0x2
+
+    new-array v7, v7, [B
+
+    invoke-static {v4, v3, v7, v3, v5}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
+
+    invoke-virtual {v0, v7}, Ljava/lang/ThreadLocal;->set(Ljava/lang/Object;)V
+
+    move-object v4, v7
 
     goto :goto_2
 
-    :cond_7
-    if-eqz v3, :cond_8
-
-    :goto_2
-    return v1
-
-    :cond_8
-    iget-object p0, p0, Lmsa;->q0:Ljava/lang/String;
-
-    if-eqz p0, :cond_9
-
-    invoke-virtual {p0, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result p0
-
-    if-nez p0, :cond_a
+    :catchall_1
+    move-exception v0
 
     goto :goto_3
 
-    :cond_9
-    if-eqz v2, :cond_a
+    :cond_3
+    :goto_2
+    if-lez v6, :cond_2
+
+    invoke-static {v2, v3, v4, v5, v6}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_1
+
+    move v5, v8
+
+    goto :goto_1
+
+    :cond_4
+    :try_start_2
+    invoke-interface {v1}, Ljava/io/Closeable;->close()V
+
+    new-instance v0, Ljava/lang/String;
+
+    sget-object v1, Lo72;->a:Ljava/nio/charset/Charset;
+
+    invoke-direct {v0, v4, v3, v5, v1}, Ljava/lang/String;-><init>([BIILjava/nio/charset/Charset;)V
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_0
+
+    goto :goto_5
 
     :goto_3
-    return v1
+    :try_start_3
+    throw v0
+    :try_end_3
+    .catchall {:try_start_3 .. :try_end_3} :catchall_2
 
-    :cond_a
-    return v0
+    :catchall_2
+    move-exception v2
 
-    :cond_b
+    :try_start_4
+    invoke-static {v1, v0}, Lmu0;->e(Ljava/io/Closeable;Ljava/lang/Throwable;)V
+
+    throw v2
+    :try_end_4
+    .catchall {:try_start_4 .. :try_end_4} :catchall_0
+
     :goto_4
-    return v1
+    new-instance v1, Lhvc;
+
+    invoke-direct {v1, v0}, Lhvc;-><init>(Ljava/lang/Throwable;)V
+
+    move-object v0, v1
+
+    :goto_5
+    instance-of v1, v0, Lhvc;
+
+    if-eqz v1, :cond_5
+
+    const/4 v0, 0x0
+
+    :cond_5
+    check-cast v0, Ljava/lang/String;
+
+    if-eqz v0, :cond_6
+
+    new-instance v1, Llsa;
+
+    const/4 v2, 0x0
+
+    invoke-direct {v1, v2}, Llsa;-><init>(I)V
+
+    invoke-virtual {p1, v0, v1}, Landroid/webkit/WebView;->evaluateJavascript(Ljava/lang/String;Landroid/webkit/ValueCallback;)V
+
+    :cond_6
+    invoke-super {p0, p1, p2}, Landroid/webkit/WebViewClient;->onPageCommitVisible(Landroid/webkit/WebView;Ljava/lang/String;)V
+
+    return-void
 .end method
 
-.method public final toString()Ljava/lang/String;
+.method public final onPageFinished(Landroid/webkit/WebView;Ljava/lang/String;)V
+    .locals 1
+
+    iget-object p0, p0, Lmsa;->a:Ltmg;
+
+    iget-object p0, p0, Ltmg;->I0:Lyce;
+
+    :cond_0
+    invoke-virtual {p0}, Lyce;->getValue()Ljava/lang/Object;
+
+    move-result-object p1
+
+    move-object p2, p1
+
+    check-cast p2, Lhxa;
+
+    sget-object v0, Lhxa;->a:Lhxa;
+
+    if-eq p2, v0, :cond_1
+
+    if-nez p2, :cond_2
+
+    :cond_1
+    sget-object p2, Lhxa;->b:Lhxa;
+
+    invoke-virtual {p0, p1, p2}, Lyce;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_0
+
+    :cond_2
+    return-void
+.end method
+
+.method public final onPageStarted(Landroid/webkit/WebView;Ljava/lang/String;Landroid/graphics/Bitmap;)V
+    .locals 0
+
+    iget-object p0, p0, Lmsa;->a:Ltmg;
+
+    const/4 p1, 0x0
+
+    invoke-virtual {p0, p2, p1}, Ltmg;->w(Ljava/lang/String;Z)V
+
+    return-void
+.end method
+
+.method public final onReceivedError(Landroid/webkit/WebView;Landroid/webkit/WebResourceRequest;Landroid/webkit/WebResourceError;)V
     .locals 3
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    invoke-interface {p2}, Landroid/webkit/WebResourceRequest;->isForMainFrame()Z
 
-    const-string v1, "PhoneDb{phonebookId="
+    move-result v0
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    if-eqz v0, :cond_0
 
-    iget-wide v1, p0, Lmsa;->c:J
+    iget-object v0, p0, Lmsa;->a:Ltmg;
 
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    iget-object v0, v0, Ltmg;->I0:Lyce;
 
-    const-string v1, ", contactId="
+    sget-object v1, Lhxa;->o:Lhxa;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    const/4 v2, 0x0
 
-    iget v1, p0, Lmsa;->o:I
+    invoke-virtual {v0, v2, v1}, Lyce;->m(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    :cond_0
+    invoke-super {p0, p1, p2, p3}, Landroid/webkit/WebViewClient;->onReceivedError(Landroid/webkit/WebView;Landroid/webkit/WebResourceRequest;Landroid/webkit/WebResourceError;)V
 
-    const-string v1, ", phone=\'"
+    return-void
+.end method
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+.method public final onReceivedSslError(Landroid/webkit/WebView;Landroid/webkit/SslErrorHandler;Landroid/net/http/SslError;)V
+    .locals 1
 
-    iget-object v1, p0, Lmsa;->X:Ljava/lang/String;
+    iget-object p0, p0, Lmsa;->a:Ltmg;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    iget-object p1, p0, Ltmg;->r0:Lf53;
 
-    const-string v1, "\', serverPhone="
+    check-cast p1, Lh53;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    const/4 p3, 0x0
 
-    iget-wide v1, p0, Lmsa;->Y:J
+    iget-object p1, p1, Li3;->g:Lfl7;
 
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    const-string v0, "web_app:ssl_check"
 
-    const-string v1, ", firstName=\'"
+    invoke-virtual {p1, v0, p3}, Lfl7;->getBoolean(Ljava/lang/String;Z)Z
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    move-result p1
 
-    iget-object v1, p0, Lmsa;->o0:Ljava/lang/String;
+    if-eqz p1, :cond_0
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {p2}, Landroid/webkit/SslErrorHandler;->proceed()V
 
-    const-string v1, "\', lastName=\'"
+    return-void
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    :cond_0
+    iget-object p0, p0, Ltmg;->I0:Lyce;
 
-    iget-object v1, p0, Lmsa;->p0:Ljava/lang/String;
+    sget-object p1, Lhxa;->o:Lhxa;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    const/4 p2, 0x0
 
-    const-string v1, "\', type="
+    invoke-virtual {p0, p2, p1}, Lyce;->m(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    return-void
+.end method
 
-    iget p0, p0, Lmsa;->r0:I
+.method public final shouldOverrideUrlLoading(Landroid/webkit/WebView;Landroid/webkit/WebResourceRequest;)Z
+    .locals 4
 
-    invoke-static {p0}, Lp3a;->p(I)Ljava/lang/String;
+    invoke-interface {p2}, Landroid/webkit/WebResourceRequest;->getUrl()Landroid/net/Uri;
 
-    move-result-object p0
+    move-result-object v0
 
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    iget-object v1, p0, Lmsa;->b:Lqxg;
 
-    const/16 p0, 0x7d
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+    invoke-virtual {v0}, Landroid/net/Uri;->getScheme()Ljava/lang/String;
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    move-result-object v2
 
-    move-result-object p0
+    const-string v3, "http"
 
-    return-object p0
+    invoke-static {v2, v3}, Lvyg;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v2
+
+    if-nez v2, :cond_1
+
+    invoke-virtual {v0}, Landroid/net/Uri;->getScheme()Ljava/lang/String;
+
+    move-result-object v2
+
+    const-string v3, "https"
+
+    invoke-static {v2, v3}, Lvyg;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_0
+
+    goto :goto_1
+
+    :cond_0
+    :try_start_0
+    iget-object v1, v1, Lqxg;->a:Landroid/content/Context;
+
+    new-instance v2, Landroid/content/Intent;
+
+    const-string v3, "android.intent.action.VIEW"
+
+    invoke-direct {v2, v3, v0}, Landroid/content/Intent;-><init>(Ljava/lang/String;Landroid/net/Uri;)V
+
+    invoke-virtual {v1, v2}, Landroid/content/Context;->startActivity(Landroid/content/Intent;)V
+    :try_end_0
+    .catch Landroid/content/ActivityNotFoundException; {:try_start_0 .. :try_end_0} :catch_1
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    goto :goto_0
+
+    :catch_0
+    move-exception v0
+
+    const-string v1, "WebAppUrlInterceptor"
+
+    const-string v2, "Unexpected exception when try to open activity by link"
+
+    invoke-static {v1, v2, v0}, Ljtg;->m(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    goto :goto_1
+
+    :catch_1
+    :goto_0
+    const/4 p0, 0x1
+
+    return p0
+
+    :cond_1
+    :goto_1
+    invoke-super {p0, p1, p2}, Landroid/webkit/WebViewClient;->shouldOverrideUrlLoading(Landroid/webkit/WebView;Landroid/webkit/WebResourceRequest;)Z
+
+    move-result p0
+
+    return p0
 .end method

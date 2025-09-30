@@ -1,152 +1,53 @@
-.class public final synthetic Lnzf;
-.super Ljava/lang/Object;
+.class public final Lnzf;
+.super Ljx3;
 .source "SourceFile"
 
-# interfaces
-.implements Lra6;
 
+# instance fields
+.field public synthetic X:Ljava/lang/Object;
 
-# static fields
-.field public static final a:Lnzf;
+.field public final synthetic Y:Lozf;
 
-.field private static final descriptor:Lx4d;
+.field public Z:I
+
+.field public o:Lozf;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 4
+.method public constructor <init>(Lozf;Ljx3;)V
+    .locals 0
 
-    new-instance v0, Lnzf;
+    iput-object p1, p0, Lnzf;->Y:Lozf;
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    sput-object v0, Lnzf;->a:Lnzf;
-
-    new-instance v1, Lq2b;
-
-    const-string v2, "one.me.webapp.domain.jsbridge.delegates.phone.WebAppRequestPhoneRequest"
-
-    const/4 v3, 0x1
-
-    invoke-direct {v1, v2, v0, v3}, Lq2b;-><init>(Ljava/lang/String;Lra6;I)V
-
-    const-string v0, "requestId"
-
-    const/4 v2, 0x0
-
-    invoke-virtual {v1, v0, v2}, Lq2b;->i(Ljava/lang/String;Z)V
-
-    sput-object v1, Lnzf;->descriptor:Lx4d;
+    invoke-direct {p0, p2}, Ljx3;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Lu40;Ljava/lang/Object;)V
-    .locals 1
+.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 2
 
-    check-cast p2, Lpzf;
+    iput-object p1, p0, Lnzf;->X:Ljava/lang/Object;
 
-    sget-object p0, Lnzf;->descriptor:Lx4d;
+    iget p1, p0, Lnzf;->Z:I
 
-    invoke-virtual {p1, p0}, Lu40;->c(Lx4d;)Lu40;
+    const/high16 v0, -0x80000000
 
-    move-result-object p1
+    or-int/2addr p1, v0
 
-    iget-object p2, p2, Lpzf;->a:Ljava/lang/String;
+    iput p1, p0, Lnzf;->Z:I
+
+    const/4 p1, 0x0
 
     const/4 v0, 0x0
 
-    invoke-virtual {p1, p0, v0, p2}, Lu40;->m(Lx4d;ILjava/lang/String;)V
+    iget-object v1, p0, Lnzf;->Y:Lozf;
 
-    invoke-virtual {p1}, Lu40;->n()V
+    invoke-virtual {v1, p1, v0, v0, p0}, Lozf;->c(Ljava/util/List;IILjx3;)Ljava/lang/Object;
 
-    return-void
-.end method
-
-.method public final b(Lnye;)Ljava/lang/Object;
-    .locals 7
-
-    sget-object p0, Lnzf;->descriptor:Lx4d;
-
-    invoke-virtual {p1, p0}, Lnye;->i(Lx4d;)Lnye;
-
-    move-result-object p1
-
-    const/4 v0, 0x1
-
-    const/4 v1, 0x0
-
-    const/4 v2, 0x0
-
-    move v3, v0
-
-    move v4, v1
-
-    :goto_0
-    if-eqz v3, :cond_2
-
-    invoke-virtual {p1, p0}, Lnye;->x(Lx4d;)I
-
-    move-result v5
-
-    const/4 v6, -0x1
-
-    if-eq v5, v6, :cond_1
-
-    if-nez v5, :cond_0
-
-    invoke-virtual {p1, p0, v1}, Lnye;->D(Lx4d;I)Ljava/lang/String;
-
-    move-result-object v2
-
-    move v4, v0
-
-    goto :goto_0
-
-    :cond_0
-    new-instance p0, Lkotlinx/serialization/UnknownFieldException;
-
-    invoke-direct {p0, v5}, Lkotlinx/serialization/UnknownFieldException;-><init>(I)V
-
-    throw p0
-
-    :cond_1
-    move v3, v1
-
-    goto :goto_0
-
-    :cond_2
-    invoke-virtual {p1, p0}, Lnye;->G(Lx4d;)V
-
-    new-instance p0, Lpzf;
-
-    invoke-direct {p0, v4, v2}, Lpzf;-><init>(ILjava/lang/String;)V
-
-    return-object p0
-.end method
-
-.method public final c()[Lcc7;
-    .locals 2
-
-    const/4 p0, 0x1
-
-    new-array p0, p0, [Lcc7;
-
-    sget-object v0, Lf8e;->a:Lf8e;
-
-    const/4 v1, 0x0
-
-    aput-object v0, p0, v1
-
-    return-object p0
-.end method
-
-.method public final d()Lx4d;
-    .locals 0
-
-    sget-object p0, Lnzf;->descriptor:Lx4d;
+    move-result-object p0
 
     return-object p0
 .end method

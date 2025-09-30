@@ -1,24 +1,23 @@
 .class public final Lzob;
-.super Ljava/lang/Object;
+.super Luc0;
 .source "SourceFile"
-
-# interfaces
-.implements Lapb;
 
 
 # static fields
-.field public static final a:Lzob;
+.field public static final b:Lzob;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 1
+    .locals 2
 
     new-instance v0, Lzob;
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    const/16 v1, 0xd
 
-    sput-object v0, Lzob;->a:Lzob;
+    invoke-direct {v0, v1}, Luc0;-><init>(I)V
+
+    sput-object v0, Lzob;->b:Lzob;
 
     return-void
 .end method
@@ -50,7 +49,7 @@
 .method public final hashCode()I
     .locals 0
 
-    const p0, 0x778a90e9
+    const p0, 0x5dad53ff
 
     return p0
 .end method
@@ -58,7 +57,7 @@
 .method public final toString()Ljava/lang/String;
     .locals 0
 
-    const-string p0, "RequestCameraPermission"
+    const-string p0, "SelectPhotoFromGallery"
 
     return-object p0
 .end method

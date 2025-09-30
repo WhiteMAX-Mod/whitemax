@@ -1,124 +1,159 @@
-.class public final Ldr8;
+.class public final synthetic Ldr8;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/util/Iterator;
-.implements Lqb7;
+.implements Lzb6;
 
 
 # instance fields
-.field public final a:Ljava/util/Iterator;
+.field public final synthetic a:I
 
-.field public final b:Ljava/util/Iterator;
-
-.field public final synthetic c:Lrh4;
+.field public final synthetic b:Ler8;
 
 
 # direct methods
-.method public constructor <init>(Lrh4;)V
-    .locals 1
+.method public synthetic constructor <init>(Ler8;I)V
+    .locals 0
+
+    iput p2, p0, Ldr8;->a:I
+
+    iput-object p1, p0, Ldr8;->b:Ler8;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Ldr8;->c:Lrh4;
-
-    iget-object v0, p1, Lrh4;->b:Ljava/lang/Object;
-
-    check-cast v0, Lps;
-
-    iget-object v0, v0, Lps;->b:Ljava/lang/Object;
-
-    check-cast v0, Ljava/lang/Iterable;
-
-    invoke-interface {v0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
-
-    move-result-object v0
-
-    iput-object v0, p0, Ldr8;->a:Ljava/util/Iterator;
-
-    iget-object p1, p1, Lrh4;->c:Ljava/lang/Object;
-
-    check-cast p1, Lps;
-
-    iget-object p1, p1, Lps;->b:Ljava/lang/Object;
-
-    check-cast p1, Ljava/lang/Iterable;
-
-    invoke-interface {p1}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
-
-    move-result-object p1
-
-    iput-object p1, p0, Ldr8;->b:Ljava/util/Iterator;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final hasNext()Z
-    .locals 1
+.method public final invoke()Ljava/lang/Object;
+    .locals 3
 
-    iget-object v0, p0, Ldr8;->a:Ljava/util/Iterator;
+    iget v0, p0, Ldr8;->a:I
 
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+    packed-switch v0, :pswitch_data_0
 
-    move-result v0
+    iget-object p0, p0, Ldr8;->b:Ler8;
 
-    if-eqz v0, :cond_0
+    iget-object p0, p0, Ler8;->c:Lzte;
 
-    iget-object p0, p0, Ldr8;->b:Ljava/util/Iterator;
-
-    invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result p0
-
-    if-eqz p0, :cond_0
-
-    const/4 p0, 0x1
-
-    return p0
-
-    :cond_0
-    const/4 p0, 0x0
-
-    return p0
-.end method
-
-.method public final next()Ljava/lang/Object;
-    .locals 2
-
-    iget-object v0, p0, Ldr8;->c:Lrh4;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    iget-object v0, p0, Ldr8;->a:Ljava/util/Iterator;
-
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v0
-
-    iget-object p0, p0, Ldr8;->b:Ljava/util/Iterator;
-
-    invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    invoke-virtual {p0}, Lzte;->getValue()Ljava/lang/Object;
 
     move-result-object p0
 
-    new-instance v1, Ldna;
+    check-cast p0, Lorg/json/JSONObject;
 
-    invoke-direct {v1, v0, p0}, Ldna;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+    const/4 v0, 0x0
 
+    if-eqz p0, :cond_0
+
+    const-string v1, "hdr_enabled"
+
+    invoke-virtual {p0, v1, v0}, Lorg/json/JSONObject;->optBoolean(Ljava/lang/String;Z)Z
+
+    move-result v0
+
+    :cond_0
+    invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object p0
+
+    return-object p0
+
+    :pswitch_0
+    iget-object p0, p0, Ldr8;->b:Ler8;
+
+    iget-object p0, p0, Ler8;->c:Lzte;
+
+    invoke-virtual {p0}, Lzte;->getValue()Ljava/lang/Object;
+
+    move-result-object p0
+
+    check-cast p0, Lorg/json/JSONObject;
+
+    const/4 v0, 0x0
+
+    if-eqz p0, :cond_1
+
+    const-string v1, "hevc_enabled"
+
+    invoke-virtual {p0, v1, v0}, Lorg/json/JSONObject;->optBoolean(Ljava/lang/String;Z)Z
+
+    move-result v0
+
+    :cond_1
+    invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object p0
+
+    return-object p0
+
+    :pswitch_1
+    iget-object p0, p0, Ldr8;->b:Ler8;
+
+    iget-object p0, p0, Ler8;->c:Lzte;
+
+    invoke-virtual {p0}, Lzte;->getValue()Ljava/lang/Object;
+
+    move-result-object p0
+
+    check-cast p0, Lorg/json/JSONObject;
+
+    const/4 v0, 0x0
+
+    if-eqz p0, :cond_2
+
+    const-string v1, "enabled"
+
+    invoke-virtual {p0, v1, v0}, Lorg/json/JSONObject;->optBoolean(Ljava/lang/String;Z)Z
+
+    move-result v0
+
+    :cond_2
+    invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object p0
+
+    return-object p0
+
+    :pswitch_2
+    iget-object p0, p0, Ldr8;->b:Ler8;
+
+    iget-object v0, p0, Ler8;->a:Ljava/lang/String;
+
+    const/4 v1, 0x0
+
+    if-eqz v0, :cond_3
+
+    :try_start_0
+    new-instance v2, Lorg/json/JSONObject;
+
+    invoke-direct {v2, v0}, Lorg/json/JSONObject;-><init>(Ljava/lang/String;)V
+    :try_end_0
+    .catch Lorg/json/JSONException; {:try_start_0 .. :try_end_0} :catch_0
+
+    move-object v1, v2
+
+    goto :goto_0
+
+    :catch_0
+    move-exception v0
+
+    iget-object p0, p0, Ler8;->b:Ljava/lang/String;
+
+    const-string v2, "Failed to parse media transform params"
+
+    invoke-static {p0, v2, v0}, Ljtg;->m(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    :cond_3
+    :goto_0
     return-object v1
-.end method
 
-.method public final remove()V
-    .locals 1
-
-    new-instance p0, Ljava/lang/UnsupportedOperationException;
-
-    const-string v0, "Operation is not supported for read-only collection"
-
-    invoke-direct {p0, v0}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
-
-    throw p0
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

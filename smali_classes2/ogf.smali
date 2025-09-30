@@ -1,465 +1,236 @@
 .class public final Logf;
-.super Ljava/lang/Object;
+.super Lure;
 .source "SourceFile"
+
+# interfaces
+.implements Lpc6;
 
 
 # instance fields
-.field public final a:Z
+.field public synthetic X:Ljava/lang/Object;
 
-.field public final b:Ltl8;
-
-.field public final c:I
-
-.field public volatile d:Ljava/lang/Integer;
-
-.field public volatile e:Ljava/lang/Integer;
-
-.field public f:Ldsa;
-
-.field public g:Ljava/lang/Integer;
-
-.field public h:Ljava/lang/Integer;
-
-.field public i:Ljava/lang/Integer;
+.field public final synthetic Y:Lone/me/settings/twofa/password/TwoFACheckPassScreen;
 
 
 # direct methods
-.method public constructor <init>(ZILtl8;)V
+.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/settings/twofa/password/TwoFACheckPassScreen;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p2, p0, Logf;->Y:Lone/me/settings/twofa/password/TwoFACheckPassScreen;
 
-    iput-boolean p1, p0, Logf;->a:Z
+    const/4 p2, 0x2
 
-    iput-object p3, p0, Logf;->b:Ltl8;
-
-    rem-int/lit8 p1, p2, 0x10
-
-    sub-int/2addr p2, p1
-
-    const/16 p1, 0x140
-
-    const/16 p3, 0x1000
-
-    invoke-static {p2, p1, p3}, Lqo8;->h(III)I
-
-    move-result p1
-
-    iput p1, p0, Logf;->c:I
+    invoke-direct {p0, p2, p1}, Lure;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(II)Ldsa;
-    .locals 19
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    move-object/from16 v0, p0
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    move/from16 v1, p1
-
-    move/from16 v2, p2
-
-    iget-object v3, v0, Logf;->d:Ljava/lang/Integer;
-
-    iget-object v4, v0, Logf;->e:Ljava/lang/Integer;
-
-    iget v5, v0, Logf;->c:I
-
-    if-eqz v3, :cond_0
-
-    if-eqz v4, :cond_0
-
-    invoke-virtual {v3}, Ljava/lang/Integer;->intValue()I
-
-    move-result v3
-
-    invoke-virtual {v4}, Ljava/lang/Integer;->intValue()I
-
-    move-result v4
-
-    invoke-static {v3, v4}, Ljava/lang/Math;->min(II)I
-
-    move-result v5
-
-    goto :goto_0
-
-    :cond_0
-    if-eqz v3, :cond_1
-
-    invoke-virtual {v3}, Ljava/lang/Integer;->intValue()I
-
-    move-result v5
-
-    goto :goto_0
-
-    :cond_1
-    if-eqz v4, :cond_2
-
-    invoke-virtual {v4}, Ljava/lang/Integer;->intValue()I
-
-    move-result v5
-
-    :cond_2
-    :goto_0
-    invoke-static/range {p1 .. p2}, Ljava/lang/Math;->max(II)I
-
-    move-result v3
-
-    const/4 v4, 0x1
-
-    const/4 v6, 0x0
-
-    if-le v3, v5, :cond_4
-
-    int-to-float v7, v5
-
-    int-to-float v3, v3
-
-    div-float/2addr v7, v3
-
-    invoke-static/range {p1 .. p2}, Ljava/lang/Math;->min(II)I
-
-    move-result v3
-
-    if-lez v3, :cond_3
-
-    int-to-float v3, v3
-
-    mul-float v8, v7, v3
-
-    invoke-static {v8}, Lkhg;->x(F)I
-
-    move-result v8
-
-    rem-int/lit8 v9, v8, 0x10
-
-    if-lez v9, :cond_3
-
-    sub-int v10, v8, v9
-
-    add-int/lit8 v10, v10, 0x10
-
-    sub-int v8, v10, v8
-
-    if-le v9, v8, :cond_3
-
-    int-to-float v7, v10
-
-    div-float/2addr v7, v3
-
-    :cond_3
-    int-to-float v3, v1
-
-    mul-float/2addr v3, v7
-
-    invoke-static {v3}, Lkhg;->x(F)I
-
-    move-result v3
-
-    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v3
-
-    int-to-float v8, v2
-
-    mul-float/2addr v8, v7
-
-    invoke-static {v8}, Lkhg;->x(F)I
-
-    move-result v8
-
-    invoke-static {v8}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v8
-
-    new-instance v9, Ldna;
-
-    invoke-direct {v9, v3, v8}, Ldna;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
-
-    move v3, v4
-
-    goto :goto_1
-
-    :cond_4
-    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v3
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v7
-
-    new-instance v9, Ldna;
-
-    invoke-direct {v9, v3, v7}, Ldna;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
-
-    const/high16 v7, 0x3f800000    # 1.0f
-
-    move v3, v6
-
-    :goto_1
-    iget-object v8, v9, Ldna;->a:Ljava/lang/Object;
-
-    check-cast v8, Ljava/lang/Number;
-
-    invoke-virtual {v8}, Ljava/lang/Number;->intValue()I
-
-    move-result v8
-
-    iget-object v9, v9, Ldna;->b:Ljava/lang/Object;
-
-    check-cast v9, Ljava/lang/Number;
-
-    invoke-virtual {v9}, Ljava/lang/Number;->intValue()I
-
-    move-result v9
-
-    invoke-static {v8, v9}, Ljava/lang/Math;->max(II)I
-
-    move-result v10
-
-    const/16 v11, 0x140
-
-    const/4 v12, 0x2
-
-    if-ge v10, v11, :cond_5
-
-    div-int/2addr v11, v10
-
-    invoke-static {v11, v12}, Ljava/lang/Math;->max(II)I
-
-    move-result v11
-
-    goto :goto_2
-
-    :cond_5
-    move v11, v4
-
-    :goto_2
-    if-ne v11, v4, :cond_6
-
-    move v13, v10
-
-    goto :goto_3
-
-    :cond_6
-    mul-int v13, v10, v11
-
-    :goto_3
-    invoke-static {v8, v9}, Ljava/lang/Math;->min(II)I
-
-    move-result v8
-
-    if-ne v11, v4, :cond_7
-
-    move v9, v8
-
-    goto :goto_4
-
-    :cond_7
-    mul-int v9, v8, v11
-
-    :goto_4
-    if-ge v13, v5, :cond_8
-
-    rem-int/lit8 v5, v13, 0x10
-
-    sub-int v5, v13, v5
-
-    :cond_8
-    div-int/lit8 v14, v5, 0x10
-
-    mul-int/lit8 v15, v14, 0x9
-
-    if-le v15, v9, :cond_9
-
-    invoke-static {v9, v14, v6}, Lzo3;->b(III)I
-
-    move-result v6
-
-    goto :goto_5
-
-    :cond_9
-    invoke-static {v15, v14, v9}, Lzo3;->b(III)I
-
-    move-result v6
-
-    :goto_5
-    if-ne v11, v4, :cond_a
-
-    move v10, v5
-
-    goto :goto_6
-
-    :cond_a
-    if-ne v5, v13, :cond_b
-
-    goto :goto_6
-
-    :cond_b
-    int-to-float v10, v5
-
-    int-to-float v13, v11
-
-    div-float/2addr v10, v13
-
-    invoke-static {v10}, Lkhg;->x(F)I
-
-    move-result v10
-
-    :goto_6
-    if-eqz v3, :cond_c
-
-    int-to-float v10, v10
-
-    div-float/2addr v10, v7
-
-    invoke-static {v10}, Lkhg;->x(F)I
-
-    move-result v10
-
-    :cond_c
-    if-ne v11, v4, :cond_d
-
-    move v8, v6
-
-    goto :goto_7
-
-    :cond_d
-    if-ne v6, v9, :cond_e
-
-    goto :goto_7
-
-    :cond_e
-    int-to-float v4, v6
-
-    int-to-float v8, v11
-
-    div-float/2addr v4, v8
-
-    invoke-static {v4}, Lkhg;->x(F)I
-
-    move-result v8
-
-    :goto_7
-    if-eqz v3, :cond_f
-
-    int-to-float v3, v8
-
-    div-float/2addr v3, v7
-
-    invoke-static {v3}, Lkhg;->x(F)I
-
-    move-result v8
-
-    :cond_f
-    if-lt v1, v2, :cond_10
-
-    sub-int/2addr v1, v10
-
-    div-int/2addr v1, v12
-
-    sub-int/2addr v2, v8
-
-    div-int/2addr v2, v12
-
-    move/from16 v16, v5
-
-    move/from16 v17, v6
-
-    move v15, v8
-
-    move v14, v10
-
-    :goto_8
-    move v12, v1
-
-    move v13, v2
-
-    goto :goto_9
-
-    :cond_10
-    sub-int/2addr v1, v8
-
-    div-int/2addr v1, v12
-
-    sub-int/2addr v2, v10
-
-    div-int/2addr v2, v12
-
-    move/from16 v17, v5
-
-    move/from16 v16, v6
-
-    move v14, v8
-
-    move v15, v10
-
-    goto :goto_8
-
-    :goto_9
-    new-instance v11, Ldsa;
-
-    iget-boolean v0, v0, Logf;->a:Z
-
-    move/from16 v18, v0
-
-    invoke-direct/range {v11 .. v18}, Ldsa;-><init>(IIIIIIZ)V
-
-    return-object v11
-.end method
-
-.method public final b(II)Lorg/webrtc/Size;
-    .locals 2
-
-    if-eqz p1, :cond_1
-
-    if-nez p2, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    invoke-virtual {p0, p1, p2}, Logf;->a(II)Ldsa;
+    invoke-virtual {p0, p1, p2}, Logf;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
     move-result-object p0
 
-    new-instance p1, Lorg/webrtc/Size;
+    check-cast p0, Logf;
 
-    iget p2, p0, Ldsa;->g:I
+    sget-object p1, Lylf;->a:Lylf;
 
-    iget p0, p0, Ldsa;->h:I
-
-    invoke-direct {p1, p2, p0}, Lorg/webrtc/Size;-><init>(II)V
+    invoke-virtual {p0, p1}, Logf;->o(Ljava/lang/Object;)Ljava/lang/Object;
 
     return-object p1
+.end method
 
-    :cond_1
-    :goto_0
-    new-instance v0, Ljava/lang/StringBuilder;
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 1
 
-    const-string v1, "Wrong frame size: "
+    new-instance v0, Logf;
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    iget-object p0, p0, Logf;->Y:Lone/me/settings/twofa/password/TwoFACheckPassScreen;
 
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-direct {v0, p2, p0}, Logf;-><init>(Lkotlin/coroutines/Continuation;Lone/me/settings/twofa/password/TwoFACheckPassScreen;)V
 
-    const-string p1, "x"
+    iput-object p1, v0, Logf;->X:Ljava/lang/Object;
 
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    return-object v0
+.end method
 
-    invoke-virtual {v0, p2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 5
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-static {p1}, Lqe5;->V(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Logf;->X:Ljava/lang/Object;
+
+    check-cast p1, Lkgf;
+
+    iget-object p0, p0, Logf;->Y:Lone/me/settings/twofa/password/TwoFACheckPassScreen;
+
+    iget-object v0, p0, Lone/me/settings/twofa/password/TwoFACheckPassScreen;->X:Ljava/lang/Object;
+
+    sget-object v1, Lone/me/settings/twofa/password/TwoFACheckPassScreen;->s0:[Lxi7;
+
+    sget-object v1, Lhgf;->a:Lhgf;
+
+    invoke-static {p1, v1}, Lvyg;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    const/4 v2, 0x0
+
+    if-eqz v1, :cond_0
+
+    sget-object p1, Lchf;->a:Lchf;
+
+    invoke-virtual {p1}, Lscout/Component;->getAccessor()Lz4;
 
     move-result-object p1
 
-    iget-object p0, p0, Logf;->b:Ltl8;
+    const-class v0, Lt1b;
 
-    invoke-virtual {p0, p1}, Ltl8;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {p1, v0}, Lz4;->c(Ljava/lang/Class;)Ljava/lang/Object;
 
-    const/4 p0, 0x0
+    move-result-object p1
+
+    check-cast p1, Lt1b;
+
+    invoke-virtual {p1}, Lt1b;->e()V
+
+    invoke-virtual {p0}, Lxx3;->getActivity()Landroid/app/Activity;
+
+    move-result-object p0
+
+    invoke-static {p0}, Lla6;->u(Landroid/app/Activity;)V
+
+    sget-object p0, Lpif;->c:Lpif;
+
+    invoke-virtual {p0}, Lx2;->F0()Lza4;
+
+    move-result-object p0
+
+    const-string p1, ":chat-list"
+
+    invoke-virtual {p0, p1, v2}, Lza4;->b(Ljava/lang/String;Landroid/os/Bundle;)Z
+
+    goto :goto_0
+
+    :cond_0
+    instance-of v1, p1, Ljgf;
+
+    if-eqz v1, :cond_1
+
+    invoke-virtual {p0}, Lxx3;->getActivity()Landroid/app/Activity;
+
+    move-result-object p0
+
+    invoke-static {p0}, Lla6;->u(Landroid/app/Activity;)V
+
+    invoke-interface {v0}, Lcl7;->getValue()Ljava/lang/Object;
+
+    move-result-object p0
+
+    check-cast p0, Lqa7;
+
+    check-cast p1, Ljgf;
+
+    iget-object p1, p1, Ljgf;->a:Ljava/lang/String;
+
+    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    new-instance v0, Lone/me/settings/twofa/configuration/TwoFASettingsScreen;
+
+    invoke-direct {v0, p1}, Lone/me/settings/twofa/configuration/TwoFASettingsScreen;-><init>(Ljava/lang/String;)V
+
+    invoke-static {v0, v2, v2}, Lcb7;->d(Lxx3;Leh;Leh;)Luzc;
+
+    move-result-object p1
+
+    const-string v0, "twofa_settings_screen"
+
+    invoke-virtual {p0, p1, v0}, Lqa7;->a(Luzc;Ljava/lang/String;)V
+
+    goto :goto_0
+
+    :cond_1
+    instance-of v1, p1, Ligf;
+
+    if-eqz v1, :cond_2
+
+    invoke-virtual {p0}, Lxx3;->getActivity()Landroid/app/Activity;
+
+    move-result-object v1
+
+    invoke-static {v1}, Lla6;->u(Landroid/app/Activity;)V
+
+    iget-object v1, p0, Lone/me/settings/twofa/password/TwoFACheckPassScreen;->Z:Lcic;
+
+    sget-object v3, Lone/me/settings/twofa/password/TwoFACheckPassScreen;->s0:[Lxi7;
+
+    const/4 v4, 0x1
+
+    aget-object v3, v3, v4
+
+    invoke-interface {v1, p0, v3}, Lcic;->N(Ljava/lang/Object;Lxi7;)Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lone/me/sdk/uikit/common/button/OneMeButton;
+
+    const/4 v3, 0x0
+
+    invoke-virtual {v1, v3}, Lone/me/sdk/uikit/common/button/OneMeButton;->setProgressEnabled(Z)V
+
+    invoke-interface {v0}, Lcl7;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lqa7;
+
+    check-cast p1, Ligf;
+
+    iget-object v1, p1, Ligf;->a:Ljava/lang/String;
+
+    iget-object p1, p1, Ligf;->b:Lta7;
+
+    iget-object p0, p0, Lone/me/settings/twofa/password/TwoFACheckPassScreen;->b:Ljava/lang/Object;
+
+    invoke-interface {p0}, Lcl7;->getValue()Ljava/lang/Object;
+
+    move-result-object p0
+
+    check-cast p0, Lpa7;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    new-instance v3, Lone/me/settings/twofa/restore/TwoFAStartRestoreScreen;
+
+    invoke-virtual {p0}, Ljava/lang/Enum;->name()Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-direct {v3, p0, v1, p1}, Lone/me/settings/twofa/restore/TwoFAStartRestoreScreen;-><init>(Ljava/lang/String;Ljava/lang/String;Lta7;)V
+
+    invoke-static {v3, v2, v2}, Lcb7;->d(Lxx3;Leh;Leh;)Luzc;
+
+    move-result-object p0
+
+    const-string p1, "twofa_start_restore_screen"
+
+    invoke-virtual {v0, p0, p1}, Lqa7;->a(Luzc;Ljava/lang/String;)V
+
+    :goto_0
+    sget-object p0, Lylf;->a:Lylf;
 
     return-object p0
+
+    :cond_2
+    new-instance p0, Lkotlin/NoWhenBranchMatchedException;
+
+    invoke-direct {p0}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
+
+    throw p0
 .end method

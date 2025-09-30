@@ -1,15 +1,27 @@
-.class public abstract Lzr9;
+.class public final Lzr9;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
+# instance fields
+.field public final a:I
+
+.field public final b:I
+
+.field public final c:I
+
+
 # direct methods
-.method public static a(Landroid/app/Notification$Action;)Z
+.method public constructor <init>(III)V
     .locals 0
 
-    invoke-virtual {p0}, Landroid/app/Notification$Action;->getAllowGeneratedReplies()Z
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    move-result p0
+    iput p1, p0, Lzr9;->a:I
 
-    return p0
+    iput p2, p0, Lzr9;->b:I
+
+    iput p3, p0, Lzr9;->c:I
+
+    return-void
 .end method

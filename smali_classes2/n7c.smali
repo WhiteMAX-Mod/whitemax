@@ -1,287 +1,146 @@
-.class public final Ln7c;
+.class public abstract Ln7c;
 .super Ljava/lang/Object;
-.source "SourceFile"
 
 
-# instance fields
-.field public final a:Lljc;
+# static fields
+.field public static oneme_settings_privacy_black_list_empty_state:I = 0x7f0a07d8
 
-.field public final b:Lh23;
+.field public static oneme_settings_privacy_black_list_rv:I = 0x7f0a07d9
 
+.field public static oneme_settings_privacy_black_list_toolbar:I = 0x7f0a07da
 
-# direct methods
-.method public constructor <init>(Lgda;Lh23;)V
-    .locals 0
+.field public static oneme_settings_privacy_black_list_unblock_action:I = 0x7f0a07db
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+.field public static oneme_settings_privacy_black_list_unblock_cancel_action:I = 0x7f0a07dc
 
-    iput-object p1, p0, Ln7c;->a:Lljc;
+.field public static oneme_settings_privacy_content_level_access:I = 0x7f0a07dd
 
-    iput-object p2, p0, Ln7c;->b:Lh23;
+.field public static oneme_settings_privacy_enter_pin_code_root:I = 0x7f0a07de
 
-    return-void
-.end method
+.field public static oneme_settings_privacy_info_header:I = 0x7f0a07df
 
-.method public static d(Lb7c;Lf7c;)Lm28;
-    .locals 7
+.field public static oneme_settings_privacy_onboarding_content:I = 0x7f0a07e0
 
-    iget-wide v0, p1, Lf7c;->b:J
+.field public static oneme_settings_privacy_onboarding_content_subtitle:I = 0x7f0a07e1
 
-    iget-object v2, p1, Lf7c;->a:Lr7c;
+.field public static oneme_settings_privacy_onboarding_content_title:I = 0x7f0a07e2
 
-    iget v3, v2, Lr7c;->a:I
+.field public static oneme_settings_privacy_onboarding_item_1:I = 0x7f0a07e3
 
-    const-wide/16 v4, 0x0
+.field public static oneme_settings_privacy_onboarding_item_2:I = 0x7f0a07e4
 
-    cmp-long v4, v0, v4
+.field public static oneme_settings_privacy_onboarding_item_3:I = 0x7f0a07e5
 
-    const/4 v5, 0x1
+.field public static oneme_settings_privacy_onboarding_item_4:I = 0x7f0a07e6
 
-    const/4 v6, 0x2
+.field public static oneme_settings_privacy_onboarding_lock:I = 0x7f0a07e7
 
-    if-lez v4, :cond_0
+.field public static oneme_settings_privacy_onboarding_lock_background:I = 0x7f0a07e8
 
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+.field public static oneme_settings_privacy_onboarding_root:I = 0x7f0a07e9
 
-    const-string p1, "SELECT * FROM recent WHERE recent_type=? AND server_id=?"
+.field public static oneme_settings_privacy_onboarding_scroll_view:I = 0x7f0a07ea
 
-    invoke-static {v6, p1}, Lakc;->c(ILjava/lang/String;)Lakc;
+.field public static oneme_settings_privacy_onboarding_set_password_button:I = 0x7f0a07eb
 
-    move-result-object p1
+.field public static oneme_settings_privacy_onboarding_set_pin_code_button:I = 0x7f0a07ec
 
-    int-to-long v2, v3
+.field public static oneme_settings_privacy_onboarding_toolbar:I = 0x7f0a07ed
 
-    invoke-virtual {p1, v5, v2, v3}, Lakc;->k(IJ)V
+.field public static oneme_settings_privacy_onboarding_top_guideline:I = 0x7f0a07ee
 
-    invoke-virtual {p1, v6, v0, v1}, Lakc;->k(IJ)V
+.field public static oneme_settings_privacy_onboarding_without_code_button:I = 0x7f0a07ef
 
-    new-instance v0, La7c;
+.field public static oneme_settings_privacy_pin_code_toolbar:I = 0x7f0a07f0
 
-    const/4 v1, 0x3
+.field public static oneme_settings_privacy_safe_files:I = 0x7f0a07f1
 
-    invoke-direct {v0, p0, p1, v1}, La7c;-><init>(Lb7c;Lakc;I)V
+.field public static oneme_settings_privacy_screen_add_me_to_chat:I = 0x7f0a07f2
 
-    new-instance p0, Lm28;
+.field public static oneme_settings_privacy_screen_black_list:I = 0x7f0a07f3
 
-    invoke-direct {p0, v0}, Lm28;-><init>(Ljava/util/concurrent/Callable;)V
+.field public static oneme_settings_privacy_screen_blacklist:I = 0x7f0a07f4
 
-    return-object p0
+.field public static oneme_settings_privacy_screen_call_me:I = 0x7f0a07f5
 
-    :cond_0
-    invoke-virtual {v2}, Ljava/lang/Enum;->ordinal()I
+.field public static oneme_settings_privacy_screen_dialog_add_chat_button_all:I = 0x7f0a07f6
 
-    move-result v0
+.field public static oneme_settings_privacy_screen_dialog_add_chat_button_contacts:I = 0x7f0a07f7
 
-    if-eq v0, v5, :cond_3
+.field public static oneme_settings_privacy_screen_dialog_call_button_all:I = 0x7f0a07f8
 
-    if-eq v0, v6, :cond_2
+.field public static oneme_settings_privacy_screen_dialog_call_button_contacts:I = 0x7f0a07f9
 
-    const/4 v1, 0x3
+.field public static oneme_settings_privacy_screen_dialog_content_level_access_all:I = 0x7f0a07fa
 
-    if-ne v0, v1, :cond_1
+.field public static oneme_settings_privacy_screen_dialog_content_level_access_safe:I = 0x7f0a07fb
 
-    check-cast p1, Lhd6;
+.field public static oneme_settings_privacy_screen_dialog_finished_session_cancel_btn:I = 0x7f0a07fc
 
-    iget-object p1, p1, Lhd6;->c:Lk10;
+.field public static oneme_settings_privacy_screen_dialog_finished_session_finish_btn:I = 0x7f0a07fd
 
-    iget-wide v0, p1, Lk10;->o0:J
+.field public static oneme_settings_privacy_screen_dialog_online_button_contacts:I = 0x7f0a07fe
 
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+.field public static oneme_settings_privacy_screen_dialog_online_button_nobody:I = 0x7f0a07ff
 
-    const-string p1, "SELECT * FROM recent WHERE recent_type=? AND gif_id=?"
+.field public static oneme_settings_privacy_screen_dialog_online_never_accept_btn:I = 0x7f0a0800
 
-    invoke-static {v6, p1}, Lakc;->c(ILjava/lang/String;)Lakc;
+.field public static oneme_settings_privacy_screen_dialog_online_never_cancel_btn:I = 0x7f0a0801
 
-    move-result-object p1
+.field public static oneme_settings_privacy_screen_dialog_safe_file_no_btn:I = 0x7f0a0802
 
-    int-to-long v2, v3
+.field public static oneme_settings_privacy_screen_dialog_safe_file_yes_btn:I = 0x7f0a0803
 
-    invoke-virtual {p1, v5, v2, v3}, Lakc;->k(IJ)V
+.field public static oneme_settings_privacy_screen_dialog_search_by_phone_all:I = 0x7f0a0804
 
-    invoke-virtual {p1, v6, v0, v1}, Lakc;->k(IJ)V
+.field public static oneme_settings_privacy_screen_dialog_search_by_phone_contacts:I = 0x7f0a0805
 
-    new-instance v0, La7c;
+.field public static oneme_settings_privacy_screen_finished_sessions:I = 0x7f0a0806
 
-    const/4 v1, 0x2
+.field public static oneme_settings_privacy_screen_how_can_section:I = 0x7f0a0807
 
-    invoke-direct {v0, p0, p1, v1}, La7c;-><init>(Lb7c;Lakc;I)V
+.field public static oneme_settings_privacy_screen_how_session:I = 0x7f0a0808
 
-    new-instance p0, Lm28;
+.field public static oneme_settings_privacy_screen_list:I = 0x7f0a0809
 
-    invoke-direct {p0, v0}, Lm28;-><init>(Ljava/util/concurrent/Callable;)V
+.field public static oneme_settings_privacy_screen_online_state_all:I = 0x7f0a080a
 
-    return-object p0
+.field public static oneme_settings_privacy_screen_online_state_nobody:I = 0x7f0a080b
 
-    :cond_1
-    new-instance p0, Ljava/lang/IllegalStateException;
+.field public static oneme_settings_privacy_screen_safe_mode:I = 0x7f0a080c
 
-    sget-object p1, Ljava/util/Locale;->ENGLISH:Ljava/util/Locale;
+.field public static oneme_settings_privacy_screen_search_by_phone:I = 0x7f0a080d
 
-    new-instance p1, Ljava/lang/StringBuilder;
+.field public static oneme_settings_privacy_screen_see_online_state:I = 0x7f0a080e
 
-    const-string v0, "Unexpected value: "
+.field public static oneme_settings_privacy_screen_settings_header_vh:I = 0x7f0a080f
 
-    invoke-direct {p1, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+.field public static oneme_settings_privacy_screen_settings_item_vh:I = 0x7f0a0810
 
-    invoke-virtual {p1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+.field public static oneme_settings_privacy_screen_settings_warning_vh:I = 0x7f0a0811
 
-    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+.field public static oneme_settings_privacy_screen_toolbar:I = 0x7f0a0812
 
-    move-result-object p1
+.field public static oneme_settings_privacy_screen_twofa:I = 0x7f0a0813
 
-    invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+.field public static oneme_settings_privacy_screen_twofa_profile_delete:I = 0x7f0a0814
 
-    throw p0
+.field public static oneme_settings_privacy_screen_twofa_warning_item:I = 0x7f0a0815
 
-    :cond_2
-    check-cast p1, Lq1e;
+.field public static oneme_settings_privacy_screen_web_apps:I = 0x7f0a0816
 
-    iget-wide v0, p1, Lq1e;->c:J
+.field public static oneme_settings_privacy_setup_pin_code_description:I = 0x7f0a0817
 
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+.field public static oneme_settings_privacy_setup_pin_code_error:I = 0x7f0a0818
 
-    const-string p1, "SELECT * FROM recent WHERE recent_type=? AND sticker_id=?"
+.field public static oneme_settings_privacy_setup_pin_code_forgot:I = 0x7f0a0819
 
-    invoke-static {v6, p1}, Lakc;->c(ILjava/lang/String;)Lakc;
+.field public static oneme_settings_privacy_setup_pin_code_input:I = 0x7f0a081a
 
-    move-result-object p1
+.field public static oneme_settings_privacy_setup_pin_code_lock:I = 0x7f0a081b
 
-    int-to-long v2, v3
+.field public static oneme_settings_privacy_setup_pin_code_root_view:I = 0x7f0a081c
 
-    invoke-virtual {p1, v5, v2, v3}, Lakc;->k(IJ)V
+.field public static oneme_settings_privacy_setup_pin_code_title:I = 0x7f0a081d
 
-    invoke-virtual {p1, v6, v0, v1}, Lakc;->k(IJ)V
-
-    new-instance v0, La7c;
-
-    const/4 v1, 0x0
-
-    invoke-direct {v0, p0, p1, v1}, La7c;-><init>(Lb7c;Lakc;I)V
-
-    new-instance p0, Lm28;
-
-    invoke-direct {p0, v0}, Lm28;-><init>(Ljava/util/concurrent/Callable;)V
-
-    return-object p0
-
-    :cond_3
-    check-cast p1, Lvx4;
-
-    iget-object p1, p1, Lvx4;->c:Ljava/lang/String;
-
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    const-string v0, "SELECT * FROM recent WHERE recent_type=? AND emoji=?"
-
-    invoke-static {v6, v0}, Lakc;->c(ILjava/lang/String;)Lakc;
-
-    move-result-object v0
-
-    int-to-long v1, v3
-
-    invoke-virtual {v0, v5, v1, v2}, Lakc;->k(IJ)V
-
-    if-nez p1, :cond_4
-
-    invoke-virtual {v0, v6}, Lakc;->Z(I)V
-
-    goto :goto_0
-
-    :cond_4
-    invoke-virtual {v0, v6, p1}, Lakc;->f(ILjava/lang/String;)V
-
-    :goto_0
-    new-instance p1, La7c;
-
-    const/4 v1, 0x1
-
-    invoke-direct {p1, p0, v0, v1}, La7c;-><init>(Lb7c;Lakc;I)V
-
-    new-instance p0, Lm28;
-
-    invoke-direct {p0, p1}, Lm28;-><init>(Ljava/util/concurrent/Callable;)V
-
-    return-object p0
-.end method
-
-
-# virtual methods
-.method public final a(Ljava/util/List;)Lvw9;
-    .locals 3
-
-    invoke-virtual {p0}, Ln7c;->b()Ldpd;
-
-    move-result-object p0
-
-    new-instance v0, Lv72;
-
-    const/16 v1, 0x15
-
-    invoke-direct {v0, v1, p1}, Lv72;-><init>(ILjava/util/List;)V
-
-    new-instance v1, Lk28;
-
-    const/4 v2, 0x3
-
-    invoke-direct {v1, p0, v0, v2}, Lk28;-><init>(Ljava/lang/Object;Lm66;I)V
-
-    new-instance p0, Lv72;
-
-    const/16 v0, 0x16
-
-    invoke-direct {p0, v0, p1}, Lv72;-><init>(ILjava/util/List;)V
-
-    const p1, 0x7fffffff
-
-    invoke-virtual {v1, p0, p1}, Lvw9;->g(Lm66;I)Lvw9;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public final b()Ldpd;
-    .locals 2
-
-    iget-object p0, p0, Ln7c;->a:Lljc;
-
-    invoke-virtual {p0}, Lljc;->n()Lpz9;
-
-    move-result-object p0
-
-    new-instance v0, Lpta;
-
-    const/16 v1, 0x11
-
-    invoke-direct {v0, v1}, Lpta;-><init>(I)V
-
-    invoke-virtual {p0, v0}, Ltod;->h(Lm66;)Ldpd;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public final c(Ljava/util/List;)Lf93;
-    .locals 3
-
-    iget-object v0, p0, Ln7c;->a:Lljc;
-
-    invoke-virtual {v0}, Lljc;->n()Lpz9;
-
-    move-result-object v0
-
-    new-instance v1, Lvh8;
-
-    const/16 v2, 0x19
-
-    invoke-direct {v1, p0, v2, p1}, Lvh8;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
-
-    new-instance p0, Lf93;
-
-    const/4 p1, 0x3
-
-    invoke-direct {p0, v0, p1, v1}, Lf93;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
-
-    return-object p0
-.end method
+.field public static top_barrier:I = 0x7f0a0c4f

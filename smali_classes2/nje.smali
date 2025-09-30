@@ -1,274 +1,110 @@
-.class public final synthetic Lnje;
+.class public final Lnje;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lv56;
+.implements Lua4;
 
 
-# instance fields
-.field public final synthetic a:I
+# static fields
+.field public static final a:Lnje;
 
-.field public final synthetic b:Lje7;
+.field public static final b:Loje;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lje7;I)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    iput p2, p0, Lnje;->a:I
+    new-instance v0, Lnje;
 
-    iput-object p1, p0, Lnje;->b:Lje7;
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    sput-object v0, Lnje;->a:Lnje;
+
+    sget-object v0, Loje;->b:Loje;
+
+    sput-object v0, Lnje;->b:Loje;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke()Ljava/lang/Object;
-    .locals 6
+.method public final a()Lcb4;
+    .locals 0
 
-    iget v0, p0, Lnje;->a:I
+    sget-object p0, Lnje;->b:Loje;
 
-    const/4 v1, 0x2
+    return-object p0
+.end method
 
-    const/4 v2, 0x0
+.method public final b(Ljava/lang/String;Lxa4;Landroid/os/Bundle;)Lfb4;
+    .locals 8
 
-    const/4 v3, 0x5
+    sget-object p0, Lnje;->b:Loje;
+
+    iget-object p0, p0, Lcb4;->a:Ljava/util/LinkedHashSet;
+
+    invoke-interface {p0, p2}, Ljava/util/Collection;->contains(Ljava/lang/Object;)Z
+
+    move-result p0
+
+    if-nez p0, :cond_0
+
+    const/4 p0, 0x0
+
+    return-object p0
+
+    :cond_0
+    sget-object p0, Loje;->b:Loje;
+
+    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    sget-object p0, Loje;->c:Lxa4;
+
+    invoke-virtual {p2, p0}, Lxa4;->equals(Ljava/lang/Object;)Z
+
+    move-result p0
+
+    if-eqz p0, :cond_1
+
+    new-instance v0, Lfb4;
+
+    new-instance v6, Lhn1;
+
+    const/16 p0, 0xd
+
+    invoke-direct {v6, p3, p0}, Lhn1;-><init>(Landroid/os/Bundle;I)V
+
+    const/16 v7, 0x10
 
     const/4 v4, 0x1
 
-    iget-object p0, p0, Lnje;->b:Lje7;
+    const/4 v5, 0x0
 
-    packed-switch v0, :pswitch_data_0
+    move-object v1, p1
 
-    invoke-interface {p0}, Lje7;->getValue()Ljava/lang/Object;
+    move-object v2, p2
 
-    move-result-object p0
+    move-object v3, p3
 
-    check-cast p0, Lptf;
-
-    iget-object p0, p0, Lptf;->a:Lu4;
-
-    const-class v0, Lvu0;
-
-    invoke-virtual {p0, v0}, Lu4;->d(Ljava/lang/Class;)Lwfe;
-
-    move-result-object v0
-
-    const-class v1, Lrie;
-
-    invoke-virtual {p0, v1}, Lu4;->d(Ljava/lang/Class;)Lwfe;
-
-    move-result-object p0
-
-    new-instance v1, Lryf;
-
-    invoke-direct {v1, v0, p0}, Lryf;-><init>(Lje7;Lje7;)V
-
-    return-object v1
-
-    :pswitch_0
-    invoke-interface {p0}, Lje7;->getValue()Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, Lxs0;
-
-    const/16 v0, 0x4000
-
-    invoke-interface {p0, v0}, Lxs0;->a(I)Ljava/nio/ByteBuffer;
-
-    move-result-object p0
-
-    return-object p0
-
-    :pswitch_1
-    invoke-interface {p0}, Lje7;->getValue()Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, La9a;
-
-    invoke-virtual {p0}, La9a;->g()Ljava/util/concurrent/ExecutorService;
-
-    move-result-object p0
-
-    return-object p0
-
-    :pswitch_2
-    invoke-interface {p0}, Lje7;->getValue()Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, La9a;
-
-    invoke-virtual {p0}, La9a;->b()Lw8a;
-
-    move-result-object v0
-
-    const-string v1, "srvc-rqst"
-
-    invoke-virtual {v0, v3, v1}, Lw8a;->a(ILjava/lang/String;)Lek5;
-
-    move-result-object v0
-
-    invoke-virtual {p0, v0, v1}, La9a;->i(Lek5;Ljava/lang/String;)Ljava/util/concurrent/ExecutorService;
-
-    move-result-object p0
-
-    return-object p0
-
-    :pswitch_3
-    new-instance v0, Lv45;
-
-    invoke-interface {p0}, Lje7;->getValue()Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, La9a;
-
-    const-string v5, "media-transform"
-
-    invoke-virtual {p0, v2, v5, v1, v3}, La9a;->f(ILjava/lang/String;II)Ljava/util/concurrent/ExecutorService;
-
-    move-result-object v1
-
-    invoke-virtual {p0, v1, v5}, La9a;->h(Ljava/util/concurrent/ExecutorService;Ljava/lang/String;)Ljava/util/concurrent/ScheduledExecutorService;
-
-    move-result-object p0
-
-    invoke-direct {v0, p0, v4}, Lv45;-><init>(Ljava/util/concurrent/Executor;Z)V
+    invoke-direct/range {v0 .. v7}, Lfb4;-><init>(Ljava/lang/String;Lxa4;Landroid/os/Bundle;ILdb4;Leb4;I)V
 
     return-object v0
 
-    :pswitch_4
-    new-instance v0, Lv45;
+    :cond_1
+    move-object v2, p2
 
-    invoke-interface {p0}, Lje7;->getValue()Ljava/lang/Object;
+    new-instance p0, Ljava/lang/IllegalStateException;
 
-    move-result-object p0
+    const-string p1, "invalid route "
 
-    check-cast p0, La9a;
+    invoke-static {p1, v2}, Lmw1;->g(Ljava/lang/String;Lxa4;)Ljava/lang/String;
 
-    const-string v5, "upload"
+    move-result-object p1
 
-    invoke-virtual {p0, v2, v5, v1, v3}, La9a;->f(ILjava/lang/String;II)Ljava/util/concurrent/ExecutorService;
+    invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    move-result-object v1
-
-    invoke-virtual {p0, v1, v5}, La9a;->h(Ljava/util/concurrent/ExecutorService;Ljava/lang/String;)Ljava/util/concurrent/ScheduledExecutorService;
-
-    move-result-object p0
-
-    invoke-direct {v0, p0, v4}, Lv45;-><init>(Ljava/util/concurrent/Executor;Z)V
-
-    return-object v0
-
-    :pswitch_5
-    new-instance v0, Lv45;
-
-    invoke-interface {p0}, Lje7;->getValue()Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, La9a;
-
-    iget-object p0, p0, La9a;->m:Lwfe;
-
-    invoke-virtual {p0}, Lwfe;->getValue()Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, Ljava/util/concurrent/ScheduledExecutorService;
-
-    invoke-direct {v0, p0, v4}, Lv45;-><init>(Ljava/util/concurrent/Executor;Z)V
-
-    return-object v0
-
-    :pswitch_6
-    new-instance v0, Lv45;
-
-    invoke-interface {p0}, Lje7;->getValue()Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, La9a;
-
-    iget-object p0, p0, La9a;->l:Lwfe;
-
-    invoke-virtual {p0}, Lwfe;->getValue()Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, Ljava/util/concurrent/ScheduledExecutorService;
-
-    invoke-direct {v0, p0, v4}, Lv45;-><init>(Ljava/util/concurrent/Executor;Z)V
-
-    return-object v0
-
-    :pswitch_7
-    invoke-interface {p0}, Lje7;->getValue()Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, La9a;
-
-    iget-object v0, p0, La9a;->i:Ln45;
-
-    sget-object v1, La9a;->p:[Lbc7;
-
-    const/4 v3, 0x3
-
-    aget-object v1, v1, v3
-
-    invoke-virtual {p0, v0}, La9a;->e(Ln45;)Ljava/util/concurrent/ExecutorService;
-
-    move-result-object p0
-
-    sget-object v0, Ltsc;->a:Lcqd;
-
-    new-instance v0, Lv45;
-
-    invoke-direct {v0, p0, v2}, Lv45;-><init>(Ljava/util/concurrent/Executor;Z)V
-
-    return-object v0
-
-    :pswitch_8
-    new-instance v0, Lv45;
-
-    invoke-interface {p0}, Lje7;->getValue()Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, La9a;
-
-    iget-object p0, p0, La9a;->n:Lwfe;
-
-    invoke-virtual {p0}, Lwfe;->getValue()Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, Ljava/util/concurrent/ScheduledExecutorService;
-
-    invoke-direct {v0, p0, v4}, Lv45;-><init>(Ljava/util/concurrent/Executor;Z)V
-
-    return-object v0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_8
-        :pswitch_7
-        :pswitch_6
-        :pswitch_5
-        :pswitch_4
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    throw p0
 .end method

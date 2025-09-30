@@ -1,176 +1,115 @@
-.class public final Lh41;
+.class public final synthetic Lh41;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lx64;
+.implements Lbc6;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final synthetic X:Lvv0;
+
+.field public final synthetic a:Lnk;
 
 .field public final synthetic b:J
 
-.field public final synthetic c:Z
+.field public final synthetic c:Lj41;
 
-.field public final synthetic o:Z
+.field public final synthetic o:Lst1;
 
 
 # direct methods
-.method public synthetic constructor <init>(JZZI)V
+.method public synthetic constructor <init>(Lnk;JLj41;Lst1;Lvv0;)V
     .locals 0
 
-    iput p5, p0, Lh41;->a:I
-
-    iput-wide p1, p0, Lh41;->b:J
-
-    iput-boolean p3, p0, Lh41;->c:Z
-
-    iput-boolean p4, p0, Lh41;->o:Z
-
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lh41;->a:Lnk;
+
+    iput-wide p2, p0, Lh41;->b:J
+
+    iput-object p4, p0, Lh41;->c:Lj41;
+
+    iput-object p5, p0, Lh41;->o:Lst1;
+
+    iput-object p6, p0, Lh41;->X:Lvv0;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Ljava/lang/Object;
-    .locals 6
+.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 3
 
-    iget v0, p0, Lh41;->a:I
+    check-cast p1, Lru/ok/android/externcalls/sdk/factory/AnswerCallParams$Builder;
 
-    packed-switch v0, :pswitch_data_0
+    iget-object v0, p0, Lh41;->a:Lnk;
 
-    sget-object v0, Lone/me/calls/ui/ui/call/CallScreen;->I0:Lz84;
+    iget-wide v1, v0, Lnk;->a:J
 
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    invoke-static {v1, v2}, Lrya;->b(J)Lru/ok/android/externcalls/sdk/id/ParticipantId;
 
-    new-instance v0, Lone/me/calls/ui/ui/call/CallScreen;
+    move-result-object v1
 
-    new-instance v1, Ldna;
+    invoke-virtual {p1, v1}, Lru/ok/android/externcalls/sdk/factory/AnswerCallParams$Builder;->setOpponentId(Lru/ok/android/externcalls/sdk/id/ParticipantId;)Lru/ok/android/externcalls/sdk/factory/AnswerCallParams$Builder;
 
-    const-string v2, "type"
+    move-result-object p1
 
-    const-string v3, "CHAT"
+    iget-object v1, v0, Lnk;->c:Ljava/lang/String;
 
-    invoke-direct {v1, v2, v3}, Ldna;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+    if-eqz v1, :cond_0
 
-    iget-wide v2, p0, Lh41;->b:J
+    invoke-virtual {p1, v1}, Lru/ok/android/externcalls/sdk/factory/AnswerCallParams$Builder;->setConversationParams(Ljava/lang/String;)Lru/ok/android/externcalls/sdk/factory/AnswerCallParams$Builder;
 
-    invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    :cond_0
+    iget-object v0, v0, Lnk;->b:Ljava/lang/String;
 
-    move-result-object v2
+    invoke-virtual {p1, v0}, Lru/ok/android/externcalls/sdk/factory/AnswerCallParams$Builder;->setConversationId(Ljava/lang/String;)Lru/ok/android/externcalls/sdk/factory/AnswerCallParams$Builder;
 
-    new-instance v3, Ldna;
+    move-result-object p1
 
-    const-string v4, "chat_id"
+    iget-wide v0, p0, Lh41;->b:J
 
-    invoke-direct {v3, v4, v2}, Ldna;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+    invoke-static {v0, v1}, Lrya;->b(J)Lru/ok/android/externcalls/sdk/id/ParticipantId;
 
-    iget-boolean v2, p0, Lh41;->c:Z
+    move-result-object v0
 
-    invoke-static {v2}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+    invoke-virtual {p1, v0}, Lru/ok/android/externcalls/sdk/factory/BaseCallParams$Builder;->setMyId(Lru/ok/android/externcalls/sdk/id/ParticipantId;)Lru/ok/android/externcalls/sdk/factory/BaseCallParams$Builder;
 
-    move-result-object v2
+    move-result-object p1
 
-    new-instance v4, Ldna;
+    iget-object v0, p0, Lh41;->c:Lj41;
 
-    const-string v5, "video_enabled"
+    iget-object v0, v0, Lj41;->b:Lcl7;
 
-    invoke-direct {v4, v5, v2}, Ldna;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+    invoke-interface {v0}, Lcl7;->getValue()Ljava/lang/Object;
 
-    iget-boolean p0, p0, Lh41;->o:Z
+    move-result-object v0
 
-    invoke-static {p0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+    check-cast v0, Lwu1;
 
-    move-result-object p0
+    invoke-virtual {p1, v0}, Lru/ok/android/externcalls/sdk/factory/BaseCallParams$Builder;->setEventListener(Lru/ok/android/externcalls/sdk/events/ConversationEventsListener;)Lru/ok/android/externcalls/sdk/factory/BaseCallParams$Builder;
 
-    new-instance v2, Ldna;
+    move-result-object p1
 
-    const-string v5, "microphone_enabled"
+    iget-object v0, p0, Lh41;->o:Lst1;
 
-    invoke-direct {v2, v5, p0}, Ldna;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+    invoke-virtual {p1, v0}, Lru/ok/android/externcalls/sdk/factory/BaseCallParams$Builder;->setOnPrepared(Lbc6;)Lru/ok/android/externcalls/sdk/factory/BaseCallParams$Builder;
 
-    filled-new-array {v1, v3, v4, v2}, [Ldna;
+    move-result-object p1
 
-    move-result-object p0
+    iget-object p0, p0, Lh41;->X:Lvv0;
 
-    invoke-static {p0}, Lp54;->d([Ldna;)Landroid/os/Bundle;
-
-    move-result-object p0
-
-    invoke-direct {v0, p0}, Lone/me/calls/ui/ui/call/CallScreen;-><init>(Landroid/os/Bundle;)V
-
-    return-object v0
-
-    :pswitch_0
-    sget-object v0, Lone/me/calls/ui/ui/call/CallScreen;->I0:Lz84;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    new-instance v0, Lone/me/calls/ui/ui/call/CallScreen;
-
-    new-instance v1, Ldna;
-
-    const-string v2, "type"
-
-    const-string v3, "ONE_TO_ONE"
-
-    invoke-direct {v1, v2, v3}, Ldna;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
-
-    iget-wide v2, p0, Lh41;->b:J
-
-    invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v2
-
-    new-instance v3, Ldna;
-
-    const-string v4, "opponent_id"
-
-    invoke-direct {v3, v4, v2}, Ldna;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
-
-    iget-boolean v2, p0, Lh41;->c:Z
-
-    invoke-static {v2}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
-
-    move-result-object v2
-
-    new-instance v4, Ldna;
-
-    const-string v5, "video_enabled"
-
-    invoke-direct {v4, v5, v2}, Ldna;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
-
-    iget-boolean p0, p0, Lh41;->o:Z
-
-    invoke-static {p0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+    invoke-virtual {p1, p0}, Lru/ok/android/externcalls/sdk/factory/BaseCallParams$Builder;->setOnError(Lbc6;)Lru/ok/android/externcalls/sdk/factory/BaseCallParams$Builder;
 
     move-result-object p0
 
-    new-instance v2, Ldna;
-
-    const-string v5, "microphone_enabled"
-
-    invoke-direct {v2, v5, p0}, Ldna;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
-
-    filled-new-array {v1, v3, v4, v2}, [Ldna;
+    invoke-virtual {p0}, Lru/ok/android/externcalls/sdk/factory/BaseCallParams$Builder;->build()Ljava/lang/Object;
 
     move-result-object p0
 
-    invoke-static {p0}, Lp54;->d([Ldna;)Landroid/os/Bundle;
+    check-cast p0, Lru/ok/android/externcalls/sdk/factory/AnswerCallParams;
 
-    move-result-object p0
-
-    invoke-direct {v0, p0}, Lone/me/calls/ui/ui/call/CallScreen;-><init>(Landroid/os/Bundle;)V
-
-    return-object v0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-object p0
 .end method

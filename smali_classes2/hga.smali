@@ -1,100 +1,61 @@
-.class public final Lhga;
+.class public abstract Lhga;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ljga;
-
 
 # static fields
-.field public static final CREATOR:Landroid/os/Parcelable$Creator;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Landroid/os/Parcelable$Creator<",
-            "Lhga;",
-            ">;"
-        }
-    .end annotation
-.end field
+.field public static final a:Liga;
 
-.field public static final a:Lhga;
+.field public static final b:Liga;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 2
+    .locals 5
 
-    new-instance v0, Lhga;
+    new-instance v0, Liga;
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    sget v1, Ls0d;->i:I
 
-    sput-object v0, Lhga;->a:Lhga;
+    new-instance v2, Lp2f;
 
-    new-instance v0, Lej9;
+    invoke-direct {v2, v1}, Lp2f;-><init>(I)V
 
-    const/16 v1, 0x12
+    sget v1, Lq0d;->y0:I
 
-    invoke-direct {v0, v1}, Lej9;-><init>(I)V
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    sput-object v0, Lhga;->CREATOR:Landroid/os/Parcelable$Creator;
+    move-result-object v1
 
-    return-void
-.end method
+    const-string v3, "BY"
 
+    const/16 v4, 0x177
 
-# virtual methods
-.method public final describeContents()I
-    .locals 0
+    invoke-direct {v0, v3, v4, v2, v1}, Liga;-><init>(Ljava/lang/String;ILp2f;Ljava/lang/Integer;)V
 
-    const/4 p0, 0x0
+    sput-object v0, Lhga;->a:Liga;
 
-    return p0
-.end method
+    new-instance v0, Liga;
 
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
+    sget v1, Ls0d;->y0:I
 
-    const/4 v0, 0x1
+    new-instance v2, Lp2f;
 
-    if-ne p0, p1, :cond_0
+    invoke-direct {v2, v1}, Lp2f;-><init>(I)V
 
-    return v0
+    sget v1, Lq0d;->z0:I
 
-    :cond_0
-    instance-of p0, p1, Lhga;
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    if-nez p0, :cond_1
+    move-result-object v1
 
-    const/4 p0, 0x0
+    const-string v3, "RU"
 
-    return p0
+    const/4 v4, 0x7
 
-    :cond_1
-    return v0
-.end method
+    invoke-direct {v0, v3, v4, v2, v1}, Liga;-><init>(Ljava/lang/String;ILp2f;Ljava/lang/Integer;)V
 
-.method public final hashCode()I
-    .locals 0
-
-    const p0, -0x472bda66
-
-    return p0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 0
-
-    const-string p0, "Empty"
-
-    return-object p0
-.end method
-
-.method public final writeToParcel(Landroid/os/Parcel;I)V
-    .locals 0
-
-    const/4 p0, 0x1
-
-    invoke-virtual {p1, p0}, Landroid/os/Parcel;->writeInt(I)V
+    sput-object v0, Lhga;->b:Liga;
 
     return-void
 .end method

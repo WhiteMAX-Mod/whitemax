@@ -1,45 +1,61 @@
 .class public final Lbma;
-.super Lkbc;
+.super Lfma;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:I
-
-.field public final b:F
-
-.field public final c:F
+# static fields
+.field public static final a:Lbma;
 
 
 # direct methods
-.method public constructor <init>(I)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lbma;
 
-    iput p1, p0, Lbma;->a:I
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    const/high16 p1, 0x3f000000    # 0.5f
-
-    iput p1, p0, Lbma;->b:F
-
-    iput p1, p0, Lbma;->c:F
+    sput-object v0, Lbma;->a:Lbma;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Landroidx/recyclerview/widget/RecyclerView;I)Landroid/widget/EdgeEffect;
-    .locals 2
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 1
 
-    invoke-virtual {p1}, Landroid/view/View;->getContext()Landroid/content/Context;
+    const/4 v0, 0x1
 
-    move-result-object v0
+    if-ne p0, p1, :cond_0
 
-    new-instance v1, Lama;
+    return v0
 
-    invoke-direct {v1, p2, p0, p1, v0}, Lama;-><init>(ILbma;Landroidx/recyclerview/widget/RecyclerView;Landroid/content/Context;)V
+    :cond_0
+    instance-of p0, p1, Lbma;
 
-    return-object v1
+    if-nez p0, :cond_1
+
+    const/4 p0, 0x0
+
+    return p0
+
+    :cond_1
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 0
+
+    const p0, 0xa9e2037
+
+    return p0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 0
+
+    const-string p0, "Large"
+
+    return-object p0
 .end method

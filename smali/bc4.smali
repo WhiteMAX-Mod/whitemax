@@ -1,138 +1,99 @@
-.class public final Lbc4;
-.super Lo45;
+.class public final synthetic Lbc4;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/util/concurrent/Executor;
+.implements Lpt7;
+.implements Lom3;
 
 
-# static fields
-.field public static final a:Lbc4;
+# instance fields
+.field public final synthetic X:Ljava/lang/Object;
 
-.field public static final b:Ljx3;
+.field public final synthetic a:Lev7;
+
+.field public final synthetic b:Lvi8;
+
+.field public final synthetic c:Ljava/io/IOException;
+
+.field public final synthetic o:Z
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 9
+.method public synthetic constructor <init>(Ljava/lang/Object;Lev7;Lvi8;Ljava/io/IOException;Z)V
+    .locals 0
 
-    new-instance v0, Lbc4;
+    iput-object p1, p0, Lbc4;->X:Ljava/lang/Object;
 
-    invoke-direct {v0}, Ljx3;-><init>()V
+    iput-object p2, p0, Lbc4;->a:Lev7;
 
-    sput-object v0, Lbc4;->a:Lbc4;
+    iput-object p3, p0, Lbc4;->b:Lvi8;
 
-    sget-object v0, Ll5f;->a:Ll5f;
+    iput-object p4, p0, Lbc4;->c:Ljava/io/IOException;
 
-    invoke-static {}, Lkotlinx/coroutines/internal/SystemPropsKt;->getAVAILABLE_PROCESSORS()I
+    iput-boolean p5, p0, Lbc4;->o:Z
 
-    move-result v1
-
-    const/16 v2, 0x40
-
-    if-ge v2, v1, :cond_0
-
-    move v4, v1
-
-    goto :goto_0
-
-    :cond_0
-    move v4, v2
-
-    :goto_0
-    const/16 v7, 0xc
-
-    const/4 v8, 0x0
-
-    const-string v3, "kotlinx.coroutines.io.parallelism"
-
-    const/4 v5, 0x0
-
-    const/4 v6, 0x0
-
-    invoke-static/range {v3 .. v8}, Lkotlinx/coroutines/internal/SystemPropsKt;->systemProp$default(Ljava/lang/String;IIIILjava/lang/Object;)I
-
-    move-result v1
-
-    const/4 v2, 0x2
-
-    const/4 v3, 0x0
-
-    invoke-static {v0, v1, v3, v2, v3}, Ljx3;->limitedParallelism$default(Ljx3;ILjava/lang/String;ILjava/lang/Object;)Ljx3;
-
-    move-result-object v0
-
-    sput-object v0, Lbc4;->b:Ljx3;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final close()V
-    .locals 1
+.method public accept(Ljava/lang/Object;)V
+    .locals 8
 
-    new-instance p0, Ljava/lang/IllegalStateException;
+    iget-object v0, p0, Lbc4;->X:Ljava/lang/Object;
 
-    const-string v0, "Cannot be invoked on Dispatchers.IO"
+    check-cast v0, Lz96;
 
-    invoke-direct {p0, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    move-object v1, p1
 
-    throw p0
-.end method
+    check-cast v1, Lhq8;
 
-.method public final dispatch(Lhx3;Ljava/lang/Runnable;)V
-    .locals 0
+    iget v2, v0, Lz96;->b:I
 
-    sget-object p0, Lbc4;->b:Ljx3;
+    iget-object p1, v0, Lz96;->c:Ljava/lang/Object;
 
-    invoke-virtual {p0, p1, p2}, Ljx3;->dispatch(Lhx3;Ljava/lang/Runnable;)V
+    move-object v3, p1
 
-    return-void
-.end method
+    check-cast v3, Lyp8;
 
-.method public final dispatchYield(Lhx3;Ljava/lang/Runnable;)V
-    .locals 0
+    iget-object v4, p0, Lbc4;->a:Lev7;
 
-    sget-object p0, Lbc4;->b:Ljx3;
+    iget-object v5, p0, Lbc4;->b:Lvi8;
 
-    invoke-virtual {p0, p1, p2}, Ljx3;->dispatchYield(Lhx3;Ljava/lang/Runnable;)V
+    iget-object v6, p0, Lbc4;->c:Ljava/io/IOException;
 
-    return-void
-.end method
+    iget-boolean v7, p0, Lbc4;->o:Z
 
-.method public final execute(Ljava/lang/Runnable;)V
-    .locals 1
-
-    sget-object v0, Laz4;->a:Laz4;
-
-    invoke-virtual {p0, v0, p1}, Lbc4;->dispatch(Lhx3;Ljava/lang/Runnable;)V
+    invoke-interface/range {v1 .. v7}, Lhq8;->a(ILyp8;Lev7;Lvi8;Ljava/io/IOException;Z)V
 
     return-void
 .end method
 
-.method public final limitedParallelism(ILjava/lang/String;)Ljx3;
-    .locals 0
+.method public invoke(Ljava/lang/Object;)V
+    .locals 7
 
-    sget-object p0, Ll5f;->a:Ll5f;
+    iget-object v0, p0, Lbc4;->X:Ljava/lang/Object;
 
-    invoke-virtual {p0, p1, p2}, Ll5f;->limitedParallelism(ILjava/lang/String;)Ljx3;
+    move-object v2, v0
 
-    move-result-object p0
+    check-cast v2, Lfd;
 
-    return-object p0
-.end method
+    iget-boolean v6, p0, Lbc4;->o:Z
 
-.method public final n()Ljava/util/concurrent/Executor;
-    .locals 0
+    move-object v1, p1
 
-    return-object p0
-.end method
+    check-cast v1, Lgd;
 
-.method public final toString()Ljava/lang/String;
-    .locals 0
+    iget-object v3, p0, Lbc4;->a:Lev7;
 
-    const-string p0, "Dispatchers.IO"
+    iget-object v4, p0, Lbc4;->b:Lvi8;
 
-    return-object p0
+    iget-object v5, p0, Lbc4;->c:Ljava/io/IOException;
+
+    invoke-interface/range {v1 .. v6}, Lgd;->b0(Lfd;Lev7;Lvi8;Ljava/io/IOException;Z)V
+
+    return-void
 .end method

@@ -1,157 +1,287 @@
-.class public final enum Loj3;
-.super Ljava/lang/Enum;
+.class public final Loj3;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Landroid/os/Parcelable;
 
 
 # static fields
-.field public static final enum X:Loj3;
+.field public static final CREATOR:Landroid/os/Parcelable$Creator;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroid/os/Parcelable$Creator<",
+            "Loj3;",
+            ">;"
+        }
+    .end annotation
+.end field
 
-.field public static final enum Y:Loj3;
 
-.field public static final enum Z:Loj3;
+# instance fields
+.field public final a:I
 
-.field public static final enum a:Loj3;
+.field public final b:I
 
-.field public static final enum b:Loj3;
-
-.field public static final enum c:Loj3;
-
-.field public static final enum o:Loj3;
-
-.field public static final enum o0:Loj3;
-
-.field public static final enum p0:Loj3;
-
-.field public static final synthetic q0:[Loj3;
+.field public final c:I
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 11
+    .locals 2
 
-    new-instance v0, Loj3;
+    new-instance v0, Lz7;
 
-    const-string v1, "OPEN_PROFILE"
+    const/16 v1, 0x19
 
-    const/4 v2, 0x0
+    invoke-direct {v0, v1}, Lz7;-><init>(I)V
 
-    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v0, Loj3;->a:Loj3;
-
-    new-instance v1, Loj3;
-
-    const-string v2, "SHARE_CONTACT"
-
-    const/4 v3, 0x1
-
-    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v1, Loj3;->b:Loj3;
-
-    new-instance v2, Loj3;
-
-    const-string v3, "WRITE"
-
-    const/4 v4, 0x2
-
-    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v2, Loj3;->c:Loj3;
-
-    new-instance v3, Loj3;
-
-    const-string v4, "SELECT"
-
-    const/4 v5, 0x3
-
-    invoke-direct {v3, v4, v5}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v3, Loj3;->o:Loj3;
-
-    new-instance v4, Loj3;
-
-    const-string v5, "BLOCK"
-
-    const/4 v6, 0x4
-
-    invoke-direct {v4, v5, v6}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v4, Loj3;->X:Loj3;
-
-    new-instance v5, Loj3;
-
-    const-string v6, "DELETE"
-
-    const/4 v7, 0x5
-
-    invoke-direct {v5, v6, v7}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v5, Loj3;->Y:Loj3;
-
-    new-instance v6, Loj3;
-
-    const-string v7, "AUDIO_CALL"
-
-    const/4 v8, 0x6
-
-    invoke-direct {v6, v7, v8}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v6, Loj3;->Z:Loj3;
-
-    new-instance v7, Loj3;
-
-    const-string v8, "VIDEO_CALL"
-
-    const/4 v9, 0x7
-
-    invoke-direct {v7, v8, v9}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v7, Loj3;->o0:Loj3;
-
-    new-instance v8, Loj3;
-
-    const-string v9, "SUSPEND"
-
-    const/16 v10, 0x8
-
-    invoke-direct {v8, v9, v10}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v8, Loj3;->p0:Loj3;
-
-    filled-new-array/range {v0 .. v8}, [Loj3;
-
-    move-result-object v0
-
-    sput-object v0, Loj3;->q0:[Loj3;
+    sput-object v0, Loj3;->CREATOR:Landroid/os/Parcelable$Creator;
 
     return-void
 .end method
 
-.method public static valueOf(Ljava/lang/String;)Loj3;
-    .locals 1
+.method public constructor <init>(III)V
+    .locals 0
 
-    const-class v0, Loj3;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+    iput p1, p0, Loj3;->a:I
+
+    iput p2, p0, Loj3;->b:I
+
+    iput p3, p0, Loj3;->c:I
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final describeContents()I
+    .locals 0
+
+    const/4 p0, 0x0
+
+    return p0
+.end method
+
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 2
+
+    if-ne p0, p1, :cond_0
+
+    goto :goto_1
+
+    :cond_0
+    instance-of v0, p1, Loj3;
+
+    if-nez v0, :cond_1
+
+    goto :goto_0
+
+    :cond_1
+    check-cast p1, Loj3;
+
+    iget v0, p0, Loj3;->a:I
+
+    iget v1, p1, Loj3;->a:I
+
+    if-eq v0, v1, :cond_2
+
+    goto :goto_0
+
+    :cond_2
+    iget v0, p0, Loj3;->b:I
+
+    iget v1, p1, Loj3;->b:I
+
+    if-eq v0, v1, :cond_3
+
+    goto :goto_0
+
+    :cond_3
+    iget p0, p0, Loj3;->c:I
+
+    iget p1, p1, Loj3;->c:I
+
+    if-eq p0, p1, :cond_4
+
+    :goto_0
+    const/4 p0, 0x0
+
+    return p0
+
+    :cond_4
+    :goto_1
+    const/4 p0, 0x1
+
+    return p0
+.end method
+
+.method public final hashCode()I
+    .locals 3
+
+    iget v0, p0, Loj3;->a:I
+
+    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
+
+    move-result v0
+
+    const/16 v1, 0x1f
+
+    mul-int/2addr v0, v1
+
+    iget v2, p0, Loj3;->b:I
+
+    invoke-static {v2, v0, v1}, Lbg9;->h(III)I
+
+    move-result v0
+
+    iget p0, p0, Loj3;->c:I
+
+    invoke-static {p0}, Lmw1;->t(I)I
+
+    move-result p0
+
+    add-int/2addr p0, v0
+
+    return p0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 3
+
+    const-string v0, "Icon(iconRes="
+
+    const-string v1, ", size="
+
+    iget v2, p0, Loj3;->a:I
+
+    invoke-static {v2, v0, v1}, Lee5;->l(ILjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    const/4 v1, 0x1
+
+    iget v2, p0, Loj3;->b:I
+
+    if-eq v2, v1, :cond_1
+
+    const/4 v1, 0x2
+
+    if-eq v2, v1, :cond_0
+
+    const-string v1, "null"
+
+    goto :goto_0
+
+    :cond_0
+    const-string v1, "LARGE"
+
+    goto :goto_0
+
+    :cond_1
+    const-string v1, "SMALL"
+
+    :goto_0
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", appearance="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const/4 v1, 0x1
+
+    iget p0, p0, Loj3;->c:I
+
+    if-eq p0, v1, :cond_3
+
+    const/4 v1, 0x2
+
+    if-eq p0, v1, :cond_2
+
+    const-string p0, "null"
+
+    goto :goto_1
+
+    :cond_2
+    const-string p0, "SECONDARY"
+
+    goto :goto_1
+
+    :cond_3
+    const-string p0, "PRIMARY"
+
+    :goto_1
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string p0, ")"
+
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p0
-
-    check-cast p0, Loj3;
 
     return-object p0
 .end method
 
-.method public static values()[Loj3;
+.method public final writeToParcel(Landroid/os/Parcel;I)V
     .locals 1
 
-    sget-object v0, Loj3;->q0:[Loj3;
+    iget p2, p0, Loj3;->a:I
 
-    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
 
-    move-result-object v0
+    const/4 p2, 0x1
 
-    check-cast v0, [Loj3;
+    iget v0, p0, Loj3;->b:I
 
-    return-object v0
+    if-eq v0, p2, :cond_1
+
+    const/4 p2, 0x2
+
+    if-ne v0, p2, :cond_0
+
+    const-string p2, "LARGE"
+
+    goto :goto_0
+
+    :cond_0
+    const/4 p0, 0x0
+
+    throw p0
+
+    :cond_1
+    const-string p2, "SMALL"
+
+    :goto_0
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
+
+    const/4 p2, 0x1
+
+    iget p0, p0, Loj3;->c:I
+
+    if-eq p0, p2, :cond_3
+
+    const/4 p2, 0x2
+
+    if-ne p0, p2, :cond_2
+
+    const-string p0, "SECONDARY"
+
+    goto :goto_1
+
+    :cond_2
+    const/4 p0, 0x0
+
+    throw p0
+
+    :cond_3
+    const-string p0, "PRIMARY"
+
+    :goto_1
+    invoke-virtual {p1, p0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
+
+    return-void
 .end method

@@ -8,7 +8,7 @@
 
 
 # direct methods
-.method public constructor <init>(ILjava/lang/String;Lcom/google/android/exoplayer2/upstream/DataSourceException;Ljava/util/Map;Lo34;)V
+.method public constructor <init>(ILjava/lang/String;Lcom/google/android/exoplayer2/upstream/DataSourceException;Ljava/util/Map;Lm74;)V
     .locals 0
 
     new-instance p2, Ljava/lang/StringBuilder;

@@ -1,50 +1,11 @@
-.class public abstract Ltyb;
+.class public interface abstract Ltyb;
 .super Ljava/lang/Object;
+.source "SourceFile"
 
 
-# static fields
-.field public static oneme_notifications_settings_chat_enable_notifications_button:I = 0x7f130884
+# virtual methods
+.method public abstract a()V
+.end method
 
-.field public static oneme_notifications_settings_chat_enabled_section_title:I = 0x7f130885
-
-.field public static oneme_notifications_settings_chat_settings_button:I = 0x7f130886
-
-.field public static oneme_notifications_settings_chat_toolbar_title:I = 0x7f130887
-
-.field public static oneme_notifications_settings_chat_type_all_button:I = 0x7f130888
-
-.field public static oneme_notifications_settings_chat_type_pin_reply_button:I = 0x7f130889
-
-.field public static oneme_notifications_settings_dialog_enable_notifications_button:I = 0x7f13088a
-
-.field public static oneme_notifications_settings_dialog_settings_button:I = 0x7f13088b
-
-.field public static oneme_notifications_settings_dialog_toolbar_title:I = 0x7f13088c
-
-.field public static oneme_notifications_settings_enable_all_notifications:I = 0x7f13088d
-
-.field public static oneme_notifications_settings_open_settings_button_description:I = 0x7f13088e
-
-.field public static oneme_notifications_settings_open_settings_button_title:I = 0x7f13088f
-
-.field public static oneme_notifications_settings_other_in_app_push_button_description:I = 0x7f130890
-
-.field public static oneme_notifications_settings_other_in_app_push_button_title:I = 0x7f130891
-
-.field public static oneme_notifications_settings_other_new_user_button:I = 0x7f130892
-
-.field public static oneme_notifications_settings_other_settings_button:I = 0x7f130893
-
-.field public static oneme_notifications_settings_other_toolbar_title:I = 0x7f130894
-
-.field public static oneme_notifications_settings_reset_default_button:I = 0x7f130895
-
-.field public static oneme_notifications_settings_show_content_button:I = 0x7f130896
-
-.field public static oneme_notifications_settings_toolbar_title:I = 0x7f130897
-
-.field public static oneme_notifications_settings_type_off:I = 0x7f130898
-
-.field public static oneme_notifications_settings_type_on:I = 0x7f130899
-
-.field public static oneme_notifications_settings_type_reply:I = 0x7f13089a
+.method public abstract b()V
+.end method

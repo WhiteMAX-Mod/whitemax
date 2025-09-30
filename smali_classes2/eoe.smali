@@ -1,44 +1,108 @@
 .class public final Leoe;
-.super Ljava/lang/Object;
+.super Lcoe;
 .source "SourceFile"
 
 # interfaces
-.implements Landroid/os/Parcelable$Creator;
+.implements Landroid/os/Parcelable;
 
 
-# virtual methods
-.method public final createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
-    .locals 3
+# static fields
+.field public static final CREATOR:Ldoe;
 
-    new-instance p0, Lfoe;
 
-    invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
+# instance fields
+.field public final b:Le44;
 
-    move-result v0
 
-    invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
+# direct methods
+.method static constructor <clinit>()V
+    .locals 1
 
-    move-result v1
+    new-instance v0, Ldoe;
 
-    const-class v2, Ljava/lang/Object;
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    invoke-virtual {v2}, Ljava/lang/Class;->getClassLoader()Ljava/lang/ClassLoader;
+    sput-object v0, Leoe;->CREATOR:Ldoe;
 
-    move-result-object v2
+    return-void
+.end method
 
-    invoke-virtual {p1, v2}, Landroid/os/Parcel;->readArrayList(Ljava/lang/ClassLoader;)Ljava/util/ArrayList;
+.method public constructor <init>(Landroid/os/Parcel;)V
+    .locals 1
+
+    .line 2
+    const-class v0, Le44;
+
+    invoke-virtual {v0}, Ljava/lang/Class;->getClassLoader()Ljava/lang/ClassLoader;
+
+    move-result-object v0
+
+    invoke-virtual {p1, v0}, Landroid/os/Parcel;->readBundle(Ljava/lang/ClassLoader;)Landroid/os/Bundle;
 
     move-result-object p1
 
-    invoke-direct {p0, p1, v0, v1}, Lfoe;-><init>(Ljava/util/List;II)V
+    if-nez p1, :cond_0
 
-    return-object p0
+    sget-object p1, Landroid/os/Bundle;->EMPTY:Landroid/os/Bundle;
+
+    .line 3
+    :cond_0
+    invoke-static {p1}, Le44;->b(Landroid/os/Bundle;)Le44;
+
+    move-result-object p1
+
+    .line 4
+    invoke-direct {p0, p1}, Leoe;-><init>(Le44;)V
+
+    return-void
 .end method
 
-.method public final newArray(I)[Ljava/lang/Object;
+.method public constructor <init>(Le44;)V
+    .locals 1
+
+    .line 1
+    iget-object v0, p1, Le44;->a:Ljava/lang/CharSequence;
+
+    invoke-static {v0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-direct {p0, v0}, Lcoe;-><init>(Ljava/lang/String;)V
+
+    iput-object p1, p0, Leoe;->b:Le44;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final describeContents()I
     .locals 0
 
-    new-array p0, p1, [Lfoe;
+    const/4 p0, 0x0
 
-    return-object p0
+    return p0
+.end method
+
+.method public final writeToParcel(Landroid/os/Parcel;I)V
+    .locals 1
+
+    iget-object p0, p0, Leoe;->b:Le44;
+
+    invoke-virtual {p0}, Le44;->c()Landroid/os/Bundle;
+
+    move-result-object p2
+
+    iget-object p0, p0, Le44;->d:Landroid/graphics/Bitmap;
+
+    if-eqz p0, :cond_0
+
+    sget-object v0, Le44;->v:Ljava/lang/String;
+
+    invoke-virtual {p2, v0, p0}, Landroid/os/Bundle;->putParcelable(Ljava/lang/String;Landroid/os/Parcelable;)V
+
+    :cond_0
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeBundle(Landroid/os/Bundle;)V
+
+    return-void
 .end method

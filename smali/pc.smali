@@ -1,23 +1,21 @@
 .class public final Lpc;
-.super Ljava/lang/Object;
+.super Landroid/widget/ArrayAdapter;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:[B
-
-.field public final b:I
-
-
-# direct methods
-.method public constructor <init>(I[B)V
+# virtual methods
+.method public final getItemId(I)J
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    int-to-long p0, p1
 
-    iput-object p2, p0, Lpc;->a:[B
+    return-wide p0
+.end method
 
-    iput p1, p0, Lpc;->b:I
+.method public final hasStableIds()Z
+    .locals 0
 
-    return-void
+    const/4 p0, 0x1
+
+    return p0
 .end method

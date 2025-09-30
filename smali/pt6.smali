@@ -1,106 +1,229 @@
 .class public final Lpt6;
-.super Ljava/lang/Object;
+.super Lzt6;
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:Lut6;
+# instance fields
+.field public final d:I
+
+.field public final e:J
+
+.field public final f:Z
+
+.field public final g:Z
+
+.field public final h:J
+
+.field public final i:Z
+
+.field public final j:I
+
+.field public final k:J
+
+.field public final l:I
+
+.field public final m:J
+
+.field public final n:J
+
+.field public final o:Z
+
+.field public final p:Z
+
+.field public final q:Lmw4;
+
+.field public final r:Ll37;
+
+.field public final s:Ll37;
+
+.field public final t:Lp37;
+
+.field public final u:J
+
+.field public final v:Lnt6;
+
+.field public final w:Ll37;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 5
+.method public constructor <init>(ILjava/lang/String;Ljava/util/List;JZJZIJIJJZZZLmw4;Ljava/util/List;Ljava/util/List;Lnt6;Ljava/util/Map;Ljava/util/List;)V
+    .locals 4
 
-    new-instance v0, Landroid/util/Size;
+    move/from16 v0, p18
 
-    const/16 v1, 0x280
+    invoke-direct {p0, p2, p3, v0}, Lzt6;-><init>(Ljava/lang/String;Ljava/util/List;Z)V
 
-    const/16 v2, 0x1e0
+    iput p1, p0, Lpt6;->d:I
 
-    invoke-direct {v0, v1, v2}, Landroid/util/Size;-><init>(II)V
+    iput-wide p7, p0, Lpt6;->h:J
 
-    sget-object v1, Lql5;->c:Lql5;
+    iput-boolean p6, p0, Lpt6;->g:Z
 
-    new-instance v2, Lfgc;
+    iput-boolean p9, p0, Lpt6;->i:Z
 
-    sget-object v3, Luqd;->c:Landroid/util/Size;
+    iput p10, p0, Lpt6;->j:I
 
-    invoke-direct {v2}, Ljava/lang/Object;-><init>()V
+    move-wide p1, p11
 
-    iput-object v3, v2, Lfgc;->a:Landroid/util/Size;
+    iput-wide p1, p0, Lpt6;->k:J
 
-    const/4 v3, 0x1
+    move/from16 p1, p13
 
-    iput v3, v2, Lfgc;->b:I
+    iput p1, p0, Lpt6;->l:I
 
-    new-instance v4, Legc;
+    move-wide/from16 p1, p14
 
-    invoke-direct {v4, v1, v2}, Legc;-><init>(Lql5;Lfgc;)V
+    iput-wide p1, p0, Lpt6;->m:J
 
-    new-instance v1, Lot6;
+    move-wide/from16 p1, p16
 
-    const/4 v2, 0x0
+    iput-wide p1, p0, Lpt6;->n:J
 
-    invoke-direct {v1, v2}, Lot6;-><init>(I)V
+    move/from16 p1, p19
 
-    sget-object v2, Lgv6;->E:Ls90;
+    iput-boolean p1, p0, Lpt6;->o:Z
 
-    iget-object v1, v1, Lot6;->b:Lzg9;
+    move/from16 p1, p20
 
-    invoke-virtual {v1, v2, v0}, Lzg9;->h(Ls90;Ljava/lang/Object;)V
+    iput-boolean p1, p0, Lpt6;->p:Z
 
-    sget-object v0, Lp9f;->g0:Ls90;
+    move-object/from16 p1, p21
 
-    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    iput-object p1, p0, Lpt6;->q:Lmw4;
 
-    move-result-object v2
+    invoke-static/range {p22 .. p22}, Ll37;->j(Ljava/util/Collection;)Ll37;
 
-    invoke-virtual {v1, v0, v2}, Lzg9;->h(Ls90;Ljava/lang/Object;)V
+    move-result-object p1
 
-    sget-object v0, Lgv6;->z:Ls90;
+    iput-object p1, p0, Lpt6;->r:Ll37;
 
-    const/4 v2, 0x0
+    invoke-static/range {p23 .. p23}, Ll37;->j(Ljava/util/Collection;)Ll37;
 
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    move-result-object p1
 
-    move-result-object v2
+    iput-object p1, p0, Lpt6;->s:Ll37;
 
-    invoke-virtual {v1, v0, v2}, Lzg9;->h(Ls90;Ljava/lang/Object;)V
+    invoke-static/range {p25 .. p25}, Lp37;->a(Ljava/util/Map;)Lp37;
 
-    sget-object v0, Lgv6;->H:Ls90;
+    move-result-object p1
 
-    invoke-virtual {v1, v0, v4}, Lzg9;->h(Ls90;Ljava/lang/Object;)V
+    iput-object p1, p0, Lpt6;->t:Lp37;
 
-    sget-object v0, Lzt4;->d:Lzt4;
+    invoke-static/range {p26 .. p26}, Ll37;->j(Ljava/util/Collection;)Ll37;
 
-    invoke-virtual {v0, v0}, Lzt4;->equals(Ljava/lang/Object;)Z
+    move-result-object p1
 
-    move-result v2
+    iput-object p1, p0, Lpt6;->w:Ll37;
 
-    if-eqz v2, :cond_0
+    invoke-interface/range {p23 .. p23}, Ljava/util/List;->isEmpty()Z
 
-    sget-object v2, Lwu6;->y:Ls90;
+    move-result p1
 
-    invoke-virtual {v1, v2, v0}, Lzg9;->h(Ls90;Ljava/lang/Object;)V
+    const-wide/16 p2, 0x0
 
-    new-instance v0, Lut6;
+    if-nez p1, :cond_0
 
-    invoke-static {v1}, Lqka;->a(Lrc3;)Lqka;
+    invoke-static/range {p23 .. p23}, Lkp;->r(Ljava/lang/Iterable;)Ljava/lang/Object;
 
-    move-result-object v1
+    move-result-object p1
 
-    invoke-direct {v0, v1}, Lut6;-><init>(Lqka;)V
+    check-cast p1, Lgt6;
 
-    sput-object v0, Lpt6;->a:Lut6;
+    iget-wide v0, p1, Lmt6;->X:J
 
-    return-void
+    iget-wide v2, p1, Lmt6;->c:J
+
+    add-long/2addr v0, v2
+
+    iput-wide v0, p0, Lpt6;->u:J
+
+    goto :goto_0
 
     :cond_0
-    new-instance v0, Ljava/lang/UnsupportedOperationException;
+    invoke-interface/range {p22 .. p22}, Ljava/util/List;->isEmpty()Z
 
-    const-string v1, "ImageAnalysis currently only supports SDR"
+    move-result p1
 
-    invoke-direct {v0, v1}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+    if-nez p1, :cond_1
 
-    throw v0
+    invoke-static/range {p22 .. p22}, Lkp;->r(Ljava/lang/Iterable;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lkt6;
+
+    iget-wide v0, p1, Lmt6;->X:J
+
+    iget-wide v2, p1, Lmt6;->c:J
+
+    add-long/2addr v0, v2
+
+    iput-wide v0, p0, Lpt6;->u:J
+
+    goto :goto_0
+
+    :cond_1
+    iput-wide p2, p0, Lpt6;->u:J
+
+    :goto_0
+    const-wide v0, -0x7fffffffffffffffL    # -4.9E-324
+
+    cmp-long p1, p4, v0
+
+    if-nez p1, :cond_2
+
+    goto :goto_1
+
+    :cond_2
+    cmp-long p1, p4, p2
+
+    if-ltz p1, :cond_3
+
+    iget-wide v0, p0, Lpt6;->u:J
+
+    invoke-static {v0, v1, p4, p5}, Ljava/lang/Math;->min(JJ)J
+
+    move-result-wide v0
+
+    goto :goto_1
+
+    :cond_3
+    iget-wide v0, p0, Lpt6;->u:J
+
+    add-long/2addr v0, p4
+
+    invoke-static {p2, p3, v0, v1}, Ljava/lang/Math;->max(JJ)J
+
+    move-result-wide v0
+
+    :goto_1
+    iput-wide v0, p0, Lpt6;->e:J
+
+    cmp-long p1, p4, p2
+
+    if-ltz p1, :cond_4
+
+    const/4 p1, 0x1
+
+    goto :goto_2
+
+    :cond_4
+    const/4 p1, 0x0
+
+    :goto_2
+    iput-boolean p1, p0, Lpt6;->f:Z
+
+    move-object/from16 p1, p24
+
+    iput-object p1, p0, Lpt6;->v:Lnt6;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final a(Ljava/util/List;)Ljava/lang/Object;
+    .locals 0
+
+    return-object p0
 .end method

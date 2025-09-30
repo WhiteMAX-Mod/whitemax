@@ -1,79 +1,99 @@
 .class public final Li16;
-.super Lq14;
+.super Landroidx/recyclerview/widget/RecyclerView;
 .source "SourceFile"
 
 
 # instance fields
-.field public final synthetic Z:Landroidx/fragment/app/a;
+.field public final U1:Lv06;
 
 
 # direct methods
-.method public constructor <init>(Landroidx/fragment/app/a;)V
-    .locals 0
+.method public constructor <init>(Landroid/content/Context;Ljava/util/concurrent/Executor;)V
+    .locals 2
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/4 v0, 0x0
 
-    iput-object p1, p0, Li16;->Z:Landroidx/fragment/app/a;
+    invoke-direct {p0, p1, v0}, Landroidx/recyclerview/widget/RecyclerView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
+
+    new-instance v0, Lv06;
+
+    invoke-direct {v0, p2}, Lv06;-><init>(Ljava/util/concurrent/Executor;)V
+
+    iput-object v0, p0, Li16;->U1:Lv06;
+
+    new-instance p2, Lh16;
+
+    invoke-direct {p2}, Ljava/lang/Object;-><init>()V
+
+    new-instance v1, Lone/me/chats/list/folderwidget/section/FolderWidgetsSectionView$1;
+
+    invoke-direct {v1, p1, p0}, Lone/me/chats/list/folderwidget/section/FolderWidgetsSectionView$1;-><init>(Landroid/content/Context;Li16;)V
+
+    invoke-virtual {p0, v1}, Landroidx/recyclerview/widget/RecyclerView;->setLayoutManager(Landroidx/recyclerview/widget/a;)V
+
+    invoke-virtual {p0, p2}, Landroidx/recyclerview/widget/RecyclerView;->l(Looc;)V
+
+    invoke-virtual {p0, v0}, Landroidx/recyclerview/widget/RecyclerView;->setAdapter(Lcoc;)V
+
+    new-instance p1, Lvy0;
+
+    const/16 p2, 0x8
+
+    int-to-float p2, p2
+
+    invoke-static {}, Lvo4;->d()Landroid/content/res/Resources;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object v0
+
+    iget v0, v0, Landroid/util/DisplayMetrics;->density:F
+
+    mul-float/2addr p2, v0
+
+    invoke-static {p2}, Lya6;->G(F)I
+
+    move-result p2
+
+    const/4 v0, 0x6
+
+    int-to-float v0, v0
+
+    invoke-static {}, Lvo4;->d()Landroid/content/res/Resources;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object v1
+
+    iget v1, v1, Landroid/util/DisplayMetrics;->density:F
+
+    mul-float/2addr v0, v1
+
+    invoke-static {v0}, Lya6;->G(F)I
+
+    move-result v0
+
+    const/4 v1, 0x4
+
+    invoke-direct {p1, p2, v0, v1}, Lvy0;-><init>(III)V
+
+    invoke-virtual {p0, p1}, Landroidx/recyclerview/widget/RecyclerView;->j(Ljoc;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final c0(I)Landroid/view/View;
-    .locals 2
-
-    iget-object p0, p0, Li16;->Z:Landroidx/fragment/app/a;
-
-    iget-object v0, p0, Landroidx/fragment/app/a;->Q0:Landroid/view/View;
-
-    if-eqz v0, :cond_0
-
-    invoke-virtual {v0, p1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
-
-    move-result-object p0
-
-    return-object p0
-
-    :cond_0
-    new-instance p1, Ljava/lang/IllegalStateException;
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "Fragment "
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string p0, " does not have a view"
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    invoke-direct {p1, p0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-.end method
-
-.method public final d0()Z
+.method public final setListener(Lg16;)V
     .locals 0
 
-    iget-object p0, p0, Li16;->Z:Landroidx/fragment/app/a;
+    iget-object p0, p0, Li16;->U1:Lv06;
 
-    iget-object p0, p0, Landroidx/fragment/app/a;->Q0:Landroid/view/View;
+    iput-object p1, p0, Lv06;->Y:Ljava/lang/Object;
 
-    if-eqz p0, :cond_0
-
-    const/4 p0, 0x1
-
-    return p0
-
-    :cond_0
-    const/4 p0, 0x0
-
-    return p0
+    return-void
 .end method

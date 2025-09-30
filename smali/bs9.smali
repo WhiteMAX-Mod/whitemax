@@ -1,55 +1,23 @@
-.class public abstract Lbs9;
+.class public final Lbs9;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
+# instance fields
+.field public final a:I
+
+.field public final b:Z
+
+
 # direct methods
-.method public static a(Landroid/app/Notification;)Z
+.method public constructor <init>(IIZ)V
     .locals 0
 
-    invoke-virtual {p0}, Landroid/app/Notification;->getAllowSystemGeneratedContextualActions()Z
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    move-result p0
+    iput p2, p0, Lbs9;->a:I
 
-    return p0
-.end method
+    iput-boolean p3, p0, Lbs9;->b:Z
 
-.method public static b(Landroid/app/Notification;)Landroid/app/Notification$BubbleMetadata;
-    .locals 0
-
-    invoke-virtual {p0}, Landroid/app/Notification;->getBubbleMetadata()Landroid/app/Notification$BubbleMetadata;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static c(Landroid/app/RemoteInput;)I
-    .locals 0
-
-    invoke-virtual {p0}, Landroid/app/RemoteInput;->getEditChoicesBeforeSending()I
-
-    move-result p0
-
-    return p0
-.end method
-
-.method public static d(Landroid/app/Notification;)Landroid/content/LocusId;
-    .locals 0
-
-    invoke-virtual {p0}, Landroid/app/Notification;->getLocusId()Landroid/content/LocusId;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static e(Landroid/app/Notification$Action;)Z
-    .locals 0
-
-    invoke-virtual {p0}, Landroid/app/Notification$Action;->isContextual()Z
-
-    move-result p0
-
-    return p0
+    return-void
 .end method

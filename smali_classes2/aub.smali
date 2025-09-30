@@ -1,26 +1,86 @@
-.class public abstract Laub;
-.super Ljava/lang/Object;
+.class public final Laub;
+.super Luc0;
+.source "SourceFile"
 
 
-# static fields
-.field public static oneme_main_bottom_bar:I = 0x7f0a0717
+# instance fields
+.field public final b:J
 
-.field public static oneme_main_calls_bottom_item:I = 0x7f0a0718
 
-.field public static oneme_main_calls_container:I = 0x7f0a0719
+# direct methods
+.method public constructor <init>(J)V
+    .locals 1
 
-.field public static oneme_main_chats_bottom_item:I = 0x7f0a071a
+    const/16 v0, 0xf
 
-.field public static oneme_main_chats_container:I = 0x7f0a071b
+    invoke-direct {p0, v0}, Luc0;-><init>(I)V
 
-.field public static oneme_main_contacts_bottom_item:I = 0x7f0a071c
+    iput-wide p1, p0, Laub;->b:J
 
-.field public static oneme_main_contacts_container:I = 0x7f0a071d
+    return-void
+.end method
 
-.field public static oneme_main_container:I = 0x7f0a071e
 
-.field public static oneme_main_root:I = 0x7f0a071f
+# virtual methods
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 5
 
-.field public static oneme_main_settings_bottom_item:I = 0x7f0a0720
+    const/4 v0, 0x1
 
-.field public static oneme_main_settings_container:I = 0x7f0a0721
+    if-ne p0, p1, :cond_0
+
+    return v0
+
+    :cond_0
+    instance-of v1, p1, Laub;
+
+    const/4 v2, 0x0
+
+    if-nez v1, :cond_1
+
+    return v2
+
+    :cond_1
+    check-cast p1, Laub;
+
+    iget-wide v3, p0, Laub;->b:J
+
+    iget-wide p0, p1, Laub;->b:J
+
+    cmp-long p0, v3, p0
+
+    if-eqz p0, :cond_2
+
+    return v2
+
+    :cond_2
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 2
+
+    iget-wide v0, p0, Laub;->b:J
+
+    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
+
+    move-result p0
+
+    return p0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 4
+
+    const-string v0, "Search(chatId="
+
+    const-string v1, ")"
+
+    iget-wide v2, p0, Laub;->b:J
+
+    invoke-static {v2, v3, v0, v1}, Lwsf;->e(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p0
+
+    return-object p0
+.end method

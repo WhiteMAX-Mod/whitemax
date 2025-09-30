@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lncf;
+.implements Lrtf;
 
 
 # virtual methods

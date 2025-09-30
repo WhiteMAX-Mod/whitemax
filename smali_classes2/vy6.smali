@@ -1,193 +1,319 @@
 .class public final Lvy6;
-.super Lqde;
+.super Ljava/lang/Object;
 .source "SourceFile"
-
-# interfaces
-.implements Ll66;
 
 
 # instance fields
-.field public final synthetic X:Ll86;
+.field public final a:I
 
-.field public final synthetic Y:Lxy6;
+.field public final b:I
+
+.field public final c:I
+
+.field public final d:I
+
+.field public final e:I
+
+.field public final f:I
+
+.field public final g:I
+
+.field public final h:I
+
+.field public final i:I
+
+.field public final j:I
 
 
 # direct methods
-.method public constructor <init>(Ll86;Lxy6;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(IIIIIIIIII)V
     .locals 0
 
-    iput-object p1, p0, Lvy6;->X:Ll86;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p2, p0, Lvy6;->Y:Lxy6;
+    iput p1, p0, Lvy6;->a:I
 
-    const/4 p1, 0x2
+    iput p2, p0, Lvy6;->b:I
 
-    invoke-direct {p0, p1, p3}, Lqde;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput p3, p0, Lvy6;->c:I
+
+    iput p4, p0, Lvy6;->d:I
+
+    iput p5, p0, Lvy6;->e:I
+
+    iput p6, p0, Lvy6;->f:I
+
+    iput p7, p0, Lvy6;->g:I
+
+    iput p8, p0, Lvy6;->h:I
+
+    iput p9, p0, Lvy6;->i:I
+
+    iput p10, p0, Lvy6;->j:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 2
 
-    check-cast p1, Lox3;
-
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Lvy6;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p0
-
-    check-cast p0, Lvy6;
-
-    sget-object p1, Le5f;->a:Le5f;
-
-    invoke-virtual {p0, p1}, Lvy6;->o(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 1
-
-    new-instance p1, Lvy6;
-
-    iget-object v0, p0, Lvy6;->X:Ll86;
-
-    iget-object p0, p0, Lvy6;->Y:Lxy6;
-
-    invoke-direct {p1, v0, p0, p2}, Lvy6;-><init>(Ll86;Lxy6;Lkotlin/coroutines/Continuation;)V
-
-    return-object p1
-.end method
-
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 11
-
-    invoke-static {p1}, Lsgg;->Z(Ljava/lang/Object;)V
-
-    sget-object p1, Li86;->a:Li86;
-
-    iget-object v0, p0, Lvy6;->X:Ll86;
-
-    invoke-static {v0, p1}, Lxq7;->d(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_0
-
-    new-instance p0, Ljava/lang/Integer;
-
-    const/4 p1, -0x1
-
-    invoke-direct {p0, p1}, Ljava/lang/Integer;-><init>(I)V
-
-    return-object p0
-
-    :cond_0
-    invoke-virtual {v0}, Ll86;->d()Ljava/util/List;
-
-    move-result-object p1
-
-    invoke-interface {p1}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
-
-    move-result-object p1
-
-    const/4 v1, 0x0
-
-    move v2, v1
-
-    :goto_0
-    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v3
-
-    if-eqz v3, :cond_2
-
-    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v3
-
-    check-cast v3, Lf86;
-
-    iget-object v4, p0, Lvy6;->Y:Lxy6;
-
-    iget-object v5, v4, Lxy6;->o:Landroid/content/ContentResolver;
-
-    invoke-virtual {v3}, Lf86;->i()Landroid/net/Uri;
-
-    move-result-object v6
-
-    invoke-virtual {v3}, Lf86;->f()Ljava/lang/String;
-
-    move-result-object v4
-
-    filled-new-array {v4}, [Ljava/lang/String;
-
-    move-result-object v7
-
-    invoke-virtual {v0, v3}, Ll86;->e(Lf86;)Ljava/lang/String;
-
-    move-result-object v8
-
-    invoke-virtual {v0, v3}, Ll86;->a(Lf86;)[Ljava/lang/String;
-
-    move-result-object v9
-
-    const/4 v10, 0x0
-
-    invoke-virtual/range {v5 .. v10}, Landroid/content/ContentResolver;->query(Landroid/net/Uri;[Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;)Landroid/database/Cursor;
-
-    move-result-object v3
-
-    if-eqz v3, :cond_1
-
-    :try_start_0
-    invoke-interface {v3}, Landroid/database/Cursor;->getCount()I
-
-    move-result v4
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    invoke-interface {v3}, Ljava/io/Closeable;->close()V
+    if-ne p0, p1, :cond_0
 
     goto :goto_1
 
-    :catchall_0
-    move-exception v0
+    :cond_0
+    instance-of v0, p1, Lvy6;
 
-    move-object p0, v0
+    if-nez v0, :cond_1
 
-    :try_start_1
-    throw p0
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_1
-
-    :catchall_1
-    move-exception v0
-
-    move-object p1, v0
-
-    invoke-static {v3, p0}, Liz7;->d(Ljava/io/Closeable;Ljava/lang/Throwable;)V
-
-    throw p1
+    goto :goto_0
 
     :cond_1
-    move v4, v1
+    check-cast p1, Lvy6;
 
-    :goto_1
-    add-int/2addr v2, v4
+    iget v0, p0, Lvy6;->a:I
+
+    iget v1, p1, Lvy6;->a:I
+
+    if-eq v0, v1, :cond_2
 
     goto :goto_0
 
     :cond_2
-    new-instance p0, Ljava/lang/Integer;
+    iget v0, p0, Lvy6;->b:I
 
-    invoke-direct {p0, v2}, Ljava/lang/Integer;-><init>(I)V
+    iget v1, p1, Lvy6;->b:I
+
+    if-eq v0, v1, :cond_3
+
+    goto :goto_0
+
+    :cond_3
+    iget v0, p0, Lvy6;->c:I
+
+    iget v1, p1, Lvy6;->c:I
+
+    if-eq v0, v1, :cond_4
+
+    goto :goto_0
+
+    :cond_4
+    iget v0, p0, Lvy6;->d:I
+
+    iget v1, p1, Lvy6;->d:I
+
+    if-eq v0, v1, :cond_5
+
+    goto :goto_0
+
+    :cond_5
+    iget v0, p0, Lvy6;->e:I
+
+    iget v1, p1, Lvy6;->e:I
+
+    if-eq v0, v1, :cond_6
+
+    goto :goto_0
+
+    :cond_6
+    iget v0, p0, Lvy6;->f:I
+
+    iget v1, p1, Lvy6;->f:I
+
+    if-eq v0, v1, :cond_7
+
+    goto :goto_0
+
+    :cond_7
+    iget v0, p0, Lvy6;->g:I
+
+    iget v1, p1, Lvy6;->g:I
+
+    if-eq v0, v1, :cond_8
+
+    goto :goto_0
+
+    :cond_8
+    iget v0, p0, Lvy6;->h:I
+
+    iget v1, p1, Lvy6;->h:I
+
+    if-eq v0, v1, :cond_9
+
+    goto :goto_0
+
+    :cond_9
+    iget v0, p0, Lvy6;->i:I
+
+    iget v1, p1, Lvy6;->i:I
+
+    if-eq v0, v1, :cond_a
+
+    goto :goto_0
+
+    :cond_a
+    iget p0, p0, Lvy6;->j:I
+
+    iget p1, p1, Lvy6;->j:I
+
+    if-eq p0, p1, :cond_b
+
+    :goto_0
+    const/4 p0, 0x0
+
+    return p0
+
+    :cond_b
+    :goto_1
+    const/4 p0, 0x1
+
+    return p0
+.end method
+
+.method public final hashCode()I
+    .locals 3
+
+    iget v0, p0, Lvy6;->a:I
+
+    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
+
+    move-result v0
+
+    const/16 v1, 0x1f
+
+    mul-int/2addr v0, v1
+
+    iget v2, p0, Lvy6;->b:I
+
+    invoke-static {v2, v0, v1}, Lz7e;->m(III)I
+
+    move-result v0
+
+    iget v2, p0, Lvy6;->c:I
+
+    invoke-static {v2, v0, v1}, Lz7e;->m(III)I
+
+    move-result v0
+
+    iget v2, p0, Lvy6;->d:I
+
+    invoke-static {v2, v0, v1}, Lz7e;->m(III)I
+
+    move-result v0
+
+    iget v2, p0, Lvy6;->e:I
+
+    invoke-static {v2, v0, v1}, Lz7e;->m(III)I
+
+    move-result v0
+
+    iget v2, p0, Lvy6;->f:I
+
+    invoke-static {v2, v0, v1}, Lz7e;->m(III)I
+
+    move-result v0
+
+    iget v2, p0, Lvy6;->g:I
+
+    invoke-static {v2, v0, v1}, Lz7e;->m(III)I
+
+    move-result v0
+
+    iget v2, p0, Lvy6;->h:I
+
+    invoke-static {v2, v0, v1}, Lz7e;->m(III)I
+
+    move-result v0
+
+    const v2, -0x4d0b4005
+
+    invoke-static {v2, v0, v1}, Lz7e;->m(III)I
+
+    move-result v0
+
+    const v2, -0x4d0f5109
+
+    invoke-static {v2, v0, v1}, Lz7e;->m(III)I
+
+    move-result v0
+
+    iget v2, p0, Lvy6;->i:I
+
+    invoke-static {v2, v0, v1}, Lz7e;->m(III)I
+
+    move-result v0
+
+    iget p0, p0, Lvy6;->j:I
+
+    invoke-static {p0}, Ljava/lang/Integer;->hashCode(I)I
+
+    move-result p0
+
+    add-int/2addr p0, v0
+
+    return p0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 5
+
+    const-string v0, ", earthStep2="
+
+    const-string v1, ", earthStrokeStep1="
+
+    const-string v2, "IconLocalCategoryColors(earthStep1="
+
+    iget v3, p0, Lvy6;->a:I
+
+    iget v4, p0, Lvy6;->b:I
+
+    invoke-static {v2, v3, v0, v4, v1}, Lsg0;->j(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    const-string v1, ", earthStrokeStep2="
+
+    const-string v2, ", mercuryStep1="
+
+    iget v3, p0, Lvy6;->c:I
+
+    iget v4, p0, Lvy6;->d:I
+
+    invoke-static {v0, v3, v1, v4, v2}, Lsq3;->o(Ljava/lang/StringBuilder;ILjava/lang/String;ILjava/lang/String;)V
+
+    const-string v1, ", mercuryStep2="
+
+    const-string v2, ", mercuryStrokeStep1="
+
+    iget v3, p0, Lvy6;->e:I
+
+    iget v4, p0, Lvy6;->f:I
+
+    invoke-static {v0, v3, v1, v4, v2}, Lsq3;->o(Ljava/lang/StringBuilder;ILjava/lang/String;ILjava/lang/String;)V
+
+    const-string v1, ", mercuryStrokeStep2="
+
+    const-string v2, ", venusStep1=-1292582917, venusStep2=-1292849417, venusStrokeStep1="
+
+    iget v3, p0, Lvy6;->g:I
+
+    iget v4, p0, Lvy6;->h:I
+
+    invoke-static {v0, v3, v1, v4, v2}, Lsq3;->o(Ljava/lang/StringBuilder;ILjava/lang/String;ILjava/lang/String;)V
+
+    const-string v1, ", venusStrokeStep2="
+
+    const-string v2, ")"
+
+    iget v3, p0, Lvy6;->i:I
+
+    iget p0, p0, Lvy6;->j:I
+
+    invoke-static {v0, v3, v1, p0, v2}, Lsg0;->h(Ljava/lang/StringBuilder;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/String;
+
+    move-result-object p0
 
     return-object p0
 .end method

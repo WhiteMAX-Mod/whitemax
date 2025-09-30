@@ -4,5 +4,5 @@
 
 
 # virtual methods
-.method public abstract j(Lorg/json/JSONObject;)V
+.method public abstract p(I)V
 .end method

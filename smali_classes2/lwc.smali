@@ -1,74 +1,53 @@
-.class public final synthetic Llwc;
-.super Ljava/lang/Object;
+.class public final Llwc;
+.super Ljx3;
 .source "SourceFile"
-
-# interfaces
-.implements Lv56;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public X:Ljava/util/List;
 
-.field public final synthetic b:Lmwc;
+.field public synthetic Y:Ljava/lang/Object;
+
+.field public final synthetic Z:Lxwc;
+
+.field public o:Lxwc;
+
+.field public r0:I
 
 
 # direct methods
-.method public synthetic constructor <init>(Lmwc;I)V
+.method public constructor <init>(Lxwc;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    iput p2, p0, Llwc;->a:I
+    iput-object p1, p0, Llwc;->Z:Lxwc;
 
-    iput-object p1, p0, Llwc;->b:Lmwc;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p2}, Ljx3;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke()Ljava/lang/Object;
-    .locals 2
+.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    iget v0, p0, Llwc;->a:I
+    iput-object p1, p0, Llwc;->Y:Ljava/lang/Object;
 
-    packed-switch v0, :pswitch_data_0
+    iget p1, p0, Llwc;->r0:I
 
-    const/16 v0, 0xa
+    const/high16 v0, -0x80000000
 
-    iget-object p0, p0, Llwc;->b:Lmwc;
+    or-int/2addr p1, v0
 
-    iget-object p0, p0, Le3;->g:Lme7;
+    iput p1, p0, Llwc;->r0:I
 
-    const-string v1, "request_id"
+    iget-object p1, p0, Llwc;->Z:Lxwc;
 
-    invoke-virtual {p0, v1, v0}, Lme7;->getInt(Ljava/lang/String;I)I
+    const/4 v0, 0x0
 
-    move-result p0
-
-    invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    invoke-static {p1, v0, p0}, Lxwc;->d(Lxwc;Ljava/util/List;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
     move-result-object p0
 
     return-object p0
-
-    :pswitch_0
-    iget-object p0, p0, Llwc;->b:Lmwc;
-
-    invoke-virtual {p0}, Lmwc;->p()J
-
-    move-result-wide v0
-
-    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object p0
-
-    return-object p0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
 .end method

@@ -1,96 +1,156 @@
 .class public final Lx9b;
-.super Leab;
+.super Lure;
 .source "SourceFile"
+
+# interfaces
+.implements Lpc6;
 
 
 # instance fields
-.field public final b:Ljoe;
+.field public final synthetic X:Lz9b;
+
+.field public final synthetic Y:I
+
+.field public final synthetic Z:Ls72;
+
+.field public final synthetic r0:J
+
+.field public final synthetic s0:J
 
 
 # direct methods
-.method public constructor <init>(Ljoe;)V
+.method public constructor <init>(Lz9b;ILs72;JJLkotlin/coroutines/Continuation;)V
     .locals 0
 
-    invoke-direct {p0}, Leab;-><init>()V
+    iput-object p1, p0, Lx9b;->X:Lz9b;
 
-    iput-object p1, p0, Lx9b;->b:Ljoe;
+    iput p2, p0, Lx9b;->Y:I
+
+    iput-object p3, p0, Lx9b;->Z:Ls72;
+
+    iput-wide p4, p0, Lx9b;->r0:J
+
+    iput-wide p6, p0, Lx9b;->s0:J
+
+    const/4 p1, 0x2
+
+    invoke-direct {p0, p1, p8}, Lure;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
-
-    if-ne p0, p1, :cond_0
-
-    goto :goto_1
-
-    :cond_0
-    instance-of v0, p1, Lx9b;
-
-    if-nez v0, :cond_1
-
-    goto :goto_0
-
-    :cond_1
-    check-cast p1, Lx9b;
-
-    iget-object p0, p0, Lx9b;->b:Ljoe;
-
-    iget-object p1, p1, Lx9b;->b:Ljoe;
-
-    invoke-virtual {p0, p1}, Ljoe;->equals(Ljava/lang/Object;)Z
-
-    move-result p0
-
-    if-nez p0, :cond_2
-
-    :goto_0
-    const/4 p0, 0x0
-
-    return p0
-
-    :cond_2
-    :goto_1
-    const/4 p0, 0x1
-
-    return p0
-.end method
-
-.method public final hashCode()I
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    iget-object p0, p0, Lx9b;->b:Ljoe;
+    check-cast p1, Ly04;
 
-    invoke-virtual {p0}, Ljoe;->hashCode()I
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    move-result p0
-
-    return p0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 2
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "ExternalShareLink(text="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object p0, p0, Lx9b;->b:Ljoe;
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string p0, ")"
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {p0, p1, p2}, Lx9b;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
     move-result-object p0
+
+    check-cast p0, Lx9b;
+
+    sget-object p1, Lylf;->a:Lylf;
+
+    invoke-virtual {p0, p1}, Lx9b;->o(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object p1
+.end method
+
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 9
+
+    new-instance v0, Lx9b;
+
+    iget-wide v4, p0, Lx9b;->r0:J
+
+    iget-wide v6, p0, Lx9b;->s0:J
+
+    iget-object v1, p0, Lx9b;->X:Lz9b;
+
+    iget v2, p0, Lx9b;->Y:I
+
+    iget-object v3, p0, Lx9b;->Z:Ls72;
+
+    move-object v8, p2
+
+    invoke-direct/range {v0 .. v8}, Lx9b;-><init>(Lz9b;ILs72;JJLkotlin/coroutines/Continuation;)V
+
+    return-object v0
+.end method
+
+.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 10
+
+    invoke-static {p1}, Lqe5;->V(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Lx9b;->X:Lz9b;
+
+    iget-object p1, p1, Lz9b;->e:Lcl7;
+
+    invoke-interface {p1}, Lcl7;->getValue()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lqoa;
+
+    new-instance v0, Lyoa;
+
+    iget v1, p0, Lx9b;->Y:I
+
+    const/4 v2, 0x3
+
+    const/4 v3, 0x0
+
+    invoke-direct {v0, v3, v3, v1, v2}, Lyoa;-><init>(IIII)V
+
+    invoke-virtual {p1, v0}, Lqoa;->c(Lyoa;)V
+
+    sget v0, Lila;->d:I
+
+    new-instance v1, Lp2f;
+
+    invoke-direct {v1, v0}, Lp2f;-><init>(I)V
+
+    invoke-virtual {p1, v1}, Lqoa;->g(Lu2f;)V
+
+    sget-object v0, Lipa;->a:Lipa;
+
+    invoke-virtual {p1, v0}, Lqoa;->e(Ljpa;)V
+
+    new-instance v0, Lnpa;
+
+    sget v1, Ld1d;->s:I
+
+    new-instance v2, Lp2f;
+
+    invoke-direct {v2, v1}, Lp2f;-><init>(I)V
+
+    invoke-direct {v0, v2}, Lnpa;-><init>(Lu2f;)V
+
+    invoke-virtual {p1, v0}, Lqoa;->f(Lopa;)V
+
+    new-instance v3, Lba2;
+
+    iget-object v4, p0, Lx9b;->X:Lz9b;
+
+    iget-object v5, p0, Lx9b;->Z:Ls72;
+
+    iget-wide v6, p0, Lx9b;->r0:J
+
+    iget-wide v8, p0, Lx9b;->s0:J
+
+    invoke-direct/range {v3 .. v9}, Lba2;-><init>(Lz9b;Ls72;JJ)V
+
+    invoke-virtual {p1, v3}, Lqoa;->d(Lroa;)V
+
+    invoke-virtual {p1}, Lqoa;->i()Lpoa;
+
+    sget-object p0, Lylf;->a:Lylf;
 
     return-object p0
 .end method

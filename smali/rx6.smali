@@ -1,39 +1,33 @@
-.class public final Lrx6;
-.super Lv64;
+.class public abstract Lrx6;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # static fields
-.field public static final b:Lrx6;
+.field public static final a:Ljava/util/regex/Pattern;
 
-.field public static final c:Lr64;
+.field public static final b:Ljava/util/regex/Pattern;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 5
+    .locals 1
 
-    new-instance v0, Lrx6;
+    const-string v0, "bytes (\\d+)-(\\d+)/(?:\\d+|\\*)"
 
-    invoke-direct {v0}, Lv64;-><init>()V
-
-    sput-object v0, Lrx6;->b:Lrx6;
-
-    const/4 v1, 0x0
-
-    new-array v1, v1, [Ljava/lang/String;
-
-    const/4 v2, 0x0
-
-    const/16 v3, 0xe
-
-    const-string v4, ":inAppReview/fake"
-
-    invoke-static {v0, v4, v1, v2, v3}, Lv64;->a(Lv64;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lr64;
+    invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
 
     move-result-object v0
 
-    sput-object v0, Lrx6;->c:Lr64;
+    sput-object v0, Lrx6;->a:Ljava/util/regex/Pattern;
+
+    const-string v0, "bytes (?:(?:\\d+-\\d+)|\\*)/(\\d+)"
+
+    invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
+
+    move-result-object v0
+
+    sput-object v0, Lrx6;->b:Ljava/util/regex/Pattern;
 
     return-void
 .end method

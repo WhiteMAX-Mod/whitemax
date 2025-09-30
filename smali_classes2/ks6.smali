@@ -1,82 +1,50 @@
-.class public final Lks6;
-.super Ljava/lang/Object;
+.class public final synthetic Lks6;
+.super Led6;
 .source "SourceFile"
 
+# interfaces
+.implements Lbc6;
 
-# instance fields
-.field public final a:I
+
+# static fields
+.field public static final a:Lks6;
 
 
 # direct methods
-.method public constructor <init>(I)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 6
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lks6;
 
-    iput p1, p0, Lks6;->a:I
+    const-string v4, "getTime()J"
+
+    const/4 v5, 0x0
+
+    const/4 v1, 0x1
+
+    const-class v2, Lur6;
+
+    const-string v3, "getTime"
+
+    invoke-direct/range {v0 .. v5}, Led6;-><init>(ILjava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
+
+    sput-object v0, Lks6;->a:Lks6;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
-
-    if-ne p0, p1, :cond_0
-
-    goto :goto_1
-
-    :cond_0
-    instance-of v0, p1, Lks6;
-
-    if-nez v0, :cond_1
-
-    goto :goto_0
-
-    :cond_1
-    check-cast p1, Lks6;
-
-    iget p0, p0, Lks6;->a:I
-
-    iget p1, p1, Lks6;->a:I
-
-    if-eq p0, p1, :cond_2
-
-    :goto_0
-    const/4 p0, 0x0
-
-    return p0
-
-    :cond_2
-    :goto_1
-    const/4 p0, 0x1
-
-    return p0
-.end method
-
-.method public final hashCode()I
+.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    iget p0, p0, Lks6;->a:I
+    check-cast p1, Lur6;
 
-    invoke-static {p0}, Ljava/lang/Integer;->hashCode(I)I
+    invoke-interface {p1}, Lur6;->l()J
 
-    move-result p0
+    move-result-wide p0
 
-    return p0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 2
-
-    const-string v0, "IconLocalPromoColors(accent="
-
-    const-string v1, ")"
-
-    iget p0, p0, Lks6;->a:I
-
-    invoke-static {p0, v0, v1}, Lpg0;->e(ILjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p0, p1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object p0
 

@@ -1,248 +1,224 @@
-.class public final synthetic Lkcg;
-.super Ljava/lang/Object;
+.class public final Lkcg;
+.super Lure;
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/lang/Runnable;
+.implements Lpc6;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final synthetic X:Lmcg;
 
-.field public final synthetic b:Lhjc;
-
-.field public final synthetic c:[B
-
-.field public final synthetic o:I
+.field public final synthetic Y:[B
 
 
 # direct methods
-.method public synthetic constructor <init>(Lhjc;[BII)V
+.method public constructor <init>(Lmcg;Lkotlin/coroutines/Continuation;[B)V
     .locals 0
 
-    iput p4, p0, Lkcg;->a:I
+    iput-object p1, p0, Lkcg;->X:Lmcg;
 
-    iput-object p1, p0, Lkcg;->b:Lhjc;
+    iput-object p3, p0, Lkcg;->Y:[B
 
-    iput-object p2, p0, Lkcg;->c:[B
+    const/4 p1, 0x2
 
-    iput p3, p0, Lkcg;->o:I
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p1, p2}, Lure;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
-    .locals 8
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    iget v0, p0, Lkcg;->a:I
+    check-cast p1, Ly04;
 
-    packed-switch v0, :pswitch_data_0
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    iget v0, p0, Lkcg;->o:I
+    invoke-virtual {p0, p1, p2}, Lkcg;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    iget-object v1, p0, Lkcg;->b:Lhjc;
+    move-result-object p0
 
-    iget-object v2, v1, Lhjc;->c:Ljava/lang/Object;
+    check-cast p0, Lkcg;
 
-    check-cast v2, Ljava/util/concurrent/CopyOnWriteArrayList;
+    sget-object p1, Lylf;->a:Lylf;
 
-    invoke-virtual {v2}, Ljava/util/concurrent/CopyOnWriteArrayList;->iterator()Ljava/util/Iterator;
+    invoke-virtual {p0, p1}, Lkcg;->o(Ljava/lang/Object;)Ljava/lang/Object;
 
-    move-result-object v2
+    return-object p1
+.end method
 
-    :goto_0
-    invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 1
 
-    move-result v3
+    new-instance p1, Lkcg;
 
-    if-eqz v3, :cond_2
+    iget-object v0, p0, Lkcg;->X:Lmcg;
 
-    invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    iget-object p0, p0, Lkcg;->Y:[B
 
-    move-result-object v3
+    invoke-direct {p1, v0, p2, p0}, Lkcg;-><init>(Lmcg;Lkotlin/coroutines/Continuation;[B)V
 
-    check-cast v3, Lomc;
+    return-object p1
+.end method
 
-    :try_start_0
-    iget-object v4, v3, Lomc;->b:Ls1c;
+.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 9
 
-    iget-object v3, v3, Lomc;->a:Ljava/lang/String;
+    invoke-static {p1}, Lqe5;->V(Ljava/lang/Object;)V
 
-    sget-object v5, Lzbg;->a:[I
+    iget-object p1, p0, Lkcg;->X:Lmcg;
 
-    invoke-static {v0}, Lzt1;->s(I)I
+    invoke-virtual {p1}, Lmcg;->getWaveView()Li60;
 
-    move-result v6
+    move-result-object p1
 
-    aget v5, v5, v6
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    iget v0, p1, Li60;->o:F
 
-    const/4 v6, 0x1
+    iget-object v1, p1, Li60;->z0:Landroid/graphics/Path;
 
-    iget-object v7, p0, Lkcg;->c:[B
+    const/4 v2, 0x1
 
-    if-eq v5, v6, :cond_1
+    iput-boolean v2, p1, Li60;->t0:Z
 
-    const/4 v6, 0x2
+    invoke-virtual {v1}, Landroid/graphics/Path;->isEmpty()Z
 
-    if-eq v5, v6, :cond_0
+    move-result v2
 
-    :try_start_1
-    const-string v5, "<unknown>"
+    if-eqz v2, :cond_0
 
-    goto :goto_1
+    goto :goto_0
 
     :cond_0
-    invoke-static {v7}, Lhk6;->a([B)Ljava/lang/String;
+    invoke-virtual {v1}, Landroid/graphics/Path;->reset()V
 
-    move-result-object v5
+    :goto_0
+    iget-object p0, p0, Lkcg;->Y:[B
+
+    if-nez p0, :cond_1
+
+    goto :goto_3
+
+    :cond_1
+    invoke-virtual {p1}, Landroid/view/View;->getMeasuredHeight()I
+
+    move-result v2
+
+    int-to-float v2, v2
+
+    const/high16 v3, 0x40000000    # 2.0f
+
+    div-float/2addr v2, v3
+
+    invoke-virtual {v1}, Landroid/graphics/Path;->reset()V
+
+    array-length v4, p0
+
+    if-nez v4, :cond_2
+
+    goto :goto_2
+
+    :cond_2
+    invoke-virtual {p1}, Landroid/view/View;->getWidth()I
+
+    move-result v4
+
+    int-to-float v4, v4
+
+    div-float v5, v0, v3
+
+    sub-float/2addr v4, v5
+
+    const/4 v5, 0x6
+
+    int-to-float v5, v5
+
+    invoke-static {}, Lvo4;->d()Landroid/content/res/Resources;
+
+    move-result-object v6
+
+    invoke-virtual {v6}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object v6
+
+    iget v6, v6, Landroid/util/DisplayMetrics;->density:F
+
+    mul-float/2addr v5, v6
+
+    invoke-static {v5}, Lya6;->G(F)I
+
+    move-result v5
+
+    int-to-float v5, v5
+
+    sub-float/2addr v4, v5
+
+    array-length v5, p0
+
+    add-int/lit8 v5, v5, -0x1
+
+    if-ltz v5, :cond_5
+
+    :goto_1
+    add-int/lit8 v6, v5, -0x1
+
+    aget-byte v5, p0, v5
+
+    int-to-float v5, v5
+
+    invoke-virtual {p1}, Landroid/view/View;->getMeasuredHeight()I
+
+    move-result v7
+
+    int-to-float v7, v7
+
+    const/high16 v8, 0x42fe0000    # 127.0f
+
+    div-float/2addr v7, v8
+
+    mul-float/2addr v7, v5
+
+    iget v5, p1, Li60;->b:F
+
+    cmpg-float v8, v7, v5
+
+    if-gez v8, :cond_3
+
+    move v7, v5
+
+    :cond_3
+    div-float/2addr v7, v3
+
+    sub-float v5, v2, v7
+
+    add-float/2addr v7, v2
+
+    invoke-virtual {v1, v4, v5}, Landroid/graphics/Path;->moveTo(FF)V
+
+    invoke-virtual {v1, v4, v7}, Landroid/graphics/Path;->lineTo(FF)V
+
+    sub-float/2addr v4, v0
+
+    iget v5, p1, Li60;->c:F
+
+    sub-float/2addr v4, v5
+
+    if-gez v6, :cond_4
+
+    goto :goto_2
+
+    :cond_4
+    move v5, v6
 
     goto :goto_1
 
-    :cond_1
-    new-instance v5, Ljava/lang/String;
-
-    invoke-direct {v5, v7}, Ljava/lang/String;-><init>([B)V
-
-    :goto_1
-    const-string v6, "-> "
-
-    invoke-virtual {v6, v5}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v5
-
-    invoke-interface {v4, v3, v5}, Ls1c;->log(Ljava/lang/String;Ljava/lang/String;)V
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    goto :goto_0
-
-    :catchall_0
-    move-exception v3
-
-    iget-object v4, v1, Lhjc;->b:Ljava/lang/Object;
-
-    check-cast v4, Ls1c;
-
-    const-string v5, "CallsListeners"
-
-    const-string v6, "rtc.command.handle.listeners.ondatasend"
-
-    invoke-interface {v4, v5, v6, v3}, Ls1c;->reportException(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    goto :goto_0
-
-    :cond_2
-    return-void
-
-    :pswitch_0
-    iget v0, p0, Lkcg;->o:I
-
-    iget-object v1, p0, Lkcg;->b:Lhjc;
-
-    iget-object v2, v1, Lhjc;->c:Ljava/lang/Object;
-
-    check-cast v2, Ljava/util/concurrent/CopyOnWriteArrayList;
-
-    invoke-virtual {v2}, Ljava/util/concurrent/CopyOnWriteArrayList;->iterator()Ljava/util/Iterator;
-
-    move-result-object v2
-
+    :cond_5
     :goto_2
-    invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v3
-
-    if-eqz v3, :cond_5
-
-    invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v3
-
-    check-cast v3, Lomc;
-
-    :try_start_2
-    iget-object v4, v3, Lomc;->b:Ls1c;
-
-    iget-object v3, v3, Lomc;->a:Ljava/lang/String;
-
-    sget-object v5, Lzbg;->a:[I
-
-    invoke-static {v0}, Lzt1;->s(I)I
-
-    move-result v6
-
-    aget v5, v5, v6
-    :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_1
-
-    const/4 v6, 0x1
-
-    iget-object v7, p0, Lkcg;->c:[B
-
-    if-eq v5, v6, :cond_4
-
-    const/4 v6, 0x2
-
-    if-eq v5, v6, :cond_3
-
-    :try_start_3
-    const-string v5, "<unknown>"
-
-    goto :goto_3
-
-    :cond_3
-    invoke-static {v7}, Lhk6;->a([B)Ljava/lang/String;
-
-    move-result-object v5
-
-    goto :goto_3
-
-    :cond_4
-    new-instance v5, Ljava/lang/String;
-
-    invoke-direct {v5, v7}, Ljava/lang/String;-><init>([B)V
+    invoke-virtual {p1}, Landroid/view/View;->invalidate()V
 
     :goto_3
-    const-string v6, "<- "
+    sget-object p0, Lylf;->a:Lylf;
 
-    invoke-virtual {v6, v5}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v5
-
-    invoke-interface {v4, v3, v5}, Ls1c;->log(Ljava/lang/String;Ljava/lang/String;)V
-    :try_end_3
-    .catchall {:try_start_3 .. :try_end_3} :catchall_1
-
-    goto :goto_2
-
-    :catchall_1
-    move-exception v3
-
-    iget-object v4, v1, Lhjc;->b:Ljava/lang/Object;
-
-    check-cast v4, Ls1c;
-
-    const-string v5, "CallsListeners"
-
-    const-string v6, "rtc.command.handle.listeners.ondatareceive"
-
-    invoke-interface {v4, v5, v6, v3}, Ls1c;->reportException(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    goto :goto_2
-
-    :cond_5
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-object p0
 .end method

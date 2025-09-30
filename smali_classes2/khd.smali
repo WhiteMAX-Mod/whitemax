@@ -1,74 +1,69 @@
 .class public final Lkhd;
-.super Lqde;
+.super Ljx3;
 .source "SourceFile"
-
-# interfaces
-.implements Ll66;
 
 
 # instance fields
-.field public synthetic X:Ljava/lang/Object;
+.field public X:Ljava/lang/String;
+
+.field public Y:Lpv0;
+
+.field public Z:Lkv0;
+
+.field public o:Llhd;
+
+.field public r0:Luz8;
+
+.field public s0:J
+
+.field public synthetic t0:Ljava/lang/Object;
+
+.field public final synthetic u0:Llhd;
+
+.field public v0:I
+
+
+# direct methods
+.method public constructor <init>(Llhd;Ljx3;)V
+    .locals 0
+
+    iput-object p1, p0, Lkhd;->u0:Llhd;
+
+    invoke-direct {p0, p2}, Ljx3;-><init>(Lkotlin/coroutines/Continuation;)V
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
-
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Lkhd;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p0
-
-    check-cast p0, Lkhd;
-
-    sget-object p1, Le5f;->a:Le5f;
-
-    invoke-virtual {p0, p1}, Lkhd;->o(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p1
-.end method
-
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 1
-
-    new-instance p0, Lkhd;
-
-    const/4 v0, 0x2
-
-    invoke-direct {p0, v0, p2}, Lqde;-><init>(ILkotlin/coroutines/Continuation;)V
-
-    iput-object p1, p0, Lkhd;->X:Ljava/lang/Object;
-
-    return-object p0
-.end method
-
 .method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+    .locals 7
 
-    invoke-static {p1}, Lsgg;->Z(Ljava/lang/Object;)V
+    iput-object p1, p0, Lkhd;->t0:Ljava/lang/Object;
 
-    iget-object p0, p0, Lkhd;->X:Ljava/lang/Object;
+    iget p1, p0, Lkhd;->v0:I
 
-    check-cast p0, Ljava/lang/String;
+    const/high16 v0, -0x80000000
 
-    sget-object p1, Lqfd;->c:Lqfd;
+    or-int/2addr p1, v0
 
-    invoke-virtual {p1}, Lu2;->D0()Ls64;
+    iput p1, p0, Lkhd;->v0:I
 
-    move-result-object p1
+    const/4 v4, 0x0
 
-    const-string v0, ":settings/privacy/pincode?mode=confirm&hash="
+    const/4 v5, 0x0
 
-    invoke-virtual {v0, p0}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+    iget-object v0, p0, Lkhd;->u0:Llhd;
+
+    const-wide/16 v1, 0x0
+
+    const/4 v3, 0x0
+
+    move-object v6, p0
+
+    invoke-virtual/range {v0 .. v6}, Llhd;->B(JLjava/lang/String;Lpv0;Lkv0;Ljx3;)Ljava/lang/Object;
 
     move-result-object p0
-
-    const/4 v0, 0x0
-
-    invoke-virtual {p1, p0, v0}, Ls64;->b(Ljava/lang/String;Landroid/os/Bundle;)Z
-
-    sget-object p0, Le5f;->a:Le5f;
 
     return-object p0
 .end method

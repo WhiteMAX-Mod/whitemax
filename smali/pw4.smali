@@ -1,8 +1,7 @@
-.class public interface abstract Lpw4;
+.class public final Lpw4;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# virtual methods
-.method public abstract a(Lkhg;)V
-.end method
+# instance fields
+.field public a:Lsw4;

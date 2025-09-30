@@ -1,98 +1,94 @@
 .class public final Lex5;
-.super Lqde;
+.super Lvk4;
 .source "SourceFile"
 
 # interfaces
-.implements Ll66;
+.implements Lbx5;
 
 
 # instance fields
-.field public synthetic X:Ljava/lang/Object;
-
-.field public final synthetic Y:Lone/me/folders/pickerfolders/FoldersPickerScreen;
+.field public c:Llne;
 
 
-# direct methods
-.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/folders/pickerfolders/FoldersPickerScreen;)V
-    .locals 0
+# virtual methods
+.method public final b()V
+    .locals 1
 
-    iput-object p2, p0, Lex5;->Y:Lone/me/folders/pickerfolders/FoldersPickerScreen;
+    iget-object v0, p0, Lvk4;->b:Ljava/lang/Object;
 
-    const/4 p2, 0x2
-
-    invoke-direct {p0, p2, p1}, Lqde;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-virtual {p0, v0}, Lvk4;->e(Ljava/lang/Object;)V
 
     return-void
 .end method
 
-
-# virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
-
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Lex5;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p0
-
-    check-cast p0, Lex5;
-
-    sget-object p1, Le5f;->a:Le5f;
-
-    invoke-virtual {p0, p1}, Lex5;->o(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p1
-.end method
-
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+.method public final cancel()V
     .locals 1
 
-    new-instance v0, Lex5;
+    const/4 v0, 0x4
 
-    iget-object p0, p0, Lex5;->Y:Lone/me/folders/pickerfolders/FoldersPickerScreen;
+    invoke-virtual {p0, v0}, Ljava/util/concurrent/atomic/AtomicInteger;->set(I)V
 
-    invoke-direct {v0, p2, p0}, Lex5;-><init>(Lkotlin/coroutines/Continuation;Lone/me/folders/pickerfolders/FoldersPickerScreen;)V
+    const/4 v0, 0x0
 
-    iput-object p1, v0, Lex5;->X:Ljava/lang/Object;
+    iput-object v0, p0, Lvk4;->b:Ljava/lang/Object;
 
-    return-object v0
+    iget-object p0, p0, Lex5;->c:Llne;
+
+    invoke-interface {p0}, Llne;->cancel()V
+
+    return-void
 .end method
 
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 3
+.method public final d(Llne;)V
+    .locals 2
 
-    invoke-static {p1}, Lsgg;->Z(Ljava/lang/Object;)V
+    iget-object v0, p0, Lex5;->c:Llne;
 
-    iget-object p1, p0, Lex5;->X:Ljava/lang/Object;
+    invoke-static {v0, p1}, Lnne;->e(Llne;Llne;)Z
 
-    check-cast p1, Ljava/lang/Boolean;
+    move-result v0
 
-    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
+    if-eqz v0, :cond_0
 
-    move-result p1
+    iput-object p1, p0, Lex5;->c:Llne;
 
-    sget-object v0, Lone/me/folders/pickerfolders/FoldersPickerScreen;->o0:[Lbc7;
+    iget-object v0, p0, Lvk4;->a:Ljne;
 
-    iget-object p0, p0, Lex5;->Y:Lone/me/folders/pickerfolders/FoldersPickerScreen;
+    invoke-interface {v0, p0}, Ljne;->d(Llne;)V
 
-    iget-object v0, p0, Lone/me/folders/pickerfolders/FoldersPickerScreen;->Y:Lo5c;
+    const-wide v0, 0x7fffffffffffffffL
 
-    sget-object v1, Lone/me/folders/pickerfolders/FoldersPickerScreen;->o0:[Lbc7;
+    invoke-interface {p1, v0, v1}, Llne;->h(J)V
 
-    const/4 v2, 0x3
+    :cond_0
+    return-void
+.end method
 
-    aget-object v1, v1, v2
+.method public final onError(Ljava/lang/Throwable;)V
+    .locals 1
 
-    invoke-interface {v0, p0, v1}, Lo5c;->M(Ljava/lang/Object;Lbc7;)Ljava/lang/Object;
+    const/4 v0, 0x0
 
-    move-result-object p0
+    iput-object v0, p0, Lvk4;->b:Ljava/lang/Object;
 
-    check-cast p0, Lone/me/sdk/uikit/common/button/OneMeButton;
+    iget-object p0, p0, Lvk4;->a:Ljne;
 
-    invoke-virtual {p0, p1}, Lone/me/sdk/uikit/common/button/OneMeButton;->setEnabled(Z)V
+    invoke-interface {p0, p1}, Ljne;->onError(Ljava/lang/Throwable;)V
 
-    sget-object p0, Le5f;->a:Le5f;
+    return-void
+.end method
 
-    return-object p0
+.method public final s(Ljava/lang/Object;)V
+    .locals 0
+
+    iget-object p0, p0, Lvk4;->b:Ljava/lang/Object;
+
+    check-cast p0, Ljava/util/Collection;
+
+    if-eqz p0, :cond_0
+
+    invoke-interface {p0, p1}, Ljava/util/Collection;->add(Ljava/lang/Object;)Z
+
+    :cond_0
+    return-void
 .end method

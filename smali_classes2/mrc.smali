@@ -3,59 +3,52 @@
 .source "SourceFile"
 
 # interfaces
-.implements Landroid/content/DialogInterface$OnKeyListener;
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field public final synthetic a:Lru/ok/tamtam/messages/scheduled/ScheduledSendPickerDialogFragment;
+.field public final synthetic a:I
+
+.field public final synthetic b:Lorg/webrtc/RenderSynchronizer;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lru/ok/tamtam/messages/scheduled/ScheduledSendPickerDialogFragment;)V
+.method public synthetic constructor <init>(Lorg/webrtc/RenderSynchronizer;I)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput p2, p0, Lmrc;->a:I
 
-    iput-object p1, p0, Lmrc;->a:Lru/ok/tamtam/messages/scheduled/ScheduledSendPickerDialogFragment;
+    iput-object p1, p0, Lmrc;->b:Lorg/webrtc/RenderSynchronizer;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onKey(Landroid/content/DialogInterface;ILandroid/view/KeyEvent;)Z
-    .locals 0
+.method public final run()V
+    .locals 1
 
-    const/4 p1, 0x4
+    iget v0, p0, Lmrc;->a:I
 
-    if-ne p2, p1, :cond_0
+    iget-object p0, p0, Lmrc;->b:Lorg/webrtc/RenderSynchronizer;
 
-    invoke-virtual {p3}, Landroid/view/KeyEvent;->getAction()I
+    packed-switch v0, :pswitch_data_0
 
-    move-result p1
+    invoke-static {p0}, Lorg/webrtc/RenderSynchronizer;->c(Lorg/webrtc/RenderSynchronizer;)V
 
-    const/4 p2, 0x1
+    return-void
 
-    if-ne p1, p2, :cond_0
+    :pswitch_0
+    invoke-static {p0}, Lorg/webrtc/RenderSynchronizer;->a(Lorg/webrtc/RenderSynchronizer;)V
 
-    new-instance p1, Lorc;
+    return-void
 
-    iget-object p0, p0, Lmrc;->a:Lru/ok/tamtam/messages/scheduled/ScheduledSendPickerDialogFragment;
+    nop
 
-    iget-object p2, p0, Lru/ok/tamtam/messages/scheduled/ScheduledSendPickerDialogFragment;->B1:Ljava/lang/Object;
-
-    invoke-interface {p2}, Lje7;->getValue()Ljava/lang/Object;
-
-    move-result-object p2
-
-    check-cast p2, Landroid/os/Parcelable;
-
-    invoke-direct {p1, p2}, Lorc;-><init>(Landroid/os/Parcelable;)V
-
-    invoke-virtual {p0, p1}, Lru/ok/tamtam/messages/scheduled/ScheduledSendPickerDialogFragment;->c1(Lqrc;)V
-
-    :cond_0
-    const/4 p0, 0x0
-
-    return p0
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

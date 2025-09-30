@@ -1,150 +1,226 @@
-.class public final Lfa4;
-.super Ljava/lang/Object;
+.class public Lfa4;
+.super Llx;
 .source "SourceFile"
-
-# interfaces
-.implements Lcq4;
 
 
 # instance fields
-.field public final a:Landroid/content/res/Resources;
+.field public X:Z
 
-.field public final b:Lcq4;
+.field public Y:J
+
+.field public Z:Ljava/nio/ByteBuffer;
+
+.field public final c:Lx34;
+
+.field public o:Ljava/nio/ByteBuffer;
+
+.field public final r0:I
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/res/Resources;Lcq4;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const-string v0, "goog.exo.decoder"
 
-    iput-object p1, p0, Lfa4;->a:Landroid/content/res/Resources;
+    invoke-static {v0}, Lhd5;->a(Ljava/lang/String;)V
 
-    iput-object p2, p0, Lfa4;->b:Lcq4;
+    return-void
+.end method
+
+.method public constructor <init>(I)V
+    .locals 2
+
+    const/4 v0, 0x1
+
+    invoke-direct {p0, v0}, Llx;-><init>(I)V
+
+    new-instance v0, Lx34;
+
+    const/4 v1, 0x0
+
+    invoke-direct {v0, v1}, Lx34;-><init>(I)V
+
+    iput-object v0, p0, Lfa4;->c:Lx34;
+
+    iput p1, p0, Lfa4;->r0:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Lc33;)Landroid/graphics/drawable/Drawable;
+.method public u()V
     .locals 2
 
-    :try_start_0
-    invoke-static {}, Lq46;->x()Lp46;
+    const/4 v0, 0x0
 
-    instance-of v0, p1, Lcom/facebook/imagepipeline/image/CloseableStaticBitmap;
+    iput v0, p0, Llx;->b:I
 
-    if-eqz v0, :cond_2
+    iget-object v1, p0, Lfa4;->o:Ljava/nio/ByteBuffer;
 
-    check-cast p1, Lcom/facebook/imagepipeline/image/CloseableStaticBitmap;
+    if-eqz v1, :cond_0
 
-    new-instance v0, Landroid/graphics/drawable/BitmapDrawable;
-
-    iget-object p0, p0, Lfa4;->a:Landroid/content/res/Resources;
-
-    invoke-interface {p1}, Lcom/facebook/imagepipeline/image/CloseableStaticBitmap;->getUnderlyingBitmap()Landroid/graphics/Bitmap;
-
-    move-result-object v1
-
-    invoke-direct {v0, p0, v1}, Landroid/graphics/drawable/BitmapDrawable;-><init>(Landroid/content/res/Resources;Landroid/graphics/Bitmap;)V
-
-    invoke-interface {p1}, Lcom/facebook/imagepipeline/image/CloseableStaticBitmap;->getRotationAngle()I
-
-    move-result p0
-
-    if-eqz p0, :cond_0
-
-    invoke-interface {p1}, Lcom/facebook/imagepipeline/image/CloseableStaticBitmap;->getRotationAngle()I
-
-    move-result p0
-
-    const/4 v1, -0x1
-
-    if-eq p0, v1, :cond_0
-
-    goto :goto_0
+    invoke-virtual {v1}, Ljava/nio/ByteBuffer;->clear()Ljava/nio/Buffer;
 
     :cond_0
-    invoke-interface {p1}, Lcom/facebook/imagepipeline/image/CloseableStaticBitmap;->getExifOrientation()I
+    iget-object v1, p0, Lfa4;->Z:Ljava/nio/ByteBuffer;
 
-    move-result p0
+    if-eqz v1, :cond_1
 
-    const/4 v1, 0x1
+    invoke-virtual {v1}, Ljava/nio/ByteBuffer;->clear()Ljava/nio/Buffer;
 
-    if-eq p0, v1, :cond_1
+    :cond_1
+    iput-boolean v0, p0, Lfa4;->X:Z
 
-    invoke-interface {p1}, Lcom/facebook/imagepipeline/image/CloseableStaticBitmap;->getExifOrientation()I
+    return-void
+.end method
 
-    move-result p0
+.method public final v(I)Ljava/nio/ByteBuffer;
+    .locals 3
 
-    if-eqz p0, :cond_1
+    const/4 v0, 0x1
 
-    :goto_0
-    new-instance p0, Lxka;
+    iget v1, p0, Lfa4;->r0:I
 
-    invoke-interface {p1}, Lcom/facebook/imagepipeline/image/CloseableStaticBitmap;->getRotationAngle()I
+    if-ne v1, v0, :cond_0
 
-    move-result v1
+    invoke-static {p1}, Ljava/nio/ByteBuffer;->allocate(I)Ljava/nio/ByteBuffer;
 
-    invoke-interface {p1}, Lcom/facebook/imagepipeline/image/CloseableStaticBitmap;->getExifOrientation()I
+    move-result-object p0
 
-    move-result p1
+    return-object p0
 
-    invoke-direct {p0, v0, v1, p1}, Lxka;-><init>(Landroid/graphics/drawable/BitmapDrawable;II)V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    :cond_0
+    const/4 v0, 0x2
 
-    invoke-static {}, Lq46;->x()Lp46;
+    if-ne v1, v0, :cond_1
+
+    invoke-static {p1}, Ljava/nio/ByteBuffer;->allocateDirect(I)Ljava/nio/ByteBuffer;
+
+    move-result-object p0
 
     return-object p0
 
     :cond_1
-    invoke-static {}, Lq46;->x()Lp46;
+    iget-object p0, p0, Lfa4;->o:Ljava/nio/ByteBuffer;
 
-    return-object v0
-
-    :cond_2
-    iget-object p0, p0, Lfa4;->b:Lcq4;
-
-    if-eqz p0, :cond_3
-
-    :try_start_1
-    invoke-interface {p0, p1}, Lcq4;->b(Lc33;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_3
-
-    invoke-interface {p0, p1}, Lcq4;->a(Lc33;)Landroid/graphics/drawable/Drawable;
-
-    move-result-object p0
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    invoke-static {}, Lq46;->x()Lp46;
-
-    return-object p0
-
-    :cond_3
-    invoke-static {}, Lq46;->x()Lp46;
+    if-nez p0, :cond_2
 
     const/4 p0, 0x0
 
-    return-object p0
+    goto :goto_0
 
-    :catchall_0
-    move-exception p0
+    :cond_2
+    invoke-virtual {p0}, Ljava/nio/Buffer;->capacity()I
 
-    invoke-static {}, Lq46;->x()Lp46;
+    move-result p0
 
-    throw p0
+    :goto_0
+    new-instance v0, Lcom/google/android/exoplayer2/decoder/DecoderInputBuffer$InsufficientCapacityException;
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    const/16 v2, 0x2c
+
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(I)V
+
+    const-string v2, "Buffer too small ("
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string p0, " < "
+
+    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string p0, ")"
+
+    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-direct {v0, p0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw v0
 .end method
 
-.method public final b(Lc33;)Z
-    .locals 0
+.method public final w(I)V
+    .locals 3
 
-    const/4 p0, 0x1
+    iget-object v0, p0, Lfa4;->o:Ljava/nio/ByteBuffer;
 
-    return p0
+    if-nez v0, :cond_0
+
+    invoke-virtual {p0, p1}, Lfa4;->v(I)Ljava/nio/ByteBuffer;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lfa4;->o:Ljava/nio/ByteBuffer;
+
+    return-void
+
+    :cond_0
+    invoke-virtual {v0}, Ljava/nio/Buffer;->capacity()I
+
+    move-result v1
+
+    invoke-virtual {v0}, Ljava/nio/Buffer;->position()I
+
+    move-result v2
+
+    add-int/2addr p1, v2
+
+    if-lt v1, p1, :cond_1
+
+    iput-object v0, p0, Lfa4;->o:Ljava/nio/ByteBuffer;
+
+    return-void
+
+    :cond_1
+    invoke-virtual {p0, p1}, Lfa4;->v(I)Ljava/nio/ByteBuffer;
+
+    move-result-object p1
+
+    invoke-virtual {v0}, Ljava/nio/ByteBuffer;->order()Ljava/nio/ByteOrder;
+
+    move-result-object v1
+
+    invoke-virtual {p1, v1}, Ljava/nio/ByteBuffer;->order(Ljava/nio/ByteOrder;)Ljava/nio/ByteBuffer;
+
+    if-lez v2, :cond_2
+
+    invoke-virtual {v0}, Ljava/nio/ByteBuffer;->flip()Ljava/nio/Buffer;
+
+    invoke-virtual {p1, v0}, Ljava/nio/ByteBuffer;->put(Ljava/nio/ByteBuffer;)Ljava/nio/ByteBuffer;
+
+    :cond_2
+    iput-object p1, p0, Lfa4;->o:Ljava/nio/ByteBuffer;
+
+    return-void
+.end method
+
+.method public final x()V
+    .locals 1
+
+    iget-object v0, p0, Lfa4;->o:Ljava/nio/ByteBuffer;
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {v0}, Ljava/nio/ByteBuffer;->flip()Ljava/nio/Buffer;
+
+    :cond_0
+    iget-object p0, p0, Lfa4;->Z:Ljava/nio/ByteBuffer;
+
+    if-eqz p0, :cond_1
+
+    invoke-virtual {p0}, Ljava/nio/ByteBuffer;->flip()Ljava/nio/Buffer;
+
+    :cond_1
+    return-void
 .end method

@@ -25,11 +25,11 @@
 
     new-instance v0, Lorg/webrtc/RefCountDelegate;
 
-    new-instance v1, Lcj8;
+    new-instance v1, Lvp8;
 
     const/4 v2, 0x0
 
-    invoke-direct {v1, p1, p2, v2}, Lcj8;-><init>(JI)V
+    invoke-direct {v1, p1, p2, v2}, Lvp8;-><init>(JI)V
 
     invoke-direct {v0, v1}, Lorg/webrtc/RefCountDelegate;-><init>(Ljava/lang/Runnable;)V
 

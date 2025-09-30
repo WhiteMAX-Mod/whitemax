@@ -1,257 +1,81 @@
-.class public final Lcaf;
+.class public final synthetic Lcaf;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lzn1;
+.implements Ldw1;
 
 
 # instance fields
-.field public final a:J
-
-.field public final b:Ljava/lang/String;
-
-.field public final c:Ljava/lang/CharSequence;
-
-.field public final d:Z
-
-.field public final e:Ljava/lang/String;
+.field public final synthetic a:Ldaf;
 
 
 # direct methods
-.method public constructor <init>(JLjava/lang/String;Ljava/lang/CharSequence;ZLjava/lang/String;)V
+.method public synthetic constructor <init>(Ldaf;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-wide p1, p0, Lcaf;->a:J
-
-    iput-object p3, p0, Lcaf;->b:Ljava/lang/String;
-
-    iput-object p4, p0, Lcaf;->c:Ljava/lang/CharSequence;
-
-    iput-boolean p5, p0, Lcaf;->d:Z
-
-    iput-object p6, p0, Lcaf;->e:Ljava/lang/String;
+    iput-object p1, p0, Lcaf;->a:Ldaf;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final c()Z
-    .locals 0
-
-    iget-boolean p0, p0, Lcaf;->d:Z
-
-    return p0
-.end method
-
-.method public final d()J
+.method public final a(Landroid/hardware/camera2/TotalCaptureResult;)Z
     .locals 2
 
-    iget-wide v0, p0, Lcaf;->a:J
+    iget-object p0, p0, Lcaf;->a:Ldaf;
 
-    return-wide v0
-.end method
+    iget-object v0, p0, Ldaf;->f:Lqs1;
 
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 7
+    const/4 v1, 0x0
 
-    const/4 v0, 0x1
+    if-eqz v0, :cond_1
 
-    if-ne p0, p1, :cond_0
+    invoke-virtual {p1}, Landroid/hardware/camera2/CaptureResult;->getRequest()Landroid/hardware/camera2/CaptureRequest;
 
-    return v0
+    move-result-object p1
 
-    :cond_0
-    instance-of v1, p1, Lcaf;
+    sget-object v0, Landroid/hardware/camera2/CaptureRequest;->FLASH_MODE:Landroid/hardware/camera2/CaptureRequest$Key;
 
-    const/4 v2, 0x0
+    invoke-virtual {p1, v0}, Landroid/hardware/camera2/CaptureRequest;->get(Landroid/hardware/camera2/CaptureRequest$Key;)Ljava/lang/Object;
 
-    if-nez v1, :cond_1
+    move-result-object p1
 
-    return v2
+    check-cast p1, Ljava/lang/Integer;
 
-    :cond_1
-    check-cast p1, Lcaf;
+    if-eqz p1, :cond_0
 
-    iget-wide v3, p0, Lcaf;->a:J
+    invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
 
-    iget-wide v5, p1, Lcaf;->a:J
+    move-result p1
 
-    cmp-long v1, v3, v5
+    const/4 v0, 0x2
 
-    if-eqz v1, :cond_2
+    if-ne p1, v0, :cond_0
 
-    return v2
-
-    :cond_2
-    iget-object v1, p0, Lcaf;->b:Ljava/lang/String;
-
-    iget-object v3, p1, Lcaf;->b:Ljava/lang/String;
-
-    invoke-static {v1, v3}, Lxq7;->d(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_3
-
-    return v2
-
-    :cond_3
-    iget-object v1, p0, Lcaf;->c:Ljava/lang/CharSequence;
-
-    iget-object v3, p1, Lcaf;->c:Ljava/lang/CharSequence;
-
-    invoke-static {v1, v3}, Lxq7;->d(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_4
-
-    return v2
-
-    :cond_4
-    iget-boolean v1, p0, Lcaf;->d:Z
-
-    iget-boolean v3, p1, Lcaf;->d:Z
-
-    if-eq v1, v3, :cond_5
-
-    return v2
-
-    :cond_5
-    iget-object p0, p0, Lcaf;->e:Ljava/lang/String;
-
-    iget-object p1, p1, Lcaf;->e:Ljava/lang/String;
-
-    invoke-static {p0, p1}, Lxq7;->d(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p0
-
-    if-nez p0, :cond_6
-
-    return v2
-
-    :cond_6
-    return v0
-.end method
-
-.method public final getName()Ljava/lang/String;
-    .locals 0
-
-    iget-object p0, p0, Lcaf;->b:Ljava/lang/String;
-
-    return-object p0
-.end method
-
-.method public final hashCode()I
-    .locals 3
-
-    iget-wide v0, p0, Lcaf;->a:J
-
-    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
-
-    move-result v0
-
-    const/16 v1, 0x1f
-
-    mul-int/2addr v0, v1
-
-    iget-object v2, p0, Lcaf;->b:Ljava/lang/String;
-
-    invoke-static {v0, v1, v2}, Lv04;->d(IILjava/lang/String;)I
-
-    move-result v0
-
-    iget-object v2, p0, Lcaf;->c:Ljava/lang/CharSequence;
-
-    invoke-static {v2, v0, v1}, Lm26;->d(Ljava/lang/CharSequence;II)I
-
-    move-result v0
-
-    iget-boolean v2, p0, Lcaf;->d:Z
-
-    invoke-static {v0, v1, v2}, Luz1;->f(IIZ)I
-
-    move-result v0
-
-    iget-object p0, p0, Lcaf;->e:Ljava/lang/String;
-
-    if-nez p0, :cond_0
-
-    const/4 p0, 0x0
+    const/4 p1, 0x1
 
     goto :goto_0
 
     :cond_0
-    invoke-virtual {p0}, Ljava/lang/String;->hashCode()I
-
-    move-result p0
+    move p1, v1
 
     :goto_0
-    add-int/2addr v0, p0
+    iget-boolean v0, p0, Ldaf;->g:Z
 
-    return v0
-.end method
+    if-ne p1, v0, :cond_1
 
-.method public final j()Ljava/lang/CharSequence;
-    .locals 0
+    iget-object p1, p0, Ldaf;->f:Lqs1;
 
-    iget-object p0, p0, Lcaf;->c:Ljava/lang/CharSequence;
+    const/4 v0, 0x0
 
-    return-object p0
-.end method
+    invoke-virtual {p1, v0}, Lqs1;->b(Ljava/lang/Object;)Z
 
-.method public final q()Ljava/lang/String;
-    .locals 0
+    iput-object v0, p0, Ldaf;->f:Lqs1;
 
-    iget-object p0, p0, Lcaf;->e:Ljava/lang/String;
-
-    return-object p0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 5
-
-    const-string v0, "UserInfo(serverId="
-
-    const-string v1, ", name="
-
-    iget-wide v2, p0, Lcaf;->a:J
-
-    iget-object v4, p0, Lcaf;->b:Ljava/lang/String;
-
-    invoke-static {v0, v2, v3, v1, v4}, Lp3a;->k(Ljava/lang/String;JLjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    const-string v1, ", abbreviation="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lcaf;->c:Ljava/lang/CharSequence;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", isUnknown="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-boolean v1, p0, Lcaf;->d:Z
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    const-string v1, ", avatar="
-
-    const-string v2, ")"
-
-    iget-object p0, p0, Lcaf;->e:Ljava/lang/String;
-
-    invoke-static {v0, v1, p0, v2}, Lrqc;->j(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
+    :cond_1
+    return v1
 .end method

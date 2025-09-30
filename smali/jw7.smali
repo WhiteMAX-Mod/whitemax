@@ -1,48 +1,79 @@
 .class public final Ljw7;
-.super Lbu3;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+# interfaces
+.implements Ld17;
 
 
-# instance fields
-.field public X:I
+# static fields
+.field public static final a:Ljw7;
 
-.field public final synthetic Y:Lff7;
-
-.field public synthetic o:Ljava/lang/Object;
+.field public static final b:[B
 
 
 # direct methods
-.method public constructor <init>(Lff7;Lkotlin/coroutines/Continuation;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    iput-object p1, p0, Ljw7;->Y:Lff7;
+    new-instance v0, Ljw7;
 
-    invoke-direct {p0, p2}, Lbu3;-><init>(Lkotlin/coroutines/Continuation;)V
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    sput-object v0, Ljw7;->a:Ljw7;
+
+    const/4 v0, 0x4
+
+    new-array v0, v0, [B
+
+    fill-array-data v0, :array_0
+
+    sput-object v0, Ljw7;->b:[B
 
     return-void
+
+    :array_0
+    .array-data 1
+        0x3t
+        0x0t
+        0x8t
+        0x0t
+    .end array-data
 .end method
 
 
 # virtual methods
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+.method public final a(I[B)Le17;
+    .locals 0
 
-    iput-object p1, p0, Ljw7;->o:Ljava/lang/Object;
+    const/4 p0, 0x4
 
-    iget p1, p0, Ljw7;->X:I
+    if-lt p1, p0, :cond_0
 
-    const/high16 v0, -0x80000000
+    sget-object p0, Ljw7;->b:[B
 
-    or-int/2addr p1, v0
+    const/4 p1, 0x0
 
-    iput p1, p0, Ljw7;->X:I
+    invoke-static {p2, p0, p1}, Lhv8;->C([B[BI)Z
 
-    iget-object p1, p0, Ljw7;->Y:Lff7;
+    move-result p0
 
-    const/4 v0, 0x0
+    if-eqz p0, :cond_0
 
-    invoke-virtual {p1, v0, p0}, Lff7;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p0
+    sget-object p0, Ly30;->h:Le17;
 
     return-object p0
+
+    :cond_0
+    sget-object p0, Le17;->c:Le17;
+
+    return-object p0
+.end method
+
+.method public final b()I
+    .locals 0
+
+    const/4 p0, 0x4
+
+    return p0
 .end method

@@ -3,268 +3,353 @@
 .source "SourceFile"
 
 # interfaces
-.implements Llqf;
+.implements Ljava/util/concurrent/ScheduledExecutorService;
+.implements Ljava/util/concurrent/ExecutorService;
 
 
 # instance fields
-.field public final synthetic a:Landroid/graphics/Rect;
+.field public final a:Ljava/util/concurrent/ExecutorService;
 
-.field public final synthetic b:Landroid/view/View;
-
-.field public final synthetic c:Landroid/view/View;
-
-.field public final synthetic d:Landroid/graphics/Rect;
-
-.field public final synthetic e:I
-
-.field public final synthetic f:I
+.field public final b:Lcl7;
 
 
 # direct methods
-.method public constructor <init>(Landroid/graphics/Rect;Landroid/view/View;Landroid/view/View;Landroid/graphics/Rect;II)V
+.method public constructor <init>(Ljava/util/concurrent/ExecutorService;Lzte;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lrl4;->a:Landroid/graphics/Rect;
+    iput-object p1, p0, Lrl4;->a:Ljava/util/concurrent/ExecutorService;
 
-    iput-object p2, p0, Lrl4;->b:Landroid/view/View;
-
-    iput-object p3, p0, Lrl4;->c:Landroid/view/View;
-
-    iput-object p4, p0, Lrl4;->d:Landroid/graphics/Rect;
-
-    iput p5, p0, Lrl4;->e:I
-
-    iput p6, p0, Lrl4;->f:I
+    iput-object p2, p0, Lrl4;->b:Lcl7;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()V
+.method public final awaitTermination(JLjava/util/concurrent/TimeUnit;)Z
     .locals 0
+
+    iget-object p0, p0, Lrl4;->a:Ljava/util/concurrent/ExecutorService;
+
+    invoke-interface {p0, p1, p2, p3}, Ljava/util/concurrent/ExecutorService;->awaitTermination(JLjava/util/concurrent/TimeUnit;)Z
+
+    move-result p0
+
+    return p0
+.end method
+
+.method public final execute(Ljava/lang/Runnable;)V
+    .locals 0
+
+    iget-object p0, p0, Lrl4;->a:Ljava/util/concurrent/ExecutorService;
+
+    invoke-interface {p0, p1}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
 
     return-void
 .end method
 
-.method public final c(Landroid/graphics/Rect;Landroid/view/View;)V
-    .locals 9
+.method public final invokeAll(Ljava/util/Collection;)Ljava/util/List;
+    .locals 0
 
-    iget-object p2, p0, Lrl4;->b:Landroid/view/View;
+    .line 1
+    iget-object p0, p0, Lrl4;->a:Ljava/util/concurrent/ExecutorService;
 
-    invoke-virtual {p2}, Landroid/view/View;->getWidth()I
+    invoke-interface {p0, p1}, Ljava/util/concurrent/ExecutorService;->invokeAll(Ljava/util/Collection;)Ljava/util/List;
 
-    move-result v0
+    move-result-object p0
 
-    invoke-virtual {p2}, Landroid/view/View;->getHeight()I
+    return-object p0
+.end method
 
-    move-result v1
+.method public final invokeAll(Ljava/util/Collection;JLjava/util/concurrent/TimeUnit;)Ljava/util/List;
+    .locals 0
 
-    iget-object v2, p0, Lrl4;->a:Landroid/graphics/Rect;
+    .line 2
+    iget-object p0, p0, Lrl4;->a:Ljava/util/concurrent/ExecutorService;
 
-    const/4 v3, 0x0
+    invoke-interface {p0, p1, p2, p3, p4}, Ljava/util/concurrent/ExecutorService;->invokeAll(Ljava/util/Collection;JLjava/util/concurrent/TimeUnit;)Ljava/util/List;
 
-    invoke-virtual {v2, v3, v3, v0, v1}, Landroid/graphics/Rect;->set(IIII)V
+    move-result-object p0
 
-    iget-object v0, p0, Lrl4;->d:Landroid/graphics/Rect;
+    return-object p0
+.end method
 
-    iget-object v1, p0, Lrl4;->c:Landroid/view/View;
+.method public final invokeAny(Ljava/util/Collection;)Ljava/lang/Object;
+    .locals 0
 
-    invoke-static {v0, v1}, Lfqf;->d(Landroid/graphics/Rect;Landroid/view/View;)V
+    .line 1
+    iget-object p0, p0, Lrl4;->a:Ljava/util/concurrent/ExecutorService;
 
-    iget v1, p0, Lrl4;->e:I
+    invoke-interface {p0, p1}, Ljava/util/concurrent/ExecutorService;->invokeAny(Ljava/util/Collection;)Ljava/lang/Object;
 
-    invoke-virtual {v0, v1, v1}, Landroid/graphics/Rect;->inset(II)V
+    move-result-object p0
 
-    invoke-virtual {v0}, Landroid/graphics/Rect;->centerX()I
+    return-object p0
+.end method
 
-    move-result v1
+.method public final invokeAny(Ljava/util/Collection;JLjava/util/concurrent/TimeUnit;)Ljava/lang/Object;
+    .locals 0
 
-    invoke-virtual {p1}, Landroid/graphics/Rect;->centerX()I
+    .line 2
+    iget-object p0, p0, Lrl4;->a:Ljava/util/concurrent/ExecutorService;
 
-    move-result v3
+    invoke-interface {p0, p1, p2, p3, p4}, Ljava/util/concurrent/ExecutorService;->invokeAny(Ljava/util/Collection;JLjava/util/concurrent/TimeUnit;)Ljava/lang/Object;
 
-    const/4 v4, 0x3
+    move-result-object p0
 
-    const/4 v5, 0x5
+    return-object p0
+.end method
 
-    if-ge v1, v3, :cond_0
+.method public final isShutdown()Z
+    .locals 0
 
-    move v1, v5
+    iget-object p0, p0, Lrl4;->a:Ljava/util/concurrent/ExecutorService;
 
-    goto :goto_0
-
-    :cond_0
-    move v1, v4
-
-    :goto_0
-    invoke-virtual {v0}, Landroid/graphics/Rect;->centerY()I
-
-    move-result v3
-
-    invoke-virtual {p1}, Landroid/graphics/Rect;->centerY()I
-
-    move-result v6
-
-    const/16 v7, 0x30
-
-    const/16 v8, 0x50
-
-    if-ge v3, v6, :cond_1
-
-    move v3, v8
-
-    goto :goto_1
-
-    :cond_1
-    move v3, v7
-
-    :goto_1
-    or-int/2addr v1, v3
-
-    and-int/lit8 v3, v1, 0x5
-
-    if-ne v3, v5, :cond_2
-
-    iget v3, p1, Landroid/graphics/Rect;->right:I
-
-    invoke-virtual {v2}, Landroid/graphics/Rect;->width()I
-
-    move-result v4
-
-    sub-int/2addr v3, v4
-
-    iget v4, v2, Landroid/graphics/Rect;->top:I
-
-    invoke-virtual {v2, v3, v4}, Landroid/graphics/Rect;->offsetTo(II)V
-
-    goto :goto_2
-
-    :cond_2
-    and-int/lit8 v3, v1, 0x3
-
-    if-ne v3, v4, :cond_3
-
-    iget v3, p1, Landroid/graphics/Rect;->left:I
-
-    iget v4, v2, Landroid/graphics/Rect;->top:I
-
-    invoke-virtual {v2, v3, v4}, Landroid/graphics/Rect;->offsetTo(II)V
-
-    :cond_3
-    :goto_2
-    and-int/lit8 v3, v1, 0x50
-
-    iget p0, p0, Lrl4;->f:I
-
-    if-ne v3, v8, :cond_4
-
-    iget v1, v2, Landroid/graphics/Rect;->left:I
-
-    iget p1, p1, Landroid/graphics/Rect;->top:I
-
-    invoke-virtual {v2}, Landroid/graphics/Rect;->height()I
-
-    move-result v3
-
-    sub-int/2addr p1, v3
-
-    sub-int/2addr p1, p0
-
-    invoke-virtual {v2, v1, p1}, Landroid/graphics/Rect;->offsetTo(II)V
-
-    goto :goto_3
-
-    :cond_4
-    and-int/2addr v1, v7
-
-    if-ne v1, v7, :cond_5
-
-    iget v1, v2, Landroid/graphics/Rect;->left:I
-
-    iget p1, p1, Landroid/graphics/Rect;->bottom:I
-
-    add-int/2addr p1, p0
-
-    invoke-virtual {v2, v1, p1}, Landroid/graphics/Rect;->offsetTo(II)V
-
-    :cond_5
-    :goto_3
-    invoke-virtual {v0, v2}, Landroid/graphics/Rect;->contains(Landroid/graphics/Rect;)Z
+    invoke-interface {p0}, Ljava/util/concurrent/ExecutorService;->isShutdown()Z
 
     move-result p0
 
-    if-nez p0, :cond_9
+    return p0
+.end method
 
-    iget p0, v2, Landroid/graphics/Rect;->left:I
+.method public final isTerminated()Z
+    .locals 0
 
-    iget p1, v0, Landroid/graphics/Rect;->left:I
+    iget-object p0, p0, Lrl4;->a:Ljava/util/concurrent/ExecutorService;
 
-    if-ge p0, p1, :cond_6
-
-    iget p0, v2, Landroid/graphics/Rect;->top:I
-
-    invoke-virtual {v2, p1, p0}, Landroid/graphics/Rect;->offsetTo(II)V
-
-    :cond_6
-    iget p0, v2, Landroid/graphics/Rect;->top:I
-
-    iget p1, v0, Landroid/graphics/Rect;->top:I
-
-    if-ge p0, p1, :cond_7
-
-    iget p0, v2, Landroid/graphics/Rect;->left:I
-
-    invoke-virtual {v2, p0, p1}, Landroid/graphics/Rect;->offsetTo(II)V
-
-    :cond_7
-    iget p0, v2, Landroid/graphics/Rect;->bottom:I
-
-    iget p1, v0, Landroid/graphics/Rect;->bottom:I
-
-    if-le p0, p1, :cond_8
-
-    iget p0, v2, Landroid/graphics/Rect;->left:I
-
-    invoke-virtual {v2}, Landroid/graphics/Rect;->height()I
-
-    move-result v1
-
-    sub-int/2addr p1, v1
-
-    invoke-virtual {v2, p0, p1}, Landroid/graphics/Rect;->offsetTo(II)V
-
-    :cond_8
-    iget p0, v2, Landroid/graphics/Rect;->right:I
-
-    iget p1, v0, Landroid/graphics/Rect;->right:I
-
-    if-le p0, p1, :cond_9
-
-    invoke-virtual {v2}, Landroid/graphics/Rect;->width()I
+    invoke-interface {p0}, Ljava/util/concurrent/ExecutorService;->isTerminated()Z
 
     move-result p0
 
-    sub-int/2addr p1, p0
+    return p0
+.end method
 
-    iget p0, v2, Landroid/graphics/Rect;->top:I
+.method public final schedule(Ljava/lang/Runnable;JLjava/util/concurrent/TimeUnit;)Ljava/util/concurrent/ScheduledFuture;
+    .locals 2
 
-    invoke-virtual {v2, p1, p0}, Landroid/graphics/Rect;->offsetTo(II)V
+    .line 5
+    invoke-static {p1}, Ljava/util/concurrent/Executors;->callable(Ljava/lang/Runnable;)Ljava/util/concurrent/Callable;
 
-    :cond_9
-    iget p0, v2, Landroid/graphics/Rect;->left:I
+    move-result-object p1
 
-    int-to-float p0, p0
+    .line 6
+    iget-object v0, p0, Lrl4;->b:Lcl7;
 
-    invoke-virtual {p2, p0}, Landroid/view/View;->setX(F)V
+    invoke-interface {v0}, Lcl7;->getValue()Ljava/lang/Object;
 
-    iget p0, v2, Landroid/graphics/Rect;->top:I
+    move-result-object v0
 
-    int-to-float p0, p0
+    check-cast v0, Ljava/util/concurrent/ScheduledExecutorService;
 
-    invoke-virtual {p2, p0}, Landroid/view/View;->setY(F)V
+    .line 7
+    new-instance v1, Lmma;
 
-    return-void
+    .line 8
+    iget-object p0, p0, Lrl4;->a:Ljava/util/concurrent/ExecutorService;
+
+    invoke-direct {v1, p1, p0}, Lmma;-><init>(Ljava/util/concurrent/Callable;Ljava/util/concurrent/ExecutorService;)V
+
+    .line 9
+    new-instance p0, Llma;
+
+    const/4 p1, 0x1
+
+    invoke-direct {p0, v1, p1}, Llma;-><init>(Lmma;I)V
+
+    invoke-interface {v0, p0, p2, p3, p4}, Ljava/util/concurrent/ScheduledExecutorService;->schedule(Ljava/lang/Runnable;JLjava/util/concurrent/TimeUnit;)Ljava/util/concurrent/ScheduledFuture;
+
+    move-result-object p0
+
+    iput-object p0, v1, Lmma;->r0:Ljava/util/concurrent/ScheduledFuture;
+
+    return-object v1
+.end method
+
+.method public final schedule(Ljava/util/concurrent/Callable;JLjava/util/concurrent/TimeUnit;)Ljava/util/concurrent/ScheduledFuture;
+    .locals 2
+
+    .line 1
+    iget-object v0, p0, Lrl4;->b:Lcl7;
+
+    invoke-interface {v0}, Lcl7;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/util/concurrent/ScheduledExecutorService;
+
+    .line 2
+    new-instance v1, Lmma;
+
+    .line 3
+    iget-object p0, p0, Lrl4;->a:Ljava/util/concurrent/ExecutorService;
+
+    invoke-direct {v1, p1, p0}, Lmma;-><init>(Ljava/util/concurrent/Callable;Ljava/util/concurrent/ExecutorService;)V
+
+    .line 4
+    new-instance p0, Llma;
+
+    const/4 p1, 0x1
+
+    invoke-direct {p0, v1, p1}, Llma;-><init>(Lmma;I)V
+
+    invoke-interface {v0, p0, p2, p3, p4}, Ljava/util/concurrent/ScheduledExecutorService;->schedule(Ljava/lang/Runnable;JLjava/util/concurrent/TimeUnit;)Ljava/util/concurrent/ScheduledFuture;
+
+    move-result-object p0
+
+    iput-object p0, v1, Lmma;->r0:Ljava/util/concurrent/ScheduledFuture;
+
+    return-object v1
+.end method
+
+.method public final scheduleAtFixedRate(Ljava/lang/Runnable;JJLjava/util/concurrent/TimeUnit;)Ljava/util/concurrent/ScheduledFuture;
+    .locals 8
+
+    invoke-static {p1}, Ljava/util/concurrent/Executors;->callable(Ljava/lang/Runnable;)Ljava/util/concurrent/Callable;
+
+    move-result-object p1
+
+    iget-object v0, p0, Lrl4;->b:Lcl7;
+
+    invoke-interface {v0}, Lcl7;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    move-object v1, v0
+
+    check-cast v1, Ljava/util/concurrent/ScheduledExecutorService;
+
+    new-instance v0, Lmma;
+
+    iget-object p0, p0, Lrl4;->a:Ljava/util/concurrent/ExecutorService;
+
+    invoke-direct {v0, p1, p0}, Lmma;-><init>(Ljava/util/concurrent/Callable;Ljava/util/concurrent/ExecutorService;)V
+
+    new-instance v2, Llma;
+
+    const/4 p0, 0x0
+
+    invoke-direct {v2, v0, p0}, Llma;-><init>(Lmma;I)V
+
+    move-wide v3, p2
+
+    move-wide v5, p4
+
+    move-object v7, p6
+
+    invoke-interface/range {v1 .. v7}, Ljava/util/concurrent/ScheduledExecutorService;->scheduleWithFixedDelay(Ljava/lang/Runnable;JJLjava/util/concurrent/TimeUnit;)Ljava/util/concurrent/ScheduledFuture;
+
+    move-result-object p0
+
+    iput-object p0, v0, Lmma;->r0:Ljava/util/concurrent/ScheduledFuture;
+
+    return-object v0
+.end method
+
+.method public final scheduleWithFixedDelay(Ljava/lang/Runnable;JJLjava/util/concurrent/TimeUnit;)Ljava/util/concurrent/ScheduledFuture;
+    .locals 8
+
+    invoke-static {p1}, Ljava/util/concurrent/Executors;->callable(Ljava/lang/Runnable;)Ljava/util/concurrent/Callable;
+
+    move-result-object p1
+
+    iget-object v0, p0, Lrl4;->b:Lcl7;
+
+    invoke-interface {v0}, Lcl7;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    move-object v1, v0
+
+    check-cast v1, Ljava/util/concurrent/ScheduledExecutorService;
+
+    new-instance v0, Lmma;
+
+    iget-object p0, p0, Lrl4;->a:Ljava/util/concurrent/ExecutorService;
+
+    invoke-direct {v0, p1, p0}, Lmma;-><init>(Ljava/util/concurrent/Callable;Ljava/util/concurrent/ExecutorService;)V
+
+    new-instance v2, Llma;
+
+    const/4 p0, 0x0
+
+    invoke-direct {v2, v0, p0}, Llma;-><init>(Lmma;I)V
+
+    move-wide v3, p2
+
+    move-wide v5, p4
+
+    move-object v7, p6
+
+    invoke-interface/range {v1 .. v7}, Ljava/util/concurrent/ScheduledExecutorService;->scheduleWithFixedDelay(Ljava/lang/Runnable;JJLjava/util/concurrent/TimeUnit;)Ljava/util/concurrent/ScheduledFuture;
+
+    move-result-object p0
+
+    iput-object p0, v0, Lmma;->r0:Ljava/util/concurrent/ScheduledFuture;
+
+    return-object v0
+.end method
+
+.method public final shutdown()V
+    .locals 1
+
+    new-instance p0, Ljava/lang/UnsupportedOperationException;
+
+    const-string v0, "Shutting down is not allowed."
+
+    invoke-direct {p0, v0}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+
+    throw p0
+.end method
+
+.method public final shutdownNow()Ljava/util/List;
+    .locals 1
+
+    new-instance p0, Ljava/lang/UnsupportedOperationException;
+
+    const-string v0, "Shutting down is not allowed."
+
+    invoke-direct {p0, v0}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+
+    throw p0
+.end method
+
+.method public final submit(Ljava/lang/Runnable;)Ljava/util/concurrent/Future;
+    .locals 0
+
+    .line 1
+    iget-object p0, p0, Lrl4;->a:Ljava/util/concurrent/ExecutorService;
+
+    invoke-interface {p0, p1}, Ljava/util/concurrent/ExecutorService;->submit(Ljava/lang/Runnable;)Ljava/util/concurrent/Future;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public final submit(Ljava/lang/Runnable;Ljava/lang/Object;)Ljava/util/concurrent/Future;
+    .locals 0
+
+    .line 2
+    iget-object p0, p0, Lrl4;->a:Ljava/util/concurrent/ExecutorService;
+
+    invoke-interface {p0, p1, p2}, Ljava/util/concurrent/ExecutorService;->submit(Ljava/lang/Runnable;Ljava/lang/Object;)Ljava/util/concurrent/Future;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public final submit(Ljava/util/concurrent/Callable;)Ljava/util/concurrent/Future;
+    .locals 0
+
+    .line 3
+    iget-object p0, p0, Lrl4;->a:Ljava/util/concurrent/ExecutorService;
+
+    invoke-interface {p0, p1}, Ljava/util/concurrent/ExecutorService;->submit(Ljava/util/concurrent/Callable;)Ljava/util/concurrent/Future;
+
+    move-result-object p0
+
+    return-object p0
 .end method

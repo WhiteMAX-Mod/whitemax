@@ -1,10 +1,3 @@
 .class public abstract Lv4;
-.super Lleg;
+.super Lya6;
 .source "SourceFile"
-
-# interfaces
-.implements Lgr6;
-
-
-# static fields
-.field public static final synthetic d:I

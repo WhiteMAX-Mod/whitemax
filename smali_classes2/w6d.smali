@@ -3,22 +3,22 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lc6;
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
 .field public final synthetic a:I
 
-.field public final synthetic b:Lx6d;
+.field public final synthetic b:Lorg/webrtc/ScreenCapturerAndroid;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lx6d;I)V
+.method public synthetic constructor <init>(Lorg/webrtc/ScreenCapturerAndroid;I)V
     .locals 0
 
     iput p2, p0, Lw6d;->a:I
 
-    iput-object p1, p0, Lw6d;->b:Lx6d;
+    iput-object p1, p0, Lw6d;->b:Lorg/webrtc/ScreenCapturerAndroid;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -28,28 +28,20 @@
 
 # virtual methods
 .method public final run()V
-    .locals 3
+    .locals 1
 
     iget v0, p0, Lw6d;->a:I
 
+    iget-object p0, p0, Lw6d;->b:Lorg/webrtc/ScreenCapturerAndroid;
+
     packed-switch v0, :pswitch_data_0
 
-    iget-object p0, p0, Lw6d;->b:Lx6d;
-
-    invoke-virtual {p0}, Lx6d;->y()V
+    invoke-static {p0}, Lorg/webrtc/ScreenCapturerAndroid;->b(Lorg/webrtc/ScreenCapturerAndroid;)V
 
     return-void
 
     :pswitch_0
-    iget-object p0, p0, Lw6d;->b:Lx6d;
-
-    invoke-virtual {p0}, Li6d;->r()Lhme;
-
-    move-result-object v0
-
-    iget-wide v1, p0, Lx6d;->b:J
-
-    invoke-virtual {v0, v1, v2}, Lhme;->c(J)V
+    invoke-static {p0}, Lorg/webrtc/ScreenCapturerAndroid;->a(Lorg/webrtc/ScreenCapturerAndroid;)V
 
     return-void
 

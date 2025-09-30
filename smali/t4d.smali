@@ -1,48 +1,42 @@
-.class public final synthetic Lt4d;
-.super La76;
+.class public final Lt4d;
+.super Li0;
 .source "SourceFile"
 
 # interfaces
-.implements Lx56;
-
-
-# static fields
-.field public static final a:Lt4d;
-
-
-# direct methods
-.method static constructor <clinit>()V
-    .locals 6
-
-    new-instance v0, Lt4d;
-
-    const-string v4, "iterator()Ljava/util/Iterator;"
-
-    const/4 v5, 0x0
-
-    const/4 v1, 0x1
-
-    const-class v2, Ljava/lang/Iterable;
-
-    const-string v3, "iterator"
-
-    invoke-direct/range {v0 .. v5}, La76;-><init>(ILjava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
-
-    sput-object v0, Lt4d;->a:Lt4d;
-
-    return-void
-.end method
+.implements Ljava/lang/Runnable;
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final run()V
+    .locals 2
 
-    check-cast p1, Ljava/lang/Iterable;
+    invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
 
-    invoke-interface {p1}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
+    move-result-object v0
 
-    move-result-object p0
+    iput-object v0, p0, Li0;->c:Ljava/lang/Thread;
 
-    return-object p0
+    const/4 v0, 0x0
+
+    :try_start_0
+    iget-object v1, p0, Li0;->a:Ljava/lang/Runnable;
+
+    invoke-interface {v1}, Ljava/lang/Runnable;->run()V
+
+    iput-object v0, p0, Li0;->c:Ljava/lang/Thread;
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    return-void
+
+    :catchall_0
+    move-exception v1
+
+    invoke-virtual {p0}, Li0;->e()V
+
+    iput-object v0, p0, Li0;->c:Ljava/lang/Thread;
+
+    invoke-static {v1}, Ln4e;->D(Ljava/lang/Throwable;)V
+
+    throw v1
 .end method

@@ -2,146 +2,126 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ljava/lang/Iterable;
+
 
 # instance fields
-.field public a:Ljava/lang/Object;
+.field public final a:Ljava/lang/Object;
 
-.field public b:Ljava/lang/Object;
+.field public final b:Ljava/util/HashMap;
 
-.field public c:I
+.field public c:Ljava/util/Set;
 
-.field public d:Ljava/lang/Object;
-
-.field public e:Ljava/lang/Object;
-
-.field public f:I
-
-.field public g:I
-
-.field public h:I
-
-.field public final i:Ljava/lang/Object;
-
-.field public j:Ljava/lang/Object;
+.field public o:Ljava/util/List;
 
 
 # direct methods
-.method public constructor <init>(I)V
-    .locals 2
+.method public constructor <init>()V
+    .locals 1
 
-    packed-switch p1, :pswitch_data_0
-
-    .line 7
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 8
-    new-instance p1, Landroid/media/MediaCodec$CryptoInfo;
+    new-instance v0, Ljava/lang/Object;
 
-    invoke-direct {p1}, Landroid/media/MediaCodec$CryptoInfo;-><init>()V
-
-    iput-object p1, p0, Lj04;->i:Ljava/lang/Object;
-
-    .line 9
-    sget v0, Lnaf;->a:I
-
-    const/16 v1, 0x18
-
-    if-lt v0, v1, :cond_0
-
-    new-instance v0, Lha8;
-
-    .line 10
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    .line 11
-    iput-object p1, v0, Lha8;->a:Ljava/lang/Object;
+    iput-object v0, p0, Lj04;->a:Ljava/lang/Object;
 
-    .line 12
-    new-instance p1, Landroid/media/MediaCodec$CryptoInfo$Pattern;
+    new-instance v0, Ljava/util/HashMap;
 
-    const/4 v1, 0x0
+    invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
-    invoke-direct {p1, v1, v1}, Landroid/media/MediaCodec$CryptoInfo$Pattern;-><init>(II)V
+    iput-object v0, p0, Lj04;->b:Ljava/util/HashMap;
 
-    iput-object p1, v0, Lha8;->b:Ljava/lang/Object;
+    sget-object v0, Ljava/util/Collections;->EMPTY_SET:Ljava/util/Set;
+
+    iput-object v0, p0, Lj04;->c:Ljava/util/Set;
+
+    sget-object v0, Ljava/util/Collections;->EMPTY_LIST:Ljava/util/List;
+
+    iput-object v0, p0, Lj04;->o:Ljava/util/List;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final a(Lrw4;)I
+    .locals 2
+
+    iget-object v0, p0, Lj04;->a:Ljava/lang/Object;
+
+    monitor-enter v0
+
+    :try_start_0
+    iget-object v1, p0, Lj04;->b:Ljava/util/HashMap;
+
+    invoke-virtual {v1, p1}, Ljava/util/HashMap;->containsKey(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    iget-object p0, p0, Lj04;->b:Ljava/util/HashMap;
+
+    invoke-virtual {p0, p1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p0
+
+    check-cast p0, Ljava/lang/Integer;
+
+    invoke-virtual {p0}, Ljava/lang/Integer;->intValue()I
+
+    move-result p0
 
     goto :goto_0
 
-    :cond_0
-    const/4 v0, 0x0
-
-    .line 13
-    :goto_0
-    iput-object v0, p0, Lj04;->j:Ljava/lang/Object;
-
-    return-void
-
-    .line 14
-    :pswitch_0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 15
-    new-instance p1, Landroid/media/MediaCodec$CryptoInfo;
-
-    invoke-direct {p1}, Landroid/media/MediaCodec$CryptoInfo;-><init>()V
-
-    iput-object p1, p0, Lj04;->i:Ljava/lang/Object;
-
-    .line 16
-    sget v0, Lpaf;->a:I
-
-    const/16 v1, 0x18
-
-    if-lt v0, v1, :cond_1
-
-    new-instance v0, Lt4b;
-
-    invoke-direct {v0, p1}, Lt4b;-><init>(Landroid/media/MediaCodec$CryptoInfo;)V
+    :catchall_0
+    move-exception p0
 
     goto :goto_1
 
-    :cond_1
-    const/4 v0, 0x0
+    :cond_0
+    const/4 p0, 0x0
+
+    :goto_0
+    monitor-exit v0
+
+    return p0
 
     :goto_1
-    iput-object v0, p0, Lj04;->j:Ljava/lang/Object;
+    monitor-exit v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x1
-        :pswitch_0
-    .end packed-switch
+    throw p0
 .end method
 
-.method public constructor <init>(Lckd;Landroid/content/Context;Lqf1;Ls1c;)V
-    .locals 0
+.method public final iterator()Ljava/util/Iterator;
+    .locals 1
 
-    .line 1
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iget-object v0, p0, Lj04;->a:Ljava/lang/Object;
 
-    .line 2
-    iput-object p1, p0, Lj04;->a:Ljava/lang/Object;
+    monitor-enter v0
 
-    .line 3
-    iput-object p2, p0, Lj04;->b:Ljava/lang/Object;
+    :try_start_0
+    iget-object p0, p0, Lj04;->o:Ljava/util/List;
 
-    .line 4
-    iput-object p3, p0, Lj04;->d:Ljava/lang/Object;
+    invoke-interface {p0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
-    .line 5
-    iput-object p4, p0, Lj04;->e:Ljava/lang/Object;
+    move-result-object p0
 
-    .line 6
-    new-instance p1, Ljjc;
+    monitor-exit v0
 
-    const/4 p2, 0x1
+    return-object p0
 
-    invoke-direct {p1, p2}, Ljjc;-><init>(I)V
+    :catchall_0
+    move-exception p0
 
-    iput-object p1, p0, Lj04;->i:Ljava/lang/Object;
+    monitor-exit v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    return-void
+    throw p0
 .end method

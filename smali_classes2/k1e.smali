@@ -1,52 +1,23 @@
-.class public final synthetic Lk1e;
-.super Lq8;
+.class public final Lk1e;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ln66;
 
+# instance fields
+.field public final a:Lvmd;
 
-# static fields
-.field public static final o0:Lk1e;
+.field public final b:Ljava/lang/Object;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 5
-
-    new-instance v0, Lk1e;
-
-    const-string v1, "<init>(Ljava/lang/Object;Ljava/lang/Object;)V"
-
-    const/4 v2, 0x4
-
-    const/4 v3, 0x3
-
-    const-class v4, Ldna;
-
-    invoke-direct {v0, v3, v4, v1, v2}, Lq8;-><init>(ILjava/lang/Class;Ljava/lang/String;I)V
-
-    sput-object v0, Lk1e;->o0:Lk1e;
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+.method public constructor <init>(Lvmd;Ljava/util/List;)V
     .locals 0
 
-    check-cast p1, Lt1e;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    check-cast p2, Ljava/lang/Boolean;
+    iput-object p1, p0, Lk1e;->a:Lvmd;
 
-    check-cast p3, Lkotlin/coroutines/Continuation;
+    iput-object p2, p0, Lk1e;->b:Ljava/lang/Object;
 
-    sget-object p0, Lp1e;->D0:[Lbc7;
-
-    new-instance p0, Ldna;
-
-    invoke-direct {p0, p1, p2}, Ldna;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
-
-    return-object p0
+    return-void
 .end method

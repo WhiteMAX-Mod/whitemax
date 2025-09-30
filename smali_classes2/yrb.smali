@@ -1,92 +1,69 @@
-.class public abstract Lyrb;
-.super Ljava/lang/Object;
+.class public final Lyrb;
+.super Llsb;
+.source "SourceFile"
 
 
-# static fields
-.field public static add_24:I = 0x7f080258
+# virtual methods
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 1
 
-.field public static call_24:I = 0x7f080286
+    const/4 v0, 0x1
 
-.field public static call_fill_16:I = 0x7f080288
+    if-ne p0, p1, :cond_0
 
-.field public static cancel_10:I = 0x7f08028d
+    return v0
 
-.field public static cancel_outline_28:I = 0x7f08028e
+    :cond_0
+    instance-of p0, p1, Lyrb;
 
-.field public static chat_24:I = 0x7f080293
+    if-nez p0, :cond_1
 
-.field public static check_24:I = 0x7f080299
+    const/4 p0, 0x0
 
-.field public static contact_24:I = 0x7f0802c1
+    return p0
 
-.field public static copy_24:I = 0x7f0802c5
+    :cond_1
+    check-cast p1, Lyrb;
 
-.field public static download_24:I = 0x7f0802de
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-.field public static edit_outline_24:I = 0x7f0802e5
+    return v0
+.end method
 
-.field public static file_24:I = 0x7f08035a
+.method public final getItemId()J
+    .locals 2
 
-.field public static forward_24:I = 0x7f08045d
+    const/16 p0, 0x100
 
-.field public static ic_add_16:I = 0x7f080475
+    int-to-long v0, p0
 
-.field public static ic_arrow_left_outline_28:I = 0x7f0804a2
+    return-wide v0
+.end method
 
-.field public static ic_cancel_filled_24:I = 0x7f0804ea
+.method public final hashCode()I
+    .locals 0
 
-.field public static ic_cancel_outline_24:I = 0x7f0804eb
+    const/4 p0, -0x1
 
-.field public static ic_cancel_outline_28:I = 0x7f0804ec
+    invoke-static {p0}, Ljava/lang/Integer;->hashCode(I)I
 
-.field public static ic_channel_outline_28:I = 0x7f0804f1
+    move-result p0
 
-.field public static ic_check_filled_24:I = 0x7f0804fa
+    return p0
+.end method
 
-.field public static ic_delete_filled_apart_24:I = 0x7f080535
+.method public final m()I
+    .locals 0
 
-.field public static ic_delete_filled_cut_out_24:I = 0x7f080536
+    const/16 p0, 0x100
 
-.field public static ic_done_28:I = 0x7f08053e
+    return p0
+.end method
 
-.field public static ic_heart_fill_24:I = 0x7f0805b0
+.method public final toString()Ljava/lang/String;
+    .locals 0
 
-.field public static ic_heart_outline_24:I = 0x7f0805b1
+    const-string p0, "Attaches(count=-1)"
 
-.field public static ic_mention_24:I = 0x7f0805ee
-
-.field public static ic_message_filled_28:I = 0x7f0805f5
-
-.field public static ic_more_vertical_filled_16:I = 0x7f080611
-
-.field public static ic_next_16:I = 0x7f08069e
-
-.field public static ic_online_24:I = 0x7f0806aa
-
-.field public static ic_phone_28:I = 0x7f0806b8
-
-.field public static ic_search_outline_16:I = 0x7f0806f4
-
-.field public static ic_settings_filled_28:I = 0x7f080705
-
-.field public static ic_stub_outline_24:I = 0x7f08072b
-
-.field public static ic_swap_24:I = 0x7f080730
-
-.field public static ic_users_28:I = 0x7f08074d
-
-.field public static ic_users_outline_28:I = 0x7f08074e
-
-.field public static link_24:I = 0x7f080793
-
-.field public static media_24:I = 0x7f080801
-
-.field public static microphone_on_24:I = 0x7f08080e
-
-.field public static setting_24:I = 0x7f0808bd
-
-.field public static settings_outline_24:I = 0x7f0808bf
-
-.field public static share_24_android:I = 0x7f0808c1
-
-.field public static support_24:I = 0x7f0808d6
+    return-object p0
+.end method

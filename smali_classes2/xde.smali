@@ -1,49 +1,19 @@
 .class public final Lxde;
-.super Lbu3;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public final synthetic X:Llee;
-
-.field public Y:I
-
-.field public synthetic o:Ljava/lang/Object;
+.field public final a:Lorg/webrtc/RTCStatsReport;
 
 
 # direct methods
-.method public constructor <init>(Llee;Lbu3;)V
+.method public constructor <init>(Lorg/webrtc/RTCStatsReport;)V
     .locals 0
 
-    iput-object p1, p0, Lxde;->X:Llee;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, p2}, Lbu3;-><init>(Lkotlin/coroutines/Continuation;)V
+    iput-object p1, p0, Lxde;->a:Lorg/webrtc/RTCStatsReport;
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
-
-    iput-object p1, p0, Lxde;->o:Ljava/lang/Object;
-
-    iget p1, p0, Lxde;->Y:I
-
-    const/high16 v0, -0x80000000
-
-    or-int/2addr p1, v0
-
-    iput p1, p0, Lxde;->Y:I
-
-    iget-object p1, p0, Lxde;->X:Llee;
-
-    const/4 v0, 0x0
-
-    invoke-static {p1, v0, p0}, Llee;->c(Llee;Ljava/lang/Throwable;Lbu3;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    return-object p0
 .end method

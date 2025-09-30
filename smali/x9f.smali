@@ -1,267 +1,76 @@
 .class public final Lx9f;
-.super Ljava/lang/Object;
+.super Landroid/content/BroadcastReceiver;
 .source "SourceFile"
-
-# interfaces
-.implements Lol7;
 
 
 # instance fields
-.field public final X:J
-
-.field public final a:Lns5;
-
-.field public final b:Lw9f;
-
-.field public final c:Lmoe;
-
-.field public final o:I
-
-
-# direct methods
-.method public constructor <init>(Lns5;Lw9f;Lmoe;)V
-    .locals 0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lx9f;->a:Lns5;
-
-    iput-object p2, p0, Lx9f;->b:Lw9f;
-
-    iput-object p3, p0, Lx9f;->c:Lmoe;
-
-    invoke-virtual {p2}, Ljava/lang/Enum;->ordinal()I
-
-    move-result p3
-
-    iput p3, p0, Lx9f;->o:I
-
-    if-eqz p1, :cond_0
-
-    iget-object p1, p1, Lns5;->a:Ljava/lang/String;
-
-    if-eqz p1, :cond_0
-
-    invoke-virtual {p1}, Ljava/lang/String;->hashCode()I
-
-    move-result p1
-
-    goto :goto_0
-
-    :cond_0
-    const/4 p1, 0x0
-
-    :goto_0
-    invoke-virtual {p2}, Ljava/lang/Object;->hashCode()I
-
-    move-result p2
-
-    mul-int/lit8 p2, p2, 0x21
-
-    add-int/2addr p2, p1
-
-    int-to-long p1, p2
-
-    iput-wide p1, p0, Lx9f;->X:J
-
-    return-void
-.end method
+.field public a:Ly9f;
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
+.method public final declared-synchronized onReceive(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 4
 
-    const/4 v0, 0x1
+    monitor-enter p0
 
-    if-ne p0, p1, :cond_0
+    :try_start_0
+    iget-object p2, p0, Lx9f;->a:Ly9f;
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    return v0
+    if-nez p2, :cond_0
+
+    monitor-exit p0
+
+    return-void
 
     :cond_0
-    instance-of v1, p1, Lx9f;
+    :try_start_1
+    invoke-virtual {p2}, Ly9f;->c()Z
 
-    const/4 v2, 0x0
+    move-result p2
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    if-nez v1, :cond_1
+    if-nez p2, :cond_1
 
-    return v2
+    monitor-exit p0
+
+    return-void
 
     :cond_1
-    check-cast p1, Lx9f;
+    :try_start_2
+    iget-object p2, p0, Lx9f;->a:Ly9f;
 
-    iget-object v1, p0, Lx9f;->a:Lns5;
+    iget-object v0, p2, Ly9f;->o:Lw9f;
 
-    iget-object v3, p1, Lx9f;->a:Lns5;
+    iget-object v0, v0, Lw9f;->f:Ljava/util/concurrent/ScheduledThreadPoolExecutor;
 
-    invoke-static {v1, v3}, Lxq7;->d(Ljava/lang/Object;Ljava/lang/Object;)Z
+    sget-object v1, Ljava/util/concurrent/TimeUnit;->SECONDS:Ljava/util/concurrent/TimeUnit;
 
-    move-result v1
+    const-wide/16 v2, 0x0
 
-    if-nez v1, :cond_2
+    invoke-virtual {v0, p2, v2, v3, v1}, Ljava/util/concurrent/ScheduledThreadPoolExecutor;->schedule(Ljava/lang/Runnable;JLjava/util/concurrent/TimeUnit;)Ljava/util/concurrent/ScheduledFuture;
 
-    return v2
+    invoke-virtual {p1, p0}, Landroid/content/Context;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V
 
-    :cond_2
-    iget-object v1, p0, Lx9f;->b:Lw9f;
+    const/4 p1, 0x0
 
-    iget-object v3, p1, Lx9f;->b:Lw9f;
+    iput-object p1, p0, Lx9f;->a:Ly9f;
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    if-eq v1, v3, :cond_3
+    monitor-exit p0
 
-    return v2
+    return-void
 
-    :cond_3
-    iget-object p0, p0, Lx9f;->c:Lmoe;
+    :catchall_0
+    move-exception p1
 
-    iget-object p1, p1, Lx9f;->c:Lmoe;
+    :try_start_3
+    monitor-exit p0
+    :try_end_3
+    .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
-    invoke-static {p0, p1}, Lxq7;->d(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p0
-
-    if-nez p0, :cond_4
-
-    return v2
-
-    :cond_4
-    return v0
-.end method
-
-.method public final getItemId()J
-    .locals 2
-
-    iget-wide v0, p0, Lx9f;->X:J
-
-    return-wide v0
-.end method
-
-.method public final h(Lol7;)Z
-    .locals 1
-
-    instance-of v0, p1, Lx9f;
-
-    if-eqz v0, :cond_2
-
-    const/4 v0, 0x0
-
-    iget-object p0, p0, Lx9f;->a:Lns5;
-
-    if-eqz p0, :cond_0
-
-    iget-object p0, p0, Lns5;->a:Ljava/lang/String;
-
-    goto :goto_0
-
-    :cond_0
-    move-object p0, v0
-
-    :goto_0
-    check-cast p1, Lx9f;
-
-    iget-object p1, p1, Lx9f;->a:Lns5;
-
-    if-eqz p1, :cond_1
-
-    iget-object v0, p1, Lns5;->a:Ljava/lang/String;
-
-    :cond_1
-    invoke-static {p0, v0}, Lxq7;->d(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p0
-
-    return p0
-
-    :cond_2
-    const/4 p0, 0x0
-
-    return p0
-.end method
-
-.method public final hashCode()I
-    .locals 2
-
-    iget-object v0, p0, Lx9f;->a:Lns5;
-
-    if-nez v0, :cond_0
-
-    const/4 v0, 0x0
-
-    goto :goto_0
-
-    :cond_0
-    invoke-virtual {v0}, Lns5;->hashCode()I
-
-    move-result v0
-
-    :goto_0
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget-object v1, p0, Lx9f;->b:Lw9f;
-
-    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    mul-int/lit8 v1, v1, 0x1f
-
-    iget-object p0, p0, Lx9f;->c:Lmoe;
-
-    invoke-virtual {p0}, Ljava/lang/Object;->hashCode()I
-
-    move-result p0
-
-    add-int/2addr p0, v1
-
-    return p0
-.end method
-
-.method public final m()I
-    .locals 0
-
-    iget p0, p0, Lx9f;->o:I
-
-    return p0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 2
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "UserFolderListItem(folder="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v1, p0, Lx9f;->a:Lns5;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", type="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lx9f;->b:Lw9f;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", processedTitle="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object p0, p0, Lx9f;->c:Lmoe;
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string p0, ")"
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
+    throw p1
 .end method

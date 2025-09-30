@@ -1,86 +1,84 @@
-.class public final synthetic Lql1;
-.super Ljava/lang/Object;
+.class public final Lql1;
+.super Lure;
 .source "SourceFile"
 
 # interfaces
-.implements Landroid/view/View$OnClickListener;
+.implements Lpc6;
 
 
 # instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Lsl1;
-
-
-# direct methods
-.method public synthetic constructor <init>(Lsl1;I)V
-    .locals 0
-
-    iput p2, p0, Lql1;->a:I
-
-    iput-object p1, p0, Lql1;->b:Lsl1;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    return-void
-.end method
+.field public synthetic X:Ljava/lang/Object;
 
 
 # virtual methods
-.method public final onClick(Landroid/view/View;)V
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    iget p1, p0, Lql1;->a:I
+    check-cast p1, Ljava/util/Collection;
 
-    iget-object p0, p0, Lql1;->b:Lsl1;
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    packed-switch p1, :pswitch_data_0
+    invoke-virtual {p0, p1, p2}, Lql1;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    iget-object p0, p0, Lsl1;->C0:Lrl1;
+    move-result-object p0
 
-    if-eqz p0, :cond_0
+    check-cast p0, Lql1;
 
-    invoke-interface {p0}, Lrl1;->j()V
+    sget-object p1, Lylf;->a:Lylf;
 
-    :cond_0
-    return-void
+    invoke-virtual {p0, p1}, Lql1;->o(Ljava/lang/Object;)Ljava/lang/Object;
 
-    :pswitch_0
-    iget-object p0, p0, Lsl1;->C0:Lrl1;
+    return-object p1
+.end method
 
-    if-eqz p0, :cond_1
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 1
 
-    invoke-interface {p0}, Lrl1;->f()V
+    new-instance p0, Lql1;
 
-    :cond_1
-    return-void
+    const/4 v0, 0x2
 
-    :pswitch_1
-    iget-object p0, p0, Lsl1;->C0:Lrl1;
+    invoke-direct {p0, v0, p2}, Lure;-><init>(ILkotlin/coroutines/Continuation;)V
 
-    if-eqz p0, :cond_2
+    iput-object p1, p0, Lql1;->X:Ljava/lang/Object;
 
-    invoke-interface {p0}, Lrl1;->h()V
+    return-object p0
+.end method
 
-    :cond_2
-    return-void
+.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    :pswitch_2
-    iget-object p0, p0, Lsl1;->C0:Lrl1;
+    invoke-static {p1}, Lqe5;->V(Ljava/lang/Object;)V
 
-    if-eqz p0, :cond_3
+    iget-object p0, p0, Lql1;->X:Ljava/lang/Object;
 
-    invoke-interface {p0}, Lrl1;->i()V
+    check-cast p0, Ljava/util/Collection;
 
-    :cond_3
-    return-void
+    sget-object p1, Lv31;->a:Lv31;
 
-    nop
+    invoke-virtual {p1}, Lscout/Component;->getAccessor()Lz4;
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    move-result-object p1
+
+    const-class v0, Lnq4;
+
+    invoke-virtual {p1, v0}, Lz4;->c(Ljava/lang/Class;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lnq4;
+
+    iget-object p1, p1, Lnq4;->d:Lzte;
+
+    invoke-virtual {p1}, Lzte;->getValue()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lqo9;
+
+    invoke-interface {p1, p0}, Lqo9;->h(Ljava/lang/Object;)Z
+
+    sget-object p0, Lylf;->a:Lylf;
+
+    return-object p0
 .end method

@@ -1,42 +1,97 @@
 .class public final Lard;
-.super Landroid/animation/AnimatorListenerAdapter;
+.super Lfrd;
 .source "SourceFile"
 
 
-# instance fields
-.field public final synthetic a:I
+# static fields
+.field public static final CREATOR:Landroid/os/Parcelable$Creator;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroid/os/Parcelable$Creator<",
+            "Lard;",
+            ">;"
+        }
+    .end annotation
+.end field
 
-.field public final synthetic b:Lru/ok/messages/views/widgets/SlideOutLayout;
+.field public static final a:Lard;
 
 
 # direct methods
-.method public constructor <init>(Lru/ok/messages/views/widgets/SlideOutLayout;I)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 2
 
-    iput-object p1, p0, Lard;->b:Lru/ok/messages/views/widgets/SlideOutLayout;
+    new-instance v0, Lard;
 
-    iput p2, p0, Lard;->a:I
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
+    sput-object v0, Lard;->a:Lard;
+
+    new-instance v0, Le5d;
+
+    const/4 v1, 0x5
+
+    invoke-direct {v0, v1}, Le5d;-><init>(I)V
+
+    sput-object v0, Lard;->CREATOR:Landroid/os/Parcelable$Creator;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onAnimationEnd(Landroid/animation/Animator;)V
+.method public final describeContents()I
     .locals 0
 
-    iget-object p1, p0, Lard;->b:Lru/ok/messages/views/widgets/SlideOutLayout;
+    const/4 p0, 0x0
 
-    iget-object p1, p1, Lru/ok/messages/views/widgets/SlideOutLayout;->u0:Lbrd;
+    return p0
+.end method
 
-    if-eqz p1, :cond_0
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 1
 
-    iget p0, p0, Lard;->a:I
+    const/4 v0, 0x1
 
-    invoke-interface {p1, p0}, Lbrd;->I(I)V
+    if-ne p0, p1, :cond_0
+
+    return v0
 
     :cond_0
+    instance-of p0, p1, Lard;
+
+    if-nez p0, :cond_1
+
+    const/4 p0, 0x0
+
+    return p0
+
+    :cond_1
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 0
+
+    const p0, 0x49c7fb9b
+
+    return p0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 0
+
+    const-string p0, "Arrow"
+
+    return-object p0
+.end method
+
+.method public final writeToParcel(Landroid/os/Parcel;I)V
+    .locals 0
+
+    const/4 p0, 0x1
+
+    invoke-virtual {p1, p0}, Landroid/os/Parcel;->writeInt(I)V
+
     return-void
 .end method

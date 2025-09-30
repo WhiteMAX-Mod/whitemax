@@ -1,67 +1,75 @@
 .class public final Lfha;
-.super Lbu3;
+.super Ljava/util/concurrent/LinkedTransferQueue;
 .source "SourceFile"
 
 
-# instance fields
-.field public X:Ljava/io/IOException;
+# virtual methods
+.method public final bridge contains(Ljava/lang/Object;)Z
+    .locals 1
 
-.field public Y:Laha;
+    if-nez p1, :cond_0
 
-.field public Z:Ljava/io/File;
+    const/4 v0, 0x1
 
-.field public o:Liha;
+    goto :goto_0
 
-.field public o0:Ljava/util/Iterator;
+    :cond_0
+    instance-of v0, p1, Ljava/lang/Runnable;
 
-.field public synthetic p0:Ljava/lang/Object;
+    :goto_0
+    if-nez v0, :cond_1
 
-.field public final synthetic q0:Liha;
+    const/4 p0, 0x0
 
-.field public r0:I
+    return p0
 
+    :cond_1
+    check-cast p1, Ljava/lang/Runnable;
 
-# direct methods
-.method public constructor <init>(Liha;Lbu3;)V
-    .locals 0
+    invoke-super {p0, p1}, Ljava/util/concurrent/LinkedTransferQueue;->contains(Ljava/lang/Object;)Z
 
-    iput-object p1, p0, Lfha;->q0:Liha;
+    move-result p0
 
-    invoke-direct {p0, p2}, Lbu3;-><init>(Lkotlin/coroutines/Continuation;)V
-
-    return-void
+    return p0
 .end method
 
+.method public final offer(Ljava/lang/Object;)Z
+    .locals 0
 
-# virtual methods
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 6
+    check-cast p1, Ljava/lang/Runnable;
 
-    iput-object p1, p0, Lfha;->p0:Ljava/lang/Object;
+    invoke-virtual {p0, p1}, Ljava/util/concurrent/LinkedTransferQueue;->tryTransfer(Ljava/lang/Object;)Z
 
-    iget p1, p0, Lfha;->r0:I
+    move-result p0
 
-    const/high16 v0, -0x80000000
+    return p0
+.end method
 
-    or-int/2addr p1, v0
+.method public final bridge remove(Ljava/lang/Object;)Z
+    .locals 1
 
-    iput p1, p0, Lfha;->r0:I
+    if-nez p1, :cond_0
 
-    const/4 v3, 0x0
+    const/4 v0, 0x1
 
-    const/4 v4, 0x0
+    goto :goto_0
 
-    iget-object v0, p0, Lfha;->q0:Liha;
+    :cond_0
+    instance-of v0, p1, Ljava/lang/Runnable;
 
-    const/4 v1, 0x0
+    :goto_0
+    if-nez v0, :cond_1
 
-    const/4 v2, 0x0
+    const/4 p0, 0x0
 
-    move-object v5, p0
+    return p0
 
-    invoke-virtual/range {v0 .. v5}, Liha;->g(Ljava/io/IOException;Lhfc;Laha;Ljava/io/File;Lbu3;)Ljava/lang/Object;
+    :cond_1
+    check-cast p1, Ljava/lang/Runnable;
 
-    move-result-object p0
+    invoke-super {p0, p1}, Ljava/util/concurrent/LinkedTransferQueue;->remove(Ljava/lang/Object;)Z
 
-    return-object p0
+    move-result p0
+
+    return p0
 .end method

@@ -1,85 +1,140 @@
-.class public final enum Lsha;
-.super Ljava/lang/Enum;
+.class public final Lsha;
+.super Lure;
 .source "SourceFile"
 
+# interfaces
+.implements Lpc6;
 
-# static fields
-.field public static final enum a:Lsha;
 
-.field public static final enum b:Lsha;
+# instance fields
+.field public X:I
 
-.field public static final enum c:Lsha;
+.field public final synthetic Y:[Ljava/io/File;
 
-.field public static final synthetic o:[Lsha;
+.field public final synthetic Z:Laia;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 5
+.method public constructor <init>([Ljava/io/File;Laia;Lkotlin/coroutines/Continuation;)V
+    .locals 0
 
-    new-instance v0, Lsha;
+    iput-object p1, p0, Lsha;->Y:[Ljava/io/File;
 
-    const-string v1, "ERROR"
+    iput-object p2, p0, Lsha;->Z:Laia;
 
-    const/4 v2, 0x0
+    const/4 p1, 0x2
 
-    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v0, Lsha;->a:Lsha;
-
-    new-instance v1, Lsha;
-
-    const-string v2, "HINT"
-
-    const/4 v3, 0x1
-
-    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v1, Lsha;->b:Lsha;
-
-    new-instance v2, Lsha;
-
-    const-string v3, "DESCRIPTION"
-
-    const/4 v4, 0x2
-
-    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v2, Lsha;->c:Lsha;
-
-    filled-new-array {v0, v1, v2}, [Lsha;
-
-    move-result-object v0
-
-    sput-object v0, Lsha;->o:[Lsha;
+    invoke-direct {p0, p1, p3}, Lure;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
-.method public static valueOf(Ljava/lang/String;)Lsha;
-    .locals 1
 
-    const-class v0, Lsha;
+# virtual methods
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+    check-cast p1, Ly04;
+
+    check-cast p2, Lkotlin/coroutines/Continuation;
+
+    invoke-virtual {p0, p1, p2}, Lsha;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
     move-result-object p0
 
     check-cast p0, Lsha;
 
+    sget-object p1, Lylf;->a:Lylf;
+
+    invoke-virtual {p0, p1}, Lsha;->o(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p0
+
     return-object p0
 .end method
 
-.method public static values()[Lsha;
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
     .locals 1
 
-    sget-object v0, Lsha;->o:[Lsha;
+    new-instance p1, Lsha;
 
-    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
+    iget-object v0, p0, Lsha;->Y:[Ljava/io/File;
 
-    move-result-object v0
+    iget-object p0, p0, Lsha;->Z:Laia;
 
-    check-cast v0, [Lsha;
+    invoke-direct {p1, v0, p0, p2}, Lsha;-><init>([Ljava/io/File;Laia;Lkotlin/coroutines/Continuation;)V
 
-    return-object v0
+    return-object p1
+.end method
+
+.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 5
+
+    iget v0, p0, Lsha;->X:I
+
+    const/4 v1, 0x1
+
+    if-eqz v0, :cond_1
+
+    if-ne v0, v1, :cond_0
+
+    invoke-static {p1}, Lqe5;->V(Ljava/lang/Object;)V
+
+    goto :goto_1
+
+    :cond_0
+    new-instance p0, Ljava/lang/IllegalStateException;
+
+    const-string p1, "call to \'resume\' before \'invoke\' with coroutine"
+
+    invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p0
+
+    :cond_1
+    invoke-static {p1}, Lqe5;->V(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Lsha;->Z:Laia;
+
+    iget-object v0, p0, Lsha;->Y:[Ljava/io/File;
+
+    if-eqz v0, :cond_2
+
+    array-length v2, v0
+
+    const/4 v3, 0x0
+
+    :goto_0
+    if-ge v3, v2, :cond_2
+
+    aget-object v4, v0, v3
+
+    invoke-virtual {v4}, Ljava/io/File;->toPath()Ljava/nio/file/Path;
+
+    move-result-object v4
+
+    invoke-static {p1, v4}, Laia;->c(Laia;Ljava/nio/file/Path;)V
+
+    add-int/lit8 v3, v3, 0x1
+
+    goto :goto_0
+
+    :cond_2
+    iput v1, p0, Lsha;->X:I
+
+    invoke-static {p1, p0}, Laia;->a(Laia;Ljx3;)Ljava/lang/Object;
+
+    move-result-object p0
+
+    sget-object p1, Lz04;->a:Lz04;
+
+    if-ne p0, p1, :cond_3
+
+    return-object p1
+
+    :cond_3
+    :goto_1
+    sget-object p0, Lylf;->a:Lylf;
+
+    return-object p0
 .end method

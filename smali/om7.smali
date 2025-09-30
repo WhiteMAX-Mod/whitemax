@@ -1,89 +1,81 @@
 .class public final Lom7;
-.super Ljava/lang/Object;
+.super Ljava/io/OutputStream;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:Ljava/lang/Object;
-
-.field public b:Ldm5;
-
-.field public c:Z
-
-.field public d:Z
+.field public a:J
 
 
-# direct methods
-.method public constructor <init>(Ljava/lang/Object;)V
-    .locals 1
+# virtual methods
+.method public final write(I)V
+    .locals 4
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    .line 1
+    iget-wide v0, p0, Lom7;->a:J
 
-    iput-object p1, p0, Lom7;->a:Ljava/lang/Object;
+    const-wide/16 v2, 0x1
 
-    new-instance p1, Ldm5;
+    add-long/2addr v0, v2
 
-    const/4 v0, 0x1
-
-    invoke-direct {p1, v0}, Ldm5;-><init>(I)V
-
-    iput-object p1, p0, Lom7;->b:Ldm5;
+    iput-wide v0, p0, Lom7;->a:J
 
     return-void
 .end method
 
+.method public final write([B)V
+    .locals 4
 
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 2
+    .line 2
+    iget-wide v0, p0, Lom7;->a:J
 
-    if-ne p0, p1, :cond_0
+    array-length p1, p1
 
-    const/4 p0, 0x1
+    int-to-long v2, p1
 
-    return p0
+    add-long/2addr v0, v2
 
-    :cond_0
-    if-eqz p1, :cond_2
+    iput-wide v0, p0, Lom7;->a:J
 
-    const-class v0, Lom7;
-
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    move-result-object v1
-
-    if-eq v0, v1, :cond_1
-
-    goto :goto_0
-
-    :cond_1
-    check-cast p1, Lom7;
-
-    iget-object p1, p1, Lom7;->a:Ljava/lang/Object;
-
-    iget-object p0, p0, Lom7;->a:Ljava/lang/Object;
-
-    invoke-virtual {p0, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
-
-    move-result p0
-
-    return p0
-
-    :cond_2
-    :goto_0
-    const/4 p0, 0x0
-
-    return p0
+    return-void
 .end method
 
-.method public final hashCode()I
-    .locals 0
+.method public final write([BII)V
+    .locals 2
 
-    iget-object p0, p0, Lom7;->a:Ljava/lang/Object;
+    if-ltz p2, :cond_0
 
-    invoke-virtual {p0}, Ljava/lang/Object;->hashCode()I
+    .line 3
+    array-length v0, p1
 
-    move-result p0
+    if-gt p2, v0, :cond_0
 
-    return p0
+    if-ltz p3, :cond_0
+
+    add-int/2addr p2, p3
+
+    array-length p1, p1
+
+    if-gt p2, p1, :cond_0
+
+    if-ltz p2, :cond_0
+
+    .line 4
+    iget-wide p1, p0, Lom7;->a:J
+
+    int-to-long v0, p3
+
+    add-long/2addr p1, v0
+
+    iput-wide p1, p0, Lom7;->a:J
+
+    return-void
+
+    .line 5
+    :cond_0
+    new-instance p0, Ljava/lang/IndexOutOfBoundsException;
+
+    invoke-direct {p0}, Ljava/lang/IndexOutOfBoundsException;-><init>()V
+
+    throw p0
 .end method

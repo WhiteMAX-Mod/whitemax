@@ -1,44 +1,46 @@
-.class public final synthetic Lg98;
-.super Ljava/lang/Object;
+.class public final Lg98;
+.super La98;
 .source "SourceFile"
 
 # interfaces
-.implements Landroid/os/IBinder$DeathRecipient;
+.implements Lf4d;
 
 
-# instance fields
-.field public final synthetic a:Lj98;
+# static fields
+.field public static final a:Lg98;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lj98;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lg98;
 
-    iput-object p1, p0, Lg98;->a:Lj98;
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    sput-object v0, Lg98;->a:Lg98;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final binderDied()V
-    .locals 2
+.method public final g(Lt98;)V
+    .locals 0
 
-    iget-object p0, p0, Lg98;->a:Lj98;
+    sget-object p0, Lk45;->a:Lk45;
 
-    iget-object p0, p0, Lj98;->a:Lo88;
+    invoke-interface {p1, p0}, Lt98;->c(Loq4;)V
 
-    invoke-static {p0}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
-
-    new-instance v0, Lz46;
-
-    const/16 v1, 0xb
-
-    invoke-direct {v0, v1, p0}, Lz46;-><init>(ILjava/lang/Object;)V
-
-    invoke-virtual {p0, v0}, Lo88;->q(Ljava/lang/Runnable;)V
+    invoke-interface {p1}, Lt98;->b()V
 
     return-void
+.end method
+
+.method public final get()Ljava/lang/Object;
+    .locals 0
+
+    const/4 p0, 0x0
+
+    return-object p0
 .end method

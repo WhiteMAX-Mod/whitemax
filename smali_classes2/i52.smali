@@ -1,48 +1,73 @@
 .class public final Li52;
-.super Lbu3;
+.super Lr3;
+.source "SourceFile"
+
+
+# static fields
+.field public static final CREATOR:Landroid/os/Parcelable$Creator;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroid/os/Parcelable$Creator<",
+            "Li52;",
+            ">;"
+        }
+    .end annotation
+.end field
 
 
 # instance fields
-.field public X:I
+.field public final a:Lzw7;
 
-.field public final synthetic Y:Lpk1;
-
-.field public synthetic o:Ljava/lang/Object;
+.field public final b:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>(Lpk1;Lkotlin/coroutines/Continuation;)V
+.method static constructor <clinit>()V
+    .locals 2
+
+    new-instance v0, Lz7;
+
+    const/16 v1, 0xe
+
+    invoke-direct {v0, v1}, Lz7;-><init>(I)V
+
+    sput-object v0, Li52;->CREATOR:Landroid/os/Parcelable$Creator;
+
+    return-void
+.end method
+
+.method public constructor <init>(Lzw7;Ljava/lang/String;)V
     .locals 0
 
-    iput-object p1, p0, Li52;->Y:Lpk1;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, p2}, Lbu3;-><init>(Lkotlin/coroutines/Continuation;)V
+    iput-object p1, p0, Li52;->a:Lzw7;
+
+    iput-object p2, p0, Li52;->b:Ljava/lang/String;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final describeContents()I
+    .locals 0
+
+    const/4 p0, 0x0
+
+    return p0
+.end method
+
+.method public final writeToParcel(Landroid/os/Parcel;I)V
     .locals 1
 
-    iput-object p1, p0, Li52;->o:Ljava/lang/Object;
+    iget-object v0, p0, Li52;->a:Lzw7;
 
-    iget p1, p0, Li52;->X:I
+    invoke-virtual {p1, v0, p2}, Landroid/os/Parcel;->writeParcelable(Landroid/os/Parcelable;I)V
 
-    const/high16 v0, -0x80000000
+    iget-object p0, p0, Li52;->b:Ljava/lang/String;
 
-    or-int/2addr p1, v0
+    invoke-virtual {p1, p0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    iput p1, p0, Li52;->X:I
-
-    iget-object p1, p0, Li52;->Y:Lpk1;
-
-    const/4 v0, 0x0
-
-    invoke-virtual {p1, v0, p0}, Lpk1;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    return-object p0
+    return-void
 .end method

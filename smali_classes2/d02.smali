@@ -1,68 +1,82 @@
 .class public final Ld02;
-.super Lsbc;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Le02;
 
 
 # instance fields
-.field public final a:Laod;
+.field public final a:Lfec;
 
-.field public final b:La76;
+.field public final b:Lf6f;
+
+.field public volatile c:Lorg/webrtc/Size;
+
+.field public d:J
 
 
 # direct methods
-.method public constructor <init>(Laod;Lx56;)V
-    .locals 0
+.method public constructor <init>(Lfec;)V
+    .locals 2
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Ld02;->a:Laod;
+    iput-object p1, p0, Ld02;->a:Lfec;
 
-    check-cast p2, La76;
+    new-instance p1, Lf6f;
 
-    iput-object p2, p0, Ld02;->b:La76;
+    invoke-direct {p1}, Lf6f;-><init>()V
+
+    iput-object p1, p0, Ld02;->b:Lf6f;
+
+    new-instance p1, Lorg/webrtc/Size;
+
+    const/4 v0, 0x0
+
+    invoke-direct {p1, v0, v0}, Lorg/webrtc/Size;-><init>(II)V
+
+    iput-object p1, p0, Ld02;->c:Lorg/webrtc/Size;
+
+    invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
+
+    move-result-wide v0
+
+    iput-wide v0, p0, Ld02;->d:J
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final b(Landroidx/recyclerview/widget/RecyclerView;II)V
-    .locals 0
+.method public final toString()Ljava/lang/String;
+    .locals 4
 
-    invoke-static {p1}, Lgad;->E(Landroidx/recyclerview/widget/RecyclerView;)Landroidx/recyclerview/widget/GridLayoutManager;
+    iget-object v0, p0, Ld02;->b:Lf6f;
 
-    move-result-object p1
+    invoke-virtual {v0}, Lf6f;->b()D
 
-    if-eqz p1, :cond_1
+    move-result-wide v0
 
-    invoke-virtual {p1}, Landroidx/recyclerview/widget/LinearLayoutManager;->S0()I
+    iget-object p0, p0, Ld02;->c:Lorg/webrtc/Size;
 
-    move-result p1
+    new-instance v2, Ljava/lang/StringBuilder;
 
-    const/4 p2, -0x1
+    const-string v3, "fps estimation: "
 
-    if-ne p1, p2, :cond_0
+    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    goto :goto_0
+    invoke-virtual {v2, v0, v1}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
 
-    :cond_0
-    iget-object p2, p0, Ld02;->a:Laod;
+    const-string v0, ", frame size: "
 
-    iget-object p2, p2, Lhl7;->o:Lwu;
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object p2, p2, Lwu;->f:Ljava/util/List;
+    invoke-virtual {v2, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    invoke-static {p1, p2}, Lp43;->C0(ILjava/util/List;)Ljava/lang/Object;
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object p1
+    move-result-object p0
 
-    check-cast p1, Lol7;
-
-    iget-object p0, p0, Ld02;->b:La76;
-
-    invoke-interface {p0, p1}, Lx56;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
-
-    :cond_1
-    :goto_0
-    return-void
+    return-object p0
 .end method

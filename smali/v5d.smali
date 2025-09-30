@@ -1,215 +1,154 @@
-.class public final Lv5d;
-.super Lqde;
+.class public abstract Lv5d;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ll66;
 
+# static fields
+.field public static final a:Z
 
-# instance fields
-.field public synthetic X:Ljava/lang/Object;
-
-.field public final synthetic Y:Lone/me/devmenu/server/ServerHostBottomSheet;
-
-.field public final synthetic Z:Landroid/view/View;
+.field public static final b:J
 
 
 # direct methods
-.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/devmenu/server/ServerHostBottomSheet;Landroid/view/View;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 4
 
-    iput-object p2, p0, Lv5d;->Y:Lone/me/devmenu/server/ServerHostBottomSheet;
+    const-string v0, "rx3.scheduler.use-nanotime"
 
-    iput-object p3, p0, Lv5d;->Z:Landroid/view/View;
+    invoke-static {v0}, Ljava/lang/Boolean;->getBoolean(Ljava/lang/String;)Z
 
-    const/4 p2, 0x2
+    move-result v0
 
-    invoke-direct {p0, p2, p1}, Lqde;-><init>(ILkotlin/coroutines/Continuation;)V
+    sput-boolean v0, Lv5d;->a:Z
+
+    const-string v0, "rx3.scheduler.drift-tolerance"
+
+    const-wide/16 v1, 0xf
+
+    invoke-static {v0, v1, v2}, Ljava/lang/Long;->getLong(Ljava/lang/String;J)Ljava/lang/Long;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/Long;->longValue()J
+
+    move-result-wide v0
+
+    const-string v2, "rx3.scheduler.drift-tolerance-unit"
+
+    const-string v3, "minutes"
+
+    invoke-static {v2, v3}, Ljava/lang/System;->getProperty(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v2
+
+    const-string v3, "seconds"
+
+    invoke-virtual {v3, v2}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
+
+    move-result v3
+
+    if-eqz v3, :cond_0
+
+    sget-object v2, Ljava/util/concurrent/TimeUnit;->SECONDS:Ljava/util/concurrent/TimeUnit;
+
+    invoke-virtual {v2, v0, v1}, Ljava/util/concurrent/TimeUnit;->toNanos(J)J
+
+    move-result-wide v0
+
+    goto :goto_0
+
+    :cond_0
+    const-string v3, "milliseconds"
+
+    invoke-virtual {v3, v2}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_1
+
+    sget-object v2, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;
+
+    invoke-virtual {v2, v0, v1}, Ljava/util/concurrent/TimeUnit;->toNanos(J)J
+
+    move-result-wide v0
+
+    goto :goto_0
+
+    :cond_1
+    sget-object v2, Ljava/util/concurrent/TimeUnit;->MINUTES:Ljava/util/concurrent/TimeUnit;
+
+    invoke-virtual {v2, v0, v1}, Ljava/util/concurrent/TimeUnit;->toNanos(J)J
+
+    move-result-wide v0
+
+    :goto_0
+    sput-wide v0, Lv5d;->b:J
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public abstract a()Lt5d;
+.end method
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+.method public b(Ljava/lang/Runnable;)Loq4;
+    .locals 3
 
-    invoke-virtual {p0, p1, p2}, Lv5d;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    const-wide/16 v0, 0x0
+
+    sget-object v2, Ljava/util/concurrent/TimeUnit;->NANOSECONDS:Ljava/util/concurrent/TimeUnit;
+
+    invoke-virtual {p0, p1, v0, v1, v2}, Lv5d;->c(Ljava/lang/Runnable;JLjava/util/concurrent/TimeUnit;)Loq4;
 
     move-result-object p0
 
-    check-cast p0, Lv5d;
-
-    sget-object p1, Le5f;->a:Le5f;
-
-    invoke-virtual {p0, p1}, Lv5d;->o(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p1
+    return-object p0
 .end method
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
+.method public c(Ljava/lang/Runnable;JLjava/util/concurrent/TimeUnit;)Loq4;
+    .locals 1
 
-    new-instance v0, Lv5d;
+    invoke-virtual {p0}, Lv5d;->a()Lt5d;
 
-    iget-object v1, p0, Lv5d;->Y:Lone/me/devmenu/server/ServerHostBottomSheet;
+    move-result-object p0
 
-    iget-object p0, p0, Lv5d;->Z:Landroid/view/View;
+    const-string v0, "run is null"
 
-    invoke-direct {v0, p2, v1, p0}, Lv5d;-><init>(Lkotlin/coroutines/Continuation;Lone/me/devmenu/server/ServerHostBottomSheet;Landroid/view/View;)V
+    invoke-static {p1, v0}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
-    iput-object p1, v0, Lv5d;->X:Ljava/lang/Object;
+    new-instance v0, Lr5d;
+
+    invoke-direct {v0, p1, p0}, Lr5d;-><init>(Ljava/lang/Runnable;Lt5d;)V
+
+    invoke-virtual {p0, v0, p2, p3, p4}, Lt5d;->c(Ljava/lang/Runnable;JLjava/util/concurrent/TimeUnit;)Loq4;
 
     return-object v0
 .end method
 
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 9
+.method public d(Ljava/lang/Runnable;JJLjava/util/concurrent/TimeUnit;)Loq4;
+    .locals 1
 
-    iget-object v0, p0, Lv5d;->Y:Lone/me/devmenu/server/ServerHostBottomSheet;
-
-    iget-object v1, v0, Lone/me/devmenu/server/ServerHostBottomSheet;->z0:Lo5c;
-
-    iget-object v2, v0, Lone/me/devmenu/server/ServerHostBottomSheet;->x0:Lo5c;
-
-    iget-object v3, v0, Lone/me/devmenu/server/ServerHostBottomSheet;->v0:Landroid/transition/AutoTransition;
-
-    invoke-static {p1}, Lsgg;->Z(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Lv5d;->X:Ljava/lang/Object;
-
-    check-cast p1, Lto6;
-
-    instance-of v4, p1, Lqo6;
-
-    const/4 v5, 0x1
-
-    if-eqz v4, :cond_0
-
-    invoke-static {v0}, Lsbg;->u(Lou3;)V
-
-    invoke-virtual {v0, v5}, Lone/me/sdk/bottomsheet/BaseBottomSheetWidget;->v0(Z)V
-
-    goto :goto_0
-
-    :cond_0
-    instance-of v4, p1, Lro6;
-
-    const/4 v6, 0x2
-
-    const/4 v7, 0x0
-
-    iget-object p0, p0, Lv5d;->Z:Landroid/view/View;
-
-    const/16 v8, 0x8
-
-    if-eqz v4, :cond_2
-
-    check-cast p0, Landroid/view/ViewGroup;
-
-    invoke-static {p0, v3}, Landroid/transition/TransitionManager;->beginDelayedTransition(Landroid/view/ViewGroup;Landroid/transition/Transition;)V
-
-    sget-object p0, Lone/me/devmenu/server/ServerHostBottomSheet;->C0:[Lbc7;
-
-    aget-object v3, p0, v7
-
-    invoke-interface {v2, v0, v3}, Lo5c;->M(Ljava/lang/Object;Lbc7;)Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Landroidx/recyclerview/widget/RecyclerView;
-
-    invoke-virtual {v2, v8}, Landroid/view/View;->setVisibility(I)V
-
-    aget-object v2, p0, v6
-
-    invoke-interface {v1, v0, v2}, Lo5c;->M(Ljava/lang/Object;Lbc7;)Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Landroid/widget/LinearLayout;
-
-    invoke-virtual {v1, v7}, Landroid/view/View;->setVisibility(I)V
-
-    iget-object v1, v0, Lone/me/devmenu/server/ServerHostBottomSheet;->A0:Lo5c;
-
-    const/4 v2, 0x3
-
-    aget-object p0, p0, v2
-
-    invoke-interface {v1, v0, p0}, Lo5c;->M(Ljava/lang/Object;Lbc7;)Ljava/lang/Object;
+    invoke-virtual {p0}, Lv5d;->a()Lt5d;
 
     move-result-object p0
 
-    check-cast p0, Lvha;
+    move-object v0, p1
 
-    check-cast p1, Lro6;
+    new-instance p1, Lzo6;
 
-    iget-object p1, p1, Lro6;->a:Ljava/lang/String;
+    invoke-direct {p1, v0, p0}, Lzo6;-><init>(Ljava/lang/Runnable;Lt5d;)V
 
-    if-nez p1, :cond_1
-
-    const-string p1, ""
-
-    :cond_1
-    invoke-virtual {p0, p1}, Lvha;->setText(Ljava/lang/CharSequence;)V
-
-    goto :goto_0
-
-    :cond_2
-    instance-of p1, p1, Lso6;
-
-    if-eqz p1, :cond_3
-
-    check-cast p0, Landroid/view/ViewGroup;
-
-    invoke-static {p0, v3}, Landroid/transition/TransitionManager;->beginDelayedTransition(Landroid/view/ViewGroup;Landroid/transition/Transition;)V
-
-    sget-object p0, Lone/me/devmenu/server/ServerHostBottomSheet;->C0:[Lbc7;
-
-    aget-object p1, p0, v7
-
-    invoke-interface {v2, v0, p1}, Lo5c;->M(Ljava/lang/Object;Lbc7;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Landroidx/recyclerview/widget/RecyclerView;
-
-    invoke-virtual {p1, v8}, Landroid/view/View;->setVisibility(I)V
-
-    aget-object p1, p0, v6
-
-    invoke-interface {v1, v0, p1}, Lo5c;->M(Ljava/lang/Object;Lbc7;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Landroid/widget/LinearLayout;
-
-    invoke-virtual {p1, v8}, Landroid/view/View;->setVisibility(I)V
-
-    iget-object p1, v0, Lone/me/devmenu/server/ServerHostBottomSheet;->y0:Lo5c;
-
-    aget-object p0, p0, v5
-
-    invoke-interface {p1, v0, p0}, Lo5c;->M(Ljava/lang/Object;Lbc7;)Ljava/lang/Object;
+    invoke-virtual/range {p0 .. p6}, Lt5d;->d(Ljava/lang/Runnable;JJLjava/util/concurrent/TimeUnit;)Loq4;
 
     move-result-object p0
 
-    check-cast p0, Leda;
+    sget-object p2, Lk45;->a:Lk45;
 
-    invoke-virtual {p0, v7}, Landroid/view/View;->setVisibility(I)V
-
-    :goto_0
-    sget-object p0, Le5f;->a:Le5f;
+    if-ne p0, p2, :cond_0
 
     return-object p0
 
-    :cond_3
-    new-instance p0, Lkotlin/NoWhenBranchMatchedException;
-
-    invoke-direct {p0}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
-
-    throw p0
+    :cond_0
+    return-object p1
 .end method

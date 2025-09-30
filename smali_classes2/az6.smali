@@ -1,87 +1,67 @@
-.class public final Laz6;
-.super Lsdb;
+.class public abstract synthetic Laz6;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final B0:Leed;
+# static fields
+.field public static final synthetic $EnumSwitchMapping$0:[I
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;)V
-    .locals 14
-
-    new-instance v0, Lded;
-
-    const/4 v1, 0x0
-
-    invoke-direct {v0, p1, v1}, Lded;-><init>(Landroid/content/Context;I)V
-
-    invoke-direct {p0, v0}, Lccc;-><init>(Landroid/view/View;)V
-
-    const/16 p1, 0x40
-
-    int-to-long v1, p1
-
-    sget p1, Lmca;->i0:I
-
-    new-instance v10, Lhoe;
-
-    invoke-direct {v10, p1}, Lhoe;-><init>(I)V
-
-    new-instance v0, Leed;
-
-    const/4 v12, 0x0
-
-    const/16 v13, 0x618
-
-    const/4 v3, 0x0
-
-    sget-object v4, Lmoe;->a:Lloe;
-
-    const/4 v5, 0x0
-
-    const/4 v6, 0x0
-
-    const/4 v7, 0x0
-
-    sget-object v8, Lkdd;->a:Lkdd;
-
-    const/4 v9, 0x0
-
-    const/4 v11, 0x0
-
-    invoke-direct/range {v0 .. v13}, Leed;-><init>(JILmoe;Lrdd;Lmoe;Ljava/lang/Integer;Lpdd;Lhdd;Lmoe;ILedd;I)V
-
-    iput-object v0, p0, Laz6;->B0:Leed;
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final x(Lol7;)V
+.method static constructor <clinit>()V
     .locals 3
 
-    check-cast p1, Lzy6;
+    invoke-static {}, Lzy6;->values()[Lzy6;
 
-    iget-object v0, p0, Lccc;->a:Landroid/view/View;
+    move-result-object v0
 
-    check-cast v0, Lded;
+    array-length v0, v0
 
-    iget-object p1, p1, Lzy6;->a:Lfoe;
+    new-array v0, v0, [I
 
-    const/4 v1, 0x0
+    :try_start_0
+    sget-object v1, Lzy6;->b:Lzy6;
 
-    const/16 v2, 0x7fb
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
-    iget-object p0, p0, Laz6;->B0:Leed;
+    move-result v1
 
-    invoke-static {p0, p1, v1, v2}, Leed;->l(Leed;Lfoe;Lldd;I)Leed;
+    const/4 v2, 0x1
 
-    move-result-object p0
+    aput v2, v0, v1
+    :try_end_0
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
 
-    invoke-virtual {v0, p0}, Lded;->setModelItem(Lsdd;)V
+    :catch_0
+    :try_start_1
+    sget-object v1, Lzy6;->c:Lzy6;
+
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
+
+    move-result v1
+
+    const/4 v2, 0x2
+
+    aput v2, v0, v1
+    :try_end_1
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
+
+    :catch_1
+    :try_start_2
+    sget-object v1, Lzy6;->o:Lzy6;
+
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
+
+    move-result v1
+
+    const/4 v2, 0x3
+
+    aput v2, v0, v1
+    :try_end_2
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_2
+
+    :catch_2
+    sput-object v0, Laz6;->$EnumSwitchMapping$0:[I
 
     return-void
 .end method

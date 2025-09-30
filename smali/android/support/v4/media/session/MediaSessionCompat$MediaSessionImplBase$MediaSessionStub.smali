@@ -843,13 +843,13 @@
 
     move-result v1
 
-    new-instance v2, Lfi8;
+    new-instance v2, Lyo8;
 
     invoke-virtual {p0, v1}, Landroid/support/v4/media/session/MediaSessionCompat$MediaSessionImplBase;->getPackageNameForUid(I)Ljava/lang/String;
 
     move-result-object v3
 
-    invoke-direct {v2, v3, v0, v1}, Lfi8;-><init>(Ljava/lang/String;II)V
+    invoke-direct {v2, v3, v0, v1}, Lyo8;-><init>(Ljava/lang/String;II)V
 
     iget-object v3, p0, Landroid/support/v4/media/session/MediaSessionCompat$MediaSessionImplBase;->mControllerCallbacks:Landroid/os/RemoteCallbackList;
 

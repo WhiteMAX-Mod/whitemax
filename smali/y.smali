@@ -1,416 +1,139 @@
-.class public final Ly;
+.class public abstract Ly;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Landroid/os/Parcelable$ClassLoaderCreator;
+.implements Landroid/os/Parcelable;
+
+
+# static fields
+.field public static final CREATOR:Landroid/os/Parcelable$Creator;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroid/os/Parcelable$Creator<",
+            "Ly;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+.field public static final b:Lw;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final a:Landroid/os/Parcelable;
 
 
 # direct methods
-.method public synthetic constructor <init>(I)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 2
 
-    iput p1, p0, Ly;->a:I
+    new-instance v0, Lw;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {v0}, Ly;-><init>()V
+
+    sput-object v0, Ly;->b:Lw;
+
+    new-instance v0, Lx;
+
+    const/4 v1, 0x0
+
+    invoke-direct {v0, v1}, Lx;-><init>(I)V
+
+    sput-object v0, Ly;->CREATOR:Landroid/os/Parcelable$Creator;
 
     return-void
 .end method
 
-
-# virtual methods
-.method public final createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
-    .locals 2
-
-    iget p0, p0, Ly;->a:I
-
-    packed-switch p0, :pswitch_data_0
+.method public constructor <init>()V
+    .locals 1
 
     .line 1
-    new-instance p0, Lmpf;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     const/4 v0, 0x0
 
     .line 2
-    invoke-direct {p0, p1, v0}, Landroid/view/View$BaseSavedState;-><init>(Landroid/os/Parcel;Ljava/lang/ClassLoader;)V
+    iput-object v0, p0, Ly;->a:Landroid/os/Parcelable;
 
-    .line 3
-    invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
-
-    move-result v1
-
-    iput v1, p0, Lmpf;->a:I
-
-    .line 4
-    invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
-
-    move-result v1
-
-    iput v1, p0, Lmpf;->b:I
-
-    .line 5
-    invoke-virtual {p1, v0}, Landroid/os/Parcel;->readParcelable(Ljava/lang/ClassLoader;)Landroid/os/Parcelable;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lmpf;->c:Landroid/os/Parcelable;
-
-    return-object p0
-
-    .line 6
-    :pswitch_0
-    new-instance p0, Lcpf;
-
-    const/4 v0, 0x0
-
-    invoke-direct {p0, p1, v0}, Lcpf;-><init>(Landroid/os/Parcel;Ljava/lang/ClassLoader;)V
-
-    return-object p0
-
-    .line 7
-    :pswitch_1
-    new-instance p0, Lqne;
-
-    const/4 v0, 0x0
-
-    invoke-direct {p0, p1, v0}, Lqne;-><init>(Landroid/os/Parcel;Ljava/lang/ClassLoader;)V
-
-    return-object p0
-
-    .line 8
-    :pswitch_2
-    new-instance p0, Lryc;
-
-    const/4 v0, 0x0
-
-    invoke-direct {p0, p1, v0}, Lryc;-><init>(Landroid/os/Parcel;Ljava/lang/ClassLoader;)V
-
-    return-object p0
-
-    .line 9
-    :pswitch_3
-    new-instance p0, Lwbc;
-
-    const/4 v0, 0x0
-
-    invoke-direct {p0, p1, v0}, Lwbc;-><init>(Landroid/os/Parcel;Ljava/lang/ClassLoader;)V
-
-    return-object p0
-
-    .line 10
-    :pswitch_4
-    new-instance p0, Lx08;
-
-    const/4 v0, 0x0
-
-    invoke-direct {p0, p1, v0}, Lx08;-><init>(Landroid/os/Parcel;Ljava/lang/ClassLoader;)V
-
-    return-object p0
-
-    .line 11
-    :pswitch_5
-    new-instance p0, Lk16;
-
-    const/4 v0, 0x0
-
-    invoke-direct {p0, p1, v0}, Lk16;-><init>(Landroid/os/Parcel;Ljava/lang/ClassLoader;)V
-
-    return-object p0
-
-    .line 12
-    :pswitch_6
-    new-instance p0, Lpw3;
-
-    const/4 v0, 0x0
-
-    invoke-direct {p0, p1, v0}, Lpw3;-><init>(Landroid/os/Parcel;Ljava/lang/ClassLoader;)V
-
-    return-object p0
-
-    .line 13
-    :pswitch_7
-    new-instance p0, Luy2;
-
-    const/4 v0, 0x0
-
-    invoke-direct {p0, p1, v0}, Luy2;-><init>(Landroid/os/Parcel;Ljava/lang/ClassLoader;)V
-
-    return-object p0
-
-    .line 14
-    :pswitch_8
-    new-instance p0, Ltl;
-
-    const/4 v0, 0x0
-
-    invoke-direct {p0, p1, v0}, Ltl;-><init>(Landroid/os/Parcel;Ljava/lang/ClassLoader;)V
-
-    return-object p0
-
-    :pswitch_9
-    const/4 p0, 0x0
-
-    .line 15
-    invoke-virtual {p1, p0}, Landroid/os/Parcel;->readParcelable(Ljava/lang/ClassLoader;)Landroid/os/Parcelable;
-
-    move-result-object p0
-
-    if-nez p0, :cond_0
-
-    .line 16
-    sget-object p0, Lz;->b:Lx;
-
-    return-object p0
-
-    .line 17
-    :cond_0
-    new-instance p0, Ljava/lang/IllegalStateException;
-
-    const-string p1, "superState must be null"
-
-    invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_9
-        :pswitch_8
-        :pswitch_7
-        :pswitch_6
-        :pswitch_5
-        :pswitch_4
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    return-void
 .end method
 
-.method public final createFromParcel(Landroid/os/Parcel;Ljava/lang/ClassLoader;)Ljava/lang/Object;
-    .locals 1
-
-    iget p0, p0, Ly;->a:I
-
-    packed-switch p0, :pswitch_data_0
-
-    .line 18
-    new-instance p0, Lmpf;
-
-    .line 19
-    invoke-direct {p0, p1, p2}, Landroid/view/View$BaseSavedState;-><init>(Landroid/os/Parcel;Ljava/lang/ClassLoader;)V
-
-    .line 20
-    invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
-
-    move-result v0
-
-    iput v0, p0, Lmpf;->a:I
-
-    .line 21
-    invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
-
-    move-result v0
-
-    iput v0, p0, Lmpf;->b:I
-
-    .line 22
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->readParcelable(Ljava/lang/ClassLoader;)Landroid/os/Parcelable;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lmpf;->c:Landroid/os/Parcelable;
-
-    return-object p0
-
-    .line 23
-    :pswitch_0
-    new-instance p0, Lcpf;
-
-    invoke-direct {p0, p1, p2}, Lcpf;-><init>(Landroid/os/Parcel;Ljava/lang/ClassLoader;)V
-
-    return-object p0
-
-    .line 24
-    :pswitch_1
-    new-instance p0, Lqne;
-
-    invoke-direct {p0, p1, p2}, Lqne;-><init>(Landroid/os/Parcel;Ljava/lang/ClassLoader;)V
-
-    return-object p0
-
-    .line 25
-    :pswitch_2
-    new-instance p0, Lryc;
-
-    invoke-direct {p0, p1, p2}, Lryc;-><init>(Landroid/os/Parcel;Ljava/lang/ClassLoader;)V
-
-    return-object p0
-
-    .line 26
-    :pswitch_3
-    new-instance p0, Lwbc;
-
-    invoke-direct {p0, p1, p2}, Lwbc;-><init>(Landroid/os/Parcel;Ljava/lang/ClassLoader;)V
-
-    return-object p0
-
-    .line 27
-    :pswitch_4
-    new-instance p0, Lx08;
-
-    invoke-direct {p0, p1, p2}, Lx08;-><init>(Landroid/os/Parcel;Ljava/lang/ClassLoader;)V
-
-    return-object p0
-
-    .line 28
-    :pswitch_5
-    new-instance p0, Lk16;
-
-    invoke-direct {p0, p1, p2}, Lk16;-><init>(Landroid/os/Parcel;Ljava/lang/ClassLoader;)V
-
-    return-object p0
-
-    .line 29
-    :pswitch_6
-    new-instance p0, Lpw3;
-
-    invoke-direct {p0, p1, p2}, Lpw3;-><init>(Landroid/os/Parcel;Ljava/lang/ClassLoader;)V
-
-    return-object p0
-
-    .line 30
-    :pswitch_7
-    new-instance p0, Luy2;
-
-    invoke-direct {p0, p1, p2}, Luy2;-><init>(Landroid/os/Parcel;Ljava/lang/ClassLoader;)V
-
-    return-object p0
-
-    .line 31
-    :pswitch_8
-    new-instance p0, Ltl;
-
-    invoke-direct {p0, p1, p2}, Ltl;-><init>(Landroid/os/Parcel;Ljava/lang/ClassLoader;)V
-
-    return-object p0
-
-    .line 32
-    :pswitch_9
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->readParcelable(Ljava/lang/ClassLoader;)Landroid/os/Parcelable;
-
-    move-result-object p0
-
-    if-nez p0, :cond_0
-
-    .line 33
-    sget-object p0, Lz;->b:Lx;
-
-    return-object p0
-
-    .line 34
-    :cond_0
-    new-instance p0, Ljava/lang/IllegalStateException;
-
-    const-string p1, "superState must be null"
-
-    invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p0
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_9
-        :pswitch_8
-        :pswitch_7
-        :pswitch_6
-        :pswitch_5
-        :pswitch_4
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public final newArray(I)[Ljava/lang/Object;
+.method public constructor <init>(Landroid/os/Parcel;Ljava/lang/ClassLoader;)V
     .locals 0
 
-    iget p0, p0, Ly;->a:I
+    .line 6
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    packed-switch p0, :pswitch_data_0
+    .line 7
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->readParcelable(Ljava/lang/ClassLoader;)Landroid/os/Parcelable;
 
-    new-array p0, p1, [Lmpf;
+    move-result-object p1
 
-    return-object p0
+    if-eqz p1, :cond_0
 
-    :pswitch_0
-    new-array p0, p1, [Lcpf;
+    goto :goto_0
 
-    return-object p0
+    .line 8
+    :cond_0
+    sget-object p1, Ly;->b:Lw;
 
-    :pswitch_1
-    new-array p0, p1, [Lqne;
+    :goto_0
+    iput-object p1, p0, Ly;->a:Landroid/os/Parcelable;
 
-    return-object p0
+    return-void
+.end method
 
-    :pswitch_2
-    new-array p0, p1, [Lryc;
+.method public constructor <init>(Landroid/os/Parcelable;)V
+    .locals 1
 
-    return-object p0
+    .line 3
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    :pswitch_3
-    new-array p0, p1, [Lwbc;
+    if-eqz p1, :cond_1
 
-    return-object p0
+    .line 4
+    sget-object v0, Ly;->b:Lw;
 
-    :pswitch_4
-    new-array p0, p1, [Lx08;
+    if-eq p1, v0, :cond_0
 
-    return-object p0
+    goto :goto_0
 
-    :pswitch_5
-    new-array p0, p1, [Lk16;
+    :cond_0
+    const/4 p1, 0x0
 
-    return-object p0
+    :goto_0
+    iput-object p1, p0, Ly;->a:Landroid/os/Parcelable;
 
-    :pswitch_6
-    new-array p0, p1, [Lpw3;
+    return-void
 
-    return-object p0
+    .line 5
+    :cond_1
+    new-instance p0, Ljava/lang/IllegalArgumentException;
 
-    :pswitch_7
-    new-array p0, p1, [Luy2;
+    const-string p1, "superState must not be null"
 
-    return-object p0
+    invoke-direct {p0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
-    :pswitch_8
-    new-array p0, p1, [Ltl;
+    throw p0
+.end method
 
-    return-object p0
 
-    :pswitch_9
-    new-array p0, p1, [Lz;
+# virtual methods
+.method public final describeContents()I
+    .locals 0
 
-    return-object p0
+    const/4 p0, 0x0
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_9
-        :pswitch_8
-        :pswitch_7
-        :pswitch_6
-        :pswitch_5
-        :pswitch_4
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    return p0
+.end method
+
+.method public writeToParcel(Landroid/os/Parcel;I)V
+    .locals 0
+
+    iget-object p0, p0, Ly;->a:Landroid/os/Parcelable;
+
+    invoke-virtual {p1, p0, p2}, Landroid/os/Parcel;->writeParcelable(Landroid/os/Parcelable;I)V
+
+    return-void
 .end method

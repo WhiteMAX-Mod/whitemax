@@ -1,85 +1,178 @@
-.class public final enum Lnia;
-.super Ljava/lang/Enum;
+.class public final Lnia;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final enum a:Lnia;
+# instance fields
+.field public final a:Landroid/content/Context;
 
-.field public static final enum b:Lnia;
-
-.field public static final enum c:Lnia;
-
-.field public static final synthetic o:[Lnia;
+.field public final b:Ldka;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 5
+.method public constructor <init>(Landroid/content/Context;Ldka;)V
+    .locals 0
 
-    new-instance v0, Lnia;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const-string v1, "Compact"
+    iput-object p1, p0, Lnia;->a:Landroid/content/Context;
 
-    const/4 v2, 0x0
-
-    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v0, Lnia;->a:Lnia;
-
-    new-instance v1, Lnia;
-
-    const-string v2, "Main"
-
-    const/4 v3, 0x1
-
-    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v1, Lnia;->b:Lnia;
-
-    new-instance v2, Lnia;
-
-    const-string v3, "Chat"
-
-    const/4 v4, 0x2
-
-    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v2, Lnia;->c:Lnia;
-
-    filled-new-array {v0, v1, v2}, [Lnia;
-
-    move-result-object v0
-
-    sput-object v0, Lnia;->o:[Lnia;
+    iput-object p2, p0, Lnia;->b:Ldka;
 
     return-void
 .end method
 
-.method public static valueOf(Ljava/lang/String;)Lnia;
-    .locals 1
 
-    const-class v0, Lnia;
+# virtual methods
+.method public final varargs a(Ljava/lang/String;Ljava/util/List;Z[Ljava/lang/String;)Ljava/lang/CharSequence;
+    .locals 11
 
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+    array-length v0, p4
+
+    const/4 v1, 0x0
+
+    move v2, v1
+
+    :goto_0
+    const/4 v3, 0x2
+
+    const/4 v4, 0x3
+
+    const-string v5, ""
+
+    const-string v6, "\u00a0"
+
+    iget-object v7, p0, Lnia;->b:Ldka;
+
+    const/4 v8, 0x1
+
+    if-ge v2, v0, :cond_3
+
+    aget-object v9, p4, v2
+
+    if-eqz v9, :cond_2
+
+    invoke-virtual {v9}, Ljava/lang/String;->length()I
+
+    move-result v10
+
+    if-nez v10, :cond_0
+
+    goto :goto_1
+
+    :cond_0
+    invoke-static {v9, p2}, Luyg;->u(Ljava/lang/String;Ljava/util/List;)Z
+
+    move-result v10
+
+    if-eqz v10, :cond_2
+
+    iget-object p3, v7, Ldka;->j:Lz25;
+
+    invoke-interface {p3, p1}, Lz25;->e(Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
+
+    move-result-object p1
+
+    invoke-virtual {v9}, Ljava/lang/Object;->toString()Ljava/lang/String;
+
+    move-result-object p3
+
+    invoke-static {p3, p2}, Luyg;->u(Ljava/lang/String;Ljava/util/List;)Z
+
+    move-result p3
+
+    if-eqz p3, :cond_1
+
+    invoke-virtual {v9}, Ljava/lang/Object;->toString()Ljava/lang/String;
+
+    move-result-object p3
+
+    sget-object p4, Lyu4;->t0:Lbx9;
+
+    iget-object p0, p0, Lnia;->a:Landroid/content/Context;
+
+    invoke-virtual {p4, p0}, Lbx9;->k(Landroid/content/Context;)Lyu4;
 
     move-result-object p0
 
-    check-cast p0, Lnia;
+    invoke-virtual {p0}, Lyu4;->j()Lera;
 
-    return-object p0
-.end method
+    move-result-object p0
 
-.method public static values()[Lnia;
-    .locals 1
+    sget-object p4, Liad;->a:Liad;
 
-    sget-object v0, Lnia;->o:[Lnia;
+    invoke-virtual {p4}, Liad;->r()Lzbd;
 
-    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
+    move-result-object p4
+
+    invoke-virtual {p3}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
     move-result-object v0
 
-    check-cast v0, [Lnia;
+    invoke-virtual {p4, v0, p2}, Lzbd;->d(Ljava/lang/String;Ljava/util/List;)Ljava/util/List;
 
-    return-object v0
+    move-result-object p2
+
+    invoke-static {p3, p2, p0}, Luyg;->s(Ljava/lang/CharSequence;Ljava/util/List;Lera;)Landroid/text/SpannableString;
+
+    move-result-object v5
+
+    :cond_1
+    new-array p0, v4, [Ljava/lang/CharSequence;
+
+    aput-object p1, p0, v1
+
+    aput-object v6, p0, v8
+
+    aput-object v5, p0, v3
+
+    invoke-static {p0}, Landroid/text/TextUtils;->concat([Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
+
+    move-result-object p0
+
+    return-object p0
+
+    :cond_2
+    :goto_1
+    add-int/lit8 v2, v2, 0x1
+
+    goto :goto_0
+
+    :cond_3
+    if-eqz p3, :cond_5
+
+    array-length p0, p4
+
+    if-nez p0, :cond_4
+
+    goto :goto_2
+
+    :cond_4
+    new-array p0, v4, [Ljava/lang/CharSequence;
+
+    iget-object p2, v7, Ldka;->j:Lz25;
+
+    invoke-interface {p2, p1}, Lz25;->e(Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
+
+    move-result-object p1
+
+    aput-object p1, p0, v1
+
+    aput-object v6, p0, v8
+
+    invoke-static {p4}, Lxr;->Q([Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    aput-object p1, p0, v3
+
+    invoke-static {p0}, Landroid/text/TextUtils;->concat([Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
+
+    move-result-object p0
+
+    return-object p0
+
+    :cond_5
+    :goto_2
+    return-object v5
 .end method

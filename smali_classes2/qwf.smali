@@ -1,65 +1,27 @@
 .class public final Lqwf;
-.super Lap;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final synthetic m:Lrwf;
+# static fields
+.field public static final a:Ljava/util/Map;
 
 
 # direct methods
-.method public constructor <init>(Lrwf;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 2
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Ly88;
 
-    iput-object p1, p0, Lqwf;->m:Lrwf;
+    const/16 v1, 0x3e8
 
-    return-void
-.end method
+    invoke-direct {v0, v1}, Ly88;-><init>(I)V
 
+    invoke-static {v0}, Ljava/util/Collections;->synchronizedMap(Ljava/util/Map;)Ljava/util/Map;
 
-# virtual methods
-.method public final U()V
-    .locals 0
+    move-result-object v0
 
-    iget-object p0, p0, Lqwf;->m:Lrwf;
-
-    iget-object p0, p0, Lrwf;->d:Ljava/lang/Object;
-
-    check-cast p0, La76;
-
-    invoke-interface {p0}, Lv56;->invoke()Ljava/lang/Object;
-
-    return-void
-.end method
-
-.method public final V()V
-    .locals 1
-
-    iget-object p0, p0, Lqwf;->m:Lrwf;
-
-    iget-object p0, p0, Lrwf;->a:Ljava/lang/Object;
-
-    check-cast p0, Ljava/lang/String;
-
-    const-string v0, "onAuthenticationFailed"
-
-    invoke-static {p0, v0}, Lg47;->p(Ljava/lang/String;Ljava/lang/String;)V
-
-    return-void
-.end method
-
-.method public final W()V
-    .locals 0
-
-    iget-object p0, p0, Lqwf;->m:Lrwf;
-
-    iget-object p0, p0, Lrwf;->c:Ljava/lang/Object;
-
-    check-cast p0, La76;
-
-    invoke-interface {p0}, Lv56;->invoke()Ljava/lang/Object;
+    sput-object v0, Lqwf;->a:Ljava/util/Map;
 
     return-void
 .end method

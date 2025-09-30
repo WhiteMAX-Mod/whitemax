@@ -4,8 +4,8 @@
 
 
 # virtual methods
-.method public abstract a(JLuu1;)V
+.method public abstract a()V
 .end method
 
-.method public abstract clear()V
+.method public abstract b(Landroid/net/Uri;Lcv7;Z)Z
 .end method

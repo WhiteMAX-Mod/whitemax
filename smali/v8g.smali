@@ -3,13 +3,18 @@
 .source "SourceFile"
 
 
-# direct methods
-.method public static a(Landroid/content/Context;)Z
+# virtual methods
+.method public a(I)V
     .locals 0
 
-    invoke-virtual {p0}, Landroid/content/Context;->isDeviceProtectedStorage()Z
+    return-void
+.end method
 
-    move-result p0
+.method public b(IFI)V
+    .locals 0
 
-    return p0
+    return-void
+.end method
+
+.method public abstract c(I)V
 .end method

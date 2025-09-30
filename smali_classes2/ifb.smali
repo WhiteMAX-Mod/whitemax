@@ -1,117 +1,93 @@
 .class public final Lifb;
-.super Lqde;
+.super Landroid/view/View$BaseSavedState;
 .source "SourceFile"
 
-# interfaces
-.implements Ll66;
+
+# static fields
+.field public static final CREATOR:Lhfb;
 
 
 # instance fields
-.field public synthetic X:Ljava/lang/Object;
+.field public final a:I
 
-.field public final synthetic Y:Lrfb;
+.field public final b:Z
 
 
 # direct methods
-.method public constructor <init>(Lrfb;Lkotlin/coroutines/Continuation;)V
+.method static constructor <clinit>()V
+    .locals 1
+
+    new-instance v0, Lhfb;
+
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    sput-object v0, Lifb;->CREATOR:Lhfb;
+
+    return-void
+.end method
+
+.method public constructor <init>(Landroid/os/Parcel;)V
+    .locals 1
+
+    .line 4
+    invoke-direct {p0, p1}, Landroid/view/View$BaseSavedState;-><init>(Landroid/os/Parcel;)V
+
+    .line 5
+    invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
+
+    move-result v0
+
+    iput v0, p0, Lifb;->a:I
+
+    .line 6
+    invoke-virtual {p1}, Landroid/os/Parcel;->readByte()B
+
+    move-result p1
+
+    if-lez p1, :cond_0
+
+    const/4 p1, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    const/4 p1, 0x0
+
+    :goto_0
+    iput-boolean p1, p0, Lifb;->b:Z
+
+    return-void
+.end method
+
+.method public constructor <init>(Landroid/os/Parcelable;IZ)V
     .locals 0
 
-    iput-object p1, p0, Lifb;->Y:Lrfb;
+    .line 1
+    invoke-direct {p0, p1}, Landroid/view/View$BaseSavedState;-><init>(Landroid/os/Parcelable;)V
 
-    const/4 p1, 0x2
+    .line 2
+    iput p2, p0, Lifb;->a:I
 
-    invoke-direct {p0, p1, p2}, Lqde;-><init>(ILkotlin/coroutines/Continuation;)V
+    .line 3
+    iput-boolean p3, p0, Lifb;->b:Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+.method public final writeToParcel(Landroid/os/Parcel;I)V
     .locals 0
 
-    check-cast p1, Lkeb;
+    invoke-super {p0, p1, p2}, Landroid/view/View$BaseSavedState;->writeToParcel(Landroid/os/Parcel;I)V
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    iget p2, p0, Lifb;->a:I
 
-    invoke-virtual {p0, p1, p2}, Lifb;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
 
-    move-result-object p0
+    iget-boolean p0, p0, Lifb;->b:Z
 
-    check-cast p0, Lifb;
+    invoke-virtual {p1, p0}, Landroid/os/Parcel;->writeByte(B)V
 
-    sget-object p1, Le5f;->a:Le5f;
-
-    invoke-virtual {p0, p1}, Lifb;->o(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p1
-.end method
-
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 1
-
-    new-instance v0, Lifb;
-
-    iget-object p0, p0, Lifb;->Y:Lrfb;
-
-    invoke-direct {v0, p0, p2}, Lifb;-><init>(Lrfb;Lkotlin/coroutines/Continuation;)V
-
-    iput-object p1, v0, Lifb;->X:Ljava/lang/Object;
-
-    return-object v0
-.end method
-
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 4
-
-    invoke-static {p1}, Lsgg;->Z(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Lifb;->X:Ljava/lang/Object;
-
-    check-cast p1, Lkeb;
-
-    instance-of v0, p1, Lieb;
-
-    if-eqz v0, :cond_0
-
-    check-cast p1, Lieb;
-
-    iget-object p1, p1, Lieb;->a:Ljava/lang/Long;
-
-    iget-object p0, p0, Lifb;->Y:Lrfb;
-
-    iget-object v0, p0, Lrfb;->u0:Ljava/util/concurrent/atomic/AtomicLong;
-
-    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicLong;->get()J
-
-    move-result-wide v0
-
-    invoke-virtual {p1}, Ljava/lang/Long;->longValue()J
-
-    move-result-wide v2
-
-    cmp-long p1, v2, v0
-
-    if-nez p1, :cond_0
-
-    iget-object p0, p0, Lrfb;->A0:Lj35;
-
-    new-instance p1, Lweb;
-
-    sget v0, Lpca;->Y0:I
-
-    new-instance v1, Lhoe;
-
-    invoke-direct {v1, v0}, Lhoe;-><init>(I)V
-
-    sget v0, Lanc;->z:I
-
-    invoke-direct {p1, v0, v1}, Lweb;-><init>(ILhoe;)V
-
-    invoke-static {p0, p1}, Ljof;->o(Lj35;Ljava/lang/Object;)V
-
-    :cond_0
-    sget-object p0, Le5f;->a:Le5f;
-
-    return-object p0
+    return-void
 .end method

@@ -1,29 +1,22 @@
-.class public abstract Ll85;
+.class public final Ll85;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lt85;
 
-# static fields
-.field public static final a:Ljava/lang/Object;
 
-.field public static final b:Ljava/util/HashMap;
+# instance fields
+.field public final a:Lyh8;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(Lyh8;)V
+    .locals 0
 
-    new-instance v0, Ljava/lang/Object;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    sput-object v0, Ll85;->a:Ljava/lang/Object;
-
-    new-instance v0, Ljava/util/HashMap;
-
-    invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
-
-    sput-object v0, Ll85;->b:Ljava/util/HashMap;
+    iput-object p1, p0, Ll85;->a:Lyh8;
 
     return-void
 .end method

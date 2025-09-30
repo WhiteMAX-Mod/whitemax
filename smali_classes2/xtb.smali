@@ -1,44 +1,125 @@
-.class public abstract Lxtb;
-.super Ljava/lang/Object;
+.class public final Lxtb;
+.super Luc0;
+.source "SourceFile"
 
 
-# static fields
-.field public static oneme_media_keyboard:I = 0x7f0a0722
+# instance fields
+.field public final b:J
 
-.field public static oneme_media_keyboard_bottom_panel:I = 0x7f0a0723
+.field public final c:Lfmb;
 
-.field public static oneme_media_keyboard_emoji_container:I = 0x7f0a0724
 
-.field public static oneme_media_keyboard_emoji_list:I = 0x7f0a0725
+# direct methods
+.method public constructor <init>(JLfmb;)V
+    .locals 1
 
-.field public static oneme_media_keyboard_emoji_tabs:I = 0x7f0a0726
+    const/16 v0, 0xf
 
-.field public static oneme_media_keyboard_fake_search_view:I = 0x7f0a0727
+    invoke-direct {p0, v0}, Luc0;-><init>(I)V
 
-.field public static oneme_media_keyboard_pager:I = 0x7f0a0728
+    iput-wide p1, p0, Lxtb;->b:J
 
-.field public static oneme_media_keyboard_recent_clear_confirmation_action:I = 0x7f0a0729
+    iput-object p3, p0, Lxtb;->c:Lfmb;
 
-.field public static oneme_media_keyboard_recent_clear_confirmation_cancel:I = 0x7f0a072a
+    return-void
+.end method
 
-.field public static oneme_media_keyboard_remove_action:I = 0x7f0a072b
 
-.field public static oneme_media_keyboard_settings_action:I = 0x7f0a072c
+# virtual methods
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 7
 
-.field public static oneme_media_keyboard_showcase_action:I = 0x7f0a072d
+    const/4 v0, 0x1
 
-.field public static oneme_media_keyboard_stickers_container:I = 0x7f0a072e
+    if-ne p0, p1, :cond_0
 
-.field public static oneme_media_keyboard_stickers_header_title:I = 0x7f0a072f
+    return v0
 
-.field public static oneme_media_keyboard_stickers_list:I = 0x7f0a0730
+    :cond_0
+    instance-of v1, p1, Lxtb;
 
-.field public static oneme_media_keyboard_stickers_tabs:I = 0x7f0a0731
+    const/4 v2, 0x0
 
-.field public static oneme_media_keyboard_tabs:I = 0x7f0a0732
+    if-nez v1, :cond_1
 
-.field public static oneme_media_keyboard_top_panel:I = 0x7f0a0733
+    return v2
 
-.field public static oneme_media_keyboard_view_type_category_emoji:I = 0x7f0a0734
+    :cond_1
+    check-cast p1, Lxtb;
 
-.field public static oneme_media_keyboard_view_type_fake_search:I = 0x7f0a0735
+    iget-wide v3, p0, Lxtb;->b:J
+
+    iget-wide v5, p1, Lxtb;->b:J
+
+    cmp-long v1, v3, v5
+
+    if-eqz v1, :cond_2
+
+    return v2
+
+    :cond_2
+    iget-object p0, p0, Lxtb;->c:Lfmb;
+
+    iget-object p1, p1, Lxtb;->c:Lfmb;
+
+    if-eq p0, p1, :cond_3
+
+    return v2
+
+    :cond_3
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 2
+
+    iget-wide v0, p0, Lxtb;->b:J
+
+    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
+
+    move-result v0
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget-object p0, p0, Lxtb;->c:Lfmb;
+
+    invoke-virtual {p0}, Ljava/lang/Object;->hashCode()I
+
+    move-result p0
+
+    add-int/2addr p0, v0
+
+    return p0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 3
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "OpenChat(chatId="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-wide v1, p0, Lxtb;->b:J
+
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    const-string v1, ", type="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object p0, p0, Lxtb;->c:Lfmb;
+
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string p0, ")"
+
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    return-object p0
+.end method

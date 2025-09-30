@@ -1,161 +1,49 @@
 .class public final Lo83;
-.super Lq83;
+.super Ljx3;
 .source "SourceFile"
 
 
+# instance fields
+.field public final synthetic X:Lp83;
+
+.field public Y:I
+
+.field public synthetic o:Ljava/lang/Object;
+
+
 # direct methods
-.method public static g(I)Lq83;
+.method public constructor <init>(Lp83;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    if-gez p0, :cond_0
+    iput-object p1, p0, Lo83;->X:Lp83;
 
-    sget-object p0, Lq83;->b:Lp83;
+    invoke-direct {p0, p2}, Ljx3;-><init>(Lkotlin/coroutines/Continuation;)V
 
-    return-object p0
-
-    :cond_0
-    if-lez p0, :cond_1
-
-    sget-object p0, Lq83;->c:Lp83;
-
-    return-object p0
-
-    :cond_1
-    sget-object p0, Lq83;->a:Lo83;
-
-    return-object p0
+    return-void
 .end method
 
 
 # virtual methods
-.method public final a(II)Lq83;
-    .locals 0
+.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    if-ge p1, p2, :cond_0
+    iput-object p1, p0, Lo83;->o:Ljava/lang/Object;
 
-    const/4 p0, -0x1
+    iget p1, p0, Lo83;->Y:I
 
-    goto :goto_0
+    const/high16 v0, -0x80000000
 
-    :cond_0
-    if-le p1, p2, :cond_1
+    or-int/2addr p1, v0
 
-    const/4 p0, 0x1
+    iput p1, p0, Lo83;->Y:I
 
-    goto :goto_0
+    iget-object p1, p0, Lo83;->X:Lp83;
 
-    :cond_1
-    const/4 p0, 0x0
+    const/4 v0, 0x0
 
-    :goto_0
-    invoke-static {p0}, Lo83;->g(I)Lq83;
+    invoke-virtual {p1, v0, p0}, Lp83;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
     move-result-object p0
 
     return-object p0
-.end method
-
-.method public final b(JJ)Lq83;
-    .locals 0
-
-    cmp-long p0, p1, p3
-
-    if-gez p0, :cond_0
-
-    const/4 p0, -0x1
-
-    goto :goto_0
-
-    :cond_0
-    if-lez p0, :cond_1
-
-    const/4 p0, 0x1
-
-    goto :goto_0
-
-    :cond_1
-    const/4 p0, 0x0
-
-    :goto_0
-    invoke-static {p0}, Lo83;->g(I)Lq83;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public final c(Ljava/lang/Object;Ljava/lang/Object;Ljava/util/Comparator;)Lq83;
-    .locals 0
-
-    invoke-interface {p3, p1, p2}, Ljava/util/Comparator;->compare(Ljava/lang/Object;Ljava/lang/Object;)I
-
-    move-result p0
-
-    invoke-static {p0}, Lo83;->g(I)Lq83;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public final d(ZZ)Lq83;
-    .locals 0
-
-    if-ne p1, p2, :cond_0
-
-    const/4 p0, 0x0
-
-    goto :goto_0
-
-    :cond_0
-    if-eqz p1, :cond_1
-
-    const/4 p0, 0x1
-
-    goto :goto_0
-
-    :cond_1
-    const/4 p0, -0x1
-
-    :goto_0
-    invoke-static {p0}, Lo83;->g(I)Lq83;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public final e(ZZ)Lq83;
-    .locals 0
-
-    if-ne p2, p1, :cond_0
-
-    const/4 p0, 0x0
-
-    goto :goto_0
-
-    :cond_0
-    if-eqz p2, :cond_1
-
-    const/4 p0, 0x1
-
-    goto :goto_0
-
-    :cond_1
-    const/4 p0, -0x1
-
-    :goto_0
-    invoke-static {p0}, Lo83;->g(I)Lq83;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public final f()I
-    .locals 0
-
-    const/4 p0, 0x0
-
-    return p0
 .end method

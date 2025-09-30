@@ -1,323 +1,327 @@
-.class public final synthetic Lc60;
+.class public final Lc60;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ljava/lang/Runnable;
-
 
 # instance fields
-.field public final synthetic a:I
+.field public A:J
 
-.field public final synthetic b:Lha8;
+.field public B:J
+
+.field public C:J
+
+.field public D:Z
+
+.field public E:J
+
+.field public F:J
+
+.field public final a:Lq2e;
+
+.field public final b:[J
+
+.field public c:Landroid/media/AudioTrack;
+
+.field public d:I
+
+.field public e:I
+
+.field public f:La60;
+
+.field public g:I
+
+.field public h:Z
+
+.field public i:J
+
+.field public j:F
+
+.field public k:Z
+
+.field public l:J
+
+.field public m:J
+
+.field public n:Ljava/lang/reflect/Method;
+
+.field public o:J
+
+.field public p:Z
+
+.field public q:Z
+
+.field public r:J
+
+.field public s:J
+
+.field public t:J
+
+.field public u:J
+
+.field public v:I
+
+.field public w:I
+
+.field public x:J
+
+.field public y:J
+
+.field public z:J
 
 
 # direct methods
-.method public synthetic constructor <init>(Lha8;IJJ)V
-    .locals 0
-
-    .line 1
-    const/4 p2, 0x1
-
-    iput p2, p0, Lc60;->a:I
+.method public constructor <init>(Lq2e;)V
+    .locals 2
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lc60;->b:Lha8;
+    iput-object p1, p0, Lc60;->a:Lq2e;
 
-    return-void
-.end method
+    sget p1, Llrf;->a:I
 
-.method public synthetic constructor <init>(Lha8;J)V
-    .locals 0
+    const/16 v0, 0x12
 
-    .line 2
-    const/4 p2, 0x4
+    if-lt p1, v0, :cond_0
 
-    iput p2, p0, Lc60;->a:I
+    :try_start_0
+    const-class p1, Landroid/media/AudioTrack;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const-string v0, "getLatency"
 
-    iput-object p1, p0, Lc60;->b:Lha8;
+    const/4 v1, 0x0
 
-    return-void
-.end method
+    invoke-virtual {p1, v0, v1}, Ljava/lang/Class;->getMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
 
-.method public synthetic constructor <init>(Lha8;Ldz5;Le64;)V
-    .locals 0
+    move-result-object p1
 
-    .line 3
-    const/4 p2, 0x6
+    iput-object p1, p0, Lc60;->n:Ljava/lang/reflect/Method;
+    :try_end_0
+    .catch Ljava/lang/NoSuchMethodException; {:try_start_0 .. :try_end_0} :catch_0
 
-    iput p2, p0, Lc60;->a:I
+    :catch_0
+    :cond_0
+    const/16 p1, 0xa
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-array p1, p1, [J
 
-    iput-object p1, p0, Lc60;->b:Lha8;
-
-    return-void
-.end method
-
-.method public synthetic constructor <init>(Lha8;Ljava/lang/Object;I)V
-    .locals 0
-
-    .line 4
-    iput p3, p0, Lc60;->a:I
-
-    iput-object p1, p0, Lc60;->b:Lha8;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    return-void
-.end method
-
-.method public synthetic constructor <init>(Lha8;Ljava/lang/String;JJ)V
-    .locals 0
-
-    .line 5
-    const/4 p2, 0x2
-
-    iput p2, p0, Lc60;->a:I
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lc60;->b:Lha8;
+    iput-object p1, p0, Lc60;->b:[J
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
-    .locals 3
+.method public final a()J
+    .locals 11
 
-    iget v0, p0, Lc60;->a:I
+    iget-object v0, p0, Lc60;->c:Landroid/media/AudioTrack;
 
-    const/16 v1, 0xe
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    const/16 v2, 0xb
+    iget-wide v1, p0, Lc60;->x:J
 
-    iget-object p0, p0, Lc60;->b:Lha8;
+    const-wide v3, -0x7fffffffffffffffL    # -4.9E-324
 
-    packed-switch v0, :pswitch_data_0
+    cmp-long v1, v1, v3
 
-    iget-object p0, p0, Lha8;->b:Ljava/lang/Object;
+    if-eqz v1, :cond_0
 
-    check-cast p0, La75;
+    invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
-    sget v0, Lnaf;->a:I
+    move-result-wide v0
 
-    iget-object p0, p0, La75;->a:Lg75;
+    const-wide/16 v2, 0x3e8
 
-    iget-object p0, p0, Lg75;->y0:Lu74;
+    mul-long/2addr v0, v2
 
-    invoke-virtual {p0}, Lu74;->J()Lyc;
+    iget-wide v2, p0, Lc60;->x:J
 
-    move-result-object v0
+    sub-long/2addr v0, v2
 
-    new-instance v1, Li74;
+    iget v2, p0, Lc60;->g:I
 
-    const/16 v2, 0x13
+    int-to-long v2, v2
 
-    invoke-direct {v1, v2}, Li74;-><init>(I)V
+    mul-long/2addr v0, v2
 
-    const/16 v2, 0x3f6
+    const-wide/32 v2, 0xf4240
 
-    invoke-virtual {p0, v0, v2, v1}, Lu74;->K(Lyc;ILjm7;)V
+    div-long/2addr v0, v2
 
-    return-void
+    iget-wide v2, p0, Lc60;->A:J
 
-    :pswitch_0
-    iget-object p0, p0, Lha8;->b:Ljava/lang/Object;
+    iget-wide v4, p0, Lc60;->z:J
 
-    check-cast p0, La75;
+    add-long/2addr v4, v0
 
-    sget v0, Lnaf;->a:I
+    invoke-static {v2, v3, v4, v5}, Ljava/lang/Math;->min(JJ)J
 
-    iget-object p0, p0, La75;->a:Lg75;
+    move-result-wide v0
 
-    iget-object p0, p0, Lg75;->y0:Lu74;
+    return-wide v0
 
-    invoke-virtual {p0}, Lu74;->J()Lyc;
+    :cond_0
+    invoke-virtual {v0}, Landroid/media/AudioTrack;->getPlayState()I
 
-    move-result-object v0
+    move-result v1
 
-    new-instance v1, Ltv3;
+    const/4 v2, 0x1
 
-    invoke-direct {v1, v2}, Ltv3;-><init>(I)V
+    const-wide/16 v5, 0x0
 
-    const/16 v2, 0x3f1
+    if-ne v1, v2, :cond_1
 
-    invoke-virtual {p0, v0, v2, v1}, Lu74;->K(Lyc;ILjm7;)V
+    return-wide v5
 
-    return-void
+    :cond_1
+    invoke-virtual {v0}, Landroid/media/AudioTrack;->getPlaybackHeadPosition()I
 
-    :pswitch_1
-    iget-object p0, p0, Lha8;->b:Ljava/lang/Object;
+    move-result v0
 
-    check-cast p0, La75;
+    int-to-long v7, v0
 
-    sget v0, Lnaf;->a:I
+    const-wide v9, 0xffffffffL
 
-    iget-object p0, p0, La75;->a:Lg75;
+    and-long/2addr v7, v9
 
-    iget-object p0, p0, Lg75;->y0:Lu74;
+    iget-boolean v0, p0, Lc60;->h:Z
 
-    invoke-virtual {p0}, Lu74;->J()Lyc;
+    if-eqz v0, :cond_3
 
-    move-result-object v0
+    const/4 v0, 0x2
 
-    new-instance v1, Li74;
+    if-ne v1, v0, :cond_2
+
+    cmp-long v0, v7, v5
+
+    if-nez v0, :cond_2
+
+    iget-wide v9, p0, Lc60;->s:J
+
+    iput-wide v9, p0, Lc60;->u:J
+
+    :cond_2
+    iget-wide v9, p0, Lc60;->u:J
+
+    add-long/2addr v7, v9
+
+    :cond_3
+    sget v0, Llrf;->a:I
 
     const/16 v2, 0x1d
 
-    invoke-direct {v1, v2}, Li74;-><init>(I)V
+    if-gt v0, v2, :cond_6
 
-    const/16 v2, 0x3ef
+    cmp-long v0, v7, v5
 
-    invoke-virtual {p0, v0, v2, v1}, Lu74;->K(Lyc;ILjm7;)V
+    if-nez v0, :cond_5
 
-    return-void
+    iget-wide v9, p0, Lc60;->s:J
 
-    :pswitch_2
-    iget-object p0, p0, Lha8;->b:Ljava/lang/Object;
+    cmp-long v0, v9, v5
 
-    check-cast p0, La75;
+    if-lez v0, :cond_5
 
-    sget v0, Lnaf;->a:I
+    const/4 v0, 0x3
 
-    iget-object p0, p0, La75;->a:Lg75;
+    if-ne v1, v0, :cond_5
 
-    iget-object p0, p0, Lg75;->y0:Lu74;
+    iget-wide v0, p0, Lc60;->y:J
 
-    invoke-virtual {p0}, Lu74;->J()Lyc;
+    cmp-long v0, v0, v3
 
-    move-result-object v0
+    if-nez v0, :cond_4
 
-    new-instance v2, Li74;
+    invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
-    invoke-direct {v2, v1}, Li74;-><init>(I)V
+    move-result-wide v0
 
-    const/16 v1, 0x3f2
+    iput-wide v0, p0, Lc60;->y:J
 
-    invoke-virtual {p0, v0, v1, v2}, Lu74;->K(Lyc;ILjm7;)V
+    :cond_4
+    iget-wide v0, p0, Lc60;->s:J
 
-    return-void
+    return-wide v0
 
-    :pswitch_3
-    iget-object p0, p0, Lha8;->b:Ljava/lang/Object;
+    :cond_5
+    iput-wide v3, p0, Lc60;->y:J
 
-    check-cast p0, La75;
+    :cond_6
+    iget-wide v0, p0, Lc60;->s:J
 
-    sget v0, Lnaf;->a:I
+    cmp-long v0, v0, v7
 
-    iget-object p0, p0, La75;->a:Lg75;
+    if-lez v0, :cond_7
 
-    iget-object p0, p0, Lg75;->y0:Lu74;
+    iget-wide v0, p0, Lc60;->t:J
 
-    invoke-virtual {p0}, Lu74;->J()Lyc;
+    const-wide/16 v2, 0x1
 
-    move-result-object v0
+    add-long/2addr v0, v2
 
-    new-instance v1, Lo74;
+    iput-wide v0, p0, Lc60;->t:J
 
-    const/16 v2, 0x14
+    :cond_7
+    iput-wide v7, p0, Lc60;->s:J
 
-    invoke-direct {v1, v2}, Lo74;-><init>(I)V
+    iget-wide v0, p0, Lc60;->t:J
 
-    const/16 v2, 0x405
+    const/16 p0, 0x20
 
-    invoke-virtual {p0, v0, v2, v1}, Lu74;->K(Lyc;ILjm7;)V
+    shl-long/2addr v0, p0
 
-    return-void
+    add-long/2addr v7, v0
 
-    :pswitch_4
-    iget-object p0, p0, Lha8;->b:Ljava/lang/Object;
+    return-wide v7
+.end method
 
-    check-cast p0, La75;
+.method public final b(J)Z
+    .locals 2
 
-    sget v0, Lnaf;->a:I
+    invoke-virtual {p0}, Lc60;->a()J
 
-    iget-object p0, p0, La75;->a:Lg75;
+    move-result-wide v0
 
-    iget-object p0, p0, Lg75;->y0:Lu74;
+    cmp-long p1, p1, v0
 
-    invoke-virtual {p0}, Lu74;->J()Lyc;
+    if-gtz p1, :cond_1
 
-    move-result-object v0
+    iget-boolean p1, p0, Lc60;->h:Z
 
-    new-instance v1, Ltv3;
+    if-eqz p1, :cond_0
 
-    const/16 v2, 0xa
+    iget-object p1, p0, Lc60;->c:Landroid/media/AudioTrack;
 
-    invoke-direct {v1, v2}, Ltv3;-><init>(I)V
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    const/16 v2, 0x3f0
+    invoke-virtual {p1}, Landroid/media/AudioTrack;->getPlayState()I
 
-    invoke-virtual {p0, v0, v2, v1}, Lu74;->K(Lyc;ILjm7;)V
+    move-result p1
 
-    return-void
+    const/4 p2, 0x2
 
-    :pswitch_5
-    iget-object p0, p0, Lha8;->b:Ljava/lang/Object;
+    if-ne p1, p2, :cond_0
 
-    check-cast p0, La75;
+    invoke-virtual {p0}, Lc60;->a()J
 
-    sget v0, Lnaf;->a:I
+    move-result-wide p0
 
-    iget-object p0, p0, La75;->a:Lg75;
+    const-wide/16 v0, 0x0
 
-    iget-object p0, p0, Lg75;->y0:Lu74;
+    cmp-long p0, p0, v0
 
-    invoke-virtual {p0}, Lu74;->J()Lyc;
+    if-nez p0, :cond_0
 
-    move-result-object v0
+    goto :goto_0
 
-    new-instance v2, Ltv3;
+    :cond_0
+    const/4 p0, 0x0
 
-    invoke-direct {v2, v1}, Ltv3;-><init>(I)V
+    return p0
 
-    const/16 v1, 0x3f3
+    :cond_1
+    :goto_0
+    const/4 p0, 0x1
 
-    invoke-virtual {p0, v0, v1, v2}, Lu74;->K(Lyc;ILjm7;)V
-
-    return-void
-
-    :pswitch_6
-    iget-object p0, p0, Lha8;->b:Ljava/lang/Object;
-
-    check-cast p0, La75;
-
-    sget v0, Lnaf;->a:I
-
-    iget-object p0, p0, La75;->a:Lg75;
-
-    iget-object p0, p0, Lg75;->y0:Lu74;
-
-    invoke-virtual {p0}, Lu74;->J()Lyc;
-
-    move-result-object v0
-
-    new-instance v1, Li74;
-
-    invoke-direct {v1, v2}, Li74;-><init>(I)V
-
-    const/16 v2, 0x3f4
-
-    invoke-virtual {p0, v0, v2, v1}, Lu74;->K(Lyc;ILjm7;)V
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_6
-        :pswitch_5
-        :pswitch_4
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    return p0
 .end method

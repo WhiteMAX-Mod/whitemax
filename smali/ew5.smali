@@ -1,111 +1,142 @@
 .class public final Lew5;
-.super Lv64;
+.super Lq0;
 .source "SourceFile"
 
 
-# static fields
-.field public static final b:Lew5;
+# instance fields
+.field public final X:I
 
-.field public static final c:Lr64;
+.field public final c:Lnye;
 
-.field public static final d:Lr64;
-
-.field public static final e:Lr64;
-
-.field public static final f:Lr64;
-
-.field public static final g:Lr64;
-
-.field public static final h:Lr64;
+.field public final o:I
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 7
+.method public constructor <init>(Lrv5;Lnye;II)V
+    .locals 0
 
-    new-instance v0, Lew5;
+    invoke-direct {p0, p1}, Lq0;-><init>(Lrv5;)V
 
-    invoke-direct {v0}, Lv64;-><init>()V
+    iput-object p2, p0, Lew5;->c:Lnye;
 
-    sput-object v0, Lew5;->b:Lew5;
+    iput p3, p0, Lew5;->o:I
 
-    const/4 v1, 0x0
+    iput p4, p0, Lew5;->X:I
 
-    new-array v2, v1, [Ljava/lang/String;
+    return-void
+.end method
 
-    const-string v3, ":settings/folder-list"
 
-    const/4 v4, 0x0
+# virtual methods
+.method public final f(Lbx5;)V
+    .locals 4
 
-    const/16 v5, 0xe
+    iget-object v0, p0, Lq0;->b:Lrv5;
 
-    invoke-static {v0, v3, v2, v4, v5}, Lv64;->a(Lv64;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lr64;
+    instance-of v1, v0, Lype;
 
-    move-result-object v2
+    iget-object v2, p0, Lew5;->c:Lnye;
 
-    sput-object v2, Lew5;->c:Lr64;
+    if-eqz v1, :cond_3
 
-    const-string v2, "id"
+    :try_start_0
+    check-cast v0, Lype;
 
-    filled-new-array {v2}, [Ljava/lang/String;
+    invoke-interface {v0}, Lype;->get()Ljava/lang/Object;
 
-    move-result-object v3
+    move-result-object p0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_2
 
-    const-string v6, ":settings/folder"
+    if-nez p0, :cond_0
 
-    invoke-static {v0, v6, v3, v4, v5}, Lv64;->a(Lv64;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lr64;
+    invoke-static {p1}, Lf55;->a(Ljne;)V
 
-    move-result-object v3
+    return-void
 
-    sput-object v3, Lew5;->d:Lr64;
+    :cond_0
+    :try_start_1
+    invoke-virtual {v2, p0}, Lnye;->apply(Ljava/lang/Object;)Ljava/lang/Object;
 
-    const-string v3, ":settings/folder/edit"
+    move-result-object p0
 
-    new-array v6, v1, [Ljava/lang/String;
+    check-cast p0, Lkzb;
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
-    invoke-static {v0, v3, v6, v4, v5}, Lv64;->a(Lv64;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lr64;
+    instance-of v0, p0, Lype;
 
-    move-result-object v3
+    if-eqz v0, :cond_2
 
-    sput-object v3, Lew5;->e:Lr64;
+    :try_start_2
+    check-cast p0, Lype;
 
-    const-string v3, ":settings/folder/create"
+    invoke-interface {p0}, Lype;->get()Ljava/lang/Object;
 
-    new-array v6, v1, [Ljava/lang/String;
+    move-result-object p0
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    invoke-static {v0, v3, v6, v4, v5}, Lv64;->a(Lv64;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lr64;
+    if-nez p0, :cond_1
 
-    move-result-object v3
+    invoke-static {p1}, Lf55;->a(Ljne;)V
 
-    sput-object v3, Lew5;->f:Lr64;
+    return-void
 
-    const-string v3, ":settings/folder/by-chat"
+    :cond_1
+    new-instance v0, Le4d;
 
-    filled-new-array {v2}, [Ljava/lang/String;
+    invoke-direct {v0, p1, p0}, Le4d;-><init>(Ljne;Ljava/lang/Object;)V
 
-    move-result-object v2
+    invoke-interface {p1, v0}, Ljne;->d(Llne;)V
 
-    invoke-static {v0, v3, v2, v4, v5}, Lv64;->a(Lv64;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lr64;
+    return-void
 
-    move-result-object v2
+    :catchall_0
+    move-exception p0
 
-    sput-object v2, Lew5;->g:Lr64;
+    invoke-static {p0}, Lzyd;->F(Ljava/lang/Throwable;)V
 
-    const-string v2, ":settings/folder/settings"
+    invoke-static {p0, p1}, Lf55;->b(Ljava/lang/Throwable;Ljne;)V
 
-    new-array v3, v1, [Ljava/lang/String;
+    goto :goto_0
 
-    invoke-static {v0, v2, v3, v4, v5}, Lv64;->a(Lv64;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lr64;
+    :cond_2
+    check-cast p0, Lrv5;
 
-    const-string v2, ":settings/folder/members-picker"
+    invoke-virtual {p0, p1}, Lrv5;->e(Ljne;)V
 
-    new-array v1, v1, [Ljava/lang/String;
+    return-void
 
-    invoke-static {v0, v2, v1, v4, v5}, Lv64;->a(Lv64;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lr64;
+    :catchall_1
+    move-exception p0
 
-    move-result-object v0
+    invoke-static {p0}, Lzyd;->F(Ljava/lang/Throwable;)V
 
-    sput-object v0, Lew5;->h:Lr64;
+    invoke-static {p0, p1}, Lf55;->b(Ljava/lang/Throwable;Ljne;)V
+
+    goto :goto_0
+
+    :catchall_2
+    move-exception p0
+
+    invoke-static {p0}, Lzyd;->F(Ljava/lang/Throwable;)V
+
+    invoke-static {p0, p1}, Lf55;->b(Ljava/lang/Throwable;Ljne;)V
+
+    :goto_0
+    return-void
+
+    :cond_3
+    new-instance v1, Ldw5;
+
+    iget v3, p0, Lew5;->o:I
+
+    iget p0, p0, Lew5;->X:I
+
+    invoke-direct {v1, p1, v2, v3, p0}, Ldw5;-><init>(Ljne;Lnye;II)V
+
+    invoke-virtual {v0, v1}, Lrv5;->c(Lbx5;)V
 
     return-void
 .end method

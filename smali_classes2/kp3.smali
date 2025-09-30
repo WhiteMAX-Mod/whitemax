@@ -1,109 +1,64 @@
 .class public final Lkp3;
-.super Lki0;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lmp3;
 
-# instance fields
-.field public final synthetic b:I
 
-.field public final c:Ljava/util/AbstractCollection;
+# static fields
+.field public static final a:Lkp3;
 
 
 # direct methods
-.method public constructor <init>(JLlz;)V
+.method static constructor <clinit>()V
     .locals 1
 
-    const/4 v0, 0x1
+    new-instance v0, Lkp3;
 
-    iput v0, p0, Lkp3;->b:I
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    .line 1
-    invoke-direct {p0, p1, p2}, Lki0;-><init>(J)V
-
-    .line 2
-    iput-object p3, p0, Lkp3;->c:Ljava/util/AbstractCollection;
-
-    return-void
-.end method
-
-.method public constructor <init>(Ljava/util/List;)V
-    .locals 1
-
-    const/4 v0, 0x0
-
-    iput v0, p0, Lkp3;->b:I
-
-    .line 3
-    invoke-direct {p0}, Lki0;-><init>()V
-
-    .line 4
-    new-instance v0, Ljava/util/LinkedHashSet;
-
-    invoke-direct {v0, p1}, Ljava/util/LinkedHashSet;-><init>(Ljava/util/Collection;)V
-
-    iput-object v0, p0, Lkp3;->c:Ljava/util/AbstractCollection;
+    sput-object v0, Lkp3;->a:Lkp3;
 
     return-void
 .end method
 
 
 # virtual methods
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 1
+
+    const/4 v0, 0x1
+
+    if-ne p0, p1, :cond_0
+
+    return v0
+
+    :cond_0
+    instance-of p0, p1, Lkp3;
+
+    if-nez p0, :cond_1
+
+    const/4 p0, 0x0
+
+    return p0
+
+    :cond_1
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 0
+
+    const p0, -0x41b324a5    # -0.20005552f
+
+    return p0
+.end method
+
 .method public final toString()Ljava/lang/String;
-    .locals 2
+    .locals 0
 
-    iget v0, p0, Lkp3;->b:I
-
-    packed-switch v0, :pswitch_data_0
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "SharePreviewEvent{attaches="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object p0, p0, Lkp3;->c:Ljava/util/AbstractCollection;
-
-    check-cast p0, Llz;
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const/16 p0, 0x7d
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
+    const-string p0, "Invalidate"
 
     return-object p0
-
-    :pswitch_0
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "ContactNotFoundEvent{contactServerIds="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object p0, p0, Lkp3;->c:Ljava/util/AbstractCollection;
-
-    check-cast p0, Ljava/util/LinkedHashSet;
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const/16 p0, 0x7d
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
 .end method

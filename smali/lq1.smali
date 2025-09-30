@@ -1,143 +1,79 @@
-.class public final Llq1;
+.class public final synthetic Llq1;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lbm7;
+.implements Lyyc;
+.implements Lg3e;
+.implements Lroa;
 
 
 # instance fields
-.field public final a:Ljava/lang/ref/WeakReference;
+.field public final synthetic a:I
 
-.field public final b:Lkq1;
+.field public final synthetic b:Lzb6;
 
 
 # direct methods
-.method public constructor <init>(Liq1;)V
-    .locals 1
+.method public synthetic constructor <init>(ILzb6;)V
+    .locals 0
+
+    iput p1, p0, Llq1;->a:I
+
+    iput-object p2, p0, Llq1;->b:Lzb6;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    new-instance v0, Lkq1;
-
-    invoke-direct {v0, p0}, Lkq1;-><init>(Llq1;)V
-
-    iput-object v0, p0, Llq1;->b:Lkq1;
-
-    new-instance v0, Ljava/lang/ref/WeakReference;
-
-    invoke-direct {v0, p1}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
-
-    iput-object v0, p0, Llq1;->a:Ljava/lang/ref/WeakReference;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final cancel(Z)Z
+.method public b()V
     .locals 1
 
-    iget-object v0, p0, Llq1;->a:Ljava/lang/ref/WeakReference;
+    iget v0, p0, Llq1;->a:I
 
-    invoke-virtual {v0}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
+    iget-object p0, p0, Llq1;->b:Lzb6;
 
-    move-result-object v0
+    packed-switch v0, :pswitch_data_0
 
-    check-cast v0, Liq1;
+    invoke-static {p0}, Lsq1;->z(Lzb6;)V
 
-    iget-object p0, p0, Llq1;->b:Lkq1;
+    return-void
 
-    invoke-virtual {p0, p1}, Lm3;->cancel(Z)Z
+    :pswitch_0
+    invoke-static {p0}, Lsq1;->H(Lzb6;)V
 
-    move-result p0
+    return-void
 
-    if-eqz p0, :cond_0
+    nop
 
-    if-eqz v0, :cond_0
-
-    const/4 p1, 0x0
-
-    iput-object p1, v0, Liq1;->a:Ljava/lang/Object;
-
-    iput-object p1, v0, Liq1;->b:Llq1;
-
-    iget-object v0, v0, Liq1;->c:Lhgc;
-
-    invoke-virtual {v0, p1}, Lm3;->j(Ljava/lang/Object;)Z
-
-    :cond_0
-    return p0
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method
 
-.method public final d(Ljava/lang/Runnable;Ljava/util/concurrent/Executor;)V
+.method public i(Lo2e;)V
     .locals 0
 
-    iget-object p0, p0, Llq1;->b:Lkq1;
+    iget-object p0, p0, Llq1;->b:Lzb6;
 
-    invoke-virtual {p0, p1, p2}, Lm3;->d(Ljava/lang/Runnable;Ljava/util/concurrent/Executor;)V
+    invoke-static {p0, p1}, Lru/ok/android/externcalls/sdk/util/CallsThreadUtilsKt;->a(Lzb6;Lo2e;)V
 
     return-void
 .end method
 
-.method public final get()Ljava/lang/Object;
+.method public u(Lsoa;)V
     .locals 0
 
-    .line 1
-    iget-object p0, p0, Llq1;->b:Lkq1;
+    iget-object p0, p0, Llq1;->b:Lzb6;
 
-    invoke-virtual {p0}, Lm3;->get()Ljava/lang/Object;
+    if-eqz p0, :cond_0
 
-    move-result-object p0
+    invoke-interface {p0}, Lzb6;->invoke()Ljava/lang/Object;
 
-    return-object p0
-.end method
-
-.method public final get(JLjava/util/concurrent/TimeUnit;)Ljava/lang/Object;
-    .locals 0
-
-    .line 2
-    iget-object p0, p0, Llq1;->b:Lkq1;
-
-    invoke-virtual {p0, p1, p2, p3}, Lm3;->get(JLjava/util/concurrent/TimeUnit;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public final isCancelled()Z
-    .locals 0
-
-    iget-object p0, p0, Llq1;->b:Lkq1;
-
-    iget-object p0, p0, Lm3;->a:Ljava/lang/Object;
-
-    instance-of p0, p0, Lg3;
-
-    return p0
-.end method
-
-.method public final isDone()Z
-    .locals 0
-
-    iget-object p0, p0, Llq1;->b:Lkq1;
-
-    invoke-virtual {p0}, Lm3;->isDone()Z
-
-    move-result p0
-
-    return p0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 0
-
-    iget-object p0, p0, Llq1;->b:Lkq1;
-
-    invoke-virtual {p0}, Lm3;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
+    :cond_0
+    return-void
 .end method

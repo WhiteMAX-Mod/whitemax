@@ -1,80 +1,96 @@
-.class public final synthetic Ljj9;
+.class public final Ljj9;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lc6;
-
 
 # instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Lkj9;
+.field public final a:Ljava/util/ArrayList;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lkj9;I)V
+.method public constructor <init>(Ljava/util/ArrayList;)V
     .locals 0
 
-    iput p2, p0, Ljj9;->a:I
-
-    iput-object p1, p0, Ljj9;->b:Lkj9;
-
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Ljj9;->a:Ljava/util/ArrayList;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 1
+
+    if-ne p0, p1, :cond_0
+
+    goto :goto_1
+
+    :cond_0
+    instance-of v0, p1, Ljj9;
+
+    if-nez v0, :cond_1
+
+    goto :goto_0
+
+    :cond_1
+    check-cast p1, Ljj9;
+
+    iget-object p0, p0, Ljj9;->a:Ljava/util/ArrayList;
+
+    iget-object p1, p1, Ljj9;->a:Ljava/util/ArrayList;
+
+    invoke-virtual {p0, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+
+    move-result p0
+
+    if-nez p0, :cond_2
+
+    :goto_0
+    const/4 p0, 0x0
+
+    return p0
+
+    :cond_2
+    :goto_1
+    const/4 p0, 0x1
+
+    return p0
+.end method
+
+.method public final hashCode()I
+    .locals 0
+
+    iget-object p0, p0, Ljj9;->a:Ljava/util/ArrayList;
+
+    invoke-virtual {p0}, Ljava/lang/Object;->hashCode()I
+
+    move-result p0
+
+    return p0
+.end method
+
+.method public final toString()Ljava/lang/String;
     .locals 2
 
-    iget v0, p0, Ljj9;->a:I
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    packed-switch v0, :pswitch_data_0
+    const-string v1, "MovieThumbnail(qualities="
 
-    new-instance v0, Laj0;
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    const/16 v1, 0x1a
+    iget-object p0, p0, Ljj9;->a:Ljava/util/ArrayList;
 
-    invoke-direct {v0, v1}, Laj0;-><init>(I)V
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    iget-object p0, p0, Ljj9;->b:Lkj9;
+    const-string p0, ")"
 
-    invoke-virtual {p0, v0}, Lv2;->o(Lmj3;)V
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    return-void
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    :pswitch_0
-    new-instance v0, Laj0;
+    move-result-object p0
 
-    const/16 v1, 0x19
-
-    invoke-direct {v0, v1}, Laj0;-><init>(I)V
-
-    iget-object p0, p0, Ljj9;->b:Lkj9;
-
-    invoke-virtual {p0, v0}, Lv2;->o(Lmj3;)V
-
-    return-void
-
-    :pswitch_1
-    new-instance v0, Laj0;
-
-    const/16 v1, 0x1b
-
-    invoke-direct {v0, v1}, Laj0;-><init>(I)V
-
-    iget-object p0, p0, Ljj9;->b:Lkj9;
-
-    invoke-virtual {p0, v0}, Lv2;->o(Lmj3;)V
-
-    return-void
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    return-object p0
 .end method

@@ -1,138 +1,95 @@
-.class public final synthetic Ln7a;
-.super Ljava/lang/Object;
+.class public final Ln7a;
+.super Lp7a;
 .source "SourceFile"
-
-# interfaces
-.implements Lv56;
 
 
 # instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Lo7a;
+.field public final Z:Ljava/util/concurrent/atomic/AtomicInteger;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lo7a;I)V
+.method public constructor <init>(Lxid;JLjava/util/concurrent/TimeUnit;Lv5d;)V
     .locals 0
 
-    iput p2, p0, Ln7a;->a:I
+    invoke-direct/range {p0 .. p5}, Lp7a;-><init>(Lxid;JLjava/util/concurrent/TimeUnit;Lv5d;)V
 
-    iput-object p1, p0, Ln7a;->b:Lo7a;
+    new-instance p1, Ljava/util/concurrent/atomic/AtomicInteger;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/4 p2, 0x1
+
+    invoke-direct {p1, p2}, Ljava/util/concurrent/atomic/AtomicInteger;-><init>(I)V
+
+    iput-object p1, p0, Ln7a;->Z:Ljava/util/concurrent/atomic/AtomicInteger;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke()Ljava/lang/Object;
+.method public final a()V
+    .locals 2
+
+    const/4 v0, 0x0
+
+    invoke-virtual {p0, v0}, Ljava/util/concurrent/atomic/AtomicReference;->getAndSet(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    iget-object v1, p0, Lp7a;->a:Lxid;
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {v1, v0}, Lxid;->s(Ljava/lang/Object;)V
+
+    :cond_0
+    iget-object p0, p0, Ln7a;->Z:Ljava/util/concurrent/atomic/AtomicInteger;
+
+    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicInteger;->decrementAndGet()I
+
+    move-result p0
+
+    if-nez p0, :cond_1
+
+    invoke-virtual {v1}, Lxid;->b()V
+
+    :cond_1
+    return-void
+.end method
+
+.method public final run()V
     .locals 3
 
-    iget v0, p0, Ln7a;->a:I
+    iget-object v0, p0, Ln7a;->Z:Ljava/util/concurrent/atomic/AtomicInteger;
 
-    iget-object p0, p0, Ln7a;->b:Lo7a;
+    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicInteger;->incrementAndGet()I
 
-    packed-switch v0, :pswitch_data_0
+    move-result v1
 
-    invoke-virtual {p0}, Lo7a;->d()La9a;
+    const/4 v2, 0x2
 
-    move-result-object p0
+    if-ne v1, v2, :cond_1
 
-    iget-object v0, p0, La9a;->i:Ln45;
+    const/4 v1, 0x0
 
-    sget-object v1, La9a;->p:[Lbc7;
+    invoke-virtual {p0, v1}, Ljava/util/concurrent/atomic/AtomicReference;->getAndSet(Ljava/lang/Object;)Ljava/lang/Object;
 
-    const/4 v2, 0x3
+    move-result-object v1
 
-    aget-object v1, v1, v2
+    iget-object p0, p0, Lp7a;->a:Lxid;
 
-    invoke-virtual {p0, v0}, La9a;->e(Ln45;)Ljava/util/concurrent/ExecutorService;
+    if-eqz v1, :cond_0
 
-    move-result-object p0
+    invoke-virtual {p0, v1}, Lxid;->s(Ljava/lang/Object;)V
 
-    new-instance v0, Lp45;
+    :cond_0
+    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicInteger;->decrementAndGet()I
 
-    invoke-direct {v0, p0}, Lp45;-><init>(Ljava/util/concurrent/Executor;)V
+    move-result v0
 
-    return-object v0
+    if-nez v0, :cond_1
 
-    :pswitch_0
-    invoke-virtual {p0}, Lo7a;->d()La9a;
+    invoke-virtual {p0}, Lxid;->b()V
 
-    move-result-object p0
-
-    invoke-virtual {p0}, La9a;->d()Ljava/util/concurrent/ExecutorService;
-
-    move-result-object p0
-
-    new-instance v0, Lp45;
-
-    invoke-direct {v0, p0}, Lp45;-><init>(Ljava/util/concurrent/Executor;)V
-
-    return-object v0
-
-    :pswitch_1
-    invoke-virtual {p0}, Lo7a;->d()La9a;
-
-    move-result-object p0
-
-    iget-object v0, p0, La9a;->j:Ln45;
-
-    sget-object v1, La9a;->p:[Lbc7;
-
-    const/4 v2, 0x4
-
-    aget-object v1, v1, v2
-
-    invoke-virtual {p0, v0}, La9a;->e(Ln45;)Ljava/util/concurrent/ExecutorService;
-
-    move-result-object p0
-
-    new-instance v0, Lp45;
-
-    invoke-direct {v0, p0}, Lp45;-><init>(Ljava/util/concurrent/Executor;)V
-
-    return-object v0
-
-    :pswitch_2
-    invoke-virtual {p0}, Lo7a;->d()La9a;
-
-    move-result-object p0
-
-    invoke-virtual {p0}, La9a;->c()Ljava/util/concurrent/ExecutorService;
-
-    move-result-object p0
-
-    new-instance v0, Lp45;
-
-    invoke-direct {v0, p0}, Lp45;-><init>(Ljava/util/concurrent/Executor;)V
-
-    return-object v0
-
-    :pswitch_3
-    invoke-virtual {p0}, Lo7a;->d()La9a;
-
-    move-result-object p0
-
-    invoke-virtual {p0}, La9a;->a()Ljava/util/concurrent/ExecutorService;
-
-    move-result-object p0
-
-    new-instance v0, Lp45;
-
-    invoke-direct {v0, p0}, Lp45;-><init>(Ljava/util/concurrent/Executor;)V
-
-    return-object v0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    :cond_1
+    return-void
 .end method

@@ -1,118 +1,104 @@
-.class public final Lhp9;
-.super Lqde;
+.class public final synthetic Lhp9;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Ll66;
+.implements Lsm3;
 
 
 # instance fields
-.field public X:I
+.field public final synthetic a:Lkp9;
 
-.field public final synthetic Y:Ljp9;
+.field public final synthetic b:Z
 
-.field public final synthetic Z:Lqg9;
+.field public final synthetic c:Landroid/net/Uri;
 
 
 # direct methods
-.method public constructor <init>(Ljp9;Lqg9;Lkotlin/coroutines/Continuation;)V
+.method public synthetic constructor <init>(Lkp9;ZLandroid/net/Uri;)V
     .locals 0
 
-    iput-object p1, p0, Lhp9;->Y:Ljp9;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p2, p0, Lhp9;->Z:Lqg9;
+    iput-object p1, p0, Lhp9;->a:Lkp9;
 
-    const/4 p1, 0x2
+    iput-boolean p2, p0, Lhp9;->b:Z
 
-    invoke-direct {p0, p1, p3}, Lqde;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-object p3, p0, Lhp9;->c:Landroid/net/Uri;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final accept(Ljava/lang/Object;)V
+    .locals 4
 
-    check-cast p1, Lox3;
+    check-cast p1, Li4g;
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    iget-object v0, p0, Lhp9;->a:Lkp9;
 
-    invoke-virtual {p0, p1, p2}, Lhp9;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    iget-object v1, v0, Lkp9;->c:Ldl8;
 
-    move-result-object p0
+    check-cast v1, Lhx7;
 
-    check-cast p0, Lhp9;
+    invoke-virtual {v1}, Lhx7;->k()Z
 
-    sget-object p1, Le5f;->a:Le5f;
+    move-result v1
 
-    invoke-virtual {p0, p1}, Lhp9;->o(Ljava/lang/Object;)Ljava/lang/Object;
+    iput-boolean v1, p1, Li4g;->e:Z
 
-    move-result-object p0
+    iget-object v1, v0, Lkp9;->z0:Lc10;
 
-    return-object p0
-.end method
+    iget-boolean v2, v1, Lc10;->g:Z
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 1
+    iput-boolean v2, p1, Li4g;->f:Z
 
-    new-instance p1, Lhp9;
+    iget-object v2, v0, Lkp9;->s0:Lqgb;
 
-    iget-object v0, p0, Lhp9;->Y:Ljp9;
+    invoke-static {v2, v1}, Lte2;->J(Lqgb;Lc10;)Z
 
-    iget-object p0, p0, Lhp9;->Z:Lqg9;
+    move-result v1
 
-    invoke-direct {p1, v0, p0, p2}, Lhp9;-><init>(Ljp9;Lqg9;Lkotlin/coroutines/Continuation;)V
+    iput-boolean v1, p1, Li4g;->g:Z
 
-    return-object p1
-.end method
+    iget-boolean v1, p0, Lhp9;->b:Z
 
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 2
+    iput-boolean v1, p1, Li4g;->h:Z
 
-    iget v0, p0, Lhp9;->X:I
+    iget-object v1, v0, Lkp9;->z0:Lc10;
 
-    const/4 v1, 0x1
+    iget-wide v2, v1, Lc10;->c:J
 
-    if-eqz v0, :cond_1
+    iput-wide v2, p1, Li4g;->i:J
 
-    if-ne v0, v1, :cond_0
+    iget-wide v2, v1, Lc10;->k:J
 
-    invoke-static {p1}, Lsgg;->Z(Ljava/lang/Object;)V
+    iput-wide v2, p1, Li4g;->j:J
 
-    goto :goto_0
+    const/4 v2, 0x0
 
-    :cond_0
-    new-instance p0, Ljava/lang/IllegalStateException;
+    iput-object v2, p1, Li4g;->m:Lmvf;
 
-    const-string p1, "call to \'resume\' before \'invoke\' with coroutine"
+    iput-object v1, p1, Li4g;->n:Lc10;
 
-    invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    iput-object v2, p1, Li4g;->o:Landroid/graphics/drawable/BitmapDrawable;
 
-    throw p0
+    iget-object p0, p0, Lhp9;->c:Landroid/net/Uri;
 
-    :cond_1
-    invoke-static {p1}, Lsgg;->Z(Ljava/lang/Object;)V
+    iput-object p0, p1, Li4g;->p:Landroid/net/Uri;
 
-    iput v1, p0, Lhp9;->X:I
+    invoke-virtual {v0}, Lkp9;->Z0()Z
 
-    iget-object p1, p0, Lhp9;->Y:Ljp9;
+    const/4 p0, 0x1
 
-    iget-object v0, p0, Lhp9;->Z:Lqg9;
+    iput-boolean p0, p1, Li4g;->r:Z
 
-    invoke-virtual {p1, v0, p0}, Llp9;->c(Lqg9;Lbu3;)Ljava/lang/Object;
+    const/4 v0, 0x0
 
-    move-result-object p0
+    iput-boolean v0, p1, Li4g;->s:Z
 
-    sget-object p1, Lpx3;->a:Lpx3;
+    iput-boolean p0, p1, Li4g;->q:Z
 
-    if-ne p0, p1, :cond_2
-
-    return-object p1
-
-    :cond_2
-    :goto_0
-    sget-object p0, Le5f;->a:Le5f;
-
-    return-object p0
+    return-void
 .end method

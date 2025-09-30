@@ -4,70 +4,96 @@
 
 
 # static fields
-.field public static final a:Ljava/lang/reflect/Field;
+.field public static final a:Ljava/lang/ThreadLocal;
 
-.field public static final b:Ljava/lang/reflect/Field;
-
-.field public static final c:Ljava/lang/reflect/Field;
-
-.field public static final d:Z
+.field public static final b:Ljava/lang/ThreadLocal;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 3
+    .locals 1
 
-    :try_start_0
-    const-class v0, Landroid/view/View;
+    new-instance v0, Ljava/lang/ThreadLocal;
 
-    const-string v1, "mAttachInfo"
+    invoke-direct {v0}, Ljava/lang/ThreadLocal;-><init>()V
 
-    invoke-virtual {v0, v1}, Ljava/lang/Class;->getDeclaredField(Ljava/lang/String;)Ljava/lang/reflect/Field;
+    sput-object v0, Lp7g;->a:Ljava/lang/ThreadLocal;
 
-    move-result-object v0
+    new-instance v0, Ljava/lang/ThreadLocal;
 
-    sput-object v0, Lp7g;->a:Ljava/lang/reflect/Field;
+    invoke-direct {v0}, Ljava/lang/ThreadLocal;-><init>()V
 
-    const/4 v1, 0x1
-
-    invoke-virtual {v0, v1}, Ljava/lang/reflect/AccessibleObject;->setAccessible(Z)V
-
-    const-string v0, "android.view.View$AttachInfo"
-
-    invoke-static {v0}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
-
-    move-result-object v0
-
-    const-string v2, "mStableInsets"
-
-    invoke-virtual {v0, v2}, Ljava/lang/Class;->getDeclaredField(Ljava/lang/String;)Ljava/lang/reflect/Field;
-
-    move-result-object v2
-
-    sput-object v2, Lp7g;->b:Ljava/lang/reflect/Field;
-
-    invoke-virtual {v2, v1}, Ljava/lang/reflect/AccessibleObject;->setAccessible(Z)V
-
-    const-string v2, "mContentInsets"
-
-    invoke-virtual {v0, v2}, Ljava/lang/Class;->getDeclaredField(Ljava/lang/String;)Ljava/lang/reflect/Field;
-
-    move-result-object v0
-
-    sput-object v0, Lp7g;->c:Ljava/lang/reflect/Field;
-
-    invoke-virtual {v0, v1}, Ljava/lang/reflect/AccessibleObject;->setAccessible(Z)V
-
-    sput-boolean v1, Lp7g;->d:Z
-    :try_end_0
-    .catch Ljava/lang/ReflectiveOperationException; {:try_start_0 .. :try_end_0} :catch_0
+    sput-object v0, Lp7g;->b:Ljava/lang/ThreadLocal;
 
     return-void
+.end method
 
-    :catch_0
-    move-exception v0
+.method public static a(Landroidx/coordinatorlayout/widget/CoordinatorLayout;Landroid/view/View;Landroid/graphics/Matrix;)V
+    .locals 2
 
-    invoke-virtual {v0}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
+    invoke-virtual {p1}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
 
+    move-result-object v0
+
+    instance-of v1, v0, Landroid/view/View;
+
+    if-eqz v1, :cond_0
+
+    if-eq v0, p0, :cond_0
+
+    check-cast v0, Landroid/view/View;
+
+    invoke-static {p0, v0, p2}, Lp7g;->a(Landroidx/coordinatorlayout/widget/CoordinatorLayout;Landroid/view/View;Landroid/graphics/Matrix;)V
+
+    invoke-virtual {v0}, Landroid/view/View;->getScrollX()I
+
+    move-result p0
+
+    neg-int p0, p0
+
+    int-to-float p0, p0
+
+    invoke-virtual {v0}, Landroid/view/View;->getScrollY()I
+
+    move-result v0
+
+    neg-int v0, v0
+
+    int-to-float v0, v0
+
+    invoke-virtual {p2, p0, v0}, Landroid/graphics/Matrix;->preTranslate(FF)Z
+
+    :cond_0
+    invoke-virtual {p1}, Landroid/view/View;->getLeft()I
+
+    move-result p0
+
+    int-to-float p0, p0
+
+    invoke-virtual {p1}, Landroid/view/View;->getTop()I
+
+    move-result v0
+
+    int-to-float v0, v0
+
+    invoke-virtual {p2, p0, v0}, Landroid/graphics/Matrix;->preTranslate(FF)Z
+
+    invoke-virtual {p1}, Landroid/view/View;->getMatrix()Landroid/graphics/Matrix;
+
+    move-result-object p0
+
+    invoke-virtual {p0}, Landroid/graphics/Matrix;->isIdentity()Z
+
+    move-result p0
+
+    if-nez p0, :cond_1
+
+    invoke-virtual {p1}, Landroid/view/View;->getMatrix()Landroid/graphics/Matrix;
+
+    move-result-object p0
+
+    invoke-virtual {p2, p0}, Landroid/graphics/Matrix;->preConcat(Landroid/graphics/Matrix;)Z
+
+    :cond_1
     return-void
 .end method

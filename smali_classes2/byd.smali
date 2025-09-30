@@ -4,134 +4,102 @@
 
 
 # instance fields
-.field public final a:Lqy;
+.field public final a:[F
 
-.field public final b:Lg6g;
+.field public final b:[I
+
+.field public final c:I
+
+.field public d:I
+
+.field public e:I
+
+.field public f:I
+
+.field public final g:F
+
+.field public final h:F
+
+.field public final i:Z
+
+.field public j:Z
+
+.field public k:Landroid/graphics/PorterDuff$Mode;
+
+.field public final l:I
+
+.field public final m:I
+
+.field public n:J
+
+.field public final o:J
+
+.field public p:Landroid/view/animation/Interpolator;
+
+.field public q:Landroid/animation/ValueAnimator;
 
 
 # direct methods
-.method public constructor <init>(Lqy;Lg6g;)V
-    .locals 0
+.method public constructor <init>()V
+    .locals 3
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lbyd;->a:Lqy;
+    const/4 v0, 0x5
 
-    iput-object p2, p0, Lbyd;->b:Lg6g;
+    new-array v1, v0, [F
 
-    return-void
-.end method
+    iput-object v1, p0, Lbyd;->a:[F
 
+    new-array v0, v0, [I
 
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
+    iput-object v0, p0, Lbyd;->b:[I
+
+    new-instance v0, Landroid/graphics/RectF;
+
+    invoke-direct {v0}, Landroid/graphics/RectF;-><init>()V
 
     const/4 v0, 0x1
 
-    if-ne p0, p1, :cond_0
+    iput v0, p0, Lbyd;->c:I
 
-    return v0
+    const/4 v1, -0x1
 
-    :cond_0
-    instance-of v1, p1, Lbyd;
+    iput v1, p0, Lbyd;->d:I
 
-    const/4 v2, 0x0
+    const v2, -0x777778
 
-    if-nez v1, :cond_1
+    iput v2, p0, Lbyd;->e:I
 
-    return v2
+    const/high16 v2, 0x3f800000    # 1.0f
 
-    :cond_1
-    check-cast p1, Lbyd;
+    iput v2, p0, Lbyd;->g:F
 
-    iget-object v1, p0, Lbyd;->a:Lqy;
+    iput v2, p0, Lbyd;->h:F
 
-    iget-object v3, p1, Lbyd;->a:Lqy;
+    iput-boolean v0, p0, Lbyd;->i:Z
 
-    invoke-static {v1, v3}, Lxq7;->d(Ljava/lang/Object;Ljava/lang/Object;)Z
+    iput-boolean v0, p0, Lbyd;->j:Z
 
-    move-result v1
+    sget-object v2, Landroid/graphics/PorterDuff$Mode;->SRC_IN:Landroid/graphics/PorterDuff$Mode;
 
-    if-nez v1, :cond_2
+    iput-object v2, p0, Lbyd;->k:Landroid/graphics/PorterDuff$Mode;
 
-    return v2
+    iput v1, p0, Lbyd;->l:I
 
-    :cond_2
-    iget-object p0, p0, Lbyd;->b:Lg6g;
+    iput v0, p0, Lbyd;->m:I
 
-    iget-object p1, p1, Lbyd;->b:Lg6g;
+    const-wide/16 v0, 0x4b0
 
-    invoke-static {p0, p1}, Lxq7;->d(Ljava/lang/Object;Ljava/lang/Object;)Z
+    iput-wide v0, p0, Lbyd;->n:J
 
-    move-result p0
+    iput-wide v0, p0, Lbyd;->o:J
 
-    if-nez p0, :cond_3
+    new-instance v0, Lzg5;
 
-    return v2
+    invoke-direct {v0}, Lzg5;-><init>()V
 
-    :cond_3
-    return v0
-.end method
+    iput-object v0, p0, Lbyd;->p:Landroid/view/animation/Interpolator;
 
-.method public final hashCode()I
-    .locals 1
-
-    iget-object v0, p0, Lbyd;->a:Lqy;
-
-    if-nez v0, :cond_0
-
-    const/4 v0, 0x0
-
-    goto :goto_0
-
-    :cond_0
-    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
-
-    move-result v0
-
-    :goto_0
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget-object p0, p0, Lbyd;->b:Lg6g;
-
-    invoke-virtual {p0}, Ljava/lang/Object;->hashCode()I
-
-    move-result p0
-
-    add-int/2addr p0, v0
-
-    return p0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 2
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "StartMessage(media="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v1, p0, Lbyd;->a:Lqy;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", text="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object p0, p0, Lbyd;->b:Lg6g;
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string p0, ")"
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
+    return-void
 .end method

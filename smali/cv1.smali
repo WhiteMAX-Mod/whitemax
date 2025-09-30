@@ -1,115 +1,137 @@
 .class public final Lcv1;
-.super Lef6;
+.super Lure;
 .source "SourceFile"
 
+# interfaces
+.implements Lpc6;
 
-# static fields
-.field public static final Z:Ls90;
 
-.field public static final o0:Ls90;
+# instance fields
+.field public X:I
 
-.field public static final p0:Ls90;
+.field public final synthetic Y:Ldv1;
 
-.field public static final q0:Ls90;
-
-.field public static final r0:Ls90;
-
-.field public static final s0:Ls90;
+.field public final synthetic Z:Ld31;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 4
+.method public constructor <init>(Ldv1;Ld31;Lkotlin/coroutines/Continuation;)V
+    .locals 0
 
-    new-instance v0, Ls90;
+    iput-object p1, p0, Lcv1;->Y:Ldv1;
 
-    const-string v1, "camera2.captureRequest.templateType"
+    iput-object p2, p0, Lcv1;->Z:Ld31;
 
-    sget-object v2, Ljava/lang/Integer;->TYPE:Ljava/lang/Class;
+    const/4 p1, 0x2
 
-    const/4 v3, 0x0
-
-    invoke-direct {v0, v1, v2, v3}, Ls90;-><init>(Ljava/lang/String;Ljava/lang/Class;Landroid/hardware/camera2/CaptureRequest$Key;)V
-
-    sput-object v0, Lcv1;->Z:Ls90;
-
-    new-instance v0, Ls90;
-
-    const-string v1, "camera2.cameraCaptureSession.streamUseCase"
-
-    sget-object v2, Ljava/lang/Long;->TYPE:Ljava/lang/Class;
-
-    invoke-direct {v0, v1, v2, v3}, Ls90;-><init>(Ljava/lang/String;Ljava/lang/Class;Landroid/hardware/camera2/CaptureRequest$Key;)V
-
-    sput-object v0, Lcv1;->o0:Ls90;
-
-    new-instance v0, Ls90;
-
-    const-string v1, "camera2.cameraDevice.stateCallback"
-
-    const-class v2, Landroid/hardware/camera2/CameraDevice$StateCallback;
-
-    invoke-direct {v0, v1, v2, v3}, Ls90;-><init>(Ljava/lang/String;Ljava/lang/Class;Landroid/hardware/camera2/CaptureRequest$Key;)V
-
-    sput-object v0, Lcv1;->p0:Ls90;
-
-    new-instance v0, Ls90;
-
-    const-string v1, "camera2.cameraCaptureSession.stateCallback"
-
-    const-class v2, Landroid/hardware/camera2/CameraCaptureSession$StateCallback;
-
-    invoke-direct {v0, v1, v2, v3}, Ls90;-><init>(Ljava/lang/String;Ljava/lang/Class;Landroid/hardware/camera2/CaptureRequest$Key;)V
-
-    sput-object v0, Lcv1;->q0:Ls90;
-
-    new-instance v0, Ls90;
-
-    const-string v1, "camera2.cameraCaptureSession.captureCallback"
-
-    const-class v2, Landroid/hardware/camera2/CameraCaptureSession$CaptureCallback;
-
-    invoke-direct {v0, v1, v2, v3}, Ls90;-><init>(Ljava/lang/String;Ljava/lang/Class;Landroid/hardware/camera2/CaptureRequest$Key;)V
-
-    sput-object v0, Lcv1;->r0:Ls90;
-
-    new-instance v0, Ls90;
-
-    const-string v1, "camera2.cameraCaptureSession.physicalCameraId"
-
-    const-class v2, Ljava/lang/String;
-
-    invoke-direct {v0, v1, v2, v3}, Ls90;-><init>(Ljava/lang/String;Ljava/lang/Class;Landroid/hardware/camera2/CaptureRequest$Key;)V
-
-    sput-object v0, Lcv1;->s0:Ls90;
+    invoke-direct {p0, p1, p3}, Lure;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
-.method public static W(Landroid/hardware/camera2/CaptureRequest$Key;)Ls90;
+
+# virtual methods
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
+
+    check-cast p1, Ly04;
+
+    check-cast p2, Lkotlin/coroutines/Continuation;
+
+    invoke-virtual {p0, p1, p2}, Lcv1;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+
+    move-result-object p0
+
+    check-cast p0, Lcv1;
+
+    sget-object p1, Lylf;->a:Lylf;
+
+    invoke-virtual {p0, p1}, Lcv1;->o(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 1
+
+    new-instance p1, Lcv1;
+
+    iget-object v0, p0, Lcv1;->Y:Ldv1;
+
+    iget-object p0, p0, Lcv1;->Z:Ld31;
+
+    invoke-direct {p1, v0, p0, p2}, Lcv1;-><init>(Ldv1;Ld31;Lkotlin/coroutines/Continuation;)V
+
+    return-object p1
+.end method
+
+.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 3
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    iget v0, p0, Lcv1;->X:I
 
-    const-string v1, "camera2.captureRequest.option."
+    const/4 v1, 0x1
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    if-eqz v0, :cond_1
 
-    invoke-virtual {p0}, Landroid/hardware/camera2/CaptureRequest$Key;->getName()Ljava/lang/String;
+    if-ne v0, v1, :cond_0
 
-    move-result-object v1
+    invoke-static {p1}, Lqe5;->V(Ljava/lang/Object;)V
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    return-object p1
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    :cond_0
+    new-instance p0, Ljava/lang/IllegalStateException;
+
+    const-string p1, "call to \'resume\' before \'invoke\' with coroutine"
+
+    invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p0
+
+    :cond_1
+    invoke-static {p1}, Lqe5;->V(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Lcv1;->Z:Ld31;
+
+    iget-object p1, p1, Ld31;->d:Ljava/lang/String;
+
+    iput v1, p0, Lcv1;->X:I
+
+    iget-object v0, p0, Lcv1;->Y:Ldv1;
+
+    iget-object v0, v0, Ldv1;->a:Lcl7;
+
+    invoke-interface {v0}, Lcl7;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
-    new-instance v1, Ls90;
+    check-cast v0, Lxwe;
 
-    const-class v2, Ljava/lang/Object;
+    check-cast v0, Laga;
 
-    invoke-direct {v1, v0, v2, p0}, Ls90;-><init>(Ljava/lang/String;Ljava/lang/Class;Landroid/hardware/camera2/CaptureRequest$Key;)V
+    invoke-virtual {v0}, Laga;->b()Ls04;
 
-    return-object v1
+    move-result-object v0
+
+    new-instance v1, Lav1;
+
+    const/4 v2, 0x0
+
+    invoke-direct {v1, p1, v2}, Lav1;-><init>(Ljava/lang/String;Lkotlin/coroutines/Continuation;)V
+
+    invoke-static {v0, v1, p0}, Lvyg;->H(Lq04;Lpc6;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p0
+
+    sget-object p1, Lz04;->a:Lz04;
+
+    if-ne p0, p1, :cond_2
+
+    return-object p1
+
+    :cond_2
+    return-object p0
 .end method

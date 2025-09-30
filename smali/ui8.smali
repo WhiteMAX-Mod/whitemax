@@ -1,259 +1,128 @@
-.class public final synthetic Lui8;
+.class public final Lui8;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lij3;
+
+# static fields
+.field public static final e:Ljava/lang/String;
+
+.field public static final f:Ljava/lang/String;
+
+.field public static final g:Ljava/lang/String;
+
+.field public static final h:Ljava/lang/String;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final a:Landroid/os/Bundle;
 
-.field public final synthetic b:Lwg8;
+.field public final b:Z
 
-.field public final synthetic c:I
+.field public final c:Z
+
+.field public final d:Z
 
 
 # direct methods
-.method public synthetic constructor <init>(Lwg8;II)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 2
 
-    iput p3, p0, Lui8;->a:I
+    sget v0, Lnrf;->a:I
 
-    iput-object p1, p0, Lui8;->b:Lwg8;
+    const/4 v0, 0x0
 
-    iput p2, p0, Lui8;->c:I
+    const/16 v1, 0x24
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-static {v0, v1}, Ljava/lang/Integer;->toString(II)Ljava/lang/String;
+
+    move-result-object v0
+
+    sput-object v0, Lui8;->e:Ljava/lang/String;
+
+    const/4 v0, 0x1
+
+    invoke-static {v0, v1}, Ljava/lang/Integer;->toString(II)Ljava/lang/String;
+
+    move-result-object v0
+
+    sput-object v0, Lui8;->f:Ljava/lang/String;
+
+    const/4 v0, 0x2
+
+    invoke-static {v0, v1}, Ljava/lang/Integer;->toString(II)Ljava/lang/String;
+
+    move-result-object v0
+
+    sput-object v0, Lui8;->g:Ljava/lang/String;
+
+    const/4 v0, 0x3
+
+    invoke-static {v0, v1}, Ljava/lang/Integer;->toString(II)Ljava/lang/String;
+
+    move-result-object v0
+
+    sput-object v0, Lui8;->h:Ljava/lang/String;
 
     return-void
 .end method
 
+.method public constructor <init>(Landroid/os/Bundle;ZZZ)V
+    .locals 1
 
-# virtual methods
-.method public final accept(Ljava/lang/Object;)V
-    .locals 13
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iget v0, p0, Lui8;->a:I
+    new-instance v0, Landroid/os/Bundle;
 
-    const/4 v1, 0x1
+    invoke-direct {v0, p1}, Landroid/os/Bundle;-><init>(Landroid/os/Bundle;)V
 
-    const/4 v2, -0x1
+    iput-object v0, p0, Lui8;->a:Landroid/os/Bundle;
 
-    iget v3, p0, Lui8;->c:I
+    iput-boolean p2, p0, Lui8;->b:Z
 
-    iget-object p0, p0, Lui8;->b:Lwg8;
+    iput-boolean p3, p0, Lui8;->c:Z
 
-    packed-switch v0, :pswitch_data_0
+    iput-boolean p4, p0, Lui8;->d:Z
 
-    check-cast p1, Lbm7;
+    return-void
+.end method
 
-    :try_start_0
-    invoke-interface {p1}, Ljava/util/concurrent/Future;->get()Ljava/lang/Object;
+.method public static a(Landroid/os/Bundle;)Lui8;
+    .locals 5
 
-    move-result-object p1
+    sget-object v0, Lui8;->e:Ljava/lang/String;
 
-    check-cast p1, Lx8d;
+    invoke-virtual {p0, v0}, Landroid/os/Bundle;->getBundle(Ljava/lang/String;)Landroid/os/Bundle;
 
-    const-string v0, "SessionResult must not be null"
+    move-result-object v0
 
-    invoke-static {p1, v0}, Lu27;->h(Ljava/lang/Object;Ljava/lang/String;)V
-    :try_end_0
-    .catch Ljava/util/concurrent/CancellationException; {:try_start_0 .. :try_end_0} :catch_1
-    .catch Ljava/util/concurrent/ExecutionException; {:try_start_0 .. :try_end_0} :catch_0
-    .catch Ljava/lang/InterruptedException; {:try_start_0 .. :try_end_0} :catch_0
+    sget-object v1, Lui8;->f:Ljava/lang/String;
 
-    goto :goto_2
+    const/4 v2, 0x0
 
-    :catch_0
-    move-exception v0
+    invoke-virtual {p0, v1, v2}, Landroid/os/BaseBundle;->getBoolean(Ljava/lang/String;Z)Z
 
-    move-object p1, v0
+    move-result v1
 
-    goto :goto_0
+    sget-object v3, Lui8;->g:Ljava/lang/String;
 
-    :catch_1
-    move-exception v0
+    invoke-virtual {p0, v3, v2}, Landroid/os/BaseBundle;->getBoolean(Ljava/lang/String;Z)Z
 
-    move-object p1, v0
+    move-result v3
 
-    goto :goto_1
+    sget-object v4, Lui8;->h:Ljava/lang/String;
 
-    :goto_0
-    const-string v0, "Session operation failed"
+    invoke-virtual {p0, v4, v2}, Landroid/os/BaseBundle;->getBoolean(Ljava/lang/String;Z)Z
 
-    invoke-static {v0, p1}, Lou0;->K(Ljava/lang/String;Ljava/lang/Throwable;)V
+    move-result p0
 
-    new-instance v0, Lx8d;
+    new-instance v2, Lui8;
 
-    invoke-virtual {p1}, Ljava/lang/Throwable;->getCause()Ljava/lang/Throwable;
+    if-nez v0, :cond_0
 
-    move-result-object p1
-
-    instance-of p1, p1, Ljava/lang/UnsupportedOperationException;
-
-    if-eqz p1, :cond_0
-
-    const/4 v2, -0x6
+    sget-object v0, Landroid/os/Bundle;->EMPTY:Landroid/os/Bundle;
 
     :cond_0
-    invoke-direct {v0, v2}, Lx8d;-><init>(I)V
+    invoke-direct {v2, v0, v1, v3, p0}, Lui8;-><init>(Landroid/os/Bundle;ZZZ)V
 
-    move-object p1, v0
-
-    goto :goto_2
-
-    :goto_1
-    const-string v0, "Session operation cancelled"
-
-    invoke-static {v0, p1}, Lou0;->K(Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    new-instance p1, Lx8d;
-
-    invoke-direct {p1, v1}, Lx8d;-><init>(I)V
-
-    :goto_2
-    invoke-static {p0, v3, p1}, Lbj8;->b0(Lwg8;ILx8d;)V
-
-    return-void
-
-    :pswitch_0
-    const-string v4, "no error message provided"
-
-    check-cast p1, Lbm7;
-
-    :try_start_1
-    invoke-interface {p1}, Ljava/util/concurrent/Future;->get()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lxf7;
-
-    const-string v0, "LibraryResult must not be null"
-
-    invoke-static {p1, v0}, Lu27;->h(Ljava/lang/Object;Ljava/lang/String;)V
-    :try_end_1
-    .catch Ljava/util/concurrent/CancellationException; {:try_start_1 .. :try_end_1} :catch_3
-    .catch Ljava/util/concurrent/ExecutionException; {:try_start_1 .. :try_end_1} :catch_2
-    .catch Ljava/lang/InterruptedException; {:try_start_1 .. :try_end_1} :catch_2
-
-    goto :goto_6
-
-    :catch_2
-    move-exception v0
-
-    move-object p1, v0
-
-    goto :goto_3
-
-    :catch_3
-    move-exception v0
-
-    move-object p1, v0
-
-    goto :goto_5
-
-    :goto_3
-    const-string v0, "Library operation failed"
-
-    invoke-static {v0, p1}, Lou0;->K(Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    sget-object p1, Lxf7;->g:Ljava/lang/String;
-
-    new-instance v10, Ln8d;
-
-    sget-object p1, Landroid/os/Bundle;->EMPTY:Landroid/os/Bundle;
-
-    invoke-direct {v10, v4, v2, p1}, Ln8d;-><init>(Ljava/lang/String;ILandroid/os/Bundle;)V
-
-    new-instance v5, Lxf7;
-
-    invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
-
-    move-result-wide v7
-
-    const/4 v11, 0x0
-
-    const/4 v12, 0x4
-
-    iget v6, v10, Ln8d;->a:I
-
-    const/4 v9, 0x0
-
-    invoke-direct/range {v5 .. v12}, Lxf7;-><init>(IJLzb8;Ln8d;Ljava/lang/Object;I)V
-
-    :goto_4
-    move-object p1, v5
-
-    goto :goto_6
-
-    :goto_5
-    const-string v0, "Library operation cancelled"
-
-    invoke-static {v0, p1}, Lou0;->K(Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    sget-object p1, Lxf7;->g:Ljava/lang/String;
-
-    new-instance v10, Ln8d;
-
-    sget-object p1, Landroid/os/Bundle;->EMPTY:Landroid/os/Bundle;
-
-    invoke-direct {v10, v4, v1, p1}, Ln8d;-><init>(Ljava/lang/String;ILandroid/os/Bundle;)V
-
-    new-instance v5, Lxf7;
-
-    invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
-
-    move-result-wide v7
-
-    const/4 v11, 0x0
-
-    const/4 v12, 0x4
-
-    iget v6, v10, Ln8d;->a:I
-
-    const/4 v9, 0x0
-
-    invoke-direct/range {v5 .. v12}, Lxf7;-><init>(IJLzb8;Ln8d;Ljava/lang/Object;I)V
-
-    goto :goto_4
-
-    :goto_6
-    :try_start_2
-    iget-object v0, p0, Lwg8;->d:Lvg8;
-
-    invoke-static {v0}, Lu27;->k(Ljava/lang/Object;)V
-
-    invoke-interface {v0, v3, p1}, Lvg8;->f(ILxf7;)V
-    :try_end_2
-    .catch Landroid/os/RemoteException; {:try_start_2 .. :try_end_2} :catch_4
-
-    goto :goto_7
-
-    :catch_4
-    move-exception v0
-
-    move-object p1, v0
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "Failed to send result to browser "
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    invoke-static {p0, p1}, Lou0;->K(Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    :goto_7
-    return-void
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-object v2
 .end method

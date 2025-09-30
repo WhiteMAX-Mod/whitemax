@@ -1,3 +1,0 @@
-.class public interface abstract Lbq2;
-.super Ljava/lang/Object;
-.source "SourceFile"

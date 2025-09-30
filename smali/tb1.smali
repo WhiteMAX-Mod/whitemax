@@ -1,236 +1,101 @@
 .class public final Ltb1;
-.super Lqde;
+.super Lub1;
 .source "SourceFile"
-
-# interfaces
-.implements Ll66;
 
 
 # instance fields
-.field public synthetic X:Ljava/lang/Object;
-
-.field public final synthetic Y:Lone/me/calls/ui/bottomsheet/previewjoinlink/CallJoinLinkPreviewWidget;
+.field public final a:Lhrf;
 
 
 # direct methods
-.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/calls/ui/bottomsheet/previewjoinlink/CallJoinLinkPreviewWidget;)V
+.method public constructor <init>(Lhrf;)V
     .locals 0
 
-    iput-object p2, p0, Ltb1;->Y:Lone/me/calls/ui/bottomsheet/previewjoinlink/CallJoinLinkPreviewWidget;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 p2, 0x2
-
-    invoke-direct {p0, p2, p1}, Lqde;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-object p1, p0, Ltb1;->a:Lhrf;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 3
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    const/4 v0, 0x1
 
-    invoke-virtual {p0, p1, p2}, Ltb1;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    if-ne p0, p1, :cond_0
 
-    move-result-object p0
-
-    check-cast p0, Ltb1;
-
-    sget-object p1, Le5f;->a:Le5f;
-
-    invoke-virtual {p0, p1}, Ltb1;->o(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p1
-.end method
-
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 1
-
-    new-instance v0, Ltb1;
-
-    iget-object p0, p0, Ltb1;->Y:Lone/me/calls/ui/bottomsheet/previewjoinlink/CallJoinLinkPreviewWidget;
-
-    invoke-direct {v0, p2, p0}, Ltb1;-><init>(Lkotlin/coroutines/Continuation;Lone/me/calls/ui/bottomsheet/previewjoinlink/CallJoinLinkPreviewWidget;)V
-
-    iput-object p1, v0, Ltb1;->X:Ljava/lang/Object;
-
-    return-object v0
-.end method
-
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 14
-
-    invoke-static {p1}, Lsgg;->Z(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Ltb1;->X:Ljava/lang/Object;
-
-    check-cast p1, Lfb1;
-
-    iget-object p0, p0, Ltb1;->Y:Lone/me/calls/ui/bottomsheet/previewjoinlink/CallJoinLinkPreviewWidget;
-
-    iget-object v0, p0, Lone/me/calls/ui/bottomsheet/previewjoinlink/CallJoinLinkPreviewWidget;->r0:Lo5c;
-
-    sget-object v1, Lone/me/calls/ui/bottomsheet/previewjoinlink/CallJoinLinkPreviewWidget;->x0:[Lbc7;
-
-    const/4 v2, 0x6
-
-    aget-object v1, v1, v2
-
-    invoke-interface {v0, p0, v1}, Lo5c;->M(Ljava/lang/Object;Lbc7;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lyo1;
-
-    iget-object v1, p1, Lfb1;->a:Led0;
-
-    invoke-virtual {v0, v1}, Lyo1;->setAvatar(Led0;)V
-
-    iget-object v1, p1, Lfb1;->c:Lf38;
-
-    sget-object v2, Lf38;->b:Lf38;
-
-    if-ne v1, v2, :cond_0
-
-    sget-object v3, Ljaf;->b:Ljaf;
-
-    goto :goto_0
+    return v0
 
     :cond_0
-    sget-object v3, Ljaf;->o:Ljaf;
+    instance-of v1, p1, Ltb1;
 
-    :goto_0
-    invoke-virtual {v0, v3}, Lyo1;->setButtonAction(Ljaf;)V
+    const/4 v2, 0x0
 
-    if-ne v1, v2, :cond_1
+    if-nez v1, :cond_1
 
-    const/4 v1, 0x1
-
-    goto :goto_1
+    return v2
 
     :cond_1
-    const/4 v1, 0x0
+    check-cast p1, Ltb1;
 
-    :goto_1
-    iget-boolean v2, p1, Lfb1;->d:Z
+    iget-object p0, p0, Ltb1;->a:Lhrf;
 
-    invoke-virtual {v0, v1, v2}, Lyo1;->G(ZZ)V
+    iget-object p1, p1, Ltb1;->a:Lhrf;
 
-    const/4 v1, 0x0
+    invoke-static {p0, p1}, Lvyg;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    invoke-virtual {v0, v1, v1}, Lyo1;->I(Ljava/lang/String;Ljava/lang/CharSequence;)V
+    move-result p0
 
-    invoke-virtual {p0}, Lone/me/calls/ui/bottomsheet/previewjoinlink/CallJoinLinkPreviewWidget;->r0()Landroid/widget/TextView;
+    if-nez p0, :cond_2
 
-    move-result-object v0
+    return v2
 
-    iget-object v1, p1, Lfb1;->e:Lmoe;
+    :cond_2
+    return v0
+.end method
 
-    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
+.method public final hashCode()I
+    .locals 0
 
-    move-result-object v2
+    iget-object p0, p0, Ltb1;->a:Lhrf;
 
-    invoke-virtual {v1, v2}, Lmoe;->b(Landroid/content/Context;)Ljava/lang/CharSequence;
+    if-nez p0, :cond_0
 
-    move-result-object v1
+    const/4 p0, 0x0
 
-    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+    return p0
 
-    invoke-virtual {p0}, Lone/me/calls/ui/bottomsheet/previewjoinlink/CallJoinLinkPreviewWidget;->p0()Lmlc;
+    :cond_0
+    invoke-virtual {p0}, Lhrf;->hashCode()I
 
-    move-result-object v2
+    move-result p0
 
-    iget-object v0, p0, Lone/me/calls/ui/bottomsheet/previewjoinlink/CallJoinLinkPreviewWidget;->s0:Ljava/lang/Object;
+    return p0
+.end method
 
-    invoke-interface {v0}, Lje7;->getValue()Ljava/lang/Object;
+.method public final toString()Ljava/lang/String;
+    .locals 2
 
-    move-result-object v0
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    move-object v4, v0
+    const-string v1, "VideoState(participant="
 
-    check-cast v4, Landroid/graphics/drawable/Drawable;
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-object v0, p0, Lone/me/calls/ui/bottomsheet/previewjoinlink/CallJoinLinkPreviewWidget;->t0:Ljava/lang/Object;
+    iget-object p0, p0, Ltb1;->a:Lhrf;
 
-    invoke-interface {v0}, Lje7;->getValue()Ljava/lang/Object;
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    move-result-object v0
+    const-string p0, ")"
 
-    move-object v3, v0
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    check-cast v3, Landroid/graphics/drawable/Drawable;
-
-    iget-object v5, p1, Lfb1;->b:Lf38;
-
-    sget v0, Lyxb;->call_microphone_enabled_accessibility:I
-
-    new-instance v6, Lhoe;
-
-    invoke-direct {v6, v0}, Lhoe;-><init>(I)V
-
-    sget v0, Lyxb;->call_microphone_disabled_accessibility:I
-
-    new-instance v7, Lhoe;
-
-    invoke-direct {v7, v0}, Lhoe;-><init>(I)V
-
-    invoke-static/range {v2 .. v7}, Lone/me/calls/ui/bottomsheet/previewjoinlink/CallJoinLinkPreviewWidget;->v0(Lmlc;Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;Lf38;Lhoe;Lhoe;)V
-
-    invoke-virtual {p0}, Lone/me/calls/ui/bottomsheet/previewjoinlink/CallJoinLinkPreviewWidget;->s0()Lmlc;
-
-    move-result-object v8
-
-    iget-object v0, p0, Lone/me/calls/ui/bottomsheet/previewjoinlink/CallJoinLinkPreviewWidget;->u0:Ljava/lang/Object;
-
-    invoke-interface {v0}, Lje7;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    move-object v10, v0
-
-    check-cast v10, Landroid/graphics/drawable/Drawable;
-
-    iget-object v0, p0, Lone/me/calls/ui/bottomsheet/previewjoinlink/CallJoinLinkPreviewWidget;->v0:Ljava/lang/Object;
-
-    invoke-interface {v0}, Lje7;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    move-object v9, v0
-
-    check-cast v9, Landroid/graphics/drawable/Drawable;
-
-    iget-object v11, p1, Lfb1;->c:Lf38;
-
-    sget v0, Lyxb;->call_video_enabled_accessibility:I
-
-    new-instance v12, Lhoe;
-
-    invoke-direct {v12, v0}, Lhoe;-><init>(I)V
-
-    sget v0, Lyxb;->call_video_disabled_accessibility:I
-
-    new-instance v13, Lhoe;
-
-    invoke-direct {v13, v0}, Lhoe;-><init>(I)V
-
-    invoke-static/range {v8 .. v13}, Lone/me/calls/ui/bottomsheet/previewjoinlink/CallJoinLinkPreviewWidget;->v0(Lmlc;Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;Lf38;Lhoe;Lhoe;)V
-
-    invoke-virtual {p0}, Lone/me/calls/ui/bottomsheet/previewjoinlink/CallJoinLinkPreviewWidget;->q0()Loga;
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p0
-
-    iget-object v0, p1, Lfb1;->f:Ljava/util/List;
-
-    invoke-virtual {p0, v0}, Loga;->setAvatars(Ljava/util/List;)V
-
-    iget-object p1, p1, Lfb1;->g:Lmoe;
-
-    invoke-virtual {p0, p1}, Loga;->setTitle(Lmoe;)V
-
-    sget-object p0, Le5f;->a:Le5f;
 
     return-object p0
 .end method

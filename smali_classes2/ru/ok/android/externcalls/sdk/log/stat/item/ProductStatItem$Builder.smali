@@ -100,7 +100,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lru/ok/android/externcalls/sdk/log/stat/item/ProductStatItem$Builder$Companion;-><init>(Ll94;)V
+    invoke-direct {v0, v1}, Lru/ok/android/externcalls/sdk/log/stat/item/ProductStatItem$Builder$Companion;-><init>(Lld4;)V
 
     sput-object v0, Lru/ok/android/externcalls/sdk/log/stat/item/ProductStatItem$Builder;->Companion:Lru/ok/android/externcalls/sdk/log/stat/item/ProductStatItem$Builder$Companion;
 
@@ -128,7 +128,7 @@
 
     iput-wide v0, p0, Lru/ok/android/externcalls/sdk/log/stat/item/ProductStatItem$Builder;->timestamp:J
 
-    sget-object v0, Lhz4;->a:Lhz4;
+    sget-object v0, Lq45;->a:Lq45;
 
     iput-object v0, p0, Lru/ok/android/externcalls/sdk/log/stat/item/ProductStatItem$Builder;->custom:Ljava/util/Map;
 
@@ -161,7 +161,7 @@
     const/4 v7, 0x0
 
     .line 8
-    invoke-direct/range {v0 .. v7}, Lru/ok/android/externcalls/sdk/log/stat/item/ProductStatItem;-><init>(Ljava/lang/String;ILjava/lang/String;JLjava/util/Map;Ll94;)V
+    invoke-direct/range {v0 .. v7}, Lru/ok/android/externcalls/sdk/log/stat/item/ProductStatItem;-><init>(Ljava/lang/String;ILjava/lang/String;JLjava/util/Map;Lld4;)V
 
     return-object v0
 .end method

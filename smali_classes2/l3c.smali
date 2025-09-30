@@ -1,85 +1,62 @@
-.class public final enum Ll3c;
-.super Ljava/lang/Enum;
-.source "SourceFile"
+.class public abstract Ll3c;
+.super Ljava/lang/Object;
 
 
 # static fields
-.field public static final enum a:Ll3c;
+.field public static activity_horizontal_margin:I = 0x7f070051
 
-.field public static final enum b:Ll3c;
+.field public static activity_vertical_margin:I = 0x7f070052
 
-.field public static final enum c:Ll3c;
+.field public static avatar_large:I = 0x7f070057
 
-.field public static final synthetic o:[Ll3c;
+.field public static avatar_medium:I = 0x7f070058
 
+.field public static avatar_small:I = 0x7f070059
 
-# direct methods
-.method static constructor <clinit>()V
-    .locals 5
+.field public static folder_filter_item_height:I = 0x7f0700fd
 
-    new-instance v0, Ll3c;
+.field public static font_large:I = 0x7f0700ff
 
-    const-string v1, "NONE"
+.field public static font_larger:I = 0x7f070100
 
-    const/4 v2, 0x0
+.field public static font_medium:I = 0x7f070101
 
-    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+.field public static font_normal:I = 0x7f070102
 
-    sput-object v0, Ll3c;->a:Ll3c;
+.field public static font_normal_subtitle:I = 0x7f070103
 
-    new-instance v1, Ll3c;
+.field public static font_only_emoji:I = 0x7f070104
 
-    const-string v2, "READ"
+.field public static font_small:I = 0x7f070105
 
-    const/4 v3, 0x1
+.field public static font_smaller:I = 0x7f070106
 
-    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+.field public static font_subtitle:I = 0x7f070107
 
-    sput-object v1, Ll3c;->b:Ll3c;
+.field public static font_toolbar_subtitle:I = 0x7f070108
 
-    new-instance v2, Ll3c;
+.field public static font_toolbar_title:I = 0x7f070109
 
-    const-string v3, "WRITE"
+.field public static font_very_small:I = 0x7f07010a
 
-    const/4 v4, 0x2
+.field public static huge_horizontal_margin:I = 0x7f07011f
 
-    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+.field public static match_parent:I = 0x7f0702aa
 
-    sput-object v2, Ll3c;->c:Ll3c;
+.field public static progress_bar_medium:I = 0x7f0703ee
 
-    filled-new-array {v0, v1, v2}, [Ll3c;
+.field public static progress_bar_small:I = 0x7f0703ef
 
-    move-result-object v0
+.field public static rounded_button_margin:I = 0x7f0703f6
 
-    sput-object v0, Ll3c;->o:[Ll3c;
+.field public static small_vertical_margin:I = 0x7f070400
 
-    return-void
-.end method
+.field public static spacing_normal:I = 0x7f070401
 
-.method public static valueOf(Ljava/lang/String;)Ll3c;
-    .locals 1
+.field public static spacing_small:I = 0x7f07040b
 
-    const-class v0, Ll3c;
+.field public static spacing_tiny:I = 0x7f07040c
 
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+.field public static tiny_vertical_margin:I = 0x7f07041e
 
-    move-result-object p0
-
-    check-cast p0, Ll3c;
-
-    return-object p0
-.end method
-
-.method public static values()[Ll3c;
-    .locals 1
-
-    sget-object v0, Ll3c;->o:[Ll3c;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, [Ll3c;
-
-    return-object v0
-.end method
+.field public static wrap_content:I = 0x7f070429

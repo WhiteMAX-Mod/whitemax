@@ -3,554 +3,333 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lnfc;
+.implements Lts7;
 
 
 # instance fields
-.field public final a:Ljava/util/ArrayList;
+.field public final X:Lb16;
+
+.field public final Y:I
+
+.field public final Z:I
+
+.field public final a:J
+
+.field public final b:Ljava/lang/String;
+
+.field public final c:Ljava/lang/CharSequence;
+
+.field public final o:Ljava/lang/String;
+
+.field public final r0:J
 
 
 # direct methods
-.method public constructor <init>(Ljava/util/Set;)V
-    .locals 2
+.method public constructor <init>(JLjava/lang/String;Ljava/lang/String;Ljava/lang/String;Lb16;II)V
+    .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    if-nez p1, :cond_0
+    iput-wide p1, p0, Lc16;->a:J
 
-    new-instance p1, Ljava/util/ArrayList;
+    iput-object p3, p0, Lc16;->b:Ljava/lang/String;
 
-    invoke-direct {p1}, Ljava/util/ArrayList;-><init>()V
+    iput-object p4, p0, Lc16;->c:Ljava/lang/CharSequence;
 
-    iput-object p1, p0, Lc16;->a:Ljava/util/ArrayList;
+    iput-object p5, p0, Lc16;->o:Ljava/lang/String;
 
-    return-void
+    iput-object p6, p0, Lc16;->X:Lb16;
 
-    :cond_0
-    new-instance v0, Ljava/util/ArrayList;
+    iput p7, p0, Lc16;->Y:I
 
-    invoke-interface {p1}, Ljava/util/Set;->size()I
+    iput p8, p0, Lc16;->Z:I
 
-    move-result v1
+    iput-wide p1, p0, Lc16;->r0:J
 
-    invoke-direct {v0, v1}, Ljava/util/ArrayList;-><init>(I)V
-
-    iput-object v0, p0, Lc16;->a:Ljava/util/ArrayList;
-
-    invoke-interface {p1}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
-
-    move-result-object p0
-
-    :cond_1
-    :goto_0
-    invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result p1
-
-    if-eqz p1, :cond_2
-
-    invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object p1
-
-    if-eqz p1, :cond_1
-
-    invoke-virtual {v0, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    goto :goto_0
-
-    :cond_2
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Ln7b;Ljava/lang/String;Ljava/util/Map;)V
-    .locals 3
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
 
-    iget-object p0, p0, Lc16;->a:Ljava/util/ArrayList;
+    if-ne p0, p1, :cond_0
 
-    invoke-virtual {p0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
-
-    move-result-object p0
-
-    :goto_0
-    invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lnfc;
-
-    :try_start_0
-    invoke-interface {v0, p1, p2, p3}, Lq7b;->a(Ln7b;Ljava/lang/String;Ljava/util/Map;)V
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
-
-    goto :goto_0
-
-    :catch_0
-    move-exception v0
-
-    const-string v1, "ForwardingRequestListener2"
-
-    const-string v2, "InternalListener exception in onProducerFinishWithSuccess"
-
-    invoke-static {v1, v2, v0}, Lda5;->c(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    goto :goto_0
+    goto :goto_1
 
     :cond_0
-    return-void
-.end method
+    instance-of v0, p1, Lc16;
 
-.method public final b(Lkad;)V
-    .locals 3
-
-    iget-object p0, p0, Lc16;->a:Ljava/util/ArrayList;
-
-    invoke-virtual {p0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
-
-    move-result-object p0
-
-    :goto_0
-    invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lnfc;
-
-    :try_start_0
-    invoke-interface {v0, p1}, Lnfc;->b(Lkad;)V
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+    if-nez v0, :cond_1
 
     goto :goto_0
-
-    :catch_0
-    move-exception v0
-
-    const-string v1, "ForwardingRequestListener2"
-
-    const-string v2, "InternalListener exception in onRequestStart"
-
-    invoke-static {v1, v2, v0}, Lda5;->c(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    goto :goto_0
-
-    :cond_0
-    return-void
-.end method
-
-.method public final c(Ln7b;)V
-    .locals 3
-
-    iget-object p0, p0, Lc16;->a:Ljava/util/ArrayList;
-
-    invoke-virtual {p0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
-
-    move-result-object p0
-
-    :goto_0
-    invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lnfc;
-
-    :try_start_0
-    invoke-interface {v0, p1}, Lq7b;->c(Ln7b;)V
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
-
-    goto :goto_0
-
-    :catch_0
-    move-exception v0
-
-    const-string v1, "ForwardingRequestListener2"
-
-    const-string v2, "InternalListener exception in onIntermediateChunkStart"
-
-    invoke-static {v1, v2, v0}, Lda5;->c(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    goto :goto_0
-
-    :cond_0
-    return-void
-.end method
-
-.method public final d(Ln7b;Ljava/lang/String;Ljava/lang/Throwable;Ljava/util/Map;)V
-    .locals 3
-
-    iget-object p0, p0, Lc16;->a:Ljava/util/ArrayList;
-
-    invoke-virtual {p0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
-
-    move-result-object p0
-
-    :goto_0
-    invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lnfc;
-
-    :try_start_0
-    invoke-interface {v0, p1, p2, p3, p4}, Lq7b;->d(Ln7b;Ljava/lang/String;Ljava/lang/Throwable;Ljava/util/Map;)V
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
-
-    goto :goto_0
-
-    :catch_0
-    move-exception v0
-
-    const-string v1, "ForwardingRequestListener2"
-
-    const-string v2, "InternalListener exception in onProducerFinishWithFailure"
-
-    invoke-static {v1, v2, v0}, Lda5;->c(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    goto :goto_0
-
-    :cond_0
-    return-void
-.end method
-
-.method public final e(Ln7b;Ljava/lang/String;Z)V
-    .locals 3
-
-    iget-object p0, p0, Lc16;->a:Ljava/util/ArrayList;
-
-    invoke-virtual {p0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
-
-    move-result-object p0
-
-    :goto_0
-    invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lnfc;
-
-    :try_start_0
-    invoke-interface {v0, p1, p2, p3}, Lq7b;->e(Ln7b;Ljava/lang/String;Z)V
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
-
-    goto :goto_0
-
-    :catch_0
-    move-exception v0
-
-    const-string v1, "ForwardingRequestListener2"
-
-    const-string v2, "InternalListener exception in onProducerFinishWithSuccess"
-
-    invoke-static {v1, v2, v0}, Lda5;->c(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    goto :goto_0
-
-    :cond_0
-    return-void
-.end method
-
-.method public final f(Ln7b;Ljava/lang/Throwable;)V
-    .locals 3
-
-    iget-object p0, p0, Lc16;->a:Ljava/util/ArrayList;
-
-    invoke-virtual {p0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
-
-    move-result-object p0
-
-    :goto_0
-    invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lnfc;
-
-    :try_start_0
-    invoke-interface {v0, p1, p2}, Lnfc;->f(Ln7b;Ljava/lang/Throwable;)V
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
-
-    goto :goto_0
-
-    :catch_0
-    move-exception v0
-
-    const-string v1, "ForwardingRequestListener2"
-
-    const-string v2, "InternalListener exception in onRequestFailure"
-
-    invoke-static {v1, v2, v0}, Lda5;->c(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    goto :goto_0
-
-    :cond_0
-    return-void
-.end method
-
-.method public final g(Ln7b;)V
-    .locals 3
-
-    iget-object p0, p0, Lc16;->a:Ljava/util/ArrayList;
-
-    invoke-virtual {p0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
-
-    move-result-object p0
-
-    :goto_0
-    invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lnfc;
-
-    :try_start_0
-    invoke-interface {v0, p1}, Lnfc;->g(Ln7b;)V
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
-
-    goto :goto_0
-
-    :catch_0
-    move-exception v0
-
-    const-string v1, "ForwardingRequestListener2"
-
-    const-string v2, "InternalListener exception in onRequestSuccess"
-
-    invoke-static {v1, v2, v0}, Lda5;->c(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    goto :goto_0
-
-    :cond_0
-    return-void
-.end method
-
-.method public final h(Ln7b;)V
-    .locals 3
-
-    iget-object p0, p0, Lc16;->a:Ljava/util/ArrayList;
-
-    invoke-virtual {p0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
-
-    move-result-object p0
-
-    :goto_0
-    invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lnfc;
-
-    :try_start_0
-    invoke-interface {v0, p1}, Lnfc;->h(Ln7b;)V
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
-
-    goto :goto_0
-
-    :catch_0
-    move-exception v0
-
-    const-string v1, "ForwardingRequestListener2"
-
-    const-string v2, "InternalListener exception in onRequestCancellation"
-
-    invoke-static {v1, v2, v0}, Lda5;->c(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    goto :goto_0
-
-    :cond_0
-    return-void
-.end method
-
-.method public final i(Ln7b;Ljava/lang/String;)Z
-    .locals 1
-
-    iget-object p0, p0, Lc16;->a:Ljava/util/ArrayList;
-
-    if-eqz p0, :cond_0
-
-    invoke-virtual {p0}, Ljava/util/ArrayList;->isEmpty()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    invoke-virtual {p0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
-
-    move-result-object p0
 
     :cond_1
-    invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
+    check-cast p1, Lc16;
 
-    move-result v0
+    iget-wide v0, p0, Lc16;->a:J
+
+    iget-wide v2, p1, Lc16;->a:J
+
+    cmp-long v0, v0, v2
 
     if-eqz v0, :cond_2
 
-    invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    goto :goto_0
 
-    move-result-object v0
+    :cond_2
+    iget-object v0, p0, Lc16;->b:Ljava/lang/String;
 
-    check-cast v0, Lnfc;
+    iget-object v1, p1, Lc16;->b:Ljava/lang/String;
 
-    invoke-interface {v0, p1, p2}, Lq7b;->i(Ln7b;Ljava/lang/String;)Z
+    invoke-virtual {v0, v1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
     move-result v0
 
-    if-eqz v0, :cond_1
+    if-nez v0, :cond_3
 
-    const/4 p0, 0x1
+    goto :goto_0
 
-    return p0
+    :cond_3
+    iget-object v0, p0, Lc16;->c:Ljava/lang/CharSequence;
 
-    :cond_2
+    iget-object v1, p1, Lc16;->c:Ljava/lang/CharSequence;
+
+    invoke-static {v0, v1}, Lvyg;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_4
+
+    goto :goto_0
+
+    :cond_4
+    iget-object v0, p0, Lc16;->o:Ljava/lang/String;
+
+    iget-object v1, p1, Lc16;->o:Ljava/lang/String;
+
+    invoke-static {v0, v1}, Lvyg;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_5
+
+    goto :goto_0
+
+    :cond_5
+    iget-object v0, p0, Lc16;->X:Lb16;
+
+    iget-object v1, p1, Lc16;->X:Lb16;
+
+    invoke-static {v0, v1}, Lvyg;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_6
+
+    goto :goto_0
+
+    :cond_6
+    iget v0, p0, Lc16;->Y:I
+
+    iget v1, p1, Lc16;->Y:I
+
+    if-eq v0, v1, :cond_7
+
+    goto :goto_0
+
+    :cond_7
+    iget p0, p0, Lc16;->Z:I
+
+    iget p1, p1, Lc16;->Z:I
+
+    if-eq p0, p1, :cond_8
+
     :goto_0
     const/4 p0, 0x0
 
     return p0
+
+    :cond_8
+    :goto_1
+    const/4 p0, 0x1
+
+    return p0
 .end method
 
-.method public final j(Ln7b;Ljava/lang/String;)V
-    .locals 3
+.method public final getItemId()J
+    .locals 2
 
-    iget-object p0, p0, Lc16;->a:Ljava/util/ArrayList;
+    iget-wide v0, p0, Lc16;->r0:J
 
-    invoke-virtual {p0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
+    return-wide v0
+.end method
 
-    move-result-object p0
+.method public final hashCode()I
+    .locals 4
 
-    :goto_0
-    invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
+    iget-wide v0, p0, Lc16;->a:J
+
+    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
 
     move-result v0
 
-    if-eqz v0, :cond_0
+    const/16 v1, 0x1f
 
-    invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    mul-int/2addr v0, v1
 
-    move-result-object v0
+    iget-object v2, p0, Lc16;->b:Ljava/lang/String;
 
-    check-cast v0, Lnfc;
+    invoke-virtual {v2}, Ljava/lang/Object;->hashCode()I
 
-    :try_start_0
-    invoke-interface {v0, p1, p2}, Lq7b;->j(Ln7b;Ljava/lang/String;)V
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+    move-result v2
 
-    goto :goto_0
+    add-int/2addr v2, v0
 
-    :catch_0
-    move-exception v0
+    mul-int/2addr v2, v1
 
-    const-string v1, "ForwardingRequestListener2"
+    const/4 v0, 0x0
 
-    const-string v2, "InternalListener exception in onProducerStart"
+    iget-object v3, p0, Lc16;->c:Ljava/lang/CharSequence;
 
-    invoke-static {v1, v2, v0}, Lda5;->c(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    if-nez v3, :cond_0
+
+    move v3, v0
 
     goto :goto_0
 
     :cond_0
-    return-void
-.end method
+    invoke-virtual {v3}, Ljava/lang/Object;->hashCode()I
 
-.method public final k(Ln7b;Ljava/lang/String;)V
-    .locals 3
-
-    iget-object p0, p0, Lc16;->a:Ljava/util/ArrayList;
-
-    invoke-virtual {p0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
-
-    move-result-object p0
+    move-result v3
 
     :goto_0
-    invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
+    add-int/2addr v2, v3
+
+    mul-int/2addr v2, v1
+
+    iget-object v3, p0, Lc16;->o:Ljava/lang/String;
+
+    if-nez v3, :cond_1
+
+    move v3, v0
+
+    goto :goto_1
+
+    :cond_1
+    invoke-virtual {v3}, Ljava/lang/String;->hashCode()I
+
+    move-result v3
+
+    :goto_1
+    add-int/2addr v2, v3
+
+    mul-int/2addr v2, v1
+
+    iget-object v3, p0, Lc16;->X:Lb16;
+
+    if-nez v3, :cond_2
+
+    goto :goto_2
+
+    :cond_2
+    invoke-virtual {v3}, Ljava/lang/Object;->hashCode()I
 
     move-result v0
 
-    if-eqz v0, :cond_0
+    :goto_2
+    add-int/2addr v2, v0
 
-    invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    mul-int/2addr v2, v1
 
-    move-result-object v0
+    iget v0, p0, Lc16;->Y:I
 
-    check-cast v0, Lnfc;
+    invoke-static {v0, v2, v1}, Lz7e;->m(III)I
 
-    :try_start_0
-    invoke-interface {v0, p1, p2}, Lq7b;->k(Ln7b;Ljava/lang/String;)V
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+    move-result v0
 
-    goto :goto_0
+    iget p0, p0, Lc16;->Z:I
 
-    :catch_0
-    move-exception v0
+    invoke-static {p0}, Ljava/lang/Integer;->hashCode(I)I
 
-    const-string v1, "ForwardingRequestListener2"
+    move-result p0
 
-    const-string v2, "InternalListener exception in onProducerFinishWithCancellation"
+    add-int/2addr p0, v0
 
-    invoke-static {v1, v2, v0}, Lda5;->c(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    return p0
+.end method
 
-    goto :goto_0
+.method public final m()I
+    .locals 0
 
-    :cond_0
-    return-void
+    iget p0, p0, Lc16;->Z:I
+
+    return p0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 3
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "FolderWidgetItem(id="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-wide v1, p0, Lc16;->a:J
+
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    const-string v1, ", name="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lc16;->b:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", description="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lc16;->c:Ljava/lang/CharSequence;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", iconUrl="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lc16;->o:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", clickAction="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lc16;->X:Lb16;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", widgetWidth="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget v1, p0, Lc16;->Y:I
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v1, ", viewType="
+
+    const-string v2, ")"
+
+    iget p0, p0, Lc16;->Z:I
+
+    invoke-static {v0, v1, p0, v2}, Lsq3;->i(Ljava/lang/StringBuilder;Ljava/lang/String;ILjava/lang/String;)Ljava/lang/String;
+
+    move-result-object p0
+
+    return-object p0
 .end method

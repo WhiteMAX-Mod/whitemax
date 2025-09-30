@@ -1,104 +1,809 @@
-.class public abstract Loyb;
-.super Ljava/lang/Object;
+.class public final Loyb;
+.super Lj29;
+.source "SourceFile"
 
 
-# static fields
-.field public static oneme_login_confirm_description:I = 0x7f130837
+# instance fields
+.field public a:[Lmyb;
 
-.field public static oneme_login_confirm_info_loading_1:I = 0x7f130838
+.field public b:Ljava/lang/String;
 
-.field public static oneme_login_confirm_info_loading_2:I = 0x7f130839
+.field public c:J
 
-.field public static oneme_login_confirm_info_loading_3:I = 0x7f13083a
+.field public d:J
 
-.field public static oneme_login_confirm_resend:I = 0x7f13083b
+.field public e:J
 
-.field public static oneme_login_confirm_timer:I = 0x7f13083c
+.field public f:[Lnyb;
 
-.field public static oneme_login_confirm_title:I = 0x7f13083d
+.field public g:Lru/ok/tamtam/nano/Protos$Attaches;
 
-.field public static oneme_login_error_connection_description:I = 0x7f13083e
+.field public h:J
 
-.field public static oneme_login_error_connection_title:I = 0x7f13083f
+.field public i:Lru/ok/tamtam/nano/Protos$MessageElements;
 
-.field public static oneme_login_input_continue:I = 0x7f130840
+.field public j:Z
 
-.field public static oneme_login_input_default_phone_hint:I = 0x7f130841
+.field public k:J
 
-.field public static oneme_login_input_description:I = 0x7f130842
 
-.field public static oneme_login_input_is_not_valid_phone_error:I = 0x7f130843
+# direct methods
+.method public constructor <init>()V
+    .locals 5
 
-.field public static oneme_login_input_name_confirmation_cancel:I = 0x7f130844
+    invoke-direct {p0}, Lj29;-><init>()V
 
-.field public static oneme_login_input_name_confirmation_description:I = 0x7f130845
+    sget-object v0, Lmyb;->o:[Lmyb;
 
-.field public static oneme_login_input_name_confirmation_return:I = 0x7f130846
+    const/4 v1, 0x0
 
-.field public static oneme_login_input_name_confirmation_title:I = 0x7f130847
+    if-nez v0, :cond_1
 
-.field public static oneme_login_input_name_contact_permission_description:I = 0x7f130848
+    sget-object v0, Lla7;->b:Ljava/lang/Object;
 
-.field public static oneme_login_input_name_contact_permission_title:I = 0x7f130849
+    monitor-enter v0
 
-.field public static oneme_login_input_name_continue_button_active:I = 0x7f13084a
+    :try_start_0
+    sget-object v2, Lmyb;->o:[Lmyb;
 
-.field public static oneme_login_input_name_continue_button_disabled:I = 0x7f13084b
+    if-nez v2, :cond_0
 
-.field public static oneme_login_input_name_description:I = 0x7f13084c
+    new-array v2, v1, [Lmyb;
 
-.field public static oneme_login_input_name_hint_name:I = 0x7f13084d
+    sput-object v2, Lmyb;->o:[Lmyb;
 
-.field public static oneme_login_input_name_hint_surname:I = 0x7f13084e
+    goto :goto_0
 
-.field public static oneme_login_input_name_hint_surname_short:I = 0x7f13084f
+    :catchall_0
+    move-exception p0
 
-.field public static oneme_login_input_name_surname_placeholder:I = 0x7f130850
+    goto :goto_1
 
-.field public static oneme_login_input_name_title:I = 0x7f130851
+    :cond_0
+    :goto_0
+    monitor-exit v0
 
-.field public static oneme_login_input_need_help:I = 0x7f130852
+    goto :goto_2
 
-.field public static oneme_login_input_need_help_email_title:I = 0x7f130853
+    :goto_1
+    monitor-exit v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-.field public static oneme_login_input_title:I = 0x7f130854
+    throw p0
 
-.field public static oneme_login_neuro_avatars_bottomsheet_title:I = 0x7f130855
+    :cond_1
+    :goto_2
+    sget-object v0, Lmyb;->o:[Lmyb;
 
-.field public static oneme_login_neuro_avatars_cancel_action:I = 0x7f130856
+    iput-object v0, p0, Loyb;->a:[Lmyb;
 
-.field public static oneme_login_neuro_avatars_continue_button:I = 0x7f130857
+    const-string v0, ""
 
-.field public static oneme_login_neuro_avatars_description:I = 0x7f130858
+    iput-object v0, p0, Loyb;->b:Ljava/lang/String;
 
-.field public static oneme_login_neuro_avatars_load_from_gallery_action:I = 0x7f130859
+    const-wide/16 v2, 0x0
 
-.field public static oneme_login_neuro_avatars_profile_description:I = 0x7f13085a
+    iput-wide v2, p0, Loyb;->c:J
 
-.field public static oneme_login_neuro_avatars_profile_title:I = 0x7f13085b
+    iput-wide v2, p0, Loyb;->d:J
 
-.field public static oneme_login_neuro_avatars_remove_photo_action:I = 0x7f13085c
+    iput-wide v2, p0, Loyb;->e:J
 
-.field public static oneme_login_neuro_avatars_save_button:I = 0x7f13085d
+    sget-object v0, Lnyb;->e:[Lnyb;
 
-.field public static oneme_login_neuro_avatars_take_photo_action:I = 0x7f13085e
+    if-nez v0, :cond_3
 
-.field public static oneme_login_neuro_avatars_title:I = 0x7f13085f
+    sget-object v0, Lla7;->b:Ljava/lang/Object;
 
-.field public static oneme_login_sms_count_exceeded_description:I = 0x7f130860
+    monitor-enter v0
 
-.field public static oneme_login_sms_count_exceeded_title:I = 0x7f130861
+    :try_start_1
+    sget-object v4, Lnyb;->e:[Lnyb;
 
-.field public static oneme_login_welcome_continue_btn:I = 0x7f130862
+    if-nez v4, :cond_2
 
-.field public static oneme_login_welcome_description:I = 0x7f130863
+    new-array v4, v1, [Lnyb;
 
-.field public static oneme_login_welcome_privacy_policy_clickable_part:I = 0x7f130864
+    sput-object v4, Lnyb;->e:[Lnyb;
 
-.field public static oneme_login_welcome_switch_btn:I = 0x7f130865
+    goto :goto_3
 
-.field public static oneme_login_welcome_terms:I = 0x7f130866
+    :catchall_1
+    move-exception p0
 
-.field public static oneme_login_welcome_title:I = 0x7f130867
+    goto :goto_4
 
-.field public static oneme_login_welcome_user_agreement_clickable_part:I = 0x7f130868
+    :cond_2
+    :goto_3
+    monitor-exit v0
+
+    goto :goto_5
+
+    :goto_4
+    monitor-exit v0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_1
+
+    throw p0
+
+    :cond_3
+    :goto_5
+    sget-object v0, Lnyb;->e:[Lnyb;
+
+    iput-object v0, p0, Loyb;->f:[Lnyb;
+
+    const/4 v0, 0x0
+
+    iput-object v0, p0, Loyb;->g:Lru/ok/tamtam/nano/Protos$Attaches;
+
+    iput-wide v2, p0, Loyb;->h:J
+
+    iput-object v0, p0, Loyb;->i:Lru/ok/tamtam/nano/Protos$MessageElements;
+
+    iput-boolean v1, p0, Loyb;->j:Z
+
+    iput-wide v2, p0, Loyb;->k:J
+
+    const/4 v0, -0x1
+
+    iput v0, p0, Lj29;->cachedSize:I
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final computeSerializedSize()I
+    .locals 7
+
+    iget-object v0, p0, Loyb;->a:[Lmyb;
+
+    const/4 v1, 0x0
+
+    if-eqz v0, :cond_1
+
+    array-length v0, v0
+
+    if-lez v0, :cond_1
+
+    move v0, v1
+
+    move v2, v0
+
+    :goto_0
+    iget-object v3, p0, Loyb;->a:[Lmyb;
+
+    array-length v4, v3
+
+    if-ge v0, v4, :cond_2
+
+    aget-object v3, v3, v0
+
+    if-eqz v3, :cond_0
+
+    const/4 v4, 0x1
+
+    invoke-static {v4, v3}, Lr63;->i(ILj29;)I
+
+    move-result v3
+
+    add-int/2addr v2, v3
+
+    :cond_0
+    add-int/lit8 v0, v0, 0x1
+
+    goto :goto_0
+
+    :cond_1
+    move v2, v1
+
+    :cond_2
+    iget-object v0, p0, Loyb;->b:Ljava/lang/String;
+
+    const-string v3, ""
+
+    invoke-virtual {v0, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_3
+
+    const/4 v0, 0x2
+
+    iget-object v3, p0, Loyb;->b:Ljava/lang/String;
+
+    invoke-static {v0, v3}, Lr63;->l(ILjava/lang/String;)I
+
+    move-result v0
+
+    add-int/2addr v2, v0
+
+    :cond_3
+    iget-wide v3, p0, Loyb;->c:J
+
+    const-wide/16 v5, 0x0
+
+    cmp-long v0, v3, v5
+
+    if-eqz v0, :cond_4
+
+    const/4 v0, 0x3
+
+    invoke-static {v0, v3, v4}, Lr63;->h(IJ)I
+
+    move-result v0
+
+    add-int/2addr v2, v0
+
+    :cond_4
+    iget-wide v3, p0, Loyb;->d:J
+
+    cmp-long v0, v3, v5
+
+    if-eqz v0, :cond_5
+
+    const/4 v0, 0x4
+
+    invoke-static {v0, v3, v4}, Lr63;->h(IJ)I
+
+    move-result v0
+
+    add-int/2addr v2, v0
+
+    :cond_5
+    iget-wide v3, p0, Loyb;->e:J
+
+    cmp-long v0, v3, v5
+
+    if-eqz v0, :cond_6
+
+    const/4 v0, 0x5
+
+    invoke-static {v0, v3, v4}, Lr63;->h(IJ)I
+
+    move-result v0
+
+    add-int/2addr v2, v0
+
+    :cond_6
+    iget-object v0, p0, Loyb;->f:[Lnyb;
+
+    if-eqz v0, :cond_8
+
+    array-length v0, v0
+
+    if-lez v0, :cond_8
+
+    :goto_1
+    iget-object v0, p0, Loyb;->f:[Lnyb;
+
+    array-length v3, v0
+
+    if-ge v1, v3, :cond_8
+
+    aget-object v0, v0, v1
+
+    if-eqz v0, :cond_7
+
+    const/4 v3, 0x6
+
+    invoke-static {v3, v0}, Lr63;->i(ILj29;)I
+
+    move-result v0
+
+    add-int/2addr v0, v2
+
+    move v2, v0
+
+    :cond_7
+    add-int/lit8 v1, v1, 0x1
+
+    goto :goto_1
+
+    :cond_8
+    iget-object v0, p0, Loyb;->g:Lru/ok/tamtam/nano/Protos$Attaches;
+
+    if-eqz v0, :cond_9
+
+    const/4 v1, 0x7
+
+    invoke-static {v1, v0}, Lr63;->i(ILj29;)I
+
+    move-result v0
+
+    add-int/2addr v2, v0
+
+    :cond_9
+    iget-wide v0, p0, Loyb;->h:J
+
+    cmp-long v3, v0, v5
+
+    if-eqz v3, :cond_a
+
+    const/16 v3, 0x8
+
+    invoke-static {v3, v0, v1}, Lr63;->h(IJ)I
+
+    move-result v0
+
+    add-int/2addr v2, v0
+
+    :cond_a
+    iget-object v0, p0, Loyb;->i:Lru/ok/tamtam/nano/Protos$MessageElements;
+
+    if-eqz v0, :cond_b
+
+    const/16 v1, 0x9
+
+    invoke-static {v1, v0}, Lr63;->i(ILj29;)I
+
+    move-result v0
+
+    add-int/2addr v2, v0
+
+    :cond_b
+    iget-boolean v0, p0, Loyb;->j:Z
+
+    if-eqz v0, :cond_c
+
+    const/16 v0, 0xa
+
+    invoke-static {v0}, Lr63;->a(I)I
+
+    move-result v0
+
+    add-int/2addr v2, v0
+
+    :cond_c
+    iget-wide v0, p0, Loyb;->k:J
+
+    cmp-long p0, v0, v5
+
+    if-eqz p0, :cond_d
+
+    const/16 p0, 0xb
+
+    invoke-static {p0, v0, v1}, Lr63;->h(IJ)I
+
+    move-result p0
+
+    add-int/2addr p0, v2
+
+    return p0
+
+    :cond_d
+    return v2
+.end method
+
+.method public final mergeFrom(Lq63;)Lj29;
+    .locals 5
+
+    :cond_0
+    :goto_0
+    invoke-virtual {p1}, Lq63;->s()I
+
+    move-result v0
+
+    const/4 v1, 0x0
+
+    sparse-switch v0, :sswitch_data_0
+
+    invoke-virtual {p1, v0}, Lq63;->u(I)Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    goto/16 :goto_5
+
+    :sswitch_0
+    invoke-virtual {p1}, Lq63;->q()J
+
+    move-result-wide v0
+
+    iput-wide v0, p0, Loyb;->k:J
+
+    goto :goto_0
+
+    :sswitch_1
+    invoke-virtual {p1}, Lq63;->f()Z
+
+    move-result v0
+
+    iput-boolean v0, p0, Loyb;->j:Z
+
+    goto :goto_0
+
+    :sswitch_2
+    iget-object v0, p0, Loyb;->i:Lru/ok/tamtam/nano/Protos$MessageElements;
+
+    if-nez v0, :cond_1
+
+    new-instance v0, Lru/ok/tamtam/nano/Protos$MessageElements;
+
+    invoke-direct {v0}, Lru/ok/tamtam/nano/Protos$MessageElements;-><init>()V
+
+    iput-object v0, p0, Loyb;->i:Lru/ok/tamtam/nano/Protos$MessageElements;
+
+    :cond_1
+    iget-object v0, p0, Loyb;->i:Lru/ok/tamtam/nano/Protos$MessageElements;
+
+    invoke-virtual {p1, v0}, Lq63;->j(Lj29;)V
+
+    goto :goto_0
+
+    :sswitch_3
+    invoke-virtual {p1}, Lq63;->q()J
+
+    move-result-wide v0
+
+    iput-wide v0, p0, Loyb;->h:J
+
+    goto :goto_0
+
+    :sswitch_4
+    iget-object v0, p0, Loyb;->g:Lru/ok/tamtam/nano/Protos$Attaches;
+
+    if-nez v0, :cond_2
+
+    new-instance v0, Lru/ok/tamtam/nano/Protos$Attaches;
+
+    invoke-direct {v0}, Lru/ok/tamtam/nano/Protos$Attaches;-><init>()V
+
+    iput-object v0, p0, Loyb;->g:Lru/ok/tamtam/nano/Protos$Attaches;
+
+    :cond_2
+    iget-object v0, p0, Loyb;->g:Lru/ok/tamtam/nano/Protos$Attaches;
+
+    invoke-virtual {p1, v0}, Lq63;->j(Lj29;)V
+
+    goto :goto_0
+
+    :sswitch_5
+    const/16 v0, 0x32
+
+    invoke-static {p1, v0}, Lxnd;->F(Lq63;I)I
+
+    move-result v0
+
+    iget-object v2, p0, Loyb;->f:[Lnyb;
+
+    if-nez v2, :cond_3
+
+    move v3, v1
+
+    goto :goto_1
+
+    :cond_3
+    array-length v3, v2
+
+    :goto_1
+    add-int/2addr v0, v3
+
+    new-array v4, v0, [Lnyb;
+
+    if-eqz v3, :cond_4
+
+    invoke-static {v2, v1, v4, v1, v3}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
+
+    :cond_4
+    :goto_2
+    add-int/lit8 v1, v0, -0x1
+
+    if-ge v3, v1, :cond_5
+
+    new-instance v1, Lnyb;
+
+    invoke-direct {v1}, Lnyb;-><init>()V
+
+    aput-object v1, v4, v3
+
+    invoke-virtual {p1, v1}, Lq63;->j(Lj29;)V
+
+    invoke-virtual {p1}, Lq63;->s()I
+
+    add-int/lit8 v3, v3, 0x1
+
+    goto :goto_2
+
+    :cond_5
+    new-instance v0, Lnyb;
+
+    invoke-direct {v0}, Lnyb;-><init>()V
+
+    aput-object v0, v4, v3
+
+    invoke-virtual {p1, v0}, Lq63;->j(Lj29;)V
+
+    iput-object v4, p0, Loyb;->f:[Lnyb;
+
+    goto :goto_0
+
+    :sswitch_6
+    invoke-virtual {p1}, Lq63;->q()J
+
+    move-result-wide v0
+
+    iput-wide v0, p0, Loyb;->e:J
+
+    goto/16 :goto_0
+
+    :sswitch_7
+    invoke-virtual {p1}, Lq63;->q()J
+
+    move-result-wide v0
+
+    iput-wide v0, p0, Loyb;->d:J
+
+    goto/16 :goto_0
+
+    :sswitch_8
+    invoke-virtual {p1}, Lq63;->q()J
+
+    move-result-wide v0
+
+    iput-wide v0, p0, Loyb;->c:J
+
+    goto/16 :goto_0
+
+    :sswitch_9
+    invoke-virtual {p1}, Lq63;->r()Ljava/lang/String;
+
+    move-result-object v0
+
+    iput-object v0, p0, Loyb;->b:Ljava/lang/String;
+
+    goto/16 :goto_0
+
+    :sswitch_a
+    const/16 v0, 0xa
+
+    invoke-static {p1, v0}, Lxnd;->F(Lq63;I)I
+
+    move-result v0
+
+    iget-object v2, p0, Loyb;->a:[Lmyb;
+
+    if-nez v2, :cond_6
+
+    move v3, v1
+
+    goto :goto_3
+
+    :cond_6
+    array-length v3, v2
+
+    :goto_3
+    add-int/2addr v0, v3
+
+    new-array v4, v0, [Lmyb;
+
+    if-eqz v3, :cond_7
+
+    invoke-static {v2, v1, v4, v1, v3}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
+
+    :cond_7
+    :goto_4
+    add-int/lit8 v1, v0, -0x1
+
+    if-ge v3, v1, :cond_8
+
+    new-instance v1, Lmyb;
+
+    invoke-direct {v1}, Lmyb;-><init>()V
+
+    aput-object v1, v4, v3
+
+    invoke-virtual {p1, v1}, Lq63;->j(Lj29;)V
+
+    invoke-virtual {p1}, Lq63;->s()I
+
+    add-int/lit8 v3, v3, 0x1
+
+    goto :goto_4
+
+    :cond_8
+    new-instance v0, Lmyb;
+
+    invoke-direct {v0}, Lmyb;-><init>()V
+
+    aput-object v0, v4, v3
+
+    invoke-virtual {p1, v0}, Lq63;->j(Lj29;)V
+
+    iput-object v4, p0, Loyb;->a:[Lmyb;
+
+    goto/16 :goto_0
+
+    :goto_5
+    :sswitch_b
+    return-object p0
+
+    nop
+
+    :sswitch_data_0
+    .sparse-switch
+        0x0 -> :sswitch_b
+        0xa -> :sswitch_a
+        0x12 -> :sswitch_9
+        0x18 -> :sswitch_8
+        0x20 -> :sswitch_7
+        0x28 -> :sswitch_6
+        0x32 -> :sswitch_5
+        0x3a -> :sswitch_4
+        0x40 -> :sswitch_3
+        0x4a -> :sswitch_2
+        0x50 -> :sswitch_1
+        0x58 -> :sswitch_0
+    .end sparse-switch
+.end method
+
+.method public final writeTo(Lr63;)V
+    .locals 6
+
+    iget-object v0, p0, Loyb;->a:[Lmyb;
+
+    const/4 v1, 0x0
+
+    if-eqz v0, :cond_1
+
+    array-length v0, v0
+
+    if-lez v0, :cond_1
+
+    move v0, v1
+
+    :goto_0
+    iget-object v2, p0, Loyb;->a:[Lmyb;
+
+    array-length v3, v2
+
+    if-ge v0, v3, :cond_1
+
+    aget-object v2, v2, v0
+
+    if-eqz v2, :cond_0
+
+    const/4 v3, 0x1
+
+    invoke-virtual {p1, v3, v2}, Lr63;->y(ILj29;)V
+
+    :cond_0
+    add-int/lit8 v0, v0, 0x1
+
+    goto :goto_0
+
+    :cond_1
+    iget-object v0, p0, Loyb;->b:Ljava/lang/String;
+
+    const-string v2, ""
+
+    invoke-virtual {v0, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_2
+
+    const/4 v0, 0x2
+
+    iget-object v2, p0, Loyb;->b:Ljava/lang/String;
+
+    invoke-virtual {p1, v0, v2}, Lr63;->E(ILjava/lang/String;)V
+
+    :cond_2
+    iget-wide v2, p0, Loyb;->c:J
+
+    const-wide/16 v4, 0x0
+
+    cmp-long v0, v2, v4
+
+    if-eqz v0, :cond_3
+
+    const/4 v0, 0x3
+
+    invoke-virtual {p1, v0, v2, v3}, Lr63;->x(IJ)V
+
+    :cond_3
+    iget-wide v2, p0, Loyb;->d:J
+
+    cmp-long v0, v2, v4
+
+    if-eqz v0, :cond_4
+
+    const/4 v0, 0x4
+
+    invoke-virtual {p1, v0, v2, v3}, Lr63;->x(IJ)V
+
+    :cond_4
+    iget-wide v2, p0, Loyb;->e:J
+
+    cmp-long v0, v2, v4
+
+    if-eqz v0, :cond_5
+
+    const/4 v0, 0x5
+
+    invoke-virtual {p1, v0, v2, v3}, Lr63;->x(IJ)V
+
+    :cond_5
+    iget-object v0, p0, Loyb;->f:[Lnyb;
+
+    if-eqz v0, :cond_7
+
+    array-length v0, v0
+
+    if-lez v0, :cond_7
+
+    :goto_1
+    iget-object v0, p0, Loyb;->f:[Lnyb;
+
+    array-length v2, v0
+
+    if-ge v1, v2, :cond_7
+
+    aget-object v0, v0, v1
+
+    if-eqz v0, :cond_6
+
+    const/4 v2, 0x6
+
+    invoke-virtual {p1, v2, v0}, Lr63;->y(ILj29;)V
+
+    :cond_6
+    add-int/lit8 v1, v1, 0x1
+
+    goto :goto_1
+
+    :cond_7
+    iget-object v0, p0, Loyb;->g:Lru/ok/tamtam/nano/Protos$Attaches;
+
+    if-eqz v0, :cond_8
+
+    const/4 v1, 0x7
+
+    invoke-virtual {p1, v1, v0}, Lr63;->y(ILj29;)V
+
+    :cond_8
+    iget-wide v0, p0, Loyb;->h:J
+
+    cmp-long v2, v0, v4
+
+    if-eqz v2, :cond_9
+
+    const/16 v2, 0x8
+
+    invoke-virtual {p1, v2, v0, v1}, Lr63;->x(IJ)V
+
+    :cond_9
+    iget-object v0, p0, Loyb;->i:Lru/ok/tamtam/nano/Protos$MessageElements;
+
+    if-eqz v0, :cond_a
+
+    const/16 v1, 0x9
+
+    invoke-virtual {p1, v1, v0}, Lr63;->y(ILj29;)V
+
+    :cond_a
+    iget-boolean v0, p0, Loyb;->j:Z
+
+    if-eqz v0, :cond_b
+
+    const/16 v1, 0xa
+
+    invoke-virtual {p1, v1, v0}, Lr63;->r(IZ)V
+
+    :cond_b
+    iget-wide v0, p0, Loyb;->k:J
+
+    cmp-long p0, v0, v4
+
+    if-eqz p0, :cond_c
+
+    const/16 p0, 0xb
+
+    invoke-virtual {p1, p0, v0, v1}, Lr63;->x(IJ)V
+
+    :cond_c
+    return-void
+.end method

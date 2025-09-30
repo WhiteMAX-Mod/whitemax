@@ -1,213 +1,132 @@
-.class public final Lzg1;
+.class public interface abstract Lzg1;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:Ljava/lang/Integer;
-
-.field public final b:Llg9;
-
-.field public final c:Ljava/lang/CharSequence;
-
-
-# direct methods
-.method public constructor <init>(Ljava/lang/Integer;Llg9;Ljava/lang/CharSequence;)V
+# virtual methods
+.method public a()Z
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-interface {p0}, Lzg1;->s()Lq5g;
 
-    iput-object p1, p0, Lzg1;->a:Ljava/lang/Integer;
+    move-result-object p0
 
-    iput-object p2, p0, Lzg1;->b:Llg9;
+    iget-boolean p0, p0, Lq5g;->a:Z
 
-    iput-object p3, p0, Lzg1;->c:Ljava/lang/CharSequence;
-
-    return-void
+    return p0
 .end method
 
-.method public static a(Lzg1;Ljava/lang/Integer;Llg9;Ljava/lang/String;I)Lzg1;
+.method public abstract b()Z
+.end method
+
+.method public abstract e()Z
+.end method
+
+.method public abstract f()Z
+.end method
+
+.method public abstract g()Z
+.end method
+
+.method public abstract getId()Lxg1;
+.end method
+
+.method public abstract h()Z
+.end method
+
+.method public abstract i()Z
+.end method
+
+.method public abstract isConnected()Z
+.end method
+
+.method public isScreenCaptureEnabled()Z
+    .locals 0
+
+    invoke-interface {p0}, Lzg1;->p()Lq5g;
+
+    move-result-object p0
+
+    iget-boolean p0, p0, Lq5g;->a:Z
+
+    return p0
+.end method
+
+.method public abstract k()Z
+.end method
+
+.method public l()Z
     .locals 1
 
-    and-int/lit8 v0, p4, 0x1
+    invoke-interface {p0}, Lzg1;->a()Z
 
-    if-eqz v0, :cond_0
+    move-result v0
 
-    iget-object p1, p0, Lzg1;->a:Ljava/lang/Integer;
+    if-nez v0, :cond_1
 
-    :cond_0
-    and-int/lit8 v0, p4, 0x2
-
-    if-eqz v0, :cond_1
-
-    iget-object p2, p0, Lzg1;->b:Llg9;
-
-    :cond_1
-    and-int/lit8 p4, p4, 0x4
-
-    if-eqz p4, :cond_2
-
-    iget-object p3, p0, Lzg1;->c:Ljava/lang/CharSequence;
-
-    :cond_2
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    new-instance p0, Lzg1;
-
-    invoke-direct {p0, p1, p2, p3}, Lzg1;-><init>(Ljava/lang/Integer;Llg9;Ljava/lang/CharSequence;)V
-
-    return-object p0
-.end method
-
-
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
-
-    const/4 v0, 0x1
-
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    instance-of v1, p1, Lzg1;
-
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
-    check-cast p1, Lzg1;
-
-    iget-object v1, p0, Lzg1;->a:Ljava/lang/Integer;
-
-    iget-object v3, p1, Lzg1;->a:Ljava/lang/Integer;
-
-    invoke-static {v1, v3}, Lxq7;->d(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_2
-
-    return v2
-
-    :cond_2
-    iget-object v1, p0, Lzg1;->b:Llg9;
-
-    iget-object v3, p1, Lzg1;->b:Llg9;
-
-    invoke-static {v1, v3}, Lxq7;->d(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_3
-
-    return v2
-
-    :cond_3
-    iget-object p0, p0, Lzg1;->c:Ljava/lang/CharSequence;
-
-    iget-object p1, p1, Lzg1;->c:Ljava/lang/CharSequence;
-
-    invoke-static {p0, p1}, Lxq7;->d(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-interface {p0}, Lzg1;->isScreenCaptureEnabled()Z
 
     move-result p0
 
-    if-nez p0, :cond_4
-
-    return v2
-
-    :cond_4
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 3
-
-    const/4 v0, 0x0
-
-    iget-object v1, p0, Lzg1;->a:Ljava/lang/Integer;
-
-    if-nez v1, :cond_0
-
-    move v1, v0
+    if-eqz p0, :cond_0
 
     goto :goto_0
 
     :cond_0
-    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
+    const/4 p0, 0x0
 
-    move-result v1
-
-    :goto_0
-    mul-int/lit8 v1, v1, 0x1f
-
-    iget-object v2, p0, Lzg1;->b:Llg9;
-
-    invoke-virtual {v2}, Llg9;->hashCode()I
-
-    move-result v2
-
-    add-int/2addr v2, v1
-
-    mul-int/lit8 v2, v2, 0x1f
-
-    iget-object p0, p0, Lzg1;->c:Ljava/lang/CharSequence;
-
-    if-nez p0, :cond_1
-
-    goto :goto_1
+    return p0
 
     :cond_1
-    invoke-virtual {p0}, Ljava/lang/Object;->hashCode()I
+    :goto_0
+    const/4 p0, 0x1
+
+    return p0
+.end method
+
+.method public m()Z
+    .locals 1
+
+    invoke-interface {p0}, Lzg1;->i()Z
 
     move-result v0
 
-    :goto_1
-    add-int/2addr v2, v0
+    if-nez v0, :cond_1
 
-    return v2
+    invoke-interface {p0}, Lzg1;->e()Z
+
+    move-result p0
+
+    if-eqz p0, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    const/4 p0, 0x0
+
+    return p0
+
+    :cond_1
+    :goto_0
+    const/4 p0, 0x1
+
+    return p0
 .end method
 
-.method public final toString()Ljava/lang/String;
-    .locals 2
+.method public abstract n()Z
+.end method
 
-    new-instance v0, Ljava/lang/StringBuilder;
+.method public abstract o()Z
+.end method
 
-    const-string v1, "State(selectedEmoji="
+.method public abstract p()Lq5g;
+.end method
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+.method public abstract r()I
+.end method
 
-    iget-object v1, p0, Lzg1;->a:Ljava/lang/Integer;
+.method public abstract s()Lq5g;
+.end method
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", selectedReasons="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lzg1;->b:Llg9;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", otherReasonText="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object p0, p0, Lzg1;->c:Ljava/lang/CharSequence;
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string p0, ")"
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
+.method public abstract t()Z
 .end method

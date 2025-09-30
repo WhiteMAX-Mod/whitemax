@@ -1,150 +1,126 @@
 .class public final Lk80;
-.super Ljava/lang/Object;
+.super Lr66;
 .source "SourceFile"
 
 # interfaces
-.implements Lqw9;
+.implements Ljava/lang/Runnable;
 
 
-# static fields
-.field public static final a:Lk80;
+# instance fields
+.field public X:I
 
-.field public static final b:Lte5;
+.field public Y:Z
 
-.field public static final c:Lte5;
+.field public Z:F
 
-.field public static final d:Lte5;
-
-.field public static final e:Lte5;
-
-.field public static final f:Lte5;
-
-.field public static final g:Lte5;
-
-.field public static final h:Lte5;
-
-
-# direct methods
-.method static constructor <clinit>()V
-    .locals 1
-
-    new-instance v0, Lk80;
-
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    sput-object v0, Lk80;->a:Lk80;
-
-    const-string v0, "eventTimeMs"
-
-    invoke-static {v0}, Lte5;->a(Ljava/lang/String;)Lte5;
-
-    move-result-object v0
-
-    sput-object v0, Lk80;->b:Lte5;
-
-    const-string v0, "eventCode"
-
-    invoke-static {v0}, Lte5;->a(Ljava/lang/String;)Lte5;
-
-    move-result-object v0
-
-    sput-object v0, Lk80;->c:Lte5;
-
-    const-string v0, "eventUptimeMs"
-
-    invoke-static {v0}, Lte5;->a(Ljava/lang/String;)Lte5;
-
-    move-result-object v0
-
-    sput-object v0, Lk80;->d:Lte5;
-
-    const-string v0, "sourceExtension"
-
-    invoke-static {v0}, Lte5;->a(Ljava/lang/String;)Lte5;
-
-    move-result-object v0
-
-    sput-object v0, Lk80;->e:Lte5;
-
-    const-string v0, "sourceExtensionJsonProto3"
-
-    invoke-static {v0}, Lte5;->a(Ljava/lang/String;)Lte5;
-
-    move-result-object v0
-
-    sput-object v0, Lk80;->f:Lte5;
-
-    const-string v0, "timezoneOffsetSeconds"
-
-    invoke-static {v0}, Lte5;->a(Ljava/lang/String;)Lte5;
-
-    move-result-object v0
-
-    sput-object v0, Lk80;->g:Lte5;
-
-    const-string v0, "networkConnectionInfo"
-
-    invoke-static {v0}, Lte5;->a(Ljava/lang/String;)Lte5;
-
-    move-result-object v0
-
-    sput-object v0, Lk80;->h:Lte5;
-
-    return-void
-.end method
+.field public r0:Z
 
 
 # virtual methods
-.method public final a(Ljava/lang/Object;Ljava/lang/Object;)V
-    .locals 2
+.method public final draw(Landroid/graphics/Canvas;)V
+    .locals 7
 
-    check-cast p1, Lms7;
+    invoke-virtual {p1}, Landroid/graphics/Canvas;->save()I
 
-    check-cast p2, Lrw9;
+    move-result v0
 
-    check-cast p1, Lpa0;
+    invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->getBounds()Landroid/graphics/Rect;
 
-    iget-wide v0, p1, Lpa0;->a:J
+    move-result-object v1
 
-    sget-object p0, Lk80;->b:Lte5;
+    iget v2, v1, Landroid/graphics/Rect;->right:I
 
-    invoke-interface {p2, p0, v0, v1}, Lrw9;->e(Lte5;J)Lrw9;
+    iget v3, v1, Landroid/graphics/Rect;->left:I
 
-    sget-object p0, Lk80;->c:Lte5;
+    sub-int/2addr v2, v3
 
-    iget-object v0, p1, Lpa0;->b:Ljava/lang/Integer;
+    iget v4, v1, Landroid/graphics/Rect;->bottom:I
 
-    invoke-interface {p2, p0, v0}, Lrw9;->a(Lte5;Ljava/lang/Object;)Lrw9;
+    iget v1, v1, Landroid/graphics/Rect;->top:I
 
-    sget-object p0, Lk80;->d:Lte5;
+    sub-int/2addr v4, v1
 
-    iget-wide v0, p1, Lpa0;->c:J
+    iget v5, p0, Lk80;->Z:F
 
-    invoke-interface {p2, p0, v0, v1}, Lrw9;->e(Lte5;J)Lrw9;
+    iget-boolean v6, p0, Lk80;->Y:Z
 
-    sget-object p0, Lk80;->e:Lte5;
+    if-nez v6, :cond_0
 
-    iget-object v0, p1, Lpa0;->d:[B
+    const/high16 v6, 0x43b40000    # 360.0f
 
-    invoke-interface {p2, p0, v0}, Lrw9;->a(Lte5;Ljava/lang/Object;)Lrw9;
+    sub-float v5, v6, v5
 
-    sget-object p0, Lk80;->f:Lte5;
+    :cond_0
+    div-int/lit8 v2, v2, 0x2
 
-    iget-object v0, p1, Lpa0;->e:Ljava/lang/String;
+    add-int/2addr v2, v3
 
-    invoke-interface {p2, p0, v0}, Lrw9;->a(Lte5;Ljava/lang/Object;)Lrw9;
+    int-to-float v2, v2
 
-    sget-object p0, Lk80;->g:Lte5;
+    div-int/lit8 v4, v4, 0x2
 
-    iget-wide v0, p1, Lpa0;->f:J
+    add-int/2addr v4, v1
 
-    invoke-interface {p2, p0, v0, v1}, Lrw9;->e(Lte5;J)Lrw9;
+    int-to-float v1, v4
 
-    sget-object p0, Lk80;->h:Lte5;
+    invoke-virtual {p1, v5, v2, v1}, Landroid/graphics/Canvas;->rotate(FFF)V
 
-    iget-object p1, p1, Lpa0;->g:Lfm9;
+    invoke-super {p0, p1}, Lr66;->draw(Landroid/graphics/Canvas;)V
 
-    invoke-interface {p2, p0, p1}, Lrw9;->a(Lte5;Ljava/lang/Object;)Lrw9;
+    invoke-virtual {p1, v0}, Landroid/graphics/Canvas;->restoreToCount(I)V
+
+    iget-boolean p1, p0, Lk80;->r0:Z
+
+    if-nez p1, :cond_1
+
+    const/4 p1, 0x1
+
+    iput-boolean p1, p0, Lk80;->r0:Z
+
+    invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
+
+    move-result-wide v0
+
+    const-wide/16 v2, 0x14
+
+    add-long/2addr v0, v2
+
+    invoke-virtual {p0, p0, v0, v1}, Landroid/graphics/drawable/Drawable;->scheduleSelf(Ljava/lang/Runnable;J)V
+
+    :cond_1
+    return-void
+.end method
+
+.method public final run()V
+    .locals 3
+
+    const/4 v0, 0x0
+
+    iput-boolean v0, p0, Lk80;->r0:Z
+
+    iget v0, p0, Lk80;->Z:F
+
+    iget v1, p0, Lk80;->X:I
+
+    int-to-float v1, v1
+
+    const/high16 v2, 0x41a00000    # 20.0f
+
+    div-float/2addr v2, v1
+
+    const/high16 v1, 0x43b40000    # 360.0f
+
+    mul-float/2addr v2, v1
+
+    float-to-int v1, v2
+
+    int-to-float v1, v1
+
+    add-float/2addr v0, v1
+
+    iput v0, p0, Lk80;->Z:F
+
+    invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->invalidateSelf()V
 
     return-void
 .end method

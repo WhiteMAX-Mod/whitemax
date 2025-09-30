@@ -19,15 +19,15 @@
         "Lru/ok/android/externcalls/sdk/stat/start/ConversationStartedStat;",
         "",
         "Lkotlin/Function0;",
-        "Lf61;",
+        "Lv61;",
         "getEventualStatSender",
         "Lru/ok/android/externcalls/sdk/Conversation$CallType;",
         "callType",
-        "Lzre;",
+        "Ly5f;",
         "timeProvider",
         "<init>",
-        "(Lv56;Lru/ok/android/externcalls/sdk/Conversation$CallType;Lzre;)V",
-        "Le5f;",
+        "(Lzb6;Lru/ok/android/externcalls/sdk/Conversation$CallType;Ly5f;)V",
+        "Lylf;",
         "report",
         "()V",
         "",
@@ -36,9 +36,9 @@
         "getWarmupStatusString",
         "()Ljava/lang/String;",
         "onConversationStarted",
-        "Lv56;",
+        "Lzb6;",
         "Lru/ok/android/externcalls/sdk/Conversation$CallType;",
-        "Lzre;",
+        "Ly5f;",
         "",
         "isReported",
         "Z",
@@ -95,10 +95,10 @@
 # instance fields
 .field private final callType:Lru/ok/android/externcalls/sdk/Conversation$CallType;
 
-.field private final getEventualStatSender:Lv56;
+.field private final getEventualStatSender:Lzb6;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lv56;"
+            "Lzb6;"
         }
     .end annotation
 .end field
@@ -107,7 +107,7 @@
 
 .field private final startTimeMs:J
 
-.field private final timeProvider:Lzre;
+.field private final timeProvider:Ly5f;
 
 
 # direct methods
@@ -118,32 +118,32 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lru/ok/android/externcalls/sdk/stat/start/ConversationStartedStat$Companion;-><init>(Ll94;)V
+    invoke-direct {v0, v1}, Lru/ok/android/externcalls/sdk/stat/start/ConversationStartedStat$Companion;-><init>(Lld4;)V
 
     sput-object v0, Lru/ok/android/externcalls/sdk/stat/start/ConversationStartedStat;->Companion:Lru/ok/android/externcalls/sdk/stat/start/ConversationStartedStat$Companion;
 
     return-void
 .end method
 
-.method public constructor <init>(Lv56;Lru/ok/android/externcalls/sdk/Conversation$CallType;Lzre;)V
+.method public constructor <init>(Lzb6;Lru/ok/android/externcalls/sdk/Conversation$CallType;Ly5f;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lv56;",
+            "Lzb6;",
             "Lru/ok/android/externcalls/sdk/Conversation$CallType;",
-            "Lzre;",
+            "Ly5f;",
             ")V"
         }
     .end annotation
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lru/ok/android/externcalls/sdk/stat/start/ConversationStartedStat;->getEventualStatSender:Lv56;
+    iput-object p1, p0, Lru/ok/android/externcalls/sdk/stat/start/ConversationStartedStat;->getEventualStatSender:Lzb6;
 
     iput-object p2, p0, Lru/ok/android/externcalls/sdk/stat/start/ConversationStartedStat;->callType:Lru/ok/android/externcalls/sdk/Conversation$CallType;
 
-    iput-object p3, p0, Lru/ok/android/externcalls/sdk/stat/start/ConversationStartedStat;->timeProvider:Lzre;
+    iput-object p3, p0, Lru/ok/android/externcalls/sdk/stat/start/ConversationStartedStat;->timeProvider:Ly5f;
 
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
@@ -210,9 +210,9 @@
 .method private final report()V
     .locals 6
 
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/stat/start/ConversationStartedStat;->timeProvider:Lzre;
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/stat/start/ConversationStartedStat;->timeProvider:Ly5f;
 
-    check-cast v0, Lase;
+    check-cast v0, Lc0d;
 
     invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
@@ -224,13 +224,13 @@
 
     sub-long/2addr v0, v2
 
-    iget-object v2, p0, Lru/ok/android/externcalls/sdk/stat/start/ConversationStartedStat;->getEventualStatSender:Lv56;
+    iget-object v2, p0, Lru/ok/android/externcalls/sdk/stat/start/ConversationStartedStat;->getEventualStatSender:Lzb6;
 
-    invoke-interface {v2}, Lv56;->invoke()Ljava/lang/Object;
+    invoke-interface {v2}, Lzb6;->invoke()Ljava/lang/Object;
 
     move-result-object v2
 
-    check-cast v2, Lf61;
+    check-cast v2, Lv61;
 
     if-eqz v2, :cond_5
 
@@ -256,7 +256,7 @@
 
     move-result-object p0
 
-    invoke-static {p0}, Lq43;->e0([Ljava/lang/Object;)Ljava/util/List;
+    invoke-static {p0}, Lr73;->I([Ljava/lang/Object;)Ljava/util/List;
 
     move-result-object p0
 
@@ -284,7 +284,7 @@
 
     check-cast v5, Ljava/lang/String;
 
-    invoke-static {v5}, Lj8e;->J0(Ljava/lang/CharSequence;)Z
+    invoke-static {v5}, Ljme;->q0(Ljava/lang/CharSequence;)Z
 
     move-result v5
 
@@ -299,7 +299,7 @@
 
     const/16 v4, 0xa
 
-    invoke-static {v3, v4}, Lr43;->k0(Ljava/lang/Iterable;I)I
+    invoke-static {v3, v4}, Ls73;->O(Ljava/lang/Iterable;I)I
 
     move-result v4
 
@@ -384,11 +384,11 @@
     invoke-virtual {v1, v3, p0}, Lru/ok/android/externcalls/analytics/events/EventItemsMap;->set(Ljava/lang/String;Ljava/lang/String;)Lru/ok/android/externcalls/analytics/events/EventItemsMap;
 
     :cond_4
-    check-cast v2, Lg61;
+    check-cast v2, Lw61;
 
     const-string p0, "call_start"
 
-    invoke-virtual {v2, p0, v0, v1}, Lg61;->c(Ljava/lang/String;Lru/ok/android/externcalls/analytics/events/EventItemValue;Lru/ok/android/externcalls/analytics/events/EventItemsMap;)V
+    invoke-virtual {v2, p0, v0, v1}, Lw61;->c(Ljava/lang/String;Lru/ok/android/externcalls/analytics/events/EventItemValue;Lru/ok/android/externcalls/analytics/events/EventItemsMap;)V
 
     :cond_5
     return-void

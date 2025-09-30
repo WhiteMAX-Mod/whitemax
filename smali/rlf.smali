@@ -1,120 +1,80 @@
-.class public final synthetic Lrlf;
-.super Ljava/lang/Object;
+.class public final Lrlf;
+.super Ls04;
 .source "SourceFile"
 
-# interfaces
-.implements Ljava/lang/Runnable;
 
-
-# instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Llgb;
+# static fields
+.field public static final a:Lrlf;
 
 
 # direct methods
-.method public synthetic constructor <init>(Llgb;JI)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    .line 1
-    const/4 p2, 0x0
+    new-instance v0, Lrlf;
 
-    iput p2, p0, Lrlf;->a:I
+    invoke-direct {v0}, Ls04;-><init>()V
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lrlf;->b:Llgb;
-
-    return-void
-.end method
-
-.method public synthetic constructor <init>(Llgb;Ljava/lang/Exception;)V
-    .locals 0
-
-    .line 2
-    const/4 p2, 0x1
-
-    iput p2, p0, Lrlf;->a:I
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lrlf;->b:Llgb;
+    sput-object v0, Lrlf;->a:Lrlf;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
-    .locals 3
+.method public final dispatch(Lq04;Ljava/lang/Runnable;)V
+    .locals 0
 
-    iget v0, p0, Lrlf;->a:I
+    sget-object p0, Lzxg;->b:Lzw9;
 
-    iget-object p0, p0, Lrlf;->b:Llgb;
+    invoke-interface {p1, p0}, Lq04;->get(Lp04;)Lo04;
 
-    packed-switch v0, :pswitch_data_0
+    move-result-object p0
 
-    iget-object p0, p0, Llgb;->c:Ljava/lang/Object;
+    check-cast p0, Lzxg;
 
-    check-cast p0, Lb75;
+    if-eqz p0, :cond_0
 
-    sget v0, Lpaf;->a:I
+    const/4 p1, 0x1
 
-    iget-object p0, p0, Lb75;->a:Lh75;
-
-    iget-object p0, p0, Lh75;->z0:Lv74;
-
-    invoke-virtual {p0}, Lv74;->H()Lzc;
-
-    move-result-object v0
-
-    new-instance v1, Ltv3;
-
-    const/16 v2, 0xc
-
-    invoke-direct {v1, v2}, Ltv3;-><init>(I)V
-
-    const/16 v2, 0x406
-
-    invoke-virtual {p0, v0, v2, v1}, Lv74;->I(Lzc;ILkm7;)V
+    iput-boolean p1, p0, Lzxg;->a:Z
 
     return-void
 
-    :pswitch_0
-    iget-object p0, p0, Llgb;->c:Ljava/lang/Object;
+    :cond_0
+    new-instance p0, Ljava/lang/UnsupportedOperationException;
 
-    check-cast p0, Lb75;
+    const-string p1, "Dispatchers.Unconfined.dispatch function can only be used by the yield function. If you wrap Unconfined dispatcher in your code, make sure you properly delegate isDispatchNeeded and dispatch calls."
 
-    sget v0, Lpaf;->a:I
+    invoke-direct {p0, p1}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
 
-    iget-object p0, p0, Lb75;->a:Lh75;
+    throw p0
+.end method
 
-    iget-object p0, p0, Lh75;->z0:Lv74;
+.method public final isDispatchNeeded(Lq04;)Z
+    .locals 0
 
-    iget-object v0, p0, Lv74;->o:Lq13;
+    const/4 p0, 0x0
 
-    iget-object v0, v0, Lq13;->e:Ljava/lang/Object;
+    return p0
+.end method
 
-    check-cast v0, Lfj8;
+.method public final limitedParallelism(ILjava/lang/String;)Ls04;
+    .locals 0
 
-    invoke-virtual {p0, v0}, Lv74;->c(Lfj8;)Lzc;
+    new-instance p0, Ljava/lang/UnsupportedOperationException;
 
-    move-result-object v0
+    const-string p1, "limitedParallelism is not supported for Dispatchers.Unconfined"
 
-    new-instance v1, Li74;
+    invoke-direct {p0, p1}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
 
-    const/4 v2, 0x4
+    throw p0
+.end method
 
-    invoke-direct {v1, v2}, Li74;-><init>(I)V
+.method public final toString()Ljava/lang/String;
+    .locals 0
 
-    const/16 v2, 0x3fd
+    const-string p0, "Dispatchers.Unconfined"
 
-    invoke-virtual {p0, v0, v2, v1}, Lv74;->I(Lzc;ILkm7;)V
-
-    return-void
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-object p0
 .end method

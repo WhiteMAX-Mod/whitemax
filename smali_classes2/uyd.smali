@@ -1,110 +1,106 @@
-.class public final Luyd;
-.super Lqde;
+.class public final synthetic Luyd;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Ll66;
+.implements Landroid/view/View$OnFocusChangeListener;
 
 
 # instance fields
-.field public X:I
+.field public final synthetic a:Lwyd;
 
-.field public final synthetic Y:J
+.field public final synthetic b:Landroidx/appcompat/widget/AppCompatEditText;
 
 
 # direct methods
-.method public constructor <init>(JLkotlin/coroutines/Continuation;)V
+.method public synthetic constructor <init>(Lwyd;Landroidx/appcompat/widget/AppCompatEditText;)V
     .locals 0
 
-    iput-wide p1, p0, Luyd;->Y:J
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 p1, 0x2
+    iput-object p1, p0, Luyd;->a:Lwyd;
 
-    invoke-direct {p0, p1, p3}, Lqde;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-object p2, p0, Luyd;->b:Landroidx/appcompat/widget/AppCompatEditText;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final onFocusChange(Landroid/view/View;Z)V
+    .locals 3
 
-    check-cast p1, Lox3;
+    iget-object p1, p0, Luyd;->a:Lwyd;
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    iget-object v0, p1, Lwyd;->J0:Landroid/widget/ImageView;
 
-    invoke-virtual {p0, p1, p2}, Luyd;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    const/16 v1, 0x8
+
+    const/4 v2, 0x0
+
+    if-eqz p2, :cond_1
+
+    iget-object p0, p0, Luyd;->b:Landroidx/appcompat/widget/AppCompatEditText;
+
+    invoke-virtual {p0}, Landroidx/appcompat/widget/AppCompatEditText;->getText()Landroid/text/Editable;
 
     move-result-object p0
 
-    check-cast p0, Luyd;
+    if-eqz p0, :cond_1
 
-    sget-object p1, Le5f;->a:Le5f;
+    invoke-interface {p0}, Ljava/lang/CharSequence;->length()I
 
-    invoke-virtual {p0, p1}, Luyd;->o(Ljava/lang/Object;)Ljava/lang/Object;
+    move-result p0
 
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
-
-    new-instance p1, Luyd;
-
-    iget-wide v0, p0, Luyd;->Y:J
-
-    invoke-direct {p1, v0, v1, p2}, Luyd;-><init>(JLkotlin/coroutines/Continuation;)V
-
-    return-object p1
-.end method
-
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 2
-
-    iget v0, p0, Luyd;->X:I
-
-    const/4 v1, 0x1
-
-    if-eqz v0, :cond_1
-
-    if-ne v0, v1, :cond_0
-
-    invoke-static {p1}, Lsgg;->Z(Ljava/lang/Object;)V
+    if-nez p0, :cond_0
 
     goto :goto_0
 
     :cond_0
-    new-instance p0, Ljava/lang/IllegalStateException;
+    move p0, v2
 
-    const-string p1, "call to \'resume\' before \'invoke\' with coroutine"
-
-    invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p0
+    goto :goto_1
 
     :cond_1
-    invoke-static {p1}, Lsgg;->Z(Ljava/lang/Object;)V
+    :goto_0
+    move p0, v1
 
-    iput v1, p0, Luyd;->X:I
+    :goto_1
+    invoke-virtual {v0, p0}, Landroid/view/View;->setVisibility(I)V
 
-    iget-wide v0, p0, Luyd;->Y:J
+    iget-object p0, p1, Lwyd;->E0:Lqe5;
 
-    invoke-static {v0, v1, p0}, Lq14;->t(JLkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    instance-of v0, p0, Lryd;
 
-    move-result-object p0
+    if-eqz v0, :cond_4
 
-    sget-object p1, Lpx3;->a:Lpx3;
+    iget-object p1, p1, Lwyd;->K0:Landroid/widget/ImageView;
 
-    if-ne p0, p1, :cond_2
+    if-nez p2, :cond_3
 
-    return-object p1
+    if-eqz p0, :cond_2
+
+    check-cast p0, Lryd;
+
+    goto :goto_2
 
     :cond_2
-    :goto_0
-    sget-object p0, Le5f;->a:Le5f;
+    const/4 p0, 0x0
 
-    return-object p0
+    :goto_2
+    if-eqz p0, :cond_3
+
+    iget-boolean p0, p0, Lryd;->f:Z
+
+    const/4 p2, 0x1
+
+    if-ne p0, p2, :cond_3
+
+    move v1, v2
+
+    :cond_3
+    invoke-virtual {p1, v1}, Landroid/view/View;->setVisibility(I)V
+
+    :cond_4
+    return-void
 .end method

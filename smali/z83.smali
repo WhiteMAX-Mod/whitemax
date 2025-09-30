@@ -1,152 +1,282 @@
-.class public final synthetic Lz83;
-.super Ljava/lang/Object;
+.class public final Lz83;
+.super Lrz6;
 .source "SourceFile"
 
-# interfaces
-.implements Lx64;
+
+# static fields
+.field public static final CREATOR:Landroid/os/Parcelable$Creator;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroid/os/Parcelable$Creator<",
+            "Lz83;",
+            ">;"
+        }
+    .end annotation
+.end field
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final b:Ljava/lang/String;
 
-.field public final synthetic b:J
+.field public final c:Ljava/lang/String;
+
+.field public final o:Ljava/lang/String;
 
 
 # direct methods
-.method public synthetic constructor <init>(JI)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 2
 
-    iput p3, p0, Lz83;->a:I
+    new-instance v0, Lz7;
 
-    iput-wide p1, p0, Lz83;->b:J
+    const/16 v1, 0x17
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {v0, v1}, Lz7;-><init>(I)V
+
+    sput-object v0, Lz83;->CREATOR:Landroid/os/Parcelable$Creator;
+
+    return-void
+.end method
+
+.method public constructor <init>(Landroid/os/Parcel;)V
+    .locals 2
+
+    .line 5
+    const-string v0, "COMM"
+
+    invoke-direct {p0, v0}, Lrz6;-><init>(Ljava/lang/String;)V
+
+    .line 6
+    invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
+
+    move-result-object v0
+
+    sget v1, Llrf;->a:I
+
+    iput-object v0, p0, Lz83;->b:Ljava/lang/String;
+
+    .line 7
+    invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lz83;->c:Ljava/lang/String;
+
+    .line 8
+    invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lz83;->o:Ljava/lang/String;
+
+    return-void
+.end method
+
+.method public constructor <init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    .locals 1
+
+    .line 1
+    const-string v0, "COMM"
+
+    invoke-direct {p0, v0}, Lrz6;-><init>(Ljava/lang/String;)V
+
+    .line 2
+    iput-object p1, p0, Lz83;->b:Ljava/lang/String;
+
+    .line 3
+    iput-object p2, p0, Lz83;->c:Ljava/lang/String;
+
+    .line 4
+    iput-object p3, p0, Lz83;->o:Ljava/lang/String;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Ljava/lang/Object;
+.method public final equals(Ljava/lang/Object;)Z
     .locals 4
 
-    iget v0, p0, Lz83;->a:I
+    const/4 v0, 0x1
 
-    packed-switch v0, :pswitch_data_0
+    if-ne p0, p1, :cond_0
 
-    new-instance v0, Lone/me/webapp/settings/WebAppSettingsScreen;
+    return v0
 
-    iget-wide v1, p0, Lz83;->b:J
+    :cond_0
+    const/4 v1, 0x0
 
-    invoke-direct {v0, v1, v2}, Lone/me/webapp/settings/WebAppSettingsScreen;-><init>(J)V
+    if-eqz p1, :cond_2
 
-    return-object v0
+    const-class v2, Lz83;
 
-    :pswitch_0
-    new-instance v0, Lone/me/stickerssettings/stickersscreen/StickersScreen;
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    sget-object v1, Ll3e;->o:Ll3e;
+    move-result-object v3
 
-    iget-wide v2, p0, Lz83;->b:J
+    if-eq v2, v3, :cond_1
 
-    invoke-direct {v0, v1, v2, v3}, Lone/me/stickerssettings/stickersscreen/StickersScreen;-><init>(Ll3e;J)V
+    goto :goto_0
 
-    return-object v0
+    :cond_1
+    check-cast p1, Lz83;
 
-    :pswitch_1
-    new-instance v0, Lone/me/startconversation/channel/PickSubscribersScreen;
+    iget-object v2, p0, Lz83;->c:Ljava/lang/String;
 
-    iget-wide v1, p0, Lz83;->b:J
+    iget-object v3, p1, Lz83;->c:Ljava/lang/String;
 
-    invoke-direct {v0, v1, v2}, Lone/me/startconversation/channel/PickSubscribersScreen;-><init>(J)V
+    invoke-static {v2, v3}, Llrf;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    return-object v0
+    move-result v2
 
-    :pswitch_2
-    new-instance v0, Lone/me/profileedit/screens/memberpermissions/ProfileMemberPermissionsScreen;
+    if-eqz v2, :cond_2
 
-    iget-wide v1, p0, Lz83;->b:J
+    iget-object v2, p0, Lz83;->b:Ljava/lang/String;
 
-    invoke-direct {v0, v1, v2}, Lone/me/profileedit/screens/memberpermissions/ProfileMemberPermissionsScreen;-><init>(J)V
+    iget-object v3, p1, Lz83;->b:Ljava/lang/String;
 
-    return-object v0
+    invoke-static {v2, v3}, Llrf;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    :pswitch_3
-    new-instance v0, Lone/me/profile/screens/addadmins/AddChatAdminsScreen;
+    move-result v2
 
-    iget-wide v1, p0, Lz83;->b:J
+    if-eqz v2, :cond_2
 
-    invoke-direct {v0, v1, v2}, Lone/me/profile/screens/addadmins/AddChatAdminsScreen;-><init>(J)V
+    iget-object p0, p0, Lz83;->o:Ljava/lang/String;
 
-    return-object v0
+    iget-object p1, p1, Lz83;->o:Ljava/lang/String;
 
-    :pswitch_4
-    new-instance v0, Lone/me/profile/screens/invite/ProfileInviteScreen;
+    invoke-static {p0, p1}, Llrf;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    iget-wide v1, p0, Lz83;->b:J
+    move-result p0
 
-    invoke-direct {v0, v1, v2}, Lone/me/profile/screens/invite/ProfileInviteScreen;-><init>(J)V
+    if-eqz p0, :cond_2
 
-    return-object v0
+    return v0
 
-    :pswitch_5
-    new-instance v0, Lone/me/profile/screens/media/ChatMediaTabWidget;
+    :cond_2
+    :goto_0
+    return v1
+.end method
 
-    iget-wide v1, p0, Lz83;->b:J
+.method public final hashCode()I
+    .locals 3
 
-    invoke-direct {v0, v1, v2}, Lone/me/profile/screens/media/ChatMediaTabWidget;-><init>(J)V
+    const/4 v0, 0x0
 
-    return-object v0
+    iget-object v1, p0, Lz83;->b:Ljava/lang/String;
 
-    :pswitch_6
-    new-instance v0, Lone/me/login/neuroavatars/NeuroAvatarsScreen;
+    if-eqz v1, :cond_0
 
-    iget-wide v1, p0, Lz83;->b:J
+    invoke-virtual {v1}, Ljava/lang/String;->hashCode()I
 
-    invoke-direct {v0, v1, v2}, Lone/me/login/neuroavatars/NeuroAvatarsScreen;-><init>(J)V
+    move-result v1
 
-    return-object v0
+    goto :goto_0
 
-    :pswitch_7
-    new-instance v0, Lone/me/folders/pickerfolders/FoldersPickerScreen;
+    :cond_0
+    move v1, v0
 
-    iget-wide v1, p0, Lz83;->b:J
+    :goto_0
+    const/16 v2, 0x20f
 
-    invoke-direct {v0, v1, v2}, Lone/me/folders/pickerfolders/FoldersPickerScreen;-><init>(J)V
+    add-int/2addr v2, v1
 
-    return-object v0
+    mul-int/lit8 v2, v2, 0x1f
 
-    :pswitch_8
-    new-instance v0, Lone/me/folders/edit/FolderEditScreen;
+    iget-object v1, p0, Lz83;->c:Ljava/lang/String;
 
-    iget-wide v1, p0, Lz83;->b:J
+    if-eqz v1, :cond_1
 
-    invoke-direct {v0, v1, v2}, Lone/me/folders/edit/FolderEditScreen;-><init>(J)V
+    invoke-virtual {v1}, Ljava/lang/String;->hashCode()I
 
-    return-object v0
+    move-result v1
 
-    :pswitch_9
-    new-instance v0, Lone/me/complaintbottomsheet/ComplaintBottomSheet;
+    goto :goto_1
 
-    iget-wide v1, p0, Lz83;->b:J
+    :cond_1
+    move v1, v0
 
-    invoke-direct {v0, v1, v2}, Lone/me/complaintbottomsheet/ComplaintBottomSheet;-><init>(J)V
+    :goto_1
+    add-int/2addr v2, v1
 
-    return-object v0
+    mul-int/lit8 v2, v2, 0x1f
 
-    nop
+    iget-object p0, p0, Lz83;->o:Ljava/lang/String;
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_9
-        :pswitch_8
-        :pswitch_7
-        :pswitch_6
-        :pswitch_5
-        :pswitch_4
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    if-eqz p0, :cond_2
+
+    invoke-virtual {p0}, Ljava/lang/String;->hashCode()I
+
+    move-result v0
+
+    :cond_2
+    add-int/2addr v2, v0
+
+    return v2
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 4
+
+    const/16 v0, 0x19
+
+    iget-object v1, p0, Lrz6;->a:Ljava/lang/String;
+
+    invoke-static {v0, v1}, Lsq3;->f(ILjava/lang/String;)I
+
+    move-result v0
+
+    iget-object v2, p0, Lz83;->b:Ljava/lang/String;
+
+    invoke-static {v0, v2}, Lsq3;->f(ILjava/lang/String;)I
+
+    move-result v0
+
+    iget-object p0, p0, Lz83;->c:Ljava/lang/String;
+
+    invoke-static {v0, p0}, Lsq3;->f(ILjava/lang/String;)I
+
+    move-result v0
+
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    invoke-direct {v3, v0}, Ljava/lang/StringBuilder;-><init>(I)V
+
+    invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v0, ": language="
+
+    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v0, ", description="
+
+    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public final writeToParcel(Landroid/os/Parcel;I)V
+    .locals 0
+
+    iget-object p2, p0, Lrz6;->a:Ljava/lang/String;
+
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
+
+    iget-object p2, p0, Lz83;->b:Ljava/lang/String;
+
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
+
+    iget-object p0, p0, Lz83;->o:Ljava/lang/String;
+
+    invoke-virtual {p1, p0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
+
+    return-void
 .end method

@@ -1,293 +1,290 @@
-.class public Llx;
-.super Lsse;
+.class public abstract Llx;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final h:J
-
-.field public static final i:J
-
-.field public static j:Llx;
-
-
 # instance fields
-.field public e:Z
+.field public final synthetic a:I
 
-.field public f:Llx;
-
-.field public g:J
+.field public b:I
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
+.method public synthetic constructor <init>(I)V
+    .locals 0
 
-    sget-object v0, Ljava/util/concurrent/TimeUnit;->SECONDS:Ljava/util/concurrent/TimeUnit;
+    .line 1
+    iput p1, p0, Llx;->a:I
 
-    const-wide/16 v1, 0x3c
-
-    invoke-virtual {v0, v1, v2}, Ljava/util/concurrent/TimeUnit;->toMillis(J)J
-
-    move-result-wide v0
-
-    sput-wide v0, Llx;->h:J
-
-    sget-object v2, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;
-
-    invoke-virtual {v2, v0, v1}, Ljava/util/concurrent/TimeUnit;->toNanos(J)J
-
-    move-result-wide v0
-
-    sput-wide v0, Llx;->i:J
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
+.end method
+
+.method public synthetic constructor <init>(II)V
+    .locals 0
+
+    .line 2
+    iput p2, p0, Llx;->a:I
+
+    iput p1, p0, Llx;->b:I
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+.method public static d(I)Ljava/lang/String;
+    .locals 5
+
+    shr-int/lit8 v0, p0, 0x18
+
+    and-int/lit16 v0, v0, 0xff
+
+    int-to-char v0, v0
+
+    shr-int/lit8 v1, p0, 0x10
+
+    and-int/lit16 v1, v1, 0xff
+
+    int-to-char v1, v1
+
+    shr-int/lit8 v2, p0, 0x8
+
+    and-int/lit16 v2, v2, 0xff
+
+    int-to-char v2, v2
+
+    and-int/lit16 p0, p0, 0xff
+
+    int-to-char p0, p0
+
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    const/4 v4, 0x4
+
+    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(I)V
+
+    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3, p0}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static e(I)Ljava/lang/String;
+    .locals 2
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, ""
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    shr-int/lit8 v1, p0, 0x18
+
+    and-int/lit16 v1, v1, 0xff
+
+    int-to-char v1, v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+
+    shr-int/lit8 v1, p0, 0x10
+
+    and-int/lit16 v1, v1, 0xff
+
+    int-to-char v1, v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+
+    shr-int/lit8 v1, p0, 0x8
+
+    and-int/lit16 v1, v1, 0xff
+
+    int-to-char v1, v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+
+    and-int/lit16 p0, p0, 0xff
+
+    int-to-char p0, p0
+
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static t(I)I
+    .locals 0
+
+    shr-int/lit8 p0, p0, 0x18
+
+    and-int/lit16 p0, p0, 0xff
+
+    return p0
 .end method
 
 
 # virtual methods
-.method public final i()V
-    .locals 10
+.method public a(I)V
+    .locals 1
 
-    iget-boolean v0, p0, Llx;->e:Z
+    iget v0, p0, Llx;->a:I
 
-    if-nez v0, :cond_8
+    packed-switch v0, :pswitch_data_0
 
-    iget-wide v0, p0, Lsse;->c:J
+    iget v0, p0, Llx;->b:I
 
-    iget-boolean v2, p0, Lsse;->a:Z
+    or-int/2addr p1, v0
 
-    const-wide/16 v3, 0x0
-
-    cmp-long v3, v0, v3
-
-    if-nez v3, :cond_0
-
-    if-nez v2, :cond_0
+    iput p1, p0, Llx;->b:I
 
     return-void
 
-    :cond_0
-    const/4 v4, 0x1
+    :pswitch_0
+    iget v0, p0, Llx;->b:I
 
-    iput-boolean v4, p0, Llx;->e:Z
+    or-int/2addr p1, v0
 
-    const-class v5, Llx;
-
-    monitor-enter v5
-
-    :try_start_0
-    sget-object v6, Llx;->j:Llx;
-
-    if-nez v6, :cond_1
-
-    new-instance v6, Llx;
-
-    invoke-direct {v6}, Ljava/lang/Object;-><init>()V
-
-    sput-object v6, Llx;->j:Llx;
-
-    new-instance v6, Lix;
-
-    const-string v7, "Okio Watchdog"
-
-    invoke-direct {v6, v7}, Lix;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v6, v4}, Ljava/lang/Thread;->setDaemon(Z)V
-
-    invoke-virtual {v6}, Ljava/lang/Thread;->start()V
-
-    goto :goto_0
-
-    :catchall_0
-    move-exception p0
-
-    goto :goto_4
-
-    :cond_1
-    :goto_0
-    invoke-static {}, Ljava/lang/System;->nanoTime()J
-
-    move-result-wide v6
-
-    if-eqz v3, :cond_2
-
-    if-eqz v2, :cond_2
-
-    invoke-virtual {p0}, Lsse;->c()J
-
-    move-result-wide v2
-
-    sub-long/2addr v2, v6
-
-    invoke-static {v0, v1, v2, v3}, Ljava/lang/Math;->min(JJ)J
-
-    move-result-wide v0
-
-    add-long/2addr v0, v6
-
-    iput-wide v0, p0, Llx;->g:J
-
-    goto :goto_1
-
-    :cond_2
-    if-eqz v3, :cond_3
-
-    add-long/2addr v0, v6
-
-    iput-wide v0, p0, Llx;->g:J
-
-    goto :goto_1
-
-    :cond_3
-    if-eqz v2, :cond_7
-
-    invoke-virtual {p0}, Lsse;->c()J
-
-    move-result-wide v0
-
-    iput-wide v0, p0, Llx;->g:J
-
-    :goto_1
-    iget-wide v0, p0, Llx;->g:J
-
-    sub-long/2addr v0, v6
-
-    sget-object v2, Llx;->j:Llx;
-
-    :goto_2
-    iget-object v3, v2, Llx;->f:Llx;
-
-    if-eqz v3, :cond_5
-
-    iget-wide v8, v3, Llx;->g:J
-
-    sub-long/2addr v8, v6
-
-    cmp-long v4, v0, v8
-
-    if-gez v4, :cond_4
-
-    goto :goto_3
-
-    :cond_4
-    move-object v2, v3
-
-    goto :goto_2
-
-    :cond_5
-    :goto_3
-    iput-object v3, p0, Llx;->f:Llx;
-
-    iput-object p0, v2, Llx;->f:Llx;
-
-    sget-object p0, Llx;->j:Llx;
-
-    if-ne v2, p0, :cond_6
-
-    const-class p0, Llx;
-
-    invoke-virtual {p0}, Ljava/lang/Object;->notify()V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    :cond_6
-    monitor-exit v5
+    iput p1, p0, Llx;->b:I
 
     return-void
 
-    :cond_7
-    :try_start_1
-    new-instance p0, Ljava/lang/AssertionError;
+    nop
 
-    invoke-direct {p0}, Ljava/lang/AssertionError;-><init>()V
-
-    throw p0
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    :goto_4
-    monitor-exit v5
-
-    throw p0
-
-    :cond_8
-    const-string p0, "Unbalanced enter/exit"
-
-    new-instance v0, Ljava/lang/IllegalStateException;
-
-    invoke-direct {v0, p0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw v0
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_0
+    .end packed-switch
 .end method
 
-.method public final j()Z
-    .locals 4
+.method public abstract b(Lda6;)V
+.end method
 
-    iget-boolean v0, p0, Llx;->e:Z
+.method public abstract c(Lda6;)V
+.end method
 
-    const/4 v1, 0x0
+.method public h(I)Z
+    .locals 1
 
-    if-nez v0, :cond_0
+    iget v0, p0, Llx;->a:I
 
-    return v1
+    packed-switch v0, :pswitch_data_0
 
-    :cond_0
-    iput-boolean v1, p0, Llx;->e:Z
+    iget p0, p0, Llx;->b:I
 
-    const-class v0, Llx;
+    and-int/2addr p0, p1
 
-    monitor-enter v0
-
-    :try_start_0
-    sget-object v2, Llx;->j:Llx;
-
-    :goto_0
-    if-eqz v2, :cond_2
-
-    iget-object v3, v2, Llx;->f:Llx;
-
-    if-ne v3, p0, :cond_1
-
-    iget-object v3, p0, Llx;->f:Llx;
-
-    iput-object v3, v2, Llx;->f:Llx;
-
-    const/4 v2, 0x0
-
-    iput-object v2, p0, Llx;->f:Llx;
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    monitor-exit v0
-
-    return v1
-
-    :catchall_0
-    move-exception p0
-
-    goto :goto_1
-
-    :cond_1
-    move-object v2, v3
-
-    goto :goto_0
-
-    :cond_2
-    monitor-exit v0
+    if-ne p0, p1, :cond_0
 
     const/4 p0, 0x1
 
+    goto :goto_0
+
+    :cond_0
+    const/4 p0, 0x0
+
+    :goto_0
     return p0
 
-    :goto_1
-    monitor-exit v0
+    :pswitch_0
+    iget p0, p0, Llx;->b:I
 
-    throw p0
+    and-int/2addr p0, p1
+
+    if-ne p0, p1, :cond_1
+
+    const/4 p0, 0x1
+
+    goto :goto_1
+
+    :cond_1
+    const/4 p0, 0x0
+
+    :goto_1
+    return p0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_0
+    .end packed-switch
 .end method
 
-.method public k()V
-    .locals 0
+.method public abstract i()I
+.end method
 
-    return-void
+.method public abstract j()I
+.end method
+
+.method public abstract k()I
+.end method
+
+.method public abstract l()I
+.end method
+
+.method public abstract n()I
+.end method
+
+.method public abstract o()V
+.end method
+
+.method public abstract p(Lda6;)V
+.end method
+
+.method public abstract q(Lda6;)V
+.end method
+
+.method public abstract s(Lda6;)Lm39;
+.end method
+
+.method public toString()Ljava/lang/String;
+    .locals 1
+
+    iget v0, p0, Llx;->a:I
+
+    sparse-switch v0, :sswitch_data_0
+
+    invoke-super {p0}, Ljava/lang/Object;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    return-object p0
+
+    :sswitch_0
+    iget p0, p0, Llx;->b:I
+
+    invoke-static {p0}, Llx;->e(I)Ljava/lang/String;
+
+    move-result-object p0
+
+    return-object p0
+
+    :sswitch_1
+    iget p0, p0, Llx;->b:I
+
+    invoke-static {p0}, Llx;->d(I)Ljava/lang/String;
+
+    move-result-object p0
+
+    return-object p0
+
+    :sswitch_data_0
+    .sparse-switch
+        0x0 -> :sswitch_1
+        0x4 -> :sswitch_0
+    .end sparse-switch
 .end method

@@ -8,16 +8,16 @@
 
 .field public final b:Z
 
-.field public final c:Lfz5;
+.field public final c:Lx46;
 
 
 # direct methods
-.method public constructor <init>(ILfz5;Z)V
+.method public constructor <init>(ILx46;Z)V
     .locals 1
 
     const-string v0, "AudioTrack write failed: "
 
-    invoke-static {p1, v0}, Lm26;->h(ILjava/lang/String;)Ljava/lang/String;
+    invoke-static {p1, v0}, Lyv7;->e(ILjava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -27,7 +27,7 @@
 
     iput p1, p0, Landroidx/media3/exoplayer/audio/AudioSink$WriteException;->a:I
 
-    iput-object p2, p0, Landroidx/media3/exoplayer/audio/AudioSink$WriteException;->c:Lfz5;
+    iput-object p2, p0, Landroidx/media3/exoplayer/audio/AudioSink$WriteException;->c:Lx46;
 
     return-void
 .end method

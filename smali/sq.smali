@@ -1,244 +1,51 @@
-.class public final synthetic Lsq;
+.class public abstract synthetic Lsq;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lv56;
 
-
-# instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Lje7;
-
-.field public final synthetic c:Lje7;
+# static fields
+.field public static final synthetic $EnumSwitchMapping$0:[I
 
 
 # direct methods
-.method public synthetic constructor <init>(Lje7;Lje7;I)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 3
 
-    iput p3, p0, Lsq;->a:I
-
-    iput-object p1, p0, Lsq;->b:Lje7;
-
-    iput-object p2, p0, Lsq;->c:Lje7;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final invoke()Ljava/lang/Object;
-    .locals 4
-
-    iget v0, p0, Lsq;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    new-instance v0, Lrba;
-
-    iget-object v1, p0, Lsq;->b:Lje7;
-
-    iget-object p0, p0, Lsq;->c:Lje7;
-
-    invoke-direct {v0, v1, p0}, Lrba;-><init>(Lje7;Lje7;)V
-
-    return-object v0
-
-    :pswitch_0
-    iget-object v0, p0, Lsq;->b:Lje7;
-
-    invoke-interface {v0}, Lje7;->getValue()Ljava/lang/Object;
+    invoke-static {}, Lzp;->values()[Lzp;
 
     move-result-object v0
 
-    check-cast v0, Lrie;
+    array-length v0, v0
 
-    check-cast v0, Lo7a;
-
-    invoke-virtual {v0}, Lo7a;->b()Ljx3;
-
-    move-result-object v0
+    new-array v0, v0, [I
 
     const/4 v1, 0x1
 
-    const-string v2, "shortcuts"
+    :try_start_0
+    aput v1, v0, v1
+    :try_end_0
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
 
-    invoke-virtual {v0, v1, v2}, Ljx3;->limitedParallelism(ILjava/lang/String;)Ljx3;
+    :catch_0
+    const/4 v1, 0x2
 
-    move-result-object v0
+    :try_start_1
+    aput v1, v0, v1
+    :try_end_1
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
 
-    iget-object p0, p0, Lsq;->c:Lje7;
+    :catch_1
+    const/4 v1, 0x0
 
-    invoke-interface {p0}, Lje7;->getValue()Ljava/lang/Object;
+    const/4 v2, 0x3
 
-    move-result-object p0
+    :try_start_2
+    aput v2, v0, v1
+    :try_end_2
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_2
 
-    check-cast p0, Lhx3;
+    :catch_2
+    sput-object v0, Lsq;->$EnumSwitchMapping$0:[I
 
-    invoke-virtual {v0, p0}, Le0;->plus(Lhx3;)Lhx3;
-
-    move-result-object p0
-
-    invoke-static {p0}, Lvk9;->a(Lhx3;)Lkotlinx/coroutines/internal/ContextScope;
-
-    move-result-object p0
-
-    return-object p0
-
-    :pswitch_1
-    new-instance v0, Lie0;
-
-    iget-object v1, p0, Lsq;->b:Lje7;
-
-    iget-object p0, p0, Lsq;->c:Lje7;
-
-    invoke-direct {v0, v1, p0}, Lie0;-><init>(Lje7;Lje7;)V
-
-    return-object v0
-
-    :pswitch_2
-    invoke-static {}, Lk3c;->b()Lw77;
-
-    move-result-object v0
-
-    iget-object v1, p0, Lsq;->b:Lje7;
-
-    invoke-interface {v1}, Lje7;->getValue()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lrie;
-
-    check-cast v1, Lo7a;
-
-    invoke-virtual {v1}, Lo7a;->a()Ljx3;
-
-    move-result-object v1
-
-    const-string v2, "non-contacts"
-
-    const/4 v3, 0x1
-
-    invoke-virtual {v1, v3, v2}, Ljx3;->limitedParallelism(ILjava/lang/String;)Ljx3;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Lx87;->plus(Lhx3;)Lhx3;
-
-    move-result-object v0
-
-    iget-object p0, p0, Lsq;->c:Lje7;
-
-    invoke-interface {p0}, Lje7;->getValue()Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, Lhx3;
-
-    invoke-interface {v0, p0}, Lhx3;->plus(Lhx3;)Lhx3;
-
-    move-result-object p0
-
-    invoke-static {p0}, Lvk9;->a(Lhx3;)Lkotlinx/coroutines/internal/ContextScope;
-
-    move-result-object p0
-
-    return-object p0
-
-    :pswitch_3
-    new-instance v0, Lie0;
-
-    iget-object v1, p0, Lsq;->b:Lje7;
-
-    iget-object p0, p0, Lsq;->c:Lje7;
-
-    invoke-direct {v0, v1, p0}, Lie0;-><init>(Lje7;Lje7;)V
-
-    return-object v0
-
-    :pswitch_4
-    new-instance v0, Lie0;
-
-    iget-object v1, p0, Lsq;->b:Lje7;
-
-    iget-object p0, p0, Lsq;->c:Lje7;
-
-    invoke-direct {v0, v1, p0}, Lie0;-><init>(Lje7;Lje7;)V
-
-    return-object v0
-
-    :pswitch_5
-    invoke-static {}, Lfq0;->a()Ltbe;
-
-    move-result-object v0
-
-    iget-object v1, p0, Lsq;->b:Lje7;
-
-    invoke-interface {v1}, Lje7;->getValue()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lrie;
-
-    check-cast v1, Lo7a;
-
-    invoke-virtual {v1}, Lo7a;->b()Ljx3;
-
-    move-result-object v1
-
-    invoke-interface {v0, v1}, Lhx3;->plus(Lhx3;)Lhx3;
-
-    move-result-object v0
-
-    iget-object p0, p0, Lsq;->c:Lje7;
-
-    invoke-interface {p0}, Lje7;->getValue()Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, Lhx3;
-
-    invoke-interface {v0, p0}, Lhx3;->plus(Lhx3;)Lhx3;
-
-    move-result-object p0
-
-    return-object p0
-
-    :pswitch_6
-    new-instance v0, Lao7;
-
-    iget-object v1, p0, Lsq;->b:Lje7;
-
-    iget-object p0, p0, Lsq;->c:Lje7;
-
-    invoke-direct {v0, v1, p0}, Lao7;-><init>(Lje7;Lje7;)V
-
-    return-object v0
-
-    :pswitch_7
-    new-instance v0, Lao7;
-
-    iget-object v1, p0, Lsq;->b:Lje7;
-
-    iget-object p0, p0, Lsq;->c:Lje7;
-
-    invoke-direct {v0, v1, p0}, Lao7;-><init>(Lje7;Lje7;)V
-
-    return-object v0
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_7
-        :pswitch_6
-        :pswitch_5
-        :pswitch_4
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    return-void
 .end method

@@ -1,323 +1,191 @@
 .class public final Lkc0;
-.super Lu2;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public final synthetic X:Ljava/lang/Object;
+.field public final a:Ljava/lang/String;
 
-.field public final synthetic c:I
+.field public final b:Ljava/lang/String;
 
-.field public final synthetic o:Ljava/lang/Object;
+.field public final c:Lu00;
+
+.field public final d:I
 
 
 # direct methods
-.method public constructor <init>(Llc0;Lyha;)V
-    .locals 1
+.method public constructor <init>(Ljava/lang/String;Ljava/lang/String;Lu00;I)V
+    .locals 0
 
-    const/4 v0, 0x0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput v0, p0, Lkc0;->c:I
+    iput-object p1, p0, Lkc0;->a:Ljava/lang/String;
 
-    sget-object v0, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
+    iput-object p2, p0, Lkc0;->b:Ljava/lang/String;
 
-    iput-object p1, p0, Lkc0;->o:Ljava/lang/Object;
+    iput-object p3, p0, Lkc0;->c:Lu00;
 
-    iput-object p2, p0, Lkc0;->X:Ljava/lang/Object;
-
-    const/16 p1, 0x9
-
-    .line 1
-    invoke-direct {p0, p1, v0}, Lu2;-><init>(ILjava/lang/Object;)V
-
-    return-void
-.end method
-
-.method public constructor <init>(Lru/ok/utils/widgets/BadgeCountView;Landroid/content/Context;)V
-    .locals 1
-
-    const/4 v0, 0x1
-
-    iput v0, p0, Lkc0;->c:I
-
-    const/4 v0, 0x0
-
-    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v0
-
-    iput-object p1, p0, Lkc0;->o:Ljava/lang/Object;
-
-    iput-object p2, p0, Lkc0;->X:Ljava/lang/Object;
-
-    const/16 p1, 0x9
-
-    .line 2
-    invoke-direct {p0, p1, v0}, Lu2;-><init>(ILjava/lang/Object;)V
+    iput p4, p0, Lkc0;->d:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final x0(Ljava/lang/Object;Ljava/lang/Object;)V
-    .locals 5
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 2
 
-    iget v0, p0, Lkc0;->c:I
-
-    packed-switch v0, :pswitch_data_0
-
-    check-cast p2, Ljava/lang/Number;
-
-    invoke-virtual {p2}, Ljava/lang/Number;->intValue()I
-
-    move-result p2
-
-    check-cast p1, Ljava/lang/Number;
-
-    invoke-virtual {p1}, Ljava/lang/Number;->intValue()I
-
-    iget-object p1, p0, Lkc0;->o:Ljava/lang/Object;
-
-    check-cast p1, Lru/ok/utils/widgets/BadgeCountView;
-
-    invoke-virtual {p1}, Lru/ok/utils/widgets/BadgeCountView;->getManageVisibility()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    if-lez p2, :cond_0
-
-    const/4 v0, 0x0
-
-    goto :goto_0
-
-    :cond_0
-    const/16 v0, 0x8
-
-    :goto_0
-    invoke-virtual {p1, v0}, Landroid/view/View;->setVisibility(I)V
-
-    :cond_1
-    invoke-virtual {p1}, Landroid/view/View;->getVisibility()I
-
-    move-result v0
-
-    const/4 v1, 0x0
-
-    if-nez v0, :cond_8
-
-    if-ltz p2, :cond_9
-
-    invoke-virtual {p1}, Lru/ok/utils/widgets/BadgeCountView;->getNeedPlusIndicator()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_2
-
-    iget-object p0, p0, Lkc0;->X:Ljava/lang/Object;
-
-    check-cast p0, Landroid/content/Context;
-
-    sget v0, Lxzb;->folder_new_messages_max_exceeded:I
-
-    invoke-static {p2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    filled-new-array {v2}, [Ljava/lang/Object;
-
-    move-result-object v2
-
-    invoke-virtual {p0, v0, v2}, Landroid/content/Context;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object p0
+    if-ne p0, p1, :cond_0
 
     goto :goto_1
 
+    :cond_0
+    instance-of v0, p1, Lkc0;
+
+    if-nez v0, :cond_1
+
+    goto :goto_0
+
+    :cond_1
+    check-cast p1, Lkc0;
+
+    iget-object v0, p0, Lkc0;->a:Ljava/lang/String;
+
+    iget-object v1, p1, Lkc0;->a:Ljava/lang/String;
+
+    invoke-static {v0, v1}, Lvyg;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_2
+
+    goto :goto_0
+
     :cond_2
-    invoke-static {p2}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
+    iget-object v0, p0, Lkc0;->b:Ljava/lang/String;
 
-    move-result-object p0
+    iget-object v1, p1, Lkc0;->b:Ljava/lang/String;
 
-    :goto_1
-    invoke-virtual {p1, p0}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+    invoke-static {v0, v1}, Lvyg;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    iget p0, p1, Lru/ok/utils/widgets/BadgeCountView;->u0:I
+    move-result v0
 
-    const/16 v0, 0x14
+    if-nez v0, :cond_3
 
-    const/16 v2, 0xa
-
-    if-ge p2, v2, :cond_3
-
-    invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object p0
-
-    invoke-static {p0, v1, v1}, Ld46;->D(Ljava/lang/Integer;Ljava/lang/Integer;Ljava/lang/Integer;)Landroid/graphics/drawable/GradientDrawable;
-
-    move-result-object p0
-
-    goto :goto_2
+    goto :goto_0
 
     :cond_3
-    invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    iget-object v0, p0, Lkc0;->c:Lu00;
 
-    move-result-object p0
+    iget-object v1, p1, Lkc0;->c:Lu00;
 
-    int-to-float v3, v0
+    invoke-virtual {v0, v1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
-    invoke-static {}, Lgk4;->d()Landroid/content/res/Resources;
+    move-result v0
 
-    move-result-object v4
+    if-nez v0, :cond_4
 
-    invoke-virtual {v4}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v4
-
-    iget v4, v4, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v3, v4
-
-    invoke-static {v3}, Lkhg;->x(F)I
-
-    move-result v3
-
-    invoke-static {p0, v1, v1, v3}, Ld46;->F(Ljava/lang/Integer;Ljava/lang/Integer;Ljava/lang/Integer;I)Landroid/graphics/drawable/GradientDrawable;
-
-    move-result-object p0
-
-    :goto_2
-    const/16 v3, 0xc
-
-    const/4 v4, 0x1
-
-    if-gt v4, p2, :cond_4
-
-    if-ge p2, v2, :cond_4
-
-    new-instance v1, Ltf0;
-
-    invoke-direct {v1, p0, v0, v3}, Ltf0;-><init>(Landroid/graphics/drawable/GradientDrawable;II)V
-
-    goto :goto_3
+    goto :goto_0
 
     :cond_4
-    const/16 v0, 0x64
+    iget p0, p0, Lkc0;->d:I
 
-    if-gt v2, p2, :cond_5
+    iget p1, p1, Lkc0;->d:I
 
-    if-ge p2, v0, :cond_5
+    if-eq p0, p1, :cond_5
 
-    new-instance v1, Ltf0;
+    :goto_0
+    const/4 p0, 0x0
 
-    const/16 p2, 0x16
-
-    invoke-direct {v1, p0, p2, v3}, Ltf0;-><init>(Landroid/graphics/drawable/GradientDrawable;II)V
-
-    goto :goto_3
+    return p0
 
     :cond_5
-    const/16 v2, 0x3e8
+    :goto_1
+    const/4 p0, 0x1
 
-    if-gt v0, p2, :cond_6
+    return p0
+.end method
 
-    if-ge p2, v2, :cond_6
+.method public final hashCode()I
+    .locals 3
 
-    new-instance v1, Ltf0;
+    iget-object v0, p0, Lkc0;->a:Ljava/lang/String;
 
-    const/16 p2, 0x1a
+    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
 
-    invoke-direct {v1, p0, p2, v3}, Ltf0;-><init>(Landroid/graphics/drawable/GradientDrawable;II)V
+    move-result v0
 
-    goto :goto_3
+    const/16 v1, 0x1f
 
-    :cond_6
-    if-gt v2, p2, :cond_7
+    mul-int/2addr v0, v1
 
-    const/16 v0, 0x2710
+    iget-object v2, p0, Lkc0;->b:Ljava/lang/String;
 
-    if-ge p2, v0, :cond_7
+    invoke-static {v0, v1, v2}, Lsq3;->d(IILjava/lang/String;)I
 
-    new-instance v1, Ltf0;
+    move-result v0
 
-    const/16 p2, 0x1f
+    iget-object v2, p0, Lkc0;->c:Lu00;
 
-    const/4 v0, 0x4
+    invoke-virtual {v2}, Ljava/lang/Object;->hashCode()I
 
-    invoke-direct {v1, p0, p2, v0}, Ltf0;-><init>(Landroid/graphics/drawable/GradientDrawable;II)V
+    move-result v2
 
-    :cond_7
-    :goto_3
-    invoke-static {p1, v1}, Lru/ok/utils/widgets/BadgeCountView;->i(Lru/ok/utils/widgets/BadgeCountView;Ltf0;)V
+    add-int/2addr v2, v0
 
-    goto :goto_4
+    mul-int/2addr v2, v1
 
-    :cond_8
-    invoke-virtual {p1, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+    iget p0, p0, Lkc0;->d:I
 
-    :cond_9
-    :goto_4
-    return-void
+    invoke-static {p0}, Lmw1;->t(I)I
 
-    :pswitch_0
-    iget-object v0, p0, Lkc0;->X:Ljava/lang/Object;
+    move-result p0
 
-    check-cast v0, Lyha;
+    add-int/2addr p0, v2
 
-    iget-object p0, p0, Lkc0;->o:Ljava/lang/Object;
+    return p0
+.end method
 
-    check-cast p0, Llc0;
+.method public final toString()Ljava/lang/String;
+    .locals 5
 
-    invoke-static {p1, p2}, Lxq7;->d(Ljava/lang/Object;Ljava/lang/Object;)Z
+    const-string v0, ", originalUri="
 
-    move-result v1
+    const-string v1, ", relativeCrop="
 
-    if-nez v1, :cond_b
+    const-string v2, "PhotoAvatar(localCroppedUri="
 
-    check-cast p2, Ljava/lang/Boolean;
+    iget-object v3, p0, Lkc0;->a:Ljava/lang/String;
 
-    invoke-virtual {p2}, Ljava/lang/Boolean;->booleanValue()Z
+    iget-object v4, p0, Lkc0;->b:Ljava/lang/String;
 
-    move-result p2
+    invoke-static {v2, v3, v0, v4, v1}, Lz7e;->u(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    check-cast p1, Ljava/lang/Boolean;
+    move-result-object v0
 
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    iget-object v1, p0, Lkc0;->c:Lu00;
 
-    invoke-virtual {p0}, Llc0;->b()Landroid/graphics/Paint;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    move-result-object p1
+    const-string v1, ", source="
 
-    if-eqz p2, :cond_a
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-interface {v0}, Lyha;->getText()Lane;
+    iget p0, p0, Lkc0;->d:I
 
-    const/4 p2, -0x1
+    invoke-static {p0}, Lmw1;->v(I)Ljava/lang/String;
 
-    goto :goto_5
+    move-result-object p0
 
-    :cond_a
-    invoke-interface {v0}, Lyha;->getText()Lane;
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object p2
+    const-string p0, ")"
 
-    iget p2, p2, Lane;->e:I
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    :goto_5
-    invoke-virtual {p1, p2}, Landroid/graphics/Paint;->setColor(I)V
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    invoke-virtual {p0}, Llc0;->c()V
+    move-result-object p0
 
-    invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->invalidateSelf()V
-
-    :cond_b
-    return-void
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-object p0
 .end method

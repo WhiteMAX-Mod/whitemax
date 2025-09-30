@@ -1,221 +1,249 @@
 .class public final Lafe;
-.super Landroid/widget/FrameLayout;
+.super Lli0;
 .source "SourceFile"
-
-# interfaces
-.implements Lhfe;
 
 
 # instance fields
-.field public final synthetic a:Life;
+.field public final X:Ljava/lang/String;
+
+.field public final Y:J
+
+.field public final Z:Ljava/lang/String;
+
+.field public final b:J
+
+.field public final c:I
+
+.field public final o:I
+
+.field public final r0:Ljava/lang/String;
+
+.field public final s0:Ljava/lang/String;
+
+.field public final t0:Ljava/util/List;
+
+.field public final u0:I
+
+.field public final v0:J
+
+.field public final w0:Ljava/lang/String;
+
+.field public final x0:Z
+
+.field public final y0:I
+
+.field public final z0:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;)V
-    .locals 0
+.method public constructor <init>(Lzee;)V
+    .locals 2
 
-    invoke-direct {p0, p1}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;)V
+    iget-wide v0, p1, Lzee;->a:J
 
-    new-instance p1, Life;
+    invoke-direct {p0, v0, v1}, Lli0;-><init>(J)V
 
-    invoke-direct {p1}, Ljava/lang/Object;-><init>()V
+    iget-wide v0, p1, Lzee;->b:J
 
-    iput-object p1, p0, Lafe;->a:Life;
+    iput-wide v0, p0, Lafe;->b:J
+
+    iget v0, p1, Lzee;->c:I
+
+    iput v0, p0, Lafe;->c:I
+
+    iget v0, p1, Lzee;->d:I
+
+    iput v0, p0, Lafe;->o:I
+
+    iget-object v0, p1, Lzee;->e:Ljava/lang/String;
+
+    iput-object v0, p0, Lafe;->X:Ljava/lang/String;
+
+    iget-wide v0, p1, Lzee;->f:J
+
+    iput-wide v0, p0, Lafe;->Y:J
+
+    iget-object v0, p1, Lzee;->g:Ljava/lang/String;
+
+    iput-object v0, p0, Lafe;->Z:Ljava/lang/String;
+
+    iget-object v0, p1, Lzee;->h:Ljava/lang/String;
+
+    iput-object v0, p0, Lafe;->r0:Ljava/lang/String;
+
+    iget-object v0, p1, Lzee;->i:Ljava/lang/String;
+
+    iput-object v0, p0, Lafe;->s0:Ljava/lang/String;
+
+    iget-object v0, p1, Lzee;->j:Ljava/util/List;
+
+    iput-object v0, p0, Lafe;->t0:Ljava/util/List;
+
+    iget v0, p1, Lzee;->k:I
+
+    iput v0, p0, Lafe;->u0:I
+
+    iget-wide v0, p1, Lzee;->l:J
+
+    iput-wide v0, p0, Lafe;->v0:J
+
+    iget-object v0, p1, Lzee;->m:Ljava/lang/String;
+
+    iput-object v0, p0, Lafe;->w0:Ljava/lang/String;
+
+    iget-boolean v0, p1, Lzee;->n:Z
+
+    iput-boolean v0, p0, Lafe;->x0:Z
+
+    iget v0, p1, Lzee;->o:I
+
+    iput v0, p0, Lafe;->y0:I
+
+    iget-object p1, p1, Lzee;->p:Ljava/lang/String;
+
+    iput-object p1, p0, Lafe;->z0:Ljava/lang/String;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final dispatchTouchEvent(Landroid/view/MotionEvent;)Z
-    .locals 0
+.method public final toString()Ljava/lang/String;
+    .locals 3
 
-    invoke-super {p0, p1}, Landroid/view/View;->dispatchTouchEvent(Landroid/view/MotionEvent;)Z
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    const/4 p0, 0x1
+    const-string v1, "StickerDb{stickerId="
 
-    return p0
-.end method
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-.method public getOnRequestInterceptTouchEvent()Lv56;
-    .locals 0
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()",
-            "Lv56;"
-        }
-    .end annotation
+    iget-wide v1, p0, Lafe;->b:J
 
-    iget-object p0, p0, Lafe;->a:Life;
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
-    iget-object p0, p0, Life;->b:Lv56;
+    const-string v1, ", width="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget v1, p0, Lafe;->c:I
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v1, ", height="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget v1, p0, Lafe;->o:I
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v1, ", url=\'"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lafe;->X:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, "\', updateTime="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-wide v1, p0, Lafe;->Y:J
+
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    const-string v1, ", mp4url=\'"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lafe;->Z:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, "\', firstUrl=\'"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lafe;->r0:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, "\', previewUrl=\'"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lafe;->s0:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, "\', tags=\'"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lafe;->t0:Ljava/util/List;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, "\', token=\'null\', stickerType="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget v1, p0, Lafe;->u0:I
+
+    invoke-static {v1}, Lz7e;->E(I)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", setId="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-wide v1, p0, Lafe;->v0:J
+
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    const-string v1, ", lottieUrl=\'"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lafe;->w0:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, "\', audio="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-boolean v1, p0, Lafe;->x0:Z
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string v1, ", authorType="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget v1, p0, Lafe;->y0:I
+
+    invoke-static {v1}, Lz7e;->A(I)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", videoUrl=\'"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object p0, p0, Lafe;->z0:Ljava/lang/String;
+
+    const-string v1, "\'}"
+
+    invoke-static {v0, p0, v1}, Lyv7;->k(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p0
 
     return-object p0
-.end method
-
-.method public getOnTouch()Lx56;
-    .locals 0
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()",
-            "Lx56;"
-        }
-    .end annotation
-
-    iget-object p0, p0, Lafe;->a:Life;
-
-    iget-object p0, p0, Life;->a:Lx56;
-
-    return-object p0
-.end method
-
-.method public final onInterceptTouchEvent(Landroid/view/MotionEvent;)Z
-    .locals 2
-
-    iget-object v0, p0, Lafe;->a:Life;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    iget-object v0, v0, Life;->a:Lx56;
-
-    const/4 v1, 0x0
-
-    if-eqz v0, :cond_0
-
-    invoke-interface {v0, p1}, Lx56;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/lang/Boolean;
-
-    invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
-
-    move-result v0
-
-    goto :goto_0
-
-    :cond_0
-    move v0, v1
-
-    :goto_0
-    if-nez v0, :cond_2
-
-    invoke-super {p0, p1}, Landroid/view/ViewGroup;->onInterceptTouchEvent(Landroid/view/MotionEvent;)Z
-
-    move-result p0
-
-    if-eqz p0, :cond_1
-
-    goto :goto_1
-
-    :cond_1
-    return v1
-
-    :cond_2
-    :goto_1
-    const/4 p0, 0x1
-
-    return p0
-.end method
-
-.method public final onTouchEvent(Landroid/view/MotionEvent;)Z
-    .locals 2
-
-    iget-object v0, p0, Lafe;->a:Life;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    iget-object v0, v0, Life;->a:Lx56;
-
-    const/4 v1, 0x0
-
-    if-eqz v0, :cond_0
-
-    invoke-interface {v0, p1}, Lx56;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/lang/Boolean;
-
-    invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
-
-    move-result v0
-
-    goto :goto_0
-
-    :cond_0
-    move v0, v1
-
-    :goto_0
-    if-nez v0, :cond_2
-
-    invoke-super {p0, p1}, Landroid/view/View;->onTouchEvent(Landroid/view/MotionEvent;)Z
-
-    move-result p0
-
-    if-eqz p0, :cond_1
-
-    goto :goto_1
-
-    :cond_1
-    return v1
-
-    :cond_2
-    :goto_1
-    const/4 p0, 0x1
-
-    return p0
-.end method
-
-.method public final requestDisallowInterceptTouchEvent(Z)V
-    .locals 0
-
-    invoke-super {p0, p1}, Landroid/view/ViewGroup;->requestDisallowInterceptTouchEvent(Z)V
-
-    iget-object p0, p0, Lafe;->a:Life;
-
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    iget-object p0, p0, Life;->b:Lv56;
-
-    if-eqz p0, :cond_0
-
-    invoke-interface {p0}, Lv56;->invoke()Ljava/lang/Object;
-
-    :cond_0
-    return-void
-.end method
-
-.method public setOnRequestInterceptTouchEvent(Lv56;)V
-    .locals 0
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Lv56;",
-            ")V"
-        }
-    .end annotation
-
-    iget-object p0, p0, Lafe;->a:Life;
-
-    iput-object p1, p0, Life;->b:Lv56;
-
-    return-void
-.end method
-
-.method public setOnTouch(Lx56;)V
-    .locals 0
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Lx56;",
-            ")V"
-        }
-    .end annotation
-
-    iget-object p0, p0, Lafe;->a:Life;
-
-    iput-object p1, p0, Life;->a:Lx56;
-
-    return-void
 .end method

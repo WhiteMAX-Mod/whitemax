@@ -1,82 +1,158 @@
-.class public final Lah;
-.super Lfh;
+.class public abstract Lah;
+.super Lpxe;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:I
-
-
-# direct methods
-.method public constructor <init>(I)V
-    .locals 0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput p1, p0, Lah;->a:I
-
-    return-void
-.end method
-
-
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
+.method public final z(Landroid/content/Context;Landroid/content/res/XmlResourceParser;I)Ljava/lang/Object;
     .locals 3
 
-    const/4 v0, 0x1
+    sget-object v0, Lyg;->w0:Lyg;
 
-    if-ne p0, p1, :cond_0
+    invoke-virtual {v0, p1, p2}, Lpxe;->B(Landroid/content/Context;Landroid/content/res/XmlResourceParser;)Ljava/lang/Object;
 
-    return v0
+    move-result-object v0
+
+    check-cast v0, Loh;
+
+    instance-of v1, v0, Ljh;
+
+    if-nez v1, :cond_0
+
+    invoke-interface {p2, p3}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeValue(I)Ljava/lang/String;
+
+    move-result-object v1
+
+    const/16 v2, 0x23
+
+    invoke-static {v1, v2}, Ljme;->F0(Ljava/lang/String;C)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    new-instance v0, Ljh;
+
+    const/4 v1, 0x0
+
+    invoke-direct {v0, v1}, Ljh;-><init>(I)V
 
     :cond_0
-    instance-of v1, p1, Lah;
+    instance-of v1, v0, Ljh;
 
-    const/4 v2, 0x0
+    if-eqz v1, :cond_1
 
-    if-nez v1, :cond_1
+    new-instance p0, Ljh;
 
-    return v2
+    invoke-interface {p2, p3}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeValue(I)Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-static {p1}, Lzxa;->s(Ljava/lang/String;)I
+
+    move-result p1
+
+    invoke-direct {p0, p1}, Ljh;-><init>(I)V
+
+    return-object p0
 
     :cond_1
-    check-cast p1, Lah;
+    instance-of v1, v0, Lkh;
 
-    iget p0, p0, Lah;->a:I
+    if-eqz v1, :cond_2
 
-    iget p1, p1, Lah;->a:I
+    new-instance p0, Lkh;
 
-    if-eq p0, p1, :cond_2
+    invoke-interface {p2, p3}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeValue(I)Ljava/lang/String;
 
-    return v2
+    move-result-object p2
+
+    :try_start_0
+    invoke-static {p1, p2}, Lto4;->a(Landroid/content/Context;Ljava/lang/String;)F
+
+    move-result p1
+    :try_end_0
+    .catch Ljava/lang/NumberFormatException; {:try_start_0 .. :try_end_0} :catch_0
+
+    goto :goto_0
+
+    :catch_0
+    invoke-static {p2}, Ljava/lang/Float;->parseFloat(Ljava/lang/String;)F
+
+    move-result p1
+
+    :goto_0
+    invoke-direct {p0, p1}, Lkh;-><init>(F)V
+
+    return-object p0
 
     :cond_2
-    return v0
-.end method
+    instance-of p1, v0, Llh;
 
-.method public final hashCode()I
-    .locals 0
+    if-eqz p1, :cond_3
 
-    iget p0, p0, Lah;->a:I
+    new-instance p0, Llh;
 
-    invoke-static {p0}, Ljava/lang/Integer;->hashCode(I)I
+    invoke-interface {p2, p3}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeValue(I)Ljava/lang/String;
 
-    move-result p0
+    move-result-object p1
 
-    return p0
-.end method
+    invoke-static {p1}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
 
-.method public final toString()Ljava/lang/String;
-    .locals 2
+    move-result p1
 
-    const-string v0, "Color(value="
+    invoke-direct {p0, p1}, Llh;-><init>(I)V
 
-    const-string v1, ")"
+    return-object p0
 
-    iget p0, p0, Lah;->a:I
+    :cond_3
+    instance-of p1, v0, Lmh;
 
-    invoke-static {p0, v0, v1}, Lpg0;->e(ILjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    if-eqz p1, :cond_4
+
+    new-instance p0, Lmh;
+
+    invoke-interface {p2, p3}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeValue(I)Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-direct {p0, p1}, Lmh;-><init>(Ljava/lang/String;)V
+
+    return-object p0
+
+    :cond_4
+    sget-object p1, Lnh;->a:Lnh;
+
+    invoke-static {v0, p1}, Lvyg;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_5
+
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    iget-object p0, p0, Lpxe;->b:Ljava/lang/Object;
+
+    check-cast p0, Lxg;
+
+    iget-object p0, p0, Lxg;->a:Ljava/lang/String;
+
+    const-string p2, "Undefined "
+
+    const-string p3, " type"
+
+    invoke-static {p2, p0, p3}, Lyv7;->h(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
 
-    return-object p0
+    invoke-direct {p1, p0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_5
+    new-instance p0, Lkotlin/NoWhenBranchMatchedException;
+
+    invoke-direct {p0}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
+
+    throw p0
 .end method

@@ -1,96 +1,138 @@
-.class public final Lhr9;
-.super Llje;
+.class public final synthetic Lhr9;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lc6;
 
 
 # instance fields
-.field public final o:Lv7b;
+.field public final synthetic a:I
+
+.field public final synthetic b:Lir9;
 
 
 # direct methods
-.method public constructor <init>(Lv7b;)V
-    .locals 1
+.method public synthetic constructor <init>(Lir9;I)V
+    .locals 0
 
-    const/4 v0, 0x0
+    iput p2, p0, Lhr9;->a:I
 
-    invoke-direct {p0, v0}, Lhi0;-><init>(Z)V
+    iput-object p1, p0, Lhr9;->b:Lir9;
 
-    iput-object p1, p0, Lhr9;->o:Lv7b;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 3
-
-    const/4 v0, 0x1
-
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    instance-of v1, p1, Lhr9;
-
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
-    check-cast p1, Lhr9;
-
-    iget-object p0, p0, Lhr9;->o:Lv7b;
-
-    iget-object p1, p1, Lhr9;->o:Lv7b;
-
-    invoke-static {p0, p1}, Lxq7;->d(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p0
-
-    if-nez p0, :cond_2
-
-    return v2
-
-    :cond_2
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 0
-
-    iget-object p0, p0, Lhr9;->o:Lv7b;
-
-    invoke-virtual {p0}, Lv7b;->hashCode()I
-
-    move-result p0
-
-    return p0
-.end method
-
-.method public final toString()Ljava/lang/String;
+.method public final run()V
     .locals 2
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    iget v0, p0, Lhr9;->a:I
 
-    const-string v1, "Response(profile="
+    packed-switch v0, :pswitch_data_0
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    new-instance v0, Lej0;
 
-    iget-object p0, p0, Lhr9;->o:Lv7b;
+    const/16 v1, 0x11
 
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-direct {v0, v1}, Lej0;-><init>(I)V
 
-    const-string p0, ")"
+    iget-object p0, p0, Lhr9;->b:Lir9;
 
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {p0, v0}, Ly2;->n(Lsm3;)V
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    return-void
 
-    move-result-object p0
+    :pswitch_0
+    new-instance v0, Lyq9;
 
-    return-object p0
+    const/4 v1, 0x4
+
+    invoke-direct {v0, v1}, Lyq9;-><init>(I)V
+
+    iget-object p0, p0, Lhr9;->b:Lir9;
+
+    invoke-virtual {p0, v0}, Ly2;->n(Lsm3;)V
+
+    return-void
+
+    :pswitch_1
+    new-instance v0, Lyq9;
+
+    const/4 v1, 0x5
+
+    invoke-direct {v0, v1}, Lyq9;-><init>(I)V
+
+    iget-object p0, p0, Lhr9;->b:Lir9;
+
+    invoke-virtual {p0, v0}, Ly2;->n(Lsm3;)V
+
+    return-void
+
+    :pswitch_2
+    new-instance v0, Lyq9;
+
+    const/4 v1, 0x6
+
+    invoke-direct {v0, v1}, Lyq9;-><init>(I)V
+
+    iget-object p0, p0, Lhr9;->b:Lir9;
+
+    invoke-virtual {p0, v0}, Ly2;->n(Lsm3;)V
+
+    return-void
+
+    :pswitch_3
+    new-instance v0, Lej0;
+
+    const/16 v1, 0x18
+
+    invoke-direct {v0, v1}, Lej0;-><init>(I)V
+
+    iget-object p0, p0, Lhr9;->b:Lir9;
+
+    invoke-virtual {p0, v0}, Ly2;->n(Lsm3;)V
+
+    return-void
+
+    :pswitch_4
+    new-instance v0, Lej0;
+
+    const/16 v1, 0x1a
+
+    invoke-direct {v0, v1}, Lej0;-><init>(I)V
+
+    iget-object p0, p0, Lhr9;->b:Lir9;
+
+    invoke-virtual {p0, v0}, Ly2;->n(Lsm3;)V
+
+    return-void
+
+    :pswitch_5
+    new-instance v0, Lej0;
+
+    const/16 v1, 0x11
+
+    invoke-direct {v0, v1}, Lej0;-><init>(I)V
+
+    iget-object p0, p0, Lhr9;->b:Lir9;
+
+    invoke-virtual {p0, v0}, Ly2;->n(Lsm3;)V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_5
+        :pswitch_4
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

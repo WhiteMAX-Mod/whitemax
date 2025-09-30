@@ -258,7 +258,7 @@
 .method public static hash([BI)I
     .locals 0
 
-    invoke-static {p1, p0}, Lwoc;->c(I[B)I
+    invoke-static {p1, p0}, Lo2d;->c(I[B)I
 
     move-result p0
 
@@ -272,7 +272,7 @@
 .method public static hash64k([BI)I
     .locals 0
 
-    invoke-static {p1, p0}, Lwoc;->c(I[B)I
+    invoke-static {p1, p0}, Lo2d;->c(I[B)I
 
     move-result p0
 
@@ -477,7 +477,7 @@
 
     const-string p2, "Malformed input at offset "
 
-    invoke-static {p1, p2}, Lm26;->h(ILjava/lang/String;)Ljava/lang/String;
+    invoke-static {p1, p2}, Lyv7;->e(ILjava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 

@@ -1,73 +1,94 @@
-.class public final enum Lnu3;
-.super Ljava/lang/Enum;
+.class public final Lnu3;
+.super Lj2e;
 .source "SourceFile"
 
 
-# static fields
-.field public static final enum a:Lnu3;
+# virtual methods
+.method public final F(Lmu3;)V
+    .locals 2
 
-.field public static final enum b:Lnu3;
+    iget-object p0, p0, Lzoc;->a:Landroid/view/View;
 
-.field public static final synthetic c:[Lnu3;
+    check-cast p0, Ldha;
 
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-# direct methods
-.method static constructor <clinit>()V
-    .locals 4
+    sget v0, Lq0d;->L0:I
 
-    new-instance v0, Lnu3;
+    invoke-virtual {p0, v0}, Ldha;->setIcon(I)V
 
-    const-string v1, "RELEASE_DETACH"
+    sget v0, Ldfa;->p:I
 
-    const/4 v2, 0x0
+    new-instance v1, Lp2f;
 
-    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    invoke-direct {v1, v0}, Lp2f;-><init>(I)V
 
-    sput-object v0, Lnu3;->a:Lnu3;
+    invoke-virtual {p0, v1}, Ldha;->setTitle(Lu2f;)V
 
-    new-instance v1, Lnu3;
+    iget p1, p1, Lmu3;->a:I
 
-    const-string v2, "RETAIN_DETACH"
+    new-instance v0, Lp2f;
 
-    const/4 v3, 0x1
+    invoke-direct {v0, p1}, Lp2f;-><init>(I)V
 
-    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v1, Lnu3;->b:Lnu3;
-
-    filled-new-array {v0, v1}, [Lnu3;
-
-    move-result-object v0
-
-    sput-object v0, Lnu3;->c:[Lnu3;
+    invoke-virtual {p0, v0}, Ldha;->setSubtitle(Lu2f;)V
 
     return-void
 .end method
 
-.method public static valueOf(Ljava/lang/String;)Lnu3;
+.method public final G(Ljava/lang/Integer;Lzb6;)V
     .locals 1
 
-    const-class v0, Lnu3;
+    iget-object p0, p0, Lzoc;->a:Landroid/view/View;
 
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+    if-eqz p1, :cond_0
 
-    move-result-object p0
+    check-cast p0, Ldha;
 
-    check-cast p0, Lnu3;
-
-    return-object p0
-.end method
-
-.method public static values()[Lnu3;
-    .locals 1
-
-    sget-object v0, Lnu3;->c:[Lnu3;
-
-    invoke-virtual {v0}, [Lnu3;->clone()Ljava/lang/Object;
+    invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
-    check-cast v0, [Lnu3;
+    invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
 
-    return-object v0
+    move-result p1
+
+    invoke-virtual {v0, p1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
+
+    move-result-object p1
+
+    new-instance v0, Lg5;
+
+    invoke-direct {v0, p2}, Lg5;-><init>(Lzb6;)V
+
+    invoke-virtual {p0, p1, v0}, Ldha;->w(Ljava/lang/String;Landroid/view/View$OnClickListener;)V
+
+    return-void
+
+    :cond_0
+    check-cast p0, Ldha;
+
+    iget-object p0, p0, Ldha;->I0:Lone/me/sdk/uikit/common/button/OneMeButton;
+
+    const/4 p1, 0x0
+
+    invoke-virtual {p0, p1}, Lone/me/sdk/uikit/common/button/OneMeButton;->setText(Ljava/lang/CharSequence;)V
+
+    invoke-virtual {p0, p1}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+
+    const/16 p1, 0x8
+
+    invoke-virtual {p0, p1}, Landroid/view/View;->setVisibility(I)V
+
+    return-void
+.end method
+
+.method public final bridge synthetic y(Lts7;)V
+    .locals 0
+
+    check-cast p1, Lmu3;
+
+    invoke-virtual {p0, p1}, Lnu3;->F(Lmu3;)V
+
+    return-void
 .end method

@@ -1,8 +1,19 @@
-.class public interface abstract Lqsa;
+.class public abstract Lqsa;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# virtual methods
-.method public abstract a(Ljava/util/ArrayList;)V
+# static fields
+.field public static final a:I
+
+
+# direct methods
+.method static constructor <clinit>()V
+    .locals 1
+
+    sget v0, Ly7c;->webview:I
+
+    sput v0, Lqsa;->a:I
+
+    return-void
 .end method

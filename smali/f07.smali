@@ -1,241 +1,422 @@
-.class public final Lf07;
-.super Lnv8;
+.class public abstract Lf07;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lb27;
 
 
 # instance fields
-.field public a:[Le07;
+.field public X:Landroid/media/ImageWriter;
+
+.field public Y:Landroid/graphics/Rect;
+
+.field public Z:Landroid/graphics/Matrix;
+
+.field public volatile a:I
+
+.field public volatile b:I
+
+.field public volatile c:Z
+
+.field public o:Lid8;
+
+.field public r0:Ljava/nio/ByteBuffer;
+
+.field public s0:Ljava/nio/ByteBuffer;
+
+.field public t0:Ljava/nio/ByteBuffer;
+
+.field public u0:Ljava/nio/ByteBuffer;
+
+.field public final v0:Ljava/lang/Object;
+
+.field public w0:Z
 
 
 # direct methods
 .method public constructor <init>()V
     .locals 2
 
-    invoke-direct {p0}, Lnv8;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    sget-object v0, Le07;->u:[Le07;
+    const/4 v0, 0x1
 
-    if-nez v0, :cond_1
+    iput v0, p0, Lf07;->b:I
 
-    sget-object v0, Lr37;->b:Ljava/lang/Object;
+    new-instance v1, Landroid/graphics/Rect;
 
-    monitor-enter v0
+    invoke-direct {v1}, Landroid/graphics/Rect;-><init>()V
 
-    :try_start_0
-    sget-object v1, Le07;->u:[Le07;
+    iput-object v1, p0, Lf07;->Y:Landroid/graphics/Rect;
 
-    if-nez v1, :cond_0
+    new-instance v1, Landroid/graphics/Rect;
 
-    const/4 v1, 0x0
+    invoke-direct {v1}, Landroid/graphics/Rect;-><init>()V
 
-    new-array v1, v1, [Le07;
+    new-instance v1, Landroid/graphics/Matrix;
 
-    sput-object v1, Le07;->u:[Le07;
+    invoke-direct {v1}, Landroid/graphics/Matrix;-><init>()V
 
-    goto :goto_0
+    iput-object v1, p0, Lf07;->Z:Landroid/graphics/Matrix;
 
-    :catchall_0
-    move-exception p0
+    new-instance v1, Landroid/graphics/Matrix;
 
-    goto :goto_1
+    invoke-direct {v1}, Landroid/graphics/Matrix;-><init>()V
 
-    :cond_0
-    :goto_0
-    monitor-exit v0
+    new-instance v1, Ljava/lang/Object;
 
-    goto :goto_2
+    invoke-direct {v1}, Ljava/lang/Object;-><init>()V
 
-    :goto_1
-    monitor-exit v0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    iput-object v1, p0, Lf07;->v0:Ljava/lang/Object;
 
-    throw p0
-
-    :cond_1
-    :goto_2
-    sget-object v0, Le07;->u:[Le07;
-
-    iput-object v0, p0, Lf07;->a:[Le07;
-
-    const/4 v0, -0x1
-
-    iput v0, p0, Lnv8;->cachedSize:I
+    iput-boolean v0, p0, Lf07;->w0:Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final computeSerializedSize()I
-    .locals 4
+.method public abstract a(Lc27;)La27;
+.end method
 
-    iget-object v0, p0, Lf07;->a:[Le07;
+.method public final b(La27;)Lgt7;
+    .locals 3
 
-    const/4 v1, 0x0
+    iget-boolean v0, p0, Lf07;->c:Z
+
+    if-eqz v0, :cond_0
+
+    iget v0, p0, Lf07;->a:I
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    :goto_0
+    iget-object v1, p0, Lf07;->v0:Ljava/lang/Object;
+
+    monitor-enter v1
+
+    :try_start_0
+    iget-boolean v2, p0, Lf07;->c:Z
+
+    if-eqz v2, :cond_1
+
+    if-eqz v0, :cond_1
+
+    invoke-virtual {p0, p1, v0}, Lf07;->f(La27;I)V
+
+    goto :goto_1
+
+    :catchall_0
+    move-exception p0
+
+    goto :goto_2
+
+    :cond_1
+    :goto_1
+    iget-boolean v0, p0, Lf07;->c:Z
 
     if-eqz v0, :cond_2
 
-    array-length v0, v0
+    invoke-virtual {p0, p1}, Lf07;->d(La27;)V
 
-    if-lez v0, :cond_2
+    :cond_2
+    monitor-exit v1
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    move v0, v1
+    new-instance p0, Landroidx/core/os/OperationCanceledException;
 
-    :goto_0
-    iget-object v2, p0, Lf07;->a:[Le07;
+    const-string p1, "No analyzer or executor currently set."
 
-    array-length v3, v2
+    invoke-virtual {p1}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
-    if-ge v1, v3, :cond_1
+    move-result-object p1
 
-    aget-object v2, v2, v1
+    invoke-direct {p0, p1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
 
-    if-eqz v2, :cond_0
+    new-instance p1, Lp27;
 
-    const/4 v3, 0x1
+    const/4 v0, 0x1
 
-    invoke-static {v3, v2}, Lq33;->i(ILnv8;)I
+    invoke-direct {p1, v0, p0}, Lp27;-><init>(ILjava/lang/Object;)V
+
+    return-object p1
+
+    :goto_2
+    :try_start_1
+    monitor-exit v1
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    throw p0
+.end method
+
+.method public abstract c()V
+.end method
+
+.method public final d(La27;)V
+    .locals 3
+
+    iget v0, p0, Lf07;->b:I
+
+    const/4 v1, 0x1
+
+    if-ne v0, v1, :cond_3
+
+    iget-object v0, p0, Lf07;->s0:Ljava/nio/ByteBuffer;
+
+    if-nez v0, :cond_0
+
+    invoke-interface {p1}, La27;->getWidth()I
+
+    move-result v0
+
+    invoke-interface {p1}, La27;->getHeight()I
+
+    move-result v1
+
+    mul-int/2addr v1, v0
+
+    invoke-static {v1}, Ljava/nio/ByteBuffer;->allocateDirect(I)Ljava/nio/ByteBuffer;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lf07;->s0:Ljava/nio/ByteBuffer;
+
+    :cond_0
+    iget-object v0, p0, Lf07;->s0:Ljava/nio/ByteBuffer;
+
+    const/4 v1, 0x0
+
+    invoke-virtual {v0, v1}, Ljava/nio/ByteBuffer;->position(I)Ljava/nio/Buffer;
+
+    iget-object v0, p0, Lf07;->t0:Ljava/nio/ByteBuffer;
+
+    if-nez v0, :cond_1
+
+    invoke-interface {p1}, La27;->getWidth()I
+
+    move-result v0
+
+    invoke-interface {p1}, La27;->getHeight()I
 
     move-result v2
 
-    add-int/2addr v2, v0
+    mul-int/2addr v2, v0
 
-    move v0, v2
+    div-int/lit8 v2, v2, 0x4
+
+    invoke-static {v2}, Ljava/nio/ByteBuffer;->allocateDirect(I)Ljava/nio/ByteBuffer;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lf07;->t0:Ljava/nio/ByteBuffer;
+
+    :cond_1
+    iget-object v0, p0, Lf07;->t0:Ljava/nio/ByteBuffer;
+
+    invoke-virtual {v0, v1}, Ljava/nio/ByteBuffer;->position(I)Ljava/nio/Buffer;
+
+    iget-object v0, p0, Lf07;->u0:Ljava/nio/ByteBuffer;
+
+    if-nez v0, :cond_2
+
+    invoke-interface {p1}, La27;->getWidth()I
+
+    move-result v0
+
+    invoke-interface {p1}, La27;->getHeight()I
+
+    move-result p1
+
+    mul-int/2addr p1, v0
+
+    div-int/lit8 p1, p1, 0x4
+
+    invoke-static {p1}, Ljava/nio/ByteBuffer;->allocateDirect(I)Ljava/nio/ByteBuffer;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lf07;->u0:Ljava/nio/ByteBuffer;
+
+    :cond_2
+    iget-object p0, p0, Lf07;->u0:Ljava/nio/ByteBuffer;
+
+    invoke-virtual {p0, v1}, Ljava/nio/ByteBuffer;->position(I)Ljava/nio/Buffer;
+
+    return-void
+
+    :cond_3
+    iget v0, p0, Lf07;->b:I
+
+    const/4 v1, 0x2
+
+    if-ne v0, v1, :cond_4
+
+    iget-object v0, p0, Lf07;->r0:Ljava/nio/ByteBuffer;
+
+    if-nez v0, :cond_4
+
+    invoke-interface {p1}, La27;->getWidth()I
+
+    move-result v0
+
+    invoke-interface {p1}, La27;->getHeight()I
+
+    move-result p1
+
+    mul-int/2addr p1, v0
+
+    mul-int/lit8 p1, p1, 0x4
+
+    invoke-static {p1}, Ljava/nio/ByteBuffer;->allocateDirect(I)Ljava/nio/ByteBuffer;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lf07;->r0:Ljava/nio/ByteBuffer;
+
+    :cond_4
+    return-void
+.end method
+
+.method public abstract e(La27;)V
+.end method
+
+.method public final f(La27;I)V
+    .locals 5
+
+    iget-object v0, p0, Lf07;->o:Lid8;
+
+    if-nez v0, :cond_0
+
+    goto :goto_4
 
     :cond_0
-    add-int/lit8 v1, v1, 0x1
+    invoke-virtual {v0}, Lid8;->a()V
+
+    invoke-interface {p1}, La27;->getWidth()I
+
+    move-result v0
+
+    invoke-interface {p1}, La27;->getHeight()I
+
+    move-result p1
+
+    iget-object v1, p0, Lf07;->o:Lid8;
+
+    invoke-virtual {v1}, Lid8;->d()I
+
+    move-result v1
+
+    iget-object v2, p0, Lf07;->o:Lid8;
+
+    invoke-virtual {v2}, Lid8;->u()I
+
+    move-result v2
+
+    const/16 v3, 0x5a
+
+    const/4 v4, 0x1
+
+    if-eq p2, v3, :cond_2
+
+    const/16 v3, 0x10e
+
+    if-ne p2, v3, :cond_1
 
     goto :goto_0
 
     :cond_1
-    return v0
-
-    :cond_2
-    return v1
-.end method
-
-.method public final mergeFrom(Lp33;)Lnv8;
-    .locals 5
-
-    :cond_0
-    :goto_0
-    invoke-virtual {p1}, Lp33;->s()I
-
-    move-result v0
-
-    if-eqz v0, :cond_5
-
-    const/16 v1, 0xa
-
-    if-eq v0, v1, :cond_1
-
-    invoke-virtual {p1, v0}, Lp33;->u(I)Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    goto :goto_3
-
-    :cond_1
-    invoke-static {p1, v1}, Lwqd;->s(Lp33;I)I
-
-    move-result v0
-
-    iget-object v1, p0, Lf07;->a:[Le07;
-
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_2
-
-    move v3, v2
+    const/4 p2, 0x0
 
     goto :goto_1
 
     :cond_2
-    array-length v3, v1
+    :goto_0
+    move p2, v4
 
     :goto_1
-    add-int/2addr v0, v3
+    if-eqz p2, :cond_3
 
-    new-array v4, v0, [Le07;
-
-    if-eqz v3, :cond_3
-
-    invoke-static {v1, v2, v4, v2, v3}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
-
-    :cond_3
-    :goto_2
-    add-int/lit8 v1, v0, -0x1
-
-    if-ge v3, v1, :cond_4
-
-    new-instance v1, Le07;
-
-    invoke-direct {v1}, Le07;-><init>()V
-
-    aput-object v1, v4, v3
-
-    invoke-virtual {p1, v1}, Lp33;->j(Lnv8;)V
-
-    invoke-virtual {p1}, Lp33;->s()I
-
-    add-int/lit8 v3, v3, 0x1
+    move v3, p1
 
     goto :goto_2
 
+    :cond_3
+    move v3, v0
+
+    :goto_2
+    if-eqz p2, :cond_4
+
+    goto :goto_3
+
     :cond_4
-    new-instance v0, Le07;
+    move v0, p1
 
-    invoke-direct {v0}, Le07;-><init>()V
+    :goto_3
+    new-instance p1, Lid8;
 
-    aput-object v0, v4, v3
+    invoke-static {v3, v0, v1, v2}, Lkua;->g(IIII)Lrd;
 
-    invoke-virtual {p1, v0}, Lp33;->j(Lnv8;)V
+    move-result-object p2
 
-    iput-object v4, p0, Lf07;->a:[Le07;
+    invoke-direct {p1, p2}, Lid8;-><init>(Lc27;)V
 
-    goto :goto_0
+    iput-object p1, p0, Lf07;->o:Lid8;
+
+    iget p1, p0, Lf07;->b:I
+
+    if-ne p1, v4, :cond_6
+
+    iget-object p1, p0, Lf07;->X:Landroid/media/ImageWriter;
+
+    if-eqz p1, :cond_5
+
+    invoke-virtual {p1}, Landroid/media/ImageWriter;->close()V
 
     :cond_5
-    :goto_3
-    return-object p0
+    iget-object p1, p0, Lf07;->o:Lid8;
+
+    invoke-virtual {p1}, Lid8;->getSurface()Landroid/view/Surface;
+
+    move-result-object p1
+
+    iget-object p2, p0, Lf07;->o:Lid8;
+
+    invoke-virtual {p2}, Lid8;->u()I
+
+    move-result p2
+
+    invoke-static {p1, p2}, Landroid/media/ImageWriter;->newInstance(Landroid/view/Surface;I)Landroid/media/ImageWriter;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lf07;->X:Landroid/media/ImageWriter;
+
+    :cond_6
+    :goto_4
+    return-void
 .end method
 
-.method public final writeTo(Lq33;)V
-    .locals 3
+.method public final j(Lc27;)V
+    .locals 0
 
-    iget-object v0, p0, Lf07;->a:[Le07;
+    :try_start_0
+    invoke-virtual {p0, p1}, Lf07;->a(Lc27;)La27;
 
-    if-eqz v0, :cond_1
+    move-result-object p1
 
-    array-length v0, v0
+    if-eqz p1, :cond_0
 
-    if-lez v0, :cond_1
+    invoke-virtual {p0, p1}, Lf07;->e(La27;)V
+    :try_end_0
+    .catch Ljava/lang/IllegalStateException; {:try_start_0 .. :try_end_0} :catch_0
 
-    const/4 v0, 0x0
-
-    :goto_0
-    iget-object v1, p0, Lf07;->a:[Le07;
-
-    array-length v2, v1
-
-    if-ge v0, v2, :cond_1
-
-    aget-object v1, v1, v0
-
-    if-eqz v1, :cond_0
-
-    const/4 v2, 0x1
-
-    invoke-virtual {p1, v2, v1}, Lq33;->y(ILnv8;)V
-
+    :catch_0
     :cond_0
-    add-int/lit8 v0, v0, 0x1
-
-    goto :goto_0
-
-    :cond_1
     return-void
 .end method

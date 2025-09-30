@@ -2,212 +2,198 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lt3f;
-
 
 # instance fields
-.field public final a:Lhoe;
+.field public final a:Ljava/nio/FloatBuffer;
 
-.field public final b:Ljoe;
+.field public final b:[F
 
-.field public final c:I
+.field public final c:[F
+
+.field public d:I
+
+.field public e:I
+
+.field public f:I
+
+.field public g:I
+
+.field public h:I
+
+.field public i:I
+
+.field public final j:F
+
+.field public final k:Z
 
 
 # direct methods
-.method public constructor <init>(Lhoe;Ljoe;I)V
-    .locals 1
-
-    sget v0, Lknc;->a:I
+.method public constructor <init>(FZ)V
+    .locals 2
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Ls3f;->a:Lhoe;
+    const/16 v0, 0x10
 
-    iput-object p2, p0, Ls3f;->b:Ljoe;
+    new-array v1, v0, [F
 
-    iput p3, p0, Ls3f;->c:I
+    iput-object v1, p0, Ls3f;->b:[F
+
+    new-array v0, v0, [F
+
+    iput-object v0, p0, Ls3f;->c:[F
+
+    const/16 v1, -0x3039
+
+    iput v1, p0, Ls3f;->e:I
+
+    iput p1, p0, Ls3f;->j:F
+
+    iput-boolean p2, p0, Ls3f;->k:Z
+
+    const/16 p1, 0x14
+
+    new-array p1, p1, [F
+
+    fill-array-data p1, :array_0
+
+    const/16 p2, 0x50
+
+    invoke-static {p2}, Ljava/nio/ByteBuffer;->allocateDirect(I)Ljava/nio/ByteBuffer;
+
+    move-result-object p2
+
+    invoke-static {}, Ljava/nio/ByteOrder;->nativeOrder()Ljava/nio/ByteOrder;
+
+    move-result-object v1
+
+    invoke-virtual {p2, v1}, Ljava/nio/ByteBuffer;->order(Ljava/nio/ByteOrder;)Ljava/nio/ByteBuffer;
+
+    move-result-object p2
+
+    invoke-virtual {p2}, Ljava/nio/ByteBuffer;->asFloatBuffer()Ljava/nio/FloatBuffer;
+
+    move-result-object p2
+
+    iput-object p2, p0, Ls3f;->a:Ljava/nio/FloatBuffer;
+
+    invoke-virtual {p2, p1}, Ljava/nio/FloatBuffer;->put([F)Ljava/nio/FloatBuffer;
+
+    move-result-object p0
+
+    const/4 p1, 0x0
+
+    invoke-virtual {p0, p1}, Ljava/nio/FloatBuffer;->position(I)Ljava/nio/Buffer;
+
+    invoke-static {v0, p1}, Landroid/opengl/Matrix;->setIdentityM([FI)V
 
     return-void
+
+    :array_0
+    .array-data 4
+        -0x40800000    # -1.0f
+        -0x40800000    # -1.0f
+        0x0
+        0x0
+        0x0
+        0x3f800000    # 1.0f
+        -0x40800000    # -1.0f
+        0x0
+        0x3f800000    # 1.0f
+        0x0
+        -0x40800000    # -1.0f
+        0x3f800000    # 1.0f
+        0x0
+        0x0
+        0x3f800000    # 1.0f
+        0x3f800000    # 1.0f
+        0x3f800000    # 1.0f
+        0x0
+        0x3f800000    # 1.0f
+        0x3f800000    # 1.0f
+    .end array-data
 .end method
 
+.method public static a(Ljava/lang/String;)V
+    .locals 3
 
-# virtual methods
-.method public final a()Lmoe;
-    .locals 0
+    invoke-static {}, Landroid/opengl/GLES20;->glGetError()I
 
-    iget-object p0, p0, Ls3f;->b:Ljoe;
+    move-result v0
 
-    return-object p0
-.end method
+    if-nez v0, :cond_0
 
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 2
-
-    if-ne p0, p1, :cond_0
-
-    goto :goto_1
+    return-void
 
     :cond_0
-    instance-of v0, p1, Ls3f;
+    new-instance v1, Ljava/lang/RuntimeException;
 
-    if-nez v0, :cond_1
+    new-instance v2, Ljava/lang/StringBuilder;
 
-    goto :goto_0
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    :cond_1
-    check-cast p1, Ls3f;
+    invoke-virtual {v2, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    sget v0, Lknc;->a:I
+    const-string p0, ": glError "
 
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    invoke-virtual {v2, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v0, p0, Ls3f;->a:Lhoe;
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    iget-object v1, p1, Ls3f;->a:Lhoe;
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    invoke-virtual {v0, v1}, Lhoe;->equals(Ljava/lang/Object;)Z
+    move-result-object p0
 
-    move-result v0
+    invoke-direct {v1, p0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
 
-    if-nez v0, :cond_2
-
-    goto :goto_0
-
-    :cond_2
-    iget-object v0, p0, Ls3f;->b:Ljoe;
-
-    iget-object v1, p1, Ls3f;->b:Ljoe;
-
-    invoke-virtual {v0, v1}, Ljoe;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_3
-
-    goto :goto_0
-
-    :cond_3
-    iget p0, p0, Ls3f;->c:I
-
-    iget p1, p1, Ls3f;->c:I
-
-    if-eq p0, p1, :cond_4
-
-    :goto_0
-    const/4 p0, 0x0
-
-    return p0
-
-    :cond_4
-    :goto_1
-    const/4 p0, 0x1
-
-    return p0
+    throw v1
 .end method
 
-.method public final getIcon()I
-    .locals 0
-
-    sget p0, Lknc;->c:I
-
-    return p0
-.end method
-
-.method public final getTitle()Lmoe;
-    .locals 0
-
-    iget-object p0, p0, Ls3f;->a:Lhoe;
-
-    return-object p0
-.end method
-
-.method public final hashCode()I
+.method public static b(ILjava/lang/String;)I
     .locals 3
 
-    sget v0, Lknc;->c:I
-
-    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
+    invoke-static {p0}, Landroid/opengl/GLES20;->glCreateShader(I)I
 
     move-result v0
-
-    const/16 v1, 0x1f
-
-    mul-int/2addr v0, v1
-
-    iget-object v2, p0, Ls3f;->a:Lhoe;
-
-    iget v2, v2, Lhoe;->b:I
-
-    invoke-static {v2, v0, v1}, Lrqc;->e(III)I
-
-    move-result v0
-
-    iget-object v2, p0, Ls3f;->b:Ljoe;
-
-    invoke-virtual {v2}, Ljoe;->hashCode()I
-
-    move-result v2
-
-    add-int/2addr v2, v0
-
-    mul-int/2addr v2, v1
-
-    iget p0, p0, Ls3f;->c:I
-
-    invoke-static {p0}, Ljava/lang/Integer;->hashCode(I)I
-
-    move-result p0
-
-    add-int/2addr p0, v2
-
-    return p0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 3
-
-    sget v0, Lknc;->c:I
 
     new-instance v1, Ljava/lang/StringBuilder;
 
-    const-string v2, "VerifyEmail(icon="
+    const-string v2, "glCreateShader type="
 
     invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string v0, ", title="
-
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v0, p0, Ls3f;->a:Lhoe;
-
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v0, ", subtitle="
-
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v0, p0, Ls3f;->b:Ljoe;
-
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v0, ", codeLength="
-
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget p0, p0, Ls3f;->c:I
-
     invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string p0, ")"
-
-    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p0
 
-    return-object p0
+    invoke-static {p0}, Ls3f;->a(Ljava/lang/String;)V
+
+    invoke-static {v0, p1}, Landroid/opengl/GLES20;->glShaderSource(ILjava/lang/String;)V
+
+    invoke-static {v0}, Landroid/opengl/GLES20;->glCompileShader(I)V
+
+    const/4 p0, 0x1
+
+    new-array p0, p0, [I
+
+    const p1, 0x8b81
+
+    const/4 v1, 0x0
+
+    invoke-static {v0, p1, p0, v1}, Landroid/opengl/GLES20;->glGetShaderiv(II[II)V
+
+    aget p0, p0, v1
+
+    if-nez p0, :cond_0
+
+    invoke-static {v0}, Landroid/opengl/GLES20;->glGetShaderInfoLog(I)Ljava/lang/String;
+
+    invoke-static {v0}, Landroid/opengl/GLES20;->glDeleteShader(I)V
+
+    return v1
+
+    :cond_0
+    return v0
 .end method

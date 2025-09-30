@@ -3,54 +3,194 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lol7;
+.implements Lis5;
 
 
-# static fields
-.field public static final a:Lww2;
+# instance fields
+.field public final synthetic a:I
 
-.field public static final b:I
-
-.field public static final c:J
+.field public final synthetic b:Lps1;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public synthetic constructor <init>(Lps1;I)V
+    .locals 0
 
-    new-instance v0, Lww2;
+    iput p2, p0, Lww2;->a:I
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lww2;->b:Lps1;
 
-    sput-object v0, Lww2;->a:Lww2;
-
-    sget v0, Lltb;->oneme_chat_list_loading_view_type:I
-
-    sput v0, Lww2;->b:I
-
-    sget v0, Lltb;->oneme_chat_list_loading_id:I
-
-    int-to-long v0, v0
-
-    sput-wide v0, Lww2;->c:J
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final getItemId()J
+.method public final d(Lks5;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
     .locals 2
 
-    sget-wide v0, Lww2;->c:J
+    iget v0, p0, Lww2;->a:I
 
-    return-wide v0
-.end method
+    packed-switch v0, :pswitch_data_0
 
-.method public final m()I
-    .locals 0
+    new-instance v0, Leia;
 
-    sget p0, Lww2;->b:I
+    const/16 v1, 0x14
 
-    return p0
+    invoke-direct {v0, p1, v1}, Leia;-><init>(Lks5;I)V
+
+    iget-object p0, p0, Lww2;->b:Lps1;
+
+    invoke-virtual {p0, v0, p2}, Lz52;->d(Lks5;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p0
+
+    sget-object p1, Lz04;->a:Lz04;
+
+    if-ne p0, p1, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    sget-object p0, Lylf;->a:Lylf;
+
+    :goto_0
+    return-object p0
+
+    :pswitch_0
+    new-instance v0, Lyf7;
+
+    const/4 v1, 0x1
+
+    invoke-direct {v0, p1, v1}, Lyf7;-><init>(Lks5;I)V
+
+    iget-object p0, p0, Lww2;->b:Lps1;
+
+    invoke-virtual {p0, v0, p2}, Lz52;->d(Lks5;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p0
+
+    sget-object p1, Lz04;->a:Lz04;
+
+    if-ne p0, p1, :cond_1
+
+    goto :goto_1
+
+    :cond_1
+    sget-object p0, Lylf;->a:Lylf;
+
+    :goto_1
+    return-object p0
+
+    :pswitch_1
+    new-instance v0, Lyf7;
+
+    const/4 v1, 0x0
+
+    invoke-direct {v0, p1, v1}, Lyf7;-><init>(Lks5;I)V
+
+    iget-object p0, p0, Lww2;->b:Lps1;
+
+    invoke-virtual {p0, v0, p2}, Lz52;->d(Lks5;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p0
+
+    sget-object p1, Lz04;->a:Lz04;
+
+    if-ne p0, p1, :cond_2
+
+    goto :goto_2
+
+    :cond_2
+    sget-object p0, Lylf;->a:Lylf;
+
+    :goto_2
+    return-object p0
+
+    :pswitch_2
+    new-instance v0, Lmy2;
+
+    const/16 v1, 0x1c
+
+    invoke-direct {v0, p1, v1}, Lmy2;-><init>(Lks5;I)V
+
+    iget-object p0, p0, Lww2;->b:Lps1;
+
+    invoke-virtual {p0, v0, p2}, Lz52;->d(Lks5;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p0
+
+    sget-object p1, Lz04;->a:Lz04;
+
+    if-ne p0, p1, :cond_3
+
+    goto :goto_3
+
+    :cond_3
+    sget-object p0, Lylf;->a:Lylf;
+
+    :goto_3
+    return-object p0
+
+    :pswitch_3
+    new-instance v0, Lmy2;
+
+    const/16 v1, 0xa
+
+    invoke-direct {v0, p1, v1}, Lmy2;-><init>(Lks5;I)V
+
+    iget-object p0, p0, Lww2;->b:Lps1;
+
+    invoke-virtual {p0, v0, p2}, Lz52;->d(Lks5;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p0
+
+    sget-object p1, Lz04;->a:Lz04;
+
+    if-ne p0, p1, :cond_4
+
+    goto :goto_4
+
+    :cond_4
+    sget-object p0, Lylf;->a:Lylf;
+
+    :goto_4
+    return-object p0
+
+    :pswitch_4
+    new-instance v0, Lcm1;
+
+    const/16 v1, 0x1d
+
+    invoke-direct {v0, p1, v1}, Lcm1;-><init>(Lks5;I)V
+
+    iget-object p0, p0, Lww2;->b:Lps1;
+
+    invoke-virtual {p0, v0, p2}, Lz52;->d(Lks5;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p0
+
+    sget-object p1, Lz04;->a:Lz04;
+
+    if-ne p0, p1, :cond_5
+
+    goto :goto_5
+
+    :cond_5
+    sget-object p0, Lylf;->a:Lylf;
+
+    :goto_5
+    return-object p0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_4
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

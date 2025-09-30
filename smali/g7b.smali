@@ -1,105 +1,120 @@
-.class public final Lg7b;
-.super Ljava/lang/Object;
+.class public final synthetic Lg7b;
+.super Led6;
 .source "SourceFile"
+
+# interfaces
+.implements Lbc6;
 
 
 # instance fields
-.field public final a:I
+.field public final synthetic a:I
 
-.field public final b:Landroid/graphics/Rect;
-
-.field public final c:I
-
-.field public final d:I
-
-.field public final e:Landroid/graphics/Matrix;
-
-.field public final f:Lsfc;
-
-.field public final g:Ljava/lang/String;
-
-.field public final h:Ljava/util/ArrayList;
-
-.field public final i:Lbm7;
-
-.field public j:I
+.field public final synthetic b:Lone/me/chats/picker/chats/PickerChatsListWidget;
 
 
 # direct methods
-.method public constructor <init>(Lez1;Landroid/graphics/Rect;IILandroid/graphics/Matrix;Lsfc;Lbm7;I)V
-    .locals 1
+.method public constructor <init>(Lone/me/chats/picker/chats/PickerChatsListWidget;I)V
+    .locals 12
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput p2, p0, Lg7b;->a:I
 
-    const/4 v0, -0x1
+    packed-switch p2, :pswitch_data_0
 
-    iput v0, p0, Lg7b;->j:I
+    iput-object p1, p0, Lg7b;->b:Lone/me/chats/picker/chats/PickerChatsListWidget;
 
-    iput p8, p0, Lg7b;->a:I
+    const-string v4, "checkBoxItemDecoration_delegate$lambda$10$isChatItem(Lone/me/chats/picker/chats/PickerChatsListWidget;I)Z"
 
-    iput p4, p0, Lg7b;->d:I
+    const/4 v5, 0x0
 
-    iput p3, p0, Lg7b;->c:I
+    const/4 v1, 0x1
 
-    iput-object p2, p0, Lg7b;->b:Landroid/graphics/Rect;
+    const-class v2, Lcb7;
 
-    iput-object p5, p0, Lg7b;->e:Landroid/graphics/Matrix;
+    const-string v3, "isChatItem"
 
-    iput-object p6, p0, Lg7b;->f:Lsfc;
+    move-object v0, p0
 
-    invoke-virtual {p1}, Ljava/lang/Object;->hashCode()I
-
-    move-result p2
-
-    invoke-static {p2}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
-
-    move-result-object p2
-
-    iput-object p2, p0, Lg7b;->g:Ljava/lang/String;
-
-    new-instance p2, Ljava/util/ArrayList;
-
-    invoke-direct {p2}, Ljava/util/ArrayList;-><init>()V
-
-    iput-object p2, p0, Lg7b;->h:Ljava/util/ArrayList;
-
-    iget-object p1, p1, Lez1;->a:Ljava/util/List;
-
-    invoke-static {p1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
-
-    invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
-
-    move-result-object p1
-
-    :goto_0
-    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result p2
-
-    if-eqz p2, :cond_0
-
-    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object p2
-
-    check-cast p2, Lpz1;
-
-    iget-object p3, p0, Lg7b;->h:Ljava/util/ArrayList;
-
-    invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    const/4 p2, 0x0
-
-    invoke-static {p2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object p2
-
-    invoke-virtual {p3, p2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    goto :goto_0
-
-    :cond_0
-    iput-object p7, p0, Lg7b;->i:Lbm7;
+    invoke-direct/range {v0 .. v5}, Led6;-><init>(ILjava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
 
     return-void
+
+    :pswitch_0
+    move-object v0, p0
+
+    iput-object p1, v0, Lg7b;->b:Lone/me/chats/picker/chats/PickerChatsListWidget;
+
+    const-string v10, "checkBoxItemDecoration_delegate$lambda$10$isChatItem(Lone/me/chats/picker/chats/PickerChatsListWidget;I)Z"
+
+    const/4 v11, 0x0
+
+    const/4 v7, 0x1
+
+    const-class v8, Lcb7;
+
+    const-string v9, "isChatItem"
+
+    move-object v6, v0
+
+    invoke-direct/range {v6 .. v11}, Led6;-><init>(ILjava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
+
+    return-void
+
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_0
+    .end packed-switch
+.end method
+
+
+# virtual methods
+.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
+
+    iget v0, p0, Lg7b;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    check-cast p1, Ljava/lang/Number;
+
+    invoke-virtual {p1}, Ljava/lang/Number;->intValue()I
+
+    move-result p1
+
+    iget-object p0, p0, Lg7b;->b:Lone/me/chats/picker/chats/PickerChatsListWidget;
+
+    invoke-static {p0, p1}, Lone/me/chats/picker/chats/PickerChatsListWidget;->y0(Lone/me/chats/picker/chats/PickerChatsListWidget;I)Z
+
+    move-result p0
+
+    invoke-static {p0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object p0
+
+    return-object p0
+
+    :pswitch_0
+    check-cast p1, Ljava/lang/Number;
+
+    invoke-virtual {p1}, Ljava/lang/Number;->intValue()I
+
+    move-result p1
+
+    iget-object p0, p0, Lg7b;->b:Lone/me/chats/picker/chats/PickerChatsListWidget;
+
+    invoke-static {p0, p1}, Lone/me/chats/picker/chats/PickerChatsListWidget;->y0(Lone/me/chats/picker/chats/PickerChatsListWidget;I)Z
+
+    move-result p0
+
+    invoke-static {p0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object p0
+
+    return-object p0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

@@ -1,191 +1,113 @@
 .class public final Lyva;
-.super Lqde;
+.super Ljava/lang/Object;
 .source "SourceFile"
-
-# interfaces
-.implements Ll66;
 
 
 # instance fields
-.field public synthetic X:Ljava/lang/Object;
-
-.field public final synthetic Y:Lone/me/chats/picker/chats/PickerChatsListWidget;
-
-.field public final synthetic Z:Landroid/view/View;
+.field public final a:Lawa;
 
 
 # direct methods
-.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/chats/picker/chats/PickerChatsListWidget;Landroid/view/View;)V
+.method public constructor <init>(ILandroid/view/Surface;)V
+    .locals 3
+
+    .line 1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 2
+    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
+
+    const/16 v1, 0x21
+
+    if-lt v0, v1, :cond_0
+
+    .line 3
+    new-instance v0, Lbwa;
+
+    .line 4
+    new-instance v1, Landroid/hardware/camera2/params/OutputConfiguration;
+
+    invoke-direct {v1, p1, p2}, Landroid/hardware/camera2/params/OutputConfiguration;-><init>(ILandroid/view/Surface;)V
+
+    .line 5
+    invoke-direct {v0, v1}, Lawa;-><init>(Ljava/lang/Object;)V
+
+    .line 6
+    iput-object v0, p0, Lyva;->a:Lawa;
+
+    return-void
+
+    .line 7
+    :cond_0
+    new-instance v0, Lawa;
+
+    .line 8
+    new-instance v1, Lzva;
+
+    new-instance v2, Landroid/hardware/camera2/params/OutputConfiguration;
+
+    invoke-direct {v2, p1, p2}, Landroid/hardware/camera2/params/OutputConfiguration;-><init>(ILandroid/view/Surface;)V
+
+    invoke-direct {v1, v2}, Lzva;-><init>(Landroid/hardware/camera2/params/OutputConfiguration;)V
+
+    .line 9
+    invoke-direct {v0, v1}, Lawa;-><init>(Ljava/lang/Object;)V
+
+    .line 10
+    iput-object v0, p0, Lyva;->a:Lawa;
+
+    return-void
+.end method
+
+.method public constructor <init>(Lawa;)V
     .locals 0
 
-    iput-object p2, p0, Lyva;->Y:Lone/me/chats/picker/chats/PickerChatsListWidget;
+    .line 11
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p3, p0, Lyva;->Z:Landroid/view/View;
-
-    const/4 p2, 0x2
-
-    invoke-direct {p0, p2, p1}, Lqde;-><init>(ILkotlin/coroutines/Continuation;)V
+    .line 12
+    iput-object p1, p0, Lyva;->a:Lawa;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 1
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    instance-of v0, p1, Lyva;
 
-    invoke-virtual {p0, p1, p2}, Lyva;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    if-nez v0, :cond_0
 
-    move-result-object p0
-
-    check-cast p0, Lyva;
-
-    sget-object p1, Le5f;->a:Le5f;
-
-    invoke-virtual {p0, p1}, Lyva;->o(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p1
-.end method
-
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
-
-    new-instance v0, Lyva;
-
-    iget-object v1, p0, Lyva;->Y:Lone/me/chats/picker/chats/PickerChatsListWidget;
-
-    iget-object p0, p0, Lyva;->Z:Landroid/view/View;
-
-    invoke-direct {v0, p2, v1, p0}, Lyva;-><init>(Lkotlin/coroutines/Continuation;Lone/me/chats/picker/chats/PickerChatsListWidget;Landroid/view/View;)V
-
-    iput-object p1, v0, Lyva;->X:Ljava/lang/Object;
-
-    return-object v0
-.end method
-
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 5
-
-    invoke-static {p1}, Lsgg;->Z(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Lyva;->X:Ljava/lang/Object;
-
-    check-cast p1, Ljava/util/List;
-
-    iget-object v0, p0, Lyva;->Y:Lone/me/chats/picker/chats/PickerChatsListWidget;
-
-    iget-object v1, v0, Lone/me/chats/picker/chats/PickerChatsListWidget;->v0:Lkm0;
-
-    iget-object v2, v0, Lone/me/chats/picker/chats/PickerChatsListWidget;->u0:Lbva;
-
-    invoke-virtual {v2, p1}, Lhl7;->E(Ljava/util/List;)V
-
-    invoke-virtual {v0}, Lou3;->getView()Landroid/view/View;
-
-    move-result-object v2
-
-    const/4 v3, 0x0
-
-    if-eqz v2, :cond_0
-
-    invoke-virtual {v0}, Lone/me/chats/picker/chats/PickerChatsListWidget;->t0()Lone/me/sdk/lists/widgets/EndlessRecyclerView2;
-
-    move-result-object v2
-
-    invoke-virtual {v2, v3}, Lone/me/sdk/lists/widgets/EndlessRecyclerView2;->setRefreshingNext(Z)V
-
-    :cond_0
-    iget-object v2, v0, Lone/me/chats/picker/chats/PickerChatsListWidget;->b:Ljava/lang/String;
-
-    const-string v4, "all.chat.folder"
-
-    invoke-static {v2, v4}, Lxq7;->d(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_6
-
-    iget-object p0, p0, Lyva;->Z:Landroid/view/View;
-
-    instance-of v2, p0, Landroid/view/ViewGroup;
-
-    if-eqz v2, :cond_1
-
-    check-cast p0, Landroid/view/ViewGroup;
-
-    goto :goto_0
-
-    :cond_1
     const/4 p0, 0x0
 
-    :goto_0
-    if-eqz p0, :cond_2
+    return p0
 
-    invoke-virtual {v1}, Lkm0;->getValue()Ljava/lang/Object;
+    :cond_0
+    check-cast p1, Lyva;
 
-    move-result-object v2
+    iget-object p1, p1, Lyva;->a:Lawa;
 
-    check-cast v2, Landroid/view/View;
+    iget-object p0, p0, Lyva;->a:Lawa;
 
-    invoke-static {v2, p0}, Lwqd;->e(Landroid/view/View;Landroid/view/ViewGroup;)V
+    invoke-virtual {p0, p1}, Lawa;->equals(Ljava/lang/Object;)Z
 
-    :cond_2
-    invoke-virtual {v0}, Lone/me/chats/picker/chats/PickerChatsListWidget;->t0()Lone/me/sdk/lists/widgets/EndlessRecyclerView2;
+    move-result p0
 
-    move-result-object p0
+    return p0
+.end method
 
-    const/4 v0, 0x4
+.method public final hashCode()I
+    .locals 0
 
-    if-eqz p1, :cond_4
+    iget-object p0, p0, Lyva;->a:Lawa;
 
-    invoke-interface {p1}, Ljava/util/Collection;->isEmpty()Z
+    iget-object p0, p0, Lawa;->a:Ljava/lang/Object;
 
-    move-result v2
+    invoke-virtual {p0}, Ljava/lang/Object;->hashCode()I
 
-    if-nez v2, :cond_3
+    move-result p0
 
-    goto :goto_1
-
-    :cond_3
-    move v2, v0
-
-    goto :goto_2
-
-    :cond_4
-    :goto_1
-    move v2, v3
-
-    :goto_2
-    invoke-virtual {p0, v2}, Landroid/view/View;->setVisibility(I)V
-
-    invoke-virtual {v1}, Lkm0;->getValue()Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, Ls8a;
-
-    if-eqz p1, :cond_5
-
-    invoke-interface {p1}, Ljava/util/List;->isEmpty()Z
-
-    move-result p1
-
-    const/4 v1, 0x1
-
-    if-ne p1, v1, :cond_5
-
-    goto :goto_3
-
-    :cond_5
-    move v3, v0
-
-    :goto_3
-    invoke-virtual {p0, v3}, Ls8a;->setVisibility(I)V
-
-    :cond_6
-    sget-object p0, Le5f;->a:Le5f;
-
-    return-object p0
+    return p0
 .end method

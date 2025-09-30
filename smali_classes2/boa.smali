@@ -1,134 +1,169 @@
-.class public final Lboa;
+.class public abstract Lboa;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lorg/webrtc/VideoSink;
 
+# static fields
+.field public static final a:I
 
-# instance fields
-.field public final a:Ljava/lang/String;
+.field public static final b:I
 
-.field public b:J
+.field public static final c:I
 
-.field public final synthetic c:Lcoa;
+.field public static final d:I
+
+.field public static final e:I
+
+.field public static final f:I
+
+.field public static final g:I
+
+.field public static final h:I
+
+.field public static final i:I
+
+.field public static final j:I
+
+.field public static final k:I
+
+.field public static final l:I
+
+.field public static final m:I
+
+.field public static final n:I
+
+.field public static final o:I
+
+.field public static final p:I
+
+.field public static final q:I
+
+.field public static final r:I
+
+.field public static final s:I
+
+.field public static final t:I
+
+.field public static final u:I
+
+.field public static final v:I
+
+.field public static final w:I
+
+.field public static final x:I
+
+.field public static final y:I
+
+.field public static final z:I
 
 
 # direct methods
-.method public constructor <init>(Lcoa;Ljava/lang/String;)V
-    .locals 2
+.method static constructor <clinit>()V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    sget v0, Ln7c;->oneme_settings_privacy_black_list_empty_state:I
 
-    iput-object p1, p0, Lboa;->c:Lcoa;
+    sput v0, Lboa;->a:I
 
-    const-wide/16 v0, -0x1
+    sget v0, Ln7c;->oneme_settings_privacy_black_list_rv:I
 
-    iput-wide v0, p0, Lboa;->b:J
+    sput v0, Lboa;->b:I
 
-    iput-object p2, p0, Lboa;->a:Ljava/lang/String;
+    sget v0, Ln7c;->oneme_settings_privacy_black_list_toolbar:I
 
-    return-void
-.end method
+    sput v0, Lboa;->c:I
 
+    sget v0, Ln7c;->oneme_settings_privacy_black_list_unblock_action:I
 
-# virtual methods
-.method public final onFrame(Lorg/webrtc/VideoFrame;)V
-    .locals 6
+    sput v0, Lboa;->d:I
 
-    invoke-virtual {p1}, Lorg/webrtc/VideoFrame;->getCompactParticipantId()Ljava/lang/Long;
+    sget v0, Ln7c;->oneme_settings_privacy_black_list_unblock_cancel_action:I
 
-    move-result-object p1
+    sput v0, Lboa;->e:I
 
-    const-wide/16 v0, -0x1
+    sget v0, Ln7c;->oneme_settings_privacy_screen_dialog_add_chat_button_all:I
 
-    if-nez p1, :cond_0
+    sput v0, Lboa;->f:I
 
-    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    sget v0, Ln7c;->oneme_settings_privacy_screen_dialog_add_chat_button_contacts:I
 
-    move-result-object p1
+    sput v0, Lboa;->g:I
 
-    :cond_0
-    invoke-virtual {p1}, Ljava/lang/Long;->longValue()J
+    sget v0, Ln7c;->oneme_settings_privacy_screen_dialog_call_button_all:I
 
-    move-result-wide v2
+    sput v0, Lboa;->h:I
 
-    iget-wide v4, p0, Lboa;->b:J
+    sget v0, Ln7c;->oneme_settings_privacy_screen_dialog_call_button_contacts:I
 
-    cmp-long v2, v2, v4
+    sput v0, Lboa;->i:I
 
-    if-eqz v2, :cond_3
+    sget v0, Ln7c;->oneme_settings_privacy_screen_dialog_content_level_access_all:I
 
-    invoke-virtual {p1}, Ljava/lang/Long;->longValue()J
+    sput v0, Lboa;->j:I
 
-    move-result-wide v2
+    sget v0, Ln7c;->oneme_settings_privacy_screen_dialog_content_level_access_safe:I
 
-    iput-wide v2, p0, Lboa;->b:J
+    sput v0, Lboa;->k:I
 
-    invoke-virtual {p1}, Ljava/lang/Long;->longValue()J
+    sget v0, Ln7c;->oneme_settings_privacy_screen_dialog_finished_session_cancel_btn:I
 
-    move-result-wide v2
+    sput v0, Lboa;->l:I
 
-    cmp-long v0, v2, v0
+    sget v0, Ln7c;->oneme_settings_privacy_screen_dialog_finished_session_finish_btn:I
 
-    if-nez v0, :cond_1
+    sput v0, Lboa;->m:I
 
-    const/4 p1, 0x0
+    sget v0, Ln7c;->oneme_settings_privacy_screen_dialog_online_button_contacts:I
 
-    :cond_1
-    iget-object v0, p0, Lboa;->c:Lcoa;
+    sput v0, Lboa;->n:I
 
-    iget-object v1, v0, Lcoa;->k:Ljava/util/concurrent/ConcurrentHashMap;
+    sget v0, Ln7c;->oneme_settings_privacy_screen_dialog_online_button_nobody:I
 
-    iget-object v2, v0, Lcoa;->l:Ljava/util/concurrent/ConcurrentHashMap;
+    sput v0, Lboa;->o:I
 
-    iget-object p0, p0, Lboa;->a:Ljava/lang/String;
+    sget v0, Ln7c;->oneme_settings_privacy_screen_dialog_online_never_accept_btn:I
 
-    invoke-virtual {v1, p0}, Ljava/util/concurrent/ConcurrentHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    sput v0, Lboa;->p:I
 
-    move-result-object v3
+    sget v0, Ln7c;->oneme_settings_privacy_screen_dialog_online_never_cancel_btn:I
 
-    check-cast v3, Ldp1;
+    sput v0, Lboa;->q:I
 
-    if-eqz v3, :cond_2
+    sget v0, Ln7c;->oneme_settings_privacy_screen_dialog_safe_file_no_btn:I
 
-    invoke-virtual {v1, p0, v3}, Ljava/util/concurrent/ConcurrentHashMap;->remove(Ljava/lang/Object;Ljava/lang/Object;)Z
+    sput v0, Lboa;->r:I
 
-    invoke-virtual {v2, v3, p0}, Ljava/util/concurrent/ConcurrentHashMap;->remove(Ljava/lang/Object;Ljava/lang/Object;)Z
+    sget v0, Ln7c;->oneme_settings_privacy_screen_dialog_safe_file_yes_btn:I
 
-    :cond_2
-    if-eqz p1, :cond_3
+    sput v0, Lboa;->s:I
 
-    iget-object v0, v0, Lyi3;->e:Ljava/lang/Object;
+    sget v0, Ln7c;->oneme_settings_privacy_screen_dialog_search_by_phone_all:I
 
-    check-cast v0, Lsag;
+    sput v0, Lboa;->t:I
 
-    invoke-virtual {p1}, Ljava/lang/Long;->longValue()J
+    sget v0, Ln7c;->oneme_settings_privacy_screen_dialog_search_by_phone_contacts:I
 
-    move-result-wide v3
+    sput v0, Lboa;->u:I
 
-    long-to-int p1, v3
+    sget v0, Ln7c;->oneme_settings_privacy_screen_list:I
 
-    iget-object v0, v0, Lsag;->b:Ljava/lang/Object;
+    sput v0, Lboa;->v:I
 
-    check-cast v0, Ljava/util/concurrent/ConcurrentHashMap;
+    sget v0, Ln7c;->oneme_settings_privacy_screen_settings_header_vh:I
 
-    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    sput v0, Lboa;->w:I
 
-    move-result-object p1
+    sget v0, Ln7c;->oneme_settings_privacy_screen_settings_item_vh:I
 
-    invoke-virtual {v0, p1}, Ljava/util/concurrent/ConcurrentHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    sput v0, Lboa;->x:I
 
-    move-result-object p1
+    sget v0, Ln7c;->oneme_settings_privacy_screen_settings_warning_vh:I
 
-    check-cast p1, Ldp1;
+    sput v0, Lboa;->y:I
 
-    if-eqz p1, :cond_3
+    sget v0, Ln7c;->oneme_settings_privacy_screen_toolbar:I
 
-    invoke-virtual {v1, p0, p1}, Ljava/util/concurrent/ConcurrentHashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    sput v0, Lboa;->z:I
 
-    invoke-virtual {v2, p1, p0}, Ljava/util/concurrent/ConcurrentHashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    :cond_3
     return-void
 .end method

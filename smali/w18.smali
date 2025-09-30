@@ -1,142 +1,161 @@
 .class public final Lw18;
-.super Ljava/lang/Object;
+.super Lure;
 .source "SourceFile"
+
+# interfaces
+.implements Lpc6;
 
 
 # instance fields
-.field public A:I
+.field public X:I
 
-.field public B:I
+.field public final synthetic Y:Li28;
 
-.field public C:I
 
-.field public D:I
+# direct methods
+.method public constructor <init>(Li28;Lkotlin/coroutines/Continuation;)V
+    .locals 0
 
-.field public E:F
+    iput-object p1, p0, Lw18;->Y:Li28;
 
-.field public F:F
+    const/4 p1, 0x2
 
-.field public G:F
+    invoke-direct {p0, p1, p2}, Lure;-><init>(ILkotlin/coroutines/Continuation;)V
 
-.field public H:F
-
-.field public I:F
-
-.field public J:F
-
-.field public K:F
-
-.field public L:F
-
-.field public M:F
-
-.field public N:F
-
-.field public O:[B
-
-.field public P:I
-
-.field public Q:I
-
-.field public R:I
-
-.field public S:J
-
-.field public T:J
-
-.field public U:Lb1f;
-
-.field public V:Z
-
-.field public W:Z
-
-.field public X:Ljava/lang/String;
-
-.field public Y:Lbye;
-
-.field public Z:I
-
-.field public a:Ljava/lang/String;
-
-.field public b:Ljava/lang/String;
-
-.field public c:I
-
-.field public d:I
-
-.field public e:I
-
-.field public f:I
-
-.field public g:I
-
-.field public h:Z
-
-.field public i:[B
-
-.field public j:Lzxe;
-
-.field public k:[B
-
-.field public l:Ldr4;
-
-.field public m:I
-
-.field public n:I
-
-.field public o:I
-
-.field public p:I
-
-.field public q:I
-
-.field public r:I
-
-.field public s:I
-
-.field public t:F
-
-.field public u:F
-
-.field public v:F
-
-.field public w:[B
-
-.field public x:I
-
-.field public y:Z
-
-.field public z:I
+    return-void
+.end method
 
 
 # virtual methods
-.method public final a(Ljava/lang/String;)[B
-    .locals 1
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    iget-object p0, p0, Lw18;->k:[B
+    check-cast p1, Ly04;
 
-    if-eqz p0, :cond_0
+    check-cast p2, Lkotlin/coroutines/Continuation;
+
+    invoke-virtual {p0, p1, p2}, Lw18;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+
+    move-result-object p0
+
+    check-cast p0, Lw18;
+
+    sget-object p1, Lylf;->a:Lylf;
+
+    invoke-virtual {p0, p1}, Lw18;->o(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p0
 
     return-object p0
+.end method
+
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 0
+
+    new-instance p1, Lw18;
+
+    iget-object p0, p0, Lw18;->Y:Li28;
+
+    invoke-direct {p1, p0, p2}, Lw18;-><init>(Li28;Lkotlin/coroutines/Continuation;)V
+
+    return-object p1
+.end method
+
+.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 8
+
+    iget v0, p0, Lw18;->X:I
+
+    sget-object v1, Lylf;->a:Lylf;
+
+    const/4 v2, 0x1
+
+    if-eqz v0, :cond_1
+
+    if-ne v0, v2, :cond_0
+
+    invoke-static {p1}, Lqe5;->V(Ljava/lang/Object;)V
+
+    return-object v1
 
     :cond_0
-    new-instance p0, Ljava/lang/StringBuilder;
+    new-instance p0, Ljava/lang/IllegalStateException;
 
-    const-string v0, "Missing CodecPrivate for codec "
+    const-string p1, "call to \'resume\' before \'invoke\' with coroutine"
 
-    invoke-direct {p0, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {p0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    const/4 p1, 0x0
-
-    invoke-static {p1, p0}, Landroidx/media3/common/ParserException;->a(Ljava/lang/RuntimeException;Ljava/lang/String;)Landroidx/media3/common/ParserException;
-
-    move-result-object p0
+    invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
     throw p0
+
+    :cond_1
+    invoke-static {p1}, Lqe5;->V(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Lw18;->Y:Li28;
+
+    iget-object v0, p1, Li28;->o:Lzte;
+
+    invoke-virtual {v0}, Lzte;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lis5;
+
+    new-instance v3, Lzv2;
+
+    const/16 v4, 0xb
+
+    invoke-direct {v3, v0, v4}, Lzv2;-><init>(Lis5;I)V
+
+    new-instance v0, Ljava/util/ArrayList;
+
+    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
+
+    new-instance v4, Ls18;
+
+    const/4 v5, 0x3
+
+    const/4 v6, 0x0
+
+    const/4 v7, 0x0
+
+    invoke-direct {v4, v5, v7, v6}, Ls18;-><init>(ILkotlin/coroutines/Continuation;I)V
+
+    new-instance v5, Lq31;
+
+    invoke-direct {v5, v0, v3, v4}, Lq31;-><init>(Ljava/lang/Object;Lis5;Lrc6;)V
+
+    new-instance v0, Lu18;
+
+    const/4 v3, 0x0
+
+    invoke-direct {v0, p1, v3}, Lu18;-><init>(Li28;I)V
+
+    iput v2, p0, Lw18;->X:I
+
+    new-instance p1, Lyf7;
+
+    const/4 v2, 0x4
+
+    invoke-direct {p1, v0, v2}, Lyf7;-><init>(Lks5;I)V
+
+    invoke-virtual {v5, p1, p0}, Lq31;->d(Lks5;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p0
+
+    sget-object p1, Lz04;->a:Lz04;
+
+    if-ne p0, p1, :cond_2
+
+    goto :goto_0
+
+    :cond_2
+    move-object p0, v1
+
+    :goto_0
+    if-ne p0, p1, :cond_3
+
+    return-object p1
+
+    :cond_3
+    return-object v1
 .end method

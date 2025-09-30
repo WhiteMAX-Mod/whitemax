@@ -1,109 +1,154 @@
 .class public final Lryc;
-.super Lz;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # static fields
-.field public static final CREATOR:Landroid/os/Parcelable$Creator;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Landroid/os/Parcelable$Creator<",
-            "Lryc;",
-            ">;"
-        }
-    .end annotation
-.end field
+.field public static final b:Lryc;
+
+.field public static final c:Lryc;
 
 
 # instance fields
-.field public c:Z
+.field public final a:Z
 
 
 # direct methods
 .method static constructor <clinit>()V
     .locals 2
 
-    new-instance v0, Ly;
+    new-instance v0, Lryc;
 
-    const/4 v1, 0x7
+    const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Ly;-><init>(I)V
+    invoke-direct {v0, v1}, Lryc;-><init>(Z)V
 
-    sput-object v0, Lryc;->CREATOR:Landroid/os/Parcelable$Creator;
+    sput-object v0, Lryc;->b:Lryc;
+
+    new-instance v0, Lryc;
+
+    const/4 v1, 0x1
+
+    invoke-direct {v0, v1}, Lryc;-><init>(Z)V
+
+    sput-object v0, Lryc;->c:Lryc;
 
     return-void
 .end method
 
-.method public constructor <init>(Landroid/os/Parcel;Ljava/lang/ClassLoader;)V
+.method public constructor <init>(Z)V
     .locals 0
 
-    invoke-direct {p0, p1, p2}, Lz;-><init>(Landroid/os/Parcel;Ljava/lang/ClassLoader;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 p2, 0x0
-
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->readValue(Ljava/lang/ClassLoader;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Ljava/lang/Boolean;
-
-    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
-
-    move-result p1
-
-    iput-boolean p1, p0, Lryc;->c:Z
+    iput-boolean p1, p0, Lryc;->a:Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final toString()Ljava/lang/String;
-    .locals 2
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 1
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    if-ne p1, p0, :cond_0
 
-    const-string v1, "SearchView.SavedState{"
+    goto :goto_0
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    :cond_0
+    instance-of v0, p1, Lryc;
 
-    invoke-static {p0}, Ljava/lang/System;->identityHashCode(Ljava/lang/Object;)I
+    if-nez v0, :cond_1
 
-    move-result v1
+    goto :goto_1
 
-    invoke-static {v1}, Ljava/lang/Integer;->toHexString(I)Ljava/lang/String;
+    :cond_1
+    check-cast p1, Lryc;
 
-    move-result-object v1
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    iget-boolean p0, p0, Lryc;->a:Z
 
-    const-string v1, " isIconified="
+    iget-boolean p1, p1, Lryc;->a:Z
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    if-ne p0, p1, :cond_2
 
-    iget-boolean p0, p0, Lryc;->c:Z
+    :goto_0
+    const/4 p0, 0x1
 
-    const-string v1, "}"
+    return p0
 
-    invoke-static {v0, p0, v1}, Lzt1;->j(Ljava/lang/StringBuilder;ZLjava/lang/String;)Ljava/lang/String;
+    :cond_2
+    :goto_1
+    const/4 p0, 0x0
 
-    move-result-object p0
-
-    return-object p0
+    return p0
 .end method
 
-.method public final writeToParcel(Landroid/os/Parcel;I)V
-    .locals 0
+.method public final hashCode()I
+    .locals 1
 
-    invoke-super {p0, p1, p2}, Lz;->writeToParcel(Landroid/os/Parcel;I)V
+    const/4 v0, -0x1
 
-    iget-boolean p0, p0, Lryc;->c:Z
+    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v0
+
+    iget-boolean p0, p0, Lryc;->a:Z
 
     invoke-static {p0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object p0
 
-    invoke-virtual {p1, p0}, Landroid/os/Parcel;->writeValue(Ljava/lang/Object;)V
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
 
-    return-void
+    move-result v0
+
+    invoke-virtual {p0}, Ljava/lang/Object;->hashCode()I
+
+    move-result p0
+
+    add-int/lit8 v0, v0, 0x1f
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    add-int/2addr v0, p0
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 2
+
+    const/4 v0, -0x1
+
+    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v0
+
+    iget-boolean p0, p0, Lryc;->a:Z
+
+    invoke-static {p0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object p0
+
+    filled-new-array {v0, p0}, [Ljava/lang/Object;
+
+    move-result-object p0
+
+    const/4 v0, 0x2
+
+    invoke-static {p0, v0}, Ljava/util/Arrays;->copyOf([Ljava/lang/Object;I)[Ljava/lang/Object;
+
+    move-result-object p0
+
+    const/4 v0, 0x0
+
+    const-string v1, "%d defer:%b"
+
+    invoke-static {v0, v1, p0}, Ljava/lang/String;->format(Ljava/util/Locale;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object p0
+
+    return-object p0
 .end method

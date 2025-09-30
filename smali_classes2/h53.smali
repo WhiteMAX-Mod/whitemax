@@ -1,618 +1,418 @@
 .class public final Lh53;
-.super Landroid/view/GestureDetector$SimpleOnGestureListener;
+.super Lgad;
 .source "SourceFile"
 
 
 # instance fields
-.field public final synthetic a:I
-
-.field public final b:Ljava/lang/Object;
-
-.field public final synthetic c:Ljava/lang/Object;
-
-
-# direct methods
-.method public constructor <init>(Lhs8;Lfs8;)V
-    .locals 1
-
-    const/4 v0, 0x1
-
-    iput v0, p0, Lh53;->a:I
-
-    .line 2
-    iput-object p1, p0, Lh53;->c:Ljava/lang/Object;
-
-    .line 3
-    invoke-direct {p0}, Landroid/view/GestureDetector$SimpleOnGestureListener;-><init>()V
-
-    .line 4
-    iput-object p2, p0, Lh53;->b:Ljava/lang/Object;
-
-    return-void
-.end method
-
-.method public synthetic constructor <init>(Ljava/lang/Object;ILjava/lang/Object;)V
-    .locals 0
-
-    .line 1
-    iput p2, p0, Lh53;->a:I
-
-    iput-object p1, p0, Lh53;->b:Ljava/lang/Object;
-
-    iput-object p3, p0, Lh53;->c:Ljava/lang/Object;
-
-    invoke-direct {p0}, Landroid/view/GestureDetector$SimpleOnGestureListener;-><init>()V
-
-    return-void
-.end method
+.field public volatile l:Ljava/lang/Boolean;
 
 
 # virtual methods
-.method public a(Landroid/view/MotionEvent;)Z
-    .locals 1
+.method public final A()Z
+    .locals 3
 
-    iget-object p0, p0, Lh53;->c:Ljava/lang/Object;
-
-    check-cast p0, Lhs8;
-
-    iget-object p0, p0, Lhs8;->E0:Landroid/view/ViewGroup;
-
-    instance-of v0, p0, Lgv8;
-
-    if-eqz v0, :cond_0
-
-    invoke-virtual {p0}, Landroid/view/View;->getTouchDelegate()Landroid/view/TouchDelegate;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_0
-
-    invoke-virtual {p0}, Landroid/view/View;->getTouchDelegate()Landroid/view/TouchDelegate;
-
-    move-result-object p0
-
-    invoke-virtual {p0, p1}, Landroid/view/TouchDelegate;->onTouchEvent(Landroid/view/MotionEvent;)Z
-
-    move-result p0
-
-    return p0
-
-    :cond_0
-    const/4 p0, 0x0
-
-    return p0
-.end method
-
-.method public onDown(Landroid/view/MotionEvent;)Z
-    .locals 4
-
-    iget v0, p0, Lh53;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    :pswitch_0
-    invoke-super {p0, p1}, Landroid/view/GestureDetector$SimpleOnGestureListener;->onDown(Landroid/view/MotionEvent;)Z
-
-    move-result p0
-
-    return p0
-
-    :pswitch_1
-    iget-object p0, p0, Lh53;->b:Ljava/lang/Object;
-
-    check-cast p0, Ljjd;
-
-    invoke-virtual {p0}, Landroid/view/View;->getTouchDelegate()Landroid/view/TouchDelegate;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_0
-
-    invoke-virtual {v0, p1}, Landroid/view/TouchDelegate;->onTouchEvent(Landroid/view/MotionEvent;)Z
-
-    move-result v0
-
-    goto :goto_0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    :goto_0
-    const/4 v1, 0x1
-
-    if-eqz v0, :cond_1
-
-    goto :goto_1
-
-    :cond_1
-    iget-object v0, p0, Ljjd;->r0:Landroid/graphics/Rect;
-
-    invoke-virtual {p1}, Landroid/view/MotionEvent;->getX()F
-
-    move-result v2
-
-    float-to-int v2, v2
-
-    invoke-virtual {p1}, Landroid/view/MotionEvent;->getY()F
-
-    move-result v3
-
-    float-to-int v3, v3
-
-    invoke-virtual {v0, v2, v3}, Landroid/graphics/Rect;->contains(II)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_2
-
-    invoke-static {p0}, Ljjd;->m(Ljjd;)Landroid/graphics/drawable/RippleDrawable;
-
-    move-result-object v0
-
-    invoke-virtual {p1}, Landroid/view/MotionEvent;->getX()F
-
-    move-result v2
-
-    invoke-virtual {p1}, Landroid/view/MotionEvent;->getY()F
-
-    move-result v3
-
-    invoke-virtual {v0, v2, v3}, Landroid/graphics/drawable/RippleDrawable;->setHotspot(FF)V
-
-    invoke-static {p0}, Ljjd;->j(Ljjd;)Landroid/graphics/drawable/ShapeDrawable;
-
-    move-result-object v0
-
-    invoke-virtual {p1}, Landroid/view/MotionEvent;->getX()F
-
-    move-result v2
-
-    invoke-virtual {p1}, Landroid/view/MotionEvent;->getY()F
-
-    move-result p1
-
-    invoke-virtual {v0, v2, p1}, Landroid/graphics/drawable/Drawable;->setHotspot(FF)V
-
-    invoke-virtual {p0, v1}, Landroid/view/View;->setPressed(Z)V
-
-    invoke-virtual {p0}, Landroid/view/View;->invalidate()V
-
-    :cond_2
-    :goto_1
-    return v1
-
-    :pswitch_2
-    const/4 p0, 0x1
-
-    return p0
-
-    :pswitch_3
-    invoke-virtual {p0, p1}, Lh53;->a(Landroid/view/MotionEvent;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_3
-
-    goto :goto_3
-
-    :cond_3
-    iget-object p0, p0, Lh53;->c:Ljava/lang/Object;
-
-    check-cast p0, Lhs8;
-
-    iget-object p0, p0, Lhs8;->E0:Landroid/view/ViewGroup;
-
-    instance-of v0, p0, Los8;
-
-    if-eqz v0, :cond_4
-
-    check-cast p0, Los8;
-
-    goto :goto_2
-
-    :cond_4
-    const/4 p0, 0x0
-
-    :goto_2
-    if-eqz p0, :cond_5
-
-    sget-object v0, Lhs8;->N0:[I
-
-    invoke-interface {p0, p1, v0}, Los8;->d(Landroid/view/MotionEvent;[I)V
-
-    :cond_5
-    :goto_3
-    const/4 p0, 0x1
-
-    return p0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x1
-        :pswitch_3
-        :pswitch_2
-        :pswitch_0
-        :pswitch_1
-    .end packed-switch
-.end method
-
-.method public onLongPress(Landroid/view/MotionEvent;)V
-    .locals 2
-
-    iget v0, p0, Lh53;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    :pswitch_0
-    invoke-super {p0, p1}, Landroid/view/GestureDetector$SimpleOnGestureListener;->onLongPress(Landroid/view/MotionEvent;)V
-
-    return-void
-
-    :pswitch_1
-    iget-object p0, p0, Lh53;->b:Ljava/lang/Object;
-
-    check-cast p0, Ljjd;
-
-    invoke-virtual {p0}, Landroid/view/View;->getTouchDelegate()Landroid/view/TouchDelegate;
-
-    move-result-object v0
+    iget-object v0, p0, Lh53;->l:Ljava/lang/Boolean;
 
     const/4 v1, 0x0
 
-    if-eqz v0, :cond_0
+    if-nez v0, :cond_0
 
-    invoke-virtual {v0, p1}, Landroid/view/TouchDelegate;->onTouchEvent(Landroid/view/MotionEvent;)Z
+    const-string v0, "ok_push_disabled"
 
-    move-result p1
+    iget-object v2, p0, Li3;->g:Lfl7;
 
-    goto :goto_0
+    invoke-virtual {v2, v0, v1}, Lfl7;->getBoolean(Ljava/lang/String;Z)Z
+
+    move-result v0
+
+    invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lh53;->l:Ljava/lang/Boolean;
 
     :cond_0
-    move p1, v1
+    :try_start_0
+    iget-object p0, p0, Lh53;->l:Ljava/lang/Boolean;
 
-    :goto_0
-    if-eqz p1, :cond_1
-
-    goto :goto_1
-
-    :cond_1
-    invoke-virtual {p0, v1}, Landroid/view/View;->setPressed(Z)V
-
-    invoke-virtual {p0}, Landroid/view/View;->invalidate()V
-
-    invoke-virtual {p0}, Landroid/view/View;->performLongClick()Z
-
-    :goto_1
-    return-void
-
-    :pswitch_2
-    invoke-super {p0, p1}, Landroid/view/GestureDetector$SimpleOnGestureListener;->onLongPress(Landroid/view/MotionEvent;)V
-
-    iget-object p0, p0, Lh53;->c:Ljava/lang/Object;
-
-    check-cast p0, Lbz8;
-
-    invoke-virtual {p0}, Lbz8;->invoke()Ljava/lang/Object;
-
-    return-void
-
-    :pswitch_3
-    invoke-virtual {p0, p1}, Lh53;->a(Landroid/view/MotionEvent;)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_2
-
-    goto :goto_2
-
-    :cond_2
-    iget-object p0, p0, Lh53;->c:Ljava/lang/Object;
-
-    check-cast p0, Lhs8;
-
-    iget-object p0, p0, Lccc;->a:Landroid/view/View;
-
-    check-cast p0, Lzr8;
-
-    invoke-virtual {p0}, Landroid/view/View;->performLongClick()Z
-
-    :goto_2
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x1
-        :pswitch_3
-        :pswitch_2
-        :pswitch_0
-        :pswitch_1
-    .end packed-switch
-.end method
-
-.method public onSingleTapConfirmed(Landroid/view/MotionEvent;)Z
-    .locals 4
-
-    iget v0, p0, Lh53;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    invoke-super {p0, p1}, Landroid/view/GestureDetector$SimpleOnGestureListener;->onSingleTapConfirmed(Landroid/view/MotionEvent;)Z
+    invoke-virtual {p0}, Ljava/lang/Boolean;->booleanValue()Z
 
     move-result p0
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     return p0
 
-    :pswitch_0
-    iget-object p1, p0, Lh53;->b:Ljava/lang/Object;
-
-    check-cast p1, Le8b;
-
-    const/4 v0, 0x1
-
-    if-eqz p1, :cond_1
-
-    iget-object p0, p0, Lh53;->c:Ljava/lang/Object;
-
-    check-cast p0, Lone/me/profile/screens/avatars/ProfileAvatarWidget;
-
-    iget-object v1, p0, Lone/me/profile/screens/avatars/ProfileAvatarWidget;->b:Lvr;
-
-    sget-object v2, Lone/me/profile/screens/avatars/ProfileAvatarWidget;->X:[Lbc7;
-
-    const/4 v3, 0x0
-
-    aget-object v2, v2, v3
-
-    invoke-virtual {v1, p0}, Lvr;->a(Lone/me/sdk/arch/Widget;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, Ljava/lang/Number;
-
-    invoke-virtual {p0}, Ljava/lang/Number;->longValue()J
-
-    check-cast p1, Lone/me/profile/screens/avatars/ProfileAvatarsScreen;
-
-    invoke-virtual {p1}, Lone/me/profile/screens/avatars/ProfileAvatarsScreen;->D0()Lvia;
-
-    move-result-object p0
-
-    invoke-virtual {p0}, Landroid/view/View;->getVisibility()I
-
-    move-result p0
-
-    if-nez p0, :cond_0
-
-    move v3, v0
-
-    :cond_0
-    xor-int/lit8 p0, v3, 0x1
-
-    invoke-virtual {p1, p0}, Lone/me/profile/screens/avatars/ProfileAvatarsScreen;->C0(Z)V
-
-    :cond_1
-    return v0
-
-    :pswitch_data_0
-    .packed-switch 0x3
-        :pswitch_0
-    .end packed-switch
+    :catch_0
+    return v1
 .end method
 
-.method public onSingleTapUp(Landroid/view/MotionEvent;)Z
-    .locals 4
+.method public final c()V
+    .locals 39
 
-    iget v0, p0, Lh53;->a:I
+    move-object/from16 v0, p0
 
-    packed-switch v0, :pswitch_data_0
-
-    :pswitch_0
-    invoke-super {p0, p1}, Landroid/view/GestureDetector$SimpleOnGestureListener;->onSingleTapUp(Landroid/view/MotionEvent;)Z
-
-    move-result p0
-
-    return p0
-
-    :pswitch_1
-    iget-object v0, p0, Lh53;->b:Ljava/lang/Object;
-
-    check-cast v0, Ljjd;
-
-    invoke-virtual {v0}, Landroid/view/View;->getTouchDelegate()Landroid/view/TouchDelegate;
+    invoke-virtual {v0}, Lh53;->x()Ljava/lang/String;
 
     move-result-object v1
 
-    const/4 v2, 0x0
-
-    if-eqz v1, :cond_0
-
-    invoke-virtual {v1, p1}, Landroid/view/TouchDelegate;->onTouchEvent(Landroid/view/MotionEvent;)Z
-
-    move-result v1
-
-    goto :goto_0
-
-    :cond_0
-    move v1, v2
-
-    :goto_0
-    if-eqz v1, :cond_1
-
-    goto :goto_1
-
-    :cond_1
-    invoke-virtual {v0, v2}, Landroid/view/View;->setPressed(Z)V
-
-    invoke-virtual {v0}, Landroid/view/View;->invalidate()V
-
-    iget-object v1, v0, Ljjd;->r0:Landroid/graphics/Rect;
-
-    invoke-virtual {p1}, Landroid/view/MotionEvent;->getX()F
-
-    move-result v2
-
-    float-to-int v2, v2
-
-    invoke-virtual {p1}, Landroid/view/MotionEvent;->getY()F
-
-    move-result p1
-
-    float-to-int p1, p1
-
-    invoke-virtual {v1, v2, p1}, Landroid/graphics/Rect;->contains(II)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_2
-
-    iget-object p0, p0, Lh53;->c:Ljava/lang/Object;
-
-    check-cast p0, Laza;
-
-    invoke-virtual {p0}, Laza;->invoke()Ljava/lang/Object;
-
-    goto :goto_1
-
-    :cond_2
-    invoke-virtual {v0}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
-
-    move-result-object p0
-
-    check-cast p0, Landroid/view/View;
-
-    invoke-virtual {p0}, Landroid/view/View;->performClick()Z
-
-    :goto_1
-    const/4 p0, 0x1
-
-    return p0
-
-    :pswitch_2
-    iget-object p0, p0, Lh53;->b:Ljava/lang/Object;
-
-    check-cast p0, Lbz8;
-
-    invoke-virtual {p0}, Lbz8;->invoke()Ljava/lang/Object;
-
-    const/4 p0, 0x1
-
-    return p0
-
-    :pswitch_3
-    iget-object v0, p0, Lh53;->c:Ljava/lang/Object;
-
-    check-cast v0, Lhs8;
-
-    invoke-virtual {p0, p1}, Lh53;->a(Landroid/view/MotionEvent;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_3
-
-    goto :goto_3
-
-    :cond_3
-    iget-object v1, v0, Lhs8;->E0:Landroid/view/ViewGroup;
-
-    instance-of v2, v1, Los8;
-
-    const/4 v3, 0x0
-
-    if-eqz v2, :cond_4
-
-    check-cast v1, Los8;
-
-    goto :goto_2
-
-    :cond_4
-    move-object v1, v3
-
-    :goto_2
-    if-eqz v1, :cond_5
-
-    invoke-interface {v1, p1}, Los8;->n(Landroid/view/MotionEvent;)Ls33;
+    invoke-virtual {v0}, Lh53;->y()Ljava/lang/String;
 
     move-result-object v2
 
-    if-eqz v2, :cond_5
+    iget-object v3, v0, Li3;->g:Lfl7;
 
-    invoke-interface {v2}, Ls33;->i()Ljava/lang/String;
+    const-string v4, "server.useTls"
 
-    move-result-object v3
+    const/4 v5, 0x1
 
-    :cond_5
-    if-eqz v1, :cond_6
+    invoke-virtual {v3, v4, v5}, Lfl7;->getBoolean(Ljava/lang/String;Z)Z
 
-    sget-object v2, Lhs8;->O0:[I
+    move-result v6
 
-    invoke-interface {v1, p1, v2}, Los8;->d(Landroid/view/MotionEvent;[I)V
+    const-string v7, "server.loginError"
 
-    :cond_6
-    if-eqz v1, :cond_8
+    const/4 v8, 0x0
 
-    invoke-interface {v1, p1}, Los8;->h(Landroid/view/MotionEvent;)Z
+    invoke-virtual {v3, v7, v8}, Lfl7;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
-    move-result p1
+    move-result-object v9
 
-    if-nez p1, :cond_7
+    const-string v10, "device.id"
 
-    if-eqz v3, :cond_8
+    invoke-virtual {v3, v10, v8}, Lfl7;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
-    :cond_7
-    iget-object p0, p0, Lh53;->b:Ljava/lang/Object;
+    move-result-object v11
 
-    check-cast p0, Lfs8;
+    const-string v12, "user.Phone.Code"
 
-    invoke-virtual {p0, v3}, Lfs8;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v3, v12, v8}, Lfl7;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
-    goto :goto_3
+    move-result-object v13
 
-    :cond_8
-    iget-object p0, v0, Lccc;->a:Landroid/view/View;
+    const-string v14, "user.Phone"
 
-    check-cast p0, Lzr8;
+    invoke-virtual {v3, v14, v8}, Lfl7;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
-    invoke-virtual {p0}, Landroid/view/View;->performClick()Z
+    move-result-object v15
 
-    :goto_3
-    const/4 p0, 0x1
+    const-string v5, "app.lastSuccessProxy"
 
-    return p0
+    move-object/from16 v17, v14
 
-    :pswitch_4
-    iget-object p1, p0, Lh53;->b:Ljava/lang/Object;
+    invoke-virtual {v3, v5, v8}, Lfl7;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
-    check-cast p1, Lg53;
+    move-result-object v14
 
-    if-eqz p1, :cond_9
+    move-object/from16 v18, v5
 
-    iget-object p0, p0, Lh53;->c:Ljava/lang/Object;
+    const-string v5, "app.currentProxyList"
 
-    check-cast p0, Lf53;
+    move-object/from16 v19, v14
 
-    invoke-virtual {p0}, Lf53;->getColor()I
+    invoke-virtual {v3, v5, v8}, Lfl7;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v14
+
+    const/16 v8, 0x12b
+
+    move-object/from16 v21, v5
+
+    const-string v5, "app.currentProxyListTtl"
+
+    invoke-virtual {v3, v5, v8}, Lfl7;->getInt(Ljava/lang/String;I)I
+
+    move-result v8
+
+    move-object/from16 v22, v5
+
+    const-string v5, "app.debugHostRotation"
+
+    move/from16 v23, v8
+
+    const/4 v8, 0x0
+
+    move-object/from16 v24, v14
+
+    invoke-virtual {v3, v5, v8}, Lfl7;->getBoolean(Ljava/lang/String;Z)Z
+
+    move-result v14
+
+    move-object/from16 v25, v5
+
+    const-string v5, "app.debugUaDnsEmulation"
+
+    invoke-virtual {v3, v5, v8}, Lfl7;->getBoolean(Ljava/lang/String;Z)Z
+
+    move-result v8
+
+    move-object/from16 v26, v5
+
+    invoke-virtual {v0}, Lgad;->p()Ljava/lang/String;
+
+    move-result-object v5
+
+    move-object/from16 v27, v5
+
+    const-string v5, "user.systemLang"
+
+    move/from16 v28, v8
+
+    const/4 v8, 0x0
+
+    invoke-virtual {v3, v5, v8}, Lfl7;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v8
+
+    move-object/from16 v20, v5
+
+    const-string v5, ""
+
+    move-object/from16 v29, v8
+
+    const-string v8, "app.tenor.anon.id"
+
+    invoke-virtual {v3, v8, v5}, Lfl7;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v5
+
+    move/from16 v31, v14
+
+    move-object/from16 v30, v15
+
+    const-wide/16 v14, 0x0
+
+    move-object/from16 v32, v5
+
+    const-string v5, "app.last.push.state.time"
+
+    invoke-virtual {v3, v5, v14, v15}, Lfl7;->getLong(Ljava/lang/String;J)J
+
+    move-result-wide v14
+
+    move-object/from16 v33, v3
+
+    iget-object v3, v0, Lgad;->j:Lvn4;
+
+    invoke-virtual {v3}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    sget-object v3, Lhtf;->a:Lhtf;
+
+    invoke-virtual {v3}, Lhtf;->b()Lvca;
+
+    move-result-object v34
+
+    invoke-virtual/range {v34 .. v34}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    invoke-virtual {v0}, Lh53;->z()J
+
+    move-result-wide v34
+
+    move-object/from16 v36, v3
+
+    new-instance v3, Landroid/util/ArrayMap;
+
+    move-wide/from16 v37, v14
+
+    const/4 v14, 0x1
+
+    invoke-direct {v3, v14}, Landroid/util/ArrayMap;-><init>(I)V
+
+    invoke-virtual/range {v33 .. v33}, Lfl7;->getAll()Ljava/util/Map;
+
+    move-result-object v14
+
+    new-instance v15, Lg53;
+
+    move-object/from16 v16, v14
+
+    const/4 v14, 0x0
+
+    invoke-direct {v15, v14, v3}, Lg53;-><init>(ILjava/lang/Object;)V
+
+    move-object/from16 v14, v16
+
+    check-cast v14, Ljava/util/HashMap;
+
+    invoke-virtual {v14, v15}, Ljava/util/HashMap;->forEach(Ljava/util/function/BiConsumer;)V
+
+    invoke-super {v0}, Lgad;->c()V
+
+    const-string v14, "server.host"
+
+    invoke-virtual {v0, v14, v1}, Li3;->k(Ljava/lang/String;Ljava/lang/String;)V
+
+    const-string v1, "server.port"
+
+    invoke-virtual {v0, v1, v2}, Li3;->k(Ljava/lang/String;Ljava/lang/String;)V
+
+    invoke-virtual {v0, v4, v6}, Li3;->h(Ljava/lang/String;Z)V
+
+    invoke-virtual {v0, v7, v9}, Li3;->k(Ljava/lang/String;Ljava/lang/String;)V
+
+    invoke-virtual {v0, v10, v11}, Li3;->k(Ljava/lang/String;Ljava/lang/String;)V
+
+    invoke-virtual {v0, v12, v13}, Li3;->k(Ljava/lang/String;Ljava/lang/String;)V
+
+    move-object/from16 v2, v17
+
+    move-object/from16 v1, v30
+
+    invoke-virtual {v0, v2, v1}, Li3;->k(Ljava/lang/String;Ljava/lang/String;)V
+
+    move-object/from16 v2, v18
+
+    move-object/from16 v1, v19
+
+    invoke-virtual {v0, v2, v1}, Li3;->k(Ljava/lang/String;Ljava/lang/String;)V
+
+    move-object/from16 v2, v21
+
+    move-object/from16 v1, v24
+
+    invoke-virtual {v0, v2, v1}, Li3;->k(Ljava/lang/String;Ljava/lang/String;)V
+
+    move-object/from16 v2, v22
+
+    move/from16 v1, v23
+
+    invoke-virtual {v0, v1, v2}, Li3;->i(ILjava/lang/String;)V
+
+    move-object/from16 v2, v25
+
+    move/from16 v1, v31
+
+    invoke-virtual {v0, v2, v1}, Li3;->h(Ljava/lang/String;Z)V
+
+    move-object/from16 v2, v26
+
+    move/from16 v1, v28
+
+    invoke-virtual {v0, v2, v1}, Li3;->h(Ljava/lang/String;Z)V
+
+    const-string v1, "user.lang"
+
+    move-object/from16 v2, v27
+
+    invoke-virtual {v0, v1, v2}, Li3;->k(Ljava/lang/String;Ljava/lang/String;)V
+
+    move-object/from16 v2, v20
+
+    move-object/from16 v1, v29
+
+    invoke-virtual {v0, v2, v1}, Li3;->k(Ljava/lang/String;Ljava/lang/String;)V
+
+    move-object/from16 v1, v32
+
+    invoke-virtual {v0, v8, v1}, Li3;->k(Ljava/lang/String;Ljava/lang/String;)V
+
+    invoke-static/range {v37 .. v38}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v5, v1}, Li3;->j(Ljava/lang/String;Ljava/lang/Long;)V
+
+    iget-object v1, v0, Lgad;->j:Lvn4;
+
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    invoke-virtual/range {v36 .. v36}, Lhtf;->b()Lvca;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    const-string v1, "app.stats.session.id"
+
+    invoke-static/range {v34 .. v35}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Li3;->j(Ljava/lang/String;Ljava/lang/Long;)V
+
+    new-instance v1, Lg53;
+
+    const/4 v2, 0x1
+
+    invoke-direct {v1, v2, v0}, Lg53;-><init>(ILjava/lang/Object;)V
+
+    invoke-virtual {v3, v1}, Landroid/util/ArrayMap;->forEach(Ljava/util/function/BiConsumer;)V
+
+    return-void
+.end method
+
+.method public final d(Ljava/lang/String;Z)Z
+    .locals 0
+
+    iget-object p0, p0, Li3;->g:Lfl7;
+
+    invoke-virtual {p0, p1, p2}, Lfl7;->getBoolean(Ljava/lang/String;Z)Z
 
     move-result p0
 
-    check-cast p1, Lsta;
-
-    invoke-virtual {p1, p0}, Lsta;->c(I)V
-
-    :cond_9
-    const/4 p0, 0x1
-
     return p0
+.end method
 
-    nop
+.method public final w()J
+    .locals 3
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_4
-        :pswitch_3
-        :pswitch_2
-        :pswitch_0
-        :pswitch_1
-    .end packed-switch
+    const-wide/16 v0, 0x0
+
+    iget-object p0, p0, Li3;->g:Lfl7;
+
+    const-string v2, "folders_sync"
+
+    invoke-virtual {p0, v2, v0, v1}, Lfl7;->getLong(Ljava/lang/String;J)J
+
+    move-result-wide v0
+
+    return-wide v0
+.end method
+
+.method public final x()Ljava/lang/String;
+    .locals 2
+
+    const-string v0, "server.host"
+
+    iget-object p0, p0, Li3;->g:Lfl7;
+
+    const/4 v1, 0x0
+
+    invoke-virtual {p0, v0, v1}, Lfl7;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public final y()Ljava/lang/String;
+    .locals 2
+
+    const-string v0, "server.port"
+
+    iget-object p0, p0, Li3;->g:Lfl7;
+
+    const/4 v1, 0x0
+
+    invoke-virtual {p0, v0, v1}, Lfl7;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public final z()J
+    .locals 3
+
+    const-wide/16 v0, 0x0
+
+    iget-object p0, p0, Li3;->g:Lfl7;
+
+    const-string v2, "app.stats.session.id"
+
+    invoke-virtual {p0, v2, v0, v1}, Lfl7;->getLong(Ljava/lang/String;J)J
+
+    move-result-wide v0
+
+    return-wide v0
 .end method

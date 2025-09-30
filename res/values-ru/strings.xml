@@ -69,6 +69,7 @@
     <string name="call_notification_ongoing_text">Текущий вызов</string>
     <string name="call_notification_screening_text">Фильтрация входящего вызова</string>
     <string name="cancel">Отменить</string>
+    <string name="cancellation">Отмена</string>
     <string name="cant_open_camera">"Не удалось открыть камеру. 
 Возможно, на устройстве нет ни одного подходящего приложения."</string>
     <string name="cant_open_file">"Не удалось открыть файл. 
@@ -131,6 +132,7 @@
     <string name="draft_with_text">Черновик:</string>
     <string name="emoji_font_downloading">Обновление эмоджи</string>
     <string name="empty_list">Список пуст</string>
+    <string name="enable">Включить</string>
     <string name="error_a11y_label">Ошибка: недопустимое значение</string>
     <string name="error_icon_content_description">Ошибка</string>
     <string name="error_message_authentication_expired">Чтобы использовать это приложение, войдите в аккаунт.</string>
@@ -178,6 +180,7 @@
     <string name="live_location_stop_question">Остановить трансляцию местоположения?</string>
     <string name="live_location_time_no_limit">Всегда</string>
     <string name="loading_location">Определение адреса…</string>
+    <string name="make_a_shot">Сделать снимок</string>
     <string name="map_type_hybrid">Гибрид</string>
     <string name="map_type_map">Карта</string>
     <string name="map_type_satellite">Спутник</string>
@@ -253,6 +256,7 @@
     <string name="media_settings_video_autoload">Автозагрузка видео</string>
     <string name="menu_avatar_photo__main">Сделать главной</string>
     <string name="menu_delete">Удалить</string>
+    <string name="menu_settings">Настройки</string>
     <string name="message">Сообщение</string>
     <string name="message_was_deleted">Сообщение было удалено</string>
     <string name="messages">Сообщения</string>
@@ -400,6 +404,11 @@
     <string name="photo_initcap">Фото</string>
     <string name="photo_removed">Фотография успешно удалена</string>
     <string name="pip_drag_to_close">Перетащите сюда, чтобы закрыть видео</string>
+    <string name="report_type_extremism">Экстремизм</string>
+    <string name="report_type_fake">Мошенничество</string>
+    <string name="report_type_other">Другое</string>
+    <string name="report_type_porno">Порнография</string>
+    <string name="report_type_spam">Спам</string>
     <string name="save_to_gallery">Сохранить в галерею</string>
     <string name="saving_image">Сохранение изображения</string>
     <string name="saving_image_fail">Не удалось сохранить фото</string>
@@ -431,17 +440,10 @@
     <string name="sensitive_content_warning">Возможно, неприемлемый контент! Нажмите, чтобы отобразить</string>
     <string name="service_notifications">Сервисные уведомления</string>
     <string name="set_bg_failed">Ошибка. Не удалось установить фон</string>
-    <string name="setting_day_color">День</string>
-    <string name="setting_default_color">По умолчанию</string>
-    <string name="setting_graphite_color">Графит</string>
-    <string name="setting_night_color">Ночь</string>
     <string name="share">Поделиться</string>
     <string name="share_location_title">Место</string>
     <string name="share_photo_fail">Не удалось поделиться фотографией</string>
     <string name="share_video_fail">Не удалось поделиться видео</string>
-    <string name="short_minute">м</string>
-    <string name="short_second">с</string>
-    <string name="short_timer_format" formatted="false">%d%s</string>
     <string name="shortcut_create_chat">Новое сообщение</string>
     <string name="side_sheet_accessibility_pane_title">Боковая панель</string>
     <string name="status_bar_notification_info_overflow">>999</string>
@@ -461,6 +463,8 @@
     <string name="tt_call_incoming_video_cap">Входящий видеовызов</string>
     <string name="tt_call_missed_audio">пропущенный аудиовызов</string>
     <string name="tt_call_missed_audio_cap">Пропущенный аудиовызов</string>
+    <string name="tt_call_missed_video">пропущенный видеовызов</string>
+    <string name="tt_call_missed_video_cap">Пропущенный видеовызов</string>
     <string name="tt_call_outgoing_audio">исходящий аудиовызов</string>
     <string name="tt_call_outgoing_audio_cap">Исходящий аудиовызов</string>
     <string name="tt_call_outgoing_canceled_audio">отменённый аудиовызов</string>
@@ -545,7 +549,6 @@
     <string name="tt_live_location_updating">%s. Обновляем…</string>
     <string name="tt_location">место</string>
     <string name="tt_mark_as_read">Прочитано</string>
-    <string name="tt_new_message">Новое сообщение</string>
     <string name="tt_notif_category_active_calls">Исходящие</string>
     <string name="tt_notif_category_chats">Групповые чаты и каналы</string>
     <string name="tt_notif_category_dialogs">Чаты</string>

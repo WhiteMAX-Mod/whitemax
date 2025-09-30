@@ -1,188 +1,105 @@
-.class public final Lqjb;
-.super Lqde;
+.class public abstract Lqjb;
+.super Ljava/lang/Object;
 .source "SourceFile"
-
-# interfaces
-.implements Ll66;
-
-
-# instance fields
-.field public synthetic X:Ljava/lang/Object;
-
-.field public final synthetic Y:Ljkb;
 
 
 # direct methods
-.method public constructor <init>(Ljkb;Lkotlin/coroutines/Continuation;)V
-    .locals 0
+.method public static a([B)Lrjb;
+    .locals 14
 
-    iput-object p1, p0, Lqjb;->Y:Ljkb;
+    new-instance v0, Lru/ok/tamtam/nano/Tasks$Profile;
 
-    const/4 p1, 0x2
+    invoke-direct {v0}, Lru/ok/tamtam/nano/Tasks$Profile;-><init>()V
 
-    invoke-direct {p0, p1, p2}, Lqde;-><init>(ILkotlin/coroutines/Continuation;)V
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
-
-    check-cast p1, Lkeb;
-
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Lqjb;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    :try_start_0
+    invoke-static {v0, p0}, Lj29;->mergeFrom(Lj29;[B)Lj29;
 
     move-result-object p0
 
-    check-cast p0, Lqjb;
+    check-cast p0, Lru/ok/tamtam/nano/Tasks$Profile;
+    :try_end_0
+    .catch Lcom/google/protobuf/nano/InvalidProtocolBufferNanoException; {:try_start_0 .. :try_end_0} :catch_0
 
-    sget-object p1, Le5f;->a:Le5f;
+    iget-object v0, p0, Lru/ok/tamtam/nano/Tasks$Profile;->crop:Lru/ok/tamtam/nano/Tasks$Rect;
 
-    invoke-virtual {p0, p1}, Lqjb;->o(Ljava/lang/Object;)Ljava/lang/Object;
+    if-eqz v0, :cond_0
 
-    return-object p1
-.end method
+    new-instance v1, Lu00;
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 1
+    iget v2, v0, Lru/ok/tamtam/nano/Tasks$Rect;->left:F
 
-    new-instance v0, Lqjb;
+    iget v3, v0, Lru/ok/tamtam/nano/Tasks$Rect;->top:F
 
-    iget-object p0, p0, Lqjb;->Y:Ljkb;
+    iget v4, v0, Lru/ok/tamtam/nano/Tasks$Rect;->right:F
 
-    invoke-direct {v0, p0, p2}, Lqjb;-><init>(Ljkb;Lkotlin/coroutines/Continuation;)V
+    iget v5, v0, Lru/ok/tamtam/nano/Tasks$Rect;->bottom:F
 
-    iput-object p1, v0, Lqjb;->X:Ljava/lang/Object;
+    const/4 v6, 0x2
 
-    return-object v0
-.end method
+    invoke-direct/range {v1 .. v6}, Lu00;-><init>(FFFFI)V
 
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 6
+    :goto_0
+    move-object v10, v1
 
-    iget-object v0, p0, Lqjb;->Y:Ljkb;
+    goto :goto_1
 
-    iget-object v1, v0, Ljkb;->x0:Lj35;
-
-    iget-object v2, v0, Ljkb;->M0:Lx7b;
-
-    invoke-static {p1}, Lsgg;->Z(Ljava/lang/Object;)V
-
-    iget-object p0, p0, Lqjb;->X:Ljava/lang/Object;
-
-    check-cast p0, Lkeb;
-
-    instance-of p1, p0, Lheb;
-
-    if-eqz p1, :cond_0
-
-    check-cast p0, Lheb;
-
-    iget-object p1, p0, Lheb;->a:Ljava/lang/Long;
-
-    iget-object p0, p0, Lheb;->b:Lmoe;
-
-    invoke-virtual {v2}, Lx7b;->g()J
-
-    move-result-wide v2
-
-    invoke-virtual {p1}, Ljava/lang/Long;->longValue()J
-
-    move-result-wide v4
-
-    cmp-long p1, v4, v2
-
-    if-nez p1, :cond_1
-
-    iget-object p1, v0, Ljof;->a:Lkotlinx/coroutines/internal/ContextScope;
-
-    invoke-virtual {v0}, Ljkb;->u()Lrie;
-
-    move-result-object v2
-
-    check-cast v2, Lo7a;
-
-    invoke-virtual {v2}, Lo7a;->b()Ljx3;
-
-    move-result-object v2
-
-    new-instance v3, Lwjb;
-
-    const/4 v4, 0x0
-
-    invoke-direct {v3, v0, v4}, Lwjb;-><init>(Ljkb;Lkotlin/coroutines/Continuation;)V
-
-    const/4 v0, 0x2
-
-    invoke-static {p1, v2, v4, v3, v0}, Lzo3;->E(Lox3;Lhx3;Lrx3;Ll66;I)Ldwd;
-
-    new-instance p1, Lfjb;
-
-    sget v0, Lanc;->I:I
-
-    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v0
-
-    invoke-direct {p1, p0, v0}, Lfjb;-><init>(Lmoe;Ljava/lang/Integer;)V
-
-    invoke-static {v1, p1}, Ljof;->o(Lj35;Ljava/lang/Object;)V
+    :cond_0
+    const/4 v1, 0x0
 
     goto :goto_0
 
-    :cond_0
-    instance-of p1, p0, Lieb;
+    :goto_1
+    new-instance v2, Lrjb;
 
-    if-eqz p1, :cond_2
+    iget-wide v3, p0, Lru/ok/tamtam/nano/Tasks$Profile;->requestId:J
 
-    check-cast p0, Lieb;
+    iget-object v5, p0, Lru/ok/tamtam/nano/Tasks$Profile;->firstName:Ljava/lang/String;
 
-    iget-object p0, p0, Lieb;->a:Ljava/lang/Long;
+    iget-object v6, p0, Lru/ok/tamtam/nano/Tasks$Profile;->lastName:Ljava/lang/String;
 
-    invoke-virtual {v2}, Lx7b;->g()J
+    iget-object v7, p0, Lru/ok/tamtam/nano/Tasks$Profile;->photoToken:Ljava/lang/String;
 
-    move-result-wide v2
+    iget-wide v8, p0, Lru/ok/tamtam/nano/Tasks$Profile;->photoId:J
 
-    invoke-virtual {p0}, Ljava/lang/Long;->longValue()J
+    iget-object v11, p0, Lru/ok/tamtam/nano/Tasks$Profile;->description:Ljava/lang/String;
 
-    move-result-wide p0
+    iget-object v12, p0, Lru/ok/tamtam/nano/Tasks$Profile;->link:Ljava/lang/String;
 
-    cmp-long p0, p0, v2
+    iget-object p0, p0, Lru/ok/tamtam/nano/Tasks$Profile;->avatarType:Ljava/lang/String;
 
-    if-nez p0, :cond_1
+    const-string v0, "PRESET_AVATAR"
 
-    new-instance p0, Lfjb;
+    invoke-virtual {p0, v0}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
-    sget p1, Loda;->k:I
+    move-result p0
 
-    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    if-eqz p0, :cond_1
 
-    move-result-object p1
+    const/4 p0, 0x1
 
-    sget v0, Lpca;->a0:I
+    :goto_2
+    move v13, p0
 
-    new-instance v2, Lhoe;
-
-    invoke-direct {v2, v0}, Lhoe;-><init>(I)V
-
-    invoke-direct {p0, v2, p1}, Lfjb;-><init>(Lmoe;Ljava/lang/Integer;)V
-
-    invoke-static {v1, p0}, Ljof;->o(Lj35;Ljava/lang/Object;)V
+    goto :goto_3
 
     :cond_1
-    :goto_0
-    sget-object p0, Le5f;->a:Le5f;
+    const/4 p0, 0x2
 
-    return-object p0
+    goto :goto_2
 
-    :cond_2
-    new-instance p0, Lkotlin/NoWhenBranchMatchedException;
+    :goto_3
+    invoke-direct/range {v2 .. v13}, Lrjb;-><init>(JLjava/lang/String;Ljava/lang/String;Ljava/lang/String;JLu00;Ljava/lang/String;Ljava/lang/String;I)V
 
-    invoke-direct {p0}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
+    return-object v2
 
-    throw p0
+    :catch_0
+    move-exception v0
+
+    move-object p0, v0
+
+    new-instance v0, Lru/ok/tamtam/nano/ProtoException;
+
+    invoke-direct {v0, p0}, Ljava/io/IOException;-><init>(Ljava/lang/Throwable;)V
+
+    throw v0
 .end method

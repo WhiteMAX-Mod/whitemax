@@ -1,25 +1,39 @@
-.class public abstract Lw1a;
+.class public final Lw1a;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:I
+# instance fields
+.field public final a:Landroid/content/ComponentName;
 
-.field public static final b:I
+.field public b:Z
+
+.field public c:Landroid/support/v4/app/INotificationSideChannel;
+
+.field public final d:Ljava/util/ArrayDeque;
+
+.field public e:I
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(Landroid/content/ComponentName;)V
+    .locals 2
 
-    sget v0, Lqxb;->about_app_settings_toolbar_title:I
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    sput v0, Lw1a;->a:I
+    const/4 v0, 0x0
 
-    sget v0, Lqxb;->about_app_settings_version:I
+    iput-boolean v0, p0, Lw1a;->b:Z
 
-    sput v0, Lw1a;->b:I
+    new-instance v1, Ljava/util/ArrayDeque;
+
+    invoke-direct {v1}, Ljava/util/ArrayDeque;-><init>()V
+
+    iput-object v1, p0, Lw1a;->d:Ljava/util/ArrayDeque;
+
+    iput v0, p0, Lw1a;->e:I
+
+    iput-object p1, p0, Lw1a;->a:Landroid/content/ComponentName;
 
     return-void
 .end method

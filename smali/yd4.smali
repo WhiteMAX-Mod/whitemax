@@ -1,155 +1,68 @@
 .class public final Lyd4;
-.super Lwtd;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public final c:Lzd4;
+.field public final a:Ljava/lang/String;
+
+.field public final b:Lll5;
+
+.field public c:J
+
+.field public d:J
 
 
 # direct methods
-.method public constructor <init>(Lzd4;)V
+.method public constructor <init>(Ljava/io/File;Ljava/lang/String;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lyd4;->c:Lzd4;
+    invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    iput-object p2, p0, Lyd4;->a:Ljava/lang/String;
+
+    new-instance p2, Lll5;
+
+    invoke-direct {p2, p1}, Lll5;-><init>(Ljava/io/File;)V
+
+    iput-object p2, p0, Lyd4;->b:Lll5;
+
+    const-wide/16 p1, -0x1
+
+    iput-wide p1, p0, Lyd4;->c:J
+
+    iput-wide p1, p0, Lyd4;->d:J
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Landroid/view/ViewGroup;)V
-    .locals 3
+.method public final a()J
+    .locals 4
 
-    iget-object v0, p0, Lyd4;->c:Lzd4;
+    iget-wide v0, p0, Lyd4;->d:J
 
-    iget-object v1, v0, Lu2;->b:Ljava/lang/Object;
+    const-wide/16 v2, 0x0
 
-    check-cast v1, Lxtd;
+    cmp-long v0, v0, v2
 
-    iget-object v2, v1, Lxtd;->c:Landroidx/fragment/app/a;
+    if-gez v0, :cond_0
 
-    iget-object v2, v2, Landroidx/fragment/app/a;->Q0:Landroid/view/View;
+    iget-object v0, p0, Lyd4;->b:Lll5;
 
-    invoke-virtual {v2}, Landroid/view/View;->clearAnimation()V
+    iget-object v0, v0, Lll5;->a:Ljava/io/File;
 
-    invoke-virtual {p1, v2}, Landroid/view/ViewGroup;->endViewTransition(Landroid/view/View;)V
+    invoke-virtual {v0}, Ljava/io/File;->lastModified()J
 
-    iget-object p1, v0, Lu2;->b:Ljava/lang/Object;
+    move-result-wide v0
 
-    check-cast p1, Lxtd;
-
-    invoke-virtual {p1, p0}, Lxtd;->c(Lwtd;)V
-
-    const/4 p0, 0x2
-
-    invoke-static {p0}, Landroidx/fragment/app/c;->L(I)Z
-
-    move-result p0
-
-    if-eqz p0, :cond_0
-
-    invoke-virtual {v1}, Lxtd;->toString()Ljava/lang/String;
+    iput-wide v0, p0, Lyd4;->d:J
 
     :cond_0
-    return-void
-.end method
+    iget-wide v0, p0, Lyd4;->d:J
 
-.method public final b(Landroid/view/ViewGroup;)V
-    .locals 5
-
-    iget-object v0, p0, Lyd4;->c:Lzd4;
-
-    iget-object v1, v0, Lu2;->b:Ljava/lang/Object;
-
-    check-cast v1, Lxtd;
-
-    invoke-virtual {v0}, Lu2;->N0()Z
-
-    move-result v2
-
-    if-eqz v2, :cond_0
-
-    invoke-virtual {v1, p0}, Lxtd;->c(Lwtd;)V
-
-    return-void
-
-    :cond_0
-    invoke-virtual {p1}, Landroid/view/View;->getContext()Landroid/content/Context;
-
-    move-result-object v2
-
-    iget-object v3, v1, Lxtd;->c:Landroidx/fragment/app/a;
-
-    iget-object v3, v3, Landroidx/fragment/app/a;->Q0:Landroid/view/View;
-
-    invoke-virtual {v0, v2}, Lzd4;->T0(Landroid/content/Context;)Lt4b;
-
-    move-result-object v0
-
-    const-string v2, "Required value was null."
-
-    if-eqz v0, :cond_4
-
-    iget-object v0, v0, Lt4b;->b:Ljava/lang/Object;
-
-    check-cast v0, Landroid/view/animation/Animation;
-
-    if-eqz v0, :cond_3
-
-    iget v2, v1, Lxtd;->a:I
-
-    const/4 v4, 0x1
-
-    if-eq v2, v4, :cond_1
-
-    invoke-virtual {v3, v0}, Landroid/view/View;->startAnimation(Landroid/view/animation/Animation;)V
-
-    invoke-virtual {v1, p0}, Lxtd;->c(Lwtd;)V
-
-    return-void
-
-    :cond_1
-    invoke-virtual {p1, v3}, Landroid/view/ViewGroup;->startViewTransition(Landroid/view/View;)V
-
-    new-instance v2, Ln16;
-
-    invoke-direct {v2, v0, p1, v3}, Ln16;-><init>(Landroid/view/animation/Animation;Landroid/view/ViewGroup;Landroid/view/View;)V
-
-    new-instance v0, Lxd4;
-
-    invoke-direct {v0, v1, p1, v3, p0}, Lxd4;-><init>(Lxtd;Landroid/view/ViewGroup;Landroid/view/View;Lyd4;)V
-
-    invoke-virtual {v2, v0}, Landroid/view/animation/Animation;->setAnimationListener(Landroid/view/animation/Animation$AnimationListener;)V
-
-    invoke-virtual {v3, v2}, Landroid/view/View;->startAnimation(Landroid/view/animation/Animation;)V
-
-    const/4 p0, 0x2
-
-    invoke-static {p0}, Landroidx/fragment/app/c;->L(I)Z
-
-    move-result p0
-
-    if-eqz p0, :cond_2
-
-    invoke-virtual {v1}, Lxtd;->toString()Ljava/lang/String;
-
-    :cond_2
-    return-void
-
-    :cond_3
-    new-instance p0, Ljava/lang/IllegalStateException;
-
-    invoke-direct {p0, v2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p0
-
-    :cond_4
-    new-instance p0, Ljava/lang/IllegalStateException;
-
-    invoke-direct {p0, v2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p0
+    return-wide v0
 .end method

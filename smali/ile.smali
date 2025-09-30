@@ -3,132 +3,30 @@
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/lang/Runnable;
+.implements Lqd0;
 
 
 # instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Lule;
-
-.field public final synthetic c:Lau3;
-
-.field public final synthetic o:Lbolts/Task;
+.field public final a:Lx46;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lule;Lau3;Lbolts/Task;I)V
+.method public constructor <init>(Lx46;)V
     .locals 0
 
-    iput p4, p0, Lile;->a:I
-
-    iput-object p1, p0, Lile;->b:Lule;
-
-    iput-object p2, p0, Lile;->c:Lau3;
-
-    iput-object p3, p0, Lile;->o:Lbolts/Task;
-
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lile;->a:Lx46;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
-    .locals 4
+.method public final getType()I
+    .locals 0
 
-    iget v0, p0, Lile;->a:I
+    const p0, 0x66727473
 
-    packed-switch v0, :pswitch_data_0
-
-    iget-object v0, p0, Lile;->b:Lule;
-
-    :try_start_0
-    iget-object v1, p0, Lile;->c:Lau3;
-
-    iget-object v2, p0, Lile;->o:Lbolts/Task;
-
-    invoke-interface {v1, v2}, Lau3;->a(Lbolts/Task;)Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lbolts/Task;
-
-    if-nez v1, :cond_0
-
-    const/4 p0, 0x0
-
-    invoke-virtual {v0, p0}, Lule;->c(Ljava/lang/Object;)V
-
-    goto :goto_1
-
-    :catch_0
-    move-exception p0
-
-    goto :goto_0
-
-    :cond_0
-    new-instance v2, Ljle;
-
-    const/4 v3, 0x0
-
-    invoke-direct {v2, v3, p0}, Ljle;-><init>(ILjava/lang/Object;)V
-
-    invoke-virtual {v1, v2}, Lbolts/Task;->continueWith(Lau3;)Lbolts/Task;
-    :try_end_0
-    .catch Ljava/util/concurrent/CancellationException; {:try_start_0 .. :try_end_0} :catch_1
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
-
-    goto :goto_1
-
-    :goto_0
-    invoke-virtual {v0, p0}, Lule;->b(Ljava/lang/Exception;)V
-
-    goto :goto_1
-
-    :catch_1
-    invoke-virtual {v0}, Lule;->a()V
-
-    :goto_1
-    return-void
-
-    :pswitch_0
-    iget-object v0, p0, Lile;->b:Lule;
-
-    :try_start_1
-    iget-object v1, p0, Lile;->c:Lau3;
-
-    iget-object p0, p0, Lile;->o:Lbolts/Task;
-
-    invoke-interface {v1, p0}, Lau3;->a(Lbolts/Task;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    invoke-virtual {v0, p0}, Lule;->c(Ljava/lang/Object;)V
-    :try_end_1
-    .catch Ljava/util/concurrent/CancellationException; {:try_start_1 .. :try_end_1} :catch_3
-    .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_2
-
-    goto :goto_2
-
-    :catch_2
-    move-exception p0
-
-    invoke-virtual {v0, p0}, Lule;->b(Ljava/lang/Exception;)V
-
-    goto :goto_2
-
-    :catch_3
-    invoke-virtual {v0}, Lule;->a()V
-
-    :goto_2
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return p0
 .end method

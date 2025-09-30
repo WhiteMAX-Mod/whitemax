@@ -4,17 +4,17 @@
 
 
 # virtual methods
-.method public abstract c(Lcs0;)V
+.method public abstract a(Ljava/lang/String;)V
 .end method
 
-.method public abstract l()V
+.method public abstract b()Lis5;
 .end method
 
-.method public abstract setForwardClickListener(Lx56;)V
+.method public abstract c()Z
 .end method
 
-.method public abstract setLink(Lzu8;)V
+.method public abstract d()Liic;
 .end method
 
-.method public abstract setReplyClickListener(Ll66;)V
+.method public abstract e()V
 .end method

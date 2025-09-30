@@ -2,86 +2,96 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lbf6;
+
+
+# instance fields
+.field public final a:Lngd;
+
 
 # direct methods
-.method public static a(Landroid/content/Context;Llr7;)V
-    .locals 4
+.method public constructor <init>(Lngd;)V
+    .locals 0
 
-    sget v0, Lkr7;->a:I
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    new-instance v0, Lrfg;
+    iput-object p1, p0, Laf6;->a:Lngd;
 
-    sget-object v1, Lrfg;->s0:Lnz7;
+    return-void
+.end method
 
-    sget-object v2, Lgk;->d:Lfk;
 
-    sget-object v3, Loe6;->c:Loe6;
+# virtual methods
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 3
 
-    invoke-direct {v0, p0, v1, v2, v3}, Lpe6;-><init>(Landroid/content/Context;Lnz7;Lgk;Loe6;)V
+    const/4 v0, 0x1
 
-    new-instance p0, Ljava/util/ArrayList;
+    if-ne p0, p1, :cond_0
 
-    invoke-direct {p0}, Ljava/util/ArrayList;-><init>()V
+    return v0
 
-    new-instance v1, Lcom/google/android/gms/location/LocationRequest;
-
-    invoke-direct {v1}, Lcom/google/android/gms/location/LocationRequest;-><init>()V
-
-    const/16 v2, 0x64
-
-    invoke-static {v2}, Lxqd;->I(I)V
-
-    iput v2, v1, Lcom/google/android/gms/location/LocationRequest;->a:I
-
-    invoke-virtual {p0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    new-instance v1, Lmr7;
+    :cond_0
+    instance-of v1, p1, Laf6;
 
     const/4 v2, 0x0
 
-    invoke-direct {v1, p0, v2, v2}, Lmr7;-><init>(Ljava/util/ArrayList;ZZ)V
+    if-nez v1, :cond_1
 
-    new-instance p0, Lyq0;
+    return v2
 
-    const/4 v3, 0x5
+    :cond_1
+    check-cast p1, Laf6;
 
-    invoke-direct {p0, v3}, Lyq0;-><init>(I)V
+    iget-object p0, p0, Laf6;->a:Lngd;
 
-    const/4 v3, 0x1
+    iget-object p1, p1, Laf6;->a:Lngd;
 
-    iput-boolean v3, p0, Lyq0;->c:Z
+    invoke-static {p0, p1}, Lvyg;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    new-instance v3, Ltwe;
+    move-result p0
 
-    invoke-direct {v3, v1}, Ltwe;-><init>(Ljava/lang/Object;)V
+    if-nez p0, :cond_2
 
-    iput-object v3, p0, Lyq0;->d:Ljava/lang/Object;
+    return v2
 
-    const/16 v1, 0x97a
+    :cond_2
+    return v0
+.end method
 
-    iput v1, p0, Lyq0;->b:I
+.method public final hashCode()I
+    .locals 0
 
-    invoke-virtual {p0}, Lyq0;->e()Lbfg;
+    iget-object p0, p0, Laf6;->a:Lngd;
+
+    invoke-virtual {p0}, Lngd;->hashCode()I
+
+    move-result p0
+
+    return p0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 2
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "RemoveMediaItem(item="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object p0, p0, Laf6;->a:Lngd;
+
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string p0, ")"
+
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p0
 
-    invoke-virtual {v0, v2, p0}, Lpe6;->c(ILow6;)Lmlg;
-
-    move-result-object p0
-
-    new-instance v0, Lze6;
-
-    invoke-direct {v0, p1}, Lze6;-><init>(Llr7;)V
-
-    invoke-virtual {p0, v0}, Lmlg;->i(Lf1a;)Lmlg;
-
-    new-instance v0, Lze6;
-
-    invoke-direct {v0, p1}, Lze6;-><init>(Llr7;)V
-
-    sget-object p1, Lame;->a:Lo67;
-
-    invoke-virtual {p0, p1, v0}, Lmlg;->c(Ljava/util/concurrent/Executor;Lh1a;)Lmlg;
-
-    return-void
+    return-object p0
 .end method

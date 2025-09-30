@@ -2,116 +2,107 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lone/me/rlottie/ImageReceiver;
+
 
 # instance fields
-.field public final a:Luh;
+.field public final synthetic a:I
 
-.field public final b:Landroid/os/HandlerThread;
-
-.field public final c:Landroid/os/Handler;
-
-.field public final d:Landroid/os/HandlerThread;
-
-.field public final e:Ljava/util/HashMap;
-
-.field public final f:Ljava/util/concurrent/ConcurrentHashMap;
-
-.field public final g:Ljava/util/LinkedHashSet;
-
-.field public final h:Lee1;
-
-.field public volatile i:Z
+.field public final synthetic b:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Lsc6;Lxb6;Luh;Lorg/webrtc/EglBase;Lp8d;)V
-    .locals 2
+.method public synthetic constructor <init>(ILjava/lang/Object;)V
+    .locals 0
+
+    iput p1, p0, Lii;->a:I
+
+    iput-object p2, p0, Lii;->b:Ljava/lang/Object;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p3, p0, Lii;->a:Luh;
+    return-void
+.end method
 
-    new-instance p2, Landroid/os/HandlerThread;
 
-    const-string p3, "AniRDControl"
+# virtual methods
+.method public final invalidate()V
+    .locals 1
 
-    invoke-direct {p2, p3}, Landroid/os/HandlerThread;-><init>(Ljava/lang/String;)V
+    iget v0, p0, Lii;->a:I
 
-    iput-object p2, p0, Lii;->b:Landroid/os/HandlerThread;
+    packed-switch v0, :pswitch_data_0
 
-    new-instance p3, Landroid/os/HandlerThread;
+    iget-object p0, p0, Lii;->b:Ljava/lang/Object;
 
-    const-string p5, "AniRDOutput"
+    check-cast p0, Lvrg;
 
-    invoke-direct {p3, p5}, Landroid/os/HandlerThread;-><init>(Ljava/lang/String;)V
-
-    iput-object p3, p0, Lii;->d:Landroid/os/HandlerThread;
-
-    new-instance p5, Ljava/util/HashMap;
-
-    invoke-direct {p5}, Ljava/util/HashMap;-><init>()V
-
-    iput-object p5, p0, Lii;->e:Ljava/util/HashMap;
-
-    new-instance p5, Ljava/util/concurrent/ConcurrentHashMap;
-
-    invoke-direct {p5}, Ljava/util/concurrent/ConcurrentHashMap;-><init>()V
-
-    iput-object p5, p0, Lii;->f:Ljava/util/concurrent/ConcurrentHashMap;
-
-    new-instance p5, Ljava/util/HashMap;
-
-    invoke-direct {p5}, Ljava/util/HashMap;-><init>()V
-
-    new-instance p5, Ljava/util/LinkedHashSet;
-
-    invoke-direct {p5}, Ljava/util/LinkedHashSet;-><init>()V
-
-    iput-object p5, p0, Lii;->g:Ljava/util/LinkedHashSet;
-
-    new-instance p5, Landroid/graphics/Point;
-
-    invoke-direct {p5}, Landroid/graphics/Point;-><init>()V
-
-    iget-object p1, p1, Lsc6;->a:Ljava/lang/Object;
-
-    check-cast p1, Ls1c;
-
-    new-instance p5, Lee1;
-
-    invoke-interface {p4}, Lorg/webrtc/EglBase;->getEglBaseContext()Lorg/webrtc/EglBase$Context;
-
-    move-result-object p4
-
-    sget-object v0, Lorg/webrtc/EglBase;->CONFIG_PLAIN:[I
-
-    const-string v1, "CallOpenGLAnimoji"
-
-    invoke-direct {p5, p1, p4, v0, v1}, Lee1;-><init>(Ls1c;Lorg/webrtc/EglBase$Context;[ILjava/lang/String;)V
-
-    iput-object p5, p0, Lii;->h:Lee1;
-
-    invoke-virtual {p2}, Ljava/lang/Thread;->start()V
-
-    new-instance p1, Landroid/os/Handler;
-
-    invoke-virtual {p2}, Landroid/os/HandlerThread;->getLooper()Landroid/os/Looper;
-
-    move-result-object p2
-
-    invoke-direct {p1, p2}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
-
-    iput-object p1, p0, Lii;->c:Landroid/os/Handler;
-
-    invoke-virtual {p3}, Ljava/lang/Thread;->start()V
-
-    new-instance p0, Landroid/os/Handler;
-
-    invoke-virtual {p3}, Landroid/os/HandlerThread;->getLooper()Landroid/os/Looper;
-
-    move-result-object p1
-
-    invoke-direct {p0, p1}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
+    invoke-virtual {p0}, Landroid/view/View;->invalidate()V
 
     return-void
+
+    :pswitch_0
+    iget-object p0, p0, Lii;->b:Ljava/lang/Object;
+
+    check-cast p0, Lpgc;
+
+    iget-object p0, p0, Lzoc;->a:Landroid/view/View;
+
+    check-cast p0, Landroid/widget/ImageView;
+
+    invoke-virtual {p0}, Landroid/view/View;->invalidate()V
+
+    return-void
+
+    :pswitch_1
+    iget-object p0, p0, Lii;->b:Ljava/lang/Object;
+
+    check-cast p0, Lr39;
+
+    invoke-virtual {p0}, Landroid/view/View;->invalidate()V
+
+    return-void
+
+    :pswitch_2
+    iget-object p0, p0, Lii;->b:Ljava/lang/Object;
+
+    check-cast p0, Lb29;
+
+    invoke-virtual {p0}, Landroid/view/View;->invalidate()V
+
+    return-void
+
+    :pswitch_3
+    iget-object p0, p0, Lii;->b:Ljava/lang/Object;
+
+    check-cast p0, Lr15;
+
+    iget-object p0, p0, Lzoc;->a:Landroid/view/View;
+
+    check-cast p0, Landroid/widget/ImageView;
+
+    invoke-virtual {p0}, Landroid/view/View;->invalidate()V
+
+    return-void
+
+    :pswitch_4
+    iget-object p0, p0, Lii;->b:Ljava/lang/Object;
+
+    check-cast p0, Lji;
+
+    invoke-virtual {p0}, Landroid/view/View;->invalidate()V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_4
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

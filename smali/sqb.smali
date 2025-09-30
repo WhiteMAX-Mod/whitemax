@@ -1,38 +1,23 @@
 .class public abstract Lsqb;
 .super Ljava/lang/Object;
+.source "SourceFile"
 
 
-# static fields
-.field public static mr_cast_meta_black_scrim:I = 0x7f06031e
+# direct methods
+.method public static a(Ljava/lang/Runnable;)V
+    .locals 3
 
-.field public static mr_cast_meta_default_background:I = 0x7f06031f
+    invoke-static {}, Landroid/view/Choreographer;->getInstance()Landroid/view/Choreographer;
 
-.field public static mr_cast_meta_default_text_color:I = 0x7f060320
+    move-result-object v0
 
-.field public static mr_cast_progressbar_background_dark:I = 0x7f060321
+    new-instance v1, Lfg;
 
-.field public static mr_cast_progressbar_background_light:I = 0x7f060322
+    const/4 v2, 0x1
 
-.field public static mr_cast_progressbar_progress_and_thumb_dark:I = 0x7f060323
+    invoke-direct {v1, v2, p0}, Lfg;-><init>(ILjava/lang/Object;)V
 
-.field public static mr_cast_progressbar_progress_and_thumb_light:I = 0x7f060324
+    invoke-virtual {v0, v1}, Landroid/view/Choreographer;->postFrameCallback(Landroid/view/Choreographer$FrameCallback;)V
 
-.field public static mr_cast_route_divider_dark:I = 0x7f060325
-
-.field public static mr_cast_route_divider_light:I = 0x7f060326
-
-.field public static mr_dynamic_dialog_background_dark:I = 0x7f060327
-
-.field public static mr_dynamic_dialog_background_light:I = 0x7f060328
-
-.field public static mr_dynamic_dialog_header_text_color_dark:I = 0x7f060329
-
-.field public static mr_dynamic_dialog_header_text_color_light:I = 0x7f06032a
-
-.field public static mr_dynamic_dialog_icon_dark:I = 0x7f06032b
-
-.field public static mr_dynamic_dialog_icon_light:I = 0x7f06032c
-
-.field public static mr_dynamic_dialog_route_text_color_dark:I = 0x7f06032d
-
-.field public static mr_dynamic_dialog_route_text_color_light:I = 0x7f06032e
+    return-void
+.end method

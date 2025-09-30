@@ -1,48 +1,35 @@
 .class public final Lb46;
-.super La46;
+.super Ljava/lang/Object;
 .source "SourceFile"
-
-# interfaces
-.implements Lmce;
 
 
 # instance fields
-.field public final c:Landroid/database/sqlite/SQLiteStatement;
+.field public final a:I
+
+.field public final b:Z
+
+.field public final c:Ljava/lang/String;
+
+.field public final d:I
+
+.field public final e:I
 
 
 # direct methods
-.method public constructor <init>(Landroid/database/sqlite/SQLiteStatement;)V
+.method public constructor <init>(IIILjava/lang/String;Ljava/lang/String;Z)V
     .locals 0
 
-    invoke-direct {p0, p1}, La46;-><init>(Landroid/database/sqlite/SQLiteProgram;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lb46;->c:Landroid/database/sqlite/SQLiteStatement;
+    iput p1, p0, Lb46;->a:I
+
+    iput-boolean p6, p0, Lb46;->b:Z
+
+    iput-object p5, p0, Lb46;->c:Ljava/lang/String;
+
+    iput p2, p0, Lb46;->d:I
+
+    iput p3, p0, Lb46;->e:I
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final C()I
-    .locals 0
-
-    iget-object p0, p0, Lb46;->c:Landroid/database/sqlite/SQLiteStatement;
-
-    invoke-virtual {p0}, Landroid/database/sqlite/SQLiteStatement;->executeUpdateDelete()I
-
-    move-result p0
-
-    return p0
-.end method
-
-.method public final n0()J
-    .locals 2
-
-    iget-object p0, p0, Lb46;->c:Landroid/database/sqlite/SQLiteStatement;
-
-    invoke-virtual {p0}, Landroid/database/sqlite/SQLiteStatement;->executeInsert()J
-
-    move-result-wide v0
-
-    return-wide v0
 .end method

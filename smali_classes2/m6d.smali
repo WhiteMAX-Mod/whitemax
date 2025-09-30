@@ -1,80 +1,50 @@
 .class public final Lm6d;
-.super Lk7d;
+.super Lnk7;
 .source "SourceFile"
+
+# interfaces
+.implements Lzb6;
 
 
 # instance fields
-.field public final synthetic g:I
+.field public final synthetic a:Ln6d;
 
-.field public final h:Ljava/lang/Object;
+.field public final synthetic b:Ljava/lang/Class;
+
+.field public final synthetic c:Z
 
 
 # direct methods
-.method public synthetic constructor <init>(JLjava/lang/Object;I)V
+.method public constructor <init>(Ln6d;Ljava/lang/Class;Z)V
     .locals 0
 
-    .line 1
-    iput p4, p0, Lm6d;->g:I
+    iput-object p1, p0, Lm6d;->a:Ln6d;
 
-    invoke-direct {p0, p1, p2}, Lk7d;-><init>(J)V
+    iput-object p2, p0, Lm6d;->b:Ljava/lang/Class;
 
-    iput-object p3, p0, Lm6d;->h:Ljava/lang/Object;
+    iput-boolean p3, p0, Lm6d;->c:Z
 
-    return-void
-.end method
+    const/4 p1, 0x0
 
-.method public constructor <init>(Ler8;)V
-    .locals 2
-
-    const/4 v0, 0x0
-
-    iput v0, p0, Lm6d;->g:I
-
-    const-wide/16 v0, 0x0
-
-    .line 2
-    invoke-direct {p0, v0, v1}, Lk7d;-><init>(J)V
-
-    .line 3
-    iput-object p1, p0, Lm6d;->h:Ljava/lang/Object;
+    invoke-direct {p0, p1}, Lnk7;-><init>(I)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Ll7d;
+.method public final invoke()Ljava/lang/Object;
     .locals 2
 
-    iget v0, p0, Lm6d;->g:I
+    iget-object v0, p0, Lm6d;->b:Ljava/lang/Class;
 
-    packed-switch v0, :pswitch_data_0
+    iget-boolean v1, p0, Lm6d;->c:Z
 
-    new-instance v0, Lm7d;
+    iget-object p0, p0, Lm6d;->a:Ln6d;
 
-    invoke-direct {v0, p0}, Lm7d;-><init>(Lm6d;)V
+    invoke-virtual {p0, v0, v1}, Ln6d;->c(Ljava/lang/Class;Z)Ljava/lang/Object;
 
-    return-object v0
+    move-result-object p0
 
-    :pswitch_0
-    new-instance v0, Ln6d;
-
-    const/4 v1, 0x0
-
-    invoke-direct {v0, p0, v1}, Ln6d;-><init>(Lm6d;B)V
-
-    return-object v0
-
-    :pswitch_1
-    new-instance v0, Ln6d;
-
-    invoke-direct {v0, p0}, Ln6d;-><init>(Lm6d;)V
-
-    return-object v0
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    return-object p0
 .end method

@@ -1,22 +1,19 @@
 .class public final Lzrd;
-.super Ljava/lang/Object;
+.super Lasd;
 .source "SourceFile"
-
-# interfaces
-.implements Lbsd;
 
 
 # instance fields
-.field public final a:Lqt7;
+.field public final a:Landroid/net/Uri;
 
 
 # direct methods
-.method public constructor <init>(Lqt7;)V
+.method public constructor <init>(Landroid/net/Uri;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lzrd;->a:Lqt7;
+    iput-object p1, p0, Lzrd;->a:Landroid/net/Uri;
 
     return-void
 .end method
@@ -44,11 +41,11 @@
     :cond_1
     check-cast p1, Lzrd;
 
-    iget-object p0, p0, Lzrd;->a:Lqt7;
+    iget-object p0, p0, Lzrd;->a:Landroid/net/Uri;
 
-    iget-object p1, p1, Lzrd;->a:Lqt7;
+    iget-object p1, p1, Lzrd;->a:Landroid/net/Uri;
 
-    invoke-static {p0, p1}, Lxq7;->d(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {p0, p1}, Lvyg;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p0
 
@@ -63,9 +60,16 @@
 .method public final hashCode()I
     .locals 0
 
-    iget-object p0, p0, Lzrd;->a:Lqt7;
+    iget-object p0, p0, Lzrd;->a:Landroid/net/Uri;
 
-    invoke-virtual {p0}, Ljava/lang/Object;->hashCode()I
+    if-nez p0, :cond_0
+
+    const/4 p0, 0x0
+
+    return p0
+
+    :cond_0
+    invoke-virtual {p0}, Landroid/net/Uri;->hashCode()I
 
     move-result p0
 
@@ -77,11 +81,11 @@
 
     new-instance v0, Ljava/lang/StringBuilder;
 
-    const-string v1, "Error(error="
+    const-string v1, "ShowInviteDialog(qrCodeUri="
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-object p0, p0, Lzrd;->a:Lqt7;
+    iget-object p0, p0, Lzrd;->a:Landroid/net/Uri;
 
     invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 

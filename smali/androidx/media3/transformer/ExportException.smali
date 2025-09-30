@@ -4,7 +4,7 @@
 
 
 # static fields
-.field public static final b:Lcdc;
+.field public static final b:Lkqc;
 
 
 # instance fields
@@ -15,11 +15,11 @@
 .method static constructor <clinit>()V
     .locals 3
 
-    new-instance v0, Lhw6;
+    new-instance v0, Lu27;
 
     const/4 v1, 0x4
 
-    invoke-direct {v0, v1}, Lr36;-><init>(I)V
+    invoke-direct {v0, v1}, Lz96;-><init>(I)V
 
     const/16 v1, 0x3e9
 
@@ -29,7 +29,7 @@
 
     const-string v2, "ERROR_CODE_FAILED_RUNTIME_CHECK"
 
-    invoke-virtual {v0, v2, v1}, Lhw6;->b0(Ljava/lang/Object;Ljava/lang/Object;)V
+    invoke-virtual {v0, v2, v1}, Lu27;->d0(Ljava/lang/Object;Ljava/lang/Object;)V
 
     const/16 v1, 0x7d0
 
@@ -39,7 +39,7 @@
 
     const-string v2, "ERROR_CODE_IO_UNSPECIFIED"
 
-    invoke-virtual {v0, v2, v1}, Lhw6;->b0(Ljava/lang/Object;Ljava/lang/Object;)V
+    invoke-virtual {v0, v2, v1}, Lu27;->d0(Ljava/lang/Object;Ljava/lang/Object;)V
 
     const/16 v1, 0x7d1
 
@@ -49,7 +49,7 @@
 
     const-string v2, "ERROR_CODE_IO_NETWORK_CONNECTION_FAILED"
 
-    invoke-virtual {v0, v2, v1}, Lhw6;->b0(Ljava/lang/Object;Ljava/lang/Object;)V
+    invoke-virtual {v0, v2, v1}, Lu27;->d0(Ljava/lang/Object;Ljava/lang/Object;)V
 
     const/16 v1, 0x7d2
 
@@ -59,7 +59,7 @@
 
     const-string v2, "ERROR_CODE_IO_NETWORK_CONNECTION_TIMEOUT"
 
-    invoke-virtual {v0, v2, v1}, Lhw6;->b0(Ljava/lang/Object;Ljava/lang/Object;)V
+    invoke-virtual {v0, v2, v1}, Lu27;->d0(Ljava/lang/Object;Ljava/lang/Object;)V
 
     const/16 v1, 0x7d3
 
@@ -69,7 +69,7 @@
 
     const-string v2, "ERROR_CODE_IO_INVALID_HTTP_CONTENT_TYPE"
 
-    invoke-virtual {v0, v2, v1}, Lhw6;->b0(Ljava/lang/Object;Ljava/lang/Object;)V
+    invoke-virtual {v0, v2, v1}, Lu27;->d0(Ljava/lang/Object;Ljava/lang/Object;)V
 
     const/16 v1, 0x7d4
 
@@ -79,7 +79,7 @@
 
     const-string v2, "ERROR_CODE_IO_BAD_HTTP_STATUS"
 
-    invoke-virtual {v0, v2, v1}, Lhw6;->b0(Ljava/lang/Object;Ljava/lang/Object;)V
+    invoke-virtual {v0, v2, v1}, Lu27;->d0(Ljava/lang/Object;Ljava/lang/Object;)V
 
     const/16 v1, 0x7d5
 
@@ -89,7 +89,7 @@
 
     const-string v2, "ERROR_CODE_IO_FILE_NOT_FOUND"
 
-    invoke-virtual {v0, v2, v1}, Lhw6;->b0(Ljava/lang/Object;Ljava/lang/Object;)V
+    invoke-virtual {v0, v2, v1}, Lu27;->d0(Ljava/lang/Object;Ljava/lang/Object;)V
 
     const/16 v1, 0x7d6
 
@@ -99,7 +99,7 @@
 
     const-string v2, "ERROR_CODE_IO_NO_PERMISSION"
 
-    invoke-virtual {v0, v2, v1}, Lhw6;->b0(Ljava/lang/Object;Ljava/lang/Object;)V
+    invoke-virtual {v0, v2, v1}, Lu27;->d0(Ljava/lang/Object;Ljava/lang/Object;)V
 
     const/16 v1, 0x7d7
 
@@ -109,7 +109,7 @@
 
     const-string v2, "ERROR_CODE_IO_CLEARTEXT_NOT_PERMITTED"
 
-    invoke-virtual {v0, v2, v1}, Lhw6;->b0(Ljava/lang/Object;Ljava/lang/Object;)V
+    invoke-virtual {v0, v2, v1}, Lu27;->d0(Ljava/lang/Object;Ljava/lang/Object;)V
 
     const/16 v1, 0x7d8
 
@@ -119,7 +119,7 @@
 
     const-string v2, "ERROR_CODE_IO_READ_POSITION_OUT_OF_RANGE"
 
-    invoke-virtual {v0, v2, v1}, Lhw6;->b0(Ljava/lang/Object;Ljava/lang/Object;)V
+    invoke-virtual {v0, v2, v1}, Lu27;->d0(Ljava/lang/Object;Ljava/lang/Object;)V
 
     const/16 v1, 0xbb9
 
@@ -129,7 +129,7 @@
 
     const-string v2, "ERROR_CODE_DECODER_INIT_FAILED"
 
-    invoke-virtual {v0, v2, v1}, Lhw6;->b0(Ljava/lang/Object;Ljava/lang/Object;)V
+    invoke-virtual {v0, v2, v1}, Lu27;->d0(Ljava/lang/Object;Ljava/lang/Object;)V
 
     const/16 v1, 0xbba
 
@@ -139,7 +139,7 @@
 
     const-string v2, "ERROR_CODE_DECODING_FAILED"
 
-    invoke-virtual {v0, v2, v1}, Lhw6;->b0(Ljava/lang/Object;Ljava/lang/Object;)V
+    invoke-virtual {v0, v2, v1}, Lu27;->d0(Ljava/lang/Object;Ljava/lang/Object;)V
 
     const/16 v1, 0xbbb
 
@@ -149,7 +149,7 @@
 
     const-string v2, "ERROR_CODE_DECODING_FORMAT_UNSUPPORTED"
 
-    invoke-virtual {v0, v2, v1}, Lhw6;->b0(Ljava/lang/Object;Ljava/lang/Object;)V
+    invoke-virtual {v0, v2, v1}, Lu27;->d0(Ljava/lang/Object;Ljava/lang/Object;)V
 
     const/16 v1, 0xfa1
 
@@ -159,7 +159,7 @@
 
     const-string v2, "ERROR_CODE_ENCODER_INIT_FAILED"
 
-    invoke-virtual {v0, v2, v1}, Lhw6;->b0(Ljava/lang/Object;Ljava/lang/Object;)V
+    invoke-virtual {v0, v2, v1}, Lu27;->d0(Ljava/lang/Object;Ljava/lang/Object;)V
 
     const/16 v1, 0xfa2
 
@@ -169,7 +169,7 @@
 
     const-string v2, "ERROR_CODE_ENCODING_FAILED"
 
-    invoke-virtual {v0, v2, v1}, Lhw6;->b0(Ljava/lang/Object;Ljava/lang/Object;)V
+    invoke-virtual {v0, v2, v1}, Lu27;->d0(Ljava/lang/Object;Ljava/lang/Object;)V
 
     const/16 v1, 0xfa3
 
@@ -179,7 +179,7 @@
 
     const-string v2, "ERROR_CODE_ENCODING_FORMAT_UNSUPPORTED"
 
-    invoke-virtual {v0, v2, v1}, Lhw6;->b0(Ljava/lang/Object;Ljava/lang/Object;)V
+    invoke-virtual {v0, v2, v1}, Lu27;->d0(Ljava/lang/Object;Ljava/lang/Object;)V
 
     const/16 v1, 0x1389
 
@@ -189,7 +189,7 @@
 
     const-string v2, "ERROR_CODE_VIDEO_FRAME_PROCESSING_FAILED"
 
-    invoke-virtual {v0, v2, v1}, Lhw6;->b0(Ljava/lang/Object;Ljava/lang/Object;)V
+    invoke-virtual {v0, v2, v1}, Lu27;->d0(Ljava/lang/Object;Ljava/lang/Object;)V
 
     const/16 v1, 0x1771
 
@@ -199,7 +199,7 @@
 
     const-string v2, "ERROR_CODE_AUDIO_PROCESSING_FAILED"
 
-    invoke-virtual {v0, v2, v1}, Lhw6;->b0(Ljava/lang/Object;Ljava/lang/Object;)V
+    invoke-virtual {v0, v2, v1}, Lu27;->d0(Ljava/lang/Object;Ljava/lang/Object;)V
 
     const/16 v1, 0x1b59
 
@@ -209,7 +209,7 @@
 
     const-string v2, "ERROR_CODE_MUXING_FAILED"
 
-    invoke-virtual {v0, v2, v1}, Lhw6;->b0(Ljava/lang/Object;Ljava/lang/Object;)V
+    invoke-virtual {v0, v2, v1}, Lu27;->d0(Ljava/lang/Object;Ljava/lang/Object;)V
 
     const/16 v1, 0x1b5a
 
@@ -219,7 +219,7 @@
 
     const-string v2, "ERROR_CODE_MUXING_TIMEOUT"
 
-    invoke-virtual {v0, v2, v1}, Lhw6;->b0(Ljava/lang/Object;Ljava/lang/Object;)V
+    invoke-virtual {v0, v2, v1}, Lu27;->d0(Ljava/lang/Object;Ljava/lang/Object;)V
 
     const/16 v1, 0x1b5b
 
@@ -229,13 +229,13 @@
 
     const-string v2, "ERROR_CODE_MUXING_APPEND"
 
-    invoke-virtual {v0, v2, v1}, Lhw6;->b0(Ljava/lang/Object;Ljava/lang/Object;)V
+    invoke-virtual {v0, v2, v1}, Lu27;->d0(Ljava/lang/Object;Ljava/lang/Object;)V
 
-    invoke-virtual {v0}, Lhw6;->a0()Lcdc;
+    invoke-virtual {v0}, Lu27;->c0()Lkqc;
 
     move-result-object v0
 
-    sput-object v0, Landroidx/media3/transformer/ExportException;->b:Lcdc;
+    sput-object v0, Landroidx/media3/transformer/ExportException;->b:Lkqc;
 
     return-void
 .end method
@@ -275,11 +275,11 @@
 
     const-string v2, ", audioFormat="
 
-    invoke-static {v1, p1, v2}, Lzt1;->m(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {v1, p1, v2}, Lmw1;->n(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object p1
 
-    iget-object v1, p0, Landroidx/media3/common/audio/AudioProcessor$UnhandledAudioFormatException;->a:Lv50;
+    iget-object v1, p0, Landroidx/media3/common/audio/AudioProcessor$UnhandledAudioFormatException;->a:La50;
 
     invoke-virtual {p1, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
@@ -296,7 +296,7 @@
     return-object v0
 .end method
 
-.method public static c(Ljava/lang/Exception;ILnh3;)Landroidx/media3/transformer/ExportException;
+.method public static c(Ljava/lang/Exception;ILsk3;)Landroidx/media3/transformer/ExportException;
     .locals 3
 
     new-instance v0, Landroidx/media3/transformer/ExportException;
@@ -320,33 +320,18 @@
     return-object v0
 .end method
 
-.method public static d(Ljava/lang/Exception;)Landroidx/media3/transformer/ExportException;
+.method public static d(Ljava/lang/RuntimeException;)Landroidx/media3/transformer/ExportException;
     .locals 4
 
-    instance-of v0, p0, Ljava/lang/RuntimeException;
-
-    const/4 v1, 0x0
-
-    if-eqz v0, :cond_0
-
     new-instance v0, Landroidx/media3/transformer/ExportException;
 
-    const-string v2, "Unexpected runtime error"
+    const/16 v1, 0x3e9
 
-    const/16 v3, 0x3e9
+    const/4 v2, 0x0
 
-    invoke-direct {v0, v2, p0, v3, v1}, Landroidx/media3/transformer/ExportException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;II)V
+    const-string v3, "Unexpected runtime error"
 
-    return-object v0
-
-    :cond_0
-    new-instance v0, Landroidx/media3/transformer/ExportException;
-
-    const-string v2, "Unexpected error"
-
-    const/16 v3, 0x3e8
-
-    invoke-direct {v0, v2, p0, v3, v1}, Landroidx/media3/transformer/ExportException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;II)V
+    invoke-direct {v0, v3, p0, v1, v2}, Landroidx/media3/transformer/ExportException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;II)V
 
     return-object v0
 .end method

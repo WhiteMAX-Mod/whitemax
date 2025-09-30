@@ -1,68 +1,74 @@
 .class public final Lx94;
-.super Ljava/lang/Object;
+.super Laa4;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:Ljava/lang/String;
-
-.field public final b:Ltf5;
-
-.field public c:J
-
-.field public d:J
-
-
-# direct methods
-.method public constructor <init>(Ljava/io/File;Ljava/lang/String;)V
+# virtual methods
+.method public final n(Lk55;)I
     .locals 0
+
+    invoke-virtual {p1}, Lk55;->o()I
+
+    move-result p0
+
+    return p0
+.end method
+
+.method public final o()Lu37;
+    .locals 1
+
+    new-instance p0, Lu37;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    const/4 v0, 0x0
 
-    iput-object p2, p0, Lx94;->a:Ljava/lang/String;
+    iput v0, p0, Lu37;->a:I
 
-    new-instance p2, Ltf5;
+    iput-boolean v0, p0, Lu37;->b:Z
 
-    invoke-direct {p2, p1}, Ltf5;-><init>(Ljava/io/File;)V
+    iput-boolean v0, p0, Lu37;->c:Z
 
-    iput-object p2, p0, Lx94;->b:Ltf5;
-
-    const-wide/16 p1, -0x1
-
-    iput-wide p1, p0, Lx94;->c:J
-
-    iput-wide p1, p0, Lx94;->d:J
-
-    return-void
+    return-object p0
 .end method
 
+.method public final declared-synchronized s(Lk55;I)Z
+    .locals 1
 
-# virtual methods
-.method public final a()J
-    .locals 4
+    monitor-enter p0
 
-    iget-wide v0, p0, Lx94;->d:J
+    :try_start_0
+    invoke-static {p2}, Ldi0;->b(I)Z
 
-    const-wide/16 v2, 0x0
+    move-result v0
 
-    cmp-long v0, v0, v2
+    if-eqz v0, :cond_0
 
-    if-gez v0, :cond_0
+    const/4 p1, 0x0
 
-    iget-object v0, p0, Lx94;->b:Ltf5;
-
-    iget-object v0, v0, Ltf5;->a:Ljava/io/File;
-
-    invoke-virtual {v0}, Ljava/io/File;->lastModified()J
-
-    move-result-wide v0
-
-    iput-wide v0, p0, Lx94;->d:J
+    goto :goto_0
 
     :cond_0
-    iget-wide v0, p0, Lx94;->d:J
+    iget-object v0, p0, Laa4;->g:Lgf7;
 
-    return-wide v0
+    invoke-virtual {v0, p1, p2}, Lgf7;->e(Lk55;I)Z
+
+    move-result p1
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    :goto_0
+    monitor-exit p0
+
+    return p1
+
+    :catchall_0
+    move-exception p1
+
+    :try_start_1
+    monitor-exit p0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    throw p1
 .end method

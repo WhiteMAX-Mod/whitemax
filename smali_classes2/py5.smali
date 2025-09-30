@@ -1,22 +1,27 @@
 .class public final Lpy5;
-.super Landroid/text/style/ForegroundColorSpan;
+.super Lj2e;
 .source "SourceFile"
-
-# interfaces
-.implements Lqw3;
 
 
 # virtual methods
-.method public final copy()Lqw3;
+.method public final E()V
     .locals 1
 
-    new-instance v0, Lpy5;
+    iget-object p0, p0, Lzoc;->a:Landroid/view/View;
 
-    invoke-virtual {p0}, Landroid/text/style/ForegroundColorSpan;->getForegroundColor()I
+    check-cast p0, Lone/me/sdk/uikit/common/button/OneMeButton;
 
-    move-result p0
+    const/4 v0, 0x0
 
-    invoke-direct {v0, p0}, Landroid/text/style/ForegroundColorSpan;-><init>(I)V
+    invoke-virtual {p0, v0}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    return-object v0
+    return-void
+.end method
+
+.method public final bridge synthetic y(Lts7;)V
+    .locals 0
+
+    check-cast p1, Loy5;
+
+    return-void
 .end method

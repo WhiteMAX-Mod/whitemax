@@ -25,14 +25,14 @@
 
 
 # virtual methods
-.method public final Z0(Lp5;)V
+.method public final Z0(Lt5;)V
     .locals 5
 
     const/4 p1, 0x0
 
-    iput-boolean p1, p0, Lru/ok/messages/views/dialogs/FrgDlgBase;->x1:Z
+    iput-boolean p1, p0, Lru/ok/messages/views/dialogs/FrgDlgBase;->A1:Z
 
-    iget-object p1, p0, Landroidx/fragment/app/a;->E0:Landroidx/fragment/app/a;
+    iget-object p1, p0, Landroidx/fragment/app/a;->H0:Landroidx/fragment/app/a;
 
     if-nez p1, :cond_0
 
@@ -59,7 +59,7 @@
 
     move-result-object v3
 
-    iget-object p0, p0, Landroidx/fragment/app/a;->E0:Landroidx/fragment/app/a;
+    iget-object p0, p0, Landroidx/fragment/app/a;->H0:Landroidx/fragment/app/a;
 
     if-eqz p0, :cond_1
 
@@ -80,13 +80,13 @@
 
     const-string v4, ", but "
 
-    invoke-static {v0, v3, v2, v1, v4}, Lzge;->r(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {v0, v3, v2, v1, v4}, Lz7e;->u(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
     const-string v1, " is null"
 
-    invoke-static {v0, p0, v1}, Lm26;->j(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0, p0, v1}, Lyv7;->k(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
 
@@ -119,7 +119,7 @@
 
     move-result-object v3
 
-    iget-object v4, p0, Landroidx/fragment/app/a;->E0:Landroidx/fragment/app/a;
+    iget-object v4, p0, Landroidx/fragment/app/a;->H0:Landroidx/fragment/app/a;
 
     if-eqz v4, :cond_4
 
@@ -138,7 +138,7 @@
 
     const-string v4, " that implements "
 
-    invoke-static {v0, v3, v2, v1, v4}, Lzge;->r(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {v0, v3, v2, v1, v4}, Lz7e;->u(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 

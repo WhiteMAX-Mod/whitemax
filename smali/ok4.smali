@@ -1,82 +1,136 @@
-.class public final enum Lok4;
-.super Ljava/lang/Enum;
+.class public final synthetic Lok4;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/util/concurrent/Executor;
+.implements Ljava/lang/Runnable;
 
 
-# static fields
-.field public static final enum a:Lok4;
+# instance fields
+.field public final synthetic a:I
 
-.field public static final synthetic b:[Lok4;
+.field public final synthetic b:Lpk4;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
+.method public synthetic constructor <init>(Lpk4;I)V
+    .locals 0
 
-    new-instance v0, Lok4;
+    .line 1
+    iput p2, p0, Lok4;->a:I
 
-    const-string v1, "INSTANCE"
+    iput-object p1, p0, Lok4;->b:Lpk4;
 
-    const/4 v2, 0x0
-
-    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v0, Lok4;->a:Lok4;
-
-    filled-new-array {v0}, [Lok4;
-
-    move-result-object v0
-
-    sput-object v0, Lok4;->b:[Lok4;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
-.method public static valueOf(Ljava/lang/String;)Lok4;
-    .locals 1
+.method public synthetic constructor <init>(Lpk4;Ljava/lang/String;)V
+    .locals 0
 
-    const-class v0, Lok4;
+    .line 2
+    const/4 p2, 0x0
 
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+    iput p2, p0, Lok4;->a:I
 
-    move-result-object p0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    check-cast p0, Lok4;
+    iput-object p1, p0, Lok4;->b:Lpk4;
 
-    return-object p0
-.end method
-
-.method public static values()[Lok4;
-    .locals 1
-
-    sget-object v0, Lok4;->b:[Lok4;
-
-    invoke-virtual {v0}, [Lok4;->clone()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, [Lok4;
-
-    return-object v0
+    return-void
 .end method
 
 
 # virtual methods
-.method public final execute(Ljava/lang/Runnable;)V
-    .locals 0
+.method public final run()V
+    .locals 6
 
-    invoke-interface {p1}, Ljava/lang/Runnable;->run()V
+    iget v0, p0, Lok4;->a:I
+
+    iget-object p0, p0, Lok4;->b:Lpk4;
+
+    packed-switch v0, :pswitch_data_0
+
+    invoke-virtual {p0}, Lpk4;->b()V
 
     return-void
-.end method
 
-.method public final toString()Ljava/lang/String;
-    .locals 0
+    :pswitch_0
+    invoke-virtual {p0}, Lpk4;->a()V
 
-    const-string p0, "MoreExecutors.directExecutor()"
+    return-void
 
-    return-object p0
+    :pswitch_1
+    :try_start_0
+    iget-object v0, p0, Lpk4;->e:Lts1;
+
+    invoke-virtual {v0}, Lts1;->get()Ljava/lang/Object;
+
+    sget-object v0, Lpk4;->m:Ljava/util/concurrent/atomic/AtomicInteger;
+
+    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicInteger;->decrementAndGet()I
+
+    sget-object v0, Lpk4;->l:Ljava/util/concurrent/atomic/AtomicInteger;
+
+    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicInteger;->get()I
+
+    invoke-virtual {p0}, Ljava/lang/Object;->toString()Ljava/lang/String;
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    return-void
+
+    :catch_0
+    move-exception v0
+
+    invoke-virtual {p0}, Ljava/lang/Object;->toString()Ljava/lang/String;
+
+    iget-object v1, p0, Lpk4;->a:Ljava/lang/Object;
+
+    monitor-enter v1
+
+    :try_start_1
+    new-instance v2, Ljava/lang/IllegalArgumentException;
+
+    const-string v3, "DeferrableSurface %s [closed: %b, use_count: %s] terminated with unexpected exception."
+
+    iget-boolean v4, p0, Lpk4;->c:Z
+
+    invoke-static {v4}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object v4
+
+    iget v5, p0, Lpk4;->b:I
+
+    invoke-static {v5}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v5
+
+    filled-new-array {p0, v4, v5}, [Ljava/lang/Object;
+
+    move-result-object p0
+
+    invoke-static {v3, p0}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-direct {v2, p0, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    throw v2
+
+    :catchall_0
+    move-exception p0
+
+    monitor-exit v1
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    throw p0
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

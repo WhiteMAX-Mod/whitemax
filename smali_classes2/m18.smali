@@ -1,103 +1,117 @@
-.class public final synthetic Lm18;
+.class public final Lm18;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Landroid/animation/ValueAnimator$AnimatorUpdateListener;
+.implements Lnob;
 
 
-# instance fields
-.field public final synthetic X:F
-
-.field public final synthetic Y:F
-
-.field public final synthetic a:Landroid/animation/ValueAnimator;
-
-.field public final synthetic b:Landroid/view/View;
-
-.field public final synthetic c:F
-
-.field public final synthetic o:F
+# static fields
+.field public static final a:Lm18;
 
 
 # direct methods
-.method public synthetic constructor <init>(Landroid/animation/ValueAnimator;Landroid/view/View;Lp18;FFFF)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lm18;
 
-    iput-object p1, p0, Lm18;->a:Landroid/animation/ValueAnimator;
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p2, p0, Lm18;->b:Landroid/view/View;
-
-    iput p4, p0, Lm18;->c:F
-
-    iput p5, p0, Lm18;->o:F
-
-    iput p6, p0, Lm18;->X:F
-
-    iput p7, p0, Lm18;->Y:F
+    sput-object v0, Lm18;->a:Lm18;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onAnimationUpdate(Landroid/animation/ValueAnimator;)V
-    .locals 5
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 1
 
-    sget p1, Lp18;->t0:I
+    const/4 v0, 0x1
 
-    iget-object p1, p0, Lm18;->a:Landroid/animation/ValueAnimator;
+    if-ne p0, p1, :cond_0
 
-    invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Ljava/lang/Float;
-
-    invoke-virtual {p1}, Ljava/lang/Float;->floatValue()F
-
-    move-result p1
-
-    iget v0, p0, Lm18;->X:F
-
-    cmpg-float v1, p1, v0
-
-    iget v2, p0, Lm18;->c:F
-
-    if-gez v1, :cond_0
-
-    goto :goto_0
+    return v0
 
     :cond_0
-    iget v1, p0, Lm18;->Y:F
+    instance-of p0, p1, Lm18;
 
-    cmpl-float v3, p1, v1
+    if-nez p0, :cond_1
 
-    iget v4, p0, Lm18;->o:F
+    const/4 p0, 0x0
 
-    if-lez v3, :cond_1
-
-    move v2, v4
-
-    goto :goto_0
+    return p0
 
     :cond_1
-    sub-float/2addr p1, v0
+    return v0
+.end method
 
-    sub-float/2addr v1, v0
+.method public final getItemId()J
+    .locals 2
 
-    div-float/2addr p1, v1
+    const/16 p0, 0x200
 
-    invoke-static {v4, v2, p1, v2}, Lp3a;->g(FFFF)F
+    int-to-long v0, p0
 
-    move-result v2
+    return-wide v0
+.end method
 
-    :goto_0
-    iget-object p0, p0, Lm18;->b:Landroid/view/View;
+.method public final h(Lts7;)Z
+    .locals 2
 
-    invoke-virtual {p0, v2}, Landroid/view/View;->setAlpha(F)V
+    const/16 p0, 0x200
 
-    return-void
+    int-to-long v0, p0
+
+    invoke-interface {p1}, Lts7;->getItemId()J
+
+    move-result-wide p0
+
+    cmp-long p0, v0, p0
+
+    if-nez p0, :cond_0
+
+    const/4 p0, 0x1
+
+    return p0
+
+    :cond_0
+    const/4 p0, 0x0
+
+    return p0
+.end method
+
+.method public final hashCode()I
+    .locals 0
+
+    const p0, -0x5adaf6c
+
+    return p0
+.end method
+
+.method public final m()I
+    .locals 0
+
+    const/16 p0, 0x200
+
+    return p0
+.end method
+
+.method public final q(Lts7;)Z
+    .locals 0
+
+    invoke-virtual {p0, p1}, Lm18;->equals(Ljava/lang/Object;)Z
+
+    move-result p0
+
+    return p0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 0
+
+    const-string p0, "LogoutItem"
+
+    return-object p0
 .end method

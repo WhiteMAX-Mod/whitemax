@@ -3,178 +3,217 @@
 .source "SourceFile"
 
 # interfaces
-.implements Landroid/os/Parcelable;
-
-
-# static fields
-.field public static final CREATOR:Landroid/os/Parcelable$Creator;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Landroid/os/Parcelable$Creator<",
-            "Lih8;",
-            ">;"
-        }
-    .end annotation
-.end field
+.implements Lyh8;
 
 
 # instance fields
-.field public final a:Ljava/lang/Object;
+.field public final X:J
 
-.field public final b:Ljava/lang/Object;
+.field public final a:J
 
-.field public c:Lsr6;
+.field public final b:J
 
-.field public o:Lncf;
+.field public final c:Lkz;
+
+.field public final o:I
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
-
-    new-instance v0, Ldj7;
-
-    const/16 v1, 0xf
-
-    invoke-direct {v0, v1}, Ldj7;-><init>(I)V
-
-    sput-object v0, Lih8;->CREATOR:Landroid/os/Parcelable$Creator;
-
-    return-void
-.end method
-
-.method public constructor <init>(Ljava/lang/Object;Lsr6;)V
-    .locals 1
+.method public constructor <init>(JJLkz;)V
+    .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    new-instance v0, Ljava/lang/Object;
+    iput-wide p1, p0, Lih8;->a:J
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    iput-wide p3, p0, Lih8;->b:J
 
-    iput-object v0, p0, Lih8;->a:Ljava/lang/Object;
+    iput-object p5, p0, Lih8;->c:Lkz;
 
-    iput-object p1, p0, Lih8;->b:Ljava/lang/Object;
+    sget p1, Lnea;->a:I
 
-    iput-object p2, p0, Lih8;->c:Lsr6;
+    iput p1, p0, Lih8;->o:I
 
-    const/4 p1, 0x0
-
-    iput-object p1, p0, Lih8;->o:Lncf;
+    iput-wide p3, p0, Lih8;->X:J
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Lsr6;
-    .locals 1
-
-    iget-object v0, p0, Lih8;->a:Ljava/lang/Object;
-
-    monitor-enter v0
-
-    :try_start_0
-    iget-object p0, p0, Lih8;->c:Lsr6;
-
-    monitor-exit v0
-
-    return-object p0
-
-    :catchall_0
-    move-exception p0
-
-    monitor-exit v0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    throw p0
-.end method
-
-.method public final describeContents()I
-    .locals 0
-
-    const/4 p0, 0x0
-
-    return p0
-.end method
-
 .method public final equals(Ljava/lang/Object;)Z
-    .locals 3
-
-    const/4 v0, 0x1
+    .locals 4
 
     if-ne p0, p1, :cond_0
 
-    return v0
+    goto :goto_1
 
     :cond_0
-    instance-of v1, p1, Lih8;
+    instance-of v0, p1, Lih8;
 
-    const/4 v2, 0x0
+    if-nez v0, :cond_1
 
-    if-nez v1, :cond_1
-
-    return v2
+    goto :goto_0
 
     :cond_1
     check-cast p1, Lih8;
 
-    iget-object p0, p0, Lih8;->b:Ljava/lang/Object;
+    iget-wide v0, p0, Lih8;->a:J
 
-    if-nez p0, :cond_3
+    iget-wide v2, p1, Lih8;->a:J
 
-    iget-object p0, p1, Lih8;->b:Ljava/lang/Object;
+    cmp-long v0, v0, v2
 
-    if-nez p0, :cond_2
+    if-eqz v0, :cond_2
 
-    return v0
+    goto :goto_0
 
     :cond_2
-    return v2
+    iget-wide v0, p0, Lih8;->b:J
+
+    iget-wide v2, p1, Lih8;->b:J
+
+    cmp-long v0, v0, v2
+
+    if-eqz v0, :cond_3
+
+    goto :goto_0
 
     :cond_3
-    iget-object p1, p1, Lih8;->b:Ljava/lang/Object;
+    iget-object p0, p0, Lih8;->c:Lkz;
 
-    if-nez p1, :cond_4
+    iget-object p1, p1, Lih8;->c:Lkz;
 
-    return v2
-
-    :cond_4
-    invoke-virtual {p0, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+    invoke-static {p0, p1}, Lvyg;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p0
 
-    return p0
-.end method
+    if-nez p0, :cond_4
 
-.method public final hashCode()I
-    .locals 0
-
-    iget-object p0, p0, Lih8;->b:Ljava/lang/Object;
-
-    if-nez p0, :cond_0
-
+    :goto_0
     const/4 p0, 0x0
 
     return p0
 
-    :cond_0
-    invoke-virtual {p0}, Ljava/lang/Object;->hashCode()I
-
-    move-result p0
+    :cond_4
+    :goto_1
+    const/4 p0, 0x1
 
     return p0
 .end method
 
-.method public final writeToParcel(Landroid/os/Parcel;I)V
+.method public final getItemId()J
+    .locals 2
+
+    iget-wide v0, p0, Lih8;->X:J
+
+    return-wide v0
+.end method
+
+.method public final hashCode()I
+    .locals 4
+
+    iget-wide v0, p0, Lih8;->a:J
+
+    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
+
+    move-result v0
+
+    const/16 v1, 0x1f
+
+    mul-int/2addr v0, v1
+
+    iget-wide v2, p0, Lih8;->b:J
+
+    invoke-static {v0, v1, v2, v3}, Lwsf;->d(IIJ)I
+
+    move-result v0
+
+    iget-object p0, p0, Lih8;->c:Lkz;
+
+    invoke-virtual {p0}, Ljava/lang/Object;->hashCode()I
+
+    move-result p0
+
+    add-int/2addr p0, v0
+
+    mul-int/2addr p0, v1
+
+    return p0
+.end method
+
+.method public final i()J
+    .locals 2
+
+    iget-wide v0, p0, Lih8;->b:J
+
+    return-wide v0
+.end method
+
+.method public final j()J
+    .locals 2
+
+    iget-wide v0, p0, Lih8;->a:J
+
+    return-wide v0
+.end method
+
+.method public final m()I
     .locals 0
 
-    iget-object p0, p0, Lih8;->b:Ljava/lang/Object;
+    iget p0, p0, Lih8;->o:I
 
-    check-cast p0, Landroid/os/Parcelable;
+    return p0
+.end method
 
-    invoke-virtual {p1, p0, p2}, Landroid/os/Parcel;->writeParcelable(Landroid/os/Parcelable;I)V
+.method public final toString()Ljava/lang/String;
+    .locals 4
 
-    return-void
+    const-string v0, "ContentLevel(messageId="
+
+    const-string v1, ", attachId="
+
+    iget-wide v2, p0, Lih8;->a:J
+
+    invoke-static {v2, v3, v0, v1}, Lmw1;->l(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    iget-wide v1, p0, Lih8;->b:J
+
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    const-string v1, ", attachModel="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object p0, p0, Lih8;->c:Lkz;
+
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string p0, ", localId=)"
+
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public final v()Lkz;
+    .locals 0
+
+    iget-object p0, p0, Lih8;->c:Lkz;
+
+    return-object p0
+.end method
+
+.method public final w()Ljava/lang/String;
+    .locals 0
+
+    const-string p0, ""
+
+    return-object p0
 .end method

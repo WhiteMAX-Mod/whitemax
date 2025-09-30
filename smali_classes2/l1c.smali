@@ -3,26 +3,38 @@
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/lang/Runnable;
+.implements Landroid/animation/ValueAnimator$AnimatorUpdateListener;
 
 
 # instance fields
+.field public final synthetic X:F
+
+.field public final synthetic Y:Landroid/view/View;
+
 .field public final synthetic a:I
 
-.field public final synthetic b:Lone/me/rlottie/RLottieDrawable;
+.field public final synthetic b:F
 
-.field public final synthetic c:Ljava/lang/Runnable;
+.field public final synthetic c:F
+
+.field public final synthetic o:F
 
 
 # direct methods
-.method public synthetic constructor <init>(Lone/me/rlottie/RLottieDrawable;Ljava/lang/Runnable;I)V
+.method public synthetic constructor <init>(Landroid/view/View;FFFFI)V
     .locals 0
 
-    iput p3, p0, Ll1c;->a:I
+    iput p6, p0, Ll1c;->a:I
 
-    iput-object p1, p0, Ll1c;->b:Lone/me/rlottie/RLottieDrawable;
+    iput-object p1, p0, Ll1c;->Y:Landroid/view/View;
 
-    iput-object p2, p0, Ll1c;->c:Ljava/lang/Runnable;
+    iput p2, p0, Ll1c;->b:F
+
+    iput p3, p0, Ll1c;->c:F
+
+    iput p4, p0, Ll1c;->o:F
+
+    iput p5, p0, Ll1c;->X:F
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -31,68 +43,81 @@
 
 
 # virtual methods
-.method public final run()V
-    .locals 3
+.method public final onAnimationUpdate(Landroid/animation/ValueAnimator;)V
+    .locals 7
 
     iget v0, p0, Ll1c;->a:I
 
-    iget-object v1, p0, Ll1c;->c:Ljava/lang/Runnable;
-
-    iget-object p0, p0, Ll1c;->b:Lone/me/rlottie/RLottieDrawable;
-
     packed-switch v0, :pswitch_data_0
 
-    sget-object v0, Lone/me/rlottie/RLottieDrawable;->gson:Lcom/google/gson/Gson;
+    iget-object v0, p0, Ll1c;->Y:Landroid/view/View;
 
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    check-cast v0, Lezf;
 
-    invoke-interface {v1}, Ljava/lang/Runnable;->run()V
+    invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedFraction()F
 
-    iget-object v0, p0, Lone/me/rlottie/RLottieDrawable;->C0:Ljava/lang/Runnable;
+    move-result p1
 
-    if-eqz v0, :cond_0
+    iget v1, p0, Ll1c;->c:F
 
-    const/4 v0, 0x0
+    iget v2, p0, Ll1c;->b:F
 
-    iput-object v0, p0, Lone/me/rlottie/RLottieDrawable;->C0:Ljava/lang/Runnable;
+    invoke-static {v1, v2, p1, v2}, Lbg9;->g(FFFF)F
 
-    invoke-static {}, Lpo0;->c()V
+    move-result v1
 
-    :cond_0
+    iput v1, v0, Lezf;->F0:F
+
+    iget v1, p0, Ll1c;->X:F
+
+    iget p0, p0, Ll1c;->o:F
+
+    invoke-static {v1, p0, p1, p0}, Lbg9;->g(FFFF)F
+
+    move-result p0
+
+    iput p0, v0, Lezf;->E0:F
+
+    iget-object p1, v0, Lezf;->u0:Landroid/graphics/Paint;
+
+    invoke-virtual {p1, p0}, Landroid/graphics/Paint;->setStrokeWidth(F)V
+
+    iget-object p0, v0, Lezf;->o:Landroid/graphics/Paint;
+
+    iget p1, v0, Lezf;->E0:F
+
+    invoke-virtual {p0, p1}, Landroid/graphics/Paint;->setStrokeWidth(F)V
+
+    invoke-virtual {v0}, Landroid/view/View;->invalidate()V
+
     return-void
 
     :pswitch_0
-    sget-object v0, Lone/me/rlottie/RLottieDrawable;->gson:Lcom/google/gson/Gson;
+    iget-object v0, p0, Ll1c;->Y:Landroid/view/View;
 
-    :try_start_0
-    iget-object v0, p0, Lone/me/rlottie/RLottieDrawable;->o1:Lpo0;
+    move-object v1, v0
 
-    if-eqz v0, :cond_1
+    check-cast v1, Lp1c;
 
-    invoke-virtual {v0}, Lpo0;->b()V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
 
-    goto :goto_0
+    move-result-object p1
 
-    :catchall_0
-    move-exception v0
+    check-cast p1, Ljava/lang/Float;
 
-    invoke-static {}, Lone/me/rlottie/RLottie;->getLogger()Lzk9;
+    invoke-virtual {p1}, Ljava/lang/Float;->floatValue()F
 
-    move-result-object v2
+    move-result v6
 
-    invoke-interface {v2, v0}, Lzk9;->q(Ljava/lang/Throwable;)V
+    iget v2, p0, Ll1c;->b:F
 
-    :cond_1
-    :goto_0
-    new-instance v0, Ll1c;
+    iget v3, p0, Ll1c;->c:F
 
-    const/4 v2, 0x1
+    iget v4, p0, Ll1c;->o:F
 
-    invoke-direct {v0, p0, v1, v2}, Ll1c;-><init>(Lone/me/rlottie/RLottieDrawable;Ljava/lang/Runnable;I)V
+    iget v5, p0, Ll1c;->X:F
 
-    invoke-static {v0}, Lzd;->d(Ljava/lang/Runnable;)V
+    invoke-static/range {v1 .. v6}, Lp1c;->b(Lp1c;FFFFF)V
 
     return-void
 

@@ -1,23 +1,15 @@
-.class public abstract synthetic Ls0a;
+.class public abstract Ls0a;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:Ljava/util/logging/Logger;
-
-
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public static a(Landroid/app/Notification$MessagingStyle;Landroid/app/Notification$MessagingStyle$Message;)Landroid/app/Notification$MessagingStyle;
+    .locals 0
 
-    const-string v0, "okio.Okio"
+    invoke-virtual {p0, p1}, Landroid/app/Notification$MessagingStyle;->addHistoricMessage(Landroid/app/Notification$MessagingStyle$Message;)Landroid/app/Notification$MessagingStyle;
 
-    invoke-static {v0}, Ljava/util/logging/Logger;->getLogger(Ljava/lang/String;)Ljava/util/logging/Logger;
+    move-result-object p0
 
-    move-result-object v0
-
-    sput-object v0, Ls0a;->a:Ljava/util/logging/Logger;
-
-    return-void
+    return-object p0
 .end method

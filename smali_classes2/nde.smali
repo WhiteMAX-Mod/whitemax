@@ -1,85 +1,236 @@
-.class public final enum Lnde;
-.super Ljava/lang/Enum;
+.class public final Lnde;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final enum a:Lnde;
+# instance fields
+.field public final a:I
 
-.field public static final enum b:Lnde;
+.field public final b:I
 
-.field public static final enum c:Lnde;
+.field public final c:I
 
-.field public static final synthetic o:[Lnde;
+.field public final d:I
+
+.field public final e:I
+
+.field public final f:I
+
+.field public final g:I
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 5
+.method public constructor <init>(IIIIIII)V
+    .locals 0
 
-    new-instance v0, Lnde;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const-string v1, "ALREADY_DOWNLOADING_BY_OTHER"
+    iput p1, p0, Lnde;->a:I
 
-    const/4 v2, 0x0
+    iput p2, p0, Lnde;->b:I
 
-    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    iput p3, p0, Lnde;->c:I
 
-    sput-object v0, Lnde;->a:Lnde;
+    iput p4, p0, Lnde;->d:I
 
-    new-instance v1, Lnde;
+    iput p5, p0, Lnde;->e:I
 
-    const-string v2, "FINISH"
+    iput p6, p0, Lnde;->f:I
 
-    const/4 v3, 0x1
-
-    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v1, Lnde;->b:Lnde;
-
-    new-instance v2, Lnde;
-
-    const-string v3, "ERROR"
-
-    const/4 v4, 0x2
-
-    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v2, Lnde;->c:Lnde;
-
-    filled-new-array {v0, v1, v2}, [Lnde;
-
-    move-result-object v0
-
-    sput-object v0, Lnde;->o:[Lnde;
+    iput p7, p0, Lnde;->g:I
 
     return-void
 .end method
 
-.method public static valueOf(Ljava/lang/String;)Lnde;
-    .locals 1
 
-    const-class v0, Lnde;
+# virtual methods
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 2
 
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+    if-ne p0, p1, :cond_0
 
-    move-result-object p0
+    goto :goto_1
 
-    check-cast p0, Lnde;
+    :cond_0
+    instance-of v0, p1, Lnde;
 
-    return-object p0
+    if-nez v0, :cond_1
+
+    goto :goto_0
+
+    :cond_1
+    check-cast p1, Lnde;
+
+    iget v0, p0, Lnde;->a:I
+
+    iget v1, p1, Lnde;->a:I
+
+    if-eq v0, v1, :cond_2
+
+    goto :goto_0
+
+    :cond_2
+    iget v0, p0, Lnde;->b:I
+
+    iget v1, p1, Lnde;->b:I
+
+    if-eq v0, v1, :cond_3
+
+    goto :goto_0
+
+    :cond_3
+    iget v0, p0, Lnde;->c:I
+
+    iget v1, p1, Lnde;->c:I
+
+    if-eq v0, v1, :cond_4
+
+    goto :goto_0
+
+    :cond_4
+    iget v0, p0, Lnde;->d:I
+
+    iget v1, p1, Lnde;->d:I
+
+    if-eq v0, v1, :cond_5
+
+    goto :goto_0
+
+    :cond_5
+    iget v0, p0, Lnde;->e:I
+
+    iget v1, p1, Lnde;->e:I
+
+    if-eq v0, v1, :cond_6
+
+    goto :goto_0
+
+    :cond_6
+    iget v0, p0, Lnde;->f:I
+
+    iget v1, p1, Lnde;->f:I
+
+    if-eq v0, v1, :cond_7
+
+    goto :goto_0
+
+    :cond_7
+    iget p0, p0, Lnde;->g:I
+
+    iget p1, p1, Lnde;->g:I
+
+    if-eq p0, p1, :cond_8
+
+    :goto_0
+    const/4 p0, 0x0
+
+    return p0
+
+    :cond_8
+    :goto_1
+    const/4 p0, 0x1
+
+    return p0
 .end method
 
-.method public static values()[Lnde;
-    .locals 1
+.method public final hashCode()I
+    .locals 3
 
-    sget-object v0, Lnde;->o:[Lnde;
+    iget v0, p0, Lnde;->a:I
 
-    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
+    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
+
+    move-result v0
+
+    const/16 v1, 0x1f
+
+    mul-int/2addr v0, v1
+
+    iget v2, p0, Lnde;->b:I
+
+    invoke-static {v2, v0, v1}, Lz7e;->m(III)I
+
+    move-result v0
+
+    iget v2, p0, Lnde;->c:I
+
+    invoke-static {v2, v0, v1}, Lz7e;->m(III)I
+
+    move-result v0
+
+    iget v2, p0, Lnde;->d:I
+
+    invoke-static {v2, v0, v1}, Lz7e;->m(III)I
+
+    move-result v0
+
+    iget v2, p0, Lnde;->e:I
+
+    invoke-static {v2, v0, v1}, Lz7e;->m(III)I
+
+    move-result v0
+
+    iget v2, p0, Lnde;->f:I
+
+    invoke-static {v2, v0, v1}, Lz7e;->m(III)I
+
+    move-result v0
+
+    iget p0, p0, Lnde;->g:I
+
+    invoke-static {p0}, Ljava/lang/Integer;->hashCode(I)I
+
+    move-result p0
+
+    add-int/2addr p0, v0
+
+    return p0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 5
+
+    const-string v0, ", contrastStatic="
+
+    const-string v1, ", negative="
+
+    const-string v2, "StatesTextDisabledColors(contrast="
+
+    iget v3, p0, Lnde;->a:I
+
+    iget v4, p0, Lnde;->b:I
+
+    invoke-static {v2, v3, v0, v4, v1}, Lsg0;->j(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    check-cast v0, [Lnde;
+    const-string v1, ", neutralThemed="
 
-    return-object v0
+    const-string v2, ", primary="
+
+    iget v3, p0, Lnde;->c:I
+
+    iget v4, p0, Lnde;->d:I
+
+    invoke-static {v0, v3, v1, v4, v2}, Lsq3;->o(Ljava/lang/StringBuilder;ILjava/lang/String;ILjava/lang/String;)V
+
+    const-string v1, ", primaryStatic="
+
+    const-string v2, ", themed="
+
+    iget v3, p0, Lnde;->e:I
+
+    iget v4, p0, Lnde;->f:I
+
+    invoke-static {v0, v3, v1, v4, v2}, Lsq3;->o(Ljava/lang/StringBuilder;ILjava/lang/String;ILjava/lang/String;)V
+
+    const-string v1, ")"
+
+    iget p0, p0, Lnde;->g:I
+
+    invoke-static {v0, p0, v1}, Lyv7;->i(Ljava/lang/StringBuilder;ILjava/lang/String;)Ljava/lang/String;
+
+    move-result-object p0
+
+    return-object p0
 .end method

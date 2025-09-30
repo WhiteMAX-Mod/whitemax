@@ -1,8 +1,16 @@
-.class public interface abstract Ljm7;
+.class public final Ljm7;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lz3d;
 
-# virtual methods
-.method public abstract invoke(Ljava/lang/Object;)V
+
+# direct methods
+.method public constructor <init>()V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
 .end method

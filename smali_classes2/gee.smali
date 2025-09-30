@@ -1,50 +1,8 @@
-.class public final Lgee;
-.super Lbu3;
-
-
-# instance fields
-.field public X:I
-
-.field public Y:Lbn5;
-
-.field public final synthetic Z:Lhee;
-
-.field public synthetic o:Ljava/lang/Object;
-
-
-# direct methods
-.method public constructor <init>(Lhee;Lkotlin/coroutines/Continuation;)V
-    .locals 0
-
-    iput-object p1, p0, Lgee;->Z:Lhee;
-
-    invoke-direct {p0, p2}, Lbu3;-><init>(Lkotlin/coroutines/Continuation;)V
-
-    return-void
-.end method
+.class public interface abstract Lgee;
+.super Ljava/lang/Object;
+.source "SourceFile"
 
 
 # virtual methods
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
-
-    iput-object p1, p0, Lgee;->o:Ljava/lang/Object;
-
-    iget p1, p0, Lgee;->X:I
-
-    const/high16 v0, -0x80000000
-
-    or-int/2addr p1, v0
-
-    iput p1, p0, Lgee;->X:I
-
-    iget-object p1, p0, Lgee;->Z:Lhee;
-
-    const/4 v0, 0x0
-
-    invoke-virtual {p1, v0, p0}, Lhee;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    return-object p0
+.method public abstract a([Lorg/webrtc/StatsReport;[Lorg/webrtc/StatsReport;[Lcr0;Ljava/util/Map;Lbq1;)V
 .end method

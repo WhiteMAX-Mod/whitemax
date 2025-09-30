@@ -1,88 +1,22 @@
-.class public final synthetic Lff6;
+.class public final Lff6;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lf1a;
-.implements Lh1a;
-.implements Le1a;
+.implements Lif6;
 
 
 # instance fields
-.field public final synthetic a:Ljf6;
+.field public final a:I
 
 
 # direct methods
-.method public synthetic constructor <init>(Ljf6;)V
+.method public constructor <init>(I)V
     .locals 0
-
-    iput-object p1, p0, Lff6;->a:Ljf6;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    return-void
-.end method
-
-
-# virtual methods
-.method public e()V
-    .locals 2
-
-    iget-object p0, p0, Lff6;->a:Ljf6;
-
-    iget-object v0, p0, Ljf6;->e:Ljava/lang/String;
-
-    const-string v1, "startRetriever: canceled"
-
-    invoke-static {v0, v1}, Lg47;->p(Ljava/lang/String;Ljava/lang/String;)V
-
-    const/4 v0, 0x0
-
-    iput-object v0, p0, Ljf6;->h:Lmlg;
-
-    return-void
-.end method
-
-.method public l(Lcom/google/android/gms/tasks/Task;)V
-    .locals 1
-
-    iget-object p0, p0, Lff6;->a:Ljf6;
-
-    iget-object p1, p0, Ljf6;->e:Ljava/lang/String;
-
-    const-string v0, "retriever is complete"
-
-    invoke-static {p1, v0}, Lg47;->p(Ljava/lang/String;Ljava/lang/String;)V
-
-    const/4 p1, 0x0
-
-    iput-object p1, p0, Ljf6;->h:Lmlg;
-
-    return-void
-.end method
-
-.method public onFailure(Ljava/lang/Exception;)V
-    .locals 3
-
-    iget-object p0, p0, Lff6;->a:Ljf6;
-
-    iget-object v0, p0, Ljf6;->e:Ljava/lang/String;
-
-    new-instance v1, Lux3;
-
-    const-string v2, "startRetriever: failed"
-
-    invoke-direct {v1, v2, p1}, Ljava/lang/Error;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    const/4 p1, 0x0
-
-    new-array p1, p1, [Ljava/lang/Object;
-
-    const/4 v2, 0x0
-
-    invoke-static {v0, v1, v2, p1}, Lg47;->t(Ljava/lang/String;Ljava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)V
-
-    iput-object v2, p0, Ljf6;->h:Lmlg;
+    iput p1, p0, Lff6;->a:I
 
     return-void
 .end method

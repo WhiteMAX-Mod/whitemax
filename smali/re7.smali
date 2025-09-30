@@ -1,164 +1,137 @@
-.class public final Lre7;
-.super Ljava/lang/Object;
+.class public Lre7;
+.super Lsf7;
 .source "SourceFile"
 
 # interfaces
-.implements Lkw0;
+.implements Loc3;
 
 
 # instance fields
-.field public final a:J
-
-.field public final b:Ljava/util/TreeSet;
-
-.field public c:J
+.field public final a:Z
 
 
 # direct methods
-.method public constructor <init>(J)V
-    .locals 1
+.method public constructor <init>(Lre7;)V
+    .locals 4
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/4 v0, 0x1
 
-    iput-wide p1, p0, Lre7;->a:J
+    invoke-direct {p0, v0}, Lsf7;-><init>(Z)V
 
-    new-instance p1, Ljava/util/TreeSet;
+    invoke-virtual {p0, p1}, Lsf7;->initParentJob(Lqe7;)V
 
-    new-instance p2, Lgf4;
+    invoke-virtual {p0}, Lsf7;->getParentHandle$kotlinx_coroutines_core()Lx13;
 
-    const/4 v0, 0x7
+    move-result-object p1
 
-    invoke-direct {p2, v0}, Lgf4;-><init>(I)V
+    instance-of v1, p1, Ly13;
 
-    invoke-direct {p1, p2}, Ljava/util/TreeSet;-><init>(Ljava/util/Comparator;)V
+    const/4 v2, 0x0
 
-    iput-object p1, p0, Lre7;->b:Ljava/util/TreeSet;
+    if-eqz v1, :cond_0
+
+    check-cast p1, Ly13;
+
+    goto :goto_0
+
+    :cond_0
+    move-object p1, v2
+
+    :goto_0
+    const/4 v1, 0x0
+
+    if-eqz p1, :cond_6
+
+    iget-object p1, p1, Ldf7;->a:Lsf7;
+
+    if-eqz p1, :cond_1
+
+    goto :goto_1
+
+    :cond_1
+    move-object p1, v2
+
+    :goto_1
+    if-nez p1, :cond_2
+
+    goto :goto_4
+
+    :cond_2
+    invoke-virtual {p1}, Lsf7;->getHandlesException$kotlinx_coroutines_core()Z
+
+    move-result v3
+
+    if-eqz v3, :cond_3
+
+    goto :goto_5
+
+    :cond_3
+    invoke-virtual {p1}, Lsf7;->getParentHandle$kotlinx_coroutines_core()Lx13;
+
+    move-result-object p1
+
+    instance-of v3, p1, Ly13;
+
+    if-eqz v3, :cond_4
+
+    check-cast p1, Ly13;
+
+    goto :goto_2
+
+    :cond_4
+    move-object p1, v2
+
+    :goto_2
+    if-eqz p1, :cond_6
+
+    iget-object p1, p1, Ldf7;->a:Lsf7;
+
+    if-eqz p1, :cond_5
+
+    goto :goto_3
+
+    :cond_5
+    move-object p1, v2
+
+    :goto_3
+    if-nez p1, :cond_2
+
+    :cond_6
+    :goto_4
+    move v0, v1
+
+    :goto_5
+    iput-boolean v0, p0, Lre7;->a:Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Ldod;Lgod;)V
-    .locals 4
+.method public final D()Z
+    .locals 1
 
-    iget-object v0, p0, Lre7;->b:Ljava/util/TreeSet;
+    sget-object v0, Lylf;->a:Lylf;
 
-    invoke-virtual {v0, p2}, Ljava/util/TreeSet;->add(Ljava/lang/Object;)Z
+    invoke-virtual {p0, v0}, Lsf7;->makeCompleting$kotlinx_coroutines_core(Ljava/lang/Object;)Z
 
-    iget-wide v0, p0, Lre7;->c:J
+    move-result p0
 
-    iget-wide v2, p2, Lxw0;->c:J
-
-    add-long/2addr v0, v2
-
-    iput-wide v0, p0, Lre7;->c:J
-
-    const-wide/16 v0, 0x0
-
-    invoke-virtual {p0, p1, v0, v1}, Lre7;->e(Law0;J)V
-
-    return-void
+    return p0
 .end method
 
-.method public final b(Law0;Ljava/lang/String;JJ)V
+.method public final getHandlesException$kotlinx_coroutines_core()Z
     .locals 0
 
-    const-wide/16 p2, -0x1
+    iget-boolean p0, p0, Lre7;->a:Z
 
-    cmp-long p2, p5, p2
-
-    if-eqz p2, :cond_0
-
-    invoke-virtual {p0, p1, p5, p6}, Lre7;->e(Law0;J)V
-
-    :cond_0
-    return-void
+    return p0
 .end method
 
-.method public final c(Ldod;Lgod;Lgod;)V
+.method public final getOnCancelComplete$kotlinx_coroutines_core()Z
     .locals 0
 
-    invoke-virtual {p0, p1, p2}, Lre7;->d(Ldod;Lxw0;)V
+    const/4 p0, 0x1
 
-    invoke-virtual {p0, p1, p3}, Lre7;->a(Ldod;Lgod;)V
-
-    return-void
-.end method
-
-.method public final d(Ldod;Lxw0;)V
-    .locals 2
-
-    iget-object p1, p0, Lre7;->b:Ljava/util/TreeSet;
-
-    invoke-virtual {p1, p2}, Ljava/util/TreeSet;->remove(Ljava/lang/Object;)Z
-
-    iget-wide v0, p0, Lre7;->c:J
-
-    iget-wide p1, p2, Lxw0;->c:J
-
-    sub-long/2addr v0, p1
-
-    iput-wide v0, p0, Lre7;->c:J
-
-    return-void
-.end method
-
-.method public final e(Law0;J)V
-    .locals 4
-
-    :goto_0
-    iget-wide v0, p0, Lre7;->c:J
-
-    add-long/2addr v0, p2
-
-    iget-wide v2, p0, Lre7;->a:J
-
-    cmp-long v0, v0, v2
-
-    if-lez v0, :cond_0
-
-    iget-object v0, p0, Lre7;->b:Ljava/util/TreeSet;
-
-    invoke-virtual {v0}, Ljava/util/TreeSet;->isEmpty()Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    iget-object v0, p0, Lre7;->b:Ljava/util/TreeSet;
-
-    invoke-virtual {v0}, Ljava/util/TreeSet;->first()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lxw0;
-
-    move-object v1, p1
-
-    check-cast v1, Ldod;
-
-    monitor-enter v1
-
-    :try_start_0
-    invoke-virtual {v1, v0}, Ldod;->m(Lxw0;)V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    monitor-exit v1
-
-    goto :goto_0
-
-    :catchall_0
-    move-exception p0
-
-    :try_start_1
-    monitor-exit v1
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    throw p0
-
-    :cond_0
-    return-void
+    return p0
 .end method

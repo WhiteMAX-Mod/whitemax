@@ -1,142 +1,139 @@
-.class public Lm76;
-.super Ljava/lang/Object;
+.class public abstract Lm76;
+.super Lp6f;
 .source "SourceFile"
-
-# interfaces
-.implements Lbm7;
 
 
 # instance fields
-.field public final a:Lbm7;
-
-.field public b:Liq1;
+.field public final e:Lp6f;
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 2
-
-    .line 4
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 5
-    new-instance v0, Ltkg;
-
-    const/16 v1, 0xe
-
-    invoke-direct {v0, v1, p0}, Ltkg;-><init>(ILjava/lang/Object;)V
-
-    invoke-static {v0}, Lxja;->q(Ljq1;)Llq1;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lm76;->a:Lbm7;
-
-    return-void
-.end method
-
-.method public constructor <init>(Lbm7;)V
+.method public constructor <init>(Lp6f;)V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    .line 3
-    iput-object p1, p0, Lm76;->a:Lbm7;
+    iput-object p1, p0, Lm76;->e:Lp6f;
 
     return-void
-.end method
-
-.method public static a(Lbm7;)Lm76;
-    .locals 1
-
-    instance-of v0, p0, Lm76;
-
-    if-eqz v0, :cond_0
-
-    check-cast p0, Lm76;
-
-    return-object p0
-
-    :cond_0
-    new-instance v0, Lm76;
-
-    invoke-direct {v0, p0}, Lm76;-><init>(Lbm7;)V
-
-    return-object v0
 .end method
 
 
 # virtual methods
-.method public cancel(Z)Z
+.method public final a(Z)I
     .locals 0
 
-    iget-object p0, p0, Lm76;->a:Lbm7;
+    iget-object p0, p0, Lm76;->e:Lp6f;
 
-    invoke-interface {p0, p1}, Ljava/util/concurrent/Future;->cancel(Z)Z
+    invoke-virtual {p0, p1}, Lp6f;->a(Z)I
 
     move-result p0
 
     return p0
 .end method
 
-.method public final d(Ljava/lang/Runnable;Ljava/util/concurrent/Executor;)V
+.method public b(Ljava/lang/Object;)I
     .locals 0
 
-    iget-object p0, p0, Lm76;->a:Lbm7;
+    iget-object p0, p0, Lm76;->e:Lp6f;
 
-    invoke-interface {p0, p1, p2}, Lbm7;->d(Ljava/lang/Runnable;Ljava/util/concurrent/Executor;)V
-
-    return-void
-.end method
-
-.method public get()Ljava/lang/Object;
-    .locals 0
-
-    .line 1
-    iget-object p0, p0, Lm76;->a:Lbm7;
-
-    invoke-interface {p0}, Ljava/util/concurrent/Future;->get()Ljava/lang/Object;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public get(JLjava/util/concurrent/TimeUnit;)Ljava/lang/Object;
-    .locals 0
-
-    .line 2
-    iget-object p0, p0, Lm76;->a:Lbm7;
-
-    invoke-interface {p0, p1, p2, p3}, Ljava/util/concurrent/Future;->get(JLjava/util/concurrent/TimeUnit;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public final isCancelled()Z
-    .locals 0
-
-    iget-object p0, p0, Lm76;->a:Lbm7;
-
-    invoke-interface {p0}, Ljava/util/concurrent/Future;->isCancelled()Z
+    invoke-virtual {p0, p1}, Lp6f;->b(Ljava/lang/Object;)I
 
     move-result p0
 
     return p0
 .end method
 
-.method public final isDone()Z
+.method public final c(Z)I
     .locals 0
 
-    iget-object p0, p0, Lm76;->a:Lbm7;
+    iget-object p0, p0, Lm76;->e:Lp6f;
 
-    invoke-interface {p0}, Ljava/util/concurrent/Future;->isDone()Z
+    invoke-virtual {p0, p1}, Lp6f;->c(Z)I
+
+    move-result p0
+
+    return p0
+.end method
+
+.method public final e(IIZ)I
+    .locals 0
+
+    iget-object p0, p0, Lm76;->e:Lp6f;
+
+    invoke-virtual {p0, p1, p2, p3}, Lp6f;->e(IIZ)I
+
+    move-result p0
+
+    return p0
+.end method
+
+.method public f(ILk6f;Z)Lk6f;
+    .locals 0
+
+    iget-object p0, p0, Lm76;->e:Lp6f;
+
+    invoke-virtual {p0, p1, p2, p3}, Lp6f;->f(ILk6f;Z)Lk6f;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public final h()I
+    .locals 0
+
+    iget-object p0, p0, Lm76;->e:Lp6f;
+
+    invoke-virtual {p0}, Lp6f;->h()I
+
+    move-result p0
+
+    return p0
+.end method
+
+.method public final k(IIZ)I
+    .locals 0
+
+    iget-object p0, p0, Lm76;->e:Lp6f;
+
+    invoke-virtual {p0, p1, p2, p3}, Lp6f;->k(IIZ)I
+
+    move-result p0
+
+    return p0
+.end method
+
+.method public l(I)Ljava/lang/Object;
+    .locals 0
+
+    iget-object p0, p0, Lm76;->e:Lp6f;
+
+    invoke-virtual {p0, p1}, Lp6f;->l(I)Ljava/lang/Object;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public m(ILn6f;J)Ln6f;
+    .locals 0
+
+    iget-object p0, p0, Lm76;->e:Lp6f;
+
+    invoke-virtual {p0, p1, p2, p3, p4}, Lp6f;->m(ILn6f;J)Ln6f;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public final o()I
+    .locals 0
+
+    iget-object p0, p0, Lm76;->e:Lp6f;
+
+    invoke-virtual {p0}, Lp6f;->o()I
 
     move-result p0
 

@@ -1,14 +1,9 @@
-.class public interface abstract Ldu4;
+.class public final Ldu4;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# virtual methods
-.method public abstract a()Ljava/util/Set;
-.end method
+# instance fields
+.field public volatile a:J
 
-.method public abstract b()Landroid/hardware/camera2/params/DynamicRangeProfiles;
-.end method
-
-.method public abstract c(Lzt4;)Ljava/util/Set;
-.end method
+.field public volatile b:F

@@ -1,105 +1,172 @@
-.class public final enum Lbg3;
-.super Ljava/lang/Enum;
+.class public final synthetic Lbg3;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
-
-# static fields
-.field public static final synthetic X:[Lbg3;
-
-.field public static final enum b:Lbg3;
-
-.field public static final enum c:Lbg3;
-
-.field public static final enum o:Lbg3;
+# interfaces
+.implements Lzb6;
 
 
 # instance fields
-.field public final a:I
+.field public final synthetic a:I
+
+.field public final synthetic b:Lch3;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 6
+.method public synthetic constructor <init>(Lch3;I)V
+    .locals 0
 
-    new-instance v0, Lbg3;
+    iput p2, p0, Lbg3;->a:I
 
-    const/4 v1, 0x0
+    iput-object p1, p0, Lbg3;->b:Lch3;
 
-    sget v2, Laqb;->global_text_positive:I
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const-string v3, "SUCCESS"
+    return-void
+.end method
 
-    invoke-direct {v0, v3, v1, v2}, Lbg3;-><init>(Ljava/lang/String;II)V
 
-    sput-object v0, Lbg3;->b:Lbg3;
+# virtual methods
+.method public final invoke()Ljava/lang/Object;
+    .locals 9
 
-    new-instance v1, Lbg3;
+    iget v0, p0, Lbg3;->a:I
 
-    const/4 v2, 0x1
+    packed-switch v0, :pswitch_data_0
 
-    sget v3, Laqb;->global_text_negative:I
+    new-instance v1, Liwc;
 
-    const-string v4, "ERROR"
-
-    invoke-direct {v1, v4, v2, v3}, Lbg3;-><init>(Ljava/lang/String;II)V
-
-    sput-object v1, Lbg3;->c:Lbg3;
-
-    new-instance v2, Lbg3;
-
-    const/4 v3, 0x2
-
-    sget v4, Laqb;->global_text_primary:I
-
-    const-string v5, "NORMAL"
-
-    invoke-direct {v2, v5, v3, v4}, Lbg3;-><init>(Ljava/lang/String;II)V
-
-    sput-object v2, Lbg3;->o:Lbg3;
-
-    filled-new-array {v0, v1, v2}, [Lbg3;
+    invoke-static {}, Ljava/util/UUID;->randomUUID()Ljava/util/UUID;
 
     move-result-object v0
 
-    sput-object v0, Lbg3;->X:[Lbg3;
+    invoke-virtual {v0}, Ljava/util/UUID;->toString()Ljava/lang/String;
 
-    return-void
-.end method
+    move-result-object v2
 
-.method public constructor <init>(Ljava/lang/String;II)V
-    .locals 0
+    iget-object p0, p0, Lbg3;->b:Lch3;
 
-    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    iget-object p0, p0, Lch3;->c:Lcl7;
 
-    iput p3, p0, Lbg3;->a:I
+    invoke-interface {p0}, Lcl7;->getValue()Ljava/lang/Object;
 
-    return-void
-.end method
+    move-result-object v0
 
-.method public static valueOf(Ljava/lang/String;)Lbg3;
-    .locals 1
+    check-cast v0, Lkia;
 
-    const-class v0, Lbg3;
+    iget-object v0, v0, Lkia;->a:Landroid/content/Context;
 
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+    sget v3, Ld1d;->p0:I
+
+    invoke-virtual {v0, v3}, Landroid/content/Context;->getString(I)Ljava/lang/String;
+
+    move-result-object v3
+
+    sget-object v0, Ltz5;->Y:Ltz5;
+
+    invoke-static {v0}, Ljava/util/Collections;->singleton(Ljava/lang/Object;)Ljava/util/Set;
+
+    move-result-object v6
+
+    const/16 v7, 0x3bc8
+
+    const/4 v4, 0x0
+
+    const/4 v5, 0x0
+
+    invoke-direct/range {v1 .. v7}, Liwc;-><init>(Ljava/lang/String;Ljava/lang/String;ILjava/lang/String;Ljava/util/Set;I)V
+
+    new-instance v2, Liwc;
+
+    invoke-static {}, Ljava/util/UUID;->randomUUID()Ljava/util/UUID;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/util/UUID;->toString()Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-interface {p0}, Lcl7;->getValue()Ljava/lang/Object;
 
     move-result-object p0
 
-    check-cast p0, Lbg3;
+    check-cast p0, Lkia;
+
+    iget-object p0, p0, Lkia;->a:Landroid/content/Context;
+
+    sget v0, Ld1d;->q0:I
+
+    invoke-virtual {p0, v0}, Landroid/content/Context;->getString(I)Ljava/lang/String;
+
+    move-result-object v4
+
+    sget-object p0, Ltz5;->w0:Ltz5;
+
+    sget-object v0, Ltz5;->x0:Ltz5;
+
+    filled-new-array {p0, v0}, [Ltz5;
+
+    move-result-object p0
+
+    invoke-static {p0}, Lxnd;->g0([Ljava/lang/Object;)Ljava/util/Set;
+
+    move-result-object v7
+
+    const/16 v8, 0x3bc8
+
+    const/4 v5, 0x1
+
+    const/4 v6, 0x0
+
+    invoke-direct/range {v2 .. v8}, Liwc;-><init>(Ljava/lang/String;Ljava/lang/String;ILjava/lang/String;Ljava/util/Set;I)V
+
+    filled-new-array {v1, v2}, [Liwc;
+
+    move-result-object p0
+
+    invoke-static {p0}, Lr73;->J([Ljava/lang/Object;)Ljava/util/ArrayList;
+
+    move-result-object p0
 
     return-object p0
-.end method
 
-.method public static values()[Lbg3;
-    .locals 1
+    :pswitch_0
+    iget-object p0, p0, Lbg3;->b:Lch3;
 
-    sget-object v0, Lbg3;->X:[Lbg3;
+    iget-object p0, p0, Lch3;->c:Lcl7;
 
-    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
+    invoke-interface {p0}, Lcl7;->getValue()Ljava/lang/Object;
 
-    move-result-object v0
+    move-result-object p0
 
-    check-cast v0, [Lbg3;
+    check-cast p0, Lkia;
 
-    return-object v0
+    iget-object p0, p0, Lkia;->a:Landroid/content/Context;
+
+    sget v0, Ld1d;->m0:I
+
+    invoke-virtual {p0, v0}, Landroid/content/Context;->getString(I)Ljava/lang/String;
+
+    move-result-object v3
+
+    new-instance v1, Liwc;
+
+    sget-object v6, Lz45;->a:Lz45;
+
+    const/16 v7, 0x3bc8
+
+    const-string v2, "all.chat.folder"
+
+    const/4 v4, -0x1
+
+    const/4 v5, 0x0
+
+    invoke-direct/range {v1 .. v7}, Liwc;-><init>(Ljava/lang/String;Ljava/lang/String;ILjava/lang/String;Ljava/util/Set;I)V
+
+    return-object v1
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

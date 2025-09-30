@@ -1,32 +1,26 @@
 .class public final Lij7;
-.super Lqde;
+.super Lure;
 .source "SourceFile"
 
 # interfaces
-.implements Ll66;
+.implements Lpc6;
 
 
 # instance fields
-.field public X:I
+.field public synthetic X:Ljava/lang/Object;
 
-.field public synthetic Y:Ljava/lang/Object;
-
-.field public final synthetic Z:Lwj7;
-
-.field public final synthetic o0:Landroid/net/Uri;
+.field public final synthetic Y:Lone/me/keyboardmedia/emoji/KeyboardEmojiWidget;
 
 
 # direct methods
-.method public constructor <init>(Lwj7;Landroid/net/Uri;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(Lone/me/keyboardmedia/emoji/KeyboardEmojiWidget;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    iput-object p1, p0, Lij7;->Z:Lwj7;
-
-    iput-object p2, p0, Lij7;->o0:Landroid/net/Uri;
+    iput-object p1, p0, Lij7;->Y:Lone/me/keyboardmedia/emoji/KeyboardEmojiWidget;
 
     const/4 p1, 0x2
 
-    invoke-direct {p0, p1, p3}, Lqde;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0, p1, p2}, Lure;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
@@ -36,7 +30,7 @@
 .method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    check-cast p1, Lbn5;
+    check-cast p1, Lz35;
 
     check-cast p2, Lkotlin/coroutines/Continuation;
 
@@ -46,27 +40,23 @@
 
     check-cast p0, Lij7;
 
-    sget-object p1, Le5f;->a:Le5f;
+    sget-object p1, Lylf;->a:Lylf;
 
     invoke-virtual {p0, p1}, Lij7;->o(Ljava/lang/Object;)Ljava/lang/Object;
 
-    move-result-object p0
-
-    return-object p0
+    return-object p1
 .end method
 
 .method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
+    .locals 1
 
     new-instance v0, Lij7;
 
-    iget-object v1, p0, Lij7;->Z:Lwj7;
+    iget-object p0, p0, Lij7;->Y:Lone/me/keyboardmedia/emoji/KeyboardEmojiWidget;
 
-    iget-object p0, p0, Lij7;->o0:Landroid/net/Uri;
+    invoke-direct {v0, p0, p2}, Lij7;-><init>(Lone/me/keyboardmedia/emoji/KeyboardEmojiWidget;Lkotlin/coroutines/Continuation;)V
 
-    invoke-direct {v0, v1, p0, p2}, Lij7;-><init>(Lwj7;Landroid/net/Uri;Lkotlin/coroutines/Continuation;)V
-
-    iput-object p1, v0, Lij7;->Y:Ljava/lang/Object;
+    iput-object p1, v0, Lij7;->X:Ljava/lang/Object;
 
     return-object v0
 .end method
@@ -74,53 +64,27 @@
 .method public final o(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 2
 
-    iget v0, p0, Lij7;->X:I
+    invoke-static {p1}, Lqe5;->V(Ljava/lang/Object;)V
 
-    const/4 v1, 0x1
+    iget-object p1, p0, Lij7;->X:Ljava/lang/Object;
 
-    if-eqz v0, :cond_1
+    check-cast p1, Lz35;
 
-    if-ne v0, v1, :cond_0
+    iget-object p0, p0, Lij7;->Y:Lone/me/keyboardmedia/emoji/KeyboardEmojiWidget;
 
-    invoke-static {p1}, Lsgg;->Z(Ljava/lang/Object;)V
+    iget-object v0, p0, Lone/me/keyboardmedia/emoji/KeyboardEmojiWidget;->Y:Lcv2;
 
-    goto :goto_0
+    iget-object v1, p1, Lz35;->a:Ljava/util/List;
 
-    :cond_0
-    new-instance p0, Ljava/lang/IllegalStateException;
+    invoke-virtual {v0, v1}, Lls7;->E(Ljava/util/List;)V
 
-    const-string p1, "call to \'resume\' before \'invoke\' with coroutine"
+    iget-object p0, p0, Lone/me/keyboardmedia/emoji/KeyboardEmojiWidget;->X:Lv06;
 
-    invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    iget-object p1, p1, Lz35;->b:Ljava/util/List;
 
-    throw p0
+    invoke-virtual {p0, p1}, Lls7;->E(Ljava/util/List;)V
 
-    :cond_1
-    invoke-static {p1}, Lsgg;->Z(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Lij7;->Y:Ljava/lang/Object;
-
-    check-cast p1, Lbn5;
-
-    iput v1, p0, Lij7;->X:I
-
-    iget-object v0, p0, Lij7;->Z:Lwj7;
-
-    iget-object v1, p0, Lij7;->o0:Landroid/net/Uri;
-
-    invoke-static {v0, p1, v1, p0}, Lwj7;->a(Lwj7;Lbn5;Landroid/net/Uri;Lbu3;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    sget-object p1, Lpx3;->a:Lpx3;
-
-    if-ne p0, p1, :cond_2
-
-    return-object p1
-
-    :cond_2
-    :goto_0
-    sget-object p0, Le5f;->a:Le5f;
+    sget-object p0, Lylf;->a:Lylf;
 
     return-object p0
 .end method

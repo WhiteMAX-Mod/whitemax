@@ -1,165 +1,86 @@
 .class public final Ln10;
-.super Ljava/lang/Object;
+.super Lux;
 .source "SourceFile"
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final X:Ljava/lang/String;
 
-.field public b:F
+.field public final Y:Ljava/lang/Long;
 
-.field public c:F
+.field public final Z:[B
 
-.field public d:F
+.field public final o:Ljava/lang/Long;
 
-.field public e:F
+.field public final r0:Ljava/lang/String;
+
+.field public final s0:Ljava/lang/String;
+
+.field public final t0:I
 
 
 # direct methods
-.method public synthetic constructor <init>()V
+.method public constructor <init>(JLjava/lang/String;J[BZLjava/lang/String;Ljava/lang/String;ZI)V
     .locals 1
 
-    .line 1
-    const/4 v0, 0x1
+    sget-object v0, Lxz;->Y:Lxz;
 
-    iput v0, p0, Ln10;->a:I
+    invoke-direct {p0, v0, p7, p10}, Lux;-><init>(Lxz;ZZ)V
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-static {p4, p5}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
-    return-void
-.end method
+    move-result-object p4
 
-.method public synthetic constructor <init>(FFFFI)V
-    .locals 0
+    iput-object p4, p0, Ln10;->Y:Ljava/lang/Long;
 
-    .line 2
-    iput p5, p0, Ln10;->a:I
+    invoke-static {p1, p2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
-    iput p1, p0, Ln10;->b:F
+    move-result-object p1
 
-    iput p2, p0, Ln10;->c:F
+    iput-object p1, p0, Ln10;->o:Ljava/lang/Long;
 
-    iput p3, p0, Ln10;->d:F
+    iput-object p3, p0, Ln10;->X:Ljava/lang/String;
 
-    iput p4, p0, Ln10;->e:F
+    iput-object p6, p0, Ln10;->Z:[B
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p8, p0, Ln10;->r0:Ljava/lang/String;
+
+    iput-object p9, p0, Ln10;->s0:Ljava/lang/String;
+
+    iput p11, p0, Ln10;->t0:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public a()Ljava/util/HashMap;
+.method public final a()Ljava/util/HashMap;
     .locals 3
 
-    new-instance v0, Ljava/util/HashMap;
+    invoke-super {p0}, Lux;->a()Ljava/util/HashMap;
 
-    invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
+    move-result-object v0
 
-    iget v1, p0, Ln10;->b:F
+    iget-object v1, p0, Ln10;->r0:Ljava/lang/String;
 
-    invoke-static {v1}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+    invoke-static {v1}, Lm7g;->m(Ljava/lang/CharSequence;)Z
 
-    move-result-object v1
+    move-result v2
 
-    const-string v2, "x1"
+    if-nez v2, :cond_0
 
-    invoke-virtual {v0, v2, v1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    const-string p0, "token"
 
-    iget v1, p0, Ln10;->c:F
+    invoke-virtual {v0, p0, v1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    invoke-static {v1}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+    return-object v0
 
-    move-result-object v1
+    :cond_0
+    const-string v1, "audioId"
 
-    const-string v2, "y1"
-
-    invoke-virtual {v0, v2, v1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    iget v1, p0, Ln10;->d:F
-
-    invoke-static {v1}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
-
-    move-result-object v1
-
-    const-string v2, "x2"
-
-    invoke-virtual {v0, v2, v1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    iget p0, p0, Ln10;->e:F
-
-    invoke-static {p0}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
-
-    move-result-object p0
-
-    const-string v1, "y2"
+    iget-object p0, p0, Ln10;->o:Ljava/lang/Long;
 
     invoke-virtual {v0, v1, p0}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     return-object v0
-.end method
-
-.method public toString()Ljava/lang/String;
-    .locals 5
-
-    iget v0, p0, Ln10;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    invoke-super {p0}, Ljava/lang/Object;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
-
-    :pswitch_0
-    iget v0, p0, Ln10;->b:F
-
-    iget v1, p0, Ln10;->c:F
-
-    iget v2, p0, Ln10;->d:F
-
-    iget p0, p0, Ln10;->e:F
-
-    new-instance v3, Ljava/lang/StringBuilder;
-
-    const-string v4, "{x1="
-
-    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
-
-    const-string v0, ", y1="
-
-    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
-
-    const-string v0, ", x2="
-
-    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
-
-    const-string v0, ", y2="
-
-    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v3, p0}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
-
-    const-string p0, "}"
-
-    invoke-virtual {v3, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
-
-    :pswitch_data_0
-    .packed-switch 0x2
-        :pswitch_0
-    .end packed-switch
 .end method

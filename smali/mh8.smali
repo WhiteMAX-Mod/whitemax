@@ -1,21 +1,64 @@
-.class public abstract Lmh8;
+.class public final Lmh8;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
+# instance fields
+.field public a:J
+
+.field public b:J
+
+.field public c:J
+
+.field public d:F
+
+.field public e:F
+
+
 # direct methods
-.method public static a(Landroid/content/Context;)Z
-    .locals 1
+.method public constructor <init>()V
+    .locals 2
 
-    invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
+    .line 2
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    move-result-object p0
+    const-wide v0, -0x7fffffffffffffffL    # -4.9E-324
 
-    const-string v0, "android.software.leanback"
+    .line 3
+    iput-wide v0, p0, Lmh8;->a:J
 
-    invoke-virtual {p0, v0}, Landroid/content/pm/PackageManager;->hasSystemFeature(Ljava/lang/String;)Z
+    .line 4
+    iput-wide v0, p0, Lmh8;->b:J
 
-    move-result p0
+    .line 5
+    iput-wide v0, p0, Lmh8;->c:J
 
-    return p0
+    const v0, -0x800001
+
+    .line 6
+    iput v0, p0, Lmh8;->d:F
+
+    .line 7
+    iput v0, p0, Lmh8;->e:F
+
+    return-void
+.end method
+
+.method public synthetic constructor <init>(JJJFF)V
+    .locals 0
+
+    .line 1
+    iput-wide p1, p0, Lmh8;->a:J
+
+    iput-wide p3, p0, Lmh8;->b:J
+
+    iput-wide p5, p0, Lmh8;->c:J
+
+    iput p7, p0, Lmh8;->d:F
+
+    iput p8, p0, Lmh8;->e:F
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
 .end method

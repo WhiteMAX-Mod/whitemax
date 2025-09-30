@@ -1,74 +1,43 @@
 .class public final Lt54;
-.super Lw54;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# virtual methods
-.method public final n(La05;)I
+# instance fields
+.field public final a:Lv46;
+
+.field public final b:Ll37;
+
+.field public final c:Lsed;
+
+.field public final d:Ljava/lang/String;
+
+.field public final e:Ljava/util/ArrayList;
+
+.field public final f:Ljava/util/ArrayList;
+
+
+# direct methods
+.method public constructor <init>(Lv46;Ljava/util/ArrayList;Lsed;Ljava/lang/String;Ljava/util/ArrayList;Ljava/util/ArrayList;Ljava/util/ArrayList;Ljava/util/ArrayList;)V
     .locals 0
-
-    invoke-virtual {p1}, La05;->o()I
-
-    move-result p0
-
-    return p0
-.end method
-
-.method public final o()Lfx6;
-    .locals 1
-
-    new-instance p0, Lfx6;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 v0, 0x0
+    iput-object p1, p0, Lt54;->a:Lv46;
 
-    iput v0, p0, Lfx6;->a:I
+    invoke-static {p2}, Ll37;->j(Ljava/util/Collection;)Ll37;
 
-    iput-boolean v0, p0, Lfx6;->b:Z
+    move-result-object p1
 
-    iput-boolean v0, p0, Lfx6;->c:Z
+    iput-object p1, p0, Lt54;->b:Ll37;
 
-    return-object p0
-.end method
+    iput-object p3, p0, Lt54;->c:Lsed;
 
-.method public final declared-synchronized s(La05;I)Z
-    .locals 1
+    iput-object p4, p0, Lt54;->d:Ljava/lang/String;
 
-    monitor-enter p0
+    iput-object p5, p0, Lt54;->e:Ljava/util/ArrayList;
 
-    :try_start_0
-    invoke-static {p2}, Lai0;->b(I)Z
+    iput-object p6, p0, Lt54;->f:Ljava/util/ArrayList;
 
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    const/4 p1, 0x0
-
-    goto :goto_0
-
-    :cond_0
-    iget-object v0, p0, Lw54;->g:Ll87;
-
-    invoke-virtual {v0, p1, p2}, Ll87;->e(La05;I)Z
-
-    move-result p1
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    :goto_0
-    monitor-exit p0
-
-    return p1
-
-    :catchall_0
-    move-exception p1
-
-    :try_start_1
-    monitor-exit p0
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    throw p1
+    return-void
 .end method

@@ -1,69 +1,162 @@
-.class public final Lnq1;
-.super Ljava/util/concurrent/AbstractExecutorService;
+.class public final synthetic Lnq1;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lzb6;
 
-# static fields
-.field public static final a:Lnq1;
+
+# instance fields
+.field public final synthetic a:I
+
+.field public final synthetic b:Lsq1;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public synthetic constructor <init>(Lsq1;I)V
+    .locals 0
 
-    new-instance v0, Lnq1;
+    iput p2, p0, Lnq1;->a:I
 
-    invoke-direct {v0}, Ljava/util/concurrent/AbstractExecutorService;-><init>()V
+    iput-object p1, p0, Lnq1;->b:Lsq1;
 
-    sput-object v0, Lnq1;->a:Lnq1;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final awaitTermination(JLjava/util/concurrent/TimeUnit;)Z
-    .locals 0
+.method public final invoke()Ljava/lang/Object;
+    .locals 3
 
-    const/4 p0, 0x1
+    iget v0, p0, Lnq1;->a:I
 
-    return p0
-.end method
+    packed-switch v0, :pswitch_data_0
 
-.method public final execute(Ljava/lang/Runnable;)V
-    .locals 0
+    new-instance v0, Landroid/graphics/drawable/GradientDrawable;
 
-    invoke-interface {p1}, Ljava/lang/Runnable;->run()V
+    sget-object v1, Landroid/graphics/drawable/GradientDrawable$Orientation;->TOP_BOTTOM:Landroid/graphics/drawable/GradientDrawable$Orientation;
 
-    return-void
-.end method
+    sget-object v2, Lyu4;->t0:Lbx9;
 
-.method public final isShutdown()Z
-    .locals 0
+    iget-object p0, p0, Lnq1;->b:Lsq1;
 
+    invoke-virtual {v2, p0}, Lbx9;->q(Landroid/view/View;)Llia;
+
+    move-result-object p0
+
+    iget-object p0, p0, Llia;->c:Lera;
+
+    invoke-interface {p0}, Lera;->b()Lie0;
+
+    move-result-object p0
+
+    iget p0, p0, Lie0;->f:I
+
+    const/4 v2, 0x0
+
+    filled-new-array {p0, v2, v2}, [I
+
+    move-result-object p0
+
+    invoke-direct {v0, v1, p0}, Landroid/graphics/drawable/GradientDrawable;-><init>(Landroid/graphics/drawable/GradientDrawable$Orientation;[I)V
+
+    return-object v0
+
+    :pswitch_0
+    new-instance v0, Landroid/graphics/drawable/ShapeDrawable;
+
+    new-instance v1, Landroid/graphics/drawable/shapes/OvalShape;
+
+    invoke-direct {v1}, Landroid/graphics/drawable/shapes/OvalShape;-><init>()V
+
+    invoke-direct {v0, v1}, Landroid/graphics/drawable/ShapeDrawable;-><init>(Landroid/graphics/drawable/shapes/Shape;)V
+
+    invoke-virtual {v0}, Landroid/graphics/drawable/ShapeDrawable;->getPaint()Landroid/graphics/Paint;
+
+    move-result-object v1
+
+    sget-object v2, Lyu4;->t0:Lbx9;
+
+    iget-object p0, p0, Lnq1;->b:Lsq1;
+
+    invoke-virtual {v2, p0}, Lbx9;->q(Landroid/view/View;)Llia;
+
+    move-result-object p0
+
+    iget-object p0, p0, Llia;->c:Lera;
+
+    invoke-interface {p0}, Lera;->b()Lie0;
+
+    move-result-object p0
+
+    iget p0, p0, Lie0;->f:I
+
+    invoke-virtual {v1, p0}, Landroid/graphics/Paint;->setColor(I)V
+
+    return-object v0
+
+    :pswitch_1
+    new-instance v0, Landroid/graphics/drawable/ShapeDrawable;
+
+    new-instance v1, Landroid/graphics/drawable/shapes/OvalShape;
+
+    invoke-direct {v1}, Landroid/graphics/drawable/shapes/OvalShape;-><init>()V
+
+    invoke-direct {v0, v1}, Landroid/graphics/drawable/ShapeDrawable;-><init>(Landroid/graphics/drawable/shapes/Shape;)V
+
+    invoke-virtual {v0}, Landroid/graphics/drawable/ShapeDrawable;->getPaint()Landroid/graphics/Paint;
+
+    move-result-object v1
+
+    sget-object v2, Lyu4;->t0:Lbx9;
+
+    iget-object p0, p0, Lnq1;->b:Lsq1;
+
+    invoke-virtual {v2, p0}, Lbx9;->q(Landroid/view/View;)Llia;
+
+    move-result-object p0
+
+    iget-object p0, p0, Llia;->c:Lera;
+
+    invoke-interface {p0}, Lera;->b()Lie0;
+
+    move-result-object p0
+
+    iget p0, p0, Lie0;->l:I
+
+    invoke-virtual {v1, p0}, Landroid/graphics/Paint;->setColor(I)V
+
+    return-object v0
+
+    :pswitch_2
+    iget-object p0, p0, Lnq1;->b:Lsq1;
+
+    iget-object p0, p0, Lsq1;->h1:Lzb6;
+
+    if-eqz p0, :cond_0
+
+    invoke-interface {p0}, Lzb6;->invoke()Ljava/lang/Object;
+
+    move-result-object p0
+
+    check-cast p0, Lzxf;
+
+    goto :goto_0
+
+    :cond_0
     const/4 p0, 0x0
 
-    return p0
-.end method
-
-.method public final isTerminated()Z
-    .locals 0
-
-    const/4 p0, 0x0
-
-    return p0
-.end method
-
-.method public final shutdown()V
-    .locals 0
-
-    return-void
-.end method
-
-.method public final shutdownNow()Ljava/util/List;
-    .locals 0
-
-    sget-object p0, Ljava/util/Collections;->EMPTY_LIST:Ljava/util/List;
-
+    :goto_0
     return-object p0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

@@ -1,26 +1,21 @@
-.class public interface abstract Lpy1;
+.class public abstract Lpy1;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lkotlin/coroutines/Continuation;
+
+# static fields
+.field public static final a:Loy1;
 
 
-# virtual methods
-.method public abstract d(Ljx3;)V
-.end method
+# direct methods
+.method static constructor <clinit>()V
+    .locals 1
 
-.method public abstract e(Lx56;)V
-.end method
+    new-instance v0, Loy1;
 
-.method public abstract f(Ljava/lang/Object;Ln66;)V
-.end method
+    invoke-direct {v0}, Loy1;-><init>()V
 
-.method public abstract isCancelled()Z
-.end method
+    sput-object v0, Lpy1;->a:Loy1;
 
-.method public abstract k(Ljava/lang/Object;Ln66;)Lkotlinx/coroutines/internal/Symbol;
-.end method
-
-.method public abstract n(Ljava/lang/Object;)V
+    return-void
 .end method

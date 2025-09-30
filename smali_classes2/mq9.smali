@@ -1,169 +1,68 @@
-.class public final Lmq9;
-.super Llje;
+.class public final synthetic Lmq9;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lc6;
 
 
 # instance fields
-.field public X:Ljava/lang/String;
+.field public final synthetic a:I
 
-.field public Y:Lbr7;
-
-.field public o:J
+.field public final synthetic b:Lnq9;
 
 
 # direct methods
-.method public constructor <init>(Ldx8;)V
+.method public synthetic constructor <init>(Lnq9;I)V
     .locals 0
 
-    invoke-direct {p0, p1}, Llje;-><init>(Ldx8;)V
+    iput p2, p0, Lmq9;->a:I
+
+    iput-object p1, p0, Lmq9;->b:Lnq9;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final c(Ldx8;Ljava/lang/String;)V
+.method public final run()V
     .locals 2
 
-    invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    iget v0, p0, Lmq9;->a:I
 
-    invoke-virtual {p2}, Ljava/lang/String;->hashCode()I
+    packed-switch v0, :pswitch_data_0
 
-    move-result v0
+    new-instance v0, Lej0;
 
-    const/4 v1, -0x1
+    const/16 v1, 0x15
 
-    sparse-switch v0, :sswitch_data_0
+    invoke-direct {v0, v1}, Lej0;-><init>(I)V
 
-    goto :goto_0
+    iget-object p0, p0, Lmq9;->b:Lnq9;
 
-    :sswitch_0
-    const-string v0, "location"
-
-    invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result p2
-
-    if-nez p2, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    const/4 v1, 0x2
-
-    goto :goto_0
-
-    :sswitch_1
-    const-string v0, "deviceId"
-
-    invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result p2
-
-    if-nez p2, :cond_1
-
-    goto :goto_0
-
-    :cond_1
-    const/4 v1, 0x1
-
-    goto :goto_0
-
-    :sswitch_2
-    const-string v0, "userId"
-
-    invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result p2
-
-    if-nez p2, :cond_2
-
-    goto :goto_0
-
-    :cond_2
-    const/4 v1, 0x0
-
-    :goto_0
-    packed-switch v1, :pswitch_data_0
-
-    invoke-virtual {p1}, Ldx8;->B()V
+    invoke-virtual {p0, v0}, Ly2;->n(Lsm3;)V
 
     return-void
 
     :pswitch_0
-    invoke-static {p1}, Lbr7;->a(Ldx8;)Lbr7;
+    new-instance v0, Lej0;
 
-    move-result-object p1
+    const/16 v1, 0x14
 
-    iput-object p1, p0, Lmq9;->Y:Lbr7;
+    invoke-direct {v0, v1}, Lej0;-><init>(I)V
 
-    return-void
+    iget-object p0, p0, Lmq9;->b:Lnq9;
 
-    :pswitch_1
-    invoke-static {p1}, Lxq7;->f0(Ldx8;)Ljava/lang/String;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lmq9;->X:Ljava/lang/String;
+    invoke-virtual {p0, v0}, Ly2;->n(Lsm3;)V
 
     return-void
 
-    :pswitch_2
-    const-wide/16 v0, 0x0
-
-    invoke-static {p1, v0, v1}, Lxq7;->c0(Ldx8;J)J
-
-    move-result-wide p1
-
-    iput-wide p1, p0, Lmq9;->o:J
-
-    return-void
-
-    :sswitch_data_0
-    .sparse-switch
-        -0x31d4d1ba -> :sswitch_2
-        0x421cea11 -> :sswitch_1
-        0x714f9fb5 -> :sswitch_0
-    .end sparse-switch
+    nop
 
     :pswitch_data_0
     .packed-switch 0x0
-        :pswitch_2
-        :pswitch_1
         :pswitch_0
     .end packed-switch
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 5
-
-    iget-wide v0, p0, Lmq9;->o:J
-
-    iget-object v2, p0, Lmq9;->X:Ljava/lang/String;
-
-    iget-object p0, p0, Lmq9;->Y:Lbr7;
-
-    const-string v3, "Response{userId="
-
-    const-string v4, ", deviceId=\'"
-
-    invoke-static {v3, v0, v1, v4, v2}, Lp3a;->k(Ljava/lang/String;JLjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    const-string v1, "\', location="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string p0, "}"
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
 .end method

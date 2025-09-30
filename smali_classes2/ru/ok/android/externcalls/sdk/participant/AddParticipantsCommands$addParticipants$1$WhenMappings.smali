@@ -34,7 +34,7 @@
 
     const/4 v0, 0x2
 
-    invoke-static {v0}, Lzt1;->v(I)[I
+    invoke-static {v0}, Lmw1;->w(I)[I
 
     move-result-object v1
 

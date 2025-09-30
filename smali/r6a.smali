@@ -1,133 +1,84 @@
-.class public abstract Lr6a;
-.super Ljava/lang/Object;
+.class public final Lr6a;
+.super Ly4a;
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:I
+# instance fields
+.field public final a:Lv5d;
 
-.field public static final b:I
+.field public final b:J
 
-.field public static final c:I
+.field public final c:J
 
-.field public static final d:I
-
-.field public static final e:I
-
-.field public static final f:I
-
-.field public static final g:I
-
-.field public static final h:I
-
-.field public static final i:I
-
-.field public static final j:I
-
-.field public static final k:I
-
-.field public static final l:I
-
-.field public static final m:I
-
-.field public static final n:I
-
-.field public static final o:I
-
-.field public static final p:I
-
-.field public static final q:I
-
-.field public static final r:I
-
-.field public static final s:I
-
-.field public static final t:I
+.field public final o:Ljava/util/concurrent/TimeUnit;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(JJLjava/util/concurrent/TimeUnit;Lv5d;)V
+    .locals 0
 
-    sget v0, Lntb;->oneme_contactlist_action_audio_call:I
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    sput v0, Lr6a;->a:I
+    iput-wide p1, p0, Lr6a;->b:J
 
-    sget v0, Lntb;->oneme_contactlist_action_block:I
+    iput-wide p3, p0, Lr6a;->c:J
 
-    sput v0, Lr6a;->b:I
+    iput-object p5, p0, Lr6a;->o:Ljava/util/concurrent/TimeUnit;
 
-    sget v0, Lntb;->oneme_contactlist_action_delete:I
+    iput-object p6, p0, Lr6a;->a:Lv5d;
 
-    sput v0, Lr6a;->c:I
+    return-void
+.end method
 
-    sget v0, Lntb;->oneme_contactlist_action_open_profile:I
 
-    sput v0, Lr6a;->d:I
+# virtual methods
+.method public final n(Ld8a;)V
+    .locals 7
 
-    sget v0, Lntb;->oneme_contactlist_action_select:I
+    new-instance v1, Lq6a;
 
-    sput v0, Lr6a;->e:I
+    invoke-direct {v1, p1}, Lq6a;-><init>(Ld8a;)V
 
-    sget v0, Lntb;->oneme_contactlist_action_share_contact:I
+    invoke-interface {p1, v1}, Ld8a;->c(Loq4;)V
 
-    sput v0, Lr6a;->f:I
+    iget-object v0, p0, Lr6a;->a:Lv5d;
 
-    sget v0, Lntb;->oneme_contactlist_action_suspend_bot:I
+    instance-of p1, v0, Lzcf;
 
-    sput v0, Lr6a;->g:I
+    if-eqz p1, :cond_0
 
-    sget v0, Lntb;->oneme_contactlist_action_video_call:I
+    check-cast v0, Lzcf;
 
-    sput v0, Lr6a;->h:I
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    sget v0, Lntb;->oneme_contactlist_action_write:I
+    new-instance v0, Lycf;
 
-    sput v0, Lr6a;->i:I
+    invoke-direct {v0}, Lycf;-><init>()V
 
-    sget v0, Lntb;->oneme_contactlist_confirm_block:I
+    invoke-static {v1, v0}, Lsq4;->g(Ljava/util/concurrent/atomic/AtomicReference;Loq4;)Z
 
-    sput v0, Lr6a;->j:I
+    iget-wide v4, p0, Lr6a;->c:J
 
-    sget v0, Lntb;->oneme_contactlist_confirm_cancel:I
+    iget-object v6, p0, Lr6a;->o:Ljava/util/concurrent/TimeUnit;
 
-    sput v0, Lr6a;->k:I
+    iget-wide v2, p0, Lr6a;->b:J
 
-    sget v0, Lntb;->oneme_contactlist_confirm_delete:I
+    invoke-virtual/range {v0 .. v6}, Lt5d;->d(Ljava/lang/Runnable;JJLjava/util/concurrent/TimeUnit;)Loq4;
 
-    sput v0, Lr6a;->l:I
+    return-void
 
-    sget v0, Lntb;->oneme_contactlist_contact_view_type:I
+    :cond_0
+    iget-wide v4, p0, Lr6a;->c:J
 
-    sput v0, Lr6a;->m:I
+    iget-object v6, p0, Lr6a;->o:Ljava/util/concurrent/TimeUnit;
 
-    sget v0, Lntb;->oneme_contactlist_container:I
+    iget-wide v2, p0, Lr6a;->b:J
 
-    sput v0, Lr6a;->n:I
+    invoke-virtual/range {v0 .. v6}, Lv5d;->d(Ljava/lang/Runnable;JJLjava/util/concurrent/TimeUnit;)Loq4;
 
-    sget v0, Lntb;->oneme_contactlist_empty_search_result_view_type:I
+    move-result-object p0
 
-    sput v0, Lr6a;->o:I
-
-    sget v0, Lntb;->oneme_contactlist_global_contact_view_type:I
-
-    sput v0, Lr6a;->p:I
-
-    sget v0, Lntb;->oneme_contactlist_menu_item_add_contact:I
-
-    sput v0, Lr6a;->q:I
-
-    sget v0, Lntb;->oneme_contactlist_menu_item_create_chat:I
-
-    sput v0, Lr6a;->r:I
-
-    sget v0, Lntb;->oneme_contactlist_phonebook_contact_view_type:I
-
-    sput v0, Lr6a;->s:I
-
-    sget v0, Lntb;->oneme_contactlist_toolbar:I
-
-    sput v0, Lr6a;->t:I
+    invoke-static {v1, p0}, Lsq4;->g(Ljava/util/concurrent/atomic/AtomicReference;Loq4;)Z
 
     return-void
 .end method

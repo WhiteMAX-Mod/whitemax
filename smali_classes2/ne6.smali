@@ -1,47 +1,75 @@
 .class public final Lne6;
-.super Ljava/lang/Object;
+.super Lqe6;
 .source "SourceFile"
 
 
 # static fields
-.field public static final c:Lh3b;
+.field public static final a:Lne6;
 
+.field public static final b:Lge6;
 
-# instance fields
-.field public final a:Lkotlinx/coroutines/internal/ContextScope;
-
-.field public final b:Ljava/lang/String;
+.field public static final c:Ljava/util/List;
 
 
 # direct methods
 .method static constructor <clinit>()V
     .locals 2
 
-    new-instance v0, Lh3b;
+    new-instance v0, Lne6;
 
-    const/16 v1, 0x1e
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0, v1}, Lh3b;-><init>(I)V
+    sput-object v0, Lne6;->a:Lne6;
 
-    sput-object v0, Lne6;->c:Lh3b;
+    new-instance v0, Lge6;
+
+    sget v1, Lcna;->a:I
+
+    invoke-direct {v0, v1}, Lge6;-><init>(I)V
+
+    sput-object v0, Lne6;->b:Lge6;
+
+    sget-object v0, Lje6;->e:Lje6;
+
+    invoke-static {v0}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
+
+    move-result-object v0
+
+    sput-object v0, Lne6;->c:Ljava/util/List;
 
     return-void
 .end method
 
-.method public constructor <init>(Lkotlinx/coroutines/internal/ContextScope;)V
+
+# virtual methods
+.method public final b()Ljava/lang/String;
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const-string p0, "ru.ok.tamtam.ALL_PHOTO"
 
-    iput-object p1, p0, Lne6;->a:Lkotlinx/coroutines/internal/ContextScope;
+    return-object p0
+.end method
 
-    const-class p1, Lne6;
+.method public final c()Lr3;
+    .locals 0
 
-    invoke-virtual {p1}, Ljava/lang/Class;->getName()Ljava/lang/String;
+    sget-object p0, Lne6;->b:Lge6;
 
-    move-result-object p1
+    return-object p0
+.end method
 
-    iput-object p1, p0, Lne6;->b:Ljava/lang/String;
+.method public final d()Ljava/util/List;
+    .locals 0
 
-    return-void
+    sget-object p0, Lne6;->c:Ljava/util/List;
+
+    return-object p0
+.end method
+
+.method public final f()Lge6;
+    .locals 0
+
+    sget-object p0, Lne6;->b:Lge6;
+
+    return-object p0
 .end method

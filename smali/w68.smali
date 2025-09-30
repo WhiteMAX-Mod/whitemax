@@ -1,67 +1,117 @@
-.class public abstract Lw68;
-.super Lc03;
+.class public Lw68;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public final q0:J
+.field public final a:Ls3h;
 
 
 # direct methods
-.method public constructor <init>(Li34;Lp34;Lfz5;ILjava/lang/Object;JJJ)V
-    .locals 11
+.method public constructor <init>(Ls3h;)V
+    .locals 0
 
-    const/4 v3, 0x1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    move-object v0, p0
-
-    move-object v1, p1
-
-    move-object v2, p2
-
-    move-object v4, p3
-
-    move v5, p4
-
-    move-object/from16 v6, p5
-
-    move-wide/from16 v7, p6
-
-    move-wide/from16 v9, p8
-
-    invoke-direct/range {v0 .. v10}, Lc03;-><init>(Li34;Lp34;ILfz5;ILjava/lang/Object;JJ)V
-
-    invoke-virtual {p3}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    move-wide/from16 p1, p10
-
-    iput-wide p1, p0, Lw68;->q0:J
+    iput-object p1, p0, Lw68;->a:Ls3h;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public a()J
-    .locals 4
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 2
 
-    iget-wide v0, p0, Lw68;->q0:J
+    instance-of v0, p1, Lw68;
 
-    const-wide/16 v2, -0x1
+    const/4 v1, 0x0
 
-    cmp-long p0, v0, v2
+    if-nez v0, :cond_0
 
-    if-eqz p0, :cond_0
-
-    const-wide/16 v2, 0x1
-
-    add-long/2addr v0, v2
-
-    return-wide v0
+    return v1
 
     :cond_0
-    return-wide v2
+    :try_start_0
+    iget-object p0, p0, Lw68;->a:Ls3h;
+
+    check-cast p1, Lw68;
+
+    iget-object p1, p1, Lw68;->a:Ls3h;
+
+    check-cast p0, Lo3h;
+
+    invoke-virtual {p0}, Lk1h;->Y()Landroid/os/Parcel;
+
+    move-result-object v0
+
+    invoke-static {v0, p1}, Ll4h;->c(Landroid/os/Parcel;Landroid/os/IInterface;)V
+
+    const/16 p1, 0x10
+
+    invoke-virtual {p0, v0, p1}, Lk1h;->B(Landroid/os/Parcel;I)Landroid/os/Parcel;
+
+    move-result-object p0
+
+    invoke-virtual {p0}, Landroid/os/Parcel;->readInt()I
+
+    move-result p1
+
+    if-eqz p1, :cond_1
+
+    const/4 v1, 0x1
+
+    :cond_1
+    invoke-virtual {p0}, Landroid/os/Parcel;->recycle()V
+    :try_end_0
+    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
+
+    return v1
+
+    :catch_0
+    move-exception p0
+
+    new-instance p1, Lcom/google/android/gms/maps/model/RuntimeRemoteException;
+
+    invoke-direct {p1, p0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V
+
+    throw p1
 .end method
 
-.method public abstract b()Z
+.method public final hashCode()I
+    .locals 2
+
+    :try_start_0
+    iget-object p0, p0, Lw68;->a:Ls3h;
+
+    check-cast p0, Lo3h;
+
+    invoke-virtual {p0}, Lk1h;->Y()Landroid/os/Parcel;
+
+    move-result-object v0
+
+    const/16 v1, 0x11
+
+    invoke-virtual {p0, v0, v1}, Lk1h;->B(Landroid/os/Parcel;I)Landroid/os/Parcel;
+
+    move-result-object p0
+
+    invoke-virtual {p0}, Landroid/os/Parcel;->readInt()I
+
+    move-result v0
+
+    invoke-virtual {p0}, Landroid/os/Parcel;->recycle()V
+    :try_end_0
+    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
+
+    return v0
+
+    :catch_0
+    move-exception p0
+
+    new-instance v0, Lcom/google/android/gms/maps/model/RuntimeRemoteException;
+
+    invoke-direct {v0, p0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V
+
+    throw v0
 .end method

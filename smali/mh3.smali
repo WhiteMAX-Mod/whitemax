@@ -1,446 +1,163 @@
 .class public final Lmh3;
-.super Ln3;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final CREATOR:Landroid/os/Parcelable$Creator;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Landroid/os/Parcelable$Creator<",
-            "Lmh3;",
-            ">;"
-        }
-    .end annotation
-.end field
-
-.field public static final X:Lmh3;
-
-
 # instance fields
-.field public final a:I
+.field public final a:Ljava/util/concurrent/ExecutorService;
 
-.field public final b:I
+.field public final b:Ljava/util/concurrent/ExecutorService;
 
-.field public final c:Landroid/app/PendingIntent;
+.field public final c:Lqwg;
 
-.field public final o:Ljava/lang/String;
+.field public final d:Lr52;
+
+.field public final e:Lck7;
+
+.field public final f:I
+
+.field public final g:I
+
+.field public final h:I
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public constructor <init>(Lgu9;)V
+    .locals 6
 
-    new-instance v0, Lmh3;
-
-    const/4 v1, 0x0
-
-    invoke-direct {v0, v1}, Lmh3;-><init>(I)V
-
-    sput-object v0, Lmh3;->X:Lmh3;
-
-    new-instance v0, Ltgg;
-
-    const/4 v1, 0x1
-
-    invoke-direct {v0, v1}, Ltgg;-><init>(I)V
-
-    sput-object v0, Lmh3;->CREATOR:Landroid/os/Parcelable$Creator;
-
-    return-void
-.end method
-
-.method public constructor <init>(I)V
-    .locals 2
-
-    const/4 v0, 0x0
-
-    const/4 v1, 0x1
-
-    .line 3
-    invoke-direct {p0, v1, p1, v0, v0}, Lmh3;-><init>(IILandroid/app/PendingIntent;Ljava/lang/String;)V
-
-    return-void
-.end method
-
-.method public constructor <init>(IILandroid/app/PendingIntent;Ljava/lang/String;)V
-    .locals 0
-
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
-    iput p1, p0, Lmh3;->a:I
+    iget-object v0, p1, Lgu9;->d:Ljava/lang/Object;
 
-    iput p2, p0, Lmh3;->b:I
-
-    iput-object p3, p0, Lmh3;->c:Landroid/app/PendingIntent;
-
-    iput-object p4, p0, Lmh3;->o:Ljava/lang/String;
-
-    return-void
-.end method
-
-.method public constructor <init>(ILandroid/app/PendingIntent;)V
-    .locals 2
-
-    const/4 v0, 0x0
-
-    const/4 v1, 0x1
-
-    .line 4
-    invoke-direct {p0, v1, p1, p2, v0}, Lmh3;-><init>(IILandroid/app/PendingIntent;Ljava/lang/String;)V
-
-    return-void
-.end method
-
-.method public static b(I)Ljava/lang/String;
-    .locals 2
-
-    const/16 v0, 0x63
-
-    if-eq p0, v0, :cond_1
-
-    const/16 v0, 0x5dc
-
-    if-eq p0, v0, :cond_0
-
-    packed-switch p0, :pswitch_data_0
-
-    packed-switch p0, :pswitch_data_1
-
-    const-string v0, "UNKNOWN_ERROR_CODE("
-
-    const-string v1, ")"
-
-    invoke-static {p0, v0, v1}, Lpg0;->e(ILjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
-
-    :pswitch_0
-    const-string p0, "API_DISABLED_FOR_CONNECTION"
-
-    return-object p0
-
-    :pswitch_1
-    const-string p0, "API_DISABLED"
-
-    return-object p0
-
-    :pswitch_2
-    const-string p0, "RESOLUTION_ACTIVITY_NOT_FOUND"
-
-    return-object p0
-
-    :pswitch_3
-    const-string p0, "API_VERSION_UPDATE_REQUIRED"
-
-    return-object p0
-
-    :pswitch_4
-    const-string p0, "RESTRICTED_PROFILE"
-
-    return-object p0
-
-    :pswitch_5
-    const-string p0, "SERVICE_MISSING_PERMISSION"
-
-    return-object p0
-
-    :pswitch_6
-    const-string p0, "SERVICE_UPDATING"
-
-    return-object p0
-
-    :pswitch_7
-    const-string p0, "SIGN_IN_FAILED"
-
-    return-object p0
-
-    :pswitch_8
-    const-string p0, "API_UNAVAILABLE"
-
-    return-object p0
-
-    :pswitch_9
-    const-string p0, "INTERRUPTED"
-
-    return-object p0
-
-    :pswitch_a
-    const-string p0, "TIMEOUT"
-
-    return-object p0
-
-    :pswitch_b
-    const-string p0, "CANCELED"
-
-    return-object p0
-
-    :pswitch_c
-    const-string p0, "LICENSE_CHECK_FAILED"
-
-    return-object p0
-
-    :pswitch_d
-    const-string p0, "DEVELOPER_ERROR"
-
-    return-object p0
-
-    :pswitch_e
-    const-string p0, "SERVICE_INVALID"
-
-    return-object p0
-
-    :pswitch_f
-    const-string p0, "INTERNAL_ERROR"
-
-    return-object p0
-
-    :pswitch_10
-    const-string p0, "NETWORK_ERROR"
-
-    return-object p0
-
-    :pswitch_11
-    const-string p0, "RESOLUTION_REQUIRED"
-
-    return-object p0
-
-    :pswitch_12
-    const-string p0, "INVALID_ACCOUNT"
-
-    return-object p0
-
-    :pswitch_13
-    const-string p0, "SIGN_IN_REQUIRED"
-
-    return-object p0
-
-    :pswitch_14
-    const-string p0, "SERVICE_DISABLED"
-
-    return-object p0
-
-    :pswitch_15
-    const-string p0, "SERVICE_VERSION_UPDATE_REQUIRED"
-
-    return-object p0
-
-    :pswitch_16
-    const-string p0, "SERVICE_MISSING"
-
-    return-object p0
-
-    :pswitch_17
-    const-string p0, "SUCCESS"
-
-    return-object p0
-
-    :pswitch_18
-    const-string p0, "UNKNOWN"
-
-    return-object p0
-
-    :cond_0
-    const-string p0, "DRIVE_EXTERNAL_STORAGE_REQUIRED"
-
-    return-object p0
-
-    :cond_1
-    const-string p0, "UNFINISHED"
-
-    return-object p0
-
-    :pswitch_data_0
-    .packed-switch -0x1
-        :pswitch_18
-        :pswitch_17
-        :pswitch_16
-        :pswitch_15
-        :pswitch_14
-        :pswitch_13
-        :pswitch_12
-        :pswitch_11
-        :pswitch_10
-        :pswitch_f
-        :pswitch_e
-        :pswitch_d
-        :pswitch_c
-    .end packed-switch
-
-    :pswitch_data_1
-    .packed-switch 0xd
-        :pswitch_b
-        :pswitch_a
-        :pswitch_9
-        :pswitch_8
-        :pswitch_7
-        :pswitch_6
-        :pswitch_5
-        :pswitch_4
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
-.end method
-
-
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
-
-    const/4 v0, 0x1
-
-    if-ne p1, p0, :cond_0
-
-    return v0
-
-    :cond_0
-    instance-of v1, p1, Lmh3;
-
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
-    check-cast p1, Lmh3;
-
-    iget v1, p0, Lmh3;->b:I
-
-    iget v3, p1, Lmh3;->b:I
-
-    if-ne v1, v3, :cond_2
-
-    iget-object v1, p0, Lmh3;->c:Landroid/app/PendingIntent;
-
-    iget-object v3, p1, Lmh3;->c:Landroid/app/PendingIntent;
-
-    invoke-static {v1, v3}, Lgr0;->j(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_2
-
-    iget-object p0, p0, Lmh3;->o:Ljava/lang/String;
-
-    iget-object p1, p1, Lmh3;->o:Ljava/lang/String;
-
-    invoke-static {p0, p1}, Lgr0;->j(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p0
-
-    if-eqz p0, :cond_2
-
-    return v0
-
-    :cond_2
-    return v2
-.end method
-
-.method public final hashCode()I
-    .locals 2
-
-    iget v0, p0, Lmh3;->b:I
-
-    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v0
-
-    iget-object v1, p0, Lmh3;->c:Landroid/app/PendingIntent;
-
-    iget-object p0, p0, Lmh3;->o:Ljava/lang/String;
-
-    filled-new-array {v0, v1, p0}, [Ljava/lang/Object;
-
-    move-result-object p0
-
-    invoke-static {p0}, Ljava/util/Arrays;->hashCode([Ljava/lang/Object;)I
-
-    move-result p0
-
-    return p0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 3
-
-    new-instance v0, Lnz7;
-
-    invoke-direct {v0, p0}, Lnz7;-><init>(Ljava/lang/Object;)V
-
-    const-string v1, "statusCode"
-
-    iget v2, p0, Lmh3;->b:I
-
-    invoke-static {v2}, Lmh3;->b(I)Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v2, v1}, Lnz7;->z(Ljava/lang/Object;Ljava/lang/String;)V
-
-    const-string v1, "resolution"
-
-    iget-object v2, p0, Lmh3;->c:Landroid/app/PendingIntent;
-
-    invoke-virtual {v0, v2, v1}, Lnz7;->z(Ljava/lang/Object;Ljava/lang/String;)V
-
-    const-string v1, "message"
-
-    iget-object p0, p0, Lmh3;->o:Ljava/lang/String;
-
-    invoke-virtual {v0, p0, v1}, Lnz7;->z(Ljava/lang/Object;Ljava/lang/String;)V
-
-    invoke-virtual {v0}, Lnz7;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public final writeToParcel(Landroid/os/Parcel;I)V
-    .locals 4
-
-    const/16 v0, 0x4f45
-
-    invoke-static {p1, v0}, Lq14;->B0(Landroid/os/Parcel;I)I
-
-    move-result v0
-
-    const/4 v1, 0x1
-
-    const/4 v2, 0x4
-
-    invoke-static {p1, v1, v2}, Lq14;->D0(Landroid/os/Parcel;II)V
-
-    iget v1, p0, Lmh3;->a:I
-
-    invoke-virtual {p1, v1}, Landroid/os/Parcel;->writeInt(I)V
+    check-cast v0, Ljava/util/concurrent/ExecutorService;
 
     const/4 v1, 0x2
 
-    invoke-static {p1, v1, v2}, Lq14;->D0(Landroid/os/Parcel;II)V
+    const/4 v2, 0x4
 
-    iget v1, p0, Lmh3;->b:I
+    const/4 v3, 0x1
 
-    invoke-virtual {p1, v1}, Landroid/os/Parcel;->writeInt(I)V
+    if-nez v0, :cond_0
 
-    const/4 v1, 0x3
+    invoke-static {}, Ljava/lang/Runtime;->getRuntime()Ljava/lang/Runtime;
 
-    iget-object v3, p0, Lmh3;->c:Landroid/app/PendingIntent;
+    move-result-object v0
 
-    invoke-static {p1, v1, v3, p2}, Lq14;->x0(Landroid/os/Parcel;ILandroid/os/Parcelable;I)V
+    invoke-virtual {v0}, Ljava/lang/Runtime;->availableProcessors()I
 
-    iget-object p0, p0, Lmh3;->o:Ljava/lang/String;
+    move-result v0
 
-    invoke-static {p1, v2, p0}, Lq14;->y0(Landroid/os/Parcel;ILjava/lang/String;)V
+    sub-int/2addr v0, v3
 
-    invoke-static {p1, v0}, Lq14;->C0(Landroid/os/Parcel;I)V
+    invoke-static {v0, v2}, Ljava/lang/Math;->min(II)I
+
+    move-result v0
+
+    invoke-static {v1, v0}, Ljava/lang/Math;->max(II)I
+
+    move-result v0
+
+    new-instance v4, Ljh3;
+
+    const/4 v5, 0x0
+
+    invoke-direct {v4, v5}, Ljh3;-><init>(Z)V
+
+    invoke-static {v0, v4}, Ljava/util/concurrent/Executors;->newFixedThreadPool(ILjava/util/concurrent/ThreadFactory;)Ljava/util/concurrent/ExecutorService;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lmh3;->a:Ljava/util/concurrent/ExecutorService;
+
+    goto :goto_0
+
+    :cond_0
+    iput-object v0, p0, Lmh3;->a:Ljava/util/concurrent/ExecutorService;
+
+    :goto_0
+    iget-object v0, p1, Lgu9;->c:Ljava/lang/Object;
+
+    check-cast v0, Ljava/util/concurrent/ExecutorService;
+
+    if-nez v0, :cond_1
+
+    invoke-static {}, Ljava/lang/Runtime;->getRuntime()Ljava/lang/Runtime;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/Runtime;->availableProcessors()I
+
+    move-result v0
+
+    sub-int/2addr v0, v3
+
+    invoke-static {v0, v2}, Ljava/lang/Math;->min(II)I
+
+    move-result v0
+
+    invoke-static {v1, v0}, Ljava/lang/Math;->max(II)I
+
+    move-result v0
+
+    new-instance v1, Ljh3;
+
+    invoke-direct {v1, v3}, Ljh3;-><init>(Z)V
+
+    invoke-static {v0, v1}, Ljava/util/concurrent/Executors;->newFixedThreadPool(ILjava/util/concurrent/ThreadFactory;)Ljava/util/concurrent/ExecutorService;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lmh3;->b:Ljava/util/concurrent/ExecutorService;
+
+    goto :goto_1
+
+    :cond_1
+    iput-object v0, p0, Lmh3;->b:Ljava/util/concurrent/ExecutorService;
+
+    :goto_1
+    iget-object v0, p1, Lgu9;->e:Ljava/lang/Object;
+
+    check-cast v0, Lqwg;
+
+    if-nez v0, :cond_2
+
+    sget-object v0, Lqwg;->a:Ljava/lang/String;
+
+    new-instance v0, Lpwg;
+
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    iput-object v0, p0, Lmh3;->c:Lqwg;
+
+    goto :goto_2
+
+    :cond_2
+    iput-object v0, p0, Lmh3;->c:Lqwg;
+
+    :goto_2
+    new-instance v0, Lr52;
+
+    const/16 v1, 0xd
+
+    invoke-direct {v0, v1}, Lr52;-><init>(I)V
+
+    iput-object v0, p0, Lmh3;->d:Lr52;
+
+    new-instance v0, Lck7;
+
+    invoke-direct {v0, v1}, Lck7;-><init>(I)V
+
+    iput-object v0, p0, Lmh3;->e:Lck7;
+
+    iput v2, p0, Lmh3;->f:I
+
+    const v0, 0x7fffffff
+
+    iput v0, p0, Lmh3;->g:I
+
+    iget p1, p1, Lgu9;->b:I
+
+    iput p1, p0, Lmh3;->h:I
 
     return-void
 .end method

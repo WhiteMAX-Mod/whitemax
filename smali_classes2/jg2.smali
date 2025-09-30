@@ -1,98 +1,85 @@
 .class public final Ljg2;
-.super Lqde;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Ll66;
+.implements Lng2;
 
 
 # instance fields
-.field public final synthetic X:Lwg2;
+.field public final a:J
 
 
 # direct methods
-.method public constructor <init>(Lwg2;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(J)V
     .locals 0
 
-    iput-object p1, p0, Ljg2;->X:Lwg2;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 p1, 0x2
-
-    invoke-direct {p0, p1, p2}, Lqde;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-wide p1, p0, Ljg2;->a:J
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 5
 
-    check-cast p1, Lox3;
+    const/4 v0, 0x1
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    if-ne p0, p1, :cond_0
 
-    invoke-virtual {p0, p1, p2}, Ljg2;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    return v0
 
-    move-result-object p0
+    :cond_0
+    instance-of v1, p1, Ljg2;
 
-    check-cast p0, Ljg2;
+    const/4 v2, 0x0
 
-    sget-object p1, Le5f;->a:Le5f;
+    if-nez v1, :cond_1
 
-    invoke-virtual {p0, p1}, Ljg2;->o(Ljava/lang/Object;)Ljava/lang/Object;
+    return v2
 
-    move-result-object p0
+    :cond_1
+    check-cast p1, Ljg2;
 
-    return-object p0
+    iget-wide v3, p0, Ljg2;->a:J
+
+    iget-wide p0, p1, Ljg2;->a:J
+
+    cmp-long p0, v3, p0
+
+    if-eqz p0, :cond_2
+
+    return v2
+
+    :cond_2
+    return v0
 .end method
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 0
+.method public final hashCode()I
+    .locals 2
 
-    new-instance p1, Ljg2;
+    iget-wide v0, p0, Ljg2;->a:J
 
-    iget-object p0, p0, Ljg2;->X:Lwg2;
+    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
 
-    invoke-direct {p1, p0, p2}, Ljg2;-><init>(Lwg2;Lkotlin/coroutines/Continuation;)V
+    move-result p0
 
-    return-object p1
+    return p0
 .end method
 
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+.method public final toString()Ljava/lang/String;
+    .locals 4
 
-    invoke-static {p1}, Lsgg;->Z(Ljava/lang/Object;)V
+    const-string v0, "DownloadError(messageId="
 
-    sget-object p1, Lwg2;->N0:[Lbc7;
+    const-string v1, ")"
 
-    iget-object p0, p0, Ljg2;->X:Lwg2;
+    iget-wide v2, p0, Ljg2;->a:J
 
-    iget-object p0, p0, Lwg2;->t0:Lje7;
-
-    invoke-interface {p0}, Lje7;->getValue()Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, Lmfa;
-
-    sget p1, Lpca;->U1:I
-
-    new-instance v0, Lhoe;
-
-    invoke-direct {v0, p1}, Lhoe;-><init>(I)V
-
-    invoke-virtual {p0, v0}, Lmfa;->g(Lmoe;)V
-
-    new-instance p1, Laga;
-
-    sget v0, Lanc;->n:I
-
-    invoke-direct {p1, v0}, Laga;-><init>(I)V
-
-    invoke-virtual {p0, p1}, Lmfa;->e(Lega;)V
-
-    invoke-virtual {p0}, Lmfa;->i()Llfa;
+    invoke-static {v2, v3, v0, v1}, Lwsf;->e(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
 

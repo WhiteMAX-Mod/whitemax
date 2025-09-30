@@ -1,90 +1,94 @@
-.class public abstract Lcvb;
-.super Ljava/lang/Object;
+.class public final Lcvb;
+.super Ljvb;
+.source "SourceFile"
 
 
-# static fields
-.field public static oneme_settings_storage_item_action_all_cancel:I = 0x7f0a07fa
+# instance fields
+.field public final a:Landroid/content/Intent;
 
-.field public static oneme_settings_storage_item_action_all_clear:I = 0x7f0a07fb
 
-.field public static oneme_settings_storage_item_action_audio_cancel:I = 0x7f0a07fc
+# direct methods
+.method public constructor <init>(Landroid/content/Intent;)V
+    .locals 0
 
-.field public static oneme_settings_storage_item_action_audio_clear:I = 0x7f0a07fd
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-.field public static oneme_settings_storage_item_action_files_cancel:I = 0x7f0a07fe
+    iput-object p1, p0, Lcvb;->a:Landroid/content/Intent;
 
-.field public static oneme_settings_storage_item_action_files_clear:I = 0x7f0a07ff
+    return-void
+.end method
 
-.field public static oneme_settings_storage_item_action_gif_cancel:I = 0x7f0a0800
 
-.field public static oneme_settings_storage_item_action_gif_clear:I = 0x7f0a0801
+# virtual methods
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 3
 
-.field public static oneme_settings_storage_item_action_images_cancel:I = 0x7f0a0802
+    const/4 v0, 0x1
 
-.field public static oneme_settings_storage_item_action_images_clear:I = 0x7f0a0803
+    if-ne p0, p1, :cond_0
 
-.field public static oneme_settings_storage_item_action_music_cancel:I = 0x7f0a0804
+    return v0
 
-.field public static oneme_settings_storage_item_action_music_clear:I = 0x7f0a0805
+    :cond_0
+    instance-of v1, p1, Lcvb;
 
-.field public static oneme_settings_storage_item_action_stickers_cancel:I = 0x7f0a0806
+    const/4 v2, 0x0
 
-.field public static oneme_settings_storage_item_action_stickers_clear:I = 0x7f0a0807
+    if-nez v1, :cond_1
 
-.field public static oneme_settings_storage_item_action_video_cancel:I = 0x7f0a0808
+    return v2
 
-.field public static oneme_settings_storage_item_action_video_clear:I = 0x7f0a0809
+    :cond_1
+    check-cast p1, Lcvb;
 
-.field public static oneme_settings_storage_item_all_clear_title:I = 0x7f0a080a
+    iget-object p0, p0, Lcvb;->a:Landroid/content/Intent;
 
-.field public static oneme_settings_storage_item_audio_clear_title:I = 0x7f0a080b
+    iget-object p1, p1, Lcvb;->a:Landroid/content/Intent;
 
-.field public static oneme_settings_storage_item_audio_messages:I = 0x7f0a080c
+    invoke-static {p0, p1}, Lvyg;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-.field public static oneme_settings_storage_item_clear_cache:I = 0x7f0a080d
+    move-result p0
 
-.field public static oneme_settings_storage_item_files:I = 0x7f0a080e
+    if-nez p0, :cond_2
 
-.field public static oneme_settings_storage_item_files_clear_title:I = 0x7f0a080f
+    return v2
 
-.field public static oneme_settings_storage_item_gif:I = 0x7f0a0810
+    :cond_2
+    return v0
+.end method
 
-.field public static oneme_settings_storage_item_gif_clear_title:I = 0x7f0a0811
+.method public final hashCode()I
+    .locals 0
 
-.field public static oneme_settings_storage_item_images:I = 0x7f0a0812
+    iget-object p0, p0, Lcvb;->a:Landroid/content/Intent;
 
-.field public static oneme_settings_storage_item_images_clear_title:I = 0x7f0a0813
+    invoke-virtual {p0}, Ljava/lang/Object;->hashCode()I
 
-.field public static oneme_settings_storage_item_music:I = 0x7f0a0814
+    move-result p0
 
-.field public static oneme_settings_storage_item_music_clear_title:I = 0x7f0a0815
+    return p0
+.end method
 
-.field public static oneme_settings_storage_item_one_month:I = 0x7f0a0816
+.method public final toString()Ljava/lang/String;
+    .locals 2
 
-.field public static oneme_settings_storage_item_one_week:I = 0x7f0a0817
+    new-instance v0, Ljava/lang/StringBuilder;
 
-.field public static oneme_settings_storage_item_six_month:I = 0x7f0a0818
+    const-string v1, "SelectPhotoFromCamera(intent="
 
-.field public static oneme_settings_storage_item_stickers:I = 0x7f0a0819
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-.field public static oneme_settings_storage_item_stickers_clear_title:I = 0x7f0a081a
+    iget-object p0, p0, Lcvb;->a:Landroid/content/Intent;
 
-.field public static oneme_settings_storage_item_unlimited:I = 0x7f0a081b
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-.field public static oneme_settings_storage_item_video:I = 0x7f0a081c
+    const-string p0, ")"
 
-.field public static oneme_settings_storage_item_video_clear_title:I = 0x7f0a081d
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-.field public static oneme_settings_storage_screen_data_section_header:I = 0x7f0a081e
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-.field public static oneme_settings_storage_screen_list:I = 0x7f0a081f
+    move-result-object p0
 
-.field public static oneme_settings_storage_screen_preserve_media_section:I = 0x7f0a0820
-
-.field public static oneme_settings_storage_screen_settings_button_vh:I = 0x7f0a0821
-
-.field public static oneme_settings_storage_screen_settings_header_vh:I = 0x7f0a0822
-
-.field public static oneme_settings_storage_screen_settings_item_vh:I = 0x7f0a0823
-
-.field public static oneme_settings_storage_screen_toolbar:I = 0x7f0a0824
+    return-object p0
+.end method

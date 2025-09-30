@@ -1,162 +1,84 @@
-.class public final Lkee;
-.super Lqde;
+.class public final synthetic Lkee;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Ll66;
+.implements Ls0e;
 
 
 # instance fields
-.field public X:I
+.field public final synthetic a:I
 
-.field public synthetic Y:Ljava/lang/Object;
+.field public final synthetic b:Lru/ok/android/externcalls/sdk/stereo/internal/command/StereoRoomCommandExecutorImpl;
 
-.field public final synthetic Z:Llee;
+.field public final synthetic c:Lbc6;
 
 
 # direct methods
-.method public constructor <init>(Llee;Lkotlin/coroutines/Continuation;)V
+.method public synthetic constructor <init>(Lru/ok/android/externcalls/sdk/stereo/internal/command/StereoRoomCommandExecutorImpl;Lbc6;I)V
     .locals 0
 
-    iput-object p1, p0, Lkee;->Z:Llee;
+    iput p3, p0, Lkee;->a:I
 
-    const/4 p1, 0x2
+    iput-object p1, p0, Lkee;->b:Lru/ok/android/externcalls/sdk/stereo/internal/command/StereoRoomCommandExecutorImpl;
 
-    invoke-direct {p0, p1, p2}, Lqde;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-object p2, p0, Lkee;->c:Lbc6;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
-
-    check-cast p1, Ly6f;
-
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Lkee;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p0
-
-    check-cast p0, Lkee;
-
-    sget-object p1, Le5f;->a:Le5f;
-
-    invoke-virtual {p0, p1}, Lkee;->o(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+.method public final k(Lorg/json/JSONObject;)V
     .locals 1
 
-    new-instance v0, Lkee;
+    iget v0, p0, Lkee;->a:I
 
-    iget-object p0, p0, Lkee;->Z:Llee;
+    packed-switch v0, :pswitch_data_0
 
-    invoke-direct {v0, p0, p2}, Lkee;-><init>(Llee;Lkotlin/coroutines/Continuation;)V
+    iget-object v0, p0, Lkee;->b:Lru/ok/android/externcalls/sdk/stereo/internal/command/StereoRoomCommandExecutorImpl;
 
-    iput-object p1, v0, Lkee;->Y:Ljava/lang/Object;
+    iget-object p0, p0, Lkee;->c:Lbc6;
 
-    return-object v0
-.end method
+    invoke-static {v0, p0, p1}, Lru/ok/android/externcalls/sdk/stereo/internal/command/StereoRoomCommandExecutorImpl;->c(Lru/ok/android/externcalls/sdk/stereo/internal/command/StereoRoomCommandExecutorImpl;Lbc6;Lorg/json/JSONObject;)V
 
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 7
+    return-void
 
-    iget v0, p0, Lkee;->X:I
+    :pswitch_0
+    iget-object v0, p0, Lkee;->b:Lru/ok/android/externcalls/sdk/stereo/internal/command/StereoRoomCommandExecutorImpl;
 
-    const/4 v1, 0x2
+    iget-object p0, p0, Lkee;->c:Lbc6;
 
-    const/4 v2, 0x1
+    invoke-static {v0, p0, p1}, Lru/ok/android/externcalls/sdk/stereo/internal/command/StereoRoomCommandExecutorImpl;->f(Lru/ok/android/externcalls/sdk/stereo/internal/command/StereoRoomCommandExecutorImpl;Lbc6;Lorg/json/JSONObject;)V
 
-    if-eqz v0, :cond_2
+    return-void
 
-    if-eq v0, v2, :cond_1
+    :pswitch_1
+    iget-object v0, p0, Lkee;->b:Lru/ok/android/externcalls/sdk/stereo/internal/command/StereoRoomCommandExecutorImpl;
 
-    if-ne v0, v1, :cond_0
+    iget-object p0, p0, Lkee;->c:Lbc6;
 
-    goto :goto_0
+    invoke-static {v0, p0, p1}, Lru/ok/android/externcalls/sdk/stereo/internal/command/StereoRoomCommandExecutorImpl;->a(Lru/ok/android/externcalls/sdk/stereo/internal/command/StereoRoomCommandExecutorImpl;Lbc6;Lorg/json/JSONObject;)V
 
-    :cond_0
-    new-instance p0, Ljava/lang/IllegalStateException;
+    return-void
 
-    const-string p1, "call to \'resume\' before \'invoke\' with coroutine"
+    :pswitch_2
+    iget-object v0, p0, Lkee;->b:Lru/ok/android/externcalls/sdk/stereo/internal/command/StereoRoomCommandExecutorImpl;
 
-    invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    iget-object p0, p0, Lkee;->c:Lbc6;
 
-    throw p0
+    invoke-static {v0, p0, p1}, Lru/ok/android/externcalls/sdk/stereo/internal/command/StereoRoomCommandExecutorImpl;->b(Lru/ok/android/externcalls/sdk/stereo/internal/command/StereoRoomCommandExecutorImpl;Lbc6;Lorg/json/JSONObject;)V
 
-    :cond_1
-    :goto_0
-    invoke-static {p1}, Lsgg;->Z(Ljava/lang/Object;)V
+    return-void
 
-    goto :goto_3
+    nop
 
-    :cond_2
-    invoke-static {p1}, Lsgg;->Z(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Lkee;->Y:Ljava/lang/Object;
-
-    check-cast p1, Ly6f;
-
-    invoke-virtual {p1}, Ly6f;->a()Z
-
-    move-result v0
-
-    iget-object v3, p1, Ly6f;->a:Lg7f;
-
-    if-eqz v0, :cond_5
-
-    iget v0, v3, Lg7f;->c:I
-
-    const/4 v4, 0x6
-
-    iget-object v5, p0, Lkee;->Z:Llee;
-
-    sget-object v6, Lpx3;->a:Lpx3;
-
-    if-ne v0, v4, :cond_3
-
-    goto :goto_1
-
-    :cond_3
-    invoke-static {v0}, Lzge;->a(I)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_4
-
-    :goto_1
-    iput v2, p0, Lkee;->X:I
-
-    invoke-virtual {v5, v3, p0}, Llee;->h(Lg7f;Lbu3;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    if-ne p0, v6, :cond_5
-
-    goto :goto_2
-
-    :cond_4
-    iput v1, p0, Lkee;->X:I
-
-    invoke-virtual {v5, p1, p0}, Llee;->f(Ly6f;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    if-ne p0, v6, :cond_5
-
-    :goto_2
-    return-object v6
-
-    :cond_5
-    :goto_3
-    sget-object p0, Le5f;->a:Le5f;
-
-    return-object p0
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

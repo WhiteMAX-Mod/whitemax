@@ -2,236 +2,83 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ljavax/net/ssl/X509TrustManager;
-
 
 # instance fields
-.field public final a:[Ljavax/net/ssl/X509TrustManager;
-
-.field public final b:Ljava/util/ArrayList;
+.field public final a:I
 
 
 # direct methods
-.method public constructor <init>([Ljavax/net/ssl/X509TrustManager;)V
-    .locals 5
+.method public constructor <init>(I)V
+    .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Ljb3;->a:[Ljavax/net/ssl/X509TrustManager;
-
-    new-instance v0, Ljava/util/ArrayList;
-
-    array-length v1, p1
-
-    invoke-direct {v0, v1}, Ljava/util/ArrayList;-><init>(I)V
-
-    array-length v1, p1
-
-    const/4 v2, 0x0
-
-    :goto_0
-    if-ge v2, v1, :cond_0
-
-    aget-object v3, p1, v2
-
-    new-instance v4, Landroid/net/http/X509TrustManagerExtensions;
-
-    invoke-direct {v4, v3}, Landroid/net/http/X509TrustManagerExtensions;-><init>(Ljavax/net/ssl/X509TrustManager;)V
-
-    invoke-virtual {v0, v4}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    add-int/lit8 v2, v2, 0x1
-
-    goto :goto_0
-
-    :cond_0
-    iput-object v0, p0, Ljb3;->b:Ljava/util/ArrayList;
+    iput p1, p0, Ljb3;->a:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final checkClientTrusted([Ljava/security/cert/X509Certificate;Ljava/lang/String;)V
-    .locals 3
-
-    iget-object p0, p0, Ljb3;->a:[Ljavax/net/ssl/X509TrustManager;
-
-    array-length v0, p0
-
-    const/4 v1, 0x0
-
-    :goto_0
-    if-ge v1, v0, :cond_0
-
-    aget-object v2, p0, v1
-
-    :try_start_0
-    invoke-interface {v2, p1, p2}, Ljavax/net/ssl/X509TrustManager;->checkClientTrusted([Ljava/security/cert/X509Certificate;Ljava/lang/String;)V
-    :try_end_0
-    .catch Ljava/security/cert/CertificateException; {:try_start_0 .. :try_end_0} :catch_0
-
-    return-void
-
-    :catch_0
-    add-int/lit8 v1, v1, 0x1
-
-    goto :goto_0
-
-    :cond_0
-    new-instance p0, Ljava/security/cert/CertificateException;
-
-    const-string p1, "None of the TrustManagers trust this certificate chain"
-
-    invoke-direct {p0, p1}, Ljava/security/cert/CertificateException;-><init>(Ljava/lang/String;)V
-
-    throw p0
-.end method
-
-.method public final checkServerTrusted([Ljava/security/cert/X509Certificate;Ljava/lang/String;Ljava/lang/String;)Ljava/util/List;
+.method public final equals(Ljava/lang/Object;)Z
     .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "([",
-            "Ljava/security/cert/X509Certificate;",
-            "Ljava/lang/String;",
-            "Ljava/lang/String;",
-            ")",
-            "Ljava/util/List<",
-            "Ljava/security/cert/X509Certificate;",
-            ">;"
-        }
-    .end annotation
 
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Ljava/security/cert/CertificateException;
-        }
-    .end annotation
+    if-ne p0, p1, :cond_0
 
-    .line 4
-    iget-object p0, p0, Ljb3;->b:Ljava/util/ArrayList;
+    goto :goto_1
 
-    invoke-virtual {p0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
-
-    move-result-object p0
-
-    :catch_0
-    invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/net/http/X509TrustManagerExtensions;
-
-    .line 5
-    :try_start_0
-    invoke-virtual {v0, p1, p2, p3}, Landroid/net/http/X509TrustManagerExtensions;->checkServerTrusted([Ljava/security/cert/X509Certificate;Ljava/lang/String;Ljava/lang/String;)Ljava/util/List;
-
-    move-result-object p0
-    :try_end_0
-    .catch Ljava/security/cert/CertificateException; {:try_start_0 .. :try_end_0} :catch_0
-
-    return-object p0
-
-    .line 6
     :cond_0
-    new-instance p0, Ljava/security/cert/CertificateException;
+    instance-of v0, p1, Ljb3;
 
-    const-string p1, "None of the TrustManagers trust this certificate chain"
-
-    invoke-direct {p0, p1}, Ljava/security/cert/CertificateException;-><init>(Ljava/lang/String;)V
-
-    throw p0
-.end method
-
-.method public final checkServerTrusted([Ljava/security/cert/X509Certificate;Ljava/lang/String;)V
-    .locals 3
-
-    .line 1
-    iget-object p0, p0, Ljb3;->a:[Ljavax/net/ssl/X509TrustManager;
-
-    array-length v0, p0
-
-    const/4 v1, 0x0
-
-    :goto_0
-    if-ge v1, v0, :cond_0
-
-    aget-object v2, p0, v1
-
-    .line 2
-    :try_start_0
-    invoke-interface {v2, p1, p2}, Ljavax/net/ssl/X509TrustManager;->checkServerTrusted([Ljava/security/cert/X509Certificate;Ljava/lang/String;)V
-    :try_end_0
-    .catch Ljava/security/cert/CertificateException; {:try_start_0 .. :try_end_0} :catch_0
-
-    return-void
-
-    :catch_0
-    add-int/lit8 v1, v1, 0x1
+    if-nez v0, :cond_1
 
     goto :goto_0
 
-    .line 3
-    :cond_0
-    new-instance p0, Ljava/security/cert/CertificateException;
+    :cond_1
+    check-cast p1, Ljb3;
 
-    const-string p1, "None of the TrustManagers trust this certificate chain"
+    iget p0, p0, Ljb3;->a:I
 
-    invoke-direct {p0, p1}, Ljava/security/cert/CertificateException;-><init>(Ljava/lang/String;)V
+    iget p1, p1, Ljb3;->a:I
 
-    throw p0
-.end method
-
-.method public final getAcceptedIssuers()[Ljava/security/cert/X509Certificate;
-    .locals 5
-
-    new-instance v0, Ljava/util/ArrayList;
-
-    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
-
-    iget-object p0, p0, Ljb3;->a:[Ljavax/net/ssl/X509TrustManager;
-
-    array-length v1, p0
-
-    const/4 v2, 0x0
-
-    move v3, v2
+    if-eq p0, p1, :cond_2
 
     :goto_0
-    if-ge v3, v1, :cond_0
+    const/4 p0, 0x0
 
-    aget-object v4, p0, v3
+    return p0
 
-    invoke-interface {v4}, Ljavax/net/ssl/X509TrustManager;->getAcceptedIssuers()[Ljava/security/cert/X509Certificate;
+    :cond_2
+    :goto_1
+    const/4 p0, 0x1
 
-    move-result-object v4
+    return p0
+.end method
 
-    invoke-static {v4}, Lns;->m0([Ljava/lang/Object;)Ljava/util/List;
+.method public final hashCode()I
+    .locals 0
 
-    move-result-object v4
+    iget p0, p0, Ljb3;->a:I
 
-    invoke-static {v4, v0}, Lv43;->n0(Ljava/lang/Iterable;Ljava/util/AbstractCollection;)V
+    invoke-static {p0}, Ljava/lang/Integer;->hashCode(I)I
 
-    add-int/lit8 v3, v3, 0x1
+    move-result p0
 
-    goto :goto_0
+    return p0
+.end method
 
-    :cond_0
-    new-array p0, v2, [Ljava/security/cert/X509Certificate;
+.method public final toString()Ljava/lang/String;
+    .locals 2
 
-    invoke-virtual {v0, p0}, Ljava/util/ArrayList;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;
+    const-string v0, "CommonStrokeSeparatorColors(primary="
+
+    const-string v1, ")"
+
+    iget p0, p0, Ljb3;->a:I
+
+    invoke-static {p0, v0, v1}, Lsg0;->e(ILjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
-
-    check-cast p0, [Ljava/security/cert/X509Certificate;
 
     return-object p0
 .end method

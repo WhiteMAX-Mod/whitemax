@@ -1,40 +1,24 @@
-.class public interface abstract Lmdc;
+.class public abstract Lmdc;
 .super Ljava/lang/Object;
-.source "SourceFile"
+
+
+# static fields
+.field public static ColorSelectorView:[I
+
+.field public static ColorSelectorView_color_selector_orientation:I
 
 
 # direct methods
-.method public static synthetic d(Lmdc;JIJLbu3;)Ljava/lang/Object;
-    .locals 10
+.method public static constructor <clinit>()V
+    .locals 1
 
-    const/4 v4, 0x0
+    const v0, 0x7f0402ed
 
-    const-wide v7, 0x7fffffffffffffffL
+    filled-new-array {v0}, [I
 
-    move-object v0, p0
+    move-result-object v0
 
-    move-wide v1, p1
-
-    move v3, p3
-
-    move-wide v5, p4
-
-    move-object/from16 v9, p6
-
-    invoke-interface/range {v0 .. v9}, Lmdc;->c(JIIJJLbu3;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-
-# virtual methods
-.method public abstract c(JIIJJLbu3;)Ljava/lang/Object;
-.end method
-
-.method public e(Lcl6;)V
-    .locals 0
+    sput-object v0, Lmdc;->ColorSelectorView:[I
 
     return-void
 .end method

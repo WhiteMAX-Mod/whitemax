@@ -13,17 +13,17 @@
         "",
         "<init>",
         "()V",
-        "Lkb7;",
+        "Lgi7;",
         "writer",
         "Lru/ok/android/externcalls/analytics/events/EventItemValue;",
         "value",
-        "Le5f;",
+        "Lylf;",
         "writeValue",
-        "(Lkb7;Lru/ok/android/externcalls/analytics/events/EventItemValue;)V",
+        "(Lgi7;Lru/ok/android/externcalls/analytics/events/EventItemValue;)V",
         "Lru/ok/android/externcalls/analytics/events/CallAnalyticsEvent;",
         "event",
         "serialize",
-        "(Lkb7;Lru/ok/android/externcalls/analytics/events/CallAnalyticsEvent;)V",
+        "(Lgi7;Lru/ok/android/externcalls/analytics/events/CallAnalyticsEvent;)V",
         "calls-sdk-analytics_release"
     }
     k = 0x1
@@ -61,7 +61,7 @@
     return-void
 .end method
 
-.method private final writeValue(Lkb7;Lru/ok/android/externcalls/analytics/events/EventItemValue;)V
+.method private final writeValue(Lgi7;Lru/ok/android/externcalls/analytics/events/EventItemValue;)V
     .locals 2
 
     instance-of p0, p2, Lru/ok/android/externcalls/analytics/events/EventItemValue$FloatValue;
@@ -78,7 +78,7 @@
 
     move-result-object p0
 
-    check-cast p1, Lu1;
+    check-cast p1, Lv1;
 
     invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
@@ -86,7 +86,7 @@
 
     move-result-wide v0
 
-    invoke-virtual {p1, v0, v1}, Lu1;->d(D)V
+    invoke-virtual {p1, v0, v1}, Lv1;->m(D)V
 
     return-void
 
@@ -101,7 +101,7 @@
 
     move-result p0
 
-    check-cast p1, Lu1;
+    check-cast p1, Lv1;
 
     invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
@@ -109,7 +109,7 @@
 
     move-result-object p0
 
-    invoke-virtual {p1, p0}, Lu1;->c(Ljava/lang/String;)V
+    invoke-virtual {p1, p0}, Lv1;->d(Ljava/lang/String;)V
 
     return-void
 
@@ -124,7 +124,7 @@
 
     move-result-wide v0
 
-    check-cast p1, Lu1;
+    check-cast p1, Lv1;
 
     invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
@@ -132,7 +132,7 @@
 
     move-result-object p0
 
-    invoke-virtual {p1, p0}, Lu1;->c(Ljava/lang/String;)V
+    invoke-virtual {p1, p0}, Lv1;->d(Ljava/lang/String;)V
 
     return-void
 
@@ -147,7 +147,7 @@
 
     move-result-object p0
 
-    invoke-interface {p1, p0}, Lkb7;->h(Ljava/lang/String;)V
+    invoke-interface {p1, p0}, Lgi7;->h(Ljava/lang/String;)V
 
     :cond_3
     return-void
@@ -155,10 +155,10 @@
 
 
 # virtual methods
-.method public final serialize(Lkb7;Lru/ok/android/externcalls/analytics/events/CallAnalyticsEvent;)V
+.method public final serialize(Lgi7;Lru/ok/android/externcalls/analytics/events/CallAnalyticsEvent;)V
     .locals 2
 
-    invoke-interface {p1}, Lkb7;->s()V
+    invoke-interface {p1}, Lgi7;->s()V
 
     invoke-virtual {p2}, Lru/ok/android/externcalls/analytics/events/CallAnalyticsEvent;->getItems()Ljava/util/Map;
 
@@ -191,7 +191,7 @@
 
     check-cast v1, Ljava/lang/String;
 
-    invoke-interface {p1, v1}, Lkb7;->k0(Ljava/lang/String;)Lkb7;
+    invoke-interface {p1, v1}, Lgi7;->k0(Ljava/lang/String;)Lgi7;
 
     invoke-interface {v0}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
@@ -199,12 +199,12 @@
 
     check-cast v0, Lru/ok/android/externcalls/analytics/events/EventItemValue;
 
-    invoke-direct {p0, p1, v0}, Lru/ok/android/externcalls/analytics/internal/event/EventSerializer;->writeValue(Lkb7;Lru/ok/android/externcalls/analytics/events/EventItemValue;)V
+    invoke-direct {p0, p1, v0}, Lru/ok/android/externcalls/analytics/internal/event/EventSerializer;->writeValue(Lgi7;Lru/ok/android/externcalls/analytics/events/EventItemValue;)V
 
     goto :goto_0
 
     :cond_0
-    invoke-interface {p1}, Lkb7;->q()V
+    invoke-interface {p1}, Lgi7;->q()V
 
     return-void
 .end method

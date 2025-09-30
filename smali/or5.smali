@@ -1,186 +1,92 @@
 .class public final Lor5;
-.super Lkg4;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lvr5;
+.implements Lbid;
 
 
 # instance fields
-.field public X:Z
+.field public final synthetic a:I
 
-.field public final c:Z
+.field public final b:Ljava/lang/Object;
 
-.field public o:Ll9e;
+.field public final c:Lbc6;
+
+.field public final d:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Lj9e;Z)V
-    .locals 0
+.method public constructor <init>(Lbid;Lbc6;Lbc6;)V
+    .locals 1
 
-    invoke-direct {p0, p1}, Lkg4;-><init>(Lj9e;)V
+    const/4 v0, 0x0
 
-    iput-boolean p2, p0, Lor5;->c:Z
+    iput v0, p0, Lor5;->a:I
+
+    .line 5
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 6
+    iput-object p1, p0, Lor5;->d:Ljava/lang/Object;
+
+    .line 7
+    iput-object p2, p0, Lor5;->c:Lbc6;
+
+    .line 8
+    iput-object p3, p0, Lor5;->b:Ljava/lang/Object;
+
+    return-void
+.end method
+
+.method public constructor <init>(Ljava/lang/Object;Lbc6;Lbc6;)V
+    .locals 1
+
+    const/4 v0, 0x1
+
+    iput v0, p0, Lor5;->a:I
+
+    .line 1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 2
+    iput-object p1, p0, Lor5;->b:Ljava/lang/Object;
+
+    .line 3
+    iput-object p2, p0, Lor5;->c:Lbc6;
+
+    .line 4
+    iput-object p3, p0, Lor5;->d:Ljava/lang/Object;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final b()V
-    .locals 2
-
-    iget-boolean v0, p0, Lor5;->X:Z
-
-    if-eqz v0, :cond_0
-
-    return-void
-
-    :cond_0
-    const/4 v0, 0x1
-
-    iput-boolean v0, p0, Lor5;->X:Z
-
-    iget-object v0, p0, Lkg4;->b:Ljava/lang/Object;
-
-    const/4 v1, 0x0
-
-    iput-object v1, p0, Lkg4;->b:Ljava/lang/Object;
-
-    if-nez v0, :cond_1
-
-    move-object v0, v1
-
-    :cond_1
-    if-nez v0, :cond_3
-
-    iget-boolean v0, p0, Lor5;->c:Z
-
-    iget-object p0, p0, Lkg4;->a:Lj9e;
-
-    if-eqz v0, :cond_2
-
-    new-instance v0, Ljava/util/NoSuchElementException;
-
-    invoke-direct {v0}, Ljava/util/NoSuchElementException;-><init>()V
-
-    invoke-interface {p0, v0}, Lj9e;->onError(Ljava/lang/Throwable;)V
-
-    return-void
-
-    :cond_2
-    invoke-interface {p0}, Lj9e;->b()V
-
-    return-void
-
-    :cond_3
-    invoke-virtual {p0, v0}, Lkg4;->f(Ljava/lang/Object;)V
-
-    return-void
-.end method
-
-.method public final cancel()V
+.method public final iterator()Ljava/util/Iterator;
     .locals 1
 
-    const/4 v0, 0x4
+    iget v0, p0, Lor5;->a:I
 
-    invoke-virtual {p0, v0}, Ljava/util/concurrent/atomic/AtomicInteger;->set(I)V
+    packed-switch v0, :pswitch_data_0
 
-    const/4 v0, 0x0
+    new-instance v0, Lxn5;
 
-    iput-object v0, p0, Lkg4;->b:Ljava/lang/Object;
+    invoke-direct {v0, p0}, Lxn5;-><init>(Lor5;)V
 
-    iget-object p0, p0, Lor5;->o:Ll9e;
+    return-object v0
 
-    invoke-interface {p0}, Ll9e;->cancel()V
+    :pswitch_0
+    new-instance v0, Lhp5;
 
-    return-void
-.end method
+    invoke-direct {v0, p0}, Lhp5;-><init>(Lor5;)V
 
-.method public final d(Ll9e;)V
-    .locals 2
+    return-object v0
 
-    iget-object v0, p0, Lor5;->o:Ll9e;
+    nop
 
-    invoke-static {v0, p1}, Ln9e;->e(Ll9e;Ll9e;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    iput-object p1, p0, Lor5;->o:Ll9e;
-
-    iget-object v0, p0, Lkg4;->a:Lj9e;
-
-    invoke-interface {v0, p0}, Lj9e;->d(Ll9e;)V
-
-    const-wide v0, 0x7fffffffffffffffL
-
-    invoke-interface {p1, v0, v1}, Ll9e;->i(J)V
-
-    :cond_0
-    return-void
-.end method
-
-.method public final h(Ljava/lang/Object;)V
-    .locals 1
-
-    iget-boolean v0, p0, Lor5;->X:Z
-
-    if-eqz v0, :cond_0
-
-    return-void
-
-    :cond_0
-    iget-object v0, p0, Lkg4;->b:Ljava/lang/Object;
-
-    if-eqz v0, :cond_1
-
-    const/4 p1, 0x1
-
-    iput-boolean p1, p0, Lor5;->X:Z
-
-    iget-object p1, p0, Lor5;->o:Ll9e;
-
-    invoke-interface {p1}, Ll9e;->cancel()V
-
-    new-instance p1, Ljava/lang/IllegalArgumentException;
-
-    const-string v0, "Sequence contains more than one element!"
-
-    invoke-direct {p1, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    iget-object p0, p0, Lkg4;->a:Lj9e;
-
-    invoke-interface {p0, p1}, Lj9e;->onError(Ljava/lang/Throwable;)V
-
-    return-void
-
-    :cond_1
-    iput-object p1, p0, Lkg4;->b:Ljava/lang/Object;
-
-    return-void
-.end method
-
-.method public final onError(Ljava/lang/Throwable;)V
-    .locals 1
-
-    iget-boolean v0, p0, Lor5;->X:Z
-
-    if-eqz v0, :cond_0
-
-    invoke-static {p1}, Lou0;->x(Ljava/lang/Throwable;)V
-
-    return-void
-
-    :cond_0
-    const/4 v0, 0x1
-
-    iput-boolean v0, p0, Lor5;->X:Z
-
-    iget-object p0, p0, Lkg4;->a:Lj9e;
-
-    invoke-interface {p0, p1}, Lj9e;->onError(Ljava/lang/Throwable;)V
-
-    return-void
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

@@ -1,121 +1,71 @@
-.class public final Lyd8;
-.super Lqde;
+.class public abstract Lyd8;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ll66;
 
+# static fields
+.field public static final a:Ljava/lang/Object;
 
-# instance fields
-.field public synthetic X:Ljava/lang/Object;
-
-.field public final synthetic Y:Lone/me/mediapicker/MediaPickerScreen;
+.field public static final b:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/mediapicker/MediaPickerScreen;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 3
 
-    iput-object p2, p0, Lyd8;->Y:Lone/me/mediapicker/MediaPickerScreen;
+    new-instance v0, Lrw7;
 
-    const/4 p2, 0x2
+    const/16 v1, 0xf
 
-    invoke-direct {p0, p2, p1}, Lqde;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {v0, v1}, Lrw7;-><init>(I)V
+
+    const/4 v1, 0x3
+
+    invoke-static {v1, v0}, Lcb7;->G(ILzb6;)Lcl7;
+
+    move-result-object v0
+
+    sput-object v0, Lyd8;->a:Ljava/lang/Object;
+
+    new-instance v0, Lrw7;
+
+    const/16 v2, 0x10
+
+    invoke-direct {v0, v2}, Lrw7;-><init>(I)V
+
+    invoke-static {v1, v0}, Lcb7;->G(ILzb6;)Lcl7;
+
+    move-result-object v0
+
+    sput-object v0, Lyd8;->b:Ljava/lang/Object;
 
     return-void
 .end method
 
-
-# virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
-
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Lyd8;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p0
-
-    check-cast p0, Lyd8;
-
-    sget-object p1, Le5f;->a:Le5f;
-
-    invoke-virtual {p0, p1}, Lyd8;->o(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p1
-.end method
-
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+.method public static final a()Landroid/graphics/Matrix;
     .locals 1
 
-    new-instance v0, Lyd8;
+    sget-object v0, Lyd8;->a:Ljava/lang/Object;
 
-    iget-object p0, p0, Lyd8;->Y:Lone/me/mediapicker/MediaPickerScreen;
+    invoke-interface {v0}, Lcl7;->getValue()Ljava/lang/Object;
 
-    invoke-direct {v0, p2, p0}, Lyd8;-><init>(Lkotlin/coroutines/Continuation;Lone/me/mediapicker/MediaPickerScreen;)V
+    move-result-object v0
 
-    iput-object p1, v0, Lyd8;->X:Ljava/lang/Object;
+    check-cast v0, Landroid/graphics/Matrix;
 
     return-object v0
 .end method
 
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 3
+.method public static final b()Landroid/graphics/Path;
+    .locals 1
 
-    invoke-static {p1}, Lsgg;->Z(Ljava/lang/Object;)V
+    sget-object v0, Lyd8;->b:Ljava/lang/Object;
 
-    iget-object p1, p0, Lyd8;->X:Ljava/lang/Object;
+    invoke-interface {v0}, Lcl7;->getValue()Ljava/lang/Object;
 
-    check-cast p1, Lkl9;
+    move-result-object v0
 
-    instance-of v0, p1, Lud8;
+    check-cast v0, Landroid/graphics/Path;
 
-    if-eqz v0, :cond_0
-
-    new-instance v0, Landroid/content/Intent;
-
-    iget-object p0, p0, Lyd8;->Y:Lone/me/mediapicker/MediaPickerScreen;
-
-    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
-
-    move-result-object v1
-
-    const-class v2, Lru/ok/messages/views/ActAvatarCrop;
-
-    invoke-direct {v0, v1, v2}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
-
-    check-cast p1, Lud8;
-
-    iget-object v1, p1, Lud8;->b:Landroid/net/Uri;
-
-    const-string v2, "ru.ok.tamtam.extra.URI"
-
-    invoke-virtual {v0, v2, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Landroid/os/Parcelable;)Landroid/content/Intent;
-
-    const-string v1, "ru.ok.tamtam.extra.FILE_PATH"
-
-    iget-object p1, p1, Lud8;->c:Ljava/lang/String;
-
-    invoke-virtual {v0, v1, p1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
-
-    const-string p1, "ru.ok.tamtam.extra.SHOW_RECAPTURE"
-
-    const/4 v1, 0x1
-
-    invoke-virtual {v0, p1, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
-
-    const-string p1, "ru.ok.tamtam.extra.FOR_CHAT_BACKGROUND"
-
-    const/4 v1, 0x0
-
-    invoke-virtual {v0, p1, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
-
-    const/16 p1, 0x29a
-
-    invoke-virtual {p0, v0, p1}, Lou3;->startActivityForResult(Landroid/content/Intent;I)V
-
-    :cond_0
-    sget-object p0, Le5f;->a:Le5f;
-
-    return-object p0
+    return-object v0
 .end method

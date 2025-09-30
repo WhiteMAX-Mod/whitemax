@@ -1,142 +1,182 @@
 .class public final Llr0;
-.super Lwk;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lby3;
 
 
 # instance fields
-.field public final b:Lkr0;
+.field public final synthetic a:I
 
-.field public final c:Lmr0;
+.field public final b:Ljava/lang/Object;
+
+.field public final c:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Lkr0;Lmr0;)V
+.method public constructor <init>(Lrzc;Lone/me/sdk/bottomsheet/BottomSheetWidget;)V
     .locals 1
 
-    iget-object v0, p1, Lkr0;->a:Ljava/lang/String;
+    const/4 v0, 0x0
 
-    invoke-direct {p0, v0}, Lwk;-><init>(Ljava/lang/String;)V
+    iput v0, p0, Llr0;->a:I
 
-    iput-object p1, p0, Llr0;->b:Lkr0;
+    .line 3
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p2, p0, Llr0;->c:Lmr0;
+    .line 4
+    iput-object p1, p0, Llr0;->b:Ljava/lang/Object;
+
+    iput-object p2, p0, Llr0;->c:Ljava/lang/Object;
+
+    return-void
+.end method
+
+.method public constructor <init>(Lxx3;Lzb6;)V
+    .locals 1
+
+    const/4 v0, 0x1
+
+    iput v0, p0, Llr0;->a:I
+
+    .line 1
+    invoke-virtual {p1}, Lxx3;->getInstanceId()Ljava/lang/String;
+
+    move-result-object p1
+
+    .line 2
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Llr0;->b:Ljava/lang/Object;
+
+    iput-object p2, p0, Llr0;->c:Ljava/lang/Object;
+
+    return-void
+.end method
+
+.method private final c(Lxx3;Lxx3;Z)V
+    .locals 0
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Z
-    .locals 1
-
-    iget-object v0, p0, Llr0;->b:Lkr0;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    iget-object p0, p0, Llr0;->c:Lmr0;
-
-    invoke-virtual {p0}, Lmr0;->canRepeat()Z
-
-    move-result p0
-
-    if-eqz p0, :cond_0
-
-    const/4 p0, 0x1
-
-    return p0
-
-    :cond_0
-    const/4 p0, 0x0
-
-    return p0
-.end method
-
-.method public final b()Z
+.method public final a(Lxx3;Lxx3;Z)V
     .locals 0
 
-    iget-object p0, p0, Llr0;->c:Lmr0;
+    iget p1, p0, Llr0;->a:I
 
-    invoke-virtual {p0}, Lmr0;->isSupplied()Z
+    packed-switch p1, :pswitch_data_0
 
-    move-result p0
+    if-eqz p2, :cond_0
 
-    return p0
+    invoke-virtual {p2}, Lxx3;->getInstanceId()Ljava/lang/String;
+
+    move-result-object p1
+
+    goto :goto_0
+
+    :cond_0
+    const/4 p1, 0x0
+
+    :goto_0
+    iget-object p2, p0, Llr0;->b:Ljava/lang/Object;
+
+    check-cast p2, Ljava/lang/String;
+
+    invoke-static {p1, p2}, Lvyg;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_1
+
+    if-nez p3, :cond_1
+
+    iget-object p0, p0, Llr0;->c:Ljava/lang/Object;
+
+    check-cast p0, Lzb6;
+
+    invoke-interface {p0}, Lzb6;->invoke()Ljava/lang/Object;
+
+    :cond_1
+    return-void
+
+    :pswitch_0
+    if-nez p2, :cond_2
+
+    goto :goto_1
+
+    :cond_2
+    iget-object p1, p0, Llr0;->b:Ljava/lang/Object;
+
+    check-cast p1, Lrzc;
+
+    invoke-virtual {p1, p0}, Lrzc;->L(Lby3;)V
+
+    iget-object p0, p0, Llr0;->c:Ljava/lang/Object;
+
+    check-cast p0, Lone/me/sdk/bottomsheet/BottomSheetWidget;
+
+    const/4 p1, 0x1
+
+    invoke-virtual {p0, p1}, Lone/me/sdk/bottomsheet/BaseBottomSheetWidget;->E0(Z)V
+
+    :goto_1
+    return-void
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method
 
-.method public final c()Z
+.method public final b(Lxx3;Lxx3;Z)V
     .locals 1
 
-    iget-object v0, p0, Llr0;->b:Lkr0;
+    iget p1, p0, Llr0;->a:I
 
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    packed-switch p1, :pswitch_data_0
 
-    iget-object p0, p0, Llr0;->c:Lmr0;
+    if-eqz p2, :cond_0
 
-    invoke-virtual {p0}, Lmr0;->shouldPost()Z
+    invoke-virtual {p2}, Lxx3;->getInstanceId()Ljava/lang/String;
 
-    move-result p0
+    move-result-object p1
 
-    if-eqz p0, :cond_0
-
-    const/4 p0, 0x1
-
-    return p0
+    goto :goto_0
 
     :cond_0
-    const/4 p0, 0x0
+    const/4 p1, 0x0
 
-    return p0
-.end method
+    :goto_0
+    iget-object v0, p0, Llr0;->b:Ljava/lang/Object;
 
-.method public final d(Lkb7;)V
-    .locals 2
+    check-cast v0, Ljava/lang/String;
 
-    iget-object v0, p0, Llr0;->c:Lmr0;
+    invoke-static {p1, v0}, Lvyg;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    invoke-virtual {v0}, Lmr0;->shouldSkipParam()Z
+    move-result p1
 
-    move-result v1
+    if-eqz p1, :cond_1
 
-    if-eqz v1, :cond_0
+    if-nez p3, :cond_1
 
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    invoke-virtual {p2}, Lxx3;->getRouter()Lrzc;
 
+    move-result-object p1
+
+    invoke-virtual {p1, p0}, Lrzc;->L(Lby3;)V
+
+    :cond_1
+    :pswitch_0
     return-void
 
-    :cond_0
-    iget-object p0, p0, Llr0;->b:Lkr0;
+    nop
 
-    iget-object p0, p0, Lkr0;->a:Ljava/lang/String;
-
-    invoke-interface {p1, p0}, Lkb7;->k0(Ljava/lang/String;)Lkb7;
-
-    invoke-virtual {v0, p1}, Lmr0;->write(Lkb7;)V
-
-    return-void
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 2
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
-    iget-object v1, p0, Lwk;->a:Ljava/lang/String;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, " = "
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object p0, p0, Llr0;->c:Lmr0;
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

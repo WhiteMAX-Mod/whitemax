@@ -1,98 +1,54 @@
 .class public final Lx49;
-.super Lqde;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Ll66;
-
-
-# instance fields
-.field public synthetic X:Ljava/lang/Object;
-
-.field public final synthetic Y:Lone/me/messages/list/ui/MessagesListWidget;
-
-
-# direct methods
-.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/messages/list/ui/MessagesListWidget;)V
-    .locals 0
-
-    iput-object p2, p0, Lx49;->Y:Lone/me/messages/list/ui/MessagesListWidget;
-
-    const/4 p2, 0x2
-
-    invoke-direct {p0, p2, p1}, Lqde;-><init>(ILkotlin/coroutines/Continuation;)V
-
-    return-void
-.end method
+.implements Lz49;
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
-
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Lx49;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p0
-
-    check-cast p0, Lx49;
-
-    sget-object p1, Le5f;->a:Le5f;
-
-    invoke-virtual {p0, p1}, Lx49;->o(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p1
-.end method
-
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+.method public final equals(Ljava/lang/Object;)Z
     .locals 1
 
-    new-instance v0, Lx49;
+    const/4 v0, 0x1
 
-    iget-object p0, p0, Lx49;->Y:Lone/me/messages/list/ui/MessagesListWidget;
+    if-ne p0, p1, :cond_0
 
-    invoke-direct {v0, p2, p0}, Lx49;-><init>(Lkotlin/coroutines/Continuation;Lone/me/messages/list/ui/MessagesListWidget;)V
-
-    iput-object p1, v0, Lx49;->X:Ljava/lang/Object;
-
-    return-object v0
-.end method
-
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
-
-    invoke-static {p1}, Lsgg;->Z(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Lx49;->X:Ljava/lang/Object;
-
-    check-cast p1, Ljava/lang/Boolean;
-
-    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
-
-    move-result p1
-
-    sget-object v0, Lone/me/messages/list/ui/MessagesListWidget;->V0:[Lbc7;
-
-    iget-object p0, p0, Lx49;->Y:Lone/me/messages/list/ui/MessagesListWidget;
-
-    invoke-virtual {p0}, Lone/me/messages/list/ui/MessagesListWidget;->A0()Lxuc;
-
-    move-result-object p0
-
-    if-nez p1, :cond_0
-
-    const/4 p1, 0x0
-
-    goto :goto_0
+    return v0
 
     :cond_0
-    const/16 p1, 0x8
+    instance-of p0, p1, Lx49;
 
-    :goto_0
-    invoke-virtual {p0, p1}, Landroid/view/View;->setVisibility(I)V
+    if-nez p0, :cond_1
 
-    sget-object p0, Le5f;->a:Le5f;
+    const/4 p0, 0x0
+
+    return p0
+
+    :cond_1
+    check-cast p1, Lx49;
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 0
+
+    const/4 p0, 0x1
+
+    invoke-static {p0}, Ljava/lang/Boolean;->hashCode(Z)I
+
+    move-result p0
+
+    return p0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 0
+
+    const-string p0, "ShowCancelForwardMessageBottomSheet(stayOnScreen=true)"
 
     return-object p0
 .end method

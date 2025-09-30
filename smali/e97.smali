@@ -1,21 +1,27 @@
 .class public final Le97;
-.super Lio;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:Le97;
+# instance fields
+.field public final a:Ly2;
+
+.field public b:Lxh4;
+
+.field public c:Lc83;
+
+.field public d:Lcr0;
+
+.field public e:Z
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(Ly2;)V
+    .locals 0
 
-    new-instance v0, Le97;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0}, Lio;-><init>()V
-
-    sput-object v0, Le97;->a:Le97;
+    iput-object p1, p0, Le97;->a:Ly2;
 
     return-void
 .end method

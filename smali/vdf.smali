@@ -1,98 +1,102 @@
 .class public final Lvdf;
-.super Ljava/lang/Object;
+.super La3e;
 .source "SourceFile"
 
 # interfaces
-.implements Lp9f;
-.implements Lgv6;
-.implements Ltqe;
-
-
-# static fields
-.field public static final b:Ls90;
-
-.field public static final c:Ls90;
-
-.field public static final o:Ls90;
+.implements Lxdf;
 
 
 # instance fields
-.field public final a:Lqka;
+.field public final n:Ljava/util/List;
+
+.field public o:Lfxf;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 4
+.method public constructor <init>(JLbx0;Lr52;Lc83;Lgxf;Li5g;Landroid/content/Context;Ljava/util/List;Z)V
+    .locals 11
 
-    new-instance v0, Ls90;
+    sget-object v6, Ldp4;->a:Ldp4;
 
-    const-string v1, "camerax.video.VideoCapture.videoOutput"
+    move-object v0, p0
 
-    const-class v2, Lmkf;
+    move-wide v9, p1
 
-    const/4 v3, 0x0
+    move-object v5, p3
 
-    invoke-direct {v0, v1, v2, v3}, Ls90;-><init>(Ljava/lang/String;Ljava/lang/Class;Landroid/hardware/camera2/CaptureRequest$Key;)V
+    move-object v7, p4
 
-    sput-object v0, Lvdf;->b:Ls90;
+    move-object/from16 v3, p5
 
-    new-instance v0, Ls90;
+    move-object/from16 v2, p6
 
-    const-string v1, "camerax.video.VideoCapture.videoEncoderInfoFinder"
+    move-object/from16 v4, p7
 
-    const-class v2, Lw66;
+    move-object/from16 v1, p8
 
-    invoke-direct {v0, v1, v2, v3}, Ls90;-><init>(Ljava/lang/String;Ljava/lang/Class;Landroid/hardware/camera2/CaptureRequest$Key;)V
+    move/from16 v8, p10
 
-    sput-object v0, Lvdf;->c:Ls90;
+    invoke-direct/range {v0 .. v10}, La3e;-><init>(Landroid/content/Context;Lgxf;Lc83;Luxf;Lbx0;Ljava/util/concurrent/Executor;Lr52;ZJ)V
 
-    new-instance v0, Ls90;
+    move-object/from16 p1, p9
 
-    const-string v1, "camerax.video.VideoCapture.forceEnableSurfaceProcessing"
-
-    const-class v2, Ljava/lang/Boolean;
-
-    invoke-direct {v0, v1, v2, v3}, Ls90;-><init>(Ljava/lang/String;Ljava/lang/Class;Landroid/hardware/camera2/CaptureRequest$Key;)V
-
-    sput-object v0, Lvdf;->o:Ls90;
-
-    return-void
-.end method
-
-.method public constructor <init>(Lqka;)V
-    .locals 2
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    sget-object v0, Lvdf;->b:Ls90;
-
-    iget-object v1, p1, Lqka;->a:Ljava/util/TreeMap;
-
-    invoke-virtual {v1, v0}, Ljava/util/TreeMap;->containsKey(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    invoke-static {v0}, Lfq0;->l(Z)V
-
-    iput-object p1, p0, Lvdf;->a:Lqka;
+    iput-object p1, p0, Lvdf;->n:Ljava/util/List;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final getConfig()Lrc3;
-    .locals 0
+.method public final c()V
+    .locals 2
 
-    iget-object p0, p0, Lvdf;->a:Lqka;
+    iget v0, p0, La3e;->m:I
 
-    return-object p0
+    invoke-virtual {p0, v0}, La3e;->b(I)Lixf;
+
+    move-result-object p0
+
+    const-wide/16 v0, -0x3
+
+    check-cast p0, Lfk4;
+
+    invoke-virtual {p0, v0, v1}, Lfk4;->e(J)V
+
+    return-void
 .end method
 
-.method public final getInputFormat()I
-    .locals 0
+.method public final d(I)Lqm6;
+    .locals 4
 
-    const/16 p0, 0x22
+    iget-object v0, p0, Lvdf;->o:Lfxf;
 
-    return p0
+    if-nez v0, :cond_0
+
+    const/4 v0, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    :goto_0
+    invoke-static {v0}, Lmq0;->h(Z)V
+
+    invoke-virtual {p0, p1}, La3e;->e(I)V
+
+    new-instance v0, Lfxf;
+
+    invoke-virtual {p0, p1}, La3e;->b(I)Lixf;
+
+    move-result-object p1
+
+    iget-object v1, p0, Lvdf;->n:Ljava/util/List;
+
+    iget-wide v2, p0, La3e;->h:J
+
+    invoke-direct {v0, p1, v1, v2, v3}, Lfxf;-><init>(Lixf;Ljava/util/List;J)V
+
+    iput-object v0, p0, Lvdf;->o:Lfxf;
+
+    return-object v0
 .end method

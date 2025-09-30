@@ -1,118 +1,235 @@
-.class public final Lzpf;
+.class public final synthetic Lzpf;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Landroid/view/View$OnAttachStateChangeListener;
+.implements Lsc3;
+.implements Lw98;
 
 
 # instance fields
-.field public a:Ldwd;
+.field public final synthetic a:Laqf;
 
-.field public final synthetic b:Lqde;
-
-.field public final synthetic c:Landroid/view/View;
+.field public final synthetic b:Ldof;
 
 
 # direct methods
-.method public constructor <init>(Ln66;Landroid/view/View;)V
+.method public synthetic constructor <init>(Laqf;Ldof;)V
     .locals 0
 
+    iput-object p1, p0, Lzpf;->a:Laqf;
+
+    iput-object p2, p0, Lzpf;->b:Ldof;
+
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    check-cast p1, Lqde;
-
-    iput-object p1, p0, Lzpf;->b:Lqde;
-
-    iput-object p2, p0, Lzpf;->c:Landroid/view/View;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onViewAttachedToWindow(Landroid/view/View;)V
-    .locals 6
+.method public d(Ljc3;)V
+    .locals 4
 
-    iget-object v0, p0, Lzpf;->a:Ldwd;
+    iget-object v0, p0, Lzpf;->a:Laqf;
 
-    if-eqz v0, :cond_0
+    iget-object p0, p0, Lzpf;->b:Ldof;
 
-    invoke-virtual {v0}, Ld0;->isActive()Z
+    const-string v1, "aqf"
 
-    move-result v0
+    new-instance v2, Ljava/lang/StringBuilder;
 
-    const/4 v1, 0x1
+    const-string v3, "removeUpload: upload="
 
-    if-ne v0, v1, :cond_0
+    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    return-void
+    invoke-virtual {v2, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    :cond_0
-    sget-object v0, Lqp4;->q0:Lap9;
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    invoke-virtual {p1}, Landroid/view/View;->getContext()Landroid/content/Context;
+    move-result-object v2
+
+    invoke-static {v1, v2}, Ljtg;->l(Ljava/lang/String;Ljava/lang/String;)V
+
+    monitor-enter v0
+
+    :try_start_0
+    iget-object v1, v0, Laqf;->a:Lcqf;
+
+    invoke-virtual {v1, p0}, Lcqf;->c(Ldof;)Lhc3;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lap9;->g(Landroid/content/Context;)Lqp4;
+    iget-object v2, v0, Laqf;->b:Lzte;
 
-    move-result-object v0
+    invoke-virtual {v2}, Lzte;->getValue()Ljava/lang/Object;
 
-    iget-object v0, v0, Lqp4;->p0:Ljava/lang/Object;
+    move-result-object v2
 
-    check-cast v0, Lu5c;
+    check-cast v2, Lxpf;
 
-    new-instance v1, Lxpf;
+    invoke-interface {v2, p0}, Lxpf;->c(Ldof;)Lhc3;
 
-    iget-object v2, p0, Lzpf;->b:Lqde;
+    move-result-object p0
 
-    iget-object v3, p0, Lzpf;->c:Landroid/view/View;
+    invoke-virtual {v1, p0}, Lhc3;->e(Lhc3;)Lic3;
 
-    const/4 v4, 0x0
+    move-result-object p0
 
-    invoke-direct {v1, v2, v3, p1, v4}, Lxpf;-><init>(Ln66;Landroid/view/View;Landroid/view/View;Lkotlin/coroutines/Continuation;)V
+    invoke-virtual {p0}, Lhc3;->a()V
 
-    new-instance v5, Lon5;
+    monitor-exit v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    invoke-direct {v5, v1, v0}, Lon5;-><init>(Ll66;Lzm5;)V
+    invoke-virtual {p1}, Ljc3;->f()Z
 
-    new-instance v0, Lypf;
+    move-result p0
 
-    invoke-direct {v0, v2, v3, v4}, Lypf;-><init>(Ln66;Landroid/view/View;Lkotlin/coroutines/Continuation;)V
+    if-nez p0, :cond_0
 
-    new-instance v1, Lgp5;
-
-    const/4 v2, 0x1
-
-    invoke-direct {v1, v5, v0, v2}, Lgp5;-><init>(Lzm5;Ll66;I)V
-
-    invoke-static {p1}, Lfof;->b(Landroid/view/View;)Lsg7;
-
-    move-result-object p1
-
-    invoke-static {v1, p1}, Lsgg;->L(Lzm5;Lox3;)Ldwd;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lzpf;->a:Ldwd;
-
-    return-void
-.end method
-
-.method public final onViewDetachedFromWindow(Landroid/view/View;)V
-    .locals 1
-
-    iget-object p1, p0, Lzpf;->a:Ldwd;
-
-    const/4 v0, 0x0
-
-    if-eqz p1, :cond_0
-
-    invoke-virtual {p1, v0}, Lx87;->cancel(Ljava/util/concurrent/CancellationException;)V
+    invoke-virtual {p1}, Ljc3;->b()V
 
     :cond_0
-    iput-object v0, p0, Lzpf;->a:Ldwd;
-
     return-void
+
+    :catchall_0
+    move-exception p0
+
+    :try_start_1
+    monitor-exit v0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    throw p0
+.end method
+
+.method public f(Le98;)V
+    .locals 5
+
+    iget-object v0, p0, Lzpf;->a:Laqf;
+
+    iget-object p0, p0, Lzpf;->b:Ldof;
+
+    const-string v1, "aqf"
+
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    const-string v3, "getUpload: upload="
+
+    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v2, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-static {v1, v2}, Ljtg;->l(Ljava/lang/String;Ljava/lang/String;)V
+
+    monitor-enter v0
+
+    :try_start_0
+    iget-object v1, v0, Laqf;->a:Lcqf;
+
+    invoke-virtual {v1, p0}, Lcqf;->d(Ldof;)La98;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, La98;->b()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lvnf;
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    goto :goto_0
+
+    :catchall_0
+    move-exception p0
+
+    goto :goto_2
+
+    :catch_0
+    const/4 v1, 0x0
+
+    :goto_0
+    :try_start_1
+    monitor-exit v0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    if-nez v1, :cond_0
+
+    :try_start_2
+    iget-object v2, v0, Laqf;->b:Lzte;
+
+    invoke-virtual {v2}, Lzte;->getValue()Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Lxpf;
+
+    invoke-interface {v2, p0}, Lxpf;->d(Ldof;)La98;
+
+    move-result-object p0
+
+    iget-object v0, v0, Laqf;->a:Lcqf;
+
+    invoke-static {v0}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
+
+    new-instance v2, Lywe;
+
+    const/16 v3, 0xd
+
+    invoke-direct {v2, v3, v0}, Lywe;-><init>(ILjava/lang/Object;)V
+
+    new-instance v0, Lx98;
+
+    sget-object v3, Lvyg;->d:Lsh9;
+
+    sget-object v4, Lvyg;->c:Lgd6;
+
+    invoke-direct {v0, p0, v2, v3, v4}, Lx98;-><init>(La98;Lpm3;Lpm3;Lc6;)V
+
+    invoke-virtual {v0}, La98;->b()Ljava/lang/Object;
+
+    move-result-object p0
+
+    check-cast p0, Lvnf;
+    :try_end_2
+    .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_1
+
+    move-object v1, p0
+
+    :catch_1
+    :cond_0
+    invoke-virtual {p1}, Le98;->f()Z
+
+    move-result p0
+
+    if-nez p0, :cond_2
+
+    if-nez v1, :cond_1
+
+    invoke-virtual {p1}, Le98;->b()V
+
+    goto :goto_1
+
+    :cond_1
+    invoke-virtual {p1, v1}, Le98;->a(Ljava/lang/Object;)V
+
+    :cond_2
+    :goto_1
+    return-void
+
+    :goto_2
+    :try_start_3
+    monitor-exit v0
+    :try_end_3
+    .catchall {:try_start_3 .. :try_end_3} :catchall_0
+
+    throw p0
 .end method

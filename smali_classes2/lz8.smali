@@ -1,78 +1,134 @@
-.class public final Llz8;
-.super Lqde;
+.class public final synthetic Llz8;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Ll66;
+.implements Lzb6;
 
 
 # instance fields
-.field public synthetic X:Ljava/lang/Object;
+.field public final synthetic a:I
 
-.field public final synthetic Y:Lone/me/sdk/messagewrite/MessageWriteWidget;
+.field public final synthetic b:Lys9;
 
 
 # direct methods
-.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/sdk/messagewrite/MessageWriteWidget;)V
+.method public synthetic constructor <init>(Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;Lys9;)V
     .locals 0
 
-    iput-object p2, p0, Llz8;->Y:Lone/me/sdk/messagewrite/MessageWriteWidget;
+    .line 2
+    const/4 p1, 0x0
 
-    const/4 p2, 0x2
+    iput p1, p0, Llz8;->a:I
 
-    invoke-direct {p0, p2, p1}, Lqde;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p2, p0, Llz8;->b:Lys9;
+
+    return-void
+.end method
+
+.method public synthetic constructor <init>(Lys9;I)V
+    .locals 0
+
+    .line 1
+    iput p2, p0, Llz8;->a:I
+
+    iput-object p1, p0, Llz8;->b:Lys9;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final invoke()Ljava/lang/Object;
+    .locals 7
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    iget v0, p0, Llz8;->a:I
 
-    invoke-virtual {p0, p1, p2}, Llz8;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    const/4 v1, 0x0
+
+    sget-object v2, Lylf;->a:Lylf;
+
+    iget-object p0, p0, Llz8;->b:Lys9;
+
+    packed-switch v0, :pswitch_data_0
+
+    sget-object v0, Lone/me/messages/list/ui/MessagesListWidget;->Z0:[Lxi7;
+
+    sget-object v0, Li89;->c:Li89;
+
+    check-cast p0, Laua;
+
+    iget-object p0, p0, Laua;->d:Ljava/lang/String;
+
+    invoke-virtual {v0}, Lx2;->F0()Lza4;
+
+    move-result-object v0
+
+    const-string v3, ":call-join-link?link="
+
+    invoke-virtual {v3, p0}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
 
-    check-cast p0, Llz8;
+    invoke-virtual {v0, p0, v1}, Lza4;->b(Ljava/lang/String;Landroid/os/Bundle;)Z
 
-    sget-object p1, Le5f;->a:Le5f;
+    return-object v2
 
-    invoke-virtual {p0, p1}, Llz8;->o(Ljava/lang/Object;)Ljava/lang/Object;
+    :pswitch_0
+    sget-object v0, Lone/me/messages/list/ui/MessagesListWidget;->Z0:[Lxi7;
 
-    return-object p1
-.end method
+    sget-object v0, Li89;->c:Li89;
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 1
+    check-cast p0, Lmua;
 
-    new-instance v0, Llz8;
+    iget-wide v3, p0, Lmua;->b:J
 
-    iget-object p0, p0, Llz8;->Y:Lone/me/sdk/messagewrite/MessageWriteWidget;
+    iget-boolean p0, p0, Lmua;->c:Z
 
-    invoke-direct {v0, p2, p0}, Llz8;-><init>(Lkotlin/coroutines/Continuation;Lone/me/sdk/messagewrite/MessageWriteWidget;)V
+    invoke-virtual {v0}, Lx2;->F0()Lza4;
 
-    iput-object p1, v0, Llz8;->X:Ljava/lang/Object;
+    move-result-object v0
 
-    return-object v0
-.end method
+    new-instance v5, Ljava/lang/StringBuilder;
 
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+    const-string v6, ":call-user?opponent_id="
 
-    invoke-static {p1}, Lsgg;->Z(Ljava/lang/Object;)V
+    invoke-direct {v5, v6}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-object p1, p0, Llz8;->X:Ljava/lang/Object;
+    invoke-virtual {v5, v3, v4}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
-    check-cast p1, Lay8;
+    const-string v3, "&video_enabled="
 
-    iget-object p0, p0, Llz8;->Y:Lone/me/sdk/messagewrite/MessageWriteWidget;
+    invoke-virtual {v5, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-static {p0, p1}, Lone/me/sdk/messagewrite/MessageWriteWidget;->r0(Lone/me/sdk/messagewrite/MessageWriteWidget;Lay8;)V
+    invoke-virtual {v5, p0}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
-    sget-object p0, Le5f;->a:Le5f;
+    invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    return-object p0
+    move-result-object p0
+
+    invoke-virtual {v0, p0, v1}, Lza4;->b(Ljava/lang/String;Landroid/os/Bundle;)Z
+
+    return-object v2
+
+    :pswitch_1
+    sget-object v0, Lone/me/messages/list/ui/contextmenu/MessageContextMenuBottomSheet;->a1:[Lxi7;
+
+    sget-object v0, Li89;->c:Li89;
+
+    check-cast p0, Lva4;
+
+    invoke-virtual {v0, p0}, Lx2;->H0(Lva4;)V
+
+    return-object v2
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

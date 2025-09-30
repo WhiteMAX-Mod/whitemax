@@ -4,5 +4,5 @@
 
 
 # virtual methods
-.method public abstract a(Landroid/graphics/Matrix;Landroid/graphics/Rect;IIFF)Landroid/graphics/Matrix;
+.method public abstract accept(Ljava/lang/Object;Ljava/lang/Object;)V
 .end method

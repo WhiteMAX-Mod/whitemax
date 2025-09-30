@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lkpb;
+.implements Lt1c;
 
 
 # direct methods

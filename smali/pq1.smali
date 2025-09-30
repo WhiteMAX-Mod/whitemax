@@ -1,374 +1,97 @@
-.class public final synthetic Lpq1;
-.super Lah9;
+.class public final enum Lpq1;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
 
-# instance fields
-.field public final synthetic a:I
+# static fields
+.field public static final synthetic X:[Lpq1;
+
+.field public static final enum a:Lpq1;
+
+.field public static final enum b:Lpq1;
+
+.field public static final enum c:Lpq1;
+
+.field public static final enum o:Lpq1;
 
 
 # direct methods
-.method public synthetic constructor <init>(IILjava/lang/Class;Ljava/lang/Object;Ljava/lang/String;Ljava/lang/String;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 6
 
-    iput p2, p0, Lpq1;->a:I
+    new-instance v0, Lpq1;
 
-    move-object p2, p3
+    const-string v1, "ACTIVE"
 
-    move-object p3, p5
+    const/4 v2, 0x0
 
-    move p5, p1
+    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    move-object p1, p4
+    sput-object v0, Lpq1;->a:Lpq1;
 
-    move-object p4, p6
+    new-instance v1, Lpq1;
 
-    invoke-direct/range {p0 .. p5}, Lolb;-><init>(Ljava/lang/Object;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
+    const-string v2, "CALLING"
+
+    const/4 v3, 0x1
+
+    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v1, Lpq1;->b:Lpq1;
+
+    new-instance v2, Lpq1;
+
+    const-string v3, "NO_CONNECTION"
+
+    const/4 v4, 0x2
+
+    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v2, Lpq1;->c:Lpq1;
+
+    new-instance v3, Lpq1;
+
+    const-string v4, "NONE"
+
+    const/4 v5, 0x3
+
+    invoke-direct {v3, v4, v5}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v3, Lpq1;->o:Lpq1;
+
+    filled-new-array {v0, v1, v2, v3}, [Lpq1;
+
+    move-result-object v0
+
+    sput-object v0, Lpq1;->X:[Lpq1;
 
     return-void
 .end method
 
-
-# virtual methods
-.method public final get()Ljava/lang/Object;
+.method public static valueOf(Ljava/lang/String;)Lpq1;
     .locals 1
 
-    iget v0, p0, Lpq1;->a:I
+    const-class v0, Lpq1;
 
-    packed-switch v0, :pswitch_data_0
-
-    iget-object p0, p0, Lcq1;->receiver:Ljava/lang/Object;
-
-    check-cast p0, Lrg9;
-
-    iget-object p0, p0, Lrg9;->d:Lbd8;
-
-    return-object p0
-
-    :pswitch_0
-    iget-object p0, p0, Lcq1;->receiver:Ljava/lang/Object;
-
-    check-cast p0, Lrg9;
-
-    iget-object p0, p0, Lrg9;->d:Lbd8;
-
-    return-object p0
-
-    :pswitch_1
-    iget-object p0, p0, Lcq1;->receiver:Ljava/lang/Object;
-
-    check-cast p0, Lrg9;
-
-    iget-object p0, p0, Lrg9;->c:Lbd8;
-
-    return-object p0
-
-    :pswitch_2
-    iget-object p0, p0, Lcq1;->receiver:Ljava/lang/Object;
-
-    check-cast p0, Lrg9;
-
-    iget-object p0, p0, Lrg9;->b:Lbd8;
-
-    return-object p0
-
-    :pswitch_3
-    iget-object p0, p0, Lcq1;->receiver:Ljava/lang/Object;
-
-    check-cast p0, Lrg9;
-
-    iget-object p0, p0, Lrg9;->a:Lbd8;
-
-    return-object p0
-
-    :pswitch_4
-    iget-object p0, p0, Lcq1;->receiver:Ljava/lang/Object;
-
-    check-cast p0, Lrg9;
-
-    iget-object p0, p0, Lrg9;->d:Lbd8;
-
-    return-object p0
-
-    :pswitch_5
-    iget-object p0, p0, Lcq1;->receiver:Ljava/lang/Object;
-
-    check-cast p0, Lrg9;
-
-    iget-object p0, p0, Lrg9;->c:Lbd8;
-
-    return-object p0
-
-    :pswitch_6
-    iget-object p0, p0, Lcq1;->receiver:Ljava/lang/Object;
-
-    check-cast p0, Lrg9;
-
-    iget-object p0, p0, Lrg9;->b:Lbd8;
-
-    return-object p0
-
-    :pswitch_7
-    iget-object p0, p0, Lcq1;->receiver:Ljava/lang/Object;
-
-    check-cast p0, Lrg9;
-
-    iget-object p0, p0, Lrg9;->a:Lbd8;
-
-    return-object p0
-
-    :pswitch_8
-    iget-object p0, p0, Lcq1;->receiver:Ljava/lang/Object;
-
-    check-cast p0, Lrg9;
-
-    iget-object p0, p0, Lrg9;->b:Lbd8;
-
-    return-object p0
-
-    :pswitch_9
-    iget-object p0, p0, Lcq1;->receiver:Ljava/lang/Object;
-
-    check-cast p0, Lrg9;
-
-    iget-object p0, p0, Lrg9;->c:Lbd8;
-
-    return-object p0
-
-    :pswitch_a
-    iget-object p0, p0, Lcq1;->receiver:Ljava/lang/Object;
-
-    check-cast p0, Lrg9;
-
-    iget-object p0, p0, Lrg9;->a:Lbd8;
-
-    return-object p0
-
-    :pswitch_b
-    iget-object p0, p0, Lcq1;->receiver:Ljava/lang/Object;
-
-    check-cast p0, Ll21;
-
-    invoke-virtual {p0}, Ll21;->a()Lru/ok/android/externcalls/sdk/video/CameraManager;
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
 
     move-result-object p0
 
-    if-eqz p0, :cond_0
-
-    invoke-interface {p0}, Lru/ok/android/externcalls/sdk/video/CameraManager;->isCameraEnabled()Z
-
-    move-result p0
-
-    const/4 v0, 0x1
-
-    if-ne p0, v0, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    :goto_0
-    invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
-
-    move-result-object p0
+    check-cast p0, Lpq1;
 
     return-object p0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_b
-        :pswitch_a
-        :pswitch_9
-        :pswitch_8
-        :pswitch_7
-        :pswitch_6
-        :pswitch_5
-        :pswitch_4
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
 .end method
 
-.method public final set(Ljava/lang/Object;)V
+.method public static values()[Lpq1;
     .locals 1
 
-    iget v0, p0, Lpq1;->a:I
+    sget-object v0, Lpq1;->X:[Lpq1;
 
-    packed-switch v0, :pswitch_data_0
+    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
 
-    iget-object p0, p0, Lcq1;->receiver:Ljava/lang/Object;
+    move-result-object v0
 
-    check-cast p0, Lrg9;
+    check-cast v0, [Lpq1;
 
-    check-cast p1, Lbd8;
-
-    iput-object p1, p0, Lrg9;->d:Lbd8;
-
-    return-void
-
-    :pswitch_0
-    iget-object p0, p0, Lcq1;->receiver:Ljava/lang/Object;
-
-    check-cast p0, Lrg9;
-
-    check-cast p1, Lbd8;
-
-    iput-object p1, p0, Lrg9;->d:Lbd8;
-
-    return-void
-
-    :pswitch_1
-    iget-object p0, p0, Lcq1;->receiver:Ljava/lang/Object;
-
-    check-cast p0, Lrg9;
-
-    check-cast p1, Lbd8;
-
-    iput-object p1, p0, Lrg9;->c:Lbd8;
-
-    return-void
-
-    :pswitch_2
-    iget-object p0, p0, Lcq1;->receiver:Ljava/lang/Object;
-
-    check-cast p0, Lrg9;
-
-    check-cast p1, Lbd8;
-
-    iput-object p1, p0, Lrg9;->b:Lbd8;
-
-    return-void
-
-    :pswitch_3
-    iget-object p0, p0, Lcq1;->receiver:Ljava/lang/Object;
-
-    check-cast p0, Lrg9;
-
-    check-cast p1, Lbd8;
-
-    iput-object p1, p0, Lrg9;->a:Lbd8;
-
-    return-void
-
-    :pswitch_4
-    iget-object p0, p0, Lcq1;->receiver:Ljava/lang/Object;
-
-    check-cast p0, Lrg9;
-
-    check-cast p1, Lbd8;
-
-    iput-object p1, p0, Lrg9;->d:Lbd8;
-
-    return-void
-
-    :pswitch_5
-    iget-object p0, p0, Lcq1;->receiver:Ljava/lang/Object;
-
-    check-cast p0, Lrg9;
-
-    check-cast p1, Lbd8;
-
-    iput-object p1, p0, Lrg9;->c:Lbd8;
-
-    return-void
-
-    :pswitch_6
-    iget-object p0, p0, Lcq1;->receiver:Ljava/lang/Object;
-
-    check-cast p0, Lrg9;
-
-    check-cast p1, Lbd8;
-
-    iput-object p1, p0, Lrg9;->b:Lbd8;
-
-    return-void
-
-    :pswitch_7
-    iget-object p0, p0, Lcq1;->receiver:Ljava/lang/Object;
-
-    check-cast p0, Lrg9;
-
-    check-cast p1, Lbd8;
-
-    iput-object p1, p0, Lrg9;->a:Lbd8;
-
-    return-void
-
-    :pswitch_8
-    iget-object p0, p0, Lcq1;->receiver:Ljava/lang/Object;
-
-    check-cast p0, Lrg9;
-
-    check-cast p1, Lbd8;
-
-    iput-object p1, p0, Lrg9;->b:Lbd8;
-
-    return-void
-
-    :pswitch_9
-    iget-object p0, p0, Lcq1;->receiver:Ljava/lang/Object;
-
-    check-cast p0, Lrg9;
-
-    check-cast p1, Lbd8;
-
-    iput-object p1, p0, Lrg9;->c:Lbd8;
-
-    return-void
-
-    :pswitch_a
-    iget-object p0, p0, Lcq1;->receiver:Ljava/lang/Object;
-
-    check-cast p0, Lrg9;
-
-    check-cast p1, Lbd8;
-
-    iput-object p1, p0, Lrg9;->a:Lbd8;
-
-    return-void
-
-    :pswitch_b
-    iget-object p0, p0, Lcq1;->receiver:Ljava/lang/Object;
-
-    check-cast p0, Ll21;
-
-    check-cast p1, Ljava/lang/Boolean;
-
-    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
-
-    move-result p1
-
-    invoke-virtual {p0}, Ll21;->a()Lru/ok/android/externcalls/sdk/video/CameraManager;
-
-    move-result-object p0
-
-    if-eqz p0, :cond_0
-
-    invoke-interface {p0, p1}, Lru/ok/android/externcalls/sdk/video/CameraManager;->setCameraEnabled(Z)V
-
-    :cond_0
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_b
-        :pswitch_a
-        :pswitch_9
-        :pswitch_8
-        :pswitch_7
-        :pswitch_6
-        :pswitch_5
-        :pswitch_4
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    return-object v0
 .end method

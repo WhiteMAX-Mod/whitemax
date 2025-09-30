@@ -75,7 +75,7 @@
     goto :goto_0
 
     :cond_0
-    invoke-virtual {v0, p1}, Landroidx/recyclerview/widget/RecyclerView;->S(Landroid/view/View;)Lccc;
+    invoke-virtual {v0, p1}, Landroidx/recyclerview/widget/RecyclerView;->S(Landroid/view/View;)Lzoc;
 
     move-result-object v1
 
@@ -85,7 +85,7 @@
     return-void
 
     :cond_1
-    instance-of v1, v1, Lfu3;
+    instance-of v1, v1, Lox3;
 
     if-eqz v1, :cond_2
 

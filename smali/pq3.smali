@@ -3,12 +3,25 @@
 .source "SourceFile"
 
 
-# virtual methods
-.method public u()V
-    .locals 0
+# static fields
+.field public static final a:Loq3;
+
+
+# direct methods
+.method static constructor <clinit>()V
+    .locals 1
+
+    sget-object v0, Loq3;->a:Loq3;
+
+    sput-object v0, Lpq3;->a:Loq3;
 
     return-void
 .end method
 
-.method public abstract x(I)V
+
+# virtual methods
+.method public abstract a()Lrce;
+.end method
+
+.method public abstract b()V
 .end method

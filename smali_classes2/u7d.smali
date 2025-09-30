@@ -1,63 +1,101 @@
-.class public abstract Lu7d;
+.class public final synthetic Lu7d;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Landroid/view/View$OnApplyWindowInsetsListener;
+
+
+# instance fields
+.field public final synthetic a:Ljava/lang/Integer;
+
+.field public final synthetic b:Landroid/view/ViewGroup;
+
+.field public final synthetic c:Ljava/lang/Integer;
+
 
 # direct methods
-.method public static a([B)Lv7d;
-    .locals 7
+.method public synthetic constructor <init>(Ljava/lang/Integer;Landroid/view/ViewGroup;Ljava/lang/Integer;Lw7d;)V
+    .locals 0
 
-    new-instance v0, Lru/ok/tamtam/nano/Tasks$SyncChatHistory;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0}, Lru/ok/tamtam/nano/Tasks$SyncChatHistory;-><init>()V
+    iput-object p1, p0, Lu7d;->a:Ljava/lang/Integer;
 
-    :try_start_0
-    invoke-static {v0, p0}, Lnv8;->mergeFrom(Lnv8;[B)Lnv8;
+    iput-object p2, p0, Lu7d;->b:Landroid/view/ViewGroup;
+
+    iput-object p3, p0, Lu7d;->c:Ljava/lang/Integer;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final onApplyWindowInsets(Landroid/view/View;Landroid/view/WindowInsets;)Landroid/view/WindowInsets;
+    .locals 3
+
+    iget-object p1, p0, Lu7d;->a:Ljava/lang/Integer;
+
+    iget-object v0, p0, Lu7d;->b:Landroid/view/ViewGroup;
+
+    const-string v1, "statusBarOverlay"
+
+    if-eqz p1, :cond_0
+
+    invoke-virtual {p1}, Ljava/lang/Number;->intValue()I
+
+    move-result p1
+
+    const/4 v2, 0x1
+
+    invoke-static {v0, v1, p2, v2}, Lw7d;->q(Landroid/view/ViewGroup;Ljava/lang/String;Landroid/view/WindowInsets;I)Landroid/view/View;
+
+    move-result-object v1
+
+    invoke-virtual {v1, p1}, Landroid/view/View;->setBackgroundColor(I)V
+
+    goto :goto_0
+
+    :cond_0
+    invoke-virtual {v0, v1}, Landroid/view/View;->findViewWithTag(Ljava/lang/Object;)Landroid/view/View;
+
+    move-result-object p1
+
+    if-eqz p1, :cond_1
+
+    invoke-virtual {v0, p1}, Landroid/view/ViewGroup;->removeView(Landroid/view/View;)V
+
+    :cond_1
+    :goto_0
+    iget-object p0, p0, Lu7d;->c:Ljava/lang/Integer;
+
+    const-string p1, "navBarOverlay"
+
+    if-eqz p0, :cond_2
+
+    invoke-virtual {p0}, Ljava/lang/Number;->intValue()I
+
+    move-result p0
+
+    const/4 v1, 0x2
+
+    invoke-static {v0, p1, p2, v1}, Lw7d;->q(Landroid/view/ViewGroup;Ljava/lang/String;Landroid/view/WindowInsets;I)Landroid/view/View;
+
+    move-result-object p1
+
+    invoke-virtual {p1, p0}, Landroid/view/View;->setBackgroundColor(I)V
+
+    return-object p2
+
+    :cond_2
+    invoke-virtual {v0, p1}, Landroid/view/View;->findViewWithTag(Ljava/lang/Object;)Landroid/view/View;
 
     move-result-object p0
 
-    check-cast p0, Lru/ok/tamtam/nano/Tasks$SyncChatHistory;
-    :try_end_0
-    .catch Lcom/google/protobuf/nano/InvalidProtocolBufferNanoException; {:try_start_0 .. :try_end_0} :catch_0
+    if-eqz p0, :cond_3
 
-    new-instance v0, Lv7d;
+    invoke-virtual {v0, p0}, Landroid/view/ViewGroup;->removeView(Landroid/view/View;)V
 
-    iget-wide v1, p0, Lru/ok/tamtam/nano/Tasks$SyncChatHistory;->taskId:J
-
-    iget-wide v3, p0, Lru/ok/tamtam/nano/Tasks$SyncChatHistory;->chatId:J
-
-    iget v5, p0, Lru/ok/tamtam/nano/Tasks$SyncChatHistory;->count:I
-
-    sget-object v6, Ltg4;->o:Ldwc;
-
-    iget p0, p0, Lru/ok/tamtam/nano/Tasks$SyncChatHistory;->itemTypeId:I
-
-    invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object p0
-
-    invoke-static {v6, p0}, Ldwc;->l(Ldwc;Ljava/lang/Integer;)Ltg4;
-
-    move-result-object v6
-
-    invoke-direct/range {v0 .. v6}, Lv7d;-><init>(JJILtg4;)V
-
-    iget-object p0, v0, Lv7d;->Y:Ljava/lang/String;
-
-    const-string v1, "parseFrom"
-
-    invoke-static {p0, v1}, Lg47;->p(Ljava/lang/String;Ljava/lang/String;)V
-
-    return-object v0
-
-    :catch_0
-    move-exception v0
-
-    move-object p0, v0
-
-    new-instance v0, Lru/ok/tamtam/nano/ProtoException;
-
-    invoke-direct {v0, p0}, Ljava/io/IOException;-><init>(Ljava/lang/Throwable;)V
-
-    throw v0
+    :cond_3
+    return-object p2
 .end method

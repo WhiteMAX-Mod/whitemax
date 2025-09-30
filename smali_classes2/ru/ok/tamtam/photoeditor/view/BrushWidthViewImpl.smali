@@ -3,10 +3,16 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lsr0;
+.implements Lcs0;
 
 
 # instance fields
+.field public A0:F
+
+.field public final B0:Z
+
+.field public final C0:Ljava/util/HashSet;
+
 .field public final a:Landroid/graphics/Paint;
 
 .field public final b:Landroid/graphics/Paint;
@@ -15,29 +21,23 @@
 
 .field public final o:Landroid/graphics/Paint;
 
-.field public final o0:I
+.field public final r0:I
 
-.field public final p0:F
-
-.field public q0:F
-
-.field public r0:F
-
-.field public s0:F
+.field public final s0:F
 
 .field public t0:F
 
 .field public u0:F
 
-.field public v0:Z
+.field public v0:F
 
 .field public w0:F
 
 .field public x0:F
 
-.field public final y0:Z
+.field public y0:Z
 
-.field public final z0:Ljava/util/HashSet;
+.field public z0:F
 
 
 # direct methods
@@ -48,13 +48,13 @@
 
     const/4 p1, 0x0
 
-    iput-boolean p1, p0, Lru/ok/tamtam/photoeditor/view/BrushWidthViewImpl;->y0:Z
+    iput-boolean p1, p0, Lru/ok/tamtam/photoeditor/view/BrushWidthViewImpl;->B0:Z
 
     new-instance p1, Ljava/util/HashSet;
 
     invoke-direct {p1}, Ljava/util/HashSet;-><init>()V
 
-    iput-object p1, p0, Lru/ok/tamtam/photoeditor/view/BrushWidthViewImpl;->z0:Ljava/util/HashSet;
+    iput-object p1, p0, Lru/ok/tamtam/photoeditor/view/BrushWidthViewImpl;->C0:Ljava/util/HashSet;
 
     const/4 p1, 0x0
 
@@ -68,13 +68,13 @@
 
     const/4 v0, 0x2
 
-    invoke-static {p1, v0}, Ll23;->o(Landroid/content/Context;I)I
+    invoke-static {p1, v0}, Lxnd;->t(Landroid/content/Context;I)I
 
     move-result p1
 
     int-to-float p1, p1
 
-    iput p1, p0, Lru/ok/tamtam/photoeditor/view/BrushWidthViewImpl;->q0:F
+    iput p1, p0, Lru/ok/tamtam/photoeditor/view/BrushWidthViewImpl;->t0:F
 
     invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
 
@@ -82,25 +82,25 @@
 
     const/16 v1, 0xb
 
-    invoke-static {p1, v1}, Ll23;->o(Landroid/content/Context;I)I
+    invoke-static {p1, v1}, Lxnd;->t(Landroid/content/Context;I)I
 
     move-result p1
 
     int-to-float p1, p1
 
-    iput p1, p0, Lru/ok/tamtam/photoeditor/view/BrushWidthViewImpl;->p0:F
+    iput p1, p0, Lru/ok/tamtam/photoeditor/view/BrushWidthViewImpl;->s0:F
 
     invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
 
     move-result-object p1
 
-    invoke-static {p1, v0}, Ll23;->o(Landroid/content/Context;I)I
+    invoke-static {p1, v0}, Lxnd;->t(Landroid/content/Context;I)I
 
     move-result p1
 
     int-to-float p1, p1
 
-    iput p1, p0, Lru/ok/tamtam/photoeditor/view/BrushWidthViewImpl;->w0:F
+    iput p1, p0, Lru/ok/tamtam/photoeditor/view/BrushWidthViewImpl;->z0:F
 
     invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
 
@@ -108,23 +108,23 @@
 
     const/16 v1, 0x20
 
-    invoke-static {p1, v1}, Ll23;->o(Landroid/content/Context;I)I
+    invoke-static {p1, v1}, Lxnd;->t(Landroid/content/Context;I)I
 
     move-result p1
 
     int-to-float p1, p1
 
-    iput p1, p0, Lru/ok/tamtam/photoeditor/view/BrushWidthViewImpl;->x0:F
+    iput p1, p0, Lru/ok/tamtam/photoeditor/view/BrushWidthViewImpl;->A0:F
 
     invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
 
     move-result-object p1
 
-    invoke-static {p1, p2}, Ll23;->o(Landroid/content/Context;I)I
+    invoke-static {p1, p2}, Lxnd;->t(Landroid/content/Context;I)I
 
     move-result p1
 
-    iput p1, p0, Lru/ok/tamtam/photoeditor/view/BrushWidthViewImpl;->o0:I
+    iput p1, p0, Lru/ok/tamtam/photoeditor/view/BrushWidthViewImpl;->r0:I
 
     new-instance p1, Landroid/graphics/Paint;
 
@@ -138,7 +138,7 @@
 
     iget-object p1, p0, Lru/ok/tamtam/photoeditor/view/BrushWidthViewImpl;->a:Landroid/graphics/Paint;
 
-    iget v2, p0, Lru/ok/tamtam/photoeditor/view/BrushWidthViewImpl;->q0:F
+    iget v2, p0, Lru/ok/tamtam/photoeditor/view/BrushWidthViewImpl;->t0:F
 
     invoke-virtual {p1, v2}, Landroid/graphics/Paint;->setStrokeWidth(F)V
 
@@ -152,7 +152,7 @@
 
     move-result-object v2
 
-    invoke-static {v2, v0}, Ll23;->o(Landroid/content/Context;I)I
+    invoke-static {v2, v0}, Lxnd;->t(Landroid/content/Context;I)I
 
     move-result v0
 
@@ -184,7 +184,7 @@
 
     const/4 v4, 0x3
 
-    invoke-static {v0, v4}, Ll23;->o(Landroid/content/Context;I)I
+    invoke-static {v0, v4}, Lxnd;->t(Landroid/content/Context;I)I
 
     move-result v0
 
@@ -222,7 +222,7 @@
 
     move-result-object v0
 
-    invoke-static {v0, v4}, Ll23;->o(Landroid/content/Context;I)I
+    invoke-static {v0, v4}, Lxnd;->t(Landroid/content/Context;I)I
 
     move-result v0
 
@@ -248,7 +248,7 @@
 
     if-ne p1, p2, :cond_0
 
-    iput-boolean p2, p0, Lru/ok/tamtam/photoeditor/view/BrushWidthViewImpl;->y0:Z
+    iput-boolean p2, p0, Lru/ok/tamtam/photoeditor/view/BrushWidthViewImpl;->B0:Z
 
     :cond_0
     return-void
@@ -272,7 +272,7 @@
     :cond_0
     invoke-super {p0, p1}, Landroid/view/View;->onDraw(Landroid/graphics/Canvas;)V
 
-    iget-boolean v0, p0, Lru/ok/tamtam/photoeditor/view/BrushWidthViewImpl;->y0:Z
+    iget-boolean v0, p0, Lru/ok/tamtam/photoeditor/view/BrushWidthViewImpl;->B0:Z
 
     if-eqz v0, :cond_1
 
@@ -301,11 +301,11 @@
     invoke-virtual {p1, v2, v3, v0, v1}, Landroid/graphics/Canvas;->scale(FFFF)V
 
     :cond_1
-    iget v5, p0, Lru/ok/tamtam/photoeditor/view/BrushWidthViewImpl;->r0:F
+    iget v5, p0, Lru/ok/tamtam/photoeditor/view/BrushWidthViewImpl;->u0:F
 
-    iget v6, p0, Lru/ok/tamtam/photoeditor/view/BrushWidthViewImpl;->t0:F
+    iget v6, p0, Lru/ok/tamtam/photoeditor/view/BrushWidthViewImpl;->w0:F
 
-    iget v8, p0, Lru/ok/tamtam/photoeditor/view/BrushWidthViewImpl;->u0:F
+    iget v8, p0, Lru/ok/tamtam/photoeditor/view/BrushWidthViewImpl;->x0:F
 
     iget-object v9, p0, Lru/ok/tamtam/photoeditor/view/BrushWidthViewImpl;->a:Landroid/graphics/Paint;
 
@@ -315,15 +315,15 @@
 
     invoke-virtual/range {v4 .. v9}, Landroid/graphics/Canvas;->drawLine(FFFFLandroid/graphics/Paint;)V
 
-    iget p1, p0, Lru/ok/tamtam/photoeditor/view/BrushWidthViewImpl;->s0:F
+    iget p1, p0, Lru/ok/tamtam/photoeditor/view/BrushWidthViewImpl;->v0:F
 
-    iget v0, p0, Lru/ok/tamtam/photoeditor/view/BrushWidthViewImpl;->u0:F
+    iget v0, p0, Lru/ok/tamtam/photoeditor/view/BrushWidthViewImpl;->x0:F
 
-    iget v1, p0, Lru/ok/tamtam/photoeditor/view/BrushWidthViewImpl;->t0:F
+    iget v1, p0, Lru/ok/tamtam/photoeditor/view/BrushWidthViewImpl;->w0:F
 
-    iget v2, p0, Lru/ok/tamtam/photoeditor/view/BrushWidthViewImpl;->w0:F
+    iget v2, p0, Lru/ok/tamtam/photoeditor/view/BrushWidthViewImpl;->z0:F
 
-    iget v3, p0, Lru/ok/tamtam/photoeditor/view/BrushWidthViewImpl;->x0:F
+    iget v3, p0, Lru/ok/tamtam/photoeditor/view/BrushWidthViewImpl;->A0:F
 
     sub-float v5, v0, p1
 
@@ -341,9 +341,9 @@
 
     div-float/2addr v3, v0
 
-    iget v0, p0, Lru/ok/tamtam/photoeditor/view/BrushWidthViewImpl;->r0:F
+    iget v0, p0, Lru/ok/tamtam/photoeditor/view/BrushWidthViewImpl;->u0:F
 
-    iget v1, p0, Lru/ok/tamtam/photoeditor/view/BrushWidthViewImpl;->p0:F
+    iget v1, p0, Lru/ok/tamtam/photoeditor/view/BrushWidthViewImpl;->s0:F
 
     const/high16 v2, 0x40400000    # 3.0f
 
@@ -351,7 +351,7 @@
 
     sub-float/2addr v0, v1
 
-    iget v1, p0, Lru/ok/tamtam/photoeditor/view/BrushWidthViewImpl;->o0:I
+    iget v1, p0, Lru/ok/tamtam/photoeditor/view/BrushWidthViewImpl;->r0:I
 
     int-to-float v1, v1
 
@@ -361,31 +361,31 @@
 
     invoke-virtual {v4, v0, p1, v1, v5}, Landroid/graphics/Canvas;->drawCircle(FFFLandroid/graphics/Paint;)V
 
-    iget p1, p0, Lru/ok/tamtam/photoeditor/view/BrushWidthViewImpl;->r0:F
+    iget p1, p0, Lru/ok/tamtam/photoeditor/view/BrushWidthViewImpl;->u0:F
 
-    iget v0, p0, Lru/ok/tamtam/photoeditor/view/BrushWidthViewImpl;->p0:F
+    iget v0, p0, Lru/ok/tamtam/photoeditor/view/BrushWidthViewImpl;->s0:F
 
     mul-float/2addr v0, v2
 
     sub-float/2addr p1, v0
 
-    iget v0, p0, Lru/ok/tamtam/photoeditor/view/BrushWidthViewImpl;->s0:F
+    iget v0, p0, Lru/ok/tamtam/photoeditor/view/BrushWidthViewImpl;->v0:F
 
     iget-object v1, p0, Lru/ok/tamtam/photoeditor/view/BrushWidthViewImpl;->c:Landroid/graphics/Paint;
 
     invoke-virtual {v4, p1, v0, v3, v1}, Landroid/graphics/Canvas;->drawCircle(FFFLandroid/graphics/Paint;)V
 
-    iget p1, p0, Lru/ok/tamtam/photoeditor/view/BrushWidthViewImpl;->r0:F
+    iget p1, p0, Lru/ok/tamtam/photoeditor/view/BrushWidthViewImpl;->u0:F
 
-    iget v0, p0, Lru/ok/tamtam/photoeditor/view/BrushWidthViewImpl;->s0:F
+    iget v0, p0, Lru/ok/tamtam/photoeditor/view/BrushWidthViewImpl;->v0:F
 
-    iget v1, p0, Lru/ok/tamtam/photoeditor/view/BrushWidthViewImpl;->p0:F
+    iget v1, p0, Lru/ok/tamtam/photoeditor/view/BrushWidthViewImpl;->s0:F
 
     iget-object v2, p0, Lru/ok/tamtam/photoeditor/view/BrushWidthViewImpl;->b:Landroid/graphics/Paint;
 
     invoke-virtual {v4, p1, v0, v1, v2}, Landroid/graphics/Canvas;->drawCircle(FFFLandroid/graphics/Paint;)V
 
-    iget-boolean p0, p0, Lru/ok/tamtam/photoeditor/view/BrushWidthViewImpl;->y0:Z
+    iget-boolean p0, p0, Lru/ok/tamtam/photoeditor/view/BrushWidthViewImpl;->B0:Z
 
     if-eqz p0, :cond_2
 
@@ -406,7 +406,7 @@
 
     move-result p2
 
-    iget p3, p0, Lru/ok/tamtam/photoeditor/view/BrushWidthViewImpl;->r0:F
+    iget p3, p0, Lru/ok/tamtam/photoeditor/view/BrushWidthViewImpl;->u0:F
 
     const/4 p4, 0x0
 
@@ -422,7 +422,7 @@
 
     double-to-float p1, p3
 
-    iput p1, p0, Lru/ok/tamtam/photoeditor/view/BrushWidthViewImpl;->r0:F
+    iput p1, p0, Lru/ok/tamtam/photoeditor/view/BrushWidthViewImpl;->u0:F
 
     int-to-double p1, p2
 
@@ -432,7 +432,7 @@
 
     double-to-float p3, p3
 
-    iput p3, p0, Lru/ok/tamtam/photoeditor/view/BrushWidthViewImpl;->t0:F
+    iput p3, p0, Lru/ok/tamtam/photoeditor/view/BrushWidthViewImpl;->w0:F
 
     const-wide p3, 0x3feccccccccccccdL    # 0.9
 
@@ -440,9 +440,9 @@
 
     double-to-float p1, p1
 
-    iput p1, p0, Lru/ok/tamtam/photoeditor/view/BrushWidthViewImpl;->u0:F
+    iput p1, p0, Lru/ok/tamtam/photoeditor/view/BrushWidthViewImpl;->x0:F
 
-    iput p1, p0, Lru/ok/tamtam/photoeditor/view/BrushWidthViewImpl;->s0:F
+    iput p1, p0, Lru/ok/tamtam/photoeditor/view/BrushWidthViewImpl;->v0:F
 
     :cond_0
     return-void
@@ -455,7 +455,7 @@
 
     move-result v0
 
-    iget-boolean v1, p0, Lru/ok/tamtam/photoeditor/view/BrushWidthViewImpl;->y0:Z
+    iget-boolean v1, p0, Lru/ok/tamtam/photoeditor/view/BrushWidthViewImpl;->B0:Z
 
     if-eqz v1, :cond_0
 
@@ -476,9 +476,9 @@
 
     if-nez v1, :cond_1
 
-    iget v1, p0, Lru/ok/tamtam/photoeditor/view/BrushWidthViewImpl;->r0:F
+    iget v1, p0, Lru/ok/tamtam/photoeditor/view/BrushWidthViewImpl;->u0:F
 
-    iget v3, p0, Lru/ok/tamtam/photoeditor/view/BrushWidthViewImpl;->p0:F
+    iget v3, p0, Lru/ok/tamtam/photoeditor/view/BrushWidthViewImpl;->s0:F
 
     const/high16 v4, 0x40000000    # 2.0f
 
@@ -500,9 +500,9 @@
 
     move-result v0
 
-    iget v1, p0, Lru/ok/tamtam/photoeditor/view/BrushWidthViewImpl;->t0:F
+    iget v1, p0, Lru/ok/tamtam/photoeditor/view/BrushWidthViewImpl;->w0:F
 
-    iget v3, p0, Lru/ok/tamtam/photoeditor/view/BrushWidthViewImpl;->p0:F
+    iget v3, p0, Lru/ok/tamtam/photoeditor/view/BrushWidthViewImpl;->s0:F
 
     mul-float/2addr v3, v4
 
@@ -516,9 +516,9 @@
 
     move-result v0
 
-    iget v1, p0, Lru/ok/tamtam/photoeditor/view/BrushWidthViewImpl;->u0:F
+    iget v1, p0, Lru/ok/tamtam/photoeditor/view/BrushWidthViewImpl;->x0:F
 
-    iget v3, p0, Lru/ok/tamtam/photoeditor/view/BrushWidthViewImpl;->p0:F
+    iget v3, p0, Lru/ok/tamtam/photoeditor/view/BrushWidthViewImpl;->s0:F
 
     mul-float/2addr v3, v4
 
@@ -528,7 +528,7 @@
 
     if-gez v0, :cond_1
 
-    iput-boolean v2, p0, Lru/ok/tamtam/photoeditor/view/BrushWidthViewImpl;->v0:Z
+    iput-boolean v2, p0, Lru/ok/tamtam/photoeditor/view/BrushWidthViewImpl;->y0:Z
 
     :cond_1
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getAction()I
@@ -539,23 +539,23 @@
 
     if-ne v0, v1, :cond_4
 
-    iget-boolean v0, p0, Lru/ok/tamtam/photoeditor/view/BrushWidthViewImpl;->v0:Z
+    iget-boolean v0, p0, Lru/ok/tamtam/photoeditor/view/BrushWidthViewImpl;->y0:Z
 
     if-eqz v0, :cond_4
 
-    iget v0, p0, Lru/ok/tamtam/photoeditor/view/BrushWidthViewImpl;->s0:F
+    iget v0, p0, Lru/ok/tamtam/photoeditor/view/BrushWidthViewImpl;->v0:F
 
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getY()F
 
     move-result v1
 
-    iget v3, p0, Lru/ok/tamtam/photoeditor/view/BrushWidthViewImpl;->t0:F
+    iget v3, p0, Lru/ok/tamtam/photoeditor/view/BrushWidthViewImpl;->w0:F
 
     cmpg-float v1, v1, v3
 
     if-gez v1, :cond_2
 
-    iput v3, p0, Lru/ok/tamtam/photoeditor/view/BrushWidthViewImpl;->s0:F
+    iput v3, p0, Lru/ok/tamtam/photoeditor/view/BrushWidthViewImpl;->v0:F
 
     goto :goto_0
 
@@ -564,13 +564,13 @@
 
     move-result v1
 
-    iget v3, p0, Lru/ok/tamtam/photoeditor/view/BrushWidthViewImpl;->u0:F
+    iget v3, p0, Lru/ok/tamtam/photoeditor/view/BrushWidthViewImpl;->x0:F
 
     cmpl-float v1, v1, v3
 
     if-lez v1, :cond_3
 
-    iput v3, p0, Lru/ok/tamtam/photoeditor/view/BrushWidthViewImpl;->s0:F
+    iput v3, p0, Lru/ok/tamtam/photoeditor/view/BrushWidthViewImpl;->v0:F
 
     goto :goto_0
 
@@ -579,10 +579,10 @@
 
     move-result p1
 
-    iput p1, p0, Lru/ok/tamtam/photoeditor/view/BrushWidthViewImpl;->s0:F
+    iput p1, p0, Lru/ok/tamtam/photoeditor/view/BrushWidthViewImpl;->v0:F
 
     :goto_0
-    iget p1, p0, Lru/ok/tamtam/photoeditor/view/BrushWidthViewImpl;->s0:F
+    iget p1, p0, Lru/ok/tamtam/photoeditor/view/BrushWidthViewImpl;->v0:F
 
     cmpl-float p1, p1, v0
 
@@ -599,17 +599,17 @@
 
     if-ne p1, v2, :cond_5
 
-    iget-boolean p1, p0, Lru/ok/tamtam/photoeditor/view/BrushWidthViewImpl;->v0:Z
+    iget-boolean p1, p0, Lru/ok/tamtam/photoeditor/view/BrushWidthViewImpl;->y0:Z
 
     if-eqz p1, :cond_5
 
     const/4 p1, 0x0
 
-    iput-boolean p1, p0, Lru/ok/tamtam/photoeditor/view/BrushWidthViewImpl;->v0:Z
+    iput-boolean p1, p0, Lru/ok/tamtam/photoeditor/view/BrushWidthViewImpl;->y0:Z
 
     new-instance p1, Lb;
 
-    const/16 v0, 0x15
+    const/16 v0, 0x16
 
     invoke-direct {p1, v0, p0}, Lb;-><init>(ILjava/lang/Object;)V
 
@@ -620,11 +620,13 @@
 .end method
 
 .method public setBrushWidth(F)V
-    .locals 1
+    .locals 2
 
-    new-instance v0, Ltr0;
+    new-instance v0, Lds0;
 
-    invoke-direct {v0, p0, p1}, Ltr0;-><init>(Lru/ok/tamtam/photoeditor/view/BrushWidthViewImpl;F)V
+    const/4 v1, 0x0
+
+    invoke-direct {v0, p0, p1, v1}, Lds0;-><init>(Ljava/lang/Object;FI)V
 
     invoke-virtual {p0, v0}, Landroid/view/View;->post(Ljava/lang/Runnable;)Z
 
@@ -634,7 +636,7 @@
 .method public setMaxBrushWidth(F)V
     .locals 0
 
-    iput p1, p0, Lru/ok/tamtam/photoeditor/view/BrushWidthViewImpl;->x0:F
+    iput p1, p0, Lru/ok/tamtam/photoeditor/view/BrushWidthViewImpl;->A0:F
 
     return-void
 .end method
@@ -642,7 +644,7 @@
 .method public setMinBrushWidth(F)V
     .locals 0
 
-    iput p1, p0, Lru/ok/tamtam/photoeditor/view/BrushWidthViewImpl;->w0:F
+    iput p1, p0, Lru/ok/tamtam/photoeditor/view/BrushWidthViewImpl;->z0:F
 
     return-void
 .end method
@@ -672,7 +674,7 @@
 .method public setSeekBarLineWidth(F)V
     .locals 0
 
-    iput p1, p0, Lru/ok/tamtam/photoeditor/view/BrushWidthViewImpl;->q0:F
+    iput p1, p0, Lru/ok/tamtam/photoeditor/view/BrushWidthViewImpl;->t0:F
 
     return-void
 .end method

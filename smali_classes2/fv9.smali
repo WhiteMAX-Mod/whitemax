@@ -1,149 +1,210 @@
-.class public final Lfv9;
-.super Lqde;
+.class public final synthetic Lfv9;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Ll66;
+.implements Landroid/view/View$OnClickListener;
 
 
 # instance fields
-.field public synthetic X:Ljava/lang/Object;
+.field public final synthetic a:I
 
-.field public final synthetic Y:Lone/me/notifications/settings/NotificationsSettingsScreen;
+.field public final synthetic b:Lone/me/login/neuroavatars/NeuroAvatarsScreen;
 
 
 # direct methods
-.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/notifications/settings/NotificationsSettingsScreen;)V
+.method public synthetic constructor <init>(Lone/me/login/neuroavatars/NeuroAvatarsScreen;I)V
     .locals 0
 
-    iput-object p2, p0, Lfv9;->Y:Lone/me/notifications/settings/NotificationsSettingsScreen;
+    iput p2, p0, Lfv9;->a:I
 
-    const/4 p2, 0x2
+    iput-object p1, p0, Lfv9;->b:Lone/me/login/neuroavatars/NeuroAvatarsScreen;
 
-    invoke-direct {p0, p2, p1}, Lqde;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final onClick(Landroid/view/View;)V
+    .locals 12
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    iget p1, p0, Lfv9;->a:I
 
-    invoke-virtual {p0, p1, p2}, Lfv9;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    const/4 v0, 0x1
 
-    move-result-object p0
+    const/4 v1, 0x6
 
-    check-cast p0, Lfv9;
+    iget-object p0, p0, Lfv9;->b:Lone/me/login/neuroavatars/NeuroAvatarsScreen;
 
-    sget-object p1, Le5f;->a:Le5f;
+    const/4 v2, 0x0
 
-    invoke-virtual {p0, p1}, Lfv9;->o(Ljava/lang/Object;)Ljava/lang/Object;
+    packed-switch p1, :pswitch_data_0
 
-    return-object p1
-.end method
+    sget-object p1, Lone/me/login/neuroavatars/NeuroAvatarsScreen;->K0:[Lxi7;
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 1
+    invoke-virtual {p0}, Lone/me/login/neuroavatars/NeuroAvatarsScreen;->A0()Lxpc;
 
-    new-instance v0, Lfv9;
+    move-result-object p1
 
-    iget-object p0, p0, Lfv9;->Y:Lone/me/notifications/settings/NotificationsSettingsScreen;
+    if-nez p1, :cond_0
 
-    invoke-direct {v0, p2, p0}, Lfv9;-><init>(Lkotlin/coroutines/Continuation;Lone/me/notifications/settings/NotificationsSettingsScreen;)V
-
-    iput-object p1, v0, Lfv9;->X:Ljava/lang/Object;
-
-    return-object v0
-.end method
-
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 3
-
-    invoke-static {p1}, Lsgg;->Z(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Lfv9;->X:Ljava/lang/Object;
-
-    check-cast p1, Lkl9;
-
-    instance-of v0, p1, Lp64;
-
-    sget-object v1, Le5f;->a:Le5f;
-
-    if-eqz v0, :cond_0
-
-    sget-object p0, Lau9;->c:Lau9;
-
-    check-cast p1, Lp64;
-
-    invoke-virtual {p0, p1}, Lu2;->F0(Lp64;)V
-
-    return-object v1
+    goto :goto_3
 
     :cond_0
-    instance-of p1, p1, Lav9;
+    invoke-static {p0}, Lqe5;->t(Lxx3;)V
 
-    if-eqz p1, :cond_1
+    invoke-virtual {p0}, Lone/me/login/neuroavatars/NeuroAvatarsScreen;->C0()Lfw9;
 
-    sget-object p1, Lh37;->a:Ljava/lang/String;
+    move-result-object p1
 
-    iget-object p0, p0, Lfv9;->Y:Lone/me/notifications/settings/NotificationsSettingsScreen;
+    invoke-virtual {p1}, Lfw9;->r()Ljava/util/List;
 
-    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
+    move-result-object p1
 
-    move-result-object p0
+    sget v3, Lbbc;->oneme_login_neuro_avatars_bottomsheet_title:I
 
-    :try_start_0
-    new-instance p1, Landroid/content/Intent;
+    const/4 v4, 0x0
 
-    invoke-direct {p1}, Landroid/content/Intent;-><init>()V
+    invoke-static {v3, v4, v4, v1}, Lsg0;->d(ILandroid/os/Bundle;Ls6d;I)Llj3;
 
-    const/high16 v0, 0x10000000
+    move-result-object v1
 
-    invoke-virtual {p1, v0}, Landroid/content/Intent;->setFlags(I)Landroid/content/Intent;
+    check-cast p1, Los7;
 
-    const-string v0, "android.settings.APP_NOTIFICATION_SETTINGS"
+    invoke-virtual {p1, v2}, Los7;->listIterator(I)Ljava/util/ListIterator;
 
-    invoke-virtual {p1, v0}, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
+    move-result-object p1
 
-    const-string v0, "android.provider.extra.APP_PACKAGE"
+    :goto_0
+    move-object v3, p1
 
-    invoke-virtual {p0}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
+    check-cast v3, Lms7;
 
-    move-result-object v2
+    invoke-virtual {v3}, Lms7;->hasNext()Z
 
-    invoke-virtual {p1, v0, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
+    move-result v5
 
-    invoke-virtual {p0, p1}, Landroid/content/Context;->startActivity(Landroid/content/Intent;)V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    if-eqz v5, :cond_1
 
-    move-object p1, v1
+    invoke-virtual {v3}, Lms7;->next()Ljava/lang/Object;
+
+    move-result-object v3
+
+    check-cast v3, Lmj3;
+
+    filled-new-array {v3}, [Lmj3;
+
+    move-result-object v3
+
+    invoke-virtual {v1, v3}, Llj3;->a([Lmj3;)V
 
     goto :goto_0
 
-    :catchall_0
-    move-exception p0
+    :cond_1
+    sget-object p1, Lone/me/sdk/bottomsheet/BottomSheetWidget;->y0:[Lxi7;
 
-    new-instance p1, Ljhc;
+    invoke-virtual {v1}, Llj3;->e()Lone/me/sdk/bottomsheet/ConfirmationBottomSheet;
 
-    invoke-direct {p1, p0}, Ljhc;-><init>(Ljava/lang/Throwable;)V
+    move-result-object v6
 
-    :goto_0
-    invoke-static {p1}, Llhc;->a(Ljava/lang/Object;)Ljava/lang/Throwable;
+    invoke-virtual {v6, p0}, Lxx3;->setTargetController(Lxx3;)V
+
+    invoke-virtual {v6, p0}, Lone/me/sdk/arch/Widget;->saveTarget(Lone/me/sdk/arch/Widget;)V
+
+    move-object p1, p0
+
+    :goto_1
+    invoke-virtual {p1}, Lxx3;->getParentController()Lxx3;
+
+    move-result-object v1
+
+    if-eqz v1, :cond_2
+
+    invoke-virtual {p1}, Lxx3;->getParentController()Lxx3;
+
+    move-result-object p1
+
+    goto :goto_1
+
+    :cond_2
+    instance-of v1, p1, Lxzc;
+
+    if-eqz v1, :cond_3
+
+    check-cast p1, Lxzc;
+
+    goto :goto_2
+
+    :cond_3
+    move-object p1, v4
+
+    :goto_2
+    if-eqz p1, :cond_4
+
+    invoke-interface {p1}, Lxzc;->d0()Lrzc;
+
+    move-result-object v4
+
+    :cond_4
+    invoke-virtual {v6, p0}, Lone/me/sdk/bottomsheet/BottomSheetWidget;->M0(Lone/me/sdk/arch/Widget;)V
+
+    if-eqz v4, :cond_5
+
+    new-instance v5, Luzc;
+
+    const/4 v10, 0x0
+
+    const/4 v11, -0x1
+
+    const/4 v7, 0x0
+
+    const/4 v8, 0x0
+
+    const/4 v9, 0x0
+
+    invoke-direct/range {v5 .. v11}, Luzc;-><init>(Lxx3;Ljava/lang/String;Lcy3;Lcy3;ZI)V
+
+    const-string p0, "BottomSheetWidget"
+
+    invoke-static {v2, v5, v0, p0}, Lsg0;->m(ZLuzc;ZLjava/lang/String;)V
+
+    invoke-virtual {v4, v5}, Lrzc;->H(Luzc;)V
+
+    :cond_5
+    :goto_3
+    return-void
+
+    :pswitch_0
+    sget-object p1, Lone/me/login/neuroavatars/NeuroAvatarsScreen;->K0:[Lxi7;
+
+    iget-object p1, p0, Lone/me/login/neuroavatars/NeuroAvatarsScreen;->u0:Lcic;
+
+    sget-object v3, Lone/me/login/neuroavatars/NeuroAvatarsScreen;->K0:[Lxi7;
+
+    aget-object v1, v3, v1
+
+    invoke-interface {p1, p0, v1}, Lcic;->N(Ljava/lang/Object;Lxi7;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lone/me/sdk/uikit/common/button/OneMeButton;
+
+    invoke-virtual {p1, v0}, Lone/me/sdk/uikit/common/button/OneMeButton;->setProgressEnabled(Z)V
+
+    invoke-virtual {p1, v2}, Landroid/view/View;->setClickable(Z)V
+
+    invoke-virtual {p0}, Lone/me/login/neuroavatars/NeuroAvatarsScreen;->C0()Lfw9;
 
     move-result-object p0
 
-    if-eqz p0, :cond_1
+    invoke-virtual {p0}, Lfw9;->t()V
 
-    sget-object p1, Lh37;->a:Ljava/lang/String;
+    return-void
 
-    const-string v0, "openNotificationsSettings: failed"
-
-    invoke-static {p1, v0, p0}, Lg47;->r(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    :cond_1
-    return-object v1
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

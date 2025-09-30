@@ -1,284 +1,610 @@
-.class public final synthetic Lqbb;
-.super Ljava/lang/Object;
+.class public final Lqbb;
+.super Lv1;
 .source "SourceFile"
-
-# interfaces
-.implements Lv56;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final a:Ljava/io/Writer;
 
-.field public final synthetic b:Lone/me/profileedit/screens/adminpermissions/ProfileEditAdminPermissionsWidget;
+.field public final b:Lvf;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lone/me/profileedit/screens/adminpermissions/ProfileEditAdminPermissionsWidget;I)V
-    .locals 0
-
-    iput p2, p0, Lqbb;->a:I
-
-    iput-object p1, p0, Lqbb;->b:Lone/me/profileedit/screens/adminpermissions/ProfileEditAdminPermissionsWidget;
+.method public constructor <init>(Ljava/io/Writer;)V
+    .locals 2
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    new-instance v0, Lvf;
+
+    const/4 v1, 0x1
+
+    invoke-direct {v0, v1}, Lvf;-><init>(I)V
+
+    iput-object v0, p0, Lqbb;->b:Lvf;
+
+    iput-object p1, p0, Lqbb;->a:Ljava/io/Writer;
+
+    const/4 p0, 0x0
+
+    invoke-virtual {v0, p0}, Lvf;->e(I)V
 
     return-void
 .end method
 
+.method public static W(Lvf;)Ljava/lang/String;
+    .locals 7
 
-# virtual methods
-.method public final invoke()Ljava/lang/Object;
-    .locals 19
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    move-object/from16 v0, p0
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    iget v1, v0, Lqbb;->a:I
+    iget v1, p0, Lvf;->b:I
+
+    if-ltz v1, :cond_4
+
+    const/16 v2, 0x8
+
+    invoke-static {v1, v2}, Ljava/lang/Math;->max(II)I
+
+    move-result v1
+
+    new-array v1, v1, [I
 
     const/4 v2, 0x0
 
-    iget-object v0, v0, Lqbb;->b:Lone/me/profileedit/screens/adminpermissions/ProfileEditAdminPermissionsWidget;
-
-    packed-switch v1, :pswitch_data_0
-
-    sget-object v1, Lone/me/profileedit/screens/adminpermissions/ProfileEditAdminPermissionsWidget;->t0:[Lbc7;
-
-    new-instance v1, Lone/me/sdk/uikit/common/button/OneMeButton;
-
-    invoke-virtual {v0}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
-
-    move-result-object v3
-
-    const/4 v4, 0x0
-
-    invoke-direct {v1, v3, v4}, Lone/me/sdk/uikit/common/button/OneMeButton;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
-
-    new-instance v3, Landroid/widget/FrameLayout$LayoutParams;
-
-    const/4 v4, -0x2
-
-    const/16 v5, 0x50
-
-    const/4 v6, -0x1
-
-    invoke-direct {v3, v6, v4, v5}, Landroid/widget/FrameLayout$LayoutParams;-><init>(III)V
-
-    const/16 v4, 0xc
-
-    int-to-float v4, v4
-
-    invoke-static {}, Lgk4;->d()Landroid/content/res/Resources;
-
-    move-result-object v5
-
-    invoke-virtual {v5}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v5
-
-    iget v5, v5, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v4, v5
-
-    invoke-static {v4}, Lkhg;->x(F)I
-
-    move-result v4
-
-    iput v4, v3, Landroid/widget/FrameLayout$LayoutParams;->leftMargin:I
-
-    iput v4, v3, Landroid/widget/FrameLayout$LayoutParams;->rightMargin:I
-
-    iput v4, v3, Landroid/widget/FrameLayout$LayoutParams;->topMargin:I
-
-    iput v4, v3, Landroid/widget/FrameLayout$LayoutParams;->bottomMargin:I
-
-    invoke-virtual {v1, v3}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
-
-    sget-object v3, Lt4a;->c:Lt4a;
-
-    invoke-virtual {v1, v3}, Lone/me/sdk/uikit/common/button/OneMeButton;->setSize(Lt4a;)V
-
-    sget-object v3, Ls4a;->a:Ls4a;
-
-    invoke-virtual {v1, v3}, Lone/me/sdk/uikit/common/button/OneMeButton;->setMode(Ls4a;)V
-
-    sget-object v3, Lq4a;->c:Lq4a;
-
-    invoke-virtual {v1, v3}, Lone/me/sdk/uikit/common/button/OneMeButton;->setAppearance(Lq4a;)V
-
-    invoke-virtual {v0}, Lone/me/profileedit/screens/adminpermissions/ProfileEditAdminPermissionsWidget;->q0()Labb;
-
-    move-result-object v3
-
-    sget-object v4, Labb;->b:Labb;
-
-    const/16 v5, 0x8
-
-    if-ne v3, v4, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    move v2, v5
+    move v3, v2
 
     :goto_0
-    invoke-virtual {v1, v2}, Landroid/view/View;->setVisibility(I)V
+    iget v4, p0, Lvf;->b:I
 
-    invoke-virtual {v0}, Lone/me/profileedit/screens/adminpermissions/ProfileEditAdminPermissionsWidget;->q0()Labb;
+    if-nez v4, :cond_2
 
-    move-result-object v2
+    :goto_1
+    if-nez v3, :cond_0
 
-    sget-object v3, Labb;->c:Labb;
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    if-ne v2, v3, :cond_1
+    move-result-object p0
 
-    sget v2, Lmca;->j1:I
+    return-object p0
+
+    :cond_0
+    if-eqz v3, :cond_1
+
+    add-int/lit8 v3, v3, -0x1
+
+    aget v2, v1, v3
+
+    const-string v4, ""
+
+    packed-switch v2, :pswitch_data_0
+
+    new-instance p0, Ljava/lang/IllegalArgumentException;
+
+    invoke-static {v2, v4}, Lyv7;->e(ILjava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-direct {p0, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw p0
+
+    :pswitch_0
+    const-string v4, "{:"
+
+    goto :goto_2
+
+    :pswitch_1
+    const-string v4, "{"
+
+    goto :goto_2
+
+    :pswitch_2
+    const-string v4, "["
+
+    :goto_2
+    :pswitch_3
+    invoke-virtual {v0, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p0, v2}, Lvf;->e(I)V
 
     goto :goto_1
 
     :cond_1
-    sget v2, Lmca;->L0:I
+    new-instance p0, Ljava/util/NoSuchElementException;
 
-    :goto_1
-    invoke-virtual {v1, v2}, Lone/me/sdk/uikit/common/button/OneMeButton;->setText(I)V
+    invoke-direct {p0}, Ljava/util/NoSuchElementException;-><init>()V
 
-    new-instance v2, Lrha;
+    throw p0
 
-    invoke-direct {v2, v5, v0}, Lrha;-><init>(ILjava/lang/Object;)V
+    :cond_2
+    invoke-virtual {p0}, Lvf;->c()I
 
-    invoke-static {v1, v2}, Lu7;->Q(Landroid/view/View;Landroid/view/View$OnClickListener;)V
+    move-result v4
 
-    return-object v1
+    array-length v5, v1
 
-    :pswitch_0
-    iget-object v1, v0, Lone/me/profileedit/screens/adminpermissions/ProfileEditAdminPermissionsWidget;->b:Lvr;
+    if-ge v3, v5, :cond_3
 
-    sget-object v3, Lone/me/profileedit/screens/adminpermissions/ProfileEditAdminPermissionsWidget;->t0:[Lbc7;
+    move-object v6, v1
 
-    aget-object v2, v3, v2
+    goto :goto_3
 
-    invoke-virtual {v1, v0}, Lvr;->a(Lone/me/sdk/arch/Widget;)Ljava/lang/Object;
+    :cond_3
+    mul-int/lit8 v6, v5, 0x2
 
-    move-result-object v1
+    new-array v6, v6, [I
 
-    check-cast v1, Ljava/lang/Number;
+    invoke-static {v1, v2, v6, v2, v5}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
-    invoke-virtual {v1}, Ljava/lang/Number;->longValue()J
+    move-object v1, v6
 
-    move-result-wide v5
+    :goto_3
+    add-int/lit8 v5, v3, 0x1
 
-    iget-object v1, v0, Lone/me/profileedit/screens/adminpermissions/ProfileEditAdminPermissionsWidget;->c:Lvr;
+    aput v4, v1, v3
 
-    const/4 v2, 0x1
+    move v3, v5
 
-    aget-object v2, v3, v2
+    move-object v1, v6
 
-    invoke-virtual {v1, v0}, Lvr;->a(Lone/me/sdk/arch/Widget;)Ljava/lang/Object;
+    goto :goto_0
 
-    move-result-object v1
+    :cond_4
+    new-instance p0, Ljava/lang/IllegalArgumentException;
 
-    check-cast v1, Ljava/lang/Number;
+    const-string v0, "Illegal Capacity: "
 
-    invoke-virtual {v1}, Ljava/lang/Number;->longValue()J
-
-    move-result-wide v7
-
-    invoke-virtual {v0}, Lone/me/profileedit/screens/adminpermissions/ProfileEditAdminPermissionsWidget;->q0()Labb;
-
-    move-result-object v9
-
-    invoke-virtual {v0}, Lone/me/profileedit/screens/adminpermissions/ProfileEditAdminPermissionsWidget;->p0()Z
-
-    move-result v10
-
-    sget-object v0, Lxbb;->a:Lxbb;
-
-    invoke-virtual {v0}, Lxbb;->c()Lje7;
-
-    move-result-object v1
-
-    check-cast v1, Lwfe;
-
-    invoke-virtual {v1}, Lwfe;->getValue()Ljava/lang/Object;
-
-    move-result-object v1
-
-    move-object v11, v1
-
-    check-cast v11, Lbx2;
-
-    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lu4;
-
-    move-result-object v1
-
-    const-class v2, Lxr3;
-
-    invoke-virtual {v1, v2}, Lu4;->d(Ljava/lang/Class;)Lwfe;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Lwfe;->getValue()Ljava/lang/Object;
-
-    move-result-object v1
-
-    move-object v12, v1
-
-    check-cast v12, Lxr3;
-
-    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lu4;
-
-    move-result-object v1
-
-    const-class v2, Lz9;
-
-    invoke-virtual {v1, v2}, Lu4;->d(Ljava/lang/Class;)Lwfe;
-
-    move-result-object v17
-
-    invoke-virtual {v0}, Lxbb;->d()Lje7;
-
-    move-result-object v15
-
-    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lu4;
-
-    move-result-object v1
-
-    const-class v2, Ly7b;
-
-    invoke-virtual {v1, v2}, Lu4;->d(Ljava/lang/Class;)Lwfe;
-
-    move-result-object v13
-
-    invoke-virtual {v0}, Lxbb;->b()Lje7;
-
-    move-result-object v14
-
-    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lu4;
-
-    move-result-object v1
-
-    const-class v2, Lzd5;
-
-    invoke-virtual {v1, v2}, Lu4;->d(Ljava/lang/Class;)Lwfe;
-
-    move-result-object v16
-
-    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lu4;
+    invoke-static {v1, v0}, Lyv7;->e(ILjava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    const-class v1, Lh23;
+    invoke-direct {p0, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {v0, v1}, Lu4;->d(Ljava/lang/Class;)Lwfe;
-
-    move-result-object v18
-
-    new-instance v4, Lpbb;
-
-    invoke-direct/range {v4 .. v18}, Lpbb;-><init>(JJLabb;ZLbx2;Lxr3;Lje7;Lje7;Lje7;Lje7;Lje7;Lje7;)V
-
-    return-object v4
+    throw p0
 
     :pswitch_data_0
     .packed-switch 0x0
+        :pswitch_3
+        :pswitch_3
+        :pswitch_2
+        :pswitch_2
+        :pswitch_1
         :pswitch_0
+        :pswitch_1
     .end packed-switch
+.end method
+
+
+# virtual methods
+.method public final M(Ljava/io/InputStreamReader;)V
+    .locals 3
+
+    invoke-virtual {p0}, Lqbb;->n()V
+
+    iget-object v0, p0, Lqbb;->b:Lvf;
+
+    invoke-virtual {v0}, Lvf;->b()I
+
+    move-result v1
+
+    const/4 v2, 0x2
+
+    iget-object p0, p0, Lqbb;->a:Ljava/io/Writer;
+
+    if-eq v1, v2, :cond_2
+
+    const/4 v2, 0x3
+
+    if-eq v1, v2, :cond_2
+
+    const/4 v2, 0x6
+
+    if-ne v1, v2, :cond_1
+
+    new-instance v0, Lrh7;
+
+    invoke-direct {v0, p1}, Lrh7;-><init>(Ljava/io/InputStreamReader;)V
+
+    invoke-static {v0, p0}, Lf54;->I(Lrh7;Ljava/lang/Appendable;)V
+
+    invoke-virtual {v0}, Lrh7;->o()I
+
+    move-result p0
+
+    if-nez p0, :cond_0
+
+    goto :goto_1
+
+    :cond_0
+    invoke-virtual {v0}, Lrh7;->o()I
+
+    move-result p0
+
+    iget p1, v0, Lrh7;->o:I
+
+    int-to-long v1, p1
+
+    invoke-virtual {v0}, Lrh7;->m()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-static {v1, v2, p1, p0}, Lru/ok/android/api/json/JsonSyntaxException;->b(JLjava/lang/String;I)Lru/ok/android/api/json/JsonSyntaxException;
+
+    move-result-object p0
+
+    throw p0
+
+    :cond_1
+    new-instance p0, Ljava/lang/StringBuilder;
+
+    const-string p1, "Nesting problem: "
+
+    invoke-direct {p0, p1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-static {v0}, Lqbb;->W(Lvf;)Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-virtual {p0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    new-instance p1, Lru/ok/android/api/json/JsonStateException;
+
+    invoke-direct {p1, p0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_2
+    new-instance v0, Lrh7;
+
+    invoke-direct {v0, p1}, Lrh7;-><init>(Ljava/io/InputStreamReader;)V
+
+    invoke-static {v0, p0}, Lf54;->I(Lrh7;Ljava/lang/Appendable;)V
+
+    :goto_0
+    invoke-virtual {v0}, Lrh7;->o()I
+
+    move-result p1
+
+    if-eqz p1, :cond_3
+
+    const/16 p1, 0x2c
+
+    invoke-virtual {v0, p1}, Lrh7;->d(I)V
+
+    invoke-virtual {v0, p0}, Lrh7;->c(Ljava/lang/Appendable;)V
+
+    invoke-static {v0, p0}, Lf54;->I(Lrh7;Ljava/lang/Appendable;)V
+
+    goto :goto_0
+
+    :cond_3
+    :goto_1
+    return-void
+.end method
+
+.method public final close()V
+    .locals 1
+
+    iget-object v0, p0, Lqbb;->a:Ljava/io/Writer;
+
+    invoke-virtual {v0}, Ljava/io/Writer;->close()V
+
+    iget-object p0, p0, Lqbb;->b:Lvf;
+
+    invoke-virtual {p0}, Lvf;->b()I
+
+    move-result p0
+
+    const/4 v0, 0x1
+
+    if-ne p0, v0, :cond_0
+
+    return-void
+
+    :cond_0
+    new-instance p0, Lru/ok/android/api/json/JsonStateException;
+
+    const-string v0, "Unfinished document"
+
+    invoke-direct {p0, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p0
+.end method
+
+.method public final d(Ljava/lang/String;)V
+    .locals 0
+
+    invoke-virtual {p0}, Lqbb;->n()V
+
+    iget-object p0, p0, Lqbb;->a:Ljava/io/Writer;
+
+    invoke-virtual {p0, p1}, Ljava/io/Writer;->write(Ljava/lang/String;)V
+
+    return-void
+.end method
+
+.method public final flush()V
+    .locals 0
+
+    iget-object p0, p0, Lqbb;->a:Ljava/io/Writer;
+
+    invoke-virtual {p0}, Ljava/io/Writer;->flush()V
+
+    return-void
+.end method
+
+.method public final h(Ljava/lang/String;)V
+    .locals 0
+
+    invoke-virtual {p0}, Lqbb;->n()V
+
+    iget-object p0, p0, Lqbb;->a:Ljava/io/Writer;
+
+    invoke-static {p1, p0}, Lgs3;->E(Ljava/lang/String;Ljava/io/Writer;)V
+
+    return-void
+.end method
+
+.method public final k0(Ljava/lang/String;)Lgi7;
+    .locals 4
+
+    iget-object v0, p0, Lqbb;->b:Lvf;
+
+    invoke-virtual {v0}, Lvf;->b()I
+
+    move-result v1
+
+    const/4 v2, 0x6
+
+    iget-object v3, p0, Lqbb;->a:Ljava/io/Writer;
+
+    if-ne v1, v2, :cond_0
+
+    const/16 v1, 0x2c
+
+    invoke-virtual {v3, v1}, Ljava/io/Writer;->write(I)V
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v2, 0x4
+
+    if-ne v1, v2, :cond_1
+
+    :goto_0
+    const/4 v1, 0x5
+
+    invoke-virtual {v0, v1}, Lvf;->d(I)V
+
+    invoke-static {p1, v3}, Lgs3;->E(Ljava/lang/String;Ljava/io/Writer;)V
+
+    return-object p0
+
+    :cond_1
+    new-instance p0, Ljava/lang/StringBuilder;
+
+    const-string p1, "Nesting problem: "
+
+    invoke-direct {p0, p1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-static {v0}, Lqbb;->W(Lvf;)Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-virtual {p0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    new-instance p1, Lru/ok/android/api/json/JsonStateException;
+
+    invoke-direct {p1, p0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+.end method
+
+.method public final n()V
+    .locals 4
+
+    iget-object v0, p0, Lqbb;->b:Lvf;
+
+    invoke-virtual {v0}, Lvf;->b()I
+
+    move-result v1
+
+    if-eqz v1, :cond_3
+
+    const/4 v2, 0x5
+
+    iget-object p0, p0, Lqbb;->a:Ljava/io/Writer;
+
+    if-eq v1, v2, :cond_2
+
+    const/4 v2, 0x2
+
+    const/4 v3, 0x3
+
+    if-eq v1, v2, :cond_1
+
+    if-ne v1, v3, :cond_0
+
+    const/16 v0, 0x2c
+
+    invoke-virtual {p0, v0}, Ljava/io/Writer;->write(I)V
+
+    return-void
+
+    :cond_0
+    new-instance p0, Ljava/lang/StringBuilder;
+
+    const-string v1, "Nesting problem: "
+
+    invoke-direct {p0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-static {v0}, Lqbb;->W(Lvf;)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {p0, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    new-instance v0, Lru/ok/android/api/json/JsonStateException;
+
+    invoke-direct {v0, p0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+
+    :cond_1
+    invoke-virtual {v0, v3}, Lvf;->d(I)V
+
+    return-void
+
+    :cond_2
+    const-string v1, ":"
+
+    invoke-virtual {p0, v1}, Ljava/io/Writer;->write(Ljava/lang/String;)V
+
+    const/4 p0, 0x6
+
+    invoke-virtual {v0, p0}, Lvf;->d(I)V
+
+    return-void
+
+    :cond_3
+    const/4 p0, 0x1
+
+    invoke-virtual {v0, p0}, Lvf;->d(I)V
+
+    return-void
+.end method
+
+.method public final o(II)V
+    .locals 1
+
+    iget-object p0, p0, Lqbb;->b:Lvf;
+
+    invoke-virtual {p0}, Lvf;->b()I
+
+    move-result v0
+
+    if-eq v0, p2, :cond_1
+
+    if-ne v0, p1, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    new-instance p1, Ljava/lang/StringBuilder;
+
+    const-string p2, "Nesting problem: "
+
+    invoke-direct {p1, p2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-static {p0}, Lqbb;->W(Lvf;)Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-virtual {p1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    new-instance p1, Lru/ok/android/api/json/JsonStateException;
+
+    invoke-direct {p1, p0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_1
+    :goto_0
+    invoke-virtual {p0}, Lvf;->c()I
+
+    return-void
+.end method
+
+.method public final q()V
+    .locals 2
+
+    const/4 v0, 0x4
+
+    const/4 v1, 0x6
+
+    invoke-virtual {p0, v0, v1}, Lqbb;->o(II)V
+
+    iget-object p0, p0, Lqbb;->a:Ljava/io/Writer;
+
+    const/16 v0, 0x7d
+
+    invoke-virtual {p0, v0}, Ljava/io/Writer;->write(I)V
+
+    return-void
+.end method
+
+.method public final s()V
+    .locals 2
+
+    invoke-virtual {p0}, Lqbb;->n()V
+
+    iget-object v0, p0, Lqbb;->b:Lvf;
+
+    const/4 v1, 0x4
+
+    invoke-virtual {v0, v1}, Lvf;->e(I)V
+
+    iget-object p0, p0, Lqbb;->a:Ljava/io/Writer;
+
+    const/16 v0, 0x7b
+
+    invoke-virtual {p0, v0}, Ljava/io/Writer;->write(I)V
+
+    return-void
+.end method
+
+.method public final t()V
+    .locals 2
+
+    const/4 v0, 0x2
+
+    const/4 v1, 0x3
+
+    invoke-virtual {p0, v0, v1}, Lqbb;->o(II)V
+
+    iget-object p0, p0, Lqbb;->a:Ljava/io/Writer;
+
+    const/16 v0, 0x5d
+
+    invoke-virtual {p0, v0}, Ljava/io/Writer;->write(I)V
+
+    return-void
+.end method
+
+.method public final u()V
+    .locals 2
+
+    invoke-virtual {p0}, Lqbb;->n()V
+
+    iget-object v0, p0, Lqbb;->b:Lvf;
+
+    const/4 v1, 0x2
+
+    invoke-virtual {v0, v1}, Lvf;->e(I)V
+
+    iget-object p0, p0, Lqbb;->a:Ljava/io/Writer;
+
+    const/16 v0, 0x5b
+
+    invoke-virtual {p0, v0}, Ljava/io/Writer;->write(I)V
+
+    return-void
 .end method

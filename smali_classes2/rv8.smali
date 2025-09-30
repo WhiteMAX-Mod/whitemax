@@ -1,174 +1,100 @@
-.class public final Lrv8;
+.class public final synthetic Lrv8;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/lang/Cloneable;
+.implements Lbc6;
 
 
 # instance fields
-.field public X:I
+.field public final synthetic a:I
 
-.field public a:Ljava/nio/charset/CodingErrorAction;
+.field public final synthetic b:Lipc;
 
-.field public b:Ljava/nio/charset/CodingErrorAction;
 
-.field public c:I
+# direct methods
+.method public synthetic constructor <init>(Lipc;I)V
+    .locals 0
 
-.field public o:I
+    iput p2, p0, Lrv8;->a:I
+
+    iput-object p1, p0, Lrv8;->b:Lipc;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final clone()Ljava/lang/Object;
-    .locals 2
+.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 5
 
-    new-instance v0, Lrv8;
+    iget v0, p0, Lrv8;->a:I
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    packed-switch v0, :pswitch_data_0
 
-    sget-object v1, Ljava/nio/charset/CodingErrorAction;->REPLACE:Ljava/nio/charset/CodingErrorAction;
+    iget-object p0, p0, Lrv8;->b:Lipc;
 
-    iput-object v1, v0, Lrv8;->a:Ljava/nio/charset/CodingErrorAction;
+    check-cast p1, Landroid/view/Surface;
 
-    iput-object v1, v0, Lrv8;->b:Ljava/nio/charset/CodingErrorAction;
+    iput-object p1, p0, Lipc;->a:Ljava/lang/Object;
 
-    const v1, 0x7fffffff
+    sget-object p0, Lylf;->a:Lylf;
 
-    iput v1, v0, Lrv8;->c:I
+    return-object p0
 
-    const/16 v1, 0x2000
+    :pswitch_0
+    check-cast p1, Ltm3;
 
-    iput v1, v0, Lrv8;->o:I
+    iget-object p0, p0, Lrv8;->b:Lipc;
 
-    iput v1, v0, Lrv8;->X:I
+    iget-object v0, p0, Lipc;->a:Ljava/lang/Object;
 
-    iget-object v1, p0, Lrv8;->a:Ljava/nio/charset/CodingErrorAction;
+    check-cast v0, Ldw8;
 
-    iput-object v1, v0, Lrv8;->a:Ljava/nio/charset/CodingErrorAction;
+    new-instance v1, Lrl2;
 
-    iget-object v1, p0, Lrv8;->b:Ljava/nio/charset/CodingErrorAction;
+    invoke-static {p1}, Lf68;->t(Ltm3;)Lvp3;
 
-    iput-object v1, v0, Lrv8;->b:Ljava/nio/charset/CodingErrorAction;
+    move-result-object v2
 
-    iget v1, p0, Lrv8;->c:I
+    iget-object p0, p0, Lipc;->a:Ljava/lang/Object;
 
-    iput v1, v0, Lrv8;->c:I
+    check-cast p0, Ldw8;
 
-    iget p0, p0, Lrv8;->o:I
+    iget-object p0, p0, Ldw8;->x0:Lcl7;
 
-    iput p0, v0, Lrv8;->o:I
+    invoke-interface {p0}, Lcl7;->getValue()Ljava/lang/Object;
 
-    return-object v0
-.end method
+    move-result-object p0
 
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 2
+    check-cast p0, Lygb;
 
-    instance-of v0, p1, Lrv8;
+    invoke-virtual {p1}, Ltm3;->n()J
 
-    if-nez v0, :cond_0
+    move-result-wide v3
 
-    goto :goto_0
+    invoke-virtual {p0, v3, v4}, Lygb;->p(J)Lvgb;
 
-    :cond_0
-    check-cast p1, Lrv8;
+    move-result-object p0
 
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    invoke-static {p0}, Lf68;->m(Lvgb;)Lwgb;
 
-    iget-object v0, p0, Lrv8;->a:Ljava/nio/charset/CodingErrorAction;
+    move-result-object p0
 
-    iget-object v1, p1, Lrv8;->a:Ljava/nio/charset/CodingErrorAction;
+    const-wide/16 v3, 0x0
 
-    if-ne v0, v1, :cond_1
+    invoke-direct {v1, v2, p0, v3, v4}, Lrl2;-><init>(Lvp3;Lwgb;J)V
 
-    iget-object v0, p0, Lrv8;->b:Ljava/nio/charset/CodingErrorAction;
+    invoke-virtual {v0, v1}, Ldw8;->y(Lrl2;)Lgt8;
 
-    iget-object v1, p1, Lrv8;->b:Ljava/nio/charset/CodingErrorAction;
+    move-result-object p0
 
-    if-ne v0, v1, :cond_1
+    return-object p0
 
-    iget v0, p0, Lrv8;->c:I
-
-    iget v1, p1, Lrv8;->c:I
-
-    if-ne v0, v1, :cond_1
-
-    iget v0, p0, Lrv8;->X:I
-
-    iget v1, p1, Lrv8;->X:I
-
-    if-ne v0, v1, :cond_1
-
-    iget p0, p0, Lrv8;->o:I
-
-    iget p1, p1, Lrv8;->o:I
-
-    if-ne p0, p1, :cond_1
-
-    const/4 p0, 0x1
-
-    return p0
-
-    :cond_1
-    :goto_0
-    const/4 p0, 0x0
-
-    return p0
-.end method
-
-.method public final hashCode()I
-    .locals 3
-
-    iget-object v0, p0, Lrv8;->a:Ljava/nio/charset/CodingErrorAction;
-
-    const/4 v1, 0x0
-
-    if-eqz v0, :cond_0
-
-    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
-
-    move-result v0
-
-    goto :goto_0
-
-    :cond_0
-    move v0, v1
-
-    :goto_0
-    const/16 v2, 0x3e0
-
-    add-int/2addr v2, v0
-
-    mul-int/lit8 v2, v2, 0x1f
-
-    iget-object v0, p0, Lrv8;->b:Ljava/nio/charset/CodingErrorAction;
-
-    if-eqz v0, :cond_1
-
-    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
-
-    move-result v1
-
-    :cond_1
-    add-int/2addr v2, v1
-
-    mul-int/lit8 v2, v2, 0x1f
-
-    iget v0, p0, Lrv8;->c:I
-
-    add-int/2addr v2, v0
-
-    mul-int/lit8 v2, v2, 0x1f
-
-    iget v0, p0, Lrv8;->o:I
-
-    add-int/2addr v2, v0
-
-    mul-int/lit8 v2, v2, 0x1f
-
-    iget p0, p0, Lrv8;->X:I
-
-    add-int/2addr v2, p0
-
-    return v2
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

@@ -1,113 +1,78 @@
 .class public final Lzc8;
-.super Ljava/lang/Object;
+.super Lure;
 .source "SourceFile"
 
 # interfaces
-.implements Lm88;
-.implements Lz0b;
+.implements Lpc6;
 
 
 # instance fields
-.field public final a:Lki8;
+.field public synthetic X:Ljava/lang/Object;
 
-.field public final b:Lyg8;
+.field public final synthetic Y:Lrgd;
 
 
 # direct methods
-.method public constructor <init>(Lki8;Lyg8;)V
+.method public constructor <init>(Lkotlin/coroutines/Continuation;Lrgd;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p2, p0, Lzc8;->Y:Lrgd;
 
-    iput-object p1, p0, Lzc8;->a:Lki8;
+    const/4 p2, 0x2
 
-    iput-object p2, p0, Lzc8;->b:Lyg8;
+    invoke-direct {p0, p2, p1}, Lure;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final X(Lc1b;Lx0b;)V
-    .locals 3
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    const/4 p1, 0x4
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    const/4 v0, 0x5
+    invoke-virtual {p0, p1, p2}, Lzc8;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    const/16 v1, 0xe
+    move-result-object p0
 
-    const/4 v2, 0x0
+    check-cast p0, Lzc8;
 
-    filled-new-array {p1, v0, v1, v2}, [I
+    sget-object p1, Lylf;->a:Lylf;
 
-    move-result-object p1
+    invoke-virtual {p0, p1}, Lzc8;->o(Ljava/lang/Object;)Ljava/lang/Object;
 
-    iget-object p2, p2, Lx0b;->a:Lfm5;
-
-    invoke-virtual {p2, p1}, Lfm5;->a([I)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_0
-
-    iget-object p1, p0, Lzc8;->a:Lki8;
-
-    iget-object p0, p0, Lzc8;->b:Lyg8;
-
-    invoke-virtual {p1, p0, v2}, Lki8;->g(Lyg8;Z)Z
-
-    :cond_0
-    return-void
+    return-object p1
 .end method
 
-.method public final c()V
-    .locals 2
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 1
 
-    iget-object v0, p0, Lzc8;->b:Lyg8;
+    new-instance v0, Lzc8;
 
-    const/4 v1, 0x0
+    iget-object p0, p0, Lzc8;->Y:Lrgd;
 
-    iget-object p0, p0, Lzc8;->a:Lki8;
+    invoke-direct {v0, p2, p0}, Lzc8;-><init>(Lkotlin/coroutines/Continuation;Lrgd;)V
 
-    invoke-virtual {p0, v0, v1}, Lki8;->g(Lyg8;Z)Z
+    iput-object p1, v0, Lzc8;->X:Ljava/lang/Object;
 
-    return-void
+    return-object v0
 .end method
 
-.method public final h()V
-    .locals 2
+.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    iget-object v0, p0, Lzc8;->b:Lyg8;
+    invoke-static {p1}, Lqe5;->V(Ljava/lang/Object;)V
 
-    const/4 v1, 0x0
+    iget-object p1, p0, Lzc8;->X:Ljava/lang/Object;
 
-    iget-object p0, p0, Lzc8;->a:Lki8;
+    check-cast p1, Ljava/util/List;
 
-    invoke-virtual {p0, v0, v1}, Lki8;->g(Lyg8;Z)Z
+    iget-object p0, p0, Lzc8;->Y:Lrgd;
 
-    return-void
-.end method
+    invoke-virtual {p0, p1}, Lls7;->E(Ljava/util/List;)V
 
-.method public final onDisconnected()V
-    .locals 2
+    sget-object p0, Lylf;->a:Lylf;
 
-    iget-object v0, p0, Lzc8;->a:Lki8;
-
-    iget-object p0, p0, Lzc8;->b:Lyg8;
-
-    invoke-virtual {v0, p0}, Lki8;->d(Lyg8;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    invoke-virtual {v0, p0}, Lki8;->h(Lyg8;)V
-
-    :cond_0
-    const/4 v1, 0x0
-
-    invoke-virtual {v0, p0, v1}, Lki8;->g(Lyg8;Z)Z
-
-    return-void
+    return-object p0
 .end method

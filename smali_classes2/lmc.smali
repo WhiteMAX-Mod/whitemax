@@ -2,323 +2,271 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lis5;
+
 
 # instance fields
 .field public final synthetic a:I
 
-.field public final b:Lkmc;
-
-.field public c:Lpmc;
-
-.field public d:Luj4;
-
-.field public final e:J
-
-.field public final f:J
-
-.field public final g:F
-
-.field public final h:F
+.field public final synthetic b:Lis5;
 
 
 # direct methods
-.method public constructor <init>(Lkmc;)V
-    .locals 3
+.method public synthetic constructor <init>(Lis5;I)V
+    .locals 0
 
-    const/4 v0, 0x0
+    iput p2, p0, Llmc;->a:I
 
-    iput v0, p0, Llmc;->a:I
+    iput-object p1, p0, Llmc;->b:Lis5;
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 v0, 0x0
-
-    .line 2
-    iput-object v0, p0, Llmc;->c:Lpmc;
-
-    .line 3
-    iput-object v0, p0, Llmc;->d:Luj4;
-
-    .line 4
-    sget-object v0, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;
-
-    const-wide/16 v1, 0xc8
-
-    .line 5
-    invoke-virtual {v0, v1, v2}, Ljava/util/concurrent/TimeUnit;->toMillis(J)J
-
-    move-result-wide v0
-
-    iput-wide v0, p0, Llmc;->e:J
-
-    .line 6
-    sget-object v0, Ljava/util/concurrent/TimeUnit;->SECONDS:Ljava/util/concurrent/TimeUnit;
-
-    const-wide/16 v1, 0x4
-
-    .line 7
-    invoke-virtual {v0, v1, v2}, Ljava/util/concurrent/TimeUnit;->toMillis(J)J
-
-    move-result-wide v0
-
-    iput-wide v0, p0, Llmc;->f:J
-
-    const/high16 v0, 0x40000000    # 2.0f
-
-    .line 8
-    iput v0, p0, Llmc;->g:F
-
-    const v0, 0x3dcccccd    # 0.1f
-
-    .line 9
-    iput v0, p0, Llmc;->h:F
-
-    .line 10
-    iput-object p1, p0, Llmc;->b:Lkmc;
-
     return-void
-.end method
-
-.method public constructor <init>(Llmc;)V
-    .locals 10
-
-    const/4 v0, 0x1
-
-    iput v0, p0, Llmc;->a:I
-
-    .line 11
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iget v0, p1, Llmc;->h:F
-
-    iget v1, p1, Llmc;->g:F
-
-    iget-wide v2, p1, Llmc;->f:J
-
-    iget-wide v4, p1, Llmc;->e:J
-
-    .line 12
-    iget-object v6, p1, Llmc;->b:Lkmc;
-
-    if-eqz v6, :cond_4
-
-    const-wide/16 v7, 0x0
-
-    cmp-long v9, v4, v7
-
-    if-ltz v9, :cond_3
-
-    cmp-long v7, v2, v7
-
-    if-ltz v7, :cond_2
-
-    const/4 v7, 0x0
-
-    cmpg-float v8, v1, v7
-
-    if-ltz v8, :cond_1
-
-    cmpg-float v7, v0, v7
-
-    if-ltz v7, :cond_0
-
-    .line 13
-    iput-object v6, p0, Llmc;->b:Lkmc;
-
-    .line 14
-    iget-object v6, p1, Llmc;->c:Lpmc;
-
-    iput-object v6, p0, Llmc;->c:Lpmc;
-
-    .line 15
-    iget-object p1, p1, Llmc;->d:Luj4;
-
-    iput-object p1, p0, Llmc;->d:Luj4;
-
-    .line 16
-    iput-wide v4, p0, Llmc;->e:J
-
-    .line 17
-    iput-wide v2, p0, Llmc;->f:J
-
-    .line 18
-    iput v1, p0, Llmc;->g:F
-
-    .line 19
-    iput v0, p0, Llmc;->h:F
-
-    return-void
-
-    .line 20
-    :cond_0
-    new-instance p0, Ljava/lang/IllegalArgumentException;
-
-    new-instance p1, Ljava/lang/StringBuilder;
-
-    const-string v1, "Illegal \'retryBackoffJitter\' value: "
-
-    invoke-direct {p1, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-direct {p0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw p0
-
-    .line 21
-    :cond_1
-    new-instance p0, Ljava/lang/IllegalArgumentException;
-
-    new-instance p1, Ljava/lang/StringBuilder;
-
-    const-string v0, "Illegal \'retryBackoffFactor\' value: "
-
-    invoke-direct {p1, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {p1, v1}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-direct {p0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw p0
-
-    .line 22
-    :cond_2
-    new-instance p0, Ljava/lang/IllegalArgumentException;
-
-    const-string p1, "Illegal \'maxRetryTimeoutMs\' value: "
-
-    .line 23
-    invoke-static {v2, v3, p1}, Lu88;->h(JLjava/lang/String;)Ljava/lang/String;
-
-    move-result-object p1
-
-    .line 24
-    invoke-direct {p0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw p0
-
-    .line 25
-    :cond_3
-    new-instance p0, Ljava/lang/IllegalArgumentException;
-
-    const-string p1, "Illegal \'minRetryTimeoutMs\' value: "
-
-    .line 26
-    invoke-static {v4, v5, p1}, Lu88;->h(JLjava/lang/String;)Ljava/lang/String;
-
-    move-result-object p1
-
-    .line 27
-    invoke-direct {p0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw p0
-
-    .line 28
-    :cond_4
-    new-instance p0, Ljava/lang/IllegalArgumentException;
-
-    const-string p1, "Illegal \'command\' value: null"
-
-    invoke-direct {p0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw p0
 .end method
 
 
 # virtual methods
-.method public toString()Ljava/lang/String;
-    .locals 3
+.method public final d(Lks5;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    .locals 2
 
     iget v0, p0, Llmc;->a:I
 
     packed-switch v0, :pswitch_data_0
 
-    invoke-super {p0}, Ljava/lang/Object;->toString()Ljava/lang/String;
+    new-instance v0, Leia;
+
+    const/16 v1, 0x1c
+
+    invoke-direct {v0, p1, v1}, Leia;-><init>(Lks5;I)V
+
+    iget-object p0, p0, Llmc;->b:Lis5;
+
+    invoke-interface {p0, v0, p2}, Lis5;->d(Lks5;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
     move-result-object p0
 
+    sget-object p1, Lz04;->a:Lz04;
+
+    if-ne p0, p1, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    sget-object p0, Lylf;->a:Lylf;
+
+    :goto_0
     return-object p0
 
     :pswitch_0
-    new-instance v0, Ljava/lang/StringBuilder;
+    new-instance v0, Leia;
 
-    const-string v1, "RtcCommandConfig{command="
+    const/16 v1, 0x1b
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-direct {v0, p1, v1}, Leia;-><init>(Lks5;I)V
 
-    iget-object v1, p0, Llmc;->b:Lkmc;
+    iget-object p0, p0, Llmc;->b:Lis5;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", sentListener=null, successListener="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Llmc;->c:Lpmc;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", errorListener="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Llmc;->d:Luj4;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", maxRetryCount=0, minRetryTimeoutMs="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-wide v1, p0, Llmc;->e:J
-
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    const-string v1, ", maxRetryTimeoutMs="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-wide v1, p0, Llmc;->f:J
-
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    const-string v1, ", retryBackoffFactor="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget v1, p0, Llmc;->g:F
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
-
-    const-string v1, ", retryBackoffJitter="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget p0, p0, Llmc;->h:F
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
-
-    const/16 p0, 0x7d
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-interface {p0, v0, p2}, Lis5;->d(Lks5;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
     move-result-object p0
 
+    sget-object p1, Lz04;->a:Lz04;
+
+    if-ne p0, p1, :cond_1
+
+    goto :goto_1
+
+    :cond_1
+    sget-object p0, Lylf;->a:Lylf;
+
+    :goto_1
+    return-object p0
+
+    :pswitch_1
+    new-instance v0, Leia;
+
+    const/16 v1, 0x1a
+
+    invoke-direct {v0, p1, v1}, Leia;-><init>(Lks5;I)V
+
+    iget-object p0, p0, Llmc;->b:Lis5;
+
+    invoke-interface {p0, v0, p2}, Lis5;->d(Lks5;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p0
+
+    sget-object p1, Lz04;->a:Lz04;
+
+    if-ne p0, p1, :cond_2
+
+    goto :goto_2
+
+    :cond_2
+    sget-object p0, Lylf;->a:Lylf;
+
+    :goto_2
+    return-object p0
+
+    :pswitch_2
+    new-instance v0, Leia;
+
+    const/16 v1, 0x19
+
+    invoke-direct {v0, p1, v1}, Leia;-><init>(Lks5;I)V
+
+    iget-object p0, p0, Llmc;->b:Lis5;
+
+    invoke-interface {p0, v0, p2}, Lis5;->d(Lks5;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p0
+
+    sget-object p1, Lz04;->a:Lz04;
+
+    if-ne p0, p1, :cond_3
+
+    goto :goto_3
+
+    :cond_3
+    sget-object p0, Lylf;->a:Lylf;
+
+    :goto_3
+    return-object p0
+
+    :pswitch_3
+    new-instance v0, Leia;
+
+    const/16 v1, 0x17
+
+    invoke-direct {v0, p1, v1}, Leia;-><init>(Lks5;I)V
+
+    iget-object p0, p0, Llmc;->b:Lis5;
+
+    invoke-interface {p0, v0, p2}, Lis5;->d(Lks5;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p0
+
+    sget-object p1, Lz04;->a:Lz04;
+
+    if-ne p0, p1, :cond_4
+
+    goto :goto_4
+
+    :cond_4
+    sget-object p0, Lylf;->a:Lylf;
+
+    :goto_4
+    return-object p0
+
+    :pswitch_4
+    new-instance v0, Leia;
+
+    const/16 v1, 0x12
+
+    invoke-direct {v0, p1, v1}, Leia;-><init>(Lks5;I)V
+
+    iget-object p0, p0, Llmc;->b:Lis5;
+
+    invoke-interface {p0, v0, p2}, Lis5;->d(Lks5;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p0
+
+    sget-object p1, Lz04;->a:Lz04;
+
+    if-ne p0, p1, :cond_5
+
+    goto :goto_5
+
+    :cond_5
+    sget-object p0, Lylf;->a:Lylf;
+
+    :goto_5
+    return-object p0
+
+    :pswitch_5
+    new-instance v0, Leia;
+
+    const/16 v1, 0x10
+
+    invoke-direct {v0, p1, v1}, Leia;-><init>(Lks5;I)V
+
+    iget-object p0, p0, Llmc;->b:Lis5;
+
+    invoke-interface {p0, v0, p2}, Lis5;->d(Lks5;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p0
+
+    sget-object p1, Lz04;->a:Lz04;
+
+    if-ne p0, p1, :cond_6
+
+    goto :goto_6
+
+    :cond_6
+    sget-object p0, Lylf;->a:Lylf;
+
+    :goto_6
+    return-object p0
+
+    :pswitch_6
+    new-instance v0, Leia;
+
+    const/16 v1, 0xd
+
+    invoke-direct {v0, p1, v1}, Leia;-><init>(Lks5;I)V
+
+    iget-object p0, p0, Llmc;->b:Lis5;
+
+    invoke-interface {p0, v0, p2}, Lis5;->d(Lks5;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p0
+
+    sget-object p1, Lz04;->a:Lz04;
+
+    if-ne p0, p1, :cond_7
+
+    goto :goto_7
+
+    :cond_7
+    sget-object p0, Lylf;->a:Lylf;
+
+    :goto_7
+    return-object p0
+
+    :pswitch_7
+    new-instance v0, Leia;
+
+    const/16 v1, 0xc
+
+    invoke-direct {v0, p1, v1}, Leia;-><init>(Lks5;I)V
+
+    iget-object p0, p0, Llmc;->b:Lis5;
+
+    invoke-interface {p0, v0, p2}, Lis5;->d(Lks5;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p0
+
+    sget-object p1, Lz04;->a:Lz04;
+
+    if-ne p0, p1, :cond_8
+
+    goto :goto_8
+
+    :cond_8
+    sget-object p0, Lylf;->a:Lylf;
+
+    :goto_8
     return-object p0
 
     :pswitch_data_0
-    .packed-switch 0x1
+    .packed-switch 0x0
+        :pswitch_7
+        :pswitch_6
+        :pswitch_5
+        :pswitch_4
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
         :pswitch_0
     .end packed-switch
 .end method

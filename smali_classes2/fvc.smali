@@ -1,230 +1,65 @@
-.class public final Lfvc;
-.super Ljava/lang/Object;
+.class public final enum Lfvc;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
-# interfaces
-.implements Llqf;
 
+# static fields
+.field public static final synthetic a:[Lfvc;
 
-# instance fields
-.field public final synthetic a:Lohc;
-
-.field public final synthetic b:Landroid/graphics/Rect;
-
-.field public final synthetic c:Landroid/graphics/Rect;
-
-.field public final synthetic d:Landroid/graphics/Rect;
-
-.field public final synthetic e:I
+.field public static final synthetic b:Ly75;
 
 
 # direct methods
-.method public constructor <init>(Lohc;Landroid/graphics/Rect;Landroid/graphics/Rect;Landroid/graphics/Rect;I)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 3
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lfvc;
 
-    iput-object p1, p0, Lfvc;->a:Lohc;
-
-    iput-object p2, p0, Lfvc;->b:Landroid/graphics/Rect;
-
-    iput-object p3, p0, Lfvc;->c:Landroid/graphics/Rect;
-
-    iput-object p4, p0, Lfvc;->d:Landroid/graphics/Rect;
-
-    iput p5, p0, Lfvc;->e:I
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final a()V
-    .locals 0
-
-    return-void
-.end method
-
-.method public final b()V
-    .locals 4
-
-    iget-object p0, p0, Lfvc;->a:Lohc;
-
-    iget-object v0, p0, Lohc;->c:Ljava/lang/Object;
-
-    check-cast v0, Landroid/view/View;
-
-    instance-of v1, v0, Landroidx/recyclerview/widget/RecyclerView;
+    const-string v1, "LIMITED_TO_REVERSE_CONTACTS"
 
     const/4 v2, 0x0
 
-    if-eqz v1, :cond_0
+    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    check-cast v0, Landroidx/recyclerview/widget/RecyclerView;
+    filled-new-array {v0}, [Lfvc;
 
-    goto :goto_0
+    move-result-object v0
 
-    :cond_0
-    move-object v0, v2
+    sput-object v0, Lfvc;->a:[Lfvc;
 
-    :goto_0
-    if-eqz v0, :cond_1
+    new-instance v1, Ly75;
 
-    new-instance v1, Lnwa;
+    invoke-direct {v1, v0}, Ly75;-><init>([Ljava/lang/Enum;)V
 
-    const/4 v3, 0x1
-
-    invoke-direct {v1, v0, v3}, Lnwa;-><init>(Landroidx/recyclerview/widget/RecyclerView;I)V
-
-    const/4 v3, 0x0
-
-    invoke-static {v0, v3, v1}, Ltzd;->a(Landroidx/recyclerview/widget/RecyclerView;ILjava/lang/Runnable;)V
-
-    :cond_1
-    iput-object v2, p0, Lohc;->c:Ljava/lang/Object;
+    sput-object v1, Lfvc;->b:Ly75;
 
     return-void
 .end method
 
-.method public final c(Landroid/graphics/Rect;Landroid/view/View;)V
-    .locals 6
+.method public static valueOf(Ljava/lang/String;)Lfvc;
+    .locals 1
 
-    iget-object v0, p0, Lfvc;->a:Lohc;
+    const-class v0, Lfvc;
 
-    iget-object v1, v0, Lohc;->b:Ljava/lang/Object;
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
 
-    check-cast v1, Landroid/view/View;
+    move-result-object p0
 
-    iget-object v2, v0, Lohc;->c:Ljava/lang/Object;
+    check-cast p0, Lfvc;
 
-    check-cast v2, Landroid/view/View;
+    return-object p0
+.end method
 
-    const/4 v3, 0x0
+.method public static values()[Lfvc;
+    .locals 1
 
-    if-nez v2, :cond_2
+    sget-object v0, Lfvc;->a:[Lfvc;
 
-    invoke-static {p2}, Lohc;->f(Landroid/view/View;)Landroid/view/View;
+    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
 
-    move-result-object v2
+    move-result-object v0
 
-    if-nez v2, :cond_0
+    check-cast v0, [Lfvc;
 
-    invoke-virtual {p2}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
-
-    move-result-object v2
-
-    check-cast v2, Landroid/view/View;
-
-    :cond_0
-    iput-object v2, v0, Lohc;->c:Ljava/lang/Object;
-
-    instance-of v4, v2, Landroidx/recyclerview/widget/RecyclerView;
-
-    if-eqz v4, :cond_1
-
-    check-cast v2, Landroidx/recyclerview/widget/RecyclerView;
-
-    goto :goto_0
-
-    :cond_1
-    move-object v2, v3
-
-    :goto_0
-    if-eqz v2, :cond_2
-
-    new-instance v4, Lnwa;
-
-    const/4 v5, 0x2
-
-    invoke-direct {v4, v2, v5}, Lnwa;-><init>(Landroidx/recyclerview/widget/RecyclerView;I)V
-
-    const/4 v5, 0x0
-
-    invoke-static {v2, v5, v4}, Ltzd;->a(Landroidx/recyclerview/widget/RecyclerView;ILjava/lang/Runnable;)V
-
-    :cond_2
-    iget-object v2, p0, Lfvc;->b:Landroid/graphics/Rect;
-
-    invoke-static {v2, v1}, Lfqf;->d(Landroid/graphics/Rect;Landroid/view/View;)V
-
-    invoke-virtual {v1}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
-
-    move-result-object v1
-
-    instance-of v4, v1, Lr3b;
-
-    if-eqz v4, :cond_3
-
-    move-object v3, v1
-
-    check-cast v3, Lr3b;
-
-    :cond_3
-    if-eqz v3, :cond_4
-
-    invoke-virtual {v3}, Lr3b;->getCallback()Ll3b;
-
-    move-result-object v1
-
-    if-eqz v1, :cond_4
-
-    invoke-virtual {v1}, Ll3b;->c()I
-
-    move-result v1
-
-    goto :goto_1
-
-    :cond_4
-    iget v1, v2, Landroid/graphics/Rect;->top:I
-
-    :goto_1
-    iget-object v0, v0, Lohc;->c:Ljava/lang/Object;
-
-    check-cast v0, Landroid/view/View;
-
-    iget-object v2, p0, Lfvc;->c:Landroid/graphics/Rect;
-
-    if-eqz v0, :cond_5
-
-    invoke-static {v2, v0}, Lfqf;->d(Landroid/graphics/Rect;Landroid/view/View;)V
-
-    :cond_5
-    iget v0, v2, Landroid/graphics/Rect;->top:I
-
-    iget v3, p0, Lfvc;->e:I
-
-    add-int/2addr v0, v3
-
-    iget-object p0, p0, Lfvc;->d:Landroid/graphics/Rect;
-
-    iput v0, p0, Landroid/graphics/Rect;->top:I
-
-    sub-int/2addr v1, v3
-
-    iput v1, p0, Landroid/graphics/Rect;->bottom:I
-
-    iget v0, v2, Landroid/graphics/Rect;->left:I
-
-    iput v0, p0, Landroid/graphics/Rect;->left:I
-
-    iget v0, v2, Landroid/graphics/Rect;->right:I
-
-    iput v0, p0, Landroid/graphics/Rect;->right:I
-
-    invoke-virtual {p0, p1}, Landroid/graphics/Rect;->contains(Landroid/graphics/Rect;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_6
-
-    invoke-static {p2, p2}, Lohc;->d(Landroid/view/View;Landroid/view/View;)Lu2;
-
-    move-result-object p2
-
-    if-eqz p2, :cond_6
-
-    invoke-virtual {p2, p1, p0}, Lu2;->A0(Landroid/graphics/Rect;Landroid/graphics/Rect;)V
-
-    :cond_6
-    return-void
+    return-object v0
 .end method

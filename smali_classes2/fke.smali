@@ -1,150 +1,46 @@
 .class public final Lfke;
-.super Ljava/lang/Object;
-.source "SourceFile"
+.super Ljx3;
 
 
 # instance fields
-.field public final a:Lar7;
+.field public X:I
 
-.field public final b:J
+.field public final synthetic Y:Lhc9;
 
-.field public final c:J
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Lar7;JJ)V
+.method public constructor <init>(Lhc9;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lfke;->Y:Lhc9;
 
-    iput-object p1, p0, Lfke;->a:Lar7;
-
-    iput-wide p2, p0, Lfke;->b:J
-
-    iput-wide p4, p0, Lfke;->c:J
+    invoke-direct {p0, p2}, Ljx3;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 7
+.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    const/4 v0, 0x1
+    iput-object p1, p0, Lfke;->o:Ljava/lang/Object;
 
-    if-ne p0, p1, :cond_0
+    iget p1, p0, Lfke;->X:I
 
-    return v0
+    const/high16 v0, -0x80000000
 
-    :cond_0
-    instance-of v1, p1, Lfke;
+    or-int/2addr p1, v0
 
-    const/4 v2, 0x0
+    iput p1, p0, Lfke;->X:I
 
-    if-nez v1, :cond_1
+    iget-object p1, p0, Lfke;->Y:Lhc9;
 
-    return v2
+    const/4 v0, 0x0
 
-    :cond_1
-    check-cast p1, Lfke;
-
-    iget-object v1, p0, Lfke;->a:Lar7;
-
-    iget-object v3, p1, Lfke;->a:Lar7;
-
-    invoke-static {v1, v3}, Lxq7;->d(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_2
-
-    return v2
-
-    :cond_2
-    iget-wide v3, p0, Lfke;->b:J
-
-    iget-wide v5, p1, Lfke;->b:J
-
-    cmp-long v1, v3, v5
-
-    if-eqz v1, :cond_3
-
-    return v2
-
-    :cond_3
-    iget-wide v3, p0, Lfke;->c:J
-
-    iget-wide p0, p1, Lfke;->c:J
-
-    cmp-long p0, v3, p0
-
-    if-eqz p0, :cond_4
-
-    return v2
-
-    :cond_4
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 4
-
-    iget-object v0, p0, Lfke;->a:Lar7;
-
-    invoke-virtual {v0}, Lar7;->hashCode()I
-
-    move-result v0
-
-    const/16 v1, 0x1f
-
-    mul-int/2addr v0, v1
-
-    iget-wide v2, p0, Lfke;->b:J
-
-    invoke-static {v0, v1, v2, v3}, Lzge;->m(IIJ)I
-
-    move-result v0
-
-    iget-wide v1, p0, Lfke;->c:J
-
-    invoke-static {v1, v2}, Ljava/lang/Long;->hashCode(J)I
-
-    move-result p0
-
-    add-int/2addr p0, v0
-
-    return p0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 5
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "LocationResult(locationData="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v1, p0, Lfke;->a:Lar7;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", livePeriod="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-wide v1, p0, Lfke;->b:J
-
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    const-string v1, ", zoom="
-
-    const-string v2, ")"
-
-    iget-wide v3, p0, Lfke;->c:J
-
-    invoke-static {v3, v4, v1, v2, v0}, Lv04;->g(JLjava/lang/String;Ljava/lang/String;Ljava/lang/StringBuilder;)Ljava/lang/String;
+    invoke-virtual {p1, v0, p0}, Lhc9;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
     move-result-object p0
 

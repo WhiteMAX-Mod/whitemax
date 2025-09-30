@@ -3,258 +3,132 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lau3;
+.implements Lt6e;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public a:Lt6e;
 
-.field public final synthetic b:Ljava/lang/Object;
-
-.field public final synthetic c:Ljava/lang/Object;
-
-.field public final synthetic d:Ljava/lang/Object;
-
-.field public final synthetic e:Ljava/lang/Object;
+.field public final b:Lwk4;
 
 
 # direct methods
-.method public constructor <init>(Ljava/util/concurrent/Callable;Lau3;Ljava/util/concurrent/Executor;Lcy1;)V
-    .locals 1
+.method public constructor <init>(Lwk4;)V
+    .locals 0
 
-    const/4 v0, 0x1
-
-    iput v0, p0, Lxk4;->a:I
-
-    .line 2
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lxk4;->b:Ljava/lang/Object;
-
-    iput-object p2, p0, Lxk4;->c:Ljava/lang/Object;
-
-    iput-object p3, p0, Lxk4;->d:Ljava/lang/Object;
-
-    iput-object p4, p0, Lxk4;->e:Ljava/lang/Object;
-
-    return-void
-.end method
-
-.method public constructor <init>(Lyk4;Lq7b;Ln7b;Lai0;)V
-    .locals 1
-
-    const/4 v0, 0x0
-
-    iput v0, p0, Lxk4;->a:I
-
-    .line 1
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lxk4;->e:Ljava/lang/Object;
-
-    iput-object p2, p0, Lxk4;->b:Ljava/lang/Object;
-
-    iput-object p3, p0, Lxk4;->c:Ljava/lang/Object;
-
-    iput-object p4, p0, Lxk4;->d:Ljava/lang/Object;
+    iput-object p1, p0, Lxk4;->b:Lwk4;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Lbolts/Task;)Ljava/lang/Object;
-    .locals 6
+.method public final a(Ljavax/net/ssl/SSLSocket;)Z
+    .locals 0
 
-    iget v0, p0, Lxk4;->a:I
+    iget-object p0, p0, Lxk4;->b:Lwk4;
 
-    packed-switch v0, :pswitch_data_0
+    invoke-interface {p0, p1}, Lwk4;->a(Ljavax/net/ssl/SSLSocket;)Z
 
-    iget-object p1, p0, Lxk4;->d:Ljava/lang/Object;
+    move-result p0
 
-    check-cast p1, Ljava/util/concurrent/Executor;
+    return p0
+.end method
 
-    iget-object v0, p0, Lxk4;->b:Ljava/lang/Object;
+.method public final b()Z
+    .locals 0
 
-    check-cast v0, Ljava/util/concurrent/Callable;
+    const/4 p0, 0x1
 
-    invoke-interface {v0}, Ljava/util/concurrent/Callable;->call()Ljava/lang/Object;
+    return p0
+.end method
 
-    move-result-object v0
+.method public final c(Ljavax/net/ssl/SSLSocket;)Ljava/lang/String;
+    .locals 0
 
-    check-cast v0, Ljava/lang/Boolean;
+    invoke-virtual {p0, p1}, Lxk4;->e(Ljavax/net/ssl/SSLSocket;)Lt6e;
 
-    invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
+    move-result-object p0
+
+    if-eqz p0, :cond_0
+
+    invoke-interface {p0, p1}, Lt6e;->c(Ljavax/net/ssl/SSLSocket;)Ljava/lang/String;
+
+    move-result-object p0
+
+    return-object p0
+
+    :cond_0
+    const/4 p0, 0x0
+
+    return-object p0
+.end method
+
+.method public final d(Ljavax/net/ssl/SSLSocket;Ljava/lang/String;Ljava/util/List;)V
+    .locals 0
+
+    invoke-virtual {p0, p1}, Lxk4;->e(Ljavax/net/ssl/SSLSocket;)Lt6e;
+
+    move-result-object p0
+
+    if-eqz p0, :cond_0
+
+    invoke-interface {p0, p1, p2, p3}, Lt6e;->d(Ljavax/net/ssl/SSLSocket;Ljava/lang/String;Ljava/util/List;)V
+
+    :cond_0
+    return-void
+.end method
+
+.method public final declared-synchronized e(Ljavax/net/ssl/SSLSocket;)Lt6e;
+    .locals 1
+
+    monitor-enter p0
+
+    :try_start_0
+    iget-object v0, p0, Lxk4;->a:Lt6e;
+
+    if-nez v0, :cond_0
+
+    iget-object v0, p0, Lxk4;->b:Lwk4;
+
+    invoke-interface {v0, p1}, Lwk4;->a(Ljavax/net/ssl/SSLSocket;)Z
 
     move-result v0
-
-    const/4 v1, 0x0
 
     if-eqz v0, :cond_0
 
-    invoke-static {v1}, Lbolts/Task;->forResult(Ljava/lang/Object;)Lbolts/Task;
+    iget-object v0, p0, Lxk4;->b:Lwk4;
 
-    move-result-object v0
+    invoke-interface {v0, p1}, Lwk4;->b(Ljavax/net/ssl/SSLSocket;)Lt6e;
 
-    iget-object v1, p0, Lxk4;->c:Ljava/lang/Object;
+    move-result-object p1
 
-    check-cast v1, Lau3;
-
-    invoke-virtual {v0, v1, p1}, Lbolts/Task;->onSuccessTask(Lau3;Ljava/util/concurrent/Executor;)Lbolts/Task;
-
-    move-result-object v0
-
-    iget-object p0, p0, Lxk4;->e:Ljava/lang/Object;
-
-    check-cast p0, Lcy1;
-
-    iget-object p0, p0, Lcy1;->b:Ljava/lang/Object;
-
-    check-cast p0, Lxk4;
-
-    invoke-virtual {v0, p0, p1}, Lbolts/Task;->onSuccessTask(Lau3;Ljava/util/concurrent/Executor;)Lbolts/Task;
-
-    move-result-object p0
+    iput-object p1, p0, Lxk4;->a:Lt6e;
 
     goto :goto_0
 
-    :cond_0
-    invoke-static {v1}, Lbolts/Task;->forResult(Ljava/lang/Object;)Lbolts/Task;
-
-    move-result-object p0
-
-    :goto_0
-    return-object p0
-
-    :pswitch_0
-    iget-object v0, p0, Lxk4;->e:Ljava/lang/Object;
-
-    check-cast v0, Lyk4;
-
-    iget-object v0, v0, Lyk4;->d:Ljava/lang/Object;
-
-    check-cast v0, Lyk4;
-
-    iget-object v1, p0, Lxk4;->d:Ljava/lang/Object;
-
-    check-cast v1, Lai0;
-
-    iget-object v2, p0, Lxk4;->b:Ljava/lang/Object;
-
-    check-cast v2, Lq7b;
-
-    iget-object p0, p0, Lxk4;->c:Ljava/lang/Object;
-
-    check-cast p0, Ln7b;
-
-    invoke-virtual {p1}, Lbolts/Task;->isCancelled()Z
-
-    move-result v3
-
-    const/4 v4, 0x0
-
-    const-string v5, "DiskCacheProducer"
-
-    if-nez v3, :cond_4
-
-    invoke-virtual {p1}, Lbolts/Task;->isFaulted()Z
-
-    move-result v3
-
-    if-eqz v3, :cond_1
-
-    invoke-virtual {p1}, Lbolts/Task;->getError()Ljava/lang/Exception;
-
-    move-result-object v3
-
-    instance-of v3, v3, Ljava/util/concurrent/CancellationException;
-
-    if-eqz v3, :cond_1
+    :catchall_0
+    move-exception p1
 
     goto :goto_1
 
-    :cond_1
-    invoke-virtual {p1}, Lbolts/Task;->isFaulted()Z
+    :cond_0
+    :goto_0
+    iget-object p1, p0, Lxk4;->a:Lt6e;
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    move-result v3
+    monitor-exit p0
 
-    if-eqz v3, :cond_2
+    return-object p1
 
-    invoke-virtual {p1}, Lbolts/Task;->getError()Ljava/lang/Exception;
-
-    move-result-object p1
-
-    invoke-interface {v2, p0, v5, p1, v4}, Lq7b;->d(Ln7b;Ljava/lang/String;Ljava/lang/Throwable;Ljava/util/Map;)V
-
-    invoke-virtual {v0, v1, p0}, Lyk4;->a(Lai0;Ln7b;)V
-
-    goto :goto_2
-
-    :cond_2
-    invoke-virtual {p1}, Lbolts/Task;->getResult()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, La05;
-
-    if-eqz p1, :cond_3
-
-    invoke-virtual {p1}, La05;->o()I
-
-    move-result v0
-
-    const/4 v3, 0x1
-
-    invoke-static {v2, p0, v3, v0}, Lyk4;->c(Lq7b;Ln7b;ZI)Ljava/util/Map;
-
-    move-result-object v0
-
-    invoke-interface {v2, p0, v5, v0}, Lq7b;->a(Ln7b;Ljava/lang/String;Ljava/util/Map;)V
-
-    invoke-interface {v2, p0, v5, v3}, Lq7b;->e(Ln7b;Ljava/lang/String;Z)V
-
-    check-cast p0, Ljj0;
-
-    const-string v0, "default"
-
-    const-string v2, "disk"
-
-    invoke-virtual {p0, v2, v0}, Ljj0;->h(Ljava/lang/String;Ljava/lang/String;)V
-
-    const/high16 p0, 0x3f800000    # 1.0f
-
-    invoke-virtual {v1, p0}, Lai0;->i(F)V
-
-    invoke-virtual {v1, v3, p1}, Lai0;->g(ILjava/lang/Object;)V
-
-    invoke-virtual {p1}, La05;->close()V
-
-    goto :goto_2
-
-    :cond_3
-    const/4 p1, 0x0
-
-    invoke-static {v2, p0, p1, p1}, Lyk4;->c(Lq7b;Ln7b;ZI)Ljava/util/Map;
-
-    move-result-object p1
-
-    invoke-interface {v2, p0, v5, p1}, Lq7b;->a(Ln7b;Ljava/lang/String;Ljava/util/Map;)V
-
-    invoke-virtual {v0, v1, p0}, Lyk4;->a(Lai0;Ln7b;)V
-
-    goto :goto_2
-
-    :cond_4
     :goto_1
-    invoke-interface {v2, p0, v5}, Lq7b;->k(Ln7b;Ljava/lang/String;)V
+    :try_start_1
+    monitor-exit p0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    invoke-virtual {v1}, Lai0;->c()V
-
-    :goto_2
-    return-object v4
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    throw p1
 .end method

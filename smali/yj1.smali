@@ -1,163 +1,48 @@
-.class public final synthetic Lyj1;
-.super Ljava/lang/Object;
-.source "SourceFile"
-
-# interfaces
-.implements Lv56;
+.class public final Lyj1;
+.super Ljx3;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public X:I
 
-.field public final synthetic b:Lbl1;
+.field public final synthetic Y:Lmv;
+
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lbl1;I)V
+.method public constructor <init>(Lmv;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    iput p2, p0, Lyj1;->a:I
+    iput-object p1, p0, Lyj1;->Y:Lmv;
 
-    iput-object p1, p0, Lyj1;->b:Lbl1;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p2}, Ljx3;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke()Ljava/lang/Object;
-    .locals 2
+.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    iget v0, p0, Lyj1;->a:I
+    iput-object p1, p0, Lyj1;->o:Ljava/lang/Object;
 
-    iget-object p0, p0, Lyj1;->b:Lbl1;
+    iget p1, p0, Lyj1;->X:I
 
-    packed-switch v0, :pswitch_data_0
+    const/high16 v0, -0x80000000
 
-    iget-object p0, p0, Lbl1;->p0:Lptc;
+    or-int/2addr p1, v0
 
-    iget-boolean p0, p0, Lptc;->e:Z
+    iput p1, p0, Lyj1;->X:I
 
-    if-eqz p0, :cond_0
+    iget-object p1, p0, Lyj1;->Y:Lmv;
 
-    const/4 p0, 0x6
+    const/4 v0, 0x0
 
-    goto :goto_0
-
-    :cond_0
-    const/16 p0, 0x8
-
-    :goto_0
-    new-instance v0, Landroidx/recyclerview/widget/b;
-
-    invoke-direct {v0}, Landroidx/recyclerview/widget/b;-><init>()V
-
-    const/4 v1, 0x1
-
-    invoke-virtual {v0, v1, p0}, Landroidx/recyclerview/widget/b;->setMaxRecycledViews(II)V
-
-    return-object v0
-
-    :pswitch_0
-    iget-object p0, p0, Lbl1;->q0:Lje7;
-
-    invoke-interface {p0}, Lje7;->getValue()Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, Lzd5;
-
-    check-cast p0, Lbe5;
-
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    sget-object v0, Lru/ok/tamtam/android/prefs/PmsKey;->grse:Lru/ok/tamtam/android/prefs/PmsKey;
-
-    const/4 v1, 0x0
-
-    invoke-virtual {p0, v0, v1}, Ltwc;->k(Lru/ok/tamtam/android/prefs/PmsKey;Z)Z
-
-    move-result p0
-
-    :goto_1
-    invoke-static {p0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+    invoke-virtual {p1, v0, p0}, Lmv;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
     move-result-object p0
 
     return-object p0
-
-    :pswitch_1
-    iget-object p0, p0, Lbl1;->q0:Lje7;
-
-    invoke-interface {p0}, Lje7;->getValue()Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, Lzd5;
-
-    check-cast p0, Lbe5;
-
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    sget-object v0, Lru/ok/tamtam/android/prefs/PmsKey;->sse:Lru/ok/tamtam/android/prefs/PmsKey;
-
-    const/4 v1, 0x0
-
-    invoke-virtual {p0, v0, v1}, Ltwc;->k(Lru/ok/tamtam/android/prefs/PmsKey;Z)Z
-
-    move-result p0
-
-    goto :goto_1
-
-    :pswitch_2
-    iget-object p0, p0, Lbl1;->q0:Lje7;
-
-    invoke-interface {p0}, Lje7;->getValue()Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, Lzd5;
-
-    check-cast p0, Lbe5;
-
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    sget-object v0, Lru/ok/tamtam/android/prefs/PmsKey;->gsse:Lru/ok/tamtam/android/prefs/PmsKey;
-
-    const/4 v1, 0x0
-
-    invoke-virtual {p0, v0, v1}, Ltwc;->k(Lru/ok/tamtam/android/prefs/PmsKey;Z)Z
-
-    move-result p0
-
-    goto :goto_1
-
-    :pswitch_3
-    iget-object p0, p0, Lbl1;->q0:Lje7;
-
-    invoke-interface {p0}, Lje7;->getValue()Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, Lzd5;
-
-    check-cast p0, Lbe5;
-
-    invoke-virtual {p0}, Lbe5;->q()Z
-
-    move-result p0
-
-    goto :goto_1
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
 .end method

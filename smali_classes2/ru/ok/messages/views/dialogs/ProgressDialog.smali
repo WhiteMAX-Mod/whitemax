@@ -4,7 +4,7 @@
 
 
 # instance fields
-.field public B1:Lmkb;
+.field public E1:Lqwb;
 
 
 # direct methods
@@ -55,9 +55,9 @@
 
     move-result v3
 
-    iput-boolean v1, p0, Landroidx/fragment/app/DialogFragment;->n1:Z
+    iput-boolean v1, p0, Landroidx/fragment/app/DialogFragment;->q1:Z
 
-    iget-object v4, p0, Landroidx/fragment/app/DialogFragment;->s1:Landroid/app/Dialog;
+    iget-object v4, p0, Landroidx/fragment/app/DialogFragment;->v1:Landroid/app/Dialog;
 
     if-eqz v4, :cond_0
 
@@ -78,27 +78,27 @@
 
     move-result-object p0
 
-    new-instance v5, Ln08;
+    new-instance v5, Lm78;
 
-    invoke-direct {v5, p0, v4}, Ln08;-><init>(Landroid/content/Context;I)V
+    invoke-direct {v5, p0, v4}, Lm78;-><init>(Landroid/content/Context;I)V
 
-    iget-object v4, v5, Lmc;->a:Lic;
+    iget-object v4, v5, Lrc;->a:Lnc;
 
-    iput-boolean v1, v4, Lic;->m:Z
+    iput-boolean v1, v4, Lnc;->m:Z
 
-    new-instance v1, Lt00;
+    new-instance v1, La00;
 
     const/4 v6, 0x1
 
-    invoke-direct {v1, v6}, Lt00;-><init>(I)V
+    invoke-direct {v1, v6}, La00;-><init>(I)V
 
-    iput-object v2, v4, Lic;->k:Ljava/lang/CharSequence;
+    iput-object v2, v4, Lnc;->k:Ljava/lang/CharSequence;
 
-    iput-object v1, v4, Lic;->l:Landroid/content/DialogInterface$OnClickListener;
+    iput-object v1, v4, Lnc;->l:Landroid/content/DialogInterface$OnClickListener;
 
-    invoke-static {p0, v0, v5, v3}, Lg47;->G(Landroid/content/Context;Ljava/lang/String;Ln08;Z)V
+    invoke-static {p0, v0, v5, v3}, Lvyg;->D(Landroid/content/Context;Ljava/lang/String;Lm78;Z)V
 
-    invoke-virtual {v5}, Ln08;->create()Lnc;
+    invoke-virtual {v5}, Lm78;->create()Lsc;
 
     move-result-object p0
 
@@ -109,17 +109,17 @@
 
     move-result-object p0
 
-    new-instance v2, Ln08;
+    new-instance v2, Lm78;
 
-    invoke-direct {v2, p0, v4}, Ln08;-><init>(Landroid/content/Context;I)V
+    invoke-direct {v2, p0, v4}, Lm78;-><init>(Landroid/content/Context;I)V
 
-    iget-object v4, v2, Lmc;->a:Lic;
+    iget-object v4, v2, Lrc;->a:Lnc;
 
-    iput-boolean v1, v4, Lic;->m:Z
+    iput-boolean v1, v4, Lnc;->m:Z
 
-    invoke-static {p0, v0, v2, v3}, Lg47;->G(Landroid/content/Context;Ljava/lang/String;Ln08;Z)V
+    invoke-static {p0, v0, v2, v3}, Lvyg;->D(Landroid/content/Context;Ljava/lang/String;Lm78;Z)V
 
-    invoke-virtual {v2}, Ln08;->create()Lnc;
+    invoke-virtual {v2}, Lm78;->create()Lsc;
 
     move-result-object p0
 
@@ -129,11 +129,11 @@
 .method public final onCancel(Landroid/content/DialogInterface;)V
     .locals 0
 
-    iget-object p0, p0, Lru/ok/messages/views/dialogs/ProgressDialog;->B1:Lmkb;
+    iget-object p0, p0, Lru/ok/messages/views/dialogs/ProgressDialog;->E1:Lqwb;
 
     if-eqz p0, :cond_0
 
-    invoke-interface {p0}, Lmkb;->onCancel()V
+    invoke-interface {p0}, Lqwb;->onCancel()V
 
     :cond_0
     return-void

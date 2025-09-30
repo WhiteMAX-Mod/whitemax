@@ -1,52 +1,47 @@
-.class public final synthetic Lyk6;
-.super La76;
+.class public final Lyk6;
+.super Ljava/lang/Object;
 .source "SourceFile"
-
-# interfaces
-.implements Lx56;
 
 
 # static fields
-.field public static final a:Lyk6;
+.field public static final c:Lbfb;
+
+
+# instance fields
+.field public final a:Lkotlinx/coroutines/internal/ContextScope;
+
+.field public final b:Ljava/lang/String;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 6
+    .locals 2
 
-    new-instance v0, Lyk6;
+    new-instance v0, Lbfb;
 
-    const-string v4, "getTime()J"
+    const/16 v1, 0x1e
 
-    const/4 v5, 0x0
+    invoke-direct {v0, v1}, Lbfb;-><init>(I)V
 
-    const/4 v1, 0x1
-
-    const-class v2, Lfl6;
-
-    const-string v3, "getTime"
-
-    invoke-direct/range {v0 .. v5}, La76;-><init>(ILjava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
-
-    sput-object v0, Lyk6;->a:Lyk6;
+    sput-object v0, Lyk6;->c:Lbfb;
 
     return-void
 .end method
 
-
-# virtual methods
-.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
+.method public constructor <init>(Lkotlinx/coroutines/internal/ContextScope;)V
     .locals 0
 
-    check-cast p1, Lfl6;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-interface {p1}, Lfl6;->l()J
+    iput-object p1, p0, Lyk6;->a:Lkotlinx/coroutines/internal/ContextScope;
 
-    move-result-wide p0
+    const-class p1, Lyk6;
 
-    invoke-static {p0, p1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    invoke-virtual {p1}, Ljava/lang/Class;->getName()Ljava/lang/String;
 
-    move-result-object p0
+    move-result-object p1
 
-    return-object p0
+    iput-object p1, p0, Lyk6;->b:Ljava/lang/String;
+
+    return-void
 .end method

@@ -1,49 +1,84 @@
-.class public final Lq8a;
-.super Lbu3;
+.class public abstract Lq8a;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public final synthetic X:Lr8a;
-
-.field public Y:I
-
-.field public synthetic o:Ljava/lang/Object;
+.field public final a:Lwd3;
 
 
 # direct methods
-.method public constructor <init>(Lr8a;Lbu3;)V
+.method public constructor <init>(Lwd3;)V
     .locals 0
 
-    iput-object p1, p0, Lq8a;->X:Lr8a;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, p2}, Lbu3;-><init>(Lkotlin/coroutines/Continuation;)V
+    iput-object p1, p0, Lq8a;->a:Lwd3;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+.method public abstract a()Lwk;
+.end method
 
-    iput-object p1, p0, Lq8a;->o:Ljava/lang/Object;
+.method public abstract b()Lr8a;
+.end method
 
-    iget p1, p0, Lq8a;->Y:I
+.method public abstract c()Lk1d;
+.end method
 
-    const/high16 v0, -0x80000000
+.method public final d()Lwd3;
+    .locals 2
 
-    or-int/2addr p1, v0
+    new-instance v0, Lwd3;
 
-    iput p1, p0, Lq8a;->Y:I
+    invoke-direct {v0}, Lwd3;-><init>()V
 
-    iget-object p1, p0, Lq8a;->X:Lr8a;
+    iget-object p0, p0, Lq8a;->a:Lwd3;
 
-    const/4 v0, 0x0
+    iget-object v1, p0, Lwd3;->a:Ljava/lang/Object;
 
-    invoke-virtual {p1, v0, p0}, Lr8a;->a(Landroid/content/Context;Lbu3;)V
+    check-cast v1, Lsh3;
 
-    sget-object p0, Lpx3;->a:Lpx3;
+    iput-object v1, v0, Lwd3;->a:Ljava/lang/Object;
 
-    return-object p0
+    iget-object v1, p0, Lwd3;->o:Ljava/lang/Object;
+
+    check-cast v1, Ljl;
+
+    iput-object v1, v0, Lwd3;->o:Ljava/lang/Object;
+
+    iget-object v1, p0, Lwd3;->b:Ljava/lang/Object;
+
+    check-cast v1, Lg8f;
+
+    iput-object v1, v0, Lwd3;->b:Ljava/lang/Object;
+
+    iget-object v1, p0, Lwd3;->c:Ljava/lang/Object;
+
+    check-cast v1, Ljavax/inject/Provider;
+
+    iput-object v1, v0, Lwd3;->c:Ljava/lang/Object;
+
+    iget-object v1, p0, Lwd3;->Z:Ljava/lang/Object;
+
+    check-cast v1, Lql;
+
+    iput-object v1, v0, Lwd3;->Z:Ljava/lang/Object;
+
+    iget-object v1, p0, Lwd3;->Y:Ljava/lang/Object;
+
+    check-cast v1, Lul;
+
+    iput-object v1, v0, Lwd3;->Y:Ljava/lang/Object;
+
+    iget-object p0, p0, Lwd3;->X:Ljava/lang/Object;
+
+    check-cast p0, Lfo8;
+
+    iput-object p0, v0, Lwd3;->X:Ljava/lang/Object;
+
+    return-object v0
 .end method

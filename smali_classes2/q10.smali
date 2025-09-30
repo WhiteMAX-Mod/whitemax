@@ -1,107 +1,110 @@
-.class public final Lq10;
+.class public final synthetic Lq10;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Landroid/view/View$OnClickListener;
+
 
 # instance fields
-.field public a:J
+.field public final synthetic a:I
 
-.field public b:I
 
-.field public c:I
+# direct methods
+.method public synthetic constructor <init>(I)V
+    .locals 0
 
-.field public d:Ljava/lang/String;
+    iput p1, p0, Lq10;->a:I
 
-.field public e:J
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-.field public f:Ljava/lang/String;
+    return-void
+.end method
 
-.field public g:Ljava/lang/String;
+.method private final a(Landroid/view/View;)V
+    .locals 0
 
-.field public h:Ljava/lang/String;
-
-.field public i:Ljava/util/List;
-
-.field public j:I
-
-.field public k:J
-
-.field public l:Ljava/lang/String;
-
-.field public m:Z
-
-.field public n:I
-
-.field public o:Ljava/lang/String;
+    return-void
+.end method
 
 
 # virtual methods
-.method public a()Lr10;
-    .locals 2
+.method public final onClick(Landroid/view/View;)V
+    .locals 1
 
-    iget-object v0, p0, Lq10;->i:Ljava/util/List;
+    iget p0, p0, Lq10;->a:I
 
-    if-nez v0, :cond_0
+    const-string p1, ":call-contact"
 
-    sget-object v0, Ljava/util/Collections;->EMPTY_LIST:Ljava/util/List;
+    const/4 v0, 0x0
 
-    iput-object v0, p0, Lq10;->i:Ljava/util/List;
+    packed-switch p0, :pswitch_data_0
 
-    :cond_0
-    iget v0, p0, Lq10;->j:I
+    sget-object p0, Lone/me/profile/screens/avatars/ProfileAvatarsScreen;->y0:[Lxi7;
 
-    const/4 v1, 0x1
+    :pswitch_0
+    return-void
 
-    if-nez v0, :cond_1
+    :pswitch_1
+    sget-object p0, Lone/me/keyboardmedia/MediaKeyboardWidget;->B0:[Lxi7;
 
-    iput v1, p0, Lq10;->j:I
+    sget-object p0, Lpj7;->c:Lpj7;
 
-    :cond_1
-    iget v0, p0, Lq10;->n:I
+    invoke-virtual {p0}, Lx2;->F0()Lza4;
 
-    if-nez v0, :cond_2
+    move-result-object p0
 
-    iput v1, p0, Lq10;->n:I
+    const-string p1, ":stickers/settings"
 
-    :cond_2
-    new-instance v0, Lr10;
+    invoke-virtual {p0, p1, v0}, Lza4;->b(Ljava/lang/String;Landroid/os/Bundle;)Z
 
-    invoke-direct {v0, p0}, Lr10;-><init>(Lq10;)V
+    return-void
 
-    return-object v0
-.end method
+    :pswitch_2
+    sget-object p0, Lone/me/calllist/ui/CallHistoryScreen;->C0:[Lxi7;
 
-.method public b()Ll0e;
-    .locals 2
+    sget-object p0, Lj81;->c:Lj81;
 
-    iget-object v0, p0, Lq10;->i:Ljava/util/List;
+    invoke-virtual {p0}, Lx2;->F0()Lza4;
 
-    if-nez v0, :cond_0
+    move-result-object p0
 
-    sget-object v0, Ljava/util/Collections;->EMPTY_LIST:Ljava/util/List;
+    invoke-virtual {p0, p1, v0}, Lza4;->b(Ljava/lang/String;Landroid/os/Bundle;)Z
 
-    iput-object v0, p0, Lq10;->i:Ljava/util/List;
+    return-void
 
-    :cond_0
-    iget v0, p0, Lq10;->j:I
+    :pswitch_3
+    sget-object p0, Lone/me/calllist/ui/CallHistoryScreen;->C0:[Lxi7;
 
-    const/4 v1, 0x1
+    sget-object p0, Lj81;->c:Lj81;
 
-    if-nez v0, :cond_1
+    invoke-virtual {p0}, Lx2;->F0()Lza4;
 
-    iput v1, p0, Lq10;->j:I
+    move-result-object p0
 
-    :cond_1
-    iget v0, p0, Lq10;->n:I
+    invoke-virtual {p0, p1, v0}, Lza4;->b(Ljava/lang/String;Landroid/os/Bundle;)Z
 
-    if-nez v0, :cond_2
+    return-void
 
-    iput v1, p0, Lq10;->n:I
+    :pswitch_4
+    sget p0, Lru/ok/messages/media/audio/AudioListenView;->B0:I
 
-    :cond_2
-    new-instance v0, Ll0e;
+    return-void
 
-    invoke-direct {v0, p0}, Ll0e;-><init>(Lq10;)V
+    :pswitch_5
+    sget p0, Lru/ok/messages/media/attaches/AudioAttachView;->v0:I
 
-    return-object v0
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_5
+        :pswitch_4
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

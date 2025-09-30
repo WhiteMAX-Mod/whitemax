@@ -1,272 +1,92 @@
-.class public final Lvee;
-.super Landroid/graphics/drawable/Drawable;
+.class public final synthetic Lvee;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lggb;
 
 
 # instance fields
-.field public final a:Ltre;
+.field public final synthetic a:I
 
-.field public final b:Ljava/lang/String;
-
-.field public final c:I
-
-.field public final d:I
-
-.field public final e:I
+.field public final synthetic b:Ljava/lang/Long;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;II)V
-    .locals 3
-
-    .line 7
-    invoke-direct {p0}, Landroid/graphics/drawable/Drawable;-><init>()V
-
-    .line 8
-    iput-object p1, p0, Lvee;->b:Ljava/lang/String;
-
-    .line 9
-    iput p2, p0, Lvee;->c:I
-
-    .line 10
-    iput p3, p0, Lvee;->d:I
-
-    const/4 v0, 0x1
-
-    .line 11
-    iput v0, p0, Lvee;->e:I
-
-    .line 12
-    sget-object v1, Luee;->$EnumSwitchMapping$0:[I
-
-    invoke-static {v0}, Lzt1;->s(I)I
-
-    move-result v2
-
-    aget v1, v1, v2
-
-    if-ne v1, v0, :cond_0
-
-    .line 13
-    new-instance v0, Ltre;
-
-    invoke-direct {v0, p1, p2, p3}, Ltre;-><init>(Ljava/lang/String;II)V
-
-    .line 14
-    iget-object p1, v0, Ltre;->h:Lwfe;
-
-    invoke-virtual {p1}, Lwfe;->getValue()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Le5f;
-
-    .line 15
-    iput-object v0, p0, Lvee;->a:Ltre;
-
-    return-void
-
-    :cond_0
-    new-instance p0, Lkotlin/NoWhenBranchMatchedException;
-
-    invoke-direct {p0}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
-
-    throw p0
-.end method
-
-.method public constructor <init>(Ljava/lang/String;IIILtre;)V
+.method public synthetic constructor <init>(ILjava/lang/Long;)V
     .locals 0
 
-    .line 1
-    invoke-direct {p0}, Landroid/graphics/drawable/Drawable;-><init>()V
+    iput p1, p0, Lvee;->a:I
 
-    .line 2
-    iput-object p1, p0, Lvee;->b:Ljava/lang/String;
+    iput-object p2, p0, Lvee;->b:Ljava/lang/Long;
 
-    .line 3
-    iput p2, p0, Lvee;->c:I
-
-    .line 4
-    iput p3, p0, Lvee;->d:I
-
-    .line 5
-    iput p4, p0, Lvee;->e:I
-
-    .line 6
-    iput-object p5, p0, Lvee;->a:Ltre;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Lvee;
-    .locals 6
+.method public final test(Ljava/lang/Object;)Z
+    .locals 2
 
-    new-instance v0, Lvee;
+    iget v0, p0, Lvee;->a:I
 
-    iget-object v1, p0, Lvee;->a:Ltre;
+    packed-switch v0, :pswitch_data_0
 
-    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    check-cast p1, Lzfe;
 
-    new-instance v2, Landroid/graphics/Paint;
+    iget-wide v0, p1, Lzfe;->a:J
 
-    iget-object v3, v1, Ltre;->g:Landroid/graphics/Paint;
+    iget-object p0, p0, Lvee;->b:Ljava/lang/Long;
 
-    invoke-direct {v2, v3}, Landroid/graphics/Paint;-><init>(Landroid/graphics/Paint;)V
+    invoke-virtual {p0}, Ljava/lang/Long;->longValue()J
 
-    new-instance v5, Ltre;
+    move-result-wide p0
 
-    iget-object v3, v1, Ltre;->a:Ljava/lang/String;
+    cmp-long p0, v0, p0
 
-    iget v4, v1, Ltre;->b:I
+    if-nez p0, :cond_0
 
-    iget v1, v1, Ltre;->c:I
+    const/4 p0, 0x1
 
-    invoke-direct {v5, v3, v4, v1}, Ltre;-><init>(Ljava/lang/String;II)V
-
-    iput-object v2, v5, Ltre;->g:Landroid/graphics/Paint;
-
-    const/4 v1, 0x1
-
-    iput-boolean v1, v5, Ltre;->j:Z
-
-    iget-object v1, p0, Lvee;->b:Ljava/lang/String;
-
-    iget v2, p0, Lvee;->c:I
-
-    iget v3, p0, Lvee;->d:I
-
-    iget v4, p0, Lvee;->e:I
-
-    invoke-direct/range {v0 .. v5}, Lvee;-><init>(Ljava/lang/String;IIILtre;)V
-
-    return-object v0
-.end method
-
-.method public final draw(Landroid/graphics/Canvas;)V
-    .locals 3
-
-    iget-object p0, p0, Lvee;->a:Ltre;
-
-    iget-boolean v0, p0, Ltre;->j:Z
-
-    if-eqz v0, :cond_0
-
-    iget v0, p0, Ltre;->f:F
-
-    invoke-virtual {p1}, Landroid/graphics/Canvas;->save()I
-
-    move-result v1
-
-    const/4 v2, 0x0
-
-    invoke-virtual {p1, v0, v0, v2, v2}, Landroid/graphics/Canvas;->scale(FFFF)V
-
-    :try_start_0
-    iget-object p0, p0, Ltre;->g:Landroid/graphics/Paint;
-
-    invoke-virtual {p1, p0}, Landroid/graphics/Canvas;->drawPaint(Landroid/graphics/Paint;)V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    invoke-virtual {p1, v1}, Landroid/graphics/Canvas;->restoreToCount(I)V
-
-    return-void
-
-    :catchall_0
-    move-exception p0
-
-    invoke-virtual {p1, v1}, Landroid/graphics/Canvas;->restoreToCount(I)V
-
-    throw p0
+    goto :goto_0
 
     :cond_0
-    const-class p0, Ltre;
+    const/4 p0, 0x0
 
-    invoke-virtual {p0}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
-
-    move-result-object p0
-
-    const-string p1, "error: cant\' render svg, incorrect data!"
-
-    invoke-static {p0, p1}, Lg47;->Q(Ljava/lang/String;Ljava/lang/String;)V
-
-    return-void
-.end method
-
-.method public final getAlpha()I
-    .locals 0
-
-    iget-object p0, p0, Lvee;->a:Ltre;
-
-    iget-object p0, p0, Ltre;->g:Landroid/graphics/Paint;
-
-    invoke-virtual {p0}, Landroid/graphics/Paint;->getAlpha()I
-
-    move-result p0
-
+    :goto_0
     return p0
-.end method
 
-.method public final getIntrinsicHeight()I
-    .locals 0
+    :pswitch_0
+    check-cast p1, Llee;
 
-    iget-object p0, p0, Lvee;->a:Ltre;
+    iget-wide v0, p1, Llee;->a:J
 
-    iget p0, p0, Ltre;->e:I
+    iget-object p0, p0, Lvee;->b:Ljava/lang/Long;
 
+    invoke-virtual {p0}, Ljava/lang/Long;->longValue()J
+
+    move-result-wide p0
+
+    cmp-long p0, v0, p0
+
+    if-nez p0, :cond_1
+
+    const/4 p0, 0x1
+
+    goto :goto_1
+
+    :cond_1
+    const/4 p0, 0x0
+
+    :goto_1
     return p0
-.end method
 
-.method public final getIntrinsicWidth()I
-    .locals 0
+    nop
 
-    iget-object p0, p0, Lvee;->a:Ltre;
-
-    iget p0, p0, Ltre;->d:I
-
-    return p0
-.end method
-
-.method public final getOpacity()I
-    .locals 0
-
-    const/4 p0, -0x2
-
-    return p0
-.end method
-
-.method public final bridge synthetic mutate()Landroid/graphics/drawable/Drawable;
-    .locals 0
-
-    invoke-virtual {p0}, Lvee;->a()Lvee;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public final setAlpha(I)V
-    .locals 0
-
-    iget-object p0, p0, Lvee;->a:Ltre;
-
-    iget-object p0, p0, Ltre;->g:Landroid/graphics/Paint;
-
-    invoke-virtual {p0, p1}, Landroid/graphics/Paint;->setAlpha(I)V
-
-    return-void
-.end method
-
-.method public final setColorFilter(Landroid/graphics/ColorFilter;)V
-    .locals 0
-
-    iget-object p0, p0, Lvee;->a:Ltre;
-
-    iget-object p0, p0, Ltre;->g:Landroid/graphics/Paint;
-
-    invoke-virtual {p0, p1}, Landroid/graphics/Paint;->setColorFilter(Landroid/graphics/ColorFilter;)Landroid/graphics/ColorFilter;
-
-    return-void
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

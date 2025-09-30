@@ -1,17 +1,11 @@
-.class public final Ld7;
-.super Lqh7;
+.class public interface abstract Ld7;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public a:Z
+# virtual methods
+.method public abstract b()Z
+.end method
 
-.field public b:I
-
-.field public c:I
-
-.field public d:Z
-
-.field public e:Z
-
-.field public f:Z
+.method public abstract e()Z
+.end method

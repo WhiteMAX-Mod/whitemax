@@ -1,130 +1,64 @@
 .class public final Ls71;
-.super Lu2;
+.super Lin6;
 .source "SourceFile"
 
 
-# static fields
-.field public static final c:Ls71;
+# instance fields
+.field public final synthetic c:Lw71;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public constructor <init>(Lw71;)V
+    .locals 0
 
-    new-instance v0, Ls71;
+    iput-object p1, p0, Ls71;->c:Lw71;
 
-    const/16 v1, 0x8
-
-    invoke-direct {v0, v1}, Lu2;-><init>(I)V
-
-    sput-object v0, Ls71;->c:Ls71;
+    invoke-direct {p0}, Lin6;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final T0(Ljava/lang/Long;Ljava/lang/String;Ljava/lang/CharSequence;)V
+.method public final c(I)I
     .locals 3
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    iget-object p0, p0, Ls71;->c:Lw71;
 
-    const-string v1, ":call-history-info?is_link_call=true"
+    iget-object v0, p0, Lw71;->K0:Lyua;
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    iget v1, v0, Lyua;->b:I
 
-    sget-object v1, Ls71;->c:Ls71;
+    const/4 v2, 0x2
 
-    if-eqz p2, :cond_0
+    if-ne v1, v2, :cond_0
 
-    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    if-nez p1, :cond_0
 
-    const-string v2, "&call_link="
-
-    invoke-virtual {v2, p2}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object p2
-
-    invoke-virtual {v0, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    goto :goto_0
 
     :cond_0
-    if-eqz p3, :cond_1
+    iget p1, v0, Lyua;->a:I
 
-    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    if-eqz p1, :cond_1
 
-    new-instance p2, Ljava/lang/StringBuilder;
-
-    const-string v2, "&call_title="
-
-    invoke-direct {p2, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {p2, p3}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p2
-
-    invoke-virtual {v0, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    goto :goto_1
 
     :cond_1
-    if-eqz p1, :cond_2
+    iget-object p0, p0, Lw71;->H0:Lmf1;
 
-    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    invoke-virtual {p0}, Lls7;->j()I
 
-    new-instance p2, Ljava/lang/StringBuilder;
+    move-result p0
 
-    const-string p3, "&call_chat_id="
+    if-gt p0, v2, :cond_2
 
-    invoke-direct {p2, p3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {p2, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    :goto_0
+    return v2
 
     :cond_2
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    :goto_1
+    const/4 p0, 0x1
 
-    move-result-object p1
-
-    invoke-virtual {p0}, Lu2;->D0()Ls64;
-
-    move-result-object p0
-
-    const/4 p2, 0x0
-
-    invoke-virtual {p0, p1, p2}, Ls64;->b(Ljava/lang/String;Landroid/os/Bundle;)Z
-
-    return-void
-.end method
-
-.method public final U0(JJ)V
-    .locals 2
-
-    const-string v0, ":chats?id="
-
-    const-string v1, "&type=local&message_id="
-
-    invoke-static {p1, p2, v0, v1}, Lzt1;->k(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object p1
-
-    const-string p2, "&highlight_message=true"
-
-    invoke-static {p1, p3, p4, p2}, Lu88;->m(Ljava/lang/StringBuilder;JLjava/lang/String;)Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-virtual {p0}, Lu2;->D0()Ls64;
-
-    move-result-object p0
-
-    const/4 p2, 0x0
-
-    invoke-virtual {p0, p1, p2}, Ls64;->b(Ljava/lang/String;Landroid/os/Bundle;)Z
-
-    return-void
+    return p0
 .end method

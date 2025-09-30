@@ -1,51 +1,19 @@
-.class public final Lvde;
-.super Lbu3;
+.class public final synthetic Lvde;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public synthetic X:Ljava/lang/Object;
-
-.field public final synthetic Y:Llee;
-
-.field public Z:I
-
-.field public o:Ly6f;
+.field public final synthetic a:Lgmd;
 
 
 # direct methods
-.method public constructor <init>(Llee;Lbu3;)V
+.method public synthetic constructor <init>(Lgmd;)V
     .locals 0
 
-    iput-object p1, p0, Lvde;->Y:Llee;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, p2}, Lbu3;-><init>(Lkotlin/coroutines/Continuation;)V
+    iput-object p1, p0, Lvde;->a:Lgmd;
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
-
-    iput-object p1, p0, Lvde;->X:Ljava/lang/Object;
-
-    iget p1, p0, Lvde;->Z:I
-
-    const/high16 v0, -0x80000000
-
-    or-int/2addr p1, v0
-
-    iput p1, p0, Lvde;->Z:I
-
-    iget-object p1, p0, Lvde;->Y:Llee;
-
-    const/4 v0, 0x0
-
-    invoke-static {p1, v0, p0}, Llee;->b(Llee;Ly6f;Lbu3;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    return-object p0
 .end method

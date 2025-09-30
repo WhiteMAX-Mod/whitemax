@@ -22,10 +22,10 @@
         "",
         "<init>",
         "()V",
-        "Ls1c;",
+        "Lfec;",
         "log",
         "setLogger",
-        "(Ls1c;)Lru/ok/android/externcalls/sdk/ConversationFactoryInitParams$PeerConnection$Builder;",
+        "(Lfec;)Lru/ok/android/externcalls/sdk/ConversationFactoryInitParams$PeerConnection$Builder;",
         "Lorg/webrtc/NativeLibraryLoader;",
         "libraryLoader",
         "setNativeLibraryLoader",
@@ -72,7 +72,7 @@
         "udpMarker",
         "tcpMarker",
         "logger",
-        "Ls1c;",
+        "Lfec;",
         "isEarlyAudioPlayoutEnabled",
         "isEarlyAudioRecordingEnabled",
         "isSkipRelayToNotRelayConnectionEnabled",
@@ -116,7 +116,7 @@
 
 .field private libraryLoader:Lorg/webrtc/NativeLibraryLoader;
 
-.field private logger:Ls1c;
+.field private logger:Lfec;
 
 .field private rttMultCapMs:Ljava/lang/Integer;
 
@@ -205,7 +205,7 @@
 
     iget-boolean v14, v0, Lru/ok/android/externcalls/sdk/ConversationFactoryInitParams$PeerConnection$Builder;->isSharedSocketDisabledForICE:Z
 
-    iget-object v0, v0, Lru/ok/android/externcalls/sdk/ConversationFactoryInitParams$PeerConnection$Builder;->logger:Ls1c;
+    iget-object v0, v0, Lru/ok/android/externcalls/sdk/ConversationFactoryInitParams$PeerConnection$Builder;->logger:Lfec;
 
     move-object/from16 v16, v15
 
@@ -213,7 +213,7 @@
 
     move-object/from16 v0, v16
 
-    invoke-direct/range {v0 .. v15}, Lru/ok/android/externcalls/sdk/ConversationFactoryInitParams$PeerConnection;-><init>(Ljava/lang/String;Ljava/lang/Integer;ZZLjava/lang/String;Ljava/lang/String;Lorg/webrtc/NativeLibraryLoader;ZZZZLru/ok/android/externcalls/sdk/ConversationFactoryInitParams$PeerConnection$DynamicRedundancyParameters;ZZLs1c;)V
+    invoke-direct/range {v0 .. v15}, Lru/ok/android/externcalls/sdk/ConversationFactoryInitParams$PeerConnection;-><init>(Ljava/lang/String;Ljava/lang/Integer;ZZLjava/lang/String;Ljava/lang/String;Lorg/webrtc/NativeLibraryLoader;ZZZZLru/ok/android/externcalls/sdk/ConversationFactoryInitParams$PeerConnection$DynamicRedundancyParameters;ZZLfec;)V
 
     return-object v0
 .end method
@@ -264,10 +264,10 @@
     return-object p0
 .end method
 
-.method public final setLogger(Ls1c;)Lru/ok/android/externcalls/sdk/ConversationFactoryInitParams$PeerConnection$Builder;
+.method public final setLogger(Lfec;)Lru/ok/android/externcalls/sdk/ConversationFactoryInitParams$PeerConnection$Builder;
     .locals 0
 
-    iput-object p1, p0, Lru/ok/android/externcalls/sdk/ConversationFactoryInitParams$PeerConnection$Builder;->logger:Ls1c;
+    iput-object p1, p0, Lru/ok/android/externcalls/sdk/ConversationFactoryInitParams$PeerConnection$Builder;->logger:Lfec;
 
     return-object p0
 .end method

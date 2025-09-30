@@ -1,56 +1,87 @@
 .class public final Lkbb;
-.super Lbu3;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+# interfaces
+.implements Llbb;
 
 
 # instance fields
-.field public X:I
-
-.field public Y:Llbb;
-
-.field public Z:Ljava/lang/Object;
-
-.field public synthetic o:Ljava/lang/Object;
-
-.field public final synthetic o0:Llbb;
-
-.field public p0:Ljava/lang/Object;
-
-.field public q0:Lnj3;
-
-.field public r0:Lazd;
+.field public final a:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>(Llbb;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(Ljava/lang/String;)V
     .locals 0
 
-    iput-object p1, p0, Lkbb;->o0:Llbb;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, p2}, Lbu3;-><init>(Lkotlin/coroutines/Continuation;)V
+    iput-object p1, p0, Lkbb;->a:Ljava/lang/String;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 3
 
-    iput-object p1, p0, Lkbb;->o:Ljava/lang/Object;
+    const/4 v0, 0x1
 
-    iget p1, p0, Lkbb;->X:I
+    if-ne p0, p1, :cond_0
 
-    const/high16 v0, -0x80000000
+    return v0
 
-    or-int/2addr p1, v0
+    :cond_0
+    instance-of v1, p1, Lkbb;
 
-    iput p1, p0, Lkbb;->X:I
+    const/4 v2, 0x0
 
-    iget-object p1, p0, Lkbb;->o0:Llbb;
+    if-nez v1, :cond_1
 
-    const/4 v0, 0x0
+    return v2
 
-    invoke-virtual {p1, v0, p0}, Llbb;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    :cond_1
+    check-cast p1, Lkbb;
+
+    iget-object p0, p0, Lkbb;->a:Ljava/lang/String;
+
+    iget-object p1, p1, Lkbb;->a:Ljava/lang/String;
+
+    invoke-static {p0, p1}, Lvyg;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p0
+
+    if-nez p0, :cond_2
+
+    return v2
+
+    :cond_2
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 0
+
+    iget-object p0, p0, Lkbb;->a:Ljava/lang/String;
+
+    invoke-virtual {p0}, Ljava/lang/String;->hashCode()I
+
+    move-result p0
+
+    return p0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 2
+
+    const-string v0, "UserPhoto(url="
+
+    const-string v1, ")"
+
+    iget-object p0, p0, Lkbb;->a:Ljava/lang/String;
+
+    invoke-static {v0, p0, v1}, Lyv7;->h(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
 

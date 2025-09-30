@@ -1,68 +1,107 @@
-.class public final synthetic Lpyd;
+.class public final Lpyd;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/lang/Runnable;
-
-
-# instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Lbk8;
-
-.field public final synthetic c:Lcdg;
-
-
-# direct methods
-.method public synthetic constructor <init>(Lbk8;Lcdg;I)V
-    .locals 0
-
-    iput p3, p0, Lpyd;->a:I
-
-    iput-object p1, p0, Lpyd;->b:Lbk8;
-
-    iput-object p2, p0, Lpyd;->c:Lcdg;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    return-void
-.end method
+.implements Lnob;
 
 
 # virtual methods
-.method public final run()V
+.method public final equals(Ljava/lang/Object;)Z
     .locals 1
 
-    iget v0, p0, Lpyd;->a:I
+    const/4 v0, 0x1
 
-    packed-switch v0, :pswitch_data_0
+    if-ne p0, p1, :cond_0
 
-    iget-object v0, p0, Lpyd;->b:Lbk8;
+    return v0
 
-    iget-object v0, v0, Lbk8;->f:Ljava/lang/Object;
+    :cond_0
+    instance-of p0, p1, Lpyd;
 
-    check-cast v0, Ljava/util/LinkedHashSet;
+    if-nez p0, :cond_1
 
-    iget-object p0, p0, Lpyd;->c:Lcdg;
+    const/4 p0, 0x0
 
-    invoke-interface {v0, p0}, Ljava/util/Set;->remove(Ljava/lang/Object;)Z
+    return p0
 
-    return-void
+    :cond_1
+    check-cast p1, Lpyd;
 
-    :pswitch_0
-    iget-object v0, p0, Lpyd;->b:Lbk8;
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    iget-object p0, p0, Lpyd;->c:Lcdg;
+    return v0
+.end method
 
-    invoke-virtual {v0, p0}, Lbk8;->m(Lcdg;)V
+.method public final getItemId()J
+    .locals 2
 
-    return-void
+    const/16 p0, 0x8
 
-    nop
+    int-to-long v0, p0
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-wide v0
+.end method
+
+.method public final h(Lts7;)Z
+    .locals 2
+
+    const/16 p0, 0x8
+
+    int-to-long v0, p0
+
+    invoke-interface {p1}, Lts7;->getItemId()J
+
+    move-result-wide p0
+
+    cmp-long p0, v0, p0
+
+    if-nez p0, :cond_0
+
+    const/4 p0, 0x1
+
+    return p0
+
+    :cond_0
+    const/4 p0, 0x0
+
+    return p0
+.end method
+
+.method public final hashCode()I
+    .locals 0
+
+    const p0, 0x20000008
+
+    invoke-static {p0}, Ljava/lang/Integer;->hashCode(I)I
+
+    move-result p0
+
+    return p0
+.end method
+
+.method public final m()I
+    .locals 0
+
+    const p0, 0x20000008
+
+    return p0
+.end method
+
+.method public final q(Lts7;)Z
+    .locals 0
+
+    invoke-virtual {p0, p1}, Lpyd;->equals(Ljava/lang/Object;)Z
+
+    move-result p0
+
+    return p0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 0
+
+    const-string p0, "ShortLinkHeaderItem(viewType=536870920)"
+
+    return-object p0
 .end method

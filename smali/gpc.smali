@@ -1,17 +1,24 @@
-.class public interface abstract Lgpc;
+.class public final Lgpc;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ljava/io/Serializable;
+
+
+# instance fields
+.field public a:I
+
 
 # virtual methods
-.method public abstract b()V
-.end method
+.method public final toString()Ljava/lang/String;
+    .locals 0
 
-.method public abstract c()Z
-.end method
+    iget p0, p0, Lgpc;->a:I
 
-.method public abstract e(J)I
-.end method
+    invoke-static {p0}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
 
-.method public abstract h(Lnz7;Lb64;I)I
+    move-result-object p0
+
+    return-object p0
 .end method

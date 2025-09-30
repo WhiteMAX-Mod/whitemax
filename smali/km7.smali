@@ -1,8 +1,6 @@
-.class public interface abstract Lkm7;
+.class public interface abstract annotation Lkm7;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-
-# virtual methods
-.method public abstract invoke(Ljava/lang/Object;)V
-.end method
+# interfaces
+.implements Ljava/lang/annotation/Annotation;

@@ -1,208 +1,94 @@
-.class public final synthetic Lfyf;
-.super Ljava/lang/Object;
+.class public final Lfyf;
+.super Liyf;
 .source "SourceFile"
 
-# interfaces
-.implements Lra6;
 
-
-# static fields
-.field public static final a:Lfyf;
-
-.field private static final descriptor:Lx4d;
+# instance fields
+.field public final a:Ljava/util/List;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 4
+.method public constructor <init>(Ljava/util/List;)V
+    .locals 0
 
-    new-instance v0, Lfyf;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    sput-object v0, Lfyf;->a:Lfyf;
-
-    new-instance v1, Lq2b;
-
-    const-string v2, "one.me.webapp.domain.jsbridge.delegates.download.WebAppDownloadFileRequest"
-
-    const/4 v3, 0x3
-
-    invoke-direct {v1, v2, v0, v3}, Lq2b;-><init>(Ljava/lang/String;Lra6;I)V
-
-    const-string v0, "requestId"
-
-    const/4 v2, 0x0
-
-    invoke-virtual {v1, v0, v2}, Lq2b;->i(Ljava/lang/String;Z)V
-
-    const-string v0, "url"
-
-    invoke-virtual {v1, v0, v2}, Lq2b;->i(Ljava/lang/String;Z)V
-
-    const-string v0, "file_name"
-
-    invoke-virtual {v1, v0, v2}, Lq2b;->i(Ljava/lang/String;Z)V
-
-    sput-object v1, Lfyf;->descriptor:Lx4d;
+    iput-object p1, p0, Lfyf;->a:Ljava/util/List;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Lu40;Ljava/lang/Object;)V
-    .locals 2
-
-    check-cast p2, Lhyf;
-
-    sget-object p0, Lfyf;->descriptor:Lx4d;
-
-    invoke-virtual {p1, p0}, Lu40;->c(Lx4d;)Lu40;
-
-    move-result-object p1
-
-    iget-object v0, p2, Lhyf;->a:Ljava/lang/String;
-
-    const/4 v1, 0x0
-
-    invoke-virtual {p1, p0, v1, v0}, Lu40;->m(Lx4d;ILjava/lang/String;)V
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 3
 
     const/4 v0, 0x1
 
-    iget-object v1, p2, Lhyf;->b:Ljava/lang/String;
+    if-ne p0, p1, :cond_0
 
-    invoke-virtual {p1, p0, v0, v1}, Lu40;->m(Lx4d;ILjava/lang/String;)V
+    return v0
 
-    const/4 v0, 0x2
-
-    iget-object p2, p2, Lhyf;->c:Ljava/lang/String;
-
-    invoke-virtual {p1, p0, v0, p2}, Lu40;->m(Lx4d;ILjava/lang/String;)V
-
-    invoke-virtual {p1}, Lu40;->n()V
-
-    return-void
-.end method
-
-.method public final b(Lnye;)Ljava/lang/Object;
-    .locals 9
-
-    sget-object p0, Lfyf;->descriptor:Lx4d;
-
-    invoke-virtual {p1, p0}, Lnye;->i(Lx4d;)Lnye;
-
-    move-result-object p1
-
-    const/4 v0, 0x1
-
-    const/4 v1, 0x0
+    :cond_0
+    instance-of v1, p1, Lfyf;
 
     const/4 v2, 0x0
 
-    move v5, v0
+    if-nez v1, :cond_1
 
-    move v6, v1
-
-    move-object v3, v2
-
-    move-object v4, v3
-
-    :goto_0
-    if-eqz v5, :cond_4
-
-    invoke-virtual {p1, p0}, Lnye;->x(Lx4d;)I
-
-    move-result v7
-
-    const/4 v8, -0x1
-
-    if-eq v7, v8, :cond_3
-
-    if-eqz v7, :cond_2
-
-    if-eq v7, v0, :cond_1
-
-    const/4 v4, 0x2
-
-    if-ne v7, v4, :cond_0
-
-    invoke-virtual {p1, p0, v4}, Lnye;->D(Lx4d;I)Ljava/lang/String;
-
-    move-result-object v4
-
-    or-int/lit8 v6, v6, 0x4
-
-    goto :goto_0
-
-    :cond_0
-    new-instance p0, Lkotlinx/serialization/UnknownFieldException;
-
-    invoke-direct {p0, v7}, Lkotlinx/serialization/UnknownFieldException;-><init>(I)V
-
-    throw p0
+    return v2
 
     :cond_1
-    invoke-virtual {p1, p0, v0}, Lnye;->D(Lx4d;I)Ljava/lang/String;
+    check-cast p1, Lfyf;
 
-    move-result-object v3
+    iget-object p0, p0, Lfyf;->a:Ljava/util/List;
 
-    or-int/lit8 v6, v6, 0x2
+    iget-object p1, p1, Lfyf;->a:Ljava/util/List;
 
-    goto :goto_0
+    invoke-static {p0, p1}, Lvyg;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p0
+
+    if-nez p0, :cond_2
+
+    return v2
 
     :cond_2
-    invoke-virtual {p1, p0, v1}, Lnye;->D(Lx4d;I)Ljava/lang/String;
-
-    move-result-object v2
-
-    or-int/lit8 v6, v6, 0x1
-
-    goto :goto_0
-
-    :cond_3
-    move v5, v1
-
-    goto :goto_0
-
-    :cond_4
-    invoke-virtual {p1, p0}, Lnye;->G(Lx4d;)V
-
-    new-instance p0, Lhyf;
-
-    invoke-direct {p0, v2, v6, v3, v4}, Lhyf;-><init>(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;)V
-
-    return-object p0
+    return v0
 .end method
 
-.method public final c()[Lcc7;
-    .locals 2
-
-    const/4 p0, 0x3
-
-    new-array p0, p0, [Lcc7;
-
-    sget-object v0, Lf8e;->a:Lf8e;
-
-    const/4 v1, 0x0
-
-    aput-object v0, p0, v1
-
-    const/4 v1, 0x1
-
-    aput-object v0, p0, v1
-
-    const/4 v1, 0x2
-
-    aput-object v0, p0, v1
-
-    return-object p0
-.end method
-
-.method public final d()Lx4d;
+.method public final hashCode()I
     .locals 0
 
-    sget-object p0, Lfyf;->descriptor:Lx4d;
+    iget-object p0, p0, Lfyf;->a:Ljava/util/List;
+
+    invoke-virtual {p0}, Ljava/lang/Object;->hashCode()I
+
+    move-result p0
+
+    return p0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 2
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "FilesReady(uriList="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object p0, p0, Lfyf;->a:Ljava/util/List;
+
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string p0, ")"
+
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
 
     return-object p0
 .end method

@@ -1,67 +1,55 @@
-.class public abstract synthetic Lchf;
-.super Ljava/lang/Object;
+.class public final Lchf;
+.super Lso;
 .source "SourceFile"
 
 
 # static fields
-.field public static final synthetic $EnumSwitchMapping$0:[I
+.field public static final a:Lchf;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 4
+    .locals 1
 
-    const/4 v0, 0x5
+    new-instance v0, Lchf;
 
-    invoke-static {v0}, Lzt1;->v(I)[I
+    invoke-direct {v0}, Lso;-><init>()V
 
-    move-result-object v1
-
-    array-length v1, v1
-
-    new-array v1, v1, [I
-
-    const/4 v2, 0x1
-
-    :try_start_0
-    aput v2, v1, v2
-    :try_end_0
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
-
-    :catch_0
-    const/4 v2, 0x2
-
-    :try_start_1
-    aput v2, v1, v2
-    :try_end_1
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
-
-    :catch_1
-    const/4 v2, 0x3
-
-    :try_start_2
-    aput v2, v1, v2
-    :try_end_2
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_2
-
-    :catch_2
-    const/4 v2, 0x0
-
-    const/4 v3, 0x4
-
-    :try_start_3
-    aput v3, v1, v2
-    :try_end_3
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_3 .. :try_end_3} :catch_3
-
-    :catch_3
-    :try_start_4
-    aput v0, v1, v3
-    :try_end_4
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_4 .. :try_end_4} :catch_4
-
-    :catch_4
-    sput-object v1, Lchf;->$EnumSwitchMapping$0:[I
+    sput-object v0, Lchf;->a:Lchf;
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final b()Lcl7;
+    .locals 1
+
+    invoke-virtual {p0}, Lscout/Component;->getAccessor()Lz4;
+
+    move-result-object p0
+
+    const-class v0, Lrk;
+
+    invoke-virtual {p0, v0}, Lz4;->d(Ljava/lang/Class;)Lzte;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public final c()Lcl7;
+    .locals 1
+
+    invoke-virtual {p0}, Lscout/Component;->getAccessor()Lz4;
+
+    move-result-object p0
+
+    const-class v0, Lxwe;
+
+    invoke-virtual {p0, v0}, Lz4;->d(Ljava/lang/Class;)Lzte;
+
+    move-result-object p0
+
+    return-object p0
 .end method

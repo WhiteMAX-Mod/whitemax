@@ -1,130 +1,157 @@
-.class public final synthetic Ly1c;
+.class public abstract Ly1c;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Landroid/view/View$OnClickListener;
-
-
-# instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Lone/me/calls/ui/bottomsheet/raisehand/RaiseHandActionBottomSheet;
+.implements Lad6;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lone/me/calls/ui/bottomsheet/raisehand/RaiseHandActionBottomSheet;I)V
-    .locals 0
-
-    iput p2, p0, Ly1c;->a:I
-
-    iput-object p1, p0, Ly1c;->b:Lone/me/calls/ui/bottomsheet/raisehand/RaiseHandActionBottomSheet;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final onClick(Landroid/view/View;)V
+.method public static a(Landroid/content/Context;Landroid/os/Bundle;)Lu1c;
     .locals 3
 
-    iget p1, p0, Ly1c;->a:I
+    const-string v0, "androidx.camera.core.quirks.DEFAULT_QUIRK_ENABLED"
 
-    const/4 v0, 0x1
+    const/4 v1, 0x1
 
-    iget-object p0, p0, Ly1c;->b:Lone/me/calls/ui/bottomsheet/raisehand/RaiseHandActionBottomSheet;
+    invoke-virtual {p1, v0, v1}, Landroid/os/BaseBundle;->getBoolean(Ljava/lang/String;Z)Z
 
-    packed-switch p1, :pswitch_data_0
+    move-result v0
 
-    sget-object p1, Lone/me/calls/ui/bottomsheet/raisehand/RaiseHandActionBottomSheet;->x0:[Lbc7;
+    const-string v1, "androidx.camera.core.quirks.FORCE_ENABLED"
 
-    iget-object p1, p0, Lone/me/calls/ui/bottomsheet/raisehand/RaiseHandActionBottomSheet;->u0:Lje7;
+    invoke-static {p0, v1, p1}, Ly1c;->b(Landroid/content/Context;Ljava/lang/String;Landroid/os/Bundle;)[Ljava/lang/String;
 
-    invoke-interface {p1}, Lje7;->getValue()Ljava/lang/Object;
+    move-result-object v1
+
+    const-string v2, "androidx.camera.core.quirks.FORCE_DISABLED"
+
+    invoke-static {p0, v2, p1}, Ly1c;->b(Landroid/content/Context;Ljava/lang/String;Landroid/os/Bundle;)[Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-static {v1}, Ljava/util/Arrays;->toString([Ljava/lang/Object;)Ljava/lang/String;
+
+    invoke-static {p0}, Ljava/util/Arrays;->toString([Ljava/lang/Object;)Ljava/lang/String;
+
+    invoke-static {v1}, Ly1c;->c([Ljava/lang/String;)Ljava/util/HashSet;
 
     move-result-object p1
 
-    check-cast p1, Lb2c;
+    new-instance v1, Ljava/util/HashSet;
 
-    iget-object v1, p1, Lb2c;->b:Lwf1;
+    invoke-direct {v1, p1}, Ljava/util/HashSet;-><init>(Ljava/util/Collection;)V
 
-    iget-object p1, p1, Lb2c;->c:Lfr1;
+    invoke-static {p0}, Ly1c;->c([Ljava/lang/String;)Ljava/util/HashSet;
 
-    invoke-virtual {p1}, Lfr1;->d()Lxna;
+    move-result-object p0
 
-    move-result-object v2
+    new-instance p1, Ljava/util/HashSet;
 
-    iget-object p1, p1, Lfr1;->l:Lxy0;
+    invoke-direct {p1, p0}, Ljava/util/HashSet;-><init>(Ljava/util/Collection;)V
 
-    iget-object v2, v2, Lxna;->a:Lyf1;
+    new-instance p0, Lu1c;
 
-    invoke-interface {v2}, Lyf1;->getId()Lwf1;
+    invoke-direct {p0, v0, v1, p1}, Lu1c;-><init>(ZLjava/util/HashSet;Ljava/util/HashSet;)V
 
-    move-result-object v2
+    return-object p0
+.end method
 
-    invoke-static {v1, v2}, Lxq7;->d(Ljava/lang/Object;Ljava/lang/Object;)Z
+.method public static b(Landroid/content/Context;Ljava/lang/String;Landroid/os/Bundle;)[Ljava/lang/String;
+    .locals 2
 
-    move-result v2
+    invoke-virtual {p2, p1}, Landroid/os/BaseBundle;->containsKey(Ljava/lang/String;)Z
 
-    if-eqz v2, :cond_1
+    move-result v0
 
-    check-cast p1, Lsz0;
+    const/4 v1, 0x0
 
-    invoke-virtual {p1}, Lsz0;->f()Lru/ok/android/externcalls/sdk/participant/state/ParticipantStatesManager;
+    if-nez v0, :cond_0
 
-    move-result-object v1
+    new-array p0, v1, [Ljava/lang/String;
+
+    return-object p0
+
+    :cond_0
+    const/4 v0, -0x1
+
+    invoke-virtual {p2, p1, v0}, Landroid/os/BaseBundle;->getInt(Ljava/lang/String;I)I
+
+    move-result p1
+
+    if-ne p1, v0, :cond_1
+
+    new-array p0, v1, [Ljava/lang/String;
+
+    return-object p0
+
+    :cond_1
+    :try_start_0
+    invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object p0
+
+    invoke-virtual {p0, p1}, Landroid/content/res/Resources;->getStringArray(I)[Ljava/lang/String;
+
+    move-result-object p0
+    :try_end_0
+    .catch Landroid/content/res/Resources$NotFoundException; {:try_start_0 .. :try_end_0} :catch_0
+
+    return-object p0
+
+    :catch_0
+    new-array p0, v1, [Ljava/lang/String;
+
+    return-object p0
+.end method
+
+.method public static c([Ljava/lang/String;)Ljava/util/HashSet;
+    .locals 5
+
+    new-instance v0, Ljava/util/HashSet;
+
+    invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
+
+    array-length v1, p0
 
     const/4 v2, 0x0
 
-    if-eqz v1, :cond_0
+    :goto_0
+    if-ge v2, v1, :cond_2
 
-    invoke-interface {v1, v2}, Lru/ok/android/externcalls/sdk/participant/state/ParticipantStatesManager;->setOwnHandRaised(Z)V
+    aget-object v3, p0, v2
 
+    :try_start_0
+    invoke-static {v3}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
+
+    move-result-object v3
+
+    const-class v4, Lt1c;
+
+    invoke-virtual {v4, v3}, Ljava/lang/Class;->isAssignableFrom(Ljava/lang/Class;)Z
+
+    move-result v4
+    :try_end_0
+    .catch Ljava/lang/ClassNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
+
+    if-eqz v4, :cond_0
+
+    goto :goto_1
+
+    :catch_0
     :cond_0
-    iget-object p1, p1, Lsz0;->t0:Ljava/util/concurrent/atomic/AtomicBoolean;
+    const/4 v3, 0x0
 
-    invoke-virtual {p1, v2}, Ljava/util/concurrent/atomic/AtomicBoolean;->set(Z)V
+    :goto_1
+    if-eqz v3, :cond_1
+
+    invoke-virtual {v0, v3}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
+
+    :cond_1
+    add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 
-    :cond_1
-    check-cast p1, Lsz0;
-
-    invoke-virtual {p1}, Lsz0;->f()Lru/ok/android/externcalls/sdk/participant/state/ParticipantStatesManager;
-
-    move-result-object v2
-
-    if-eqz v2, :cond_2
-
-    invoke-static {v1}, Leoa;->d(Lwf1;)Lru/ok/android/externcalls/sdk/id/ParticipantId;
-
-    move-result-object v1
-
-    invoke-interface {v2, v1}, Lru/ok/android/externcalls/sdk/participant/state/ParticipantStatesManager;->lowerHandParticipant(Lru/ok/android/externcalls/sdk/id/ParticipantId;)V
-
     :cond_2
-    iget-object p1, p1, Lsz0;->y0:Lwjd;
-
-    sget-object v1, Lbb;->a:Lbb;
-
-    invoke-virtual {p1, v1}, Lwjd;->h(Ljava/lang/Object;)Z
-
-    :goto_0
-    invoke-virtual {p0, v0}, Lone/me/sdk/bottomsheet/BaseBottomSheetWidget;->v0(Z)V
-
-    return-void
-
-    :pswitch_0
-    sget-object p1, Lone/me/calls/ui/bottomsheet/raisehand/RaiseHandActionBottomSheet;->x0:[Lbc7;
-
-    invoke-virtual {p0, v0}, Lone/me/sdk/bottomsheet/BaseBottomSheetWidget;->v0(Z)V
-
-    return-void
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-object v0
 .end method

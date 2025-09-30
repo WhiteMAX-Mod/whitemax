@@ -1,101 +1,64 @@
 .class public final Le19;
-.super Liw7;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lf19;
 
-# instance fields
-.field public final synthetic g:Lje7;
+
+# static fields
+.field public static final a:Le19;
 
 
 # direct methods
-.method public constructor <init>(Lje7;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    iput-object p1, p0, Le19;->g:Lje7;
+    new-instance v0, Le19;
 
-    const/4 p1, 0x6
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, p1}, Liw7;-><init>(I)V
+    sput-object v0, Le19;->a:Le19;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 3
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 1
 
-    check-cast p1, La1f;
+    const/4 v0, 0x1
 
-    iget-object v0, p1, La1f;->a:Ljava/lang/Object;
+    if-ne p0, p1, :cond_0
 
-    check-cast v0, Ljava/lang/Number;
+    return v0
 
-    invoke-virtual {v0}, Ljava/lang/Number;->intValue()I
+    :cond_0
+    instance-of p0, p1, Le19;
 
-    move-result v0
+    if-nez p0, :cond_1
 
-    iget-object v1, p1, La1f;->b:Ljava/lang/Object;
+    const/4 p0, 0x0
 
-    check-cast v1, Ljava/lang/Number;
+    return p0
 
-    invoke-virtual {v1}, Ljava/lang/Number;->floatValue()F
+    :cond_1
+    return v0
+.end method
 
-    move-result v1
+.method public final hashCode()I
+    .locals 0
 
-    iget-object p1, p1, La1f;->c:Ljava/lang/Object;
+    const p0, -0x15cdca80
 
-    check-cast p1, Ljava/lang/Boolean;
+    return p0
+.end method
 
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+.method public final toString()Ljava/lang/String;
+    .locals 0
 
-    new-instance p1, Landroid/text/TextPaint;
+    const-string p0, "DoneWithDisable"
 
-    const/4 v2, 0x1
-
-    invoke-direct {p1, v2}, Landroid/text/TextPaint;-><init>(I)V
-
-    invoke-virtual {p1, v2}, Landroid/graphics/Paint;->setAntiAlias(Z)V
-
-    invoke-virtual {p1, v0}, Landroid/graphics/Paint;->setColor(I)V
-
-    invoke-virtual {p1, v1}, Landroid/graphics/Paint;->setTextSize(F)V
-
-    iget-object p0, p0, Le19;->g:Lje7;
-
-    invoke-interface {p0}, Lje7;->getValue()Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, Lis0;
-
-    check-cast p0, Ln4a;
-
-    sget-object v0, Lqp4;->q0:Lap9;
-
-    iget-object p0, p0, Ln4a;->a:Landroid/content/Context;
-
-    invoke-virtual {v0, p0}, Lap9;->g(Landroid/content/Context;)Lqp4;
-
-    move-result-object p0
-
-    invoke-virtual {p0}, Lqp4;->k()Lyha;
-
-    move-result-object p0
-
-    invoke-interface {p0}, Lyha;->a()Ldq2;
-
-    move-result-object p0
-
-    invoke-interface {p0}, Ldq2;->i()Lcs0;
-
-    move-result-object p0
-
-    iget-object p0, p0, Lcs0;->d:Lfs0;
-
-    iget p0, p0, Lfs0;->b:I
-
-    iput p0, p1, Landroid/text/TextPaint;->linkColor:I
-
-    return-object p1
+    return-object p0
 .end method

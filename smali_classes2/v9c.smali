@@ -1,3 +1,6 @@
-.class public interface abstract Lv9c;
+.class public abstract Lv9c;
 .super Ljava/lang/Object;
-.source "SourceFile"
+
+
+# static fields
+.field public static invite_friends:I = 0x7f120030

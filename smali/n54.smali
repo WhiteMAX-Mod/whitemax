@@ -1,80 +1,43 @@
 .class public final Ln54;
-.super Lus;
+.super Lj1d;
 .source "SourceFile"
 
 
 # instance fields
-.field public final i:Z
+.field public final synthetic r0:Ltw0;
+
+.field public final synthetic s0:I
+
+.field public final synthetic t0:Lbtc;
 
 
 # direct methods
-.method public constructor <init>(Z)V
+.method public constructor <init>(Ltw0;ILbtc;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Ln54;->r0:Ltw0;
 
-    iput-boolean p1, p0, Ln54;->i:Z
+    iput p2, p0, Ln54;->s0:I
+
+    iput-object p3, p0, Ln54;->t0:Lbtc;
+
+    invoke-direct {p0}, Lj1d;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 3
-
-    const/4 v0, 0x1
-
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    instance-of v1, p1, Ln54;
-
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
-    check-cast p1, Ln54;
-
-    iget-boolean p0, p0, Ln54;->i:Z
-
-    iget-boolean p1, p1, Ln54;->i:Z
-
-    if-eq p0, p1, :cond_2
-
-    return v2
-
-    :cond_2
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 0
-
-    iget-boolean p0, p0, Ln54;->i:Z
-
-    invoke-static {p0}, Ljava/lang/Boolean;->hashCode(Z)I
-
-    move-result p0
-
-    return p0
-.end method
-
-.method public final toString()Ljava/lang/String;
+.method public final c()Ljava/lang/Object;
     .locals 2
 
-    const-string v0, "Switch(isToggled="
+    iget v0, p0, Ln54;->s0:I
 
-    const-string v1, ")"
+    iget-object v1, p0, Ln54;->t0:Lbtc;
 
-    iget-boolean p0, p0, Ln54;->i:Z
+    iget-object p0, p0, Ln54;->r0:Ltw0;
 
-    invoke-static {v0, v1, p0}, Lzge;->p(Ljava/lang/String;Ljava/lang/String;Z)Ljava/lang/String;
+    invoke-static {p0, v0, v1}, Lla6;->x(Ltw0;ILbtc;)Le33;
 
     move-result-object p0
 

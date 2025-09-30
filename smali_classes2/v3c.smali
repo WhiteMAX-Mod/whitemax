@@ -1,91 +1,50 @@
-.class public final enum Lv3c;
-.super Ljava/lang/Enum;
-.source "SourceFile"
+.class public abstract Lv3c;
+.super Ljava/lang/Object;
 
 
 # static fields
-.field public static final enum b:Lv3c;
+.field public static onechat_react_add_tension:I = 0x7f0703c0
 
-.field public static final synthetic c:[Lv3c;
+.field public static onechat_react_animation_drawable_size:I = 0x7f0703c1
 
-.field public static final synthetic o:Ln25;
+.field public static onechat_react_badge_corners_radius:I = 0x7f0703c2
 
+.field public static onechat_react_bubble_width_tension:I = 0x7f0703c3
 
-# instance fields
-.field public final a:I
+.field public static onechat_react_change_tension:I = 0x7f0703c4
 
+.field public static onechat_react_counter_padding:I = 0x7f0703c5
 
-# direct methods
-.method static constructor <clinit>()V
-    .locals 4
+.field public static onechat_react_default_small_height_fallback:I = 0x7f0703c6
 
-    new-instance v0, Lv3c;
+.field public static onechat_react_default_small_width_fallback:I = 0x7f0703c7
 
-    const-string v1, "EMOJI"
+.field public static onechat_react_move_tension:I = 0x7f0703c8
 
-    const/4 v2, 0x0
+.field public static onechat_react_next_change_delay_coef:I = 0x7f0703c9
 
-    invoke-direct {v0, v1, v2, v2}, Lv3c;-><init>(Ljava/lang/String;II)V
+.field public static onechat_react_next_move_delay_coef:I = 0x7f0703ca
 
-    sput-object v0, Lv3c;->b:Lv3c;
+.field public static onechat_react_panel_corner_radius:I = 0x7f0703cb
 
-    new-instance v1, Lv3c;
+.field public static onechat_react_panel_popup_side_margin:I = 0x7f0703cc
 
-    const-string v2, "STICKER"
+.field public static onechat_react_panel_selected_text_size:I = 0x7f0703cd
 
-    const/4 v3, 0x1
+.field public static onechat_react_panel_side_margin:I = 0x7f0703ce
 
-    invoke-direct {v1, v2, v3, v3}, Lv3c;-><init>(Ljava/lang/String;II)V
+.field public static onechat_react_panel_size:I = 0x7f0703cf
 
-    filled-new-array {v0, v1}, [Lv3c;
+.field public static onechat_react_panel_text_size:I = 0x7f0703d0
 
-    move-result-object v0
+.field public static onechat_react_panel_vertical_margin:I = 0x7f0703d1
 
-    sput-object v0, Lv3c;->c:[Lv3c;
+.field public static onechat_react_scale_1_step:I = 0x7f0703d2
 
-    new-instance v1, Ln25;
+.field public static onechat_react_scale_2_step:I = 0x7f0703d3
 
-    invoke-direct {v1, v0}, Ln25;-><init>([Ljava/lang/Enum;)V
+.field public static onechat_react_scale_3_step:I = 0x7f0703d4
 
-    sput-object v1, Lv3c;->o:Ln25;
+.field public static onechat_react_side_margin:I = 0x7f0703d5
 
-    return-void
-.end method
-
-.method public constructor <init>(Ljava/lang/String;II)V
-    .locals 0
-
-    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    iput p3, p0, Lv3c;->a:I
-
-    return-void
-.end method
-
-.method public static valueOf(Ljava/lang/String;)Lv3c;
-    .locals 1
-
-    const-class v0, Lv3c;
-
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
-
-    move-result-object p0
-
-    check-cast p0, Lv3c;
-
-    return-object p0
-.end method
-
-.method public static values()[Lv3c;
-    .locals 1
-
-    sget-object v0, Lv3c;->c:[Lv3c;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, [Lv3c;
-
-    return-object v0
-.end method
+.field public static onechat_react_text_size_small:I = 0x7f0703d6

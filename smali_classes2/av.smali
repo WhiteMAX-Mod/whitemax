@@ -1,61 +1,53 @@
 .class public final Lav;
-.super Lev;
+.super Ljx3;
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:Lav;
+# instance fields
+.field public synthetic X:Ljava/lang/Object;
+
+.field public final synthetic Y:Lyv;
+
+.field public Z:I
+
+.field public o:Lyv;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(Lyv;Ljx3;)V
+    .locals 0
 
-    new-instance v0, Lav;
+    iput-object p1, p0, Lav;->Y:Lyv;
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    sput-object v0, Lav;->a:Lav;
+    invoke-direct {p0, p2}, Ljx3;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
+.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 3
 
-    const/4 v0, 0x1
+    iput-object p1, p0, Lav;->X:Ljava/lang/Object;
 
-    if-ne p0, p1, :cond_0
+    iget p1, p0, Lav;->Z:I
 
-    return v0
+    const/high16 v0, -0x80000000
 
-    :cond_0
-    instance-of p0, p1, Lav;
+    or-int/2addr p1, v0
 
-    if-nez p0, :cond_1
+    iput p1, p0, Lav;->Z:I
 
-    const/4 p0, 0x0
+    const/4 p1, 0x0
 
-    return p0
+    const-wide/16 v0, 0x0
 
-    :cond_1
-    return v0
-.end method
+    iget-object v2, p0, Lav;->Y:Lyv;
 
-.method public final hashCode()I
-    .locals 0
+    invoke-static {v2, p1, v0, v1, p0}, Lyv;->c(Lyv;Lvqc;JLjx3;)Ljava/lang/Object;
 
-    const p0, 0x2c75b5e3
-
-    return p0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 0
-
-    const-string p0, "Idle"
+    move-result-object p0
 
     return-object p0
 .end method

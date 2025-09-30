@@ -58,13 +58,13 @@
 
     move-result-object v0
 
-    iget-object v1, p0, Landroidx/appcompat/widget/ActionBarOverlayLayout;->H0:Le6;
+    iget-object v1, p0, Landroidx/appcompat/widget/ActionBarOverlayLayout;->K0:Le6;
 
     invoke-virtual {v0, v1}, Landroid/view/ViewPropertyAnimator;->setListener(Landroid/animation/Animator$AnimatorListener;)Landroid/view/ViewPropertyAnimator;
 
     move-result-object v0
 
-    iput-object v0, p0, Landroidx/appcompat/widget/ActionBarOverlayLayout;->G0:Landroid/view/ViewPropertyAnimator;
+    iput-object v0, p0, Landroidx/appcompat/widget/ActionBarOverlayLayout;->J0:Landroid/view/ViewPropertyAnimator;
 
     return-void
 
@@ -85,13 +85,13 @@
 
     move-result-object v0
 
-    iget-object v1, p0, Landroidx/appcompat/widget/ActionBarOverlayLayout;->H0:Le6;
+    iget-object v1, p0, Landroidx/appcompat/widget/ActionBarOverlayLayout;->K0:Le6;
 
     invoke-virtual {v0, v1}, Landroid/view/ViewPropertyAnimator;->setListener(Landroid/animation/Animator$AnimatorListener;)Landroid/view/ViewPropertyAnimator;
 
     move-result-object v0
 
-    iput-object v0, p0, Landroidx/appcompat/widget/ActionBarOverlayLayout;->G0:Landroid/view/ViewPropertyAnimator;
+    iput-object v0, p0, Landroidx/appcompat/widget/ActionBarOverlayLayout;->J0:Landroid/view/ViewPropertyAnimator;
 
     return-void
 

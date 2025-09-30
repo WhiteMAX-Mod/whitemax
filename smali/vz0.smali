@@ -1,65 +1,48 @@
 .class public final Lvz0;
-.super Ljava/lang/Object;
-.source "SourceFile"
-
-# interfaces
-.implements Lsu3;
+.super Ljx3;
 
 
 # instance fields
-.field public final synthetic a:Lone/me/calls/ui/ui/settings/CallAdminSettingsScreen;
+.field public X:I
+
+.field public final synthetic Y:Lwb;
+
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Lone/me/calls/ui/ui/settings/CallAdminSettingsScreen;)V
+.method public constructor <init>(Lwb;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lvz0;->Y:Lwb;
 
-    iput-object p1, p0, Lvz0;->a:Lone/me/calls/ui/ui/settings/CallAdminSettingsScreen;
+    invoke-direct {p0, p2}, Ljx3;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Lou3;Lou3;Z)V
-    .locals 0
+.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    return-void
-.end method
+    iput-object p1, p0, Lvz0;->o:Ljava/lang/Object;
 
-.method public final b(Lou3;Lou3;Z)V
-    .locals 0
+    iget p1, p0, Lvz0;->X:I
 
-    if-eqz p3, :cond_0
+    const/high16 v0, -0x80000000
 
-    sget-object p1, Lone/me/calls/ui/ui/settings/CallAdminSettingsScreen;->p0:[Lbc7;
+    or-int/2addr p1, v0
 
-    iget-object p0, p0, Lvz0;->a:Lone/me/calls/ui/ui/settings/CallAdminSettingsScreen;
+    iput p1, p0, Lvz0;->X:I
 
-    invoke-virtual {p0}, Lone/me/calls/ui/ui/settings/CallAdminSettingsScreen;->p0()Le01;
+    iget-object p1, p0, Lvz0;->Y:Lwb;
+
+    const/4 v0, 0x0
+
+    invoke-virtual {p1, v0, p0}, Lwb;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
     move-result-object p0
 
-    invoke-virtual {p0}, Le01;->q()Lxy0;
-
-    move-result-object p1
-
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    check-cast p1, Lsz0;
-
-    iget-object p1, p1, Lsz0;->B0:Lazd;
-
-    invoke-virtual {p1}, Lazd;->getValue()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lv9;
-
-    invoke-virtual {p0, p1}, Le01;->r(Lv9;)V
-
-    :cond_0
-    return-void
+    return-object p0
 .end method

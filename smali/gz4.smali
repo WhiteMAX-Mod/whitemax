@@ -2,362 +2,305 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ljava/util/List;
-.implements Ljava/io/Serializable;
-.implements Ljava/util/RandomAccess;
-.implements Lqb7;
-
 
 # static fields
-.field public static final a:Lgz4;
+.field public static final c:Lgz4;
+
+.field public static final d:Lgz4;
+
+.field public static final e:Lgz4;
+
+.field public static final f:Lgz4;
+
+.field public static final g:Lgz4;
+
+.field public static final h:Lgz4;
+
+.field public static final i:Lgz4;
+
+
+# instance fields
+.field public final a:I
+
+.field public final b:I
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 1
+    .locals 4
 
     new-instance v0, Lgz4;
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    const/4 v1, 0x0
 
-    sput-object v0, Lgz4;->a:Lgz4;
+    invoke-direct {v0, v1, v1}, Lgz4;-><init>(II)V
+
+    sput-object v0, Lgz4;->c:Lgz4;
+
+    new-instance v0, Lgz4;
+
+    const/4 v1, 0x1
+
+    const/16 v2, 0x8
+
+    invoke-direct {v0, v1, v2}, Lgz4;-><init>(II)V
+
+    sput-object v0, Lgz4;->d:Lgz4;
+
+    new-instance v0, Lgz4;
+
+    const/4 v1, 0x3
+
+    const/16 v3, 0xa
+
+    invoke-direct {v0, v1, v3}, Lgz4;-><init>(II)V
+
+    sput-object v0, Lgz4;->e:Lgz4;
+
+    new-instance v0, Lgz4;
+
+    const/4 v1, 0x4
+
+    invoke-direct {v0, v1, v3}, Lgz4;-><init>(II)V
+
+    sput-object v0, Lgz4;->f:Lgz4;
+
+    new-instance v0, Lgz4;
+
+    const/4 v1, 0x5
+
+    invoke-direct {v0, v1, v3}, Lgz4;-><init>(II)V
+
+    sput-object v0, Lgz4;->g:Lgz4;
+
+    new-instance v0, Lgz4;
+
+    const/4 v1, 0x6
+
+    invoke-direct {v0, v1, v3}, Lgz4;-><init>(II)V
+
+    sput-object v0, Lgz4;->h:Lgz4;
+
+    new-instance v0, Lgz4;
+
+    invoke-direct {v0, v1, v2}, Lgz4;-><init>(II)V
+
+    sput-object v0, Lgz4;->i:Lgz4;
+
+    return-void
+.end method
+
+.method public constructor <init>(II)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput p1, p0, Lgz4;->a:I
+
+    iput p2, p0, Lgz4;->b:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final bridge synthetic add(ILjava/lang/Object;)V
-    .locals 0
+.method public final a()Z
+    .locals 2
 
-    .line 1
-    new-instance p0, Ljava/lang/UnsupportedOperationException;
+    invoke-virtual {p0}, Lgz4;->b()Z
 
-    const-string p1, "Operation is not supported for read-only collection"
+    move-result v0
 
-    invoke-direct {p0, p1}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+    if-eqz v0, :cond_0
 
-    throw p0
-.end method
+    iget v0, p0, Lgz4;->a:I
 
-.method public final bridge synthetic add(Ljava/lang/Object;)Z
-    .locals 0
+    const/4 v1, 0x1
 
-    .line 2
-    new-instance p0, Ljava/lang/UnsupportedOperationException;
+    if-eq v0, v1, :cond_0
 
-    const-string p1, "Operation is not supported for read-only collection"
+    iget p0, p0, Lgz4;->b:I
 
-    invoke-direct {p0, p1}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+    const/16 v0, 0xa
 
-    throw p0
-.end method
+    if-ne p0, v0, :cond_0
 
-.method public final addAll(ILjava/util/Collection;)Z
-    .locals 0
+    return v1
 
-    .line 1
-    new-instance p0, Ljava/lang/UnsupportedOperationException;
-
-    const-string p1, "Operation is not supported for read-only collection"
-
-    invoke-direct {p0, p1}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
-
-    throw p0
-.end method
-
-.method public final addAll(Ljava/util/Collection;)Z
-    .locals 0
-
-    .line 2
-    new-instance p0, Ljava/lang/UnsupportedOperationException;
-
-    const-string p1, "Operation is not supported for read-only collection"
-
-    invoke-direct {p0, p1}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
-
-    throw p0
-.end method
-
-.method public final clear()V
-    .locals 1
-
-    new-instance p0, Ljava/lang/UnsupportedOperationException;
-
-    const-string v0, "Operation is not supported for read-only collection"
-
-    invoke-direct {p0, v0}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
-
-    throw p0
-.end method
-
-.method public final bridge contains(Ljava/lang/Object;)Z
-    .locals 0
-
+    :cond_0
     const/4 p0, 0x0
 
     return p0
 .end method
 
-.method public final containsAll(Ljava/util/Collection;)Z
-    .locals 0
+.method public final b()Z
+    .locals 2
 
-    invoke-interface {p1}, Ljava/util/Collection;->isEmpty()Z
+    iget v0, p0, Lgz4;->a:I
 
-    move-result p0
+    if-eqz v0, :cond_0
+
+    const/4 v1, 0x2
+
+    if-eq v0, v1, :cond_0
+
+    iget p0, p0, Lgz4;->b:I
+
+    if-eqz p0, :cond_0
+
+    const/4 p0, 0x1
+
+    return p0
+
+    :cond_0
+    const/4 p0, 0x0
 
     return p0
 .end method
 
 .method public final equals(Ljava/lang/Object;)Z
-    .locals 0
+    .locals 4
 
-    instance-of p0, p1, Ljava/util/List;
+    const/4 v0, 0x1
 
-    if-eqz p0, :cond_0
+    if-ne p1, p0, :cond_0
 
-    check-cast p1, Ljava/util/List;
-
-    invoke-interface {p1}, Ljava/util/List;->isEmpty()Z
-
-    move-result p0
-
-    if-eqz p0, :cond_0
-
-    const/4 p0, 0x1
-
-    return p0
+    return v0
 
     :cond_0
-    const/4 p0, 0x0
+    instance-of v1, p1, Lgz4;
 
-    return p0
-.end method
+    const/4 v2, 0x0
 
-.method public final get(I)Ljava/lang/Object;
-    .locals 2
+    if-eqz v1, :cond_1
 
-    new-instance p0, Ljava/lang/IndexOutOfBoundsException;
+    check-cast p1, Lgz4;
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    iget v1, p0, Lgz4;->a:I
 
-    const-string v1, "Empty list doesn\'t contain element at index "
+    iget v3, p1, Lgz4;->a:I
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    if-ne v1, v3, :cond_1
 
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    iget p0, p0, Lgz4;->b:I
 
-    const/16 p1, 0x2e
+    iget p1, p1, Lgz4;->b:I
 
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+    if-ne p0, p1, :cond_1
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    return v0
 
-    move-result-object p1
-
-    invoke-direct {p0, p1}, Ljava/lang/IndexOutOfBoundsException;-><init>(Ljava/lang/String;)V
-
-    throw p0
+    :cond_1
+    return v2
 .end method
 
 .method public final hashCode()I
-    .locals 0
-
-    const/4 p0, 0x1
-
-    return p0
-.end method
-
-.method public final bridge indexOf(Ljava/lang/Object;)I
-    .locals 0
-
-    const/4 p0, -0x1
-
-    return p0
-.end method
-
-.method public final isEmpty()Z
-    .locals 0
-
-    const/4 p0, 0x1
-
-    return p0
-.end method
-
-.method public final iterator()Ljava/util/Iterator;
-    .locals 0
-
-    sget-object p0, Lfz4;->a:Lfz4;
-
-    return-object p0
-.end method
-
-.method public final bridge lastIndexOf(Ljava/lang/Object;)I
-    .locals 0
-
-    const/4 p0, -0x1
-
-    return p0
-.end method
-
-.method public final listIterator()Ljava/util/ListIterator;
-    .locals 0
-
-    .line 1
-    sget-object p0, Lfz4;->a:Lfz4;
-
-    return-object p0
-.end method
-
-.method public final listIterator(I)Ljava/util/ListIterator;
-    .locals 1
-
-    if-nez p1, :cond_0
-
-    .line 2
-    sget-object p0, Lfz4;->a:Lfz4;
-
-    return-object p0
-
-    .line 3
-    :cond_0
-    new-instance p0, Ljava/lang/IndexOutOfBoundsException;
-
-    const-string v0, "Index: "
-
-    .line 4
-    invoke-static {p1, v0}, Lm26;->h(ILjava/lang/String;)Ljava/lang/String;
-
-    move-result-object p1
-
-    .line 5
-    invoke-direct {p0, p1}, Ljava/lang/IndexOutOfBoundsException;-><init>(Ljava/lang/String;)V
-
-    throw p0
-.end method
-
-.method public final bridge synthetic remove(I)Ljava/lang/Object;
-    .locals 0
-
-    .line 1
-    new-instance p0, Ljava/lang/UnsupportedOperationException;
-
-    const-string p1, "Operation is not supported for read-only collection"
-
-    invoke-direct {p0, p1}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
-
-    throw p0
-.end method
-
-.method public final remove(Ljava/lang/Object;)Z
-    .locals 0
-
-    .line 2
-    new-instance p0, Ljava/lang/UnsupportedOperationException;
-
-    const-string p1, "Operation is not supported for read-only collection"
-
-    invoke-direct {p0, p1}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
-
-    throw p0
-.end method
-
-.method public final removeAll(Ljava/util/Collection;)Z
-    .locals 0
-
-    new-instance p0, Ljava/lang/UnsupportedOperationException;
-
-    const-string p1, "Operation is not supported for read-only collection"
-
-    invoke-direct {p0, p1}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
-
-    throw p0
-.end method
-
-.method public final retainAll(Ljava/util/Collection;)Z
-    .locals 0
-
-    new-instance p0, Ljava/lang/UnsupportedOperationException;
-
-    const-string p1, "Operation is not supported for read-only collection"
-
-    invoke-direct {p0, p1}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
-
-    throw p0
-.end method
-
-.method public final bridge synthetic set(ILjava/lang/Object;)Ljava/lang/Object;
-    .locals 0
-
-    new-instance p0, Ljava/lang/UnsupportedOperationException;
-
-    const-string p1, "Operation is not supported for read-only collection"
-
-    invoke-direct {p0, p1}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
-
-    throw p0
-.end method
-
-.method public final bridge size()I
-    .locals 0
-
-    const/4 p0, 0x0
-
-    return p0
-.end method
-
-.method public final subList(II)Ljava/util/List;
     .locals 2
 
-    if-nez p1, :cond_0
+    iget v0, p0, Lgz4;->a:I
 
-    if-nez p2, :cond_0
+    const v1, 0xf4243
 
-    return-object p0
+    xor-int/2addr v0, v1
 
-    :cond_0
-    new-instance p0, Ljava/lang/IndexOutOfBoundsException;
+    mul-int/2addr v0, v1
 
-    const-string v0, "fromIndex: "
+    iget p0, p0, Lgz4;->b:I
 
-    const-string v1, ", toIndex: "
+    xor-int/2addr p0, v0
 
-    invoke-static {v0, p1, p2, v1}, Lv04;->h(Ljava/lang/String;IILjava/lang/String;)Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-direct {p0, p1}, Ljava/lang/IndexOutOfBoundsException;-><init>(Ljava/lang/String;)V
-
-    throw p0
-.end method
-
-.method public final toArray()[Ljava/lang/Object;
-    .locals 0
-
-    .line 1
-    invoke-static {p0}, Lq46;->J(Ljava/util/Collection;)[Ljava/lang/Object;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public final toArray([Ljava/lang/Object;)[Ljava/lang/Object;
-    .locals 0
-
-    .line 2
-    invoke-static {p0, p1}, Lq46;->K(Ljava/util/Collection;[Ljava/lang/Object;)[Ljava/lang/Object;
-
-    move-result-object p0
-
-    return-object p0
+    return p0
 .end method
 
 .method public final toString()Ljava/lang/String;
-    .locals 0
+    .locals 2
 
-    const-string p0, "[]"
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "DynamicRange@"
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-static {p0}, Ljava/lang/System;->identityHashCode(Ljava/lang/Object;)I
+
+    move-result v1
+
+    invoke-static {v1}, Ljava/lang/Integer;->toHexString(I)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, "{encoding="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget v1, p0, Lgz4;->a:I
+
+    packed-switch v1, :pswitch_data_0
+
+    const-string v1, "<Unknown>"
+
+    goto :goto_0
+
+    :pswitch_0
+    const-string v1, "DOLBY_VISION"
+
+    goto :goto_0
+
+    :pswitch_1
+    const-string v1, "HDR10_PLUS"
+
+    goto :goto_0
+
+    :pswitch_2
+    const-string v1, "HDR10"
+
+    goto :goto_0
+
+    :pswitch_3
+    const-string v1, "HLG"
+
+    goto :goto_0
+
+    :pswitch_4
+    const-string v1, "HDR_UNSPECIFIED"
+
+    goto :goto_0
+
+    :pswitch_5
+    const-string v1, "SDR"
+
+    goto :goto_0
+
+    :pswitch_6
+    const-string v1, "UNSPECIFIED"
+
+    :goto_0
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", bitDepth="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget p0, p0, Lgz4;->b:I
+
+    const-string v1, "}"
+
+    invoke-static {v0, p0, v1}, Lyv7;->i(Ljava/lang/StringBuilder;ILjava/lang/String;)Ljava/lang/String;
+
+    move-result-object p0
 
     return-object p0
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_6
+        :pswitch_5
+        :pswitch_4
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

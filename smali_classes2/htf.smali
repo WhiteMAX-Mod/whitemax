@@ -1,102 +1,59 @@
 .class public final Lhtf;
-.super Lk42;
+.super Lso;
 .source "SourceFile"
 
 
-# instance fields
-.field public final c:J
+# static fields
+.field public static final a:Lhtf;
 
 
 # direct methods
-.method public constructor <init>(J)V
-    .locals 2
+.method static constructor <clinit>()V
+    .locals 1
 
-    const/4 v0, 0x3
+    new-instance v0, Lhtf;
 
-    invoke-static {p1, p2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    invoke-direct {v0}, Lso;-><init>()V
 
-    move-result-object v1
-
-    invoke-direct {p0, v0, v1}, Lk42;-><init>(ILjava/lang/Long;)V
-
-    iput-wide p1, p0, Lhtf;->c:J
+    sput-object v0, Lhtf;->a:Lhtf;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Ljava/lang/Long;
-    .locals 2
+.method public final b()Lvca;
+    .locals 1
 
-    iget-wide v0, p0, Lhtf;->c:J
-
-    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    invoke-virtual {p0}, Lscout/Component;->getAccessor()Lz4;
 
     move-result-object p0
+
+    const-class v0, Lvca;
+
+    invoke-virtual {p0, v0}, Lz4;->c(Ljava/lang/Class;)Ljava/lang/Object;
+
+    move-result-object p0
+
+    check-cast p0, Lvca;
 
     return-object p0
 .end method
 
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 5
+.method public final c()La24;
+    .locals 1
 
-    const/4 v0, 0x1
-
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    instance-of v1, p1, Lhtf;
-
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
-    check-cast p1, Lhtf;
-
-    iget-wide v3, p0, Lhtf;->c:J
-
-    iget-wide p0, p1, Lhtf;->c:J
-
-    cmp-long p0, v3, p0
-
-    if-eqz p0, :cond_2
-
-    return v2
-
-    :cond_2
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 2
-
-    iget-wide v0, p0, Lhtf;->c:J
-
-    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
-
-    move-result p0
-
-    return p0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 4
-
-    const-string v0, "ChatId(sourceId="
-
-    const-string v1, ")"
-
-    iget-wide v2, p0, Lhtf;->c:J
-
-    invoke-static {v2, v3, v0, v1}, Lu88;->i(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {p0}, Lscout/Component;->getAccessor()Lz4;
 
     move-result-object p0
+
+    const-class v0, La24;
+
+    invoke-virtual {p0, v0}, Lz4;->c(Ljava/lang/Class;)Ljava/lang/Object;
+
+    move-result-object p0
+
+    check-cast p0, La24;
 
     return-object p0
 .end method

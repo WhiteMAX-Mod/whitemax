@@ -1,181 +1,121 @@
-.class public abstract Lk6a;
-.super Ljava/lang/Object;
+.class public final Lk6a;
+.super Lzk0;
 .source "SourceFile"
 
 
-# static fields
-.field public static final A:I
+# instance fields
+.field public volatile X:Z
 
-.field public static final B:I
+.field public final a:Ld8a;
 
-.field public static final a:I
+.field public final b:[Ljava/lang/Object;
 
-.field public static final b:I
+.field public c:I
 
-.field public static final c:I
-
-.field public static final d:I
-
-.field public static final e:I
-
-.field public static final f:I
-
-.field public static final g:I
-
-.field public static final h:I
-
-.field public static final i:I
-
-.field public static final j:I
-
-.field public static final k:I
-
-.field public static final l:I
-
-.field public static final m:I
-
-.field public static final n:I
-
-.field public static final o:I
-
-.field public static final p:I
-
-.field public static final q:I
-
-.field public static final r:I
-
-.field public static final s:I
-
-.field public static final t:I
-
-.field public static final u:I
-
-.field public static final v:I
-
-.field public static final w:I
-
-.field public static final x:I
-
-.field public static final y:I
-
-.field public static final z:I
+.field public o:Z
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(Ld8a;[Ljava/lang/Object;)V
+    .locals 0
 
-    sget v0, Lmtb;->chat__background:I
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    sput v0, Lk6a;->a:I
+    iput-object p1, p0, Lk6a;->a:Ld8a;
 
-    sget v0, Lmtb;->chat__bottom_container:I
-
-    sput v0, Lk6a;->b:I
-
-    sget v0, Lmtb;->chat__bottom_container_chat_status_button:I
-
-    sput v0, Lk6a;->c:I
-
-    sget v0, Lmtb;->chat__bottom_container_search:I
-
-    sput v0, Lk6a;->d:I
-
-    sget v0, Lmtb;->chat__bottom_container_search_down_button:I
-
-    sput v0, Lk6a;->e:I
-
-    sget v0, Lmtb;->chat__bottom_container_search_separator:I
-
-    sput v0, Lk6a;->f:I
-
-    sget v0, Lmtb;->chat__bottom_container_search_up_button:I
-
-    sput v0, Lk6a;->g:I
-
-    sget v0, Lmtb;->chat__main_container:I
-
-    sput v0, Lk6a;->h:I
-
-    sget v0, Lmtb;->chat__media_bar_container:I
-
-    sput v0, Lk6a;->i:I
-
-    sget v0, Lmtb;->chat__media_keyboard:I
-
-    sput v0, Lk6a;->j:I
-
-    sget v0, Lmtb;->chat__messages_container:I
-
-    sput v0, Lk6a;->k:I
-
-    sget v0, Lmtb;->chat__pinbars_container:I
-
-    sput v0, Lk6a;->l:I
-
-    sget v0, Lmtb;->chat__search_view:I
-
-    sput v0, Lk6a;->m:I
-
-    sget v0, Lmtb;->chat__suggestion_container:I
-
-    sput v0, Lk6a;->n:I
-
-    sget v0, Lmtb;->chat__toolbar:I
-
-    sput v0, Lk6a;->o:I
-
-    sget v0, Lmtb;->chat__video_msg_container:I
-
-    sput v0, Lk6a;->p:I
-
-    sget v0, Lmtb;->chat_screen__action_cancel:I
-
-    sput v0, Lk6a;->q:I
-
-    sget v0, Lmtb;->chat_screen__leave_chat_confirm:I
-
-    sput v0, Lk6a;->r:I
-
-    sget v0, Lmtb;->chat_screen__remove_chat_confirm:I
-
-    sput v0, Lk6a;->s:I
-
-    sget v0, Lmtb;->chat_screen__video_msg_placeholder:I
-
-    sput v0, Lk6a;->t:I
-
-    sget v0, Lmtb;->chat_screen__video_msg_preview:I
-
-    sput v0, Lk6a;->u:I
-
-    sget v0, Lmtb;->chat_screen__video_msg_progress:I
-
-    sput v0, Lk6a;->v:I
-
-    sget v0, Lmtb;->chat_screen__video_msg_switch_camera_btn:I
-
-    sput v0, Lk6a;->w:I
-
-    sget v0, Lmtb;->chat_screen__video_msg_timer:I
-
-    sput v0, Lk6a;->x:I
-
-    sget v0, Lmtb;->chat_screen__video_msg_torch_btn:I
-
-    sput v0, Lk6a;->y:I
-
-    sget v0, Lmtb;->media_bar__emoji_keyboard_container:I
-
-    sput v0, Lk6a;->z:I
-
-    sget v0, Lmtb;->media_bar__media_type_picker_button:I
-
-    sput v0, Lk6a;->A:I
-
-    sget v0, Lmtb;->media_bar__select_album_container:I
-
-    sput v0, Lk6a;->B:I
+    iput-object p2, p0, Lk6a;->b:[Ljava/lang/Object;
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final clear()V
+    .locals 1
+
+    iget-object v0, p0, Lk6a;->b:[Ljava/lang/Object;
+
+    array-length v0, v0
+
+    iput v0, p0, Lk6a;->c:I
+
+    return-void
+.end method
+
+.method public final e()V
+    .locals 1
+
+    const/4 v0, 0x1
+
+    iput-boolean v0, p0, Lk6a;->X:Z
+
+    return-void
+.end method
+
+.method public final f()Z
+    .locals 0
+
+    iget-boolean p0, p0, Lk6a;->X:Z
+
+    return p0
+.end method
+
+.method public final isEmpty()Z
+    .locals 1
+
+    iget v0, p0, Lk6a;->c:I
+
+    iget-object p0, p0, Lk6a;->b:[Ljava/lang/Object;
+
+    array-length p0, p0
+
+    if-ne v0, p0, :cond_0
+
+    const/4 p0, 0x1
+
+    return p0
+
+    :cond_0
+    const/4 p0, 0x0
+
+    return p0
+.end method
+
+.method public final poll()Ljava/lang/Object;
+    .locals 3
+
+    iget v0, p0, Lk6a;->c:I
+
+    iget-object v1, p0, Lk6a;->b:[Ljava/lang/Object;
+
+    array-length v2, v1
+
+    if-eq v0, v2, :cond_0
+
+    add-int/lit8 v2, v0, 0x1
+
+    iput v2, p0, Lk6a;->c:I
+
+    aget-object p0, v1, v0
+
+    const-string v0, "The array element is null"
+
+    invoke-static {p0, v0}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
+
+    return-object p0
+
+    :cond_0
+    const/4 p0, 0x0
+
+    return-object p0
+.end method
+
+.method public final q(I)I
+    .locals 0
+
+    const/4 p1, 0x1
+
+    iput-boolean p1, p0, Lk6a;->o:Z
+
+    return p1
 .end method

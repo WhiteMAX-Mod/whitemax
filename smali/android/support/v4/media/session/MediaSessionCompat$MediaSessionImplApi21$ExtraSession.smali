@@ -515,11 +515,11 @@
 
     move-result v1
 
-    new-instance v2, Lfi8;
+    new-instance v2, Lyo8;
 
     const-string v3, "android.media.session.MediaController"
 
-    invoke-direct {v2, v3, v0, v1}, Lfi8;-><init>(Ljava/lang/String;II)V
+    invoke-direct {v2, v3, v0, v1}, Lyo8;-><init>(Ljava/lang/String;II)V
 
     iget-object v3, p0, Landroid/support/v4/media/session/MediaSessionCompat$MediaSessionImplApi21;->mExtraControllerCallbacks:Landroid/os/RemoteCallbackList;
 

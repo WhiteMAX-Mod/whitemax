@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<menu
-  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
-    <item android:id="@id/menu_avatar_photo__save_to_gallery" android:title="@string/save_to_gallery" app:showAsAction="never" />
-    <item android:id="@id/menu_avatar_photo__share" android:title="@string/share" app:showAsAction="never" />
-    <item android:id="@id/menu_avatar_photo__make_main" android:visible="false" android:title="@string/menu_avatar_photo__main" app:showAsAction="never" />
-    <item android:id="@id/menu_avatar_photo__delete" android:visible="false" android:title="@string/menu_delete" app:showAsAction="never" />
-</menu>

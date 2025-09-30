@@ -1,97 +1,95 @@
-.class public final Lb96;
+.class public final synthetic Lb96;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lc96;
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field public final a:F
+.field public final synthetic a:I
+
+.field public final synthetic b:Lc96;
 
 
 # direct methods
-.method public constructor <init>(F)V
+.method public synthetic constructor <init>(Lc96;I)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput p2, p0, Lb96;->a:I
 
-    iput p1, p0, Lb96;->a:F
+    iput-object p1, p0, Lb96;->b:Lc96;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 3
-
-    const/4 v0, 0x1
-
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    instance-of v1, p1, Lb96;
-
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
-    check-cast p1, Lb96;
-
-    iget p0, p0, Lb96;->a:F
-
-    iget p1, p1, Lb96;->a:F
-
-    invoke-static {p0, p1}, Ljava/lang/Float;->compare(FF)I
-
-    move-result p0
-
-    if-eqz p0, :cond_2
-
-    return v2
-
-    :cond_2
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 0
-
-    iget p0, p0, Lb96;->a:F
-
-    invoke-static {p0}, Ljava/lang/Float;->hashCode(F)I
-
-    move-result p0
-
-    return p0
-.end method
-
-.method public final toString()Ljava/lang/String;
+.method public final run()V
     .locals 2
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    iget v0, p0, Lb96;->a:I
 
-    const-string v1, "UpdateCameraTranslation(translationY="
+    iget-object p0, p0, Lb96;->b:Lc96;
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    packed-switch v0, :pswitch_data_0
 
-    iget p0, p0, Lb96;->a:F
+    const/4 v0, 0x0
 
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
+    iput-boolean v0, p0, Lc96;->s0:Z
 
-    const-string p0, ")"
+    iget-object v1, p0, Lc96;->Y:Lorg/webrtc/ScreenCapturerAndroid;
 
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    if-eqz v1, :cond_0
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    iget-object v1, p0, Lc96;->Y:Lorg/webrtc/ScreenCapturerAndroid;
 
-    move-result-object p0
+    invoke-virtual {v1}, Lorg/webrtc/ScreenCapturerAndroid;->stopCapture()V
 
-    return-object p0
+    :cond_0
+    const/4 v1, 0x0
+
+    iput-object v1, p0, Lc96;->Y:Lorg/webrtc/ScreenCapturerAndroid;
+
+    iput-boolean v0, p0, Lc96;->t0:Z
+
+    iget-object v0, p0, Lc96;->X:Lorg/webrtc/SurfaceTextureHelper;
+
+    if-eqz v0, :cond_1
+
+    iget-object v0, p0, Lc96;->X:Lorg/webrtc/SurfaceTextureHelper;
+
+    invoke-virtual {v0}, Lorg/webrtc/SurfaceTextureHelper;->dispose()V
+
+    :cond_1
+    iput-object v1, p0, Lc96;->X:Lorg/webrtc/SurfaceTextureHelper;
+
+    return-void
+
+    :pswitch_0
+    const/4 v0, 0x0
+
+    iput-boolean v0, p0, Lc96;->s0:Z
+
+    iget-object v1, p0, Lc96;->Y:Lorg/webrtc/ScreenCapturerAndroid;
+
+    if-eqz v1, :cond_2
+
+    iget-object v1, p0, Lc96;->Y:Lorg/webrtc/ScreenCapturerAndroid;
+
+    invoke-virtual {v1}, Lorg/webrtc/ScreenCapturerAndroid;->stopCapture()V
+
+    :cond_2
+    iput-boolean v0, p0, Lc96;->t0:Z
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

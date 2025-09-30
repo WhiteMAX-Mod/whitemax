@@ -1,94 +1,152 @@
 .class public final Lyr5;
-.super Lkg4;
+.super Ljava/lang/Object;
 .source "SourceFile"
-
-# interfaces
-.implements Lvr5;
 
 
 # instance fields
-.field public c:Ll9e;
+.field public final a:J
+
+
+# direct methods
+.method public synthetic constructor <init>(J)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-wide p1, p0, Lyr5;->a:J
+
+    return-void
+.end method
+
+.method public static a(FF)J
+    .locals 4
+
+    invoke-static {p0}, Ljava/lang/Float;->floatToRawIntBits(F)I
+
+    move-result p0
+
+    int-to-long v0, p0
+
+    invoke-static {p1}, Ljava/lang/Float;->floatToRawIntBits(F)I
+
+    move-result p0
+
+    int-to-long p0, p0
+
+    const/16 v2, 0x20
+
+    shl-long/2addr v0, v2
+
+    const-wide v2, 0xffffffffL
+
+    and-long/2addr p0, v2
+
+    or-long/2addr p0, v0
+
+    return-wide p0
+.end method
+
+.method public static b(J)Ljava/lang/String;
+    .locals 3
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "("
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    const/16 v1, 0x20
+
+    shr-long v1, p0, v1
+
+    long-to-int v1, v1
+
+    invoke-static {v1}, Ljava/lang/Float;->intBitsToFloat(I)F
+
+    move-result v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
+
+    const-string v1, ", "
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-wide v1, 0xffffffffL
+
+    and-long/2addr p0, v1
+
+    long-to-int p0, p0
+
+    invoke-static {p0}, Ljava/lang/Float;->intBitsToFloat(I)F
+
+    move-result p0
+
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
+
+    const/16 p0, 0x29
+
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    return-object p0
+.end method
 
 
 # virtual methods
-.method public final b()V
-    .locals 1
-
-    iget-object v0, p0, Lkg4;->b:Ljava/lang/Object;
-
-    invoke-virtual {p0, v0}, Lkg4;->f(Ljava/lang/Object;)V
-
-    return-void
-.end method
-
-.method public final cancel()V
-    .locals 1
-
-    const/4 v0, 0x4
-
-    invoke-virtual {p0, v0}, Ljava/util/concurrent/atomic/AtomicInteger;->set(I)V
-
-    const/4 v0, 0x0
-
-    iput-object v0, p0, Lkg4;->b:Ljava/lang/Object;
-
-    iget-object p0, p0, Lyr5;->c:Ll9e;
-
-    invoke-interface {p0}, Ll9e;->cancel()V
-
-    return-void
-.end method
-
-.method public final d(Ll9e;)V
+.method public final equals(Ljava/lang/Object;)Z
     .locals 2
 
-    iget-object v0, p0, Lyr5;->c:Ll9e;
+    instance-of v0, p1, Lyr5;
 
-    invoke-static {v0, p1}, Ln9e;->e(Ll9e;Ll9e;)Z
+    if-nez v0, :cond_0
 
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    iput-object p1, p0, Lyr5;->c:Ll9e;
-
-    iget-object v0, p0, Lkg4;->a:Lj9e;
-
-    invoke-interface {v0, p0}, Lj9e;->d(Ll9e;)V
-
-    const-wide v0, 0x7fffffffffffffffL
-
-    invoke-interface {p1, v0, v1}, Ll9e;->i(J)V
+    goto :goto_0
 
     :cond_0
-    return-void
+    check-cast p1, Lyr5;
+
+    iget-wide v0, p1, Lyr5;->a:J
+
+    iget-wide p0, p0, Lyr5;->a:J
+
+    cmp-long p0, p0, v0
+
+    if-eqz p0, :cond_1
+
+    :goto_0
+    const/4 p0, 0x0
+
+    return p0
+
+    :cond_1
+    const/4 p0, 0x1
+
+    return p0
 .end method
 
-.method public final h(Ljava/lang/Object;)V
-    .locals 0
+.method public final hashCode()I
+    .locals 2
 
-    iget-object p0, p0, Lkg4;->b:Ljava/lang/Object;
+    iget-wide v0, p0, Lyr5;->a:J
 
-    check-cast p0, Ljava/util/Collection;
+    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
 
-    if-eqz p0, :cond_0
+    move-result p0
 
-    invoke-interface {p0, p1}, Ljava/util/Collection;->add(Ljava/lang/Object;)Z
-
-    :cond_0
-    return-void
+    return p0
 .end method
 
-.method public final onError(Ljava/lang/Throwable;)V
-    .locals 1
+.method public final toString()Ljava/lang/String;
+    .locals 2
 
-    const/4 v0, 0x0
+    iget-wide v0, p0, Lyr5;->a:J
 
-    iput-object v0, p0, Lkg4;->b:Ljava/lang/Object;
+    invoke-static {v0, v1}, Lyr5;->b(J)Ljava/lang/String;
 
-    iget-object p0, p0, Lkg4;->a:Lj9e;
+    move-result-object p0
 
-    invoke-interface {p0, p1}, Lj9e;->onError(Ljava/lang/Throwable;)V
-
-    return-void
+    return-object p0
 .end method

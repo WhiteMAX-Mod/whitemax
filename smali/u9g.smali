@@ -1,92 +1,45 @@
-.class public final Lu9g;
+.class public abstract Lu9g;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:Ljava/lang/String;
-
-.field public final b:Ljava/lang/String;
-
-.field public final c:Lx55;
-
-.field public final d:Ll9g;
-
-.field public final e:Ljava/util/Set;
-
-.field public final f:J
-
-.field public final g:I
-
-
 # direct methods
-.method public constructor <init>(Ljava/lang/String;Ljava/lang/String;Lx55;Ll9g;Ljava/util/Set;JI)V
-    .locals 0
+.method public static a(Landroid/view/View;Landroid/graphics/Rect;Landroid/graphics/Rect;)V
+    .locals 2
 
-    .line 1
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Landroid/view/WindowInsets$Builder;
 
-    .line 2
-    iput-object p1, p0, Lu9g;->a:Ljava/lang/String;
+    invoke-direct {v0}, Landroid/view/WindowInsets$Builder;-><init>()V
 
-    .line 3
-    iput-object p2, p0, Lu9g;->b:Ljava/lang/String;
+    invoke-static {p1}, Landroid/graphics/Insets;->of(Landroid/graphics/Rect;)Landroid/graphics/Insets;
 
-    .line 4
-    iput-object p3, p0, Lu9g;->c:Lx55;
+    move-result-object v1
 
-    .line 5
-    iput-object p4, p0, Lu9g;->d:Ll9g;
-
-    .line 6
-    iput-object p5, p0, Lu9g;->e:Ljava/util/Set;
-
-    .line 7
-    iput-wide p6, p0, Lu9g;->f:J
-
-    .line 8
-    iput p8, p0, Lu9g;->g:I
-
-    return-void
-.end method
-
-.method public constructor <init>(Ljava/lang/String;Lx55;Landroidx/work/WorkRequest;)V
-    .locals 10
-
-    .line 9
-    invoke-virtual {p3}, Landroidx/work/WorkRequest;->getId()Ljava/util/UUID;
+    invoke-virtual {v0, v1}, Landroid/view/WindowInsets$Builder;->setSystemWindowInsets(Landroid/graphics/Insets;)Landroid/view/WindowInsets$Builder;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Ljava/util/UUID;->toString()Ljava/lang/String;
+    invoke-virtual {v0}, Landroid/view/WindowInsets$Builder;->build()Landroid/view/WindowInsets;
 
-    move-result-object v2
+    move-result-object v0
 
-    .line 10
-    invoke-virtual {p3}, Landroidx/work/WorkRequest;->getWorkSpec()Ll9g;
+    invoke-virtual {p0, v0, p2}, Landroid/view/View;->computeSystemWindowInsets(Landroid/view/WindowInsets;Landroid/graphics/Rect;)Landroid/view/WindowInsets;
 
-    move-result-object v5
+    move-result-object p0
 
-    .line 11
-    invoke-virtual {p3}, Landroidx/work/WorkRequest;->getTags()Ljava/util/Set;
+    invoke-virtual {p0}, Landroid/view/WindowInsets;->getSystemWindowInsets()Landroid/graphics/Insets;
 
-    move-result-object v6
+    move-result-object p0
 
-    .line 12
-    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+    iget p2, p0, Landroid/graphics/Insets;->left:I
 
-    move-result-wide v7
+    iget v0, p0, Landroid/graphics/Insets;->top:I
 
-    const/4 v9, 0x0
+    iget v1, p0, Landroid/graphics/Insets;->right:I
 
-    move-object v1, p0
+    iget p0, p0, Landroid/graphics/Insets;->bottom:I
 
-    move-object v3, p1
-
-    move-object v4, p2
-
-    .line 13
-    invoke-direct/range {v1 .. v9}, Lu9g;-><init>(Ljava/lang/String;Ljava/lang/String;Lx55;Ll9g;Ljava/util/Set;JI)V
+    invoke-virtual {p1, p2, v0, v1, p0}, Landroid/graphics/Rect;->set(IIII)V
 
     return-void
 .end method

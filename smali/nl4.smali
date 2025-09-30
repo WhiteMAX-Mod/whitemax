@@ -1,94 +1,298 @@
-.class public final Lnl4;
-.super Lkotlinx/coroutines/internal/ScopeCoroutine;
+.class public final synthetic Lnl4;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
-
-# static fields
-.field public static final synthetic a:Ljava/util/concurrent/atomic/AtomicIntegerFieldUpdater;
+# interfaces
+.implements Ltl4;
+.implements Ltte;
 
 
 # instance fields
-.field private volatile synthetic _decision$volatile:I
+.field public final synthetic X:Ljava/lang/Object;
+
+.field public final synthetic a:I
+
+.field public final synthetic b:Ljava/lang/Object;
+
+.field public final synthetic c:J
+
+.field public final synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public synthetic constructor <init>(Lsl4;Ljava/lang/Object;JLjava/util/concurrent/TimeUnit;I)V
+    .locals 0
 
-    const-class v0, Lnl4;
+    .line 1
+    iput p6, p0, Lnl4;->a:I
 
-    const-string v1, "_decision$volatile"
+    iput-object p1, p0, Lnl4;->b:Ljava/lang/Object;
 
-    invoke-static {v0, v1}, Ljava/util/concurrent/atomic/AtomicIntegerFieldUpdater;->newUpdater(Ljava/lang/Class;Ljava/lang/String;)Ljava/util/concurrent/atomic/AtomicIntegerFieldUpdater;
+    iput-object p2, p0, Lnl4;->X:Ljava/lang/Object;
 
-    move-result-object v0
+    iput-wide p3, p0, Lnl4;->c:J
 
-    sput-object v0, Lnl4;->a:Ljava/util/concurrent/atomic/AtomicIntegerFieldUpdater;
+    iput-object p5, p0, Lnl4;->o:Ljava/lang/Object;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+.method public synthetic constructor <init>(Ltpf;Ljava/lang/Iterable;Lmb0;J)V
+    .locals 1
+
+    .line 2
+    const/4 v0, 0x2
+
+    iput v0, p0, Lnl4;->a:I
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lnl4;->b:Ljava/lang/Object;
+
+    iput-object p2, p0, Lnl4;->X:Ljava/lang/Object;
+
+    iput-object p3, p0, Lnl4;->o:Ljava/lang/Object;
+
+    iput-wide p4, p0, Lnl4;->c:J
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final afterCompletion(Ljava/lang/Object;)V
-    .locals 0
+.method public a()Ljava/lang/Object;
+    .locals 10
 
-    invoke-virtual {p0, p1}, Lnl4;->afterResume(Ljava/lang/Object;)V
+    iget-object v0, p0, Lnl4;->b:Ljava/lang/Object;
 
-    return-void
-.end method
+    check-cast v0, Ltpf;
 
-.method public final afterResume(Ljava/lang/Object;)V
-    .locals 3
+    iget-object v1, p0, Lnl4;->X:Ljava/lang/Object;
+
+    check-cast v1, Ljava/lang/Iterable;
+
+    iget-object v2, p0, Lnl4;->o:Ljava/lang/Object;
+
+    check-cast v2, Lmb0;
+
+    iget-object v3, v0, Ltpf;->c:Lk95;
+
+    check-cast v3, Lw1d;
+
+    invoke-virtual {v3}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    invoke-interface {v1}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
+
+    move-result-object v4
+
+    invoke-interface {v4}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v4
+
+    const/4 v5, 0x0
+
+    if-nez v4, :cond_0
+
+    goto :goto_1
 
     :cond_0
-    sget-object v0, Lnl4;->a:Ljava/util/concurrent/atomic/AtomicIntegerFieldUpdater;
+    new-instance v4, Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0, p0}, Ljava/util/concurrent/atomic/AtomicIntegerFieldUpdater;->get(Ljava/lang/Object;)I
+    const-string v6, "UPDATE events SET num_attempts = num_attempts + 1 WHERE _id in "
 
-    move-result v1
+    invoke-direct {v4, v6}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    const/4 v2, 0x2
+    invoke-static {v1}, Lw1d;->q0(Ljava/lang/Iterable;)Ljava/lang/String;
 
-    if-eqz v1, :cond_2
+    move-result-object v1
 
-    const/4 v0, 0x1
+    invoke-virtual {v4, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    if-ne v1, v0, :cond_1
+    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    iget-object p0, p0, Lkotlinx/coroutines/internal/ScopeCoroutine;->uCont:Lkotlin/coroutines/Continuation;
+    move-result-object v1
 
-    invoke-static {p0}, Lwx7;->E(Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    const-string v4, "SELECT COUNT(*), transport_name FROM events WHERE num_attempts >= 16 GROUP BY transport_name"
+
+    invoke-virtual {v3}, Lw1d;->m()Landroid/database/sqlite/SQLiteDatabase;
+
+    move-result-object v6
+
+    invoke-virtual {v6}, Landroid/database/sqlite/SQLiteDatabase;->beginTransaction()V
+
+    :try_start_0
+    invoke-virtual {v6, v1}, Landroid/database/sqlite/SQLiteDatabase;->compileStatement(Ljava/lang/String;)Landroid/database/sqlite/SQLiteStatement;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Landroid/database/sqlite/SQLiteStatement;->execute()V
+
+    invoke-virtual {v6, v4, v5}, Landroid/database/sqlite/SQLiteDatabase;->rawQuery(Ljava/lang/String;[Ljava/lang/String;)Landroid/database/Cursor;
+
+    move-result-object v1
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    :goto_0
+    :try_start_1
+    invoke-interface {v1}, Landroid/database/Cursor;->moveToNext()Z
+
+    move-result v4
+
+    if-eqz v4, :cond_1
+
+    const/4 v4, 0x0
+
+    invoke-interface {v1, v4}, Landroid/database/Cursor;->getInt(I)I
+
+    move-result v4
+
+    const/4 v7, 0x1
+
+    invoke-interface {v1, v7}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
+
+    move-result-object v7
+
+    int-to-long v8, v4
+
+    sget-object v4, Lnz7;->Y:Lnz7;
+
+    invoke-virtual {v3, v8, v9, v4, v7}, Lw1d;->X(JLnz7;Ljava/lang/String;)V
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_1
+
+    goto :goto_0
+
+    :cond_1
+    :try_start_2
+    invoke-interface {v1}, Landroid/database/Cursor;->close()V
+
+    const-string v1, "DELETE FROM events WHERE num_attempts >= 16"
+
+    invoke-virtual {v6, v1}, Landroid/database/sqlite/SQLiteDatabase;->compileStatement(Ljava/lang/String;)Landroid/database/sqlite/SQLiteStatement;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Landroid/database/sqlite/SQLiteStatement;->execute()V
+
+    invoke-virtual {v6}, Landroid/database/sqlite/SQLiteDatabase;->setTransactionSuccessful()V
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_0
+
+    invoke-virtual {v6}, Landroid/database/sqlite/SQLiteDatabase;->endTransaction()V
+
+    :goto_1
+    iget-object v0, v0, Ltpf;->g:Lu53;
+
+    invoke-interface {v0}, Lu53;->l()J
+
+    move-result-wide v0
+
+    iget-wide v6, p0, Lnl4;->c:J
+
+    add-long/2addr v0, v6
+
+    new-instance p0, Lwv1;
+
+    const/16 v4, 0xa
+
+    invoke-direct {p0, v0, v1, v2, v4}, Lwv1;-><init>(JLjava/lang/Object;I)V
+
+    invoke-virtual {v3, p0}, Lw1d;->o(Lu1d;)Ljava/lang/Object;
+
+    return-object v5
+
+    :catchall_0
+    move-exception p0
+
+    goto :goto_2
+
+    :catchall_1
+    move-exception p0
+
+    :try_start_3
+    invoke-interface {v1}, Landroid/database/Cursor;->close()V
+
+    throw p0
+    :try_end_3
+    .catchall {:try_start_3 .. :try_end_3} :catchall_0
+
+    :goto_2
+    invoke-virtual {v6}, Landroid/database/sqlite/SQLiteDatabase;->endTransaction()V
+
+    throw p0
+.end method
+
+.method public b(Ltgd;)Ljava/util/concurrent/ScheduledFuture;
+    .locals 6
+
+    iget v0, p0, Lnl4;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    iget-object v0, p0, Lnl4;->b:Ljava/lang/Object;
+
+    check-cast v0, Lsl4;
+
+    iget-object v1, p0, Lnl4;->X:Ljava/lang/Object;
+
+    check-cast v1, Ljava/util/concurrent/Callable;
+
+    iget-object v2, p0, Lnl4;->o:Ljava/lang/Object;
+
+    check-cast v2, Ljava/util/concurrent/TimeUnit;
+
+    iget-object v3, v0, Lsl4;->b:Ljava/util/concurrent/ScheduledExecutorService;
+
+    new-instance v4, Lfu0;
+
+    const/4 v5, 0x1
+
+    invoke-direct {v4, v0, v1, p1, v5}, Lfu0;-><init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;I)V
+
+    iget-wide p0, p0, Lnl4;->c:J
+
+    invoke-interface {v3, v4, p0, p1, v2}, Ljava/util/concurrent/ScheduledExecutorService;->schedule(Ljava/util/concurrent/Callable;JLjava/util/concurrent/TimeUnit;)Ljava/util/concurrent/ScheduledFuture;
 
     move-result-object p0
 
-    invoke-static {p1}, La4f;->w(Ljava/lang/Object;)Ljava/lang/Object;
+    return-object p0
 
-    move-result-object p1
+    :pswitch_0
+    iget-object v0, p0, Lnl4;->b:Ljava/lang/Object;
 
-    const/4 v0, 0x0
+    check-cast v0, Lsl4;
 
-    invoke-static {p0, p1, v0, v2, v0}, Lkotlinx/coroutines/internal/DispatchedContinuationKt;->resumeCancellableWith$default(Lkotlin/coroutines/Continuation;Ljava/lang/Object;Lx56;ILjava/lang/Object;)V
+    iget-object v1, p0, Lnl4;->X:Ljava/lang/Object;
 
-    return-void
+    check-cast v1, Ljava/lang/Runnable;
 
-    :cond_1
-    new-instance p0, Ljava/lang/IllegalStateException;
+    iget-object v2, p0, Lnl4;->o:Ljava/lang/Object;
 
-    const-string p1, "Already resumed"
+    check-cast v2, Ljava/util/concurrent/TimeUnit;
 
-    invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    iget-object v3, v0, Lsl4;->b:Ljava/util/concurrent/ScheduledExecutorService;
 
-    throw p0
+    new-instance v4, Lql4;
 
-    :cond_2
-    const/4 v1, 0x0
+    const/4 v5, 0x1
 
-    invoke-virtual {v0, p0, v1, v2}, Ljava/util/concurrent/atomic/AtomicIntegerFieldUpdater;->compareAndSet(Ljava/lang/Object;II)Z
+    invoke-direct {v4, v0, v1, p1, v5}, Lql4;-><init>(Lsl4;Ljava/lang/Runnable;Ltgd;I)V
 
-    move-result v0
+    iget-wide p0, p0, Lnl4;->c:J
 
-    if-eqz v0, :cond_0
+    invoke-interface {v3, v4, p0, p1, v2}, Ljava/util/concurrent/ScheduledExecutorService;->schedule(Ljava/lang/Runnable;JLjava/util/concurrent/TimeUnit;)Ljava/util/concurrent/ScheduledFuture;
 
-    return-void
+    move-result-object p0
+
+    return-object p0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

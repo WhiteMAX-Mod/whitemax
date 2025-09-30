@@ -34,21 +34,21 @@
         "getTime",
         "(J)J",
         "statItem",
-        "Le5f;",
+        "Lylf;",
         "sendStat",
         "(Lru/ok/android/externcalls/sdk/log/stat/item/StatItem;)V",
-        "Lu1a;",
+        "Lbaa;",
         "makeState",
-        "(Lru/ok/android/externcalls/sdk/log/stat/item/StatItem;)Lu1a;",
-        "Lt1a;",
+        "(Lru/ok/android/externcalls/sdk/log/stat/item/StatItem;)Lbaa;",
+        "Laaa;",
         "builder",
         "setStat",
-        "(Lt1a;Lru/ok/android/externcalls/sdk/log/stat/item/StatItem;)Lt1a;",
+        "(Laaa;Lru/ok/android/externcalls/sdk/log/stat/item/StatItem;)Laaa;",
         "",
         "",
         "custom",
         "setCustom",
-        "(Lt1a;Ljava/util/Map;)V",
+        "(Laaa;Ljava/util/Map;)V",
         "calls-sdk_release"
     }
     k = 0x1
@@ -81,26 +81,24 @@
 .method public abstract getTime(J)J
 .end method
 
-.method public makeState(Lru/ok/android/externcalls/sdk/log/stat/item/StatItem;)Lu1a;
+.method public makeState(Lru/ok/android/externcalls/sdk/log/stat/item/StatItem;)Lbaa;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(TS;)",
-            "Lu1a;"
+            "Lbaa;"
         }
     .end annotation
 
-    new-instance v0, Lt1a;
+    invoke-static {}, Lbaa;->a()Laaa;
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    move-result-object v0
 
-    invoke-virtual {v0}, Lt1a;->b()V
-
-    invoke-virtual {p0, v0, p1}, Lru/ok/android/externcalls/sdk/log/stat/BaseStatisticsManagerImpl;->setStat(Lt1a;Lru/ok/android/externcalls/sdk/log/stat/item/StatItem;)Lt1a;
+    invoke-virtual {p0, v0, p1}, Lru/ok/android/externcalls/sdk/log/stat/BaseStatisticsManagerImpl;->setStat(Laaa;Lru/ok/android/externcalls/sdk/log/stat/item/StatItem;)Laaa;
 
     move-result-object p0
 
-    invoke-virtual {p0}, Lt1a;->a()Lu1a;
+    invoke-virtual {p0}, Laaa;->a()Lbaa;
 
     move-result-object p0
 
@@ -115,40 +113,21 @@
         }
     .end annotation
 
-    invoke-virtual {p0, p1}, Lru/ok/android/externcalls/sdk/log/stat/BaseStatisticsManagerImpl;->makeState(Lru/ok/android/externcalls/sdk/log/stat/item/StatItem;)Lu1a;
+    invoke-virtual {p0, p1}, Lru/ok/android/externcalls/sdk/log/stat/BaseStatisticsManagerImpl;->makeState(Lru/ok/android/externcalls/sdk/log/stat/item/StatItem;)Lbaa;
 
     move-result-object p0
 
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    sget-object p0, Lr1a;->a:Ljava/util/ArrayList;
-
-    invoke-virtual {p0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
-
-    move-result-object p0
-
-    invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result p1
-
-    if-nez p1, :cond_0
+    invoke-virtual {p0}, Lbaa;->b()V
 
     return-void
-
-    :cond_0
-    invoke-static {p0}, Lv04;->f(Ljava/util/Iterator;)Ljava/lang/ClassCastException;
-
-    move-result-object p0
-
-    throw p0
 .end method
 
-.method public setCustom(Lt1a;Ljava/util/Map;)V
+.method public setCustom(Laaa;Ljava/util/Map;)V
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lt1a;",
+            "Laaa;",
             "Ljava/util/Map<",
             "Ljava/lang/String;",
             "Ljava/lang/String;",
@@ -189,7 +168,7 @@
 
     check-cast p2, Ljava/lang/String;
 
-    invoke-virtual {p1, v0, p2}, Lt1a;->c(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {p1, v0, p2}, Laaa;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 
@@ -197,14 +176,14 @@
     return-void
 .end method
 
-.method public setStat(Lt1a;Lru/ok/android/externcalls/sdk/log/stat/item/StatItem;)Lt1a;
+.method public setStat(Laaa;Lru/ok/android/externcalls/sdk/log/stat/item/StatItem;)Laaa;
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lt1a;",
+            "Laaa;",
             "TS;)",
-            "Lt1a;"
+            "Laaa;"
         }
     .end annotation
 
@@ -212,25 +191,25 @@
 
     move-result-object v0
 
-    invoke-virtual {p0, p1, v0}, Lru/ok/android/externcalls/sdk/log/stat/BaseStatisticsManagerImpl;->setCustom(Lt1a;Ljava/util/Map;)V
+    invoke-virtual {p0, p1, v0}, Lru/ok/android/externcalls/sdk/log/stat/BaseStatisticsManagerImpl;->setCustom(Laaa;Ljava/util/Map;)V
 
     invoke-interface {p2}, Lru/ok/android/externcalls/sdk/log/stat/item/StatItem;->getCollector()Ljava/lang/String;
 
     move-result-object v0
 
-    iput-object v0, p1, Lt1a;->a:Ljava/lang/String;
+    iput-object v0, p1, Laaa;->a:Ljava/lang/String;
 
     invoke-interface {p2}, Lru/ok/android/externcalls/sdk/log/stat/item/StatItem;->getType()I
 
     move-result v0
 
-    iput v0, p1, Lt1a;->b:I
+    iput v0, p1, Laaa;->b:I
 
     invoke-interface {p2}, Lru/ok/android/externcalls/sdk/log/stat/item/StatItem;->getOperation()Ljava/lang/String;
 
     move-result-object v0
 
-    iput-object v0, p1, Lt1a;->c:Ljava/lang/String;
+    iput-object v0, p1, Laaa;->c:Ljava/lang/String;
 
     invoke-interface {p2}, Lru/ok/android/externcalls/sdk/log/stat/item/StatItem;->getTimestamp()J
 
@@ -240,7 +219,7 @@
 
     move-result-wide v0
 
-    invoke-virtual {p1, v0, v1}, Lt1a;->d(J)V
+    invoke-virtual {p1, v0, v1}, Laaa;->e(J)V
 
     return-object p1
 .end method

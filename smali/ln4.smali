@@ -3,24 +3,28 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lmn4;
+.implements Lxu0;
 
 
 # instance fields
-.field public final a:Landroid/net/Uri;
+.field public final a:I
 
-.field public final b:Lgn4;
+.field public final b:I
+
+.field public final c:I
 
 
 # direct methods
-.method public constructor <init>(Landroid/net/Uri;Lgn4;)V
+.method public constructor <init>(III)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lln4;->a:Landroid/net/Uri;
+    iput p1, p0, Lln4;->a:I
 
-    iput-object p2, p0, Lln4;->b:Lgn4;
+    iput p2, p0, Lln4;->b:I
+
+    iput p3, p0, Lln4;->c:I
 
     return-void
 .end method
@@ -48,89 +52,50 @@
     :cond_1
     check-cast p1, Lln4;
 
-    iget-object v1, p0, Lln4;->a:Landroid/net/Uri;
+    iget v1, p0, Lln4;->a:I
 
-    iget-object v3, p1, Lln4;->a:Landroid/net/Uri;
+    iget v3, p1, Lln4;->a:I
 
-    invoke-static {v1, v3}, Lxq7;->d(Ljava/lang/Object;Ljava/lang/Object;)Z
+    if-ne v1, v3, :cond_2
 
-    move-result v1
+    iget v1, p0, Lln4;->b:I
 
-    if-nez v1, :cond_2
+    iget v3, p1, Lln4;->b:I
 
-    return v2
+    if-ne v1, v3, :cond_2
+
+    iget p0, p0, Lln4;->c:I
+
+    iget p1, p1, Lln4;->c:I
+
+    if-ne p0, p1, :cond_2
+
+    return v0
 
     :cond_2
-    iget-object p0, p0, Lln4;->b:Lgn4;
-
-    iget-object p1, p1, Lln4;->b:Lgn4;
-
-    if-eq p0, p1, :cond_3
-
     return v2
-
-    :cond_3
-    return v0
 .end method
 
 .method public final hashCode()I
-    .locals 1
-
-    iget-object v0, p0, Lln4;->a:Landroid/net/Uri;
-
-    if-nez v0, :cond_0
-
-    const/4 v0, 0x0
-
-    goto :goto_0
-
-    :cond_0
-    invoke-virtual {v0}, Landroid/net/Uri;->hashCode()I
-
-    move-result v0
-
-    :goto_0
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget-object p0, p0, Lln4;->b:Lgn4;
-
-    invoke-virtual {p0}, Ljava/lang/Object;->hashCode()I
-
-    move-result p0
-
-    add-int/2addr p0, v0
-
-    return p0
-.end method
-
-.method public final toString()Ljava/lang/String;
     .locals 2
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    const/16 v0, 0x20f
 
-    const-string v1, "DownloadMediaCompleted(uri="
+    iget v1, p0, Lln4;->a:I
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    add-int/2addr v0, v1
 
-    iget-object v1, p0, Lln4;->a:Landroid/net/Uri;
+    mul-int/lit8 v0, v0, 0x1f
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    iget v1, p0, Lln4;->b:I
 
-    const-string v1, ", cause="
+    add-int/2addr v0, v1
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    mul-int/lit8 v0, v0, 0x1f
 
-    iget-object p0, p0, Lln4;->b:Lgn4;
+    iget p0, p0, Lln4;->c:I
 
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    add-int/2addr v0, p0
 
-    const-string p0, ")"
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
+    return v0
 .end method

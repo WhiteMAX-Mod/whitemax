@@ -1,125 +1,98 @@
 .class public final Ler1;
-.super Lqde;
+.super Lx2;
 .source "SourceFile"
-
-# interfaces
-.implements Ll66;
 
 
 # instance fields
-.field public synthetic X:Ljava/lang/Object;
+.field public final synthetic c:I
 
-.field public final synthetic Y:Lfr1;
+.field public final synthetic o:Lfr1;
 
 
 # direct methods
-.method public constructor <init>(Lfr1;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(Lfr1;I)V
     .locals 0
 
-    iput-object p1, p0, Ler1;->Y:Lfr1;
+    iput p2, p0, Ler1;->c:I
 
-    const/4 p1, 0x2
+    iput-object p1, p0, Ler1;->o:Lfr1;
 
-    invoke-direct {p0, p1, p2}, Lqde;-><init>(ILkotlin/coroutines/Continuation;)V
+    const/16 p1, 0x9
+
+    packed-switch p2, :pswitch_data_0
+
+    sget-object p2, Ldr1;->b:Ldr1;
+
+    invoke-direct {p0, p1, p2}, Lx2;-><init>(ILjava/lang/Object;)V
 
     return-void
+
+    :pswitch_0
+    const/4 p2, 0x0
+
+    invoke-direct {p0, p1, p2}, Lx2;-><init>(ILjava/lang/Object;)V
+
+    return-void
+
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_0
+    .end packed-switch
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
-
-    check-cast p1, Lv9f;
-
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Ler1;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p0
-
-    check-cast p0, Ler1;
-
-    sget-object p1, Le5f;->a:Le5f;
-
-    invoke-virtual {p0, p1}, Ler1;->o(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p1
-.end method
-
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+.method public final x0(Ljava/lang/Object;Ljava/lang/Object;)V
     .locals 1
 
-    new-instance v0, Ler1;
+    iget v0, p0, Ler1;->c:I
 
-    iget-object p0, p0, Ler1;->Y:Lfr1;
+    packed-switch v0, :pswitch_data_0
 
-    invoke-direct {v0, p0, p2}, Ler1;-><init>(Lfr1;Lkotlin/coroutines/Continuation;)V
+    check-cast p2, Lera;
 
-    iput-object p1, v0, Ler1;->X:Ljava/lang/Object;
+    check-cast p1, Lera;
 
-    return-object v0
-.end method
+    invoke-static {p1, p2}, Lvyg;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 11
+    move-result p1
 
-    invoke-static {p1}, Lsgg;->Z(Ljava/lang/Object;)V
+    if-nez p1, :cond_1
 
-    iget-object p1, p0, Ler1;->X:Ljava/lang/Object;
+    iget-object p0, p0, Ler1;->o:Lfr1;
 
-    check-cast p1, Lv9f;
+    if-nez p2, :cond_0
 
-    sget-object v0, Lv9f;->a:Lv9f;
+    sget-object p1, Lyu4;->t0:Lbx9;
 
-    iget-object p0, p0, Ler1;->Y:Lfr1;
+    invoke-virtual {p1, p0}, Lbx9;->l(Landroid/view/View;)Lera;
 
-    if-ne p1, v0, :cond_0
-
-    invoke-virtual {p0}, Lfr1;->b()Lazd;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lazd;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lw04;
-
-    iget-object v1, p0, Lfr1;->m:Lje7;
-
-    invoke-interface {v1}, Lje7;->getValue()Ljava/lang/Object;
-
-    move-result-object v1
-
-    move-object v2, v1
-
-    check-cast v2, Lys1;
-
-    iget-object v4, v0, Lw04;->c:Ljava/lang/String;
-
-    iget-boolean v9, v0, Lw04;->h:Z
-
-    invoke-virtual {v2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    const/4 v8, 0x0
-
-    const/16 v10, 0x38
-
-    const-string v3, "BAD_CONNECTION_ALERT"
-
-    const-string v5, "VPN"
-
-    const/4 v6, 0x0
-
-    const/4 v7, 0x0
-
-    invoke-static/range {v2 .. v10}, Lys1;->c(Lys1;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Long;Ljava/lang/String;Ljava/lang/String;ZI)V
+    move-result-object p2
 
     :cond_0
-    invoke-virtual {p0, p1}, Lfr1;->o(Lv9f;)V
+    invoke-virtual {p0, p2}, Lfr1;->onThemeChanged(Lera;)V
 
-    sget-object p0, Le5f;->a:Le5f;
+    :cond_1
+    return-void
 
-    return-object p0
+    :pswitch_0
+    check-cast p2, Ldr1;
+
+    check-cast p1, Ldr1;
+
+    if-eq p1, p2, :cond_2
+
+    iget-object p0, p0, Ler1;->o:Lfr1;
+
+    invoke-static {p0}, Lfr1;->C(Lfr1;)V
+
+    :cond_2
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

@@ -1,80 +1,64 @@
-.class public final Lhb6;
-.super Lqde;
+.class public final synthetic Lhb6;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Ll66;
+.implements Lpm3;
+.implements Lp0e;
 
 
 # instance fields
-.field public synthetic X:Ljava/lang/Object;
+.field public final synthetic a:Lru/ok/messages/settings/caching/FrgCachingSettings;
+
+
+# direct methods
+.method public synthetic constructor <init>(Lru/ok/messages/settings/caching/FrgCachingSettings;)V
+    .locals 0
+
+    iput-object p1, p0, Lhb6;->a:Lru/ok/messages/settings/caching/FrgCachingSettings;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+.method public a(F)Ljava/lang/String;
     .locals 0
 
-    check-cast p1, Lnj3;
+    iget-object p0, p0, Lhb6;->a:Lru/ok/messages/settings/caching/FrgCachingSettings;
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    iget-object p0, p0, Lru/ok/messages/settings/caching/FrgCachingSettings;->F1:[Ljava/lang/String;
 
-    invoke-virtual {p0, p1, p2}, Lhb6;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    float-to-int p1, p1
 
-    move-result-object p0
-
-    check-cast p0, Lhb6;
-
-    sget-object p1, Le5f;->a:Le5f;
-
-    invoke-virtual {p0, p1}, Lhb6;->o(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p0
+    aget-object p0, p0, p1
 
     return-object p0
 .end method
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+.method public accept(Ljava/lang/Object;)V
     .locals 1
 
-    new-instance p0, Lhb6;
+    check-cast p1, Loq4;
 
-    const/4 v0, 0x2
+    iget-object p0, p0, Lhb6;->a:Lru/ok/messages/settings/caching/FrgCachingSettings;
 
-    invoke-direct {p0, v0, p2}, Lqde;-><init>(ILkotlin/coroutines/Continuation;)V
+    iget-object v0, p0, Lru/ok/messages/views/fragments/base/FrgBase;->x1:Lxd3;
 
-    iput-object p1, p0, Lhb6;->X:Ljava/lang/Object;
+    if-nez v0, :cond_0
 
-    return-object p0
-.end method
+    new-instance v0, Lxd3;
 
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    invoke-static {p1}, Lsgg;->Z(Ljava/lang/Object;)V
-
-    iget-object p0, p0, Lhb6;->X:Ljava/lang/Object;
-
-    check-cast p0, Lnj3;
-
-    if-eqz p0, :cond_0
-
-    invoke-virtual {p0}, Lnj3;->w()Z
-
-    move-result p0
-
-    if-nez p0, :cond_0
-
-    const/4 p0, 0x1
-
-    goto :goto_0
+    iput-object v0, p0, Lru/ok/messages/views/fragments/base/FrgBase;->x1:Lxd3;
 
     :cond_0
-    const/4 p0, 0x0
+    iget-object p0, p0, Lru/ok/messages/views/fragments/base/FrgBase;->x1:Lxd3;
 
-    :goto_0
-    invoke-static {p0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+    invoke-virtual {p0, p1}, Lxd3;->a(Loq4;)Z
 
-    move-result-object p0
-
-    return-object p0
+    return-void
 .end method

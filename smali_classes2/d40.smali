@@ -1,60 +1,73 @@
-.class public final synthetic Ld40;
-.super Ljava/lang/Object;
+.class public final Ld40;
+.super Lure;
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/lang/Runnable;
+.implements Lrc6;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public synthetic X:Lm40;
 
-.field public final synthetic b:Lru/ok/android/externcalls/sdk/audio/internal/AudioFocusRequestHelper;
-
-
-# direct methods
-.method public synthetic constructor <init>(Lru/ok/android/externcalls/sdk/audio/internal/AudioFocusRequestHelper;I)V
-    .locals 0
-
-    iput p2, p0, Ld40;->a:I
-
-    iput-object p1, p0, Ld40;->b:Lru/ok/android/externcalls/sdk/audio/internal/AudioFocusRequestHelper;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    return-void
-.end method
+.field public synthetic Y:F
 
 
 # virtual methods
-.method public final run()V
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
 
-    iget v0, p0, Ld40;->a:I
+    check-cast p1, Lm40;
 
-    iget-object p0, p0, Ld40;->b:Lru/ok/android/externcalls/sdk/audio/internal/AudioFocusRequestHelper;
+    check-cast p2, Ljava/lang/Number;
 
-    packed-switch v0, :pswitch_data_0
+    invoke-virtual {p2}, Ljava/lang/Number;->floatValue()F
 
-    invoke-static {p0}, Lru/ok/android/externcalls/sdk/audio/internal/AudioFocusRequestHelper;->d(Lru/ok/android/externcalls/sdk/audio/internal/AudioFocusRequestHelper;)V
+    move-result p0
 
-    return-void
+    check-cast p3, Lkotlin/coroutines/Continuation;
 
-    :pswitch_0
-    invoke-static {p0}, Lru/ok/android/externcalls/sdk/audio/internal/AudioFocusRequestHelper;->b(Lru/ok/android/externcalls/sdk/audio/internal/AudioFocusRequestHelper;)V
+    new-instance p2, Ld40;
 
-    return-void
+    const/4 v0, 0x3
 
-    :pswitch_1
-    invoke-static {p0}, Lru/ok/android/externcalls/sdk/audio/internal/AudioFocusRequestHelper;->c(Lru/ok/android/externcalls/sdk/audio/internal/AudioFocusRequestHelper;)V
+    invoke-direct {p2, v0, p3}, Lure;-><init>(ILkotlin/coroutines/Continuation;)V
 
-    return-void
+    iput-object p1, p2, Ld40;->X:Lm40;
 
-    nop
+    iput p0, p2, Ld40;->Y:F
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    sget-object p0, Lylf;->a:Lylf;
+
+    invoke-virtual {p2, p0}, Ld40;->o(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 2
+
+    invoke-static {p1}, Lqe5;->V(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Ld40;->X:Lm40;
+
+    iget p0, p0, Ld40;->Y:F
+
+    if-eqz p1, :cond_0
+
+    iget-object v0, p1, Lm40;->a:Ljava/lang/Long;
+
+    iget-object p1, p1, Lm40;->c:Lc20;
+
+    new-instance v1, Lm40;
+
+    invoke-direct {v1, v0, p0, p1}, Lm40;-><init>(Ljava/lang/Long;FLc20;)V
+
+    return-object v1
+
+    :cond_0
+    const/4 p0, 0x0
+
+    return-object p0
 .end method

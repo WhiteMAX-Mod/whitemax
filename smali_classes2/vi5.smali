@@ -1,161 +1,226 @@
 .class public final Lvi5;
-.super Lde;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Ln18;
 
 
 # instance fields
-.field public final synthetic b:I
+.field public final X:Lvh;
 
-.field public final synthetic c:Landroid/graphics/drawable/Drawable$Callback;
+.field public final a:Lexc;
+
+.field public final b:Luh;
+
+.field public final c:Lvh;
+
+.field public final o:Lvh;
 
 
 # direct methods
-.method public synthetic constructor <init>(Landroid/graphics/drawable/Drawable$Callback;I)V
-    .locals 0
-
-    iput p2, p0, Lvi5;->b:I
-
-    iput-object p1, p0, Lvi5;->c:Landroid/graphics/drawable/Drawable$Callback;
+.method public constructor <init>(Lru/ok/tamtam/android/db/room/OneMeRoomDatabase;)V
+    .locals 2
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    return-void
-.end method
+    iput-object p1, p0, Lvi5;->a:Lexc;
 
-.method private final c(Landroid/graphics/drawable/Drawable;)V
-    .locals 0
+    new-instance v0, Luh;
+
+    const/16 v1, 0x9
+
+    invoke-direct {v0, p1, v1}, Luh;-><init>(Lexc;I)V
+
+    iput-object v0, p0, Lvi5;->b:Luh;
+
+    new-instance v0, Lvh;
+
+    const/16 v1, 0x14
+
+    invoke-direct {v0, p1, v1}, Lvh;-><init>(Lexc;I)V
+
+    iput-object v0, p0, Lvi5;->c:Lvh;
+
+    new-instance v0, Lvh;
+
+    const/16 v1, 0x15
+
+    invoke-direct {v0, p1, v1}, Lvh;-><init>(Lexc;I)V
+
+    iput-object v0, p0, Lvi5;->o:Lvh;
+
+    new-instance v0, Lvh;
+
+    const/16 v1, 0x16
+
+    invoke-direct {v0, p1, v1}, Lvh;-><init>(Lexc;I)V
+
+    iput-object v0, p0, Lvi5;->X:Lvh;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Landroid/graphics/drawable/Drawable;)V
-    .locals 1
-
-    iget v0, p0, Lvi5;->b:I
-
-    packed-switch v0, :pswitch_data_0
-
-    iget-object p0, p0, Lvi5;->c:Landroid/graphics/drawable/Drawable$Callback;
-
-    check-cast p0, Lpoe;
-
-    iget-object p0, p0, Lpoe;->b:Landroid/animation/AnimatorSet;
-
-    if-eqz p0, :cond_0
-
-    invoke-virtual {p0}, Landroid/animation/Animator;->end()V
-
-    :cond_0
-    return-void
-
-    :pswitch_0
-    iget-object p0, p0, Lvi5;->c:Landroid/graphics/drawable/Drawable$Callback;
-
-    check-cast p0, Ls2e;
-
-    invoke-virtual {p0}, Ls2e;->start()V
-
-    return-void
-
-    :pswitch_1
-    iget-object p0, p0, Lvi5;->c:Landroid/graphics/drawable/Drawable$Callback;
-
-    check-cast p0, Lg18;
-
-    iget-object p0, p0, Lg18;->y0:Landroid/content/res/ColorStateList;
-
-    if-eqz p0, :cond_1
-
-    invoke-static {p1, p0}, Laq4;->h(Landroid/graphics/drawable/Drawable;Landroid/content/res/ColorStateList;)V
-
-    :cond_1
-    return-void
-
-    :pswitch_2
-    iget-object p0, p0, Lvi5;->c:Landroid/graphics/drawable/Drawable$Callback;
-
-    check-cast p0, Lwi5;
-
-    iget-object p1, p0, Lwi5;->o:Landroid/animation/AnimatorSet;
-
-    invoke-virtual {p1}, Landroid/animation/AnimatorSet;->cancel()V
-
-    invoke-virtual {p0}, Lwi5;->start()V
-
-    return-void
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public final b(Landroid/graphics/drawable/Drawable;)V
+.method public final f()V
     .locals 2
 
-    iget v0, p0, Lvi5;->b:I
+    new-instance v0, Lsi5;
 
-    packed-switch v0, :pswitch_data_0
+    const/4 v1, 0x0
 
-    iget-object p0, p0, Lvi5;->c:Landroid/graphics/drawable/Drawable$Callback;
+    invoke-direct {v0, p0, v1}, Lsi5;-><init>(Lvi5;Lkotlin/coroutines/Continuation;)V
 
-    check-cast p0, Lpoe;
+    invoke-static {v0}, Lvyg;->B(Lpc6;)Ljava/lang/Object;
 
-    iget-object p0, p0, Lpoe;->b:Landroid/animation/AnimatorSet;
-
-    if-eqz p0, :cond_0
-
-    invoke-virtual {p0}, Landroid/animation/Animator;->start()V
-
-    :cond_0
-    :pswitch_0
     return-void
+.end method
 
-    :pswitch_1
-    iget-object p0, p0, Lvi5;->c:Landroid/graphics/drawable/Drawable$Callback;
+.method public final p(Ljava/util/List;Lq3a;)Ljava/lang/Object;
+    .locals 6
 
-    check-cast p0, Lg18;
+    new-instance v0, Ljava/util/ArrayList;
 
-    iget-object v0, p0, Lg18;->y0:Landroid/content/res/ColorStateList;
+    const/16 v1, 0xa
 
-    if-eqz v0, :cond_1
-
-    iget-object p0, p0, Lg18;->C0:[I
-
-    invoke-virtual {v0}, Landroid/content/res/ColorStateList;->getDefaultColor()I
+    invoke-static {p1, v1}, Ls73;->O(Ljava/lang/Iterable;I)I
 
     move-result v1
 
-    invoke-virtual {v0, p0, v1}, Landroid/content/res/ColorStateList;->getColorForState([II)I
+    invoke-direct {v0, v1}, Ljava/util/ArrayList;-><init>(I)V
 
-    move-result p0
+    invoke-interface {p1}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
-    invoke-static {p1, p0}, Laq4;->g(Landroid/graphics/drawable/Drawable;I)V
+    move-result-object p1
+
+    :goto_0
+    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lc4a;
+
+    iget-wide v2, v1, Lc4a;->a:J
+
+    iget-wide v4, v1, Lc4a;->b:J
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {v1, v2, v3}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    const-string v2, "_"
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1, v4, v5}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    goto :goto_0
+
+    :cond_0
+    const-string p1, "SELECT * FROM fcm_notifications_analytics WHERE chat_id||\'_\'||msg_id IN ("
+
+    invoke-static {p1}, Lmw1;->m(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object p1
+
+    invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
+
+    move-result v1
+
+    invoke-static {p1, v1}, Lte2;->c(Ljava/lang/StringBuilder;I)V
+
+    const-string v2, ") AND analytics_status = ("
+
+    invoke-virtual {p1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v2, "?"
+
+    invoke-virtual {p1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v2, ")"
+
+    invoke-virtual {p1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    const/4 v2, 0x1
+
+    add-int/2addr v1, v2
+
+    invoke-static {v1, p1}, Lvxc;->c(ILjava/lang/String;)Lvxc;
+
+    move-result-object p1
+
+    invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
+
+    move-result-object v0
+
+    move v3, v2
+
+    :goto_1
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v4
+
+    if-eqz v4, :cond_2
+
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v4
+
+    check-cast v4, Ljava/lang/String;
+
+    if-nez v4, :cond_1
+
+    invoke-virtual {p1, v3}, Lvxc;->Z(I)V
+
+    goto :goto_2
 
     :cond_1
-    return-void
+    invoke-virtual {p1, v3, v4}, Lvxc;->f(ILjava/lang/String;)V
 
-    :pswitch_2
-    iget-object p0, p0, Lvi5;->c:Landroid/graphics/drawable/Drawable$Callback;
+    :goto_2
+    add-int/lit8 v3, v3, 0x1
 
-    check-cast p0, Lwi5;
+    goto :goto_1
 
-    iget-object p0, p0, Lwi5;->o:Landroid/animation/AnimatorSet;
+    :cond_2
+    int-to-long v2, v2
 
-    invoke-virtual {p0}, Landroid/animation/AnimatorSet;->start()V
+    invoke-virtual {p1, v1, v2, v3}, Lvxc;->k(IJ)V
 
-    return-void
+    new-instance v0, Landroid/os/CancellationSignal;
 
-    nop
+    invoke-direct {v0}, Landroid/os/CancellationSignal;-><init>()V
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    new-instance v1, Lwh;
+
+    const/16 v2, 0xd
+
+    invoke-direct {v1, p0, v2, p1}, Lwh;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+
+    iget-object p0, p0, Lvi5;->a:Lexc;
+
+    invoke-static {p0, v0, v1, p2}, Lmu0;->h(Lexc;Landroid/os/CancellationSignal;Ljava/util/concurrent/Callable;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p0
+
+    return-object p0
 .end method

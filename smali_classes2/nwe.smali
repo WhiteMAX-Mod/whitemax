@@ -1,100 +1,108 @@
 .class public final Lnwe;
-.super Ljava/lang/Object;
+.super Lure;
 .source "SourceFile"
 
 # interfaces
-.implements Landroid/app/Application$ActivityLifecycleCallbacks;
+.implements Lpc6;
 
 
 # instance fields
-.field public final a:Lp9d;
+.field public X:I
 
-.field public b:I
-
-
-# direct methods
-.method public constructor <init>(Lp9d;)V
-    .locals 0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lnwe;->a:Lp9d;
-
-    return-void
-.end method
+.field public synthetic Y:Ljava/lang/Object;
 
 
 # virtual methods
-.method public final onActivityCreated(Landroid/app/Activity;Landroid/os/Bundle;)V
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    return-void
+    check-cast p1, Lks5;
+
+    check-cast p2, Lkotlin/coroutines/Continuation;
+
+    invoke-virtual {p0, p1, p2}, Lnwe;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+
+    move-result-object p0
+
+    check-cast p0, Lnwe;
+
+    sget-object p1, Lylf;->a:Lylf;
+
+    invoke-virtual {p0, p1}, Lnwe;->o(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p0
+
+    return-object p0
 .end method
 
-.method public final onActivityDestroyed(Landroid/app/Activity;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public final onActivityPaused(Landroid/app/Activity;)V
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
     .locals 1
 
-    iget p1, p0, Lnwe;->b:I
+    new-instance p0, Lnwe;
 
-    const/4 v0, 0x1
+    const/4 v0, 0x2
 
-    sub-int/2addr p1, v0
+    invoke-direct {p0, v0, p2}, Lure;-><init>(ILkotlin/coroutines/Continuation;)V
 
-    iput p1, p0, Lnwe;->b:I
+    iput-object p1, p0, Lnwe;->Y:Ljava/lang/Object;
 
-    if-nez p1, :cond_0
+    return-object p0
+.end method
 
-    iget-object p0, p0, Lnwe;->a:Lp9d;
+.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 2
 
-    invoke-virtual {p0, v0}, Lp9d;->e(Z)V
+    iget v0, p0, Lnwe;->X:I
+
+    const/4 v1, 0x1
+
+    if-eqz v0, :cond_1
+
+    if-ne v0, v1, :cond_0
+
+    invoke-static {p1}, Lqe5;->V(Ljava/lang/Object;)V
+
+    goto :goto_0
 
     :cond_0
-    return-void
-.end method
+    new-instance p0, Ljava/lang/IllegalStateException;
 
-.method public final onActivityResumed(Landroid/app/Activity;)V
-    .locals 1
+    const-string p1, "call to \'resume\' before \'invoke\' with coroutine"
 
-    iget p1, p0, Lnwe;->b:I
+    invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    if-nez p1, :cond_0
+    throw p0
 
-    iget-object p1, p0, Lnwe;->a:Lp9d;
+    :cond_1
+    invoke-static {p1}, Lqe5;->V(Ljava/lang/Object;)V
 
-    const/4 v0, 0x0
+    iget-object p1, p0, Lnwe;->Y:Ljava/lang/Object;
 
-    invoke-virtual {p1, v0}, Lp9d;->e(Z)V
+    check-cast p1, Lks5;
 
-    :cond_0
-    iget p1, p0, Lnwe;->b:I
+    sget-object v0, Lcze;->d0:Liic;
 
-    add-int/lit8 p1, p1, 0x1
+    iget-object v0, v0, Liic;->a:Lrce;
 
-    iput p1, p0, Lnwe;->b:I
+    invoke-interface {v0}, Lrce;->getValue()Ljava/lang/Object;
 
-    return-void
-.end method
+    move-result-object v0
 
-.method public final onActivitySaveInstanceState(Landroid/app/Activity;Landroid/os/Bundle;)V
-    .locals 0
+    iput v1, p0, Lnwe;->X:I
 
-    return-void
-.end method
+    invoke-interface {p1, v0, p0}, Lks5;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
-.method public final onActivityStarted(Landroid/app/Activity;)V
-    .locals 0
+    move-result-object p0
 
-    return-void
-.end method
+    sget-object p1, Lz04;->a:Lz04;
 
-.method public final onActivityStopped(Landroid/app/Activity;)V
-    .locals 0
+    if-ne p0, p1, :cond_2
 
-    return-void
+    return-object p1
+
+    :cond_2
+    :goto_0
+    sget-object p0, Lylf;->a:Lylf;
+
+    return-object p0
 .end method

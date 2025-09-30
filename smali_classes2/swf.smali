@@ -1,181 +1,152 @@
-.class public final synthetic Lswf;
-.super Ljava/lang/Object;
+.class public final Lswf;
+.super Lure;
 .source "SourceFile"
 
 # interfaces
-.implements Lra6;
+.implements Lpc6;
 
 
-# static fields
-.field public static final a:Lswf;
+# instance fields
+.field public X:I
 
-.field private static final descriptor:Lx4d;
+.field public synthetic Y:Ljava/lang/Object;
+
+.field public final synthetic Z:Lxwf;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 4
+.method public constructor <init>(Lxwf;Lkotlin/coroutines/Continuation;)V
+    .locals 0
 
-    new-instance v0, Lswf;
+    iput-object p1, p0, Lswf;->Z:Lxwf;
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    const/4 p1, 0x2
 
-    sput-object v0, Lswf;->a:Lswf;
-
-    new-instance v1, Lq2b;
-
-    const-string v2, "one.me.webapp.domain.jsbridge.delegates.biometry.WebAppBiometryUnavailableResponse"
-
-    const/4 v3, 0x2
-
-    invoke-direct {v1, v2, v0, v3}, Lq2b;-><init>(Ljava/lang/String;Lra6;I)V
-
-    const-string v0, "requestId"
-
-    const/4 v2, 0x0
-
-    invoke-virtual {v1, v0, v2}, Lq2b;->i(Ljava/lang/String;Z)V
-
-    const-string v0, "available"
-
-    invoke-virtual {v1, v0, v2}, Lq2b;->i(Ljava/lang/String;Z)V
-
-    sput-object v1, Lswf;->descriptor:Lx4d;
+    invoke-direct {p0, p1, p2}, Lure;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Lu40;Ljava/lang/Object;)V
-    .locals 2
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    check-cast p2, Luwf;
+    check-cast p1, Lks5;
 
-    sget-object p0, Lswf;->descriptor:Lx4d;
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    invoke-virtual {p1, p0}, Lu40;->c(Lx4d;)Lu40;
+    invoke-virtual {p0, p1, p2}, Lswf;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    move-result-object p1
+    move-result-object p0
 
-    iget-object v0, p2, Luwf;->a:Ljava/lang/String;
+    check-cast p0, Lswf;
 
-    const/4 v1, 0x0
+    sget-object p1, Lylf;->a:Lylf;
 
-    invoke-virtual {p1, p0, v1, v0}, Lu40;->m(Lx4d;ILjava/lang/String;)V
+    invoke-virtual {p0, p1}, Lswf;->o(Ljava/lang/Object;)Ljava/lang/Object;
 
-    const/4 v0, 0x1
+    move-result-object p0
 
-    iget-boolean p2, p2, Luwf;->b:Z
-
-    invoke-virtual {p1, p0, v0, p2}, Lu40;->f(Lx4d;IZ)V
-
-    invoke-virtual {p1}, Lu40;->n()V
-
-    return-void
+    return-object p0
 .end method
 
-.method public final b(Lnye;)Ljava/lang/Object;
-    .locals 8
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 1
 
-    sget-object p0, Lswf;->descriptor:Lx4d;
+    new-instance v0, Lswf;
 
-    invoke-virtual {p1, p0}, Lnye;->i(Lx4d;)Lnye;
+    iget-object p0, p0, Lswf;->Z:Lxwf;
 
-    move-result-object p1
+    invoke-direct {v0, p0, p2}, Lswf;-><init>(Lxwf;Lkotlin/coroutines/Continuation;)V
 
-    const/4 v0, 0x1
+    iput-object p1, v0, Lswf;->Y:Ljava/lang/Object;
 
-    const/4 v1, 0x0
+    return-object v0
+.end method
 
-    const/4 v2, 0x0
+.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 4
 
-    move v3, v0
+    iget v0, p0, Lswf;->X:I
 
-    move v4, v1
+    const/4 v1, 0x2
 
-    move v5, v4
+    const/4 v2, 0x1
 
-    :goto_0
-    if-eqz v3, :cond_3
+    sget-object v3, Lz04;->a:Lz04;
 
-    invoke-virtual {p1, p0}, Lnye;->x(Lx4d;)I
+    if-eqz v0, :cond_2
 
-    move-result v6
+    if-eq v0, v2, :cond_1
 
-    const/4 v7, -0x1
+    if-ne v0, v1, :cond_0
 
-    if-eq v6, v7, :cond_2
+    invoke-static {p1}, Lqe5;->V(Ljava/lang/Object;)V
 
-    if-eqz v6, :cond_1
-
-    if-ne v6, v0, :cond_0
-
-    invoke-virtual {p1, p0, v0}, Lnye;->w(Lx4d;I)Z
-
-    move-result v5
-
-    or-int/lit8 v4, v4, 0x2
-
-    goto :goto_0
+    goto :goto_2
 
     :cond_0
-    new-instance p0, Lkotlinx/serialization/UnknownFieldException;
+    new-instance p0, Ljava/lang/IllegalStateException;
 
-    invoke-direct {p0, v6}, Lkotlinx/serialization/UnknownFieldException;-><init>(I)V
+    const-string p1, "call to \'resume\' before \'invoke\' with coroutine"
+
+    invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
     throw p0
 
     :cond_1
-    invoke-virtual {p1, p0, v1}, Lnye;->D(Lx4d;I)Ljava/lang/String;
+    iget-object v0, p0, Lswf;->Y:Ljava/lang/Object;
 
-    move-result-object v2
+    check-cast v0, Lks5;
 
-    or-int/lit8 v4, v4, 0x1
+    invoke-static {p1}, Lqe5;->V(Ljava/lang/Object;)V
 
     goto :goto_0
 
     :cond_2
-    move v3, v1
+    invoke-static {p1}, Lqe5;->V(Ljava/lang/Object;)V
 
-    goto :goto_0
+    iget-object p1, p0, Lswf;->Y:Ljava/lang/Object;
+
+    move-object v0, p1
+
+    check-cast v0, Lks5;
+
+    iput-object v0, p0, Lswf;->Y:Ljava/lang/Object;
+
+    iput v2, p0, Lswf;->X:I
+
+    iget-object p1, p0, Lswf;->Z:Lxwf;
+
+    invoke-interface {p1, p0}, Lxwf;->c(Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    if-ne p1, v3, :cond_3
+
+    goto :goto_1
 
     :cond_3
-    invoke-virtual {p1, p0}, Lnye;->G(Lx4d;)V
+    :goto_0
+    const/4 v2, 0x0
 
-    new-instance p0, Luwf;
+    iput-object v2, p0, Lswf;->Y:Ljava/lang/Object;
 
-    invoke-direct {p0, v2, v4, v5}, Luwf;-><init>(Ljava/lang/String;IZ)V
+    iput v1, p0, Lswf;->X:I
 
-    return-object p0
-.end method
+    invoke-interface {v0, p1, p0}, Lks5;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
-.method public final c()[Lcc7;
-    .locals 2
+    move-result-object p0
 
-    const/4 p0, 0x2
+    if-ne p0, v3, :cond_4
 
-    new-array p0, p0, [Lcc7;
+    :goto_1
+    return-object v3
 
-    sget-object v0, Lf8e;->a:Lf8e;
-
-    const/4 v1, 0x0
-
-    aput-object v0, p0, v1
-
-    sget-object v0, Ltp0;->a:Ltp0;
-
-    const/4 v1, 0x1
-
-    aput-object v0, p0, v1
-
-    return-object p0
-.end method
-
-.method public final d()Lx4d;
-    .locals 0
-
-    sget-object p0, Lswf;->descriptor:Lx4d;
+    :cond_4
+    :goto_2
+    sget-object p0, Lylf;->a:Lylf;
 
     return-object p0
 .end method

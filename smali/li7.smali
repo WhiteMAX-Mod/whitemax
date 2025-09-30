@@ -1,83 +1,24 @@
-.class public final Lli7;
+.class public interface abstract Lli7;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lo64;
-
-
-# static fields
-.field public static final a:Lli7;
-
-.field public static final b:Lmi7;
-
-
-# direct methods
-.method static constructor <clinit>()V
-    .locals 1
-
-    new-instance v0, Lli7;
-
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    sput-object v0, Lli7;->a:Lli7;
-
-    sget-object v0, Lmi7;->b:Lmi7;
-
-    sput-object v0, Lli7;->b:Lmi7;
-
-    return-void
-.end method
+.implements Lii7;
+.implements Luc6;
 
 
 # virtual methods
-.method public final a()Lv64;
-    .locals 0
-
-    sget-object p0, Lli7;->b:Lmi7;
-
-    return-object p0
+.method public abstract isExternal()Z
 .end method
 
-.method public final b(Ljava/lang/String;Lr64;Landroid/os/Bundle;)Ly64;
-    .locals 8
+.method public abstract isInfix()Z
+.end method
 
-    sget-object p0, Lmi7;->b:Lmi7;
+.method public abstract isInline()Z
+.end method
 
-    iget-object p0, p0, Lv64;->a:Ljava/util/LinkedHashSet;
+.method public abstract isOperator()Z
+.end method
 
-    invoke-interface {p0, p2}, Ljava/util/Collection;->contains(Ljava/lang/Object;)Z
-
-    move-result p0
-
-    if-nez p0, :cond_0
-
-    const/4 p0, 0x0
-
-    return-object p0
-
-    :cond_0
-    new-instance v0, Ly64;
-
-    sget-object v5, Lw64;->c:Lw64;
-
-    new-instance v6, Ll92;
-
-    const/4 p0, 0x7
-
-    invoke-direct {v6, p3, p0}, Ll92;-><init>(Landroid/os/Bundle;I)V
-
-    const/16 v7, 0x8
-
-    const/4 v4, 0x0
-
-    move-object v1, p1
-
-    move-object v2, p2
-
-    move-object v3, p3
-
-    invoke-direct/range {v0 .. v7}, Ly64;-><init>(Ljava/lang/String;Lr64;Landroid/os/Bundle;ILw64;Lx64;I)V
-
-    return-object v0
+.method public abstract isSuspend()Z
 .end method

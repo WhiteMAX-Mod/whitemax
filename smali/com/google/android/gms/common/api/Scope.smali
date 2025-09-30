@@ -1,5 +1,5 @@
 .class public final Lcom/google/android/gms/common/api/Scope;
-.super Ln3;
+.super Lr3;
 .source "SourceFile"
 
 # interfaces
@@ -28,11 +28,11 @@
 .method static constructor <clinit>()V
     .locals 2
 
-    new-instance v0, Lmrf;
+    new-instance v0, Lfvf;
 
-    const/16 v1, 0x10
+    const/16 v1, 0x14
 
-    invoke-direct {v0, v1}, Lmrf;-><init>(I)V
+    invoke-direct {v0, v1}, Lfvf;-><init>(I)V
 
     sput-object v0, Lcom/google/android/gms/common/api/Scope;->CREATOR:Landroid/os/Parcelable$Creator;
 
@@ -46,7 +46,7 @@
 
     const-string v0, "scopeUri must not be null or empty"
 
-    invoke-static {p2, v0}, Lkhg;->h(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {p2, v0}, Ljk7;->q(Ljava/lang/String;Ljava/lang/String;)V
 
     iput p1, p0, Lcom/google/android/gms/common/api/Scope;->a:I
 
@@ -114,7 +114,7 @@
 
     const/16 p2, 0x4f45
 
-    invoke-static {p1, p2}, Lq14;->B0(Landroid/os/Parcel;I)I
+    invoke-static {p1, p2}, Ljs9;->U(Landroid/os/Parcel;I)I
 
     move-result p2
 
@@ -122,7 +122,7 @@
 
     const/4 v1, 0x4
 
-    invoke-static {p1, v0, v1}, Lq14;->D0(Landroid/os/Parcel;II)V
+    invoke-static {p1, v0, v1}, Ljs9;->W(Landroid/os/Parcel;II)V
 
     iget v0, p0, Lcom/google/android/gms/common/api/Scope;->a:I
 
@@ -132,9 +132,9 @@
 
     iget-object p0, p0, Lcom/google/android/gms/common/api/Scope;->b:Ljava/lang/String;
 
-    invoke-static {p1, v0, p0}, Lq14;->y0(Landroid/os/Parcel;ILjava/lang/String;)V
+    invoke-static {p1, v0, p0}, Ljs9;->P(Landroid/os/Parcel;ILjava/lang/String;)V
 
-    invoke-static {p1, p2}, Lq14;->C0(Landroid/os/Parcel;I)V
+    invoke-static {p1, p2}, Ljs9;->V(Landroid/os/Parcel;I)V
 
     return-void
 .end method

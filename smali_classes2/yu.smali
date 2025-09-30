@@ -1,172 +1,51 @@
 .class public final Lyu;
-.super Ljava/lang/Object;
+.super Ljx3;
 .source "SourceFile"
-
-# interfaces
-.implements Lgh9;
 
 
 # instance fields
-.field public final synthetic a:Lazd;
+.field public final synthetic X:Lyv;
 
-.field public final synthetic b:Lpw;
+.field public Y:I
+
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Lpw;)V
+.method public constructor <init>(Lyv;Ljx3;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lyu;->X:Lyv;
 
-    iput-object p1, p0, Lyu;->b:Lpw;
-
-    new-instance p1, Lel6;
-
-    invoke-direct {p1}, Ljava/lang/Object;-><init>()V
-
-    invoke-static {p1}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
-
-    move-result-object p1
-
-    invoke-static {p1}, Lbzd;->a(Ljava/lang/Object;)Lazd;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lyu;->a:Lazd;
+    invoke-direct {p0, p2}, Ljx3;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-    .locals 0
+.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 3
 
-    check-cast p1, Ljava/util/List;
+    iput-object p1, p0, Lyu;->o:Ljava/lang/Object;
 
-    iget-object p0, p0, Lyu;->a:Lazd;
+    iget p1, p0, Lyu;->Y:I
 
-    invoke-virtual {p0, p1}, Lazd;->setValue(Ljava/lang/Object;)V
+    const/high16 v0, -0x80000000
 
-    sget-object p0, Le5f;->a:Le5f;
+    or-int/2addr p1, v0
 
-    return-object p0
-.end method
+    iput p1, p0, Lyu;->Y:I
 
-.method public final b()Ljava/util/List;
-    .locals 0
+    const/4 p1, 0x0
 
-    iget-object p0, p0, Lyu;->a:Lazd;
+    const-wide/16 v0, 0x0
 
-    invoke-virtual {p0}, Lazd;->b()Ljava/util/List;
+    iget-object v2, p0, Lyu;->X:Lyv;
 
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public final c(Ljava/lang/Object;Ljava/lang/Object;)Z
-    .locals 0
-
-    check-cast p1, Ljava/util/List;
-
-    check-cast p2, Ljava/util/List;
-
-    iget-object p0, p0, Lyu;->a:Lazd;
-
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    invoke-virtual {p0, p1, p2}, Lazd;->m(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p0
-
-    return p0
-.end method
-
-.method public final d(Lbn5;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-    .locals 0
-
-    iget-object p0, p0, Lyu;->a:Lazd;
-
-    invoke-virtual {p0, p1, p2}, Lazd;->d(Lbn5;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    sget-object p0, Lpx3;->a:Lpx3;
-
-    return-object p0
-.end method
-
-.method public final f()Ljava/util/List;
-    .locals 0
-
-    iget-object p0, p0, Lyu;->a:Lazd;
-
-    invoke-virtual {p0}, Lazd;->getValue()Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, Ljava/util/List;
-
-    return-object p0
-.end method
-
-.method public final g()V
-    .locals 0
-
-    iget-object p0, p0, Lyu;->a:Lazd;
-
-    invoke-virtual {p0}, Lazd;->g()V
-
-    const/4 p0, 0x0
-
-    throw p0
-.end method
-
-.method public final bridge synthetic getValue()Ljava/lang/Object;
-    .locals 0
-
-    invoke-virtual {p0}, Lyu;->f()Ljava/util/List;
+    invoke-static {v2, p1, v0, v1, p0}, Lyv;->b(Lyv;Lvqc;JLjx3;)Ljava/lang/Object;
 
     move-result-object p0
 
     return-object p0
-.end method
-
-.method public final h(Ljava/lang/Object;)Z
-    .locals 0
-
-    check-cast p1, Ljava/util/List;
-
-    iget-object p0, p0, Lyu;->a:Lazd;
-
-    invoke-virtual {p0, p1}, Lazd;->setValue(Ljava/lang/Object;)V
-
-    const/4 p0, 0x1
-
-    return p0
-.end method
-
-.method public final j()Ltyd;
-    .locals 0
-
-    iget-object p0, p0, Lyu;->a:Lazd;
-
-    invoke-virtual {p0}, Lo3;->j()Ltyd;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public final setValue(Ljava/lang/Object;)V
-    .locals 1
-
-    check-cast p1, Ljava/util/List;
-
-    iget-object p0, p0, Lyu;->a:Lazd;
-
-    const/4 v0, 0x0
-
-    invoke-virtual {p0, v0, p1}, Lazd;->m(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    return-void
 .end method

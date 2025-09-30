@@ -1,48 +1,61 @@
 .class public final Lvk1;
-.super Lbu3;
+.super Ldl1;
+.source "SourceFile"
 
 
-# instance fields
-.field public X:I
-
-.field public final synthetic Y:Lpk1;
-
-.field public synthetic o:Ljava/lang/Object;
+# static fields
+.field public static final D:Lvk1;
 
 
 # direct methods
-.method public constructor <init>(Lpk1;Lkotlin/coroutines/Continuation;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    iput-object p1, p0, Lvk1;->Y:Lpk1;
+    new-instance v0, Lvk1;
 
-    invoke-direct {p0, p2}, Lbu3;-><init>(Lkotlin/coroutines/Continuation;)V
+    invoke-direct {v0}, Ldl1;-><init>()V
+
+    sput-object v0, Lvk1;->D:Lvk1;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final equals(Ljava/lang/Object;)Z
     .locals 1
 
-    iput-object p1, p0, Lvk1;->o:Ljava/lang/Object;
+    const/4 v0, 0x1
 
-    iget p1, p0, Lvk1;->X:I
+    if-ne p0, p1, :cond_0
 
-    const/high16 v0, -0x80000000
+    return v0
 
-    or-int/2addr p1, v0
+    :cond_0
+    instance-of p0, p1, Lvk1;
 
-    iput p1, p0, Lvk1;->X:I
+    if-nez p0, :cond_1
 
-    iget-object p1, p0, Lvk1;->Y:Lpk1;
+    const/4 p0, 0x0
 
-    const/4 v0, 0x0
+    return p0
 
-    invoke-virtual {p1, v0, p0}, Lpk1;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    :cond_1
+    return v0
+.end method
 
-    move-result-object p0
+.method public final hashCode()I
+    .locals 0
+
+    const p0, -0x6cfea200
+
+    return p0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 0
+
+    const-string p0, "RecordStateScreen"
 
     return-object p0
 .end method

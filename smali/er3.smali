@@ -1,286 +1,121 @@
 .class public final Ler3;
-.super Ljava/lang/Object;
+.super Lure;
 .source "SourceFile"
 
 # interfaces
-.implements Lo64;
+.implements Lpc6;
 
 
 # instance fields
-.field public final synthetic a:I
-
-.field public final b:Lje7;
+.field public final synthetic X:Lor3;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lje7;I)V
+.method public constructor <init>(Lor3;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    iput p2, p0, Ler3;->a:I
+    iput-object p1, p0, Ler3;->X:Lor3;
 
-    iput-object p1, p0, Ler3;->b:Lje7;
+    const/4 p1, 0x2
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p1, p2}, Lure;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Lv64;
-    .locals 1
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    iget v0, p0, Ler3;->a:I
+    check-cast p1, Ly04;
 
-    packed-switch v0, :pswitch_data_0
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    iget-object p0, p0, Ler3;->b:Lje7;
-
-    invoke-interface {p0}, Lje7;->getValue()Ljava/lang/Object;
+    invoke-virtual {p0, p1, p2}, Ler3;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
     move-result-object p0
 
-    check-cast p0, Lzw7;
+    check-cast p0, Ler3;
 
-    return-object p0
+    sget-object p1, Lylf;->a:Lylf;
 
-    :pswitch_0
-    sget-object p0, Lfr3;->b:Lfr3;
+    invoke-virtual {p0, p1}, Ler3;->o(Ljava/lang/Object;)Ljava/lang/Object;
 
-    return-object p0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-object p1
 .end method
 
-.method public final b(Ljava/lang/String;Lr64;Landroid/os/Bundle;)Ly64;
-    .locals 8
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 0
 
-    iget v0, p0, Ler3;->a:I
+    new-instance p1, Ler3;
 
-    packed-switch v0, :pswitch_data_0
+    iget-object p0, p0, Ler3;->X:Lor3;
 
-    iget-object p0, p0, Ler3;->b:Lje7;
+    invoke-direct {p1, p0, p2}, Ler3;-><init>(Lor3;Lkotlin/coroutines/Continuation;)V
 
-    invoke-interface {p0}, Lje7;->getValue()Ljava/lang/Object;
+    return-object p1
+.end method
 
-    move-result-object p0
+.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 2
 
-    check-cast p0, Lzw7;
+    invoke-static {p1}, Lqe5;->V(Ljava/lang/Object;)V
 
-    iget-object p0, p0, Lv64;->a:Ljava/util/LinkedHashSet;
+    iget-object p0, p0, Ler3;->X:Lor3;
 
-    invoke-interface {p0, p2}, Ljava/util/Collection;->contains(Ljava/lang/Object;)Z
+    iget-object p1, p0, Lor3;->y0:Lcl7;
 
-    move-result p0
+    invoke-interface {p1}, Lcl7;->getValue()Ljava/lang/Object;
 
-    if-nez p0, :cond_0
+    move-result-object p1
 
-    const/4 p0, 0x0
+    check-cast p1, Lxjd;
 
-    goto :goto_1
+    check-cast p1, Lpad;
 
-    :cond_0
-    sget-object p0, Lzw7;->b:Lzw7;
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    sget-object v0, Lru/ok/tamtam/android/prefs/PmsKey;->account-nickname-enabled:Lru/ok/tamtam/android/prefs/PmsKey;
 
-    sget-object p0, Lzw7;->c:Lr64;
+    const/4 v1, 0x0
 
-    invoke-virtual {p2, p0}, Lr64;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {p1, v0, v1}, Lpad;->l(Ljava/lang/Enum;Z)Z
 
-    move-result p0
+    move-result p1
 
-    if-nez p0, :cond_2
+    if-eqz p1, :cond_0
 
-    sget-object p0, Lzw7;->d:Lr64;
-
-    invoke-virtual {p2, p0}, Lr64;->equals(Ljava/lang/Object;)Z
-
-    move-result p0
-
-    if-nez p0, :cond_2
-
-    sget-object p0, Lzw7;->e:Lr64;
-
-    invoke-virtual {p2, p0}, Lr64;->equals(Ljava/lang/Object;)Z
-
-    move-result p0
-
-    if-nez p0, :cond_2
-
-    sget-object p0, Lzw7;->f:Lr64;
-
-    invoke-virtual {p2, p0}, Lr64;->equals(Ljava/lang/Object;)Z
-
-    move-result p0
-
-    if-eqz p0, :cond_1
+    sget p1, Ldfa;->j:I
 
     goto :goto_0
 
-    :cond_1
-    new-instance p0, Ljava/lang/IllegalStateException;
+    :cond_0
+    sget p1, Ldfa;->i:I
 
-    const-string p1, "unknown route "
-
-    invoke-static {p1, p2}, Lzt1;->f(Ljava/lang/String;Lr64;)Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p0
-
-    :cond_2
     :goto_0
-    new-instance v6, Lyw7;
+    iget-object p0, p0, Lor3;->G0:Lyce;
 
-    invoke-direct {v6, p2, p3}, Lyw7;-><init>(Lr64;Landroid/os/Bundle;)V
+    :cond_1
+    invoke-virtual {p0}, Lyce;->getValue()Ljava/lang/Object;
 
-    new-instance v0, Ly64;
+    move-result-object v0
 
-    const/16 v7, 0x18
+    move-object v1, v0
 
-    const/4 v4, 0x0
+    check-cast v1, Lu2f;
 
-    const/4 v5, 0x0
+    new-instance v1, Lp2f;
 
-    move-object v1, p1
+    invoke-direct {v1, p1}, Lp2f;-><init>(I)V
 
-    move-object v2, p2
+    invoke-virtual {p0, v0, v1}, Lyce;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    move-object v3, p3
+    move-result v0
 
-    invoke-direct/range {v0 .. v7}, Ly64;-><init>(Ljava/lang/String;Lr64;Landroid/os/Bundle;ILw64;Lx64;I)V
+    if-eqz v0, :cond_1
 
-    move-object p0, v0
+    sget-object p0, Lylf;->a:Lylf;
 
-    :goto_1
     return-object p0
-
-    :pswitch_0
-    move-object v1, p1
-
-    move-object v2, p2
-
-    move-object v3, p3
-
-    sget-object p1, Lfr3;->b:Lfr3;
-
-    iget-object p1, p1, Lv64;->a:Ljava/util/LinkedHashSet;
-
-    invoke-interface {p1, v2}, Ljava/util/Collection;->contains(Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_3
-
-    const/4 p0, 0x0
-
-    goto :goto_4
-
-    :cond_3
-    sget-object p1, Lfr3;->c:Lr64;
-
-    invoke-virtual {v2, p1}, Lr64;->equals(Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_4
-
-    new-instance p0, Li;
-
-    const/16 p1, 0x8
-
-    invoke-direct {p0, p1}, Li;-><init>(I)V
-
-    move-object v6, p0
-
-    goto :goto_2
-
-    :cond_4
-    sget-object p1, Lfr3;->d:Lr64;
-
-    invoke-virtual {v2, p1}, Lr64;->equals(Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_5
-
-    new-instance p1, Laq;
-
-    const/4 p2, 0x1
-
-    invoke-direct {p1, p2, p0}, Laq;-><init>(ILjava/lang/Object;)V
-
-    move-object v6, p1
-
-    :goto_2
-    new-instance v0, Ly64;
-
-    const/4 v5, 0x0
-
-    const/16 v7, 0x10
-
-    const/4 v4, 0x3
-
-    invoke-direct/range {v0 .. v7}, Ly64;-><init>(Ljava/lang/String;Lr64;Landroid/os/Bundle;ILw64;Lx64;I)V
-
-    :goto_3
-    move-object p0, v0
-
-    goto :goto_4
-
-    :cond_5
-    sget-object p0, Lfr3;->e:Lr64;
-
-    invoke-virtual {v2, p0}, Lr64;->equals(Ljava/lang/Object;)Z
-
-    move-result p0
-
-    if-eqz p0, :cond_6
-
-    new-instance v6, Li;
-
-    const/16 p0, 0x9
-
-    invoke-direct {v6, p0}, Li;-><init>(I)V
-
-    new-instance v0, Ly64;
-
-    const/16 v7, 0x18
-
-    const/4 v4, 0x0
-
-    const/4 v5, 0x0
-
-    invoke-direct/range {v0 .. v7}, Ly64;-><init>(Ljava/lang/String;Lr64;Landroid/os/Bundle;ILw64;Lx64;I)V
-
-    goto :goto_3
-
-    :goto_4
-    return-object p0
-
-    :cond_6
-    new-instance p0, Ljava/lang/IllegalStateException;
-
-    const-string p1, "unknown route "
-
-    invoke-static {p1, v2}, Lzt1;->f(Ljava/lang/String;Lr64;)Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p0
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
 .end method

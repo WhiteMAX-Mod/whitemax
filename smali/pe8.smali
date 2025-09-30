@@ -1,31 +1,28 @@
-.class public final Lpe8;
-.super Landroid/media/MediaRouter2$ControllerCallback;
+.class public interface abstract Lpe8;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final synthetic a:Lue8;
+# static fields
+.field public static final M:Lxr7;
 
 
 # direct methods
-.method public constructor <init>(Lue8;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 2
 
-    iput-object p1, p0, Lpe8;->a:Lue8;
+    new-instance v0, Lxr7;
 
-    invoke-direct {p0}, Landroid/media/MediaRouter2$ControllerCallback;-><init>()V
+    const/16 v1, 0x10
+
+    invoke-direct {v0, v1}, Lxr7;-><init>(I)V
+
+    sput-object v0, Lpe8;->M:Lxr7;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onControllerUpdated(Landroid/media/MediaRouter2$RoutingController;)V
-    .locals 0
-
-    iget-object p0, p0, Lpe8;->a:Lue8;
-
-    invoke-virtual {p0, p1}, Lue8;->k(Landroid/media/MediaRouter2$RoutingController;)V
-
-    return-void
+.method public abstract G(Ljava/lang/String;ZZ)Ljava/util/List;
 .end method

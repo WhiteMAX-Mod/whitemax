@@ -1,99 +1,127 @@
 .class public final Lbf9;
-.super Lz1;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public transient Y:Laf9;
+.field public final a:Lim4;
+
+.field public final b:Lo24;
+
+.field public final c:Ljava/util/HashMap;
+
+
+# direct methods
+.method public constructor <init>(Landroid/content/Context;Lo24;)V
+    .locals 2
+
+    new-instance v0, Lim4;
+
+    const/16 v1, 0x1a
+
+    invoke-direct {v0, v1, p1}, Lim4;-><init>(ILjava/lang/Object;)V
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    new-instance p1, Ljava/util/HashMap;
+
+    invoke-direct {p1}, Ljava/util/HashMap;-><init>()V
+
+    iput-object p1, p0, Lbf9;->c:Ljava/util/HashMap;
+
+    iput-object v0, p0, Lbf9;->a:Lim4;
+
+    iput-object p2, p0, Lbf9;->b:Lo24;
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final c()Ld2;
-    .locals 2
+.method public final declared-synchronized a(Ljava/lang/String;)Lsef;
+    .locals 5
 
-    iget-object v0, p0, Lz1;->o:Ljava/util/Map;
+    monitor-enter p0
 
-    instance-of v1, v0, Ljava/util/NavigableMap;
+    :try_start_0
+    iget-object v0, p0, Lbf9;->c:Ljava/util/HashMap;
 
-    if-eqz v1, :cond_0
+    invoke-virtual {v0, p1}, Ljava/util/HashMap;->containsKey(Ljava/lang/Object;)Z
 
-    new-instance v1, Lf2;
+    move-result v0
 
-    check-cast v0, Ljava/util/NavigableMap;
+    if-eqz v0, :cond_0
 
-    invoke-direct {v1, p0, v0}, Lf2;-><init>(Lbf9;Ljava/util/NavigableMap;)V
+    iget-object v0, p0, Lbf9;->c:Ljava/util/HashMap;
 
-    return-object v1
+    invoke-virtual {v0, p1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lsef;
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    monitor-exit p0
+
+    return-object p1
+
+    :catchall_0
+    move-exception p1
+
+    goto :goto_0
 
     :cond_0
-    instance-of v1, v0, Ljava/util/SortedMap;
+    :try_start_1
+    iget-object v0, p0, Lbf9;->a:Lim4;
 
-    if-eqz v1, :cond_1
+    invoke-virtual {v0, p1}, Lim4;->S(Ljava/lang/String;)Lcom/google/android/datatransport/cct/CctBackendFactory;
 
-    new-instance v1, Li2;
+    move-result-object v0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    check-cast v0, Ljava/util/SortedMap;
+    if-nez v0, :cond_1
 
-    invoke-direct {v1, p0, v0}, Li2;-><init>(Lbf9;Ljava/util/SortedMap;)V
+    monitor-exit p0
 
-    return-object v1
-
-    :cond_1
-    new-instance v1, Ld2;
-
-    invoke-direct {v1, p0, v0}, Ld2;-><init>(Lz1;Ljava/util/Map;)V
-
-    return-object v1
-.end method
-
-.method public final d()Ljava/util/Collection;
-    .locals 0
-
-    iget-object p0, p0, Lbf9;->Y:Laf9;
-
-    invoke-virtual {p0}, Laf9;->get()Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, Ljava/util/List;
+    const/4 p0, 0x0
 
     return-object p0
-.end method
-
-.method public final e()Le2;
-    .locals 2
-
-    iget-object v0, p0, Lz1;->o:Ljava/util/Map;
-
-    instance-of v1, v0, Ljava/util/NavigableMap;
-
-    if-eqz v1, :cond_0
-
-    new-instance v1, Lg2;
-
-    check-cast v0, Ljava/util/NavigableMap;
-
-    invoke-direct {v1, p0, v0}, Lg2;-><init>(Lbf9;Ljava/util/NavigableMap;)V
-
-    return-object v1
-
-    :cond_0
-    instance-of v1, v0, Ljava/util/SortedMap;
-
-    if-eqz v1, :cond_1
-
-    new-instance v1, Lj2;
-
-    check-cast v0, Ljava/util/SortedMap;
-
-    invoke-direct {v1, p0, v0}, Lj2;-><init>(Lbf9;Ljava/util/SortedMap;)V
-
-    return-object v1
 
     :cond_1
-    new-instance v1, Le2;
+    :try_start_2
+    iget-object v1, p0, Lbf9;->b:Lo24;
 
-    invoke-direct {v1, p0, v0}, Le2;-><init>(Lz1;Ljava/util/Map;)V
+    iget-object v2, v1, Lo24;->a:Landroid/content/Context;
 
-    return-object v1
+    iget-object v3, v1, Lo24;->b:Lu53;
+
+    iget-object v1, v1, Lo24;->c:Lu53;
+
+    new-instance v4, Le90;
+
+    invoke-direct {v4, v2, v3, v1, p1}, Le90;-><init>(Landroid/content/Context;Lu53;Lu53;Ljava/lang/String;)V
+
+    invoke-virtual {v0, v4}, Lcom/google/android/datatransport/cct/CctBackendFactory;->create(Ln24;)Lsef;
+
+    move-result-object v0
+
+    iget-object v1, p0, Lbf9;->c:Ljava/util/HashMap;
+
+    invoke-virtual {v1, p1, v0}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_0
+
+    monitor-exit p0
+
+    return-object v0
+
+    :goto_0
+    :try_start_3
+    monitor-exit p0
+    :try_end_3
+    .catchall {:try_start_3 .. :try_end_3} :catchall_0
+
+    throw p1
 .end method

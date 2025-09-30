@@ -1,48 +1,46 @@
-.class public final Le8g;
+.class public Le8g;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ld8g;
 
-# instance fields
-.field public final a:Lp6g;
+
+# static fields
+.field public static a:Le8g;
 
 
-# direct methods
-.method public constructor <init>(Landroid/view/Window;Landroid/view/View;)V
-    .locals 2
+# virtual methods
+.method public a(Ljava/lang/Class;)Ly7g;
+    .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-static {p1}, Lr94;->l(Ljava/lang/Class;)Ly7g;
 
-    new-instance v0, Lef6;
+    move-result-object p0
 
-    invoke-direct {v0, p2}, Lef6;-><init>(Landroid/view/View;)V
+    return-object p0
+.end method
 
-    sget p2, Landroid/os/Build$VERSION;->SDK_INT:I
+.method public b(Ljava/lang/Class;Lqn9;)Ly7g;
+    .locals 0
 
-    const/16 v1, 0x1e
+    invoke-virtual {p0, p1}, Le8g;->a(Ljava/lang/Class;)Ly7g;
 
-    if-lt p2, v1, :cond_0
+    move-result-object p0
 
-    new-instance p2, Ld8g;
+    return-object p0
+.end method
 
-    invoke-static {p1}, Lx7g;->d(Landroid/view/Window;)Landroid/view/WindowInsetsController;
+.method public final c(Ly33;Lqn9;)Ly7g;
+    .locals 0
 
-    move-result-object v1
+    invoke-interface {p1}, Lw33;->a()Ljava/lang/Class;
 
-    invoke-direct {p2, v1, v0}, Ld8g;-><init>(Landroid/view/WindowInsetsController;Lef6;)V
+    move-result-object p1
 
-    iput-object p1, p2, Ld8g;->p0:Landroid/view/Window;
+    invoke-virtual {p0, p1, p2}, Le8g;->b(Ljava/lang/Class;Lqn9;)Ly7g;
 
-    iput-object p2, p0, Le8g;->a:Lp6g;
+    move-result-object p0
 
-    return-void
-
-    :cond_0
-    new-instance p2, Lc8g;
-
-    invoke-direct {p2, p1, v0}, Lc8g;-><init>(Landroid/view/Window;Lef6;)V
-
-    iput-object p2, p0, Le8g;->a:Lp6g;
-
-    return-void
+    return-object p0
 .end method

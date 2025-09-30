@@ -43,7 +43,7 @@
 
     const-string p2, "app_badge_count"
 
-    invoke-static {p3, p2}, Lu88;->g(ILjava/lang/String;)Landroid/os/Bundle;
+    invoke-static {p3, p2}, Lyv7;->d(ILjava/lang/String;)Landroid/os/Bundle;
 
     move-result-object p2
 

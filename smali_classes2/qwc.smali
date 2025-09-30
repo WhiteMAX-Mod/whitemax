@@ -1,110 +1,110 @@
-.class public final Lqwc;
-.super Lqde;
+.class public final synthetic Lqwc;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Ll66;
+.implements Lbc6;
 
 
 # instance fields
-.field public X:I
+.field public final synthetic a:I
 
-.field public final synthetic Y:Lru/ok/tamtam/workmanager/SdkCoroutineWorker;
+.field public final synthetic b:I
+
+.field public final synthetic c:Ljava/lang/Object;
+
+.field public final synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Lru/ok/tamtam/workmanager/SdkCoroutineWorker;Lkotlin/coroutines/Continuation;)V
-    .locals 0
+.method public synthetic constructor <init>(Lone/me/sdk/arch/Widget;ILbc6;)V
+    .locals 1
 
-    iput-object p1, p0, Lqwc;->Y:Lru/ok/tamtam/workmanager/SdkCoroutineWorker;
+    .line 2
+    const/4 v0, 0x1
 
-    const/4 p1, 0x2
+    iput v0, p0, Lqwc;->a:I
 
-    invoke-direct {p0, p1, p2}, Lqde;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lqwc;->c:Ljava/lang/Object;
+
+    iput p2, p0, Lqwc;->b:I
+
+    iput-object p3, p0, Lqwc;->o:Ljava/lang/Object;
+
+    return-void
+.end method
+
+.method public synthetic constructor <init>(Lxwc;Ljava/lang/String;I)V
+    .locals 1
+
+    .line 1
+    const/4 v0, 0x0
+
+    iput v0, p0, Lqwc;->a:I
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lqwc;->c:Ljava/lang/Object;
+
+    iput-object p2, p0, Lqwc;->o:Ljava/lang/Object;
+
+    iput p3, p0, Lqwc;->b:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
-
-    check-cast p1, Lox3;
-
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Lqwc;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p0
-
-    check-cast p0, Lqwc;
-
-    sget-object p1, Le5f;->a:Le5f;
-
-    invoke-virtual {p0, p1}, Lqwc;->o(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 0
-
-    new-instance p1, Lqwc;
-
-    iget-object p0, p0, Lqwc;->Y:Lru/ok/tamtam/workmanager/SdkCoroutineWorker;
-
-    invoke-direct {p1, p0, p2}, Lqwc;-><init>(Lru/ok/tamtam/workmanager/SdkCoroutineWorker;Lkotlin/coroutines/Continuation;)V
-
-    return-object p1
-.end method
-
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 2
 
-    iget v0, p0, Lqwc;->X:I
+    iget v0, p0, Lqwc;->a:I
 
-    const/4 v1, 0x1
+    packed-switch v0, :pswitch_data_0
 
-    if-eqz v0, :cond_1
+    iget-object v0, p0, Lqwc;->c:Ljava/lang/Object;
 
-    if-ne v0, v1, :cond_0
+    check-cast v0, Lone/me/sdk/arch/Widget;
 
-    invoke-static {p1}, Lsgg;->Z(Ljava/lang/Object;)V
+    iget-object v1, p0, Lqwc;->o:Ljava/lang/Object;
 
-    goto :goto_0
+    check-cast v1, Lbc6;
 
-    :cond_0
-    new-instance p0, Ljava/lang/IllegalStateException;
+    check-cast p1, Lrzc;
 
-    const-string p1, "call to \'resume\' before \'invoke\' with coroutine"
+    iget p0, p0, Lqwc;->b:I
 
-    invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p0
-
-    :cond_1
-    invoke-static {p1}, Lsgg;->Z(Ljava/lang/Object;)V
-
-    iput v1, p0, Lqwc;->X:I
-
-    iget-object p1, p0, Lqwc;->Y:Lru/ok/tamtam/workmanager/SdkCoroutineWorker;
-
-    invoke-virtual {p1, p0}, Lru/ok/tamtam/workmanager/SdkCoroutineWorker;->onStopWork(Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    invoke-static {v0, p0, v1, p1}, Lone/me/sdk/arch/Widget;->q0(Lone/me/sdk/arch/Widget;ILbc6;Lrzc;)Lrzc;
 
     move-result-object p0
 
-    sget-object p1, Lpx3;->a:Lpx3;
+    return-object p0
 
-    if-ne p0, p1, :cond_2
+    :pswitch_0
+    iget-object v0, p0, Lqwc;->c:Ljava/lang/Object;
 
-    return-object p1
+    check-cast v0, Lxwc;
 
-    :cond_2
-    :goto_0
-    sget-object p0, Le5f;->a:Le5f;
+    iget-object v1, p0, Lqwc;->o:Ljava/lang/Object;
+
+    check-cast v1, Ljava/lang/String;
+
+    check-cast p1, Lkotlin/coroutines/Continuation;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    iget p0, p0, Lqwc;->b:I
+
+    invoke-static {v0, v1, p0, p1}, Lxwc;->i(Lxwc;Ljava/lang/String;ILkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p0
 
     return-object p0
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

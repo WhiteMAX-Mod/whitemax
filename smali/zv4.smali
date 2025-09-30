@@ -4,200 +4,92 @@
 
 
 # static fields
-.field public static final f:I
+.field public static final b:Lzv4;
+
+.field public static final c:Z
 
 
 # instance fields
-.field public final a:Z
-
-.field public final b:I
-
-.field public final c:I
-
-.field public final d:I
-
-.field public final e:F
+.field public final a:Ljava/util/concurrent/ArrayBlockingQueue;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 2
+    .locals 1
 
-    const-wide v0, 0x4014666666666667L    # 5.1000000000000005
+    new-instance v0, Lzv4;
 
-    invoke-static {v0, v1}, Ljava/lang/Math;->round(D)J
+    invoke-direct {v0}, Lzv4;-><init>()V
 
-    move-result-wide v0
+    sput-object v0, Lzv4;->b:Lzv4;
 
-    long-to-int v0, v0
+    const/4 v0, 0x1
 
-    sput v0, Lzv4;->f:I
+    sput-boolean v0, Lzv4;->c:Z
 
     return-void
 .end method
 
-.method public constructor <init>(Landroid/content/Context;)V
-    .locals 5
-
-    sget v0, Liqb;->elevationOverlayEnabled:I
-
-    const/4 v1, 0x0
-
-    invoke-static {v0, p1, v1}, Lrbg;->B(ILandroid/content/Context;Z)Z
-
-    move-result v0
-
-    sget v2, Liqb;->elevationOverlayColor:I
-
-    invoke-static {v2, v1, p1}, Lsbg;->o(IILandroid/content/Context;)I
-
-    move-result v2
-
-    sget v3, Liqb;->elevationOverlayAccentColor:I
-
-    invoke-static {v3, v1, p1}, Lsbg;->o(IILandroid/content/Context;)I
-
-    move-result v3
-
-    sget v4, Liqb;->colorSurface:I
-
-    invoke-static {v4, v1, p1}, Lsbg;->o(IILandroid/content/Context;)I
-
-    move-result v1
-
-    invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
-
-    move-result-object p1
-
-    invoke-virtual {p1}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object p1
-
-    iget p1, p1, Landroid/util/DisplayMetrics;->density:F
+.method public constructor <init>()V
+    .locals 2
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-boolean v0, p0, Lzv4;->a:Z
+    new-instance v0, Ljava/util/concurrent/ArrayBlockingQueue;
 
-    iput v2, p0, Lzv4;->b:I
+    const/16 v1, 0x14
 
-    iput v3, p0, Lzv4;->c:I
+    invoke-direct {v0, v1}, Ljava/util/concurrent/ArrayBlockingQueue;-><init>(I)V
 
-    iput v1, p0, Lzv4;->d:I
-
-    iput p1, p0, Lzv4;->e:F
+    iput-object v0, p0, Lzv4;->a:Ljava/util/concurrent/ArrayBlockingQueue;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(IF)I
-    .locals 5
+.method public final a(Lyv4;)V
+    .locals 3
 
-    iget-boolean v0, p0, Lzv4;->a:Z
+    sget-boolean v0, Lzv4;->c:Z
 
-    if-eqz v0, :cond_3
-
-    const/16 v0, 0xff
-
-    invoke-static {p1, v0}, Lk53;->i(II)I
-
-    move-result v1
-
-    iget v2, p0, Lzv4;->d:I
-
-    if-ne v1, v2, :cond_3
-
-    iget v1, p0, Lzv4;->e:F
-
-    const/4 v2, 0x0
-
-    cmpg-float v3, v1, v2
-
-    if-lez v3, :cond_1
-
-    cmpg-float v3, p2, v2
-
-    if-gtz v3, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    div-float/2addr p2, v1
-
-    float-to-double v3, p2
-
-    invoke-static {v3, v4}, Ljava/lang/Math;->log1p(D)D
-
-    move-result-wide v3
-
-    double-to-float p2, v3
-
-    const/high16 v1, 0x40900000    # 4.5f
-
-    mul-float/2addr p2, v1
-
-    const/high16 v1, 0x40000000    # 2.0f
-
-    add-float/2addr p2, v1
-
-    const/high16 v1, 0x42c80000    # 100.0f
-
-    div-float/2addr p2, v1
-
-    const/high16 v1, 0x3f800000    # 1.0f
-
-    invoke-static {p2, v1}, Ljava/lang/Math;->min(FF)F
-
-    move-result p2
+    if-nez v0, :cond_0
 
     goto :goto_1
 
-    :cond_1
+    :cond_0
+    const/4 v0, 0x5
+
     :goto_0
-    move p2, v2
+    iget-object v1, p0, Lzv4;->a:Ljava/util/concurrent/ArrayBlockingQueue;
 
+    invoke-virtual {v1, p1}, Ljava/util/concurrent/ArrayBlockingQueue;->offer(Ljava/lang/Object;)Z
+
+    move-result v2
+
+    if-nez v2, :cond_1
+
+    if-lez v0, :cond_1
+
+    invoke-virtual {v1}, Ljava/util/concurrent/ArrayBlockingQueue;->poll()Ljava/lang/Object;
+
+    add-int/lit8 v0, v0, -0x1
+
+    goto :goto_0
+
+    :cond_1
     :goto_1
-    invoke-static {p1}, Landroid/graphics/Color;->alpha(I)I
+    return-void
+.end method
 
-    move-result v1
+.method public final toString()Ljava/lang/String;
+    .locals 0
 
-    invoke-static {p1, v0}, Lk53;->i(II)I
+    iget-object p0, p0, Lzv4;->a:Ljava/util/concurrent/ArrayBlockingQueue;
 
-    move-result p1
+    invoke-virtual {p0}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
-    iget v0, p0, Lzv4;->b:I
+    move-result-object p0
 
-    invoke-static {p1, p2, v0}, Lsbg;->A(IFI)I
-
-    move-result p1
-
-    cmpl-float p2, p2, v2
-
-    if-lez p2, :cond_2
-
-    iget p0, p0, Lzv4;->c:I
-
-    if-eqz p0, :cond_2
-
-    sget p2, Lzv4;->f:I
-
-    invoke-static {p0, p2}, Lk53;->i(II)I
-
-    move-result p0
-
-    invoke-static {p0, p1}, Lk53;->g(II)I
-
-    move-result p1
-
-    :cond_2
-    invoke-static {p1, v1}, Lk53;->i(II)I
-
-    move-result p0
-
-    return p0
-
-    :cond_3
-    return p1
+    return-object p0
 .end method

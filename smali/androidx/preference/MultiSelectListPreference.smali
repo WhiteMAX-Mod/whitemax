@@ -7,11 +7,11 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 2
 
-    sget v0, Lgqb;->dialogPreferenceStyle:I
+    sget v0, Lq2c;->dialogPreferenceStyle:I
 
     const v1, 0x1010091
 
-    invoke-static {v0, v1, p1}, Ltk9;->n(IILandroid/content/Context;)I
+    invoke-static {v0, v1, p1}, Ln2e;->k(IILandroid/content/Context;)I
 
     move-result v0
 
@@ -21,7 +21,7 @@
 
     invoke-direct {p0}, Ljava/util/HashSet;-><init>()V
 
-    sget-object p0, Ln0c;->MultiSelectListPreference:[I
+    sget-object p0, Ladc;->MultiSelectListPreference:[I
 
     const/4 v1, 0x0
 
@@ -29,9 +29,9 @@
 
     move-result-object p0
 
-    sget p1, Ln0c;->MultiSelectListPreference_entries:I
+    sget p1, Ladc;->MultiSelectListPreference_entries:I
 
-    sget p2, Ln0c;->MultiSelectListPreference_android_entries:I
+    sget p2, Ladc;->MultiSelectListPreference_android_entries:I
 
     invoke-virtual {p0, p1}, Landroid/content/res/TypedArray;->getTextArray(I)[Ljava/lang/CharSequence;
 
@@ -42,9 +42,9 @@
     invoke-virtual {p0, p2}, Landroid/content/res/TypedArray;->getTextArray(I)[Ljava/lang/CharSequence;
 
     :cond_0
-    sget p1, Ln0c;->MultiSelectListPreference_entryValues:I
+    sget p1, Ladc;->MultiSelectListPreference_entryValues:I
 
-    sget p2, Ln0c;->MultiSelectListPreference_android_entryValues:I
+    sget p2, Ladc;->MultiSelectListPreference_android_entryValues:I
 
     invoke-virtual {p0, p1}, Landroid/content/res/TypedArray;->getTextArray(I)[Ljava/lang/CharSequence;
 

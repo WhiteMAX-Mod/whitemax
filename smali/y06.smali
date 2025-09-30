@@ -1,127 +1,104 @@
-.class public final Ly06;
+.class public abstract Ly06;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ljava/lang/Runnable;
 
+# static fields
+.field public static final a:Lw97;
 
-# instance fields
-.field public final synthetic a:I
+.field public static final b:Lw97;
 
-.field public final synthetic b:Lz06;
+.field public static final c:Lw97;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lz06;I)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 4
 
-    iput p2, p0, Ly06;->a:I
+    new-instance v0, Lw97;
 
-    iput-object p1, p0, Ly06;->b:Lz06;
+    const/4 v1, 0x0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/16 v2, 0x13f
+
+    const/4 v3, 0x1
+
+    invoke-direct {v0, v1, v2, v3}, Lu97;-><init>(III)V
+
+    sput-object v0, Ly06;->a:Lw97;
+
+    new-instance v0, Lw97;
+
+    const/16 v1, 0x140
+
+    const/16 v2, 0x21b
+
+    invoke-direct {v0, v1, v2, v3}, Lu97;-><init>(III)V
+
+    sput-object v0, Ly06;->b:Lw97;
+
+    new-instance v0, Lw97;
+
+    const/16 v1, 0x21c
+
+    const v2, 0x7fffffff
+
+    invoke-direct {v0, v1, v2, v3}, Lu97;-><init>(III)V
+
+    sput-object v0, Ly06;->c:Lw97;
 
     return-void
 .end method
 
+.method public static a(I)I
+    .locals 1
 
-# virtual methods
-.method public final run()V
-    .locals 11
+    sget v0, Lw5c;->oneme_big_folder_widget_view_type:I
 
-    iget v0, p0, Ly06;->a:I
+    if-ne p0, v0, :cond_0
 
-    packed-switch v0, :pswitch_data_0
+    const/16 p0, 0x5c
 
-    iget-object p0, p0, Ly06;->b:Lz06;
+    int-to-float p0, p0
 
-    invoke-virtual {p0}, Lz06;->a()V
+    invoke-static {}, Lvo4;->d()Landroid/content/res/Resources;
 
-    iget-object v0, p0, Lz06;->o:Landroid/view/View;
+    move-result-object v0
 
-    invoke-virtual {v0}, Landroid/view/View;->isEnabled()Z
+    invoke-virtual {v0}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
 
-    move-result v1
+    move-result-object v0
 
-    if-eqz v1, :cond_2
+    iget v0, v0, Landroid/util/DisplayMetrics;->density:F
 
-    invoke-virtual {v0}, Landroid/view/View;->isLongClickable()Z
+    mul-float/2addr p0, v0
 
-    move-result v1
+    invoke-static {p0}, Lya6;->G(F)I
 
-    if-eqz v1, :cond_0
+    move-result p0
 
-    goto :goto_0
+    return p0
 
     :cond_0
-    invoke-virtual {p0}, Lz06;->c()Z
+    const/16 p0, 0x80
 
-    move-result v1
+    int-to-float p0, p0
 
-    if-nez v1, :cond_1
+    invoke-static {}, Lvo4;->d()Landroid/content/res/Resources;
 
-    goto :goto_0
+    move-result-object v0
 
-    :cond_1
-    invoke-virtual {v0}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
+    invoke-virtual {v0}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
 
-    move-result-object v1
+    move-result-object v0
 
-    const/4 v2, 0x1
+    iget v0, v0, Landroid/util/DisplayMetrics;->density:F
 
-    invoke-interface {v1, v2}, Landroid/view/ViewParent;->requestDisallowInterceptTouchEvent(Z)V
+    mul-float/2addr p0, v0
 
-    invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
+    invoke-static {p0}, Lya6;->G(F)I
 
-    move-result-wide v3
+    move-result p0
 
-    const/4 v9, 0x0
-
-    const/4 v10, 0x0
-
-    const/4 v7, 0x3
-
-    const/4 v8, 0x0
-
-    move-wide v5, v3
-
-    invoke-static/range {v3 .. v10}, Landroid/view/MotionEvent;->obtain(JJIFFI)Landroid/view/MotionEvent;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Landroid/view/View;->onTouchEvent(Landroid/view/MotionEvent;)Z
-
-    invoke-virtual {v1}, Landroid/view/MotionEvent;->recycle()V
-
-    iput-boolean v2, p0, Lz06;->Z:Z
-
-    :cond_2
-    :goto_0
-    return-void
-
-    :pswitch_0
-    iget-object p0, p0, Ly06;->b:Lz06;
-
-    iget-object p0, p0, Lz06;->o:Landroid/view/View;
-
-    invoke-virtual {p0}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
-
-    move-result-object p0
-
-    if-eqz p0, :cond_3
-
-    const/4 v0, 0x1
-
-    invoke-interface {p0, v0}, Landroid/view/ViewParent;->requestDisallowInterceptTouchEvent(Z)V
-
-    :cond_3
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return p0
 .end method

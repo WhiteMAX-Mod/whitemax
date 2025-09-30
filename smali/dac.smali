@@ -1,253 +1,94 @@
-.class public final Ldac;
-.super Lqde;
-.source "SourceFile"
+.class public abstract Ldac;
+.super Ljava/lang/Object;
 
-# interfaces
-.implements Ll66;
 
+# static fields
+.field public static account_auth_service_name:I = 0x7f130020
 
-# instance fields
-.field public synthetic X:Ljava/lang/Object;
+.field public static account_auth_type:I = 0x7f130021
 
-.field public final synthetic Y:Lone/me/calls/ui/bottomsheet/exit/RecordExitBottomSheet;
+.field public static app_gost_host_1:I = 0x7f130063
 
+.field public static app_gost_host_2:I = 0x7f130064
 
-# direct methods
-.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/calls/ui/bottomsheet/exit/RecordExitBottomSheet;)V
-    .locals 0
+.field public static app_gost_host_3:I = 0x7f130065
 
-    iput-object p2, p0, Ldac;->Y:Lone/me/calls/ui/bottomsheet/exit/RecordExitBottomSheet;
+.field public static app_gost_host_4:I = 0x7f130066
 
-    const/4 p2, 0x2
+.field public static app_host:I = 0x7f130067
 
-    invoke-direct {p0, p2, p1}, Lqde;-><init>(ILkotlin/coroutines/Continuation;)V
+.field public static app_host_1:I = 0x7f130068
 
-    return-void
-.end method
+.field public static app_host_2:I = 0x7f130069
 
+.field public static app_host_3:I = 0x7f13006a
 
-# virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.field public static app_host_prod:I = 0x7f13006b
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+.field public static app_host_prod_port:I = 0x7f13006c
 
-    invoke-virtual {p0, p1, p2}, Ldac;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+.field public static app_package_name:I = 0x7f13006f
 
-    move-result-object p0
+.field public static app_scheme:I = 0x7f130070
 
-    check-cast p0, Ldac;
+.field public static folder_path:I = 0x7f130539
 
-    sget-object p1, Le5f;->a:Le5f;
+.field public static gcm_defaultSenderId:I = 0x7f130580
 
-    invoke-virtual {p0, p1}, Ldac;->o(Ljava/lang/Object;)Ljava/lang/Object;
+.field public static google_api_key:I = 0x7f13058d
 
-    return-object p1
-.end method
+.field public static google_app_id:I = 0x7f13058e
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 1
+.field public static google_crash_reporting_api_key:I = 0x7f13058f
 
-    new-instance v0, Ldac;
+.field public static google_storage_bucket:I = 0x7f130590
 
-    iget-object p0, p0, Ldac;->Y:Lone/me/calls/ui/bottomsheet/exit/RecordExitBottomSheet;
+.field public static join_chat_confirm_channel_button:I = 0x7f1305ad
 
-    invoke-direct {v0, p2, p0}, Ldac;-><init>(Lkotlin/coroutines/Continuation;Lone/me/calls/ui/bottomsheet/exit/RecordExitBottomSheet;)V
+.field public static join_chat_confirm_chat_button:I = 0x7f1305ae
 
-    iput-object p1, v0, Ldac;->X:Ljava/lang/Object;
+.field public static join_chat_title_channel:I = 0x7f1305b0
 
-    return-object v0
-.end method
+.field public static join_chat_title_chat:I = 0x7f1305b1
 
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 6
+.field public static link_call_join_path:I = 0x7f1305b3
 
-    invoke-static {p1}, Lsgg;->Z(Ljava/lang/Object;)V
+.field public static link_chat_join_path:I = 0x7f1305b4
 
-    iget-object p1, p0, Ldac;->X:Ljava/lang/Object;
+.field public static link_chat_path:I = 0x7f1305b5
 
-    check-cast p1, Lgac;
+.field public static link_host_api:I = 0x7f1305bd
 
-    sget-object v0, Lone/me/calls/ui/bottomsheet/exit/RecordExitBottomSheet;->C0:[Lbc7;
+.field public static link_private_channel_path:I = 0x7f1305c4
 
-    iget-object p0, p0, Ldac;->Y:Lone/me/calls/ui/bottomsheet/exit/RecordExitBottomSheet;
+.field public static link_private_contact_path:I = 0x7f1305c5
 
-    invoke-virtual {p0}, Lone/me/calls/ui/bottomsheet/exit/RecordExitBottomSheet;->I0()Landroid/widget/TextView;
+.field public static link_startwebapp_path:I = 0x7f1305c8
 
-    move-result-object v0
+.field public static link_stickerset_path:I = 0x7f1305c9
 
-    iget-object v1, p1, Lgac;->a:Lhoe;
+.field public static oneme_app_name:I = 0x7f1307a9
 
-    iget-object v2, p1, Lgac;->d:Lfac;
+.field public static oneme_contact_saved_snackbar_title:I = 0x7f130811
 
-    iget-object v3, p1, Lgac;->c:Lfac;
+.field public static project_id:I = 0x7f130c3c
 
-    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
+.field public static snackbar_contact_removed:I = 0x7f130cdf
 
-    move-result-object v4
+.field public static snackbar_content_level_error_title:I = 0x7f130ce0
 
-    invoke-virtual {v1, v4}, Lmoe;->b(Landroid/content/Context;)Ljava/lang/CharSequence;
+.field public static snackbar_folder_link_error_caption:I = 0x7f130ce1
 
-    move-result-object v1
+.field public static snackbar_folder_link_error_title:I = 0x7f130ce2
 
-    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+.field public static snackbar_link_info_error:I = 0x7f130ce3
 
-    invoke-virtual {p0}, Lone/me/calls/ui/bottomsheet/exit/RecordExitBottomSheet;->H0()Landroid/widget/TextView;
+.field public static snackbar_self_contact_open:I = 0x7f130ce4
 
-    move-result-object v0
+.field public static tracer_app_token:I = 0x7f130d1a
 
-    iget-object v1, p1, Lgac;->b:Lmoe;
+.field public static tracer_environment:I = 0x7f130d1b
 
-    if-eqz v1, :cond_0
+.field public static tracer_mapping_uuid:I = 0x7f130d1c
 
-    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
-
-    move-result-object v4
-
-    invoke-virtual {v1, v4}, Lmoe;->b(Landroid/content/Context;)Ljava/lang/CharSequence;
-
-    move-result-object v4
-
-    goto :goto_0
-
-    :cond_0
-    const/4 v4, 0x0
-
-    :goto_0
-    invoke-virtual {v0, v4}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
-
-    invoke-virtual {p0}, Lone/me/calls/ui/bottomsheet/exit/RecordExitBottomSheet;->H0()Landroid/widget/TextView;
-
-    move-result-object v0
-
-    const/16 v4, 0x8
-
-    const/4 v5, 0x0
-
-    if-eqz v1, :cond_1
-
-    move v1, v5
-
-    goto :goto_1
-
-    :cond_1
-    move v1, v4
-
-    :goto_1
-    invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
-
-    iget-object v0, p1, Lgac;->e:Lloe;
-
-    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Lmoe;->b(Landroid/content/Context;)Ljava/lang/CharSequence;
-
-    move-result-object v0
-
-    invoke-virtual {p0}, Lone/me/calls/ui/bottomsheet/exit/RecordExitBottomSheet;->G0()Lded;
-
-    move-result-object v1
-
-    invoke-virtual {v1, v0}, Lded;->setTitle(Ljava/lang/CharSequence;)V
-
-    invoke-virtual {p0}, Lone/me/calls/ui/bottomsheet/exit/RecordExitBottomSheet;->G0()Lded;
-
-    move-result-object v1
-
-    if-eqz v0, :cond_3
-
-    invoke-interface {v0}, Ljava/lang/CharSequence;->length()I
-
-    move-result v0
-
-    if-nez v0, :cond_2
-
-    goto :goto_2
-
-    :cond_2
-    move v0, v5
-
-    goto :goto_3
-
-    :cond_3
-    :goto_2
-    move v0, v4
-
-    :goto_3
-    invoke-virtual {v1, v0}, Landroid/view/View;->setVisibility(I)V
-
-    invoke-virtual {p0}, Lone/me/calls/ui/bottomsheet/exit/RecordExitBottomSheet;->D0()Lqy2;
-
-    move-result-object v0
-
-    iget-boolean v1, p1, Lgac;->f:Z
-
-    if-eqz v1, :cond_4
-
-    move v4, v5
-
-    :cond_4
-    invoke-virtual {v0, v4}, Landroid/view/View;->setVisibility(I)V
-
-    invoke-virtual {p0}, Lone/me/calls/ui/bottomsheet/exit/RecordExitBottomSheet;->E0()Lone/me/sdk/uikit/common/button/OneMeButton;
-
-    move-result-object v0
-
-    iget-object v1, v3, Lfac;->c:Ls4a;
-
-    invoke-virtual {v0, v1}, Lone/me/sdk/uikit/common/button/OneMeButton;->setMode(Ls4a;)V
-
-    iget-object v1, v3, Lfac;->b:Lhoe;
-
-    invoke-virtual {v0}, Landroid/view/View;->getContext()Landroid/content/Context;
-
-    move-result-object v3
-
-    invoke-virtual {v1, v3}, Lmoe;->b(Landroid/content/Context;)Ljava/lang/CharSequence;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Lone/me/sdk/uikit/common/button/OneMeButton;->setText(Ljava/lang/CharSequence;)V
-
-    new-instance v1, Lwp;
-
-    const/4 v3, 0x5
-
-    invoke-direct {v1, p0, v3, p1}, Lwp;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
-
-    invoke-static {v0, v1}, Lu7;->Q(Landroid/view/View;Landroid/view/View$OnClickListener;)V
-
-    invoke-virtual {p0}, Lone/me/calls/ui/bottomsheet/exit/RecordExitBottomSheet;->F0()Lone/me/sdk/uikit/common/button/OneMeButton;
-
-    move-result-object p1
-
-    iget-object v0, v2, Lfac;->c:Ls4a;
-
-    invoke-virtual {p1, v0}, Lone/me/sdk/uikit/common/button/OneMeButton;->setMode(Ls4a;)V
-
-    iget-object v0, v2, Lfac;->b:Lhoe;
-
-    invoke-virtual {p1}, Landroid/view/View;->getContext()Landroid/content/Context;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Lmoe;->b(Landroid/content/Context;)Ljava/lang/CharSequence;
-
-    move-result-object v0
-
-    invoke-virtual {p1, v0}, Lone/me/sdk/uikit/common/button/OneMeButton;->setText(Ljava/lang/CharSequence;)V
-
-    new-instance v0, Ljyc;
-
-    const/16 v1, 0xc
-
-    invoke-direct {v0, v1, p0}, Ljyc;-><init>(ILjava/lang/Object;)V
-
-    invoke-static {p1, v0}, Lu7;->Q(Landroid/view/View;Landroid/view/View$OnClickListener;)V
-
-    sget-object p0, Le5f;->a:Le5f;
-
-    return-object p0
-.end method
+.field public static web_scheme:I = 0x7f130e5c

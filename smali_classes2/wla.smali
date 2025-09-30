@@ -1,158 +1,61 @@
 .class public final Lwla;
-.super Lij0;
+.super Lama;
 .source "SourceFile"
 
 
-# instance fields
-.field public final synthetic c:I
-
-.field public d:Ljava/lang/Object;
+# static fields
+.field public static final a:Lwla;
 
 
 # direct methods
-.method public synthetic constructor <init>()V
+.method static constructor <clinit>()V
     .locals 1
 
-    .line 1
-    const/4 v0, 0x1
+    new-instance v0, Lwla;
 
-    iput v0, p0, Lwla;->c:I
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    return-void
-.end method
-
-.method public constructor <init>(Landroid/net/Uri;)V
-    .locals 1
-
-    const/4 v0, 0x0
-
-    iput v0, p0, Lwla;->c:I
-
-    .line 2
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 3
-    iput-object p1, p0, Lwla;->d:Ljava/lang/Object;
+    sput-object v0, Lwla;->a:Lwla;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final b()Lpw0;
-    .locals 2
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 1
 
-    iget v0, p0, Lwla;->c:I
+    const/4 v0, 0x1
 
-    packed-switch v0, :pswitch_data_0
+    if-ne p0, p1, :cond_0
 
-    iget-object v0, p0, Lwla;->d:Ljava/lang/Object;
-
-    check-cast v0, Leod;
-
-    if-nez v0, :cond_0
-
-    new-instance v0, Leod;
-
-    const-string v1, "RoundAsCirclePostprocessor#AntiAliased"
-
-    invoke-direct {v0, v1}, Leod;-><init>(Ljava/lang/String;)V
-
-    iput-object v0, p0, Lwla;->d:Ljava/lang/Object;
+    return v0
 
     :cond_0
-    iget-object p0, p0, Lwla;->d:Ljava/lang/Object;
+    instance-of p0, p1, Lwla;
 
-    check-cast p0, Leod;
+    if-nez p0, :cond_1
 
-    return-object p0
+    const/4 p0, 0x0
 
-    :pswitch_0
-    new-instance v0, Leod;
+    return p0
 
-    iget-object p0, p0, Lwla;->d:Ljava/lang/Object;
-
-    check-cast p0, Landroid/net/Uri;
-
-    invoke-virtual {p0}, Landroid/net/Uri;->hashCode()I
-
-    move-result p0
-
-    invoke-static {p0}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
-
-    move-result-object p0
-
-    invoke-direct {v0, p0}, Leod;-><init>(Ljava/lang/String;)V
-
-    return-object v0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    :cond_1
+    return v0
 .end method
 
-.method public final c(Landroid/graphics/Bitmap;)V
-    .locals 2
+.method public final hashCode()I
+    .locals 0
 
-    iget v0, p0, Lwla;->c:I
+    const p0, -0x3b483d5f
 
-    packed-switch v0, :pswitch_data_0
+    return p0
+.end method
 
-    const/4 p0, 0x1
+.method public final toString()Ljava/lang/String;
+    .locals 0
 
-    invoke-static {p1, p0}, Lcom/facebook/imagepipeline/nativecode/NativeRoundingFilter;->toCircleFast(Landroid/graphics/Bitmap;Z)V
+    const-string p0, "Primary"
 
-    return-void
-
-    :pswitch_0
-    iget-object p0, p0, Lwla;->d:Ljava/lang/Object;
-
-    check-cast p0, Landroid/net/Uri;
-
-    invoke-static {p0}, Lzo3;->w(Landroid/net/Uri;)Landroid/graphics/Bitmap;
-
-    move-result-object p0
-
-    if-eqz p0, :cond_0
-
-    new-instance v0, Landroid/graphics/Canvas;
-
-    invoke-direct {v0, p1}, Landroid/graphics/Canvas;-><init>(Landroid/graphics/Bitmap;)V
-
-    invoke-virtual {p1}, Landroid/graphics/Bitmap;->getWidth()I
-
-    move-result p1
-
-    int-to-float p1, p1
-
-    invoke-virtual {p0}, Landroid/graphics/Bitmap;->getWidth()I
-
-    move-result v1
-
-    int-to-float v1, v1
-
-    div-float/2addr p1, v1
-
-    invoke-virtual {v0, p1, p1}, Landroid/graphics/Canvas;->scale(FF)V
-
-    const/4 p1, 0x0
-
-    const/4 v1, 0x0
-
-    invoke-virtual {v0, p0, v1, v1, p1}, Landroid/graphics/Canvas;->drawBitmap(Landroid/graphics/Bitmap;FFLandroid/graphics/Paint;)V
-
-    :cond_0
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-object p0
 .end method

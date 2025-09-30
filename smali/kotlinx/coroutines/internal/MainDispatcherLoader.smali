@@ -13,14 +13,14 @@
         "",
         "<init>",
         "()V",
-        "Lxw7;",
+        "Lt38;",
         "loadMainDispatcher",
-        "()Lxw7;",
+        "()Lt38;",
         "",
         "FAST_SERVICE_LOADER_ENABLED",
         "Z",
         "dispatcher",
-        "Lxw7;",
+        "Lt38;",
         "kotlinx-coroutines-core"
     }
     k = 0x1
@@ -38,7 +38,7 @@
 
 .field public static final INSTANCE:Lkotlinx/coroutines/internal/MainDispatcherLoader;
 
-.field public static final dispatcher:Lxw7;
+.field public static final dispatcher:Lt38;
 
 
 # direct methods
@@ -57,11 +57,11 @@
 
     invoke-static {v1, v2}, Lkotlinx/coroutines/internal/SystemPropsKt;->systemProp(Ljava/lang/String;Z)Z
 
-    invoke-direct {v0}, Lkotlinx/coroutines/internal/MainDispatcherLoader;->loadMainDispatcher()Lxw7;
+    invoke-direct {v0}, Lkotlinx/coroutines/internal/MainDispatcherLoader;->loadMainDispatcher()Lt38;
 
     move-result-object v0
 
-    sput-object v0, Lkotlinx/coroutines/internal/MainDispatcherLoader;->dispatcher:Lxw7;
+    sput-object v0, Lkotlinx/coroutines/internal/MainDispatcherLoader;->dispatcher:Lt38;
 
     return-void
 .end method
@@ -74,7 +74,7 @@
     return-void
 .end method
 
-.method private final loadMainDispatcher()Lxw7;
+.method private final loadMainDispatcher()Lt38;
     .locals 6
 
     const-class p0, Lkotlinx/coroutines/internal/MainDispatcherFactory;
@@ -94,17 +94,17 @@
 
     move-result-object p0
 
-    new-instance v1, Lps;
+    new-instance v1, Lzr;
 
     const/4 v2, 0x6
 
-    invoke-direct {v1, v2, p0}, Lps;-><init>(ILjava/lang/Object;)V
+    invoke-direct {v1, v2, p0}, Lzr;-><init>(ILjava/lang/Object;)V
 
-    new-instance p0, Lii3;
+    new-instance p0, Lnl3;
 
-    invoke-direct {p0, v1}, Lii3;-><init>(Li4d;)V
+    invoke-direct {p0, v1}, Lnl3;-><init>(Lbid;)V
 
-    invoke-static {p0}, Lr4d;->X(Li4d;)Ljava/util/List;
+    invoke-static {p0}, Lkid;->m0(Lbid;)Ljava/util/List;
 
     move-result-object p0
 
@@ -175,7 +175,7 @@
 
     if-eqz v2, :cond_5
 
-    invoke-static {v2, p0}, Lkotlinx/coroutines/internal/MainDispatchersKt;->tryCreateDispatcher(Lkotlinx/coroutines/internal/MainDispatcherFactory;Ljava/util/List;)Lxw7;
+    invoke-static {v2, p0}, Lkotlinx/coroutines/internal/MainDispatchersKt;->tryCreateDispatcher(Lkotlinx/coroutines/internal/MainDispatcherFactory;Ljava/util/List;)Lt38;
 
     move-result-object p0
 

@@ -1,134 +1,97 @@
-.class public final Lb14;
-.super Landroid/widget/Filter;
+.class public final enum Lb14;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
 
-# instance fields
-.field public a:La14;
+# static fields
+.field public static final synthetic X:[Lb14;
+
+.field public static final enum a:Lb14;
+
+.field public static final enum b:Lb14;
+
+.field public static final enum c:Lb14;
+
+.field public static final enum o:Lb14;
 
 
-# virtual methods
-.method public final convertResultToString(Ljava/lang/Object;)Ljava/lang/CharSequence;
-    .locals 0
+# direct methods
+.method static constructor <clinit>()V
+    .locals 6
 
-    iget-object p0, p0, Lb14;->a:La14;
+    new-instance v0, Lb14;
 
-    check-cast p1, Landroid/database/Cursor;
+    const-string v1, "DEFAULT"
 
-    check-cast p0, Lcbe;
+    const/4 v2, 0x0
 
-    invoke-virtual {p0, p1}, Lcbe;->c(Landroid/database/Cursor;)Ljava/lang/String;
+    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Lb14;->a:Lb14;
+
+    new-instance v1, Lb14;
+
+    const-string v2, "LAZY"
+
+    const/4 v3, 0x1
+
+    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v1, Lb14;->b:Lb14;
+
+    new-instance v2, Lb14;
+
+    const-string v3, "ATOMIC"
+
+    const/4 v4, 0x2
+
+    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v2, Lb14;->c:Lb14;
+
+    new-instance v3, Lb14;
+
+    const-string v4, "UNDISPATCHED"
+
+    const/4 v5, 0x3
+
+    invoke-direct {v3, v4, v5}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v3, Lb14;->o:Lb14;
+
+    filled-new-array {v0, v1, v2, v3}, [Lb14;
+
+    move-result-object v0
+
+    sput-object v0, Lb14;->X:[Lb14;
+
+    return-void
+.end method
+
+.method public static valueOf(Ljava/lang/String;)Lb14;
+    .locals 1
+
+    const-class v0, Lb14;
+
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
 
     move-result-object p0
+
+    check-cast p0, Lb14;
 
     return-object p0
 .end method
 
-.method public final performFiltering(Ljava/lang/CharSequence;)Landroid/widget/Filter$FilterResults;
-    .locals 3
+.method public static values()[Lb14;
+    .locals 1
 
-    iget-object p0, p0, Lb14;->a:La14;
+    sget-object v0, Lb14;->X:[Lb14;
 
-    check-cast p0, Lcbe;
+    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
 
-    iget-object v0, p0, Lcbe;->r0:Ltyc;
+    move-result-object v0
 
-    if-nez p1, :cond_0
+    check-cast v0, [Lb14;
 
-    const-string p1, ""
-
-    goto :goto_0
-
-    :cond_0
-    invoke-interface {p1}, Ljava/lang/CharSequence;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    :goto_0
-    invoke-virtual {v0}, Landroid/view/View;->getVisibility()I
-
-    move-result v1
-
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_2
-
-    invoke-virtual {v0}, Landroid/view/View;->getWindowVisibility()I
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    goto :goto_1
-
-    :cond_1
-    :try_start_0
-    iget-object v0, p0, Lcbe;->s0:Landroid/app/SearchableInfo;
-
-    invoke-virtual {p0, v0, p1}, Lcbe;->g(Landroid/app/SearchableInfo;Ljava/lang/String;)Landroid/database/Cursor;
-
-    move-result-object p0
-
-    if-eqz p0, :cond_2
-
-    invoke-interface {p0}, Landroid/database/Cursor;->getCount()I
-    :try_end_0
-    .catch Ljava/lang/RuntimeException; {:try_start_0 .. :try_end_0} :catch_0
-
-    goto :goto_2
-
-    :catch_0
-    :cond_2
-    :goto_1
-    move-object p0, v2
-
-    :goto_2
-    new-instance p1, Landroid/widget/Filter$FilterResults;
-
-    invoke-direct {p1}, Landroid/widget/Filter$FilterResults;-><init>()V
-
-    if-eqz p0, :cond_3
-
-    invoke-interface {p0}, Landroid/database/Cursor;->getCount()I
-
-    move-result v0
-
-    iput v0, p1, Landroid/widget/Filter$FilterResults;->count:I
-
-    iput-object p0, p1, Landroid/widget/Filter$FilterResults;->values:Ljava/lang/Object;
-
-    goto :goto_3
-
-    :cond_3
-    const/4 p0, 0x0
-
-    iput p0, p1, Landroid/widget/Filter$FilterResults;->count:I
-
-    iput-object v2, p1, Landroid/widget/Filter$FilterResults;->values:Ljava/lang/Object;
-
-    :goto_3
-    return-object p1
-.end method
-
-.method public final publishResults(Ljava/lang/CharSequence;Landroid/widget/Filter$FilterResults;)V
-    .locals 0
-
-    iget-object p0, p0, Lb14;->a:La14;
-
-    iget-object p1, p0, La14;->c:Landroid/database/Cursor;
-
-    iget-object p2, p2, Landroid/widget/Filter$FilterResults;->values:Ljava/lang/Object;
-
-    if-eqz p2, :cond_0
-
-    if-eq p2, p1, :cond_0
-
-    check-cast p2, Landroid/database/Cursor;
-
-    check-cast p0, Lcbe;
-
-    invoke-virtual {p0, p2}, Lcbe;->b(Landroid/database/Cursor;)V
-
-    :cond_0
-    return-void
+    return-object v0
 .end method

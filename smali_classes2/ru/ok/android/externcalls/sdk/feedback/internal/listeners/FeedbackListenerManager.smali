@@ -13,7 +13,7 @@
         "",
         "",
         "millis",
-        "Le5f;",
+        "Lylf;",
         "setTimeout",
         "(J)V",
         "",

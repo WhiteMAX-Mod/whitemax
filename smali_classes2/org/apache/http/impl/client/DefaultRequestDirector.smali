@@ -1269,7 +1269,7 @@
 
     const-string v2, "Target host must not be null, or set in parameters. scheme="
 
-    invoke-static {v2, p1, v0, p2, v1}, Lzge;->r(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {v2, p1, v0, p2, v1}, Lz7e;->u(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object p1
 
@@ -1325,7 +1325,7 @@
 
     const-string p2, " from RouteDirector."
 
-    invoke-static {v2, p1, p2}, Lpg0;->e(ILjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v2, p1, p2}, Lsg0;->e(ILjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
@@ -2373,7 +2373,7 @@
 
     const-string v3, ") exceeded"
 
-    invoke-static {v2, v1, v3}, Lm26;->i(Ljava/lang/StringBuilder;ILjava/lang/String;)Ljava/lang/String;
+    invoke-static {v2, v1, v3}, Lyv7;->i(Ljava/lang/StringBuilder;ILjava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 

@@ -1,109 +1,44 @@
-.class public abstract Lg9a;
+.class public final Lg9a;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # static fields
-.field public static final a:I
-
-.field public static final b:I
-
-.field public static final c:I
-
-.field public static final d:I
-
-.field public static final e:I
-
-.field public static final f:I
-
-.field public static final g:I
-
-.field public static final h:I
-
-.field public static final i:I
-
-.field public static final j:I
-
-.field public static final k:I
-
-.field public static final l:I
-
-.field public static final m:I
-
-.field public static final n:I
-
-.field public static final o:I
-
-.field public static final p:I
+.field public static final a:Lg9a;
 
 
 # direct methods
 .method static constructor <clinit>()V
     .locals 1
 
-    sget v0, Lutb;->oneme_folders_chats_picker_toolbar:I
+    new-instance v0, Lg9a;
 
-    sput v0, Lg9a;->a:I
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    sget v0, Lutb;->oneme_folders_delete_folder_bottom_sheet_cancel_button:I
-
-    sput v0, Lg9a;->b:I
-
-    sget v0, Lutb;->oneme_folders_delete_folder_bottom_sheet_delete_button:I
-
-    sput v0, Lg9a;->c:I
-
-    sget v0, Lutb;->oneme_folders_edit_create_button:I
-
-    sput v0, Lg9a;->d:I
-
-    sget v0, Lutb;->oneme_folders_edit_members_list:I
-
-    sput v0, Lg9a;->e:I
-
-    sget v0, Lutb;->oneme_folders_edit_screen:I
-
-    sput v0, Lg9a;->f:I
-
-    sget v0, Lutb;->oneme_folders_edit_toolbar:I
-
-    sput v0, Lg9a;->g:I
-
-    sget v0, Lutb;->oneme_folders_list_all_folder_view_type:I
-
-    sput v0, Lg9a;->h:I
-
-    sget v0, Lutb;->oneme_folders_list_create_folder_view_type:I
-
-    sput v0, Lg9a;->i:I
-
-    sget v0, Lutb;->oneme_folders_list_menu_action_change:I
-
-    sput v0, Lg9a;->j:I
-
-    sget v0, Lutb;->oneme_folders_list_menu_action_delete_folder:I
-
-    sput v0, Lg9a;->k:I
-
-    sget v0, Lutb;->oneme_folders_list_recommended_folder_view_type:I
-
-    sput v0, Lg9a;->l:I
-
-    sget v0, Lutb;->oneme_folders_list_recycler_view:I
-
-    sput v0, Lg9a;->m:I
-
-    sget v0, Lutb;->oneme_folders_list_screen:I
-
-    sput v0, Lg9a;->n:I
-
-    sget v0, Lutb;->oneme_folders_list_toolbar:I
-
-    sput v0, Lg9a;->o:I
-
-    sget v0, Lutb;->oneme_folders_list_user_folder_view_type:I
-
-    sput v0, Lg9a;->p:I
+    sput-object v0, Lg9a;->a:Lg9a;
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final a(Lbc6;Lbc6;Lzb6;Lzb6;)Landroid/window/OnBackInvokedCallback;
+    .locals 0
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Lbc6;",
+            "Lbc6;",
+            "Lzb6;",
+            "Lzb6;",
+            ")",
+            "Landroid/window/OnBackInvokedCallback;"
+        }
+    .end annotation
+
+    new-instance p0, Lf9a;
+
+    invoke-direct {p0, p1, p2, p3, p4}, Lf9a;-><init>(Lbc6;Lbc6;Lzb6;Lzb6;)V
+
+    return-object p0
 .end method

@@ -1,90 +1,48 @@
-.class public final synthetic Lyl1;
-.super Ljava/lang/Object;
-.source "SourceFile"
-
-# interfaces
-.implements Landroid/view/View$OnClickListener;
+.class public final Lyl1;
+.super Ljx3;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public X:I
 
-.field public final synthetic b:Lam1;
+.field public final synthetic Y:Lmv;
+
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lam1;I)V
+.method public constructor <init>(Lmv;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    iput p2, p0, Lyl1;->a:I
+    iput-object p1, p0, Lyl1;->Y:Lmv;
 
-    iput-object p1, p0, Lyl1;->b:Lam1;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p2}, Ljx3;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onClick(Landroid/view/View;)V
+.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
 
-    iget p1, p0, Lyl1;->a:I
+    iput-object p1, p0, Lyl1;->o:Ljava/lang/Object;
 
-    iget-object p0, p0, Lyl1;->b:Lam1;
+    iget p1, p0, Lyl1;->X:I
 
-    packed-switch p1, :pswitch_data_0
+    const/high16 v0, -0x80000000
 
-    iget-object p0, p0, Lam1;->I0:Lzl1;
+    or-int/2addr p1, v0
 
-    if-eqz p0, :cond_0
+    iput p1, p0, Lyl1;->X:I
 
-    check-cast p0, Lai1;
+    iget-object p1, p0, Lyl1;->Y:Lmv;
 
-    iget-object p0, p0, Lai1;->a:Lone/me/calls/ui/ui/call/CallScreen;
+    const/4 v0, 0x0
 
-    sget-object p1, Lone/me/calls/ui/ui/call/CallScreen;->I0:Lz84;
-
-    invoke-virtual {p0}, Lone/me/calls/ui/ui/call/CallScreen;->z0()Lbl1;
+    invoke-virtual {p1, v0, p0}, Lmv;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
     move-result-object p0
 
-    iget-object p0, p0, Lbl1;->Z:Lco1;
-
-    invoke-virtual {p0}, Lco1;->f()V
-
-    :cond_0
-    return-void
-
-    :pswitch_0
-    iget-object p1, p0, Lam1;->I0:Lzl1;
-
-    if-eqz p1, :cond_1
-
-    iget-object p0, p0, Lam1;->N0:Lwf1;
-
-    check-cast p1, Lai1;
-
-    iget-object p1, p1, Lai1;->a:Lone/me/calls/ui/ui/call/CallScreen;
-
-    sget-object v0, Lone/me/calls/ui/ui/call/CallScreen;->I0:Lz84;
-
-    invoke-virtual {p1}, Lone/me/calls/ui/ui/call/CallScreen;->z0()Lbl1;
-
-    move-result-object p1
-
-    iget-object p1, p1, Lbl1;->Z:Lco1;
-
-    invoke-virtual {p1, p0}, Lco1;->d(Lwf1;)V
-
-    :cond_1
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-object p0
 .end method

@@ -3,90 +3,186 @@
 .source "SourceFile"
 
 # interfaces
-.implements Llj3;
+.implements Landroid/transition/Transition$TransitionListener;
 
 
 # instance fields
-.field public final synthetic a:Lru/ok/messages/media/mediabar/ActLocalMedias;
+.field public final synthetic a:I
+
+.field public final synthetic b:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Lru/ok/messages/media/mediabar/ActLocalMedias;)V
+.method public synthetic constructor <init>(ILjava/lang/Object;)V
     .locals 0
+
+    iput p1, p0, La6;->a:I
+
+    iput-object p2, p0, La6;->b:Ljava/lang/Object;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, La6;->a:Lru/ok/messages/media/mediabar/ActLocalMedias;
+    return-void
+.end method
+
+.method private final a(Landroid/transition/Transition;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method private final b(Landroid/transition/Transition;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method private final c(Landroid/transition/Transition;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method private final d(Landroid/transition/Transition;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method private final e(Landroid/transition/Transition;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method private final f(Landroid/transition/Transition;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method private final g(Landroid/transition/Transition;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method private final h(Landroid/transition/Transition;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method private final i(Landroid/transition/Transition;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method private final j(Landroid/transition/Transition;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method private final k(Landroid/transition/Transition;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method private final l(Landroid/transition/Transition;)V
+    .locals 0
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final accept(Ljava/lang/Object;)V
+.method public final onTransitionCancel(Landroid/transition/Transition;)V
+    .locals 0
+
+    iget p0, p0, La6;->a:I
+
+    return-void
+.end method
+
+.method public final onTransitionEnd(Landroid/transition/Transition;)V
     .locals 3
 
-    check-cast p1, Lwnb;
+    iget v0, p0, La6;->a:I
 
-    iget-object p0, p0, La6;->a:Lru/ok/messages/media/mediabar/ActLocalMedias;
+    packed-switch v0, :pswitch_data_0
 
-    iget-object p0, p0, Lru/ok/messages/media/mediabar/ActLocalMedias;->e1:Lni9;
+    iget-object p0, p0, La6;->b:Ljava/lang/Object;
 
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    check-cast p0, Lggc;
 
-    invoke-virtual {p1}, Ljava/lang/Object;->toString()Ljava/lang/String;
+    iget-object p0, p0, Lggc;->s0:Lzb6;
 
-    move-result-object v0
+    invoke-interface {p0}, Lzb6;->invoke()Ljava/lang/Object;
 
-    filled-new-array {v0}, [Ljava/lang/Object;
+    return-void
 
-    move-result-object v0
+    :pswitch_0
+    iget-object p0, p0, La6;->b:Ljava/lang/Object;
 
-    const-string v1, "ni9"
+    check-cast p0, Lone/me/chats/forward/ForwardPickerScreen;
 
-    const-string v2, "onQualitySelected: %s"
+    iget-object p0, p0, Lone/me/chats/forward/ForwardPickerScreen;->y0:Lzb6;
 
-    invoke-static {v1, v2, v0}, Lg47;->o(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-interface {p0}, Lzb6;->invoke()Ljava/lang/Object;
 
-    iget-object v0, p0, Lni9;->p0:Lsef;
+    return-void
 
-    invoke-virtual {v0}, Lsef;->a()Lu10;
+    :pswitch_1
+    invoke-virtual {p1, p0}, Landroid/transition/Transition;->removeListener(Landroid/transition/Transition$TransitionListener;)Landroid/transition/Transition;
 
-    move-result-object v0
+    iget-object p1, p0, La6;->b:Ljava/lang/Object;
 
-    iput-object p1, v0, Lu10;->c:Lwnb;
+    check-cast p1, Lru/ok/messages/media/mediabar/ActLocalMedias;
 
-    new-instance v1, Lsef;
+    iget-object p1, p1, Lru/ok/messages/media/mediabar/ActLocalMedias;->b1:Landroidx/viewpager2/widget/ViewPager2;
 
-    invoke-direct {v1, v0}, Lsef;-><init>(Lu10;)V
+    new-instance v0, Lb;
 
-    iput-object v1, p0, Lni9;->p0:Lsef;
+    const/4 v1, 0x4
 
-    invoke-virtual {p0}, Lni9;->X0()V
+    invoke-direct {v0, v1, p0}, Lb;-><init>(ILjava/lang/Object;)V
 
-    new-instance v0, Liw1;
+    const-wide/16 v1, 0x64
 
-    const/4 v1, 0x1
+    invoke-virtual {p1, v0, v1, v2}, Landroid/view/View;->postDelayed(Ljava/lang/Runnable;J)Z
 
-    invoke-direct {v0, v1, p1}, Liw1;-><init>(ILjava/lang/Object;)V
+    return-void
 
-    invoke-virtual {p0, v0}, Lni9;->Y0(Lw66;)V
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
+.end method
 
-    invoke-virtual {p0}, Lni9;->V0()V
+.method public final onTransitionPause(Landroid/transition/Transition;)V
+    .locals 0
 
-    iget-object p1, p0, Lni9;->r0:Luc;
+    iget p0, p0, La6;->a:I
 
-    iget-object p0, p0, Lni9;->p0:Lsef;
+    return-void
+.end method
 
-    iget-object p0, p0, Lsef;->a:Lwnb;
+.method public final onTransitionResume(Landroid/transition/Transition;)V
+    .locals 0
 
-    invoke-virtual {p0}, Ljava/lang/Enum;->name()Ljava/lang/String;
+    iget p0, p0, La6;->a:I
 
-    move-result-object p0
+    return-void
+.end method
 
-    const-string v0, "VIDEO_UPLOAD_QUALITY_SELECTED"
+.method public final onTransitionStart(Landroid/transition/Transition;)V
+    .locals 0
 
-    invoke-virtual {p1, v0, p0}, Luc;->g(Ljava/lang/String;Ljava/lang/String;)V
+    iget p0, p0, La6;->a:I
 
     return-void
 .end method

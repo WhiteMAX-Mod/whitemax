@@ -1,50 +1,34 @@
 .class public final Llif;
-.super Lbu3;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+# interfaces
+.implements Loif;
 
 
 # instance fields
-.field public X:I
+.field public final a:Lp2f;
 
-.field public Y:Lbn5;
+.field public final b:Lp2f;
 
-.field public final synthetic Z:Lv29;
+.field public final c:Ljava/util/List;
 
-.field public synthetic o:Ljava/lang/Object;
+.field public final d:Ls6d;
 
 
 # direct methods
-.method public constructor <init>(Lv29;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(Lp2f;Lp2f;Ljava/util/List;Ls6d;)V
     .locals 0
 
-    iput-object p1, p0, Llif;->Z:Lv29;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, p2}, Lbu3;-><init>(Lkotlin/coroutines/Continuation;)V
+    iput-object p1, p0, Llif;->a:Lp2f;
+
+    iput-object p2, p0, Llif;->b:Lp2f;
+
+    iput-object p3, p0, Llif;->c:Ljava/util/List;
+
+    iput-object p4, p0, Llif;->d:Ls6d;
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
-
-    iput-object p1, p0, Llif;->o:Ljava/lang/Object;
-
-    iget p1, p0, Llif;->X:I
-
-    const/high16 v0, -0x80000000
-
-    or-int/2addr p1, v0
-
-    iput p1, p0, Llif;->X:I
-
-    iget-object p1, p0, Llif;->Z:Lv29;
-
-    const/4 v0, 0x0
-
-    invoke-virtual {p1, v0, p0}, Lv29;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    return-object p0
 .end method

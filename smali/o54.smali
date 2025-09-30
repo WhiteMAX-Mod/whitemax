@@ -1,287 +1,387 @@
 .class public final Lo54;
-.super Ljava/lang/Object;
+.super Lxed;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:J
-
-.field public final b:Lmoe;
-
-.field public final c:I
-
-.field public final d:Lmoe;
-
-.field public final e:Lus;
+.field public final k:Lyvg;
 
 
 # direct methods
-.method public constructor <init>(JLmoe;ILmoe;Lus;)V
-    .locals 0
+.method public constructor <init>(Lzh8;Lrw0;Ljava/util/concurrent/Executor;)V
+    .locals 1
 
-    .line 1
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lw54;
 
-    .line 2
-    iput-wide p1, p0, Lo54;->a:J
+    invoke-direct {v0}, Lw54;-><init>()V
 
-    .line 3
-    iput-object p3, p0, Lo54;->b:Lmoe;
+    invoke-direct {p0, p1, v0, p2, p3}, Lxed;-><init>(Lzh8;Lfya;Lrw0;Ljava/util/concurrent/Executor;)V
 
-    .line 4
-    iput p4, p0, Lo54;->c:I
+    new-instance p1, Lyvg;
 
-    .line 5
-    iput-object p5, p0, Lo54;->d:Lmoe;
+    const/4 p2, 0x3
 
-    .line 6
-    iput-object p6, p0, Lo54;->e:Lus;
+    invoke-direct {p1, p2}, Lyvg;-><init>(I)V
 
-    return-void
-.end method
-
-.method public synthetic constructor <init>(JLmoe;ILmoe;Lus;I)V
-    .locals 7
-
-    and-int/lit8 v0, p7, 0x4
-
-    if-eqz v0, :cond_0
-
-    const/4 p4, 0x0
-
-    :cond_0
-    move v4, p4
-
-    and-int/lit8 p4, p7, 0x8
-
-    if-eqz p4, :cond_1
-
-    const/4 p5, 0x0
-
-    :cond_1
-    move-object v5, p5
-
-    and-int/lit8 p4, p7, 0x10
-
-    if-eqz p4, :cond_2
-
-    .line 7
-    sget-object p6, Ll54;->i:Ll54;
-
-    :cond_2
-    move-object v0, p0
-
-    move-wide v1, p1
-
-    move-object v3, p3
-
-    move-object v6, p6
-
-    .line 8
-    invoke-direct/range {v0 .. v6}, Lo54;-><init>(JLmoe;ILmoe;Lus;)V
+    iput-object p1, p0, Lo54;->k:Lyvg;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 7
+.method public final e(Ltw0;Lgp5;Z)Ljava/util/ArrayList;
+    .locals 26
 
-    const/4 v0, 0x1
+    move-object/from16 v1, p0
 
-    if-ne p0, p1, :cond_0
+    move/from16 v2, p3
 
-    return v0
+    move-object/from16 v3, p2
 
-    :cond_0
-    instance-of v1, p1, Lo54;
+    check-cast v3, Lr54;
 
-    const/4 v2, 0x0
+    new-instance v4, Ljava/util/ArrayList;
 
-    if-nez v1, :cond_1
+    invoke-direct {v4}, Ljava/util/ArrayList;-><init>()V
 
-    return v2
-
-    :cond_1
-    check-cast p1, Lo54;
-
-    iget-wide v3, p0, Lo54;->a:J
-
-    iget-wide v5, p1, Lo54;->a:J
-
-    invoke-static {v3, v4, v5, v6}, Lji4;->a(JJ)Z
-
-    move-result v1
-
-    if-nez v1, :cond_2
-
-    return v2
-
-    :cond_2
-    iget-object v1, p0, Lo54;->b:Lmoe;
-
-    iget-object v3, p1, Lo54;->b:Lmoe;
-
-    invoke-static {v1, v3}, Lxq7;->d(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_3
-
-    return v2
-
-    :cond_3
-    iget v1, p0, Lo54;->c:I
-
-    iget v3, p1, Lo54;->c:I
-
-    if-eq v1, v3, :cond_4
-
-    return v2
-
-    :cond_4
-    iget-object v1, p0, Lo54;->d:Lmoe;
-
-    iget-object v3, p1, Lo54;->d:Lmoe;
-
-    invoke-static {v1, v3}, Lxq7;->d(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_5
-
-    return v2
-
-    :cond_5
-    iget-object p0, p0, Lo54;->e:Lus;
-
-    iget-object p1, p1, Lo54;->e:Lus;
-
-    invoke-static {p0, p1}, Lxq7;->d(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p0
-
-    if-nez p0, :cond_6
-
-    return v2
-
-    :cond_6
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 3
-
-    sget-object v0, Lji4;->b:Ljava/util/concurrent/atomic/AtomicLong;
-
-    iget-wide v0, p0, Lo54;->a:J
-
-    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
-
-    move-result v0
-
-    const/16 v1, 0x1f
-
-    mul-int/2addr v0, v1
-
-    iget-object v2, p0, Lo54;->b:Lmoe;
-
-    invoke-static {v0, v1, v2}, Lpg0;->c(IILmoe;)I
-
-    move-result v0
-
-    iget v2, p0, Lo54;->c:I
-
-    invoke-static {v2, v0, v1}, Lrqc;->e(III)I
-
-    move-result v0
-
-    iget-object v2, p0, Lo54;->d:Lmoe;
-
-    if-nez v2, :cond_0
-
-    const/4 v2, 0x0
-
-    goto :goto_0
-
-    :cond_0
-    invoke-virtual {v2}, Ljava/lang/Object;->hashCode()I
-
-    move-result v2
+    const/4 v6, 0x0
 
     :goto_0
-    add-int/2addr v0, v2
+    iget-object v0, v3, Lr54;->m:Ljava/util/List;
 
-    mul-int/2addr v0, v1
+    invoke-interface {v0}, Ljava/util/List;->size()I
 
-    iget-object p0, p0, Lo54;->e:Lus;
+    move-result v0
 
-    invoke-virtual {p0}, Ljava/lang/Object;->hashCode()I
+    if-ge v6, v0, :cond_a
 
-    move-result p0
-
-    add-int/2addr p0, v0
-
-    return p0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 3
-
-    iget-wide v0, p0, Lo54;->a:J
-
-    invoke-static {v0, v1}, Lji4;->b(J)Ljava/lang/String;
+    invoke-virtual {v3, v6}, Lr54;->b(I)Lv1b;
 
     move-result-object v0
 
-    new-instance v1, Ljava/lang/StringBuilder;
+    iget-wide v7, v0, Lv1b;->b:J
 
-    const-string v2, "DebugSettingItem(itemId="
+    invoke-static {v7, v8}, Lnrf;->U(J)J
 
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    move-result-wide v7
 
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v3, v6}, Lr54;->d(I)J
 
-    const-string v0, ", titleRes="
+    move-result-wide v9
 
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    iget-object v11, v0, Lv1b;->c:Ljava/util/List;
 
-    iget-object v0, p0, Lo54;->b:Lmoe;
+    const/4 v12, 0x0
 
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    :goto_1
+    invoke-interface {v11}, Ljava/util/List;->size()I
 
-    const-string v0, ", startIconRes="
+    move-result v0
 
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    if-ge v12, v0, :cond_9
 
-    iget v0, p0, Lo54;->c:I
+    invoke-interface {v11, v12}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    move-result-object v0
 
-    const-string v0, ", upperTextRes="
+    move-object v13, v0
 
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    check-cast v13, Lr8;
 
-    iget-object v0, p0, Lo54;->d:Lmoe;
+    const/4 v14, 0x0
 
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    :goto_2
+    iget-object v0, v13, Lr8;->c:Ljava/util/List;
 
-    const-string v0, ", action="
+    invoke-interface {v0}, Ljava/util/List;->size()I
 
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    move-result v0
 
-    iget-object p0, p0, Lo54;->e:Lus;
+    if-ge v14, v0, :cond_8
 
-    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    iget-object v0, v13, Lr8;->c:Ljava/util/List;
 
-    const-string p0, ")"
+    invoke-interface {v0, v14}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
-    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    move-result-object v0
 
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    check-cast v0, Lbtc;
 
-    move-result-object p0
+    :try_start_0
+    iget v15, v13, Lr8;->b:I
 
-    return-object p0
+    invoke-virtual {v0}, Lbtc;->d()Ll64;
+
+    move-result-object v16
+
+    if-eqz v16, :cond_0
+
+    move/from16 v17, v6
+
+    move-object/from16 v15, v16
+
+    move-object/from16 v16, v3
+
+    goto :goto_3
+
+    :cond_0
+    new-instance v5, Ln54;
+    :try_end_0
+    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_3
+
+    move-object/from16 v16, v3
+
+    move-object/from16 v3, p1
+
+    :try_start_1
+    invoke-direct {v5, v3, v15, v0}, Ln54;-><init>(Ltw0;ILbtc;)V
+
+    invoke-virtual {v1, v5, v2}, Lxed;->c(Lj1d;Z)Ljava/lang/Object;
+
+    move-result-object v5
+
+    check-cast v5, Le33;
+
+    if-nez v5, :cond_1
+
+    const/4 v5, 0x0
+
+    move-object v15, v5
+
+    move/from16 v17, v6
+
+    goto :goto_3
+
+    :cond_1
+    new-instance v15, Lz13;
+
+    iget-wide v2, v0, Lbtc;->c:J
+    :try_end_1
+    .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_2
+
+    move/from16 v17, v6
+
+    const/4 v6, 0x3
+
+    :try_start_2
+    invoke-direct {v15, v5, v2, v3, v6}, Lz13;-><init>(Ljava/lang/Object;JI)V
+    :try_end_2
+    .catch Ljava/io/IOException; {:try_start_2 .. :try_end_2} :catch_1
+
+    :goto_3
+    if-eqz v15, :cond_6
+
+    invoke-interface {v15, v9, v10}, Ll64;->C(J)J
+
+    move-result-wide v2
+
+    const-wide/16 v5, -0x1
+
+    cmp-long v5, v2, v5
+
+    if-eqz v5, :cond_5
+
+    iget-object v5, v1, Lo54;->k:Lyvg;
+
+    iget-object v6, v0, Lbtc;->b:Ll37;
+
+    invoke-virtual {v5, v6}, Lyvg;->U(Ljava/util/List;)Ljk0;
+
+    move-result-object v5
+
+    sget v6, Lnrf;->a:I
+
+    iget-object v5, v5, Ljk0;->a:Ljava/lang/String;
+
+    iget-object v6, v0, Lbtc;->X:Luec;
+
+    if-eqz v6, :cond_2
+
+    const/4 v1, 0x0
+
+    invoke-static {v0, v5, v6, v1}, Lla6;->b(Lbtc;Ljava/lang/String;Luec;I)Ln74;
+
+    move-result-object v6
+
+    new-instance v1, Lved;
+
+    invoke-direct {v1, v7, v8, v6}, Lved;-><init>(JLn74;)V
+
+    invoke-virtual {v4, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    :cond_2
+    invoke-virtual {v0}, Lbtc;->e()Luec;
+
+    move-result-object v1
+
+    if-eqz v1, :cond_3
+
+    const/4 v6, 0x0
+
+    invoke-static {v0, v5, v1, v6}, Lla6;->b(Lbtc;Ljava/lang/String;Luec;I)Ln74;
+
+    move-result-object v1
+
+    new-instance v6, Lved;
+
+    invoke-direct {v6, v7, v8, v1}, Lved;-><init>(JLn74;)V
+
+    invoke-virtual {v4, v6}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    :cond_3
+    invoke-interface {v15}, Ll64;->B()J
+
+    move-result-wide v18
+
+    add-long v2, v18, v2
+
+    const-wide/16 v20, 0x1
+
+    sub-long v2, v2, v20
+
+    move-wide/from16 v22, v2
+
+    move-wide/from16 v1, v18
+
+    :goto_4
+    cmp-long v3, v1, v22
+
+    if-gtz v3, :cond_4
+
+    invoke-interface {v15, v1, v2}, Ll64;->a(J)J
+
+    move-result-wide v18
+
+    move-wide/from16 v24, v7
+
+    add-long v6, v18, v24
+
+    invoke-interface {v15, v1, v2}, Ll64;->k(J)Luec;
+
+    move-result-object v3
+
+    const/4 v8, 0x0
+
+    invoke-static {v0, v5, v3, v8}, Lla6;->b(Lbtc;Ljava/lang/String;Luec;I)Ln74;
+
+    move-result-object v3
+
+    new-instance v8, Lved;
+
+    invoke-direct {v8, v6, v7, v3}, Lved;-><init>(JLn74;)V
+
+    invoke-virtual {v4, v8}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    add-long v1, v1, v20
+
+    move-wide/from16 v7, v24
+
+    goto :goto_4
+
+    :cond_4
+    move-wide/from16 v24, v7
+
+    goto :goto_8
+
+    :cond_5
+    new-instance v0, Landroidx/media3/exoplayer/offline/DownloadException;
+
+    const-string v1, "Unbounded segment index"
+
+    invoke-direct {v0, v1}, Ljava/io/IOException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+
+    :cond_6
+    move-wide/from16 v24, v7
+
+    :try_start_3
+    new-instance v0, Landroidx/media3/exoplayer/offline/DownloadException;
+
+    const-string v1, "Missing segment index"
+
+    invoke-direct {v0, v1}, Ljava/io/IOException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+    :try_end_3
+    .catch Ljava/io/IOException; {:try_start_3 .. :try_end_3} :catch_0
+
+    :catch_0
+    move-exception v0
+
+    goto :goto_7
+
+    :catch_1
+    move-exception v0
+
+    goto :goto_6
+
+    :catch_2
+    move-exception v0
+
+    goto :goto_5
+
+    :catch_3
+    move-exception v0
+
+    move-object/from16 v16, v3
+
+    :goto_5
+    move/from16 v17, v6
+
+    :goto_6
+    move-wide/from16 v24, v7
+
+    :goto_7
+    if-eqz p3, :cond_7
+
+    :goto_8
+    add-int/lit8 v14, v14, 0x1
+
+    move-object/from16 v1, p0
+
+    move/from16 v2, p3
+
+    move-object/from16 v3, v16
+
+    move/from16 v6, v17
+
+    move-wide/from16 v7, v24
+
+    goto/16 :goto_2
+
+    :cond_7
+    throw v0
+
+    :cond_8
+    move-object/from16 v16, v3
+
+    move/from16 v17, v6
+
+    move-wide/from16 v24, v7
+
+    add-int/lit8 v12, v12, 0x1
+
+    move-object/from16 v1, p0
+
+    move/from16 v2, p3
+
+    goto/16 :goto_1
+
+    :cond_9
+    move-object/from16 v16, v3
+
+    move/from16 v17, v6
+
+    add-int/lit8 v6, v17, 0x1
+
+    move-object/from16 v1, p0
+
+    move/from16 v2, p3
+
+    goto/16 :goto_0
+
+    :cond_a
+    return-object v4
 .end method

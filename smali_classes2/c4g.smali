@@ -1,38 +1,59 @@
-.class public final Lc4g;
-.super Lsod;
+.class public interface abstract Lc4g;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public B0:Lz3g;
-
-
 # virtual methods
-.method public final x(Lol7;)V
-    .locals 1
-
-    instance-of v0, p1, Ly3g;
-
-    if-nez v0, :cond_0
+.method public D()V
+    .locals 0
 
     return-void
+.end method
 
-    :cond_0
-    move-object v0, p1
+.method public H(Ljava/lang/Throwable;)V
+    .locals 0
 
-    check-cast v0, Lz3g;
+    return-void
+.end method
 
-    iput-object v0, p0, Lc4g;->B0:Lz3g;
+.method public a(F)V
+    .locals 0
 
-    iget-object p0, p0, Lccc;->a:Landroid/view/View;
+    return-void
+.end method
 
-    check-cast p0, Lded;
+.method public b()V
+    .locals 0
 
-    check-cast p1, Ly3g;
+    return-void
+.end method
 
-    iget-object p1, p1, Ly3g;->a:Leed;
+.method public c(Z)V
+    .locals 0
 
-    invoke-virtual {p0, p1}, Lded;->setModelItem(Lsdd;)V
+    return-void
+.end method
+
+.method public d()V
+    .locals 0
+
+    return-void
+.end method
+
+.method public e()V
+    .locals 0
+
+    return-void
+.end method
+
+.method public f()V
+    .locals 0
+
+    return-void
+.end method
+
+.method public i()V
+    .locals 0
 
     return-void
 .end method

@@ -1,24 +1,132 @@
-.class public abstract Lsrb;
-.super Ljava/lang/Object;
+.class public final Lsrb;
+.super Lure;
+.source "SourceFile"
+
+# interfaces
+.implements Lpc6;
 
 
-# static fields
-.field public static add_8:I = 0x7f080259
+# instance fields
+.field public X:I
 
-.field public static apple_outline_24:I = 0x7f080260
+.field public synthetic Y:Ljava/lang/Object;
 
-.field public static ball_outline_24:I = 0x7f08026d
+.field public final synthetic Z:Lzv2;
 
-.field public static car_outline_24:I = 0x7f080290
+.field public final synthetic r0:Ltrb;
 
-.field public static fire_24:I = 0x7f080361
 
-.field public static flags_outline_24:I = 0x7f080459
+# direct methods
+.method public constructor <init>(Lzv2;Lkotlin/coroutines/Continuation;Ltrb;)V
+    .locals 0
 
-.field public static lamp_outline_24:I = 0x7f08078f
+    iput-object p1, p0, Lsrb;->Z:Lzv2;
 
-.field public static paw_outline_24:I = 0x7f080874
+    iput-object p3, p0, Lsrb;->r0:Ltrb;
 
-.field public static remove_outline_24:I = 0x7f08089b
+    const/4 p1, 0x2
 
-.field public static symbols_outline_24:I = 0x7f0808d7
+    invoke-direct {p0, p1, p2}, Lure;-><init>(ILkotlin/coroutines/Continuation;)V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
+
+    check-cast p1, Lks5;
+
+    check-cast p2, Lkotlin/coroutines/Continuation;
+
+    invoke-virtual {p0, p1, p2}, Lsrb;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+
+    move-result-object p0
+
+    check-cast p0, Lsrb;
+
+    sget-object p1, Lylf;->a:Lylf;
+
+    invoke-virtual {p0, p1}, Lsrb;->o(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
+
+    new-instance v0, Lsrb;
+
+    iget-object v1, p0, Lsrb;->Z:Lzv2;
+
+    iget-object p0, p0, Lsrb;->r0:Ltrb;
+
+    invoke-direct {v0, v1, p2, p0}, Lsrb;-><init>(Lzv2;Lkotlin/coroutines/Continuation;Ltrb;)V
+
+    iput-object p1, v0, Lsrb;->Y:Ljava/lang/Object;
+
+    return-object v0
+.end method
+
+.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 4
+
+    iget v0, p0, Lsrb;->X:I
+
+    const/4 v1, 0x1
+
+    if-eqz v0, :cond_1
+
+    if-ne v0, v1, :cond_0
+
+    invoke-static {p1}, Lqe5;->V(Ljava/lang/Object;)V
+
+    goto :goto_0
+
+    :cond_0
+    new-instance p0, Ljava/lang/IllegalStateException;
+
+    const-string p1, "call to \'resume\' before \'invoke\' with coroutine"
+
+    invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p0
+
+    :cond_1
+    invoke-static {p1}, Lqe5;->V(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Lsrb;->Y:Ljava/lang/Object;
+
+    check-cast p1, Lks5;
+
+    new-instance v0, Lk92;
+
+    iget-object v2, p0, Lsrb;->r0:Ltrb;
+
+    const/4 v3, 0x7
+
+    invoke-direct {v0, p1, v2, v3}, Lk92;-><init>(Lks5;Ljava/lang/Object;I)V
+
+    iput v1, p0, Lsrb;->X:I
+
+    iget-object p1, p0, Lsrb;->Z:Lzv2;
+
+    invoke-virtual {p1, v0, p0}, Lzv2;->d(Lks5;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p0
+
+    sget-object p1, Lz04;->a:Lz04;
+
+    if-ne p0, p1, :cond_2
+
+    return-object p1
+
+    :cond_2
+    :goto_0
+    sget-object p0, Lylf;->a:Lylf;
+
+    return-object p0
+.end method

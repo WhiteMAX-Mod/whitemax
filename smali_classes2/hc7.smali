@@ -1,193 +1,101 @@
 .class public final Lhc7;
-.super Ljava/lang/Object;
+.super Lure;
 .source "SourceFile"
+
+# interfaces
+.implements Lpc6;
 
 
 # instance fields
-.field public a:F
+.field public synthetic X:Ljava/lang/Object;
 
-.field public b:F
-
-.field public c:F
-
-.field public d:F
+.field public final synthetic Y:Lone/me/inviteactions/invitebyphone/InviteByPhoneScreen;
 
 
 # direct methods
-.method public constructor <init>(FFFF)V
+.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/inviteactions/invitebyphone/InviteByPhoneScreen;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p2, p0, Lhc7;->Y:Lone/me/inviteactions/invitebyphone/InviteByPhoneScreen;
 
-    iput p1, p0, Lhc7;->a:F
+    const/4 p2, 0x2
 
-    iput p2, p0, Lhc7;->b:F
-
-    iput p3, p0, Lhc7;->c:F
-
-    iput p4, p0, Lhc7;->d:F
+    invoke-direct {p0, p2, p1}, Lure;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    const/4 v0, 0x1
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    instance-of v1, p1, Lhc7;
-
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
-    check-cast p1, Lhc7;
-
-    iget v1, p0, Lhc7;->a:F
-
-    iget v3, p1, Lhc7;->a:F
-
-    invoke-static {v1, v3}, Ljava/lang/Float;->compare(FF)I
-
-    move-result v1
-
-    if-eqz v1, :cond_2
-
-    return v2
-
-    :cond_2
-    iget v1, p0, Lhc7;->b:F
-
-    iget v3, p1, Lhc7;->b:F
-
-    invoke-static {v1, v3}, Ljava/lang/Float;->compare(FF)I
-
-    move-result v1
-
-    if-eqz v1, :cond_3
-
-    return v2
-
-    :cond_3
-    iget v1, p0, Lhc7;->c:F
-
-    iget v3, p1, Lhc7;->c:F
-
-    invoke-static {v1, v3}, Ljava/lang/Float;->compare(FF)I
-
-    move-result v1
-
-    if-eqz v1, :cond_4
-
-    return v2
-
-    :cond_4
-    iget p0, p0, Lhc7;->d:F
-
-    iget p1, p1, Lhc7;->d:F
-
-    invoke-static {p0, p1}, Ljava/lang/Float;->compare(FF)I
-
-    move-result p0
-
-    if-eqz p0, :cond_5
-
-    return v2
-
-    :cond_5
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 3
-
-    iget v0, p0, Lhc7;->a:F
-
-    invoke-static {v0}, Ljava/lang/Float;->hashCode(F)I
-
-    move-result v0
-
-    const/16 v1, 0x1f
-
-    mul-int/2addr v0, v1
-
-    iget v2, p0, Lhc7;->b:F
-
-    invoke-static {v0, v2, v1}, Luz1;->e(IFI)I
-
-    move-result v0
-
-    iget v2, p0, Lhc7;->c:F
-
-    invoke-static {v0, v2, v1}, Luz1;->e(IFI)I
-
-    move-result v0
-
-    iget p0, p0, Lhc7;->d:F
-
-    invoke-static {p0}, Ljava/lang/Float;->hashCode(F)I
-
-    move-result p0
-
-    add-int/2addr p0, v0
-
-    return p0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 5
-
-    iget v0, p0, Lhc7;->a:F
-
-    iget v1, p0, Lhc7;->b:F
-
-    iget v2, p0, Lhc7;->c:F
-
-    iget p0, p0, Lhc7;->d:F
-
-    new-instance v3, Ljava/lang/StringBuilder;
-
-    const-string v4, "KeyFrame(t="
-
-    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
-
-    const-string v0, ", alpha="
-
-    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
-
-    const-string v0, ", trimStart="
-
-    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
-
-    const-string v0, ", trimEnd="
-
-    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v3, p0}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
-
-    const-string p0, ")"
-
-    invoke-virtual {v3, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {p0, p1, p2}, Lhc7;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
     move-result-object p0
 
+    check-cast p0, Lhc7;
+
+    sget-object p1, Lylf;->a:Lylf;
+
+    invoke-virtual {p0, p1}, Lhc7;->o(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object p1
+.end method
+
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 1
+
+    new-instance v0, Lhc7;
+
+    iget-object p0, p0, Lhc7;->Y:Lone/me/inviteactions/invitebyphone/InviteByPhoneScreen;
+
+    invoke-direct {v0, p2, p0}, Lhc7;-><init>(Lkotlin/coroutines/Continuation;Lone/me/inviteactions/invitebyphone/InviteByPhoneScreen;)V
+
+    iput-object p1, v0, Lhc7;->X:Ljava/lang/Object;
+
+    return-object v0
+.end method
+
+.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
+
+    invoke-static {p1}, Lqe5;->V(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Lhc7;->X:Ljava/lang/Object;
+
+    check-cast p1, Lfc7;
+
+    if-eqz p1, :cond_0
+
+    iget-object p0, p0, Lhc7;->Y:Lone/me/inviteactions/invitebyphone/InviteByPhoneScreen;
+
+    iget-object v0, p0, Lone/me/inviteactions/invitebyphone/InviteByPhoneScreen;->v0:Lzte;
+
+    invoke-virtual {v0}, Lzte;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lbq3;
+
+    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
+
+    move-result-object p0
+
+    iget-object p1, p1, Lfc7;->a:Landroid/net/Uri;
+
+    invoke-virtual {v0, p0, p1}, Lbq3;->a(Landroid/content/Context;Landroid/net/Uri;)V
+
+    sget-object p0, Lylf;->a:Lylf;
+
     return-object p0
+
+    :cond_0
+    new-instance p0, Lkotlin/NoWhenBranchMatchedException;
+
+    invoke-direct {p0}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
+
+    throw p0
 .end method

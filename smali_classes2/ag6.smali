@@ -2,89 +2,99 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lis5;
+
 
 # instance fields
-.field public final a:[I
+.field public final synthetic a:I
+
+.field public final synthetic b:Lis5;
+
+.field public final synthetic c:Lqg6;
 
 
 # direct methods
-.method public constructor <init>([I)V
+.method public synthetic constructor <init>(Lis5;Lqg6;I)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput p3, p0, Lag6;->a:I
 
-    iput-object p1, p0, Lag6;->a:[I
+    iput-object p1, p0, Lag6;->b:Lis5;
+
+    iput-object p2, p0, Lag6;->c:Lqg6;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
+.method public final d(Lks5;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
     .locals 3
 
-    const/4 v0, 0x1
+    iget v0, p0, Lag6;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    new-instance v0, Lzf6;
+
+    iget-object v1, p0, Lag6;->c:Lqg6;
+
+    const/4 v2, 0x1
+
+    invoke-direct {v0, p1, v1, v2}, Lzf6;-><init>(Lks5;Lqg6;I)V
+
+    iget-object p0, p0, Lag6;->b:Lis5;
+
+    invoke-interface {p0, v0, p2}, Lis5;->d(Lks5;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p0
+
+    sget-object p1, Lz04;->a:Lz04;
 
     if-ne p0, p1, :cond_0
 
-    return v0
+    goto :goto_0
 
     :cond_0
-    instance-of v1, p1, Lag6;
+    sget-object p0, Lylf;->a:Lylf;
+
+    :goto_0
+    return-object p0
+
+    :pswitch_0
+    new-instance v0, Lzf6;
+
+    iget-object v1, p0, Lag6;->c:Lqg6;
 
     const/4 v2, 0x0
 
-    if-nez v1, :cond_1
+    invoke-direct {v0, p1, v1, v2}, Lzf6;-><init>(Lks5;Lqg6;I)V
 
-    return v2
+    iget-object p0, p0, Lag6;->b:Lis5;
+
+    invoke-interface {p0, v0, p2}, Lis5;->d(Lks5;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p0
+
+    sget-object p1, Lz04;->a:Lz04;
+
+    if-ne p0, p1, :cond_1
+
+    goto :goto_1
 
     :cond_1
-    check-cast p1, Lag6;
+    sget-object p0, Lylf;->a:Lylf;
 
-    iget-object p0, p0, Lag6;->a:[I
-
-    iget-object p1, p1, Lag6;->a:[I
-
-    invoke-static {p0, p1}, Lxq7;->d(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p0
-
-    if-nez p0, :cond_2
-
-    return v2
-
-    :cond_2
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 0
-
-    iget-object p0, p0, Lag6;->a:[I
-
-    invoke-static {p0}, Ljava/util/Arrays;->hashCode([I)I
-
-    move-result p0
-
-    return p0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 2
-
-    iget-object p0, p0, Lag6;->a:[I
-
-    invoke-static {p0}, Ljava/util/Arrays;->toString([I)Ljava/lang/String;
-
-    move-result-object p0
-
-    const-string v0, "GradientsLocalColors(promoTextGradient="
-
-    const-string v1, ")"
-
-    invoke-static {v0, p0, v1}, Lu88;->k(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object p0
-
+    :goto_1
     return-object p0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

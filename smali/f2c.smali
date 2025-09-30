@@ -1,76 +1,72 @@
-.class public final Lf2c;
-.super Lg2c;
-.source "SourceFile"
-
-# interfaces
-.implements Ljava/io/Serializable;
+.class public abstract Lf2c;
+.super Ljava/lang/Object;
 
 
-# virtual methods
-.method public final a(I)I
-    .locals 0
+# static fields
+.field public static design_appbar_state_list_animator:I = 0x7f020000
 
-    sget-object p0, Lg2c;->b:Ld3;
+.field public static design_fab_hide_motion_spec:I = 0x7f020001
 
-    invoke-virtual {p0, p1}, Ld3;->a(I)I
+.field public static design_fab_show_motion_spec:I = 0x7f020002
 
-    move-result p0
+.field public static fragment_close_enter:I = 0x7f020005
 
-    return p0
-.end method
+.field public static fragment_close_exit:I = 0x7f020006
 
-.method public final b()I
-    .locals 0
+.field public static fragment_fade_enter:I = 0x7f020007
 
-    sget-object p0, Lg2c;->b:Ld3;
+.field public static fragment_fade_exit:I = 0x7f020008
 
-    invoke-virtual {p0}, Ld3;->b()I
+.field public static fragment_open_enter:I = 0x7f020009
 
-    move-result p0
+.field public static fragment_open_exit:I = 0x7f02000a
 
-    return p0
-.end method
+.field public static m3_appbar_state_list_animator:I = 0x7f02000b
 
-.method public final c(I)I
-    .locals 0
+.field public static m3_btn_elevated_btn_state_list_anim:I = 0x7f02000c
 
-    sget-object p0, Lg2c;->b:Ld3;
+.field public static m3_btn_state_list_anim:I = 0x7f02000d
 
-    invoke-virtual {p0, p1}, Ld3;->c(I)I
+.field public static m3_card_elevated_state_list_anim:I = 0x7f02000e
 
-    move-result p0
+.field public static m3_card_state_list_anim:I = 0x7f02000f
 
-    return p0
-.end method
+.field public static m3_chip_state_list_anim:I = 0x7f020010
 
-.method public final d()J
-    .locals 2
+.field public static m3_elevated_chip_state_list_anim:I = 0x7f020011
 
-    sget-object p0, Lg2c;->b:Ld3;
+.field public static m3_extended_fab_change_size_collapse_motion_spec:I = 0x7f020012
 
-    invoke-virtual {p0}, Ld3;->d()J
+.field public static m3_extended_fab_change_size_expand_motion_spec:I = 0x7f020013
 
-    move-result-wide v0
+.field public static m3_extended_fab_hide_motion_spec:I = 0x7f020014
 
-    return-wide v0
-.end method
+.field public static m3_extended_fab_show_motion_spec:I = 0x7f020015
 
-.method public final e(J)J
-    .locals 0
+.field public static m3_extended_fab_state_list_animator:I = 0x7f020016
 
-    const/4 p0, 0x0
+.field public static mtrl_btn_state_list_anim:I = 0x7f020017
 
-    throw p0
-.end method
+.field public static mtrl_btn_unelevated_state_list_anim:I = 0x7f020018
 
-.method public final f(JJ)J
-    .locals 0
+.field public static mtrl_card_state_list_anim:I = 0x7f020019
 
-    sget-object p0, Lg2c;->b:Ld3;
+.field public static mtrl_chip_state_list_anim:I = 0x7f02001a
 
-    invoke-virtual {p0, p1, p2, p3, p4}, Lg2c;->f(JJ)J
+.field public static mtrl_extended_fab_change_size_collapse_motion_spec:I = 0x7f02001b
 
-    move-result-wide p0
+.field public static mtrl_extended_fab_change_size_expand_motion_spec:I = 0x7f02001c
 
-    return-wide p0
-.end method
+.field public static mtrl_extended_fab_hide_motion_spec:I = 0x7f02001d
+
+.field public static mtrl_extended_fab_show_motion_spec:I = 0x7f02001e
+
+.field public static mtrl_extended_fab_state_list_animator:I = 0x7f02001f
+
+.field public static mtrl_fab_hide_motion_spec:I = 0x7f020020
+
+.field public static mtrl_fab_show_motion_spec:I = 0x7f020021
+
+.field public static mtrl_fab_transformation_sheet_collapse_spec:I = 0x7f020022
+
+.field public static mtrl_fab_transformation_sheet_expand_spec:I = 0x7f020023

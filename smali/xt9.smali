@@ -3,158 +3,190 @@
 .source "SourceFile"
 
 
-# static fields
-.field public static final c:Ljava/lang/Object;
-
-.field public static d:Ljava/lang/String;
-
-.field public static e:Ljava/util/HashSet;
-
-.field public static final f:Ljava/lang/Object;
-
-.field public static g:Lwt9;
-
-
 # instance fields
-.field public final a:Landroid/content/Context;
+.field public final a:Z
 
-.field public final b:Landroid/app/NotificationManager;
+.field public final b:Z
+
+.field public final c:Z
+
+.field public final d:Z
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
-
-    new-instance v0, Ljava/lang/Object;
-
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    sput-object v0, Lxt9;->c:Ljava/lang/Object;
-
-    new-instance v0, Ljava/util/HashSet;
-
-    invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
-
-    sput-object v0, Lxt9;->e:Ljava/util/HashSet;
-
-    new-instance v0, Ljava/lang/Object;
-
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    sput-object v0, Lxt9;->f:Ljava/lang/Object;
-
-    return-void
-.end method
-
-.method public constructor <init>(Landroid/content/Context;)V
-    .locals 1
+.method public constructor <init>(ZZZZ)V
+    .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lxt9;->a:Landroid/content/Context;
+    iput-boolean p1, p0, Lxt9;->a:Z
 
-    const-string v0, "notification"
+    iput-boolean p2, p0, Lxt9;->b:Z
 
-    invoke-virtual {p1, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+    iput-boolean p3, p0, Lxt9;->c:Z
 
-    move-result-object p1
-
-    check-cast p1, Landroid/app/NotificationManager;
-
-    iput-object p1, p0, Lxt9;->b:Landroid/app/NotificationManager;
+    iput-boolean p4, p0, Lxt9;->d:Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Ljava/lang/String;ILandroid/app/Notification;)V
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
+
+    const/4 v0, 0x1
+
+    if-ne p0, p1, :cond_0
+
+    return v0
+
+    :cond_0
+    instance-of v1, p1, Lxt9;
+
+    const/4 v2, 0x0
+
+    if-nez v1, :cond_1
+
+    return v2
+
+    :cond_1
+    check-cast p1, Lxt9;
+
+    iget-boolean v1, p0, Lxt9;->a:Z
+
+    iget-boolean v3, p1, Lxt9;->a:Z
+
+    if-eq v1, v3, :cond_2
+
+    return v2
+
+    :cond_2
+    iget-boolean v1, p0, Lxt9;->b:Z
+
+    iget-boolean v3, p1, Lxt9;->b:Z
+
+    if-eq v1, v3, :cond_3
+
+    return v2
+
+    :cond_3
+    iget-boolean v1, p0, Lxt9;->c:Z
+
+    iget-boolean v3, p1, Lxt9;->c:Z
+
+    if-eq v1, v3, :cond_4
+
+    return v2
+
+    :cond_4
+    iget-boolean p0, p0, Lxt9;->d:Z
+
+    iget-boolean p1, p1, Lxt9;->d:Z
+
+    if-eq p0, p1, :cond_5
+
+    return v2
+
+    :cond_5
+    return v0
+.end method
+
+.method public final hashCode()I
     .locals 3
 
-    iget-object v0, p0, Lxt9;->b:Landroid/app/NotificationManager;
+    const/4 v0, 0x1
 
-    iget-object v1, p3, Landroid/app/Notification;->extras:Landroid/os/Bundle;
+    iget-boolean v1, p0, Lxt9;->a:Z
 
-    if-eqz v1, :cond_1
+    if-eqz v1, :cond_0
 
-    const-string v2, "android.support.useSideChannel"
+    move v1, v0
 
-    invoke-virtual {v1, v2}, Landroid/os/BaseBundle;->getBoolean(Ljava/lang/String;)Z
+    :cond_0
+    mul-int/lit8 v1, v1, 0x1f
 
-    move-result v1
+    iget-boolean v2, p0, Lxt9;->b:Z
 
-    if-eqz v1, :cond_1
+    if-eqz v2, :cond_1
 
-    new-instance v1, Ltt9;
+    move v2, v0
 
-    iget-object v2, p0, Lxt9;->a:Landroid/content/Context;
+    :cond_1
+    add-int/2addr v1, v2
 
-    invoke-virtual {v2}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
+    mul-int/lit8 v1, v1, 0x1f
 
-    move-result-object v2
+    iget-boolean v2, p0, Lxt9;->c:Z
 
-    invoke-direct {v1, v2, p2, p1, p3}, Ltt9;-><init>(Ljava/lang/String;ILjava/lang/String;Landroid/app/Notification;)V
+    if-eqz v2, :cond_2
 
-    sget-object v2, Lxt9;->f:Ljava/lang/Object;
+    move v2, v0
 
-    monitor-enter v2
+    :cond_2
+    add-int/2addr v1, v2
 
-    :try_start_0
-    sget-object p3, Lxt9;->g:Lwt9;
+    mul-int/lit8 v1, v1, 0x1f
 
-    if-nez p3, :cond_0
+    iget-boolean p0, p0, Lxt9;->d:Z
 
-    new-instance p3, Lwt9;
-
-    iget-object p0, p0, Lxt9;->a:Landroid/content/Context;
-
-    invoke-virtual {p0}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
-
-    move-result-object p0
-
-    invoke-direct {p3, p0}, Lwt9;-><init>(Landroid/content/Context;)V
-
-    sput-object p3, Lxt9;->g:Lwt9;
+    if-eqz p0, :cond_3
 
     goto :goto_0
 
-    :catchall_0
-    move-exception p0
+    :cond_3
+    move v0, p0
 
-    goto :goto_1
-
-    :cond_0
     :goto_0
-    sget-object p0, Lxt9;->g:Lwt9;
+    add-int/2addr v1, v0
 
-    iget-object p0, p0, Lwt9;->b:Landroid/os/Handler;
+    return v1
+.end method
 
-    const/4 p3, 0x0
+.method public final toString()Ljava/lang/String;
+    .locals 2
 
-    invoke-virtual {p0, p3, v1}, Landroid/os/Handler;->obtainMessage(ILjava/lang/Object;)Landroid/os/Message;
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "NetworkState(isConnected="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-boolean v1, p0, Lxt9;->a:Z
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string v1, ", isValidated="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-boolean v1, p0, Lxt9;->b:Z
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string v1, ", isMetered="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-boolean v1, p0, Lxt9;->c:Z
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string v1, ", isNotRoaming="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-boolean p0, p0, Lxt9;->d:Z
+
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const/16 p0, 0x29
+
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p0
 
-    invoke-virtual {p0}, Landroid/os/Message;->sendToTarget()V
-
-    monitor-exit v2
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    invoke-virtual {v0, p1, p2}, Landroid/app/NotificationManager;->cancel(Ljava/lang/String;I)V
-
-    return-void
-
-    :goto_1
-    :try_start_1
-    monitor-exit v2
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    throw p0
-
-    :cond_1
-    invoke-virtual {v0, p1, p2, p3}, Landroid/app/NotificationManager;->notify(Ljava/lang/String;ILandroid/app/Notification;)V
-
-    return-void
+    return-object p0
 .end method

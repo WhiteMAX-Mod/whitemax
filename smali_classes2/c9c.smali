@@ -1,170 +1,52 @@
-.class public final synthetic Lc9c;
+.class public abstract Lc9c;
 .super Ljava/lang/Object;
-.source "SourceFile"
 
-# interfaces
-.implements Landroid/animation/ValueAnimator$AnimatorUpdateListener;
 
+# static fields
+.field public static menu_attach_photo:I = 0x7f0f0000
 
-# instance fields
-.field public final synthetic a:I
+.field public static menu_attach_video:I = 0x7f0f0001
 
-.field public final synthetic b:Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;
+.field public static menu_avatar_photo:I = 0x7f0f0002
 
+.field public static menu_avatar_view:I = 0x7f0f0003
 
-# direct methods
-.method public synthetic constructor <init>(Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;I)V
-    .locals 0
+.field public static menu_calls_selected_actions:I = 0x7f0f0004
 
-    iput p2, p0, Lc9c;->a:I
+.field public static menu_channel_profile:I = 0x7f0f0005
 
-    iput-object p1, p0, Lc9c;->b:Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;
+.field public static menu_channel_settings:I = 0x7f0f0006
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+.field public static menu_chat:I = 0x7f0f0007
 
-    return-void
-.end method
+.field public static menu_chat_profile:I = 0x7f0f0008
 
+.field public static menu_chat_selected_actions:I = 0x7f0f0009
 
-# virtual methods
-.method public final onAnimationUpdate(Landroid/animation/ValueAnimator;)V
-    .locals 2
+.field public static menu_constructor:I = 0x7f0f000a
 
-    iget v0, p0, Lc9c;->a:I
+.field public static menu_contact_profile:I = 0x7f0f000b
 
-    const-string v1, "null cannot be cast to non-null type android.widget.FrameLayout.LayoutParams"
+.field public static menu_contacts_selected_actions:I = 0x7f0f000c
 
-    iget-object p0, p0, Lc9c;->b:Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;
+.field public static menu_empty:I = 0x7f0f000d
 
-    packed-switch v0, :pswitch_data_0
+.field public static menu_folder_page:I = 0x7f0f000e
 
-    sget-object v0, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->a1:[Lbc7;
+.field public static menu_left_chat_profile:I = 0x7f0f000f
 
-    invoke-virtual {p0}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->G0()Landroid/view/View;
+.field public static menu_local_photo:I = 0x7f0f0010
 
-    move-result-object p0
+.field public static menu_local_video:I = 0x7f0f0011
 
-    invoke-virtual {p0}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+.field public static menu_location:I = 0x7f0f0012
 
-    move-result-object v0
+.field public static menu_location_layer:I = 0x7f0f0013
 
-    if-eqz v0, :cond_0
+.field public static menu_profile:I = 0x7f0f0014
 
-    check-cast v0, Landroid/widget/FrameLayout$LayoutParams;
+.field public static menu_search:I = 0x7f0f0015
 
-    invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
+.field public static menu_sticker_set:I = 0x7f0f0016
 
-    move-result-object p1
-
-    check-cast p1, Ljava/lang/Integer;
-
-    invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
-
-    move-result p1
-
-    iput p1, v0, Landroid/widget/FrameLayout$LayoutParams;->height:I
-
-    invoke-virtual {p0, v0}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
-
-    return-void
-
-    :cond_0
-    new-instance p0, Ljava/lang/NullPointerException;
-
-    invoke-direct {p0, v1}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
-
-    throw p0
-
-    :pswitch_0
-    sget-object v0, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->a1:[Lbc7;
-
-    invoke-virtual {p0}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->C0()Landroid/graphics/drawable/Drawable;
-
-    move-result-object p0
-
-    invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Ljava/lang/Integer;
-
-    invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
-
-    move-result p1
-
-    invoke-static {p0, p1}, Lgad;->j0(Landroid/graphics/drawable/Drawable;I)V
-
-    return-void
-
-    :pswitch_1
-    sget-object v0, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->a1:[Lbc7;
-
-    invoke-virtual {p0}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->G0()Landroid/view/View;
-
-    move-result-object p0
-
-    invoke-virtual {p0}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_1
-
-    check-cast v0, Landroid/widget/FrameLayout$LayoutParams;
-
-    invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Ljava/lang/Integer;
-
-    invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
-
-    move-result p1
-
-    iput p1, v0, Landroid/widget/FrameLayout$LayoutParams;->height:I
-
-    invoke-virtual {p0, v0}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
-
-    return-void
-
-    :cond_1
-    new-instance p0, Ljava/lang/NullPointerException;
-
-    invoke-direct {p0, v1}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
-
-    throw p0
-
-    :pswitch_2
-    sget-object v0, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->a1:[Lbc7;
-
-    invoke-virtual {p0}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->s0()Landroid/widget/ImageView;
-
-    move-result-object p0
-
-    invoke-virtual {p0}, Landroid/widget/ImageView;->getDrawable()Landroid/graphics/drawable/Drawable;
-
-    move-result-object p0
-
-    invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Ljava/lang/Integer;
-
-    invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
-
-    move-result p1
-
-    invoke-static {p0, p1}, Lgad;->j0(Landroid/graphics/drawable/Drawable;I)V
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
-.end method
+.field public static menu_tam_crop_image:I = 0x7f0f0017

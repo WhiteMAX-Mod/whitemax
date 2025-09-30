@@ -1,53 +1,59 @@
 .class public final Lw63;
-.super Lbu3;
+.super Lgi0;
 .source "SourceFile"
 
 
 # instance fields
-.field public X:Lo63;
+.field public final synthetic b:Lx63;
 
-.field public synthetic Y:Ljava/lang/Object;
-
-.field public final synthetic Z:Lc73;
-
-.field public o:Lc73;
-
-.field public o0:I
+.field public final synthetic c:Lt63;
 
 
 # direct methods
-.method public constructor <init>(Lc73;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(Lx63;Lt63;)V
     .locals 0
 
-    iput-object p1, p0, Lw63;->Z:Lc73;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, p2}, Lbu3;-><init>(Lkotlin/coroutines/Continuation;)V
+    iput-object p1, p0, Lw63;->b:Lx63;
+
+    iput-object p2, p0, Lw63;->c:Lt63;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+.method public final c(Ljava/lang/String;Ljava/lang/Object;Landroid/graphics/drawable/Animatable;)V
+    .locals 0
 
-    iput-object p1, p0, Lw63;->Y:Ljava/lang/Object;
+    iget-object p1, p0, Lw63;->b:Lx63;
 
-    iget p1, p0, Lw63;->o0:I
+    iget-object p2, p1, Lx63;->b:Landroid/view/ViewGroup;
 
-    const/high16 v0, -0x80000000
+    invoke-virtual {p2}, Landroid/view/View;->postInvalidate()V
 
-    or-int/2addr p1, v0
+    iget-object p1, p1, Lx63;->g:Lbc6;
 
-    iput p1, p0, Lw63;->o0:I
+    iget-object p0, p0, Lw63;->c:Lt63;
 
-    iget-object p1, p0, Lw63;->Z:Lc73;
-
-    const/4 v0, 0x0
-
-    invoke-static {p1, v0, p0}, Lc73;->a(Lc73;Lo63;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    invoke-interface {p0}, Lt63;->i()Ljava/lang/String;
 
     move-result-object p0
 
-    return-object p0
+    invoke-interface {p1, p0}, Lbc6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-void
+.end method
+
+.method public final d(Ljava/lang/String;Ljava/lang/Throwable;)V
+    .locals 0
+
+    const-string p0, "CollageImageAttachDraweeWrapper"
+
+    const-string p1, "onFailure"
+
+    invoke-static {p0, p1, p2}, Ljtg;->m(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    return-void
 .end method

@@ -1,91 +1,136 @@
 .class public final Lo28;
-.super Ljava/util/concurrent/ConcurrentLinkedQueue;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lr28;
+.implements Ljava/util/Iterator;
+.implements Lmi7;
 
 
 # instance fields
-.field public a:I
+.field public final a:J
 
-.field public final b:Ljava/util/concurrent/atomic/AtomicInteger;
+.field public final b:J
+
+.field public c:Z
+
+.field public o:J
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 1
+.method public constructor <init>(JJJ)V
+    .locals 2
 
-    invoke-direct {p0}, Ljava/util/concurrent/ConcurrentLinkedQueue;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    new-instance v0, Ljava/util/concurrent/atomic/AtomicInteger;
+    iput-wide p5, p0, Lo28;->a:J
 
-    invoke-direct {v0}, Ljava/util/concurrent/atomic/AtomicInteger;-><init>()V
+    iput-wide p3, p0, Lo28;->b:J
 
-    iput-object v0, p0, Lo28;->b:Ljava/util/concurrent/atomic/AtomicInteger;
+    const-wide/16 v0, 0x0
+
+    cmp-long p5, p5, v0
+
+    const/4 p6, 0x0
+
+    const/4 v0, 0x1
+
+    if-lez p5, :cond_0
+
+    cmp-long p5, p1, p3
+
+    if-gtz p5, :cond_1
+
+    :goto_0
+    move p6, v0
+
+    goto :goto_1
+
+    :cond_0
+    cmp-long p5, p1, p3
+
+    if-ltz p5, :cond_1
+
+    goto :goto_0
+
+    :cond_1
+    :goto_1
+    iput-boolean p6, p0, Lo28;->c:Z
+
+    if-eqz p6, :cond_2
+
+    goto :goto_2
+
+    :cond_2
+    move-wide p1, p3
+
+    :goto_2
+    iput-wide p1, p0, Lo28;->o:J
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final e()I
+.method public final hasNext()Z
     .locals 0
 
-    iget-object p0, p0, Lo28;->b:Ljava/util/concurrent/atomic/AtomicInteger;
-
-    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicInteger;->get()I
-
-    move-result p0
+    iget-boolean p0, p0, Lo28;->c:Z
 
     return p0
 .end method
 
-.method public final j()I
-    .locals 0
+.method public final next()Ljava/lang/Object;
+    .locals 4
 
-    iget p0, p0, Lo28;->a:I
+    iget-wide v0, p0, Lo28;->o:J
 
-    return p0
-.end method
+    iget-wide v2, p0, Lo28;->b:J
 
-.method public final m()V
-    .locals 0
+    cmp-long v2, v0, v2
 
-    invoke-virtual {p0}, Lo28;->poll()Ljava/lang/Object;
+    if-nez v2, :cond_1
 
-    return-void
-.end method
+    iget-boolean v2, p0, Lo28;->c:Z
 
-.method public final offer(Ljava/lang/Object;)Z
-    .locals 1
+    if-eqz v2, :cond_0
 
-    iget-object v0, p0, Lo28;->b:Ljava/util/concurrent/atomic/AtomicInteger;
+    const/4 v2, 0x0
 
-    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicInteger;->getAndIncrement()I
+    iput-boolean v2, p0, Lo28;->c:Z
 
-    invoke-super {p0, p1}, Ljava/util/concurrent/ConcurrentLinkedQueue;->offer(Ljava/lang/Object;)Z
-
-    move-result p0
-
-    return p0
-.end method
-
-.method public final poll()Ljava/lang/Object;
-    .locals 2
-
-    invoke-super {p0}, Ljava/util/concurrent/ConcurrentLinkedQueue;->poll()Ljava/lang/Object;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_0
-
-    iget v1, p0, Lo28;->a:I
-
-    add-int/lit8 v1, v1, 0x1
-
-    iput v1, p0, Lo28;->a:I
+    goto :goto_0
 
     :cond_0
-    return-object v0
+    new-instance p0, Ljava/util/NoSuchElementException;
+
+    invoke-direct {p0}, Ljava/util/NoSuchElementException;-><init>()V
+
+    throw p0
+
+    :cond_1
+    iget-wide v2, p0, Lo28;->a:J
+
+    add-long/2addr v2, v0
+
+    iput-wide v2, p0, Lo28;->o:J
+
+    :goto_0
+    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public final remove()V
+    .locals 1
+
+    new-instance p0, Ljava/lang/UnsupportedOperationException;
+
+    const-string v0, "Operation is not supported for read-only collection"
+
+    invoke-direct {p0, v0}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+
+    throw p0
 .end method

@@ -1,25 +1,25 @@
 .class public final Lgq1;
-.super Lbu3;
+.super Ljx3;
 .source "SourceFile"
 
 
 # instance fields
 .field public synthetic X:Ljava/lang/Object;
 
-.field public final synthetic Y:Lhq1;
+.field public final synthetic Y:Liq1;
 
 .field public Z:I
 
-.field public o:Lr7b;
+.field public o:Liq1;
 
 
 # direct methods
-.method public constructor <init>(Lhq1;Lbu3;)V
+.method public constructor <init>(Liq1;Ljx3;)V
     .locals 0
 
-    iput-object p1, p0, Lgq1;->Y:Lhq1;
+    iput-object p1, p0, Lgq1;->Y:Liq1;
 
-    invoke-direct {p0, p2}, Lbu3;-><init>(Lkotlin/coroutines/Continuation;)V
+    invoke-direct {p0, p2}, Ljx3;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
@@ -27,7 +27,7 @@
 
 # virtual methods
 .method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+    .locals 2
 
     iput-object p1, p0, Lgq1;->X:Ljava/lang/Object;
 
@@ -39,11 +39,11 @@
 
     iput p1, p0, Lgq1;->Z:I
 
-    iget-object p1, p0, Lgq1;->Y:Lhq1;
+    iget-object p1, p0, Lgq1;->Y:Liq1;
 
-    const/4 v0, 0x0
+    const-wide/16 v0, 0x0
 
-    invoke-virtual {p1, v0, p0}, Lhq1;->i(Lr7b;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    invoke-virtual {p1, v0, v1, p0}, Liq1;->d(JLjx3;)Ljava/lang/Object;
 
     move-result-object p0
 

@@ -1,32 +1,48 @@
 .class public final Ljfd;
-.super Lsod;
-.source "SourceFile"
+.super Ljx3;
 
 
-# virtual methods
-.method public final C()V
+# instance fields
+.field public X:I
+
+.field public final synthetic Y:Lifd;
+
+.field public synthetic o:Ljava/lang/Object;
+
+
+# direct methods
+.method public constructor <init>(Lifd;Lkotlin/coroutines/Continuation;)V
     .locals 0
+
+    iput-object p1, p0, Ljfd;->Y:Lifd;
+
+    invoke-direct {p0, p2}, Ljx3;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
-.method public final x(Lol7;)V
+
+# virtual methods
+.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
 
-    instance-of v0, p1, Lazc;
+    iput-object p1, p0, Ljfd;->o:Ljava/lang/Object;
 
-    if-nez v0, :cond_0
+    iget p1, p0, Ljfd;->X:I
 
-    return-void
+    const/high16 v0, -0x80000000
 
-    :cond_0
-    iget-object p0, p0, Lccc;->a:Landroid/view/View;
+    or-int/2addr p1, v0
 
-    check-cast p0, Lded;
+    iput p1, p0, Ljfd;->X:I
 
-    check-cast p1, Lsdd;
+    iget-object p1, p0, Ljfd;->Y:Lifd;
 
-    invoke-virtual {p0, p1}, Lded;->setModelItem(Lsdd;)V
+    const/4 v0, 0x0
 
-    return-void
+    invoke-virtual {p1, v0, p0}, Lifd;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p0
+
+    return-object p0
 .end method

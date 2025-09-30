@@ -1,99 +1,102 @@
-.class public final Lyt;
-.super Llje;
+.class public final synthetic Lyt;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lpm3;
 
 
 # instance fields
-.field public X:J
+.field public final synthetic a:I
 
-.field public o:Z
+.field public final synthetic b:Lzg2;
 
 
 # direct methods
-.method public constructor <init>(Ldx8;)V
+.method public synthetic constructor <init>(Lzg2;I)V
     .locals 0
 
-    invoke-direct {p0, p1}, Llje;-><init>(Ldx8;)V
+    iput p2, p0, Lyt;->a:I
+
+    iput-object p1, p0, Lyt;->b:Lzg2;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final c(Ldx8;Ljava/lang/String;)V
+.method public final accept(Ljava/lang/Object;)V
     .locals 2
 
-    invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    iget v0, p0, Lyt;->a:I
 
-    const-string v0, "success"
+    check-cast p1, Ljava/lang/Throwable;
 
-    invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    packed-switch v0, :pswitch_data_0
 
-    move-result v0
+    iget-object p0, p0, Lyt;->b:Lzg2;
 
-    if-nez v0, :cond_1
+    iget-object v0, p0, Lzg2;->a:Ljava/lang/String;
 
-    const-string v0, "updateTime"
+    const-string v1, "load: exception"
 
-    invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-static {v0, v1, p1}, Ljtg;->m(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    move-result p2
+    iget-object p0, p0, Lzg2;->Y:Lq95;
 
-    if-nez p2, :cond_0
+    new-instance v0, Lru/ok/tamtam/util/HandledException;
 
-    invoke-virtual {p1}, Ldx8;->B()V
+    invoke-direct {v0, p1}, Lru/ok/tamtam/util/HandledException;-><init>(Ljava/lang/Throwable;)V
 
-    return-void
-
-    :cond_0
-    const-wide/16 v0, 0x0
-
-    invoke-static {p1, v0, v1}, Lxq7;->c0(Ldx8;J)J
-
-    move-result-wide p1
-
-    iput-wide p1, p0, Lyt;->X:J
+    invoke-interface {p0, v0}, Lq95;->a(Ljava/lang/Throwable;)V
 
     return-void
 
-    :cond_1
-    invoke-static {p1}, Lxq7;->W(Ldx8;)Z
+    :pswitch_0
+    iget-object p0, p0, Lyt;->b:Lzg2;
 
-    move-result p1
+    iget-object p0, p0, Lzg2;->r0:Lbu;
 
-    iput-boolean p1, p0, Lyt;->o:Z
+    invoke-virtual {p0}, Lbu;->b()V
 
     return-void
-.end method
 
-.method public final toString()Ljava/lang/String;
-    .locals 4
+    :pswitch_1
+    iget-object p0, p0, Lyt;->b:Lzg2;
 
-    iget-boolean v0, p0, Lyt;->o:Z
+    iget-object v0, p0, Lzg2;->a:Ljava/lang/String;
 
-    iget-wide v1, p0, Lyt;->X:J
+    const-string v1, "loadPrev: exception"
 
-    new-instance p0, Ljava/lang/StringBuilder;
+    invoke-static {v0, v1, p1}, Ljtg;->m(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    const-string v3, "Response{success="
+    iget-object p0, p0, Lzg2;->Y:Lq95;
 
-    invoke-direct {p0, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    new-instance v0, Lru/ok/tamtam/util/HandledException;
 
-    invoke-virtual {p0, v0}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+    invoke-direct {v0, p1}, Lru/ok/tamtam/util/HandledException;-><init>(Ljava/lang/Throwable;)V
 
-    const-string v0, ", updateTime="
+    invoke-interface {p0, v0}, Lq95;->a(Ljava/lang/Throwable;)V
 
-    invoke-virtual {p0, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    return-void
 
-    invoke-virtual {p0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    :pswitch_2
+    iget-object p0, p0, Lyt;->b:Lzg2;
 
-    const-string v0, "}"
+    iget-object p0, p0, Lzg2;->s0:Lbu;
 
-    invoke-virtual {p0, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {p0}, Lbu;->b()V
 
-    invoke-virtual {p0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    return-void
 
-    move-result-object p0
+    nop
 
-    return-object p0
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

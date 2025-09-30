@@ -1,180 +1,155 @@
 .class public final Ln81;
-.super Ljof;
+.super Lj2e;
 .source "SourceFile"
 
 
 # instance fields
-.field public final X:Lje7;
+.field public final E0:Lsk6;
 
-.field public final Y:Ljava/lang/Object;
-
-.field public final Z:Lazd;
-
-.field public final b:Lje7;
-
-.field public final c:Lev5;
-
-.field public final o:Lhg1;
-
-.field public final o0:Lazd;
-
-.field public final p0:Lazd;
-
-.field public final q0:Lazd;
-
-.field public final r0:Lazd;
+.field public final F0:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Lje7;Lje7;Lev5;Lhg1;)V
+.method public constructor <init>(Len3;Lsk6;)V
     .locals 0
 
-    invoke-direct {p0}, Ljof;-><init>()V
+    invoke-direct {p0, p1}, Lzoc;-><init>(Landroid/view/View;)V
 
-    iput-object p2, p0, Ln81;->b:Lje7;
+    iput-object p2, p0, Ln81;->E0:Lsk6;
 
-    iput-object p3, p0, Ln81;->c:Lev5;
-
-    iput-object p4, p0, Ln81;->o:Lhg1;
-
-    iput-object p1, p0, Ln81;->X:Lje7;
-
-    new-instance p1, Lw5;
+    new-instance p1, Lk;
 
     const/16 p2, 0x19
 
-    invoke-direct {p1, p2, p0}, Lw5;-><init>(ILjava/lang/Object;)V
+    invoke-direct {p1, p2, p0}, Lk;-><init>(ILjava/lang/Object;)V
 
     const/4 p2, 0x3
 
-    invoke-static {p2, p1}, Lkhg;->o(ILv56;)Lje7;
+    invoke-static {p2, p1}, Lcb7;->G(ILzb6;)Lcl7;
 
     move-result-object p1
 
-    iput-object p1, p0, Ln81;->Y:Ljava/lang/Object;
-
-    new-instance p1, Ll81;
-
-    invoke-direct {p1}, Ll81;-><init>()V
-
-    invoke-static {p1}, Lbzd;->a(Ljava/lang/Object;)Lazd;
-
-    move-result-object p1
-
-    iput-object p1, p0, Ln81;->Z:Lazd;
-
-    iput-object p1, p0, Ln81;->o0:Lazd;
-
-    new-instance p1, Lis1;
-
-    sget-object p2, Lgz4;->a:Lgz4;
-
-    const/4 p3, 0x0
-
-    invoke-direct {p1, p2, p3, p3}, Lis1;-><init>(Ljava/util/List;ZZ)V
-
-    invoke-static {p1}, Lbzd;->a(Ljava/lang/Object;)Lazd;
-
-    move-result-object p1
-
-    iput-object p1, p0, Ln81;->p0:Lazd;
-
-    iput-object p1, p0, Ln81;->q0:Lazd;
-
-    sget-object p1, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
-
-    invoke-static {p1}, Lbzd;->a(Ljava/lang/Object;)Lazd;
-
-    move-result-object p1
-
-    iput-object p1, p0, Ln81;->r0:Lazd;
-
-    new-instance p2, Lk81;
-
-    const/4 p3, 0x0
-
-    invoke-direct {p2, p0, p3}, Lk81;-><init>(Ln81;Lkotlin/coroutines/Continuation;)V
-
-    new-instance p3, Lgp5;
-
-    const/4 p4, 0x1
-
-    invoke-direct {p3, p1, p2, p4}, Lgp5;-><init>(Lzm5;Ll66;I)V
-
-    iget-object p0, p0, Ljof;->a:Lkotlinx/coroutines/internal/ContextScope;
-
-    invoke-static {p3, p0}, Lsgg;->L(Lzm5;Lox3;)Ldwd;
+    iput-object p1, p0, Ln81;->F0:Ljava/lang/Object;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final q(JLkl6;)V
-    .locals 5
+.method public final F(Lhs6;)V
+    .locals 6
 
-    :cond_0
-    iget-object v0, p0, Ln81;->Z:Lazd;
+    iget v0, p1, Lhs6;->t0:I
 
-    invoke-virtual {v0}, Lazd;->getValue()Ljava/lang/Object;
+    iget-wide v1, p1, Lhs6;->b:J
+
+    iget-object v3, p0, Lzoc;->a:Landroid/view/View;
+
+    check-cast v3, Len3;
+
+    iget-wide v4, p1, Lhs6;->v0:J
+
+    invoke-static {v4, v5}, Ljava/lang/Long;->hashCode(J)I
+
+    move-result v4
+
+    invoke-virtual {v3, v4}, Landroidx/constraintlayout/widget/ConstraintLayout;->setId(I)V
+
+    iget-object v4, p1, Lhs6;->Y:Ljava/lang/String;
+
+    invoke-virtual {v3, v4}, Len3;->setTitle(Ljava/lang/CharSequence;)V
+
+    iget-object v4, p1, Lhs6;->u0:Lzr6;
+
+    instance-of v4, v4, Lwr6;
+
+    const/4 v5, 0x0
+
+    if-eqz v4, :cond_0
+
+    invoke-virtual {v3, v1, v2, v5, v5}, Len3;->C(JLjava/lang/CharSequence;Ljava/lang/String;)V
+
+    iget-object v1, p0, Ln81;->F0:Ljava/lang/Object;
+
+    invoke-interface {v1}, Lcl7;->getValue()Ljava/lang/Object;
 
     move-result-object v1
 
-    move-object v2, v1
+    check-cast v1, Ljd0;
 
-    check-cast v2, Ll81;
-
-    iget-object v3, v2, Ll81;->b:Ljava/util/Map;
-
-    new-instance v4, Ljava/util/LinkedHashMap;
-
-    invoke-direct {v4, v3}, Ljava/util/LinkedHashMap;-><init>(Ljava/util/Map;)V
-
-    invoke-static {p1, p2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v3
-
-    invoke-interface {v4, v3}, Ljava/util/Map;->containsKey(Ljava/lang/Object;)Z
-
-    move-result v3
-
-    if-eqz v3, :cond_1
-
-    invoke-static {p1, p2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v3
-
-    invoke-interface {v4, v3}, Ljava/util/Map;->remove(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v3
-
-    check-cast v3, Lkl6;
+    invoke-virtual {v3, v1}, Len3;->setAvatarOverlay(Ljd0;)V
 
     goto :goto_0
 
+    :cond_0
+    invoke-virtual {v3, v5}, Len3;->setAvatarOverlay(Ljd0;)V
+
+    iget-object v4, p1, Lhs6;->c:Ljava/lang/CharSequence;
+
+    iget-object v5, p1, Lhs6;->o:Ljava/lang/String;
+
+    if-nez v5, :cond_1
+
+    const-string v5, ""
+
     :cond_1
-    invoke-static {p1, p2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v3
-
-    invoke-interface {v4, v3, p3}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v3
-
-    check-cast v3, Lkl6;
+    invoke-virtual {v3, v1, v2, v4, v5}, Len3;->C(JLjava/lang/CharSequence;Ljava/lang/String;)V
 
     :goto_0
-    iget-boolean v2, v2, Ll81;->a:Z
+    iget-object v1, p1, Lhs6;->s0:Ljava/lang/CharSequence;
 
-    new-instance v3, Ll81;
+    invoke-virtual {v3, v1}, Len3;->setDescription(Ljava/lang/CharSequence;)V
 
-    invoke-direct {v3, v2, v4}, Ll81;-><init>(ZLjava/util/Map;)V
+    iget-object v1, p1, Lhs6;->Z:Ljava/lang/String;
 
-    invoke-virtual {v0, v1, v3}, Lazd;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-virtual {v3, v1}, Len3;->setTime(Ljava/lang/CharSequence;)V
 
-    move-result v0
+    iget-boolean v1, p1, Lhs6;->r0:Z
 
-    if-eqz v0, :cond_0
+    invoke-virtual {v3, v1}, Len3;->B(Z)V
+
+    const/4 v1, 0x0
+
+    const/4 v2, 0x1
+
+    if-ne v0, v2, :cond_2
+
+    move v4, v2
+
+    goto :goto_1
+
+    :cond_2
+    move v4, v1
+
+    :goto_1
+    invoke-virtual {v3, v4}, Len3;->y(Z)V
+
+    const/4 v4, 0x2
+
+    if-ne v0, v4, :cond_3
+
+    move v1, v2
+
+    :cond_3
+    invoke-virtual {v3, v1}, Len3;->z(Z)V
+
+    iget-wide v0, p1, Lhs6;->a:J
+
+    iput-wide v0, v3, Len3;->Q0:J
+
+    iget-object p0, p0, Ln81;->E0:Lsk6;
+
+    iput-object p0, v3, Len3;->O0:Lsk6;
+
+    return-void
+.end method
+
+.method public final bridge synthetic y(Lts7;)V
+    .locals 0
+
+    check-cast p1, Lhs6;
+
+    invoke-virtual {p0, p1}, Ln81;->F(Lhs6;)V
 
     return-void
 .end method

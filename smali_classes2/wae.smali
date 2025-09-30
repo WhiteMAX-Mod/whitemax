@@ -1,127 +1,126 @@
-.class public final Lwae;
+.class public final synthetic Lwae;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Leb4;
+
 
 # instance fields
-.field public final a:Lvae;
-
-.field public final b:Ljava/util/ArrayList;
+.field public final synthetic a:I
 
 
 # direct methods
-.method public constructor <init>(Lvae;Ljava/util/ArrayList;)V
+.method public synthetic constructor <init>(I)V
     .locals 0
 
+    iput p1, p0, Lwae;->a:I
+
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lwae;->a:Lvae;
-
-    iput-object p2, p0, Lwae;->b:Ljava/util/ArrayList;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 2
+.method public final a()Ljava/lang/Object;
+    .locals 7
 
-    if-ne p0, p1, :cond_0
+    iget p0, p0, Lwae;->a:I
 
-    goto :goto_1
+    packed-switch p0, :pswitch_data_0
 
-    :cond_0
-    instance-of v0, p1, Lwae;
+    new-instance p0, Lone/me/webview/FaqWebViewWidget;
 
-    if-nez v0, :cond_1
-
-    goto :goto_0
-
-    :cond_1
-    check-cast p1, Lwae;
-
-    iget-object v0, p0, Lwae;->a:Lvae;
-
-    iget-object v1, p1, Lwae;->a:Lvae;
-
-    if-eq v0, v1, :cond_2
-
-    goto :goto_0
-
-    :cond_2
-    iget-object p0, p0, Lwae;->b:Ljava/util/ArrayList;
-
-    iget-object p1, p1, Lwae;->b:Ljava/util/ArrayList;
-
-    invoke-virtual {p0, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
-
-    move-result p0
-
-    if-nez p0, :cond_3
-
-    :goto_0
-    const/4 p0, 0x0
-
-    return p0
-
-    :cond_3
-    :goto_1
-    const/4 p0, 0x1
-
-    return p0
-.end method
-
-.method public final hashCode()I
-    .locals 1
-
-    iget-object v0, p0, Lwae;->a:Lvae;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
-
-    move-result v0
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget-object p0, p0, Lwae;->b:Ljava/util/ArrayList;
-
-    invoke-virtual {p0}, Ljava/lang/Object;->hashCode()I
-
-    move-result p0
-
-    add-int/2addr p0, v0
-
-    return p0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 2
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "SuggestionSearchResult(state="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v1, p0, Lwae;->a:Lvae;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", mentions="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object p0, p0, Lwae;->b:Ljava/util/ArrayList;
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string p0, ")"
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
+    invoke-direct {p0}, Lone/me/webview/FaqWebViewWidget;-><init>()V
 
     return-object p0
+
+    :pswitch_0
+    new-instance p0, Lone/me/webapp/settings/WebAppsSettingScreen;
+
+    invoke-direct {p0}, Lone/me/webapp/settings/WebAppsSettingScreen;-><init>()V
+
+    return-object p0
+
+    :pswitch_1
+    new-instance p0, Lone/me/settings/twofa/restore/ProfileDeletionInfoScreen;
+
+    invoke-direct {p0}, Lone/me/settings/twofa/restore/ProfileDeletionInfoScreen;-><init>()V
+
+    return-object p0
+
+    :pswitch_2
+    new-instance v0, Lone/me/stickerssettings/stickersscreen/StickersScreen;
+
+    const/4 v4, 0x2
+
+    const/4 v5, 0x0
+
+    sget-object v1, Lohe;->c:Lohe;
+
+    const-wide/16 v2, 0x0
+
+    invoke-direct/range {v0 .. v5}, Lone/me/stickerssettings/stickersscreen/StickersScreen;-><init>(Lohe;JILld4;)V
+
+    return-object v0
+
+    :pswitch_3
+    new-instance v1, Lone/me/stickerssettings/stickersscreen/StickersScreen;
+
+    const/4 v5, 0x2
+
+    const/4 v6, 0x0
+
+    sget-object v2, Lohe;->b:Lohe;
+
+    const-wide/16 v3, 0x0
+
+    invoke-direct/range {v1 .. v6}, Lone/me/stickerssettings/stickersscreen/StickersScreen;-><init>(Lohe;JILld4;)V
+
+    return-object v1
+
+    :pswitch_4
+    new-instance p0, Lone/me/stickerssettings/StickersSettingsScreen;
+
+    invoke-direct {p0}, Lone/me/stickerssettings/StickersSettingsScreen;-><init>()V
+
+    return-object p0
+
+    :pswitch_5
+    new-instance p0, Lone/me/startconversation/chattitleicon/ChatTitleIconScreen;
+
+    const/4 v0, 0x0
+
+    sget-object v1, Lyae;->c:Lyae;
+
+    invoke-direct {p0, v0, v1}, Lone/me/startconversation/chattitleicon/ChatTitleIconScreen;-><init>([JLyae;)V
+
+    return-object p0
+
+    :pswitch_6
+    new-instance p0, Lone/me/startconversation/chat/PickChatMembers;
+
+    invoke-direct {p0}, Lone/me/startconversation/chat/PickChatMembers;-><init>()V
+
+    return-object p0
+
+    :pswitch_7
+    new-instance p0, Lone/me/startconversation/StartConversationScreen;
+
+    invoke-direct {p0}, Lone/me/startconversation/StartConversationScreen;-><init>()V
+
+    return-object p0
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_7
+        :pswitch_6
+        :pswitch_5
+        :pswitch_4
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

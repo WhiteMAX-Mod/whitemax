@@ -1,80 +1,34 @@
-.class public final Lkre;
-.super Lqde;
+.class public final synthetic Lkre;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Ll66;
+.implements Landroid/view/PixelCopy$OnPixelCopyFinishedListener;
 
 
 # instance fields
-.field public synthetic X:Ljava/lang/Object;
-
-.field public final synthetic Y:Lone/me/devmenu/threadsviewer/ThreadsStateViewerScreen;
+.field public final synthetic a:Ljava/util/concurrent/Semaphore;
 
 
 # direct methods
-.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/devmenu/threadsviewer/ThreadsStateViewerScreen;)V
+.method public synthetic constructor <init>(Ljava/util/concurrent/Semaphore;)V
     .locals 0
 
-    iput-object p2, p0, Lkre;->Y:Lone/me/devmenu/threadsviewer/ThreadsStateViewerScreen;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 p2, 0x2
-
-    invoke-direct {p0, p2, p1}, Lqde;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-object p1, p0, Lkre;->a:Ljava/util/concurrent/Semaphore;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+.method public final onPixelCopyFinished(I)V
     .locals 0
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    iget-object p0, p0, Lkre;->a:Ljava/util/concurrent/Semaphore;
 
-    invoke-virtual {p0, p1, p2}, Lkre;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    invoke-virtual {p0}, Ljava/util/concurrent/Semaphore;->release()V
 
-    move-result-object p0
-
-    check-cast p0, Lkre;
-
-    sget-object p1, Le5f;->a:Le5f;
-
-    invoke-virtual {p0, p1}, Lkre;->o(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p1
-.end method
-
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 1
-
-    new-instance v0, Lkre;
-
-    iget-object p0, p0, Lkre;->Y:Lone/me/devmenu/threadsviewer/ThreadsStateViewerScreen;
-
-    invoke-direct {v0, p2, p0}, Lkre;-><init>(Lkotlin/coroutines/Continuation;Lone/me/devmenu/threadsviewer/ThreadsStateViewerScreen;)V
-
-    iput-object p1, v0, Lkre;->X:Ljava/lang/Object;
-
-    return-object v0
-.end method
-
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
-
-    invoke-static {p1}, Lsgg;->Z(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Lkre;->X:Ljava/lang/Object;
-
-    check-cast p1, Ljava/util/List;
-
-    iget-object p0, p0, Lkre;->Y:Lone/me/devmenu/threadsviewer/ThreadsStateViewerScreen;
-
-    iget-object p0, p0, Lone/me/devmenu/threadsviewer/ThreadsStateViewerScreen;->o:Lmv5;
-
-    invoke-virtual {p0, p1}, Lhl7;->E(Ljava/util/List;)V
-
-    sget-object p0, Le5f;->a:Le5f;
-
-    return-object p0
+    return-void
 .end method

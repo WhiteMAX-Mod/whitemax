@@ -1,140 +1,41 @@
 .class public final Loje;
-.super Ljava/lang/Object;
+.super Lcb4;
 .source "SourceFile"
 
-# interfaces
-.implements Lmje;
 
+# static fields
+.field public static final b:Loje;
 
-# instance fields
-.field public final a:Lje7;
-
-.field public final b:Lwfe;
-
-.field public final c:Lwfe;
-
-.field public final d:Lwfe;
-
-.field public final e:Lwfe;
-
-.field public final f:Lwfe;
-
-.field public final g:Lwfe;
-
-.field public final h:Lwfe;
+.field public static final c:Lxa4;
 
 
 # direct methods
-.method public constructor <init>(Lje7;Lwfe;)V
-    .locals 1
+.method static constructor <clinit>()V
+    .locals 6
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Loje;
 
-    iput-object p1, p0, Loje;->a:Lje7;
+    invoke-direct {v0}, Lcb4;-><init>()V
 
-    iput-object p2, p0, Loje;->f:Lwfe;
+    sput-object v0, Loje;->b:Loje;
 
-    new-instance p2, Lnje;
+    const/4 v1, 0x0
 
-    const/4 v0, 0x0
+    new-array v2, v1, [Ljava/lang/String;
 
-    invoke-direct {p2, p1, v0}, Lnje;-><init>(Lje7;I)V
+    const/16 v5, 0xe
 
-    new-instance v0, Lwfe;
+    const/4 v4, 0x0
 
-    invoke-direct {v0, p2}, Lwfe;-><init>(Lv56;)V
+    const-string v1, ":stickers/showcase"
 
-    iput-object v0, p0, Loje;->c:Lwfe;
+    const/4 v3, 0x0
 
-    new-instance p2, Lnje;
+    invoke-static/range {v0 .. v5}, Lcb4;->a(Lcb4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;II)Lxa4;
 
-    const/4 v0, 0x1
+    move-result-object v0
 
-    invoke-direct {p2, p1, v0}, Lnje;-><init>(Lje7;I)V
-
-    new-instance v0, Lwfe;
-
-    invoke-direct {v0, p2}, Lwfe;-><init>(Lv56;)V
-
-    iput-object v0, p0, Loje;->d:Lwfe;
-
-    new-instance p2, Lnje;
-
-    const/4 v0, 0x2
-
-    invoke-direct {p2, p1, v0}, Lnje;-><init>(Lje7;I)V
-
-    new-instance v0, Lwfe;
-
-    invoke-direct {v0, p2}, Lwfe;-><init>(Lv56;)V
-
-    iput-object v0, p0, Loje;->b:Lwfe;
-
-    new-instance p2, Lnje;
-
-    const/4 v0, 0x3
-
-    invoke-direct {p2, p1, v0}, Lnje;-><init>(Lje7;I)V
-
-    new-instance v0, Lwfe;
-
-    invoke-direct {v0, p2}, Lwfe;-><init>(Lv56;)V
-
-    iput-object v0, p0, Loje;->e:Lwfe;
-
-    new-instance p2, Lnje;
-
-    const/4 v0, 0x4
-
-    invoke-direct {p2, p1, v0}, Lnje;-><init>(Lje7;I)V
-
-    new-instance v0, Lwfe;
-
-    invoke-direct {v0, p2}, Lwfe;-><init>(Lv56;)V
-
-    iput-object v0, p0, Loje;->g:Lwfe;
-
-    new-instance p2, Lnje;
-
-    const/4 v0, 0x5
-
-    invoke-direct {p2, p1, v0}, Lnje;-><init>(Lje7;I)V
-
-    new-instance p1, Lwfe;
-
-    invoke-direct {p1, p2}, Lwfe;-><init>(Lv56;)V
-
-    iput-object p1, p0, Loje;->h:Lwfe;
+    sput-object v0, Loje;->c:Lxa4;
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final a()Lgsc;
-    .locals 0
-
-    iget-object p0, p0, Loje;->b:Lwfe;
-
-    invoke-virtual {p0}, Lwfe;->getValue()Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, Lgsc;
-
-    return-object p0
-.end method
-
-.method public final b()Lgsc;
-    .locals 0
-
-    iget-object p0, p0, Loje;->f:Lwfe;
-
-    invoke-virtual {p0}, Lwfe;->getValue()Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, Lgsc;
-
-    return-object p0
 .end method

@@ -1,58 +1,24 @@
-.class public final Li8;
+.class public final synthetic Li8;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lx56;
-
-
-# static fields
-.field public static final b:Li8;
-
-.field public static final c:Li8;
-
-.field public static final o:Li8;
+.implements Lbc6;
 
 
 # instance fields
 .field public final synthetic a:I
 
+.field public final synthetic b:Lera;
+
 
 # direct methods
-.method static synthetic constructor <clinit>()V
-    .locals 2
-
-    new-instance v0, Li8;
-
-    const/4 v1, 0x0
-
-    invoke-direct {v0, v1}, Li8;-><init>(I)V
-
-    sput-object v0, Li8;->b:Li8;
-
-    new-instance v0, Li8;
-
-    const/4 v1, 0x1
-
-    invoke-direct {v0, v1}, Li8;-><init>(I)V
-
-    sput-object v0, Li8;->c:Li8;
-
-    new-instance v0, Li8;
-
-    const/4 v1, 0x2
-
-    invoke-direct {v0, v1}, Li8;-><init>(I)V
-
-    sput-object v0, Li8;->o:Li8;
-
-    return-void
-.end method
-
-.method public synthetic constructor <init>(I)V
+.method public synthetic constructor <init>(ILera;)V
     .locals 0
 
     iput p1, p0, Li8;->a:I
+
+    iput-object p2, p0, Li8;->b:Lera;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -64,165 +30,74 @@
 .method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
 
-    iget p0, p0, Li8;->a:I
+    iget v0, p0, Li8;->a:I
 
-    packed-switch p0, :pswitch_data_0
+    packed-switch v0, :pswitch_data_0
 
-    check-cast p1, Ldx8;
+    check-cast p1, Lera;
 
-    :try_start_0
-    invoke-static {p1}, Lxq7;->f0(Ldx8;)Ljava/lang/String;
+    iget-object p0, p0, Li8;->b:Lera;
+
+    invoke-interface {p0}, Lera;->b()Lie0;
 
     move-result-object p0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    goto :goto_1
+    iget p0, p0, Lie0;->m:I
 
-    :catchall_0
-    move-exception p0
+    invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    const-string p1, "ServerPayload/PayloadCatching"
+    move-result-object p0
 
-    const-string v0, "payloadCatching catch error"
+    return-object p0
 
-    invoke-static {p1, v0, p0}, Lg47;->O(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    :pswitch_0
+    check-cast p1, Lera;
 
-    sget-object p1, La6d;->a:Ljava/util/concurrent/CopyOnWriteArraySet;
+    iget-object p0, p0, Li8;->b:Lera;
 
-    invoke-virtual {p1}, Ljava/util/concurrent/CopyOnWriteArraySet;->iterator()Ljava/util/Iterator;
+    invoke-interface {p0}, Lera;->getIcon()Lqy6;
 
-    move-result-object p1
+    move-result-object p0
 
-    :goto_0
-    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
+    iget p0, p0, Lqy6;->h:I
 
-    move-result v0
+    invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object p0
+
+    return-object p0
+
+    :pswitch_1
+    iget-object p0, p0, Li8;->b:Lera;
+
+    check-cast p1, Landroid/view/View;
+
+    invoke-static {p1, p0}, Ljk7;->y(Landroid/view/View;Lera;)V
+
+    sget-object p0, Lylf;->a:Lylf;
+
+    return-object p0
+
+    :pswitch_2
+    check-cast p1, Landroid/view/View;
+
+    instance-of v0, p1, Lx3f;
 
     if-eqz v0, :cond_0
 
-    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    iget-object p0, p0, Li8;->b:Lera;
 
-    move-result-object v0
+    invoke-static {p1, p0}, Ljk7;->y(Landroid/view/View;Lera;)V
 
-    check-cast v0, Li2a;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    invoke-static {p0}, Li2a;->a(Ljava/lang/Throwable;)V
+    const/4 p0, 0x0
 
     goto :goto_0
 
     :cond_0
-    sget p1, Lrqc;->a:I
+    const/4 p0, 0x1
 
-    invoke-static {p1}, Lzt1;->s(I)I
-
-    move-result p1
-
-    if-eqz p1, :cond_2
-
-    const/4 v0, 0x1
-
-    if-eq p1, v0, :cond_1
-
-    new-instance p0, Lkotlin/NoWhenBranchMatchedException;
-
-    invoke-direct {p0}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
-
-    throw p0
-
-    :cond_1
-    throw p0
-
-    :cond_2
-    const/4 p0, 0x0
-
-    :goto_1
-    return-object p0
-
-    :pswitch_0
-    check-cast p1, Ldx8;
-
-    :try_start_1
-    invoke-static {p1}, Lxq7;->f0(Ldx8;)Ljava/lang/String;
-
-    move-result-object p0
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_1
-
-    goto :goto_3
-
-    :catchall_1
-    move-exception p0
-
-    const-string p1, "ServerPayload/PayloadCatching"
-
-    const-string v0, "payloadCatching catch error"
-
-    invoke-static {p1, v0, p0}, Lg47;->O(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    sget-object p1, La6d;->a:Ljava/util/concurrent/CopyOnWriteArraySet;
-
-    invoke-virtual {p1}, Ljava/util/concurrent/CopyOnWriteArraySet;->iterator()Ljava/util/Iterator;
-
-    move-result-object p1
-
-    :goto_2
-    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_3
-
-    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Li2a;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    invoke-static {p0}, Li2a;->a(Ljava/lang/Throwable;)V
-
-    goto :goto_2
-
-    :cond_3
-    sget p1, Lrqc;->a:I
-
-    invoke-static {p1}, Lzt1;->s(I)I
-
-    move-result p1
-
-    if-eqz p1, :cond_5
-
-    const/4 v0, 0x1
-
-    if-eq p1, v0, :cond_4
-
-    new-instance p0, Lkotlin/NoWhenBranchMatchedException;
-
-    invoke-direct {p0}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
-
-    throw p0
-
-    :cond_4
-    throw p0
-
-    :cond_5
-    const/4 p0, 0x0
-
-    :goto_3
-    return-object p0
-
-    :pswitch_1
-    check-cast p1, Ljava/lang/ref/WeakReference;
-
-    invoke-virtual {p1}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
-
-    move-result-object p0
-
-    invoke-static {p0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+    :goto_0
+    invoke-static {p0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object p0
 
@@ -230,6 +105,7 @@
 
     :pswitch_data_0
     .packed-switch 0x0
+        :pswitch_2
         :pswitch_1
         :pswitch_0
     .end packed-switch

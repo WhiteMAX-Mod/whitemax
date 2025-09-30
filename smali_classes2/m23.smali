@@ -1,98 +1,48 @@
 .class public final Lm23;
-.super Landroid/transition/Transition;
-.source "SourceFile"
+.super Ljx3;
 
 
 # instance fields
-.field public final a:Landroid/graphics/Rect;
+.field public X:I
 
-.field public final b:Z
+.field public final synthetic Y:Lmy2;
+
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Landroid/graphics/Rect;Z)V
+.method public constructor <init>(Lmy2;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    invoke-direct {p0}, Landroid/transition/Transition;-><init>()V
+    iput-object p1, p0, Lm23;->Y:Lmy2;
 
-    iput-object p1, p0, Lm23;->a:Landroid/graphics/Rect;
-
-    iput-boolean p2, p0, Lm23;->b:Z
+    invoke-direct {p0, p2}, Ljx3;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final captureEndValues(Landroid/transition/TransitionValues;)V
-    .locals 0
+.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    return-void
-.end method
+    iput-object p1, p0, Lm23;->o:Ljava/lang/Object;
 
-.method public final captureStartValues(Landroid/transition/TransitionValues;)V
-    .locals 0
+    iget p1, p0, Lm23;->X:I
 
-    return-void
-.end method
+    const/high16 v0, -0x80000000
 
-.method public final createAnimator(Landroid/view/ViewGroup;Landroid/transition/TransitionValues;Landroid/transition/TransitionValues;)Landroid/animation/Animator;
-    .locals 2
+    or-int/2addr p1, v0
 
-    if-eqz p2, :cond_1
+    iput p1, p0, Lm23;->X:I
 
-    if-eqz p3, :cond_1
+    iget-object p1, p0, Lm23;->Y:Lmy2;
 
-    iget-object p1, p2, Landroid/transition/TransitionValues;->view:Landroid/view/View;
+    const/4 v0, 0x0
 
-    instance-of p1, p1, Lya6;
+    invoke-virtual {p1, v0, p0}, Lmy2;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
-    if-nez p1, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    const/4 p1, 0x2
-
-    new-array p1, p1, [F
-
-    fill-array-data p1, :array_0
-
-    invoke-static {p1}, Landroid/animation/ValueAnimator;->ofFloat([F)Landroid/animation/ValueAnimator;
-
-    move-result-object p1
-
-    new-instance p3, Lhg;
-
-    const/4 v0, 0x3
-
-    invoke-direct {p3, p0, v0, p2}, Lhg;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
-
-    invoke-virtual {p1, p3}, Landroid/animation/ValueAnimator;->addUpdateListener(Landroid/animation/ValueAnimator$AnimatorUpdateListener;)V
-
-    new-instance p3, Lxg;
-
-    const/4 v0, 0x1
-
-    const/4 v1, 0x0
-
-    invoke-direct {p3, p0, p2, v1, v0}, Lxg;-><init>(Ljava/lang/Object;Ljava/lang/Object;ZI)V
-
-    invoke-virtual {p1, p3}, Landroid/animation/Animator;->addListener(Landroid/animation/Animator$AnimatorListener;)V
-
-    return-object p1
-
-    :cond_1
-    :goto_0
-    const/4 p0, 0x0
+    move-result-object p0
 
     return-object p0
-
-    nop
-
-    :array_0
-    .array-data 4
-        0x0
-        0x3f800000    # 1.0f
-    .end array-data
 .end method

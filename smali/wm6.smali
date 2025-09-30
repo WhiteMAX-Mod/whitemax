@@ -1,102 +1,71 @@
-.class public abstract Lwm6;
-.super Ljava/lang/Object;
+.class public final Lwm6;
+.super Lan6;
 .source "SourceFile"
-
-# interfaces
-.implements Ljava/lang/Comparable;
 
 
 # instance fields
-.field public final X:J
-
-.field public final Y:Ldr4;
-
-.field public final Z:Ljava/lang/String;
-
-.field public final a:Ljava/lang/String;
-
-.field public final b:Lum6;
-
-.field public final c:J
-
-.field public final o:I
-
-.field public final o0:Ljava/lang/String;
-
-.field public final p0:J
-
-.field public final q0:J
-
-.field public final r0:Z
+.field public d:I
 
 
-# direct methods
-.method public constructor <init>(Ljava/lang/String;Lum6;JIJLdr4;Ljava/lang/String;Ljava/lang/String;JJZ)V
-    .locals 0
+# virtual methods
+.method public final a(Lfn6;Landroid/view/View;Lmq0;IZ)I
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/4 v0, 0x0
 
-    iput-object p1, p0, Lwm6;->a:Ljava/lang/String;
+    invoke-super/range {p0 .. p5}, Lan6;->a(Lfn6;Landroid/view/View;Lmq0;IZ)I
 
-    iput-object p2, p0, Lwm6;->b:Lum6;
+    move-result p0
 
-    iput-wide p3, p0, Lwm6;->c:J
+    invoke-static {v0, p0}, Ljava/lang/Math;->max(II)I
 
-    iput p5, p0, Lwm6;->o:I
+    move-result p0
 
-    iput-wide p6, p0, Lwm6;->X:J
+    return p0
+.end method
 
-    iput-object p8, p0, Lwm6;->Y:Ldr4;
+.method public final b(II)V
+    .locals 1
 
-    iput-object p9, p0, Lwm6;->Z:Ljava/lang/String;
+    invoke-super {p0, p1, p2}, Lan6;->b(II)V
 
-    iput-object p10, p0, Lwm6;->o0:Ljava/lang/String;
+    iget v0, p0, Lwm6;->d:I
 
-    iput-wide p11, p0, Lwm6;->p0:J
+    add-int/2addr p1, p2
 
-    iput-wide p13, p0, Lwm6;->q0:J
+    invoke-static {v0, p1}, Ljava/lang/Math;->max(II)I
 
-    iput-boolean p15, p0, Lwm6;->r0:Z
+    move-result p1
+
+    iput p1, p0, Lwm6;->d:I
 
     return-void
 .end method
 
+.method public final c()V
+    .locals 1
 
-# virtual methods
-.method public final compareTo(Ljava/lang/Object;)I
-    .locals 4
+    invoke-super {p0}, Lan6;->c()V
 
-    check-cast p1, Ljava/lang/Long;
+    const/high16 v0, -0x80000000
 
-    invoke-virtual {p1}, Ljava/lang/Long;->longValue()J
+    iput v0, p0, Lwm6;->d:I
 
-    move-result-wide v0
+    return-void
+.end method
 
-    iget-wide v2, p0, Lwm6;->X:J
+.method public final d(Z)I
+    .locals 0
 
-    cmp-long p0, v2, v0
+    invoke-super {p0, p1}, Lan6;->d(Z)I
 
-    if-lez p0, :cond_0
+    move-result p1
 
-    const/4 p0, 0x1
+    iget p0, p0, Lwm6;->d:I
 
-    return p0
+    invoke-static {p1, p0}, Ljava/lang/Math;->max(II)I
 
-    :cond_0
-    invoke-virtual {p1}, Ljava/lang/Long;->longValue()J
-
-    move-result-wide p0
-
-    cmp-long p0, v2, p0
-
-    if-gez p0, :cond_1
-
-    const/4 p0, -0x1
-
-    return p0
-
-    :cond_1
-    const/4 p0, 0x0
+    move-result p0
 
     return p0
 .end method

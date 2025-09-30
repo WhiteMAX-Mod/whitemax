@@ -1,39 +1,27 @@
 .class public final Lpr5;
-.super Lp0;
+.super Lah6;
 .source "SourceFile"
 
 
-# instance fields
-.field public final c:Z
-
-
-# direct methods
-.method public constructor <init>(Lmr5;)V
-    .locals 0
-
-    invoke-direct {p0, p1}, Lp0;-><init>(Llq5;)V
-
-    const/4 p1, 0x1
-
-    iput-boolean p1, p0, Lpr5;->c:Z
-
-    return-void
-.end method
-
-
 # virtual methods
-.method public final f(Lvr5;)V
+.method public final m(I)Lts0;
     .locals 2
 
-    new-instance v0, Lor5;
+    new-instance v0, Lr4a;
 
-    iget-boolean v1, p0, Lpr5;->c:Z
+    iget-object p0, p0, Lkj0;->c:Lteb;
 
-    invoke-direct {v0, p1, v1}, Lor5;-><init>(Lj9e;Z)V
+    iget p0, p0, Lteb;->d:I
 
-    iget-object p0, p0, Lp0;->b:Llq5;
+    const/4 v1, 0x0
 
-    invoke-virtual {p0, v0}, Llq5;->c(Lvr5;)V
+    invoke-direct {v0, p1, p0, v1}, Lts0;-><init>(III)V
 
-    return-void
+    new-instance p0, Ljava/util/LinkedList;
+
+    invoke-direct {p0}, Ljava/util/LinkedList;-><init>()V
+
+    iput-object p0, v0, Lr4a;->e:Ljava/util/LinkedList;
+
+    return-object v0
 .end method

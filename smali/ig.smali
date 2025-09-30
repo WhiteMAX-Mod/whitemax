@@ -3,26 +3,18 @@
 .source "SourceFile"
 
 # interfaces
-.implements Landroid/animation/ValueAnimator$AnimatorUpdateListener;
+.implements Ljava/util/concurrent/ThreadFactory;
 
 
 # instance fields
 .field public final synthetic a:I
 
-.field public final synthetic b:Landroid/view/View;
-
-.field public final synthetic c:Lag;
-
 
 # direct methods
-.method public synthetic constructor <init>(Landroid/view/View;Lag;I)V
+.method public synthetic constructor <init>(I)V
     .locals 0
 
-    iput p3, p0, Lig;->a:I
-
-    iput-object p1, p0, Lig;->b:Landroid/view/View;
-
-    iput-object p2, p0, Lig;->c:Lag;
+    iput p1, p0, Lig;->a:I
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -31,79 +23,31 @@
 
 
 # virtual methods
-.method public final onAnimationUpdate(Landroid/animation/ValueAnimator;)V
-    .locals 5
+.method public final newThread(Ljava/lang/Runnable;)Ljava/lang/Thread;
+    .locals 1
 
-    iget p1, p0, Lig;->a:I
+    iget p0, p0, Lig;->a:I
 
-    iget-object v0, p0, Lig;->c:Lag;
+    packed-switch p0, :pswitch_data_0
 
-    iget-object p0, p0, Lig;->b:Landroid/view/View;
+    new-instance p0, Ljava/lang/Thread;
 
-    packed-switch p1, :pswitch_data_0
+    const-string v0, "tracer-scheduler"
 
-    sget p1, Lxl1;->s0:I
+    invoke-direct {p0, p1, v0}, Ljava/lang/Thread;-><init>(Ljava/lang/Runnable;Ljava/lang/String;)V
 
-    new-instance p1, Landroid/graphics/Rect;
-
-    invoke-static {}, Lgk4;->d()Landroid/content/res/Resources;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v1
-
-    iget v1, v1, Landroid/util/DisplayMetrics;->density:F
-
-    const/high16 v2, 0x41800000    # 16.0f
-
-    mul-float/2addr v1, v2
-
-    float-to-int v1, v1
-
-    neg-int v1, v1
-
-    invoke-virtual {p0}, Landroid/view/View;->getWidth()I
-
-    move-result v3
-
-    iget v0, v0, Lag;->a:I
-
-    const/4 v4, 0x0
-
-    invoke-direct {p1, v4, v1, v3, v0}, Landroid/graphics/Rect;-><init>(IIII)V
-
-    invoke-static {}, Lgk4;->d()Landroid/content/res/Resources;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v0
-
-    iget v0, v0, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v0, v2
-
-    invoke-static {p0, p1, v0}, Lxqd;->i(Landroid/view/View;Landroid/graphics/Rect;F)V
-
-    return-void
+    return-object p0
 
     :pswitch_0
-    invoke-virtual {p0}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+    new-instance p0, Ljava/lang/Thread;
 
-    move-result-object p1
+    invoke-direct {p0, p1}, Ljava/lang/Thread;-><init>(Ljava/lang/Runnable;)V
 
-    check-cast p1, Landroid/view/ViewGroup$MarginLayoutParams;
+    const/4 p1, 0x1
 
-    iget v0, v0, Lag;->a:I
+    invoke-virtual {p0, p1}, Ljava/lang/Thread;->setPriority(I)V
 
-    iput v0, p1, Landroid/view/ViewGroup$MarginLayoutParams;->height:I
-
-    invoke-virtual {p0, p1}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
-
-    return-void
+    return-object p0
 
     nop
 

@@ -1,72 +1,165 @@
 .class public final Lree;
-.super Ljava/lang/Object;
+.super Landroid/widget/FrameLayout;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:Lje7;
+.field public final a:Lck7;
 
-.field public final b:Lje7;
+.field public b:Lpge;
 
-.field public final c:Lje7;
-
-.field public final d:Lje7;
+.field public c:Lhfe;
 
 
 # direct methods
-.method public constructor <init>(Lje7;Lje7;Lje7;Lje7;)V
-    .locals 0
+.method public constructor <init>(Landroid/content/Context;)V
+    .locals 2
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/4 v0, 0x0
 
-    iput-object p1, p0, Lree;->a:Lje7;
+    invoke-direct {p0, p1, v0}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    iput-object p4, p0, Lree;->b:Lje7;
+    new-instance v0, Lck7;
 
-    iput-object p2, p0, Lree;->c:Lje7;
+    invoke-direct {v0, p1}, Lck7;-><init>(Landroid/content/Context;)V
 
-    iput-object p3, p0, Lree;->d:Lje7;
+    iput-object v0, p0, Lree;->a:Lck7;
+
+    const/4 p1, 0x0
+
+    invoke-virtual {p0, p1}, Landroid/view/ViewGroup;->setClipToPadding(Z)V
+
+    iget-object p1, v0, Lck7;->b:Ljava/lang/Object;
+
+    check-cast p1, Lone/me/sdk/uikit/common/views/OneMeDraweeView;
+
+    new-instance v0, Landroid/widget/FrameLayout$LayoutParams;
+
+    const/4 v1, -0x1
+
+    invoke-direct {v0, v1, v1}, Landroid/widget/FrameLayout$LayoutParams;-><init>(II)V
+
+    invoke-virtual {p0, p1, v0}, Landroid/view/ViewGroup;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
     return-void
 .end method
 
-.method public static final a(Lree;Lfx8;)Lg7f;
-    .locals 2
 
-    new-instance p0, Lnj8;
+# virtual methods
+.method public final a(Lhfe;)V
+    .locals 5
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iget-object v0, p0, Lree;->c:Lhfe;
 
-    iget-object v0, p1, Lfx8;->f:Ljava/lang/String;
+    const/4 v1, 0x0
 
-    invoke-virtual {v0}, Ljava/lang/String;->length()I
+    const/4 v2, 0x1
 
-    move-result v1
+    if-nez v0, :cond_0
 
-    if-nez v1, :cond_0
-
-    iget-object v0, p1, Lfx8;->a:Lkv8;
-
-    iget-object v0, v0, Lkv8;->c:Ljava/lang/String;
+    goto :goto_0
 
     :cond_0
-    iput-object v0, p0, Lnj8;->d:Ljava/io/Serializable;
+    iget v3, v0, Lhfe;->Z:I
 
-    iget-object v0, p1, Lfx8;->b:Ljava/lang/String;
+    iget v4, p1, Lhfe;->Z:I
 
-    iput-object v0, p0, Lnj8;->c:Ljava/lang/Object;
+    if-ne v3, v4, :cond_2
 
-    iget v0, p1, Lfx8;->d:I
+    iget v0, v0, Lhfe;->r0:I
 
-    iput v0, p0, Lnj8;->b:I
+    iget v3, p1, Lhfe;->r0:I
 
-    iget-wide v0, p1, Lfx8;->c:J
+    if-eq v0, v3, :cond_1
 
-    iput-wide v0, p0, Lnj8;->a:J
+    goto :goto_0
 
-    new-instance p1, Lg7f;
+    :cond_1
+    move v2, v1
 
-    invoke-direct {p1, p0}, Lg7f;-><init>(Lnj8;)V
+    :cond_2
+    :goto_0
+    iput-object p1, p0, Lree;->c:Lhfe;
 
-    return-object p1
+    iget-object v0, p0, Lree;->b:Lpge;
+
+    if-eqz v0, :cond_3
+
+    invoke-virtual {v0, p1}, Lpge;->b(Lhfe;)V
+
+    :cond_3
+    iget-object p1, p1, Lhfe;->o:Ljava/lang/String;
+
+    iget-object v0, p0, Lree;->a:Lck7;
+
+    iget-object v0, v0, Lck7;->b:Ljava/lang/Object;
+
+    check-cast v0, Lone/me/sdk/uikit/common/views/OneMeDraweeView;
+
+    invoke-static {p1}, Li27;->b(Ljava/lang/String;)Li27;
+
+    move-result-object p1
+
+    sget v3, Lone/me/sdk/uikit/common/views/OneMeDraweeView;->A0:I
+
+    const/4 v3, 0x0
+
+    invoke-virtual {v0, p1, v3}, Lone/me/sdk/uikit/common/views/OneMeDraweeView;->o(Li27;Li27;)V
+
+    invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
+
+    if-eqz v2, :cond_4
+
+    invoke-virtual {p0}, Landroid/view/View;->requestLayout()V
+
+    :cond_4
+    return-void
+.end method
+
+.method public final getSizeConfigurator()Lpge;
+    .locals 0
+
+    iget-object p0, p0, Lree;->b:Lpge;
+
+    return-object p0
+.end method
+
+.method public final onMeasure(II)V
+    .locals 1
+
+    iget-object v0, p0, Lree;->b:Lpge;
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {v0, p1, p2}, Lpge;->a(II)Lhs;
+
+    move-result-object v0
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    :goto_0
+    if-eqz v0, :cond_1
+
+    iget p1, v0, Lhs;->b:I
+
+    :cond_1
+    if-eqz v0, :cond_2
+
+    iget p2, v0, Lhs;->c:I
+
+    :cond_2
+    invoke-super {p0, p1, p2}, Landroid/widget/FrameLayout;->onMeasure(II)V
+
+    return-void
+.end method
+
+.method public final setSizeConfigurator(Lpge;)V
+    .locals 0
+
+    iput-object p1, p0, Lree;->b:Lpge;
+
+    return-void
 .end method

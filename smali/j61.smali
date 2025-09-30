@@ -3,68 +3,57 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lt1c;
+.implements Lyo1;
 
 
 # instance fields
-.field public final a:Lje7;
+.field public final synthetic a:Lijb;
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 2
-
-    .line 1
-    sget-object v0, Liid;->a:Liid;
-
-    .line 2
-    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lu4;
-
-    move-result-object v0
-
-    const-class v1, Lke8;
-
-    invoke-virtual {v0, v1}, Lu4;->d(Ljava/lang/Class;)Lwfe;
-
-    move-result-object v0
-
-    .line 3
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 4
-    iput-object v0, p0, Lj61;->a:Lje7;
-
-    return-void
-.end method
-
-.method public constructor <init>(Lje7;)V
+.method public constructor <init>(Lijb;)V
     .locals 0
 
-    .line 5
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 6
-    iput-object p1, p0, Lj61;->a:Lje7;
+    iput-object p1, p0, Lj61;->a:Lijb;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public shouldHideSensitiveInformation()Z
+.method public final onMediaConnected(Lru/ok/android/externcalls/sdk/connection/MediaConnectionListener$ConnectedInfo;)V
     .locals 0
 
-    iget-object p0, p0, Lj61;->a:Lje7;
+    invoke-virtual {p1}, Lru/ok/android/externcalls/sdk/connection/MediaConnectionListener$ConnectedInfo;->isFirstConnection()Z
 
-    invoke-interface {p0}, Lje7;->getValue()Ljava/lang/Object;
+    move-result p1
 
-    move-result-object p0
+    if-nez p1, :cond_0
 
-    check-cast p0, Lo4a;
+    sget-object p1, Lp51;->c:Lp51;
 
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    iget-object p0, p0, Lj61;->a:Lijb;
 
-    const/4 p0, 0x1
+    check-cast p0, Lfjb;
 
-    return p0
+    invoke-virtual {p0, p1}, Lfjb;->g(Ljava/lang/Object;)Ljava/lang/Object;
+
+    :cond_0
+    return-void
+.end method
+
+.method public final onMediaDisconnected(Lru/ok/android/externcalls/sdk/connection/MediaConnectionListener$DisconnectedInfo;)V
+    .locals 0
+
+    sget-object p1, Lq51;->c:Lq51;
+
+    iget-object p0, p0, Lj61;->a:Lijb;
+
+    check-cast p0, Lfjb;
+
+    invoke-virtual {p0, p1}, Lfjb;->g(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-void
 .end method

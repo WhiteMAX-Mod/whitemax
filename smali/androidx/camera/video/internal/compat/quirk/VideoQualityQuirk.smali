@@ -3,9 +3,9 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lkpb;
+.implements Lt1c;
 
 
 # virtual methods
-.method public abstract a(Lyw1;Leb0;)Z
+.method public abstract a(Lmz1;Lra0;)Z
 .end method

@@ -4,28 +4,50 @@
 
 
 # instance fields
-.field public final a:Lfn4;
+.field public final a:Landroid/content/Context;
 
-.field public final b:Z
+.field public final b:Lnyc;
 
-.field public final c:Ljava/util/ArrayList;
+.field public c:Landroid/view/VelocityTracker;
 
-.field public final d:Ljava/lang/Exception;
+.field public d:F
+
+.field public e:I
+
+.field public f:I
+
+.field public g:I
+
+.field public final h:[I
 
 
 # direct methods
-.method public constructor <init>(Lfn4;ZLjava/util/ArrayList;Ljava/lang/Exception;)V
-    .locals 0
+.method public constructor <init>(Landroid/content/Context;Lnyc;)V
+    .locals 2
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lqo4;->a:Lfn4;
+    const/4 v0, -0x1
 
-    iput-boolean p2, p0, Lqo4;->b:Z
+    iput v0, p0, Lqo4;->e:I
 
-    iput-object p3, p0, Lqo4;->c:Ljava/util/ArrayList;
+    iput v0, p0, Lqo4;->f:I
 
-    iput-object p4, p0, Lqo4;->d:Ljava/lang/Exception;
+    iput v0, p0, Lqo4;->g:I
+
+    const v0, 0x7fffffff
+
+    const/4 v1, 0x0
+
+    filled-new-array {v0, v1}, [I
+
+    move-result-object v0
+
+    iput-object v0, p0, Lqo4;->h:[I
+
+    iput-object p1, p0, Lqo4;->a:Landroid/content/Context;
+
+    iput-object p2, p0, Lqo4;->b:Lnyc;
 
     return-void
 .end method

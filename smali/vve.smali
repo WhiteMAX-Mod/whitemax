@@ -1,153 +1,186 @@
-.class public final synthetic Lvve;
+.class public final Lvve;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/util/concurrent/Callable;
+.implements Lp8g;
 
 
 # instance fields
-.field public final synthetic X:Ljv5;
+.field public final a:Ljava/lang/ref/WeakReference;
 
-.field public final synthetic a:Landroid/content/Context;
+.field public b:I
 
-.field public final synthetic b:Ljava/util/concurrent/ScheduledThreadPoolExecutor;
-
-.field public final synthetic c:Lcom/google/firebase/messaging/FirebaseMessaging;
-
-.field public final synthetic o:Lqjf;
+.field public c:I
 
 
 # direct methods
-.method public synthetic constructor <init>(Landroid/content/Context;Ljava/util/concurrent/ScheduledThreadPoolExecutor;Lcom/google/firebase/messaging/FirebaseMessaging;Lqjf;Ljv5;)V
-    .locals 0
+.method public constructor <init>(Lcom/google/android/material/tabs/TabLayout;)V
+    .locals 1
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lvve;->a:Landroid/content/Context;
+    new-instance v0, Ljava/lang/ref/WeakReference;
 
-    iput-object p2, p0, Lvve;->b:Ljava/util/concurrent/ScheduledThreadPoolExecutor;
+    invoke-direct {v0, p1}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
 
-    iput-object p3, p0, Lvve;->c:Lcom/google/firebase/messaging/FirebaseMessaging;
-
-    iput-object p4, p0, Lvve;->o:Lqjf;
-
-    iput-object p5, p0, Lvve;->X:Ljv5;
+    iput-object v0, p0, Lvve;->a:Ljava/lang/ref/WeakReference;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final call()Ljava/lang/Object;
-    .locals 7
+.method public final a(I)V
+    .locals 1
 
-    iget-object v5, p0, Lvve;->a:Landroid/content/Context;
+    iget v0, p0, Lvve;->c:I
 
-    iget-object v6, p0, Lvve;->b:Ljava/util/concurrent/ScheduledThreadPoolExecutor;
+    iput v0, p0, Lvve;->b:I
 
-    iget-object v1, p0, Lvve;->c:Lcom/google/firebase/messaging/FirebaseMessaging;
+    iput p1, p0, Lvve;->c:I
 
-    iget-object v2, p0, Lvve;->o:Lqjf;
+    iget-object p1, p0, Lvve;->a:Ljava/lang/ref/WeakReference;
 
-    iget-object v4, p0, Lvve;->X:Ljv5;
+    invoke-virtual {p1}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
 
-    const-class p0, Luve;
+    move-result-object p1
 
-    monitor-enter p0
+    check-cast p1, Lcom/google/android/material/tabs/TabLayout;
 
-    :try_start_0
-    sget-object v0, Luve;->c:Ljava/lang/ref/WeakReference;
+    if-eqz p1, :cond_0
 
-    if-eqz v0, :cond_0
+    iget p0, p0, Lvve;->c:I
+
+    iput p0, p1, Lcom/google/android/material/tabs/TabLayout;->g1:I
+
+    :cond_0
+    return-void
+.end method
+
+.method public final b(I)V
+    .locals 3
+
+    iget-object v0, p0, Lvve;->a:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v0}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Luve;
+    check-cast v0, Lcom/google/android/material/tabs/TabLayout;
+
+    if-eqz v0, :cond_2
+
+    invoke-virtual {v0}, Lcom/google/android/material/tabs/TabLayout;->getSelectedTabPosition()I
+
+    move-result v1
+
+    if-eq v1, p1, :cond_2
+
+    invoke-virtual {v0}, Lcom/google/android/material/tabs/TabLayout;->getTabCount()I
+
+    move-result v1
+
+    if-ge p1, v1, :cond_2
+
+    iget v1, p0, Lvve;->c:I
+
+    if-eqz v1, :cond_1
+
+    const/4 v2, 0x2
+
+    if-ne v1, v2, :cond_0
+
+    iget p0, p0, Lvve;->b:I
+
+    if-nez p0, :cond_0
 
     goto :goto_0
 
-    :catchall_0
-    move-exception v0
-
-    goto :goto_2
-
     :cond_0
-    const/4 v0, 0x0
-
-    :goto_0
-    if-nez v0, :cond_1
-
-    const-string v0, "com.google.android.gms.appid"
-
-    const/4 v3, 0x0
-
-    invoke-virtual {v5, v0, v3}, Landroid/content/Context;->getSharedPreferences(Ljava/lang/String;I)Landroid/content/SharedPreferences;
-
-    move-result-object v0
-
-    new-instance v3, Luve;
-
-    invoke-direct {v3, v0, v6}, Luve;-><init>(Landroid/content/SharedPreferences;Ljava/util/concurrent/ScheduledThreadPoolExecutor;)V
-
-    monitor-enter v3
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    :try_start_1
-    invoke-static {v0, v6}, Lw84;->j(Landroid/content/SharedPreferences;Ljava/util/concurrent/ScheduledThreadPoolExecutor;)Lw84;
-
-    move-result-object v0
-
-    iput-object v0, v3, Luve;->a:Lw84;
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_1
-
-    :try_start_2
-    monitor-exit v3
-
-    new-instance v0, Ljava/lang/ref/WeakReference;
-
-    invoke-direct {v0, v3}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
-
-    sput-object v0, Luve;->c:Ljava/lang/ref/WeakReference;
-    :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_0
+    const/4 p0, 0x0
 
     goto :goto_1
 
-    :catchall_1
-    move-exception v0
-
-    :try_start_3
-    monitor-exit v3
-    :try_end_3
-    .catchall {:try_start_3 .. :try_end_3} :catchall_1
-
-    :try_start_4
-    throw v0
-    :try_end_4
-    .catchall {:try_start_4 .. :try_end_4} :catchall_0
-
     :cond_1
-    move-object v3, v0
+    :goto_0
+    const/4 p0, 0x1
 
     :goto_1
-    monitor-exit p0
+    invoke-virtual {v0, p1}, Lcom/google/android/material/tabs/TabLayout;->h(I)Luve;
 
-    new-instance v0, Lwve;
+    move-result-object p1
 
-    invoke-direct/range {v0 .. v6}, Lwve;-><init>(Lcom/google/firebase/messaging/FirebaseMessaging;Lqjf;Luve;Ljv5;Landroid/content/Context;Ljava/util/concurrent/ScheduledThreadPoolExecutor;)V
+    invoke-virtual {v0, p1, p0}, Lcom/google/android/material/tabs/TabLayout;->o(Luve;Z)V
 
-    return-object v0
+    :cond_2
+    return-void
+.end method
 
+.method public final c(IF)V
+    .locals 7
+
+    iget-object v0, p0, Lvve;->a:Ljava/lang/ref/WeakReference;
+
+    invoke-virtual {v0}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
+
+    move-result-object v0
+
+    move-object v1, v0
+
+    check-cast v1, Lcom/google/android/material/tabs/TabLayout;
+
+    if-eqz v1, :cond_4
+
+    iget v0, p0, Lvve;->c:I
+
+    const/4 v2, 0x0
+
+    const/4 v3, 0x2
+
+    const/4 v4, 0x1
+
+    if-ne v0, v3, :cond_1
+
+    iget v5, p0, Lvve;->b:I
+
+    if-ne v5, v4, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    move v5, v4
+
+    move v4, v2
+
+    goto :goto_1
+
+    :cond_1
+    :goto_0
+    move v5, v4
+
+    :goto_1
+    if-ne v0, v3, :cond_3
+
+    iget p0, p0, Lvve;->b:I
+
+    if-eqz p0, :cond_2
+
+    goto :goto_2
+
+    :cond_2
+    move v5, v2
+
+    :cond_3
     :goto_2
-    :try_start_5
-    monitor-exit p0
-    :try_end_5
-    .catchall {:try_start_5 .. :try_end_5} :catchall_0
+    const/4 v6, 0x0
 
-    throw v0
+    move v2, p1
+
+    move v3, p2
+
+    invoke-virtual/range {v1 .. v6}, Lcom/google/android/material/tabs/TabLayout;->q(IFZZZ)V
+
+    :cond_4
+    return-void
 .end method

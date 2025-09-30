@@ -50,7 +50,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Ll94;)V
+.method public synthetic constructor <init>(Lld4;)V
     .locals 0
 
     .line 1
@@ -74,7 +74,7 @@
 
     const-string v2, "Error executing API method "
 
-    invoke-static {p0, v2, p1, v0, v1}, Lm26;->m(ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {p0, v2, p1, v0, v1}, Lyv7;->m(ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object p0
 
@@ -98,7 +98,7 @@
 
     const-string v0, ": "
 
-    invoke-static {p2, p1, v0, p0}, Lv04;->k(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p2, p1, v0, p0}, Lee5;->k(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
 

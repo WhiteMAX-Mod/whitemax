@@ -1,136 +1,54 @@
-.class public final Ly32;
-.super Lqh0;
+.class public final synthetic Ly32;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lexf;
 
 
 # instance fields
-.field public final i:Landroid/util/SparseArray;
+.field public final synthetic a:I
+
+.field public final synthetic b:Lbk6;
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 1
+.method public synthetic constructor <init>(Lbk6;I)V
+    .locals 0
 
-    invoke-direct {p0}, Lqh0;-><init>()V
+    iput p2, p0, Ly32;->a:I
 
-    new-instance v0, Landroid/util/SparseArray;
+    iput-object p1, p0, Ly32;->b:Lbk6;
 
-    invoke-direct {v0}, Landroid/util/SparseArray;-><init>()V
-
-    iput-object v0, p0, Ly32;->i:Landroid/util/SparseArray;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final b(Ljava/nio/ByteBuffer;)V
-    .locals 8
+.method public final run()V
+    .locals 1
 
-    iget-object v0, p0, Lqh0;->b:Lv50;
+    iget v0, p0, Ly32;->a:I
 
-    iget v0, v0, Lv50;->b:I
+    iget-object p0, p0, Ly32;->b:Lbk6;
 
-    iget-object v1, p0, Ly32;->i:Landroid/util/SparseArray;
+    packed-switch v0, :pswitch_data_0
 
-    invoke-virtual {v1, v0}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
-
-    move-result-object v0
-
-    move-object v5, v0
-
-    check-cast v5, Lz32;
-
-    invoke-static {v5}, Lu27;->k(Ljava/lang/Object;)V
-
-    invoke-virtual {p1}, Ljava/nio/Buffer;->remaining()I
-
-    move-result v0
-
-    iget-object v1, p0, Lqh0;->b:Lv50;
-
-    iget v1, v1, Lv50;->d:I
-
-    div-int v6, v0, v1
-
-    iget-object v0, p0, Lqh0;->c:Lv50;
-
-    iget v0, v0, Lv50;->d:I
-
-    mul-int/2addr v0, v6
-
-    invoke-virtual {p0, v0}, Lqh0;->k(I)Ljava/nio/ByteBuffer;
-
-    move-result-object v3
-
-    iget-object v2, p0, Lqh0;->b:Lv50;
-
-    iget-object v4, p0, Lqh0;->c:Lv50;
-
-    const/4 v7, 0x0
-
-    move-object v1, p1
-
-    invoke-static/range {v1 .. v7}, Ltk9;->A(Ljava/nio/ByteBuffer;Lv50;Ljava/nio/ByteBuffer;Lv50;Lz32;IZ)V
-
-    invoke-virtual {v3}, Ljava/nio/ByteBuffer;->flip()Ljava/nio/Buffer;
+    invoke-interface {p0}, Lbk6;->c()V
 
     return-void
-.end method
 
-.method public final g(Lv50;)Lv50;
-    .locals 2
+    :pswitch_0
+    invoke-interface {p0}, Lbk6;->flush()V
 
-    iget v0, p1, Lv50;->c:I
+    return-void
 
-    const/4 v1, 0x2
+    nop
 
-    if-ne v0, v1, :cond_2
-
-    iget-object p0, p0, Ly32;->i:Landroid/util/SparseArray;
-
-    iget v0, p1, Lv50;->b:I
-
-    invoke-virtual {p0, v0}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, Lz32;
-
-    if-eqz p0, :cond_1
-
-    iget-boolean v0, p0, Lz32;->e:Z
-
-    if-eqz v0, :cond_0
-
-    sget-object p0, Lv50;->e:Lv50;
-
-    return-object p0
-
-    :cond_0
-    new-instance v0, Lv50;
-
-    iget p1, p1, Lv50;->a:I
-
-    iget p0, p0, Lz32;->b:I
-
-    invoke-direct {v0, p1, p0, v1}, Lv50;-><init>(III)V
-
-    return-object v0
-
-    :cond_1
-    new-instance p0, Landroidx/media3/common/audio/AudioProcessor$UnhandledAudioFormatException;
-
-    const-string v0, "No mixing matrix for input channel count"
-
-    invoke-direct {p0, v0, p1}, Landroidx/media3/common/audio/AudioProcessor$UnhandledAudioFormatException;-><init>(Ljava/lang/String;Lv50;)V
-
-    throw p0
-
-    :cond_2
-    new-instance p0, Landroidx/media3/common/audio/AudioProcessor$UnhandledAudioFormatException;
-
-    invoke-direct {p0, p1}, Landroidx/media3/common/audio/AudioProcessor$UnhandledAudioFormatException;-><init>(Lv50;)V
-
-    throw p0
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

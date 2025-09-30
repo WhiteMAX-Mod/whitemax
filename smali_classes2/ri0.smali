@@ -1,140 +1,35 @@
-.class public final synthetic Lri0;
-.super Ljava/lang/Object;
+.class public abstract Lri0;
+.super Loi0;
 .source "SourceFile"
-
-# interfaces
-.implements Ljj3;
 
 
 # instance fields
-.field public final synthetic a:Lny7;
-
-.field public final synthetic b:J
-
-.field public final synthetic c:Z
-
-.field public final synthetic o:J
+.field public final b:Ljava/lang/String;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lny7;JZJ)V
-    .locals 0
+.method public constructor <init>()V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    .line 1
+    invoke-direct {p0}, Loi0;-><init>()V
 
-    iput-object p1, p0, Lri0;->a:Lny7;
+    const/4 v0, 0x0
 
-    iput-wide p2, p0, Lri0;->b:J
-
-    iput-boolean p4, p0, Lri0;->c:Z
-
-    iput-wide p5, p0, Lri0;->o:J
+    .line 2
+    iput-object v0, p0, Lri0;->b:Ljava/lang/String;
 
     return-void
 .end method
 
+.method public constructor <init>(Ljava/lang/String;)V
+    .locals 0
 
-# virtual methods
-.method public final accept(Ljava/lang/Object;)V
-    .locals 5
+    .line 3
+    invoke-direct {p0}, Loi0;-><init>()V
 
-    check-cast p1, Ljava/util/Map;
+    .line 4
+    iput-object p1, p0, Lri0;->b:Ljava/lang/String;
 
-    iget-object v0, p0, Lri0;->a:Lny7;
-
-    iget-object v0, v0, Lny7;->b:Ljava/util/LinkedHashMap;
-
-    iget-wide v1, p0, Lri0;->b:J
-
-    invoke-static {v1, v2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Ljava/util/LinkedHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lsi0;
-
-    iget-boolean v2, p0, Lri0;->c:Z
-
-    if-eqz v1, :cond_1
-
-    iget-object v1, v1, Lsi0;->a:Ltkg;
-
-    if-eqz v2, :cond_0
-
-    sget-object v3, Lry7;->a:Lry7;
-
-    invoke-interface {p1, v3}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v3
-
-    check-cast v3, Lmn0;
-
-    invoke-virtual {v1, v3}, Ltkg;->X(Lmn0;)V
-
-    goto :goto_0
-
-    :cond_0
-    sget-object v3, Lry7;->c:Lry7;
-
-    invoke-interface {p1, v3}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v3
-
-    check-cast v3, Lmn0;
-
-    invoke-virtual {v1, v3}, Ltkg;->X(Lmn0;)V
-
-    :goto_0
-    invoke-virtual {v1}, Ltkg;->Z()V
-
-    :cond_1
-    iget-wide v3, p0, Lri0;->o:J
-
-    invoke-static {v3, v4}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object p0
-
-    invoke-virtual {v0, p0}, Ljava/util/LinkedHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, Lsi0;
-
-    if-eqz p0, :cond_3
-
-    iget-object p0, p0, Lsi0;->a:Ltkg;
-
-    if-eqz v2, :cond_2
-
-    sget-object v0, Lry7;->b:Lry7;
-
-    invoke-interface {p1, v0}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lmn0;
-
-    invoke-virtual {p0, p1}, Ltkg;->X(Lmn0;)V
-
-    goto :goto_1
-
-    :cond_2
-    sget-object v0, Lry7;->o:Lry7;
-
-    invoke-interface {p1, v0}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lmn0;
-
-    invoke-virtual {p0, p1}, Ltkg;->X(Lmn0;)V
-
-    :goto_1
-    invoke-virtual {p0}, Ltkg;->Z()V
-
-    :cond_3
     return-void
 .end method

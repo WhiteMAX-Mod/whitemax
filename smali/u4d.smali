@@ -1,48 +1,54 @@
-.class public final synthetic Lu4d;
-.super La76;
+.class public final Lu4d;
+.super Li0;
 .source "SourceFile"
 
 # interfaces
-.implements Lx56;
-
-
-# static fields
-.field public static final a:Lu4d;
-
-
-# direct methods
-.method static constructor <clinit>()V
-    .locals 6
-
-    new-instance v0, Lu4d;
-
-    const-string v4, "iterator()Ljava/util/Iterator;"
-
-    const/4 v5, 0x0
-
-    const/4 v1, 0x1
-
-    const-class v2, Li4d;
-
-    const-string v3, "iterator"
-
-    invoke-direct/range {v0 .. v5}, La76;-><init>(ILjava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
-
-    sput-object v0, Lu4d;->a:Lu4d;
-
-    return-void
-.end method
+.implements Ljava/util/concurrent/Callable;
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final call()Ljava/lang/Object;
+    .locals 3
 
-    check-cast p1, Li4d;
+    sget-object v0, Li0;->o:Ljava/util/concurrent/FutureTask;
 
-    invoke-interface {p1}, Li4d;->iterator()Ljava/util/Iterator;
+    invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
 
-    move-result-object p0
+    move-result-object v1
 
-    return-object p0
+    iput-object v1, p0, Li0;->c:Ljava/lang/Thread;
+
+    const/4 v1, 0x0
+
+    :try_start_0
+    iget-object v2, p0, Li0;->a:Ljava/lang/Runnable;
+
+    invoke-interface {v2}, Ljava/lang/Runnable;->run()V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    :try_start_1
+    invoke-virtual {p0, v0}, Ljava/util/concurrent/atomic/AtomicReference;->lazySet(Ljava/lang/Object;)V
+
+    iput-object v1, p0, Li0;->c:Ljava/lang/Thread;
+
+    return-object v1
+
+    :catchall_0
+    move-exception v2
+
+    invoke-virtual {p0, v0}, Ljava/util/concurrent/atomic/AtomicReference;->lazySet(Ljava/lang/Object;)V
+
+    iput-object v1, p0, Li0;->c:Ljava/lang/Thread;
+
+    throw v2
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_1
+
+    :catchall_1
+    move-exception p0
+
+    invoke-static {p0}, Ln4e;->D(Ljava/lang/Throwable;)V
+
+    throw p0
 .end method

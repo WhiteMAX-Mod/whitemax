@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lqq8;
+.implements Lix8;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
 
 # virtual methods
-.method public final b(Lxp8;)V
+.method public final b(Lpw8;)V
     .locals 0
 
     return-void

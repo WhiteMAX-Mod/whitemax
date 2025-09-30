@@ -1,73 +1,239 @@
-.class public abstract Laaa;
+.class public final Laaa;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:I
+# instance fields
+.field public a:Ljava/lang/String;
 
-.field public static final b:I
+.field public b:I
 
-.field public static final c:I
+.field public c:Ljava/lang/String;
 
-.field public static final d:I
+.field public d:I
 
-.field public static final e:I
+.field public e:J
 
-.field public static final f:I
+.field public f:Ljava/lang/String;
 
-.field public static final g:I
+.field public g:Z
 
-.field public static final h:I
+.field public h:Ljava/util/ArrayList;
 
-.field public static final i:I
-
-.field public static final j:I
+.field public i:Ljava/util/ArrayList;
 
 
-# direct methods
-.method static constructor <clinit>()V
-    .locals 1
+# virtual methods
+.method public final a()Lbaa;
+    .locals 10
 
-    sget v0, Lsrb;->add_8:I
+    iget-object v1, p0, Laaa;->a:Ljava/lang/String;
 
-    sput v0, Laaa;->a:I
+    iget v2, p0, Laaa;->b:I
 
-    sget v0, Lsrb;->apple_outline_24:I
+    iget-object v3, p0, Laaa;->c:Ljava/lang/String;
 
-    sput v0, Laaa;->b:I
+    iget v4, p0, Laaa;->d:I
 
-    sget v0, Lsrb;->ball_outline_24:I
+    iget-wide v5, p0, Laaa;->e:J
 
-    sput v0, Laaa;->c:I
+    iget-boolean v0, p0, Laaa;->g:Z
 
-    sget v0, Lsrb;->car_outline_24:I
+    if-eqz v0, :cond_0
 
-    sput v0, Laaa;->d:I
+    iget-object v0, p0, Laaa;->f:Ljava/lang/String;
 
-    sget v0, Lsrb;->fire_24:I
+    :goto_0
+    move-object v7, v0
 
-    sput v0, Laaa;->e:I
+    goto :goto_1
 
-    sget v0, Lsrb;->flags_outline_24:I
+    :cond_0
+    const/4 v0, 0x0
 
-    sput v0, Laaa;->f:I
+    goto :goto_0
 
-    sget v0, Lsrb;->lamp_outline_24:I
+    :goto_1
+    sget-object v0, Ljava/util/Collections;->EMPTY_LIST:Ljava/util/List;
 
-    sput v0, Laaa;->g:I
+    iget-object v8, p0, Laaa;->h:Ljava/util/ArrayList;
 
-    sget v0, Lsrb;->paw_outline_24:I
+    if-nez v8, :cond_1
 
-    sput v0, Laaa;->h:I
+    move-object v8, v0
 
-    sget v0, Lsrb;->remove_outline_24:I
+    :cond_1
+    iget-object v9, p0, Laaa;->i:Ljava/util/ArrayList;
 
-    sput v0, Laaa;->i:I
+    if-nez v9, :cond_2
 
-    sget v0, Lsrb;->symbols_outline_24:I
+    move-object v9, v0
 
-    sput v0, Laaa;->j:I
+    :cond_2
+    invoke-virtual {p0}, Laaa;->b()V
+
+    if-eqz v1, :cond_4
+
+    if-eqz v3, :cond_3
+
+    new-instance v0, Lbaa;
+
+    invoke-direct/range {v0 .. v9}, Lbaa;-><init>(Ljava/lang/String;ILjava/lang/String;IJLjava/lang/String;Ljava/util/List;Ljava/util/List;)V
+
+    return-object v0
+
+    :cond_3
+    new-instance p0, Ljava/lang/IllegalStateException;
+
+    const-string v0, "Operation not set"
+
+    invoke-direct {p0, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p0
+
+    :cond_4
+    new-instance p0, Ljava/lang/IllegalStateException;
+
+    const-string v0, "Collector not set"
+
+    invoke-direct {p0, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p0
+.end method
+
+.method public final b()V
+    .locals 3
+
+    const/4 v0, 0x0
+
+    iput-object v0, p0, Laaa;->a:Ljava/lang/String;
+
+    const/4 v1, -0x1
+
+    iput v1, p0, Laaa;->b:I
+
+    iput-object v0, p0, Laaa;->c:Ljava/lang/String;
+
+    const/4 v1, 0x1
+
+    iput v1, p0, Laaa;->d:I
+
+    const-wide/16 v1, 0x0
+
+    iput-wide v1, p0, Laaa;->e:J
+
+    iput-object v0, p0, Laaa;->f:Ljava/lang/String;
+
+    const/4 v1, 0x0
+
+    iput-boolean v1, p0, Laaa;->g:Z
+
+    iput-object v0, p0, Laaa;->h:Ljava/util/ArrayList;
+
+    iput-object v0, p0, Laaa;->i:Ljava/util/ArrayList;
 
     return-void
+.end method
+
+.method public final c()V
+    .locals 0
+
+    invoke-virtual {p0}, Laaa;->a()Lbaa;
+
+    move-result-object p0
+
+    invoke-virtual {p0}, Lbaa;->b()V
+
+    return-void
+.end method
+
+.method public final d(Ljava/lang/String;Ljava/lang/String;)V
+    .locals 2
+
+    iget-object v0, p0, Laaa;->h:Ljava/util/ArrayList;
+
+    iget-object v1, p0, Laaa;->i:Ljava/util/ArrayList;
+
+    if-nez p2, :cond_1
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {v0, p1}, Ljava/util/ArrayList;->indexOf(Ljava/lang/Object;)I
+
+    move-result p0
+
+    if-ltz p0, :cond_0
+
+    invoke-virtual {v0, p0}, Ljava/util/ArrayList;->remove(I)Ljava/lang/Object;
+
+    invoke-virtual {v1, p0}, Ljava/util/ArrayList;->remove(I)Ljava/lang/Object;
+
+    :cond_0
+    return-void
+
+    :cond_1
+    if-eqz v0, :cond_3
+
+    invoke-virtual {v0, p1}, Ljava/util/ArrayList;->indexOf(Ljava/lang/Object;)I
+
+    move-result p0
+
+    if-ltz p0, :cond_2
+
+    invoke-virtual {v1, p0, p2}, Ljava/util/ArrayList;->set(ILjava/lang/Object;)Ljava/lang/Object;
+
+    return-void
+
+    :cond_2
+    invoke-virtual {v0, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    invoke-virtual {v1, p2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    return-void
+
+    :cond_3
+    new-instance v0, Ljava/util/ArrayList;
+
+    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
+
+    new-instance v1, Ljava/util/ArrayList;
+
+    invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
+
+    invoke-virtual {v0, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    invoke-virtual {v1, p2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    iput-object v0, p0, Laaa;->h:Ljava/util/ArrayList;
+
+    iput-object v1, p0, Laaa;->i:Ljava/util/ArrayList;
+
+    return-void
+.end method
+
+.method public final e(J)V
+    .locals 2
+
+    const-wide/16 v0, 0x0
+
+    cmp-long v0, p1, v0
+
+    if-ltz v0, :cond_0
+
+    iput-wide p1, p0, Laaa;->e:J
+
+    return-void
+
+    :cond_0
+    new-instance p0, Ljava/lang/IllegalArgumentException;
+
+    const-string v0, "Illegal time "
+
+    invoke-static {p1, p2, v0}, Lbg9;->i(JLjava/lang/String;)Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-direct {p0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw p0
 .end method

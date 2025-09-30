@@ -1,35 +1,20 @@
 .class public final Lsl5;
-.super Lzj0;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lb74;
 
 
 # virtual methods
-.method public final b()I
-    .locals 0
+.method public final a()Ld74;
+    .locals 1
 
-    const/4 p0, 0x0
+    new-instance p0, Lul5;
 
-    return p0
-.end method
+    const/4 v0, 0x0
 
-.method public final k()I
-    .locals 0
-
-    const/4 p0, 0x0
-
-    return p0
-.end method
-
-.method public final m()Ljava/lang/Object;
-    .locals 0
-
-    const/4 p0, 0x0
+    invoke-direct {p0, v0}, Lhi0;-><init>(Z)V
 
     return-object p0
-.end method
-
-.method public final r(JJJLjava/util/List;[Ly68;)V
-    .locals 0
-
-    return-void
 .end method

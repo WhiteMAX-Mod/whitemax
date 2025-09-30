@@ -1,130 +1,123 @@
 .class public final Lan4;
-.super Ljava/lang/Object;
+.super Lcb4;
 .source "SourceFile"
 
-# interfaces
-.implements Landroid/animation/Animator$AnimatorListener;
 
+# static fields
+.field public static final b:Lan4;
 
-# instance fields
-.field public final synthetic a:I
+.field public static final c:Lxa4;
 
-.field public final synthetic b:Landroid/view/View;
+.field public static final d:Lxa4;
+
+.field public static final e:Lxa4;
+
+.field public static final f:Lxa4;
+
+.field public static final g:Lxa4;
+
+.field public static final h:Lxa4;
+
+.field public static final i:Lxa4;
 
 
 # direct methods
-.method public synthetic constructor <init>(Landroid/view/View;I)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 7
 
-    iput p2, p0, Lan4;->a:I
+    new-instance v0, Lan4;
 
-    iput-object p1, p0, Lan4;->b:Landroid/view/View;
+    invoke-direct {v0}, Lcb4;-><init>()V
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    sput-object v0, Lan4;->b:Lan4;
 
-    return-void
-.end method
+    const/4 v6, 0x0
 
-.method private final a(Landroid/animation/Animator;)V
-    .locals 0
+    new-array v2, v6, [Ljava/lang/String;
 
-    return-void
-.end method
+    const/4 v4, 0x2
 
-.method private final b(Landroid/animation/Animator;)V
-    .locals 0
+    const/4 v5, 0x2
 
-    return-void
-.end method
+    const-string v1, ":-1113596792"
 
-.method private final c(Landroid/animation/Animator;)V
-    .locals 0
+    const/4 v3, 0x0
 
-    return-void
-.end method
+    invoke-static/range {v0 .. v5}, Lcb4;->a(Lcb4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;II)Lxa4;
 
-.method private final d(Landroid/animation/Animator;)V
-    .locals 0
+    move-result-object v1
 
-    return-void
-.end method
+    sput-object v1, Lan4;->c:Lxa4;
 
-.method private final e(Landroid/animation/Animator;)V
-    .locals 0
+    new-array v2, v6, [Ljava/lang/String;
 
-    return-void
-.end method
+    const/16 v5, 0xa
 
-.method private final f(Landroid/animation/Animator;)V
-    .locals 0
+    const-string v1, ":settings/dev"
 
-    return-void
-.end method
+    const/4 v4, 0x1
 
+    invoke-static/range {v0 .. v5}, Lcb4;->a(Lcb4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;II)Lxa4;
 
-# virtual methods
-.method public final onAnimationCancel(Landroid/animation/Animator;)V
-    .locals 0
+    move-result-object v1
 
-    iget p0, p0, Lan4;->a:I
+    sput-object v1, Lan4;->d:Lxa4;
 
-    return-void
-.end method
+    new-array v2, v6, [Ljava/lang/String;
 
-.method public final onAnimationEnd(Landroid/animation/Animator;)V
-    .locals 0
+    const-string v1, ":743233864"
 
-    iget p1, p0, Lan4;->a:I
+    invoke-static/range {v0 .. v5}, Lcb4;->a(Lcb4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;II)Lxa4;
 
-    packed-switch p1, :pswitch_data_0
+    move-result-object v1
 
-    iget-object p0, p0, Lan4;->b:Landroid/view/View;
+    sput-object v1, Lan4;->e:Lxa4;
 
-    const/16 p1, 0x8
+    new-array v2, v6, [Ljava/lang/String;
 
-    invoke-virtual {p0, p1}, Landroid/view/View;->setVisibility(I)V
+    const-string v1, ":1462995683"
 
-    :pswitch_0
-    return-void
+    invoke-static/range {v0 .. v5}, Lcb4;->a(Lcb4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;II)Lxa4;
 
-    nop
+    move-result-object v1
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
+    sput-object v1, Lan4;->f:Lxa4;
 
-.method public final onAnimationRepeat(Landroid/animation/Animator;)V
-    .locals 0
+    new-array v2, v6, [Ljava/lang/String;
 
-    iget p0, p0, Lan4;->a:I
+    const-string v1, ":-388796178"
 
-    return-void
-.end method
+    invoke-static/range {v0 .. v5}, Lcb4;->a(Lcb4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;II)Lxa4;
 
-.method public final onAnimationStart(Landroid/animation/Animator;)V
-    .locals 0
+    move-result-object v1
 
-    iget p1, p0, Lan4;->a:I
+    sput-object v1, Lan4;->g:Lxa4;
 
-    packed-switch p1, :pswitch_data_0
+    new-array v2, v6, [Ljava/lang/String;
 
-    return-void
+    const-string v1, ":-1933980664"
 
-    :pswitch_0
-    iget-object p0, p0, Lan4;->b:Landroid/view/View;
+    invoke-static/range {v0 .. v5}, Lcb4;->a(Lcb4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;II)Lxa4;
 
-    const/4 p1, 0x0
+    move-result-object v1
 
-    invoke-virtual {p0, p1}, Landroid/view/View;->setVisibility(I)V
+    sput-object v1, Lan4;->h:Lxa4;
+
+    new-array v2, v6, [Ljava/lang/String;
+
+    const-string v1, ":2046483142"
+
+    invoke-static/range {v0 .. v5}, Lcb4;->a(Lcb4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;II)Lxa4;
+
+    move-result-object v1
+
+    sput-object v1, Lan4;->i:Lxa4;
+
+    new-array v2, v6, [Ljava/lang/String;
+
+    const-string v1, ":59501677"
+
+    invoke-static/range {v0 .. v5}, Lcb4;->a(Lcb4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;II)Lxa4;
 
     return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
 .end method

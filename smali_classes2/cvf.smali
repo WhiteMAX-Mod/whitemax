@@ -1,51 +1,39 @@
 .class public final Lcvf;
-.super Lbu3;
+.super Loi0;
 .source "SourceFile"
 
 
 # instance fields
-.field public synthetic X:Ljava/lang/Object;
+.field public final X:J
 
-.field public final synthetic Y:Levf;
+.field public final Y:Z
 
-.field public Z:I
+.field public final Z:Lgj7;
 
-.field public o:Len0;
+.field public final b:J
+
+.field public final c:J
+
+.field public final o:J
 
 
 # direct methods
-.method public constructor <init>(Levf;Lbu3;)V
+.method public constructor <init>(JJJJJZLgj7;)V
     .locals 0
 
-    iput-object p1, p0, Lcvf;->Y:Levf;
+    invoke-direct {p0, p1, p2}, Loi0;-><init>(J)V
 
-    invoke-direct {p0, p2}, Lbu3;-><init>(Lkotlin/coroutines/Continuation;)V
+    iput-wide p3, p0, Lcvf;->b:J
+
+    iput-wide p5, p0, Lcvf;->c:J
+
+    iput-wide p7, p0, Lcvf;->o:J
+
+    iput-wide p9, p0, Lcvf;->X:J
+
+    iput-boolean p11, p0, Lcvf;->Y:Z
+
+    iput-object p12, p0, Lcvf;->Z:Lgj7;
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
-
-    iput-object p1, p0, Lcvf;->X:Ljava/lang/Object;
-
-    iget p1, p0, Lcvf;->Z:I
-
-    const/high16 v0, -0x80000000
-
-    or-int/2addr p1, v0
-
-    iput p1, p0, Lcvf;->Z:I
-
-    iget-object p1, p0, Lcvf;->Y:Levf;
-
-    const/4 v0, 0x0
-
-    invoke-static {p1, v0, p0}, Levf;->c(Levf;Len0;Lbu3;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    return-object p0
 .end method

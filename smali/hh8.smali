@@ -1,58 +1,25 @@
 .class public final Lhh8;
-.super Ljava/lang/Object;
+.super Lfh8;
 .source "SourceFile"
-
-# interfaces
-.implements Landroid/os/Parcelable;
 
 
 # static fields
-.field public static final CREATOR:Landroid/os/Parcelable$Creator;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Landroid/os/Parcelable$Creator<",
-            "Lhh8;",
-            ">;"
-        }
-    .end annotation
-.end field
-
-
-# instance fields
-.field public a:Landroid/os/ResultReceiver;
+.field public static final p:Lhh8;
 
 
 # direct methods
 .method static constructor <clinit>()V
     .locals 2
 
-    new-instance v0, Ldj7;
+    new-instance v0, Ldh8;
 
-    const/16 v1, 0xe
+    invoke-direct {v0}, Ldh8;-><init>()V
 
-    invoke-direct {v0, v1}, Ldj7;-><init>(I)V
+    new-instance v1, Lhh8;
 
-    sput-object v0, Lhh8;->CREATOR:Landroid/os/Parcelable$Creator;
+    invoke-direct {v1, v0}, Lfh8;-><init>(Ldh8;)V
 
-    return-void
-.end method
-
-
-# virtual methods
-.method public final describeContents()I
-    .locals 0
-
-    const/4 p0, 0x0
-
-    return p0
-.end method
-
-.method public final writeToParcel(Landroid/os/Parcel;I)V
-    .locals 0
-
-    iget-object p0, p0, Lhh8;->a:Landroid/os/ResultReceiver;
-
-    invoke-virtual {p0, p1, p2}, Landroid/os/ResultReceiver;->writeToParcel(Landroid/os/Parcel;I)V
+    sput-object v1, Lhh8;->p:Lhh8;
 
     return-void
 .end method

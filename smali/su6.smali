@@ -3,101 +3,208 @@
 .source "SourceFile"
 
 
-# static fields
-.field public static final d:Ljava/lang/Object;
-
-
 # instance fields
-.field public a:I
+.field public final a:I
 
-.field public b:Ljava/util/ArrayList;
+.field public final b:I
 
-.field public final c:Lzb4;
+.field public final c:Ljava/lang/String;
+
+.field public final d:Ljava/lang/String;
+
+.field public final e:Ljava/lang/String;
+
+.field public final f:Ljava/lang/String;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
-
-    new-instance v0, Lwl4;
-
-    const/16 v1, 0x1a
-
-    invoke-direct {v0, v1}, Lwl4;-><init>(I)V
-
-    const/4 v1, 0x1
-
-    invoke-static {v1, v0}, Lkhg;->o(ILv56;)Lje7;
-
-    move-result-object v0
-
-    sput-object v0, Lsu6;->d:Ljava/lang/Object;
-
-    return-void
-.end method
-
-.method public constructor <init>()V
-    .locals 1
+.method public constructor <init>(Ljava/lang/String;IILjava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    new-instance v0, Lzb4;
+    iput p2, p0, Lsu6;->a:I
 
-    invoke-direct {v0}, Lzb4;-><init>()V
+    iput p3, p0, Lsu6;->b:I
 
-    iput-object v0, p0, Lsu6;->c:Lzb4;
+    iput-object p1, p0, Lsu6;->c:Ljava/lang/String;
 
-    invoke-virtual {p0}, Lsu6;->a()V
+    iput-object p4, p0, Lsu6;->d:Ljava/lang/String;
+
+    iput-object p5, p0, Lsu6;->e:Ljava/lang/String;
+
+    iput-object p6, p0, Lsu6;->f:Ljava/lang/String;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()V
-    .locals 3
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
 
-    iget-object v0, p0, Lsu6;->c:Lzb4;
+    const/4 v0, 0x1
 
-    iget v0, v0, Lzb4;->a:I
+    if-ne p0, p1, :cond_0
 
-    iput v0, p0, Lsu6;->a:I
+    return v0
 
-    iget-object v0, p0, Lsu6;->b:Ljava/util/ArrayList;
+    :cond_0
+    const/4 v1, 0x0
 
-    if-eqz v0, :cond_0
+    if-eqz p1, :cond_2
 
-    invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
+    const-class v2, Lsu6;
 
-    move-result-object v0
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    :goto_0
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+    move-result-object v3
 
-    move-result v1
+    if-eq v2, v3, :cond_1
 
-    if-eqz v1, :cond_0
+    goto :goto_0
 
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lqu6;
+    :cond_1
+    check-cast p1, Lsu6;
 
     iget v2, p0, Lsu6;->a:I
 
-    invoke-interface {v1}, Lqu6;->b()I
+    iget v3, p1, Lsu6;->a:I
 
-    move-result v1
+    if-ne v2, v3, :cond_2
 
-    invoke-static {v2, v1}, Ljava/lang/Math;->max(II)I
+    iget v2, p0, Lsu6;->b:I
 
-    move-result v1
+    iget v3, p1, Lsu6;->b:I
 
-    iput v1, p0, Lsu6;->a:I
+    if-ne v2, v3, :cond_2
+
+    iget-object v2, p0, Lsu6;->c:Ljava/lang/String;
+
+    iget-object v3, p1, Lsu6;->c:Ljava/lang/String;
+
+    invoke-static {v2, v3}, Landroid/text/TextUtils;->equals(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_2
+
+    iget-object v2, p0, Lsu6;->d:Ljava/lang/String;
+
+    iget-object v3, p1, Lsu6;->d:Ljava/lang/String;
+
+    invoke-static {v2, v3}, Landroid/text/TextUtils;->equals(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_2
+
+    iget-object v2, p0, Lsu6;->e:Ljava/lang/String;
+
+    iget-object v3, p1, Lsu6;->e:Ljava/lang/String;
+
+    invoke-static {v2, v3}, Landroid/text/TextUtils;->equals(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_2
+
+    iget-object p0, p0, Lsu6;->f:Ljava/lang/String;
+
+    iget-object p1, p1, Lsu6;->f:Ljava/lang/String;
+
+    invoke-static {p0, p1}, Landroid/text/TextUtils;->equals(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
+
+    move-result p0
+
+    if-eqz p0, :cond_2
+
+    return v0
+
+    :cond_2
+    :goto_0
+    return v1
+.end method
+
+.method public final hashCode()I
+    .locals 3
+
+    iget v0, p0, Lsu6;->a:I
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget v1, p0, Lsu6;->b:I
+
+    add-int/2addr v0, v1
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    const/4 v1, 0x0
+
+    iget-object v2, p0, Lsu6;->c:Ljava/lang/String;
+
+    if-eqz v2, :cond_0
+
+    invoke-virtual {v2}, Ljava/lang/String;->hashCode()I
+
+    move-result v2
 
     goto :goto_0
 
     :cond_0
-    return-void
+    move v2, v1
+
+    :goto_0
+    add-int/2addr v0, v2
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget-object v2, p0, Lsu6;->d:Ljava/lang/String;
+
+    if-eqz v2, :cond_1
+
+    invoke-virtual {v2}, Ljava/lang/String;->hashCode()I
+
+    move-result v2
+
+    goto :goto_1
+
+    :cond_1
+    move v2, v1
+
+    :goto_1
+    add-int/2addr v0, v2
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget-object v2, p0, Lsu6;->e:Ljava/lang/String;
+
+    if-eqz v2, :cond_2
+
+    invoke-virtual {v2}, Ljava/lang/String;->hashCode()I
+
+    move-result v2
+
+    goto :goto_2
+
+    :cond_2
+    move v2, v1
+
+    :goto_2
+    add-int/2addr v0, v2
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget-object p0, p0, Lsu6;->f:Ljava/lang/String;
+
+    if-eqz p0, :cond_3
+
+    invoke-virtual {p0}, Ljava/lang/String;->hashCode()I
+
+    move-result v1
+
+    :cond_3
+    add-int/2addr v0, v1
+
+    return v0
 .end method

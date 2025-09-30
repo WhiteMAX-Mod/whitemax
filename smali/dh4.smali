@@ -1,120 +1,118 @@
-.class public final synthetic Ldh4;
+.class public final Ldh4;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/lang/Runnable;
+.implements Lsdd;
 
 
 # instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Ljava/lang/Runnable;
-
-.field public final synthetic c:Lef6;
+.field public final synthetic a:Lfh4;
 
 
 # direct methods
-.method public synthetic constructor <init>(Ljava/lang/Runnable;Lef6;I)V
+.method public constructor <init>(Lfh4;)V
     .locals 0
 
-    iput p3, p0, Ldh4;->a:I
-
-    iput-object p1, p0, Ldh4;->b:Ljava/lang/Runnable;
-
-    iput-object p2, p0, Ldh4;->c:Lef6;
-
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Ldh4;->a:Lfh4;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
-    .locals 1
+.method public final c()Z
+    .locals 0
 
-    iget v0, p0, Ldh4;->a:I
+    const/4 p0, 0x1
 
-    packed-switch v0, :pswitch_data_0
+    return p0
+.end method
 
-    iget-object v0, p0, Ldh4;->b:Ljava/lang/Runnable;
+.method public final e(J)Lqdd;
+    .locals 10
 
-    iget-object p0, p0, Ldh4;->c:Lef6;
+    iget-object p0, p0, Ldh4;->a:Lfh4;
 
-    iget-object p0, p0, Lef6;->b:Ljava/lang/Object;
+    iget-object v0, p0, Lfh4;->w0:Ljava/lang/Object;
 
-    check-cast p0, Ljh4;
+    check-cast v0, Lnle;
 
-    :try_start_0
-    invoke-interface {v0}, Ljava/lang/Runnable;->run()V
+    iget v0, v0, Lnle;->f:I
 
-    const/4 v0, 0x0
+    int-to-long v0, v0
 
-    invoke-virtual {p0, v0}, Lm3;->j(Ljava/lang/Object;)Z
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+    mul-long/2addr v0, p1
 
-    goto :goto_0
+    const-wide/32 v2, 0xf4240
 
-    :catch_0
-    move-exception v0
+    div-long/2addr v0, v2
 
-    invoke-virtual {p0, v0}, Lm3;->k(Ljava/lang/Throwable;)Z
+    iget-wide v4, p0, Lfh4;->b:J
 
-    :goto_0
-    return-void
+    iget-wide v2, p0, Lfh4;->c:J
 
-    :pswitch_0
-    iget-object v0, p0, Ldh4;->b:Ljava/lang/Runnable;
+    sub-long v6, v2, v4
 
-    :try_start_1
-    invoke-interface {v0}, Ljava/lang/Runnable;->run()V
-    :try_end_1
-    .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_1
+    mul-long/2addr v6, v0
 
-    goto :goto_1
+    iget-wide v0, p0, Lfh4;->X:J
 
-    :catch_1
-    move-exception v0
+    div-long/2addr v6, v0
 
-    iget-object p0, p0, Ldh4;->c:Lef6;
+    add-long/2addr v6, v4
 
-    iget-object p0, p0, Lef6;->b:Ljava/lang/Object;
+    const-wide/16 v0, 0x7530
 
-    check-cast p0, Ljh4;
+    sub-long/2addr v6, v0
 
-    invoke-virtual {p0, v0}, Lm3;->k(Ljava/lang/Throwable;)Z
+    const-wide/16 v0, 0x1
 
-    :goto_1
-    return-void
+    sub-long/2addr v2, v0
 
-    :pswitch_1
-    iget-object v0, p0, Ldh4;->b:Ljava/lang/Runnable;
+    move-wide v8, v6
 
-    :try_start_2
-    invoke-interface {v0}, Ljava/lang/Runnable;->run()V
-    :try_end_2
-    .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_2
+    move-wide v6, v2
 
-    return-void
+    move-wide v2, v8
 
-    :catch_2
-    move-exception v0
+    invoke-static/range {v2 .. v7}, Llrf;->j(JJJ)J
 
-    iget-object p0, p0, Ldh4;->c:Lef6;
+    move-result-wide v0
 
-    iget-object p0, p0, Lef6;->b:Ljava/lang/Object;
+    new-instance p0, Lqdd;
 
-    check-cast p0, Ljh4;
+    new-instance v2, Lwdd;
 
-    invoke-virtual {p0, v0}, Lm3;->k(Ljava/lang/Throwable;)Z
+    invoke-direct {v2, p1, p2, v0, v1}, Lwdd;-><init>(JJ)V
 
-    throw v0
+    invoke-direct {p0, v2, v2}, Lqdd;-><init>(Lwdd;Lwdd;)V
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    return-object p0
+.end method
+
+.method public final f()J
+    .locals 5
+
+    iget-object p0, p0, Ldh4;->a:Lfh4;
+
+    iget-object v0, p0, Lfh4;->w0:Ljava/lang/Object;
+
+    check-cast v0, Lnle;
+
+    iget-wide v1, p0, Lfh4;->X:J
+
+    const-wide/32 v3, 0xf4240
+
+    mul-long/2addr v1, v3
+
+    iget p0, v0, Lnle;->f:I
+
+    int-to-long v3, p0
+
+    div-long/2addr v1, v3
+
+    return-wide v1
 .end method

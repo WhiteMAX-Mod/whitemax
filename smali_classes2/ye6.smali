@@ -2,38 +2,63 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lbf6;
 
-# instance fields
-.field public final a:Lrfg;
 
-.field public final b:Ljava/util/HashMap;
+# static fields
+.field public static final a:Lye6;
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;)V
-    .locals 4
+.method static constructor <clinit>()V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lye6;
 
-    new-instance v0, Ljava/util/HashMap;
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
-
-    iput-object v0, p0, Lye6;->b:Ljava/util/HashMap;
-
-    sget v0, Lkr7;->a:I
-
-    new-instance v0, Lrfg;
-
-    sget-object v1, Lrfg;->s0:Lnz7;
-
-    sget-object v2, Lgk;->d:Lfk;
-
-    sget-object v3, Loe6;->c:Loe6;
-
-    invoke-direct {v0, p1, v1, v2, v3}, Lpe6;-><init>(Landroid/content/Context;Lnz7;Lgk;Loe6;)V
-
-    iput-object v0, p0, Lye6;->a:Lrfg;
+    sput-object v0, Lye6;->a:Lye6;
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 1
+
+    const/4 v0, 0x1
+
+    if-ne p0, p1, :cond_0
+
+    return v0
+
+    :cond_0
+    instance-of p0, p1, Lye6;
+
+    if-nez p0, :cond_1
+
+    const/4 p0, 0x0
+
+    return p0
+
+    :cond_1
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 0
+
+    const p0, -0x6ebc12d1
+
+    return p0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 0
+
+    const-string p0, "ClearSelectionAndScrollUp"
+
+    return-object p0
 .end method

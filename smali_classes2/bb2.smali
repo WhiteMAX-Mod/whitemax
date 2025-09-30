@@ -1,120 +1,68 @@
-.class public final synthetic Lbb2;
-.super Ljava/lang/Object;
+.class public final Lbb2;
+.super Lsxe;
 .source "SourceFile"
-
-# interfaces
-.implements Llj3;
 
 
 # instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:J
-
-.field public final synthetic c:Ljava/lang/Object;
+.field public c:Lt72;
 
 
 # direct methods
-.method public synthetic constructor <init>(Ljava/lang/Object;JI)V
+.method public constructor <init>(Lt39;)V
     .locals 0
 
-    iput p4, p0, Lbb2;->a:I
-
-    iput-object p1, p0, Lbb2;->c:Ljava/lang/Object;
-
-    iput-wide p2, p0, Lbb2;->b:J
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p1}, Lsxe;-><init>(Lt39;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final accept(Ljava/lang/Object;)V
-    .locals 10
+.method public final c(Lt39;Ljava/lang/String;)V
+    .locals 1
 
-    iget v0, p0, Lbb2;->a:I
+    const-string v0, "chat"
 
-    iget-object v1, p0, Lbb2;->c:Ljava/lang/Object;
+    invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    packed-switch v0, :pswitch_data_0
+    move-result p2
 
-    check-cast v1, Lyjc;
+    if-eqz p2, :cond_0
 
-    check-cast p1, Ljava/util/List;
-
-    invoke-interface {p1}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
+    invoke-static {p1}, Lt72;->a(Lt39;)Lt72;
 
     move-result-object p1
 
-    :goto_0
-    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
+    iput-object p1, p0, Lbb2;->c:Lt72;
 
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lela;
-
-    iget-wide v2, p0, Lbb2;->b:J
-
-    invoke-virtual {v1, v0, v2, v3}, Lyjc;->g(Lela;J)V
-
-    goto :goto_0
+    return-void
 
     :cond_0
-    return-void
-
-    :pswitch_0
-    move-object v5, v1
-
-    check-cast v5, Lcb2;
-
-    move-object v8, p1
-
-    check-cast v8, Ljava/util/Collection;
-
-    invoke-virtual {v5}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    invoke-interface {v8}, Ljava/util/Collection;->size()I
-
-    move-result p1
-
-    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object p1
-
-    filled-new-array {p1}, [Ljava/lang/Object;
-
-    move-result-object p1
-
-    const-string v0, "cb2"
-
-    const-string v1, "ValidateMessagesTimeUseCase found some items for delete, size = %d"
-
-    invoke-static {v0, v1, p1}, Lg47;->o(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
-
-    iget-object p1, v5, Lcb2;->h:Lgsc;
-
-    new-instance v4, Lab2;
-
-    const/4 v9, 0x0
-
-    iget-wide v6, p0, Lbb2;->b:J
-
-    invoke-direct/range {v4 .. v9}, Lab2;-><init>(Ljava/lang/Object;JLjava/lang/Object;I)V
-
-    invoke-virtual {p1, v4}, Lgsc;->b(Ljava/lang/Runnable;)Lam4;
+    invoke-virtual {p1}, Lt39;->B()V
 
     return-void
+.end method
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+.method public final toString()Ljava/lang/String;
+    .locals 2
+
+    iget-object p0, p0, Lbb2;->c:Lt72;
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "{chat="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string p0, "}"
+
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    return-object p0
 .end method

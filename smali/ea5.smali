@@ -1,132 +1,88 @@
 .class public final Lea5;
-.super Ljava/lang/Object;
+.super Ljava/util/concurrent/atomic/AtomicBoolean;
 .source "SourceFile"
 
 # interfaces
-.implements Lct7;
-
-
-# static fields
-.field public static final b:Lea5;
+.implements Ljava/lang/Runnable;
+.implements Loq4;
 
 
 # instance fields
-.field public a:I
+.field public final a:Ljava/lang/Runnable;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public constructor <init>(Ljava/lang/Runnable;)V
+    .locals 0
 
-    new-instance v0, Lea5;
+    invoke-direct {p0}, Ljava/util/concurrent/atomic/AtomicBoolean;-><init>()V
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    const/4 v1, 0x5
-
-    iput v1, v0, Lea5;->a:I
-
-    sput-object v0, Lea5;->b:Lea5;
+    iput-object p1, p0, Lea5;->a:Ljava/lang/Runnable;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Ljava/lang/String;)V
-    .locals 0
+.method public final e()V
+    .locals 1
+
+    const/4 v0, 0x1
+
+    invoke-virtual {p0, v0}, Ljava/util/concurrent/atomic/AtomicBoolean;->lazySet(Z)V
 
     return-void
 .end method
 
-.method public final b(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+.method public final f()Z
     .locals 0
 
-    invoke-static {p3}, Landroid/util/Log;->getStackTraceString(Ljava/lang/Throwable;)Ljava/lang/String;
+    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
 
-    return-void
-.end method
-
-.method public final d(Ljava/lang/String;Ljava/lang/String;)V
-    .locals 0
-
-    .line 1
-    return-void
-.end method
-
-.method public final d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-    .locals 0
-
-    .line 2
-    invoke-static {p3}, Landroid/util/Log;->getStackTraceString(Ljava/lang/Throwable;)Ljava/lang/String;
-
-    return-void
-.end method
-
-.method public final e(Ljava/lang/String;Ljava/lang/String;)V
-    .locals 0
-
-    .line 1
-    return-void
-.end method
-
-.method public final e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-    .locals 0
-
-    .line 2
-    invoke-static {p3}, Landroid/util/Log;->getStackTraceString(Ljava/lang/Throwable;)Ljava/lang/String;
-
-    return-void
-.end method
-
-.method public final f(Ljava/lang/String;Ljava/lang/String;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public final h(I)Z
-    .locals 0
-
-    iget p0, p0, Lea5;->a:I
-
-    if-gt p0, p1, :cond_0
-
-    const/4 p0, 0x1
-
-    return p0
-
-    :cond_0
-    const/4 p0, 0x0
+    move-result p0
 
     return p0
 .end method
 
-.method public final i(I)V
-    .locals 0
+.method public final run()V
+    .locals 2
 
-    iput p1, p0, Lea5;->a:I
+    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
 
-    return-void
-.end method
+    move-result v0
 
-.method public final w(Ljava/lang/String;Ljava/lang/String;)V
-    .locals 0
-
-    .line 1
-    return-void
-.end method
-
-.method public final w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-    .locals 0
-
-    if-nez p3, :cond_0
+    if-eqz v0, :cond_0
 
     return-void
 
-    .line 2
     :cond_0
-    invoke-static {p3}, Landroid/util/Log;->getStackTraceString(Ljava/lang/Throwable;)Ljava/lang/String;
+    const/4 v0, 0x1
+
+    :try_start_0
+    iget-object v1, p0, Lea5;->a:Ljava/lang/Runnable;
+
+    invoke-interface {v1}, Ljava/lang/Runnable;->run()V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    invoke-virtual {p0, v0}, Ljava/util/concurrent/atomic/AtomicBoolean;->lazySet(Z)V
 
     return-void
+
+    :catchall_0
+    move-exception v1
+
+    :try_start_1
+    invoke-static {v1}, Ln4e;->D(Ljava/lang/Throwable;)V
+
+    throw v1
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_1
+
+    :catchall_1
+    move-exception v1
+
+    invoke-virtual {p0, v0}, Ljava/util/concurrent/atomic/AtomicBoolean;->lazySet(Z)V
+
+    throw v1
 .end method

@@ -2,573 +2,296 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Landroid/os/Parcelable;
+
+
+# static fields
+.field public static final CREATOR:Landroid/os/Parcelable$Creator;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroid/os/Parcelable$Creator<",
+            "Lnj8;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+.field public static final c:Ltr;
+
+.field public static final o:[Ljava/lang/String;
+
 
 # instance fields
-.field public a:J
+.field public final a:Landroid/os/Bundle;
 
-.field public b:I
-
-.field public c:Ljava/lang/Object;
-
-.field public d:Ljava/io/Serializable;
+.field public b:Landroid/media/MediaMetadata;
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 6
+.method static constructor <clinit>()V
+    .locals 10
 
-    .line 1
-    new-instance v1, Ljava/util/concurrent/CopyOnWriteArrayList;
+    new-instance v0, Ltr;
 
-    invoke-direct {v1}, Ljava/util/concurrent/CopyOnWriteArrayList;-><init>()V
+    const/4 v1, 0x0
 
-    const/4 v3, 0x0
+    invoke-direct {v0, v1}, Lr1e;-><init>(I)V
 
-    const-wide/16 v4, 0x0
+    sput-object v0, Lnj8;->c:Ltr;
 
-    const/4 v2, 0x0
+    const/4 v2, 0x1
 
-    move-object v0, p0
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    invoke-direct/range {v0 .. v5}, Lnj8;-><init>(Ljava/util/concurrent/CopyOnWriteArrayList;ILej8;J)V
+    move-result-object v2
+
+    const-string v3, "android.media.metadata.TITLE"
+
+    invoke-virtual {v0, v3, v2}, Lr1e;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    const-string v3, "android.media.metadata.ARTIST"
+
+    invoke-virtual {v0, v3, v2}, Lr1e;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v1
+
+    const-string v3, "android.media.metadata.DURATION"
+
+    invoke-virtual {v0, v3, v1}, Lr1e;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    const-string v3, "android.media.metadata.ALBUM"
+
+    invoke-virtual {v0, v3, v2}, Lr1e;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    const-string v3, "android.media.metadata.AUTHOR"
+
+    invoke-virtual {v0, v3, v2}, Lr1e;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    const-string v3, "android.media.metadata.WRITER"
+
+    invoke-virtual {v0, v3, v2}, Lr1e;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    const-string v3, "android.media.metadata.COMPOSER"
+
+    invoke-virtual {v0, v3, v2}, Lr1e;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    const-string v3, "android.media.metadata.COMPILATION"
+
+    invoke-virtual {v0, v3, v2}, Lr1e;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    const-string v3, "android.media.metadata.DATE"
+
+    invoke-virtual {v0, v3, v2}, Lr1e;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    const-string v3, "android.media.metadata.YEAR"
+
+    invoke-virtual {v0, v3, v1}, Lr1e;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    const-string v3, "android.media.metadata.GENRE"
+
+    invoke-virtual {v0, v3, v2}, Lr1e;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    const-string v3, "android.media.metadata.TRACK_NUMBER"
+
+    invoke-virtual {v0, v3, v1}, Lr1e;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    const-string v3, "android.media.metadata.NUM_TRACKS"
+
+    invoke-virtual {v0, v3, v1}, Lr1e;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    const-string v3, "android.media.metadata.DISC_NUMBER"
+
+    invoke-virtual {v0, v3, v1}, Lr1e;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    const-string v3, "android.media.metadata.ALBUM_ARTIST"
+
+    invoke-virtual {v0, v3, v2}, Lr1e;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    const/4 v3, 0x2
+
+    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v3
+
+    const-string v4, "android.media.metadata.ART"
+
+    invoke-virtual {v0, v4, v3}, Lr1e;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    const-string v4, "android.media.metadata.ART_URI"
+
+    invoke-virtual {v0, v4, v2}, Lr1e;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    const-string v4, "android.media.metadata.ALBUM_ART"
+
+    invoke-virtual {v0, v4, v3}, Lr1e;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    const-string v4, "android.media.metadata.ALBUM_ART_URI"
+
+    invoke-virtual {v0, v4, v2}, Lr1e;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    const/4 v4, 0x3
+
+    invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v4
+
+    const-string v5, "android.media.metadata.USER_RATING"
+
+    invoke-virtual {v0, v5, v4}, Lr1e;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    const-string v5, "android.media.metadata.RATING"
+
+    invoke-virtual {v0, v5, v4}, Lr1e;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    const-string v4, "android.media.metadata.DISPLAY_TITLE"
+
+    invoke-virtual {v0, v4, v2}, Lr1e;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    const-string v4, "android.media.metadata.DISPLAY_SUBTITLE"
+
+    invoke-virtual {v0, v4, v2}, Lr1e;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    const-string v4, "android.media.metadata.DISPLAY_DESCRIPTION"
+
+    invoke-virtual {v0, v4, v2}, Lr1e;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    const-string v4, "android.media.metadata.DISPLAY_ICON"
+
+    invoke-virtual {v0, v4, v3}, Lr1e;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    const-string v3, "android.media.metadata.DISPLAY_ICON_URI"
+
+    invoke-virtual {v0, v3, v2}, Lr1e;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    const-string v3, "android.media.metadata.MEDIA_ID"
+
+    invoke-virtual {v0, v3, v2}, Lr1e;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    const-string v3, "android.media.metadata.BT_FOLDER_TYPE"
+
+    invoke-virtual {v0, v3, v1}, Lr1e;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    const-string v3, "android.media.metadata.MEDIA_URI"
+
+    invoke-virtual {v0, v3, v2}, Lr1e;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    const-string v2, "android.media.metadata.ADVERTISEMENT"
+
+    invoke-virtual {v0, v2, v1}, Lr1e;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    const-string v2, "android.media.metadata.DOWNLOAD_STATUS"
+
+    invoke-virtual {v0, v2, v1}, Lr1e;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    const-string v8, "android.media.metadata.AUTHOR"
+
+    const-string v9, "android.media.metadata.COMPOSER"
+
+    const-string v3, "android.media.metadata.TITLE"
+
+    const-string v4, "android.media.metadata.ARTIST"
+
+    const-string v5, "android.media.metadata.ALBUM"
+
+    const-string v6, "android.media.metadata.ALBUM_ARTIST"
+
+    const-string v7, "android.media.metadata.WRITER"
+
+    filled-new-array/range {v3 .. v9}, [Ljava/lang/String;
+
+    move-result-object v0
+
+    sput-object v0, Lnj8;->o:[Ljava/lang/String;
+
+    new-instance v0, Lba8;
+
+    const/4 v1, 0x3
+
+    invoke-direct {v0, v1}, Lba8;-><init>(I)V
+
+    sput-object v0, Lnj8;->CREATOR:Landroid/os/Parcelable$Creator;
 
     return-void
 .end method
 
-.method public constructor <init>(Ljava/util/concurrent/CopyOnWriteArrayList;ILej8;J)V
-    .locals 0
+.method public constructor <init>(Landroid/os/Bundle;)V
+    .locals 1
 
-    .line 2
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 2
+    new-instance v0, Landroid/os/Bundle;
+
+    invoke-direct {v0, p1}, Landroid/os/Bundle;-><init>(Landroid/os/Bundle;)V
+
+    iput-object v0, p0, Lnj8;->a:Landroid/os/Bundle;
+
     .line 3
-    iput-object p1, p0, Lnj8;->d:Ljava/io/Serializable;
+    invoke-static {v0}, Lfo8;->q(Landroid/os/Bundle;)V
+
+    return-void
+.end method
+
+.method public constructor <init>(Landroid/os/Parcel;)V
+    .locals 1
 
     .line 4
-    iput p2, p0, Lnj8;->b:I
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 5
-    iput-object p3, p0, Lnj8;->c:Ljava/lang/Object;
+    const-class v0, Lfo8;
+
+    invoke-virtual {v0}, Ljava/lang/Class;->getClassLoader()Ljava/lang/ClassLoader;
+
+    move-result-object v0
+
+    invoke-virtual {p1, v0}, Landroid/os/Parcel;->readBundle(Ljava/lang/ClassLoader;)Landroid/os/Bundle;
+
+    move-result-object p1
 
     .line 6
-    iput-wide p4, p0, Lnj8;->a:J
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    .line 7
+    iput-object p1, p0, Lnj8;->a:Landroid/os/Bundle;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public a(J)J
-    .locals 3
+.method public final a(Ljava/lang/String;)J
+    .locals 2
 
-    invoke-static {p1, p2}, Lnaf;->K(J)J
+    iget-object p0, p0, Lnj8;->a:Landroid/os/Bundle;
 
-    move-result-wide p1
+    const-wide/16 v0, 0x0
 
-    const-wide v0, -0x7fffffffffffffffL    # -4.9E-324
+    invoke-virtual {p0, p1, v0, v1}, Landroid/os/BaseBundle;->getLong(Ljava/lang/String;J)J
 
-    cmp-long v2, p1, v0
+    move-result-wide p0
 
-    if-nez v2, :cond_0
-
-    return-wide v0
-
-    :cond_0
-    iget-wide v0, p0, Lnj8;->a:J
-
-    add-long/2addr v0, p1
-
-    return-wide v0
+    return-wide p0
 .end method
 
-.method public b(ILdz5;ILjava/lang/Object;J)V
-    .locals 10
+.method public final describeContents()I
+    .locals 0
 
-    new-instance v0, Lac8;
+    const/4 p0, 0x0
 
-    move-wide v1, p5
-
-    invoke-virtual {p0, v1, v2}, Lnj8;->a(J)J
-
-    move-result-wide v6
-
-    const-wide v8, -0x7fffffffffffffffL    # -4.9E-324
-
-    const/4 v1, 0x1
-
-    move v2, p1
-
-    move-object v3, p2
-
-    move v4, p3
-
-    move-object v5, p4
-
-    invoke-direct/range {v0 .. v9}, Lac8;-><init>(IILjava/lang/Object;ILjava/lang/Object;JJ)V
-
-    invoke-virtual {p0, v0}, Lnj8;->c(Lac8;)V
-
-    return-void
+    return p0
 .end method
 
-.method public c(Lac8;)V
-    .locals 5
+.method public final writeToParcel(Landroid/os/Parcel;I)V
+    .locals 0
 
-    iget-object v0, p0, Lnj8;->d:Ljava/io/Serializable;
+    iget-object p0, p0, Lnj8;->a:Landroid/os/Bundle;
 
-    check-cast v0, Ljava/util/concurrent/CopyOnWriteArrayList;
+    invoke-virtual {p1, p0}, Landroid/os/Parcel;->writeBundle(Landroid/os/Bundle;)V
 
-    invoke-virtual {v0}, Ljava/util/concurrent/CopyOnWriteArrayList;->iterator()Ljava/util/Iterator;
-
-    move-result-object v0
-
-    :goto_0
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Llj8;
-
-    iget-object v2, v1, Llj8;->b:Loj8;
-
-    iget-object v1, v1, Llj8;->a:Landroid/os/Handler;
-
-    new-instance v3, Ln05;
-
-    const/16 v4, 0x15
-
-    invoke-direct {v3, p0, v2, p1, v4}, Ln05;-><init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;I)V
-
-    invoke-static {v1, v3}, Lnaf;->F(Landroid/os/Handler;Ljava/lang/Runnable;)V
-
-    goto :goto_0
-
-    :cond_0
-    return-void
-.end method
-
-.method public d(Lxn7;IILdz5;ILjava/lang/Object;JJ)V
-    .locals 10
-
-    new-instance v0, Lac8;
-
-    move-wide/from16 v1, p7
-
-    invoke-virtual {p0, v1, v2}, Lnj8;->a(J)J
-
-    move-result-wide v6
-
-    move-wide/from16 v1, p9
-
-    invoke-virtual {p0, v1, v2}, Lnj8;->a(J)J
-
-    move-result-wide v8
-
-    move v1, p2
-
-    move v2, p3
-
-    move-object v3, p4
-
-    move v4, p5
-
-    move-object/from16 v5, p6
-
-    invoke-direct/range {v0 .. v9}, Lac8;-><init>(IILjava/lang/Object;ILjava/lang/Object;JJ)V
-
-    invoke-virtual {p0, p1, v0}, Lnj8;->e(Lxn7;Lac8;)V
-
-    return-void
-.end method
-
-.method public e(Lxn7;Lac8;)V
-    .locals 8
-
-    iget-object v0, p0, Lnj8;->d:Ljava/io/Serializable;
-
-    check-cast v0, Ljava/util/concurrent/CopyOnWriteArrayList;
-
-    invoke-virtual {v0}, Ljava/util/concurrent/CopyOnWriteArrayList;->iterator()Ljava/util/Iterator;
-
-    move-result-object v0
-
-    :goto_0
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Llj8;
-
-    iget-object v4, v1, Llj8;->b:Loj8;
-
-    iget-object v1, v1, Llj8;->a:Landroid/os/Handler;
-
-    new-instance v2, Lij8;
-
-    const/4 v7, 0x2
-
-    move-object v3, p0
-
-    move-object v5, p1
-
-    move-object v6, p2
-
-    invoke-direct/range {v2 .. v7}, Lij8;-><init>(Lnj8;Loj8;Lxn7;Lac8;I)V
-
-    invoke-static {v1, v2}, Lnaf;->F(Landroid/os/Handler;Ljava/lang/Runnable;)V
-
-    goto :goto_0
-
-    :cond_0
-    return-void
-.end method
-
-.method public f(Lxn7;IILdz5;ILjava/lang/Object;JJ)V
-    .locals 10
-
-    new-instance v0, Lac8;
-
-    move-wide/from16 v1, p7
-
-    invoke-virtual {p0, v1, v2}, Lnj8;->a(J)J
-
-    move-result-wide v6
-
-    move-wide/from16 v1, p9
-
-    invoke-virtual {p0, v1, v2}, Lnj8;->a(J)J
-
-    move-result-wide v8
-
-    move v1, p2
-
-    move v2, p3
-
-    move-object v3, p4
-
-    move v4, p5
-
-    move-object/from16 v5, p6
-
-    invoke-direct/range {v0 .. v9}, Lac8;-><init>(IILjava/lang/Object;ILjava/lang/Object;JJ)V
-
-    invoke-virtual {p0, p1, v0}, Lnj8;->g(Lxn7;Lac8;)V
-
-    return-void
-.end method
-
-.method public g(Lxn7;Lac8;)V
-    .locals 8
-
-    iget-object v0, p0, Lnj8;->d:Ljava/io/Serializable;
-
-    check-cast v0, Ljava/util/concurrent/CopyOnWriteArrayList;
-
-    invoke-virtual {v0}, Ljava/util/concurrent/CopyOnWriteArrayList;->iterator()Ljava/util/Iterator;
-
-    move-result-object v0
-
-    :goto_0
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Llj8;
-
-    iget-object v4, v1, Llj8;->b:Loj8;
-
-    iget-object v1, v1, Llj8;->a:Landroid/os/Handler;
-
-    new-instance v2, Lij8;
-
-    const/4 v7, 0x1
-
-    move-object v3, p0
-
-    move-object v5, p1
-
-    move-object v6, p2
-
-    invoke-direct/range {v2 .. v7}, Lij8;-><init>(Lnj8;Loj8;Lxn7;Lac8;I)V
-
-    invoke-static {v1, v2}, Lnaf;->F(Landroid/os/Handler;Ljava/lang/Runnable;)V
-
-    goto :goto_0
-
-    :cond_0
-    return-void
-.end method
-
-.method public h(Lxn7;IILdz5;ILjava/lang/Object;JJLjava/io/IOException;Z)V
-    .locals 10
-
-    new-instance v0, Lac8;
-
-    move-wide/from16 v1, p7
-
-    invoke-virtual {p0, v1, v2}, Lnj8;->a(J)J
-
-    move-result-wide v6
-
-    move-wide/from16 v1, p9
-
-    invoke-virtual {p0, v1, v2}, Lnj8;->a(J)J
-
-    move-result-wide v8
-
-    move v1, p2
-
-    move v2, p3
-
-    move-object v3, p4
-
-    move v4, p5
-
-    move-object/from16 v5, p6
-
-    invoke-direct/range {v0 .. v9}, Lac8;-><init>(IILjava/lang/Object;ILjava/lang/Object;JJ)V
-
-    move-object/from16 p2, p11
-
-    move/from16 p3, p12
-
-    invoke-virtual {p0, p1, v0, p2, p3}, Lnj8;->j(Lxn7;Lac8;Ljava/io/IOException;Z)V
-
-    return-void
-.end method
-
-.method public i(Lxn7;ILjava/io/IOException;Z)V
-    .locals 13
-
-    const-wide v7, -0x7fffffffffffffffL    # -4.9E-324
-
-    const-wide v9, -0x7fffffffffffffffL    # -4.9E-324
-
-    const/4 v3, -0x1
-
-    const/4 v4, 0x0
-
-    const/4 v5, 0x0
-
-    const/4 v6, 0x0
-
-    move-object v0, p0
-
-    move-object v1, p1
-
-    move v2, p2
-
-    move-object/from16 v11, p3
-
-    move/from16 v12, p4
-
-    invoke-virtual/range {v0 .. v12}, Lnj8;->h(Lxn7;IILdz5;ILjava/lang/Object;JJLjava/io/IOException;Z)V
-
-    return-void
-.end method
-
-.method public j(Lxn7;Lac8;Ljava/io/IOException;Z)V
-    .locals 10
-
-    iget-object v0, p0, Lnj8;->d:Ljava/io/Serializable;
-
-    check-cast v0, Ljava/util/concurrent/CopyOnWriteArrayList;
-
-    invoke-virtual {v0}, Ljava/util/concurrent/CopyOnWriteArrayList;->iterator()Ljava/util/Iterator;
-
-    move-result-object v0
-
-    :goto_0
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Llj8;
-
-    iget-object v4, v1, Llj8;->b:Loj8;
-
-    iget-object v1, v1, Llj8;->a:Landroid/os/Handler;
-
-    new-instance v2, Lkj8;
-
-    const/4 v9, 0x0
-
-    move-object v3, p0
-
-    move-object v5, p1
-
-    move-object v6, p2
-
-    move-object v7, p3
-
-    move v8, p4
-
-    invoke-direct/range {v2 .. v9}, Lkj8;-><init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/io/IOException;ZI)V
-
-    invoke-static {v1, v2}, Lnaf;->F(Landroid/os/Handler;Ljava/lang/Runnable;)V
-
-    goto :goto_0
-
-    :cond_0
-    return-void
-.end method
-
-.method public k(Lxn7;IILdz5;ILjava/lang/Object;JJ)V
-    .locals 10
-
-    new-instance v0, Lac8;
-
-    move-wide/from16 v1, p7
-
-    invoke-virtual {p0, v1, v2}, Lnj8;->a(J)J
-
-    move-result-wide v6
-
-    move-wide/from16 v1, p9
-
-    invoke-virtual {p0, v1, v2}, Lnj8;->a(J)J
-
-    move-result-wide v8
-
-    move v1, p2
-
-    move v2, p3
-
-    move-object v3, p4
-
-    move v4, p5
-
-    move-object/from16 v5, p6
-
-    invoke-direct/range {v0 .. v9}, Lac8;-><init>(IILjava/lang/Object;ILjava/lang/Object;JJ)V
-
-    invoke-virtual {p0, p1, v0}, Lnj8;->l(Lxn7;Lac8;)V
-
-    return-void
-.end method
-
-.method public l(Lxn7;Lac8;)V
-    .locals 8
-
-    iget-object v0, p0, Lnj8;->d:Ljava/io/Serializable;
-
-    check-cast v0, Ljava/util/concurrent/CopyOnWriteArrayList;
-
-    invoke-virtual {v0}, Ljava/util/concurrent/CopyOnWriteArrayList;->iterator()Ljava/util/Iterator;
-
-    move-result-object v0
-
-    :goto_0
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Llj8;
-
-    iget-object v4, v1, Llj8;->b:Loj8;
-
-    iget-object v1, v1, Llj8;->a:Landroid/os/Handler;
-
-    new-instance v2, Lij8;
-
-    const/4 v7, 0x0
-
-    move-object v3, p0
-
-    move-object v5, p1
-
-    move-object v6, p2
-
-    invoke-direct/range {v2 .. v7}, Lij8;-><init>(Lnj8;Loj8;Lxn7;Lac8;I)V
-
-    invoke-static {v1, v2}, Lnaf;->F(Landroid/os/Handler;Ljava/lang/Runnable;)V
-
-    goto :goto_0
-
-    :cond_0
-    return-void
-.end method
-
-.method public m(Lac8;)V
-    .locals 8
-
-    iget-object v0, p0, Lnj8;->c:Ljava/lang/Object;
-
-    move-object v4, v0
-
-    check-cast v4, Lej8;
-
-    invoke-virtual {v4}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    iget-object v0, p0, Lnj8;->d:Ljava/io/Serializable;
-
-    check-cast v0, Ljava/util/concurrent/CopyOnWriteArrayList;
-
-    invoke-virtual {v0}, Ljava/util/concurrent/CopyOnWriteArrayList;->iterator()Ljava/util/Iterator;
-
-    move-result-object v0
-
-    :goto_0
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Llj8;
-
-    iget-object v3, v1, Llj8;->b:Loj8;
-
-    iget-object v7, v1, Llj8;->a:Landroid/os/Handler;
-
-    new-instance v1, Lvg3;
-
-    const/16 v6, 0x9
-
-    move-object v2, p0
-
-    move-object v5, p1
-
-    invoke-direct/range {v1 .. v6}, Lvg3;-><init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;I)V
-
-    invoke-static {v7, v1}, Lnaf;->F(Landroid/os/Handler;Ljava/lang/Runnable;)V
-
-    goto :goto_0
-
-    :cond_0
     return-void
 .end method

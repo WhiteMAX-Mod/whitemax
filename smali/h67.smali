@@ -1,239 +1,207 @@
 .class public final Lh67;
-.super Lqde;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Ll66;
+.implements Ltdd;
 
 
 # instance fields
-.field public synthetic X:Ljava/lang/Object;
+.field public final a:Lj28;
 
-.field public final synthetic Y:Lone/me/inviteactions/invitefriendsbottomsheet/InviteFriendsToMaxBottomSheet;
+.field public final b:Lj28;
+
+.field public c:J
 
 
 # direct methods
-.method public constructor <init>(Lone/me/inviteactions/invitefriendsbottomsheet/InviteFriendsToMaxBottomSheet;Lkotlin/coroutines/Continuation;)V
-    .locals 0
+.method public constructor <init>(J[J[J)V
+    .locals 6
 
-    iput-object p1, p0, Lh67;->Y:Lone/me/inviteactions/invitefriendsbottomsheet/InviteFriendsToMaxBottomSheet;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 p1, 0x2
+    array-length v0, p3
 
-    invoke-direct {p0, p1, p2}, Lqde;-><init>(ILkotlin/coroutines/Continuation;)V
+    array-length v1, p4
+
+    const/4 v2, 0x0
+
+    const/4 v3, 0x1
+
+    if-ne v0, v1, :cond_0
+
+    move v0, v3
+
+    goto :goto_0
+
+    :cond_0
+    move v0, v2
+
+    :goto_0
+    invoke-static {v0}, Lmq0;->c(Z)V
+
+    array-length v0, p4
+
+    if-lez v0, :cond_1
+
+    aget-wide v1, p4, v2
+
+    const-wide/16 v4, 0x0
+
+    cmp-long v1, v1, v4
+
+    if-lez v1, :cond_1
+
+    new-instance v1, Lj28;
+
+    add-int/2addr v0, v3
+
+    invoke-direct {v1, v0}, Lj28;-><init>(I)V
+
+    iput-object v1, p0, Lh67;->a:Lj28;
+
+    new-instance v2, Lj28;
+
+    invoke-direct {v2, v0}, Lj28;-><init>(I)V
+
+    iput-object v2, p0, Lh67;->b:Lj28;
+
+    invoke-virtual {v1, v4, v5}, Lj28;->a(J)V
+
+    invoke-virtual {v2, v4, v5}, Lj28;->a(J)V
+
+    goto :goto_1
+
+    :cond_1
+    new-instance v1, Lj28;
+
+    invoke-direct {v1, v0}, Lj28;-><init>(I)V
+
+    iput-object v1, p0, Lh67;->a:Lj28;
+
+    new-instance v1, Lj28;
+
+    invoke-direct {v1, v0}, Lj28;-><init>(I)V
+
+    iput-object v1, p0, Lh67;->b:Lj28;
+
+    :goto_1
+    iget-object v0, p0, Lh67;->a:Lj28;
+
+    invoke-virtual {v0, p3}, Lj28;->b([J)V
+
+    iget-object p3, p0, Lh67;->b:Lj28;
+
+    invoke-virtual {p3, p4}, Lj28;->b([J)V
+
+    iput-wide p1, p0, Lh67;->c:J
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+.method public final c()Z
     .locals 0
 
-    check-cast p1, Lox3;
+    iget-object p0, p0, Lh67;->b:Lj28;
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    iget p0, p0, Lj28;->b:I
 
-    invoke-virtual {p0, p1, p2}, Lh67;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    if-lez p0, :cond_0
 
-    move-result-object p0
+    const/4 p0, 0x1
 
-    check-cast p0, Lh67;
+    return p0
 
-    sget-object p1, Le5f;->a:Le5f;
+    :cond_0
+    const/4 p0, 0x0
 
-    invoke-virtual {p0, p1}, Lh67;->o(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p1
+    return p0
 .end method
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 1
+.method public final e(J)Lrdd;
+    .locals 7
 
-    new-instance v0, Lh67;
+    iget-object v0, p0, Lh67;->b:Lj28;
 
-    iget-object p0, p0, Lh67;->Y:Lone/me/inviteactions/invitefriendsbottomsheet/InviteFriendsToMaxBottomSheet;
+    iget v1, v0, Lj28;->b:I
 
-    invoke-direct {v0, p0, p2}, Lh67;-><init>(Lone/me/inviteactions/invitefriendsbottomsheet/InviteFriendsToMaxBottomSheet;Lkotlin/coroutines/Continuation;)V
+    if-nez v1, :cond_0
 
-    iput-object p1, v0, Lh67;->X:Ljava/lang/Object;
+    new-instance p0, Lrdd;
 
-    return-object v0
-.end method
+    sget-object p1, Lxdd;->c:Lxdd;
 
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 4
+    invoke-direct {p0, p1, p1}, Lrdd;-><init>(Lxdd;Lxdd;)V
 
-    invoke-static {p1}, Lsgg;->Z(Ljava/lang/Object;)V
+    return-object p0
 
-    iget-object p1, p0, Lh67;->X:Ljava/lang/Object;
+    :cond_0
+    invoke-static {v0, p1, p2}, Lnrf;->b(Lj28;J)I
 
-    check-cast p1, Lox3;
+    move-result v1
 
-    iget-object p0, p0, Lh67;->Y:Lone/me/inviteactions/invitefriendsbottomsheet/InviteFriendsToMaxBottomSheet;
+    new-instance v2, Lxdd;
 
-    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
+    invoke-virtual {v0, v1}, Lj28;->c(I)J
 
-    move-result-object p1
+    move-result-wide v3
 
-    iget-object v0, p0, Lone/me/inviteactions/invitefriendsbottomsheet/InviteFriendsToMaxBottomSheet;->v0:Lje7;
+    iget-object p0, p0, Lh67;->a:Lj28;
 
-    invoke-interface {v0}, Lje7;->getValue()Ljava/lang/Object;
+    invoke-virtual {p0, v1}, Lj28;->c(I)J
 
-    move-result-object v0
+    move-result-wide v5
 
-    check-cast v0, Ld6d;
+    invoke-direct {v2, v3, v4, v5, v6}, Lxdd;-><init>(JJ)V
 
-    check-cast v0, Lvwc;
+    cmp-long p1, v3, p1
 
-    iget-object v1, v0, Le3;->g:Lme7;
+    if-eqz p1, :cond_2
 
-    const-string v2, "invite-long"
+    iget p1, v0, Lj28;->b:I
 
-    const/4 v3, 0x0
+    add-int/lit8 p1, p1, -0x1
 
-    invoke-virtual {v1, v2, v3}, Lme7;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v1
-
-    const/4 v2, 0x1
-
-    if-eqz v1, :cond_0
+    if-ne v1, p1, :cond_1
 
     goto :goto_0
 
-    :cond_0
-    sget v1, Lhnc;->C:I
-
-    invoke-virtual {p1, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-virtual {v0}, Lvwc;->m()Ljava/lang/String;
-
-    move-result-object v0
-
-    filled-new-array {v0}, [Ljava/lang/Object;
-
-    move-result-object v0
-
-    invoke-static {v0, v2}, Ljava/util/Arrays;->copyOf([Ljava/lang/Object;I)[Ljava/lang/Object;
-
-    move-result-object v0
-
-    invoke-static {p1, v0}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object v1
-
-    :goto_0
-    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
-
-    move-result-object p1
-
-    invoke-virtual {v1}, Ljava/lang/Object;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {p1, v0}, Lzx7;->o(Landroid/content/Context;Ljava/lang/String;)V
-
-    :try_start_0
-    iget-object p1, p0, Lone/me/inviteactions/invitefriendsbottomsheet/InviteFriendsToMaxBottomSheet;->y0:Lje7;
-
-    invoke-interface {p1}, Lje7;->getValue()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Le67;
-
-    iget-object p1, p1, Le67;->X:Lu5c;
-
-    iget-object p1, p1, Lu5c;->a:Ltyd;
-
-    invoke-interface {p1}, Ltyd;->getValue()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lmnb;
-
-    if-eqz p1, :cond_1
-
-    iget-object p1, p1, Lmnb;->a:Landroid/net/Uri;
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    goto :goto_2
-
-    :catchall_0
-    move-exception p1
-
-    goto :goto_1
-
     :cond_1
-    move-object p1, v3
+    new-instance p1, Lxdd;
 
-    goto :goto_2
+    add-int/lit8 v1, v1, 0x1
 
-    :goto_1
-    new-instance v0, Ljhc;
+    invoke-virtual {v0, v1}, Lj28;->c(I)J
 
-    invoke-direct {v0, p1}, Ljhc;-><init>(Ljava/lang/Throwable;)V
+    move-result-wide v3
 
-    move-object p1, v0
+    invoke-virtual {p0, v1}, Lj28;->c(I)J
 
-    :goto_2
-    instance-of v0, p1, Ljhc;
+    move-result-wide v0
 
-    if-eqz v0, :cond_2
+    invoke-direct {p1, v3, v4, v0, v1}, Lxdd;-><init>(JJ)V
 
-    goto :goto_3
+    new-instance p0, Lrdd;
 
-    :cond_2
-    move-object v3, p1
-
-    :goto_3
-    check-cast v3, Landroid/net/Uri;
-
-    sget-object p1, Lh37;->a:Ljava/lang/String;
-
-    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
-
-    move-result-object p1
-
-    invoke-static {p1, v1, v3}, Lh37;->d(Landroid/content/Context;Ljava/lang/CharSequence;Landroid/net/Uri;)V
-
-    iget-object p1, p0, Lone/me/inviteactions/invitefriendsbottomsheet/InviteFriendsToMaxBottomSheet;->w0:Lje7;
-
-    invoke-interface {p1}, Lje7;->getValue()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lj67;
-
-    const-string v0, "main"
-
-    const-string v1, "trigger_max"
-
-    const-string v3, "clicked_to_invite"
-
-    invoke-virtual {p1, v3, v0, v1}, Lj67;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
-
-    iget-object p1, p0, Lone/me/inviteactions/invitefriendsbottomsheet/InviteFriendsToMaxBottomSheet;->u0:Lje7;
-
-    invoke-interface {p1}, Lje7;->getValue()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lh23;
-
-    check-cast p1, Lmwc;
-
-    const-string v0, "app.already.invited.friends"
-
-    invoke-virtual {p1, v0, v2}, Le3;->g(Ljava/lang/String;Z)V
-
-    invoke-virtual {p0, v2}, Lone/me/sdk/bottomsheet/BaseBottomSheetWidget;->v0(Z)V
-
-    sget-object p0, Le5f;->a:Le5f;
+    invoke-direct {p0, v2, p1}, Lrdd;-><init>(Lxdd;Lxdd;)V
 
     return-object p0
+
+    :cond_2
+    :goto_0
+    new-instance p0, Lrdd;
+
+    invoke-direct {p0, v2, v2}, Lrdd;-><init>(Lxdd;Lxdd;)V
+
+    return-object p0
+.end method
+
+.method public final f()J
+    .locals 2
+
+    iget-wide v0, p0, Lh67;->c:J
+
+    return-wide v0
 .end method

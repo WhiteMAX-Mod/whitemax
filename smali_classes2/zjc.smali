@@ -4,791 +4,284 @@
 
 
 # instance fields
-.field public final a:Lljc;
+.field public final a:Lfxc;
 
-.field public final b:Lwfe;
+.field public final b:Lf53;
 
 
 # direct methods
-.method public constructor <init>(Lgda;)V
-    .locals 1
+.method public constructor <init>(Ljma;Lf53;)V
+    .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lzjc;->a:Lljc;
+    iput-object p1, p0, Lzjc;->a:Lfxc;
 
-    new-instance p1, Lepa;
-
-    const/16 v0, 0x18
-
-    invoke-direct {p1, v0, p0}, Lepa;-><init>(ILjava/lang/Object;)V
-
-    new-instance v0, Lwfe;
-
-    invoke-direct {v0, p1}, Lwfe;-><init>(Lv56;)V
-
-    iput-object v0, p0, Lzjc;->b:Lwfe;
+    iput-object p2, p0, Lzjc;->b:Lf53;
 
     return-void
 .end method
 
-.method public static b(Lzjc;Lmsa;)Lnsa;
-    .locals 14
+.method public static d(Lnjc;Lrjc;)Ll98;
+    .locals 7
+
+    iget-wide v0, p1, Lrjc;->b:J
+
+    iget-object v2, p1, Lrjc;->a:Ldkc;
+
+    iget v3, v2, Ldkc;->a:I
+
+    const-wide/16 v4, 0x0
+
+    cmp-long v4, v0, v4
+
+    const/4 v5, 0x1
+
+    const/4 v6, 0x2
+
+    if-lez v4, :cond_0
 
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    new-instance v0, Lnsa;
+    const-string p1, "SELECT * FROM recent WHERE recent_type=? AND server_id=?"
 
-    iget-wide v1, p1, Lhi0;->b:J
+    invoke-static {v6, p1}, Lvxc;->c(ILjava/lang/String;)Lvxc;
 
-    iget-wide v3, p1, Lmsa;->c:J
+    move-result-object p1
 
-    iget v5, p1, Lmsa;->o:I
+    int-to-long v2, v3
 
-    iget-object v6, p1, Lmsa;->X:Ljava/lang/String;
+    invoke-virtual {p1, v5, v2, v3}, Lvxc;->k(IJ)V
 
-    iget-wide v7, p1, Lmsa;->Y:J
+    invoke-virtual {p1, v6, v0, v1}, Lvxc;->k(IJ)V
 
-    iget-object v9, p1, Lmsa;->Z:Ljava/lang/String;
+    new-instance v0, Lmjc;
 
-    iget-object v10, p1, Lmsa;->o0:Ljava/lang/String;
+    const/4 v1, 0x3
 
-    iget-object v11, p1, Lmsa;->p0:Ljava/lang/String;
+    invoke-direct {v0, p0, p1, v1}, Lmjc;-><init>(Lnjc;Lvxc;I)V
 
-    iget-object v12, p1, Lmsa;->q0:Ljava/lang/String;
+    new-instance p0, Ll98;
 
-    iget v13, p1, Lmsa;->r0:I
+    invoke-direct {p0, v0}, Ll98;-><init>(Ljava/util/concurrent/Callable;)V
 
-    invoke-direct/range {v0 .. v13}, Lnsa;-><init>(JJILjava/lang/String;JLjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;I)V
+    return-object p0
 
-    return-object v0
-.end method
+    :cond_0
+    invoke-virtual {v2}, Ljava/lang/Enum;->ordinal()I
 
-.method public static d(Lnsa;)Lmsa;
-    .locals 14
+    move-result v0
 
-    iget-wide v1, p0, Lnsa;->a:J
+    if-eq v0, v5, :cond_3
 
-    iget-wide v3, p0, Lnsa;->b:J
+    if-eq v0, v6, :cond_2
 
-    iget v5, p0, Lnsa;->c:I
+    const/4 v1, 0x3
 
-    iget-object v6, p0, Lnsa;->d:Ljava/lang/String;
+    if-ne v0, v1, :cond_1
 
-    iget-wide v7, p0, Lnsa;->e:J
+    check-cast p1, Loj6;
 
-    iget-object v9, p0, Lnsa;->f:Ljava/lang/String;
+    iget-object p1, p1, Loj6;->c:Lr00;
 
-    iget-object v10, p0, Lnsa;->g:Ljava/lang/String;
+    iget-wide v0, p1, Lr00;->r0:J
 
-    iget-object v11, p0, Lnsa;->h:Ljava/lang/String;
+    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    iget-object v12, p0, Lnsa;->i:Ljava/lang/String;
+    const-string p1, "SELECT * FROM recent WHERE recent_type=? AND gif_id=?"
 
-    iget p0, p0, Lnsa;->j:I
+    invoke-static {v6, p1}, Lvxc;->c(ILjava/lang/String;)Lvxc;
 
-    invoke-static {p0}, Lzt1;->s(I)I
+    move-result-object p1
 
-    move-result v13
+    int-to-long v2, v3
 
-    new-instance v0, Lmsa;
+    invoke-virtual {p1, v5, v2, v3}, Lvxc;->k(IJ)V
 
-    invoke-direct/range {v0 .. v13}, Lmsa;-><init>(JJILjava/lang/String;JLjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;I)V
+    invoke-virtual {p1, v6, v0, v1}, Lvxc;->k(IJ)V
 
-    return-object v0
-.end method
+    new-instance v0, Lmjc;
 
+    const/4 v1, 0x2
 
-# virtual methods
-.method public final a()V
-    .locals 3
+    invoke-direct {v0, p0, p1, v1}, Lmjc;-><init>(Lnjc;Lvxc;I)V
 
-    invoke-virtual {p0}, Lzjc;->c()Lhta;
+    new-instance p0, Ll98;
 
-    move-result-object p0
+    invoke-direct {p0, v0}, Ll98;-><init>(Ljava/util/concurrent/Callable;)V
 
-    iget-object v0, p0, Lhta;->a:Lkjc;
+    return-object p0
 
-    invoke-virtual {v0}, Lkjc;->b()V
+    :cond_1
+    new-instance p0, Ljava/lang/IllegalStateException;
 
-    iget-object p0, p0, Lhta;->e:Lm09;
+    sget-object p1, Ljava/util/Locale;->ENGLISH:Ljava/util/Locale;
 
-    invoke-virtual {p0}, Lv2;->f()Lmce;
+    new-instance p1, Ljava/lang/StringBuilder;
 
-    move-result-object v1
+    const-string v0, "Unexpected value: "
 
-    :try_start_0
-    invoke-virtual {v0}, Lkjc;->c()V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    invoke-direct {p1, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    :try_start_1
-    invoke-interface {v1}, Lmce;->C()I
+    invoke-virtual {p1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0}, Lkjc;->q()V
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_1
+    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    :try_start_2
-    invoke-virtual {v0}, Lkjc;->k()V
-    :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_0
+    move-result-object p1
 
-    invoke-virtual {p0, v1}, Lv2;->u(Lmce;)V
+    invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    return-void
+    throw p0
 
-    :catchall_0
-    move-exception v0
+    :cond_2
+    check-cast p1, Lrfe;
+
+    iget-wide v0, p1, Lrfe;->c:J
+
+    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    const-string p1, "SELECT * FROM recent WHERE recent_type=? AND sticker_id=?"
+
+    invoke-static {v6, p1}, Lvxc;->c(ILjava/lang/String;)Lvxc;
+
+    move-result-object p1
+
+    int-to-long v2, v3
+
+    invoke-virtual {p1, v5, v2, v3}, Lvxc;->k(IJ)V
+
+    invoke-virtual {p1, v6, v0, v1}, Lvxc;->k(IJ)V
+
+    new-instance v0, Lmjc;
+
+    const/4 v1, 0x0
+
+    invoke-direct {v0, p0, p1, v1}, Lmjc;-><init>(Lnjc;Lvxc;I)V
+
+    new-instance p0, Ll98;
+
+    invoke-direct {p0, v0}, Ll98;-><init>(Ljava/util/concurrent/Callable;)V
+
+    return-object p0
+
+    :cond_3
+    check-cast p1, Lg35;
+
+    iget-object p1, p1, Lg35;->c:Ljava/lang/String;
+
+    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    const-string v0, "SELECT * FROM recent WHERE recent_type=? AND emoji=?"
+
+    invoke-static {v6, v0}, Lvxc;->c(ILjava/lang/String;)Lvxc;
+
+    move-result-object v0
+
+    int-to-long v1, v3
+
+    invoke-virtual {v0, v5, v1, v2}, Lvxc;->k(IJ)V
+
+    if-nez p1, :cond_4
+
+    invoke-virtual {v0, v6}, Lvxc;->Z(I)V
 
     goto :goto_0
 
-    :catchall_1
-    move-exception v2
-
-    :try_start_3
-    invoke-virtual {v0}, Lkjc;->k()V
-
-    throw v2
-    :try_end_3
-    .catchall {:try_start_3 .. :try_end_3} :catchall_0
+    :cond_4
+    invoke-virtual {v0, v6, p1}, Lvxc;->f(ILjava/lang/String;)V
 
     :goto_0
-    invoke-virtual {p0, v1}, Lv2;->u(Lmce;)V
+    new-instance p1, Lmjc;
 
-    throw v0
-.end method
+    const/4 v1, 0x1
 
-.method public final c()Lhta;
-    .locals 0
+    invoke-direct {p1, p0, v0, v1}, Lmjc;-><init>(Lnjc;Lvxc;I)V
 
-    iget-object p0, p0, Lzjc;->b:Lwfe;
+    new-instance p0, Ll98;
 
-    invoke-virtual {p0}, Lwfe;->getValue()Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, Lhta;
+    invoke-direct {p0, p1}, Ll98;-><init>(Ljava/util/concurrent/Callable;)V
 
     return-object p0
 .end method
 
-.method public final e()Ljava/util/ArrayList;
-    .locals 28
 
-    invoke-virtual/range {p0 .. p0}, Lzjc;->c()Lhta;
+# virtual methods
+.method public final a(Ljava/util/List;)Ly4a;
+    .locals 3
 
-    move-result-object v0
+    invoke-virtual {p0}, Lzjc;->b()Lu2e;
 
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    move-result-object p0
 
-    const-string v1, "SELECT * FROM phones"
+    new-instance v0, Lha2;
 
-    const/4 v2, 0x0
+    const/16 v1, 0x15
 
-    invoke-static {v2, v1}, Lakc;->c(ILjava/lang/String;)Lakc;
+    invoke-direct {v0, v1, p1}, Lha2;-><init>(ILjava/util/List;)V
 
-    move-result-object v1
+    new-instance v1, Lj98;
 
-    iget-object v0, v0, Lhta;->a:Lkjc;
+    const/4 v2, 0x3
 
-    invoke-virtual {v0}, Lkjc;->b()V
+    invoke-direct {v1, p0, v0, v2}, Lj98;-><init>(Ljava/lang/Object;Lqc6;I)V
 
-    invoke-virtual {v0, v1}, Lkjc;->n(Llce;)Landroid/database/Cursor;
+    new-instance p0, Lha2;
 
-    move-result-object v2
+    const/16 v0, 0x16
 
-    :try_start_0
-    const-string v0, "id"
+    invoke-direct {p0, v0, p1}, Lha2;-><init>(ILjava/util/List;)V
 
-    invoke-static {v2, v0}, Lgad;->B(Landroid/database/Cursor;Ljava/lang/String;)I
+    const p1, 0x7fffffff
 
-    move-result v0
+    invoke-virtual {v1, p0, p1}, Ly4a;->f(Lqc6;I)Ly4a;
 
-    const-string v3, "phonebook_id"
+    move-result-object p0
 
-    invoke-static {v2, v3}, Lgad;->B(Landroid/database/Cursor;Ljava/lang/String;)I
-
-    move-result v3
-
-    const-string v4, "contact_id"
-
-    invoke-static {v2, v4}, Lgad;->B(Landroid/database/Cursor;Ljava/lang/String;)I
-
-    move-result v4
-
-    const-string v5, "phone"
-
-    invoke-static {v2, v5}, Lgad;->B(Landroid/database/Cursor;Ljava/lang/String;)I
-
-    move-result v5
-
-    const-string v6, "server_phone"
-
-    invoke-static {v2, v6}, Lgad;->B(Landroid/database/Cursor;Ljava/lang/String;)I
-
-    move-result v6
-
-    const-string v7, "email"
-
-    invoke-static {v2, v7}, Lgad;->B(Landroid/database/Cursor;Ljava/lang/String;)I
-
-    move-result v7
-
-    const-string v8, "first_name"
-
-    invoke-static {v2, v8}, Lgad;->B(Landroid/database/Cursor;Ljava/lang/String;)I
-
-    move-result v8
-
-    const-string v9, "last_name"
-
-    invoke-static {v2, v9}, Lgad;->B(Landroid/database/Cursor;Ljava/lang/String;)I
-
-    move-result v9
-
-    const-string v10, "avatar_path"
-
-    invoke-static {v2, v10}, Lgad;->B(Landroid/database/Cursor;Ljava/lang/String;)I
-
-    move-result v10
-
-    const-string v11, "type"
-
-    invoke-static {v2, v11}, Lgad;->B(Landroid/database/Cursor;Ljava/lang/String;)I
-
-    move-result v11
-
-    new-instance v12, Ljava/util/ArrayList;
-
-    invoke-interface {v2}, Landroid/database/Cursor;->getCount()I
-
-    move-result v13
-
-    invoke-direct {v12, v13}, Ljava/util/ArrayList;-><init>(I)V
-
-    :goto_0
-    invoke-interface {v2}, Landroid/database/Cursor;->moveToNext()Z
-
-    move-result v13
-
-    if-eqz v13, :cond_5
-
-    invoke-interface {v2, v0}, Landroid/database/Cursor;->getLong(I)J
-
-    move-result-wide v15
-
-    invoke-interface {v2, v3}, Landroid/database/Cursor;->getLong(I)J
-
-    move-result-wide v17
-
-    invoke-interface {v2, v4}, Landroid/database/Cursor;->getInt(I)I
-
-    move-result v19
-
-    invoke-interface {v2, v5}, Landroid/database/Cursor;->isNull(I)Z
-
-    move-result v13
-
-    const/4 v14, 0x0
-
-    if-eqz v13, :cond_0
-
-    move-object/from16 v20, v14
-
-    goto :goto_1
-
-    :cond_0
-    invoke-interface {v2, v5}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
-
-    move-result-object v13
-
-    move-object/from16 v20, v13
-
-    :goto_1
-    invoke-interface {v2, v6}, Landroid/database/Cursor;->getLong(I)J
-
-    move-result-wide v21
-
-    invoke-interface {v2, v7}, Landroid/database/Cursor;->isNull(I)Z
-
-    move-result v13
-
-    if-eqz v13, :cond_1
-
-    move-object/from16 v23, v14
-
-    goto :goto_2
-
-    :cond_1
-    invoke-interface {v2, v7}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
-
-    move-result-object v13
-
-    move-object/from16 v23, v13
-
-    :goto_2
-    invoke-interface {v2, v8}, Landroid/database/Cursor;->isNull(I)Z
-
-    move-result v13
-
-    if-eqz v13, :cond_2
-
-    move-object/from16 v24, v14
-
-    goto :goto_3
-
-    :cond_2
-    invoke-interface {v2, v8}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
-
-    move-result-object v13
-
-    move-object/from16 v24, v13
-
-    :goto_3
-    invoke-interface {v2, v9}, Landroid/database/Cursor;->isNull(I)Z
-
-    move-result v13
-
-    if-eqz v13, :cond_3
-
-    move-object/from16 v25, v14
-
-    goto :goto_4
-
-    :cond_3
-    invoke-interface {v2, v9}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
-
-    move-result-object v13
-
-    move-object/from16 v25, v13
-
-    :goto_4
-    invoke-interface {v2, v10}, Landroid/database/Cursor;->isNull(I)Z
-
-    move-result v13
-
-    if-eqz v13, :cond_4
-
-    :goto_5
-    move-object/from16 v26, v14
-
-    goto :goto_6
-
-    :cond_4
-    invoke-interface {v2, v10}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
-
-    move-result-object v14
-
-    goto :goto_5
-
-    :goto_6
-    invoke-interface {v2, v11}, Landroid/database/Cursor;->getInt(I)I
-
-    move-result v13
-
-    invoke-static {v13}, Lp3a;->a(I)I
-
-    move-result v27
-
-    new-instance v14, Lnsa;
-
-    invoke-direct/range {v14 .. v27}, Lnsa;-><init>(JJILjava/lang/String;JLjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;I)V
-
-    invoke-virtual {v12, v14}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    goto :goto_0
-
-    :catchall_0
-    move-exception v0
-
-    goto :goto_8
-
-    :cond_5
-    invoke-interface {v2}, Landroid/database/Cursor;->close()V
-
-    invoke-virtual {v1}, Lakc;->o()V
-
-    new-instance v0, Ljava/util/ArrayList;
-
-    const/16 v1, 0xa
-
-    invoke-static {v12, v1}, Lr43;->k0(Ljava/lang/Iterable;I)I
-
-    move-result v1
-
-    invoke-direct {v0, v1}, Ljava/util/ArrayList;-><init>(I)V
-
-    invoke-virtual {v12}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
-
-    move-result-object v1
-
-    :goto_7
-    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v2
-
-    if-eqz v2, :cond_6
-
-    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Lnsa;
-
-    invoke-static {v2}, Lzjc;->d(Lnsa;)Lmsa;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    goto :goto_7
-
-    :cond_6
-    return-object v0
-
-    :goto_8
-    invoke-interface {v2}, Landroid/database/Cursor;->close()V
-
-    invoke-virtual {v1}, Lakc;->o()V
-
-    throw v0
+    return-object p0
 .end method
 
-.method public final f(Ljava/util/List;)Ljava/util/ArrayList;
-    .locals 28
+.method public final b()Lu2e;
+    .locals 2
 
-    invoke-virtual/range {p0 .. p0}, Lzjc;->c()Lhta;
+    iget-object p0, p0, Lzjc;->a:Lfxc;
+
+    invoke-virtual {p0}, Lfxc;->n()Ls7a;
+
+    move-result-object p0
+
+    new-instance v0, Lbzb;
+
+    const/16 v1, 0xf
+
+    invoke-direct {v0, v1}, Lbzb;-><init>(I)V
+
+    invoke-virtual {p0, v0}, Lk2e;->h(Lqc6;)Lu2e;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public final c(Ljava/util/List;)Lic3;
+    .locals 3
+
+    iget-object v0, p0, Lzjc;->a:Lfxc;
+
+    invoke-virtual {v0}, Lfxc;->n()Ls7a;
 
     move-result-object v0
 
-    iget-object v0, v0, Lhta;->a:Lkjc;
+    new-instance v1, Lgp8;
 
-    const-string v1, "SELECT * FROM phones WHERE server_phone in ("
+    const/16 v2, 0x19
 
-    invoke-static {v1}, Lzt1;->l(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-direct {v1, p0, v2, p1}, Lgp8;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
 
-    move-result-object v1
+    new-instance p0, Lic3;
 
-    invoke-interface/range {p1 .. p1}, Ljava/util/List;->size()I
+    const/4 p1, 0x2
 
-    move-result v2
+    invoke-direct {p0, v0, p1, v1}, Lic3;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
 
-    invoke-static {v1, v2}, Lkhg;->c(Ljava/lang/StringBuilder;I)V
-
-    const-string v3, ")"
-
-    invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {v2, v1}, Lakc;->c(ILjava/lang/String;)Lakc;
-
-    move-result-object v1
-
-    invoke-interface/range {p1 .. p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
-
-    move-result-object v2
-
-    const/4 v3, 0x1
-
-    :goto_0
-    invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v4
-
-    if-eqz v4, :cond_1
-
-    invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v4
-
-    check-cast v4, Ljava/lang/Long;
-
-    if-nez v4, :cond_0
-
-    invoke-virtual {v1, v3}, Lakc;->Z(I)V
-
-    goto :goto_1
-
-    :cond_0
-    invoke-virtual {v4}, Ljava/lang/Long;->longValue()J
-
-    move-result-wide v4
-
-    invoke-virtual {v1, v3, v4, v5}, Lakc;->k(IJ)V
-
-    :goto_1
-    add-int/lit8 v3, v3, 0x1
-
-    goto :goto_0
-
-    :cond_1
-    invoke-virtual {v0}, Lkjc;->b()V
-
-    invoke-virtual {v0, v1}, Lkjc;->n(Llce;)Landroid/database/Cursor;
-
-    move-result-object v2
-
-    :try_start_0
-    const-string v0, "id"
-
-    invoke-static {v2, v0}, Lgad;->B(Landroid/database/Cursor;Ljava/lang/String;)I
-
-    move-result v0
-
-    const-string v3, "phonebook_id"
-
-    invoke-static {v2, v3}, Lgad;->B(Landroid/database/Cursor;Ljava/lang/String;)I
-
-    move-result v3
-
-    const-string v4, "contact_id"
-
-    invoke-static {v2, v4}, Lgad;->B(Landroid/database/Cursor;Ljava/lang/String;)I
-
-    move-result v4
-
-    const-string v5, "phone"
-
-    invoke-static {v2, v5}, Lgad;->B(Landroid/database/Cursor;Ljava/lang/String;)I
-
-    move-result v5
-
-    const-string v6, "server_phone"
-
-    invoke-static {v2, v6}, Lgad;->B(Landroid/database/Cursor;Ljava/lang/String;)I
-
-    move-result v6
-
-    const-string v7, "email"
-
-    invoke-static {v2, v7}, Lgad;->B(Landroid/database/Cursor;Ljava/lang/String;)I
-
-    move-result v7
-
-    const-string v8, "first_name"
-
-    invoke-static {v2, v8}, Lgad;->B(Landroid/database/Cursor;Ljava/lang/String;)I
-
-    move-result v8
-
-    const-string v9, "last_name"
-
-    invoke-static {v2, v9}, Lgad;->B(Landroid/database/Cursor;Ljava/lang/String;)I
-
-    move-result v9
-
-    const-string v10, "avatar_path"
-
-    invoke-static {v2, v10}, Lgad;->B(Landroid/database/Cursor;Ljava/lang/String;)I
-
-    move-result v10
-
-    const-string v11, "type"
-
-    invoke-static {v2, v11}, Lgad;->B(Landroid/database/Cursor;Ljava/lang/String;)I
-
-    move-result v11
-
-    new-instance v12, Ljava/util/ArrayList;
-
-    invoke-interface {v2}, Landroid/database/Cursor;->getCount()I
-
-    move-result v13
-
-    invoke-direct {v12, v13}, Ljava/util/ArrayList;-><init>(I)V
-
-    :goto_2
-    invoke-interface {v2}, Landroid/database/Cursor;->moveToNext()Z
-
-    move-result v13
-
-    if-eqz v13, :cond_7
-
-    invoke-interface {v2, v0}, Landroid/database/Cursor;->getLong(I)J
-
-    move-result-wide v15
-
-    invoke-interface {v2, v3}, Landroid/database/Cursor;->getLong(I)J
-
-    move-result-wide v17
-
-    invoke-interface {v2, v4}, Landroid/database/Cursor;->getInt(I)I
-
-    move-result v19
-
-    invoke-interface {v2, v5}, Landroid/database/Cursor;->isNull(I)Z
-
-    move-result v13
-
-    const/4 v14, 0x0
-
-    if-eqz v13, :cond_2
-
-    move-object/from16 v20, v14
-
-    goto :goto_3
-
-    :cond_2
-    invoke-interface {v2, v5}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
-
-    move-result-object v13
-
-    move-object/from16 v20, v13
-
-    :goto_3
-    invoke-interface {v2, v6}, Landroid/database/Cursor;->getLong(I)J
-
-    move-result-wide v21
-
-    invoke-interface {v2, v7}, Landroid/database/Cursor;->isNull(I)Z
-
-    move-result v13
-
-    if-eqz v13, :cond_3
-
-    move-object/from16 v23, v14
-
-    goto :goto_4
-
-    :cond_3
-    invoke-interface {v2, v7}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
-
-    move-result-object v13
-
-    move-object/from16 v23, v13
-
-    :goto_4
-    invoke-interface {v2, v8}, Landroid/database/Cursor;->isNull(I)Z
-
-    move-result v13
-
-    if-eqz v13, :cond_4
-
-    move-object/from16 v24, v14
-
-    goto :goto_5
-
-    :cond_4
-    invoke-interface {v2, v8}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
-
-    move-result-object v13
-
-    move-object/from16 v24, v13
-
-    :goto_5
-    invoke-interface {v2, v9}, Landroid/database/Cursor;->isNull(I)Z
-
-    move-result v13
-
-    if-eqz v13, :cond_5
-
-    move-object/from16 v25, v14
-
-    goto :goto_6
-
-    :cond_5
-    invoke-interface {v2, v9}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
-
-    move-result-object v13
-
-    move-object/from16 v25, v13
-
-    :goto_6
-    invoke-interface {v2, v10}, Landroid/database/Cursor;->isNull(I)Z
-
-    move-result v13
-
-    if-eqz v13, :cond_6
-
-    :goto_7
-    move-object/from16 v26, v14
-
-    goto :goto_8
-
-    :cond_6
-    invoke-interface {v2, v10}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
-
-    move-result-object v14
-
-    goto :goto_7
-
-    :goto_8
-    invoke-interface {v2, v11}, Landroid/database/Cursor;->getInt(I)I
-
-    move-result v13
-
-    invoke-static {v13}, Lp3a;->a(I)I
-
-    move-result v27
-
-    new-instance v14, Lnsa;
-
-    invoke-direct/range {v14 .. v27}, Lnsa;-><init>(JJILjava/lang/String;JLjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;I)V
-
-    invoke-virtual {v12, v14}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    goto :goto_2
-
-    :catchall_0
-    move-exception v0
-
-    goto :goto_a
-
-    :cond_7
-    invoke-interface {v2}, Landroid/database/Cursor;->close()V
-
-    invoke-virtual {v1}, Lakc;->o()V
-
-    new-instance v0, Ljava/util/ArrayList;
-
-    const/16 v1, 0xa
-
-    invoke-static {v12, v1}, Lr43;->k0(Ljava/lang/Iterable;I)I
-
-    move-result v1
-
-    invoke-direct {v0, v1}, Ljava/util/ArrayList;-><init>(I)V
-
-    invoke-virtual {v12}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
-
-    move-result-object v1
-
-    :goto_9
-    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v2
-
-    if-eqz v2, :cond_8
-
-    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Lnsa;
-
-    invoke-static {v2}, Lzjc;->d(Lnsa;)Lmsa;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    goto :goto_9
-
-    :cond_8
-    return-object v0
-
-    :goto_a
-    invoke-interface {v2}, Landroid/database/Cursor;->close()V
-
-    invoke-virtual {v1}, Lakc;->o()V
-
-    throw v0
+    return-object p0
 .end method

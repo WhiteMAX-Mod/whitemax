@@ -1,256 +1,109 @@
-.class public final Lh5;
+.class public final synthetic Lh5;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lbpf;
+.implements Lpm3;
+.implements Lz8a;
 
 
 # instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Lq5;
+.field public final synthetic a:Lru/ok/messages/media/attaches/ActAttachesView;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lq5;I)V
+.method public synthetic constructor <init>(Lru/ok/messages/media/attaches/ActAttachesView;)V
     .locals 0
 
-    iput p2, p0, Lh5;->a:I
-
-    iput-object p1, p0, Lh5;->b:Lq5;
+    iput-object p1, p0, Lh5;->a:Lru/ok/messages/media/attaches/ActAttachesView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
-.method private final a(I)V
-    .locals 0
-
-    return-void
-.end method
-
-.method private final b(I)V
-    .locals 0
-
-    return-void
-.end method
-
-.method private final c(IF)V
-    .locals 0
-
-    return-void
-.end method
-
-.method private final d(IF)V
-    .locals 0
-
-    return-void
-.end method
-
 
 # virtual methods
-.method public final n(I)V
-    .locals 0
+.method public O(Landroid/view/View;Lvug;)Lvug;
+    .locals 3
 
-    iget p0, p0, Lh5;->a:I
+    iget-object p0, p0, Lh5;->a:Lru/ok/messages/media/attaches/ActAttachesView;
 
-    return-void
-.end method
+    iget-object p1, p0, Lru/ok/messages/media/attaches/ActAttachesView;->X0:Landroid/view/View;
 
-.method public final o(I)V
-    .locals 2
+    invoke-virtual {p1}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
-    iget v0, p0, Lh5;->a:I
+    move-result-object p1
 
-    packed-switch v0, :pswitch_data_0
+    check-cast p1, Landroid/widget/RelativeLayout$LayoutParams;
 
-    iget-object p0, p0, Lh5;->b:Lq5;
-
-    check-cast p0, Lru/ok/messages/contacts/profile/ActContactAvatars;
-
-    invoke-virtual {p0, p1}, Lru/ok/messages/contacts/profile/ActContactAvatars;->o(I)V
-
-    return-void
-
-    :pswitch_0
-    iget-object p0, p0, Lh5;->b:Lq5;
-
-    check-cast p0, Lru/ok/messages/media/attaches/ActAttachesView;
-
-    iget-object v0, p0, Lru/ok/messages/media/attaches/ActAttachesView;->S0:Ld20;
-
-    if-nez v0, :cond_0
-
-    goto/16 :goto_1
-
-    :cond_0
-    iget-object v1, p0, Lru/ok/messages/media/attaches/ActAttachesView;->d1:Ljava/lang/String;
-
-    iget-object v0, v0, Ld20;->i:Ljava/util/ArrayList;
-
-    invoke-virtual {v0, v1}, Ljava/util/ArrayList;->indexOf(Ljava/lang/Object;)I
+    invoke-virtual {p2}, Lvug;->a()I
 
     move-result v0
 
-    if-ne v0, p1, :cond_1
+    iput v0, p1, Landroid/widget/RelativeLayout$LayoutParams;->bottomMargin:I
 
-    goto/16 :goto_1
+    iget-object v0, p0, Lru/ok/messages/media/attaches/ActAttachesView;->X0:Landroid/view/View;
 
-    :cond_1
-    iget-object v0, p0, Lru/ok/messages/media/attaches/ActAttachesView;->S0:Ld20;
+    invoke-virtual {v0, p1}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    iget-object v1, p0, Lru/ok/messages/media/attaches/ActAttachesView;->d1:Ljava/lang/String;
+    iget-object p1, p0, Lru/ok/messages/media/attaches/ActAttachesView;->X0:Landroid/view/View;
 
-    invoke-virtual {v0, v1}, Ld20;->k(Ljava/lang/String;)Lru/ok/messages/media/attaches/fragments/FrgAttachView;
+    invoke-virtual {p2}, Lvug;->b()I
 
-    move-result-object v0
+    move-result v0
 
-    instance-of v1, v0, Lru/ok/messages/media/attaches/fragments/FrgAttachVideo;
+    iget-object v1, p0, Lru/ok/messages/media/attaches/ActAttachesView;->X0:Landroid/view/View;
 
-    if-eqz v1, :cond_2
+    invoke-virtual {v1}, Landroid/view/View;->getPaddingTop()I
 
-    check-cast v0, Lru/ok/messages/media/attaches/fragments/FrgAttachVideo;
+    move-result v1
 
-    invoke-virtual {v0}, Lru/ok/messages/media/attaches/fragments/FrgAttachVideo;->u1()V
+    invoke-virtual {p2}, Lvug;->c()I
 
-    :cond_2
-    iget-object v0, p0, Lru/ok/messages/media/attaches/ActAttachesView;->S0:Ld20;
+    move-result v2
 
-    invoke-virtual {v0, p1}, Ld20;->h(I)Ljava/lang/String;
+    iget-object p0, p0, Lru/ok/messages/media/attaches/ActAttachesView;->X0:Landroid/view/View;
 
-    move-result-object v1
+    invoke-virtual {p0}, Landroid/view/View;->getPaddingBottom()I
 
-    iget-object v0, v0, Lnl5;->f:Ljava/util/HashMap;
+    move-result p0
 
-    invoke-virtual {v0, v1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {p1, v0, v1, v2, p0}, Landroid/view/View;->setPadding(IIII)V
 
-    move-result-object v0
+    return-object p2
+.end method
 
-    check-cast v0, Landroidx/fragment/app/a;
+.method public accept(Ljava/lang/Object;)V
+    .locals 2
 
-    instance-of v1, v0, Lru/ok/messages/media/attaches/fragments/FrgAttachVideo;
+    check-cast p1, Lxx8;
 
-    if-eqz v1, :cond_3
+    iget-object p0, p0, Lh5;->a:Lru/ok/messages/media/attaches/ActAttachesView;
 
-    check-cast v0, Lru/ok/messages/media/attaches/fragments/FrgAttachVideo;
+    iget-object v0, p0, Lru/ok/messages/media/attaches/ActAttachesView;->V0:Lk10;
 
-    invoke-virtual {v0}, Lru/ok/messages/media/attaches/fragments/FrgAttachVideo;->t1()V
+    iget-object v1, v0, Lk10;->j:Ljava/util/List;
 
-    :cond_3
-    iget-object v0, p0, Lru/ok/messages/media/attaches/ActAttachesView;->S0:Ld20;
+    invoke-interface {v1}, Ljava/util/List;->clear()V
 
-    invoke-virtual {v0, p1}, Ld20;->l(I)Lfna;
+    iget-object v0, v0, Lk10;->i:Ljava/util/ArrayList;
+
+    invoke-virtual {v0}, Ljava/util/ArrayList;->clear()V
+
+    iget-object v0, p0, Lru/ok/messages/media/attaches/ActAttachesView;->V0:Lk10;
+
+    invoke-static {p1}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
 
     move-result-object p1
 
-    if-eqz p1, :cond_7
+    const/4 v1, 0x1
 
-    iget-object p1, p1, Lfna;->a:Ljava/lang/Object;
-
-    check-cast p1, Lw10;
-
-    iget-object p1, p1, Lw10;->r:Ljava/lang/String;
-
-    iput-object p1, p0, Lru/ok/messages/media/attaches/ActAttachesView;->d1:Ljava/lang/String;
+    invoke-virtual {v0, p1, v1}, Lk10;->e(Ljava/util/List;Z)V
 
     const/4 p1, 0x0
 
-    iput-boolean p1, p0, Lru/ok/messages/media/attaches/ActAttachesView;->b1:Z
-
-    invoke-virtual {p0}, Lru/ok/messages/media/attaches/ActAttachesView;->g0()V
-
-    invoke-virtual {p0}, Lru/ok/messages/media/attaches/ActAttachesView;->i0()V
-
-    iget-object p1, p0, Lru/ok/messages/media/attaches/ActAttachesView;->S0:Ld20;
-
-    iget-object p0, p0, Lru/ok/messages/media/attaches/ActAttachesView;->d1:Ljava/lang/String;
-
-    invoke-virtual {p1, p0}, Ld20;->k(Ljava/lang/String;)Lru/ok/messages/media/attaches/fragments/FrgAttachView;
-
-    move-result-object p0
-
-    instance-of p1, p0, Lru/ok/messages/media/attaches/fragments/FrgAttachPhoto;
-
-    if-eqz p1, :cond_4
-
-    const-string p0, "ATTACH_PHOTO"
-
-    goto :goto_0
-
-    :cond_4
-    instance-of p1, p0, Lru/ok/messages/media/attaches/fragments/FrgAttachVideo;
-
-    if-eqz p1, :cond_5
-
-    const-string p0, "ATTACH_VIDEO"
-
-    goto :goto_0
-
-    :cond_5
-    instance-of p0, p0, Lru/ok/messages/media/attaches/fragments/FrgAttachUnknown;
-
-    if-eqz p0, :cond_6
-
-    const-string p0, "ATTACH_UNKNOWN"
-
-    goto :goto_0
-
-    :cond_6
-    const/4 p0, 0x0
-
-    :goto_0
-    invoke-static {p0}, Lxja;->v(Ljava/lang/CharSequence;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_7
-
-    new-instance p1, Ljava/lang/StringBuilder;
-
-    const-string v0, "sendFragmentStats: "
-
-    invoke-direct {p1, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {p1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    const-string v0, "ru.ok.messages.media.attaches.ActAttachesView"
-
-    invoke-static {v0, p1}, Lg47;->p(Ljava/lang/String;Ljava/lang/String;)V
-
-    invoke-static {}, Lol;->b()Lsb3;
-
-    move-result-object p1
-
-    check-cast p1, Lq6a;
-
-    invoke-virtual {p1}, Lq6a;->b()Luc;
-
-    move-result-object p1
-
-    invoke-virtual {p1, p0}, Luc;->f(Ljava/lang/String;)V
-
-    :cond_7
-    :goto_1
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public final q(IF)V
-    .locals 0
-
-    iget p0, p0, Lh5;->a:I
+    invoke-virtual {p0, p1}, Lru/ok/messages/media/attaches/ActAttachesView;->f0(I)V
 
     return-void
 .end method

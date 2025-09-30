@@ -2,92 +2,57 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-
-# static fields
-.field public static final b:Lqq4;
-
-.field public static final c:Z
+# interfaces
+.implements Lrq4;
 
 
 # instance fields
-.field public final a:Ljava/util/concurrent/ArrayBlockingQueue;
+.field public final a:Ljava/util/concurrent/ScheduledFuture;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
-
-    new-instance v0, Lqq4;
-
-    invoke-direct {v0}, Lqq4;-><init>()V
-
-    sput-object v0, Lqq4;->b:Lqq4;
-
-    const/4 v0, 0x1
-
-    sput-boolean v0, Lqq4;->c:Z
-
-    return-void
-.end method
-
-.method public constructor <init>()V
-    .locals 2
+.method public constructor <init>(Ljava/util/concurrent/ScheduledFuture;)V
+    .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    new-instance v0, Ljava/util/concurrent/ArrayBlockingQueue;
-
-    const/16 v1, 0x14
-
-    invoke-direct {v0, v1}, Ljava/util/concurrent/ArrayBlockingQueue;-><init>(I)V
-
-    iput-object v0, p0, Lqq4;->a:Ljava/util/concurrent/ArrayBlockingQueue;
+    iput-object p1, p0, Lqq4;->a:Ljava/util/concurrent/ScheduledFuture;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Lpq4;)V
-    .locals 3
+.method public final dispose()V
+    .locals 1
 
-    sget-boolean v0, Lqq4;->c:Z
+    iget-object p0, p0, Lqq4;->a:Ljava/util/concurrent/ScheduledFuture;
 
-    if-nez v0, :cond_0
+    const/4 v0, 0x0
 
-    goto :goto_1
+    invoke-interface {p0, v0}, Ljava/util/concurrent/Future;->cancel(Z)Z
 
-    :cond_0
-    const/4 v0, 0x5
-
-    :goto_0
-    iget-object v1, p0, Lqq4;->a:Ljava/util/concurrent/ArrayBlockingQueue;
-
-    invoke-virtual {v1, p1}, Ljava/util/concurrent/ArrayBlockingQueue;->offer(Ljava/lang/Object;)Z
-
-    move-result v2
-
-    if-nez v2, :cond_1
-
-    if-lez v0, :cond_1
-
-    invoke-virtual {v1}, Ljava/util/concurrent/ArrayBlockingQueue;->poll()Ljava/lang/Object;
-
-    add-int/lit8 v0, v0, -0x1
-
-    goto :goto_0
-
-    :cond_1
-    :goto_1
     return-void
 .end method
 
 .method public final toString()Ljava/lang/String;
-    .locals 0
+    .locals 2
 
-    iget-object p0, p0, Lqq4;->a:Ljava/util/concurrent/ArrayBlockingQueue;
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    invoke-virtual {p0}, Ljava/lang/Object;->toString()Ljava/lang/String;
+    const-string v1, "DisposableFutureHandle["
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object p0, p0, Lqq4;->a:Ljava/util/concurrent/ScheduledFuture;
+
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const/16 p0, 0x5d
+
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p0
 

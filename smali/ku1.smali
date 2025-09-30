@@ -1,301 +1,162 @@
-.class public final synthetic Lku1;
+.class public final Lku1;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lw66;
-
 
 # instance fields
-.field public final synthetic a:I
+.field public final a:Lnxd;
+
+.field public final b:Lkotlinx/coroutines/internal/ContextScope;
 
 
 # direct methods
-.method public synthetic constructor <init>(I)V
-    .locals 0
-
-    iput p1, p0, Lku1;->a:I
+.method public constructor <init>(Lcl7;Lcl7;)V
+    .locals 2
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    const/4 v0, 0x0
+
+    const/4 v1, 0x7
+
+    invoke-static {v0, v0, v1}, Loxd;->b(III)Lnxd;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lku1;->a:Lnxd;
+
+    invoke-interface {p2}, Lcl7;->getValue()Ljava/lang/Object;
+
+    move-result-object p2
+
+    check-cast p2, Lxwe;
+
+    check-cast p2, Laga;
+
+    invoke-virtual {p2}, Laga;->c()Lt38;
+
+    move-result-object p2
+
+    invoke-static {p2}, Lb0b;->a(Lq04;)Lkotlinx/coroutines/internal/ContextScope;
+
+    move-result-object p2
+
+    iput-object p2, p0, Lku1;->b:Lkotlinx/coroutines/internal/ContextScope;
+
+    invoke-interface {p1}, Lcl7;->getValue()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lfv0;
+
+    invoke-virtual {p1, p0}, Lfv0;->d(Ljava/lang/Object;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final apply(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 11
+.method public final onEvent(Lcp7;)V
+    .locals 2
+    .annotation runtime Line;
+    .end annotation
 
-    iget p0, p0, Lku1;->a:I
-
-    const/4 v0, 0x1
+    .line 4
+    new-instance v0, Liu1;
 
     const/4 v1, 0x0
 
-    const/4 v2, 0x0
+    invoke-direct {v0, p0, p1, v1}, Liu1;-><init>(Lku1;Lcp7;Lkotlin/coroutines/Continuation;)V
 
-    packed-switch p0, :pswitch_data_0
+    const/4 p1, 0x3
 
-    check-cast p1, Ljava/util/List;
+    iget-object p0, p0, Lku1;->b:Lkotlinx/coroutines/internal/ContextScope;
 
-    if-eqz p1, :cond_1
+    invoke-static {p0, v1, v1, v0, p1}, Lvyg;->u(Ly04;Lq04;Lb14;Lpc6;I)Lcae;
 
-    new-instance v1, Ljava/util/ArrayList;
+    return-void
+.end method
 
-    const/16 p0, 0xa
+.method public final onEvent(Lk18;)V
+    .locals 2
+    .annotation runtime Line;
+    .end annotation
 
-    invoke-static {p1, p0}, Lr43;->k0(Ljava/lang/Iterable;I)I
+    .line 1
+    new-instance p1, Lfu1;
 
-    move-result p0
+    const/4 v0, 0x0
 
-    invoke-direct {v1, p0}, Ljava/util/ArrayList;-><init>(I)V
+    invoke-direct {p1, p0, v0}, Lfu1;-><init>(Lku1;Lkotlin/coroutines/Continuation;)V
 
-    invoke-interface {p1}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
+    const/4 v1, 0x3
 
-    move-result-object p0
+    iget-object p0, p0, Lku1;->b:Lkotlinx/coroutines/internal/ContextScope;
 
-    :goto_0
-    invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
+    invoke-static {p0, v0, v0, p1, v1}, Lvyg;->u(Ly04;Lq04;Lb14;Lpc6;I)Lcae;
 
-    move-result p1
+    return-void
+.end method
 
-    if-eqz p1, :cond_1
+.method public final onEvent(Lm13;)V
+    .locals 2
+    .annotation runtime Line;
+    .end annotation
 
-    invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    .line 3
+    new-instance v0, Lhu1;
 
-    move-result-object p1
+    const/4 v1, 0x0
 
-    check-cast p1, Lk9g;
+    invoke-direct {v0, p0, p1, v1}, Lhu1;-><init>(Lku1;Lm13;Lkotlin/coroutines/Continuation;)V
 
-    iget-object v0, p1, Lk9g;->g:Ljava/util/ArrayList;
+    const/4 p1, 0x3
 
-    invoke-interface {v0}, Ljava/util/Collection;->isEmpty()Z
+    iget-object p0, p0, Lku1;->b:Lkotlinx/coroutines/internal/ContextScope;
 
-    move-result v3
+    invoke-static {p0, v1, v1, v0, p1}, Lvyg;->u(Ly04;Lq04;Lb14;Lpc6;I)Lcae;
 
-    if-nez v3, :cond_0
+    return-void
+.end method
 
-    invoke-interface {v0, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
+.method public final onEvent(Lni0;)V
+    .locals 2
+    .annotation runtime Line;
+    .end annotation
 
-    move-result-object v0
+    .line 5
+    new-instance v0, Lju1;
 
-    check-cast v0, Lt24;
+    const/4 v1, 0x0
 
-    :goto_1
-    move-object v8, v0
+    invoke-direct {v0, p0, p1, v1}, Lju1;-><init>(Lku1;Lni0;Lkotlin/coroutines/Continuation;)V
 
-    goto :goto_2
+    const/4 p1, 0x3
 
-    :cond_0
-    sget-object v0, Lt24;->b:Lt24;
+    iget-object p0, p0, Lku1;->b:Lkotlinx/coroutines/internal/ContextScope;
 
-    goto :goto_1
+    invoke-static {p0, v1, v1, v0, p1}, Lvyg;->u(Ly04;Lq04;Lb14;Lpc6;I)Lcae;
 
-    :goto_2
-    new-instance v3, Lr8g;
+    return-void
+.end method
 
-    iget-object v0, p1, Lk9g;->a:Ljava/lang/String;
+.method public final onEvent(Lnv3;)V
+    .locals 2
+    .annotation runtime Line;
+    .end annotation
 
-    invoke-static {v0}, Ljava/util/UUID;->fromString(Ljava/lang/String;)Ljava/util/UUID;
+    .line 2
+    new-instance v0, Lgu1;
 
-    move-result-object v4
+    const/4 v1, 0x0
 
-    iget-object v5, p1, Lk9g;->b:Lq8g;
+    invoke-direct {v0, p0, p1, v1}, Lgu1;-><init>(Lku1;Lnv3;Lkotlin/coroutines/Continuation;)V
 
-    iget-object v6, p1, Lk9g;->c:Lt24;
+    const/4 p1, 0x3
 
-    iget-object v7, p1, Lk9g;->f:Ljava/util/ArrayList;
+    iget-object p0, p0, Lku1;->b:Lkotlinx/coroutines/internal/ContextScope;
 
-    iget v9, p1, Lk9g;->d:I
+    invoke-static {p0, v1, v1, v0, p1}, Lvyg;->u(Ly04;Lq04;Lb14;Lpc6;I)Lcae;
 
-    iget v10, p1, Lk9g;->e:I
-
-    invoke-direct/range {v3 .. v10}, Lr8g;-><init>(Ljava/util/UUID;Lq8g;Lt24;Ljava/util/ArrayList;Lt24;II)V
-
-    invoke-virtual {v1, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    goto :goto_0
-
-    :cond_1
-    return-object v1
-
-    :pswitch_0
-    check-cast p1, Lac0;
-
-    :try_start_0
-    invoke-static {p1}, Lgff;->T0(Lac0;)Lgff;
-
-    move-result-object p0
-
-    invoke-static {p0, v1}, Lhff;->a(Lfff;Landroid/util/Size;)Lfff;
-
-    move-result-object v1
-    :try_end_0
-    .catch Landroidx/camera/video/internal/encoder/InvalidConfigException; {:try_start_0 .. :try_end_0} :catch_0
-
-    :catch_0
-    return-object v1
-
-    :pswitch_1
-    check-cast p1, Ljava/util/List;
-
-    return-object v1
-
-    :pswitch_2
-    check-cast p1, Lkq7;
-
-    iput-boolean v0, p1, Lkq7;->a:Z
-
-    iput-boolean v0, p1, Lkq7;->c:Z
-
-    iput-boolean v2, p1, Lkq7;->b:Z
-
-    return-object p1
-
-    :pswitch_3
-    check-cast p1, Lkq7;
-
-    iput-boolean v2, p1, Lkq7;->e:Z
-
-    iput-boolean v2, p1, Lkq7;->g:Z
-
-    iput-boolean v2, p1, Lkq7;->h:Z
-
-    return-object p1
-
-    :pswitch_4
-    check-cast p1, Lkq7;
-
-    iput-boolean v2, p1, Lkq7;->g:Z
-
-    iput-boolean v2, p1, Lkq7;->h:Z
-
-    iput-boolean v2, p1, Lkq7;->e:Z
-
-    return-object p1
-
-    :pswitch_5
-    check-cast p1, Lkq7;
-
-    iput-boolean v2, p1, Lkq7;->e:Z
-
-    iput-boolean v2, p1, Lkq7;->g:Z
-
-    iput-boolean v2, p1, Lkq7;->h:Z
-
-    return-object p1
-
-    :pswitch_6
-    check-cast p1, Lkq7;
-
-    iput-boolean v0, p1, Lkq7;->e:Z
-
-    return-object p1
-
-    :pswitch_7
-    check-cast p1, Lkq7;
-
-    iput-boolean v0, p1, Lkq7;->g:Z
-
-    iput-boolean v0, p1, Lkq7;->h:Z
-
-    return-object p1
-
-    :pswitch_8
-    check-cast p1, Lkq7;
-
-    iput-boolean v2, p1, Lkq7;->e:Z
-
-    return-object p1
-
-    :pswitch_9
-    check-cast p1, Lkq7;
-
-    iput-boolean v2, p1, Lkq7;->g:Z
-
-    iput-boolean v2, p1, Lkq7;->h:Z
-
-    return-object p1
-
-    :pswitch_a
-    check-cast p1, Ljava/util/List;
-
-    sget-object p0, Lhu6;->A:Lfu6;
-
-    return-object v1
-
-    :pswitch_b
-    new-instance p0, Lv6b;
-
-    check-cast p1, Lu6b;
-
-    invoke-direct {p0, p1}, Lv6b;-><init>(Lu6b;)V
-
-    return-object p0
-
-    :pswitch_c
-    check-cast p1, Landroid/hardware/camera2/TotalCaptureResult;
-
-    sget p0, Lxu1;->h:I
-
-    sget-object p0, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
-
-    return-object p0
-
-    :pswitch_d
-    check-cast p1, Landroid/hardware/camera2/TotalCaptureResult;
-
-    sget p0, Lvu1;->g:I
-
-    sget-object p0, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
-
-    return-object p0
-
-    :pswitch_e
-    check-cast p1, Ljava/util/List;
-
-    sget-object p0, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
-
-    invoke-interface {p1, p0}, Ljava/util/List;->contains(Ljava/lang/Object;)Z
-
-    move-result p0
-
-    invoke-static {p0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
-
-    move-result-object p0
-
-    return-object p0
-
-    :pswitch_f
-    check-cast p1, Landroid/hardware/camera2/TotalCaptureResult;
-
-    return-object v1
-
-    :pswitch_10
-    check-cast p1, Ljava/lang/Void;
-
-    sget-object p0, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
-
-    return-object p0
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_10
-        :pswitch_f
-        :pswitch_e
-        :pswitch_d
-        :pswitch_c
-        :pswitch_b
-        :pswitch_a
-        :pswitch_9
-        :pswitch_8
-        :pswitch_7
-        :pswitch_6
-        :pswitch_5
-        :pswitch_4
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    return-void
 .end method

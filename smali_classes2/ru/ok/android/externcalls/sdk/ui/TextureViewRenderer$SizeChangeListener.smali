@@ -23,7 +23,7 @@
         "",
         "w",
         "h",
-        "Le5f;",
+        "Lylf;",
         "onTextureSizeChanged",
         "(II)V",
         "onFrameSizeChanged",

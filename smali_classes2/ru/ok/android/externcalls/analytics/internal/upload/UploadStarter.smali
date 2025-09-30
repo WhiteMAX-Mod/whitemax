@@ -15,7 +15,7 @@
         "()V",
         "",
         "apiMethod",
-        "Le5f;",
+        "Lylf;",
         "upload",
         "(Ljava/lang/String;)V",
         "startUpload",
@@ -120,11 +120,11 @@
     return-void
 
     :cond_0
-    new-instance v0, Lgje;
+    new-instance v0, Lsle;
 
-    const/16 v1, 0xa
+    const/16 v1, 0xf
 
-    invoke-direct {v0, v1, p1}, Lgje;-><init>(ILjava/lang/Object;)V
+    invoke-direct {v0, v1, p1}, Lsle;-><init>(ILjava/lang/Object;)V
 
     invoke-interface {p0, v0}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
 

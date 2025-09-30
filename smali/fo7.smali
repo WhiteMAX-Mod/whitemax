@@ -1,11 +1,6 @@
-.class public interface abstract Lfo7;
+.class public interface abstract annotation Lfo7;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-
-# virtual methods
-.method public abstract e()V
-.end method
-
-.method public abstract load()V
-.end method
+# interfaces
+.implements Ljava/lang/annotation/Annotation;

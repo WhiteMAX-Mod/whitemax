@@ -1,37 +1,73 @@
 .class public final Lrp5;
-.super Lbu3;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public X:Lmp5;
+.field public final a:Ljava/security/Signature;
 
-.field public synthetic Y:Ljava/lang/Object;
+.field public final b:Ljavax/crypto/Cipher;
 
-.field public Z:I
-
-.field public o:Lkcc;
+.field public final c:Ljavax/crypto/Mac;
 
 
-# virtual methods
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+# direct methods
+.method public constructor <init>(Ljava/security/Signature;)V
+    .locals 0
 
-    iput-object p1, p0, Lrp5;->Y:Ljava/lang/Object;
+    .line 1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iget p1, p0, Lrp5;->Z:I
-
-    const/high16 v0, -0x80000000
-
-    or-int/2addr p1, v0
-
-    iput p1, p0, Lrp5;->Z:I
+    .line 2
+    iput-object p1, p0, Lrp5;->a:Ljava/security/Signature;
 
     const/4 p1, 0x0
 
-    invoke-static {p1, p1, p0}, Lsgg;->u(Lu5c;Lejf;Lbu3;)Ljava/lang/Object;
+    .line 3
+    iput-object p1, p0, Lrp5;->b:Ljavax/crypto/Cipher;
 
-    move-result-object p0
+    .line 4
+    iput-object p1, p0, Lrp5;->c:Ljavax/crypto/Mac;
 
-    return-object p0
+    return-void
+.end method
+
+.method public constructor <init>(Ljavax/crypto/Cipher;)V
+    .locals 0
+
+    .line 5
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 6
+    iput-object p1, p0, Lrp5;->b:Ljavax/crypto/Cipher;
+
+    const/4 p1, 0x0
+
+    .line 7
+    iput-object p1, p0, Lrp5;->a:Ljava/security/Signature;
+
+    .line 8
+    iput-object p1, p0, Lrp5;->c:Ljavax/crypto/Mac;
+
+    return-void
+.end method
+
+.method public constructor <init>(Ljavax/crypto/Mac;)V
+    .locals 0
+
+    .line 9
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 10
+    iput-object p1, p0, Lrp5;->c:Ljavax/crypto/Mac;
+
+    const/4 p1, 0x0
+
+    .line 11
+    iput-object p1, p0, Lrp5;->b:Ljavax/crypto/Cipher;
+
+    .line 12
+    iput-object p1, p0, Lrp5;->a:Ljava/security/Signature;
+
+    return-void
 .end method

@@ -1,125 +1,91 @@
-.class public final Lli4;
-.super Lv64;
+.class public final synthetic Lli4;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lsm3;
 
-# static fields
-.field public static final b:Lli4;
 
-.field public static final c:Lr64;
+# instance fields
+.field public final synthetic a:Lmi4;
 
-.field public static final d:Lr64;
+.field public final synthetic b:Lire;
 
-.field public static final e:Lr64;
+.field public final synthetic c:Landroid/graphics/SurfaceTexture;
 
-.field public static final f:Lr64;
-
-.field public static final g:Lr64;
-
-.field public static final h:Lr64;
-
-.field public static final i:Lr64;
-
-.field public static final j:Lr64;
+.field public final synthetic d:Landroid/view/Surface;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 6
+.method public synthetic constructor <init>(Lmi4;Lire;Landroid/graphics/SurfaceTexture;Landroid/view/Surface;)V
+    .locals 0
 
-    new-instance v0, Lli4;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0}, Lv64;-><init>()V
+    iput-object p1, p0, Lli4;->a:Lmi4;
 
-    sput-object v0, Lli4;->b:Lli4;
+    iput-object p2, p0, Lli4;->b:Lire;
 
-    const/4 v1, 0x0
+    iput-object p3, p0, Lli4;->c:Landroid/graphics/SurfaceTexture;
 
-    new-array v2, v1, [Ljava/lang/String;
-
-    const/4 v3, 0x2
-
-    const-string v4, ":settings/dev"
-
-    const/4 v5, 0x0
-
-    invoke-static {v0, v4, v2, v5, v3}, Lv64;->a(Lv64;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lr64;
-
-    move-result-object v2
-
-    sput-object v2, Lli4;->c:Lr64;
-
-    new-array v2, v1, [Ljava/lang/String;
-
-    const-string v3, ":settings/dev/logsviewer"
-
-    const/16 v4, 0xa
-
-    invoke-static {v0, v3, v2, v5, v4}, Lv64;->a(Lv64;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lr64;
-
-    move-result-object v2
-
-    sput-object v2, Lli4;->d:Lr64;
-
-    const-string v2, ":settings/dev/showroom"
-
-    new-array v3, v1, [Ljava/lang/String;
-
-    invoke-static {v0, v2, v3, v5, v4}, Lv64;->a(Lv64;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lr64;
-
-    move-result-object v2
-
-    sput-object v2, Lli4;->e:Lr64;
-
-    const-string v2, ":settings/dev/threadsviewer"
-
-    new-array v3, v1, [Ljava/lang/String;
-
-    invoke-static {v0, v2, v3, v5, v4}, Lv64;->a(Lv64;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lr64;
-
-    move-result-object v2
-
-    sput-object v2, Lli4;->f:Lr64;
-
-    const-string v2, ":settings/magic-room"
-
-    new-array v3, v1, [Ljava/lang/String;
-
-    invoke-static {v0, v2, v3, v5, v4}, Lv64;->a(Lv64;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lr64;
-
-    move-result-object v2
-
-    sput-object v2, Lli4;->g:Lr64;
-
-    const-string v2, ":settings/server-host"
-
-    new-array v3, v1, [Ljava/lang/String;
-
-    invoke-static {v0, v2, v3, v5, v4}, Lv64;->a(Lv64;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lr64;
-
-    move-result-object v2
-
-    sput-object v2, Lli4;->h:Lr64;
-
-    const-string v2, ":settings/server-port"
-
-    new-array v3, v1, [Ljava/lang/String;
-
-    invoke-static {v0, v2, v3, v5, v4}, Lv64;->a(Lv64;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lr64;
-
-    move-result-object v2
-
-    sput-object v2, Lli4;->i:Lr64;
-
-    const-string v2, ":settings/themes-room"
-
-    new-array v1, v1, [Ljava/lang/String;
-
-    invoke-static {v0, v2, v1, v5, v4}, Lv64;->a(Lv64;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lr64;
-
-    move-result-object v0
-
-    sput-object v0, Lli4;->j:Lr64;
+    iput-object p4, p0, Lli4;->d:Landroid/view/Surface;
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final accept(Ljava/lang/Object;)V
+    .locals 4
+
+    iget-object v0, p0, Lli4;->a:Lmi4;
+
+    iget-object v1, p0, Lli4;->b:Lire;
+
+    iget-object v2, p0, Lli4;->c:Landroid/graphics/SurfaceTexture;
+
+    iget-object p0, p0, Lli4;->d:Landroid/view/Surface;
+
+    check-cast p1, Lgb0;
+
+    iget-object p1, v1, Lire;->a:Ljava/lang/Object;
+
+    monitor-enter p1
+
+    const/4 v3, 0x0
+
+    :try_start_0
+    iput-object v3, v1, Lire;->n:Lhre;
+
+    iput-object v3, v1, Lire;->o:Ljava/util/concurrent/Executor;
+
+    monitor-exit p1
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    invoke-virtual {v2, v3}, Landroid/graphics/SurfaceTexture;->setOnFrameAvailableListener(Landroid/graphics/SurfaceTexture$OnFrameAvailableListener;)V
+
+    invoke-virtual {v2}, Landroid/graphics/SurfaceTexture;->release()V
+
+    invoke-virtual {p0}, Landroid/view/Surface;->release()V
+
+    iget p0, v0, Lmi4;->s0:I
+
+    add-int/lit8 p0, p0, -0x1
+
+    iput p0, v0, Lmi4;->s0:I
+
+    invoke-virtual {v0}, Lmi4;->b()V
+
+    return-void
+
+    :catchall_0
+    move-exception p0
+
+    :try_start_1
+    monitor-exit p1
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    throw p0
 .end method

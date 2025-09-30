@@ -1,80 +1,147 @@
-.class public final Lt20;
+.class public final synthetic Lt20;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ljava/lang/Runnable;
+
 
 # instance fields
-.field public final a:Landroid/media/AudioAttributes;
+.field public final synthetic a:I
+
+.field public final synthetic b:Ljava/lang/Runnable;
 
 
 # direct methods
-.method public constructor <init>(Landroid/media/AudioAttributes;I)V
+.method public synthetic constructor <init>(Ljava/lang/Runnable;I)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput p2, p0, Lt20;->a:I
 
-    iput-object p1, p0, Lt20;->a:Landroid/media/AudioAttributes;
+    iput-object p1, p0, Lt20;->b:Ljava/lang/Runnable;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
+.method public final run()V
+    .locals 3
 
-    instance-of v0, p1, Lt20;
+    iget v0, p0, Lt20;->a:I
 
-    if-nez v0, :cond_0
+    const-string v1, "failed to execute fresco task"
 
-    const/4 p0, 0x0
+    const-string v2, "Fresco"
 
-    return p0
+    iget-object p0, p0, Lt20;->b:Ljava/lang/Runnable;
 
-    :cond_0
-    check-cast p1, Lt20;
+    packed-switch v0, :pswitch_data_0
 
-    iget-object p0, p0, Lt20;->a:Landroid/media/AudioAttributes;
+    invoke-static {p0}, Lkbf;->a(Ljava/lang/Runnable;)V
 
-    iget-object p1, p1, Lt20;->a:Landroid/media/AudioAttributes;
+    return-void
 
-    invoke-static {p0, p1}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
+    :pswitch_0
+    sget-object v0, Lone/me/rlottie/RLottieDrawable;->gson:Lcom/google/gson/Gson;
 
-    move-result p0
+    invoke-static {p0}, Lee;->d(Ljava/lang/Runnable;)V
 
-    return p0
-.end method
+    return-void
 
-.method public final hashCode()I
-    .locals 0
+    :pswitch_1
+    sget-object v0, Lone/me/rlottie/RLottieDrawable;->gson:Lcom/google/gson/Gson;
 
-    iget-object p0, p0, Lt20;->a:Landroid/media/AudioAttributes;
+    invoke-static {p0}, Lee;->d(Ljava/lang/Runnable;)V
 
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    return-void
 
-    invoke-virtual {p0}, Landroid/media/AudioAttributes;->hashCode()I
+    :pswitch_2
+    :try_start_0
+    invoke-interface {p0}, Ljava/lang/Runnable;->run()V
+    :try_end_0
+    .catch Ljava/lang/InterruptedException; {:try_start_0 .. :try_end_0} :catch_1
+    .catch Ljava/lang/IllegalStateException; {:try_start_0 .. :try_end_0} :catch_0
 
-    move-result p0
+    goto :goto_0
 
-    return p0
-.end method
+    :catch_0
+    move-exception p0
 
-.method public final toString()Ljava/lang/String;
-    .locals 2
+    invoke-static {v2, v1, p0}, Ljtg;->Q(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    :goto_0
+    return-void
 
-    const-string v1, "AudioAttributesCompat: audioattributes="
+    :catch_1
+    move-exception p0
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    throw p0
 
-    iget-object p0, p0, Lt20;->a:Landroid/media/AudioAttributes;
+    :pswitch_3
+    :try_start_1
+    invoke-interface {p0}, Ljava/lang/Runnable;->run()V
+    :try_end_1
+    .catch Ljava/lang/InterruptedException; {:try_start_1 .. :try_end_1} :catch_3
+    .catch Ljava/lang/IllegalStateException; {:try_start_1 .. :try_end_1} :catch_2
 
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    goto :goto_1
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    :catch_2
+    move-exception p0
 
-    move-result-object p0
+    invoke-static {v2, v1, p0}, Ljtg;->Q(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    return-object p0
+    :goto_1
+    return-void
+
+    :catch_3
+    move-exception p0
+
+    throw p0
+
+    :pswitch_4
+    :try_start_2
+    invoke-interface {p0}, Ljava/lang/Runnable;->run()V
+    :try_end_2
+    .catch Ljava/lang/InterruptedException; {:try_start_2 .. :try_end_2} :catch_5
+    .catch Ljava/lang/IllegalStateException; {:try_start_2 .. :try_end_2} :catch_4
+
+    goto :goto_2
+
+    :catch_4
+    move-exception p0
+
+    invoke-static {v2, v1, p0}, Ljtg;->Q(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    :goto_2
+    return-void
+
+    :catch_5
+    move-exception p0
+
+    throw p0
+
+    :pswitch_5
+    const/16 v0, -0x10
+
+    invoke-static {v0}, Landroid/os/Process;->setThreadPriority(I)V
+
+    invoke-interface {p0}, Ljava/lang/Runnable;->run()V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_5
+        :pswitch_4
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

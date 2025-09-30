@@ -1,100 +1,197 @@
-.class public final Lip0;
+.class public abstract Lip0;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Landroid/content/ServiceConnection;
-
-
-# instance fields
-.field public a:Z
-
-.field public final b:Ljava/util/concurrent/LinkedBlockingQueue;
-
 
 # direct methods
-.method public constructor <init>()V
-    .locals 1
+.method public static a(Lhp0;)Ljava/lang/Object;
+    .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-virtual {p0}, Ljava/lang/Enum;->ordinal()I
 
-    const/4 v0, 0x0
+    move-result p0
 
-    iput-boolean v0, p0, Lip0;->a:Z
+    packed-switch p0, :pswitch_data_0
 
-    new-instance v0, Ljava/util/concurrent/LinkedBlockingQueue;
-
-    invoke-direct {v0}, Ljava/util/concurrent/LinkedBlockingQueue;-><init>()V
-
-    iput-object v0, p0, Lip0;->b:Ljava/util/concurrent/LinkedBlockingQueue;
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final a()Landroid/os/IBinder;
-    .locals 3
-
-    sget-object v0, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;
-
-    const-string v1, "BlockingServiceConnection.getServiceWithTimeout() called on main thread"
-
-    invoke-static {v1}, Lkhg;->j(Ljava/lang/String;)V
-
-    iget-boolean v1, p0, Lip0;->a:Z
-
-    if-nez v1, :cond_1
-
-    const/4 v1, 0x1
-
-    iput-boolean v1, p0, Lip0;->a:Z
-
-    iget-object p0, p0, Lip0;->b:Ljava/util/concurrent/LinkedBlockingQueue;
-
-    const-wide/16 v1, 0x2710
-
-    invoke-virtual {p0, v1, v2, v0}, Ljava/util/concurrent/LinkedBlockingQueue;->poll(JLjava/util/concurrent/TimeUnit;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, Landroid/os/IBinder;
-
-    if-eqz p0, :cond_0
+    const/4 p0, 0x0
 
     return-object p0
 
-    :cond_0
-    new-instance p0, Ljava/util/concurrent/TimeoutException;
+    :pswitch_0
+    sget-object p0, Landroid/graphics/BlendMode;->LUMINOSITY:Landroid/graphics/BlendMode;
 
-    const-string v0, "Timed out waiting for the service connection"
+    return-object p0
 
-    invoke-direct {p0, v0}, Ljava/util/concurrent/TimeoutException;-><init>(Ljava/lang/String;)V
+    :pswitch_1
+    sget-object p0, Landroid/graphics/BlendMode;->COLOR:Landroid/graphics/BlendMode;
 
-    throw p0
+    return-object p0
 
-    :cond_1
-    new-instance p0, Ljava/lang/IllegalStateException;
+    :pswitch_2
+    sget-object p0, Landroid/graphics/BlendMode;->SATURATION:Landroid/graphics/BlendMode;
 
-    const-string v0, "Cannot call get on this connection more than once"
+    return-object p0
 
-    invoke-direct {p0, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    :pswitch_3
+    sget-object p0, Landroid/graphics/BlendMode;->HUE:Landroid/graphics/BlendMode;
 
-    throw p0
-.end method
+    return-object p0
 
-.method public final onServiceConnected(Landroid/content/ComponentName;Landroid/os/IBinder;)V
-    .locals 0
+    :pswitch_4
+    sget-object p0, Landroid/graphics/BlendMode;->MULTIPLY:Landroid/graphics/BlendMode;
 
-    iget-object p0, p0, Lip0;->b:Ljava/util/concurrent/LinkedBlockingQueue;
+    return-object p0
 
-    invoke-interface {p0, p2}, Ljava/util/concurrent/BlockingQueue;->add(Ljava/lang/Object;)Z
+    :pswitch_5
+    sget-object p0, Landroid/graphics/BlendMode;->EXCLUSION:Landroid/graphics/BlendMode;
 
-    return-void
-.end method
+    return-object p0
 
-.method public final onServiceDisconnected(Landroid/content/ComponentName;)V
-    .locals 0
+    :pswitch_6
+    sget-object p0, Landroid/graphics/BlendMode;->DIFFERENCE:Landroid/graphics/BlendMode;
 
-    return-void
+    return-object p0
+
+    :pswitch_7
+    sget-object p0, Landroid/graphics/BlendMode;->SOFT_LIGHT:Landroid/graphics/BlendMode;
+
+    return-object p0
+
+    :pswitch_8
+    sget-object p0, Landroid/graphics/BlendMode;->HARD_LIGHT:Landroid/graphics/BlendMode;
+
+    return-object p0
+
+    :pswitch_9
+    sget-object p0, Landroid/graphics/BlendMode;->COLOR_BURN:Landroid/graphics/BlendMode;
+
+    return-object p0
+
+    :pswitch_a
+    sget-object p0, Landroid/graphics/BlendMode;->COLOR_DODGE:Landroid/graphics/BlendMode;
+
+    return-object p0
+
+    :pswitch_b
+    sget-object p0, Landroid/graphics/BlendMode;->LIGHTEN:Landroid/graphics/BlendMode;
+
+    return-object p0
+
+    :pswitch_c
+    sget-object p0, Landroid/graphics/BlendMode;->DARKEN:Landroid/graphics/BlendMode;
+
+    return-object p0
+
+    :pswitch_d
+    sget-object p0, Landroid/graphics/BlendMode;->OVERLAY:Landroid/graphics/BlendMode;
+
+    return-object p0
+
+    :pswitch_e
+    sget-object p0, Landroid/graphics/BlendMode;->SCREEN:Landroid/graphics/BlendMode;
+
+    return-object p0
+
+    :pswitch_f
+    sget-object p0, Landroid/graphics/BlendMode;->MODULATE:Landroid/graphics/BlendMode;
+
+    return-object p0
+
+    :pswitch_10
+    sget-object p0, Landroid/graphics/BlendMode;->PLUS:Landroid/graphics/BlendMode;
+
+    return-object p0
+
+    :pswitch_11
+    sget-object p0, Landroid/graphics/BlendMode;->XOR:Landroid/graphics/BlendMode;
+
+    return-object p0
+
+    :pswitch_12
+    sget-object p0, Landroid/graphics/BlendMode;->DST_ATOP:Landroid/graphics/BlendMode;
+
+    return-object p0
+
+    :pswitch_13
+    sget-object p0, Landroid/graphics/BlendMode;->SRC_ATOP:Landroid/graphics/BlendMode;
+
+    return-object p0
+
+    :pswitch_14
+    sget-object p0, Landroid/graphics/BlendMode;->DST_OUT:Landroid/graphics/BlendMode;
+
+    return-object p0
+
+    :pswitch_15
+    sget-object p0, Landroid/graphics/BlendMode;->SRC_OUT:Landroid/graphics/BlendMode;
+
+    return-object p0
+
+    :pswitch_16
+    sget-object p0, Landroid/graphics/BlendMode;->DST_IN:Landroid/graphics/BlendMode;
+
+    return-object p0
+
+    :pswitch_17
+    sget-object p0, Landroid/graphics/BlendMode;->SRC_IN:Landroid/graphics/BlendMode;
+
+    return-object p0
+
+    :pswitch_18
+    sget-object p0, Landroid/graphics/BlendMode;->DST_OVER:Landroid/graphics/BlendMode;
+
+    return-object p0
+
+    :pswitch_19
+    sget-object p0, Landroid/graphics/BlendMode;->SRC_OVER:Landroid/graphics/BlendMode;
+
+    return-object p0
+
+    :pswitch_1a
+    sget-object p0, Landroid/graphics/BlendMode;->DST:Landroid/graphics/BlendMode;
+
+    return-object p0
+
+    :pswitch_1b
+    sget-object p0, Landroid/graphics/BlendMode;->SRC:Landroid/graphics/BlendMode;
+
+    return-object p0
+
+    :pswitch_1c
+    sget-object p0, Landroid/graphics/BlendMode;->CLEAR:Landroid/graphics/BlendMode;
+
+    return-object p0
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1c
+        :pswitch_1b
+        :pswitch_1a
+        :pswitch_19
+        :pswitch_18
+        :pswitch_17
+        :pswitch_16
+        :pswitch_15
+        :pswitch_14
+        :pswitch_13
+        :pswitch_12
+        :pswitch_11
+        :pswitch_10
+        :pswitch_f
+        :pswitch_e
+        :pswitch_d
+        :pswitch_c
+        :pswitch_b
+        :pswitch_a
+        :pswitch_9
+        :pswitch_8
+        :pswitch_7
+        :pswitch_6
+        :pswitch_5
+        :pswitch_4
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

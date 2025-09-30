@@ -4,16 +4,16 @@
 
 
 # instance fields
-.field public final a:Lfz5;
+.field public final a:Lx46;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/Throwable;Lfz5;)V
+.method public constructor <init>(Ljava/lang/Throwable;Lx46;)V
     .locals 0
 
     invoke-direct {p0, p1}, Ljava/lang/Exception;-><init>(Ljava/lang/Throwable;)V
 
-    iput-object p2, p0, Landroidx/media3/exoplayer/video/VideoSink$VideoSinkException;->a:Lfz5;
+    iput-object p2, p0, Landroidx/media3/exoplayer/video/VideoSink$VideoSinkException;->a:Lx46;
 
     return-void
 .end method

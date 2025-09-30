@@ -1,201 +1,176 @@
 .class public final Ltq4;
-.super Landroid/transition/Transition;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Ld8a;
+.implements Loq4;
 
 
 # instance fields
-.field public final a:Ld46;
+.field public final a:Ld8a;
 
-.field public final b:Ld46;
+.field public final b:Lpm3;
+
+.field public final c:Lc6;
+
+.field public o:Loq4;
 
 
 # direct methods
-.method public constructor <init>(Ld46;Ld46;)V
+.method public constructor <init>(Ld8a;Lpm3;Lc6;)V
     .locals 0
 
-    invoke-direct {p0}, Landroid/transition/Transition;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Ltq4;->a:Ld46;
+    iput-object p1, p0, Ltq4;->a:Ld8a;
 
-    iput-object p2, p0, Ltq4;->b:Ld46;
+    iput-object p2, p0, Ltq4;->b:Lpm3;
+
+    iput-object p3, p0, Ltq4;->c:Lc6;
 
     return-void
-.end method
-
-.method public static a(Landroid/transition/TransitionValues;)V
-    .locals 4
-
-    iget-object v0, p0, Landroid/transition/TransitionValues;->view:Landroid/view/View;
-
-    instance-of v0, v0, Lya6;
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Landroid/transition/TransitionValues;->values:Ljava/util/Map;
-
-    new-instance v1, Landroid/graphics/Rect;
-
-    iget-object v2, p0, Landroid/transition/TransitionValues;->view:Landroid/view/View;
-
-    invoke-virtual {v2}, Landroid/view/View;->getWidth()I
-
-    move-result v2
-
-    iget-object p0, p0, Landroid/transition/TransitionValues;->view:Landroid/view/View;
-
-    invoke-virtual {p0}, Landroid/view/View;->getHeight()I
-
-    move-result p0
-
-    const/4 v3, 0x0
-
-    invoke-direct {v1, v3, v3, v2, p0}, Landroid/graphics/Rect;-><init>(IIII)V
-
-    const-string p0, "draweeTransition:bounds"
-
-    invoke-interface {v0, p0, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    :cond_0
-    return-void
-.end method
-
-.method public static b(Ld46;Ld46;)Landroid/transition/TransitionSet;
-    .locals 2
-
-    new-instance v0, Landroid/transition/TransitionSet;
-
-    invoke-direct {v0}, Landroid/transition/TransitionSet;-><init>()V
-
-    new-instance v1, Landroid/transition/ChangeBounds;
-
-    invoke-direct {v1}, Landroid/transition/ChangeBounds;-><init>()V
-
-    invoke-virtual {v0, v1}, Landroid/transition/TransitionSet;->addTransition(Landroid/transition/Transition;)Landroid/transition/TransitionSet;
-
-    new-instance v1, Ltq4;
-
-    invoke-direct {v1, p0, p1}, Ltq4;-><init>(Ld46;Ld46;)V
-
-    invoke-virtual {v0, v1}, Landroid/transition/TransitionSet;->addTransition(Landroid/transition/Transition;)Landroid/transition/TransitionSet;
-
-    return-object v0
 .end method
 
 
 # virtual methods
-.method public final captureEndValues(Landroid/transition/TransitionValues;)V
-    .locals 0
+.method public final b()V
+    .locals 2
 
-    invoke-static {p1}, Ltq4;->a(Landroid/transition/TransitionValues;)V
+    iget-object v0, p0, Ltq4;->o:Loq4;
 
-    return-void
-.end method
+    sget-object v1, Lsq4;->a:Lsq4;
 
-.method public final captureStartValues(Landroid/transition/TransitionValues;)V
-    .locals 0
+    if-eq v0, v1, :cond_0
 
-    invoke-static {p1}, Ltq4;->a(Landroid/transition/TransitionValues;)V
+    iput-object v1, p0, Ltq4;->o:Loq4;
 
-    return-void
-.end method
+    iget-object p0, p0, Ltq4;->a:Ld8a;
 
-.method public final createAnimator(Landroid/view/ViewGroup;Landroid/transition/TransitionValues;Landroid/transition/TransitionValues;)Landroid/animation/Animator;
-    .locals 3
-
-    const/4 p1, 0x0
-
-    if-eqz p2, :cond_3
-
-    if-nez p3, :cond_0
-
-    goto :goto_0
+    invoke-interface {p0}, Ld8a;->b()V
 
     :cond_0
-    iget-object v0, p2, Landroid/transition/TransitionValues;->values:Ljava/util/Map;
+    return-void
+.end method
 
-    const-string v1, "draweeTransition:bounds"
+.method public final c(Loq4;)V
+    .locals 2
 
-    invoke-interface {v0, v1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    iget-object v0, p0, Ltq4;->a:Ld8a;
 
-    move-result-object v0
+    :try_start_0
+    iget-object v1, p0, Ltq4;->b:Lpm3;
 
-    check-cast v0, Landroid/graphics/Rect;
+    invoke-interface {v1, p1}, Lpm3;->accept(Ljava/lang/Object;)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    iget-object p3, p3, Landroid/transition/TransitionValues;->values:Ljava/util/Map;
+    iget-object v1, p0, Ltq4;->o:Loq4;
 
-    invoke-interface {p3, v1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {v1, p1}, Lsq4;->h(Loq4;Loq4;)Z
 
-    move-result-object p3
+    move-result v1
 
-    check-cast p3, Landroid/graphics/Rect;
+    if-eqz v1, :cond_0
 
-    if-eqz v0, :cond_3
+    iput-object p1, p0, Ltq4;->o:Loq4;
 
-    if-nez p3, :cond_1
+    invoke-interface {v0, p0}, Ld8a;->c(Loq4;)V
+
+    :cond_0
+    return-void
+
+    :catchall_0
+    move-exception v1
+
+    invoke-static {v1}, Lzyd;->F(Ljava/lang/Throwable;)V
+
+    invoke-interface {p1}, Loq4;->e()V
+
+    sget-object p1, Lsq4;->a:Lsq4;
+
+    iput-object p1, p0, Ltq4;->o:Loq4;
+
+    invoke-static {v1, v0}, Lk45;->b(Ljava/lang/Throwable;Ld8a;)V
+
+    return-void
+.end method
+
+.method public final e()V
+    .locals 2
+
+    iget-object v0, p0, Ltq4;->o:Loq4;
+
+    sget-object v1, Lsq4;->a:Lsq4;
+
+    if-eq v0, v1, :cond_0
+
+    iput-object v1, p0, Ltq4;->o:Loq4;
+
+    :try_start_0
+    iget-object p0, p0, Ltq4;->c:Lc6;
+
+    invoke-interface {p0}, Lc6;->run()V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     goto :goto_0
 
-    :cond_1
-    iget-object v1, p0, Ltq4;->a:Ld46;
+    :catchall_0
+    move-exception p0
 
-    iget-object v2, p0, Ltq4;->b:Ld46;
+    invoke-static {p0}, Lzyd;->F(Ljava/lang/Throwable;)V
 
-    if-ne v1, v2, :cond_2
+    invoke-static {p0}, Ln4e;->D(Ljava/lang/Throwable;)V
 
-    return-object p1
-
-    :cond_2
-    iget-object p1, p2, Landroid/transition/TransitionValues;->view:Landroid/view/View;
-
-    check-cast p1, Lya6;
-
-    new-instance p2, Ltqc;
-
-    invoke-direct {p2, v1, v2, v0, p3}, Ltqc;-><init>(Ld46;Ld46;Landroid/graphics/Rect;Landroid/graphics/Rect;)V
-
-    invoke-virtual {p1}, Luq4;->getHierarchy()Lrq4;
-
-    move-result-object p3
-
-    check-cast p3, Lwa6;
-
-    invoke-virtual {p3, p2}, Lwa6;->h(Luqc;)V
-
-    const/4 p3, 0x2
-
-    new-array p3, p3, [F
-
-    fill-array-data p3, :array_0
-
-    invoke-static {p3}, Landroid/animation/ValueAnimator;->ofFloat([F)Landroid/animation/ValueAnimator;
-
-    move-result-object p3
-
-    new-instance v0, Lsj0;
-
-    const/4 v1, 0x3
-
-    invoke-direct {v0, v1, p2}, Lsj0;-><init>(ILjava/lang/Object;)V
-
-    invoke-virtual {p3, v0}, Landroid/animation/ValueAnimator;->addUpdateListener(Landroid/animation/ValueAnimator$AnimatorUpdateListener;)V
-
-    new-instance p2, Lxg;
-
-    const/4 v0, 0x0
-
-    invoke-direct {p2, p0, p1, v0, v1}, Lxg;-><init>(Ljava/lang/Object;Ljava/lang/Object;ZI)V
-
-    invoke-virtual {p3, p2}, Landroid/animation/Animator;->addListener(Landroid/animation/Animator$AnimatorListener;)V
-
-    return-object p3
-
-    :cond_3
     :goto_0
-    return-object p1
+    invoke-interface {v0}, Loq4;->e()V
 
-    :array_0
-    .array-data 4
-        0x0
-        0x3f800000    # 1.0f
-    .end array-data
+    :cond_0
+    return-void
+.end method
+
+.method public final f()Z
+    .locals 0
+
+    iget-object p0, p0, Ltq4;->o:Loq4;
+
+    invoke-interface {p0}, Loq4;->f()Z
+
+    move-result p0
+
+    return p0
+.end method
+
+.method public final onError(Ljava/lang/Throwable;)V
+    .locals 2
+
+    iget-object v0, p0, Ltq4;->o:Loq4;
+
+    sget-object v1, Lsq4;->a:Lsq4;
+
+    if-eq v0, v1, :cond_0
+
+    iput-object v1, p0, Ltq4;->o:Loq4;
+
+    iget-object p0, p0, Ltq4;->a:Ld8a;
+
+    invoke-interface {p0, p1}, Ld8a;->onError(Ljava/lang/Throwable;)V
+
+    return-void
+
+    :cond_0
+    invoke-static {p1}, Ln4e;->D(Ljava/lang/Throwable;)V
+
+    return-void
+.end method
+
+.method public final s(Ljava/lang/Object;)V
+    .locals 0
+
+    iget-object p0, p0, Ltq4;->a:Ld8a;
+
+    invoke-interface {p0, p1}, Ld8a;->s(Ljava/lang/Object;)V
+
+    return-void
 .end method

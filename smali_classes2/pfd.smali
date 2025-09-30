@@ -1,79 +1,95 @@
 .class public final Lpfd;
-.super Lv64;
+.super Lure;
 .source "SourceFile"
 
+# interfaces
+.implements Lpc6;
 
-# static fields
-.field public static final b:Lpfd;
 
-.field public static final c:Lr64;
+# instance fields
+.field public synthetic X:Ljava/lang/Object;
 
-.field public static final d:Lr64;
-
-.field public static final e:Lr64;
-
-.field public static final f:Lr64;
+.field public final synthetic Y:Lone/me/sdk/gallery/selectalbum/SelectAlbumWidget;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 6
+.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/sdk/gallery/selectalbum/SelectAlbumWidget;)V
+    .locals 0
+
+    iput-object p2, p0, Lpfd;->Y:Lone/me/sdk/gallery/selectalbum/SelectAlbumWidget;
+
+    const/4 p2, 0x2
+
+    invoke-direct {p0, p2, p1}, Lure;-><init>(ILkotlin/coroutines/Continuation;)V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
+
+    check-cast p2, Lkotlin/coroutines/Continuation;
+
+    invoke-virtual {p0, p1, p2}, Lpfd;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+
+    move-result-object p0
+
+    check-cast p0, Lpfd;
+
+    sget-object p1, Lylf;->a:Lylf;
+
+    invoke-virtual {p0, p1}, Lpfd;->o(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object p1
+.end method
+
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 1
 
     new-instance v0, Lpfd;
 
-    invoke-direct {v0}, Lv64;-><init>()V
+    iget-object p0, p0, Lpfd;->Y:Lone/me/sdk/gallery/selectalbum/SelectAlbumWidget;
 
-    sput-object v0, Lpfd;->b:Lpfd;
+    invoke-direct {v0, p2, p0}, Lpfd;-><init>(Lkotlin/coroutines/Continuation;Lone/me/sdk/gallery/selectalbum/SelectAlbumWidget;)V
 
-    const/4 v1, 0x0
+    iput-object p1, v0, Lpfd;->X:Ljava/lang/Object;
 
-    new-array v2, v1, [Ljava/lang/String;
+    return-object v0
+.end method
 
-    const-string v3, ":settings/privacy"
+.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    const/4 v4, 0x0
+    invoke-static {p1}, Lqe5;->V(Ljava/lang/Object;)V
 
-    const/16 v5, 0xe
+    iget-object p1, p0, Lpfd;->X:Ljava/lang/Object;
 
-    invoke-static {v0, v3, v2, v4, v5}, Lv64;->a(Lv64;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lr64;
+    check-cast p1, Lafd;
 
-    move-result-object v2
+    if-eqz p1, :cond_0
 
-    sput-object v2, Lpfd;->c:Lr64;
+    sget-object p1, Lone/me/sdk/gallery/selectalbum/SelectAlbumWidget;->Y:[Lxi7;
 
-    const-string v2, ":settings/blacklist"
+    iget-object p0, p0, Lpfd;->Y:Lone/me/sdk/gallery/selectalbum/SelectAlbumWidget;
 
-    new-array v3, v1, [Ljava/lang/String;
+    invoke-virtual {p0}, Lone/me/sdk/gallery/selectalbum/SelectAlbumWidget;->z0()Llfb;
 
-    invoke-static {v0, v2, v3, v4, v5}, Lv64;->a(Lv64;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lr64;
+    move-result-object p0
 
-    move-result-object v2
+    const/4 p1, 0x1
 
-    sput-object v2, Lpfd;->d:Lr64;
+    invoke-virtual {p0, p1}, Llfb;->j(Z)V
 
-    const-string v2, ":settings/privacy/onboarding"
+    sget-object p0, Lylf;->a:Lylf;
 
-    new-array v1, v1, [Ljava/lang/String;
+    return-object p0
 
-    invoke-static {v0, v2, v1, v4, v5}, Lv64;->a(Lv64;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lr64;
+    :cond_0
+    new-instance p0, Lkotlin/NoWhenBranchMatchedException;
 
-    move-result-object v1
+    invoke-direct {p0}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
 
-    sput-object v1, Lpfd;->e:Lr64;
-
-    const-string v1, "mode"
-
-    filled-new-array {v1}, [Ljava/lang/String;
-
-    move-result-object v1
-
-    const-string v2, ":settings/privacy/pincode"
-
-    invoke-static {v0, v2, v1, v4, v5}, Lv64;->a(Lv64;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lr64;
-
-    move-result-object v0
-
-    sput-object v0, Lpfd;->f:Lr64;
-
-    return-void
+    throw p0
 .end method

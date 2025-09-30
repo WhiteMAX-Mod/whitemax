@@ -1,5 +1,5 @@
 .class public Lru/ok/android/externcalls/analytics/internal/api/SimpleItemsApiValue;
-.super Lmr0;
+.super Lwr0;
 .source "SourceFile"
 
 
@@ -36,7 +36,7 @@
 
 
 # virtual methods
-.method public write(Lkb7;)V
+.method public write(Lgi7;)V
     .locals 2
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -45,7 +45,7 @@
         }
     .end annotation
 
-    invoke-interface {p1}, Lkb7;->u()V
+    invoke-interface {p1}, Lgi7;->u()V
 
     iget-object p0, p0, Lru/ok/android/externcalls/analytics/internal/api/SimpleItemsApiValue;->items:Ljava/lang/Iterable;
 
@@ -68,12 +68,12 @@
 
     sget-object v1, Lru/ok/android/externcalls/analytics/internal/event/EventSerializer;->INSTANCE:Lru/ok/android/externcalls/analytics/internal/event/EventSerializer;
 
-    invoke-virtual {v1, p1, v0}, Lru/ok/android/externcalls/analytics/internal/event/EventSerializer;->serialize(Lkb7;Lru/ok/android/externcalls/analytics/events/CallAnalyticsEvent;)V
+    invoke-virtual {v1, p1, v0}, Lru/ok/android/externcalls/analytics/internal/event/EventSerializer;->serialize(Lgi7;Lru/ok/android/externcalls/analytics/events/CallAnalyticsEvent;)V
 
     goto :goto_0
 
     :cond_0
-    invoke-interface {p1}, Lkb7;->t()V
+    invoke-interface {p1}, Lgi7;->t()V
 
     return-void
 .end method

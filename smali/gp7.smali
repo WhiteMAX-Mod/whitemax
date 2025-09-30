@@ -3,170 +3,81 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lri4;
+.implements Lua4;
 
 
-# instance fields
-.field public final a:Lmoe;
+# static fields
+.field public static final a:Lgp7;
 
-.field public final b:La76;
-
-.field public final c:Lx56;
-
-.field public final d:I
-
-.field public final e:J
-
-.field public final f:Lazd;
-
-.field public final g:Lu5c;
+.field public static final b:Lhp7;
 
 
 # direct methods
-.method public constructor <init>(Lmoe;Lv56;Lx56;II)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    and-int/lit8 p5, p5, 0x8
+    new-instance v0, Lgp7;
 
-    if-eqz p5, :cond_0
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    const/4 p4, 0x0
+    sput-object v0, Lgp7;->a:Lgp7;
 
-    :cond_0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    sget-object v0, Lhp7;->b:Lhp7;
 
-    iput-object p1, p0, Lgp7;->a:Lmoe;
-
-    check-cast p2, La76;
-
-    iput-object p2, p0, Lgp7;->b:La76;
-
-    iput-object p3, p0, Lgp7;->c:Lx56;
-
-    iput p4, p0, Lgp7;->d:I
-
-    sget-object p1, Lji4;->b:Ljava/util/concurrent/atomic/AtomicLong;
-
-    invoke-virtual {p1}, Ljava/util/concurrent/atomic/AtomicLong;->incrementAndGet()J
-
-    move-result-wide p1
-
-    iput-wide p1, p0, Lgp7;->e:J
-
-    invoke-virtual {p0}, Lgp7;->e()Ljava/util/List;
-
-    move-result-object p1
-
-    invoke-static {p1}, Lbzd;->a(Ljava/lang/Object;)Lazd;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lgp7;->f:Lazd;
-
-    new-instance p2, Lu5c;
-
-    invoke-direct {p2, p1}, Lu5c;-><init>(Lgh9;)V
-
-    iput-object p2, p0, Lgp7;->g:Lu5c;
+    sput-object v0, Lgp7;->b:Lhp7;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final c()Ltyd;
+.method public final a()Lcb4;
     .locals 0
 
-    iget-object p0, p0, Lgp7;->g:Lu5c;
+    sget-object p0, Lgp7;->b:Lhp7;
 
     return-object p0
 .end method
 
-.method public final d(Lo54;)V
-    .locals 4
-
-    iget-wide v0, p1, Lo54;->a:J
-
-    iget-wide v2, p0, Lgp7;->e:J
-
-    invoke-static {v0, v1, v2, v3}, Lji4;->a(JJ)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_0
-
-    iget-object p1, p0, Lgp7;->b:La76;
-
-    invoke-interface {p1}, Lv56;->invoke()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Ljava/lang/Boolean;
-
-    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
-
-    move-result p1
-
-    xor-int/lit8 p1, p1, 0x1
-
-    invoke-static {p1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
-
-    move-result-object p1
-
-    iget-object v0, p0, Lgp7;->c:Lx56;
-
-    invoke-interface {v0, p1}, Lx56;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
-
-    invoke-virtual {p0}, Lgp7;->e()Ljava/util/List;
-
-    move-result-object p1
-
-    const/4 v0, 0x0
-
-    iget-object p0, p0, Lgp7;->f:Lazd;
-
-    invoke-virtual {p0, v0, p1}, Lazd;->m(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    :cond_0
-    return-void
-.end method
-
-.method public final e()Ljava/util/List;
+.method public final b(Ljava/lang/String;Lxa4;Landroid/os/Bundle;)Lfb4;
     .locals 8
 
-    new-instance v0, Lo54;
+    sget-object p0, Lhp7;->b:Lhp7;
 
-    new-instance v6, Ln54;
+    iget-object p0, p0, Lcb4;->a:Ljava/util/LinkedHashSet;
 
-    iget-object v1, p0, Lgp7;->b:La76;
+    invoke-interface {p0, p2}, Ljava/util/Collection;->contains(Ljava/lang/Object;)Z
 
-    invoke-interface {v1}, Lv56;->invoke()Ljava/lang/Object;
+    move-result p0
 
-    move-result-object v1
+    if-nez p0, :cond_0
 
-    check-cast v1, Ljava/lang/Boolean;
+    const/4 p0, 0x0
 
-    invoke-virtual {v1}, Ljava/lang/Boolean;->booleanValue()Z
+    return-object p0
 
-    move-result v1
+    :cond_0
+    new-instance v0, Lfb4;
 
-    invoke-direct {v6, v1}, Ln54;-><init>(Z)V
+    sget-object v5, Ldb4;->c:Ldb4;
+
+    new-instance v6, Lhn1;
+
+    const/16 p0, 0x8
+
+    invoke-direct {v6, p3, p0}, Lhn1;-><init>(Landroid/os/Bundle;I)V
 
     const/16 v7, 0x8
 
-    iget-wide v1, p0, Lgp7;->e:J
+    const/4 v4, 0x0
 
-    iget-object v3, p0, Lgp7;->a:Lmoe;
+    move-object v1, p1
 
-    iget v4, p0, Lgp7;->d:I
+    move-object v2, p2
 
-    const/4 v5, 0x0
+    move-object v3, p3
 
-    invoke-direct/range {v0 .. v7}, Lo54;-><init>(JLmoe;ILmoe;Lus;I)V
+    invoke-direct/range {v0 .. v7}, Lfb4;-><init>(Ljava/lang/String;Lxa4;Landroid/os/Bundle;ILdb4;Leb4;I)V
 
-    invoke-static {v0}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
-
-    move-result-object p0
-
-    return-object p0
+    return-object v0
 .end method

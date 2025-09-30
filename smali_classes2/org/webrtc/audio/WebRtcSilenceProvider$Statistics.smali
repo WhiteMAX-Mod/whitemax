@@ -145,19 +145,19 @@
 
     const-string v0, "ns, log delta: "
 
-    invoke-static {v1, v2, p4, v0}, Lzt1;->k(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {v1, v2, p4, v0}, Lmw1;->l(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object p4
 
     const-string v0, "ns, reads: "
 
-    invoke-static {p4, p5, p6, v0, p3}, Lv04;->q(Ljava/lang/StringBuilder;JLjava/lang/String;I)V
+    invoke-static {p4, p5, p6, v0, p3}, Lsq3;->p(Ljava/lang/StringBuilder;JLjava/lang/String;I)V
 
     const-string p3, ", read time: "
 
     const-string p5, "ms, suspend time: "
 
-    invoke-static {p1, p2, p3, p5, p4}, Lzt1;->q(JLjava/lang/String;Ljava/lang/String;Ljava/lang/StringBuilder;)V
+    invoke-static {p1, p2, p3, p5, p4}, Lmw1;->r(JLjava/lang/String;Ljava/lang/String;Ljava/lang/StringBuilder;)V
 
     invoke-virtual {p4, v3, v4}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 

@@ -1,48 +1,14 @@
-.class public final Liv7;
-.super Lbu3;
-
-
-# instance fields
-.field public X:I
-
-.field public final synthetic Y:Lff7;
-
-.field public synthetic o:Ljava/lang/Object;
-
-
-# direct methods
-.method public constructor <init>(Lff7;Lkotlin/coroutines/Continuation;)V
-    .locals 0
-
-    iput-object p1, p0, Liv7;->Y:Lff7;
-
-    invoke-direct {p0, p2}, Lbu3;-><init>(Lkotlin/coroutines/Continuation;)V
-
-    return-void
-.end method
+.class public interface abstract Liv7;
+.super Ljava/lang/Object;
+.source "SourceFile"
 
 
 # virtual methods
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+.method public abstract D(Llv7;JJ)V
+.end method
 
-    iput-object p1, p0, Liv7;->o:Ljava/lang/Object;
+.method public abstract F(Llv7;JJLjava/io/IOException;I)Lf11;
+.end method
 
-    iget p1, p0, Liv7;->X:I
-
-    const/high16 v0, -0x80000000
-
-    or-int/2addr p1, v0
-
-    iput p1, p0, Liv7;->X:I
-
-    iget-object p1, p0, Liv7;->Y:Lff7;
-
-    const/4 v0, 0x0
-
-    invoke-virtual {p1, v0, p0}, Lff7;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    return-object p0
+.method public abstract t(Llv7;JJZ)V
 .end method

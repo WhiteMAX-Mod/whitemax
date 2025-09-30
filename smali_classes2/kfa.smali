@@ -1,45 +1,70 @@
-.class public abstract synthetic Lkfa;
+.class public final synthetic Lkfa;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lbc6;
 
-# static fields
-.field public static final synthetic $EnumSwitchMapping$0:[I
+
+# instance fields
+.field public final synthetic X:Lzfb;
+
+.field public final synthetic a:Ls72;
+
+.field public final synthetic b:I
+
+.field public final synthetic c:Lone/me/messages/list/loader/MessageModel;
+
+.field public final synthetic o:Ljava/util/List;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
+.method public synthetic constructor <init>(Ls72;ILone/me/messages/list/loader/MessageModel;Ljava/util/List;Lzfb;)V
+    .locals 0
 
-    const/4 v0, 0x5
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-static {v0}, Lzt1;->v(I)[I
+    iput-object p1, p0, Lkfa;->a:Ls72;
 
-    move-result-object v0
+    iput p2, p0, Lkfa;->b:I
 
-    array-length v0, v0
+    iput-object p3, p0, Lkfa;->c:Lone/me/messages/list/loader/MessageModel;
 
-    new-array v0, v0, [I
+    iput-object p4, p0, Lkfa;->o:Ljava/util/List;
 
-    const/4 v1, 0x1
-
-    const/4 v2, 0x2
-
-    :try_start_0
-    aput v1, v0, v2
-    :try_end_0
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
-
-    :catch_0
-    const/4 v1, 0x4
-
-    :try_start_1
-    aput v2, v0, v1
-    :try_end_1
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
-
-    :catch_1
-    sput-object v0, Lkfa;->$EnumSwitchMapping$0:[I
+    iput-object p5, p0, Lkfa;->X:Lzfb;
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
+
+    check-cast p1, Lv58;
+
+    iget-object v0, p0, Lkfa;->a:Ls72;
+
+    iput-object v0, p1, Lv58;->a:Ls72;
+
+    iget v0, p0, Lkfa;->b:I
+
+    iput v0, p1, Lv58;->b:I
+
+    iget-object v0, p0, Lkfa;->c:Lone/me/messages/list/loader/MessageModel;
+
+    iput-object v0, p1, Lv58;->d:Lone/me/messages/list/loader/MessageModel;
+
+    iget-object v0, p0, Lkfa;->o:Ljava/util/List;
+
+    iput-object v0, p1, Lv58;->f:Ljava/util/List;
+
+    iget-object p0, p0, Lkfa;->X:Lzfb;
+
+    iput-object p0, p1, Lv58;->e:Lzfb;
+
+    sget-object p0, Lylf;->a:Lylf;
+
+    return-object p0
 .end method

@@ -1,561 +1,301 @@
-.class public final Ls94;
+.class public abstract Ls94;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:Llo7;
-
-.field public final b:Lr3d;
-
-.field public final c:[I
-
-.field public final d:I
-
-.field public final e:Li34;
-
-.field public final f:J
-
-.field public final g:I
-
-.field public final h:Lq1b;
-
-.field public final i:[Lo94;
-
-.field public j:La85;
-
-.field public k:Ly14;
-
-.field public l:I
-
-.field public m:Landroidx/media3/exoplayer/source/BehindLiveWindowException;
-
-.field public n:Z
+# static fields
+.field public static final a:Ljava/util/LinkedHashMap;
 
 
 # direct methods
-.method public constructor <init>(Lmb4;Llo7;Ly14;Lr3d;I[ILa85;ILi34;JIZLjava/util/ArrayList;Lq1b;)V
-    .locals 21
+.method static constructor <clinit>()V
+    .locals 15
 
-    move-object/from16 v0, p0
+    new-instance v0, Lz96;
 
-    move-object/from16 v1, p1
+    const/4 v1, 0x4
 
-    move-object/from16 v2, p3
+    invoke-direct {v0, v1}, Lz96;-><init>(I)V
 
-    move-object/from16 v3, p4
+    const-string v1, "Start"
 
-    move/from16 v4, p5
+    invoke-static {v1}, Ll37;->m(Ljava/lang/Object;)Llqc;
 
-    move-object/from16 v5, p7
+    move-result-object v1
 
-    move/from16 v6, p8
+    const-string v2, "TransformerInternal"
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    invoke-virtual {v0, v2, v1}, Lz96;->V(Ljava/lang/Object;Ljava/lang/Object;)Lz96;
 
-    move-object/from16 v7, p2
+    const-string v1, "InputFormat"
 
-    iput-object v7, v0, Ls94;->a:Llo7;
+    const-string v2, "OutputFormat"
 
-    iput-object v2, v0, Ls94;->k:Ly14;
+    invoke-static {v1, v2}, Ll37;->n(Ljava/lang/Object;Ljava/lang/Object;)Llqc;
 
-    iput-object v3, v0, Ls94;->b:Lr3d;
+    move-result-object v3
 
-    move-object/from16 v7, p6
+    const-string v4, "AssetLoader"
 
-    iput-object v7, v0, Ls94;->c:[I
+    invoke-virtual {v0, v4, v3}, Lz96;->V(Ljava/lang/Object;Ljava/lang/Object;)Lz96;
 
-    iput-object v5, v0, Ls94;->j:La85;
+    const-string v5, "InputFormat"
 
-    iput v6, v0, Ls94;->d:I
+    const-string v6, "OutputFormat"
 
-    move-object/from16 v7, p9
+    const-string v7, "AcceptedInput"
 
-    iput-object v7, v0, Ls94;->e:Li34;
+    const-string v8, "ProducedOutput"
 
-    iput v4, v0, Ls94;->l:I
+    const-string v9, "InputEnded"
 
-    move-wide/from16 v7, p10
+    const-string v10, "OutputEnded"
 
-    iput-wide v7, v0, Ls94;->f:J
+    filled-new-array/range {v5 .. v10}, [Ljava/lang/Object;
 
-    move/from16 v7, p12
+    move-result-object v3
 
-    iput v7, v0, Ls94;->g:I
+    const/4 v4, 0x6
 
-    move-object/from16 v12, p15
+    invoke-static {v4, v3}, Ln4e;->l(I[Ljava/lang/Object;)V
 
-    iput-object v12, v0, Ls94;->h:Lq1b;
+    invoke-static {v4, v3}, Ll37;->h(I[Ljava/lang/Object;)Llqc;
 
-    invoke-virtual {v2, v4}, Ly14;->d(I)J
+    move-result-object v3
 
-    move-result-wide v13
+    const-string v5, "AudioDecoder"
 
-    invoke-virtual {v0}, Ls94;->a()Ljava/util/ArrayList;
+    invoke-virtual {v0, v5, v3}, Lz96;->V(Ljava/lang/Object;Ljava/lang/Object;)Lz96;
+
+    const-string v3, "RegisterNewInputStream"
+
+    const-string v5, "OutputEnded"
+
+    invoke-static {v3, v5}, Ll37;->n(Ljava/lang/Object;Ljava/lang/Object;)Llqc;
+
+    move-result-object v6
+
+    const-string v7, "AudioGraph"
+
+    invoke-virtual {v0, v7, v6}, Lz96;->V(Ljava/lang/Object;Ljava/lang/Object;)Lz96;
+
+    const-string v6, "ProducedOutput"
+
+    invoke-static {v3, v2, v6}, Ll37;->o(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Llqc;
 
     move-result-object v2
 
-    invoke-interface {v5}, La85;->length()I
+    const-string v3, "AudioMixer"
 
-    move-result v4
+    invoke-virtual {v0, v3, v2}, Lz96;->V(Ljava/lang/Object;Ljava/lang/Object;)Lz96;
 
-    new-array v4, v4, [Lo94;
+    const-string v10, "InputEnded"
 
-    iput-object v4, v0, Ls94;->i:[Lo94;
+    const-string v11, "OutputEnded"
 
-    const/4 v4, 0x0
+    const-string v6, "InputFormat"
 
-    move v15, v4
+    const-string v7, "OutputFormat"
 
-    :goto_0
-    iget-object v7, v0, Ls94;->i:[Lo94;
+    const-string v8, "AcceptedInput"
 
-    array-length v7, v7
+    const-string v9, "ProducedOutput"
 
-    if-ge v15, v7, :cond_c
+    filled-new-array/range {v6 .. v11}, [Ljava/lang/Object;
 
-    invoke-interface {v5, v15}, La85;->f(I)I
+    move-result-object v2
 
-    move-result v7
+    invoke-static {v4, v2}, Ln4e;->l(I[Ljava/lang/Object;)V
 
-    invoke-virtual {v2, v7}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+    invoke-static {v4, v2}, Ll37;->h(I[Ljava/lang/Object;)Llqc;
 
-    move-result-object v7
+    move-result-object v2
 
-    check-cast v7, Lgfc;
+    const-string v3, "AudioEncoder"
 
-    iget-object v8, v7, Lgfc;->b:Lxw6;
+    invoke-virtual {v0, v3, v2}, Lz96;->V(Ljava/lang/Object;Ljava/lang/Object;)Lz96;
 
-    invoke-virtual {v3, v8}, Lr3d;->x(Ljava/util/List;)Lgk0;
+    const-string v10, "InputEnded"
 
-    move-result-object v8
+    const-string v11, "OutputEnded"
 
-    iget-object v9, v0, Ls94;->i:[Lo94;
+    const-string v6, "InputFormat"
 
-    new-instance v16, Lo94;
+    const-string v7, "OutputFormat"
 
-    if-eqz v8, :cond_0
+    const-string v8, "AcceptedInput"
 
-    :goto_1
-    move-object/from16 v17, v8
+    const-string v9, "ProducedOutput"
 
-    goto :goto_2
+    filled-new-array/range {v6 .. v11}, [Ljava/lang/Object;
 
-    :cond_0
-    iget-object v8, v7, Lgfc;->b:Lxw6;
+    move-result-object v2
 
-    invoke-interface {v8, v4}, Ljava/util/List;->get(I)Ljava/lang/Object;
+    invoke-static {v4, v2}, Ln4e;->l(I[Ljava/lang/Object;)V
 
-    move-result-object v8
+    invoke-static {v4, v2}, Ll37;->h(I[Ljava/lang/Object;)Llqc;
 
-    check-cast v8, Lgk0;
+    move-result-object v2
 
-    goto :goto_1
+    const-string v3, "VideoDecoder"
 
-    :goto_2
-    iget-object v8, v7, Lgfc;->a:Lfz5;
+    invoke-virtual {v0, v3, v2}, Lz96;->V(Ljava/lang/Object;Ljava/lang/Object;)Lz96;
 
-    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    const-string v6, "RegisterNewInputStream"
 
-    iget-object v10, v8, Lfz5;->l:Ljava/lang/String;
+    const-string v7, "SurfaceTextureInput"
 
-    invoke-static {v10}, La99;->j(Ljava/lang/String;)Z
+    const-string v8, "QueueFrame"
 
-    move-result v11
+    const-string v9, "QueueBitmap"
 
-    if-eqz v11, :cond_2
+    const-string v10, "QueueTexture"
 
-    iget-boolean v11, v1, Lmb4;->c:Z
+    const-string v11, "RenderedToOutputSurface"
 
-    if-nez v11, :cond_1
+    const-string v12, "OutputTextureRendered"
 
-    const/4 v8, 0x0
+    const-string v13, "ReceiveEndOfAllInput"
 
-    move-object/from16 v18, v7
+    const-string v14, "SignalEnded"
 
-    move-object/from16 v19, v9
+    filled-new-array/range {v6 .. v14}, [Ljava/lang/Object;
 
-    :goto_3
-    move-object v12, v8
+    move-result-object v2
 
-    move v4, v15
+    const/16 v3, 0x9
 
-    goto/16 :goto_9
+    invoke-static {v3, v2}, Ln4e;->l(I[Ljava/lang/Object;)V
 
-    :cond_1
-    new-instance v11, Lu9e;
+    invoke-static {v3, v2}, Ll37;->h(I[Ljava/lang/Object;)Llqc;
 
-    iget-object v4, v1, Lmb4;->b:Lcwc;
+    move-result-object v2
 
-    invoke-virtual {v4, v8}, Lcwc;->p(Lfz5;)Laae;
+    const-string v3, "VideoFrameProcessor"
 
-    move-result-object v4
+    invoke-virtual {v0, v3, v2}, Lz96;->V(Ljava/lang/Object;Ljava/lang/Object;)Lz96;
 
-    invoke-direct {v11, v4, v8}, Lu9e;-><init>(Laae;Lfz5;)V
+    const-string v2, "SurfaceTextureTransformFix"
 
-    :goto_4
-    move-object/from16 v18, v7
+    const-string v3, "SignalEOS"
 
-    move-object v7, v8
+    invoke-static {v3, v2}, Ll37;->n(Ljava/lang/Object;Ljava/lang/Object;)Llqc;
 
-    move-object/from16 v19, v9
+    move-result-object v2
 
-    move-object/from16 v20, v10
+    const-string v6, "ExternalTextureManager"
 
-    goto/16 :goto_8
+    invoke-virtual {v0, v6, v2}, Lz96;->V(Ljava/lang/Object;Ljava/lang/Object;)Lz96;
 
-    :cond_2
-    const/4 v4, 0x1
+    const-string v2, "BitmapTextureManager"
 
-    if-nez v10, :cond_3
+    invoke-static {v3}, Ll37;->m(Ljava/lang/Object;)Llqc;
 
-    goto :goto_5
+    move-result-object v6
 
-    :cond_3
-    const-string v11, "video/webm"
+    invoke-virtual {v0, v2, v6}, Lz96;->V(Ljava/lang/Object;Ljava/lang/Object;)Lz96;
 
-    invoke-virtual {v10, v11}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+    const-string v2, "TexIdTextureManager"
 
-    move-result v11
+    invoke-static {v3}, Ll37;->m(Ljava/lang/Object;)Llqc;
 
-    if-nez v11, :cond_4
+    move-result-object v3
 
-    const-string v11, "audio/webm"
+    invoke-virtual {v0, v2, v3}, Lz96;->V(Ljava/lang/Object;Ljava/lang/Object;)Lz96;
 
-    invoke-virtual {v10, v11}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+    const-string v2, "OutputTextureRendered"
 
-    move-result v11
+    invoke-static {v2}, Ll37;->m(Ljava/lang/Object;)Llqc;
 
-    if-nez v11, :cond_4
+    move-result-object v2
 
-    const-string v11, "application/webm"
+    const-string v3, "Compositor"
 
-    invoke-virtual {v10, v11}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+    invoke-virtual {v0, v3, v2}, Lz96;->V(Ljava/lang/Object;Ljava/lang/Object;)Lz96;
 
-    move-result v11
+    const-string v10, "InputEnded"
 
-    if-nez v11, :cond_4
+    const-string v11, "OutputEnded"
 
-    const-string v11, "video/x-matroska"
+    const-string v6, "InputFormat"
 
-    invoke-virtual {v10, v11}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+    const-string v7, "OutputFormat"
 
-    move-result v11
+    const-string v8, "AcceptedInput"
 
-    if-nez v11, :cond_4
+    const-string v9, "ProducedOutput"
 
-    const-string v11, "audio/x-matroska"
+    filled-new-array/range {v6 .. v11}, [Ljava/lang/Object;
 
-    invoke-virtual {v10, v11}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+    move-result-object v2
 
-    move-result v11
+    invoke-static {v4, v2}, Ln4e;->l(I[Ljava/lang/Object;)V
 
-    if-nez v11, :cond_4
+    invoke-static {v4, v2}, Ll37;->h(I[Ljava/lang/Object;)Llqc;
 
-    const-string v11, "application/x-matroska"
+    move-result-object v2
 
-    invoke-virtual {v10, v11}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+    const-string v3, "VideoEncoder"
 
-    move-result v11
+    invoke-virtual {v0, v3, v2}, Lz96;->V(Ljava/lang/Object;Ljava/lang/Object;)Lz96;
 
-    if-eqz v11, :cond_5
+    const-string v2, "AcceptedInput"
 
-    :cond_4
-    move-object/from16 v18, v7
+    const-string v3, "InputEnded"
 
-    move-object v7, v8
+    const-string v4, "CanWriteSample"
 
-    move-object/from16 v19, v9
+    invoke-static {v1, v4, v2, v3, v5}, Ll37;->p(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Llqc;
 
-    move-object/from16 v20, v10
+    move-result-object v1
 
-    goto :goto_7
+    const-string v2, "Muxer"
 
-    :cond_5
-    :goto_5
-    const-string v11, "image/jpeg"
+    invoke-virtual {v0, v2, v1}, Lz96;->V(Ljava/lang/Object;Ljava/lang/Object;)Lz96;
 
-    invoke-static {v10, v11}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-virtual {v0}, Lz96;->s()Lp37;
 
-    move-result v11
+    new-instance v0, Ljava/util/LinkedHashMap;
 
-    if-eqz v11, :cond_6
+    invoke-direct {v0}, Ljava/util/LinkedHashMap;-><init>()V
 
-    new-instance v11, Lvc4;
+    sput-object v0, Ls94;->a:Ljava/util/LinkedHashMap;
 
-    invoke-direct {v11, v4}, Lvc4;-><init>(I)V
+    invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
-    goto :goto_4
-
-    :cond_6
-    const-string v4, "image/png"
-
-    invoke-static {v10, v4}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v4
-
-    if-eqz v4, :cond_7
-
-    new-instance v11, Lpp0;
-
-    const/4 v4, 0x1
-
-    invoke-direct {v11, v4}, Lpp0;-><init>(I)V
-
-    goto :goto_4
-
-    :cond_7
-    if-eqz p13, :cond_8
-
-    const/4 v4, 0x4
-
-    goto :goto_6
-
-    :cond_8
-    const/4 v4, 0x0
-
-    :goto_6
-    iget-boolean v11, v1, Lmb4;->c:Z
-
-    if-nez v11, :cond_9
-
-    or-int/lit8 v4, v4, 0x20
-
-    :cond_9
-    move-object v11, v7
-
-    new-instance v7, Ls26;
-
-    move-object/from16 v18, v8
-
-    iget-object v8, v1, Lmb4;->b:Lcwc;
-
-    move-object/from16 v19, v10
-
-    const/4 v10, 0x0
-
-    move-object/from16 v20, v19
-
-    move-object/from16 v19, v9
-
-    move v9, v4
-
-    move-object/from16 v4, v18
-
-    move-object/from16 v18, v11
-
-    move-object/from16 v11, p14
-
-    invoke-direct/range {v7 .. v12}, Ls26;-><init>(Ly9e;ILxse;Ljava/util/List;Lq1b;)V
-
-    move-object v11, v7
-
-    move-object v7, v4
-
-    goto :goto_8
-
-    :goto_7
-    iget-boolean v8, v1, Lmb4;->c:Z
-
-    if-nez v8, :cond_a
-
-    const/4 v4, 0x3
-
-    :cond_a
-    new-instance v11, Ly18;
-
-    iget-object v8, v1, Lmb4;->b:Lcwc;
-
-    invoke-direct {v11, v8, v4}, Ly18;-><init>(Ly9e;I)V
-
-    :goto_8
-    iget-boolean v4, v1, Lmb4;->c:Z
-
-    if-eqz v4, :cond_b
-
-    invoke-static/range {v20 .. v20}, La99;->j(Ljava/lang/String;)Z
-
-    move-result v4
-
-    if-nez v4, :cond_b
-
-    invoke-interface {v11}, Lw95;->m()Lw95;
-
-    move-result-object v4
-
-    instance-of v4, v4, Ls26;
-
-    if-nez v4, :cond_b
-
-    invoke-interface {v11}, Lw95;->m()Lw95;
-
-    move-result-object v4
-
-    instance-of v4, v4, Ly18;
-
-    if-nez v4, :cond_b
-
-    new-instance v4, Lbae;
-
-    iget-object v8, v1, Lmb4;->b:Lcwc;
-
-    invoke-direct {v4, v11, v8}, Lbae;-><init>(Lw95;Lcwc;)V
-
-    move-object v11, v4
-
-    :cond_b
-    new-instance v8, Lsu0;
-
-    invoke-direct {v8, v11, v6, v7}, Lsu0;-><init>(Lw95;ILfz5;)V
-
-    goto/16 :goto_3
-
-    :goto_9
-    invoke-virtual/range {v18 .. v18}, Lgfc;->c()Lq24;
-
-    move-result-object v15
-
-    move-object/from16 v7, v16
-
-    const/16 v16, 0x1
-
-    move-wide v8, v13
-
-    const-wide/16 v13, 0x0
-
-    move-object/from16 v11, v17
-
-    move-object/from16 v10, v18
-
-    invoke-direct/range {v7 .. v16}, Lo94;-><init>(JLjava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;JLjava/lang/Object;I)V
-
-    aput-object v7, v19, v4
-
-    add-int/lit8 v15, v4, 0x1
-
-    move-object/from16 v12, p15
-
-    move-wide v13, v8
-
-    const/4 v4, 0x0
-
-    goto/16 :goto_0
-
-    :cond_c
     return-void
 .end method
 
+.method public static declared-synchronized a()V
+    .locals 2
 
-# virtual methods
-.method public final a()Ljava/util/ArrayList;
-    .locals 5
+    const-class v0, Ls94;
 
-    iget-object v0, p0, Ls94;->k:Ly14;
+    monitor-enter v0
 
-    iget v1, p0, Ls94;->l:I
+    :try_start_0
+    const-class v1, Ls94;
 
-    invoke-virtual {v0, v1}, Ly14;->b(I)Lara;
+    monitor-enter v1
 
-    move-result-object v0
+    monitor-exit v1
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    iget-object v0, v0, Lara;->c:Ljava/util/List;
+    monitor-exit v0
 
-    new-instance v1, Ljava/util/ArrayList;
-
-    invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
-
-    iget-object p0, p0, Ls94;->c:[I
-
-    array-length v2, p0
-
-    const/4 v3, 0x0
+    return-void
 
     :goto_0
-    if-ge v3, v2, :cond_0
+    :try_start_1
+    monitor-exit v0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    aget v4, p0, v3
+    throw v1
 
-    invoke-interface {v0, v4}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    move-result-object v4
-
-    check-cast v4, Lp8;
-
-    iget-object v4, v4, Lp8;->c:Ljava/util/List;
-
-    invoke-virtual {v1, v4}, Ljava/util/ArrayList;->addAll(Ljava/util/Collection;)Z
-
-    add-int/lit8 v3, v3, 0x1
+    :catchall_0
+    move-exception v1
 
     goto :goto_0
-
-    :cond_0
-    return-object v1
-.end method
-
-.method public final b(I)Lo94;
-    .locals 13
-
-    iget-object v0, p0, Ls94;->i:[Lo94;
-
-    aget-object v1, v0, p1
-
-    iget-object v2, v1, Lo94;->e:Ljava/lang/Object;
-
-    check-cast v2, Lgfc;
-
-    iget-object v2, v2, Lgfc;->b:Lxw6;
-
-    iget-object p0, p0, Ls94;->b:Lr3d;
-
-    invoke-virtual {p0, v2}, Lr3d;->x(Ljava/util/List;)Lgk0;
-
-    move-result-object v7
-
-    if-eqz v7, :cond_0
-
-    iget-object p0, v1, Lo94;->f:Ljava/lang/Object;
-
-    check-cast p0, Lgk0;
-
-    invoke-virtual {v7, p0}, Lgk0;->equals(Ljava/lang/Object;)Z
-
-    move-result p0
-
-    if-nez p0, :cond_0
-
-    new-instance v3, Lo94;
-
-    iget-wide v4, v1, Lo94;->b:J
-
-    iget-object p0, v1, Lo94;->e:Ljava/lang/Object;
-
-    move-object v6, p0
-
-    check-cast v6, Lgfc;
-
-    iget-object p0, v1, Lo94;->d:Ljava/lang/Object;
-
-    move-object v8, p0
-
-    check-cast v8, Ld03;
-
-    iget-wide v9, v1, Lo94;->c:J
-
-    iget-object p0, v1, Lo94;->g:Ljava/lang/Object;
-
-    move-object v11, p0
-
-    check-cast v11, Lq24;
-
-    const/4 v12, 0x1
-
-    invoke-direct/range {v3 .. v12}, Lo94;-><init>(JLjava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;JLjava/lang/Object;I)V
-
-    aput-object v3, v0, p1
-
-    return-object v3
-
-    :cond_0
-    return-object v1
 .end method

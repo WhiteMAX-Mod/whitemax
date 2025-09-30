@@ -1,112 +1,166 @@
-.class public final synthetic Lo7e;
+.class public final Lo7e;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Li8d;
+.implements Landroid/text/TextWatcher;
+.implements Landroid/text/SpanWatcher;
 
 
 # instance fields
-.field public final synthetic a:Lp7e;
+.field public final a:Ljava/lang/Object;
 
-.field public final synthetic b:Ljava/lang/String;
-
-.field public final synthetic c:Ljava/lang/String;
-
-.field public final synthetic d:Lp9f;
-
-.field public final synthetic e:Lnb0;
-
-.field public final synthetic f:Lnb0;
+.field public final b:Ljava/util/concurrent/atomic/AtomicInteger;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lp7e;Ljava/lang/String;Ljava/lang/String;Lp9f;Lnb0;Lnb0;)V
-    .locals 0
+.method public constructor <init>(Ljava/lang/Object;)V
+    .locals 2
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lo7e;->a:Lp7e;
+    new-instance v0, Ljava/util/concurrent/atomic/AtomicInteger;
 
-    iput-object p2, p0, Lo7e;->b:Ljava/lang/String;
+    const/4 v1, 0x0
 
-    iput-object p3, p0, Lo7e;->c:Ljava/lang/String;
+    invoke-direct {v0, v1}, Ljava/util/concurrent/atomic/AtomicInteger;-><init>(I)V
 
-    iput-object p4, p0, Lo7e;->d:Lp9f;
+    iput-object v0, p0, Lo7e;->b:Ljava/util/concurrent/atomic/AtomicInteger;
 
-    iput-object p5, p0, Lo7e;->e:Lnb0;
-
-    iput-object p6, p0, Lo7e;->f:Lnb0;
+    iput-object p1, p0, Lo7e;->a:Ljava/lang/Object;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Lk8d;)V
-    .locals 6
+.method public final afterTextChanged(Landroid/text/Editable;)V
+    .locals 0
 
-    iget-object v0, p0, Lo7e;->a:Lp7e;
+    iget-object p0, p0, Lo7e;->a:Ljava/lang/Object;
 
-    invoke-virtual {v0}, Lm9f;->c()Lax1;
+    check-cast p0, Landroid/text/TextWatcher;
 
-    move-result-object p1
+    invoke-interface {p0, p1}, Landroid/text/TextWatcher;->afterTextChanged(Landroid/text/Editable;)V
 
-    if-nez p1, :cond_0
+    return-void
+.end method
 
-    goto :goto_1
+.method public final beforeTextChanged(Ljava/lang/CharSequence;III)V
+    .locals 0
 
-    :cond_0
-    invoke-virtual {v0}, Lp7e;->F()V
+    iget-object p0, p0, Lo7e;->a:Ljava/lang/Object;
 
-    iget-object v1, p0, Lo7e;->b:Ljava/lang/String;
+    check-cast p0, Landroid/text/TextWatcher;
 
-    iget-object v2, p0, Lo7e;->c:Ljava/lang/String;
+    invoke-interface {p0, p1, p2, p3, p4}, Landroid/text/TextWatcher;->beforeTextChanged(Ljava/lang/CharSequence;III)V
 
-    iget-object v3, p0, Lo7e;->d:Lp9f;
+    return-void
+.end method
 
-    iget-object v4, p0, Lo7e;->e:Lnb0;
+.method public final onSpanAdded(Landroid/text/Spannable;Ljava/lang/Object;II)V
+    .locals 1
 
-    iget-object v5, p0, Lo7e;->f:Lnb0;
+    iget-object v0, p0, Lo7e;->b:Ljava/util/concurrent/atomic/AtomicInteger;
 
-    invoke-virtual/range {v0 .. v5}, Lp7e;->G(Ljava/lang/String;Ljava/lang/String;Lp9f;Lnb0;Lnb0;)Ljava/util/List;
-
-    move-result-object p0
-
-    invoke-virtual {v0, p0}, Lm9f;->E(Ljava/util/List;)V
-
-    invoke-virtual {v0}, Lm9f;->q()V
-
-    iget-object p0, v0, Lp7e;->q:Ltqf;
-
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    invoke-static {}, Lp6g;->c()V
-
-    iget-object p1, p0, Ltqf;->a:Ljava/util/HashSet;
-
-    invoke-virtual {p1}, Ljava/util/HashSet;->iterator()Ljava/util/Iterator;
-
-    move-result-object p1
-
-    :goto_0
-    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
+    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicInteger;->get()I
 
     move-result v0
 
-    if-eqz v0, :cond_1
+    if-lez v0, :cond_0
 
-    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    instance-of v0, p2, Lykf;
 
-    move-result-object v0
+    if-eqz v0, :cond_0
 
-    check-cast v0, Lm9f;
+    return-void
 
-    invoke-virtual {p0, v0}, Ltqf;->b(Lm9f;)V
+    :cond_0
+    iget-object p0, p0, Lo7e;->a:Ljava/lang/Object;
 
-    goto :goto_0
+    check-cast p0, Landroid/text/SpanWatcher;
 
-    :cond_1
-    :goto_1
+    invoke-interface {p0, p1, p2, p3, p4}, Landroid/text/SpanWatcher;->onSpanAdded(Landroid/text/Spannable;Ljava/lang/Object;II)V
+
+    return-void
+.end method
+
+.method public final onSpanChanged(Landroid/text/Spannable;Ljava/lang/Object;IIII)V
+    .locals 7
+
+    iget-object v0, p0, Lo7e;->b:Ljava/util/concurrent/atomic/AtomicInteger;
+
+    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicInteger;->get()I
+
+    move-result v0
+
+    if-lez v0, :cond_0
+
+    instance-of v0, p2, Lykf;
+
+    if-eqz v0, :cond_0
+
+    return-void
+
+    :cond_0
+    iget-object p0, p0, Lo7e;->a:Ljava/lang/Object;
+
+    move-object v0, p0
+
+    check-cast v0, Landroid/text/SpanWatcher;
+
+    move-object v1, p1
+
+    move-object v2, p2
+
+    move v3, p3
+
+    move v4, p4
+
+    move v5, p5
+
+    move v6, p6
+
+    invoke-interface/range {v0 .. v6}, Landroid/text/SpanWatcher;->onSpanChanged(Landroid/text/Spannable;Ljava/lang/Object;IIII)V
+
+    return-void
+.end method
+
+.method public final onSpanRemoved(Landroid/text/Spannable;Ljava/lang/Object;II)V
+    .locals 1
+
+    iget-object v0, p0, Lo7e;->b:Ljava/util/concurrent/atomic/AtomicInteger;
+
+    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicInteger;->get()I
+
+    move-result v0
+
+    if-lez v0, :cond_0
+
+    instance-of v0, p2, Lykf;
+
+    if-eqz v0, :cond_0
+
+    return-void
+
+    :cond_0
+    iget-object p0, p0, Lo7e;->a:Ljava/lang/Object;
+
+    check-cast p0, Landroid/text/SpanWatcher;
+
+    invoke-interface {p0, p1, p2, p3, p4}, Landroid/text/SpanWatcher;->onSpanRemoved(Landroid/text/Spannable;Ljava/lang/Object;II)V
+
+    return-void
+.end method
+
+.method public final onTextChanged(Ljava/lang/CharSequence;III)V
+    .locals 0
+
+    iget-object p0, p0, Lo7e;->a:Ljava/lang/Object;
+
+    check-cast p0, Landroid/text/TextWatcher;
+
+    invoke-interface {p0, p1, p2, p3, p4}, Landroid/text/TextWatcher;->onTextChanged(Ljava/lang/CharSequence;III)V
+
     return-void
 .end method

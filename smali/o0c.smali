@@ -1,62 +1,101 @@
-.class public abstract Lo0c;
+.class public final Lo0c;
 .super Ljava/lang/Object;
+.source "SourceFile"
+
+# interfaces
+.implements Lnqe;
+.implements Lml4;
 
 
-# static fields
-.field public static RecyclerView:[I = null
+# instance fields
+.field public final a:Lnqe;
 
-.field public static RecyclerView_android_clipToPadding:I = 0x1
+.field public final b:Ljava/util/concurrent/Executor;
 
-.field public static RecyclerView_android_descendantFocusability:I = 0x2
-
-.field public static RecyclerView_android_orientation:I = 0x0
-
-.field public static RecyclerView_fastScrollEnabled:I = 0x3
-
-.field public static RecyclerView_fastScrollHorizontalThumbDrawable:I = 0x4
-
-.field public static RecyclerView_fastScrollHorizontalTrackDrawable:I = 0x5
-
-.field public static RecyclerView_fastScrollVerticalThumbDrawable:I = 0x6
-
-.field public static RecyclerView_fastScrollVerticalTrackDrawable:I = 0x7
-
-.field public static RecyclerView_layoutManager:I = 0x8
-
-.field public static RecyclerView_reverseLayout:I = 0x9
-
-.field public static RecyclerView_spanCount:I = 0xa
-
-.field public static RecyclerView_stackFromEnd:I = 0xb
+.field public final c:Lh2a;
 
 
 # direct methods
-.method public static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(Lnqe;Ljava/util/concurrent/Executor;Lh2a;)V
+    .locals 0
 
-    const/16 v0, 0xc
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    new-array v0, v0, [I
+    iput-object p1, p0, Lo0c;->a:Lnqe;
 
-    fill-array-data v0, :array_0
+    iput-object p2, p0, Lo0c;->b:Ljava/util/concurrent/Executor;
 
-    sput-object v0, Lo0c;->RecyclerView:[I
+    iput-object p3, p0, Lo0c;->c:Lh2a;
 
     return-void
+.end method
 
-    :array_0
-    .array-data 4
-        0x10100c4
-        0x10100eb
-        0x10100f1
-        0x7f0403b0
-        0x7f0403b1
-        0x7f0403b2
-        0x7f0403b3
-        0x7f0403b4
-        0x7f040597
-        0x7f04071e
-        0x7f040791
-        0x7f0407d6
-    .end array-data
+
+# virtual methods
+.method public final close()V
+    .locals 0
+
+    iget-object p0, p0, Lo0c;->a:Lnqe;
+
+    invoke-interface {p0}, Ljava/io/Closeable;->close()V
+
+    return-void
+.end method
+
+.method public final getDelegate()Lnqe;
+    .locals 0
+
+    iget-object p0, p0, Lo0c;->a:Lnqe;
+
+    return-object p0
+.end method
+
+.method public final getReadableDatabase()Llqe;
+    .locals 3
+
+    new-instance v0, Ln0c;
+
+    iget-object v1, p0, Lo0c;->a:Lnqe;
+
+    invoke-interface {v1}, Lnqe;->getReadableDatabase()Llqe;
+
+    move-result-object v1
+
+    iget-object v2, p0, Lo0c;->b:Ljava/util/concurrent/Executor;
+
+    iget-object p0, p0, Lo0c;->c:Lh2a;
+
+    invoke-direct {v0, v1, v2, p0}, Ln0c;-><init>(Llqe;Ljava/util/concurrent/Executor;Lh2a;)V
+
+    return-object v0
+.end method
+
+.method public final getWritableDatabase()Llqe;
+    .locals 3
+
+    new-instance v0, Ln0c;
+
+    iget-object v1, p0, Lo0c;->a:Lnqe;
+
+    invoke-interface {v1}, Lnqe;->getWritableDatabase()Llqe;
+
+    move-result-object v1
+
+    iget-object v2, p0, Lo0c;->b:Ljava/util/concurrent/Executor;
+
+    iget-object p0, p0, Lo0c;->c:Lh2a;
+
+    invoke-direct {v0, v1, v2, p0}, Ln0c;-><init>(Llqe;Ljava/util/concurrent/Executor;Lh2a;)V
+
+    return-object v0
+.end method
+
+.method public final setWriteAheadLoggingEnabled(Z)V
+    .locals 0
+
+    iget-object p0, p0, Lo0c;->a:Lnqe;
+
+    invoke-interface {p0, p1}, Lnqe;->setWriteAheadLoggingEnabled(Z)V
+
+    return-void
 .end method

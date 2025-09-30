@@ -3,129 +3,95 @@
 .source "SourceFile"
 
 # interfaces
-.implements Ls1b;
+.implements Lupd;
 
 
 # instance fields
-.field public final a:Landroid/app/Application;
-
-.field public final b:Le45;
-
-.field public final c:Ld65;
-
-.field public final d:Lje7;
-
-.field public final e:La2b;
-
-.field public final f:Ljava/lang/String;
-
-.field public final g:Lzfc;
+.field public final a:Lpnd;
 
 
 # direct methods
-.method public constructor <init>(Landroid/app/Application;Le45;Ld65;Lje7;La2b;)V
+.method public constructor <init>(Lpnd;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lspd;->a:Landroid/app/Application;
-
-    iput-object p2, p0, Lspd;->b:Le45;
-
-    iput-object p3, p0, Lspd;->c:Ld65;
-
-    iput-object p4, p0, Lspd;->d:Lje7;
-
-    iput-object p5, p0, Lspd;->e:La2b;
-
-    const-class p1, Lspd;
-
-    invoke-virtual {p1}, Ljava/lang/Class;->getName()Ljava/lang/String;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lspd;->f:Ljava/lang/String;
-
-    new-instance p1, Lyrc;
-
-    const/4 p2, 0x6
-
-    invoke-direct {p1, p2, p0}, Lyrc;-><init>(ILjava/lang/Object;)V
-
-    new-instance p2, Lzfc;
-
-    invoke-direct {p2, p1}, Lzfc;-><init>(Lv56;)V
-
-    iput-object p2, p0, Lspd;->g:Lzfc;
+    iput-object p1, p0, Lspd;->a:Lpnd;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Ltkf;)V
-    .locals 1
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 3
 
-    iget-object p0, p0, Lspd;->f:Ljava/lang/String;
+    const/4 v0, 0x1
 
-    const-string v0, "Single player handler. Free player"
+    if-ne p0, p1, :cond_0
 
-    invoke-static {p0, v0}, Lg47;->p(Ljava/lang/String;Ljava/lang/String;)V
-
-    invoke-virtual {p1}, Ltkf;->M0()V
-
-    const/4 p0, 0x0
-
-    invoke-virtual {p1, p0}, Ltkf;->L0(Landroid/view/Surface;)V
-
-    return-void
-.end method
-
-.method public final get()Ltkf;
-    .locals 5
-
-    iget-object v0, p0, Lspd;->f:Ljava/lang/String;
-
-    sget-object v1, Lg47;->m:Llr6;
-
-    if-nez v1, :cond_0
-
-    goto :goto_0
+    return v0
 
     :cond_0
-    invoke-interface {v1}, Llr6;->c()Z
+    instance-of v1, p1, Lspd;
 
-    move-result v2
+    const/4 v2, 0x0
 
-    if-eqz v2, :cond_1
+    if-nez v1, :cond_1
 
-    sget-object v2, Lqs7;->o:Lqs7;
-
-    iget-object v3, p0, Lspd;->g:Lzfc;
-
-    invoke-virtual {v3}, Lzfc;->a()Z
-
-    move-result v3
-
-    const-string v4, "Single player handler. Player exist: "
-
-    invoke-static {v4, v3}, Lu88;->l(Ljava/lang/String;Z)Ljava/lang/String;
-
-    move-result-object v3
-
-    const/4 v4, 0x0
-
-    invoke-interface {v1, v2, v0, v3, v4}, Llr6;->d(Lqs7;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    return v2
 
     :cond_1
-    :goto_0
-    iget-object p0, p0, Lspd;->g:Lzfc;
+    check-cast p1, Lspd;
 
-    invoke-virtual {p0}, Lzfc;->getValue()Ljava/lang/Object;
+    iget-object p0, p0, Lspd;->a:Lpnd;
+
+    iget-object p1, p1, Lspd;->a:Lpnd;
+
+    invoke-static {p0, p1}, Lvyg;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p0
+
+    if-nez p0, :cond_2
+
+    return v2
+
+    :cond_2
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 0
+
+    iget-object p0, p0, Lspd;->a:Lpnd;
+
+    invoke-virtual {p0}, Ljava/lang/Object;->hashCode()I
+
+    move-result p0
+
+    return p0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 2
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "SessionsClose(event="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object p0, p0, Lspd;->a:Lpnd;
+
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string p0, ")"
+
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p0
-
-    check-cast p0, Ltkf;
 
     return-object p0
 .end method

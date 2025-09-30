@@ -1,23 +1,37 @@
 .class public final Lxu5;
-.super Lu2;
+.super Ljx3;
 .source "SourceFile"
 
 
-# static fields
-.field public static final c:Lxu5;
+# instance fields
+.field public X:Lsu5;
+
+.field public synthetic Y:Ljava/lang/Object;
+
+.field public Z:I
+
+.field public o:Lipc;
 
 
-# direct methods
-.method static constructor <clinit>()V
-    .locals 2
+# virtual methods
+.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    new-instance v0, Lxu5;
+    iput-object p1, p0, Lxu5;->Y:Ljava/lang/Object;
 
-    const/16 v1, 0x8
+    iget p1, p0, Lxu5;->Z:I
 
-    invoke-direct {v0, v1}, Lu2;-><init>(I)V
+    const/high16 v0, -0x80000000
 
-    sput-object v0, Lxu5;->c:Lxu5;
+    or-int/2addr p1, v0
 
-    return-void
+    iput p1, p0, Lxu5;->Z:I
+
+    const/4 p1, 0x0
+
+    invoke-static {p1, p1, p0}, Lo97;->b0(Liic;Ll1g;Ljx3;)Ljava/lang/Object;
+
+    move-result-object p0
+
+    return-object p0
 .end method

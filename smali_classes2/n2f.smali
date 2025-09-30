@@ -1,189 +1,184 @@
 .class public final Ln2f;
-.super Lqde;
+.super Lu2f;
 .source "SourceFile"
 
-# interfaces
-.implements Ll66;
+
+# static fields
+.field public static final CREATOR:Lm2f;
 
 
 # instance fields
-.field public synthetic X:Ljava/lang/Object;
+.field public final b:I
 
-.field public final synthetic Y:Lone/me/settings/twofa/creation/TwoFACreationScreen;
+.field public final c:I
+
+.field public final o:Ljava/util/List;
 
 
 # direct methods
-.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/settings/twofa/creation/TwoFACreationScreen;)V
+.method static constructor <clinit>()V
+    .locals 1
+
+    new-instance v0, Lm2f;
+
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    sput-object v0, Ln2f;->CREATOR:Lm2f;
+
+    return-void
+.end method
+
+.method public constructor <init>(Ljava/util/List;II)V
     .locals 0
 
-    iput-object p2, p0, Ln2f;->Y:Lone/me/settings/twofa/creation/TwoFACreationScreen;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 p2, 0x2
+    iput p2, p0, Ln2f;->b:I
 
-    invoke-direct {p0, p2, p1}, Lqde;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput p3, p0, Ln2f;->c:I
+
+    iput-object p1, p0, Ln2f;->o:Ljava/util/List;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+.method public final describeContents()I
     .locals 0
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    const/4 p0, 0x0
 
-    invoke-virtual {p0, p1, p2}, Ln2f;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p0
-
-    check-cast p0, Ln2f;
-
-    sget-object p1, Le5f;->a:Le5f;
-
-    invoke-virtual {p0, p1}, Ln2f;->o(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p1
+    return p0
 .end method
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 1
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
 
-    new-instance v0, Ln2f;
+    const/4 v0, 0x1
 
-    iget-object p0, p0, Ln2f;->Y:Lone/me/settings/twofa/creation/TwoFACreationScreen;
+    if-ne p0, p1, :cond_0
 
-    invoke-direct {v0, p2, p0}, Ln2f;-><init>(Lkotlin/coroutines/Continuation;Lone/me/settings/twofa/creation/TwoFACreationScreen;)V
-
-    iput-object p1, v0, Ln2f;->X:Ljava/lang/Object;
-
-    return-object v0
-.end method
-
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 7
-
-    invoke-static {p1}, Lsgg;->Z(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Ln2f;->X:Ljava/lang/Object;
-
-    check-cast p1, Ljava/lang/String;
-
-    iget-object p0, p0, Ln2f;->Y:Lone/me/settings/twofa/creation/TwoFACreationScreen;
-
-    iget-object v0, p0, Lone/me/settings/twofa/creation/TwoFACreationScreen;->Z:Lo5c;
-
-    sget-object v1, Lone/me/settings/twofa/creation/TwoFACreationScreen;->p0:[Lbc7;
-
-    invoke-virtual {p0}, Lone/me/settings/twofa/creation/TwoFACreationScreen;->q0()Li2f;
-
-    move-result-object v1
-
-    sget-object v2, Li2f;->b:Li2f;
-
-    if-eq v1, v2, :cond_0
-
-    goto :goto_4
+    return v0
 
     :cond_0
-    const/4 v1, 0x0
+    instance-of v1, p1, Ln2f;
 
-    if-eqz p1, :cond_2
+    const/4 v2, 0x0
 
-    invoke-virtual {p1}, Ljava/lang/String;->length()I
+    if-nez v1, :cond_1
 
-    move-result v2
-
-    if-nez v2, :cond_1
-
-    goto :goto_0
+    return v2
 
     :cond_1
-    move v2, v1
+    check-cast p1, Ln2f;
 
-    goto :goto_1
+    iget v1, p0, Ln2f;->b:I
+
+    iget v3, p1, Ln2f;->b:I
+
+    if-eq v1, v3, :cond_2
+
+    return v2
 
     :cond_2
-    :goto_0
-    const/4 v2, 0x1
+    iget v1, p0, Ln2f;->c:I
 
-    :goto_1
-    iget-object v3, p0, Lone/me/settings/twofa/creation/TwoFACreationScreen;->o0:Lo5c;
+    iget v3, p1, Ln2f;->c:I
 
-    sget-object v4, Lone/me/settings/twofa/creation/TwoFACreationScreen;->p0:[Lbc7;
+    if-eq v1, v3, :cond_3
 
-    const/4 v5, 0x3
-
-    aget-object v5, v4, v5
-
-    invoke-interface {v3, p0, v5}, Lo5c;->M(Ljava/lang/Object;Lbc7;)Ljava/lang/Object;
-
-    move-result-object v3
-
-    check-cast v3, Lone/me/sdk/uikit/common/button/OneMeButton;
-
-    const/16 v5, 0x8
-
-    if-eqz v2, :cond_3
-
-    move v6, v1
-
-    goto :goto_2
+    return v2
 
     :cond_3
-    move v6, v5
+    iget-object p0, p0, Ln2f;->o:Ljava/util/List;
 
-    :goto_2
-    invoke-virtual {v3, v6}, Landroid/view/View;->setVisibility(I)V
+    iget-object p1, p1, Ln2f;->o:Ljava/util/List;
 
-    const/4 v3, 0x2
+    invoke-static {p0, p1}, Lvyg;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    aget-object v6, v4, v3
+    move-result p0
 
-    invoke-interface {v0, p0, v6}, Lo5c;->M(Ljava/lang/Object;Lbc7;)Ljava/lang/Object;
+    if-nez p0, :cond_4
 
-    move-result-object v6
-
-    check-cast v6, Landroid/widget/TextView;
-
-    if-nez v2, :cond_4
-
-    goto :goto_3
+    return v2
 
     :cond_4
-    move v1, v5
+    return v0
+.end method
 
-    :goto_3
-    invoke-virtual {v6, v1}, Landroid/view/View;->setVisibility(I)V
+.method public final hashCode()I
+    .locals 3
 
-    if-nez v2, :cond_5
+    iget v0, p0, Ln2f;->b:I
 
-    aget-object v1, v4, v3
+    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
 
-    invoke-interface {v0, p0, v1}, Lo5c;->M(Ljava/lang/Object;Lbc7;)Ljava/lang/Object;
+    move-result v0
+
+    const/16 v1, 0x1f
+
+    mul-int/2addr v0, v1
+
+    iget v2, p0, Ln2f;->c:I
+
+    invoke-static {v2, v0, v1}, Lz7e;->m(III)I
+
+    move-result v0
+
+    iget-object p0, p0, Ln2f;->o:Ljava/util/List;
+
+    invoke-virtual {p0}, Ljava/lang/Object;->hashCode()I
+
+    move-result p0
+
+    add-int/2addr p0, v0
+
+    return p0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 5
+
+    const-string v0, ", quantity="
+
+    const-string v1, ", args="
+
+    const-string v2, "PluralsParams(resId="
+
+    iget v3, p0, Ln2f;->b:I
+
+    iget v4, p0, Ln2f;->c:I
+
+    invoke-static {v2, v3, v0, v4, v1}, Lsg0;->j(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    check-cast v0, Landroid/widget/TextView;
+    const-string v1, ")"
 
-    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
+    iget-object p0, p0, Ln2f;->o:Ljava/util/List;
 
-    move-result-object p0
-
-    sget v1, Lkzb;->oneme_settings_twofa_creation_email_verify_resend_code_timer:I
-
-    filled-new-array {p1}, [Ljava/lang/Object;
-
-    move-result-object p1
-
-    invoke-virtual {p0, v1, p1}, Landroid/content/Context;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
+    invoke-static {v0, p0, v1}, Lmw1;->j(Ljava/lang/StringBuilder;Ljava/util/List;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
-
-    invoke-virtual {v0, p0}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
-
-    :cond_5
-    :goto_4
-    sget-object p0, Le5f;->a:Le5f;
 
     return-object p0
+.end method
+
+.method public final writeToParcel(Landroid/os/Parcel;I)V
+    .locals 0
+
+    iget p2, p0, Ln2f;->b:I
+
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
+
+    iget p2, p0, Ln2f;->c:I
+
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
+
+    iget-object p0, p0, Ln2f;->o:Ljava/util/List;
+
+    invoke-virtual {p1, p0}, Landroid/os/Parcel;->writeList(Ljava/util/List;)V
+
+    return-void
 .end method

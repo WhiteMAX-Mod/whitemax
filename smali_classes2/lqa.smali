@@ -1,214 +1,65 @@
 .class public final Llqa;
-.super Ljava/lang/Object;
+.super Ljx3;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:Ljava/util/LinkedHashMap;
+.field public X:Ljava/io/IOException;
+
+.field public Y:Lhqa;
+
+.field public Z:Ljava/io/File;
+
+.field public o:Loqa;
+
+.field public r0:Ljava/util/Iterator;
+
+.field public synthetic s0:Ljava/lang/Object;
+
+.field public final synthetic t0:Loqa;
+
+.field public u0:I
 
 
 # direct methods
-.method public constructor <init>(Ljava/util/LinkedHashMap;)V
+.method public constructor <init>(Loqa;Ljx3;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Llqa;->t0:Loqa;
 
-    iput-object p1, p0, Llqa;->a:Ljava/util/LinkedHashMap;
+    invoke-direct {p0, p2}, Ljx3;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
-.method public static final a(Lorg/json/JSONObject;)Llqa;
-    .locals 14
 
-    new-instance v0, Ljava/util/LinkedHashMap;
+# virtual methods
+.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 6
 
-    invoke-direct {v0}, Ljava/util/LinkedHashMap;-><init>()V
+    iput-object p1, p0, Llqa;->s0:Ljava/lang/Object;
 
-    invoke-virtual {p0}, Lorg/json/JSONObject;->names()Lorg/json/JSONArray;
+    iget p1, p0, Llqa;->u0:I
 
-    move-result-object v1
+    const/high16 v0, -0x80000000
 
-    if-nez v1, :cond_0
+    or-int/2addr p1, v0
 
-    new-instance v1, Lorg/json/JSONArray;
-
-    invoke-direct {v1}, Lorg/json/JSONArray;-><init>()V
-
-    :cond_0
-    invoke-virtual {v1}, Lorg/json/JSONArray;->length()I
-
-    move-result v2
+    iput p1, p0, Llqa;->u0:I
 
     const/4 v3, 0x0
 
-    move v4, v3
+    const/4 v4, 0x0
 
-    :goto_0
-    if-ge v4, v2, :cond_3
+    iget-object v0, p0, Llqa;->t0:Loqa;
 
-    invoke-virtual {v1, v4}, Lorg/json/JSONArray;->getString(I)Ljava/lang/String;
+    const/4 v1, 0x0
 
-    move-result-object v5
+    const/4 v2, 0x0
 
-    invoke-virtual {p0, v5}, Lorg/json/JSONObject;->getJSONArray(Ljava/lang/String;)Lorg/json/JSONArray;
+    move-object v5, p0
 
-    move-result-object v6
-
-    new-instance v7, Ljava/util/ArrayList;
-
-    invoke-direct {v7}, Ljava/util/ArrayList;-><init>()V
-
-    invoke-virtual {v6}, Lorg/json/JSONArray;->length()I
-
-    move-result v8
-
-    move v9, v3
-
-    :goto_1
-    if-ge v9, v8, :cond_2
-
-    invoke-virtual {v6, v9}, Lorg/json/JSONArray;->getJSONObject(I)Lorg/json/JSONObject;
-
-    move-result-object v10
-
-    const-string v11, "dimension"
-
-    invoke-virtual {v10, v11}, Lorg/json/JSONObject;->has(Ljava/lang/String;)Z
-
-    move-result v12
-
-    if-eqz v12, :cond_1
-
-    const-string v12, "bitrate"
-
-    invoke-virtual {v10, v12}, Lorg/json/JSONObject;->has(Ljava/lang/String;)Z
-
-    move-result v13
-
-    if-eqz v13, :cond_1
-
-    new-instance v13, Lkqa;
-
-    invoke-virtual {v10, v11}, Lorg/json/JSONObject;->getInt(Ljava/lang/String;)I
-
-    move-result v11
-
-    invoke-virtual {v10, v12}, Lorg/json/JSONObject;->getInt(Ljava/lang/String;)I
-
-    move-result v10
-
-    invoke-direct {v13, v11, v10}, Lkqa;-><init>(II)V
-
-    invoke-virtual {v7, v13}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    :cond_1
-    add-int/lit8 v9, v9, 0x1
-
-    goto :goto_1
-
-    :cond_2
-    sget-object v6, Ljava/util/Locale;->ROOT:Ljava/util/Locale;
-
-    invoke-virtual {v5, v6}, Ljava/lang/String;->toLowerCase(Ljava/util/Locale;)Ljava/lang/String;
-
-    move-result-object v5
-
-    new-instance v6, Laq6;
-
-    const/16 v8, 0x8
-
-    invoke-direct {v6, v8}, Laq6;-><init>(I)V
-
-    invoke-static {v7, v6}, Lp43;->Q0(Ljava/lang/Iterable;Ljava/util/Comparator;)Ljava/util/List;
-
-    move-result-object v6
-
-    invoke-interface {v0, v5, v6}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    add-int/lit8 v4, v4, 0x1
-
-    goto :goto_0
-
-    :cond_3
-    new-instance p0, Llqa;
-
-    invoke-direct {p0, v0}, Llqa;-><init>(Ljava/util/LinkedHashMap;)V
-
-    return-object p0
-.end method
-
-
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
-
-    if-ne p0, p1, :cond_0
-
-    goto :goto_1
-
-    :cond_0
-    instance-of v0, p1, Llqa;
-
-    if-nez v0, :cond_1
-
-    goto :goto_0
-
-    :cond_1
-    check-cast p1, Llqa;
-
-    iget-object p0, p0, Llqa;->a:Ljava/util/LinkedHashMap;
-
-    iget-object p1, p1, Llqa;->a:Ljava/util/LinkedHashMap;
-
-    invoke-virtual {p0, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
-
-    move-result p0
-
-    if-nez p0, :cond_2
-
-    :goto_0
-    const/4 p0, 0x0
-
-    return p0
-
-    :cond_2
-    :goto_1
-    const/4 p0, 0x1
-
-    return p0
-.end method
-
-.method public final hashCode()I
-    .locals 0
-
-    iget-object p0, p0, Llqa;->a:Ljava/util/LinkedHashMap;
-
-    invoke-virtual {p0}, Ljava/lang/Object;->hashCode()I
-
-    move-result p0
-
-    return p0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 2
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "PeerVideoSettingsBitrateTable(bitrateTables="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object p0, p0, Llqa;->a:Ljava/util/LinkedHashMap;
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string p0, ")"
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual/range {v0 .. v5}, Loqa;->g(Ljava/io/IOException;Lctc;Lhqa;Ljava/io/File;Ljx3;)Ljava/lang/Object;
 
     move-result-object p0
 

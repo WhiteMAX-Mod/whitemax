@@ -1,25 +1,29 @@
 .class public final Lwe0;
-.super Lbu3;
+.super Ljx3;
 .source "SourceFile"
 
 
 # instance fields
-.field public synthetic X:Ljava/lang/Object;
+.field public X:Lipc;
 
-.field public final synthetic Y:Lru/ok/tamtam/workmanager/BacklogWorker;
+.field public Y:I
 
-.field public Z:I
+.field public synthetic Z:Ljava/lang/Object;
 
-.field public o:Lru/ok/tamtam/workmanager/BacklogWorker;
+.field public o:Ljava/util/List;
+
+.field public final synthetic r0:Lru/ok/tamtam/workmanager/BacklogWorker;
+
+.field public s0:I
 
 
 # direct methods
-.method public constructor <init>(Lru/ok/tamtam/workmanager/BacklogWorker;Lbu3;)V
+.method public constructor <init>(Lru/ok/tamtam/workmanager/BacklogWorker;Ljx3;)V
     .locals 0
 
-    iput-object p1, p0, Lwe0;->Y:Lru/ok/tamtam/workmanager/BacklogWorker;
+    iput-object p1, p0, Lwe0;->r0:Lru/ok/tamtam/workmanager/BacklogWorker;
 
-    invoke-direct {p0, p2}, Lbu3;-><init>(Lkotlin/coroutines/Continuation;)V
+    invoke-direct {p0, p2}, Ljx3;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
@@ -29,19 +33,21 @@
 .method public final o(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
 
-    iput-object p1, p0, Lwe0;->X:Ljava/lang/Object;
+    iput-object p1, p0, Lwe0;->Z:Ljava/lang/Object;
 
-    iget p1, p0, Lwe0;->Z:I
+    iget p1, p0, Lwe0;->s0:I
 
     const/high16 v0, -0x80000000
 
     or-int/2addr p1, v0
 
-    iput p1, p0, Lwe0;->Z:I
+    iput p1, p0, Lwe0;->s0:I
 
-    iget-object p1, p0, Lwe0;->Y:Lru/ok/tamtam/workmanager/BacklogWorker;
+    iget-object p1, p0, Lwe0;->r0:Lru/ok/tamtam/workmanager/BacklogWorker;
 
-    invoke-virtual {p1, p0}, Lru/ok/tamtam/workmanager/BacklogWorker;->doWork(Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    const/4 v0, 0x0
+
+    invoke-virtual {p1, v0, p0}, Lru/ok/tamtam/workmanager/BacklogWorker;->b(Ljava/util/List;Ljx3;)Ljava/lang/Object;
 
     move-result-object p0
 

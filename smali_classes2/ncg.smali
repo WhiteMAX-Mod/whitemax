@@ -1,94 +1,309 @@
-.class public abstract Lncg;
-.super Licg;
+.class public final Lncg;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Loq4;
+.implements Lpq4;
 
 
 # instance fields
-.field private fragmentSource:Ljava/lang/String;
+.field public final a:Lxd3;
 
-.field private height:I
-
-.field public final id:I
-
-.field private width:I
+.field public final b:Ljava/util/HashSet;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;I)V
-    .locals 0
+.method public constructor <init>()V
+    .locals 1
 
-    invoke-direct {p0, p1}, Lmdg;-><init>(Ljava/lang/String;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lncg;->fragmentSource:Ljava/lang/String;
+    new-instance v0, Lxd3;
 
-    iput p2, p0, Lncg;->id:I
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    iput-object v0, p0, Lncg;->a:Lxd3;
+
+    new-instance v0, Ljava/util/HashSet;
+
+    invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
+
+    iput-object v0, p0, Lncg;->b:Ljava/util/HashSet;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final getHeight()I
-    .locals 0
+.method public final declared-synchronized a(Loq4;)Z
+    .locals 2
 
-    iget p0, p0, Lncg;->height:I
+    monitor-enter p0
 
-    return p0
-.end method
+    :try_start_0
+    new-instance v0, Locg;
 
-.method public getSource()Ljava/lang/String;
-    .locals 0
+    invoke-direct {v0, p1}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
 
-    iget-object p0, p0, Lncg;->fragmentSource:Ljava/lang/String;
+    iget-object p1, p0, Lncg;->a:Lxd3;
 
-    return-object p0
-.end method
+    invoke-virtual {p1, v0}, Lxd3;->a(Loq4;)Z
 
-.method public getTarget()I
-    .locals 0
+    move-result p1
 
-    const/16 p0, 0xde1
+    if-eqz p1, :cond_0
 
-    return p0
-.end method
+    iget-object v1, p0, Lncg;->b:Ljava/util/HashSet;
 
-.method public final getWidth()I
-    .locals 0
-
-    iget p0, p0, Lncg;->width:I
-
-    return p0
-.end method
-
-.method public final setSize(II)V
-    .locals 1
-
-    iget v0, p0, Lncg;->width:I
-
-    if-ne p1, v0, :cond_1
-
-    iget v0, p0, Lncg;->height:I
-
-    if-eq p2, v0, :cond_0
+    invoke-virtual {v1, v0}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     goto :goto_0
 
+    :catchall_0
+    move-exception p1
+
+    goto :goto_1
+
     :cond_0
-    return-void
-
-    :cond_1
     :goto_0
-    iput p2, p0, Lncg;->height:I
+    monitor-exit p0
 
-    iput p1, p0, Lncg;->width:I
+    return p1
 
-    invoke-virtual {p0, p1, p2}, Lncg;->updateLocations(II)V
+    :goto_1
+    :try_start_1
+    monitor-exit p0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    return-void
+    throw p1
 .end method
 
-.method public updateLocations(II)V
-    .locals 0
+.method public final declared-synchronized b(Loq4;)Z
+    .locals 5
+
+    monitor-enter p0
+
+    const/4 v0, 0x0
+
+    :try_start_0
+    iget-object v1, p0, Lncg;->a:Lxd3;
+
+    iget-object v2, p0, Lncg;->b:Ljava/util/HashSet;
+
+    invoke-virtual {v2}, Ljava/util/HashSet;->iterator()Ljava/util/Iterator;
+
+    move-result-object v2
+
+    :cond_0
+    invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v3
+
+    if-eqz v3, :cond_1
+
+    invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v3
+
+    check-cast v3, Locg;
+
+    invoke-virtual {v3}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
+
+    move-result-object v4
+
+    check-cast v4, Loq4;
+
+    if-ne v4, p1, :cond_0
+
+    invoke-interface {v2}, Ljava/util/Iterator;->remove()V
+
+    invoke-virtual {v1, v3}, Lxd3;->b(Loq4;)Z
+
+    move-result v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    :cond_1
+    monitor-exit p0
+
+    return v0
+
+    :catchall_0
+    move-exception p1
+
+    :try_start_1
+    const-string v1, "ncg"
+
+    const-string v2, "delete: failed"
+
+    invoke-static {v1, v2, p1}, Ljtg;->m(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_1
+
+    monitor-exit p0
+
+    return v0
+
+    :catchall_1
+    move-exception p1
+
+    :try_start_2
+    monitor-exit p0
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_1
+
+    throw p1
+.end method
+
+.method public final declared-synchronized c(Loq4;)Z
+    .locals 5
+
+    monitor-enter p0
+
+    const/4 v0, 0x0
+
+    :try_start_0
+    iget-object v1, p0, Lncg;->a:Lxd3;
+
+    iget-object v2, p0, Lncg;->b:Ljava/util/HashSet;
+
+    invoke-virtual {v2}, Ljava/util/HashSet;->iterator()Ljava/util/Iterator;
+
+    move-result-object v2
+
+    :cond_0
+    invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v3
+
+    if-eqz v3, :cond_1
+
+    invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v3
+
+    check-cast v3, Locg;
+
+    invoke-virtual {v3}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
+
+    move-result-object v4
+
+    check-cast v4, Loq4;
+
+    if-ne v4, p1, :cond_0
+
+    invoke-interface {v2}, Ljava/util/Iterator;->remove()V
+
+    invoke-virtual {v1, v3}, Lxd3;->c(Loq4;)Z
+
+    move-result v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    :cond_1
+    monitor-exit p0
+
+    return v0
+
+    :catchall_0
+    move-exception p1
+
+    :try_start_1
+    const-string v1, "ncg"
+
+    const-string v2, "delete: failed"
+
+    invoke-static {v1, v2, p1}, Ljtg;->m(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_1
+
+    monitor-exit p0
+
+    return v0
+
+    :catchall_1
+    move-exception p1
+
+    :try_start_2
+    monitor-exit p0
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_1
+
+    throw p1
+.end method
+
+.method public final declared-synchronized d()V
+    .locals 1
+
+    monitor-enter p0
+
+    :try_start_0
+    iget-object v0, p0, Lncg;->a:Lxd3;
+
+    invoke-virtual {v0}, Lxd3;->d()V
+
+    iget-object v0, p0, Lncg;->b:Ljava/util/HashSet;
+
+    invoke-virtual {v0}, Ljava/util/HashSet;->clear()V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    monitor-exit p0
 
     return-void
+
+    :catchall_0
+    move-exception v0
+
+    :try_start_1
+    monitor-exit p0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    throw v0
+.end method
+
+.method public final declared-synchronized e()V
+    .locals 1
+
+    monitor-enter p0
+
+    :try_start_0
+    iget-object v0, p0, Lncg;->a:Lxd3;
+
+    invoke-virtual {v0}, Lxd3;->e()V
+
+    iget-object v0, p0, Lncg;->b:Ljava/util/HashSet;
+
+    invoke-virtual {v0}, Ljava/util/HashSet;->clear()V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    monitor-exit p0
+
+    return-void
+
+    :catchall_0
+    move-exception v0
+
+    :try_start_1
+    monitor-exit p0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    throw v0
+.end method
+
+.method public final f()Z
+    .locals 0
+
+    iget-object p0, p0, Lncg;->a:Lxd3;
+
+    iget-boolean p0, p0, Lxd3;->b:Z
+
+    return p0
 .end method

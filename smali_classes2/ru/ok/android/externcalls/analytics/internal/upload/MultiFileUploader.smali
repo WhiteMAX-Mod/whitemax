@@ -37,7 +37,7 @@
         "timeBeforeNextUploadMs",
         "<init>",
         "(Ljavax/inject/Provider;Ljavax/inject/Provider;Ljava/util/concurrent/locks/Lock;Ljava/lang/String;ZILjava/lang/Long;)V",
-        "Le5f;",
+        "Lylf;",
         "scheduleNextUpload",
         "()V",
         "triggerUpload",
@@ -71,7 +71,7 @@
         "scaleUpNextUploadTimeout",
         "Landroid/os/Handler;",
         "handler$delegate",
-        "Lje7;",
+        "Lcl7;",
         "getHandler",
         "()Landroid/os/Handler;",
         "handler",
@@ -119,7 +119,7 @@
 
 .field private final fileIndexStringLength:I
 
-.field private final handler$delegate:Lje7;
+.field private final handler$delegate:Lcl7;
 
 .field private final looperProvider:Ljavax/inject/Provider;
     .annotation system Ldalvik/annotation/Signature;
@@ -144,7 +144,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lru/ok/android/externcalls/analytics/internal/upload/MultiFileUploader$Companion;-><init>(Ll94;)V
+    invoke-direct {v0, v1}, Lru/ok/android/externcalls/analytics/internal/upload/MultiFileUploader$Companion;-><init>(Lld4;)V
 
     sput-object v0, Lru/ok/android/externcalls/analytics/internal/upload/MultiFileUploader;->Companion:Lru/ok/android/externcalls/analytics/internal/upload/MultiFileUploader$Companion;
 
@@ -234,17 +234,17 @@
     invoke-direct {p0, v0}, Lru/ok/android/externcalls/analytics/internal/upload/MultiFileUploader$handler$2;-><init>(Lru/ok/android/externcalls/analytics/internal/upload/MultiFileUploader;)V
 
     .line 9
-    new-instance p1, Lwfe;
+    new-instance p1, Lzte;
 
-    invoke-direct {p1, p0}, Lwfe;-><init>(Lv56;)V
+    invoke-direct {p1, p0}, Lzte;-><init>(Lzb6;)V
 
     .line 10
-    iput-object p1, v0, Lru/ok/android/externcalls/analytics/internal/upload/MultiFileUploader;->handler$delegate:Lje7;
+    iput-object p1, v0, Lru/ok/android/externcalls/analytics/internal/upload/MultiFileUploader;->handler$delegate:Lcl7;
 
     return-void
 .end method
 
-.method public synthetic constructor <init>(Ljavax/inject/Provider;Ljavax/inject/Provider;Ljava/util/concurrent/locks/Lock;Ljava/lang/String;ZILjava/lang/Long;ILl94;)V
+.method public synthetic constructor <init>(Ljavax/inject/Provider;Ljavax/inject/Provider;Ljava/util/concurrent/locks/Lock;Ljava/lang/String;ZILjava/lang/Long;ILld4;)V
     .locals 8
 
     and-int/lit8 v0, p8, 0x20
@@ -417,7 +417,7 @@
 
     move-result-object v7
 
-    invoke-static {v4, v7}, Lxq7;->d(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v4, v7}, Lvyg;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v7
 
@@ -534,7 +534,7 @@
 
     invoke-direct {v0, p0}, Lru/ok/android/externcalls/analytics/internal/upload/MultiFileUploader$createNewFile$1;-><init>(Lru/ok/android/externcalls/analytics/internal/upload/MultiFileUploader;)V
 
-    invoke-virtual {p0, v0}, Lru/ok/android/externcalls/analytics/internal/upload/AbstractUploader;->withLock(Lv56;)Ljava/lang/Object;
+    invoke-virtual {p0, v0}, Lru/ok/android/externcalls/analytics/internal/upload/AbstractUploader;->withLock(Lzb6;)Ljava/lang/Object;
 
     move-result-object p0
 
@@ -594,7 +594,7 @@
 
     const-string v3, " drop request failed"
 
-    invoke-static {v1, p1, v3}, Lu88;->k(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v1, p1, v3}, Lyv7;->h(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
@@ -630,14 +630,14 @@
 
     if-eqz p0, :cond_0
 
-    invoke-static {p0}, Lns;->d0([Ljava/lang/Object;)Ljava/util/ArrayList;
+    invoke-static {p0}, Lxr;->P([Ljava/lang/Object;)Ljava/util/ArrayList;
 
     move-result-object p0
 
     return-object p0
 
     :cond_0
-    sget-object p0, Lgz4;->a:Lgz4;
+    sget-object p0, Lp45;->a:Lp45;
 
     return-object p0
 .end method
@@ -661,18 +661,18 @@
 
     const/16 v0, 0x5f
 
-    invoke-static {p1, p0, v0}, Lj8e;->O0(Ljava/lang/String;IC)Ljava/lang/String;
+    invoke-static {p1, p0, v0}, Ljme;->v0(Ljava/lang/String;IC)Ljava/lang/String;
 
     move-result-object p0
 
-    invoke-static {v2, p0}, Lpg0;->g(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v2, p0}, Lsg0;->g(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
 
     return-object p0
 
     :cond_0
-    invoke-static {p1, v2}, Lm26;->h(ILjava/lang/String;)Ljava/lang/String;
+    invoke-static {p1, v2}, Lyv7;->e(ILjava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
 
@@ -682,9 +682,9 @@
 .method private final getHandler()Landroid/os/Handler;
     .locals 0
 
-    iget-object p0, p0, Lru/ok/android/externcalls/analytics/internal/upload/MultiFileUploader;->handler$delegate:Lje7;
+    iget-object p0, p0, Lru/ok/android/externcalls/analytics/internal/upload/MultiFileUploader;->handler$delegate:Lcl7;
 
-    invoke-interface {p0}, Lje7;->getValue()Ljava/lang/Object;
+    invoke-interface {p0}, Lcl7;->getValue()Ljava/lang/Object;
 
     move-result-object p0
 
@@ -808,7 +808,7 @@
 
     const-string v5, " ms"
 
-    invoke-static {v2, v3, v4, v5}, Lu88;->i(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v2, v3, v4, v5}, Lwsf;->e(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v4
 
@@ -1058,7 +1058,7 @@
 
     invoke-direct {v0, p0}, Lru/ok/android/externcalls/analytics/internal/upload/MultiFileUploader$getSink$1;-><init>(Lru/ok/android/externcalls/analytics/internal/upload/MultiFileUploader;)V
 
-    invoke-virtual {p0, v0}, Lru/ok/android/externcalls/analytics/internal/upload/AbstractUploader;->withLock(Lv56;)Ljava/lang/Object;
+    invoke-virtual {p0, v0}, Lru/ok/android/externcalls/analytics/internal/upload/AbstractUploader;->withLock(Lzb6;)Ljava/lang/Object;
 
     move-result-object p0
 
@@ -1099,7 +1099,7 @@
 
     invoke-direct {v0, p0}, Lru/ok/android/externcalls/analytics/internal/upload/MultiFileUploader$upload$1;-><init>(Lru/ok/android/externcalls/analytics/internal/upload/MultiFileUploader;)V
 
-    invoke-virtual {p0, v0}, Lru/ok/android/externcalls/analytics/internal/upload/AbstractUploader;->withLock(Lv56;)Ljava/lang/Object;
+    invoke-virtual {p0, v0}, Lru/ok/android/externcalls/analytics/internal/upload/AbstractUploader;->withLock(Lzb6;)Ljava/lang/Object;
 
     return-void
 .end method

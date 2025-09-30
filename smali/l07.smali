@@ -1,199 +1,72 @@
-.class public final Ll07;
-.super La03;
+.class public final synthetic Ll07;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field public final q0:Lru0;
+.field public final synthetic a:I
 
-.field public r0:Lt4b;
+.field public final synthetic b:Lm07;
 
-.field public s0:J
+.field public final synthetic c:Landroid/graphics/Bitmap;
 
-.field public volatile t0:Z
+.field public final synthetic o:Lx46;
 
 
 # direct methods
-.method public constructor <init>(Lg34;Lo34;Ldz5;ILjava/lang/Object;Lru0;)V
-    .locals 11
+.method public synthetic constructor <init>(Lm07;Landroid/graphics/Bitmap;Lx46;I)V
+    .locals 0
 
-    const-wide v7, -0x7fffffffffffffffL    # -4.9E-324
+    iput p4, p0, Ll07;->a:I
 
-    const-wide v9, -0x7fffffffffffffffL    # -4.9E-324
+    iput-object p1, p0, Ll07;->b:Lm07;
 
-    const/4 v3, 0x2
+    iput-object p2, p0, Ll07;->c:Landroid/graphics/Bitmap;
 
-    move-object v0, p0
+    iput-object p3, p0, Ll07;->o:Lx46;
 
-    move-object v1, p1
-
-    move-object v2, p2
-
-    move-object v4, p3
-
-    move v5, p4
-
-    move-object/from16 v6, p5
-
-    invoke-direct/range {v0 .. v10}, La03;-><init>(Lg34;Lo34;ILdz5;ILjava/lang/Object;JJ)V
-
-    move-object/from16 p1, p6
-
-    iput-object p1, p0, Ll07;->q0:Lru0;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final e()V
-    .locals 1
+.method public final run()V
+    .locals 2
 
-    const/4 v0, 0x1
+    iget v0, p0, Ll07;->a:I
 
-    iput-boolean v0, p0, Ll07;->t0:Z
+    packed-switch v0, :pswitch_data_0
 
-    return-void
-.end method
+    iget-object v0, p0, Ll07;->c:Landroid/graphics/Bitmap;
 
-.method public final load()V
-    .locals 7
+    iget-object v1, p0, Ll07;->o:Lx46;
 
-    iget-wide v0, p0, Ll07;->s0:J
+    iget-object p0, p0, Ll07;->b:Lm07;
 
-    const-wide/16 v2, 0x0
-
-    cmp-long v0, v0, v2
-
-    if-nez v0, :cond_0
-
-    iget-object v1, p0, Ll07;->q0:Lru0;
-
-    iget-object v2, p0, Ll07;->r0:Lt4b;
-
-    const-wide v5, -0x7fffffffffffffffL    # -4.9E-324
-
-    const-wide v3, -0x7fffffffffffffffL    # -4.9E-324
-
-    invoke-virtual/range {v1 .. v6}, Lru0;->a(Lt4b;JJ)V
-
-    :cond_0
-    :try_start_0
-    iget-object v0, p0, La03;->b:Lo34;
-
-    iget-wide v1, p0, Ll07;->s0:J
-
-    invoke-virtual {v0, v1, v2}, Lo34;->b(J)Lo34;
-
-    move-result-object v0
-
-    new-instance v1, Lcb4;
-
-    iget-object v2, p0, La03;->p0:Lb0e;
-
-    iget-wide v3, v0, Lo34;->f:J
-
-    invoke-virtual {v2, v0}, Lb0e;->O(Lo34;)J
-
-    move-result-wide v5
-
-    invoke-direct/range {v1 .. v6}, Lcb4;-><init>(La34;JJ)V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_1
-
-    :goto_0
-    :try_start_1
-    iget-boolean v0, p0, Ll07;->t0:Z
-
-    if-nez v0, :cond_3
-
-    iget-object v0, p0, Ll07;->q0:Lru0;
-
-    iget-object v0, v0, Lru0;->a:Lv95;
-
-    sget-object v2, Lru0;->q0:Lh7;
-
-    invoke-interface {v0, v1, v2}, Lv95;->i(Lx95;Lh7;)I
-
-    move-result v0
-
-    const/4 v2, 0x0
-
-    const/4 v3, 0x1
-
-    if-eq v0, v3, :cond_1
-
-    move v4, v3
-
-    goto :goto_1
-
-    :cond_1
-    move v4, v2
-
-    :goto_1
-    invoke-static {v4}, Lq46;->f(Z)V
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    if-nez v0, :cond_2
-
-    move v2, v3
-
-    :cond_2
-    if-eqz v2, :cond_3
-
-    goto :goto_0
-
-    :catchall_0
-    move-exception v0
-
-    goto :goto_2
-
-    :cond_3
-    :try_start_2
-    iget-wide v0, v1, Lcb4;->o:J
-
-    iget-object v2, p0, La03;->b:Lo34;
-
-    iget-wide v2, v2, Lo34;->f:J
-
-    sub-long/2addr v0, v2
-
-    iput-wide v0, p0, Ll07;->s0:J
-    :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_1
-
-    iget-object p0, p0, La03;->p0:Lb0e;
-
-    invoke-static {p0}, Lsbg;->f(Lg34;)V
+    invoke-virtual {p0, v0, v1}, Lm07;->b(Landroid/graphics/Bitmap;Lx46;)V
 
     return-void
 
-    :catchall_1
-    move-exception v0
+    :pswitch_0
+    iget-object v0, p0, Ll07;->c:Landroid/graphics/Bitmap;
 
-    goto :goto_3
+    iget-object v1, p0, Ll07;->o:Lx46;
 
-    :goto_2
-    :try_start_3
-    iget-wide v1, v1, Lcb4;->o:J
+    iget-object p0, p0, Ll07;->b:Lm07;
 
-    iget-object v3, p0, La03;->b:Lo34;
+    invoke-virtual {p0, v0, v1}, Lm07;->b(Landroid/graphics/Bitmap;Lx46;)V
 
-    iget-wide v3, v3, Lo34;->f:J
+    return-void
 
-    sub-long/2addr v1, v3
+    nop
 
-    iput-wide v1, p0, Ll07;->s0:J
-
-    throw v0
-    :try_end_3
-    .catchall {:try_start_3 .. :try_end_3} :catchall_1
-
-    :goto_3
-    iget-object p0, p0, La03;->p0:Lb0e;
-
-    invoke-static {p0}, Lsbg;->f(Lg34;)V
-
-    throw v0
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

@@ -13,7 +13,7 @@
         "Landroid/widget/FrameLayout;",
         "",
         "highlighted",
-        "Le5f;",
+        "Lylf;",
         "setHighlighted",
         "(Z)V",
         "tamtam-app_release"
@@ -42,9 +42,9 @@
 
     invoke-direct {p0, p1, p2, v0, v0}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;II)V
 
-    sget p2, Lknc;->i:I
+    sget p2, La1d;->q:I
 
-    invoke-static {p1, p2}, Let3;->b(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
+    invoke-static {p1, p2}, Llw3;->b(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
 
     move-result-object p1
 

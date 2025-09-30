@@ -1,51 +1,41 @@
-.class public abstract synthetic Lyhe;
-.super Ljava/lang/Object;
+.class public final Lyhe;
+.super Lcb4;
 .source "SourceFile"
 
 
 # static fields
-.field public static final synthetic $EnumSwitchMapping$0:[I
+.field public static final b:Lyhe;
+
+.field public static final c:Lxa4;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 3
+    .locals 6
 
-    const/4 v0, 0x3
+    new-instance v0, Lyhe;
 
-    invoke-static {v0}, Lzt1;->v(I)[I
+    invoke-direct {v0}, Lcb4;-><init>()V
 
-    move-result-object v1
+    sput-object v0, Lyhe;->b:Lyhe;
 
-    array-length v1, v1
+    const/4 v1, 0x0
 
-    new-array v1, v1, [I
+    new-array v2, v1, [Ljava/lang/String;
 
-    const/4 v2, 0x1
+    const/16 v5, 0xe
 
-    :try_start_0
-    aput v2, v1, v2
-    :try_end_0
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
+    const/4 v4, 0x0
 
-    :catch_0
-    const/4 v2, 0x2
+    const-string v1, ":stickers/search"
 
-    :try_start_1
-    aput v2, v1, v2
-    :try_end_1
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
+    const/4 v3, 0x0
 
-    :catch_1
-    const/4 v2, 0x0
+    invoke-static/range {v0 .. v5}, Lcb4;->a(Lcb4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;II)Lxa4;
 
-    :try_start_2
-    aput v0, v1, v2
-    :try_end_2
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_2
+    move-result-object v0
 
-    :catch_2
-    sput-object v1, Lyhe;->$EnumSwitchMapping$0:[I
+    sput-object v0, Lyhe;->c:Lxa4;
 
     return-void
 .end method

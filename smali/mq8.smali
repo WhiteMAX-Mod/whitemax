@@ -1,50 +1,108 @@
-.class public final Lmq8;
-.super Lwl7;
+.class public final synthetic Lmq8;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Laq8;
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field public H0:Ly7a;
+.field public final synthetic a:I
+
+.field public final synthetic b:Lpq8;
+
+.field public final synthetic c:Landroid/util/Pair;
+
+.field public final synthetic o:Lvi8;
+
+
+# direct methods
+.method public synthetic constructor <init>(Lpq8;Landroid/util/Pair;Lvi8;I)V
+    .locals 0
+
+    iput p4, p0, Lmq8;->a:I
+
+    iput-object p1, p0, Lmq8;->b:Lpq8;
+
+    iput-object p2, p0, Lmq8;->c:Landroid/util/Pair;
+
+    iput-object p3, p0, Lmq8;->o:Lvi8;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final d(Lxp8;Landroid/view/MenuItem;)V
-    .locals 0
+.method public final run()V
+    .locals 3
 
-    iget-object p0, p0, Lmq8;->H0:Ly7a;
+    iget v0, p0, Lmq8;->a:I
 
-    if-eqz p0, :cond_0
+    packed-switch v0, :pswitch_data_0
 
-    invoke-virtual {p0, p1, p2}, Ly7a;->d(Lxp8;Landroid/view/MenuItem;)V
+    iget-object v0, p0, Lmq8;->b:Lpq8;
 
-    :cond_0
+    iget-object v0, v0, Lpq8;->b:Luq8;
+
+    iget-object v0, v0, Luq8;->j:Ljava/lang/Object;
+
+    check-cast v0, Lec4;
+
+    iget-object v1, p0, Lmq8;->c:Landroid/util/Pair;
+
+    iget-object v2, v1, Landroid/util/Pair;->first:Ljava/lang/Object;
+
+    check-cast v2, Ljava/lang/Integer;
+
+    invoke-virtual {v2}, Ljava/lang/Integer;->intValue()I
+
+    move-result v2
+
+    iget-object v1, v1, Landroid/util/Pair;->second:Ljava/lang/Object;
+
+    check-cast v1, Lyp8;
+
+    iget-object p0, p0, Lmq8;->o:Lvi8;
+
+    invoke-virtual {v0, v2, v1, p0}, Lec4;->C(ILyp8;Lvi8;)V
+
     return-void
-.end method
 
-.method public final l(Lxp8;Lbq8;)V
-    .locals 0
+    :pswitch_0
+    iget-object v0, p0, Lmq8;->b:Lpq8;
 
-    iget-object p0, p0, Lmq8;->H0:Ly7a;
+    iget-object v0, v0, Lpq8;->b:Luq8;
 
-    if-eqz p0, :cond_0
+    iget-object v0, v0, Luq8;->j:Ljava/lang/Object;
 
-    invoke-virtual {p0, p1, p2}, Ly7a;->l(Lxp8;Lbq8;)V
+    check-cast v0, Lec4;
 
-    :cond_0
+    iget-object v1, p0, Lmq8;->c:Landroid/util/Pair;
+
+    iget-object v2, v1, Landroid/util/Pair;->first:Ljava/lang/Object;
+
+    check-cast v2, Ljava/lang/Integer;
+
+    invoke-virtual {v2}, Ljava/lang/Integer;->intValue()I
+
+    move-result v2
+
+    iget-object v1, v1, Landroid/util/Pair;->second:Ljava/lang/Object;
+
+    check-cast v1, Lyp8;
+
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    iget-object p0, p0, Lmq8;->o:Lvi8;
+
+    invoke-virtual {v0, v2, v1, p0}, Lec4;->y(ILyp8;Lvi8;)V
+
     return-void
-.end method
 
-.method public final q(Landroid/content/Context;Z)Lxr4;
-    .locals 1
-
-    new-instance v0, Llq8;
-
-    invoke-direct {v0, p1, p2}, Llq8;-><init>(Landroid/content/Context;Z)V
-
-    invoke-virtual {v0, p0}, Llq8;->setHoverListener(Laq8;)V
-
-    return-object v0
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

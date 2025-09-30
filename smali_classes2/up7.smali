@@ -2,239 +2,99 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ldq7;
+
 
 # static fields
-.field public static final synthetic h:I
+.field public static final CREATOR:Landroid/os/Parcelable$Creator;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroid/os/Parcelable$Creator<",
+            "Lup7;",
+            ">;"
+        }
+    .end annotation
+.end field
 
-
-# instance fields
-.field public final a:Lvu0;
-
-.field public final b:Lkx3;
-
-.field public final c:Leq7;
-
-.field public final d:Lrie;
-
-.field public final e:Lkotlinx/coroutines/internal/ContextScope;
-
-.field public final f:Lw2d;
-
-.field public g:Ljava/lang/Object;
+.field public static final a:Lup7;
 
 
 # direct methods
-.method public constructor <init>(Lvu0;Lkx3;Lx4b;Leq7;Lrie;Landroid/content/ContentResolver;Lhi5;)V
-    .locals 3
+.method static constructor <clinit>()V
+    .locals 2
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lup7;
 
-    iput-object p1, p0, Lup7;->a:Lvu0;
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p2, p0, Lup7;->b:Lkx3;
+    sput-object v0, Lup7;->a:Lup7;
 
-    iput-object p4, p0, Lup7;->c:Leq7;
+    new-instance v0, Lra7;
 
-    iput-object p5, p0, Lup7;->d:Lrie;
+    const/16 v1, 0xf
 
-    check-cast p5, Lo7a;
+    invoke-direct {v0, v1}, Lra7;-><init>(I)V
 
-    invoke-virtual {p5}, Lo7a;->a()Ljx3;
-
-    move-result-object p1
-
-    invoke-static {p1}, Lvk9;->a(Lhx3;)Lkotlinx/coroutines/internal/ContextScope;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lup7;->e:Lkotlinx/coroutines/internal/ContextScope;
-
-    new-instance v0, Lw2d;
-
-    check-cast p3, La5b;
-
-    iget-object v1, p3, La5b;->c:Lzo;
-
-    iget-object p3, p3, La5b;->e:Lbe5;
-
-    new-instance v2, Lvh4;
-
-    invoke-direct {v2, p6, p7}, Lvh4;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
-
-    invoke-direct {v0, v1, p3, v2}, Lw2d;-><init>(Lzo;Lbe5;Lvh4;)V
-
-    iput-object v0, p0, Lup7;->f:Lw2d;
-
-    sget-object p3, Lhz4;->a:Lhz4;
-
-    iput-object p3, p0, Lup7;->g:Ljava/lang/Object;
-
-    check-cast p4, Lxy6;
-
-    iget-object p3, p4, Lxy6;->s0:Lkk3;
-
-    new-instance p4, Lsp7;
-
-    const/4 p6, 0x0
-
-    invoke-direct {p4, p0, p6}, Lsp7;-><init>(Lup7;Lkotlin/coroutines/Continuation;)V
-
-    new-instance p0, Lgp5;
-
-    const/4 p6, 0x1
-
-    invoke-direct {p0, p3, p4, p6}, Lgp5;-><init>(Lzm5;Ll66;I)V
-
-    invoke-virtual {p5}, Lo7a;->a()Ljx3;
-
-    move-result-object p3
-
-    invoke-static {p0, p3}, Lsgg;->x(Lzm5;Lhx3;)Lzm5;
-
-    move-result-object p0
-
-    invoke-static {p1, p2}, Lvk9;->C(Lox3;Lfx3;)Lkotlinx/coroutines/internal/ContextScope;
-
-    move-result-object p1
-
-    invoke-static {p0, p1}, Lsgg;->L(Lzm5;Lox3;)Ldwd;
+    sput-object v0, Lup7;->CREATOR:Landroid/os/Parcelable$Creator;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Ljava/lang/String;)Ljava/util/List;
-    .locals 2
+.method public final describeContents()I
+    .locals 0
 
-    sget-object v0, Lgz4;->a:Lgz4;
+    const/4 p0, 0x0
 
-    if-nez p1, :cond_0
+    return p0
+.end method
 
-    goto :goto_1
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 1
+
+    const/4 v0, 0x1
+
+    if-ne p0, p1, :cond_0
+
+    return v0
 
     :cond_0
-    const-string v1, "SELECTED_MEDIA_ALBUM"
+    instance-of p0, p1, Lup7;
 
-    invoke-virtual {p1, v1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+    if-nez p0, :cond_1
 
-    move-result v1
+    const/4 p0, 0x0
 
-    if-eqz v1, :cond_3
-
-    iget-object p0, p0, Lup7;->f:Lw2d;
-
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    new-instance p1, Ljava/util/ArrayList;
-
-    invoke-direct {p1}, Ljava/util/ArrayList;-><init>()V
-
-    iget-object p0, p0, Lw2d;->a:Ljava/util/concurrent/CopyOnWriteArraySet;
-
-    invoke-virtual {p0}, Ljava/util/concurrent/CopyOnWriteArraySet;->iterator()Ljava/util/Iterator;
-
-    move-result-object p0
+    return p0
 
     :cond_1
-    :goto_0
-    invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
+    return v0
+.end method
 
-    move-result v0
+.method public final hashCode()I
+    .locals 0
 
-    if-eqz v0, :cond_2
+    const p0, 0x4057c762
 
-    invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    return p0
+.end method
 
-    move-result-object v0
+.method public final toString()Ljava/lang/String;
+    .locals 0
 
-    check-cast v0, Ly2d;
+    const-string p0, "Progress"
 
-    iget-boolean v1, v0, Ly2d;->f:Z
-
-    if-eqz v1, :cond_1
-
-    iget-object v0, v0, Ly2d;->a:Lrp7;
-
-    invoke-virtual {p1, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    goto :goto_0
-
-    :cond_2
-    return-object p1
-
-    :cond_3
-    iget-object v1, p0, Lup7;->g:Ljava/lang/Object;
-
-    invoke-interface {v1, p1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lm86;
-
-    if-nez p1, :cond_4
-
-    :goto_1
-    return-object v0
-
-    :cond_4
-    iget-object p1, p1, Lm86;->a:Ll86;
-
-    iget-object p0, p0, Lup7;->c:Leq7;
-
-    check-cast p0, Lxy6;
-
-    iget-object p0, p0, Lxy6;->w0:Ljava/util/concurrent/ConcurrentHashMap;
-
-    invoke-virtual {p0, p1}, Ljava/util/concurrent/ConcurrentHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, Ljava/util/List;
-
-    if-nez p0, :cond_5
-
-    goto :goto_2
-
-    :cond_5
-    move-object v0, p0
-
-    :goto_2
-    new-instance p0, Ljava/util/ArrayList;
-
-    const/16 p1, 0xa
-
-    invoke-static {v0, p1}, Lr43;->k0(Ljava/lang/Iterable;I)I
-
-    move-result p1
-
-    invoke-direct {p0, p1}, Ljava/util/ArrayList;-><init>(I)V
-
-    invoke-interface {v0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
-
-    move-result-object p1
-
-    :goto_3
-    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_6
-
-    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lwp7;
-
-    invoke-static {v0}, Lxqd;->A(Lwp7;)Lrp7;
-
-    move-result-object v0
-
-    invoke-virtual {p0, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    goto :goto_3
-
-    :cond_6
     return-object p0
+.end method
+
+.method public final writeToParcel(Landroid/os/Parcel;I)V
+    .locals 0
+
+    const/4 p0, 0x1
+
+    invoke-virtual {p1, p0}, Landroid/os/Parcel;->writeInt(I)V
+
+    return-void
 .end method

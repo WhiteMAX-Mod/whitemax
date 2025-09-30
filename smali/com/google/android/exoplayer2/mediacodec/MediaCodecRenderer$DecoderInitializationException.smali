@@ -8,13 +8,34 @@
 
 .field public final b:Z
 
-.field public final c:Lm78;
+.field public final c:Lje8;
 
 .field public final o:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>(Ldz5;Lcom/google/android/exoplayer2/mediacodec/MediaCodecUtil$DecoderQueryException;ZI)V
+.method public constructor <init>(Ljava/lang/String;Ljava/lang/Throwable;Ljava/lang/String;ZLje8;Ljava/lang/String;)V
+    .locals 0
+
+    .line 5
+    invoke-direct {p0, p1, p2}, Ljava/lang/Exception;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    .line 6
+    iput-object p3, p0, Lcom/google/android/exoplayer2/mediacodec/MediaCodecRenderer$DecoderInitializationException;->a:Ljava/lang/String;
+
+    .line 7
+    iput-boolean p4, p0, Lcom/google/android/exoplayer2/mediacodec/MediaCodecRenderer$DecoderInitializationException;->b:Z
+
+    .line 8
+    iput-object p5, p0, Lcom/google/android/exoplayer2/mediacodec/MediaCodecRenderer$DecoderInitializationException;->c:Lje8;
+
+    .line 9
+    iput-object p6, p0, Lcom/google/android/exoplayer2/mediacodec/MediaCodecRenderer$DecoderInitializationException;->o:Ljava/lang/String;
+
+    return-void
+.end method
+
+.method public constructor <init>(Lv46;Lcom/google/android/exoplayer2/mediacodec/MediaCodecUtil$DecoderQueryException;ZI)V
     .locals 10
 
     .line 1
@@ -48,7 +69,7 @@
 
     move-result-object v4
 
-    iget-object v6, p1, Ldz5;->s0:Ljava/lang/String;
+    iget-object v6, p1, Lv46;->v0:Ljava/lang/String;
 
     if-gez p4, :cond_0
 
@@ -97,28 +118,7 @@
     move v7, p3
 
     .line 4
-    invoke-direct/range {v3 .. v9}, Lcom/google/android/exoplayer2/mediacodec/MediaCodecRenderer$DecoderInitializationException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;Ljava/lang/String;ZLm78;Ljava/lang/String;)V
-
-    return-void
-.end method
-
-.method public constructor <init>(Ljava/lang/String;Ljava/lang/Throwable;Ljava/lang/String;ZLm78;Ljava/lang/String;)V
-    .locals 0
-
-    .line 5
-    invoke-direct {p0, p1, p2}, Ljava/lang/Exception;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    .line 6
-    iput-object p3, p0, Lcom/google/android/exoplayer2/mediacodec/MediaCodecRenderer$DecoderInitializationException;->a:Ljava/lang/String;
-
-    .line 7
-    iput-boolean p4, p0, Lcom/google/android/exoplayer2/mediacodec/MediaCodecRenderer$DecoderInitializationException;->b:Z
-
-    .line 8
-    iput-object p5, p0, Lcom/google/android/exoplayer2/mediacodec/MediaCodecRenderer$DecoderInitializationException;->c:Lm78;
-
-    .line 9
-    iput-object p6, p0, Lcom/google/android/exoplayer2/mediacodec/MediaCodecRenderer$DecoderInitializationException;->o:Ljava/lang/String;
+    invoke-direct/range {v3 .. v9}, Lcom/google/android/exoplayer2/mediacodec/MediaCodecRenderer$DecoderInitializationException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;Ljava/lang/String;ZLje8;Ljava/lang/String;)V
 
     return-void
 .end method

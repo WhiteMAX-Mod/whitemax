@@ -1,188 +1,99 @@
 .class public final Lzoa;
-.super Ljava/lang/Object;
+.super Lcpa;
 .source "SourceFile"
 
-# interfaces
-.implements Landroid/view/ActionMode$Callback;
 
+# static fields
+.field public static final CREATOR:Landroid/os/Parcelable$Creator;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroid/os/Parcelable$Creator<",
+            "Lzoa;",
+            ">;"
+        }
+    .end annotation
+.end field
 
-# instance fields
-.field public final a:Landroid/content/Context;
-
-.field public final b:Ly07;
-
-.field public final c:I
-
-.field public final d:I
+.field public static final b:Lzoa;
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;Ly07;II)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 3
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lzoa;
 
-    iput-object p1, p0, Lzoa;->a:Landroid/content/Context;
+    const-wide v1, 0x7fffffffffffffffL
 
-    iput-object p2, p0, Lzoa;->b:Ly07;
+    invoke-direct {v0, v1, v2}, Lcpa;-><init>(J)V
 
-    iput p3, p0, Lzoa;->c:I
+    sput-object v0, Lzoa;->b:Lzoa;
 
-    iput p4, p0, Lzoa;->d:I
+    new-instance v0, Lba8;
+
+    const/16 v1, 0x18
+
+    invoke-direct {v0, v1}, Lba8;-><init>(I)V
+
+    sput-object v0, Lzoa;->CREATOR:Landroid/os/Parcelable$Creator;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onActionItemClicked(Landroid/view/ActionMode;Landroid/view/MenuItem;)Z
-    .locals 5
-
-    if-eqz p2, :cond_0
-
-    invoke-interface {p2}, Landroid/view/MenuItem;->getItemId()I
-
-    move-result p1
-
-    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object p1
-
-    goto :goto_0
-
-    :cond_0
-    const/4 p1, 0x0
-
-    :goto_0
-    const/4 p2, 0x0
-
-    if-nez p1, :cond_1
-
-    goto :goto_2
-
-    :cond_1
-    invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
-
-    move-result p1
-
-    const v0, 0x1020022
-
-    if-ne p1, v0, :cond_5
-
-    iget-object p1, p0, Lzoa;->a:Landroid/content/Context;
-
-    invoke-static {p1}, Lzx7;->X(Landroid/content/Context;)Ljava/lang/CharSequence;
-
-    move-result-object p1
-
-    if-nez p1, :cond_2
-
-    goto :goto_2
-
-    :cond_2
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
-    invoke-interface {p1}, Ljava/lang/CharSequence;->length()I
-
-    move-result v1
-
-    move v2, p2
-
-    :goto_1
-    if-ge v2, v1, :cond_4
-
-    invoke-interface {p1, v2}, Ljava/lang/CharSequence;->charAt(I)C
-
-    move-result v3
-
-    invoke-static {v3}, Ljava/lang/Character;->isDigit(C)Z
-
-    move-result v4
-
-    if-eqz v4, :cond_3
-
-    invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/Appendable;
-
-    :cond_3
-    add-int/lit8 v2, v2, 0x1
-
-    goto :goto_1
-
-    :cond_4
-    iget p1, p0, Lzoa;->d:I
-
-    invoke-static {p1, v0}, Lj8e;->d1(ILjava/lang/CharSequence;)Ljava/lang/CharSequence;
-
-    move-result-object p1
-
-    invoke-virtual {p1}, Ljava/lang/Object;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    iget v0, p0, Lzoa;->c:I
-
-    iget-object p0, p0, Lzoa;->b:Ly07;
-
-    check-cast p0, Leg3;
-
-    invoke-virtual {p0, v0, p1}, Leg3;->H0(ILjava/lang/String;)V
-
-    invoke-virtual {p1}, Ljava/lang/String;->length()I
-
-    move-result p0
-
-    if-lez p0, :cond_5
-
-    const/4 p0, 0x1
-
-    return p0
-
-    :cond_5
-    :goto_2
-    return p2
-.end method
-
-.method public final onCreateActionMode(Landroid/view/ActionMode;Landroid/view/Menu;)Z
+.method public final describeContents()I
     .locals 0
 
-    const/4 p0, 0x1
+    const/4 p0, 0x0
 
     return p0
 .end method
 
-.method public final onDestroyActionMode(Landroid/view/ActionMode;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public final onPrepareActionMode(Landroid/view/ActionMode;Landroid/view/Menu;)Z
+.method public final equals(Ljava/lang/Object;)Z
     .locals 1
 
-    const p0, 0x1020022
+    const/4 v0, 0x1
 
-    invoke-interface {p2, p0}, Landroid/view/Menu;->findItem(I)Landroid/view/MenuItem;
-
-    move-result-object p1
-
-    const/4 v0, 0x0
-
-    if-nez p1, :cond_0
+    if-ne p0, p1, :cond_0
 
     return v0
 
     :cond_0
-    invoke-interface {p2}, Landroid/view/Menu;->clear()V
+    instance-of p0, p1, Lzoa;
 
-    invoke-interface {p1}, Landroid/view/MenuItem;->getTitle()Ljava/lang/CharSequence;
+    if-nez p0, :cond_1
 
-    move-result-object p1
+    const/4 p0, 0x0
 
-    invoke-interface {p2, v0, p0, v0, p1}, Landroid/view/Menu;->add(IIILjava/lang/CharSequence;)Landroid/view/MenuItem;
+    return p0
+
+    :cond_1
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 0
+
+    const p0, 0x6f5f0da2
+
+    return p0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 0
+
+    const-string p0, "Indeterminate"
+
+    return-object p0
+.end method
+
+.method public final writeToParcel(Landroid/os/Parcel;I)V
+    .locals 0
 
     const/4 p0, 0x1
 
-    return p0
+    invoke-virtual {p1, p0}, Landroid/os/Parcel;->writeInt(I)V
+
+    return-void
 .end method

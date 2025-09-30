@@ -1,25 +1,22 @@
-.class public abstract synthetic Lcre;
+.class public interface abstract Lcre;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final synthetic a:Ln25;
+# virtual methods
+.method public abstract a(Lire;)V
+.end method
 
+.method public c(II)Lgt7;
+    .locals 0
 
-# direct methods
-.method static constructor <clinit>()V
-    .locals 2
+    sget-object p0, Lp27;->c:Lp27;
 
-    invoke-static {}, Ljava/lang/Thread$State;->values()[Ljava/lang/Thread$State;
+    return-object p0
+.end method
 
-    move-result-object v0
+.method public abstract d(Lbre;)V
+.end method
 
-    new-instance v1, Ln25;
-
-    invoke-direct {v1, v0}, Ln25;-><init>([Ljava/lang/Enum;)V
-
-    sput-object v1, Lcre;->a:Ln25;
-
-    return-void
+.method public abstract release()V
 .end method

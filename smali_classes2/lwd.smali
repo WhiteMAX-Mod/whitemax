@@ -1,107 +1,78 @@
 .class public final Llwd;
-.super Ljava/lang/Object;
+.super Lure;
 .source "SourceFile"
 
-
-# static fields
-.field public static final synthetic e:[Lbc7;
-
-.field public static final f:Ljava/lang/String;
+# interfaces
+.implements Lpc6;
 
 
 # instance fields
-.field public final a:Ltm4;
-
-.field public final b:Ltm4;
-
-.field public final c:Ltm4;
-
-.field public final d:Ltm4;
+.field public final synthetic X:Landroid/view/ViewGroup;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 8
+.method public constructor <init>(Landroid/view/ViewGroup;Lkotlin/coroutines/Continuation;)V
+    .locals 0
 
-    new-instance v0, Lnlb;
+    iput-object p1, p0, Llwd;->X:Landroid/view/ViewGroup;
 
-    const-class v1, Llwd;
+    const/4 p1, 0x2
 
-    const-string v2, "messageController"
-
-    const-string v3, "getMessageController()Lru/ok/tamtam/messages/MessageController;"
-
-    const/4 v4, 0x0
-
-    invoke-direct {v0, v1, v2, v3, v4}, Lnlb;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
-
-    sget-object v2, Llcc;->a:Lmcc;
-
-    const-string v3, "workerService"
-
-    const-string v5, "getWorkerService()Lru/ok/tamtam/services/WorkerService;"
-
-    invoke-static {v2, v1, v3, v5, v4}, Lm26;->g(Lmcc;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)Lnlb;
-
-    move-result-object v2
-
-    new-instance v3, Lnlb;
-
-    const-string v5, "fileAttachUploader"
-
-    const-string v6, "getFileAttachUploader()Lru/ok/tamtam/FileAttachUploader;"
-
-    invoke-direct {v3, v1, v5, v6, v4}, Lnlb;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
-
-    new-instance v5, Lnlb;
-
-    const-string v6, "clientPrefs"
-
-    const-string v7, "getClientPrefs()Lru/ok/tamtam/prefs/ClientPrefs;"
-
-    invoke-direct {v5, v1, v6, v7, v4}, Lnlb;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
-
-    const/4 v6, 0x4
-
-    new-array v6, v6, [Lbc7;
-
-    aput-object v0, v6, v4
-
-    const/4 v0, 0x1
-
-    aput-object v2, v6, v0
-
-    const/4 v0, 0x2
-
-    aput-object v3, v6, v0
-
-    const/4 v0, 0x3
-
-    aput-object v5, v6, v0
-
-    sput-object v6, Llwd;->e:[Lbc7;
-
-    invoke-virtual {v1}, Ljava/lang/Class;->getName()Ljava/lang/String;
-
-    move-result-object v0
-
-    sput-object v0, Llwd;->f:Ljava/lang/String;
+    invoke-direct {p0, p1, p2}, Lure;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
-.method public constructor <init>(Ltm4;Ltm4;Ltm4;Ltm4;)V
+
+# virtual methods
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    check-cast p1, Ljava/lang/Boolean;
 
-    iput-object p1, p0, Llwd;->a:Ltm4;
+    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
 
-    iput-object p2, p0, Llwd;->b:Ltm4;
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    iput-object p3, p0, Llwd;->c:Ltm4;
+    invoke-virtual {p0, p1, p2}, Llwd;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    iput-object p4, p0, Llwd;->d:Ltm4;
+    move-result-object p0
 
-    return-void
+    check-cast p0, Llwd;
+
+    sget-object p1, Lylf;->a:Lylf;
+
+    invoke-virtual {p0, p1}, Llwd;->o(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object p1
+.end method
+
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 0
+
+    new-instance p1, Llwd;
+
+    iget-object p0, p0, Llwd;->X:Landroid/view/ViewGroup;
+
+    invoke-direct {p1, p0, p2}, Llwd;-><init>(Landroid/view/ViewGroup;Lkotlin/coroutines/Continuation;)V
+
+    return-object p1
+.end method
+
+.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
+
+    invoke-static {p1}, Lqe5;->V(Ljava/lang/Object;)V
+
+    sget-object p1, Lone/me/sharedata/ShareDataPickerScreen;->E0:Lj97;
+
+    const/4 v0, 0x0
+
+    iget-object p0, p0, Llwd;->X:Landroid/view/ViewGroup;
+
+    invoke-static {p0, p1, v0}, Ln2e;->b(Landroid/view/View;Lj97;Lbc6;)V
+
+    sget-object p0, Lylf;->a:Lylf;
+
+    return-object p0
 .end method

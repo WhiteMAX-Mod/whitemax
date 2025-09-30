@@ -2,26 +2,49 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Le16;
+
 
 # instance fields
-.field public a:Z
+.field public final a:I
 
-.field public b:I
+.field public final b:J
 
-.field public c:I
 
-.field public d:I
+# direct methods
+.method public constructor <init>()V
+    .locals 2
 
-.field public e:I
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-.field public f:I
+    sget v0, Lw5c;->oneme_folder_widget_section_empty_view_type:I
 
-.field public g:Ljava/lang/Object;
+    iput v0, p0, Lj16;->a:I
 
-.field public h:Ljava/lang/Object;
+    sget v0, Lw5c;->oneme_folder_widget_section_empty_id:I
 
-.field public i:Ljava/lang/Object;
+    int-to-long v0, v0
 
-.field public j:F
+    iput-wide v0, p0, Lj16;->b:J
 
-.field public k:Landroid/view/View;
+    return-void
+.end method
+
+
+# virtual methods
+.method public final getItemId()J
+    .locals 2
+
+    iget-wide v0, p0, Lj16;->b:J
+
+    return-wide v0
+.end method
+
+.method public final m()I
+    .locals 0
+
+    iget p0, p0, Lj16;->a:I
+
+    return p0
+.end method

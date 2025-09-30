@@ -1,151 +1,99 @@
-.class public final synthetic Lqpa;
-.super Ljava/lang/Object;
+.class public final Lqpa;
+.super Lx2;
 .source "SourceFile"
-
-# interfaces
-.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final synthetic c:I
 
-.field public final synthetic b:Lfqa;
-
-.field public final synthetic c:Ljava/lang/String;
+.field public final synthetic o:Lrpa;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lfqa;Ljava/lang/String;I)V
+.method public constructor <init>(Lrpa;I)V
     .locals 0
 
-    iput p3, p0, Lqpa;->a:I
+    iput p2, p0, Lqpa;->c:I
 
-    iput-object p1, p0, Lqpa;->b:Lfqa;
+    iput-object p1, p0, Lqpa;->o:Lrpa;
 
-    iput-object p2, p0, Lqpa;->c:Ljava/lang/String;
+    const/16 p1, 0x9
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    packed-switch p2, :pswitch_data_0
 
-    return-void
-.end method
+    sget-object p2, Lfpa;->a:Lfpa;
 
+    invoke-direct {p0, p1, p2}, Lx2;-><init>(ILjava/lang/Object;)V
 
-# virtual methods
-.method public final run()V
-    .locals 5
-
-    iget v0, p0, Lqpa;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    iget-object v0, p0, Lqpa;->b:Lfqa;
-
-    iget-object v1, v0, Lfqa;->N:Leqa;
-
-    if-eqz v1, :cond_0
-
-    iget-object p0, p0, Lqpa;->c:Ljava/lang/String;
-
-    invoke-interface {v1, v0, p0}, Leqa;->g(Lfqa;Ljava/lang/String;)V
-
-    :cond_0
     return-void
 
     :pswitch_0
-    iget-object v0, p0, Lqpa;->b:Lfqa;
+    sget-object p2, Lmpa;->a:Lmpa;
 
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    const-string v2, "create sdp error "
-
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object p0, p0, Lqpa;->c:Ljava/lang/String;
-
-    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    const-string v2, "create.sdp2"
-
-    invoke-virtual {v0, v1, v2}, Lfqa;->j(Ljava/lang/String;Ljava/lang/String;)V
-
-    iget-object v1, v0, Lfqa;->x:Lv1c;
-
-    const-string v2, "onCreateSDPFailed"
-
-    const/4 v3, 0x0
-
-    sget-object v4, Loyd;->c:Loyd;
-
-    invoke-virtual {v1, v4, v2, v3}, Lv1c;->log(Loyd;Ljava/lang/String;Ljava/lang/String;)V
-
-    iget-object v1, v0, Lfqa;->r:Landroid/os/Handler;
-
-    new-instance v2, Lupa;
-
-    const/4 v3, 0x1
-
-    invoke-direct {v2, v0, p0, v3}, Lupa;-><init>(Lfqa;Ljava/lang/String;I)V
-
-    invoke-virtual {v1, v2}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
-
-    return-void
-
-    :pswitch_1
-    iget-object v0, p0, Lqpa;->b:Lfqa;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    const-string v2, "set sdp error "
-
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object p0, p0, Lqpa;->c:Ljava/lang/String;
-
-    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    const-string v2, "set.sdp2"
-
-    invoke-virtual {v0, v1, v2}, Lfqa;->j(Ljava/lang/String;Ljava/lang/String;)V
-
-    iget-object v1, v0, Lfqa;->x:Lv1c;
-
-    const-string v2, "setSdpFailed"
-
-    const/4 v3, 0x0
-
-    sget-object v4, Loyd;->c:Loyd;
-
-    invoke-virtual {v1, v4, v2, v3}, Lv1c;->log(Loyd;Ljava/lang/String;Ljava/lang/String;)V
-
-    iget-object v1, v0, Lfqa;->r:Landroid/os/Handler;
-
-    new-instance v2, Lupa;
-
-    const/4 v3, 0x3
-
-    invoke-direct {v2, v0, p0, v3}, Lupa;-><init>(Lfqa;Ljava/lang/String;I)V
-
-    invoke-virtual {v1, v2}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
+    invoke-direct {p0, p1, p2}, Lx2;-><init>(ILjava/lang/Object;)V
 
     return-void
 
     nop
 
     :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_0
+    .end packed-switch
+.end method
+
+
+# virtual methods
+.method public final x0(Ljava/lang/Object;Ljava/lang/Object;)V
+    .locals 1
+
+    iget v0, p0, Lqpa;->c:I
+
+    packed-switch v0, :pswitch_data_0
+
+    check-cast p2, Lopa;
+
+    check-cast p1, Lopa;
+
+    invoke-static {p1, p2}, Lvyg;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_0
+
+    iget-object p0, p0, Lqpa;->o:Lrpa;
+
+    invoke-static {p0, p2}, Lrpa;->w(Lrpa;Lopa;)V
+
+    invoke-virtual {p0}, Lrpa;->x()V
+
+    :cond_0
+    return-void
+
+    :pswitch_0
+    check-cast p2, Ljpa;
+
+    check-cast p1, Ljpa;
+
+    invoke-static {p1, p2}, Lvyg;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_1
+
+    iget-object p0, p0, Lqpa;->o:Lrpa;
+
+    invoke-static {p0, p2}, Lrpa;->v(Lrpa;Ljpa;)V
+
+    invoke-virtual {p0}, Lrpa;->x()V
+
+    :cond_1
+    return-void
+
+    nop
+
+    :pswitch_data_0
     .packed-switch 0x0
-        :pswitch_1
         :pswitch_0
     .end packed-switch
 .end method

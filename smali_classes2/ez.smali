@@ -2,826 +2,300 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lofc;
+
+# static fields
+.field public static final synthetic f:[Lxi7;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final a:Lzy;
 
-.field public final b:Ljava/lang/Object;
+.field public final b:Landroid/app/Application;
+
+.field public final c:Lkotlinx/coroutines/internal/ContextScope;
+
+.field public final d:Lncb;
+
+.field public final e:Lyce;
 
 
 # direct methods
-.method public constructor <init>(Lgz;)V
-    .locals 1
+.method static constructor <clinit>()V
+    .locals 4
 
-    const/4 v0, 0x0
+    new-instance v0, Lmo9;
 
-    iput v0, p0, Lez;->a:I
+    const-string v1, "updateAttachJob"
 
-    .line 1
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const-string v2, "getUpdateAttachJob()Lkotlinx/coroutines/Job;"
 
-    .line 2
-    iput-object p1, p0, Lez;->b:Ljava/lang/Object;
+    const-class v3, Lez;
+
+    invoke-direct {v0, v3, v1, v2}, Lmo9;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;)V
+
+    sget-object v1, Ljpc;->a:Lkpc;
+
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    const/4 v1, 0x1
+
+    new-array v1, v1, [Lxi7;
+
+    const/4 v2, 0x0
+
+    aput-object v0, v1, v2
+
+    sput-object v1, Lez;->f:[Lxi7;
 
     return-void
 .end method
 
-.method public constructor <init>(Ljava/util/Set;)V
-    .locals 2
+.method public constructor <init>(Lxwe;Lzy;Landroid/app/Application;)V
+    .locals 0
 
-    const/4 v0, 0x1
-
-    iput v0, p0, Lez;->a:I
-
-    .line 3
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 4
-    new-instance v0, Ljava/util/ArrayList;
+    iput-object p2, p0, Lez;->a:Lzy;
 
-    invoke-interface {p1}, Ljava/util/Set;->size()I
+    iput-object p3, p0, Lez;->b:Landroid/app/Application;
 
-    move-result v1
+    check-cast p1, Laga;
 
-    invoke-direct {v0, v1}, Ljava/util/ArrayList;-><init>(I)V
-
-    iput-object v0, p0, Lez;->b:Ljava/lang/Object;
-
-    .line 5
-    invoke-interface {p1}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
+    invoke-virtual {p1}, Laga;->a()Ls04;
 
     move-result-object p1
 
-    :cond_0
-    :goto_0
-    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
+    invoke-static {p1}, Lb0b;->a(Lq04;)Lkotlinx/coroutines/internal/ContextScope;
 
-    move-result v0
+    move-result-object p1
 
-    if-eqz v0, :cond_1
+    iput-object p1, p0, Lez;->c:Lkotlinx/coroutines/internal/ContextScope;
 
-    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    invoke-static {}, Lmq0;->L()Lncb;
 
-    move-result-object v0
+    move-result-object p1
 
-    check-cast v0, Lofc;
+    iput-object p1, p0, Lez;->d:Lncb;
 
-    if-eqz v0, :cond_0
+    const/4 p1, 0x0
 
-    .line 6
-    iget-object v1, p0, Lez;->b:Ljava/lang/Object;
+    invoke-static {p1}, Lzce;->a(Ljava/lang/Object;)Lyce;
 
-    check-cast v1, Ljava/util/ArrayList;
+    move-result-object p1
 
-    invoke-virtual {v1, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    goto :goto_0
-
-    :cond_1
-    return-void
-.end method
-
-.method public constructor <init>([Lofc;)V
-    .locals 4
-
-    const/4 v0, 0x1
-
-    iput v0, p0, Lez;->a:I
-
-    .line 7
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 8
-    new-instance v0, Ljava/util/ArrayList;
-
-    array-length v1, p1
-
-    invoke-direct {v0, v1}, Ljava/util/ArrayList;-><init>(I)V
-
-    iput-object v0, p0, Lez;->b:Ljava/lang/Object;
-
-    .line 9
-    array-length v0, p1
-
-    const/4 v1, 0x0
-
-    :goto_0
-    if-ge v1, v0, :cond_1
-
-    aget-object v2, p1, v1
-
-    if-eqz v2, :cond_0
-
-    .line 10
-    iget-object v3, p0, Lez;->b:Ljava/lang/Object;
-
-    check-cast v3, Ljava/util/ArrayList;
-
-    invoke-virtual {v3, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    :cond_0
-    add-int/lit8 v1, v1, 0x1
-
-    goto :goto_0
-
-    :cond_1
-    return-void
-.end method
-
-.method public static l(Ljava/lang/Exception;Ljava/lang/String;)V
-    .locals 1
-
-    const-string v0, "ForwardingRequestListener"
-
-    invoke-static {v0, p1, p0}, Lda5;->c(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    return-void
-.end method
-
-.method private final m(Ljava/lang/String;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method private final n(Ljava/lang/String;Ljava/lang/String;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method private final o(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;Ljava/util/Map;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method private final p(Ljava/lang/String;Ljava/lang/String;Ljava/util/Map;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method private final q(Ljava/lang/String;Ljava/lang/String;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method private r(Ljava/lang/String;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method private s(Lvv6;Ljava/lang/Object;Ljava/lang/String;Z)V
-    .locals 0
-
-    return-void
-.end method
-
-.method private t(Lvv6;Ljava/lang/String;Z)V
-    .locals 0
-
-    return-void
-.end method
-
-.method private u(Ljava/lang/String;Ljava/lang/String;Z)V
-    .locals 0
+    iput-object p1, p0, Lez;->e:Lyce;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public a(Lvv6;Ljava/lang/String;Z)V
-    .locals 4
+.method public final a(Lwfc;)Lxy;
+    .locals 13
 
-    iget v0, p0, Lez;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    iget-object p0, p0, Lez;->b:Ljava/lang/Object;
-
-    check-cast p0, Ljava/util/ArrayList;
-
-    invoke-virtual {p0}, Ljava/util/ArrayList;->size()I
-
-    move-result v0
-
-    const/4 v1, 0x0
-
-    :goto_0
-    if-ge v1, v0, :cond_0
-
-    invoke-virtual {p0, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Lofc;
-
-    :try_start_0
-    invoke-interface {v2, p1, p2, p3}, Lofc;->a(Lvv6;Ljava/lang/String;Z)V
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
-
-    goto :goto_1
-
-    :catch_0
-    move-exception v2
-
-    const-string v3, "InternalListener exception in onRequestSuccess"
-
-    invoke-static {v2, v3}, Lez;->l(Ljava/lang/Exception;Ljava/lang/String;)V
-
-    :goto_1
-    add-int/lit8 v1, v1, 0x1
-
-    goto :goto_0
-
-    :cond_0
-    :pswitch_0
-    return-void
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public b(Lvv6;Ljava/lang/Object;Ljava/lang/String;Z)V
-    .locals 4
-
-    iget v0, p0, Lez;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    iget-object p0, p0, Lez;->b:Ljava/lang/Object;
-
-    check-cast p0, Ljava/util/ArrayList;
-
-    invoke-virtual {p0}, Ljava/util/ArrayList;->size()I
-
-    move-result v0
-
-    const/4 v1, 0x0
-
-    :goto_0
-    if-ge v1, v0, :cond_0
-
-    invoke-virtual {p0, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Lofc;
-
-    :try_start_0
-    invoke-interface {v2, p1, p2, p3, p4}, Lofc;->b(Lvv6;Ljava/lang/Object;Ljava/lang/String;Z)V
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
-
-    goto :goto_1
-
-    :catch_0
-    move-exception v2
-
-    const-string v3, "InternalListener exception in onRequestStart"
-
-    invoke-static {v2, v3}, Lez;->l(Ljava/lang/Exception;Ljava/lang/String;)V
-
-    :goto_1
-    add-int/lit8 v1, v1, 0x1
-
-    goto :goto_0
-
-    :cond_0
-    :pswitch_0
-    return-void
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public final c(Lvv6;Ljava/lang/String;Ljava/lang/Throwable;Z)V
-    .locals 4
-
-    iget v0, p0, Lez;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    iget-object p0, p0, Lez;->b:Ljava/lang/Object;
-
-    check-cast p0, Ljava/util/ArrayList;
-
-    invoke-virtual {p0}, Ljava/util/ArrayList;->size()I
-
-    move-result v0
-
-    const/4 v1, 0x0
-
-    :goto_0
-    if-ge v1, v0, :cond_0
-
-    invoke-virtual {p0, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Lofc;
-
-    :try_start_0
-    invoke-interface {v2, p1, p2, p3, p4}, Lofc;->c(Lvv6;Ljava/lang/String;Ljava/lang/Throwable;Z)V
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
-
-    goto :goto_1
-
-    :catch_0
-    move-exception v2
-
-    const-string v3, "InternalListener exception in onRequestFailure"
-
-    invoke-static {v2, v3}, Lez;->l(Ljava/lang/Exception;Ljava/lang/String;)V
-
-    :goto_1
-    add-int/lit8 v1, v1, 0x1
-
-    goto :goto_0
-
-    :cond_0
-    return-void
-
-    :pswitch_0
-    iget-object p0, p0, Lez;->b:Ljava/lang/Object;
-
-    check-cast p0, Lgz;
-
-    const/4 p1, 0x1
-
-    iput-boolean p1, p0, Lgz;->l:Z
-
-    iget-object p0, p0, Lgz;->h:Lfz;
-
-    if-eqz p0, :cond_1
-
-    invoke-interface {p0}, Lfz;->j()V
-
-    :cond_1
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public final d(Ljava/lang/String;Ljava/lang/String;)V
-    .locals 4
-
-    iget v0, p0, Lez;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    iget-object p0, p0, Lez;->b:Ljava/lang/Object;
-
-    check-cast p0, Ljava/util/ArrayList;
-
-    invoke-virtual {p0}, Ljava/util/ArrayList;->size()I
-
-    move-result v0
-
-    const/4 v1, 0x0
-
-    :goto_0
-    if-ge v1, v0, :cond_0
-
-    invoke-virtual {p0, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Lofc;
-
-    :try_start_0
-    invoke-interface {v2, p1, p2}, Lofc;->d(Ljava/lang/String;Ljava/lang/String;)V
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
-
-    goto :goto_1
-
-    :catch_0
-    move-exception v2
-
-    const-string v3, "InternalListener exception in onProducerStart"
-
-    invoke-static {v2, v3}, Lez;->l(Ljava/lang/Exception;Ljava/lang/String;)V
-
-    :goto_1
-    add-int/lit8 v1, v1, 0x1
-
-    goto :goto_0
-
-    :cond_0
-    :pswitch_0
-    return-void
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public final e(Ljava/lang/String;Ljava/lang/String;)V
-    .locals 4
-
-    iget v0, p0, Lez;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    iget-object p0, p0, Lez;->b:Ljava/lang/Object;
-
-    check-cast p0, Ljava/util/ArrayList;
-
-    invoke-virtual {p0}, Ljava/util/ArrayList;->size()I
-
-    move-result v0
-
-    const/4 v1, 0x0
-
-    :goto_0
-    if-ge v1, v0, :cond_0
-
-    invoke-virtual {p0, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Lofc;
-
-    :try_start_0
-    invoke-interface {v2, p1, p2}, Lofc;->e(Ljava/lang/String;Ljava/lang/String;)V
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
-
-    goto :goto_1
-
-    :catch_0
-    move-exception v2
-
-    const-string v3, "InternalListener exception in onProducerFinishWithCancellation"
-
-    invoke-static {v2, v3}, Lez;->l(Ljava/lang/Exception;Ljava/lang/String;)V
-
-    :goto_1
-    add-int/lit8 v1, v1, 0x1
-
-    goto :goto_0
-
-    :cond_0
-    :pswitch_0
-    return-void
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public f(Ljava/lang/String;Ljava/lang/String;Z)V
-    .locals 4
-
-    iget v0, p0, Lez;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    iget-object p0, p0, Lez;->b:Ljava/lang/Object;
-
-    check-cast p0, Ljava/util/ArrayList;
-
-    invoke-virtual {p0}, Ljava/util/ArrayList;->size()I
-
-    move-result v0
-
-    const/4 v1, 0x0
-
-    :goto_0
-    if-ge v1, v0, :cond_0
-
-    invoke-virtual {p0, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Lofc;
-
-    :try_start_0
-    invoke-interface {v2, p1, p2, p3}, Lofc;->f(Ljava/lang/String;Ljava/lang/String;Z)V
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
-
-    goto :goto_1
-
-    :catch_0
-    move-exception v2
-
-    const-string v3, "InternalListener exception in onProducerFinishWithSuccess"
-
-    invoke-static {v2, v3}, Lez;->l(Ljava/lang/Exception;Ljava/lang/String;)V
-
-    :goto_1
-    add-int/lit8 v1, v1, 0x1
-
-    goto :goto_0
-
-    :cond_0
-    :pswitch_0
-    return-void
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public final g(Ljava/lang/String;)V
-    .locals 4
-
-    iget v0, p0, Lez;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    iget-object p0, p0, Lez;->b:Ljava/lang/Object;
-
-    check-cast p0, Ljava/util/ArrayList;
-
-    invoke-virtual {p0}, Ljava/util/ArrayList;->size()I
-
-    move-result v0
-
-    const/4 v1, 0x0
-
-    :goto_0
-    if-ge v1, v0, :cond_0
-
-    invoke-virtual {p0, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Lofc;
-
-    :try_start_0
-    invoke-interface {v2, p1}, Lofc;->g(Ljava/lang/String;)V
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
-
-    goto :goto_1
-
-    :catch_0
-    move-exception v2
-
-    const-string v3, "InternalListener exception in onIntermediateChunkStart"
-
-    invoke-static {v2, v3}, Lez;->l(Ljava/lang/Exception;Ljava/lang/String;)V
-
-    :goto_1
-    add-int/lit8 v1, v1, 0x1
-
-    goto :goto_0
-
-    :cond_0
-    :pswitch_0
-    return-void
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public final h(Ljava/lang/String;)Z
-    .locals 4
-
-    iget v0, p0, Lez;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    iget-object p0, p0, Lez;->b:Ljava/lang/Object;
-
-    check-cast p0, Ljava/util/ArrayList;
-
-    invoke-virtual {p0}, Ljava/util/ArrayList;->size()I
-
-    move-result v0
-
-    const/4 v1, 0x0
-
-    move v2, v1
-
-    :goto_0
-    if-ge v2, v0, :cond_1
-
-    invoke-virtual {p0, v2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
-
-    move-result-object v3
-
-    check-cast v3, Lofc;
-
-    invoke-interface {v3, p1}, Lofc;->h(Ljava/lang/String;)Z
-
-    move-result v3
-
-    if-eqz v3, :cond_0
+    instance-of v0, p1, Lsfc;
 
     const/4 v1, 0x1
 
-    goto :goto_1
+    const-string v2, "/"
 
-    :cond_0
-    add-int/lit8 v2, v2, 0x1
+    const/4 v3, 0x0
+
+    const/16 v4, 0x64
+
+    iget-object p0, p0, Lez;->b:Landroid/app/Application;
+
+    if-eqz v0, :cond_2
+
+    check-cast p1, Lsfc;
+
+    iget v0, p1, Lsfc;->c:F
+
+    iget-wide v5, p1, Lsfc;->b:J
+
+    iget-object v7, p1, Lsfc;->f:Ljava/lang/Long;
+
+    iget-object v8, p1, Lsfc;->e:Ljava/lang/Long;
+
+    const-wide/16 v9, 0x0
+
+    if-eqz v8, :cond_0
+
+    if-eqz v7, :cond_0
+
+    invoke-virtual {v8}, Ljava/lang/Long;->longValue()J
+
+    move-result-wide v11
+
+    cmp-long v8, v11, v9
+
+    if-nez v8, :cond_0
+
+    invoke-virtual {v7}, Ljava/lang/Number;->longValue()J
+
+    move-result-wide v7
+
+    long-to-float v7, v7
+
+    int-to-float v4, v4
+
+    div-float v4, v0, v4
+
+    mul-float/2addr v4, v7
+
+    float-to-long v7, v4
 
     goto :goto_0
+
+    :cond_0
+    iget-wide v7, p1, Lsfc;->d:J
+
+    :goto_0
+    cmp-long v4, v5, v9
+
+    if-lez v4, :cond_1
+
+    invoke-static {v7, v8, v3, p0}, Lo3f;->t(JZLandroid/content/Context;)Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-static {v5, v6}, Lo3f;->m(J)I
+
+    move-result v4
+
+    invoke-static {v5, v6, v4, v1, p0}, Lo3f;->s(JIZLandroid/content/Context;)Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-static {v3, v2, p0}, Lsq3;->h(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p0
+
+    new-instance v1, Lt2f;
+
+    invoke-direct {v1, p0}, Lt2f;-><init>(Ljava/lang/CharSequence;)V
+
+    goto :goto_1
 
     :cond_1
-    :goto_1
-    return v1
+    sget p0, Ljka;->x:I
 
-    :pswitch_0
-    const/4 p0, 0x0
+    new-instance v1, Lp2f;
 
-    return p0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public final i(Ljava/lang/String;Ljava/lang/String;Ljava/util/Map;)V
-    .locals 4
-
-    iget v0, p0, Lez;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    iget-object p0, p0, Lez;->b:Ljava/lang/Object;
-
-    check-cast p0, Ljava/util/ArrayList;
-
-    invoke-virtual {p0}, Ljava/util/ArrayList;->size()I
-
-    move-result v0
-
-    const/4 v1, 0x0
-
-    :goto_0
-    if-ge v1, v0, :cond_0
-
-    invoke-virtual {p0, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Lofc;
-
-    :try_start_0
-    invoke-interface {v2, p1, p2, p3}, Lofc;->i(Ljava/lang/String;Ljava/lang/String;Ljava/util/Map;)V
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
-
-    goto :goto_1
-
-    :catch_0
-    move-exception v2
-
-    const-string v3, "InternalListener exception in onProducerFinishWithSuccess"
-
-    invoke-static {v2, v3}, Lez;->l(Ljava/lang/Exception;Ljava/lang/String;)V
+    invoke-direct {v1, p0}, Lp2f;-><init>(I)V
 
     :goto_1
-    add-int/lit8 v1, v1, 0x1
+    new-instance p0, Lty;
 
-    goto :goto_0
+    iget-wide v2, p1, Lsfc;->a:J
 
-    :cond_0
-    :pswitch_0
-    return-void
+    invoke-direct {p0, v2, v3, v0, v1}, Lty;-><init>(JFLu2f;)V
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
+    return-object p0
 
-.method public final j(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;Ljava/util/Map;)V
-    .locals 4
+    :cond_2
+    instance-of v0, p1, Lvfc;
 
-    iget v0, p0, Lez;->a:I
+    if-eqz v0, :cond_3
 
-    packed-switch v0, :pswitch_data_0
+    check-cast p1, Lvfc;
 
-    iget-object p0, p0, Lez;->b:Ljava/lang/Object;
+    iget v0, p1, Lvfc;->c:F
 
-    check-cast p0, Ljava/util/ArrayList;
+    iget-wide v5, p1, Lvfc;->b:J
 
-    invoke-virtual {p0}, Ljava/util/ArrayList;->size()I
+    long-to-float v7, v5
 
-    move-result v0
+    int-to-float v4, v4
 
-    const/4 v1, 0x0
+    div-float v4, v0, v4
 
-    :goto_0
-    if-ge v1, v0, :cond_0
+    mul-float/2addr v4, v7
 
-    invoke-virtual {p0, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+    float-to-long v7, v4
 
-    move-result-object v2
+    invoke-static {v7, v8, v3, p0}, Lo3f;->t(JZLandroid/content/Context;)Ljava/lang/String;
 
-    check-cast v2, Lofc;
+    move-result-object v3
 
-    :try_start_0
-    invoke-interface {v2, p1, p2, p3, p4}, Lofc;->j(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;Ljava/util/Map;)V
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+    invoke-static {v5, v6}, Lo3f;->m(J)I
 
-    goto :goto_1
+    move-result v4
 
-    :catch_0
-    move-exception v2
+    invoke-static {v5, v6, v4, v1, p0}, Lo3f;->s(JIZLandroid/content/Context;)Ljava/lang/String;
 
-    const-string v3, "InternalListener exception in onProducerFinishWithFailure"
+    move-result-object p0
 
-    invoke-static {v2, v3}, Lez;->l(Ljava/lang/Exception;Ljava/lang/String;)V
+    invoke-static {v3, v2, p0}, Lsq3;->h(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
-    :goto_1
-    add-int/lit8 v1, v1, 0x1
+    move-result-object p0
 
-    goto :goto_0
+    new-instance v1, Lt2f;
 
-    :cond_0
-    :pswitch_0
-    return-void
+    invoke-direct {v1, p0}, Lt2f;-><init>(Ljava/lang/CharSequence;)V
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
+    new-instance p0, Lwy;
 
-.method public k(Ljava/lang/String;)V
-    .locals 4
+    iget-wide v2, p1, Lvfc;->a:J
 
-    iget v0, p0, Lez;->a:I
+    invoke-direct {p0, v2, v3, v0, v1}, Lwy;-><init>(JFLt2f;)V
 
-    packed-switch v0, :pswitch_data_0
+    return-object p0
 
-    iget-object p0, p0, Lez;->b:Ljava/lang/Object;
+    :cond_3
+    instance-of v0, p1, Ltfc;
 
-    check-cast p0, Ljava/util/ArrayList;
+    if-eqz v0, :cond_4
 
-    invoke-virtual {p0}, Ljava/util/ArrayList;->size()I
+    check-cast p1, Ltfc;
 
-    move-result v0
+    iget-wide v2, p1, Ltfc;->b:J
 
-    const/4 v1, 0x0
+    invoke-static {v2, v3, v1, p0}, Lo3f;->t(JZLandroid/content/Context;)Ljava/lang/String;
 
-    :goto_0
-    if-ge v1, v0, :cond_0
+    move-result-object p0
 
-    invoke-virtual {p0, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+    new-instance v0, Lt2f;
 
-    move-result-object v2
+    invoke-direct {v0, p0}, Lt2f;-><init>(Ljava/lang/CharSequence;)V
 
-    check-cast v2, Lofc;
+    new-instance p0, Luy;
 
-    :try_start_0
-    invoke-interface {v2, p1}, Lofc;->k(Ljava/lang/String;)V
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+    iget-wide v1, p1, Ltfc;->a:J
 
-    goto :goto_1
+    invoke-direct {p0, v1, v2, v0}, Luy;-><init>(JLt2f;)V
 
-    :catch_0
-    move-exception v2
+    return-object p0
 
-    const-string v3, "InternalListener exception in onRequestCancellation"
+    :cond_4
+    instance-of v0, p1, Lufc;
 
-    invoke-static {v2, v3}, Lez;->l(Ljava/lang/Exception;Ljava/lang/String;)V
+    if-eqz v0, :cond_5
 
-    :goto_1
-    add-int/lit8 v1, v1, 0x1
+    check-cast p1, Lufc;
 
-    goto :goto_0
+    iget-wide v2, p1, Lufc;->b:J
 
-    :cond_0
-    :pswitch_0
-    return-void
+    invoke-static {v2, v3, v1, p0}, Lo3f;->t(JZLandroid/content/Context;)Ljava/lang/String;
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    move-result-object p0
+
+    new-instance v0, Lt2f;
+
+    invoke-direct {v0, p0}, Lt2f;-><init>(Ljava/lang/CharSequence;)V
+
+    new-instance p0, Lvy;
+
+    iget-wide v1, p1, Lufc;->a:J
+
+    invoke-direct {p0, v1, v2, v0}, Lvy;-><init>(JLt2f;)V
+
+    return-object p0
+
+    :cond_5
+    new-instance p0, Lkotlin/NoWhenBranchMatchedException;
+
+    invoke-direct {p0}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
+
+    throw p0
 .end method

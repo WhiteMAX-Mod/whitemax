@@ -3,157 +3,70 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lj73;
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field public final a:Ly42;
+.field public final synthetic a:I
 
-.field public final b:Ljava/lang/CharSequence;
+.field public final synthetic b:Lj73;
 
-.field public final c:Ljava/lang/String;
+.field public final synthetic c:Landroid/graphics/drawable/Drawable;
 
-.field public final d:J
+.field public final synthetic o:Ljava/lang/Runnable;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
-
-    const-class v0, Li73;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
-
-    return-void
-.end method
-
-.method public constructor <init>(Ly42;Ljava/lang/CharSequence;Ljava/lang/String;)V
+.method public synthetic constructor <init>(Lj73;Landroid/graphics/drawable/Drawable;Ljava/lang/Runnable;I)V
     .locals 0
 
+    iput p4, p0, Li73;->a:I
+
+    iput-object p1, p0, Li73;->b:Lj73;
+
+    iput-object p2, p0, Li73;->c:Landroid/graphics/drawable/Drawable;
+
+    iput-object p3, p0, Li73;->o:Ljava/lang/Runnable;
+
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Li73;->a:Ly42;
-
-    iput-object p2, p0, Li73;->b:Ljava/lang/CharSequence;
-
-    iput-object p3, p0, Li73;->c:Ljava/lang/String;
-
-    iget-wide p1, p1, Ly42;->a:J
-
-    iput-wide p1, p0, Li73;->d:J
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
-
-    if-ne p0, p1, :cond_0
-
-    goto :goto_1
-
-    :cond_0
-    instance-of v0, p1, Li73;
-
-    if-nez v0, :cond_1
-
-    goto :goto_0
-
-    :cond_1
-    check-cast p1, Li73;
-
-    iget-wide v0, p1, Li73;->d:J
-
-    iget-wide v2, p0, Li73;->d:J
-
-    cmp-long v0, v2, v0
-
-    if-eqz v0, :cond_2
-
-    goto :goto_0
-
-    :cond_2
-    iget-object v0, p0, Li73;->b:Ljava/lang/CharSequence;
-
-    iget-object v1, p1, Li73;->b:Ljava/lang/CharSequence;
-
-    invoke-static {v0, v1}, Lxq7;->d(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_3
-
-    goto :goto_0
-
-    :cond_3
-    iget-object p0, p0, Li73;->c:Ljava/lang/String;
-
-    iget-object p1, p1, Li73;->c:Ljava/lang/String;
-
-    invoke-virtual {p0, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
-
-    move-result p0
-
-    if-nez p0, :cond_4
-
-    :goto_0
-    const/4 p0, 0x0
-
-    return p0
-
-    :cond_4
-    :goto_1
-    const/4 p0, 0x1
-
-    return p0
-.end method
-
-.method public final getId()J
+.method public final run()V
     .locals 2
 
-    iget-wide v0, p0, Li73;->d:J
+    iget v0, p0, Li73;->a:I
 
-    return-wide v0
-.end method
+    packed-switch v0, :pswitch_data_0
 
-.method public final hashCode()I
-    .locals 4
+    iget-object v0, p0, Li73;->c:Landroid/graphics/drawable/Drawable;
 
-    const-class v0, Li73;
+    iget-object v1, p0, Li73;->o:Ljava/lang/Runnable;
 
-    invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
+    iget-object p0, p0, Li73;->b:Lj73;
 
-    move-result-object v0
+    invoke-static {p0, v0, v1}, Lj73;->C(Lj73;Landroid/graphics/drawable/Drawable;Ljava/lang/Runnable;)V
 
-    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
+    return-void
 
-    move-result v0
+    :pswitch_0
+    iget-object v0, p0, Li73;->c:Landroid/graphics/drawable/Drawable;
 
-    const/16 v1, 0x1f
+    iget-object v1, p0, Li73;->o:Ljava/lang/Runnable;
 
-    mul-int/2addr v0, v1
+    iget-object p0, p0, Li73;->b:Lj73;
 
-    iget-wide v2, p0, Li73;->d:J
+    invoke-static {p0, v0, v1}, Lj73;->C(Lj73;Landroid/graphics/drawable/Drawable;Ljava/lang/Runnable;)V
 
-    invoke-static {v0, v1, v2, v3}, Lzge;->m(IIJ)I
+    return-void
 
-    move-result v0
+    nop
 
-    iget-object v2, p0, Li73;->b:Ljava/lang/CharSequence;
-
-    invoke-static {v2, v0, v1}, Lm26;->d(Ljava/lang/CharSequence;II)I
-
-    move-result v0
-
-    iget-object p0, p0, Li73;->c:Ljava/lang/String;
-
-    invoke-virtual {p0}, Ljava/lang/Object;->hashCode()I
-
-    move-result p0
-
-    add-int/2addr p0, v0
-
-    return p0
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

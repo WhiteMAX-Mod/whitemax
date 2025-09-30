@@ -1,127 +1,133 @@
 .class public final Lvm1;
-.super Ltk9;
+.super Landroid/media/VolumeProvider;
 .source "SourceFile"
 
 
 # instance fields
-.field public final g:J
+.field public final synthetic a:I
 
-.field public final h:Z
+.field public final synthetic b:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(JZ)V
+.method public constructor <init>(Lone/me/calls/impl/service/CallServiceImpl;)V
     .locals 1
 
-    const/4 v0, 0x5
+    const/4 v0, 0x0
 
-    invoke-direct {p0, v0}, Ltk9;-><init>(I)V
+    iput v0, p0, Lvm1;->a:I
 
-    iput-wide p1, p0, Lvm1;->g:J
+    iput-object p1, p0, Lvm1;->b:Ljava/lang/Object;
 
-    iput-boolean p3, p0, Lvm1;->h:Z
+    const/4 p1, 0x1
+
+    .line 2
+    invoke-direct {p0, p1, v0, v0}, Landroid/media/VolumeProvider;-><init>(III)V
+
+    return-void
+.end method
+
+.method public constructor <init>(Lzdb;III)V
+    .locals 1
+
+    const/4 v0, 0x1
+
+    iput v0, p0, Lvm1;->a:I
+
+    .line 1
+    iput-object p1, p0, Lvm1;->b:Ljava/lang/Object;
+
+    invoke-direct {p0, p2, p3, p4}, Landroid/media/VolumeProvider;-><init>(III)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 7
+.method public final onAdjustVolume(I)V
+    .locals 3
 
-    const/4 v0, 0x1
+    iget v0, p0, Lvm1;->a:I
 
-    if-ne p0, p1, :cond_0
+    packed-switch v0, :pswitch_data_0
 
-    return v0
+    iget-object p0, p0, Lvm1;->b:Ljava/lang/Object;
 
-    :cond_0
-    instance-of v1, p1, Lvm1;
+    check-cast p0, Lzdb;
+
+    iget-object v0, p0, Lzdb;->f:Landroid/os/Handler;
+
+    new-instance v1, Lydb;
+
+    const/4 v2, 0x1
+
+    invoke-direct {v1, p0, p1, v2}, Lydb;-><init>(Lzdb;II)V
+
+    invoke-static {v0, v1}, Lnrf;->Y(Landroid/os/Handler;Ljava/lang/Runnable;)V
+
+    return-void
+
+    :pswitch_0
+    const-string v0, "CallServiceTag"
+
+    const-string v1, "on adjust volume changed: "
+
+    invoke-static {p1, v1, v0}, Lsg0;->k(ILjava/lang/String;Ljava/lang/String;)V
+
+    iget-object p0, p0, Lvm1;->b:Ljava/lang/Object;
+
+    check-cast p0, Lone/me/calls/impl/service/CallServiceImpl;
+
+    iget-object p0, p0, Lone/me/calls/impl/service/CallServiceImpl;->Y:Lzte;
+
+    invoke-virtual {p0}, Lzte;->getValue()Ljava/lang/Object;
+
+    move-result-object p0
+
+    check-cast p0, Lz71;
+
+    invoke-virtual {p0}, Lz71;->a()V
+
+    return-void
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public onSetVolumeTo(I)V
+    .locals 3
+
+    iget v0, p0, Lvm1;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    invoke-super {p0, p1}, Landroid/media/VolumeProvider;->onSetVolumeTo(I)V
+
+    return-void
+
+    :pswitch_0
+    iget-object p0, p0, Lvm1;->b:Ljava/lang/Object;
+
+    check-cast p0, Lzdb;
+
+    iget-object v0, p0, Lzdb;->f:Landroid/os/Handler;
+
+    new-instance v1, Lydb;
 
     const/4 v2, 0x0
 
-    if-nez v1, :cond_1
+    invoke-direct {v1, p0, p1, v2}, Lydb;-><init>(Lzdb;II)V
 
-    return v2
+    invoke-static {v0, v1}, Lnrf;->Y(Landroid/os/Handler;Ljava/lang/Runnable;)V
 
-    :cond_1
-    check-cast p1, Lvm1;
+    return-void
 
-    iget-wide v3, p0, Lvm1;->g:J
+    nop
 
-    iget-wide v5, p1, Lvm1;->g:J
-
-    cmp-long v1, v3, v5
-
-    if-eqz v1, :cond_2
-
-    return v2
-
-    :cond_2
-    iget-boolean p0, p0, Lvm1;->h:Z
-
-    iget-boolean p1, p1, Lvm1;->h:Z
-
-    if-eq p0, p1, :cond_3
-
-    return v2
-
-    :cond_3
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 2
-
-    iget-wide v0, p0, Lvm1;->g:J
-
-    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
-
-    move-result v0
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget-boolean p0, p0, Lvm1;->h:Z
-
-    invoke-static {p0}, Ljava/lang/Boolean;->hashCode(Z)I
-
-    move-result p0
-
-    add-int/2addr p0, v0
-
-    return p0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 4
-
-    const-string v0, "Chat(chatId="
-
-    const-string v1, ", isVideo="
-
-    iget-wide v2, p0, Lvm1;->g:J
-
-    iget-boolean p0, p0, Lvm1;->h:Z
-
-    invoke-static {v2, v3, v0, v1, p0}, Lpg0;->i(JLjava/lang/String;Ljava/lang/String;Z)Ljava/lang/StringBuilder;
-
-    move-result-object p0
-
-    const-string v0, ")"
-
-    invoke-virtual {p0, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public final x()Z
-    .locals 0
-
-    iget-boolean p0, p0, Lvm1;->h:Z
-
-    return p0
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_0
+    .end packed-switch
 .end method

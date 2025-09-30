@@ -1,8 +1,3 @@
-.class public interface abstract Lt4;
-.super Ljava/lang/Object;
+.class public abstract Lt4;
+.super Lya6;
 .source "SourceFile"
-
-
-# virtual methods
-.method public abstract a(Landroid/view/View;)Z
-.end method

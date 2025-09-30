@@ -1,270 +1,572 @@
-.class public final Lmcf;
-.super Llcf;
+.class public Lmcf;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lxu0;
 
 
 # instance fields
-.field public final d:Landroid/util/SparseIntArray;
+.field public final A0:I
 
-.field public final e:Landroid/os/Parcel;
+.field public final B0:Ll37;
 
-.field public final f:I
+.field public final C0:Ll37;
 
-.field public final g:I
+.field public final D0:I
 
-.field public final h:Ljava/lang/String;
+.field public final E0:Z
 
-.field public i:I
+.field public final F0:Z
 
-.field public j:I
+.field public final G0:Z
 
-.field public k:I
+.field public final H0:Licf;
+
+.field public final I0:Lw37;
+
+.field public final X:I
+
+.field public final Y:I
+
+.field public final Z:I
+
+.field public final a:I
+
+.field public final b:I
+
+.field public final c:I
+
+.field public final o:I
+
+.field public final r0:I
+
+.field public final s0:I
+
+.field public final t0:I
+
+.field public final u0:Z
+
+.field public final v0:Ll37;
+
+.field public final w0:I
+
+.field public final x0:Ll37;
+
+.field public final y0:I
+
+.field public final z0:I
 
 
 # direct methods
-.method public constructor <init>(Landroid/os/Parcel;)V
-    .locals 8
+.method static constructor <clinit>()V
+    .locals 1
 
-    .line 1
-    invoke-virtual {p1}, Landroid/os/Parcel;->dataPosition()I
+    new-instance v0, Lkcf;
 
-    move-result v2
-
-    invoke-virtual {p1}, Landroid/os/Parcel;->dataSize()I
-
-    move-result v3
-
-    new-instance v5, Ljs;
-
-    const/4 v0, 0x0
-
-    .line 2
-    invoke-direct {v5, v0}, Lbod;-><init>(I)V
-
-    .line 3
-    new-instance v6, Ljs;
-
-    .line 4
-    invoke-direct {v6, v0}, Lbod;-><init>(I)V
-
-    .line 5
-    new-instance v7, Ljs;
-
-    .line 6
-    invoke-direct {v7, v0}, Lbod;-><init>(I)V
-
-    .line 7
-    const-string v4, ""
-
-    move-object v0, p0
-
-    move-object v1, p1
-
-    invoke-direct/range {v0 .. v7}, Lmcf;-><init>(Landroid/os/Parcel;IILjava/lang/String;Ljs;Ljs;Ljs;)V
+    invoke-direct {v0}, Lkcf;-><init>()V
 
     return-void
 .end method
 
-.method public constructor <init>(Landroid/os/Parcel;IILjava/lang/String;Ljs;Ljs;Ljs;)V
-    .locals 0
+.method public constructor <init>(Lkcf;)V
+    .locals 1
 
-    .line 8
-    invoke-direct {p0, p5, p6, p7}, Llcf;-><init>(Ljs;Ljs;Ljs;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 9
-    new-instance p5, Landroid/util/SparseIntArray;
+    iget v0, p1, Lkcf;->a:I
 
-    invoke-direct {p5}, Landroid/util/SparseIntArray;-><init>()V
+    iput v0, p0, Lmcf;->a:I
 
-    iput-object p5, p0, Lmcf;->d:Landroid/util/SparseIntArray;
+    iget v0, p1, Lkcf;->b:I
 
-    const/4 p5, -0x1
+    iput v0, p0, Lmcf;->b:I
 
-    .line 10
-    iput p5, p0, Lmcf;->i:I
+    iget v0, p1, Lkcf;->c:I
 
-    .line 11
-    iput p5, p0, Lmcf;->k:I
+    iput v0, p0, Lmcf;->c:I
 
-    .line 12
-    iput-object p1, p0, Lmcf;->e:Landroid/os/Parcel;
+    iget v0, p1, Lkcf;->d:I
 
-    .line 13
-    iput p2, p0, Lmcf;->f:I
+    iput v0, p0, Lmcf;->o:I
 
-    .line 14
-    iput p3, p0, Lmcf;->g:I
+    iget v0, p1, Lkcf;->e:I
 
-    .line 15
-    iput p2, p0, Lmcf;->j:I
+    iput v0, p0, Lmcf;->X:I
 
-    .line 16
-    iput-object p4, p0, Lmcf;->h:Ljava/lang/String;
+    iget v0, p1, Lkcf;->f:I
+
+    iput v0, p0, Lmcf;->Y:I
+
+    iget v0, p1, Lkcf;->g:I
+
+    iput v0, p0, Lmcf;->Z:I
+
+    iget v0, p1, Lkcf;->h:I
+
+    iput v0, p0, Lmcf;->r0:I
+
+    iget v0, p1, Lkcf;->i:I
+
+    iput v0, p0, Lmcf;->s0:I
+
+    iget v0, p1, Lkcf;->j:I
+
+    iput v0, p0, Lmcf;->t0:I
+
+    iget-boolean v0, p1, Lkcf;->k:Z
+
+    iput-boolean v0, p0, Lmcf;->u0:Z
+
+    iget-object v0, p1, Lkcf;->l:Ll37;
+
+    iput-object v0, p0, Lmcf;->v0:Ll37;
+
+    iget v0, p1, Lkcf;->m:I
+
+    iput v0, p0, Lmcf;->w0:I
+
+    iget-object v0, p1, Lkcf;->n:Ll37;
+
+    iput-object v0, p0, Lmcf;->x0:Ll37;
+
+    iget v0, p1, Lkcf;->o:I
+
+    iput v0, p0, Lmcf;->y0:I
+
+    iget v0, p1, Lkcf;->p:I
+
+    iput v0, p0, Lmcf;->z0:I
+
+    iget v0, p1, Lkcf;->q:I
+
+    iput v0, p0, Lmcf;->A0:I
+
+    iget-object v0, p1, Lkcf;->r:Ll37;
+
+    iput-object v0, p0, Lmcf;->B0:Ll37;
+
+    iget-object v0, p1, Lkcf;->s:Ll37;
+
+    iput-object v0, p0, Lmcf;->C0:Ll37;
+
+    iget v0, p1, Lkcf;->t:I
+
+    iput v0, p0, Lmcf;->D0:I
+
+    iget-boolean v0, p1, Lkcf;->u:Z
+
+    iput-boolean v0, p0, Lmcf;->E0:Z
+
+    iget-boolean v0, p1, Lkcf;->v:Z
+
+    iput-boolean v0, p0, Lmcf;->F0:Z
+
+    iget-boolean v0, p1, Lkcf;->w:Z
+
+    iput-boolean v0, p0, Lmcf;->G0:Z
+
+    iget-object v0, p1, Lkcf;->x:Licf;
+
+    iput-object v0, p0, Lmcf;->H0:Licf;
+
+    iget-object p1, p1, Lkcf;->y:Lw37;
+
+    iput-object p1, p0, Lmcf;->I0:Lw37;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Lmcf;
-    .locals 8
+.method public equals(Ljava/lang/Object;)Z
+    .locals 4
 
-    new-instance v0, Lmcf;
+    const/4 v0, 0x1
 
-    iget-object v1, p0, Lmcf;->e:Landroid/os/Parcel;
+    if-ne p0, p1, :cond_0
 
-    invoke-virtual {v1}, Landroid/os/Parcel;->dataPosition()I
+    return v0
+
+    :cond_0
+    const/4 v1, 0x0
+
+    if-eqz p1, :cond_2
+
+    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    move-result-object v2
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    move-result-object v3
+
+    if-eq v2, v3, :cond_1
+
+    goto/16 :goto_0
+
+    :cond_1
+    check-cast p1, Lmcf;
+
+    iget v2, p0, Lmcf;->a:I
+
+    iget v3, p1, Lmcf;->a:I
+
+    if-ne v2, v3, :cond_2
+
+    iget v2, p0, Lmcf;->b:I
+
+    iget v3, p1, Lmcf;->b:I
+
+    if-ne v2, v3, :cond_2
+
+    iget v2, p0, Lmcf;->c:I
+
+    iget v3, p1, Lmcf;->c:I
+
+    if-ne v2, v3, :cond_2
+
+    iget v2, p0, Lmcf;->o:I
+
+    iget v3, p1, Lmcf;->o:I
+
+    if-ne v2, v3, :cond_2
+
+    iget v2, p0, Lmcf;->X:I
+
+    iget v3, p1, Lmcf;->X:I
+
+    if-ne v2, v3, :cond_2
+
+    iget v2, p0, Lmcf;->Y:I
+
+    iget v3, p1, Lmcf;->Y:I
+
+    if-ne v2, v3, :cond_2
+
+    iget v2, p0, Lmcf;->Z:I
+
+    iget v3, p1, Lmcf;->Z:I
+
+    if-ne v2, v3, :cond_2
+
+    iget v2, p0, Lmcf;->r0:I
+
+    iget v3, p1, Lmcf;->r0:I
+
+    if-ne v2, v3, :cond_2
+
+    iget-boolean v2, p0, Lmcf;->u0:Z
+
+    iget-boolean v3, p1, Lmcf;->u0:Z
+
+    if-ne v2, v3, :cond_2
+
+    iget v2, p0, Lmcf;->s0:I
+
+    iget v3, p1, Lmcf;->s0:I
+
+    if-ne v2, v3, :cond_2
+
+    iget v2, p0, Lmcf;->t0:I
+
+    iget v3, p1, Lmcf;->t0:I
+
+    if-ne v2, v3, :cond_2
+
+    iget-object v2, p0, Lmcf;->v0:Ll37;
+
+    iget-object v3, p1, Lmcf;->v0:Ll37;
+
+    invoke-virtual {v2, v3}, Ll37;->equals(Ljava/lang/Object;)Z
 
     move-result v2
 
-    iget v3, p0, Lmcf;->j:I
+    if-eqz v2, :cond_2
 
-    iget v4, p0, Lmcf;->f:I
+    iget v2, p0, Lmcf;->w0:I
 
-    if-ne v3, v4, :cond_0
+    iget v3, p1, Lmcf;->w0:I
 
-    iget v3, p0, Lmcf;->g:I
+    if-ne v2, v3, :cond_2
 
-    :cond_0
-    new-instance v4, Ljava/lang/StringBuilder;
+    iget-object v2, p0, Lmcf;->x0:Ll37;
 
-    invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
+    iget-object v3, p1, Lmcf;->x0:Ll37;
 
-    iget-object v5, p0, Lmcf;->h:Ljava/lang/String;
+    invoke-virtual {v2, v3}, Ll37;->equals(Ljava/lang/Object;)Z
 
-    const-string v6, "  "
+    move-result v2
 
-    invoke-static {v4, v5, v6}, Lm26;->j(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    if-eqz v2, :cond_2
 
-    move-result-object v4
+    iget v2, p0, Lmcf;->y0:I
 
-    iget-object v6, p0, Llcf;->b:Ljs;
+    iget v3, p1, Lmcf;->y0:I
 
-    iget-object v7, p0, Llcf;->c:Ljs;
+    if-ne v2, v3, :cond_2
 
-    iget-object v5, p0, Llcf;->a:Ljs;
+    iget v2, p0, Lmcf;->z0:I
 
-    invoke-direct/range {v0 .. v7}, Lmcf;-><init>(Landroid/os/Parcel;IILjava/lang/String;Ljs;Ljs;Ljs;)V
+    iget v3, p1, Lmcf;->z0:I
 
-    return-object v0
-.end method
+    if-ne v2, v3, :cond_2
 
-.method public final e(I)Z
-    .locals 2
+    iget v2, p0, Lmcf;->A0:I
 
-    :goto_0
-    iget v0, p0, Lmcf;->j:I
+    iget v3, p1, Lmcf;->A0:I
 
-    iget v1, p0, Lmcf;->g:I
+    if-ne v2, v3, :cond_2
 
-    if-ge v0, v1, :cond_2
+    iget-object v2, p0, Lmcf;->B0:Ll37;
 
-    iget v0, p0, Lmcf;->k:I
+    iget-object v3, p1, Lmcf;->B0:Ll37;
 
-    if-ne v0, p1, :cond_0
+    invoke-virtual {v2, v3}, Ll37;->equals(Ljava/lang/Object;)Z
 
-    goto :goto_1
+    move-result v2
 
-    :cond_0
-    invoke-static {v0}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
+    if-eqz v2, :cond_2
 
-    move-result-object v0
+    iget-object v2, p0, Lmcf;->C0:Ll37;
 
-    invoke-static {p1}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
+    iget-object v3, p1, Lmcf;->C0:Ll37;
 
-    move-result-object v1
+    invoke-virtual {v2, v3}, Ll37;->equals(Ljava/lang/Object;)Z
 
-    invoke-virtual {v0, v1}, Ljava/lang/String;->compareTo(Ljava/lang/String;)I
+    move-result v2
 
-    move-result v0
+    if-eqz v2, :cond_2
 
-    if-lez v0, :cond_1
+    iget v2, p0, Lmcf;->D0:I
 
-    goto :goto_2
+    iget v3, p1, Lmcf;->D0:I
 
-    :cond_1
-    iget v0, p0, Lmcf;->j:I
+    if-ne v2, v3, :cond_2
 
-    iget-object v1, p0, Lmcf;->e:Landroid/os/Parcel;
+    iget-boolean v2, p0, Lmcf;->E0:Z
 
-    invoke-virtual {v1, v0}, Landroid/os/Parcel;->setDataPosition(I)V
+    iget-boolean v3, p1, Lmcf;->E0:Z
 
-    invoke-virtual {v1}, Landroid/os/Parcel;->readInt()I
+    if-ne v2, v3, :cond_2
 
-    move-result v0
+    iget-boolean v2, p0, Lmcf;->F0:Z
 
-    invoke-virtual {v1}, Landroid/os/Parcel;->readInt()I
+    iget-boolean v3, p1, Lmcf;->F0:Z
 
-    move-result v1
+    if-ne v2, v3, :cond_2
 
-    iput v1, p0, Lmcf;->k:I
+    iget-boolean v2, p0, Lmcf;->G0:Z
 
-    iget v1, p0, Lmcf;->j:I
+    iget-boolean v3, p1, Lmcf;->G0:Z
 
-    add-int/2addr v1, v0
+    if-ne v2, v3, :cond_2
 
-    iput v1, p0, Lmcf;->j:I
+    iget-object v2, p0, Lmcf;->H0:Licf;
 
-    goto :goto_0
+    iget-object v3, p1, Lmcf;->H0:Licf;
 
-    :cond_2
-    iget p0, p0, Lmcf;->k:I
+    invoke-virtual {v2, v3}, Licf;->equals(Ljava/lang/Object;)Z
 
-    if-ne p0, p1, :cond_3
+    move-result v2
 
-    :goto_1
-    const/4 p0, 0x1
+    if-eqz v2, :cond_2
 
-    return p0
+    iget-object p0, p0, Lmcf;->I0:Lw37;
 
-    :cond_3
-    :goto_2
-    const/4 p0, 0x0
+    iget-object p1, p1, Lmcf;->I0:Lw37;
 
-    return p0
-.end method
-
-.method public final i(I)V
-    .locals 5
-
-    iget v0, p0, Lmcf;->i:I
-
-    iget-object v1, p0, Lmcf;->d:Landroid/util/SparseIntArray;
-
-    iget-object v2, p0, Lmcf;->e:Landroid/os/Parcel;
-
-    if-ltz v0, :cond_0
-
-    invoke-virtual {v1, v0}, Landroid/util/SparseIntArray;->get(I)I
-
-    move-result v0
-
-    invoke-virtual {v2}, Landroid/os/Parcel;->dataPosition()I
-
-    move-result v3
-
-    sub-int v4, v3, v0
-
-    invoke-virtual {v2, v0}, Landroid/os/Parcel;->setDataPosition(I)V
-
-    invoke-virtual {v2, v4}, Landroid/os/Parcel;->writeInt(I)V
-
-    invoke-virtual {v2, v3}, Landroid/os/Parcel;->setDataPosition(I)V
-
-    :cond_0
-    iput p1, p0, Lmcf;->i:I
-
-    invoke-virtual {v2}, Landroid/os/Parcel;->dataPosition()I
+    invoke-virtual {p0, p1}, Lw37;->equals(Ljava/lang/Object;)Z
 
     move-result p0
 
-    invoke-virtual {v1, p1, p0}, Landroid/util/SparseIntArray;->put(II)V
+    if-eqz p0, :cond_2
 
-    const/4 p0, 0x0
+    return v0
 
-    invoke-virtual {v2, p0}, Landroid/os/Parcel;->writeInt(I)V
+    :cond_2
+    :goto_0
+    return v1
+.end method
 
-    invoke-virtual {v2, p1}, Landroid/os/Parcel;->writeInt(I)V
+.method public hashCode()I
+    .locals 3
 
-    return-void
+    iget v0, p0, Lmcf;->a:I
+
+    const/16 v1, 0x1f
+
+    add-int/2addr v0, v1
+
+    mul-int/2addr v0, v1
+
+    iget v2, p0, Lmcf;->b:I
+
+    add-int/2addr v0, v2
+
+    mul-int/2addr v0, v1
+
+    iget v2, p0, Lmcf;->c:I
+
+    add-int/2addr v0, v2
+
+    mul-int/2addr v0, v1
+
+    iget v2, p0, Lmcf;->o:I
+
+    add-int/2addr v0, v2
+
+    mul-int/2addr v0, v1
+
+    iget v2, p0, Lmcf;->X:I
+
+    add-int/2addr v0, v2
+
+    mul-int/2addr v0, v1
+
+    iget v2, p0, Lmcf;->Y:I
+
+    add-int/2addr v0, v2
+
+    mul-int/2addr v0, v1
+
+    iget v2, p0, Lmcf;->Z:I
+
+    add-int/2addr v0, v2
+
+    mul-int/2addr v0, v1
+
+    iget v2, p0, Lmcf;->r0:I
+
+    add-int/2addr v0, v2
+
+    mul-int/2addr v0, v1
+
+    iget-boolean v2, p0, Lmcf;->u0:Z
+
+    add-int/2addr v0, v2
+
+    mul-int/2addr v0, v1
+
+    iget v2, p0, Lmcf;->s0:I
+
+    add-int/2addr v0, v2
+
+    mul-int/2addr v0, v1
+
+    iget v2, p0, Lmcf;->t0:I
+
+    add-int/2addr v0, v2
+
+    mul-int/2addr v0, v1
+
+    iget-object v2, p0, Lmcf;->v0:Ll37;
+
+    invoke-virtual {v2}, Ll37;->hashCode()I
+
+    move-result v2
+
+    add-int/2addr v2, v0
+
+    mul-int/2addr v2, v1
+
+    iget v0, p0, Lmcf;->w0:I
+
+    add-int/2addr v2, v0
+
+    mul-int/2addr v2, v1
+
+    iget-object v0, p0, Lmcf;->x0:Ll37;
+
+    invoke-virtual {v0}, Ll37;->hashCode()I
+
+    move-result v0
+
+    add-int/2addr v0, v2
+
+    mul-int/2addr v0, v1
+
+    iget v2, p0, Lmcf;->y0:I
+
+    add-int/2addr v0, v2
+
+    mul-int/2addr v0, v1
+
+    iget v2, p0, Lmcf;->z0:I
+
+    add-int/2addr v0, v2
+
+    mul-int/2addr v0, v1
+
+    iget v2, p0, Lmcf;->A0:I
+
+    add-int/2addr v0, v2
+
+    mul-int/2addr v0, v1
+
+    iget-object v2, p0, Lmcf;->B0:Ll37;
+
+    invoke-virtual {v2}, Ll37;->hashCode()I
+
+    move-result v2
+
+    add-int/2addr v2, v0
+
+    mul-int/2addr v2, v1
+
+    iget-object v0, p0, Lmcf;->C0:Ll37;
+
+    invoke-virtual {v0}, Ll37;->hashCode()I
+
+    move-result v0
+
+    add-int/2addr v0, v2
+
+    mul-int/2addr v0, v1
+
+    iget v2, p0, Lmcf;->D0:I
+
+    add-int/2addr v0, v2
+
+    mul-int/2addr v0, v1
+
+    iget-boolean v2, p0, Lmcf;->E0:Z
+
+    add-int/2addr v0, v2
+
+    mul-int/2addr v0, v1
+
+    iget-boolean v2, p0, Lmcf;->F0:Z
+
+    add-int/2addr v0, v2
+
+    mul-int/2addr v0, v1
+
+    iget-boolean v2, p0, Lmcf;->G0:Z
+
+    add-int/2addr v0, v2
+
+    mul-int/2addr v0, v1
+
+    iget-object v2, p0, Lmcf;->H0:Licf;
+
+    iget-object v2, v2, Licf;->a:Lp37;
+
+    invoke-virtual {v2}, Lp37;->hashCode()I
+
+    move-result v2
+
+    add-int/2addr v2, v0
+
+    mul-int/2addr v2, v1
+
+    iget-object p0, p0, Lmcf;->I0:Lw37;
+
+    invoke-virtual {p0}, Lw37;->hashCode()I
+
+    move-result p0
+
+    add-int/2addr p0, v2
+
+    return p0
 .end method

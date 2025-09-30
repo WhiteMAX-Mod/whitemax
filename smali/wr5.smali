@@ -1,104 +1,93 @@
 .class public final Lwr5;
-.super Ljava/util/concurrent/atomic/AtomicReference;
+.super Ljava/lang/Object;
 .source "SourceFile"
-
-# interfaces
-.implements Ll9e;
-.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field public final a:Lj9e;
+.field public a:I
 
-.field public volatile b:Z
+.field public b:Z
 
+.field public c:I
 
-# direct methods
-.method public constructor <init>(Lj9e;)V
-    .locals 0
+.field public d:I
 
-    invoke-direct {p0}, Ljava/util/concurrent/atomic/AtomicReference;-><init>()V
+.field public e:I
 
-    iput-object p1, p0, Lwr5;->a:Lj9e;
+.field public f:I
 
-    return-void
-.end method
+.field public g:I
+
+.field public h:I
+
+.field public i:Z
 
 
 # virtual methods
-.method public final cancel()V
-    .locals 0
+.method public final toString()Ljava/lang/String;
+    .locals 2
 
-    invoke-static {p0}, Lem4;->a(Ljava/util/concurrent/atomic/AtomicReference;)Z
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    return-void
-.end method
+    const-string v1, "LayoutState{mAvailable="
 
-.method public final i(J)V
-    .locals 0
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-static {p1, p2}, Ln9e;->d(J)Z
+    iget v1, p0, Lwr5;->a:I
 
-    move-result p1
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    if-eqz p1, :cond_0
+    const-string v1, ", mFlexLinePosition="
 
-    const/4 p1, 0x1
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iput-boolean p1, p0, Lwr5;->b:Z
+    iget v1, p0, Lwr5;->c:I
 
-    :cond_0
-    return-void
-.end method
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-.method public final run()V
-    .locals 4
+    const-string v1, ", mPosition="
 
-    sget-object v0, Lbz4;->a:Lbz4;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
+    iget v1, p0, Lwr5;->d:I
 
-    move-result-object v1
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    sget-object v2, Lem4;->a:Lem4;
+    const-string v1, ", mOffset="
 
-    if-eq v1, v2, :cond_1
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-boolean v1, p0, Lwr5;->b:Z
+    iget v1, p0, Lwr5;->e:I
 
-    if-eqz v1, :cond_0
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    iget-object v1, p0, Lwr5;->a:Lj9e;
+    const-string v1, ", mScrollingOffset="
 
-    const-wide/16 v2, 0x0
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    iget v1, p0, Lwr5;->f:I
 
-    move-result-object v2
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    invoke-interface {v1, v2}, Lj9e;->h(Ljava/lang/Object;)V
+    const-string v1, ", mLastScrollDelta="
 
-    invoke-virtual {p0, v0}, Ljava/util/concurrent/atomic/AtomicReference;->lazySet(Ljava/lang/Object;)V
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object p0, p0, Lwr5;->a:Lj9e;
+    iget v1, p0, Lwr5;->g:I
 
-    invoke-interface {p0}, Lj9e;->b()V
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    return-void
+    const-string v1, ", mItemDirection=1, mLayoutDirection="
 
-    :cond_0
-    invoke-virtual {p0, v0}, Ljava/util/concurrent/atomic/AtomicReference;->lazySet(Ljava/lang/Object;)V
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object p0, p0, Lwr5;->a:Lj9e;
+    iget p0, p0, Lwr5;->h:I
 
-    new-instance v0, Lio/reactivex/rxjava3/exceptions/MissingBackpressureException;
+    const/16 v1, 0x7d
 
-    const-string v1, "Could not emit value due to lack of requests"
+    invoke-static {v0, p0, v1}, Lmw1;->i(Ljava/lang/StringBuilder;IC)Ljava/lang/String;
 
-    invoke-direct {v0, v1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
+    move-result-object p0
 
-    invoke-interface {p0, v0}, Lj9e;->onError(Ljava/lang/Throwable;)V
-
-    :cond_1
-    return-void
+    return-object p0
 .end method

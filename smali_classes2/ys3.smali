@@ -1,97 +1,190 @@
 .class public final Lys3;
-.super Ljava/lang/Object;
+.super Lure;
 .source "SourceFile"
 
 # interfaces
-.implements Lbt3;
+.implements Ltc6;
 
 
 # instance fields
-.field public final a:Lmoe;
+.field public final synthetic X:I
+
+.field public synthetic Y:Ljava/util/List;
+
+.field public synthetic Z:Ljava/lang/Object;
+
+.field public synthetic r0:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Lmoe;)V
-    .locals 0
+.method public synthetic constructor <init>(ILkotlin/coroutines/Continuation;)V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    .line 1
+    const/4 v0, 0x1
 
-    iput-object p1, p0, Lys3;->a:Lmoe;
+    iput v0, p0, Lys3;->X:I
+
+    invoke-direct {p0, p1, p2}, Lure;-><init>(ILkotlin/coroutines/Continuation;)V
+
+    return-void
+.end method
+
+.method public constructor <init>(Lbt3;Lkotlin/coroutines/Continuation;)V
+    .locals 1
+
+    const/4 v0, 0x0
+
+    iput v0, p0, Lys3;->X:I
+
+    .line 2
+    iput-object p1, p0, Lys3;->r0:Ljava/lang/Object;
+
+    const/4 p1, 0x4
+
+    invoke-direct {p0, p1, p2}, Lure;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 3
+.method public final i(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    const/4 v0, 0x1
+    iget v0, p0, Lys3;->X:I
 
-    if-ne p0, p1, :cond_0
+    packed-switch v0, :pswitch_data_0
 
-    return v0
+    check-cast p1, Ljava/util/List;
 
-    :cond_0
-    instance-of v1, p1, Lys3;
+    check-cast p2, Ljava/util/List;
 
-    const/4 v2, 0x0
+    check-cast p3, Ljava/util/List;
 
-    if-nez v1, :cond_1
+    check-cast p4, Lkotlin/coroutines/Continuation;
 
-    return v2
+    new-instance p0, Lys3;
 
-    :cond_1
-    check-cast p1, Lys3;
+    const/4 v0, 0x4
 
-    iget-object p0, p0, Lys3;->a:Lmoe;
+    invoke-direct {p0, v0, p4}, Lys3;-><init>(ILkotlin/coroutines/Continuation;)V
 
-    iget-object p1, p1, Lys3;->a:Lmoe;
+    iput-object p1, p0, Lys3;->Y:Ljava/util/List;
 
-    invoke-static {p0, p1}, Lxq7;->d(Ljava/lang/Object;Ljava/lang/Object;)Z
+    iput-object p2, p0, Lys3;->Z:Ljava/lang/Object;
 
-    move-result p0
+    iput-object p3, p0, Lys3;->r0:Ljava/lang/Object;
 
-    if-nez p0, :cond_2
+    sget-object p1, Lylf;->a:Lylf;
 
-    return v2
-
-    :cond_2
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 0
-
-    iget-object p0, p0, Lys3;->a:Lmoe;
-
-    invoke-virtual {p0}, Ljava/lang/Object;->hashCode()I
-
-    move-result p0
-
-    return p0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 2
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "Gallery(toolbarTitle="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object p0, p0, Lys3;->a:Lmoe;
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string p0, ")"
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {p0, p1}, Lys3;->o(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p0
 
     return-object p0
+
+    :pswitch_0
+    check-cast p1, Ltm3;
+
+    check-cast p2, Lvgb;
+
+    check-cast p3, Ljava/util/List;
+
+    check-cast p4, Lkotlin/coroutines/Continuation;
+
+    new-instance p2, Lys3;
+
+    iget-object p0, p0, Lys3;->r0:Ljava/lang/Object;
+
+    check-cast p0, Lbt3;
+
+    invoke-direct {p2, p0, p4}, Lys3;-><init>(Lbt3;Lkotlin/coroutines/Continuation;)V
+
+    iput-object p1, p2, Lys3;->Z:Ljava/lang/Object;
+
+    iput-object p3, p2, Lys3;->Y:Ljava/util/List;
+
+    sget-object p0, Lylf;->a:Lylf;
+
+    invoke-virtual {p2, p0}, Lys3;->o(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p0
+
+    return-object p0
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 2
+
+    iget v0, p0, Lys3;->X:I
+
+    packed-switch v0, :pswitch_data_0
+
+    invoke-static {p1}, Lqe5;->V(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Lys3;->Y:Ljava/util/List;
+
+    iget-object v0, p0, Lys3;->Z:Ljava/lang/Object;
+
+    check-cast v0, Ljava/util/List;
+
+    iget-object p0, p0, Lys3;->r0:Ljava/lang/Object;
+
+    check-cast p0, Ljava/util/List;
+
+    new-instance v1, Lfje;
+
+    invoke-direct {v1}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, v1, Lfje;->a:Ljava/util/List;
+
+    iput-object v0, v1, Lfje;->b:Ljava/util/List;
+
+    iput-object p0, v1, Lfje;->c:Ljava/util/List;
+
+    return-object v1
+
+    :pswitch_0
+    invoke-static {p1}, Lqe5;->V(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Lys3;->Z:Ljava/lang/Object;
+
+    check-cast p1, Ltm3;
+
+    iget-object v0, p0, Lys3;->Y:Ljava/util/List;
+
+    iget-object p0, p0, Lys3;->r0:Ljava/lang/Object;
+
+    check-cast p0, Lbt3;
+
+    invoke-virtual {p0, p1}, Lbt3;->E(Ltm3;)Lpxa;
+
+    move-result-object p0
+
+    iget-object p1, p0, Lpxa;->a:Ljava/lang/Object;
+
+    check-cast p1, Lsjb;
+
+    iget-object p0, p0, Lpxa;->b:Ljava/lang/Object;
+
+    check-cast p0, Ljava/util/List;
+
+    new-instance v1, Lljb;
+
+    invoke-direct {v1, p1, p0, v0}, Lljb;-><init>(Lsjb;Ljava/util/List;Ljava/util/List;)V
+
+    return-object v1
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

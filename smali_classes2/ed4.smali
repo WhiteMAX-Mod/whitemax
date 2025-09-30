@@ -1,332 +1,273 @@
-.class public final Led4;
-.super Ll0a;
+.class public final synthetic Led4;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public final synthetic b:I
+.field public final synthetic a:Lfd4;
 
-.field public final c:Lunc;
+.field public final synthetic b:Ljava/net/Socket;
 
-.field public final d:Lnk;
+.field public final synthetic c:I
 
-.field public final e:Lm0a;
+.field public final synthetic d:I
 
 
 # direct methods
-.method public constructor <init>(Lp8d;Lgl;Lkl;Lihb;)V
-    .locals 3
+.method public synthetic constructor <init>(Lfd4;Ljava/net/Socket;II)V
+    .locals 0
 
-    const/4 v0, 0x0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput v0, p0, Led4;->b:I
+    iput-object p1, p0, Led4;->a:Lfd4;
 
-    .line 9
-    invoke-direct {p0, p1}, Ll0a;-><init>(Lp8d;)V
+    iput-object p2, p0, Led4;->b:Ljava/net/Socket;
 
-    .line 10
-    new-instance v0, Low;
+    iput p3, p0, Led4;->c:I
 
-    const/4 v1, 0x2
-
-    invoke-direct {v0, p2, v1, p4}, Low;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
-
-    .line 11
-    new-instance p2, Lr3d;
-
-    new-instance p4, Lcwc;
-
-    .line 12
-    invoke-direct {p4}, Ljava/lang/Object;-><init>()V
-
-    .line 13
-    invoke-direct {p2, p4}, Lr3d;-><init>(Lcwc;)V
-
-    .line 14
-    iget-object p4, p1, Lp8d;->o:Ljava/lang/Object;
-
-    check-cast p4, Lal;
-
-    .line 15
-    iput-object p4, p2, Lr3d;->o:Ljava/lang/Object;
-
-    .line 16
-    new-instance p4, Lom4;
-
-    .line 17
-    new-instance v1, Lly4;
-
-    const/16 v2, 0xa
-
-    invoke-direct {v1, v2, v0}, Lly4;-><init>(ILjava/lang/Object;)V
-
-    .line 18
-    invoke-direct {p4, v1}, Lom4;-><init>(Lly4;)V
-
-    .line 19
-    iget-object v1, p2, Lr3d;->a:Ljava/lang/Object;
-
-    check-cast v1, Ldt3;
-
-    .line 20
-    iput-object p4, v1, Ldt3;->b:Ljava/lang/Object;
-
-    .line 21
-    new-instance p4, Lyh4;
-
-    .line 22
-    iget-object p1, p1, Lp8d;->c:Ljava/lang/Object;
-
-    check-cast p1, Ljavax/inject/Provider;
-
-    .line 23
-    invoke-direct {p4, p2, v0, p3, p1}, Lyh4;-><init>(Lr3d;Low;Lkl;Ljavax/inject/Provider;)V
-
-    .line 24
-    new-instance p1, Ljab;
-
-    invoke-direct {p1, v0, p4, p2}, Ljab;-><init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V
-
-    iput-object p1, p0, Led4;->e:Lm0a;
-
-    .line 25
-    iput-object p4, p0, Led4;->d:Lnk;
-
-    .line 26
-    new-instance p1, Lunc;
-
-    invoke-direct {p1, p4}, Lunc;-><init>(Lnk;)V
-
-    iput-object p1, p0, Led4;->c:Lunc;
+    iput p4, p0, Led4;->d:I
 
     return-void
-.end method
-
-.method public constructor <init>(Lp8d;Lle3;Lgue;)V
-    .locals 4
-
-    const/4 v0, 0x1
-
-    iput v0, p0, Led4;->b:I
-
-    .line 27
-    invoke-direct {p0, p1}, Ll0a;-><init>(Lp8d;)V
-
-    .line 28
-    new-instance v0, Ldt3;
-
-    invoke-direct {v0, p2}, Ldt3;-><init>(Ljava/lang/Object;)V
-
-    .line 29
-    new-instance p2, Lr3d;
-
-    new-instance v1, Lcwc;
-
-    .line 30
-    invoke-direct {v1}, Ljava/lang/Object;-><init>()V
-
-    .line 31
-    invoke-direct {p2, v1}, Lr3d;-><init>(Lcwc;)V
-
-    .line 32
-    iget-object v1, p1, Lp8d;->o:Ljava/lang/Object;
-
-    check-cast v1, Lal;
-
-    .line 33
-    iput-object v1, p2, Lr3d;->o:Ljava/lang/Object;
-
-    .line 34
-    new-instance v1, Lom4;
-
-    .line 35
-    new-instance v2, Lly4;
-
-    const/16 v3, 0xa
-
-    invoke-direct {v2, v3, v0}, Lly4;-><init>(ILjava/lang/Object;)V
-
-    .line 36
-    invoke-direct {v1, v2}, Lom4;-><init>(Lly4;)V
-
-    .line 37
-    iget-object v2, p2, Lr3d;->a:Ljava/lang/Object;
-
-    check-cast v2, Ldt3;
-
-    .line 38
-    iput-object v1, v2, Ldt3;->b:Ljava/lang/Object;
-
-    .line 39
-    new-instance v1, Lyh4;
-
-    .line 40
-    iget-object p1, p1, Lp8d;->c:Ljava/lang/Object;
-
-    check-cast p1, Ljavax/inject/Provider;
-
-    .line 41
-    invoke-direct {v1, p2, v0, p3, p1}, Lyh4;-><init>(Lr3d;Ldt3;Lgue;Ljavax/inject/Provider;)V
-
-    .line 42
-    new-instance p1, Ljo7;
-
-    invoke-direct {p1, v0, v1, p2}, Ljo7;-><init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V
-
-    iput-object p1, p0, Led4;->e:Lm0a;
-
-    .line 43
-    iput-object v1, p0, Led4;->d:Lnk;
-
-    .line 44
-    new-instance p1, Lunc;
-
-    invoke-direct {p1, v1}, Lunc;-><init>(Lnk;)V
-
-    iput-object p1, p0, Led4;->c:Lunc;
-
-    return-void
-.end method
-
-.method public constructor <init>(Ly3b;)V
-    .locals 1
-
-    const/4 v0, 0x2
-
-    iput v0, p0, Led4;->b:I
-
-    .line 1
-    invoke-direct {p0, p1}, Ll0a;-><init>(Lp8d;)V
-
-    .line 2
-    new-instance v0, Lvo9;
-
-    .line 3
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    .line 4
-    iput-object v0, p0, Led4;->e:Lm0a;
-
-    .line 5
-    iget-object p1, p1, Ly3b;->o0:Lnk;
-
-    if-eqz p1, :cond_0
-
-    .line 6
-    iput-object p1, p0, Led4;->d:Lnk;
-
-    .line 7
-    new-instance v0, Lunc;
-
-    invoke-direct {v0, p1}, Lunc;-><init>(Lnk;)V
-
-    iput-object v0, p0, Led4;->c:Lunc;
-
-    return-void
-
-    .line 8
-    :cond_0
-    new-instance p0, Ljava/lang/IllegalArgumentException;
-
-    const-string p1, "Required value was null."
-
-    invoke-direct {p0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw p0
 .end method
 
 
 # virtual methods
-.method public final a()Lnk;
-    .locals 1
+.method public final a(Ljava/lang/String;Ljava/net/InetAddress;J)V
+    .locals 10
 
-    iget v0, p0, Led4;->b:I
+    iget-object v0, p0, Led4;->a:Lfd4;
 
-    packed-switch v0, :pswitch_data_0
+    iget-object v1, p0, Led4;->b:Ljava/net/Socket;
 
-    iget-object p0, p0, Led4;->d:Lnk;
+    iget v2, p0, Led4;->c:I
 
-    return-object p0
+    iget p0, p0, Led4;->d:I
 
-    :pswitch_0
-    iget-object p0, p0, Led4;->d:Lnk;
+    iget-object v3, v0, Lbi0;->g:Lvj3;
 
-    check-cast p0, Lyh4;
+    invoke-virtual {v3}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    return-object p0
+    const-wide/16 v4, 0x0
 
-    :pswitch_1
-    iget-object p0, p0, Led4;->d:Lnk;
+    invoke-static {p3, p4, v4, v5}, Ljava/lang/Math;->max(JJ)J
 
-    check-cast p0, Lyh4;
+    move-result-wide p3
 
-    return-object p0
+    iput-wide p3, v3, Lvj3;->d:J
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
-.end method
+    sget-object p3, Lqz7;->o:Lqz7;
 
-.method public final b()Lm0a;
-    .locals 1
+    sget-object p4, Ljtg;->g:Loja;
 
-    iget v0, p0, Led4;->b:I
+    const/4 v3, 0x0
 
-    packed-switch v0, :pswitch_data_0
+    const-string v6, "fd4"
 
-    iget-object p0, p0, Led4;->e:Lm0a;
+    if-nez p4, :cond_0
 
-    check-cast p0, Lvo9;
+    goto :goto_0
 
-    return-object p0
+    :cond_0
+    invoke-virtual {p4, p3}, Loja;->a(Lqz7;)Z
 
-    :pswitch_0
-    iget-object p0, p0, Led4;->e:Lm0a;
+    move-result v7
 
-    check-cast p0, Ljo7;
+    if-nez v7, :cond_1
 
-    return-object p0
+    goto :goto_0
 
-    :pswitch_1
-    iget-object p0, p0, Led4;->e:Lm0a;
+    :cond_1
+    sget-object v7, Ljava/util/Locale;->ROOT:Ljava/util/Locale;
 
-    check-cast p0, Ljab;
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    return-object p0
+    move-result-object v8
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
-.end method
+    invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-.method public final c()Lunc;
-    .locals 1
+    move-result-object v9
 
-    iget v0, p0, Led4;->b:I
+    filled-new-array {p2, v8, v9}, [Ljava/lang/Object;
 
-    packed-switch v0, :pswitch_data_0
+    move-result-object v8
 
-    iget-object p0, p0, Led4;->c:Lunc;
+    const-string v9, "connectSocket, address=%s:%d, timeout=%dms"
 
-    return-object p0
+    invoke-static {v7, v9, v8}, Ljava/lang/String;->format(Ljava/util/Locale;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
-    :pswitch_0
-    iget-object p0, p0, Led4;->c:Lunc;
+    move-result-object v7
 
-    return-object p0
+    invoke-virtual {p4, p3, v6, v7, v3}, Loja;->b(Lqz7;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    :pswitch_1
-    iget-object p0, p0, Led4;->c:Lunc;
+    :goto_0
+    invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
-    return-object p0
+    move-result-wide v7
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    :try_start_0
+    new-instance p4, Ljava/net/InetSocketAddress;
+
+    invoke-direct {p4, p2, v2}, Ljava/net/InetSocketAddress;-><init>(Ljava/net/InetAddress;I)V
+
+    invoke-virtual {v1, p4, p0}, Ljava/net/Socket;->connect(Ljava/net/SocketAddress;I)V
+    :try_end_0
+    .catch Ljava/net/SocketTimeoutException; {:try_start_0 .. :try_end_0} :catch_0
+
+    iget-object p0, v0, Lbi0;->g:Lvj3;
+
+    invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
+
+    move-result-wide p1
+
+    sub-long/2addr p1, v7
+
+    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    invoke-static {p1, p2, v4, v5}, Ljava/lang/Math;->max(JJ)J
+
+    move-result-wide p1
+
+    iput-wide p1, p0, Lvj3;->e:J
+
+    sget-object p0, Ljtg;->g:Loja;
+
+    if-nez p0, :cond_2
+
+    goto :goto_1
+
+    :cond_2
+    invoke-virtual {p0, p3}, Loja;->a(Lqz7;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_3
+
+    :goto_1
+    return-void
+
+    :cond_3
+    sget-object p1, Ljava/util/Locale;->ROOT:Ljava/util/Locale;
+
+    const-string p2, "connected %s"
+
+    filled-new-array {v1}, [Ljava/lang/Object;
+
+    move-result-object p4
+
+    invoke-static {p1, p2, p4}, Ljava/lang/String;->format(Ljava/util/Locale;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-virtual {p0, p3, v6, p1, v3}, Loja;->b(Lqz7;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    return-void
+
+    :catch_0
+    move-exception p0
+
+    iget-object p3, v0, Lfd4;->j:Lar4;
+
+    if-eqz p3, :cond_a
+
+    check-cast p3, Lbr4;
+
+    iget-object p4, p3, Lbr4;->c:Ljava/util/concurrent/locks/ReentrantLock;
+
+    invoke-virtual {p4}, Ljava/util/concurrent/locks/ReentrantLock;->lock()V
+
+    :try_start_1
+    iget-object p3, p3, Lbr4;->f:Ljava/util/HashMap;
+
+    invoke-virtual {p3, p1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Ljava/util/ArrayList;
+
+    if-eqz p1, :cond_6
+
+    invoke-interface {p1}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
+
+    move-result-object p1
+
+    :cond_4
+    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result p3
+
+    if-eqz p3, :cond_5
+
+    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object p3
+
+    move-object v0, p3
+
+    check-cast v0, Lpd7;
+
+    iget-object v0, v0, Lpd7;->a:Ljava/net/InetAddress;
+
+    invoke-virtual {v0, p2}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_4
+
+    move-object v3, p3
+
+    goto :goto_2
+
+    :catchall_0
+    move-exception p0
+
+    goto :goto_4
+
+    :cond_5
+    :goto_2
+    check-cast v3, Lpd7;
+
+    :cond_6
+    const/4 p1, 0x2
+
+    const/4 p3, 0x1
+
+    if-nez v3, :cond_7
+
+    goto :goto_3
+
+    :cond_7
+    iget v0, v3, Lpd7;->c:I
+
+    if-nez v0, :cond_8
+
+    goto :goto_3
+
+    :cond_8
+    iget v0, v3, Lpd7;->d:I
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    if-nez v0, :cond_9
+
+    move p3, p1
+
+    :cond_9
+    :goto_3
+    invoke-virtual {p4}, Ljava/util/concurrent/locks/ReentrantLock;->unlock()V
+
+    if-ne p3, p1, :cond_a
+
+    new-instance p1, Lone/me/net/client/api/AddressUnreachableException;
+
+    invoke-direct {p1, p2, p0}, Lone/me/net/client/api/AddressUnreachableException;-><init>(Ljava/net/InetAddress;Ljava/net/SocketTimeoutException;)V
+
+    throw p1
+
+    :goto_4
+    invoke-virtual {p4}, Ljava/util/concurrent/locks/ReentrantLock;->unlock()V
+
+    throw p0
+
+    :cond_a
+    throw p0
 .end method

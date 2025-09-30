@@ -1,128 +1,84 @@
 .class public final Loc8;
-.super Ljava/lang/Object;
+.super Lure;
 .source "SourceFile"
+
+# interfaces
+.implements Lpc6;
 
 
 # instance fields
-.field public A:Ljava/lang/Integer;
+.field public final synthetic X:Lone/me/chatscreen/mediabar/MediaBarWidget;
 
-.field public B:Ljava/lang/Integer;
 
-.field public C:Ljava/lang/CharSequence;
+# direct methods
+.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/chatscreen/mediabar/MediaBarWidget;)V
+    .locals 0
 
-.field public D:Ljava/lang/CharSequence;
+    iput-object p2, p0, Loc8;->X:Lone/me/chatscreen/mediabar/MediaBarWidget;
 
-.field public E:Ljava/lang/CharSequence;
+    const/4 p2, 0x2
 
-.field public F:Landroid/os/Bundle;
+    invoke-direct {p0, p2, p1}, Lure;-><init>(ILkotlin/coroutines/Continuation;)V
 
-.field public a:Ljava/lang/CharSequence;
-
-.field public b:Ljava/lang/CharSequence;
-
-.field public c:Ljava/lang/CharSequence;
-
-.field public d:Ljava/lang/CharSequence;
-
-.field public e:Ljava/lang/CharSequence;
-
-.field public f:Ljava/lang/CharSequence;
-
-.field public g:Ljava/lang/CharSequence;
-
-.field public h:Landroid/net/Uri;
-
-.field public i:Lv2c;
-
-.field public j:Lv2c;
-
-.field public k:[B
-
-.field public l:Ljava/lang/Integer;
-
-.field public m:Landroid/net/Uri;
-
-.field public n:Ljava/lang/Integer;
-
-.field public o:Ljava/lang/Integer;
-
-.field public p:Ljava/lang/Integer;
-
-.field public q:Ljava/lang/Boolean;
-
-.field public r:Ljava/lang/Integer;
-
-.field public s:Ljava/lang/Integer;
-
-.field public t:Ljava/lang/Integer;
-
-.field public u:Ljava/lang/Integer;
-
-.field public v:Ljava/lang/Integer;
-
-.field public w:Ljava/lang/Integer;
-
-.field public x:Ljava/lang/CharSequence;
-
-.field public y:Ljava/lang/CharSequence;
-
-.field public z:Ljava/lang/CharSequence;
+    return-void
+.end method
 
 
 # virtual methods
-.method public final a(I[B)V
-    .locals 3
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    const/4 v0, 0x3
+    check-cast p1, Ljava/lang/Boolean;
 
-    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
 
-    move-result-object v0
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    iget-object v1, p0, Loc8;->k:[B
+    invoke-virtual {p0, p1, p2}, Loc8;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    if-eqz v1, :cond_1
+    move-result-object p0
 
-    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    check-cast p0, Loc8;
 
-    move-result-object v1
+    sget-object p1, Lylf;->a:Lylf;
 
-    sget v2, Lnaf;->a:I
+    invoke-virtual {p0, p1}, Loc8;->o(Ljava/lang/Object;)Ljava/lang/Object;
 
-    invoke-virtual {v1, v0}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+    return-object p1
+.end method
 
-    move-result v1
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 0
 
-    if-nez v1, :cond_1
+    new-instance p1, Loc8;
 
-    iget-object v1, p0, Loc8;->l:Ljava/lang/Integer;
+    iget-object p0, p0, Loc8;->X:Lone/me/chatscreen/mediabar/MediaBarWidget;
 
-    invoke-static {v1, v0}, Lnaf;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-direct {p1, p2, p0}, Loc8;-><init>(Lkotlin/coroutines/Continuation;Lone/me/chatscreen/mediabar/MediaBarWidget;)V
 
-    move-result v0
+    return-object p1
+.end method
 
-    if-nez v0, :cond_0
+.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    goto :goto_0
+    invoke-static {p1}, Lqe5;->V(Ljava/lang/Object;)V
 
-    :cond_0
-    return-void
+    sget-object p1, Lone/me/chatscreen/mediabar/MediaBarWidget;->c1:[Lxi7;
 
-    :cond_1
-    :goto_0
-    invoke-virtual {p2}, [B->clone()Ljava/lang/Object;
+    iget-object p0, p0, Loc8;->X:Lone/me/chatscreen/mediabar/MediaBarWidget;
 
-    move-result-object p2
+    invoke-virtual {p0}, Lone/me/chatscreen/mediabar/MediaBarWidget;->D0()Landroid/widget/LinearLayout;
 
-    check-cast p2, [B
+    move-result-object p0
 
-    iput-object p2, p0, Loc8;->k:[B
+    sget-object p1, Lone/me/chatscreen/mediabar/MediaBarWidget;->d1:Lj97;
 
-    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    const/4 v0, 0x0
 
-    move-result-object p1
+    invoke-static {p0, p1, v0}, Ln2e;->b(Landroid/view/View;Lj97;Lbc6;)V
 
-    iput-object p1, p0, Loc8;->l:Ljava/lang/Integer;
+    sget-object p0, Lylf;->a:Lylf;
 
-    return-void
+    return-object p0
 .end method

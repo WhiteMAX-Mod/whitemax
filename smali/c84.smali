@@ -1,28 +1,49 @@
-.class public abstract Lc84;
+.class public final Lc84;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# direct methods
-.method public static a(Landroid/media/AudioTrack;Lv1b;)V
-    .locals 1
+# instance fields
+.field public a:I
 
-    iget-object p1, p1, Lv1b;->a:Lt1b;
+.field public b:I
 
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+.field public c:Ljava/lang/String;
 
-    iget-object p1, p1, Lt1b;->a:Landroid/media/metrics/LogSessionId;
 
-    invoke-static {}, Lps3;->f()Landroid/media/metrics/LogSessionId;
+# virtual methods
+.method public final toString()Ljava/lang/String;
+    .locals 2
 
-    invoke-static {p1}, Lps3;->w(Landroid/media/metrics/LogSessionId;)Z
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    move-result v0
+    const-string v1, "Start:"
 
-    if-nez v0, :cond_0
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-static {p0, p1}, Lps3;->p(Landroid/media/AudioTrack;Landroid/media/metrics/LogSessionId;)V
+    iget v1, p0, Lc84;->a:I
 
-    :cond_0
-    return-void
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v1, " End:"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget v1, p0, Lc84;->b:I
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v1, " \'"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object p0, p0, Lc84;->c:Ljava/lang/String;
+
+    const-string v1, "\'"
+
+    invoke-static {v0, p0, v1}, Lyv7;->k(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p0
+
+    return-object p0
 .end method

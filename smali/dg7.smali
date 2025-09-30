@@ -1,3 +1,3 @@
 .class public final Ldg7;
-.super Ljava/lang/Object;
+.super Lys9;
 .source "SourceFile"

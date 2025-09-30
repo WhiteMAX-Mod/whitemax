@@ -1,24 +1,28 @@
 .class public Lru/ok/messages/media/crop/ActTamCropImage;
-.super Lp5;
+.super Lt5;
 .source "SourceFile"
 
 
+# static fields
+.field public static final synthetic U0:I
+
+
 # instance fields
-.field public Q0:Lik8;
+.field public T0:Lar8;
 
 
 # direct methods
 .method public constructor <init>()V
     .locals 0
 
-    invoke-direct {p0}, Lp5;-><init>()V
+    invoke-direct {p0}, Lt5;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final P()Ljava/lang/String;
+.method public final N()Ljava/lang/String;
     .locals 0
 
     const/4 p0, 0x0
@@ -26,34 +30,69 @@
     return-object p0
 .end method
 
+.method public final o()Lcze;
+    .locals 1
+
+    iget-object v0, p0, Lru/ok/messages/media/crop/ActTamCropImage;->T0:Lar8;
+
+    if-nez v0, :cond_0
+
+    sget-object v0, Lar8;->e0:Lar8;
+
+    iput-object v0, p0, Lru/ok/messages/media/crop/ActTamCropImage;->T0:Lar8;
+
+    :cond_0
+    iget-object p0, p0, Lru/ok/messages/media/crop/ActTamCropImage;->T0:Lar8;
+
+    return-object p0
+.end method
+
 .method public final onCreate(Landroid/os/Bundle;)V
     .locals 8
 
-    invoke-super {p0, p1}, Lp5;->onCreate(Landroid/os/Bundle;)V
+    invoke-super {p0, p1}, Lt5;->onCreate(Landroid/os/Bundle;)V
 
-    sget v0, Lqwb;->act_tam_crop_image:I
+    sget v0, Lz8c;->act_tam_crop_image:I
 
-    invoke-virtual {p0, v0}, Lp5;->setContentView(I)V
+    invoke-virtual {p0, v0}, Lt5;->setContentView(I)V
 
-    iget-object v0, p0, Lru/ok/messages/media/crop/ActTamCropImage;->Q0:Lik8;
+    iget-object v0, p0, Lru/ok/messages/media/crop/ActTamCropImage;->T0:Lar8;
 
-    iget v0, v0, Lvke;->L:I
+    iget v0, v0, Lcze;->L:I
 
-    invoke-virtual {p0, v0}, Lp5;->V(I)V
+    invoke-virtual {p0, v0}, Lt5;->T(I)V
 
-    sget v0, Lpvb;->act_tam_crop_image__root:I
+    sget v0, Lb8c;->act_tam_crop_image__root:I
 
-    invoke-virtual {p0, v0}, Lam;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v0}, Lkm;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
-    invoke-virtual {p0}, Lru/ok/messages/media/crop/ActTamCropImage;->p()Lvke;
+    invoke-virtual {p0}, Lru/ok/messages/media/crop/ActTamCropImage;->o()Lcze;
 
     move-result-object v1
 
-    iget v1, v1, Lvke;->m:I
+    iget v1, v1, Lcze;->m:I
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setBackgroundColor(I)V
+
+    sget v0, Lb8c;->act_tam_crop_image__root:I
+
+    invoke-virtual {p0, v0}, Lkm;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    new-instance v1, Lbx0;
+
+    const/16 v2, 0xd
+
+    invoke-direct {v1, v2}, Lbx0;-><init>(I)V
+
+    sget-object v2, Lh7g;->a:Ljava/util/WeakHashMap;
+
+    invoke-static {v0, v1}, Lw6g;->u(Landroid/view/View;Lz8a;)V
+
+    invoke-static {v0}, Lu6g;->c(Landroid/view/View;)V
 
     if-nez p1, :cond_0
 
@@ -91,7 +130,7 @@
 
     move-result-object v3
 
-    check-cast v3, Ljz3;
+    check-cast v3, Lu24;
 
     invoke-virtual {p0}, Landroid/app/Activity;->getIntent()Landroid/content/Intent;
 
@@ -123,33 +162,16 @@
 
     invoke-virtual {p1, v6}, Landroidx/fragment/app/a;->L0(Landroid/os/Bundle;)V
 
-    invoke-virtual {p0}, Landroidx/fragment/app/b;->E()Lb26;
+    invoke-virtual {p0}, Landroidx/fragment/app/b;->C()Lj86;
 
     move-result-object p0
 
-    sget v0, Lpvb;->act_tam_crop_image__container:I
+    sget v0, Lb8c;->act_tam_crop_image__container:I
 
     const-string v1, "ru.ok.messages.media.crop.FrgTamCropImage"
 
-    invoke-static {p0, v0, p1, v1}, Lxqd;->c(Lb26;ILru/ok/messages/views/fragments/base/FrgBase;Ljava/lang/String;)V
+    invoke-static {p0, v0, p1, v1}, Ll1h;->a(Lj86;ILru/ok/messages/views/fragments/base/FrgBase;Ljava/lang/String;)V
 
     :cond_0
     return-void
-.end method
-
-.method public final p()Lvke;
-    .locals 1
-
-    iget-object v0, p0, Lru/ok/messages/media/crop/ActTamCropImage;->Q0:Lik8;
-
-    if-nez v0, :cond_0
-
-    sget-object v0, Lik8;->e0:Lik8;
-
-    iput-object v0, p0, Lru/ok/messages/media/crop/ActTamCropImage;->Q0:Lik8;
-
-    :cond_0
-    iget-object p0, p0, Lru/ok/messages/media/crop/ActTamCropImage;->Q0:Lik8;
-
-    return-object p0
 .end method

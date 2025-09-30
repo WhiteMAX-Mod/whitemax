@@ -1,198 +1,245 @@
-.class public abstract Lcg8;
+.class public final Lcg8;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Landroid/content/ServiceConnection;
+
 
 # instance fields
-.field public X:Lkf8;
+.field public final a:Landroid/os/Bundle;
 
-.field public Y:Z
-
-.field public Z:Ldg8;
-
-.field public final a:Landroid/content/Context;
-
-.field public final b:Lhd7;
-
-.field public final c:Lqx;
-
-.field public o:Lzvd;
-
-.field public o0:Z
+.field public final synthetic b:Ldg8;
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;Lhd7;)V
-    .locals 2
+.method public constructor <init>(Ldg8;Landroid/os/Bundle;)V
+    .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    new-instance v0, Lqx;
+    iput-object p1, p0, Lcg8;->b:Ldg8;
 
-    const/16 v1, 0x9
-
-    invoke-direct {v0, v1, p0}, Lqx;-><init>(ILjava/lang/Object;)V
-
-    iput-object v0, p0, Lcg8;->c:Lqx;
-
-    if-eqz p1, :cond_1
-
-    iput-object p1, p0, Lcg8;->a:Landroid/content/Context;
-
-    if-nez p2, :cond_0
-
-    new-instance p2, Lhd7;
-
-    new-instance v0, Landroid/content/ComponentName;
-
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    move-result-object v1
-
-    invoke-direct {v0, p1, v1}, Landroid/content/ComponentName;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
-
-    const/16 p1, 0x13
-
-    invoke-direct {p2, p1, v0}, Lhd7;-><init>(ILjava/lang/Object;)V
-
-    iput-object p2, p0, Lcg8;->b:Lhd7;
+    iput-object p2, p0, Lcg8;->a:Landroid/os/Bundle;
 
     return-void
-
-    :cond_0
-    iput-object p2, p0, Lcg8;->b:Lhd7;
-
-    return-void
-
-    :cond_1
-    new-instance p0, Ljava/lang/IllegalArgumentException;
-
-    const-string p1, "context must not be null"
-
-    invoke-direct {p0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw p0
 .end method
 
 
 # virtual methods
-.method public c(Ljava/lang/String;)Lag8;
-    .locals 0
-
-    if-eqz p1, :cond_0
-
-    const/4 p0, 0x0
-
-    return-object p0
-
-    :cond_0
-    new-instance p0, Ljava/lang/IllegalArgumentException;
-
-    const-string p1, "initialMemberRouteId cannot be null."
-
-    invoke-direct {p0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw p0
-.end method
-
-.method public abstract d(Ljava/lang/String;)Lbg8;
-.end method
-
-.method public e(Ljava/lang/String;Ljava/lang/String;)Lbg8;
-    .locals 0
-
-    if-eqz p1, :cond_1
-
-    if-eqz p2, :cond_0
-
-    invoke-virtual {p0, p1}, Lcg8;->d(Ljava/lang/String;)Lbg8;
-
-    move-result-object p0
-
-    return-object p0
-
-    :cond_0
-    new-instance p0, Ljava/lang/IllegalArgumentException;
-
-    const-string p1, "routeGroupId cannot be null"
-
-    invoke-direct {p0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw p0
-
-    :cond_1
-    new-instance p0, Ljava/lang/IllegalArgumentException;
-
-    const-string p1, "routeId cannot be null"
-
-    invoke-direct {p0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw p0
-.end method
-
-.method public abstract f(Lkf8;)V
-.end method
-
-.method public final g(Ldg8;)V
+.method public final onBindingDied(Landroid/content/ComponentName;)V
     .locals 1
 
-    invoke-static {}, Lng8;->b()V
+    iget-object p0, p0, Lcg8;->b:Ldg8;
 
-    iget-object v0, p0, Lcg8;->Z:Ldg8;
+    iget-object p0, p0, Ldg8;->a:Ljf8;
 
-    if-eq v0, p1, :cond_0
+    invoke-static {p0}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    iput-object p1, p0, Lcg8;->Z:Ldg8;
+    new-instance p1, Ls36;
 
-    iget-boolean p1, p0, Lcg8;->o0:Z
+    const/16 v0, 0xd
 
-    if-nez p1, :cond_0
+    invoke-direct {p1, v0, p0}, Ls36;-><init>(ILjava/lang/Object;)V
 
-    const/4 p1, 0x1
+    invoke-virtual {p0, p1}, Ljf8;->r(Ljava/lang/Runnable;)V
 
-    iput-boolean p1, p0, Lcg8;->o0:Z
-
-    iget-object p0, p0, Lcg8;->c:Lqx;
-
-    invoke-virtual {p0, p1}, Landroid/os/Handler;->sendEmptyMessage(I)Z
-
-    :cond_0
     return-void
 .end method
 
-.method public final h(Lkf8;)V
-    .locals 1
+.method public final onServiceConnected(Landroid/content/ComponentName;Landroid/os/IBinder;)V
+    .locals 7
 
-    invoke-static {}, Lng8;->b()V
+    iget-object v0, p0, Lcg8;->b:Ldg8;
 
-    iget-object v0, p0, Lcg8;->X:Lkf8;
+    iget-object v1, v0, Ldg8;->e:Lknd;
 
-    invoke-static {v0, p1}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
+    iget-object v2, v0, Ldg8;->a:Ljf8;
 
-    move-result v0
+    const-string v3, "Service "
 
-    if-eqz v0, :cond_0
+    const-string v4, "Expected connection to "
+
+    :try_start_0
+    iget-object v5, v1, Lknd;->a:Ljnd;
+
+    invoke-interface {v5}, Ljnd;->getPackageName()Ljava/lang/String;
+
+    move-result-object v5
+
+    invoke-virtual {p1}, Landroid/content/ComponentName;->getPackageName()Ljava/lang/String;
+
+    move-result-object v6
+
+    invoke-virtual {v5, v6}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v5
+
+    if-nez v5, :cond_0
+
+    new-instance p0, Ljava/lang/StringBuilder;
+
+    invoke-direct {p0, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object p2, v1, Lknd;->a:Ljnd;
+
+    invoke-interface {p2}, Ljnd;->getPackageName()Ljava/lang/String;
+
+    move-result-object p2
+
+    invoke-virtual {p0, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string p2, " but is connected to "
+
+    invoke-virtual {p0, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-static {p0}, Lxnd;->u(Ljava/lang/String;)V
+    :try_end_0
+    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    invoke-static {v2}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
+
+    new-instance p0, Ls36;
+
+    const/16 p1, 0xd
+
+    invoke-direct {p0, p1, v2}, Ls36;-><init>(ILjava/lang/Object;)V
+
+    :goto_0
+    invoke-virtual {v2, p0}, Ljf8;->r(Ljava/lang/Runnable;)V
+
+    return-void
+
+    :catchall_0
+    move-exception p0
+
+    goto :goto_1
+
+    :cond_0
+    :try_start_1
+    invoke-static {p2}, Lbp8;->k(Landroid/os/IBinder;)Liy6;
+
+    move-result-object p2
+
+    if-nez p2, :cond_1
+
+    const-string p0, "Service interface is missing."
+
+    invoke-static {p0}, Lxnd;->u(Ljava/lang/String;)V
+    :try_end_1
+    .catch Landroid/os/RemoteException; {:try_start_1 .. :try_end_1} :catch_0
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    invoke-static {v2}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
+
+    new-instance p0, Ls36;
+
+    const/16 p1, 0xd
+
+    invoke-direct {p0, p1, v2}, Ls36;-><init>(ILjava/lang/Object;)V
 
     goto :goto_0
 
-    :cond_0
-    iput-object p1, p0, Lcg8;->X:Lkf8;
-
-    iget-boolean p1, p0, Lcg8;->Y:Z
-
-    if-nez p1, :cond_1
-
-    const/4 p1, 0x1
-
-    iput-boolean p1, p0, Lcg8;->Y:Z
-
-    iget-object p0, p0, Lcg8;->c:Lqx;
-
-    const/4 p1, 0x2
-
-    invoke-virtual {p0, p1}, Landroid/os/Handler;->sendEmptyMessage(I)Z
-
     :cond_1
-    :goto_0
+    :try_start_2
+    new-instance v1, Lqk3;
+
+    iget-object v4, v0, Ldg8;->d:Landroid/content/Context;
+
+    invoke-virtual {v4}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
+
+    move-result-object v4
+
+    invoke-static {}, Landroid/os/Process;->myPid()I
+
+    move-result v5
+
+    iget-object p0, p0, Lcg8;->a:Landroid/os/Bundle;
+
+    invoke-virtual {v2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    invoke-direct {v1, v4, v5, p0}, Lqk3;-><init>(Ljava/lang/String;ILandroid/os/Bundle;)V
+
+    iget-object p0, v0, Ldg8;->c:Lng8;
+
+    invoke-virtual {v1}, Lqk3;->b()Landroid/os/Bundle;
+
+    move-result-object v0
+
+    invoke-interface {p2, p0, v0}, Liy6;->K(Lay6;Landroid/os/Bundle;)V
+    :try_end_2
+    .catch Landroid/os/RemoteException; {:try_start_2 .. :try_end_2} :catch_0
+    .catchall {:try_start_2 .. :try_end_2} :catchall_0
+
+    return-void
+
+    :catch_0
+    :try_start_3
+    new-instance p0, Ljava/lang/StringBuilder;
+
+    invoke-direct {p0, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {p0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string p1, " has died prematurely"
+
+    invoke-virtual {p0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-static {p0}, Lxnd;->l0(Ljava/lang/String;)V
+    :try_end_3
+    .catchall {:try_start_3 .. :try_end_3} :catchall_0
+
+    invoke-static {v2}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
+
+    new-instance p0, Ls36;
+
+    const/16 p1, 0xd
+
+    invoke-direct {p0, p1, v2}, Ls36;-><init>(ILjava/lang/Object;)V
+
+    goto :goto_0
+
+    :goto_1
+    invoke-static {v2}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
+
+    new-instance p1, Ls36;
+
+    const/16 p2, 0xd
+
+    invoke-direct {p1, p2, v2}, Ls36;-><init>(ILjava/lang/Object;)V
+
+    invoke-virtual {v2, p1}, Ljf8;->r(Ljava/lang/Runnable;)V
+
+    throw p0
+.end method
+
+.method public final onServiceDisconnected(Landroid/content/ComponentName;)V
+    .locals 1
+
+    iget-object p0, p0, Lcg8;->b:Ldg8;
+
+    iget-object p0, p0, Ldg8;->a:Ljf8;
+
+    invoke-static {p0}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
+
+    new-instance p1, Ls36;
+
+    const/16 v0, 0xd
+
+    invoke-direct {p1, v0, p0}, Ls36;-><init>(ILjava/lang/Object;)V
+
+    invoke-virtual {p0, p1}, Ljf8;->r(Ljava/lang/Runnable;)V
+
     return-void
 .end method

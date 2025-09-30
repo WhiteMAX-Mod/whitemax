@@ -1,43 +1,25 @@
-.class public abstract Lnda;
-.super Ljava/lang/Object;
+.class public final Lnda;
+.super Lpvb;
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:I
+# virtual methods
+.method public final y(Lts7;)V
+    .locals 2
 
-.field public static final b:I
+    check-cast p1, Lurb;
 
-.field public static final c:I
+    iget-object p0, p0, Lzoc;->a:Landroid/view/View;
 
-.field public static final d:I
+    check-cast p0, Lmda;
 
-.field public static final e:I
+    iget-object v0, p1, Lurb;->a:Ljava/util/List;
 
+    iget-object v1, p1, Lurb;->b:Ljava/util/List;
 
-# direct methods
-.method static constructor <clinit>()V
-    .locals 1
+    iget-boolean p1, p1, Lurb;->c:Z
 
-    sget v0, Ljrb;->size_border_radius_new_banner:I
-
-    sput v0, Lnda;->a:I
-
-    sget v0, Ljrb;->spacing_size_2xl:I
-
-    sput v0, Lnda;->b:I
-
-    sget v0, Ljrb;->spacing_size_2xs:I
-
-    sput v0, Lnda;->c:I
-
-    sget v0, Ljrb;->spacing_size_m:I
-
-    sput v0, Lnda;->d:I
-
-    sget v0, Ljrb;->spacing_size_xs:I
-
-    sput v0, Lnda;->e:I
+    invoke-virtual {p0, v0, v1, p1}, Lmda;->b(Ljava/util/List;Ljava/util/List;Z)V
 
     return-void
 .end method

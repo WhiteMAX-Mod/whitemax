@@ -1,69 +1,53 @@
 .class public final Ldeg;
-.super Lly1;
+.super Ljx3;
 .source "SourceFile"
 
 
 # instance fields
-.field public final synthetic c:I
+.field public X:Lkn0;
 
-.field public final o:Lkj3;
+.field public synthetic Y:Ljava/lang/Object;
+
+.field public final synthetic Z:Loeg;
+
+.field public o:Loeg;
+
+.field public r0:I
 
 
 # direct methods
-.method public constructor <init>(Lfqa;Lkj3;I)V
+.method public constructor <init>(Loeg;Ljx3;)V
     .locals 0
 
-    iput p3, p0, Ldeg;->c:I
+    iput-object p1, p0, Ldeg;->Z:Loeg;
 
-    packed-switch p3, :pswitch_data_0
-
-    iput-object p2, p0, Ldeg;->o:Lkj3;
-
-    invoke-direct {p0, p1}, Lly1;-><init>(Lfqa;)V
+    invoke-direct {p0, p2}, Ljx3;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
-
-    :pswitch_0
-    invoke-direct {p0, p1}, Lly1;-><init>(Lfqa;)V
-
-    iput-object p2, p0, Ldeg;->o:Lkj3;
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x1
-        :pswitch_0
-    .end packed-switch
 .end method
 
 
 # virtual methods
-.method public final a(Lorg/webrtc/PeerConnection;)V
+.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
 
-    iget v0, p0, Ldeg;->c:I
+    iput-object p1, p0, Ldeg;->Y:Ljava/lang/Object;
 
-    packed-switch v0, :pswitch_data_0
+    iget p1, p0, Ldeg;->r0:I
 
-    iget-object p0, p0, Ldeg;->o:Lkj3;
+    const/high16 v0, -0x80000000
 
-    invoke-interface {p0, p1}, Lkj3;->accept(Ljava/lang/Object;)V
+    or-int/2addr p1, v0
 
-    return-void
+    iput p1, p0, Ldeg;->r0:I
 
-    :pswitch_0
-    iget-object p0, p0, Ldeg;->o:Lkj3;
+    iget-object p1, p0, Ldeg;->Z:Loeg;
 
-    invoke-interface {p0, p1}, Lkj3;->accept(Ljava/lang/Object;)V
+    const/4 v0, 0x0
 
-    return-void
+    invoke-virtual {p1, v0, p0}, Loeg;->h(Lkn0;Ljx3;)Ljava/lang/Object;
 
-    nop
+    move-result-object p0
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-object p0
 .end method

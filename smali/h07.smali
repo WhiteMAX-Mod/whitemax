@@ -1,241 +1,122 @@
 .class public final Lh07;
-.super Lnv8;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Loqf;
+.implements Lt17;
+.implements Lq4f;
+
+
+# static fields
+.field public static final X:Ld90;
+
+.field public static final Y:Ld90;
+
+.field public static final Z:Ld90;
+
+.field public static final b:Ld90;
+
+.field public static final c:Ld90;
+
+.field public static final o:Ld90;
 
 
 # instance fields
-.field public a:[Lg07;
+.field public final a:Lcva;
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 2
+.method static constructor <clinit>()V
+    .locals 4
 
-    invoke-direct {p0}, Lnv8;-><init>()V
+    new-instance v0, Ld90;
 
-    sget-object v0, Lg07;->f:[Lg07;
+    const-string v1, "camerax.core.imageAnalysis.backpressureStrategy"
 
-    if-nez v0, :cond_1
+    const-class v2, La07;
 
-    sget-object v0, Lr37;->b:Ljava/lang/Object;
+    const/4 v3, 0x0
 
-    monitor-enter v0
+    invoke-direct {v0, v1, v2, v3}, Ld90;-><init>(Ljava/lang/String;Ljava/lang/Class;Landroid/hardware/camera2/CaptureRequest$Key;)V
 
-    :try_start_0
-    sget-object v1, Lg07;->f:[Lg07;
+    sput-object v0, Lh07;->b:Ld90;
 
-    if-nez v1, :cond_0
+    new-instance v0, Ld90;
 
-    const/4 v1, 0x0
+    const-string v1, "camerax.core.imageAnalysis.imageQueueDepth"
 
-    new-array v1, v1, [Lg07;
+    sget-object v2, Ljava/lang/Integer;->TYPE:Ljava/lang/Class;
 
-    sput-object v1, Lg07;->f:[Lg07;
+    invoke-direct {v0, v1, v2, v3}, Ld90;-><init>(Ljava/lang/String;Ljava/lang/Class;Landroid/hardware/camera2/CaptureRequest$Key;)V
 
-    goto :goto_0
+    sput-object v0, Lh07;->c:Ld90;
 
-    :catchall_0
-    move-exception p0
+    new-instance v0, Ld90;
 
-    goto :goto_1
+    const-string v1, "camerax.core.imageAnalysis.imageReaderProxyProvider"
 
-    :cond_0
-    :goto_0
-    monitor-exit v0
+    const-class v2, Ld27;
 
-    goto :goto_2
+    invoke-direct {v0, v1, v2, v3}, Ld90;-><init>(Ljava/lang/String;Ljava/lang/Class;Landroid/hardware/camera2/CaptureRequest$Key;)V
 
-    :goto_1
-    monitor-exit v0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    sput-object v0, Lh07;->o:Ld90;
 
-    throw p0
+    new-instance v0, Ld90;
 
-    :cond_1
-    :goto_2
-    sget-object v0, Lg07;->f:[Lg07;
+    const-string v1, "camerax.core.imageAnalysis.outputImageFormat"
 
-    iput-object v0, p0, Lh07;->a:[Lg07;
+    const-class v2, Ld07;
 
-    const/4 v0, -0x1
+    invoke-direct {v0, v1, v2, v3}, Ld90;-><init>(Ljava/lang/String;Ljava/lang/Class;Landroid/hardware/camera2/CaptureRequest$Key;)V
 
-    iput v0, p0, Lnv8;->cachedSize:I
+    sput-object v0, Lh07;->X:Ld90;
+
+    new-instance v0, Ld90;
+
+    const-string v1, "camerax.core.imageAnalysis.onePixelShiftEnabled"
+
+    const-class v2, Ljava/lang/Boolean;
+
+    invoke-direct {v0, v1, v2, v3}, Ld90;-><init>(Ljava/lang/String;Ljava/lang/Class;Landroid/hardware/camera2/CaptureRequest$Key;)V
+
+    sput-object v0, Lh07;->Y:Ld90;
+
+    new-instance v0, Ld90;
+
+    const-string v1, "camerax.core.imageAnalysis.outputImageRotationEnabled"
+
+    invoke-direct {v0, v1, v2, v3}, Ld90;-><init>(Ljava/lang/String;Ljava/lang/Class;Landroid/hardware/camera2/CaptureRequest$Key;)V
+
+    sput-object v0, Lh07;->Z:Ld90;
+
+    return-void
+.end method
+
+.method public constructor <init>(Lcva;)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lh07;->a:Lcva;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final computeSerializedSize()I
-    .locals 4
+.method public final getConfig()Lzf3;
+    .locals 0
 
-    iget-object v0, p0, Lh07;->a:[Lg07;
+    iget-object p0, p0, Lh07;->a:Lcva;
 
-    const/4 v1, 0x0
-
-    if-eqz v0, :cond_2
-
-    array-length v0, v0
-
-    if-lez v0, :cond_2
-
-    move v0, v1
-
-    :goto_0
-    iget-object v2, p0, Lh07;->a:[Lg07;
-
-    array-length v3, v2
-
-    if-ge v1, v3, :cond_1
-
-    aget-object v2, v2, v1
-
-    if-eqz v2, :cond_0
-
-    const/4 v3, 0x1
-
-    invoke-static {v3, v2}, Lq33;->i(ILnv8;)I
-
-    move-result v2
-
-    add-int/2addr v2, v0
-
-    move v0, v2
-
-    :cond_0
-    add-int/lit8 v1, v1, 0x1
-
-    goto :goto_0
-
-    :cond_1
-    return v0
-
-    :cond_2
-    return v1
-.end method
-
-.method public final mergeFrom(Lp33;)Lnv8;
-    .locals 5
-
-    :cond_0
-    :goto_0
-    invoke-virtual {p1}, Lp33;->s()I
-
-    move-result v0
-
-    if-eqz v0, :cond_5
-
-    const/16 v1, 0xa
-
-    if-eq v0, v1, :cond_1
-
-    invoke-virtual {p1, v0}, Lp33;->u(I)Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    goto :goto_3
-
-    :cond_1
-    invoke-static {p1, v1}, Lwqd;->s(Lp33;I)I
-
-    move-result v0
-
-    iget-object v1, p0, Lh07;->a:[Lg07;
-
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_2
-
-    move v3, v2
-
-    goto :goto_1
-
-    :cond_2
-    array-length v3, v1
-
-    :goto_1
-    add-int/2addr v0, v3
-
-    new-array v4, v0, [Lg07;
-
-    if-eqz v3, :cond_3
-
-    invoke-static {v1, v2, v4, v2, v3}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
-
-    :cond_3
-    :goto_2
-    add-int/lit8 v1, v0, -0x1
-
-    if-ge v3, v1, :cond_4
-
-    new-instance v1, Lg07;
-
-    invoke-direct {v1}, Lg07;-><init>()V
-
-    aput-object v1, v4, v3
-
-    invoke-virtual {p1, v1}, Lp33;->j(Lnv8;)V
-
-    invoke-virtual {p1}, Lp33;->s()I
-
-    add-int/lit8 v3, v3, 0x1
-
-    goto :goto_2
-
-    :cond_4
-    new-instance v0, Lg07;
-
-    invoke-direct {v0}, Lg07;-><init>()V
-
-    aput-object v0, v4, v3
-
-    invoke-virtual {p1, v0}, Lp33;->j(Lnv8;)V
-
-    iput-object v4, p0, Lh07;->a:[Lg07;
-
-    goto :goto_0
-
-    :cond_5
-    :goto_3
     return-object p0
 .end method
 
-.method public final writeTo(Lq33;)V
-    .locals 3
+.method public final getInputFormat()I
+    .locals 0
 
-    iget-object v0, p0, Lh07;->a:[Lg07;
+    const/16 p0, 0x23
 
-    if-eqz v0, :cond_1
-
-    array-length v0, v0
-
-    if-lez v0, :cond_1
-
-    const/4 v0, 0x0
-
-    :goto_0
-    iget-object v1, p0, Lh07;->a:[Lg07;
-
-    array-length v2, v1
-
-    if-ge v0, v2, :cond_1
-
-    aget-object v1, v1, v0
-
-    if-eqz v1, :cond_0
-
-    const/4 v2, 0x1
-
-    invoke-virtual {p1, v2, v1}, Lq33;->y(ILnv8;)V
-
-    :cond_0
-    add-int/lit8 v0, v0, 0x1
-
-    goto :goto_0
-
-    :cond_1
-    return-void
+    return p0
 .end method

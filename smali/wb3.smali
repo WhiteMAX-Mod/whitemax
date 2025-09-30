@@ -1,136 +1,92 @@
-.class public final Lwb3;
-.super Lesc;
+.class public final synthetic Lwb3;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lzb6;
 
 
 # instance fields
-.field public volatile X:Z
+.field public final synthetic a:I
 
-.field public final a:Lml7;
-
-.field public final b:Lva3;
-
-.field public final c:Lml7;
-
-.field public final o:Lyb3;
+.field public final synthetic b:Lone/me/complaintbottomsheet/ComplaintBottomSheet;
 
 
 # direct methods
-.method public constructor <init>(Lyb3;)V
-    .locals 2
+.method public synthetic constructor <init>(Lone/me/complaintbottomsheet/ComplaintBottomSheet;I)V
+    .locals 0
+
+    iput p2, p0, Lwb3;->a:I
+
+    iput-object p1, p0, Lwb3;->b:Lone/me/complaintbottomsheet/ComplaintBottomSheet;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lwb3;->o:Lyb3;
-
-    new-instance p1, Lml7;
-
-    invoke-direct {p1}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lwb3;->a:Lml7;
-
-    new-instance v0, Lva3;
-
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    iput-object v0, p0, Lwb3;->b:Lva3;
-
-    new-instance v1, Lml7;
-
-    invoke-direct {v1}, Ljava/lang/Object;-><init>()V
-
-    iput-object v1, p0, Lwb3;->c:Lml7;
-
-    invoke-virtual {v1, p1}, Lml7;->a(Lam4;)Z
-
-    invoke-virtual {v1, v0}, Lml7;->a(Lam4;)Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final b(Ljava/lang/Runnable;)Lam4;
-    .locals 6
+.method public final invoke()Ljava/lang/Object;
+    .locals 4
 
-    iget-boolean v0, p0, Lwb3;->X:Z
+    iget v0, p0, Lwb3;->a:I
 
-    if-eqz v0, :cond_0
+    iget-object p0, p0, Lwb3;->b:Lone/me/complaintbottomsheet/ComplaintBottomSheet;
 
-    sget-object p0, Lbz4;->a:Lbz4;
+    packed-switch v0, :pswitch_data_0
 
-    return-object p0
+    sget-object v0, Lone/me/complaintbottomsheet/ComplaintBottomSheet;->X:[Lxi7;
 
-    :cond_0
-    iget-object v0, p0, Lwb3;->o:Lyb3;
+    new-instance v0, Lqoa;
 
-    sget-object v4, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;
+    invoke-direct {v0, p0}, Lqoa;-><init>(Lone/me/sdk/arch/Widget;)V
 
-    iget-object v5, p0, Lwb3;->a:Lml7;
+    new-instance p0, Lepa;
 
-    const-wide/16 v2, 0x0
+    sget v1, Lq0d;->z:I
 
-    move-object v1, p1
+    invoke-direct {p0, v1}, Lepa;-><init>(I)V
 
-    invoke-virtual/range {v0 .. v5}, Lio9;->e(Ljava/lang/Runnable;JLjava/util/concurrent/TimeUnit;Lbm4;)Ljrc;
+    invoke-virtual {v0, p0}, Lqoa;->e(Ljpa;)V
 
-    move-result-object p0
+    sget p0, Lpga;->b:I
 
-    return-object p0
-.end method
+    new-instance v1, Lp2f;
 
-.method public final c(Ljava/lang/Runnable;JLjava/util/concurrent/TimeUnit;)Lam4;
-    .locals 6
+    invoke-direct {v1, p0}, Lp2f;-><init>(I)V
 
-    iget-boolean v0, p0, Lwb3;->X:Z
+    invoke-virtual {v0, v1}, Lqoa;->g(Lu2f;)V
 
-    if-eqz v0, :cond_0
+    return-object v0
 
-    sget-object p0, Lbz4;->a:Lbz4;
+    :pswitch_0
+    new-instance v0, Lgc3;
 
-    return-object p0
+    iget-object v1, p0, Lone/me/complaintbottomsheet/ComplaintBottomSheet;->a:Lfr;
 
-    :cond_0
-    iget-object v0, p0, Lwb3;->o:Lyb3;
+    sget-object v2, Lone/me/complaintbottomsheet/ComplaintBottomSheet;->X:[Lxi7;
 
-    iget-object v5, p0, Lwb3;->b:Lva3;
+    const/4 v3, 0x0
 
-    move-object v1, p1
+    aget-object v2, v2, v3
 
-    move-wide v2, p2
-
-    move-object v4, p4
-
-    invoke-virtual/range {v0 .. v5}, Lio9;->e(Ljava/lang/Runnable;JLjava/util/concurrent/TimeUnit;Lbm4;)Ljrc;
+    invoke-virtual {v1, p0}, Lfr;->a(Lone/me/sdk/arch/Widget;)Ljava/lang/Object;
 
     move-result-object p0
 
-    return-object p0
-.end method
+    check-cast p0, Ljava/lang/Number;
 
-.method public final f()V
-    .locals 1
+    invoke-virtual {p0}, Ljava/lang/Number;->longValue()J
 
-    iget-boolean v0, p0, Lwb3;->X:Z
+    move-result-wide v1
 
-    if-nez v0, :cond_0
+    invoke-direct {v0, v1, v2}, Lgc3;-><init>(J)V
 
-    const/4 v0, 0x1
+    return-object v0
 
-    iput-boolean v0, p0, Lwb3;->X:Z
-
-    iget-object p0, p0, Lwb3;->c:Lml7;
-
-    invoke-virtual {p0}, Lml7;->f()V
-
-    :cond_0
-    return-void
-.end method
-
-.method public final g()Z
-    .locals 0
-
-    iget-boolean p0, p0, Lwb3;->X:Z
-
-    return p0
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

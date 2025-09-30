@@ -1,109 +1,107 @@
 .class public abstract Lr1;
-.super Ljava/lang/Object;
+.super Lgmf;
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/util/Iterator;
-.implements Lqb7;
+.implements Ljava/util/ListIterator;
 
 
 # instance fields
-.field public a:I
+.field public final b:I
 
-.field public b:Ljava/lang/Object;
+.field public c:I
+
+
+# direct methods
+.method public constructor <init>(II)V
+    .locals 1
+
+    const/4 v0, 0x0
+
+    invoke-direct {p0, v0}, Lgmf;-><init>(I)V
+
+    invoke-static {p2, p1}, Lgy7;->o(II)V
+
+    iput p1, p0, Lr1;->b:I
+
+    iput p2, p0, Lr1;->c:I
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public abstract a()V
+.method public abstract a(I)Ljava/lang/Object;
+.end method
+
+.method public final add(Ljava/lang/Object;)V
+    .locals 0
+
+    new-instance p0, Ljava/lang/UnsupportedOperationException;
+
+    invoke-direct {p0}, Ljava/lang/UnsupportedOperationException;-><init>()V
+
+    throw p0
 .end method
 
 .method public final hasNext()Z
-    .locals 3
+    .locals 1
 
-    iget v0, p0, Lr1;->a:I
+    iget v0, p0, Lr1;->c:I
 
-    const/4 v1, 0x0
+    iget p0, p0, Lr1;->b:I
 
-    const/4 v2, 0x1
+    if-ge v0, p0, :cond_0
 
-    if-eqz v0, :cond_2
+    const/4 p0, 0x1
 
-    if-eq v0, v2, :cond_1
-
-    const/4 p0, 0x2
-
-    if-ne v0, p0, :cond_0
-
-    return v1
+    return p0
 
     :cond_0
-    new-instance p0, Ljava/lang/IllegalArgumentException;
+    const/4 p0, 0x0
 
-    const-string v0, "hasNext called when the iterator is in the FAILED state."
+    return p0
+.end method
 
-    invoke-direct {p0, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+.method public final hasPrevious()Z
+    .locals 0
 
-    throw p0
+    iget p0, p0, Lr1;->c:I
 
-    :cond_1
-    return v2
+    if-lez p0, :cond_0
 
-    :cond_2
-    const/4 v0, 0x3
+    const/4 p0, 0x1
 
-    iput v0, p0, Lr1;->a:I
+    return p0
 
-    invoke-virtual {p0}, Lr1;->a()V
+    :cond_0
+    const/4 p0, 0x0
 
-    iget p0, p0, Lr1;->a:I
-
-    if-ne p0, v2, :cond_3
-
-    return v2
-
-    :cond_3
-    return v1
+    return p0
 .end method
 
 .method public final next()Ljava/lang/Object;
-    .locals 4
+    .locals 2
 
-    iget v0, p0, Lr1;->a:I
+    invoke-virtual {p0}, Lr1;->hasNext()Z
 
-    const/4 v1, 0x0
+    move-result v0
 
-    const/4 v2, 0x1
+    if-eqz v0, :cond_0
 
-    if-ne v0, v2, :cond_0
+    iget v0, p0, Lr1;->c:I
 
-    iput v1, p0, Lr1;->a:I
+    add-int/lit8 v1, v0, 0x1
 
-    iget-object p0, p0, Lr1;->b:Ljava/lang/Object;
+    iput v1, p0, Lr1;->c:I
+
+    invoke-virtual {p0, v0}, Lr1;->a(I)Ljava/lang/Object;
+
+    move-result-object p0
 
     return-object p0
 
     :cond_0
-    const/4 v3, 0x2
-
-    if-eq v0, v3, :cond_1
-
-    const/4 v0, 0x3
-
-    iput v0, p0, Lr1;->a:I
-
-    invoke-virtual {p0}, Lr1;->a()V
-
-    iget v0, p0, Lr1;->a:I
-
-    if-ne v0, v2, :cond_1
-
-    iput v1, p0, Lr1;->a:I
-
-    iget-object p0, p0, Lr1;->b:Ljava/lang/Object;
-
-    return-object p0
-
-    :cond_1
     new-instance p0, Ljava/util/NoSuchElementException;
 
     invoke-direct {p0}, Ljava/util/NoSuchElementException;-><init>()V
@@ -111,14 +109,59 @@
     throw p0
 .end method
 
-.method public final remove()V
+.method public final nextIndex()I
+    .locals 0
+
+    iget p0, p0, Lr1;->c:I
+
+    return p0
+.end method
+
+.method public final previous()Ljava/lang/Object;
     .locals 1
+
+    invoke-virtual {p0}, Lr1;->hasPrevious()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    iget v0, p0, Lr1;->c:I
+
+    add-int/lit8 v0, v0, -0x1
+
+    iput v0, p0, Lr1;->c:I
+
+    invoke-virtual {p0, v0}, Lr1;->a(I)Ljava/lang/Object;
+
+    move-result-object p0
+
+    return-object p0
+
+    :cond_0
+    new-instance p0, Ljava/util/NoSuchElementException;
+
+    invoke-direct {p0}, Ljava/util/NoSuchElementException;-><init>()V
+
+    throw p0
+.end method
+
+.method public final previousIndex()I
+    .locals 0
+
+    iget p0, p0, Lr1;->c:I
+
+    add-int/lit8 p0, p0, -0x1
+
+    return p0
+.end method
+
+.method public final set(Ljava/lang/Object;)V
+    .locals 0
 
     new-instance p0, Ljava/lang/UnsupportedOperationException;
 
-    const-string v0, "Operation is not supported for read-only collection"
-
-    invoke-direct {p0, v0}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p0}, Ljava/lang/UnsupportedOperationException;-><init>()V
 
     throw p0
 .end method

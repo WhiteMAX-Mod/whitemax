@@ -1,136 +1,35 @@
-.class public final Lcr1;
+.class public interface abstract Lcr1;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lch3;
-
-
-# instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Ldh3;
-
-.field public final synthetic c:Ljava/lang/Object;
-
-
-# direct methods
-.method public synthetic constructor <init>(Ldh3;Ljava/lang/Object;I)V
-    .locals 0
-
-    iput p3, p0, Lcr1;->a:I
-
-    iput-object p1, p0, Lcr1;->b:Ldh3;
-
-    iput-object p2, p0, Lcr1;->c:Ljava/lang/Object;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    return-void
-.end method
-
-.method private final c()V
-    .locals 0
-
-    return-void
-.end method
-
 
 # virtual methods
-.method public final a()V
-    .locals 2
+.method public L()V
+    .locals 0
 
-    iget v0, p0, Lcr1;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    iget-object v0, p0, Lcr1;->b:Ldh3;
-
-    invoke-interface {v0}, Ldh3;->f()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    invoke-interface {v0, p0}, Ldh3;->e(Lch3;)V
-
-    iget-object p0, p0, Lcr1;->c:Ljava/lang/Object;
-
-    check-cast p0, Lqy1;
-
-    sget-object v0, Le5f;->a:Le5f;
-
-    invoke-virtual {p0, v0}, Lqy1;->resumeWith(Ljava/lang/Object;)V
-
-    :cond_0
-    :pswitch_0
     return-void
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
 .end method
 
-.method public final b()V
-    .locals 2
-
-    iget v0, p0, Lcr1;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    iget-object v0, p0, Lcr1;->b:Ldh3;
-
-    invoke-interface {v0}, Ldh3;->f()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    invoke-interface {v0, p0}, Ldh3;->e(Lch3;)V
-
-    iget-object p0, p0, Lcr1;->c:Ljava/lang/Object;
-
-    check-cast p0, Lqy1;
-
-    sget-object v0, Le5f;->a:Le5f;
-
-    invoke-virtual {p0, v0}, Lqy1;->resumeWith(Ljava/lang/Object;)V
-
-    :cond_0
-    return-void
-
-    :pswitch_0
-    iget-object v0, p0, Lcr1;->b:Ldh3;
-
-    invoke-interface {v0}, Ldh3;->d()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    sget-object v0, Lv9f;->a:Lv9f;
-
-    goto :goto_0
-
-    :cond_1
-    sget-object v0, Lv9f;->b:Lv9f;
-
-    :goto_0
-    iget-object p0, p0, Lcr1;->c:Ljava/lang/Object;
-
-    check-cast p0, Lr7b;
-
-    check-cast p0, Lo7b;
-
-    invoke-virtual {p0, v0}, Lo7b;->g(Ljava/lang/Object;)Ljava/lang/Object;
+.method public k(Lxg1;)V
+    .locals 0
 
     return-void
+.end method
 
-    nop
+.method public m(Lxg1;Landroid/graphics/Point;)V
+    .locals 0
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-void
+.end method
+
+.method public s(Lxg1;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public z(Lxg1;)V
+    .locals 0
+
+    return-void
 .end method

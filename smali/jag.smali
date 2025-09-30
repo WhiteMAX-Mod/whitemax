@@ -1,131 +1,266 @@
-.class public final enum Ljag;
-.super Ljava/lang/Enum;
+.class public final Ljag;
+.super Landroid/animation/AnimatorListenerAdapter;
 .source "SourceFile"
 
-
-# static fields
-.field public static final enum X:Ljag;
-
-.field public static final enum Y:Ljag;
-
-.field public static final synthetic Z:[Ljag;
-
-.field public static final enum c:Ljag;
-
-.field public static final enum o:Ljag;
-
-.field public static final synthetic o0:Ln25;
+# interfaces
+.implements Ldef;
 
 
 # instance fields
-.field public final a:C
+.field public final a:Landroid/view/View;
 
-.field public final b:C
+.field public final b:I
+
+.field public final c:Landroid/view/ViewGroup;
+
+.field public final d:Z
+
+.field public e:Z
+
+.field public f:Z
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 9
+.method public constructor <init>(Landroid/view/View;I)V
+    .locals 1
 
-    new-instance v0, Ljag;
+    invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
 
-    const-string v1, "OBJ"
+    const/4 v0, 0x0
 
-    const/4 v2, 0x0
+    iput-boolean v0, p0, Ljag;->f:Z
 
-    const/16 v3, 0x7b
+    iput-object p1, p0, Ljag;->a:Landroid/view/View;
 
-    const/16 v4, 0x7d
+    iput p2, p0, Ljag;->b:I
 
-    invoke-direct {v0, v1, v2, v3, v4}, Ljag;-><init>(Ljava/lang/String;ICC)V
+    invoke-virtual {p1}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
 
-    sput-object v0, Ljag;->c:Ljag;
+    move-result-object p1
 
-    new-instance v1, Ljag;
+    check-cast p1, Landroid/view/ViewGroup;
 
-    const-string v2, "LIST"
+    iput-object p1, p0, Ljag;->c:Landroid/view/ViewGroup;
 
-    const/4 v5, 0x1
+    const/4 p1, 0x1
 
-    const/16 v6, 0x5b
+    iput-boolean p1, p0, Ljag;->d:Z
 
-    const/16 v7, 0x5d
-
-    invoke-direct {v1, v2, v5, v6, v7}, Ljag;-><init>(Ljava/lang/String;ICC)V
-
-    sput-object v1, Ljag;->o:Ljag;
-
-    new-instance v2, Ljag;
-
-    const-string v5, "MAP"
-
-    const/4 v8, 0x2
-
-    invoke-direct {v2, v5, v8, v3, v4}, Ljag;-><init>(Ljava/lang/String;ICC)V
-
-    sput-object v2, Ljag;->X:Ljag;
-
-    new-instance v3, Ljag;
-
-    const-string v4, "POLY_OBJ"
-
-    const/4 v5, 0x3
-
-    invoke-direct {v3, v4, v5, v6, v7}, Ljag;-><init>(Ljava/lang/String;ICC)V
-
-    sput-object v3, Ljag;->Y:Ljag;
-
-    filled-new-array {v0, v1, v2, v3}, [Ljag;
-
-    move-result-object v0
-
-    sput-object v0, Ljag;->Z:[Ljag;
-
-    new-instance v1, Ln25;
-
-    invoke-direct {v1, v0}, Ln25;-><init>([Ljava/lang/Enum;)V
-
-    sput-object v1, Ljag;->o0:Ln25;
+    invoke-virtual {p0, p1}, Ljag;->g(Z)V
 
     return-void
 .end method
 
-.method public constructor <init>(Ljava/lang/String;ICC)V
+
+# virtual methods
+.method public final a(Lfef;)V
     .locals 0
 
-    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    return-void
+.end method
 
-    iput-char p3, p0, Ljag;->a:C
+.method public final b()V
+    .locals 1
 
-    iput-char p4, p0, Ljag;->b:C
+    const/4 v0, 0x0
+
+    invoke-virtual {p0, v0}, Ljag;->g(Z)V
+
+    iget-boolean v0, p0, Ljag;->f:Z
+
+    if-nez v0, :cond_0
+
+    sget-object v0, Lv9g;->a:La42;
+
+    iget-object v0, p0, Ljag;->a:Landroid/view/View;
+
+    iget p0, p0, Ljag;->b:I
+
+    invoke-virtual {v0, p0}, Landroid/view/View;->setTransitionVisibility(I)V
+
+    :cond_0
+    return-void
+.end method
+
+.method public final c(Lfef;)V
+    .locals 0
+
+    invoke-virtual {p1, p0}, Lfef;->E(Ldef;)Lfef;
 
     return-void
 .end method
 
-.method public static valueOf(Ljava/lang/String;)Ljag;
+.method public final f()V
     .locals 1
 
-    const-class v0, Ljag;
+    const/4 v0, 0x1
 
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+    invoke-virtual {p0, v0}, Ljag;->g(Z)V
 
-    move-result-object p0
+    iget-boolean v0, p0, Ljag;->f:Z
 
-    check-cast p0, Ljag;
+    if-nez v0, :cond_0
 
-    return-object p0
+    sget-object v0, Lv9g;->a:La42;
+
+    iget-object p0, p0, Ljag;->a:Landroid/view/View;
+
+    const/4 v0, 0x0
+
+    invoke-virtual {p0, v0}, Landroid/view/View;->setTransitionVisibility(I)V
+
+    :cond_0
+    return-void
 .end method
 
-.method public static values()[Ljag;
+.method public final g(Z)V
     .locals 1
 
-    sget-object v0, Ljag;->Z:[Ljag;
+    iget-boolean v0, p0, Ljag;->d:Z
 
-    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
+    if-eqz v0, :cond_0
 
-    move-result-object v0
+    iget-boolean v0, p0, Ljag;->e:Z
 
-    check-cast v0, [Ljag;
+    if-eq v0, p1, :cond_0
 
-    return-object v0
+    iget-object v0, p0, Ljag;->c:Landroid/view/ViewGroup;
+
+    if-eqz v0, :cond_0
+
+    iput-boolean p1, p0, Ljag;->e:Z
+
+    invoke-static {v0, p1}, Lo7g;->b(Landroid/view/ViewGroup;Z)V
+
+    :cond_0
+    return-void
+.end method
+
+.method public final h(Lfef;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public final onAnimationCancel(Landroid/animation/Animator;)V
+    .locals 0
+
+    const/4 p1, 0x1
+
+    iput-boolean p1, p0, Ljag;->f:Z
+
+    return-void
+.end method
+
+.method public final onAnimationEnd(Landroid/animation/Animator;)V
+    .locals 1
+
+    .line 1
+    iget-boolean p1, p0, Ljag;->f:Z
+
+    if-nez p1, :cond_0
+
+    .line 2
+    sget-object p1, Lv9g;->a:La42;
+
+    .line 3
+    iget-object p1, p0, Ljag;->a:Landroid/view/View;
+
+    iget v0, p0, Ljag;->b:I
+
+    invoke-virtual {p1, v0}, Landroid/view/View;->setTransitionVisibility(I)V
+
+    .line 4
+    iget-object p1, p0, Ljag;->c:Landroid/view/ViewGroup;
+
+    if-eqz p1, :cond_0
+
+    .line 5
+    invoke-virtual {p1}, Landroid/view/View;->invalidate()V
+
+    :cond_0
+    const/4 p1, 0x0
+
+    .line 6
+    invoke-virtual {p0, p1}, Ljag;->g(Z)V
+
+    return-void
+.end method
+
+.method public final onAnimationEnd(Landroid/animation/Animator;Z)V
+    .locals 0
+
+    if-nez p2, :cond_1
+
+    .line 7
+    iget-boolean p1, p0, Ljag;->f:Z
+
+    if-nez p1, :cond_0
+
+    .line 8
+    sget-object p1, Lv9g;->a:La42;
+
+    .line 9
+    iget-object p1, p0, Ljag;->a:Landroid/view/View;
+
+    iget p2, p0, Ljag;->b:I
+
+    invoke-virtual {p1, p2}, Landroid/view/View;->setTransitionVisibility(I)V
+
+    .line 10
+    iget-object p1, p0, Ljag;->c:Landroid/view/ViewGroup;
+
+    if-eqz p1, :cond_0
+
+    .line 11
+    invoke-virtual {p1}, Landroid/view/View;->invalidate()V
+
+    :cond_0
+    const/4 p1, 0x0
+
+    .line 12
+    invoke-virtual {p0, p1}, Ljag;->g(Z)V
+
+    :cond_1
+    return-void
+.end method
+
+.method public final onAnimationRepeat(Landroid/animation/Animator;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public final onAnimationStart(Landroid/animation/Animator;)V
+    .locals 0
+
+    .line 1
+    return-void
+.end method
+
+.method public final onAnimationStart(Landroid/animation/Animator;Z)V
+    .locals 0
+
+    if-eqz p2, :cond_0
+
+    .line 2
+    sget-object p1, Lv9g;->a:La42;
+
+    .line 3
+    iget-object p1, p0, Ljag;->a:Landroid/view/View;
+
+    const/4 p2, 0x0
+
+    invoke-virtual {p1, p2}, Landroid/view/View;->setTransitionVisibility(I)V
+
+    .line 4
+    iget-object p0, p0, Ljag;->c:Landroid/view/ViewGroup;
+
+    if-eqz p0, :cond_0
+
+    .line 5
+    invoke-virtual {p0}, Landroid/view/View;->invalidate()V
+
+    :cond_0
+    return-void
 .end method

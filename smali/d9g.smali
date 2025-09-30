@@ -1,109 +1,183 @@
 .class public final Ld9g;
-.super Lv2;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public final synthetic o:I
+.field public final a:Ljava/util/ArrayList;
+
+.field public b:J
+
+.field public c:Landroid/view/animation/Interpolator;
+
+.field public d:Le9g;
+
+.field public e:Z
+
+.field public final f:Lr8f;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lkjc;I)V
-    .locals 0
+.method public constructor <init>()V
+    .locals 2
 
-    iput p2, p0, Ld9g;->o:I
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, p1}, Lv2;-><init>(Lkjc;)V
+    const-wide/16 v0, -0x1
+
+    iput-wide v0, p0, Ld9g;->b:J
+
+    new-instance v0, Lr8f;
+
+    invoke-direct {v0, p0}, Lr8f;-><init>(Ld9g;)V
+
+    iput-object v0, p0, Ld9g;->f:Lr8f;
+
+    new-instance v0, Ljava/util/ArrayList;
+
+    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
+
+    iput-object v0, p0, Ld9g;->a:Ljava/util/ArrayList;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final g()Ljava/lang/String;
-    .locals 0
+.method public final a()V
+    .locals 2
 
-    iget p0, p0, Ld9g;->o:I
+    iget-boolean v0, p0, Ld9g;->e:Z
 
-    packed-switch p0, :pswitch_data_0
+    if-nez v0, :cond_0
 
-    const-string p0, "DELETE FROM worktag WHERE work_spec_id=?"
+    return-void
 
-    return-object p0
+    :cond_0
+    iget-object v0, p0, Ld9g;->a:Ljava/util/ArrayList;
 
-    :pswitch_0
-    const-string p0, "UPDATE workspec SET run_attempt_count=0 WHERE id=?"
+    invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
-    return-object p0
+    move-result-object v0
 
-    :pswitch_1
-    const-string p0, "UPDATE workspec SET run_attempt_count=run_attempt_count+1 WHERE id=?"
+    :goto_0
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
 
-    return-object p0
+    move-result v1
 
-    :pswitch_2
-    const-string p0, "UPDATE workspec SET last_enqueue_time=? WHERE id=?"
+    if-eqz v1, :cond_1
 
-    return-object p0
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    :pswitch_3
-    const-string p0, "UPDATE workspec SET output=? WHERE id=?"
+    move-result-object v1
 
-    return-object p0
+    check-cast v1, Lc9g;
 
-    :pswitch_4
-    const-string p0, "UPDATE workspec SET period_count=period_count+1 WHERE id=?"
+    invoke-virtual {v1}, Lc9g;->b()V
 
-    return-object p0
+    goto :goto_0
 
-    :pswitch_5
-    const-string p0, "UPDATE workspec SET state=? WHERE id=?"
+    :cond_1
+    const/4 v0, 0x0
 
-    return-object p0
+    iput-boolean v0, p0, Ld9g;->e:Z
 
-    :pswitch_6
-    const-string p0, "DELETE FROM workspec WHERE id=?"
+    return-void
+.end method
 
-    return-object p0
+.method public final b()V
+    .locals 6
 
-    :pswitch_7
-    const-string p0, "UPDATE workspec SET generation=generation+1 WHERE id=?"
+    iget-boolean v0, p0, Ld9g;->e:Z
 
-    return-object p0
+    if-eqz v0, :cond_0
 
-    :pswitch_8
-    const-string p0, "DELETE FROM workspec WHERE state IN (2, 3, 5) AND (SELECT COUNT(*)=0 FROM dependency WHERE     prerequisite_id=id AND     work_spec_id NOT IN         (SELECT id FROM workspec WHERE state IN (2, 3, 5)))"
+    return-void
 
-    return-object p0
+    :cond_0
+    iget-object v0, p0, Ld9g;->a:Ljava/util/ArrayList;
 
-    :pswitch_9
-    const-string p0, "UPDATE workspec SET schedule_requested_at=-1 WHERE state NOT IN (2, 3, 5)"
+    invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
-    return-object p0
+    move-result-object v0
 
-    :pswitch_a
-    const-string p0, "UPDATE workspec SET schedule_requested_at=? WHERE id=?"
+    :cond_1
+    :goto_0
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
 
-    return-object p0
+    move-result v1
 
-    :pswitch_b
-    const-string p0, "DELETE FROM WorkProgress"
+    if-eqz v1, :cond_5
 
-    return-object p0
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_b
-        :pswitch_a
-        :pswitch_9
-        :pswitch_8
-        :pswitch_7
-        :pswitch_6
-        :pswitch_5
-        :pswitch_4
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    move-result-object v1
+
+    check-cast v1, Lc9g;
+
+    iget-wide v2, p0, Ld9g;->b:J
+
+    const-wide/16 v4, 0x0
+
+    cmp-long v4, v2, v4
+
+    if-ltz v4, :cond_2
+
+    invoke-virtual {v1, v2, v3}, Lc9g;->c(J)V
+
+    :cond_2
+    iget-object v2, p0, Ld9g;->c:Landroid/view/animation/Interpolator;
+
+    if-eqz v2, :cond_3
+
+    iget-object v3, v1, Lc9g;->a:Ljava/lang/ref/WeakReference;
+
+    invoke-virtual {v3}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
+
+    move-result-object v3
+
+    check-cast v3, Landroid/view/View;
+
+    if-eqz v3, :cond_3
+
+    invoke-virtual {v3}, Landroid/view/View;->animate()Landroid/view/ViewPropertyAnimator;
+
+    move-result-object v3
+
+    invoke-virtual {v3, v2}, Landroid/view/ViewPropertyAnimator;->setInterpolator(Landroid/animation/TimeInterpolator;)Landroid/view/ViewPropertyAnimator;
+
+    :cond_3
+    iget-object v2, p0, Ld9g;->d:Le9g;
+
+    if-eqz v2, :cond_4
+
+    iget-object v2, p0, Ld9g;->f:Lr8f;
+
+    invoke-virtual {v1, v2}, Lc9g;->d(Le9g;)V
+
+    :cond_4
+    iget-object v1, v1, Lc9g;->a:Ljava/lang/ref/WeakReference;
+
+    invoke-virtual {v1}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Landroid/view/View;
+
+    if-eqz v1, :cond_1
+
+    invoke-virtual {v1}, Landroid/view/View;->animate()Landroid/view/ViewPropertyAnimator;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Landroid/view/ViewPropertyAnimator;->start()V
+
+    goto :goto_0
+
+    :cond_5
+    const/4 v0, 0x1
+
+    iput-boolean v0, p0, Ld9g;->e:Z
+
+    return-void
 .end method

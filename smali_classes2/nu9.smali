@@ -1,131 +1,199 @@
 .class public final Lnu9;
-.super Lqde;
+.super Ljava/lang/Object;
 .source "SourceFile"
-
-# interfaces
-.implements Ll66;
 
 
 # instance fields
-.field public X:I
+.field public final a:Lcl7;
 
-.field public final synthetic Y:Lru/ok/messages/NotificationsImagesProvider;
+.field public final b:Lcl7;
 
-.field public final synthetic Z:Landroid/net/Uri;
+.field public final c:Lcl7;
 
-.field public final synthetic o0:Leod;
+.field public final d:Lcl7;
+
+.field public final e:Lcl7;
+
+.field public final f:Lcl7;
+
+.field public final g:Ljava/lang/String;
+
+.field public final h:Lkotlinx/coroutines/internal/ContextScope;
+
+.field public final i:Lnxd;
+
+.field public final j:Lhic;
+
+.field public final k:Lyce;
+
+.field public final l:Liic;
+
+.field public volatile m:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>(Lru/ok/messages/NotificationsImagesProvider;Landroid/net/Uri;Leod;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(Lcl7;Lcl7;Lcl7;Lcl7;Lcl7;Lcl7;Lcl7;)V
     .locals 0
 
-    iput-object p1, p0, Lnu9;->Y:Lru/ok/messages/NotificationsImagesProvider;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p2, p0, Lnu9;->Z:Landroid/net/Uri;
+    iput-object p1, p0, Lnu9;->a:Lcl7;
 
-    iput-object p3, p0, Lnu9;->o0:Leod;
+    iput-object p3, p0, Lnu9;->b:Lcl7;
 
-    const/4 p1, 0x2
+    iput-object p4, p0, Lnu9;->c:Lcl7;
 
-    invoke-direct {p0, p1, p4}, Lqde;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-object p5, p0, Lnu9;->d:Lcl7;
+
+    iput-object p6, p0, Lnu9;->e:Lcl7;
+
+    iput-object p7, p0, Lnu9;->f:Lcl7;
+
+    const-class p1, Lnu9;
+
+    invoke-virtual {p1}, Ljava/lang/Class;->getName()Ljava/lang/String;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lnu9;->g:Ljava/lang/String;
+
+    invoke-interface {p2}, Lcl7;->getValue()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lxwe;
+
+    check-cast p1, Laga;
+
+    invoke-virtual {p1}, Laga;->b()Ls04;
+
+    move-result-object p1
+
+    invoke-static {p1}, Lb0b;->a(Lq04;)Lkotlinx/coroutines/internal/ContextScope;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lnu9;->h:Lkotlinx/coroutines/internal/ContextScope;
+
+    const/4 p1, 0x4
+
+    const/4 p2, 0x0
+
+    const p3, 0x7fffffff
+
+    invoke-static {p2, p3, p1}, Loxd;->b(III)Lnxd;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lnu9;->i:Lnxd;
+
+    new-instance p2, Lhic;
+
+    invoke-direct {p2, p1}, Lhic;-><init>(Lqo9;)V
+
+    iput-object p2, p0, Lnu9;->j:Lhic;
+
+    const/4 p1, 0x0
+
+    invoke-static {p1}, Lzce;->a(Ljava/lang/Object;)Lyce;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lnu9;->k:Lyce;
+
+    new-instance p2, Liic;
+
+    invoke-direct {p2, p1}, Liic;-><init>(Lro9;)V
+
+    iput-object p2, p0, Lnu9;->l:Liic;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+.method public final a()Lcp5;
     .locals 0
 
-    check-cast p1, Lox3;
+    iget-object p0, p0, Lnu9;->b:Lcl7;
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Lnu9;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    invoke-interface {p0}, Lcl7;->getValue()Ljava/lang/Object;
 
     move-result-object p0
 
-    check-cast p0, Lnu9;
-
-    sget-object p1, Le5f;->a:Le5f;
-
-    invoke-virtual {p0, p1}, Lnu9;->o(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p0
+    check-cast p0, Lcp5;
 
     return-object p0
 .end method
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+.method public final b()V
     .locals 2
 
-    new-instance p1, Lnu9;
+    const/4 v0, 0x0
 
-    iget-object v0, p0, Lnu9;->Z:Landroid/net/Uri;
+    iput-object v0, p0, Lnu9;->m:Ljava/lang/String;
 
-    iget-object v1, p0, Lnu9;->o0:Leod;
+    iget-object p0, p0, Lnu9;->f:Lcl7;
 
-    iget-object p0, p0, Lnu9;->Y:Lru/ok/messages/NotificationsImagesProvider;
-
-    invoke-direct {p1, p0, v0, v1, p2}, Lnu9;-><init>(Lru/ok/messages/NotificationsImagesProvider;Landroid/net/Uri;Leod;Lkotlin/coroutines/Continuation;)V
-
-    return-object p1
-.end method
-
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 5
-
-    iget v0, p0, Lnu9;->X:I
-
-    const/4 v1, 0x1
-
-    if-eqz v0, :cond_1
-
-    if-ne v0, v1, :cond_0
-
-    invoke-static {p1}, Lsgg;->Z(Ljava/lang/Object;)V
-
-    return-object p1
-
-    :cond_0
-    new-instance p0, Ljava/lang/IllegalStateException;
-
-    const-string p1, "call to \'resume\' before \'invoke\' with coroutine"
-
-    invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p0
-
-    :cond_1
-    invoke-static {p1}, Lsgg;->Z(Ljava/lang/Object;)V
-
-    new-instance p1, Lmu9;
-
-    iget-object v0, p0, Lnu9;->o0:Leod;
-
-    const/4 v2, 0x0
-
-    iget-object v3, p0, Lnu9;->Y:Lru/ok/messages/NotificationsImagesProvider;
-
-    iget-object v4, p0, Lnu9;->Z:Landroid/net/Uri;
-
-    invoke-direct {p1, v3, v4, v0, v2}, Lmu9;-><init>(Lru/ok/messages/NotificationsImagesProvider;Landroid/net/Uri;Leod;Lkotlin/coroutines/Continuation;)V
-
-    iput v1, p0, Lnu9;->X:I
-
-    const-wide/16 v0, 0xbb8
-
-    invoke-static {v0, v1, p1, p0}, Lu7;->Z(JLl66;Lbu3;)Ljava/lang/Object;
+    invoke-interface {p0}, Lcl7;->getValue()Ljava/lang/Object;
 
     move-result-object p0
 
-    sget-object p1, Lpx3;->a:Lpx3;
+    check-cast p0, Lqoa;
 
-    if-ne p0, p1, :cond_2
+    sget v0, Ld1d;->t:I
 
-    return-object p1
+    new-instance v1, Lp2f;
 
-    :cond_2
-    return-object p0
+    invoke-direct {v1, v0}, Lp2f;-><init>(I)V
+
+    invoke-virtual {p0, v1}, Lqoa;->g(Lu2f;)V
+
+    new-instance v0, Lepa;
+
+    sget v1, Lq0d;->I:I
+
+    invoke-direct {v0, v1}, Lepa;-><init>(I)V
+
+    invoke-virtual {p0, v0}, Lqoa;->e(Ljpa;)V
+
+    invoke-virtual {p0}, Lqoa;->i()Lpoa;
+
+    return-void
+.end method
+
+.method public final c()V
+    .locals 2
+
+    const/4 v0, 0x0
+
+    iput-object v0, p0, Lnu9;->m:Ljava/lang/String;
+
+    iget-object p0, p0, Lnu9;->f:Lcl7;
+
+    invoke-interface {p0}, Lcl7;->getValue()Ljava/lang/Object;
+
+    move-result-object p0
+
+    check-cast p0, Lqoa;
+
+    sget v0, Ld1d;->v:I
+
+    new-instance v1, Lp2f;
+
+    invoke-direct {v1, v0}, Lp2f;-><init>(I)V
+
+    invoke-virtual {p0, v1}, Lqoa;->g(Lu2f;)V
+
+    new-instance v0, Lepa;
+
+    sget v1, Lq0d;->I:I
+
+    invoke-direct {v0, v1}, Lepa;-><init>(I)V
+
+    invoke-virtual {p0, v0}, Lqoa;->e(Ljpa;)V
+
+    invoke-virtual {p0}, Lqoa;->i()Lpoa;
+
+    return-void
 .end method

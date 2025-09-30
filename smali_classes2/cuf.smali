@@ -1,109 +1,125 @@
 .class public final Lcuf;
-.super Ljava/lang/Object;
+.super Lux;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:Lkjc;
+.field public final X:Ljava/lang/Integer;
 
-.field public final b:Lauf;
+.field public final Y:Ljava/lang/Long;
 
-.field public final c:Lsa4;
+.field public final Z:Ljava/lang/String;
 
-.field public final d:Lbjc;
+.field public final o:Ljava/lang/Long;
 
-.field public final e:Lbjc;
+.field public final r0:Ljava/lang/Integer;
+
+.field public final s0:Ljava/lang/Integer;
+
+.field public final t0:Z
+
+.field public final u0:Ljava/lang/String;
+
+.field public final v0:Ljava/lang/String;
+
+.field public final w0:[B
+
+.field public final x0:Ljava/lang/Long;
+
+.field public final y0:Ljava/lang/String;
+
+.field public final z0:Ldvf;
 
 
 # direct methods
-.method public constructor <init>(Lru/ok/tamtam/android/db/room/OneMeRoomDatabase;)V
-    .locals 2
+.method public constructor <init>(JILjava/lang/Long;Ljava/lang/String;Ljava/lang/Integer;Ljava/lang/Integer;ZLjava/lang/String;Ljava/lang/String;[BLjava/lang/Long;ZLjava/lang/String;Ldvf;Z)V
+    .locals 3
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    sget-object v0, Lxz;->X:Lxz;
 
-    iput-object p1, p0, Lcuf;->a:Lkjc;
+    move/from16 v1, p13
 
-    new-instance v0, Lauf;
+    move/from16 v2, p16
 
-    const/4 v1, 0x0
+    invoke-direct {p0, v0, v1, v2}, Lux;-><init>(Lxz;ZZ)V
 
-    invoke-direct {v0, p1, v1}, Lauf;-><init>(Lkjc;I)V
+    invoke-static {p1, p2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
-    iput-object v0, p0, Lcuf;->b:Lauf;
+    move-result-object p1
 
-    new-instance v0, Lsa4;
+    iput-object p1, p0, Lcuf;->o:Ljava/lang/Long;
 
-    const/4 v1, 0x7
+    invoke-static {p3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    invoke-direct {v0, p1, v1}, Lsa4;-><init>(Lkjc;I)V
+    move-result-object p1
 
-    iput-object v0, p0, Lcuf;->c:Lsa4;
+    iput-object p1, p0, Lcuf;->X:Ljava/lang/Integer;
 
-    new-instance v0, Lbjc;
+    iput-object p4, p0, Lcuf;->Y:Ljava/lang/Long;
 
-    const/16 v1, 0x19
+    iput-object p5, p0, Lcuf;->Z:Ljava/lang/String;
 
-    invoke-direct {v0, p1, v1}, Lbjc;-><init>(Lkjc;I)V
+    iput-object p6, p0, Lcuf;->r0:Ljava/lang/Integer;
 
-    iput-object v0, p0, Lcuf;->d:Lbjc;
+    iput-object p7, p0, Lcuf;->s0:Ljava/lang/Integer;
 
-    new-instance v0, Lbjc;
+    iput-boolean p8, p0, Lcuf;->t0:Z
 
-    const/16 v1, 0x1a
+    iput-object p9, p0, Lcuf;->u0:Ljava/lang/String;
 
-    invoke-direct {v0, p1, v1}, Lbjc;-><init>(Lkjc;I)V
+    iput-object p10, p0, Lcuf;->v0:Ljava/lang/String;
 
-    iput-object v0, p0, Lcuf;->e:Lbjc;
+    iput-object p12, p0, Lcuf;->x0:Ljava/lang/Long;
 
-    new-instance p0, Lbjc;
+    iput-object p11, p0, Lcuf;->w0:[B
 
-    const/16 v0, 0x1b
+    move-object/from16 p1, p14
 
-    invoke-direct {p0, p1, v0}, Lbjc;-><init>(Lkjc;I)V
+    iput-object p1, p0, Lcuf;->y0:Ljava/lang/String;
 
-    new-instance p0, Lbjc;
+    move-object/from16 p1, p15
 
-    const/16 v0, 0x1c
-
-    invoke-direct {p0, p1, v0}, Lbjc;-><init>(Lkjc;I)V
+    iput-object p1, p0, Lcuf;->z0:Ldvf;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(JJLqde;)Ljava/lang/Object;
+.method public final a()Ljava/util/HashMap;
     .locals 3
 
-    const/4 v0, 0x2
+    invoke-super {p0}, Lux;->a()Ljava/util/HashMap;
 
-    const-string v1, "SELECT * FROM webapp_biometry WHERE user_id = ? AND bot_id = ?"
+    move-result-object v0
 
-    invoke-static {v0, v1}, Lakc;->c(ILjava/lang/String;)Lakc;
+    iget-object v1, p0, Lcuf;->y0:Ljava/lang/String;
 
-    move-result-object v1
+    invoke-static {v1}, Lm7g;->m(Ljava/lang/CharSequence;)Z
 
-    const/4 v2, 0x1
+    move-result v2
 
-    invoke-virtual {v1, v2, p1, p2}, Lakc;->k(IJ)V
+    if-nez v2, :cond_0
 
-    invoke-virtual {v1, v0, p3, p4}, Lakc;->k(IJ)V
+    const-string v2, "token"
 
-    new-instance p1, Landroid/os/CancellationSignal;
+    invoke-virtual {v0, v2, v1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    invoke-direct {p1}, Landroid/os/CancellationSignal;-><init>()V
+    goto :goto_0
 
-    new-instance p2, Lztf;
+    :cond_0
+    const-string v1, "videoId"
 
-    const/4 p3, 0x1
+    iget-object v2, p0, Lcuf;->o:Ljava/lang/Long;
 
-    invoke-direct {p2, p0, v1, p3}, Lztf;-><init>(Lcuf;Lakc;I)V
+    invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    iget-object p0, p0, Lcuf;->a:Lkjc;
+    :goto_0
+    const-string v1, "videoType"
 
-    invoke-static {p0, p1, p2, p5}, Lxja;->l(Lkjc;Landroid/os/CancellationSignal;Ljava/util/concurrent/Callable;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    iget-object p0, p0, Lcuf;->X:Ljava/lang/Integer;
 
-    move-result-object p0
+    invoke-virtual {v0, v1, p0}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    return-object p0
+    return-object v0
 .end method

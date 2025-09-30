@@ -1,50 +1,19 @@
-.class public final synthetic Lws8;
+.class public final Lws8;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ljj3;
-
 
 # instance fields
-.field public final synthetic a:J
-
-.field public final synthetic b:J
-
-.field public final synthetic c:Z
+.field public final a:Lxjd;
 
 
 # direct methods
-.method public synthetic constructor <init>(JJZ)V
+.method public constructor <init>(Lxjd;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-wide p1, p0, Lws8;->a:J
-
-    iput-wide p3, p0, Lws8;->b:J
-
-    iput-boolean p5, p0, Lws8;->c:Z
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final accept(Ljava/lang/Object;)V
-    .locals 6
-
-    iget-boolean v5, p0, Lws8;->c:Z
-
-    move-object v0, p1
-
-    check-cast v0, Lx00;
-
-    iget-wide v1, p0, Lws8;->a:J
-
-    iget-wide v3, p0, Lws8;->b:J
-
-    invoke-static/range {v0 .. v5}, Lxq7;->j0(Lx00;JJZ)V
+    iput-object p1, p0, Lws8;->a:Lxjd;
 
     return-void
 .end method

@@ -1,151 +1,79 @@
-.class public final synthetic Lq76;
-.super Ljava/lang/Object;
+.class public final Lq76;
+.super Lzyd;
 .source "SourceFile"
-
-# interfaces
-.implements Ljq1;
-.implements Lmu;
 
 
 # instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Lbm7;
+.field public final synthetic Z:Landroidx/fragment/app/a;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lbm7;I)V
+.method public constructor <init>(Landroidx/fragment/app/a;)V
     .locals 0
 
-    iput p2, p0, Lq76;->a:I
-
-    iput-object p1, p0, Lq76;->b:Lbm7;
-
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lq76;->Z:Landroidx/fragment/app/a;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public L(Liq1;)Ljava/lang/String;
+.method public final C(I)Landroid/view/View;
     .locals 2
 
-    iget v0, p0, Lq76;->a:I
+    iget-object p0, p0, Lq76;->Z:Landroidx/fragment/app/a;
 
-    packed-switch v0, :pswitch_data_0
+    iget-object v0, p0, Landroidx/fragment/app/a;->T0:Landroid/view/View;
 
-    const/4 v0, 0x0
+    if-eqz v0, :cond_0
 
-    invoke-static {}, Lsgg;->n()Lpk4;
-
-    move-result-object v1
-
-    iget-object p0, p0, Lq76;->b:Lbm7;
-
-    invoke-static {v0, p0, p1, v1}, Lu7;->J(ZLbm7;Liq1;Lpk4;)V
-
-    new-instance p1, Ljava/lang/StringBuilder;
-
-    const-string v0, "nonCancellationPropagating["
-
-    invoke-direct {p1, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {p1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string p0, "]"
-
-    invoke-virtual {p1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v0, p1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object p0
 
     return-object p0
 
-    :pswitch_0
-    new-instance v0, Lge4;
+    :cond_0
+    new-instance p1, Ljava/lang/IllegalStateException;
 
-    const/4 v1, 0x1
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    invoke-direct {v0, p1, v1}, Lge4;-><init>(Liq1;I)V
+    const-string v1, "Fragment "
 
-    invoke-static {}, Lsgg;->n()Lpk4;
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    move-result-object p1
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    iget-object p0, p0, Lq76;->b:Lbm7;
+    const-string p0, " does not have a view"
 
-    invoke-interface {p0, v0, p1}, Lbm7;->d(Ljava/lang/Runnable;Ljava/util/concurrent/Executor;)V
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    new-instance p1, Ljava/lang/StringBuilder;
-
-    const-string v0, "transformVoidFuture ["
-
-    invoke-direct {p1, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {p1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string p0, "]"
-
-    invoke-virtual {p1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p0
 
-    return-object p0
+    invoke-direct {p1, p0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    throw p1
 .end method
 
-.method public apply(Ljava/lang/Object;)Lbm7;
-    .locals 1
+.method public final D()Z
+    .locals 0
 
-    iget v0, p0, Lq76;->a:I
+    iget-object p0, p0, Lq76;->Z:Landroidx/fragment/app/a;
 
-    packed-switch v0, :pswitch_data_0
+    iget-object p0, p0, Landroidx/fragment/app/a;->T0:Landroid/view/View;
 
-    check-cast p1, Ljava/lang/Void;
+    if-eqz p0, :cond_0
 
-    iget-object p0, p0, Lq76;->b:Lbm7;
+    const/4 p0, 0x1
 
-    invoke-interface {p0}, Ljava/util/concurrent/Future;->get()Ljava/lang/Object;
+    return p0
 
-    move-result-object p0
+    :cond_0
+    const/4 p0, 0x0
 
-    check-cast p0, Lov1;
-
-    invoke-interface {p0}, Lov1;->b()Lbm7;
-
-    move-result-object p0
-
-    return-object p0
-
-    :pswitch_0
-    check-cast p1, Lov1;
-
-    iget-object p0, p0, Lq76;->b:Lbm7;
-
-    invoke-interface {p0}, Ljava/util/concurrent/Future;->get()Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, Lov1;
-
-    invoke-interface {p0}, Lov1;->a()Lbm7;
-
-    move-result-object p0
-
-    return-object p0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x2
-        :pswitch_0
-    .end packed-switch
+    return p0
 .end method

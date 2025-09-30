@@ -1,97 +1,52 @@
-.class public final enum Ldi5;
-.super Ljava/lang/Enum;
+.class public final synthetic Ldi5;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lype;
 
-# static fields
-.field public static final synthetic X:[Ldi5;
 
-.field public static final enum a:Ldi5;
+# instance fields
+.field public final synthetic a:Lgi5;
 
-.field public static final enum b:Ldi5;
+.field public final synthetic b:J
 
-.field public static final enum c:Ldi5;
-
-.field public static final enum o:Ldi5;
+.field public final synthetic c:J
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 6
+.method public synthetic constructor <init>(Lgi5;JJ)V
+    .locals 0
 
-    new-instance v0, Ldi5;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const-string v1, "PresentArrow"
+    iput-object p1, p0, Ldi5;->a:Lgi5;
 
-    const/4 v2, 0x0
+    iput-wide p2, p0, Ldi5;->b:J
 
-    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v0, Ldi5;->a:Ldi5;
-
-    new-instance v1, Ldi5;
-
-    const-string v2, "ArrowToProgress"
-
-    const/4 v3, 0x1
-
-    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v1, Ldi5;->b:Ldi5;
-
-    new-instance v2, Ldi5;
-
-    const-string v3, "ProgressToArrow"
-
-    const/4 v4, 0x2
-
-    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v2, Ldi5;->c:Ldi5;
-
-    new-instance v3, Ldi5;
-
-    const-string v4, "ProgressSpinning"
-
-    const/4 v5, 0x3
-
-    invoke-direct {v3, v4, v5}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v3, Ldi5;->o:Ldi5;
-
-    filled-new-array {v0, v1, v2, v3}, [Ldi5;
-
-    move-result-object v0
-
-    sput-object v0, Ldi5;->X:[Ldi5;
+    iput-wide p4, p0, Ldi5;->c:J
 
     return-void
 .end method
 
-.method public static valueOf(Ljava/lang/String;)Ldi5;
-    .locals 1
 
-    const-class v0, Ldi5;
+# virtual methods
+.method public final get()Ljava/lang/Object;
+    .locals 6
 
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+    new-instance v0, Lfi5;
+
+    iget-object v1, p0, Ldi5;->a:Lgi5;
+
+    iget-wide v2, p0, Ldi5;->b:J
+
+    iget-wide v4, p0, Ldi5;->c:J
+
+    invoke-direct/range {v0 .. v5}, Lfi5;-><init>(Lgi5;JJ)V
+
+    invoke-virtual {v1, v0}, Lgi5;->a(Ljava/util/concurrent/Callable;)Lx3e;
 
     move-result-object p0
 
-    check-cast p0, Ldi5;
-
     return-object p0
-.end method
-
-.method public static values()[Ldi5;
-    .locals 1
-
-    sget-object v0, Ldi5;->X:[Ldi5;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, [Ldi5;
-
-    return-object v0
 .end method

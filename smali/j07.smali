@@ -1,100 +1,99 @@
 .class public final Lj07;
-.super Lnv8;
+.super Lt66;
 .source "SourceFile"
 
 
 # instance fields
-.field public a:I
+.field public final X:Ljava/lang/Object;
+
+.field public final synthetic o:I
 
 
 # direct methods
-.method public constructor <init>()V
+.method public constructor <init>(La27;)V
     .locals 1
 
-    invoke-direct {p0}, Lnv8;-><init>()V
+    const/4 v0, 0x1
+
+    iput v0, p0, Lj07;->o:I
+
+    .line 1
+    invoke-direct {p0, p1}, Lt66;-><init>(La27;)V
+
+    .line 2
+    new-instance p1, Ljava/util/concurrent/atomic/AtomicBoolean;
 
     const/4 v0, 0x0
 
-    iput v0, p0, Lj07;->a:I
+    invoke-direct {p1, v0}, Ljava/util/concurrent/atomic/AtomicBoolean;-><init>(Z)V
 
-    const/4 v0, -0x1
+    iput-object p1, p0, Lj07;->X:Ljava/lang/Object;
 
-    iput v0, p0, Lnv8;->cachedSize:I
+    return-void
+.end method
+
+.method public constructor <init>(La27;Lk07;)V
+    .locals 1
+
+    const/4 v0, 0x0
+
+    iput v0, p0, Lj07;->o:I
+
+    .line 3
+    invoke-direct {p0, p1}, Lt66;-><init>(La27;)V
+
+    .line 4
+    new-instance p1, Ljava/lang/ref/WeakReference;
+
+    invoke-direct {p1, p2}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
+
+    iput-object p1, p0, Lj07;->X:Ljava/lang/Object;
+
+    .line 5
+    new-instance p1, Li07;
+
+    const/4 p2, 0x0
+
+    invoke-direct {p1, p2, p0}, Li07;-><init>(ILjava/lang/Object;)V
+
+    invoke-virtual {p0, p1}, Lt66;->c(Ls66;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final computeSerializedSize()I
-    .locals 1
-
-    iget p0, p0, Lj07;->a:I
-
-    if-eqz p0, :cond_0
-
-    const/4 v0, 0x1
-
-    invoke-static {v0, p0}, Lq33;->n(II)I
-
-    move-result p0
-
-    return p0
-
-    :cond_0
-    const/4 p0, 0x0
-
-    return p0
-.end method
-
-.method public final mergeFrom(Lp33;)Lnv8;
+.method public close()V
     .locals 2
 
-    :cond_0
-    :goto_0
-    invoke-virtual {p1}, Lp33;->s()I
+    iget v0, p0, Lj07;->o:I
 
-    move-result v0
+    packed-switch v0, :pswitch_data_0
 
-    if-eqz v0, :cond_2
+    invoke-super {p0}, Lt66;->close()V
 
-    const/16 v1, 0x8
+    return-void
 
-    if-eq v0, v1, :cond_1
+    :pswitch_0
+    iget-object v0, p0, Lj07;->X:Ljava/lang/Object;
 
-    invoke-virtual {p1, v0}, Lp33;->u(I)Z
+    check-cast v0, Ljava/util/concurrent/atomic/AtomicBoolean;
+
+    const/4 v1, 0x1
+
+    invoke-virtual {v0, v1}, Ljava/util/concurrent/atomic/AtomicBoolean;->getAndSet(Z)Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    goto :goto_1
-
-    :cond_1
-    invoke-virtual {p1}, Lp33;->p()I
-
-    move-result v0
-
-    iput v0, p0, Lj07;->a:I
-
-    goto :goto_0
-
-    :cond_2
-    :goto_1
-    return-object p0
-.end method
-
-.method public final writeTo(Lq33;)V
-    .locals 1
-
-    iget p0, p0, Lj07;->a:I
-
-    if-eqz p0, :cond_0
-
-    const/4 v0, 0x1
-
-    invoke-virtual {p1, v0, p0}, Lq33;->G(II)V
+    invoke-super {p0}, Lt66;->close()V
 
     :cond_0
     return-void
+
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_0
+    .end packed-switch
 .end method

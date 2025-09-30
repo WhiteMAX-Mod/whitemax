@@ -1,73 +1,38 @@
-.class public final enum Ljtc;
-.super Ljava/lang/Enum;
+.class public interface abstract Ljtc;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final enum a:Ljtc;
-
-.field public static final enum b:Ljtc;
-
-.field public static final synthetic c:[Ljtc;
-
-
-# direct methods
-.method static constructor <clinit>()V
-    .locals 4
-
-    new-instance v0, Ljtc;
-
-    const-string v1, "PREVIEW_VIEW"
-
-    const/4 v2, 0x0
-
-    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v0, Ljtc;->a:Ljtc;
-
-    new-instance v1, Ljtc;
-
-    const-string v2, "SCREEN_FLASH_VIEW"
-
-    const/4 v3, 0x1
-
-    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v1, Ljtc;->b:Ljtc;
-
-    filled-new-array {v0, v1}, [Ljtc;
-
-    move-result-object v0
-
-    sput-object v0, Ljtc;->c:[Ljtc;
-
-    return-void
+# virtual methods
+.method public abstract a(Li27;Ljava/lang/String;Z)V
 .end method
 
-.method public static valueOf(Ljava/lang/String;)Ljtc;
-    .locals 1
-
-    const-class v0, Ljtc;
-
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
-
-    move-result-object p0
-
-    check-cast p0, Ljtc;
-
-    return-object p0
+.method public abstract b(Li27;Ljava/lang/Object;Ljava/lang/String;Z)V
 .end method
 
-.method public static values()[Ljtc;
-    .locals 1
+.method public abstract c(Li27;Ljava/lang/String;Ljava/lang/Throwable;Z)V
+.end method
 
-    sget-object v0, Ljtc;->c:[Ljtc;
+.method public abstract d(Ljava/lang/String;Ljava/lang/String;)V
+.end method
 
-    invoke-virtual {v0}, [Ljtc;->clone()Ljava/lang/Object;
+.method public abstract e(Ljava/lang/String;Ljava/lang/String;)V
+.end method
 
-    move-result-object v0
+.method public abstract f(Ljava/lang/String;Ljava/lang/String;Z)V
+.end method
 
-    check-cast v0, [Ljtc;
+.method public abstract g(Ljava/lang/String;)V
+.end method
 
-    return-object v0
+.method public abstract h(Ljava/lang/String;)Z
+.end method
+
+.method public abstract i(Ljava/lang/String;Ljava/lang/String;Ljava/util/Map;)V
+.end method
+
+.method public abstract j(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;Ljava/util/Map;)V
+.end method
+
+.method public abstract k(Ljava/lang/String;)V
 .end method

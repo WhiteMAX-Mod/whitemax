@@ -1,113 +1,253 @@
-.class public interface abstract Ll19;
+.class public final Ll19;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ln19;
+
+
+# instance fields
+.field public final a:J
+
+.field public final b:Ljava/lang/String;
+
+.field public final c:J
+
+.field public final d:Landroid/text/Layout;
+
+.field public final e:Landroid/text/Layout;
+
+
+# direct methods
+.method public constructor <init>(JLjava/lang/String;JLandroid/text/Layout;Landroid/text/Layout;)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-wide p1, p0, Ll19;->a:J
+
+    iput-object p3, p0, Ll19;->b:Ljava/lang/String;
+
+    iput-wide p4, p0, Ll19;->c:J
+
+    iput-object p6, p0, Ll19;->d:Landroid/text/Layout;
+
+    iput-object p7, p0, Ll19;->e:Landroid/text/Layout;
+
+    return-void
+.end method
+
 
 # virtual methods
-.method public abstract b()Ljava/util/List;
+.method public final a()Landroid/text/Layout;
+    .locals 0
+
+    iget-object p0, p0, Ll19;->d:Landroid/text/Layout;
+
+    return-object p0
 .end method
 
-.method public e(J)Lone/me/messages/list/loader/MessageModel;
-    .locals 3
+.method public final b()Landroid/text/Layout;
+    .locals 0
 
-    invoke-interface {p0}, Ll19;->b()Ljava/util/List;
+    iget-object p0, p0, Ll19;->e:Landroid/text/Layout;
 
-    move-result-object p0
+    return-object p0
+.end method
 
-    invoke-interface {p0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 7
 
-    move-result-object p0
+    const/4 v0, 0x1
+
+    if-ne p0, p1, :cond_0
+
+    return v0
 
     :cond_0
-    invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
+    instance-of v1, p1, Ll19;
 
-    move-result v0
+    const/4 v2, 0x0
 
-    if-eqz v0, :cond_1
+    if-nez v1, :cond_1
 
-    invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v0
-
-    move-object v1, v0
-
-    check-cast v1, Lone/me/messages/list/loader/MessageModel;
-
-    iget-wide v1, v1, Lone/me/messages/list/loader/MessageModel;->a:J
-
-    cmp-long v1, v1, p1
-
-    if-nez v1, :cond_0
-
-    goto :goto_0
+    return v2
 
     :cond_1
-    const/4 v0, 0x0
+    check-cast p1, Ll19;
 
-    :goto_0
-    check-cast v0, Lone/me/messages/list/loader/MessageModel;
+    iget-wide v3, p0, Ll19;->a:J
 
-    return-object v0
-.end method
+    iget-wide v5, p1, Ll19;->a:J
 
-.method public g(J)I
-    .locals 5
+    cmp-long v1, v3, v5
 
-    invoke-interface {p0}, Ll19;->b()Ljava/util/List;
+    if-eqz v1, :cond_2
 
-    move-result-object p0
+    return v2
 
-    invoke-interface {p0}, Ljava/util/List;->size()I
+    :cond_2
+    iget-object v1, p0, Ll19;->b:Ljava/lang/String;
 
-    move-result v0
+    iget-object v3, p1, Ll19;->b:Ljava/lang/String;
 
-    invoke-interface {p0}, Ljava/util/List;->size()I
+    invoke-static {v1, v3}, Lvyg;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v1
 
-    invoke-static {v1, v0}, Lq43;->h0(II)V
+    if-nez v1, :cond_3
 
-    add-int/lit8 v0, v0, -0x1
+    return v2
 
-    const/4 v1, 0x0
+    :cond_3
+    iget-wide v3, p0, Ll19;->c:J
 
-    :goto_0
-    if-gt v1, v0, :cond_1
+    iget-wide v5, p1, Ll19;->c:J
 
-    add-int v2, v1, v0
+    cmp-long v1, v3, v5
 
-    ushr-int/lit8 v2, v2, 0x1
+    if-eqz v1, :cond_4
 
-    invoke-interface {p0, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
+    return v2
 
-    move-result-object v3
+    :cond_4
+    iget-object v1, p0, Ll19;->d:Landroid/text/Layout;
 
-    check-cast v3, Lone/me/messages/list/loader/MessageModel;
+    iget-object v3, p1, Ll19;->d:Landroid/text/Layout;
 
-    iget-wide v3, v3, Lone/me/messages/list/loader/MessageModel;->c:J
+    invoke-static {v1, v3}, Lvyg;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    invoke-static {v3, v4, p1, p2}, Lxq7;->m(JJ)I
+    move-result v1
 
-    move-result v3
+    if-nez v1, :cond_5
 
-    if-gez v3, :cond_0
+    return v2
 
-    add-int/lit8 v1, v2, 0x1
+    :cond_5
+    iget-object p0, p0, Ll19;->e:Landroid/text/Layout;
+
+    iget-object p1, p1, Ll19;->e:Landroid/text/Layout;
+
+    invoke-static {p0, p1}, Lvyg;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p0
+
+    if-nez p0, :cond_6
+
+    return v2
+
+    :cond_6
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 5
+
+    iget-wide v0, p0, Ll19;->a:J
+
+    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
+
+    move-result v0
+
+    const/16 v1, 0x1f
+
+    mul-int/2addr v0, v1
+
+    const/4 v2, 0x0
+
+    iget-object v3, p0, Ll19;->b:Ljava/lang/String;
+
+    if-nez v3, :cond_0
+
+    move v3, v2
 
     goto :goto_0
 
     :cond_0
-    if-lez v3, :cond_2
+    invoke-virtual {v3}, Ljava/lang/String;->hashCode()I
 
-    add-int/lit8 v0, v2, -0x1
+    move-result v3
 
-    goto :goto_0
+    :goto_0
+    add-int/2addr v0, v3
+
+    mul-int/2addr v0, v1
+
+    iget-wide v3, p0, Ll19;->c:J
+
+    invoke-static {v0, v1, v3, v4}, Lwsf;->d(IIJ)I
+
+    move-result v0
+
+    iget-object v3, p0, Ll19;->d:Landroid/text/Layout;
+
+    invoke-virtual {v3}, Ljava/lang/Object;->hashCode()I
+
+    move-result v3
+
+    add-int/2addr v3, v0
+
+    mul-int/2addr v3, v1
+
+    iget-object p0, p0, Ll19;->e:Landroid/text/Layout;
+
+    if-nez p0, :cond_1
+
+    goto :goto_1
 
     :cond_1
-    add-int/lit8 v1, v1, 0x1
+    invoke-virtual {p0}, Ljava/lang/Object;->hashCode()I
 
-    neg-int v2, v1
+    move-result v2
 
-    :cond_2
-    return v2
+    :goto_1
+    add-int/2addr v3, v2
+
+    return v3
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 5
+
+    const-string v0, "Channel(chatId="
+
+    const-string v1, ", channelLink="
+
+    iget-wide v2, p0, Ll19;->a:J
+
+    iget-object v4, p0, Ll19;->b:Ljava/lang/String;
+
+    invoke-static {v0, v2, v3, v1, v4}, Lmhc;->i(Ljava/lang/String;JLjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    const-string v1, ", forwardedMessageId="
+
+    const-string v2, ", bodyLayout="
+
+    iget-wide v3, p0, Ll19;->c:J
+
+    invoke-static {v3, v4, v1, v2, v0}, Lmw1;->r(JLjava/lang/String;Ljava/lang/String;Ljava/lang/StringBuilder;)V
+
+    iget-object v1, p0, Ll19;->d:Landroid/text/Layout;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", forwardedTitleLayout="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object p0, p0, Ll19;->e:Landroid/text/Layout;
+
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string p0, ")"
+
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    return-object p0
 .end method

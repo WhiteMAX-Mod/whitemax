@@ -1,355 +1,277 @@
 .class public final Lgh4;
-.super Ljava/lang/Object;
+.super Lq8a;
 .source "SourceFile"
-
-# interfaces
-.implements Ljava/util/concurrent/ScheduledExecutorService;
-.implements Ljava/util/concurrent/ExecutorService;
 
 
 # instance fields
-.field public final a:Ljava/util/concurrent/ExecutorService;
+.field public final synthetic b:I
 
-.field public final b:Lje7;
+.field public final c:Lk1d;
+
+.field public final d:Lwk;
+
+.field public final e:Lr8a;
 
 
 # direct methods
-.method public constructor <init>(Ljava/util/concurrent/ExecutorService;Lwfe;)V
-    .locals 0
+.method public constructor <init>(Lwd3;Lql;Lul;Lfo8;)V
+    .locals 3
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/4 v0, 0x0
 
-    iput-object p1, p0, Lgh4;->a:Ljava/util/concurrent/ExecutorService;
+    iput v0, p0, Lgh4;->b:I
 
-    iput-object p2, p0, Lgh4;->b:Lje7;
+    .line 1
+    invoke-direct {p0, p1}, Lq8a;-><init>(Lwd3;)V
+
+    .line 2
+    new-instance v0, Lxv;
+
+    const/4 v1, 0x2
+
+    invoke-direct {v0, p2, v1, p4}, Lxv;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+
+    .line 3
+    new-instance p2, Lbkd;
+
+    new-instance p4, Lww9;
+
+    const/16 v1, 0x12
+
+    .line 4
+    invoke-direct {p4, v1}, Lww9;-><init>(I)V
+
+    .line 5
+    invoke-direct {p2, p4}, Lbkd;-><init>(Lww9;)V
+
+    .line 6
+    iget-object p4, p1, Lwd3;->o:Ljava/lang/Object;
+
+    check-cast p4, Ljl;
+
+    .line 7
+    iput-object p4, p2, Lbkd;->o:Ljava/lang/Object;
+
+    .line 8
+    new-instance p4, Lcr4;
+
+    .line 9
+    new-instance v1, Ltgd;
+
+    const/16 v2, 0xa
+
+    invoke-direct {v1, v2, v0}, Ltgd;-><init>(ILjava/lang/Object;)V
+
+    .line 10
+    invoke-direct {p4, v1}, Lcr4;-><init>(Ltgd;)V
+
+    .line 11
+    iget-object v1, p2, Lbkd;->a:Ljava/lang/Object;
+
+    check-cast v1, Lkw3;
+
+    .line 12
+    iput-object p4, v1, Lkw3;->b:Ljava/lang/Object;
+
+    .line 13
+    new-instance p4, Llm4;
+
+    .line 14
+    iget-object p1, p1, Lwd3;->c:Ljava/lang/Object;
+
+    check-cast p1, Ljavax/inject/Provider;
+
+    .line 15
+    invoke-direct {p4, p2, v0, p3, p1}, Llm4;-><init>(Lbkd;Lxv;Lul;Ljavax/inject/Provider;)V
+
+    .line 16
+    new-instance p1, Ls15;
+
+    invoke-direct {p1, v0, p4, p2}, Ls15;-><init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V
+
+    iput-object p1, p0, Lgh4;->e:Lr8a;
+
+    .line 17
+    iput-object p4, p0, Lgh4;->d:Lwk;
+
+    .line 18
+    new-instance p1, Lk1d;
+
+    invoke-direct {p1, p4}, Lk1d;-><init>(Lwk;)V
+
+    iput-object p1, p0, Lgh4;->c:Lk1d;
+
+    return-void
+.end method
+
+.method public constructor <init>(Lwd3;Lsh3;Lg8f;)V
+    .locals 4
+
+    const/4 v0, 0x1
+
+    iput v0, p0, Lgh4;->b:I
+
+    .line 19
+    invoke-direct {p0, p1}, Lq8a;-><init>(Lwd3;)V
+
+    .line 20
+    new-instance v0, Lkw3;
+
+    invoke-direct {v0, p2}, Lkw3;-><init>(Ljava/lang/Object;)V
+
+    .line 21
+    new-instance p2, Lbkd;
+
+    new-instance v1, Lww9;
+
+    const/16 v2, 0x12
+
+    .line 22
+    invoke-direct {v1, v2}, Lww9;-><init>(I)V
+
+    .line 23
+    invoke-direct {p2, v1}, Lbkd;-><init>(Lww9;)V
+
+    .line 24
+    iget-object v1, p1, Lwd3;->o:Ljava/lang/Object;
+
+    check-cast v1, Ljl;
+
+    .line 25
+    iput-object v1, p2, Lbkd;->o:Ljava/lang/Object;
+
+    .line 26
+    new-instance v1, Lcr4;
+
+    .line 27
+    new-instance v2, Ltgd;
+
+    const/16 v3, 0xa
+
+    invoke-direct {v2, v3, v0}, Ltgd;-><init>(ILjava/lang/Object;)V
+
+    .line 28
+    invoke-direct {v1, v2}, Lcr4;-><init>(Ltgd;)V
+
+    .line 29
+    iget-object v2, p2, Lbkd;->a:Ljava/lang/Object;
+
+    check-cast v2, Lkw3;
+
+    .line 30
+    iput-object v1, v2, Lkw3;->b:Ljava/lang/Object;
+
+    .line 31
+    new-instance v1, Llm4;
+
+    .line 32
+    iget-object p1, p1, Lwd3;->c:Ljava/lang/Object;
+
+    check-cast p1, Ljavax/inject/Provider;
+
+    .line 33
+    invoke-direct {v1, p2, v0, p3, p1}, Llm4;-><init>(Lbkd;Lkw3;Lg8f;Ljavax/inject/Provider;)V
+
+    .line 34
+    new-instance p1, Lktb;
+
+    const/4 p3, 0x5
+
+    invoke-direct {p1, v0, v1, p2, p3}, Lktb;-><init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;I)V
+
+    iput-object p1, p0, Lgh4;->e:Lr8a;
+
+    .line 35
+    iput-object v1, p0, Lgh4;->d:Lwk;
+
+    .line 36
+    new-instance p1, Lk1d;
+
+    invoke-direct {p1, v1}, Lk1d;-><init>(Lwk;)V
+
+    iput-object p1, p0, Lgh4;->c:Lk1d;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final awaitTermination(JLjava/util/concurrent/TimeUnit;)Z
-    .locals 0
-
-    iget-object p0, p0, Lgh4;->a:Ljava/util/concurrent/ExecutorService;
-
-    invoke-interface {p0, p1, p2, p3}, Ljava/util/concurrent/ExecutorService;->awaitTermination(JLjava/util/concurrent/TimeUnit;)Z
-
-    move-result p0
-
-    return p0
-.end method
-
-.method public final execute(Ljava/lang/Runnable;)V
-    .locals 0
-
-    iget-object p0, p0, Lgh4;->a:Ljava/util/concurrent/ExecutorService;
-
-    invoke-interface {p0, p1}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
-
-    return-void
-.end method
-
-.method public final invokeAll(Ljava/util/Collection;)Ljava/util/List;
-    .locals 0
-
-    .line 1
-    iget-object p0, p0, Lgh4;->a:Ljava/util/concurrent/ExecutorService;
-
-    invoke-interface {p0, p1}, Ljava/util/concurrent/ExecutorService;->invokeAll(Ljava/util/Collection;)Ljava/util/List;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public final invokeAll(Ljava/util/Collection;JLjava/util/concurrent/TimeUnit;)Ljava/util/List;
-    .locals 0
-
-    .line 2
-    iget-object p0, p0, Lgh4;->a:Ljava/util/concurrent/ExecutorService;
-
-    invoke-interface {p0, p1, p2, p3, p4}, Ljava/util/concurrent/ExecutorService;->invokeAll(Ljava/util/Collection;JLjava/util/concurrent/TimeUnit;)Ljava/util/List;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public final invokeAny(Ljava/util/Collection;)Ljava/lang/Object;
-    .locals 0
-
-    .line 1
-    iget-object p0, p0, Lgh4;->a:Ljava/util/concurrent/ExecutorService;
-
-    invoke-interface {p0, p1}, Ljava/util/concurrent/ExecutorService;->invokeAny(Ljava/util/Collection;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public final invokeAny(Ljava/util/Collection;JLjava/util/concurrent/TimeUnit;)Ljava/lang/Object;
-    .locals 0
-
-    .line 2
-    iget-object p0, p0, Lgh4;->a:Ljava/util/concurrent/ExecutorService;
-
-    invoke-interface {p0, p1, p2, p3, p4}, Ljava/util/concurrent/ExecutorService;->invokeAny(Ljava/util/Collection;JLjava/util/concurrent/TimeUnit;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public final isShutdown()Z
-    .locals 0
-
-    iget-object p0, p0, Lgh4;->a:Ljava/util/concurrent/ExecutorService;
-
-    invoke-interface {p0}, Ljava/util/concurrent/ExecutorService;->isShutdown()Z
-
-    move-result p0
-
-    return p0
-.end method
-
-.method public final isTerminated()Z
-    .locals 0
-
-    iget-object p0, p0, Lgh4;->a:Ljava/util/concurrent/ExecutorService;
-
-    invoke-interface {p0}, Ljava/util/concurrent/ExecutorService;->isTerminated()Z
-
-    move-result p0
-
-    return p0
-.end method
-
-.method public final schedule(Ljava/lang/Runnable;JLjava/util/concurrent/TimeUnit;)Ljava/util/concurrent/ScheduledFuture;
-    .locals 2
-
-    .line 5
-    invoke-static {p1}, Ljava/util/concurrent/Executors;->callable(Ljava/lang/Runnable;)Ljava/util/concurrent/Callable;
-
-    move-result-object p1
-
-    .line 6
-    iget-object v0, p0, Lgh4;->b:Lje7;
-
-    invoke-interface {v0}, Lje7;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/util/concurrent/ScheduledExecutorService;
-
-    .line 7
-    new-instance v1, Ljda;
-
-    .line 8
-    iget-object p0, p0, Lgh4;->a:Ljava/util/concurrent/ExecutorService;
-
-    invoke-direct {v1, p1, p0}, Ljda;-><init>(Ljava/util/concurrent/Callable;Ljava/util/concurrent/ExecutorService;)V
-
-    .line 9
-    new-instance p0, Lida;
-
-    const/4 p1, 0x1
-
-    invoke-direct {p0, v1, p1}, Lida;-><init>(Ljda;I)V
-
-    invoke-interface {v0, p0, p2, p3, p4}, Ljava/util/concurrent/ScheduledExecutorService;->schedule(Ljava/lang/Runnable;JLjava/util/concurrent/TimeUnit;)Ljava/util/concurrent/ScheduledFuture;
-
-    move-result-object p0
-
-    iput-object p0, v1, Ljda;->o0:Ljava/util/concurrent/ScheduledFuture;
-
-    return-object v1
-.end method
-
-.method public final schedule(Ljava/util/concurrent/Callable;JLjava/util/concurrent/TimeUnit;)Ljava/util/concurrent/ScheduledFuture;
-    .locals 2
-
-    .line 1
-    iget-object v0, p0, Lgh4;->b:Lje7;
-
-    invoke-interface {v0}, Lje7;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/util/concurrent/ScheduledExecutorService;
-
-    .line 2
-    new-instance v1, Ljda;
-
-    .line 3
-    iget-object p0, p0, Lgh4;->a:Ljava/util/concurrent/ExecutorService;
-
-    invoke-direct {v1, p1, p0}, Ljda;-><init>(Ljava/util/concurrent/Callable;Ljava/util/concurrent/ExecutorService;)V
-
-    .line 4
-    new-instance p0, Lida;
-
-    const/4 p1, 0x1
-
-    invoke-direct {p0, v1, p1}, Lida;-><init>(Ljda;I)V
-
-    invoke-interface {v0, p0, p2, p3, p4}, Ljava/util/concurrent/ScheduledExecutorService;->schedule(Ljava/lang/Runnable;JLjava/util/concurrent/TimeUnit;)Ljava/util/concurrent/ScheduledFuture;
-
-    move-result-object p0
-
-    iput-object p0, v1, Ljda;->o0:Ljava/util/concurrent/ScheduledFuture;
-
-    return-object v1
-.end method
-
-.method public final scheduleAtFixedRate(Ljava/lang/Runnable;JJLjava/util/concurrent/TimeUnit;)Ljava/util/concurrent/ScheduledFuture;
-    .locals 8
-
-    invoke-static {p1}, Ljava/util/concurrent/Executors;->callable(Ljava/lang/Runnable;)Ljava/util/concurrent/Callable;
-
-    move-result-object p1
-
-    iget-object v0, p0, Lgh4;->b:Lje7;
-
-    invoke-interface {v0}, Lje7;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    move-object v1, v0
-
-    check-cast v1, Ljava/util/concurrent/ScheduledExecutorService;
-
-    new-instance v0, Ljda;
-
-    iget-object p0, p0, Lgh4;->a:Ljava/util/concurrent/ExecutorService;
-
-    invoke-direct {v0, p1, p0}, Ljda;-><init>(Ljava/util/concurrent/Callable;Ljava/util/concurrent/ExecutorService;)V
-
-    new-instance v2, Lida;
-
-    const/4 p0, 0x0
-
-    invoke-direct {v2, v0, p0}, Lida;-><init>(Ljda;I)V
-
-    move-wide v3, p2
-
-    move-wide v5, p4
-
-    move-object v7, p6
-
-    invoke-interface/range {v1 .. v7}, Ljava/util/concurrent/ScheduledExecutorService;->scheduleWithFixedDelay(Ljava/lang/Runnable;JJLjava/util/concurrent/TimeUnit;)Ljava/util/concurrent/ScheduledFuture;
-
-    move-result-object p0
-
-    iput-object p0, v0, Ljda;->o0:Ljava/util/concurrent/ScheduledFuture;
-
-    return-object v0
-.end method
-
-.method public final scheduleWithFixedDelay(Ljava/lang/Runnable;JJLjava/util/concurrent/TimeUnit;)Ljava/util/concurrent/ScheduledFuture;
-    .locals 8
-
-    invoke-static {p1}, Ljava/util/concurrent/Executors;->callable(Ljava/lang/Runnable;)Ljava/util/concurrent/Callable;
-
-    move-result-object p1
-
-    iget-object v0, p0, Lgh4;->b:Lje7;
-
-    invoke-interface {v0}, Lje7;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    move-object v1, v0
-
-    check-cast v1, Ljava/util/concurrent/ScheduledExecutorService;
-
-    new-instance v0, Ljda;
-
-    iget-object p0, p0, Lgh4;->a:Ljava/util/concurrent/ExecutorService;
-
-    invoke-direct {v0, p1, p0}, Ljda;-><init>(Ljava/util/concurrent/Callable;Ljava/util/concurrent/ExecutorService;)V
-
-    new-instance v2, Lida;
-
-    const/4 p0, 0x0
-
-    invoke-direct {v2, v0, p0}, Lida;-><init>(Ljda;I)V
-
-    move-wide v3, p2
-
-    move-wide v5, p4
-
-    move-object v7, p6
-
-    invoke-interface/range {v1 .. v7}, Ljava/util/concurrent/ScheduledExecutorService;->scheduleWithFixedDelay(Ljava/lang/Runnable;JJLjava/util/concurrent/TimeUnit;)Ljava/util/concurrent/ScheduledFuture;
-
-    move-result-object p0
-
-    iput-object p0, v0, Ljda;->o0:Ljava/util/concurrent/ScheduledFuture;
-
-    return-object v0
-.end method
-
-.method public final shutdown()V
+.method public final a()Lwk;
     .locals 1
 
-    new-instance p0, Ljava/lang/UnsupportedOperationException;
+    iget v0, p0, Lgh4;->b:I
 
-    const-string v0, "Shutting down is not allowed."
+    packed-switch v0, :pswitch_data_0
 
-    invoke-direct {p0, v0}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+    iget-object p0, p0, Lgh4;->d:Lwk;
 
-    throw p0
+    check-cast p0, Llm4;
+
+    return-object p0
+
+    :pswitch_0
+    iget-object p0, p0, Lgh4;->d:Lwk;
+
+    check-cast p0, Llm4;
+
+    return-object p0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method
 
-.method public final shutdownNow()Ljava/util/List;
+.method public final b()Lr8a;
     .locals 1
 
-    new-instance p0, Ljava/lang/UnsupportedOperationException;
+    iget v0, p0, Lgh4;->b:I
 
-    const-string v0, "Shutting down is not allowed."
+    packed-switch v0, :pswitch_data_0
 
-    invoke-direct {p0, v0}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+    iget-object p0, p0, Lgh4;->e:Lr8a;
 
-    throw p0
-.end method
-
-.method public final submit(Ljava/lang/Runnable;)Ljava/util/concurrent/Future;
-    .locals 0
-
-    .line 1
-    iget-object p0, p0, Lgh4;->a:Ljava/util/concurrent/ExecutorService;
-
-    invoke-interface {p0, p1}, Ljava/util/concurrent/ExecutorService;->submit(Ljava/lang/Runnable;)Ljava/util/concurrent/Future;
-
-    move-result-object p0
+    check-cast p0, Lktb;
 
     return-object p0
-.end method
 
-.method public final submit(Ljava/lang/Runnable;Ljava/lang/Object;)Ljava/util/concurrent/Future;
-    .locals 0
+    :pswitch_0
+    iget-object p0, p0, Lgh4;->e:Lr8a;
 
-    .line 2
-    iget-object p0, p0, Lgh4;->a:Ljava/util/concurrent/ExecutorService;
-
-    invoke-interface {p0, p1, p2}, Ljava/util/concurrent/ExecutorService;->submit(Ljava/lang/Runnable;Ljava/lang/Object;)Ljava/util/concurrent/Future;
-
-    move-result-object p0
+    check-cast p0, Ls15;
 
     return-object p0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method
 
-.method public final submit(Ljava/util/concurrent/Callable;)Ljava/util/concurrent/Future;
-    .locals 0
+.method public final c()Lk1d;
+    .locals 1
 
-    .line 3
-    iget-object p0, p0, Lgh4;->a:Ljava/util/concurrent/ExecutorService;
+    iget v0, p0, Lgh4;->b:I
 
-    invoke-interface {p0, p1}, Ljava/util/concurrent/ExecutorService;->submit(Ljava/util/concurrent/Callable;)Ljava/util/concurrent/Future;
+    packed-switch v0, :pswitch_data_0
 
-    move-result-object p0
+    iget-object p0, p0, Lgh4;->c:Lk1d;
 
     return-object p0
+
+    :pswitch_0
+    iget-object p0, p0, Lgh4;->c:Lk1d;
+
+    return-object p0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

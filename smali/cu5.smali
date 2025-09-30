@@ -1,82 +1,35 @@
 .class public final Lcu5;
-.super Lqde;
+.super Ljx3;
 .source "SourceFile"
-
-# interfaces
-.implements Ll66;
 
 
 # instance fields
-.field public final synthetic X:Lhu5;
+.field public synthetic X:Ljava/lang/Object;
 
-.field public final synthetic Y:J
+.field public Y:I
 
-
-# direct methods
-.method public constructor <init>(Lhu5;JLkotlin/coroutines/Continuation;)V
-    .locals 0
-
-    iput-object p1, p0, Lcu5;->X:Lhu5;
-
-    iput-wide p2, p0, Lcu5;->Y:J
-
-    const/4 p1, 0x2
-
-    invoke-direct {p0, p1, p4}, Lqde;-><init>(ILkotlin/coroutines/Continuation;)V
-
-    return-void
-.end method
+.field public o:Ljava/lang/Object;
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
-
-    check-cast p1, Lox3;
-
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Lcu5;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p0
-
-    check-cast p0, Lcu5;
-
-    sget-object p1, Le5f;->a:Le5f;
-
-    invoke-virtual {p0, p1}, Lcu5;->o(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p1
-.end method
-
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 3
-
-    new-instance p1, Lcu5;
-
-    iget-object v0, p0, Lcu5;->X:Lhu5;
-
-    iget-wide v1, p0, Lcu5;->Y:J
-
-    invoke-direct {p1, v0, v1, v2, p2}, Lcu5;-><init>(Lhu5;JLkotlin/coroutines/Continuation;)V
-
-    return-object p1
-.end method
-
 .method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 2
+    .locals 1
 
-    invoke-static {p1}, Lsgg;->Z(Ljava/lang/Object;)V
+    iput-object p1, p0, Lcu5;->X:Ljava/lang/Object;
 
-    sget-object p1, Lhu5;->B0:[Lbc7;
+    iget p1, p0, Lcu5;->Y:I
 
-    iget-object p1, p0, Lcu5;->X:Lhu5;
+    const/high16 v0, -0x80000000
 
-    iget-wide v0, p0, Lcu5;->Y:J
+    or-int/2addr p1, v0
 
-    invoke-virtual {p1, v0, v1}, Lhu5;->s(J)V
+    iput p1, p0, Lcu5;->Y:I
 
-    sget-object p0, Le5f;->a:Le5f;
+    const/4 p1, 0x0
+
+    invoke-static {p1, p1, p1, p0}, Lgy7;->c(Lks5;Ljava/lang/Object;Ljava/lang/Object;Ljx3;)V
+
+    sget-object p0, Lz04;->a:Lz04;
 
     return-object p0
 .end method

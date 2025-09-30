@@ -1,87 +1,157 @@
 .class public final Lqe4;
-.super Lff4;
+.super Ljava/lang/Object;
 .source "SourceFile"
-
-# interfaces
-.implements Ljava/lang/Comparable;
 
 
 # instance fields
-.field public final X:I
+.field public final a:[B
 
-.field public final Y:I
+.field public final b:Ljava/util/ArrayDeque;
+
+.field public c:I
+
+.field public d:I
+
+.field public e:J
+
+.field public final f:Ljava/lang/Object;
+
+.field public g:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(ILuxe;ILwe4;I)V
-    .locals 0
+.method public constructor <init>(I)V
+    .locals 2
 
-    invoke-direct {p0, p1, p2, p3}, Lff4;-><init>(ILuxe;I)V
+    packed-switch p1, :pswitch_data_0
 
-    iget-boolean p1, p4, Lwe4;->n0:Z
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-static {p5, p1}, Lqj0;->j(IZ)Z
+    const/16 p1, 0x8
 
-    move-result p1
+    new-array p1, p1, [B
 
-    iput p1, p0, Lqe4;->X:I
+    iput-object p1, p0, Lqe4;->a:[B
 
-    iget-object p1, p0, Lff4;->o:Lfz5;
+    new-instance p1, Ljava/util/ArrayDeque;
 
-    iget p2, p1, Lfz5;->s:I
+    invoke-direct {p1}, Ljava/util/ArrayDeque;-><init>()V
 
-    const/4 p3, -0x1
+    iput-object p1, p0, Lqe4;->b:Ljava/util/ArrayDeque;
 
-    if-eq p2, p3, :cond_1
+    new-instance p1, Lcsf;
 
-    iget p1, p1, Lfz5;->t:I
+    const/4 v0, 0x0
 
-    if-ne p1, p3, :cond_0
+    const/4 v1, 0x0
 
-    goto :goto_0
+    invoke-direct {p1, v0, v1}, Lcsf;-><init>(IZ)V
 
-    :cond_0
-    mul-int p3, p2, p1
-
-    :cond_1
-    :goto_0
-    iput p3, p0, Lqe4;->Y:I
+    iput-object p1, p0, Lqe4;->f:Ljava/lang/Object;
 
     return-void
+
+    :pswitch_0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    const/16 p1, 0x8
+
+    new-array p1, p1, [B
+
+    iput-object p1, p0, Lqe4;->a:[B
+
+    new-instance p1, Ljava/util/ArrayDeque;
+
+    invoke-direct {p1}, Ljava/util/ArrayDeque;-><init>()V
+
+    iput-object p1, p0, Lqe4;->b:Ljava/util/ArrayDeque;
+
+    new-instance p1, Lcsf;
+
+    const/4 v0, 0x1
+
+    const/4 v1, 0x0
+
+    invoke-direct {p1, v0, v1}, Lcsf;-><init>(IZ)V
+
+    iput-object p1, p0, Lqe4;->f:Ljava/lang/Object;
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_0
+    .end packed-switch
 .end method
 
 
 # virtual methods
-.method public final a()I
-    .locals 0
+.method public a(Lpf5;I)J
+    .locals 5
 
-    iget p0, p0, Lqe4;->X:I
+    iget-object p0, p0, Lqe4;->a:[B
 
-    return p0
+    const/4 v0, 0x0
+
+    invoke-interface {p1, p0, v0, p2}, Lpf5;->readFully([BII)V
+
+    const-wide/16 v1, 0x0
+
+    :goto_0
+    if-ge v0, p2, :cond_0
+
+    const/16 p1, 0x8
+
+    shl-long/2addr v1, p1
+
+    aget-byte p1, p0, v0
+
+    and-int/lit16 p1, p1, 0xff
+
+    int-to-long v3, p1
+
+    or-long/2addr v1, v3
+
+    add-int/lit8 v0, v0, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    return-wide v1
 .end method
 
-.method public final bridge synthetic b(Lff4;)Z
-    .locals 0
+.method public b(Lqf5;I)J
+    .locals 5
 
-    check-cast p1, Lqe4;
+    iget-object p0, p0, Lqe4;->a:[B
 
-    const/4 p0, 0x0
+    const/4 v0, 0x0
 
-    return p0
-.end method
+    invoke-interface {p1, p0, v0, p2}, Lqf5;->readFully([BII)V
 
-.method public final compareTo(Ljava/lang/Object;)I
-    .locals 0
+    const-wide/16 v1, 0x0
 
-    check-cast p1, Lqe4;
+    :goto_0
+    if-ge v0, p2, :cond_0
 
-    iget p0, p0, Lqe4;->Y:I
+    const/16 p1, 0x8
 
-    iget p1, p1, Lqe4;->Y:I
+    shl-long/2addr v1, p1
 
-    invoke-static {p0, p1}, Ljava/lang/Integer;->compare(II)I
+    aget-byte p1, p0, v0
 
-    move-result p0
+    and-int/lit16 p1, p1, 0xff
 
-    return p0
+    int-to-long v3, p1
+
+    or-long/2addr v1, v3
+
+    add-int/lit8 v0, v0, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    return-wide v1
 .end method

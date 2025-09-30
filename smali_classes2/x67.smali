@@ -1,129 +1,160 @@
 .class public final Lx67;
-.super Lc77;
+.super Lj29;
 .source "SourceFile"
 
 
 # instance fields
-.field public final Y:Luj;
+.field public a:I
 
-.field public final Z:Lx4e;
+.field public b:[B
 
 
 # direct methods
-.method public constructor <init>(Luj;Lx4e;)V
-    .locals 2
+.method public constructor <init>()V
+    .locals 1
 
-    const/4 v0, 0x3
+    invoke-direct {p0}, Lj29;-><init>()V
 
-    const/4 v1, 0x0
+    const/4 v0, 0x0
 
-    invoke-direct {p0, v0, v1}, Lc77;-><init>(II)V
+    iput v0, p0, Lx67;->a:I
 
-    iput-object p1, p0, Lx67;->Y:Luj;
+    sget-object v0, Lxnd;->m:[B
 
-    iput-object p2, p0, Lx67;->Z:Lx4e;
+    iput-object v0, p0, Lx67;->b:[B
+
+    const/4 v0, -0x1
+
+    iput v0, p0, Lj29;->cachedSize:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Landroidx/recyclerview/widget/RecyclerView;Lccc;)V
-    .locals 1
+.method public final computeSerializedSize()I
+    .locals 3
 
-    invoke-super {p0, p1, p2}, Lc77;->a(Landroidx/recyclerview/widget/RecyclerView;Lccc;)V
+    iget v0, p0, Lx67;->a:I
 
-    instance-of p1, p2, Lzp4;
+    if-eqz v0, :cond_0
 
-    if-eqz p1, :cond_0
+    const/4 v1, 0x1
 
-    move-object p1, p2
+    invoke-static {v1, v0}, Lr63;->n(II)I
 
-    check-cast p1, Lzp4;
+    move-result v0
 
-    check-cast p1, La2e;
+    goto :goto_0
 
-    iget-object p1, p1, Lccc;->a:Landroid/view/View;
-
-    invoke-virtual {p1}, Landroid/view/View;->animate()Landroid/view/ViewPropertyAnimator;
-
-    move-result-object p1
-
+    :cond_0
     const/4 v0, 0x0
 
-    invoke-virtual {p1, v0}, Landroid/view/ViewPropertyAnimator;->translationZ(F)Landroid/view/ViewPropertyAnimator;
+    :goto_0
+    iget-object v1, p0, Lx67;->b:[B
 
-    iget-object p0, p0, Lx67;->Z:Lx4e;
+    sget-object v2, Lxnd;->m:[B
 
-    invoke-virtual {p0, p2}, Lx4e;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {v1, v2}, Ljava/util/Arrays;->equals([B[B)Z
 
-    :cond_0
-    return-void
-.end method
+    move-result v1
 
-.method public final i(Lccc;Lccc;)Z
-    .locals 0
+    if-nez v1, :cond_1
 
-    invoke-virtual {p1}, Lccc;->g()I
+    const/4 v1, 0x2
 
-    move-result p1
+    iget-object p0, p0, Lx67;->b:[B
 
-    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    invoke-static {v1, p0}, Lr63;->b(I[B)I
 
-    move-result-object p1
+    move-result p0
 
-    invoke-virtual {p2}, Lccc;->g()I
-
-    move-result p2
-
-    invoke-static {p2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object p2
-
-    iget-object p0, p0, Lx67;->Y:Luj;
-
-    invoke-virtual {p0, p1, p2}, Luj;->invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    const/4 p0, 0x1
+    add-int/2addr p0, v0
 
     return p0
+
+    :cond_1
+    return v0
 .end method
 
-.method public final j(Lccc;I)V
-    .locals 0
-
-    if-eqz p2, :cond_0
-
-    instance-of p0, p1, Lzp4;
-
-    if-eqz p0, :cond_0
-
-    check-cast p1, Lzp4;
-
-    check-cast p1, La2e;
-
-    iget-object p0, p1, Lccc;->a:Landroid/view/View;
-
-    invoke-virtual {p0}, Landroid/view/View;->animate()Landroid/view/ViewPropertyAnimator;
-
-    move-result-object p0
-
-    invoke-static {}, Lgk4;->d()Landroid/content/res/Resources;
-
-    move-result-object p1
-
-    invoke-virtual {p1}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object p1
-
-    iget p1, p1, Landroid/util/DisplayMetrics;->density:F
-
-    const/high16 p2, 0x41a00000    # 20.0f
-
-    mul-float/2addr p1, p2
-
-    invoke-virtual {p0, p1}, Landroid/view/ViewPropertyAnimator;->translationZ(F)Landroid/view/ViewPropertyAnimator;
+.method public final mergeFrom(Lq63;)Lj29;
+    .locals 2
 
     :cond_0
+    :goto_0
+    invoke-virtual {p1}, Lq63;->s()I
+
+    move-result v0
+
+    if-eqz v0, :cond_3
+
+    const/16 v1, 0x8
+
+    if-eq v0, v1, :cond_2
+
+    const/16 v1, 0x12
+
+    if-eq v0, v1, :cond_1
+
+    invoke-virtual {p1, v0}, Lq63;->u(I)Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    goto :goto_1
+
+    :cond_1
+    invoke-virtual {p1}, Lq63;->g()[B
+
+    move-result-object v0
+
+    iput-object v0, p0, Lx67;->b:[B
+
+    goto :goto_0
+
+    :cond_2
+    invoke-virtual {p1}, Lq63;->p()I
+
+    move-result v0
+
+    iput v0, p0, Lx67;->a:I
+
+    goto :goto_0
+
+    :cond_3
+    :goto_1
+    return-object p0
+.end method
+
+.method public final writeTo(Lr63;)V
+    .locals 2
+
+    iget v0, p0, Lx67;->a:I
+
+    if-eqz v0, :cond_0
+
+    const/4 v1, 0x1
+
+    invoke-virtual {p1, v1, v0}, Lr63;->G(II)V
+
+    :cond_0
+    iget-object v0, p0, Lx67;->b:[B
+
+    sget-object v1, Lxnd;->m:[B
+
+    invoke-static {v0, v1}, Ljava/util/Arrays;->equals([B[B)Z
+
+    move-result v0
+
+    if-nez v0, :cond_1
+
+    const/4 v0, 0x2
+
+    iget-object p0, p0, Lx67;->b:[B
+
+    invoke-virtual {p1, v0, p0}, Lr63;->s(I[B)V
+
+    :cond_1
     return-void
 .end method

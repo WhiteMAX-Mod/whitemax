@@ -1,209 +1,78 @@
 .class public final Lofd;
-.super Ljava/lang/Object;
+.super Lure;
 .source "SourceFile"
 
 # interfaces
-.implements Lo64;
+.implements Lpc6;
 
 
-# static fields
-.field public static final a:Lofd;
+# instance fields
+.field public synthetic X:Ljava/lang/Object;
 
-.field public static final b:Lpfd;
+.field public final synthetic Y:Lcgd;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(Lkotlin/coroutines/Continuation;Lcgd;)V
+    .locals 0
 
-    new-instance v0, Lofd;
+    iput-object p2, p0, Lofd;->Y:Lcgd;
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    const/4 p2, 0x2
 
-    sput-object v0, Lofd;->a:Lofd;
-
-    sget-object v0, Lpfd;->b:Lpfd;
-
-    sput-object v0, Lofd;->b:Lpfd;
+    invoke-direct {p0, p2, p1}, Lure;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Lv64;
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    sget-object p0, Lofd;->b:Lpfd;
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    return-object p0
+    invoke-virtual {p0, p1, p2}, Lofd;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+
+    move-result-object p0
+
+    check-cast p0, Lofd;
+
+    sget-object p1, Lylf;->a:Lylf;
+
+    invoke-virtual {p0, p1}, Lofd;->o(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object p1
 .end method
 
-.method public final b(Ljava/lang/String;Lr64;Landroid/os/Bundle;)Ly64;
-    .locals 10
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 1
 
-    sget-object p0, Lofd;->b:Lpfd;
+    new-instance v0, Lofd;
 
-    iget-object p0, p0, Lv64;->a:Ljava/util/LinkedHashSet;
+    iget-object p0, p0, Lofd;->Y:Lcgd;
 
-    invoke-interface {p0, p2}, Ljava/util/Collection;->contains(Ljava/lang/Object;)Z
+    invoke-direct {v0, p2, p0}, Lofd;-><init>(Lkotlin/coroutines/Continuation;Lcgd;)V
 
-    move-result p0
-
-    const/4 v0, 0x0
-
-    if-nez p0, :cond_0
+    iput-object p1, v0, Lofd;->X:Ljava/lang/Object;
 
     return-object v0
+.end method
 
-    :cond_0
-    sget-object p0, Lpfd;->b:Lpfd;
+.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    invoke-static {p1}, Lqe5;->V(Ljava/lang/Object;)V
 
-    sget-object p0, Lpfd;->c:Lr64;
+    iget-object p1, p0, Lofd;->X:Ljava/lang/Object;
 
-    invoke-virtual {p2, p0}, Lr64;->equals(Ljava/lang/Object;)Z
+    check-cast p1, Ljava/util/List;
 
-    move-result p0
+    iget-object p0, p0, Lofd;->Y:Lcgd;
 
-    if-eqz p0, :cond_1
+    invoke-virtual {p0, p1}, Lls7;->E(Ljava/util/List;)V
 
-    sget-object p0, Lnfd;->b:Lnfd;
+    sget-object p0, Lylf;->a:Lylf;
 
-    :goto_0
-    move-object v8, p0
-
-    goto :goto_1
-
-    :cond_1
-    sget-object p0, Lpfd;->d:Lr64;
-
-    invoke-virtual {p2, p0}, Lr64;->equals(Ljava/lang/Object;)Z
-
-    move-result p0
-
-    if-eqz p0, :cond_2
-
-    sget-object p0, Lnfd;->c:Lnfd;
-
-    goto :goto_0
-
-    :cond_2
-    sget-object p0, Lpfd;->e:Lr64;
-
-    invoke-virtual {p2, p0}, Lr64;->equals(Ljava/lang/Object;)Z
-
-    move-result p0
-
-    if-eqz p0, :cond_3
-
-    sget-object p0, Lnfd;->o:Lnfd;
-
-    goto :goto_0
-
-    :cond_3
-    sget-object p0, Lpfd;->f:Lr64;
-
-    invoke-virtual {p2, p0}, Lr64;->equals(Ljava/lang/Object;)Z
-
-    move-result p0
-
-    if-eqz p0, :cond_6
-
-    const-string p0, "mode"
-
-    invoke-static {p0, p3}, Lcu0;->A0(Ljava/lang/String;Landroid/os/Bundle;)Ljava/lang/String;
-
-    move-result-object p0
-
-    const-string v0, "setup"
-
-    invoke-virtual {p0, v0}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_4
-
-    sget-object p0, Lnfd;->X:Lnfd;
-
-    goto :goto_0
-
-    :cond_4
-    const-string v0, "confirm"
-
-    invoke-virtual {p0, v0}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
-
-    move-result p0
-
-    if-eqz p0, :cond_5
-
-    const-string p0, "hash"
-
-    invoke-static {p0, p3}, Lcu0;->A0(Ljava/lang/String;Landroid/os/Bundle;)Ljava/lang/String;
-
-    move-result-object p0
-
-    new-instance v0, Lf41;
-
-    const/4 v1, 0x1
-
-    invoke-direct {v0, p0, v1}, Lf41;-><init>(Ljava/lang/String;I)V
-
-    move-object v8, v0
-
-    :goto_1
-    new-instance v2, Ly64;
-
-    const/16 v9, 0x18
-
-    const/4 v6, 0x0
-
-    const/4 v7, 0x0
-
-    move-object v3, p1
-
-    move-object v4, p2
-
-    move-object v5, p3
-
-    invoke-direct/range {v2 .. v9}, Ly64;-><init>(Ljava/lang/String;Lr64;Landroid/os/Bundle;ILw64;Lx64;I)V
-
-    return-object v2
-
-    :cond_5
-    new-instance p0, Ljava/lang/IllegalStateException;
-
-    const-string p1, "illegal mode"
-
-    invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p0
-
-    :cond_6
-    move-object v4, p2
-
-    const-class p0, Lofd;
-
-    invoke-virtual {p0}, Ljava/lang/Class;->getName()Ljava/lang/String;
-
-    move-result-object p0
-
-    const-string p1, "invalid route "
-
-    invoke-static {p1, v4}, Lu88;->j(Ljava/lang/String;Lr64;)Ljava/lang/String;
-
-    move-result-object p2
-
-    new-instance p3, Ljava/lang/IllegalArgumentException;
-
-    invoke-static {p1, v4}, Lu88;->j(Ljava/lang/String;Lr64;)Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-direct {p3, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    invoke-static {p0, p2, p3}, Lg47;->r(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    return-object v0
+    return-object p0
 .end method

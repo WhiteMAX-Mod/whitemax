@@ -1,169 +1,48 @@
-.class public final Lmb4;
+.class public final synthetic Lmb4;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Ljm6;
-
-
-# static fields
-.field public static final d:[I
+.implements Lpt7;
 
 
 # instance fields
-.field public b:Lcwc;
+.field public final synthetic a:Lfd;
 
-.field public c:Z
+.field public final synthetic b:Z
+
+.field public final synthetic c:I
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public synthetic constructor <init>(Lfd;ZI)V
+    .locals 0
 
-    const/4 v0, 0x7
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    new-array v0, v0, [I
+    iput-object p1, p0, Lmb4;->a:Lfd;
 
-    fill-array-data v0, :array_0
+    iput-boolean p2, p0, Lmb4;->b:Z
 
-    sput-object v0, Lmb4;->d:[I
+    iput p3, p0, Lmb4;->c:I
 
-    return-void
-
-    nop
-
-    :array_0
-    .array-data 4
-        0x8
-        0xd
-        0xb
-        0x2
-        0x0
-        0x1
-        0x7
-    .end array-data
-.end method
-
-.method public static a(Ljava/util/ArrayList;I)V
-    .locals 3
-
-    const/4 v0, 0x0
-
-    const/4 v1, 0x7
-
-    sget-object v2, Lmb4;->d:[I
-
-    invoke-static {p1, v0, v1, v2}, Lzx7;->G(III[I)I
-
-    move-result v0
-
-    const/4 v1, -0x1
-
-    if-eq v0, v1, :cond_1
-
-    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v0
-
-    invoke-virtual {p0, v0}, Ljava/util/ArrayList;->contains(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object p1
-
-    invoke-virtual {p0, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    :cond_1
-    :goto_0
     return-void
 .end method
 
 
 # virtual methods
-.method public b(Lfz5;)Lfz5;
-    .locals 3
+.method public final invoke(Ljava/lang/Object;)V
+    .locals 2
 
-    iget-boolean v0, p0, Lmb4;->c:Z
+    iget v0, p0, Lmb4;->c:I
 
-    if-eqz v0, :cond_1
+    check-cast p1, Lgd;
 
-    iget-object v0, p0, Lmb4;->b:Lcwc;
+    iget-object v1, p0, Lmb4;->a:Lfd;
 
-    invoke-virtual {v0, p1}, Lcwc;->m(Lfz5;)Z
+    iget-boolean p0, p0, Lmb4;->b:Z
 
-    move-result v0
+    invoke-interface {p1, v1, p0, v0}, Lgd;->K0(Lfd;ZI)V
 
-    if-eqz v0, :cond_1
-
-    invoke-virtual {p1}, Lfz5;->a()Lcz5;
-
-    move-result-object v0
-
-    iget-object v1, p1, Lfz5;->j:Ljava/lang/String;
-
-    const-string v2, "application/x-media3-cues"
-
-    invoke-static {v2}, La99;->l(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v2
-
-    iput-object v2, v0, Lcz5;->l:Ljava/lang/String;
-
-    iget-object p0, p0, Lmb4;->b:Lcwc;
-
-    invoke-virtual {p0, p1}, Lcwc;->t(Lfz5;)I
-
-    move-result p0
-
-    iput p0, v0, Lcz5;->F:I
-
-    new-instance p0, Ljava/lang/StringBuilder;
-
-    invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
-
-    iget-object p1, p1, Lfz5;->m:Ljava/lang/String;
-
-    invoke-virtual {p0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    if-eqz v1, :cond_0
-
-    const-string p1, " "
-
-    invoke-virtual {p1, v1}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object p1
-
-    goto :goto_0
-
-    :cond_0
-    const-string p1, ""
-
-    :goto_0
-    invoke-virtual {p0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    iput-object p0, v0, Lcz5;->i:Ljava/lang/String;
-
-    const-wide p0, 0x7fffffffffffffffL
-
-    iput-wide p0, v0, Lcz5;->q:J
-
-    new-instance p0, Lfz5;
-
-    invoke-direct {p0, v0}, Lfz5;-><init>(Lcz5;)V
-
-    return-object p0
-
-    :cond_1
-    return-object p1
+    return-void
 .end method

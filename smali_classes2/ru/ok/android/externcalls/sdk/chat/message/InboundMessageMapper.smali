@@ -13,13 +13,13 @@
         "",
         "<init>",
         "()V",
-        "Lbz6;",
+        "Lv57;",
         "inboundMessageInternal",
         "Lru/ok/android/externcalls/sdk/participant/collection/ParticipantStore;",
         "participantStore",
         "Lru/ok/android/externcalls/sdk/chat/message/InboundMessage;",
         "fromInternal",
-        "(Lbz6;Lru/ok/android/externcalls/sdk/participant/collection/ParticipantStore;)Lru/ok/android/externcalls/sdk/chat/message/InboundMessage;",
+        "(Lv57;Lru/ok/android/externcalls/sdk/participant/collection/ParticipantStore;)Lru/ok/android/externcalls/sdk/chat/message/InboundMessage;",
         "calls-sdk_release"
     }
     k = 0x1
@@ -59,14 +59,14 @@
 
 
 # virtual methods
-.method public final fromInternal(Lbz6;Lru/ok/android/externcalls/sdk/participant/collection/ParticipantStore;)Lru/ok/android/externcalls/sdk/chat/message/InboundMessage;
+.method public final fromInternal(Lv57;Lru/ok/android/externcalls/sdk/participant/collection/ParticipantStore;)Lru/ok/android/externcalls/sdk/chat/message/InboundMessage;
     .locals 1
 
     new-instance p0, Lru/ok/android/externcalls/sdk/chat/message/InboundMessage;
 
-    iget-object v0, p1, Lbz6;->a:Lrf1;
+    iget-object v0, p1, Lv57;->a:Lsg1;
 
-    invoke-virtual {p2, v0}, Lru/ok/android/externcalls/sdk/participant/collection/ParticipantStore;->getByInternal(Lrf1;)Lru/ok/android/externcalls/sdk/ConversationParticipant;
+    invoke-virtual {p2, v0}, Lru/ok/android/externcalls/sdk/participant/collection/ParticipantStore;->getByInternal(Lsg1;)Lru/ok/android/externcalls/sdk/ConversationParticipant;
 
     move-result-object p2
 
@@ -82,9 +82,9 @@
     const/4 p2, 0x0
 
     :goto_0
-    iget-object v0, p1, Lbz6;->b:Ljava/lang/String;
+    iget-object v0, p1, Lv57;->b:Ljava/lang/String;
 
-    iget-boolean p1, p1, Lbz6;->c:Z
+    iget-boolean p1, p1, Lv57;->c:Z
 
     invoke-direct {p0, p2, v0, p1}, Lru/ok/android/externcalls/sdk/chat/message/InboundMessage;-><init>(Lru/ok/android/externcalls/sdk/id/ParticipantId;Ljava/lang/String;Z)V
 

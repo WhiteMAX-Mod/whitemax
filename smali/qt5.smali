@@ -1,190 +1,297 @@
 .class public final Lqt5;
-.super Lqde;
+.super Lure;
 .source "SourceFile"
 
 # interfaces
-.implements Ll66;
+.implements Lrc6;
 
 
 # instance fields
-.field public synthetic X:Ljava/lang/Object;
+.field public X:J
 
-.field public final synthetic Y:Lone/me/folders/edit/FolderEditScreen;
+.field public Y:I
+
+.field public synthetic Z:Ljava/lang/Object;
+
+.field public synthetic r0:Ljava/lang/Object;
+
+.field public final synthetic s0:J
+
+.field public final synthetic t0:Lis5;
 
 
 # direct methods
-.method public constructor <init>(Lone/me/folders/edit/FolderEditScreen;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(JLis5;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    iput-object p1, p0, Lqt5;->Y:Lone/me/folders/edit/FolderEditScreen;
+    iput-wide p1, p0, Lqt5;->s0:J
 
-    const/4 p1, 0x2
+    iput-object p3, p0, Lqt5;->t0:Lis5;
 
-    invoke-direct {p0, p1, p2}, Lqde;-><init>(ILkotlin/coroutines/Continuation;)V
+    const/4 p1, 0x3
+
+    invoke-direct {p0, p1, p4}, Lure;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 3
 
-    check-cast p1, Ltt5;
+    check-cast p1, Ly04;
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    check-cast p2, Lks5;
 
-    invoke-virtual {p0, p1, p2}, Lqt5;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p0
-
-    check-cast p0, Lqt5;
-
-    sget-object p1, Le5f;->a:Le5f;
-
-    invoke-virtual {p0, p1}, Lqt5;->o(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p1
-.end method
-
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 1
+    check-cast p3, Lkotlin/coroutines/Continuation;
 
     new-instance v0, Lqt5;
 
-    iget-object p0, p0, Lqt5;->Y:Lone/me/folders/edit/FolderEditScreen;
+    iget-wide v1, p0, Lqt5;->s0:J
 
-    invoke-direct {v0, p0, p2}, Lqt5;-><init>(Lone/me/folders/edit/FolderEditScreen;Lkotlin/coroutines/Continuation;)V
+    iget-object p0, p0, Lqt5;->t0:Lis5;
 
-    iput-object p1, v0, Lqt5;->X:Ljava/lang/Object;
+    invoke-direct {v0, v1, v2, p0, p3}, Lqt5;-><init>(JLis5;Lkotlin/coroutines/Continuation;)V
 
-    return-object v0
-.end method
+    iput-object p1, v0, Lqt5;->Z:Ljava/lang/Object;
 
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 6
+    iput-object p2, v0, Lqt5;->r0:Ljava/lang/Object;
 
-    iget-object v0, p0, Lqt5;->Y:Lone/me/folders/edit/FolderEditScreen;
+    sget-object p0, Lylf;->a:Lylf;
 
-    iget-object v1, v0, Lone/me/folders/edit/FolderEditScreen;->Z:Lo5c;
-
-    invoke-static {p1}, Lsgg;->Z(Ljava/lang/Object;)V
-
-    iget-object p0, p0, Lqt5;->X:Ljava/lang/Object;
-
-    check-cast p0, Ltt5;
-
-    instance-of p1, p0, Lrt5;
-
-    const/4 v2, 0x3
-
-    sget-object v3, Lgia;->a:Lgia;
-
-    if-eqz p1, :cond_0
-
-    invoke-static {v0}, Lone/me/folders/edit/FolderEditScreen;->p0(Lone/me/folders/edit/FolderEditScreen;)Lvia;
-
-    move-result-object p1
-
-    sget v4, Li9a;->k:I
-
-    invoke-virtual {p1, v4}, Lvia;->setTitle(I)V
-
-    sget-object p1, Lone/me/folders/edit/FolderEditScreen;->o0:[Lbc7;
-
-    aget-object v4, p1, v2
-
-    invoke-interface {v1, v0, v4}, Lo5c;->M(Ljava/lang/Object;Lbc7;)Ljava/lang/Object;
-
-    move-result-object v4
-
-    check-cast v4, Lone/me/sdk/uikit/common/button/OneMeButton;
-
-    const/4 v5, 0x0
-
-    invoke-virtual {v4, v5}, Landroid/view/View;->setVisibility(I)V
-
-    aget-object p1, p1, v2
-
-    invoke-interface {v1, v0, p1}, Lo5c;->M(Ljava/lang/Object;Lbc7;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lone/me/sdk/uikit/common/button/OneMeButton;
-
-    check-cast p0, Lrt5;
-
-    iget-boolean p0, p0, Lrt5;->b:Z
-
-    invoke-virtual {p1, p0}, Lone/me/sdk/uikit/common/button/OneMeButton;->setEnabled(Z)V
-
-    invoke-static {v0}, Lone/me/folders/edit/FolderEditScreen;->p0(Lone/me/folders/edit/FolderEditScreen;)Lvia;
+    invoke-virtual {v0, p0}, Lqt5;->o(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p0
 
-    invoke-virtual {p0, v3}, Lvia;->setRightActions(Llia;)V
+    return-object p0
+.end method
+
+.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 16
+
+    move-object/from16 v0, p0
+
+    iget v1, v0, Lqt5;->Y:I
+
+    const/4 v2, 0x0
+
+    const/4 v3, 0x1
+
+    const/4 v4, 0x0
+
+    if-eqz v1, :cond_1
+
+    if-ne v1, v3, :cond_0
+
+    iget-wide v5, v0, Lqt5;->X:J
+
+    iget-object v1, v0, Lqt5;->r0:Ljava/lang/Object;
+
+    check-cast v1, Lbjc;
+
+    iget-object v7, v0, Lqt5;->Z:Ljava/lang/Object;
+
+    check-cast v7, Lks5;
+
+    invoke-static/range {p1 .. p1}, Lqe5;->V(Ljava/lang/Object;)V
+
+    move-object/from16 v8, p1
+
+    goto/16 :goto_2
+
+    :cond_0
+    new-instance v0, Ljava/lang/IllegalStateException;
+
+    const-string v1, "call to \'resume\' before \'invoke\' with coroutine"
+
+    invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+
+    :cond_1
+    invoke-static/range {p1 .. p1}, Lqe5;->V(Ljava/lang/Object;)V
+
+    iget-object v1, v0, Lqt5;->Z:Ljava/lang/Object;
+
+    check-cast v1, Ly04;
+
+    iget-object v5, v0, Lqt5;->r0:Ljava/lang/Object;
+
+    check-cast v5, Lks5;
+
+    const-wide/16 v6, 0x0
+
+    iget-wide v8, v0, Lqt5;->s0:J
+
+    invoke-static {v8, v9, v6, v7}, Lfy4;->c(JJ)I
+
+    move-result v6
+
+    if-lez v6, :cond_7
+
+    iget-object v6, v0, Lqt5;->t0:Lis5;
+
+    const/4 v7, 0x2
+
+    invoke-static {v6, v2, v7}, Lo97;->e(Lis5;II)Lis5;
+
+    move-result-object v15
+
+    instance-of v6, v15, Lz52;
+
+    if-eqz v6, :cond_2
+
+    move-object v6, v15
+
+    check-cast v6, Lz52;
 
     goto :goto_0
 
-    :cond_0
-    instance-of p1, p0, Lst5;
-
-    if-eqz p1, :cond_2
-
-    invoke-static {v0}, Lone/me/folders/edit/FolderEditScreen;->p0(Lone/me/folders/edit/FolderEditScreen;)Lvia;
-
-    move-result-object p1
-
-    sget v4, Li9a;->l:I
-
-    invoke-virtual {p1, v4}, Lvia;->setTitle(I)V
-
-    sget-object p1, Lone/me/folders/edit/FolderEditScreen;->o0:[Lbc7;
-
-    aget-object p1, p1, v2
-
-    invoke-interface {v1, v0, p1}, Lo5c;->M(Ljava/lang/Object;Lbc7;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lone/me/sdk/uikit/common/button/OneMeButton;
-
-    const/16 v1, 0x8
-
-    invoke-virtual {p1, v1}, Landroid/view/View;->setVisibility(I)V
-
-    invoke-static {v0}, Lone/me/folders/edit/FolderEditScreen;->p0(Lone/me/folders/edit/FolderEditScreen;)Lvia;
-
-    move-result-object p1
-
-    check-cast p0, Lst5;
-
-    iget-boolean p0, p0, Lst5;->c:Z
-
-    if-eqz p0, :cond_1
-
-    new-instance v3, Lfia;
-
-    new-instance p0, Lnt5;
-
-    const/4 v1, 0x1
-
-    invoke-direct {p0, v0, v1}, Lnt5;-><init>(Lone/me/folders/edit/FolderEditScreen;I)V
-
-    invoke-direct {v3, p0}, Lfia;-><init>(Lx56;)V
-
-    :cond_1
-    invoke-virtual {p1, v3}, Lvia;->setRightActions(Llia;)V
+    :cond_2
+    move-object v6, v4
 
     :goto_0
-    sget-object p0, Le5f;->a:Le5f;
+    if-nez v6, :cond_3
 
-    return-object p0
+    new-instance v10, Lh62;
 
-    :cond_2
-    new-instance p0, Lkotlin/NoWhenBranchMatchedException;
+    const/16 v13, 0xe
 
-    invoke-direct {p0}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
+    const/4 v12, 0x0
 
-    throw p0
+    const/4 v11, 0x0
+
+    const/4 v14, 0x0
+
+    invoke-direct/range {v10 .. v15}, Lh62;-><init>(IIILq04;Lis5;)V
+
+    move-object v6, v10
+
+    :cond_3
+    invoke-virtual {v6, v1}, Lz52;->m(Ly04;)Lbjc;
+
+    move-result-object v1
+
+    move-object v7, v5
+
+    move-wide v5, v8
+
+    :cond_4
+    new-instance v9, Lvfd;
+
+    iget-object v8, v0, Ljx3;->b:Lq04;
+
+    invoke-direct {v9, v8}, Lvfd;-><init>(Lq04;)V
+
+    invoke-interface {v1}, Lbjc;->a()Lrfd;
+
+    move-result-object v8
+
+    new-instance v14, Lot5;
+
+    invoke-direct {v14, v7, v4}, Lot5;-><init>(Lks5;Lkotlin/coroutines/Continuation;)V
+
+    move-object v10, v8
+
+    new-instance v8, Ltfd;
+
+    check-cast v10, Lque;
+
+    iget-object v11, v10, Lque;->b:Ljava/lang/Object;
+
+    iget-object v12, v10, Lque;->c:Ljava/lang/Object;
+
+    check-cast v12, Lrc6;
+
+    iget-object v13, v10, Lque;->o:Ljava/lang/Object;
+
+    check-cast v13, Lrc6;
+
+    iget-object v10, v10, Lque;->X:Ljava/lang/Object;
+
+    move-object v15, v10
+
+    check-cast v15, Lrc6;
+
+    move-object v10, v11
+
+    move-object v11, v12
+
+    move-object v12, v13
+
+    const/4 v13, 0x0
+
+    invoke-direct/range {v8 .. v15}, Ltfd;-><init>(Lvfd;Ljava/lang/Object;Lrc6;Lrc6;Ljava/lang/Object;Lure;Lrc6;)V
+
+    invoke-virtual {v9, v8, v2}, Lvfd;->f(Ltfd;Z)V
+
+    new-instance v8, Lpt5;
+
+    invoke-direct {v8, v5, v6, v4}, Lpt5;-><init>(JLkotlin/coroutines/Continuation;)V
+
+    invoke-static {v5, v6}, Ln2e;->B(J)J
+
+    move-result-wide v10
+
+    invoke-static {v9, v10, v11, v8}, Lrde;->C(Lvfd;JLbc6;)V
+
+    iput-object v7, v0, Lqt5;->Z:Ljava/lang/Object;
+
+    iput-object v1, v0, Lqt5;->r0:Ljava/lang/Object;
+
+    iput-wide v5, v0, Lqt5;->X:J
+
+    iput v3, v0, Lqt5;->Y:I
+
+    sget-object v8, Lvfd;->Y:Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;
+
+    invoke-virtual {v8, v9}, Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v8
+
+    instance-of v8, v8, Ltfd;
+
+    if-eqz v8, :cond_5
+
+    invoke-virtual {v9, v0}, Lvfd;->c(Ljx3;)Ljava/lang/Object;
+
+    move-result-object v8
+
+    goto :goto_1
+
+    :cond_5
+    invoke-virtual {v9, v0}, Lvfd;->d(Ljx3;)Ljava/lang/Object;
+
+    move-result-object v8
+
+    :goto_1
+    sget-object v9, Lz04;->a:Lz04;
+
+    if-ne v8, v9, :cond_6
+
+    return-object v9
+
+    :cond_6
+    :goto_2
+    check-cast v8, Ljava/lang/Boolean;
+
+    invoke-virtual {v8}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result v8
+
+    if-nez v8, :cond_4
+
+    sget-object v0, Lylf;->a:Lylf;
+
+    return-object v0
+
+    :cond_7
+    new-instance v0, Lkotlinx/coroutines/TimeoutCancellationException;
+
+    const-string v1, "Timed out immediately"
+
+    invoke-direct {v0, v1, v4}, Lkotlinx/coroutines/TimeoutCancellationException;-><init>(Ljava/lang/String;Lqe7;)V
+
+    throw v0
 .end method

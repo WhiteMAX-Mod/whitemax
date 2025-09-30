@@ -1,140 +1,212 @@
-.class public final synthetic Lj82;
-.super Ljava/lang/Object;
+.class public final Lj82;
+.super Lx7g;
 .source "SourceFile"
-
-# interfaces
-.implements Ljj3;
 
 
 # instance fields
-.field public final synthetic X:Ljava/util/concurrent/atomic/AtomicBoolean;
+.field public final X:Lcl7;
 
-.field public final synthetic Y:Z
+.field public final Y:Ljava/lang/Object;
 
-.field public final synthetic a:Ln82;
+.field public final Z:Lcl7;
 
-.field public final synthetic b:J
+.field public final b:J
 
-.field public final synthetic c:J
+.field public final c:Lcl7;
 
-.field public final synthetic o:I
+.field public final o:Lcl7;
+
+.field public final r0:Lcl7;
+
+.field public final s0:Llhd;
+
+.field public t0:Lcae;
+
+.field public final u0:Ljava/util/ArrayList;
+
+.field public final v0:Lv85;
 
 
 # direct methods
-.method public synthetic constructor <init>(Ln82;JJILjava/util/concurrent/atomic/AtomicBoolean;Z)V
-    .locals 0
+.method public constructor <init>(J)V
+    .locals 6
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    sget-object v0, Lvlb;->a:Lvlb;
 
-    iput-object p1, p0, Lj82;->a:Ln82;
+    invoke-virtual {v0}, Lvlb;->c()Lcl7;
 
-    iput-wide p2, p0, Lj82;->b:J
+    move-result-object v1
 
-    iput-wide p4, p0, Lj82;->c:J
+    invoke-virtual {v0}, Lvlb;->e()Lcl7;
 
-    iput p6, p0, Lj82;->o:I
+    move-result-object v2
 
-    iput-object p7, p0, Lj82;->X:Ljava/util/concurrent/atomic/AtomicBoolean;
+    invoke-virtual {v0}, Lvlb;->f()Lcl7;
 
-    iput-boolean p8, p0, Lj82;->Y:Z
+    move-result-object v3
+
+    new-instance v4, Lws1;
+
+    const/16 v5, 0xe
+
+    invoke-direct {v4, v5}, Lws1;-><init>(I)V
+
+    const/4 v5, 0x3
+
+    invoke-static {v5, v4}, Lcb7;->G(ILzb6;)Lcl7;
+
+    move-result-object v4
+
+    invoke-virtual {v0}, Lvlb;->g()Lcl7;
+
+    move-result-object v5
+
+    invoke-virtual {v0}, Lvlb;->d()Lcl7;
+
+    move-result-object v0
+
+    invoke-direct {p0}, Lx7g;-><init>()V
+
+    iput-wide p1, p0, Lj82;->b:J
+
+    iput-object v1, p0, Lj82;->c:Lcl7;
+
+    iput-object v2, p0, Lj82;->o:Lcl7;
+
+    iput-object v3, p0, Lj82;->X:Lcl7;
+
+    iput-object v4, p0, Lj82;->Y:Ljava/lang/Object;
+
+    iput-object v5, p0, Lj82;->Z:Lcl7;
+
+    iput-object v0, p0, Lj82;->r0:Lcl7;
+
+    new-instance p1, Llhd;
+
+    const/4 p2, 0x6
+
+    invoke-direct {p1, p2}, Llhd;-><init>(I)V
+
+    iput-object p1, p0, Lj82;->s0:Llhd;
+
+    new-instance p1, Ljava/util/ArrayList;
+
+    invoke-direct {p1}, Ljava/util/ArrayList;-><init>()V
+
+    iput-object p1, p0, Lj82;->u0:Ljava/util/ArrayList;
+
+    new-instance p1, Lv85;
+
+    const/4 p2, 0x0
+
+    invoke-direct {p1, p2}, Lv85;-><init>(I)V
+
+    iput-object p1, p0, Lj82;->v0:Lv85;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final accept(Ljava/lang/Object;)V
-    .locals 10
+.method public final q()Ls72;
+    .locals 3
 
-    check-cast p1, Ls82;
+    iget-object v0, p0, Lj82;->c:Lcl7;
 
-    iget-object v0, p0, Lj82;->a:Ln82;
+    invoke-interface {v0}, Lcl7;->getValue()Ljava/lang/Object;
 
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    move-result-object v0
 
-    invoke-virtual {p1}, Ls82;->c()Ljava/util/Map;
+    check-cast v0, Lyz2;
+
+    iget-wide v1, p0, Lj82;->b:J
+
+    check-cast v0, Ly03;
+
+    invoke-virtual {v0, v1, v2}, Ly03;->N(J)Liic;
+
+    move-result-object p0
+
+    iget-object p0, p0, Liic;->a:Lrce;
+
+    invoke-interface {p0}, Lrce;->getValue()Ljava/lang/Object;
+
+    move-result-object p0
+
+    check-cast p0, Ls72;
+
+    return-object p0
+.end method
+
+.method public final r()V
+    .locals 4
+
+    iget-object v0, p0, Lj82;->u0:Ljava/util/ArrayList;
+
+    invoke-static {v0}, Lq73;->B0(Ljava/lang/Iterable;)Ljava/util/List;
 
     move-result-object v1
 
-    iget-wide v2, p0, Lj82;->b:J
+    invoke-virtual {v0}, Ljava/util/ArrayList;->clear()V
 
-    invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    iget-object v0, p0, Lj82;->t0:Lcae;
 
-    move-result-object v4
+    if-eqz v0, :cond_0
 
-    invoke-interface {v1, v4}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v0}, Le0;->isActive()Z
 
-    move-result-object v4
+    move-result v0
 
-    check-cast v4, Ljava/lang/Long;
+    const/4 v2, 0x1
 
-    if-nez v4, :cond_0
-
-    return-void
-
-    :cond_0
-    invoke-virtual {v4}, Ljava/lang/Long;->longValue()J
-
-    move-result-wide v4
-
-    iget-wide v6, p0, Lj82;->c:J
-
-    cmp-long v4, v4, v6
-
-    const/4 v5, 0x0
-
-    const/4 v8, 0x1
-
-    if-eqz v4, :cond_1
-
-    move v4, v8
+    if-ne v0, v2, :cond_0
 
     goto :goto_0
 
-    :cond_1
-    move v4, v5
+    :cond_0
+    invoke-interface {v1}, Ljava/util/List;->isEmpty()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
 
     :goto_0
-    if-eqz v4, :cond_2
+    return-void
 
-    invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    :cond_1
+    iget-object v0, p0, Lj82;->X:Lcl7;
 
-    move-result-object v9
+    invoke-interface {v0}, Lcl7;->getValue()Ljava/lang/Object;
 
-    invoke-static {v6, v7}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    move-result-object v0
 
-    move-result-object v6
+    check-cast v0, Lxwe;
 
-    invoke-interface {v1, v9, v6}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    check-cast v0, Laga;
 
-    :cond_2
-    iget v1, p0, Lj82;->o:I
+    invoke-virtual {v0}, Laga;->b()Ls04;
 
-    if-ltz v1, :cond_3
+    move-result-object v0
 
-    iput v1, p1, Ls82;->m:I
+    sget-object v2, Lhx9;->a:Lhx9;
 
-    :cond_3
-    iget-boolean p1, p0, Lj82;->Y:Z
+    invoke-virtual {v0, v2}, Lf0;->plus(Lq04;)Lq04;
 
-    if-eqz p1, :cond_4
+    move-result-object v0
 
-    if-eqz v4, :cond_4
+    new-instance v2, Li82;
 
-    invoke-virtual {v0}, Ln82;->K()J
+    const/4 v3, 0x0
 
-    move-result-wide v0
+    invoke-direct {v2, p0, v1, v3}, Li82;-><init>(Lj82;Ljava/util/List;Lkotlin/coroutines/Continuation;)V
 
-    cmp-long p1, v2, v0
+    const/4 v1, 0x2
 
-    if-nez p1, :cond_4
+    invoke-static {p0, v0, v2, v1}, Lx7g;->n(Lx7g;Lq04;Lpc6;I)Lcae;
 
-    move v5, v8
+    move-result-object v0
 
-    :cond_4
-    iget-object p0, p0, Lj82;->X:Ljava/util/concurrent/atomic/AtomicBoolean;
-
-    invoke-virtual {p0, v5}, Ljava/util/concurrent/atomic/AtomicBoolean;->set(Z)V
+    iput-object v0, p0, Lj82;->t0:Lcae;
 
     return-void
 .end method

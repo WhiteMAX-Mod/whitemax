@@ -4,13 +4,13 @@
 
 
 # instance fields
-.field public A1:Lt4b;
+.field public A1:Z
 
-.field public x1:Z
+.field public B1:Ls2b;
 
-.field public y1:Lwra;
+.field public C1:Z
 
-.field public z1:Z
+.field public D1:Lr2b;
 
 
 # direct methods
@@ -21,19 +21,19 @@
 
     const/4 v0, 0x1
 
-    iput-boolean v0, p0, Lru/ok/messages/views/dialogs/FrgDlgBase;->x1:Z
+    iput-boolean v0, p0, Lru/ok/messages/views/dialogs/FrgDlgBase;->A1:Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public Z0(Lp5;)V
+.method public Z0(Lt5;)V
     .locals 0
 
     const/4 p1, 0x0
 
-    iput-boolean p1, p0, Lru/ok/messages/views/dialogs/FrgDlgBase;->x1:Z
+    iput-boolean p1, p0, Lru/ok/messages/views/dialogs/FrgDlgBase;->A1:Z
 
     return-void
 .end method
@@ -49,7 +49,7 @@
 
     const/4 v0, 0x1
 
-    iput-boolean v0, p0, Landroidx/fragment/app/a;->O0:Z
+    iput-boolean v0, p0, Landroidx/fragment/app/a;->R0:Z
 
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
@@ -67,17 +67,17 @@
 
     const-string v2, "ru.ok.messages.views.dialogs.FrgDlgBase"
 
-    invoke-static {v2, v1}, Lg47;->p(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v1}, Ljtg;->l(Ljava/lang/String;Ljava/lang/String;)V
 
-    instance-of v1, p1, Lp5;
+    instance-of v1, p1, Lt5;
 
     if-eqz v1, :cond_0
 
-    iput-boolean v0, p0, Lru/ok/messages/views/dialogs/FrgDlgBase;->x1:Z
+    iput-boolean v0, p0, Lru/ok/messages/views/dialogs/FrgDlgBase;->A1:Z
 
-    check-cast p1, Lp5;
+    check-cast p1, Lt5;
 
-    invoke-virtual {p0, p1}, Lru/ok/messages/views/dialogs/FrgDlgBase;->Z0(Lp5;)V
+    invoke-virtual {p0, p1}, Lru/ok/messages/views/dialogs/FrgDlgBase;->Z0(Lt5;)V
 
     return-void
 
@@ -116,7 +116,7 @@
 
     move-result-object p1
 
-    check-cast p1, Lp5;
+    check-cast p1, Lt5;
 
     goto :goto_0
 
@@ -133,11 +133,11 @@
     return-void
 
     :cond_1
-    iget-object p1, p1, Lp5;->G0:Lt4b;
+    iget-object p1, p1, Lt5;->J0:Lr2b;
 
-    iput-object p1, p0, Lru/ok/messages/views/dialogs/FrgDlgBase;->A1:Lt4b;
+    iput-object p1, p0, Lru/ok/messages/views/dialogs/FrgDlgBase;->D1:Lr2b;
 
-    iget-boolean p0, p0, Lru/ok/messages/views/dialogs/FrgDlgBase;->x1:Z
+    iget-boolean p0, p0, Lru/ok/messages/views/dialogs/FrgDlgBase;->A1:Z
 
     if-nez p0, :cond_2
 
@@ -158,11 +158,11 @@
 
     const/4 v0, 0x1
 
-    iput-boolean v0, p0, Landroidx/fragment/app/a;->O0:Z
+    iput-boolean v0, p0, Landroidx/fragment/app/a;->R0:Z
 
     const/4 v0, 0x0
 
-    iput-boolean v0, p0, Lru/ok/messages/views/dialogs/FrgDlgBase;->z1:Z
+    iput-boolean v0, p0, Lru/ok/messages/views/dialogs/FrgDlgBase;->C1:Z
 
     return-void
 .end method
@@ -170,13 +170,7 @@
 .method public final x0(I[Ljava/lang/String;[I)V
     .locals 1
 
-    invoke-virtual {p0}, Landroidx/fragment/app/a;->S()Landroid/content/Context;
-
-    move-result-object v0
-
-    invoke-static {v0, p2, p3}, Lxja;->H(Landroid/content/Context;[Ljava/lang/String;[I)V
-
-    iget-boolean v0, p0, Lru/ok/messages/views/dialogs/FrgDlgBase;->z1:Z
+    iget-boolean v0, p0, Lru/ok/messages/views/dialogs/FrgDlgBase;->C1:Z
 
     if-eqz v0, :cond_0
 
@@ -185,11 +179,11 @@
     return-void
 
     :cond_0
-    new-instance v0, Lwra;
+    new-instance v0, Ls2b;
 
-    invoke-direct {v0, p1, p2, p3}, Lwra;-><init>(I[Ljava/lang/String;[I)V
+    invoke-direct {v0, p1, p2, p3}, Ls2b;-><init>(I[Ljava/lang/String;[I)V
 
-    iput-object v0, p0, Lru/ok/messages/views/dialogs/FrgDlgBase;->y1:Lwra;
+    iput-object v0, p0, Lru/ok/messages/views/dialogs/FrgDlgBase;->B1:Ls2b;
 
     return-void
 .end method
@@ -199,25 +193,25 @@
 
     const/4 v0, 0x1
 
-    iput-boolean v0, p0, Landroidx/fragment/app/a;->O0:Z
+    iput-boolean v0, p0, Landroidx/fragment/app/a;->R0:Z
 
-    iput-boolean v0, p0, Lru/ok/messages/views/dialogs/FrgDlgBase;->z1:Z
+    iput-boolean v0, p0, Lru/ok/messages/views/dialogs/FrgDlgBase;->C1:Z
 
-    iget-object v0, p0, Lru/ok/messages/views/dialogs/FrgDlgBase;->y1:Lwra;
+    iget-object v0, p0, Lru/ok/messages/views/dialogs/FrgDlgBase;->B1:Ls2b;
 
     if-eqz v0, :cond_0
 
-    iget v1, v0, Lwra;->a:I
+    iget v1, v0, Ls2b;->a:I
 
-    iget-object v2, v0, Lwra;->b:[Ljava/lang/String;
+    iget-object v2, v0, Ls2b;->b:[Ljava/lang/String;
 
-    iget-object v0, v0, Lwra;->c:[I
+    iget-object v0, v0, Ls2b;->c:[I
 
     invoke-virtual {p0, v1, v2, v0}, Lru/ok/messages/views/dialogs/FrgDlgBase;->a1(I[Ljava/lang/String;[I)V
 
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lru/ok/messages/views/dialogs/FrgDlgBase;->y1:Lwra;
+    iput-object v0, p0, Lru/ok/messages/views/dialogs/FrgDlgBase;->B1:Ls2b;
 
     :cond_0
     return-void

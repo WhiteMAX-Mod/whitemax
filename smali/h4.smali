@@ -1,167 +1,111 @@
-.class public abstract Lh4;
+.class public abstract synthetic Lh4;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # direct methods
-.method public static a(ZIIIIZLjava/lang/String;Ljava/lang/String;)Lj4;
-    .locals 2
-
-    new-instance v0, Lj4;
-
-    new-instance v1, Landroid/view/accessibility/AccessibilityNodeInfo$CollectionItemInfo$Builder;
-
-    invoke-direct {v1}, Landroid/view/accessibility/AccessibilityNodeInfo$CollectionItemInfo$Builder;-><init>()V
-
-    invoke-virtual {v1, p0}, Landroid/view/accessibility/AccessibilityNodeInfo$CollectionItemInfo$Builder;->setHeading(Z)Landroid/view/accessibility/AccessibilityNodeInfo$CollectionItemInfo$Builder;
-
-    move-result-object p0
-
-    invoke-virtual {p0, p1}, Landroid/view/accessibility/AccessibilityNodeInfo$CollectionItemInfo$Builder;->setColumnIndex(I)Landroid/view/accessibility/AccessibilityNodeInfo$CollectionItemInfo$Builder;
-
-    move-result-object p0
-
-    invoke-virtual {p0, p2}, Landroid/view/accessibility/AccessibilityNodeInfo$CollectionItemInfo$Builder;->setRowIndex(I)Landroid/view/accessibility/AccessibilityNodeInfo$CollectionItemInfo$Builder;
-
-    move-result-object p0
-
-    invoke-virtual {p0, p3}, Landroid/view/accessibility/AccessibilityNodeInfo$CollectionItemInfo$Builder;->setColumnSpan(I)Landroid/view/accessibility/AccessibilityNodeInfo$CollectionItemInfo$Builder;
-
-    move-result-object p0
-
-    invoke-virtual {p0, p4}, Landroid/view/accessibility/AccessibilityNodeInfo$CollectionItemInfo$Builder;->setRowSpan(I)Landroid/view/accessibility/AccessibilityNodeInfo$CollectionItemInfo$Builder;
-
-    move-result-object p0
-
-    invoke-virtual {p0, p5}, Landroid/view/accessibility/AccessibilityNodeInfo$CollectionItemInfo$Builder;->setSelected(Z)Landroid/view/accessibility/AccessibilityNodeInfo$CollectionItemInfo$Builder;
-
-    move-result-object p0
-
-    invoke-virtual {p0, p6}, Landroid/view/accessibility/AccessibilityNodeInfo$CollectionItemInfo$Builder;->setRowTitle(Ljava/lang/String;)Landroid/view/accessibility/AccessibilityNodeInfo$CollectionItemInfo$Builder;
-
-    move-result-object p0
-
-    invoke-virtual {p0, p7}, Landroid/view/accessibility/AccessibilityNodeInfo$CollectionItemInfo$Builder;->setColumnTitle(Ljava/lang/String;)Landroid/view/accessibility/AccessibilityNodeInfo$CollectionItemInfo$Builder;
-
-    move-result-object p0
-
-    invoke-virtual {p0}, Landroid/view/accessibility/AccessibilityNodeInfo$CollectionItemInfo$Builder;->build()Landroid/view/accessibility/AccessibilityNodeInfo$CollectionItemInfo;
-
-    move-result-object p0
-
-    invoke-direct {v0, p0}, Lj4;-><init>(Landroid/view/accessibility/AccessibilityNodeInfo$CollectionItemInfo;)V
-
-    return-object v0
-.end method
-
-.method public static b(Landroid/view/accessibility/AccessibilityNodeInfo;II)Lk4;
+.method public static bridge synthetic a(Landroid/media/Spatializer;)I
     .locals 0
 
-    invoke-virtual {p0, p1, p2}, Landroid/view/accessibility/AccessibilityNodeInfo;->getChild(II)Landroid/view/accessibility/AccessibilityNodeInfo;
-
-    move-result-object p0
-
-    if-eqz p0, :cond_0
-
-    new-instance p1, Lk4;
-
-    invoke-direct {p1, p0}, Lk4;-><init>(Ljava/lang/Object;)V
-
-    return-object p1
-
-    :cond_0
-    const/4 p0, 0x0
-
-    return-object p0
-.end method
-
-.method public static c(Ljava/lang/Object;)Ljava/lang/String;
-    .locals 0
-
-    check-cast p0, Landroid/view/accessibility/AccessibilityNodeInfo$CollectionItemInfo;
-
-    invoke-virtual {p0}, Landroid/view/accessibility/AccessibilityNodeInfo$CollectionItemInfo;->getColumnTitle()Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static d(Ljava/lang/Object;)Ljava/lang/String;
-    .locals 0
-
-    check-cast p0, Landroid/view/accessibility/AccessibilityNodeInfo$CollectionItemInfo;
-
-    invoke-virtual {p0}, Landroid/view/accessibility/AccessibilityNodeInfo$CollectionItemInfo;->getRowTitle()Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static e(Landroid/view/accessibility/AccessibilityNodeInfo;)Landroid/view/accessibility/AccessibilityNodeInfo$ExtraRenderingInfo;
-    .locals 0
-
-    invoke-virtual {p0}, Landroid/view/accessibility/AccessibilityNodeInfo;->getExtraRenderingInfo()Landroid/view/accessibility/AccessibilityNodeInfo$ExtraRenderingInfo;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static f(Landroid/view/accessibility/AccessibilityNodeInfo;I)Lk4;
-    .locals 0
-
-    invoke-virtual {p0, p1}, Landroid/view/accessibility/AccessibilityNodeInfo;->getParent(I)Landroid/view/accessibility/AccessibilityNodeInfo;
-
-    move-result-object p0
-
-    if-eqz p0, :cond_0
-
-    new-instance p1, Lk4;
-
-    invoke-direct {p1, p0}, Lk4;-><init>(Ljava/lang/Object;)V
-
-    return-object p1
-
-    :cond_0
-    const/4 p0, 0x0
-
-    return-object p0
-.end method
-
-.method public static g(Landroid/view/accessibility/AccessibilityNodeInfo;)Ljava/lang/String;
-    .locals 0
-
-    invoke-virtual {p0}, Landroid/view/accessibility/AccessibilityNodeInfo;->getUniqueId()Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static h(Landroid/view/accessibility/AccessibilityNodeInfo;)Z
-    .locals 0
-
-    invoke-virtual {p0}, Landroid/view/accessibility/AccessibilityNodeInfo;->isTextSelectable()Z
+    invoke-virtual {p0}, Landroid/media/Spatializer;->getImmersiveAudioLevel()I
 
     move-result p0
 
     return p0
 .end method
 
-.method public static i(Landroid/view/accessibility/AccessibilityNodeInfo;Z)V
+.method public static bridge synthetic b(Landroid/media/AudioManager;)Landroid/media/Spatializer;
     .locals 0
 
-    invoke-virtual {p0, p1}, Landroid/view/accessibility/AccessibilityNodeInfo;->setTextSelectable(Z)V
+    invoke-virtual {p0}, Landroid/media/AudioManager;->getSpatializer()Landroid/media/Spatializer;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static bridge synthetic c(Ljava/lang/Object;)Landroid/media/Spatializer;
+    .locals 0
+
+    check-cast p0, Landroid/media/Spatializer;
+
+    return-object p0
+.end method
+
+.method public static bridge synthetic d()Landroid/view/accessibility/AccessibilityNodeInfo$AccessibilityAction;
+    .locals 1
+
+    sget-object v0, Landroid/view/accessibility/AccessibilityNodeInfo$AccessibilityAction;->ACTION_DRAG_START:Landroid/view/accessibility/AccessibilityNodeInfo$AccessibilityAction;
+
+    return-object v0
+.end method
+
+.method public static bridge synthetic e(Landroid/media/AudioAttributes$Builder;I)V
+    .locals 0
+
+    invoke-virtual {p0, p1}, Landroid/media/AudioAttributes$Builder;->setSpatializationBehavior(I)Landroid/media/AudioAttributes$Builder;
 
     return-void
 .end method
 
-.method public static j(Landroid/view/accessibility/AccessibilityNodeInfo;Ljava/lang/String;)V
+.method public static bridge synthetic f(Landroid/media/Spatializer;Ldt1;Ldj4;)V
     .locals 0
 
-    invoke-virtual {p0, p1}, Landroid/view/accessibility/AccessibilityNodeInfo;->setUniqueId(Ljava/lang/String;)V
+    invoke-virtual {p0, p1, p2}, Landroid/media/Spatializer;->addOnSpatializerStateChangedListener(Ljava/util/concurrent/Executor;Landroid/media/Spatializer$OnSpatializerStateChangedListener;)V
 
     return-void
+.end method
+
+.method public static bridge synthetic g(Landroid/media/Spatializer;Ldj4;)V
+    .locals 0
+
+    invoke-virtual {p0, p1}, Landroid/media/Spatializer;->removeOnSpatializerStateChangedListener(Landroid/media/Spatializer$OnSpatializerStateChangedListener;)V
+
+    return-void
+.end method
+
+.method public static bridge synthetic h(Landroid/media/Spatializer;)Z
+    .locals 0
+
+    invoke-virtual {p0}, Landroid/media/Spatializer;->isAvailable()Z
+
+    move-result p0
+
+    return p0
+.end method
+
+.method public static bridge synthetic i(Landroid/media/Spatializer;Landroid/media/AudioAttributes;Landroid/media/AudioFormat;)Z
+    .locals 0
+
+    invoke-virtual {p0, p1, p2}, Landroid/media/Spatializer;->canBeSpatialized(Landroid/media/AudioAttributes;Landroid/media/AudioFormat;)Z
+
+    move-result p0
+
+    return p0
+.end method
+
+.method public static bridge synthetic j()Landroid/view/accessibility/AccessibilityNodeInfo$AccessibilityAction;
+    .locals 1
+
+    sget-object v0, Landroid/view/accessibility/AccessibilityNodeInfo$AccessibilityAction;->ACTION_DRAG_DROP:Landroid/view/accessibility/AccessibilityNodeInfo$AccessibilityAction;
+
+    return-object v0
+.end method
+
+.method public static bridge synthetic k(Landroid/media/Spatializer;)Z
+    .locals 0
+
+    invoke-virtual {p0}, Landroid/media/Spatializer;->isEnabled()Z
+
+    move-result p0
+
+    return p0
+.end method
+
+.method public static bridge synthetic l()Landroid/view/accessibility/AccessibilityNodeInfo$AccessibilityAction;
+    .locals 1
+
+    sget-object v0, Landroid/view/accessibility/AccessibilityNodeInfo$AccessibilityAction;->ACTION_DRAG_CANCEL:Landroid/view/accessibility/AccessibilityNodeInfo$AccessibilityAction;
+
+    return-object v0
 .end method

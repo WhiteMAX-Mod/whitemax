@@ -1,53 +1,83 @@
-.class public interface abstract Laae;
-.super Ljava/lang/Object;
+.class public final Laae;
+.super Lr3;
 .source "SourceFile"
 
 
+# static fields
+.field public static final CREATOR:Landroid/os/Parcelable$Creator;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroid/os/Parcelable$Creator<",
+            "Laae;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+
+# instance fields
+.field public final a:Lnyc;
+
+
+# direct methods
+.method static constructor <clinit>()V
+    .locals 2
+
+    new-instance v0, Lp3h;
+
+    const/16 v1, 0x1c
+
+    invoke-direct {v0, v1}, Lp3h;-><init>(I)V
+
+    sput-object v0, Laae;->CREATOR:Landroid/os/Parcelable$Creator;
+
+    return-void
+.end method
+
+.method public constructor <init>(Landroid/os/IBinder;)V
+    .locals 1
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    new-instance v0, Lnyc;
+
+    invoke-static {p1}, Lw4a;->c0(Landroid/os/IBinder;)Lny6;
+
+    move-result-object p1
+
+    invoke-direct {v0, p1}, Lnyc;-><init>(Lny6;)V
+
+    iput-object v0, p0, Laae;->a:Lnyc;
+
+    return-void
+.end method
+
+
 # virtual methods
-.method public g(I[BI)Lp9e;
-    .locals 6
+.method public final writeToParcel(Landroid/os/Parcel;I)V
+    .locals 1
 
-    invoke-static {}, Lxw6;->i()Lvw6;
+    const/16 p2, 0x4f45
 
-    move-result-object p1
+    invoke-static {p1, p2}, Ljs9;->U(Landroid/os/Parcel;I)I
 
-    new-instance v5, Lync;
+    move-result p2
 
-    const/16 v0, 0x16
+    iget-object p0, p0, Laae;->a:Lnyc;
 
-    invoke-direct {v5, v0, p1}, Lync;-><init>(ILjava/lang/Object;)V
+    iget-object p0, p0, Lnyc;->b:Ljava/lang/Object;
 
-    const/4 v2, 0x0
+    check-cast p0, Lny6;
 
-    sget-object v4, Lz9e;->c:Lz9e;
+    invoke-interface {p0}, Landroid/os/IInterface;->asBinder()Landroid/os/IBinder;
 
-    move-object v0, p0
+    move-result-object p0
 
-    move-object v1, p2
+    const/4 v0, 0x2
 
-    move v3, p3
+    invoke-static {p1, v0, p0}, Ljs9;->K(Landroid/os/Parcel;ILandroid/os/IBinder;)V
 
-    invoke-interface/range {v0 .. v5}, Laae;->m([BIILz9e;Lij3;)V
-
-    new-instance p0, Lu04;
-
-    invoke-virtual {p1}, Lvw6;->h()Lddc;
-
-    move-result-object p1
-
-    invoke-direct {p0, p1}, Lu04;-><init>(Lddc;)V
-
-    return-object p0
-.end method
-
-.method public abstract m([BIILz9e;Lij3;)V
-.end method
-
-.method public abstract n()I
-.end method
-
-.method public reset()V
-    .locals 0
+    invoke-static {p1, p2}, Ljs9;->V(Landroid/os/Parcel;I)V
 
     return-void
 .end method

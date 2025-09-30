@@ -4,100 +4,146 @@
 
 
 # instance fields
-.field public a:I
+.field public final a:Ljava/lang/String;
 
-.field public b:I
+.field public final b:Lt90;
 
-.field public c:F
 
-.field public d:F
+# direct methods
+.method public constructor <init>(Ljava/lang/String;Lt90;)V
+    .locals 0
 
-.field public e:J
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-.field public f:J
+    if-eqz p1, :cond_1
 
-.field public g:J
+    iput-object p1, p0, La90;->a:Ljava/lang/String;
 
-.field public h:F
+    if-eqz p2, :cond_0
 
-.field public i:I
+    iput-object p2, p0, La90;->b:Lt90;
+
+    return-void
+
+    :cond_0
+    new-instance p0, Ljava/lang/NullPointerException;
+
+    const-string p1, "Null cameraConfigId"
+
+    invoke-direct {p0, p1}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
+
+    throw p0
+
+    :cond_1
+    new-instance p0, Ljava/lang/NullPointerException;
+
+    const-string p1, "Null cameraIdString"
+
+    invoke-direct {p0, p1}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
+
+    throw p0
+.end method
 
 
 # virtual methods
-.method public final a(J)F
-    .locals 8
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
 
-    iget-wide v0, p0, La90;->e:J
+    const/4 v0, 0x1
 
-    cmp-long v2, p1, v0
+    if-ne p1, p0, :cond_0
 
-    const/4 v3, 0x0
-
-    if-gez v2, :cond_0
-
-    return v3
+    return v0
 
     :cond_0
-    iget-wide v4, p0, La90;->g:J
+    instance-of v1, p1, La90;
 
-    const-wide/16 v6, 0x0
+    const/4 v2, 0x0
 
-    cmp-long v2, v4, v6
+    if-eqz v1, :cond_1
 
-    const/high16 v6, 0x3f800000    # 1.0f
+    check-cast p1, La90;
 
-    if-ltz v2, :cond_2
+    iget-object v1, p0, La90;->a:Ljava/lang/String;
 
-    cmp-long v2, p1, v4
+    iget-object v3, p1, La90;->a:Ljava/lang/String;
 
-    if-gez v2, :cond_1
+    invoke-virtual {v1, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    goto :goto_0
+    move-result v1
+
+    if-eqz v1, :cond_1
+
+    iget-object p0, p0, La90;->b:Lt90;
+
+    iget-object p1, p1, La90;->b:Lt90;
+
+    invoke-virtual {p0, p1}, Lt90;->equals(Ljava/lang/Object;)Z
+
+    move-result p0
+
+    if-eqz p0, :cond_1
+
+    return v0
 
     :cond_1
-    sub-long/2addr p1, v4
+    return v2
+.end method
 
-    iget v0, p0, La90;->h:F
+.method public final hashCode()I
+    .locals 2
 
-    sub-float v1, v6, v0
+    iget-object v0, p0, La90;->a:Ljava/lang/String;
 
-    long-to-float p1, p1
+    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
 
-    iget p0, p0, La90;->i:I
+    move-result v0
 
-    int-to-float p0, p0
+    const v1, 0xf4243
 
-    div-float/2addr p1, p0
+    xor-int/2addr v0, v1
 
-    invoke-static {p1, v3, v6}, Lyl7;->b(FFF)F
+    mul-int/2addr v0, v1
 
-    move-result p0
+    iget-object p0, p0, La90;->b:Lt90;
 
-    mul-float/2addr p0, v0
-
-    add-float/2addr p0, v1
-
-    return p0
-
-    :cond_2
-    :goto_0
-    sub-long/2addr p1, v0
-
-    long-to-float p1, p1
-
-    iget p0, p0, La90;->a:I
-
-    int-to-float p0, p0
-
-    div-float/2addr p1, p0
-
-    invoke-static {p1, v3, v6}, Lyl7;->b(FFF)F
+    invoke-virtual {p0}, Lt90;->hashCode()I
 
     move-result p0
 
-    const/high16 p1, 0x3f000000    # 0.5f
-
-    mul-float/2addr p0, p1
+    xor-int/2addr p0, v0
 
     return p0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 2
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "CameraId{cameraIdString="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v1, p0, La90;->a:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", cameraConfigId="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object p0, p0, La90;->b:Lt90;
+
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string p0, "}"
+
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    return-object p0
 .end method

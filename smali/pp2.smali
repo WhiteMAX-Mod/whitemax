@@ -1,99 +1,157 @@
-.class public abstract synthetic Lpp2;
-.super Ljava/lang/Object;
+.class public final Lpp2;
+.super Lure;
 .source "SourceFile"
 
+# interfaces
+.implements Lpc6;
 
-# static fields
-.field public static final synthetic $EnumSwitchMapping$0:[I
+
+# instance fields
+.field public X:I
+
+.field public synthetic Y:Ljava/lang/Object;
+
+.field public final synthetic Z:Lone/me/chatscreen/ChatScreen;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 8
+.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/chatscreen/ChatScreen;)V
+    .locals 0
 
-    invoke-static {}, Lop2;->values()[Lop2;
+    iput-object p2, p0, Lpp2;->Z:Lone/me/chatscreen/ChatScreen;
+
+    const/4 p2, 0x2
+
+    invoke-direct {p0, p2, p1}, Lure;-><init>(ILkotlin/coroutines/Continuation;)V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
+
+    check-cast p2, Lkotlin/coroutines/Continuation;
+
+    invoke-virtual {p0, p1, p2}, Lpp2;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+
+    move-result-object p0
+
+    check-cast p0, Lpp2;
+
+    sget-object p1, Lylf;->a:Lylf;
+
+    invoke-virtual {p0, p1}, Lpp2;->o(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 1
+
+    new-instance v0, Lpp2;
+
+    iget-object p0, p0, Lpp2;->Z:Lone/me/chatscreen/ChatScreen;
+
+    invoke-direct {v0, p2, p0}, Lpp2;-><init>(Lkotlin/coroutines/Continuation;Lone/me/chatscreen/ChatScreen;)V
+
+    iput-object p1, v0, Lpp2;->Y:Ljava/lang/Object;
+
+    return-object v0
+.end method
+
+.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 6
+
+    iget v0, p0, Lpp2;->X:I
+
+    sget-object v1, Lylf;->a:Lylf;
+
+    const/4 v2, 0x1
+
+    if-eqz v0, :cond_1
+
+    if-ne v0, v2, :cond_0
+
+    invoke-static {p1}, Lqe5;->V(Ljava/lang/Object;)V
+
+    return-object v1
+
+    :cond_0
+    new-instance p0, Ljava/lang/IllegalStateException;
+
+    const-string p1, "call to \'resume\' before \'invoke\' with coroutine"
+
+    invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p0
+
+    :cond_1
+    invoke-static {p1}, Lqe5;->V(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Lpp2;->Y:Ljava/lang/Object;
+
+    check-cast p1, Lub2;
+
+    sget-object v0, Lone/me/chatscreen/ChatScreen;->j1:[Lxi7;
+
+    iget-object v0, p0, Lpp2;->Z:Lone/me/chatscreen/ChatScreen;
+
+    iget-object v3, v0, Lone/me/chatscreen/ChatScreen;->F0:Lcl7;
+
+    invoke-interface {v3}, Lcl7;->getValue()Ljava/lang/Object;
+
+    move-result-object v3
+
+    check-cast v3, Lmpe;
+
+    invoke-virtual {v0}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
-    array-length v0, v0
+    iput v2, p0, Lpp2;->X:I
 
-    new-array v0, v0, [I
+    iget-object v2, v3, Lmpe;->r0:Lcl7;
 
-    const/4 v1, 0x1
+    invoke-interface {v2}, Lcl7;->getValue()Ljava/lang/Object;
 
-    const/4 v2, 0x4
+    move-result-object v2
 
-    :try_start_0
-    aput v1, v0, v2
-    :try_end_0
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
+    check-cast v2, Lxwe;
 
-    :catch_0
-    const/4 v3, 0x2
+    check-cast v2, Laga;
 
-    const/4 v4, 0x6
+    invoke-virtual {v2}, Laga;->a()Ls04;
 
-    :try_start_1
-    aput v3, v0, v4
-    :try_end_1
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
+    move-result-object v2
 
-    :catch_1
-    const/4 v5, 0x3
+    new-instance v4, Ljpe;
 
-    const/4 v6, 0x7
+    const/4 v5, 0x0
 
-    :try_start_2
-    aput v5, v0, v6
-    :try_end_2
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_2
+    invoke-direct {v4, p1, v3, v0, v5}, Ljpe;-><init>(Lub2;Lmpe;Landroid/content/Context;Lkotlin/coroutines/Continuation;)V
 
-    :catch_2
-    :try_start_3
-    aput v2, v0, v5
-    :try_end_3
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_3 .. :try_end_3} :catch_3
+    invoke-static {v2, v4, p0}, Lvyg;->H(Lq04;Lpc6;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
-    :catch_3
-    const/4 v2, 0x5
+    move-result-object p0
 
-    const/16 v5, 0x8
+    sget-object p1, Lz04;->a:Lz04;
 
-    :try_start_4
-    aput v2, v0, v5
-    :try_end_4
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_4 .. :try_end_4} :catch_4
+    if-ne p0, p1, :cond_2
 
-    :catch_4
-    const/4 v7, 0x0
+    goto :goto_0
 
-    :try_start_5
-    aput v4, v0, v7
-    :try_end_5
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_5 .. :try_end_5} :catch_5
+    :cond_2
+    move-object p0, v1
 
-    :catch_5
-    :try_start_6
-    aput v6, v0, v1
-    :try_end_6
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_6 .. :try_end_6} :catch_6
+    :goto_0
+    if-ne p0, p1, :cond_3
 
-    :catch_6
-    :try_start_7
-    aput v5, v0, v3
-    :try_end_7
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_7 .. :try_end_7} :catch_7
+    return-object p1
 
-    :catch_7
-    const/16 v1, 0x9
-
-    :try_start_8
-    aput v1, v0, v2
-    :try_end_8
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_8 .. :try_end_8} :catch_8
-
-    :catch_8
-    sput-object v0, Lpp2;->$EnumSwitchMapping$0:[I
-
-    return-void
+    :cond_3
+    return-object v1
 .end method

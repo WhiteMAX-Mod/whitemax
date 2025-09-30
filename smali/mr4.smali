@@ -1,60 +1,72 @@
-.class public final Lmr4;
+.class public final synthetic Lmr4;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lpr4;
+.implements Lzb6;
 
 
-# virtual methods
-.method public final a(Lir4;Lfz5;)Ler4;
-    .locals 1
+# instance fields
+.field public final synthetic a:I
 
-    iget-object p0, p2, Lfz5;->q:Ldr4;
+.field public final synthetic b:Lor4;
 
-    if-nez p0, :cond_0
+.field public final synthetic c:Landroid/content/Context;
 
-    const/4 p0, 0x0
 
-    return-object p0
-
-    :cond_0
-    new-instance p0, Lx25;
-
-    new-instance p1, Landroidx/media3/exoplayer/drm/DrmSession$DrmSessionException;
-
-    new-instance p2, Landroidx/media3/exoplayer/drm/UnsupportedDrmException;
-
-    invoke-direct {p2}, Ljava/lang/Exception;-><init>()V
-
-    const/16 v0, 0x1771
-
-    invoke-direct {p1, p2, v0}, Landroidx/media3/exoplayer/drm/DrmSession$DrmSessionException;-><init>(Ljava/lang/Throwable;I)V
-
-    invoke-direct {p0, p1}, Lx25;-><init>(Landroidx/media3/exoplayer/drm/DrmSession$DrmSessionException;)V
-
-    return-object p0
-.end method
-
-.method public final c(Landroid/os/Looper;Lw1b;)V
+# direct methods
+.method public synthetic constructor <init>(Lor4;Landroid/content/Context;I)V
     .locals 0
+
+    iput p3, p0, Lmr4;->a:I
+
+    iput-object p1, p0, Lmr4;->b:Lor4;
+
+    iput-object p2, p0, Lmr4;->c:Landroid/content/Context;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
-.method public final d(Lfz5;)I
-    .locals 0
 
-    iget-object p0, p1, Lfz5;->q:Ldr4;
+# virtual methods
+.method public final invoke()Ljava/lang/Object;
+    .locals 2
 
-    if-eqz p0, :cond_0
+    iget v0, p0, Lmr4;->a:I
 
-    const/4 p0, 0x1
+    packed-switch v0, :pswitch_data_0
 
-    return p0
+    iget-object v0, p0, Lmr4;->c:Landroid/content/Context;
 
-    :cond_0
-    const/4 p0, 0x0
+    const/4 v1, 0x0
 
-    return p0
+    iget-object p0, p0, Lmr4;->b:Lor4;
+
+    invoke-virtual {p0, v0, v1}, Lor4;->f(Landroid/content/Context;Z)Landroid/widget/FrameLayout;
+
+    move-result-object p0
+
+    return-object p0
+
+    :pswitch_0
+    iget-object v0, p0, Lmr4;->c:Landroid/content/Context;
+
+    const/4 v1, 0x1
+
+    iget-object p0, p0, Lmr4;->b:Lor4;
+
+    invoke-virtual {p0, v0, v1}, Lor4;->f(Landroid/content/Context;Z)Landroid/widget/FrameLayout;
+
+    move-result-object p0
+
+    return-object p0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

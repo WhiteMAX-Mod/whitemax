@@ -1,1539 +1,297 @@
-.class public final Lsvc;
-.super Lkpd;
+.class public final synthetic Lsvc;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lqc6;
+.implements Lrs1;
 
 
 # instance fields
-.field public final synthetic b:I
+.field public final synthetic X:Ljava/lang/Object;
+
+.field public final synthetic a:Ljava/lang/Object;
+
+.field public final synthetic b:Ljava/lang/Object;
+
+.field public final synthetic c:Ljava/lang/Object;
+
+.field public final synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method public synthetic constructor <init>(I)V
+.method public synthetic constructor <init>(Lbc6;Lgf0;Lpc6;Lv5d;Lbc6;)V
     .locals 0
 
-    iput p1, p0, Lsvc;->b:I
+    .line 2
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0}, Lkpd;-><init>()V
+    iput-object p1, p0, Lsvc;->a:Ljava/lang/Object;
+
+    iput-object p2, p0, Lsvc;->c:Ljava/lang/Object;
+
+    iput-object p3, p0, Lsvc;->o:Ljava/lang/Object;
+
+    iput-object p4, p0, Lsvc;->X:Ljava/lang/Object;
+
+    iput-object p5, p0, Lsvc;->b:Ljava/lang/Object;
+
+    return-void
+.end method
+
+.method public synthetic constructor <init>(Lor4;Lire;Le6f;Lsb0;Lea0;)V
+    .locals 0
+
+    .line 1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lsvc;->a:Ljava/lang/Object;
+
+    iput-object p2, p0, Lsvc;->b:Ljava/lang/Object;
+
+    iput-object p3, p0, Lsvc;->c:Ljava/lang/Object;
+
+    iput-object p4, p0, Lsvc;->o:Ljava/lang/Object;
+
+    iput-object p5, p0, Lsvc;->X:Ljava/lang/Object;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final b(Lu4;)Ljava/lang/Object;
-    .locals 20
+.method public apply(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 8
 
-    move-object/from16 v0, p0
-
-    move-object/from16 v1, p1
-
-    iget v0, v0, Lsvc;->b:I
-
-    packed-switch v0, :pswitch_data_0
-
-    new-instance v0, Ler9;
-
-    const-class v2, Liw8;
-
-    invoke-virtual {v1, v2}, Lu4;->d(Ljava/lang/Class;)Lwfe;
-
-    move-result-object v2
-
-    const-class v3, Ld6d;
-
-    invoke-virtual {v1, v3}, Lu4;->d(Ljava/lang/Class;)Lwfe;
-
-    move-result-object v3
-
-    const-class v4, Lgw8;
-
-    invoke-virtual {v1, v4}, Lu4;->d(Ljava/lang/Class;)Lwfe;
-
-    move-result-object v1
-
-    invoke-direct {v0, v2, v3, v1}, Ler9;-><init>(Lje7;Lje7;Lje7;)V
-
-    return-object v0
-
-    :pswitch_0
-    new-instance v0, Lgwc;
-
-    const/16 v2, 0xb
-
-    invoke-direct {v0, v1, v2}, Lgwc;-><init>(Lu4;I)V
-
-    invoke-static {v0}, La4f;->i(Lv56;)Ltm4;
-
-    move-result-object v0
-
-    new-instance v2, Lgwc;
-
-    const/16 v3, 0xc
-
-    invoke-direct {v2, v1, v3}, Lgwc;-><init>(Lu4;I)V
-
-    invoke-static {v2}, La4f;->i(Lv56;)Ltm4;
-
-    move-result-object v2
-
-    new-instance v3, Lgwc;
-
-    const/16 v4, 0xd
-
-    invoke-direct {v3, v1, v4}, Lgwc;-><init>(Lu4;I)V
-
-    invoke-static {v3}, La4f;->i(Lv56;)Ltm4;
-
-    move-result-object v1
-
-    new-instance v3, Ljq9;
-
-    invoke-direct {v3, v0, v2, v1}, Ljq9;-><init>(Ltm4;Ltm4;Ltm4;)V
-
-    return-object v3
-
-    :pswitch_1
-    new-instance v0, Lgwc;
-
-    const/16 v2, 0x8
-
-    invoke-direct {v0, v1, v2}, Lgwc;-><init>(Lu4;I)V
-
-    invoke-static {v0}, La4f;->i(Lv56;)Ltm4;
-
-    new-instance v0, Lgwc;
-
-    const/16 v2, 0x9
-
-    invoke-direct {v0, v1, v2}, Lgwc;-><init>(Lu4;I)V
-
-    invoke-static {v0}, La4f;->i(Lv56;)Ltm4;
-
-    move-result-object v4
-
-    new-instance v0, Lgwc;
-
-    const/16 v2, 0xa
-
-    invoke-direct {v0, v1, v2}, Lgwc;-><init>(Lu4;I)V
-
-    invoke-static {v0}, La4f;->i(Lv56;)Ltm4;
-
-    move-result-object v5
-
-    new-instance v0, Lgwc;
-
-    const/4 v2, 0x5
-
-    invoke-direct {v0, v1, v2}, Lgwc;-><init>(Lu4;I)V
-
-    invoke-static {v0}, La4f;->i(Lv56;)Ltm4;
-
-    move-result-object v6
-
-    new-instance v0, Lgwc;
-
-    const/4 v2, 0x6
-
-    invoke-direct {v0, v1, v2}, Lgwc;-><init>(Lu4;I)V
-
-    invoke-static {v0}, La4f;->i(Lv56;)Ltm4;
-
-    move-result-object v7
-
-    new-instance v0, Lgwc;
-
-    const/4 v2, 0x7
-
-    invoke-direct {v0, v1, v2}, Lgwc;-><init>(Lu4;I)V
-
-    invoke-static {v0}, La4f;->i(Lv56;)Ltm4;
-
-    move-result-object v8
-
-    new-instance v3, Lup9;
-
-    invoke-direct/range {v3 .. v8}, Lup9;-><init>(Ltm4;Ltm4;Ltm4;Ltm4;Ltm4;)V
-
-    return-object v3
-
-    :pswitch_2
-    new-instance v0, Lzg3;
-
-    const-class v2, Lx4b;
-
-    invoke-virtual {v1, v2}, Lu4;->d(Ljava/lang/Class;)Lwfe;
-
-    move-result-object v2
-
-    const-class v3, Lti4;
-
-    invoke-virtual {v1, v3}, Lu4;->d(Ljava/lang/Class;)Lwfe;
-
-    move-result-object v3
-
-    const-class v4, Ldh3;
-
-    invoke-virtual {v1, v4}, Lu4;->d(Ljava/lang/Class;)Lwfe;
-
-    move-result-object v4
-
-    const-class v5, Lm9d;
-
-    invoke-virtual {v1, v5}, Lu4;->d(Ljava/lang/Class;)Lwfe;
-
-    move-result-object v1
-
-    invoke-direct {v0, v2, v3, v4, v1}, Lzg3;-><init>(Lje7;Lje7;Lje7;Lje7;)V
-
-    return-object v0
-
-    :pswitch_3
-    new-instance v0, Lgwc;
-
-    const/4 v2, 0x4
-
-    invoke-direct {v0, v1, v2}, Lgwc;-><init>(Lu4;I)V
-
-    invoke-static {v0}, La4f;->i(Lv56;)Ltm4;
-
-    move-result-object v0
-
-    new-instance v1, Lnq9;
-
-    invoke-direct {v1, v0}, Lnq9;-><init>(Ltm4;)V
-
-    return-object v1
-
-    :pswitch_4
-    const-class v0, Lvu0;
-
-    invoke-virtual {v1, v0}, Lu4;->c(Ljava/lang/Class;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lvu0;
-
-    new-instance v2, Lgwc;
-
-    const/4 v3, 0x3
-
-    invoke-direct {v2, v1, v3}, Lgwc;-><init>(Lu4;I)V
-
-    invoke-static {v2}, La4f;->i(Lv56;)Ltm4;
-
-    move-result-object v1
-
-    new-instance v2, Lzp9;
-
-    invoke-direct {v2, v0, v1}, Lzp9;-><init>(Lvu0;Ltm4;)V
-
-    return-object v2
-
-    :pswitch_5
-    new-instance v0, Lgwc;
-
-    const/4 v2, 0x1
-
-    invoke-direct {v0, v1, v2}, Lgwc;-><init>(Lu4;I)V
-
-    invoke-static {v0}, La4f;->i(Lv56;)Ltm4;
-
-    move-result-object v0
-
-    new-instance v2, Lgwc;
-
-    const/4 v3, 0x2
-
-    invoke-direct {v2, v1, v3}, Lgwc;-><init>(Lu4;I)V
-
-    invoke-static {v2}, La4f;->i(Lv56;)Ltm4;
-
-    move-result-object v1
-
-    new-instance v2, Lcr9;
-
-    invoke-direct {v2, v0, v1}, Lcr9;-><init>(Ltm4;Ltm4;)V
-
-    return-object v2
-
-    :pswitch_6
-    new-instance v0, Lfwc;
-
-    const/16 v2, 0x1c
-
-    invoke-direct {v0, v1, v2}, Lfwc;-><init>(Lu4;I)V
-
-    invoke-static {v0}, La4f;->i(Lv56;)Ltm4;
-
-    move-result-object v4
-
-    new-instance v0, Lfwc;
-
-    const/16 v2, 0x1d
-
-    invoke-direct {v0, v1, v2}, Lfwc;-><init>(Lu4;I)V
-
-    invoke-static {v0}, La4f;->i(Lv56;)Ltm4;
-
-    move-result-object v5
-
-    const-class v0, Lvu0;
-
-    invoke-virtual {v1, v0}, Lu4;->c(Ljava/lang/Class;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    move-object v6, v0
-
-    check-cast v6, Lvu0;
-
-    new-instance v0, Lgwc;
-
-    const/4 v2, 0x0
-
-    invoke-direct {v0, v1, v2}, Lgwc;-><init>(Lu4;I)V
-
-    invoke-static {v0}, La4f;->i(Lv56;)Ltm4;
-
-    move-result-object v7
-
-    new-instance v0, Lfwc;
-
-    const/16 v2, 0x1a
-
-    invoke-direct {v0, v1, v2}, Lfwc;-><init>(Lu4;I)V
-
-    invoke-static {v0}, La4f;->i(Lv56;)Ltm4;
-
-    move-result-object v8
-
-    new-instance v0, Lfwc;
-
-    const/16 v2, 0x1b
-
-    invoke-direct {v0, v1, v2}, Lfwc;-><init>(Lu4;I)V
-
-    invoke-static {v0}, La4f;->i(Lv56;)Ltm4;
-
-    move-result-object v9
-
-    new-instance v3, Lbq9;
-
-    invoke-direct/range {v3 .. v9}, Lbq9;-><init>(Ltm4;Ltm4;Lvu0;Ltm4;Ltm4;Ltm4;)V
-
-    return-object v3
-
-    :pswitch_7
-    new-instance v4, Ldq9;
-
-    const-class v0, Lx4b;
-
-    invoke-virtual {v1, v0}, Lu4;->c(Ljava/lang/Class;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    move-object v5, v0
-
-    check-cast v5, Lx4b;
-
-    const-class v0, Lvu0;
-
-    invoke-virtual {v1, v0}, Lu4;->c(Ljava/lang/Class;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    move-object v6, v0
-
-    check-cast v6, Lvu0;
-
-    const-class v0, Ln82;
-
-    invoke-virtual {v1, v0}, Lu4;->d(Ljava/lang/Class;)Lwfe;
-
-    move-result-object v7
-
-    const-class v0, Lpx5;
-
-    invoke-virtual {v1, v0}, Lu4;->d(Ljava/lang/Class;)Lwfe;
-
-    move-result-object v8
-
-    const-class v0, Lbe3;
-
-    invoke-virtual {v1, v0}, Lu4;->d(Ljava/lang/Class;)Lwfe;
-
-    move-result-object v9
-
-    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    invoke-direct/range {v4 .. v9}, Ldq9;-><init>(Lx4b;Lvu0;Lje7;Lje7;Lje7;)V
-
-    return-object v4
-
-    :pswitch_8
-    new-instance v0, Lfwc;
-
-    const/16 v2, 0x17
-
-    invoke-direct {v0, v1, v2}, Lfwc;-><init>(Lu4;I)V
-
-    invoke-static {v0}, La4f;->i(Lv56;)Ltm4;
-
-    move-result-object v4
-
-    new-instance v0, Lfwc;
-
-    const/16 v2, 0x18
-
-    invoke-direct {v0, v1, v2}, Lfwc;-><init>(Lu4;I)V
-
-    invoke-static {v0}, La4f;->i(Lv56;)Ltm4;
-
-    move-result-object v5
-
-    const-class v0, Lx4b;
-
-    invoke-virtual {v1, v0}, Lu4;->c(Ljava/lang/Class;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    move-object v6, v0
-
-    check-cast v6, Lx4b;
-
-    const-class v0, Lvu0;
-
-    invoke-virtual {v1, v0}, Lu4;->c(Ljava/lang/Class;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    move-object v7, v0
-
-    check-cast v7, Lvu0;
-
-    new-instance v0, Lfwc;
-
-    const/16 v2, 0x19
-
-    invoke-direct {v0, v1, v2}, Lfwc;-><init>(Lu4;I)V
-
-    invoke-static {v0}, La4f;->i(Lv56;)Ltm4;
-
-    move-result-object v8
-
-    new-instance v0, Lfwc;
-
-    const/16 v2, 0xd
-
-    invoke-direct {v0, v1, v2}, Lfwc;-><init>(Lu4;I)V
-
-    invoke-static {v0}, La4f;->i(Lv56;)Ltm4;
-
-    move-result-object v9
-
-    new-instance v0, Lfwc;
-
-    const/16 v2, 0xe
-
-    invoke-direct {v0, v1, v2}, Lfwc;-><init>(Lu4;I)V
-
-    invoke-static {v0}, La4f;->i(Lv56;)Ltm4;
-
-    move-result-object v10
-
-    new-instance v0, Lfwc;
-
-    const/16 v2, 0xf
-
-    invoke-direct {v0, v1, v2}, Lfwc;-><init>(Lu4;I)V
-
-    invoke-static {v0}, La4f;->i(Lv56;)Ltm4;
-
-    move-result-object v11
-
-    new-instance v0, Lfwc;
-
-    const/16 v2, 0x10
-
-    invoke-direct {v0, v1, v2}, Lfwc;-><init>(Lu4;I)V
-
-    invoke-static {v0}, La4f;->i(Lv56;)Ltm4;
-
-    move-result-object v12
-
-    new-instance v0, Lfwc;
-
-    const/16 v2, 0x11
-
-    invoke-direct {v0, v1, v2}, Lfwc;-><init>(Lu4;I)V
-
-    invoke-static {v0}, La4f;->i(Lv56;)Ltm4;
-
-    move-result-object v13
-
-    new-instance v0, Lfwc;
-
-    const/16 v2, 0x12
-
-    invoke-direct {v0, v1, v2}, Lfwc;-><init>(Lu4;I)V
-
-    invoke-static {v0}, La4f;->i(Lv56;)Ltm4;
-
-    move-result-object v14
-
-    new-instance v0, Lfwc;
-
-    const/16 v2, 0x13
-
-    invoke-direct {v0, v1, v2}, Lfwc;-><init>(Lu4;I)V
-
-    invoke-static {v0}, La4f;->i(Lv56;)Ltm4;
-
-    move-result-object v15
-
-    new-instance v0, Lfwc;
-
-    const/16 v2, 0x14
-
-    invoke-direct {v0, v1, v2}, Lfwc;-><init>(Lu4;I)V
-
-    invoke-static {v0}, La4f;->i(Lv56;)Ltm4;
-
-    move-result-object v16
-
-    new-instance v0, Lfwc;
-
-    const/16 v2, 0x15
-
-    invoke-direct {v0, v1, v2}, Lfwc;-><init>(Lu4;I)V
-
-    invoke-static {v0}, La4f;->i(Lv56;)Ltm4;
-
-    move-result-object v17
-
-    new-instance v0, Lfwc;
-
-    const/16 v2, 0x16
-
-    invoke-direct {v0, v1, v2}, Lfwc;-><init>(Lu4;I)V
-
-    invoke-static {v0}, La4f;->i(Lv56;)Ltm4;
-
-    move-result-object v18
-
-    new-instance v3, Lsq9;
-
-    invoke-direct/range {v3 .. v18}, Lsq9;-><init>(Ltm4;Ltm4;Lx4b;Lvu0;Ltm4;Ltm4;Ltm4;Ltm4;Ltm4;Ltm4;Ltm4;Ltm4;Ltm4;Ltm4;Ltm4;)V
-
-    return-object v3
-
-    :pswitch_9
-    new-instance v4, Lpq9;
-
-    const-class v0, Lik;
-
-    invoke-virtual {v1, v0}, Lu4;->d(Ljava/lang/Class;)Lwfe;
-
-    move-result-object v5
-
-    const-class v0, Lw9g;
-
-    invoke-virtual {v1, v0}, Lu4;->d(Ljava/lang/Class;)Lwfe;
-
-    move-result-object v6
-
-    const-class v0, Lx4b;
-
-    invoke-virtual {v1, v0}, Lu4;->c(Ljava/lang/Class;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    move-object v7, v0
-
-    check-cast v7, Lx4b;
-
-    const-class v0, Lvu0;
-
-    invoke-virtual {v1, v0}, Lu4;->c(Ljava/lang/Class;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    move-object v8, v0
-
-    check-cast v8, Lvu0;
-
-    const-class v0, Ln82;
-
-    invoke-virtual {v1, v0}, Lu4;->d(Ljava/lang/Class;)Lwfe;
-
-    move-result-object v9
-
-    const-class v0, Ltba;
-
-    invoke-virtual {v1, v0}, Lu4;->d(Ljava/lang/Class;)Lwfe;
-
-    move-result-object v10
-
-    invoke-direct/range {v4 .. v10}, Lpq9;-><init>(Lje7;Lje7;Lx4b;Lvu0;Lje7;Lje7;)V
-
-    return-object v4
-
-    :pswitch_a
-    const-class v0, Le45;
-
-    invoke-virtual {v1, v0}, Lu4;->c(Ljava/lang/Class;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Le45;
-
-    new-instance v2, Lfwc;
-
-    const/16 v3, 0xb
-
-    invoke-direct {v2, v1, v3}, Lfwc;-><init>(Lu4;I)V
-
-    invoke-static {v2}, La4f;->i(Lv56;)Ltm4;
-
-    move-result-object v2
-
-    new-instance v3, Lfwc;
-
-    const/16 v4, 0xc
-
-    invoke-direct {v3, v1, v4}, Lfwc;-><init>(Lu4;I)V
-
-    invoke-static {v3}, La4f;->i(Lv56;)Ltm4;
-
-    move-result-object v1
-
-    new-instance v3, Lgq9;
-
-    invoke-direct {v3, v0, v2, v1}, Lgq9;-><init>(Le45;Ltm4;Ltm4;)V
-
-    return-object v3
-
-    :pswitch_b
-    new-instance v0, Llke;
-
-    const-class v2, Lmq6;
-
-    invoke-virtual {v1, v2}, Lu4;->d(Ljava/lang/Class;)Lwfe;
-
-    move-result-object v1
-
-    invoke-direct {v0, v1}, Llke;-><init>(Lje7;)V
-
-    return-object v0
-
-    :pswitch_c
-    new-instance v2, Lez6;
-
-    const-class v0, Landroid/content/Context;
-
-    invoke-virtual {v1, v0}, Lu4;->d(Ljava/lang/Class;)Lwfe;
-
-    move-result-object v3
-
-    const-class v0, Lx4b;
-
-    invoke-virtual {v1, v0}, Lu4;->d(Ljava/lang/Class;)Lwfe;
-
-    move-result-object v4
-
-    const-class v0, Lvu0;
-
-    invoke-virtual {v1, v0}, Lu4;->d(Ljava/lang/Class;)Lwfe;
-
-    move-result-object v5
-
-    const-class v0, Le45;
-
-    invoke-virtual {v1, v0}, Lu4;->d(Ljava/lang/Class;)Lwfe;
-
-    move-result-object v6
-
-    const-class v0, Laba;
-
-    invoke-virtual {v1, v0}, Lu4;->d(Ljava/lang/Class;)Lwfe;
-
-    move-result-object v7
-
-    new-instance v0, Lfs2;
-
-    const/16 v8, 0x11
-
-    invoke-direct {v0, v1, v8}, Lfs2;-><init>(Lu4;I)V
-
-    new-instance v8, Lwfe;
-
-    invoke-direct {v8, v0}, Lwfe;-><init>(Lv56;)V
-
-    const-class v0, Lna9;
-
-    invoke-virtual {v1, v0}, Lu4;->d(Ljava/lang/Class;)Lwfe;
-
-    move-result-object v9
-
-    const-class v0, Ln82;
-
-    invoke-virtual {v1, v0}, Lu4;->d(Ljava/lang/Class;)Lwfe;
-
-    move-result-object v10
-
-    const-class v0, Lxk3;
-
-    invoke-virtual {v1, v0}, Lu4;->d(Ljava/lang/Class;)Lwfe;
-
-    move-result-object v11
-
-    const-class v0, Luc;
-
-    invoke-virtual {v1, v0}, Lu4;->d(Ljava/lang/Class;)Lwfe;
-
-    move-result-object v12
-
-    invoke-direct/range {v2 .. v12}, Lez6;-><init>(Lje7;Lje7;Lje7;Lje7;Lje7;Lwfe;Lje7;Lje7;Lje7;Lje7;)V
-
-    return-object v2
-
-    :pswitch_d
-    const-class v0, Lo9d;
-
-    invoke-virtual {v1, v0}, Lu4;->c(Ljava/lang/Class;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lm9d;
-
-    return-object v0
-
-    :pswitch_e
-    new-instance v0, Ly5d;
-
-    const-class v2, Lgq9;
-
-    invoke-virtual {v1, v2}, Lu4;->d(Ljava/lang/Class;)Lwfe;
-
-    move-result-object v2
-
-    const-class v3, Lpq9;
-
-    invoke-virtual {v1, v3}, Lu4;->d(Ljava/lang/Class;)Lwfe;
-
-    move-result-object v3
-
-    const-class v4, Lsq9;
-
-    invoke-virtual {v1, v4}, Lu4;->d(Ljava/lang/Class;)Lwfe;
-
-    move-result-object v4
-
-    const-class v5, Ldq9;
-
-    invoke-virtual {v1, v5}, Lu4;->d(Ljava/lang/Class;)Lwfe;
-
-    move-result-object v5
-
-    const-class v6, Lbq9;
-
-    invoke-virtual {v1, v6}, Lu4;->d(Ljava/lang/Class;)Lwfe;
-
-    move-result-object v6
-
-    const-class v7, Le20;
-
-    invoke-virtual {v1, v7}, Lu4;->d(Ljava/lang/Class;)Lwfe;
-
-    move-result-object v7
-
-    const-class v8, Lcr9;
-
-    invoke-virtual {v1, v8}, Lu4;->d(Ljava/lang/Class;)Lwfe;
-
-    move-result-object v8
-
-    const-class v9, Lar9;
-
-    invoke-virtual {v1, v9}, Lu4;->d(Ljava/lang/Class;)Lwfe;
-
-    move-result-object v9
-
-    const-class v10, Lzp9;
-
-    invoke-virtual {v1, v10}, Lu4;->d(Ljava/lang/Class;)Lwfe;
-
-    move-result-object v10
-
-    const-class v11, Lnq9;
-
-    invoke-virtual {v1, v11}, Lu4;->d(Ljava/lang/Class;)Lwfe;
-
-    move-result-object v11
-
-    const-class v12, Lup9;
-
-    invoke-virtual {v1, v12}, Lu4;->d(Ljava/lang/Class;)Lwfe;
-
-    move-result-object v12
-
-    const-class v13, Ljq9;
-
-    invoke-virtual {v1, v13}, Lu4;->d(Ljava/lang/Class;)Lwfe;
-
-    move-result-object v13
-
-    const-class v14, Ler9;
-
-    invoke-virtual {v1, v14}, Lu4;->d(Ljava/lang/Class;)Lwfe;
-
-    move-result-object v14
-
-    const-class v15, Lyq9;
-
-    invoke-virtual {v1, v15}, Lu4;->d(Ljava/lang/Class;)Lwfe;
-
-    move-result-object v15
-
-    move-object/from16 p0, v0
-
-    const-class v0, Lir9;
-
-    invoke-virtual {v1, v0}, Lu4;->d(Ljava/lang/Class;)Lwfe;
-
-    move-result-object v16
-
-    const-class v0, Lkx3;
-
-    invoke-virtual {v1, v0}, Lu4;->c(Ljava/lang/Class;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    move-object/from16 v17, v0
-
-    check-cast v17, Lkx3;
-
-    const-class v0, Lrie;
-
-    invoke-virtual {v1, v0}, Lu4;->c(Ljava/lang/Class;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    move-object/from16 v18, v0
-
-    check-cast v18, Lrie;
-
-    const-class v0, Lpx5;
-
-    invoke-virtual {v1, v0}, Lu4;->d(Ljava/lang/Class;)Lwfe;
-
-    move-result-object v19
-
-    move-object/from16 v1, p0
-
-    invoke-direct/range {v1 .. v19}, Ly5d;-><init>(Lje7;Lje7;Lje7;Lje7;Lje7;Lje7;Lje7;Lje7;Lje7;Lje7;Lje7;Lje7;Lje7;Lje7;Lje7;Lkx3;Lrie;Lje7;)V
-
-    return-object v1
-
-    :pswitch_f
-    const-class v0, Landroid/content/Context;
-
-    invoke-virtual {v1, v0}, Lu4;->c(Ljava/lang/Class;)Ljava/lang/Object;
-
-    move-result-object v0
+    iget-object v0, p0, Lsvc;->a:Ljava/lang/Object;
 
     move-object v2, v0
 
-    check-cast v2, Landroid/content/Context;
+    check-cast v2, Lbc6;
 
-    const-class v0, Llba;
-
-    invoke-virtual {v1, v0}, Lu4;->c(Ljava/lang/Class;)Ljava/lang/Object;
-
-    move-result-object v0
+    iget-object v0, p0, Lsvc;->c:Ljava/lang/Object;
 
     move-object v3, v0
 
-    check-cast v3, Llba;
+    check-cast v3, Lgf0;
 
-    const-class v0, Lb94;
-
-    invoke-virtual {v1, v0}, Lu4;->c(Ljava/lang/Class;)Ljava/lang/Object;
-
-    move-result-object v0
+    iget-object v0, p0, Lsvc;->o:Ljava/lang/Object;
 
     move-object v4, v0
 
-    check-cast v4, Lb94;
+    check-cast v4, Lpc6;
 
-    const-class v0, Lc8a;
-
-    invoke-virtual {v1, v0}, Lu4;->c(Ljava/lang/Class;)Ljava/lang/Object;
-
-    move-result-object v0
+    iget-object v0, p0, Lsvc;->X:Ljava/lang/Object;
 
     move-object v5, v0
 
-    check-cast v5, Lc8a;
+    check-cast v5, Lv5d;
 
-    const-class v0, Lx4b;
+    iget-object p0, p0, Lsvc;->b:Ljava/lang/Object;
 
-    invoke-virtual {v1, v0}, Lu4;->c(Ljava/lang/Class;)Ljava/lang/Object;
+    move-object v6, p0
 
-    move-result-object v0
+    check-cast v6, Lbc6;
 
-    move-object v6, v0
+    check-cast p1, Ly4a;
 
-    check-cast v6, Lx4b;
+    new-instance v1, Lcec;
 
-    new-instance v0, Lfwc;
+    const/4 v7, 0x6
 
-    const/16 v7, 0xa
+    invoke-direct/range {v1 .. v7}, Lcec;-><init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;I)V
 
-    invoke-direct {v0, v1, v7}, Lfwc;-><init>(Lu4;I)V
+    const p0, 0x7fffffff
 
-    invoke-static {v0}, La4f;->i(Lv56;)Ltm4;
+    invoke-virtual {p1, v1, p0}, Ly4a;->f(Lqc6;I)Ly4a;
 
-    new-instance v1, Lur9;
+    move-result-object p0
 
-    invoke-direct/range {v1 .. v6}, Lur9;-><init>(Landroid/content/Context;Llba;Lb94;Lc8a;Lx4b;)V
+    return-object p0
+.end method
 
-    return-object v1
+.method public t(Lqs1;)Ljava/lang/String;
+    .locals 11
 
-    :pswitch_10
-    const-class v0, Lvu0;
-
-    invoke-virtual {v1, v0}, Lu4;->c(Ljava/lang/Class;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lvu0;
-
-    new-instance v2, Lfwc;
-
-    const/4 v3, 0x7
-
-    invoke-direct {v2, v1, v3}, Lfwc;-><init>(Lu4;I)V
-
-    invoke-static {v2}, La4f;->i(Lv56;)Ltm4;
-
-    move-result-object v2
-
-    new-instance v3, Lfwc;
-
-    const/16 v4, 0x8
-
-    invoke-direct {v3, v1, v4}, Lfwc;-><init>(Lu4;I)V
-
-    invoke-static {v3}, La4f;->i(Lv56;)Ltm4;
-
-    move-result-object v3
-
-    new-instance v4, Lfwc;
-
-    const/16 v5, 0x9
-
-    invoke-direct {v4, v1, v5}, Lfwc;-><init>(Lu4;I)V
-
-    invoke-static {v4}, La4f;->i(Lv56;)Ltm4;
-
-    move-result-object v1
-
-    new-instance v4, Lar9;
-
-    invoke-direct {v4, v0, v2, v3, v1}, Lar9;-><init>(Lvu0;Ltm4;Ltm4;Ltm4;)V
-
-    return-object v4
-
-    :pswitch_11
-    new-instance v5, Lxu9;
-
-    const-class v0, Lqu9;
-
-    invoke-virtual {v1, v0}, Lu4;->d(Ljava/lang/Class;)Lwfe;
-
-    move-result-object v6
-
-    const-class v0, Lbx2;
-
-    invoke-virtual {v1, v0}, Lu4;->d(Ljava/lang/Class;)Lwfe;
-
-    move-result-object v7
-
-    const-class v0, Lh23;
-
-    invoke-virtual {v1, v0}, Lu4;->d(Ljava/lang/Class;)Lwfe;
-
-    move-result-object v8
-
-    const-class v0, Ltba;
-
-    invoke-virtual {v1, v0}, Lu4;->d(Ljava/lang/Class;)Lwfe;
-
-    move-result-object v9
-
-    const-class v0, Lvv9;
-
-    invoke-virtual {v1, v0}, Lu4;->d(Ljava/lang/Class;)Lwfe;
-
-    move-result-object v10
-
-    const-class v0, Lrie;
-
-    invoke-virtual {v1, v0}, Lu4;->c(Ljava/lang/Class;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    move-object v11, v0
-
-    check-cast v11, Lrie;
-
-    const-class v0, Lkx3;
-
-    invoke-virtual {v1, v0}, Lu4;->c(Ljava/lang/Class;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    move-object v12, v0
-
-    check-cast v12, Lkx3;
-
-    invoke-direct/range {v5 .. v12}, Lxu9;-><init>(Lje7;Lje7;Lje7;Lje7;Lje7;Lrie;Lkx3;)V
-
-    return-object v5
-
-    :pswitch_12
-    const-class v0, Lzje;
-
-    invoke-virtual {v1, v0}, Lu4;->c(Ljava/lang/Class;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Llq9;
-
-    return-object v0
-
-    :pswitch_13
-    new-instance v0, Lzje;
-
-    const-class v2, Lx4b;
-
-    invoke-virtual {v1, v2}, Lu4;->c(Ljava/lang/Class;)Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Lx4b;
-
-    const-class v3, Luc;
-
-    invoke-virtual {v1, v3}, Lu4;->d(Ljava/lang/Class;)Lwfe;
-
-    move-result-object v3
-
-    const-class v4, Lti4;
-
-    invoke-virtual {v1, v4}, Lu4;->d(Ljava/lang/Class;)Lwfe;
-
-    move-result-object v4
-
-    const-class v5, Ldh3;
-
-    invoke-virtual {v1, v5}, Lu4;->d(Ljava/lang/Class;)Lwfe;
-
-    move-result-object v5
-
-    const-class v6, Ly5d;
-
-    invoke-virtual {v1, v6}, Lu4;->d(Ljava/lang/Class;)Lwfe;
-
-    move-result-object v6
-
-    const-class v7, Le4a;
-
-    invoke-virtual {v1, v7}, Lu4;->d(Ljava/lang/Class;)Lwfe;
-
-    move-result-object v7
-
-    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    const-class v8, Lxk3;
-
-    invoke-virtual {v1, v8}, Lu4;->d(Ljava/lang/Class;)Lwfe;
-
-    move-result-object v8
-
-    const-class v9, Lez6;
-
-    invoke-virtual {v1, v9}, Lu4;->d(Ljava/lang/Class;)Lwfe;
-
-    move-result-object v9
-
-    const-class v10, Lo47;
-
-    invoke-virtual {v1, v10}, Lu4;->d(Ljava/lang/Class;)Lwfe;
-
-    move-result-object v10
-
-    const-class v11, Lfq3;
-
-    invoke-virtual {v1, v11}, Lu4;->d(Ljava/lang/Class;)Lwfe;
-
-    move-result-object v11
-
-    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    const-class v12, Le45;
-
-    invoke-virtual {v1, v12}, Lu4;->d(Ljava/lang/Class;)Lwfe;
-
-    move-result-object v12
-
-    const-class v13, Lw2a;
-
-    invoke-virtual {v1, v13}, Lu4;->d(Ljava/lang/Class;)Lwfe;
-
-    move-result-object v13
-
-    const-class v14, Lh5b;
-
-    invoke-virtual {v1, v14}, Lu4;->d(Ljava/lang/Class;)Lwfe;
-
-    move-result-object v14
-
-    const-class v15, Lhr1;
-
-    invoke-virtual {v1, v15}, Lu4;->d(Ljava/lang/Class;)Lwfe;
-
-    move-result-object v15
+    iget-object v0, p0, Lsvc;->a:Ljava/lang/Object;
 
     move-object v1, v0
 
-    invoke-direct/range {v1 .. v15}, Lzje;-><init>(Lx4b;Lje7;Lje7;Lje7;Lje7;Lje7;Lje7;Lje7;Lje7;Lje7;Lje7;Lje7;Lje7;Lje7;)V
+    check-cast v1, Lor4;
 
-    return-object v1
+    iget-object v0, p0, Lsvc;->b:Ljava/lang/Object;
 
-    :pswitch_14
-    new-instance v2, Lxc2;
+    check-cast v0, Lire;
 
-    const-class v0, Lik;
+    iget-object v2, p0, Lsvc;->c:Ljava/lang/Object;
 
-    invoke-virtual {v1, v0}, Lu4;->c(Ljava/lang/Class;)Ljava/lang/Object;
+    move-object v5, v2
 
-    move-result-object v0
+    check-cast v5, Le6f;
 
-    move-object v3, v0
+    iget-object v2, p0, Lsvc;->o:Ljava/lang/Object;
 
-    check-cast v3, Lik;
+    check-cast v2, Lsb0;
 
-    const-class v0, Ln82;
+    iget-object p0, p0, Lsvc;->X:Ljava/lang/Object;
 
-    invoke-virtual {v1, v0}, Lu4;->c(Ljava/lang/Class;)Ljava/lang/Object;
+    check-cast p0, Lea0;
 
-    move-result-object v0
+    iget-object v8, v0, Lire;->c:Lgz4;
 
-    move-object v4, v0
-
-    check-cast v4, Ln82;
-
-    const-class v0, Lxs8;
-
-    invoke-virtual {v1, v0}, Lu4;->c(Ljava/lang/Class;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    move-object v5, v0
-
-    check-cast v5, Lxs8;
-
-    const-class v0, Lx4b;
-
-    invoke-virtual {v1, v0}, Lu4;->c(Ljava/lang/Class;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    move-object v6, v0
-
-    check-cast v6, Lx4b;
-
-    const-class v0, Ldh3;
-
-    invoke-virtual {v1, v0}, Lu4;->c(Ljava/lang/Class;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    move-object v7, v0
-
-    check-cast v7, Ldh3;
-
-    const-class v0, Lwt8;
-
-    invoke-virtual {v1, v0}, Lu4;->c(Ljava/lang/Class;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    move-object v8, v0
-
-    check-cast v8, Lwt8;
-
-    invoke-direct/range {v2 .. v8}, Lxc2;-><init>(Lik;Ln82;Lxs8;Lx4b;Ldh3;Lwt8;)V
-
-    return-object v2
-
-    :pswitch_15
-    new-instance v0, Lcke;
-
-    const-class v2, Lh23;
-
-    invoke-virtual {v1, v2}, Lu4;->c(Ljava/lang/Class;)Ljava/lang/Object;
+    invoke-static {p0, v8, v2}, Llvf;->b(Lea0;Lgz4;Lsb0;)Lpb0;
 
     move-result-object v2
 
-    check-cast v2, Lh23;
+    iget-object v6, p0, Lea0;->a:Lrb0;
 
-    const-class v3, Ld6d;
+    iget-object v7, v0, Lire;->b:Landroid/util/Size;
 
-    invoke-virtual {v1, v3}, Lu4;->c(Ljava/lang/Class;)Ljava/lang/Object;
+    iget-object v9, v0, Lire;->d:Landroid/util/Range;
 
-    move-result-object v1
+    iget-object v4, v2, Lpb0;->a:Ljava/lang/String;
 
-    check-cast v1, Ld6d;
+    iget-object p0, v2, Lpb0;->c:Lk90;
 
-    invoke-direct {v0, v2, v1}, Lcke;-><init>(Lh23;Ld6d;)V
+    if-eqz p0, :cond_0
 
-    return-object v0
+    new-instance v3, Li03;
 
-    :pswitch_16
-    new-instance v3, Loc5;
+    move-object v10, v9
 
-    const-class v0, Lik;
+    move-object v9, v8
 
-    invoke-virtual {v1, v0}, Lu4;->c(Ljava/lang/Class;)Ljava/lang/Object;
+    move-object v8, p0
 
-    move-result-object v0
+    invoke-direct/range {v3 .. v10}, Li03;-><init>(Ljava/lang/String;Le6f;Lrb0;Landroid/util/Size;Lk90;Lgz4;Landroid/util/Range;)V
 
-    move-object v4, v0
+    goto :goto_0
 
-    check-cast v4, Lik;
+    :cond_0
+    new-instance v3, Liwf;
 
-    const-class v0, Like;
+    invoke-direct/range {v3 .. v9}, Liwf;-><init>(Ljava/lang/String;Le6f;Lrb0;Landroid/util/Size;Lgz4;Landroid/util/Range;)V
 
-    invoke-virtual {v1, v0}, Lu4;->c(Ljava/lang/Class;)Ljava/lang/Object;
+    :goto_0
+    invoke-interface {v3}, Laqe;->get()Ljava/lang/Object;
 
-    move-result-object v0
+    move-result-object p0
 
-    move-object v5, v0
+    check-cast p0, Lnb0;
 
-    check-cast v5, Like;
+    :try_start_0
+    iget-object v2, v1, Lor4;->e:Ljava/lang/Object;
 
-    const-class v0, Lmje;
+    check-cast v2, Lbzb;
 
-    invoke-virtual {v1, v0}, Lu4;->c(Ljava/lang/Class;)Ljava/lang/Object;
+    iget-object v3, v1, Lor4;->c:Ljava/lang/Object;
 
-    move-result-object v2
+    check-cast v3, Ljava/util/concurrent/Executor;
 
-    check-cast v2, Lmje;
+    invoke-virtual {v2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    check-cast v2, Loje;
+    new-instance v2, Lg65;
 
-    invoke-virtual {v2}, Loje;->a()Lgsc;
+    invoke-direct {v2, v3, p0}, Lg65;-><init>(Ljava/util/concurrent/Executor;Lt55;)V
 
-    move-result-object v6
+    iput-object v2, v1, Lor4;->f:Ljava/lang/Object;
+    :try_end_0
+    .catch Landroidx/camera/video/internal/encoder/InvalidConfigException; {:try_start_0 .. :try_end_0} :catch_0
 
-    invoke-virtual {v1, v0}, Lu4;->c(Ljava/lang/Class;)Ljava/lang/Object;
+    iget-object p0, v2, Lg65;->e:Ln55;
 
-    move-result-object v0
+    instance-of v2, p0, Lf65;
 
-    check-cast v0, Lmje;
+    if-nez v2, :cond_1
 
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    new-instance p0, Ljava/lang/AssertionError;
 
-    check-cast v0, Loje;
+    const-string v0, "The EncoderInput of video isn\'t a SurfaceInput."
 
-    invoke-virtual {v0}, Loje;->a()Lgsc;
+    invoke-direct {p0, v0}, Ljava/lang/AssertionError;-><init>(Ljava/lang/Object;)V
 
-    move-result-object v7
+    invoke-virtual {p1, p0}, Lqs1;->d(Ljava/lang/Throwable;)Z
 
-    const-class v0, Lvu0;
+    goto :goto_1
 
-    invoke-virtual {v1, v0}, Lu4;->c(Ljava/lang/Class;)Ljava/lang/Object;
+    :cond_1
+    check-cast p0, Lf65;
 
-    move-result-object v0
+    iget-object v2, v1, Lor4;->d:Ljava/lang/Object;
 
-    move-object v8, v0
+    check-cast v2, Ljava/util/concurrent/Executor;
 
-    check-cast v8, Lvu0;
+    new-instance v3, Lqz;
 
-    const-class v0, Lh23;
+    const/16 v4, 0x1d
 
-    invoke-virtual {v1, v0}, Lu4;->c(Ljava/lang/Class;)Ljava/lang/Object;
+    invoke-direct {v3, v1, p1, v0, v4}, Lqz;-><init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;I)V
 
-    move-result-object v0
+    iget-object v4, p0, Lf65;->a:Ljava/lang/Object;
 
-    check-cast v0, Lh23;
+    monitor-enter v4
 
-    const-class v0, Lhme;
+    :try_start_1
+    iput-object v3, p0, Lf65;->o:Lqz;
 
-    invoke-virtual {v1, v0}, Lu4;->c(Ljava/lang/Class;)Ljava/lang/Object;
+    invoke-virtual {v2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    move-result-object v0
+    iput-object v2, p0, Lf65;->X:Ljava/util/concurrent/Executor;
 
-    move-object v9, v0
+    iget-object p0, p0, Lf65;->b:Landroid/view/Surface;
 
-    check-cast v9, Lhme;
+    monitor-exit v4
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    invoke-direct/range {v3 .. v9}, Loc5;-><init>(Lik;Like;Lgsc;Lgsc;Lvu0;Lhme;)V
+    if-eqz p0, :cond_2
 
-    return-object v3
+    :try_start_2
+    new-instance p1, Lik4;
 
-    :pswitch_17
-    new-instance v4, Lrc5;
+    const/16 v0, 0x14
 
-    const-class v0, Lik;
+    invoke-direct {p1, v3, v0, p0}, Lik4;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
 
-    invoke-virtual {v1, v0}, Lu4;->c(Ljava/lang/Class;)Ljava/lang/Object;
+    invoke-interface {v2, p1}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
+    :try_end_2
+    .catch Ljava/util/concurrent/RejectedExecutionException; {:try_start_2 .. :try_end_2} :catch_1
 
-    move-result-object v0
+    goto :goto_1
 
-    move-object v5, v0
+    :catchall_0
+    move-exception v0
 
-    check-cast v5, Lik;
+    move-object p0, v0
 
-    const-class v0, Like;
+    :try_start_3
+    monitor-exit v4
+    :try_end_3
+    .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
-    invoke-virtual {v1, v0}, Lu4;->c(Ljava/lang/Class;)Ljava/lang/Object;
+    throw p0
 
-    move-result-object v0
+    :catch_0
+    move-exception v0
 
-    move-object v6, v0
+    move-object p0, v0
 
-    check-cast v6, Like;
+    invoke-virtual {p1, p0}, Lqs1;->d(Ljava/lang/Throwable;)Z
 
-    const-class v0, Lmje;
+    :catch_1
+    :cond_2
+    :goto_1
+    new-instance p0, Ljava/lang/StringBuilder;
 
-    invoke-virtual {v1, v0}, Lu4;->c(Ljava/lang/Class;)Ljava/lang/Object;
+    const-string p1, "ConfigureVideoEncoderFuture "
 
-    move-result-object v2
+    invoke-direct {p0, p1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    check-cast v2, Lmje;
+    invoke-virtual {p0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    check-cast v2, Loje;
+    invoke-virtual {p0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    invoke-virtual {v2}, Loje;->a()Lgsc;
+    move-result-object p0
 
-    move-result-object v7
-
-    invoke-virtual {v1, v0}, Lu4;->c(Ljava/lang/Class;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lmje;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    check-cast v0, Loje;
-
-    invoke-virtual {v0}, Loje;->a()Lgsc;
-
-    move-result-object v8
-
-    const-class v0, Lvu0;
-
-    invoke-virtual {v1, v0}, Lu4;->c(Ljava/lang/Class;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    move-object v9, v0
-
-    check-cast v9, Lvu0;
-
-    const-class v0, Lh23;
-
-    invoke-virtual {v1, v0}, Lu4;->c(Ljava/lang/Class;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lh23;
-
-    const-class v0, Lhme;
-
-    invoke-virtual {v1, v0}, Lu4;->c(Ljava/lang/Class;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    move-object v10, v0
-
-    check-cast v10, Lhme;
-
-    invoke-direct/range {v4 .. v10}, Lrc5;-><init>(Lik;Like;Lgsc;Lgsc;Lvu0;Lhme;)V
-
-    return-object v4
-
-    :pswitch_18
-    const-class v0, Lo9d;
-
-    invoke-virtual {v1, v0}, Lu4;->c(Ljava/lang/Class;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljh3;
-
-    return-object v0
-
-    :pswitch_19
-    new-instance v0, Like;
-
-    const-class v2, Lm9d;
-
-    invoke-virtual {v1, v2}, Lu4;->d(Ljava/lang/Class;)Lwfe;
-
-    move-result-object v1
-
-    invoke-direct {v0, v1}, Like;-><init>(Lje7;)V
-
-    return-object v0
-
-    :pswitch_1a
-    new-instance v0, Lo47;
-
-    const-class v2, Ln82;
-
-    invoke-virtual {v1, v2}, Lu4;->d(Ljava/lang/Class;)Lwfe;
-
-    move-result-object v2
-
-    const-class v3, Lxk3;
-
-    invoke-virtual {v1, v3}, Lu4;->d(Ljava/lang/Class;)Lwfe;
-
-    move-result-object v3
-
-    const-class v4, Lf4b;
-
-    invoke-virtual {v1, v4}, Lu4;->d(Ljava/lang/Class;)Lwfe;
-
-    move-result-object v4
-
-    const-class v5, Ltba;
-
-    invoke-virtual {v1, v5}, Lu4;->d(Ljava/lang/Class;)Lwfe;
-
-    move-result-object v1
-
-    invoke-direct {v0, v2, v3, v4, v1}, Lo47;-><init>(Lje7;Lje7;Lje7;Lje7;)V
-
-    return-object v0
-
-    :pswitch_1b
-    new-instance v5, Lkj;
-
-    const-class v0, Ld6d;
-
-    invoke-virtual {v1, v0}, Lu4;->d(Ljava/lang/Class;)Lwfe;
-
-    move-result-object v6
-
-    const-class v0, Lxo;
-
-    invoke-virtual {v1, v0}, Lu4;->d(Ljava/lang/Class;)Lwfe;
-
-    move-result-object v7
-
-    const-class v0, Lf4b;
-
-    invoke-virtual {v1, v0}, Lu4;->d(Ljava/lang/Class;)Lwfe;
-
-    move-result-object v8
-
-    const-class v0, Lbx2;
-
-    invoke-virtual {v1, v0}, Lu4;->d(Ljava/lang/Class;)Lwfe;
-
-    move-result-object v9
-
-    const-class v0, Lbq2;
-
-    invoke-virtual {v1, v0}, Lu4;->d(Ljava/lang/Class;)Lwfe;
-
-    move-result-object v10
-
-    const-class v0, Lxh0;
-
-    invoke-virtual {v1, v0}, Lu4;->d(Ljava/lang/Class;)Lwfe;
-
-    move-result-object v11
-
-    const-class v0, Lti4;
-
-    invoke-virtual {v1, v0}, Lu4;->c(Ljava/lang/Class;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    move-object v12, v0
-
-    check-cast v12, Lti4;
-
-    const-class v0, Lrie;
-
-    invoke-virtual {v1, v0}, Lu4;->c(Ljava/lang/Class;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    move-object v13, v0
-
-    check-cast v13, Lrie;
-
-    invoke-direct/range {v5 .. v13}, Lkj;-><init>(Lje7;Lje7;Lje7;Lje7;Lje7;Lje7;Lti4;Lrie;)V
-
-    return-object v5
-
-    :pswitch_1c
-    const-class v0, Lr34;
-
-    invoke-virtual {v1, v0}, Lu4;->c(Ljava/lang/Class;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lr34;
-
-    check-cast v0, Lz24;
-
-    iget-object v0, v0, Lz24;->u:Lzi;
-
-    return-object v0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1c
-        :pswitch_1b
-        :pswitch_1a
-        :pswitch_19
-        :pswitch_18
-        :pswitch_17
-        :pswitch_16
-        :pswitch_15
-        :pswitch_14
-        :pswitch_13
-        :pswitch_12
-        :pswitch_11
-        :pswitch_10
-        :pswitch_f
-        :pswitch_e
-        :pswitch_d
-        :pswitch_c
-        :pswitch_b
-        :pswitch_a
-        :pswitch_9
-        :pswitch_8
-        :pswitch_7
-        :pswitch_6
-        :pswitch_5
-        :pswitch_4
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    return-object p0
 .end method

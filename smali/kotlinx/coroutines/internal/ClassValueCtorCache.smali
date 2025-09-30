@@ -19,7 +19,7 @@
         "Lkotlin/Function1;",
         "Lkotlinx/coroutines/internal/Ctor;",
         "get",
-        "(Ljava/lang/Class;)Lx56;",
+        "(Ljava/lang/Class;)Lbc6;",
         "kotlinx/coroutines/internal/ClassValueCtorCache$cache$1",
         "cache",
         "Lkotlinx/coroutines/internal/ClassValueCtorCache$cache$1;",
@@ -73,7 +73,7 @@
 
 
 # virtual methods
-.method public get(Ljava/lang/Class;)Lx56;
+.method public get(Ljava/lang/Class;)Lbc6;
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -82,17 +82,17 @@
             "+",
             "Ljava/lang/Throwable;",
             ">;)",
-            "Lx56;"
+            "Lbc6;"
         }
     .end annotation
 
     sget-object p0, Lkotlinx/coroutines/internal/ClassValueCtorCache;->cache:Lkotlinx/coroutines/internal/ClassValueCtorCache$cache$1;
 
-    invoke-static {p0, p1}, Ldo0;->g(Lkotlinx/coroutines/internal/ClassValueCtorCache$cache$1;Ljava/lang/Class;)Ljava/lang/Object;
+    invoke-static {p0, p1}, Ljo0;->g(Lkotlinx/coroutines/internal/ClassValueCtorCache$cache$1;Ljava/lang/Class;)Ljava/lang/Object;
 
     move-result-object p0
 
-    check-cast p0, Lx56;
+    check-cast p0, Lbc6;
 
     return-object p0
 .end method

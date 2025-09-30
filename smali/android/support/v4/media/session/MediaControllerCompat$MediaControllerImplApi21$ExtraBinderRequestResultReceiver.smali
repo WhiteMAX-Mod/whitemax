@@ -84,11 +84,11 @@
 
     iget-object v0, p0, Landroid/support/v4/media/session/MediaControllerCompat$MediaControllerImplApi21;->mSessionToken:Landroid/support/v4/media/session/MediaSessionCompat$Token;
 
-    invoke-static {p2}, Lmna;->r(Landroid/os/Bundle;)Lncf;
+    invoke-static {p2}, Lzxa;->n(Landroid/os/Bundle;)Lrtf;
 
     move-result-object p2
 
-    invoke-virtual {v0, p2}, Landroid/support/v4/media/session/MediaSessionCompat$Token;->setSession2Token(Lncf;)V
+    invoke-virtual {v0, p2}, Landroid/support/v4/media/session/MediaSessionCompat$Token;->setSession2Token(Lrtf;)V
 
     invoke-virtual {p0}, Landroid/support/v4/media/session/MediaControllerCompat$MediaControllerImplApi21;->processPendingCallbacksLocked()V
 

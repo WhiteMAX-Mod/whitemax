@@ -1,265 +1,82 @@
-.class public final Lx5c;
+.class public abstract Lx5c;
 .super Ljava/lang/Object;
-.source "SourceFile"
 
-# interfaces
-.implements Ljava/lang/Runnable;
 
+# static fields
+.field public static chat__audio_record:I = 0x7f0a024c
 
-# instance fields
-.field public volatile a:Ljava/util/concurrent/atomic/AtomicInteger;
+.field public static chat__background:I = 0x7f0a024d
 
-.field public final b:Ldq1;
+.field public static chat__bottom_container:I = 0x7f0a024e
 
-.field public final synthetic c:Lz5c;
+.field public static chat__bottom_container_chat_status_button:I = 0x7f0a024f
 
+.field public static chat__bottom_container_search:I = 0x7f0a0250
 
-# direct methods
-.method public constructor <init>(Lz5c;Ldq1;)V
-    .locals 0
+.field public static chat__bottom_container_search_down_button:I = 0x7f0a0251
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+.field public static chat__bottom_container_search_separator:I = 0x7f0a0252
 
-    iput-object p1, p0, Lx5c;->c:Lz5c;
+.field public static chat__bottom_container_search_up_button:I = 0x7f0a0253
 
-    iput-object p2, p0, Lx5c;->b:Ldq1;
+.field public static chat__main_container:I = 0x7f0a0254
 
-    new-instance p1, Ljava/util/concurrent/atomic/AtomicInteger;
+.field public static chat__media_bar_container:I = 0x7f0a0255
 
-    const/4 p2, 0x0
+.field public static chat__media_keyboard:I = 0x7f0a0256
 
-    invoke-direct {p1, p2}, Ljava/util/concurrent/atomic/AtomicInteger;-><init>(I)V
+.field public static chat__messages_container:I = 0x7f0a0257
 
-    iput-object p1, p0, Lx5c;->a:Ljava/util/concurrent/atomic/AtomicInteger;
+.field public static chat__pinbars_container:I = 0x7f0a0258
 
-    return-void
-.end method
+.field public static chat__root_container:I = 0x7f0a0259
 
+.field public static chat__search_view:I = 0x7f0a025a
 
-# virtual methods
-.method public final run()V
-    .locals 8
+.field public static chat__suggestion_container:I = 0x7f0a025b
 
-    const-string v0, "Callback failure for "
+.field public static chat__toolbar:I = 0x7f0a025c
 
-    const-string v1, "canceled due to "
+.field public static chat__video_msg_container:I = 0x7f0a025d
 
-    iget-object v2, p0, Lx5c;->c:Lz5c;
+.field public static chat_screen__action_cancel:I = 0x7f0a027e
 
-    iget-object v2, v2, Lz5c;->w0:Lhfc;
+.field public static chat_screen__leave_chat_confirm:I = 0x7f0a027f
 
-    iget-object v2, v2, Lhfc;->b:Lyq6;
+.field public static chat_screen__remove_chat_confirm:I = 0x7f0a0280
 
-    invoke-virtual {v2}, Lyq6;->g()Ljava/lang/String;
+.field public static chat_screen__video_msg_placeholder:I = 0x7f0a0281
 
-    move-result-object v2
+.field public static chat_screen__video_msg_preview:I = 0x7f0a0282
 
-    const-string v3, "OkHttp "
+.field public static chat_screen__video_msg_progress:I = 0x7f0a0283
 
-    invoke-virtual {v3, v2}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+.field public static chat_screen__video_msg_root_container:I = 0x7f0a0284
 
-    move-result-object v2
+.field public static chat_screen__video_msg_switch_camera_btn:I = 0x7f0a0285
 
-    invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
+.field public static chat_screen__video_msg_timer:I = 0x7f0a0286
 
-    move-result-object v3
+.field public static chat_screen__video_msg_torch_btn:I = 0x7f0a0287
 
-    invoke-virtual {v3}, Ljava/lang/Thread;->getName()Ljava/lang/String;
+.field public static chat_screen__video_msg_video_view:I = 0x7f0a0288
 
-    move-result-object v4
+.field public static media_bar__album_chooser:I = 0x7f0a04c1
 
-    invoke-virtual {v3, v2}, Ljava/lang/Thread;->setName(Ljava/lang/String;)V
+.field public static media_bar__bottom_container:I = 0x7f0a04c2
 
-    :try_start_0
-    iget-object v2, p0, Lx5c;->c:Lz5c;
+.field public static media_bar__draggable_container:I = 0x7f0a04c3
 
-    iget-object v2, v2, Lz5c;->b:Lup6;
+.field public static media_bar__emoji_keyboard_container:I = 0x7f0a04c4
 
-    invoke-virtual {v2}, Llx;->i()V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+.field public static media_bar__media_type_picker_button:I = 0x7f0a04c5
 
-    const/4 v2, 0x0
+.field public static media_bar__message_container:I = 0x7f0a04c6
 
-    :try_start_1
-    iget-object v5, p0, Lx5c;->c:Lz5c;
+.field public static media_bar__partial_media_access_container:I = 0x7f0a04c7
 
-    invoke-virtual {v5}, Lz5c;->h()Lsgc;
+.field public static media_bar__popup_layout:I = 0x7f0a04c8
 
-    move-result-object v2
-    :try_end_1
-    .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_2
+.field public static media_bar__primary_container:I = 0x7f0a04c9
 
-    const/4 v5, 0x1
-
-    :try_start_2
-    iget-object v6, p0, Lx5c;->b:Ldq1;
-
-    iget-object v7, p0, Lx5c;->c:Lz5c;
-
-    invoke-interface {v6, v7, v2}, Ldq1;->h(Lz5c;Lsgc;)V
-    :try_end_2
-    .catch Ljava/io/IOException; {:try_start_2 .. :try_end_2} :catch_0
-    .catchall {:try_start_2 .. :try_end_2} :catchall_1
-
-    :try_start_3
-    iget-object v0, p0, Lx5c;->c:Lz5c;
-
-    iget-object v0, v0, Lz5c;->v0:Lp0a;
-
-    iget-object v0, v0, Lp0a;->a:Lj0e;
-
-    :goto_0
-    invoke-virtual {v0, p0}, Lj0e;->d(Lx5c;)V
-    :try_end_3
-    .catchall {:try_start_3 .. :try_end_3} :catchall_0
-
-    goto :goto_5
-
-    :catchall_0
-    move-exception p0
-
-    goto/16 :goto_7
-
-    :catchall_1
-    move-exception v0
-
-    move v2, v5
-
-    goto :goto_1
-
-    :catch_0
-    move-exception v1
-
-    move v2, v5
-
-    goto :goto_3
-
-    :catchall_2
-    move-exception v0
-
-    goto :goto_1
-
-    :catch_1
-    move-exception v1
-
-    goto :goto_3
-
-    :goto_1
-    :try_start_4
-    iget-object v5, p0, Lx5c;->c:Lz5c;
-
-    invoke-virtual {v5}, Lz5c;->d()V
-
-    if-nez v2, :cond_0
-
-    new-instance v2, Ljava/io/IOException;
-
-    new-instance v5, Ljava/lang/StringBuilder;
-
-    invoke-direct {v5, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v5, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-direct {v2, v1}, Ljava/io/IOException;-><init>(Ljava/lang/String;)V
-
-    invoke-static {v2, v0}, Lzo3;->d(Ljava/lang/Throwable;Ljava/lang/Throwable;)V
-
-    iget-object v1, p0, Lx5c;->b:Ldq1;
-
-    iget-object v5, p0, Lx5c;->c:Lz5c;
-
-    invoke-interface {v1, v5, v2}, Ldq1;->m(Lz5c;Ljava/io/IOException;)V
-
-    goto :goto_2
-
-    :catchall_3
-    move-exception v0
-
-    goto :goto_6
-
-    :cond_0
-    :goto_2
-    throw v0
-
-    :goto_3
-    if-eqz v2, :cond_1
-
-    sget-object v2, Lf0b;->a:Lf0b;
-
-    sget-object v2, Lf0b;->a:Lf0b;
-
-    new-instance v5, Ljava/lang/StringBuilder;
-
-    invoke-direct {v5, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v0, p0, Lx5c;->c:Lz5c;
-
-    invoke-static {v0}, Lz5c;->a(Lz5c;)Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-virtual {v5, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-virtual {v2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    const/4 v2, 0x4
-
-    invoke-static {v2, v0, v1}, Lf0b;->i(ILjava/lang/String;Ljava/lang/Throwable;)V
-
-    goto :goto_4
-
-    :cond_1
-    iget-object v0, p0, Lx5c;->b:Ldq1;
-
-    iget-object v2, p0, Lx5c;->c:Lz5c;
-
-    invoke-interface {v0, v2, v1}, Ldq1;->m(Lz5c;Ljava/io/IOException;)V
-    :try_end_4
-    .catchall {:try_start_4 .. :try_end_4} :catchall_3
-
-    :goto_4
-    :try_start_5
-    iget-object v0, p0, Lx5c;->c:Lz5c;
-
-    iget-object v0, v0, Lz5c;->v0:Lp0a;
-
-    iget-object v0, v0, Lp0a;->a:Lj0e;
-    :try_end_5
-    .catchall {:try_start_5 .. :try_end_5} :catchall_0
-
-    goto :goto_0
-
-    :goto_5
-    invoke-virtual {v3, v4}, Ljava/lang/Thread;->setName(Ljava/lang/String;)V
-
-    return-void
-
-    :goto_6
-    :try_start_6
-    iget-object v1, p0, Lx5c;->c:Lz5c;
-
-    iget-object v1, v1, Lz5c;->v0:Lp0a;
-
-    iget-object v1, v1, Lp0a;->a:Lj0e;
-
-    invoke-virtual {v1, p0}, Lj0e;->d(Lx5c;)V
-
-    throw v0
-    :try_end_6
-    .catchall {:try_start_6 .. :try_end_6} :catchall_0
-
-    :goto_7
-    invoke-virtual {v3, v4}, Ljava/lang/Thread;->setName(Ljava/lang/String;)V
-
-    throw p0
-.end method
+.field public static media_bar__select_album_container:I = 0x7f0a04ca

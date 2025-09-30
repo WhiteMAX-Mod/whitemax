@@ -1,19 +1,100 @@
 .class public final Lcq7;
-.super Ldq7;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ldq7;
 
-# instance fields
-.field public final a:Ljava/util/List;
+
+# static fields
+.field public static final CREATOR:Landroid/os/Parcelable$Creator;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroid/os/Parcelable$Creator<",
+            "Lcq7;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+.field public static final a:Lcq7;
 
 
 # direct methods
-.method public constructor <init>(Ljava/util/List;)V
+.method static constructor <clinit>()V
+    .locals 2
+
+    new-instance v0, Lcq7;
+
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    sput-object v0, Lcq7;->a:Lcq7;
+
+    new-instance v0, Lra7;
+
+    const/16 v1, 0x16
+
+    invoke-direct {v0, v1}, Lra7;-><init>(I)V
+
+    sput-object v0, Lcq7;->CREATOR:Landroid/os/Parcelable$Creator;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final describeContents()I
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/4 p0, 0x0
 
-    iput-object p1, p0, Lcq7;->a:Ljava/util/List;
+    return p0
+.end method
+
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 1
+
+    const/4 v0, 0x1
+
+    if-ne p0, p1, :cond_0
+
+    return v0
+
+    :cond_0
+    instance-of p0, p1, Lcq7;
+
+    if-nez p0, :cond_1
+
+    const/4 p0, 0x0
+
+    return p0
+
+    :cond_1
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 0
+
+    const p0, -0x3800957b
+
+    return p0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 0
+
+    const-string p0, "UnknownFolderError"
+
+    return-object p0
+.end method
+
+.method public final writeToParcel(Landroid/os/Parcel;I)V
+    .locals 0
+
+    const/4 p0, 0x1
+
+    invoke-virtual {p1, p0}, Landroid/os/Parcel;->writeInt(I)V
 
     return-void
 .end method

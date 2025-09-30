@@ -1,168 +1,177 @@
-.class public final Lyb4;
+.class public final synthetic Lyb4;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lou6;
+.implements Lot7;
 
 
 # instance fields
-.field public final a:Lou6;
+.field public final synthetic a:I
 
-.field public final b:Lou6;
-
-.field public final c:Li0b;
-
-.field public final d:Lre;
-
-.field public final e:Ljava/util/Map;
+.field public final synthetic b:Lm5g;
 
 
 # direct methods
-.method public constructor <init>(Lre;Lpe;Li0b;Ljava/util/HashMap;)V
-    .locals 2
+.method public synthetic constructor <init>(Led;Lm5g;)V
+    .locals 0
+
+    .line 1
+    const/4 p1, 0x0
+
+    iput p1, p0, Lyb4;->a:I
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    new-instance v0, Lre;
+    iput-object p2, p0, Lyb4;->b:Lm5g;
 
-    const/4 v1, 0x1
+    return-void
+.end method
 
-    invoke-direct {v0, v1, p0}, Lre;-><init>(ILjava/lang/Object;)V
+.method public synthetic constructor <init>(Lm5g;)V
+    .locals 1
 
-    iput-object v0, p0, Lyb4;->d:Lre;
+    .line 2
+    const/4 v0, 0x1
 
-    iput-object p1, p0, Lyb4;->a:Lou6;
+    iput v0, p0, Lyb4;->a:I
 
-    iput-object p2, p0, Lyb4;->b:Lou6;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p3, p0, Lyb4;->c:Li0b;
-
-    iput-object p4, p0, Lyb4;->e:Ljava/util/Map;
+    iput-object p1, p0, Lyb4;->b:Lm5g;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(La05;ILznb;Lmu6;)Lc33;
-    .locals 2
+.method public final invoke(Ljava/lang/Object;)V
+    .locals 6
 
-    invoke-virtual {p4}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    iget v0, p0, Lyb4;->a:I
 
-    invoke-virtual {p1}, La05;->r0()V
+    iget-object p0, p0, Lyb4;->b:Lm5g;
 
-    iget-object v0, p1, La05;->b:Lru6;
+    packed-switch v0, :pswitch_data_0
 
-    if-eqz v0, :cond_0
+    check-cast p1, Lrcb;
 
-    sget-object v1, Lru6;->c:Lru6;
+    invoke-interface {p1, p0}, Lrcb;->A(Lm5g;)V
 
-    if-ne v0, v1, :cond_1
+    return-void
 
-    :cond_0
-    invoke-virtual {p1}, La05;->n()Ljava/io/InputStream;
+    :pswitch_0
+    check-cast p1, Lub5;
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    const-string v0, "videoDebugListener.onVideoSizeChanged: %s"
+
+    filled-new-array {p0}, [Ljava/lang/Object;
 
     move-result-object v1
 
-    if-eqz v1, :cond_1
+    const-string v2, "ub5"
 
-    sget-object v0, Lsu6;->d:Ljava/lang/Object;
+    invoke-static {v2, v0, v1}, Ljtg;->k(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    :try_start_0
-    invoke-static {v1}, Lfq0;->B(Ljava/io/InputStream;)Lru6;
+    iget v0, p0, Lm5g;->c:I
 
-    move-result-object v0
-    :try_end_0
-    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
+    iget v1, p0, Lm5g;->b:I
 
-    iput-object v0, p1, La05;->b:Lru6;
+    iget p0, p0, Lm5g;->a:I
+
+    const/16 v2, 0x5a
+
+    if-eq v0, v2, :cond_1
+
+    const/16 v2, 0x10e
+
+    if-ne v0, v2, :cond_0
 
     goto :goto_0
 
-    :catch_0
-    move-exception p0
+    :cond_0
+    iput p0, p1, Lub5;->t0:I
 
-    invoke-static {p0}, Lsgg;->S(Ljava/lang/Throwable;)V
+    iput v1, p1, Lub5;->u0:I
 
-    const/4 p0, 0x0
-
-    throw p0
+    goto :goto_1
 
     :cond_1
     :goto_0
-    iget-object v1, p0, Lyb4;->e:Ljava/util/Map;
+    iput v1, p1, Lub5;->t0:I
 
-    if-eqz v1, :cond_2
+    iput p0, p1, Lub5;->u0:I
 
-    invoke-interface {v1, v0}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    :goto_1
+    iput v0, p1, Lub5;->v0:I
 
-    move-result-object v0
+    iget-object v0, p1, Lub5;->Z:Lmvf;
 
-    check-cast v0, Lou6;
+    if-eqz v0, :cond_3
 
-    if-eqz v0, :cond_2
+    int-to-float v0, p0
 
-    invoke-interface {v0, p1, p2, p3, p4}, Lou6;->a(La05;ILznb;Lmu6;)Lc33;
+    int-to-float v2, v1
 
-    move-result-object p0
+    div-float/2addr v0, v2
 
-    return-object p0
+    const/high16 v2, 0x3f800000    # 1.0f
+
+    div-float/2addr v2, v0
+
+    iget v0, p1, Lub5;->r0:F
+
+    sub-float/2addr v0, v2
+
+    const/4 v2, 0x0
+
+    cmpl-float v2, v0, v2
+
+    if-eqz v2, :cond_2
+
+    invoke-static {v0}, Ljava/lang/Math;->abs(F)F
+
+    move-result v0
+
+    float-to-double v2, v0
+
+    const-wide v4, 0x3f1a36e2eb1c432dL    # 1.0E-4
+
+    cmpg-double v0, v2, v4
+
+    if-gtz v0, :cond_3
 
     :cond_2
-    iget-object p0, p0, Lyb4;->d:Lre;
+    iput v1, p1, Lub5;->t0:I
 
-    invoke-virtual {p0, p1, p2, p3, p4}, Lre;->a(La05;ILznb;Lmu6;)Lc33;
+    iput p0, p1, Lub5;->u0:I
 
-    move-result-object p0
+    :cond_3
+    iget-object p0, p1, Lub5;->Y:Lhx7;
 
-    return-object p0
-.end method
+    if-eqz p0, :cond_4
 
-.method public final b(La05;Lmu6;)Lcom/facebook/imagepipeline/image/CloseableStaticBitmap;
-    .locals 1
+    iget v0, p1, Lub5;->t0:I
 
-    iget-object p0, p0, Lyb4;->c:Li0b;
+    iget v1, p1, Lub5;->u0:I
 
-    iget-object p2, p2, Lmu6;->a:Landroid/graphics/Bitmap$Config;
+    iget p1, p1, Lub5;->v0:I
 
-    invoke-interface {p0, p1, p2}, Li0b;->a(La05;Landroid/graphics/Bitmap$Config;)Lf33;
+    iget-object p0, p0, Lhx7;->e:Lx2;
 
-    move-result-object p0
+    if-eqz p0, :cond_4
 
-    :try_start_0
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    invoke-interface {p0, v0, v1, p1}, Lcl8;->r(III)V
 
-    sget-object p2, Lfx6;->d:Lfx6;
+    :cond_4
+    return-void
 
-    invoke-virtual {p1}, La05;->r0()V
+    nop
 
-    iget v0, p1, La05;->c:I
-
-    invoke-virtual {p1}, La05;->r0()V
-
-    iget p1, p1, La05;->o:I
-
-    invoke-static {p0, p2, v0, p1}, Lcom/facebook/imagepipeline/image/CloseableStaticBitmap;->of(Lf33;Lznb;II)Lcom/facebook/imagepipeline/image/CloseableStaticBitmap;
-
-    move-result-object p1
-
-    const-string p2, "is_rounded"
-
-    sget-object v0, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
-
-    invoke-interface {p1, p2, v0}, Lcom/facebook/fresco/middleware/HasExtraData;->putExtra(Ljava/lang/String;Ljava/lang/Object;)V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    invoke-virtual {p0}, Lf33;->close()V
-
-    return-object p1
-
-    :catchall_0
-    move-exception p1
-
-    invoke-static {p0}, Lf33;->W(Lf33;)V
-
-    throw p1
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

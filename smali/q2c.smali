@@ -1,205 +1,128 @@
-.class public final enum Lq2c;
-.super Ljava/lang/Enum;
-.source "SourceFile"
+.class public abstract Lq2c;
+.super Ljava/lang/Object;
 
 
 # static fields
-.field public static final enum X:Lq2c;
+.field public static adjustable:I = 0x7f040030
 
-.field public static final enum Y:Lq2c;
+.field public static allowDividerAbove:I = 0x7f040038
 
-.field public static final enum Z:Lq2c;
+.field public static allowDividerAfterLastItem:I = 0x7f040039
 
-.field public static final enum b:Lq2c;
+.field public static allowDividerBelow:I = 0x7f04003a
 
-.field public static final enum c:Lq2c;
+.field public static checkBoxPreferenceStyle:I = 0x7f040266
 
-.field public static final enum o:Lq2c;
+.field public static defaultValue:I = 0x7f04033a
 
-.field public static final enum o0:Lq2c;
+.field public static dependency:I = 0x7f04033e
 
-.field public static final enum p0:Lq2c;
+.field public static dialogIcon:I = 0x7f040341
 
-.field public static final enum q0:Lq2c;
+.field public static dialogLayout:I = 0x7f040342
 
-.field public static final enum r0:Lq2c;
+.field public static dialogMessage:I = 0x7f040343
 
-.field public static final enum s0:Lq2c;
+.field public static dialogPreferenceStyle:I = 0x7f040344
 
-.field public static final synthetic t0:[Lq2c;
+.field public static dialogTitle:I = 0x7f040347
 
-.field public static final synthetic u0:Ln25;
+.field public static disableDependentsState:I = 0x7f040348
 
+.field public static dropdownPreferenceStyle:I = 0x7f040368
 
-# instance fields
-.field public final a:Ljava/lang/String;
+.field public static editTextPreferenceStyle:I = 0x7f04036d
 
+.field public static enableCopying:I = 0x7f040375
 
-# direct methods
-.method static constructor <clinit>()V
-    .locals 14
+.field public static enabled:I = 0x7f040377
 
-    new-instance v0, Lq2c;
+.field public static entries:I = 0x7f040383
 
-    const-string v1, "AUDIO_FREEZES"
+.field public static entryValues:I = 0x7f040384
 
-    const/4 v2, 0x0
+.field public static fragment:I = 0x7f0403f0
 
-    invoke-direct {v0, v1, v2, v1}, Lq2c;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+.field public static icon:I = 0x7f04053f
 
-    sput-object v0, Lq2c;->b:Lq2c;
+.field public static iconSpaceReserved:I = 0x7f040544
 
-    new-instance v1, Lq2c;
+.field public static initialExpandedChildrenCount:I = 0x7f04055d
 
-    const-string v2, "AUDIO_CALL_INTERRUPTION"
+.field public static isPreferenceVisible:I = 0x7f040563
 
-    const/4 v3, 0x1
+.field public static key:I = 0x7f040585
 
-    invoke-direct {v1, v2, v3, v2}, Lq2c;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+.field public static layout:I = 0x7f040594
 
-    sput-object v1, Lq2c;->c:Lq2c;
+.field public static maxHeight:I = 0x7f040648
 
-    new-instance v2, Lq2c;
+.field public static maxWidth:I = 0x7f04064e
 
-    const-string v3, "VOICE_COMMUNICATION_PROBLEM"
+.field public static min:I = 0x7f040664
 
-    const/4 v4, 0x2
+.field public static negativeButtonText:I = 0x7f0406ac
 
-    invoke-direct {v2, v3, v4, v3}, Lq2c;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+.field public static order:I = 0x7f0406bb
 
-    sput-object v2, Lq2c;->o:Lq2c;
+.field public static orderingFromXml:I = 0x7f0406bc
 
-    new-instance v3, Lq2c;
+.field public static persistent:I = 0x7f0406db
 
-    const-string v4, "AUDIO_QUALITY"
+.field public static positiveButtonText:I = 0x7f0406ed
 
-    const/4 v5, 0x3
+.field public static preferenceCategoryStyle:I = 0x7f0406ef
 
-    invoke-direct {v3, v4, v5, v4}, Lq2c;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+.field public static preferenceCategoryTitleTextAppearance:I = 0x7f0406f0
 
-    sput-object v3, Lq2c;->X:Lq2c;
+.field public static preferenceCategoryTitleTextColor:I = 0x7f0406f1
 
-    new-instance v4, Lq2c;
+.field public static preferenceFragmentCompatStyle:I = 0x7f0406f2
 
-    const-string v5, "AUDIO_ECHO"
+.field public static preferenceFragmentListStyle:I = 0x7f0406f3
 
-    const/4 v6, 0x4
+.field public static preferenceFragmentStyle:I = 0x7f0406f4
 
-    invoke-direct {v4, v5, v6, v5}, Lq2c;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+.field public static preferenceInformationStyle:I = 0x7f0406f5
 
-    sput-object v4, Lq2c;->Y:Lq2c;
+.field public static preferenceScreenStyle:I = 0x7f0406f6
 
-    new-instance v5, Lq2c;
+.field public static preferenceStyle:I = 0x7f0406f7
 
-    const-string v6, "VIDEO_FREEZES"
+.field public static preferenceTheme:I = 0x7f0406f8
 
-    const/4 v7, 0x5
+.field public static seekBarIncrement:I = 0x7f040747
 
-    invoke-direct {v5, v6, v7, v6}, Lq2c;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+.field public static seekBarPreferenceStyle:I = 0x7f040748
 
-    sput-object v5, Lq2c;->Z:Lq2c;
+.field public static selectable:I = 0x7f04074a
 
-    new-instance v6, Lq2c;
+.field public static selectableItemBackground:I = 0x7f04074b
 
-    const-string v7, "VIDEO_QUALITY"
+.field public static shouldDisableView:I = 0x7f04075d
 
-    const/4 v8, 0x6
+.field public static showSeekBarValue:I = 0x7f040769
 
-    invoke-direct {v6, v7, v8, v7}, Lq2c;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+.field public static singleLineTitle:I = 0x7f04077f
 
-    sput-object v6, Lq2c;->o0:Lq2c;
+.field public static summary:I = 0x7f0407fc
 
-    new-instance v7, Lq2c;
+.field public static summaryOff:I = 0x7f0407fd
 
-    const-string v8, "VIDEO_SYNC"
+.field public static summaryOn:I = 0x7f0407fe
 
-    const/4 v9, 0x7
+.field public static switchPreferenceCompatStyle:I = 0x7f040802
 
-    invoke-direct {v7, v8, v9, v8}, Lq2c;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+.field public static switchPreferenceStyle:I = 0x7f040803
 
-    sput-object v7, Lq2c;->p0:Lq2c;
+.field public static switchTextOff:I = 0x7f040806
 
-    new-instance v8, Lq2c;
+.field public static switchTextOn:I = 0x7f040807
 
-    const-string v9, "VIDEO_CALL_INTERRUPTION"
+.field public static title:I = 0x7f040889
 
-    const/16 v10, 0x8
+.field public static updatesContinuously:I = 0x7f0408cc
 
-    invoke-direct {v8, v9, v10, v9}, Lq2c;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+.field public static useSimpleSummaryProvider:I = 0x7f0408d1
 
-    sput-object v8, Lq2c;->q0:Lq2c;
-
-    new-instance v9, Lq2c;
-
-    const-string v10, "USERS_FREEZES"
-
-    const/16 v11, 0x9
-
-    invoke-direct {v9, v10, v11, v10}, Lq2c;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v9, Lq2c;->r0:Lq2c;
-
-    new-instance v10, Lq2c;
-
-    const/16 v11, 0xa
-
-    const/4 v12, 0x0
-
-    const-string v13, "OTHER"
-
-    invoke-direct {v10, v13, v11, v12}, Lq2c;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v10, Lq2c;->s0:Lq2c;
-
-    filled-new-array/range {v0 .. v10}, [Lq2c;
-
-    move-result-object v0
-
-    sput-object v0, Lq2c;->t0:[Lq2c;
-
-    new-instance v1, Ln25;
-
-    invoke-direct {v1, v0}, Ln25;-><init>([Ljava/lang/Enum;)V
-
-    sput-object v1, Lq2c;->u0:Ln25;
-
-    return-void
-.end method
-
-.method public constructor <init>(Ljava/lang/String;ILjava/lang/String;)V
-    .locals 0
-
-    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    iput-object p3, p0, Lq2c;->a:Ljava/lang/String;
-
-    return-void
-.end method
-
-.method public static valueOf(Ljava/lang/String;)Lq2c;
-    .locals 1
-
-    const-class v0, Lq2c;
-
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
-
-    move-result-object p0
-
-    check-cast p0, Lq2c;
-
-    return-object p0
-.end method
-
-.method public static values()[Lq2c;
-    .locals 1
-
-    sget-object v0, Lq2c;->t0:[Lq2c;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, [Lq2c;
-
-    return-object v0
-.end method
+.field public static widgetLayout:I = 0x7f0408e8

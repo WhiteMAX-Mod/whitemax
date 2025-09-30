@@ -1,5 +1,5 @@
 .class public Lru/ok/android/externcalls/sdk/log/ExtLogger;
-.super Lv1c;
+.super Liec;
 .source "SourceFile"
 
 
@@ -29,7 +29,7 @@
 
     const-string v0, ""
 
-    iput-object v0, p0, Lv1c;->conversationId:Ljava/lang/String;
+    iput-object v0, p0, Liec;->conversationId:Ljava/lang/String;
 
     :try_start_0
     invoke-static {}, Lru/ok/android/ext/OneLogger;->ensureInitialized()V
@@ -44,26 +44,24 @@
     return-void
 .end method
 
-.method public static simpleBuilder(Loyd;)Lt1a;
+.method public static simpleBuilder(Lmce;)Laaa;
     .locals 2
 
-    new-instance v0, Lt1a;
+    invoke-static {}, Lbaa;->a()Laaa;
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    invoke-virtual {v0}, Lt1a;->b()V
+    move-result-object v0
 
     const-string v1, "ok.mobile.apps.video"
 
-    iput-object v1, v0, Lt1a;->a:Ljava/lang/String;
+    iput-object v1, v0, Laaa;->a:Ljava/lang/String;
 
     const/4 v1, 0x1
 
-    iput v1, v0, Lt1a;->b:I
+    iput v1, v0, Laaa;->b:I
 
     if-eqz p0, :cond_0
 
-    iget-object p0, p0, Loyd;->a:Ljava/lang/String;
+    iget-object p0, p0, Lmce;->a:Ljava/lang/String;
 
     goto :goto_0
 
@@ -71,85 +69,87 @@
     const/4 p0, 0x0
 
     :goto_0
-    iput-object p0, v0, Lt1a;->c:Ljava/lang/String;
+    iput-object p0, v0, Laaa;->c:Ljava/lang/String;
 
-    iput v1, v0, Lt1a;->d:I
+    iput v1, v0, Laaa;->d:I
 
     return-object v0
 .end method
 
-.method public static simpleBuilderAny(Ljava/lang/String;)Lt1a;
+.method public static simpleBuilderAny(Ljava/lang/String;)Laaa;
     .locals 2
 
-    new-instance v0, Lt1a;
+    invoke-static {}, Lbaa;->a()Laaa;
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    invoke-virtual {v0}, Lt1a;->b()V
+    move-result-object v0
 
     const-string v1, "ok.mobile.apps.video"
 
-    iput-object v1, v0, Lt1a;->a:Ljava/lang/String;
+    iput-object v1, v0, Laaa;->a:Ljava/lang/String;
 
     const/4 v1, 0x1
 
-    iput v1, v0, Lt1a;->b:I
+    iput v1, v0, Laaa;->b:I
 
-    iput-object p0, v0, Lt1a;->c:Ljava/lang/String;
+    iput-object p0, v0, Laaa;->c:Ljava/lang/String;
 
-    iput v1, v0, Lt1a;->d:I
+    iput v1, v0, Laaa;->d:I
 
     return-object v0
 .end method
 
 
 # virtual methods
+.method public log(Lbaa;)V
+    .locals 0
+
+    .line 1
+    invoke-virtual {p1}, Lbaa;->b()V
+
+    return-void
+.end method
+
 .method public log(Ljava/lang/String;JLjava/lang/String;Ljava/lang/String;)V
     .locals 2
 
-    .line 11
-    new-instance v0, Lt1a;
+    .line 3
+    invoke-static {}, Lbaa;->a()Laaa;
 
-    .line 12
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    move-result-object v0
 
-    .line 13
-    invoke-virtual {v0}, Lt1a;->b()V
-
-    .line 14
     const-string v1, "ok.mobile.apps.video"
 
-    .line 15
-    iput-object v1, v0, Lt1a;->a:Ljava/lang/String;
+    .line 4
+    iput-object v1, v0, Laaa;->a:Ljava/lang/String;
 
     const/4 v1, 0x1
 
-    .line 16
-    iput v1, v0, Lt1a;->b:I
+    .line 5
+    iput v1, v0, Laaa;->b:I
 
-    .line 17
-    iput-object p1, v0, Lt1a;->c:Ljava/lang/String;
+    .line 6
+    iput-object p1, v0, Laaa;->c:Ljava/lang/String;
 
-    .line 18
-    iput v1, v0, Lt1a;->d:I
+    .line 7
+    iput v1, v0, Laaa;->d:I
 
-    .line 19
-    invoke-virtual {v0, p2, p3}, Lt1a;->d(J)V
+    .line 8
+    invoke-virtual {v0, p2, p3}, Laaa;->e(J)V
 
     if-eqz p4, :cond_0
 
-    .line 20
+    .line 9
     const-string p2, "param"
 
-    invoke-virtual {v0, p2, p4}, Lt1a;->c(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {v0, p2, p4}, Laaa;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 21
+    .line 10
     :cond_0
     iget-object p2, p0, Lru/ok/android/externcalls/sdk/log/ExtLogger;->place:Ljava/lang/String;
 
     if-eqz p2, :cond_1
 
-    .line 22
+    .line 11
     const-string p3, "callStart"
 
     invoke-virtual {p3, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -158,26 +158,26 @@
 
     if-eqz p1, :cond_1
 
-    .line 23
+    .line 12
     const-string p1, "place"
 
-    invoke-virtual {v0, p1, p2}, Lt1a;->c(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {v0, p1, p2}, Laaa;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_1
     if-eqz p5, :cond_2
 
-    .line 24
+    .line 13
     const-string p1, "stat_type"
 
-    invoke-virtual {v0, p1, p5}, Lt1a;->c(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {v0, p1, p5}, Laaa;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 25
+    .line 14
     :cond_2
-    invoke-virtual {v0}, Lt1a;->a()Lu1a;
+    invoke-virtual {v0}, Laaa;->a()Lbaa;
 
     move-result-object p1
 
-    invoke-virtual {p0, p1}, Lru/ok/android/externcalls/sdk/log/ExtLogger;->log(Lu1a;)V
+    invoke-virtual {p0, p1}, Lru/ok/android/externcalls/sdk/log/ExtLogger;->log(Lbaa;)V
 
     return-void
 .end method
@@ -208,7 +208,7 @@
 
     move-object v3, p3
 
-    .line 10
+    .line 15
     invoke-virtual/range {v0 .. v5}, Lru/ok/android/externcalls/sdk/log/ExtLogger;->log(Ljava/lang/String;Ljava/lang/String;Ljava/util/Map;Ljava/lang/String;Ljava/lang/Long;)V
 
     return-void
@@ -231,50 +231,46 @@
         }
     .end annotation
 
-    .line 26
-    new-instance v0, Lt1a;
+    .line 16
+    invoke-static {}, Lbaa;->a()Laaa;
 
-    .line 27
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    move-result-object v0
 
-    .line 28
-    invoke-virtual {v0}, Lt1a;->b()V
-
-    .line 29
-    iput-object p1, v0, Lt1a;->a:Ljava/lang/String;
+    .line 17
+    iput-object p1, v0, Laaa;->a:Ljava/lang/String;
 
     const/4 p1, 0x1
 
-    .line 30
-    iput p1, v0, Lt1a;->b:I
+    .line 18
+    iput p1, v0, Laaa;->b:I
 
-    .line 31
-    iput-object p2, v0, Lt1a;->c:Ljava/lang/String;
+    .line 19
+    iput-object p2, v0, Laaa;->c:Ljava/lang/String;
 
-    .line 32
-    iput p1, v0, Lt1a;->d:I
+    .line 20
+    iput p1, v0, Laaa;->d:I
 
     if-eqz p4, :cond_0
 
-    .line 33
-    iput-object p4, v0, Lt1a;->f:Ljava/lang/String;
+    .line 21
+    iput-object p4, v0, Laaa;->f:Ljava/lang/String;
 
-    .line 34
-    iput-boolean p1, v0, Lt1a;->g:Z
+    .line 22
+    iput-boolean p1, v0, Laaa;->g:Z
 
     :cond_0
     if-eqz p5, :cond_1
 
-    .line 35
+    .line 23
     invoke-virtual {p5}, Ljava/lang/Long;->longValue()J
 
     move-result-wide p1
 
-    invoke-virtual {v0, p1, p2}, Lt1a;->d(J)V
+    invoke-virtual {v0, p1, p2}, Laaa;->e(J)V
 
     goto :goto_0
 
-    .line 36
+    .line 24
     :cond_1
     iget-object p1, p0, Lru/ok/android/externcalls/sdk/log/ExtLogger;->timeProvider:Lru/ok/android/externcalls/sdk/log/ExtLogger$TimeProvider;
 
@@ -282,9 +278,9 @@
 
     move-result-wide p1
 
-    invoke-virtual {v0, p1, p2}, Lt1a;->d(J)V
+    invoke-virtual {v0, p1, p2}, Laaa;->e(J)V
 
-    .line 37
+    .line 25
     :goto_0
     invoke-interface {p3}, Ljava/util/Map;->entrySet()Ljava/util/Set;
 
@@ -307,7 +303,7 @@
 
     check-cast p2, Ljava/util/Map$Entry;
 
-    .line 38
+    .line 26
     invoke-interface {p2}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
     move-result-object p3
@@ -320,27 +316,27 @@
 
     check-cast p2, Ljava/lang/String;
 
-    invoke-virtual {v0, p3, p2}, Lt1a;->c(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {v0, p3, p2}, Laaa;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_1
 
-    .line 39
+    .line 27
     :cond_2
-    invoke-virtual {v0}, Lt1a;->a()Lu1a;
+    invoke-virtual {v0}, Laaa;->a()Lbaa;
 
     move-result-object p1
 
-    invoke-virtual {p0, p1}, Lru/ok/android/externcalls/sdk/log/ExtLogger;->log(Lu1a;)V
+    invoke-virtual {p0, p1}, Lru/ok/android/externcalls/sdk/log/ExtLogger;->log(Lbaa;)V
 
     return-void
 .end method
 
-.method public log(Loyd;Ljava/util/Map;)V
+.method public log(Lmce;Ljava/util/Map;)V
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Loyd;",
+            "Lmce;",
             "Ljava/util/Map<",
             "Ljava/lang/String;",
             "Ljava/lang/String;",
@@ -348,61 +344,30 @@
         }
     .end annotation
 
-    .line 9
+    .line 2
     const-string v0, "ok.mobile.apps.video"
 
-    iget-object p1, p1, Loyd;->a:Ljava/lang/String;
+    iget-object p1, p1, Lmce;->a:Ljava/lang/String;
 
     invoke-virtual {p0, v0, p1, p2}, Lru/ok/android/externcalls/sdk/log/ExtLogger;->log(Ljava/lang/String;Ljava/lang/String;Ljava/util/Map;)V
 
     return-void
 .end method
 
-.method public log(Lu1a;)V
-    .locals 0
-
-    .line 1
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    .line 2
-    sget-object p0, Lr1a;->a:Ljava/util/ArrayList;
-
-    invoke-virtual {p0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
-
-    move-result-object p0
-
-    invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result p1
-
-    if-nez p1, :cond_0
-
-    return-void
-
-    .line 3
-    :cond_0
-    invoke-static {p0}, Lv04;->f(Ljava/util/Iterator;)Ljava/lang/ClassCastException;
-
-    move-result-object p0
-
-    .line 4
-    throw p0
-.end method
-
-.method public logSimple(Loyd;Ljava/lang/String;Ljava/lang/String;)V
+.method public logSimple(Lmce;Ljava/lang/String;Ljava/lang/String;)V
     .locals 1
 
-    invoke-static {p1}, Lru/ok/android/externcalls/sdk/log/ExtLogger;->simpleBuilder(Loyd;)Lt1a;
+    invoke-static {p1}, Lru/ok/android/externcalls/sdk/log/ExtLogger;->simpleBuilder(Lmce;)Laaa;
 
     move-result-object p1
 
     const-string v0, "vcid"
 
-    invoke-virtual {p1, v0, p2}, Lt1a;->c(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {p1, v0, p2}, Laaa;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     const-string p2, "param"
 
-    invoke-virtual {p1, p2, p3}, Lt1a;->c(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {p1, p2, p3}, Laaa;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     iget-object p2, p0, Lru/ok/android/externcalls/sdk/log/ExtLogger;->timeProvider:Lru/ok/android/externcalls/sdk/log/ExtLogger$TimeProvider;
 
@@ -410,13 +375,13 @@
 
     move-result-wide p2
 
-    invoke-virtual {p1, p2, p3}, Lt1a;->d(J)V
+    invoke-virtual {p1, p2, p3}, Laaa;->e(J)V
 
-    invoke-virtual {p1}, Lt1a;->a()Lu1a;
+    invoke-virtual {p1}, Laaa;->a()Lbaa;
 
     move-result-object p1
 
-    invoke-virtual {p0, p1}, Lru/ok/android/externcalls/sdk/log/ExtLogger;->log(Lu1a;)V
+    invoke-virtual {p0, p1}, Lru/ok/android/externcalls/sdk/log/ExtLogger;->log(Lbaa;)V
 
     return-void
 .end method

@@ -1,64 +1,65 @@
-.class public final synthetic Luwe;
+.class public final Luwe;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ljava/util/concurrent/ThreadFactory;
-
 
 # instance fields
-.field public final synthetic a:Ljava/util/concurrent/atomic/AtomicInteger;
+.field public final a:J
 
-.field public final synthetic b:Ljava/lang/String;
+.field public final b:J
+
+.field public final c:J
 
 
 # direct methods
-.method public synthetic constructor <init>(Ljava/util/concurrent/atomic/AtomicInteger;Ljava/lang/String;)V
+.method public constructor <init>(JJJ)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Luwe;->a:Ljava/util/concurrent/atomic/AtomicInteger;
+    iput-wide p1, p0, Luwe;->a:J
 
-    iput-object p2, p0, Luwe;->b:Ljava/lang/String;
+    iput-wide p3, p0, Luwe;->b:J
+
+    iput-wide p5, p0, Luwe;->c:J
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final newThread(Ljava/lang/Runnable;)Ljava/lang/Thread;
-    .locals 4
+.method public final toString()Ljava/lang/String;
+    .locals 3
 
-    iget-object v0, p0, Luwe;->a:Ljava/util/concurrent/atomic/AtomicInteger;
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicInteger;->getAndIncrement()I
+    const-string v1, "RawContact{tamtamContactId="
 
-    move-result v0
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    new-instance v1, Ljava/lang/Thread;
+    iget-wide v1, p0, Luwe;->a:J
 
-    new-instance v2, Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
-    const-string v3, "tracer-io-"
+    const-string v1, ", rawContactId="
 
-    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object p0, p0, Luwe;->b:Ljava/lang/String;
+    iget-wide v1, p0, Luwe;->b:J
 
-    invoke-virtual {v2, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
-    const/16 p0, 0x2d
+    const-string v1, ", contactId="
 
-    invoke-virtual {v2, p0}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    iget-wide v1, p0, Luwe;->c:J
 
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    const/16 p0, 0x7d
+
+    invoke-static {v0, v1, v2, p0}, Lbg9;->k(Ljava/lang/StringBuilder;JC)Ljava/lang/String;
 
     move-result-object p0
 
-    invoke-direct {v1, p1, p0}, Ljava/lang/Thread;-><init>(Ljava/lang/Runnable;Ljava/lang/String;)V
-
-    return-object v1
+    return-object p0
 .end method

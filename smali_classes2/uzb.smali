@@ -1,212 +1,129 @@
-.class public abstract Luzb;
+.class public final Luzb;
 .super Ljava/lang/Object;
+.source "SourceFile"
 
 
-# static fields
-.field public static call_history_item_call_audio_button_accessibility:I = 0x7f13014b
+# instance fields
+.field public final a:Landroid/net/Uri;
 
-.field public static call_history_item_call_video_button_accessibility:I = 0x7f13015b
+.field public final b:Landroid/graphics/Bitmap;
 
-.field public static empty_view_subtitle_empty_search:I = 0x7f130482
 
-.field public static empty_view_title_empty_search:I = 0x7f130483
+# direct methods
+.method public constructor <init>(Landroid/net/Uri;Landroid/graphics/Bitmap;)V
+    .locals 0
 
-.field public static oneme_action_share:I = 0x7f130795
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-.field public static oneme_action_share_qr_code_error:I = 0x7f130796
+    iput-object p1, p0, Luzb;->a:Landroid/net/Uri;
 
-.field public static oneme_avatar_сrop_reset:I = 0x7f1307a9
+    iput-object p2, p0, Luzb;->b:Landroid/graphics/Bitmap;
 
-.field public static oneme_belarus_name:I = 0x7f1307aa
+    return-void
+.end method
 
-.field public static oneme_bot_shortlink_action_share_link_text:I = 0x7f1307ab
 
-.field public static oneme_bottom_sheet_cancel:I = 0x7f1307ac
+# virtual methods
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
 
-.field public static oneme_button_stack_more:I = 0x7f1307ad
+    const/4 v0, 0x1
 
-.field public static oneme_channel_shortlink_action_share_link_text:I = 0x7f1307ae
+    if-ne p0, p1, :cond_0
 
-.field public static oneme_chat_modal_action_add_to_folder:I = 0x7f1307b2
+    return v0
 
-.field public static oneme_chat_modal_action_block_user:I = 0x7f1307b3
+    :cond_0
+    instance-of v1, p1, Luzb;
 
-.field public static oneme_chat_modal_action_clear_chat_history:I = 0x7f1307b4
+    const/4 v2, 0x0
 
-.field public static oneme_chat_modal_action_clear_saved_messages:I = 0x7f1307b5
+    if-nez v1, :cond_1
 
-.field public static oneme_chat_modal_action_delete_channel:I = 0x7f1307b6
+    return v2
 
-.field public static oneme_chat_modal_action_delete_chat:I = 0x7f1307b7
+    :cond_1
+    check-cast p1, Luzb;
 
-.field public static oneme_chat_modal_action_delete_for_all:I = 0x7f1307b8
+    iget-object v1, p0, Luzb;->a:Landroid/net/Uri;
 
-.field public static oneme_chat_modal_action_leave_chanel:I = 0x7f1307b9
+    iget-object v3, p1, Luzb;->a:Landroid/net/Uri;
 
-.field public static oneme_chat_modal_action_leave_chat:I = 0x7f1307ba
+    invoke-static {v1, v3}, Lvyg;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-.field public static oneme_chat_modal_action_mark_as_read:I = 0x7f1307bb
+    move-result v1
 
-.field public static oneme_chat_modal_action_mark_as_unread:I = 0x7f1307bc
+    if-nez v1, :cond_2
 
-.field public static oneme_chat_modal_action_modal_pin:I = 0x7f1307bd
+    return v2
 
-.field public static oneme_chat_modal_action_modal_unpin:I = 0x7f1307be
+    :cond_2
+    iget-object p0, p0, Luzb;->b:Landroid/graphics/Bitmap;
 
-.field public static oneme_chat_modal_action_mute:I = 0x7f1307bf
+    iget-object p1, p1, Luzb;->b:Landroid/graphics/Bitmap;
 
-.field public static oneme_chat_modal_action_remove_from_folder:I = 0x7f1307c0
+    invoke-static {p0, p1}, Lvyg;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-.field public static oneme_chat_modal_action_report:I = 0x7f1307c1
+    move-result p0
 
-.field public static oneme_chat_modal_action_select:I = 0x7f1307c2
+    if-nez p0, :cond_3
 
-.field public static oneme_chat_modal_action_share_channel:I = 0x7f1307c3
+    return v2
 
-.field public static oneme_chat_modal_action_suspend_and_delete_bot:I = 0x7f1307c4
+    :cond_3
+    return v0
+.end method
 
-.field public static oneme_chat_modal_action_suspend_bot:I = 0x7f1307c5
+.method public final hashCode()I
+    .locals 1
 
-.field public static oneme_chat_modal_action_unmute:I = 0x7f1307c6
+    iget-object v0, p0, Luzb;->a:Landroid/net/Uri;
 
-.field public static oneme_chat_modal_action_unsubscribe_chanel:I = 0x7f1307c7
+    invoke-virtual {v0}, Landroid/net/Uri;->hashCode()I
 
-.field public static oneme_chat_notifications_bottom_sheet_title:I = 0x7f1307c8
+    move-result v0
 
-.field public static oneme_chat_notifications_disable_1_day:I = 0x7f1307c9
+    mul-int/lit8 v0, v0, 0x1f
 
-.field public static oneme_chat_notifications_disable_1_hour:I = 0x7f1307ca
+    iget-object p0, p0, Luzb;->b:Landroid/graphics/Bitmap;
 
-.field public static oneme_chat_notifications_disable_4_hour:I = 0x7f1307cb
+    invoke-virtual {p0}, Ljava/lang/Object;->hashCode()I
 
-.field public static oneme_chat_notifications_disable_forever:I = 0x7f1307cc
+    move-result p0
 
-.field public static oneme_chat_notifications_off_snackbar_title:I = 0x7f1307cd
+    add-int/2addr p0, v0
 
-.field public static oneme_chat_notifications_on_snackbar_title:I = 0x7f1307ce
+    return p0
+.end method
 
-.field public static oneme_chat_shortlink_action_share_link_text:I = 0x7f1307cf
+.method public final toString()Ljava/lang/String;
+    .locals 2
 
-.field public static oneme_chat_toolbar_more_action_add_to_folder:I = 0x7f1307d0
+    new-instance v0, Ljava/lang/StringBuilder;
 
-.field public static oneme_chat_toolbar_more_action_notifications:I = 0x7f1307d1
+    const-string v1, "QrCode(uri="
 
-.field public static oneme_chat_toolbar_more_action_search:I = 0x7f1307d2
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-.field public static oneme_chat_toolbar_more_action_video_call:I = 0x7f1307d3
+    iget-object v1, p0, Luzb;->a:Landroid/net/Uri;
 
-.field public static oneme_connection_network_error_description:I = 0x7f1307e8
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-.field public static oneme_connection_network_error_title:I = 0x7f1307e9
+    const-string v1, ", bitmap="
 
-.field public static oneme_connection_server_error_description:I = 0x7f1307ea
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-.field public static oneme_connection_server_error_title:I = 0x7f1307eb
+    iget-object p0, p0, Luzb;->b:Landroid/graphics/Bitmap;
 
-.field public static oneme_contact_not_found_bottom_sheet_not_now_button:I = 0x7f1307ed
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-.field public static oneme_contact_not_found_bottom_sheet_subtitle:I = 0x7f1307ee
+    const-string p0, ")"
 
-.field public static oneme_contact_not_found_bottom_sheet_title:I = 0x7f1307ef
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-.field public static oneme_contactlist_action_audio_call:I = 0x7f1307f1
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-.field public static oneme_contactlist_action_block:I = 0x7f1307f2
+    move-result-object p0
 
-.field public static oneme_contactlist_action_delete:I = 0x7f1307f3
-
-.field public static oneme_contactlist_action_open_profile:I = 0x7f1307f4
-
-.field public static oneme_contactlist_action_select:I = 0x7f1307f5
-
-.field public static oneme_contactlist_action_share_contact:I = 0x7f1307f6
-
-.field public static oneme_contactlist_action_suspend_bot:I = 0x7f1307f7
-
-.field public static oneme_contactlist_action_video_call:I = 0x7f1307f8
-
-.field public static oneme_contactlist_action_write:I = 0x7f1307f9
-
-.field public static oneme_countries_bottomsheet_selection_cancel:I = 0x7f1307fa
-
-.field public static oneme_countries_bottomsheet_selection_title:I = 0x7f1307fb
-
-.field public static oneme_create_channel_button_text:I = 0x7f1307fc
-
-.field public static oneme_create_channel_description_hint:I = 0x7f1307fd
-
-.field public static oneme_create_channel_name_hint:I = 0x7f1307fe
-
-.field public static oneme_empty_search_subtitle:I = 0x7f1307ff
-
-.field public static oneme_empty_search_title:I = 0x7f130800
-
-.field public static oneme_empty_search_view_title:I = 0x7f130801
-
-.field public static oneme_empty_view_no_one_here:I = 0x7f130802
-
-.field public static oneme_error_phone_empty:I = 0x7f130803
-
-.field public static oneme_error_phone_too_long:I = 0x7f130804
-
-.field public static oneme_forward_author_invisible:I = 0x7f13081b
-
-.field public static oneme_forward_author_visibility_onboarding:I = 0x7f13081c
-
-.field public static oneme_forward_author_visible:I = 0x7f13081d
-
-.field public static oneme_forward_confirm_cancel:I = 0x7f13081e
-
-.field public static oneme_forward_confirm_close:I = 0x7f13081f
-
-.field public static oneme_forward_confirmation_close_title:I = 0x7f130820
-
-.field public static oneme_input_error_empty_name:I = 0x7f130827
-
-.field public static oneme_input_error_empty_title:I = 0x7f130828
-
-.field public static oneme_input_error_incorrect_symbols:I = 0x7f130829
-
-.field public static oneme_input_error_name_length:I = 0x7f13082a
-
-.field public static oneme_input_error_name_only_spaces:I = 0x7f13082b
-
-.field public static oneme_invite:I = 0x7f13082c
-
-.field public static oneme_last_message_pinned:I = 0x7f130836
-
-.field public static oneme_narnia_name:I = 0x7f130883
-
-.field public static oneme_pick_photo_bottom_dialog_camera_button_text:I = 0x7f13089b
-
-.field public static oneme_pick_photo_bottom_dialog_cancel_button_text:I = 0x7f13089c
-
-.field public static oneme_pick_photo_bottom_dialog_delete_button_text:I = 0x7f13089d
-
-.field public static oneme_pick_photo_bottom_dialog_gallery_button_text:I = 0x7f13089e
-
-.field public static oneme_pick_photo_bottom_dialog_title:I = 0x7f13089f
-
-.field public static oneme_pinned_message_title:I = 0x7f1308a0
-
-.field public static oneme_russia_name:I = 0x7f130923
-
-.field public static oneme_search_view_default_hint:I = 0x7f130924
-
-.field public static oneme_tabbar_item_calls:I = 0x7f130a26
-
-.field public static oneme_tabbar_item_chats:I = 0x7f130a27
-
-.field public static oneme_tabbar_item_contacts:I = 0x7f130a28
-
-.field public static oneme_tabbar_item_settings:I = 0x7f130a29
-
-.field public static oneme_wait_please:I = 0x7f130a2f
-
-.field public static search_all_contacts_header:I = 0x7f130c4a
-
-.field public static search_contacts_header:I = 0x7f130c50
-
-.field public static search_global_contacts_header:I = 0x7f130c53
-
-.field public static search_phonebook_contacts_header:I = 0x7f130c57
+    return-object p0
+.end method

@@ -4,7 +4,7 @@
 
 
 # instance fields
-.field public x1:Z
+.field public A1:Z
 
 
 # direct methods
@@ -21,15 +21,15 @@
 .method public final S0()V
     .locals 4
 
-    iget-object v0, p0, Landroidx/fragment/app/DialogFragment;->s1:Landroid/app/Dialog;
+    iget-object v0, p0, Landroidx/fragment/app/DialogFragment;->v1:Landroid/app/Dialog;
 
-    instance-of v1, v0, Lcr0;
+    instance-of v1, v0, Ljr0;
 
     if-eqz v1, :cond_3
 
-    check-cast v0, Lcr0;
+    check-cast v0, Ljr0;
 
-    invoke-virtual {v0}, Lcr0;->f()Lcom/google/android/material/bottomsheet/BottomSheetBehavior;
+    invoke-virtual {v0}, Ljr0;->f()Lcom/google/android/material/bottomsheet/BottomSheetBehavior;
 
     move-result-object v1
 
@@ -37,13 +37,13 @@
 
     if-eqz v2, :cond_3
 
-    iget-boolean v0, v0, Lcr0;->q0:Z
+    iget-boolean v0, v0, Ljr0;->t0:Z
 
     if-eqz v0, :cond_3
 
     const/4 v0, 0x1
 
-    iput-boolean v0, p0, Lcom/google/android/material/bottomsheet/BottomSheetDialogFragment;->x1:Z
+    iput-boolean v0, p0, Lcom/google/android/material/bottomsheet/BottomSheetDialogFragment;->A1:Z
 
     iget v0, v1, Lcom/google/android/material/bottomsheet/BottomSheetBehavior;->L:I
 
@@ -56,30 +56,30 @@
     return-void
 
     :cond_0
-    iget-object v0, p0, Landroidx/fragment/app/DialogFragment;->s1:Landroid/app/Dialog;
+    iget-object v0, p0, Landroidx/fragment/app/DialogFragment;->v1:Landroid/app/Dialog;
 
-    instance-of v3, v0, Lcr0;
+    instance-of v3, v0, Ljr0;
 
     if-eqz v3, :cond_1
 
-    check-cast v0, Lcr0;
+    check-cast v0, Ljr0;
 
-    iget-object v3, v0, Lcr0;->Y:Lcom/google/android/material/bottomsheet/BottomSheetBehavior;
+    iget-object v3, v0, Ljr0;->Y:Lcom/google/android/material/bottomsheet/BottomSheetBehavior;
 
-    iget-object v0, v0, Lcr0;->x0:Lar0;
+    iget-object v0, v0, Ljr0;->A0:Lhr0;
 
     iget-object v3, v3, Lcom/google/android/material/bottomsheet/BottomSheetBehavior;->W:Ljava/util/ArrayList;
 
     invoke-virtual {v3, v0}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
 
     :cond_1
-    new-instance v0, Lar0;
+    new-instance v0, Lhr0;
 
     check-cast p0, Lru/ok/tamtam/messages/scheduled/ScheduledSendPickerDialogFragment;
 
     const/4 v3, 0x1
 
-    invoke-direct {v0, v3, p0}, Lar0;-><init>(ILjava/lang/Object;)V
+    invoke-direct {v0, v3, p0}, Lhr0;-><init>(ILjava/lang/Object;)V
 
     iget-object p0, v1, Lcom/google/android/material/bottomsheet/BottomSheetBehavior;->W:Ljava/util/ArrayList;
 
@@ -105,7 +105,7 @@
 .method public V0()Landroid/app/Dialog;
     .locals 2
 
-    new-instance v0, Lcr0;
+    new-instance v0, Ljr0;
 
     invoke-virtual {p0}, Landroidx/fragment/app/a;->S()Landroid/content/Context;
 
@@ -115,7 +115,7 @@
 
     move-result p0
 
-    invoke-direct {v0, v1, p0}, Lcr0;-><init>(Landroid/content/Context;I)V
+    invoke-direct {v0, v1, p0}, Ljr0;-><init>(Landroid/content/Context;I)V
 
     return-object v0
 .end method
@@ -123,7 +123,7 @@
 .method public final Z0()V
     .locals 1
 
-    iget-boolean v0, p0, Lcom/google/android/material/bottomsheet/BottomSheetDialogFragment;->x1:Z
+    iget-boolean v0, p0, Lcom/google/android/material/bottomsheet/BottomSheetDialogFragment;->A1:Z
 
     if-eqz v0, :cond_0
 

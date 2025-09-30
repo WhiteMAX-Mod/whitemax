@@ -2,147 +2,142 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lpw0;
-
 
 # instance fields
-.field public final a:Z
+.field public a:Z
 
-.field public final b:Ljava/lang/String;
+.field public b:J
+
+.field public c:Ljava/lang/Object;
+
+.field public d:Ljava/lang/Object;
+
+.field public e:Ljava/lang/Object;
+
+.field public f:Ljava/lang/Object;
+
+.field public g:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(IZ)V
-    .locals 0
+.method public constructor <init>()V
+    .locals 1
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-boolean p2, p0, Lwf;->a:Z
+    const-string v0, ""
 
-    const-string p2, "anim://"
+    iput-object v0, p0, Lwf;->d:Ljava/lang/Object;
 
-    invoke-static {p1, p2}, Lm26;->h(ILjava/lang/String;)Ljava/lang/String;
+    sget-object v0, Liv0;->b:Liv0;
 
-    move-result-object p1
-
-    iput-object p1, p0, Lwf;->b:Ljava/lang/String;
+    iput-object v0, p0, Lwf;->e:Ljava/lang/Object;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Landroid/net/Uri;)Z
-    .locals 1
+.method public a()I
+    .locals 0
 
-    invoke-virtual {p1}, Landroid/net/Uri;->toString()Ljava/lang/String;
+    iget-object p0, p0, Lwf;->c:Ljava/lang/Object;
 
-    move-result-object p1
+    check-cast p0, Lpn0;
 
-    iget-object p0, p0, Lwf;->b:Ljava/lang/String;
+    iget-object p0, p0, Lpn0;->c:Lck7;
 
-    const/4 v0, 0x0
-
-    invoke-static {p1, p0, v0}, Lr8e;->w0(Ljava/lang/String;Ljava/lang/String;Z)Z
+    invoke-virtual {p0}, Lck7;->A()I
 
     move-result p0
 
     return p0
 .end method
 
-.method public final b()Z
+.method public b(I)I
     .locals 0
 
-    const/4 p0, 0x0
+    iget-object p0, p0, Lwf;->c:Ljava/lang/Object;
+
+    check-cast p0, Lpn0;
+
+    iget-object p0, p0, Lpn0;->c:Lck7;
+
+    iget-object p0, p0, Lck7;->b:Ljava/lang/Object;
+
+    check-cast p0, Lre;
+
+    iget-object p0, p0, Lre;->e:[I
+
+    aget p0, p0, p1
 
     return p0
 .end method
 
-.method public final c()Ljava/lang/String;
+.method public c()I
     .locals 0
 
-    iget-object p0, p0, Lwf;->b:Ljava/lang/String;
+    iget-object p0, p0, Lwf;->c:Ljava/lang/Object;
 
-    return-object p0
+    check-cast p0, Lpn0;
+
+    iget-object p0, p0, Lpn0;->c:Lck7;
+
+    invoke-virtual {p0}, Lck7;->B()I
+
+    move-result p0
+
+    return p0
 .end method
 
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 2
+.method public declared-synchronized d()V
+    .locals 5
 
+    monitor-enter p0
+
+    :try_start_0
     iget-boolean v0, p0, Lwf;->a:Z
 
     if-nez v0, :cond_0
 
-    invoke-super {p0, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+    const/4 v0, 0x1
 
-    move-result p0
+    iput-boolean v0, p0, Lwf;->a:Z
 
-    return p0
+    iget-object v0, p0, Lwf;->f:Ljava/lang/Object;
 
-    :cond_0
-    if-ne p0, p1, :cond_1
+    check-cast v0, Ljava/util/concurrent/ScheduledExecutorService;
 
-    const/4 p0, 0x1
+    iget-object v1, p0, Lwf;->g:Ljava/lang/Object;
 
-    return p0
+    check-cast v1, Loe;
 
-    :cond_1
-    if-eqz p1, :cond_3
+    sget-object v2, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;
 
-    const-class v0, Lwf;
+    const-wide/16 v3, 0x3e8
 
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_2
+    invoke-interface {v0, v1, v3, v4, v2}, Ljava/util/concurrent/ScheduledExecutorService;->schedule(Ljava/lang/Runnable;JLjava/util/concurrent/TimeUnit;)Ljava/util/concurrent/ScheduledFuture;
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     goto :goto_0
 
-    :cond_2
-    check-cast p1, Lwf;
+    :catchall_0
+    move-exception v0
 
-    iget-object p0, p0, Lwf;->b:Ljava/lang/String;
-
-    iget-object p1, p1, Lwf;->b:Ljava/lang/String;
-
-    invoke-static {p0, p1}, Lxq7;->d(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p0
-
-    return p0
-
-    :cond_3
-    :goto_0
-    const/4 p0, 0x0
-
-    return p0
-.end method
-
-.method public final hashCode()I
-    .locals 1
-
-    iget-boolean v0, p0, Lwf;->a:Z
-
-    if-nez v0, :cond_0
-
-    invoke-super {p0}, Ljava/lang/Object;->hashCode()I
-
-    move-result p0
-
-    return p0
+    goto :goto_1
 
     :cond_0
-    iget-object p0, p0, Lwf;->b:Ljava/lang/String;
+    :goto_0
+    monitor-exit p0
 
-    invoke-virtual {p0}, Ljava/lang/String;->hashCode()I
+    return-void
 
-    move-result p0
+    :goto_1
+    :try_start_1
+    monitor-exit p0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    return p0
+    throw v0
 .end method

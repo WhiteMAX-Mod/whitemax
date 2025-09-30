@@ -1,258 +1,123 @@
 .class public final Lnt1;
-.super Liv1;
+.super Lure;
 .source "SourceFile"
+
+# interfaces
+.implements Lpc6;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public synthetic X:Ljava/lang/Object;
 
-.field public b:Ljava/lang/Object;
-
-.field public c:Ljava/lang/Object;
+.field public final synthetic Y:Lot1;
 
 
 # direct methods
-.method public synthetic constructor <init>()V
-    .locals 1
+.method public constructor <init>(Lot1;Lkotlin/coroutines/Continuation;)V
+    .locals 0
 
-    .line 1
-    const/4 v0, 0x0
+    iput-object p1, p0, Lnt1;->Y:Lot1;
 
-    iput v0, p0, Lnt1;->a:I
+    const/4 p1, 0x2
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    return-void
-.end method
-
-.method public constructor <init>(Liq1;Lyw1;)V
-    .locals 1
-
-    const/4 v0, 0x1
-
-    iput v0, p0, Lnt1;->a:I
-
-    .line 2
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 3
-    iput-object p1, p0, Lnt1;->b:Ljava/lang/Object;
-
-    iput-object p2, p0, Lnt1;->c:Ljava/lang/Object;
+    invoke-direct {p0, p1, p2}, Lure;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public a(I)V
-    .locals 5
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    iget v0, p0, Lnt1;->a:I
+    check-cast p1, Luqf;
 
-    packed-switch v0, :pswitch_data_0
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    return-void
+    invoke-virtual {p0, p1, p2}, Lnt1;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    :pswitch_0
-    iget-object v0, p0, Lnt1;->b:Ljava/lang/Object;
+    move-result-object p0
 
-    check-cast v0, Ljava/util/HashSet;
+    check-cast p0, Lnt1;
 
-    invoke-virtual {v0}, Ljava/util/HashSet;->iterator()Ljava/util/Iterator;
+    sget-object p1, Lylf;->a:Lylf;
 
-    move-result-object v0
+    invoke-virtual {p0, p1}, Lnt1;->o(Ljava/lang/Object;)Ljava/lang/Object;
 
-    :catch_0
-    :goto_0
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Liv1;
-
-    :try_start_0
-    iget-object v2, p0, Lnt1;->c:Ljava/lang/Object;
-
-    check-cast v2, Landroid/util/ArrayMap;
-
-    invoke-virtual {v2, v1}, Landroid/util/ArrayMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Ljava/util/concurrent/Executor;
-
-    new-instance v3, Lw30;
-
-    const/4 v4, 0x4
-
-    invoke-direct {v3, p1, v4, v1}, Lw30;-><init>(IILjava/lang/Object;)V
-
-    invoke-interface {v2, v3}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
-    :try_end_0
-    .catch Ljava/util/concurrent/RejectedExecutionException; {:try_start_0 .. :try_end_0} :catch_0
-
-    goto :goto_0
-
-    :cond_0
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-object p1
 .end method
 
-.method public final b(ILpv1;)V
-    .locals 5
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 1
 
-    iget v0, p0, Lnt1;->a:I
+    new-instance v0, Lnt1;
 
-    packed-switch v0, :pswitch_data_0
+    iget-object p0, p0, Lnt1;->Y:Lot1;
 
-    iget-object p1, p0, Lnt1;->b:Ljava/lang/Object;
+    invoke-direct {v0, p0, p2}, Lnt1;-><init>(Lot1;Lkotlin/coroutines/Continuation;)V
 
-    check-cast p1, Liq1;
+    iput-object p1, v0, Lnt1;->X:Ljava/lang/Object;
 
-    const/4 p2, 0x0
-
-    invoke-virtual {p1, p2}, Liq1;->b(Ljava/lang/Object;)Z
-
-    iget-object p1, p0, Lnt1;->c:Ljava/lang/Object;
-
-    check-cast p1, Lyw1;
-
-    check-cast p1, Lyw1;
-
-    invoke-interface {p1, p0}, Lyw1;->r(Liv1;)V
-
-    return-void
-
-    :pswitch_0
-    iget-object v0, p0, Lnt1;->b:Ljava/lang/Object;
-
-    check-cast v0, Ljava/util/HashSet;
-
-    invoke-virtual {v0}, Ljava/util/HashSet;->iterator()Ljava/util/Iterator;
-
-    move-result-object v0
-
-    :catch_0
-    :goto_0
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Liv1;
-
-    :try_start_0
-    iget-object v2, p0, Lnt1;->c:Ljava/lang/Object;
-
-    check-cast v2, Landroid/util/ArrayMap;
-
-    invoke-virtual {v2, v1}, Landroid/util/ArrayMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Ljava/util/concurrent/Executor;
-
-    new-instance v3, Lvj1;
-
-    const/4 v4, 0x2
-
-    invoke-direct {v3, v1, p1, p2, v4}, Lvj1;-><init>(Ljava/lang/Object;ILjava/lang/Object;I)V
-
-    invoke-interface {v2, v3}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
-    :try_end_0
-    .catch Ljava/util/concurrent/RejectedExecutionException; {:try_start_0 .. :try_end_0} :catch_0
-
-    goto :goto_0
-
-    :cond_0
-    return-void
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-object v0
 .end method
 
-.method public c(ILuj6;)V
-    .locals 5
+.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 10
 
-    iget v0, p0, Lnt1;->a:I
+    invoke-static {p1}, Lqe5;->V(Ljava/lang/Object;)V
 
-    packed-switch v0, :pswitch_data_0
+    iget-object p1, p0, Lnt1;->X:Ljava/lang/Object;
 
-    return-void
+    check-cast p1, Luqf;
 
-    :pswitch_0
-    iget-object v0, p0, Lnt1;->b:Ljava/lang/Object;
+    sget-object v0, Luqf;->a:Luqf;
 
-    check-cast v0, Ljava/util/HashSet;
+    iget-object p0, p0, Lnt1;->Y:Lot1;
 
-    invoke-virtual {v0}, Ljava/util/HashSet;->iterator()Ljava/util/Iterator;
+    if-ne p1, v0, :cond_0
+
+    invoke-virtual {p0}, Lot1;->b()Lyce;
 
     move-result-object v0
 
-    :catch_0
-    :goto_0
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+    invoke-virtual {v0}, Lyce;->getValue()Ljava/lang/Object;
 
-    move-result v1
+    move-result-object v0
 
-    if-eqz v1, :cond_0
+    check-cast v0, Lj44;
 
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    iget-object v1, p0, Lot1;->m:Lcl7;
+
+    invoke-interface {v1}, Lcl7;->getValue()Ljava/lang/Object;
 
     move-result-object v1
 
-    check-cast v1, Liv1;
+    move-object v2, v1
 
-    :try_start_0
-    iget-object v2, p0, Lnt1;->c:Ljava/lang/Object;
+    check-cast v2, Llv1;
 
-    check-cast v2, Landroid/util/ArrayMap;
+    iget-object v4, v0, Lj44;->c:Ljava/lang/String;
 
-    invoke-virtual {v2, v1}, Landroid/util/ArrayMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    iget-boolean v8, v0, Lj44;->h:Z
 
-    move-result-object v2
+    invoke-virtual {v2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    check-cast v2, Ljava/util/concurrent/Executor;
+    const/4 v7, 0x0
 
-    new-instance v3, Lvj1;
+    const/16 v9, 0x38
 
-    const/4 v4, 0x1
+    const-string v3, "BAD_CONNECTION_ALERT"
 
-    invoke-direct {v3, v1, p1, p2, v4}, Lvj1;-><init>(Ljava/lang/Object;ILjava/lang/Object;I)V
+    const-string v5, "VPN"
 
-    invoke-interface {v2, v3}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
-    :try_end_0
-    .catch Ljava/util/concurrent/RejectedExecutionException; {:try_start_0 .. :try_end_0} :catch_0
+    const/4 v6, 0x0
 
-    goto :goto_0
+    invoke-static/range {v2 .. v9}, Llv1;->c(Llv1;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Long;Ljava/lang/String;ZI)V
 
     :cond_0
-    return-void
+    invoke-virtual {p0, p1}, Lot1;->n(Luqf;)V
 
-    nop
+    sget-object p0, Lylf;->a:Lylf;
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-object p0
 .end method

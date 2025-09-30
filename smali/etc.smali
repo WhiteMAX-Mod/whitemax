@@ -1,210 +1,61 @@
 .class public final Letc;
-.super Ljava/lang/Object;
+.super Laec;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:Lje7;
+.field public final synthetic X:Lor8;
 
-.field public final b:Lazd;
+.field public final synthetic Y:I
+
+.field public final synthetic o:[B
 
 
 # direct methods
-.method public constructor <init>(Lje7;)V
-    .locals 0
+.method public constructor <init>([BLor8;I)V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/4 v0, 0x2
 
-    iput-object p1, p0, Letc;->a:Lje7;
+    invoke-direct {p0, v0}, Laec;-><init>(I)V
 
-    sget-object p1, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
+    iput-object p1, p0, Letc;->o:[B
 
-    invoke-static {p1}, Lbzd;->a(Ljava/lang/Object;)Lazd;
+    iput-object p2, p0, Letc;->X:Lor8;
 
-    move-result-object p1
-
-    iput-object p1, p0, Letc;->b:Lazd;
+    iput p3, p0, Letc;->Y:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Z)V
-    .locals 3
+.method public final K(Lhu0;)V
+    .locals 1
 
-    :cond_0
-    iget-object v0, p0, Letc;->b:Lazd;
+    iget-object v0, p0, Letc;->o:[B
 
-    invoke-virtual {v0}, Lazd;->getValue()Ljava/lang/Object;
+    iget p0, p0, Letc;->Y:I
 
-    move-result-object v1
-
-    move-object v2, v1
-
-    check-cast v2, Ljava/lang/Boolean;
-
-    invoke-virtual {v2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    invoke-static {p1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Lazd;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    iget-object p0, p0, Letc;->a:Lje7;
-
-    invoke-interface {p0}, Lje7;->getValue()Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, Law3;
-
-    invoke-virtual {p0}, Law3;->a()Lru/ok/android/externcalls/sdk/Conversation;
-
-    move-result-object p0
-
-    if-eqz p0, :cond_1
-
-    invoke-interface {p0}, Lru/ok/android/externcalls/sdk/Conversation;->getScreenCaptureManager()Lru/ok/android/externcalls/sdk/video/ScreenCaptureManager;
-
-    move-result-object p0
-
-    goto :goto_0
-
-    :cond_1
-    const/4 p0, 0x0
-
-    :goto_0
-    if-eqz p0, :cond_2
-
-    invoke-interface {p0, p1}, Lru/ok/android/externcalls/sdk/video/ScreenCaptureManager;->setAudioCaptureEnabled(Z)V
-
-    :cond_2
-    return-void
-.end method
-
-.method public final b(Z)V
-    .locals 2
-
-    iget-object v0, p0, Letc;->a:Lje7;
-
-    invoke-interface {v0}, Lje7;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Law3;
-
-    invoke-virtual {v0}, Law3;->a()Lru/ok/android/externcalls/sdk/Conversation;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_0
-
-    invoke-interface {v0}, Lru/ok/android/externcalls/sdk/Conversation;->getScreenCaptureManager()Lru/ok/android/externcalls/sdk/video/ScreenCaptureManager;
-
-    move-result-object v0
-
-    goto :goto_0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    :goto_0
-    const/4 v1, 0x0
-
-    if-eqz v0, :cond_1
-
-    invoke-interface {v0, p1, v1}, Lru/ok/android/externcalls/sdk/video/ScreenCaptureManager;->setScreenCaptureEnabled(ZZ)V
-
-    :cond_1
-    if-eqz p1, :cond_2
-
-    iget-object p1, p0, Letc;->b:Lazd;
-
-    invoke-virtual {p1}, Lazd;->getValue()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Ljava/lang/Boolean;
-
-    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
-
-    move-result p1
-
-    invoke-virtual {p0, p1}, Letc;->a(Z)V
-
-    return-void
-
-    :cond_2
-    invoke-virtual {p0, v1}, Letc;->a(Z)V
+    invoke-interface {p1, p0, v0}, Lhu0;->K(I[B)Lhu0;
 
     return-void
 .end method
 
-.method public final c()Z
+.method public final k()J
     .locals 2
 
-    iget-object p0, p0, Letc;->a:Lje7;
+    iget p0, p0, Letc;->Y:I
 
-    invoke-interface {p0}, Lje7;->getValue()Ljava/lang/Object;
+    int-to-long v0, p0
 
-    move-result-object v0
+    return-wide v0
+.end method
 
-    check-cast v0, Law3;
+.method public final l()Lor8;
+    .locals 0
 
-    invoke-virtual {v0}, Law3;->a()Lru/ok/android/externcalls/sdk/Conversation;
+    iget-object p0, p0, Letc;->X:Lor8;
 
-    move-result-object v0
-
-    if-eqz v0, :cond_1
-
-    invoke-interface {v0}, Lru/ok/android/externcalls/sdk/Conversation;->isPrepared()Z
-
-    move-result v0
-
-    const/4 v1, 0x1
-
-    if-ne v0, v1, :cond_1
-
-    invoke-interface {p0}, Lje7;->getValue()Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, Law3;
-
-    invoke-virtual {p0}, Law3;->a()Lru/ok/android/externcalls/sdk/Conversation;
-
-    move-result-object p0
-
-    if-eqz p0, :cond_0
-
-    invoke-interface {p0}, Lru/ok/android/externcalls/sdk/Conversation;->getScreenCaptureManager()Lru/ok/android/externcalls/sdk/video/ScreenCaptureManager;
-
-    move-result-object p0
-
-    goto :goto_0
-
-    :cond_0
-    const/4 p0, 0x0
-
-    :goto_0
-    if-eqz p0, :cond_1
-
-    invoke-interface {p0}, Lru/ok/android/externcalls/sdk/video/ScreenCaptureManager;->isScreenCaptureEnabled()Z
-
-    move-result p0
-
-    if-ne p0, v1, :cond_1
-
-    return v1
-
-    :cond_1
-    const/4 p0, 0x0
-
-    return p0
+    return-object p0
 .end method

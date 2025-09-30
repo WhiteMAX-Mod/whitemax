@@ -1,81 +1,30 @@
 .class public final Lfhf;
-.super Lqde;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Ll66;
+.implements Lghf;
 
 
 # instance fields
-.field public final synthetic X:Llhf;
+.field public final a:Lp2f;
+
+.field public final b:Lp2f;
+
+.field public final c:Ljava/util/List;
 
 
 # direct methods
-.method public constructor <init>(Llhf;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(Lp2f;Lp2f;Ljava/util/List;)V
     .locals 0
 
-    iput-object p1, p0, Lfhf;->X:Llhf;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 p1, 0x2
+    iput-object p1, p0, Lfhf;->a:Lp2f;
 
-    invoke-direct {p0, p1, p2}, Lqde;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-object p2, p0, Lfhf;->b:Lp2f;
+
+    iput-object p3, p0, Lfhf;->c:Ljava/util/List;
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
-
-    check-cast p1, Lox3;
-
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Lfhf;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p0
-
-    check-cast p0, Lfhf;
-
-    sget-object p1, Le5f;->a:Le5f;
-
-    invoke-virtual {p0, p1}, Lfhf;->o(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p1
-.end method
-
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 0
-
-    new-instance p1, Lfhf;
-
-    iget-object p0, p0, Lfhf;->X:Llhf;
-
-    invoke-direct {p1, p0, p2}, Lfhf;-><init>(Llhf;Lkotlin/coroutines/Continuation;)V
-
-    return-object p1
-.end method
-
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
-
-    invoke-static {p1}, Lsgg;->Z(Ljava/lang/Object;)V
-
-    iget-object p0, p0, Lfhf;->X:Llhf;
-
-    invoke-virtual {p0}, Llhf;->d()Lsif;
-
-    move-result-object p0
-
-    iget-object p0, p0, Lsif;->X:Ltkf;
-
-    if-eqz p0, :cond_0
-
-    invoke-virtual {p0}, Ltkf;->M0()V
-
-    :cond_0
-    sget-object p0, Le5f;->a:Le5f;
-
-    return-object p0
 .end method

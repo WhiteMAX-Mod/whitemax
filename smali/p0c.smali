@@ -1,24 +1,58 @@
-.class public abstract Lp0c;
+.class public final synthetic Lp0c;
 .super Ljava/lang/Object;
+.source "SourceFile"
+
+# interfaces
+.implements Ljava/lang/Runnable;
 
 
-# static fields
-.field public static ViewPager2:[I
+# instance fields
+.field public final synthetic a:I
 
-.field public static ViewPager2_android_orientation:I
+.field public final synthetic b:Lq0c;
 
 
 # direct methods
-.method public static constructor <clinit>()V
-    .locals 1
+.method public synthetic constructor <init>(Lq0c;I)V
+    .locals 0
 
-    const v0, 0x10100c4
+    iput p2, p0, Lp0c;->a:I
 
-    filled-new-array {v0}, [I
+    iput-object p1, p0, Lp0c;->b:Lq0c;
 
-    move-result-object v0
-
-    sput-object v0, Lp0c;->ViewPager2:[I
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final run()V
+    .locals 1
+
+    iget v0, p0, Lp0c;->a:I
+
+    iget-object p0, p0, Lp0c;->b:Lq0c;
+
+    packed-switch v0, :pswitch_data_0
+
+    iget-object p0, p0, Lq0c;->c:Lh2a;
+
+    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    return-void
+
+    :pswitch_0
+    iget-object p0, p0, Lq0c;->c:Lh2a;
+
+    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

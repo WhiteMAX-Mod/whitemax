@@ -1,160 +1,158 @@
 .class public final Lgx7;
-.super Lqde;
+.super Ljava/lang/Object;
 .source "SourceFile"
-
-# interfaces
-.implements Ll66;
 
 
 # instance fields
-.field public synthetic X:Ljava/lang/Object;
+.field public final a:Landroid/content/Context;
 
-.field public final synthetic Y:Lone/me/main/MainScreen;
+.field public final b:Lfec;
+
+.field public volatile c:Z
+
+.field public volatile d:Z
 
 
 # direct methods
-.method public constructor <init>(Lone/me/main/MainScreen;Lkotlin/coroutines/Continuation;)V
-    .locals 0
+.method public constructor <init>(Landroid/content/Context;Lfec;)V
+    .locals 2
 
-    iput-object p1, p0, Lgx7;->Y:Lone/me/main/MainScreen;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 p1, 0x2
+    iput-object p1, p0, Lgx7;->a:Landroid/content/Context;
 
-    invoke-direct {p0, p1, p2}, Lqde;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-object p2, p0, Lgx7;->b:Lfec;
+
+    const-string p2, "android.permission.RECORD_AUDIO"
+
+    invoke-static {p1, p2}, Lw7;->d(Landroid/content/Context;Ljava/lang/String;)I
+
+    move-result p2
+
+    const/4 v0, 0x0
+
+    const/4 v1, 0x1
+
+    if-nez p2, :cond_0
+
+    move p2, v1
+
+    goto :goto_0
+
+    :cond_0
+    move p2, v0
+
+    :goto_0
+    iput-boolean p2, p0, Lgx7;->c:Z
+
+    const-string p2, "android.permission.CAMERA"
+
+    invoke-static {p1, p2}, Lw7;->d(Landroid/content/Context;Ljava/lang/String;)I
+
+    move-result p1
+
+    if-nez p1, :cond_1
+
+    move v0, v1
+
+    :cond_1
+    iput-boolean v0, p0, Lgx7;->d:Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final a()Z
+    .locals 10
 
-    check-cast p1, Ldy3;
+    const-string v0, "android.permission.RECORD_AUDIO"
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    iget-object v1, p0, Lgx7;->a:Landroid/content/Context;
 
-    invoke-virtual {p0, p1, p2}, Lgx7;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    invoke-static {v1, v0}, Lw7;->d(Landroid/content/Context;Ljava/lang/String;)I
 
-    move-result-object p0
+    move-result v0
 
-    check-cast p0, Lgx7;
+    const/4 v1, 0x1
 
-    sget-object p1, Le5f;->a:Le5f;
+    const/4 v2, 0x0
 
-    invoke-virtual {p0, p1}, Lgx7;->o(Ljava/lang/Object;)Ljava/lang/Object;
+    if-nez v0, :cond_0
 
-    return-object p1
-.end method
-
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 1
-
-    new-instance v0, Lgx7;
-
-    iget-object p0, p0, Lgx7;->Y:Lone/me/main/MainScreen;
-
-    invoke-direct {v0, p0, p2}, Lgx7;-><init>(Lone/me/main/MainScreen;Lkotlin/coroutines/Continuation;)V
-
-    iput-object p1, v0, Lgx7;->X:Ljava/lang/Object;
-
-    return-object v0
-.end method
-
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 6
-
-    invoke-static {p1}, Lsgg;->Z(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Lgx7;->X:Ljava/lang/Object;
-
-    check-cast p1, Ldy3;
-
-    sget-object v0, Lone/me/main/MainScreen;->Z:Lvo9;
-
-    iget-object p0, p0, Lgx7;->Y:Lone/me/main/MainScreen;
-
-    invoke-virtual {p0}, Lone/me/main/MainScreen;->r0()Ll4a;
-
-    move-result-object p0
-
-    sget v0, Loaa;->e:I
-
-    iget p1, p1, Ldy3;->a:I
-
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    const/4 v1, 0x0
-
-    move v2, v1
-
-    :goto_0
-    invoke-virtual {p0}, Landroid/view/ViewGroup;->getChildCount()I
-
-    move-result v3
-
-    if-ge v2, v3, :cond_0
-
-    const/4 v3, 0x1
-
-    goto :goto_1
-
-    :cond_0
-    move v3, v1
-
-    :goto_1
-    if-eqz v3, :cond_4
-
-    add-int/lit8 v3, v2, 0x1
-
-    invoke-virtual {p0, v2}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
-
-    move-result-object v2
-
-    if-eqz v2, :cond_3
-
-    sget v4, Lnvb;->tag_tab_item:I
-
-    invoke-static {v2, v4}, Lod7;->z(Landroid/view/View;I)Ljava/lang/Object;
-
-    move-result-object v4
-
-    instance-of v5, v4, Lk4a;
-
-    if-eqz v5, :cond_1
-
-    check-cast v4, Lk4a;
-
-    goto :goto_2
-
-    :cond_1
-    const/4 v4, 0x0
-
-    :goto_2
-    if-eqz v4, :cond_2
-
-    iget v4, v4, Lk4a;->c:I
-
-    if-ne v4, v0, :cond_2
-
-    check-cast v2, Lrq0;
-
-    invoke-virtual {v2, p1}, Lrq0;->setCounter(I)V
-
-    :cond_2
-    move v2, v3
+    move v0, v1
 
     goto :goto_0
 
+    :cond_0
+    move v0, v2
+
+    :goto_0
+    const-string v3, "android.permission.CAMERA"
+
+    iget-object v4, p0, Lgx7;->a:Landroid/content/Context;
+
+    invoke-static {v4, v3}, Lw7;->d(Landroid/content/Context;Ljava/lang/String;)I
+
+    move-result v3
+
+    if-nez v3, :cond_1
+
+    move v3, v1
+
+    goto :goto_1
+
+    :cond_1
+    move v3, v2
+
+    :goto_1
+    iget-object v4, p0, Lgx7;->b:Lfec;
+
+    iget-boolean v5, p0, Lgx7;->c:Z
+
+    iget-boolean v6, p0, Lgx7;->d:Z
+
+    const-string v7, ", video: "
+
+    const-string v8, "call permissions state updated, audio: "
+
+    const-string v9, "->"
+
+    invoke-static {v8, v5, v9, v0, v7}, Lyv7;->n(Ljava/lang/String;ZLjava/lang/String;ZLjava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v5
+
+    invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v5, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v5, v3}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v5
+
+    const-string v6, "LocalMediaPermissionProvider"
+
+    invoke-interface {v4, v6, v5}, Lfec;->log(Ljava/lang/String;Ljava/lang/String;)V
+
+    iget-boolean v4, p0, Lgx7;->c:Z
+
+    if-eq v4, v0, :cond_2
+
+    iput-boolean v0, p0, Lgx7;->c:Z
+
+    move v2, v1
+
+    :cond_2
+    iget-boolean v0, p0, Lgx7;->d:Z
+
+    if-eq v0, v3, :cond_3
+
+    iput-boolean v3, p0, Lgx7;->d:Z
+
+    return v1
+
     :cond_3
-    new-instance p0, Ljava/lang/IndexOutOfBoundsException;
-
-    invoke-direct {p0}, Ljava/lang/IndexOutOfBoundsException;-><init>()V
-
-    throw p0
-
-    :cond_4
-    sget-object p0, Le5f;->a:Le5f;
-
-    return-object p0
+    return v2
 .end method

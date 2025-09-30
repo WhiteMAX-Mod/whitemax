@@ -1,125 +1,76 @@
-.class public final Lr10;
+.class public final synthetic Lr10;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-
-# static fields
-.field public static final p:Lr10;
+# interfaces
+.implements Landroid/view/View$OnLongClickListener;
 
 
 # instance fields
-.field public final a:J
-
-.field public final b:Ljava/lang/String;
-
-.field public final c:I
-
-.field public final d:I
-
-.field public final e:Ljava/lang/String;
-
-.field public final f:Ljava/lang/String;
-
-.field public final g:Ljava/util/List;
-
-.field public final h:Ljava/lang/String;
-
-.field public final i:J
-
-.field public final j:I
-
-.field public final k:J
-
-.field public final l:Ljava/lang/String;
-
-.field public final m:Z
-
-.field public final n:I
-
-.field public final o:Ljava/lang/String;
+.field public final synthetic a:I
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public synthetic constructor <init>(I)V
+    .locals 0
 
-    new-instance v0, Lq10;
+    .line 1
+    iput p1, p0, Lr10;->a:I
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    invoke-virtual {v0}, Lq10;->a()Lr10;
-
-    move-result-object v0
-
-    sput-object v0, Lr10;->p:Lr10;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
-.method public constructor <init>(Lq10;)V
-    .locals 2
+.method public synthetic constructor <init>(Lyh0;Ljk6;Lt82;)V
+    .locals 0
+
+    .line 2
+    const/4 p1, 0x3
+
+    iput p1, p0, Lr10;->a:I
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iget-wide v0, p1, Lq10;->a:J
-
-    iput-wide v0, p0, Lr10;->a:J
-
-    iget-object v0, p1, Lq10;->d:Ljava/lang/String;
-
-    iput-object v0, p0, Lr10;->b:Ljava/lang/String;
-
-    iget v0, p1, Lq10;->b:I
-
-    iput v0, p0, Lr10;->c:I
-
-    iget v0, p1, Lq10;->c:I
-
-    iput v0, p0, Lr10;->d:I
-
-    iget-object v0, p1, Lq10;->f:Ljava/lang/String;
-
-    iput-object v0, p0, Lr10;->e:Ljava/lang/String;
-
-    iget-object v0, p1, Lq10;->g:Ljava/lang/String;
-
-    iput-object v0, p0, Lr10;->f:Ljava/lang/String;
-
-    iget-object v0, p1, Lq10;->i:Ljava/util/List;
-
-    iput-object v0, p0, Lr10;->g:Ljava/util/List;
-
-    iget-object v0, p1, Lq10;->h:Ljava/lang/String;
-
-    iput-object v0, p0, Lr10;->h:Ljava/lang/String;
-
-    iget-wide v0, p1, Lq10;->e:J
-
-    iput-wide v0, p0, Lr10;->i:J
-
-    iget v0, p1, Lq10;->j:I
-
-    iput v0, p0, Lr10;->j:I
-
-    iget-wide v0, p1, Lq10;->k:J
-
-    iput-wide v0, p0, Lr10;->k:J
-
-    iget-object v0, p1, Lq10;->l:Ljava/lang/String;
-
-    iput-object v0, p0, Lr10;->l:Ljava/lang/String;
-
-    iget-boolean v0, p1, Lq10;->m:Z
-
-    iput-boolean v0, p0, Lr10;->m:Z
-
-    iget v0, p1, Lq10;->n:I
-
-    iput v0, p0, Lr10;->n:I
-
-    iget-object p1, p1, Lq10;->o:Ljava/lang/String;
-
-    iput-object p1, p0, Lr10;->o:Ljava/lang/String;
-
     return-void
+.end method
+
+
+# virtual methods
+.method public final onLongClick(Landroid/view/View;)Z
+    .locals 0
+
+    iget p0, p0, Lr10;->a:I
+
+    const/4 p1, 0x1
+
+    packed-switch p0, :pswitch_data_0
+
+    return p1
+
+    :pswitch_0
+    sget-object p0, Lone/me/calllist/ui/callinfo/CallLinkInfoScreen;->A0:Les3;
+
+    const/4 p0, 0x0
+
+    return p0
+
+    :pswitch_1
+    sget p0, Lru/ok/messages/media/audio/AudioListenView;->B0:I
+
+    return p1
+
+    :pswitch_2
+    sget p0, Lru/ok/messages/media/attaches/AudioAttachView;->v0:I
+
+    return p1
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

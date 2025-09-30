@@ -1,123 +1,127 @@
-.class public abstract synthetic Lo4f;
-.super Ljava/lang/Object;
+.class public final Lo4f;
+.super Landroid/text/style/CharacterStyle;
 .source "SourceFile"
 
+# interfaces
+.implements Landroid/text/style/UpdateAppearance;
+.implements Lx3f;
 
-# static fields
-.field public static final synthetic $EnumSwitchMapping$0:[I
+
+# instance fields
+.field public final a:Lbc6;
+
+.field public b:I
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public constructor <init>(Lera;Lbc6;)V
+    .locals 0
+
+    invoke-direct {p0}, Landroid/text/style/CharacterStyle;-><init>()V
+
+    iput-object p2, p0, Lo4f;->a:Lbc6;
+
+    invoke-interface {p2, p1}, Lbc6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Ljava/lang/Number;
+
+    invoke-virtual {p1}, Ljava/lang/Number;->intValue()I
+
+    move-result p1
+
+    iput p1, p0, Lo4f;->b:I
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final equals(Ljava/lang/Object;)Z
     .locals 3
 
-    invoke-static {}, Ljava/util/concurrent/TimeUnit;->values()[Ljava/util/concurrent/TimeUnit;
+    const/4 v0, 0x1
 
-    move-result-object v0
+    if-ne p0, p1, :cond_0
 
-    array-length v0, v0
+    return v0
 
-    new-array v0, v0, [I
+    :cond_0
+    instance-of v1, p1, Lo4f;
 
-    :try_start_0
-    sget-object v1, Ljava/util/concurrent/TimeUnit;->NANOSECONDS:Ljava/util/concurrent/TimeUnit;
+    const/4 v2, 0x0
 
-    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
+    if-nez v1, :cond_1
 
-    move-result v1
+    return v2
 
-    const/4 v2, 0x1
+    :cond_1
+    iget p0, p0, Lo4f;->b:I
 
-    aput v2, v0, v1
-    :try_end_0
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
+    check-cast p1, Lo4f;
 
-    :catch_0
-    :try_start_1
-    sget-object v1, Ljava/util/concurrent/TimeUnit;->MICROSECONDS:Ljava/util/concurrent/TimeUnit;
+    iget p1, p1, Lo4f;->b:I
 
-    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
+    if-eq p0, p1, :cond_2
 
-    move-result v1
+    return v2
 
-    const/4 v2, 0x2
+    :cond_2
+    return v0
+.end method
 
-    aput v2, v0, v1
-    :try_end_1
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
+.method public final hashCode()I
+    .locals 1
 
-    :catch_1
-    :try_start_2
-    sget-object v1, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;
+    const-class v0, Lo4f;
 
-    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
 
-    move-result v1
+    move-result v0
 
-    const/4 v2, 0x3
+    iget p0, p0, Lo4f;->b:I
 
-    aput v2, v0, v1
-    :try_end_2
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_2
+    invoke-static {p0}, Ljava/lang/Integer;->hashCode(I)I
 
-    :catch_2
-    :try_start_3
-    sget-object v1, Ljava/util/concurrent/TimeUnit;->SECONDS:Ljava/util/concurrent/TimeUnit;
+    move-result p0
 
-    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
+    mul-int/lit8 p0, p0, 0x1f
 
-    move-result v1
+    add-int/2addr p0, v0
 
-    const/4 v2, 0x4
+    return p0
+.end method
 
-    aput v2, v0, v1
-    :try_end_3
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_3 .. :try_end_3} :catch_3
+.method public final onThemeChanged(Lera;)V
+    .locals 1
 
-    :catch_3
-    :try_start_4
-    sget-object v1, Ljava/util/concurrent/TimeUnit;->MINUTES:Ljava/util/concurrent/TimeUnit;
+    iget-object v0, p0, Lo4f;->a:Lbc6;
 
-    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
+    invoke-interface {v0, p1}, Lbc6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
-    move-result v1
+    move-result-object p1
 
-    const/4 v2, 0x5
+    check-cast p1, Ljava/lang/Number;
 
-    aput v2, v0, v1
-    :try_end_4
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_4 .. :try_end_4} :catch_4
+    invoke-virtual {p1}, Ljava/lang/Number;->intValue()I
 
-    :catch_4
-    :try_start_5
-    sget-object v1, Ljava/util/concurrent/TimeUnit;->HOURS:Ljava/util/concurrent/TimeUnit;
+    move-result p1
 
-    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
+    iput p1, p0, Lo4f;->b:I
 
-    move-result v1
+    return-void
+.end method
 
-    const/4 v2, 0x6
+.method public final updateDrawState(Landroid/text/TextPaint;)V
+    .locals 0
 
-    aput v2, v0, v1
-    :try_end_5
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_5 .. :try_end_5} :catch_5
+    if-eqz p1, :cond_0
 
-    :catch_5
-    :try_start_6
-    sget-object v1, Ljava/util/concurrent/TimeUnit;->DAYS:Ljava/util/concurrent/TimeUnit;
+    iget p0, p0, Lo4f;->b:I
 
-    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
+    invoke-virtual {p1, p0}, Landroid/graphics/Paint;->setColor(I)V
 
-    move-result v1
-
-    const/4 v2, 0x7
-
-    aput v2, v0, v1
-    :try_end_6
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_6 .. :try_end_6} :catch_6
-
-    :catch_6
-    sput-object v0, Lo4f;->$EnumSwitchMapping$0:[I
-
+    :cond_0
     return-void
 .end method

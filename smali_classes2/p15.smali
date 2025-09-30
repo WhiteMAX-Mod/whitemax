@@ -2,140 +2,121 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ljava/lang/Runnable;
-
 
 # instance fields
-.field public final synthetic a:Lq15;
+.field public final a:D
 
-.field public final synthetic b:I
+.field public final b:D
 
-.field public final synthetic c:I
+.field public final c:D
+
+.field public d:D
 
 
 # direct methods
-.method public constructor <init>(Lq15;II)V
+.method public constructor <init>(DDD)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lp15;->a:Lq15;
+    .line 2
+    iput-wide p1, p0, Lp15;->a:D
 
-    iput p2, p0, Lp15;->b:I
+    .line 3
+    iput-wide p3, p0, Lp15;->b:D
 
-    iput p3, p0, Lp15;->c:I
+    .line 4
+    iput-wide p5, p0, Lp15;->c:D
+
+    .line 5
+    iput-wide p5, p0, Lp15;->d:D
+
+    return-void
+.end method
+
+.method public synthetic constructor <init>(DDI)V
+    .locals 8
+
+    and-int/lit8 v0, p5, 0x2
+
+    if-eqz v0, :cond_0
+
+    move-wide v4, p1
+
+    goto :goto_0
+
+    :cond_0
+    move-wide v4, p3
+
+    :goto_0
+    and-int/lit8 p3, p5, 0x4
+
+    if-eqz p3, :cond_1
+
+    const-wide/high16 p3, 0x7ff8000000000000L    # Double.NaN
+
+    :goto_1
+    move-object v1, p0
+
+    move-wide v2, p1
+
+    move-wide v6, p3
+
+    goto :goto_2
+
+    :cond_1
+    const-wide/16 p3, 0x0
+
+    goto :goto_1
+
+    .line 6
+    :goto_2
+    invoke-direct/range {v1 .. v7}, Lp15;-><init>(DDD)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
-    .locals 5
+.method public final a(D)V
+    .locals 6
 
-    iget-object v0, p0, Lp15;->a:Lq15;
+    iget-wide v0, p0, Lp15;->d:D
 
-    iget-object v1, v0, Lq15;->a:Lm15;
+    invoke-static {v0, v1}, Ljava/lang/Double;->isNaN(D)Z
 
-    iget-object v2, v0, Lq15;->d:Lone/me/sdk/lists/widgets/EndlessRecyclerView2;
+    move-result v2
 
-    iget v3, p0, Lp15;->b:I
+    if-eqz v2, :cond_0
 
-    if-nez v3, :cond_0
-
-    iget p0, p0, Lp15;->c:I
+    goto :goto_1
 
     :cond_0
-    invoke-virtual {v2}, Lone/me/sdk/lists/widgets/EndlessRecyclerView2;->getLinearLayoutManager()Landroidx/recyclerview/widget/LinearLayoutManager;
+    cmpl-double v2, p1, v0
 
-    move-result-object p0
+    if-lez v2, :cond_1
 
-    invoke-virtual {p0}, Landroidx/recyclerview/widget/LinearLayoutManager;->X0()I
-
-    move-result p0
-
-    invoke-virtual {v2}, Landroidx/recyclerview/widget/RecyclerView;->getAdapter()Lgbc;
-
-    move-result-object v3
-
-    if-eqz v3, :cond_1
-
-    invoke-virtual {v3}, Lgbc;->j()I
-
-    move-result v3
+    iget-wide v2, p0, Lp15;->a:D
 
     goto :goto_0
 
     :cond_1
-    const/4 v3, 0x0
+    iget-wide v2, p0, Lp15;->b:D
 
     :goto_0
-    sub-int/2addr v3, p0
+    mul-double/2addr p1, v2
 
-    iget p0, v0, Lq15;->b:I
+    const-wide/high16 v4, 0x3ff0000000000000L    # 1.0
 
-    const/4 v4, 0x1
+    sub-double/2addr v4, v2
 
-    if-gt v3, p0, :cond_3
+    mul-double/2addr v4, v0
 
-    invoke-virtual {v2}, Lone/me/sdk/lists/widgets/EndlessRecyclerView2;->getIgnoreRefreshingFlagsForScrollEvent()Z
+    add-double/2addr p1, v4
 
-    move-result p0
+    :goto_1
+    iput-wide p1, p0, Lp15;->d:D
 
-    if-nez p0, :cond_2
-
-    iget-boolean p0, v2, Lone/me/sdk/lists/widgets/EndlessRecyclerView2;->X1:Z
-
-    if-nez p0, :cond_3
-
-    :cond_2
-    invoke-interface {v1}, Lm15;->m()Z
-
-    move-result p0
-
-    if-eqz p0, :cond_3
-
-    invoke-virtual {v2, v4}, Lone/me/sdk/lists/widgets/EndlessRecyclerView2;->setRefreshingNext(Z)V
-
-    invoke-interface {v1}, Lm15;->l()V
-
-    :cond_3
-    invoke-virtual {v2}, Lone/me/sdk/lists/widgets/EndlessRecyclerView2;->getLinearLayoutManager()Landroidx/recyclerview/widget/LinearLayoutManager;
-
-    move-result-object p0
-
-    invoke-virtual {p0}, Landroidx/recyclerview/widget/LinearLayoutManager;->V0()I
-
-    move-result p0
-
-    if-ltz p0, :cond_5
-
-    iget v0, v0, Lq15;->b:I
-
-    if-gt p0, v0, :cond_5
-
-    invoke-virtual {v2}, Lone/me/sdk/lists/widgets/EndlessRecyclerView2;->getIgnoreRefreshingFlagsForScrollEvent()Z
-
-    move-result p0
-
-    if-nez p0, :cond_4
-
-    iget-boolean p0, v2, Lone/me/sdk/lists/widgets/EndlessRecyclerView2;->Y1:Z
-
-    if-nez p0, :cond_5
-
-    :cond_4
-    invoke-interface {v1}, Lm15;->g()Z
-
-    move-result p0
-
-    if-eqz p0, :cond_5
-
-    invoke-virtual {v2, v4}, Lone/me/sdk/lists/widgets/EndlessRecyclerView2;->setRefreshingPrev(Z)V
-
-    invoke-interface {v1}, Lm15;->i()V
-
-    :cond_5
     return-void
 .end method

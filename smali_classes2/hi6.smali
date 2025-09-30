@@ -1,117 +1,98 @@
-.class public abstract synthetic Lhi6;
-.super Ljava/lang/Object;
+.class public final Lhi6;
+.super Lure;
 .source "SourceFile"
 
+# interfaces
+.implements Lpc6;
 
-# static fields
-.field public static final synthetic a:[I
 
-.field public static final synthetic b:[I
+# instance fields
+.field public final synthetic X:Ljava/lang/Object;
+
+.field public final synthetic Y:Ljava/lang/Long;
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public constructor <init>(Ljava/lang/Object;Lkotlin/coroutines/Continuation;Ljava/lang/Long;)V
+    .locals 0
+
+    iput-object p1, p0, Lhi6;->X:Ljava/lang/Object;
+
+    iput-object p3, p0, Lhi6;->Y:Ljava/lang/Long;
+
+    const/4 p1, 0x2
+
+    invoke-direct {p0, p1, p2}, Lure;-><init>(ILkotlin/coroutines/Continuation;)V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
+
+    check-cast p1, Ly04;
+
+    check-cast p2, Lkotlin/coroutines/Continuation;
+
+    invoke-virtual {p0, p1, p2}, Lhi6;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+
+    move-result-object p0
+
+    check-cast p0, Lhi6;
+
+    sget-object p1, Lylf;->a:Lylf;
+
+    invoke-virtual {p0, p1}, Lhi6;->o(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 1
+
+    new-instance p1, Lhi6;
+
+    iget-object v0, p0, Lhi6;->X:Ljava/lang/Object;
+
+    iget-object p0, p0, Lhi6;->Y:Ljava/lang/Long;
+
+    invoke-direct {p1, v0, p2, p0}, Lhi6;-><init>(Ljava/lang/Object;Lkotlin/coroutines/Continuation;Ljava/lang/Long;)V
+
+    return-object p1
+.end method
+
+.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 7
 
-    invoke-static {}, Lgmf;->values()[Lgmf;
+    invoke-static {p1}, Lqe5;->V(Ljava/lang/Object;)V
 
-    move-result-object v0
+    iget-object p1, p0, Lhi6;->X:Ljava/lang/Object;
 
-    array-length v0, v0
+    check-cast p1, Lxx8;
 
-    new-array v0, v0, [I
+    iget-object p1, p1, Lxx8;->a:Luz8;
 
-    sput-object v0, Lhi6;->b:[I
+    iget-wide v1, p1, Luz8;->r0:J
 
-    const/4 v1, 0x1
+    iget-wide v3, p1, Lli0;->a:J
 
-    const/4 v2, 0x0
+    iget-object p0, p0, Lhi6;->Y:Ljava/lang/Long;
 
-    :try_start_0
-    aput v1, v0, v2
-    :try_end_0
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
+    invoke-virtual {p0}, Ljava/lang/Long;->longValue()J
 
-    :catch_0
-    const/4 v0, 0x2
+    move-result-wide v5
 
-    :try_start_1
-    sget-object v3, Lhi6;->b:[I
+    new-instance v0, Lokd;
 
-    aput v0, v3, v1
-    :try_end_1
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
+    invoke-direct/range {v0 .. v6}, Lokd;-><init>(JJJ)V
 
-    :catch_1
-    const/4 v3, 0x3
+    new-instance p0, Lpkd;
 
-    :try_start_2
-    sget-object v4, Lhi6;->b:[I
+    invoke-direct {p0, v0}, Lpkd;-><init>(Lokd;)V
 
-    aput v3, v4, v3
-    :try_end_2
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_2
-
-    :catch_2
-    const/4 v4, 0x4
-
-    :try_start_3
-    sget-object v5, Lhi6;->b:[I
-
-    aput v4, v5, v4
-    :try_end_3
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_3 .. :try_end_3} :catch_3
-
-    :catch_3
-    :try_start_4
-    sget-object v5, Lhi6;->b:[I
-
-    const/4 v6, 0x5
-
-    aput v6, v5, v0
-    :try_end_4
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_4 .. :try_end_4} :catch_4
-
-    :catch_4
-    invoke-static {}, Lbd8;->values()[Lbd8;
-
-    move-result-object v5
-
-    array-length v5, v5
-
-    new-array v5, v5, [I
-
-    sput-object v5, Lhi6;->a:[I
-
-    :try_start_5
-    aput v1, v5, v2
-    :try_end_5
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_5 .. :try_end_5} :catch_5
-
-    :catch_5
-    :try_start_6
-    sget-object v2, Lhi6;->a:[I
-
-    aput v0, v2, v1
-    :try_end_6
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_6 .. :try_end_6} :catch_6
-
-    :catch_6
-    :try_start_7
-    sget-object v1, Lhi6;->a:[I
-
-    aput v3, v1, v0
-    :try_end_7
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_7 .. :try_end_7} :catch_7
-
-    :catch_7
-    :try_start_8
-    sget-object v0, Lhi6;->a:[I
-
-    aput v4, v0, v3
-    :try_end_8
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_8 .. :try_end_8} :catch_8
-
-    :catch_8
-    return-void
+    return-object p0
 .end method

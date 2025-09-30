@@ -1,193 +1,215 @@
-.class public final synthetic Lqg4;
+.class public final Lqg4;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ljava/lang/Runnable;
-
 
 # instance fields
-.field public final synthetic a:I
+.field public final a:Lhb4;
 
-.field public final synthetic b:Lrg4;
+.field public final b:J
+
+.field public final c:J
+
+.field public final d:J
+
+.field public final e:J
+
+.field public final f:I
+
+.field public final g:J
+
+.field public h:I
+
+.field public i:Z
 
 
 # direct methods
-.method public synthetic constructor <init>(Lrg4;I)V
-    .locals 0
-
-    iput p2, p0, Lqg4;->a:I
-
-    iput-object p1, p0, Lqg4;->b:Lrg4;
+.method public constructor <init>(Lhb4;IIII)V
+    .locals 5
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    const-string v0, "bufferForPlaybackMs"
+
+    const/4 v1, 0x0
+
+    const-string v2, "0"
+
+    invoke-static {v0, p4, v1, v2}, Lqg4;->a(Ljava/lang/String;IILjava/lang/String;)V
+
+    const-string v3, "bufferForPlaybackAfterRebufferMs"
+
+    invoke-static {v3, p5, v1, v2}, Lqg4;->a(Ljava/lang/String;IILjava/lang/String;)V
+
+    const-string v4, "minBufferMs"
+
+    invoke-static {v4, p2, p4, v0}, Lqg4;->a(Ljava/lang/String;IILjava/lang/String;)V
+
+    invoke-static {v4, p2, p5, v3}, Lqg4;->a(Ljava/lang/String;IILjava/lang/String;)V
+
+    const-string v0, "maxBufferMs"
+
+    invoke-static {v0, p3, p2, v4}, Lqg4;->a(Ljava/lang/String;IILjava/lang/String;)V
+
+    const-string v0, "backBufferDurationMs"
+
+    invoke-static {v0, v1, v1, v2}, Lqg4;->a(Ljava/lang/String;IILjava/lang/String;)V
+
+    iput-object p1, p0, Lqg4;->a:Lhb4;
+
+    int-to-long p1, p2
+
+    invoke-static {p1, p2}, Llrf;->B(J)J
+
+    move-result-wide p1
+
+    iput-wide p1, p0, Lqg4;->b:J
+
+    int-to-long p1, p3
+
+    invoke-static {p1, p2}, Llrf;->B(J)J
+
+    move-result-wide p1
+
+    iput-wide p1, p0, Lqg4;->c:J
+
+    int-to-long p1, p4
+
+    invoke-static {p1, p2}, Llrf;->B(J)J
+
+    move-result-wide p1
+
+    iput-wide p1, p0, Lqg4;->d:J
+
+    int-to-long p1, p5
+
+    invoke-static {p1, p2}, Llrf;->B(J)J
+
+    move-result-wide p1
+
+    iput-wide p1, p0, Lqg4;->e:J
+
+    const/4 p1, -0x1
+
+    iput p1, p0, Lqg4;->f:I
+
+    const/high16 p1, 0xc80000
+
+    iput p1, p0, Lqg4;->h:I
+
+    int-to-long p1, v1
+
+    invoke-static {p1, p2}, Llrf;->B(J)J
+
+    move-result-wide p1
+
+    iput-wide p1, p0, Lqg4;->g:J
+
+    return-void
+.end method
+
+.method public static a(Ljava/lang/String;IILjava/lang/String;)V
+    .locals 1
+
+    if-lt p1, p2, :cond_0
+
+    const/4 p1, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    const/4 p1, 0x0
+
+    :goto_0
+    invoke-virtual {p0}, Ljava/lang/String;->length()I
+
+    move-result p2
+
+    add-int/lit8 p2, p2, 0x15
+
+    invoke-virtual {p3}, Ljava/lang/String;->length()I
+
+    move-result v0
+
+    add-int/2addr v0, p2
+
+    new-instance p2, Ljava/lang/StringBuilder;
+
+    invoke-direct {p2, v0}, Ljava/lang/StringBuilder;-><init>(I)V
+
+    invoke-virtual {p2, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string p0, " cannot be less than "
+
+    invoke-virtual {p2, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p2, p3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-static {p0, p1}, Lxnd;->j(Ljava/lang/String;Z)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
-    .locals 7
+.method public final b(Z)V
+    .locals 2
 
-    iget v0, p0, Lqg4;->a:I
+    iget v0, p0, Lqg4;->f:I
 
-    iget-object p0, p0, Lqg4;->b:Lrg4;
+    const/4 v1, -0x1
 
-    packed-switch v0, :pswitch_data_0
+    if-ne v0, v1, :cond_0
 
-    iget v0, p0, Lrg4;->Z:I
+    const/high16 v0, 0xc80000
 
-    if-nez v0, :cond_1
+    :cond_0
+    iput v0, p0, Lqg4;->h:I
 
-    const/4 v0, 0x1
+    const/4 v0, 0x0
 
-    iput v0, p0, Lrg4;->Z:I
+    iput-boolean v0, p0, Lqg4;->i:Z
 
-    invoke-static {}, Lfc2;->p()Lfc2;
+    if-eqz p1, :cond_2
 
-    move-result-object v0
+    iget-object p0, p0, Lqg4;->a:Lhb4;
 
-    sget-object v1, Lrg4;->t0:Ljava/lang/String;
-
-    new-instance v2, Ljava/lang/StringBuilder;
-
-    const-string v3, "onAllConstraintsMet for "
-
-    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v3, p0, Lrg4;->c:Lp8g;
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Lfc2;->g(Ljava/lang/String;Ljava/lang/String;)V
-
-    iget-object v0, p0, Lrg4;->o:Lzfe;
-
-    iget-object v0, v0, Lzfe;->o:Lh7b;
-
-    iget-object v1, p0, Lrg4;->s0:Liyd;
-
-    const/4 v2, 0x0
-
-    invoke-virtual {v0, v1, v2}, Lh7b;->h(Liyd;Lod;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Lrg4;->o:Lzfe;
-
-    iget-object v0, v0, Lzfe;->c:Lr9g;
-
-    iget-object v1, p0, Lrg4;->c:Lp8g;
-
-    const-string v2, "Starting timer for "
-
-    iget-object v3, v0, Lr9g;->d:Ljava/lang/Object;
-
-    monitor-enter v3
+    monitor-enter p0
 
     :try_start_0
-    invoke-static {}, Lfc2;->p()Lfc2;
+    iget-boolean p1, p0, Lhb4;->e:Z
 
-    move-result-object v4
+    if-eqz p1, :cond_1
 
-    sget-object v5, Lr9g;->e:Ljava/lang/String;
-
-    new-instance v6, Ljava/lang/StringBuilder;
-
-    invoke-direct {v6, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v6, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v6}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {v4, v5, v2}, Lfc2;->g(Ljava/lang/String;Ljava/lang/String;)V
-
-    invoke-virtual {v0, v1}, Lr9g;->a(Lp8g;)V
-
-    new-instance v2, Lq9g;
-
-    invoke-direct {v2, v0, v1}, Lq9g;-><init>(Lr9g;Lp8g;)V
-
-    iget-object v4, v0, Lr9g;->b:Ljava/util/HashMap;
-
-    invoke-virtual {v4, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    iget-object v4, v0, Lr9g;->c:Ljava/util/HashMap;
-
-    invoke-virtual {v4, v1, p0}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    iget-object p0, v0, Lr9g;->a:Lly4;
-
-    iget-object p0, p0, Lly4;->b:Ljava/lang/Object;
-
-    check-cast p0, Landroid/os/Handler;
-
-    const-wide/32 v0, 0x927c0
-
-    invoke-virtual {p0, v2, v0, v1}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
-
-    monitor-exit v3
+    invoke-virtual {p0, v0}, Lhb4;->b(I)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     goto :goto_0
 
     :catchall_0
-    move-exception p0
+    move-exception p1
 
-    monitor-exit v3
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    throw p0
-
-    :cond_0
-    invoke-virtual {p0}, Lrg4;->b()V
-
-    goto :goto_0
+    goto :goto_1
 
     :cond_1
-    invoke-static {}, Lfc2;->p()Lfc2;
-
-    move-result-object v0
-
-    sget-object v1, Lrg4;->t0:Ljava/lang/String;
-
-    new-instance v2, Ljava/lang/StringBuilder;
-
-    const-string v3, "Already started work for "
-
-    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object p0, p0, Lrg4;->c:Lp8g;
-
-    invoke-virtual {v2, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    invoke-virtual {v0, v1, p0}, Lfc2;->g(Ljava/lang/String;Ljava/lang/String;)V
-
     :goto_0
-    return-void
-
-    :pswitch_0
-    invoke-static {p0}, Lrg4;->a(Lrg4;)V
+    monitor-exit p0
 
     return-void
 
-    nop
+    :goto_1
+    :try_start_1
+    monitor-exit p0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    throw p1
+
+    :cond_2
+    return-void
 .end method

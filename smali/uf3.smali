@@ -1,117 +1,75 @@
 .class public final Luf3;
-.super Lqde;
+.super Lw2;
 .source "SourceFile"
-
-# interfaces
-.implements Ll66;
 
 
 # instance fields
-.field public synthetic X:Ljava/lang/Object;
+.field public final a:Lpc6;
 
-.field public final synthetic Y:Lone/me/calls/ui/bottomsheet/opponent/ConfirmRemoveOpponentToCallBottomSheet;
+.field public final synthetic b:Lvf3;
 
 
 # direct methods
-.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/calls/ui/bottomsheet/opponent/ConfirmRemoveOpponentToCallBottomSheet;)V
+.method public constructor <init>(Lvf3;Lpc6;)V
     .locals 0
 
-    iput-object p2, p0, Luf3;->Y:Lone/me/calls/ui/bottomsheet/opponent/ConfirmRemoveOpponentToCallBottomSheet;
+    iput-object p1, p0, Luf3;->b:Lvf3;
 
-    const/4 p2, 0x2
+    invoke-direct {p0}, Ljava/util/AbstractSet;-><init>()V
 
-    invoke-direct {p0, p2, p1}, Lqde;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-object p2, p0, Luf3;->a:Lpc6;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+.method public final add(Ljava/lang/Object;)Z
     .locals 0
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    sget-object p0, Lwf3;->a:Lkotlinx/coroutines/internal/Symbol;
 
-    invoke-virtual {p0, p1, p2}, Luf3;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    new-instance p0, Ljava/lang/UnsupportedOperationException;
 
-    move-result-object p0
+    const-string p1, "not implemented"
 
-    check-cast p0, Luf3;
+    invoke-direct {p0, p1}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
 
-    sget-object p1, Le5f;->a:Le5f;
-
-    invoke-virtual {p0, p1}, Luf3;->o(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p1
+    throw p0
 .end method
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 1
+.method public final getSize()I
+    .locals 0
 
-    new-instance v0, Luf3;
+    iget-object p0, p0, Luf3;->b:Lvf3;
 
-    iget-object p0, p0, Luf3;->Y:Lone/me/calls/ui/bottomsheet/opponent/ConfirmRemoveOpponentToCallBottomSheet;
+    invoke-virtual {p0}, Lvf3;->getSize()I
 
-    invoke-direct {v0, p2, p0}, Luf3;-><init>(Lkotlin/coroutines/Continuation;Lone/me/calls/ui/bottomsheet/opponent/ConfirmRemoveOpponentToCallBottomSheet;)V
+    move-result p0
 
-    iput-object p1, v0, Luf3;->X:Ljava/lang/Object;
-
-    return-object v0
+    return p0
 .end method
 
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final iterator()Ljava/util/Iterator;
     .locals 2
 
-    invoke-static {p1}, Lsgg;->Z(Ljava/lang/Object;)V
+    sget-object v0, Lvf3;->c:Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;
 
-    iget-object p1, p0, Luf3;->X:Ljava/lang/Object;
+    iget-object v1, p0, Luf3;->b:Lvf3;
 
-    check-cast p1, Lkl9;
-
-    instance-of v0, p1, Lmj1;
-
-    if-eqz v0, :cond_0
-
-    iget-object p0, p0, Luf3;->Y:Lone/me/calls/ui/bottomsheet/opponent/ConfirmRemoveOpponentToCallBottomSheet;
-
-    iget-object v0, p0, Lone/me/calls/ui/bottomsheet/opponent/ConfirmRemoveOpponentToCallBottomSheet;->v0:Ljava/lang/Object;
-
-    invoke-interface {v0}, Lje7;->getValue()Ljava/lang/Object;
+    invoke-virtual {v0, v1}, Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lgmd;
-
-    check-cast p1, Lmj1;
-
-    iget-object v1, p0, Lone/me/calls/ui/bottomsheet/opponent/ConfirmRemoveOpponentToCallBottomSheet;->w0:Ljava/lang/Object;
-
-    invoke-interface {v1}, Lje7;->getValue()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Ljava/lang/Number;
-
-    invoke-virtual {v1}, Ljava/lang/Number;->intValue()I
-
-    move-result v1
+    check-cast v0, Lsf3;
 
     invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    new-instance v0, Lemd;
+    new-instance v1, Lrf3;
 
-    invoke-direct {v0, p0, p1, v1}, Lemd;-><init>(Lone/me/sdk/arch/Widget;Lmj1;I)V
+    iget-object p0, p0, Luf3;->a:Lpc6;
 
-    sget-object p1, Lui1;->b:Lui1;
+    invoke-direct {v1, v0, p0}, Lrf3;-><init>(Lsf3;Lpc6;)V
 
-    invoke-static {p1, v0}, Lgmd;->b(Lui1;Lv56;)V
-
-    const/4 p1, 0x1
-
-    invoke-virtual {p0, p1}, Lone/me/sdk/bottomsheet/BaseBottomSheetWidget;->v0(Z)V
-
-    :cond_0
-    sget-object p0, Le5f;->a:Le5f;
-
-    return-object p0
+    return-object v1
 .end method

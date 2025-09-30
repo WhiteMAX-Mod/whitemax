@@ -1,197 +1,61 @@
 .class public final Ltsf;
-.super Ljava/lang/Object;
+.super Landroid/graphics/drawable/Drawable$ConstantState;
 .source "SourceFile"
-
-# interfaces
-.implements La0d;
 
 
 # instance fields
-.field public final a:Lssf;
+.field public a:I
 
-.field public final b:I
+.field public b:Lssf;
 
-.field public final c:J
+.field public c:Landroid/content/res/ColorStateList;
 
-.field public final d:J
+.field public d:Landroid/graphics/PorterDuff$Mode;
 
-.field public final e:J
+.field public e:Z
 
+.field public f:Landroid/graphics/Bitmap;
 
-# direct methods
-.method public constructor <init>(Lssf;IJJ)V
-    .locals 6
+.field public g:Landroid/content/res/ColorStateList;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+.field public h:Landroid/graphics/PorterDuff$Mode;
 
-    iput-object p1, p0, Ltsf;->a:Lssf;
+.field public i:I
 
-    iput p2, p0, Ltsf;->b:I
+.field public j:Z
 
-    iput-wide p3, p0, Ltsf;->c:J
+.field public k:Z
 
-    sub-long/2addr p5, p3
-
-    iget p3, p1, Lssf;->c:I
-
-    int-to-long p3, p3
-
-    div-long/2addr p5, p3
-
-    iput-wide p5, p0, Ltsf;->d:J
-
-    int-to-long p2, p2
-
-    mul-long v0, p5, p2
-
-    iget p1, p1, Lssf;->b:I
-
-    int-to-long v4, p1
-
-    const-wide/32 v2, 0xf4240
-
-    invoke-static/range {v0 .. v5}, Lnaf;->H(JJJ)J
-
-    move-result-wide p1
-
-    iput-wide p1, p0, Ltsf;->e:J
-
-    return-void
-.end method
+.field public l:Landroid/graphics/Paint;
 
 
 # virtual methods
-.method public final c()Z
+.method public getChangingConfigurations()I
     .locals 0
 
-    const/4 p0, 0x1
+    iget p0, p0, Ltsf;->a:I
 
     return p0
 .end method
 
-.method public final e(J)Lyzc;
-    .locals 23
+.method public final newDrawable()Landroid/graphics/drawable/Drawable;
+    .locals 1
 
-    move-object/from16 v0, p0
+    .line 1
+    new-instance v0, Lvsf;
 
-    iget-object v1, v0, Ltsf;->a:Lssf;
+    invoke-direct {v0, p0}, Lvsf;-><init>(Ltsf;)V
 
-    iget v2, v1, Lssf;->b:I
-
-    int-to-long v2, v2
-
-    mul-long v2, v2, p1
-
-    iget v4, v0, Ltsf;->b:I
-
-    int-to-long v5, v4
-
-    const-wide/32 v7, 0xf4240
-
-    mul-long/2addr v5, v7
-
-    div-long v7, v2, v5
-
-    iget-wide v2, v0, Ltsf;->d:J
-
-    const-wide/16 v5, 0x1
-
-    sub-long v11, v2, v5
-
-    const-wide/16 v9, 0x0
-
-    invoke-static/range {v7 .. v12}, Lnaf;->j(JJJ)J
-
-    move-result-wide v2
-
-    iget v7, v1, Lssf;->c:I
-
-    int-to-long v8, v7
-
-    mul-long/2addr v8, v2
-
-    iget-wide v13, v0, Ltsf;->c:J
-
-    add-long/2addr v8, v13
-
-    move-wide v15, v5
-
-    int-to-long v5, v4
-
-    mul-long v17, v2, v5
-
-    iget v0, v1, Lssf;->b:I
-
-    int-to-long v5, v0
-
-    const-wide/32 v19, 0xf4240
-
-    move-wide/from16 v21, v5
-
-    invoke-static/range {v17 .. v22}, Lnaf;->H(JJJ)J
-
-    move-result-wide v5
-
-    new-instance v0, Le0d;
-
-    invoke-direct {v0, v5, v6, v8, v9}, Le0d;-><init>(JJ)V
-
-    cmp-long v5, v5, p1
-
-    if-gez v5, :cond_1
-
-    cmp-long v5, v2, v11
-
-    if-nez v5, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    add-long/2addr v2, v15
-
-    int-to-long v5, v7
-
-    mul-long/2addr v5, v2
-
-    add-long/2addr v5, v13
-
-    int-to-long v7, v4
-
-    mul-long v9, v2, v7
-
-    iget v1, v1, Lssf;->b:I
-
-    int-to-long v13, v1
-
-    const-wide/32 v11, 0xf4240
-
-    invoke-static/range {v9 .. v14}, Lnaf;->H(JJJ)J
-
-    move-result-wide v1
-
-    new-instance v3, Le0d;
-
-    invoke-direct {v3, v1, v2, v5, v6}, Le0d;-><init>(JJ)V
-
-    new-instance v1, Lyzc;
-
-    invoke-direct {v1, v0, v3}, Lyzc;-><init>(Le0d;Le0d;)V
-
-    return-object v1
-
-    :cond_1
-    :goto_0
-    new-instance v1, Lyzc;
-
-    invoke-direct {v1, v0, v0}, Lyzc;-><init>(Le0d;Le0d;)V
-
-    return-object v1
+    return-object v0
 .end method
 
-.method public final f()J
-    .locals 2
+.method public final newDrawable(Landroid/content/res/Resources;)Landroid/graphics/drawable/Drawable;
+    .locals 0
 
-    iget-wide v0, p0, Ltsf;->e:J
+    .line 2
+    new-instance p1, Lvsf;
 
-    return-wide v0
+    invoke-direct {p1, p0}, Lvsf;-><init>(Ltsf;)V
+
+    return-object p1
 .end method

@@ -1,96 +1,41 @@
-.class public final synthetic Ldq;
-.super Ljava/lang/Object;
+.class public final Ldq;
+.super Lcb4;
 .source "SourceFile"
 
-# interfaces
-.implements Landroid/view/View$OnClickListener;
 
+# static fields
+.field public static final b:Ldq;
 
-# instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Ljfa;
-
-.field public final synthetic c:Landroid/widget/TextView;
+.field public static final c:Lxa4;
 
 
 # direct methods
-.method public synthetic constructor <init>(Ljfa;Landroid/widget/TextView;I)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 6
 
-    iput p3, p0, Ldq;->a:I
+    new-instance v0, Ldq;
 
-    iput-object p1, p0, Ldq;->b:Ljfa;
+    invoke-direct {v0}, Lcb4;-><init>()V
 
-    iput-object p2, p0, Ldq;->c:Landroid/widget/TextView;
+    sput-object v0, Ldq;->b:Ldq;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/4 v1, 0x0
 
-    return-void
-.end method
+    new-array v2, v1, [Ljava/lang/String;
 
+    const/16 v5, 0xe
 
-# virtual methods
-.method public final onClick(Landroid/view/View;)V
-    .locals 3
+    const/4 v4, 0x0
 
-    iget p1, p0, Ldq;->a:I
+    const-string v1, ":settings/appearance"
 
-    sget-object v0, Lyi6;->o:Lyi6;
+    const/4 v3, 0x0
 
-    const/high16 v1, 0x3f800000    # 1.0f
+    invoke-static/range {v0 .. v5}, Lcb4;->a(Lcb4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;II)Lxa4;
 
-    iget-object v2, p0, Ldq;->c:Landroid/widget/TextView;
+    move-result-object v0
 
-    iget-object p0, p0, Ldq;->b:Ljfa;
-
-    packed-switch p1, :pswitch_data_0
-
-    sget-object p1, Lone/me/appearancesettings/singletheme/AppearanceSettingsScreen;->Z:[Lbc7;
-
-    invoke-virtual {p0}, Ljfa;->getValue()F
-
-    move-result p1
-
-    cmpg-float p1, p1, v1
-
-    if-nez p1, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    invoke-static {v2, v0}, Ln1c;->s(Landroid/view/View;Laj6;)Z
-
-    :goto_0
-    invoke-virtual {p0, v1}, Ljfa;->setValue(F)V
+    sput-object v0, Ldq;->c:Lxa4;
 
     return-void
-
-    :pswitch_0
-    sget-object p1, Lone/me/appearancesettings/multitheme/AppearanceSettingsMultiThemeScreen;->o0:[Lbc7;
-
-    invoke-virtual {p0}, Ljfa;->getValue()F
-
-    move-result p1
-
-    cmpg-float p1, p1, v1
-
-    if-nez p1, :cond_1
-
-    goto :goto_1
-
-    :cond_1
-    invoke-static {v2, v0}, Ln1c;->s(Landroid/view/View;Laj6;)Z
-
-    :goto_1
-    invoke-virtual {p0, v1}, Ljfa;->setValue(F)V
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
 .end method

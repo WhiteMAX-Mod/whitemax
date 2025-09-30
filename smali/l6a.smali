@@ -1,301 +1,93 @@
-.class public abstract Ll6a;
-.super Ljava/lang/Object;
+.class public final Ll6a;
+.super Ly4a;
 .source "SourceFile"
 
+# interfaces
+.implements Lype;
 
-# static fields
-.field public static final A:I
 
-.field public static final B:I
-
-.field public static final C:I
-
-.field public static final D:I
-
-.field public static final E:I
-
-.field public static final F:I
-
-.field public static final G:I
-
-.field public static final H:I
-
-.field public static final I:I
-
-.field public static final J:I
-
-.field public static final K:I
-
-.field public static final L:I
-
-.field public static final M:I
-
-.field public static final N:I
-
-.field public static final O:I
-
-.field public static final P:I
-
-.field public static final Q:I
-
-.field public static final R:I
-
-.field public static final S:I
-
-.field public static final T:I
-
-.field public static final U:I
-
-.field public static final V:I
-
-.field public static final a:I
-
-.field public static final b:I
-
-.field public static final c:I
-
-.field public static final d:I
-
-.field public static final e:I
-
-.field public static final f:I
-
-.field public static final g:I
-
-.field public static final h:I
-
-.field public static final i:I
-
-.field public static final j:I
-
-.field public static final k:I
-
-.field public static final l:I
-
-.field public static final m:I
-
-.field public static final n:I
-
-.field public static final o:I
-
-.field public static final p:I
-
-.field public static final q:I
-
-.field public static final r:I
-
-.field public static final s:I
-
-.field public static final t:I
-
-.field public static final u:I
-
-.field public static final v:I
-
-.field public static final w:I
-
-.field public static final x:I
-
-.field public static final y:I
-
-.field public static final z:I
+# instance fields
+.field public final a:Lo5;
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public constructor <init>(Lo5;)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Ll6a;->a:Lo5;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final get()Ljava/lang/Object;
     .locals 1
 
-    sget v0, Ldyb;->chat_screen__cancel:I
+    iget-object p0, p0, Ll6a;->a:Lo5;
 
-    sput v0, Ll6a;->a:I
+    invoke-virtual {p0}, Lo5;->call()Ljava/lang/Object;
 
-    sget v0, Ldyb;->chat_screen__leave_chat_action:I
+    move-result-object p0
 
-    sput v0, Ll6a;->b:I
+    sget-object v0, Ls95;->a:Lr95;
 
-    sget v0, Ldyb;->chat_screen__leave_chat_title:I
+    return-object p0
+.end method
 
-    sput v0, Ll6a;->c:I
+.method public final n(Ld8a;)V
+    .locals 2
 
-    sget v0, Ldyb;->chat_screen__remove_chat_action:I
+    new-instance v0, Luk4;
 
-    sput v0, Ll6a;->d:I
+    invoke-direct {v0, p1}, Luk4;-><init>(Ld8a;)V
 
-    sget v0, Ldyb;->chat_screen__remove_chat_title:I
+    invoke-interface {p1, v0}, Ld8a;->c(Loq4;)V
 
-    sput v0, Ll6a;->e:I
+    invoke-virtual {v0}, Luk4;->f()Z
 
-    sget v0, Ldyb;->chat_screen__search_result_down_button_accessibility:I
+    move-result v1
 
-    sput v0, Ll6a;->f:I
+    if-eqz v1, :cond_0
 
-    sget v0, Ldyb;->chat_screen__search_result_not_found:I
+    goto :goto_0
 
-    sput v0, Ll6a;->g:I
+    :cond_0
+    :try_start_0
+    iget-object p0, p0, Ll6a;->a:Lo5;
 
-    sget v0, Ldyb;->chat_screen__search_result_success:I
+    invoke-virtual {p0}, Lo5;->call()Ljava/lang/Object;
 
-    sput v0, Ll6a;->h:I
+    move-result-object p0
 
-    sget v0, Ldyb;->chat_screen__search_result_up_button_accessibility:I
+    sget-object p1, Ls95;->a:Lr95;
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    sput v0, Ll6a;->i:I
+    invoke-virtual {v0, p0}, Luk4;->d(Ljava/lang/Object;)V
 
-    sget v0, Ldyb;->chat_screen__start_chat_with_bot:I
+    return-void
 
-    sput v0, Ll6a;->j:I
+    :catchall_0
+    move-exception p0
 
-    sget v0, Ldyb;->chat_screen_channel_search_hint:I
+    invoke-static {p0}, Lzyd;->F(Ljava/lang/Throwable;)V
 
-    sput v0, Ll6a;->k:I
+    invoke-virtual {v0}, Luk4;->f()Z
 
-    sget v0, Ldyb;->chat_screen_file_too_big_caption:I
+    move-result v0
 
-    sput v0, Ll6a;->l:I
+    if-nez v0, :cond_1
 
-    sget v0, Ldyb;->chat_screen_file_too_big_title:I
+    invoke-interface {p1, p0}, Ld8a;->onError(Ljava/lang/Throwable;)V
 
-    sput v0, Ll6a;->m:I
+    goto :goto_0
 
-    sget v0, Ldyb;->chat_screen_join_channel:I
+    :cond_1
+    invoke-static {p0}, Ln4e;->D(Ljava/lang/Throwable;)V
 
-    sput v0, Ll6a;->n:I
-
-    sget v0, Ldyb;->chat_screen_join_chat:I
-
-    sput v0, Ll6a;->o:I
-
-    sget v0, Ldyb;->chat_screen_leave_chat:I
-
-    sput v0, Ll6a;->p:I
-
-    sget v0, Ldyb;->chat_screen_remove_chat:I
-
-    sput v0, Ll6a;->q:I
-
-    sget v0, Ldyb;->chat_screen_search_hint:I
-
-    sput v0, Ll6a;->r:I
-
-    sget v0, Ldyb;->chat_screen_status_mute_chat:I
-
-    sput v0, Ll6a;->s:I
-
-    sget v0, Ldyb;->chat_screen_status_subscribe_chat:I
-
-    sput v0, Ll6a;->t:I
-
-    sget v0, Ldyb;->chat_screen_status_unmute_chat:I
-
-    sput v0, Ll6a;->u:I
-
-    sget v0, Ldyb;->chat_screen_unblock_contact:I
-
-    sput v0, Ll6a;->v:I
-
-    sget v0, Ldyb;->media_bar_restricted_media_action:I
-
-    sput v0, Ll6a;->w:I
-
-    sget v0, Ldyb;->media_bar_restricted_media_subtitle:I
-
-    sput v0, Ll6a;->x:I
-
-    sget v0, Ldyb;->media_bar_restricted_media_title:I
-
-    sput v0, Ll6a;->y:I
-
-    sget v0, Ldyb;->media_type_picker__close_dialog__accept:I
-
-    sput v0, Ll6a;->z:I
-
-    sget v0, Ldyb;->media_type_picker__close_dialog__decline:I
-
-    sput v0, Ll6a;->A:I
-
-    sget v0, Ldyb;->media_type_picker__close_dialog__title:I
-
-    sput v0, Ll6a;->B:I
-
-    sget v0, Ldyb;->media_type_picker__contact:I
-
-    sput v0, Ll6a;->C:I
-
-    sget v0, Ldyb;->media_type_picker__file:I
-
-    sput v0, Ll6a;->D:I
-
-    sget v0, Ldyb;->media_type_picker__file_dialog__decline:I
-
-    sput v0, Ll6a;->E:I
-
-    sget v0, Ldyb;->media_type_picker__file_dialog__from_file_manager:I
-
-    sput v0, Ll6a;->F:I
-
-    sget v0, Ldyb;->media_type_picker__file_dialog__from_gallery:I
-
-    sput v0, Ll6a;->G:I
-
-    sget v0, Ldyb;->media_type_picker__file_dialog__title:I
-
-    sput v0, Ll6a;->H:I
-
-    sget v0, Ldyb;->media_type_picker__gallery:I
-
-    sput v0, Ll6a;->I:I
-
-    sget v0, Ldyb;->media_type_picker__input_hint:I
-
-    sput v0, Ll6a;->J:I
-
-    sget v0, Ldyb;->media_type_picker__money:I
-
-    sput v0, Ll6a;->K:I
-
-    sget v0, Ldyb;->media_type_picker__permissions_dialog__button:I
-
-    sput v0, Ll6a;->L:I
-
-    sget v0, Ldyb;->media_type_picker__permissions_dialog__camera_permission:I
-
-    sput v0, Ll6a;->M:I
-
-    sget v0, Ldyb;->media_type_picker__permissions_dialog__gallery_camera_subtitle:I
-
-    sput v0, Ll6a;->N:I
-
-    sget v0, Ldyb;->media_type_picker__permissions_dialog__gallery_camera_title:I
-
-    sput v0, Ll6a;->O:I
-
-    sget v0, Ldyb;->media_type_picker__permissions_dialog__gallery_subtitle:I
-
-    sput v0, Ll6a;->P:I
-
-    sget v0, Ldyb;->media_type_picker__permissions_dialog__gallery_title:I
-
-    sput v0, Ll6a;->Q:I
-
-    sget v0, Ldyb;->media_type_picker__permissions_dialog__subtitle:I
-
-    sput v0, Ll6a;->R:I
-
-    sget v0, Ldyb;->media_type_picker__permissions_dialog__title:I
-
-    sput v0, Ll6a;->S:I
-
-    sget v0, Ldyb;->media_type_picker__place:I
-
-    sput v0, Ll6a;->T:I
-
-    sget v0, Ldyb;->media_type_picker__snack_file:I
-
-    sput v0, Ll6a;->U:I
-
-    sget v0, Ldyb;->media_type_picker__snack_media:I
-
-    sput v0, Ll6a;->V:I
-
+    :goto_0
     return-void
 .end method

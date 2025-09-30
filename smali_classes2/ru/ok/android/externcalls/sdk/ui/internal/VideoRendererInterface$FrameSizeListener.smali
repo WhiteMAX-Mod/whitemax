@@ -23,7 +23,7 @@
         "",
         "width",
         "height",
-        "Le5f;",
+        "Lylf;",
         "onFrame",
         "(II)V",
         "calls-sdk_release"

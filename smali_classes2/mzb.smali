@@ -1,54 +1,158 @@
-.class public abstract Lmzb;
+.class public final Lmzb;
 .super Ljava/lang/Object;
+.source "SourceFile"
 
 
-# static fields
-.field public static oneme_startconversation_channel_add_subscribers_error:I = 0x7f1309de
+# instance fields
+.field public volatile a:Z
 
-.field public static oneme_startconversation_channel_create_error:I = 0x7f1309df
+.field public final b:Ljava/lang/Object;
 
-.field public static oneme_startconversation_channel_limit_add_subscribers_error:I = 0x7f1309e0
 
-.field public static oneme_startconversation_channel_select_subscribers_skip_button:I = 0x7f1309e1
+# direct methods
+.method public constructor <init>()V
+    .locals 1
 
-.field public static oneme_startconversation_channel_select_subscribers_toolbar_title:I = 0x7f1309e2
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-.field public static oneme_startconversation_title:I = 0x7f1309e3
+    const/4 v0, 0x0
 
-.field public static oneme_startconversations_chat_members:I = 0x7f1309e4
+    iput-boolean v0, p0, Lmzb;->a:Z
 
-.field public static oneme_startconversations_chat_titleicon_avatar_bottomsheet_title:I = 0x7f1309e5
+    new-instance v0, Ljava/lang/Object;
 
-.field public static oneme_startconversations_chat_titleicon_avatars_cancel_action:I = 0x7f1309e6
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-.field public static oneme_startconversations_chat_titleicon_avatars_load_from_gallery_action:I = 0x7f1309e7
+    iput-object v0, p0, Lmzb;->b:Ljava/lang/Object;
 
-.field public static oneme_startconversations_chat_titleicon_avatars_take_photo_action:I = 0x7f1309e8
+    return-void
+.end method
 
-.field public static oneme_startconversations_chat_titleicon_confirm_button_title:I = 0x7f1309e9
 
-.field public static oneme_startconversations_chat_titleicon_confirm_button_title_channel:I = 0x7f1309ea
+# virtual methods
+.method public final a()V
+    .locals 2
 
-.field public static oneme_startconversations_chat_titleicon_hint:I = 0x7f1309eb
+    iget-object v0, p0, Lmzb;->b:Ljava/lang/Object;
 
-.field public static oneme_startconversations_chat_titleicon_hint_channel:I = 0x7f1309ec
+    monitor-enter v0
 
-.field public static oneme_startconversations_chat_titleicon_input_description_hint:I = 0x7f1309ed
+    const/4 v1, 0x1
 
-.field public static oneme_startconversations_chat_titleicon_input_hint:I = 0x7f1309ee
+    :try_start_0
+    iput-boolean v1, p0, Lmzb;->a:Z
 
-.field public static oneme_startconversations_chat_titleicon_input_hint_channel:I = 0x7f1309ef
+    iget-object p0, p0, Lmzb;->b:Ljava/lang/Object;
 
-.field public static oneme_startconversations_chat_titleicon_toolbar_title:I = 0x7f1309f0
+    invoke-virtual {p0}, Ljava/lang/Object;->notify()V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-.field public static oneme_startconversations_chat_titleicon_toolbar_title_channel:I = 0x7f1309f1
+    monitor-exit v0
 
-.field public static oneme_startconversations_continue_create_chat:I = 0x7f1309f2
+    return-void
 
-.field public static oneme_startconversations_create_empty_chat:I = 0x7f1309f3
+    :catchall_0
+    move-exception p0
 
-.field public static oneme_startconversations_member_search_hint:I = 0x7f1309f4
+    monitor-exit v0
 
-.field public static oneme_startconversations_phonebook_section_header:I = 0x7f1309f5
+    throw p0
+.end method
 
-.field public static oneme_startconversations_search_hint:I = 0x7f1309f6
+.method public final b(J)V
+    .locals 5
+
+    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+
+    move-result-wide v0
+
+    add-long/2addr p1, v0
+
+    cmp-long v2, p1, v0
+
+    const/4 v3, 0x0
+
+    if-gez v2, :cond_1
+
+    iget-object p1, p0, Lmzb;->b:Ljava/lang/Object;
+
+    monitor-enter p1
+
+    :goto_0
+    :try_start_0
+    iget-boolean p2, p0, Lmzb;->a:Z
+
+    if-nez p2, :cond_0
+
+    iget-object p2, p0, Lmzb;->b:Ljava/lang/Object;
+
+    invoke-virtual {p2}, Ljava/lang/Object;->wait()V
+
+    goto :goto_0
+
+    :catchall_0
+    move-exception p0
+
+    goto :goto_1
+
+    :cond_0
+    iput-boolean v3, p0, Lmzb;->a:Z
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    monitor-exit p1
+
+    return-void
+
+    :goto_1
+    monitor-exit p1
+
+    throw p0
+
+    :cond_1
+    iget-object v2, p0, Lmzb;->b:Ljava/lang/Object;
+
+    monitor-enter v2
+
+    :goto_2
+    :try_start_1
+    iget-boolean v4, p0, Lmzb;->a:Z
+
+    if-nez v4, :cond_2
+
+    cmp-long v4, v0, p1
+
+    if-gez v4, :cond_2
+
+    iget-object v4, p0, Lmzb;->b:Ljava/lang/Object;
+
+    sub-long v0, p1, v0
+
+    invoke-virtual {v4, v0, v1}, Ljava/lang/Object;->wait(J)V
+
+    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+
+    move-result-wide v0
+
+    goto :goto_2
+
+    :catchall_1
+    move-exception p0
+
+    goto :goto_3
+
+    :cond_2
+    iput-boolean v3, p0, Lmzb;->a:Z
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_1
+
+    monitor-exit v2
+
+    return-void
+
+    :goto_3
+    monitor-exit v2
+
+    throw p0
+.end method

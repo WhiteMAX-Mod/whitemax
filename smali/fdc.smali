@@ -1,130 +1,107 @@
-.class public final Lfdc;
-.super Lhx6;
-.source "SourceFile"
+.class public abstract Lfdc;
+.super Ljava/lang/Object;
 
 
-# instance fields
-.field public final transient X:[Ljava/lang/Object;
+# static fields
+.field public static MapAttrs:[I = null
 
-.field public final transient Y:I
+.field public static MapAttrs_ambientEnabled:I = 0x0
 
-.field public final transient Z:I
+.field public static MapAttrs_backgroundColor:I = 0x1
 
-.field public final transient o:Lax6;
+.field public static MapAttrs_cameraBearing:I = 0x2
+
+.field public static MapAttrs_cameraMaxZoomPreference:I = 0x3
+
+.field public static MapAttrs_cameraMinZoomPreference:I = 0x4
+
+.field public static MapAttrs_cameraTargetLat:I = 0x5
+
+.field public static MapAttrs_cameraTargetLng:I = 0x6
+
+.field public static MapAttrs_cameraTilt:I = 0x7
+
+.field public static MapAttrs_cameraZoom:I = 0x8
+
+.field public static MapAttrs_latLngBoundsNorthEastLatitude:I = 0x9
+
+.field public static MapAttrs_latLngBoundsNorthEastLongitude:I = 0xa
+
+.field public static MapAttrs_latLngBoundsSouthWestLatitude:I = 0xb
+
+.field public static MapAttrs_latLngBoundsSouthWestLongitude:I = 0xc
+
+.field public static MapAttrs_liteMode:I = 0xd
+
+.field public static MapAttrs_mapColorScheme:I = 0xe
+
+.field public static MapAttrs_mapId:I = 0xf
+
+.field public static MapAttrs_mapType:I = 0x10
+
+.field public static MapAttrs_uiCompass:I = 0x11
+
+.field public static MapAttrs_uiMapToolbar:I = 0x12
+
+.field public static MapAttrs_uiRotateGestures:I = 0x13
+
+.field public static MapAttrs_uiScrollGestures:I = 0x14
+
+.field public static MapAttrs_uiScrollGesturesDuringRotateOrZoom:I = 0x15
+
+.field public static MapAttrs_uiTiltGestures:I = 0x16
+
+.field public static MapAttrs_uiZoomControls:I = 0x17
+
+.field public static MapAttrs_uiZoomGestures:I = 0x18
+
+.field public static MapAttrs_useViewLifecycle:I = 0x19
+
+.field public static MapAttrs_zOrderOnTop:I = 0x1a
 
 
 # direct methods
-.method public constructor <init>(Lax6;[Ljava/lang/Object;II)V
-    .locals 0
+.method public static constructor <clinit>()V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/util/AbstractCollection;-><init>()V
+    const/16 v0, 0x1b
 
-    iput-object p1, p0, Lfdc;->o:Lax6;
+    new-array v0, v0, [I
 
-    iput-object p2, p0, Lfdc;->X:[Ljava/lang/Object;
+    fill-array-data v0, :array_0
 
-    iput p3, p0, Lfdc;->Y:I
-
-    iput p4, p0, Lfdc;->Z:I
+    sput-object v0, Lfdc;->MapAttrs:[I
 
     return-void
-.end method
 
-
-# virtual methods
-.method public final b(I[Ljava/lang/Object;)I
-    .locals 0
-
-    invoke-virtual {p0}, Lhx6;->a()Lxw6;
-
-    move-result-object p0
-
-    invoke-virtual {p0, p1, p2}, Lxw6;->b(I[Ljava/lang/Object;)I
-
-    move-result p0
-
-    return p0
-.end method
-
-.method public final contains(Ljava/lang/Object;)Z
-    .locals 2
-
-    instance-of v0, p1, Ljava/util/Map$Entry;
-
-    const/4 v1, 0x0
-
-    if-eqz v0, :cond_0
-
-    check-cast p1, Ljava/util/Map$Entry;
-
-    invoke-interface {p1}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
-
-    move-result-object v0
-
-    invoke-interface {p1}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
-
-    move-result-object p1
-
-    if-eqz p1, :cond_0
-
-    iget-object p0, p0, Lfdc;->o:Lax6;
-
-    invoke-virtual {p0, v0}, Lax6;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    invoke-virtual {p1, p0}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
-
-    move-result p0
-
-    if-eqz p0, :cond_0
-
-    const/4 p0, 0x1
-
-    return p0
-
-    :cond_0
-    return v1
-.end method
-
-.method public final f()Z
-    .locals 0
-
-    const/4 p0, 0x1
-
-    return p0
-.end method
-
-.method public final g()Lm5f;
-    .locals 1
-
-    invoke-virtual {p0}, Lhx6;->a()Lxw6;
-
-    move-result-object p0
-
-    const/4 v0, 0x0
-
-    invoke-virtual {p0, v0}, Lxw6;->l(I)Las5;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public final k()Lxw6;
-    .locals 1
-
-    new-instance v0, Ledc;
-
-    invoke-direct {v0, p0}, Ledc;-><init>(Lfdc;)V
-
-    return-object v0
-.end method
-
-.method public final size()I
-    .locals 0
-
-    iget p0, p0, Lfdc;->Z:I
-
-    return p0
+    :array_0
+    .array-data 4
+        0x7f040040
+        0x7f04005c
+        0x7f0400b5
+        0x7f0400b6
+        0x7f0400b7
+        0x7f0400b8
+        0x7f0400b9
+        0x7f0400ba
+        0x7f0400bb
+        0x7f040590
+        0x7f040591
+        0x7f040592
+        0x7f040593
+        0x7f040604
+        0x7f04060b
+        0x7f04060c
+        0x7f04060d
+        0x7f0408c2
+        0x7f0408c3
+        0x7f0408c4
+        0x7f0408c5
+        0x7f0408c6
+        0x7f0408c7
+        0x7f0408c8
+        0x7f0408c9
+        0x7f0408d2
+        0x7f0408fa
+    .end array-data
 .end method

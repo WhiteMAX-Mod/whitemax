@@ -1,152 +1,188 @@
 .class public final Lyp4;
-.super Landroid/view/View;
+.super Ljava/lang/Thread;
 .source "SourceFile"
 
-# interfaces
-.implements Lppe;
+
+# static fields
+.field public static Y:I
 
 
 # instance fields
-.field public final a:Landroid/graphics/Paint;
+.field public final X:I
 
-.field public final b:Landroid/graphics/RectF;
+.field public volatile a:Landroid/os/Handler;
 
-.field public c:F
+.field public final b:Ljava/util/concurrent/CountDownLatch;
+
+.field public c:J
+
+.field public final o:I
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;)V
+.method public constructor <init>(Ljava/lang/String;)V
     .locals 2
 
-    invoke-direct {p0, p1}, Landroid/view/View;-><init>(Landroid/content/Context;)V
+    invoke-direct {p0}, Ljava/lang/Thread;-><init>()V
 
-    new-instance p1, Landroid/graphics/Paint;
+    const/4 v0, 0x0
 
-    invoke-direct {p1}, Landroid/graphics/Paint;-><init>()V
+    iput-object v0, p0, Lyp4;->a:Landroid/os/Handler;
 
-    iput-object p1, p0, Lyp4;->a:Landroid/graphics/Paint;
+    new-instance v0, Ljava/util/concurrent/CountDownLatch;
 
-    new-instance p1, Landroid/graphics/RectF;
+    const/4 v1, 0x1
 
-    invoke-direct {p1}, Landroid/graphics/RectF;-><init>()V
+    invoke-direct {v0, v1}, Ljava/util/concurrent/CountDownLatch;-><init>(I)V
 
-    iput-object p1, p0, Lyp4;->b:Landroid/graphics/RectF;
+    iput-object v0, p0, Lyp4;->b:Ljava/util/concurrent/CountDownLatch;
 
-    sget-object p1, Lqp4;->q0:Lap9;
+    sget v0, Lyp4;->Y:I
 
-    invoke-virtual {p1, p0}, Lap9;->h(Landroid/view/View;)Lyha;
+    add-int/lit8 v1, v0, 0x1
 
-    move-result-object p1
+    sput v1, Lyp4;->Y:I
 
-    invoke-virtual {p0, p1}, Lyp4;->onThemeChanged(Lyha;)V
+    iput v0, p0, Lyp4;->o:I
 
-    const/4 p1, 0x0
+    const/16 v0, -0x3e8
 
-    invoke-virtual {p0, p1}, Landroid/view/View;->setClickable(Z)V
+    iput v0, p0, Lyp4;->X:I
 
-    new-instance p1, Landroid/widget/FrameLayout$LayoutParams;
+    invoke-virtual {p0, p1}, Ljava/lang/Thread;->setName(Ljava/lang/String;)V
 
-    const/4 v0, -0x2
-
-    const/16 v1, 0x31
-
-    invoke-direct {p1, v0, v0, v1}, Landroid/widget/FrameLayout$LayoutParams;-><init>(III)V
-
-    invoke-virtual {p0, p1}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+    invoke-virtual {p0}, Ljava/lang/Thread;->start()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onDraw(Landroid/graphics/Canvas;)V
-    .locals 2
-
-    iget v0, p0, Lyp4;->c:F
-
-    iget-object v1, p0, Lyp4;->a:Landroid/graphics/Paint;
-
-    iget-object p0, p0, Lyp4;->b:Landroid/graphics/RectF;
-
-    invoke-virtual {p1, p0, v0, v0, v1}, Landroid/graphics/Canvas;->drawRoundRect(Landroid/graphics/RectF;FFLandroid/graphics/Paint;)V
-
-    return-void
-.end method
-
-.method public final onMeasure(II)V
-    .locals 2
-
-    invoke-static {}, Lgk4;->d()Landroid/content/res/Resources;
-
-    move-result-object p1
-
-    invoke-virtual {p1}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object p1
-
-    iget p1, p1, Landroid/util/DisplayMetrics;->density:F
-
-    const/high16 p2, 0x42200000    # 40.0f
-
-    mul-float/2addr p1, p2
-
-    invoke-static {}, Lgk4;->d()Landroid/content/res/Resources;
-
-    move-result-object p2
-
-    invoke-virtual {p2}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object p2
-
-    iget p2, p2, Landroid/util/DisplayMetrics;->density:F
-
-    const/high16 v0, 0x40800000    # 4.0f
-
-    mul-float/2addr p2, v0
-
-    iget-object v0, p0, Lyp4;->b:Landroid/graphics/RectF;
-
-    const/4 v1, 0x0
-
-    invoke-virtual {v0, v1, v1, p1, p2}, Landroid/graphics/RectF;->set(FFFF)V
-
-    invoke-virtual {v0}, Landroid/graphics/RectF;->centerY()F
-
-    move-result p1
-
-    iput p1, p0, Lyp4;->c:F
-
-    invoke-virtual {v0}, Landroid/graphics/RectF;->width()F
-
-    move-result p1
-
-    float-to-int p1, p1
-
-    invoke-virtual {v0}, Landroid/graphics/RectF;->height()F
-
-    move-result p2
-
-    float-to-int p2, p2
-
-    invoke-virtual {p0, p1, p2}, Landroid/view/View;->setMeasuredDimension(II)V
-
-    return-void
-.end method
-
-.method public final onThemeChanged(Lyha;)V
+.method public final a(Ljava/lang/Runnable;)V
     .locals 1
 
-    invoke-interface {p1}, Lyha;->getIcon()Lds6;
+    :try_start_0
+    iget-object v0, p0, Lyp4;->b:Ljava/util/concurrent/CountDownLatch;
+
+    invoke-virtual {v0}, Ljava/util/concurrent/CountDownLatch;->await()V
+
+    iget-object p0, p0, Lyp4;->a:Landroid/os/Handler;
+
+    invoke-virtual {p0, p1}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    return-void
+
+    :catch_0
+    move-exception p0
+
+    invoke-static {}, Lone/me/rlottie/RLottie;->getLogger()Lns9;
 
     move-result-object p1
 
-    iget p1, p1, Lds6;->h:I
+    invoke-interface {p1, p0}, Lns9;->F(Ljava/lang/Throwable;)V
 
-    iget-object v0, p0, Lyp4;->a:Landroid/graphics/Paint;
+    return-void
+.end method
 
-    invoke-virtual {v0, p1}, Landroid/graphics/Paint;->setColor(I)V
+.method public final b(Ljava/lang/Runnable;)V
+    .locals 2
 
-    invoke-virtual {p0}, Landroid/view/View;->invalidate()V
+    invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
+
+    move-result-wide v0
+
+    iput-wide v0, p0, Lyp4;->c:J
+
+    const-wide/16 v0, 0x0
+
+    invoke-virtual {p0, p1, v0, v1}, Lyp4;->c(Ljava/lang/Runnable;J)Z
+
+    return-void
+.end method
+
+.method public final c(Ljava/lang/Runnable;J)Z
+    .locals 2
+
+    :try_start_0
+    iget-object v0, p0, Lyp4;->b:Ljava/util/concurrent/CountDownLatch;
+
+    invoke-virtual {v0}, Ljava/util/concurrent/CountDownLatch;->await()V
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    goto :goto_0
+
+    :catch_0
+    move-exception v0
+
+    invoke-static {}, Lone/me/rlottie/RLottie;->getLogger()Lns9;
+
+    move-result-object v1
+
+    invoke-interface {v1, v0}, Lns9;->F(Ljava/lang/Throwable;)V
+
+    :goto_0
+    const-wide/16 v0, 0x0
+
+    cmp-long v0, p2, v0
+
+    if-gtz v0, :cond_0
+
+    iget-object p0, p0, Lyp4;->a:Landroid/os/Handler;
+
+    invoke-virtual {p0, p1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
+
+    move-result p0
+
+    return p0
+
+    :cond_0
+    iget-object p0, p0, Lyp4;->a:Landroid/os/Handler;
+
+    invoke-virtual {p0, p1, p2, p3}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
+
+    move-result p0
+
+    return p0
+.end method
+
+.method public final run()V
+    .locals 4
+
+    invoke-static {}, Landroid/os/Looper;->prepare()V
+
+    new-instance v0, Landroid/os/Handler;
+
+    invoke-static {}, Landroid/os/Looper;->myLooper()Landroid/os/Looper;
+
+    move-result-object v1
+
+    new-instance v2, Lcf3;
+
+    const/4 v3, 0x2
+
+    invoke-direct {v2, v3, p0}, Lcf3;-><init>(ILjava/lang/Object;)V
+
+    invoke-direct {v0, v1, v2}, Landroid/os/Handler;-><init>(Landroid/os/Looper;Landroid/os/Handler$Callback;)V
+
+    iput-object v0, p0, Lyp4;->a:Landroid/os/Handler;
+
+    iget-object v0, p0, Lyp4;->b:Ljava/util/concurrent/CountDownLatch;
+
+    invoke-virtual {v0}, Ljava/util/concurrent/CountDownLatch;->countDown()V
+
+    iget p0, p0, Lyp4;->X:I
+
+    const/16 v0, -0x3e8
+
+    if-eq p0, v0, :cond_0
+
+    invoke-static {p0}, Landroid/os/Process;->setThreadPriority(I)V
+
+    :cond_0
+    invoke-static {}, Landroid/os/Looper;->loop()V
 
     return-void
 .end method

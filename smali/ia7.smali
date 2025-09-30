@@ -1,248 +1,186 @@
-.class public abstract Lia7;
-.super Ljava/lang/Object;
+.class public final Lia7;
+.super Lsz6;
 .source "SourceFile"
 
 
-# static fields
-.field public static final c:Lha7;
-
-
 # instance fields
-.field public final a:Lka7;
+.field public final b:Ljava/lang/String;
 
-.field public final b:Lhd7;
+.field public final c:Ljava/lang/String;
+
+.field public final d:Ljava/lang/String;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 4
-
-    new-instance v0, Lha7;
-
-    new-instance v1, Lka7;
-
-    const/4 v2, 0x0
-
-    const/4 v3, 0x3
-
-    invoke-direct {v1, v3, v2, v2}, Lka7;-><init>(IZZ)V
-
-    invoke-direct {v0, v1}, Lia7;-><init>(Lka7;)V
-
-    sput-object v0, Lia7;->c:Lha7;
-
-    return-void
-.end method
-
-.method public constructor <init>(Lka7;)V
+.method public constructor <init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
     .locals 1
 
-    sget v0, Lsgg;->e:I
+    const-string v0, "----"
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, v0}, Lsz6;-><init>(Ljava/lang/String;)V
 
-    iput-object p1, p0, Lia7;->a:Lka7;
+    iput-object p1, p0, Lia7;->b:Ljava/lang/String;
 
-    new-instance p1, Lhd7;
+    iput-object p2, p0, Lia7;->c:Ljava/lang/String;
 
-    const/16 v0, 0xb
-
-    invoke-direct {p1, v0}, Lhd7;-><init>(I)V
-
-    iput-object p1, p0, Lia7;->b:Lhd7;
+    iput-object p3, p0, Lia7;->d:Ljava/lang/String;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Lcc7;Ljava/lang/String;)Ljava/lang/Object;
+.method public final equals(Ljava/lang/Object;)Z
     .locals 4
 
-    new-instance v0, Lnye;
+    const/4 v0, 0x1
 
-    invoke-direct {v0, p2}, Lnye;-><init>(Ljava/lang/String;)V
+    if-ne p0, p1, :cond_0
 
-    new-instance v1, Lnye;
+    return v0
 
-    sget-object v2, Ljag;->c:Ljag;
+    :cond_0
+    const/4 v1, 0x0
 
-    invoke-interface {p1}, Lcc7;->d()Lx4d;
+    if-eqz p1, :cond_2
+
+    const-class v2, Lia7;
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v3
 
-    invoke-direct {v1, p0, v2, v0, v3}, Lnye;-><init>(Lia7;Ljag;Lnye;Lx4d;)V
+    if-eq v2, v3, :cond_1
 
-    invoke-virtual {v1, p1}, Lnye;->B(Lcc7;)Ljava/lang/Object;
+    goto :goto_0
 
-    move-result-object p0
+    :cond_1
+    check-cast p1, Lia7;
 
-    invoke-virtual {v0}, Lnye;->p()B
+    iget-object v2, p0, Lia7;->c:Ljava/lang/String;
 
-    move-result p1
+    iget-object v3, p1, Lia7;->c:Ljava/lang/String;
 
-    const/16 v1, 0xa
+    invoke-static {v2, v3}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    if-ne p1, v1, :cond_0
+    move-result v2
 
-    return-object p0
+    if-eqz v2, :cond_2
 
-    :cond_0
-    new-instance p0, Ljava/lang/StringBuilder;
+    iget-object v2, p0, Lia7;->b:Ljava/lang/String;
 
-    const-string p1, "Expected EOF after parsing, but had "
+    iget-object v3, p1, Lia7;->b:Ljava/lang/String;
 
-    invoke-direct {p0, p1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-static {v2, v3}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    iget p1, v0, Lnye;->b:I
+    move-result v2
 
-    add-int/lit8 p1, p1, -0x1
+    if-eqz v2, :cond_2
 
-    invoke-virtual {p2, p1}, Ljava/lang/String;->charAt(I)C
+    iget-object p0, p0, Lia7;->d:Ljava/lang/String;
 
-    move-result p1
+    iget-object p1, p1, Lia7;->d:Ljava/lang/String;
 
-    invoke-virtual {p0, p1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+    invoke-static {p0, p1}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    const-string p1, " instead"
+    move-result p0
 
-    invoke-virtual {p0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    if-eqz p0, :cond_2
 
-    invoke-virtual {p0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    return v0
 
-    move-result-object p0
-
-    const/4 p1, 0x0
-
-    const/4 p2, 0x6
-
-    invoke-static {v0, p0, p1, p2}, Lnye;->I(Lnye;Ljava/lang/String;II)V
-
-    const/4 p0, 0x0
-
-    throw p0
+    :cond_2
+    :goto_0
+    return v1
 .end method
 
-.method public final b(Lcc7;Ljava/lang/Object;)Ljava/lang/String;
-    .locals 6
+.method public final hashCode()I
+    .locals 3
 
-    new-instance v0, Lnh0;
+    const/4 v0, 0x0
 
-    const/16 v1, 0x8
+    iget-object v1, p0, Lia7;->b:Ljava/lang/String;
 
-    const/4 v2, 0x0
+    if-eqz v1, :cond_0
 
-    invoke-direct {v0, v2, v1}, Lnh0;-><init>(CI)V
+    invoke-virtual {v1}, Ljava/lang/String;->hashCode()I
 
-    sget-object v1, Lj42;->c:Lj42;
-
-    monitor-enter v1
-
-    :try_start_0
-    iget-object v2, v1, Lk42;->b:Ljava/lang/Object;
-
-    check-cast v2, Lxr;
-
-    invoke-virtual {v2}, Lxr;->isEmpty()Z
-
-    move-result v3
-
-    const/4 v4, 0x0
-
-    if-eqz v3, :cond_0
-
-    move-object v2, v4
+    move-result v1
 
     goto :goto_0
 
     :cond_0
-    invoke-virtual {v2}, Lxr;->removeLast()Ljava/lang/Object;
-
-    move-result-object v2
+    move v1, v0
 
     :goto_0
-    check-cast v2, [C
+    const/16 v2, 0x20f
 
-    if-eqz v2, :cond_1
+    add-int/2addr v2, v1
 
-    iget v3, v1, Lk42;->a:I
+    mul-int/lit8 v2, v2, 0x1f
 
-    array-length v4, v2
+    iget-object v1, p0, Lia7;->c:Ljava/lang/String;
 
-    sub-int/2addr v3, v4
+    if-eqz v1, :cond_1
 
-    iput v3, v1, Lk42;->a:I
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    invoke-virtual {v1}, Ljava/lang/String;->hashCode()I
 
-    move-object v4, v2
+    move-result v1
 
     goto :goto_1
 
-    :catchall_0
-    move-exception p0
-
-    goto :goto_2
-
     :cond_1
+    move v1, v0
+
     :goto_1
-    monitor-exit v1
+    add-int/2addr v2, v1
 
-    if-nez v4, :cond_2
+    mul-int/lit8 v2, v2, 0x1f
 
-    const/16 v1, 0x80
+    iget-object p0, p0, Lia7;->d:Ljava/lang/String;
 
-    new-array v4, v1, [C
+    if-eqz p0, :cond_2
+
+    invoke-virtual {p0}, Ljava/lang/String;->hashCode()I
+
+    move-result v0
 
     :cond_2
-    iput-object v4, v0, Lnh0;->c:Ljava/lang/Object;
+    add-int/2addr v2, v0
 
-    :try_start_1
-    new-instance v1, Lu40;
+    return v2
+.end method
 
-    sget-object v2, Ljag;->c:Ljag;
+.method public final toString()Ljava/lang/String;
+    .locals 2
 
-    sget-object v3, Ljag;->o0:Ln25;
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    invoke-virtual {v3}, Ly1;->getSize()I
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    move-result v3
+    iget-object v1, p0, Lsz6;->a:Ljava/lang/String;
 
-    new-array v3, v3, [Lu40;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    new-instance v4, Lvq0;
+    const-string v1, ": domain="
 
-    invoke-direct {v4}, Ljava/lang/Object;-><init>()V
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iput-object v0, v4, Lvq0;->b:Ljava/lang/Object;
+    iget-object v1, p0, Lia7;->b:Ljava/lang/String;
 
-    const/4 v5, 0x1
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iput-boolean v5, v4, Lvq0;->a:Z
+    const-string v1, ", description="
 
-    invoke-direct {v1, v4, p0, v2, v3}, Lu40;-><init>(Lvq0;Lia7;Ljag;[Lu40;)V
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v1, p1, p2}, Lu40;->k(Lcc7;Ljava/lang/Object;)V
+    iget-object p0, p0, Lia7;->c:Ljava/lang/String;
 
-    invoke-virtual {v0}, Lnh0;->toString()Ljava/lang/String;
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p0
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_1
-
-    invoke-virtual {v0}, Lnh0;->w()V
 
     return-object p0
-
-    :catchall_1
-    move-exception p0
-
-    invoke-virtual {v0}, Lnh0;->w()V
-
-    throw p0
-
-    :goto_2
-    monitor-exit v1
-
-    throw p0
 .end method

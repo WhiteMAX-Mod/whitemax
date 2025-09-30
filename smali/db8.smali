@@ -1,64 +1,48 @@
-.class public interface abstract Ldb8;
-.super Ljava/lang/Object;
-.source "SourceFile"
+.class public final Ldb8;
+.super Ljx3;
 
-# interfaces
-.implements Lol7;
+
+# instance fields
+.field public X:I
+
+.field public final synthetic Y:Lyf7;
+
+.field public synthetic o:Ljava/lang/Object;
+
+
+# direct methods
+.method public constructor <init>(Lyf7;Lkotlin/coroutines/Continuation;)V
+    .locals 0
+
+    iput-object p1, p0, Ldb8;->Y:Lyf7;
+
+    invoke-direct {p0, p2}, Ljx3;-><init>(Lkotlin/coroutines/Continuation;)V
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public h(Lol7;)Z
-    .locals 4
+.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    instance-of v0, p1, Ldb8;
+    iput-object p1, p0, Ldb8;->o:Ljava/lang/Object;
 
-    if-nez v0, :cond_0
+    iget p1, p0, Ldb8;->X:I
 
-    goto :goto_0
+    const/high16 v0, -0x80000000
 
-    :cond_0
-    invoke-interface {p0}, Ldb8;->j()J
+    or-int/2addr p1, v0
 
-    move-result-wide v0
+    iput p1, p0, Ldb8;->X:I
 
-    check-cast p1, Ldb8;
+    iget-object p1, p0, Ldb8;->Y:Lyf7;
 
-    invoke-interface {p1}, Ldb8;->j()J
+    const/4 v0, 0x0
 
-    move-result-wide v2
+    invoke-virtual {p1, v0, p0}, Lyf7;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
-    cmp-long v0, v0, v2
+    move-result-object p0
 
-    if-nez v0, :cond_1
-
-    invoke-interface {p0}, Ldb8;->i()J
-
-    move-result-wide v0
-
-    invoke-interface {p1}, Ldb8;->i()J
-
-    move-result-wide p0
-
-    cmp-long p0, v0, p0
-
-    if-nez p0, :cond_1
-
-    const/4 p0, 0x1
-
-    return p0
-
-    :cond_1
-    :goto_0
-    const/4 p0, 0x0
-
-    return p0
-.end method
-
-.method public abstract i()J
-.end method
-
-.method public abstract j()J
-.end method
-
-.method public abstract x()Ljava/lang/String;
+    return-object p0
 .end method

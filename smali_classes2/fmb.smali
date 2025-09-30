@@ -1,296 +1,201 @@
-.class public final Lfmb;
-.super Lnv8;
+.class public final enum Lfmb;
+.super Ljava/lang/Enum;
 .source "SourceFile"
+
+# interfaces
+.implements Landroid/os/Parcelable;
+.implements Lvu0;
+
+
+# static fields
+.field public static final CREATOR:Landroid/os/Parcelable$Creator;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroid/os/Parcelable$Creator<",
+            "Lfmb;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+.field public static final synthetic X:[Lfmb;
+
+.field public static final synthetic Y:Ly75;
+
+.field public static final enum b:Lfmb;
+
+.field public static final enum c:Lfmb;
+
+.field public static final enum o:Lfmb;
 
 
 # instance fields
-.field public a:F
-
-.field public b:F
-
-.field public c:F
-
-.field public d:F
+.field public final a:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 1
+.method static constructor <clinit>()V
+    .locals 6
 
-    invoke-direct {p0}, Lnv8;-><init>()V
+    new-instance v0, Lfmb;
 
-    const/4 v0, 0x0
+    const/4 v1, 0x0
 
-    iput v0, p0, Lfmb;->a:F
+    const-string v2, "local_chat"
 
-    iput v0, p0, Lfmb;->b:F
+    const-string v3, "LOCAL_CHAT"
 
-    iput v0, p0, Lfmb;->c:F
+    invoke-direct {v0, v3, v1, v2}, Lfmb;-><init>(Ljava/lang/String;ILjava/lang/String;)V
 
-    iput v0, p0, Lfmb;->d:F
+    sput-object v0, Lfmb;->b:Lfmb;
 
-    const/4 v0, -0x1
+    new-instance v1, Lfmb;
 
-    iput v0, p0, Lnv8;->cachedSize:I
+    const/4 v2, 0x1
+
+    const-string v3, "server_chat"
+
+    const-string v4, "SERVER_CHAT"
+
+    invoke-direct {v1, v4, v2, v3}, Lfmb;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v1, Lfmb;->c:Lfmb;
+
+    new-instance v2, Lfmb;
+
+    const/4 v3, 0x2
+
+    const-string v4, "contact"
+
+    const-string v5, "CONTACT"
+
+    invoke-direct {v2, v5, v3, v4}, Lfmb;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v2, Lfmb;->o:Lfmb;
+
+    filled-new-array {v0, v1, v2}, [Lfmb;
+
+    move-result-object v0
+
+    sput-object v0, Lfmb;->X:[Lfmb;
+
+    new-instance v1, Ly75;
+
+    invoke-direct {v1, v0}, Ly75;-><init>([Ljava/lang/Enum;)V
+
+    sput-object v1, Lfmb;->Y:Ly75;
+
+    new-instance v0, Lgpa;
+
+    const/16 v1, 0x12
+
+    invoke-direct {v0, v1}, Lgpa;-><init>(I)V
+
+    sput-object v0, Lfmb;->CREATOR:Landroid/os/Parcelable$Creator;
 
     return-void
 .end method
 
+.method public constructor <init>(Ljava/lang/String;ILjava/lang/String;)V
+    .locals 0
 
-# virtual methods
-.method public final computeSerializedSize()I
-    .locals 4
+    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    iget v0, p0, Lfmb;->a:F
+    iput-object p3, p0, Lfmb;->a:Ljava/lang/String;
 
-    invoke-static {v0}, Ljava/lang/Float;->floatToIntBits(F)I
-
-    move-result v0
-
-    const/4 v1, 0x0
-
-    invoke-static {v1}, Ljava/lang/Float;->floatToIntBits(F)I
-
-    move-result v2
-
-    if-eq v0, v2, :cond_0
-
-    const/4 v0, 0x1
-
-    invoke-static {v0}, Lq33;->e(I)I
-
-    move-result v0
-
-    goto :goto_0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    :goto_0
-    iget v2, p0, Lfmb;->b:F
-
-    invoke-static {v2}, Ljava/lang/Float;->floatToIntBits(F)I
-
-    move-result v2
-
-    invoke-static {v1}, Ljava/lang/Float;->floatToIntBits(F)I
-
-    move-result v3
-
-    if-eq v2, v3, :cond_1
-
-    const/4 v2, 0x2
-
-    invoke-static {v2}, Lq33;->e(I)I
-
-    move-result v2
-
-    add-int/2addr v0, v2
-
-    :cond_1
-    iget v2, p0, Lfmb;->c:F
-
-    invoke-static {v2}, Ljava/lang/Float;->floatToIntBits(F)I
-
-    move-result v2
-
-    invoke-static {v1}, Ljava/lang/Float;->floatToIntBits(F)I
-
-    move-result v3
-
-    if-eq v2, v3, :cond_2
-
-    const/4 v2, 0x3
-
-    invoke-static {v2}, Lq33;->e(I)I
-
-    move-result v2
-
-    add-int/2addr v0, v2
-
-    :cond_2
-    iget p0, p0, Lfmb;->d:F
-
-    invoke-static {p0}, Ljava/lang/Float;->floatToIntBits(F)I
-
-    move-result p0
-
-    invoke-static {v1}, Ljava/lang/Float;->floatToIntBits(F)I
-
-    move-result v1
-
-    if-eq p0, v1, :cond_3
-
-    const/4 p0, 0x4
-
-    invoke-static {p0}, Lq33;->e(I)I
-
-    move-result p0
-
-    add-int/2addr p0, v0
-
-    return p0
-
-    :cond_3
-    return v0
+    return-void
 .end method
 
-.method public final mergeFrom(Lp33;)Lnv8;
-    .locals 2
+.method public static valueOf(Ljava/lang/String;)Lfmb;
+    .locals 1
 
-    :cond_0
-    :goto_0
-    invoke-virtual {p1}, Lp33;->s()I
+    const-class v0, Lfmb;
 
-    move-result v0
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
 
-    if-eqz v0, :cond_5
+    move-result-object p0
 
-    const/16 v1, 0xd
+    check-cast p0, Lfmb;
 
-    if-eq v0, v1, :cond_4
-
-    const/16 v1, 0x15
-
-    if-eq v0, v1, :cond_3
-
-    const/16 v1, 0x1d
-
-    if-eq v0, v1, :cond_2
-
-    const/16 v1, 0x25
-
-    if-eq v0, v1, :cond_1
-
-    invoke-virtual {p1, v0}, Lp33;->u(I)Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    goto :goto_1
-
-    :cond_1
-    invoke-virtual {p1}, Lp33;->i()F
-
-    move-result v0
-
-    iput v0, p0, Lfmb;->d:F
-
-    goto :goto_0
-
-    :cond_2
-    invoke-virtual {p1}, Lp33;->i()F
-
-    move-result v0
-
-    iput v0, p0, Lfmb;->c:F
-
-    goto :goto_0
-
-    :cond_3
-    invoke-virtual {p1}, Lp33;->i()F
-
-    move-result v0
-
-    iput v0, p0, Lfmb;->b:F
-
-    goto :goto_0
-
-    :cond_4
-    invoke-virtual {p1}, Lp33;->i()F
-
-    move-result v0
-
-    iput v0, p0, Lfmb;->a:F
-
-    goto :goto_0
-
-    :cond_5
-    :goto_1
     return-object p0
 .end method
 
-.method public final writeTo(Lq33;)V
-    .locals 3
+.method public static values()[Lfmb;
+    .locals 1
 
-    iget v0, p0, Lfmb;->a:F
+    sget-object v0, Lfmb;->X:[Lfmb;
 
-    invoke-static {v0}, Ljava/lang/Float;->floatToIntBits(F)I
+    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
 
-    move-result v0
+    move-result-object v0
 
-    const/4 v1, 0x0
+    check-cast v0, [Lfmb;
 
-    invoke-static {v1}, Ljava/lang/Float;->floatToIntBits(F)I
+    return-object v0
+.end method
 
-    move-result v2
 
-    if-eq v0, v2, :cond_0
+# virtual methods
+.method public final a(Ljava/lang/String;)Ljava/lang/Object;
+    .locals 2
 
-    const/4 v0, 0x1
+    new-instance p0, Lw1;
 
-    iget v2, p0, Lfmb;->a:F
+    const/4 v0, 0x0
 
-    invoke-virtual {p1, v0, v2}, Lq33;->v(IF)V
+    sget-object v1, Lfmb;->Y:Ly75;
+
+    invoke-direct {p0, v0, v1}, Lw1;-><init>(ILjava/lang/Object;)V
 
     :cond_0
-    iget v0, p0, Lfmb;->b:F
-
-    invoke-static {v0}, Ljava/lang/Float;->floatToIntBits(F)I
+    invoke-virtual {p0}, Lw1;->hasNext()Z
 
     move-result v0
 
-    invoke-static {v1}, Ljava/lang/Float;->floatToIntBits(F)I
+    if-eqz v0, :cond_1
 
-    move-result v2
+    invoke-virtual {p0}, Lw1;->next()Ljava/lang/Object;
 
-    if-eq v0, v2, :cond_1
+    move-result-object v0
 
-    const/4 v0, 0x2
+    check-cast v0, Lfmb;
 
-    iget v2, p0, Lfmb;->b:F
+    iget-object v1, v0, Lfmb;->a:Ljava/lang/String;
 
-    invoke-virtual {p1, v0, v2}, Lq33;->v(IF)V
-
-    :cond_1
-    iget v0, p0, Lfmb;->c:F
-
-    invoke-static {v0}, Ljava/lang/Float;->floatToIntBits(F)I
-
-    move-result v0
-
-    invoke-static {v1}, Ljava/lang/Float;->floatToIntBits(F)I
-
-    move-result v2
-
-    if-eq v0, v2, :cond_2
-
-    const/4 v0, 0x3
-
-    iget v2, p0, Lfmb;->c:F
-
-    invoke-virtual {p1, v0, v2}, Lq33;->v(IF)V
-
-    :cond_2
-    iget v0, p0, Lfmb;->d:F
-
-    invoke-static {v0}, Ljava/lang/Float;->floatToIntBits(F)I
-
-    move-result v0
-
-    invoke-static {v1}, Ljava/lang/Float;->floatToIntBits(F)I
+    invoke-virtual {v1, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
     move-result v1
 
-    if-eq v0, v1, :cond_3
+    if-eqz v1, :cond_0
 
-    const/4 v0, 0x4
+    return-object v0
 
-    iget p0, p0, Lfmb;->d:F
+    :cond_1
+    new-instance p0, Ljava/util/NoSuchElementException;
 
-    invoke-virtual {p1, v0, p0}, Lq33;->v(IF)V
+    const-string p1, "Collection contains no element matching the predicate."
 
-    :cond_3
+    invoke-direct {p0, p1}, Ljava/util/NoSuchElementException;-><init>(Ljava/lang/String;)V
+
+    throw p0
+.end method
+
+.method public final describeContents()I
+    .locals 0
+
+    const/4 p0, 0x0
+
+    return p0
+.end method
+
+.method public final writeToParcel(Landroid/os/Parcel;I)V
+    .locals 0
+
+    invoke-virtual {p0}, Ljava/lang/Enum;->name()Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-virtual {p1, p0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
+
     return-void
 .end method

@@ -1,217 +1,222 @@
 .class public final Lau;
-.super Loh0;
+.super Lmhc;
 .source "SourceFile"
+
+# interfaces
+.implements Lsc3;
 
 
 # instance fields
-.field public final X:J
-
-.field public final Y:J
-
-.field public final Z:I
+.field public final b:Lsc3;
 
 
 # direct methods
-.method public constructor <init>(JIJJI)V
+.method public constructor <init>(Lsc3;)V
     .locals 0
 
-    invoke-direct {p0, p1, p2, p3}, Loh0;-><init>(JI)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-wide p4, p0, Lau;->X:J
-
-    iput-wide p6, p0, Lau;->Y:J
-
-    iput p8, p0, Lau;->Z:I
+    iput-object p1, p0, Lau;->b:Lsc3;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final g()[B
-    .locals 3
+.method public final d(Ljc3;)V
+    .locals 1
 
-    new-instance v0, Lru/ok/tamtam/nano/Tasks$AssetsMove;
+    :try_start_0
+    iget-object p0, p0, Lau;->b:Lsc3;
 
-    invoke-direct {v0}, Lru/ok/tamtam/nano/Tasks$AssetsMove;-><init>()V
+    invoke-interface {p0, p1}, Lsc3;->d(Ljc3;)V
+    :try_end_0
+    .catch Ljava/lang/RuntimeException; {:try_start_0 .. :try_end_0} :catch_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    iget v1, p0, Loh0;->o:I
+    return-void
 
-    invoke-static {v1}, Lru/ok/tamtam/nano/b;->p(I)I
+    :catch_0
+    move-exception p0
 
-    move-result v1
+    goto :goto_0
 
-    iput v1, v0, Lru/ok/tamtam/nano/Tasks$AssetsMove;->assetType:I
+    :catchall_0
+    move-exception p0
 
-    iget-wide v1, p0, Lau;->X:J
+    new-instance p1, Ljava/lang/RuntimeException;
 
-    iput-wide v1, v0, Lru/ok/tamtam/nano/Tasks$AssetsMove;->id:J
+    invoke-direct {p1, p0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V
 
-    iget-wide v1, p0, Lhl;->a:J
+    throw p1
 
-    iput-wide v1, v0, Lru/ok/tamtam/nano/Tasks$AssetsMove;->requestId:J
+    :goto_0
+    invoke-virtual {p0}, Ljava/lang/Throwable;->getCause()Ljava/lang/Throwable;
 
-    iget-wide v1, p0, Lau;->Y:J
+    move-result-object v0
 
-    iput-wide v1, v0, Lru/ok/tamtam/nano/Tasks$AssetsMove;->prevId:J
+    instance-of v0, v0, Ljava/lang/InterruptedException;
 
-    iget p0, p0, Lau;->Z:I
+    if-eqz v0, :cond_1
 
-    iput p0, v0, Lru/ok/tamtam/nano/Tasks$AssetsMove;->position:I
+    invoke-virtual {p1}, Ljc3;->f()Z
 
-    invoke-static {v0}, Lnv8;->toByteArray(Lnv8;)[B
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    invoke-virtual {p0}, Ljava/lang/Throwable;->getCause()Ljava/lang/Throwable;
 
     move-result-object p0
 
-    return-object p0
+    invoke-virtual {p1, p0}, Ljc3;->onError(Ljava/lang/Throwable;)V
+
+    goto :goto_1
+
+    :cond_0
+    invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
+
+    move-result-object p0
+
+    invoke-virtual {p0}, Ljava/lang/Thread;->interrupt()V
+
+    :goto_1
+    return-void
+
+    :cond_1
+    throw p0
 .end method
 
-.method public final getType()Lyra;
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 1
+
+    instance-of v0, p1, Lau;
+
+    if-eqz v0, :cond_0
+
+    check-cast p1, Lau;
+
+    iget-object p0, p0, Lau;->b:Lsc3;
+
+    iget-object p1, p1, Lau;->b:Lsc3;
+
+    invoke-static {p0, p1}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p0
+
+    if-eqz p0, :cond_0
+
+    const/4 p0, 0x1
+
+    return p0
+
+    :cond_0
+    const/4 p0, 0x0
+
+    return p0
+.end method
+
+.method public final hashCode()I
     .locals 0
 
-    sget-object p0, Lyra;->Q0:Lyra;
+    iget-object p0, p0, Lau;->b:Lsc3;
 
-    return-object p0
+    invoke-static {p0}, Ljava/util/Objects;->hashCode(Ljava/lang/Object;)I
+
+    move-result p0
+
+    return p0
 .end method
 
-.method public final i()Lije;
-    .locals 8
+.method public final toString()Ljava/lang/String;
+    .locals 5
 
-    new-instance v0, Lqt;
+    const/4 v0, 0x1
 
-    const/4 v1, 0x0
+    new-array v1, v0, [Ljava/lang/Object;
 
-    const/4 v2, 0x4
+    const/4 v2, 0x0
 
-    invoke-direct {v0, v1, v2}, Lqt;-><init>(Llja;I)V
+    iget-object p0, p0, Lau;->b:Lsc3;
 
-    iget v1, p0, Loh0;->o:I
+    aput-object p0, v1, v2
 
-    if-eqz v1, :cond_4
+    const-string p0, "b"
 
-    iget-wide v2, p0, Lau;->X:J
+    invoke-virtual {p0}, Ljava/lang/String;->length()I
 
-    const-wide/16 v4, 0x0
+    move-result v3
 
-    cmp-long v6, v2, v4
+    if-nez v3, :cond_0
 
-    if-eqz v6, :cond_3
-
-    iget-wide v6, p0, Lau;->Y:J
-
-    cmp-long v4, v6, v4
-
-    iget p0, p0, Lau;->Z:I
-
-    if-gtz v4, :cond_1
-
-    if-ltz p0, :cond_0
+    new-array p0, v2, [Ljava/lang/String;
 
     goto :goto_0
 
     :cond_0
-    new-instance p0, Ljava/lang/IllegalArgumentException;
+    const-string v3, ";"
 
-    const-string v0, "prevId or position must be set"
+    invoke-virtual {p0, v3}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
 
-    invoke-direct {p0, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+    move-result-object p0
 
-    throw p0
+    :goto_0
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-class v4, Lau;
+
+    invoke-virtual {v4}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
+
+    move-result-object v4
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v4, "["
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    :goto_1
+    array-length v4, p0
+
+    if-ge v2, v4, :cond_2
+
+    aget-object v4, p0, v2
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v4, "="
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    aget-object v4, v1, v2
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    array-length v4, p0
+
+    sub-int/2addr v4, v0
+
+    if-eq v2, v4, :cond_1
+
+    const-string v4, ", "
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     :cond_1
-    :goto_0
-    const-string v5, "type"
+    add-int/lit8 v2, v2, 0x1
 
-    invoke-static {v1}, Lzt1;->d(I)Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v5, v1}, Lije;->p(Ljava/lang/String;Ljava/lang/String;)V
-
-    const-string v1, "id"
-
-    invoke-virtual {v0, v2, v3, v1}, Lije;->i(JLjava/lang/String;)V
-
-    if-lez v4, :cond_2
-
-    const-string p0, "prevId"
-
-    invoke-virtual {v0, v6, v7, p0}, Lije;->i(JLjava/lang/String;)V
-
-    return-object v0
+    goto :goto_1
 
     :cond_2
-    const-string v1, "position"
+    const-string p0, "]"
 
-    invoke-virtual {v0, p0, v1}, Lije;->e(ILjava/lang/String;)V
+    invoke-virtual {v3, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    return-object v0
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    :cond_3
-    new-instance p0, Ljava/lang/IllegalArgumentException;
+    move-result-object p0
 
-    const-string v0, "id must not be null or empty"
-
-    invoke-direct {p0, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw p0
-
-    :cond_4
-    new-instance p0, Ljava/lang/IllegalArgumentException;
-
-    const-string v0, "type must not be null"
-
-    invoke-direct {p0, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw p0
-.end method
-
-.method public final u(Llje;)V
-    .locals 4
-
-    check-cast p1, Lbu;
-
-    iget-boolean v0, p1, Lbu;->o:Z
-
-    const/4 v1, 0x0
-
-    if-eqz v0, :cond_1
-
-    iget-wide v2, p1, Lbu;->X:J
-
-    invoke-virtual {p0, v2, v3}, Loh0;->v(J)V
-
-    iget-object p1, p0, Lhl;->c:Lil;
-
-    if-eqz p1, :cond_0
-
-    move-object v1, p1
-
-    :cond_0
-    invoke-virtual {v1}, Lil;->b()Lvu0;
-
-    move-result-object p1
-
-    new-instance v0, Lcu;
-
-    iget-wide v1, p0, Lhl;->a:J
-
-    invoke-direct {v0, v1, v2}, Lki0;-><init>(J)V
-
-    invoke-virtual {p1, v0}, Lvu0;->c(Ljava/lang/Object;)V
-
-    return-void
-
-    :cond_1
-    new-instance p1, Lvie;
-
-    const-string v0, "asset.task.failed"
-
-    const-string v2, "failed to move asset"
-
-    invoke-direct {p1, v0, v2, v1}, Lvie;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
-
-    invoke-virtual {p0, p1}, Loh0;->f(Lvie;)V
-
-    return-void
+    return-object p0
 .end method

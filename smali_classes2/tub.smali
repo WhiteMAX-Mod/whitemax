@@ -1,76 +1,48 @@
-.class public abstract Ltub;
-.super Ljava/lang/Object;
+.class public final Ltub;
+.super Ljx3;
 
 
-# static fields
-.field public static audio_record__action_view:I = 0x7f0a00ea
+# instance fields
+.field public X:I
 
-.field public static audio_record__action_view_background:I = 0x7f0a00eb
+.field public final synthetic Y:Leia;
 
-.field public static audio_record__action_view_bg_container:I = 0x7f0a00ec
+.field public synthetic o:Ljava/lang/Object;
 
-.field public static audio_record__action_view_container:I = 0x7f0a00ed
 
-.field public static audio_record__audio_hand_free_record_view:I = 0x7f0a00ee
+# direct methods
+.method public constructor <init>(Leia;Lkotlin/coroutines/Continuation;)V
+    .locals 0
 
-.field public static audio_record__audio_record_root:I = 0x7f0a00ef
+    iput-object p1, p0, Ltub;->Y:Leia;
 
-.field public static audio_record__cancel_view:I = 0x7f0a00f0
+    invoke-direct {p0, p2}, Ljx3;-><init>(Lkotlin/coroutines/Continuation;)V
 
-.field public static audio_record__dot_view:I = 0x7f0a00f1
+    return-void
+.end method
 
-.field public static audio_record__duration_view:I = 0x7f0a00f2
 
-.field public static audio_record__hand_free_dot_view:I = 0x7f0a00f3
+# virtual methods
+.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-.field public static audio_record__hand_free_duration_view:I = 0x7f0a00f4
+    iput-object p1, p0, Ltub;->o:Ljava/lang/Object;
 
-.field public static audio_record__lock_view:I = 0x7f0a00f5
+    iget p1, p0, Ltub;->X:I
 
-.field public static audio_record__pause_recording_button:I = 0x7f0a00f6
+    const/high16 v0, -0x80000000
 
-.field public static audio_record__play_pause_listening_button:I = 0x7f0a00f7
+    or-int/2addr p1, v0
 
-.field public static audio_record__play_recording_button:I = 0x7f0a00f8
+    iput p1, p0, Ltub;->X:I
 
-.field public static audio_record__recording_panel:I = 0x7f0a00f9
+    iget-object p1, p0, Ltub;->Y:Leia;
 
-.field public static audio_record__remove_button:I = 0x7f0a00fa
+    const/4 v0, 0x0
 
-.field public static audio_record__swipe_remove_button:I = 0x7f0a00fb
+    invoke-virtual {p1, v0, p0}, Leia;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
-.field public static audio_record__wave_container:I = 0x7f0a00fc
+    move-result-object p0
 
-.field public static audio_record__wave_view:I = 0x7f0a00fd
-
-.field public static writebar__add_link_bottom_sheet_button_add:I = 0x7f0a0d5b
-
-.field public static writebar__add_link_bottom_sheet_input:I = 0x7f0a0d5c
-
-.field public static writebar__container:I = 0x7f0a0d5d
-
-.field public static writebar__record_controls:I = 0x7f0a0d5e
-
-.field public static writebar__root:I = 0x7f0a0d5f
-
-.field public static writebar__suggestion_close_button:I = 0x7f0a0d60
-
-.field public static writebar__suggestion_close_panel:I = 0x7f0a0d61
-
-.field public static writebar__suggestion_container:I = 0x7f0a0d62
-
-.field public static writebar__suggestion_item:I = 0x7f0a0d63
-
-.field public static writebar__suggestion_not_found:I = 0x7f0a0d64
-
-.field public static writebar__suggestion_panel:I = 0x7f0a0d65
-
-.field public static writebar__suggestion_popup_drag_layout:I = 0x7f0a0d66
-
-.field public static writebar__suggestion_popup_layout:I = 0x7f0a0d67
-
-.field public static writebar__suggestion_popup_layout_content:I = 0x7f0a0d68
-
-.field public static writebar__suggestion_popup_layout_list:I = 0x7f0a0d69
-
-.field public static writebar__suggestion_title:I = 0x7f0a0d6a
+    return-object p0
+.end method

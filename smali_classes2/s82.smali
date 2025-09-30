@@ -1,275 +1,125 @@
-.class public final Ls82;
+.class public abstract synthetic Ls82;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public A:J
+# static fields
+.field public static final synthetic $EnumSwitchMapping$0:[I
 
-.field public B:Ljava/util/ArrayList;
-
-.field public C:Ld92;
-
-.field public D:La92;
-
-.field public E:Ljava/lang/String;
-
-.field public F:Lql5;
-
-.field public G:I
-
-.field public H:Ljava/lang/String;
-
-.field public I:Ljava/util/List;
-
-.field public J:I
-
-.field public K:Lx82;
-
-.field public L:J
-
-.field public M:Z
-
-.field public N:Z
-
-.field public O:Z
-
-.field public P:J
-
-.field public Q:I
-
-.field public R:Ljs;
-
-.field public S:I
-
-.field public T:Ly00;
-
-.field public U:J
-
-.field public V:I
-
-.field public W:J
-
-.field public X:I
-
-.field public Y:J
-
-.field public Z:J
-
-.field public a:J
-
-.field public a0:Ljava/util/ArrayList;
-
-.field public b:Li92;
-
-.field public b0:J
-
-.field public c:Lh92;
-
-.field public c0:J
-
-.field public d:J
-
-.field public d0:Ljq0;
-
-.field public e:Ljava/util/Map;
-
-.field public e0:J
-
-.field public f:J
-
-.field public f0:Lm8a;
-
-.field public g:Ljava/lang/String;
-
-.field public g0:J
-
-.field public h:Ljava/lang/String;
-
-.field public h0:J
-
-.field public i:Ljava/lang/String;
-
-.field public i0:Z
-
-.field public j:J
-
-.field public j0:Ljava/util/Map;
-
-.field public k:J
-
-.field public k0:J
-
-.field public l:J
-
-.field public l0:Z
-
-.field public m:I
-
-.field public m0:Le92;
-
-.field public n:Lc92;
-
-.field public n0:J
-
-.field public o:Ljava/lang/String;
-
-.field public o0:Ljava/lang/String;
-
-.field public p:Lz82;
-
-.field public p0:J
-
-.field public q:Lv82;
-
-.field public q0:J
-
-.field public r:Lv82;
-
-.field public r0:I
-
-.field public s:Lv82;
-
-.field public t:Lv82;
-
-.field public u:Lv82;
-
-.field public v:Lv82;
-
-.field public w:Lv82;
-
-.field public x:J
-
-.field public y:Ljava/util/ArrayList;
-
-.field public z:Ljava/util/List;
+.field public static final synthetic $EnumSwitchMapping$1:[I
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 2
+.method static constructor <clinit>()V
+    .locals 9
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/4 v0, 0x7
 
-    new-instance v0, Lc92;
+    invoke-static {v0}, Lmw1;->w(I)[I
 
-    invoke-direct {v0}, Lc92;-><init>()V
+    move-result-object v1
 
-    iput-object v0, p0, Ls82;->n:Lc92;
+    array-length v1, v1
 
-    const/4 v0, 0x2
+    new-array v1, v1, [I
 
-    iput v0, p0, Ls82;->r0:I
+    const/4 v2, 0x1
 
-    new-instance v0, Ljs;
+    const/4 v3, 0x2
 
-    const/4 v1, 0x0
+    :try_start_0
+    aput v2, v1, v3
+    :try_end_0
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
 
-    invoke-direct {v0, v1}, Lbod;-><init>(I)V
+    :catch_0
+    :try_start_1
+    aput v3, v1, v2
+    :try_end_1
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
 
-    iput-object v0, p0, Ls82;->R:Ljs;
+    :catch_1
+    const/4 v4, 0x3
 
-    sget-object v0, Ljq0;->c:Ljq0;
+    :try_start_2
+    aput v4, v1, v4
+    :try_end_2
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_2
 
-    iput-object v0, p0, Ls82;->d0:Ljq0;
+    :catch_2
+    const/4 v5, 0x4
 
-    const/4 v0, 0x0
+    :try_start_3
+    aput v5, v1, v5
+    :try_end_3
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_3 .. :try_end_3} :catch_3
 
-    iput-object v0, p0, Ls82;->m0:Le92;
+    :catch_3
+    const/4 v6, 0x0
 
-    return-void
-.end method
+    const/4 v7, 0x5
 
+    :try_start_4
+    aput v7, v1, v6
+    :try_end_4
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_4 .. :try_end_4} :catch_4
 
-# virtual methods
-.method public final a(Lt82;)V
-    .locals 1
+    :catch_4
+    const/4 v8, 0x6
 
-    iget-object v0, p0, Ls82;->B:Ljava/util/ArrayList;
+    :try_start_5
+    aput v8, v1, v7
+    :try_end_5
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_5 .. :try_end_5} :catch_5
 
-    if-nez v0, :cond_0
+    :catch_5
+    :try_start_6
+    aput v0, v1, v8
+    :try_end_6
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_6 .. :try_end_6} :catch_6
 
-    new-instance v0, Ljava/util/ArrayList;
+    :catch_6
+    sput-object v1, Ls82;->$EnumSwitchMapping$0:[I
 
-    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
+    invoke-static {}, Lr82;->values()[Lr82;
 
-    iput-object v0, p0, Ls82;->B:Ljava/util/ArrayList;
+    move-result-object v0
 
-    :cond_0
-    iget-object p0, p0, Ls82;->B:Ljava/util/ArrayList;
+    array-length v0, v0
 
-    invoke-virtual {p0, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+    new-array v0, v0, [I
 
-    return-void
-.end method
+    :try_start_7
+    aput v2, v0, v6
+    :try_end_7
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_7 .. :try_end_7} :catch_7
 
-.method public final b()Ljava/util/List;
-    .locals 1
+    :catch_7
+    :try_start_8
+    aput v3, v0, v3
+    :try_end_8
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_8 .. :try_end_8} :catch_8
 
-    iget-object v0, p0, Ls82;->B:Ljava/util/ArrayList;
+    :catch_8
+    :try_start_9
+    aput v4, v0, v4
+    :try_end_9
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_9 .. :try_end_9} :catch_9
 
-    if-nez v0, :cond_0
+    :catch_9
+    :try_start_a
+    aput v5, v0, v5
+    :try_end_a
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_a .. :try_end_a} :catch_a
 
-    new-instance v0, Ljava/util/ArrayList;
+    :catch_a
+    :try_start_b
+    aput v7, v0, v2
+    :try_end_b
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_b .. :try_end_b} :catch_b
 
-    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
-
-    iput-object v0, p0, Ls82;->B:Ljava/util/ArrayList;
-
-    :cond_0
-    iget-object p0, p0, Ls82;->B:Ljava/util/ArrayList;
-
-    return-object p0
-.end method
-
-.method public final c()Ljava/util/Map;
-    .locals 2
-
-    iget-object v0, p0, Ls82;->e:Ljava/util/Map;
-
-    if-nez v0, :cond_0
-
-    new-instance v0, Ljs;
-
-    const/4 v1, 0x2
-
-    invoke-direct {v0, v1}, Lbod;-><init>(I)V
-
-    iput-object v0, p0, Ls82;->e:Ljava/util/Map;
-
-    :cond_0
-    iget-object p0, p0, Ls82;->e:Ljava/util/Map;
-
-    return-object p0
-.end method
-
-.method public final d(Ljava/util/Map;)V
-    .locals 2
-
-    if-nez p1, :cond_0
-
-    new-instance p1, Ljs;
-
-    const/4 v0, 0x2
-
-    invoke-direct {p1, v0}, Lbod;-><init>(I)V
-
-    iput-object p1, p0, Ls82;->R:Ljs;
-
-    return-void
-
-    :cond_0
-    new-instance v0, Ljs;
-
-    invoke-interface {p1}, Ljava/util/Map;->size()I
-
-    move-result v1
-
-    invoke-direct {v0, v1}, Lbod;-><init>(I)V
-
-    iput-object v0, p0, Ls82;->R:Ljs;
-
-    invoke-virtual {v0, p1}, Ljs;->putAll(Ljava/util/Map;)V
+    :catch_b
+    sput-object v0, Ls82;->$EnumSwitchMapping$1:[I
 
     return-void
 .end method

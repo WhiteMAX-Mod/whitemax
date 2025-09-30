@@ -47,10 +47,10 @@
         "dynamicRedundancyParams",
         "isOpusDREDLowBitrateEnabled",
         "isSharedSocketDisabledForICE",
-        "Ls1c;",
+        "Lfec;",
         "logger",
         "<init>",
-        "(Ljava/lang/String;Ljava/lang/Integer;ZZLjava/lang/String;Ljava/lang/String;Lorg/webrtc/NativeLibraryLoader;ZZZZLru/ok/android/externcalls/sdk/ConversationFactoryInitParams$PeerConnection$DynamicRedundancyParameters;ZZLs1c;)V",
+        "(Ljava/lang/String;Ljava/lang/Integer;ZZLjava/lang/String;Ljava/lang/String;Lorg/webrtc/NativeLibraryLoader;ZZZZLru/ok/android/externcalls/sdk/ConversationFactoryInitParams$PeerConnection$DynamicRedundancyParameters;ZZLfec;)V",
         "Ljava/lang/String;",
         "getBonusFieldTrials",
         "()Ljava/lang/String;",
@@ -67,9 +67,9 @@
         "Lru/ok/android/externcalls/sdk/ConversationFactoryInitParams$PeerConnection$DynamicRedundancyParameters;",
         "getDynamicRedundancyParams",
         "()Lru/ok/android/externcalls/sdk/ConversationFactoryInitParams$PeerConnection$DynamicRedundancyParameters;",
-        "Ls1c;",
+        "Lfec;",
         "getLogger",
-        "()Ls1c;",
+        "()Lfec;",
         "AudioAdaptationParameters",
         "Builder",
         "DynamicRedundancyParameters",
@@ -108,7 +108,7 @@
 
 .field private final libraryLoader:Lorg/webrtc/NativeLibraryLoader;
 
-.field private final logger:Ls1c;
+.field private final logger:Lfec;
 
 .field private final rttMultCapMs:Ljava/lang/Integer;
 
@@ -118,7 +118,7 @@
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;Ljava/lang/Integer;ZZLjava/lang/String;Ljava/lang/String;Lorg/webrtc/NativeLibraryLoader;ZZZZLru/ok/android/externcalls/sdk/ConversationFactoryInitParams$PeerConnection$DynamicRedundancyParameters;ZZLs1c;)V
+.method public constructor <init>(Ljava/lang/String;Ljava/lang/Integer;ZZLjava/lang/String;Ljava/lang/String;Lorg/webrtc/NativeLibraryLoader;ZZZZLru/ok/android/externcalls/sdk/ConversationFactoryInitParams$PeerConnection$DynamicRedundancyParameters;ZZLfec;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -151,7 +151,7 @@
 
     iput-boolean p14, p0, Lru/ok/android/externcalls/sdk/ConversationFactoryInitParams$PeerConnection;->isSharedSocketDisabledForICE:Z
 
-    iput-object p15, p0, Lru/ok/android/externcalls/sdk/ConversationFactoryInitParams$PeerConnection;->logger:Ls1c;
+    iput-object p15, p0, Lru/ok/android/externcalls/sdk/ConversationFactoryInitParams$PeerConnection;->logger:Lfec;
 
     return-void
 .end method
@@ -182,10 +182,10 @@
     return-object p0
 .end method
 
-.method public final getLogger()Ls1c;
+.method public final getLogger()Lfec;
     .locals 0
 
-    iget-object p0, p0, Lru/ok/android/externcalls/sdk/ConversationFactoryInitParams$PeerConnection;->logger:Ls1c;
+    iget-object p0, p0, Lru/ok/android/externcalls/sdk/ConversationFactoryInitParams$PeerConnection;->logger:Lfec;
 
     return-object p0
 .end method

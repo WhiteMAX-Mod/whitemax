@@ -61,7 +61,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lru/ok/android/externcalls/sdk/id/local/LocalParticipantId$Companion;-><init>(Ll94;)V
+    invoke-direct {v0, v1}, Lru/ok/android/externcalls/sdk/id/local/LocalParticipantId$Companion;-><init>(Lld4;)V
 
     sput-object v0, Lru/ok/android/externcalls/sdk/id/local/LocalParticipantId;->Companion:Lru/ok/android/externcalls/sdk/id/local/LocalParticipantId$Companion;
 
@@ -88,7 +88,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(ILl94;)V
+.method public synthetic constructor <init>(ILld4;)V
     .locals 0
 
     .line 1
@@ -216,7 +216,7 @@
 
     const-string v1, ")"
 
-    invoke-static {p0, v0, v1}, Lpg0;->e(ILjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p0, v0, v1}, Lsg0;->e(ILjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
 

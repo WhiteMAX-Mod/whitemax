@@ -3,13 +3,13 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lxbc;
+.implements Luoc;
 
 
 # instance fields
-.field public final p:Lwt4;
+.field public final p:Lcz4;
 
-.field public q:Ldy;
+.field public q:Llx;
 
 .field public final r:Landroid/view/View$OnLayoutChangeListener;
 
@@ -19,29 +19,29 @@
     .locals 3
 
     .line 1
-    new-instance v0, Lwt4;
+    new-instance v0, Lcz4;
 
-    invoke-direct {v0}, Lwt4;-><init>()V
+    invoke-direct {v0}, Lcz4;-><init>()V
 
     .line 2
     invoke-direct {p0}, Landroidx/recyclerview/widget/a;-><init>()V
 
     .line 3
-    new-instance v1, Lsz1;
+    new-instance v1, Lh22;
 
-    invoke-direct {v1}, Lsz1;-><init>()V
+    invoke-direct {v1}, Lh22;-><init>()V
 
     .line 4
-    new-instance v1, Lc61;
+    new-instance v1, Ls61;
 
     const/4 v2, 0x1
 
-    invoke-direct {v1, v2, p0}, Lc61;-><init>(ILjava/lang/Object;)V
+    invoke-direct {v1, v2, p0}, Ls61;-><init>(ILjava/lang/Object;)V
 
     iput-object v1, p0, Lcom/google/android/material/carousel/CarouselLayoutManager;->r:Landroid/view/View$OnLayoutChangeListener;
 
     .line 5
-    iput-object v0, p0, Lcom/google/android/material/carousel/CarouselLayoutManager;->p:Lwt4;
+    iput-object v0, p0, Lcom/google/android/material/carousel/CarouselLayoutManager;->p:Lcz4;
 
     .line 6
     invoke-virtual {p0}, Landroidx/recyclerview/widget/a;->v0()V
@@ -66,26 +66,26 @@
     invoke-direct {p0}, Landroidx/recyclerview/widget/a;-><init>()V
 
     .line 9
-    new-instance p3, Lsz1;
+    new-instance p3, Lh22;
 
-    invoke-direct {p3}, Lsz1;-><init>()V
+    invoke-direct {p3}, Lh22;-><init>()V
 
     .line 10
-    new-instance p3, Lc61;
+    new-instance p3, Ls61;
 
     const/4 p4, 0x1
 
-    invoke-direct {p3, p4, p0}, Lc61;-><init>(ILjava/lang/Object;)V
+    invoke-direct {p3, p4, p0}, Ls61;-><init>(ILjava/lang/Object;)V
 
     iput-object p3, p0, Lcom/google/android/material/carousel/CarouselLayoutManager;->r:Landroid/view/View$OnLayoutChangeListener;
 
     .line 11
-    new-instance p3, Lwt4;
+    new-instance p3, Lcz4;
 
-    invoke-direct {p3}, Lwt4;-><init>()V
+    invoke-direct {p3}, Lcz4;-><init>()V
 
     .line 12
-    iput-object p3, p0, Lcom/google/android/material/carousel/CarouselLayoutManager;->p:Lwt4;
+    iput-object p3, p0, Lcom/google/android/material/carousel/CarouselLayoutManager;->p:Lcz4;
 
     .line 13
     invoke-virtual {p0}, Landroidx/recyclerview/widget/a;->v0()V
@@ -93,14 +93,14 @@
     if-eqz p2, :cond_0
 
     .line 14
-    sget-object p3, Lt0c;->Carousel:[I
+    sget-object p3, Lgdc;->Carousel:[I
 
     invoke-virtual {p1, p2, p3}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[I)Landroid/content/res/TypedArray;
 
     move-result-object p1
 
     .line 15
-    sget p2, Lt0c;->Carousel_carousel_alignment:I
+    sget p2, Lgdc;->Carousel_carousel_alignment:I
 
     const/4 p3, 0x0
 
@@ -110,7 +110,7 @@
     invoke-virtual {p0}, Landroidx/recyclerview/widget/a;->v0()V
 
     .line 17
-    sget p2, Lt0c;->RecyclerView_android_orientation:I
+    sget p2, Lgdc;->RecyclerView_android_orientation:I
 
     invoke-virtual {p1, p2, p3}, Landroid/content/res/TypedArray;->getInt(II)I
 
@@ -149,19 +149,21 @@
 .end method
 
 .method public final H0(Landroidx/recyclerview/widget/RecyclerView;I)V
-    .locals 1
+    .locals 2
 
-    new-instance v0, Lrz1;
+    new-instance v0, Lg22;
 
     invoke-virtual {p1}, Landroid/view/View;->getContext()Landroid/content/Context;
 
     move-result-object p1
 
-    invoke-direct {v0, p0, p1}, Lrz1;-><init>(Lcom/google/android/material/carousel/CarouselLayoutManager;Landroid/content/Context;)V
+    const/4 v1, 0x0
 
-    iput p2, v0, Lxh7;->a:I
+    invoke-direct {v0, p0, p1, v1}, Lg22;-><init>(Ljava/lang/Object;Landroid/content/Context;I)V
 
-    invoke-virtual {p0, v0}, Landroidx/recyclerview/widget/a;->I0(Lxh7;)V
+    iput p2, v0, Lto7;->a:I
+
+    invoke-virtual {p0, v0}, Landroidx/recyclerview/widget/a;->I0(Lto7;)V
 
     return-void
 .end method
@@ -169,9 +171,9 @@
 .method public final K0()Z
     .locals 0
 
-    iget-object p0, p0, Lcom/google/android/material/carousel/CarouselLayoutManager;->q:Ldy;
+    iget-object p0, p0, Lcom/google/android/material/carousel/CarouselLayoutManager;->q:Llx;
 
-    iget p0, p0, Ldy;->b:I
+    iget p0, p0, Llx;->b:I
 
     if-nez p0, :cond_0
 
@@ -226,7 +228,7 @@
 
     const-string v0, "invalid orientation:"
 
-    invoke-static {p1, v0}, Lm26;->h(ILjava/lang/String;)Ljava/lang/String;
+    invoke-static {p1, v0}, Lyv7;->e(ILjava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
@@ -240,11 +242,11 @@
 
     invoke-virtual {p0, v1}, Landroidx/recyclerview/widget/a;->c(Ljava/lang/String;)V
 
-    iget-object v1, p0, Lcom/google/android/material/carousel/CarouselLayoutManager;->q:Ldy;
+    iget-object v1, p0, Lcom/google/android/material/carousel/CarouselLayoutManager;->q:Llx;
 
     if-eqz v1, :cond_3
 
-    iget v1, v1, Ldy;->b:I
+    iget v1, v1, Llx;->b:I
 
     if-eq p1, v1, :cond_2
 
@@ -259,11 +261,11 @@
 
     if-ne p1, v0, :cond_4
 
-    new-instance p1, Ltz1;
+    new-instance p1, Li22;
 
     const/4 v0, 0x0
 
-    invoke-direct {p1, p0, v0}, Ltz1;-><init>(Lcom/google/android/material/carousel/CarouselLayoutManager;I)V
+    invoke-direct {p1, p0, v0}, Li22;-><init>(Lcom/google/android/material/carousel/CarouselLayoutManager;I)V
 
     goto :goto_2
 
@@ -277,14 +279,14 @@
     throw p0
 
     :cond_5
-    new-instance p1, Ltz1;
+    new-instance p1, Li22;
 
     const/4 v0, 0x1
 
-    invoke-direct {p1, p0, v0}, Ltz1;-><init>(Lcom/google/android/material/carousel/CarouselLayoutManager;I)V
+    invoke-direct {p1, p0, v0}, Li22;-><init>(Lcom/google/android/material/carousel/CarouselLayoutManager;I)V
 
     :goto_2
-    iput-object p1, p0, Lcom/google/android/material/carousel/CarouselLayoutManager;->q:Ldy;
+    iput-object p1, p0, Lcom/google/android/material/carousel/CarouselLayoutManager;->q:Llx;
 
     invoke-virtual {p0}, Landroidx/recyclerview/widget/a;->v0()V
 
@@ -306,9 +308,9 @@
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/google/android/material/carousel/CarouselLayoutManager;->p:Lwt4;
+    iget-object v1, p0, Lcom/google/android/material/carousel/CarouselLayoutManager;->p:Lcz4;
 
-    iget v2, v1, Lwt4;->a:F
+    iget v2, v1, Lcz4;->a:F
 
     const/4 v3, 0x0
 
@@ -323,16 +325,16 @@
 
     move-result-object v2
 
-    sget v4, Lhrb;->m3_carousel_small_item_size_min:I
+    sget v4, Lr3c;->m3_carousel_small_item_size_min:I
 
     invoke-virtual {v2, v4}, Landroid/content/res/Resources;->getDimension(I)F
 
     move-result v2
 
     :goto_0
-    iput v2, v1, Lwt4;->a:F
+    iput v2, v1, Lcz4;->a:F
 
-    iget v2, v1, Lwt4;->b:F
+    iget v2, v1, Lcz4;->b:F
 
     cmpl-float v3, v2, v3
 
@@ -345,14 +347,14 @@
 
     move-result-object v0
 
-    sget v2, Lhrb;->m3_carousel_small_item_size_max:I
+    sget v2, Lr3c;->m3_carousel_small_item_size_max:I
 
     invoke-virtual {v0, v2}, Landroid/content/res/Resources;->getDimension(I)F
 
     move-result v2
 
     :goto_1
-    iput v2, v1, Lwt4;->b:F
+    iput v2, v1, Lcz4;->b:F
 
     invoke-virtual {p0}, Landroidx/recyclerview/widget/a;->v0()V
 
@@ -373,7 +375,7 @@
     return-void
 .end method
 
-.method public final Y(Landroid/view/View;ILubc;Lybc;)Landroid/view/View;
+.method public final Y(Landroid/view/View;ILroc;Lvoc;)Landroid/view/View;
     .locals 3
 
     invoke-virtual {p0}, Landroidx/recyclerview/widget/a;->w()I
@@ -385,9 +387,9 @@
     goto/16 :goto_4
 
     :cond_0
-    iget-object p3, p0, Lcom/google/android/material/carousel/CarouselLayoutManager;->q:Ldy;
+    iget-object p3, p0, Lcom/google/android/material/carousel/CarouselLayoutManager;->q:Llx;
 
-    iget p3, p3, Ldy;->b:I
+    iget p3, p3, Llx;->b:I
 
     const/high16 p4, -0x80000000
 
@@ -502,9 +504,9 @@
     goto :goto_3
 
     :cond_a
-    iget-object p0, p0, Lcom/google/android/material/carousel/CarouselLayoutManager;->q:Ldy;
+    iget-object p0, p0, Lcom/google/android/material/carousel/CarouselLayoutManager;->q:Llx;
 
-    invoke-virtual {p0}, Ldy;->j()I
+    invoke-virtual {p0}, Llx;->l()I
 
     const/4 p0, 0x0
 
@@ -577,9 +579,9 @@
     goto :goto_5
 
     :cond_f
-    iget-object p0, p0, Lcom/google/android/material/carousel/CarouselLayoutManager;->q:Ldy;
+    iget-object p0, p0, Lcom/google/android/material/carousel/CarouselLayoutManager;->q:Llx;
 
-    invoke-virtual {p0}, Ldy;->j()I
+    invoke-virtual {p0}, Llx;->l()I
 
     const/4 p0, 0x0
 
@@ -699,10 +701,10 @@
     return-void
 .end method
 
-.method public final j0(Lubc;Lybc;)V
-    .locals 2
+.method public final j0(Lroc;Lvoc;)V
+    .locals 1
 
-    invoke-virtual {p2}, Lybc;->b()I
+    invoke-virtual {p2}, Lvoc;->b()I
 
     move-result p2
 
@@ -737,13 +739,7 @@
 
     const/4 p0, 0x0
 
-    const-wide v0, 0x7fffffffffffffffL
-
-    invoke-virtual {p1, p0, v0, v1}, Lubc;->j(IJ)Lccc;
-
-    move-result-object p0
-
-    iget-object p0, p0, Lccc;->a:Landroid/view/View;
+    invoke-virtual {p1, p0}, Lroc;->d(I)Landroid/view/View;
 
     new-instance p0, Ljava/lang/IllegalStateException;
 
@@ -755,12 +751,12 @@
 
     :cond_2
     :goto_1
-    invoke-virtual {p0, p1}, Landroidx/recyclerview/widget/a;->q0(Lubc;)V
+    invoke-virtual {p0, p1}, Landroidx/recyclerview/widget/a;->q0(Lroc;)V
 
     return-void
 .end method
 
-.method public final k(Lybc;)I
+.method public final k(Lvoc;)I
     .locals 0
 
     invoke-virtual {p0}, Landroidx/recyclerview/widget/a;->w()I
@@ -770,7 +766,7 @@
     return p0
 .end method
 
-.method public final k0(Lybc;)V
+.method public final k0(Lvoc;)V
     .locals 0
 
     invoke-virtual {p0}, Landroidx/recyclerview/widget/a;->w()I
@@ -793,7 +789,7 @@
     return-void
 .end method
 
-.method public final l(Lybc;)I
+.method public final l(Lvoc;)I
     .locals 0
 
     const/4 p0, 0x0
@@ -801,7 +797,7 @@
     return p0
 .end method
 
-.method public final m(Lybc;)I
+.method public final m(Lvoc;)I
     .locals 0
 
     const/4 p0, 0x0
@@ -809,7 +805,7 @@
     return p0
 .end method
 
-.method public final n(Lybc;)I
+.method public final n(Lvoc;)I
     .locals 0
 
     invoke-virtual {p0}, Landroidx/recyclerview/widget/a;->w()I
@@ -819,7 +815,7 @@
     return p0
 .end method
 
-.method public final o(Lybc;)I
+.method public final o(Lvoc;)I
     .locals 0
 
     const/4 p0, 0x0
@@ -827,7 +823,7 @@
     return p0
 .end method
 
-.method public final p(Lybc;)I
+.method public final p(Lvoc;)I
     .locals 0
 
     const/4 p0, 0x0
@@ -835,14 +831,14 @@
     return p0
 .end method
 
-.method public final s()Lobc;
+.method public final s()Lloc;
     .locals 1
 
-    new-instance p0, Lobc;
+    new-instance p0, Lloc;
 
     const/4 v0, -0x2
 
-    invoke-direct {p0, v0, v0}, Lobc;-><init>(II)V
+    invoke-direct {p0, v0, v0}, Lloc;-><init>(II)V
 
     return-object p0
 .end method
@@ -855,7 +851,7 @@
     return p0
 .end method
 
-.method public final w0(ILubc;Lybc;)I
+.method public final w0(ILroc;Lvoc;)I
     .locals 1
 
     invoke-virtual {p0}, Lcom/google/android/material/carousel/CarouselLayoutManager;->K0()Z
@@ -877,13 +873,7 @@
     goto :goto_0
 
     :cond_0
-    const-wide p0, 0x7fffffffffffffffL
-
-    invoke-virtual {p2, v0, p0, p1}, Lubc;->j(IJ)Lccc;
-
-    move-result-object p0
-
-    iget-object p0, p0, Lccc;->a:Landroid/view/View;
+    invoke-virtual {p2, v0}, Lroc;->d(I)Landroid/view/View;
 
     new-instance p0, Ljava/lang/IllegalStateException;
 
@@ -904,7 +894,7 @@
     return-void
 .end method
 
-.method public final y0(ILubc;Lybc;)I
+.method public final y0(ILroc;Lvoc;)I
     .locals 1
 
     invoke-virtual {p0}, Lcom/google/android/material/carousel/CarouselLayoutManager;->f()Z
@@ -926,13 +916,7 @@
     goto :goto_0
 
     :cond_0
-    const-wide p0, 0x7fffffffffffffffL
-
-    invoke-virtual {p2, v0, p0, p1}, Lubc;->j(IJ)Lccc;
-
-    move-result-object p0
-
-    iget-object p0, p0, Lccc;->a:Landroid/view/View;
+    invoke-virtual {p2, v0}, Lroc;->d(I)Landroid/view/View;
 
     new-instance p0, Ljava/lang/IllegalStateException;
 

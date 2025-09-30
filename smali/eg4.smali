@@ -1,460 +1,212 @@
-.class public abstract Leg4;
+.class public final Leg4;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-
-# static fields
-.field public static final k:Landroid/util/Size;
-
-.field public static final l:Ljava/util/concurrent/atomic/AtomicInteger;
-
-.field public static final m:Ljava/util/concurrent/atomic/AtomicInteger;
+# interfaces
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field public final a:Ljava/lang/Object;
+.field public final synthetic a:I
 
-.field public b:I
+.field public final synthetic b:Ljava/util/ArrayList;
 
-.field public c:Z
-
-.field public d:Liq1;
-
-.field public final e:Llq1;
-
-.field public f:Liq1;
-
-.field public final g:Llq1;
-
-.field public final h:Landroid/util/Size;
-
-.field public final i:I
-
-.field public j:Ljava/lang/Class;
+.field public final synthetic c:Lkg4;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public synthetic constructor <init>(Lkg4;Ljava/util/ArrayList;I)V
+    .locals 0
 
-    new-instance v0, Landroid/util/Size;
+    iput p3, p0, Leg4;->a:I
 
-    const/4 v1, 0x0
+    iput-object p1, p0, Leg4;->c:Lkg4;
 
-    invoke-direct {v0, v1, v1}, Landroid/util/Size;-><init>(II)V
-
-    sput-object v0, Leg4;->k:Landroid/util/Size;
-
-    new-instance v0, Ljava/util/concurrent/atomic/AtomicInteger;
-
-    invoke-direct {v0, v1}, Ljava/util/concurrent/atomic/AtomicInteger;-><init>(I)V
-
-    sput-object v0, Leg4;->l:Ljava/util/concurrent/atomic/AtomicInteger;
-
-    new-instance v0, Ljava/util/concurrent/atomic/AtomicInteger;
-
-    invoke-direct {v0, v1}, Ljava/util/concurrent/atomic/AtomicInteger;-><init>(I)V
-
-    sput-object v0, Leg4;->m:Ljava/util/concurrent/atomic/AtomicInteger;
-
-    return-void
-.end method
-
-.method public constructor <init>(Landroid/util/Size;I)V
-    .locals 1
+    iput-object p2, p0, Leg4;->b:Ljava/util/ArrayList;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    new-instance v0, Ljava/lang/Object;
-
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    iput-object v0, p0, Leg4;->a:Ljava/lang/Object;
-
-    const/4 v0, 0x0
-
-    iput v0, p0, Leg4;->b:I
-
-    iput-boolean v0, p0, Leg4;->c:Z
-
-    iput-object p1, p0, Leg4;->h:Landroid/util/Size;
-
-    iput p2, p0, Leg4;->i:I
-
-    new-instance p1, Lcg4;
-
-    const/4 p2, 0x0
-
-    invoke-direct {p1, p0, p2}, Lcg4;-><init>(Leg4;I)V
-
-    invoke-static {p1}, Lxja;->q(Ljq1;)Llq1;
-
-    move-result-object p1
-
-    iput-object p1, p0, Leg4;->e:Llq1;
-
-    new-instance p2, Lcg4;
-
-    const/4 v0, 0x1
-
-    invoke-direct {p2, p0, v0}, Lcg4;-><init>(Leg4;I)V
-
-    invoke-static {p2}, Lxja;->q(Ljq1;)Llq1;
-
-    move-result-object p2
-
-    iput-object p2, p0, Leg4;->g:Llq1;
-
-    const-string p2, "DeferrableSurface"
-
-    const/4 v0, 0x3
-
-    invoke-static {v0, p2}, Lqo8;->u(ILjava/lang/String;)Z
-
-    move-result p2
-
-    if-eqz p2, :cond_0
-
-    sget-object p2, Leg4;->m:Ljava/util/concurrent/atomic/AtomicInteger;
-
-    invoke-virtual {p2}, Ljava/util/concurrent/atomic/AtomicInteger;->incrementAndGet()I
-
-    sget-object p2, Leg4;->l:Ljava/util/concurrent/atomic/AtomicInteger;
-
-    invoke-virtual {p2}, Ljava/util/concurrent/atomic/AtomicInteger;->get()I
-
-    invoke-virtual {p0}, Ljava/lang/Object;->toString()Ljava/lang/String;
-
-    new-instance p2, Ljava/lang/Exception;
-
-    invoke-direct {p2}, Ljava/lang/Exception;-><init>()V
-
-    invoke-static {p2}, Landroid/util/Log;->getStackTraceString(Ljava/lang/Throwable;)Ljava/lang/String;
-
-    move-result-object p2
-
-    new-instance v0, Ldg4;
-
-    invoke-direct {v0, p0, p2}, Ldg4;-><init>(Leg4;Ljava/lang/String;)V
-
-    invoke-static {}, Lsgg;->n()Lpk4;
-
-    move-result-object p0
-
-    iget-object p1, p1, Llq1;->b:Lkq1;
-
-    invoke-virtual {p1, v0, p0}, Lm3;->d(Ljava/lang/Runnable;Ljava/util/concurrent/Executor;)V
-
-    :cond_0
     return-void
 .end method
 
 
 # virtual methods
-.method public a()V
-    .locals 5
+.method public final run()V
+    .locals 12
 
-    iget-object v0, p0, Leg4;->a:Ljava/lang/Object;
+    iget v0, p0, Leg4;->a:I
 
-    monitor-enter v0
+    packed-switch v0, :pswitch_data_0
 
-    :try_start_0
-    iget-boolean v1, p0, Leg4;->c:Z
+    iget-object v0, p0, Leg4;->b:Ljava/util/ArrayList;
 
-    const/4 v2, 0x0
+    invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
-    if-nez v1, :cond_1
+    move-result-object v1
 
-    const/4 v1, 0x1
+    :goto_0
+    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
 
-    iput-boolean v1, p0, Leg4;->c:Z
+    move-result v2
 
-    iget-object v1, p0, Leg4;->f:Liq1;
+    iget-object v3, p0, Leg4;->c:Lkg4;
 
-    invoke-virtual {v1, v2}, Liq1;->b(Ljava/lang/Object;)Z
+    if-eqz v2, :cond_0
 
-    iget v1, p0, Leg4;->b:I
+    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    if-nez v1, :cond_0
+    move-result-object v2
 
-    iget-object v1, p0, Leg4;->d:Liq1;
+    check-cast v2, Lzoc;
 
-    iput-object v2, p0, Leg4;->d:Liq1;
+    invoke-virtual {v3}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    iget-object v4, v2, Lzoc;->a:Landroid/view/View;
+
+    invoke-virtual {v4}, Landroid/view/View;->animate()Landroid/view/ViewPropertyAnimator;
+
+    move-result-object v5
+
+    iget-object v6, v3, Lkg4;->o:Ljava/util/ArrayList;
+
+    invoke-virtual {v6, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    const/high16 v6, 0x3f800000    # 1.0f
+
+    invoke-virtual {v5, v6}, Landroid/view/ViewPropertyAnimator;->alpha(F)Landroid/view/ViewPropertyAnimator;
+
+    move-result-object v6
+
+    iget-wide v7, v3, Lhoc;->c:J
+
+    invoke-virtual {v6, v7, v8}, Landroid/view/ViewPropertyAnimator;->setDuration(J)Landroid/view/ViewPropertyAnimator;
+
+    move-result-object v6
+
+    new-instance v7, Lfg4;
+
+    invoke-direct {v7, v3, v2, v4, v5}, Lfg4;-><init>(Lkg4;Lzoc;Landroid/view/View;Landroid/view/ViewPropertyAnimator;)V
+
+    invoke-virtual {v6, v7}, Landroid/view/ViewPropertyAnimator;->setListener(Landroid/animation/Animator$AnimatorListener;)Landroid/view/ViewPropertyAnimator;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Landroid/view/ViewPropertyAnimator;->start()V
 
     goto :goto_0
 
-    :catchall_0
-    move-exception p0
-
-    goto :goto_2
-
     :cond_0
-    move-object v1, v2
+    invoke-virtual {v0}, Ljava/util/ArrayList;->clear()V
 
-    :goto_0
-    const-string v3, "DeferrableSurface"
+    iget-object p0, v3, Lkg4;->l:Ljava/util/ArrayList;
 
-    const/4 v4, 0x3
+    invoke-virtual {p0, v0}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
 
-    invoke-static {v4, v3}, Lqo8;->u(ILjava/lang/String;)Z
-
-    move-result v3
-
-    if-eqz v3, :cond_2
-
-    invoke-virtual {p0}, Ljava/lang/Object;->toString()Ljava/lang/String;
-
-    goto :goto_1
-
-    :cond_1
-    move-object v1, v2
-
-    :cond_2
-    :goto_1
-    monitor-exit v0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    if-eqz v1, :cond_3
-
-    invoke-virtual {v1, v2}, Liq1;->b(Ljava/lang/Object;)Z
-
-    :cond_3
     return-void
 
-    :goto_2
-    :try_start_1
-    monitor-exit v0
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+    :pswitch_0
+    iget-object v0, p0, Leg4;->b:Ljava/util/ArrayList;
 
-    throw p0
-.end method
+    invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
-.method public final b()V
-    .locals 5
+    move-result-object v1
 
-    iget-object v0, p0, Leg4;->a:Ljava/lang/Object;
+    :goto_1
+    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
 
-    monitor-enter v0
+    move-result v2
 
-    :try_start_0
-    iget v1, p0, Leg4;->b:I
+    iget-object v4, p0, Leg4;->c:Lkg4;
 
-    if-eqz v1, :cond_3
+    if-eqz v2, :cond_3
 
-    add-int/lit8 v1, v1, -0x1
+    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    iput v1, p0, Leg4;->b:I
+    move-result-object v2
+
+    check-cast v2, Ljg4;
+
+    iget-object v5, v2, Ljg4;->a:Lzoc;
+
+    iget v3, v2, Ljg4;->b:I
+
+    iget v6, v2, Ljg4;->c:I
+
+    iget v7, v2, Ljg4;->d:I
+
+    iget v2, v2, Ljg4;->e:I
+
+    invoke-virtual {v4}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    move v8, v7
+
+    iget-object v7, v5, Lzoc;->a:Landroid/view/View;
+
+    sub-int v3, v8, v3
+
+    sub-int v8, v2, v6
 
     const/4 v2, 0x0
-
-    if-nez v1, :cond_0
-
-    iget-boolean v1, p0, Leg4;->c:Z
-
-    if-eqz v1, :cond_0
-
-    iget-object v1, p0, Leg4;->d:Liq1;
-
-    iput-object v2, p0, Leg4;->d:Liq1;
-
-    goto :goto_0
-
-    :catchall_0
-    move-exception p0
-
-    goto :goto_1
-
-    :cond_0
-    move-object v1, v2
-
-    :goto_0
-    const-string v3, "DeferrableSurface"
-
-    const/4 v4, 0x3
-
-    invoke-static {v4, v3}, Lqo8;->u(ILjava/lang/String;)Z
-
-    move-result v3
 
     if-eqz v3, :cond_1
 
-    invoke-virtual {p0}, Ljava/lang/Object;->toString()Ljava/lang/String;
+    invoke-virtual {v7}, Landroid/view/View;->animate()Landroid/view/ViewPropertyAnimator;
 
-    iget v3, p0, Leg4;->b:I
+    move-result-object v6
 
-    if-nez v3, :cond_1
-
-    sget-object v3, Leg4;->m:Ljava/util/concurrent/atomic/AtomicInteger;
-
-    invoke-virtual {v3}, Ljava/util/concurrent/atomic/AtomicInteger;->get()I
-
-    sget-object v3, Leg4;->l:Ljava/util/concurrent/atomic/AtomicInteger;
-
-    invoke-virtual {v3}, Ljava/util/concurrent/atomic/AtomicInteger;->decrementAndGet()I
-
-    invoke-virtual {p0}, Ljava/lang/Object;->toString()Ljava/lang/String;
+    invoke-virtual {v6, v2}, Landroid/view/ViewPropertyAnimator;->translationX(F)Landroid/view/ViewPropertyAnimator;
 
     :cond_1
-    monitor-exit v0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    if-eqz v8, :cond_2
 
-    if-eqz v1, :cond_2
+    invoke-virtual {v7}, Landroid/view/View;->animate()Landroid/view/ViewPropertyAnimator;
 
-    invoke-virtual {v1, v2}, Liq1;->b(Ljava/lang/Object;)Z
+    move-result-object v6
+
+    invoke-virtual {v6, v2}, Landroid/view/ViewPropertyAnimator;->translationY(F)Landroid/view/ViewPropertyAnimator;
 
     :cond_2
-    return-void
+    invoke-virtual {v7}, Landroid/view/View;->animate()Landroid/view/ViewPropertyAnimator;
 
-    :cond_3
-    :try_start_1
-    new-instance p0, Ljava/lang/IllegalStateException;
+    move-result-object v9
 
-    const-string v1, "Decrementing use count occurs more times than incrementing"
+    iget-object v2, v4, Lkg4;->p:Ljava/util/ArrayList;
 
-    invoke-direct {p0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v2, v5}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    throw p0
+    invoke-virtual {v4}, Lhoc;->f()J
 
-    :goto_1
-    monitor-exit v0
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+    move-result-wide v10
 
-    throw p0
-.end method
+    invoke-virtual {v9, v10, v11}, Landroid/view/ViewPropertyAnimator;->setDuration(J)Landroid/view/ViewPropertyAnimator;
 
-.method public final c()Lbm7;
-    .locals 3
+    move-result-object v2
 
-    iget-object v0, p0, Leg4;->a:Ljava/lang/Object;
+    move v6, v3
 
-    monitor-enter v0
+    new-instance v3, Lgg4;
 
-    :try_start_0
-    iget-boolean v1, p0, Leg4;->c:Z
+    invoke-direct/range {v3 .. v9}, Lgg4;-><init>(Lkg4;Lzoc;ILandroid/view/View;ILandroid/view/ViewPropertyAnimator;)V
 
-    if-eqz v1, :cond_0
+    invoke-virtual {v2, v3}, Landroid/view/ViewPropertyAnimator;->setListener(Landroid/animation/Animator$AnimatorListener;)Landroid/view/ViewPropertyAnimator;
 
-    new-instance v1, Landroidx/camera/core/impl/DeferrableSurface$SurfaceClosedException;
+    move-result-object v2
 
-    const-string v2, "DeferrableSurface already closed."
-
-    invoke-direct {v1, p0, v2}, Landroidx/camera/core/impl/DeferrableSurface$SurfaceClosedException;-><init>(Leg4;Ljava/lang/String;)V
-
-    new-instance p0, Lcw6;
-
-    const/4 v2, 0x1
-
-    invoke-direct {p0, v2, v1}, Lcw6;-><init>(ILjava/lang/Object;)V
-
-    monitor-exit v0
-
-    return-object p0
-
-    :catchall_0
-    move-exception p0
-
-    goto :goto_0
-
-    :cond_0
-    invoke-virtual {p0}, Leg4;->e()Lbm7;
-
-    move-result-object p0
-
-    monitor-exit v0
-
-    return-object p0
-
-    :goto_0
-    monitor-exit v0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    throw p0
-.end method
-
-.method public final d()V
-    .locals 4
-
-    iget-object v0, p0, Leg4;->a:Ljava/lang/Object;
-
-    monitor-enter v0
-
-    :try_start_0
-    iget v1, p0, Leg4;->b:I
-
-    if-nez v1, :cond_1
-
-    iget-boolean v2, p0, Leg4;->c:Z
-
-    if-nez v2, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    new-instance v1, Landroidx/camera/core/impl/DeferrableSurface$SurfaceClosedException;
-
-    const-string v2, "Cannot begin use on a closed surface."
-
-    invoke-direct {v1, p0, v2}, Landroidx/camera/core/impl/DeferrableSurface$SurfaceClosedException;-><init>(Leg4;Ljava/lang/String;)V
-
-    throw v1
-
-    :catchall_0
-    move-exception p0
+    invoke-virtual {v2}, Landroid/view/ViewPropertyAnimator;->start()V
 
     goto :goto_1
 
-    :cond_1
-    :goto_0
-    const/4 v2, 0x1
-
-    add-int/2addr v1, v2
-
-    iput v1, p0, Leg4;->b:I
-
-    const-string v1, "DeferrableSurface"
-
-    const/4 v3, 0x3
-
-    invoke-static {v3, v1}, Lqo8;->u(ILjava/lang/String;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_3
-
-    iget v1, p0, Leg4;->b:I
-
-    if-ne v1, v2, :cond_2
-
-    sget-object v1, Leg4;->m:Ljava/util/concurrent/atomic/AtomicInteger;
-
-    invoke-virtual {v1}, Ljava/util/concurrent/atomic/AtomicInteger;->get()I
-
-    sget-object v1, Leg4;->l:Ljava/util/concurrent/atomic/AtomicInteger;
-
-    invoke-virtual {v1}, Ljava/util/concurrent/atomic/AtomicInteger;->incrementAndGet()I
-
-    invoke-virtual {p0}, Ljava/lang/Object;->toString()Ljava/lang/String;
-
-    :cond_2
-    invoke-virtual {p0}, Ljava/lang/Object;->toString()Ljava/lang/String;
-
     :cond_3
-    monitor-exit v0
+    invoke-virtual {v0}, Ljava/util/ArrayList;->clear()V
+
+    iget-object p0, v4, Lkg4;->m:Ljava/util/ArrayList;
+
+    invoke-virtual {p0, v0}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
 
     return-void
 
-    :goto_1
-    monitor-exit v0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    throw p0
-.end method
-
-.method public abstract e()Lbm7;
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

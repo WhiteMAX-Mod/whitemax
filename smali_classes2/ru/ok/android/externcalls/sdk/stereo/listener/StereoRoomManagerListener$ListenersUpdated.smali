@@ -234,7 +234,7 @@
 
     iget-object v3, p1, Lru/ok/android/externcalls/sdk/stereo/listener/StereoRoomManagerListener$ListenersUpdated;->addedParticipantIds:Ljava/util/List;
 
-    invoke-static {v1, v3}, Lxq7;->d(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v3}, Lvyg;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v1
 
@@ -247,7 +247,7 @@
 
     iget-object p1, p1, Lru/ok/android/externcalls/sdk/stereo/listener/StereoRoomManagerListener$ListenersUpdated;->removedParticipantIds:Ljava/util/List;
 
-    invoke-static {p0, p1}, Lxq7;->d(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {p0, p1}, Lvyg;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p0
 
@@ -314,7 +314,7 @@
 
     iget-object v2, p0, Lru/ok/android/externcalls/sdk/stereo/listener/StereoRoomManagerListener$ListenersUpdated;->addedParticipantIds:Ljava/util/List;
 
-    invoke-static {v2, v0, v1}, Lzge;->n(Ljava/util/List;II)I
+    invoke-static {v2, v0, v1}, Lz7e;->n(Ljava/util/List;II)I
 
     move-result v0
 
@@ -358,7 +358,7 @@
 
     const-string v0, ")"
 
-    invoke-static {v2, p0, v0}, Lzt1;->i(Ljava/lang/StringBuilder;Ljava/util/List;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v2, p0, v0}, Lmw1;->j(Ljava/lang/StringBuilder;Ljava/util/List;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
 

@@ -1,42 +1,95 @@
 .class public final Lv80;
-.super Ljava/lang/Object;
+.super Lgl0;
 .source "SourceFile"
 
-# interfaces
-.implements Lqw9;
 
-
-# static fields
-.field public static final a:Lv80;
+# instance fields
+.field public final a:Ljava/util/ArrayList;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(Ljava/util/ArrayList;)V
+    .locals 0
 
-    new-instance v0, Lv80;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    sput-object v0, Lv80;->a:Lv80;
-
-    const-string v0, "messagingClientEventExtension"
-
-    invoke-static {v0}, Lte5;->a(Ljava/lang/String;)Lte5;
+    iput-object p1, p0, Lv80;->a:Ljava/util/ArrayList;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Ljava/lang/Object;Ljava/lang/Object;)V
-    .locals 0
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 1
 
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    if-ne p1, p0, :cond_0
 
-    new-instance p0, Ljava/lang/ClassCastException;
+    const/4 p0, 0x1
 
-    invoke-direct {p0}, Ljava/lang/ClassCastException;-><init>()V
+    return p0
 
-    throw p0
+    :cond_0
+    instance-of v0, p1, Lgl0;
+
+    if-eqz v0, :cond_1
+
+    check-cast p1, Lgl0;
+
+    check-cast p1, Lv80;
+
+    iget-object p1, p1, Lv80;->a:Ljava/util/ArrayList;
+
+    iget-object p0, p0, Lv80;->a:Ljava/util/ArrayList;
+
+    invoke-virtual {p0, p1}, Ljava/util/ArrayList;->equals(Ljava/lang/Object;)Z
+
+    move-result p0
+
+    return p0
+
+    :cond_1
+    const/4 p0, 0x0
+
+    return p0
+.end method
+
+.method public final hashCode()I
+    .locals 1
+
+    iget-object p0, p0, Lv80;->a:Ljava/util/ArrayList;
+
+    invoke-virtual {p0}, Ljava/util/ArrayList;->hashCode()I
+
+    move-result p0
+
+    const v0, 0xf4243
+
+    xor-int/2addr p0, v0
+
+    return p0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 2
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "BatchedLogRequest{logRequests="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object p0, p0, Lv80;->a:Ljava/util/ArrayList;
+
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string p0, "}"
+
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    return-object p0
 .end method

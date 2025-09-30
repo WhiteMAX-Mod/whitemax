@@ -1,310 +1,67 @@
-.class public final Ls28;
-.super Ljava/util/concurrent/atomic/AtomicReference;
+.class public abstract Ls28;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lu28;
-.implements Lam4;
-.implements Ljava/lang/Runnable;
-.implements Lnpd;
 
-
-# instance fields
-.field public final X:Ljava/lang/Object;
-
-.field public final synthetic a:I
-
-.field public final b:Lgsc;
-
-.field public c:Ljava/lang/Object;
-
-.field public o:Ljava/lang/Throwable;
+# static fields
+.field public static final a:[B
 
 
 # direct methods
-.method public synthetic constructor <init>(Ljava/lang/Object;Lgsc;I)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 5
 
-    iput p3, p0, Ls28;->a:I
+    const/16 v0, 0x80
 
-    invoke-direct {p0}, Ljava/util/concurrent/atomic/AtomicReference;-><init>()V
+    new-array v0, v0, [B
 
-    iput-object p1, p0, Ls28;->X:Ljava/lang/Object;
+    const/4 v1, -0x1
 
-    iput-object p2, p0, Ls28;->b:Lgsc;
+    invoke-static {v0, v1}, Ljava/util/Arrays;->fill([BB)V
 
-    return-void
-.end method
+    const/4 v1, 0x0
 
+    move v2, v1
 
-# virtual methods
-.method public final a(Ljava/lang/Object;)V
-    .locals 1
+    :goto_0
+    const/16 v3, 0xa
 
-    iget v0, p0, Ls28;->a:I
+    if-ge v2, v3, :cond_0
 
-    packed-switch v0, :pswitch_data_0
+    add-int/lit8 v3, v2, 0x30
 
-    iput-object p1, p0, Ls28;->c:Ljava/lang/Object;
+    int-to-byte v4, v2
 
-    iget-object p1, p0, Ls28;->b:Lgsc;
+    aput-byte v4, v0, v3
 
-    invoke-virtual {p1, p0}, Lgsc;->b(Ljava/lang/Runnable;)Lam4;
-
-    move-result-object p1
-
-    invoke-static {p0, p1}, Lem4;->c(Ljava/util/concurrent/atomic/AtomicReference;Lam4;)Z
-
-    return-void
-
-    :pswitch_0
-    iput-object p1, p0, Ls28;->c:Ljava/lang/Object;
-
-    iget-object p1, p0, Ls28;->b:Lgsc;
-
-    invoke-virtual {p1, p0}, Lgsc;->b(Ljava/lang/Runnable;)Lam4;
-
-    move-result-object p1
-
-    invoke-static {p0, p1}, Lem4;->c(Ljava/util/concurrent/atomic/AtomicReference;Lam4;)Z
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public b()V
-    .locals 1
-
-    iget-object v0, p0, Ls28;->b:Lgsc;
-
-    invoke-virtual {v0, p0}, Lgsc;->b(Ljava/lang/Runnable;)Lam4;
-
-    move-result-object v0
-
-    invoke-static {p0, v0}, Lem4;->c(Ljava/util/concurrent/atomic/AtomicReference;Lam4;)Z
-
-    return-void
-.end method
-
-.method public final c(Lam4;)V
-    .locals 1
-
-    iget v0, p0, Ls28;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    invoke-static {p0, p1}, Lem4;->e(Ljava/util/concurrent/atomic/AtomicReference;Lam4;)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_0
-
-    iget-object p1, p0, Ls28;->X:Ljava/lang/Object;
-
-    check-cast p1, Lnpd;
-
-    invoke-interface {p1, p0}, Lnpd;->c(Lam4;)V
-
-    :cond_0
-    return-void
-
-    :pswitch_0
-    invoke-static {p0, p1}, Lem4;->e(Ljava/util/concurrent/atomic/AtomicReference;Lam4;)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_1
-
-    iget-object p1, p0, Ls28;->X:Ljava/lang/Object;
-
-    check-cast p1, Lu28;
-
-    invoke-interface {p1, p0}, Lu28;->c(Lam4;)V
-
-    :cond_1
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public final f()V
-    .locals 1
-
-    iget v0, p0, Ls28;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    invoke-static {p0}, Lem4;->a(Ljava/util/concurrent/atomic/AtomicReference;)Z
-
-    return-void
-
-    :pswitch_0
-    invoke-static {p0}, Lem4;->a(Ljava/util/concurrent/atomic/AtomicReference;)Z
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public final g()Z
-    .locals 1
-
-    iget v0, p0, Ls28;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, Lam4;
-
-    invoke-static {p0}, Lem4;->b(Lam4;)Z
-
-    move-result p0
-
-    return p0
-
-    :pswitch_0
-    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, Lam4;
-
-    invoke-static {p0}, Lem4;->b(Lam4;)Z
-
-    move-result p0
-
-    return p0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public final onError(Ljava/lang/Throwable;)V
-    .locals 1
-
-    iget v0, p0, Ls28;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    iput-object p1, p0, Ls28;->o:Ljava/lang/Throwable;
-
-    iget-object p1, p0, Ls28;->b:Lgsc;
-
-    invoke-virtual {p1, p0}, Lgsc;->b(Ljava/lang/Runnable;)Lam4;
-
-    move-result-object p1
-
-    invoke-static {p0, p1}, Lem4;->c(Ljava/util/concurrent/atomic/AtomicReference;Lam4;)Z
-
-    return-void
-
-    :pswitch_0
-    iput-object p1, p0, Ls28;->o:Ljava/lang/Throwable;
-
-    iget-object p1, p0, Ls28;->b:Lgsc;
-
-    invoke-virtual {p1, p0}, Lgsc;->b(Ljava/lang/Runnable;)Lam4;
-
-    move-result-object p1
-
-    invoke-static {p0, p1}, Lem4;->c(Ljava/util/concurrent/atomic/AtomicReference;Lam4;)Z
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public final run()V
-    .locals 3
-
-    iget v0, p0, Ls28;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    iget-object v0, p0, Ls28;->X:Ljava/lang/Object;
-
-    check-cast v0, Lnpd;
-
-    iget-object v1, p0, Ls28;->o:Ljava/lang/Throwable;
-
-    if-eqz v1, :cond_0
-
-    invoke-interface {v0, v1}, Lnpd;->onError(Ljava/lang/Throwable;)V
+    add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 
     :cond_0
-    iget-object p0, p0, Ls28;->c:Ljava/lang/Object;
+    :goto_1
+    const/16 v2, 0x1a
 
-    invoke-interface {v0, p0}, Lnpd;->a(Ljava/lang/Object;)V
+    if-ge v1, v2, :cond_1
 
-    :goto_0
-    return-void
+    add-int/lit8 v2, v1, 0x41
 
-    :pswitch_0
-    iget-object v0, p0, Ls28;->X:Ljava/lang/Object;
+    add-int/lit8 v3, v1, 0xa
 
-    check-cast v0, Lu28;
+    int-to-byte v3, v3
 
-    iget-object v1, p0, Ls28;->o:Ljava/lang/Throwable;
+    aput-byte v3, v0, v2
 
-    const/4 v2, 0x0
+    add-int/lit8 v2, v1, 0x61
 
-    if-eqz v1, :cond_1
+    aput-byte v3, v0, v2
 
-    iput-object v2, p0, Ls28;->o:Ljava/lang/Throwable;
-
-    invoke-interface {v0, v1}, Lu28;->onError(Ljava/lang/Throwable;)V
+    add-int/lit8 v1, v1, 0x1
 
     goto :goto_1
 
     :cond_1
-    iget-object v1, p0, Ls28;->c:Ljava/lang/Object;
+    sput-object v0, Ls28;->a:[B
 
-    if-eqz v1, :cond_2
-
-    iput-object v2, p0, Ls28;->c:Ljava/lang/Object;
-
-    invoke-interface {v0, v1}, Lu28;->a(Ljava/lang/Object;)V
-
-    goto :goto_1
-
-    :cond_2
-    invoke-interface {v0}, Lu28;->b()V
-
-    :goto_1
     return-void
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
 .end method

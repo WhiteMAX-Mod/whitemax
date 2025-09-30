@@ -1,222 +1,105 @@
-.class public final Lm11;
-.super Lqde;
+.class public final synthetic Lm11;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lp66;
+.implements Landroid/widget/PopupWindow$OnDismissListener;
 
 
 # instance fields
-.field public synthetic X:Lru/ok/android/externcalls/sdk/audio/CallsAudioDeviceInfo;
+.field public final synthetic a:I
 
-.field public synthetic Y:Lda1;
-
-.field public synthetic Z:Z
-
-.field public final synthetic o0:Lb21;
-
-.field public final synthetic p0:Lje7;
+.field public final synthetic b:Lp11;
 
 
 # direct methods
-.method public constructor <init>(Lb21;Lje7;Lkotlin/coroutines/Continuation;)V
+.method public synthetic constructor <init>(Lp11;I)V
     .locals 0
 
-    iput-object p1, p0, Lm11;->o0:Lb21;
+    iput p2, p0, Lm11;->a:I
 
-    iput-object p2, p0, Lm11;->p0:Lje7;
+    iput-object p1, p0, Lm11;->b:Lp11;
 
-    const/4 p1, 0x4
-
-    invoke-direct {p0, p1, p3}, Lqde;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final i(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 2
+.method public final onDismiss()V
+    .locals 3
 
-    check-cast p1, Lru/ok/android/externcalls/sdk/audio/CallsAudioDeviceInfo;
+    iget v0, p0, Lm11;->a:I
 
-    check-cast p2, Lda1;
+    packed-switch v0, :pswitch_data_0
 
-    check-cast p3, Ljava/lang/Boolean;
+    iget-object p0, p0, Lm11;->b:Lp11;
 
-    invoke-virtual {p3}, Ljava/lang/Boolean;->booleanValue()Z
+    iget-object p0, p0, Lp11;->K0:Lbzc;
 
-    move-result p3
+    sget v0, Lq0d;->t0:I
 
-    check-cast p4, Lkotlin/coroutines/Continuation;
+    sget v1, Lmac;->call_more_accessibility:I
 
-    new-instance v0, Lm11;
+    new-instance v2, Lp2f;
 
-    iget-object v1, p0, Lm11;->o0:Lb21;
+    invoke-direct {v2, v1}, Lp2f;-><init>(I)V
 
-    iget-object p0, p0, Lm11;->p0:Lje7;
+    invoke-static {p0, v0, v2}, Lp11;->w(Lbzc;ILu2f;)V
 
-    invoke-direct {v0, v1, p0, p4}, Lm11;-><init>(Lb21;Lje7;Lkotlin/coroutines/Continuation;)V
+    return-void
 
-    iput-object p1, v0, Lm11;->X:Lru/ok/android/externcalls/sdk/audio/CallsAudioDeviceInfo;
+    :pswitch_0
+    iget-object p0, p0, Lm11;->b:Lp11;
 
-    iput-object p2, v0, Lm11;->Y:Lda1;
+    iget-object v0, p0, Lp11;->O0:Lk51;
 
-    iput-boolean p3, v0, Lm11;->Z:Z
+    if-eqz v0, :cond_1
 
-    sget-object p0, Le5f;->a:Le5f;
+    iget-object p0, p0, Lp11;->H0:Lbzc;
 
-    invoke-virtual {v0, p0}, Lm11;->o(Ljava/lang/Object;)Ljava/lang/Object;
+    instance-of v1, v0, Lg51;
 
-    return-object p0
-.end method
+    if-eqz v1, :cond_0
 
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 14
+    check-cast v0, Lg51;
 
-    invoke-static {p1}, Lsgg;->Z(Ljava/lang/Object;)V
+    iget v1, v0, Lg51;->c:I
 
-    iget-object p1, p0, Lm11;->X:Lru/ok/android/externcalls/sdk/audio/CallsAudioDeviceInfo;
+    iget-object v0, v0, Lg51;->f:Lp2f;
 
-    iget-object v0, p0, Lm11;->Y:Lda1;
-
-    iget-boolean v1, p0, Lm11;->Z:Z
-
-    iget-object v2, p0, Lm11;->o0:Lb21;
-
-    iget-object v3, v2, Lb21;->p0:Lazd;
-
-    :cond_0
-    invoke-virtual {v3}, Lazd;->getValue()Ljava/lang/Object;
-
-    move-result-object v4
-
-    move-object v5, v4
-
-    check-cast v5, Luq0;
-
-    iget-object v7, v0, Lda1;->r:Lf38;
-
-    iget-object v8, v0, Lda1;->q:Lf38;
-
-    iget-boolean v6, v0, Lda1;->g:Z
-
-    sget-object v9, Lf38;->b:Lf38;
-
-    sget-object v10, Lf38;->o:Lf38;
-
-    iget-object v11, p0, Lm11;->p0:Lje7;
-
-    if-eqz v6, :cond_2
-
-    iget-object v6, v0, Lda1;->e:Lv85;
-
-    instance-of v6, v6, Lu85;
-
-    if-eqz v6, :cond_1
+    invoke-static {p0, v1, v0}, Lp11;->w(Lbzc;ILu2f;)V
 
     goto :goto_0
 
+    :cond_0
+    invoke-interface {v0}, Lk51;->a()I
+
+    move-result v1
+
+    invoke-interface {v0}, Lk51;->getContentDescription()Lu2f;
+
+    move-result-object v0
+
+    invoke-static {p0, v1, v0}, Lp11;->y(Lbzc;ILu2f;)V
+
     :cond_1
-    invoke-interface {v11}, Lje7;->getValue()Ljava/lang/Object;
-
-    move-result-object v6
-
-    check-cast v6, Lzd5;
-
-    check-cast v6, Lbe5;
-
-    invoke-virtual {v6}, Lbe5;->o()Z
-
-    move-result v6
-
-    if-nez v6, :cond_3
-
-    :cond_2
     :goto_0
-    move-object v6, v10
+    return-void
 
-    goto :goto_1
+    :pswitch_1
+    iget-object p0, p0, Lm11;->b:Lp11;
 
-    :cond_3
-    if-eqz v1, :cond_4
+    const/4 v0, 0x0
 
-    move-object v6, v9
+    iput-object v0, p0, Lp11;->P0:La9f;
 
-    goto :goto_1
+    return-void
 
-    :cond_4
-    sget-object v6, Lf38;->a:Lf38;
-
-    :goto_1
-    invoke-interface {v11}, Lje7;->getValue()Ljava/lang/Object;
-
-    move-result-object v11
-
-    check-cast v11, Lzd5;
-
-    check-cast v11, Lbe5;
-
-    invoke-virtual {v11}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    sget-object v12, Lru/ok/tamtam/android/prefs/PmsKey;->group-call-chat-support:Lru/ok/tamtam/android/prefs/PmsKey;
-
-    const/4 v13, 0x0
-
-    invoke-virtual {v11, v12, v13}, Ltwc;->k(Lru/ok/tamtam/android/prefs/PmsKey;Z)Z
-
-    move-result v11
-
-    if-nez v11, :cond_5
-
-    goto :goto_3
-
-    :cond_5
-    iget-object v11, v0, Lda1;->f:Lg31;
-
-    if-eqz v11, :cond_6
-
-    iget-object v11, v11, Lg31;->a:Ljava/lang/Long;
-
-    goto :goto_2
-
-    :cond_6
-    const/4 v11, 0x0
-
-    :goto_2
-    if-nez v11, :cond_7
-
-    goto :goto_3
-
-    :cond_7
-    move-object v10, v9
-
-    :goto_3
-    iget-object v9, v2, Lb21;->c:Lbl1;
-
-    invoke-virtual {v9}, Lbl1;->u()Z
-
-    move-result v9
-
-    invoke-static {p1, v9}, Laz7;->b(Lru/ok/android/externcalls/sdk/audio/CallsAudioDeviceInfo;Z)Lv41;
-
-    move-result-object v11
-
-    invoke-virtual {v5}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    move-object v9, v6
-
-    new-instance v6, Luq0;
-
-    invoke-direct/range {v6 .. v11}, Luq0;-><init>(Lf38;Lf38;Lf38;Lf38;Lv41;)V
-
-    invoke-virtual {v3, v4, v6}, Lazd;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v4
-
-    if-eqz v4, :cond_0
-
-    sget-object p0, Le5f;->a:Le5f;
-
-    return-object p0
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

@@ -1,61 +1,161 @@
-.class public final Ltca;
-.super Lxca;
+.class public final synthetic Ltca;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lzb6;
 
-# static fields
-.field public static final a:Ltca;
+
+# instance fields
+.field public final synthetic a:I
+
+.field public final synthetic b:Luca;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public synthetic constructor <init>(Luca;I)V
+    .locals 0
 
-    new-instance v0, Ltca;
+    iput p2, p0, Ltca;->a:I
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Ltca;->b:Luca;
 
-    sput-object v0, Ltca;->a:Ltca;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
+.method public final invoke()Ljava/lang/Object;
+    .locals 2
 
-    const/4 v0, 0x1
+    iget v0, p0, Ltca;->a:I
 
-    if-ne p0, p1, :cond_0
+    iget-object p0, p0, Ltca;->b:Luca;
 
-    return v0
+    packed-switch v0, :pswitch_data_0
+
+    iget-object p0, p0, Luca;->a:Landroid/content/Context;
+
+    invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object v0
+
+    iget v1, v0, Landroid/util/DisplayMetrics;->widthPixels:I
+
+    int-to-float v1, v1
+
+    iget v0, v0, Landroid/util/DisplayMetrics;->density:F
+
+    div-float/2addr v1, v0
+
+    const/high16 v0, 0x44480000    # 800.0f
+
+    cmpl-float v0, v1, v0
+
+    if-lez v0, :cond_0
+
+    invoke-static {p0}, Lkp;->t(Landroid/content/Context;)Landroid/util/Size;
+
+    move-result-object p0
+
+    invoke-virtual {p0}, Landroid/util/Size;->getWidth()I
+
+    move-result p0
+
+    const/16 v0, 0x64
+
+    int-to-float v0, v0
+
+    invoke-static {}, Lvo4;->d()Landroid/content/res/Resources;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object v1
+
+    iget v1, v1, Landroid/util/DisplayMetrics;->density:F
+
+    invoke-static {v0, v1, p0}, Lsq3;->q(FFI)I
+
+    move-result p0
+
+    goto :goto_0
 
     :cond_0
-    instance-of p0, p1, Ltca;
+    const/high16 p0, 0x43b40000    # 360.0f
 
-    if-nez p0, :cond_1
+    cmpl-float p0, v1, p0
 
-    const/4 p0, 0x0
+    if-lez p0, :cond_1
 
-    return p0
+    const/16 p0, 0x123
+
+    int-to-float p0, p0
+
+    invoke-static {}, Lvo4;->d()Landroid/content/res/Resources;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object v0
+
+    iget v0, v0, Landroid/util/DisplayMetrics;->density:F
+
+    mul-float/2addr p0, v0
+
+    invoke-static {p0}, Lya6;->G(F)I
+
+    move-result p0
+
+    goto :goto_0
 
     :cond_1
-    return v0
-.end method
+    const/16 p0, 0xf8
 
-.method public final hashCode()I
-    .locals 0
+    int-to-float p0, p0
 
-    const p0, -0x3b483d5f
+    invoke-static {}, Lvo4;->d()Landroid/content/res/Resources;
 
-    return p0
-.end method
+    move-result-object v0
 
-.method public final toString()Ljava/lang/String;
-    .locals 0
+    invoke-virtual {v0}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
 
-    const-string p0, "Primary"
+    move-result-object v0
+
+    iget v0, v0, Landroid/util/DisplayMetrics;->density:F
+
+    mul-float/2addr p0, v0
+
+    invoke-static {p0}, Lya6;->G(F)I
+
+    move-result p0
+
+    :goto_0
+    invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object p0
 
     return-object p0
+
+    :pswitch_0
+    iget-object p0, p0, Luca;->a:Landroid/content/Context;
+
+    invoke-static {p0}, Lx4h;->a(Landroid/content/Context;)Lnlf;
+
+    move-result-object p0
+
+    return-object p0
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

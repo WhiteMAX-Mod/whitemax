@@ -1,37 +1,60 @@
-.class public abstract Lh6a;
-.super Ljava/lang/Object;
+.class public final Lh6a;
+.super Lhc3;
 .source "SourceFile"
 
+# interfaces
+.implements Lmd6;
 
-# static fields
-.field public static final a:I
 
-.field public static final b:I
+# instance fields
+.field public final a:Ly4a;
 
-.field public static final c:I
-
-.field public static final d:I
+.field public final b:Lqc6;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(Ly4a;Lqc6;)V
+    .locals 0
 
-    sget v0, Ldxb;->picker_chats_list_forward_messages:I
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    sput v0, Lh6a;->a:I
+    iput-object p1, p0, Lh6a;->a:Ly4a;
 
-    sget v0, Ldxb;->picker_chats_list_share_files:I
+    iput-object p2, p0, Lh6a;->b:Lqc6;
 
-    sput v0, Lh6a;->b:I
+    return-void
+.end method
 
-    sget v0, Ldxb;->picker_chats_list_share_images:I
 
-    sput v0, Lh6a;->c:I
+# virtual methods
+.method public final d()Ly4a;
+    .locals 3
 
-    sget v0, Ldxb;->picker_chats_list_share_videos:I
+    new-instance v0, Lr5a;
 
-    sput v0, Lh6a;->d:I
+    iget-object v1, p0, Lh6a;->b:Lqc6;
+
+    const/4 v2, 0x1
+
+    iget-object p0, p0, Lh6a;->a:Ly4a;
+
+    invoke-direct {v0, p0, v1, v2}, Lr5a;-><init>(Ly4a;Lqc6;I)V
+
+    return-object v0
+.end method
+
+.method public final i(Lrc3;)V
+    .locals 2
+
+    new-instance v0, Lg6a;
+
+    iget-object v1, p0, Lh6a;->b:Lqc6;
+
+    invoke-direct {v0, p1, v1}, Lg6a;-><init>(Lrc3;Lqc6;)V
+
+    iget-object p0, p0, Lh6a;->a:Ly4a;
+
+    invoke-virtual {p0, v0}, Ly4a;->a(Ld8a;)V
 
     return-void
 .end method

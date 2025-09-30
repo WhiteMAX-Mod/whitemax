@@ -3,646 +3,740 @@
 .source "SourceFile"
 
 # interfaces
-.implements Li8g;
-.implements Lp9g;
-
-
-# static fields
-.field public static final t0:Ljava/lang/String;
+.implements Ltu7;
 
 
 # instance fields
-.field public final X:Luk8;
+.field public final a:Lib4;
 
-.field public final Y:Ljava/lang/Object;
+.field public final b:J
 
-.field public Z:I
+.field public final c:J
 
-.field public final a:Landroid/content/Context;
+.field public final d:J
 
-.field public final b:I
+.field public final e:J
 
-.field public final c:Lp8g;
+.field public final f:I
 
-.field public final o:Lzfe;
+.field public final g:Z
 
-.field public final o0:La5d;
+.field public final h:J
 
-.field public final p0:Lv30;
+.field public final i:Ljava/util/HashMap;
 
-.field public q0:Landroid/os/PowerManager$WakeLock;
-
-.field public r0:Z
-
-.field public final s0:Liyd;
+.field public j:J
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
-
-    const-string v0, "DelayMetCommandHandler"
-
-    invoke-static {v0}, Lfc2;->F(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    sput-object v0, Lrg4;->t0:Ljava/lang/String;
-
-    return-void
-.end method
-
-.method public constructor <init>(Landroid/content/Context;ILzfe;Liyd;)V
-    .locals 0
+.method public constructor <init>(Lib4;IIIIZ)V
+    .locals 5
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lrg4;->a:Landroid/content/Context;
+    const-string v0, "bufferForPlaybackMs"
 
-    iput p2, p0, Lrg4;->b:I
+    const/4 v1, 0x0
 
-    iput-object p3, p0, Lrg4;->o:Lzfe;
+    const-string v2, "0"
 
-    iget-object p1, p4, Liyd;->a:Lp8g;
+    invoke-static {v0, p4, v1, v2}, Lrg4;->m(Ljava/lang/String;IILjava/lang/String;)V
 
-    iput-object p1, p0, Lrg4;->c:Lp8g;
+    const-string v3, "bufferForPlaybackAfterRebufferMs"
 
-    iput-object p4, p0, Lrg4;->s0:Liyd;
+    invoke-static {v3, p5, v1, v2}, Lrg4;->m(Ljava/lang/String;IILjava/lang/String;)V
 
-    iget-object p1, p3, Lzfe;->X:Lw8g;
+    const-string v4, "minBufferMs"
 
-    iget-object p1, p1, Lw8g;->j:Lh6d;
+    invoke-static {v4, p2, p4, v0}, Lrg4;->m(Ljava/lang/String;IILjava/lang/String;)V
 
-    iget-object p2, p3, Lzfe;->b:Lzle;
+    invoke-static {v4, p2, p5, v3}, Lrg4;->m(Ljava/lang/String;IILjava/lang/String;)V
 
-    check-cast p2, Ljab;
+    const-string v0, "maxBufferMs"
 
-    iget-object p3, p2, Ljab;->a:Ljava/lang/Object;
+    invoke-static {v0, p3, p2, v4}, Lrg4;->m(Ljava/lang/String;IILjava/lang/String;)V
 
-    check-cast p3, La5d;
+    const-string v0, "backBufferDurationMs"
 
-    iput-object p3, p0, Lrg4;->o0:La5d;
+    invoke-static {v0, v1, v1, v2}, Lrg4;->m(Ljava/lang/String;IILjava/lang/String;)V
 
-    iget-object p2, p2, Ljab;->c:Ljava/lang/Object;
+    iput-object p1, p0, Lrg4;->a:Lib4;
 
-    check-cast p2, Lv30;
+    int-to-long p1, p2
 
-    iput-object p2, p0, Lrg4;->p0:Lv30;
+    invoke-static {p1, p2}, Lnrf;->U(J)J
 
-    new-instance p2, Luk8;
+    move-result-wide p1
 
-    invoke-direct {p2, p1, p0}, Luk8;-><init>(Lh6d;Li8g;)V
+    iput-wide p1, p0, Lrg4;->b:J
 
-    iput-object p2, p0, Lrg4;->X:Luk8;
+    int-to-long p1, p3
 
-    const/4 p1, 0x0
+    invoke-static {p1, p2}, Lnrf;->U(J)J
 
-    iput-boolean p1, p0, Lrg4;->r0:Z
+    move-result-wide p1
 
-    iput p1, p0, Lrg4;->Z:I
+    iput-wide p1, p0, Lrg4;->c:J
 
-    new-instance p1, Ljava/lang/Object;
+    int-to-long p1, p4
 
-    invoke-direct {p1}, Ljava/lang/Object;-><init>()V
+    invoke-static {p1, p2}, Lnrf;->U(J)J
 
-    iput-object p1, p0, Lrg4;->Y:Ljava/lang/Object;
+    move-result-wide p1
+
+    iput-wide p1, p0, Lrg4;->d:J
+
+    int-to-long p1, p5
+
+    invoke-static {p1, p2}, Lnrf;->U(J)J
+
+    move-result-wide p1
+
+    iput-wide p1, p0, Lrg4;->e:J
+
+    const/4 p1, -0x1
+
+    iput p1, p0, Lrg4;->f:I
+
+    iput-boolean p6, p0, Lrg4;->g:Z
+
+    int-to-long p1, v1
+
+    invoke-static {p1, p2}, Lnrf;->U(J)J
+
+    move-result-wide p1
+
+    iput-wide p1, p0, Lrg4;->h:J
+
+    new-instance p1, Ljava/util/HashMap;
+
+    invoke-direct {p1}, Ljava/util/HashMap;-><init>()V
+
+    iput-object p1, p0, Lrg4;->i:Ljava/util/HashMap;
+
+    const-wide/16 p1, -0x1
+
+    iput-wide p1, p0, Lrg4;->j:J
 
     return-void
 .end method
 
-.method public static a(Lrg4;)V
-    .locals 10
+.method public static m(Ljava/lang/String;IILjava/lang/String;)V
+    .locals 0
 
-    iget v0, p0, Lrg4;->b:I
+    if-lt p1, p2, :cond_0
 
-    iget-object v1, p0, Lrg4;->p0:Lv30;
+    const/4 p1, 0x1
 
-    iget-object v2, p0, Lrg4;->a:Landroid/content/Context;
-
-    iget-object v3, p0, Lrg4;->o:Lzfe;
-
-    iget-object v4, p0, Lrg4;->c:Lp8g;
-
-    iget-object v5, v4, Lp8g;->a:Ljava/lang/String;
-
-    iget v6, p0, Lrg4;->Z:I
-
-    sget-object v7, Lrg4;->t0:Ljava/lang/String;
-
-    const/4 v8, 0x2
-
-    if-ge v6, v8, :cond_1
-
-    iput v8, p0, Lrg4;->Z:I
-
-    invoke-static {}, Lfc2;->p()Lfc2;
-
-    move-result-object p0
-
-    new-instance v6, Ljava/lang/StringBuilder;
-
-    const-string v8, "Stopping work for WorkSpec "
-
-    invoke-direct {v6, v8}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v6, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v6}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v6
-
-    invoke-virtual {p0, v7, v6}, Lfc2;->g(Ljava/lang/String;Ljava/lang/String;)V
-
-    new-instance p0, Landroid/content/Intent;
-
-    const-class v6, Landroidx/work/impl/background/systemalarm/SystemAlarmService;
-
-    invoke-direct {p0, v2, v6}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
-
-    const-string v8, "ACTION_STOP_WORK"
-
-    invoke-virtual {p0, v8}, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
-
-    invoke-static {p0, v4}, Lu53;->d(Landroid/content/Intent;Lp8g;)V
-
-    new-instance v8, Ltn;
-
-    const/4 v9, 0x4
-
-    invoke-direct {v8, v3, p0, v0, v9}, Ltn;-><init>(Ljava/lang/Object;Ljava/lang/Object;II)V
-
-    invoke-virtual {v1, v8}, Lv30;->execute(Ljava/lang/Runnable;)V
-
-    iget-object p0, v3, Lzfe;->o:Lh7b;
-
-    invoke-virtual {p0, v5}, Lh7b;->d(Ljava/lang/String;)Z
-
-    move-result p0
-
-    if-eqz p0, :cond_0
-
-    invoke-static {}, Lfc2;->p()Lfc2;
-
-    move-result-object p0
-
-    new-instance v8, Ljava/lang/StringBuilder;
-
-    const-string v9, "WorkSpec "
-
-    invoke-direct {v8, v9}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v8, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v5, " needs to be rescheduled"
-
-    invoke-virtual {v8, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v8}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v5
-
-    invoke-virtual {p0, v7, v5}, Lfc2;->g(Ljava/lang/String;Ljava/lang/String;)V
-
-    new-instance p0, Landroid/content/Intent;
-
-    invoke-direct {p0, v2, v6}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
-
-    const-string v2, "ACTION_SCHEDULE_WORK"
-
-    invoke-virtual {p0, v2}, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
-
-    invoke-static {p0, v4}, Lu53;->d(Landroid/content/Intent;Lp8g;)V
-
-    new-instance v2, Ltn;
-
-    const/4 v4, 0x4
-
-    invoke-direct {v2, v3, p0, v0, v4}, Ltn;-><init>(Ljava/lang/Object;Ljava/lang/Object;II)V
-
-    invoke-virtual {v1, v2}, Lv30;->execute(Ljava/lang/Runnable;)V
-
-    return-void
+    goto :goto_0
 
     :cond_0
-    invoke-static {}, Lfc2;->p()Lfc2;
+    const/4 p1, 0x0
+
+    :goto_0
+    new-instance p2, Ljava/lang/StringBuilder;
+
+    invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {p2, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string p0, " cannot be less than "
+
+    invoke-virtual {p2, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p2, p3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p0
 
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "Processor does not have WorkSpec "
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v0, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, ". No need to reschedule"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-virtual {p0, v7, v0}, Lfc2;->g(Ljava/lang/String;Ljava/lang/String;)V
-
-    return-void
-
-    :cond_1
-    invoke-static {}, Lfc2;->p()Lfc2;
-
-    move-result-object p0
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "Already stopped work for "
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v0, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-virtual {p0, v7, v0}, Lfc2;->g(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {p0, p1}, Lmq0;->b(Ljava/lang/Object;Z)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final b()V
-    .locals 5
+.method public final a(Lsu7;[Lpd5;)V
+    .locals 8
 
-    const-string v0, "Releasing wakelock "
+    iget-object p1, p1, Lsu7;->a:Lndb;
 
-    iget-object v1, p0, Lrg4;->Y:Ljava/lang/Object;
+    iget-object v0, p0, Lrg4;->i:Ljava/util/HashMap;
 
-    monitor-enter v1
-
-    :try_start_0
-    iget-object v2, p0, Lrg4;->X:Luk8;
-
-    invoke-virtual {v2}, Luk8;->E()V
-
-    iget-object v2, p0, Lrg4;->o:Lzfe;
-
-    iget-object v2, v2, Lzfe;->c:Lr9g;
-
-    iget-object v3, p0, Lrg4;->c:Lp8g;
-
-    invoke-virtual {v2, v3}, Lr9g;->a(Lp8g;)V
-
-    iget-object v2, p0, Lrg4;->q0:Landroid/os/PowerManager$WakeLock;
-
-    if-eqz v2, :cond_0
-
-    invoke-virtual {v2}, Landroid/os/PowerManager$WakeLock;->isHeld()Z
-
-    move-result v2
-
-    if-eqz v2, :cond_0
-
-    invoke-static {}, Lfc2;->p()Lfc2;
-
-    move-result-object v2
-
-    sget-object v3, Lrg4;->t0:Ljava/lang/String;
-
-    new-instance v4, Ljava/lang/StringBuilder;
-
-    invoke-direct {v4, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v0, p0, Lrg4;->q0:Landroid/os/PowerManager$WakeLock;
-
-    invoke-virtual {v4, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v0, "for WorkSpec "
-
-    invoke-virtual {v4, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v0, p0, Lrg4;->c:Lp8g;
-
-    invoke-virtual {v4, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-virtual {v2, v3, v0}, Lfc2;->g(Ljava/lang/String;Ljava/lang/String;)V
-
-    iget-object p0, p0, Lrg4;->q0:Landroid/os/PowerManager$WakeLock;
-
-    invoke-virtual {p0}, Landroid/os/PowerManager$WakeLock;->release()V
-
-    goto :goto_0
-
-    :catchall_0
-    move-exception p0
-
-    goto :goto_1
-
-    :cond_0
-    :goto_0
-    monitor-exit v1
-
-    return-void
-
-    :goto_1
-    monitor-exit v1
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    throw p0
-.end method
-
-.method public final c()V
-    .locals 6
-
-    iget-object v0, p0, Lrg4;->c:Lp8g;
-
-    iget-object v0, v0, Lp8g;->a:Ljava/lang/String;
-
-    const-string v1, " ("
-
-    invoke-static {v0, v1}, Lm26;->n(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    iget v2, p0, Lrg4;->b:I
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string v2, ")"
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    iget-object v2, p0, Lrg4;->a:Landroid/content/Context;
-
-    invoke-static {v2, v1}, Lhsf;->a(Landroid/content/Context;Ljava/lang/String;)Landroid/os/PowerManager$WakeLock;
-
-    move-result-object v1
-
-    iput-object v1, p0, Lrg4;->q0:Landroid/os/PowerManager$WakeLock;
-
-    invoke-static {}, Lfc2;->p()Lfc2;
-
-    move-result-object v1
-
-    new-instance v2, Ljava/lang/StringBuilder;
-
-    const-string v3, "Acquiring wakelock "
-
-    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v3, p0, Lrg4;->q0:Landroid/os/PowerManager$WakeLock;
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v3, "for WorkSpec "
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v2
-
-    sget-object v3, Lrg4;->t0:Ljava/lang/String;
-
-    invoke-virtual {v1, v3, v2}, Lfc2;->g(Ljava/lang/String;Ljava/lang/String;)V
-
-    iget-object v1, p0, Lrg4;->q0:Landroid/os/PowerManager$WakeLock;
-
-    invoke-virtual {v1}, Landroid/os/PowerManager$WakeLock;->acquire()V
-
-    iget-object v1, p0, Lrg4;->o:Lzfe;
-
-    iget-object v1, v1, Lzfe;->X:Lw8g;
-
-    iget-object v1, v1, Lw8g;->c:Landroidx/work/impl/WorkDatabase;
-
-    invoke-virtual {v1}, Landroidx/work/impl/WorkDatabase;->x()Lm9g;
-
-    move-result-object v1
-
-    invoke-virtual {v1, v0}, Lm9g;->o(Ljava/lang/String;)Ll9g;
-
-    move-result-object v1
-
-    if-nez v1, :cond_0
-
-    new-instance v0, Lqg4;
-
-    const/4 v1, 0x0
-
-    invoke-direct {v0, p0, v1}, Lqg4;-><init>(Lrg4;I)V
-
-    iget-object p0, p0, Lrg4;->o0:La5d;
-
-    invoke-virtual {p0, v0}, La5d;->execute(Ljava/lang/Runnable;)V
-
-    return-void
-
-    :cond_0
-    invoke-virtual {v1}, Ll9g;->c()Z
-
-    move-result v2
-
-    iput-boolean v2, p0, Lrg4;->r0:Z
-
-    if-nez v2, :cond_1
-
-    invoke-static {}, Lfc2;->p()Lfc2;
-
-    move-result-object v2
-
-    new-instance v4, Ljava/lang/StringBuilder;
-
-    const-string v5, "No constraints for "
-
-    invoke-direct {v4, v5}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v4, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-virtual {v2, v3, v0}, Lfc2;->g(Ljava/lang/String;Ljava/lang/String;)V
-
-    invoke-static {v1}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
-
-    move-result-object v0
-
-    invoke-virtual {p0, v0}, Lrg4;->f(Ljava/util/List;)V
-
-    return-void
-
-    :cond_1
-    iget-object p0, p0, Lrg4;->X:Luk8;
-
-    invoke-static {v1}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
-
-    move-result-object v0
-
-    invoke-virtual {p0, v0}, Luk8;->D(Ljava/util/Collection;)V
-
-    return-void
-.end method
-
-.method public final d(Ljava/util/ArrayList;)V
-    .locals 1
-
-    new-instance p1, Lqg4;
-
-    const/4 v0, 0x0
-
-    invoke-direct {p1, p0, v0}, Lqg4;-><init>(Lrg4;I)V
-
-    iget-object p0, p0, Lrg4;->o0:La5d;
-
-    invoke-virtual {p0, p1}, La5d;->execute(Ljava/lang/Runnable;)V
-
-    return-void
-.end method
-
-.method public final e(Z)V
-    .locals 7
-
-    invoke-static {}, Lfc2;->p()Lfc2;
-
-    move-result-object v0
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    const-string v2, "onExecuted "
-
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v2, p0, Lrg4;->c:Lp8g;
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v3, ", "
-
-    invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    sget-object v3, Lrg4;->t0:Ljava/lang/String;
-
-    invoke-virtual {v0, v3, v1}, Lfc2;->g(Ljava/lang/String;Ljava/lang/String;)V
-
-    invoke-virtual {p0}, Lrg4;->b()V
-
-    const-class v0, Landroidx/work/impl/background/systemalarm/SystemAlarmService;
-
-    iget v1, p0, Lrg4;->b:I
-
-    iget-object v3, p0, Lrg4;->o:Lzfe;
-
-    iget-object v4, p0, Lrg4;->p0:Lv30;
-
-    iget-object v5, p0, Lrg4;->a:Landroid/content/Context;
-
-    if-eqz p1, :cond_0
-
-    new-instance p1, Landroid/content/Intent;
-
-    invoke-direct {p1, v5, v0}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
-
-    const-string v6, "ACTION_SCHEDULE_WORK"
-
-    invoke-virtual {p1, v6}, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
-
-    invoke-static {p1, v2}, Lu53;->d(Landroid/content/Intent;Lp8g;)V
-
-    new-instance v2, Ltn;
-
-    const/4 v6, 0x4
-
-    invoke-direct {v2, v3, p1, v1, v6}, Ltn;-><init>(Ljava/lang/Object;Ljava/lang/Object;II)V
-
-    invoke-virtual {v4, v2}, Lv30;->execute(Ljava/lang/Runnable;)V
-
-    :cond_0
-    iget-boolean p0, p0, Lrg4;->r0:Z
-
-    if-eqz p0, :cond_1
-
-    new-instance p0, Landroid/content/Intent;
-
-    invoke-direct {p0, v5, v0}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
-
-    const-string p1, "ACTION_CONSTRAINTS_CHANGED"
-
-    invoke-virtual {p0, p1}, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
-
-    new-instance p1, Ltn;
-
-    const/4 v0, 0x4
-
-    invoke-direct {p1, v3, p0, v1, v0}, Ltn;-><init>(Ljava/lang/Object;Ljava/lang/Object;II)V
-
-    invoke-virtual {v4, p1}, Lv30;->execute(Ljava/lang/Runnable;)V
-
-    :cond_1
-    return-void
-.end method
-
-.method public final f(Ljava/util/List;)V
-    .locals 2
-
-    invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+    invoke-virtual {v0, p1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
 
+    check-cast p1, Lpg4;
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    const/4 v1, -0x1
+
+    iget v2, p0, Lrg4;->f:I
+
+    if-ne v2, v1, :cond_2
+
+    array-length v1, p2
+
+    const/4 v2, 0x0
+
+    move v3, v2
+
+    move v4, v3
+
+    :goto_0
+    const/high16 v5, 0xc80000
+
+    if-ge v3, v1, :cond_1
+
+    aget-object v6, p2, v3
+
+    if-eqz v6, :cond_0
+
+    invoke-interface {v6}, Lpd5;->a()Lubf;
+
+    move-result-object v6
+
+    iget v6, v6, Lubf;->c:I
+
+    const/high16 v7, 0x20000
+
+    packed-switch v6, :pswitch_data_0
+
+    new-instance p0, Ljava/lang/IllegalArgumentException;
+
+    invoke-direct {p0}, Ljava/lang/IllegalArgumentException;-><init>()V
+
+    throw p0
+
+    :pswitch_0
+    move v5, v7
+
+    goto :goto_1
+
+    :pswitch_1
+    const/high16 v5, 0x7d00000
+
+    goto :goto_1
+
+    :pswitch_2
+    const/high16 v5, 0x89a0000
+
+    goto :goto_1
+
+    :pswitch_3
+    move v5, v2
+
+    :goto_1
+    :pswitch_4
+    add-int/2addr v4, v5
+
     :cond_0
-    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
+    add-int/lit8 v3, v3, 0x1
+
+    goto :goto_0
+
+    :cond_1
+    invoke-static {v5, v4}, Ljava/lang/Math;->max(II)I
+
+    move-result v2
+
+    :cond_2
+    iput v2, p1, Lpg4;->b:I
+
+    invoke-virtual {v0}, Ljava/util/HashMap;->isEmpty()Z
+
+    move-result p1
+
+    iget-object p2, p0, Lrg4;->a:Lib4;
+
+    if-eqz p1, :cond_3
+
+    invoke-virtual {p2}, Lib4;->b()V
+
+    return-void
+
+    :cond_3
+    invoke-virtual {p0}, Lrg4;->n()I
+
+    move-result p0
+
+    invoke-virtual {p2, p0}, Lib4;->c(I)V
+
+    return-void
+
+    :pswitch_data_0
+    .packed-switch -0x2
+        :pswitch_3
+        :pswitch_4
+        :pswitch_2
+        :pswitch_4
+        :pswitch_1
+        :pswitch_0
+        :pswitch_0
+        :pswitch_0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final b()Z
+    .locals 0
+
+    const/4 p0, 0x0
+
+    return p0
+.end method
+
+.method public final c()Z
+    .locals 1
+
+    iget-object p0, p0, Lrg4;->i:Ljava/util/HashMap;
+
+    invoke-virtual {p0}, Ljava/util/HashMap;->values()Ljava/util/Collection;
+
+    move-result-object p0
+
+    invoke-interface {p0}, Ljava/util/Collection;->iterator()Ljava/util/Iterator;
+
+    move-result-object p0
+
+    :cond_0
+    invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
-    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Ll9g;
+    check-cast v0, Lpg4;
 
-    invoke-static {v0}, Lsgg;->y(Ll9g;)Lp8g;
-
-    move-result-object v0
-
-    iget-object v1, p0, Lrg4;->c:Lp8g;
-
-    invoke-virtual {v0, v1}, Lp8g;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
+    iget-boolean v0, v0, Lpg4;->a:Z
 
     if-eqz v0, :cond_0
 
-    new-instance p1, Lqg4;
+    const/4 p0, 0x0
 
-    const/4 v0, 0x1
+    return p0
 
-    invoke-direct {p1, p0, v0}, Lqg4;-><init>(Lrg4;I)V
+    :cond_1
+    const/4 p0, 0x1
 
-    iget-object p0, p0, Lrg4;->o0:La5d;
+    return p0
+.end method
 
-    invoke-virtual {p0, p1}, La5d;->execute(Ljava/lang/Runnable;)V
+.method public final e(Lndb;)V
+    .locals 2
+
+    iget-object v0, p0, Lrg4;->i:Ljava/util/HashMap;
+
+    invoke-virtual {v0, p1}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    if-eqz p1, :cond_1
+
+    invoke-virtual {v0}, Ljava/util/HashMap;->isEmpty()Z
+
+    move-result p1
+
+    iget-object v1, p0, Lrg4;->a:Lib4;
+
+    if-eqz p1, :cond_0
+
+    invoke-virtual {v1}, Lib4;->b()V
+
+    goto :goto_0
+
+    :cond_0
+    invoke-virtual {p0}, Lrg4;->n()I
+
+    move-result p1
+
+    invoke-virtual {v1, p1}, Lib4;->c(I)V
+
+    :cond_1
+    :goto_0
+    invoke-virtual {v0}, Ljava/util/HashMap;->isEmpty()Z
+
+    move-result p1
+
+    if-eqz p1, :cond_2
+
+    const-wide/16 v0, -0x1
+
+    iput-wide v0, p0, Lrg4;->j:J
+
+    :cond_2
+    return-void
+.end method
+
+.method public final f(Lndb;)V
+    .locals 1
+
+    iget-object v0, p0, Lrg4;->i:Ljava/util/HashMap;
+
+    invoke-virtual {v0, p1}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    if-eqz p1, :cond_1
+
+    invoke-virtual {v0}, Ljava/util/HashMap;->isEmpty()Z
+
+    move-result p1
+
+    iget-object v0, p0, Lrg4;->a:Lib4;
+
+    if-eqz p1, :cond_0
+
+    invoke-virtual {v0}, Lib4;->b()V
+
+    return-void
+
+    :cond_0
+    invoke-virtual {p0}, Lrg4;->n()I
+
+    move-result p0
+
+    invoke-virtual {v0, p0}, Lib4;->c(I)V
 
     :cond_1
     return-void
+.end method
+
+.method public final h()J
+    .locals 2
+
+    iget-wide v0, p0, Lrg4;->h:J
+
+    return-wide v0
+.end method
+
+.method public final i(Lndb;)V
+    .locals 6
+
+    invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/Thread;->getId()J
+
+    move-result-wide v0
+
+    iget-wide v2, p0, Lrg4;->j:J
+
+    const-wide/16 v4, -0x1
+
+    cmp-long v4, v2, v4
+
+    const/4 v5, 0x0
+
+    if-eqz v4, :cond_1
+
+    cmp-long v2, v2, v0
+
+    if-nez v2, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    move v2, v5
+
+    goto :goto_1
+
+    :cond_1
+    :goto_0
+    const/4 v2, 0x1
+
+    :goto_1
+    const-string v3, "Players that share the same LoadControl must share the same playback thread. See ExoPlayer.Builder.setPlaybackLooper(Looper)."
+
+    invoke-static {v3, v2}, Lmq0;->g(Ljava/lang/Object;Z)V
+
+    iput-wide v0, p0, Lrg4;->j:J
+
+    iget-object v0, p0, Lrg4;->i:Ljava/util/HashMap;
+
+    invoke-virtual {v0, p1}, Ljava/util/HashMap;->containsKey(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_2
+
+    new-instance v1, Lpg4;
+
+    invoke-direct {v1}, Ljava/lang/Object;-><init>()V
+
+    invoke-virtual {v0, p1, v1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    :cond_2
+    invoke-virtual {v0, p1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lpg4;
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    const/4 v0, -0x1
+
+    iget p0, p0, Lrg4;->f:I
+
+    if-ne p0, v0, :cond_3
+
+    const/high16 p0, 0xc80000
+
+    :cond_3
+    iput p0, p1, Lpg4;->b:I
+
+    iput-boolean v5, p1, Lpg4;->a:Z
+
+    return-void
+.end method
+
+.method public final j(Lsu7;)Z
+    .locals 14
+
+    iget-object v0, p0, Lrg4;->i:Ljava/util/HashMap;
+
+    iget-object v1, p1, Lsu7;->a:Lndb;
+
+    invoke-virtual {v0, v1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lpg4;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    iget-object v1, p0, Lrg4;->a:Lib4;
+
+    invoke-virtual {v1}, Lib4;->a()I
+
+    move-result v1
+
+    invoke-virtual {p0}, Lrg4;->n()I
+
+    move-result v2
+
+    const/4 v3, 0x1
+
+    const/4 v4, 0x0
+
+    if-lt v1, v2, :cond_0
+
+    move v1, v3
+
+    goto :goto_0
+
+    :cond_0
+    move v1, v4
+
+    :goto_0
+    iget v2, p1, Lsu7;->c:F
+
+    const/high16 v5, 0x3f800000    # 1.0f
+
+    cmpl-float v5, v2, v5
+
+    iget-wide v6, p0, Lrg4;->c:J
+
+    iget-wide v8, p0, Lrg4;->b:J
+
+    if-lez v5, :cond_1
+
+    invoke-static {v2, v8, v9}, Lnrf;->D(FJ)J
+
+    move-result-wide v8
+
+    invoke-static {v8, v9, v6, v7}, Ljava/lang/Math;->min(JJ)J
+
+    move-result-wide v8
+
+    :cond_1
+    const-wide/32 v10, 0x7a120
+
+    invoke-static {v8, v9, v10, v11}, Ljava/lang/Math;->max(JJ)J
+
+    move-result-wide v8
+
+    iget-wide v12, p1, Lsu7;->b:J
+
+    cmp-long p1, v12, v8
+
+    if-gez p1, :cond_4
+
+    iget-boolean p0, p0, Lrg4;->g:Z
+
+    if-nez p0, :cond_3
+
+    if-nez v1, :cond_2
+
+    goto :goto_1
+
+    :cond_2
+    move v3, v4
+
+    :cond_3
+    :goto_1
+    iput-boolean v3, v0, Lpg4;->a:Z
+
+    if-nez v3, :cond_6
+
+    cmp-long p0, v12, v10
+
+    if-gez p0, :cond_6
+
+    const-string p0, "Target buffer size reached with less than 500ms of buffered media data."
+
+    invoke-static {p0}, Lxnd;->l0(Ljava/lang/String;)V
+
+    goto :goto_2
+
+    :cond_4
+    cmp-long p0, v12, v6
+
+    if-gez p0, :cond_5
+
+    if-eqz v1, :cond_6
+
+    :cond_5
+    iput-boolean v4, v0, Lpg4;->a:Z
+
+    :cond_6
+    :goto_2
+    iget-boolean p0, v0, Lpg4;->a:Z
+
+    return p0
+.end method
+
+.method public final k()Lib4;
+    .locals 0
+
+    iget-object p0, p0, Lrg4;->a:Lib4;
+
+    return-object p0
+.end method
+
+.method public final l(Lsu7;)Z
+    .locals 8
+
+    iget-wide v0, p1, Lsu7;->b:J
+
+    iget v2, p1, Lsu7;->c:F
+
+    invoke-static {v2, v0, v1}, Lnrf;->G(FJ)J
+
+    move-result-wide v0
+
+    iget-boolean v2, p1, Lsu7;->d:Z
+
+    if-eqz v2, :cond_0
+
+    iget-wide v2, p0, Lrg4;->e:J
+
+    goto :goto_0
+
+    :cond_0
+    iget-wide v2, p0, Lrg4;->d:J
+
+    :goto_0
+    iget-wide v4, p1, Lsu7;->e:J
+
+    const-wide v6, -0x7fffffffffffffffL    # -4.9E-324
+
+    cmp-long p1, v4, v6
+
+    if-eqz p1, :cond_1
+
+    const-wide/16 v6, 0x2
+
+    div-long/2addr v4, v6
+
+    invoke-static {v4, v5, v2, v3}, Ljava/lang/Math;->min(JJ)J
+
+    move-result-wide v2
+
+    :cond_1
+    const-wide/16 v4, 0x0
+
+    cmp-long p1, v2, v4
+
+    if-lez p1, :cond_3
+
+    cmp-long p1, v0, v2
+
+    if-gez p1, :cond_3
+
+    iget-boolean p1, p0, Lrg4;->g:Z
+
+    if-nez p1, :cond_2
+
+    iget-object p1, p0, Lrg4;->a:Lib4;
+
+    invoke-virtual {p1}, Lib4;->a()I
+
+    move-result p1
+
+    invoke-virtual {p0}, Lrg4;->n()I
+
+    move-result p0
+
+    if-lt p1, p0, :cond_2
+
+    goto :goto_1
+
+    :cond_2
+    const/4 p0, 0x0
+
+    return p0
+
+    :cond_3
+    :goto_1
+    const/4 p0, 0x1
+
+    return p0
+.end method
+
+.method public final n()I
+    .locals 2
+
+    iget-object p0, p0, Lrg4;->i:Ljava/util/HashMap;
+
+    invoke-virtual {p0}, Ljava/util/HashMap;->values()Ljava/util/Collection;
+
+    move-result-object p0
+
+    invoke-interface {p0}, Ljava/util/Collection;->iterator()Ljava/util/Iterator;
+
+    move-result-object p0
+
+    const/4 v0, 0x0
+
+    :goto_0
+    invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lpg4;
+
+    iget v1, v1, Lpg4;->b:I
+
+    add-int/2addr v0, v1
+
+    goto :goto_0
+
+    :cond_0
+    return v0
 .end method

@@ -1,446 +1,141 @@
 .class public final Ls;
-.super Ljava/lang/Object;
+.super Lure;
 .source "SourceFile"
 
 # interfaces
-.implements Lv56;
+.implements Lpc6;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public X:I
 
-.field public final synthetic b:Lv56;
+.field public final synthetic Y:Lu;
 
 
 # direct methods
-.method public synthetic constructor <init>(ILv56;)V
+.method public constructor <init>(Lu;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    iput p1, p0, Ls;->a:I
+    iput-object p1, p0, Ls;->Y:Lu;
 
-    iput-object p2, p0, Ls;->b:Lv56;
+    const/4 p1, 0x2
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p1, p2}, Lure;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke()Ljava/lang/Object;
-    .locals 2
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    iget v0, p0, Ls;->a:I
+    check-cast p1, Ly04;
 
-    packed-switch v0, :pswitch_data_0
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    new-instance v0, Lr;
+    invoke-virtual {p0, p1, p2}, Ls;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    iget-object p0, p0, Ls;->b:Lv56;
+    move-result-object p0
 
-    check-cast p0, Lx2;
+    check-cast p0, Ls;
 
-    const/16 v1, 0x1c
+    sget-object p1, Lylf;->a:Lylf;
 
-    invoke-direct {v0, v1, p0}, Lr;-><init>(ILv56;)V
+    invoke-virtual {p0, p1}, Ls;->o(Ljava/lang/Object;)Ljava/lang/Object;
 
-    return-object v0
+    move-result-object p0
 
-    :pswitch_0
-    new-instance v0, Lr;
+    return-object p0
+.end method
 
-    iget-object p0, p0, Ls;->b:Lv56;
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 0
 
-    check-cast p0, Lu12;
+    new-instance p1, Ls;
 
-    const/16 v1, 0x1b
+    iget-object p0, p0, Ls;->Y:Lu;
 
-    invoke-direct {v0, v1, p0}, Lr;-><init>(ILv56;)V
+    invoke-direct {p1, p0, p2}, Ls;-><init>(Lu;Lkotlin/coroutines/Continuation;)V
 
-    return-object v0
+    return-object p1
+.end method
 
-    :pswitch_1
-    new-instance v0, Lr;
+.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 7
 
-    iget-object p0, p0, Ls;->b:Lv56;
+    iget v0, p0, Ls;->X:I
 
-    check-cast p0, Lg52;
+    sget-object v1, Lylf;->a:Lylf;
 
-    const/16 v1, 0x1a
+    const/4 v2, 0x1
 
-    invoke-direct {v0, v1, p0}, Lr;-><init>(ILv56;)V
+    if-eqz v0, :cond_1
 
-    return-object v0
+    if-ne v0, v2, :cond_0
 
-    :pswitch_2
-    new-instance v0, Lr;
+    invoke-static {p1}, Lqe5;->V(Ljava/lang/Object;)V
 
-    iget-object p0, p0, Ls;->b:Lv56;
+    return-object v1
 
-    check-cast p0, Lg52;
+    :cond_0
+    new-instance p0, Ljava/lang/IllegalStateException;
 
-    const/16 v1, 0x19
+    const-string p1, "call to \'resume\' before \'invoke\' with coroutine"
 
-    invoke-direct {v0, v1, p0}, Lr;-><init>(ILv56;)V
+    invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    return-object v0
+    throw p0
 
-    :pswitch_3
-    new-instance v0, Lr;
+    :cond_1
+    invoke-static {p1}, Lqe5;->V(Ljava/lang/Object;)V
 
-    iget-object p0, p0, Ls;->b:Lv56;
+    iget-object p1, p0, Ls;->Y:Lu;
 
-    check-cast p0, Lu12;
+    iget-object v0, p1, Lu;->o:Lyce;
 
-    const/16 v1, 0x18
+    new-instance v3, Lp1e;
 
-    invoke-direct {v0, v1, p0}, Lr;-><init>(ILv56;)V
+    sget v4, Lk5c;->about_app_version:I
 
-    return-object v0
+    sget v5, Lcac;->about_app_settings_version:I
 
-    :pswitch_4
-    new-instance v0, Lr;
+    new-instance v6, Lp2f;
 
-    iget-object p0, p0, Ls;->b:Lv56;
+    invoke-direct {v6, v5}, Lp2f;-><init>(I)V
 
-    check-cast p0, Lcd1;
+    iget-object p1, p1, Lu;->b:Lcl7;
 
-    const/16 v1, 0x17
+    invoke-interface {p1}, Lcl7;->getValue()Ljava/lang/Object;
 
-    invoke-direct {v0, v1, p0}, Lr;-><init>(ILv56;)V
+    move-result-object p1
 
-    return-object v0
+    check-cast p1, Lvca;
 
-    :pswitch_5
-    new-instance v0, Lr;
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    iget-object p0, p0, Ls;->b:Lv56;
+    new-instance p1, Lt2f;
 
-    check-cast p0, Lsh1;
+    const-string v5, "25.11.0"
 
-    const/16 v1, 0x16
+    invoke-direct {p1, v5}, Lt2f;-><init>(Ljava/lang/CharSequence;)V
 
-    invoke-direct {v0, v1, p0}, Lr;-><init>(ILv56;)V
+    invoke-direct {v3, v4, v6, p1}, Lp1e;-><init>(ILp2f;Lt2f;)V
 
-    return-object v0
+    invoke-static {v3}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
 
-    :pswitch_6
-    new-instance v0, Lr;
+    move-result-object p1
 
-    iget-object p0, p0, Ls;->b:Lv56;
+    iput v2, p0, Ls;->X:I
 
-    check-cast p0, Lcd1;
+    invoke-virtual {v0, p1}, Lyce;->setValue(Ljava/lang/Object;)V
 
-    const/16 v1, 0x15
+    sget-object p0, Lz04;->a:Lz04;
 
-    invoke-direct {v0, v1, p0}, Lr;-><init>(ILv56;)V
+    if-ne v1, p0, :cond_2
 
-    return-object v0
+    return-object p0
 
-    :pswitch_7
-    new-instance v0, Lr;
-
-    iget-object p0, p0, Ls;->b:Lv56;
-
-    check-cast p0, Lth1;
-
-    const/16 v1, 0x14
-
-    invoke-direct {v0, v1, p0}, Lr;-><init>(ILv56;)V
-
-    return-object v0
-
-    :pswitch_8
-    new-instance v0, Lr;
-
-    iget-object p0, p0, Ls;->b:Lv56;
-
-    check-cast p0, Lcd1;
-
-    const/16 v1, 0x13
-
-    invoke-direct {v0, v1, p0}, Lr;-><init>(ILv56;)V
-
-    return-object v0
-
-    :pswitch_9
-    new-instance v0, Lr;
-
-    iget-object p0, p0, Ls;->b:Lv56;
-
-    check-cast p0, Lff1;
-
-    const/16 v1, 0x12
-
-    invoke-direct {v0, v1, p0}, Lr;-><init>(ILv56;)V
-
-    return-object v0
-
-    :pswitch_a
-    new-instance v0, Lr;
-
-    iget-object p0, p0, Ls;->b:Lv56;
-
-    check-cast p0, Lx2;
-
-    const/16 v1, 0x11
-
-    invoke-direct {v0, v1, p0}, Lr;-><init>(ILv56;)V
-
-    return-object v0
-
-    :pswitch_b
-    new-instance v0, Lr;
-
-    iget-object p0, p0, Ls;->b:Lv56;
-
-    check-cast p0, Lx2;
-
-    const/16 v1, 0x10
-
-    invoke-direct {v0, v1, p0}, Lr;-><init>(ILv56;)V
-
-    return-object v0
-
-    :pswitch_c
-    new-instance v0, Lr;
-
-    iget-object p0, p0, Ls;->b:Lv56;
-
-    check-cast p0, Lx2;
-
-    const/16 v1, 0xf
-
-    invoke-direct {v0, v1, p0}, Lr;-><init>(ILv56;)V
-
-    return-object v0
-
-    :pswitch_d
-    new-instance v0, Lr;
-
-    iget-object p0, p0, Ls;->b:Lv56;
-
-    check-cast p0, Ln91;
-
-    const/16 v1, 0xe
-
-    invoke-direct {v0, v1, p0}, Lr;-><init>(ILv56;)V
-
-    return-object v0
-
-    :pswitch_e
-    new-instance v0, Lr;
-
-    iget-object p0, p0, Ls;->b:Lv56;
-
-    check-cast p0, Lx2;
-
-    const/16 v1, 0xd
-
-    invoke-direct {v0, v1, p0}, Lr;-><init>(ILv56;)V
-
-    return-object v0
-
-    :pswitch_f
-    new-instance v0, Lr;
-
-    iget-object p0, p0, Ls;->b:Lv56;
-
-    check-cast p0, Lh81;
-
-    const/16 v1, 0xc
-
-    invoke-direct {v0, v1, p0}, Lr;-><init>(ILv56;)V
-
-    return-object v0
-
-    :pswitch_10
-    new-instance v0, Lr;
-
-    iget-object p0, p0, Ls;->b:Lv56;
-
-    check-cast p0, Lz71;
-
-    const/16 v1, 0xb
-
-    invoke-direct {v0, v1, p0}, Lr;-><init>(ILv56;)V
-
-    return-object v0
-
-    :pswitch_11
-    new-instance v0, Lr;
-
-    iget-object p0, p0, Ls;->b:Lv56;
-
-    check-cast p0, Le11;
-
-    const/16 v1, 0xa
-
-    invoke-direct {v0, v1, p0}, Lr;-><init>(ILv56;)V
-
-    return-object v0
-
-    :pswitch_12
-    new-instance v0, Lr;
-
-    iget-object p0, p0, Ls;->b:Lv56;
-
-    check-cast p0, Lw5;
-
-    const/16 v1, 0x9
-
-    invoke-direct {v0, v1, p0}, Lr;-><init>(ILv56;)V
-
-    return-object v0
-
-    :pswitch_13
-    new-instance v0, Lr;
-
-    iget-object p0, p0, Ls;->b:Lv56;
-
-    check-cast p0, Lm;
-
-    const/16 v1, 0x8
-
-    invoke-direct {v0, v1, p0}, Lr;-><init>(ILv56;)V
-
-    return-object v0
-
-    :pswitch_14
-    new-instance v0, Lr;
-
-    iget-object p0, p0, Ls;->b:Lv56;
-
-    check-cast p0, Lm;
-
-    const/4 v1, 0x7
-
-    invoke-direct {v0, v1, p0}, Lr;-><init>(ILv56;)V
-
-    return-object v0
-
-    :pswitch_15
-    new-instance v0, Lr;
-
-    iget-object p0, p0, Ls;->b:Lv56;
-
-    check-cast p0, Lm;
-
-    const/4 v1, 0x6
-
-    invoke-direct {v0, v1, p0}, Lr;-><init>(ILv56;)V
-
-    return-object v0
-
-    :pswitch_16
-    new-instance v0, Lr;
-
-    iget-object p0, p0, Ls;->b:Lv56;
-
-    check-cast p0, Lw5;
-
-    const/4 v1, 0x5
-
-    invoke-direct {v0, v1, p0}, Lr;-><init>(ILv56;)V
-
-    return-object v0
-
-    :pswitch_17
-    new-instance v0, Lr;
-
-    iget-object p0, p0, Ls;->b:Lv56;
-
-    check-cast p0, Lm;
-
-    const/4 v1, 0x4
-
-    invoke-direct {v0, v1, p0}, Lr;-><init>(ILv56;)V
-
-    return-object v0
-
-    :pswitch_18
-    new-instance v0, Lr;
-
-    iget-object p0, p0, Ls;->b:Lv56;
-
-    check-cast p0, Lw5;
-
-    const/4 v1, 0x3
-
-    invoke-direct {v0, v1, p0}, Lr;-><init>(ILv56;)V
-
-    return-object v0
-
-    :pswitch_19
-    new-instance v0, Lr;
-
-    iget-object p0, p0, Ls;->b:Lv56;
-
-    check-cast p0, Lw5;
-
-    const/4 v1, 0x2
-
-    invoke-direct {v0, v1, p0}, Lr;-><init>(ILv56;)V
-
-    return-object v0
-
-    :pswitch_1a
-    new-instance v0, Lr;
-
-    iget-object p0, p0, Ls;->b:Lv56;
-
-    check-cast p0, Lx2;
-
-    const/4 v1, 0x1
-
-    invoke-direct {v0, v1, p0}, Lr;-><init>(ILv56;)V
-
-    return-object v0
-
-    :pswitch_1b
-    new-instance v0, Lr;
-
-    iget-object p0, p0, Ls;->b:Lv56;
-
-    check-cast p0, Lm;
-
-    const/4 v1, 0x0
-
-    invoke-direct {v0, v1, p0}, Lr;-><init>(ILv56;)V
-
-    return-object v0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1b
-        :pswitch_1a
-        :pswitch_19
-        :pswitch_18
-        :pswitch_17
-        :pswitch_16
-        :pswitch_15
-        :pswitch_14
-        :pswitch_13
-        :pswitch_12
-        :pswitch_11
-        :pswitch_10
-        :pswitch_f
-        :pswitch_e
-        :pswitch_d
-        :pswitch_c
-        :pswitch_b
-        :pswitch_a
-        :pswitch_9
-        :pswitch_8
-        :pswitch_7
-        :pswitch_6
-        :pswitch_5
-        :pswitch_4
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    :cond_2
+    return-object v1
 .end method

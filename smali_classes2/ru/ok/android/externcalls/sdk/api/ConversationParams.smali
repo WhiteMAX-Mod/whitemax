@@ -6,10 +6,10 @@
 # static fields
 .field private static final LOG_TAG:Ljava/lang/String; = "ConversationParams"
 
-.field public static final PARSER:Lza7;
+.field public static final PARSER:Lvh7;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lza7;"
+            "Lvh7;"
         }
     .end annotation
 .end field
@@ -53,13 +53,13 @@
 .method static constructor <clinit>()V
     .locals 2
 
-    new-instance v0, Ltv3;
+    new-instance v0, Lcz3;
 
-    const/4 v1, 0x6
+    const/4 v1, 0x5
 
-    invoke-direct {v0, v1}, Ltv3;-><init>(I)V
+    invoke-direct {v0, v1}, Lcz3;-><init>(I)V
 
-    sput-object v0, Lru/ok/android/externcalls/sdk/api/ConversationParams;->PARSER:Lza7;
+    sput-object v0, Lru/ok/android/externcalls/sdk/api/ConversationParams;->PARSER:Lvh7;
 
     return-void
 .end method
@@ -78,10 +78,10 @@
     return-void
 .end method
 
-.method public static synthetic a(Ldb7;)Lru/ok/android/externcalls/sdk/api/ConversationParams;
+.method public static synthetic a(Lzh7;)Lru/ok/android/externcalls/sdk/api/ConversationParams;
     .locals 0
 
-    invoke-static {p0}, Lru/ok/android/externcalls/sdk/api/ConversationParams;->parseCallParams(Ldb7;)Lru/ok/android/externcalls/sdk/api/ConversationParams;
+    invoke-static {p0}, Lru/ok/android/externcalls/sdk/api/ConversationParams;->parseCallParams(Lzh7;)Lru/ok/android/externcalls/sdk/api/ConversationParams;
 
     move-result-object p0
 
@@ -168,27 +168,6 @@
     invoke-direct {v0, v1, p0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
 
     throw v0
-.end method
-
-.method private static parseCallParams(Ldb7;)Lru/ok/android/externcalls/sdk/api/ConversationParams;
-    .locals 0
-    .annotation system Ldalvik/annotation/Throws;
-        value = {
-            Ljava/io/IOException;,
-            Lru/ok/android/api/json/JsonTypeMismatchException;
-        }
-    .end annotation
-
-    .line 36
-    invoke-static {p0}, Lzx7;->T(Ldb7;)Lorg/json/JSONObject;
-
-    move-result-object p0
-
-    invoke-static {p0}, Lru/ok/android/externcalls/sdk/api/ConversationParams;->parseCallParams(Lorg/json/JSONObject;)Lru/ok/android/externcalls/sdk/api/ConversationParams;
-
-    move-result-object p0
-
-    return-object p0
 .end method
 
 .method public static parseCallParams(Lorg/json/JSONObject;)Lru/ok/android/externcalls/sdk/api/ConversationParams;
@@ -475,6 +454,27 @@
     invoke-static {v3, v0, p0}, Lru/ok/android/externcalls/sdk/log/GlobalRTCLogger;->logException(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     return-object v4
+.end method
+
+.method private static parseCallParams(Lzh7;)Lru/ok/android/externcalls/sdk/api/ConversationParams;
+    .locals 0
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/io/IOException;,
+            Lru/ok/android/api/json/JsonTypeMismatchException;
+        }
+    .end annotation
+
+    .line 36
+    invoke-static {p0}, Lkp;->D(Lzh7;)Lorg/json/JSONObject;
+
+    move-result-object p0
+
+    invoke-static {p0}, Lru/ok/android/externcalls/sdk/api/ConversationParams;->parseCallParams(Lorg/json/JSONObject;)Lru/ok/android/externcalls/sdk/api/ConversationParams;
+
+    move-result-object p0
+
+    return-object p0
 .end method
 
 .method private static parseCallParamsCompact(Lorg/json/JSONObject;)Lru/ok/android/externcalls/sdk/api/ConversationParams;
@@ -816,7 +816,7 @@
 
     const-string v1, "\'}"
 
-    invoke-static {v0, p0, v1}, Lm26;->j(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0, p0, v1}, Lyv7;->k(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
 

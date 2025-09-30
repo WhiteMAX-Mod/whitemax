@@ -1,145 +1,58 @@
 .class public final Lxmd;
-.super Landroid/animation/AnimatorListenerAdapter;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lym1;
 
 
 # instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Land;
+.field public final a:Ljava/util/concurrent/CopyOnWriteArraySet;
 
 
 # direct methods
-.method public synthetic constructor <init>(Land;I)V
-    .locals 0
+.method public constructor <init>()V
+    .locals 1
 
-    iput p2, p0, Lxmd;->a:I
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lxmd;->b:Land;
+    new-instance v0, Ljava/util/concurrent/CopyOnWriteArraySet;
 
-    invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
+    invoke-direct {v0}, Ljava/util/concurrent/CopyOnWriteArraySet;-><init>()V
+
+    iput-object v0, p0, Lxmd;->a:Ljava/util/concurrent/CopyOnWriteArraySet;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onAnimationCancel(Landroid/animation/Animator;)V
+.method public final a(Lmgb;)V
     .locals 1
 
-    iget p1, p0, Lxmd;->a:I
+    iget-object p0, p0, Lxmd;->a:Ljava/util/concurrent/CopyOnWriteArraySet;
 
-    packed-switch p1, :pswitch_data_0
+    invoke-virtual {p0}, Ljava/util/concurrent/CopyOnWriteArraySet;->iterator()Ljava/util/Iterator;
 
-    iget-object p0, p0, Lxmd;->b:Land;
+    move-result-object p0
 
-    iget p1, p0, Land;->a1:F
+    :goto_0
+    invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
 
-    iget v0, p0, Land;->g1:F
+    move-result v0
 
-    sub-float/2addr p1, v0
+    if-eqz v0, :cond_0
 
-    iget v0, p0, Land;->Y0:F
+    invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    mul-float/2addr p1, v0
+    move-result-object v0
 
-    iget v0, p0, Land;->b1:F
+    check-cast v0, Lym1;
 
-    div-float/2addr p1, v0
+    invoke-interface {v0, p1}, Lym1;->a(Lmgb;)V
 
-    iget v0, p0, Land;->b:F
+    goto :goto_0
 
-    add-float/2addr p1, v0
-
-    iput p1, p0, Land;->o:F
-
-    const/4 p1, 0x0
-
-    iput-boolean p1, p0, Land;->d1:Z
-
-    const/4 p1, 0x1
-
-    iput-boolean p1, p0, Land;->k1:Z
-
-    invoke-virtual {p0}, Landroid/view/View;->invalidate()V
-
+    :cond_0
     return-void
-
-    :pswitch_0
-    const/4 p1, 0x0
-
-    iget-object p0, p0, Lxmd;->b:Land;
-
-    iput-boolean p1, p0, Land;->d1:Z
-
-    invoke-virtual {p0}, Landroid/view/View;->invalidate()V
-
-    return-void
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public final onAnimationEnd(Landroid/animation/Animator;)V
-    .locals 1
-
-    iget p1, p0, Lxmd;->a:I
-
-    packed-switch p1, :pswitch_data_0
-
-    iget-object p0, p0, Lxmd;->b:Land;
-
-    iget p1, p0, Land;->a1:F
-
-    iget v0, p0, Land;->g1:F
-
-    sub-float/2addr p1, v0
-
-    iget v0, p0, Land;->Y0:F
-
-    mul-float/2addr p1, v0
-
-    iget v0, p0, Land;->b1:F
-
-    div-float/2addr p1, v0
-
-    iget v0, p0, Land;->b:F
-
-    add-float/2addr p1, v0
-
-    iput p1, p0, Land;->o:F
-
-    const/4 p1, 0x0
-
-    iput-boolean p1, p0, Land;->d1:Z
-
-    const/4 p1, 0x1
-
-    iput-boolean p1, p0, Land;->k1:Z
-
-    invoke-virtual {p0}, Landroid/view/View;->invalidate()V
-
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    return-void
-
-    :pswitch_0
-    const/4 p1, 0x0
-
-    iget-object p0, p0, Lxmd;->b:Land;
-
-    iput-boolean p1, p0, Land;->d1:Z
-
-    invoke-virtual {p0}, Landroid/view/View;->invalidate()V
-
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    return-void
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
 .end method

@@ -1,120 +1,250 @@
-.class public final synthetic Lplf;
-.super Ljava/lang/Object;
+.class public final Lplf;
+.super Ljava/util/concurrent/AbstractExecutorService;
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/lang/Runnable;
+.implements Ljava/util/concurrent/ScheduledExecutorService;
+
+
+# static fields
+.field public static b:Lplf;
 
 
 # instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:I
-
-.field public final synthetic c:J
-
-.field public final synthetic o:Ljava/lang/Object;
+.field public final a:Landroid/os/Handler;
 
 
 # direct methods
-.method public synthetic constructor <init>(Ljava/lang/Object;IJI)V
+.method public constructor <init>(Landroid/os/Handler;)V
     .locals 0
 
-    iput p5, p0, Lplf;->a:I
+    invoke-direct {p0}, Ljava/util/concurrent/AbstractExecutorService;-><init>()V
 
-    iput-object p1, p0, Lplf;->o:Ljava/lang/Object;
-
-    iput p2, p0, Lplf;->b:I
-
-    iput-wide p3, p0, Lplf;->c:J
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lplf;->a:Landroid/os/Handler;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
-    .locals 6
+.method public final a(Ljava/lang/Runnable;)V
+    .locals 0
 
-    iget v0, p0, Lplf;->a:I
+    iget-object p0, p0, Lplf;->a:Landroid/os/Handler;
 
-    const/16 v1, 0x3fa
+    invoke-virtual {p0, p1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    iget-wide v2, p0, Lplf;->c:J
+    return-void
+.end method
 
-    iget v4, p0, Lplf;->b:I
+.method public final awaitTermination(JLjava/util/concurrent/TimeUnit;)Z
+    .locals 0
 
-    iget-object p0, p0, Lplf;->o:Ljava/lang/Object;
+    new-instance p0, Ljava/lang/UnsupportedOperationException;
 
-    packed-switch v0, :pswitch_data_0
+    invoke-direct {p0}, Ljava/lang/UnsupportedOperationException;-><init>()V
 
-    check-cast p0, Llgb;
+    throw p0
+.end method
 
-    iget-object p0, p0, Llgb;->c:Ljava/lang/Object;
+.method public final execute(Ljava/lang/Runnable;)V
+    .locals 2
 
-    check-cast p0, Lb75;
-
-    sget v0, Lpaf;->a:I
-
-    iget-object p0, p0, Lb75;->a:Lh75;
-
-    iget-object p0, p0, Lh75;->z0:Lv74;
-
-    iget-object v0, p0, Lv74;->o:Lq13;
-
-    iget-object v0, v0, Lq13;->e:Ljava/lang/Object;
-
-    check-cast v0, Lfj8;
-
-    invoke-virtual {p0, v0}, Lv74;->c(Lfj8;)Lzc;
+    invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
 
     move-result-object v0
 
-    new-instance v5, Lf74;
+    iget-object v1, p0, Lplf;->a:Landroid/os/Handler;
 
-    invoke-direct {v5, v0, v4, v2, v3}, Lf74;-><init>(Lzc;IJ)V
+    invoke-virtual {v1}, Landroid/os/Handler;->getLooper()Landroid/os/Looper;
 
-    invoke-virtual {p0, v0, v1, v5}, Lv74;->I(Lzc;ILkm7;)V
+    move-result-object v1
 
-    return-void
+    invoke-virtual {v1}, Landroid/os/Looper;->getThread()Ljava/lang/Thread;
 
-    :pswitch_0
-    check-cast p0, Lkab;
+    move-result-object v1
 
-    iget-object p0, p0, Lkab;->c:Ljava/lang/Object;
+    if-ne v0, v1, :cond_0
 
-    check-cast p0, La75;
-
-    sget v0, Lnaf;->a:I
-
-    iget-object p0, p0, La75;->a:Lg75;
-
-    iget-object p0, p0, Lg75;->y0:Lu74;
-
-    iget-object v0, p0, Lu74;->o:Lc40;
-
-    iget-object v0, v0, Lc40;->e:Ljava/lang/Object;
-
-    check-cast v0, Lej8;
-
-    invoke-virtual {p0, v0}, Lu74;->G(Lej8;)Lyc;
-
-    move-result-object v0
-
-    new-instance v5, Lm74;
-
-    invoke-direct {v5, v0, v4, v2, v3}, Lm74;-><init>(Lyc;IJ)V
-
-    invoke-virtual {p0, v0, v1, v5}, Lu74;->K(Lyc;ILjm7;)V
+    invoke-interface {p1}, Ljava/lang/Runnable;->run()V
 
     return-void
 
-    nop
+    :cond_0
+    invoke-virtual {p0, p1}, Lplf;->a(Ljava/lang/Runnable;)V
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-void
+.end method
+
+.method public final isShutdown()Z
+    .locals 0
+
+    const/4 p0, 0x0
+
+    return p0
+.end method
+
+.method public final isTerminated()Z
+    .locals 0
+
+    const/4 p0, 0x0
+
+    return p0
+.end method
+
+.method public final newTaskFor(Ljava/lang/Runnable;Ljava/lang/Object;)Ljava/util/concurrent/RunnableFuture;
+    .locals 0
+
+    .line 1
+    new-instance p0, Lw4d;
+
+    invoke-direct {p0, p1, p2}, Lw4d;-><init>(Ljava/lang/Runnable;Ljava/lang/Object;)V
+
+    return-object p0
+.end method
+
+.method public final newTaskFor(Ljava/util/concurrent/Callable;)Ljava/util/concurrent/RunnableFuture;
+    .locals 0
+
+    .line 2
+    new-instance p0, Lw4d;
+
+    invoke-direct {p0, p1}, Lw4d;-><init>(Ljava/util/concurrent/Callable;)V
+
+    return-object p0
+.end method
+
+.method public final schedule(Ljava/lang/Runnable;JLjava/util/concurrent/TimeUnit;)Ljava/util/concurrent/ScheduledFuture;
+    .locals 2
+
+    .line 1
+    new-instance v0, Lw4d;
+
+    const/4 v1, 0x0
+
+    invoke-direct {v0, p1, v1}, Lw4d;-><init>(Ljava/lang/Runnable;Ljava/lang/Object;)V
+
+    .line 2
+    iget-object p0, p0, Lplf;->a:Landroid/os/Handler;
+
+    invoke-virtual {p4, p2, p3}, Ljava/util/concurrent/TimeUnit;->toMillis(J)J
+
+    move-result-wide p1
+
+    invoke-virtual {p0, v0, p1, p2}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
+
+    return-object v0
+.end method
+
+.method public final schedule(Ljava/util/concurrent/Callable;JLjava/util/concurrent/TimeUnit;)Ljava/util/concurrent/ScheduledFuture;
+    .locals 1
+
+    .line 3
+    new-instance v0, Lw4d;
+
+    invoke-direct {v0, p1}, Lw4d;-><init>(Ljava/util/concurrent/Callable;)V
+
+    .line 4
+    iget-object p0, p0, Lplf;->a:Landroid/os/Handler;
+
+    invoke-virtual {p4, p2, p3}, Ljava/util/concurrent/TimeUnit;->toMillis(J)J
+
+    move-result-wide p1
+
+    invoke-virtual {p0, v0, p1, p2}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
+
+    return-object v0
+.end method
+
+.method public final scheduleAtFixedRate(Ljava/lang/Runnable;JJLjava/util/concurrent/TimeUnit;)Ljava/util/concurrent/ScheduledFuture;
+    .locals 0
+
+    new-instance p0, Ljava/lang/UnsupportedOperationException;
+
+    invoke-direct {p0}, Ljava/lang/UnsupportedOperationException;-><init>()V
+
+    throw p0
+.end method
+
+.method public final scheduleWithFixedDelay(Ljava/lang/Runnable;JJLjava/util/concurrent/TimeUnit;)Ljava/util/concurrent/ScheduledFuture;
+    .locals 0
+
+    new-instance p0, Ljava/lang/UnsupportedOperationException;
+
+    invoke-direct {p0}, Ljava/lang/UnsupportedOperationException;-><init>()V
+
+    throw p0
+.end method
+
+.method public final shutdown()V
+    .locals 0
+
+    new-instance p0, Ljava/lang/UnsupportedOperationException;
+
+    invoke-direct {p0}, Ljava/lang/UnsupportedOperationException;-><init>()V
+
+    throw p0
+.end method
+
+.method public final shutdownNow()Ljava/util/List;
+    .locals 0
+
+    new-instance p0, Ljava/lang/UnsupportedOperationException;
+
+    invoke-direct {p0}, Ljava/lang/UnsupportedOperationException;-><init>()V
+
+    throw p0
+.end method
+
+.method public final submit(Ljava/lang/Runnable;)Ljava/util/concurrent/Future;
+    .locals 2
+
+    .line 1
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    .line 2
+    new-instance v0, Lw4d;
+
+    const/4 v1, 0x0
+
+    invoke-direct {v0, p1, v1}, Lw4d;-><init>(Ljava/lang/Runnable;Ljava/lang/Object;)V
+
+    .line 3
+    invoke-virtual {p0, v0}, Lplf;->execute(Ljava/lang/Runnable;)V
+
+    return-object v0
+.end method
+
+.method public final submit(Ljava/lang/Runnable;Ljava/lang/Object;)Ljava/util/concurrent/Future;
+    .locals 1
+
+    .line 4
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    .line 5
+    new-instance v0, Lw4d;
+
+    invoke-direct {v0, p1, p2}, Lw4d;-><init>(Ljava/lang/Runnable;Ljava/lang/Object;)V
+
+    .line 6
+    invoke-virtual {p0, v0}, Lplf;->execute(Ljava/lang/Runnable;)V
+
+    return-object v0
+.end method
+
+.method public final submit(Ljava/util/concurrent/Callable;)Ljava/util/concurrent/Future;
+    .locals 1
+
+    .line 7
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    .line 8
+    new-instance v0, Lw4d;
+
+    invoke-direct {v0, p1}, Lw4d;-><init>(Ljava/util/concurrent/Callable;)V
+
+    .line 9
+    invoke-virtual {p0, v0}, Lplf;->execute(Ljava/lang/Runnable;)V
+
+    return-object v0
 .end method

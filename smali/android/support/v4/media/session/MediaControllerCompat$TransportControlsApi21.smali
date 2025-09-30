@@ -363,7 +363,7 @@
 
     const-string v0, "android.support.v4.media.session.action.ARGUMENT_REPEAT_MODE"
 
-    invoke-static {p1, v0}, Lu88;->g(ILjava/lang/String;)Landroid/os/Bundle;
+    invoke-static {p1, v0}, Lyv7;->d(ILjava/lang/String;)Landroid/os/Bundle;
 
     move-result-object p1
 
@@ -379,7 +379,7 @@
 
     const-string v0, "android.support.v4.media.session.action.ARGUMENT_SHUFFLE_MODE"
 
-    invoke-static {p1, v0}, Lu88;->g(ILjava/lang/String;)Landroid/os/Bundle;
+    invoke-static {p1, v0}, Lyv7;->d(ILjava/lang/String;)Landroid/os/Bundle;
 
     move-result-object p1
 

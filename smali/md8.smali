@@ -1,199 +1,27 @@
-.class public Lmd8;
-.super Ljava/lang/Object;
+.class public final Lmd8;
+.super Lkd8;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:Ljava/lang/Object;
+.field public final synthetic e:Lcp8;
 
-.field public final b:I
+.field public final synthetic f:Lcp8;
 
-.field public final c:I
-
-.field public final d:J
-
-.field public final e:I
+.field public final synthetic g:Lcp8;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/Object;IIJI)V
+.method public constructor <init>(Lcp8;)V
     .locals 0
 
-    .line 7
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lmd8;->g:Lcp8;
 
-    .line 8
-    iput-object p1, p0, Lmd8;->a:Ljava/lang/Object;
+    iput-object p1, p0, Lmd8;->f:Lcp8;
 
-    .line 9
-    iput p2, p0, Lmd8;->b:I
+    iput-object p1, p0, Lmd8;->e:Lcp8;
 
-    .line 10
-    iput p3, p0, Lmd8;->c:I
-
-    .line 11
-    iput-wide p4, p0, Lmd8;->d:J
-
-    .line 12
-    iput p6, p0, Lmd8;->e:I
+    invoke-direct {p0, p1}, Lkd8;-><init>(Lcp8;)V
 
     return-void
-.end method
-
-.method public constructor <init>(Lmd8;)V
-    .locals 2
-
-    .line 1
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 2
-    iget-object v0, p1, Lmd8;->a:Ljava/lang/Object;
-
-    iput-object v0, p0, Lmd8;->a:Ljava/lang/Object;
-
-    .line 3
-    iget v0, p1, Lmd8;->b:I
-
-    iput v0, p0, Lmd8;->b:I
-
-    .line 4
-    iget v0, p1, Lmd8;->c:I
-
-    iput v0, p0, Lmd8;->c:I
-
-    .line 5
-    iget-wide v0, p1, Lmd8;->d:J
-
-    iput-wide v0, p0, Lmd8;->d:J
-
-    .line 6
-    iget p1, p1, Lmd8;->e:I
-
-    iput p1, p0, Lmd8;->e:I
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final a()Z
-    .locals 1
-
-    iget p0, p0, Lmd8;->b:I
-
-    const/4 v0, -0x1
-
-    if-eq p0, v0, :cond_0
-
-    const/4 p0, 0x1
-
-    return p0
-
-    :cond_0
-    const/4 p0, 0x0
-
-    return p0
-.end method
-
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 7
-
-    const/4 v0, 0x1
-
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    instance-of v1, p1, Lmd8;
-
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
-    check-cast p1, Lmd8;
-
-    iget-object v1, p0, Lmd8;->a:Ljava/lang/Object;
-
-    iget-object v3, p1, Lmd8;->a:Ljava/lang/Object;
-
-    invoke-virtual {v1, v3}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_2
-
-    iget v1, p0, Lmd8;->b:I
-
-    iget v3, p1, Lmd8;->b:I
-
-    if-ne v1, v3, :cond_2
-
-    iget v1, p0, Lmd8;->c:I
-
-    iget v3, p1, Lmd8;->c:I
-
-    if-ne v1, v3, :cond_2
-
-    iget-wide v3, p0, Lmd8;->d:J
-
-    iget-wide v5, p1, Lmd8;->d:J
-
-    cmp-long v1, v3, v5
-
-    if-nez v1, :cond_2
-
-    iget p0, p0, Lmd8;->e:I
-
-    iget p1, p1, Lmd8;->e:I
-
-    if-ne p0, p1, :cond_2
-
-    return v0
-
-    :cond_2
-    return v2
-.end method
-
-.method public final hashCode()I
-    .locals 3
-
-    iget-object v0, p0, Lmd8;->a:Ljava/lang/Object;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
-
-    move-result v0
-
-    add-int/lit16 v0, v0, 0x20f
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget v1, p0, Lmd8;->b:I
-
-    add-int/2addr v0, v1
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget v1, p0, Lmd8;->c:I
-
-    add-int/2addr v0, v1
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget-wide v1, p0, Lmd8;->d:J
-
-    long-to-int v1, v1
-
-    add-int/2addr v0, v1
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget p0, p0, Lmd8;->e:I
-
-    add-int/2addr v0, p0
-
-    return v0
 .end method

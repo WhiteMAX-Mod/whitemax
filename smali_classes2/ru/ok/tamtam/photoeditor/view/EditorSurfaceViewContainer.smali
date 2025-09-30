@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lov4;
+.implements Lx05;
 
 
 # instance fields
@@ -11,13 +11,13 @@
 
 .field public final b:Landroid/view/View;
 
-.field public final c:Lqv4;
+.field public final c:Lz05;
 
 .field public o:Z
 
-.field public final o0:Landroid/graphics/Rect;
+.field public final r0:Landroid/graphics/Rect;
 
-.field public final p0:Landroid/graphics/Rect;
+.field public final s0:Landroid/graphics/Rect;
 
 
 # direct methods
@@ -30,15 +30,15 @@
 
     invoke-direct {p1}, Landroid/graphics/Rect;-><init>()V
 
-    iput-object p1, p0, Lru/ok/tamtam/photoeditor/view/EditorSurfaceViewContainer;->o0:Landroid/graphics/Rect;
+    iput-object p1, p0, Lru/ok/tamtam/photoeditor/view/EditorSurfaceViewContainer;->r0:Landroid/graphics/Rect;
 
     new-instance p1, Landroid/graphics/Rect;
 
     invoke-direct {p1}, Landroid/graphics/Rect;-><init>()V
 
-    iput-object p1, p0, Lru/ok/tamtam/photoeditor/view/EditorSurfaceViewContainer;->p0:Landroid/graphics/Rect;
+    iput-object p1, p0, Lru/ok/tamtam/photoeditor/view/EditorSurfaceViewContainer;->s0:Landroid/graphics/Rect;
 
-    new-instance p1, Lqv4;
+    new-instance p1, Lz05;
 
     invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
 
@@ -50,33 +50,33 @@
 
     invoke-direct {p2}, Ljava/util/ArrayList;-><init>()V
 
-    iput-object p2, p1, Lqv4;->a:Ljava/util/ArrayList;
+    iput-object p2, p1, Lz05;->a:Ljava/util/ArrayList;
 
     new-instance p2, Landroid/graphics/Matrix;
 
     invoke-direct {p2}, Landroid/graphics/Matrix;-><init>()V
 
-    iput-object p2, p1, Lqv4;->o:Landroid/graphics/Matrix;
+    iput-object p2, p1, Lz05;->o:Landroid/graphics/Matrix;
 
     new-instance p2, Landroid/graphics/Matrix;
 
     invoke-direct {p2}, Landroid/graphics/Matrix;-><init>()V
 
-    iput-object p2, p1, Lqv4;->o0:Landroid/graphics/Matrix;
+    iput-object p2, p1, Lz05;->r0:Landroid/graphics/Matrix;
 
     const/16 p2, 0x9
 
     new-array p2, p2, [F
 
-    iput-object p2, p1, Lqv4;->r0:[F
+    iput-object p2, p1, Lz05;->u0:[F
 
     const/high16 p2, 0x40400000    # 3.0f
 
-    iput p2, p1, Lqv4;->s0:F
+    iput p2, p1, Lz05;->v0:F
 
     const/4 p2, 0x0
 
-    iput-boolean p2, p1, Lqv4;->u0:Z
+    iput-boolean p2, p1, Lz05;->x0:Z
 
     new-instance p2, Landroid/view/ScaleGestureDetector;
 
@@ -86,9 +86,9 @@
 
     invoke-direct {p2, v0, p1}, Landroid/view/ScaleGestureDetector;-><init>(Landroid/content/Context;Landroid/view/ScaleGestureDetector$OnScaleGestureListener;)V
 
-    iput-object p2, p1, Lqv4;->b:Landroid/view/ScaleGestureDetector;
+    iput-object p2, p1, Lz05;->b:Landroid/view/ScaleGestureDetector;
 
-    iput-object p1, p0, Lru/ok/tamtam/photoeditor/view/EditorSurfaceViewContainer;->c:Lqv4;
+    iput-object p1, p0, Lru/ok/tamtam/photoeditor/view/EditorSurfaceViewContainer;->c:Lz05;
 
     new-instance p1, Landroid/widget/FrameLayout$LayoutParams;
 
@@ -96,15 +96,15 @@
 
     invoke-direct {p1, p2, p2}, Landroid/widget/FrameLayout$LayoutParams;-><init>(II)V
 
-    iget-object p2, p0, Lru/ok/tamtam/photoeditor/view/EditorSurfaceViewContainer;->c:Lqv4;
+    iget-object p2, p0, Lru/ok/tamtam/photoeditor/view/EditorSurfaceViewContainer;->c:Lz05;
 
     invoke-virtual {p2, p1}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    iget-object p1, p0, Lru/ok/tamtam/photoeditor/view/EditorSurfaceViewContainer;->c:Lqv4;
+    iget-object p1, p0, Lru/ok/tamtam/photoeditor/view/EditorSurfaceViewContainer;->c:Lz05;
 
-    invoke-virtual {p1, p0}, Lqv4;->setBoundingListener(Lov4;)V
+    invoke-virtual {p1, p0}, Lz05;->setBoundingListener(Lx05;)V
 
-    iget-object p1, p0, Lru/ok/tamtam/photoeditor/view/EditorSurfaceViewContainer;->c:Lqv4;
+    iget-object p1, p0, Lru/ok/tamtam/photoeditor/view/EditorSurfaceViewContainer;->c:Lz05;
 
     invoke-virtual {p0, p1}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
 
@@ -161,10 +161,10 @@
 
 
 # virtual methods
-.method public getEditorSurfaceView()Lqv4;
+.method public getEditorSurfaceView()Lz05;
     .locals 0
 
-    iget-object p0, p0, Lru/ok/tamtam/photoeditor/view/EditorSurfaceViewContainer;->c:Lqv4;
+    iget-object p0, p0, Lru/ok/tamtam/photoeditor/view/EditorSurfaceViewContainer;->c:Lz05;
 
     return-object p0
 .end method
@@ -172,7 +172,7 @@
 .method public final onLayout(ZIIII)V
     .locals 4
 
-    iget-object p1, p0, Lru/ok/tamtam/photoeditor/view/EditorSurfaceViewContainer;->c:Lqv4;
+    iget-object p1, p0, Lru/ok/tamtam/photoeditor/view/EditorSurfaceViewContainer;->c:Lz05;
 
     invoke-virtual {p1, p2, p3, p4, p5}, Landroid/view/View;->layout(IIII)V
 
@@ -250,7 +250,7 @@
 .method public final onMeasure(II)V
     .locals 4
 
-    iget-object v0, p0, Lru/ok/tamtam/photoeditor/view/EditorSurfaceViewContainer;->c:Lqv4;
+    iget-object v0, p0, Lru/ok/tamtam/photoeditor/view/EditorSurfaceViewContainer;->c:Lz05;
 
     invoke-virtual {v0, p1, p2}, Landroid/view/View;->measure(II)V
 

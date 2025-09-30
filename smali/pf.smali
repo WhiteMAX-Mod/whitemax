@@ -1,145 +1,49 @@
 .class public final Lpf;
-.super Ljava/lang/Object;
+.super Landroid/graphics/drawable/Drawable$ConstantState;
 .source "SourceFile"
 
 
 # instance fields
-.field public a:Z
+.field public a:Lvsf;
 
-.field public b:J
+.field public b:Landroid/animation/AnimatorSet;
 
-.field public c:Ljava/lang/Object;
+.field public c:Ljava/util/ArrayList;
 
-.field public d:Ljava/lang/Object;
-
-.field public e:Ljava/lang/Object;
-
-.field public f:Ljava/lang/Object;
-
-.field public g:Ljava/lang/Object;
-
-
-# direct methods
-.method public constructor <init>()V
-    .locals 1
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    const-string v0, ""
-
-    iput-object v0, p0, Lpf;->d:Ljava/lang/Object;
-
-    sget-object v0, Lyu0;->b:Lyu0;
-
-    iput-object v0, p0, Lpf;->e:Ljava/lang/Object;
-
-    return-void
-.end method
+.field public d:Ltr;
 
 
 # virtual methods
-.method public a()I
+.method public final getChangingConfigurations()I
     .locals 0
 
-    iget-object p0, p0, Lpf;->c:Ljava/lang/Object;
-
-    check-cast p0, Lin0;
-
-    iget-object p0, p0, Lin0;->c:Lie6;
-
-    invoke-virtual {p0}, Lie6;->n()I
-
-    move-result p0
+    const/4 p0, 0x0
 
     return p0
 .end method
 
-.method public b(I)I
-    .locals 0
+.method public final newDrawable()Landroid/graphics/drawable/Drawable;
+    .locals 1
 
-    iget-object p0, p0, Lpf;->c:Ljava/lang/Object;
+    .line 1
+    new-instance p0, Ljava/lang/IllegalStateException;
 
-    check-cast p0, Lin0;
+    const-string v0, "No constant state support for SDK < 24."
 
-    iget-object p0, p0, Lin0;->c:Lie6;
+    invoke-direct {p0, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    iget-object p0, p0, Lie6;->a:Ljava/lang/Object;
-
-    check-cast p0, Lme;
-
-    iget-object p0, p0, Lme;->g:Ljava/lang/Object;
-
-    check-cast p0, [I
-
-    aget p0, p0, p1
-
-    return p0
+    throw p0
 .end method
 
-.method public c()I
+.method public final newDrawable(Landroid/content/res/Resources;)Landroid/graphics/drawable/Drawable;
     .locals 0
 
-    iget-object p0, p0, Lpf;->c:Ljava/lang/Object;
+    .line 2
+    new-instance p0, Ljava/lang/IllegalStateException;
 
-    check-cast p0, Lin0;
+    const-string p1, "No constant state support for SDK < 24."
 
-    iget-object p0, p0, Lin0;->c:Lie6;
+    invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {p0}, Lie6;->o()I
-
-    move-result p0
-
-    return p0
-.end method
-
-.method public declared-synchronized d()V
-    .locals 5
-
-    monitor-enter p0
-
-    :try_start_0
-    iget-boolean v0, p0, Lpf;->a:Z
-
-    if-nez v0, :cond_0
-
-    const/4 v0, 0x1
-
-    iput-boolean v0, p0, Lpf;->a:Z
-
-    iget-object v0, p0, Lpf;->f:Ljava/lang/Object;
-
-    check-cast v0, Ljava/util/concurrent/ScheduledExecutorService;
-
-    iget-object v1, p0, Lpf;->g:Ljava/lang/Object;
-
-    check-cast v1, Lje;
-
-    sget-object v2, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;
-
-    const-wide/16 v3, 0x3e8
-
-    invoke-interface {v0, v1, v3, v4, v2}, Ljava/util/concurrent/ScheduledExecutorService;->schedule(Ljava/lang/Runnable;JLjava/util/concurrent/TimeUnit;)Ljava/util/concurrent/ScheduledFuture;
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    goto :goto_0
-
-    :catchall_0
-    move-exception v0
-
-    goto :goto_1
-
-    :cond_0
-    :goto_0
-    monitor-exit p0
-
-    return-void
-
-    :goto_1
-    :try_start_1
-    monitor-exit p0
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    throw v0
+    throw p0
 .end method

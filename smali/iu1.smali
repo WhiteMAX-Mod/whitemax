@@ -1,47 +1,124 @@
 .class public final Liu1;
-.super Landroid/hardware/camera2/CameraCaptureSession$CaptureCallback;
+.super Lure;
 .source "SourceFile"
+
+# interfaces
+.implements Lpc6;
+
+
+# instance fields
+.field public X:I
+
+.field public final synthetic Y:Lku1;
+
+.field public final synthetic Z:Lcp7;
+
+
+# direct methods
+.method public constructor <init>(Lku1;Lcp7;Lkotlin/coroutines/Continuation;)V
+    .locals 0
+
+    iput-object p1, p0, Liu1;->Y:Lku1;
+
+    iput-object p2, p0, Liu1;->Z:Lcp7;
+
+    const/4 p1, 0x2
+
+    invoke-direct {p0, p1, p3}, Lure;-><init>(ILkotlin/coroutines/Continuation;)V
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final onCaptureBufferLost(Landroid/hardware/camera2/CameraCaptureSession;Landroid/hardware/camera2/CaptureRequest;Landroid/view/Surface;J)V
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    return-void
+    check-cast p1, Ly04;
+
+    check-cast p2, Lkotlin/coroutines/Continuation;
+
+    invoke-virtual {p0, p1, p2}, Liu1;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+
+    move-result-object p0
+
+    check-cast p0, Liu1;
+
+    sget-object p1, Lylf;->a:Lylf;
+
+    invoke-virtual {p0, p1}, Liu1;->o(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p0
+
+    return-object p0
 .end method
 
-.method public final onCaptureCompleted(Landroid/hardware/camera2/CameraCaptureSession;Landroid/hardware/camera2/CaptureRequest;Landroid/hardware/camera2/TotalCaptureResult;)V
-    .locals 0
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 1
 
-    return-void
+    new-instance p1, Liu1;
+
+    iget-object v0, p0, Liu1;->Y:Lku1;
+
+    iget-object p0, p0, Liu1;->Z:Lcp7;
+
+    invoke-direct {p1, v0, p0, p2}, Liu1;-><init>(Lku1;Lcp7;Lkotlin/coroutines/Continuation;)V
+
+    return-object p1
 .end method
 
-.method public final onCaptureFailed(Landroid/hardware/camera2/CameraCaptureSession;Landroid/hardware/camera2/CaptureRequest;Landroid/hardware/camera2/CaptureFailure;)V
-    .locals 0
+.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 3
 
-    return-void
-.end method
+    iget v0, p0, Liu1;->X:I
 
-.method public final onCaptureProgressed(Landroid/hardware/camera2/CameraCaptureSession;Landroid/hardware/camera2/CaptureRequest;Landroid/hardware/camera2/CaptureResult;)V
-    .locals 0
+    const/4 v1, 0x1
 
-    return-void
-.end method
+    if-eqz v0, :cond_1
 
-.method public final onCaptureSequenceAborted(Landroid/hardware/camera2/CameraCaptureSession;I)V
-    .locals 0
+    if-ne v0, v1, :cond_0
 
-    return-void
-.end method
+    invoke-static {p1}, Lqe5;->V(Ljava/lang/Object;)V
 
-.method public final onCaptureSequenceCompleted(Landroid/hardware/camera2/CameraCaptureSession;IJ)V
-    .locals 0
+    goto :goto_0
 
-    return-void
-.end method
+    :cond_0
+    new-instance p0, Ljava/lang/IllegalStateException;
 
-.method public final onCaptureStarted(Landroid/hardware/camera2/CameraCaptureSession;Landroid/hardware/camera2/CaptureRequest;JJ)V
-    .locals 0
+    const-string p1, "call to \'resume\' before \'invoke\' with coroutine"
 
-    return-void
+    invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p0
+
+    :cond_1
+    invoke-static {p1}, Lqe5;->V(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Liu1;->Y:Lku1;
+
+    iget-object p1, p1, Lku1;->a:Lnxd;
+
+    new-instance v0, Lw51;
+
+    iget-object v2, p0, Liu1;->Z:Lcp7;
+
+    invoke-direct {v0, v2}, Lw51;-><init>(Lcp7;)V
+
+    iput v1, p0, Liu1;->X:I
+
+    invoke-virtual {p1, v0, p0}, Lnxd;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p0
+
+    sget-object p1, Lz04;->a:Lz04;
+
+    if-ne p0, p1, :cond_2
+
+    return-object p1
+
+    :cond_2
+    :goto_0
+    sget-object p0, Lylf;->a:Lylf;
+
+    return-object p0
 .end method

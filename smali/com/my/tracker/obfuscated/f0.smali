@@ -87,11 +87,11 @@
     invoke-direct {v1, p0, p1, p2}, Lcom/my/tracker/obfuscated/f0;-><init>(Lcom/my/tracker/obfuscated/t;Lcom/my/tracker/obfuscated/i;Landroid/content/Context;)V
 
     .line 6
-    new-instance p0, Lgje;
+    new-instance p0, Lsle;
 
-    const/16 p1, 0x16
+    const/16 p1, 0x1c
 
-    invoke-direct {p0, p1, v1}, Lgje;-><init>(ILjava/lang/Object;)V
+    invoke-direct {p0, p1, v1}, Lsle;-><init>(ILjava/lang/Object;)V
 
     invoke-static {p0}, Lcom/my/tracker/obfuscated/h;->a(Ljava/lang/Runnable;)V
 

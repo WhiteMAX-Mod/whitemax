@@ -1,19 +1,26 @@
-.class public final Lm6c;
+.class public abstract Lm6c;
 .super Ljava/lang/Object;
-.source "SourceFile"
 
 
-# instance fields
-.field public final a:Landroid/content/Context;
+# static fields
+.field public static oneme_main_bottom_bar:I = 0x7f0a0732
 
+.field public static oneme_main_calls_bottom_item:I = 0x7f0a0733
 
-# direct methods
-.method public constructor <init>(Landroid/content/Context;)V
-    .locals 0
+.field public static oneme_main_calls_container:I = 0x7f0a0734
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+.field public static oneme_main_chats_bottom_item:I = 0x7f0a0735
 
-    iput-object p1, p0, Lm6c;->a:Landroid/content/Context;
+.field public static oneme_main_chats_container:I = 0x7f0a0736
 
-    return-void
-.end method
+.field public static oneme_main_contacts_bottom_item:I = 0x7f0a0737
+
+.field public static oneme_main_contacts_container:I = 0x7f0a0738
+
+.field public static oneme_main_container:I = 0x7f0a0739
+
+.field public static oneme_main_root:I = 0x7f0a073a
+
+.field public static oneme_main_settings_bottom_item:I = 0x7f0a073b
+
+.field public static oneme_main_settings_container:I = 0x7f0a073c

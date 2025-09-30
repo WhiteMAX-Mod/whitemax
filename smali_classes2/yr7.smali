@@ -1,23 +1,29 @@
 .class public final Lyr7;
-.super Lije;
+.super Lhs7;
 .source "SourceFile"
 
 
-# virtual methods
-.method public final L()S
-    .locals 0
+# instance fields
+.field public final X:Ljava/lang/String;
 
-    sget-object p0, Llja;->c:Lec2;
 
-    const/4 p0, 0x5
+# direct methods
+.method public constructor <init>(Ljava/lang/String;)V
+    .locals 9
 
-    return p0
-.end method
+    const-wide/16 v5, 0x0
 
-.method public final T()Z
-    .locals 0
+    const-wide/16 v7, 0x0
 
-    const/4 p0, 0x0
+    const-wide/16 v1, 0x0
 
-    return p0
+    const-wide/16 v3, 0x0
+
+    move-object v0, p0
+
+    invoke-direct/range {v0 .. v8}, Lhs7;-><init>(JJJJ)V
+
+    iput-object p1, v0, Lyr7;->X:Ljava/lang/String;
+
+    return-void
 .end method

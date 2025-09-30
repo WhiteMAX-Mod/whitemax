@@ -1,19 +1,23 @@
 .class public final Ljvf;
-.super Lnvf;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:Luvf;
+.field public a:Lvp3;
 
+.field public b:Ljava/lang/String;
 
-# direct methods
-.method public constructor <init>(Luvf;)V
-    .locals 0
+.field public c:Ljava/lang/String;
 
-    invoke-direct {p0}, Ljava/lang/Throwable;-><init>()V
+.field public d:Ljava/lang/String;
 
-    iput-object p1, p0, Ljvf;->a:Luvf;
+.field public e:I
 
-    return-void
-.end method
+.field public f:J
+
+.field public g:Ljava/util/List;
+
+.field public h:B
+
+.field public i:J

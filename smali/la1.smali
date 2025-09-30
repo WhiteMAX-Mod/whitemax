@@ -1,64 +1,40 @@
-.class public final Lla1;
+.class public final synthetic Lla1;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Loa1;
+.implements Landroid/animation/ValueAnimator$AnimatorUpdateListener;
 
 
-# static fields
-.field public static final a:Lla1;
+# instance fields
+.field public final synthetic a:Lone/me/calls/ui/ui/indicator/CallIndicatorWidget;
+
+.field public final synthetic b:Z
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public synthetic constructor <init>(Lone/me/calls/ui/ui/indicator/CallIndicatorWidget;Z)V
+    .locals 0
 
-    new-instance v0, Lla1;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lla1;->a:Lone/me/calls/ui/ui/indicator/CallIndicatorWidget;
 
-    sput-object v0, Lla1;->a:Lla1;
+    iput-boolean p2, p0, Lla1;->b:Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
-
-    const/4 v0, 0x1
-
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    instance-of p0, p1, Lla1;
-
-    if-nez p0, :cond_1
-
-    const/4 p0, 0x0
-
-    return p0
-
-    :cond_1
-    return v0
-.end method
-
-.method public final hashCode()I
+.method public final onAnimationUpdate(Landroid/animation/ValueAnimator;)V
     .locals 0
 
-    const p0, -0x2fe4f2f9
+    iget-object p1, p0, Lla1;->a:Lone/me/calls/ui/ui/indicator/CallIndicatorWidget;
 
-    return p0
-.end method
+    iget-boolean p0, p0, Lla1;->b:Z
 
-.method public final toString()Ljava/lang/String;
-    .locals 0
+    invoke-static {p1, p0}, Lone/me/calls/ui/ui/indicator/CallIndicatorWidget;->z0(Lone/me/calls/ui/ui/indicator/CallIndicatorWidget;Z)V
 
-    const-string p0, "OpenCallIncoming"
-
-    return-object p0
+    return-void
 .end method

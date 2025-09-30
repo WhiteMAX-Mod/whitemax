@@ -26,7 +26,7 @@
 # instance fields
 .field public final Z:Ljava/lang/String;
 
-.field public final o0:Ljava/lang/String;
+.field public final r0:Ljava/lang/String;
 
 
 # direct methods
@@ -39,7 +39,7 @@
 
     iput-object p2, p0, Lru/ok/android/api/session/ApiSessionChangedException;->Z:Ljava/lang/String;
 
-    iput-object p3, p0, Lru/ok/android/api/session/ApiSessionChangedException;->o0:Ljava/lang/String;
+    iput-object p3, p0, Lru/ok/android/api/session/ApiSessionChangedException;->r0:Ljava/lang/String;
 
     return-void
 .end method
@@ -65,7 +65,7 @@
 
     sget-object v1, Ljava/util/Locale;->US:Ljava/util/Locale;
 
-    iget-object v2, p0, Lru/ok/android/api/session/ApiSessionChangedException;->o0:Ljava/lang/String;
+    iget-object v2, p0, Lru/ok/android/api/session/ApiSessionChangedException;->r0:Ljava/lang/String;
 
     invoke-virtual {v2}, Ljava/lang/String;->hashCode()I
 
@@ -141,7 +141,7 @@
 
     const-string v1, "\'}"
 
-    invoke-static {v0, p0, v1}, Lm26;->j(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0, p0, v1}, Lyv7;->k(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
 

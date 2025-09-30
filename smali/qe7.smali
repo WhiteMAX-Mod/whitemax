@@ -1,114 +1,41 @@
-.class public final Lqe7;
+.class public interface abstract Lqe7;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-
-# instance fields
-.field public final a:Ljava/util/TreeSet;
-
-.field public b:J
-
-
-# direct methods
-.method public constructor <init>()V
-    .locals 3
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    new-instance v0, Ljava/util/TreeSet;
-
-    new-instance v1, Lgf4;
-
-    const/4 v2, 0x6
-
-    invoke-direct {v1, v2}, Lgf4;-><init>(I)V
-
-    invoke-direct {v0, v1}, Ljava/util/TreeSet;-><init>(Ljava/util/Comparator;)V
-
-    iput-object v0, p0, Lqe7;->a:Ljava/util/TreeSet;
-
-    return-void
-.end method
+# interfaces
+.implements Lo04;
 
 
 # virtual methods
-.method public final a(Lbw0;J)V
-    .locals 4
-
-    :goto_0
-    iget-wide v0, p0, Lqe7;->b:J
-
-    add-long/2addr v0, p2
-
-    const-wide/32 v2, 0x6400000
-
-    cmp-long v0, v0, v2
-
-    if-lez v0, :cond_0
-
-    iget-object v0, p0, Lqe7;->a:Ljava/util/TreeSet;
-
-    invoke-virtual {v0}, Ljava/util/TreeSet;->isEmpty()Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    iget-object v0, p0, Lqe7;->a:Ljava/util/TreeSet;
-
-    invoke-virtual {v0}, Ljava/util/TreeSet;->first()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lww0;
-
-    move-object v1, p1
-
-    check-cast v1, Lcod;
-
-    monitor-enter v1
-
-    :try_start_0
-    invoke-virtual {v1, v0}, Lcod;->j(Lww0;)V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    monitor-exit v1
-
-    goto :goto_0
-
-    :catchall_0
-    move-exception p0
-
-    :try_start_1
-    monitor-exit v1
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    throw p0
-
-    :cond_0
-    return-void
+.method public abstract attachChild(La23;)Lx13;
 .end method
 
-.method public final b(Lcod;Lfod;)V
-    .locals 4
+.method public abstract cancel(Ljava/util/concurrent/CancellationException;)V
+.end method
 
-    iget-object v0, p0, Lqe7;->a:Ljava/util/TreeSet;
+.method public abstract getCancellationException()Ljava/util/concurrent/CancellationException;
+.end method
 
-    invoke-virtual {v0, p2}, Ljava/util/TreeSet;->add(Ljava/lang/Object;)Z
+.method public abstract getChildren()Lbid;
+.end method
 
-    iget-wide v0, p0, Lqe7;->b:J
+.method public abstract invokeOnCompletion(Lbc6;)Lrq4;
+.end method
 
-    iget-wide v2, p2, Lww0;->c:J
+.method public abstract invokeOnCompletion(ZZLbc6;)Lrq4;
+.end method
 
-    add-long/2addr v0, v2
+.method public abstract isActive()Z
+.end method
 
-    iput-wide v0, p0, Lqe7;->b:J
+.method public abstract isCancelled()Z
+.end method
 
-    const-wide/16 v0, 0x0
+.method public abstract isCompleted()Z
+.end method
 
-    invoke-virtual {p0, p1, v0, v1}, Lqe7;->a(Lbw0;J)V
+.method public abstract join(Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+.end method
 
-    return-void
+.method public abstract start()Z
 .end method

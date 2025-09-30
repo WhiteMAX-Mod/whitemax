@@ -1,29 +1,23 @@
-.class public interface abstract Ldh3;
+.class public final Ldh3;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# virtual methods
-.method public abstract a()Z
-.end method
+# instance fields
+.field public final a:Lcec;
 
-.method public abstract b()Lvh3;
-.end method
+.field public b:Ljava/lang/Boolean;
 
-.method public abstract c(Lch3;)V
-.end method
+.field public c:Ljava/lang/Float;
 
-.method public abstract d()Z
-.end method
 
-.method public abstract e(Lch3;)V
-.end method
+# direct methods
+.method public constructor <init>(Lcec;)V
+    .locals 0
 
-.method public abstract f()Z
-.end method
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-.method public abstract g()Z
-.end method
+    iput-object p1, p0, Ldh3;->a:Lcec;
 
-.method public abstract invalidate()V
+    return-void
 .end method

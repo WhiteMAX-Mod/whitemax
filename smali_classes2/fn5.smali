@@ -1,174 +1,61 @@
 .class public final Lfn5;
-.super Ljava/lang/Object;
+.super Lhn5;
 .source "SourceFile"
 
-# interfaces
-.implements Lbn5;
 
-
-# instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Lr7b;
+# static fields
+.field public static final a:Lfn5;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lr7b;I)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    iput p2, p0, Lfn5;->a:I
+    new-instance v0, Lfn5;
 
-    iput-object p1, p0, Lfn5;->b:Lr7b;
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    sput-object v0, Lfn5;->a:Lfn5;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-    .locals 4
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 1
 
-    iget v0, p0, Lfn5;->a:I
+    const/4 v0, 0x1
 
-    packed-switch v0, :pswitch_data_0
+    if-ne p0, p1, :cond_0
 
-    instance-of v0, p2, Lfo5;
-
-    if-eqz v0, :cond_0
-
-    move-object v0, p2
-
-    check-cast v0, Lfo5;
-
-    iget v1, v0, Lfo5;->Y:I
-
-    const/high16 v2, -0x80000000
-
-    and-int v3, v1, v2
-
-    if-eqz v3, :cond_0
-
-    sub-int/2addr v1, v2
-
-    iput v1, v0, Lfo5;->Y:I
-
-    goto :goto_0
+    return v0
 
     :cond_0
-    new-instance v0, Lfo5;
+    instance-of p0, p1, Lfn5;
 
-    invoke-direct {v0, p0, p2}, Lfo5;-><init>(Lfn5;Lkotlin/coroutines/Continuation;)V
+    if-nez p0, :cond_1
 
-    :goto_0
-    iget-object p2, v0, Lfo5;->o:Ljava/lang/Object;
+    const/4 p0, 0x0
 
-    iget v1, v0, Lfo5;->Y:I
-
-    const/4 v2, 0x1
-
-    if-eqz v1, :cond_2
-
-    if-ne v1, v2, :cond_1
-
-    invoke-static {p2}, Lsgg;->Z(Ljava/lang/Object;)V
-
-    goto :goto_1
+    return p0
 
     :cond_1
-    new-instance p0, Ljava/lang/IllegalStateException;
+    return v0
+.end method
 
-    const-string p1, "call to \'resume\' before \'invoke\' with coroutine"
+.method public final hashCode()I
+    .locals 0
 
-    invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    const p0, 0x443b70c7
 
-    throw p0
+    return p0
+.end method
 
-    :cond_2
-    invoke-static {p2}, Lsgg;->Z(Ljava/lang/Object;)V
+.method public final toString()Ljava/lang/String;
+    .locals 0
 
-    if-nez p1, :cond_3
+    const-string p0, "Failed"
 
-    sget-object p1, Lew9;->a:Lkotlinx/coroutines/internal/Symbol;
-
-    :cond_3
-    iput v2, v0, Lfo5;->Y:I
-
-    iget-object p0, p0, Lfn5;->b:Lr7b;
-
-    check-cast p0, Lo7b;
-
-    iget-object p0, p0, Lo7b;->a:Lst0;
-
-    invoke-interface {p0, p1, v0}, Lp3d;->h(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    sget-object p1, Lpx3;->a:Lpx3;
-
-    if-ne p0, p1, :cond_4
-
-    goto :goto_2
-
-    :cond_4
-    :goto_1
-    sget-object p1, Le5f;->a:Le5f;
-
-    :goto_2
-    return-object p1
-
-    :pswitch_0
-    iget-object p0, p0, Lfn5;->b:Lr7b;
-
-    check-cast p0, Lo7b;
-
-    iget-object p0, p0, Lo7b;->a:Lst0;
-
-    invoke-interface {p0, p1, p2}, Lp3d;->h(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    sget-object p1, Lpx3;->a:Lpx3;
-
-    if-ne p0, p1, :cond_5
-
-    goto :goto_3
-
-    :cond_5
-    sget-object p0, Le5f;->a:Le5f;
-
-    :goto_3
     return-object p0
-
-    :pswitch_1
-    iget-object p0, p0, Lfn5;->b:Lr7b;
-
-    check-cast p0, Lo7b;
-
-    iget-object p0, p0, Lo7b;->a:Lst0;
-
-    invoke-interface {p0, p1, p2}, Lp3d;->h(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    sget-object p1, Lpx3;->a:Lpx3;
-
-    if-ne p0, p1, :cond_6
-
-    goto :goto_4
-
-    :cond_6
-    sget-object p0, Le5f;->a:Le5f;
-
-    :goto_4
-    return-object p0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
 .end method

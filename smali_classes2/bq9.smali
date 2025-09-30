@@ -1,39 +1,80 @@
-.class public final Lbq9;
+.class public final synthetic Lbq9;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ly98;
+
 
 # instance fields
-.field public final a:Ltm4;
-
-.field public final b:Ltm4;
-
-.field public final c:Lvu0;
-
-.field public final d:Ltm4;
-
-.field public final e:Ltm4;
-
-.field public final f:Ltm4;
+.field public final synthetic a:Ldq9;
 
 
 # direct methods
-.method public constructor <init>(Ltm4;Ltm4;Lvu0;Ltm4;Ltm4;Ltm4;)V
+.method public synthetic constructor <init>(Ldq9;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lbq9;->a:Ltm4;
+    iput-object p1, p0, Lbq9;->a:Ldq9;
 
-    iput-object p2, p0, Lbq9;->b:Ltm4;
+    return-void
+.end method
 
-    iput-object p3, p0, Lbq9;->c:Lvu0;
 
-    iput-object p4, p0, Lbq9;->d:Ltm4;
+# virtual methods
+.method public final a(Lt98;)V
+    .locals 1
 
-    iput-object p5, p0, Lbq9;->e:Ltm4;
+    iget-object p0, p0, Lbq9;->a:Ldq9;
 
-    iput-object p6, p0, Lbq9;->f:Ltm4;
+    iget-object v0, p0, Ldq9;->v0:Lz68;
+
+    if-eqz v0, :cond_2
+
+    iget-boolean v0, v0, Lz68;->h:Z
+
+    if-nez v0, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    iget-object p0, p0, Ldq9;->r0:Lhu7;
+
+    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    sget-object p0, Lg98;->a:Lg98;
+
+    sget-object v0, Ld29;->a:Ld29;
+
+    invoke-virtual {p0, v0}, La98;->c(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p0
+
+    check-cast p0, Ld29;
+
+    if-ne p0, v0, :cond_1
+
+    sget-object p0, Ljava/util/Collections;->EMPTY_LIST:Ljava/util/List;
+
+    invoke-interface {p1, p0}, Lt98;->a(Ljava/lang/Object;)V
+
+    return-void
+
+    :cond_1
+    invoke-static {p0}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
+
+    move-result-object p0
+
+    invoke-interface {p1, p0}, Lt98;->a(Ljava/lang/Object;)V
+
+    return-void
+
+    :cond_2
+    :goto_0
+    sget-object p0, Ljava/util/Collections;->EMPTY_LIST:Ljava/util/List;
+
+    invoke-interface {p1, p0}, Lt98;->a(Ljava/lang/Object;)V
 
     return-void
 .end method

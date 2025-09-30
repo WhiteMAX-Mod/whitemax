@@ -1,75 +1,99 @@
 .class public final Lzu9;
-.super Lv64;
+.super Lj2e;
 .source "SourceFile"
 
 
-# static fields
-.field public static final b:Lzu9;
+# virtual methods
+.method public final F(Lru9;)V
+    .locals 5
 
-.field public static final c:Lr64;
+    iget-object p0, p0, Lzoc;->a:Landroid/view/View;
 
-.field public static final d:Lr64;
+    check-cast p0, Lone/me/sdk/uikit/common/views/OneMeDraweeView;
 
-.field public static final e:Lr64;
+    iget-wide v0, p1, Lru9;->a:J
 
-.field public static final f:Lr64;
+    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
 
+    move-result v0
 
-# direct methods
-.method static constructor <clinit>()V
-    .locals 6
+    invoke-virtual {p0, v0}, Landroid/view/View;->setId(I)V
 
-    new-instance v0, Lzu9;
+    iget-object p1, p1, Lru9;->b:Ljava/lang/String;
 
-    invoke-direct {v0}, Lv64;-><init>()V
+    invoke-static {p1}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
 
-    sput-object v0, Lzu9;->b:Lzu9;
+    move-result-object p1
 
-    const/4 v1, 0x0
+    invoke-static {p1}, Lj27;->d(Landroid/net/Uri;)Lj27;
 
-    new-array v2, v1, [Ljava/lang/String;
+    move-result-object p1
 
-    const-string v3, ":settings/notifications"
+    new-instance v0, Lztc;
 
-    const/4 v4, 0x0
+    const/16 v1, 0x40
 
-    const/16 v5, 0xe
+    int-to-float v1, v1
 
-    invoke-static {v0, v3, v2, v4, v5}, Lv64;->a(Lv64;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lr64;
-
-    move-result-object v2
-
-    sput-object v2, Lzu9;->c:Lr64;
-
-    const-string v2, ":settings/notifications/chat"
-
-    new-array v3, v1, [Ljava/lang/String;
-
-    invoke-static {v0, v2, v3, v4, v5}, Lv64;->a(Lv64;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lr64;
+    invoke-static {}, Lvo4;->d()Landroid/content/res/Resources;
 
     move-result-object v2
 
-    sput-object v2, Lzu9;->d:Lr64;
-
-    const-string v2, ":settings/notifications/dialog"
-
-    new-array v3, v1, [Ljava/lang/String;
-
-    invoke-static {v0, v2, v3, v4, v5}, Lv64;->a(Lv64;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lr64;
+    invoke-virtual {v2}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
 
     move-result-object v2
 
-    sput-object v2, Lzu9;->e:Lr64;
+    iget v2, v2, Landroid/util/DisplayMetrics;->density:F
 
-    const-string v2, ":settings/notifications/other"
+    mul-float/2addr v2, v1
 
-    new-array v1, v1, [Ljava/lang/String;
+    invoke-static {v2}, Lya6;->G(F)I
 
-    invoke-static {v0, v2, v1, v4, v5}, Lv64;->a(Lv64;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lr64;
+    move-result v2
 
-    move-result-object v0
+    invoke-static {}, Lvo4;->d()Landroid/content/res/Resources;
 
-    sput-object v0, Lzu9;->f:Lr64;
+    move-result-object v3
+
+    invoke-virtual {v3}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object v3
+
+    iget v3, v3, Landroid/util/DisplayMetrics;->density:F
+
+    mul-float/2addr v1, v3
+
+    invoke-static {v1}, Lya6;->G(F)I
+
+    move-result v1
+
+    const/4 v3, 0x0
+
+    const/16 v4, 0xc
+
+    invoke-direct {v0, v3, v2, v1, v4}, Lztc;-><init>(FIII)V
+
+    iput-object v0, p1, Lj27;->d:Lztc;
+
+    invoke-virtual {p1}, Lj27;->a()Li27;
+
+    move-result-object p1
+
+    sget v0, Lone/me/sdk/uikit/common/views/OneMeDraweeView;->A0:I
+
+    const/4 v0, 0x0
+
+    invoke-virtual {p0, p1, v0}, Lone/me/sdk/uikit/common/views/OneMeDraweeView;->o(Li27;Li27;)V
+
+    return-void
+.end method
+
+.method public final bridge synthetic y(Lts7;)V
+    .locals 0
+
+    check-cast p1, Lru9;
+
+    invoke-virtual {p0, p1}, Lzu9;->F(Lru9;)V
 
     return-void
 .end method

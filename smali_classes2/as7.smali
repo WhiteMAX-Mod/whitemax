@@ -1,110 +1,29 @@
-.class public final synthetic Las7;
-.super Ljava/lang/Object;
+.class public final Las7;
+.super Lhs7;
 .source "SourceFile"
-
-# interfaces
-.implements Lx56;
 
 
 # instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Lje7;
+.field public final X:Ljava/lang/String;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lfs7;Lje7;)V
-    .locals 0
+.method public constructor <init>(Ljava/lang/String;)V
+    .locals 9
 
-    .line 2
-    const/4 p1, 0x0
+    const-wide/16 v5, 0x0
 
-    iput p1, p0, Las7;->a:I
+    const-wide/16 v7, 0x0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const-wide/16 v1, 0x0
 
-    iput-object p2, p0, Las7;->b:Lje7;
+    const-wide/16 v3, 0x0
 
-    return-void
-.end method
+    move-object v0, p0
 
-.method public synthetic constructor <init>(Lje7;)V
-    .locals 1
+    invoke-direct/range {v0 .. v8}, Lhs7;-><init>(JJJJ)V
 
-    .line 1
-    const/4 v0, 0x1
-
-    iput v0, p0, Las7;->a:I
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Las7;->b:Lje7;
+    iput-object p1, v0, Las7;->X:Ljava/lang/String;
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 2
-
-    iget v0, p0, Las7;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    check-cast p1, Ljava/lang/Long;
-
-    invoke-virtual {p1}, Ljava/lang/Long;->longValue()J
-
-    move-result-wide v0
-
-    iget-object p0, p0, Las7;->b:Lje7;
-
-    invoke-interface {p0}, Lje7;->getValue()Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, Lxk3;
-
-    invoke-virtual {p0, v0, v1}, Lxk3;->m(J)Z
-
-    move-result p0
-
-    invoke-static {p0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
-
-    move-result-object p0
-
-    return-object p0
-
-    :pswitch_0
-    check-cast p1, Ljava/lang/Throwable;
-
-    const-string v0, "LogController"
-
-    const-string v1, "Failed to store event"
-
-    invoke-static {v0, v1, p1}, Lg47;->r(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    iget-object p0, p0, Las7;->b:Lje7;
-
-    invoke-interface {p0}, Lje7;->getValue()Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, Le45;
-
-    const/4 v0, 0x1
-
-    check-cast p0, Lu8a;
-
-    invoke-virtual {p0, p1, v0}, Lu8a;->c(Ljava/lang/Throwable;Z)V
-
-    sget-object p0, Le5f;->a:Le5f;
-
-    return-object p0
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
 .end method

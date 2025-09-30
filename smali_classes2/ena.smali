@@ -1,162 +1,211 @@
-.class public final Lena;
+.class public abstract Lena;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:Ljava/lang/Object;
+# static fields
+.field public static final A:I
 
-.field public final b:Ljava/lang/Object;
+.field public static final B:I
+
+.field public static final C:I
+
+.field public static final D:I
+
+.field public static final E:I
+
+.field public static final F:I
+
+.field public static final G:I
+
+.field public static final a:I
+
+.field public static final b:I
+
+.field public static final c:I
+
+.field public static final d:I
+
+.field public static final e:I
+
+.field public static final f:I
+
+.field public static final g:I
+
+.field public static final h:I
+
+.field public static final i:I
+
+.field public static final j:I
+
+.field public static final k:I
+
+.field public static final l:I
+
+.field public static final m:I
+
+.field public static final n:I
+
+.field public static final o:I
+
+.field public static final p:I
+
+.field public static final q:I
+
+.field public static final r:I
+
+.field public static final s:I
+
+.field public static final t:I
+
+.field public static final u:I
+
+.field public static final v:I
+
+.field public static final w:I
+
+.field public static final x:I
+
+.field public static final y:I
+
+.field public static final z:I
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/Object;Ljava/lang/Object;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    sget v0, Lf7c;->audio_record__action_view:I
 
-    iput-object p1, p0, Lena;->a:Ljava/lang/Object;
+    sput v0, Lena;->a:I
 
-    iput-object p2, p0, Lena;->b:Ljava/lang/Object;
+    sget v0, Lf7c;->audio_record__action_view_background:I
+
+    sput v0, Lena;->b:I
+
+    sget v0, Lf7c;->audio_record__action_view_bg_container:I
+
+    sput v0, Lena;->c:I
+
+    sget v0, Lf7c;->audio_record__action_view_container:I
+
+    sput v0, Lena;->d:I
+
+    sget v0, Lf7c;->audio_record__audio_hand_free_record_view:I
+
+    sput v0, Lena;->e:I
+
+    sget v0, Lf7c;->audio_record__audio_record_root:I
+
+    sput v0, Lena;->f:I
+
+    sget v0, Lf7c;->audio_record__cancel_view:I
+
+    sput v0, Lena;->g:I
+
+    sget v0, Lf7c;->audio_record__dot_view:I
+
+    sput v0, Lena;->h:I
+
+    sget v0, Lf7c;->audio_record__duration_view:I
+
+    sput v0, Lena;->i:I
+
+    sget v0, Lf7c;->audio_record__hand_free_dot_view:I
+
+    sput v0, Lena;->j:I
+
+    sget v0, Lf7c;->audio_record__hand_free_duration_view:I
+
+    sput v0, Lena;->k:I
+
+    sget v0, Lf7c;->audio_record__lock_view:I
+
+    sput v0, Lena;->l:I
+
+    sget v0, Lf7c;->audio_record__pause_recording_button:I
+
+    sput v0, Lena;->m:I
+
+    sget v0, Lf7c;->audio_record__play_pause_listening_button:I
+
+    sput v0, Lena;->n:I
+
+    sget v0, Lf7c;->audio_record__play_recording_button:I
+
+    sput v0, Lena;->o:I
+
+    sget v0, Lf7c;->audio_record__recording_panel:I
+
+    sput v0, Lena;->p:I
+
+    sget v0, Lf7c;->audio_record__remove_button:I
+
+    sput v0, Lena;->q:I
+
+    sget v0, Lf7c;->audio_record__swipe_remove_button:I
+
+    sput v0, Lena;->r:I
+
+    sget v0, Lf7c;->audio_record__wave_container:I
+
+    sput v0, Lena;->s:I
+
+    sget v0, Lf7c;->audio_record__wave_view:I
+
+    sput v0, Lena;->t:I
+
+    sget v0, Lf7c;->writebar__add_link_bottom_sheet_button_add:I
+
+    sput v0, Lena;->u:I
+
+    sget v0, Lf7c;->writebar__add_link_bottom_sheet_input:I
+
+    sput v0, Lena;->v:I
+
+    sget v0, Lf7c;->writebar__container:I
+
+    sput v0, Lena;->w:I
+
+    sget v0, Lf7c;->writebar__record_controls:I
+
+    sput v0, Lena;->x:I
+
+    sget v0, Lf7c;->writebar__root:I
+
+    sput v0, Lena;->y:I
+
+    sget v0, Lf7c;->writebar__suggestion_close_button:I
+
+    sput v0, Lena;->z:I
+
+    sget v0, Lf7c;->writebar__suggestion_close_panel:I
+
+    sput v0, Lena;->A:I
+
+    sget v0, Lf7c;->writebar__suggestion_item:I
+
+    sput v0, Lena;->B:I
+
+    sget v0, Lf7c;->writebar__suggestion_not_found:I
+
+    sput v0, Lena;->C:I
+
+    sget v0, Lf7c;->writebar__suggestion_popup_drag_layout:I
+
+    sput v0, Lena;->D:I
+
+    sget v0, Lf7c;->writebar__suggestion_popup_layout_content:I
+
+    sput v0, Lena;->E:I
+
+    sget v0, Lf7c;->writebar__suggestion_popup_layout_list:I
+
+    sput v0, Lena;->F:I
+
+    sget v0, Lf7c;->writebar__suggestion_title:I
+
+    sput v0, Lena;->G:I
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
-
-    const/4 v0, 0x1
-
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    const/4 v1, 0x0
-
-    if-eqz p1, :cond_5
-
-    const-class v2, Lena;
-
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    move-result-object v3
-
-    if-eq v2, v3, :cond_1
-
-    goto :goto_1
-
-    :cond_1
-    check-cast p1, Lena;
-
-    iget-object v2, p1, Lena;->b:Ljava/lang/Object;
-
-    iget-object p1, p1, Lena;->a:Ljava/lang/Object;
-
-    iget-object v3, p0, Lena;->a:Ljava/lang/Object;
-
-    if-eqz v3, :cond_2
-
-    invoke-virtual {v3, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_3
-
-    goto :goto_0
-
-    :cond_2
-    if-eqz p1, :cond_3
-
-    :goto_0
-    return v1
-
-    :cond_3
-    iget-object p0, p0, Lena;->b:Ljava/lang/Object;
-
-    if-eqz p0, :cond_4
-
-    invoke-virtual {p0, v2}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
-
-    move-result p0
-
-    return p0
-
-    :cond_4
-    if-nez v2, :cond_5
-
-    return v0
-
-    :cond_5
-    :goto_1
-    return v1
-.end method
-
-.method public final hashCode()I
-    .locals 2
-
-    const/4 v0, 0x0
-
-    iget-object v1, p0, Lena;->a:Ljava/lang/Object;
-
-    if-eqz v1, :cond_0
-
-    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
-
-    move-result v1
-
-    goto :goto_0
-
-    :cond_0
-    move v1, v0
-
-    :goto_0
-    mul-int/lit8 v1, v1, 0x1f
-
-    iget-object p0, p0, Lena;->b:Ljava/lang/Object;
-
-    if-eqz p0, :cond_1
-
-    invoke-virtual {p0}, Ljava/lang/Object;->hashCode()I
-
-    move-result v0
-
-    :cond_1
-    add-int/2addr v1, v0
-
-    return v1
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 2
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "Pair{first="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v1, p0, Lena;->a:Ljava/lang/Object;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", second="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object p0, p0, Lena;->b:Ljava/lang/Object;
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const/16 p0, 0x7d
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
 .end method

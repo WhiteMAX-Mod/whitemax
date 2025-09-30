@@ -1,33 +1,51 @@
 .class public final Lcx6;
-.super Ljava/util/AbstractMap;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:[Lvaf;
+.field public final a:Ljava/lang/String;
+
+.field public final b:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>([Lvaf;)V
+.method public constructor <init>(Ljava/lang/String;Ljava/lang/String;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/util/AbstractMap;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lcx6;->a:[Lvaf;
+    iput-object p1, p0, Lcx6;->a:Ljava/lang/String;
+
+    iput-object p2, p0, Lcx6;->b:Ljava/lang/String;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final entrySet()Ljava/util/Set;
-    .locals 1
+.method public final toString()Ljava/lang/String;
+    .locals 2
 
-    new-instance v0, Les;
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    iget-object p0, p0, Lcx6;->a:[Lvaf;
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-direct {v0, p0}, Les;-><init>([Lvaf;)V
+    iget-object v1, p0, Lcx6;->a:Ljava/lang/String;
 
-    return-object v0
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, ": "
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object p0, p0, Lcx6;->b:Ljava/lang/String;
+
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    return-object p0
 .end method

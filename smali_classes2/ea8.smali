@@ -3,160 +3,302 @@
 .source "SourceFile"
 
 # interfaces
-.implements Li34;
+.implements Ljava/lang/Comparable;
 
 
 # instance fields
-.field public final a:Lv94;
+.field public final X:J
 
-.field public b:Ldb4;
+.field public final a:Ljava/lang/String;
+
+.field public final b:J
+
+.field public final c:J
+
+.field public final o:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;Landroid/net/Uri;)V
-    .locals 17
+.method public constructor <init>(Ljava/lang/String;Ljava/lang/String;JJJ)V
+    .locals 1
 
-    move-object/from16 v0, p0
+    sget-object v0, Ljava/util/concurrent/TimeUnit;->NANOSECONDS:Ljava/util/concurrent/TimeUnit;
 
-    new-instance v1, Lv94;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    new-instance v2, Lnz7;
+    iput-object p1, p0, Lea8;->a:Ljava/lang/String;
 
-    const/16 v3, 0x15
+    iput-wide p3, p0, Lea8;->b:J
 
-    invoke-direct {v2, v3}, Lnz7;-><init>(I)V
+    iput-wide p5, p0, Lea8;->c:J
 
-    new-instance v3, Lxb4;
+    iput-object p2, p0, Lea8;->o:Ljava/lang/String;
 
-    const/16 v4, 0x1f40
-
-    invoke-direct {v3, v4, v4, v2}, Lxb4;-><init>(IILnz7;)V
-
-    move-object/from16 v2, p1
-
-    invoke-direct {v1, v2, v3}, Lv94;-><init>(Landroid/content/Context;Li34;)V
-
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    iput-object v1, v0, Lea8;->a:Lv94;
-
-    sget-object v10, Ljava/util/Collections;->EMPTY_MAP:Ljava/util/Map;
-
-    new-instance v4, Lp34;
-
-    const-wide/16 v6, 0x0
-
-    const/4 v8, 0x1
-
-    const/4 v9, 0x0
-
-    const-wide/16 v11, 0x0
-
-    const-wide/16 v13, -0x1
-
-    const/4 v15, 0x0
-
-    const/16 v16, 0x0
-
-    move-object/from16 v5, p2
-
-    invoke-direct/range {v4 .. v16}, Lp34;-><init>(Landroid/net/Uri;JI[BLjava/util/Map;JJLjava/lang/String;I)V
-
-    invoke-virtual {v0, v4}, Lea8;->F(Lp34;)J
+    iput-wide p7, p0, Lea8;->X:J
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final F(Lp34;)J
-    .locals 10
+.method public final compareTo(Ljava/lang/Object;)I
+    .locals 7
 
-    iget-object v0, p0, Lea8;->a:Lv94;
+    check-cast p1, Lea8;
 
-    invoke-virtual {v0, p1}, Lv94;->F(Lp34;)J
+    sget-object v0, Ljava/util/concurrent/TimeUnit;->NANOSECONDS:Ljava/util/concurrent/TimeUnit;
 
-    move-result-wide v0
+    iget-wide v1, p0, Lea8;->c:J
 
-    const-wide/16 v2, -0x1
+    invoke-virtual {v0, v1, v2}, Ljava/util/concurrent/TimeUnit;->toNanos(J)J
 
-    cmp-long v2, v0, v2
+    move-result-wide v1
 
-    if-eqz v2, :cond_0
+    iget-wide v3, p0, Lea8;->b:J
 
-    iget-wide v2, p1, Lp34;->f:J
+    invoke-virtual {v0, v3, v4}, Ljava/util/concurrent/TimeUnit;->toNanos(J)J
 
-    add-long/2addr v2, v0
+    move-result-wide v3
 
-    move-wide v8, v2
+    add-long/2addr v3, v1
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    iget-wide v1, p1, Lea8;->c:J
+
+    invoke-virtual {v0, v1, v2}, Ljava/util/concurrent/TimeUnit;->toNanos(J)J
+
+    move-result-wide v1
+
+    iget-wide v5, p1, Lea8;->b:J
+
+    invoke-virtual {v0, v5, v6}, Ljava/util/concurrent/TimeUnit;->toNanos(J)J
+
+    move-result-wide v5
+
+    add-long/2addr v5, v1
+
+    invoke-static {v3, v4, v5, v6}, Lvyg;->h(JJ)I
+
+    move-result v0
+
+    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v1
+
+    if-eqz v0, :cond_0
 
     goto :goto_0
 
     :cond_0
-    move-wide v8, v0
+    const/4 v1, 0x0
 
     :goto_0
-    new-instance v4, Ldb4;
+    if-eqz v1, :cond_1
 
-    iget-wide v6, p1, Lp34;->f:J
-
-    move-object v5, p0
-
-    invoke-direct/range {v4 .. v9}, Ldb4;-><init>(Lb34;JJ)V
-
-    iput-object v4, v5, Lea8;->b:Ldb4;
-
-    return-wide v0
-.end method
-
-.method public final G(Lbze;)V
-    .locals 0
-
-    iget-object p0, p0, Lea8;->a:Lv94;
-
-    invoke-virtual {p0, p1}, Lv94;->G(Lbze;)V
-
-    return-void
-.end method
-
-.method public final close()V
-    .locals 1
-
-    const/4 v0, 0x0
-
-    iput-object v0, p0, Lea8;->b:Ldb4;
-
-    :try_start_0
-    iget-object p0, p0, Lea8;->a:Lv94;
-
-    invoke-virtual {p0}, Lv94;->close()V
-    :try_end_0
-    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
-
-    :catch_0
-    return-void
-.end method
-
-.method public final getUri()Landroid/net/Uri;
-    .locals 0
-
-    iget-object p0, p0, Lea8;->a:Lv94;
-
-    invoke-virtual {p0}, Lv94;->getUri()Landroid/net/Uri;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public final read([BII)I
-    .locals 0
-
-    iget-object p0, p0, Lea8;->a:Lv94;
-
-    invoke-virtual {p0, p1, p2, p3}, Lv94;->read([BII)I
+    invoke-virtual {v1}, Ljava/lang/Integer;->intValue()I
 
     move-result p0
 
     return p0
+
+    :cond_1
+    iget-object p0, p0, Lea8;->a:Ljava/lang/String;
+
+    iget-object p1, p1, Lea8;->a:Ljava/lang/String;
+
+    invoke-virtual {p0, p1}, Ljava/lang/String;->compareTo(Ljava/lang/String;)I
+
+    move-result p0
+
+    return p0
+.end method
+
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
+
+    if-ne p0, p1, :cond_0
+
+    goto :goto_1
+
+    :cond_0
+    instance-of v0, p1, Lea8;
+
+    if-nez v0, :cond_1
+
+    goto :goto_0
+
+    :cond_1
+    check-cast p1, Lea8;
+
+    iget-object v0, p0, Lea8;->a:Ljava/lang/String;
+
+    iget-object v1, p1, Lea8;->a:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_2
+
+    goto :goto_0
+
+    :cond_2
+    iget-wide v0, p0, Lea8;->b:J
+
+    iget-wide v2, p1, Lea8;->b:J
+
+    cmp-long v0, v0, v2
+
+    if-eqz v0, :cond_3
+
+    goto :goto_0
+
+    :cond_3
+    iget-wide v0, p0, Lea8;->c:J
+
+    iget-wide v2, p1, Lea8;->c:J
+
+    cmp-long v0, v0, v2
+
+    if-eqz v0, :cond_4
+
+    goto :goto_0
+
+    :cond_4
+    sget-object v0, Ljava/util/concurrent/TimeUnit;->NANOSECONDS:Ljava/util/concurrent/TimeUnit;
+
+    iget-object v0, p0, Lea8;->o:Ljava/lang/String;
+
+    iget-object v1, p1, Lea8;->o:Ljava/lang/String;
+
+    invoke-static {v0, v1}, Lvyg;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_5
+
+    goto :goto_0
+
+    :cond_5
+    iget-wide v0, p0, Lea8;->X:J
+
+    iget-wide p0, p1, Lea8;->X:J
+
+    cmp-long p0, v0, p0
+
+    if-eqz p0, :cond_6
+
+    :goto_0
+    const/4 p0, 0x0
+
+    return p0
+
+    :cond_6
+    :goto_1
+    const/4 p0, 0x1
+
+    return p0
+.end method
+
+.method public final hashCode()I
+    .locals 4
+
+    iget-object v0, p0, Lea8;->a:Ljava/lang/String;
+
+    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
+
+    move-result v0
+
+    const/16 v1, 0x1f
+
+    mul-int/2addr v0, v1
+
+    iget-wide v2, p0, Lea8;->b:J
+
+    invoke-static {v0, v1, v2, v3}, Lwsf;->d(IIJ)I
+
+    move-result v0
+
+    iget-wide v2, p0, Lea8;->c:J
+
+    invoke-static {v0, v1, v2, v3}, Lwsf;->d(IIJ)I
+
+    move-result v0
+
+    sget-object v2, Ljava/util/concurrent/TimeUnit;->NANOSECONDS:Ljava/util/concurrent/TimeUnit;
+
+    invoke-virtual {v2}, Ljava/lang/Object;->hashCode()I
+
+    move-result v2
+
+    add-int/2addr v2, v0
+
+    mul-int/2addr v2, v1
+
+    iget-object v0, p0, Lea8;->o:Ljava/lang/String;
+
+    invoke-static {v2, v1, v0}, Lsq3;->d(IILjava/lang/String;)I
+
+    move-result v0
+
+    iget-wide v1, p0, Lea8;->X:J
+
+    invoke-static {v1, v2}, Ljava/lang/Long;->hashCode(J)I
+
+    move-result p0
+
+    add-int/2addr p0, v0
+
+    return p0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 6
+
+    sget-object v0, Ljava/util/concurrent/TimeUnit;->NANOSECONDS:Ljava/util/concurrent/TimeUnit;
+
+    const-string v1, "Measurement(taskName="
+
+    const-string v2, ", dependencyDuration="
+
+    iget-wide v3, p0, Lea8;->b:J
+
+    iget-object v5, p0, Lea8;->a:Ljava/lang/String;
+
+    invoke-static {v1, v3, v4, v5, v2}, Lz7e;->t(Ljava/lang/String;JLjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    const-string v2, ", executionDuration="
+
+    const-string v3, ", unit="
+
+    iget-wide v4, p0, Lea8;->c:J
+
+    invoke-static {v4, v5, v2, v3, v1}, Lmw1;->r(JLjava/lang/String;Ljava/lang/String;Ljava/lang/StringBuilder;)V
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v0, ", threadName="
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v0, p0, Lea8;->o:Ljava/lang/String;
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v0, ", startTime="
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v0, ")"
+
+    iget-wide v2, p0, Lea8;->X:J
+
+    invoke-static {v1, v2, v3, v0}, Lyv7;->j(Ljava/lang/StringBuilder;JLjava/lang/String;)Ljava/lang/String;
+
+    move-result-object p0
+
+    return-object p0
 .end method

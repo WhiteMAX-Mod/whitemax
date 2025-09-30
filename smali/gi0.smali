@@ -1,76 +1,62 @@
-.class public abstract Lgi0;
+.class public Lgi0;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lq34;
+.implements Lhy3;
+
+
+# static fields
+.field public static final a:Lgi0;
+
+
+# direct methods
+.method static constructor <clinit>()V
+    .locals 1
+
+    new-instance v0, Lgi0;
+
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    sput-object v0, Lgi0;->a:Lgi0;
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final a(Lg0;)V
-    .locals 1
-
-    invoke-virtual {p1}, Lg0;->h()Z
-
-    move-result v0
-
-    :try_start_0
-    invoke-virtual {p0, p1}, Lgi0;->f(Lg0;)V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    if-eqz v0, :cond_0
-
-    invoke-virtual {p1}, Lg0;->a()Z
-
-    :cond_0
-    return-void
-
-    :catchall_0
-    move-exception p0
-
-    if-eqz v0, :cond_1
-
-    invoke-virtual {p1}, Lg0;->a()Z
-
-    :cond_1
-    throw p0
-.end method
-
-.method public b(Lg0;)V
+.method public c(Ljava/lang/String;Ljava/lang/Object;Landroid/graphics/drawable/Animatable;)V
     .locals 0
 
     return-void
 .end method
 
-.method public final c(Lg0;)V
-    .locals 0
-
-    :try_start_0
-    invoke-virtual {p0, p1}, Lgi0;->e(Lg0;)V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    invoke-virtual {p1}, Lg0;->a()Z
-
-    return-void
-
-    :catchall_0
-    move-exception p0
-
-    invoke-virtual {p1}, Lg0;->a()Z
-
-    throw p0
-.end method
-
-.method public d()V
+.method public d(Ljava/lang/String;Ljava/lang/Throwable;)V
     .locals 0
 
     return-void
 .end method
 
-.method public abstract e(Lg0;)V
+.method public e(Ljava/lang/String;)V
+    .locals 0
+
+    return-void
 .end method
 
-.method public abstract f(Lg0;)V
+.method public h(Ljava/lang/String;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public final k(Ljava/lang/String;Ljava/lang/Throwable;)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public onIntermediateImageSet(Ljava/lang/String;Ljava/lang/Object;)V
+    .locals 0
+
+    return-void
 .end method

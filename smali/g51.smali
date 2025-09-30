@@ -3,28 +3,76 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lo51;
+.implements Lk51;
 
 
 # instance fields
-.field public final a:J
+.field public final a:Lru/ok/android/externcalls/sdk/audio/CallsAudioDeviceInfo;
+
+.field public final b:I
+
+.field public final c:I
+
+.field public final d:I
+
+.field public final e:Lp2f;
+
+.field public final f:Lp2f;
 
 
 # direct methods
-.method public constructor <init>(J)V
-    .locals 0
+.method public constructor <init>(Lru/ok/android/externcalls/sdk/audio/CallsAudioDeviceInfo;)V
+    .locals 1
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-wide p1, p0, Lg51;->a:J
+    iput-object p1, p0, Lg51;->a:Lru/ok/android/externcalls/sdk/audio/CallsAudioDeviceInfo;
+
+    sget p1, Laea;->J:I
+
+    iput p1, p0, Lg51;->b:I
+
+    sget p1, Lzda;->x0:I
+
+    iput p1, p0, Lg51;->c:I
+
+    sget p1, Lzda;->J0:I
+
+    iput p1, p0, Lg51;->d:I
+
+    sget p1, Ldea;->v2:I
+
+    new-instance v0, Lp2f;
+
+    invoke-direct {v0, p1}, Lp2f;-><init>(I)V
+
+    iput-object v0, p0, Lg51;->e:Lp2f;
+
+    iput-object v0, p0, Lg51;->f:Lp2f;
 
     return-void
 .end method
 
 
 # virtual methods
+.method public final a()I
+    .locals 0
+
+    iget p0, p0, Lg51;->c:I
+
+    return p0
+.end method
+
+.method public final b()Lru/ok/android/externcalls/sdk/audio/CallsAudioDeviceInfo;
+    .locals 0
+
+    iget-object p0, p0, Lg51;->a:Lru/ok/android/externcalls/sdk/audio/CallsAudioDeviceInfo;
+
+    return-object p0
+.end method
+
 .method public final equals(Ljava/lang/Object;)Z
-    .locals 5
+    .locals 3
 
     const/4 v0, 0x1
 
@@ -44,13 +92,15 @@
     :cond_1
     check-cast p1, Lg51;
 
-    iget-wide v3, p0, Lg51;->a:J
+    iget-object p0, p0, Lg51;->a:Lru/ok/android/externcalls/sdk/audio/CallsAudioDeviceInfo;
 
-    iget-wide p0, p1, Lg51;->a:J
+    iget-object p1, p1, Lg51;->a:Lru/ok/android/externcalls/sdk/audio/CallsAudioDeviceInfo;
 
-    cmp-long p0, v3, p0
+    invoke-static {p0, p1}, Lvyg;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    if-eqz p0, :cond_2
+    move-result p0
+
+    if-nez p0, :cond_2
 
     return v2
 
@@ -58,12 +108,44 @@
     return v0
 .end method
 
+.method public final getContentDescription()Lu2f;
+    .locals 0
+
+    iget-object p0, p0, Lg51;->f:Lp2f;
+
+    return-object p0
+.end method
+
+.method public final getIcon()I
+    .locals 0
+
+    iget p0, p0, Lg51;->d:I
+
+    return p0
+.end method
+
+.method public final getId()I
+    .locals 0
+
+    iget p0, p0, Lg51;->b:I
+
+    return p0
+.end method
+
+.method public final getTitle()Lu2f;
+    .locals 0
+
+    iget-object p0, p0, Lg51;->e:Lp2f;
+
+    return-object p0
+.end method
+
 .method public final hashCode()I
-    .locals 2
+    .locals 0
 
-    iget-wide v0, p0, Lg51;->a:J
+    iget-object p0, p0, Lg51;->a:Lru/ok/android/externcalls/sdk/audio/CallsAudioDeviceInfo;
 
-    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
+    invoke-virtual {p0}, Lru/ok/android/externcalls/sdk/audio/CallsAudioDeviceInfo;->hashCode()I
 
     move-result p0
 
@@ -71,15 +153,23 @@
 .end method
 
 .method public final toString()Ljava/lang/String;
-    .locals 4
+    .locals 2
 
-    const-string v0, "Error(requestId="
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    const-string v1, ")"
+    const-string v1, "Earpiece(device="
 
-    iget-wide v2, p0, Lg51;->a:J
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-static {v2, v3, v0, v1}, Lu88;->i(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    iget-object p0, p0, Lg51;->a:Lru/ok/android/externcalls/sdk/audio/CallsAudioDeviceInfo;
+
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string p0, ")"
+
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p0
 

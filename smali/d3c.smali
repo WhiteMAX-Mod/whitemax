@@ -1,822 +1,1550 @@
-.class public final Ld3c;
-.super Lei0;
-.source "SourceFile"
+.class public abstract Ld3c;
+.super Ljava/lang/Object;
 
 
-# instance fields
-.field public final X:Landroid/content/res/Resources;
+# static fields
+.field public static abc_background_cache_hint_selector_material_dark:I = 0x7f060000
 
-.field public final Y:Ljava/lang/String;
+.field public static abc_background_cache_hint_selector_material_light:I = 0x7f060001
 
-.field public Z:Landroid/net/Uri;
+.field public static abc_btn_colored_borderless_text_material:I = 0x7f060002
 
-.field public o0:Landroid/content/res/AssetFileDescriptor;
+.field public static abc_btn_colored_text_material:I = 0x7f060003
 
-.field public p0:Ljava/io/FileInputStream;
+.field public static abc_color_highlight_material:I = 0x7f060004
 
-.field public q0:J
+.field public static abc_decor_view_status_guard:I = 0x7f060005
 
-.field public r0:Z
+.field public static abc_decor_view_status_guard_light:I = 0x7f060006
 
+.field public static abc_hint_foreground_material_dark:I = 0x7f060007
 
-# direct methods
-.method public constructor <init>(Landroid/content/Context;)V
-    .locals 1
+.field public static abc_hint_foreground_material_light:I = 0x7f060008
 
-    const/4 v0, 0x0
+.field public static abc_primary_text_disable_only_material_dark:I = 0x7f060009
 
-    invoke-direct {p0, v0}, Lei0;-><init>(Z)V
+.field public static abc_primary_text_disable_only_material_light:I = 0x7f06000a
 
-    invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+.field public static abc_primary_text_material_dark:I = 0x7f06000b
 
-    move-result-object v0
+.field public static abc_primary_text_material_light:I = 0x7f06000c
 
-    iput-object v0, p0, Ld3c;->X:Landroid/content/res/Resources;
+.field public static abc_search_url_text:I = 0x7f06000d
 
-    invoke-virtual {p1}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
+.field public static abc_search_url_text_normal:I = 0x7f06000e
 
-    move-result-object p1
+.field public static abc_search_url_text_pressed:I = 0x7f06000f
 
-    iput-object p1, p0, Ld3c;->Y:Ljava/lang/String;
+.field public static abc_search_url_text_selected:I = 0x7f060010
 
-    return-void
-.end method
+.field public static abc_secondary_text_material_dark:I = 0x7f060011
 
-.method public static buildRawResourceUri(I)Landroid/net/Uri;
-    .locals 2
+.field public static abc_secondary_text_material_light:I = 0x7f060012
 
-    new-instance v0, Ljava/lang/StringBuilder;
+.field public static abc_tint_btn_checkable:I = 0x7f060013
 
-    const/16 v1, 0x1a
+.field public static abc_tint_default:I = 0x7f060014
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(I)V
+.field public static abc_tint_edittext:I = 0x7f060015
 
-    const-string v1, "rawresource:///"
+.field public static abc_tint_seek_thumb:I = 0x7f060016
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+.field public static abc_tint_spinner:I = 0x7f060017
 
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+.field public static abc_tint_switch_track:I = 0x7f060018
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+.field public static accent_material_dark:I = 0x7f06001b
 
-    move-result-object p0
+.field public static accent_material_light:I = 0x7f06001c
 
-    invoke-static {p0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
+.field public static androidx_core_ripple_material_light:I = 0x7f06001d
 
-    move-result-object p0
+.field public static androidx_core_secondary_text_default_material_light:I = 0x7f06001e
 
-    return-object p0
-.end method
+.field public static background_floating_material_dark:I = 0x7f06002c
 
+.field public static background_floating_material_light:I = 0x7f06002d
 
-# virtual methods
-.method public final O(Lo34;)J
-    .locals 20
+.field public static background_material_dark:I = 0x7f06002e
 
-    move-object/from16 v0, p0
+.field public static background_material_light:I = 0x7f06002f
 
-    move-object/from16 v1, p1
+.field public static bright_foreground_disabled_material_dark:I = 0x7f060040
 
-    iget-object v2, v1, Lo34;->a:Landroid/net/Uri;
+.field public static bright_foreground_disabled_material_light:I = 0x7f060041
 
-    iget-wide v3, v1, Lo34;->g:J
+.field public static bright_foreground_inverse_material_dark:I = 0x7f060042
 
-    iget-wide v5, v1, Lo34;->f:J
+.field public static bright_foreground_inverse_material_light:I = 0x7f060043
 
-    iput-object v2, v0, Ld3c;->Z:Landroid/net/Uri;
+.field public static bright_foreground_material_dark:I = 0x7f060044
 
-    const-string v7, "rawresource"
+.field public static bright_foreground_material_light:I = 0x7f060045
 
-    invoke-virtual {v2}, Landroid/net/Uri;->getScheme()Ljava/lang/String;
+.field public static button_material_dark:I = 0x7f06004a
 
-    move-result-object v8
+.field public static button_material_light:I = 0x7f06004b
 
-    invoke-static {v7, v8}, Landroid/text/TextUtils;->equals(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
+.field public static call_notification_answer_color:I = 0x7f06004c
 
-    move-result v7
+.field public static call_notification_decline_color:I = 0x7f06004d
 
-    const/16 v8, 0x3ec
+.field public static cardview_dark_background:I = 0x7f06005b
 
-    const/16 v9, 0x7d5
+.field public static cardview_light_background:I = 0x7f06005c
 
-    iget-object v10, v0, Ld3c;->X:Landroid/content/res/Resources;
+.field public static cardview_shadow_end_color:I = 0x7f06005d
 
-    const/4 v11, 0x1
+.field public static cardview_shadow_start_color:I = 0x7f06005e
 
-    const/4 v12, 0x0
+.field public static design_bottom_navigation_shadow_color:I = 0x7f060075
 
-    if-nez v7, :cond_6
+.field public static design_box_stroke_color:I = 0x7f060076
 
-    invoke-virtual {v2}, Landroid/net/Uri;->getScheme()Ljava/lang/String;
+.field public static design_dark_default_color_background:I = 0x7f060077
 
-    move-result-object v7
+.field public static design_dark_default_color_error:I = 0x7f060078
 
-    const-string v13, "android.resource"
+.field public static design_dark_default_color_on_background:I = 0x7f060079
 
-    invoke-static {v13, v7}, Landroid/text/TextUtils;->equals(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
+.field public static design_dark_default_color_on_error:I = 0x7f06007a
 
-    move-result v7
+.field public static design_dark_default_color_on_primary:I = 0x7f06007b
 
-    if-eqz v7, :cond_0
+.field public static design_dark_default_color_on_secondary:I = 0x7f06007c
 
-    invoke-virtual {v2}, Landroid/net/Uri;->getPathSegments()Ljava/util/List;
+.field public static design_dark_default_color_on_surface:I = 0x7f06007d
 
-    move-result-object v7
+.field public static design_dark_default_color_primary:I = 0x7f06007e
 
-    invoke-interface {v7}, Ljava/util/List;->size()I
+.field public static design_dark_default_color_primary_dark:I = 0x7f06007f
 
-    move-result v7
+.field public static design_dark_default_color_primary_variant:I = 0x7f060080
 
-    if-ne v7, v11, :cond_0
+.field public static design_dark_default_color_secondary:I = 0x7f060081
 
-    invoke-virtual {v2}, Landroid/net/Uri;->getLastPathSegment()Ljava/lang/String;
+.field public static design_dark_default_color_secondary_variant:I = 0x7f060082
 
-    move-result-object v7
+.field public static design_dark_default_color_surface:I = 0x7f060083
 
-    invoke-virtual {v7}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+.field public static design_default_color_background:I = 0x7f060084
 
-    const-string v14, "\\d+"
+.field public static design_default_color_error:I = 0x7f060085
 
-    invoke-virtual {v7, v14}, Ljava/lang/String;->matches(Ljava/lang/String;)Z
+.field public static design_default_color_on_background:I = 0x7f060086
 
-    move-result v7
+.field public static design_default_color_on_error:I = 0x7f060087
 
-    if-eqz v7, :cond_0
+.field public static design_default_color_on_primary:I = 0x7f060088
 
-    goto :goto_2
+.field public static design_default_color_on_secondary:I = 0x7f060089
 
-    :cond_0
-    invoke-virtual {v2}, Landroid/net/Uri;->getScheme()Ljava/lang/String;
+.field public static design_default_color_on_surface:I = 0x7f06008a
 
-    move-result-object v7
+.field public static design_default_color_primary:I = 0x7f06008b
 
-    invoke-static {v13, v7}, Landroid/text/TextUtils;->equals(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
+.field public static design_default_color_primary_dark:I = 0x7f06008c
 
-    move-result v7
+.field public static design_default_color_primary_variant:I = 0x7f06008d
 
-    if-eqz v7, :cond_5
+.field public static design_default_color_secondary:I = 0x7f06008e
 
-    invoke-virtual {v2}, Landroid/net/Uri;->getPath()Ljava/lang/String;
+.field public static design_default_color_secondary_variant:I = 0x7f06008f
 
-    move-result-object v7
+.field public static design_default_color_surface:I = 0x7f060090
 
-    invoke-virtual {v7}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+.field public static design_error:I = 0x7f060091
 
-    const-string v8, "/"
+.field public static design_fab_shadow_end_color:I = 0x7f060092
 
-    invoke-virtual {v7, v8}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+.field public static design_fab_shadow_mid_color:I = 0x7f060093
 
-    move-result v8
+.field public static design_fab_shadow_start_color:I = 0x7f060094
 
-    if-eqz v8, :cond_1
+.field public static design_fab_stroke_end_inner_color:I = 0x7f060095
 
-    invoke-virtual {v7, v11}, Ljava/lang/String;->substring(I)Ljava/lang/String;
+.field public static design_fab_stroke_end_outer_color:I = 0x7f060096
 
-    move-result-object v7
+.field public static design_fab_stroke_top_inner_color:I = 0x7f060097
 
-    :cond_1
-    invoke-virtual {v2}, Landroid/net/Uri;->getHost()Ljava/lang/String;
+.field public static design_fab_stroke_top_outer_color:I = 0x7f060098
 
-    move-result-object v8
+.field public static design_icon_tint:I = 0x7f060099
 
-    invoke-static {v8}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+.field public static design_snackbar_background_color:I = 0x7f06009a
 
-    move-result v13
+.field public static dim_foreground_disabled_material_dark:I = 0x7f06009b
 
-    if-eqz v13, :cond_2
+.field public static dim_foreground_disabled_material_light:I = 0x7f06009c
 
-    const-string v8, ""
+.field public static dim_foreground_material_dark:I = 0x7f06009d
 
-    goto :goto_0
+.field public static dim_foreground_material_light:I = 0x7f06009e
 
-    :cond_2
-    invoke-static {v8}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+.field public static error_color_material_dark:I = 0x7f0600a5
 
-    move-result-object v8
+.field public static error_color_material_light:I = 0x7f0600a6
 
-    const-string v13, ":"
+.field public static foreground_material_dark:I = 0x7f0600af
 
-    invoke-virtual {v8, v13}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+.field public static foreground_material_light:I = 0x7f0600b0
 
-    move-result-object v8
+.field public static highlighted_text_material_dark:I = 0x7f0600ba
 
-    :goto_0
-    invoke-static {v8}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+.field public static highlighted_text_material_light:I = 0x7f0600bb
 
-    move-result-object v8
+.field public static m3_appbar_overlay_color:I = 0x7f0600c7
 
-    invoke-static {v7}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+.field public static m3_assist_chip_icon_tint_color:I = 0x7f0600c8
 
-    move-result-object v7
+.field public static m3_assist_chip_stroke_color:I = 0x7f0600c9
 
-    invoke-virtual {v7}, Ljava/lang/String;->length()I
+.field public static m3_bottom_sheet_drag_handle_color:I = 0x7f0600ca
 
-    move-result v13
+.field public static m3_button_background_color_selector:I = 0x7f0600cb
 
-    if-eqz v13, :cond_3
+.field public static m3_button_foreground_color_selector:I = 0x7f0600cc
 
-    invoke-virtual {v8, v7}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+.field public static m3_button_outline_color_selector:I = 0x7f0600cd
 
-    move-result-object v7
+.field public static m3_button_ripple_color:I = 0x7f0600ce
 
-    goto :goto_1
+.field public static m3_button_ripple_color_selector:I = 0x7f0600cf
 
-    :cond_3
-    new-instance v7, Ljava/lang/String;
+.field public static m3_calendar_item_disabled_text:I = 0x7f0600d0
 
-    invoke-direct {v7, v8}, Ljava/lang/String;-><init>(Ljava/lang/String;)V
+.field public static m3_calendar_item_stroke_color:I = 0x7f0600d1
 
-    :goto_1
-    const-string v8, "raw"
+.field public static m3_card_foreground_color:I = 0x7f0600d2
 
-    iget-object v13, v0, Ld3c;->Y:Ljava/lang/String;
+.field public static m3_card_ripple_color:I = 0x7f0600d3
 
-    invoke-virtual {v10, v7, v8, v13}, Landroid/content/res/Resources;->getIdentifier(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)I
+.field public static m3_card_stroke_color:I = 0x7f0600d4
 
-    move-result v7
+.field public static m3_checkbox_button_icon_tint:I = 0x7f0600d5
 
-    if-eqz v7, :cond_4
+.field public static m3_checkbox_button_tint:I = 0x7f0600d6
 
-    goto :goto_3
+.field public static m3_chip_assist_text_color:I = 0x7f0600d7
 
-    :cond_4
-    new-instance v0, Lcom/google/android/exoplayer2/upstream/RawResourceDataSource$RawResourceDataSourceException;
+.field public static m3_chip_background_color:I = 0x7f0600d8
 
-    const-string v1, "Resource not found."
+.field public static m3_chip_ripple_color:I = 0x7f0600d9
 
-    invoke-direct {v0, v1, v12, v9}, Lcom/google/android/exoplayer2/upstream/DataSourceException;-><init>(Ljava/lang/String;Ljava/lang/Exception;I)V
+.field public static m3_chip_stroke_color:I = 0x7f0600da
 
-    throw v0
+.field public static m3_chip_text_color:I = 0x7f0600db
 
-    :cond_5
-    new-instance v0, Lcom/google/android/exoplayer2/upstream/RawResourceDataSource$RawResourceDataSourceException;
+.field public static m3_dark_default_color_primary_text:I = 0x7f0600dc
 
-    const-string v1, "URI must either use scheme rawresource or android.resource"
+.field public static m3_dark_default_color_secondary_text:I = 0x7f0600dd
 
-    invoke-direct {v0, v1, v12, v8}, Lcom/google/android/exoplayer2/upstream/DataSourceException;-><init>(Ljava/lang/String;Ljava/lang/Exception;I)V
+.field public static m3_dark_highlighted_text:I = 0x7f0600de
 
-    throw v0
+.field public static m3_dark_hint_foreground:I = 0x7f0600df
 
-    :cond_6
-    :goto_2
-    :try_start_0
-    invoke-virtual {v2}, Landroid/net/Uri;->getLastPathSegment()Ljava/lang/String;
+.field public static m3_dark_primary_text_disable_only:I = 0x7f0600e0
 
-    move-result-object v7
+.field public static m3_default_color_primary_text:I = 0x7f0600e1
 
-    invoke-virtual {v7}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+.field public static m3_default_color_secondary_text:I = 0x7f0600e2
 
-    invoke-static {v7}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
+.field public static m3_dynamic_dark_default_color_primary_text:I = 0x7f0600e3
 
-    move-result v7
-    :try_end_0
-    .catch Ljava/lang/NumberFormatException; {:try_start_0 .. :try_end_0} :catch_3
+.field public static m3_dynamic_dark_default_color_secondary_text:I = 0x7f0600e4
 
-    :goto_3
-    invoke-virtual {v0}, Lei0;->c()V
+.field public static m3_dynamic_dark_highlighted_text:I = 0x7f0600e5
 
-    :try_start_1
-    invoke-virtual {v10, v7}, Landroid/content/res/Resources;->openRawResourceFd(I)Landroid/content/res/AssetFileDescriptor;
+.field public static m3_dynamic_dark_hint_foreground:I = 0x7f0600e6
 
-    move-result-object v7
-    :try_end_1
-    .catch Landroid/content/res/Resources$NotFoundException; {:try_start_1 .. :try_end_1} :catch_2
+.field public static m3_dynamic_dark_primary_text_disable_only:I = 0x7f0600e7
 
-    iput-object v7, v0, Ld3c;->o0:Landroid/content/res/AssetFileDescriptor;
+.field public static m3_dynamic_default_color_primary_text:I = 0x7f0600e8
 
-    if-eqz v7, :cond_11
+.field public static m3_dynamic_default_color_secondary_text:I = 0x7f0600e9
 
-    invoke-virtual {v7}, Landroid/content/res/AssetFileDescriptor;->getLength()J
+.field public static m3_dynamic_highlighted_text:I = 0x7f0600ea
 
-    move-result-wide v9
+.field public static m3_dynamic_hint_foreground:I = 0x7f0600eb
 
-    new-instance v2, Ljava/io/FileInputStream;
+.field public static m3_dynamic_primary_text_disable_only:I = 0x7f0600ec
 
-    invoke-virtual {v7}, Landroid/content/res/AssetFileDescriptor;->getFileDescriptor()Ljava/io/FileDescriptor;
+.field public static m3_efab_ripple_color_selector:I = 0x7f0600ed
 
-    move-result-object v13
+.field public static m3_elevated_chip_background_color:I = 0x7f0600ee
 
-    invoke-direct {v2, v13}, Ljava/io/FileInputStream;-><init>(Ljava/io/FileDescriptor;)V
+.field public static m3_fab_efab_background_color_selector:I = 0x7f0600ef
 
-    iput-object v2, v0, Ld3c;->p0:Ljava/io/FileInputStream;
+.field public static m3_fab_efab_foreground_color_selector:I = 0x7f0600f0
 
-    const-wide/16 v13, -0x1
+.field public static m3_fab_ripple_color_selector:I = 0x7f0600f1
 
-    cmp-long v15, v9, v13
+.field public static m3_filled_icon_button_container_color_selector:I = 0x7f0600f2
 
-    const/16 v8, 0x7d8
+.field public static m3_highlighted_text:I = 0x7f0600f3
 
-    if-eqz v15, :cond_8
+.field public static m3_hint_foreground:I = 0x7f0600f4
 
-    cmp-long v16, v5, v9
+.field public static m3_icon_button_icon_color_selector:I = 0x7f0600f5
 
-    if-gtz v16, :cond_7
+.field public static m3_navigation_bar_item_with_indicator_icon_tint:I = 0x7f0600f6
 
-    goto :goto_4
+.field public static m3_navigation_bar_item_with_indicator_label_tint:I = 0x7f0600f7
 
-    :cond_7
-    :try_start_2
-    new-instance v0, Lcom/google/android/exoplayer2/upstream/RawResourceDataSource$RawResourceDataSourceException;
+.field public static m3_navigation_bar_ripple_color_selector:I = 0x7f0600f8
 
-    invoke-direct {v0, v12, v12, v8}, Lcom/google/android/exoplayer2/upstream/DataSourceException;-><init>(Ljava/lang/String;Ljava/lang/Exception;I)V
+.field public static m3_navigation_item_background_color:I = 0x7f0600f9
 
-    throw v0
+.field public static m3_navigation_item_icon_tint:I = 0x7f0600fa
 
-    :catch_0
-    move-exception v0
+.field public static m3_navigation_item_ripple_color:I = 0x7f0600fb
 
-    goto/16 :goto_7
+.field public static m3_navigation_item_text_color:I = 0x7f0600fc
 
-    :cond_8
-    :goto_4
-    invoke-virtual {v7}, Landroid/content/res/AssetFileDescriptor;->getStartOffset()J
+.field public static m3_navigation_rail_item_with_indicator_icon_tint:I = 0x7f0600fd
 
-    move-result-wide v16
+.field public static m3_navigation_rail_item_with_indicator_label_tint:I = 0x7f0600fe
 
-    move-wide/from16 v18, v9
+.field public static m3_navigation_rail_ripple_color_selector:I = 0x7f0600ff
 
-    add-long v8, v16, v5
+.field public static m3_popupmenu_overlay_color:I = 0x7f060100
 
-    invoke-virtual {v2, v8, v9}, Ljava/io/FileInputStream;->skip(J)J
+.field public static m3_primary_text_disable_only:I = 0x7f060101
 
-    move-result-wide v8
+.field public static m3_radiobutton_button_tint:I = 0x7f060102
 
-    sub-long v8, v8, v16
+.field public static m3_radiobutton_ripple_tint:I = 0x7f060103
 
-    cmp-long v5, v8, v5
+.field public static m3_ref_palette_black:I = 0x7f060104
 
-    if-nez v5, :cond_10
+.field public static m3_ref_palette_dynamic_neutral0:I = 0x7f060105
 
-    const-wide/16 v5, 0x0
+.field public static m3_ref_palette_dynamic_neutral10:I = 0x7f060106
 
-    if-nez v15, :cond_b
+.field public static m3_ref_palette_dynamic_neutral100:I = 0x7f060107
 
-    invoke-virtual {v2}, Ljava/io/FileInputStream;->getChannel()Ljava/nio/channels/FileChannel;
+.field public static m3_ref_palette_dynamic_neutral12:I = 0x7f060108
 
-    move-result-object v2
+.field public static m3_ref_palette_dynamic_neutral17:I = 0x7f060109
 
-    invoke-virtual {v2}, Ljava/nio/channels/FileChannel;->size()J
+.field public static m3_ref_palette_dynamic_neutral20:I = 0x7f06010a
 
-    move-result-wide v8
+.field public static m3_ref_palette_dynamic_neutral22:I = 0x7f06010b
 
-    cmp-long v8, v8, v5
+.field public static m3_ref_palette_dynamic_neutral24:I = 0x7f06010c
 
-    if-nez v8, :cond_9
+.field public static m3_ref_palette_dynamic_neutral30:I = 0x7f06010d
 
-    iput-wide v13, v0, Ld3c;->q0:J
+.field public static m3_ref_palette_dynamic_neutral4:I = 0x7f06010e
 
-    goto :goto_5
+.field public static m3_ref_palette_dynamic_neutral40:I = 0x7f06010f
 
-    :cond_9
-    invoke-virtual {v2}, Ljava/nio/channels/FileChannel;->size()J
+.field public static m3_ref_palette_dynamic_neutral50:I = 0x7f060110
 
-    move-result-wide v8
+.field public static m3_ref_palette_dynamic_neutral6:I = 0x7f060111
 
-    invoke-virtual {v2}, Ljava/nio/channels/FileChannel;->position()J
+.field public static m3_ref_palette_dynamic_neutral60:I = 0x7f060112
 
-    move-result-wide v16
+.field public static m3_ref_palette_dynamic_neutral70:I = 0x7f060113
 
-    sub-long v8, v8, v16
+.field public static m3_ref_palette_dynamic_neutral80:I = 0x7f060114
 
-    iput-wide v8, v0, Ld3c;->q0:J
+.field public static m3_ref_palette_dynamic_neutral87:I = 0x7f060115
 
-    cmp-long v2, v8, v5
+.field public static m3_ref_palette_dynamic_neutral90:I = 0x7f060116
 
-    if-ltz v2, :cond_a
+.field public static m3_ref_palette_dynamic_neutral92:I = 0x7f060117
 
-    goto :goto_5
+.field public static m3_ref_palette_dynamic_neutral94:I = 0x7f060118
 
-    :cond_a
-    new-instance v0, Lcom/google/android/exoplayer2/upstream/RawResourceDataSource$RawResourceDataSourceException;
+.field public static m3_ref_palette_dynamic_neutral95:I = 0x7f060119
 
-    const/16 v7, 0x7d8
+.field public static m3_ref_palette_dynamic_neutral96:I = 0x7f06011a
 
-    invoke-direct {v0, v12, v12, v7}, Lcom/google/android/exoplayer2/upstream/DataSourceException;-><init>(Ljava/lang/String;Ljava/lang/Exception;I)V
+.field public static m3_ref_palette_dynamic_neutral98:I = 0x7f06011b
 
-    throw v0
+.field public static m3_ref_palette_dynamic_neutral99:I = 0x7f06011c
 
-    :cond_b
-    sub-long v9, v18, v8
+.field public static m3_ref_palette_dynamic_neutral_variant0:I = 0x7f06011d
 
-    iput-wide v9, v0, Ld3c;->q0:J
-    :try_end_2
-    .catch Lcom/google/android/exoplayer2/upstream/RawResourceDataSource$RawResourceDataSourceException; {:try_start_2 .. :try_end_2} :catch_1
-    .catch Ljava/io/IOException; {:try_start_2 .. :try_end_2} :catch_0
+.field public static m3_ref_palette_dynamic_neutral_variant10:I = 0x7f06011e
 
-    cmp-long v2, v9, v5
+.field public static m3_ref_palette_dynamic_neutral_variant100:I = 0x7f06011f
 
-    if-ltz v2, :cond_f
+.field public static m3_ref_palette_dynamic_neutral_variant12:I = 0x7f060120
 
-    :goto_5
-    cmp-long v2, v3, v13
+.field public static m3_ref_palette_dynamic_neutral_variant17:I = 0x7f060121
 
-    if-eqz v2, :cond_d
+.field public static m3_ref_palette_dynamic_neutral_variant20:I = 0x7f060122
 
-    iget-wide v5, v0, Ld3c;->q0:J
+.field public static m3_ref_palette_dynamic_neutral_variant22:I = 0x7f060123
 
-    cmp-long v7, v5, v13
+.field public static m3_ref_palette_dynamic_neutral_variant24:I = 0x7f060124
 
-    if-nez v7, :cond_c
+.field public static m3_ref_palette_dynamic_neutral_variant30:I = 0x7f060125
 
-    move-wide v5, v3
+.field public static m3_ref_palette_dynamic_neutral_variant4:I = 0x7f060126
 
-    goto :goto_6
+.field public static m3_ref_palette_dynamic_neutral_variant40:I = 0x7f060127
 
-    :cond_c
-    invoke-static {v5, v6, v3, v4}, Ljava/lang/Math;->min(JJ)J
+.field public static m3_ref_palette_dynamic_neutral_variant50:I = 0x7f060128
 
-    move-result-wide v5
+.field public static m3_ref_palette_dynamic_neutral_variant6:I = 0x7f060129
 
-    :goto_6
-    iput-wide v5, v0, Ld3c;->q0:J
+.field public static m3_ref_palette_dynamic_neutral_variant60:I = 0x7f06012a
 
-    :cond_d
-    iput-boolean v11, v0, Ld3c;->r0:Z
+.field public static m3_ref_palette_dynamic_neutral_variant70:I = 0x7f06012b
 
-    invoke-virtual/range {p0 .. p1}, Lei0;->d(Lo34;)V
+.field public static m3_ref_palette_dynamic_neutral_variant80:I = 0x7f06012c
 
-    if-eqz v2, :cond_e
+.field public static m3_ref_palette_dynamic_neutral_variant87:I = 0x7f06012d
 
-    return-wide v3
+.field public static m3_ref_palette_dynamic_neutral_variant90:I = 0x7f06012e
 
-    :cond_e
-    iget-wide v0, v0, Ld3c;->q0:J
+.field public static m3_ref_palette_dynamic_neutral_variant92:I = 0x7f06012f
 
-    return-wide v0
+.field public static m3_ref_palette_dynamic_neutral_variant94:I = 0x7f060130
 
-    :cond_f
-    :try_start_3
-    new-instance v0, Lcom/google/android/exoplayer2/upstream/DataSourceException;
+.field public static m3_ref_palette_dynamic_neutral_variant95:I = 0x7f060131
 
-    const/16 v7, 0x7d8
+.field public static m3_ref_palette_dynamic_neutral_variant96:I = 0x7f060132
 
-    invoke-direct {v0, v7}, Lcom/google/android/exoplayer2/upstream/DataSourceException;-><init>(I)V
+.field public static m3_ref_palette_dynamic_neutral_variant98:I = 0x7f060133
 
-    throw v0
+.field public static m3_ref_palette_dynamic_neutral_variant99:I = 0x7f060134
 
-    :cond_10
-    new-instance v0, Lcom/google/android/exoplayer2/upstream/RawResourceDataSource$RawResourceDataSourceException;
+.field public static m3_ref_palette_dynamic_primary0:I = 0x7f060135
 
-    const/16 v7, 0x7d8
+.field public static m3_ref_palette_dynamic_primary10:I = 0x7f060136
 
-    invoke-direct {v0, v12, v12, v7}, Lcom/google/android/exoplayer2/upstream/DataSourceException;-><init>(Ljava/lang/String;Ljava/lang/Exception;I)V
+.field public static m3_ref_palette_dynamic_primary100:I = 0x7f060137
 
-    throw v0
-    :try_end_3
-    .catch Lcom/google/android/exoplayer2/upstream/RawResourceDataSource$RawResourceDataSourceException; {:try_start_3 .. :try_end_3} :catch_1
-    .catch Ljava/io/IOException; {:try_start_3 .. :try_end_3} :catch_0
+.field public static m3_ref_palette_dynamic_primary20:I = 0x7f060138
 
-    :goto_7
-    new-instance v1, Lcom/google/android/exoplayer2/upstream/RawResourceDataSource$RawResourceDataSourceException;
+.field public static m3_ref_palette_dynamic_primary30:I = 0x7f060139
 
-    const/16 v2, 0x7d0
+.field public static m3_ref_palette_dynamic_primary40:I = 0x7f06013a
 
-    invoke-direct {v1, v12, v0, v2}, Lcom/google/android/exoplayer2/upstream/DataSourceException;-><init>(Ljava/lang/String;Ljava/lang/Exception;I)V
+.field public static m3_ref_palette_dynamic_primary50:I = 0x7f06013b
 
-    throw v1
+.field public static m3_ref_palette_dynamic_primary60:I = 0x7f06013c
 
-    :catch_1
-    move-exception v0
+.field public static m3_ref_palette_dynamic_primary70:I = 0x7f06013d
 
-    throw v0
+.field public static m3_ref_palette_dynamic_primary80:I = 0x7f06013e
 
-    :cond_11
-    new-instance v0, Lcom/google/android/exoplayer2/upstream/RawResourceDataSource$RawResourceDataSourceException;
+.field public static m3_ref_palette_dynamic_primary90:I = 0x7f06013f
 
-    invoke-static {v2}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+.field public static m3_ref_palette_dynamic_primary95:I = 0x7f060140
 
-    move-result-object v1
+.field public static m3_ref_palette_dynamic_primary99:I = 0x7f060141
 
-    invoke-virtual {v1}, Ljava/lang/String;->length()I
+.field public static m3_ref_palette_dynamic_secondary0:I = 0x7f060142
 
-    move-result v2
+.field public static m3_ref_palette_dynamic_secondary10:I = 0x7f060143
 
-    add-int/lit8 v2, v2, 0x18
+.field public static m3_ref_palette_dynamic_secondary100:I = 0x7f060144
 
-    new-instance v3, Ljava/lang/StringBuilder;
+.field public static m3_ref_palette_dynamic_secondary20:I = 0x7f060145
 
-    invoke-direct {v3, v2}, Ljava/lang/StringBuilder;-><init>(I)V
+.field public static m3_ref_palette_dynamic_secondary30:I = 0x7f060146
 
-    const-string v2, "Resource is compressed: "
+.field public static m3_ref_palette_dynamic_secondary40:I = 0x7f060147
 
-    invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+.field public static m3_ref_palette_dynamic_secondary50:I = 0x7f060148
 
-    invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+.field public static m3_ref_palette_dynamic_secondary60:I = 0x7f060149
 
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+.field public static m3_ref_palette_dynamic_secondary70:I = 0x7f06014a
 
-    move-result-object v1
+.field public static m3_ref_palette_dynamic_secondary80:I = 0x7f06014b
 
-    const/16 v2, 0x7d0
+.field public static m3_ref_palette_dynamic_secondary90:I = 0x7f06014c
 
-    invoke-direct {v0, v1, v12, v2}, Lcom/google/android/exoplayer2/upstream/DataSourceException;-><init>(Ljava/lang/String;Ljava/lang/Exception;I)V
+.field public static m3_ref_palette_dynamic_secondary95:I = 0x7f06014d
 
-    throw v0
+.field public static m3_ref_palette_dynamic_secondary99:I = 0x7f06014e
 
-    :catch_2
-    move-exception v0
+.field public static m3_ref_palette_dynamic_tertiary0:I = 0x7f06014f
 
-    new-instance v1, Lcom/google/android/exoplayer2/upstream/RawResourceDataSource$RawResourceDataSourceException;
+.field public static m3_ref_palette_dynamic_tertiary10:I = 0x7f060150
 
-    invoke-direct {v1, v12, v0, v9}, Lcom/google/android/exoplayer2/upstream/DataSourceException;-><init>(Ljava/lang/String;Ljava/lang/Exception;I)V
+.field public static m3_ref_palette_dynamic_tertiary100:I = 0x7f060151
 
-    throw v1
+.field public static m3_ref_palette_dynamic_tertiary20:I = 0x7f060152
 
-    :catch_3
-    new-instance v0, Lcom/google/android/exoplayer2/upstream/RawResourceDataSource$RawResourceDataSourceException;
+.field public static m3_ref_palette_dynamic_tertiary30:I = 0x7f060153
 
-    const-string v1, "Resource identifier must be an integer."
+.field public static m3_ref_palette_dynamic_tertiary40:I = 0x7f060154
 
-    invoke-direct {v0, v1, v12, v8}, Lcom/google/android/exoplayer2/upstream/DataSourceException;-><init>(Ljava/lang/String;Ljava/lang/Exception;I)V
+.field public static m3_ref_palette_dynamic_tertiary50:I = 0x7f060155
 
-    throw v0
-.end method
+.field public static m3_ref_palette_dynamic_tertiary60:I = 0x7f060156
 
-.method public final close()V
-    .locals 5
+.field public static m3_ref_palette_dynamic_tertiary70:I = 0x7f060157
 
-    const/4 v0, 0x0
+.field public static m3_ref_palette_dynamic_tertiary80:I = 0x7f060158
 
-    iput-object v0, p0, Ld3c;->Z:Landroid/net/Uri;
+.field public static m3_ref_palette_dynamic_tertiary90:I = 0x7f060159
 
-    const/16 v1, 0x7d0
+.field public static m3_ref_palette_dynamic_tertiary95:I = 0x7f06015a
 
-    const/4 v2, 0x0
+.field public static m3_ref_palette_dynamic_tertiary99:I = 0x7f06015b
 
-    :try_start_0
-    iget-object v3, p0, Ld3c;->p0:Ljava/io/FileInputStream;
+.field public static m3_ref_palette_error0:I = 0x7f06015c
 
-    if-eqz v3, :cond_0
+.field public static m3_ref_palette_error10:I = 0x7f06015d
 
-    invoke-virtual {v3}, Ljava/io/InputStream;->close()V
-    :try_end_0
-    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+.field public static m3_ref_palette_error100:I = 0x7f06015e
 
-    goto :goto_0
+.field public static m3_ref_palette_error20:I = 0x7f06015f
 
-    :catchall_0
-    move-exception v3
+.field public static m3_ref_palette_error30:I = 0x7f060160
 
-    goto :goto_5
+.field public static m3_ref_palette_error40:I = 0x7f060161
 
-    :catch_0
-    move-exception v3
+.field public static m3_ref_palette_error50:I = 0x7f060162
 
-    goto :goto_4
+.field public static m3_ref_palette_error60:I = 0x7f060163
 
-    :cond_0
-    :goto_0
-    iput-object v0, p0, Ld3c;->p0:Ljava/io/FileInputStream;
+.field public static m3_ref_palette_error70:I = 0x7f060164
 
-    :try_start_1
-    iget-object v3, p0, Ld3c;->o0:Landroid/content/res/AssetFileDescriptor;
+.field public static m3_ref_palette_error80:I = 0x7f060165
 
-    if-eqz v3, :cond_1
+.field public static m3_ref_palette_error90:I = 0x7f060166
 
-    invoke-virtual {v3}, Landroid/content/res/AssetFileDescriptor;->close()V
-    :try_end_1
-    .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_1
+.field public static m3_ref_palette_error95:I = 0x7f060167
 
-    goto :goto_1
+.field public static m3_ref_palette_error99:I = 0x7f060168
 
-    :catchall_1
-    move-exception v1
+.field public static m3_ref_palette_neutral0:I = 0x7f060169
 
-    goto :goto_3
+.field public static m3_ref_palette_neutral10:I = 0x7f06016a
 
-    :catch_1
-    move-exception v3
+.field public static m3_ref_palette_neutral100:I = 0x7f06016b
 
-    goto :goto_2
+.field public static m3_ref_palette_neutral12:I = 0x7f06016c
 
-    :cond_1
-    :goto_1
-    iput-object v0, p0, Ld3c;->o0:Landroid/content/res/AssetFileDescriptor;
+.field public static m3_ref_palette_neutral17:I = 0x7f06016d
 
-    iget-boolean v0, p0, Ld3c;->r0:Z
+.field public static m3_ref_palette_neutral20:I = 0x7f06016e
 
-    if-eqz v0, :cond_2
+.field public static m3_ref_palette_neutral22:I = 0x7f06016f
 
-    iput-boolean v2, p0, Ld3c;->r0:Z
+.field public static m3_ref_palette_neutral24:I = 0x7f060170
 
-    invoke-virtual {p0}, Lei0;->b()V
+.field public static m3_ref_palette_neutral30:I = 0x7f060171
 
-    :cond_2
-    return-void
+.field public static m3_ref_palette_neutral4:I = 0x7f060172
 
-    :goto_2
-    :try_start_2
-    new-instance v4, Lcom/google/android/exoplayer2/upstream/RawResourceDataSource$RawResourceDataSourceException;
+.field public static m3_ref_palette_neutral40:I = 0x7f060173
 
-    invoke-direct {v4, v0, v3, v1}, Lcom/google/android/exoplayer2/upstream/DataSourceException;-><init>(Ljava/lang/String;Ljava/lang/Exception;I)V
+.field public static m3_ref_palette_neutral50:I = 0x7f060174
 
-    throw v4
-    :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_1
+.field public static m3_ref_palette_neutral6:I = 0x7f060175
 
-    :goto_3
-    iput-object v0, p0, Ld3c;->o0:Landroid/content/res/AssetFileDescriptor;
+.field public static m3_ref_palette_neutral60:I = 0x7f060176
 
-    iget-boolean v0, p0, Ld3c;->r0:Z
+.field public static m3_ref_palette_neutral70:I = 0x7f060177
 
-    if-eqz v0, :cond_3
+.field public static m3_ref_palette_neutral80:I = 0x7f060178
 
-    iput-boolean v2, p0, Ld3c;->r0:Z
+.field public static m3_ref_palette_neutral87:I = 0x7f060179
 
-    invoke-virtual {p0}, Lei0;->b()V
+.field public static m3_ref_palette_neutral90:I = 0x7f06017a
 
-    :cond_3
-    throw v1
+.field public static m3_ref_palette_neutral92:I = 0x7f06017b
 
-    :goto_4
-    :try_start_3
-    new-instance v4, Lcom/google/android/exoplayer2/upstream/RawResourceDataSource$RawResourceDataSourceException;
+.field public static m3_ref_palette_neutral94:I = 0x7f06017c
 
-    invoke-direct {v4, v0, v3, v1}, Lcom/google/android/exoplayer2/upstream/DataSourceException;-><init>(Ljava/lang/String;Ljava/lang/Exception;I)V
+.field public static m3_ref_palette_neutral95:I = 0x7f06017d
 
-    throw v4
-    :try_end_3
-    .catchall {:try_start_3 .. :try_end_3} :catchall_0
+.field public static m3_ref_palette_neutral96:I = 0x7f06017e
 
-    :goto_5
-    iput-object v0, p0, Ld3c;->p0:Ljava/io/FileInputStream;
+.field public static m3_ref_palette_neutral98:I = 0x7f06017f
 
-    :try_start_4
-    iget-object v4, p0, Ld3c;->o0:Landroid/content/res/AssetFileDescriptor;
+.field public static m3_ref_palette_neutral99:I = 0x7f060180
 
-    if-eqz v4, :cond_4
+.field public static m3_ref_palette_neutral_variant0:I = 0x7f060181
 
-    invoke-virtual {v4}, Landroid/content/res/AssetFileDescriptor;->close()V
-    :try_end_4
-    .catch Ljava/io/IOException; {:try_start_4 .. :try_end_4} :catch_2
-    .catchall {:try_start_4 .. :try_end_4} :catchall_2
+.field public static m3_ref_palette_neutral_variant10:I = 0x7f060182
 
-    goto :goto_6
+.field public static m3_ref_palette_neutral_variant100:I = 0x7f060183
 
-    :catchall_2
-    move-exception v1
+.field public static m3_ref_palette_neutral_variant20:I = 0x7f060184
 
-    goto :goto_8
+.field public static m3_ref_palette_neutral_variant30:I = 0x7f060185
 
-    :catch_2
-    move-exception v3
+.field public static m3_ref_palette_neutral_variant40:I = 0x7f060186
 
-    goto :goto_7
+.field public static m3_ref_palette_neutral_variant50:I = 0x7f060187
 
-    :cond_4
-    :goto_6
-    iput-object v0, p0, Ld3c;->o0:Landroid/content/res/AssetFileDescriptor;
+.field public static m3_ref_palette_neutral_variant60:I = 0x7f060188
 
-    iget-boolean v0, p0, Ld3c;->r0:Z
+.field public static m3_ref_palette_neutral_variant70:I = 0x7f060189
 
-    if-eqz v0, :cond_5
+.field public static m3_ref_palette_neutral_variant80:I = 0x7f06018a
 
-    iput-boolean v2, p0, Ld3c;->r0:Z
+.field public static m3_ref_palette_neutral_variant90:I = 0x7f06018b
 
-    invoke-virtual {p0}, Lei0;->b()V
+.field public static m3_ref_palette_neutral_variant95:I = 0x7f06018c
 
-    :cond_5
-    throw v3
+.field public static m3_ref_palette_neutral_variant99:I = 0x7f06018d
 
-    :goto_7
-    :try_start_5
-    new-instance v4, Lcom/google/android/exoplayer2/upstream/RawResourceDataSource$RawResourceDataSourceException;
+.field public static m3_ref_palette_primary0:I = 0x7f06018e
 
-    invoke-direct {v4, v0, v3, v1}, Lcom/google/android/exoplayer2/upstream/DataSourceException;-><init>(Ljava/lang/String;Ljava/lang/Exception;I)V
+.field public static m3_ref_palette_primary10:I = 0x7f06018f
 
-    throw v4
-    :try_end_5
-    .catchall {:try_start_5 .. :try_end_5} :catchall_2
+.field public static m3_ref_palette_primary100:I = 0x7f060190
 
-    :goto_8
-    iput-object v0, p0, Ld3c;->o0:Landroid/content/res/AssetFileDescriptor;
+.field public static m3_ref_palette_primary20:I = 0x7f060191
 
-    iget-boolean v0, p0, Ld3c;->r0:Z
+.field public static m3_ref_palette_primary30:I = 0x7f060192
 
-    if-eqz v0, :cond_6
+.field public static m3_ref_palette_primary40:I = 0x7f060193
 
-    iput-boolean v2, p0, Ld3c;->r0:Z
+.field public static m3_ref_palette_primary50:I = 0x7f060194
 
-    invoke-virtual {p0}, Lei0;->b()V
+.field public static m3_ref_palette_primary60:I = 0x7f060195
 
-    :cond_6
-    throw v1
-.end method
+.field public static m3_ref_palette_primary70:I = 0x7f060196
 
-.method public final getUri()Landroid/net/Uri;
-    .locals 0
+.field public static m3_ref_palette_primary80:I = 0x7f060197
 
-    iget-object p0, p0, Ld3c;->Z:Landroid/net/Uri;
+.field public static m3_ref_palette_primary90:I = 0x7f060198
 
-    return-object p0
-.end method
+.field public static m3_ref_palette_primary95:I = 0x7f060199
 
-.method public final read([BII)I
-    .locals 9
+.field public static m3_ref_palette_primary99:I = 0x7f06019a
 
-    if-nez p3, :cond_0
+.field public static m3_ref_palette_secondary0:I = 0x7f06019b
 
-    const/4 p0, 0x0
+.field public static m3_ref_palette_secondary10:I = 0x7f06019c
 
-    return p0
+.field public static m3_ref_palette_secondary100:I = 0x7f06019d
 
-    :cond_0
-    iget-wide v0, p0, Ld3c;->q0:J
+.field public static m3_ref_palette_secondary20:I = 0x7f06019e
 
-    const-wide/16 v2, 0x0
+.field public static m3_ref_palette_secondary30:I = 0x7f06019f
 
-    cmp-long v2, v0, v2
+.field public static m3_ref_palette_secondary40:I = 0x7f0601a0
 
-    const/4 v3, -0x1
+.field public static m3_ref_palette_secondary50:I = 0x7f0601a1
 
-    if-nez v2, :cond_1
+.field public static m3_ref_palette_secondary60:I = 0x7f0601a2
 
-    goto :goto_1
+.field public static m3_ref_palette_secondary70:I = 0x7f0601a3
 
-    :cond_1
-    const-wide/16 v4, -0x1
+.field public static m3_ref_palette_secondary80:I = 0x7f0601a4
 
-    cmp-long v2, v0, v4
+.field public static m3_ref_palette_secondary90:I = 0x7f0601a5
 
-    const/16 v6, 0x7d0
+.field public static m3_ref_palette_secondary95:I = 0x7f0601a6
 
-    if-nez v2, :cond_2
+.field public static m3_ref_palette_secondary99:I = 0x7f0601a7
 
-    goto :goto_0
+.field public static m3_ref_palette_tertiary0:I = 0x7f0601a8
 
-    :cond_2
-    int-to-long v7, p3
+.field public static m3_ref_palette_tertiary10:I = 0x7f0601a9
 
-    :try_start_0
-    invoke-static {v0, v1, v7, v8}, Ljava/lang/Math;->min(JJ)J
+.field public static m3_ref_palette_tertiary100:I = 0x7f0601aa
 
-    move-result-wide v0
+.field public static m3_ref_palette_tertiary20:I = 0x7f0601ab
 
-    long-to-int p3, v0
+.field public static m3_ref_palette_tertiary30:I = 0x7f0601ac
 
-    :goto_0
-    iget-object v0, p0, Ld3c;->p0:Ljava/io/FileInputStream;
+.field public static m3_ref_palette_tertiary40:I = 0x7f0601ad
 
-    sget v1, Lnaf;->a:I
+.field public static m3_ref_palette_tertiary50:I = 0x7f0601ae
 
-    invoke-virtual {v0, p1, p2, p3}, Ljava/io/InputStream;->read([BII)I
+.field public static m3_ref_palette_tertiary60:I = 0x7f0601af
 
-    move-result p1
-    :try_end_0
-    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
+.field public static m3_ref_palette_tertiary70:I = 0x7f0601b0
 
-    if-ne p1, v3, :cond_4
+.field public static m3_ref_palette_tertiary80:I = 0x7f0601b1
 
-    iget-wide p0, p0, Ld3c;->q0:J
+.field public static m3_ref_palette_tertiary90:I = 0x7f0601b2
 
-    cmp-long p0, p0, v4
+.field public static m3_ref_palette_tertiary95:I = 0x7f0601b3
 
-    if-nez p0, :cond_3
+.field public static m3_ref_palette_tertiary99:I = 0x7f0601b4
 
-    :goto_1
-    return v3
+.field public static m3_ref_palette_white:I = 0x7f0601b5
 
-    :cond_3
-    new-instance p0, Lcom/google/android/exoplayer2/upstream/RawResourceDataSource$RawResourceDataSourceException;
+.field public static m3_selection_control_ripple_color_selector:I = 0x7f0601b6
 
-    new-instance p1, Ljava/io/EOFException;
+.field public static m3_simple_item_ripple_color:I = 0x7f0601b7
 
-    invoke-direct {p1}, Ljava/io/EOFException;-><init>()V
+.field public static m3_slider_active_track_color:I = 0x7f0601b8
 
-    const-string p2, "End of stream reached having not read sufficient data."
+.field public static m3_slider_active_track_color_legacy:I = 0x7f0601b9
 
-    invoke-direct {p0, p2, p1, v6}, Lcom/google/android/exoplayer2/upstream/DataSourceException;-><init>(Ljava/lang/String;Ljava/lang/Exception;I)V
+.field public static m3_slider_halo_color_legacy:I = 0x7f0601ba
 
-    throw p0
+.field public static m3_slider_inactive_track_color:I = 0x7f0601bb
 
-    :cond_4
-    iget-wide p2, p0, Ld3c;->q0:J
+.field public static m3_slider_inactive_track_color_legacy:I = 0x7f0601bc
 
-    cmp-long v0, p2, v4
+.field public static m3_slider_thumb_color:I = 0x7f0601bd
 
-    if-eqz v0, :cond_5
+.field public static m3_slider_thumb_color_legacy:I = 0x7f0601be
 
-    int-to-long v0, p1
+.field public static m3_switch_thumb_tint:I = 0x7f0601bf
 
-    sub-long/2addr p2, v0
+.field public static m3_switch_track_tint:I = 0x7f0601c0
 
-    iput-wide p2, p0, Ld3c;->q0:J
+.field public static m3_sys_color_dark_background:I = 0x7f0601c1
 
-    :cond_5
-    invoke-virtual {p0, p1}, Lei0;->a(I)V
+.field public static m3_sys_color_dark_error:I = 0x7f0601c2
 
-    return p1
+.field public static m3_sys_color_dark_error_container:I = 0x7f0601c3
 
-    :catch_0
-    move-exception p0
+.field public static m3_sys_color_dark_inverse_on_surface:I = 0x7f0601c4
 
-    new-instance p1, Lcom/google/android/exoplayer2/upstream/RawResourceDataSource$RawResourceDataSourceException;
+.field public static m3_sys_color_dark_inverse_primary:I = 0x7f0601c5
 
-    const/4 p2, 0x0
+.field public static m3_sys_color_dark_inverse_surface:I = 0x7f0601c6
 
-    invoke-direct {p1, p2, p0, v6}, Lcom/google/android/exoplayer2/upstream/DataSourceException;-><init>(Ljava/lang/String;Ljava/lang/Exception;I)V
+.field public static m3_sys_color_dark_on_background:I = 0x7f0601c7
 
-    throw p1
-.end method
+.field public static m3_sys_color_dark_on_error:I = 0x7f0601c8
+
+.field public static m3_sys_color_dark_on_error_container:I = 0x7f0601c9
+
+.field public static m3_sys_color_dark_on_primary:I = 0x7f0601ca
+
+.field public static m3_sys_color_dark_on_primary_container:I = 0x7f0601cb
+
+.field public static m3_sys_color_dark_on_secondary:I = 0x7f0601cc
+
+.field public static m3_sys_color_dark_on_secondary_container:I = 0x7f0601cd
+
+.field public static m3_sys_color_dark_on_surface:I = 0x7f0601ce
+
+.field public static m3_sys_color_dark_on_surface_variant:I = 0x7f0601cf
+
+.field public static m3_sys_color_dark_on_tertiary:I = 0x7f0601d0
+
+.field public static m3_sys_color_dark_on_tertiary_container:I = 0x7f0601d1
+
+.field public static m3_sys_color_dark_outline:I = 0x7f0601d2
+
+.field public static m3_sys_color_dark_outline_variant:I = 0x7f0601d3
+
+.field public static m3_sys_color_dark_primary:I = 0x7f0601d4
+
+.field public static m3_sys_color_dark_primary_container:I = 0x7f0601d5
+
+.field public static m3_sys_color_dark_secondary:I = 0x7f0601d6
+
+.field public static m3_sys_color_dark_secondary_container:I = 0x7f0601d7
+
+.field public static m3_sys_color_dark_surface:I = 0x7f0601d8
+
+.field public static m3_sys_color_dark_surface_bright:I = 0x7f0601d9
+
+.field public static m3_sys_color_dark_surface_container:I = 0x7f0601da
+
+.field public static m3_sys_color_dark_surface_container_high:I = 0x7f0601db
+
+.field public static m3_sys_color_dark_surface_container_highest:I = 0x7f0601dc
+
+.field public static m3_sys_color_dark_surface_container_low:I = 0x7f0601dd
+
+.field public static m3_sys_color_dark_surface_container_lowest:I = 0x7f0601de
+
+.field public static m3_sys_color_dark_surface_dim:I = 0x7f0601df
+
+.field public static m3_sys_color_dark_surface_variant:I = 0x7f0601e0
+
+.field public static m3_sys_color_dark_tertiary:I = 0x7f0601e1
+
+.field public static m3_sys_color_dark_tertiary_container:I = 0x7f0601e2
+
+.field public static m3_sys_color_dynamic_dark_background:I = 0x7f0601e3
+
+.field public static m3_sys_color_dynamic_dark_error:I = 0x7f0601e4
+
+.field public static m3_sys_color_dynamic_dark_error_container:I = 0x7f0601e5
+
+.field public static m3_sys_color_dynamic_dark_inverse_on_surface:I = 0x7f0601e6
+
+.field public static m3_sys_color_dynamic_dark_inverse_primary:I = 0x7f0601e7
+
+.field public static m3_sys_color_dynamic_dark_inverse_surface:I = 0x7f0601e8
+
+.field public static m3_sys_color_dynamic_dark_on_background:I = 0x7f0601e9
+
+.field public static m3_sys_color_dynamic_dark_on_error:I = 0x7f0601ea
+
+.field public static m3_sys_color_dynamic_dark_on_error_container:I = 0x7f0601eb
+
+.field public static m3_sys_color_dynamic_dark_on_primary:I = 0x7f0601ec
+
+.field public static m3_sys_color_dynamic_dark_on_primary_container:I = 0x7f0601ed
+
+.field public static m3_sys_color_dynamic_dark_on_secondary:I = 0x7f0601ee
+
+.field public static m3_sys_color_dynamic_dark_on_secondary_container:I = 0x7f0601ef
+
+.field public static m3_sys_color_dynamic_dark_on_surface:I = 0x7f0601f0
+
+.field public static m3_sys_color_dynamic_dark_on_surface_variant:I = 0x7f0601f1
+
+.field public static m3_sys_color_dynamic_dark_on_tertiary:I = 0x7f0601f2
+
+.field public static m3_sys_color_dynamic_dark_on_tertiary_container:I = 0x7f0601f3
+
+.field public static m3_sys_color_dynamic_dark_outline:I = 0x7f0601f4
+
+.field public static m3_sys_color_dynamic_dark_outline_variant:I = 0x7f0601f5
+
+.field public static m3_sys_color_dynamic_dark_primary:I = 0x7f0601f6
+
+.field public static m3_sys_color_dynamic_dark_primary_container:I = 0x7f0601f7
+
+.field public static m3_sys_color_dynamic_dark_secondary:I = 0x7f0601f8
+
+.field public static m3_sys_color_dynamic_dark_secondary_container:I = 0x7f0601f9
+
+.field public static m3_sys_color_dynamic_dark_surface:I = 0x7f0601fa
+
+.field public static m3_sys_color_dynamic_dark_surface_bright:I = 0x7f0601fb
+
+.field public static m3_sys_color_dynamic_dark_surface_container:I = 0x7f0601fc
+
+.field public static m3_sys_color_dynamic_dark_surface_container_high:I = 0x7f0601fd
+
+.field public static m3_sys_color_dynamic_dark_surface_container_highest:I = 0x7f0601fe
+
+.field public static m3_sys_color_dynamic_dark_surface_container_low:I = 0x7f0601ff
+
+.field public static m3_sys_color_dynamic_dark_surface_container_lowest:I = 0x7f060200
+
+.field public static m3_sys_color_dynamic_dark_surface_dim:I = 0x7f060201
+
+.field public static m3_sys_color_dynamic_dark_surface_variant:I = 0x7f060202
+
+.field public static m3_sys_color_dynamic_dark_tertiary:I = 0x7f060203
+
+.field public static m3_sys_color_dynamic_dark_tertiary_container:I = 0x7f060204
+
+.field public static m3_sys_color_dynamic_light_background:I = 0x7f060205
+
+.field public static m3_sys_color_dynamic_light_error:I = 0x7f060206
+
+.field public static m3_sys_color_dynamic_light_error_container:I = 0x7f060207
+
+.field public static m3_sys_color_dynamic_light_inverse_on_surface:I = 0x7f060208
+
+.field public static m3_sys_color_dynamic_light_inverse_primary:I = 0x7f060209
+
+.field public static m3_sys_color_dynamic_light_inverse_surface:I = 0x7f06020a
+
+.field public static m3_sys_color_dynamic_light_on_background:I = 0x7f06020b
+
+.field public static m3_sys_color_dynamic_light_on_error:I = 0x7f06020c
+
+.field public static m3_sys_color_dynamic_light_on_error_container:I = 0x7f06020d
+
+.field public static m3_sys_color_dynamic_light_on_primary:I = 0x7f06020e
+
+.field public static m3_sys_color_dynamic_light_on_primary_container:I = 0x7f06020f
+
+.field public static m3_sys_color_dynamic_light_on_secondary:I = 0x7f060210
+
+.field public static m3_sys_color_dynamic_light_on_secondary_container:I = 0x7f060211
+
+.field public static m3_sys_color_dynamic_light_on_surface:I = 0x7f060212
+
+.field public static m3_sys_color_dynamic_light_on_surface_variant:I = 0x7f060213
+
+.field public static m3_sys_color_dynamic_light_on_tertiary:I = 0x7f060214
+
+.field public static m3_sys_color_dynamic_light_on_tertiary_container:I = 0x7f060215
+
+.field public static m3_sys_color_dynamic_light_outline:I = 0x7f060216
+
+.field public static m3_sys_color_dynamic_light_outline_variant:I = 0x7f060217
+
+.field public static m3_sys_color_dynamic_light_primary:I = 0x7f060218
+
+.field public static m3_sys_color_dynamic_light_primary_container:I = 0x7f060219
+
+.field public static m3_sys_color_dynamic_light_secondary:I = 0x7f06021a
+
+.field public static m3_sys_color_dynamic_light_secondary_container:I = 0x7f06021b
+
+.field public static m3_sys_color_dynamic_light_surface:I = 0x7f06021c
+
+.field public static m3_sys_color_dynamic_light_surface_bright:I = 0x7f06021d
+
+.field public static m3_sys_color_dynamic_light_surface_container:I = 0x7f06021e
+
+.field public static m3_sys_color_dynamic_light_surface_container_high:I = 0x7f06021f
+
+.field public static m3_sys_color_dynamic_light_surface_container_highest:I = 0x7f060220
+
+.field public static m3_sys_color_dynamic_light_surface_container_low:I = 0x7f060221
+
+.field public static m3_sys_color_dynamic_light_surface_container_lowest:I = 0x7f060222
+
+.field public static m3_sys_color_dynamic_light_surface_dim:I = 0x7f060223
+
+.field public static m3_sys_color_dynamic_light_surface_variant:I = 0x7f060224
+
+.field public static m3_sys_color_dynamic_light_tertiary:I = 0x7f060225
+
+.field public static m3_sys_color_dynamic_light_tertiary_container:I = 0x7f060226
+
+.field public static m3_sys_color_dynamic_on_primary_fixed:I = 0x7f060227
+
+.field public static m3_sys_color_dynamic_on_primary_fixed_variant:I = 0x7f060228
+
+.field public static m3_sys_color_dynamic_on_secondary_fixed:I = 0x7f060229
+
+.field public static m3_sys_color_dynamic_on_secondary_fixed_variant:I = 0x7f06022a
+
+.field public static m3_sys_color_dynamic_on_tertiary_fixed:I = 0x7f06022b
+
+.field public static m3_sys_color_dynamic_on_tertiary_fixed_variant:I = 0x7f06022c
+
+.field public static m3_sys_color_dynamic_primary_fixed:I = 0x7f06022d
+
+.field public static m3_sys_color_dynamic_primary_fixed_dim:I = 0x7f06022e
+
+.field public static m3_sys_color_dynamic_secondary_fixed:I = 0x7f06022f
+
+.field public static m3_sys_color_dynamic_secondary_fixed_dim:I = 0x7f060230
+
+.field public static m3_sys_color_dynamic_tertiary_fixed:I = 0x7f060231
+
+.field public static m3_sys_color_dynamic_tertiary_fixed_dim:I = 0x7f060232
+
+.field public static m3_sys_color_light_background:I = 0x7f060233
+
+.field public static m3_sys_color_light_error:I = 0x7f060234
+
+.field public static m3_sys_color_light_error_container:I = 0x7f060235
+
+.field public static m3_sys_color_light_inverse_on_surface:I = 0x7f060236
+
+.field public static m3_sys_color_light_inverse_primary:I = 0x7f060237
+
+.field public static m3_sys_color_light_inverse_surface:I = 0x7f060238
+
+.field public static m3_sys_color_light_on_background:I = 0x7f060239
+
+.field public static m3_sys_color_light_on_error:I = 0x7f06023a
+
+.field public static m3_sys_color_light_on_error_container:I = 0x7f06023b
+
+.field public static m3_sys_color_light_on_primary:I = 0x7f06023c
+
+.field public static m3_sys_color_light_on_primary_container:I = 0x7f06023d
+
+.field public static m3_sys_color_light_on_secondary:I = 0x7f06023e
+
+.field public static m3_sys_color_light_on_secondary_container:I = 0x7f06023f
+
+.field public static m3_sys_color_light_on_surface:I = 0x7f060240
+
+.field public static m3_sys_color_light_on_surface_variant:I = 0x7f060241
+
+.field public static m3_sys_color_light_on_tertiary:I = 0x7f060242
+
+.field public static m3_sys_color_light_on_tertiary_container:I = 0x7f060243
+
+.field public static m3_sys_color_light_outline:I = 0x7f060244
+
+.field public static m3_sys_color_light_outline_variant:I = 0x7f060245
+
+.field public static m3_sys_color_light_primary:I = 0x7f060246
+
+.field public static m3_sys_color_light_primary_container:I = 0x7f060247
+
+.field public static m3_sys_color_light_secondary:I = 0x7f060248
+
+.field public static m3_sys_color_light_secondary_container:I = 0x7f060249
+
+.field public static m3_sys_color_light_surface:I = 0x7f06024a
+
+.field public static m3_sys_color_light_surface_bright:I = 0x7f06024b
+
+.field public static m3_sys_color_light_surface_container:I = 0x7f06024c
+
+.field public static m3_sys_color_light_surface_container_high:I = 0x7f06024d
+
+.field public static m3_sys_color_light_surface_container_highest:I = 0x7f06024e
+
+.field public static m3_sys_color_light_surface_container_low:I = 0x7f06024f
+
+.field public static m3_sys_color_light_surface_container_lowest:I = 0x7f060250
+
+.field public static m3_sys_color_light_surface_dim:I = 0x7f060251
+
+.field public static m3_sys_color_light_surface_variant:I = 0x7f060252
+
+.field public static m3_sys_color_light_tertiary:I = 0x7f060253
+
+.field public static m3_sys_color_light_tertiary_container:I = 0x7f060254
+
+.field public static m3_sys_color_on_primary_fixed:I = 0x7f060255
+
+.field public static m3_sys_color_on_primary_fixed_variant:I = 0x7f060256
+
+.field public static m3_sys_color_on_secondary_fixed:I = 0x7f060257
+
+.field public static m3_sys_color_on_secondary_fixed_variant:I = 0x7f060258
+
+.field public static m3_sys_color_on_tertiary_fixed:I = 0x7f060259
+
+.field public static m3_sys_color_on_tertiary_fixed_variant:I = 0x7f06025a
+
+.field public static m3_sys_color_primary_fixed:I = 0x7f06025b
+
+.field public static m3_sys_color_primary_fixed_dim:I = 0x7f06025c
+
+.field public static m3_sys_color_secondary_fixed:I = 0x7f06025d
+
+.field public static m3_sys_color_secondary_fixed_dim:I = 0x7f06025e
+
+.field public static m3_sys_color_tertiary_fixed:I = 0x7f06025f
+
+.field public static m3_sys_color_tertiary_fixed_dim:I = 0x7f060260
+
+.field public static m3_tabs_icon_color:I = 0x7f060261
+
+.field public static m3_tabs_icon_color_secondary:I = 0x7f060262
+
+.field public static m3_tabs_ripple_color:I = 0x7f060263
+
+.field public static m3_tabs_ripple_color_secondary:I = 0x7f060264
+
+.field public static m3_tabs_text_color:I = 0x7f060265
+
+.field public static m3_tabs_text_color_secondary:I = 0x7f060266
+
+.field public static m3_text_button_background_color_selector:I = 0x7f060267
+
+.field public static m3_text_button_foreground_color_selector:I = 0x7f060268
+
+.field public static m3_text_button_ripple_color_selector:I = 0x7f060269
+
+.field public static m3_textfield_filled_background_color:I = 0x7f06026a
+
+.field public static m3_textfield_indicator_text_color:I = 0x7f06026b
+
+.field public static m3_textfield_input_text_color:I = 0x7f06026c
+
+.field public static m3_textfield_label_color:I = 0x7f06026d
+
+.field public static m3_textfield_stroke_color:I = 0x7f06026e
+
+.field public static m3_timepicker_button_background_color:I = 0x7f06026f
+
+.field public static m3_timepicker_button_ripple_color:I = 0x7f060270
+
+.field public static m3_timepicker_button_text_color:I = 0x7f060271
+
+.field public static m3_timepicker_clock_text_color:I = 0x7f060272
+
+.field public static m3_timepicker_display_background_color:I = 0x7f060273
+
+.field public static m3_timepicker_display_ripple_color:I = 0x7f060274
+
+.field public static m3_timepicker_display_text_color:I = 0x7f060275
+
+.field public static m3_timepicker_secondary_text_button_ripple_color:I = 0x7f060276
+
+.field public static m3_timepicker_secondary_text_button_text_color:I = 0x7f060277
+
+.field public static m3_timepicker_time_input_stroke_color:I = 0x7f060278
+
+.field public static m3_tonal_button_ripple_color_selector:I = 0x7f060279
+
+.field public static material_blue_grey_800:I = 0x7f06027a
+
+.field public static material_blue_grey_900:I = 0x7f06027b
+
+.field public static material_blue_grey_950:I = 0x7f06027c
+
+.field public static material_cursor_color:I = 0x7f06027d
+
+.field public static material_deep_teal_200:I = 0x7f06027e
+
+.field public static material_deep_teal_500:I = 0x7f06027f
+
+.field public static material_divider_color:I = 0x7f060280
+
+.field public static material_dynamic_color_dark_error:I = 0x7f060281
+
+.field public static material_dynamic_color_dark_error_container:I = 0x7f060282
+
+.field public static material_dynamic_color_dark_on_error:I = 0x7f060283
+
+.field public static material_dynamic_color_dark_on_error_container:I = 0x7f060284
+
+.field public static material_dynamic_color_light_error:I = 0x7f060285
+
+.field public static material_dynamic_color_light_error_container:I = 0x7f060286
+
+.field public static material_dynamic_color_light_on_error:I = 0x7f060287
+
+.field public static material_dynamic_color_light_on_error_container:I = 0x7f060288
+
+.field public static material_dynamic_neutral0:I = 0x7f060289
+
+.field public static material_dynamic_neutral10:I = 0x7f06028a
+
+.field public static material_dynamic_neutral100:I = 0x7f06028b
+
+.field public static material_dynamic_neutral20:I = 0x7f06028c
+
+.field public static material_dynamic_neutral30:I = 0x7f06028d
+
+.field public static material_dynamic_neutral40:I = 0x7f06028e
+
+.field public static material_dynamic_neutral50:I = 0x7f06028f
+
+.field public static material_dynamic_neutral60:I = 0x7f060290
+
+.field public static material_dynamic_neutral70:I = 0x7f060291
+
+.field public static material_dynamic_neutral80:I = 0x7f060292
+
+.field public static material_dynamic_neutral90:I = 0x7f060293
+
+.field public static material_dynamic_neutral95:I = 0x7f060294
+
+.field public static material_dynamic_neutral99:I = 0x7f060295
+
+.field public static material_dynamic_neutral_variant0:I = 0x7f060296
+
+.field public static material_dynamic_neutral_variant10:I = 0x7f060297
+
+.field public static material_dynamic_neutral_variant100:I = 0x7f060298
+
+.field public static material_dynamic_neutral_variant20:I = 0x7f060299
+
+.field public static material_dynamic_neutral_variant30:I = 0x7f06029a
+
+.field public static material_dynamic_neutral_variant40:I = 0x7f06029b
+
+.field public static material_dynamic_neutral_variant50:I = 0x7f06029c
+
+.field public static material_dynamic_neutral_variant60:I = 0x7f06029d
+
+.field public static material_dynamic_neutral_variant70:I = 0x7f06029e
+
+.field public static material_dynamic_neutral_variant80:I = 0x7f06029f
+
+.field public static material_dynamic_neutral_variant90:I = 0x7f0602a0
+
+.field public static material_dynamic_neutral_variant95:I = 0x7f0602a1
+
+.field public static material_dynamic_neutral_variant99:I = 0x7f0602a2
+
+.field public static material_dynamic_primary0:I = 0x7f0602a3
+
+.field public static material_dynamic_primary10:I = 0x7f0602a4
+
+.field public static material_dynamic_primary100:I = 0x7f0602a5
+
+.field public static material_dynamic_primary20:I = 0x7f0602a6
+
+.field public static material_dynamic_primary30:I = 0x7f0602a7
+
+.field public static material_dynamic_primary40:I = 0x7f0602a8
+
+.field public static material_dynamic_primary50:I = 0x7f0602a9
+
+.field public static material_dynamic_primary60:I = 0x7f0602aa
+
+.field public static material_dynamic_primary70:I = 0x7f0602ab
+
+.field public static material_dynamic_primary80:I = 0x7f0602ac
+
+.field public static material_dynamic_primary90:I = 0x7f0602ad
+
+.field public static material_dynamic_primary95:I = 0x7f0602ae
+
+.field public static material_dynamic_primary99:I = 0x7f0602af
+
+.field public static material_dynamic_secondary0:I = 0x7f0602b0
+
+.field public static material_dynamic_secondary10:I = 0x7f0602b1
+
+.field public static material_dynamic_secondary100:I = 0x7f0602b2
+
+.field public static material_dynamic_secondary20:I = 0x7f0602b3
+
+.field public static material_dynamic_secondary30:I = 0x7f0602b4
+
+.field public static material_dynamic_secondary40:I = 0x7f0602b5
+
+.field public static material_dynamic_secondary50:I = 0x7f0602b6
+
+.field public static material_dynamic_secondary60:I = 0x7f0602b7
+
+.field public static material_dynamic_secondary70:I = 0x7f0602b8
+
+.field public static material_dynamic_secondary80:I = 0x7f0602b9
+
+.field public static material_dynamic_secondary90:I = 0x7f0602ba
+
+.field public static material_dynamic_secondary95:I = 0x7f0602bb
+
+.field public static material_dynamic_secondary99:I = 0x7f0602bc
+
+.field public static material_dynamic_tertiary0:I = 0x7f0602bd
+
+.field public static material_dynamic_tertiary10:I = 0x7f0602be
+
+.field public static material_dynamic_tertiary100:I = 0x7f0602bf
+
+.field public static material_dynamic_tertiary20:I = 0x7f0602c0
+
+.field public static material_dynamic_tertiary30:I = 0x7f0602c1
+
+.field public static material_dynamic_tertiary40:I = 0x7f0602c2
+
+.field public static material_dynamic_tertiary50:I = 0x7f0602c3
+
+.field public static material_dynamic_tertiary60:I = 0x7f0602c4
+
+.field public static material_dynamic_tertiary70:I = 0x7f0602c5
+
+.field public static material_dynamic_tertiary80:I = 0x7f0602c6
+
+.field public static material_dynamic_tertiary90:I = 0x7f0602c7
+
+.field public static material_dynamic_tertiary95:I = 0x7f0602c8
+
+.field public static material_dynamic_tertiary99:I = 0x7f0602c9
+
+.field public static material_grey_100:I = 0x7f0602ca
+
+.field public static material_grey_300:I = 0x7f0602cb
+
+.field public static material_grey_50:I = 0x7f0602cc
+
+.field public static material_grey_600:I = 0x7f0602cd
+
+.field public static material_grey_800:I = 0x7f0602ce
+
+.field public static material_grey_850:I = 0x7f0602cf
+
+.field public static material_grey_900:I = 0x7f0602d0
+
+.field public static material_harmonized_color_error:I = 0x7f0602d1
+
+.field public static material_harmonized_color_error_container:I = 0x7f0602d2
+
+.field public static material_harmonized_color_on_error:I = 0x7f0602d3
+
+.field public static material_harmonized_color_on_error_container:I = 0x7f0602d4
+
+.field public static material_on_background_disabled:I = 0x7f0602d5
+
+.field public static material_on_background_emphasis_high_type:I = 0x7f0602d6
+
+.field public static material_on_background_emphasis_medium:I = 0x7f0602d7
+
+.field public static material_on_primary_disabled:I = 0x7f0602d8
+
+.field public static material_on_primary_emphasis_high_type:I = 0x7f0602d9
+
+.field public static material_on_primary_emphasis_medium:I = 0x7f0602da
+
+.field public static material_on_surface_disabled:I = 0x7f0602db
+
+.field public static material_on_surface_emphasis_high_type:I = 0x7f0602dc
+
+.field public static material_on_surface_emphasis_medium:I = 0x7f0602dd
+
+.field public static material_on_surface_stroke:I = 0x7f0602de
+
+.field public static material_personalized__highlighted_text:I = 0x7f0602df
+
+.field public static material_personalized__highlighted_text_inverse:I = 0x7f0602e0
+
+.field public static material_personalized_color_background:I = 0x7f0602e1
+
+.field public static material_personalized_color_control_activated:I = 0x7f0602e2
+
+.field public static material_personalized_color_control_highlight:I = 0x7f0602e3
+
+.field public static material_personalized_color_control_normal:I = 0x7f0602e4
+
+.field public static material_personalized_color_error:I = 0x7f0602e5
+
+.field public static material_personalized_color_error_container:I = 0x7f0602e6
+
+.field public static material_personalized_color_on_background:I = 0x7f0602e7
+
+.field public static material_personalized_color_on_error:I = 0x7f0602e8
+
+.field public static material_personalized_color_on_error_container:I = 0x7f0602e9
+
+.field public static material_personalized_color_on_primary:I = 0x7f0602ea
+
+.field public static material_personalized_color_on_primary_container:I = 0x7f0602eb
+
+.field public static material_personalized_color_on_secondary:I = 0x7f0602ec
+
+.field public static material_personalized_color_on_secondary_container:I = 0x7f0602ed
+
+.field public static material_personalized_color_on_surface:I = 0x7f0602ee
+
+.field public static material_personalized_color_on_surface_inverse:I = 0x7f0602ef
+
+.field public static material_personalized_color_on_surface_variant:I = 0x7f0602f0
+
+.field public static material_personalized_color_on_tertiary:I = 0x7f0602f1
+
+.field public static material_personalized_color_on_tertiary_container:I = 0x7f0602f2
+
+.field public static material_personalized_color_outline:I = 0x7f0602f3
+
+.field public static material_personalized_color_outline_variant:I = 0x7f0602f4
+
+.field public static material_personalized_color_primary:I = 0x7f0602f5
+
+.field public static material_personalized_color_primary_container:I = 0x7f0602f6
+
+.field public static material_personalized_color_primary_inverse:I = 0x7f0602f7
+
+.field public static material_personalized_color_primary_text:I = 0x7f0602f8
+
+.field public static material_personalized_color_primary_text_inverse:I = 0x7f0602f9
+
+.field public static material_personalized_color_secondary:I = 0x7f0602fa
+
+.field public static material_personalized_color_secondary_container:I = 0x7f0602fb
+
+.field public static material_personalized_color_secondary_text:I = 0x7f0602fc
+
+.field public static material_personalized_color_secondary_text_inverse:I = 0x7f0602fd
+
+.field public static material_personalized_color_surface:I = 0x7f0602fe
+
+.field public static material_personalized_color_surface_bright:I = 0x7f0602ff
+
+.field public static material_personalized_color_surface_container:I = 0x7f060300
+
+.field public static material_personalized_color_surface_container_high:I = 0x7f060301
+
+.field public static material_personalized_color_surface_container_highest:I = 0x7f060302
+
+.field public static material_personalized_color_surface_container_low:I = 0x7f060303
+
+.field public static material_personalized_color_surface_container_lowest:I = 0x7f060304
+
+.field public static material_personalized_color_surface_dim:I = 0x7f060305
+
+.field public static material_personalized_color_surface_inverse:I = 0x7f060306
+
+.field public static material_personalized_color_surface_variant:I = 0x7f060307
+
+.field public static material_personalized_color_tertiary:I = 0x7f060308
+
+.field public static material_personalized_color_tertiary_container:I = 0x7f060309
+
+.field public static material_personalized_color_text_hint_foreground_inverse:I = 0x7f06030a
+
+.field public static material_personalized_color_text_primary_inverse:I = 0x7f06030b
+
+.field public static material_personalized_color_text_primary_inverse_disable_only:I = 0x7f06030c
+
+.field public static material_personalized_color_text_secondary_and_tertiary_inverse:I = 0x7f06030d
+
+.field public static material_personalized_color_text_secondary_and_tertiary_inverse_disabled:I = 0x7f06030e
+
+.field public static material_personalized_hint_foreground:I = 0x7f06030f
+
+.field public static material_personalized_hint_foreground_inverse:I = 0x7f060310
+
+.field public static material_personalized_primary_inverse_text_disable_only:I = 0x7f060311
+
+.field public static material_personalized_primary_text_disable_only:I = 0x7f060312
+
+.field public static material_slider_active_tick_marks_color:I = 0x7f060313
+
+.field public static material_slider_active_track_color:I = 0x7f060314
+
+.field public static material_slider_halo_color:I = 0x7f060315
+
+.field public static material_slider_inactive_tick_marks_color:I = 0x7f060316
+
+.field public static material_slider_inactive_track_color:I = 0x7f060317
+
+.field public static material_slider_thumb_color:I = 0x7f060318
+
+.field public static material_timepicker_button_background:I = 0x7f060319
+
+.field public static material_timepicker_button_stroke:I = 0x7f06031a
+
+.field public static material_timepicker_clock_text_color:I = 0x7f06031b
+
+.field public static material_timepicker_clockface:I = 0x7f06031c
+
+.field public static material_timepicker_modebutton_tint:I = 0x7f06031d
+
+.field public static mtrl_btn_bg_color_selector:I = 0x7f06032f
+
+.field public static mtrl_btn_ripple_color:I = 0x7f060330
+
+.field public static mtrl_btn_stroke_color_selector:I = 0x7f060331
+
+.field public static mtrl_btn_text_btn_bg_color_selector:I = 0x7f060332
+
+.field public static mtrl_btn_text_btn_ripple_color:I = 0x7f060333
+
+.field public static mtrl_btn_text_color_disabled:I = 0x7f060334
+
+.field public static mtrl_btn_text_color_selector:I = 0x7f060335
+
+.field public static mtrl_btn_transparent_bg_color:I = 0x7f060336
+
+.field public static mtrl_calendar_item_stroke_color:I = 0x7f060337
+
+.field public static mtrl_calendar_selected_range:I = 0x7f060338
+
+.field public static mtrl_card_view_foreground:I = 0x7f060339
+
+.field public static mtrl_card_view_ripple:I = 0x7f06033a
+
+.field public static mtrl_chip_background_color:I = 0x7f06033b
+
+.field public static mtrl_chip_close_icon_tint:I = 0x7f06033c
+
+.field public static mtrl_chip_surface_color:I = 0x7f06033d
+
+.field public static mtrl_chip_text_color:I = 0x7f06033e
+
+.field public static mtrl_choice_chip_background_color:I = 0x7f06033f
+
+.field public static mtrl_choice_chip_ripple_color:I = 0x7f060340
+
+.field public static mtrl_choice_chip_text_color:I = 0x7f060341
+
+.field public static mtrl_error:I = 0x7f060342
+
+.field public static mtrl_fab_bg_color_selector:I = 0x7f060343
+
+.field public static mtrl_fab_icon_text_color_selector:I = 0x7f060344
+
+.field public static mtrl_fab_ripple_color:I = 0x7f060345
+
+.field public static mtrl_filled_background_color:I = 0x7f060346
+
+.field public static mtrl_filled_icon_tint:I = 0x7f060347
+
+.field public static mtrl_filled_stroke_color:I = 0x7f060348
+
+.field public static mtrl_indicator_text_color:I = 0x7f060349
+
+.field public static mtrl_navigation_bar_colored_item_tint:I = 0x7f06034a
+
+.field public static mtrl_navigation_bar_colored_ripple_color:I = 0x7f06034b
+
+.field public static mtrl_navigation_bar_item_tint:I = 0x7f06034c
+
+.field public static mtrl_navigation_bar_ripple_color:I = 0x7f06034d
+
+.field public static mtrl_navigation_item_background_color:I = 0x7f06034e
+
+.field public static mtrl_navigation_item_icon_tint:I = 0x7f06034f
+
+.field public static mtrl_navigation_item_text_color:I = 0x7f060350
+
+.field public static mtrl_on_primary_text_btn_text_color_selector:I = 0x7f060351
+
+.field public static mtrl_on_surface_ripple_color:I = 0x7f060352
+
+.field public static mtrl_outlined_icon_tint:I = 0x7f060353
+
+.field public static mtrl_outlined_stroke_color:I = 0x7f060354
+
+.field public static mtrl_popupmenu_overlay_color:I = 0x7f060355
+
+.field public static mtrl_scrim_color:I = 0x7f060356
+
+.field public static mtrl_switch_thumb_icon_tint:I = 0x7f060357
+
+.field public static mtrl_switch_thumb_tint:I = 0x7f060358
+
+.field public static mtrl_switch_track_decoration_tint:I = 0x7f060359
+
+.field public static mtrl_switch_track_tint:I = 0x7f06035a
+
+.field public static mtrl_tabs_colored_ripple_color:I = 0x7f06035b
+
+.field public static mtrl_tabs_icon_color_selector:I = 0x7f06035c
+
+.field public static mtrl_tabs_icon_color_selector_colored:I = 0x7f06035d
+
+.field public static mtrl_tabs_legacy_text_color_selector:I = 0x7f06035e
+
+.field public static mtrl_tabs_ripple_color:I = 0x7f06035f
+
+.field public static mtrl_text_btn_text_color_selector:I = 0x7f060360
+
+.field public static mtrl_textinput_default_box_stroke_color:I = 0x7f060361
+
+.field public static mtrl_textinput_disabled_color:I = 0x7f060362
+
+.field public static mtrl_textinput_filled_box_default_background_color:I = 0x7f060363
+
+.field public static mtrl_textinput_focused_box_stroke_color:I = 0x7f060364
+
+.field public static mtrl_textinput_hovered_box_stroke_color:I = 0x7f060365
+
+.field public static notification_action_color_filter:I = 0x7f060367
+
+.field public static notification_icon_bg_color:I = 0x7f060368
+
+.field public static primary_dark_material_dark:I = 0x7f060375
+
+.field public static primary_dark_material_light:I = 0x7f060376
+
+.field public static primary_material_dark:I = 0x7f060377
+
+.field public static primary_material_light:I = 0x7f060378
+
+.field public static primary_text_default_material_dark:I = 0x7f060379
+
+.field public static primary_text_default_material_light:I = 0x7f06037a
+
+.field public static primary_text_disabled_material_dark:I = 0x7f06037b
+
+.field public static primary_text_disabled_material_light:I = 0x7f06037c
+
+.field public static ripple_material_dark:I = 0x7f060387
+
+.field public static ripple_material_light:I = 0x7f060388
+
+.field public static secondary_text_default_material_dark:I = 0x7f06038a
+
+.field public static secondary_text_default_material_light:I = 0x7f06038b
+
+.field public static secondary_text_disabled_material_dark:I = 0x7f06038c
+
+.field public static secondary_text_disabled_material_light:I = 0x7f06038d
+
+.field public static switch_thumb_disabled_material_dark:I = 0x7f06038f
+
+.field public static switch_thumb_disabled_material_light:I = 0x7f060390
+
+.field public static switch_thumb_material_dark:I = 0x7f060391
+
+.field public static switch_thumb_material_light:I = 0x7f060392
+
+.field public static switch_thumb_normal_material_dark:I = 0x7f060393
+
+.field public static switch_thumb_normal_material_light:I = 0x7f060394
+
+.field public static tooltip_background_dark:I = 0x7f0603a1
+
+.field public static tooltip_background_light:I = 0x7f0603a2

@@ -1,203 +1,193 @@
-.class public final Lkec;
-.super Lqde;
+.class public abstract Lkec;
+.super Landroidx/constraintlayout/widget/ConstraintLayout;
 .source "SourceFile"
-
-# interfaces
-.implements Ll66;
 
 
 # instance fields
-.field public X:Llh9;
+.field public final F0:Ls0b;
 
-.field public Y:Lqde;
+.field public G0:I
 
-.field public Z:I
-
-.field public final synthetic o0:Loh9;
-
-.field public final synthetic p0:Lqde;
+.field public final H0:Lk88;
 
 
 # direct methods
-.method public constructor <init>(Loh9;Ll66;Lkotlin/coroutines/Continuation;)V
-    .locals 0
+.method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
+    .locals 3
 
-    iput-object p1, p0, Lkec;->o0:Loh9;
+    invoke-direct {p0, p1, p2, p3}, Landroidx/constraintlayout/widget/ConstraintLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
-    check-cast p2, Lqde;
+    invoke-static {p1}, Landroid/view/LayoutInflater;->from(Landroid/content/Context;)Landroid/view/LayoutInflater;
 
-    iput-object p2, p0, Lkec;->p0:Lqde;
+    move-result-object v0
 
-    const/4 p1, 0x2
+    sget v1, Lw8c;->material_radial_view_group:I
 
-    invoke-direct {p0, p1, p3}, Lqde;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-virtual {v0, v1, p0}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;)Landroid/view/View;
+
+    new-instance v0, Lk88;
+
+    invoke-direct {v0}, Lk88;-><init>()V
+
+    iput-object v0, p0, Lkec;->H0:Lk88;
+
+    new-instance v1, Lsqc;
+
+    const/high16 v2, 0x3f000000    # 0.5f
+
+    invoke-direct {v1, v2}, Lsqc;-><init>(F)V
+
+    iget-object v2, v0, Lk88;->a:Lj88;
+
+    iget-object v2, v2, Lj88;->a:Lhvd;
+
+    invoke-virtual {v2}, Lhvd;->e()Lhwg;
+
+    move-result-object v2
+
+    iput-object v1, v2, Lhwg;->e:Ljava/lang/Object;
+
+    iput-object v1, v2, Lhwg;->f:Ljava/lang/Object;
+
+    iput-object v1, v2, Lhwg;->g:Ljava/lang/Object;
+
+    iput-object v1, v2, Lhwg;->h:Ljava/lang/Object;
+
+    invoke-virtual {v2}, Lhwg;->f()Lhvd;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Lk88;->setShapeAppearanceModel(Lhvd;)V
+
+    iget-object v0, p0, Lkec;->H0:Lk88;
+
+    const/4 v1, -0x1
+
+    invoke-static {v1}, Landroid/content/res/ColorStateList;->valueOf(I)Landroid/content/res/ColorStateList;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Lk88;->k(Landroid/content/res/ColorStateList;)V
+
+    iget-object v0, p0, Lkec;->H0:Lk88;
+
+    sget-object v1, Lh7g;->a:Ljava/util/WeakHashMap;
+
+    invoke-virtual {p0, v0}, Landroid/view/View;->setBackground(Landroid/graphics/drawable/Drawable;)V
+
+    sget-object v0, Lgdc;->RadialViewGroup:[I
+
+    const/4 v1, 0x0
+
+    invoke-virtual {p1, p2, v0, p3, v1}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[III)Landroid/content/res/TypedArray;
+
+    move-result-object p1
+
+    sget p2, Lgdc;->RadialViewGroup_materialCircleRadius:I
+
+    invoke-virtual {p1, p2, v1}, Landroid/content/res/TypedArray;->getDimensionPixelSize(II)I
+
+    move-result p2
+
+    iput p2, p0, Lkec;->G0:I
+
+    new-instance p2, Ls0b;
+
+    const/4 p3, 0x7
+
+    invoke-direct {p2, p3, p0}, Ls0b;-><init>(ILjava/lang/Object;)V
+
+    iput-object p2, p0, Lkec;->F0:Ls0b;
+
+    invoke-virtual {p1}, Landroid/content/res/TypedArray;->recycle()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+.method public final addView(Landroid/view/View;ILandroid/view/ViewGroup$LayoutParams;)V
     .locals 0
 
-    check-cast p1, Lox3;
+    invoke-super {p0, p1, p2, p3}, Landroid/view/ViewGroup;->addView(Landroid/view/View;ILandroid/view/ViewGroup$LayoutParams;)V
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    invoke-virtual {p1}, Landroid/view/View;->getId()I
 
-    invoke-virtual {p0, p1, p2}, Lkec;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    move-result p2
 
-    move-result-object p0
+    const/4 p3, -0x1
 
-    check-cast p0, Lkec;
+    if-ne p2, p3, :cond_0
 
-    sget-object p1, Le5f;->a:Le5f;
+    sget-object p2, Lh7g;->a:Ljava/util/WeakHashMap;
 
-    invoke-virtual {p0, p1}, Lkec;->o(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {}, Landroid/view/View;->generateViewId()I
 
-    move-result-object p0
+    move-result p2
 
-    return-object p0
-.end method
-
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 1
-
-    new-instance p1, Lkec;
-
-    iget-object v0, p0, Lkec;->o0:Loh9;
-
-    iget-object p0, p0, Lkec;->p0:Lqde;
-
-    invoke-direct {p1, v0, p0, p2}, Lkec;-><init>(Loh9;Ll66;Lkotlin/coroutines/Continuation;)V
-
-    return-object p1
-.end method
-
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 6
-
-    iget v0, p0, Lkec;->Z:I
-
-    const/4 v1, 0x2
-
-    const/4 v2, 0x1
-
-    const/4 v3, 0x0
-
-    sget-object v4, Lpx3;->a:Lpx3;
-
-    if-eqz v0, :cond_2
-
-    if-eq v0, v2, :cond_1
-
-    if-ne v0, v1, :cond_0
-
-    iget-object p0, p0, Lkec;->X:Llh9;
-
-    :try_start_0
-    invoke-static {p1}, Lsgg;->Z(Ljava/lang/Object;)V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    goto :goto_2
-
-    :catchall_0
-    move-exception p1
-
-    goto :goto_3
+    invoke-virtual {p1, p2}, Landroid/view/View;->setId(I)V
 
     :cond_0
-    new-instance p0, Ljava/lang/IllegalStateException;
+    invoke-virtual {p0}, Landroid/view/View;->getHandler()Landroid/os/Handler;
 
-    const-string p1, "call to \'resume\' before \'invoke\' with coroutine"
+    move-result-object p1
 
-    invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    if-eqz p1, :cond_1
 
-    throw p0
+    iget-object p0, p0, Lkec;->F0:Ls0b;
+
+    invoke-virtual {p1, p0}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
+
+    invoke-virtual {p1, p0}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
     :cond_1
-    iget-object v0, p0, Lkec;->Y:Lqde;
+    return-void
+.end method
 
-    check-cast v0, Ll66;
+.method public final onFinishInflate()V
+    .locals 0
 
-    iget-object v2, p0, Lkec;->X:Llh9;
+    invoke-super {p0}, Landroid/view/View;->onFinishInflate()V
 
-    invoke-static {p1}, Lsgg;->Z(Ljava/lang/Object;)V
+    invoke-virtual {p0}, Lkec;->v()V
 
-    move-object p1, v2
+    return-void
+.end method
 
-    goto :goto_0
+.method public final onViewRemoved(Landroid/view/View;)V
+    .locals 0
 
-    :cond_2
-    invoke-static {p1}, Lsgg;->Z(Ljava/lang/Object;)V
+    invoke-super {p0, p1}, Landroidx/constraintlayout/widget/ConstraintLayout;->onViewRemoved(Landroid/view/View;)V
 
-    iget-object p1, p0, Lkec;->o0:Loh9;
+    invoke-virtual {p0}, Landroid/view/View;->getHandler()Landroid/os/Handler;
 
-    iput-object p1, p0, Lkec;->X:Llh9;
+    move-result-object p1
 
-    iget-object v0, p0, Lkec;->p0:Lqde;
+    if-eqz p1, :cond_0
 
-    iput-object v0, p0, Lkec;->Y:Lqde;
+    iget-object p0, p0, Lkec;->F0:Ls0b;
 
-    iput v2, p0, Lkec;->Z:I
+    invoke-virtual {p1, p0}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
 
-    invoke-virtual {p1, p0}, Loh9;->d(Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    invoke-virtual {p1, p0}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    move-result-object v2
+    :cond_0
+    return-void
+.end method
 
-    if-ne v2, v4, :cond_3
+.method public final setBackgroundColor(I)V
+    .locals 0
 
-    goto :goto_1
+    iget-object p0, p0, Lkec;->H0:Lk88;
 
-    :cond_3
-    :goto_0
-    :try_start_1
-    new-instance v2, Ljec;
+    invoke-static {p1}, Landroid/content/res/ColorStateList;->valueOf(I)Landroid/content/res/ColorStateList;
 
-    invoke-direct {v2, v0, v3}, Ljec;-><init>(Ll66;Lkotlin/coroutines/Continuation;)V
+    move-result-object p1
 
-    iput-object p1, p0, Lkec;->X:Llh9;
+    invoke-virtual {p0, p1}, Lk88;->k(Landroid/content/res/ColorStateList;)V
 
-    iput-object v3, p0, Lkec;->Y:Lqde;
+    return-void
+.end method
 
-    iput v1, p0, Lkec;->Z:I
-
-    invoke-static {v2, p0}, Lvk9;->e(Ll66;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p0
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_1
-
-    if-ne p0, v4, :cond_4
-
-    :goto_1
-    return-object v4
-
-    :cond_4
-    move-object p0, p1
-
-    :goto_2
-    check-cast p0, Loh9;
-
-    invoke-virtual {p0, v3}, Loh9;->e(Ljava/lang/Object;)V
-
-    sget-object p0, Le5f;->a:Le5f;
-
-    return-object p0
-
-    :catchall_1
-    move-exception p0
-
-    move-object v5, p1
-
-    move-object p1, p0
-
-    move-object p0, v5
-
-    :goto_3
-    check-cast p0, Loh9;
-
-    invoke-virtual {p0, v3}, Loh9;->e(Ljava/lang/Object;)V
-
-    throw p1
+.method public abstract v()V
 .end method

@@ -1,152 +1,572 @@
-.class public final synthetic Lu1g;
-.super Ljava/lang/Object;
+.class public final Lu1g;
+.super Lor4;
 .source "SourceFile"
 
-# interfaces
-.implements Lra6;
 
+# instance fields
+.field public final o:Landroid/util/Size;
 
-# static fields
-.field public static final a:Lu1g;
+.field public final p:Ljava/lang/String;
 
-.field private static final descriptor:Lx4d;
+.field public q:Ljee;
+
+.field public r:Lone/me/sdk/gl/effects/objects/OesToImage2dRenderer;
+
+.field public s:Lone/me/sdk/gl/effects/objects/TrivialFragmentShader;
+
+.field public final t:[F
+
+.field public u:J
+
+.field public v:I
+
+.field public w:Lokf;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 4
+.method public constructor <init>(Landroid/util/Size;Lgz4;)V
+    .locals 5
 
-    new-instance v0, Lu1g;
+    invoke-direct {p0}, Lor4;-><init>()V
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lu1g;->o:Landroid/util/Size;
 
-    sput-object v0, Lu1g;->a:Lu1g;
+    const-class v0, Lu1g;
 
-    new-instance v1, Lq2b;
+    invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
 
-    const-string v2, "one.me.webapp.domain.jsbridge.delegates.system.WebAppSetupClosingBehaviorRequest"
+    move-result-object v0
 
-    const/4 v3, 0x1
+    iput-object v0, p0, Lu1g;->p:Ljava/lang/String;
 
-    invoke-direct {v1, v2, v0, v3}, Lq2b;-><init>(Ljava/lang/String;Lra6;I)V
+    const/16 v1, 0x10
 
-    const-string v0, "needConfirmation"
+    new-array v1, v1, [F
 
-    const/4 v2, 0x0
+    iput-object v1, p0, Lu1g;->t:[F
 
-    invoke-virtual {v1, v0, v2}, Lq2b;->i(Ljava/lang/String;Z)V
+    const/4 v1, -0x1
 
-    sput-object v1, Lu1g;->descriptor:Lx4d;
+    iput v1, p0, Lu1g;->v:I
+
+    sget-object v1, Ljtg;->g:Loja;
+
+    if-nez v1, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    sget-object v2, Lqz7;->o:Lqz7;
+
+    invoke-virtual {v1, v2}, Loja;->a(Lqz7;)Z
+
+    move-result v3
+
+    if-eqz v3, :cond_1
+
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    const-string v4, "init, previewSize="
+
+    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v3, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string p1, ", dynamicRange="
+
+    invoke-virtual {v3, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    const/4 v3, 0x0
+
+    invoke-virtual {v1, v2, v0, p1, v3}, Loja;->b(Lqz7;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    :cond_1
+    :goto_0
+    sget-object p1, Ljava/util/Collections;->EMPTY_MAP:Ljava/util/Map;
+
+    invoke-virtual {p0, p2}, Lor4;->n(Lgz4;)Lr90;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Lu40;Ljava/lang/Object;)V
-    .locals 1
+.method public final q()V
+    .locals 4
 
-    check-cast p2, Lw1g;
+    iget-object v0, p0, Lu1g;->p:Ljava/lang/String;
 
-    sget-object p0, Lu1g;->descriptor:Lx4d;
+    const-string v1, "release"
 
-    invoke-virtual {p1, p0}, Lu40;->c(Lx4d;)Lu40;
+    invoke-static {v0, v1}, Ljtg;->S(Ljava/lang/String;Ljava/lang/String;)V
 
-    move-result-object p1
+    iget-object v0, p0, Lu1g;->s:Lone/me/sdk/gl/effects/objects/TrivialFragmentShader;
 
-    iget-boolean p2, p2, Lw1g;->a:Z
+    if-eqz v0, :cond_0
 
+    invoke-virtual {v0}, Lone/me/sdk/gl/effects/objects/TrivialFragmentShader;->release()V
+
+    :cond_0
     const/4 v0, 0x0
 
-    invoke-virtual {p1, p0, v0, p2}, Lu40;->f(Lx4d;IZ)V
+    iput-object v0, p0, Lu1g;->s:Lone/me/sdk/gl/effects/objects/TrivialFragmentShader;
 
-    invoke-virtual {p1}, Lu40;->n()V
+    iget-object v2, p0, Lu1g;->r:Lone/me/sdk/gl/effects/objects/OesToImage2dRenderer;
+
+    if-eqz v2, :cond_1
+
+    invoke-virtual {v2}, Lone/me/sdk/gl/effects/objects/OesToImage2dRenderer;->release()V
+
+    :cond_1
+    iput-object v0, p0, Lu1g;->r:Lone/me/sdk/gl/effects/objects/OesToImage2dRenderer;
+
+    iget-object v2, p0, Lu1g;->q:Ljee;
+
+    if-eqz v2, :cond_2
+
+    iget-object v3, v2, Ljee;->d:Ljava/lang/String;
+
+    invoke-static {v3, v1}, Ljtg;->S(Ljava/lang/String;Ljava/lang/String;)V
+
+    iget-object v1, v2, Ljee;->e:Lone/me/sdk/gl/effects/VideoMessageStencilHolder;
+
+    invoke-virtual {v1}, Lone/me/sdk/gl/effects/VideoMessageStencilHolder;->release()V
+
+    iget-object v1, v2, Ljee;->f:Lone/me/sdk/gl/effects/objects/FrameBuffer;
+
+    invoke-virtual {v1}, Lone/me/sdk/gl/effects/objects/FrameBuffer;->release()V
+
+    :cond_2
+    iput-object v0, p0, Lu1g;->q:Ljee;
+
+    iput-object v0, p0, Lu1g;->w:Lokf;
+
+    invoke-super {p0}, Lor4;->q()V
 
     return-void
 .end method
 
-.method public final b(Lnye;)Ljava/lang/Object;
-    .locals 7
+.method public final w(Landroid/graphics/SurfaceTexture;Landroid/view/Surface;[FZ)V
+    .locals 19
 
-    sget-object p0, Lu1g;->descriptor:Lx4d;
+    move-object/from16 v0, p0
 
-    invoke-virtual {p1, p0}, Lnye;->i(Lx4d;)Lnye;
+    move-object/from16 v1, p2
 
-    move-result-object p1
+    move-object/from16 v4, p3
 
-    const/4 v0, 0x1
+    invoke-virtual {v0, v1}, Lor4;->l(Landroid/view/Surface;)Lia0;
 
-    const/4 v1, 0x0
+    move-result-object v2
 
-    move v2, v0
+    sget-object v3, Lee6;->j:Lia0;
 
-    move v3, v1
+    invoke-virtual {v2, v3}, Lia0;->equals(Ljava/lang/Object;)Z
 
-    move v4, v3
+    move-result v3
 
+    if-eqz v3, :cond_1
+
+    invoke-virtual {v0, v1}, Lor4;->h(Landroid/view/Surface;)Lia0;
+
+    move-result-object v2
+
+    if-nez v2, :cond_0
+
+    goto/16 :goto_3
+
+    :cond_0
+    iget-object v3, v0, Lor4;->d:Ljava/lang/Object;
+
+    check-cast v3, Ljava/util/HashMap;
+
+    invoke-virtual {v3, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    :cond_1
+    iget-object v3, v0, Lor4;->c:Ljava/lang/Object;
+
+    check-cast v3, Ljava/util/concurrent/atomic/AtomicBoolean;
+
+    const/4 v8, 0x1
+
+    invoke-static {v3, v8}, Lee6;->d(Ljava/util/concurrent/atomic/AtomicBoolean;Z)V
+
+    iget-object v3, v0, Lor4;->e:Ljava/lang/Object;
+
+    check-cast v3, Ljava/lang/Thread;
+
+    invoke-static {v3}, Lee6;->c(Ljava/lang/Thread;)V
+
+    iget v3, v0, Lor4;->b:I
+
+    iget v11, v2, Lia0;->b:I
+
+    iget v12, v2, Lia0;->c:I
+
+    iget-object v9, v2, Lia0;->a:Landroid/opengl/EGLSurface;
+
+    invoke-virtual/range {p1 .. p1}, Landroid/graphics/SurfaceTexture;->getTimestamp()J
+
+    move-result-wide v13
+
+    iget-object v2, v0, Lu1g;->q:Ljee;
+
+    if-nez v2, :cond_2
+
+    new-instance v2, Ljee;
+
+    iget-object v5, v0, Lu1g;->o:Landroid/util/Size;
+
+    invoke-direct {v2, v5}, Ljee;-><init>(Landroid/util/Size;)V
+
+    iput-object v2, v0, Lu1g;->q:Ljee;
+
+    :cond_2
+    move-object v10, v2
+
+    iget-object v15, v10, Ljee;->f:Lone/me/sdk/gl/effects/objects/FrameBuffer;
+
+    iget-object v2, v0, Lu1g;->r:Lone/me/sdk/gl/effects/objects/OesToImage2dRenderer;
+
+    if-nez v2, :cond_3
+
+    new-instance v2, Lone/me/sdk/gl/effects/objects/OesToImage2dRenderer;
+
+    invoke-direct {v2}, Lone/me/sdk/gl/effects/objects/OesToImage2dRenderer;-><init>()V
+
+    iput-object v2, v0, Lu1g;->r:Lone/me/sdk/gl/effects/objects/OesToImage2dRenderer;
+
+    :cond_3
+    iget-object v5, v0, Lu1g;->s:Lone/me/sdk/gl/effects/objects/TrivialFragmentShader;
+
+    const/4 v6, 0x0
+
+    if-nez v5, :cond_4
+
+    new-instance v5, Lone/me/sdk/gl/effects/objects/TrivialFragmentShader;
+
+    invoke-direct {v5, v6, v6}, Lone/me/sdk/gl/effects/objects/TrivialFragmentShader;-><init>(IZ)V
+
+    iput-object v5, v0, Lu1g;->s:Lone/me/sdk/gl/effects/objects/TrivialFragmentShader;
+
+    :cond_4
+    move/from16 v16, v8
+
+    move-object/from16 v17, v9
+
+    iget-wide v8, v0, Lu1g;->u:J
+
+    cmp-long v7, v13, v8
+
+    iget-object v8, v0, Lu1g;->t:[F
+
+    if-nez v7, :cond_6
+
+    iget v7, v0, Lu1g;->v:I
+
+    if-ne v3, v7, :cond_6
+
+    invoke-static {v4, v8}, Ljava/util/Arrays;->equals([F[F)Z
+
+    move-result v7
+
+    if-nez v7, :cond_5
+
+    goto :goto_0
+
+    :cond_5
+    move-object/from16 v18, v5
+
+    move v9, v6
+
+    goto :goto_1
+
+    :cond_6
     :goto_0
-    if-eqz v2, :cond_2
+    invoke-virtual {v15}, Lone/me/sdk/gl/effects/objects/FrameBuffer;->bind()V
 
-    invoke-virtual {p1, p0}, Lnye;->x(Lx4d;)I
+    iget v7, v10, Ljee;->b:I
 
-    move-result v5
+    iget v9, v10, Ljee;->c:I
 
-    const/4 v6, -0x1
+    invoke-static {v6, v6, v7, v9}, Landroid/opengl/GLES20;->glViewport(IIII)V
 
-    if-eq v5, v6, :cond_1
+    move v7, v6
 
-    if-nez v5, :cond_0
+    const/4 v6, 0x4
 
-    invoke-virtual {p1, p0, v1}, Lnye;->w(Lx4d;I)Z
+    move v9, v7
+
+    const/4 v7, 0x0
+
+    move-object/from16 v18, v5
+
+    const/4 v5, 0x0
+
+    invoke-static/range {v2 .. v7}, Lone/me/sdk/gl/effects/objects/OesToImage2dRenderer;->render$default(Lone/me/sdk/gl/effects/objects/OesToImage2dRenderer;I[F[FILjava/lang/Object;)V
+
+    invoke-virtual {v15}, Lone/me/sdk/gl/effects/objects/FrameBuffer;->unbind()V
+
+    array-length v2, v4
+
+    invoke-static {v4, v9, v8, v9, v2}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
+
+    iput-wide v13, v0, Lu1g;->u:J
+
+    iput v3, v0, Lu1g;->v:I
+
+    :goto_1
+    xor-int/lit8 v2, p4, 0x1
+
+    move v7, v9
+
+    iget-object v9, v10, Ljee;->e:Lone/me/sdk/gl/effects/VideoMessageStencilHolder;
+
+    invoke-virtual {v15}, Lone/me/sdk/gl/effects/objects/FrameBuffer;->getTextureId()I
+
+    move-result v3
+
+    iget-object v4, v10, Ljee;->a:Landroid/util/Size;
+
+    move-wide v5, v13
+
+    move v13, v11
+
+    invoke-virtual {v4}, Landroid/util/Size;->getWidth()I
+
+    move-result v11
+
+    invoke-virtual {v4}, Landroid/util/Size;->getHeight()I
 
     move-result v4
 
-    move v3, v0
+    const/16 v16, 0x0
 
-    goto :goto_0
+    move v10, v3
 
-    :cond_0
-    new-instance p0, Lkotlinx/serialization/UnknownFieldException;
+    move v14, v12
 
-    invoke-direct {p0, v5}, Lkotlinx/serialization/UnknownFieldException;-><init>(I)V
+    move-object v3, v15
 
-    throw p0
+    move v15, v2
 
-    :cond_1
-    move v2, v1
+    move v12, v4
 
-    goto :goto_0
+    move-object/from16 v2, v17
 
-    :cond_2
-    invoke-virtual {p1, p0}, Lnye;->G(Lx4d;)V
+    move-object/from16 v4, v18
 
-    new-instance p0, Lw1g;
+    invoke-virtual/range {v9 .. v16}, Lone/me/sdk/gl/effects/VideoMessageStencilHolder;->render(IIIIIZZ)V
 
-    invoke-direct {p0, v3, v4}, Lw1g;-><init>(IZ)V
+    move v12, v14
 
-    return-object p0
-.end method
+    iget-object v8, v0, Lor4;->k:Ljava/lang/Object;
 
-.method public final c()[Lcc7;
-    .locals 2
+    check-cast v8, Landroid/view/Surface;
 
-    const/4 p0, 0x1
+    invoke-static {v8, v1}, Lvyg;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    new-array p0, p0, [Lcc7;
+    move-result v8
 
-    sget-object v0, Ltp0;->a:Ltp0;
+    if-nez v8, :cond_7
 
-    const/4 v1, 0x0
+    invoke-virtual {v0, v2}, Lor4;->o(Landroid/opengl/EGLSurface;)V
 
-    aput-object v0, p0, v1
+    iput-object v1, v0, Lor4;->k:Ljava/lang/Object;
 
-    return-object p0
-.end method
+    :cond_7
+    invoke-static {v7, v7, v13, v12}, Landroid/opengl/GLES20;->glViewport(IIII)V
 
-.method public final d()Lx4d;
-    .locals 0
+    invoke-virtual {v3}, Lone/me/sdk/gl/effects/objects/FrameBuffer;->getTextureId()I
 
-    sget-object p0, Lu1g;->descriptor:Lx4d;
+    move-result v8
 
-    return-object p0
+    invoke-virtual {v4, v8}, Lone/me/sdk/gl/effects/objects/TrivialFragmentShader;->setTextureId(I)V
+
+    invoke-virtual {v4}, Lone/me/sdk/gl/effects/objects/TrivialFragmentShader;->render()V
+
+    iget-object v4, v0, Lu1g;->w:Lokf;
+
+    const/16 v8, 0x10
+
+    const/4 v9, 0x0
+
+    if-eqz v4, :cond_9
+
+    invoke-virtual {v3}, Lone/me/sdk/gl/effects/objects/FrameBuffer;->getTextureId()I
+
+    move-result v3
+
+    mul-int v11, v13, v12
+
+    mul-int/lit8 v11, v11, 0x4
+
+    invoke-static {v11}, Ljava/nio/ByteBuffer;->allocateDirect(I)Ljava/nio/ByteBuffer;
+
+    move-result-object v15
+
+    invoke-static {v7, v7, v13, v12}, Landroid/opengl/GLES20;->glViewport(IIII)V
+
+    new-array v4, v8, [F
+
+    invoke-static {v4, v7}, Landroid/opengl/Matrix;->setIdentityM([FI)V
+
+    const/high16 v10, 0x3f800000    # 1.0f
+
+    const/high16 v11, -0x40800000    # -1.0f
+
+    invoke-static {v4, v7, v10, v11, v10}, Landroid/opengl/Matrix;->scaleM([FIFFF)V
+
+    new-instance v10, Lone/me/sdk/gl/effects/objects/FrameBuffer;
+
+    invoke-direct {v10, v13, v12}, Lone/me/sdk/gl/effects/objects/FrameBuffer;-><init>(II)V
+
+    new-instance v11, Lone/me/sdk/gl/effects/objects/TrivialFragmentShader;
+
+    invoke-direct {v11, v7, v7}, Lone/me/sdk/gl/effects/objects/TrivialFragmentShader;-><init>(IZ)V
+
+    invoke-virtual {v11, v3}, Lone/me/sdk/gl/effects/objects/TrivialFragmentShader;->setTextureId(I)V
+
+    invoke-virtual {v11, v4}, Lone/me/sdk/gl/effects/objects/TrivialFragmentShader;->setMVPMat([F)V
+
+    invoke-virtual {v10}, Lone/me/sdk/gl/effects/objects/FrameBuffer;->bind()V
+
+    invoke-virtual {v11}, Lone/me/sdk/gl/effects/objects/TrivialFragmentShader;->render()V
+
+    move-object v3, v11
+
+    move v11, v13
+
+    const/16 v13, 0x1908
+
+    const/16 v14, 0x1401
+
+    move-object v4, v9
+
+    const/4 v9, 0x0
+
+    move-object/from16 v16, v10
+
+    const/4 v10, 0x0
+
+    invoke-static/range {v9 .. v15}, Landroid/opengl/GLES20;->glReadPixels(IIIIIILjava/nio/Buffer;)V
+
+    move v13, v11
+
+    invoke-virtual/range {v16 .. v16}, Lone/me/sdk/gl/effects/objects/FrameBuffer;->unbind()V
+
+    sget-object v9, Landroid/graphics/Bitmap$Config;->ARGB_8888:Landroid/graphics/Bitmap$Config;
+
+    invoke-static {v13, v12, v9}, Landroid/graphics/Bitmap;->createBitmap(IILandroid/graphics/Bitmap$Config;)Landroid/graphics/Bitmap;
+
+    move-result-object v9
+
+    mul-int/lit8 v11, v13, 0x4
+
+    invoke-static {v9, v15, v11}, Landroidx/camera/core/ImageProcessingUtil;->e(Landroid/graphics/Bitmap;Ljava/nio/ByteBuffer;I)V
+
+    new-instance v10, Ljava/io/ByteArrayOutputStream;
+
+    invoke-direct {v10}, Ljava/io/ByteArrayOutputStream;-><init>()V
+
+    :try_start_0
+    sget-object v11, Landroid/graphics/Bitmap$CompressFormat;->JPEG:Landroid/graphics/Bitmap$CompressFormat;
+
+    const/16 v12, 0x64
+
+    invoke-virtual {v9, v11, v12, v10}, Landroid/graphics/Bitmap;->compress(Landroid/graphics/Bitmap$CompressFormat;ILjava/io/OutputStream;)Z
+
+    invoke-virtual {v10}, Ljava/io/ByteArrayOutputStream;->toByteArray()[B
+
+    move-result-object v11
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    invoke-virtual {v9}, Landroid/graphics/Bitmap;->recycle()V
+
+    invoke-virtual {v10}, Ljava/io/ByteArrayOutputStream;->close()V
+
+    invoke-virtual/range {v16 .. v16}, Lone/me/sdk/gl/effects/objects/FrameBuffer;->release()V
+
+    invoke-virtual {v3}, Lone/me/sdk/gl/effects/objects/TrivialFragmentShader;->release()V
+
+    if-eqz v11, :cond_8
+
+    iget-object v3, v0, Lu1g;->w:Lokf;
+
+    if-eqz v3, :cond_8
+
+    invoke-virtual {v3, v11}, Lokf;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+
+    :cond_8
+    iput-object v4, v0, Lu1g;->w:Lokf;
+
+    goto :goto_2
+
+    :catchall_0
+    move-exception v0
+
+    invoke-virtual {v9}, Landroid/graphics/Bitmap;->recycle()V
+
+    invoke-virtual {v10}, Ljava/io/ByteArrayOutputStream;->close()V
+
+    invoke-virtual/range {v16 .. v16}, Lone/me/sdk/gl/effects/objects/FrameBuffer;->release()V
+
+    invoke-virtual {v3}, Lone/me/sdk/gl/effects/objects/TrivialFragmentShader;->release()V
+
+    throw v0
+
+    :cond_9
+    move-object v4, v9
+
+    :goto_2
+    iget-object v3, v0, Lor4;->f:Ljava/lang/Object;
+
+    check-cast v3, Landroid/opengl/EGLDisplay;
+
+    invoke-static {v3, v2, v5, v6}, Landroid/opengl/EGLExt;->eglPresentationTimeANDROID(Landroid/opengl/EGLDisplay;Landroid/opengl/EGLSurface;J)Z
+
+    iget-object v3, v0, Lor4;->f:Ljava/lang/Object;
+
+    check-cast v3, Landroid/opengl/EGLDisplay;
+
+    invoke-static {v3, v2}, Landroid/opengl/EGL14;->eglSwapBuffers(Landroid/opengl/EGLDisplay;Landroid/opengl/EGLSurface;)Z
+
+    move-result v2
+
+    if-nez v2, :cond_a
+
+    invoke-static {}, Landroid/opengl/EGL14;->eglGetError()I
+
+    move-result v2
+
+    invoke-static {v8}, Luyg;->k(I)V
+
+    int-to-long v2, v2
+
+    const-wide v5, 0xffffffffL
+
+    and-long/2addr v2, v5
+
+    invoke-static {v8, v2, v3}, Lm7g;->A(IJ)Ljava/lang/String;
+
+    move-result-object v2
+
+    const-string v3, "failed to swap buffers, error=0x"
+
+    iget-object v5, v0, Lu1g;->p:Ljava/lang/String;
+
+    invoke-static {v3, v2, v5, v4}, Lee5;->o(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    invoke-virtual {v0, v1, v7}, Lor4;->s(Landroid/view/Surface;Z)V
+
+    :cond_a
+    :goto_3
+    return-void
 .end method

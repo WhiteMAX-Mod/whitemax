@@ -1,103 +1,145 @@
-.class public final synthetic Lqb1;
-.super Ljava/lang/Object;
+.class public final Lqb1;
+.super Lub1;
 .source "SourceFile"
-
-# interfaces
-.implements Landroid/view/View$OnClickListener;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final a:Ljava/lang/CharSequence;
 
-.field public final synthetic b:Lone/me/calls/ui/bottomsheet/previewjoinlink/CallJoinLinkPreviewWidget;
+.field public final b:Ljava/lang/String;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lone/me/calls/ui/bottomsheet/previewjoinlink/CallJoinLinkPreviewWidget;I)V
+.method public constructor <init>(Ljava/lang/String;Ljava/lang/CharSequence;)V
     .locals 0
 
-    iput p2, p0, Lqb1;->a:I
-
-    iput-object p1, p0, Lqb1;->b:Lone/me/calls/ui/bottomsheet/previewjoinlink/CallJoinLinkPreviewWidget;
-
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p2, p0, Lqb1;->a:Ljava/lang/CharSequence;
+
+    iput-object p1, p0, Lqb1;->b:Ljava/lang/String;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onClick(Landroid/view/View;)V
-    .locals 7
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
 
-    iget p1, p0, Lqb1;->a:I
+    const/4 v0, 0x1
 
-    iget-object p0, p0, Lqb1;->b:Lone/me/calls/ui/bottomsheet/previewjoinlink/CallJoinLinkPreviewWidget;
+    if-ne p0, p1, :cond_0
 
-    packed-switch p1, :pswitch_data_0
+    return v0
 
-    sget-object p1, Lone/me/calls/ui/bottomsheet/previewjoinlink/CallJoinLinkPreviewWidget;->x0:[Lbc7;
+    :cond_0
+    instance-of v1, p1, Lqb1;
 
-    invoke-virtual {p0}, Lone/me/calls/ui/bottomsheet/previewjoinlink/CallJoinLinkPreviewWidget;->t0()Lnb1;
+    const/4 v2, 0x0
 
-    move-result-object p0
+    if-nez v1, :cond_1
 
-    iget-object p1, p0, Lnb1;->t0:Lazd;
+    return v2
 
-    invoke-virtual {p1}, Lazd;->getValue()Ljava/lang/Object;
+    :cond_1
+    check-cast p1, Lqb1;
 
-    move-result-object p1
+    iget-object v1, p0, Lqb1;->a:Ljava/lang/CharSequence;
 
-    check-cast p1, Lfb1;
+    iget-object v3, p1, Lqb1;->a:Ljava/lang/CharSequence;
 
-    iget-object v0, p0, Lnb1;->w0:Lj35;
+    invoke-static {v1, v3}, Lvyg;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    new-instance v1, Lw91;
+    move-result v1
 
-    iget-object p0, p0, Lnb1;->b:Ljava/lang/String;
+    if-nez v1, :cond_2
 
-    iget-object v2, p1, Lfb1;->c:Lf38;
+    return v2
 
-    const/4 v3, 0x0
+    :cond_2
+    iget-object p0, p0, Lqb1;->b:Ljava/lang/String;
 
-    const/4 v4, 0x1
+    iget-object p1, p1, Lqb1;->b:Ljava/lang/String;
 
-    sget-object v5, Lf38;->b:Lf38;
+    invoke-static {p0, p1}, Lvyg;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    if-ne v2, v5, :cond_0
+    move-result p0
 
-    move v2, v4
+    if-nez p0, :cond_3
+
+    return v2
+
+    :cond_3
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 2
+
+    const/4 v0, 0x0
+
+    iget-object v1, p0, Lqb1;->a:Ljava/lang/CharSequence;
+
+    if-nez v1, :cond_0
+
+    move v1, v0
 
     goto :goto_0
 
     :cond_0
-    move v2, v3
+    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
+
+    move-result v1
 
     :goto_0
-    iget-object v6, p1, Lfb1;->b:Lf38;
+    mul-int/lit8 v1, v1, 0x1f
 
-    if-ne v6, v5, :cond_1
+    iget-object p0, p0, Lqb1;->b:Ljava/lang/String;
 
-    move v3, v4
+    if-nez p0, :cond_1
+
+    goto :goto_1
 
     :cond_1
-    iget-boolean p1, p1, Lfb1;->d:Z
+    invoke-virtual {p0}, Ljava/lang/String;->hashCode()I
 
-    invoke-direct {v1, p0, v2, v3, p1}, Lw91;-><init>(Ljava/lang/String;ZZZ)V
+    move-result v0
 
-    invoke-static {v0, v1}, Ljof;->o(Lj35;Ljava/lang/Object;)V
+    :goto_1
+    add-int/2addr v1, v0
 
-    return-void
+    return v1
+.end method
 
-    :pswitch_0
-    sget-object p1, Lone/me/calls/ui/bottomsheet/previewjoinlink/CallJoinLinkPreviewWidget;->x0:[Lbc7;
+.method public final toString()Ljava/lang/String;
+    .locals 2
 
-    invoke-virtual {p0}, Lone/me/calls/ui/bottomsheet/previewjoinlink/CallJoinLinkPreviewWidget;->u0()V
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    return-void
+    const-string v1, "Name(name="
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v1, p0, Lqb1;->a:Ljava/lang/CharSequence;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", accessibility="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object p0, p0, Lqb1;->b:Ljava/lang/String;
+
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string p0, ")"
+
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    return-object p0
 .end method

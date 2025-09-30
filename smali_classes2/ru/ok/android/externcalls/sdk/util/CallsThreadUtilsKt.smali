@@ -12,13 +12,13 @@
         "",
         "T",
         "Lkotlin/Function0;",
-        "Lkj3;",
+        "Lqm3;",
         "onSuccess",
         "Ljava/lang/Runnable;",
         "onError",
-        "Lam4;",
+        "Loq4;",
         "executeOnIoThread",
-        "(Lv56;Lkj3;Ljava/lang/Runnable;)Lam4;",
+        "(Lzb6;Lqm3;Ljava/lang/Runnable;)Loq4;",
         "calls-sdk_release"
     }
     k = 0x2
@@ -32,89 +32,89 @@
 
 
 # direct methods
-.method public static synthetic a(Lv56;Lxod;)V
+.method public static synthetic a(Lzb6;Lo2e;)V
     .locals 0
 
-    invoke-static {p0, p1}, Lru/ok/android/externcalls/sdk/util/CallsThreadUtilsKt;->executeOnIoThread$lambda$0(Lv56;Lbpd;)V
+    invoke-static {p0, p1}, Lru/ok/android/externcalls/sdk/util/CallsThreadUtilsKt;->executeOnIoThread$lambda$0(Lzb6;Ls2e;)V
 
     return-void
 .end method
 
-.method public static final executeOnIoThread(Lv56;Lkj3;Ljava/lang/Runnable;)Lam4;
+.method public static final executeOnIoThread(Lzb6;Lqm3;Ljava/lang/Runnable;)Loq4;
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<T:",
             "Ljava/lang/Object;",
             ">(",
-            "Lv56;",
-            "Lkj3;",
+            "Lzb6;",
+            "Lqm3;",
             "Ljava/lang/Runnable;",
             ")",
-            "Lam4;"
+            "Loq4;"
         }
     .end annotation
 
-    new-instance v0, Lfo1;
+    new-instance v0, Llq1;
 
     const/4 v1, 0x2
 
-    invoke-direct {v0, v1, p0}, Lfo1;-><init>(ILv56;)V
+    invoke-direct {v0, v1, p0}, Llq1;-><init>(ILzb6;)V
 
-    new-instance p0, Lpz9;
+    new-instance p0, Ls7a;
 
     const/4 v1, 0x1
 
-    invoke-direct {p0, v1, v0}, Lpz9;-><init>(ILjava/lang/Object;)V
+    invoke-direct {p0, v1, v0}, Ls7a;-><init>(ILjava/lang/Object;)V
 
-    invoke-static {}, Ltsc;->b()Lgsc;
+    invoke-static {}, Li6d;->b()Lv5d;
 
     move-result-object v0
 
-    invoke-virtual {p0, v0}, Ltod;->m(Lgsc;)Lmpd;
+    invoke-virtual {p0, v0}, Lk2e;->m(Lv5d;)Ld3e;
 
     move-result-object p0
 
-    invoke-static {}, Lud;->a()Lgsc;
+    invoke-static {}, Lzd;->a()Lv5d;
 
     move-result-object v0
 
-    invoke-virtual {p0, v0}, Ltod;->i(Lgsc;)Lmpd;
+    invoke-virtual {p0, v0}, Lk2e;->i(Lv5d;)Ld3e;
 
     move-result-object p0
 
     new-instance v0, Lru/ok/android/externcalls/sdk/util/CallsThreadUtilsKt$executeOnIoThread$2;
 
-    invoke-direct {v0, p1}, Lru/ok/android/externcalls/sdk/util/CallsThreadUtilsKt$executeOnIoThread$2;-><init>(Lkj3;)V
+    invoke-direct {v0, p1}, Lru/ok/android/externcalls/sdk/util/CallsThreadUtilsKt$executeOnIoThread$2;-><init>(Lqm3;)V
 
     new-instance p1, Lru/ok/android/externcalls/sdk/util/CallsThreadUtilsKt$executeOnIoThread$3;
 
     invoke-direct {p1, p2}, Lru/ok/android/externcalls/sdk/util/CallsThreadUtilsKt$executeOnIoThread$3;-><init>(Ljava/lang/Runnable;)V
 
-    new-instance p2, Lfq1;
+    new-instance p2, Lns1;
 
     const/4 v1, 0x2
 
-    invoke-direct {p2, v0, v1, p1}, Lfq1;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+    invoke-direct {p2, v0, v1, p1}, Lns1;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
 
-    invoke-virtual {p0, p2}, Ltod;->k(Lnpd;)V
+    invoke-virtual {p0, p2}, Lk2e;->k(Le3e;)V
 
     return-object p2
 .end method
 
-.method private static final executeOnIoThread$lambda$0(Lv56;Lbpd;)V
+.method private static final executeOnIoThread$lambda$0(Lzb6;Ls2e;)V
     .locals 1
 
     :try_start_0
-    invoke-interface {p0}, Lv56;->invoke()Ljava/lang/Object;
+    invoke-interface {p0}, Lzb6;->invoke()Ljava/lang/Object;
 
     move-result-object p0
 
     move-object v0, p1
 
-    check-cast v0, Lxod;
+    check-cast v0, Lo2e;
 
-    invoke-virtual {v0, p0}, Lxod;->a(Ljava/lang/Object;)V
+    invoke-virtual {v0, p0}, Lo2e;->a(Ljava/lang/Object;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -123,9 +123,9 @@
     :catchall_0
     move-exception p0
 
-    check-cast p1, Lxod;
+    check-cast p1, Lo2e;
 
-    invoke-virtual {p1, p0}, Lxod;->onError(Ljava/lang/Throwable;)V
+    invoke-virtual {p1, p0}, Lo2e;->onError(Ljava/lang/Throwable;)V
 
     return-void
 .end method

@@ -1,64 +1,49 @@
-.class public final synthetic Lcj8;
-.super Ljava/lang/Object;
+.class public final Lcj8;
+.super Ljx3;
 .source "SourceFile"
-
-# interfaces
-.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final synthetic X:Lej8;
 
-.field public final synthetic b:J
+.field public Y:I
+
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method public synthetic constructor <init>(JI)V
+.method public constructor <init>(Lej8;Ljx3;)V
     .locals 0
 
-    iput p3, p0, Lcj8;->a:I
+    iput-object p1, p0, Lcj8;->X:Lej8;
 
-    iput-wide p1, p0, Lcj8;->b:J
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p2}, Ljx3;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
-    .locals 2
+.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    iget v0, p0, Lcj8;->a:I
+    iput-object p1, p0, Lcj8;->o:Ljava/lang/Object;
 
-    packed-switch v0, :pswitch_data_0
+    iget p1, p0, Lcj8;->Y:I
 
-    iget-wide v0, p0, Lcj8;->b:J
+    const/high16 v0, -0x80000000
 
-    invoke-static {v0, v1}, Lone/me/rlottie/RLottieDrawable;->b(J)V
+    or-int/2addr p1, v0
 
-    return-void
+    iput p1, p0, Lcj8;->Y:I
 
-    :pswitch_0
-    iget-wide v0, p0, Lcj8;->b:J
+    iget-object p1, p0, Lcj8;->X:Lej8;
 
-    invoke-static {v0, v1}, Lone/me/rlottie/RLottieDrawable;->a(J)V
+    const/4 v0, 0x0
 
-    return-void
+    invoke-virtual {p1, v0, v0, p0}, Lej8;->c(Lxx8;Ljava/util/Set;Ljx3;)Ljava/lang/Object;
 
-    :pswitch_1
-    iget-wide v0, p0, Lcj8;->b:J
+    move-result-object p0
 
-    invoke-static {v0, v1}, Lorg/webrtc/MediaSource;->a(J)V
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    return-object p0
 .end method

@@ -4,24 +4,30 @@
 
 
 # instance fields
-.field public final a:I
+.field public a:Lnz1;
 
-.field public final b:Z
+.field public final b:Lpid;
 
-.field public c:I
+.field public final c:Lkga;
+
+.field public final d:Lkw1;
 
 
 # direct methods
-.method public constructor <init>(IIZ)V
-    .locals 0
+.method public constructor <init>(Lpid;Lkga;Lkw1;)V
+    .locals 1
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput p1, p0, Lf02;->a:I
+    const/4 v0, 0x0
 
-    iput-boolean p3, p0, Lf02;->b:Z
+    iput-object v0, p0, Lf02;->a:Lnz1;
 
-    iput p2, p0, Lf02;->c:I
+    iput-object p1, p0, Lf02;->b:Lpid;
+
+    iput-object p2, p0, Lf02;->c:Lkga;
+
+    iput-object p3, p0, Lf02;->d:Lkw1;
 
     return-void
 .end method

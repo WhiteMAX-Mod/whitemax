@@ -1,145 +1,175 @@
-.class public final Lj65;
+.class public final synthetic Lj65;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lfgb;
+
 
 # instance fields
-.field public final a:Landroid/content/Context;
-
-.field public final b:Lbge;
-
-.field public final c:Luc4;
-
-.field public final d:Li65;
-
-.field public e:Lvbe;
-
-.field public f:Lvbe;
-
-.field public final g:Li65;
-
-.field public final h:Landroid/os/Looper;
-
-.field public final i:Lr20;
-
-.field public final j:I
-
-.field public final k:Z
-
-.field public final l:Lc0d;
-
-.field public final m:Lmc4;
-
-.field public final n:J
-
-.field public o:Z
+.field public final synthetic a:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;Lr3d;)V
-    .locals 6
-
-    new-instance v0, Luc4;
-
-    const/4 v1, 0x5
-
-    invoke-direct {v0, v1, p2}, Luc4;-><init>(ILjava/lang/Object;)V
-
-    new-instance p2, Li65;
-
-    const/4 v1, 0x2
-
-    invoke-direct {p2, p1, v1}, Li65;-><init>(Landroid/content/Context;I)V
-
-    new-instance v1, Li65;
-
-    const/4 v2, 0x3
-
-    invoke-direct {v1, p1, v2}, Li65;-><init>(Landroid/content/Context;I)V
-
-    new-instance v3, Llb3;
-
-    invoke-direct {v3, v2}, Llb3;-><init>(I)V
-
-    new-instance v2, Li65;
-
-    const/4 v4, 0x6
-
-    invoke-direct {v2, p1, v4}, Li65;-><init>(Landroid/content/Context;I)V
+.method public synthetic constructor <init>(Ljava/lang/String;)V
+    .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lj65;->a:Landroid/content/Context;
+    iput-object p1, p0, Lj65;->a:Ljava/lang/String;
 
-    iput-object v0, p0, Lj65;->c:Luc4;
+    return-void
+.end method
 
-    iput-object p2, p0, Lj65;->d:Li65;
 
-    iput-object v1, p0, Lj65;->e:Lvbe;
+# virtual methods
+.method public final apply(Ljava/lang/Object;)Z
+    .locals 3
 
-    iput-object v3, p0, Lj65;->f:Lvbe;
+    check-cast p1, Landroid/media/MediaCodecInfo;
 
-    iput-object v2, p0, Lj65;->g:Li65;
+    sget-object v0, Lk65;->a:Llr;
 
-    sget p1, Lnaf;->a:I
+    sget v0, Lnrf;->a:I
 
-    invoke-static {}, Landroid/os/Looper;->myLooper()Landroid/os/Looper;
+    const/16 v1, 0x1d
 
-    move-result-object p1
+    if-lt v0, v1, :cond_0
 
-    if-eqz p1, :cond_0
+    invoke-virtual {p1}, Landroid/media/MediaCodecInfo;->isHardwareAccelerated()Z
+
+    move-result p0
+
+    return p0
+
+    :cond_0
+    const/4 v2, 0x1
+
+    if-lt v0, v1, :cond_1
+
+    invoke-virtual {p1}, Landroid/media/MediaCodecInfo;->isSoftwareOnly()Z
+
+    move-result p0
+
+    goto :goto_1
+
+    :cond_1
+    iget-object p0, p0, Lj65;->a:Ljava/lang/String;
+
+    invoke-static {p0}, Leg9;->i(Ljava/lang/String;)Z
+
+    move-result p0
+
+    if-eqz p0, :cond_3
+
+    :cond_2
+    :goto_0
+    move p0, v2
+
+    goto :goto_1
+
+    :cond_3
+    invoke-virtual {p1}, Landroid/media/MediaCodecInfo;->getName()Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-static {p0}, Ly30;->J(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p0
+
+    const-string p1, "arc."
+
+    invoke-virtual {p0, p1}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+
+    move-result p1
+
+    const/4 v0, 0x0
+
+    if-eqz p1, :cond_5
+
+    :cond_4
+    move p0, v0
+
+    goto :goto_1
+
+    :cond_5
+    const-string p1, "omx.google."
+
+    invoke-virtual {p0, p1}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_2
+
+    const-string p1, "omx.ffmpeg."
+
+    invoke-virtual {p0, p1}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_2
+
+    const-string p1, "omx.sec."
+
+    invoke-virtual {p0, p1}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_6
+
+    const-string p1, ".sw."
+
+    invoke-virtual {p0, p1}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_2
+
+    :cond_6
+    const-string p1, "omx.qcom.video.decoder.hevcswvdec"
+
+    invoke-virtual {p0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_2
+
+    const-string p1, "c2.android."
+
+    invoke-virtual {p0, p1}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_2
+
+    const-string p1, "c2.google."
+
+    invoke-virtual {p0, p1}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_2
+
+    const-string p1, "omx."
+
+    invoke-virtual {p0, p1}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_4
+
+    const-string p1, "c2."
+
+    invoke-virtual {p0, p1}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+
+    move-result p0
+
+    if-nez p0, :cond_4
 
     goto :goto_0
 
-    :cond_0
-    invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
+    :goto_1
+    xor-int/2addr p0, v2
 
-    move-result-object p1
-
-    :goto_0
-    iput-object p1, p0, Lj65;->h:Landroid/os/Looper;
-
-    sget-object p1, Lr20;->Z:Lr20;
-
-    iput-object p1, p0, Lj65;->i:Lr20;
-
-    const/4 p1, 0x1
-
-    iput p1, p0, Lj65;->j:I
-
-    iput-boolean p1, p0, Lj65;->k:Z
-
-    sget-object p1, Lc0d;->c:Lc0d;
-
-    iput-object p1, p0, Lj65;->l:Lc0d;
-
-    const-wide/16 p1, 0x14
-
-    invoke-static {p1, p2}, Lnaf;->B(J)J
-
-    move-result-wide v1
-
-    const-wide/16 p1, 0x1f4
-
-    invoke-static {p1, p2}, Lnaf;->B(J)J
-
-    move-result-wide v3
-
-    new-instance v0, Lmc4;
-
-    const/4 v5, 0x0
-
-    invoke-direct/range {v0 .. v5}, Lmc4;-><init>(JJI)V
-
-    iput-object v0, p0, Lj65;->m:Lmc4;
-
-    sget-object p1, Lbge;->a:Lbge;
-
-    iput-object p1, p0, Lj65;->b:Lbge;
-
-    const-wide/16 p1, 0x7d0
-
-    iput-wide p1, p0, Lj65;->n:J
-
-    return-void
+    return p0
 .end method

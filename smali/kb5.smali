@@ -1,205 +1,97 @@
-.class public final Lkb5;
-.super Landroid/animation/AnimatorListenerAdapter;
+.class public final enum Lkb5;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
 
-# instance fields
-.field public final synthetic a:I
+# static fields
+.field public static final synthetic X:[Lkb5;
 
-.field public b:Z
+.field public static final enum a:Lkb5;
 
-.field public final synthetic c:Ljava/lang/Object;
+.field public static final enum b:Lkb5;
+
+.field public static final enum c:Lkb5;
+
+.field public static final enum o:Lkb5;
 
 
 # direct methods
-.method public constructor <init>(Landroid/view/View;)V
+.method static constructor <clinit>()V
+    .locals 6
+
+    new-instance v0, Lkb5;
+
+    const-string v1, "REPLACE"
+
+    const/4 v2, 0x0
+
+    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Lkb5;->a:Lkb5;
+
+    new-instance v1, Lkb5;
+
+    const-string v2, "KEEP"
+
+    const/4 v3, 0x1
+
+    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v1, Lkb5;->b:Lkb5;
+
+    new-instance v2, Lkb5;
+
+    const-string v3, "APPEND"
+
+    const/4 v4, 0x2
+
+    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v2, Lkb5;->c:Lkb5;
+
+    new-instance v3, Lkb5;
+
+    const-string v4, "APPEND_OR_REPLACE"
+
+    const/4 v5, 0x3
+
+    invoke-direct {v3, v4, v5}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v3, Lkb5;->o:Lkb5;
+
+    filled-new-array {v0, v1, v2, v3}, [Lkb5;
+
+    move-result-object v0
+
+    sput-object v0, Lkb5;->X:[Lkb5;
+
+    return-void
+.end method
+
+.method public static valueOf(Ljava/lang/String;)Lkb5;
     .locals 1
 
-    const/4 v0, 0x2
+    const-class v0, Lkb5;
 
-    iput v0, p0, Lkb5;->a:I
-
-    .line 1
-    iput-object p1, p0, Lkb5;->c:Ljava/lang/Object;
-
-    invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
-
-    return-void
-.end method
-
-.method public constructor <init>(Llb5;)V
-    .locals 1
-
-    const/4 v0, 0x0
-
-    iput v0, p0, Lkb5;->a:I
-
-    .line 3
-    iput-object p1, p0, Lkb5;->c:Ljava/lang/Object;
-
-    invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
-
-    const/4 p1, 0x0
-
-    .line 4
-    iput-boolean p1, p0, Lkb5;->b:Z
-
-    return-void
-.end method
-
-.method public constructor <init>(Lone/me/android/root/RootController;Z)V
-    .locals 1
-
-    const/4 v0, 0x1
-
-    iput v0, p0, Lkb5;->a:I
-
-    iput-object p1, p0, Lkb5;->c:Ljava/lang/Object;
-
-    iput-boolean p2, p0, Lkb5;->b:Z
-
-    .line 2
-    invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final onAnimationCancel(Landroid/animation/Animator;)V
-    .locals 2
-
-    iget v0, p0, Lkb5;->a:I
-
-    const/4 v1, 0x1
-
-    packed-switch v0, :pswitch_data_0
-
-    invoke-super {p0, p1}, Landroid/animation/AnimatorListenerAdapter;->onAnimationCancel(Landroid/animation/Animator;)V
-
-    iput-boolean v1, p0, Lkb5;->b:Z
-
-    return-void
-
-    :pswitch_0
-    iget-object p1, p0, Lkb5;->c:Ljava/lang/Object;
-
-    check-cast p1, Lone/me/android/root/RootController;
-
-    iget-boolean p0, p0, Lkb5;->b:Z
-
-    sget-object v0, Lone/me/android/root/RootController;->q0:[Lbc7;
-
-    invoke-virtual {p1, p0}, Lone/me/android/root/RootController;->u0(Z)V
-
-    return-void
-
-    :pswitch_1
-    iput-boolean v1, p0, Lkb5;->b:Z
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public final onAnimationEnd(Landroid/animation/Animator;)V
-    .locals 3
-
-    iget v0, p0, Lkb5;->a:I
-
-    const/4 v1, 0x0
-
-    iget-object v2, p0, Lkb5;->c:Ljava/lang/Object;
-
-    packed-switch v0, :pswitch_data_0
-
-    invoke-super {p0, p1}, Landroid/animation/AnimatorListenerAdapter;->onAnimationEnd(Landroid/animation/Animator;)V
-
-    iget-boolean p1, p0, Lkb5;->b:Z
-
-    if-nez p1, :cond_0
-
-    check-cast v2, Landroid/view/View;
-
-    const/4 p1, 0x4
-
-    invoke-virtual {v2, p1}, Landroid/view/View;->setVisibility(I)V
-
-    :cond_0
-    iput-boolean v1, p0, Lkb5;->b:Z
-
-    return-void
-
-    :pswitch_0
-    check-cast v2, Lone/me/android/root/RootController;
-
-    iget-boolean p0, p0, Lkb5;->b:Z
-
-    sget-object p1, Lone/me/android/root/RootController;->q0:[Lbc7;
-
-    invoke-virtual {v2, p0}, Lone/me/android/root/RootController;->u0(Z)V
-
-    return-void
-
-    :pswitch_1
-    check-cast v2, Llb5;
-
-    iget-boolean p1, p0, Lkb5;->b:Z
-
-    if-eqz p1, :cond_1
-
-    iput-boolean v1, p0, Lkb5;->b:Z
-
-    goto :goto_0
-
-    :cond_1
-    iget-object p0, v2, Llb5;->G0:Landroid/animation/ValueAnimator;
-
-    invoke-virtual {p0}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
 
     move-result-object p0
 
-    check-cast p0, Ljava/lang/Float;
+    check-cast p0, Lkb5;
 
-    invoke-virtual {p0}, Ljava/lang/Float;->floatValue()F
+    return-object p0
+.end method
 
-    move-result p0
+.method public static values()[Lkb5;
+    .locals 1
 
-    const/4 p1, 0x0
+    sget-object v0, Lkb5;->X:[Lkb5;
 
-    cmpl-float p0, p0, p1
+    invoke-virtual {v0}, [Ljava/lang/Object;->clone()Ljava/lang/Object;
 
-    if-nez p0, :cond_2
+    move-result-object v0
 
-    iput v1, v2, Llb5;->H0:I
+    check-cast v0, [Lkb5;
 
-    invoke-virtual {v2, v1}, Llb5;->l(I)V
-
-    goto :goto_0
-
-    :cond_2
-    const/4 p0, 0x2
-
-    iput p0, v2, Llb5;->H0:I
-
-    iget-object p0, v2, Llb5;->z0:Landroidx/recyclerview/widget/RecyclerView;
-
-    invoke-virtual {p0}, Landroid/view/View;->invalidate()V
-
-    :goto_0
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    return-object v0
 .end method

@@ -1,85 +1,102 @@
-.class public final Lt28;
-.super Ln2;
+.class public abstract Lt28;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Landroid/view/animation/Interpolator;
 
 
 # instance fields
-.field public final synthetic b:I
+.field public final a:[F
 
-.field public final c:Lgsc;
+.field public final b:F
 
 
 # direct methods
-.method public synthetic constructor <init>(Lb28;Lgsc;I)V
-    .locals 0
+.method public constructor <init>([F)V
+    .locals 1
 
-    iput p3, p0, Lt28;->b:I
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, p1}, Ln2;-><init>(Lb28;)V
+    iput-object p1, p0, Lt28;->a:[F
 
-    iput-object p2, p0, Lt28;->c:Lgsc;
+    array-length p1, p1
+
+    add-int/lit8 p1, p1, -0x1
+
+    int-to-float p1, p1
+
+    const/high16 v0, 0x3f800000    # 1.0f
+
+    div-float/2addr v0, p1
+
+    iput v0, p0, Lt28;->b:F
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final g(Lu28;)V
-    .locals 4
+.method public final getInterpolation(F)F
+    .locals 3
 
-    iget v0, p0, Lt28;->b:I
+    const/high16 v0, 0x3f800000    # 1.0f
 
-    packed-switch v0, :pswitch_data_0
+    cmpl-float v1, p1, v0
 
-    new-instance v0, Lfq1;
+    if-ltz v1, :cond_0
 
-    invoke-direct {v0, p1}, Lfq1;-><init>(Lu28;)V
+    return v0
 
-    invoke-interface {p1, v0}, Lu28;->c(Lam4;)V
+    :cond_0
+    const/4 v0, 0x0
 
-    iget-object p1, v0, Lfq1;->b:Ljava/lang/Object;
+    cmpg-float v1, p1, v0
 
-    check-cast p1, Lsy1;
+    if-gtz v1, :cond_1
 
-    new-instance v1, Lt76;
+    return v0
 
-    iget-object v2, p0, Ln2;->a:Lb28;
+    :cond_1
+    iget-object v0, p0, Lt28;->a:[F
 
-    const/16 v3, 0xa
+    array-length v1, v0
 
-    invoke-direct {v1, v0, v3, v2}, Lt76;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+    add-int/lit8 v1, v1, -0x1
 
-    iget-object p0, p0, Lt28;->c:Lgsc;
+    int-to-float v1, v1
 
-    invoke-virtual {p0, v1}, Lgsc;->b(Ljava/lang/Runnable;)Lam4;
+    mul-float/2addr v1, p1
 
-    move-result-object p0
+    float-to-int v1, v1
 
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    array-length v2, v0
 
-    invoke-static {p1, p0}, Lem4;->c(Ljava/util/concurrent/atomic/AtomicReference;Lam4;)Z
+    add-int/lit8 v2, v2, -0x2
 
-    return-void
+    invoke-static {v1, v2}, Ljava/lang/Math;->min(II)I
 
-    :pswitch_0
-    new-instance v0, Ls28;
+    move-result v1
 
-    iget-object v1, p0, Lt28;->c:Lgsc;
+    int-to-float v2, v1
 
-    const/4 v2, 0x0
+    iget p0, p0, Lt28;->b:F
 
-    invoke-direct {v0, p1, v1, v2}, Ls28;-><init>(Ljava/lang/Object;Lgsc;I)V
+    mul-float/2addr v2, p0
 
-    iget-object p0, p0, Ln2;->a:Lb28;
+    sub-float/2addr p1, v2
 
-    invoke-virtual {p0, v0}, Lb28;->a(Lu28;)V
+    div-float/2addr p1, p0
 
-    return-void
+    aget p0, v0, v1
 
-    nop
+    add-int/lit8 v1, v1, 0x1
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    aget v0, v0, v1
+
+    invoke-static {v0, p0, p1, p0}, Lbg9;->g(FFFF)F
+
+    move-result p0
+
+    return p0
 .end method

@@ -1,82 +1,133 @@
-.class public final Ljta;
-.super Lqy;
+.class public final enum Ljta;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
 
-# instance fields
-.field public X:Ljava/lang/String;
+# static fields
+.field public static final enum X:Ljta;
 
-.field public final Y:Ljava/lang/Integer;
+.field public static final enum Y:Ljta;
 
-.field public final Z:Ljava/lang/Integer;
+.field public static final enum Z:Ljta;
 
-.field public final o:Ljava/lang/String;
+.field public static final enum a:Ljta;
 
-.field public final o0:Z
+.field public static final enum b:Ljta;
 
-.field public final p0:[B
+.field public static final enum c:Ljta;
 
-.field public final q0:Ljava/lang/String;
+.field public static final enum o:Ljta;
 
-.field public final r0:Ljava/lang/String;
-
-.field public final s0:Ljava/lang/Long;
-
-.field public final t0:Ljava/lang/String;
+.field public static final synthetic r0:[Ljta;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Integer;Ljava/lang/Integer;Z[BLjava/lang/Long;Ljava/lang/String;Ljava/lang/String;ZZLjava/lang/String;)V
-    .locals 1
+.method static constructor <clinit>()V
+    .locals 9
 
-    sget-object v0, Lq00;->o:Lq00;
+    new-instance v0, Ljta;
 
-    invoke-direct {p0, v0, p10, p11}, Lqy;-><init>(Lq00;ZZ)V
+    const-string v1, "AUTO_TRANSITION"
 
-    iput-object p1, p0, Ljta;->o:Ljava/lang/String;
+    const/4 v2, 0x0
 
-    iput-object p2, p0, Ljta;->X:Ljava/lang/String;
+    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    iput-object p3, p0, Ljta;->Y:Ljava/lang/Integer;
+    sput-object v0, Ljta;->a:Ljta;
 
-    iput-object p4, p0, Ljta;->Z:Ljava/lang/Integer;
+    new-instance v1, Ljta;
 
-    iput-boolean p5, p0, Ljta;->o0:Z
+    const-string v2, "SEEK"
 
-    iput-object p6, p0, Ljta;->p0:[B
+    const/4 v3, 0x1
 
-    iput-object p7, p0, Ljta;->s0:Ljava/lang/Long;
+    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    iput-object p8, p0, Ljta;->r0:Ljava/lang/String;
+    sput-object v1, Ljta;->b:Ljta;
 
-    iput-object p9, p0, Ljta;->q0:Ljava/lang/String;
+    new-instance v2, Ljta;
 
-    iput-object p12, p0, Ljta;->t0:Ljava/lang/String;
+    const-string v3, "SEEK_ADJUSTMENT"
+
+    const/4 v4, 0x2
+
+    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v2, Ljta;->c:Ljta;
+
+    new-instance v3, Ljta;
+
+    const-string v4, "SKIP"
+
+    const/4 v5, 0x3
+
+    invoke-direct {v3, v4, v5}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v3, Ljta;->o:Ljta;
+
+    new-instance v4, Ljta;
+
+    const-string v5, "REMOVE"
+
+    const/4 v6, 0x4
+
+    invoke-direct {v4, v5, v6}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v4, Ljta;->X:Ljta;
+
+    new-instance v5, Ljta;
+
+    const-string v6, "INTERNAL"
+
+    const/4 v7, 0x5
+
+    invoke-direct {v5, v6, v7}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v5, Ljta;->Y:Ljta;
+
+    new-instance v6, Ljta;
+
+    const-string v7, "UNKNOWN"
+
+    const/4 v8, 0x6
+
+    invoke-direct {v6, v7, v8}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v6, Ljta;->Z:Ljta;
+
+    filled-new-array/range {v0 .. v6}, [Ljta;
+
+    move-result-object v0
+
+    sput-object v0, Ljta;->r0:[Ljta;
 
     return-void
 .end method
 
+.method public static valueOf(Ljava/lang/String;)Ljta;
+    .locals 1
 
-# virtual methods
-.method public final a()Ljava/util/HashMap;
-    .locals 2
+    const-class v0, Ljta;
 
-    invoke-super {p0}, Lqy;->a()Ljava/util/HashMap;
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+
+    move-result-object p0
+
+    check-cast p0, Ljta;
+
+    return-object p0
+.end method
+
+.method public static values()[Ljta;
+    .locals 1
+
+    sget-object v0, Ljta;->r0:[Ljta;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
 
     move-result-object v0
 
-    iget-object p0, p0, Ljta;->q0:Ljava/lang/String;
+    check-cast v0, [Ljta;
 
-    invoke-static {p0}, Lxja;->v(Ljava/lang/CharSequence;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_0
-
-    const-string v1, "photoToken"
-
-    invoke-virtual {v0, v1, p0}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    :cond_0
     return-object v0
 .end method

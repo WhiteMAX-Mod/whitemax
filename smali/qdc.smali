@@ -1,82 +1,65 @@
 .class public abstract Lqdc;
 .super Ljava/lang/Object;
-.source "SourceFile"
+
+
+# static fields
+.field public static CoordinatorLayout:[I = null
+
+.field public static CoordinatorLayout_Layout:[I = null
+
+.field public static CoordinatorLayout_Layout_android_layout_gravity:I = 0x0
+
+.field public static CoordinatorLayout_Layout_layout_anchor:I = 0x1
+
+.field public static CoordinatorLayout_Layout_layout_anchorGravity:I = 0x2
+
+.field public static CoordinatorLayout_Layout_layout_behavior:I = 0x3
+
+.field public static CoordinatorLayout_Layout_layout_dodgeInsetEdges:I = 0x4
+
+.field public static CoordinatorLayout_Layout_layout_insetEdge:I = 0x5
+
+.field public static CoordinatorLayout_Layout_layout_keyline:I = 0x6
+
+.field public static CoordinatorLayout_keylines:I = 0x0
+
+.field public static CoordinatorLayout_statusBarBackground:I = 0x1
 
 
 # direct methods
-.method public static a(Lsdc;Landroid/content/Intent;Ljava/util/Map;)V
-    .locals 0
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Lsdc;",
-            "Landroid/content/Intent;",
-            "Ljava/util/Map<",
-            "Ljava/lang/String;",
-            "Landroid/net/Uri;",
-            ">;)V"
-        }
-    .end annotation
+.method public static constructor <clinit>()V
+    .locals 2
 
-    invoke-static {p0}, Lsdc;->a(Lsdc;)Landroid/app/RemoteInput;
+    const v0, 0x7f040588
 
-    move-result-object p0
+    const v1, 0x7f0407e8
 
-    invoke-static {p0, p1, p2}, Landroid/app/RemoteInput;->addDataResultToIntent(Landroid/app/RemoteInput;Landroid/content/Intent;Ljava/util/Map;)V
+    filled-new-array {v0, v1}, [I
+
+    move-result-object v0
+
+    sput-object v0, Lqdc;->CoordinatorLayout:[I
+
+    const/4 v0, 0x7
+
+    new-array v0, v0, [I
+
+    fill-array-data v0, :array_0
+
+    sput-object v0, Lqdc;->CoordinatorLayout_Layout:[I
 
     return-void
-.end method
 
-.method public static b(Ljava/lang/Object;)Ljava/util/Set;
-    .locals 0
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Ljava/lang/Object;",
-            ")",
-            "Ljava/util/Set<",
-            "Ljava/lang/String;",
-            ">;"
-        }
-    .end annotation
+    nop
 
-    check-cast p0, Landroid/app/RemoteInput;
-
-    invoke-virtual {p0}, Landroid/app/RemoteInput;->getAllowedDataTypes()Ljava/util/Set;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static c(Landroid/content/Intent;Ljava/lang/String;)Ljava/util/Map;
-    .locals 0
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Landroid/content/Intent;",
-            "Ljava/lang/String;",
-            ")",
-            "Ljava/util/Map<",
-            "Ljava/lang/String;",
-            "Landroid/net/Uri;",
-            ">;"
-        }
-    .end annotation
-
-    invoke-static {p0, p1}, Landroid/app/RemoteInput;->getDataResultsFromIntent(Landroid/content/Intent;Ljava/lang/String;)Ljava/util/Map;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static d(Landroid/app/RemoteInput$Builder;Ljava/lang/String;Z)Landroid/app/RemoteInput$Builder;
-    .locals 0
-
-    invoke-virtual {p0, p1, p2}, Landroid/app/RemoteInput$Builder;->setAllowDataType(Ljava/lang/String;Z)Landroid/app/RemoteInput$Builder;
-
-    move-result-object p0
-
-    return-object p0
+    :array_0
+    .array-data 4
+        0x10100b3
+        0x7f040599
+        0x7f04059a
+        0x7f04059b
+        0x7f0405cf
+        0x7f0405dd
+        0x7f0405de
+    .end array-data
 .end method

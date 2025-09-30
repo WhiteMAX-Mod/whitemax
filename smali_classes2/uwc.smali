@@ -1,89 +1,127 @@
-.class public final enum Luwc;
-.super Ljava/lang/Enum;
+.class public final Luwc;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ljava/util/concurrent/Callable;
 
-# static fields
-.field public static final enum a:Luwc;
 
-.field public static final enum b:Luwc;
+# instance fields
+.field public final synthetic a:Ljava/lang/String;
 
-.field public static final synthetic c:[Luwc;
+.field public final synthetic b:Ljava/lang/String;
+
+.field public final synthetic c:Ljava/lang/String;
+
+.field public final synthetic o:Lxwc;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 6
+.method public constructor <init>(Lxwc;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    .locals 0
 
-    new-instance v0, Luwc;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const-string v1, "hash"
+    iput-object p1, p0, Luwc;->o:Lxwc;
 
-    const/4 v2, 0x0
+    iput-object p2, p0, Luwc;->a:Ljava/lang/String;
 
-    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    iput-object p3, p0, Luwc;->b:Ljava/lang/String;
 
-    new-instance v1, Luwc;
-
-    const-string v2, "app-update-type"
-
-    const/4 v3, 0x1
-
-    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v1, Luwc;->a:Luwc;
-
-    new-instance v2, Luwc;
-
-    const-string v3, "has-phone"
-
-    const/4 v4, 0x2
-
-    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    new-instance v3, Luwc;
-
-    const-string v4, "esia-verify-botId"
-
-    const/4 v5, 0x3
-
-    invoke-direct {v3, v4, v5}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v3, Luwc;->b:Luwc;
-
-    filled-new-array {v0, v1, v2, v3}, [Luwc;
-
-    move-result-object v0
-
-    sput-object v0, Luwc;->c:[Luwc;
+    iput-object p4, p0, Luwc;->c:Ljava/lang/String;
 
     return-void
 .end method
 
-.method public static valueOf(Ljava/lang/String;)Luwc;
-    .locals 1
 
-    const-class v0, Luwc;
+# virtual methods
+.method public final call()Ljava/lang/Object;
+    .locals 5
 
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+    iget-object v0, p0, Luwc;->o:Lxwc;
 
-    move-result-object p0
+    iget-object v1, v0, Lxwc;->h:Lf79;
 
-    check-cast p0, Luwc;
+    iget-object v0, v0, Lxwc;->a:Lru/ok/tamtam/android/db/room/OneMeRoomDatabase_Impl;
+
+    invoke-virtual {v1}, Ly2;->f()Lqqe;
+
+    move-result-object v2
+
+    const/4 v3, 0x1
+
+    iget-object v4, p0, Luwc;->a:Ljava/lang/String;
+
+    invoke-interface {v2, v3, v4}, Loqe;->f(ILjava/lang/String;)V
+
+    const/4 v3, 0x2
+
+    iget-object v4, p0, Luwc;->b:Ljava/lang/String;
+
+    if-nez v4, :cond_0
+
+    invoke-interface {v2, v3}, Loqe;->Z(I)V
+
+    goto :goto_0
+
+    :cond_0
+    invoke-interface {v2, v3, v4}, Loqe;->f(ILjava/lang/String;)V
+
+    :goto_0
+    const/4 v3, 0x3
+
+    iget-object p0, p0, Luwc;->c:Ljava/lang/String;
+
+    if-nez p0, :cond_1
+
+    invoke-interface {v2, v3}, Loqe;->Z(I)V
+
+    goto :goto_1
+
+    :cond_1
+    invoke-interface {v2, v3, p0}, Loqe;->f(ILjava/lang/String;)V
+
+    :goto_1
+    :try_start_0
+    invoke-virtual {v0}, Lexc;->c()V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    :try_start_1
+    invoke-interface {v2}, Lqqe;->C()I
+
+    invoke-virtual {v0}, Lexc;->q()V
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_1
+
+    :try_start_2
+    invoke-virtual {v0}, Lexc;->k()V
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_0
+
+    invoke-virtual {v1, v2}, Ly2;->u(Lqqe;)V
+
+    sget-object p0, Lylf;->a:Lylf;
 
     return-object p0
-.end method
 
-.method public static values()[Luwc;
-    .locals 1
+    :catchall_0
+    move-exception p0
 
-    sget-object v0, Luwc;->c:[Luwc;
+    goto :goto_2
 
-    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
+    :catchall_1
+    move-exception p0
 
-    move-result-object v0
+    :try_start_3
+    invoke-virtual {v0}, Lexc;->k()V
 
-    check-cast v0, [Luwc;
+    throw p0
+    :try_end_3
+    .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
-    return-object v0
+    :goto_2
+    invoke-virtual {v1, v2}, Ly2;->u(Lqqe;)V
+
+    throw p0
 .end method

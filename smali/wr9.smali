@@ -1,95 +1,35 @@
-.class public abstract Lwr9;
+.class public final Lwr9;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
+# instance fields
+.field public final a:I
+
+.field public final b:I
+
+.field public final c:I
+
+.field public final d:I
+
+.field public final e:I
+
+
 # direct methods
-.method public static a(Landroid/app/RemoteInput;)Z
+.method public constructor <init>(IIIII)V
     .locals 0
 
-    invoke-virtual {p0}, Landroid/app/RemoteInput;->getAllowFreeFormInput()Z
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    move-result p0
+    iput p1, p0, Lwr9;->a:I
 
-    return p0
-.end method
+    iput p2, p0, Lwr9;->b:I
 
-.method public static b(Landroid/app/RemoteInput;)[Ljava/lang/CharSequence;
-    .locals 0
+    iput p3, p0, Lwr9;->c:I
 
-    invoke-virtual {p0}, Landroid/app/RemoteInput;->getChoices()[Ljava/lang/CharSequence;
+    iput p4, p0, Lwr9;->d:I
 
-    move-result-object p0
+    iput p5, p0, Lwr9;->e:I
 
-    return-object p0
-.end method
-
-.method public static c(Landroid/app/Notification$Action;)Landroid/os/Bundle;
-    .locals 0
-
-    invoke-virtual {p0}, Landroid/app/Notification$Action;->getExtras()Landroid/os/Bundle;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static d(Landroid/app/RemoteInput;)Landroid/os/Bundle;
-    .locals 0
-
-    invoke-virtual {p0}, Landroid/app/RemoteInput;->getExtras()Landroid/os/Bundle;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static e(Landroid/app/Notification;)Ljava/lang/String;
-    .locals 0
-
-    invoke-virtual {p0}, Landroid/app/Notification;->getGroup()Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static f(Landroid/app/RemoteInput;)Ljava/lang/CharSequence;
-    .locals 0
-
-    invoke-virtual {p0}, Landroid/app/RemoteInput;->getLabel()Ljava/lang/CharSequence;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static g(Landroid/app/Notification$Action;)[Landroid/app/RemoteInput;
-    .locals 0
-
-    invoke-virtual {p0}, Landroid/app/Notification$Action;->getRemoteInputs()[Landroid/app/RemoteInput;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static h(Landroid/app/RemoteInput;)Ljava/lang/String;
-    .locals 0
-
-    invoke-virtual {p0}, Landroid/app/RemoteInput;->getResultKey()Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static i(Landroid/app/Notification;)Ljava/lang/String;
-    .locals 0
-
-    invoke-virtual {p0}, Landroid/app/Notification;->getSortKey()Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
+    return-void
 .end method

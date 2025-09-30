@@ -1,49 +1,30 @@
 .class public final Lnte;
-.super Lbu3;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lmte;
 
 
 # instance fields
-.field public synthetic X:Ljava/lang/Object;
+.field public a:Lbc6;
 
-.field public final synthetic Y:Lwte;
-
-.field public Z:I
-
-.field public o:Lwte;
+.field public b:Lzb6;
 
 
-# direct methods
-.method public constructor <init>(Lwte;Lbu3;)V
+# virtual methods
+.method public final setOnRequestInterceptTouchEvent(Lzb6;)V
     .locals 0
 
-    iput-object p1, p0, Lnte;->Y:Lwte;
-
-    invoke-direct {p0, p2}, Lbu3;-><init>(Lkotlin/coroutines/Continuation;)V
+    iput-object p1, p0, Lnte;->b:Lzb6;
 
     return-void
 .end method
 
+.method public final setOnTouch(Lbc6;)V
+    .locals 0
 
-# virtual methods
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+    iput-object p1, p0, Lnte;->a:Lbc6;
 
-    iput-object p1, p0, Lnte;->X:Ljava/lang/Object;
-
-    iget p1, p0, Lnte;->Z:I
-
-    const/high16 v0, -0x80000000
-
-    or-int/2addr p1, v0
-
-    iput p1, p0, Lnte;->Z:I
-
-    iget-object p1, p0, Lnte;->Y:Lwte;
-
-    invoke-virtual {p1, p0}, Lwte;->g(Lbu3;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    return-object p0
+    return-void
 .end method

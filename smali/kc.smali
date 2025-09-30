@@ -1,21 +1,13 @@
-.class public final Lkc;
-.super Landroid/widget/ArrayAdapter;
+.class public abstract Lkc;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# virtual methods
-.method public final getItemId(I)J
+# direct methods
+.method public static a(Landroid/app/AlarmManager;IJLandroid/app/PendingIntent;)V
     .locals 0
 
-    int-to-long p0, p1
+    invoke-virtual {p0, p1, p2, p3, p4}, Landroid/app/AlarmManager;->setExact(IJLandroid/app/PendingIntent;)V
 
-    return-wide p0
-.end method
-
-.method public final hasStableIds()Z
-    .locals 0
-
-    const/4 p0, 0x1
-
-    return p0
+    return-void
 .end method

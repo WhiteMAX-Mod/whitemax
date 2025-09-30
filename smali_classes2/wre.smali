@@ -1,83 +1,53 @@
 .class public final Lwre;
-.super Lhl7;
+.super Ljx3;
 .source "SourceFile"
 
 
+# instance fields
+.field public X:Ldof;
+
+.field public synthetic Y:Ljava/lang/Object;
+
+.field public final synthetic Z:Lqse;
+
+.field public o:Lqse;
+
+.field public r0:I
+
+
 # direct methods
-.method public constructor <init>()V
-    .locals 1
+.method public constructor <init>(Lqse;Ljx3;)V
+    .locals 0
 
-    sget-object v0, Lm44;->f:Lm44;
+    iput-object p1, p0, Lwre;->Z:Lqse;
 
-    invoke-direct {p0, v0}, Lhl7;-><init>(Lxq7;)V
-
-    const/4 v0, 0x1
-
-    invoke-virtual {p0, v0}, Lgbc;->A(Z)V
+    invoke-direct {p0, p2}, Ljx3;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final k(I)J
-    .locals 0
-
-    invoke-virtual {p0, p1}, Lhl7;->C(I)Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, Lure;
-
-    iget p0, p0, Lure;->a:I
-
-    int-to-long p0, p0
-
-    return-wide p0
-.end method
-
-.method public final r(Lccc;I)V
-    .locals 0
-
-    check-cast p1, Lvre;
-
-    iget-object p1, p1, Lvre;->B0:Landroidx/appcompat/widget/AppCompatTextView;
-
-    invoke-virtual {p0, p2}, Lhl7;->C(I)Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, Lure;
-
-    iget-object p0, p0, Lure;->b:Ljava/lang/String;
-
-    invoke-virtual {p1, p0}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
-
-    return-void
-.end method
-
-.method public final t(Landroid/view/ViewGroup;I)Lccc;
+.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
 
-    invoke-virtual {p1}, Landroid/view/View;->getContext()Landroid/content/Context;
+    iput-object p1, p0, Lwre;->Y:Ljava/lang/Object;
 
-    move-result-object p0
+    iget p1, p0, Lwre;->r0:I
 
-    invoke-static {p0}, Landroid/view/LayoutInflater;->from(Landroid/content/Context;)Landroid/view/LayoutInflater;
+    const/high16 v0, -0x80000000
 
-    move-result-object p0
+    or-int/2addr p1, v0
 
-    sget p2, Lhwb;->number_item:I
+    iput p1, p0, Lwre;->r0:I
+
+    iget-object p1, p0, Lwre;->Z:Lqse;
 
     const/4 v0, 0x0
 
-    invoke-virtual {p0, p2, p1, v0}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
+    invoke-virtual {p1, v0, p0}, Lqse;->d(Ldof;Ljx3;)Ljava/lang/Object;
 
     move-result-object p0
 
-    new-instance p1, Lvre;
-
-    invoke-direct {p1, p0}, Lvre;-><init>(Landroid/view/View;)V
-
-    return-object p1
+    return-object p0
 .end method

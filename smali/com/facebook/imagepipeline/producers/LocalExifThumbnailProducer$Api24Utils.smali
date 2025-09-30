@@ -4,5 +4,5 @@
 
 
 # annotations
-.annotation build Lpm4;
+.annotation build Ldr4;
 .end annotation

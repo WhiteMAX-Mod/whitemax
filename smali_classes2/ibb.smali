@@ -1,52 +1,64 @@
 .class public final Libb;
-.super Lbu3;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+# interfaces
+.implements Llbb;
 
 
-# instance fields
-.field public X:I
-
-.field public Y:Lv29;
-
-.field public final synthetic Z:Lv29;
-
-.field public synthetic o:Ljava/lang/Object;
-
-.field public o0:Lbn5;
+# static fields
+.field public static final a:Libb;
 
 
 # direct methods
-.method public constructor <init>(Lv29;Lkotlin/coroutines/Continuation;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    iput-object p1, p0, Libb;->Z:Lv29;
+    new-instance v0, Libb;
 
-    invoke-direct {p0, p2}, Lbu3;-><init>(Lkotlin/coroutines/Continuation;)V
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    sput-object v0, Libb;->a:Libb;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final equals(Ljava/lang/Object;)Z
     .locals 1
 
-    iput-object p1, p0, Libb;->o:Ljava/lang/Object;
+    const/4 v0, 0x1
 
-    iget p1, p0, Libb;->X:I
+    if-ne p0, p1, :cond_0
 
-    const/high16 v0, -0x80000000
+    return v0
 
-    or-int/2addr p1, v0
+    :cond_0
+    instance-of p0, p1, Libb;
 
-    iput p1, p0, Libb;->X:I
+    if-nez p0, :cond_1
 
-    iget-object p1, p0, Libb;->Z:Lv29;
+    const/4 p0, 0x0
 
-    const/4 v0, 0x0
+    return p0
 
-    invoke-virtual {p1, v0, p0}, Lv29;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    :cond_1
+    return v0
+.end method
 
-    move-result-object p0
+.method public final hashCode()I
+    .locals 0
+
+    const p0, -0x2eb2bc9
+
+    return p0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 0
+
+    const-string p0, "Default"
 
     return-object p0
 .end method

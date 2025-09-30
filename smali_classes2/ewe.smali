@@ -1,114 +1,51 @@
-.class public final Lewe;
+.class public abstract synthetic Lewe;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Landroid/view/View$OnLayoutChangeListener;
 
-
-# instance fields
-.field public final synthetic a:Landroid/view/View;
-
-.field public final synthetic b:Landroid/graphics/Rect;
-
-.field public final synthetic c:I
-
-.field public final synthetic d:I
+# static fields
+.field public static final synthetic $EnumSwitchMapping$0:[I
 
 
 # direct methods
-.method public constructor <init>(Landroid/view/View;Landroid/graphics/Rect;II)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 3
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/4 v0, 0x3
 
-    iput-object p1, p0, Lewe;->a:Landroid/view/View;
+    invoke-static {v0}, Lmw1;->w(I)[I
 
-    iput-object p2, p0, Lewe;->b:Landroid/graphics/Rect;
+    move-result-object v1
 
-    iput p3, p0, Lewe;->c:I
+    array-length v1, v1
 
-    iput p4, p0, Lewe;->d:I
+    new-array v1, v1, [I
 
-    return-void
-.end method
+    const/4 v2, 0x1
 
+    :try_start_0
+    aput v2, v1, v2
+    :try_end_0
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
 
-# virtual methods
-.method public final onLayoutChange(Landroid/view/View;IIIIIIII)V
-    .locals 0
+    :catch_0
+    const/4 v2, 0x2
 
-    invoke-virtual {p1, p0}, Landroid/view/View;->removeOnLayoutChangeListener(Landroid/view/View$OnLayoutChangeListener;)V
+    :try_start_1
+    aput v2, v1, v2
+    :try_end_1
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
 
-    iget-object p1, p0, Lewe;->a:Landroid/view/View;
+    :catch_1
+    const/4 v2, 0x0
 
-    iget-object p2, p0, Lewe;->b:Landroid/graphics/Rect;
+    :try_start_2
+    aput v0, v1, v2
+    :try_end_2
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_2
 
-    invoke-virtual {p1, p2}, Landroid/view/View;->getHitRect(Landroid/graphics/Rect;)V
-
-    invoke-virtual {p2}, Landroid/graphics/Rect;->width()I
-
-    move-result p3
-
-    iget p4, p0, Lewe;->c:I
-
-    if-ge p3, p4, :cond_0
-
-    invoke-virtual {p2}, Landroid/graphics/Rect;->width()I
-
-    move-result p3
-
-    sub-int/2addr p4, p3
-
-    iget p3, p2, Landroid/graphics/Rect;->left:I
-
-    div-int/lit8 p4, p4, 0x2
-
-    sub-int/2addr p3, p4
-
-    iput p3, p2, Landroid/graphics/Rect;->left:I
-
-    iget p3, p2, Landroid/graphics/Rect;->right:I
-
-    add-int/2addr p3, p4
-
-    iput p3, p2, Landroid/graphics/Rect;->right:I
-
-    :cond_0
-    invoke-virtual {p2}, Landroid/graphics/Rect;->height()I
-
-    move-result p3
-
-    iget p0, p0, Lewe;->d:I
-
-    if-ge p3, p0, :cond_1
-
-    invoke-virtual {p2}, Landroid/graphics/Rect;->height()I
-
-    move-result p3
-
-    sub-int/2addr p0, p3
-
-    iget p3, p2, Landroid/graphics/Rect;->top:I
-
-    div-int/lit8 p0, p0, 0x2
-
-    sub-int/2addr p3, p0
-
-    iput p3, p2, Landroid/graphics/Rect;->top:I
-
-    iget p3, p2, Landroid/graphics/Rect;->bottom:I
-
-    add-int/2addr p3, p0
-
-    iput p3, p2, Landroid/graphics/Rect;->bottom:I
-
-    :cond_1
-    new-instance p0, Lb85;
-
-    invoke-direct {p0, p2, p1}, Lb85;-><init>(Landroid/graphics/Rect;Landroid/view/View;)V
-
-    invoke-virtual {p1, p0}, Landroid/view/View;->setTouchDelegate(Landroid/view/TouchDelegate;)V
+    :catch_2
+    sput-object v1, Lewe;->$EnumSwitchMapping$0:[I
 
     return-void
 .end method

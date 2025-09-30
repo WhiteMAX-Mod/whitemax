@@ -2,54 +2,39 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-
-# static fields
-.field public static final c:Ljava/lang/String;
-
-.field public static final d:Ljava/lang/String;
+# interfaces
+.implements Ltnc;
 
 
 # instance fields
-.field public final a:Ljava/lang/String;
+.field public final synthetic a:Landroid/content/Context;
 
-.field public final b:I
+.field public final synthetic b:Lsa0;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
-
-    sget v0, Lpaf;->a:I
-
-    const/4 v0, 0x0
-
-    const/16 v1, 0x24
-
-    invoke-static {v0, v1}, Ljava/lang/Integer;->toString(II)Ljava/lang/String;
-
-    move-result-object v0
-
-    sput-object v0, Lrnc;->c:Ljava/lang/String;
-
-    const/4 v0, 0x1
-
-    invoke-static {v0, v1}, Ljava/lang/Integer;->toString(II)Ljava/lang/String;
-
-    move-result-object v0
-
-    sput-object v0, Lrnc;->d:Ljava/lang/String;
-
-    return-void
-.end method
-
-.method public constructor <init>(Ljava/lang/String;I)V
+.method public constructor <init>(Lsa0;Landroid/content/Context;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lrnc;->a:Ljava/lang/String;
+    iput-object p1, p0, Lrnc;->b:Lsa0;
 
-    iput p2, p0, Lrnc;->b:I
+    iput-object p2, p0, Lrnc;->a:Landroid/content/Context;
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final a(Lq80;Ljava/util/concurrent/Executor;)Lt50;
+    .locals 1
+
+    new-instance v0, Lt50;
+
+    iget-object p0, p0, Lrnc;->a:Landroid/content/Context;
+
+    invoke-direct {v0, p1, p2, p0}, Lt50;-><init>(Lq80;Ljava/util/concurrent/Executor;Landroid/content/Context;)V
+
+    return-object v0
 .end method

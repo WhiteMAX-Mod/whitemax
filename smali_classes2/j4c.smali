@@ -1,286 +1,92 @@
-.class public final Lj4c;
-.super Lije;
-.source "SourceFile"
+.class public abstract Lj4c;
+.super Ljava/lang/Object;
 
-# interfaces
-.implements Lj5c;
 
+# static fields
+.field public static add_24:I = 0x7f0802aa
 
-# instance fields
-.field public X:Lx56;
+.field public static call_24:I = 0x7f0802d9
 
-.field public Y:Lo3c;
+.field public static call_fill_16:I = 0x7f0802db
 
-.field public Z:Z
+.field public static cancel_10:I = 0x7f0802e0
 
-.field public o:Z
+.field public static cancel_outline_28:I = 0x7f0802e1
 
+.field public static chat_24:I = 0x7f0802e6
 
-# direct methods
-.method public constructor <init>()V
-    .locals 2
+.field public static check_24:I = 0x7f0802ec
 
-    new-instance v0, Lj2a;
+.field public static contact_24:I = 0x7f080315
 
-    const/16 v1, 0x1c
+.field public static copy_24:I = 0x7f080319
 
-    invoke-direct {v0, v1}, Lj2a;-><init>(I)V
+.field public static download_24:I = 0x7f080337
 
-    invoke-direct {p0, v0}, Lije;-><init>(Lx56;)V
+.field public static edit_outline_24:I = 0x7f080340
 
-    const/4 v0, 0x1
+.field public static file_24:I = 0x7f0803b5
 
-    iput-boolean v0, p0, Lj4c;->o:Z
+.field public static forward_24:I = 0x7f0804b8
 
-    return-void
-.end method
+.field public static ic_add_16:I = 0x7f0804d2
 
+.field public static ic_arrow_left_outline_28:I = 0x7f080500
 
-# virtual methods
-.method public final f(Lfw8;Z)V
-    .locals 2
+.field public static ic_cancel_filled_24:I = 0x7f080549
 
-    invoke-virtual {p0}, Lije;->O()Landroid/view/View;
+.field public static ic_cancel_outline_24:I = 0x7f08054a
 
-    move-result-object v0
+.field public static ic_cancel_outline_28:I = 0x7f08054b
 
-    check-cast v0, Lt3c;
+.field public static ic_channel_outline_28:I = 0x7f080550
 
-    iget-object v1, p0, Lj4c;->X:Lx56;
+.field public static ic_check_filled_24:I = 0x7f080558
 
-    invoke-virtual {v0, v1}, Lt3c;->setOnChipClickListener(Lx56;)V
+.field public static ic_delete_filled_apart_24:I = 0x7f080592
 
-    iget-object v0, p0, Lj4c;->Y:Lo3c;
+.field public static ic_delete_filled_cut_out_24:I = 0x7f080593
 
-    if-eqz v0, :cond_0
+.field public static ic_done_28:I = 0x7f08059b
 
-    invoke-virtual {p0}, Lije;->O()Landroid/view/View;
+.field public static ic_heart_fill_24:I = 0x7f08060c
 
-    move-result-object v1
+.field public static ic_heart_outline_24:I = 0x7f08060d
 
-    check-cast v1, Lt3c;
+.field public static ic_mention_24:I = 0x7f08064b
 
-    invoke-virtual {v1, v0}, Lt3c;->setChipObserver(Lo3c;)V
+.field public static ic_message_filled_28:I = 0x7f080652
 
-    :cond_0
-    invoke-virtual {p0}, Lije;->O()Landroid/view/View;
+.field public static ic_more_vertical_filled_16:I = 0x7f080670
 
-    move-result-object v0
+.field public static ic_next_16:I = 0x7f0806fd
 
-    check-cast v0, Lt3c;
+.field public static ic_online_24:I = 0x7f080709
 
-    iget-boolean v1, p0, Lj4c;->Z:Z
+.field public static ic_phone_28:I = 0x7f080719
 
-    invoke-virtual {v0, v1}, Lt3c;->setStackFromEnd(Z)V
+.field public static ic_search_outline_16:I = 0x7f080756
 
-    invoke-virtual {p0}, Lije;->O()Landroid/view/View;
+.field public static ic_settings_filled_28:I = 0x7f080766
 
-    move-result-object v0
+.field public static ic_stub_outline_24:I = 0x7f08078c
 
-    check-cast v0, Lt3c;
+.field public static ic_swap_24:I = 0x7f080791
 
-    iget-boolean v1, p0, Lj4c;->o:Z
+.field public static ic_users_28:I = 0x7f0807ae
 
-    invoke-virtual {v0, v1}, Lt3c;->setIncoming(Z)V
+.field public static ic_users_outline_28:I = 0x7f0807af
 
-    invoke-virtual {p0}, Lije;->O()Landroid/view/View;
+.field public static link_24:I = 0x7f0807f6
 
-    move-result-object v0
+.field public static media_24:I = 0x7f080864
 
-    check-cast v0, Lt3c;
+.field public static microphone_on_24:I = 0x7f080871
 
-    invoke-virtual {v0, p1, p2}, Lt3c;->f(Lfw8;Z)V
+.field public static setting_24:I = 0x7f080923
 
-    invoke-virtual {p0}, Lije;->t()V
+.field public static settings_outline_24:I = 0x7f080925
 
-    return-void
-.end method
+.field public static share_24_android:I = 0x7f080927
 
-.method public final k(Lcs0;Z)V
-    .locals 5
-
-    iget-object v0, p0, Lije;->c:Ljava/lang/Object;
-
-    invoke-interface {v0}, Lje7;->a()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_2
-
-    invoke-interface {v0}, Lje7;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lt3c;
-
-    invoke-virtual {p0}, Lije;->O()Landroid/view/View;
-
-    move-result-object p0
-
-    check-cast p0, Lt3c;
-
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    const/4 v0, 0x0
-
-    :goto_0
-    invoke-virtual {p0}, Landroid/view/ViewGroup;->getChildCount()I
-
-    move-result v1
-
-    if-ge v0, v1, :cond_2
-
-    add-int/lit8 v1, v0, 0x1
-
-    invoke-virtual {p0, v0}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_1
-
-    check-cast v0, Lr3c;
-
-    iget-object v2, p1, Lcs0;->d:Lfs0;
-
-    iget-object v2, v2, Lfs0;->a:Lgs0;
-
-    iget-object v3, p1, Lcs0;->a:Lvr0;
-
-    iget-object v3, v3, Lvr0;->c:Las0;
-
-    if-eqz p2, :cond_0
-
-    iget v4, v3, Las0;->a:I
-
-    iput v4, v0, Lr3c;->o0:I
-
-    iget v3, v3, Las0;->b:I
-
-    iput v3, v0, Lr3c;->p0:I
-
-    iget v3, v2, Lgs0;->a:I
-
-    iput v3, v0, Lr3c;->q0:I
-
-    iget v2, v2, Lgs0;->b:I
-
-    iput v2, v0, Lr3c;->r0:I
-
-    goto :goto_1
-
-    :cond_0
-    iget v4, v3, Las0;->c:I
-
-    iput v4, v0, Lr3c;->o0:I
-
-    iget v3, v3, Las0;->d:I
-
-    iput v3, v0, Lr3c;->p0:I
-
-    iget v3, v2, Lgs0;->c:I
-
-    iput v3, v0, Lr3c;->q0:I
-
-    iget v2, v2, Lgs0;->d:I
-
-    iput v2, v0, Lr3c;->r0:I
-
-    :goto_1
-    invoke-virtual {v0}, Landroid/view/View;->invalidate()V
-
-    move v0, v1
-
-    goto :goto_0
-
-    :cond_1
-    new-instance p0, Ljava/lang/IndexOutOfBoundsException;
-
-    invoke-direct {p0}, Ljava/lang/IndexOutOfBoundsException;-><init>()V
-
-    throw p0
-
-    :cond_2
-    return-void
-.end method
-
-.method public final q(Z)V
-    .locals 2
-
-    iget-object v0, p0, Lije;->c:Ljava/lang/Object;
-
-    invoke-interface {v0}, Lje7;->a()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    invoke-interface {v0}, Lje7;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lt3c;
-
-    invoke-virtual {p0}, Lije;->O()Landroid/view/View;
-
-    move-result-object p0
-
-    check-cast p0, Lt3c;
-
-    const/4 v0, 0x0
-
-    invoke-virtual {p0, v0, p1}, Lt3c;->f(Lfw8;Z)V
-
-    :cond_0
-    return-void
-.end method
-
-.method public final setChipObserver(Lo3c;)V
-    .locals 1
-
-    iget-object v0, p0, Lije;->c:Ljava/lang/Object;
-
-    invoke-interface {v0}, Lje7;->a()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    invoke-virtual {p0}, Lije;->O()Landroid/view/View;
-
-    move-result-object p0
-
-    check-cast p0, Lt3c;
-
-    invoke-virtual {p0, p1}, Lt3c;->setChipObserver(Lo3c;)V
-
-    return-void
-
-    :cond_0
-    iput-object p1, p0, Lj4c;->Y:Lo3c;
-
-    return-void
-.end method
-
-.method public final setIsIncoming(Z)V
-    .locals 0
-
-    iput-boolean p1, p0, Lj4c;->o:Z
-
-    return-void
-.end method
-
-.method public final setOnClickListener(Lx56;)V
-    .locals 0
-
-    iput-object p1, p0, Lj4c;->X:Lx56;
-
-    return-void
-.end method
-
-.method public final setStackFromEnd(Z)V
-    .locals 0
-
-    iput-boolean p1, p0, Lj4c;->Z:Z
-
-    return-void
-.end method
+.field public static support_24:I = 0x7f08093d

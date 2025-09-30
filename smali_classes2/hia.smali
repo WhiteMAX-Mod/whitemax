@@ -1,99 +1,109 @@
-.class public final Lhia;
+.class public abstract Lhia;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ljia;
 
+# static fields
+.field public static final a:I
 
-# instance fields
-.field public final a:Loia;
+.field public static final b:I
+
+.field public static final c:I
+
+.field public static final d:I
+
+.field public static final e:I
+
+.field public static final f:I
+
+.field public static final g:I
+
+.field public static final h:I
+
+.field public static final i:I
+
+.field public static final j:I
+
+.field public static final k:I
+
+.field public static final l:I
+
+.field public static final m:I
+
+.field public static final n:I
+
+.field public static final o:I
+
+.field public static final p:I
 
 
 # direct methods
-.method public constructor <init>(Loia;)V
-    .locals 0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lhia;->a:Loia;
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
+.method static constructor <clinit>()V
     .locals 1
 
-    if-ne p0, p1, :cond_0
+    sget v0, Lg6c;->oneme_folders_chats_picker_toolbar:I
 
-    goto :goto_1
+    sput v0, Lhia;->a:I
 
-    :cond_0
-    instance-of v0, p1, Lhia;
+    sget v0, Lg6c;->oneme_folders_delete_folder_bottom_sheet_cancel_button:I
 
-    if-nez v0, :cond_1
+    sput v0, Lhia;->b:I
 
-    goto :goto_0
+    sget v0, Lg6c;->oneme_folders_delete_folder_bottom_sheet_delete_button:I
 
-    :cond_1
-    check-cast p1, Lhia;
+    sput v0, Lhia;->c:I
 
-    iget-object p0, p0, Lhia;->a:Loia;
+    sget v0, Lg6c;->oneme_folders_edit_create_button:I
 
-    iget-object p1, p1, Lhia;->a:Loia;
+    sput v0, Lhia;->d:I
 
-    invoke-virtual {p0, p1}, Loia;->equals(Ljava/lang/Object;)Z
+    sget v0, Lg6c;->oneme_folders_edit_members_list:I
 
-    move-result p0
+    sput v0, Lhia;->e:I
 
-    if-nez p0, :cond_2
+    sget v0, Lg6c;->oneme_folders_edit_screen:I
 
-    :goto_0
-    const/4 p0, 0x0
+    sput v0, Lhia;->f:I
 
-    return p0
+    sget v0, Lg6c;->oneme_folders_edit_toolbar:I
 
-    :cond_2
-    :goto_1
-    const/4 p0, 0x1
+    sput v0, Lhia;->g:I
 
-    return p0
-.end method
+    sget v0, Lg6c;->oneme_folders_list_all_folder_view_type:I
 
-.method public final hashCode()I
-    .locals 0
+    sput v0, Lhia;->h:I
 
-    iget-object p0, p0, Lhia;->a:Loia;
+    sget v0, Lg6c;->oneme_folders_list_create_folder_view_type:I
 
-    invoke-virtual {p0}, Loia;->hashCode()I
+    sput v0, Lhia;->i:I
 
-    move-result p0
+    sget v0, Lg6c;->oneme_folders_list_menu_action_change:I
 
-    return p0
-.end method
+    sput v0, Lhia;->j:I
 
-.method public final toString()Ljava/lang/String;
-    .locals 2
+    sget v0, Lg6c;->oneme_folders_list_menu_action_delete_folder:I
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    sput v0, Lhia;->k:I
 
-    const-string v1, "Icon(icon="
+    sget v0, Lg6c;->oneme_folders_list_recommended_folder_view_type:I
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    sput v0, Lhia;->l:I
 
-    iget-object p0, p0, Lhia;->a:Loia;
+    sget v0, Lg6c;->oneme_folders_list_recycler_view:I
 
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    sput v0, Lhia;->m:I
 
-    const-string p0, ")"
+    sget v0, Lg6c;->oneme_folders_list_screen:I
 
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    sput v0, Lhia;->n:I
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    sget v0, Lg6c;->oneme_folders_list_toolbar:I
 
-    move-result-object p0
+    sput v0, Lhia;->o:I
 
-    return-object p0
+    sget v0, Lg6c;->oneme_folders_list_user_folder_view_type:I
+
+    sput v0, Lhia;->p:I
+
+    return-void
 .end method

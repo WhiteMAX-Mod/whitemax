@@ -1,44 +1,15 @@
-.class public final La1a;
+.class public abstract La1a;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:La1a;
-
-
 # direct methods
-.method static constructor <clinit>()V
+.method public static a(Landroid/graphics/drawable/Icon;Ljava/lang/CharSequence;Landroid/app/PendingIntent;)Landroid/app/Notification$Action$Builder;
     .locals 1
 
-    new-instance v0, La1a;
+    new-instance v0, Landroid/app/Notification$Action$Builder;
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {v0, p0, p1, p2}, Landroid/app/Notification$Action$Builder;-><init>(Landroid/graphics/drawable/Icon;Ljava/lang/CharSequence;Landroid/app/PendingIntent;)V
 
-    sput-object v0, La1a;->a:La1a;
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final a(Lx56;Lx56;Lv56;Lv56;)Landroid/window/OnBackInvokedCallback;
-    .locals 0
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Lx56;",
-            "Lx56;",
-            "Lv56;",
-            "Lv56;",
-            ")",
-            "Landroid/window/OnBackInvokedCallback;"
-        }
-    .end annotation
-
-    new-instance p0, Lz0a;
-
-    invoke-direct {p0, p1, p2, p3, p4}, Lz0a;-><init>(Lx56;Lx56;Lv56;Lv56;)V
-
-    return-object p0
+    return-object v0
 .end method

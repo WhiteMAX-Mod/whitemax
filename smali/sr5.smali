@@ -2,89 +2,48 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ljava/lang/Runnable;
-
 
 # instance fields
-.field public final synthetic a:I
+.field public a:I
 
-.field public final b:J
+.field public b:I
 
-.field public final c:Ljava/lang/Object;
+.field public c:I
+
+.field public d:I
+
+.field public e:I
+
+.field public f:F
+
+.field public g:F
+
+.field public h:I
+
+.field public i:I
+
+.field public final j:Ljava/util/ArrayList;
+
+.field public k:I
+
+.field public l:I
+
+.field public m:Z
+
+.field public n:Z
 
 
 # direct methods
-.method public constructor <init>(JLl9e;)V
+.method public constructor <init>()V
     .locals 1
 
-    const/4 v0, 0x0
-
-    iput v0, p0, Lsr5;->a:I
-
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
-    iput-object p3, p0, Lsr5;->c:Ljava/lang/Object;
+    new-instance v0, Ljava/util/ArrayList;
 
-    .line 3
-    iput-wide p1, p0, Lsr5;->b:J
+    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    return-void
-.end method
-
-.method public constructor <init>(JLwz9;)V
-    .locals 1
-
-    const/4 v0, 0x1
-
-    iput v0, p0, Lsr5;->a:I
-
-    .line 4
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 5
-    iput-wide p1, p0, Lsr5;->b:J
-
-    .line 6
-    iput-object p3, p0, Lsr5;->c:Ljava/lang/Object;
+    iput-object v0, p0, Lsr5;->j:Ljava/util/ArrayList;
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final run()V
-    .locals 3
-
-    iget v0, p0, Lsr5;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    iget-object v0, p0, Lsr5;->c:Ljava/lang/Object;
-
-    iget-wide v1, p0, Lsr5;->b:J
-
-    invoke-interface {v0, v1, v2}, Lwz9;->a(J)V
-
-    return-void
-
-    :pswitch_0
-    iget-object v0, p0, Lsr5;->c:Ljava/lang/Object;
-
-    check-cast v0, Ll9e;
-
-    iget-wide v1, p0, Lsr5;->b:J
-
-    invoke-interface {v0, v1, v2}, Ll9e;->i(J)V
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
 .end method

@@ -4,26 +4,66 @@
 
 
 # instance fields
-.field public final a:J
+.field public final a:Lrb0;
 
-.field public final b:J
+.field public final b:Lr80;
 
-.field public final c:Ljava/io/File;
+.field public final c:I
 
 
 # direct methods
-.method public constructor <init>(JJLjava/io/File;)V
+.method public constructor <init>(Lrb0;Lr80;I)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-wide p1, p0, Lea0;->a:J
+    iput-object p1, p0, Lea0;->a:Lrb0;
 
-    iput-wide p3, p0, Lea0;->b:J
+    iput-object p2, p0, Lea0;->b:Lr80;
 
-    iput-object p5, p0, Lea0;->c:Ljava/io/File;
+    iput p3, p0, Lea0;->c:I
 
     return-void
+.end method
+
+.method public static a()Lpv7;
+    .locals 2
+
+    new-instance v0, Lpv7;
+
+    const/4 v1, 0x2
+
+    invoke-direct {v0, v1}, Lpv7;-><init>(I)V
+
+    const/4 v1, -0x1
+
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v1
+
+    iput-object v1, v0, Lpv7;->o:Ljava/lang/Object;
+
+    invoke-static {}, Lr80;->a()Lcec;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Lcec;->l()Lr80;
+
+    move-result-object v1
+
+    iput-object v1, v0, Lpv7;->c:Ljava/lang/Object;
+
+    invoke-static {}, Lrb0;->a()Lqb0;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Lqb0;->a()Lrb0;
+
+    move-result-object v1
+
+    iput-object v1, v0, Lpv7;->b:Ljava/lang/Object;
+
+    return-object v0
 .end method
 
 
@@ -31,66 +71,61 @@
 .method public final equals(Ljava/lang/Object;)Z
     .locals 4
 
+    const/4 v0, 0x1
+
     if-ne p1, p0, :cond_0
 
-    goto :goto_0
+    return v0
 
     :cond_0
-    instance-of v0, p1, Lea0;
+    instance-of v1, p1, Lea0;
 
-    if-eqz v0, :cond_1
+    const/4 v2, 0x0
+
+    if-eqz v1, :cond_1
 
     check-cast p1, Lea0;
 
-    iget-wide v0, p0, Lea0;->a:J
+    iget-object v1, p0, Lea0;->a:Lrb0;
 
-    iget-wide v2, p1, Lea0;->a:J
+    iget-object v3, p1, Lea0;->a:Lrb0;
 
-    cmp-long v0, v0, v2
+    invoke-virtual {v1, v3}, Lrb0;->equals(Ljava/lang/Object;)Z
 
-    if-nez v0, :cond_1
+    move-result v1
 
-    iget-wide v0, p0, Lea0;->b:J
+    if-eqz v1, :cond_1
 
-    iget-wide v2, p1, Lea0;->b:J
+    iget-object v1, p0, Lea0;->b:Lr80;
 
-    cmp-long v0, v0, v2
+    iget-object v3, p1, Lea0;->b:Lr80;
 
-    if-nez v0, :cond_1
+    invoke-virtual {v1, v3}, Lr80;->equals(Ljava/lang/Object;)Z
 
-    iget-object p0, p0, Lea0;->c:Ljava/io/File;
+    move-result v1
 
-    iget-object p1, p1, Lea0;->c:Ljava/io/File;
+    if-eqz v1, :cond_1
 
-    invoke-virtual {p0, p1}, Ljava/io/File;->equals(Ljava/lang/Object;)Z
+    iget p0, p0, Lea0;->c:I
 
-    move-result p0
+    iget p1, p1, Lea0;->c:I
 
-    if-eqz p0, :cond_1
+    if-ne p0, p1, :cond_1
 
-    :goto_0
-    const/4 p0, 0x1
-
-    return p0
+    return v0
 
     :cond_1
-    const/4 p0, 0x0
-
-    return p0
+    return v2
 .end method
 
 .method public final hashCode()I
-    .locals 5
+    .locals 3
 
-    iget-wide v0, p0, Lea0;->a:J
+    iget-object v0, p0, Lea0;->a:Lrb0;
 
-    const/16 v2, 0x20
+    invoke-virtual {v0}, Lrb0;->hashCode()I
 
-    ushr-long v3, v0, v2
-
-    xor-long/2addr v0, v3
-
-    long-to-int v0, v0
+    move-result v0
 
     const v1, 0xf4243
 
@@ -98,25 +133,17 @@
 
     mul-int/2addr v0, v1
 
-    iget-wide v3, p0, Lea0;->b:J
+    iget-object v2, p0, Lea0;->b:Lr80;
 
-    ushr-long v1, v3, v2
+    invoke-virtual {v2}, Lr80;->hashCode()I
 
-    xor-long/2addr v1, v3
+    move-result v2
 
-    long-to-int v1, v1
-
-    xor-int/2addr v0, v1
-
-    const v1, -0x2aff6277
+    xor-int/2addr v0, v2
 
     mul-int/2addr v0, v1
 
-    iget-object p0, p0, Lea0;->c:Ljava/io/File;
-
-    invoke-virtual {p0}, Ljava/io/File;->hashCode()I
-
-    move-result p0
+    iget p0, p0, Lea0;->c:I
 
     xor-int/2addr p0, v0
 
@@ -124,39 +151,35 @@
 .end method
 
 .method public final toString()Ljava/lang/String;
-    .locals 3
+    .locals 2
 
     new-instance v0, Ljava/lang/StringBuilder;
 
-    const-string v1, "FileOutputOptionsInternal{fileSizeLimit="
+    const-string v1, "MediaSpec{videoSpec="
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-wide v1, p0, Lea0;->a:J
+    iget-object v1, p0, Lea0;->a:Lrb0;
 
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    const-string v1, ", durationLimitMillis="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-wide v1, p0, Lea0;->b:J
-
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    const-string v1, ", location=null, file="
+    const-string v1, ", audioSpec="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object p0, p0, Lea0;->c:Ljava/io/File;
+    iget-object v1, p0, Lea0;->b:Lr80;
 
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    const-string p0, "}"
+    const-string v1, ", outputFormat="
 
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    iget p0, p0, Lea0;->c:I
+
+    const-string v1, "}"
+
+    invoke-static {v0, p0, v1}, Lyv7;->i(Ljava/lang/StringBuilder;ILjava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
 

@@ -1,316 +1,280 @@
 .class public final Le9e;
-.super Lxp8;
+.super Ljava/lang/Object;
 .source "SourceFile"
-
-# interfaces
-.implements Landroid/view/SubMenu;
 
 
 # instance fields
-.field public final G0:Lxp8;
+.field public final a:Ljava/lang/String;
 
-.field public final H0:Lbq8;
+.field public final b:I
+
+.field public final c:Ljava/lang/Integer;
+
+.field public final d:Ljava/lang/Integer;
+
+.field public final e:F
+
+.field public final f:Z
+
+.field public final g:Z
+
+.field public final h:Z
+
+.field public final i:Z
+
+.field public final j:I
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;Lxp8;Lbq8;)V
+.method public constructor <init>(Ljava/lang/String;ILjava/lang/Integer;Ljava/lang/Integer;FZZZZI)V
     .locals 0
 
-    invoke-direct {p0, p1}, Lxp8;-><init>(Landroid/content/Context;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p2, p0, Le9e;->G0:Lxp8;
+    iput-object p1, p0, Le9e;->a:Ljava/lang/String;
 
-    iput-object p3, p0, Le9e;->H0:Lbq8;
+    iput p2, p0, Le9e;->b:I
+
+    iput-object p3, p0, Le9e;->c:Ljava/lang/Integer;
+
+    iput-object p4, p0, Le9e;->d:Ljava/lang/Integer;
+
+    iput p5, p0, Le9e;->e:F
+
+    iput-boolean p6, p0, Le9e;->f:Z
+
+    iput-boolean p7, p0, Le9e;->g:Z
+
+    iput-boolean p8, p0, Le9e;->h:Z
+
+    iput-boolean p9, p0, Le9e;->i:Z
+
+    iput p10, p0, Le9e;->j:I
 
     return-void
 .end method
 
-
-# virtual methods
-.method public final d(Lbq8;)Z
-    .locals 0
-
-    iget-object p0, p0, Le9e;->G0:Lxp8;
-
-    invoke-virtual {p0, p1}, Lxp8;->d(Lbq8;)Z
-
-    move-result p0
-
-    return p0
-.end method
-
-.method public final e(Lxp8;Landroid/view/MenuItem;)Z
+.method public static a(Ljava/lang/String;)I
     .locals 1
 
-    invoke-super {p0, p1, p2}, Lxp8;->e(Lxp8;Landroid/view/MenuItem;)Z
+    :try_start_0
+    invoke-virtual {p0}, Ljava/lang/String;->trim()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v0}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
+
+    move-result v0
+    :try_end_0
+    .catch Ljava/lang/NumberFormatException; {:try_start_0 .. :try_end_0} :catch_0
+
+    packed-switch v0, :pswitch_data_0
+
+    goto :goto_0
+
+    :pswitch_0
+    return v0
+
+    :catch_0
+    :goto_0
+    const-string v0, "Ignoring unknown alignment: "
+
+    invoke-static {v0, p0}, Lb22;->m(Ljava/lang/String;Ljava/lang/String;)V
+
+    const/4 p0, -0x1
+
+    return p0
+
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_0
+        :pswitch_0
+        :pswitch_0
+        :pswitch_0
+        :pswitch_0
+        :pswitch_0
+        :pswitch_0
+        :pswitch_0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public static b(Ljava/lang/String;)Z
+    .locals 4
+
+    const/4 v0, 0x0
+
+    :try_start_0
+    invoke-static {p0}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
+
+    move-result p0
+    :try_end_0
+    .catch Ljava/lang/NumberFormatException; {:try_start_0 .. :try_end_0} :catch_0
+
+    const/4 v1, 0x1
+
+    if-eq p0, v1, :cond_1
+
+    const/4 v2, -0x1
+
+    if-ne p0, v2, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    return v0
+
+    :cond_1
+    :goto_0
+    return v1
+
+    :catch_0
+    move-exception v1
+
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    const-string v3, "Failed to parse boolean value: \'"
+
+    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v2, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string p0, "\'"
+
+    invoke-virtual {v2, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-static {p0, v1}, Lxnd;->m0(Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    return v0
+.end method
+
+.method public static c(Ljava/lang/String;)Ljava/lang/Integer;
+    .locals 8
+
+    :try_start_0
+    const-string v0, "&H"
+
+    invoke-virtual {p0, v0}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
     move-result v0
 
-    if-nez v0, :cond_1
+    const/16 v1, 0x10
 
-    iget-object p0, p0, Le9e;->G0:Lxp8;
+    if-eqz v0, :cond_0
 
-    invoke-virtual {p0, p1, p2}, Lxp8;->e(Lxp8;Landroid/view/MenuItem;)Z
+    const/4 v0, 0x2
 
-    move-result p0
+    invoke-virtual {p0, v0}, Ljava/lang/String;->substring(I)Ljava/lang/String;
 
-    if-eqz p0, :cond_0
+    move-result-object v0
 
-    goto :goto_0
+    invoke-static {v0, v1}, Ljava/lang/Long;->parseLong(Ljava/lang/String;I)J
 
-    :cond_0
-    const/4 p0, 0x0
-
-    return p0
-
-    :cond_1
-    :goto_0
-    const/4 p0, 0x1
-
-    return p0
-.end method
-
-.method public final f(Lbq8;)Z
-    .locals 0
-
-    iget-object p0, p0, Le9e;->G0:Lxp8;
-
-    invoke-virtual {p0, p1}, Lxp8;->f(Lbq8;)Z
-
-    move-result p0
-
-    return p0
-.end method
-
-.method public final getItem()Landroid/view/MenuItem;
-    .locals 0
-
-    iget-object p0, p0, Le9e;->H0:Lbq8;
-
-    return-object p0
-.end method
-
-.method public final j()Ljava/lang/String;
-    .locals 1
-
-    iget-object p0, p0, Le9e;->H0:Lbq8;
-
-    if-eqz p0, :cond_0
-
-    iget p0, p0, Lbq8;->a:I
+    move-result-wide v2
 
     goto :goto_0
 
+    :catch_0
+    move-exception v0
+
+    goto :goto_2
+
     :cond_0
-    const/4 p0, 0x0
+    invoke-static {p0}, Ljava/lang/Long;->parseLong(Ljava/lang/String;)J
+
+    move-result-wide v2
 
     :goto_0
-    if-nez p0, :cond_1
+    const-wide v4, 0xffffffffL
 
-    const/4 p0, 0x0
+    cmp-long v0, v2, v4
 
-    return-object p0
+    if-gtz v0, :cond_1
+
+    const/4 v0, 0x1
+
+    goto :goto_1
 
     :cond_1
-    const-string v0, "android:menu:actionviewstates:"
+    const/4 v0, 0x0
 
-    invoke-static {p0, v0}, Lm26;->h(ILjava/lang/String;)Ljava/lang/String;
+    :goto_1
+    invoke-static {v0}, Lmq0;->c(Z)V
+    :try_end_0
+    .catch Ljava/lang/IllegalArgumentException; {:try_start_0 .. :try_end_0} :catch_0
+
+    const/16 p0, 0x18
+
+    shr-long v4, v2, p0
+
+    const-wide/16 v6, 0xff
+
+    and-long/2addr v4, v6
+
+    xor-long/2addr v4, v6
+
+    invoke-static {v4, v5}, Li4h;->q(J)I
+
+    move-result p0
+
+    shr-long v0, v2, v1
+
+    and-long/2addr v0, v6
+
+    invoke-static {v0, v1}, Li4h;->q(J)I
+
+    move-result v0
+
+    const/16 v1, 0x8
+
+    shr-long v4, v2, v1
+
+    and-long/2addr v4, v6
+
+    invoke-static {v4, v5}, Li4h;->q(J)I
+
+    move-result v1
+
+    and-long/2addr v2, v6
+
+    invoke-static {v2, v3}, Li4h;->q(J)I
+
+    move-result v2
+
+    invoke-static {p0, v2, v1, v0}, Landroid/graphics/Color;->argb(IIII)I
+
+    move-result p0
+
+    invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p0
 
     return-object p0
-.end method
 
-.method public final k()Lxp8;
-    .locals 0
+    :goto_2
+    new-instance v1, Ljava/lang/StringBuilder;
 
-    iget-object p0, p0, Le9e;->G0:Lxp8;
+    const-string v2, "Failed to parse color expression: \'"
 
-    invoke-virtual {p0}, Lxp8;->k()Lxp8;
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string p0, "\'"
+
+    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p0
 
-    return-object p0
-.end method
+    invoke-static {p0, v0}, Lxnd;->m0(Ljava/lang/String;Ljava/lang/Throwable;)V
 
-.method public final m()Z
-    .locals 0
-
-    iget-object p0, p0, Le9e;->G0:Lxp8;
-
-    invoke-virtual {p0}, Lxp8;->m()Z
-
-    move-result p0
-
-    return p0
-.end method
-
-.method public final n()Z
-    .locals 0
-
-    iget-object p0, p0, Le9e;->G0:Lxp8;
-
-    invoke-virtual {p0}, Lxp8;->n()Z
-
-    move-result p0
-
-    return p0
-.end method
-
-.method public final o()Z
-    .locals 0
-
-    iget-object p0, p0, Le9e;->G0:Lxp8;
-
-    invoke-virtual {p0}, Lxp8;->o()Z
-
-    move-result p0
-
-    return p0
-.end method
-
-.method public final setGroupDividerEnabled(Z)V
-    .locals 0
-
-    iget-object p0, p0, Le9e;->G0:Lxp8;
-
-    invoke-virtual {p0, p1}, Lxp8;->setGroupDividerEnabled(Z)V
-
-    return-void
-.end method
-
-.method public final setHeaderIcon(I)Landroid/view/SubMenu;
-    .locals 6
-
-    const/4 v4, 0x0
-
-    const/4 v5, 0x0
-
-    const/4 v1, 0x0
-
-    const/4 v2, 0x0
-
-    move-object v0, p0
-
-    move v3, p1
-
-    .line 2
-    invoke-virtual/range {v0 .. v5}, Lxp8;->u(ILjava/lang/CharSequence;ILandroid/graphics/drawable/Drawable;Landroid/view/View;)V
-
-    return-object v0
-.end method
-
-.method public final setHeaderIcon(Landroid/graphics/drawable/Drawable;)Landroid/view/SubMenu;
-    .locals 6
-
-    const/4 v3, 0x0
-
-    const/4 v5, 0x0
-
-    const/4 v1, 0x0
-
-    const/4 v2, 0x0
-
-    move-object v0, p0
-
-    move-object v4, p1
-
-    .line 1
-    invoke-virtual/range {v0 .. v5}, Lxp8;->u(ILjava/lang/CharSequence;ILandroid/graphics/drawable/Drawable;Landroid/view/View;)V
-
-    return-object v0
-.end method
-
-.method public final setHeaderTitle(I)Landroid/view/SubMenu;
-    .locals 6
-
-    const/4 v4, 0x0
-
-    const/4 v5, 0x0
-
-    const/4 v2, 0x0
-
-    const/4 v3, 0x0
-
-    move-object v0, p0
-
-    move v1, p1
-
-    .line 2
-    invoke-virtual/range {v0 .. v5}, Lxp8;->u(ILjava/lang/CharSequence;ILandroid/graphics/drawable/Drawable;Landroid/view/View;)V
-
-    return-object v0
-.end method
-
-.method public final setHeaderTitle(Ljava/lang/CharSequence;)Landroid/view/SubMenu;
-    .locals 6
-
-    const/4 v4, 0x0
-
-    const/4 v5, 0x0
-
-    const/4 v1, 0x0
-
-    const/4 v3, 0x0
-
-    move-object v0, p0
-
-    move-object v2, p1
-
-    .line 1
-    invoke-virtual/range {v0 .. v5}, Lxp8;->u(ILjava/lang/CharSequence;ILandroid/graphics/drawable/Drawable;Landroid/view/View;)V
-
-    return-object v0
-.end method
-
-.method public final setHeaderView(Landroid/view/View;)Landroid/view/SubMenu;
-    .locals 6
-
-    const/4 v3, 0x0
-
-    const/4 v4, 0x0
-
-    const/4 v1, 0x0
-
-    const/4 v2, 0x0
-
-    move-object v0, p0
-
-    move-object v5, p1
-
-    invoke-virtual/range {v0 .. v5}, Lxp8;->u(ILjava/lang/CharSequence;ILandroid/graphics/drawable/Drawable;Landroid/view/View;)V
-
-    return-object v0
-.end method
-
-.method public final setIcon(I)Landroid/view/SubMenu;
-    .locals 1
-
-    .line 2
-    iget-object v0, p0, Le9e;->H0:Lbq8;
-
-    invoke-virtual {v0, p1}, Lbq8;->setIcon(I)Landroid/view/MenuItem;
+    const/4 p0, 0x0
 
     return-object p0
-.end method
-
-.method public final setIcon(Landroid/graphics/drawable/Drawable;)Landroid/view/SubMenu;
-    .locals 1
-
-    .line 1
-    iget-object v0, p0, Le9e;->H0:Lbq8;
-
-    invoke-virtual {v0, p1}, Lbq8;->setIcon(Landroid/graphics/drawable/Drawable;)Landroid/view/MenuItem;
-
-    return-object p0
-.end method
-
-.method public final setQwertyMode(Z)V
-    .locals 0
-
-    iget-object p0, p0, Le9e;->G0:Lxp8;
-
-    invoke-virtual {p0, p1}, Lxp8;->setQwertyMode(Z)V
-
-    return-void
 .end method

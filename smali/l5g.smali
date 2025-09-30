@@ -1,41 +1,37 @@
-.class public final Ll5g;
+.class public interface abstract Ll5g;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # static fields
-.field public static final c:Lgf4;
-
-
-# instance fields
-.field public final a:Ln5g;
-
-.field public final b:I
+.field public static final q0:Lse2;
 
 
 # direct methods
 .method static constructor <clinit>()V
     .locals 2
 
-    new-instance v0, Lgf4;
+    new-instance v0, Lse2;
 
-    const/16 v1, 0x1a
+    const/16 v1, 0x13
 
-    invoke-direct {v0, v1}, Lgf4;-><init>(I)V
+    invoke-direct {v0, v1}, Lse2;-><init>(I)V
 
-    sput-object v0, Ll5g;->c:Lgf4;
+    sput-object v0, Ll5g;->q0:Lse2;
 
     return-void
 .end method
 
-.method public constructor <init>(Ln5g;I)V
-    .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+# virtual methods
+.method public abstract c(Landroidx/media3/exoplayer/video/VideoSink$VideoSinkException;)V
+.end method
 
-    iput-object p1, p0, Ll5g;->a:Ln5g;
+.method public abstract g(Ln5g;)V
+.end method
 
-    iput p2, p0, Ll5g;->b:I
+.method public abstract onFirstFrameRendered()V
+.end method
 
-    return-void
+.method public abstract v()V
 .end method

@@ -1,70 +1,8 @@
-.class public final Lb17;
+.class public interface abstract Lb17;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:Lz07;
-
-
-# direct methods
-.method public constructor <init>(Lz07;)V
-    .locals 0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lb17;->a:Lz07;
-
-    return-void
-.end method
-
-
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
-
-    instance-of v0, p1, Lb17;
-
-    if-nez v0, :cond_0
-
-    const/4 p0, 0x0
-
-    return p0
-
-    :cond_0
-    check-cast p1, Lb17;
-
-    iget-object p1, p1, Lb17;->a:Lz07;
-
-    iget-object p0, p0, Lb17;->a:Lz07;
-
-    invoke-virtual {p0, p1}, Lz07;->equals(Ljava/lang/Object;)Z
-
-    move-result p0
-
-    return p0
-.end method
-
-.method public final hashCode()I
-    .locals 0
-
-    iget-object p0, p0, Lb17;->a:Lz07;
-
-    invoke-virtual {p0}, Lz07;->hashCode()I
-
-    move-result p0
-
-    return p0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 0
-
-    iget-object p0, p0, Lb17;->a:Lz07;
-
-    invoke-virtual {p0}, Lz07;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
+.method public abstract a(Lk55;ILi0c;Lz07;)Lc63;
 .end method

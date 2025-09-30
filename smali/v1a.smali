@@ -1,25 +1,23 @@
-.class public abstract Lv1a;
+.class public final Lv1a;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:I
+# instance fields
+.field public final a:Landroid/content/ComponentName;
 
-.field public static final b:I
+.field public final b:Landroid/os/IBinder;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(Landroid/content/ComponentName;Landroid/os/IBinder;)V
+    .locals 0
 
-    sget v0, Latb;->about_app_simple_cell_view_type:I
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    sput v0, Lv1a;->a:I
+    iput-object p1, p0, Lv1a;->a:Landroid/content/ComponentName;
 
-    sget v0, Latb;->about_app_version:I
-
-    sput v0, Lv1a;->b:I
+    iput-object p2, p0, Lv1a;->b:Landroid/os/IBinder;
 
     return-void
 .end method

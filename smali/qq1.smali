@@ -1,25 +1,29 @@
-.class public final Lqq1;
+.class public interface abstract Lqq1;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lru/ok/android/externcalls/sdk/audio/CallsAudioManager$DisabledAudioDeviceUsagePolicy;
-
 
 # virtual methods
-.method public final isAvailableForAutoSelect(Lru/ok/android/externcalls/sdk/audio/CallsAudioManager$AudioDeviceType;)Z
+.method public k(Lxg1;)V
     .locals 0
 
-    sget-object p0, Lru/ok/android/externcalls/sdk/audio/CallsAudioManager$AudioDeviceType;->BLUETOOTH:Lru/ok/android/externcalls/sdk/audio/CallsAudioManager$AudioDeviceType;
+    return-void
+.end method
 
-    if-ne p1, p0, :cond_0
+.method public l()V
+    .locals 0
 
-    const/4 p0, 0x1
+    return-void
+.end method
 
-    return p0
+.method public m(Lxg1;Landroid/graphics/Point;)V
+    .locals 0
 
-    :cond_0
-    const/4 p0, 0x0
+    return-void
+.end method
 
-    return p0
+.method public n()V
+    .locals 0
+
+    return-void
 .end method

@@ -22,7 +22,7 @@
         "",
         "tag",
         "message",
-        "Le5f;",
+        "Lylf;",
         "v",
         "(Ljava/lang/String;Ljava/lang/String;)V",
         "",

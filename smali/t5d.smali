@@ -1,91 +1,119 @@
-.class public final synthetic Lt5d;
+.class public abstract Lt5d;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lx66;
-
-
-# instance fields
-.field public final synthetic a:Lvo6;
+.implements Loq4;
 
 
 # direct methods
-.method public constructor <init>(Lvo6;)V
-    .locals 0
+.method public static a(Ljava/util/concurrent/TimeUnit;)J
+    .locals 3
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    sget-boolean v0, Lv5d;->a:Z
 
-    iput-object p1, p0, Lt5d;->a:Lvo6;
+    if-nez v0, :cond_0
 
-    return-void
+    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+
+    move-result-wide v0
+
+    sget-object v2, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;
+
+    invoke-virtual {p0, v0, v1, v2}, Ljava/util/concurrent/TimeUnit;->convert(JLjava/util/concurrent/TimeUnit;)J
+
+    move-result-wide v0
+
+    return-wide v0
+
+    :cond_0
+    invoke-static {}, Ljava/lang/System;->nanoTime()J
+
+    move-result-wide v0
+
+    sget-object v2, Ljava/util/concurrent/TimeUnit;->NANOSECONDS:Ljava/util/concurrent/TimeUnit;
+
+    invoke-virtual {p0, v0, v1, v2}, Ljava/util/concurrent/TimeUnit;->convert(JLjava/util/concurrent/TimeUnit;)J
+
+    move-result-wide v0
+
+    return-wide v0
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
+.method public b(Ljava/lang/Runnable;)Loq4;
+    .locals 3
 
-    instance-of v0, p1, Lt5d;
+    const-wide/16 v0, 0x0
 
-    if-eqz v0, :cond_0
+    sget-object v2, Ljava/util/concurrent/TimeUnit;->NANOSECONDS:Ljava/util/concurrent/TimeUnit;
 
-    if-eqz p1, :cond_0
-
-    invoke-virtual {p0}, Lt5d;->getFunctionDelegate()Lq66;
+    invoke-virtual {p0, p1, v0, v1, v2}, Lt5d;->c(Ljava/lang/Runnable;JLjava/util/concurrent/TimeUnit;)Loq4;
 
     move-result-object p0
 
-    check-cast p1, Lx66;
+    return-object p0
+.end method
 
-    invoke-interface {p1}, Lx66;->getFunctionDelegate()Lq66;
+.method public abstract c(Ljava/lang/Runnable;JLjava/util/concurrent/TimeUnit;)Loq4;
+.end method
 
-    move-result-object p1
+.method public final d(Ljava/lang/Runnable;JJLjava/util/concurrent/TimeUnit;)Loq4;
+    .locals 15
 
-    invoke-virtual {p0, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+    move-wide/from16 v0, p2
 
-    move-result p0
+    move-object/from16 v2, p6
 
-    return p0
+    new-instance v3, Lh12;
+
+    const/4 v4, 0x2
+
+    invoke-direct {v3, v4}, Lh12;-><init>(I)V
+
+    new-instance v12, Lh12;
+
+    invoke-direct {v12, v3}, Lh12;-><init>(Lh12;)V
+
+    move-wide/from16 v4, p4
+
+    invoke-virtual {v2, v4, v5}, Ljava/util/concurrent/TimeUnit;->toNanos(J)J
+
+    move-result-wide v13
+
+    sget-object v4, Ljava/util/concurrent/TimeUnit;->NANOSECONDS:Ljava/util/concurrent/TimeUnit;
+
+    invoke-static {v4}, Lt5d;->a(Ljava/util/concurrent/TimeUnit;)J
+
+    move-result-wide v10
+
+    invoke-virtual {v2, v0, v1}, Ljava/util/concurrent/TimeUnit;->toNanos(J)J
+
+    move-result-wide v4
+
+    add-long v7, v4, v10
+
+    new-instance v5, Ls5d;
+
+    move-object v6, p0
+
+    move-object/from16 v9, p1
+
+    invoke-direct/range {v5 .. v14}, Ls5d;-><init>(Lt5d;JLjava/lang/Runnable;JLh12;J)V
+
+    invoke-virtual {p0, v5, v0, v1, v2}, Lt5d;->c(Ljava/lang/Runnable;JLjava/util/concurrent/TimeUnit;)Loq4;
+
+    move-result-object p0
+
+    sget-object v0, Lk45;->a:Lk45;
+
+    if-ne p0, v0, :cond_0
+
+    return-object p0
 
     :cond_0
-    const/4 p0, 0x0
+    invoke-static {v3, p0}, Lsq4;->c(Ljava/util/concurrent/atomic/AtomicReference;Loq4;)Z
 
-    return p0
-.end method
-
-.method public final getFunctionDelegate()Lq66;
-    .locals 7
-
-    new-instance v0, Lq8;
-
-    const-string v6, "onNewHost(Ljava/lang/String;)Lkotlinx/coroutines/Job;"
-
-    const/16 v2, 0x8
-
-    const/4 v1, 0x1
-
-    const-class v3, Lvo6;
-
-    iget-object v4, p0, Lt5d;->a:Lvo6;
-
-    const-string v5, "onNewHost"
-
-    invoke-direct/range {v0 .. v6}, Lq8;-><init>(IILjava/lang/Class;Ljava/lang/Object;Ljava/lang/String;Ljava/lang/String;)V
-
-    return-object v0
-.end method
-
-.method public final hashCode()I
-    .locals 0
-
-    invoke-virtual {p0}, Lt5d;->getFunctionDelegate()Lq66;
-
-    move-result-object p0
-
-    invoke-virtual {p0}, Ljava/lang/Object;->hashCode()I
-
-    move-result p0
-
-    return p0
+    return-object v12
 .end method

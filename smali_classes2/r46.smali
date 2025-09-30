@@ -1,229 +1,559 @@
-.class public final synthetic Lr46;
+.class public final Lr46;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Ljj3;
+.implements Ljava/util/Collection;
+.implements Lmi7;
 
 
 # instance fields
 .field public final synthetic a:I
 
-.field public final synthetic b:Lru/ok/messages/media/attaches/fragments/FrgAttachPhoto;
-
-.field public final synthetic c:I
+.field public final synthetic b:Ljava/lang/Object;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lru/ok/messages/media/attaches/fragments/FrgAttachPhoto;II)V
-    .locals 0
+.method public constructor <init>(Loo9;)V
+    .locals 1
 
-    iput p3, p0, Lr46;->a:I
+    const/4 v0, 0x1
 
-    iput-object p1, p0, Lr46;->b:Lru/ok/messages/media/attaches/fragments/FrgAttachPhoto;
+    iput v0, p0, Lr46;->a:I
 
-    iput p2, p0, Lr46;->c:I
-
+    .line 4
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 5
+    iput-object p1, p0, Lr46;->b:Ljava/lang/Object;
+
+    return-void
+.end method
+
+.method public constructor <init>(Ls46;)V
+    .locals 1
+
+    const/4 v0, 0x0
+
+    iput v0, p0, Lr46;->a:I
+
+    .line 1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 2
+    iget-object p1, p1, Ls46;->a:Ljava/util/concurrent/ConcurrentSkipListSet;
+
+    .line 3
+    iput-object p1, p0, Lr46;->b:Ljava/lang/Object;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final accept(Ljava/lang/Object;)V
-    .locals 4
+.method public final add(Ljava/lang/Object;)Z
+    .locals 0
+
+    iget p0, p0, Lr46;->a:I
+
+    packed-switch p0, :pswitch_data_0
+
+    new-instance p0, Ljava/lang/UnsupportedOperationException;
+
+    const-string p1, "Operation is not supported for read-only collection"
+
+    invoke-direct {p0, p1}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+
+    throw p0
+
+    :pswitch_0
+    new-instance p0, Ljava/lang/UnsupportedOperationException;
+
+    const-string p1, "Operation is not supported for read-only collection"
+
+    invoke-direct {p0, p1}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+
+    throw p0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final addAll(Ljava/util/Collection;)Z
+    .locals 0
+
+    iget p0, p0, Lr46;->a:I
+
+    packed-switch p0, :pswitch_data_0
+
+    new-instance p0, Ljava/lang/UnsupportedOperationException;
+
+    const-string p1, "Operation is not supported for read-only collection"
+
+    invoke-direct {p0, p1}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+
+    throw p0
+
+    :pswitch_0
+    new-instance p0, Ljava/lang/UnsupportedOperationException;
+
+    const-string p1, "Operation is not supported for read-only collection"
+
+    invoke-direct {p0, p1}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+
+    throw p0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final clear()V
+    .locals 1
+
+    iget p0, p0, Lr46;->a:I
+
+    packed-switch p0, :pswitch_data_0
+
+    new-instance p0, Ljava/lang/UnsupportedOperationException;
+
+    const-string v0, "Operation is not supported for read-only collection"
+
+    invoke-direct {p0, v0}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+
+    throw p0
+
+    :pswitch_0
+    new-instance p0, Ljava/lang/UnsupportedOperationException;
+
+    const-string v0, "Operation is not supported for read-only collection"
+
+    invoke-direct {p0, v0}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+
+    throw p0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final contains(Ljava/lang/Object;)Z
+    .locals 1
 
     iget v0, p0, Lr46;->a:I
 
     packed-switch v0, :pswitch_data_0
 
-    check-cast p1, Ljava/lang/Throwable;
+    iget-object p0, p0, Lr46;->b:Ljava/lang/Object;
 
-    const/4 p1, 0x0
+    check-cast p0, Loo9;
 
-    iget-object v0, p0, Lr46;->b:Lru/ok/messages/media/attaches/fragments/FrgAttachPhoto;
+    invoke-virtual {p0, p1}, Loo9;->c(Ljava/lang/Object;)Z
 
-    iput-object p1, v0, Lru/ok/messages/media/attaches/fragments/FrgAttachPhoto;->I1:Le9g;
+    move-result p0
 
-    invoke-virtual {v0}, Lru/ok/messages/views/fragments/base/FrgBase;->X0()V
+    return p0
 
-    const/4 p1, 0x1
+    :pswitch_0
+    instance-of v0, p1, Lea8;
 
-    iget p0, p0, Lr46;->c:I
+    if-nez v0, :cond_0
 
-    if-ne p0, p1, :cond_0
-
-    invoke-virtual {v0}, Landroidx/fragment/app/a;->S()Landroid/content/Context;
-
-    move-result-object p0
-
-    sget p1, Lnnc;->R2:I
-
-    invoke-static {p0, p1}, Lus;->E(Landroid/content/Context;I)V
+    const/4 p0, 0x0
 
     goto :goto_0
 
     :cond_0
-    const/4 p1, 0x2
+    check-cast p1, Lea8;
 
-    if-ne p0, p1, :cond_1
+    iget-object p0, p0, Lr46;->b:Ljava/lang/Object;
 
-    invoke-virtual {v0}, Landroidx/fragment/app/a;->S()Landroid/content/Context;
+    check-cast p0, Ljava/util/concurrent/ConcurrentSkipListSet;
 
-    move-result-object p0
+    invoke-virtual {p0, p1}, Ljava/util/concurrent/ConcurrentSkipListSet;->contains(Ljava/lang/Object;)Z
 
-    sget p1, Lnnc;->Y2:I
+    move-result p0
 
-    invoke-static {p0, p1}, Lus;->E(Landroid/content/Context;I)V
+    :goto_0
+    return p0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final containsAll(Ljava/util/Collection;)Z
+    .locals 2
+
+    iget v0, p0, Lr46;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    iget-object p0, p0, Lr46;->b:Ljava/lang/Object;
+
+    check-cast p0, Loo9;
+
+    invoke-interface {p1}, Ljava/util/Collection;->isEmpty()Z
+
+    move-result v0
+
+    const/4 v1, 0x1
+
+    if-eqz v0, :cond_0
 
     goto :goto_0
 
-    :cond_1
-    const/4 p1, 0x3
-
-    if-ne p0, p1, :cond_2
-
-    invoke-virtual {v0}, Landroidx/fragment/app/a;->S()Landroid/content/Context;
-
-    move-result-object p0
-
-    sget p1, Lnnc;->t:I
-
-    invoke-static {p0, p1}, Lus;->E(Landroid/content/Context;I)V
-
-    :cond_2
-    :goto_0
-    return-void
-
-    :pswitch_0
-    check-cast p1, Ljava/io/File;
-
-    const/4 v0, 0x0
-
-    iget-object v1, p0, Lr46;->b:Lru/ok/messages/media/attaches/fragments/FrgAttachPhoto;
-
-    iput-object v0, v1, Lru/ok/messages/media/attaches/fragments/FrgAttachPhoto;->I1:Le9g;
-
-    invoke-virtual {v1}, Lru/ok/messages/views/fragments/base/FrgBase;->X0()V
-
-    const/4 v0, 0x1
-
-    iget p0, p0, Lr46;->c:I
-
-    if-ne p0, v0, :cond_3
-
-    new-instance p0, Lxxd;
-
-    iget-object v0, v1, Lru/ok/messages/views/fragments/base/FrgBase;->l1:Lt4b;
-
-    iget-object v0, v0, Lt4b;->b:Ljava/lang/Object;
-
-    check-cast v0, Lsb3;
-
-    check-cast v0, Lq6a;
-
-    invoke-virtual {v0}, Lq6a;->h()Lvj5;
-
-    move-result-object v0
-
-    iget-object v2, v1, Lru/ok/messages/views/fragments/base/FrgBase;->l1:Lt4b;
-
-    iget-object v2, v2, Lt4b;->b:Ljava/lang/Object;
-
-    check-cast v2, Lsb3;
-
-    check-cast v2, Lq6a;
-
-    invoke-virtual {v2}, Lq6a;->f()Lwi4;
-
-    move-result-object v2
-
-    iget-object v3, v1, Lru/ok/messages/views/fragments/base/FrgBase;->l1:Lt4b;
-
-    iget-object v3, v3, Lt4b;->b:Ljava/lang/Object;
-
-    check-cast v3, Lsb3;
-
-    check-cast v3, Lq6a;
-
-    invoke-virtual {v3}, Lq6a;->n()La5b;
-
-    move-result-object v3
-
-    iget-object v3, v3, La5b;->b:Le6d;
-
-    invoke-direct {p0, v0, v2, v3}, Lxxd;-><init>(Lvj5;Lwi4;Le6d;)V
-
-    invoke-virtual {p1}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
+    :cond_0
+    invoke-interface {p1}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
     move-result-object p1
 
-    invoke-virtual {p0, v1, p1}, Lxxd;->a(Landroidx/fragment/app/a;Ljava/lang/String;)V
+    :cond_1
+    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
 
-    goto :goto_1
+    move-result v0
 
-    :cond_3
-    const/4 v0, 0x2
+    if-eqz v0, :cond_2
 
-    if-ne p0, v0, :cond_4
-
-    invoke-virtual {v1}, Landroidx/fragment/app/a;->Q()Landroidx/fragment/app/b;
-
-    move-result-object p0
-
-    iget-object v0, v1, Lru/ok/messages/views/fragments/base/FrgBase;->l1:Lt4b;
-
-    iget-object v0, v0, Lt4b;->b:Ljava/lang/Object;
-
-    check-cast v0, Lsb3;
-
-    check-cast v0, Lq6a;
-
-    invoke-virtual {v0}, Lq6a;->h()Lvj5;
+    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v0
 
-    invoke-static {p0, p1, v0}, Lg47;->H(Landroidx/fragment/app/b;Ljava/io/File;Lvj5;)V
+    invoke-virtual {p0, v0}, Loo9;->c(Ljava/lang/Object;)Z
 
-    goto :goto_1
+    move-result v0
 
-    :cond_4
-    const/4 p1, 0x3
+    if-nez v0, :cond_1
 
-    if-ne p0, p1, :cond_5
+    const/4 v1, 0x0
 
-    invoke-virtual {v1}, Landroidx/fragment/app/a;->S()Landroid/content/Context;
+    :cond_2
+    :goto_0
+    return v1
+
+    :pswitch_0
+    iget-object p0, p0, Lr46;->b:Ljava/lang/Object;
+
+    check-cast p0, Ljava/util/concurrent/ConcurrentSkipListSet;
+
+    invoke-virtual {p0, p1}, Ljava/util/AbstractCollection;->containsAll(Ljava/util/Collection;)Z
+
+    move-result p0
+
+    return p0
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final isEmpty()Z
+    .locals 1
+
+    iget v0, p0, Lr46;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    iget-object p0, p0, Lr46;->b:Ljava/lang/Object;
+
+    check-cast p0, Loo9;
+
+    invoke-virtual {p0}, Loo9;->h()Z
+
+    move-result p0
+
+    return p0
+
+    :pswitch_0
+    iget-object p0, p0, Lr46;->b:Ljava/lang/Object;
+
+    check-cast p0, Ljava/util/concurrent/ConcurrentSkipListSet;
+
+    invoke-virtual {p0}, Ljava/util/concurrent/ConcurrentSkipListSet;->isEmpty()Z
+
+    move-result p0
+
+    return p0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final iterator()Ljava/util/Iterator;
+    .locals 2
+
+    iget v0, p0, Lr46;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    new-instance v0, Lo4d;
+
+    iget-object p0, p0, Lr46;->b:Ljava/lang/Object;
+
+    check-cast p0, Loo9;
+
+    const/4 v1, 0x0
+
+    invoke-direct {v0, p0, v1}, Lo4d;-><init>(Loo9;Lkotlin/coroutines/Continuation;)V
+
+    invoke-static {v0}, Li4h;->L(Lpc6;)Leid;
 
     move-result-object p0
 
-    iget-object p1, v1, Lru/ok/messages/media/attaches/fragments/FrgAttachView;->y1:Ler8;
+    return-object p0
 
-    iget-object v0, v1, Lru/ok/messages/media/attaches/fragments/FrgAttachView;->z1:Lw10;
+    :pswitch_0
+    iget-object p0, p0, Lr46;->b:Ljava/lang/Object;
 
-    iget-object v2, v1, Lru/ok/messages/views/fragments/base/FrgBase;->m1:Lowc;
+    check-cast p0, Ljava/util/concurrent/ConcurrentSkipListSet;
 
-    invoke-virtual {v2}, Lowc;->n()Lxs8;
+    invoke-virtual {p0}, Ljava/util/concurrent/ConcurrentSkipListSet;->iterator()Ljava/util/Iterator;
 
-    move-result-object v2
+    move-result-object p0
 
-    iget-object v1, v1, Lru/ok/messages/views/fragments/base/FrgBase;->l1:Lt4b;
+    return-object p0
 
-    iget-object v1, v1, Lt4b;->b:Ljava/lang/Object;
+    nop
 
-    check-cast v1, Lsb3;
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
 
-    check-cast v1, Lq6a;
+.method public final remove(Ljava/lang/Object;)Z
+    .locals 0
 
-    invoke-virtual {v1}, Lq6a;->h()Lvj5;
+    iget p0, p0, Lr46;->a:I
 
-    move-result-object v1
+    packed-switch p0, :pswitch_data_0
 
-    invoke-static {p0, p1, v0, v2, v1}, Lwx7;->J(Landroid/content/Context;Ler8;Lw10;Lxs8;Lvj5;)V
+    new-instance p0, Ljava/lang/UnsupportedOperationException;
 
-    :cond_5
-    :goto_1
-    return-void
+    const-string p1, "Operation is not supported for read-only collection"
+
+    invoke-direct {p0, p1}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+
+    throw p0
+
+    :pswitch_0
+    new-instance p0, Ljava/lang/UnsupportedOperationException;
+
+    const-string p1, "Operation is not supported for read-only collection"
+
+    invoke-direct {p0, p1}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+
+    throw p0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final removeAll(Ljava/util/Collection;)Z
+    .locals 0
+
+    iget p0, p0, Lr46;->a:I
+
+    packed-switch p0, :pswitch_data_0
+
+    new-instance p0, Ljava/lang/UnsupportedOperationException;
+
+    const-string p1, "Operation is not supported for read-only collection"
+
+    invoke-direct {p0, p1}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+
+    throw p0
+
+    :pswitch_0
+    new-instance p0, Ljava/lang/UnsupportedOperationException;
+
+    const-string p1, "Operation is not supported for read-only collection"
+
+    invoke-direct {p0, p1}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+
+    throw p0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final removeIf(Ljava/util/function/Predicate;)Z
+    .locals 0
+
+    iget p0, p0, Lr46;->a:I
+
+    packed-switch p0, :pswitch_data_0
+
+    new-instance p0, Ljava/lang/UnsupportedOperationException;
+
+    const-string p1, "Operation is not supported for read-only collection"
+
+    invoke-direct {p0, p1}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+
+    throw p0
+
+    :pswitch_0
+    new-instance p0, Ljava/lang/UnsupportedOperationException;
+
+    const-string p1, "Operation is not supported for read-only collection"
+
+    invoke-direct {p0, p1}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+
+    throw p0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final retainAll(Ljava/util/Collection;)Z
+    .locals 0
+
+    iget p0, p0, Lr46;->a:I
+
+    packed-switch p0, :pswitch_data_0
+
+    new-instance p0, Ljava/lang/UnsupportedOperationException;
+
+    const-string p1, "Operation is not supported for read-only collection"
+
+    invoke-direct {p0, p1}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+
+    throw p0
+
+    :pswitch_0
+    new-instance p0, Ljava/lang/UnsupportedOperationException;
+
+    const-string p1, "Operation is not supported for read-only collection"
+
+    invoke-direct {p0, p1}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+
+    throw p0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final size()I
+    .locals 1
+
+    iget v0, p0, Lr46;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    iget-object p0, p0, Lr46;->b:Ljava/lang/Object;
+
+    check-cast p0, Loo9;
+
+    iget p0, p0, Loo9;->e:I
+
+    return p0
+
+    :pswitch_0
+    iget-object p0, p0, Lr46;->b:Ljava/lang/Object;
+
+    check-cast p0, Ljava/util/concurrent/ConcurrentSkipListSet;
+
+    invoke-virtual {p0}, Ljava/util/concurrent/ConcurrentSkipListSet;->size()I
+
+    move-result p0
+
+    return p0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final toArray()[Ljava/lang/Object;
+    .locals 1
+
+    iget v0, p0, Lr46;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    .line 1
+    invoke-static {p0}, Lqe5;->W(Ljava/util/Collection;)[Ljava/lang/Object;
+
+    move-result-object p0
+
+    return-object p0
+
+    .line 2
+    :pswitch_0
+    invoke-static {p0}, Lqe5;->W(Ljava/util/Collection;)[Ljava/lang/Object;
+
+    move-result-object p0
+
+    return-object p0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final toArray([Ljava/lang/Object;)[Ljava/lang/Object;
+    .locals 1
+
+    iget v0, p0, Lr46;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    .line 3
+    invoke-static {p0, p1}, Lqe5;->X(Ljava/util/Collection;[Ljava/lang/Object;)[Ljava/lang/Object;
+
+    move-result-object p0
+
+    return-object p0
+
+    .line 4
+    :pswitch_0
+    invoke-static {p0, p1}, Lqe5;->X(Ljava/util/Collection;[Ljava/lang/Object;)[Ljava/lang/Object;
+
+    move-result-object p0
+
+    return-object p0
+
+    nop
 
     :pswitch_data_0
     .packed-switch 0x0

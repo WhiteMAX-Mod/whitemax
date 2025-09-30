@@ -3,18 +3,26 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lm4b;
+.implements Lpt7;
 
 
 # instance fields
 .field public final synthetic a:I
 
+.field public final synthetic b:Lfd;
+
+.field public final synthetic c:Lx46;
+
 
 # direct methods
-.method public synthetic constructor <init>(I)V
+.method public synthetic constructor <init>(Lfd;Lx46;Lja4;I)V
     .locals 0
 
-    iput p1, p0, Lub4;->a:I
+    iput p4, p0, Lub4;->a:I
+
+    iput-object p1, p0, Lub4;->b:Lfd;
+
+    iput-object p2, p0, Lub4;->c:Lx46;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -23,86 +31,38 @@
 
 
 # virtual methods
-.method public final apply(Ljava/lang/Object;)Z
-    .locals 0
+.method public final invoke(Ljava/lang/Object;)V
+    .locals 1
 
-    iget p0, p0, Lub4;->a:I
+    iget v0, p0, Lub4;->a:I
 
-    packed-switch p0, :pswitch_data_0
+    packed-switch v0, :pswitch_data_0
 
-    check-cast p1, Ljava/lang/String;
+    iget-object v0, p0, Lub4;->c:Lx46;
 
-    if-eqz p1, :cond_0
+    check-cast p1, Lgd;
 
-    const/4 p0, 0x1
+    iget-object p0, p0, Lub4;->b:Lfd;
 
-    goto :goto_0
+    invoke-interface {p1, p0, v0}, Lgd;->K(Lfd;Lx46;)V
 
-    :cond_0
-    const/4 p0, 0x0
-
-    :goto_0
-    return p0
+    return-void
 
     :pswitch_0
-    check-cast p1, Ljava/util/Map$Entry;
+    iget-object v0, p0, Lub4;->c:Lx46;
 
-    invoke-interface {p1}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
+    check-cast p1, Lgd;
 
-    move-result-object p0
+    iget-object p0, p0, Lub4;->b:Lfd;
 
-    if-eqz p0, :cond_1
+    invoke-interface {p1, p0, v0}, Lgd;->Z(Lfd;Lx46;)V
 
-    const/4 p0, 0x1
-
-    goto :goto_1
-
-    :cond_1
-    const/4 p0, 0x0
-
-    :goto_1
-    return p0
-
-    :pswitch_1
-    check-cast p1, Ljava/util/Map$Entry;
-
-    invoke-interface {p1}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
-
-    move-result-object p0
-
-    if-eqz p0, :cond_2
-
-    const/4 p0, 0x1
-
-    goto :goto_2
-
-    :cond_2
-    const/4 p0, 0x0
-
-    :goto_2
-    return p0
-
-    :pswitch_2
-    check-cast p1, Ljava/lang/String;
-
-    if-eqz p1, :cond_3
-
-    const/4 p0, 0x1
-
-    goto :goto_3
-
-    :cond_3
-    const/4 p0, 0x0
-
-    :goto_3
-    return p0
+    return-void
 
     nop
 
     :pswitch_data_0
     .packed-switch 0x0
-        :pswitch_2
-        :pswitch_1
         :pswitch_0
     .end packed-switch
 .end method

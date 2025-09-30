@@ -1,116 +1,106 @@
-.class public final Llg8;
+.class public final synthetic Llg8;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lmg8;
+.implements Lko8;
+
 
 # instance fields
-.field public final a:Lcg8;
-
-.field public final b:Ljava/util/ArrayList;
-
-.field public final c:Lhd7;
-
-.field public d:Ldg8;
+.field public final synthetic a:Landroid/app/PendingIntent;
 
 
 # direct methods
-.method public constructor <init>(Lcg8;)V
-    .locals 1
+.method public synthetic constructor <init>(ILandroid/app/PendingIntent;)V
+    .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    new-instance v0, Ljava/util/ArrayList;
+    iput-object p2, p0, Llg8;->a:Landroid/app/PendingIntent;
 
-    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
+    return-void
+.end method
 
-    iput-object v0, p0, Llg8;->b:Ljava/util/ArrayList;
+.method public synthetic constructor <init>(Landroid/app/PendingIntent;)V
+    .locals 0
 
-    iput-object p1, p0, Llg8;->a:Lcg8;
+    .line 2
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iget-object p1, p1, Lcg8;->b:Lhd7;
-
-    iput-object p1, p0, Llg8;->c:Lhd7;
+    iput-object p1, p0, Llg8;->a:Landroid/app/PendingIntent;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Ljava/lang/String;)Lmg8;
-    .locals 3
+.method public a(Lsn8;I)V
+    .locals 0
 
-    iget-object p0, p0, Llg8;->b:Ljava/util/ArrayList;
+    iget-object p0, p0, Llg8;->a:Landroid/app/PendingIntent;
 
-    invoke-virtual {p0}, Ljava/util/ArrayList;->size()I
+    invoke-interface {p1, p2, p0}, Lsn8;->c(ILandroid/app/PendingIntent;)V
+
+    return-void
+.end method
+
+.method public d(Ldg8;)V
+    .locals 1
+
+    invoke-virtual {p1}, Ldg8;->isConnected()Z
 
     move-result v0
 
-    const/4 v1, 0x0
+    if-eqz v0, :cond_2
 
-    :goto_0
-    if-ge v1, v0, :cond_1
+    iget-object v0, p1, Ldg8;->o:Landroid/app/PendingIntent;
 
-    invoke-virtual {p0, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+    iget-object p0, p0, Llg8;->a:Landroid/app/PendingIntent;
 
-    move-result-object v2
+    invoke-static {v0, p0}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    check-cast v2, Lmg8;
+    move-result v0
 
-    iget-object v2, v2, Lmg8;->b:Ljava/lang/String;
+    if-eqz v0, :cond_0
 
-    invoke-virtual {v2, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_0
-
-    invoke-virtual {p0, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, Lmg8;
-
-    return-object p0
+    goto :goto_1
 
     :cond_0
-    add-int/lit8 v1, v1, 0x1
+    iput-object p0, p1, Ldg8;->o:Landroid/app/PendingIntent;
+
+    iget-object p0, p1, Ldg8;->a:Ljf8;
+
+    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    invoke-static {}, Landroid/os/Looper;->myLooper()Landroid/os/Looper;
+
+    move-result-object p1
+
+    iget-object v0, p0, Ljf8;->X:Landroid/os/Handler;
+
+    invoke-virtual {v0}, Landroid/os/Handler;->getLooper()Landroid/os/Looper;
+
+    move-result-object v0
+
+    if-ne p1, v0, :cond_1
+
+    const/4 p1, 0x1
 
     goto :goto_0
 
     :cond_1
-    const/4 p0, 0x0
+    const/4 p1, 0x0
 
-    return-object p0
-.end method
+    :goto_0
+    invoke-static {p1}, Lmq0;->h(Z)V
 
-.method public final toString()Ljava/lang/String;
-    .locals 2
+    iget-object p0, p0, Ljf8;->o:Lhf8;
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    const-string v1, "MediaRouter.RouteProviderInfo{ packageName="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object p0, p0, Llg8;->c:Lhd7;
-
-    iget-object p0, p0, Lhd7;->b:Ljava/lang/Object;
-
-    check-cast p0, Landroid/content/ComponentName;
-
-    invoke-virtual {p0}, Landroid/content/ComponentName;->getPackageName()Ljava/lang/String;
-
-    move-result-object p0
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string p0, " }"
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
+    :cond_2
+    :goto_1
+    return-void
 .end method

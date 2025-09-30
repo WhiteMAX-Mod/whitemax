@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lcnd;
+.implements Ls0e;
 
 
 # instance fields
@@ -23,7 +23,7 @@
 
 
 # virtual methods
-.method public final j(Lorg/json/JSONObject;)V
+.method public final k(Lorg/json/JSONObject;)V
     .locals 0
 
     iget-object p0, p0, Lru/ok/android/externcalls/sdk/participant/a;->a:Ljava/lang/Runnable;

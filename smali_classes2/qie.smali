@@ -3,111 +3,150 @@
 .source "SourceFile"
 
 
-# static fields
-.field public static volatile b:Lqie;
-
-.field public static final c:Ljava/util/concurrent/CountDownLatch;
-
-
 # instance fields
-.field public final a:Lwfe;
+.field public final a:Ljava/util/List;
+
+.field public final b:Z
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public constructor <init>(ILjava/util/List;)V
+    .locals 1
 
-    new-instance v0, Ljava/util/concurrent/CountDownLatch;
+    and-int/lit8 v0, p1, 0x1
 
-    const/4 v1, 0x1
+    if-eqz v0, :cond_0
 
-    invoke-direct {v0, v1}, Ljava/util/concurrent/CountDownLatch;-><init>(I)V
-
-    sput-object v0, Lqie;->c:Ljava/util/concurrent/CountDownLatch;
-
-    return-void
-.end method
-
-.method public constructor <init>(Lwfe;)V
-    .locals 0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lqie;->a:Lwfe;
-
-    return-void
-.end method
-
-.method public static a()Lqie;
-    .locals 4
-
-    sget-object v0, Lqie;->c:Ljava/util/concurrent/CountDownLatch;
-
-    invoke-virtual {v0}, Ljava/util/concurrent/CountDownLatch;->getCount()J
-
-    move-result-wide v0
-
-    const-wide/16 v2, 0x0
-
-    cmp-long v0, v0, v2
-
-    if-nez v0, :cond_0
-
-    sget-object v0, Lqie;->b:Lqie;
-
-    return-object v0
+    const/4 p2, 0x0
 
     :cond_0
-    new-instance v0, Ljava/lang/IllegalStateException;
+    and-int/lit8 p1, p1, 0x2
 
-    const-string v1, "TamContextAndroid should call `init` before `getInstance`"
+    if-eqz p1, :cond_1
 
-    invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-.end method
-
-.method public static b()Lmie;
-    .locals 3
-
-    :try_start_0
-    sget-object v0, Lqie;->c:Ljava/util/concurrent/CountDownLatch;
-
-    invoke-virtual {v0}, Ljava/util/concurrent/CountDownLatch;->await()V
-    :try_end_0
-    .catch Ljava/lang/InterruptedException; {:try_start_0 .. :try_end_0} :catch_0
+    const/4 p1, 0x0
 
     goto :goto_0
 
-    :catch_0
-    move-exception v0
-
-    invoke-virtual {v0}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
-
-    move-result-object v0
-
-    filled-new-array {v0}, [Ljava/lang/Object;
-
-    move-result-object v0
-
-    const-string v1, "TamContextAndroid"
-
-    const-string v2, "TamContext initialization was interrupted: %s"
-
-    invoke-static {v1, v2, v0}, Lg47;->s(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    :cond_1
+    const/4 p1, 0x1
 
     :goto_0
-    invoke-static {}, Lqie;->a()Lqie;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    move-result-object v0
+    iput-object p2, p0, Lqie;->a:Ljava/util/List;
 
-    iget-object v0, v0, Lqie;->a:Lwfe;
+    iput-boolean p1, p0, Lqie;->b:Z
 
-    invoke-virtual {v0}, Lwfe;->getValue()Ljava/lang/Object;
+    return-void
+.end method
 
-    move-result-object v0
 
-    check-cast v0, Lmie;
+# virtual methods
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
 
-    return-object v0
+    const/4 v0, 0x1
+
+    if-ne p0, p1, :cond_0
+
+    return v0
+
+    :cond_0
+    instance-of v1, p1, Lqie;
+
+    const/4 v2, 0x0
+
+    if-nez v1, :cond_1
+
+    return v2
+
+    :cond_1
+    check-cast p1, Lqie;
+
+    iget-object v1, p0, Lqie;->a:Ljava/util/List;
+
+    iget-object v3, p1, Lqie;->a:Ljava/util/List;
+
+    invoke-static {v1, v3}, Lvyg;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_2
+
+    return v2
+
+    :cond_2
+    iget-boolean p0, p0, Lqie;->b:Z
+
+    iget-boolean p1, p1, Lqie;->b:Z
+
+    if-eq p0, p1, :cond_3
+
+    return v2
+
+    :cond_3
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 1
+
+    iget-object v0, p0, Lqie;->a:Ljava/util/List;
+
+    if-nez v0, :cond_0
+
+    const/4 v0, 0x0
+
+    goto :goto_0
+
+    :cond_0
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
+
+    move-result v0
+
+    :goto_0
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget-boolean p0, p0, Lqie;->b:Z
+
+    invoke-static {p0}, Ljava/lang/Boolean;->hashCode(Z)I
+
+    move-result p0
+
+    add-int/2addr p0, v0
+
+    return p0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 2
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "SearchState(sets="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v1, p0, Lqie;->a:Ljava/util/List;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", loading="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-boolean p0, p0, Lqie;->b:Z
+
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string p0, ")"
+
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    return-object p0
 .end method

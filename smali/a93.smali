@@ -1,83 +1,194 @@
 .class public final La93;
-.super Leqd;
+.super Lsz6;
 .source "SourceFile"
 
 
-# static fields
-.field public static final b:La93;
+# instance fields
+.field public final b:Ljava/lang/String;
+
+.field public final c:Ljava/lang/String;
+
+.field public final d:Ljava/lang/String;
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public constructor <init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
     .locals 1
 
-    new-instance v0, La93;
+    const-string v0, "COMM"
 
-    invoke-direct {v0}, Leqd;-><init>()V
+    invoke-direct {p0, v0}, Lsz6;-><init>(Ljava/lang/String;)V
 
-    sput-object v0, La93;->b:La93;
+    iput-object p1, p0, La93;->b:Ljava/lang/String;
+
+    iput-object p2, p0, La93;->c:Ljava/lang/String;
+
+    iput-object p3, p0, La93;->d:Ljava/lang/String;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final c()Lw64;
-    .locals 3
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
 
-    new-instance p0, Lw64;
+    const/4 v0, 0x1
 
-    new-instance v0, Lhl2;
+    if-ne p0, p1, :cond_0
 
-    const/16 v1, 0x18
+    return v0
 
-    invoke-direct {v0, v1}, Lhl2;-><init>(I)V
-
-    new-instance v1, Lhl2;
-
-    const/16 v2, 0x19
-
-    invoke-direct {v1, v2}, Lhl2;-><init>(I)V
-
-    invoke-direct {p0, v0, v1}, Lw64;-><init>(Lv56;Lv56;)V
-
-    return-object p0
-.end method
-
-.method public final d(Landroid/os/Bundle;)Lx64;
-    .locals 2
-
-    const-string p0, "chat_id"
-
-    invoke-static {p0, p1}, Lcu0;->y0(Ljava/lang/String;Landroid/os/Bundle;)J
-
-    move-result-wide p0
-
-    new-instance v0, Lz83;
-
+    :cond_0
     const/4 v1, 0x0
 
-    invoke-direct {v0, p0, p1, v1}, Lz83;-><init>(JI)V
+    if-eqz p1, :cond_2
 
-    return-object v0
+    const-class v2, La93;
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    move-result-object v3
+
+    if-eq v2, v3, :cond_1
+
+    goto :goto_0
+
+    :cond_1
+    check-cast p1, La93;
+
+    iget-object v2, p0, La93;->c:Ljava/lang/String;
+
+    iget-object v3, p1, La93;->c:Ljava/lang/String;
+
+    invoke-static {v2, v3}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_2
+
+    iget-object v2, p0, La93;->b:Ljava/lang/String;
+
+    iget-object v3, p1, La93;->b:Ljava/lang/String;
+
+    invoke-static {v2, v3}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_2
+
+    iget-object p0, p0, La93;->d:Ljava/lang/String;
+
+    iget-object p1, p1, La93;->d:Ljava/lang/String;
+
+    invoke-static {p0, p1}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p0
+
+    if-eqz p0, :cond_2
+
+    return v0
+
+    :cond_2
+    :goto_0
+    return v1
 .end method
 
-.method public final e(Ldqd;)V
+.method public final hashCode()I
     .locals 3
-
-    const-string p0, "chat_id"
-
-    filled-new-array {p0}, [Ljava/lang/String;
-
-    move-result-object p0
 
     const/4 v0, 0x0
 
-    const/16 v1, 0xe
+    iget-object v1, p0, La93;->b:Ljava/lang/String;
 
-    const-string v2, ":complaint"
+    if-eqz v1, :cond_0
 
-    invoke-static {p1, v2, p0, v0, v1}, Lv64;->a(Lv64;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lr64;
+    invoke-virtual {v1}, Ljava/lang/String;->hashCode()I
 
-    return-void
+    move-result v1
+
+    goto :goto_0
+
+    :cond_0
+    move v1, v0
+
+    :goto_0
+    const/16 v2, 0x20f
+
+    add-int/2addr v2, v1
+
+    mul-int/lit8 v2, v2, 0x1f
+
+    iget-object v1, p0, La93;->c:Ljava/lang/String;
+
+    if-eqz v1, :cond_1
+
+    invoke-virtual {v1}, Ljava/lang/String;->hashCode()I
+
+    move-result v1
+
+    goto :goto_1
+
+    :cond_1
+    move v1, v0
+
+    :goto_1
+    add-int/2addr v2, v1
+
+    mul-int/lit8 v2, v2, 0x1f
+
+    iget-object p0, p0, La93;->d:Ljava/lang/String;
+
+    if-eqz p0, :cond_2
+
+    invoke-virtual {p0}, Ljava/lang/String;->hashCode()I
+
+    move-result v0
+
+    :cond_2
+    add-int/2addr v2, v0
+
+    return v2
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 2
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    iget-object v1, p0, Lsz6;->a:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, ": language="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, La93;->b:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", description="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, La93;->c:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", text="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object p0, p0, La93;->d:Ljava/lang/String;
+
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    return-object p0
 .end method

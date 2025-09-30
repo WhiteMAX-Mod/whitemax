@@ -4,61 +4,29 @@
 
 
 # instance fields
-.field public final a:I
+.field public final a:Ljava/lang/String;
 
 .field public final b:Ljava/lang/String;
 
-.field public final c:I
-
-.field public final d:I
-
-.field public final e:I
-
-.field public final f:I
-
-.field public final g:I
-
-.field public final h:I
-
-.field public final i:I
-
-.field public final j:I
-
 
 # direct methods
-.method public constructor <init>(ILjava/lang/String;IIIIIIII)V
+.method public constructor <init>(Ljava/lang/String;Ljava/lang/String;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput p1, p0, Lz90;->a:I
+    iput-object p1, p0, Lz90;->a:Ljava/lang/String;
 
     if-eqz p2, :cond_0
 
     iput-object p2, p0, Lz90;->b:Ljava/lang/String;
-
-    iput p3, p0, Lz90;->c:I
-
-    iput p4, p0, Lz90;->d:I
-
-    iput p5, p0, Lz90;->e:I
-
-    iput p6, p0, Lz90;->f:I
-
-    iput p7, p0, Lz90;->g:I
-
-    iput p8, p0, Lz90;->h:I
-
-    iput p9, p0, Lz90;->i:I
-
-    iput p10, p0, Lz90;->j:I
 
     return-void
 
     :cond_0
     new-instance p0, Ljava/lang/NullPointerException;
 
-    const-string p1, "Null mediaType"
+    const-string p1, "Null version"
 
     invoke-direct {p0, p1}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
 
@@ -85,15 +53,9 @@
 
     check-cast p1, Lz90;
 
-    iget v1, p0, Lz90;->a:I
+    iget-object v1, p0, Lz90;->a:Ljava/lang/String;
 
-    iget v3, p1, Lz90;->a:I
-
-    if-ne v1, v3, :cond_1
-
-    iget-object v1, p0, Lz90;->b:Ljava/lang/String;
-
-    iget-object v3, p1, Lz90;->b:Ljava/lang/String;
+    iget-object v3, p1, Lz90;->a:Ljava/lang/String;
 
     invoke-virtual {v1, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -101,53 +63,15 @@
 
     if-eqz v1, :cond_1
 
-    iget v1, p0, Lz90;->c:I
+    iget-object p0, p0, Lz90;->b:Ljava/lang/String;
 
-    iget v3, p1, Lz90;->c:I
+    iget-object p1, p1, Lz90;->b:Ljava/lang/String;
 
-    if-ne v1, v3, :cond_1
+    invoke-virtual {p0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    iget v1, p0, Lz90;->d:I
+    move-result p0
 
-    iget v3, p1, Lz90;->d:I
-
-    if-ne v1, v3, :cond_1
-
-    iget v1, p0, Lz90;->e:I
-
-    iget v3, p1, Lz90;->e:I
-
-    if-ne v1, v3, :cond_1
-
-    iget v1, p0, Lz90;->f:I
-
-    iget v3, p1, Lz90;->f:I
-
-    if-ne v1, v3, :cond_1
-
-    iget v1, p0, Lz90;->g:I
-
-    iget v3, p1, Lz90;->g:I
-
-    if-ne v1, v3, :cond_1
-
-    iget v1, p0, Lz90;->h:I
-
-    iget v3, p1, Lz90;->h:I
-
-    if-ne v1, v3, :cond_1
-
-    iget v1, p0, Lz90;->i:I
-
-    iget v3, p1, Lz90;->i:I
-
-    if-ne v1, v3, :cond_1
-
-    iget p0, p0, Lz90;->j:I
-
-    iget p1, p1, Lz90;->j:I
-
-    if-ne p0, p1, :cond_1
+    if-eqz p0, :cond_1
 
     return v0
 
@@ -156,9 +80,13 @@
 .end method
 
 .method public final hashCode()I
-    .locals 3
+    .locals 2
 
-    iget v0, p0, Lz90;->a:I
+    iget-object v0, p0, Lz90;->a:Ljava/lang/String;
+
+    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
+
+    move-result v0
 
     const v1, 0xf4243
 
@@ -166,59 +94,11 @@
 
     mul-int/2addr v0, v1
 
-    iget-object v2, p0, Lz90;->b:Ljava/lang/String;
+    iget-object p0, p0, Lz90;->b:Ljava/lang/String;
 
-    invoke-virtual {v2}, Ljava/lang/String;->hashCode()I
+    invoke-virtual {p0}, Ljava/lang/String;->hashCode()I
 
-    move-result v2
-
-    xor-int/2addr v0, v2
-
-    mul-int/2addr v0, v1
-
-    iget v2, p0, Lz90;->c:I
-
-    xor-int/2addr v0, v2
-
-    mul-int/2addr v0, v1
-
-    iget v2, p0, Lz90;->d:I
-
-    xor-int/2addr v0, v2
-
-    mul-int/2addr v0, v1
-
-    iget v2, p0, Lz90;->e:I
-
-    xor-int/2addr v0, v2
-
-    mul-int/2addr v0, v1
-
-    iget v2, p0, Lz90;->f:I
-
-    xor-int/2addr v0, v2
-
-    mul-int/2addr v0, v1
-
-    iget v2, p0, Lz90;->g:I
-
-    xor-int/2addr v0, v2
-
-    mul-int/2addr v0, v1
-
-    iget v2, p0, Lz90;->h:I
-
-    xor-int/2addr v0, v2
-
-    mul-int/2addr v0, v1
-
-    iget v2, p0, Lz90;->i:I
-
-    xor-int/2addr v0, v2
-
-    mul-int/2addr v0, v1
-
-    iget p0, p0, Lz90;->j:I
+    move-result p0
 
     xor-int/2addr p0, v0
 
@@ -230,87 +110,23 @@
 
     new-instance v0, Ljava/lang/StringBuilder;
 
-    const-string v1, "VideoProfileProxy{codec="
+    const-string v1, "LibraryVersion{libraryName="
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget v1, p0, Lz90;->a:I
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string v1, ", mediaType="
+    iget-object v1, p0, Lz90;->a:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v1, p0, Lz90;->b:Ljava/lang/String;
+    const-string v1, ", version="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const-string v1, ", bitrate="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget v1, p0, Lz90;->c:I
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string v1, ", frameRate="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget v1, p0, Lz90;->d:I
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string v1, ", width="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget v1, p0, Lz90;->e:I
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string v1, ", height="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget v1, p0, Lz90;->f:I
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string v1, ", profile="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget v1, p0, Lz90;->g:I
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string v1, ", bitDepth="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget v1, p0, Lz90;->h:I
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string v1, ", chromaSubsampling="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget v1, p0, Lz90;->i:I
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string v1, ", hdrFormat="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget p0, p0, Lz90;->j:I
+    iget-object p0, p0, Lz90;->b:Ljava/lang/String;
 
     const-string v1, "}"
 
-    invoke-static {v0, p0, v1}, Lm26;->i(Ljava/lang/StringBuilder;ILjava/lang/String;)Ljava/lang/String;
+    invoke-static {v0, p0, v1}, Lyv7;->k(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
 

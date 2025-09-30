@@ -1,208 +1,182 @@
-.class public abstract Lgc;
+.class public final Lgc;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lf74;
 
-# static fields
-.field public static final a:Ljava/lang/String;
+
+# instance fields
+.field public final a:Lf74;
+
+.field public final b:[B
+
+.field public final c:[B
+
+.field public o:Ljavax/crypto/CipherInputStream;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(Lf74;[B[B)V
+    .locals 0
 
-    const-string v0, "Alarms"
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-static {v0}, Lfc2;->F(Ljava/lang/String;)Ljava/lang/String;
+    iput-object p1, p0, Lgc;->a:Lf74;
 
-    move-result-object v0
+    iput-object p2, p0, Lgc;->b:[B
 
-    sput-object v0, Lgc;->a:Ljava/lang/String;
+    iput-object p3, p0, Lgc;->c:[B
 
     return-void
 .end method
 
-.method public static a(Landroid/content/Context;Lp8g;I)V
+
+# virtual methods
+.method public final G(Ln74;)J
     .locals 4
 
-    const-string v0, "alarm"
+    :try_start_0
+    const-string v0, "AES/CBC/PKCS7Padding"
 
-    invoke-virtual {p0, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+    invoke-static {v0}, Ljavax/crypto/Cipher;->getInstance(Ljava/lang/String;)Ljavax/crypto/Cipher;
 
     move-result-object v0
+    :try_end_0
+    .catch Ljava/security/NoSuchAlgorithmException; {:try_start_0 .. :try_end_0} :catch_1
+    .catch Ljavax/crypto/NoSuchPaddingException; {:try_start_0 .. :try_end_0} :catch_1
 
-    check-cast v0, Landroid/app/AlarmManager;
+    new-instance v1, Ljavax/crypto/spec/SecretKeySpec;
 
-    sget-object v1, Lu53;->X:Ljava/lang/String;
+    iget-object v2, p0, Lgc;->b:[B
 
-    new-instance v1, Landroid/content/Intent;
+    const-string v3, "AES"
 
-    const-class v2, Landroidx/work/impl/background/systemalarm/SystemAlarmService;
+    invoke-direct {v1, v2, v3}, Ljavax/crypto/spec/SecretKeySpec;-><init>([BLjava/lang/String;)V
 
-    invoke-direct {v1, p0, v2}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
+    new-instance v2, Ljavax/crypto/spec/IvParameterSpec;
 
-    const-string v2, "ACTION_DELAY_MET"
+    iget-object v3, p0, Lgc;->c:[B
 
-    invoke-virtual {v1, v2}, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
+    invoke-direct {v2, v3}, Ljavax/crypto/spec/IvParameterSpec;-><init>([B)V
 
-    invoke-static {v1, p1}, Lu53;->d(Landroid/content/Intent;Lp8g;)V
+    const/4 v3, 0x2
 
-    const/high16 v2, 0x24000000
+    :try_start_1
+    invoke-virtual {v0, v3, v1, v2}, Ljavax/crypto/Cipher;->init(ILjava/security/Key;Ljava/security/spec/AlgorithmParameterSpec;)V
+    :try_end_1
+    .catch Ljava/security/InvalidKeyException; {:try_start_1 .. :try_end_1} :catch_0
+    .catch Ljava/security/InvalidAlgorithmParameterException; {:try_start_1 .. :try_end_1} :catch_0
 
-    invoke-static {p0, p2, v1, v2}, Landroid/app/PendingIntent;->getService(Landroid/content/Context;ILandroid/content/Intent;I)Landroid/app/PendingIntent;
+    new-instance v1, Lj74;
 
-    move-result-object p0
+    iget-object v2, p0, Lgc;->a:Lf74;
 
-    if-eqz p0, :cond_0
+    invoke-direct {v1, v2, p1}, Lj74;-><init>(Lf74;Ln74;)V
+
+    new-instance p1, Ljavax/crypto/CipherInputStream;
+
+    invoke-direct {p1, v1, v0}, Ljavax/crypto/CipherInputStream;-><init>(Ljava/io/InputStream;Ljavax/crypto/Cipher;)V
+
+    iput-object p1, p0, Lgc;->o:Ljavax/crypto/CipherInputStream;
+
+    invoke-virtual {v1}, Lj74;->m()V
+
+    const-wide/16 p0, -0x1
+
+    return-wide p0
+
+    :catch_0
+    move-exception p0
+
+    new-instance p1, Ljava/lang/RuntimeException;
+
+    invoke-direct {p1, p0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V
+
+    throw p1
+
+    :catch_1
+    move-exception p0
+
+    new-instance p1, Ljava/lang/RuntimeException;
+
+    invoke-direct {p1, p0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V
+
+    throw p1
+.end method
+
+.method public final H(Lfdf;)V
+    .locals 0
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    iget-object p0, p0, Lgc;->a:Lf74;
+
+    invoke-interface {p0, p1}, Lf74;->H(Lfdf;)V
+
+    return-void
+.end method
+
+.method public final close()V
+    .locals 1
+
+    iget-object v0, p0, Lgc;->o:Ljavax/crypto/CipherInputStream;
 
     if-eqz v0, :cond_0
 
-    invoke-static {}, Lfc2;->p()Lfc2;
+    const/4 v0, 0x0
 
-    move-result-object v1
+    iput-object v0, p0, Lgc;->o:Ljavax/crypto/CipherInputStream;
 
-    new-instance v2, Ljava/lang/StringBuilder;
+    iget-object p0, p0, Lgc;->a:Lf74;
 
-    const-string v3, "Cancelling existing alarm with (workSpecId, systemId) ("
-
-    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v2, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string p1, ", "
-
-    invoke-virtual {v2, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v2, p2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string p1, ")"
-
-    invoke-virtual {v2, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    sget-object p2, Lgc;->a:Ljava/lang/String;
-
-    invoke-virtual {v1, p2, p1}, Lfc2;->g(Ljava/lang/String;Ljava/lang/String;)V
-
-    invoke-virtual {v0, p0}, Landroid/app/AlarmManager;->cancel(Landroid/app/PendingIntent;)V
+    invoke-interface {p0}, Lf74;->close()V
 
     :cond_0
     return-void
 .end method
 
-.method public static b(Landroid/content/Context;Landroidx/work/impl/WorkDatabase;Lp8g;J)V
-    .locals 9
+.method public final getUri()Landroid/net/Uri;
+    .locals 0
 
-    invoke-virtual {p1}, Landroidx/work/impl/WorkDatabase;->u()Lmge;
+    iget-object p0, p0, Lgc;->a:Lf74;
 
-    move-result-object v0
-
-    invoke-virtual {v0, p2}, Lmge;->f(Lp8g;)Llge;
-
-    move-result-object v1
-
-    const/4 v2, 0x0
-
-    const-string v3, "ACTION_DELAY_MET"
-
-    const-class v4, Landroidx/work/impl/background/systemalarm/SystemAlarmService;
-
-    const/high16 v5, 0xc000000
-
-    const-string v6, "alarm"
-
-    if-eqz v1, :cond_0
-
-    iget p1, v1, Llge;->c:I
-
-    invoke-static {p0, p2, p1}, Lgc;->a(Landroid/content/Context;Lp8g;I)V
-
-    invoke-virtual {p0, v6}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/app/AlarmManager;
-
-    sget-object v1, Lu53;->X:Ljava/lang/String;
-
-    new-instance v1, Landroid/content/Intent;
-
-    invoke-direct {v1, p0, v4}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
-
-    invoke-virtual {v1, v3}, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
-
-    invoke-static {v1, p2}, Lu53;->d(Landroid/content/Intent;Lp8g;)V
-
-    invoke-static {p0, p1, v1, v5}, Landroid/app/PendingIntent;->getService(Landroid/content/Context;ILandroid/content/Intent;I)Landroid/app/PendingIntent;
+    invoke-interface {p0}, Lf74;->getUri()Landroid/net/Uri;
 
     move-result-object p0
 
-    if-eqz v0, :cond_1
+    return-object p0
+.end method
 
-    invoke-static {v0, v2, p3, p4, p0}, Lfc;->a(Landroid/app/AlarmManager;IJLandroid/app/PendingIntent;)V
+.method public final read([BII)I
+    .locals 1
 
-    return-void
+    iget-object v0, p0, Lgc;->o:Ljavax/crypto/CipherInputStream;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    iget-object p0, p0, Lgc;->o:Ljavax/crypto/CipherInputStream;
+
+    invoke-virtual {p0, p1, p2, p3}, Ljavax/crypto/CipherInputStream;->read([BII)I
+
+    move-result p0
+
+    if-gez p0, :cond_0
+
+    const/4 p0, -0x1
 
     :cond_0
-    new-instance v1, Lly4;
+    return p0
+.end method
 
-    const/16 v7, 0x11
+.method public final w()Ljava/util/Map;
+    .locals 0
 
-    invoke-direct {v1, v7, p1}, Lly4;-><init>(ILjava/lang/Object;)V
+    iget-object p0, p0, Lgc;->a:Lf74;
 
-    new-instance v7, Lk5;
-
-    const/4 v8, 0x6
-
-    invoke-direct {v7, v8, v1}, Lk5;-><init>(ILjava/lang/Object;)V
-
-    invoke-virtual {p1, v7}, Lkjc;->o(Ljava/util/concurrent/Callable;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Ljava/lang/Number;
-
-    invoke-virtual {p1}, Ljava/lang/Number;->intValue()I
-
-    move-result p1
-
-    new-instance v1, Llge;
-
-    iget-object v7, p2, Lp8g;->a:Ljava/lang/String;
-
-    iget v8, p2, Lp8g;->b:I
-
-    invoke-direct {v1, v7, v8, p1}, Llge;-><init>(Ljava/lang/String;II)V
-
-    invoke-virtual {v0, v1}, Lmge;->h(Llge;)V
-
-    invoke-virtual {p0, v6}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/app/AlarmManager;
-
-    sget-object v1, Lu53;->X:Ljava/lang/String;
-
-    new-instance v1, Landroid/content/Intent;
-
-    invoke-direct {v1, p0, v4}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
-
-    invoke-virtual {v1, v3}, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
-
-    invoke-static {v1, p2}, Lu53;->d(Landroid/content/Intent;Lp8g;)V
-
-    invoke-static {p0, p1, v1, v5}, Landroid/app/PendingIntent;->getService(Landroid/content/Context;ILandroid/content/Intent;I)Landroid/app/PendingIntent;
+    invoke-interface {p0}, Lf74;->w()Ljava/util/Map;
 
     move-result-object p0
 
-    if-eqz v0, :cond_1
-
-    invoke-static {v0, v2, p3, p4, p0}, Lfc;->a(Landroid/app/AlarmManager;IJLandroid/app/PendingIntent;)V
-
-    :cond_1
-    return-void
+    return-object p0
 .end method

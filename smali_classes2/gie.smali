@@ -1,29 +1,25 @@
 .class public final Lgie;
-.super Ljava/lang/RuntimeException;
+.super Lpcd;
 .source "SourceFile"
 
 
 # instance fields
-.field public final synthetic a:Ljava/lang/String;
+.field public final c:Ljava/util/ArrayList;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;Ljava/lang/String;)V
-    .locals 0
+.method public constructor <init>(Ljava/lang/String;Ljava/util/List;)V
+    .locals 1
 
-    iput-object p2, p0, Lgie;->a:Ljava/lang/String;
+    const/4 v0, 0x2
 
-    invoke-direct {p0, p1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p0, v0, p1}, Lpcd;-><init>(ILjava/lang/String;)V
+
+    new-instance p1, Ljava/util/ArrayList;
+
+    invoke-direct {p1, p2}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
+
+    iput-object p1, p0, Lgie;->c:Ljava/util/ArrayList;
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final getLocalizedMessage()Ljava/lang/String;
-    .locals 0
-
-    iget-object p0, p0, Lgie;->a:Ljava/lang/String;
-
-    return-object p0
 .end method

@@ -1,88 +1,66 @@
-.class public final synthetic Lm7c;
+.class public abstract Lm7c;
 .super Ljava/lang/Object;
-.source "SourceFile"
-
-# interfaces
-.implements Lm66;
 
 
-# instance fields
-.field public final synthetic a:I
+# static fields
+.field public static oneme_settings_media_audio_always:I = 0x7f0a07b9
 
-.field public final synthetic b:Ln7c;
+.field public static oneme_settings_media_audio_dont_load:I = 0x7f0a07ba
 
-.field public final synthetic c:Ljava/util/ArrayList;
+.field public static oneme_settings_media_audio_wifi:I = 0x7f0a07bb
 
+.field public static oneme_settings_media_auto_play_video_always:I = 0x7f0a07bc
 
-# direct methods
-.method public synthetic constructor <init>(Ln7c;Ljava/util/ArrayList;I)V
-    .locals 0
+.field public static oneme_settings_media_auto_play_video_disable:I = 0x7f0a07bd
 
-    iput p3, p0, Lm7c;->a:I
+.field public static oneme_settings_media_auto_play_video_wifi:I = 0x7f0a07be
 
-    iput-object p1, p0, Lm7c;->b:Ln7c;
+.field public static oneme_settings_media_gif_always:I = 0x7f0a07bf
 
-    iput-object p2, p0, Lm7c;->c:Ljava/util/ArrayList;
+.field public static oneme_settings_media_gif_dont_load:I = 0x7f0a07c0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+.field public static oneme_settings_media_gif_wifi:I = 0x7f0a07c1
 
-    return-void
-.end method
+.field public static oneme_settings_media_item_animoji_enabled:I = 0x7f0a07c2
 
+.field public static oneme_settings_media_item_audio:I = 0x7f0a07c3
 
-# virtual methods
-.method public final apply(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 3
+.field public static oneme_settings_media_item_gif:I = 0x7f0a07c4
 
-    iget v0, p0, Lm7c;->a:I
+.field public static oneme_settings_media_item_gif_available:I = 0x7f0a07c5
 
-    packed-switch v0, :pswitch_data_0
+.field public static oneme_settings_media_item_load_in_roaming:I = 0x7f0a07c6
 
-    check-cast p1, Lru/ok/tamtam/android/db/room/OneMeRoomDatabase;
+.field public static oneme_settings_media_item_photo:I = 0x7f0a07c7
 
-    new-instance v0, Lk7c;
+.field public static oneme_settings_media_item_video:I = 0x7f0a07c8
 
-    const/4 v1, 0x1
+.field public static oneme_settings_media_item_video_caching:I = 0x7f0a07c9
 
-    iget-object v2, p0, Lm7c;->b:Ln7c;
+.field public static oneme_settings_media_item_video_quality:I = 0x7f0a07ca
 
-    iget-object p0, p0, Lm7c;->c:Ljava/util/ArrayList;
+.field public static oneme_settings_media_photo_always:I = 0x7f0a07cb
 
-    invoke-direct {v0, v2, p1, p0, v1}, Lk7c;-><init>(Ln7c;Ljava/lang/Object;Ljava/util/List;I)V
+.field public static oneme_settings_media_photo_dont_load:I = 0x7f0a07cc
 
-    new-instance p0, Lh93;
+.field public static oneme_settings_media_photo_wifi:I = 0x7f0a07cd
 
-    const/4 p1, 0x1
+.field public static oneme_settings_media_quality_1080:I = 0x7f0a07ce
 
-    invoke-direct {p0, p1, v0}, Lh93;-><init>(ILjava/lang/Object;)V
+.field public static oneme_settings_media_quality_480:I = 0x7f0a07cf
 
-    return-object p0
+.field public static oneme_settings_media_quality_720:I = 0x7f0a07d0
 
-    :pswitch_0
-    check-cast p1, Lb7c;
+.field public static oneme_settings_media_screen_autoloading_section_header:I = 0x7f0a07d1
 
-    new-instance v0, Lk7c;
+.field public static oneme_settings_media_screen_autoplaying_section_header:I = 0x7f0a07d2
 
-    const/4 v1, 0x2
+.field public static oneme_settings_media_screen_datapressing_section_header:I = 0x7f0a07d3
 
-    iget-object v2, p0, Lm7c;->b:Ln7c;
+.field public static oneme_settings_media_screen_list:I = 0x7f0a07d4
 
-    iget-object p0, p0, Lm7c;->c:Ljava/util/ArrayList;
+.field public static oneme_settings_media_screen_settings_header_vh:I = 0x7f0a07d5
 
-    invoke-direct {v0, v2, p1, p0, v1}, Lk7c;-><init>(Ln7c;Ljava/lang/Object;Ljava/util/List;I)V
+.field public static oneme_settings_media_screen_settings_item_vh:I = 0x7f0a07d6
 
-    new-instance p0, Lh93;
-
-    const/4 p1, 0x1
-
-    invoke-direct {p0, p1, v0}, Lh93;-><init>(ILjava/lang/Object;)V
-
-    return-object p0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
+.field public static oneme_settings_media_screen_toolbar:I = 0x7f0a07d7

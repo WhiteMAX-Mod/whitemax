@@ -1,14 +1,14 @@
 .class final Lru/ok/android/externcalls/sdk/stereo/internal/StereoRoomManagerImpl$onAttendee$1;
-.super Lsd7;
+.super Lnk7;
 .source "SourceFile"
 
 # interfaces
-.implements Lv56;
+.implements Lzb6;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lru/ok/android/externcalls/sdk/stereo/internal/StereoRoomManagerImpl;->onAttendee(Lkp1;)V
+    value = Lru/ok/android/externcalls/sdk/stereo/internal/StereoRoomManagerImpl;->onAttendee(Lrr1;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,8 +18,8 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lsd7;",
-        "Lv56;"
+        "Lnk7;",
+        "Lzb6;"
     }
 .end annotation
 
@@ -28,7 +28,7 @@
         "\u0000\u0008\n\u0002\u0018\u0002\n\u0002\u0008\u0003\u0010\u0003\u001a\u00020\u0000H\n\u00a2\u0006\u0004\u0008\u0001\u0010\u0002"
     }
     d2 = {
-        "Le5f;",
+        "Lylf;",
         "invoke",
         "()V",
         "<anonymous>"
@@ -43,22 +43,22 @@
 
 
 # instance fields
-.field final synthetic $event:Lkp1;
+.field final synthetic $event:Lrr1;
 
 .field final synthetic this$0:Lru/ok/android/externcalls/sdk/stereo/internal/StereoRoomManagerImpl;
 
 
 # direct methods
-.method public constructor <init>(Lru/ok/android/externcalls/sdk/stereo/internal/StereoRoomManagerImpl;Lkp1;)V
+.method public constructor <init>(Lru/ok/android/externcalls/sdk/stereo/internal/StereoRoomManagerImpl;Lrr1;)V
     .locals 0
 
     iput-object p1, p0, Lru/ok/android/externcalls/sdk/stereo/internal/StereoRoomManagerImpl$onAttendee$1;->this$0:Lru/ok/android/externcalls/sdk/stereo/internal/StereoRoomManagerImpl;
 
-    iput-object p2, p0, Lru/ok/android/externcalls/sdk/stereo/internal/StereoRoomManagerImpl$onAttendee$1;->$event:Lkp1;
+    iput-object p2, p0, Lru/ok/android/externcalls/sdk/stereo/internal/StereoRoomManagerImpl$onAttendee$1;->$event:Lrr1;
 
     const/4 p1, 0x0
 
-    invoke-direct {p0, p1}, Lsd7;-><init>(I)V
+    invoke-direct {p0, p1}, Lnk7;-><init>(I)V
 
     return-void
 .end method
@@ -71,7 +71,7 @@
     .line 1
     invoke-virtual {p0}, Lru/ok/android/externcalls/sdk/stereo/internal/StereoRoomManagerImpl$onAttendee$1;->invoke()V
 
-    sget-object p0, Le5f;->a:Le5f;
+    sget-object p0, Lylf;->a:Lylf;
 
     return-object p0
 .end method
@@ -87,13 +87,13 @@
     move-result-object v0
 
     .line 3
-    iget-object v1, p0, Lru/ok/android/externcalls/sdk/stereo/internal/StereoRoomManagerImpl$onAttendee$1;->$event:Lkp1;
+    iget-object v1, p0, Lru/ok/android/externcalls/sdk/stereo/internal/StereoRoomManagerImpl$onAttendee$1;->$event:Lrr1;
 
     .line 4
-    iget v2, v1, Lkp1;->a:I
+    iget v2, v1, Lrr1;->a:I
 
     .line 5
-    iget-object v1, v1, Lkp1;->c:Ljava/lang/Object;
+    iget-object v1, v1, Lrr1;->c:Ljava/lang/Object;
 
     .line 6
     iget-object v3, p0, Lru/ok/android/externcalls/sdk/stereo/internal/StereoRoomManagerImpl$onAttendee$1;->this$0:Lru/ok/android/externcalls/sdk/stereo/internal/StereoRoomManagerImpl;
@@ -121,10 +121,10 @@
     move-result-object v5
 
     .line 9
-    check-cast v5, Lrf1;
+    check-cast v5, Lsg1;
 
     .line 10
-    invoke-static {v3, v5}, Lru/ok/android/externcalls/sdk/stereo/internal/StereoRoomManagerImpl;->access$getExternalId(Lru/ok/android/externcalls/sdk/stereo/internal/StereoRoomManagerImpl;Lrf1;)Lru/ok/android/externcalls/sdk/id/ParticipantId;
+    invoke-static {v3, v5}, Lru/ok/android/externcalls/sdk/stereo/internal/StereoRoomManagerImpl;->access$getExternalId(Lru/ok/android/externcalls/sdk/stereo/internal/StereoRoomManagerImpl;Lsg1;)Lru/ok/android/externcalls/sdk/id/ParticipantId;
 
     move-result-object v5
 
@@ -137,10 +137,10 @@
 
     .line 12
     :cond_1
-    iget-object v1, p0, Lru/ok/android/externcalls/sdk/stereo/internal/StereoRoomManagerImpl$onAttendee$1;->$event:Lkp1;
+    iget-object v1, p0, Lru/ok/android/externcalls/sdk/stereo/internal/StereoRoomManagerImpl$onAttendee$1;->$event:Lrr1;
 
     .line 13
-    iget-object v1, v1, Lkp1;->b:Ljava/lang/Object;
+    iget-object v1, v1, Lrr1;->b:Ljava/lang/Object;
 
     .line 14
     iget-object p0, p0, Lru/ok/android/externcalls/sdk/stereo/internal/StereoRoomManagerImpl$onAttendee$1;->this$0:Lru/ok/android/externcalls/sdk/stereo/internal/StereoRoomManagerImpl;
@@ -168,10 +168,10 @@
     move-result-object v5
 
     .line 17
-    check-cast v5, Lrf1;
+    check-cast v5, Lsg1;
 
     .line 18
-    invoke-static {p0, v5}, Lru/ok/android/externcalls/sdk/stereo/internal/StereoRoomManagerImpl;->access$getExternalId(Lru/ok/android/externcalls/sdk/stereo/internal/StereoRoomManagerImpl;Lrf1;)Lru/ok/android/externcalls/sdk/id/ParticipantId;
+    invoke-static {p0, v5}, Lru/ok/android/externcalls/sdk/stereo/internal/StereoRoomManagerImpl;->access$getExternalId(Lru/ok/android/externcalls/sdk/stereo/internal/StereoRoomManagerImpl;Lsg1;)Lru/ok/android/externcalls/sdk/id/ParticipantId;
 
     move-result-object v5
 

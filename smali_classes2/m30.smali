@@ -1,88 +1,46 @@
 .class public final Lm30;
-.super Lqde;
-.source "SourceFile"
-
-# interfaces
-.implements Ll66;
+.super Ljx3;
 
 
 # instance fields
-.field public final synthetic X:Lq30;
+.field public X:I
 
-.field public final synthetic Y:J
+.field public final synthetic Y:Ln30;
+
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Lq30;JLkotlin/coroutines/Continuation;)V
+.method public constructor <init>(Ln30;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    iput-object p1, p0, Lm30;->X:Lq30;
+    iput-object p1, p0, Lm30;->Y:Ln30;
 
-    iput-wide p2, p0, Lm30;->Y:J
-
-    const/4 p1, 0x2
-
-    invoke-direct {p0, p1, p4}, Lqde;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0, p2}, Ljx3;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
-
-    check-cast p1, Lox3;
-
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Lm30;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p0
-
-    check-cast p0, Lm30;
-
-    sget-object p1, Le5f;->a:Le5f;
-
-    invoke-virtual {p0, p1}, Lm30;->o(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 3
-
-    new-instance p1, Lm30;
-
-    iget-object v0, p0, Lm30;->X:Lq30;
-
-    iget-wide v1, p0, Lm30;->Y:J
-
-    invoke-direct {p1, v0, v1, v2, p2}, Lm30;-><init>(Lq30;JLkotlin/coroutines/Continuation;)V
-
-    return-object p1
-.end method
-
 .method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 2
+    .locals 1
 
-    invoke-static {p1}, Lsgg;->Z(Ljava/lang/Object;)V
+    iput-object p1, p0, Lm30;->o:Ljava/lang/Object;
 
-    iget-object p1, p0, Lm30;->X:Lq30;
+    iget p1, p0, Lm30;->X:I
 
-    iget-object p1, p1, Lq30;->Y:Lje7;
+    const/high16 v0, -0x80000000
 
-    invoke-interface {p1}, Lje7;->getValue()Ljava/lang/Object;
+    or-int/2addr p1, v0
 
-    move-result-object p1
+    iput p1, p0, Lm30;->X:I
 
-    check-cast p1, Lxs8;
+    iget-object p1, p0, Lm30;->Y:Ln30;
 
-    iget-wide v0, p0, Lm30;->Y:J
+    const/4 v0, 0x0
 
-    invoke-virtual {p1, v0, v1}, Lxs8;->q(J)Lzs8;
+    invoke-virtual {p1, v0, p0}, Ln30;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
     move-result-object p0
 

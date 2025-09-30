@@ -1,35 +1,40 @@
-.class public final Lrl5;
-.super Lyj0;
+.class public abstract Lrl5;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# virtual methods
-.method public final b()I
+# direct methods
+.method public static synthetic a(Ljava/lang/Throwable;)Z
     .locals 0
 
-    const/4 p0, 0x0
+    invoke-static {p0}, Lrl5;->b(Ljava/lang/Throwable;)Z
+
+    move-result p0
 
     return p0
 .end method
 
-.method public final k()I
-    .locals 0
+.method private static b(Ljava/lang/Throwable;)Z
+    .locals 1
 
+    instance-of v0, p0, Landroid/system/ErrnoException;
+
+    if-eqz v0, :cond_0
+
+    check-cast p0, Landroid/system/ErrnoException;
+
+    iget p0, p0, Landroid/system/ErrnoException;->errno:I
+
+    sget v0, Landroid/system/OsConstants;->EACCES:I
+
+    if-ne p0, v0, :cond_0
+
+    const/4 p0, 0x1
+
+    return p0
+
+    :cond_0
     const/4 p0, 0x0
 
     return p0
-.end method
-
-.method public final m()Ljava/lang/Object;
-    .locals 0
-
-    const/4 p0, 0x0
-
-    return-object p0
-.end method
-
-.method public final t(JJJLjava/util/List;[Lx68;)V
-    .locals 0
-
-    return-void
 .end method

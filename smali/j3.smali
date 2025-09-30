@@ -1,143 +1,312 @@
 .class public final Lj3;
-.super Ltk9;
+.super Ldi0;
 .source "SourceFile"
 
 
 # instance fields
-.field public final g:Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;
+.field public final synthetic b:I
 
-.field public final h:Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;
-
-.field public final i:Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;
-
-.field public final j:Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;
-
-.field public final k:Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;
+.field public final synthetic c:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;)V
-    .locals 1
+.method public synthetic constructor <init>(ILjava/lang/Object;)V
+    .locals 0
 
-    const/4 v0, 0x3
+    iput p1, p0, Lj3;->b:I
 
-    invoke-direct {p0, v0}, Ltk9;-><init>(I)V
+    iput-object p2, p0, Lj3;->c:Ljava/lang/Object;
 
-    iput-object p1, p0, Lj3;->g:Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;
-
-    iput-object p2, p0, Lj3;->h:Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;
-
-    iput-object p3, p0, Lj3;->i:Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;
-
-    iput-object p4, p0, Lj3;->j:Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;
-
-    iput-object p5, p0, Lj3;->k:Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;
+    invoke-direct {p0}, Ldi0;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final E(Ll3;Ll3;)V
-    .locals 0
+.method public final d()V
+    .locals 2
 
-    iget-object p0, p0, Lj3;->h:Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;
+    iget v0, p0, Lj3;->b:I
 
-    invoke-virtual {p0, p1, p2}, Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;->lazySet(Ljava/lang/Object;Ljava/lang/Object;)V
+    packed-switch v0, :pswitch_data_0
+
+    :try_start_0
+    invoke-static {}, Lya6;->q()Lxa6;
+
+    iget-object v0, p0, Lj3;->c:Ljava/lang/Object;
+
+    check-cast v0, Lqm9;
+
+    monitor-enter v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_1
+
+    :try_start_1
+    iget-object v1, v0, Lqm9;->g:Lj3;
+
+    if-eq v1, p0, :cond_0
+
+    monitor-exit v0
+
+    goto :goto_0
+
+    :catchall_0
+    move-exception p0
+
+    goto :goto_1
+
+    :cond_0
+    const/4 p0, 0x0
+
+    iput-object p0, v0, Lqm9;->g:Lj3;
+
+    iput-object p0, v0, Lqm9;->f:Lmj0;
+
+    iget-object v1, v0, Lqm9;->c:Ljava/io/Closeable;
+
+    invoke-static {v1}, Lqm9;->b(Ljava/io/Closeable;)V
+
+    iput-object p0, v0, Lqm9;->c:Ljava/io/Closeable;
+
+    monitor-exit v0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    const/4 p0, 0x3
+
+    :try_start_2
+    invoke-virtual {v0, p0}, Lqm9;->i(I)V
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_1
+
+    :goto_0
+    invoke-static {}, Lya6;->q()Lxa6;
 
     return-void
-.end method
 
-.method public final F(Ll3;Ljava/lang/Thread;)V
-    .locals 0
+    :goto_1
+    :try_start_3
+    monitor-exit v0
+    :try_end_3
+    .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
-    iget-object p0, p0, Lj3;->g:Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;
+    :try_start_4
+    throw p0
+    :try_end_4
+    .catchall {:try_start_4 .. :try_end_4} :catchall_1
 
-    invoke-virtual {p0, p1, p2}, Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;->lazySet(Ljava/lang/Object;Ljava/lang/Object;)V
+    :catchall_1
+    move-exception p0
+
+    invoke-static {}, Lya6;->q()Lxa6;
+
+    throw p0
+
+    :pswitch_0
+    iget-object p0, p0, Lj3;->c:Ljava/lang/Object;
+
+    check-cast p0, Ld63;
+
+    monitor-enter p0
+
+    :try_start_5
+    invoke-virtual {p0}, Lh0;->g()Z
+
+    move-result v0
+
+    invoke-static {v0}, Lcb7;->j(Z)V
+    :try_end_5
+    .catchall {:try_start_5 .. :try_end_5} :catchall_2
+
+    monitor-exit p0
 
     return-void
+
+    :catchall_2
+    move-exception v0
+
+    :try_start_6
+    monitor-exit p0
+    :try_end_6
+    .catchall {:try_start_6 .. :try_end_6} :catchall_2
+
+    throw v0
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method
 
-.method public final b(Lm3;Li3;Li3;)Z
+.method public final f(Ljava/lang/Throwable;)V
     .locals 2
 
-    :cond_0
-    iget-object v0, p0, Lj3;->j:Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;
+    iget v0, p0, Lj3;->b:I
 
-    invoke-virtual {v0, p1, p2, p3}, Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;->compareAndSet(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Z
+    packed-switch v0, :pswitch_data_0
+
+    :try_start_0
+    invoke-static {}, Lya6;->q()Lxa6;
+
+    iget-object v0, p0, Lj3;->c:Ljava/lang/Object;
+
+    check-cast v0, Lqm9;
+
+    invoke-virtual {v0, p0, p1}, Lqm9;->f(Lj3;Ljava/lang/Throwable;)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    invoke-static {}, Lya6;->q()Lxa6;
+
+    return-void
+
+    :catchall_0
+    move-exception p0
+
+    invoke-static {}, Lya6;->q()Lxa6;
+
+    throw p0
+
+    :pswitch_0
+    iget-object p0, p0, Lj3;->c:Ljava/lang/Object;
+
+    check-cast p0, Ld63;
+
+    iget-object v0, p0, Ld63;->h:Lbod;
+
+    iget-object v1, v0, Lmj0;->Y:Ljava/util/HashMap;
+
+    invoke-virtual {p0, p1, v1}, Lh0;->j(Ljava/lang/Throwable;Ljava/util/Map;)Z
 
     move-result v1
 
-    if-eqz v1, :cond_1
+    if-eqz v1, :cond_0
 
-    const/4 p0, 0x1
+    iget-object p0, p0, Ld63;->i:Loa7;
 
-    return p0
-
-    :cond_1
-    invoke-virtual {v0, p1}, Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    if-eq v0, p2, :cond_0
-
-    const/4 p0, 0x0
-
-    return p0
-.end method
-
-.method public final c(Lm3;Ljava/lang/Object;Ljava/lang/Object;)Z
-    .locals 2
+    invoke-virtual {p0, v0, p1}, Loa7;->f(Lejb;Ljava/lang/Throwable;)V
 
     :cond_0
-    iget-object v0, p0, Lj3;->k:Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;
+    return-void
 
-    invoke-virtual {v0, p1, p2, p3}, Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;->compareAndSet(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_1
-
-    const/4 p0, 0x1
-
-    return p0
-
-    :cond_1
-    invoke-virtual {v0, p1}, Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    if-eq v0, p2, :cond_0
-
-    const/4 p0, 0x0
-
-    return p0
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method
 
-.method public final d(Lm3;Ll3;Ll3;)Z
+.method public final h(ILjava/lang/Object;)V
     .locals 2
 
-    :cond_0
-    iget-object v0, p0, Lj3;->i:Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;
+    iget v0, p0, Lj3;->b:I
 
-    invoke-virtual {v0, p1, p2, p3}, Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;->compareAndSet(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Z
+    packed-switch v0, :pswitch_data_0
 
-    move-result v1
+    check-cast p2, Ljava/io/Closeable;
 
-    if-eqz v1, :cond_1
+    :try_start_0
+    invoke-static {}, Lya6;->q()Lxa6;
 
-    const/4 p0, 0x1
+    iget-object v0, p0, Lj3;->c:Ljava/lang/Object;
 
-    return p0
+    check-cast v0, Lqm9;
 
-    :cond_1
-    invoke-virtual {v0, p1}, Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v0, p0, p2, p1}, Lqm9;->g(Lj3;Ljava/io/Closeable;I)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    move-result-object v0
+    invoke-static {}, Lya6;->q()Lxa6;
 
-    if-eq v0, p2, :cond_0
+    return-void
 
-    const/4 p0, 0x0
+    :catchall_0
+    move-exception p0
 
-    return p0
+    invoke-static {}, Lya6;->q()Lxa6;
+
+    throw p0
+
+    :pswitch_0
+    iget-object p0, p0, Lj3;->c:Ljava/lang/Object;
+
+    check-cast p0, Ld63;
+
+    iget-object v0, p0, Ld63;->h:Lbod;
+
+    iget v1, p0, Ld63;->j:I
+
+    packed-switch v1, :pswitch_data_1
+
+    invoke-virtual {p0, p2, p1, v0}, Ld63;->o(Ljava/lang/Object;ILejb;)V
+
+    goto :goto_0
+
+    :pswitch_1
+    check-cast p2, Lf63;
+
+    invoke-static {p2}, Lf63;->o(Lf63;)Lf63;
+
+    move-result-object p2
+
+    invoke-virtual {p0, p2, p1, v0}, Ld63;->o(Ljava/lang/Object;ILejb;)V
+
+    :goto_0
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+
+    :pswitch_data_1
+    .packed-switch 0x0
+        :pswitch_1
+    .end packed-switch
+.end method
+
+.method public final j(F)V
+    .locals 1
+
+    iget v0, p0, Lj3;->b:I
+
+    packed-switch v0, :pswitch_data_0
+
+    :try_start_0
+    invoke-static {}, Lya6;->q()Lxa6;
+
+    iget-object v0, p0, Lj3;->c:Ljava/lang/Object;
+
+    check-cast v0, Lqm9;
+
+    invoke-virtual {v0, p0, p1}, Lqm9;->h(Lj3;F)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    invoke-static {}, Lya6;->q()Lxa6;
+
+    return-void
+
+    :catchall_0
+    move-exception p0
+
+    invoke-static {}, Lya6;->q()Lxa6;
+
+    throw p0
+
+    :pswitch_0
+    iget-object p0, p0, Lj3;->c:Ljava/lang/Object;
+
+    check-cast p0, Ld63;
+
+    invoke-virtual {p0, p1}, Lh0;->k(F)Z
+
+    return-void
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

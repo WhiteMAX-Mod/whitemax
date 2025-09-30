@@ -1,287 +1,381 @@
 .class public final Lul5;
-.super Ljava/lang/Object;
+.super Lhi0;
 .source "SourceFile"
-
-# interfaces
-.implements Lhm0;
 
 
 # instance fields
-.field public final a:Lcm5;
+.field public X:Ljava/io/RandomAccessFile;
 
-.field public final b:I
+.field public Y:Landroid/net/Uri;
 
-.field public final c:Lh7;
+.field public Z:J
 
-
-# direct methods
-.method public constructor <init>(Lcm5;I)V
-    .locals 0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lul5;->a:Lcm5;
-
-    iput p2, p0, Lul5;->b:I
-
-    new-instance p1, Lh7;
-
-    invoke-direct {p1}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lul5;->c:Lh7;
-
-    return-void
-.end method
+.field public r0:Z
 
 
 # virtual methods
-.method public final a(Ly95;)J
-    .locals 14
+.method public final P(Lm74;)J
+    .locals 8
 
-    :goto_0
-    invoke-interface {p1}, Ly95;->o()J
+    iget-object v0, p1, Lm74;->a:Landroid/net/Uri;
 
-    move-result-wide v0
+    iget-wide v1, p1, Lm74;->f:J
 
-    invoke-interface {p1}, Ly95;->getLength()J
+    iput-object v0, p0, Lul5;->Y:Landroid/net/Uri;
 
-    move-result-wide v2
+    invoke-virtual {p0}, Lhi0;->c()V
 
-    const-wide/16 v4, 0x6
+    const/16 v3, 0x7d0
 
-    sub-long/2addr v2, v4
+    const/16 v4, 0x7d6
 
-    cmp-long v0, v0, v2
+    :try_start_0
+    new-instance v5, Ljava/io/RandomAccessFile;
 
-    iget-object v1, p0, Lul5;->c:Lh7;
+    invoke-virtual {v0}, Landroid/net/Uri;->getPath()Ljava/lang/String;
 
-    iget-object v2, p0, Lul5;->a:Lcm5;
+    move-result-object v6
 
-    if-gez v0, :cond_3
+    invoke-virtual {v6}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    invoke-interface {p1}, Ly95;->o()J
+    const-string v7, "r"
 
-    move-result-wide v6
+    invoke-direct {v5, v6, v7}, Ljava/io/RandomAccessFile;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+    :try_end_0
+    .catch Ljava/io/FileNotFoundException; {:try_start_0 .. :try_end_0} :catch_3
+    .catch Ljava/lang/SecurityException; {:try_start_0 .. :try_end_0} :catch_2
+    .catch Ljava/lang/RuntimeException; {:try_start_0 .. :try_end_0} :catch_1
 
-    const/4 v0, 0x2
+    iput-object v5, p0, Lul5;->X:Ljava/io/RandomAccessFile;
 
-    new-array v3, v0, [B
+    :try_start_1
+    invoke-virtual {v5, v1, v2}, Ljava/io/RandomAccessFile;->seek(J)V
 
-    const/4 v8, 0x0
+    iget-wide v4, p1, Lm74;->g:J
 
-    invoke-interface {p1, v8, v3, v0}, Ly95;->i(I[BI)V
+    const-wide/16 v6, -0x1
 
-    aget-byte v9, v3, v8
+    cmp-long v0, v4, v6
 
-    and-int/lit16 v9, v9, 0xff
+    if-nez v0, :cond_0
 
-    shl-int/lit8 v9, v9, 0x8
+    iget-object v0, p0, Lul5;->X:Ljava/io/RandomAccessFile;
 
-    const/4 v10, 0x1
-
-    aget-byte v11, v3, v10
-
-    and-int/lit16 v11, v11, 0xff
-
-    or-int/2addr v9, v11
-
-    iget v11, p0, Lul5;->b:I
-
-    if-eq v9, v11, :cond_0
-
-    invoke-interface {p1}, Ly95;->x()V
-
-    invoke-interface {p1}, Ly95;->getPosition()J
-
-    move-result-wide v11
-
-    sub-long/2addr v6, v11
-
-    long-to-int v0, v6
-
-    invoke-interface {p1, v0}, Ly95;->p(I)V
-
-    goto :goto_3
-
-    :cond_0
-    new-instance v9, Lpna;
-
-    const/16 v12, 0x10
-
-    invoke-direct {v9, v12}, Lpna;-><init>(I)V
-
-    iget-object v12, v9, Lpna;->a:[B
-
-    invoke-static {v3, v8, v12, v8, v0}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
-
-    iget-object v3, v9, Lpna;->a:[B
-
-    :goto_1
-    const/16 v12, 0xe
-
-    if-ge v8, v12, :cond_2
-
-    add-int v12, v0, v8
-
-    rsub-int/lit8 v13, v8, 0xe
-
-    invoke-interface {p1, v12, v3, v13}, Ly95;->s(I[BI)I
-
-    move-result v12
-
-    const/4 v13, -0x1
-
-    if-ne v12, v13, :cond_1
-
-    goto :goto_2
-
-    :cond_1
-    add-int/2addr v8, v12
-
-    goto :goto_1
-
-    :cond_2
-    :goto_2
-    invoke-virtual {v9, v8}, Lpna;->F(I)V
-
-    invoke-interface {p1}, Ly95;->x()V
-
-    invoke-interface {p1}, Ly95;->getPosition()J
-
-    move-result-wide v12
-
-    sub-long/2addr v6, v12
-
-    long-to-int v0, v6
-
-    invoke-interface {p1, v0}, Ly95;->p(I)V
-
-    invoke-static {v9, v2, v11, v1}, Lgad;->j(Lpna;Lcm5;ILh7;)Z
-
-    move-result v8
-
-    :goto_3
-    if-nez v8, :cond_3
-
-    invoke-interface {p1, v10}, Ly95;->p(I)V
-
-    goto :goto_0
-
-    :cond_3
-    invoke-interface {p1}, Ly95;->o()J
-
-    move-result-wide v6
-
-    invoke-interface {p1}, Ly95;->getLength()J
-
-    move-result-wide v8
-
-    sub-long/2addr v8, v4
-
-    cmp-long p0, v6, v8
-
-    if-ltz p0, :cond_4
-
-    invoke-interface {p1}, Ly95;->getLength()J
-
-    move-result-wide v0
-
-    invoke-interface {p1}, Ly95;->o()J
-
-    move-result-wide v3
-
-    sub-long/2addr v0, v3
-
-    long-to-int p0, v0
-
-    invoke-interface {p1, p0}, Ly95;->p(I)V
-
-    iget-wide p0, v2, Lcm5;->k:J
-
-    return-wide p0
-
-    :cond_4
-    iget-wide p0, v1, Lh7;->a:J
-
-    return-wide p0
-.end method
-
-.method public final d(Ly95;J)Lfm0;
-    .locals 18
-
-    invoke-interface/range {p1 .. p1}, Ly95;->getPosition()J
+    invoke-virtual {v0}, Ljava/io/RandomAccessFile;->length()J
 
     move-result-wide v4
 
-    invoke-virtual/range {p0 .. p1}, Lul5;->a(Ly95;)J
+    sub-long/2addr v4, v1
 
-    move-result-wide v2
+    goto :goto_0
 
-    invoke-interface/range {p1 .. p1}, Ly95;->o()J
+    :catch_0
+    move-exception p0
 
-    move-result-wide v10
-
-    move-object/from16 v0, p0
-
-    iget-object v1, v0, Lul5;->a:Lcm5;
-
-    iget v1, v1, Lcm5;->d:I
-
-    const/4 v6, 0x6
-
-    invoke-static {v6, v1}, Ljava/lang/Math;->max(II)I
-
-    move-result v1
-
-    move-object/from16 v6, p1
-
-    invoke-interface {v6, v1}, Ly95;->p(I)V
-
-    invoke-virtual/range {p0 .. p1}, Lul5;->a(Ly95;)J
-
-    move-result-wide v14
-
-    invoke-interface {v6}, Ly95;->o()J
-
-    move-result-wide v16
-
-    cmp-long v0, v2, p2
-
-    if-gtz v0, :cond_0
-
-    cmp-long v0, v14, p2
-
-    if-lez v0, :cond_0
-
-    new-instance v6, Lfm0;
-
-    const/4 v7, 0x0
-
-    const-wide v8, -0x7fffffffffffffffL    # -4.9E-324
-
-    invoke-direct/range {v6 .. v11}, Lfm0;-><init>(IJJ)V
-
-    return-object v6
+    goto :goto_1
 
     :cond_0
-    cmp-long v0, v14, p2
+    :goto_0
+    iput-wide v4, p0, Lul5;->Z:J
+    :try_end_1
+    .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_0
 
-    if-gtz v0, :cond_1
+    const-wide/16 v0, 0x0
 
-    new-instance v12, Lfm0;
+    cmp-long v0, v4, v0
 
-    const/4 v13, -0x2
+    if-ltz v0, :cond_1
 
-    invoke-direct/range {v12 .. v17}, Lfm0;-><init>(IJJ)V
+    const/4 v0, 0x1
 
-    return-object v12
+    iput-boolean v0, p0, Lul5;->r0:Z
+
+    invoke-virtual {p0, p1}, Lhi0;->e(Lm74;)V
+
+    iget-wide p0, p0, Lul5;->Z:J
+
+    return-wide p0
 
     :cond_1
-    new-instance v0, Lfm0;
+    new-instance p0, Lcom/google/android/exoplayer2/upstream/FileDataSource$FileDataSourceException;
 
-    const/4 v1, -0x1
+    const/16 p1, 0x7d8
 
-    invoke-direct/range {v0 .. v5}, Lfm0;-><init>(IJJ)V
+    const/4 v0, 0x0
 
-    return-object v0
+    invoke-direct {p0, v0, v0, p1}, Lcom/google/android/exoplayer2/upstream/DataSourceException;-><init>(Ljava/lang/String;Ljava/lang/Exception;I)V
+
+    throw p0
+
+    :goto_1
+    new-instance p1, Lcom/google/android/exoplayer2/upstream/FileDataSource$FileDataSourceException;
+
+    invoke-direct {p1, p0, v3}, Lcom/google/android/exoplayer2/upstream/DataSourceException;-><init>(Ljava/lang/Exception;I)V
+
+    throw p1
+
+    :catch_1
+    move-exception p0
+
+    goto :goto_2
+
+    :catch_2
+    move-exception p0
+
+    goto :goto_3
+
+    :catch_3
+    move-exception p0
+
+    goto :goto_4
+
+    :goto_2
+    new-instance p1, Lcom/google/android/exoplayer2/upstream/FileDataSource$FileDataSourceException;
+
+    invoke-direct {p1, p0, v3}, Lcom/google/android/exoplayer2/upstream/DataSourceException;-><init>(Ljava/lang/Exception;I)V
+
+    throw p1
+
+    :goto_3
+    new-instance p1, Lcom/google/android/exoplayer2/upstream/FileDataSource$FileDataSourceException;
+
+    invoke-direct {p1, p0, v4}, Lcom/google/android/exoplayer2/upstream/DataSourceException;-><init>(Ljava/lang/Exception;I)V
+
+    throw p1
+
+    :goto_4
+    invoke-virtual {v0}, Landroid/net/Uri;->getQuery()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_3
+
+    invoke-virtual {v0}, Landroid/net/Uri;->getFragment()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_3
+
+    new-instance p1, Lcom/google/android/exoplayer2/upstream/FileDataSource$FileDataSourceException;
+
+    sget v0, Llrf;->a:I
+
+    const/16 v1, 0x15
+
+    if-lt v0, v1, :cond_2
+
+    invoke-virtual {p0}, Ljava/lang/Throwable;->getCause()Ljava/lang/Throwable;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lrl5;->a(Ljava/lang/Throwable;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_2
+
+    goto :goto_5
+
+    :cond_2
+    const/16 v4, 0x7d5
+
+    :goto_5
+    invoke-direct {p1, p0, v4}, Lcom/google/android/exoplayer2/upstream/DataSourceException;-><init>(Ljava/lang/Exception;I)V
+
+    throw p1
+
+    :cond_3
+    new-instance p1, Lcom/google/android/exoplayer2/upstream/FileDataSource$FileDataSourceException;
+
+    invoke-virtual {v0}, Landroid/net/Uri;->getPath()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0}, Landroid/net/Uri;->getQuery()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {v0}, Landroid/net/Uri;->getFragment()Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v3, ",query="
+
+    const-string v4, ",fragment="
+
+    const-string v5, "uri has query and/or fragment, which are not supported. Did you call Uri.parse() on a string containing \'?\' or \'#\'? Use Uri.fromFile(new File(path)) to avoid this. path="
+
+    invoke-static {v5, v1, v3, v2, v4}, Lz7e;->u(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    const/16 v1, 0x3ec
+
+    invoke-direct {p1, v0, p0, v1}, Lcom/google/android/exoplayer2/upstream/DataSourceException;-><init>(Ljava/lang/String;Ljava/lang/Exception;I)V
+
+    throw p1
+.end method
+
+.method public final close()V
+    .locals 5
+
+    const/4 v0, 0x0
+
+    iput-object v0, p0, Lul5;->Y:Landroid/net/Uri;
+
+    const/4 v1, 0x0
+
+    :try_start_0
+    iget-object v2, p0, Lul5;->X:Ljava/io/RandomAccessFile;
+
+    if-eqz v2, :cond_0
+
+    invoke-virtual {v2}, Ljava/io/RandomAccessFile;->close()V
+    :try_end_0
+    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    goto :goto_0
+
+    :catchall_0
+    move-exception v2
+
+    goto :goto_2
+
+    :catch_0
+    move-exception v2
+
+    goto :goto_1
+
+    :cond_0
+    :goto_0
+    iput-object v0, p0, Lul5;->X:Ljava/io/RandomAccessFile;
+
+    iget-boolean v0, p0, Lul5;->r0:Z
+
+    if-eqz v0, :cond_1
+
+    iput-boolean v1, p0, Lul5;->r0:Z
+
+    invoke-virtual {p0}, Lhi0;->b()V
+
+    :cond_1
+    return-void
+
+    :goto_1
+    :try_start_1
+    new-instance v3, Lcom/google/android/exoplayer2/upstream/FileDataSource$FileDataSourceException;
+
+    const/16 v4, 0x7d0
+
+    invoke-direct {v3, v2, v4}, Lcom/google/android/exoplayer2/upstream/DataSourceException;-><init>(Ljava/lang/Exception;I)V
+
+    throw v3
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    :goto_2
+    iput-object v0, p0, Lul5;->X:Ljava/io/RandomAccessFile;
+
+    iget-boolean v0, p0, Lul5;->r0:Z
+
+    if-eqz v0, :cond_2
+
+    iput-boolean v1, p0, Lul5;->r0:Z
+
+    invoke-virtual {p0}, Lhi0;->b()V
+
+    :cond_2
+    throw v2
+.end method
+
+.method public final getUri()Landroid/net/Uri;
+    .locals 0
+
+    iget-object p0, p0, Lul5;->Y:Landroid/net/Uri;
+
+    return-object p0
+.end method
+
+.method public final read([BII)I
+    .locals 5
+
+    if-nez p3, :cond_0
+
+    const/4 p0, 0x0
+
+    return p0
+
+    :cond_0
+    iget-wide v0, p0, Lul5;->Z:J
+
+    const-wide/16 v2, 0x0
+
+    cmp-long v2, v0, v2
+
+    if-nez v2, :cond_1
+
+    const/4 p0, -0x1
+
+    return p0
+
+    :cond_1
+    :try_start_0
+    iget-object v2, p0, Lul5;->X:Ljava/io/RandomAccessFile;
+
+    sget v3, Llrf;->a:I
+
+    int-to-long v3, p3
+
+    invoke-static {v0, v1, v3, v4}, Ljava/lang/Math;->min(JJ)J
+
+    move-result-wide v0
+
+    long-to-int p3, v0
+
+    invoke-virtual {v2, p1, p2, p3}, Ljava/io/RandomAccessFile;->read([BII)I
+
+    move-result p1
+    :try_end_0
+    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
+
+    if-lez p1, :cond_2
+
+    iget-wide p2, p0, Lul5;->Z:J
+
+    int-to-long v0, p1
+
+    sub-long/2addr p2, v0
+
+    iput-wide p2, p0, Lul5;->Z:J
+
+    invoke-virtual {p0, p1}, Lhi0;->a(I)V
+
+    :cond_2
+    return p1
+
+    :catch_0
+    move-exception p0
+
+    new-instance p1, Lcom/google/android/exoplayer2/upstream/FileDataSource$FileDataSourceException;
+
+    const/16 p2, 0x7d0
+
+    invoke-direct {p1, p0, p2}, Lcom/google/android/exoplayer2/upstream/DataSourceException;-><init>(Ljava/lang/Exception;I)V
+
+    throw p1
 .end method

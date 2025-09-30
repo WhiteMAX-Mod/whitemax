@@ -1,22 +1,75 @@
-.class public final Lycd;
+.class public interface abstract Lycd;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lcdd;
+.implements Lird;
 
 
-# instance fields
-.field public final a:Ljava/lang/String;
+# virtual methods
+.method public abstract a()I
+.end method
 
-
-# direct methods
-.method public constructor <init>(Ljava/lang/String;)V
+.method public b()Lu2f;
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/4 p0, 0x0
 
-    iput-object p1, p0, Lycd;->a:Ljava/lang/String;
+    return-object p0
+.end method
 
-    return-void
+.method public c()Lzqd;
+    .locals 0
+
+    const/4 p0, 0x0
+
+    return-object p0
+.end method
+
+.method public d()Lu2f;
+    .locals 0
+
+    const/4 p0, 0x0
+
+    return-object p0
+.end method
+
+.method public e()Lfrd;
+    .locals 0
+
+    const/4 p0, 0x0
+
+    return-object p0
+.end method
+
+.method public f()Lll7;
+    .locals 0
+
+    const/4 p0, 0x0
+
+    return-object p0
+.end method
+
+.method public g()Z
+    .locals 0
+
+    const/4 p0, 0x1
+
+    return p0
+.end method
+
+.method public getType()Lhrd;
+    .locals 0
+
+    sget-object p0, Lhrd;->b:Lhrd;
+
+    return-object p0
+.end method
+
+.method public r()Lbc6;
+    .locals 0
+
+    const/4 p0, 0x0
+
+    return-object p0
 .end method

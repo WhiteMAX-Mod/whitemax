@@ -1,65 +1,43 @@
-.class public abstract Lkxe;
+.class public final Lkxe;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:Lwfe;
+# instance fields
+.field public final a:Landroid/content/Context;
 
-.field public static final b:Lwfe;
+.field public final b:Lcl7;
+
+.field public final c:Lcl7;
+
+.field public final d:Lcl7;
+
+.field public final e:Lcl7;
+
+.field public final f:Lcl7;
+
+.field public final g:Lzte;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public constructor <init>(Landroid/content/Context;Lcl7;Lcl7;Lcl7;Lcl7;Lcl7;Lzte;)V
+    .locals 0
 
-    sget-object v0, Ld8;->Z:Ld8;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    new-instance v1, Lwfe;
+    iput-object p1, p0, Lkxe;->a:Landroid/content/Context;
 
-    invoke-direct {v1, v0}, Lwfe;-><init>(Lv56;)V
+    iput-object p2, p0, Lkxe;->b:Lcl7;
 
-    sput-object v1, Lkxe;->a:Lwfe;
+    iput-object p3, p0, Lkxe;->c:Lcl7;
 
-    sget-object v0, Ld8;->Y:Ld8;
+    iput-object p4, p0, Lkxe;->d:Lcl7;
 
-    new-instance v1, Lwfe;
+    iput-object p5, p0, Lkxe;->e:Lcl7;
 
-    invoke-direct {v1, v0}, Lwfe;-><init>(Lv56;)V
+    iput-object p6, p0, Lkxe;->f:Lcl7;
 
-    sput-object v1, Lkxe;->b:Lwfe;
-
-    return-void
-.end method
-
-.method public static a(Ljava/lang/Runnable;)V
-    .locals 1
-
-    sget-object v0, Lkxe;->b:Lwfe;
-
-    invoke-virtual {v0}, Lwfe;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/util/concurrent/Executor;
-
-    invoke-interface {v0, p0}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
-
-    return-void
-.end method
-
-.method public static b(Ljava/lang/Runnable;)V
-    .locals 1
-
-    sget-object v0, Lkxe;->a:Lwfe;
-
-    invoke-virtual {v0}, Lwfe;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/util/concurrent/Executor;
-
-    invoke-interface {v0, p0}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
+    iput-object p7, p0, Lkxe;->g:Lzte;
 
     return-void
 .end method

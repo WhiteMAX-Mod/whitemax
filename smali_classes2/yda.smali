@@ -1,19 +1,27 @@
-.class public abstract Lyda;
+.class public final Lyda;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:I
+# instance fields
+.field public final a:Lcl7;
+
+.field public final b:Lcl7;
+
+.field public final c:Lcl7;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(Lcl7;Lcl7;Lcl7;)V
+    .locals 0
 
-    sget v0, Lsub;->retained_adapter_state:I
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    sput v0, Lyda;->a:I
+    iput-object p1, p0, Lyda;->a:Lcl7;
+
+    iput-object p2, p0, Lyda;->b:Lcl7;
+
+    iput-object p3, p0, Lyda;->c:Lcl7;
 
     return-void
 .end method

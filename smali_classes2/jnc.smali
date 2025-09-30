@@ -1,37 +1,68 @@
-.class public abstract Ljnc;
+.class public final synthetic Ljnc;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ls0e;
 
-# static fields
-.field public static final a:I
 
-.field public static final b:I
+# instance fields
+.field public final synthetic a:I
 
-.field public static final c:I
+.field public final synthetic b:Lzb6;
 
-.field public static final d:I
+.field public final synthetic c:Ljava/lang/Object;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public synthetic constructor <init>(Ljava/lang/Object;Lzb6;I)V
+    .locals 0
 
-    sget v0, Lbrb;->font_normal:I
+    iput p3, p0, Ljnc;->a:I
 
-    sput v0, Ljnc;->a:I
+    iput-object p1, p0, Ljnc;->c:Ljava/lang/Object;
 
-    sget v0, Lbrb;->font_only_emoji:I
+    iput-object p2, p0, Ljnc;->b:Lzb6;
 
-    sput v0, Ljnc;->b:I
-
-    sget v0, Lbrb;->font_small:I
-
-    sput v0, Ljnc;->c:I
-
-    sget v0, Lbrb;->huge_horizontal_margin:I
-
-    sput v0, Ljnc;->d:I
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final k(Lorg/json/JSONObject;)V
+    .locals 1
+
+    iget v0, p0, Ljnc;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    iget-object v0, p0, Ljnc;->c:Ljava/lang/Object;
+
+    check-cast v0, Lru/ok/android/externcalls/sdk/record/RecordManager$StartParams;
+
+    iget-object p0, p0, Ljnc;->b:Lzb6;
+
+    invoke-static {v0, p0, p1}, Lru/ok/android/externcalls/sdk/record/internal/RecordManagerImpl;->d(Lru/ok/android/externcalls/sdk/record/RecordManager$StartParams;Lzb6;Lorg/json/JSONObject;)V
+
+    return-void
+
+    :pswitch_0
+    iget-object v0, p0, Ljnc;->c:Ljava/lang/Object;
+
+    check-cast v0, Lru/ok/android/externcalls/sdk/record/RecordManager$StopParams;
+
+    iget-object p0, p0, Ljnc;->b:Lzb6;
+
+    invoke-static {v0, p0, p1}, Lru/ok/android/externcalls/sdk/record/internal/RecordManagerImpl;->c(Lru/ok/android/externcalls/sdk/record/RecordManager$StopParams;Lzb6;Lorg/json/JSONObject;)V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

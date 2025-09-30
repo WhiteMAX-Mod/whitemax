@@ -1,24 +1,23 @@
 .class public final Lpob;
-.super Ljava/lang/Object;
+.super Luc0;
 .source "SourceFile"
-
-# interfaces
-.implements Lqob;
 
 
 # static fields
-.field public static final a:Lpob;
+.field public static final b:Lpob;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 1
+    .locals 2
 
     new-instance v0, Lpob;
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    const/16 v1, 0xd
 
-    sput-object v0, Lpob;->a:Lpob;
+    invoke-direct {v0, v1}, Luc0;-><init>(I)V
+
+    sput-object v0, Lpob;->b:Lpob;
 
     return-void
 .end method
@@ -50,7 +49,7 @@
 .method public final hashCode()I
     .locals 0
 
-    const p0, -0x47cfa8d4
+    const p0, 0x1044d8c1
 
     return p0
 .end method
@@ -58,7 +57,7 @@
 .method public final toString()Ljava/lang/String;
     .locals 0
 
-    const-string p0, "TakePhoto"
+    const-string p0, "CameraPermission"
 
     return-object p0
 .end method

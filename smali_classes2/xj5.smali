@@ -1,37 +1,55 @@
-.class public abstract synthetic Lxj5;
-.super Ljava/lang/Object;
+.class public final Lxj5;
+.super Ljx3;
 .source "SourceFile"
 
 
-# static fields
-.field public static final synthetic $EnumSwitchMapping$0:[I
+# instance fields
+.field public X:Lipc;
+
+.field public Y:Lipc;
+
+.field public Z:J
+
+.field public o:Lyj5;
+
+.field public synthetic r0:Ljava/lang/Object;
+
+.field public final synthetic s0:Lyj5;
+
+.field public t0:I
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
+.method public constructor <init>(Lyj5;Ljx3;)V
+    .locals 0
 
-    invoke-static {}, Liu5;->values()[Liu5;
+    iput-object p1, p0, Lxj5;->s0:Lyj5;
 
-    move-result-object v0
-
-    array-length v0, v0
-
-    new-array v0, v0, [I
-
-    :try_start_0
-    sget-object v1, Liu5;->b:Ljava/util/LinkedHashSet;
-
-    const/16 v1, 0xd
-
-    const/4 v2, 0x1
-
-    aput v2, v0, v1
-    :try_end_0
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
-
-    :catch_0
-    sput-object v0, Lxj5;->$EnumSwitchMapping$0:[I
+    invoke-direct {p0, p2}, Ljx3;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
+
+    iput-object p1, p0, Lxj5;->r0:Ljava/lang/Object;
+
+    iget p1, p0, Lxj5;->t0:I
+
+    const/high16 v0, -0x80000000
+
+    or-int/2addr p1, v0
+
+    iput p1, p0, Lxj5;->t0:I
+
+    iget-object p1, p0, Lxj5;->s0:Lyj5;
+
+    invoke-virtual {p1, p0}, Lyj5;->b(Ljx3;)Ljava/lang/Object;
+
+    move-result-object p0
+
+    return-object p0
 .end method

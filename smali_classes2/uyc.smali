@@ -1,33 +1,23 @@
-.class public final Luyc;
+.class public interface abstract Luyc;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public a:Loa9;
+# static fields
+.field public static final T:Lax9;
 
-.field public b:Ljava/lang/String;
 
-.field public c:Ljava/lang/String;
+# direct methods
+.method static constructor <clinit>()V
+    .locals 2
 
-.field public d:Ljava/util/List;
+    new-instance v0, Lax9;
 
-.field public e:Ljava/util/List;
+    const/16 v1, 0x13
 
-.field public f:Ljava/util/List;
+    invoke-direct {v0, v1}, Lax9;-><init>(I)V
 
-.field public g:J
+    sput-object v0, Luyc;->T:Lax9;
 
-.field public h:I
-
-.field public i:Z
-
-.field public j:J
-
-.field public k:Ljava/util/List;
-
-.field public l:Ljava/util/List;
-
-.field public m:Ljava/lang/String;
-
-.field public n:Ljava/util/List;
+    return-void
+.end method

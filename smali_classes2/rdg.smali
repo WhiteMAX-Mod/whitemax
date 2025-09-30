@@ -1,87 +1,126 @@
 .class public final Lrdg;
-.super Ljava/lang/Object;
+.super Lure;
 .source "SourceFile"
 
-
-# static fields
-.field public static final c:Lwfe;
+# interfaces
+.implements Lpc6;
 
 
 # instance fields
-.field public final a:Ljava/lang/String;
-
-.field public final b:Ljava/lang/Throwable;
+.field public final synthetic X:Loeg;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public constructor <init>(Loeg;Lkotlin/coroutines/Continuation;)V
+    .locals 0
 
-    new-instance v0, Lkxf;
+    iput-object p1, p0, Lrdg;->X:Loeg;
 
-    const/16 v1, 0x9
+    const/4 p1, 0x2
 
-    invoke-direct {v0, v1}, Lkxf;-><init>(I)V
-
-    new-instance v1, Lwfe;
-
-    invoke-direct {v1, v0}, Lwfe;-><init>(Lv56;)V
-
-    sput-object v1, Lrdg;->c:Lwfe;
+    invoke-direct {p0, p1, p2}, Lure;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
-.method public constructor <init>()V
-    .locals 3
 
-    const-string v0, "gleff"
+# virtual methods
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    check-cast p1, Ly04;
 
-    const-class v1, Lrdg;
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    invoke-virtual {v1}, Ljava/lang/Class;->getName()Ljava/lang/String;
+    invoke-virtual {p0, p1, p2}, Lrdg;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    move-result-object v1
+    move-result-object p0
 
-    iput-object v1, p0, Lrdg;->a:Ljava/lang/String;
+    check-cast p0, Lrdg;
 
-    sget-object v1, Lqdg;->a:Ljava/util/concurrent/atomic/AtomicReference;
+    sget-object p1, Lylf;->a:Lylf;
 
-    invoke-virtual {v1}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
+    invoke-virtual {p0, p1}, Lrdg;->o(Ljava/lang/Object;)Ljava/lang/Object;
 
-    move-result-object v1
+    return-object p1
+.end method
 
-    if-nez v1, :cond_0
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 0
 
-    :try_start_0
-    invoke-static {v0}, Ljava/lang/System;->loadLibrary(Ljava/lang/String;)V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    new-instance p1, Lrdg;
 
-    const/4 v0, 0x0
+    iget-object p0, p0, Lrdg;->X:Loeg;
+
+    invoke-direct {p1, p0, p2}, Lrdg;-><init>(Loeg;Lkotlin/coroutines/Continuation;)V
+
+    return-object p1
+.end method
+
+.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 2
+
+    invoke-static {p1}, Lqe5;->V(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Lrdg;->X:Loeg;
+
+    iget-object p1, p1, Loeg;->l:Lpg7;
+
+    instance-of v0, p1, Lhn0;
+
+    if-eqz v0, :cond_0
+
+    check-cast p1, Lhn0;
+
+    new-instance v0, Lteg;
+
+    sget-object v1, Lefg;->X:Lefg;
+
+    invoke-direct {v0, v1}, Lteg;-><init>(Lefg;)V
+
+    invoke-virtual {p1, v0}, Lpg7;->b(Ljava/lang/Throwable;)V
 
     goto :goto_0
 
-    :catchall_0
-    move-exception v0
-
-    iget-object v1, p0, Lrdg;->a:Ljava/lang/String;
-
-    const-string v2, "failed to load gl-effects library with system loader"
-
-    invoke-static {v1, v2, v0}, Lg47;->r(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    :goto_0
-    iput-object v0, p0, Lrdg;->b:Ljava/lang/Throwable;
-
-    return-void
-
     :cond_0
-    new-instance p0, Ljava/lang/ClassCastException;
+    instance-of v0, p1, Lln0;
 
-    invoke-direct {p0}, Ljava/lang/ClassCastException;-><init>()V
+    if-eqz v0, :cond_1
 
-    throw p0
+    check-cast p1, Lln0;
+
+    new-instance v0, Lteg;
+
+    sget-object v1, Lefg;->Y:Lefg;
+
+    invoke-direct {v0, v1}, Lteg;-><init>(Lefg;)V
+
+    invoke-virtual {p1, v0}, Lpg7;->b(Ljava/lang/Throwable;)V
+
+    goto :goto_0
+
+    :cond_1
+    instance-of v0, p1, Lin0;
+
+    if-eqz v0, :cond_2
+
+    check-cast p1, Lin0;
+
+    new-instance v0, Lqeg;
+
+    invoke-direct {v0}, Ljava/lang/Throwable;-><init>()V
+
+    invoke-virtual {p1, v0}, Lpg7;->b(Ljava/lang/Throwable;)V
+
+    :cond_2
+    :goto_0
+    iget-object p0, p0, Lrdg;->X:Loeg;
+
+    const/4 p1, 0x0
+
+    iput-object p1, p0, Loeg;->l:Lpg7;
+
+    sget-object p0, Lylf;->a:Lylf;
+
+    return-object p0
 .end method

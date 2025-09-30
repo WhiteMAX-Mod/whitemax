@@ -3,13 +3,11 @@
 .source "SourceFile"
 
 # interfaces
-.implements Landroid/app/Application$ActivityLifecycleCallbacks;
+.implements Ldz0;
 
 
 # instance fields
-.field public final a:Ljava/util/ArrayList;
-
-.field public final b:Lcnb;
+.field public final a:Ljava/util/concurrent/CopyOnWriteArraySet;
 
 
 # direct methods
@@ -18,164 +16,211 @@
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    new-instance v0, Ljava/util/ArrayList;
+    new-instance v0, Ljava/util/concurrent/CopyOnWriteArraySet;
 
-    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
+    invoke-direct {v0}, Ljava/util/concurrent/CopyOnWriteArraySet;-><init>()V
 
-    iput-object v0, p0, Lp7;->a:Ljava/util/ArrayList;
-
-    new-instance v0, Lcnb;
-
-    invoke-direct {v0}, Lcnb;-><init>()V
-
-    iput-object v0, p0, Lp7;->b:Lcnb;
+    iput-object v0, p0, Lp7;->a:Ljava/util/concurrent/CopyOnWriteArraySet;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onActivityCreated(Landroid/app/Activity;Landroid/os/Bundle;)V
-    .locals 0
+.method public final onActiveParticipantUpdated(Lcz0;)V
+    .locals 1
 
-    new-instance p2, Ljava/lang/ref/WeakReference;
+    iget-object p0, p0, Lp7;->a:Ljava/util/concurrent/CopyOnWriteArraySet;
 
-    invoke-direct {p2, p1}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
+    invoke-virtual {p0}, Ljava/util/concurrent/CopyOnWriteArraySet;->iterator()Ljava/util/Iterator;
 
-    iget-object p0, p0, Lp7;->a:Ljava/util/ArrayList;
+    move-result-object p0
 
-    invoke-virtual {p0, p2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+    :goto_0
+    invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
 
-    return-void
-.end method
+    move-result v0
 
-.method public final onActivityDestroyed(Landroid/app/Activity;)V
-    .locals 3
+    if-eqz v0, :cond_0
 
-    iget-object p0, p0, Lp7;->a:Ljava/util/ArrayList;
-
-    invoke-virtual {p0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
+    invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v0
 
+    check-cast v0, Ldz0;
+
+    invoke-interface {v0, p1}, Ldz0;->onActiveParticipantUpdated(Lcz0;)V
+
+    goto :goto_0
+
     :cond_0
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+    return-void
+.end method
 
-    move-result v1
+.method public final onActiveParticipantsAdded(Lyy0;)V
+    .locals 1
 
-    if-eqz v1, :cond_1
+    iget-object v0, p1, Lyy0;->a:Ljava/util/Collection;
 
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    invoke-interface {v0}, Ljava/util/Collection;->isEmpty()Z
 
-    move-result-object v1
+    move-result v0
 
-    check-cast v1, Ljava/lang/ref/WeakReference;
+    if-eqz v0, :cond_0
 
-    invoke-virtual {v1}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
+    goto :goto_1
 
-    move-result-object v2
+    :cond_0
+    iget-object p0, p0, Lp7;->a:Ljava/util/concurrent/CopyOnWriteArraySet;
 
-    if-ne v2, p1, :cond_0
+    invoke-virtual {p0}, Ljava/util/concurrent/CopyOnWriteArraySet;->iterator()Ljava/util/Iterator;
 
-    invoke-virtual {p0, v1}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
+    move-result-object p0
+
+    :goto_0
+    invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ldz0;
+
+    invoke-interface {v0, p1}, Ldz0;->onActiveParticipantsAdded(Lyy0;)V
+
+    goto :goto_0
 
     :cond_1
+    :goto_1
     return-void
 .end method
 
-.method public final onActivityPaused(Landroid/app/Activity;)V
-    .locals 0
+.method public final onActiveParticipantsChanged(Lzy0;)V
+    .locals 1
 
-    return-void
-.end method
+    iget-object v0, p1, Lzy0;->a:Ljava/util/List;
 
-.method public final onActivityPostResumed(Landroid/app/Activity;)V
-    .locals 0
+    invoke-interface {v0}, Ljava/util/Collection;->isEmpty()Z
 
-    iget-object p0, p0, Lp7;->b:Lcnb;
+    move-result v0
 
-    invoke-virtual {p0, p1}, Lcnb;->h(Ljava/lang/Object;)V
+    if-eqz v0, :cond_0
 
-    return-void
-.end method
+    goto :goto_1
 
-.method public final onActivityResumed(Landroid/app/Activity;)V
-    .locals 3
+    :cond_0
+    iget-object p0, p0, Lp7;->a:Ljava/util/concurrent/CopyOnWriteArraySet;
 
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    invoke-virtual {p0}, Ljava/util/concurrent/CopyOnWriteArraySet;->iterator()Ljava/util/Iterator;
 
     move-result-object p0
 
-    invoke-virtual {p0}, Ljava/lang/Class;->getName()Ljava/lang/String;
+    :goto_0
+    invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
 
-    move-result-object p0
+    move-result v0
 
-    const-string v0, "CSPDialogActivity"
+    if-eqz v0, :cond_1
 
-    invoke-virtual {p0, v0}, Ljava/lang/String;->endsWith(Ljava/lang/String;)Z
-
-    move-result p0
-
-    if-eqz p0, :cond_0
-
-    invoke-virtual {p1}, Landroid/app/Activity;->getWindow()Landroid/view/Window;
-
-    move-result-object p0
-
-    invoke-virtual {p0}, Landroid/view/Window;->getDecorView()Landroid/view/View;
-
-    move-result-object p0
-
-    check-cast p0, Landroid/view/ViewGroup;
-
-    invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+    invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v0
 
-    const-string v1, "id"
+    check-cast v0, Ldz0;
 
-    invoke-virtual {p1}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
+    invoke-interface {v0, p1}, Ldz0;->onActiveParticipantsChanged(Lzy0;)V
 
-    move-result-object p1
+    goto :goto_0
 
-    const-string v2, "tvTitle"
+    :cond_1
+    :goto_1
+    return-void
+.end method
 
-    invoke-virtual {v0, v2, v1, p1}, Landroid/content/res/Resources;->getIdentifier(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)I
+.method public final onActiveParticipantsDeAnonimized(Laz0;)V
+    .locals 1
 
-    move-result p1
+    iget-object v0, p1, Laz0;->a:Ljava/util/Collection;
 
-    if-eqz p1, :cond_0
+    invoke-interface {v0}, Ljava/util/Collection;->isEmpty()Z
 
-    invoke-virtual {p0, p1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    goto :goto_1
+
+    :cond_0
+    iget-object p0, p0, Lp7;->a:Ljava/util/concurrent/CopyOnWriteArraySet;
+
+    invoke-virtual {p0}, Ljava/util/concurrent/CopyOnWriteArraySet;->iterator()Ljava/util/Iterator;
 
     move-result-object p0
 
-    check-cast p0, Landroid/widget/TextView;
+    :goto_0
+    invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
 
-    if-eqz p0, :cond_0
+    move-result v0
 
-    sget p1, Lnnc;->h3:I
+    if-eqz v0, :cond_1
 
-    invoke-virtual {p0, p1}, Landroid/widget/TextView;->setText(I)V
+    invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ldz0;
+
+    invoke-interface {v0, p1}, Ldz0;->onActiveParticipantsDeAnonimized(Laz0;)V
+
+    goto :goto_0
+
+    :cond_1
+    :goto_1
+    return-void
+.end method
+
+.method public final onActiveParticipantsRemoved(Lbz0;)V
+    .locals 1
+
+    iget-object v0, p1, Lbz0;->a:Ljava/util/Collection;
+
+    invoke-interface {v0}, Ljava/util/Collection;->isEmpty()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    goto :goto_1
 
     :cond_0
-    return-void
-.end method
+    iget-object p0, p0, Lp7;->a:Ljava/util/concurrent/CopyOnWriteArraySet;
 
-.method public final onActivitySaveInstanceState(Landroid/app/Activity;Landroid/os/Bundle;)V
-    .locals 0
+    invoke-virtual {p0}, Ljava/util/concurrent/CopyOnWriteArraySet;->iterator()Ljava/util/Iterator;
 
-    return-void
-.end method
+    move-result-object p0
 
-.method public final onActivityStarted(Landroid/app/Activity;)V
-    .locals 0
+    :goto_0
+    invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
 
-    return-void
-.end method
+    move-result v0
 
-.method public final onActivityStopped(Landroid/app/Activity;)V
-    .locals 0
+    if-eqz v0, :cond_1
 
+    invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ldz0;
+
+    invoke-interface {v0, p1}, Ldz0;->onActiveParticipantsRemoved(Lbz0;)V
+
+    goto :goto_0
+
+    :cond_1
+    :goto_1
     return-void
 .end method

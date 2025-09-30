@@ -1,150 +1,35 @@
 .class public final Ljma;
-.super Ljava/lang/Object;
+.super Lfxc;
 .source "SourceFile"
-
-# interfaces
-.implements Landroid/os/Handler$Callback;
-
-
-# static fields
-.field public static final X:Ljava/lang/ThreadLocal;
-
-.field public static final o:Ljava/util/concurrent/ExecutorService;
 
 
 # instance fields
-.field public final a:Ljava/util/concurrent/ExecutorService;
+.field public final X:Lru/ok/tamtam/logout/a;
 
-.field public final b:Landroid/os/Handler;
-
-.field public final c:Lv1c;
+.field public final Y:Lru4;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
+.method public constructor <init>(Landroid/content/Context;Lru/ok/tamtam/logout/a;Lru4;Lkha;Lcl7;)V
+    .locals 2
 
-    invoke-static {}, Ljava/util/concurrent/Executors;->newSingleThreadExecutor()Ljava/util/concurrent/ExecutorService;
+    new-instance v0, Ll13;
 
-    move-result-object v0
+    invoke-direct {v0, p3}, Ll13;-><init>(Lru4;)V
 
-    sput-object v0, Ljma;->o:Ljava/util/concurrent/ExecutorService;
+    new-instance v1, Lqe9;
 
-    new-instance v1, Ljava/lang/ThreadLocal;
+    invoke-direct {v1, p5}, Lqe9;-><init>(Lcl7;)V
 
-    invoke-direct {v1}, Ljava/lang/ThreadLocal;-><init>()V
+    filled-new-array {v0, v1}, [Ljava/lang/Object;
 
-    sput-object v1, Ljma;->X:Ljava/lang/ThreadLocal;
+    move-result-object p5
 
-    new-instance v1, Lec;
+    invoke-direct {p0, p1, p4, p5}, Lfxc;-><init>(Landroid/content/Context;Lkha;[Ljava/lang/Object;)V
 
-    const/16 v2, 0xb
+    iput-object p2, p0, Ljma;->X:Lru/ok/tamtam/logout/a;
 
-    invoke-direct {v1, v2}, Lec;-><init>(I)V
-
-    invoke-interface {v0, v1}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
+    iput-object p3, p0, Ljma;->Y:Lru4;
 
     return-void
-.end method
-
-.method public constructor <init>(Lv1c;)V
-    .locals 0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Ljma;->c:Lv1c;
-
-    const/4 p1, 0x0
-
-    iput-object p1, p0, Ljma;->b:Landroid/os/Handler;
-
-    sget-object p1, Ljma;->o:Ljava/util/concurrent/ExecutorService;
-
-    iput-object p1, p0, Ljma;->a:Ljava/util/concurrent/ExecutorService;
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final handleMessage(Landroid/os/Message;)Z
-    .locals 5
-
-    iget-object p1, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
-
-    check-cast p1, Lpdg;
-
-    iget-boolean v0, p1, Lpdg;->c:Z
-
-    const/4 v1, 0x1
-
-    if-eqz v0, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    iget v0, p1, Lpdg;->o:I
-
-    add-int/2addr v0, v1
-
-    iput v0, p1, Lpdg;->o:I
-
-    iget-object v0, p0, Ljma;->c:Lv1c;
-
-    sget-object v2, Loyd;->r0:Loyd;
-
-    new-instance v3, Ljava/lang/StringBuilder;
-
-    const-string v4, "rtc.long.executor.task."
-
-    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget v4, p1, Lpdg;->o:I
-
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v3
-
-    iget-object v4, p1, Lpdg;->a:Ljava/lang/String;
-
-    invoke-virtual {v0, v2, v3, v4}, Lv1c;->log(Loyd;Ljava/lang/String;Ljava/lang/String;)V
-
-    iget v0, p1, Lpdg;->o:I
-
-    const/4 v2, 0x4
-
-    if-lt v0, v2, :cond_1
-
-    :goto_0
-    return v1
-
-    :cond_1
-    iget-object v0, p0, Ljma;->b:Landroid/os/Handler;
-
-    if-eqz v0, :cond_2
-
-    invoke-virtual {v0}, Landroid/os/Handler;->obtainMessage()Landroid/os/Message;
-
-    move-result-object v0
-
-    iput-object p1, v0, Landroid/os/Message;->obj:Ljava/lang/Object;
-
-    iget-object p0, p0, Ljma;->b:Landroid/os/Handler;
-
-    const-wide/16 v2, 0x1388
-
-    invoke-virtual {p0, v0, v2, v3}, Landroid/os/Handler;->sendMessageDelayed(Landroid/os/Message;J)Z
-
-    return v1
-
-    :cond_2
-    new-instance p0, Ljava/lang/IllegalStateException;
-
-    const-string p1, "No task duration check thread"
-
-    invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p0
 .end method

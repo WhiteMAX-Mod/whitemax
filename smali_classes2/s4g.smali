@@ -1,88 +1,97 @@
-.class public final synthetic Ls4g;
+.class public final Ls4g;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lv56;
+.implements Lh0d;
 
 
 # instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Le10;
-
-.field public final synthetic c:Ld6d;
+.field public final a:Lr4g;
 
 
 # direct methods
-.method public synthetic constructor <init>(Le10;Ld6d;I)V
+.method public constructor <init>(Lr4g;)V
     .locals 0
 
-    iput p3, p0, Ls4g;->a:I
-
-    iput-object p1, p0, Ls4g;->b:Le10;
-
-    iput-object p2, p0, Ls4g;->c:Ld6d;
-
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Ls4g;->a:Lr4g;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke()Ljava/lang/Object;
-    .locals 9
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 3
 
-    iget v0, p0, Ls4g;->a:I
+    const/4 v0, 0x1
 
-    packed-switch v0, :pswitch_data_0
+    if-ne p0, p1, :cond_0
 
-    new-instance v1, Lm4g;
+    return v0
 
-    iget-object v0, p0, Ls4g;->b:Le10;
+    :cond_0
+    instance-of v1, p1, Ls4g;
 
-    iget-wide v2, v0, Le10;->a:J
+    const/4 v2, 0x0
 
-    iget-wide v4, v0, Le10;->b:J
+    if-nez v1, :cond_1
 
-    iget-object v0, v0, Le10;->c:Ljava/lang/Object;
+    return v2
 
-    move-object v6, v0
+    :cond_1
+    check-cast p1, Ls4g;
 
-    check-cast v6, Landroid/content/Context;
+    iget-object p0, p0, Ls4g;->a:Lr4g;
 
-    iget-object v7, p0, Ls4g;->c:Ld6d;
+    iget-object p1, p1, Ls4g;->a:Lr4g;
 
-    invoke-direct/range {v1 .. v7}, Lm4g;-><init>(JJLandroid/content/Context;Ld6d;)V
+    invoke-static {p0, p1}, Lvyg;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    return-object v1
+    move-result p0
 
-    :pswitch_0
-    new-instance v2, Ll4g;
+    if-nez p0, :cond_2
 
-    iget-object v0, p0, Ls4g;->b:Le10;
+    return v2
 
-    iget-wide v3, v0, Le10;->a:J
+    :cond_2
+    return v0
+.end method
 
-    iget-wide v5, v0, Le10;->b:J
+.method public final hashCode()I
+    .locals 0
 
-    iget-object v0, v0, Le10;->c:Ljava/lang/Object;
+    iget-object p0, p0, Ls4g;->a:Lr4g;
 
-    move-object v7, v0
+    invoke-virtual {p0}, Lr4g;->hashCode()I
 
-    check-cast v7, Landroid/content/Context;
+    move-result p0
 
-    iget-object v8, p0, Ls4g;->c:Ld6d;
+    return p0
+.end method
 
-    invoke-direct/range {v2 .. v8}, Ll4g;-><init>(JJLandroid/content/Context;Ld6d;)V
+.method public final toString()Ljava/lang/String;
+    .locals 2
 
-    return-object v2
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    nop
+    const-string v1, "VideoQualityUpdateNotification(videoQuality="
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object p0, p0, Ls4g;->a:Lr4g;
+
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string p0, ")"
+
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    return-object p0
 .end method

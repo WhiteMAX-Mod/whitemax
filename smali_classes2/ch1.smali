@@ -4,36 +4,20 @@
 
 
 # instance fields
-.field public final a:J
+.field public final a:Lvmd;
 
-.field public final b:Loac;
-
-.field public final c:Lrf1;
-
-.field public final d:J
-
-.field public final e:Ljava/lang/String;
-
-.field public final f:Ljava/lang/String;
+.field public final b:Ljava/util/List;
 
 
 # direct methods
-.method public constructor <init>(JLoac;Lrf1;JLjava/lang/String;Ljava/lang/String;)V
+.method public constructor <init>(Lvmd;Ljava/util/List;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-wide p1, p0, Lch1;->a:J
+    iput-object p1, p0, Lch1;->a:Lvmd;
 
-    iput-object p3, p0, Lch1;->b:Loac;
-
-    iput-object p4, p0, Lch1;->c:Lrf1;
-
-    iput-wide p5, p0, Lch1;->d:J
-
-    iput-object p7, p0, Lch1;->e:Ljava/lang/String;
-
-    iput-object p8, p0, Lch1;->f:Ljava/lang/String;
+    iput-object p2, p0, Lch1;->b:Ljava/util/List;
 
     return-void
 .end method

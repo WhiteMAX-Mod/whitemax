@@ -1,33 +1,58 @@
 .class public final Lau0;
-.super Ljava/lang/Object;
+.super Ljx3;
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:Lau0;
+# instance fields
+.field public final synthetic X:Lcu0;
+
+.field public Y:I
+
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(Lcu0;Ljx3;)V
+    .locals 0
 
-    new-instance v0, Lau0;
+    iput-object p1, p0, Lau0;->X:Lcu0;
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    sput-object v0, Lau0;->a:Lau0;
+    invoke-direct {p0, p2}, Ljx3;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(I)I
-    .locals 0
+.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    invoke-static {p1}, Landroid/os/ext/SdkExtensions;->getExtensionVersion(I)I
+    iput-object p1, p0, Lau0;->o:Ljava/lang/Object;
 
-    move-result p0
+    iget p1, p0, Lau0;->Y:I
 
-    return p0
+    const/high16 v0, -0x80000000
+
+    or-int/2addr p1, v0
+
+    iput p1, p0, Lau0;->Y:I
+
+    iget-object p1, p0, Lau0;->X:Lcu0;
+
+    invoke-static {p1, p0}, Lcu0;->B(Lcu0;Ljx3;)Ljava/lang/Object;
+
+    move-result-object p0
+
+    sget-object p1, Lz04;->a:Lz04;
+
+    if-ne p0, p1, :cond_0
+
+    return-object p0
+
+    :cond_0
+    new-instance p1, Lt62;
+
+    invoke-direct {p1, p0}, Lt62;-><init>(Ljava/lang/Object;)V
+
+    return-object p1
 .end method

@@ -1,89 +1,89 @@
 .class public final Lkw1;
-.super Ljava/lang/Object;
+.super Landroid/hardware/camera2/CameraManager$AvailabilityCallback;
 .source "SourceFile"
-
-# interfaces
-.implements Lmj3;
 
 
 # instance fields
-.field public final synthetic a:Ljava/util/concurrent/Executor;
+.field public final a:Ljava/lang/String;
 
-.field public final synthetic b:Lay1;
+.field public b:Z
 
-.field public final synthetic c:Llw1;
+.field public final synthetic c:Lqw1;
 
 
 # direct methods
-.method public constructor <init>(Llw1;Ljava/util/concurrent/Executor;Lay1;)V
+.method public constructor <init>(Lqw1;Ljava/lang/String;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lkw1;->c:Lqw1;
 
-    iput-object p1, p0, Lkw1;->c:Llw1;
+    invoke-direct {p0}, Landroid/hardware/camera2/CameraManager$AvailabilityCallback;-><init>()V
 
-    iput-object p2, p0, Lkw1;->a:Ljava/util/concurrent/Executor;
+    const/4 p1, 0x1
 
-    iput-object p3, p0, Lkw1;->b:Lay1;
+    iput-boolean p1, p0, Lkw1;->b:Z
+
+    iput-object p2, p0, Lkw1;->a:Ljava/lang/String;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final accept(Ljava/lang/Object;)V
-    .locals 3
+.method public final onCameraAvailable(Ljava/lang/String;)V
+    .locals 1
 
-    check-cast p1, Lolf;
+    iget-object v0, p0, Lkw1;->a:Ljava/lang/String;
 
-    instance-of v0, p1, Ljlf;
+    invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    if-eqz v0, :cond_1
+    move-result p1
 
-    invoke-static {}, Lp6g;->m()Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    new-instance v0, Lvt1;
-
-    const/4 v1, 0x4
-
-    invoke-direct {v0, v1, p0}, Lvt1;-><init>(ILjava/lang/Object;)V
-
-    iget-object v1, p0, Lkw1;->a:Ljava/util/concurrent/Executor;
-
-    invoke-interface {v1, v0}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
+    if-nez p1, :cond_0
 
     goto :goto_0
 
     :cond_0
-    iget-object v0, p0, Lkw1;->c:Llw1;
+    const/4 p1, 0x1
 
-    iget-object v1, v0, Llw1;->h:Ljava/util/HashMap;
+    iput-boolean p1, p0, Lkw1;->b:Z
 
-    invoke-virtual {v1, p0}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
+    iget-object p1, p0, Lkw1;->c:Lqw1;
 
-    move-result-object v1
+    iget p1, p1, Lqw1;->R0:I
 
-    check-cast v1, Lbbc;
+    const/4 v0, 0x4
 
-    if-eqz v1, :cond_1
+    if-ne p1, v0, :cond_1
 
-    iget-object v2, v0, Llw1;->g:Lbbc;
+    iget-object p0, p0, Lkw1;->c:Lqw1;
 
-    if-ne v2, v1, :cond_1
+    const/4 p1, 0x0
 
-    const/4 v1, 0x0
-
-    iput-object v1, v0, Llw1;->g:Lbbc;
+    invoke-virtual {p0, p1}, Lqw1;->I(Z)V
 
     :cond_1
     :goto_0
-    iget-object p0, p0, Lkw1;->b:Lay1;
+    return-void
+.end method
 
-    invoke-virtual {p0, p1}, Lay1;->accept(Ljava/lang/Object;)V
+.method public final onCameraUnavailable(Ljava/lang/String;)V
+    .locals 1
+
+    iget-object v0, p0, Lkw1;->a:Ljava/lang/String;
+
+    invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-nez p1, :cond_0
+
+    return-void
+
+    :cond_0
+    const/4 p1, 0x0
+
+    iput-boolean p1, p0, Lkw1;->b:Z
 
     return-void
 .end method

@@ -1,83 +1,95 @@
-.class public final Lxz9;
-.super Ljava/util/concurrent/atomic/AtomicReference;
+.class public abstract Lxz9;
+.super Ljava/lang/Object;
 .source "SourceFile"
-
-# interfaces
-.implements Lam4;
-.implements Ljava/lang/Runnable;
-
-
-# instance fields
-.field public final a:La0a;
 
 
 # direct methods
-.method public constructor <init>(La0a;)V
+.method public static a(Landroid/app/RemoteInput;)Z
     .locals 0
 
-    invoke-direct {p0}, Ljava/util/concurrent/atomic/AtomicReference;-><init>()V
+    invoke-virtual {p0}, Landroid/app/RemoteInput;->getAllowFreeFormInput()Z
 
-    iput-object p1, p0, Lxz9;->a:La0a;
+    move-result p0
 
-    return-void
+    return p0
 .end method
 
-
-# virtual methods
-.method public final f()V
+.method public static b(Landroid/app/RemoteInput;)[Ljava/lang/CharSequence;
     .locals 0
 
-    invoke-static {p0}, Lem4;->a(Ljava/util/concurrent/atomic/AtomicReference;)Z
-
-    return-void
-.end method
-
-.method public final g()Z
-    .locals 1
-
-    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
+    invoke-virtual {p0}, Landroid/app/RemoteInput;->getChoices()[Ljava/lang/CharSequence;
 
     move-result-object p0
 
-    sget-object v0, Lem4;->a:Lem4;
-
-    if-ne p0, v0, :cond_0
-
-    const/4 p0, 0x1
-
-    return p0
-
-    :cond_0
-    const/4 p0, 0x0
-
-    return p0
+    return-object p0
 .end method
 
-.method public final run()V
-    .locals 2
+.method public static c(Landroid/app/Notification$Action;)Landroid/os/Bundle;
+    .locals 0
 
-    invoke-virtual {p0}, Lxz9;->g()Z
+    invoke-virtual {p0}, Landroid/app/Notification$Action;->getExtras()Landroid/os/Bundle;
 
-    move-result v0
+    move-result-object p0
 
-    if-nez v0, :cond_0
+    return-object p0
+.end method
 
-    const-wide/16 v0, 0x0
+.method public static d(Landroid/app/RemoteInput;)Landroid/os/Bundle;
+    .locals 0
 
-    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    invoke-virtual {p0}, Landroid/app/RemoteInput;->getExtras()Landroid/os/Bundle;
 
-    move-result-object v0
+    move-result-object p0
 
-    iget-object v1, p0, Lxz9;->a:La0a;
+    return-object p0
+.end method
 
-    invoke-interface {v1, v0}, La0a;->h(Ljava/lang/Object;)V
+.method public static e(Landroid/app/Notification;)Ljava/lang/String;
+    .locals 0
 
-    sget-object v0, Lbz4;->a:Lbz4;
+    invoke-virtual {p0}, Landroid/app/Notification;->getGroup()Ljava/lang/String;
 
-    invoke-virtual {p0, v0}, Ljava/util/concurrent/atomic/AtomicReference;->lazySet(Ljava/lang/Object;)V
+    move-result-object p0
 
-    invoke-interface {v1}, La0a;->b()V
+    return-object p0
+.end method
 
-    :cond_0
-    return-void
+.method public static f(Landroid/app/RemoteInput;)Ljava/lang/CharSequence;
+    .locals 0
+
+    invoke-virtual {p0}, Landroid/app/RemoteInput;->getLabel()Ljava/lang/CharSequence;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static g(Landroid/app/Notification$Action;)[Landroid/app/RemoteInput;
+    .locals 0
+
+    invoke-virtual {p0}, Landroid/app/Notification$Action;->getRemoteInputs()[Landroid/app/RemoteInput;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static h(Landroid/app/RemoteInput;)Ljava/lang/String;
+    .locals 0
+
+    invoke-virtual {p0}, Landroid/app/RemoteInput;->getResultKey()Ljava/lang/String;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static i(Landroid/app/Notification;)Ljava/lang/String;
+    .locals 0
+
+    invoke-virtual {p0}, Landroid/app/Notification;->getSortKey()Ljava/lang/String;
+
+    move-result-object p0
+
+    return-object p0
 .end method

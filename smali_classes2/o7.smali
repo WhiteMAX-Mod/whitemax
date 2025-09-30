@@ -3,164 +3,97 @@
 .source "SourceFile"
 
 
+# static fields
+.field public static final d:Ljava/util/List;
+
+
 # instance fields
-.field public a:J
+.field public final a:Lw61;
 
-.field public b:Z
+.field public final b:Lq7;
 
-.field public final c:Ljava/io/Serializable;
-
-.field public d:Ljava/lang/Object;
+.field public final c:Lbh8;
 
 
 # direct methods
-.method public constructor <init>(JLjava/lang/String;Lfr8;Ljava/lang/String;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 4
 
-    .line 3
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const-string v0, "libvpx"
 
-    .line 4
-    iget-object p1, p4, Lfr8;->Z:Ljava/lang/String;
+    const-string v1, "unknown"
 
-    iput-object p1, p0, Lo7;->c:Ljava/io/Serializable;
+    const-string v2, ""
 
-    .line 5
-    iget-object p1, p4, Lfr8;->z0:Lug4;
+    const-string v3, "null"
 
-    if-eqz p1, :cond_0
+    filled-new-array {v2, v3, v0, v1}, [Ljava/lang/String;
 
-    .line 6
-    iget-wide p1, p1, Lug4;->a:J
+    move-result-object v0
 
-    goto :goto_0
+    invoke-static {v0}, Lr73;->I([Ljava/lang/Object;)Ljava/util/List;
 
-    .line 7
-    :cond_0
-    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+    move-result-object v0
 
-    move-result-wide p1
-
-    :goto_0
-    iput-wide p1, p0, Lo7;->a:J
-
-    .line 8
-    iget-object p1, p4, Lfr8;->X:Ltw8;
-
-    sget-object p2, Ltw8;->o:Ltw8;
-
-    if-ne p1, p2, :cond_1
-
-    const/4 p1, 0x1
-
-    goto :goto_1
-
-    :cond_1
-    const/4 p1, 0x0
-
-    :goto_1
-    iput-boolean p1, p0, Lo7;->b:Z
-
-    .line 9
-    iget-object p1, p4, Lfr8;->o0:Llz;
-
-    invoke-static {p1}, Lp43;->B0(Ljava/util/List;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    instance-of p2, p1, Ljta;
-
-    const/4 p3, 0x0
-
-    if-eqz p2, :cond_2
-
-    check-cast p1, Ljta;
-
-    goto :goto_2
-
-    :cond_2
-    move-object p1, p3
-
-    :goto_2
-    if-eqz p1, :cond_4
-
-    .line 10
-    iget-object p2, p1, Ljta;->t0:Ljava/lang/String;
-
-    if-nez p2, :cond_3
-
-    iget-object p1, p1, Ljta;->o:Ljava/lang/String;
-
-    move-object p3, p1
-
-    goto :goto_3
-
-    :cond_3
-    move-object p3, p2
-
-    .line 11
-    :cond_4
-    :goto_3
-    iput-object p3, p0, Lo7;->d:Ljava/lang/Object;
+    sput-object v0, Lo7;->d:Ljava/util/List;
 
     return-void
 .end method
 
-.method public constructor <init>(Lase;Lll9;)V
-    .locals 0
+.method public constructor <init>(Lw61;Lc0d;)V
+    .locals 9
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
-    iput-object p2, p0, Lo7;->c:Ljava/io/Serializable;
+    iput-object p1, p0, Lo7;->a:Lw61;
 
-    return-void
-.end method
+    new-instance v8, Lq7;
 
+    new-instance v0, Lkea;
 
-# virtual methods
-.method public a()V
-    .locals 5
+    const/4 v6, 0x0
 
-    iget-boolean v0, p0, Lo7;->b:Z
+    const/16 v7, 0xd
 
-    if-nez v0, :cond_0
+    const/4 v1, 0x2
 
-    goto :goto_0
+    const-class v3, Lo7;
 
-    :cond_0
-    const/4 v0, 0x0
+    const-string v4, "onVideoCodec"
 
-    iput-boolean v0, p0, Lo7;->b:Z
+    const-string v5, "onVideoCodec(Lru/ok/android/webrtc/stat/codec/ActiveEncodersStats$NamedCodecInfo;J)V"
 
-    iget-object v0, p0, Lo7;->d:Ljava/lang/Object;
+    move-object v2, p0
 
-    check-cast v0, Ll7;
+    invoke-direct/range {v0 .. v7}, Lkea;-><init>(ILjava/lang/Object;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;II)V
 
-    if-nez v0, :cond_1
+    move-object v1, v0
 
-    :goto_0
-    return-void
+    invoke-direct {v8, p2, v1}, Lq7;-><init>(Lc0d;Lkea;)V
 
-    :cond_1
-    iget-wide v1, p0, Lo7;->a:J
+    iput-object v8, p0, Lo7;->b:Lq7;
 
-    invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
+    new-instance v8, Lbh8;
 
-    move-result-wide v3
+    new-instance v0, Lmz8;
 
-    sub-long/2addr v3, v1
+    const/16 v7, 0x14
 
-    iget-object p0, p0, Lo7;->c:Ljava/io/Serializable;
+    const/4 v1, 0x1
 
-    check-cast p0, Lll9;
+    const-class v3, Lo7;
 
-    invoke-static {v3, v4}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    const-string v4, "onAudioCodec"
 
-    move-result-object v1
+    const-string v5, "onAudioCodec(Lru/ok/android/webrtc/stat/codec/ActiveEncodersStats$NamedCodecInfo;)V"
 
-    invoke-virtual {p0, v0, v1}, Lll9;->invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-direct/range {v0 .. v7}, Lmz8;-><init>(ILjava/lang/Object;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;II)V
+
+    const/4 v1, 0x2
+
+    invoke-direct {v8, v1, v0}, Lbh8;-><init>(ILjava/lang/Object;)V
+
+    iput-object v8, p0, Lo7;->c:Lbh8;
 
     return-void
 .end method

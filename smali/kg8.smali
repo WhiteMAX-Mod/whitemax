@@ -1,310 +1,198 @@
-.class public final Lkg8;
+.class public final synthetic Lkg8;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lmg8;
+.implements Lko8;
+
 
 # instance fields
-.field public final a:Lbg8;
-
-.field public final b:I
-
-.field public final c:Lmg8;
-
-.field public final d:Lmg8;
-
-.field public final e:Lmg8;
-
-.field public final f:Ljava/util/ArrayList;
-
-.field public final g:Ljava/lang/ref/WeakReference;
-
-.field public h:Z
-
-.field public i:Z
+.field public final synthetic a:Lpcb;
 
 
 # direct methods
-.method public constructor <init>(Ljg8;Lmg8;Lbg8;ILmg8;Ljava/util/Collection;)V
-    .locals 1
+.method public synthetic constructor <init>(Lpcb;)V
+    .locals 0
+
+    iput-object p1, p0, Lkg8;->a:Lpcb;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    const/4 v0, 0x0
-
-    iput-boolean v0, p0, Lkg8;->h:Z
-
-    iput-boolean v0, p0, Lkg8;->i:Z
-
-    new-instance v0, Ljava/lang/ref/WeakReference;
-
-    invoke-direct {v0, p1}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
-
-    iput-object v0, p0, Lkg8;->g:Ljava/lang/ref/WeakReference;
-
-    iput-object p2, p0, Lkg8;->d:Lmg8;
-
-    iput-object p3, p0, Lkg8;->a:Lbg8;
-
-    iput p4, p0, Lkg8;->b:I
-
-    iget-object p2, p1, Ljg8;->r:Lmg8;
-
-    iput-object p2, p0, Lkg8;->c:Lmg8;
-
-    iput-object p5, p0, Lkg8;->e:Lmg8;
-
-    if-nez p6, :cond_0
-
-    const/4 p2, 0x0
-
-    goto :goto_0
-
-    :cond_0
-    new-instance p2, Ljava/util/ArrayList;
-
-    invoke-direct {p2, p6}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
-
-    :goto_0
-    iput-object p2, p0, Lkg8;->f:Ljava/util/ArrayList;
-
-    iget-object p1, p1, Ljg8;->m:Lhg8;
-
-    new-instance p2, Lz46;
-
-    const/16 p3, 0xf
-
-    invoke-direct {p2, p3, p0}, Lz46;-><init>(ILjava/lang/Object;)V
-
-    const-wide/16 p3, 0x3a98
-
-    invoke-virtual {p1, p2, p3, p4}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()V
+.method public a(Lsn8;I)V
+    .locals 0
+
+    iget-object p0, p0, Lkg8;->a:Lpcb;
+
+    invoke-interface {p1, p2, p0}, Lsn8;->g(ILpcb;)V
+
+    return-void
+.end method
+
+.method public d(Ldg8;)V
     .locals 9
 
-    invoke-static {}, Lng8;->b()V
+    iget-object v0, p1, Ldg8;->a:Ljf8;
 
-    iget-boolean v0, p0, Lkg8;->h:Z
+    invoke-virtual {p1}, Ldg8;->isConnected()Z
 
-    if-nez v0, :cond_a
+    move-result v1
 
-    iget-boolean v0, p0, Lkg8;->i:Z
+    if-nez v1, :cond_0
 
-    if-eqz v0, :cond_0
-
-    goto/16 :goto_3
+    goto/16 :goto_2
 
     :cond_0
-    iget-object v0, p0, Lkg8;->g:Ljava/lang/ref/WeakReference;
+    iget-object v1, p1, Ldg8;->v:Lpcb;
 
-    invoke-virtual {v0}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
+    iget-object p0, p0, Lkg8;->a:Lpcb;
 
-    move-result-object v1
+    invoke-static {v1, p0}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    check-cast v1, Ljg8;
+    move-result v1
 
-    iget-object v2, p0, Lkg8;->a:Lbg8;
+    if-eqz v1, :cond_1
 
-    const/4 v3, 0x1
-
-    if-eqz v1, :cond_8
-
-    iget-object v4, v1, Ljg8;->z:Lkg8;
-
-    if-ne v4, p0, :cond_8
-
-    iput-boolean v3, p0, Lkg8;->h:Z
-
-    const/4 v3, 0x0
-
-    iput-object v3, v1, Ljg8;->z:Lkg8;
-
-    invoke-virtual {v0}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Ljg8;
-
-    iget-object v4, p0, Lkg8;->c:Lmg8;
-
-    iget v5, p0, Lkg8;->b:I
-
-    if-eqz v1, :cond_5
-
-    iget-object v6, v1, Ljg8;->v:Ljava/util/HashMap;
-
-    iget-object v7, v1, Ljg8;->r:Lmg8;
-
-    if-eq v7, v4, :cond_1
-
-    goto :goto_1
+    goto/16 :goto_2
 
     :cond_1
-    iget-object v7, v1, Ljg8;->m:Lhg8;
+    iput-object p0, p1, Ldg8;->v:Lpcb;
 
-    const/16 v8, 0x107
+    iget-object v1, p1, Ldg8;->w:Lpcb;
 
-    invoke-virtual {v7, v8, v4}, Landroid/os/Handler;->obtainMessage(ILjava/lang/Object;)Landroid/os/Message;
+    iget-object v2, p1, Ldg8;->u:Lpcb;
 
-    move-result-object v7
+    invoke-static {v2, p0}, Ldg8;->f(Lpcb;Lpcb;)Lpcb;
 
-    iput v5, v7, Landroid/os/Message;->arg1:I
+    move-result-object p0
 
-    invoke-virtual {v7}, Landroid/os/Message;->sendToTarget()V
+    iput-object p0, p1, Ldg8;->w:Lpcb;
 
-    iget-object v7, v1, Ljg8;->s:Lbg8;
+    invoke-virtual {p0, v1}, Lpcb;->equals(Ljava/lang/Object;)Z
 
-    if-eqz v7, :cond_2
+    move-result p0
 
-    invoke-virtual {v7, v5}, Lbg8;->h(I)V
+    const/4 v1, 0x1
 
-    iget-object v7, v1, Ljg8;->s:Lbg8;
+    const/4 v2, 0x0
 
-    invoke-virtual {v7}, Lbg8;->d()V
+    if-nez p0, :cond_2
 
-    :cond_2
-    invoke-virtual {v6}, Ljava/util/HashMap;->isEmpty()Z
+    iget-object p0, p1, Ldg8;->r:Llqc;
 
-    move-result v7
+    iget-object v3, p1, Ldg8;->s:Llqc;
 
-    if-nez v7, :cond_4
+    iget-object v4, p1, Ldg8;->q:Ll37;
 
-    invoke-virtual {v6}, Ljava/util/HashMap;->values()Ljava/util/Collection;
+    iget-object v5, p1, Ldg8;->p:Ll37;
 
-    move-result-object v7
+    iget-object v6, p1, Ldg8;->t:Lvld;
 
-    invoke-interface {v7}, Ljava/util/Collection;->iterator()Ljava/util/Iterator;
+    iget-object v7, p1, Ldg8;->w:Lpcb;
 
-    move-result-object v7
+    iget-object v8, p1, Ldg8;->D:Landroid/os/Bundle;
 
-    :goto_0
-    invoke-interface {v7}, Ljava/util/Iterator;->hasNext()Z
+    invoke-static {v4, v5, v6, v7, v8}, Ldg8;->E(Ljava/util/List;Ljava/util/List;Lvld;Lpcb;Landroid/os/Bundle;)Llqc;
 
-    move-result v8
+    move-result-object v4
 
-    if-eqz v8, :cond_3
+    iput-object v4, p1, Ldg8;->r:Llqc;
 
-    invoke-interface {v7}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    iget-object v5, p1, Ldg8;->p:Ll37;
 
-    move-result-object v8
+    iget-object v6, p1, Ldg8;->D:Landroid/os/Bundle;
 
-    check-cast v8, Lbg8;
+    iget-object v7, p1, Ldg8;->t:Lvld;
 
-    invoke-virtual {v8, v5}, Lbg8;->h(I)V
+    iget-object v8, p1, Ldg8;->w:Lpcb;
 
-    invoke-virtual {v8}, Lbg8;->d()V
+    invoke-static {v4, v5, v6, v7, v8}, Ldg8;->D(Llqc;Ljava/util/List;Landroid/os/Bundle;Lvld;Lpcb;)Llqc;
+
+    move-result-object v4
+
+    iput-object v4, p1, Ldg8;->s:Llqc;
+
+    iget-object v4, p1, Ldg8;->r:Llqc;
+
+    invoke-virtual {v4, p0}, Ll37;->equals(Ljava/lang/Object;)Z
+
+    move-result p0
+
+    xor-int/2addr p0, v1
+
+    iget-object v4, p1, Ldg8;->s:Llqc;
+
+    invoke-virtual {v4, v3}, Ll37;->equals(Ljava/lang/Object;)Z
+
+    move-result v3
+
+    xor-int/2addr v3, v1
+
+    iget-object v4, p1, Ldg8;->h:Lut7;
+
+    new-instance v5, Lsf8;
+
+    const/4 v6, 0x4
+
+    invoke-direct {v5, p1, v6}, Lsf8;-><init>(Ldg8;I)V
+
+    const/16 v6, 0xd
+
+    invoke-virtual {v4, v6, v5}, Lut7;->f(ILpt7;)V
 
     goto :goto_0
 
+    :cond_2
+    move p0, v2
+
+    move v3, p0
+
+    :goto_0
+    if-eqz v3, :cond_4
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    invoke-static {}, Landroid/os/Looper;->myLooper()Landroid/os/Looper;
+
+    move-result-object v3
+
+    iget-object v4, v0, Ljf8;->X:Landroid/os/Handler;
+
+    invoke-virtual {v4}, Landroid/os/Handler;->getLooper()Landroid/os/Looper;
+
+    move-result-object v4
+
+    if-ne v3, v4, :cond_3
+
+    goto :goto_1
+
     :cond_3
-    invoke-virtual {v6}, Ljava/util/HashMap;->clear()V
+    move v1, v2
+
+    :goto_1
+    invoke-static {v1}, Lmq0;->h(Z)V
+
+    iget-object v1, v0, Ljf8;->o:Lhf8;
+
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     :cond_4
-    iput-object v3, v1, Ljg8;->s:Lbg8;
+    if-eqz p0, :cond_5
+
+    new-instance p0, Lxr7;
+
+    const/16 v1, 0x17
+
+    invoke-direct {p0, v1, p1}, Lxr7;-><init>(ILjava/lang/Object;)V
+
+    invoke-virtual {v0, p0}, Ljf8;->o(Lom3;)V
 
     :cond_5
-    :goto_1
-    invoke-virtual {v0}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljg8;
-
-    if-nez v0, :cond_6
-
-    goto :goto_3
-
-    :cond_6
-    iget-object v1, v0, Ljg8;->m:Lhg8;
-
-    iget-object v3, p0, Lkg8;->d:Lmg8;
-
-    iput-object v3, v0, Ljg8;->r:Lmg8;
-
-    iput-object v2, v0, Ljg8;->s:Lbg8;
-
-    iget-object v2, p0, Lkg8;->e:Lmg8;
-
-    if-nez v2, :cond_7
-
-    new-instance v2, Lfna;
-
-    invoke-direct {v2, v4, v3}, Lfna;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
-
-    const/16 v3, 0x106
-
-    invoke-virtual {v1, v3, v2}, Landroid/os/Handler;->obtainMessage(ILjava/lang/Object;)Landroid/os/Message;
-
-    move-result-object v1
-
-    iput v5, v1, Landroid/os/Message;->arg1:I
-
-    invoke-virtual {v1}, Landroid/os/Message;->sendToTarget()V
-
-    goto :goto_2
-
-    :cond_7
-    new-instance v4, Lfna;
-
-    invoke-direct {v4, v2, v3}, Lfna;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
-
-    const/16 v2, 0x108
-
-    invoke-virtual {v1, v2, v4}, Landroid/os/Handler;->obtainMessage(ILjava/lang/Object;)Landroid/os/Message;
-
-    move-result-object v1
-
-    iput v5, v1, Landroid/os/Message;->arg1:I
-
-    invoke-virtual {v1}, Landroid/os/Message;->sendToTarget()V
-
     :goto_2
-    iget-object v1, v0, Ljg8;->v:Ljava/util/HashMap;
-
-    invoke-virtual {v1}, Ljava/util/HashMap;->clear()V
-
-    invoke-virtual {v0}, Ljg8;->f()V
-
-    invoke-virtual {v0}, Ljg8;->j()V
-
-    iget-object p0, p0, Lkg8;->f:Ljava/util/ArrayList;
-
-    if-eqz p0, :cond_a
-
-    iget-object v0, v0, Ljg8;->r:Lmg8;
-
-    invoke-virtual {v0, p0}, Lmg8;->n(Ljava/util/Collection;)V
-
-    return-void
-
-    :cond_8
-    iget-boolean v0, p0, Lkg8;->h:Z
-
-    if-nez v0, :cond_a
-
-    iget-boolean v0, p0, Lkg8;->i:Z
-
-    if-eqz v0, :cond_9
-
-    goto :goto_3
-
-    :cond_9
-    iput-boolean v3, p0, Lkg8;->i:Z
-
-    if-eqz v2, :cond_a
-
-    const/4 p0, 0x0
-
-    invoke-virtual {v2, p0}, Lbg8;->h(I)V
-
-    invoke-virtual {v2}, Lbg8;->d()V
-
-    :cond_a
-    :goto_3
     return-void
 .end method

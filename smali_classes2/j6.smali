@@ -9,16 +9,16 @@
 # instance fields
 .field public final synthetic a:I
 
-.field public final synthetic b:Lv56;
+.field public final synthetic b:Lzb6;
 
 
 # direct methods
-.method public synthetic constructor <init>(ILv56;)V
+.method public synthetic constructor <init>(ILzb6;)V
     .locals 0
 
     iput p1, p0, Lj6;->a:I
 
-    iput-object p2, p0, Lj6;->b:Lv56;
+    iput-object p2, p0, Lj6;->b:Lzb6;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -32,96 +32,96 @@
 
     iget p1, p0, Lj6;->a:I
 
-    iget-object p0, p0, Lj6;->b:Lv56;
+    iget-object p0, p0, Lj6;->b:Lzb6;
 
     packed-switch p1, :pswitch_data_0
 
-    invoke-interface {p0}, Lv56;->invoke()Ljava/lang/Object;
+    invoke-interface {p0}, Lzb6;->invoke()Ljava/lang/Object;
 
     return-void
 
     :pswitch_0
-    invoke-interface {p0}, Lv56;->invoke()Ljava/lang/Object;
+    invoke-interface {p0}, Lzb6;->invoke()Ljava/lang/Object;
 
     return-void
 
     :pswitch_1
-    invoke-interface {p0}, Lv56;->invoke()Ljava/lang/Object;
+    invoke-interface {p0}, Lzb6;->invoke()Ljava/lang/Object;
 
     return-void
 
     :pswitch_2
-    invoke-interface {p0}, Lv56;->invoke()Ljava/lang/Object;
+    invoke-interface {p0}, Lzb6;->invoke()Ljava/lang/Object;
 
     return-void
 
     :pswitch_3
-    invoke-interface {p0}, Lv56;->invoke()Ljava/lang/Object;
+    invoke-interface {p0}, Lzb6;->invoke()Ljava/lang/Object;
 
     return-void
 
     :pswitch_4
-    invoke-interface {p0}, Lv56;->invoke()Ljava/lang/Object;
+    invoke-interface {p0}, Lzb6;->invoke()Ljava/lang/Object;
 
     return-void
 
     :pswitch_5
-    invoke-interface {p0}, Lv56;->invoke()Ljava/lang/Object;
+    invoke-interface {p0}, Lzb6;->invoke()Ljava/lang/Object;
 
     return-void
 
     :pswitch_6
-    invoke-interface {p0}, Lv56;->invoke()Ljava/lang/Object;
+    invoke-interface {p0}, Lzb6;->invoke()Ljava/lang/Object;
 
     return-void
 
     :pswitch_7
-    invoke-interface {p0}, Lv56;->invoke()Ljava/lang/Object;
+    invoke-interface {p0}, Lzb6;->invoke()Ljava/lang/Object;
 
     return-void
 
     :pswitch_8
-    invoke-interface {p0}, Lv56;->invoke()Ljava/lang/Object;
+    invoke-interface {p0}, Lzb6;->invoke()Ljava/lang/Object;
 
     return-void
 
     :pswitch_9
-    sget p1, Lone/me/sdk/uikit/common/views/EmptySearchView;->o0:I
+    sget p1, Lone/me/sdk/uikit/common/views/EmptySearchView;->r0:I
 
-    invoke-interface {p0}, Lv56;->invoke()Ljava/lang/Object;
+    invoke-interface {p0}, Lzb6;->invoke()Ljava/lang/Object;
 
     return-void
 
     :pswitch_a
-    invoke-interface {p0}, Lv56;->invoke()Ljava/lang/Object;
+    invoke-interface {p0}, Lzb6;->invoke()Ljava/lang/Object;
 
     return-void
 
     :pswitch_b
-    invoke-interface {p0}, Lv56;->invoke()Ljava/lang/Object;
+    invoke-interface {p0}, Lzb6;->invoke()Ljava/lang/Object;
 
     return-void
 
     :pswitch_c
     if-eqz p0, :cond_0
 
-    invoke-interface {p0}, Lv56;->invoke()Ljava/lang/Object;
+    invoke-interface {p0}, Lzb6;->invoke()Ljava/lang/Object;
 
     :cond_0
     return-void
 
     :pswitch_d
-    invoke-interface {p0}, Lv56;->invoke()Ljava/lang/Object;
+    invoke-interface {p0}, Lzb6;->invoke()Ljava/lang/Object;
 
     return-void
 
     :pswitch_e
-    invoke-interface {p0}, Lv56;->invoke()Ljava/lang/Object;
+    invoke-interface {p0}, Lzb6;->invoke()Ljava/lang/Object;
 
     return-void
 
     :pswitch_f
-    invoke-interface {p0}, Lv56;->invoke()Ljava/lang/Object;
+    invoke-interface {p0}, Lzb6;->invoke()Ljava/lang/Object;
 
     return-void
 

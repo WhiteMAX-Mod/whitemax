@@ -1,68 +1,140 @@
-.class public final Lsf8;
-.super Landroid/support/v4/media/session/MediaControllerCompat$Callback;
+.class public final synthetic Lsf8;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lbg8;
+.implements Lpt7;
+.implements Lrt7;
 
 
 # instance fields
-.field public final synthetic a:Lyf8;
+.field public final synthetic a:I
+
+.field public final synthetic b:Ldg8;
 
 
 # direct methods
-.method public constructor <init>(Lyf8;)V
+.method public synthetic constructor <init>(Ldg8;I)V
     .locals 0
 
-    iput-object p1, p0, Lsf8;->a:Lyf8;
+    iput p2, p0, Lsf8;->a:I
 
-    invoke-direct {p0}, Landroid/support/v4/media/session/MediaControllerCompat$Callback;-><init>()V
+    iput-object p1, p0, Lsf8;->b:Ldg8;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onMetadataChanged(Landroid/support/v4/media/MediaMetadataCompat;)V
-    .locals 0
+.method public c(Lgy6;I)V
+    .locals 1
 
-    if-nez p1, :cond_0
+    iget v0, p0, Lsf8;->a:I
 
-    const/4 p1, 0x0
+    iget-object p0, p0, Lsf8;->b:Ldg8;
 
-    goto :goto_0
+    packed-switch v0, :pswitch_data_0
 
-    :cond_0
-    invoke-virtual {p1}, Landroid/support/v4/media/MediaMetadataCompat;->getDescription()Landroid/support/v4/media/MediaDescriptionCompat;
+    :pswitch_0
+    iget-object p0, p0, Ldg8;->c:Lng8;
 
-    move-result-object p1
+    invoke-interface {p1, p0, p2}, Lgy6;->p(Lay6;I)V
 
-    :goto_0
-    iget-object p0, p0, Lsf8;->a:Lyf8;
+    return-void
 
-    iput-object p1, p0, Lyf8;->S0:Landroid/support/v4/media/MediaDescriptionCompat;
+    :pswitch_1
+    iget-object p0, p0, Ldg8;->c:Lng8;
 
-    invoke-virtual {p0}, Lyf8;->f()V
+    invoke-interface {p1, p0, p2}, Lgy6;->e(Lay6;I)V
 
-    invoke-virtual {p0}, Lyf8;->j()V
+    return-void
+
+    :pswitch_2
+    iget-object p0, p0, Ldg8;->c:Lng8;
+
+    invoke-interface {p1, p0, p2}, Lgy6;->C(Lay6;I)V
+
+    return-void
+
+    :pswitch_3
+    iget-object p0, p0, Ldg8;->c:Lng8;
+
+    invoke-interface {p1, p0, p2}, Lgy6;->G(Lay6;I)V
+
+    return-void
+
+    :pswitch_4
+    iget-object p0, p0, Ldg8;->c:Lng8;
+
+    invoke-interface {p1, p0, p2}, Lgy6;->U(Lay6;I)V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_4
+        :pswitch_3
+        :pswitch_2
+        :pswitch_0
+        :pswitch_0
+        :pswitch_0
+        :pswitch_1
+    .end packed-switch
+.end method
+
+.method public e(Ljava/lang/Object;Lnr5;)V
+    .locals 1
+
+    check-cast p1, Lscb;
+
+    iget-object p0, p0, Lsf8;->b:Ldg8;
+
+    iget-object p0, p0, Ldg8;->a:Ljf8;
+
+    new-instance v0, Lqcb;
+
+    invoke-direct {v0, p2}, Lqcb;-><init>(Lnr5;)V
+
+    invoke-interface {p1, p0, v0}, Lscb;->d0(Lvcb;Lqcb;)V
 
     return-void
 .end method
 
-.method public final onSessionDestroyed()V
-    .locals 2
+.method public invoke(Ljava/lang/Object;)V
+    .locals 1
 
-    iget-object p0, p0, Lsf8;->a:Lyf8;
+    iget v0, p0, Lsf8;->a:I
 
-    iget-object v0, p0, Lyf8;->Q0:Landroid/support/v4/media/session/MediaControllerCompat;
+    check-cast p1, Lscb;
 
-    if-eqz v0, :cond_0
+    packed-switch v0, :pswitch_data_0
 
-    iget-object v1, p0, Lyf8;->R0:Lsf8;
+    iget-object p0, p0, Lsf8;->b:Ldg8;
 
-    invoke-virtual {v0, v1}, Landroid/support/v4/media/session/MediaControllerCompat;->unregisterCallback(Landroid/support/v4/media/session/MediaControllerCompat$Callback;)V
+    iget-object p0, p0, Ldg8;->w:Lpcb;
 
-    const/4 v0, 0x0
+    invoke-interface {p1, p0}, Lscb;->z0(Lpcb;)V
 
-    iput-object v0, p0, Lyf8;->Q0:Landroid/support/v4/media/session/MediaControllerCompat;
-
-    :cond_0
     return-void
+
+    :pswitch_0
+    iget-object p0, p0, Lsf8;->b:Ldg8;
+
+    iget-object p0, p0, Ldg8;->w:Lpcb;
+
+    invoke-interface {p1, p0}, Lscb;->z0(Lpcb;)V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x3
+        :pswitch_0
+    .end packed-switch
 .end method

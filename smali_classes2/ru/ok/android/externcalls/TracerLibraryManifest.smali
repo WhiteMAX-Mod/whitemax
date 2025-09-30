@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lbxe;
+.implements Lbbf;
 
 
 # direct methods

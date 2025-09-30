@@ -1,196 +1,63 @@
-.class public final Ld50;
+.class public interface abstract Ld50;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lnmb;
 
-
-# instance fields
-.field public final synthetic a:Lf50;
+# static fields
+.field public static final a:Ljava/nio/ByteBuffer;
 
 
 # direct methods
-.method public constructor <init>(Lf50;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 2
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/4 v0, 0x0
 
-    iput-object p1, p0, Ld50;->a:Lf50;
+    invoke-static {v0}, Ljava/nio/ByteBuffer;->allocateDirect(I)Ljava/nio/ByteBuffer;
+
+    move-result-object v0
+
+    invoke-static {}, Ljava/nio/ByteOrder;->nativeOrder()Ljava/nio/ByteOrder;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/nio/ByteBuffer;->order(Ljava/nio/ByteOrder;)Ljava/nio/ByteBuffer;
+
+    move-result-object v0
+
+    sput-object v0, Ld50;->a:Ljava/nio/ByteBuffer;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()V
-    .locals 8
-
-    iget-object p0, p0, Ld50;->a:Lf50;
-
-    iget-object v1, p0, Lf50;->a:Lof9;
-
-    invoke-static {p0}, Lf50;->b(Lf50;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    return-void
-
-    :cond_0
-    move-object v0, v1
-
-    check-cast v0, Leg9;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    new-instance v2, Ls20;
-
-    const/4 v3, 0x1
-
-    const/4 v4, 0x0
-
-    const/4 v5, 0x2
-
-    const/4 v6, 0x1
-
-    move v7, v4
-
-    invoke-direct/range {v2 .. v7}, Ls20;-><init>(IIIII)V
-
-    iget-object v0, v0, Leg9;->m:Lo88;
-
-    const/4 v3, 0x0
-
-    if-eqz v0, :cond_1
-
-    invoke-virtual {v0, v2, v3}, Lo88;->r(Ls20;Z)V
-
-    :cond_1
-    iget-object p0, p0, Lf50;->b:Lomb;
-
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    :try_start_0
-    iget-object p0, p0, Lomb;->f:Landroid/os/PowerManager$WakeLock;
-
-    if-eqz p0, :cond_2
-
-    invoke-virtual {p0}, Landroid/os/PowerManager$WakeLock;->acquire()V
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
-
-    goto :goto_0
-
-    :catch_0
-    move-exception v0
-
-    move-object p0, v0
-
-    invoke-virtual {p0}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
-
-    move-result-object v0
-
-    new-array v2, v3, [Ljava/lang/Object;
-
-    const-string v3, "ProximityHelperTag"
-
-    invoke-static {v3, p0, v0, v2}, Lg47;->t(Ljava/lang/String;Ljava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)V
-
-    :cond_2
-    :goto_0
-    move-object p0, v1
-
-    check-cast p0, Leg9;
-
-    iget-object p0, p0, Leg9;->t:Lu5c;
-
-    iget-object p0, p0, Lu5c;->a:Ltyd;
-
-    invoke-interface {p0}, Ltyd;->getValue()Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, Ljava/lang/Number;
-
-    invoke-virtual {p0}, Ljava/lang/Number;->longValue()J
-
-    move-result-wide v2
-
-    const-wide/16 v4, 0x3e8
-
-    sub-long/2addr v2, v4
-
-    check-cast v1, Leg9;
-
-    iget-object p0, v1, Leg9;->h:Lkotlinx/coroutines/internal/ContextScope;
-
-    new-instance v0, Lag9;
-
-    const/4 v4, 0x0
-
-    invoke-direct {v0, v2, v3, v1, v4}, Lag9;-><init>(JLeg9;Lkotlin/coroutines/Continuation;)V
-
-    const/4 v1, 0x3
-
-    invoke-static {p0, v4, v4, v0, v1}, Lzo3;->E(Lox3;Lhx3;Lrx3;Ll66;I)Ldwd;
-
-    return-void
+.method public abstract a()Ljava/nio/ByteBuffer;
 .end method
 
-.method public final b()V
-    .locals 8
+.method public abstract b(Ljava/nio/ByteBuffer;)V
+.end method
 
-    iget-object p0, p0, Ld50;->a:Lf50;
+.method public abstract c()V
+.end method
 
-    iget-object v0, p0, Lf50;->a:Lof9;
+.method public abstract d()Z
+.end method
 
-    invoke-static {p0}, Lf50;->b(Lf50;)Z
+.method public abstract e(La50;)La50;
+.end method
 
-    move-result v1
+.method public f(J)J
+    .locals 0
 
-    if-eqz v1, :cond_0
+    return-wide p1
+.end method
 
-    return-void
+.method public abstract flush()V
+.end method
 
-    :cond_0
-    move-object v1, v0
+.method public abstract isActive()Z
+.end method
 
-    check-cast v1, Leg9;
-
-    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    new-instance v2, Ls20;
-
-    const/4 v3, 0x1
-
-    const/4 v4, 0x0
-
-    const/4 v5, 0x1
-
-    const/4 v6, 0x1
-
-    move v7, v4
-
-    invoke-direct/range {v2 .. v7}, Ls20;-><init>(IIIII)V
-
-    iget-object v1, v1, Leg9;->m:Lo88;
-
-    if-eqz v1, :cond_1
-
-    const/4 v3, 0x0
-
-    invoke-virtual {v1, v2, v3}, Lo88;->r(Ls20;Z)V
-
-    :cond_1
-    iget-object p0, p0, Lf50;->b:Lomb;
-
-    invoke-virtual {p0}, Lomb;->c()V
-
-    check-cast v0, Leg9;
-
-    invoke-virtual {v0}, Leg9;->q()V
-
-    return-void
+.method public abstract reset()V
 .end method

@@ -1,42 +1,127 @@
-.class public final synthetic Lwpa;
+.class public abstract Lwpa;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lorg/webrtc/RtpReceiver$Observer;
 
+# static fields
+.field public static final a:I
 
-# instance fields
-.field public final synthetic a:Lfqa;
+.field public static final b:I
+
+.field public static final c:I
+
+.field public static final d:I
+
+.field public static final e:I
+
+.field public static final f:I
+
+.field public static final g:I
+
+.field public static final h:I
+
+.field public static final i:I
+
+.field public static final j:I
+
+.field public static final k:I
+
+.field public static final l:I
+
+.field public static final m:I
+
+.field public static final n:I
+
+.field public static final o:I
+
+.field public static final p:I
+
+.field public static final q:I
+
+.field public static final r:I
+
+.field public static final s:I
 
 
 # direct methods
-.method public synthetic constructor <init>(Lfqa;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    iput-object p1, p0, Lwpa;->a:Lfqa;
+    sget v0, Ls7c;->oneme_startconversation_chat_titleicon_avatars_cancel_action:I
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    sput v0, Lwpa;->a:I
 
-    return-void
-.end method
+    sget v0, Ls7c;->oneme_startconversation_chat_titleicon_avatars_load_from_gallery_action:I
 
+    sput v0, Lwpa;->b:I
 
-# virtual methods
-.method public onFirstPacketReceived(Lorg/webrtc/MediaStreamTrack$MediaType;)V
-    .locals 2
+    sget v0, Ls7c;->oneme_startconversation_chat_titleicon_avatars_take_photo_action:I
 
-    iget-object p0, p0, Lwpa;->a:Lfqa;
+    sput v0, Lwpa;->c:I
 
-    iget-object p1, p0, Lfqa;->r:Landroid/os/Handler;
+    sget v0, Ls7c;->oneme_startconversation_chat_titleicon_constraint_layout:I
 
-    new-instance v0, Lupa;
+    sput v0, Lwpa;->d:I
 
-    const/4 v1, 0x5
+    sget v0, Ls7c;->oneme_startconversation_chat_titleicon_create_button_view:I
 
-    invoke-direct {v0, p0, v1}, Lupa;-><init>(Lfqa;I)V
+    sput v0, Lwpa;->e:I
 
-    invoke-virtual {p1, v0}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
+    sget v0, Ls7c;->oneme_startconversation_chat_titleicon_create_hint_text_view:I
+
+    sput v0, Lwpa;->f:I
+
+    sget v0, Ls7c;->oneme_startconversation_chat_titleicon_description_view:I
+
+    sput v0, Lwpa;->g:I
+
+    sget v0, Ls7c;->oneme_startconversation_chat_titleicon_icon_view:I
+
+    sput v0, Lwpa;->h:I
+
+    sget v0, Ls7c;->oneme_startconversation_chat_titleicon_title_view:I
+
+    sput v0, Lwpa;->i:I
+
+    sget v0, Ls7c;->oneme_startconversation_chat_titleicon_toolbar:I
+
+    sput v0, Lwpa;->j:I
+
+    sget v0, Ls7c;->oneme_startconversation_chat_toolbar:I
+
+    sput v0, Lwpa;->k:I
+
+    sget v0, Ls7c;->oneme_startconversation_confirm_add_subscribers_button:I
+
+    sput v0, Lwpa;->l:I
+
+    sget v0, Ls7c;->oneme_startconversation_container:I
+
+    sput v0, Lwpa;->m:I
+
+    sget v0, Ls7c;->oneme_startconversation_create_button_view_type:I
+
+    sput v0, Lwpa;->n:I
+
+    sget v0, Ls7c;->oneme_startconversation_recyclerview:I
+
+    sput v0, Lwpa;->o:I
+
+    sget v0, Ls7c;->oneme_startconversation_select_channel_subscribers_toolbar:I
+
+    sput v0, Lwpa;->p:I
+
+    sget v0, Ls7c;->oneme_startconversation_toolbar:I
+
+    sput v0, Lwpa;->q:I
+
+    sget v0, Ls7c;->oneme_startconversations_create_channel:I
+
+    sput v0, Lwpa;->r:I
+
+    sget v0, Ls7c;->oneme_startconversations_create_chat:I
+
+    sput v0, Lwpa;->s:I
 
     return-void
 .end method

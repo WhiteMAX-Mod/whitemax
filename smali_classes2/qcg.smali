@@ -1,93 +1,102 @@
-.class public abstract synthetic Lqcg;
-.super Ljava/lang/Object;
+.class public final Lqcg;
+.super Lb72;
 .source "SourceFile"
 
 
-# static fields
-.field public static final synthetic a:[I
-
-.field public static final synthetic b:[I
+# instance fields
+.field public final c:J
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public constructor <init>(J)V
+    .locals 2
+
+    const/4 v0, 0x4
+
+    invoke-static {p1, p2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v1
+
+    invoke-direct {p0, v0, v1}, Lb72;-><init>(ILjava/lang/Long;)V
+
+    iput-wide p1, p0, Lqcg;->c:J
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final a()Ljava/lang/Long;
+    .locals 2
+
+    iget-wide v0, p0, Lqcg;->c:J
+
+    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 5
+
+    const/4 v0, 0x1
+
+    if-ne p0, p1, :cond_0
+
+    return v0
+
+    :cond_0
+    instance-of v1, p1, Lqcg;
+
+    const/4 v2, 0x0
+
+    if-nez v1, :cond_1
+
+    return v2
+
+    :cond_1
+    check-cast p1, Lqcg;
+
+    iget-wide v3, p0, Lqcg;->c:J
+
+    iget-wide p0, p1, Lqcg;->c:J
+
+    cmp-long p0, v3, p0
+
+    if-eqz p0, :cond_2
+
+    return v2
+
+    :cond_2
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 2
+
+    iget-wide v0, p0, Lqcg;->c:J
+
+    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
+
+    move-result p0
+
+    return p0
+.end method
+
+.method public final toString()Ljava/lang/String;
     .locals 4
 
-    const/4 v0, 0x2
+    const-string v0, "ChannelId(sourceId="
 
-    invoke-static {v0}, Lzt1;->v(I)[I
+    const-string v1, ")"
 
-    move-result-object v1
+    iget-wide v2, p0, Lqcg;->c:J
 
-    array-length v1, v1
+    invoke-static {v2, v3, v0, v1}, Lwsf;->e(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
-    new-array v1, v1, [I
+    move-result-object p0
 
-    sput-object v1, Lqcg;->b:[I
-
-    const/4 v2, 0x1
-
-    const/4 v3, 0x0
-
-    :try_start_0
-    aput v2, v1, v3
-    :try_end_0
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
-
-    :catch_0
-    :try_start_1
-    sget-object v1, Lqcg;->b:[I
-
-    aput v0, v1, v2
-    :try_end_1
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
-
-    :catch_1
-    invoke-static {}, Lhy0;->values()[Lhy0;
-
-    move-result-object v1
-
-    array-length v1, v1
-
-    new-array v1, v1, [I
-
-    sput-object v1, Lqcg;->a:[I
-
-    :try_start_2
-    aput v2, v1, v3
-    :try_end_2
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_2
-
-    :catch_2
-    :try_start_3
-    sget-object v1, Lqcg;->a:[I
-
-    aput v0, v1, v0
-    :try_end_3
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_3 .. :try_end_3} :catch_3
-
-    :catch_3
-    :try_start_4
-    sget-object v0, Lqcg;->a:[I
-
-    const/4 v1, 0x3
-
-    aput v1, v0, v1
-    :try_end_4
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_4 .. :try_end_4} :catch_4
-
-    :catch_4
-    :try_start_5
-    sget-object v0, Lqcg;->a:[I
-
-    const/4 v1, 0x5
-
-    const/4 v2, 0x4
-
-    aput v2, v0, v1
-    :try_end_5
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_5 .. :try_end_5} :catch_5
-
-    :catch_5
-    return-void
+    return-object p0
 .end method

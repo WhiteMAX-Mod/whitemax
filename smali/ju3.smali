@@ -1,56 +1,65 @@
-.class public final synthetic Lju3;
-.super Ljava/lang/Object;
+.class public final Lju3;
+.super Lkyc;
 .source "SourceFile"
 
-# interfaces
-.implements Ldmc;
 
+# static fields
+.field public static final b:Lju3;
 
-# instance fields
-.field public final synthetic a:Lou3;
+.field public static final c:Lxa4;
 
-.field public final synthetic b:Landroid/content/Intent;
+.field public static final d:Lxa4;
 
-.field public final synthetic c:I
-
-.field public final synthetic d:Landroid/os/Bundle;
+.field public static final e:Lxa4;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lou3;Landroid/content/Intent;ILandroid/os/Bundle;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 7
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lju3;
 
-    iput-object p1, p0, Lju3;->a:Lou3;
+    invoke-direct {v0}, Lcb4;-><init>()V
 
-    iput-object p2, p0, Lju3;->b:Landroid/content/Intent;
+    sput-object v0, Lju3;->b:Lju3;
 
-    iput p3, p0, Lju3;->c:I
+    const/4 v6, 0x0
 
-    iput-object p4, p0, Lju3;->d:Landroid/os/Bundle;
+    new-array v2, v6, [Ljava/lang/String;
 
-    return-void
-.end method
+    const/16 v5, 0xe
 
+    const/4 v4, 0x0
 
-# virtual methods
-.method public final a()V
-    .locals 4
+    const-string v1, ":contact-list/create-contact"
 
-    iget-object v0, p0, Lju3;->a:Lou3;
+    const/4 v3, 0x0
 
-    iget-object v1, v0, Lou3;->router:Lcmc;
+    invoke-static/range {v0 .. v5}, Lcb4;->a(Lcb4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;II)Lxa4;
 
-    iget-object v0, v0, Lou3;->instanceId:Ljava/lang/String;
+    move-result-object v1
 
-    iget-object v2, p0, Lju3;->b:Landroid/content/Intent;
+    sput-object v1, Lju3;->c:Lxa4;
 
-    iget v3, p0, Lju3;->c:I
+    new-array v2, v6, [Ljava/lang/String;
 
-    iget-object p0, p0, Lju3;->d:Landroid/os/Bundle;
+    const-string v1, ":contact-list/share-invite"
 
-    invoke-virtual {v1, v0, v2, v3, p0}, Lcmc;->W(Ljava/lang/String;Landroid/content/Intent;ILandroid/os/Bundle;)V
+    invoke-static/range {v0 .. v5}, Lcb4;->a(Lcb4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;II)Lxa4;
+
+    move-result-object v1
+
+    sput-object v1, Lju3;->d:Lxa4;
+
+    new-array v2, v6, [Ljava/lang/String;
+
+    const-string v1, ":call-contact"
+
+    invoke-static/range {v0 .. v5}, Lcb4;->a(Lcb4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;II)Lxa4;
+
+    move-result-object v0
+
+    sput-object v0, Lju3;->e:Lxa4;
 
     return-void
 .end method

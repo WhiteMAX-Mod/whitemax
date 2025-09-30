@@ -2,115 +2,183 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Llyg;
+
 
 # instance fields
-.field public final a:Lvce;
+.field public final a:F
 
-.field public final b:Lvce;
+.field public final b:F
 
-.field public final c:Ljava/util/ArrayList;
+.field public final c:F
+
+.field public final d:F
 
 
 # direct methods
-.method public constructor <init>(Lvce;Lvce;Ljava/util/ArrayList;)V
+.method public constructor <init>(FFFF)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    if-eqz p1, :cond_1
+    iput p1, p0, Lw90;->a:F
 
-    iput-object p1, p0, Lw90;->a:Lvce;
+    iput p2, p0, Lw90;->b:F
 
-    if-eqz p2, :cond_0
+    iput p3, p0, Lw90;->c:F
 
-    iput-object p2, p0, Lw90;->b:Lvce;
-
-    iput-object p3, p0, Lw90;->c:Ljava/util/ArrayList;
+    iput p4, p0, Lw90;->d:F
 
     return-void
+.end method
 
-    :cond_0
-    new-instance p0, Ljava/lang/NullPointerException;
+.method public static e(Llyg;)Lw90;
+    .locals 4
 
-    const-string p1, "Null secondarySurfaceEdge"
+    new-instance v0, Lw90;
 
-    invoke-direct {p0, p1}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
+    invoke-interface {p0}, Llyg;->c()F
 
-    throw p0
+    move-result v1
 
-    :cond_1
-    new-instance p0, Ljava/lang/NullPointerException;
+    invoke-interface {p0}, Llyg;->a()F
 
-    const-string p1, "Null primarySurfaceEdge"
+    move-result v2
 
-    invoke-direct {p0, p1}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
+    invoke-interface {p0}, Llyg;->b()F
 
-    throw p0
+    move-result v3
+
+    invoke-interface {p0}, Llyg;->d()F
+
+    move-result p0
+
+    invoke-direct {v0, v1, v2, v3, p0}, Lw90;-><init>(FFFF)V
+
+    return-object v0
 .end method
 
 
 # virtual methods
+.method public final a()F
+    .locals 0
+
+    iget p0, p0, Lw90;->b:F
+
+    return p0
+.end method
+
+.method public final b()F
+    .locals 0
+
+    iget p0, p0, Lw90;->c:F
+
+    return p0
+.end method
+
+.method public final c()F
+    .locals 0
+
+    iget p0, p0, Lw90;->a:F
+
+    return p0
+.end method
+
+.method public final d()F
+    .locals 0
+
+    iget p0, p0, Lw90;->d:F
+
+    return p0
+.end method
+
 .method public final equals(Ljava/lang/Object;)Z
-    .locals 2
+    .locals 4
+
+    const/4 v0, 0x1
 
     if-ne p1, p0, :cond_0
 
-    goto :goto_0
+    return v0
 
     :cond_0
-    instance-of v0, p1, Lw90;
+    instance-of v1, p1, Lw90;
 
-    if-eqz v0, :cond_1
+    const/4 v2, 0x0
+
+    if-eqz v1, :cond_1
 
     check-cast p1, Lw90;
 
-    iget-object v0, p0, Lw90;->a:Lvce;
+    iget v1, p0, Lw90;->a:F
 
-    iget-object v1, p1, Lw90;->a:Lvce;
+    invoke-static {v1}, Ljava/lang/Float;->floatToIntBits(F)I
 
-    invoke-virtual {v0, v1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+    move-result v1
 
-    move-result v0
+    iget v3, p1, Lw90;->a:F
 
-    if-eqz v0, :cond_1
+    invoke-static {v3}, Ljava/lang/Float;->floatToIntBits(F)I
 
-    iget-object v0, p0, Lw90;->b:Lvce;
+    move-result v3
 
-    iget-object v1, p1, Lw90;->b:Lvce;
+    if-ne v1, v3, :cond_1
 
-    invoke-virtual {v0, v1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+    iget v1, p0, Lw90;->b:F
 
-    move-result v0
+    invoke-static {v1}, Ljava/lang/Float;->floatToIntBits(F)I
 
-    if-eqz v0, :cond_1
+    move-result v1
 
-    iget-object p0, p0, Lw90;->c:Ljava/util/ArrayList;
+    iget v3, p1, Lw90;->b:F
 
-    iget-object p1, p1, Lw90;->c:Ljava/util/ArrayList;
+    invoke-static {v3}, Ljava/lang/Float;->floatToIntBits(F)I
 
-    invoke-virtual {p0, p1}, Ljava/util/ArrayList;->equals(Ljava/lang/Object;)Z
+    move-result v3
+
+    if-ne v1, v3, :cond_1
+
+    iget v1, p0, Lw90;->c:F
+
+    invoke-static {v1}, Ljava/lang/Float;->floatToIntBits(F)I
+
+    move-result v1
+
+    iget v3, p1, Lw90;->c:F
+
+    invoke-static {v3}, Ljava/lang/Float;->floatToIntBits(F)I
+
+    move-result v3
+
+    if-ne v1, v3, :cond_1
+
+    iget p0, p0, Lw90;->d:F
+
+    invoke-static {p0}, Ljava/lang/Float;->floatToIntBits(F)I
 
     move-result p0
 
-    if-eqz p0, :cond_1
+    iget p1, p1, Lw90;->d:F
 
-    :goto_0
-    const/4 p0, 0x1
+    invoke-static {p1}, Ljava/lang/Float;->floatToIntBits(F)I
 
-    return p0
+    move-result p1
+
+    if-ne p0, p1, :cond_1
+
+    return v0
 
     :cond_1
-    const/4 p0, 0x0
-
-    return p0
+    return v2
 .end method
 
 .method public final hashCode()I
     .locals 3
 
-    iget-object v0, p0, Lw90;->a:Lvce;
+    iget v0, p0, Lw90;->a:F
 
-    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
+    invoke-static {v0}, Ljava/lang/Float;->floatToIntBits(F)I
 
     move-result v0
 
@@ -120,9 +188,9 @@
 
     mul-int/2addr v0, v1
 
-    iget-object v2, p0, Lw90;->b:Lvce;
+    iget v2, p0, Lw90;->b:F
 
-    invoke-virtual {v2}, Ljava/lang/Object;->hashCode()I
+    invoke-static {v2}, Ljava/lang/Float;->floatToIntBits(F)I
 
     move-result v2
 
@@ -130,9 +198,19 @@
 
     mul-int/2addr v0, v1
 
-    iget-object p0, p0, Lw90;->c:Ljava/util/ArrayList;
+    iget v2, p0, Lw90;->c:F
 
-    invoke-virtual {p0}, Ljava/util/ArrayList;->hashCode()I
+    invoke-static {v2}, Ljava/lang/Float;->floatToIntBits(F)I
+
+    move-result v2
+
+    xor-int/2addr v0, v2
+
+    mul-int/2addr v0, v1
+
+    iget p0, p0, Lw90;->d:F
+
+    invoke-static {p0}, Ljava/lang/Float;->floatToIntBits(F)I
 
     move-result p0
 
@@ -146,29 +224,37 @@
 
     new-instance v0, Ljava/lang/StringBuilder;
 
-    const-string v1, "In{primarySurfaceEdge="
+    const-string v1, "ImmutableZoomState{zoomRatio="
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-object v1, p0, Lw90;->a:Lvce;
+    iget v1, p0, Lw90;->a:F
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
 
-    const-string v1, ", secondarySurfaceEdge="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lw90;->b:Lvce;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", outConfigs="
+    const-string v1, ", maxZoomRatio="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object p0, p0, Lw90;->c:Ljava/util/ArrayList;
+    iget v1, p0, Lw90;->b:F
 
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
+
+    const-string v1, ", minZoomRatio="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget v1, p0, Lw90;->c:F
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
+
+    const-string v1, ", linearZoom="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget p0, p0, Lw90;->d:F
+
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
 
     const-string p0, "}"
 

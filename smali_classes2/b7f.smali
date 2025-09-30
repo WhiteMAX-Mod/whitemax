@@ -3,22 +3,22 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lc6;
+.implements Lzb6;
 
 
 # instance fields
 .field public final synthetic a:I
 
-.field public final synthetic b:Lg7f;
+.field public final synthetic b:Lv7f;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lg7f;I)V
+.method public synthetic constructor <init>(Lv7f;I)V
     .locals 0
 
     iput p2, p0, Lb7f;->a:I
 
-    iput-object p1, p0, Lb7f;->b:Lg7f;
+    iput-object p1, p0, Lb7f;->b:Lv7f;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -27,48 +27,70 @@
 
 
 # virtual methods
-.method public final run()V
-    .locals 3
+.method public final invoke()Ljava/lang/Object;
+    .locals 1
 
     iget v0, p0, Lb7f;->a:I
 
-    const-string v1, "f7f"
-
-    iget-object p0, p0, Lb7f;->b:Lg7f;
+    iget-object p0, p0, Lb7f;->b:Lv7f;
 
     packed-switch v0, :pswitch_data_0
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    iget-object p0, p0, Lv7f;->a:Ljavax/net/ssl/SSLEngine;
 
-    const-string v2, "removeUploadFromRepository: finished for data="
-
-    invoke-direct {v0, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {p0}, Ljavax/net/ssl/SSLEngine;->getDelegatedTask()Ljava/lang/Runnable;
 
     move-result-object p0
 
-    invoke-static {v1, p0}, Lg47;->p(Ljava/lang/String;Ljava/lang/String;)V
+    if-eqz p0, :cond_0
 
-    return-void
+    invoke-interface {p0}, Ljava/lang/Runnable;->run()V
+
+    sget-object p0, Lylf;->a:Lylf;
+
+    goto :goto_0
+
+    :cond_0
+    const/4 p0, 0x0
+
+    :goto_0
+    return-object p0
 
     :pswitch_0
-    const-string v0, "getUploadFromRepository: upload not found in cache,  uploadData=%s"
+    iget-object p0, p0, Lv7f;->a:Ljavax/net/ssl/SSLEngine;
 
-    filled-new-array {p0}, [Ljava/lang/Object;
+    invoke-virtual {p0}, Ljavax/net/ssl/SSLEngine;->beginHandshake()V
+
+    sget-object p0, Lylf;->a:Lylf;
+
+    return-object p0
+
+    :pswitch_1
+    iget-object p0, p0, Lv7f;->a:Ljavax/net/ssl/SSLEngine;
+
+    invoke-virtual {p0}, Ljavax/net/ssl/SSLEngine;->getDelegatedTask()Ljava/lang/Runnable;
 
     move-result-object p0
 
-    invoke-static {v1, v0, p0}, Lg47;->o(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    if-eqz p0, :cond_1
 
-    return-void
+    invoke-interface {p0}, Ljava/lang/Runnable;->run()V
+
+    sget-object p0, Lylf;->a:Lylf;
+
+    goto :goto_1
+
+    :cond_1
+    const/4 p0, 0x0
+
+    :goto_1
+    return-object p0
 
     nop
 
     :pswitch_data_0
     .packed-switch 0x0
+        :pswitch_1
         :pswitch_0
     .end packed-switch
 .end method

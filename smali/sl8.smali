@@ -1,293 +1,93 @@
 .class public final Lsl8;
-.super Lqde;
+.super Landroid/content/BroadcastReceiver;
 .source "SourceFile"
-
-# interfaces
-.implements Ll66;
 
 
 # instance fields
-.field public synthetic X:Ljava/lang/Object;
+.field public final a:Landroid/content/Context;
 
-.field public final synthetic Y:Lone/me/chatscreen/mediabar/mediatypepicker/MediaTypePickerWidget;
+.field public b:Z
+
+.field public final c:Ljava/util/ArrayList;
 
 
 # direct methods
-.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/chatscreen/mediabar/mediatypepicker/MediaTypePickerWidget;)V
-    .locals 0
+.method public constructor <init>(Landroid/content/Context;)V
+    .locals 1
 
-    iput-object p2, p0, Lsl8;->Y:Lone/me/chatscreen/mediabar/mediatypepicker/MediaTypePickerWidget;
+    invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
 
-    const/4 p2, 0x2
+    const/4 v0, 0x1
 
-    invoke-direct {p0, p2, p1}, Lqde;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-boolean v0, p0, Lsl8;->b:Z
+
+    iput-object p1, p0, Lsl8;->a:Landroid/content/Context;
+
+    new-instance p1, Ljava/util/ArrayList;
+
+    invoke-direct {p1}, Ljava/util/ArrayList;-><init>()V
+
+    iput-object p1, p0, Lsl8;->c:Ljava/util/ArrayList;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final onReceive(Landroid/content/Context;Landroid/content/Intent;)V
+    .locals 1
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
-    invoke-virtual {p0, p1, p2}, Lsl8;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    move-result-object p1
+
+    const-string v0, "android.net.conn.CONNECTIVITY_CHANGE"
+
+    invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_0
+
+    const-string p1, "noConnectivity"
+
+    const/4 v0, 0x0
+
+    invoke-virtual {p2, p1, v0}, Landroid/content/Intent;->getBooleanExtra(Ljava/lang/String;Z)Z
+
+    move-result p1
+
+    xor-int/lit8 p1, p1, 0x1
+
+    iget-boolean p2, p0, Lsl8;->b:Z
+
+    if-eq p2, p1, :cond_0
+
+    iput-boolean p1, p0, Lsl8;->b:Z
+
+    iget-object p0, p0, Lsl8;->c:Ljava/util/ArrayList;
+
+    invoke-virtual {p0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
     move-result-object p0
 
-    check-cast p0, Lsl8;
-
-    sget-object p1, Le5f;->a:Le5f;
-
-    invoke-virtual {p0, p1}, Lsl8;->o(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p1
-.end method
-
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 1
-
-    new-instance v0, Lsl8;
-
-    iget-object p0, p0, Lsl8;->Y:Lone/me/chatscreen/mediabar/mediatypepicker/MediaTypePickerWidget;
-
-    invoke-direct {v0, p2, p0}, Lsl8;-><init>(Lkotlin/coroutines/Continuation;Lone/me/chatscreen/mediabar/mediatypepicker/MediaTypePickerWidget;)V
-
-    iput-object p1, v0, Lsl8;->X:Ljava/lang/Object;
-
-    return-object v0
-.end method
-
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 11
-
-    invoke-static {p1}, Lsgg;->Z(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Lsl8;->X:Ljava/lang/Object;
-
-    check-cast p1, Lkl9;
-
-    sget-object v0, Lzk8;->b:Lzk8;
-
-    invoke-static {p1, v0}, Lxq7;->d(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v0
-
-    const/4 v1, 0x1
-
-    const/4 v2, 0x0
-
-    iget-object p0, p0, Lsl8;->Y:Lone/me/chatscreen/mediabar/mediatypepicker/MediaTypePickerWidget;
-
-    if-eqz v0, :cond_0
-
-    sget-object p1, Lone/me/chatscreen/mediabar/mediatypepicker/MediaTypePickerWidget;->Y:[Lbc7;
-
-    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
-
-    move-result-object p1
-
-    iget-object v0, p0, Lone/me/chatscreen/mediabar/mediatypepicker/MediaTypePickerWidget;->a:Lvr;
-
-    sget-object v3, Lone/me/chatscreen/mediabar/mediatypepicker/MediaTypePickerWidget;->Y:[Lbc7;
-
-    aget-object v3, v3, v2
-
-    invoke-virtual {v0, p0}, Lvr;->a(Lone/me/sdk/arch/Widget;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/lang/Number;
-
-    invoke-virtual {v0}, Ljava/lang/Number;->longValue()J
-
-    move-result-wide v3
-
-    sget v0, Lru/ok/messages/location/ActLocationMap;->Q0:I
-
-    new-instance v0, Landroid/content/Intent;
-
-    const-class v5, Lru/ok/messages/location/ActLocationMap;
-
-    invoke-direct {v0, p1, v5}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
-
-    const-string p1, "ru.ok.tamtam.extra.CHAT_ID"
-
-    invoke-virtual {v0, p1, v3, v4}, Landroid/content/Intent;->putExtra(Ljava/lang/String;J)Landroid/content/Intent;
-
-    const-string p1, "map:DISABLE_LIVE"
-
-    invoke-virtual {v0, p1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
-
-    const-string p1, "map:REGULAR_SENDING"
-
-    invoke-virtual {v0, p1, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
-
-    const/16 p1, 0x173
-
-    invoke-virtual {p0, v0, p1}, Lou3;->startActivityForResult(Landroid/content/Intent;I)V
-
-    goto/16 :goto_2
-
-    :cond_0
-    sget-object v0, Lal8;->b:Lal8;
-
-    invoke-static {p1, v0}, Lxq7;->d(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_4
-
-    sget-object p1, Lone/me/chatscreen/mediabar/mediatypepicker/MediaTypePickerWidget;->Y:[Lbc7;
-
-    sget-object p1, Lone/me/sdk/bottomsheet/BottomSheetWidget;->t0:[Lbc7;
-
-    sget p1, Ll6a;->H:I
-
-    const/4 v0, 0x6
-
-    const/4 v3, 0x0
-
-    invoke-static {p1, v0, v3}, Lpg0;->d(IILandroid/os/Bundle;)Lgg3;
-
-    move-result-object p1
-
-    new-instance v0, Lig3;
-
-    sget v4, Ll6a;->G:I
-
-    new-instance v5, Lhoe;
-
-    invoke-direct {v5, v4}, Lhoe;-><init>(I)V
-
-    const/4 v4, 0x3
-
-    const/16 v6, 0x18
-
-    invoke-direct {v0, v1, v5, v4, v6}, Lig3;-><init>(ILmoe;II)V
-
-    filled-new-array {v0}, [Lig3;
-
-    move-result-object v0
-
-    invoke-virtual {p1, v0}, Lgg3;->a([Lig3;)V
-
-    new-instance v0, Lig3;
-
-    sget v5, Ll6a;->F:I
-
-    new-instance v7, Lhoe;
-
-    invoke-direct {v7, v5}, Lhoe;-><init>(I)V
-
-    const/4 v5, 0x2
-
-    invoke-direct {v0, v5, v7, v4, v6}, Lig3;-><init>(ILmoe;II)V
-
-    filled-new-array {v0}, [Lig3;
-
-    move-result-object v0
-
-    invoke-virtual {p1, v0}, Lgg3;->a([Lig3;)V
-
-    new-instance v0, Lig3;
-
-    sget v5, Ll6a;->E:I
-
-    new-instance v7, Lhoe;
-
-    invoke-direct {v7, v5}, Lhoe;-><init>(I)V
-
-    invoke-direct {v0, v4, v7, v1, v6}, Lig3;-><init>(ILmoe;II)V
-
-    filled-new-array {v0}, [Lig3;
-
-    move-result-object v0
-
-    invoke-virtual {p1, v0}, Lgg3;->a([Lig3;)V
-
-    invoke-virtual {p1}, Lgg3;->e()Lone/me/sdk/bottomsheet/ConfirmationBottomSheet;
-
-    move-result-object v5
-
-    invoke-virtual {v5, p0}, Lou3;->setTargetController(Lou3;)V
-
-    move-object p1, p0
-
     :goto_0
-    invoke-virtual {p1}, Lou3;->getParentController()Lou3;
+    invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
 
-    move-result-object v0
+    move-result p1
 
-    if-eqz v0, :cond_1
+    if-eqz p1, :cond_0
 
-    invoke-virtual {p1}, Lou3;->getParentController()Lou3;
+    invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object p1
+
+    check-cast p1, Lvl8;
+
+    invoke-virtual {p1}, Lvl8;->c()V
 
     goto :goto_0
 
-    :cond_1
-    instance-of v0, p1, Limc;
-
-    if-eqz v0, :cond_2
-
-    check-cast p1, Limc;
-
-    goto :goto_1
-
-    :cond_2
-    move-object p1, v3
-
-    :goto_1
-    if-eqz p1, :cond_3
-
-    invoke-interface {p1}, Limc;->W()Lcmc;
-
-    move-result-object v3
-
-    :cond_3
-    invoke-virtual {v5, p0}, Lone/me/sdk/bottomsheet/BottomSheetWidget;->C0(Lone/me/sdk/arch/Widget;)V
-
-    if-eqz v3, :cond_5
-
-    new-instance v4, Lfmc;
-
-    const/4 v9, 0x0
-
-    const/4 v10, -0x1
-
-    const/4 v6, 0x0
-
-    const/4 v7, 0x0
-
-    const/4 v8, 0x0
-
-    invoke-direct/range {v4 .. v10}, Lfmc;-><init>(Lou3;Ljava/lang/String;Ltu3;Ltu3;ZI)V
-
-    const-string p0, "BottomSheetWidget"
-
-    invoke-static {v2, v4, v1, p0}, Lpg0;->m(ZLfmc;ZLjava/lang/String;)V
-
-    invoke-virtual {v3, v4}, Lcmc;->H(Lfmc;)V
-
-    goto :goto_2
-
-    :cond_4
-    instance-of p0, p1, Lp64;
-
-    if-eqz p0, :cond_5
-
-    sget-object p0, Lln2;->c:Lln2;
-
-    check-cast p1, Lp64;
-
-    invoke-virtual {p0, p1}, Lu2;->F0(Lp64;)V
-
-    :cond_5
-    :goto_2
-    sget-object p0, Le5f;->a:Le5f;
-
-    return-object p0
+    :cond_0
+    return-void
 .end method

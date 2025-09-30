@@ -1,73 +1,131 @@
 .class public final Lcha;
-.super Lbu3;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public X:Ljava/io/File;
+.field public final a:Liic;
 
-.field public Y:Lode;
-
-.field public Z:Ljava/io/File;
-
-.field public o:Ljava/lang/Object;
-
-.field public o0:Ljava/lang/Object;
-
-.field public p0:Laha;
-
-.field public q0:Z
-
-.field public synthetic r0:Ljava/lang/Object;
-
-.field public final synthetic s0:Liha;
-
-.field public t0:I
+.field public final b:Ljava/util/WeakHashMap;
 
 
 # direct methods
-.method public constructor <init>(Liha;Lbu3;)V
+.method public constructor <init>(Liic;)V
     .locals 0
 
-    iput-object p1, p0, Lcha;->s0:Liha;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, p2}, Lbu3;-><init>(Lkotlin/coroutines/Continuation;)V
+    iput-object p1, p0, Lcha;->a:Liic;
+
+    new-instance p1, Ljava/util/WeakHashMap;
+
+    invoke-direct {p1}, Ljava/util/WeakHashMap;-><init>()V
+
+    iput-object p1, p0, Lcha;->b:Ljava/util/WeakHashMap;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 7
+.method public final a(Landroid/content/Context;Ljx3;)V
+    .locals 4
 
-    iput-object p1, p0, Lcha;->r0:Ljava/lang/Object;
+    instance-of v0, p2, Lbha;
 
-    iget p1, p0, Lcha;->t0:I
+    if-eqz v0, :cond_0
 
-    const/high16 v0, -0x80000000
+    move-object v0, p2
 
-    or-int/2addr p1, v0
+    check-cast v0, Lbha;
 
-    iput p1, p0, Lcha;->t0:I
+    iget v1, v0, Lbha;->Y:I
 
-    const/4 v4, 0x0
+    const/high16 v2, -0x80000000
 
-    const/4 v5, 0x0
+    and-int v3, v1, v2
 
-    iget-object v0, p0, Lcha;->s0:Liha;
+    if-eqz v3, :cond_0
 
-    const/4 v1, 0x0
+    sub-int/2addr v1, v2
 
-    const/4 v2, 0x0
+    iput v1, v0, Lbha;->Y:I
 
-    const/4 v3, 0x0
+    goto :goto_0
 
-    move-object v6, p0
+    :cond_0
+    new-instance v0, Lbha;
 
-    invoke-virtual/range {v0 .. v6}, Liha;->b(Ljava/lang/String;Ljava/io/File;Lode;Ljava/lang/String;ZLbu3;)Ljava/lang/Object;
+    invoke-direct {v0, p0, p2}, Lbha;-><init>(Lcha;Ljx3;)V
+
+    :goto_0
+    iget-object p2, v0, Lbha;->o:Ljava/lang/Object;
+
+    iget v1, v0, Lbha;->Y:I
+
+    const/4 v2, 0x1
+
+    if-eqz v1, :cond_2
+
+    if-eq v1, v2, :cond_1
+
+    new-instance p0, Ljava/lang/IllegalStateException;
+
+    const-string p1, "call to \'resume\' before \'invoke\' with coroutine"
+
+    invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p0
+
+    :cond_1
+    invoke-static {p2}, Lqe5;->V(Ljava/lang/Object;)V
+
+    goto :goto_1
+
+    :cond_2
+    invoke-static {p2}, Lqe5;->V(Ljava/lang/Object;)V
+
+    invoke-virtual {p1}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
+
+    move-result-object p1
+
+    check-cast p1, Landroid/app/Application;
+
+    new-instance p2, Ljj5;
+
+    const/4 v1, 0x1
+
+    invoke-direct {p2, v1, p0}, Ljj5;-><init>(ILjava/lang/Object;)V
+
+    invoke-virtual {p1, p2}, Landroid/app/Application;->registerActivityLifecycleCallbacks(Landroid/app/Application$ActivityLifecycleCallbacks;)V
+
+    new-instance p1, Luv;
+
+    const/16 p2, 0x8
+
+    invoke-direct {p1, p2, p0}, Luv;-><init>(ILjava/lang/Object;)V
+
+    iput v2, v0, Lbha;->Y:I
+
+    iget-object p0, p0, Lcha;->a:Liic;
+
+    iget-object p0, p0, Liic;->a:Lrce;
+
+    invoke-interface {p0, p1, v0}, Lis5;->d(Lks5;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
     move-result-object p0
 
-    return-object p0
+    sget-object p1, Lz04;->a:Lz04;
+
+    if-ne p0, p1, :cond_3
+
+    return-void
+
+    :cond_3
+    :goto_1
+    new-instance p0, Lkotlin/KotlinNothingValueException;
+
+    invoke-direct {p0}, Lkotlin/KotlinNothingValueException;-><init>()V
+
+    throw p0
 .end method

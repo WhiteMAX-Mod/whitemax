@@ -2,174 +2,122 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lymc;
-
 
 # instance fields
-.field public final a:Lp8d;
+.field public final a:J
 
-.field public b:Lu24;
+.field public final b:I
 
 
 # direct methods
-.method public constructor <init>(Lsc6;Lp8d;)V
+.method public constructor <init>(JI)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p2, p0, Lgi;->a:Lp8d;
+    iput-wide p1, p0, Lgi;->a:J
+
+    iput p3, p0, Lgi;->b:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Lu24;[BI)V
-    .locals 4
-
-    invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
-
-    invoke-static {p2}, Ljava/nio/ByteBuffer;->wrap([B)Ljava/nio/ByteBuffer;
-
-    move-result-object p1
-
-    invoke-virtual {p1}, Ljava/nio/ByteBuffer;->get()B
-
-    move-result p3
-
-    invoke-virtual {p1}, Ljava/nio/ByteBuffer;->getShort()S
-
-    invoke-virtual {p1}, Ljava/nio/ByteBuffer;->getInt()I
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 7
 
     const/4 v0, 0x1
 
-    if-ne p3, v0, :cond_0
+    if-ne p0, p1, :cond_0
 
-    invoke-virtual {p1}, Ljava/nio/ByteBuffer;->getShort()S
-
-    goto :goto_0
+    return v0
 
     :cond_0
-    invoke-virtual {p1}, Ljava/nio/ByteBuffer;->getInt()I
-
-    :goto_0
-    invoke-virtual {p1}, Ljava/nio/ByteBuffer;->get()B
-
-    move-result v1
-
-    invoke-virtual {p1}, Ljava/nio/ByteBuffer;->slice()Ljava/nio/ByteBuffer;
-
-    move-result-object p1
-
-    sget-object v2, Ljava/nio/ByteOrder;->LITTLE_ENDIAN:Ljava/nio/ByteOrder;
-
-    invoke-virtual {p1, v2}, Ljava/nio/ByteBuffer;->order(Ljava/nio/ByteOrder;)Ljava/nio/ByteBuffer;
+    instance-of v1, p1, Lgi;
 
     const/4 v2, 0x0
 
-    if-ne p3, v0, :cond_1
+    if-nez v1, :cond_1
 
-    invoke-virtual {p1}, Ljava/nio/Buffer;->remaining()I
-
-    move-result p3
-
-    div-int/lit8 p3, p3, 0x4
-
-    new-array v0, p3, [F
-
-    :goto_1
-    if-ge v2, p3, :cond_4
-
-    invoke-virtual {p1}, Ljava/nio/ByteBuffer;->getFloat()F
-
-    move-result v1
-
-    aput v1, v0, v2
-
-    add-int/lit8 v2, v2, 0x1
-
-    goto :goto_1
+    return v2
 
     :cond_1
-    if-eqz v1, :cond_3
+    check-cast p1, Lgi;
 
-    if-eq v1, v0, :cond_4
+    iget-wide v3, p0, Lgi;->a:J
 
-    const/4 p3, 0x2
+    iget-wide v5, p1, Lgi;->a:J
 
-    if-eq v1, p3, :cond_2
+    cmp-long v1, v3, v5
 
-    goto :goto_3
+    if-eqz v1, :cond_2
+
+    return v2
 
     :cond_2
-    invoke-virtual {p1}, Ljava/nio/ByteBuffer;->get()B
+    iget p0, p0, Lgi;->b:I
 
-    move-result p3
+    iget p1, p1, Lgi;->b:I
 
-    and-int/lit16 p3, p3, 0xff
+    if-eq p0, p1, :cond_3
 
-    invoke-virtual {p1}, Ljava/nio/ByteBuffer;->get()B
+    return v2
+
+    :cond_3
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 2
+
+    iget-wide v0, p0, Lgi;->a:J
+
+    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
 
     move-result v0
 
-    and-int/lit16 v0, v0, 0xff
+    mul-int/lit8 v0, v0, 0x1f
 
-    invoke-virtual {p1}, Ljava/nio/ByteBuffer;->get()B
+    iget p0, p0, Lgi;->b:I
 
-    move-result p1
+    invoke-static {p0}, Ljava/lang/Integer;->hashCode(I)I
 
-    and-int/lit16 p1, p1, 0xff
+    move-result p0
 
-    invoke-static {p3, v0, p1}, Landroid/graphics/Color;->rgb(III)I
+    add-int/2addr p0, v0
 
-    goto :goto_3
+    return p0
+.end method
 
-    :cond_3
-    invoke-virtual {p1}, Ljava/nio/Buffer;->remaining()I
+.method public final toString()Ljava/lang/String;
+    .locals 3
 
-    move-result p3
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    new-array v0, p3, [F
+    const-string v1, "Key(animojiId="
 
-    :goto_2
-    if-ge v2, p3, :cond_4
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {p1}, Ljava/nio/ByteBuffer;->get()B
+    iget-wide v1, p0, Lgi;->a:J
 
-    move-result v1
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
-    and-int/lit16 v1, v1, 0xff
+    const-string v1, ", size="
 
-    int-to-float v1, v1
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const v3, 0x3b808081
+    iget p0, p0, Lgi;->b:I
 
-    mul-float/2addr v1, v3
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    aput v1, v0, v2
+    const-string p0, ")"
 
-    add-int/lit8 v2, v2, 0x1
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    goto :goto_2
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    :cond_4
-    :goto_3
-    iget-object p0, p0, Lgi;->a:Lp8d;
+    move-result-object p0
 
-    iget-object p1, p0, Lp8d;->Y:Ljava/lang/Object;
-
-    check-cast p1, Ljava/util/concurrent/atomic/AtomicInteger;
-
-    invoke-virtual {p1}, Ljava/util/concurrent/atomic/AtomicInteger;->incrementAndGet()I
-
-    array-length p1, p2
-
-    iget-object p0, p0, Lp8d;->X:Ljava/lang/Object;
-
-    check-cast p0, Ljava/util/concurrent/atomic/AtomicInteger;
-
-    invoke-virtual {p0, p1}, Ljava/util/concurrent/atomic/AtomicInteger;->addAndGet(I)I
-
-    return-void
+    return-object p0
 .end method

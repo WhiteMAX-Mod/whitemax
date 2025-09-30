@@ -1,190 +1,401 @@
-.class public abstract Lmf7;
+.class public final Lmf7;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lz57;
+
+
+# static fields
+.field public static final synthetic b:Ljava/util/concurrent/atomic/AtomicIntegerFieldUpdater;
+
+.field public static final synthetic c:Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;
+
+.field public static final synthetic o:Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;
+
+
+# instance fields
+.field private volatile synthetic _exceptionsHolder$volatile:Ljava/lang/Object;
+
+.field private volatile synthetic _isCompleting$volatile:I
+
+.field private volatile synthetic _rootCause$volatile:Ljava/lang/Object;
+
+.field public final a:Ldx9;
+
 
 # direct methods
-.method public static a(Landroid/os/Parcelable;Landroid/os/Parcelable$Creator;)Landroid/os/Parcelable;
-    .locals 2
+.method static constructor <clinit>()V
+    .locals 3
 
-    if-nez p0, :cond_0
+    const-string v0, "_isCompleting$volatile"
 
-    const/4 p0, 0x0
+    const-class v1, Lmf7;
 
-    return-object p0
-
-    :cond_0
-    invoke-static {p0}, Lmf7;->b(Landroid/os/Parcelable;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, Landroid/os/Parcelable;
-
-    invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
+    invoke-static {v1, v0}, Ljava/util/concurrent/atomic/AtomicIntegerFieldUpdater;->newUpdater(Ljava/lang/Class;Ljava/lang/String;)Ljava/util/concurrent/atomic/AtomicIntegerFieldUpdater;
 
     move-result-object v0
 
-    const/4 v1, 0x0
+    sput-object v0, Lmf7;->b:Ljava/util/concurrent/atomic/AtomicIntegerFieldUpdater;
 
-    :try_start_0
-    invoke-interface {p0, v0, v1}, Landroid/os/Parcelable;->writeToParcel(Landroid/os/Parcel;I)V
+    const-string v0, "_rootCause$volatile"
 
-    invoke-virtual {v0, v1}, Landroid/os/Parcel;->setDataPosition(I)V
+    const-class v2, Ljava/lang/Object;
 
-    invoke-interface {p1, v0}, Landroid/os/Parcelable$Creator;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
+    invoke-static {v1, v2, v0}, Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;->newUpdater(Ljava/lang/Class;Ljava/lang/Class;Ljava/lang/String;)Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;
 
-    move-result-object p0
+    move-result-object v0
 
-    check-cast p0, Landroid/os/Parcelable;
+    sput-object v0, Lmf7;->c:Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;
 
-    invoke-static {p0}, Lmf7;->b(Landroid/os/Parcelable;)Ljava/lang/Object;
+    const-string v0, "_exceptionsHolder$volatile"
 
-    move-result-object p0
+    invoke-static {v1, v2, v0}, Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;->newUpdater(Ljava/lang/Class;Ljava/lang/Class;Ljava/lang/String;)Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;
 
-    check-cast p0, Landroid/os/Parcelable;
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    move-result-object v0
 
-    invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
+    sput-object v0, Lmf7;->o:Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;
 
-    return-object p0
+    return-void
+.end method
 
-    :catchall_0
-    move-exception p0
+.method public constructor <init>(Ldx9;Ljava/lang/Throwable;)V
+    .locals 0
 
-    invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lmf7;->a:Ldx9;
+
+    const/4 p1, 0x0
+
+    iput p1, p0, Lmf7;->_isCompleting$volatile:I
+
+    iput-object p2, p0, Lmf7;->_rootCause$volatile:Ljava/lang/Object;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final a(Ljava/lang/Throwable;)V
+    .locals 4
+
+    invoke-virtual {p0}, Lmf7;->c()Ljava/lang/Throwable;
+
+    move-result-object v0
+
+    if-nez v0, :cond_0
+
+    sget-object v0, Lmf7;->c:Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;
+
+    invoke-virtual {v0, p0, p1}, Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;->set(Ljava/lang/Object;Ljava/lang/Object;)V
+
+    return-void
+
+    :cond_0
+    if-ne p1, v0, :cond_1
+
+    goto :goto_0
+
+    :cond_1
+    sget-object v0, Lmf7;->o:Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;
+
+    invoke-virtual {v0, p0}, Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v1
+
+    if-nez v1, :cond_2
+
+    invoke-virtual {v0, p0, p1}, Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;->set(Ljava/lang/Object;Ljava/lang/Object;)V
+
+    return-void
+
+    :cond_2
+    instance-of v2, v1, Ljava/lang/Throwable;
+
+    if-eqz v2, :cond_4
+
+    if-ne p1, v1, :cond_3
+
+    :goto_0
+    return-void
+
+    :cond_3
+    new-instance v2, Ljava/util/ArrayList;
+
+    const/4 v3, 0x4
+
+    invoke-direct {v2, v3}, Ljava/util/ArrayList;-><init>(I)V
+
+    invoke-virtual {v2, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    invoke-virtual {v2, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    invoke-virtual {v0, p0, v2}, Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;->set(Ljava/lang/Object;Ljava/lang/Object;)V
+
+    return-void
+
+    :cond_4
+    instance-of p0, v1, Ljava/util/ArrayList;
+
+    if-eqz p0, :cond_5
+
+    check-cast v1, Ljava/util/ArrayList;
+
+    invoke-virtual {v1, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    return-void
+
+    :cond_5
+    new-instance p0, Ljava/lang/IllegalStateException;
+
+    new-instance p1, Ljava/lang/StringBuilder;
+
+    const-string v0, "State is "
+
+    invoke-direct {p1, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {p1, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Ljava/lang/Object;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
     throw p0
 .end method
 
-.method public static b(Landroid/os/Parcelable;)Ljava/lang/Object;
-    .locals 2
+.method public final b()Ldx9;
+    .locals 0
 
-    sget v0, Lpaf;->a:I
+    iget-object p0, p0, Lmf7;->a:Ldx9;
 
-    const/16 v1, 0x15
+    return-object p0
+.end method
 
-    if-lt v0, v1, :cond_2
+.method public final c()Ljava/lang/Throwable;
+    .locals 1
 
-    const/16 v1, 0x17
+    sget-object v0, Lmf7;->c:Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;
 
-    if-lt v0, v1, :cond_0
+    invoke-virtual {v0, p0}, Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p0
+
+    check-cast p0, Ljava/lang/Throwable;
+
+    return-object p0
+.end method
+
+.method public final d()Z
+    .locals 0
+
+    invoke-virtual {p0}, Lmf7;->c()Ljava/lang/Throwable;
+
+    move-result-object p0
+
+    if-eqz p0, :cond_0
+
+    const/4 p0, 0x1
+
+    return p0
+
+    :cond_0
+    const/4 p0, 0x0
+
+    return p0
+.end method
+
+.method public final e(Ljava/lang/Throwable;)Ljava/util/ArrayList;
+    .locals 4
+
+    sget-object v0, Lmf7;->o:Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;
+
+    invoke-virtual {v0, p0}, Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v1
+
+    const/4 v2, 0x4
+
+    if-nez v1, :cond_0
+
+    new-instance v1, Ljava/util/ArrayList;
+
+    invoke-direct {v1, v2}, Ljava/util/ArrayList;-><init>(I)V
 
     goto :goto_0
 
     :cond_0
-    instance-of v0, p0, Landroid/support/v4/media/MediaBrowserCompat$MediaItem;
+    instance-of v3, v1, Ljava/lang/Throwable;
 
-    if-eqz v0, :cond_1
+    if-eqz v3, :cond_1
 
-    check-cast p0, Landroid/support/v4/media/MediaBrowserCompat$MediaItem;
+    new-instance v3, Ljava/util/ArrayList;
 
-    new-instance v0, Landroid/support/v4/media/MediaBrowserCompat$MediaItem;
+    invoke-direct {v3, v2}, Ljava/util/ArrayList;-><init>(I)V
 
-    invoke-virtual {p0}, Landroid/support/v4/media/MediaBrowserCompat$MediaItem;->getDescription()Landroid/support/v4/media/MediaDescriptionCompat;
+    invoke-virtual {v3, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    move-result-object v1
+    move-object v1, v3
 
-    invoke-static {v1}, Lmf7;->c(Landroid/support/v4/media/MediaDescriptionCompat;)Landroid/support/v4/media/MediaDescriptionCompat;
-
-    move-result-object v1
-
-    invoke-virtual {p0}, Landroid/support/v4/media/MediaBrowserCompat$MediaItem;->getFlags()I
-
-    move-result p0
-
-    invoke-direct {v0, v1, p0}, Landroid/support/v4/media/MediaBrowserCompat$MediaItem;-><init>(Landroid/support/v4/media/MediaDescriptionCompat;I)V
-
-    return-object v0
+    goto :goto_0
 
     :cond_1
-    instance-of v0, p0, Landroid/support/v4/media/MediaDescriptionCompat;
+    instance-of v2, v1, Ljava/util/ArrayList;
 
-    if-eqz v0, :cond_2
+    if-eqz v2, :cond_4
 
-    check-cast p0, Landroid/support/v4/media/MediaDescriptionCompat;
+    check-cast v1, Ljava/util/ArrayList;
 
-    invoke-static {p0}, Lmf7;->c(Landroid/support/v4/media/MediaDescriptionCompat;)Landroid/support/v4/media/MediaDescriptionCompat;
+    :goto_0
+    invoke-virtual {p0}, Lmf7;->c()Ljava/lang/Throwable;
 
-    move-result-object p0
+    move-result-object v2
+
+    if-eqz v2, :cond_2
+
+    const/4 v3, 0x0
+
+    invoke-virtual {v1, v3, v2}, Ljava/util/ArrayList;->add(ILjava/lang/Object;)V
 
     :cond_2
-    :goto_0
-    return-object p0
+    if-eqz p1, :cond_3
+
+    invoke-virtual {p1, v2}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+
+    move-result v2
+
+    if-nez v2, :cond_3
+
+    invoke-virtual {v1, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    :cond_3
+    sget-object p1, Ltf7;->e:Lkotlinx/coroutines/internal/Symbol;
+
+    invoke-virtual {v0, p0, p1}, Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;->set(Ljava/lang/Object;Ljava/lang/Object;)V
+
+    return-object v1
+
+    :cond_4
+    new-instance p0, Ljava/lang/IllegalStateException;
+
+    new-instance p1, Ljava/lang/StringBuilder;
+
+    const-string v0, "State is "
+
+    invoke-direct {p1, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {p1, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Ljava/lang/Object;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p0
 .end method
 
-.method public static c(Landroid/support/v4/media/MediaDescriptionCompat;)Landroid/support/v4/media/MediaDescriptionCompat;
+.method public final isActive()Z
+    .locals 0
+
+    invoke-virtual {p0}, Lmf7;->c()Ljava/lang/Throwable;
+
+    move-result-object p0
+
+    if-nez p0, :cond_0
+
+    const/4 p0, 0x1
+
+    return p0
+
+    :cond_0
+    const/4 p0, 0x0
+
+    return p0
+.end method
+
+.method public final toString()Ljava/lang/String;
     .locals 2
 
-    new-instance v0, Landroid/support/v4/media/MediaDescriptionCompat$Builder;
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    invoke-direct {v0}, Landroid/support/v4/media/MediaDescriptionCompat$Builder;-><init>()V
+    const-string v1, "Finishing[cancelling="
 
-    invoke-virtual {p0}, Landroid/support/v4/media/MediaDescriptionCompat;->getMediaId()Ljava/lang/String;
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    move-result-object v1
+    invoke-virtual {p0}, Lmf7;->d()Z
 
-    invoke-virtual {v0, v1}, Landroid/support/v4/media/MediaDescriptionCompat$Builder;->setMediaId(Ljava/lang/String;)Landroid/support/v4/media/MediaDescriptionCompat$Builder;
+    move-result v1
 
-    move-result-object v0
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
-    invoke-virtual {p0}, Landroid/support/v4/media/MediaDescriptionCompat;->getTitle()Ljava/lang/CharSequence;
+    const-string v1, ", completing="
 
-    move-result-object v1
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0, v1}, Landroid/support/v4/media/MediaDescriptionCompat$Builder;->setTitle(Ljava/lang/CharSequence;)Landroid/support/v4/media/MediaDescriptionCompat$Builder;
+    sget-object v1, Lmf7;->b:Ljava/util/concurrent/atomic/AtomicIntegerFieldUpdater;
 
-    move-result-object v0
+    invoke-virtual {v1, p0}, Ljava/util/concurrent/atomic/AtomicIntegerFieldUpdater;->get(Ljava/lang/Object;)I
 
-    invoke-virtual {p0}, Landroid/support/v4/media/MediaDescriptionCompat;->getSubtitle()Ljava/lang/CharSequence;
+    move-result v1
 
-    move-result-object v1
+    if-eqz v1, :cond_0
 
-    invoke-virtual {v0, v1}, Landroid/support/v4/media/MediaDescriptionCompat$Builder;->setSubtitle(Ljava/lang/CharSequence;)Landroid/support/v4/media/MediaDescriptionCompat$Builder;
+    const/4 v1, 0x1
 
-    move-result-object v0
+    goto :goto_0
 
-    invoke-virtual {p0}, Landroid/support/v4/media/MediaDescriptionCompat;->getDescription()Ljava/lang/CharSequence;
+    :cond_0
+    const/4 v1, 0x0
 
-    move-result-object v1
+    :goto_0
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0, v1}, Landroid/support/v4/media/MediaDescriptionCompat$Builder;->setDescription(Ljava/lang/CharSequence;)Landroid/support/v4/media/MediaDescriptionCompat$Builder;
+    const-string v1, ", rootCause="
 
-    move-result-object v0
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {p0}, Landroid/support/v4/media/MediaDescriptionCompat;->getIconBitmap()Landroid/graphics/Bitmap;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Landroid/support/v4/media/MediaDescriptionCompat$Builder;->setIconBitmap(Landroid/graphics/Bitmap;)Landroid/support/v4/media/MediaDescriptionCompat$Builder;
-
-    move-result-object v0
-
-    invoke-virtual {p0}, Landroid/support/v4/media/MediaDescriptionCompat;->getIconUri()Landroid/net/Uri;
+    invoke-virtual {p0}, Lmf7;->c()Ljava/lang/Throwable;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Landroid/support/v4/media/MediaDescriptionCompat$Builder;->setIconUri(Landroid/net/Uri;)Landroid/support/v4/media/MediaDescriptionCompat$Builder;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    move-result-object v0
+    const-string v1, ", exceptions="
 
-    invoke-virtual {p0}, Landroid/support/v4/media/MediaDescriptionCompat;->getExtras()Landroid/os/Bundle;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    sget-object v1, Lmf7;->o:Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;
+
+    invoke-virtual {v1, p0}, Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Landroid/support/v4/media/MediaDescriptionCompat$Builder;->setExtras(Landroid/os/Bundle;)Landroid/support/v4/media/MediaDescriptionCompat$Builder;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    move-result-object v0
+    const-string v1, ", list="
 
-    invoke-virtual {p0}, Landroid/support/v4/media/MediaDescriptionCompat;->getMediaUri()Landroid/net/Uri;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object p0
+    iget-object p0, p0, Lmf7;->a:Ldx9;
 
-    invoke-virtual {v0, p0}, Landroid/support/v4/media/MediaDescriptionCompat$Builder;->setMediaUri(Landroid/net/Uri;)Landroid/support/v4/media/MediaDescriptionCompat$Builder;
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    move-result-object p0
+    const/16 p0, 0x5d
 
-    invoke-virtual {p0}, Landroid/support/v4/media/MediaDescriptionCompat$Builder;->build()Landroid/support/v4/media/MediaDescriptionCompat;
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p0
 

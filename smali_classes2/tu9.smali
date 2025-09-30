@@ -1,59 +1,83 @@
 .class public final Ltu9;
-.super Lbu3;
+.super Lto7;
 .source "SourceFile"
 
 
 # instance fields
-.field public X:J
-
-.field public synthetic Y:Ljava/lang/Object;
-
-.field public final synthetic Z:Lxu9;
-
-.field public o:Ly42;
-
-.field public o0:I
+.field public final synthetic p:I
 
 
 # direct methods
-.method public constructor <init>(Lxu9;Lbu3;)V
+.method public synthetic constructor <init>(Landroid/content/Context;I)V
     .locals 0
 
-    iput-object p1, p0, Ltu9;->Z:Lxu9;
+    iput p2, p0, Ltu9;->p:I
 
-    invoke-direct {p0, p2}, Lbu3;-><init>(Lkotlin/coroutines/Continuation;)V
+    invoke-direct {p0, p1}, Lto7;-><init>(Landroid/content/Context;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 7
+.method public d(Landroid/util/DisplayMetrics;)F
+    .locals 1
 
-    iput-object p1, p0, Ltu9;->Y:Ljava/lang/Object;
+    iget v0, p0, Ltu9;->p:I
 
-    iget p1, p0, Ltu9;->o0:I
+    packed-switch v0, :pswitch_data_0
 
-    const/high16 v0, -0x80000000
+    invoke-super {p0, p1}, Lto7;->d(Landroid/util/DisplayMetrics;)F
 
-    or-int/2addr p1, v0
+    move-result p0
 
-    iput p1, p0, Ltu9;->o0:I
+    return p0
 
-    const-wide/16 v2, 0x0
+    :pswitch_0
+    iget p0, p1, Landroid/util/DisplayMetrics;->densityDpi:I
 
-    const-wide/16 v4, 0x0
+    int-to-float p0, p0
 
-    iget-object v0, p0, Ltu9;->Z:Lxu9;
+    const/high16 p1, 0x42c80000    # 100.0f
 
-    const/4 v1, 0x0
+    div-float/2addr p1, p0
 
-    move-object v6, p0
+    return p1
 
-    invoke-virtual/range {v0 .. v6}, Lxu9;->D(Ly42;JJLbu3;)Ljava/lang/Object;
+    nop
 
-    move-result-object p0
+    :pswitch_data_0
+    .packed-switch 0x2
+        :pswitch_0
+    .end packed-switch
+.end method
 
-    return-object p0
+.method public h()I
+    .locals 1
+
+    iget v0, p0, Ltu9;->p:I
+
+    packed-switch v0, :pswitch_data_0
+
+    invoke-super {p0}, Lto7;->h()I
+
+    move-result p0
+
+    return p0
+
+    :pswitch_0
+    const/4 p0, -0x1
+
+    return p0
+
+    :pswitch_1
+    const/4 p0, -0x1
+
+    return p0
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

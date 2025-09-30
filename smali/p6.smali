@@ -3,4 +3,4 @@
 .source "SourceFile"
 
 # interfaces
-.implements Li7;
+.implements Lk7;

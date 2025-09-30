@@ -1,19 +1,6 @@
-.class public final Lc7c;
+.class public abstract Lc7c;
 .super Ljava/lang/Object;
-.source "SourceFile"
 
 
-# instance fields
-.field public a:J
-
-.field public b:Lr7c;
-
-.field public c:J
-
-.field public d:J
-
-.field public e:Lh7;
-
-.field public f:Lwx4;
-
-.field public g:Laz2;
+# static fields
+.field public static oneme_emoji_view_type_emoji:I = 0x7f0a06b7

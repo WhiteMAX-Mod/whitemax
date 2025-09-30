@@ -1,48 +1,53 @@
 .class public final Lmif;
-.super Lbu3;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+# interfaces
+.implements Loif;
 
 
 # instance fields
-.field public X:I
+.field public final a:Lu2f;
 
-.field public final synthetic Y:Lfka;
+.field public final b:I
 
-.field public synthetic o:Ljava/lang/Object;
+.field public final c:Z
 
 
 # direct methods
-.method public constructor <init>(Lfka;Lkotlin/coroutines/Continuation;)V
+.method public synthetic constructor <init>(IILu2f;)V
     .locals 0
 
-    iput-object p1, p0, Lmif;->Y:Lfka;
+    and-int/lit8 p2, p2, 0x2
 
-    invoke-direct {p0, p2}, Lbu3;-><init>(Lkotlin/coroutines/Continuation;)V
+    if-eqz p2, :cond_0
+
+    .line 5
+    sget p1, La1d;->Q0:I
+
+    :cond_0
+    const/4 p2, 0x1
+
+    .line 6
+    invoke-direct {p0, p1, p3, p2}, Lmif;-><init>(ILu2f;Z)V
 
     return-void
 .end method
 
+.method public constructor <init>(ILu2f;Z)V
+    .locals 0
 
-# virtual methods
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+    .line 1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lmif;->o:Ljava/lang/Object;
+    .line 2
+    iput-object p2, p0, Lmif;->a:Lu2f;
 
-    iget p1, p0, Lmif;->X:I
+    .line 3
+    iput p1, p0, Lmif;->b:I
 
-    const/high16 v0, -0x80000000
+    .line 4
+    iput-boolean p3, p0, Lmif;->c:Z
 
-    or-int/2addr p1, v0
-
-    iput p1, p0, Lmif;->X:I
-
-    iget-object p1, p0, Lmif;->Y:Lfka;
-
-    const/4 v0, 0x0
-
-    invoke-virtual {p1, v0, p0}, Lfka;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    return-object p0
+    return-void
 .end method

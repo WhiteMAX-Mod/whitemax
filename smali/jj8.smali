@@ -1,112 +1,128 @@
-.class public final synthetic Ljj8;
+.class public final Ljj8;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ljava/lang/Runnable;
-
 
 # instance fields
-.field public final synthetic X:Lac8;
+.field public A:Ljava/lang/Integer;
 
-.field public final synthetic a:I
+.field public B:Ljava/lang/Integer;
 
-.field public final synthetic b:Lr36;
+.field public C:Ljava/lang/CharSequence;
 
-.field public final synthetic c:Ljava/lang/Object;
+.field public D:Ljava/lang/CharSequence;
 
-.field public final synthetic o:Lyn7;
+.field public E:Ljava/lang/CharSequence;
 
+.field public F:Landroid/os/Bundle;
 
-# direct methods
-.method public synthetic constructor <init>(Lr36;Lpj8;Lyn7;Lac8;I)V
-    .locals 0
+.field public a:Ljava/lang/CharSequence;
 
-    iput p5, p0, Ljj8;->a:I
+.field public b:Ljava/lang/CharSequence;
 
-    iput-object p1, p0, Ljj8;->b:Lr36;
+.field public c:Ljava/lang/CharSequence;
 
-    iput-object p2, p0, Ljj8;->c:Ljava/lang/Object;
+.field public d:Ljava/lang/CharSequence;
 
-    iput-object p3, p0, Ljj8;->o:Lyn7;
+.field public e:Ljava/lang/CharSequence;
 
-    iput-object p4, p0, Ljj8;->X:Lac8;
+.field public f:Ljava/lang/CharSequence;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+.field public g:Ljava/lang/CharSequence;
 
-    return-void
-.end method
+.field public h:Landroid/net/Uri;
+
+.field public i:Lifc;
+
+.field public j:Lifc;
+
+.field public k:[B
+
+.field public l:Ljava/lang/Integer;
+
+.field public m:Landroid/net/Uri;
+
+.field public n:Ljava/lang/Integer;
+
+.field public o:Ljava/lang/Integer;
+
+.field public p:Ljava/lang/Integer;
+
+.field public q:Ljava/lang/Boolean;
+
+.field public r:Ljava/lang/Integer;
+
+.field public s:Ljava/lang/Integer;
+
+.field public t:Ljava/lang/Integer;
+
+.field public u:Ljava/lang/Integer;
+
+.field public v:Ljava/lang/Integer;
+
+.field public w:Ljava/lang/Integer;
+
+.field public x:Ljava/lang/CharSequence;
+
+.field public y:Ljava/lang/CharSequence;
+
+.field public z:Ljava/lang/CharSequence;
 
 
 # virtual methods
-.method public final run()V
-    .locals 4
+.method public final a(I[B)V
+    .locals 3
 
-    iget v0, p0, Ljj8;->a:I
+    const/4 v0, 0x3
 
-    packed-switch v0, :pswitch_data_0
+    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    iget-object v0, p0, Ljj8;->b:Lr36;
+    move-result-object v0
 
-    iget v1, v0, Lr36;->b:I
+    iget-object v1, p0, Ljj8;->k:[B
 
-    iget-object v0, v0, Lr36;->c:Ljava/lang/Object;
+    if-eqz v1, :cond_1
 
-    check-cast v0, Lfj8;
+    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    iget-object v2, p0, Ljj8;->c:Ljava/lang/Object;
+    move-result-object v1
 
-    iget-object v3, p0, Ljj8;->o:Lyn7;
+    sget v2, Llrf;->a:I
 
-    iget-object p0, p0, Ljj8;->X:Lac8;
+    invoke-virtual {v1, v0}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
-    invoke-interface {v2, v1, v0, v3, p0}, Lpj8;->r(ILfj8;Lyn7;Lac8;)V
+    move-result v1
 
+    if-nez v1, :cond_1
+
+    iget-object v1, p0, Ljj8;->l:Ljava/lang/Integer;
+
+    invoke-static {v1, v0}, Llrf;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    goto :goto_0
+
+    :cond_0
     return-void
 
-    :pswitch_0
-    iget-object v0, p0, Ljj8;->b:Lr36;
+    :cond_1
+    :goto_0
+    invoke-virtual {p2}, [B->clone()Ljava/lang/Object;
 
-    iget v1, v0, Lr36;->b:I
+    move-result-object p2
 
-    iget-object v0, v0, Lr36;->c:Ljava/lang/Object;
+    check-cast p2, [B
 
-    check-cast v0, Lfj8;
+    iput-object p2, p0, Ljj8;->k:[B
 
-    iget-object v2, p0, Ljj8;->c:Ljava/lang/Object;
+    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    iget-object v3, p0, Ljj8;->o:Lyn7;
+    move-result-object p1
 
-    iget-object p0, p0, Ljj8;->X:Lac8;
-
-    invoke-interface {v2, v1, v0, v3, p0}, Lpj8;->t(ILfj8;Lyn7;Lac8;)V
-
-    return-void
-
-    :pswitch_1
-    iget-object v0, p0, Ljj8;->b:Lr36;
-
-    iget v1, v0, Lr36;->b:I
-
-    iget-object v0, v0, Lr36;->c:Ljava/lang/Object;
-
-    check-cast v0, Lfj8;
-
-    iget-object v2, p0, Ljj8;->c:Ljava/lang/Object;
-
-    iget-object v3, p0, Ljj8;->o:Lyn7;
-
-    iget-object p0, p0, Ljj8;->X:Lac8;
-
-    invoke-interface {v2, v1, v0, v3, p0}, Lpj8;->z(ILfj8;Lyn7;Lac8;)V
+    iput-object p1, p0, Ljj8;->l:Ljava/lang/Integer;
 
     return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
 .end method

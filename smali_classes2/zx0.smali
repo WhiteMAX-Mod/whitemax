@@ -3,113 +3,100 @@
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/lang/Runnable;
+.implements Lzb6;
 
 
 # instance fields
-.field public final synthetic X:Z
+.field public final synthetic a:I
 
-.field public final synthetic Y:Ljava/lang/String;
-
-.field public final synthetic a:Liy0;
-
-.field public final synthetic b:Lfp9;
-
-.field public final synthetic c:Lckd;
-
-.field public final synthetic o:Z
+.field public final synthetic b:Lty0;
 
 
 # direct methods
-.method public synthetic constructor <init>(Liy0;Lfp9;Lckd;ZZLjava/lang/String;)V
+.method public synthetic constructor <init>(Lty0;I)V
     .locals 0
 
+    iput p2, p0, Lzx0;->a:I
+
+    iput-object p1, p0, Lzx0;->b:Lty0;
+
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lzx0;->a:Liy0;
-
-    iput-object p2, p0, Lzx0;->b:Lfp9;
-
-    iput-object p3, p0, Lzx0;->c:Lckd;
-
-    iput-boolean p4, p0, Lzx0;->o:Z
-
-    iput-boolean p5, p0, Lzx0;->X:Z
-
-    iput-object p6, p0, Lzx0;->Y:Ljava/lang/String;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
-    .locals 15
+.method public final invoke()Ljava/lang/Object;
+    .locals 1
 
-    iget-object v0, p0, Lzx0;->a:Liy0;
+    iget v0, p0, Lzx0;->a:I
 
-    iget-object v1, p0, Lzx0;->b:Lfp9;
+    iget-object p0, p0, Lzx0;->b:Lty0;
 
-    iget-object v2, p0, Lzx0;->c:Lckd;
+    packed-switch v0, :pswitch_data_0
 
-    iget-boolean v3, p0, Lzx0;->o:Z
+    iget-object p0, p0, Lty0;->A0:Lwd1;
 
-    iget-boolean v5, p0, Lzx0;->X:Z
+    return-object p0
 
-    iget-object v7, p0, Lzx0;->Y:Ljava/lang/String;
+    :pswitch_0
+    iget-object p0, p0, Lty0;->H0:Lzo1;
 
-    iget-object p0, v1, Lfp9;->m:Ljava/lang/Runnable;
+    iget-object p0, p0, Lzo1;->i:Lw61;
 
-    iget-object v4, v2, Lckd;->a:Ljava/util/concurrent/ExecutorService;
+    return-object p0
 
-    new-instance v6, Lakd;
+    :pswitch_1
+    iget-object p0, p0, Lty0;->i0:Lbq1;
 
-    const/4 v8, 0x2
+    invoke-virtual {p0}, Lbq1;->y()Lz9f;
 
-    invoke-direct {v6, v2, v3, v8}, Lakd;-><init>(Lckd;ZI)V
+    move-result-object p0
 
-    invoke-interface {v4, v6}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
+    return-object p0
 
-    iget-object v4, v2, Lckd;->d:Lorg/webrtc/PeerConnectionFactory;
+    :pswitch_2
+    iget-object p0, p0, Lty0;->g:Lt0e;
 
-    iget-object v6, v1, Lfp9;->e:Lorg/webrtc/PeerConnectionFactory$EnhancerKind;
+    return-object p0
 
-    iget v8, v1, Lfp9;->g:I
+    :pswitch_3
+    iget-object p0, p0, Lty0;->g:Lt0e;
 
-    iget v9, v1, Lfp9;->h:I
+    return-object p0
 
-    iget v10, v1, Lfp9;->i:I
+    :pswitch_4
+    iget-object p0, p0, Lty0;->i0:Lbq1;
 
-    iget v11, v1, Lfp9;->j:I
+    invoke-virtual {p0}, Lbq1;->y()Lz9f;
 
-    iget v12, v1, Lfp9;->k:I
+    move-result-object p0
 
-    iget-boolean v13, v1, Lfp9;->l:Z
+    return-object p0
 
-    if-eqz v5, :cond_0
+    :pswitch_5
+    iget-object p0, p0, Lty0;->e0:Lbh1;
 
-    new-instance v1, Lby0;
+    iget-object p0, p0, Lbh1;->a:Lwg1;
 
-    const/4 v2, 0x0
+    iget-object p0, p0, Lwg1;->c:Leo9;
 
-    invoke-direct {v1, v0, p0, v2}, Lby0;-><init>(Liy0;Ljava/lang/Runnable;I)V
+    iget-boolean p0, p0, Leo9;->e:Z
 
-    :goto_0
-    move-object v14, v1
+    invoke-static {p0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
-    goto :goto_1
+    move-result-object p0
 
-    :cond_0
-    new-instance v1, Lec;
+    return-object p0
 
-    const/4 p0, 0x5
-
-    invoke-direct {v1, p0}, Lec;-><init>(I)V
-
-    goto :goto_0
-
-    :goto_1
-    invoke-virtual/range {v4 .. v14}, Lorg/webrtc/PeerConnectionFactory;->setPreprocessorParams(ZLorg/webrtc/PeerConnectionFactory$EnhancerKind;Ljava/lang/String;IIIIIZLjava/lang/Runnable;)V
-
-    return-void
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_5
+        :pswitch_4
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

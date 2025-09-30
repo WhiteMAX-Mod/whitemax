@@ -1,91 +1,59 @@
-.class public final synthetic Lxu;
-.super Ljava/lang/Object;
+.class public final Lxu;
+.super Ljx3;
 .source "SourceFile"
-
-# interfaces
-.implements Lx56;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public X:J
 
-.field public final synthetic b:Lqg9;
+.field public synthetic Y:Ljava/lang/Object;
+
+.field public final synthetic Z:Lyv;
+
+.field public o:Liu;
+
+.field public r0:I
 
 
 # direct methods
-.method public synthetic constructor <init>(Lqg9;I)V
+.method public constructor <init>(Lyv;Ljx3;)V
     .locals 0
 
-    iput p2, p0, Lxu;->a:I
+    iput-object p1, p0, Lxu;->Z:Lyv;
 
-    iput-object p1, p0, Lxu;->b:Lqg9;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p2}, Ljx3;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 2
+.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 6
 
-    iget v0, p0, Lxu;->a:I
+    iput-object p1, p0, Lxu;->Y:Ljava/lang/Object;
 
-    packed-switch v0, :pswitch_data_0
+    iget p1, p0, Lxu;->r0:I
 
-    check-cast p1, Ldva;
+    const/high16 v0, -0x80000000
 
-    iget-wide v0, p1, Ldva;->a:J
+    or-int/2addr p1, v0
 
-    iget-object p0, p0, Lxu;->b:Lqg9;
+    iput p1, p0, Lxu;->r0:I
 
-    invoke-virtual {p0, v0, v1}, Lqg9;->a(J)Z
+    const-wide/16 v2, 0x0
 
-    move-result p0
+    const/4 v4, 0x0
 
-    xor-int/lit8 p0, p0, 0x1
+    iget-object v0, p0, Lxu;->Z:Lyv;
 
-    :goto_0
-    invoke-static {p0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+    const/4 v1, 0x0
+
+    move-object v5, p0
+
+    invoke-virtual/range {v0 .. v5}, Lyv;->t(Ltt;JLiu;Ljx3;)Ljava/lang/Object;
 
     move-result-object p0
 
     return-object p0
-
-    :pswitch_0
-    check-cast p1, Lfl6;
-
-    invoke-interface {p1}, Lfl6;->getId()J
-
-    move-result-wide v0
-
-    iget-object p0, p0, Lxu;->b:Lqg9;
-
-    invoke-virtual {p0, v0, v1}, Lqg9;->d(J)Z
-
-    move-result p0
-
-    goto :goto_0
-
-    :pswitch_1
-    check-cast p1, Lfl6;
-
-    invoke-interface {p1}, Lfl6;->getId()J
-
-    move-result-wide v0
-
-    iget-object p0, p0, Lxu;->b:Lqg9;
-
-    invoke-virtual {p0, v0, v1}, Lqg9;->d(J)Z
-
-    move-result p0
-
-    goto :goto_0
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
 .end method

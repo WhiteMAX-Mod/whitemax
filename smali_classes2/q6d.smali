@@ -1,41 +1,87 @@
-.class public final Lq6d;
-.super Li7d;
+.class public interface abstract Lq6d;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final k:J
+# static fields
+.field public static final a:Lp6d;
 
 
 # direct methods
-.method public constructor <init>(JJLjava/util/List;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    invoke-direct {p0, p3, p4, p5}, Li7d;-><init>(JLjava/util/List;)V
+    sget-object v0, Lp6d;->a:Lp6d;
 
-    iput-wide p1, p0, Lq6d;->k:J
+    sput-object v0, Lq6d;->a:Lp6d;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Ll7d;
-    .locals 1
+.method public a()Ljava/lang/String;
+    .locals 2
 
-    new-instance v0, Lr6d;
+    check-cast p0, Lwd;
 
-    invoke-direct {v0, p0}, Lr6d;-><init>(Lq6d;)V
+    new-instance v0, Ljava/util/Date;
 
-    return-object v0
+    invoke-direct {v0}, Ljava/util/Date;-><init>()V
+
+    iget-object p0, p0, Lwd;->d:Lwl7;
+
+    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    invoke-static {v0}, Lwl7;->a(Ljava/util/Date;)Ljava/lang/String;
+
+    move-result-object p0
+
+    const-string v0, "MOV_"
+
+    const-string v1, ".mp4"
+
+    invoke-static {v0, p0, v1}, Lyv7;->h(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p0
+
+    return-object p0
 .end method
 
-.method public final b()Lj7d;
-    .locals 1
+.method public b(Z)Ljava/lang/String;
+    .locals 2
 
-    new-instance v0, Lr6d;
+    check-cast p0, Lwd;
 
-    invoke-direct {v0, p0}, Lr6d;-><init>(Lq6d;)V
+    new-instance v0, Ljava/util/Date;
 
-    return-object v0
+    invoke-direct {v0}, Ljava/util/Date;-><init>()V
+
+    iget-object p0, p0, Lwd;->d:Lwl7;
+
+    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    invoke-static {v0}, Lwl7;->a(Ljava/util/Date;)Ljava/lang/String;
+
+    move-result-object p0
+
+    if-eqz p1, :cond_0
+
+    const-string p1, "gif"
+
+    goto :goto_0
+
+    :cond_0
+    const-string p1, "jpg"
+
+    :goto_0
+    const-string v0, "IMG_"
+
+    const-string v1, "."
+
+    invoke-static {v0, p0, v1, p1}, Lee5;->k(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p0
+
+    return-object p0
 .end method

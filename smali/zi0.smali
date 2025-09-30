@@ -2,401 +2,198 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lwd8;
+.implements Lxd8;
+
 
 # instance fields
-.field public final a:Ljava/util/ArrayList;
+.field public final synthetic a:I
 
-.field public final b:Ljava/util/HashSet;
+.field public final b:J
 
-.field public final c:Lr36;
+.field public final c:J
 
-.field public final d:Lir4;
-
-.field public e:Landroid/os/Looper;
-
-.field public f:Lqse;
-
-.field public g:Lw1b;
+.field public o:J
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 5
+.method public constructor <init>(IJJ)V
+    .locals 0
+
+    iput p1, p0, Lzi0;->a:I
+
+    packed-switch p1, :pswitch_data_0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    new-instance v0, Ljava/util/ArrayList;
+    iput-wide p2, p0, Lzi0;->b:J
 
-    const/4 v1, 0x1
+    iput-wide p4, p0, Lzi0;->c:J
 
-    invoke-direct {v0, v1}, Ljava/util/ArrayList;-><init>(I)V
+    const-wide/16 p4, 0x1
 
-    iput-object v0, p0, Lzi0;->a:Ljava/util/ArrayList;
+    sub-long/2addr p2, p4
 
-    new-instance v0, Ljava/util/HashSet;
-
-    invoke-direct {v0, v1}, Ljava/util/HashSet;-><init>(I)V
-
-    iput-object v0, p0, Lzi0;->b:Ljava/util/HashSet;
-
-    new-instance v0, Lr36;
-
-    new-instance v1, Ljava/util/concurrent/CopyOnWriteArrayList;
-
-    invoke-direct {v1}, Ljava/util/concurrent/CopyOnWriteArrayList;-><init>()V
-
-    const/16 v2, 0x12
-
-    const/4 v3, 0x0
-
-    const/4 v4, 0x0
-
-    invoke-direct {v0, v1, v3, v4, v2}, Lr36;-><init>(Ljava/util/concurrent/CopyOnWriteArrayList;ILjava/lang/Object;I)V
-
-    iput-object v0, p0, Lzi0;->c:Lr36;
-
-    new-instance v0, Lir4;
-
-    new-instance v1, Ljava/util/concurrent/CopyOnWriteArrayList;
-
-    invoke-direct {v1}, Ljava/util/concurrent/CopyOnWriteArrayList;-><init>()V
-
-    invoke-direct {v0, v1, v3, v4}, Lir4;-><init>(Ljava/util/concurrent/CopyOnWriteArrayList;ILfj8;)V
-
-    iput-object v0, p0, Lzi0;->d:Lir4;
+    iput-wide p2, p0, Lzi0;->o:J
 
     return-void
+
+    :pswitch_0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-wide p2, p0, Lzi0;->b:J
+
+    iput-wide p4, p0, Lzi0;->c:J
+
+    const-wide/16 p4, 0x1
+
+    sub-long/2addr p2, p4
+
+    iput-wide p2, p0, Lzi0;->o:J
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_0
+    .end packed-switch
 .end method
 
 
 # virtual methods
-.method public a(Leb8;)Z
-    .locals 0
+.method public final c()V
+    .locals 4
 
-    const/4 p0, 0x0
+    iget v0, p0, Lzi0;->a:I
 
-    return p0
-.end method
+    packed-switch v0, :pswitch_data_0
 
-.method public final b(Lfj8;)Lr36;
-    .locals 3
+    iget-wide v0, p0, Lzi0;->o:J
 
-    new-instance v0, Lr36;
+    iget-wide v2, p0, Lzi0;->b:J
 
-    iget-object p0, p0, Lzi0;->c:Lr36;
+    cmp-long v2, v0, v2
 
-    iget-object p0, p0, Lr36;->o:Ljava/lang/Object;
+    if-ltz v2, :cond_0
 
-    check-cast p0, Ljava/util/concurrent/CopyOnWriteArrayList;
+    iget-wide v2, p0, Lzi0;->c:J
 
-    const/16 v1, 0x12
+    cmp-long p0, v0, v2
 
-    const/4 v2, 0x0
+    if-gtz p0, :cond_0
 
-    invoke-direct {v0, p0, v2, p1, v1}, Lr36;-><init>(Ljava/util/concurrent/CopyOnWriteArrayList;ILjava/lang/Object;I)V
-
-    return-object v0
-.end method
-
-.method public abstract c(Lfj8;La74;J)Ljd8;
-.end method
-
-.method public final d(Lhj8;)V
-    .locals 2
-
-    iget-object v0, p0, Lzi0;->b:Ljava/util/HashSet;
-
-    invoke-virtual {v0}, Ljava/util/HashSet;->isEmpty()Z
-
-    move-result v1
-
-    invoke-virtual {v0, p1}, Ljava/util/HashSet;->remove(Ljava/lang/Object;)Z
-
-    if-nez v1, :cond_0
-
-    invoke-virtual {v0}, Ljava/util/HashSet;->isEmpty()Z
-
-    move-result p1
-
-    if-eqz p1, :cond_0
-
-    invoke-virtual {p0}, Lzi0;->e()V
+    return-void
 
     :cond_0
-    return-void
-.end method
+    new-instance p0, Ljava/util/NoSuchElementException;
 
-.method public e()V
-    .locals 0
+    invoke-direct {p0}, Ljava/util/NoSuchElementException;-><init>()V
 
-    return-void
-.end method
+    throw p0
 
-.method public final f(Lhj8;)V
-    .locals 2
+    :pswitch_0
+    iget-wide v0, p0, Lzi0;->o:J
 
-    iget-object v0, p0, Lzi0;->e:Landroid/os/Looper;
+    iget-wide v2, p0, Lzi0;->b:J
 
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    cmp-long v2, v0, v2
 
-    iget-object v0, p0, Lzi0;->b:Ljava/util/HashSet;
+    if-ltz v2, :cond_1
 
-    invoke-virtual {v0}, Ljava/util/HashSet;->isEmpty()Z
+    iget-wide v2, p0, Lzi0;->c:J
 
-    move-result v1
+    cmp-long p0, v0, v2
 
-    invoke-virtual {v0, p1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
-
-    if-eqz v1, :cond_0
-
-    invoke-virtual {p0}, Lzi0;->g()V
-
-    :cond_0
-    return-void
-.end method
-
-.method public g()V
-    .locals 0
+    if-gtz p0, :cond_1
 
     return-void
+
+    :cond_1
+    new-instance p0, Ljava/util/NoSuchElementException;
+
+    invoke-direct {p0}, Ljava/util/NoSuchElementException;-><init>()V
+
+    throw p0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method
 
-.method public h()Lqse;
-    .locals 0
+.method public final next()Z
+    .locals 4
 
-    const/4 p0, 0x0
+    iget v0, p0, Lzi0;->a:I
 
-    return-object p0
-.end method
+    packed-switch v0, :pswitch_data_0
 
-.method public abstract i()Leb8;
-.end method
+    iget-wide v0, p0, Lzi0;->o:J
 
-.method public j()Z
-    .locals 0
+    const-wide/16 v2, 0x1
 
-    const/4 p0, 0x1
+    add-long/2addr v0, v2
 
-    return p0
-.end method
+    iput-wide v0, p0, Lzi0;->o:J
 
-.method public abstract k()V
-.end method
+    iget-wide v2, p0, Lzi0;->c:J
 
-.method public final l(Lhj8;Lbze;Lw1b;)V
-    .locals 2
+    cmp-long p0, v0, v2
 
-    invoke-static {}, Landroid/os/Looper;->myLooper()Landroid/os/Looper;
+    const/4 v0, 0x1
 
-    move-result-object v0
+    if-lez p0, :cond_0
 
-    iget-object v1, p0, Lzi0;->e:Landroid/os/Looper;
-
-    if-eqz v1, :cond_1
-
-    if-ne v1, v0, :cond_0
+    move p0, v0
 
     goto :goto_0
 
     :cond_0
-    const/4 v1, 0x0
+    const/4 p0, 0x0
+
+    :goto_0
+    xor-int/2addr p0, v0
+
+    return p0
+
+    :pswitch_0
+    iget-wide v0, p0, Lzi0;->o:J
+
+    const-wide/16 v2, 0x1
+
+    add-long/2addr v0, v2
+
+    iput-wide v0, p0, Lzi0;->o:J
+
+    iget-wide v2, p0, Lzi0;->c:J
+
+    cmp-long p0, v0, v2
+
+    const/4 v0, 0x1
+
+    if-lez p0, :cond_1
+
+    move p0, v0
 
     goto :goto_1
 
     :cond_1
-    :goto_0
-    const/4 v1, 0x1
+    const/4 p0, 0x0
 
     :goto_1
-    invoke-static {v1}, Lu27;->f(Z)V
+    xor-int/2addr p0, v0
 
-    iput-object p3, p0, Lzi0;->g:Lw1b;
+    return p0
 
-    iget-object p3, p0, Lzi0;->f:Lqse;
+    nop
 
-    iget-object v1, p0, Lzi0;->a:Ljava/util/ArrayList;
-
-    invoke-virtual {v1, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    iget-object v1, p0, Lzi0;->e:Landroid/os/Looper;
-
-    if-nez v1, :cond_2
-
-    iput-object v0, p0, Lzi0;->e:Landroid/os/Looper;
-
-    iget-object p3, p0, Lzi0;->b:Ljava/util/HashSet;
-
-    invoke-virtual {p3, p1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
-
-    invoke-virtual {p0, p2}, Lzi0;->m(Lbze;)V
-
-    return-void
-
-    :cond_2
-    if-eqz p3, :cond_3
-
-    invoke-virtual {p0, p1}, Lzi0;->f(Lhj8;)V
-
-    invoke-interface {p1, p0, p3}, Lhj8;->a(Lzi0;Lqse;)V
-
-    :cond_3
-    return-void
-.end method
-
-.method public abstract m(Lbze;)V
-.end method
-
-.method public final n(Lqse;)V
-    .locals 2
-
-    iput-object p1, p0, Lzi0;->f:Lqse;
-
-    iget-object v0, p0, Lzi0;->a:Ljava/util/ArrayList;
-
-    invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
-
-    move-result-object v0
-
-    :goto_0
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lhj8;
-
-    invoke-interface {v1, p0, p1}, Lhj8;->a(Lzi0;Lqse;)V
-
-    goto :goto_0
-
-    :cond_0
-    return-void
-.end method
-
-.method public abstract o(Ljd8;)V
-.end method
-
-.method public final p(Lhj8;)V
-    .locals 1
-
-    iget-object v0, p0, Lzi0;->a:Ljava/util/ArrayList;
-
-    invoke-virtual {v0, p1}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
-
-    invoke-virtual {v0}, Ljava/util/ArrayList;->isEmpty()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    const/4 p1, 0x0
-
-    iput-object p1, p0, Lzi0;->e:Landroid/os/Looper;
-
-    iput-object p1, p0, Lzi0;->f:Lqse;
-
-    iput-object p1, p0, Lzi0;->g:Lw1b;
-
-    iget-object p1, p0, Lzi0;->b:Ljava/util/HashSet;
-
-    invoke-virtual {p1}, Ljava/util/HashSet;->clear()V
-
-    invoke-virtual {p0}, Lzi0;->q()V
-
-    return-void
-
-    :cond_0
-    invoke-virtual {p0, p1}, Lzi0;->d(Lhj8;)V
-
-    return-void
-.end method
-
-.method public abstract q()V
-.end method
-
-.method public final r(Lkr4;)V
-    .locals 3
-
-    iget-object p0, p0, Lzi0;->d:Lir4;
-
-    iget-object p0, p0, Lir4;->c:Ljava/util/concurrent/CopyOnWriteArrayList;
-
-    invoke-virtual {p0}, Ljava/util/concurrent/CopyOnWriteArrayList;->iterator()Ljava/util/Iterator;
-
-    move-result-object v0
-
-    :cond_0
-    :goto_0
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_1
-
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lhr4;
-
-    iget-object v2, v1, Lhr4;->b:Ljava/lang/Object;
-
-    if-ne v2, p1, :cond_0
-
-    invoke-virtual {p0, v1}, Ljava/util/concurrent/CopyOnWriteArrayList;->remove(Ljava/lang/Object;)Z
-
-    goto :goto_0
-
-    :cond_1
-    return-void
-.end method
-
-.method public final s(Lpj8;)V
-    .locals 3
-
-    iget-object p0, p0, Lzi0;->c:Lr36;
-
-    iget-object p0, p0, Lr36;->o:Ljava/lang/Object;
-
-    check-cast p0, Ljava/util/concurrent/CopyOnWriteArrayList;
-
-    invoke-virtual {p0}, Ljava/util/concurrent/CopyOnWriteArrayList;->iterator()Ljava/util/Iterator;
-
-    move-result-object v0
-
-    :cond_0
-    :goto_0
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_1
-
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lmj8;
-
-    iget-object v2, v1, Lmj8;->b:Ljava/lang/Object;
-
-    if-ne v2, p1, :cond_0
-
-    invoke-virtual {p0, v1}, Ljava/util/concurrent/CopyOnWriteArrayList;->remove(Ljava/lang/Object;)Z
-
-    goto :goto_0
-
-    :cond_1
-    return-void
-.end method
-
-.method public t(Leb8;)V
-    .locals 0
-
-    return-void
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

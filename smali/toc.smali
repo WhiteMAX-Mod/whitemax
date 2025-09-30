@@ -1,93 +1,77 @@
-.class public abstract Ltoc;
-.super Lg87;
+.class public final Ltoc;
+.super Ly;
 .source "SourceFile"
 
 
-# virtual methods
-.method public dequeueWork()Lb87;
-    .locals 3
+# static fields
+.field public static final CREATOR:Landroid/os/Parcelable$Creator;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroid/os/Parcelable$Creator<",
+            "Ltoc;",
+            ">;"
+        }
+    .end annotation
+.end field
 
-    const/4 v0, 0x0
 
-    :try_start_0
-    iget-object v1, p0, Lg87;->mJobImpl:Lz77;
+# instance fields
+.field public c:Landroid/os/Parcelable;
 
-    if-eqz v1, :cond_0
 
-    invoke-interface {v1}, Lz77;->b()Lb87;
+# direct methods
+.method static constructor <clinit>()V
+    .locals 2
 
-    move-result-object p0
+    new-instance v0, Lx;
 
-    return-object p0
+    const/4 v1, 0x6
 
-    :cond_0
-    iget-object v1, p0, Lg87;->mCompatQueue:Ljava/util/ArrayList;
+    invoke-direct {v0, v1}, Lx;-><init>(I)V
 
-    monitor-enter v1
-    :try_end_0
-    .catch Ljava/lang/SecurityException; {:try_start_0 .. :try_end_0} :catch_0
+    sput-object v0, Ltoc;->CREATOR:Landroid/os/Parcelable$Creator;
 
-    :try_start_1
-    iget-object v2, p0, Lg87;->mCompatQueue:Ljava/util/ArrayList;
+    return-void
+.end method
 
-    invoke-virtual {v2}, Ljava/util/ArrayList;->size()I
+.method public constructor <init>(Landroid/os/Parcel;Ljava/lang/ClassLoader;)V
+    .locals 0
 
-    move-result v2
+    invoke-direct {p0, p1, p2}, Ly;-><init>(Landroid/os/Parcel;Ljava/lang/ClassLoader;)V
 
-    if-lez v2, :cond_1
-
-    iget-object p0, p0, Lg87;->mCompatQueue:Ljava/util/ArrayList;
-
-    const/4 v2, 0x0
-
-    invoke-virtual {p0, v2}, Ljava/util/ArrayList;->remove(I)Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, Lb87;
-
-    monitor-exit v1
-
-    return-object p0
-
-    :catchall_0
-    move-exception p0
+    if-eqz p2, :cond_0
 
     goto :goto_0
 
-    :cond_1
-    monitor-exit v1
+    :cond_0
+    const-class p2, Landroidx/recyclerview/widget/a;
 
-    return-object v0
+    invoke-virtual {p2}, Ljava/lang/Class;->getClassLoader()Ljava/lang/ClassLoader;
+
+    move-result-object p2
 
     :goto_0
-    monitor-exit v1
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->readParcelable(Ljava/lang/ClassLoader;)Landroid/os/Parcelable;
 
-    :try_start_2
-    throw p0
-    :try_end_2
-    .catch Ljava/lang/SecurityException; {:try_start_2 .. :try_end_2} :catch_0
+    move-result-object p1
 
-    :catch_0
-    move-exception p0
+    iput-object p1, p0, Ltoc;->c:Landroid/os/Parcelable;
 
-    invoke-virtual {p0}, Ljava/lang/Throwable;->printStackTrace()V
-
-    return-object v0
+    return-void
 .end method
 
-.method public onCreate()V
-    .locals 1
 
-    invoke-super {p0}, Lg87;->onCreate()V
+# virtual methods
+.method public final writeToParcel(Landroid/os/Parcel;I)V
+    .locals 0
 
-    new-instance v0, Ld87;
+    invoke-super {p0, p1, p2}, Ly;->writeToParcel(Landroid/os/Parcel;I)V
 
-    invoke-direct {v0, p0}, Ld87;-><init>(Ltoc;)V
+    iget-object p0, p0, Ltoc;->c:Landroid/os/Parcelable;
 
-    iput-object v0, p0, Lg87;->mJobImpl:Lz77;
+    const/4 p2, 0x0
+
+    invoke-virtual {p1, p0, p2}, Landroid/os/Parcel;->writeParcelable(Landroid/os/Parcelable;I)V
 
     return-void
 .end method

@@ -1,261 +1,190 @@
-.class public final Lf3c;
-.super Lj3c;
-.source "SourceFile"
+.class public abstract Lf3c;
+.super Ljava/lang/Object;
 
 
-# instance fields
-.field public final a:J
+# static fields
+.field public static accent:I = 0x7f060019
 
-.field public final b:J
+.field public static accent_highlighted:I = 0x7f06001a
 
-.field public final c:F
+.field public static attach_send_file:I = 0x7f06001f
 
-.field public final d:J
+.field public static auth_avatar_circle:I = 0x7f060020
 
-.field public final e:Ljava/lang/Long;
+.field public static auth_background:I = 0x7f060021
 
-.field public final f:Ljava/lang/Long;
+.field public static auth_background_selected:I = 0x7f060022
 
+.field public static auth_button_gray:I = 0x7f060023
 
-# direct methods
-.method public constructor <init>(JJFJLjava/lang/Long;Ljava/lang/Long;)V
-    .locals 0
+.field public static auth_button_ripple:I = 0x7f060024
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+.field public static auth_button_text_secondary:I = 0x7f060025
 
-    iput-wide p1, p0, Lf3c;->a:J
+.field public static auth_country:I = 0x7f060026
 
-    iput-wide p3, p0, Lf3c;->b:J
+.field public static auth_status_bar:I = 0x7f060027
 
-    iput p5, p0, Lf3c;->c:F
+.field public static auth_text_confirm_description:I = 0x7f060028
 
-    iput-wide p6, p0, Lf3c;->d:J
+.field public static auth_text_dark_blue:I = 0x7f060029
 
-    iput-object p8, p0, Lf3c;->e:Ljava/lang/Long;
+.field public static auth_text_gray:I = 0x7f06002a
 
-    iput-object p9, p0, Lf3c;->f:Ljava/lang/Long;
+.field public static black:I = 0x7f060031
 
-    return-void
-.end method
+.field public static black_10:I = 0x7f060032
 
+.field public static black_16:I = 0x7f060033
 
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 7
+.field public static black_30:I = 0x7f060034
 
-    const/4 v0, 0x1
+.field public static black_34:I = 0x7f060035
 
-    if-ne p0, p1, :cond_0
+.field public static black_50:I = 0x7f060036
 
-    return v0
+.field public static black_60:I = 0x7f060037
 
-    :cond_0
-    instance-of v1, p1, Lf3c;
+.field public static black_70:I = 0x7f060038
 
-    const/4 v2, 0x0
+.field public static black_8:I = 0x7f060039
 
-    if-nez v1, :cond_1
+.field public static black_80:I = 0x7f06003a
 
-    return v2
+.field public static black_85:I = 0x7f06003b
 
-    :cond_1
-    check-cast p1, Lf3c;
+.field public static blue:I = 0x7f06003c
 
-    iget-wide v3, p0, Lf3c;->a:J
+.field public static blue_30:I = 0x7f06003d
 
-    iget-wide v5, p1, Lf3c;->a:J
+.field public static blue_50:I = 0x7f06003e
 
-    cmp-long v1, v3, v5
+.field public static blue_dark:I = 0x7f06003f
 
-    if-eqz v1, :cond_2
+.field public static call_swipe_hint_color:I = 0x7f06004e
 
-    return v2
+.field public static calls_green:I = 0x7f060053
 
-    :cond_2
-    iget-wide v3, p0, Lf3c;->b:J
+.field public static calls_notif_background:I = 0x7f060054
 
-    iget-wide v5, p1, Lf3c;->b:J
+.field public static calls_notif_button_text_primary:I = 0x7f060055
 
-    cmp-long v1, v3, v5
+.field public static calls_notif_green:I = 0x7f060056
 
-    if-eqz v1, :cond_3
+.field public static calls_notif_red:I = 0x7f060057
 
-    return v2
+.field public static calls_notif_text_primary:I = 0x7f060058
 
-    :cond_3
-    iget v1, p0, Lf3c;->c:F
+.field public static calls_notif_text_secondary:I = 0x7f060059
 
-    iget v3, p1, Lf3c;->c:F
+.field public static calls_red:I = 0x7f06005a
 
-    invoke-static {v1, v3}, Ljava/lang/Float;->compare(FF)I
+.field public static chat_media_bg:I = 0x7f06005f
 
-    move-result v1
+.field public static common_bg_dark:I = 0x7f060060
 
-    if-eqz v1, :cond_4
+.field public static constructor_bg:I = 0x7f06006c
 
-    return v2
+.field public static contact_attach_stroke:I = 0x7f06006d
 
-    :cond_4
-    iget-wide v3, p0, Lf3c;->d:J
+.field public static contact_attach_stub:I = 0x7f06006e
 
-    iget-wide v5, p1, Lf3c;->d:J
+.field public static control_bg:I = 0x7f06006f
 
-    cmp-long v1, v3, v5
+.field public static control_bg_action:I = 0x7f060070
 
-    if-eqz v1, :cond_5
+.field public static control_border:I = 0x7f060071
 
-    return v2
+.field public static dark_transparent_ripple:I = 0x7f060072
 
-    :cond_5
-    iget-object v1, p0, Lf3c;->e:Ljava/lang/Long;
+.field public static divider_gray:I = 0x7f06009f
 
-    iget-object v3, p1, Lf3c;->e:Ljava/lang/Long;
+.field public static gray_33:I = 0x7f0600b1
 
-    invoke-static {v1, v3}, Lxq7;->d(Ljava/lang/Object;Ljava/lang/Object;)Z
+.field public static gray_66:I = 0x7f0600b2
 
-    move-result v1
+.field public static gray_88:I = 0x7f0600b3
 
-    if-nez v1, :cond_6
+.field public static gray_88_80:I = 0x7f0600b4
 
-    return v2
+.field public static gray_99:I = 0x7f0600b5
 
-    :cond_6
-    iget-object p0, p0, Lf3c;->f:Ljava/lang/Long;
+.field public static gray_aa:I = 0x7f0600b6
 
-    iget-object p1, p1, Lf3c;->f:Ljava/lang/Long;
+.field public static gray_cc:I = 0x7f0600b7
 
-    invoke-static {p0, p1}, Lxq7;->d(Ljava/lang/Object;Ljava/lang/Object;)Z
+.field public static gray_ec:I = 0x7f0600b8
 
-    move-result p0
+.field public static gray_separator:I = 0x7f0600b9
 
-    if-nez p0, :cond_7
+.field public static launch_background:I = 0x7f0600bd
 
-    return v2
+.field public static launch_logo_tint_color:I = 0x7f0600be
 
-    :cond_7
-    return v0
-.end method
+.field public static loading_bg:I = 0x7f0600c6
 
-.method public final hashCode()I
-    .locals 4
+.field public static music_player_primary:I = 0x7f060366
 
-    iget-wide v0, p0, Lf3c;->a:J
+.field public static orange:I = 0x7f06036f
 
-    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
+.field public static orange_50:I = 0x7f060370
 
-    move-result v0
+.field public static pip_trash_gradient_end:I = 0x7f060371
 
-    const/16 v1, 0x1f
+.field public static pip_trash_gradient_start:I = 0x7f060372
 
-    mul-int/2addr v0, v1
+.field public static profile_bg:I = 0x7f06037d
 
-    iget-wide v2, p0, Lf3c;->b:J
+.field public static quick_camera_take_button_selector:I = 0x7f06037e
 
-    invoke-static {v0, v1, v2, v3}, Lzge;->m(IIJ)I
+.field public static quick_camera_take_button_selector_red:I = 0x7f06037f
 
-    move-result v0
+.field public static range_seek_bar_border_shadow_color:I = 0x7f060380
 
-    iget v2, p0, Lf3c;->c:F
+.field public static read_status_dark_bg:I = 0x7f060381
 
-    invoke-static {v0, v2, v1}, Luz1;->e(IFI)I
+.field public static read_status_light_bg:I = 0x7f060382
 
-    move-result v0
+.field public static red:I = 0x7f060383
 
-    iget-wide v2, p0, Lf3c;->d:J
+.field public static red_delete:I = 0x7f060384
 
-    invoke-static {v0, v1, v2, v3}, Lzge;->m(IIJ)I
+.field public static ripple:I = 0x7f060385
 
-    move-result v0
+.field public static ripple_light:I = 0x7f060386
 
-    const/4 v2, 0x0
+.field public static ripple_white:I = 0x7f060389
 
-    iget-object v3, p0, Lf3c;->e:Ljava/lang/Long;
+.field public static status_bar_bg:I = 0x7f06038e
 
-    if-nez v3, :cond_0
+.field public static text_black:I = 0x7f060396
 
-    move v3, v2
+.field public static text_primary:I = 0x7f060397
 
-    goto :goto_0
+.field public static text_primary_disabled:I = 0x7f060399
 
-    :cond_0
-    invoke-virtual {v3}, Ljava/lang/Object;->hashCode()I
+.field public static text_secondary:I = 0x7f06039a
 
-    move-result v3
+.field public static text_secondary_dark:I = 0x7f06039b
 
-    :goto_0
-    add-int/2addr v0, v3
+.field public static text_white:I = 0x7f06039c
 
-    mul-int/2addr v0, v1
+.field public static time_picker_on_surface_color_day:I = 0x7f06039d
 
-    iget-object p0, p0, Lf3c;->f:Ljava/lang/Long;
+.field public static time_picker_on_surface_color_night:I = 0x7f06039e
 
-    if-nez p0, :cond_1
+.field public static time_picker_surface_color_night:I = 0x7f06039f
 
-    goto :goto_1
+.field public static transparent:I = 0x7f0603a3
 
-    :cond_1
-    invoke-virtual {p0}, Ljava/lang/Object;->hashCode()I
+.field public static white:I = 0x7f0603a4
 
-    move-result v2
+.field public static white_30:I = 0x7f0603a5
 
-    :goto_1
-    add-int/2addr v0, v2
+.field public static white_50:I = 0x7f0603a6
 
-    return v0
-.end method
+.field public static white_70:I = 0x7f0603a7
 
-.method public final toString()Ljava/lang/String;
-    .locals 5
+.field public static white_80:I = 0x7f0603a8
 
-    const-string v0, "Downloading(messageId="
-
-    const-string v1, ", totalBytes="
-
-    iget-wide v2, p0, Lf3c;->a:J
-
-    invoke-static {v2, v3, v0, v1}, Lzt1;->k(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    iget-wide v1, p0, Lf3c;->b:J
-
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    const-string v1, ", progress="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget v1, p0, Lf3c;->c:F
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
-
-    const-string v1, ", bytesDownloaded="
-
-    const-string v2, ", fileId="
-
-    iget-wide v3, p0, Lf3c;->d:J
-
-    invoke-static {v3, v4, v1, v2, v0}, Lzt1;->q(JLjava/lang/String;Ljava/lang/String;Ljava/lang/StringBuilder;)V
-
-    iget-object v1, p0, Lf3c;->e:Ljava/lang/Long;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", fileSize="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object p0, p0, Lf3c;->f:Ljava/lang/Long;
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string p0, ")"
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
-.end method
+.field public static white_95:I = 0x7f0603a9

@@ -1,80 +1,80 @@
-.class public final synthetic Lp05;
+.class public final Lp05;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ljq1;
-
 
 # instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Ls05;
+.field public final a:Llqc;
 
 
 # direct methods
-.method public synthetic constructor <init>(Ls05;I)V
+.method public constructor <init>(Lkga;)V
     .locals 0
 
-    iput p2, p0, Lp05;->a:I
-
-    iput-object p1, p0, Lp05;->b:Ls05;
-
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iget-object p1, p1, Lkga;->b:Ljava/lang/Object;
+
+    check-cast p1, Li37;
+
+    invoke-virtual {p1}, Li37;->h()Llqc;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lp05;->a:Llqc;
+
+    invoke-virtual {p1}, Ljava/util/AbstractCollection;->isEmpty()Z
+
+    move-result p0
+
+    xor-int/lit8 p0, p0, 0x1
+
+    const-string p1, "The sequence must contain at least one EditedMediaItem."
+
+    invoke-static {p1, p0}, Lmq0;->b(Ljava/lang/Object;Z)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final L(Liq1;)Ljava/lang/String;
-    .locals 3
+.method public final a()Z
+    .locals 4
 
-    iget v0, p0, Lp05;->a:I
+    const/4 v0, 0x0
 
-    packed-switch v0, :pswitch_data_0
+    move v1, v0
 
-    iget-object p0, p0, Lp05;->b:Ls05;
+    :goto_0
+    iget-object v2, p0, Lp05;->a:Llqc;
 
-    iget-object v0, p0, Ls05;->o:Lw05;
+    iget v3, v2, Llqc;->o:I
 
-    iget-object v0, v0, Lw05;->g:Lw4d;
+    if-ge v1, v3, :cond_1
 
-    new-instance v1, Lq05;
+    invoke-virtual {v2, v1}, Llqc;->get(I)Ljava/lang/Object;
 
-    const/4 v2, 0x1
+    move-result-object v2
 
-    invoke-direct {v1, p0, p1, v2}, Lq05;-><init>(Ls05;Liq1;I)V
+    check-cast v2, Lo05;
 
-    invoke-virtual {v0, v1}, Lw4d;->execute(Ljava/lang/Runnable;)V
+    iget-object v2, v2, Lo05;->a:Lzh8;
 
-    const-string p0, "acquireBuffer"
+    invoke-static {v2}, Lo05;->c(Lzh8;)Z
 
-    return-object p0
+    move-result v2
 
-    :pswitch_0
-    iget-object p0, p0, Lp05;->b:Ls05;
+    if-eqz v2, :cond_0
 
-    iget-object v0, p0, Ls05;->o:Lw05;
+    const/4 p0, 0x1
 
-    iget-object v0, v0, Lw05;->g:Lw4d;
+    return p0
 
-    new-instance v1, Lq05;
+    :cond_0
+    add-int/lit8 v1, v1, 0x1
 
-    const/4 v2, 0x0
+    goto :goto_0
 
-    invoke-direct {v1, p0, p1, v2}, Lq05;-><init>(Ls05;Liq1;I)V
-
-    invoke-virtual {v0, v1}, Lw4d;->execute(Ljava/lang/Runnable;)V
-
-    const-string p0, "fetchData"
-
-    return-object p0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    :cond_1
+    return v0
 .end method

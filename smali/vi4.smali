@@ -1,101 +1,87 @@
 .class public final Lvi4;
-.super Ljava/lang/Object;
+.super Ljj4;
 .source "SourceFile"
 
 # interfaces
-.implements Lnu0;
+.implements Ljava/lang/Comparable;
 
 
 # instance fields
-.field public final a:I
+.field public final X:I
 
-.field public final b:I
-
-.field public final c:I
+.field public final Y:I
 
 
 # direct methods
-.method public constructor <init>(III)V
+.method public constructor <init>(ILubf;ILaj4;I)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p1, p2, p3}, Ljj4;-><init>(ILubf;I)V
 
-    iput p1, p0, Lvi4;->a:I
+    iget-boolean p1, p4, Laj4;->t0:Z
 
-    iput p2, p0, Lvi4;->b:I
+    invoke-static {p5, p1}, Ltj0;->j(IZ)Z
 
-    iput p3, p0, Lvi4;->c:I
+    move-result p1
+
+    iput p1, p0, Lvi4;->X:I
+
+    iget-object p1, p0, Ljj4;->o:Lx46;
+
+    iget p2, p1, Lx46;->u:I
+
+    const/4 p3, -0x1
+
+    if-eq p2, p3, :cond_1
+
+    iget p1, p1, Lx46;->v:I
+
+    if-ne p1, p3, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    mul-int p3, p2, p1
+
+    :cond_1
+    :goto_0
+    iput p3, p0, Lvi4;->Y:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
+.method public final a()I
+    .locals 0
 
-    const/4 v0, 0x1
+    iget p0, p0, Lvi4;->X:I
 
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    instance-of v1, p1, Lvi4;
-
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
-    check-cast p1, Lvi4;
-
-    iget v1, p0, Lvi4;->a:I
-
-    iget v3, p1, Lvi4;->a:I
-
-    if-ne v1, v3, :cond_2
-
-    iget v1, p0, Lvi4;->b:I
-
-    iget v3, p1, Lvi4;->b:I
-
-    if-ne v1, v3, :cond_2
-
-    iget p0, p0, Lvi4;->c:I
-
-    iget p1, p1, Lvi4;->c:I
-
-    if-ne p0, p1, :cond_2
-
-    return v0
-
-    :cond_2
-    return v2
+    return p0
 .end method
 
-.method public final hashCode()I
-    .locals 2
+.method public final bridge synthetic b(Ljj4;)Z
+    .locals 0
 
-    const/16 v0, 0x20f
+    check-cast p1, Lvi4;
 
-    iget v1, p0, Lvi4;->a:I
+    const/4 p0, 0x0
 
-    add-int/2addr v0, v1
+    return p0
+.end method
 
-    mul-int/lit8 v0, v0, 0x1f
+.method public final compareTo(Ljava/lang/Object;)I
+    .locals 0
 
-    iget v1, p0, Lvi4;->b:I
+    check-cast p1, Lvi4;
 
-    add-int/2addr v0, v1
+    iget p0, p0, Lvi4;->Y:I
 
-    mul-int/lit8 v0, v0, 0x1f
+    iget p1, p1, Lvi4;->Y:I
 
-    iget p0, p0, Lvi4;->c:I
+    invoke-static {p0, p1}, Ljava/lang/Integer;->compare(II)I
 
-    add-int/2addr v0, p0
+    move-result p0
 
-    return v0
+    return p0
 .end method

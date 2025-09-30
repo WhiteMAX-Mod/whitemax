@@ -1,320 +1,201 @@
 .class public final Lcw4;
-.super Ljava/lang/Object;
+.super Landroid/transition/Transition;
 .source "SourceFile"
-
-# interfaces
-.implements Law4;
 
 
 # instance fields
-.field public X:Z
+.field public final a:Lxfc;
 
-.field public Y:J
-
-.field public a:Ljava/io/InputStream;
-
-.field public final b:Ljava/util/zip/ZipEntry;
-
-.field public final c:Ljava/util/zip/ZipFile;
-
-.field public final o:J
+.field public final b:Lxfc;
 
 
 # direct methods
-.method public constructor <init>(Ljava/util/zip/ZipFile;Ljava/util/zip/ZipEntry;)V
-    .locals 2
+.method public constructor <init>(Lxfc;Lxfc;)V
+    .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Landroid/transition/Transition;-><init>()V
 
-    iput-object p1, p0, Lcw4;->c:Ljava/util/zip/ZipFile;
+    iput-object p1, p0, Lcw4;->a:Lxfc;
 
-    iput-object p2, p0, Lcw4;->b:Ljava/util/zip/ZipEntry;
-
-    const/4 v0, 0x1
-
-    iput-boolean v0, p0, Lcw4;->X:Z
-
-    const-wide/16 v0, 0x0
-
-    iput-wide v0, p0, Lcw4;->Y:J
-
-    invoke-virtual {p2}, Ljava/util/zip/ZipEntry;->getSize()J
-
-    move-result-wide v0
-
-    iput-wide v0, p0, Lcw4;->o:J
-
-    invoke-virtual {p1, p2}, Ljava/util/zip/ZipFile;->getInputStream(Ljava/util/zip/ZipEntry;)Ljava/io/InputStream;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lcw4;->a:Ljava/io/InputStream;
-
-    if-eqz p1, :cond_0
+    iput-object p2, p0, Lcw4;->b:Lxfc;
 
     return-void
+.end method
+
+.method public static a(Landroid/transition/TransitionValues;)V
+    .locals 4
+
+    iget-object v0, p0, Landroid/transition/TransitionValues;->view:Landroid/view/View;
+
+    instance-of v0, v0, Leh6;
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Landroid/transition/TransitionValues;->values:Ljava/util/Map;
+
+    new-instance v1, Landroid/graphics/Rect;
+
+    iget-object v2, p0, Landroid/transition/TransitionValues;->view:Landroid/view/View;
+
+    invoke-virtual {v2}, Landroid/view/View;->getWidth()I
+
+    move-result v2
+
+    iget-object p0, p0, Landroid/transition/TransitionValues;->view:Landroid/view/View;
+
+    invoke-virtual {p0}, Landroid/view/View;->getHeight()I
+
+    move-result p0
+
+    const/4 v3, 0x0
+
+    invoke-direct {v1, v3, v3, v2, p0}, Landroid/graphics/Rect;-><init>(IIII)V
+
+    const-string p0, "draweeTransition:bounds"
+
+    invoke-interface {v0, p0, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     :cond_0
-    new-instance p0, Ljava/io/IOException;
+    return-void
+.end method
 
-    new-instance p1, Ljava/lang/StringBuilder;
+.method public static b(Lxfc;Lxfc;)Landroid/transition/TransitionSet;
+    .locals 2
 
-    invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
+    new-instance v0, Landroid/transition/TransitionSet;
 
-    invoke-virtual {p2}, Ljava/util/zip/ZipEntry;->getName()Ljava/lang/String;
+    invoke-direct {v0}, Landroid/transition/TransitionSet;-><init>()V
 
-    move-result-object p2
+    new-instance v1, Landroid/transition/ChangeBounds;
 
-    invoke-virtual {p1, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-direct {v1}, Landroid/transition/ChangeBounds;-><init>()V
 
-    const-string p2, "\'s InputStream is null"
+    invoke-virtual {v0, v1}, Landroid/transition/TransitionSet;->addTransition(Landroid/transition/Transition;)Landroid/transition/TransitionSet;
 
-    invoke-virtual {p1, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    new-instance v1, Lcw4;
 
-    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-direct {v1, p0, p1}, Lcw4;-><init>(Lxfc;Lxfc;)V
 
-    move-result-object p1
+    invoke-virtual {v0, v1}, Landroid/transition/TransitionSet;->addTransition(Landroid/transition/Transition;)Landroid/transition/TransitionSet;
 
-    invoke-direct {p0, p1}, Ljava/io/IOException;-><init>(Ljava/lang/String;)V
-
-    throw p0
+    return-object v0
 .end method
 
 
 # virtual methods
-.method public final a(JLjava/nio/ByteBuffer;)I
-    .locals 9
+.method public final captureEndValues(Landroid/transition/TransitionValues;)V
+    .locals 0
 
-    iget-object v0, p0, Lcw4;->a:Ljava/io/InputStream;
+    invoke-static {p1}, Lcw4;->a(Landroid/transition/TransitionValues;)V
 
-    if-eqz v0, :cond_8
-
-    invoke-virtual {p3}, Ljava/nio/Buffer;->remaining()I
-
-    move-result v0
-
-    iget-wide v1, p0, Lcw4;->o:J
-
-    sub-long v3, v1, p1
-
-    const-wide/16 v5, 0x0
-
-    cmp-long v5, v3, v5
-
-    if-gtz v5, :cond_0
-
-    const/4 p0, -0x1
-
-    return p0
-
-    :cond_0
-    long-to-int v3, v3
-
-    if-le v0, v3, :cond_1
-
-    move v0, v3
-
-    :cond_1
-    iget-object v3, p0, Lcw4;->a:Ljava/io/InputStream;
-
-    const-string v4, "\'s InputStream is null"
-
-    iget-object v5, p0, Lcw4;->b:Ljava/util/zip/ZipEntry;
-
-    if-eqz v3, :cond_7
-
-    iget-wide v6, p0, Lcw4;->Y:J
-
-    cmp-long v8, p1, v6
-
-    if-nez v8, :cond_2
-
-    goto :goto_1
-
-    :cond_2
-    cmp-long v8, p1, v1
-
-    if-lez v8, :cond_3
-
-    move-wide p1, v1
-
-    :cond_3
-    cmp-long v1, p1, v6
-
-    if-ltz v1, :cond_4
-
-    sub-long v1, p1, v6
-
-    invoke-virtual {v3, v1, v2}, Ljava/io/InputStream;->skip(J)J
-
-    goto :goto_0
-
-    :cond_4
-    invoke-virtual {v3}, Ljava/io/InputStream;->close()V
-
-    iget-object v1, p0, Lcw4;->c:Ljava/util/zip/ZipFile;
-
-    invoke-virtual {v1, v5}, Ljava/util/zip/ZipFile;->getInputStream(Ljava/util/zip/ZipEntry;)Ljava/io/InputStream;
-
-    move-result-object v1
-
-    iput-object v1, p0, Lcw4;->a:Ljava/io/InputStream;
-
-    if-eqz v1, :cond_6
-
-    invoke-virtual {v1, p1, p2}, Ljava/io/InputStream;->skip(J)J
-
-    :goto_0
-    iput-wide p1, p0, Lcw4;->Y:J
-
-    :goto_1
-    invoke-virtual {p3}, Ljava/nio/ByteBuffer;->hasArray()Z
-
-    move-result p1
-
-    const/4 p2, 0x0
-
-    if-eqz p1, :cond_5
-
-    iget-object p1, p0, Lcw4;->a:Ljava/io/InputStream;
-
-    invoke-virtual {p3}, Ljava/nio/ByteBuffer;->array()[B
-
-    move-result-object v1
-
-    invoke-virtual {p1, v1, p2, v0}, Ljava/io/InputStream;->read([BII)I
-
-    invoke-virtual {p3}, Ljava/nio/Buffer;->position()I
-
-    move-result p1
-
-    add-int/2addr p1, v0
-
-    invoke-virtual {p3, p1}, Ljava/nio/ByteBuffer;->position(I)Ljava/nio/Buffer;
-
-    goto :goto_2
-
-    :cond_5
-    new-array p1, v0, [B
-
-    iget-object v1, p0, Lcw4;->a:Ljava/io/InputStream;
-
-    invoke-virtual {v1, p1, p2, v0}, Ljava/io/InputStream;->read([BII)I
-
-    invoke-virtual {p3, p1, p2, v0}, Ljava/nio/ByteBuffer;->put([BII)Ljava/nio/ByteBuffer;
-
-    :goto_2
-    iget-wide p1, p0, Lcw4;->Y:J
-
-    int-to-long v1, v0
-
-    add-long/2addr p1, v1
-
-    iput-wide p1, p0, Lcw4;->Y:J
-
-    return v0
-
-    :cond_6
-    new-instance p0, Ljava/io/IOException;
-
-    new-instance p1, Ljava/lang/StringBuilder;
-
-    invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
-
-    invoke-virtual {v5}, Ljava/util/zip/ZipEntry;->getName()Ljava/lang/String;
-
-    move-result-object p2
-
-    invoke-virtual {p1, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p1, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-direct {p0, p1}, Ljava/io/IOException;-><init>(Ljava/lang/String;)V
-
-    throw p0
-
-    :cond_7
-    new-instance p0, Ljava/io/IOException;
-
-    new-instance p1, Ljava/lang/StringBuilder;
-
-    invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
-
-    invoke-virtual {v5}, Ljava/util/zip/ZipEntry;->getName()Ljava/lang/String;
-
-    move-result-object p2
-
-    invoke-virtual {p1, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p1, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-direct {p0, p1}, Ljava/io/IOException;-><init>(Ljava/lang/String;)V
-
-    throw p0
-
-    :cond_8
-    new-instance p0, Ljava/io/IOException;
-
-    const-string p1, "InputStream is null"
-
-    invoke-direct {p0, p1}, Ljava/io/IOException;-><init>(Ljava/lang/String;)V
-
-    throw p0
-.end method
-
-.method public final close()V
-    .locals 1
-
-    iget-object v0, p0, Lcw4;->a:Ljava/io/InputStream;
-
-    if-eqz v0, :cond_0
-
-    invoke-virtual {v0}, Ljava/io/InputStream;->close()V
-
-    const/4 v0, 0x0
-
-    iput-boolean v0, p0, Lcw4;->X:Z
-
-    :cond_0
     return-void
 .end method
 
-.method public final isOpen()Z
+.method public final captureStartValues(Landroid/transition/TransitionValues;)V
     .locals 0
 
-    iget-boolean p0, p0, Lcw4;->X:Z
+    invoke-static {p1}, Lcw4;->a(Landroid/transition/TransitionValues;)V
 
-    return p0
+    return-void
 .end method
 
-.method public final read(Ljava/nio/ByteBuffer;)I
-    .locals 2
+.method public final createAnimator(Landroid/view/ViewGroup;Landroid/transition/TransitionValues;Landroid/transition/TransitionValues;)Landroid/animation/Animator;
+    .locals 3
 
-    iget-wide v0, p0, Lcw4;->Y:J
+    const/4 p1, 0x0
 
-    invoke-virtual {p0, v0, v1, p1}, Lcw4;->a(JLjava/nio/ByteBuffer;)I
+    if-eqz p2, :cond_3
 
-    move-result p0
+    if-nez p3, :cond_0
 
-    return p0
-.end method
+    goto :goto_0
 
-.method public final write(Ljava/nio/ByteBuffer;)I
-    .locals 0
+    :cond_0
+    iget-object v0, p2, Landroid/transition/TransitionValues;->values:Ljava/util/Map;
 
-    new-instance p0, Ljava/lang/UnsupportedOperationException;
+    const-string v1, "draweeTransition:bounds"
 
-    const-string p1, "ElfZipFileChannel doesn\'t support write"
+    invoke-interface {v0, v1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
-    invoke-direct {p0, p1}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+    move-result-object v0
 
-    throw p0
+    check-cast v0, Landroid/graphics/Rect;
+
+    iget-object p3, p3, Landroid/transition/TransitionValues;->values:Ljava/util/Map;
+
+    invoke-interface {p3, v1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p3
+
+    check-cast p3, Landroid/graphics/Rect;
+
+    if-eqz v0, :cond_3
+
+    if-nez p3, :cond_1
+
+    goto :goto_0
+
+    :cond_1
+    iget-object v1, p0, Lcw4;->a:Lxfc;
+
+    iget-object v2, p0, Lcw4;->b:Lxfc;
+
+    if-ne v1, v2, :cond_2
+
+    return-object p1
+
+    :cond_2
+    iget-object p1, p2, Landroid/transition/TransitionValues;->view:Landroid/view/View;
+
+    check-cast p1, Leh6;
+
+    new-instance p2, Li4d;
+
+    invoke-direct {p2, v1, v2, v0, p3}, Li4d;-><init>(Lxfc;Lxfc;Landroid/graphics/Rect;Landroid/graphics/Rect;)V
+
+    invoke-virtual {p1}, Ldw4;->getHierarchy()Law4;
+
+    move-result-object p3
+
+    check-cast p3, Lch6;
+
+    invoke-virtual {p3, p2}, Lch6;->h(Lj4d;)V
+
+    const/4 p3, 0x2
+
+    new-array p3, p3, [F
+
+    fill-array-data p3, :array_0
+
+    invoke-static {p3}, Landroid/animation/ValueAnimator;->ofFloat([F)Landroid/animation/ValueAnimator;
+
+    move-result-object p3
+
+    new-instance v0, Lvj0;
+
+    const/4 v1, 0x3
+
+    invoke-direct {v0, v1, p2}, Lvj0;-><init>(ILjava/lang/Object;)V
+
+    invoke-virtual {p3, v0}, Landroid/animation/ValueAnimator;->addUpdateListener(Landroid/animation/ValueAnimator$AnimatorUpdateListener;)V
+
+    new-instance p2, Lgh;
+
+    const/4 v0, 0x0
+
+    invoke-direct {p2, p0, p1, v0, v1}, Lgh;-><init>(Ljava/lang/Object;Ljava/lang/Object;ZI)V
+
+    invoke-virtual {p3, p2}, Landroid/animation/Animator;->addListener(Landroid/animation/Animator$AnimatorListener;)V
+
+    return-object p3
+
+    :cond_3
+    :goto_0
+    return-object p1
+
+    :array_0
+    .array-data 4
+        0x0
+        0x3f800000    # 1.0f
+    .end array-data
 .end method

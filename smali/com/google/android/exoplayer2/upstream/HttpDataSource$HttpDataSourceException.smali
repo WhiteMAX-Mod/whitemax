@@ -4,7 +4,7 @@
 
 
 # direct methods
-.method public constructor <init>(Ljava/io/IOException;Lo34;II)V
+.method public constructor <init>(Ljava/io/IOException;Lm74;II)V
     .locals 0
 
     const/16 p2, 0x7d0
@@ -23,7 +23,7 @@
     return-void
 .end method
 
-.method public static a(Ljava/io/IOException;Lo34;I)Lcom/google/android/exoplayer2/upstream/HttpDataSource$HttpDataSourceException;
+.method public static a(Ljava/io/IOException;Lm74;I)Lcom/google/android/exoplayer2/upstream/HttpDataSource$HttpDataSourceException;
     .locals 3
 
     invoke-virtual {p0}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
@@ -52,7 +52,7 @@
     :cond_1
     if-eqz v0, :cond_2
 
-    invoke-static {v0}, Ld46;->M(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0}, Ly30;->J(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -85,7 +85,7 @@
     :cond_3
     new-instance v1, Lcom/google/android/exoplayer2/upstream/HttpDataSource$HttpDataSourceException;
 
-    invoke-direct {v1, p0, p1, v0, p2}, Lcom/google/android/exoplayer2/upstream/HttpDataSource$HttpDataSourceException;-><init>(Ljava/io/IOException;Lo34;II)V
+    invoke-direct {v1, p0, p1, v0, p2}, Lcom/google/android/exoplayer2/upstream/HttpDataSource$HttpDataSourceException;-><init>(Ljava/io/IOException;Lm74;II)V
 
     return-object v1
 .end method

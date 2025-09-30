@@ -2,87 +2,148 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lyze;
-
 
 # instance fields
-.field public final synthetic a:Landroid/view/ViewGroup;
-
-.field public final synthetic b:Lfd7;
-
-.field public final synthetic c:Lb0f;
+.field public final a:Lz8h;
 
 
 # direct methods
-.method public constructor <init>(Lb0f;Landroid/view/ViewGroup;Lfd7;)V
-    .locals 0
+.method public constructor <init>()V
+    .locals 1
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, La0f;->c:Lb0f;
+    new-instance v0, Lz8h;
 
-    iput-object p2, p0, La0f;->a:Landroid/view/ViewGroup;
+    invoke-direct {v0}, Lz8h;-><init>()V
 
-    iput-object p3, p0, La0f;->b:Lfd7;
+    iput-object v0, p0, La0f;->a:Lz8h;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Lzze;)V
+.method public final a(Ljava/lang/Exception;)V
     .locals 0
 
-    iget-object p1, p0, La0f;->a:Landroid/view/ViewGroup;
+    iget-object p0, p0, La0f;->a:Lz8h;
 
-    iget-object p0, p0, La0f;->b:Lfd7;
-
-    invoke-virtual {p1, p0}, Landroid/view/View;->removeCallbacks(Ljava/lang/Runnable;)Z
+    invoke-virtual {p0, p1}, Lz8h;->m(Ljava/lang/Exception;)V
 
     return-void
 .end method
 
-.method public final b()V
+.method public final b(Ljava/lang/Object;)V
     .locals 0
+
+    iget-object p0, p0, La0f;->a:Lz8h;
+
+    invoke-virtual {p0, p1}, Lz8h;->n(Ljava/lang/Object;)V
 
     return-void
 .end method
 
-.method public final c(Lzze;)V
-    .locals 0
+.method public final c(Ljava/lang/Exception;)V
+    .locals 2
 
-    iget-object p0, p0, La0f;->c:Lb0f;
+    iget-object p0, p0, La0f;->a:Lz8h;
 
-    iget-object p1, p0, Lb0f;->Y:Lru3;
+    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    invoke-virtual {p1}, Lru3;->c()V
+    const-string v0, "Exception must not be null"
 
-    const/4 p1, 0x0
+    invoke-static {p1, v0}, Ljk7;->u(Ljava/lang/Object;Ljava/lang/String;)V
 
-    iput-object p1, p0, Lb0f;->Y:Lru3;
+    iget-object v0, p0, Lz8h;->a:Ljava/lang/Object;
+
+    monitor-enter v0
+
+    :try_start_0
+    iget-boolean v1, p0, Lz8h;->c:Z
+
+    if-eqz v1, :cond_0
+
+    monitor-exit v0
 
     return-void
+
+    :catchall_0
+    move-exception p0
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v1, 0x1
+
+    iput-boolean v1, p0, Lz8h;->c:Z
+
+    iput-object p1, p0, Lz8h;->f:Ljava/lang/Exception;
+
+    monitor-exit v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    iget-object p1, p0, Lz8h;->b:Lrd;
+
+    invoke-virtual {p1, p0}, Lrd;->y(Lcom/google/android/gms/tasks/Task;)V
+
+    return-void
+
+    :goto_0
+    :try_start_1
+    monitor-exit v0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    throw p0
 .end method
 
-.method public final f()V
-    .locals 0
+.method public final d(Ljava/lang/Object;)V
+    .locals 2
+
+    iget-object p0, p0, La0f;->a:Lz8h;
+
+    iget-object v0, p0, Lz8h;->a:Ljava/lang/Object;
+
+    monitor-enter v0
+
+    :try_start_0
+    iget-boolean v1, p0, Lz8h;->c:Z
+
+    if-eqz v1, :cond_0
+
+    monitor-exit v0
 
     return-void
-.end method
 
-.method public final g(Lzze;)V
-    .locals 0
+    :catchall_0
+    move-exception p0
 
-    iget-object p0, p0, La0f;->c:Lb0f;
+    goto :goto_0
 
-    iget-object p1, p0, Lb0f;->Y:Lru3;
+    :cond_0
+    const/4 v1, 0x1
 
-    invoke-virtual {p1}, Lru3;->c()V
+    iput-boolean v1, p0, Lz8h;->c:Z
 
-    const/4 p1, 0x0
+    iput-object p1, p0, Lz8h;->e:Ljava/lang/Object;
 
-    iput-object p1, p0, Lb0f;->Y:Lru3;
+    monitor-exit v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    iget-object p1, p0, Lz8h;->b:Lrd;
+
+    invoke-virtual {p1, p0}, Lrd;->y(Lcom/google/android/gms/tasks/Task;)V
 
     return-void
+
+    :goto_0
+    :try_start_1
+    monitor-exit v0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    throw p0
 .end method

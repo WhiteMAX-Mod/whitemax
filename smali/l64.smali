@@ -1,62 +1,35 @@
-.class public final synthetic Ll64;
-.super La76;
+.class public interface abstract Ll64;
+.super Ljava/lang/Object;
 .source "SourceFile"
-
-# interfaces
-.implements Lx56;
-
-
-# static fields
-.field public static final a:Ll64;
-
-
-# direct methods
-.method static constructor <clinit>()V
-    .locals 6
-
-    new-instance v0, Ll64;
-
-    const-string v4, "isNotEmpty(Ljava/lang/CharSequence;)Z"
-
-    const/4 v5, 0x1
-
-    const/4 v1, 0x1
-
-    const-class v2, Lj8e;
-
-    const-string v3, "isNotEmpty"
-
-    invoke-direct/range {v0 .. v5}, La76;-><init>(ILjava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
-
-    sput-object v0, Ll64;->a:Ll64;
-
-    return-void
-.end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public abstract B()J
+.end method
 
-    check-cast p1, Ljava/lang/String;
+.method public abstract C(J)J
+.end method
 
-    invoke-virtual {p1}, Ljava/lang/String;->length()I
+.method public abstract D(JJ)J
+.end method
 
-    move-result p0
+.method public abstract a(J)J
+.end method
 
-    if-lez p0, :cond_0
+.method public abstract c(JJ)J
+.end method
 
-    const/4 p0, 0x1
+.method public abstract h(JJ)J
+.end method
 
-    goto :goto_0
+.method public abstract j(JJ)J
+.end method
 
-    :cond_0
-    const/4 p0, 0x0
+.method public abstract k(J)Luec;
+.end method
 
-    :goto_0
-    invoke-static {p0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+.method public abstract t(JJ)J
+.end method
 
-    move-result-object p0
-
-    return-object p0
+.method public abstract z()Z
 .end method

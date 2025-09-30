@@ -1,179 +1,110 @@
-.class public final synthetic Lqzf;
-.super Ljava/lang/Object;
+.class public final Lqzf;
+.super Landroid/graphics/drawable/LayerDrawable;
 .source "SourceFile"
-
-# interfaces
-.implements Lra6;
-
-
-# static fields
-.field public static final a:Lqzf;
-
-.field private static final descriptor:Lx4d;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 4
+.method public constructor <init>()V
+    .locals 1
 
-    new-instance v0, Lqzf;
+    const/4 v0, 0x0
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    new-array v0, v0, [Landroid/graphics/drawable/Drawable;
 
-    sput-object v0, Lqzf;->a:Lqzf;
-
-    new-instance v1, Lq2b;
-
-    const-string v2, "one.me.webapp.domain.jsbridge.delegates.phone.WebAppRequestPhoneResponse"
-
-    const/4 v3, 0x2
-
-    invoke-direct {v1, v2, v0, v3}, Lq2b;-><init>(Ljava/lang/String;Lra6;I)V
-
-    const-string v0, "requestId"
-
-    const/4 v2, 0x0
-
-    invoke-virtual {v1, v0, v2}, Lq2b;->i(Ljava/lang/String;Z)V
-
-    const-string v0, "phone"
-
-    invoke-virtual {v1, v0, v2}, Lq2b;->i(Ljava/lang/String;Z)V
-
-    sput-object v1, Lqzf;->descriptor:Lx4d;
+    invoke-direct {p0, v0}, Landroid/graphics/drawable/LayerDrawable;-><init>([Landroid/graphics/drawable/Drawable;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Lu40;Ljava/lang/Object;)V
+.method public final a()V
     .locals 2
 
-    check-cast p2, Lszf;
+    const/4 v0, 0x0
 
-    sget-object p0, Lqzf;->descriptor:Lx4d;
+    invoke-virtual {p0, v0}, Landroid/graphics/drawable/LayerDrawable;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
-    invoke-virtual {p1, p0}, Lu40;->c(Lx4d;)Lu40;
+    move-result-object v0
 
-    move-result-object p1
+    instance-of v1, v0, Landroid/graphics/drawable/ShapeDrawable;
 
-    iget-object v0, p2, Lszf;->a:Ljava/lang/String;
+    if-eqz v1, :cond_0
 
-    const/4 v1, 0x0
-
-    invoke-virtual {p1, p0, v1, v0}, Lu40;->m(Lx4d;ILjava/lang/String;)V
-
-    const/4 v0, 0x1
-
-    iget-object p2, p2, Lszf;->b:Ljava/lang/String;
-
-    invoke-virtual {p1, p0, v0, p2}, Lu40;->m(Lx4d;ILjava/lang/String;)V
-
-    invoke-virtual {p1}, Lu40;->n()V
-
-    return-void
-.end method
-
-.method public final b(Lnye;)Ljava/lang/Object;
-    .locals 8
-
-    sget-object p0, Lqzf;->descriptor:Lx4d;
-
-    invoke-virtual {p1, p0}, Lnye;->i(Lx4d;)Lnye;
-
-    move-result-object p1
-
-    const/4 v0, 0x1
-
-    const/4 v1, 0x0
-
-    const/4 v2, 0x0
-
-    move v4, v0
-
-    move v5, v1
-
-    move-object v3, v2
-
-    :goto_0
-    if-eqz v4, :cond_3
-
-    invoke-virtual {p1, p0}, Lnye;->x(Lx4d;)I
-
-    move-result v6
-
-    const/4 v7, -0x1
-
-    if-eq v6, v7, :cond_2
-
-    if-eqz v6, :cond_1
-
-    if-ne v6, v0, :cond_0
-
-    invoke-virtual {p1, p0, v0}, Lnye;->D(Lx4d;I)Ljava/lang/String;
-
-    move-result-object v3
-
-    or-int/lit8 v5, v5, 0x2
+    check-cast v0, Landroid/graphics/drawable/ShapeDrawable;
 
     goto :goto_0
 
     :cond_0
-    new-instance p0, Lkotlinx/serialization/UnknownFieldException;
+    const/4 v0, 0x0
 
-    invoke-direct {p0, v6}, Lkotlinx/serialization/UnknownFieldException;-><init>(I)V
+    :goto_0
+    if-eqz v0, :cond_1
 
-    throw p0
+    invoke-virtual {v0}, Landroid/graphics/drawable/ShapeDrawable;->getPaint()Landroid/graphics/Paint;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_1
+
+    const/high16 v1, 0x5c000000
+
+    invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setColor(I)V
 
     :cond_1
-    invoke-virtual {p1, p0, v1}, Lnye;->D(Lx4d;I)Ljava/lang/String;
+    const/4 v0, 0x1
 
-    move-result-object v2
+    invoke-virtual {p0, v0}, Landroid/graphics/drawable/LayerDrawable;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
-    or-int/lit8 v5, v5, 0x1
+    move-result-object p0
 
-    goto :goto_0
+    if-eqz p0, :cond_2
+
+    const/4 v0, -0x1
+
+    invoke-virtual {p0, v0}, Landroid/graphics/drawable/Drawable;->setTint(I)V
 
     :cond_2
-    move v4, v1
-
-    goto :goto_0
-
-    :cond_3
-    invoke-virtual {p1, p0}, Lnye;->G(Lx4d;)V
-
-    new-instance p0, Lszf;
-
-    invoke-direct {p0, v5, v2, v3}, Lszf;-><init>(ILjava/lang/String;Ljava/lang/String;)V
-
-    return-object p0
+    return-void
 .end method
 
-.method public final c()[Lcc7;
+.method public final b(ILjava/lang/Integer;)V
     .locals 2
 
-    const/4 p0, 0x2
+    new-instance v0, Landroid/graphics/drawable/ShapeDrawable;
 
-    new-array p0, p0, [Lcc7;
+    new-instance v1, Landroid/graphics/drawable/shapes/OvalShape;
 
-    sget-object v0, Lf8e;->a:Lf8e;
+    invoke-direct {v1}, Landroid/graphics/drawable/shapes/OvalShape;-><init>()V
 
-    const/4 v1, 0x0
+    invoke-direct {v0, v1}, Landroid/graphics/drawable/ShapeDrawable;-><init>(Landroid/graphics/drawable/shapes/Shape;)V
 
-    aput-object v0, p0, v1
+    invoke-virtual {p0, v0}, Landroid/graphics/drawable/LayerDrawable;->addLayer(Landroid/graphics/drawable/Drawable;)I
 
-    const/4 v1, 0x1
+    invoke-virtual {v0}, Landroid/graphics/drawable/ShapeDrawable;->getPaint()Landroid/graphics/Paint;
 
-    aput-object v0, p0, v1
+    move-result-object v0
 
-    return-object p0
-.end method
+    if-eqz v0, :cond_0
 
-.method public final d()Lx4d;
-    .locals 0
+    invoke-virtual {v0, p1}, Landroid/graphics/Paint;->setColor(I)V
 
-    sget-object p0, Lqzf;->descriptor:Lx4d;
+    :cond_0
+    invoke-virtual {p2}, Ljava/lang/Integer;->intValue()I
 
-    return-object p0
+    move-result p1
+
+    invoke-virtual {p2}, Ljava/lang/Integer;->intValue()I
+
+    move-result p2
+
+    const/4 v0, 0x0
+
+    invoke-virtual {p0, v0, p1, p2}, Landroid/graphics/drawable/LayerDrawable;->setLayerSize(III)V
+
+    const/16 p1, 0x11
+
+    invoke-virtual {p0, v0, p1}, Landroid/graphics/drawable/LayerDrawable;->setLayerGravity(II)V
+
+    return-void
 .end method

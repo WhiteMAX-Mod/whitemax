@@ -1,21 +1,56 @@
-.class public final Lki4;
-.super Lio;
+.class public final synthetic Lki4;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ljava/lang/Runnable;
 
-# static fields
-.field public static final a:Lki4;
+
+# instance fields
+.field public final synthetic a:I
+
+.field public final synthetic b:Lire;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public synthetic constructor <init>(Lire;I)V
+    .locals 0
 
-    new-instance v0, Lki4;
+    iput p2, p0, Lki4;->a:I
 
-    invoke-direct {v0}, Lio;-><init>()V
+    iput-object p1, p0, Lki4;->b:Lire;
 
-    sput-object v0, Lki4;->a:Lki4;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final run()V
+    .locals 1
+
+    iget v0, p0, Lki4;->a:I
+
+    iget-object p0, p0, Lki4;->b:Lire;
+
+    packed-switch v0, :pswitch_data_0
+
+    iget-object p0, p0, Lire;->g:Lts1;
+
+    const/4 v0, 0x1
+
+    invoke-virtual {p0, v0}, Lts1;->cancel(Z)Z
+
+    return-void
+
+    :pswitch_0
+    invoke-virtual {p0}, Lire;->d()V
+
+    return-void
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

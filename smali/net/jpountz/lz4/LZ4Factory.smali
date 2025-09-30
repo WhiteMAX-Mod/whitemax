@@ -55,7 +55,7 @@
 
     const-string v2, "Compressor"
 
-    invoke-static {v1, p1, v2}, Lu88;->k(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v1, p1, v2}, Lyv7;->h(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v3
 
@@ -69,7 +69,7 @@
 
     const-string v3, "net.jpountz.lz4.LZ4HC"
 
-    invoke-static {v3, p1, v2}, Lu88;->k(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v3, p1, v2}, Lyv7;->h(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
 
@@ -83,7 +83,7 @@
 
     const-string v3, "FastDecompressor"
 
-    invoke-static {v1, p1, v3}, Lu88;->k(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v1, p1, v3}, Lyv7;->h(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v3
 
@@ -97,7 +97,7 @@
 
     const-string v3, "SafeDecompressor"
 
-    invoke-static {v1, p1, v3}, Lu88;->k(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v1, p1, v3}, Lyv7;->h(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
@@ -365,12 +365,12 @@
 .method public static fastestInstance()Lnet/jpountz/lz4/LZ4Factory;
     .locals 2
 
-    const-class v0, Lsk9;
+    const-class v0, Lgs9;
 
     monitor-enter v0
 
     :try_start_0
-    sget-boolean v1, Lsk9;->a:Z
+    sget-boolean v1, Lgs9;->a:Z
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
@@ -378,7 +378,7 @@
 
     if-nez v1, :cond_1
 
-    const-class v0, Lsk9;
+    const-class v0, Lgs9;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getClassLoader()Ljava/lang/ClassLoader;
 
@@ -431,7 +431,7 @@
 .method public static fastestJavaInstance()Lnet/jpountz/lz4/LZ4Factory;
     .locals 1
 
-    sget-boolean v0, Lqaf;->b:Z
+    sget-boolean v0, Lorf;->b:Z
 
     if-eqz v0, :cond_0
 

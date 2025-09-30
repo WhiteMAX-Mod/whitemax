@@ -1,184 +1,183 @@
-.class public final Lkx4;
-.super Ljava/lang/Object;
+.class public final enum Lkx4;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:Ljava/net/URL;
+# static fields
+.field public static final enum X:Lkx4;
 
-.field public final b:Lorg/json/JSONObject;
+.field public static final enum Y:Lkx4;
+
+.field public static final enum Z:Lkx4;
+
+.field public static final b:[Lkx4;
+
+.field public static final enum c:Lkx4;
+
+.field public static final enum o:Lkx4;
+
+.field public static final enum r0:Lkx4;
+
+.field public static final enum s0:Lkx4;
+
+.field public static final enum t0:Lkx4;
+
+.field public static final synthetic u0:[Lkx4;
+
+
+# instance fields
+.field public final a:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>(Lorg/json/JSONObject;Ljava/lang/String;)V
-    .locals 1
+.method static constructor <clinit>()V
+    .locals 11
 
-    new-instance v0, Ljava/net/URL;
+    new-instance v0, Lkx4;
 
-    invoke-direct {v0, p2}, Ljava/net/URL;-><init>(Ljava/lang/String;)V
+    const/4 v1, 0x0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const-string v2, "do_not_disturb_mode"
 
-    iput-object v0, p0, Lkx4;->a:Ljava/net/URL;
+    const-string v3, "DO_NOT_DISTURB_MODE"
 
-    iput-object p1, p0, Lkx4;->b:Lorg/json/JSONObject;
+    invoke-direct {v0, v3, v1, v2}, Lkx4;-><init>(Ljava/lang/String;ILjava/lang/String;)V
 
-    const-string p0, "width"
+    sput-object v0, Lkx4;->c:Lkx4;
 
-    invoke-virtual {p1, p0}, Lorg/json/JSONObject;->optInt(Ljava/lang/String;)I
+    new-instance v1, Lkx4;
 
-    const-string p0, "height"
+    const/4 v2, 0x1
 
-    invoke-virtual {p1, p0}, Lorg/json/JSONObject;->optInt(Ljava/lang/String;)I
+    const-string v3, "chat_muted"
 
-    const-string p0, "staticUrl"
+    const-string v4, "CHAT_MUTED"
 
-    invoke-virtual {p1, p0}, Lorg/json/JSONObject;->optString(Ljava/lang/String;)Ljava/lang/String;
+    invoke-direct {v1, v4, v2, v3}, Lkx4;-><init>(Ljava/lang/String;ILjava/lang/String;)V
 
-    move-result-object p0
+    sput-object v1, Lkx4;->o:Lkx4;
 
-    if-eqz p0, :cond_1
+    new-instance v2, Lkx4;
 
-    :try_start_0
-    new-instance p1, Ljava/net/URL;
+    const/4 v3, 0x2
 
-    invoke-direct {p1, p0}, Ljava/net/URL;-><init>(Ljava/lang/String;)V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    const-string v4, "skipped_notif_message"
 
-    goto :goto_0
+    const-string v5, "SKIPPED_NOTIF_MESSAGE"
 
-    :catchall_0
-    move-exception p0
+    invoke-direct {v2, v5, v3, v4}, Lkx4;-><init>(Ljava/lang/String;ILjava/lang/String;)V
 
-    new-instance p1, Ljhc;
+    sput-object v2, Lkx4;->X:Lkx4;
 
-    invoke-direct {p1, p0}, Ljhc;-><init>(Ljava/lang/Throwable;)V
+    new-instance v3, Lkx4;
 
-    :goto_0
-    instance-of p0, p1, Ljhc;
+    const/4 v4, 0x3
 
-    if-eqz p0, :cond_0
+    const-string v5, "notifications_limit"
 
-    const/4 p1, 0x0
+    const-string v6, "NOTIFICATIONS_LIMIT"
 
-    :cond_0
-    check-cast p1, Ljava/net/URL;
+    invoke-direct {v3, v6, v4, v5}, Lkx4;-><init>(Ljava/lang/String;ILjava/lang/String;)V
 
-    :cond_1
+    sput-object v3, Lkx4;->Y:Lkx4;
+
+    new-instance v4, Lkx4;
+
+    const/4 v5, 0x4
+
+    const-string v6, "messages_limit"
+
+    const-string v7, "MESSAGES_LIMIT"
+
+    invoke-direct {v4, v7, v5, v6}, Lkx4;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v4, Lkx4;->Z:Lkx4;
+
+    new-instance v5, Lkx4;
+
+    const/4 v6, 0x5
+
+    const-string v7, "notif_channel_disabled"
+
+    const-string v8, "NOTIFICATION_CHANNEL_DISABLED"
+
+    invoke-direct {v5, v8, v6, v7}, Lkx4;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v5, Lkx4;->r0:Lkx4;
+
+    new-instance v6, Lkx4;
+
+    const/4 v7, 0x6
+
+    const-string v8, "notif_group_channel_disabled"
+
+    const-string v9, "NOTIFICATION_GROUP_CHANNEL_DISABLED"
+
+    invoke-direct {v6, v9, v7, v8}, Lkx4;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v6, Lkx4;->s0:Lkx4;
+
+    new-instance v7, Lkx4;
+
+    const/4 v8, 0x7
+
+    const-string v9, "system_app_notif_disabled"
+
+    const-string v10, "SYSTEM_APP_NOTIF_DISABLED"
+
+    invoke-direct {v7, v10, v8, v9}, Lkx4;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v7, Lkx4;->t0:Lkx4;
+
+    filled-new-array/range {v0 .. v7}, [Lkx4;
+
+    move-result-object v0
+
+    sput-object v0, Lkx4;->u0:[Lkx4;
+
+    invoke-static {}, Lkx4;->values()[Lkx4;
+
+    move-result-object v0
+
+    sput-object v0, Lkx4;->b:[Lkx4;
+
     return-void
 .end method
 
+.method public constructor <init>(Ljava/lang/String;ILjava/lang/String;)V
+    .locals 0
 
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
+    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    const/4 v0, 0x1
+    iput-object p3, p0, Lkx4;->a:Ljava/lang/String;
 
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    instance-of v1, p1, Lkx4;
-
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
-    check-cast p1, Lkx4;
-
-    iget-object v1, p0, Lkx4;->a:Ljava/net/URL;
-
-    iget-object v3, p1, Lkx4;->a:Ljava/net/URL;
-
-    invoke-static {v1, v3}, Lxq7;->d(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_2
-
-    return v2
-
-    :cond_2
-    iget-object p0, p0, Lkx4;->b:Lorg/json/JSONObject;
-
-    iget-object p1, p1, Lkx4;->b:Lorg/json/JSONObject;
-
-    invoke-static {p0, p1}, Lxq7;->d(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p0
-
-    if-nez p0, :cond_3
-
-    return v2
-
-    :cond_3
-    return v0
+    return-void
 .end method
 
-.method public final hashCode()I
+.method public static valueOf(Ljava/lang/String;)Lkx4;
     .locals 1
 
-    iget-object v0, p0, Lkx4;->a:Ljava/net/URL;
+    const-class v0, Lkx4;
 
-    invoke-virtual {v0}, Ljava/net/URL;->hashCode()I
-
-    move-result v0
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget-object p0, p0, Lkx4;->b:Lorg/json/JSONObject;
-
-    if-nez p0, :cond_0
-
-    const/4 p0, 0x0
-
-    goto :goto_0
-
-    :cond_0
-    invoke-virtual {p0}, Ljava/lang/Object;->hashCode()I
-
-    move-result p0
-
-    :goto_0
-    add-int/2addr v0, p0
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 2
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "Animation(url="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v1, p0, Lkx4;->a:Ljava/net/URL;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", otherProperties="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object p0, p0, Lkx4;->b:Lorg/json/JSONObject;
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string p0, ")"
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
 
     move-result-object p0
 
+    check-cast p0, Lkx4;
+
     return-object p0
+.end method
+
+.method public static values()[Lkx4;
+    .locals 1
+
+    sget-object v0, Lkx4;->u0:[Lkx4;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, [Lkx4;
+
+    return-object v0
 .end method

@@ -3,498 +3,265 @@
 .source "SourceFile"
 
 # interfaces
-.implements Llmf;
+.implements Lpm3;
+.implements Luqc;
+.implements Lhx3;
 
 
 # instance fields
-.field public final X:Lief;
-
-.field public final Y:Ljava/lang/ref/WeakReference;
-
-.field public final Z:Liw7;
-
-.field public final a:Ljava/lang/String;
-
-.field public final b:J
-
-.field public final c:Ltkf;
-
-.field public final o:Ls1b;
+.field public final a:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;JLtkf;Ls1b;Lief;Ljava/lang/ref/WeakReference;Lzb2;)V
-    .locals 0
+.method public constructor <init>()V
+    .locals 1
 
+    .line 2
+    new-instance v0, Ljava/util/LinkedHashMap;
+
+    invoke-direct {v0}, Ljava/util/LinkedHashMap;-><init>()V
+
+    .line 3
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lidf;->a:Ljava/lang/String;
+    .line 4
+    iput-object v0, p0, Lidf;->a:Ljava/lang/Object;
 
-    iput-wide p2, p0, Lidf;->b:J
+    return-void
+.end method
 
-    iput-object p4, p0, Lidf;->c:Ltkf;
+.method public synthetic constructor <init>(Ljava/lang/Object;)V
+    .locals 0
 
-    iput-object p5, p0, Lidf;->o:Ls1b;
+    .line 1
+    iput-object p1, p0, Lidf;->a:Ljava/lang/Object;
 
-    iput-object p6, p0, Lidf;->X:Lief;
-
-    iput-object p7, p0, Lidf;->Y:Ljava/lang/ref/WeakReference;
-
-    iput-object p8, p0, Lidf;->Z:Liw7;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final I()I
+.method public accept(Ljava/lang/Object;)V
     .locals 0
 
-    iget-object p0, p0, Lidf;->X:Lief;
+    .line 13
+    check-cast p1, Ljava/lang/Throwable;
 
-    invoke-interface {p0}, Lief;->getHeight()I
+    .line 14
+    iget-object p0, p0, Lidf;->a:Ljava/lang/Object;
 
-    move-result p0
+    check-cast p0, Lru/ok/tamtam/upload/workers/UploadFileAttachWorker;
 
-    return p0
+    .line 15
+    invoke-virtual {p0, p1}, Lru/ok/tamtam/upload/workers/UploadFileAttachWorker;->e(Ljava/lang/Throwable;)V
+
+    return-void
 .end method
 
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 7
+.method public accept(Ljava/lang/Object;Ljava/lang/Object;)V
+    .locals 3
 
-    const/4 v0, 0x1
+    check-cast p1, Ly2h;
 
-    if-ne p0, p1, :cond_0
+    check-cast p2, La0f;
 
-    return v0
+    .line 1
+    invoke-virtual {p1}, Lcom/google/android/gms/common/internal/a;->o()Landroid/os/IInterface;
 
-    :cond_0
-    instance-of v1, p1, Lidf;
+    move-result-object p1
+
+    check-cast p1, Lu2h;
+
+    iget-object p0, p0, Lidf;->a:Ljava/lang/Object;
+
+    check-cast p0, Lw0f;
+
+    .line 2
+    invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
+
+    move-result-object v0
+
+    iget-object v1, p1, Lk1h;->e:Ljava/lang/String;
+
+    .line 3
+    invoke-virtual {v0, v1}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
+
+    .line 4
+    sget v1, La2h;->a:I
+
+    const/4 v1, 0x1
 
     const/4 v2, 0x0
 
-    if-nez v1, :cond_1
+    if-nez p0, :cond_0
 
-    return v2
+    .line 5
+    invoke-virtual {v0, v2}, Landroid/os/Parcel;->writeInt(I)V
 
-    :cond_1
-    check-cast p1, Lidf;
+    goto :goto_0
 
-    iget-object v1, p0, Lidf;->a:Ljava/lang/String;
+    .line 6
+    :cond_0
+    invoke-virtual {v0, v1}, Landroid/os/Parcel;->writeInt(I)V
 
-    iget-object v3, p1, Lidf;->a:Ljava/lang/String;
+    .line 7
+    invoke-virtual {p0, v0, v2}, Lw0f;->writeToParcel(Landroid/os/Parcel;I)V
 
-    invoke-static {v1, v3}, Lxq7;->d(Ljava/lang/Object;Ljava/lang/Object;)Z
+    .line 8
+    :goto_0
+    :try_start_0
+    iget-object p0, p1, Lk1h;->d:Landroid/os/IBinder;
 
-    move-result v1
+    const/4 p1, 0x0
 
-    if-nez v1, :cond_2
+    invoke-interface {p0, v1, v0, p1, v1}, Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    return v2
+    .line 9
+    invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
-    :cond_2
-    iget-wide v3, p0, Lidf;->b:J
+    .line 10
+    invoke-virtual {p2, p1}, La0f;->b(Ljava/lang/Object;)V
 
-    iget-wide v5, p1, Lidf;->b:J
+    return-void
 
-    cmp-long v1, v3, v5
+    :catchall_0
+    move-exception p0
 
-    if-eqz v1, :cond_3
+    .line 11
+    invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
-    return v2
-
-    :cond_3
-    iget-object v1, p0, Lidf;->c:Ltkf;
-
-    iget-object v3, p1, Lidf;->c:Ltkf;
-
-    invoke-static {v1, v3}, Lxq7;->d(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_4
-
-    return v2
-
-    :cond_4
-    iget-object v1, p0, Lidf;->o:Ls1b;
-
-    iget-object v3, p1, Lidf;->o:Ls1b;
-
-    invoke-static {v1, v3}, Lxq7;->d(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_5
-
-    return v2
-
-    :cond_5
-    iget-object v1, p0, Lidf;->X:Lief;
-
-    iget-object v3, p1, Lidf;->X:Lief;
-
-    invoke-static {v1, v3}, Lxq7;->d(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_6
-
-    return v2
-
-    :cond_6
-    iget-object v1, p0, Lidf;->Y:Ljava/lang/ref/WeakReference;
-
-    iget-object v3, p1, Lidf;->Y:Ljava/lang/ref/WeakReference;
-
-    invoke-static {v1, v3}, Lxq7;->d(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_7
-
-    return v2
-
-    :cond_7
-    iget-object p0, p0, Lidf;->Z:Liw7;
-
-    iget-object p1, p1, Lidf;->Z:Liw7;
-
-    invoke-static {p0, p1}, Lxq7;->d(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p0
-
-    if-nez p0, :cond_8
-
-    return v2
-
-    :cond_8
-    return v0
+    .line 12
+    throw p0
 .end method
 
-.method public final f()I
-    .locals 0
-
-    const/4 p0, 0x2
-
-    return p0
-.end method
-
-.method public final hashCode()I
+.method public d(Lcom/google/android/gms/tasks/Task;)Ljava/lang/Object;
     .locals 4
 
-    iget-object v0, p0, Lidf;->a:Ljava/lang/String;
+    iget-object p0, p0, Lidf;->a:Ljava/lang/Object;
 
-    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
+    check-cast p0, Lz0b;
 
-    move-result v0
-
-    const/16 v1, 0x1f
-
-    mul-int/2addr v0, v1
-
-    iget-wide v2, p0, Lidf;->b:J
-
-    invoke-static {v0, v1, v2, v3}, Lzge;->m(IIJ)I
+    invoke-virtual {p1}, Lcom/google/android/gms/tasks/Task;->h()Z
 
     move-result v0
 
-    iget-object v2, p0, Lidf;->c:Ltkf;
+    if-nez v0, :cond_5
 
-    invoke-virtual {v2}, Ljava/lang/Object;->hashCode()I
+    move-object v0, p1
 
-    move-result v2
+    check-cast v0, Lz8h;
 
-    add-int/2addr v2, v0
+    iget-boolean v0, v0, Lz8h;->d:Z
 
-    mul-int/2addr v2, v1
+    if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lidf;->o:Ls1b;
+    goto :goto_1
 
-    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
-
-    move-result v0
-
-    add-int/2addr v0, v2
-
-    mul-int/2addr v0, v1
-
-    iget-object v2, p0, Lidf;->X:Lief;
-
-    invoke-virtual {v2}, Ljava/lang/Object;->hashCode()I
-
-    move-result v2
-
-    add-int/2addr v2, v0
-
-    mul-int/2addr v2, v1
-
-    iget-object v0, p0, Lidf;->Y:Ljava/lang/ref/WeakReference;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
-
-    move-result v0
-
-    add-int/2addr v0, v2
-
-    mul-int/2addr v0, v1
-
-    iget-object p0, p0, Lidf;->Z:Liw7;
-
-    invoke-virtual {p0}, Ljava/lang/Object;->hashCode()I
-
-    move-result p0
-
-    add-int/2addr p0, v0
-
-    return p0
-.end method
-
-.method public final n(Landroid/view/Surface;)V
-    .locals 9
-
-    const-class v0, Lidf;
-
-    invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
+    :cond_0
+    invoke-virtual {p1}, Lcom/google/android/gms/tasks/Task;->e()Ljava/lang/Exception;
 
     move-result-object v0
 
-    sget-object v1, Lg47;->m:Llr6;
+    instance-of v1, v0, Lcom/google/android/gms/common/api/ApiException;
 
-    if-nez v1, :cond_0
+    if-eqz v1, :cond_5
 
-    goto :goto_0
+    check-cast v0, Lcom/google/android/gms/common/api/ApiException;
 
-    :cond_0
-    invoke-interface {v1}, Llr6;->c()Z
+    iget-object v0, v0, Lcom/google/android/gms/common/api/ApiException;->a:Lcom/google/android/gms/common/api/Status;
 
-    move-result v2
+    iget v0, v0, Lcom/google/android/gms/common/api/Status;->a:I
 
-    if-eqz v2, :cond_1
+    const v1, 0xa7f9
 
-    sget-object v2, Lqs7;->o:Lqs7;
+    if-eq v0, v1, :cond_4
 
-    iget-wide v3, p0, Lidf;->b:J
+    const v1, 0xa7fa
 
-    iget-object v5, p0, Lidf;->a:Ljava/lang/String;
+    if-eq v0, v1, :cond_4
 
-    iget-object v6, p0, Lidf;->c:Ltkf;
+    const v1, 0xa7fb
 
-    invoke-virtual {v6}, Ltkf;->c()Z
+    if-eq v0, v1, :cond_4
 
-    move-result v6
+    const/16 v1, 0x11
 
-    const-string v7, "Player autoplay. Surface created, \n                            |msgId:"
-
-    const-string v8, ", \n                            |attachId:"
-
-    invoke-static {v7, v3, v4, v8, v5}, Lp3a;->k(Ljava/lang/String;JLjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v3
-
-    const-string v4, "\n                            |playing:"
-
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v3, v6}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v3
-
-    invoke-static {v3}, Lk8e;->l0(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v3
-
-    const/4 v4, 0x0
-
-    invoke-interface {v1, v2, v0, v3, v4}, Llr6;->d(Lqs7;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    :cond_1
-    :goto_0
-    iget-object p0, p0, Lidf;->c:Ltkf;
-
-    invoke-virtual {p0, p1}, Ltkf;->L0(Landroid/view/Surface;)V
-
-    return-void
-.end method
-
-.method public final onSurfaceTextureDestroyed(Landroid/graphics/SurfaceTexture;)V
-    .locals 9
-
-    const-class p1, Lidf;
-
-    invoke-virtual {p1}, Ljava/lang/Class;->getName()Ljava/lang/String;
-
-    move-result-object p1
-
-    sget-object v0, Lg47;->m:Llr6;
-
-    if-nez v0, :cond_0
+    if-ne v0, v1, :cond_1
 
     goto :goto_0
 
-    :cond_0
-    invoke-interface {v0}, Llr6;->c()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_1
-
-    sget-object v1, Lqs7;->o:Lqs7;
-
-    iget-wide v2, p0, Lidf;->b:J
-
-    iget-object v4, p0, Lidf;->a:Ljava/lang/String;
-
-    iget-object v5, p0, Lidf;->c:Ltkf;
-
-    invoke-virtual {v5}, Ltkf;->c()Z
-
-    move-result v5
-
-    iget-object v6, p0, Lidf;->Z:Liw7;
-
-    invoke-virtual {v6}, Liw7;->g()I
-
-    move-result v6
-
-    const-string v7, "Player autoplay. Surface destroyed, \n                            |msgId:"
-
-    const-string v8, ", \n                            |attachId:"
-
-    invoke-static {v7, v2, v3, v8, v4}, Lp3a;->k(Ljava/lang/String;JLjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v2
-
-    const-string v3, "\n                            |playing:"
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v2, v5}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    const-string v3, "\n                            |states:"
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v2, v6}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-static {v2}, Lk8e;->l0(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v2
-
-    const/4 v3, 0x0
-
-    invoke-interface {v0, v1, p1, v2, v3}, Llr6;->d(Lqs7;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
     :cond_1
-    :goto_0
-    iget-object p1, p0, Lidf;->o:Ls1b;
+    const p0, 0xa7f8
 
-    iget-object v0, p0, Lidf;->c:Ltkf;
+    if-ne v0, p0, :cond_2
 
-    invoke-interface {p1, v0}, Ls1b;->a(Ltkf;)V
+    new-instance p0, Ljava/lang/Exception;
 
-    iget-object p1, p0, Lidf;->Y:Ljava/lang/ref/WeakReference;
+    const-string p1, "Failed to get app set ID due to an internal error. Please try again later."
 
-    invoke-virtual {p1}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
+    invoke-direct {p0, p1}, Ljava/lang/Exception;-><init>(Ljava/lang/String;)V
 
-    move-result-object p1
-
-    check-cast p1, Lumf;
-
-    if-eqz p1, :cond_2
-
-    invoke-interface {p1}, Lumf;->u()V
-
-    :cond_2
-    iget-object p1, p0, Lidf;->Z:Liw7;
-
-    iget-object p0, p0, Lidf;->a:Ljava/lang/String;
-
-    invoke-virtual {p1, p0}, Liw7;->e(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-void
-.end method
-
-.method public final r()I
-    .locals 0
-
-    iget-object p0, p0, Lidf;->X:Lief;
-
-    invoke-interface {p0}, Lief;->getWidth()I
-
-    move-result p0
-
-    return p0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 5
-
-    const-string v0, "PlayingState(attachId="
-
-    const-string v1, ", messageId="
-
-    iget-wide v2, p0, Lidf;->b:J
-
-    iget-object v4, p0, Lidf;->a:Ljava/lang/String;
-
-    invoke-static {v0, v2, v3, v4, v1}, Lzge;->q(Ljava/lang/String;JLjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    const-string v1, ", player="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lidf;->c:Ltkf;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", playerHolder="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lidf;->o:Ls1b;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", videoContent="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lidf;->X:Lief;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", weakViewRef="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lidf;->Y:Ljava/lang/ref/WeakReference;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", states="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object p0, p0, Lidf;->Z:Liw7;
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string p0, ")"
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-static {p0}, Lzyd;->m(Ljava/lang/Exception;)Lz8h;
 
     move-result-object p0
 
     return-object p0
+
+    :cond_2
+    const/16 p0, 0xf
+
+    if-eq v0, p0, :cond_3
+
+    goto :goto_1
+
+    :cond_3
+    new-instance p0, Ljava/lang/Exception;
+
+    const-string p1, "The operation to get app set ID timed out. Please try again later."
+
+    invoke-direct {p0, p1}, Ljava/lang/Exception;-><init>(Ljava/lang/String;)V
+
+    invoke-static {p0}, Lzyd;->m(Ljava/lang/Exception;)Lz8h;
+
+    move-result-object p0
+
+    return-object p0
+
+    :cond_4
+    :goto_0
+    iget-object p0, p0, Lz0b;->c:Ljava/lang/Object;
+
+    check-cast p0, Li7h;
+
+    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    new-instance p1, La0f;
+
+    invoke-direct {p1}, La0f;-><init>()V
+
+    iget-object v0, p0, Li7h;->c:Ljava/lang/Object;
+
+    check-cast v0, Ljava/util/concurrent/ExecutorService;
+
+    new-instance v1, Lnwg;
+
+    const/4 v2, 0x4
+
+    const/4 v3, 0x0
+
+    invoke-direct {v1, p0, p1, v3, v2}, Lnwg;-><init>(Ljava/lang/Object;Ljava/lang/Object;ZI)V
+
+    invoke-interface {v0, v1}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
+
+    iget-object p0, p1, La0f;->a:Lz8h;
+
+    return-object p0
+
+    :cond_5
+    :goto_1
+    return-object p1
 .end method

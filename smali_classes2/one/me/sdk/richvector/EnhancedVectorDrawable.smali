@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lwbf;
+.implements Latf;
 
 
 # annotations
@@ -12,12 +12,12 @@
 
 .annotation runtime Lkotlin/Metadata;
     d1 = {
-        "\u0000\u0088\u0001\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0008\n\u0002\u0008\u0003\n\u0002\u0018\u0002\n\u0002\u0008\u0004\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0004\n\u0002\u0010\u0007\n\u0002\u0008\u0003\n\u0002\u0018\u0002\n\u0002\u0008\u0006\n\u0002\u0018\u0002\n\u0002\u0008\u0003\n\u0002\u0018\u0002\n\u0002\u0008\u0003\n\u0002\u0018\u0002\n\u0002\u0008\u0003\n\u0002\u0018\u0002\n\u0002\u0008\u0007\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0010\u000e\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0003\n\u0002\u0018\u0002\n\u0002\u0008\u0010\n\u0002\u0018\u0002\n\u0002\u0008\u0005\u0008\u0017\u0018\u0000 R2\u00020\u00012\u00020\u0002:\u0001SB\u0019\u0008\u0016\u0012\u0006\u0010\u0004\u001a\u00020\u0003\u0012\u0006\u0010\u0006\u001a\u00020\u0005\u00a2\u0006\u0004\u0008\u0007\u0010\u0008B\u001b\u0008\u0016\u0012\u0006\u0010\n\u001a\u00020\t\u0012\u0008\u0008\u0001\u0010\u0006\u001a\u00020\u0005\u00a2\u0006\u0004\u0008\u0007\u0010\u000bB\u0011\u0008\u0010\u0012\u0006\u0010\u000c\u001a\u00020\u0000\u00a2\u0006\u0004\u0008\u0007\u0010\rJ\u0017\u0010\u000f\u001a\u00020\u000e2\u0006\u0010\u0006\u001a\u00020\u0005H\u0002\u00a2\u0006\u0004\u0008\u000f\u0010\u0010J\u000f\u0010\u0012\u001a\u00020\u0011H\u0002\u00a2\u0006\u0004\u0008\u0012\u0010\u0013J\u000f\u0010\u0014\u001a\u00020\u0011H\u0002\u00a2\u0006\u0004\u0008\u0014\u0010\u0013J\u000f\u0010\u0015\u001a\u00020\u0011H\u0002\u00a2\u0006\u0004\u0008\u0015\u0010\u0013J\u0017\u0010\u0018\u001a\u00020\u00052\u0006\u0010\u0017\u001a\u00020\u0016H\u0002\u00a2\u0006\u0004\u0008\u0018\u0010\u0019J\u0017\u0010\u001c\u001a\u00020\u00112\u0006\u0010\u001b\u001a\u00020\u001aH\u0016\u00a2\u0006\u0004\u0008\u001c\u0010\u001dJ\u0017\u0010\u001f\u001a\u00020\u00112\u0006\u0010\u001e\u001a\u00020\u0005H\u0016\u00a2\u0006\u0004\u0008\u001f\u0010 J\u0019\u0010#\u001a\u00020\u00112\u0008\u0010\"\u001a\u0004\u0018\u00010!H\u0017\u00a2\u0006\u0004\u0008#\u0010$J\u0019\u0010\'\u001a\u00020\u00112\u0008\u0010&\u001a\u0004\u0018\u00010%H\u0017\u00a2\u0006\u0004\u0008\'\u0010(J\u0017\u0010+\u001a\u00020\u00112\u0006\u0010*\u001a\u00020)H\u0014\u00a2\u0006\u0004\u0008+\u0010,J\u0019\u0010/\u001a\u00020\u00112\u0008\u0010.\u001a\u0004\u0018\u00010-H\u0016\u00a2\u0006\u0004\u0008/\u00100J\u000f\u00101\u001a\u00020\u0005H\u0016\u00a2\u0006\u0004\u00081\u00102J\u000f\u00103\u001a\u00020\u0005H\u0016\u00a2\u0006\u0004\u00083\u00102J\u000f\u00104\u001a\u00020\u0005H\u0016\u00a2\u0006\u0004\u00084\u00102J\u000f\u00106\u001a\u000205H\u0016\u00a2\u0006\u0004\u00086\u00107J\u0019\u0010;\u001a\u0004\u0018\u00010:2\u0006\u00109\u001a\u000208H\u0016\u00a2\u0006\u0004\u0008;\u0010<J\u000f\u0010=\u001a\u00020\u0011H\u0016\u00a2\u0006\u0004\u0008=\u0010\u0013J\u0019\u0010A\u001a\u0004\u0018\u00010>2\u0006\u00109\u001a\u000208H\u0000\u00a2\u0006\u0004\u0008?\u0010@J\r\u0010B\u001a\u00020\u0016\u00a2\u0006\u0004\u0008B\u0010CR\u0014\u0010\u0006\u001a\u00020\u00058\u0002X\u0083\u0004\u00a2\u0006\u0006\n\u0004\u0008\u0006\u0010DR\u0014\u0010\n\u001a\u00020\t8\u0002X\u0082\u0004\u00a2\u0006\u0006\n\u0004\u0008\n\u0010ER\u0014\u0010F\u001a\u00020\u000e8\u0002X\u0082\u0004\u00a2\u0006\u0006\n\u0004\u0008F\u0010GR\u0016\u0010H\u001a\u00020\u00058\u0002@\u0002X\u0082\u000e\u00a2\u0006\u0006\n\u0004\u0008H\u0010DR\u0016\u0010I\u001a\u00020\u00058\u0002@\u0002X\u0082\u000e\u00a2\u0006\u0006\n\u0004\u0008I\u0010DR\u0016\u0010J\u001a\u00020\u00058\u0002@\u0002X\u0082\u000e\u00a2\u0006\u0006\n\u0004\u0008J\u0010DR\u0016\u0010K\u001a\u00020\u00058\u0002@\u0002X\u0082\u000e\u00a2\u0006\u0006\n\u0004\u0008K\u0010DR\u0016\u0010L\u001a\u00020\u00168\u0002@\u0002X\u0082\u000e\u00a2\u0006\u0006\n\u0004\u0008L\u0010MR\u0016\u0010N\u001a\u00020\u00168\u0002@\u0002X\u0082\u000e\u00a2\u0006\u0006\n\u0004\u0008N\u0010MR\u0014\u0010P\u001a\u00020O8\u0002X\u0082\u0004\u00a2\u0006\u0006\n\u0004\u0008P\u0010Q\u00a8\u0006T"
+        "\u0000\u0088\u0001\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0008\n\u0002\u0008\u0003\n\u0002\u0018\u0002\n\u0002\u0008\u0004\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0004\n\u0002\u0010\u0007\n\u0002\u0008\u0003\n\u0002\u0018\u0002\n\u0002\u0008\u0008\n\u0002\u0018\u0002\n\u0002\u0008\u0003\n\u0002\u0018\u0002\n\u0002\u0008\u0003\n\u0002\u0018\u0002\n\u0002\u0008\u0003\n\u0002\u0018\u0002\n\u0002\u0008\u0007\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0010\u000e\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0003\n\u0002\u0018\u0002\n\u0002\u0008\u0010\n\u0002\u0018\u0002\n\u0002\u0008\u0005\u0008\u0017\u0018\u0000 T2\u00020\u00012\u00020\u0002:\u0001UB\u0019\u0008\u0016\u0012\u0006\u0010\u0004\u001a\u00020\u0003\u0012\u0006\u0010\u0006\u001a\u00020\u0005\u00a2\u0006\u0004\u0008\u0007\u0010\u0008B\u001b\u0008\u0016\u0012\u0006\u0010\n\u001a\u00020\t\u0012\u0008\u0008\u0001\u0010\u0006\u001a\u00020\u0005\u00a2\u0006\u0004\u0008\u0007\u0010\u000bB\u0011\u0008\u0010\u0012\u0006\u0010\u000c\u001a\u00020\u0000\u00a2\u0006\u0004\u0008\u0007\u0010\rJ\u0017\u0010\u000f\u001a\u00020\u000e2\u0006\u0010\u0006\u001a\u00020\u0005H\u0002\u00a2\u0006\u0004\u0008\u000f\u0010\u0010J\u000f\u0010\u0012\u001a\u00020\u0011H\u0002\u00a2\u0006\u0004\u0008\u0012\u0010\u0013J\u000f\u0010\u0014\u001a\u00020\u0011H\u0002\u00a2\u0006\u0004\u0008\u0014\u0010\u0013J\u000f\u0010\u0015\u001a\u00020\u0011H\u0002\u00a2\u0006\u0004\u0008\u0015\u0010\u0013J\u0017\u0010\u0018\u001a\u00020\u00052\u0006\u0010\u0017\u001a\u00020\u0016H\u0002\u00a2\u0006\u0004\u0008\u0018\u0010\u0019J\u0017\u0010\u001c\u001a\u00020\u00112\u0006\u0010\u001b\u001a\u00020\u001aH\u0016\u00a2\u0006\u0004\u0008\u001c\u0010\u001dJ\u0017\u0010\u001f\u001a\u00020\u00112\u0006\u0010\u001e\u001a\u00020\u0005H\u0016\u00a2\u0006\u0004\u0008\u001f\u0010 J\u000f\u0010!\u001a\u00020\u0000H\u0016\u00a2\u0006\u0004\u0008!\u0010\"J\u0019\u0010%\u001a\u00020\u00112\u0008\u0010$\u001a\u0004\u0018\u00010#H\u0017\u00a2\u0006\u0004\u0008%\u0010&J\u0019\u0010)\u001a\u00020\u00112\u0008\u0010(\u001a\u0004\u0018\u00010\'H\u0017\u00a2\u0006\u0004\u0008)\u0010*J\u0017\u0010-\u001a\u00020\u00112\u0006\u0010,\u001a\u00020+H\u0014\u00a2\u0006\u0004\u0008-\u0010.J\u0019\u00101\u001a\u00020\u00112\u0008\u00100\u001a\u0004\u0018\u00010/H\u0016\u00a2\u0006\u0004\u00081\u00102J\u000f\u00103\u001a\u00020\u0005H\u0016\u00a2\u0006\u0004\u00083\u00104J\u000f\u00105\u001a\u00020\u0005H\u0016\u00a2\u0006\u0004\u00085\u00104J\u000f\u00106\u001a\u00020\u0005H\u0016\u00a2\u0006\u0004\u00086\u00104J\u000f\u00108\u001a\u000207H\u0016\u00a2\u0006\u0004\u00088\u00109J\u0019\u0010=\u001a\u0004\u0018\u00010<2\u0006\u0010;\u001a\u00020:H\u0016\u00a2\u0006\u0004\u0008=\u0010>J\u000f\u0010?\u001a\u00020\u0011H\u0016\u00a2\u0006\u0004\u0008?\u0010\u0013J\u0019\u0010C\u001a\u0004\u0018\u00010@2\u0006\u0010;\u001a\u00020:H\u0000\u00a2\u0006\u0004\u0008A\u0010BJ\r\u0010D\u001a\u00020\u0016\u00a2\u0006\u0004\u0008D\u0010ER\u0014\u0010\u0006\u001a\u00020\u00058\u0002X\u0083\u0004\u00a2\u0006\u0006\n\u0004\u0008\u0006\u0010FR\u0014\u0010\n\u001a\u00020\t8\u0002X\u0082\u0004\u00a2\u0006\u0006\n\u0004\u0008\n\u0010GR\u0016\u0010H\u001a\u00020\u000e8\u0002@\u0002X\u0082\u000e\u00a2\u0006\u0006\n\u0004\u0008H\u0010IR\u0016\u0010J\u001a\u00020\u00058\u0002@\u0002X\u0082\u000e\u00a2\u0006\u0006\n\u0004\u0008J\u0010FR\u0016\u0010K\u001a\u00020\u00058\u0002@\u0002X\u0082\u000e\u00a2\u0006\u0006\n\u0004\u0008K\u0010FR\u0016\u0010L\u001a\u00020\u00058\u0002@\u0002X\u0082\u000e\u00a2\u0006\u0006\n\u0004\u0008L\u0010FR\u0016\u0010M\u001a\u00020\u00058\u0002@\u0002X\u0082\u000e\u00a2\u0006\u0006\n\u0004\u0008M\u0010FR\u0016\u0010N\u001a\u00020\u00168\u0002@\u0002X\u0082\u000e\u00a2\u0006\u0006\n\u0004\u0008N\u0010OR\u0016\u0010P\u001a\u00020\u00168\u0002@\u0002X\u0082\u000e\u00a2\u0006\u0006\n\u0004\u0008P\u0010OR\u0014\u0010R\u001a\u00020Q8\u0002X\u0082\u0004\u00a2\u0006\u0006\n\u0004\u0008R\u0010S\u00a8\u0006V"
     }
     d2 = {
         "Lone/me/sdk/richvector/EnhancedVectorDrawable;",
         "Landroid/graphics/drawable/Drawable;",
-        "Lwbf;",
+        "Latf;",
         "Landroid/content/Context;",
         "context",
         "",
@@ -32,7 +32,7 @@
         "Lone/me/sdk/richvector/internal/element/Shape;",
         "buildShape",
         "(I)Lone/me/sdk/richvector/internal/element/Shape;",
-        "Le5f;",
+        "Lylf;",
         "buildScaleMatrix",
         "()V",
         "scaleAllPaths",
@@ -48,6 +48,8 @@
         "alpha",
         "setAlpha",
         "(I)V",
+        "mutate",
+        "()Lone/me/sdk/richvector/EnhancedVectorDrawable;",
         "Landroid/content/res/ColorStateList;",
         "tint",
         "setTintList",
@@ -98,7 +100,7 @@
         "scaleMatrix",
         "Landroid/graphics/Matrix;",
         "Companion",
-        "y15",
+        "j75",
         "rich-vector_release"
     }
     k = 0x1
@@ -112,7 +114,7 @@
 
 
 # static fields
-.field private static final Companion:Ly15;
+.field private static final Companion:Lj75;
 
 .field private static final TAG:Ljava/lang/String; = "EnhancedVectorDrawable"
 
@@ -130,7 +132,7 @@
 
 .field private scaleRatio:F
 
-.field private final shape:Lone/me/sdk/richvector/internal/element/Shape;
+.field private shape:Lone/me/sdk/richvector/internal/element/Shape;
 
 .field private strokeRatio:F
 
@@ -143,11 +145,11 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    new-instance v0, Ly15;
+    new-instance v0, Lj75;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    sput-object v0, Lone/me/sdk/richvector/EnhancedVectorDrawable;->Companion:Ly15;
+    sput-object v0, Lone/me/sdk/richvector/EnhancedVectorDrawable;->Companion:Lj75;
 
     return-void
 .end method
@@ -207,7 +209,7 @@
     goto :goto_0
 
     :cond_0
-    sget-object p1, Lone/me/sdk/richvector/internal/element/Shape;->Companion:Lrhd;
+    sget-object p1, Lone/me/sdk/richvector/internal/element/Shape;->Companion:Lgvd;
 
     invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
@@ -223,23 +225,25 @@
     .line 11
     invoke-virtual {p1}, Lone/me/sdk/richvector/internal/element/Shape;->getWidth()F
 
-    move-result p2
-
-    invoke-direct {p0, p2}, Lone/me/sdk/richvector/EnhancedVectorDrawable;->dp(F)I
-
-    move-result p2
-
-    invoke-virtual {p1}, Lone/me/sdk/richvector/internal/element/Shape;->getHeight()F
-
     move-result p1
 
     invoke-direct {p0, p1}, Lone/me/sdk/richvector/EnhancedVectorDrawable;->dp(F)I
 
     move-result p1
 
+    iget-object p2, p0, Lone/me/sdk/richvector/EnhancedVectorDrawable;->shape:Lone/me/sdk/richvector/internal/element/Shape;
+
+    invoke-virtual {p2}, Lone/me/sdk/richvector/internal/element/Shape;->getHeight()F
+
+    move-result p2
+
+    invoke-direct {p0, p2}, Lone/me/sdk/richvector/EnhancedVectorDrawable;->dp(F)I
+
+    move-result p2
+
     const/4 v0, 0x0
 
-    invoke-virtual {p0, v0, v0, p2, p1}, Landroid/graphics/drawable/Drawable;->setBounds(IIII)V
+    invoke-virtual {p0, v0, v0, p1, p2}, Landroid/graphics/drawable/Drawable;->setBounds(IIII)V
 
     return-void
 .end method
@@ -292,6 +296,8 @@
     invoke-direct {p0, p1}, Lone/me/sdk/richvector/EnhancedVectorDrawable;->dp(F)I
 
     move-result p1
+
+    iget-object v0, p0, Lone/me/sdk/richvector/EnhancedVectorDrawable;->shape:Lone/me/sdk/richvector/internal/element/Shape;
 
     invoke-virtual {v0}, Lone/me/sdk/richvector/internal/element/Shape;->getHeight()F
 
@@ -430,15 +436,15 @@
         }
     .end annotation
 
-    new-instance v0, Lubf;
+    new-instance v0, Lysf;
 
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lone/me/sdk/richvector/EnhancedVectorDrawable;->resources:Landroid/content/res/Resources;
 
-    sget-object v1, Lubf;->a:Lzvd;
+    sget-object v1, Lysf;->a:Leuc;
 
-    iget-object v2, v1, Lzvd;->b:Ljava/lang/Object;
+    iget-object v2, v1, Leuc;->b:Ljava/lang/Object;
 
     check-cast v2, Landroid/util/LruCache;
 
@@ -467,15 +473,15 @@
 
     move-result-object v3
 
-    new-instance v0, Ll23;
+    new-instance v0, Lj53;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    new-instance v4, Ll23;
+    new-instance v4, Lj53;
 
     invoke-direct {v4}, Ljava/lang/Object;-><init>()V
 
-    new-instance v5, Ll23;
+    new-instance v5, Lj53;
 
     invoke-direct {v5}, Ljava/lang/Object;-><init>()V
 
@@ -499,7 +505,7 @@
 
     const/4 v13, 0x0
 
-    invoke-direct/range {v6 .. v15}, Lone/me/sdk/richvector/internal/element/Shape;-><init>(Ljava/lang/String;FFIFFLone/me/sdk/richvector/internal/element/ElementHolder;ILl94;)V
+    invoke-direct/range {v6 .. v15}, Lone/me/sdk/richvector/internal/element/Shape;-><init>(Ljava/lang/String;FFIFFLone/me/sdk/richvector/internal/element/ElementHolder;ILld4;)V
 
     new-instance v7, Ljava/util/Stack;
 
@@ -538,7 +544,7 @@
     goto/16 :goto_8
 
     :cond_1
-    invoke-static/range {v17 .. v17}, Lzt1;->v(I)[I
+    invoke-static/range {v17 .. v17}, Lmw1;->w(I)[I
 
     move-result-object v8
 
@@ -551,7 +557,7 @@
 
     aget v18, v8, v9
 
-    invoke-static/range {v18 .. v18}, Lzge;->h(I)Ljava/lang/String;
+    invoke-static/range {v18 .. v18}, Lwsf;->b(I)Ljava/lang/String;
 
     move-result-object v12
 
@@ -583,9 +589,9 @@
     goto :goto_3
 
     :cond_4
-    sget-object v8, Ltbf;->$EnumSwitchMapping$0:[I
+    sget-object v8, Lxsf;->$EnumSwitchMapping$0:[I
 
-    invoke-static {v14}, Lzt1;->s(I)I
+    invoke-static {v14}, Lmw1;->t(I)I
 
     move-result v9
 
@@ -759,7 +765,7 @@
     :cond_e
     const/4 v9, 0x0
 
-    invoke-static/range {v17 .. v17}, Lzt1;->v(I)[I
+    invoke-static/range {v17 .. v17}, Lmw1;->w(I)[I
 
     move-result-object v8
 
@@ -772,7 +778,7 @@
 
     aget v16, v8, v14
 
-    invoke-static/range {v16 .. v16}, Lzge;->h(I)Ljava/lang/String;
+    invoke-static/range {v16 .. v16}, Lwsf;->b(I)Ljava/lang/String;
 
     move-result-object v9
 
@@ -804,9 +810,9 @@
     goto :goto_7
 
     :cond_11
-    sget-object v8, Ltbf;->$EnumSwitchMapping$0:[I
+    sget-object v8, Lxsf;->$EnumSwitchMapping$0:[I
 
-    invoke-static {v14}, Lzt1;->s(I)I
+    invoke-static {v14}, Lmw1;->t(I)I
 
     move-result v9
 
@@ -831,7 +837,7 @@
 
     if-ne v8, v12, :cond_12
 
-    invoke-virtual {v5, v3}, Ll23;->P(Landroid/content/res/XmlResourceParser;)Lone/me/sdk/richvector/internal/element/ClipPathElement;
+    invoke-virtual {v5, v3}, Lj53;->J(Landroid/content/res/XmlResourceParser;)Lone/me/sdk/richvector/internal/element/ClipPathElement;
 
     move-result-object v11
 
@@ -845,14 +851,14 @@
     throw v0
 
     :cond_13
-    invoke-virtual {v4, v3}, Ll23;->R(Landroid/content/res/XmlResourceParser;)Lone/me/sdk/richvector/internal/element/PathElement;
+    invoke-virtual {v4, v3}, Lj53;->L(Landroid/content/res/XmlResourceParser;)Lone/me/sdk/richvector/internal/element/PathElement;
 
     move-result-object v10
 
     goto :goto_8
 
     :cond_14
-    invoke-virtual {v0, v3}, Ll23;->Q(Landroid/content/res/XmlResourceParser;)Lone/me/sdk/richvector/internal/element/GroupElement;
+    invoke-virtual {v0, v3}, Lj53;->K(Landroid/content/res/XmlResourceParser;)Lone/me/sdk/richvector/internal/element/GroupElement;
 
     move-result-object v8
 
@@ -861,11 +867,11 @@
     goto :goto_8
 
     :cond_15
-    new-instance v8, Ll23;
+    new-instance v8, Lj53;
 
     invoke-direct {v8}, Ljava/lang/Object;-><init>()V
 
-    invoke-virtual {v8, v3}, Ll23;->S(Landroid/content/res/XmlResourceParser;)Lone/me/sdk/richvector/internal/element/Shape;
+    invoke-virtual {v8, v3}, Lj53;->M(Landroid/content/res/XmlResourceParser;)Lone/me/sdk/richvector/internal/element/Shape;
 
     move-result-object v6
 
@@ -901,7 +907,7 @@
     goto :goto_9
 
     :goto_c
-    iget-object v0, v1, Lzvd;->b:Ljava/lang/Object;
+    iget-object v0, v1, Leuc;->b:Ljava/lang/Object;
 
     check-cast v0, Landroid/util/LruCache;
 
@@ -1077,7 +1083,7 @@
 
     move-result-object v0
 
-    invoke-static {v0, p1}, Lxq7;->d(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, p1}, Lvyg;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -1122,9 +1128,9 @@
 .method public getConstantState()Landroid/graphics/drawable/Drawable$ConstantState;
     .locals 1
 
-    new-instance v0, Llf;
+    new-instance v0, Lqf;
 
-    invoke-direct {v0, p0}, Llf;-><init>(Lone/me/sdk/richvector/EnhancedVectorDrawable;)V
+    invoke-direct {v0, p0}, Lqf;-><init>(Lone/me/sdk/richvector/EnhancedVectorDrawable;)V
 
     return-object v0
 .end method
@@ -1282,6 +1288,28 @@
     invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->invalidateSelf()V
 
     return-void
+.end method
+
+.method public bridge synthetic mutate()Landroid/graphics/drawable/Drawable;
+    .locals 0
+
+    .line 1
+    invoke-virtual {p0}, Lone/me/sdk/richvector/EnhancedVectorDrawable;->mutate()Lone/me/sdk/richvector/EnhancedVectorDrawable;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public mutate()Lone/me/sdk/richvector/EnhancedVectorDrawable;
+    .locals 1
+
+    .line 2
+    new-instance v0, Lone/me/sdk/richvector/EnhancedVectorDrawable;
+
+    invoke-direct {v0, p0}, Lone/me/sdk/richvector/EnhancedVectorDrawable;-><init>(Lone/me/sdk/richvector/EnhancedVectorDrawable;)V
+
+    return-object v0
 .end method
 
 .method public onBoundsChange(Landroid/graphics/Rect;)V

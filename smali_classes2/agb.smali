@@ -1,104 +1,105 @@
 .class public final Lagb;
-.super Lcgb;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:I
+.field public final a:Lcl7;
+
+.field public final b:Lcl7;
+
+.field public final c:Lcl7;
+
+.field public final d:Lcl7;
+
+.field public final e:Lcl7;
+
+.field public final f:Lcl7;
 
 
 # direct methods
-.method public constructor <init>(I)V
+.method public constructor <init>(Lcl7;Lcl7;Lcl7;Lcl7;Lcl7;Lcl7;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput p1, p0, Lagb;->a:I
+    iput-object p1, p0, Lagb;->a:Lcl7;
+
+    iput-object p2, p0, Lagb;->b:Lcl7;
+
+    iput-object p3, p0, Lagb;->c:Lcl7;
+
+    iput-object p4, p0, Lagb;->d:Lcl7;
+
+    iput-object p5, p0, Lagb;->e:Lcl7;
+
+    iput-object p6, p0, Lagb;->f:Lcl7;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 3
+.method public final a(Ls72;Luz8;)Lzfb;
+    .locals 7
 
-    const/4 v0, 0x1
+    new-instance v0, Lzfb;
 
-    if-ne p0, p1, :cond_0
+    iget-object v1, p0, Lagb;->a:Lcl7;
 
-    return v0
+    invoke-interface {v1}, Lcl7;->getValue()Ljava/lang/Object;
 
-    :cond_0
-    instance-of v1, p1, Lagb;
+    move-result-object v1
 
-    const/4 v2, 0x0
+    check-cast v1, Ldka;
 
-    if-nez v1, :cond_1
+    iget-object v2, p0, Lagb;->b:Lcl7;
 
-    return v2
+    invoke-interface {v2}, Lcl7;->getValue()Ljava/lang/Object;
 
-    :cond_1
-    check-cast p1, Lagb;
+    move-result-object v2
 
-    iget p0, p0, Lagb;->a:I
+    check-cast v2, Lco3;
 
-    iget p1, p1, Lagb;->a:I
+    iget-object v3, p0, Lagb;->c:Lcl7;
 
-    if-ne p0, p1, :cond_2
+    invoke-interface {v3}, Lcl7;->getValue()Ljava/lang/Object;
 
-    return v0
+    move-result-object v3
 
-    :cond_2
-    return v2
-.end method
+    check-cast v3, Lqgb;
 
-.method public final getItemId()J
-    .locals 2
+    iget-object v4, p0, Lagb;->d:Lcl7;
 
-    const/16 p0, 0x400
+    invoke-interface {v4}, Lcl7;->getValue()Ljava/lang/Object;
 
-    int-to-long v0, p0
+    move-result-object v4
 
-    return-wide v0
-.end method
+    check-cast v4, Ljn4;
 
-.method public final hashCode()I
-    .locals 0
+    iget-object v4, p0, Lagb;->e:Lcl7;
 
-    iget p0, p0, Lagb;->a:I
+    invoke-interface {v4}, Lcl7;->getValue()Ljava/lang/Object;
 
-    invoke-static {p0}, Ljava/lang/Integer;->hashCode(I)I
+    move-result-object v4
 
-    move-result p0
+    check-cast v4, Lq95;
 
-    return p0
-.end method
+    iget-object p0, p0, Lagb;->f:Lcl7;
 
-.method public final m()I
-    .locals 0
-
-    iget p0, p0, Lagb;->a:I
-
-    return p0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 2
-
-    iget p0, p0, Lagb;->a:I
-
-    invoke-static {p0}, Lxqd;->D(I)Ljava/lang/String;
+    invoke-interface {p0}, Lcl7;->getValue()Ljava/lang/Object;
 
     move-result-object p0
 
-    const-string v0, "Loading(itemViewType="
+    move-object v6, p0
 
-    const-string v1, ")"
+    check-cast v6, Ltj;
 
-    invoke-static {v0, p0, v1}, Lu88;->k(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    move-object v5, p1
 
-    move-result-object p0
+    move-object v4, p2
 
-    return-object p0
+    invoke-direct/range {v0 .. v6}, Lzfb;-><init>(Ldka;Lco3;Lqgb;Luz8;Ls72;Ltj;)V
+
+    return-object v0
 .end method

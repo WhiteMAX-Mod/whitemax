@@ -2,26 +2,21 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lg89;
+
 
 # instance fields
-.field public final a:Lizd;
-
-.field public final b:Llzd;
-
-.field public final c:Lozd;
+.field public final a:J
 
 
 # direct methods
-.method public constructor <init>(Lizd;Llzd;Lozd;)V
+.method public constructor <init>(J)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lkzd;->a:Lizd;
-
-    iput-object p2, p0, Lkzd;->b:Llzd;
-
-    iput-object p3, p0, Lkzd;->c:Lozd;
+    iput-wide p1, p0, Lkzd;->a:J
 
     return-void
 .end method
@@ -29,7 +24,7 @@
 
 # virtual methods
 .method public final equals(Ljava/lang/Object;)Z
-    .locals 4
+    .locals 5
 
     const/4 v0, 0x1
 
@@ -49,116 +44,42 @@
     :cond_1
     check-cast p1, Lkzd;
 
-    iget-object v1, p0, Lkzd;->a:Lizd;
+    iget-wide v3, p0, Lkzd;->a:J
 
-    iget-object v3, p1, Lkzd;->a:Lizd;
+    iget-wide p0, p1, Lkzd;->a:J
 
-    invoke-static {v1, v3}, Lxq7;->d(Ljava/lang/Object;Ljava/lang/Object;)Z
+    cmp-long p0, v3, p0
 
-    move-result v1
-
-    if-nez v1, :cond_2
+    if-eqz p0, :cond_2
 
     return v2
 
     :cond_2
-    iget-object v1, p0, Lkzd;->b:Llzd;
-
-    iget-object v3, p1, Lkzd;->b:Llzd;
-
-    invoke-static {v1, v3}, Lxq7;->d(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_3
-
-    return v2
-
-    :cond_3
-    iget-object p0, p0, Lkzd;->c:Lozd;
-
-    iget-object p1, p1, Lkzd;->c:Lozd;
-
-    invoke-static {p0, p1}, Lxq7;->d(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p0
-
-    if-nez p0, :cond_4
-
-    return v2
-
-    :cond_4
     return v0
 .end method
 
 .method public final hashCode()I
     .locals 2
 
-    iget-object v0, p0, Lkzd;->a:Lizd;
+    iget-wide v0, p0, Lkzd;->a:J
 
-    invoke-virtual {v0}, Lizd;->hashCode()I
-
-    move-result v0
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget-object v1, p0, Lkzd;->b:Llzd;
-
-    iget-object v1, v1, Llzd;->a:Lmzd;
-
-    invoke-virtual {v1}, Lmzd;->hashCode()I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    mul-int/lit8 v1, v1, 0x1f
-
-    iget-object p0, p0, Lkzd;->c:Lozd;
-
-    invoke-virtual {p0}, Lozd;->hashCode()I
+    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
 
     move-result p0
-
-    add-int/2addr p0, v1
 
     return p0
 .end method
 
 .method public final toString()Ljava/lang/String;
-    .locals 2
+    .locals 4
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    const-string v0, "ShowEditMessage(messageId="
 
-    const-string v1, "StatesColors(background="
+    const-string v1, ")"
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    iget-wide v2, p0, Lkzd;->a:J
 
-    iget-object v1, p0, Lkzd;->a:Lizd;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", icon="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lkzd;->b:Llzd;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", text="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object p0, p0, Lkzd;->c:Lozd;
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string p0, ")"
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-static {v2, v3, v0, v1}, Lwsf;->e(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
 

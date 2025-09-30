@@ -993,7 +993,7 @@
 
     const-string v5, "AudioTrack: session ID: "
 
-    invoke-static {v5, v0, v3, v1, v4}, Lpg0;->j(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {v5, v0, v3, v1, v4}, Lsg0;->j(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
@@ -1369,7 +1369,7 @@
 
     const-string v3, "AudioTrack.play failed - incorrect state :"
 
-    invoke-static {v1, v3}, Lm26;->h(ILjava/lang/String;)Ljava/lang/String;
+    invoke-static {v1, v3}, Lyv7;->e(ILjava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
@@ -1390,7 +1390,7 @@
 
     const-string v3, "AudioTrack.play failed: "
 
-    invoke-static {v3, v0}, Lpg0;->g(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v3, v0}, Lsg0;->g(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 

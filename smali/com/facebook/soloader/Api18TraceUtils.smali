@@ -8,7 +8,7 @@
     value = 0x12
 .end annotation
 
-.annotation build Lpm4;
+.annotation build Ldr4;
 .end annotation
 
 
@@ -24,7 +24,7 @@
 .method public static a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
     .locals 3
 
-    invoke-static {p0, p1, p2}, Lv04;->j(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p0, p1, p2}, Lsq3;->h(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -50,7 +50,7 @@
 
     sub-int/2addr v2, v0
 
-    invoke-static {p0}, Lzt1;->l(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {p0}, Lmw1;->m(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object p0
 

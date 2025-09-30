@@ -1,338 +1,71 @@
 .class public final Ljqa;
-.super Ljava/lang/Object;
+.super Ljx3;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:I
+.field public X:Ljava/io/File;
 
-.field public final b:I
+.field public Y:Lsre;
 
-.field public final c:I
+.field public Z:Ljava/io/File;
 
-.field public final d:I
+.field public o:Ljava/lang/Object;
 
-.field public final e:Ljava/lang/String;
+.field public r0:Ljava/lang/Object;
 
-.field public final f:Llqa;
+.field public s0:Lhqa;
 
-.field public final g:I
+.field public t0:Z
 
-.field public final h:I
+.field public synthetic u0:Ljava/lang/Object;
 
-.field public final i:Ljava/lang/String;
+.field public final synthetic v0:Loqa;
+
+.field public w0:I
 
 
 # direct methods
-.method public constructor <init>(IIIILjava/lang/String;Llqa;IILjava/lang/String;)V
+.method public constructor <init>(Loqa;Ljx3;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Ljqa;->v0:Loqa;
 
-    iput p1, p0, Ljqa;->a:I
-
-    iput p2, p0, Ljqa;->b:I
-
-    iput p3, p0, Ljqa;->c:I
-
-    iput p4, p0, Ljqa;->d:I
-
-    iput-object p5, p0, Ljqa;->e:Ljava/lang/String;
-
-    iput-object p6, p0, Ljqa;->f:Llqa;
-
-    iput p7, p0, Ljqa;->g:I
-
-    iput p8, p0, Ljqa;->h:I
-
-    iput-object p9, p0, Ljqa;->i:Ljava/lang/String;
+    invoke-direct {p0, p2}, Ljx3;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 2
+.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 7
 
-    if-ne p0, p1, :cond_0
+    iput-object p1, p0, Ljqa;->u0:Ljava/lang/Object;
 
-    const/4 p0, 0x1
+    iget p1, p0, Ljqa;->w0:I
 
-    return p0
+    const/high16 v0, -0x80000000
 
-    :cond_0
-    if-eqz p1, :cond_a
+    or-int/2addr p1, v0
 
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    iput p1, p0, Ljqa;->w0:I
 
-    move-result-object v0
+    const/4 v4, 0x0
 
-    const-class v1, Ljqa;
+    const/4 v5, 0x0
 
-    invoke-virtual {v1, v0}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_1
-
-    goto :goto_0
-
-    :cond_1
-    check-cast p1, Ljqa;
-
-    iget v0, p0, Ljqa;->a:I
-
-    iget v1, p1, Ljqa;->a:I
-
-    if-eq v0, v1, :cond_2
-
-    goto :goto_0
-
-    :cond_2
-    iget v0, p0, Ljqa;->b:I
-
-    iget v1, p1, Ljqa;->b:I
-
-    if-eq v0, v1, :cond_3
-
-    goto :goto_0
-
-    :cond_3
-    iget v0, p0, Ljqa;->c:I
-
-    iget v1, p1, Ljqa;->c:I
-
-    if-eq v0, v1, :cond_4
-
-    goto :goto_0
-
-    :cond_4
-    iget v0, p0, Ljqa;->d:I
-
-    iget v1, p1, Ljqa;->d:I
-
-    if-eq v0, v1, :cond_5
-
-    goto :goto_0
-
-    :cond_5
-    iget v0, p0, Ljqa;->h:I
-
-    iget v1, p1, Ljqa;->h:I
-
-    if-eq v0, v1, :cond_6
-
-    goto :goto_0
-
-    :cond_6
-    iget-object v0, p0, Ljqa;->i:Ljava/lang/String;
-
-    iget-object v1, p1, Ljqa;->i:Ljava/lang/String;
-
-    invoke-static {v0, v1}, Lxq7;->d(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_7
-
-    goto :goto_0
-
-    :cond_7
-    iget-object v0, p0, Ljqa;->f:Llqa;
-
-    iget-object v1, p1, Ljqa;->f:Llqa;
-
-    invoke-static {v0, v1}, Lxq7;->d(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_8
-
-    goto :goto_0
-
-    :cond_8
-    iget v0, p0, Ljqa;->g:I
-
-    iget v1, p1, Ljqa;->g:I
-
-    if-eq v0, v1, :cond_9
-
-    goto :goto_0
-
-    :cond_9
-    iget-object p0, p0, Ljqa;->e:Ljava/lang/String;
-
-    iget-object p1, p1, Ljqa;->e:Ljava/lang/String;
-
-    invoke-static {p0, p1}, Lxq7;->d(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p0
-
-    return p0
-
-    :cond_a
-    :goto_0
-    const/4 p0, 0x0
-
-    return p0
-.end method
-
-.method public final hashCode()I
-    .locals 3
-
-    iget v0, p0, Ljqa;->a:I
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget v1, p0, Ljqa;->b:I
-
-    add-int/2addr v0, v1
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget v1, p0, Ljqa;->c:I
-
-    add-int/2addr v0, v1
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget v1, p0, Ljqa;->d:I
-
-    add-int/2addr v0, v1
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget v1, p0, Ljqa;->h:I
-
-    add-int/2addr v0, v1
-
-    mul-int/lit8 v0, v0, 0x1f
+    iget-object v0, p0, Ljqa;->v0:Loqa;
 
     const/4 v1, 0x0
 
-    iget-object v2, p0, Ljqa;->e:Ljava/lang/String;
+    const/4 v2, 0x0
 
-    if-eqz v2, :cond_0
+    const/4 v3, 0x0
 
-    invoke-virtual {v2}, Ljava/lang/String;->hashCode()I
+    move-object v6, p0
 
-    move-result v2
-
-    goto :goto_0
-
-    :cond_0
-    move v2, v1
-
-    :goto_0
-    add-int/2addr v0, v2
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget-object v2, p0, Ljqa;->f:Llqa;
-
-    if-eqz v2, :cond_1
-
-    iget-object v2, v2, Llqa;->a:Ljava/util/LinkedHashMap;
-
-    invoke-virtual {v2}, Ljava/lang/Object;->hashCode()I
-
-    move-result v2
-
-    goto :goto_1
-
-    :cond_1
-    move v2, v1
-
-    :goto_1
-    add-int/2addr v0, v2
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget v2, p0, Ljqa;->g:I
-
-    add-int/2addr v0, v2
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget-object p0, p0, Ljqa;->i:Ljava/lang/String;
-
-    if-eqz p0, :cond_2
-
-    invoke-virtual {p0}, Ljava/lang/String;->hashCode()I
-
-    move-result v1
-
-    :cond_2
-    add-int/2addr v0, v1
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 5
-
-    const-string v0, ", initialMaxDimension="
-
-    const-string v1, ", maxBitrateK="
-
-    const-string v2, "PeerVideoSettings{maxDimension="
-
-    iget v3, p0, Ljqa;->a:I
-
-    iget v4, p0, Ljqa;->b:I
-
-    invoke-static {v2, v3, v0, v4, v1}, Lpg0;->j(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    const-string v1, ", maxFrameRate="
-
-    const-string v2, ", temporalLayersCount="
-
-    iget v3, p0, Ljqa;->c:I
-
-    iget v4, p0, Ljqa;->d:I
-
-    invoke-static {v0, v3, v1, v4, v2}, Lv04;->p(Ljava/lang/StringBuilder;ILjava/lang/String;ILjava/lang/String;)V
-
-    iget v1, p0, Ljqa;->h:I
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string v1, ", degradationPreference=\'"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Ljqa;->e:Ljava/lang/String;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, "\', bitrateTable="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Ljqa;->f:Llqa;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", mediaAdaptationScale="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget v1, p0, Ljqa;->g:I
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string v1, ", source=\'"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, "\'}"
-
-    iget-object p0, p0, Ljqa;->i:Ljava/lang/String;
-
-    invoke-static {v0, p0, v1}, Lm26;->j(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual/range {v0 .. v6}, Loqa;->b(Ljava/lang/String;Ljava/io/File;Lsre;Ljava/lang/String;ZLjx3;)Ljava/lang/Object;
 
     move-result-object p0
 

@@ -1,54 +1,48 @@
-.class public abstract Lb36;
-.super Ljava/lang/Object;
-.source "SourceFile"
+.class public final Lb36;
+.super Ljx3;
 
 
 # instance fields
-.field public final a:Lmje;
+.field public X:I
 
-.field public final b:Le45;
+.field public final synthetic Y:Lmy2;
 
-.field public c:I
-
-.field public d:I
-
-.field public e:Lhef;
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Lmje;Le45;)V
+.method public constructor <init>(Lmy2;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lb36;->Y:Lmy2;
 
-    iput-object p1, p0, Lb36;->a:Lmje;
-
-    iput-object p2, p0, Lb36;->b:Le45;
+    invoke-direct {p0, p2}, Ljx3;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public a(Lhef;II)V
+.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
 
-    iget-object v0, p0, Lb36;->e:Lhef;
+    iput-object p1, p0, Lb36;->o:Ljava/lang/Object;
 
-    invoke-virtual {p1, v0}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+    iget p1, p0, Lb36;->X:I
 
-    move-result v0
+    const/high16 v0, -0x80000000
 
-    if-eqz v0, :cond_0
+    or-int/2addr p1, v0
 
-    return-void
+    iput p1, p0, Lb36;->X:I
 
-    :cond_0
-    iput-object p1, p0, Lb36;->e:Lhef;
+    iget-object p1, p0, Lb36;->Y:Lmy2;
 
-    iput p2, p0, Lb36;->c:I
+    const/4 v0, 0x0
 
-    iput p3, p0, Lb36;->d:I
+    invoke-virtual {p1, v0, p0}, Lmy2;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
-    return-void
+    move-result-object p0
+
+    return-object p0
 .end method

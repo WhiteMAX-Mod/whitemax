@@ -3,31 +3,19 @@
 .source "SourceFile"
 
 
-# instance fields
-.field public a:Lzw1;
-
-.field public final b:Lw4d;
-
-.field public final c:Lykc;
-
-.field public final d:Lxt1;
+# static fields
+.field public static final a:Lrx1;
 
 
 # direct methods
-.method public constructor <init>(Lw4d;Lykc;Lxt1;)V
+.method static constructor <clinit>()V
     .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lrx1;
 
-    const/4 v0, 0x0
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    iput-object v0, p0, Lrx1;->a:Lzw1;
-
-    iput-object p1, p0, Lrx1;->b:Lw4d;
-
-    iput-object p2, p0, Lrx1;->c:Lykc;
-
-    iput-object p3, p0, Lrx1;->d:Lxt1;
+    sput-object v0, Lrx1;->a:Lrx1;
 
     return-void
 .end method

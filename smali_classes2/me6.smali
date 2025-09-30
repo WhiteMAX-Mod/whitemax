@@ -1,142 +1,236 @@
 .class public final Lme6;
-.super Lqde;
+.super Lre6;
 .source "SourceFile"
-
-# interfaces
-.implements Ll66;
 
 
 # instance fields
-.field public final synthetic X:Landroid/text/Layout;
+.field public final a:Ljava/lang/String;
 
-.field public final synthetic Y:Lne6;
+.field public final b:Ljava/util/List;
+
+.field public final c:Lhe6;
 
 
 # direct methods
-.method public constructor <init>(Landroid/text/Layout;Lne6;Lkotlin/coroutines/Continuation;)V
-    .locals 0
+.method public constructor <init>(Ljava/lang/String;Ljava/lang/String;Ljava/util/List;)V
+    .locals 1
 
-    iput-object p1, p0, Lme6;->X:Landroid/text/Layout;
+    new-instance v0, Lhe6;
 
-    iput-object p2, p0, Lme6;->Y:Lne6;
+    invoke-direct {v0, p2}, Lhe6;-><init>(Ljava/lang/String;)V
 
-    const/4 p1, 0x2
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, p1, p3}, Lqde;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-object p1, p0, Lme6;->a:Ljava/lang/String;
+
+    iput-object p3, p0, Lme6;->b:Ljava/util/List;
+
+    iput-object v0, p0, Lme6;->c:Lhe6;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+.method public final a(Lle6;)[Ljava/lang/String;
     .locals 0
 
-    check-cast p1, Lox3;
+    iget-object p0, p0, Lme6;->a:Ljava/lang/String;
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Lme6;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    filled-new-array {p0}, [Ljava/lang/String;
 
     move-result-object p0
 
-    check-cast p0, Lme6;
-
-    sget-object p1, Le5f;->a:Le5f;
-
-    invoke-virtual {p0, p1}, Lme6;->o(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p1
+    return-object p0
 .end method
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+.method public final b()Ljava/lang/String;
+    .locals 0
+
+    iget-object p0, p0, Lme6;->a:Ljava/lang/String;
+
+    return-object p0
+.end method
+
+.method public final c()Lr3;
+    .locals 0
+
+    iget-object p0, p0, Lme6;->c:Lhe6;
+
+    return-object p0
+.end method
+
+.method public final d()Ljava/util/List;
+    .locals 0
+
+    iget-object p0, p0, Lme6;->b:Ljava/util/List;
+
+    return-object p0
+.end method
+
+.method public final e(Lle6;)Ljava/lang/String;
     .locals 1
 
-    new-instance p1, Lme6;
+    iget-object p0, p1, Lle6;->a:Ljava/lang/String;
 
-    iget-object v0, p0, Lme6;->X:Landroid/text/Layout;
+    invoke-virtual {p1}, Lle6;->b()Ljava/lang/String;
 
-    iget-object p0, p0, Lme6;->Y:Lne6;
+    move-result-object p1
 
-    invoke-direct {p1, v0, p0, p2}, Lme6;-><init>(Landroid/text/Layout;Lne6;Lkotlin/coroutines/Continuation;)V
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    return-object p1
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string p0, " AND "
+
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string p0, " = ?"
+
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    return-object p0
 .end method
 
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final equals(Ljava/lang/Object;)Z
     .locals 4
 
-    iget-object v0, p0, Lme6;->X:Landroid/text/Layout;
+    const/4 v0, 0x1
 
-    invoke-static {p1}, Lsgg;->Z(Ljava/lang/Object;)V
+    if-ne p0, p1, :cond_0
 
-    sget-object p1, Lne6;->c:Lh3b;
-
-    invoke-virtual {p1}, Lh3b;->g()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Landroid/graphics/Picture;
-
-    if-nez v1, :cond_0
-
-    new-instance v1, Landroid/graphics/Picture;
-
-    invoke-direct {v1}, Landroid/graphics/Picture;-><init>()V
+    return v0
 
     :cond_0
-    :try_start_0
-    invoke-virtual {v0}, Landroid/text/Layout;->getWidth()I
+    instance-of v1, p1, Lme6;
 
-    move-result v2
+    const/4 v2, 0x0
 
-    invoke-virtual {v0}, Landroid/text/Layout;->getHeight()I
+    if-nez v1, :cond_1
 
-    move-result v3
+    return v2
 
-    invoke-virtual {v1, v2, v3}, Landroid/graphics/Picture;->beginRecording(II)Landroid/graphics/Canvas;
+    :cond_1
+    check-cast p1, Lme6;
 
-    move-result-object v2
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    iget-object v1, p0, Lme6;->a:Ljava/lang/String;
 
-    :try_start_1
-    invoke-virtual {v0, v2}, Landroid/text/Layout;->draw(Landroid/graphics/Canvas;)V
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_1
+    iget-object v3, p1, Lme6;->a:Ljava/lang/String;
 
-    :try_start_2
-    invoke-virtual {v1}, Landroid/graphics/Picture;->endRecording()V
+    invoke-static {v1, v3}, Lvyg;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    invoke-virtual {p1, v1}, Lh3b;->f(Ljava/lang/Object;)Z
+    move-result v1
 
-    goto :goto_1
+    if-nez v1, :cond_2
 
-    :catchall_0
-    move-exception p1
+    return v2
 
-    goto :goto_0
+    :cond_2
+    iget-object v1, p0, Lme6;->b:Ljava/util/List;
 
-    :catchall_1
-    move-exception p1
+    iget-object v3, p1, Lme6;->b:Ljava/util/List;
 
-    invoke-virtual {v1}, Landroid/graphics/Picture;->endRecording()V
+    invoke-static {v1, v3}, Lvyg;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    throw p1
-    :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_0
+    move-result v1
 
-    :goto_0
-    iget-object p0, p0, Lme6;->Y:Lne6;
+    if-nez v1, :cond_3
 
-    iget-object p0, p0, Lne6;->b:Ljava/lang/String;
+    return v2
 
-    const-string v0, "fail to warm layout"
+    :cond_3
+    iget-object p0, p0, Lme6;->c:Lhe6;
 
-    invoke-static {p0, v0, p1}, Lg47;->r(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    iget-object p1, p1, Lme6;->c:Lhe6;
 
-    :goto_1
-    sget-object p0, Le5f;->a:Le5f;
+    invoke-static {p0, p1}, Lvyg;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p0
+
+    if-nez p0, :cond_4
+
+    return v2
+
+    :cond_4
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 3
+
+    iget-object v0, p0, Lme6;->a:Ljava/lang/String;
+
+    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
+
+    move-result v0
+
+    const/16 v1, 0x1f
+
+    mul-int/2addr v0, v1
+
+    iget-object v2, p0, Lme6;->b:Ljava/util/List;
+
+    invoke-static {v2, v0, v1}, Lz7e;->n(Ljava/util/List;II)I
+
+    move-result v0
+
+    iget-object p0, p0, Lme6;->c:Lhe6;
+
+    iget-object p0, p0, Lhe6;->a:Ljava/lang/String;
+
+    invoke-virtual {p0}, Ljava/lang/String;->hashCode()I
+
+    move-result p0
+
+    add-int/2addr p0, v0
+
+    return p0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 2
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "Real(id="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v1, p0, Lme6;->a:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", queryParams="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lme6;->b:Ljava/util/List;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", name="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object p0, p0, Lme6;->c:Lhe6;
+
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string p0, ")"
+
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
 
     return-object p0
 .end method

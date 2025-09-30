@@ -1,149 +1,90 @@
-.class public final Lia;
+.class public final synthetic Lia;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-
-# static fields
-.field public static final c:Lia;
+# interfaces
+.implements Landroid/view/View$OnClickListener;
 
 
 # instance fields
-.field public final a:Lmoe;
+.field public final synthetic a:I
 
-.field public final b:Ljava/util/List;
+.field public final synthetic b:Lone/me/calls/ui/ui/waitingroom/AdminWaitingRoomScreen;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
-
-    new-instance v0, Lia;
-
-    sget-object v1, Lmoe;->a:Lloe;
-
-    sget-object v2, Lgz4;->a:Lgz4;
-
-    invoke-direct {v0, v1, v2}, Lia;-><init>(Lmoe;Ljava/util/List;)V
-
-    sput-object v0, Lia;->c:Lia;
-
-    return-void
-.end method
-
-.method public constructor <init>(Lmoe;Ljava/util/List;)V
+.method public synthetic constructor <init>(Lone/me/calls/ui/ui/waitingroom/AdminWaitingRoomScreen;I)V
     .locals 0
 
+    iput p2, p0, Lia;->a:I
+
+    iput-object p1, p0, Lia;->b:Lone/me/calls/ui/ui/waitingroom/AdminWaitingRoomScreen;
+
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lia;->a:Lmoe;
-
-    iput-object p2, p0, Lia;->b:Ljava/util/List;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
+.method public final onClick(Landroid/view/View;)V
+    .locals 0
 
-    const/4 v0, 0x1
+    iget p1, p0, Lia;->a:I
 
-    if-ne p0, p1, :cond_0
+    iget-object p0, p0, Lia;->b:Lone/me/calls/ui/ui/waitingroom/AdminWaitingRoomScreen;
 
-    return v0
+    packed-switch p1, :pswitch_data_0
 
-    :cond_0
-    instance-of v1, p1, Lia;
+    sget-object p1, Lone/me/calls/ui/ui/waitingroom/AdminWaitingRoomScreen;->r0:[Lxi7;
 
-    const/4 v2, 0x0
+    invoke-virtual {p0}, Lxx3;->getRouter()Lrzc;
 
-    if-nez v1, :cond_1
+    move-result-object p1
 
-    return v2
+    invoke-virtual {p1, p0}, Lrzc;->B(Lxx3;)Z
 
-    :cond_1
-    check-cast p1, Lia;
+    return-void
 
-    iget-object v1, p0, Lia;->a:Lmoe;
+    :pswitch_0
+    sget-object p1, Lone/me/calls/ui/ui/waitingroom/AdminWaitingRoomScreen;->r0:[Lxi7;
 
-    iget-object v3, p1, Lia;->a:Lmoe;
+    iget-object p0, p0, Lone/me/calls/ui/ui/waitingroom/AdminWaitingRoomScreen;->a:Lcl7;
 
-    invoke-static {v1, v3}, Lxq7;->d(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_2
-
-    return v2
-
-    :cond_2
-    iget-object p0, p0, Lia;->b:Ljava/util/List;
-
-    iget-object p1, p1, Lia;->b:Ljava/util/List;
-
-    invoke-static {p0, p1}, Lxq7;->d(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p0
-
-    if-nez p0, :cond_3
-
-    return v2
-
-    :cond_3
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 1
-
-    iget-object v0, p0, Lia;->a:Lmoe;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
-
-    move-result v0
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget-object p0, p0, Lia;->b:Ljava/util/List;
-
-    invoke-virtual {p0}, Ljava/lang/Object;->hashCode()I
-
-    move-result p0
-
-    add-int/2addr p0, v0
-
-    return p0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 2
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "AdminWaitingRoomState(subtitle="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v1, p0, Lia;->a:Lmoe;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", list="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object p0, p0, Lia;->b:Ljava/util/List;
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string p0, ")"
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-interface {p0}, Lcl7;->getValue()Ljava/lang/Object;
 
     move-result-object p0
 
-    return-object p0
+    check-cast p0, Loa;
+
+    const/4 p1, 0x0
+
+    invoke-virtual {p0, p1}, Loa;->q(Z)V
+
+    return-void
+
+    :pswitch_1
+    sget-object p1, Lone/me/calls/ui/ui/waitingroom/AdminWaitingRoomScreen;->r0:[Lxi7;
+
+    iget-object p0, p0, Lone/me/calls/ui/ui/waitingroom/AdminWaitingRoomScreen;->a:Lcl7;
+
+    invoke-interface {p0}, Lcl7;->getValue()Ljava/lang/Object;
+
+    move-result-object p0
+
+    check-cast p0, Loa;
+
+    const/4 p1, 0x1
+
+    invoke-virtual {p0, p1}, Loa;->q(Z)V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

@@ -1,191 +1,154 @@
-.class public final synthetic Lkke;
-.super Ljava/lang/Object;
+.class public final Lkke;
+.super Lure;
 .source "SourceFile"
 
 # interfaces
-.implements Lm66;
+.implements Lpc6;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public X:I
 
-.field public final synthetic b:Like;
+.field public final synthetic Y:Loke;
 
 
 # direct methods
-.method public synthetic constructor <init>(Like;I)V
+.method public constructor <init>(Loke;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    iput p2, p0, Lkke;->a:I
+    iput-object p1, p0, Lkke;->Y:Loke;
 
-    iput-object p1, p0, Lkke;->b:Like;
+    const/4 p1, 0x2
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p1, p2}, Lure;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final apply(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 5
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    iget v0, p0, Lkke;->a:I
+    check-cast p1, Ly04;
+
+    check-cast p2, Lkotlin/coroutines/Continuation;
+
+    invoke-virtual {p0, p1, p2}, Lkke;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+
+    move-result-object p0
+
+    check-cast p0, Lkke;
+
+    sget-object p1, Lylf;->a:Lylf;
+
+    invoke-virtual {p0, p1}, Lkke;->o(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 0
+
+    new-instance p1, Lkke;
+
+    iget-object p0, p0, Lkke;->Y:Loke;
+
+    invoke-direct {p1, p0, p2}, Lkke;-><init>(Loke;Lkotlin/coroutines/Continuation;)V
+
+    return-object p1
+.end method
+
+.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 4
+
+    iget v0, p0, Lkke;->X:I
 
     const/4 v1, 0x1
 
-    iget-object p0, p0, Lkke;->b:Like;
+    if-eqz v0, :cond_1
 
-    packed-switch v0, :pswitch_data_0
+    if-ne v0, v1, :cond_0
 
-    check-cast p1, Ljava/lang/Throwable;
-
-    instance-of v0, p1, Lone/me/sdk/transfer/exceptions/HttpErrorException;
-
-    if-nez v0, :cond_0
-
-    invoke-static {p1}, Lvw9;->f(Ljava/lang/Throwable;)Lv93;
-
-    move-result-object p0
+    invoke-static {p1}, Lqe5;->V(Ljava/lang/Object;)V
 
     goto :goto_0
 
     :cond_0
-    instance-of v0, p1, Lone/me/sdk/transfer/exceptions/HttpUrlExpiredException;
+    new-instance p0, Ljava/lang/IllegalStateException;
 
-    const/4 v2, 0x0
+    const-string p1, "call to \'resume\' before \'invoke\' with coroutine"
 
-    const-string v3, "lke"
+    invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    if-eqz v0, :cond_1
-
-    const-string p0, "retryWhenTamHttpError: skipped retry on TamHttpUrlExpiredException"
-
-    invoke-static {v3, p0, v2}, Lg47;->r(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    invoke-static {p1}, Lvw9;->f(Ljava/lang/Throwable;)Lv93;
-
-    move-result-object p0
-
-    goto :goto_0
+    throw p0
 
     :cond_1
-    move-object v0, p1
+    invoke-static {p1}, Lqe5;->V(Ljava/lang/Object;)V
 
-    check-cast v0, Lone/me/sdk/transfer/exceptions/HttpErrorException;
+    iget-object p1, p0, Lkke;->Y:Loke;
 
-    iget-object v4, v0, Lone/me/sdk/transfer/exceptions/HttpErrorException;->a:Lhq6;
+    iget-object p1, p1, Loke;->o:Lcl7;
 
-    invoke-static {v4}, Lfq0;->G(Lhq6;)Z
-
-    move-result v4
-
-    if-eqz v4, :cond_2
-
-    new-instance p0, Ljava/lang/StringBuilder;
-
-    const-string v1, "retryWhenTamHttpError: critical upload error="
-
-    invoke-direct {p0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {p0, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    invoke-static {v3, p0, v2}, Lg47;->r(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    invoke-static {p1}, Lvw9;->f(Ljava/lang/Throwable;)Lv93;
-
-    move-result-object p0
-
-    goto :goto_0
-
-    :cond_2
-    iget-object p1, p0, Like;->a:Lje7;
-
-    invoke-interface {p1}, Lje7;->getValue()Ljava/lang/Object;
+    invoke-interface {p1}, Lcl7;->getValue()Ljava/lang/Object;
 
     move-result-object p1
 
-    check-cast p1, Lm9d;
+    check-cast p1, Lgkc;
 
-    check-cast p1, Lo9d;
+    invoke-virtual {p1}, Lgkc;->b()Lzjc;
 
-    iget p1, p1, Lo9d;->h:I
+    move-result-object v0
 
-    invoke-static {p1}, Like;->a(I)Z
+    sget-object v2, Ldkc;->o:Ldkc;
 
-    move-result p1
+    invoke-static {v2}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
 
-    if-nez p1, :cond_3
+    move-result-object v2
 
-    const-string p1, "retryWhenTamHttpError: no connection, await for connection available"
+    invoke-virtual {v0, v2}, Lzjc;->a(Ljava/util/List;)Ly4a;
 
-    invoke-static {v3, p1}, Lg47;->p(Ljava/lang/String;Ljava/lang/String;)V
+    move-result-object v0
 
-    invoke-virtual {p0}, Like;->b()Lrz9;
+    new-instance v2, Lsd1;
 
-    move-result-object p0
+    const/16 v3, 0x12
 
-    new-instance p1, Ll2e;
+    invoke-direct {v2, v3, p1}, Lsd1;-><init>(ILjava/lang/Object;)V
 
-    const/4 v0, 0x7
+    new-instance v3, Lh6a;
 
-    invoke-direct {p1, v0}, Ll2e;-><init>(I)V
+    invoke-direct {v3, v0, v2}, Lh6a;-><init>(Ly4a;Lqc6;)V
 
-    sget-object v0, Lkhg;->d:Llp3;
+    iget-object p1, p1, Lgkc;->c:Lzte;
 
-    sget-object v1, Lkhg;->c:Lc76;
+    invoke-virtual {p1}, Lzte;->getValue()Ljava/lang/Object;
 
-    new-instance v2, Lsx9;
+    move-result-object p1
 
-    invoke-direct {v2, p0, p1, v0, v1}, Lsx9;-><init>(Lvw9;Ljj3;Ljj3;Lc6;)V
+    check-cast p1, Lv5d;
 
-    move-object p0, v2
+    invoke-virtual {v3, p1}, Lhc3;->j(Lv5d;)Lqc3;
 
-    goto :goto_0
+    move-result-object p1
 
-    :cond_3
-    const-string p0, "retryWhenTamHttpError: http error"
+    iput v1, p0, Lkke;->X:I
 
-    invoke-static {v3, p0, v0}, Lg47;->r(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    int-to-long p0, v1
-
-    sget-object v0, Ljava/util/concurrent/TimeUnit;->SECONDS:Ljava/util/concurrent/TimeUnit;
-
-    invoke-static {}, Ltsc;->a()Lgsc;
-
-    move-result-object v1
-
-    invoke-static {p0, p1, v0, v1}, Lvw9;->t(JLjava/util/concurrent/TimeUnit;Lgsc;)Lyz9;
+    invoke-static {p1, p0}, Lgy7;->g(Lhc3;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
     move-result-object p0
 
+    sget-object p1, Lz04;->a:Lz04;
+
+    if-ne p0, p1, :cond_2
+
+    return-object p1
+
+    :cond_2
     :goto_0
-    return-object p0
-
-    :pswitch_0
-    check-cast p1, Lvw9;
-
-    new-instance v0, Lkke;
-
-    invoke-direct {v0, p0, v1}, Lkke;-><init>(Like;I)V
-
-    const p0, 0x7fffffff
-
-    invoke-virtual {p1, v0, p0}, Lvw9;->g(Lm66;I)Lvw9;
-
-    move-result-object p0
+    sget-object p0, Lylf;->a:Lylf;
 
     return-object p0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
 .end method

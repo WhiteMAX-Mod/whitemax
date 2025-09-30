@@ -1,9 +1,9 @@
 .class final Lru/ok/android/externcalls/sdk/audio/internal/impl3/CallsAudioManagerV3Impl$requestAudioFocusAsync$3;
-.super Lsd7;
+.super Lnk7;
 .source "SourceFile"
 
 # interfaces
-.implements Lx56;
+.implements Lbc6;
 
 
 # annotations
@@ -18,8 +18,8 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lsd7;",
-        "Lx56;"
+        "Lnk7;",
+        "Lbc6;"
     }
 .end annotation
 
@@ -30,7 +30,7 @@
     d2 = {
         "",
         "it",
-        "Le5f;",
+        "Lylf;",
         "invoke",
         "(Ljava/lang/Throwable;)V",
         "<anonymous>"
@@ -56,7 +56,7 @@
 
     const/4 p1, 0x1
 
-    invoke-direct {p0, p1}, Lsd7;-><init>(I)V
+    invoke-direct {p0, p1}, Lnk7;-><init>(I)V
 
     return-void
 .end method
@@ -71,7 +71,7 @@
 
     invoke-virtual {p0, p1}, Lru/ok/android/externcalls/sdk/audio/internal/impl3/CallsAudioManagerV3Impl$requestAudioFocusAsync$3;->invoke(Ljava/lang/Throwable;)V
 
-    sget-object p0, Le5f;->a:Le5f;
+    sget-object p0, Lylf;->a:Lylf;
 
     return-object p0
 .end method

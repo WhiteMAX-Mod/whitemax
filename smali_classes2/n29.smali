@@ -1,59 +1,174 @@
 .class public final Ln29;
-.super Lbu3;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Ljava/lang/Cloneable;
 
 
 # instance fields
-.field public synthetic X:Ljava/lang/Object;
+.field public X:I
 
-.field public final synthetic Y:Lh49;
+.field public a:Ljava/nio/charset/CodingErrorAction;
 
-.field public Z:I
+.field public b:Ljava/nio/charset/CodingErrorAction;
 
-.field public o:Ljava/lang/String;
+.field public c:I
 
-
-# direct methods
-.method public constructor <init>(Lh49;Lbu3;)V
-    .locals 0
-
-    iput-object p1, p0, Ln29;->Y:Lh49;
-
-    invoke-direct {p0, p2}, Lbu3;-><init>(Lkotlin/coroutines/Continuation;)V
-
-    return-void
-.end method
+.field public o:I
 
 
 # virtual methods
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 8
+.method public final clone()Ljava/lang/Object;
+    .locals 2
 
-    iput-object p1, p0, Ln29;->X:Ljava/lang/Object;
+    new-instance v0, Ln29;
 
-    iget p1, p0, Ln29;->Z:I
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    const/high16 v0, -0x80000000
+    sget-object v1, Ljava/nio/charset/CodingErrorAction;->REPLACE:Ljava/nio/charset/CodingErrorAction;
 
-    or-int/2addr p1, v0
+    iput-object v1, v0, Ln29;->a:Ljava/nio/charset/CodingErrorAction;
 
-    iput p1, p0, Ln29;->Z:I
+    iput-object v1, v0, Ln29;->b:Ljava/nio/charset/CodingErrorAction;
 
-    const-wide/16 v4, 0x0
+    const v1, 0x7fffffff
 
-    const/4 v6, 0x0
+    iput v1, v0, Ln29;->c:I
 
-    iget-object v0, p0, Ln29;->Y:Lh49;
+    const/16 v1, 0x2000
 
-    const-wide/16 v1, 0x0
+    iput v1, v0, Ln29;->o:I
 
-    const/4 v3, 0x0
+    iput v1, v0, Ln29;->X:I
 
-    move-object v7, p0
+    iget-object v1, p0, Ln29;->a:Ljava/nio/charset/CodingErrorAction;
 
-    invoke-virtual/range {v0 .. v7}, Lh49;->x(JLjava/lang/String;JZLbu3;)Ljava/lang/Object;
+    iput-object v1, v0, Ln29;->a:Ljava/nio/charset/CodingErrorAction;
 
-    move-result-object p0
+    iget-object v1, p0, Ln29;->b:Ljava/nio/charset/CodingErrorAction;
 
-    return-object p0
+    iput-object v1, v0, Ln29;->b:Ljava/nio/charset/CodingErrorAction;
+
+    iget v1, p0, Ln29;->c:I
+
+    iput v1, v0, Ln29;->c:I
+
+    iget p0, p0, Ln29;->o:I
+
+    iput p0, v0, Ln29;->o:I
+
+    return-object v0
+.end method
+
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 2
+
+    instance-of v0, p1, Ln29;
+
+    if-nez v0, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    check-cast p1, Ln29;
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    iget-object v0, p0, Ln29;->a:Ljava/nio/charset/CodingErrorAction;
+
+    iget-object v1, p1, Ln29;->a:Ljava/nio/charset/CodingErrorAction;
+
+    if-ne v0, v1, :cond_1
+
+    iget-object v0, p0, Ln29;->b:Ljava/nio/charset/CodingErrorAction;
+
+    iget-object v1, p1, Ln29;->b:Ljava/nio/charset/CodingErrorAction;
+
+    if-ne v0, v1, :cond_1
+
+    iget v0, p0, Ln29;->c:I
+
+    iget v1, p1, Ln29;->c:I
+
+    if-ne v0, v1, :cond_1
+
+    iget v0, p0, Ln29;->X:I
+
+    iget v1, p1, Ln29;->X:I
+
+    if-ne v0, v1, :cond_1
+
+    iget p0, p0, Ln29;->o:I
+
+    iget p1, p1, Ln29;->o:I
+
+    if-ne p0, p1, :cond_1
+
+    const/4 p0, 0x1
+
+    return p0
+
+    :cond_1
+    :goto_0
+    const/4 p0, 0x0
+
+    return p0
+.end method
+
+.method public final hashCode()I
+    .locals 3
+
+    iget-object v0, p0, Ln29;->a:Ljava/nio/charset/CodingErrorAction;
+
+    const/4 v1, 0x0
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
+
+    move-result v0
+
+    goto :goto_0
+
+    :cond_0
+    move v0, v1
+
+    :goto_0
+    const/16 v2, 0x3e0
+
+    add-int/2addr v2, v0
+
+    mul-int/lit8 v2, v2, 0x1f
+
+    iget-object v0, p0, Ln29;->b:Ljava/nio/charset/CodingErrorAction;
+
+    if-eqz v0, :cond_1
+
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
+
+    move-result v1
+
+    :cond_1
+    add-int/2addr v2, v1
+
+    mul-int/lit8 v2, v2, 0x1f
+
+    iget v0, p0, Ln29;->c:I
+
+    add-int/2addr v2, v0
+
+    mul-int/lit8 v2, v2, 0x1f
+
+    iget v0, p0, Ln29;->o:I
+
+    add-int/2addr v2, v0
+
+    mul-int/lit8 v2, v2, 0x1f
+
+    iget p0, p0, Ln29;->X:I
+
+    add-int/2addr v2, p0
+
+    return v2
 .end method

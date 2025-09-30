@@ -1,52 +1,23 @@
-.class public Lg35;
-.super Ljava/lang/Object;
+.class public final Lg35;
+.super Lrjc;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:Ljava/lang/Object;
-
-.field public b:Z
+.field public final c:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/Object;)V
-    .locals 0
+.method public constructor <init>(Ljava/lang/String;)V
+    .locals 3
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    sget-object v0, Ldkc;->c:Ldkc;
 
-    iput-object p1, p0, Lg35;->a:Ljava/lang/Object;
+    const-wide/16 v1, 0x0
 
-    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+    invoke-direct {p0, v0, v1, v2}, Lrjc;-><init>(Ldkc;J)V
+
+    iput-object p1, p0, Lg35;->c:Ljava/lang/String;
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final a()Ljava/lang/Object;
-    .locals 1
-
-    iget-boolean v0, p0, Lg35;->b:Z
-
-    if-eqz v0, :cond_0
-
-    new-instance p0, Lru/ok/tamtam/shared/lifecycle/AlreadyHandledEventException;
-
-    invoke-direct {p0}, Lru/ok/tamtam/shared/lifecycle/AlreadyHandledEventException;-><init>()V
-
-    new-instance v0, Ljhc;
-
-    invoke-direct {v0, p0}, Ljhc;-><init>(Ljava/lang/Throwable;)V
-
-    return-object v0
-
-    :cond_0
-    const/4 v0, 0x1
-
-    iput-boolean v0, p0, Lg35;->b:Z
-
-    iget-object p0, p0, Lg35;->a:Ljava/lang/Object;
-
-    return-object p0
 .end method

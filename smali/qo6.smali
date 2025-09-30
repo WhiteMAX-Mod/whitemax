@@ -2,63 +2,91 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lto6;
 
+# instance fields
+.field public a:J
 
-# static fields
-.field public static final a:Lqo6;
+.field public b:Z
+
+.field public c:I
+
+.field public d:J
+
+.field public e:Z
+
+.field public f:Z
+
+.field public g:Z
+
+.field public h:Z
+
+.field public i:Z
+
+.field public j:J
+
+.field public k:J
+
+.field public l:Z
+
+.field public final m:Ljava/lang/Object;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public synthetic constructor <init>(Ljava/lang/Object;)V
+    .locals 0
 
-    new-instance v0, Lqo6;
+    iput-object p1, p0, Lqo6;->m:Ljava/lang/Object;
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    sput-object v0, Lqo6;->a:Lqo6;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
+.method public a(I)V
+    .locals 9
 
-    const/4 v0, 0x1
+    iget-wide v1, p0, Lqo6;->k:J
 
-    if-ne p0, p1, :cond_0
+    const-wide v3, -0x7fffffffffffffffL    # -4.9E-324
 
-    return v0
+    cmp-long v0, v1, v3
+
+    if-eqz v0, :cond_1
+
+    iget-wide v3, p0, Lqo6;->a:J
+
+    iget-wide v5, p0, Lqo6;->j:J
+
+    cmp-long v0, v3, v5
+
+    if-nez v0, :cond_0
+
+    goto :goto_0
 
     :cond_0
-    instance-of p0, p1, Lqo6;
+    move-wide v7, v3
 
-    if-nez p0, :cond_1
+    iget-boolean v3, p0, Lqo6;->l:Z
 
-    const/4 p0, 0x0
+    sub-long v4, v7, v5
 
-    return p0
+    long-to-int v4, v4
+
+    iget-object p0, p0, Lqo6;->m:Ljava/lang/Object;
+
+    move-object v0, p0
+
+    check-cast v0, Lbcf;
+
+    const/4 v6, 0x0
+
+    move v5, p1
+
+    invoke-interface/range {v0 .. v6}, Lbcf;->a(JIIILzbf;)V
 
     :cond_1
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 0
-
-    const p0, -0x5b5c259
-
-    return p0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 0
-
-    const-string p0, "Close"
-
-    return-object p0
+    :goto_0
+    return-void
 .end method

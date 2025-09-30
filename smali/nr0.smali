@@ -1,116 +1,165 @@
 .class public final Lnr0;
-.super Lyg4;
+.super Lrbb;
 .source "SourceFile"
 
 
-# instance fields
-.field public final c:Ln7b;
+# static fields
+.field public static final d:Z
 
-.field public final synthetic d:Lxqe;
+
+# instance fields
+.field public final c:Ljava/security/Provider;
 
 
 # direct methods
-.method public constructor <init>(Lxqe;Lai0;Ln7b;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 3
 
-    iput-object p1, p0, Lnr0;->d:Lxqe;
+    const/4 v0, 0x0
 
-    invoke-direct {p0, p2}, Lyg4;-><init>(Lai0;)V
+    :try_start_0
+    const-string v1, "org.bouncycastle.jsse.provider.BouncyCastleJsseProvider"
 
-    iput-object p3, p0, Lnr0;->c:Ln7b;
+    const-class v2, Lb0b;
+
+    invoke-virtual {v2}, Ljava/lang/Class;->getClassLoader()Ljava/lang/ClassLoader;
+
+    move-result-object v2
+
+    invoke-static {v1, v0, v2}, Ljava/lang/Class;->forName(Ljava/lang/String;ZLjava/lang/ClassLoader;)Ljava/lang/Class;
+    :try_end_0
+    .catch Ljava/lang/ClassNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
+
+    const/4 v0, 0x1
+
+    :catch_0
+    sput-boolean v0, Lnr0;->d:Z
+
+    return-void
+.end method
+
+.method public constructor <init>()V
+    .locals 1
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    new-instance v0, Lorg/bouncycastle/jsse/provider/BouncyCastleJsseProvider;
+
+    invoke-direct {v0}, Lorg/bouncycastle/jsse/provider/BouncyCastleJsseProvider;-><init>()V
+
+    check-cast v0, Ljava/security/Provider;
+
+    iput-object v0, p0, Lnr0;->c:Ljava/security/Provider;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final f(Ljava/lang/Throwable;)V
-    .locals 1
-
-    iget-object p1, p0, Lnr0;->d:Lxqe;
-
-    iget-object p1, p1, Lxqe;->c:Ljava/lang/Object;
-
-    check-cast p1, Lmre;
-
-    iget-object v0, p0, Lyg4;->b:Lai0;
-
-    iget-object p0, p0, Lnr0;->c:Ln7b;
-
-    invoke-virtual {p1, v0, p0}, Lmre;->a(Lai0;Ln7b;)V
+.method public final d(Ljavax/net/ssl/SSLSocket;Ljava/lang/String;Ljava/util/List;)V
+    .locals 0
 
     return-void
 .end method
 
-.method public final h(ILjava/lang/Object;)V
-    .locals 6
+.method public final f(Ljavax/net/ssl/SSLSocket;)Ljava/lang/String;
+    .locals 0
 
-    check-cast p2, La05;
+    const/4 p0, 0x0
 
-    iget-object v0, p0, Lnr0;->c:Ln7b;
+    return-object p0
+.end method
 
-    move-object v1, v0
+.method public final k()Ljavax/net/ssl/SSLContext;
+    .locals 1
 
-    check-cast v1, Ljj0;
+    const-string v0, "TLS"
 
-    iget-object v1, v1, Ljj0;->a:Lvv6;
+    iget-object p0, p0, Lnr0;->c:Ljava/security/Provider;
 
-    invoke-static {p1}, Lai0;->a(I)Z
+    invoke-static {v0, p0}, Ljavax/net/ssl/SSLContext;->getInstance(Ljava/lang/String;Ljava/security/Provider;)Ljavax/net/ssl/SSLContext;
 
-    move-result v2
+    move-result-object p0
 
-    iget-object v3, v1, Lvv6;->h:Ldgc;
+    return-object p0
+.end method
 
-    invoke-static {p2, v3}, Ll23;->K(La05;Ldgc;)Z
+.method public final m()Ljavax/net/ssl/X509TrustManager;
+    .locals 3
 
-    move-result v3
+    const-string p0, "PKIX"
 
-    iget-object v4, p0, Lyg4;->b:Lai0;
+    const-string v0, "BCJSSE"
 
-    if-eqz p2, :cond_2
+    invoke-static {p0, v0}, Ljavax/net/ssl/TrustManagerFactory;->getInstance(Ljava/lang/String;Ljava/lang/String;)Ljavax/net/ssl/TrustManagerFactory;
 
-    if-nez v3, :cond_0
+    move-result-object p0
 
-    iget-boolean v5, v1, Lvv6;->e:Z
+    const/4 v0, 0x0
 
-    if-eqz v5, :cond_2
+    invoke-virtual {p0, v0}, Ljavax/net/ssl/TrustManagerFactory;->init(Ljava/security/KeyStore;)V
 
-    :cond_0
-    if-eqz v2, :cond_1
+    invoke-virtual {p0}, Ljavax/net/ssl/TrustManagerFactory;->getTrustManagers()[Ljavax/net/ssl/TrustManager;
 
-    if-eqz v3, :cond_1
+    move-result-object p0
 
-    invoke-virtual {v4, p1, p2}, Lai0;->g(ILjava/lang/Object;)V
+    array-length v0, p0
+
+    const/4 v1, 0x0
+
+    const/4 v2, 0x1
+
+    if-ne v0, v2, :cond_0
+
+    aget-object v0, p0, v1
+
+    instance-of v0, v0, Ljavax/net/ssl/X509TrustManager;
+
+    if-eqz v0, :cond_0
 
     goto :goto_0
 
-    :cond_1
-    and-int/lit8 p1, p1, -0x2
+    :cond_0
+    move v2, v1
 
-    invoke-virtual {v4, p1, p2}, Lai0;->g(ILjava/lang/Object;)V
+    :goto_0
+    if-eqz v2, :cond_2
+
+    aget-object p0, p0, v1
+
+    if-eqz p0, :cond_1
+
+    check-cast p0, Ljavax/net/ssl/X509TrustManager;
+
+    return-object p0
+
+    :cond_1
+    new-instance p0, Ljava/lang/NullPointerException;
+
+    const-string v0, "null cannot be cast to non-null type javax.net.ssl.X509TrustManager"
+
+    invoke-direct {p0, v0}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
+
+    throw p0
 
     :cond_2
-    :goto_0
-    if-eqz v2, :cond_3
+    invoke-static {p0}, Ljava/util/Arrays;->toString([Ljava/lang/Object;)Ljava/lang/String;
 
-    if-nez v3, :cond_3
+    move-result-object p0
 
-    invoke-virtual {v1}, Lvv6;->c()Z
+    const-string v0, "Unexpected default trust managers: "
 
-    move-result p1
+    invoke-virtual {v0, p0}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
 
-    if-nez p1, :cond_3
+    move-result-object p0
 
-    invoke-static {p2}, La05;->d(La05;)V
+    new-instance v0, Ljava/lang/IllegalStateException;
 
-    iget-object p0, p0, Lnr0;->d:Lxqe;
+    invoke-virtual {p0}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
-    iget-object p0, p0, Lxqe;->c:Ljava/lang/Object;
+    move-result-object p0
 
-    check-cast p0, Lmre;
+    invoke-direct {v0, p0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {p0, v4, v0}, Lmre;->a(Lai0;Ln7b;)V
-
-    :cond_3
-    return-void
+    throw v0
 .end method

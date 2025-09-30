@@ -1,90 +1,157 @@
-.class public final Lky4;
-.super Ljava/lang/Object;
+.class public final enum Lky4;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
-# interfaces
-.implements Landroid/text/method/TransformationMethod;
+
+# static fields
+.field public static final enum X:Lky4;
+
+.field public static final enum Y:Lky4;
+
+.field public static final enum Z:Lky4;
+
+.field public static final enum b:Lky4;
+
+.field public static final enum c:Lky4;
+
+.field public static final enum o:Lky4;
+
+.field public static final synthetic r0:[Lky4;
 
 
 # instance fields
-.field public final a:Landroid/text/method/TransformationMethod;
+.field public final a:Ljava/util/concurrent/TimeUnit;
 
 
 # direct methods
-.method public constructor <init>(Landroid/text/method/TransformationMethod;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 10
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lky4;
 
-    iput-object p1, p0, Lky4;->a:Landroid/text/method/TransformationMethod;
+    const/4 v1, 0x0
+
+    sget-object v2, Ljava/util/concurrent/TimeUnit;->NANOSECONDS:Ljava/util/concurrent/TimeUnit;
+
+    const-string v3, "NANOSECONDS"
+
+    invoke-direct {v0, v3, v1, v2}, Lky4;-><init>(Ljava/lang/String;ILjava/util/concurrent/TimeUnit;)V
+
+    sput-object v0, Lky4;->b:Lky4;
+
+    new-instance v1, Lky4;
+
+    const/4 v2, 0x1
+
+    sget-object v3, Ljava/util/concurrent/TimeUnit;->MICROSECONDS:Ljava/util/concurrent/TimeUnit;
+
+    const-string v4, "MICROSECONDS"
+
+    invoke-direct {v1, v4, v2, v3}, Lky4;-><init>(Ljava/lang/String;ILjava/util/concurrent/TimeUnit;)V
+
+    new-instance v2, Lky4;
+
+    const/4 v3, 0x2
+
+    sget-object v4, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;
+
+    const-string v5, "MILLISECONDS"
+
+    invoke-direct {v2, v5, v3, v4}, Lky4;-><init>(Ljava/lang/String;ILjava/util/concurrent/TimeUnit;)V
+
+    sput-object v2, Lky4;->c:Lky4;
+
+    new-instance v3, Lky4;
+
+    const/4 v4, 0x3
+
+    sget-object v5, Ljava/util/concurrent/TimeUnit;->SECONDS:Ljava/util/concurrent/TimeUnit;
+
+    const-string v6, "SECONDS"
+
+    invoke-direct {v3, v6, v4, v5}, Lky4;-><init>(Ljava/lang/String;ILjava/util/concurrent/TimeUnit;)V
+
+    sput-object v3, Lky4;->o:Lky4;
+
+    new-instance v4, Lky4;
+
+    const/4 v5, 0x4
+
+    sget-object v6, Ljava/util/concurrent/TimeUnit;->MINUTES:Ljava/util/concurrent/TimeUnit;
+
+    const-string v7, "MINUTES"
+
+    invoke-direct {v4, v7, v5, v6}, Lky4;-><init>(Ljava/lang/String;ILjava/util/concurrent/TimeUnit;)V
+
+    sput-object v4, Lky4;->X:Lky4;
+
+    new-instance v5, Lky4;
+
+    const/4 v6, 0x5
+
+    sget-object v7, Ljava/util/concurrent/TimeUnit;->HOURS:Ljava/util/concurrent/TimeUnit;
+
+    const-string v8, "HOURS"
+
+    invoke-direct {v5, v8, v6, v7}, Lky4;-><init>(Ljava/lang/String;ILjava/util/concurrent/TimeUnit;)V
+
+    sput-object v5, Lky4;->Y:Lky4;
+
+    new-instance v6, Lky4;
+
+    const/4 v7, 0x6
+
+    sget-object v8, Ljava/util/concurrent/TimeUnit;->DAYS:Ljava/util/concurrent/TimeUnit;
+
+    const-string v9, "DAYS"
+
+    invoke-direct {v6, v9, v7, v8}, Lky4;-><init>(Ljava/lang/String;ILjava/util/concurrent/TimeUnit;)V
+
+    sput-object v6, Lky4;->Z:Lky4;
+
+    filled-new-array/range {v0 .. v6}, [Lky4;
+
+    move-result-object v0
+
+    sput-object v0, Lky4;->r0:[Lky4;
 
     return-void
 .end method
 
+.method public constructor <init>(Ljava/lang/String;ILjava/util/concurrent/TimeUnit;)V
+    .locals 0
 
-# virtual methods
-.method public final getTransformation(Ljava/lang/CharSequence;Landroid/view/View;)Ljava/lang/CharSequence;
+    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    iput-object p3, p0, Lky4;->a:Ljava/util/concurrent/TimeUnit;
+
+    return-void
+.end method
+
+.method public static valueOf(Ljava/lang/String;)Lky4;
     .locals 1
 
-    invoke-virtual {p2}, Landroid/view/View;->isInEditMode()Z
+    const-class v0, Lky4;
 
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    return-object p1
-
-    :cond_0
-    iget-object p0, p0, Lky4;->a:Landroid/text/method/TransformationMethod;
-
-    if-eqz p0, :cond_1
-
-    invoke-interface {p0, p1, p2}, Landroid/text/method/TransformationMethod;->getTransformation(Ljava/lang/CharSequence;Landroid/view/View;)Ljava/lang/CharSequence;
-
-    move-result-object p1
-
-    :cond_1
-    if-eqz p1, :cond_3
-
-    invoke-static {}, Lqw4;->a()Lqw4;
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
 
     move-result-object p0
 
-    invoke-virtual {p0}, Lqw4;->b()I
-
-    move-result p0
-
-    const/4 p2, 0x1
-
-    if-eq p0, p2, :cond_2
-
-    goto :goto_0
-
-    :cond_2
-    invoke-static {}, Lqw4;->a()Lqw4;
-
-    move-result-object p0
-
-    invoke-virtual {p0, p1}, Lqw4;->g(Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
-
-    move-result-object p0
+    check-cast p0, Lky4;
 
     return-object p0
-
-    :cond_3
-    :goto_0
-    return-object p1
 .end method
 
-.method public final onFocusChanged(Landroid/view/View;Ljava/lang/CharSequence;ZILandroid/graphics/Rect;)V
-    .locals 0
+.method public static values()[Lky4;
+    .locals 1
 
-    iget-object p0, p0, Lky4;->a:Landroid/text/method/TransformationMethod;
+    sget-object v0, Lky4;->r0:[Lky4;
 
-    if-eqz p0, :cond_0
+    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
 
-    invoke-interface/range {p0 .. p5}, Landroid/text/method/TransformationMethod;->onFocusChanged(Landroid/view/View;Ljava/lang/CharSequence;ZILandroid/graphics/Rect;)V
+    move-result-object v0
 
-    :cond_0
-    return-void
+    check-cast v0, [Lky4;
+
+    return-object v0
 .end method

@@ -1,55 +1,41 @@
 .class public final Lle9;
-.super Ljava/lang/Object;
+.super Lcb4;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:Z
+# static fields
+.field public static final b:Lle9;
 
-.field public final b:Ljava/util/Set;
-
-.field public final c:Ljava/util/List;
+.field public static final c:Lxa4;
 
 
 # direct methods
-.method public synthetic constructor <init>(I)V
-    .locals 2
+.method static constructor <clinit>()V
+    .locals 6
 
-    const/4 v0, 0x1
+    new-instance v0, Lle9;
 
-    and-int/2addr p1, v0
+    invoke-direct {v0}, Lcb4;-><init>()V
 
-    if-eqz p1, :cond_0
+    sput-object v0, Lle9;->b:Lle9;
 
-    const/4 v0, 0x0
+    const/4 v1, 0x0
 
-    .line 5
-    :cond_0
-    sget-object p1, Lpz4;->a:Lpz4;
+    new-array v2, v1, [Ljava/lang/String;
 
-    .line 6
-    sget-object v1, Lgz4;->a:Lgz4;
+    const/16 v5, 0xe
 
-    .line 7
-    invoke-direct {p0, v0, p1, v1}, Lle9;-><init>(ZLjava/util/Set;Ljava/util/List;)V
+    const/4 v4, 0x0
 
-    return-void
-.end method
+    const-string v1, ":settings/messages"
 
-.method public constructor <init>(ZLjava/util/Set;Ljava/util/List;)V
-    .locals 0
+    const/4 v3, 0x0
 
-    .line 1
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-static/range {v0 .. v5}, Lcb4;->a(Lcb4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;II)Lxa4;
 
-    .line 2
-    iput-boolean p1, p0, Lle9;->a:Z
+    move-result-object v0
 
-    .line 3
-    iput-object p2, p0, Lle9;->b:Ljava/util/Set;
-
-    .line 4
-    iput-object p3, p0, Lle9;->c:Ljava/util/List;
+    sput-object v0, Lle9;->c:Lxa4;
 
     return-void
 .end method

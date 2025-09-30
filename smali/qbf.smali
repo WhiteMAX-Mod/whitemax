@@ -1,61 +1,185 @@
 .class public final Lqbf;
-.super Landroid/graphics/drawable/Drawable$ConstantState;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public a:I
+.field public final a:Z
 
-.field public b:Lpbf;
+.field public final b:Ljava/lang/String;
 
-.field public c:Landroid/content/res/ColorStateList;
+.field public final c:Lybf;
 
-.field public d:Landroid/graphics/PorterDuff$Mode;
+.field public final d:I
 
-.field public e:Z
-
-.field public f:Landroid/graphics/Bitmap;
-
-.field public g:Landroid/content/res/ColorStateList;
-
-.field public h:Landroid/graphics/PorterDuff$Mode;
-
-.field public i:I
-
-.field public j:Z
-
-.field public k:Z
-
-.field public l:Landroid/graphics/Paint;
+.field public final e:[B
 
 
-# virtual methods
-.method public getChangingConfigurations()I
-    .locals 0
+# direct methods
+.method public constructor <init>(ZLjava/lang/String;I[BII[B)V
+    .locals 4
 
-    iget p0, p0, Lqbf;->a:I
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    return p0
-.end method
+    const/4 v0, 0x0
 
-.method public final newDrawable()Landroid/graphics/drawable/Drawable;
-    .locals 1
+    const/4 v1, 0x1
 
-    .line 1
-    new-instance v0, Lsbf;
+    if-nez p3, :cond_0
 
-    invoke-direct {v0, p0}, Lsbf;-><init>(Lqbf;)V
+    move v2, v1
 
-    return-object v0
-.end method
+    goto :goto_0
 
-.method public final newDrawable(Landroid/content/res/Resources;)Landroid/graphics/drawable/Drawable;
-    .locals 0
+    :cond_0
+    move v2, v0
 
-    .line 2
-    new-instance p1, Lsbf;
+    :goto_0
+    if-nez p7, :cond_1
 
-    invoke-direct {p1, p0}, Lsbf;-><init>(Lqbf;)V
+    move v3, v1
 
-    return-object p1
+    goto :goto_1
+
+    :cond_1
+    move v3, v0
+
+    :goto_1
+    xor-int/2addr v2, v3
+
+    invoke-static {v2}, Lxnd;->k(Z)V
+
+    iput-boolean p1, p0, Lqbf;->a:Z
+
+    iput-object p2, p0, Lqbf;->b:Ljava/lang/String;
+
+    iput p3, p0, Lqbf;->d:I
+
+    iput-object p7, p0, Lqbf;->e:[B
+
+    new-instance p1, Lybf;
+
+    if-nez p2, :cond_2
+
+    goto :goto_4
+
+    :cond_2
+    invoke-virtual {p2}, Ljava/lang/String;->hashCode()I
+
+    move-result p3
+
+    const/4 p7, 0x2
+
+    const/4 v2, -0x1
+
+    sparse-switch p3, :sswitch_data_0
+
+    :goto_2
+    move v0, v2
+
+    goto :goto_3
+
+    :sswitch_0
+    const-string p3, "cens"
+
+    invoke-virtual {p2, p3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p3
+
+    if-nez p3, :cond_3
+
+    goto :goto_2
+
+    :cond_3
+    const/4 v0, 0x3
+
+    goto :goto_3
+
+    :sswitch_1
+    const-string p3, "cenc"
+
+    invoke-virtual {p2, p3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p3
+
+    if-nez p3, :cond_4
+
+    goto :goto_2
+
+    :cond_4
+    move v0, p7
+
+    goto :goto_3
+
+    :sswitch_2
+    const-string p3, "cbcs"
+
+    invoke-virtual {p2, p3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p3
+
+    if-nez p3, :cond_5
+
+    goto :goto_2
+
+    :cond_5
+    move v0, v1
+
+    goto :goto_3
+
+    :sswitch_3
+    const-string p3, "cbc1"
+
+    invoke-virtual {p2, p3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p3
+
+    if-nez p3, :cond_6
+
+    goto :goto_2
+
+    :cond_6
+    :goto_3
+    packed-switch v0, :pswitch_data_0
+
+    invoke-virtual {p2}, Ljava/lang/String;->length()I
+
+    move-result p2
+
+    add-int/lit8 p2, p2, 0x44
+
+    new-instance p3, Ljava/lang/StringBuilder;
+
+    invoke-direct {p3, p2}, Ljava/lang/StringBuilder;-><init>(I)V
+
+    goto :goto_4
+
+    :pswitch_0
+    move v1, p7
+
+    :goto_4
+    :pswitch_1
+    invoke-direct {p1, v1, p5, p6, p4}, Lybf;-><init>(III[B)V
+
+    iput-object p1, p0, Lqbf;->c:Lybf;
+
+    return-void
+
+    nop
+
+    :sswitch_data_0
+    .sparse-switch
+        0x2e7ccd -> :sswitch_3
+        0x2e7d0f -> :sswitch_2
+        0x2e8997 -> :sswitch_1
+        0x2e89a7 -> :sswitch_0
+    .end sparse-switch
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+        :pswitch_0
+        :pswitch_1
+        :pswitch_1
+    .end packed-switch
 .end method

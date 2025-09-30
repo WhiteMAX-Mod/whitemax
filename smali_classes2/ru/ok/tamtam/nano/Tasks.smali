@@ -6,6 +6,7 @@
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
+        Lru/ok/tamtam/nano/Tasks$CritLog;,
         Lru/ok/tamtam/nano/Tasks$ChangeChatPhoto;,
         Lru/ok/tamtam/nano/Tasks$UpdateFireTimeProtoTask;,
         Lru/ok/tamtam/nano/Tasks$MsgCancelReaction;,

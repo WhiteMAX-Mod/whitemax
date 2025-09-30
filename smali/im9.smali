@@ -1,65 +1,19 @@
 .class public final Lim9;
-.super Lli3;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
+# instance fields
+.field public final a:Z
+
+
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(Z)V
+    .locals 0
 
-    const-string v0, "NetworkNotRoamingCtrlr"
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-static {v0}, Lfc2;->F(Ljava/lang/String;)Ljava/lang/String;
+    iput-boolean p1, p0, Lim9;->a:Z
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final a(Ll9g;)Z
-    .locals 0
-
-    iget-object p0, p1, Ll9g;->j:Lej3;
-
-    iget p0, p0, Lej3;->a:I
-
-    const/4 p1, 0x4
-
-    if-ne p0, p1, :cond_0
-
-    const/4 p0, 0x1
-
-    return p0
-
-    :cond_0
-    const/4 p0, 0x0
-
-    return p0
-.end method
-
-.method public final b(Ljava/lang/Object;)Z
-    .locals 0
-
-    check-cast p1, Ljm9;
-
-    iget-boolean p0, p1, Ljm9;->a:Z
-
-    if-eqz p0, :cond_1
-
-    iget-boolean p0, p1, Ljm9;->d:Z
-
-    if-nez p0, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    const/4 p0, 0x0
-
-    return p0
-
-    :cond_1
-    :goto_0
-    const/4 p0, 0x1
-
-    return p0
 .end method

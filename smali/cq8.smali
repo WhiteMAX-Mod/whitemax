@@ -1,143 +1,86 @@
-.class public final Lcq8;
-.super Lg7;
+.class public final synthetic Lcq8;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Landroid/view/ActionProvider$VisibilityListener;
+.implements Lom3;
 
 
 # instance fields
-.field public b:Ltkg;
+.field public final synthetic a:I
 
-.field public final c:Landroid/view/ActionProvider;
+.field public final synthetic b:Lz96;
+
+.field public final synthetic c:Lev7;
+
+.field public final synthetic o:Lvi8;
 
 
 # direct methods
-.method public constructor <init>(Lfq8;Landroid/content/Context;Landroid/view/ActionProvider;)V
+.method public synthetic constructor <init>(Lz96;Lev7;Lvi8;I)V
     .locals 0
 
-    invoke-direct {p0, p2}, Lg7;-><init>(Landroid/content/Context;)V
+    iput p4, p0, Lcq8;->a:I
 
-    iput-object p3, p0, Lcq8;->c:Landroid/view/ActionProvider;
+    iput-object p1, p0, Lcq8;->b:Lz96;
+
+    iput-object p2, p0, Lcq8;->c:Lev7;
+
+    iput-object p3, p0, Lcq8;->o:Lvi8;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Z
-    .locals 0
+.method public final accept(Ljava/lang/Object;)V
+    .locals 3
 
-    iget-object p0, p0, Lcq8;->c:Landroid/view/ActionProvider;
+    iget v0, p0, Lcq8;->a:I
 
-    invoke-virtual {p0}, Landroid/view/ActionProvider;->hasSubMenu()Z
+    check-cast p1, Lhq8;
 
-    move-result p0
+    packed-switch v0, :pswitch_data_0
 
-    return p0
-.end method
+    iget-object v0, p0, Lcq8;->b:Lz96;
 
-.method public final b()Z
-    .locals 0
+    iget v1, v0, Lz96;->b:I
 
-    iget-object p0, p0, Lcq8;->c:Landroid/view/ActionProvider;
+    iget-object v0, v0, Lz96;->c:Ljava/lang/Object;
 
-    invoke-virtual {p0}, Landroid/view/ActionProvider;->isVisible()Z
+    check-cast v0, Lyp8;
 
-    move-result p0
+    iget-object v2, p0, Lcq8;->c:Lev7;
 
-    return p0
-.end method
+    iget-object p0, p0, Lcq8;->o:Lvi8;
 
-.method public final c()Landroid/view/View;
-    .locals 0
-
-    iget-object p0, p0, Lcq8;->c:Landroid/view/ActionProvider;
-
-    invoke-virtual {p0}, Landroid/view/ActionProvider;->onCreateActionView()Landroid/view/View;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public final d(Lbq8;)Landroid/view/View;
-    .locals 0
-
-    iget-object p0, p0, Lcq8;->c:Landroid/view/ActionProvider;
-
-    invoke-virtual {p0, p1}, Landroid/view/ActionProvider;->onCreateActionView(Landroid/view/MenuItem;)Landroid/view/View;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public final e()Z
-    .locals 0
-
-    iget-object p0, p0, Lcq8;->c:Landroid/view/ActionProvider;
-
-    invoke-virtual {p0}, Landroid/view/ActionProvider;->onPerformDefaultAction()Z
-
-    move-result p0
-
-    return p0
-.end method
-
-.method public final f(Le9e;)V
-    .locals 0
-
-    iget-object p0, p0, Lcq8;->c:Landroid/view/ActionProvider;
-
-    invoke-virtual {p0, p1}, Landroid/view/ActionProvider;->onPrepareSubMenu(Landroid/view/SubMenu;)V
+    invoke-interface {p1, v1, v0, v2, p0}, Lhq8;->c(ILyp8;Lev7;Lvi8;)V
 
     return-void
-.end method
 
-.method public final g()Z
-    .locals 0
+    :pswitch_0
+    iget-object v0, p0, Lcq8;->b:Lz96;
 
-    iget-object p0, p0, Lcq8;->c:Landroid/view/ActionProvider;
+    iget v1, v0, Lz96;->b:I
 
-    invoke-virtual {p0}, Landroid/view/ActionProvider;->overridesItemVisibility()Z
+    iget-object v0, v0, Lz96;->c:Ljava/lang/Object;
 
-    move-result p0
+    check-cast v0, Lyp8;
 
-    return p0
-.end method
+    iget-object v2, p0, Lcq8;->c:Lev7;
 
-.method public final h(Ltkg;)V
-    .locals 0
+    iget-object p0, p0, Lcq8;->o:Lvi8;
 
-    iput-object p1, p0, Lcq8;->b:Ltkg;
-
-    iget-object p1, p0, Lcq8;->c:Landroid/view/ActionProvider;
-
-    invoke-virtual {p1, p0}, Landroid/view/ActionProvider;->setVisibilityListener(Landroid/view/ActionProvider$VisibilityListener;)V
+    invoke-interface {p1, v1, v0, v2, p0}, Lhq8;->u(ILyp8;Lev7;Lvi8;)V
 
     return-void
-.end method
 
-.method public final onActionProviderVisibilityChanged(Z)V
-    .locals 0
+    nop
 
-    iget-object p0, p0, Lcq8;->b:Ltkg;
-
-    if-eqz p0, :cond_0
-
-    iget-object p0, p0, Ltkg;->b:Ljava/lang/Object;
-
-    check-cast p0, Lbq8;
-
-    iget-object p0, p0, Lbq8;->u0:Lxp8;
-
-    const/4 p1, 0x1
-
-    iput-boolean p1, p0, Lxp8;->o0:Z
-
-    invoke-virtual {p0, p1}, Lxp8;->p(Z)V
-
-    :cond_0
-    return-void
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

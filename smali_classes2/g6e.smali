@@ -1,118 +1,183 @@
 .class public final Lg6e;
-.super Lqde;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ll66;
+
+# static fields
+.field public static final synthetic e:[Lxi7;
 
 
 # instance fields
-.field public X:I
+.field public final a:Lon7;
 
-.field public synthetic Y:Ljava/lang/Object;
+.field public final b:Ljava/lang/Object;
 
-.field public final synthetic Z:Ly5e;
+.field public final c:Lncb;
+
+.field public final d:Lncb;
 
 
 # direct methods
-.method public constructor <init>(Ly5e;Lkotlin/coroutines/Continuation;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 5
 
-    iput-object p1, p0, Lg6e;->Z:Ly5e;
+    new-instance v0, Lmo9;
 
-    const/4 p1, 0x2
+    const-string v1, "infiniteAnimationJob"
 
-    invoke-direct {p0, p1, p2}, Lqde;-><init>(ILkotlin/coroutines/Continuation;)V
+    const-string v2, "getInfiniteAnimationJob()Lkotlinx/coroutines/Job;"
+
+    const-class v3, Lg6e;
+
+    invoke-direct {v0, v3, v1, v2}, Lmo9;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;)V
+
+    sget-object v1, Ljpc;->a:Lkpc;
+
+    const-string v2, "stateAnimationJob"
+
+    const-string v4, "getStateAnimationJob()Lkotlinx/coroutines/Job;"
+
+    invoke-static {v1, v3, v2, v4}, Lee5;->g(Lkpc;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;)Lmo9;
+
+    move-result-object v1
+
+    const/4 v2, 0x2
+
+    new-array v2, v2, [Lxi7;
+
+    const/4 v3, 0x0
+
+    aput-object v0, v2, v3
+
+    const/4 v0, 0x1
+
+    aput-object v1, v2, v0
+
+    sput-object v2, Lg6e;->e:[Lxi7;
+
+    return-void
+.end method
+
+.method public constructor <init>(Lon7;)V
+    .locals 1
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lg6e;->a:Lon7;
+
+    new-instance p1, Ly5e;
+
+    const/4 v0, 0x0
+
+    invoke-direct {p1, v0}, Ly5e;-><init>(I)V
+
+    const/4 v0, 0x3
+
+    invoke-static {v0, p1}, Lcb7;->G(ILzb6;)Lcl7;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lg6e;->b:Ljava/lang/Object;
+
+    invoke-static {}, Lmq0;->L()Lncb;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lg6e;->c:Lncb;
+
+    invoke-static {}, Lmq0;->L()Lncb;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lg6e;->d:Lncb;
+
+    return-void
+.end method
+
+.method public static a(Ly77;I)V
+    .locals 2
+
+    if-nez p0, :cond_0
+
+    return-void
+
+    :cond_0
+    move-object v0, p0
+
+    check-cast v0, Ls5e;
+
+    iget-object v0, v0, Ls5e;->G0:Lej3;
+
+    invoke-virtual {v0}, Landroid/widget/TextView;->getCurrentTextColor()I
+
+    move-result v0
+
+    new-instance v1, Landroid/animation/ArgbEvaluator;
+
+    invoke-direct {v1}, Landroid/animation/ArgbEvaluator;-><init>()V
+
+    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v0
+
+    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object p1
+
+    filled-new-array {v0, p1}, [Ljava/lang/Object;
+
+    move-result-object p1
+
+    invoke-static {v1, p1}, Landroid/animation/ValueAnimator;->ofObject(Landroid/animation/TypeEvaluator;[Ljava/lang/Object;)Landroid/animation/ValueAnimator;
+
+    move-result-object p1
+
+    const-wide/16 v0, 0xc8
+
+    invoke-virtual {p1, v0, v1}, Landroid/animation/ValueAnimator;->setDuration(J)Landroid/animation/ValueAnimator;
+
+    new-instance v0, La6e;
+
+    const/4 v1, 0x1
+
+    invoke-direct {v0, p0, v1}, La6e;-><init>(Ly77;I)V
+
+    invoke-virtual {p1, v0}, Landroid/animation/ValueAnimator;->addUpdateListener(Landroid/animation/ValueAnimator$AnimatorUpdateListener;)V
+
+    invoke-virtual {p1}, Landroid/animation/ValueAnimator;->start()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final b()V
+    .locals 5
 
-    check-cast p1, Lbn5;
+    sget-object v0, Lg6e;->e:[Lxi7;
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    const/4 v1, 0x0
 
-    invoke-virtual {p0, p1, p2}, Lg6e;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    aget-object v2, v0, v1
 
-    move-result-object p0
+    iget-object v3, p0, Lg6e;->c:Lncb;
 
-    check-cast p0, Lg6e;
+    invoke-virtual {v3, p0, v2}, Lncb;->N(Ljava/lang/Object;Lxi7;)Ljava/lang/Object;
 
-    sget-object p1, Le5f;->a:Le5f;
+    move-result-object v2
 
-    invoke-virtual {p0, p1}, Lg6e;->o(Ljava/lang/Object;)Ljava/lang/Object;
+    check-cast v2, Lqe7;
 
-    move-result-object p0
+    const/4 v4, 0x0
 
-    return-object p0
-.end method
+    if-eqz v2, :cond_0
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 1
-
-    new-instance v0, Lg6e;
-
-    iget-object p0, p0, Lg6e;->Z:Ly5e;
-
-    invoke-direct {v0, p0, p2}, Lg6e;-><init>(Ly5e;Lkotlin/coroutines/Continuation;)V
-
-    iput-object p1, v0, Lg6e;->Y:Ljava/lang/Object;
-
-    return-object v0
-.end method
-
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 2
-
-    iget v0, p0, Lg6e;->X:I
-
-    const/4 v1, 0x1
-
-    if-eqz v0, :cond_1
-
-    if-ne v0, v1, :cond_0
-
-    invoke-static {p1}, Lsgg;->Z(Ljava/lang/Object;)V
-
-    goto :goto_0
+    invoke-interface {v2, v4}, Lqe7;->cancel(Ljava/util/concurrent/CancellationException;)V
 
     :cond_0
-    new-instance p0, Ljava/lang/IllegalStateException;
+    aget-object v0, v0, v1
 
-    const-string p1, "call to \'resume\' before \'invoke\' with coroutine"
+    invoke-virtual {v3, p0, v0, v4}, Lncb;->h0(Ljava/lang/Object;Lxi7;Ljava/lang/Object;)V
 
-    invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p0
-
-    :cond_1
-    invoke-static {p1}, Lsgg;->Z(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Lg6e;->Y:Ljava/lang/Object;
-
-    check-cast p1, Lbn5;
-
-    iput v1, p0, Lg6e;->X:I
-
-    iget-object v0, p0, Lg6e;->Z:Ly5e;
-
-    invoke-interface {p1, v0, p0}, Lbn5;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    sget-object p1, Lpx3;->a:Lpx3;
-
-    if-ne p0, p1, :cond_2
-
-    return-object p1
-
-    :cond_2
-    :goto_0
-    sget-object p0, Le5f;->a:Le5f;
-
-    return-object p0
+    return-void
 .end method

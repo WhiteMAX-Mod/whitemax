@@ -1,130 +1,61 @@
-.class public abstract Lbvb;
-.super Ljava/lang/Object;
+.class public final Lbvb;
+.super Ljvb;
+.source "SourceFile"
 
 
 # static fields
-.field public static oneme_settings_privacy_black_list_empty_state:I = 0x7f0a07bc
+.field public static final a:Lbvb;
 
-.field public static oneme_settings_privacy_black_list_rv:I = 0x7f0a07bd
 
-.field public static oneme_settings_privacy_black_list_toolbar:I = 0x7f0a07be
+# direct methods
+.method static constructor <clinit>()V
+    .locals 1
 
-.field public static oneme_settings_privacy_black_list_unblock_action:I = 0x7f0a07bf
+    new-instance v0, Lbvb;
 
-.field public static oneme_settings_privacy_black_list_unblock_cancel_action:I = 0x7f0a07c0
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-.field public static oneme_settings_privacy_enter_pin_code_root:I = 0x7f0a07c1
+    sput-object v0, Lbvb;->a:Lbvb;
 
-.field public static oneme_settings_privacy_info_header:I = 0x7f0a07c2
+    return-void
+.end method
 
-.field public static oneme_settings_privacy_onboarding_content:I = 0x7f0a07c3
 
-.field public static oneme_settings_privacy_onboarding_content_subtitle:I = 0x7f0a07c4
+# virtual methods
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 1
 
-.field public static oneme_settings_privacy_onboarding_content_title:I = 0x7f0a07c5
+    const/4 v0, 0x1
 
-.field public static oneme_settings_privacy_onboarding_item_1:I = 0x7f0a07c6
+    if-ne p0, p1, :cond_0
 
-.field public static oneme_settings_privacy_onboarding_item_2:I = 0x7f0a07c7
+    return v0
 
-.field public static oneme_settings_privacy_onboarding_item_3:I = 0x7f0a07c8
+    :cond_0
+    instance-of p0, p1, Lbvb;
 
-.field public static oneme_settings_privacy_onboarding_lock:I = 0x7f0a07c9
+    if-nez p0, :cond_1
 
-.field public static oneme_settings_privacy_onboarding_lock_background:I = 0x7f0a07ca
+    const/4 p0, 0x0
 
-.field public static oneme_settings_privacy_onboarding_root:I = 0x7f0a07cb
+    return p0
 
-.field public static oneme_settings_privacy_onboarding_scroll_view:I = 0x7f0a07cc
+    :cond_1
+    return v0
+.end method
 
-.field public static oneme_settings_privacy_onboarding_set_password_button:I = 0x7f0a07cd
+.method public final hashCode()I
+    .locals 0
 
-.field public static oneme_settings_privacy_onboarding_set_pin_code_button:I = 0x7f0a07ce
+    const p0, -0x399cc60
 
-.field public static oneme_settings_privacy_onboarding_toolbar:I = 0x7f0a07cf
+    return p0
+.end method
 
-.field public static oneme_settings_privacy_onboarding_top_guideline:I = 0x7f0a07d0
+.method public final toString()Ljava/lang/String;
+    .locals 0
 
-.field public static oneme_settings_privacy_pin_code_toolbar:I = 0x7f0a07d1
+    const-string p0, "OpenCameraPermission"
 
-.field public static oneme_settings_privacy_safe_files:I = 0x7f0a07d2
-
-.field public static oneme_settings_privacy_screen_add_me_to_chat:I = 0x7f0a07d3
-
-.field public static oneme_settings_privacy_screen_black_list:I = 0x7f0a07d4
-
-.field public static oneme_settings_privacy_screen_blacklist:I = 0x7f0a07d5
-
-.field public static oneme_settings_privacy_screen_call_me:I = 0x7f0a07d6
-
-.field public static oneme_settings_privacy_screen_dialog_add_chat_button_all:I = 0x7f0a07d7
-
-.field public static oneme_settings_privacy_screen_dialog_add_chat_button_contacts:I = 0x7f0a07d8
-
-.field public static oneme_settings_privacy_screen_dialog_call_button_all:I = 0x7f0a07d9
-
-.field public static oneme_settings_privacy_screen_dialog_call_button_contacts:I = 0x7f0a07da
-
-.field public static oneme_settings_privacy_screen_dialog_finished_session_cancel_btn:I = 0x7f0a07db
-
-.field public static oneme_settings_privacy_screen_dialog_finished_session_finish_btn:I = 0x7f0a07dc
-
-.field public static oneme_settings_privacy_screen_dialog_online_button_contacts:I = 0x7f0a07dd
-
-.field public static oneme_settings_privacy_screen_dialog_online_button_nobody:I = 0x7f0a07de
-
-.field public static oneme_settings_privacy_screen_dialog_online_never_accept_btn:I = 0x7f0a07df
-
-.field public static oneme_settings_privacy_screen_dialog_online_never_cancel_btn:I = 0x7f0a07e0
-
-.field public static oneme_settings_privacy_screen_dialog_safe_file_no_btn:I = 0x7f0a07e1
-
-.field public static oneme_settings_privacy_screen_dialog_safe_file_yes_btn:I = 0x7f0a07e2
-
-.field public static oneme_settings_privacy_screen_dialog_search_by_phone_all:I = 0x7f0a07e3
-
-.field public static oneme_settings_privacy_screen_dialog_search_by_phone_contacts:I = 0x7f0a07e4
-
-.field public static oneme_settings_privacy_screen_finished_sessions:I = 0x7f0a07e5
-
-.field public static oneme_settings_privacy_screen_how_can_section:I = 0x7f0a07e6
-
-.field public static oneme_settings_privacy_screen_how_session:I = 0x7f0a07e7
-
-.field public static oneme_settings_privacy_screen_list:I = 0x7f0a07e8
-
-.field public static oneme_settings_privacy_screen_online_state_all:I = 0x7f0a07e9
-
-.field public static oneme_settings_privacy_screen_online_state_nobody:I = 0x7f0a07ea
-
-.field public static oneme_settings_privacy_screen_safe_mode:I = 0x7f0a07eb
-
-.field public static oneme_settings_privacy_screen_search_by_phone:I = 0x7f0a07ec
-
-.field public static oneme_settings_privacy_screen_see_online_state:I = 0x7f0a07ed
-
-.field public static oneme_settings_privacy_screen_settings_header_vh:I = 0x7f0a07ee
-
-.field public static oneme_settings_privacy_screen_settings_item_vh:I = 0x7f0a07ef
-
-.field public static oneme_settings_privacy_screen_toolbar:I = 0x7f0a07f0
-
-.field public static oneme_settings_privacy_screen_twofa:I = 0x7f0a07f1
-
-.field public static oneme_settings_privacy_screen_web_apps:I = 0x7f0a07f2
-
-.field public static oneme_settings_privacy_setup_pin_code_description:I = 0x7f0a07f3
-
-.field public static oneme_settings_privacy_setup_pin_code_error:I = 0x7f0a07f4
-
-.field public static oneme_settings_privacy_setup_pin_code_forgot:I = 0x7f0a07f5
-
-.field public static oneme_settings_privacy_setup_pin_code_input:I = 0x7f0a07f6
-
-.field public static oneme_settings_privacy_setup_pin_code_lock:I = 0x7f0a07f7
-
-.field public static oneme_settings_privacy_setup_pin_code_root_view:I = 0x7f0a07f8
-
-.field public static oneme_settings_privacy_setup_pin_code_title:I = 0x7f0a07f9
-
-.field public static top_barrier:I = 0x7f0a0c1c
+    return-object p0
+.end method

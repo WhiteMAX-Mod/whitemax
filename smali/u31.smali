@@ -4,28 +4,74 @@
 
 
 # instance fields
-.field public final a:Lru/ok/android/externcalls/sdk/Conversation;
+.field public final a:Ljava/lang/Long;
 
-.field public final b:Ltk9;
+.field public final b:Ljava/lang/CharSequence;
 
-.field public final c:Z
+.field public final c:Lhd0;
 
-.field public final d:Z
+.field public final d:Ljd0;
+
+.field public final e:Z
 
 
 # direct methods
-.method public constructor <init>(Lru/ok/android/externcalls/sdk/Conversation;Ltk9;ZZ)V
+.method public constructor <init>(Ljava/lang/Long;Ljava/lang/CharSequence;Lhd0;Ljd0;Z)V
     .locals 0
 
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lu31;->a:Lru/ok/android/externcalls/sdk/Conversation;
+    .line 2
+    iput-object p1, p0, Lu31;->a:Ljava/lang/Long;
 
-    iput-object p2, p0, Lu31;->b:Ltk9;
+    .line 3
+    iput-object p2, p0, Lu31;->b:Ljava/lang/CharSequence;
 
-    iput-boolean p3, p0, Lu31;->c:Z
+    .line 4
+    iput-object p3, p0, Lu31;->c:Lhd0;
 
-    iput-boolean p4, p0, Lu31;->d:Z
+    .line 5
+    iput-object p4, p0, Lu31;->d:Ljd0;
+
+    .line 6
+    iput-boolean p5, p0, Lu31;->e:Z
+
+    return-void
+.end method
+
+.method public synthetic constructor <init>(Ljava/lang/Long;Ljava/lang/CharSequence;Lhd0;ZI)V
+    .locals 2
+
+    and-int/lit8 v0, p5, 0x1
+
+    const/4 v1, 0x0
+
+    if-eqz v0, :cond_0
+
+    move-object p1, v1
+
+    :cond_0
+    and-int/lit8 v0, p5, 0x2
+
+    if-eqz v0, :cond_1
+
+    move-object p2, v1
+
+    :cond_1
+    and-int/lit8 p5, p5, 0x4
+
+    if-eqz p5, :cond_2
+
+    move-object p3, v1
+
+    :cond_2
+    move p5, p4
+
+    const/4 p4, 0x0
+
+    .line 7
+    invoke-direct/range {p0 .. p5}, Lu31;-><init>(Ljava/lang/Long;Ljava/lang/CharSequence;Lhd0;Ljd0;Z)V
 
     return-void
 .end method
@@ -33,111 +79,170 @@
 
 # virtual methods
 .method public final equals(Ljava/lang/Object;)Z
-    .locals 2
+    .locals 4
+
+    const/4 v0, 0x1
 
     if-ne p0, p1, :cond_0
 
-    goto :goto_1
+    return v0
 
     :cond_0
-    instance-of v0, p1, Lu31;
+    instance-of v1, p1, Lu31;
 
-    if-nez v0, :cond_1
+    const/4 v2, 0x0
 
-    goto :goto_0
+    if-nez v1, :cond_1
+
+    return v2
 
     :cond_1
     check-cast p1, Lu31;
 
-    iget-object v0, p0, Lu31;->a:Lru/ok/android/externcalls/sdk/Conversation;
+    iget-object v1, p0, Lu31;->a:Ljava/lang/Long;
 
-    iget-object v1, p1, Lu31;->a:Lru/ok/android/externcalls/sdk/Conversation;
+    iget-object v3, p1, Lu31;->a:Ljava/lang/Long;
 
-    invoke-static {v0, v1}, Lxq7;->d(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v3}, Lvyg;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    move-result v0
+    move-result v1
 
-    if-nez v0, :cond_2
+    if-nez v1, :cond_2
 
-    goto :goto_0
+    return v2
 
     :cond_2
-    iget-object v0, p0, Lu31;->b:Ltk9;
+    iget-object v1, p0, Lu31;->b:Ljava/lang/CharSequence;
 
-    iget-object v1, p1, Lu31;->b:Ltk9;
+    iget-object v3, p1, Lu31;->b:Ljava/lang/CharSequence;
 
-    invoke-static {v0, v1}, Lxq7;->d(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v3}, Lvyg;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    move-result v0
+    move-result v1
 
-    if-nez v0, :cond_3
+    if-nez v1, :cond_3
 
-    goto :goto_0
+    return v2
 
     :cond_3
-    iget-boolean v0, p0, Lu31;->c:Z
+    iget-object v1, p0, Lu31;->c:Lhd0;
 
-    iget-boolean v1, p1, Lu31;->c:Z
+    iget-object v3, p1, Lu31;->c:Lhd0;
 
-    if-eq v0, v1, :cond_4
+    invoke-static {v1, v3}, Lvyg;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    goto :goto_0
+    move-result v1
+
+    if-nez v1, :cond_4
+
+    return v2
 
     :cond_4
-    iget-boolean p0, p0, Lu31;->d:Z
+    iget-object v1, p0, Lu31;->d:Ljd0;
 
-    iget-boolean p1, p1, Lu31;->d:Z
+    iget-object v3, p1, Lu31;->d:Ljd0;
 
-    if-eq p0, p1, :cond_5
+    invoke-static {v1, v3}, Lvyg;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    :goto_0
-    const/4 p0, 0x0
+    move-result v1
 
-    return p0
+    if-nez v1, :cond_5
+
+    return v2
 
     :cond_5
-    :goto_1
-    const/4 p0, 0x1
+    iget-boolean p0, p0, Lu31;->e:Z
 
-    return p0
+    iget-boolean p1, p1, Lu31;->e:Z
+
+    if-eq p0, p1, :cond_6
+
+    return v2
+
+    :cond_6
+    return v0
 .end method
 
 .method public final hashCode()I
     .locals 3
 
-    iget-object v0, p0, Lu31;->a:Lru/ok/android/externcalls/sdk/Conversation;
+    const/4 v0, 0x0
 
-    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
+    iget-object v1, p0, Lu31;->a:Ljava/lang/Long;
 
-    move-result v0
+    if-nez v1, :cond_0
 
-    const/16 v1, 0x1f
+    move v1, v0
 
-    mul-int/2addr v0, v1
+    goto :goto_0
 
-    iget-object v2, p0, Lu31;->b:Ltk9;
+    :cond_0
+    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
 
+    move-result v1
+
+    :goto_0
+    mul-int/lit8 v1, v1, 0x1f
+
+    iget-object v2, p0, Lu31;->b:Ljava/lang/CharSequence;
+
+    if-nez v2, :cond_1
+
+    move v2, v0
+
+    goto :goto_1
+
+    :cond_1
     invoke-virtual {v2}, Ljava/lang/Object;->hashCode()I
 
     move-result v2
 
-    add-int/2addr v2, v0
+    :goto_1
+    add-int/2addr v1, v2
 
-    mul-int/2addr v2, v1
+    mul-int/lit8 v1, v1, 0x1f
 
-    iget-boolean v0, p0, Lu31;->c:Z
+    iget-object v2, p0, Lu31;->c:Lhd0;
 
-    invoke-static {v2, v1, v0}, Luz1;->f(IIZ)I
+    if-nez v2, :cond_2
+
+    move v2, v0
+
+    goto :goto_2
+
+    :cond_2
+    invoke-virtual {v2}, Lhd0;->hashCode()I
+
+    move-result v2
+
+    :goto_2
+    add-int/2addr v1, v2
+
+    mul-int/lit8 v1, v1, 0x1f
+
+    iget-object v2, p0, Lu31;->d:Ljd0;
+
+    if-nez v2, :cond_3
+
+    goto :goto_3
+
+    :cond_3
+    invoke-virtual {v2}, Ljava/lang/Object;->hashCode()I
 
     move-result v0
 
-    iget-boolean p0, p0, Lu31;->d:Z
+    :goto_3
+    add-int/2addr v1, v0
+
+    mul-int/lit8 v1, v1, 0x1f
+
+    iget-boolean p0, p0, Lu31;->e:Z
 
     invoke-static {p0}, Ljava/lang/Boolean;->hashCode(Z)I
 
     move-result p0
 
-    add-int/2addr p0, v0
+    add-int/2addr p0, v1
 
     return p0
 .end method
@@ -147,43 +252,47 @@
 
     new-instance v0, Ljava/lang/StringBuilder;
 
-    const-string v1, "Result(conversation="
+    const-string v1, "CallChatState(chatId="
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-object v1, p0, Lu31;->a:Lru/ok/android/externcalls/sdk/Conversation;
+    iget-object v1, p0, Lu31;->a:Ljava/lang/Long;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    const-string v1, ", callTarget="
+    const-string v1, ", name="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v1, p0, Lu31;->b:Ltk9;
+    iget-object v1, p0, Lu31;->b:Ljava/lang/CharSequence;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    const-string v1, ", isNewCall="
+    const-string v1, ", avatar="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-boolean v1, p0, Lu31;->c:Z
+    iget-object v1, p0, Lu31;->c:Lhd0;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    const-string v1, ", isIncoming="
+    const-string v1, ", overlay="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-boolean p0, p0, Lu31;->d:Z
+    iget-object v1, p0, Lu31;->d:Ljd0;
 
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    const-string p0, ")"
+    const-string v1, ", isLinkCall="
 
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    const-string v1, ")"
+
+    iget-boolean p0, p0, Lu31;->e:Z
+
+    invoke-static {v0, p0, v1}, Lmw1;->k(Ljava/lang/StringBuilder;ZLjava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
 

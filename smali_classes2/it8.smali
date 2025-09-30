@@ -1,284 +1,109 @@
 .class public final Lit8;
-.super Ljava/lang/Object;
+.super Lj2e;
 .source "SourceFile"
-
-# interfaces
-.implements Ljava/io/Serializable;
-
-
-# static fields
-.field public static final Z:Lht8;
-
-
-# instance fields
-.field public final X:S
-
-.field public final Y:Ljava/util/Map;
-
-.field public final a:J
-
-.field public final b:Ljava/lang/String;
-
-.field public final c:Lmt8;
-
-.field public final o:S
-
-
-# direct methods
-.method static constructor <clinit>()V
-    .locals 1
-
-    new-instance v0, Lht8;
-
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    sput-object v0, Lit8;->Z:Lht8;
-
-    return-void
-.end method
-
-.method public constructor <init>(JLjava/lang/String;Lmt8;SSLjava/util/Map;)V
-    .locals 0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-wide p1, p0, Lit8;->a:J
-
-    iput-object p3, p0, Lit8;->b:Ljava/lang/String;
-
-    iput-object p4, p0, Lit8;->c:Lmt8;
-
-    iput-short p5, p0, Lit8;->o:S
-
-    iput-short p6, p0, Lit8;->X:S
-
-    iput-object p7, p0, Lit8;->Y:Ljava/util/Map;
-
-    return-void
-.end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 7
+.method public final F(Lht8;)V
+    .locals 5
 
-    const/4 v0, 0x1
+    iget-object p0, p0, Lzoc;->a:Landroid/view/View;
 
-    if-ne p0, p1, :cond_0
+    check-cast p0, Lkn3;
 
-    return v0
-
-    :cond_0
-    instance-of v1, p1, Lit8;
-
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
-    check-cast p1, Lit8;
-
-    iget-wide v3, p0, Lit8;->a:J
-
-    iget-wide v5, p1, Lit8;->a:J
-
-    cmp-long v1, v3, v5
-
-    if-eqz v1, :cond_2
-
-    return v2
-
-    :cond_2
-    iget-object v1, p0, Lit8;->b:Ljava/lang/String;
-
-    iget-object v3, p1, Lit8;->b:Ljava/lang/String;
-
-    invoke-static {v1, v3}, Lxq7;->d(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_3
-
-    return v2
-
-    :cond_3
-    iget-object v1, p0, Lit8;->c:Lmt8;
-
-    iget-object v3, p1, Lit8;->c:Lmt8;
-
-    if-eq v1, v3, :cond_4
-
-    return v2
-
-    :cond_4
-    iget-short v1, p0, Lit8;->o:S
-
-    iget-short v3, p1, Lit8;->o:S
-
-    if-eq v1, v3, :cond_5
-
-    return v2
-
-    :cond_5
-    iget-short v1, p0, Lit8;->X:S
-
-    iget-short v3, p1, Lit8;->X:S
-
-    if-eq v1, v3, :cond_6
-
-    return v2
-
-    :cond_6
-    iget-object p0, p0, Lit8;->Y:Ljava/util/Map;
-
-    iget-object p1, p1, Lit8;->Y:Ljava/util/Map;
-
-    invoke-static {p0, p1}, Lxq7;->d(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p0
-
-    if-nez p0, :cond_7
-
-    return v2
-
-    :cond_7
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 3
-
-    iget-wide v0, p0, Lit8;->a:J
+    iget-wide v0, p1, Lht8;->a:J
 
     invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
 
-    move-result v0
+    move-result v2
 
-    mul-int/lit8 v0, v0, 0x1f
+    invoke-virtual {p0, v2}, Landroidx/constraintlayout/widget/ConstraintLayout;->setId(I)V
 
-    const/4 v1, 0x0
+    iget-boolean v2, p1, Lht8;->t0:Z
 
-    iget-object v2, p0, Lit8;->b:Ljava/lang/String;
+    invoke-virtual {p0, v2}, Lkn3;->setEnabled(Z)V
 
-    if-nez v2, :cond_0
+    iget-object v2, p1, Lht8;->b:Ljava/lang/String;
 
-    move v2, v1
+    invoke-virtual {p0, v2}, Lkn3;->setName(Ljava/lang/CharSequence;)V
+
+    iget-object v2, p1, Lht8;->o:Lu2f;
+
+    invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
+
+    move-result-object v3
+
+    invoke-virtual {v2, v3}, Lu2f;->b(Landroid/content/Context;)Ljava/lang/CharSequence;
+
+    move-result-object v2
+
+    invoke-virtual {p0, v2}, Lkn3;->setMessage(Ljava/lang/CharSequence;)V
+
+    iget-boolean v2, p1, Lht8;->Z:Z
+
+    invoke-virtual {p0, v2}, Lkn3;->setVerified(Z)V
+
+    iget-object v2, p1, Lht8;->w0:Lu2f;
+
+    const/4 v3, 0x0
+
+    if-eqz v2, :cond_0
+
+    invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
+
+    move-result-object v4
+
+    invoke-virtual {v2, v4}, Lu2f;->b(Landroid/content/Context;)Ljava/lang/CharSequence;
+
+    move-result-object v2
 
     goto :goto_0
 
     :cond_0
-    invoke-virtual {v2}, Ljava/lang/String;->hashCode()I
-
-    move-result v2
+    move-object v2, v3
 
     :goto_0
-    add-int/2addr v0, v2
+    invoke-virtual {p0, v2}, Lkn3;->setAlias(Ljava/lang/CharSequence;)V
 
-    mul-int/lit8 v0, v0, 0x1f
+    invoke-virtual {p0}, Lkn3;->K()V
 
-    iget-object v2, p0, Lit8;->c:Lmt8;
+    invoke-virtual {p0, v3}, Lkn3;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    invoke-virtual {v2}, Ljava/lang/Object;->hashCode()I
+    iget-object v2, p1, Lht8;->Y:Ljava/lang/CharSequence;
 
-    move-result v2
+    iget-object p1, p1, Lht8;->X:Landroid/net/Uri;
 
-    add-int/2addr v2, v0
+    if-eqz p1, :cond_1
 
-    mul-int/lit8 v2, v2, 0x1f
+    invoke-virtual {p1}, Landroid/net/Uri;->toString()Ljava/lang/String;
 
-    iget-short v0, p0, Lit8;->o:S
+    move-result-object p1
 
-    invoke-static {v0}, Ljava/lang/Short;->hashCode(S)I
-
-    move-result v0
-
-    add-int/2addr v0, v2
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget-short v2, p0, Lit8;->X:S
-
-    invoke-static {v2}, Ljava/lang/Short;->hashCode(S)I
-
-    move-result v2
-
-    add-int/2addr v2, v0
-
-    mul-int/lit8 v2, v2, 0x1f
-
-    iget-object p0, p0, Lit8;->Y:Ljava/util/Map;
-
-    if-nez p0, :cond_1
-
-    goto :goto_1
+    if-nez p1, :cond_2
 
     :cond_1
-    invoke-virtual {p0}, Ljava/lang/Object;->hashCode()I
+    sget-object p1, Landroid/net/Uri;->EMPTY:Landroid/net/Uri;
 
-    move-result v1
+    invoke-virtual {p1}, Landroid/net/Uri;->toString()Ljava/lang/String;
 
-    :goto_1
-    add-int/2addr v2, v1
+    move-result-object p1
 
-    return v2
+    :cond_2
+    invoke-virtual {p0, v0, v1, v2, p1}, Lkn3;->L(JLjava/lang/CharSequence;Ljava/lang/String;)V
+
+    const/4 p1, 0x0
+
+    invoke-virtual {p0, p1}, Lkn3;->setSelectionEnabled(Z)V
+
+    return-void
 .end method
 
-.method public final toString()Ljava/lang/String;
-    .locals 5
+.method public final bridge synthetic y(Lts7;)V
+    .locals 0
 
-    const-string v0, "MessageElement(entityId="
+    check-cast p1, Lht8;
 
-    const-string v1, ", entityName="
+    invoke-virtual {p0, p1}, Lit8;->F(Lht8;)V
 
-    iget-wide v2, p0, Lit8;->a:J
-
-    iget-object v4, p0, Lit8;->b:Ljava/lang/String;
-
-    invoke-static {v0, v2, v3, v1, v4}, Lp3a;->k(Ljava/lang/String;JLjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    const-string v1, ", type="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lit8;->c:Lmt8;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", from="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-short v1, p0, Lit8;->o:S
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string v1, ", length="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-short v1, p0, Lit8;->X:S
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string v1, ", attributes="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object p0, p0, Lit8;->Y:Ljava/util/Map;
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string p0, ")"
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
+    return-void
 .end method

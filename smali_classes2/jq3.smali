@@ -1,137 +1,61 @@
 .class public final Ljq3;
-.super Ljava/lang/Object;
+.super Loi0;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:Lje7;
+.field public final b:I
 
-.field public final b:Lje7;
-
-.field public final c:Lje7;
-
-.field public final d:Lje7;
+.field public final c:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Lje7;Lje7;Lje7;Lje7;)V
+.method public constructor <init>(IJLjava/util/List;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p2, p3}, Loi0;-><init>(J)V
 
-    iput-object p1, p0, Ljq3;->a:Lje7;
+    iput p1, p0, Ljq3;->b:I
 
-    iput-object p2, p0, Ljq3;->b:Lje7;
-
-    iput-object p3, p0, Ljq3;->c:Lje7;
-
-    iput-object p4, p0, Ljq3;->d:Lje7;
+    iput-object p4, p0, Ljq3;->c:Ljava/lang/Object;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(J)V
-    .locals 11
+.method public final toString()Ljava/lang/String;
+    .locals 3
 
-    const-class v0, Ljq3;
+    const-string v0, "BLOCKED"
 
-    invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
+    const-string v1, ", from="
 
-    move-result-object v0
+    const-string v2, "ContactListEvent{status="
 
-    const-string v1, "unblock, id = "
-
-    invoke-static {p1, p2, v1, v0}, Luz1;->n(JLjava/lang/String;Ljava/lang/String;)V
-
-    iget-object v0, p0, Ljq3;->a:Lje7;
-
-    invoke-interface {v0}, Lje7;->getValue()Ljava/lang/Object;
+    invoke-static {v2, v0, v1}, Lmw1;->n(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    check-cast v0, Lxk3;
+    iget v1, p0, Ljq3;->b:I
 
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    new-instance v1, Liz1;
+    const-string v1, ", count=40, contactIds="
 
-    const/16 v2, 0x12
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const/4 v3, 0x0
+    iget-object p0, p0, Ljq3;->c:Ljava/lang/Object;
 
-    invoke-direct {v1, v2, v3}, Liz1;-><init>(ILjava/lang/Object;)V
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0, p1, p2, v1}, Lxk3;->c(JLjj3;)Lnj3;
+    const/16 p0, 0x7d
 
-    iget-object v0, p0, Ljq3;->c:Lje7;
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    invoke-interface {v0}, Lje7;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lik;
-
-    check-cast v0, La2a;
-
-    new-instance v1, Llq3;
-
-    invoke-virtual {v0}, La2a;->x()Lx4b;
-
-    move-result-object v2
-
-    check-cast v2, La5b;
-
-    iget-object v2, v2, La5b;->a:Lj23;
-
-    invoke-virtual {v2}, Lmwc;->l()J
-
-    move-result-wide v3
-
-    const/4 v9, 0x0
-
-    const/4 v10, 0x0
-
-    const/4 v2, 0x2
-
-    const/4 v7, 0x0
-
-    const/4 v8, 0x0
-
-    move-wide v5, p1
-
-    invoke-direct/range {v1 .. v10}, Llq3;-><init>(IJJLjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
-
-    invoke-static {v0, v1}, La2a;->v(La2a;Lhl;)J
-
-    iget-object p1, p0, Ljq3;->b:Lje7;
-
-    invoke-interface {p1}, Lje7;->getValue()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lpie;
-
-    invoke-static {v5, v6}, Luz1;->k(J)Ljava/util/List;
-
-    move-result-object p2
-
-    invoke-virtual {p1, p2}, Lpie;->f(Ljava/util/Collection;)V
-
-    iget-object p0, p0, Ljq3;->d:Lje7;
-
-    invoke-interface {p0}, Lje7;->getValue()Ljava/lang/Object;
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p0
 
-    check-cast p0, Lvu0;
-
-    new-instance p1, Lhs3;
-
-    invoke-direct {p1, v5, v6}, Lhs3;-><init>(J)V
-
-    invoke-virtual {p0, p1}, Lvu0;->c(Ljava/lang/Object;)V
-
-    return-void
+    return-object p0
 .end method

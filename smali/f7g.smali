@@ -1,108 +1,68 @@
 .class public final Lf7g;
-.super Lspf;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Landroid/view/OnReceiveContentListener;
 
 
 # instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Lh7g;
+.field public final a:Ls9a;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lh7g;I)V
+.method public constructor <init>(Ls9a;)V
     .locals 0
 
-    iput p2, p0, Lf7g;->a:I
-
-    iput-object p1, p0, Lf7g;->b:Lh7g;
-
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lf7g;->a:Ls9a;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final c()V
-    .locals 3
+.method public final onReceiveContent(Landroid/view/View;Landroid/view/ContentInfo;)Landroid/view/ContentInfo;
+    .locals 2
 
-    iget v0, p0, Lf7g;->a:I
+    new-instance v0, Lzv3;
 
-    const/4 v1, 0x0
+    new-instance v1, Lnyc;
 
-    iget-object p0, p0, Lf7g;->b:Lh7g;
+    invoke-direct {v1, p2}, Lnyc;-><init>(Landroid/view/ContentInfo;)V
 
-    packed-switch v0, :pswitch_data_0
+    invoke-direct {v0, v1}, Lzv3;-><init>(Lyv3;)V
 
-    iput-object v1, p0, Lh7g;->A:Lqpf;
+    iget-object p0, p0, Lf7g;->a:Ls9a;
 
-    iget-object p0, p0, Lh7g;->l:Landroidx/appcompat/widget/ActionBarContainer;
+    invoke-interface {p0, p1, v0}, Ls9a;->a(Landroid/view/View;Lzv3;)Lzv3;
 
-    invoke-virtual {p0}, Landroid/view/View;->requestLayout()V
+    move-result-object p0
 
-    return-void
+    if-nez p0, :cond_0
 
-    :pswitch_0
-    iget-boolean v0, p0, Lh7g;->w:Z
+    const/4 p0, 0x0
 
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Lh7g;->o:Landroid/view/View;
-
-    if-eqz v0, :cond_0
-
-    const/4 v2, 0x0
-
-    invoke-virtual {v0, v2}, Landroid/view/View;->setTranslationY(F)V
-
-    iget-object v0, p0, Lh7g;->l:Landroidx/appcompat/widget/ActionBarContainer;
-
-    invoke-virtual {v0, v2}, Landroid/view/View;->setTranslationY(F)V
+    return-object p0
 
     :cond_0
-    iget-object v0, p0, Lh7g;->l:Landroidx/appcompat/widget/ActionBarContainer;
+    if-ne p0, v0, :cond_1
 
-    const/16 v2, 0x8
-
-    invoke-virtual {v0, v2}, Landroidx/appcompat/widget/ActionBarContainer;->setVisibility(I)V
-
-    iget-object v0, p0, Lh7g;->l:Landroidx/appcompat/widget/ActionBarContainer;
-
-    const/4 v2, 0x0
-
-    invoke-virtual {v0, v2}, Landroidx/appcompat/widget/ActionBarContainer;->setTransitioning(Z)V
-
-    iput-object v1, p0, Lh7g;->A:Lqpf;
-
-    iget-object v0, p0, Lh7g;->s:Lb9g;
-
-    if-eqz v0, :cond_1
-
-    iget-object v2, p0, Lh7g;->r:Lg7g;
-
-    invoke-virtual {v0, v2}, Lb9g;->C(Lf7;)V
-
-    iput-object v1, p0, Lh7g;->r:Lg7g;
-
-    iput-object v1, p0, Lh7g;->s:Lb9g;
+    return-object p2
 
     :cond_1
-    iget-object p0, p0, Lh7g;->k:Landroidx/appcompat/widget/ActionBarOverlayLayout;
+    iget-object p0, p0, Lzv3;->a:Lyv3;
 
-    if-eqz p0, :cond_2
+    invoke-interface {p0}, Lyv3;->s()Landroid/view/ContentInfo;
 
-    sget-object v0, Ltnf;->a:Ljava/util/WeakHashMap;
+    move-result-object p0
 
-    invoke-static {p0}, Lgnf;->c(Landroid/view/View;)V
+    invoke-static {p0}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    :cond_2
-    return-void
+    invoke-static {p0}, Ld20;->k(Ljava/lang/Object;)Landroid/view/ContentInfo;
 
-    nop
+    move-result-object p0
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-object p0
 .end method

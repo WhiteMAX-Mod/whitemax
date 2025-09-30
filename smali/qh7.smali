@@ -1,3 +1,3 @@
-.class public Lqh7;
-.super Landroid/widget/LinearLayout$LayoutParams;
+.class public final Lqh7;
+.super Ldh7;
 .source "SourceFile"

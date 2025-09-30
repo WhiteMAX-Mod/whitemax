@@ -3,67 +3,22 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lx64;
-.implements Lx66;
-
-
-# static fields
-.field public static final X:Lnfd;
-
-.field public static final b:Lnfd;
-
-.field public static final c:Lnfd;
-
-.field public static final o:Lnfd;
+.implements Lzb6;
 
 
 # instance fields
 .field public final synthetic a:I
 
+.field public final synthetic b:Lone/me/sdk/gallery/selectalbum/SelectAlbumWidget;
+
 
 # direct methods
-.method static synthetic constructor <clinit>()V
-    .locals 2
-
-    new-instance v0, Lnfd;
-
-    const/4 v1, 0x0
-
-    invoke-direct {v0, v1}, Lnfd;-><init>(I)V
-
-    sput-object v0, Lnfd;->b:Lnfd;
-
-    new-instance v0, Lnfd;
-
-    const/4 v1, 0x1
-
-    invoke-direct {v0, v1}, Lnfd;-><init>(I)V
-
-    sput-object v0, Lnfd;->c:Lnfd;
-
-    new-instance v0, Lnfd;
-
-    const/4 v1, 0x2
-
-    invoke-direct {v0, v1}, Lnfd;-><init>(I)V
-
-    sput-object v0, Lnfd;->o:Lnfd;
-
-    new-instance v0, Lnfd;
-
-    const/4 v1, 0x3
-
-    invoke-direct {v0, v1}, Lnfd;-><init>(I)V
-
-    sput-object v0, Lnfd;->X:Lnfd;
-
-    return-void
-.end method
-
-.method public synthetic constructor <init>(I)V
+.method public synthetic constructor <init>(Lone/me/sdk/gallery/selectalbum/SelectAlbumWidget;I)V
     .locals 0
 
-    iput p1, p0, Lnfd;->a:I
+    iput p2, p0, Lnfd;->a:I
+
+    iput-object p1, p0, Lnfd;->b:Lone/me/sdk/gallery/selectalbum/SelectAlbumWidget;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -72,329 +27,199 @@
 
 
 # virtual methods
-.method public final a()Ljava/lang/Object;
-    .locals 0
-
-    iget p0, p0, Lnfd;->a:I
-
-    packed-switch p0, :pswitch_data_0
-
-    new-instance p0, Lone/me/settings/privacy/ui/pincode/SetupPinCodeScreen;
-
-    invoke-direct {p0}, Lone/me/settings/privacy/ui/pincode/SetupPinCodeScreen;-><init>()V
-
-    return-object p0
-
-    :pswitch_0
-    new-instance p0, Lone/me/settings/privacy/ui/onboarding/SafeModeOnboardingScreen;
-
-    invoke-direct {p0}, Lone/me/settings/privacy/ui/onboarding/SafeModeOnboardingScreen;-><init>()V
-
-    return-object p0
-
-    :pswitch_1
-    new-instance p0, Lone/me/settings/privacy/ui/blacklist/SettingsBlacklistScreen;
-
-    invoke-direct {p0}, Lone/me/settings/privacy/ui/blacklist/SettingsBlacklistScreen;-><init>()V
-
-    return-object p0
-
-    :pswitch_2
-    new-instance p0, Lone/me/settings/privacy/ui/SettingsPrivacyScreen;
-
-    invoke-direct {p0}, Lone/me/settings/privacy/ui/SettingsPrivacyScreen;-><init>()V
-
-    return-object p0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
+.method public final invoke()Ljava/lang/Object;
+    .locals 8
 
     iget v0, p0, Lnfd;->a:I
 
+    const/4 v1, 0x1
+
+    const/4 v2, 0x3
+
+    const/4 v3, 0x0
+
+    const/4 v4, 0x0
+
+    iget-object p0, p0, Lnfd;->b:Lone/me/sdk/gallery/selectalbum/SelectAlbumWidget;
+
     packed-switch v0, :pswitch_data_0
 
-    instance-of v0, p1, Lx64;
+    sget-object v0, Lone/me/sdk/gallery/selectalbum/SelectAlbumWidget;->Y:[Lxi7;
 
-    if-eqz v0, :cond_0
+    new-instance v0, Llfb;
 
-    instance-of v0, p1, Lx66;
+    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
 
-    if-eqz v0, :cond_0
+    move-result-object v1
 
-    invoke-virtual {p0}, Lnfd;->getFunctionDelegate()Lq66;
+    invoke-direct {v0, v1}, Llfb;-><init>(Landroid/content/Context;)V
 
-    move-result-object p0
+    invoke-virtual {v0, v3}, Llfb;->setStackFromBottom(Z)V
 
-    check-cast p1, Lx66;
+    new-instance v1, Lr9;
 
-    invoke-interface {p1}, Lx66;->getFunctionDelegate()Lq66;
+    const/4 v3, 0x5
 
-    move-result-object p1
+    invoke-direct {v1, p0, v3}, Lr9;-><init>(Lone/me/sdk/arch/Widget;I)V
 
-    invoke-virtual {p0, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v0, v1}, Llfb;->setCallback(Lffb;)V
 
-    move-result p0
-
-    goto :goto_0
-
-    :cond_0
-    const/4 p0, 0x0
-
-    :goto_0
-    return p0
-
-    :pswitch_0
-    instance-of v0, p1, Lx64;
-
-    if-eqz v0, :cond_1
-
-    instance-of v0, p1, Lx66;
-
-    if-eqz v0, :cond_1
-
-    invoke-virtual {p0}, Lnfd;->getFunctionDelegate()Lq66;
+    invoke-virtual {p0}, Lone/me/sdk/gallery/selectalbum/SelectAlbumWidget;->y0()Ldgd;
 
     move-result-object p0
 
-    check-cast p1, Lx66;
+    invoke-virtual {v0, p0}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
 
-    invoke-interface {p1}, Lx66;->getFunctionDelegate()Lq66;
+    new-instance p0, Lgq;
 
-    move-result-object p1
+    const/16 v1, 0xb
 
-    invoke-virtual {p0, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+    invoke-direct {p0, v2, v4, v1}, Lgq;-><init>(ILkotlin/coroutines/Continuation;I)V
 
-    move-result p0
-
-    goto :goto_1
-
-    :cond_1
-    const/4 p0, 0x0
-
-    :goto_1
-    return p0
-
-    :pswitch_1
-    instance-of v0, p1, Lx64;
-
-    if-eqz v0, :cond_2
-
-    instance-of v0, p1, Lx66;
-
-    if-eqz v0, :cond_2
-
-    invoke-virtual {p0}, Lnfd;->getFunctionDelegate()Lq66;
-
-    move-result-object p0
-
-    check-cast p1, Lx66;
-
-    invoke-interface {p1}, Lx66;->getFunctionDelegate()Lq66;
-
-    move-result-object p1
-
-    invoke-virtual {p0, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
-
-    move-result p0
-
-    goto :goto_2
-
-    :cond_2
-    const/4 p0, 0x0
-
-    :goto_2
-    return p0
-
-    :pswitch_2
-    instance-of v0, p1, Lx64;
-
-    if-eqz v0, :cond_3
-
-    instance-of v0, p1, Lx66;
-
-    if-eqz v0, :cond_3
-
-    invoke-virtual {p0}, Lnfd;->getFunctionDelegate()Lq66;
-
-    move-result-object p0
-
-    check-cast p1, Lx66;
-
-    invoke-interface {p1}, Lx66;->getFunctionDelegate()Lq66;
-
-    move-result-object p1
-
-    invoke-virtual {p0, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
-
-    move-result p0
-
-    goto :goto_3
-
-    :cond_3
-    const/4 p0, 0x0
-
-    :goto_3
-    return p0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public final getFunctionDelegate()Lq66;
-    .locals 9
-
-    iget p0, p0, Lnfd;->a:I
-
-    packed-switch p0, :pswitch_data_0
-
-    new-instance v0, La76;
-
-    const-string v4, "<init>()V"
-
-    const/4 v5, 0x0
-
-    const/4 v1, 0x0
-
-    const-class v2, Lone/me/settings/privacy/ui/pincode/SetupPinCodeScreen;
-
-    const-string v3, "<init>"
-
-    invoke-direct/range {v0 .. v5}, La76;-><init>(ILjava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
+    invoke-static {p0, v0}, Ljs9;->t(Lrc6;Landroid/view/View;)V
 
     return-object v0
 
     :pswitch_0
-    new-instance v1, La76;
+    sget-object v0, Lone/me/sdk/gallery/selectalbum/SelectAlbumWidget;->Y:[Lxi7;
 
-    const-string v5, "<init>()V"
+    new-instance v0, Ldgd;
 
-    const/4 v6, 0x0
+    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
 
-    const/4 v2, 0x0
+    move-result-object v5
 
-    const-class v3, Lone/me/settings/privacy/ui/onboarding/SafeModeOnboardingScreen;
+    invoke-direct {v0, v5, v4}, Landroidx/recyclerview/widget/RecyclerView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    const-string v4, "<init>"
+    sget v5, Lyma;->d:I
 
-    invoke-direct/range {v1 .. v6}, La76;-><init>(ILjava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
+    invoke-virtual {v0, v5}, Landroid/view/View;->setId(I)V
 
-    return-object v1
+    new-instance v5, Landroid/widget/FrameLayout$LayoutParams;
+
+    const/4 v6, -0x1
+
+    const/4 v7, -0x2
+
+    invoke-direct {v5, v6, v7}, Landroid/widget/FrameLayout$LayoutParams;-><init>(II)V
+
+    invoke-virtual {v0, v5}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+
+    new-instance v5, Landroidx/recyclerview/widget/LinearLayoutManager;
+
+    invoke-virtual {v0}, Landroid/view/View;->getContext()Landroid/content/Context;
+
+    invoke-direct {v5}, Landroidx/recyclerview/widget/LinearLayoutManager;-><init>()V
+
+    invoke-virtual {v0, v5}, Landroidx/recyclerview/widget/RecyclerView;->setLayoutManager(Landroidx/recyclerview/widget/a;)V
+
+    iget-object p0, p0, Lone/me/sdk/gallery/selectalbum/SelectAlbumWidget;->c:Lrm0;
+
+    sget-object v5, Lone/me/sdk/gallery/selectalbum/SelectAlbumWidget;->Y:[Lxi7;
+
+    aget-object v1, v5, v1
+
+    invoke-virtual {p0}, Lrm0;->getValue()Ljava/lang/Object;
+
+    move-result-object p0
+
+    check-cast p0, Lcgd;
+
+    invoke-virtual {v0, p0}, Landroidx/recyclerview/widget/RecyclerView;->setAdapter(Lcoc;)V
+
+    new-instance p0, Lzq0;
+
+    invoke-static {}, Lvo4;->d()Landroid/content/res/Resources;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object v1
+
+    iget v1, v1, Landroid/util/DisplayMetrics;->density:F
+
+    const/high16 v5, 0x41a00000    # 20.0f
+
+    mul-float/2addr v1, v5
+
+    invoke-direct {p0, v3, v1}, Lzq0;-><init>(IF)V
+
+    invoke-virtual {v0, p0}, Landroid/view/View;->setOutlineProvider(Landroid/view/ViewOutlineProvider;)V
+
+    new-instance p0, Lc9b;
+
+    const/16 v1, 0xe
+
+    invoke-direct {p0, v2, v4, v1}, Lc9b;-><init>(ILkotlin/coroutines/Continuation;I)V
+
+    invoke-static {p0, v0}, Ljs9;->t(Lrc6;Landroid/view/View;)V
+
+    return-object v0
 
     :pswitch_1
-    new-instance v2, La76;
+    sget-object v0, Lone/me/sdk/gallery/selectalbum/SelectAlbumWidget;->Y:[Lxi7;
 
-    const-string v6, "<init>()V"
+    new-instance v0, Lcgd;
 
-    const/4 v7, 0x0
+    new-instance v2, Lvpc;
 
-    const/4 v3, 0x0
+    const/16 v3, 0x8
 
-    const-class v4, Lone/me/settings/privacy/ui/blacklist/SettingsBlacklistScreen;
+    invoke-direct {v2, v3, p0}, Lvpc;-><init>(ILjava/lang/Object;)V
 
-    const-string v5, "<init>"
+    iget-object v3, p0, Lone/me/sdk/gallery/selectalbum/SelectAlbumWidget;->b:Lcl7;
 
-    invoke-direct/range {v2 .. v7}, La76;-><init>(ILjava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
+    invoke-interface {v3}, Lcl7;->getValue()Ljava/lang/Object;
 
-    return-object v2
+    move-result-object v3
 
-    :pswitch_2
-    new-instance v3, La76;
+    check-cast v3, Lkha;
 
-    const-string v7, "<init>()V"
+    invoke-virtual {v3}, Lkha;->a()Ljava/util/concurrent/ExecutorService;
 
-    const/4 v8, 0x0
+    move-result-object v3
 
-    const/4 v4, 0x0
+    invoke-direct {v0, v2, v3}, Lcgd;-><init>(Lvpc;Ljava/util/concurrent/ExecutorService;)V
 
-    const-class v5, Lone/me/settings/privacy/ui/SettingsPrivacyScreen;
+    invoke-virtual {p0}, Lone/me/sdk/gallery/selectalbum/SelectAlbumWidget;->A0()Lmfd;
 
-    const-string v6, "<init>"
+    move-result-object v2
 
-    invoke-direct/range {v3 .. v8}, La76;-><init>(ILjava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
+    iget-object v2, v2, Lmfd;->r0:Liic;
 
-    return-object v3
+    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleOwner()Lzn7;
 
-    nop
+    move-result-object v3
+
+    invoke-interface {v3}, Lzn7;->L()Lbo7;
+
+    move-result-object v3
+
+    sget-object v5, Lcn7;->o:Lcn7;
+
+    invoke-static {v2, v3, v5}, Lya6;->n(Lis5;Lbo7;Lcn7;)Lps1;
+
+    move-result-object v2
+
+    new-instance v3, Lofd;
+
+    invoke-direct {v3, v4, v0}, Lofd;-><init>(Lkotlin/coroutines/Continuation;Lcgd;)V
+
+    new-instance v4, Lnu5;
+
+    invoke-direct {v4, v2, v3, v1}, Lnu5;-><init>(Lis5;Lpc6;I)V
+
+    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleScope()Lmn7;
+
+    move-result-object p0
+
+    invoke-static {v4, p0}, Lo97;->u0(Lis5;Ly04;)Lcae;
+
+    return-object v0
 
     :pswitch_data_0
     .packed-switch 0x0
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public final hashCode()I
-    .locals 1
-
-    iget v0, p0, Lnfd;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    invoke-virtual {p0}, Lnfd;->getFunctionDelegate()Lq66;
-
-    move-result-object p0
-
-    invoke-virtual {p0}, Ljava/lang/Object;->hashCode()I
-
-    move-result p0
-
-    return p0
-
-    :pswitch_0
-    invoke-virtual {p0}, Lnfd;->getFunctionDelegate()Lq66;
-
-    move-result-object p0
-
-    invoke-virtual {p0}, Ljava/lang/Object;->hashCode()I
-
-    move-result p0
-
-    return p0
-
-    :pswitch_1
-    invoke-virtual {p0}, Lnfd;->getFunctionDelegate()Lq66;
-
-    move-result-object p0
-
-    invoke-virtual {p0}, Ljava/lang/Object;->hashCode()I
-
-    move-result p0
-
-    return p0
-
-    :pswitch_2
-    invoke-virtual {p0}, Lnfd;->getFunctionDelegate()Lq66;
-
-    move-result-object p0
-
-    invoke-virtual {p0}, Ljava/lang/Object;->hashCode()I
-
-    move-result p0
-
-    return p0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_2
         :pswitch_1
         :pswitch_0
     .end packed-switch

@@ -1,121 +1,37 @@
-.class public abstract Lcaa;
+.class public final Lcaa;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:I
-
-.field public static final b:I
-
-.field public static final c:I
-
-.field public static final d:I
-
-.field public static final e:I
-
-.field public static final f:I
-
-.field public static final g:I
-
-.field public static final h:I
-
-.field public static final i:I
-
-.field public static final j:I
-
-.field public static final k:I
-
-.field public static final l:I
-
-.field public static final m:I
-
-.field public static final n:I
-
-.field public static final o:I
-
-.field public static final p:I
-
-.field public static final q:I
-
-.field public static final r:I
-
-
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public static a(Ljava/lang/String;Ljava/lang/String;)Laaa;
+    .locals 3
 
-    sget v0, Lnyb;->oneme_media_keyboard_emoji_animals_and_plants:I
+    invoke-static {}, Lbaa;->a()Laaa;
 
-    sput v0, Lcaa;->a:I
+    move-result-object v0
 
-    sget v0, Lnyb;->oneme_media_keyboard_emoji_classic:I
+    const-string v1, "uv.stat.thin.events"
 
-    sput v0, Lcaa;->b:I
+    iput-object v1, v0, Laaa;->a:Ljava/lang/String;
 
-    sget v0, Lnyb;->oneme_media_keyboard_emoji_flags:I
+    const/4 v1, 0x1
 
-    sput v0, Lcaa;->c:I
+    iput v1, v0, Laaa;->b:I
 
-    sget v0, Lnyb;->oneme_media_keyboard_emoji_food_and_drink:I
+    iput-object p0, v0, Laaa;->c:Ljava/lang/String;
 
-    sput v0, Lcaa;->d:I
+    iput v1, v0, Laaa;->d:I
 
-    sget v0, Lnyb;->oneme_media_keyboard_emoji_gestures_and_people:I
+    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
-    sput v0, Lcaa;->e:I
+    move-result-wide v1
 
-    sget v0, Lnyb;->oneme_media_keyboard_emoji_objects:I
+    invoke-virtual {v0, v1, v2}, Laaa;->e(J)V
 
-    sput v0, Lcaa;->f:I
+    const-string p0, "sessionId"
 
-    sget v0, Lnyb;->oneme_media_keyboard_emoji_sport_and_activity:I
+    invoke-virtual {v0, p0, p1}, Laaa;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    sput v0, Lcaa;->g:I
-
-    sget v0, Lnyb;->oneme_media_keyboard_emoji_symbols:I
-
-    sput v0, Lcaa;->h:I
-
-    sget v0, Lnyb;->oneme_media_keyboard_emoji_travels_and_transport:I
-
-    sput v0, Lcaa;->i:I
-
-    sget v0, Lnyb;->oneme_media_keyboard_favorite:I
-
-    sput v0, Lcaa;->j:I
-
-    sget v0, Lnyb;->oneme_media_keyboard_popular:I
-
-    sput v0, Lcaa;->k:I
-
-    sget v0, Lnyb;->oneme_media_keyboard_recent:I
-
-    sput v0, Lcaa;->l:I
-
-    sget v0, Lnyb;->oneme_media_keyboard_recent_clear_action:I
-
-    sput v0, Lcaa;->m:I
-
-    sget v0, Lnyb;->oneme_media_keyboard_recent_clear_cancel:I
-
-    sput v0, Lcaa;->n:I
-
-    sget v0, Lnyb;->oneme_media_keyboard_recent_clear_title:I
-
-    sput v0, Lcaa;->o:I
-
-    sget v0, Lnyb;->oneme_media_keyboard_tab_emoji:I
-
-    sput v0, Lcaa;->p:I
-
-    sget v0, Lnyb;->oneme_media_keyboard_tab_gifs:I
-
-    sput v0, Lcaa;->q:I
-
-    sget v0, Lnyb;->oneme_media_keyboard_tab_stickers:I
-
-    sput v0, Lcaa;->r:I
-
-    return-void
+    return-object v0
 .end method

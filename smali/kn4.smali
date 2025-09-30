@@ -2,12 +2,15 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lmn4;
-
 
 # instance fields
-.field public final a:I
+.field public a:I
+
+.field public b:I
+
+.field public c:I
+
+.field public d:Ljava/io/Serializable;
 
 
 # direct methods
@@ -23,63 +26,245 @@
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 3
+.method public a(Loq4;)V
+    .locals 8
+
+    iget-object v0, p0, Lkn4;->d:Ljava/io/Serializable;
+
+    check-cast v0, [Ljava/lang/Object;
+
+    iget v1, p0, Lkn4;->a:I
+
+    invoke-virtual {p1}, Ljava/lang/Object;->hashCode()I
+
+    move-result v2
+
+    const v3, -0x61c88647
+
+    mul-int/2addr v2, v3
+
+    ushr-int/lit8 v4, v2, 0x10
+
+    xor-int/2addr v2, v4
+
+    and-int/2addr v2, v1
+
+    aget-object v4, v0, v2
+
+    if-eqz v4, :cond_2
+
+    invoke-virtual {v4, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+
+    move-result v4
+
+    if-eqz v4, :cond_0
+
+    goto :goto_3
+
+    :cond_0
+    add-int/lit8 v2, v2, 0x1
+
+    and-int/2addr v2, v1
+
+    aget-object v4, v0, v2
+
+    if-nez v4, :cond_1
+
+    goto :goto_0
+
+    :cond_1
+    invoke-virtual {v4, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+
+    move-result v4
+
+    if-eqz v4, :cond_0
+
+    goto :goto_3
+
+    :cond_2
+    :goto_0
+    aput-object p1, v0, v2
+
+    iget p1, p0, Lkn4;->b:I
+
+    add-int/lit8 p1, p1, 0x1
+
+    iput p1, p0, Lkn4;->b:I
+
+    iget v0, p0, Lkn4;->c:I
+
+    if-lt p1, v0, :cond_7
+
+    iget-object v0, p0, Lkn4;->d:Ljava/io/Serializable;
+
+    check-cast v0, [Ljava/lang/Object;
+
+    array-length v1, v0
+
+    shl-int/lit8 v2, v1, 0x1
+
+    add-int/lit8 v4, v2, -0x1
+
+    new-array v5, v2, [Ljava/lang/Object;
+
+    :goto_1
+    add-int/lit8 v6, p1, -0x1
+
+    if-eqz p1, :cond_6
+
+    :goto_2
+    add-int/lit8 v1, v1, -0x1
+
+    aget-object p1, v0, v1
+
+    if-nez p1, :cond_3
+
+    goto :goto_2
+
+    :cond_3
+    invoke-virtual {p1}, Ljava/lang/Object;->hashCode()I
+
+    move-result p1
+
+    mul-int/2addr p1, v3
+
+    ushr-int/lit8 v7, p1, 0x10
+
+    xor-int/2addr p1, v7
+
+    and-int/2addr p1, v4
+
+    aget-object v7, v5, p1
+
+    if-eqz v7, :cond_5
+
+    :cond_4
+    add-int/lit8 p1, p1, 0x1
+
+    and-int/2addr p1, v4
+
+    aget-object v7, v5, p1
+
+    if-nez v7, :cond_4
+
+    :cond_5
+    aget-object v7, v0, v1
+
+    aput-object v7, v5, p1
+
+    move p1, v6
+
+    goto :goto_1
+
+    :cond_6
+    iput v4, p0, Lkn4;->a:I
+
+    int-to-float p1, v2
+
+    const/high16 v0, 0x3f400000    # 0.75f
+
+    mul-float/2addr p1, v0
+
+    float-to-int p1, p1
+
+    iput p1, p0, Lkn4;->c:I
+
+    iput-object v5, p0, Lkn4;->d:Ljava/io/Serializable;
+
+    :cond_7
+    :goto_3
+    return-void
+.end method
+
+.method public b()Lnn4;
+    .locals 2
+
+    iget v0, p0, Lkn4;->b:I
+
+    iget v1, p0, Lkn4;->c:I
+
+    if-gt v0, v1, :cond_0
 
     const/4 v0, 0x1
 
-    if-ne p0, p1, :cond_0
-
-    return v0
+    goto :goto_0
 
     :cond_0
-    instance-of v1, p1, Lkn4;
+    const/4 v0, 0x0
 
-    const/4 v2, 0x0
+    :goto_0
+    invoke-static {v0}, Lmq0;->c(Z)V
 
-    if-nez v1, :cond_1
+    new-instance v0, Lnn4;
 
-    return v2
+    invoke-direct {v0, p0}, Lnn4;-><init>(Lkn4;)V
+
+    return-object v0
+.end method
+
+.method public c(II[Ljava/lang/Object;)V
+    .locals 3
+
+    iget v0, p0, Lkn4;->b:I
+
+    add-int/lit8 v0, v0, -0x1
+
+    iput v0, p0, Lkn4;->b:I
+
+    :goto_0
+    add-int/lit8 p0, p1, 0x1
+
+    :goto_1
+    and-int/2addr p0, p2
+
+    aget-object v0, p3, p0
+
+    if-nez v0, :cond_0
+
+    const/4 p0, 0x0
+
+    aput-object p0, p3, p1
+
+    return-void
+
+    :cond_0
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
+
+    move-result v1
+
+    const v2, -0x61c88647
+
+    mul-int/2addr v1, v2
+
+    ushr-int/lit8 v2, v1, 0x10
+
+    xor-int/2addr v1, v2
+
+    and-int/2addr v1, p2
+
+    if-gt p1, p0, :cond_1
+
+    if-ge p1, v1, :cond_2
+
+    if-le v1, p0, :cond_3
+
+    goto :goto_2
 
     :cond_1
-    check-cast p1, Lkn4;
+    if-lt p1, v1, :cond_3
 
-    iget p0, p0, Lkn4;->a:I
-
-    iget p1, p1, Lkn4;->a:I
-
-    if-eq p0, p1, :cond_2
-
-    return v2
+    if-le v1, p0, :cond_3
 
     :cond_2
-    return v0
-.end method
+    :goto_2
+    aput-object v0, p3, p1
 
-.method public final hashCode()I
-    .locals 0
+    move p1, p0
 
-    iget p0, p0, Lkn4;->a:I
+    goto :goto_0
 
-    invoke-static {p0}, Ljava/lang/Integer;->hashCode(I)I
+    :cond_3
+    add-int/lit8 p0, p0, 0x1
 
-    move-result p0
-
-    return p0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 2
-
-    const-string v0, "DownloadFailed(textFailRes="
-
-    const-string v1, ")"
-
-    iget p0, p0, Lkn4;->a:I
-
-    invoke-static {p0, v0, v1}, Lpg0;->e(ILjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
+    goto :goto_1
 .end method

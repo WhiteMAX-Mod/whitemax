@@ -1,385 +1,242 @@
 .class public final Lwt1;
-.super Landroid/hardware/camera2/CameraDevice$StateCallback;
+.super Lure;
 .source "SourceFile"
+
+# interfaces
+.implements Lpc6;
 
 
 # instance fields
-.field public final synthetic a:Liq1;
+.field public X:I
 
-.field public final synthetic b:Ldu1;
+.field public synthetic Y:Ljava/lang/Object;
+
+.field public final synthetic Z:Leu1;
+
+.field public final synthetic r0:Ljava/lang/String;
+
+.field public final synthetic s0:Lj11;
+
+.field public final synthetic t0:Lvv0;
 
 
 # direct methods
-.method public constructor <init>(Ldu1;Liq1;)V
+.method public constructor <init>(Leu1;Ljava/lang/String;Lj11;Lvv0;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    iput-object p1, p0, Lwt1;->b:Ldu1;
+    iput-object p1, p0, Lwt1;->Z:Leu1;
 
-    iput-object p2, p0, Lwt1;->a:Liq1;
+    iput-object p2, p0, Lwt1;->r0:Ljava/lang/String;
 
-    invoke-direct {p0}, Landroid/hardware/camera2/CameraDevice$StateCallback;-><init>()V
+    iput-object p3, p0, Lwt1;->s0:Lj11;
+
+    iput-object p4, p0, Lwt1;->t0:Lvv0;
+
+    const/4 p1, 0x2
+
+    invoke-direct {p0, p1, p5}, Lure;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onClosed(Landroid/hardware/camera2/CameraDevice;)V
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    iget-object p1, p0, Lwt1;->b:Ldu1;
+    check-cast p1, Ly04;
 
-    invoke-virtual {p1}, Ldu1;->toString()Ljava/lang/String;
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    iget-object p0, p0, Lwt1;->a:Liq1;
+    invoke-virtual {p0, p1, p2}, Lwt1;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    const/4 p1, 0x0
+    move-result-object p0
 
-    invoke-virtual {p0, p1}, Liq1;->b(Ljava/lang/Object;)Z
+    check-cast p0, Lwt1;
 
-    return-void
+    sget-object p1, Lylf;->a:Lylf;
+
+    invoke-virtual {p0, p1}, Lwt1;->o(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p0
+
+    return-object p0
 .end method
 
-.method public final onDisconnected(Landroid/hardware/camera2/CameraDevice;)V
-    .locals 0
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 6
 
-    iget-object p1, p0, Lwt1;->b:Ldu1;
+    new-instance v0, Lwt1;
 
-    invoke-virtual {p1}, Ldu1;->toString()Ljava/lang/String;
+    iget-object v3, p0, Lwt1;->s0:Lj11;
 
-    iget-object p0, p0, Lwt1;->a:Liq1;
+    iget-object v4, p0, Lwt1;->t0:Lvv0;
 
-    const/4 p1, 0x0
+    iget-object v1, p0, Lwt1;->Z:Leu1;
 
-    invoke-virtual {p0, p1}, Liq1;->b(Ljava/lang/Object;)Z
+    iget-object v2, p0, Lwt1;->r0:Ljava/lang/String;
 
-    return-void
+    move-object v5, p2
+
+    invoke-direct/range {v0 .. v5}, Lwt1;-><init>(Leu1;Ljava/lang/String;Lj11;Lvv0;Lkotlin/coroutines/Continuation;)V
+
+    iput-object p1, v0, Lwt1;->Y:Ljava/lang/Object;
+
+    return-object v0
 .end method
 
-.method public final onError(Landroid/hardware/camera2/CameraDevice;I)V
-    .locals 0
+.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 7
 
-    iget-object p1, p0, Lwt1;->b:Ldu1;
+    iget v0, p0, Lwt1;->X:I
 
-    invoke-virtual {p1}, Ldu1;->toString()Ljava/lang/String;
+    const/4 v1, 0x1
 
-    iget-object p0, p0, Lwt1;->a:Liq1;
+    iget-object v2, p0, Lwt1;->Z:Leu1;
 
-    const/4 p1, 0x0
+    const-string v3, "CallEngineTag"
 
-    invoke-virtual {p0, p1}, Liq1;->b(Ljava/lang/Object;)Z
+    if-eqz v0, :cond_1
 
-    return-void
-.end method
+    if-ne v0, v1, :cond_0
 
-.method public final onOpened(Landroid/hardware/camera2/CameraDevice;)V
-    .locals 26
-
-    move-object/from16 v0, p0
-
-    move-object/from16 v1, p1
-
-    iget-object v0, v0, Lwt1;->b:Ldu1;
-
-    iget-object v2, v0, Ldu1;->c:Lw4d;
-
-    invoke-virtual {v0}, Ldu1;->toString()Ljava/lang/String;
-
-    new-instance v3, Loz1;
-
-    iget-object v4, v0, Ldu1;->L0:Lcy1;
-
-    new-instance v5, Lly4;
-
-    sget-object v6, Ljava/util/Collections;->EMPTY_LIST:Ljava/util/List;
-
-    invoke-direct {v5, v6}, Lly4;-><init>(Ljava/util/List;)V
-
-    const/4 v6, 0x0
-
-    invoke-direct {v3, v4, v5, v6}, Loz1;-><init>(Lcy1;Lly4;Z)V
-
-    new-instance v4, Landroid/graphics/SurfaceTexture;
-
-    invoke-direct {v4, v6}, Landroid/graphics/SurfaceTexture;-><init>(I)V
-
-    const/16 v5, 0x280
-
-    const/16 v7, 0x1e0
-
-    invoke-virtual {v4, v5, v7}, Landroid/graphics/SurfaceTexture;->setDefaultBufferSize(II)V
-
-    new-instance v5, Landroid/view/Surface;
-
-    invoke-direct {v5, v4}, Landroid/view/Surface;-><init>(Landroid/graphics/SurfaceTexture;)V
-
-    new-instance v7, Lew6;
-
-    invoke-direct {v7, v5}, Lew6;-><init>(Landroid/view/Surface;)V
-
-    iget-object v8, v7, Leg4;->e:Llq1;
-
-    invoke-static {v8}, Lu7;->C(Lbm7;)Lbm7;
-
-    move-result-object v8
-
-    new-instance v9, Lc;
-
-    const/16 v10, 0x1d
-
-    invoke-direct {v9, v5, v10, v4}, Lc;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
-
-    invoke-static {}, Lsgg;->n()Lpk4;
-
-    move-result-object v4
-
-    invoke-interface {v8, v9, v4}, Lbm7;->d(Ljava/lang/Runnable;Ljava/util/concurrent/Executor;)V
-
-    new-instance v4, Ljava/util/LinkedHashSet;
-
-    invoke-direct {v4}, Ljava/util/LinkedHashSet;-><init>()V
-
-    new-instance v5, Ljava/util/HashSet;
-
-    invoke-direct {v5}, Ljava/util/HashSet;-><init>()V
-
-    invoke-static {}, Lzg9;->b()Lzg9;
-
-    move-result-object v8
-
-    new-instance v9, Ljava/util/ArrayList;
-
-    invoke-direct {v9}, Ljava/util/ArrayList;-><init>()V
-
-    invoke-static {}, Lih9;->a()Lih9;
-
-    move-result-object v10
-
-    new-instance v11, Ljava/util/ArrayList;
-
-    invoke-direct {v11}, Ljava/util/ArrayList;-><init>()V
-
-    new-instance v12, Ljava/util/ArrayList;
-
-    invoke-direct {v12}, Ljava/util/ArrayList;-><init>()V
-
-    new-instance v13, Ljava/util/ArrayList;
-
-    invoke-direct {v13}, Ljava/util/ArrayList;-><init>()V
-
-    invoke-static {v7}, Ljb0;->a(Leg4;)Lg13;
-
-    move-result-object v14
-
-    sget-object v15, Lzt4;->d:Lzt4;
-
-    iput-object v15, v14, Lg13;->e:Ljava/lang/Object;
-
-    invoke-virtual {v14}, Lg13;->e()Ljb0;
-
-    move-result-object v14
-
-    invoke-interface {v4, v14}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
-
-    invoke-virtual {v0}, Ldu1;->toString()Ljava/lang/String;
-
-    new-instance v15, Lk8d;
-
-    new-instance v14, Ljava/util/ArrayList;
-
-    invoke-direct {v14, v4}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
-
-    new-instance v4, Ljava/util/ArrayList;
-
-    invoke-direct {v4, v11}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
-
-    new-instance v11, Ljava/util/ArrayList;
-
-    invoke-direct {v11, v12}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
-
-    new-instance v12, Ljava/util/ArrayList;
-
-    invoke-direct {v12, v13}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
-
-    new-instance v16, Lgz1;
-
-    new-instance v13, Ljava/util/ArrayList;
-
-    invoke-direct {v13, v5}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
-
-    invoke-static {v8}, Lqka;->a(Lrc3;)Lqka;
-
-    move-result-object v18
-
-    new-instance v5, Ljava/util/ArrayList;
-
-    invoke-direct {v5, v9}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
-
-    sget-object v8, Lxhe;->b:Lxhe;
-
-    new-instance v8, Landroid/util/ArrayMap;
-
-    invoke-direct {v8}, Landroid/util/ArrayMap;-><init>()V
-
-    iget-object v9, v10, Lxhe;->a:Landroid/util/ArrayMap;
-
-    invoke-virtual {v9}, Landroid/util/ArrayMap;->keySet()Ljava/util/Set;
-
-    move-result-object v10
-
-    invoke-interface {v10}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
-
-    move-result-object v10
-
-    :goto_0
-    invoke-interface {v10}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v17
-
-    if-eqz v17, :cond_0
-
-    invoke-interface {v10}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v17
-
-    move-object/from16 v6, v17
-
-    check-cast v6, Ljava/lang/String;
-
-    move-object/from16 v25, v4
-
-    invoke-virtual {v9, v6}, Landroid/util/ArrayMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v4
-
-    invoke-virtual {v8, v6, v4}, Landroid/util/ArrayMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-object/from16 v4, v25
-
-    const/4 v6, 0x0
+    :try_start_0
+    invoke-static {p1}, Lqe5;->V(Ljava/lang/Object;)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     goto :goto_0
 
+    :catchall_0
+    move-exception p1
+
+    goto :goto_1
+
     :cond_0
-    move-object/from16 v25, v4
+    new-instance p0, Ljava/lang/IllegalStateException;
 
-    new-instance v4, Lxhe;
+    const-string p1, "call to \'resume\' before \'invoke\' with coroutine"
 
-    invoke-direct {v4, v8}, Lxhe;-><init>(Landroid/util/ArrayMap;)V
+    invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    const/16 v19, 0x1
+    throw p0
 
-    const/16 v20, 0x0
+    :cond_1
+    invoke-static {p1}, Lqe5;->V(Ljava/lang/Object;)V
 
-    const/16 v24, 0x0
+    iget-object p1, p0, Lwt1;->Y:Ljava/lang/Object;
 
-    move/from16 v22, v20
+    check-cast p1, Ly04;
 
-    move-object/from16 v23, v4
+    const-string p1, "start creating p2p join link"
 
-    move-object/from16 v21, v5
+    invoke-static {v3, p1}, Ljtg;->l(Ljava/lang/String;Ljava/lang/String;)V
 
-    move-object/from16 v17, v13
+    iget-object p1, p0, Lwt1;->r0:Ljava/lang/String;
 
-    invoke-direct/range {v16 .. v24}, Lgz1;-><init>(Ljava/util/ArrayList;Lqka;IZLjava/util/ArrayList;ZLxhe;Lpv1;)V
+    :try_start_1
+    iget-object v0, v2, Leu1;->C:Lcl7;
 
-    const/16 v21, 0x0
-
-    const/16 v22, 0x0
-
-    const/16 v23, 0x0
-
-    move-object/from16 v18, v11
-
-    move-object/from16 v19, v12
-
-    move-object/from16 v20, v16
-
-    move-object/from16 v17, v25
-
-    move-object/from16 v16, v14
-
-    invoke-direct/range {v15 .. v23}, Lk8d;-><init>(Ljava/util/ArrayList;Ljava/util/ArrayList;Ljava/util/ArrayList;Ljava/util/ArrayList;Lgz1;Li8d;Landroid/hardware/camera2/params/InputConfiguration;Ljb0;)V
-
-    iget-object v0, v0, Ldu1;->F0:Lp89;
-
-    new-instance v8, Lvfe;
-
-    iget-object v4, v0, Lp89;->e:Ljava/lang/Object;
-
-    move-object v9, v4
-
-    check-cast v9, Lly4;
-
-    iget-object v4, v0, Lp89;->f:Ljava/lang/Object;
-
-    move-object v10, v4
-
-    check-cast v10, Lly4;
-
-    iget-object v4, v0, Lp89;->d:Ljava/lang/Object;
-
-    move-object v11, v4
-
-    check-cast v11, Lp89;
-
-    iget-object v4, v0, Lp89;->a:Ljava/lang/Object;
-
-    move-object v12, v4
-
-    check-cast v12, Lw4d;
-
-    iget-object v4, v0, Lp89;->b:Ljava/lang/Object;
-
-    move-object v13, v4
-
-    check-cast v13, Lmi6;
-
-    iget-object v0, v0, Lp89;->c:Ljava/lang/Object;
-
-    move-object v14, v0
-
-    check-cast v14, Landroid/os/Handler;
-
-    invoke-direct/range {v8 .. v14}, Lvfe;-><init>(Lly4;Lly4;Lp89;Lw4d;Lmi6;Landroid/os/Handler;)V
-
-    invoke-virtual {v3, v15, v1, v8}, Loz1;->l(Lk8d;Landroid/hardware/camera2/CameraDevice;Lvfe;)Lbm7;
+    invoke-interface {v0}, Lcl7;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
-    new-instance v4, Lq76;
+    check-cast v0, Lrk;
 
-    const/4 v5, 0x0
+    new-instance v4, Lys;
 
-    invoke-direct {v4, v0, v5}, Lq76;-><init>(Lbm7;I)V
+    sget-object v5, Lyta;->J1:Lyta;
 
-    invoke-static {v4}, Lxja;->q(Ljq1;)Llq1;
+    const/16 v6, 0x15
+
+    invoke-direct {v4, v5, v6}, Lys;-><init>(Lyta;I)V
+
+    const-string v5, "conversationId"
+
+    invoke-virtual {v4, v5, p1}, Lpxe;->q(Ljava/lang/String;Ljava/lang/String;)V
+
+    iput v1, p0, Lwt1;->X:I
+
+    check-cast v0, Lgaa;
+
+    invoke-virtual {v0, v4, p0}, Lgaa;->H(Lpxe;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p1
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    sget-object v0, Lz04;->a:Lz04;
+
+    if-ne p1, v0, :cond_2
+
+    return-object v0
+
+    :cond_2
+    :goto_0
+    :try_start_2
+    check-cast p1, Lk41;
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_0
+
+    goto :goto_2
+
+    :goto_1
+    new-instance v0, Lhvc;
+
+    invoke-direct {v0, p1}, Lhvc;-><init>(Ljava/lang/Throwable;)V
+
+    move-object p1, v0
+
+    :goto_2
+    invoke-static {p1}, Ljvc;->a(Ljava/lang/Object;)Ljava/lang/Throwable;
 
     move-result-object v0
 
-    invoke-static {v0}, Lm76;->a(Lbm7;)Lm76;
+    const/4 v1, 0x0
 
-    move-result-object v0
+    if-eqz v0, :cond_3
 
-    new-instance v4, Lz8;
+    invoke-virtual {v0}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
 
-    const/16 v6, 0xc
+    move-result-object v4
 
-    invoke-direct {v4, v3, v6, v7}, Lz8;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+    const-string v5, "fail creating p2p join link due to: "
 
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    invoke-static {v5, v4, v3, v0}, Lee5;->o(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    invoke-static {v0, v4, v2}, Lu7;->X(Lbm7;Lmu;Ljava/util/concurrent/Executor;)Lg12;
+    iput-object v1, v2, Leu1;->G:Lcae;
 
-    move-result-object v0
+    iget-object v0, p0, Lwt1;->s0:Lj11;
 
-    invoke-static {v1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v0}, Lj11;->invoke()Ljava/lang/Object;
 
-    new-instance v3, Lvt1;
+    :cond_3
+    instance-of v0, p1, Lhvc;
 
-    invoke-direct {v3, v5, v1}, Lvt1;-><init>(ILjava/lang/Object;)V
+    if-nez v0, :cond_4
 
-    invoke-virtual {v0, v3, v2}, Lm76;->d(Ljava/lang/Runnable;Ljava/util/concurrent/Executor;)V
+    check-cast p1, Lk41;
 
-    return-void
+    const-string v0, "creating p2p join link was success"
+
+    invoke-static {v3, v0}, Ljtg;->l(Ljava/lang/String;Ljava/lang/String;)V
+
+    iput-object v1, v2, Leu1;->G:Lcae;
+
+    iget-object v0, v2, Leu1;->O:Lvt1;
+
+    iget-object v1, p1, Lk41;->c:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Lvt1;->onJoinLinkUpdated(Ljava/lang/String;)V
+
+    iget-object p1, p1, Lk41;->c:Ljava/lang/String;
+
+    iget-object p0, p0, Lwt1;->t0:Lvv0;
+
+    invoke-virtual {p0, p1}, Lvv0;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+
+    :cond_4
+    sget-object p0, Lylf;->a:Lylf;
+
+    return-object p0
 .end method

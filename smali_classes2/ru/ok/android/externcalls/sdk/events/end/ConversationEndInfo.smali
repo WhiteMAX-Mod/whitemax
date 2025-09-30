@@ -114,7 +114,7 @@
 
     iget-object p1, p1, Lru/ok/android/externcalls/sdk/events/end/ConversationEndInfo;->reason:Lru/ok/android/externcalls/sdk/events/end/ConversationEndReason;
 
-    invoke-static {p0, p1}, Lxq7;->d(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {p0, p1}, Lvyg;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p0
 

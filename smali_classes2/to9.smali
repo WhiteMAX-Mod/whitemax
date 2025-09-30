@@ -2,71 +2,18 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Luaf;
+
+# instance fields
+.field public final a:Ljava/util/AbstractMap;
 
 
-# virtual methods
-.method public final a(ILjava/lang/String;)Lhoe;
-    .locals 2
+# direct methods
+.method public constructor <init>(Ljava/util/AbstractMap;)V
+    .locals 0
 
-    invoke-virtual {p2}, Ljava/lang/String;->length()I
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    move-result p0
+    iput-object p1, p0, Lto9;->a:Ljava/util/AbstractMap;
 
-    if-lez p0, :cond_2
-
-    const/4 p0, 0x0
-
-    :goto_0
-    invoke-virtual {p2}, Ljava/lang/String;->length()I
-
-    move-result v0
-
-    if-ge p0, v0, :cond_1
-
-    invoke-virtual {p2, p0}, Ljava/lang/String;->charAt(I)C
-
-    move-result v0
-
-    const/16 v1, 0x2d
-
-    if-eq v0, v1, :cond_0
-
-    const/16 v1, 0x20
-
-    if-ne v0, v1, :cond_2
-
-    :cond_0
-    add-int/lit8 p0, p0, 0x1
-
-    goto :goto_0
-
-    :cond_1
-    const-class p0, Lto9;
-
-    invoke-static {p0}, Llcc;->a(Ljava/lang/Class;)Lz03;
-
-    move-result-object p0
-
-    invoke-static {p1, p0}, Lu7;->v(ILz03;)Ljava/lang/Integer;
-
-    move-result-object p0
-
-    if-eqz p0, :cond_2
-
-    invoke-virtual {p0}, Ljava/lang/Integer;->intValue()I
-
-    move-result p0
-
-    new-instance p1, Lhoe;
-
-    invoke-direct {p1, p0}, Lhoe;-><init>(I)V
-
-    return-object p1
-
-    :cond_2
-    const/4 p0, 0x0
-
-    return-object p0
+    return-void
 .end method

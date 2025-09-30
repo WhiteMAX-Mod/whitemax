@@ -1,35 +1,42 @@
-.class public final synthetic Lj54;
+.class public final Lj54;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-
-# static fields
-.field public static final synthetic a:Ljava/util/concurrent/atomic/AtomicIntegerFieldUpdater;
+# interfaces
+.implements Ljava/io/Closeable;
 
 
 # instance fields
-.field private volatile synthetic installations$volatile:I
+.field public X:Ljavax/inject/Provider;
 
-.field private volatile synthetic sequenceNumber$volatile:J
+.field public Y:Ljavax/inject/Provider;
+
+.field public Z:Ljavax/inject/Provider;
+
+.field public a:Ljavax/inject/Provider;
+
+.field public b:Ln97;
+
+.field public c:Ljavax/inject/Provider;
+
+.field public o:Lb7;
 
 
-# direct methods
-.method static constructor <clinit>()V
-    .locals 2
+# virtual methods
+.method public final close()V
+    .locals 0
 
-    const-string v0, "installations$volatile"
+    iget-object p0, p0, Lj54;->Y:Ljavax/inject/Provider;
 
-    const-class v1, Lj54;
+    invoke-interface {p0}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
 
-    invoke-static {v1, v0}, Ljava/util/concurrent/atomic/AtomicIntegerFieldUpdater;->newUpdater(Ljava/lang/Class;Ljava/lang/String;)Ljava/util/concurrent/atomic/AtomicIntegerFieldUpdater;
+    move-result-object p0
 
-    move-result-object v0
+    check-cast p0, Lk95;
 
-    sput-object v0, Lj54;->a:Ljava/util/concurrent/atomic/AtomicIntegerFieldUpdater;
+    check-cast p0, Lw1d;
 
-    const-string v0, "sequenceNumber$volatile"
-
-    invoke-static {v1, v0}, Ljava/util/concurrent/atomic/AtomicLongFieldUpdater;->newUpdater(Ljava/lang/Class;Ljava/lang/String;)Ljava/util/concurrent/atomic/AtomicLongFieldUpdater;
+    invoke-virtual {p0}, Lw1d;->close()V
 
     return-void
 .end method

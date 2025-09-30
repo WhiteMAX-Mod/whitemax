@@ -1,162 +1,144 @@
 .class public final Lc8a;
-.super Ljava/lang/Object;
+.super Ljava/util/concurrent/atomic/AtomicBoolean;
 .source "SourceFile"
+
+# interfaces
+.implements Ld8a;
+.implements Loq4;
 
 
 # instance fields
-.field public final a:Landroid/content/Context;
+.field public final a:Ld8a;
 
-.field public final b:Lms;
+.field public final b:Lia5;
 
-.field public final c:Lms;
-
-.field public final d:Lms;
-
-.field public final e:Lwfe;
+.field public c:Loq4;
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;Lb94;)V
-    .locals 1
+.method public constructor <init>(Ld8a;Lia5;)V
+    .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/util/concurrent/atomic/AtomicBoolean;-><init>()V
 
-    iput-object p1, p0, Lc8a;->a:Landroid/content/Context;
+    iput-object p1, p0, Lc8a;->a:Ld8a;
 
-    invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    const-string p1, "ru.oneme.app.chats"
-
-    const-string p2, "ru.oneme.app.inapp.2"
-
-    const-string v0, "ru.oneme.app.dialogs"
-
-    filled-new-array {v0, p1, p2}, [Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-static {p1}, Lxqd;->f([Ljava/lang/Object;)Lms;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lc8a;->b:Lms;
-
-    const-string p1, "ru.oneme.app.new.incomingCalls."
-
-    const-string p2, "ru.oneme.app.new.activeCalls"
-
-    filled-new-array {p1, p2}, [Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-static {p1}, Lxqd;->f([Ljava/lang/Object;)Lms;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lc8a;->c:Lms;
-
-    const-string p1, "ru.oneme.app.fileUpload"
-
-    const-string p2, "ru.oneme.app.media"
-
-    const-string v0, "ru.oneme.app.misc"
-
-    filled-new-array {v0, p1, p2}, [Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-static {p1}, Lxqd;->f([Ljava/lang/Object;)Lms;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lc8a;->d:Lms;
-
-    new-instance p1, Lj57;
-
-    const/16 p2, 0x17
-
-    invoke-direct {p1, p2, p0}, Lj57;-><init>(ILjava/lang/Object;)V
-
-    new-instance p2, Lwfe;
-
-    invoke-direct {p2, p1}, Lwfe;-><init>(Lv56;)V
-
-    iput-object p2, p0, Lc8a;->e:Lwfe;
+    iput-object p2, p0, Lc8a;->b:Lia5;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(ILjava/lang/String;)V
-    .locals 2
+.method public final b()V
+    .locals 1
 
-    new-instance v0, Landroid/app/NotificationChannelGroup;
+    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
 
-    iget-object v1, p0, Lc8a;->a:Landroid/content/Context;
+    move-result v0
 
-    invoke-virtual {v1, p1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
+    if-nez v0, :cond_0
 
-    move-result-object p1
+    iget-object p0, p0, Lc8a;->a:Ld8a;
 
-    invoke-direct {v0, p2, p1}, Landroid/app/NotificationChannelGroup;-><init>(Ljava/lang/String;Ljava/lang/CharSequence;)V
+    invoke-interface {p0}, Ld8a;->b()V
 
-    iget-object p0, p0, Lc8a;->e:Lwfe;
-
-    invoke-virtual {p0}, Lwfe;->getValue()Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, Landroid/app/NotificationManager;
-
-    invoke-virtual {p0, v0}, Landroid/app/NotificationManager;->createNotificationChannelGroup(Landroid/app/NotificationChannelGroup;)V
-
+    :cond_0
     return-void
 .end method
 
-.method public final b(Ljava/lang/String;)Ljava/lang/String;
+.method public final c(Loq4;)V
     .locals 1
 
-    iget-object v0, p0, Lc8a;->b:Lms;
+    iget-object v0, p0, Lc8a;->c:Loq4;
 
-    invoke-virtual {v0, p1}, Lms;->contains(Ljava/lang/Object;)Z
+    invoke-static {v0, p1}, Lsq4;->h(Loq4;Loq4;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    const-string p0, "ru.oneme.app.notifications.group.chats"
+    iput-object p1, p0, Lc8a;->c:Loq4;
 
-    return-object p0
+    iget-object p1, p0, Lc8a;->a:Ld8a;
+
+    invoke-interface {p1, p0}, Ld8a;->c(Loq4;)V
 
     :cond_0
-    iget-object v0, p0, Lc8a;->d:Lms;
+    return-void
+.end method
 
-    invoke-virtual {v0, p1}, Lms;->contains(Ljava/lang/Object;)Z
+.method public final e()V
+    .locals 2
+
+    const/4 v0, 0x0
+
+    const/4 v1, 0x1
+
+    invoke-virtual {p0, v0, v1}, Ljava/util/concurrent/atomic/AtomicBoolean;->compareAndSet(ZZ)Z
 
     move-result v0
 
-    if-eqz v0, :cond_1
+    if-eqz v0, :cond_0
 
-    const-string p0, "ru.oneme.app.notifications.group.other"
+    new-instance v0, Lrs7;
 
-    return-object p0
+    const/16 v1, 0xa
 
-    :cond_1
-    iget-object p0, p0, Lc8a;->c:Lms;
+    invoke-direct {v0, v1, p0}, Lrs7;-><init>(ILjava/lang/Object;)V
 
-    invoke-virtual {p0, p1}, Lms;->contains(Ljava/lang/Object;)Z
+    iget-object p0, p0, Lc8a;->b:Lia5;
+
+    invoke-virtual {p0, v0}, Lia5;->b(Ljava/lang/Runnable;)Loq4;
+
+    :cond_0
+    return-void
+.end method
+
+.method public final f()Z
+    .locals 0
+
+    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
 
     move-result p0
 
-    if-eqz p0, :cond_2
+    return p0
+.end method
 
-    const-string p0, "ru.oneme.app.notifications.group.calls"
+.method public final onError(Ljava/lang/Throwable;)V
+    .locals 1
 
-    return-object p0
+    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
 
-    :cond_2
-    const/4 p0, 0x0
+    move-result v0
 
-    return-object p0
+    if-eqz v0, :cond_0
+
+    invoke-static {p1}, Ln4e;->D(Ljava/lang/Throwable;)V
+
+    return-void
+
+    :cond_0
+    iget-object p0, p0, Lc8a;->a:Ld8a;
+
+    invoke-interface {p0, p1}, Ld8a;->onError(Ljava/lang/Throwable;)V
+
+    return-void
+.end method
+
+.method public final s(Ljava/lang/Object;)V
+    .locals 1
+
+    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    iget-object p0, p0, Lc8a;->a:Ld8a;
+
+    invoke-interface {p0, p1}, Ld8a;->s(Ljava/lang/Object;)V
+
+    :cond_0
+    return-void
 .end method

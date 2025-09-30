@@ -1,101 +1,98 @@
-.class public interface abstract Lyv1;
+.class public final synthetic Lyv1;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lr5c;
+.implements Lvt;
 
 
-# static fields
-.field public static final g:Ls90;
+# instance fields
+.field public final synthetic X:I
 
-.field public static final h:Ls90;
+.field public final synthetic a:Lew1;
 
-.field public static final i:Ls90;
+.field public final synthetic b:Ljava/util/ArrayList;
 
-.field public static final j:Ls90;
+.field public final synthetic c:I
 
-.field public static final k:Ls90;
+.field public final synthetic o:I
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 4
+.method public synthetic constructor <init>(Lew1;Ljava/util/ArrayList;III)V
+    .locals 0
 
-    new-instance v0, Ls90;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const-string v1, "camerax.core.camera.useCaseConfigFactory"
+    iput-object p1, p0, Lyv1;->a:Lew1;
 
-    const-class v2, Ls9f;
+    iput-object p2, p0, Lyv1;->b:Ljava/util/ArrayList;
 
-    const/4 v3, 0x0
+    iput p3, p0, Lyv1;->c:I
 
-    invoke-direct {v0, v1, v2, v3}, Ls90;-><init>(Ljava/lang/String;Ljava/lang/Class;Landroid/hardware/camera2/CaptureRequest$Key;)V
+    iput p4, p0, Lyv1;->o:I
 
-    sput-object v0, Lyv1;->g:Ls90;
-
-    new-instance v0, Ls90;
-
-    const-string v1, "camerax.core.camera.useCaseCombinationRequiredRule"
-
-    const-class v2, Ljava/lang/Integer;
-
-    invoke-direct {v0, v1, v2, v3}, Ls90;-><init>(Ljava/lang/String;Ljava/lang/Class;Landroid/hardware/camera2/CaptureRequest$Key;)V
-
-    sput-object v0, Lyv1;->h:Ls90;
-
-    new-instance v0, Ls90;
-
-    const-string v1, "camerax.core.camera.SessionProcessor"
-
-    const-class v2, Lw8d;
-
-    invoke-direct {v0, v1, v2, v3}, Ls90;-><init>(Ljava/lang/String;Ljava/lang/Class;Landroid/hardware/camera2/CaptureRequest$Key;)V
-
-    sput-object v0, Lyv1;->i:Ls90;
-
-    new-instance v0, Ls90;
-
-    const-string v1, "camerax.core.camera.isPostviewSupported"
-
-    const-class v2, Ljava/lang/Boolean;
-
-    invoke-direct {v0, v1, v2, v3}, Ls90;-><init>(Ljava/lang/String;Ljava/lang/Class;Landroid/hardware/camera2/CaptureRequest$Key;)V
-
-    sput-object v0, Lyv1;->j:Ls90;
-
-    new-instance v0, Ls90;
-
-    const-string v1, "camerax.core.camera.isCaptureProcessProgressSupported"
-
-    invoke-direct {v0, v1, v2, v3}, Ls90;-><init>(Ljava/lang/String;Ljava/lang/Class;Landroid/hardware/camera2/CaptureRequest$Key;)V
-
-    sput-object v0, Lyv1;->k:Ls90;
+    iput p5, p0, Lyv1;->X:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public A()V
-    .locals 2
+.method public final apply(Ljava/lang/Object;)Lgt7;
+    .locals 4
 
-    const/4 v0, 0x0
+    check-cast p1, Ljava/lang/Void;
 
-    sget-object v1, Lyv1;->i:Ls90;
+    iget-object p1, p0, Lyv1;->a:Lew1;
 
-    invoke-interface {p0, v1, v0}, Lr5c;->f(Ls90;Ljava/lang/Object;)Ljava/lang/Object;
+    iget-object p1, p1, Lew1;->n:Lj30;
+
+    iget v0, p0, Lyv1;->c:I
+
+    iget v1, p0, Lyv1;->o:I
+
+    iget v2, p0, Lyv1;->X:I
+
+    invoke-virtual {p1, v0, v1, v2}, Lj30;->f(III)Lex1;
+
+    move-result-object p1
+
+    invoke-virtual {p1, v1}, Lex1;->a(I)Lgt7;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lqd6;->a(Lgt7;)Lqd6;
+
+    move-result-object v0
+
+    new-instance v2, Lti0;
+
+    const/4 v3, 0x1
+
+    iget-object p0, p0, Lyv1;->b:Ljava/util/ArrayList;
+
+    invoke-direct {v2, p1, p0, v1, v3}, Lti0;-><init>(Ljava/lang/Object;Ljava/lang/Object;II)V
+
+    iget-object p0, p1, Lex1;->b:Ljava/util/concurrent/Executor;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    invoke-static {v0, v2, p0}, Lf4h;->J(Lgt7;Lvt;Ljava/util/concurrent/Executor;)Lz32;
+
+    move-result-object v0
+
+    new-instance v1, Liw1;
+
+    const/4 v2, 0x3
+
+    invoke-direct {v1, v2, p1}, Liw1;-><init>(ILjava/lang/Object;)V
+
+    invoke-virtual {v0, v1, p0}, Lqd6;->d(Ljava/lang/Runnable;Ljava/util/concurrent/Executor;)V
+
+    invoke-static {v0}, Lf4h;->B(Lgt7;)Lgt7;
 
     move-result-object p0
 
-    if-nez p0, :cond_0
-
-    return-void
-
-    :cond_0
-    new-instance p0, Ljava/lang/ClassCastException;
-
-    invoke-direct {p0}, Ljava/lang/ClassCastException;-><init>()V
-
-    throw p0
+    return-object p0
 .end method

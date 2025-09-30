@@ -1,44 +1,119 @@
-.class public abstract Lfvb;
-.super Ljava/lang/Object;
+.class public final Lfvb;
+.super Ljvb;
+.source "SourceFile"
 
 
-# static fields
-.field public static oneme_startconversation_chat_titleicon_avatars_cancel_action:I = 0x7f0a0842
+# instance fields
+.field public final a:Lp2f;
 
-.field public static oneme_startconversation_chat_titleicon_avatars_load_from_gallery_action:I = 0x7f0a0843
 
-.field public static oneme_startconversation_chat_titleicon_avatars_take_photo_action:I = 0x7f0a0844
+# direct methods
+.method public constructor <init>(Lp2f;)V
+    .locals 1
 
-.field public static oneme_startconversation_chat_titleicon_constraint_layout:I = 0x7f0a0845
+    sget v0, La1d;->a:I
 
-.field public static oneme_startconversation_chat_titleicon_create_button_view:I = 0x7f0a0846
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-.field public static oneme_startconversation_chat_titleicon_create_hint_text_view:I = 0x7f0a0847
+    iput-object p1, p0, Lfvb;->a:Lp2f;
 
-.field public static oneme_startconversation_chat_titleicon_description_view:I = 0x7f0a0848
+    return-void
+.end method
 
-.field public static oneme_startconversation_chat_titleicon_icon_view:I = 0x7f0a0849
 
-.field public static oneme_startconversation_chat_titleicon_scroll_view:I = 0x7f0a084a
+# virtual methods
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 2
 
-.field public static oneme_startconversation_chat_titleicon_title_view:I = 0x7f0a084b
+    const/4 v0, 0x1
 
-.field public static oneme_startconversation_chat_titleicon_toolbar:I = 0x7f0a084c
+    if-ne p0, p1, :cond_0
 
-.field public static oneme_startconversation_chat_toolbar:I = 0x7f0a084d
+    return v0
 
-.field public static oneme_startconversation_confirm_add_subscribers_button:I = 0x7f0a084e
+    :cond_0
+    instance-of v1, p1, Lfvb;
 
-.field public static oneme_startconversation_container:I = 0x7f0a084f
+    if-nez v1, :cond_1
 
-.field public static oneme_startconversation_create_button_view_type:I = 0x7f0a0850
+    goto :goto_0
 
-.field public static oneme_startconversation_recyclerview:I = 0x7f0a0851
+    :cond_1
+    check-cast p1, Lfvb;
 
-.field public static oneme_startconversation_select_channel_subscribers_toolbar:I = 0x7f0a0852
+    iget-object p0, p0, Lfvb;->a:Lp2f;
 
-.field public static oneme_startconversation_toolbar:I = 0x7f0a0853
+    iget-object p1, p1, Lfvb;->a:Lp2f;
 
-.field public static oneme_startconversations_create_channel:I = 0x7f0a0854
+    invoke-virtual {p0, p1}, Lp2f;->equals(Ljava/lang/Object;)Z
 
-.field public static oneme_startconversations_create_chat:I = 0x7f0a0855
+    move-result p0
+
+    if-nez p0, :cond_2
+
+    :goto_0
+    const/4 p0, 0x0
+
+    return p0
+
+    :cond_2
+    sget p0, La1d;->a:I
+
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 1
+
+    iget-object p0, p0, Lfvb;->a:Lp2f;
+
+    iget p0, p0, Lp2f;->b:I
+
+    invoke-static {p0}, Ljava/lang/Integer;->hashCode(I)I
+
+    move-result p0
+
+    mul-int/lit8 p0, p0, 0x1f
+
+    sget v0, La1d;->T0:I
+
+    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
+
+    move-result v0
+
+    add-int/2addr v0, p0
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 3
+
+    sget v0, La1d;->T0:I
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    const-string v2, "ShowInfoSnackbar(title="
+
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object p0, p0, Lfvb;->a:Lp2f;
+
+    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string p0, ", iconRes="
+
+    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string p0, ")"
+
+    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    return-object p0
+.end method

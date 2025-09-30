@@ -4,5 +4,8 @@
 
 
 # virtual methods
-.method public abstract h(Ltkg;ILandroid/os/Bundle;)Z
+.method public abstract a(I[B)Le17;
+.end method
+
+.method public abstract b()I
 .end method

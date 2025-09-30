@@ -3,22 +3,22 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lv56;
+.implements Lyyc;
 
 
 # instance fields
 .field public final synthetic a:I
 
-.field public final synthetic b:Lone/me/calllist/ui/callinfo/CallLinkInfoScreen;
+.field public final synthetic b:Lone/me/calls/ui/bottomsheet/previewjoinlink/CallJoinLinkPreviewWidget;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lone/me/calllist/ui/callinfo/CallLinkInfoScreen;I)V
+.method public synthetic constructor <init>(Lone/me/calls/ui/bottomsheet/previewjoinlink/CallJoinLinkPreviewWidget;I)V
     .locals 0
 
     iput p2, p0, Lkc1;->a:I
 
-    iput-object p1, p0, Lkc1;->b:Lone/me/calllist/ui/callinfo/CallLinkInfoScreen;
+    iput-object p1, p0, Lkc1;->b:Lone/me/calls/ui/bottomsheet/previewjoinlink/CallJoinLinkPreviewWidget;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -27,134 +27,88 @@
 
 
 # virtual methods
-.method public final invoke()Ljava/lang/Object;
-    .locals 7
+.method public final b()V
+    .locals 4
 
     iget v0, p0, Lkc1;->a:I
 
-    iget-object p0, p0, Lkc1;->b:Lone/me/calllist/ui/callinfo/CallLinkInfoScreen;
+    const/4 v1, 0x0
+
+    sget-object v2, Lfa8;->b:Lfa8;
+
+    const/4 v3, 0x1
+
+    iget-object p0, p0, Lkc1;->b:Lone/me/calls/ui/bottomsheet/previewjoinlink/CallJoinLinkPreviewWidget;
 
     packed-switch v0, :pswitch_data_0
 
-    sget-object v0, Lone/me/calllist/ui/callinfo/CallLinkInfoScreen;->x0:Lxo3;
+    sget-object v0, Lone/me/calls/ui/bottomsheet/previewjoinlink/CallJoinLinkPreviewWidget;->A0:[Lxi7;
 
-    new-instance v0, Lhg1;
+    invoke-virtual {p0}, Lone/me/calls/ui/bottomsheet/previewjoinlink/CallJoinLinkPreviewWidget;->C0()Lic1;
 
-    new-instance v1, Lkc1;
+    move-result-object v0
 
-    const/4 v2, 0x0
+    invoke-virtual {p0}, Lone/me/calls/ui/bottomsheet/previewjoinlink/CallJoinLinkPreviewWidget;->C0()Lic1;
 
-    invoke-direct {v1, p0, v2}, Lkc1;-><init>(Lone/me/calllist/ui/callinfo/CallLinkInfoScreen;I)V
+    move-result-object p0
 
-    new-instance v3, Lwfe;
+    iget-object p0, p0, Lic1;->w0:Lyce;
 
-    invoke-direct {v3, v1}, Lwfe;-><init>(Lv56;)V
+    invoke-virtual {p0}, Lyce;->getValue()Ljava/lang/Object;
 
-    new-instance v1, Lo6g;
+    move-result-object p0
 
-    invoke-direct {v1, p0, v2}, Lo6g;-><init>(Lone/me/sdk/arch/Widget;I)V
+    check-cast p0, Lbc1;
 
-    invoke-direct {v0, v3, v1}, Lhg1;-><init>(Lwfe;Lo6g;)V
+    iget-object p0, p0, Lbc1;->c:Lfa8;
 
-    return-object v0
+    if-ne p0, v2, :cond_0
+
+    move v1, v3
+
+    :cond_0
+    xor-int/lit8 p0, v1, 0x1
+
+    invoke-virtual {v0, p0}, Lic1;->s(Z)V
+
+    return-void
 
     :pswitch_0
-    sget-object v0, Lone/me/calllist/ui/callinfo/CallLinkInfoScreen;->x0:Lxo3;
+    sget-object v0, Lone/me/calls/ui/bottomsheet/previewjoinlink/CallJoinLinkPreviewWidget;->A0:[Lxi7;
 
-    new-instance v1, Lgd0;
+    invoke-virtual {p0}, Lone/me/calls/ui/bottomsheet/previewjoinlink/CallJoinLinkPreviewWidget;->C0()Lic1;
 
-    sget v0, Lh5a;->a:I
+    move-result-object v0
 
-    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
-
-    move-result-object v2
-
-    invoke-static {v2, v0}, Let3;->b(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
-
-    move-result-object v2
-
-    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
-
-    move-result-object v4
-
-    new-instance v5, Lf8;
-
-    const/16 p0, 0x16
-
-    invoke-direct {v5, p0}, Lf8;-><init>(I)V
-
-    new-instance v6, Lf8;
-
-    const/16 p0, 0x17
-
-    invoke-direct {v6, p0}, Lf8;-><init>(I)V
-
-    sget-object v3, La3a;->a:La3a;
-
-    invoke-direct/range {v1 .. v6}, Lgd0;-><init>(Landroid/graphics/drawable/Drawable;Ld3a;Landroid/content/Context;Lx56;Lx56;)V
-
-    return-object v1
-
-    :pswitch_1
-    sget-object v0, Lone/me/calllist/ui/callinfo/CallLinkInfoScreen;->x0:Lxo3;
-
-    new-instance v1, Ljd0;
-
-    sget v0, Lh5a;->c:I
-
-    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
-
-    move-result-object v2
-
-    invoke-static {v2, v0}, Let3;->b(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
-
-    move-result-object v2
-
-    sget-object v0, Lqp4;->q0:Lap9;
-
-    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
+    invoke-virtual {p0}, Lone/me/calls/ui/bottomsheet/previewjoinlink/CallJoinLinkPreviewWidget;->C0()Lic1;
 
     move-result-object p0
 
-    invoke-virtual {v0, p0}, Lap9;->g(Landroid/content/Context;)Lqp4;
+    iget-object p0, p0, Lic1;->w0:Lyce;
+
+    invoke-virtual {p0}, Lyce;->getValue()Ljava/lang/Object;
 
     move-result-object p0
 
-    invoke-virtual {p0}, Lqp4;->k()Lyha;
+    check-cast p0, Lbc1;
 
-    move-result-object v4
+    iget-object p0, p0, Lbc1;->b:Lfa8;
 
-    new-instance v5, Lf8;
+    if-ne p0, v2, :cond_1
 
-    const/16 p0, 0x1c
+    move v1, v3
 
-    invoke-direct {v5, p0}, Lf8;-><init>(I)V
+    :cond_1
+    xor-int/lit8 p0, v1, 0x1
 
-    new-instance v6, Lf8;
+    invoke-virtual {v0, p0}, Lic1;->r(Z)V
 
-    const/16 p0, 0x1d
+    return-void
 
-    invoke-direct {v6, p0}, Lf8;-><init>(I)V
-
-    sget-object v3, Lc3a;->a:Lc3a;
-
-    invoke-direct/range {v1 .. v6}, Ljd0;-><init>(Landroid/graphics/drawable/Drawable;Ld3a;Lyha;Lx56;Lx56;)V
-
-    return-object v1
-
-    :pswitch_2
-    sget-object v0, Lone/me/calllist/ui/callinfo/CallLinkInfoScreen;->x0:Lxo3;
-
-    invoke-virtual {p0}, Lou3;->getRouter()Lcmc;
-
-    move-result-object p0
-
-    return-object p0
+    nop
 
     :pswitch_data_0
     .packed-switch 0x0
-        :pswitch_2
-        :pswitch_1
         :pswitch_0
     .end packed-switch
 .end method

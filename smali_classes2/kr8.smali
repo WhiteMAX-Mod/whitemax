@@ -1,53 +1,74 @@
-.class public final Lkr8;
-.super Lbu3;
+.class public final synthetic Lkr8;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field public X:J
+.field public final synthetic a:I
 
-.field public synthetic Y:Ljava/lang/Object;
+.field public final synthetic b:Lmr8;
 
-.field public final synthetic Z:Lnr8;
-
-.field public o:Lnr8;
-
-.field public o0:I
+.field public final synthetic c:Lodf;
 
 
 # direct methods
-.method public constructor <init>(Lnr8;Lbu3;)V
+.method public synthetic constructor <init>(Lmr8;Lodf;I)V
     .locals 0
 
-    iput-object p1, p0, Lkr8;->Z:Lnr8;
+    iput p3, p0, Lkr8;->a:I
 
-    invoke-direct {p0, p2}, Lbu3;-><init>(Lkotlin/coroutines/Continuation;)V
+    iput-object p1, p0, Lkr8;->b:Lmr8;
+
+    iput-object p2, p0, Lkr8;->c:Lodf;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 2
+.method public final run()V
+    .locals 1
 
-    iput-object p1, p0, Lkr8;->Y:Ljava/lang/Object;
+    iget v0, p0, Lkr8;->a:I
 
-    iget p1, p0, Lkr8;->o0:I
+    packed-switch v0, :pswitch_data_0
 
-    const/high16 v0, -0x80000000
+    iget-object v0, p0, Lkr8;->b:Lmr8;
 
-    or-int/2addr p1, v0
+    iget-object p0, p0, Lkr8;->c:Lodf;
 
-    iput p1, p0, Lkr8;->o0:I
+    invoke-virtual {v0, p0}, Lmr8;->b(Lodf;)V
 
-    iget-object p1, p0, Lkr8;->Z:Lnr8;
+    return-void
 
-    const-wide/16 v0, 0x0
+    :pswitch_0
+    iget-object v0, p0, Lkr8;->b:Lmr8;
 
-    invoke-virtual {p1, v0, v1, p0}, Lnr8;->c(JLbu3;)Ljava/io/Serializable;
+    iget-object p0, p0, Lkr8;->c:Lodf;
 
-    move-result-object p0
+    invoke-virtual {v0, p0}, Lmr8;->k(Lodf;)V
 
-    return-object p0
+    return-void
+
+    :pswitch_1
+    iget-object v0, p0, Lkr8;->b:Lmr8;
+
+    iget-object p0, p0, Lkr8;->c:Lodf;
+
+    invoke-virtual {v0, p0}, Lmr8;->k(Lodf;)V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

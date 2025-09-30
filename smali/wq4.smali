@@ -1,39 +1,49 @@
-.class public abstract Lwq4;
-.super Ljava/lang/Object;
+.class public final Lwq4;
+.super Ljx3;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:Loj0;
+.field public final synthetic X:Ln30;
+
+.field public Y:I
+
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Loj0;)V
+.method public constructor <init>(Ln30;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lwq4;->X:Ln30;
 
-    iput-object p1, p0, Lwq4;->a:Loj0;
+    invoke-direct {p0, p2}, Ljx3;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public abstract a(Landroid/graphics/Canvas;Landroid/graphics/Rect;FZZ)V
-.end method
+.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-.method public abstract b(Landroid/graphics/Canvas;Landroid/graphics/Paint;II)V
-.end method
+    iput-object p1, p0, Lwq4;->o:Ljava/lang/Object;
 
-.method public abstract c(Landroid/graphics/Canvas;Landroid/graphics/Paint;Lvq4;I)V
-.end method
+    iget p1, p0, Lwq4;->Y:I
 
-.method public abstract d(Landroid/graphics/Canvas;Landroid/graphics/Paint;FFIII)V
-.end method
+    const/high16 v0, -0x80000000
 
-.method public abstract e()I
-.end method
+    or-int/2addr p1, v0
 
-.method public abstract f()I
+    iput p1, p0, Lwq4;->Y:I
+
+    iget-object p1, p0, Lwq4;->X:Ln30;
+
+    const/4 v0, 0x0
+
+    invoke-virtual {p1, v0, p0}, Ln30;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p0
+
+    return-object p0
 .end method

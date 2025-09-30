@@ -2,9 +2,6 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lko4;
-
 
 # static fields
 .field public static final a:Lgo4;
@@ -50,7 +47,7 @@
 .method public final hashCode()I
     .locals 0
 
-    const p0, 0x4a4dd798    # 3372518.0f
+    const p0, 0x5a78aebb
 
     return p0
 .end method
@@ -58,7 +55,7 @@
 .method public final toString()Ljava/lang/String;
     .locals 0
 
-    const-string p0, "Completed"
+    const-string p0, "ChatUpdated"
 
     return-object p0
 .end method

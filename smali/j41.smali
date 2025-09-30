@@ -2,97 +2,214 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lx64;
-
 
 # instance fields
-.field public final synthetic a:J
+.field public final a:Llu1;
 
-.field public final synthetic b:Ljava/lang/String;
+.field public final b:Lcl7;
 
-.field public final synthetic c:Ljava/lang/String;
-
-.field public final synthetic o:Z
+.field public final c:Lcl7;
 
 
 # direct methods
-.method public constructor <init>(JLjava/lang/String;Ljava/lang/String;Z)V
+.method public constructor <init>(Llu1;Lcl7;Lcl7;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-wide p1, p0, Lj41;->a:J
+    iput-object p1, p0, Lj41;->a:Llu1;
 
-    iput-object p3, p0, Lj41;->b:Ljava/lang/String;
+    iput-object p2, p0, Lj41;->b:Lcl7;
 
-    iput-object p4, p0, Lj41;->c:Ljava/lang/String;
-
-    iput-boolean p5, p0, Lj41;->o:Z
+    iput-object p3, p0, Lj41;->c:Lcl7;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Ljava/lang/Object;
-    .locals 6
+.method public final a(Ldp1;Ltae;Lst1;Lvv0;)Li41;
+    .locals 11
 
-    sget-object v0, Lone/me/calls/ui/ui/incoming/CallIncomingScreen;->Z:Lec2;
+    invoke-virtual {p0}, Lj41;->c()J
 
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    move-result-wide v3
 
-    new-instance v0, Lone/me/calls/ui/ui/incoming/CallIncomingScreen;
+    new-instance v2, Lorg/json/JSONObject;
 
-    new-instance v1, Ldna;
+    invoke-direct {v2}, Lorg/json/JSONObject;-><init>()V
 
-    const-string v2, "call_incoming_avatar"
+    const-string v0, "is_video"
 
-    iget-object v3, p0, Lj41;->c:Ljava/lang/String;
+    iget-boolean v1, p2, Ltae;->b:Z
 
-    invoke-direct {v1, v2, v3}, Ldna;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+    invoke-virtual {v2, v0, v1}, Lorg/json/JSONObject;->put(Ljava/lang/String;Z)Lorg/json/JSONObject;
 
-    new-instance v2, Ldna;
+    new-instance v9, Li41;
 
-    const-string v3, "call_incoming_name"
+    iget-object v0, p0, Lj41;->a:Llu1;
 
-    iget-object v4, p0, Lj41;->b:Ljava/lang/String;
+    invoke-static {v0}, Llu1;->a(Llu1;)Lru/ok/android/externcalls/sdk/ConversationFactory;
 
-    invoke-direct {v2, v3, v4}, Ldna;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+    move-result-object v10
 
-    iget-wide v3, p0, Lj41;->a:J
+    new-instance v0, Lg41;
 
-    invoke-static {v3, v4}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    move-object v6, p0
 
-    move-result-object v3
+    move-object v1, p1
 
-    new-instance v4, Ldna;
+    move-object v5, p2
 
-    const-string v5, "call_incoming_chat_id"
+    move-object v7, p3
 
-    invoke-direct {v4, v5, v3}, Ldna;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+    move-object v8, p4
 
-    iget-boolean p0, p0, Lj41;->o:Z
+    invoke-direct/range {v0 .. v8}, Lg41;-><init>(Ldp1;Lorg/json/JSONObject;JLtae;Lj41;Lst1;Lvv0;)V
 
-    invoke-static {p0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
-
-    move-result-object p0
-
-    new-instance v3, Ldna;
-
-    const-string v5, "call_incoming_video"
-
-    invoke-direct {v3, v5, p0}, Ldna;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
-
-    filled-new-array {v1, v2, v4, v3}, [Ldna;
+    invoke-virtual {v10, v0}, Lru/ok/android/externcalls/sdk/ConversationFactory;->call(Lbc6;)Lru/ok/android/externcalls/sdk/Conversation;
 
     move-result-object p0
 
-    invoke-static {p0}, Lp54;->d([Ldna;)Landroid/os/Bundle;
+    const/4 p1, 0x1
+
+    const/4 p2, 0x0
+
+    invoke-direct {v9, p0, v1, p1, p2}, Li41;-><init>(Lru/ok/android/externcalls/sdk/Conversation;Lgs3;ZZ)V
+
+    return-object v9
+.end method
+
+.method public final b(Lbp1;Ltae;Lst1;Lvv0;)Li41;
+    .locals 11
+
+    invoke-virtual {p0}, Lj41;->c()J
+
+    move-result-wide v2
+
+    new-instance v1, Lorg/json/JSONObject;
+
+    invoke-direct {v1}, Lorg/json/JSONObject;-><init>()V
+
+    const-string v0, "chat_id"
+
+    iget-wide v4, p1, Lbp1;->c:J
+
+    invoke-virtual {v1, v0, v4, v5}, Lorg/json/JSONObject;->put(Ljava/lang/String;J)Lorg/json/JSONObject;
+
+    const-string v0, "is_video"
+
+    iget-boolean v4, p2, Ltae;->b:Z
+
+    invoke-virtual {v1, v0, v4}, Lorg/json/JSONObject;->put(Ljava/lang/String;Z)Lorg/json/JSONObject;
+
+    new-instance v9, Li41;
+
+    iget-object v0, p0, Lj41;->a:Llu1;
+
+    invoke-static {v0}, Llu1;->a(Llu1;)Lru/ok/android/externcalls/sdk/ConversationFactory;
+
+    move-result-object v10
+
+    new-instance v0, Lf41;
+
+    const/4 v8, 0x0
+
+    move-object v5, p0
+
+    move-object v4, p2
+
+    move-object v6, p3
+
+    move-object v7, p4
+
+    invoke-direct/range {v0 .. v8}, Lf41;-><init>(Ljava/lang/Object;JLtae;Lj41;Lst1;Lvv0;I)V
+
+    invoke-virtual {v10, v0}, Lru/ok/android/externcalls/sdk/ConversationFactory;->createConfRoom(Lbc6;)Lru/ok/android/externcalls/sdk/Conversation;
 
     move-result-object p0
 
-    invoke-direct {v0, p0}, Lone/me/calls/ui/ui/incoming/CallIncomingScreen;-><init>(Landroid/os/Bundle;)V
+    const/4 p2, 0x1
 
-    return-object v0
+    const/4 p3, 0x0
+
+    invoke-direct {v9, p0, p1, p2, p3}, Li41;-><init>(Lru/ok/android/externcalls/sdk/Conversation;Lgs3;ZZ)V
+
+    return-object v9
+.end method
+
+.method public final c()J
+    .locals 2
+
+    iget-object p0, p0, Lj41;->c:Lcl7;
+
+    invoke-interface {p0}, Lcl7;->getValue()Ljava/lang/Object;
+
+    move-result-object p0
+
+    check-cast p0, Lxq1;
+
+    iget-object p0, p0, Lxq1;->a:Lcl7;
+
+    invoke-interface {p0}, Lcl7;->getValue()Ljava/lang/Object;
+
+    move-result-object p0
+
+    check-cast p0, Lf53;
+
+    check-cast p0, Lgad;
+
+    invoke-virtual {p0}, Lgad;->q()J
+
+    move-result-wide v0
+
+    return-wide v0
+.end method
+
+.method public final d(Ljava/lang/String;ZLtae;Lst1;Lvv0;)Li41;
+    .locals 11
+
+    invoke-virtual {p0}, Lj41;->c()J
+
+    move-result-wide v2
+
+    new-instance v9, Li41;
+
+    iget-object v0, p0, Lj41;->a:Llu1;
+
+    invoke-static {v0}, Llu1;->a(Llu1;)Lru/ok/android/externcalls/sdk/ConversationFactory;
+
+    move-result-object v10
+
+    new-instance v0, Lf41;
+
+    const/4 v8, 0x1
+
+    move-object v5, p0
+
+    move-object v1, p1
+
+    move-object v4, p3
+
+    move-object v6, p4
+
+    move-object/from16 v7, p5
+
+    invoke-direct/range {v0 .. v8}, Lf41;-><init>(Ljava/lang/Object;JLtae;Lj41;Lst1;Lvv0;I)V
+
+    invoke-virtual {v10, v0}, Lru/ok/android/externcalls/sdk/ConversationFactory;->joinByLink(Lbc6;)Lru/ok/android/externcalls/sdk/Conversation;
+
+    move-result-object p0
+
+    new-instance p3, Lcp1;
+
+    invoke-direct {p3, p1, p2}, Lcp1;-><init>(Ljava/lang/String;Z)V
+
+    xor-int/lit8 p1, p2, 0x1
+
+    const/4 p2, 0x0
+
+    invoke-direct {v9, p0, p3, p1, p2}, Li41;-><init>(Lru/ok/android/externcalls/sdk/Conversation;Lgs3;ZZ)V
+
+    return-object v9
 .end method

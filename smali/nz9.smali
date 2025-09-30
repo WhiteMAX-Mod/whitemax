@@ -1,76 +1,53 @@
 .class public final Lnz9;
-.super Lw2;
+.super Ljx3;
 .source "SourceFile"
 
 
 # instance fields
-.field public final X:Z
+.field public X:Ls72;
 
-.field public final b:J
+.field public synthetic Y:Ljava/lang/Object;
 
-.field public final c:Ljava/util/concurrent/TimeUnit;
+.field public final synthetic Z:Lqz9;
 
-.field public final o:Lgsc;
+.field public o:Lqz9;
+
+.field public r0:I
 
 
 # direct methods
-.method public constructor <init>(Lqz9;JLjava/util/concurrent/TimeUnit;Lgsc;Z)V
+.method public constructor <init>(Lqz9;Ljx3;)V
     .locals 0
 
-    invoke-direct {p0, p1}, Lw2;-><init>(Lqz9;)V
+    iput-object p1, p0, Lnz9;->Z:Lqz9;
 
-    iput-wide p2, p0, Lnz9;->b:J
-
-    iput-object p4, p0, Lnz9;->c:Ljava/util/concurrent/TimeUnit;
-
-    iput-object p5, p0, Lnz9;->o:Lgsc;
-
-    iput-boolean p6, p0, Lnz9;->X:Z
+    invoke-direct {p0, p2}, Ljx3;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final p(La0a;)V
-    .locals 7
+.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    new-instance v1, Le5d;
+    iput-object p1, p0, Lnz9;->Y:Ljava/lang/Object;
 
-    invoke-direct {v1, p1}, Le5d;-><init>(La0a;)V
+    iget p1, p0, Lnz9;->r0:I
 
-    iget-boolean p1, p0, Lnz9;->X:Z
+    const/high16 v0, -0x80000000
 
-    iget-object v6, p0, Lw2;->a:Lqz9;
+    or-int/2addr p1, v0
 
-    if-eqz p1, :cond_0
+    iput p1, p0, Lnz9;->r0:I
 
-    new-instance v0, Lkz9;
+    iget-object p1, p0, Lnz9;->Z:Lqz9;
 
-    iget-object v4, p0, Lnz9;->c:Ljava/util/concurrent/TimeUnit;
+    const/4 v0, 0x0
 
-    iget-object v5, p0, Lnz9;->o:Lgsc;
+    invoke-virtual {p1, v0, p0}, Lqz9;->b(Ls72;Ljx3;)Ljava/lang/Object;
 
-    iget-wide v2, p0, Lnz9;->b:J
+    move-result-object p0
 
-    invoke-direct/range {v0 .. v5}, Lkz9;-><init>(Le5d;JLjava/util/concurrent/TimeUnit;Lgsc;)V
-
-    invoke-interface {v6, v0}, Lqz9;->a(La0a;)V
-
-    return-void
-
-    :cond_0
-    new-instance v0, Llz9;
-
-    iget-object v4, p0, Lnz9;->c:Ljava/util/concurrent/TimeUnit;
-
-    iget-object v5, p0, Lnz9;->o:Lgsc;
-
-    iget-wide v2, p0, Lnz9;->b:J
-
-    invoke-direct/range {v0 .. v5}, Lmz9;-><init>(Le5d;JLjava/util/concurrent/TimeUnit;Lgsc;)V
-
-    invoke-interface {v6, v0}, Lqz9;->a(La0a;)V
-
-    return-void
+    return-object p0
 .end method

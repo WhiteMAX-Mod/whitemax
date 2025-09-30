@@ -1,5 +1,5 @@
 .class public final Lcom/google/android/gms/location/LocationAvailability;
-.super Ln3;
+.super Lr3;
 .source "SourceFile"
 
 # interfaces
@@ -19,7 +19,7 @@
 
 
 # instance fields
-.field public final X:[Lmgg;
+.field public final X:[Lu3h;
 
 .field public final a:I
 
@@ -34,18 +34,18 @@
 .method static constructor <clinit>()V
     .locals 2
 
-    new-instance v0, Lmrf;
+    new-instance v0, Lfvf;
 
-    const/16 v1, 0x12
+    const/16 v1, 0x16
 
-    invoke-direct {v0, v1}, Lmrf;-><init>(I)V
+    invoke-direct {v0, v1}, Lfvf;-><init>(I)V
 
     sput-object v0, Lcom/google/android/gms/location/LocationAvailability;->CREATOR:Landroid/os/Parcelable$Creator;
 
     return-void
 .end method
 
-.method public constructor <init>(IIIJ[Lmgg;)V
+.method public constructor <init>(IIIJ[Lu3h;)V
     .locals 1
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -65,7 +65,7 @@
 
     iput-wide p4, p0, Lcom/google/android/gms/location/LocationAvailability;->c:J
 
-    iput-object p6, p0, Lcom/google/android/gms/location/LocationAvailability;->X:[Lmgg;
+    iput-object p6, p0, Lcom/google/android/gms/location/LocationAvailability;->X:[Lu3h;
 
     return-void
 .end method
@@ -109,9 +109,9 @@
 
     if-ne v0, v2, :cond_0
 
-    iget-object p0, p0, Lcom/google/android/gms/location/LocationAvailability;->X:[Lmgg;
+    iget-object p0, p0, Lcom/google/android/gms/location/LocationAvailability;->X:[Lu3h;
 
-    iget-object p1, p1, Lcom/google/android/gms/location/LocationAvailability;->X:[Lmgg;
+    iget-object p1, p1, Lcom/google/android/gms/location/LocationAvailability;->X:[Lu3h;
 
     invoke-static {p0, p1}, Ljava/util/Arrays;->equals([Ljava/lang/Object;[Ljava/lang/Object;)Z
 
@@ -182,7 +182,7 @@
 
     const-string v2, "]"
 
-    invoke-static {v1, v0, p0, v2}, Lm26;->k(Ljava/lang/StringBuilder;Ljava/lang/String;ZLjava/lang/String;)Ljava/lang/String;
+    invoke-static {v1, v0, p0, v2}, Lyv7;->l(Ljava/lang/StringBuilder;Ljava/lang/String;ZLjava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
 
@@ -194,7 +194,7 @@
 
     const/16 v0, 0x4f45
 
-    invoke-static {p1, v0}, Lq14;->B0(Landroid/os/Parcel;I)I
+    invoke-static {p1, v0}, Ljs9;->U(Landroid/os/Parcel;I)I
 
     move-result v0
 
@@ -202,7 +202,7 @@
 
     const/4 v2, 0x4
 
-    invoke-static {p1, v1, v2}, Lq14;->D0(Landroid/os/Parcel;II)V
+    invoke-static {p1, v1, v2}, Ljs9;->W(Landroid/os/Parcel;II)V
 
     iget v3, p0, Lcom/google/android/gms/location/LocationAvailability;->a:I
 
@@ -210,7 +210,7 @@
 
     const/4 v3, 0x2
 
-    invoke-static {p1, v3, v2}, Lq14;->D0(Landroid/os/Parcel;II)V
+    invoke-static {p1, v3, v2}, Ljs9;->W(Landroid/os/Parcel;II)V
 
     iget v3, p0, Lcom/google/android/gms/location/LocationAvailability;->b:I
 
@@ -220,13 +220,13 @@
 
     const/4 v4, 0x3
 
-    invoke-static {p1, v4, v3}, Lq14;->D0(Landroid/os/Parcel;II)V
+    invoke-static {p1, v4, v3}, Ljs9;->W(Landroid/os/Parcel;II)V
 
     iget-wide v3, p0, Lcom/google/android/gms/location/LocationAvailability;->c:J
 
     invoke-virtual {p1, v3, v4}, Landroid/os/Parcel;->writeLong(J)V
 
-    invoke-static {p1, v2, v2}, Lq14;->D0(Landroid/os/Parcel;II)V
+    invoke-static {p1, v2, v2}, Ljs9;->W(Landroid/os/Parcel;II)V
 
     iget v3, p0, Lcom/google/android/gms/location/LocationAvailability;->o:I
 
@@ -234,9 +234,9 @@
 
     const/4 v4, 0x5
 
-    iget-object p0, p0, Lcom/google/android/gms/location/LocationAvailability;->X:[Lmgg;
+    iget-object p0, p0, Lcom/google/android/gms/location/LocationAvailability;->X:[Lu3h;
 
-    invoke-static {p1, v4, p0, p2}, Lq14;->z0(Landroid/os/Parcel;I[Landroid/os/Parcelable;I)V
+    invoke-static {p1, v4, p0, p2}, Ljs9;->Q(Landroid/os/Parcel;I[Landroid/os/Parcelable;I)V
 
     const/16 p0, 0x3e8
 
@@ -250,11 +250,11 @@
     :goto_0
     const/4 p0, 0x6
 
-    invoke-static {p1, p0, v2}, Lq14;->D0(Landroid/os/Parcel;II)V
+    invoke-static {p1, p0, v2}, Ljs9;->W(Landroid/os/Parcel;II)V
 
     invoke-virtual {p1, v1}, Landroid/os/Parcel;->writeInt(I)V
 
-    invoke-static {p1, v0}, Lq14;->C0(Landroid/os/Parcel;I)V
+    invoke-static {p1, v0}, Ljs9;->V(Landroid/os/Parcel;I)V
 
     return-void
 .end method

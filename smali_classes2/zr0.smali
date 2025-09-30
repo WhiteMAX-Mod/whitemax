@@ -2,110 +2,209 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Landroid/widget/SeekBar$OnSeekBarChangeListener;
+
 
 # instance fields
-.field public final a:I
+.field public final synthetic a:I
 
-.field public final b:I
+.field public final b:Ljava/lang/Object;
+
+.field public final synthetic c:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(II)V
-    .locals 0
+.method public constructor <init>(Landroidx/mediarouter/app/d;)V
+    .locals 1
 
+    const/4 v0, 0x1
+
+    iput v0, p0, Lzr0;->a:I
+
+    .line 2
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput p1, p0, Lzr0;->a:I
+    iput-object p1, p0, Lzr0;->c:Ljava/lang/Object;
 
-    iput p2, p0, Lzr0;->b:I
+    .line 3
+    new-instance p1, Lrs7;
+
+    const/4 v0, 0x7
+
+    invoke-direct {p1, v0, p0}, Lrs7;-><init>(ILjava/lang/Object;)V
+
+    iput-object p1, p0, Lzr0;->b:Ljava/lang/Object;
+
+    return-void
+.end method
+
+.method public constructor <init>(Las0;Lru/ok/messages/settings/FrgBaseSettings;)V
+    .locals 1
+
+    const/4 v0, 0x0
+
+    iput v0, p0, Lzr0;->a:I
+
+    .line 1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lzr0;->c:Ljava/lang/Object;
+
+    iput-object p2, p0, Lzr0;->b:Ljava/lang/Object;
+
+    return-void
+.end method
+
+.method private final a(Landroid/widget/SeekBar;IZ)V
+    .locals 0
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 2
+.method public final onProgressChanged(Landroid/widget/SeekBar;IZ)V
+    .locals 0
 
-    if-ne p0, p1, :cond_0
+    iget p0, p0, Lzr0;->a:I
 
-    goto :goto_1
+    packed-switch p0, :pswitch_data_0
 
-    :cond_0
-    instance-of v0, p1, Lzr0;
+    if-eqz p3, :cond_0
 
-    if-nez v0, :cond_1
-
-    goto :goto_0
-
-    :cond_1
-    check-cast p1, Lzr0;
-
-    iget v0, p0, Lzr0;->a:I
-
-    iget v1, p1, Lzr0;->a:I
-
-    if-eq v0, v1, :cond_2
-
-    goto :goto_0
-
-    :cond_2
-    iget p0, p0, Lzr0;->b:I
-
-    iget p1, p1, Lzr0;->b:I
-
-    if-eq p0, p1, :cond_3
-
-    :goto_0
-    const/4 p0, 0x0
-
-    return p0
-
-    :cond_3
-    :goto_1
-    const/4 p0, 0x1
-
-    return p0
-.end method
-
-.method public final hashCode()I
-    .locals 1
-
-    iget v0, p0, Lzr0;->a:I
-
-    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
-
-    move-result v0
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget p0, p0, Lzr0;->b:I
-
-    invoke-static {p0}, Ljava/lang/Integer;->hashCode(I)I
-
-    move-result p0
-
-    add-int/2addr p0, v0
-
-    return p0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 4
-
-    const-string v0, ", min="
-
-    const-string v1, ")"
-
-    const-string v2, "BubbleBackgroundFocusTransparentColors(max="
-
-    iget v3, p0, Lzr0;->a:I
-
-    iget p0, p0, Lzr0;->b:I
-
-    invoke-static {v2, v3, v0, p0, v1}, Lpg0;->f(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/String;
+    invoke-virtual {p1}, Landroid/view/View;->getTag()Ljava/lang/Object;
 
     move-result-object p0
 
-    return-object p0
+    check-cast p0, Ljn8;
+
+    sget p1, Landroidx/mediarouter/app/d;->y1:I
+
+    invoke-virtual {p0, p2}, Ljn8;->j(I)V
+
+    :cond_0
+    :pswitch_0
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final onStartTrackingTouch(Landroid/widget/SeekBar;)V
+    .locals 2
+
+    iget v0, p0, Lzr0;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    iget-object v0, p0, Lzr0;->c:Ljava/lang/Object;
+
+    check-cast v0, Landroidx/mediarouter/app/d;
+
+    iget-object v1, v0, Landroidx/mediarouter/app/d;->V0:Ljn8;
+
+    if-eqz v1, :cond_0
+
+    iget-object v1, v0, Landroidx/mediarouter/app/d;->T0:Landroid/widget/SeekBar;
+
+    iget-object p0, p0, Lzr0;->b:Ljava/lang/Object;
+
+    check-cast p0, Lrs7;
+
+    invoke-virtual {v1, p0}, Landroid/view/View;->removeCallbacks(Ljava/lang/Runnable;)Z
+
+    :cond_0
+    invoke-virtual {p1}, Landroid/view/View;->getTag()Ljava/lang/Object;
+
+    move-result-object p0
+
+    check-cast p0, Ljn8;
+
+    iput-object p0, v0, Landroidx/mediarouter/app/d;->V0:Ljn8;
+
+    return-void
+
+    :pswitch_0
+    iget-object p0, p0, Lzr0;->c:Ljava/lang/Object;
+
+    check-cast p0, Las0;
+
+    const/4 p1, 0x1
+
+    iput-boolean p1, p0, Las0;->G0:Z
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final onStopTrackingTouch(Landroid/widget/SeekBar;)V
+    .locals 2
+
+    iget v0, p0, Lzr0;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    iget-object p1, p0, Lzr0;->c:Ljava/lang/Object;
+
+    check-cast p1, Landroidx/mediarouter/app/d;
+
+    iget-object p1, p1, Landroidx/mediarouter/app/d;->T0:Landroid/widget/SeekBar;
+
+    iget-object p0, p0, Lzr0;->b:Ljava/lang/Object;
+
+    check-cast p0, Lrs7;
+
+    const-wide/16 v0, 0x1f4
+
+    invoke-virtual {p1, p0, v0, v1}, Landroid/view/View;->postDelayed(Ljava/lang/Runnable;J)Z
+
+    return-void
+
+    :pswitch_0
+    iget-object v0, p0, Lzr0;->c:Ljava/lang/Object;
+
+    check-cast v0, Las0;
+
+    iget-object v1, v0, Las0;->F0:Lcod;
+
+    if-eqz v1, :cond_0
+
+    iget-object p0, p0, Lzr0;->b:Ljava/lang/Object;
+
+    check-cast p0, Lru/ok/messages/settings/FrgBaseSettings;
+
+    iget v1, v1, Lcod;->a:I
+
+    invoke-virtual {p1}, Landroid/widget/ProgressBar;->getProgress()I
+
+    move-result p1
+
+    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object p1
+
+    invoke-virtual {p0, v1, p1}, Lru/ok/messages/settings/FrgBaseSettings;->h1(ILjava/lang/Object;)V
+
+    :cond_0
+    const/4 p0, 0x0
+
+    iput-boolean p0, v0, Las0;->G0:Z
+
+    return-void
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

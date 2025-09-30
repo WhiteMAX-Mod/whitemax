@@ -1,47 +1,47 @@
-.class public final synthetic Lzt2;
-.super Lq8;
+.class public final Lzt2;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ln66;
+
+# instance fields
+.field public final a:J
+
+.field public final b:Ljava/lang/CharSequence;
+
+.field public final c:Lu2f;
+
+.field public final d:Z
+
+.field public final e:Ljava/lang/String;
+
+.field public final f:Ljava/lang/CharSequence;
+
+.field public final g:Lqra;
+
+.field public final h:Ljd0;
 
 
-# virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+# direct methods
+.method public constructor <init>(JLjava/lang/CharSequence;Lu2f;ZLjava/lang/String;Ljava/lang/CharSequence;Lqra;Ljd0;)V
     .locals 0
 
-    check-cast p1, Ljava/util/List;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    check-cast p2, Lhu2;
+    iput-wide p1, p0, Lzt2;->a:J
 
-    check-cast p3, Lkotlin/coroutines/Continuation;
+    iput-object p3, p0, Lzt2;->b:Ljava/lang/CharSequence;
 
-    iget-object p0, p0, Lq8;->a:Ljava/lang/Object;
+    iput-object p4, p0, Lzt2;->c:Lu2f;
 
-    check-cast p0, Lone/me/chats/search/ChatsListSearchScreen;
+    iput-boolean p5, p0, Lzt2;->d:Z
 
-    sget-object p3, Lone/me/chats/search/ChatsListSearchScreen;->F0:[Lbc7;
+    iput-object p6, p0, Lzt2;->e:Ljava/lang/String;
 
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    iput-object p7, p0, Lzt2;->f:Ljava/lang/CharSequence;
 
-    iget-object p0, p2, Lhu2;->a:Lgu2;
+    iput-object p8, p0, Lzt2;->g:Lqra;
 
-    sget-object p2, Ltt2;->$EnumSwitchMapping$1:[I
+    iput-object p9, p0, Lzt2;->h:Ljd0;
 
-    invoke-virtual {p0}, Ljava/lang/Enum;->ordinal()I
-
-    move-result p0
-
-    aget p0, p2, p0
-
-    const/4 p2, 0x2
-
-    if-ne p0, p2, :cond_0
-
-    return-object p1
-
-    :cond_0
-    sget-object p0, Lgz4;->a:Lgz4;
-
-    return-object p0
+    return-void
 .end method

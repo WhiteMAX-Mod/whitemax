@@ -63,10 +63,10 @@
 
 .field mState:I
 
-.field private final mSubscriptions:Ljs;
+.field private final mSubscriptions:Ltr;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Ljs;"
+            "Ltr;"
         }
     .end annotation
 .end field
@@ -84,13 +84,13 @@
 
     iput-object v0, p0, Landroid/support/v4/media/MediaBrowserCompat$MediaBrowserImplBase;->mHandler:Landroid/support/v4/media/MediaBrowserCompat$CallbackHandler;
 
-    new-instance v0, Ljs;
+    new-instance v0, Ltr;
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lbod;-><init>(I)V
+    invoke-direct {v0, v1}, Lr1e;-><init>(I)V
 
-    iput-object v0, p0, Landroid/support/v4/media/MediaBrowserCompat$MediaBrowserImplBase;->mSubscriptions:Ljs;
+    iput-object v0, p0, Landroid/support/v4/media/MediaBrowserCompat$MediaBrowserImplBase;->mSubscriptions:Ltr;
 
     const/4 v0, 0x1
 
@@ -175,7 +175,7 @@
 
     const-string v0, "UNKNOWN/"
 
-    invoke-static {p0, v0}, Lm26;->h(ILjava/lang/String;)Ljava/lang/String;
+    invoke-static {p0, v0}, Lyv7;->e(ILjava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
 
@@ -283,7 +283,7 @@
 
     const-string v2, ")"
 
-    invoke-static {v1, p0, v2}, Lm26;->j(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v1, p0, v2}, Lyv7;->k(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
 
@@ -429,7 +429,7 @@
 
     const-string v2, ")"
 
-    invoke-static {v1, p0, v2}, Lm26;->j(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v1, p0, v2}, Lyv7;->k(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
 
@@ -551,7 +551,7 @@
 
     const-string v2, ")"
 
-    invoke-static {v1, p0, v2}, Lm26;->j(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v1, p0, v2}, Lyv7;->k(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
 
@@ -586,7 +586,7 @@
 
     const-string v2, ")"
 
-    invoke-static {v1, p0, v2}, Lm26;->i(Ljava/lang/StringBuilder;ILjava/lang/String;)Ljava/lang/String;
+    invoke-static {v1, p0, v2}, Lyv7;->i(Ljava/lang/StringBuilder;ILjava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
 
@@ -621,7 +621,7 @@
 
     const-string v2, ")"
 
-    invoke-static {v1, p0, v2}, Lm26;->i(Ljava/lang/StringBuilder;ILjava/lang/String;)Ljava/lang/String;
+    invoke-static {v1, p0, v2}, Lyv7;->i(Ljava/lang/StringBuilder;ILjava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
 
@@ -723,9 +723,9 @@
     invoke-static {p1}, Ljava/util/Objects;->toString(Ljava/lang/Object;)Ljava/lang/String;
 
     :cond_1
-    iget-object p1, p0, Landroid/support/v4/media/MediaBrowserCompat$MediaBrowserImplBase;->mSubscriptions:Ljs;
+    iget-object p1, p0, Landroid/support/v4/media/MediaBrowserCompat$MediaBrowserImplBase;->mSubscriptions:Ltr;
 
-    invoke-virtual {p1, p2}, Lbod;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {p1, p2}, Lr1e;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p1
 
@@ -827,30 +827,30 @@
     invoke-virtual {p1}, Landroid/support/v4/media/MediaBrowserCompat$ConnectionCallback;->onConnected()V
 
     :try_start_0
-    iget-object p1, p0, Landroid/support/v4/media/MediaBrowserCompat$MediaBrowserImplBase;->mSubscriptions:Ljs;
+    iget-object p1, p0, Landroid/support/v4/media/MediaBrowserCompat$MediaBrowserImplBase;->mSubscriptions:Ltr;
 
-    invoke-virtual {p1}, Ljs;->entrySet()Ljava/util/Set;
+    invoke-virtual {p1}, Ltr;->entrySet()Ljava/util/Set;
 
     move-result-object p1
 
-    check-cast p1, Les;
+    check-cast p1, Lor;
 
-    invoke-virtual {p1}, Les;->iterator()Ljava/util/Iterator;
+    invoke-virtual {p1}, Lor;->iterator()Ljava/util/Iterator;
 
     move-result-object p1
 
     :cond_3
     move-object p2, p1
 
-    check-cast p2, Lhs;
+    check-cast p2, Lrr;
 
-    invoke-virtual {p2}, Lhs;->hasNext()Z
+    invoke-virtual {p2}, Lrr;->hasNext()Z
 
     move-result p3
 
     if-eqz p3, :cond_4
 
-    invoke-virtual {p2}, Lhs;->next()Ljava/lang/Object;
+    invoke-virtual {p2}, Lrr;->next()Ljava/lang/Object;
 
     check-cast p2, Ljava/util/Map$Entry;
 
@@ -969,7 +969,7 @@
 
     const-string p3, ")"
 
-    invoke-static {p2, p0, p3}, Lm26;->j(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p2, p0, p3}, Lyv7;->k(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
 
@@ -1053,9 +1053,9 @@
 .method public subscribe(Ljava/lang/String;Landroid/os/Bundle;Landroid/support/v4/media/MediaBrowserCompat$SubscriptionCallback;)V
     .locals 2
 
-    iget-object v0, p0, Landroid/support/v4/media/MediaBrowserCompat$MediaBrowserImplBase;->mSubscriptions:Ljs;
+    iget-object v0, p0, Landroid/support/v4/media/MediaBrowserCompat$MediaBrowserImplBase;->mSubscriptions:Ltr;
 
-    invoke-virtual {v0, p1}, Lbod;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v0, p1}, Lr1e;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -1067,9 +1067,9 @@
 
     invoke-direct {v0}, Landroid/support/v4/media/MediaBrowserCompat$Subscription;-><init>()V
 
-    iget-object v1, p0, Landroid/support/v4/media/MediaBrowserCompat$MediaBrowserImplBase;->mSubscriptions:Ljs;
+    iget-object v1, p0, Landroid/support/v4/media/MediaBrowserCompat$MediaBrowserImplBase;->mSubscriptions:Ltr;
 
-    invoke-virtual {v1, p1, v0}, Lbod;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v1, p1, v0}, Lr1e;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     :cond_0
     if-nez p2, :cond_1
@@ -1113,9 +1113,9 @@
 .method public unsubscribe(Ljava/lang/String;Landroid/support/v4/media/MediaBrowserCompat$SubscriptionCallback;)V
     .locals 7
 
-    iget-object v0, p0, Landroid/support/v4/media/MediaBrowserCompat$MediaBrowserImplBase;->mSubscriptions:Ljs;
+    iget-object v0, p0, Landroid/support/v4/media/MediaBrowserCompat$MediaBrowserImplBase;->mSubscriptions:Ltr;
 
-    invoke-virtual {v0, p1}, Lbod;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v0, p1}, Lr1e;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -1207,9 +1207,9 @@
     if-nez p2, :cond_6
 
     :cond_5
-    iget-object p0, p0, Landroid/support/v4/media/MediaBrowserCompat$MediaBrowserImplBase;->mSubscriptions:Ljs;
+    iget-object p0, p0, Landroid/support/v4/media/MediaBrowserCompat$MediaBrowserImplBase;->mSubscriptions:Ltr;
 
-    invoke-virtual {p0, p1}, Lbod;->remove(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {p0, p1}, Lr1e;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
     :cond_6
     :goto_2

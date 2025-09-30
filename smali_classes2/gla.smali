@@ -1,67 +1,73 @@
-.class public final Lgla;
+.class public abstract Lgla;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:I
+# static fields
+.field public static final a:I
 
-.field public final b:J
+.field public static final b:I
 
-.field public final c:J
+.field public static final c:I
+
+.field public static final d:I
+
+.field public static final e:I
+
+.field public static final f:I
+
+.field public static final g:I
+
+.field public static final h:I
+
+.field public static final i:I
+
+.field public static final j:I
 
 
 # direct methods
-.method public constructor <init>(IJJ)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    sget v0, Ls6c;->pinbars_group_call_bar:I
 
-    iput p1, p0, Lgla;->a:I
+    sput v0, Lgla;->a:I
 
-    iput-wide p2, p0, Lgla;->b:J
+    sget v0, Ls6c;->pinbars_group_call_bar_button:I
 
-    iput-wide p4, p0, Lgla;->c:J
+    sput v0, Lgla;->b:I
+
+    sget v0, Ls6c;->pinbars_group_call_bar_divider:I
+
+    sput v0, Lgla;->c:I
+
+    sget v0, Ls6c;->pinbars_group_call_bar_stack:I
+
+    sput v0, Lgla;->d:I
+
+    sget v0, Ls6c;->pinbars_group_call_bar_subtitle:I
+
+    sput v0, Lgla;->e:I
+
+    sget v0, Ls6c;->pinbars_group_call_bar_title:I
+
+    sput v0, Lgla;->f:I
+
+    sget v0, Ls6c;->pinbars_message:I
+
+    sput v0, Lgla;->g:I
+
+    sget v0, Ls6c;->pinbars_miniplayer:I
+
+    sput v0, Lgla;->h:I
+
+    sget v0, Ls6c;->pinbars_root:I
+
+    sput v0, Lgla;->i:I
+
+    sget v0, Ls6c;->unknown_contact:I
+
+    sput v0, Lgla;->j:I
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final toString()Ljava/lang/String;
-    .locals 5
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "OutgoingMessageLink{type="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget v1, p0, Lgla;->a:I
-
-    invoke-static {v1}, Lu88;->q(I)Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", chatId="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-wide v1, p0, Lgla;->b:J
-
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    const-string v1, ", messageId="
-
-    const-string v2, "}"
-
-    iget-wide v3, p0, Lgla;->c:J
-
-    invoke-static {v3, v4, v1, v2, v0}, Lv04;->g(JLjava/lang/String;Ljava/lang/String;Ljava/lang/StringBuilder;)Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
 .end method

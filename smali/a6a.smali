@@ -1,31 +1,54 @@
-.class public abstract La6a;
-.super Ljava/lang/Object;
+.class public final La6a;
+.super Lk2e;
 .source "SourceFile"
 
+# interfaces
+.implements Lmd6;
 
-# static fields
-.field public static final a:I
 
-.field public static final b:I
-
-.field public static final c:I
+# instance fields
+.field public final a:Lr5a;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(Lr5a;)V
+    .locals 0
 
-    sget v0, Lprb;->fast_forward_24:I
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    sput v0, La6a;->a:I
+    iput-object p1, p0, La6a;->a:Lr5a;
 
-    sget v0, Lprb;->fast_rewind_24:I
+    return-void
+.end method
 
-    sput v0, La6a;->b:I
 
-    sget v0, Lprb;->save_to_gallery_24:I
+# virtual methods
+.method public final d()Ly4a;
+    .locals 2
 
-    sput v0, La6a;->c:I
+    new-instance v0, Lx5a;
+
+    iget-object p0, p0, La6a;->a:Lr5a;
+
+    const/4 v1, 0x1
+
+    invoke-direct {v0, p0, v1}, Lx5a;-><init>(Lz2;Z)V
+
+    return-object v0
+.end method
+
+.method public final l(Le3e;)V
+    .locals 2
+
+    new-instance v0, Ly5a;
+
+    const/4 v1, 0x1
+
+    invoke-direct {v0, v1, p1}, Ly5a;-><init>(ILjava/lang/Object;)V
+
+    iget-object p0, p0, La6a;->a:Lr5a;
+
+    invoke-virtual {p0, v0}, Ly4a;->a(Ld8a;)V
 
     return-void
 .end method

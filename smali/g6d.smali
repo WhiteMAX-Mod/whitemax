@@ -3,11 +3,19 @@
 .source "SourceFile"
 
 
-# direct methods
-.method public static a(Landroid/app/Service;I)V
-    .locals 0
+# static fields
+.field public static final a:Liw9;
 
-    invoke-virtual {p0, p1}, Landroid/app/Service;->stopForeground(I)V
+
+# direct methods
+.method static constructor <clinit>()V
+    .locals 1
+
+    new-instance v0, Liw9;
+
+    invoke-direct {v0}, Liw9;-><init>()V
+
+    sput-object v0, Lg6d;->a:Liw9;
 
     return-void
 .end method

@@ -1,53 +1,51 @@
 .class public final Lase;
-.super Ljava/lang/Object;
+.super Ljx3;
 .source "SourceFile"
-
-# interfaces
-.implements Lzre;
 
 
 # instance fields
-.field public a:Ljava/lang/Long;
+.field public synthetic X:Ljava/lang/Object;
 
-.field public b:Ljava/lang/Long;
+.field public final synthetic Y:Lqse;
+
+.field public Z:I
+
+.field public o:Lvnf;
+
+
+# direct methods
+.method public constructor <init>(Lqse;Ljx3;)V
+    .locals 0
+
+    iput-object p1, p0, Lase;->Y:Lqse;
+
+    invoke-direct {p0, p2}, Ljx3;-><init>(Lkotlin/coroutines/Continuation;)V
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public a()Ljava/lang/Long;
-    .locals 6
+.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    iget-object v0, p0, Lase;->b:Ljava/lang/Long;
+    iput-object p1, p0, Lase;->X:Ljava/lang/Object;
 
-    const/4 v1, 0x0
+    iget p1, p0, Lase;->Z:I
 
-    if-eqz v0, :cond_0
+    const/high16 v0, -0x80000000
 
-    invoke-virtual {v0}, Ljava/lang/Number;->longValue()J
+    or-int/2addr p1, v0
 
-    move-result-wide v2
+    iput p1, p0, Lase;->Z:I
 
-    invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
+    iget-object p1, p0, Lase;->Y:Lqse;
 
-    move-result-wide v4
+    const/4 v0, 0x0
 
-    sub-long/2addr v4, v2
-
-    iget-object p0, p0, Lase;->a:Ljava/lang/Long;
-
-    if-eqz p0, :cond_0
-
-    invoke-virtual {p0}, Ljava/lang/Number;->longValue()J
-
-    move-result-wide v0
-
-    add-long/2addr v0, v4
-
-    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    invoke-static {p1, v0, p0}, Lqse;->b(Lqse;Lvnf;Ljx3;)Ljava/lang/Object;
 
     move-result-object p0
 
     return-object p0
-
-    :cond_0
-    return-object v1
 .end method

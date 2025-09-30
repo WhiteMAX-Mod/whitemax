@@ -2,10 +2,7 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lz54;
-
 
 # virtual methods
-.method public abstract a(J)V
+.method public abstract x(J)J
 .end method

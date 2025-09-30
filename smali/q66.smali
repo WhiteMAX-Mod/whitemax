@@ -1,3 +1,3 @@
-.class public interface abstract Lq66;
+.class public final Lq66;
 .super Ljava/lang/Object;
 .source "SourceFile"

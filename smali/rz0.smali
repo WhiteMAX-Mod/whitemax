@@ -1,120 +1,147 @@
-.class public final Lrz0;
-.super Lqde;
+.class public final synthetic Lrz0;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Ll66;
+.implements Lru/ok/android/externcalls/sdk/participant/state/ParticipantStatesManager$Listener;
 
 
 # instance fields
-.field public X:I
+.field public final synthetic a:I
 
-.field public final synthetic Y:Lsz0;
-
-.field public final synthetic Z:Lms;
+.field public final synthetic b:Lyo1;
 
 
 # direct methods
-.method public constructor <init>(Lsz0;Lms;Lkotlin/coroutines/Continuation;)V
+.method public synthetic constructor <init>(Lyo1;I)V
     .locals 0
 
-    iput-object p1, p0, Lrz0;->Y:Lsz0;
+    iput p2, p0, Lrz0;->a:I
 
-    iput-object p2, p0, Lrz0;->Z:Lms;
+    iput-object p1, p0, Lrz0;->b:Lyo1;
 
-    const/4 p1, 0x2
-
-    invoke-direct {p0, p1, p3}, Lqde;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final onParticipantStateChanged(Lru/ok/android/externcalls/sdk/participant/state/ParticipantStatesManager;Lru/ok/android/externcalls/sdk/participant/state/ParticipantStatesManager$StateChangedEvent;)V
+    .locals 3
 
-    check-cast p1, Lox3;
+    iget p1, p0, Lrz0;->a:I
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    iget-object p0, p0, Lrz0;->b:Lyo1;
 
-    invoke-virtual {p0, p1, p2}, Lrz0;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    packed-switch p1, :pswitch_data_0
 
-    move-result-object p0
+    check-cast p0, Ljza;
 
-    check-cast p0, Lrz0;
+    invoke-virtual {p0}, Ljza;->c()V
 
-    sget-object p1, Le5f;->a:Le5f;
+    return-void
 
-    invoke-virtual {p0, p1}, Lrz0;->o(Ljava/lang/Object;)Ljava/lang/Object;
+    :pswitch_0
+    check-cast p0, Ld01;
 
-    move-result-object p0
+    invoke-virtual {p0}, Ld01;->d()Ljz3;
 
-    return-object p0
-.end method
+    move-result-object p1
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 1
+    invoke-virtual {p1}, Ljz3;->a()Lru/ok/android/externcalls/sdk/Conversation;
 
-    new-instance p1, Lrz0;
+    move-result-object p1
 
-    iget-object v0, p0, Lrz0;->Y:Lsz0;
+    const/4 v0, 0x0
 
-    iget-object p0, p0, Lrz0;->Z:Lms;
+    if-eqz p1, :cond_0
 
-    invoke-direct {p1, v0, p0, p2}, Lrz0;-><init>(Lsz0;Lms;Lkotlin/coroutines/Continuation;)V
+    invoke-interface {p1}, Lru/ok/android/externcalls/sdk/Conversation;->getMe()Lru/ok/android/externcalls/sdk/ConversationParticipant;
 
-    return-object p1
-.end method
+    move-result-object p1
 
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 2
+    if-eqz p1, :cond_0
 
-    iget v0, p0, Lrz0;->X:I
+    invoke-virtual {p1}, Lru/ok/android/externcalls/sdk/ConversationParticipant;->getExternalId()Lru/ok/android/externcalls/sdk/id/ParticipantId;
 
-    const/4 v1, 0x1
-
-    if-eqz v0, :cond_1
-
-    if-ne v0, v1, :cond_0
-
-    invoke-static {p1}, Lsgg;->Z(Ljava/lang/Object;)V
+    move-result-object p1
 
     goto :goto_0
 
     :cond_0
-    new-instance p0, Ljava/lang/IllegalStateException;
+    move-object p1, v0
 
-    const-string p1, "call to \'resume\' before \'invoke\' with coroutine"
+    :goto_0
+    invoke-virtual {p2}, Lru/ok/android/externcalls/sdk/participant/state/ParticipantStatesManager$StateChangedEvent;->getChanges()Ljava/util/Collection;
 
-    invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    move-result-object p2
 
-    throw p0
+    invoke-interface {p2}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
+
+    move-result-object p2
 
     :cond_1
-    invoke-static {p1}, Lsgg;->Z(Ljava/lang/Object;)V
+    invoke-interface {p2}, Ljava/util/Iterator;->hasNext()Z
 
-    iget-object p1, p0, Lrz0;->Y:Lsz0;
+    move-result v1
 
-    iget-object p1, p1, Lsz0;->b:Lqo1;
+    if-eqz v1, :cond_2
 
-    iput v1, p0, Lrz0;->X:I
+    invoke-interface {p2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    iget-object v0, p0, Lrz0;->Z:Lms;
+    move-result-object v1
 
-    invoke-virtual {p1, v0, p0}, Lqo1;->d(Ljava/util/Set;Lqde;)Ljava/lang/Object;
+    move-object v2, v1
 
-    move-result-object p0
+    check-cast v2, Lru/ok/android/externcalls/sdk/participant/state/ParticipantStatesManager$ParticipantStateChange;
 
-    sget-object p1, Lpx3;->a:Lpx3;
+    invoke-virtual {v2}, Lru/ok/android/externcalls/sdk/participant/state/ParticipantStatesManager$ParticipantStateChange;->getParticipantId()Lru/ok/android/externcalls/sdk/id/ParticipantId;
 
-    if-ne p0, p1, :cond_2
+    move-result-object v2
 
-    return-object p1
+    invoke-static {v2, p1}, Lvyg;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_1
+
+    move-object v0, v1
 
     :cond_2
-    :goto_0
-    sget-object p0, Le5f;->a:Le5f;
+    check-cast v0, Lru/ok/android/externcalls/sdk/participant/state/ParticipantStatesManager$ParticipantStateChange;
 
-    return-object p0
+    if-eqz v0, :cond_3
+
+    iget-object p1, p0, Ld01;->x0:Ljava/util/concurrent/atomic/AtomicBoolean;
+
+    invoke-virtual {v0}, Lru/ok/android/externcalls/sdk/participant/state/ParticipantStatesManager$ParticipantStateChange;->isOn()Z
+
+    move-result p2
+
+    xor-int/lit8 p2, p2, 0x1
+
+    invoke-virtual {v0}, Lru/ok/android/externcalls/sdk/participant/state/ParticipantStatesManager$ParticipantStateChange;->isOn()Z
+
+    move-result v0
+
+    invoke-virtual {p1, p2, v0}, Ljava/util/concurrent/atomic/AtomicBoolean;->compareAndSet(ZZ)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_3
+
+    iget-object p0, p0, Ld01;->C0:Lnxd;
+
+    sget-object p1, Lra;->a:Lra;
+
+    invoke-virtual {p0, p1}, Lnxd;->h(Ljava/lang/Object;)Z
+
+    :cond_3
+    return-void
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

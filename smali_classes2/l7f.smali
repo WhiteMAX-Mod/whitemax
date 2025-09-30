@@ -1,27 +1,27 @@
 .class public final Ll7f;
-.super Lbu3;
+.super Ljx3;
 .source "SourceFile"
 
 
 # instance fields
-.field public X:Lru/ok/tamtam/upload/workers/UploadDraftMediaWorker;
+.field public X:Lvo9;
 
 .field public synthetic Y:Ljava/lang/Object;
 
-.field public final synthetic Z:Lru/ok/tamtam/upload/workers/UploadDraftMediaWorker;
+.field public final synthetic Z:Lv7f;
 
-.field public o:Lru/ok/tamtam/upload/workers/UploadDraftMediaWorker;
+.field public o:Lv7f;
 
-.field public o0:I
+.field public r0:I
 
 
 # direct methods
-.method public constructor <init>(Lru/ok/tamtam/upload/workers/UploadDraftMediaWorker;Lbu3;)V
+.method public constructor <init>(Lv7f;Ljx3;)V
     .locals 0
 
-    iput-object p1, p0, Ll7f;->Z:Lru/ok/tamtam/upload/workers/UploadDraftMediaWorker;
+    iput-object p1, p0, Ll7f;->Z:Lv7f;
 
-    invoke-direct {p0, p2}, Lbu3;-><init>(Lkotlin/coroutines/Continuation;)V
+    invoke-direct {p0, p2}, Ljx3;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
@@ -33,17 +33,17 @@
 
     iput-object p1, p0, Ll7f;->Y:Ljava/lang/Object;
 
-    iget p1, p0, Ll7f;->o0:I
+    iget p1, p0, Ll7f;->r0:I
 
     const/high16 v0, -0x80000000
 
     or-int/2addr p1, v0
 
-    iput p1, p0, Ll7f;->o0:I
+    iput p1, p0, Ll7f;->r0:I
 
-    iget-object p1, p0, Ll7f;->Z:Lru/ok/tamtam/upload/workers/UploadDraftMediaWorker;
+    iget-object p1, p0, Ll7f;->Z:Lv7f;
 
-    invoke-virtual {p1, p0}, Lru/ok/tamtam/upload/workers/UploadDraftMediaWorker;->doForegroundWork(Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    invoke-virtual {p1, p0}, Lv7f;->f(Ljx3;)Ljava/lang/Object;
 
     move-result-object p0
 

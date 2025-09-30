@@ -1,31 +1,25 @@
-.class public final Ltma;
+.class public abstract Ltma;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:I
+# static fields
+.field public static final a:I
 
-.field public final b:Lsma;
-
-.field public final c:J
-
-.field public final d:Lqma;
+.field public static final b:I
 
 
 # direct methods
-.method public constructor <init>(ILsma;JLqma;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    sget v0, Lucc;->Typography_Footnote:I
 
-    iput p1, p0, Ltma;->a:I
+    sput v0, Ltma;->a:I
 
-    iput-object p2, p0, Ltma;->b:Lsma;
+    sget v0, Lucc;->Typography_Title3:I
 
-    iput-wide p3, p0, Ltma;->c:J
-
-    iput-object p5, p0, Ltma;->d:Lqma;
+    sput v0, Ltma;->b:I
 
     return-void
 .end method

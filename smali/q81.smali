@@ -3,22 +3,22 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lv56;
+.implements Lzb6;
 
 
 # instance fields
 .field public final synthetic a:I
 
-.field public final synthetic b:Lema;
+.field public final synthetic b:Lone/me/calllist/ui/page/CallHistoryPageScreen;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lema;I)V
+.method public synthetic constructor <init>(Lone/me/calllist/ui/page/CallHistoryPageScreen;I)V
     .locals 0
 
     iput p2, p0, Lq81;->a:I
 
-    iput-object p1, p0, Lq81;->b:Lema;
+    iput-object p1, p0, Lq81;->b:Lone/me/calllist/ui/page/CallHistoryPageScreen;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -28,152 +28,150 @@
 
 # virtual methods
 .method public final invoke()Ljava/lang/Object;
-    .locals 2
+    .locals 4
 
     iget v0, p0, Lq81;->a:I
 
-    iget-object p0, p0, Lq81;->b:Lema;
+    const/4 v1, 0x0
+
+    iget-object p0, p0, Lq81;->b:Lone/me/calllist/ui/page/CallHistoryPageScreen;
 
     packed-switch v0, :pswitch_data_0
 
-    iget-object p0, p0, Lema;->a:Ljava/lang/Object;
+    sget-object v0, Lone/me/calllist/ui/page/CallHistoryPageScreen;->t0:Lr52;
 
-    check-cast p0, Landroid/content/Context;
+    invoke-virtual {p0}, Lxx3;->getRouter()Lrzc;
 
-    sget v0, Lnrb;->ic_link_16:I
+    move-result-object p0
 
-    sget v1, Lmda;->a:I
-
-    invoke-static {p0, v0}, Let3;->b(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
-
-    move-result-object v0
-
-    new-instance v1, Lqpe;
-
-    invoke-direct {v1, v0, p0}, Lqpe;-><init>(Landroid/graphics/drawable/Drawable;Landroid/content/Context;)V
-
-    return-object v1
+    return-object p0
 
     :pswitch_0
-    iget-object p0, p0, Lema;->a:Ljava/lang/Object;
+    sget-object v0, Lone/me/calllist/ui/page/CallHistoryPageScreen;->t0:Lr52;
 
-    check-cast p0, Landroid/content/Context;
+    new-instance v0, Lo81;
 
-    sget v0, Lnrb;->ic_outgoing_audio_call_13:I
+    new-instance v1, Lsk6;
 
-    sget v1, Lmda;->a:I
+    const/4 v2, 0x6
 
-    invoke-static {p0, v0}, Let3;->b(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
+    invoke-direct {v1, v2, p0}, Lsk6;-><init>(ILjava/lang/Object;)V
 
-    move-result-object v0
+    sget-object p0, Liad;->a:Liad;
 
-    new-instance v1, Lqpe;
+    invoke-virtual {p0}, Liad;->p()Lkha;
 
-    invoke-direct {v1, v0, p0}, Lqpe;-><init>(Landroid/graphics/drawable/Drawable;Landroid/content/Context;)V
+    move-result-object p0
 
-    return-object v1
+    invoke-virtual {p0}, Lkha;->c()Ljava/util/concurrent/ExecutorService;
+
+    move-result-object p0
+
+    invoke-direct {v0, v1, p0}, Lo81;-><init>(Lsk6;Ljava/util/concurrent/ExecutorService;)V
+
+    return-object v0
 
     :pswitch_1
-    iget-object p0, p0, Lema;->a:Ljava/lang/Object;
+    sget-object v0, Lone/me/calllist/ui/page/CallHistoryPageScreen;->t0:Lr52;
 
-    check-cast p0, Landroid/content/Context;
-
-    sget v0, Lnrb;->ic_outgoing_video_call_15:I
-
-    sget v1, Lmda;->a:I
-
-    invoke-static {p0, v0}, Let3;->b(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
+    invoke-virtual {p0}, Lone/me/calllist/ui/page/CallHistoryPageScreen;->y0()Lg91;
 
     move-result-object v0
 
-    new-instance v1, Lqpe;
+    sget-object v2, Lg91;->c:Lg91;
 
-    invoke-direct {v1, v0, p0}, Lqpe;-><init>(Landroid/graphics/drawable/Drawable;Landroid/content/Context;)V
+    if-ne v0, v2, :cond_0
 
-    return-object v1
+    new-instance v0, Ldha;
+
+    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
+
+    move-result-object p0
+
+    invoke-direct {v0, p0, v1}, Ldha;-><init>(Landroid/content/Context;I)V
+
+    const/16 p0, 0x8
+
+    invoke-virtual {v0, p0}, Ldha;->setVisibility(I)V
+
+    sget p0, Lq5c;->call_history_page_empty:I
+
+    invoke-virtual {v0, p0}, Landroidx/constraintlayout/widget/ConstraintLayout;->setId(I)V
+
+    sget p0, Lq0d;->g0:I
+
+    invoke-virtual {v0, p0}, Ldha;->setIcon(I)V
+
+    sget p0, Lhac;->call_history_missed_calls_empty_state_title:I
+
+    new-instance v1, Lp2f;
+
+    invoke-direct {v1, p0}, Lp2f;-><init>(I)V
+
+    invoke-virtual {v0, v1}, Ldha;->setTitle(Lu2f;)V
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    :goto_0
+    return-object v0
 
     :pswitch_2
-    iget-object p0, p0, Lema;->a:Ljava/lang/Object;
+    sget-object v0, Lone/me/calllist/ui/page/CallHistoryPageScreen;->t0:Lr52;
 
-    check-cast p0, Landroid/content/Context;
+    new-instance v0, Lih1;
 
-    sget v0, Lnrb;->ic_incoming_audio_call_13:I
+    new-instance v2, Lq81;
 
-    sget v1, Lmda;->a:I
+    const/4 v3, 0x4
 
-    invoke-static {p0, v0}, Let3;->b(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
+    invoke-direct {v2, p0, v3}, Lq81;-><init>(Lone/me/calllist/ui/page/CallHistoryPageScreen;I)V
 
-    move-result-object v0
+    new-instance v3, Lzte;
 
-    new-instance v1, Lqpe;
+    invoke-direct {v3, v2}, Lzte;-><init>(Lzb6;)V
 
-    invoke-direct {v1, v0, p0}, Lqpe;-><init>(Landroid/graphics/drawable/Drawable;Landroid/content/Context;)V
+    new-instance v2, Litg;
 
-    return-object v1
+    invoke-direct {v2, p0, v1}, Litg;-><init>(Lone/me/sdk/arch/Widget;I)V
+
+    invoke-direct {v0, v3, v2}, Lih1;-><init>(Lzte;Litg;)V
+
+    return-object v0
 
     :pswitch_3
-    iget-object p0, p0, Lema;->a:Ljava/lang/Object;
+    sget-object v0, Lone/me/calllist/ui/page/CallHistoryPageScreen;->t0:Lr52;
 
-    check-cast p0, Landroid/content/Context;
+    new-instance v0, Lw81;
 
-    sget v0, Lnrb;->ic_incoming_video_call_15:I
+    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->requireActivity()Lkm;
 
-    sget v1, Lmda;->a:I
+    move-result-object v1
 
-    invoke-static {p0, v0}, Let3;->b(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
+    invoke-virtual {v1}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
 
-    move-result-object v0
+    move-result-object v1
 
-    new-instance v1, Lqpe;
+    invoke-virtual {p0}, Lone/me/calllist/ui/page/CallHistoryPageScreen;->y0()Lg91;
 
-    invoke-direct {v1, v0, p0}, Lqpe;-><init>(Landroid/graphics/drawable/Drawable;Landroid/content/Context;)V
+    move-result-object v2
 
-    return-object v1
+    iget-object p0, p0, Lone/me/calllist/ui/page/CallHistoryPageScreen;->c:Ljava/lang/Object;
 
-    :pswitch_4
-    iget-object p0, p0, Lema;->a:Ljava/lang/Object;
+    invoke-interface {p0}, Lcl7;->getValue()Ljava/lang/Object;
 
-    check-cast p0, Landroid/content/Context;
+    move-result-object p0
 
-    sget v0, Lnrb;->ic_reject_audio_call_12:I
+    check-cast p0, Lih1;
 
-    sget v1, Lmda;->a:I
+    invoke-direct {v0, v1, v2, p0}, Lw81;-><init>(Landroid/content/Context;Lg91;Lih1;)V
 
-    invoke-static {p0, v0}, Let3;->b(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
-
-    move-result-object v0
-
-    new-instance v1, Lqpe;
-
-    invoke-direct {v1, v0, p0}, Lqpe;-><init>(Landroid/graphics/drawable/Drawable;Landroid/content/Context;)V
-
-    return-object v1
-
-    :pswitch_5
-    iget-object p0, p0, Lema;->a:Ljava/lang/Object;
-
-    check-cast p0, Landroid/content/Context;
-
-    sget v0, Lnrb;->ic_reject_video_call_15:I
-
-    sget v1, Lmda;->a:I
-
-    invoke-static {p0, v0}, Let3;->b(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
-
-    move-result-object v0
-
-    new-instance v1, Lqpe;
-
-    invoke-direct {v1, v0, p0}, Lqpe;-><init>(Landroid/graphics/drawable/Drawable;Landroid/content/Context;)V
-
-    return-object v1
-
-    nop
+    return-object v0
 
     :pswitch_data_0
     .packed-switch 0x0
-        :pswitch_5
-        :pswitch_4
         :pswitch_3
         :pswitch_2
         :pswitch_1

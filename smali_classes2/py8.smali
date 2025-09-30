@@ -1,245 +1,80 @@
 .class public final Lpy8;
-.super Ljava/lang/Object;
+.super Lx2;
 .source "SourceFile"
-
-# interfaces
-.implements Lbn5;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final synthetic c:I
 
-.field public final synthetic b:Lbn5;
-
-.field public final synthetic c:Luy8;
+.field public final synthetic o:Lqy8;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lbn5;Luy8;I)V
+.method public synthetic constructor <init>(Ljava/lang/Object;Lqy8;I)V
     .locals 0
 
-    iput p3, p0, Lpy8;->a:I
+    iput p3, p0, Lpy8;->c:I
 
-    iput-object p1, p0, Lpy8;->b:Lbn5;
+    iput-object p2, p0, Lpy8;->o:Lqy8;
 
-    iput-object p2, p0, Lpy8;->c:Luy8;
+    const/16 p2, 0x9
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p2, p1}, Lx2;-><init>(ILjava/lang/Object;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-    .locals 12
+.method public final x0(Ljava/lang/Object;Ljava/lang/Object;)V
+    .locals 1
 
-    iget v0, p0, Lpy8;->a:I
-
-    sget-object v1, Le5f;->a:Le5f;
-
-    const/4 v2, 0x0
-
-    iget-object v3, p0, Lpy8;->c:Luy8;
-
-    iget-object v4, p0, Lpy8;->b:Lbn5;
-
-    const-string v5, "call to \'resume\' before \'invoke\' with coroutine"
-
-    sget-object v6, Lpx3;->a:Lpx3;
-
-    const/high16 v7, -0x80000000
-
-    const/4 v8, 0x1
-
-    const/4 v9, 0x2
+    iget v0, p0, Lpy8;->c:I
 
     packed-switch v0, :pswitch_data_0
 
-    instance-of v0, p2, Lry8;
+    invoke-static {p1, p2}, Lvyg;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    if-eqz v0, :cond_0
+    move-result v0
 
-    move-object v0, p2
+    if-nez v0, :cond_0
 
-    check-cast v0, Lry8;
+    check-cast p2, [I
 
-    iget v10, v0, Lry8;->X:I
+    check-cast p1, [I
 
-    and-int v11, v10, v7
+    iget-object p0, p0, Lpy8;->o:Lqy8;
 
-    if-eqz v11, :cond_0
+    invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->getBounds()Landroid/graphics/Rect;
 
-    sub-int/2addr v10, v7
+    move-result-object p1
 
-    iput v10, v0, Lry8;->X:I
-
-    goto :goto_0
+    invoke-virtual {p0, p2, p1}, Lqy8;->e([ILandroid/graphics/Rect;)V
 
     :cond_0
-    new-instance v0, Lry8;
-
-    invoke-direct {v0, p0, p2}, Lry8;-><init>(Lpy8;Lkotlin/coroutines/Continuation;)V
-
-    :goto_0
-    iget-object p0, v0, Lry8;->o:Ljava/lang/Object;
-
-    iget p2, v0, Lry8;->X:I
-
-    if-eqz p2, :cond_3
-
-    if-eq p2, v8, :cond_2
-
-    if-ne p2, v9, :cond_1
-
-    invoke-static {p0}, Lsgg;->Z(Ljava/lang/Object;)V
-
-    goto :goto_3
-
-    :cond_1
-    new-instance p0, Ljava/lang/IllegalStateException;
-
-    invoke-direct {p0, v5}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p0
-
-    :cond_2
-    iget-object v4, v0, Lry8;->Y:Lbn5;
-
-    invoke-static {p0}, Lsgg;->Z(Ljava/lang/Object;)V
-
-    goto :goto_1
-
-    :cond_3
-    invoke-static {p0}, Lsgg;->Z(Ljava/lang/Object;)V
-
-    check-cast p1, Lxx8;
-
-    iput-object v4, v0, Lry8;->Y:Lbn5;
-
-    iput v8, v0, Lry8;->X:I
-
-    invoke-static {v3, p1, v0}, Luy8;->r(Luy8;Lxx8;Lbu3;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    if-ne p0, v6, :cond_4
-
-    goto :goto_2
-
-    :cond_4
-    :goto_1
-    iput-object v2, v0, Lry8;->Y:Lbn5;
-
-    iput v9, v0, Lry8;->X:I
-
-    invoke-interface {v4, p0, v0}, Lbn5;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    if-ne p0, v6, :cond_5
-
-    :goto_2
-    move-object v1, v6
-
-    :cond_5
-    :goto_3
-    return-object v1
+    return-void
 
     :pswitch_0
-    instance-of v0, p2, Loy8;
+    invoke-static {p1, p2}, Lvyg;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    if-eqz v0, :cond_6
+    move-result v0
 
-    move-object v0, p2
+    if-nez v0, :cond_1
 
-    check-cast v0, Loy8;
+    check-cast p2, [I
 
-    iget v10, v0, Loy8;->X:I
+    check-cast p1, [I
 
-    and-int v11, v10, v7
+    iget-object p0, p0, Lpy8;->o:Lqy8;
 
-    if-eqz v11, :cond_6
+    invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->getBounds()Landroid/graphics/Rect;
 
-    sub-int/2addr v10, v7
+    move-result-object p1
 
-    iput v10, v0, Loy8;->X:I
+    invoke-virtual {p0, p2, p1}, Lqy8;->d([ILandroid/graphics/Rect;)V
 
-    goto :goto_4
-
-    :cond_6
-    new-instance v0, Loy8;
-
-    invoke-direct {v0, p0, p2}, Loy8;-><init>(Lpy8;Lkotlin/coroutines/Continuation;)V
-
-    :goto_4
-    iget-object p0, v0, Loy8;->o:Ljava/lang/Object;
-
-    iget p2, v0, Loy8;->X:I
-
-    if-eqz p2, :cond_9
-
-    if-eq p2, v8, :cond_8
-
-    if-ne p2, v9, :cond_7
-
-    invoke-static {p0}, Lsgg;->Z(Ljava/lang/Object;)V
-
-    goto :goto_7
-
-    :cond_7
-    new-instance p0, Ljava/lang/IllegalStateException;
-
-    invoke-direct {p0, v5}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p0
-
-    :cond_8
-    iget-object v4, v0, Loy8;->Y:Lbn5;
-
-    invoke-static {p0}, Lsgg;->Z(Ljava/lang/Object;)V
-
-    goto :goto_5
-
-    :cond_9
-    invoke-static {p0}, Lsgg;->Z(Ljava/lang/Object;)V
-
-    check-cast p1, Ljava/lang/Long;
-
-    iput-object v4, v0, Loy8;->Y:Lbn5;
-
-    iput v8, v0, Loy8;->X:I
-
-    sget-object p0, Luy8;->R0:[Lbc7;
-
-    const/4 p0, 0x0
-
-    invoke-virtual {v3, p1, p0, v0}, Luy8;->x(Ljava/lang/Long;ZLbu3;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    if-ne p0, v6, :cond_a
-
-    goto :goto_6
-
-    :cond_a
-    :goto_5
-    iput-object v2, v0, Loy8;->Y:Lbn5;
-
-    iput v9, v0, Loy8;->X:I
-
-    invoke-interface {v4, p0, v0}, Lbn5;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    if-ne p0, v6, :cond_b
-
-    :goto_6
-    move-object v1, v6
-
-    :cond_b
-    :goto_7
-    return-object v1
+    :cond_1
+    return-void
 
     nop
 

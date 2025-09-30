@@ -4,119 +4,104 @@
 
 
 # instance fields
-.field public a:Ls10;
+.field public a:J
 
-.field public b:Lk10;
+.field public b:I
 
-.field public c:Ld10;
+.field public c:I
 
-.field public d:Lv10;
+.field public d:Ljava/lang/String;
 
-.field public e:Lw00;
+.field public e:J
 
-.field public f:Lr10;
+.field public f:Ljava/lang/String;
 
-.field public g:Lo10;
+.field public g:Ljava/lang/String;
 
-.field public h:Lu00;
+.field public h:Ljava/lang/String;
 
-.field public i:Lp10;
+.field public i:Ljava/util/List;
 
-.field public j:J
+.field public j:I
 
-.field public k:F
+.field public k:J
 
 .field public l:Ljava/lang/String;
 
-.field public m:Ljava/lang/String;
+.field public m:Z
 
-.field public n:Z
+.field public n:I
 
-.field public o:J
-
-.field public p:J
-
-.field public q:Lz00;
-
-.field public r:Lf10;
-
-.field public s:La10;
-
-.field public t:Ll10;
-
-.field public u:J
-
-.field public v:Lh10;
-
-.field public w:Lm6g;
-
-.field public x:Lm10;
-
-.field public y:Z
-
-.field public z:Z
+.field public o:Ljava/lang/String;
 
 
 # virtual methods
-.method public final a()Lw10;
-    .locals 1
+.method public a()Ly00;
+    .locals 2
 
-    iget-object v0, p0, Lx00;->a:Ls10;
+    iget-object v0, p0, Lx00;->i:Ljava/util/List;
 
     if-nez v0, :cond_0
 
-    sget-object v0, Ls10;->a:Ls10;
+    sget-object v0, Ljava/util/Collections;->EMPTY_LIST:Ljava/util/List;
 
-    iput-object v0, p0, Lx00;->a:Ls10;
+    iput-object v0, p0, Lx00;->i:Ljava/util/List;
 
     :cond_0
-    iget-object v0, p0, Lx00;->i:Lp10;
+    iget v0, p0, Lx00;->j:I
+
+    const/4 v1, 0x1
 
     if-nez v0, :cond_1
 
-    sget-object v0, Lp10;->a:Lp10;
-
-    iput-object v0, p0, Lx00;->i:Lp10;
+    iput v1, p0, Lx00;->j:I
 
     :cond_1
-    iget-object v0, p0, Lx00;->x:Lm10;
+    iget v0, p0, Lx00;->n:I
 
     if-nez v0, :cond_2
 
-    sget-object v0, Lm10;->a:Lm10;
-
-    iput-object v0, p0, Lx00;->x:Lm10;
+    iput v1, p0, Lx00;->n:I
 
     :cond_2
-    new-instance v0, Lw10;
+    new-instance v0, Ly00;
 
-    invoke-direct {v0, p0}, Lw10;-><init>(Lx00;)V
+    invoke-direct {v0, p0}, Ly00;-><init>(Lx00;)V
 
     return-object v0
 .end method
 
-.method public final b()Lf10;
-    .locals 0
+.method public b()Llee;
+    .locals 2
 
-    iget-object p0, p0, Lx00;->r:Lf10;
+    iget-object v0, p0, Lx00;->i:Ljava/util/List;
 
-    if-nez p0, :cond_0
+    if-nez v0, :cond_0
 
-    sget-object p0, Lf10;->f:Lf10;
+    sget-object v0, Ljava/util/Collections;->EMPTY_LIST:Ljava/util/List;
 
-    :cond_0
-    return-object p0
-.end method
-
-.method public final c()Lv10;
-    .locals 0
-
-    iget-object p0, p0, Lx00;->d:Lv10;
-
-    if-nez p0, :cond_0
-
-    sget-object p0, Lv10;->r:Lv10;
+    iput-object v0, p0, Lx00;->i:Ljava/util/List;
 
     :cond_0
-    return-object p0
+    iget v0, p0, Lx00;->j:I
+
+    const/4 v1, 0x1
+
+    if-nez v0, :cond_1
+
+    iput v1, p0, Lx00;->j:I
+
+    :cond_1
+    iget v0, p0, Lx00;->n:I
+
+    if-nez v0, :cond_2
+
+    iput v1, p0, Lx00;->n:I
+
+    :cond_2
+    new-instance v0, Llee;
+
+    invoke-direct {v0, p0}, Llee;-><init>(Lx00;)V
+
+    return-object v0
 .end method

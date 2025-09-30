@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lcb1;
+.implements Lkb1;
 
 
 # static fields
@@ -25,41 +25,40 @@
 
 
 # virtual methods
-.method public final getItemId()J
-    .locals 2
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 1
 
-    const-wide v0, 0x7ffffffffffffffeL
+    const/4 v0, 0x1
 
-    return-wide v0
-.end method
+    if-ne p0, p1, :cond_0
 
-.method public final h(Lol7;)Z
-    .locals 2
-
-    const-wide v0, 0x7ffffffffffffffeL
-
-    invoke-interface {p1}, Lol7;->getItemId()J
-
-    move-result-wide p0
-
-    cmp-long p0, v0, p0
-
-    if-nez p0, :cond_0
-
-    const/4 p0, 0x1
-
-    return p0
+    return v0
 
     :cond_0
+    instance-of p0, p1, Lbb1;
+
+    if-nez p0, :cond_1
+
     const/4 p0, 0x0
 
     return p0
+
+    :cond_1
+    return v0
 .end method
 
-.method public final m()I
+.method public final hashCode()I
     .locals 0
 
-    const/4 p0, 0x4
+    const p0, -0x195c98c1
 
     return p0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 0
+
+    const-string p0, "AcceptCall"
+
+    return-object p0
 .end method

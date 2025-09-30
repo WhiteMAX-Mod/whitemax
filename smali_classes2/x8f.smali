@@ -1,125 +1,79 @@
-.class public final Lx8f;
+.class public final synthetic Lx8f;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/util/concurrent/Callable;
+.implements Lzb6;
 
 
 # instance fields
-.field public final synthetic a:Ljava/lang/String;
+.field public final synthetic a:I
 
-.field public final synthetic b:I
-
-.field public final synthetic c:J
-
-.field public final synthetic o:Ly8f;
+.field public final synthetic b:Lzb6;
 
 
 # direct methods
-.method public constructor <init>(Ly8f;Ljava/lang/String;IJ)V
+.method public synthetic constructor <init>(ILzb6;)V
     .locals 0
 
+    iput p1, p0, Lx8f;->a:I
+
+    iput-object p2, p0, Lx8f;->b:Lzb6;
+
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lx8f;->o:Ly8f;
-
-    iput-object p2, p0, Lx8f;->a:Ljava/lang/String;
-
-    iput p3, p0, Lx8f;->b:I
-
-    iput-wide p4, p0, Lx8f;->c:J
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final call()Ljava/lang/Object;
-    .locals 6
+.method public final invoke()Ljava/lang/Object;
+    .locals 1
 
-    iget-object v0, p0, Lx8f;->o:Ly8f;
+    iget v0, p0, Lx8f;->a:I
 
-    iget-object v1, v0, Ly8f;->c:Lbjc;
+    iget-object p0, p0, Lx8f;->b:Lzb6;
 
-    iget-object v0, v0, Ly8f;->a:Lkjc;
+    packed-switch v0, :pswitch_data_0
 
-    invoke-virtual {v1}, Lv2;->f()Lmce;
+    invoke-interface {p0}, Lzb6;->invoke()Ljava/lang/Object;
 
-    move-result-object v2
+    move-result-object p0
 
-    const/4 v3, 0x1
+    check-cast p0, Lera;
 
-    iget-object v4, p0, Lx8f;->a:Ljava/lang/String;
+    invoke-interface {p0}, Lera;->getIcon()Lqy6;
 
-    if-nez v4, :cond_0
+    move-result-object p0
 
-    invoke-interface {v2, v3}, Lkce;->Z(I)V
-
-    goto :goto_0
-
-    :cond_0
-    invoke-interface {v2, v3, v4}, Lkce;->f(ILjava/lang/String;)V
+    iget p0, p0, Lqy6;->f:I
 
     :goto_0
-    iget v3, p0, Lx8f;->b:I
+    invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    invoke-static {v3}, Lzt1;->s(I)I
-
-    move-result v3
-
-    int-to-long v3, v3
-
-    const/4 v5, 0x2
-
-    invoke-interface {v2, v5, v3, v4}, Lkce;->k(IJ)V
-
-    const/4 v3, 0x3
-
-    iget-wide v4, p0, Lx8f;->c:J
-
-    invoke-interface {v2, v3, v4, v5}, Lkce;->k(IJ)V
-
-    :try_start_0
-    invoke-virtual {v0}, Lkjc;->c()V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    :try_start_1
-    invoke-interface {v2}, Lmce;->C()I
-
-    invoke-virtual {v0}, Lkjc;->q()V
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_1
-
-    :try_start_2
-    invoke-virtual {v0}, Lkjc;->k()V
-    :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_0
-
-    invoke-virtual {v1, v2}, Lv2;->u(Lmce;)V
-
-    const/4 p0, 0x0
+    move-result-object p0
 
     return-object p0
 
-    :catchall_0
-    move-exception p0
+    :pswitch_0
+    invoke-interface {p0}, Lzb6;->invoke()Ljava/lang/Object;
 
-    goto :goto_1
+    move-result-object p0
 
-    :catchall_1
-    move-exception p0
+    check-cast p0, Lera;
 
-    :try_start_3
-    invoke-virtual {v0}, Lkjc;->k()V
+    invoke-interface {p0}, Lera;->b()Lie0;
 
-    throw p0
-    :try_end_3
-    .catchall {:try_start_3 .. :try_end_3} :catchall_0
+    move-result-object p0
 
-    :goto_1
-    invoke-virtual {v1, v2}, Lv2;->u(Lmce;)V
+    iget p0, p0, Lie0;->e:I
 
-    throw p0
+    goto :goto_0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

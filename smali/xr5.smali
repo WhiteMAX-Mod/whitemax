@@ -1,79 +1,92 @@
 .class public final Lxr5;
-.super Llq5;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Landroid/os/Parcelable;
+
+
+# static fields
+.field public static final CREATOR:Landroid/os/Parcelable$Creator;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroid/os/Parcelable$Creator<",
+            "Lxr5;",
+            ">;"
+        }
+    .end annotation
+.end field
 
 
 # instance fields
-.field public final b:Lgsc;
+.field public a:I
 
-.field public final c:J
+.field public b:I
 
 
 # direct methods
-.method public constructor <init>(JLgsc;)V
-    .locals 1
+.method static constructor <clinit>()V
+    .locals 2
 
-    sget-object v0, Ljava/util/concurrent/TimeUnit;->SECONDS:Ljava/util/concurrent/TimeUnit;
+    new-instance v0, Li84;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/16 v1, 0xe
 
-    iput-wide p1, p0, Lxr5;->c:J
+    invoke-direct {v0, v1}, Li84;-><init>(I)V
 
-    iput-object p3, p0, Lxr5;->b:Lgsc;
+    sput-object v0, Lxr5;->CREATOR:Landroid/os/Parcelable$Creator;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final f(Lvr5;)V
-    .locals 3
+.method public final describeContents()I
+    .locals 0
 
-    new-instance v0, Lwr5;
+    const/4 p0, 0x0
 
-    invoke-direct {v0, p1}, Lwr5;-><init>(Lj9e;)V
+    return p0
+.end method
 
-    invoke-interface {p1, v0}, Lj9e;->d(Ll9e;)V
+.method public final toString()Ljava/lang/String;
+    .locals 2
 
-    iget-wide v1, p0, Lxr5;->c:J
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    sget-object p1, Ljava/util/concurrent/TimeUnit;->SECONDS:Ljava/util/concurrent/TimeUnit;
+    const-string v1, "SavedState{mAnchorPosition="
 
-    iget-object p0, p0, Lxr5;->b:Lgsc;
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {p0, v0, v1, v2, p1}, Lgsc;->c(Ljava/lang/Runnable;JLjava/util/concurrent/TimeUnit;)Lam4;
+    iget v1, p0, Lxr5;->a:I
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v1, ", mAnchorOffset="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget p0, p0, Lxr5;->b:I
+
+    const/16 v1, 0x7d
+
+    invoke-static {v0, p0, v1}, Lmw1;->i(Ljava/lang/StringBuilder;IC)Ljava/lang/String;
 
     move-result-object p0
 
-    :cond_0
-    const/4 p1, 0x0
+    return-object p0
+.end method
 
-    invoke-virtual {v0, p1, p0}, Ljava/util/concurrent/atomic/AtomicReference;->compareAndSet(Ljava/lang/Object;Ljava/lang/Object;)Z
+.method public final writeToParcel(Landroid/os/Parcel;I)V
+    .locals 0
 
-    move-result p1
+    iget p2, p0, Lxr5;->a:I
 
-    if-eqz p1, :cond_1
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
 
-    goto :goto_0
+    iget p0, p0, Lxr5;->b:I
 
-    :cond_1
-    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
+    invoke-virtual {p1, p0}, Landroid/os/Parcel;->writeInt(I)V
 
-    move-result-object p1
-
-    if-eqz p1, :cond_0
-
-    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
-
-    move-result-object p1
-
-    sget-object v0, Lem4;->a:Lem4;
-
-    if-ne p1, v0, :cond_2
-
-    invoke-interface {p0}, Lam4;->f()V
-
-    :cond_2
-    :goto_0
     return-void
 .end method

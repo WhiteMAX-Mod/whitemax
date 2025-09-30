@@ -1,77 +1,101 @@
-.class public final Lg4g;
+.class public final synthetic Lg4g;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements La4g;
+.implements Lpm3;
 
 
 # instance fields
-.field public final synthetic a:Lone/me/webapp/settings/WebAppsSettingScreen;
+.field public final synthetic a:I
+
+.field public final synthetic b:Lru/ok/messages/video/widgets/VideoPlayerSeekBarPreview;
 
 
 # direct methods
-.method public constructor <init>(Lone/me/webapp/settings/WebAppsSettingScreen;)V
+.method public synthetic constructor <init>(Lru/ok/messages/video/widgets/VideoPlayerSeekBarPreview;I)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput p2, p0, Lg4g;->a:I
 
-    iput-object p1, p0, Lg4g;->a:Lone/me/webapp/settings/WebAppsSettingScreen;
+    iput-object p1, p0, Lg4g;->b:Lru/ok/messages/video/widgets/VideoPlayerSeekBarPreview;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Lz3g;)V
-    .locals 1
+.method public final accept(Ljava/lang/Object;)V
+    .locals 4
 
-    sget-object v0, Lone/me/webapp/settings/WebAppsSettingScreen;->X:[Lbc7;
+    iget v0, p0, Lg4g;->a:I
 
-    iget-object p0, p0, Lg4g;->a:Lone/me/webapp/settings/WebAppsSettingScreen;
+    iget-object p0, p0, Lg4g;->b:Lru/ok/messages/video/widgets/VideoPlayerSeekBarPreview;
 
-    iget-object p0, p0, Lone/me/webapp/settings/WebAppsSettingScreen;->b:Lje7;
+    packed-switch v0, :pswitch_data_0
 
-    invoke-interface {p0}, Lje7;->getValue()Ljava/lang/Object;
+    check-cast p1, Landroid/graphics/Bitmap;
 
-    move-result-object p0
+    sget v0, Lru/ok/messages/video/widgets/VideoPlayerSeekBarPreview;->D0:I
 
-    check-cast p0, Lk4g;
+    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+
+    move-result-wide v0
+
+    iput-wide v0, p0, Lru/ok/messages/video/widgets/VideoPlayerSeekBarPreview;->A0:J
+
+    iget-object v0, p0, Lru/ok/messages/video/widgets/VideoPlayerSeekBarPreview;->t0:Lok7;
+
+    invoke-static {v0}, Ls1d;->b(Loq4;)V
+
+    iget-object p0, p0, Lru/ok/messages/video/widgets/VideoPlayerSeekBarPreview;->c:Lru/ok/messages/video/widgets/VideoFramePreview;
+
+    iget-object v0, p0, Lru/ok/messages/video/widgets/VideoFramePreview;->r0:Landroidx/appcompat/widget/AppCompatImageView;
+
+    invoke-virtual {v0, p1}, Landroidx/appcompat/widget/AppCompatImageView;->setImageBitmap(Landroid/graphics/Bitmap;)V
+
+    const/4 p1, 0x0
+
+    invoke-virtual {p0, p1}, Lru/ok/messages/video/widgets/VideoFramePreview;->a(Z)V
+
+    return-void
+
+    :pswitch_0
+    check-cast p1, Ljava/lang/Long;
+
+    sget p1, Lru/ok/messages/video/widgets/VideoPlayerSeekBarPreview;->D0:I
 
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    instance-of v0, p1, Lx3g;
+    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
-    if-nez v0, :cond_2
+    move-result-wide v0
 
-    instance-of v0, p1, Lw3g;
+    iget-wide v2, p0, Lru/ok/messages/video/widgets/VideoPlayerSeekBarPreview;->A0:J
 
-    if-eqz v0, :cond_0
+    sub-long/2addr v0, v2
 
-    return-void
+    const-wide/16 v2, 0x3e8
+
+    cmp-long p1, v0, v2
+
+    if-lez p1, :cond_0
+
+    iget-object p0, p0, Lru/ok/messages/video/widgets/VideoPlayerSeekBarPreview;->c:Lru/ok/messages/video/widgets/VideoFramePreview;
+
+    const/4 p1, 0x1
+
+    invoke-virtual {p0, p1}, Lru/ok/messages/video/widgets/VideoFramePreview;->a(Z)V
 
     :cond_0
-    instance-of v0, p1, Ly3g;
-
-    if-eqz v0, :cond_1
-
-    iget-object p0, p0, Lk4g;->Z:Lj35;
-
-    check-cast p1, Ly3g;
-
-    iget-object p1, p1, Ly3g;->b:Lp64;
-
-    invoke-static {p0, p1}, Ljof;->o(Lj35;Ljava/lang/Object;)V
-
     return-void
 
-    :cond_1
-    new-instance p0, Lkotlin/NoWhenBranchMatchedException;
+    nop
 
-    invoke-direct {p0}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
-
-    throw p0
-
-    :cond_2
-    return-void
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

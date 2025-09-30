@@ -1,143 +1,21 @@
-.class public final Llu1;
+.class public interface abstract Llu1;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lru1;
-
-
-# instance fields
-.field public final a:Lqt1;
-
-.field public final b:Ljq0;
-
-.field public final c:I
-
-.field public d:Z
-
 
 # direct methods
-.method public constructor <init>(Lqt1;ILjq0;)V
-    .locals 1
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    const/4 v0, 0x0
-
-    iput-boolean v0, p0, Llu1;->d:Z
-
-    iput-object p1, p0, Llu1;->a:Lqt1;
-
-    iput p2, p0, Llu1;->c:I
-
-    iput-object p3, p0, Llu1;->b:Ljq0;
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final a(Landroid/hardware/camera2/TotalCaptureResult;)Lbm7;
-    .locals 3
-
-    iget v0, p0, Llu1;->c:I
-
-    invoke-static {v0, p1}, Lg40;->h(ILandroid/hardware/camera2/TotalCaptureResult;)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_0
-
-    const/4 p1, 0x1
-
-    iput-boolean p1, p0, Llu1;->d:Z
-
-    new-instance p1, Lbmc;
-
-    const/16 v0, 0x18
-
-    invoke-direct {p1, v0, p0}, Lbmc;-><init>(ILjava/lang/Object;)V
-
-    invoke-static {p1}, Lxja;->q(Ljq1;)Llq1;
-
-    move-result-object p0
-
-    invoke-static {p0}, Lm76;->a(Lbm7;)Lm76;
-
-    move-result-object p0
-
-    new-instance p1, Lku1;
-
-    const/4 v0, 0x0
-
-    invoke-direct {p1, v0}, Lku1;-><init>(I)V
-
-    invoke-static {}, Lsgg;->n()Lpk4;
-
-    move-result-object v0
-
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    new-instance v1, Lykc;
-
-    const/16 v2, 0x12
-
-    invoke-direct {v1, v2, p1}, Lykc;-><init>(ILjava/lang/Object;)V
-
-    invoke-static {p0, v1, v0}, Lu7;->X(Lbm7;Lmu;Ljava/util/concurrent/Executor;)Lg12;
-
-    move-result-object p0
-
-    return-object p0
-
-    :cond_0
-    sget-object p0, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
-
-    invoke-static {p0}, Lu7;->z(Ljava/lang/Object;)Lcw6;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public final b()Z
+.method public static a(Llu1;)Lru/ok/android/externcalls/sdk/ConversationFactory;
     .locals 0
 
-    iget p0, p0, Llu1;->c:I
+    check-cast p0, Lb71;
 
-    if-nez p0, :cond_0
+    iget-object p0, p0, Lb71;->b:Lzte;
 
-    const/4 p0, 0x1
+    invoke-virtual {p0}, Lzte;->getValue()Ljava/lang/Object;
 
-    return p0
+    move-result-object p0
 
-    :cond_0
-    const/4 p0, 0x0
+    check-cast p0, Lru/ok/android/externcalls/sdk/ConversationFactory;
 
-    return p0
-.end method
-
-.method public final c()V
-    .locals 3
-
-    iget-boolean v0, p0, Llu1;->d:Z
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Llu1;->a:Lqt1;
-
-    iget-object v0, v0, Lqt1;->h:Lks5;
-
-    const/4 v1, 0x1
-
-    const/4 v2, 0x0
-
-    invoke-virtual {v0, v2, v1}, Lks5;->a(ZZ)V
-
-    iget-object p0, p0, Llu1;->b:Ljq0;
-
-    iput-boolean v2, p0, Ljq0;->b:Z
-
-    :cond_0
-    return-void
+    return-object p0
 .end method

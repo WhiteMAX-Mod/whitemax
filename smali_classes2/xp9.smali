@@ -1,350 +1,227 @@
-.class public final Lxp9;
-.super Llje;
+.class public final synthetic Lxp9;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lpm3;
 
 
 # instance fields
-.field public X:Ljava/lang/String;
+.field public final synthetic a:I
 
-.field public Y:J
-
-.field public Z:J
-
-.field public o:Ljava/lang/String;
-
-.field public o0:Lsm9;
-
-.field public p0:Ljava/lang/String;
-
-.field public q0:I
+.field public final synthetic b:Lyp9;
 
 
 # direct methods
-.method public constructor <init>(Ldx8;)V
+.method public synthetic constructor <init>(Lyp9;I)V
     .locals 0
 
-    invoke-direct {p0, p1}, Llje;-><init>(Ldx8;)V
+    iput p2, p0, Lxp9;->a:I
+
+    iput-object p1, p0, Lxp9;->b:Lyp9;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final c(Ldx8;Ljava/lang/String;)V
-    .locals 7
+.method public final accept(Ljava/lang/Object;)V
+    .locals 3
 
-    invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    iget v0, p0, Lxp9;->a:I
 
-    invoke-virtual {p2}, Ljava/lang/String;->hashCode()I
+    packed-switch v0, :pswitch_data_0
 
-    move-result v0
+    check-cast p1, Ljava/lang/Long;
 
-    const/4 v1, 0x3
+    iget-object p0, p0, Lxp9;->b:Lyp9;
 
-    const/4 v2, 0x2
+    iget-object p1, p0, Lyp9;->s0:Lj4g;
 
-    const/4 v3, 0x1
+    invoke-virtual {p1}, Lj4g;->a()Li4g;
 
-    const/4 v4, -0x1
+    move-result-object p1
 
-    sparse-switch v0, :sswitch_data_0
+    iget-object v0, p0, Lyp9;->c:Ldl8;
 
-    goto :goto_0
+    check-cast v0, Lhx7;
 
-    :sswitch_0
-    const-string v0, "sdpOffer"
+    invoke-virtual {v0}, Lhx7;->e()J
 
-    invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    move-result-wide v1
 
-    move-result p2
+    iput-wide v1, p1, Li4g;->j:J
 
-    if-nez p2, :cond_0
+    invoke-virtual {v0}, Lhx7;->c()J
 
-    goto :goto_0
+    move-result-wide v0
 
-    :cond_0
-    const/4 v4, 0x6
+    iput-wide v0, p1, Li4g;->k:J
 
-    goto :goto_0
+    new-instance v0, Lj4g;
 
-    :sswitch_1
-    const-string v0, "turnServer"
+    invoke-direct {v0, p1}, Lj4g;-><init>(Li4g;)V
 
-    invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    iput-object v0, p0, Lyp9;->s0:Lj4g;
 
-    move-result p2
+    iget-object p0, p0, Lx2;->b:Ljava/lang/Object;
 
-    if-nez p2, :cond_1
+    check-cast p0, Liq9;
 
-    goto :goto_0
+    check-cast p0, Lnr9;
 
-    :cond_1
-    const/4 v4, 0x5
-
-    goto :goto_0
-
-    :sswitch_2
-    const-string v0, "type"
-
-    invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result p2
-
-    if-nez p2, :cond_2
-
-    goto :goto_0
-
-    :cond_2
-    const/4 v4, 0x4
-
-    goto :goto_0
-
-    :sswitch_3
-    const-string v0, "vcp"
-
-    invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result p2
-
-    if-nez p2, :cond_3
-
-    goto :goto_0
-
-    :cond_3
-    move v4, v1
-
-    goto :goto_0
-
-    :sswitch_4
-    const-string v0, "callerId"
-
-    invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result p2
-
-    if-nez p2, :cond_4
-
-    goto :goto_0
-
-    :cond_4
-    move v4, v2
-
-    goto :goto_0
-
-    :sswitch_5
-    const-string v0, "chatId"
-
-    invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result p2
-
-    if-nez p2, :cond_5
-
-    goto :goto_0
-
-    :cond_5
-    move v4, v3
-
-    goto :goto_0
-
-    :sswitch_6
-    const-string v0, "conversationId"
-
-    invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result p2
-
-    if-nez p2, :cond_6
-
-    goto :goto_0
-
-    :cond_6
-    const/4 v4, 0x0
-
-    :goto_0
-    const-wide/16 v5, 0x0
-
-    packed-switch v4, :pswitch_data_0
-
-    invoke-virtual {p1}, Ldx8;->B()V
+    invoke-interface {p0, v0}, Lnr9;->d(Lj4g;)V
 
     return-void
 
     :pswitch_0
-    invoke-static {p1}, Lxq7;->f0(Ldx8;)Ljava/lang/String;
+    check-cast p1, Ljava/lang/Long;
+
+    iget-object p0, p0, Lxp9;->b:Lyp9;
+
+    iget-object p1, p0, Lyp9;->w0:Lra8;
+
+    if-eqz p1, :cond_0
+
+    check-cast p1, Lru/ok/messages/media/mediabar/ActLocalMedias;
+
+    iget-object v0, p1, Lru/ok/messages/media/mediabar/ActLocalMedias;->e1:Lru/ok/messages/media/mediabar/MediaBarPreviewLayout;
+
+    iget-object v0, v0, Lru/ok/messages/media/mediabar/MediaBarPreviewLayout;->P0:Lru/ok/messages/messages/widgets/MessageComposeEditText;
+
+    invoke-virtual {v0}, Landroid/view/View;->isFocused()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    iget-object p1, p1, Lru/ok/messages/media/mediabar/ActLocalMedias;->f1:Lek7;
+
+    iget-object p1, p1, Lek7;->b:Ldk7;
+
+    iget-boolean p1, p1, Ldk7;->X:Z
+
+    if-nez p1, :cond_3
+
+    :cond_0
+    iget-object p1, p0, Lyp9;->s0:Lj4g;
+
+    invoke-virtual {p1}, Lj4g;->a()Li4g;
 
     move-result-object p1
 
-    iput-object p1, p0, Lxp9;->p0:Ljava/lang/String;
+    const/4 v0, 0x0
 
+    iput-boolean v0, p1, Li4g;->a:Z
+
+    new-instance v1, Lj4g;
+
+    invoke-direct {v1, p1}, Lj4g;-><init>(Li4g;)V
+
+    iput-object v1, p0, Lyp9;->s0:Lj4g;
+
+    iget-object p1, p0, Lx2;->b:Ljava/lang/Object;
+
+    check-cast p1, Liq9;
+
+    check-cast p1, Lnr9;
+
+    invoke-interface {p1, v1}, Lnr9;->d(Lj4g;)V
+
+    iget-object p0, p0, Lyp9;->Z:Lru/ok/messages/media/mediabar/FrgLocalVideo;
+
+    if-nez p0, :cond_1
+
+    goto :goto_0
+
+    :cond_1
+    invoke-virtual {p0}, Lru/ok/messages/views/fragments/FrgSlideOut;->e1()Lqb6;
+
+    move-result-object p0
+
+    if-nez p0, :cond_2
+
+    goto :goto_0
+
+    :cond_2
+    const/4 p1, 0x1
+
+    invoke-interface {p0, v0, p1, v0}, Lqb6;->c(ZZZ)V
+
+    :cond_3
+    :goto_0
     return-void
 
     :pswitch_1
-    invoke-static {p1}, Lsm9;->g(Ldx8;)Lsm9;
+    check-cast p1, Ljava/lang/Throwable;
 
-    move-result-object p1
+    iget-object p0, p0, Lxp9;->b:Lyp9;
 
-    iput-object p1, p0, Lxp9;->o0:Lsm9;
+    iget-object p0, p0, Lyp9;->Z:Lru/ok/messages/media/mediabar/FrgLocalVideo;
 
-    return-void
-
-    :pswitch_2
-    invoke-static {p1}, Lxq7;->f0(Ldx8;)Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    const-string p2, "AUDIO"
-
-    invoke-virtual {p1, p2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result p2
-
-    if-nez p2, :cond_7
-
-    const-string p2, "VIDEO"
-
-    invoke-virtual {p1, p2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_8
-
-    move v1, v3
+    if-nez p0, :cond_4
 
     goto :goto_1
 
-    :cond_7
-    move v1, v2
+    :cond_4
+    invoke-virtual {p0, p1}, Lru/ok/messages/media/mediabar/FrgLocalVideo;->A(Ljava/lang/Throwable;)V
 
-    :cond_8
     :goto_1
-    iput v1, p0, Lxp9;->q0:I
-
     return-void
 
-    :pswitch_3
-    invoke-static {p1}, Lxq7;->f0(Ldx8;)Ljava/lang/String;
+    :pswitch_2
+    check-cast p1, Lmvf;
 
-    move-result-object p1
+    iget-object p0, p0, Lxp9;->b:Lyp9;
 
-    iput-object p1, p0, Lxp9;->X:Ljava/lang/String;
+    iget-object v0, p0, Lyp9;->c:Ldl8;
 
-    return-void
+    check-cast v0, Lhx7;
 
-    :pswitch_4
-    invoke-static {p1, v5, v6}, Lxq7;->c0(Ldx8;J)J
+    invoke-virtual {v0, p1, p0}, Lhx7;->r(Lmvf;Lbl8;)V
 
-    move-result-wide p1
+    iget-object v0, p0, Lyp9;->s0:Lj4g;
 
-    iput-wide p1, p0, Lxp9;->Y:J
+    invoke-virtual {v0}, Lj4g;->a()Li4g;
 
-    return-void
+    move-result-object v0
 
-    :pswitch_5
-    invoke-static {p1, v5, v6}, Lxq7;->c0(Ldx8;J)J
+    move-object v1, p1
 
-    move-result-wide p1
+    check-cast v1, Llk0;
 
-    iput-wide p1, p0, Lxp9;->Z:J
+    iget-wide v1, v1, Llk0;->a:J
 
-    return-void
+    iput-wide v1, v0, Li4g;->i:J
 
-    :pswitch_6
-    invoke-static {p1}, Lxq7;->f0(Ldx8;)Ljava/lang/String;
+    iput-object p1, v0, Li4g;->m:Lmvf;
 
-    move-result-object p1
+    new-instance p1, Lj4g;
 
-    iput-object p1, p0, Lxp9;->o:Ljava/lang/String;
+    invoke-direct {p1, v0}, Lj4g;-><init>(Li4g;)V
+
+    iput-object p1, p0, Lyp9;->s0:Lj4g;
+
+    iget-object v0, p0, Lx2;->b:Ljava/lang/Object;
+
+    check-cast v0, Liq9;
+
+    check-cast v0, Lnr9;
+
+    invoke-interface {v0, p1}, Lnr9;->d(Lj4g;)V
+
+    invoke-interface {v0, p0}, Lnr9;->b(Lz5g;)V
 
     return-void
 
     nop
 
-    :sswitch_data_0
-    .sparse-switch
-        -0x63e72f02 -> :sswitch_6
-        -0x5128d96d -> :sswitch_5
-        -0xa4245fa -> :sswitch_4
-        0x1c763 -> :sswitch_3
-        0x368f3a -> :sswitch_2
-        0x5288a20 -> :sswitch_1
-        0x17be3d5d -> :sswitch_0
-    .end sparse-switch
-
     :pswitch_data_0
     .packed-switch 0x0
-        :pswitch_6
-        :pswitch_5
-        :pswitch_4
-        :pswitch_3
         :pswitch_2
         :pswitch_1
         :pswitch_0
     .end packed-switch
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 11
-
-    iget-object v0, p0, Lxp9;->o:Ljava/lang/String;
-
-    iget-object v1, p0, Lxp9;->X:Ljava/lang/String;
-
-    iget-wide v2, p0, Lxp9;->Y:J
-
-    iget-wide v4, p0, Lxp9;->Z:J
-
-    iget-object v6, p0, Lxp9;->o0:Lsm9;
-
-    iget-object v7, p0, Lxp9;->p0:Ljava/lang/String;
-
-    iget p0, p0, Lxp9;->q0:I
-
-    const-string v8, "\'convParams=\'"
-
-    const-string v9, "\', callerId="
-
-    const-string v10, "{conversationId=\'"
-
-    invoke-static {v10, v0, v8, v1, v9}, Lzge;->r(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v0, v2, v3}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    const-string v1, ", chatId="
-
-    const-string v2, ", turnServer="
-
-    invoke-static {v4, v5, v1, v2, v0}, Lzt1;->q(JLjava/lang/String;Ljava/lang/String;Ljava/lang/StringBuilder;)V
-
-    invoke-virtual {v0, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", sdpOffer=\'"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, "\', callType="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-static {p0}, Lpg0;->r(I)Ljava/lang/String;
-
-    move-result-object p0
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string p0, "}"
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
 .end method

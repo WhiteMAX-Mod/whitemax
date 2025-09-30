@@ -1,19 +1,11 @@
-.class public final Ls25;
+.class public interface abstract Ls25;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # virtual methods
-.method public final serializer()Lcc7;
-    .locals 0
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()",
-            "Lcc7;"
-        }
-    .end annotation
+.method public abstract a()Lis5;
+.end method
 
-    sget-object p0, Lr25;->a:Lr25;
-
-    return-object p0
+.method public abstract b(Landroid/app/Activity;)V
 .end method

@@ -1,8 +1,9 @@
-.class public interface abstract Luh4;
-.super Ljava/lang/Object;
+.class public final Luh4;
+.super Lf9d;
 .source "SourceFile"
 
 
-# virtual methods
-.method public abstract a(Luh4;)V
-.end method
+# instance fields
+.field public c:Landroid/view/View;
+
+.field public d:Landroid/view/View;

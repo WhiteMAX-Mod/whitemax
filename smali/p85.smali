@@ -3,22 +3,24 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lv85;
+.implements Lt85;
 
 
-# static fields
-.field public static final a:Lp85;
+# instance fields
+.field public final a:Lu2f;
+
+.field public final b:Ljava/lang/Integer;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(Lu2f;Ljava/lang/Integer;)V
+    .locals 0
 
-    new-instance v0, Lp85;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lp85;->a:Lu2f;
 
-    sput-object v0, Lp85;->a:Lp85;
+    iput-object p2, p0, Lp85;->b:Ljava/lang/Integer;
 
     return-void
 .end method

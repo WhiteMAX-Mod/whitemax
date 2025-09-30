@@ -1,239 +1,219 @@
 .class public final Lud7;
-.super Ljava/util/concurrent/atomic/AtomicReference;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lvr5;
-.implements Ll9e;
-.implements Lam4;
+.implements Landroid/animation/Animator$AnimatorListener;
 
 
 # instance fields
-.field public final a:Lpx7;
+.field public final a:F
 
-.field public final b:Lox7;
+.field public final b:F
 
-.field public final c:Lc76;
+.field public final c:F
 
-.field public final o:Lfr5;
+.field public final d:F
+
+.field public final e:Lzoc;
+
+.field public final f:I
+
+.field public final g:Landroid/animation/ValueAnimator;
+
+.field public h:Z
+
+.field public i:F
+
+.field public j:F
+
+.field public k:Z
+
+.field public l:Z
+
+.field public m:F
+
+.field public final synthetic n:I
+
+.field public final synthetic o:Lzoc;
+
+.field public final synthetic p:Lyd7;
 
 
 # direct methods
-.method public constructor <init>(Lpx7;Lox7;)V
-    .locals 1
+.method public constructor <init>(Lyd7;Lzoc;IFFFFILzoc;)V
+    .locals 0
 
-    sget-object v0, Lkhg;->c:Lc76;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0}, Ljava/util/concurrent/atomic/AtomicReference;-><init>()V
+    iput-object p1, p0, Lud7;->p:Lyd7;
 
-    iput-object p1, p0, Lud7;->a:Lpx7;
+    iput p8, p0, Lud7;->n:I
 
-    iput-object p2, p0, Lud7;->b:Lox7;
+    iput-object p9, p0, Lud7;->o:Lzoc;
 
-    iput-object v0, p0, Lud7;->c:Lc76;
+    const/4 p1, 0x0
 
-    sget-object p1, Lfr5;->a:Lfr5;
+    iput-boolean p1, p0, Lud7;->k:Z
 
-    iput-object p1, p0, Lud7;->o:Lfr5;
+    iput-boolean p1, p0, Lud7;->l:Z
+
+    iput p3, p0, Lud7;->f:I
+
+    iput-object p2, p0, Lud7;->e:Lzoc;
+
+    iput p4, p0, Lud7;->a:F
+
+    iput p5, p0, Lud7;->b:F
+
+    iput p6, p0, Lud7;->c:F
+
+    iput p7, p0, Lud7;->d:F
+
+    const/4 p1, 0x2
+
+    new-array p1, p1, [F
+
+    fill-array-data p1, :array_0
+
+    invoke-static {p1}, Landroid/animation/ValueAnimator;->ofFloat([F)Landroid/animation/ValueAnimator;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lud7;->g:Landroid/animation/ValueAnimator;
+
+    new-instance p3, Lvj0;
+
+    const/4 p4, 0x5
+
+    invoke-direct {p3, p4, p0}, Lvj0;-><init>(ILjava/lang/Object;)V
+
+    invoke-virtual {p1, p3}, Landroid/animation/ValueAnimator;->addUpdateListener(Landroid/animation/ValueAnimator$AnimatorUpdateListener;)V
+
+    iget-object p2, p2, Lzoc;->a:Landroid/view/View;
+
+    invoke-virtual {p1, p2}, Landroid/animation/Animator;->setTarget(Ljava/lang/Object;)V
+
+    invoke-virtual {p1, p0}, Landroid/animation/Animator;->addListener(Landroid/animation/Animator$AnimatorListener;)V
+
+    const/4 p1, 0x0
+
+    iput p1, p0, Lud7;->m:F
 
     return-void
+
+    nop
+
+    :array_0
+    .array-data 4
+        0x0
+        0x3f800000    # 1.0f
+    .end array-data
 .end method
 
 
 # virtual methods
-.method public final b()V
-    .locals 2
-
-    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
-
-    move-result-object v0
-
-    sget-object v1, Ln9e;->a:Ln9e;
-
-    if-eq v0, v1, :cond_0
-
-    invoke-virtual {p0, v1}, Ljava/util/concurrent/atomic/AtomicReference;->lazySet(Ljava/lang/Object;)V
-
-    :try_start_0
-    iget-object p0, p0, Lud7;->c:Lc76;
-
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    return-void
-
-    :catchall_0
-    move-exception p0
-
-    invoke-static {p0}, Lfc2;->G(Ljava/lang/Throwable;)V
-
-    invoke-static {p0}, Lou0;->x(Ljava/lang/Throwable;)V
-
-    :cond_0
-    return-void
-.end method
-
-.method public final cancel()V
-    .locals 0
-
-    invoke-static {p0}, Ln9e;->a(Ljava/util/concurrent/atomic/AtomicReference;)V
-
-    return-void
-.end method
-
-.method public final d(Ll9e;)V
+.method public final a(Landroid/animation/Animator;)V
     .locals 1
 
-    invoke-static {p0, p1}, Ln9e;->c(Ljava/util/concurrent/atomic/AtomicReference;Ll9e;)Z
+    iget-boolean p1, p0, Lud7;->l:Z
 
-    move-result v0
+    const/4 v0, 0x1
 
-    if-eqz v0, :cond_0
+    if-nez p1, :cond_0
 
-    :try_start_0
-    iget-object v0, p0, Lud7;->o:Lfr5;
+    iget-object p1, p0, Lud7;->e:Lzoc;
 
-    invoke-virtual {v0, p0}, Lfr5;->accept(Ljava/lang/Object;)V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    return-void
-
-    :catchall_0
-    move-exception v0
-
-    invoke-static {v0}, Lfc2;->G(Ljava/lang/Throwable;)V
-
-    invoke-interface {p1}, Ll9e;->cancel()V
-
-    invoke-virtual {p0, v0}, Lud7;->onError(Ljava/lang/Throwable;)V
+    invoke-virtual {p1, v0}, Lzoc;->v(Z)V
 
     :cond_0
+    iput-boolean v0, p0, Lud7;->l:Z
+
     return-void
 .end method
 
-.method public final f()V
+.method public final onAnimationCancel(Landroid/animation/Animator;)V
     .locals 0
 
-    invoke-static {p0}, Ln9e;->a(Ljava/util/concurrent/atomic/AtomicReference;)V
+    const/high16 p1, 0x3f800000    # 1.0f
+
+    iput p1, p0, Lud7;->m:F
 
     return-void
 .end method
 
-.method public final g()Z
-    .locals 1
+.method public final onAnimationEnd(Landroid/animation/Animator;)V
+    .locals 4
 
-    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
+    invoke-virtual {p0, p1}, Lud7;->a(Landroid/animation/Animator;)V
 
-    move-result-object p0
+    iget-boolean p1, p0, Lud7;->k:Z
 
-    sget-object v0, Ln9e;->a:Ln9e;
+    if-eqz p1, :cond_0
 
-    if-ne p0, v0, :cond_0
-
-    const/4 p0, 0x1
-
-    return p0
+    goto :goto_1
 
     :cond_0
-    const/4 p0, 0x0
+    iget p1, p0, Lud7;->n:I
 
-    return p0
+    iget-object v0, p0, Lud7;->o:Lzoc;
+
+    iget-object v1, p0, Lud7;->p:Lyd7;
+
+    if-gtz p1, :cond_1
+
+    iget-object p0, v1, Lyd7;->w0:Lxd7;
+
+    iget-object p1, v1, Lyd7;->B0:Landroidx/recyclerview/widget/RecyclerView;
+
+    invoke-virtual {p0, p1, v0}, Lxd7;->a(Landroidx/recyclerview/widget/RecyclerView;Lzoc;)V
+
+    goto :goto_0
+
+    :cond_1
+    iget-object v2, v1, Lyd7;->a:Ljava/util/ArrayList;
+
+    iget-object v3, v0, Lzoc;->a:Landroid/view/View;
+
+    invoke-virtual {v2, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    const/4 v2, 0x1
+
+    iput-boolean v2, p0, Lud7;->h:Z
+
+    if-lez p1, :cond_2
+
+    iget-object v2, v1, Lyd7;->B0:Landroidx/recyclerview/widget/RecyclerView;
+
+    new-instance v3, Lwd6;
+
+    invoke-direct {v3, v1, p0, p1}, Lwd6;-><init>(Lyd7;Lud7;I)V
+
+    invoke-virtual {v2, v3}, Landroid/view/View;->post(Ljava/lang/Runnable;)Z
+
+    :cond_2
+    :goto_0
+    iget-object p0, v1, Lyd7;->G0:Landroid/view/View;
+
+    iget-object p1, v0, Lzoc;->a:Landroid/view/View;
+
+    if-ne p0, p1, :cond_3
+
+    invoke-virtual {v1, p1}, Lyd7;->r(Landroid/view/View;)V
+
+    :cond_3
+    :goto_1
+    return-void
 .end method
 
-.method public final h(Ljava/lang/Object;)V
-    .locals 1
-
-    invoke-virtual {p0}, Lud7;->g()Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    :try_start_0
-    iget-object v0, p0, Lud7;->a:Lpx7;
-
-    invoke-virtual {v0, p1}, Lpx7;->accept(Ljava/lang/Object;)V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    return-void
-
-    :catchall_0
-    move-exception p1
-
-    invoke-static {p1}, Lfc2;->G(Ljava/lang/Throwable;)V
-
-    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ll9e;
-
-    invoke-interface {v0}, Ll9e;->cancel()V
-
-    invoke-virtual {p0, p1}, Lud7;->onError(Ljava/lang/Throwable;)V
-
-    :cond_0
-    return-void
-.end method
-
-.method public final i(J)V
+.method public final onAnimationRepeat(Landroid/animation/Animator;)V
     .locals 0
 
-    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, Ll9e;
-
-    invoke-interface {p0, p1, p2}, Ll9e;->i(J)V
-
     return-void
 .end method
 
-.method public final onError(Ljava/lang/Throwable;)V
-    .locals 2
-
-    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
-
-    move-result-object v0
-
-    sget-object v1, Ln9e;->a:Ln9e;
-
-    if-eq v0, v1, :cond_0
-
-    invoke-virtual {p0, v1}, Ljava/util/concurrent/atomic/AtomicReference;->lazySet(Ljava/lang/Object;)V
-
-    :try_start_0
-    iget-object p0, p0, Lud7;->b:Lox7;
-
-    invoke-virtual {p0, p1}, Lox7;->accept(Ljava/lang/Object;)V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    return-void
-
-    :catchall_0
-    move-exception p0
-
-    invoke-static {p0}, Lfc2;->G(Ljava/lang/Throwable;)V
-
-    new-instance v0, Lio/reactivex/rxjava3/exceptions/CompositeException;
-
-    filled-new-array {p1, p0}, [Ljava/lang/Throwable;
-
-    move-result-object p0
-
-    invoke-direct {v0, p0}, Lio/reactivex/rxjava3/exceptions/CompositeException;-><init>([Ljava/lang/Throwable;)V
-
-    invoke-static {v0}, Lou0;->x(Ljava/lang/Throwable;)V
-
-    return-void
-
-    :cond_0
-    invoke-static {p1}, Lou0;->x(Ljava/lang/Throwable;)V
+.method public final onAnimationStart(Landroid/animation/Animator;)V
+    .locals 0
 
     return-void
 .end method

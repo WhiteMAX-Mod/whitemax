@@ -1,150 +1,110 @@
 .class public final Ljn7;
-.super Lccc;
+.super Lure;
 .source "SourceFile"
 
 # interfaces
-.implements Lsqe;
+.implements Lpc6;
 
 
 # instance fields
-.field public final B0:Landroid/widget/ImageView;
+.field public X:I
 
-.field public final C0:Lru/ok/messages/views/widgets/ImageSpanEllipsizedTextView;
-
-.field public final D0:Lru/ok/messages/views/widgets/EllipsizingEndTextView;
+.field public final synthetic Y:Lis5;
 
 
 # direct methods
-.method public constructor <init>(Lkn7;Landroid/view/View;)V
-    .locals 3
+.method public constructor <init>(Lis5;Lkotlin/coroutines/Continuation;)V
+    .locals 0
 
-    invoke-direct {p0, p2}, Lccc;-><init>(Landroid/view/View;)V
+    iput-object p1, p0, Ljn7;->Y:Lis5;
 
-    sget p1, Lpvb;->row_chat_location__vw_avatar:I
+    const/4 p1, 0x2
 
-    invoke-virtual {p2, p1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
-
-    move-result-object p1
-
-    check-cast p1, Lru/ok/messages/views/widgets/TamAvatarView;
-
-    sget p1, Lpvb;->row_chat_location__stop:I
-
-    invoke-virtual {p2, p1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
-
-    move-result-object p1
-
-    check-cast p1, Landroid/widget/ImageView;
-
-    iput-object p1, p0, Ljn7;->B0:Landroid/widget/ImageView;
-
-    sget v0, Lpvb;->row_chat_location__tv_title:I
-
-    invoke-virtual {p2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Lru/ok/messages/views/widgets/ImageSpanEllipsizedTextView;
-
-    iput-object v0, p0, Ljn7;->C0:Lru/ok/messages/views/widgets/ImageSpanEllipsizedTextView;
-
-    new-instance v1, Lape;
-
-    invoke-virtual {v0}, Landroid/view/View;->getContext()Landroid/content/Context;
-
-    move-result-object v2
-
-    invoke-static {v2}, Liu0;->b(Landroid/content/Context;)Lt4f;
-
-    move-result-object v2
-
-    invoke-direct {v1, v0, v2}, Lape;-><init>(Landroid/widget/TextView;Lt4f;)V
-
-    invoke-virtual {v1}, Lape;->a()V
-
-    sget v0, Lpvb;->row_chat_location__tv_subtitle:I
-
-    invoke-virtual {p2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Lru/ok/messages/views/widgets/EllipsizingEndTextView;
-
-    iput-object v0, p0, Ljn7;->D0:Lru/ok/messages/views/widgets/EllipsizingEndTextView;
-
-    new-instance v0, Ld5;
-
-    const/16 v1, 0xc
-
-    invoke-direct {v0, v1, p0}, Ld5;-><init>(ILjava/lang/Object;)V
-
-    invoke-static {p2, v0}, Lfc2;->e(Landroid/view/View;Lc6;)Ltd7;
-
-    new-instance p2, Ld5;
-
-    const/16 v0, 0xc
-
-    invoke-direct {p2, v0, p0}, Ld5;-><init>(ILjava/lang/Object;)V
-
-    invoke-static {p1, p2}, Lfc2;->e(Landroid/view/View;Lc6;)Ltd7;
-
-    invoke-virtual {p0}, Ljn7;->e()V
+    invoke-direct {p0, p1, p2}, Lure;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final e()V
-    .locals 4
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    iget-object v0, p0, Lccc;->a:Landroid/view/View;
+    check-cast p1, Ly04;
 
-    invoke-virtual {v0}, Landroid/view/View;->getContext()Landroid/content/Context;
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    move-result-object v1
+    invoke-virtual {p0, p1, p2}, Ljn7;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    sget-object v2, Lvke;->a0:Lwfe;
+    move-result-object p0
 
-    invoke-static {v1}, Lp54;->M(Landroid/content/Context;)Lvke;
+    check-cast p0, Ljn7;
 
-    move-result-object v1
+    sget-object p1, Lylf;->a:Lylf;
 
-    const/4 v2, 0x0
+    invoke-virtual {p0, p1}, Ljn7;->o(Ljava/lang/Object;)Ljava/lang/Object;
 
-    iget v3, v1, Lvke;->i:I
+    move-result-object p0
 
-    invoke-static {v2, v3}, Ld46;->y(II)Landroid/graphics/drawable/RippleDrawable;
+    return-object p0
+.end method
 
-    move-result-object v2
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 0
 
-    invoke-virtual {v0, v2}, Landroid/view/View;->setBackground(Landroid/graphics/drawable/Drawable;)V
+    new-instance p1, Ljn7;
 
-    invoke-virtual {v1}, Lvke;->a()Landroid/graphics/drawable/RippleDrawable;
+    iget-object p0, p0, Ljn7;->Y:Lis5;
 
-    move-result-object v0
+    invoke-direct {p1, p0, p2}, Ljn7;-><init>(Lis5;Lkotlin/coroutines/Continuation;)V
 
-    iget-object v2, p0, Ljn7;->B0:Landroid/widget/ImageView;
+    return-object p1
+.end method
 
-    invoke-virtual {v2, v0}, Landroid/view/View;->setBackground(Landroid/graphics/drawable/Drawable;)V
+.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 2
 
-    iget v0, v1, Lvke;->M:I
+    iget v0, p0, Ljn7;->X:I
 
-    sget-object v3, Landroid/graphics/PorterDuff$Mode;->SRC_IN:Landroid/graphics/PorterDuff$Mode;
+    const/4 v1, 0x1
 
-    invoke-virtual {v2, v0, v3}, Landroid/widget/ImageView;->setColorFilter(ILandroid/graphics/PorterDuff$Mode;)V
+    if-eqz v0, :cond_1
 
-    iget-object v0, p0, Ljn7;->C0:Lru/ok/messages/views/widgets/ImageSpanEllipsizedTextView;
+    if-ne v0, v1, :cond_0
 
-    iget v2, v1, Lvke;->F:I
+    invoke-static {p1}, Lqe5;->V(Ljava/lang/Object;)V
 
-    invoke-virtual {v0, v2}, Landroid/widget/TextView;->setTextColor(I)V
+    goto :goto_0
 
-    iget-object p0, p0, Ljn7;->D0:Lru/ok/messages/views/widgets/EllipsizingEndTextView;
+    :cond_0
+    new-instance p0, Ljava/lang/IllegalStateException;
 
-    iget v0, v1, Lvke;->J:I
+    const-string p1, "call to \'resume\' before \'invoke\' with coroutine"
 
-    invoke-virtual {p0, v0}, Landroid/widget/TextView;->setTextColor(I)V
+    invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    return-void
+    throw p0
+
+    :cond_1
+    invoke-static {p1}, Lqe5;->V(Ljava/lang/Object;)V
+
+    iput v1, p0, Ljn7;->X:I
+
+    iget-object p1, p0, Ljn7;->Y:Lis5;
+
+    invoke-static {p1, p0}, Lo97;->p(Lis5;Lure;)Ljava/lang/Object;
+
+    move-result-object p0
+
+    sget-object p1, Lz04;->a:Lz04;
+
+    if-ne p0, p1, :cond_2
+
+    return-object p1
+
+    :cond_2
+    :goto_0
+    sget-object p0, Lylf;->a:Lylf;
+
+    return-object p0
 .end method

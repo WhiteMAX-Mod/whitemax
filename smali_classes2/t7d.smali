@@ -1,206 +1,247 @@
 .class public final Lt7d;
-.super Li6d;
+.super Lem3;
 .source "SourceFile"
 
 
 # instance fields
-.field public final b:J
+.field public final f:Lorg/webrtc/PeerConnectionFactory;
 
-.field public final c:J
+.field public g:Lorg/webrtc/SurfaceTextureHelper;
+
+.field public final h:Lcxc;
 
 
 # direct methods
-.method public constructor <init>(Lqo0;)V
-    .locals 2
+.method public constructor <init>(Lorg/webrtc/PeerConnectionFactory;Ljava/lang/String;Lorg/webrtc/MediaStream;Lfec;Lzjd;Luyc;)V
+    .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p2, p3, p4}, Lem3;-><init>(Ljava/lang/String;Lorg/webrtc/MediaStream;Lfec;)V
 
-    iget-wide v0, p1, Lqo0;->b:J
+    iput-object p1, p0, Lt7d;->f:Lorg/webrtc/PeerConnectionFactory;
 
-    iput-wide v0, p0, Lt7d;->b:J
+    new-instance p1, Lcxc;
 
-    iget-wide v0, p1, Lqo0;->c:J
+    invoke-direct {p1}, Ljava/lang/Object;-><init>()V
 
-    iput-wide v0, p0, Lt7d;->c:J
+    iput-object p6, p1, Lcxc;->a:Ljava/lang/Object;
+
+    iput-object p5, p1, Lcxc;->b:Ljava/lang/Object;
+
+    iput-object p1, p0, Lt7d;->h:Lcxc;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final x()V
-    .locals 15
+.method public final b(Lorg/webrtc/MediaStream;Lorg/webrtc/MediaStreamTrack;)V
+    .locals 0
 
-    const-class v0, Lt7d;
+    check-cast p2, Lorg/webrtc/VideoTrack;
 
-    invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
+    if-eqz p1, :cond_0
 
-    move-result-object v0
-
-    iget-wide v1, p0, Lt7d;->b:J
-
-    invoke-static {v1, v2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v3
-
-    iget-wide v4, p0, Lt7d;->c:J
-
-    invoke-static {v4, v5}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v6
-
-    sget-object v7, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
-
-    filled-new-array {v3, v6, v7}, [Ljava/lang/Object;
-
-    move-result-object v3
-
-    const-string v6, "process, chatId = %d, botId = %d, suspend = %b"
-
-    invoke-static {v0, v6, v3}, Lg47;->o(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
-
-    invoke-virtual {p0}, Li6d;->f()Ln82;
-
-    move-result-object v0
-
-    invoke-virtual {v0, v1, v2}, Ln82;->C(J)Ly42;
-
-    move-result-object v0
-
-    if-nez v0, :cond_0
-
-    return-void
+    invoke-virtual {p1, p2}, Lorg/webrtc/MediaStream;->addTrack(Lorg/webrtc/VideoTrack;)Z
 
     :cond_0
-    invoke-virtual {p0}, Li6d;->f()Ln82;
+    return-void
+.end method
 
-    move-result-object v0
+.method public final c(Lorg/webrtc/MediaStream;Lorg/webrtc/MediaStreamTrack;)V
+    .locals 0
 
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    check-cast p2, Lorg/webrtc/VideoTrack;
 
-    new-instance v3, Lf01;
+    if-eqz p1, :cond_0
 
-    const/4 v6, 0x1
+    invoke-virtual {p1, p2}, Lorg/webrtc/MediaStream;->removeTrack(Lorg/webrtc/VideoTrack;)Z
 
-    const/4 v7, 0x1
+    :cond_0
+    iget-object p1, p0, Lt7d;->g:Lorg/webrtc/SurfaceTextureHelper;
 
-    invoke-direct {v3, v7, v6}, Lf01;-><init>(ZI)V
+    if-eqz p1, :cond_1
 
-    const/4 v6, 0x0
-
-    invoke-virtual {v0, v1, v2, v6, v3}, Ln82;->h(JZLjj3;)Ly42;
-
-    invoke-virtual {p0}, Li6d;->f()Ln82;
-
-    move-result-object v0
-
-    invoke-virtual {v0, v1, v2}, Ln82;->p(J)V
-
-    invoke-virtual {p0}, Li6d;->a()Lik;
-
-    move-result-object v0
-
-    check-cast v0, La2a;
-
-    iget-wide v10, p0, Lt7d;->b:J
-
-    invoke-virtual {v0, v10, v11}, La2a;->n(J)Z
-
-    move-result v3
-
-    if-nez v3, :cond_1
-
-    const-wide/16 v6, 0x0
-
-    goto :goto_0
+    invoke-virtual {p1}, Lorg/webrtc/SurfaceTextureHelper;->dispose()V
 
     :cond_1
-    new-instance v7, Ljde;
+    const/4 p1, 0x0
 
-    invoke-virtual {v0}, La2a;->x()Lx4b;
+    iput-object p1, p0, Lt7d;->g:Lorg/webrtc/SurfaceTextureHelper;
 
-    move-result-object v3
+    return-void
+.end method
 
-    check-cast v3, La5b;
+.method public final g()Lorg/webrtc/MediaSource;
+    .locals 1
 
-    iget-object v3, v3, La5b;->a:Lj23;
+    iget-object p0, p0, Lt7d;->f:Lorg/webrtc/PeerConnectionFactory;
 
-    invoke-virtual {v3}, Lmwc;->l()J
+    const/4 v0, 0x0
 
-    move-result-wide v8
-
-    const/4 v12, 0x1
-
-    iget-wide v13, p0, Lt7d;->c:J
-
-    invoke-direct/range {v7 .. v14}, Ljde;-><init>(JJZJ)V
-
-    invoke-virtual {v0}, La2a;->y()Lrke;
-
-    move-result-object v0
-
-    const/16 v3, 0xc
-
-    invoke-static {v0, v7, v6, v3}, Lrke;->d(Lrke;Lhl;ZI)J
-
-    move-result-wide v6
-
-    :goto_0
-    invoke-virtual {p0}, Li6d;->t()Lvu0;
-
-    move-result-object v0
-
-    new-instance v8, Lny2;
-
-    invoke-static {v1, v2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v3
-
-    invoke-static {v3}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
-
-    move-result-object v9
-
-    const/4 v13, 0x0
-
-    const/16 v14, 0x7c
-
-    const/4 v10, 0x1
-
-    const/4 v11, 0x0
-
-    const/4 v12, 0x0
-
-    invoke-direct/range {v8 .. v14}, Lny2;-><init>(Ljava/util/Collection;ZZLtg4;Lr6b;I)V
-
-    invoke-virtual {v0, v8}, Lvu0;->c(Ljava/lang/Object;)V
-
-    invoke-virtual {p0}, Li6d;->t()Lvu0;
-
-    move-result-object v0
-
-    new-instance v3, Lhs3;
-
-    invoke-static {v4, v5}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v4
-
-    invoke-static {v4}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
-
-    move-result-object v4
-
-    invoke-direct {v3, v6, v7, v4}, Lhs3;-><init>(JLjava/util/Collection;)V
-
-    invoke-virtual {v0, v3}, Lvu0;->c(Ljava/lang/Object;)V
-
-    invoke-virtual {p0}, Li6d;->t()Lvu0;
+    invoke-virtual {p0, v0}, Lorg/webrtc/PeerConnectionFactory;->createVideoSource(Z)Lorg/webrtc/VideoSource;
 
     move-result-object p0
 
-    new-instance v0, Lkde;
+    return-object p0
+.end method
 
-    invoke-direct {v0, v1, v2}, Lkde;-><init>(J)V
+.method public final h(Ljava/lang/String;Lorg/webrtc/MediaSource;)Lorg/webrtc/MediaStreamTrack;
+    .locals 0
 
-    invoke-virtual {p0, v0}, Lvu0;->c(Ljava/lang/Object;)V
+    check-cast p2, Lorg/webrtc/VideoSource;
+
+    iget-object p0, p0, Lt7d;->f:Lorg/webrtc/PeerConnectionFactory;
+
+    invoke-virtual {p0, p1, p2}, Lorg/webrtc/PeerConnectionFactory;->createVideoTrack(Ljava/lang/String;Lorg/webrtc/VideoSource;)Lorg/webrtc/VideoTrack;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 0
+
+    const-string p0, "OkSdkScreenShareRecord"
+
+    return-object p0
+.end method
+
+.method public final u(III)V
+    .locals 9
+
+    if-lez p1, :cond_0
+
+    if-lez p2, :cond_0
+
+    if-lt p1, p2, :cond_0
+
+    if-gtz p3, :cond_1
+
+    :cond_0
+    move v7, p3
+
+    goto :goto_2
+
+    :cond_1
+    const/16 v0, 0x140
+
+    if-ge p1, v0, :cond_2
+
+    int-to-float v1, p2
+
+    int-to-float v2, p1
+
+    div-float/2addr v1, v2
+
+    int-to-float v2, v0
+
+    mul-float/2addr v2, v1
+
+    invoke-static {v2}, Lya6;->G(F)I
+
+    move-result v1
+
+    div-int/lit8 v1, v1, 0x10
+
+    :goto_0
+    mul-int/lit8 v1, v1, 0x10
+
+    move v3, v0
+
+    move v4, v1
+
+    goto :goto_1
+
+    :cond_2
+    div-int/lit8 v0, p1, 0x10
+
+    mul-int/lit8 v0, v0, 0x10
+
+    div-int/lit8 v1, p2, 0x10
+
+    goto :goto_0
+
+    :goto_1
+    new-instance v2, Lgwf;
+
+    move v5, v4
+
+    move v6, v3
+
+    move v7, p3
+
+    invoke-direct/range {v2 .. v7}, Lgwf;-><init>(IIIII)V
+
+    goto :goto_3
+
+    :goto_2
+    const/4 v2, 0x0
+
+    :goto_3
+    if-nez v2, :cond_3
+
+    return-void
+
+    :cond_3
+    iget-object p3, p0, Lem3;->d:Ljava/lang/Object;
+
+    check-cast p3, Lorg/webrtc/MediaSource;
+
+    move-object v3, p3
+
+    check-cast v3, Lorg/webrtc/VideoSource;
+
+    if-eqz v3, :cond_4
+
+    iget v4, v2, Lgwf;->a:I
+
+    iget v5, v2, Lgwf;->b:I
+
+    iget v6, v2, Lgwf;->c:I
+
+    move v8, v7
+
+    iget v7, v2, Lgwf;->d:I
+
+    invoke-virtual/range {v3 .. v8}, Lorg/webrtc/VideoSource;->adaptOutputFormat(IIIII)V
+
+    move v7, v8
+
+    :cond_4
+    iget-object p3, p0, Lem3;->c:Ljava/lang/Object;
+
+    check-cast p3, Lfec;
+
+    invoke-virtual {p0}, Lem3;->j()Ljava/lang/String;
+
+    move-result-object p0
+
+    iget v0, v2, Lgwf;->a:I
+
+    iget v1, v2, Lgwf;->b:I
+
+    const-string v2, "Set screenshare dimensions to "
+
+    const-string v3, " by requested "
+
+    const-string v4, " x "
+
+    invoke-static {v2, v0, v4, v1, v3}, Lsg0;->j(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    const-string v1, " fps "
+
+    invoke-static {v0, p1, v4, p2, v1}, Lsq3;->o(Ljava/lang/StringBuilder;ILjava/lang/String;ILjava/lang/String;)V
+
+    invoke-virtual {v0, v7}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-interface {p3, p0, p1}, Lfec;->log(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 .end method

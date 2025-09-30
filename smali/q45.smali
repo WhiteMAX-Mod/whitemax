@@ -1,78 +1,82 @@
 .class public final Lq45;
-.super Ljava/util/concurrent/atomic/AtomicReference;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/lang/Runnable;
-.implements Lam4;
+.implements Ljava/util/Map;
+.implements Ljava/io/Serializable;
+.implements Lmi7;
 
 
-# instance fields
-.field public final a:Lsy1;
-
-.field public final b:Lsy1;
+# static fields
+.field public static final a:Lq45;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/Runnable;)V
+.method static constructor <clinit>()V
     .locals 1
 
-    invoke-direct {p0, p1}, Ljava/util/concurrent/atomic/AtomicReference;-><init>(Ljava/lang/Object;)V
+    new-instance v0, Lq45;
 
-    new-instance p1, Lsy1;
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    const/4 v0, 0x2
-
-    invoke-direct {p1, v0}, Lsy1;-><init>(I)V
-
-    iput-object p1, p0, Lq45;->a:Lsy1;
-
-    new-instance p1, Lsy1;
-
-    invoke-direct {p1, v0}, Lsy1;-><init>(I)V
-
-    iput-object p1, p0, Lq45;->b:Lsy1;
+    sput-object v0, Lq45;->a:Lq45;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final f()V
+.method public final clear()V
     .locals 1
 
-    const/4 v0, 0x0
+    new-instance p0, Ljava/lang/UnsupportedOperationException;
 
-    invoke-virtual {p0, v0}, Ljava/util/concurrent/atomic/AtomicReference;->getAndSet(Ljava/lang/Object;)Ljava/lang/Object;
+    const-string v0, "Operation is not supported for read-only collection"
 
-    move-result-object v0
+    invoke-direct {p0, v0}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
 
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Lq45;->a:Lsy1;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    invoke-static {v0}, Lem4;->a(Ljava/util/concurrent/atomic/AtomicReference;)Z
-
-    iget-object p0, p0, Lq45;->b:Lsy1;
-
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    invoke-static {p0}, Lem4;->a(Ljava/util/concurrent/atomic/AtomicReference;)Z
-
-    :cond_0
-    return-void
+    throw p0
 .end method
 
-.method public final g()Z
+.method public final containsKey(Ljava/lang/Object;)Z
     .locals 0
 
-    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
+    const/4 p0, 0x0
 
-    move-result-object p0
+    return p0
+.end method
 
-    if-nez p0, :cond_0
+.method public final bridge containsValue(Ljava/lang/Object;)Z
+    .locals 0
+
+    const/4 p0, 0x0
+
+    return p0
+.end method
+
+.method public final bridge entrySet()Ljava/util/Set;
+    .locals 0
+
+    sget-object p0, Lz45;->a:Lz45;
+
+    return-object p0
+.end method
+
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 0
+
+    instance-of p0, p1, Ljava/util/Map;
+
+    if-eqz p0, :cond_0
+
+    check-cast p1, Ljava/util/Map;
+
+    invoke-interface {p1}, Ljava/util/Map;->isEmpty()Z
+
+    move-result p0
+
+    if-eqz p0, :cond_0
 
     const/4 p0, 0x1
 
@@ -84,59 +88,94 @@
     return p0
 .end method
 
-.method public final run()V
-    .locals 5
+.method public final bridge synthetic get(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    iget-object v0, p0, Lq45;->b:Lsy1;
+    const/4 p0, 0x0
 
-    iget-object v1, p0, Lq45;->a:Lsy1;
+    return-object p0
+.end method
 
-    sget-object v2, Lem4;->a:Lem4;
+.method public final hashCode()I
+    .locals 0
 
-    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
+    const/4 p0, 0x0
 
-    move-result-object v3
+    return p0
+.end method
 
-    check-cast v3, Ljava/lang/Runnable;
+.method public final isEmpty()Z
+    .locals 0
 
-    if-eqz v3, :cond_0
+    const/4 p0, 0x1
 
-    const/4 v4, 0x0
+    return p0
+.end method
 
-    :try_start_0
-    invoke-interface {v3}, Ljava/lang/Runnable;->run()V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+.method public final bridge keySet()Ljava/util/Set;
+    .locals 0
 
-    :try_start_1
-    invoke-virtual {p0, v4}, Ljava/util/concurrent/atomic/AtomicReference;->lazySet(Ljava/lang/Object;)V
+    sget-object p0, Lz45;->a:Lz45;
 
-    invoke-virtual {v1, v2}, Ljava/util/concurrent/atomic/AtomicReference;->lazySet(Ljava/lang/Object;)V
+    return-object p0
+.end method
 
-    invoke-virtual {v0, v2}, Ljava/util/concurrent/atomic/AtomicReference;->lazySet(Ljava/lang/Object;)V
+.method public final bridge synthetic put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    return-void
+    new-instance p0, Ljava/lang/UnsupportedOperationException;
 
-    :catchall_0
-    move-exception v3
+    const-string p1, "Operation is not supported for read-only collection"
 
-    invoke-virtual {p0, v4}, Ljava/util/concurrent/atomic/AtomicReference;->lazySet(Ljava/lang/Object;)V
-
-    invoke-virtual {v1, v2}, Ljava/util/concurrent/atomic/AtomicReference;->lazySet(Ljava/lang/Object;)V
-
-    invoke-virtual {v0, v2}, Ljava/util/concurrent/atomic/AtomicReference;->lazySet(Ljava/lang/Object;)V
-
-    throw v3
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_1
-
-    :catchall_1
-    move-exception p0
-
-    invoke-static {p0}, Lou0;->x(Ljava/lang/Throwable;)V
+    invoke-direct {p0, p1}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
 
     throw p0
+.end method
 
-    :cond_0
-    return-void
+.method public final putAll(Ljava/util/Map;)V
+    .locals 0
+
+    new-instance p0, Ljava/lang/UnsupportedOperationException;
+
+    const-string p1, "Operation is not supported for read-only collection"
+
+    invoke-direct {p0, p1}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+
+    throw p0
+.end method
+
+.method public final remove(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
+
+    new-instance p0, Ljava/lang/UnsupportedOperationException;
+
+    const-string p1, "Operation is not supported for read-only collection"
+
+    invoke-direct {p0, p1}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+
+    throw p0
+.end method
+
+.method public final bridge size()I
+    .locals 0
+
+    const/4 p0, 0x0
+
+    return p0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 0
+
+    const-string p0, "{}"
+
+    return-object p0
+.end method
+
+.method public final bridge values()Ljava/util/Collection;
+    .locals 0
+
+    sget-object p0, Lp45;->a:Lp45;
+
+    return-object p0
 .end method

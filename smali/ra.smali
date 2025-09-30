@@ -3,7 +3,25 @@
 .source "SourceFile"
 
 # interfaces
-.implements Leb;
+.implements Lhb;
+
+
+# static fields
+.field public static final a:Lra;
+
+
+# direct methods
+.method static constructor <clinit>()V
+    .locals 1
+
+    new-instance v0, Lra;
+
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    sput-object v0, Lra;->a:Lra;
+
+    return-void
+.end method
 
 
 # virtual methods
@@ -26,39 +44,21 @@
     return p0
 
     :cond_1
-    check-cast p1, Lra;
-
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
     return v0
 .end method
 
 .method public final hashCode()I
-    .locals 1
+    .locals 0
 
-    const/4 p0, 0x1
+    const p0, -0x1f265fe2
 
-    invoke-static {p0}, Ljava/lang/Boolean;->hashCode(Z)I
-
-    move-result p0
-
-    mul-int/lit8 p0, p0, 0x1f
-
-    const/4 v0, 0x0
-
-    invoke-static {v0}, Ljava/lang/Boolean;->hashCode(Z)I
-
-    move-result v0
-
-    add-int/2addr v0, p0
-
-    return v0
+    return p0
 .end method
 
 .method public final toString()Ljava/lang/String;
     .locals 0
 
-    const-string p0, "DisableAllCameraAndMicInCall(isSuccess=true, isEnabled=false)"
+    const-string p0, "AdminDisableMeRaiseHand"
 
     return-object p0
 .end method

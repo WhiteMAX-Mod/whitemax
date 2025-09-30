@@ -1,105 +1,112 @@
-.class public final synthetic Lon4;
-.super Ljava/lang/Object;
+.class public final enum Lon4;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
-# interfaces
-.implements Ljj3;
 
+# static fields
+.field public static final enum X:Lon4;
 
-# instance fields
-.field public final synthetic X:Ljava/io/File;
+.field public static final synthetic Y:[Lon4;
 
-.field public final synthetic a:Lp10;
+.field public static final a:[I
 
-.field public final synthetic b:I
+.field public static volatile b:Lon4;
 
-.field public final synthetic c:J
+.field public static final enum c:Lon4;
 
-.field public final synthetic o:J
+.field public static final enum o:Lon4;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lp10;IJJLjava/io/File;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 5
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lon4;
 
-    iput-object p1, p0, Lon4;->a:Lp10;
+    const-string v1, "LOW"
 
-    iput p2, p0, Lon4;->b:I
+    const/4 v2, 0x0
 
-    iput-wide p3, p0, Lon4;->c:J
+    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    iput-wide p5, p0, Lon4;->o:J
+    sput-object v0, Lon4;->c:Lon4;
 
-    iput-object p7, p0, Lon4;->X:Ljava/io/File;
+    new-instance v1, Lon4;
+
+    const-string v2, "AVERAGE"
+
+    const/4 v3, 0x1
+
+    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v1, Lon4;->o:Lon4;
+
+    new-instance v2, Lon4;
+
+    const-string v3, "HIGH"
+
+    const/4 v4, 0x2
+
+    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v2, Lon4;->X:Lon4;
+
+    filled-new-array {v0, v1, v2}, [Lon4;
+
+    move-result-object v0
+
+    sput-object v0, Lon4;->Y:[Lon4;
+
+    const/16 v0, 0xb
+
+    new-array v0, v0, [I
+
+    fill-array-data v0, :array_0
+
+    sput-object v0, Lon4;->a:[I
 
     return-void
+
+    :array_0
+    .array-data 4
+        -0x69cfd661    # -1.42303E-25f
+        0x2fd4a230
+        0x2fd4a24d
+        0x2fd4a22e
+        0x7b397146
+        0x7b39710c
+        0x7b397124
+        0x7b3971c1
+        0x7b397145
+        0x7b3970ce
+        -0x6e7bbc02
+    .end array-data
 .end method
 
+.method public static valueOf(Ljava/lang/String;)Lon4;
+    .locals 1
 
-# virtual methods
-.method public final accept(Ljava/lang/Object;)V
-    .locals 3
+    const-class v0, Lon4;
 
-    check-cast p1, Lx00;
-
-    iget-object v0, p0, Lon4;->a:Lp10;
-
-    iput-object v0, p1, Lx00;->i:Lp10;
-
-    iget v0, p0, Lon4;->b:I
-
-    int-to-float v1, v0
-
-    iput v1, p1, Lx00;->k:F
-
-    iget-wide v1, p0, Lon4;->c:J
-
-    iput-wide v1, p1, Lx00;->p:J
-
-    iget-wide v1, p0, Lon4;->o:J
-
-    iput-wide v1, p1, Lx00;->o:J
-
-    iget-object p0, p0, Lon4;->X:Ljava/io/File;
-
-    if-eqz p0, :cond_1
-
-    const/16 v1, 0x64
-
-    if-ne v0, v1, :cond_1
-
-    iget-object v0, p1, Lx00;->r:Lf10;
-
-    if-eqz v0, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    iget-object v0, p1, Lx00;->d:Lv10;
-
-    if-eqz v0, :cond_1
-
-    :goto_0
-    invoke-virtual {p0}, Ljava/io/File;->exists()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    invoke-virtual {p0}, Ljava/io/File;->lastModified()J
-
-    move-result-wide v0
-
-    iput-wide v0, p1, Lx00;->u:J
-
-    invoke-virtual {p0}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
 
     move-result-object p0
 
-    iput-object p0, p1, Lx00;->m:Ljava/lang/String;
+    check-cast p0, Lon4;
 
-    :cond_1
-    return-void
+    return-object p0
+.end method
+
+.method public static values()[Lon4;
+    .locals 1
+
+    sget-object v0, Lon4;->Y:[Lon4;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, [Lon4;
+
+    return-object v0
 .end method

@@ -1,248 +1,78 @@
 .class public final Ltr5;
-.super Ljava/util/concurrent/atomic/AtomicReference;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lvr5;
-.implements Ll9e;
-.implements Ljava/lang/Runnable;
+.implements Lone;
 
 
 # instance fields
-.field public final X:Z
-
-.field public Y:Ldnb;
-
-.field public final a:Lj9e;
-
-.field public final b:Lesc;
-
-.field public final c:Ljava/util/concurrent/atomic/AtomicReference;
-
-.field public final o:Ljava/util/concurrent/atomic/AtomicLong;
-
-
-# direct methods
-.method public constructor <init>(Lj9e;Lesc;Ldnb;Z)V
-    .locals 0
-
-    invoke-direct {p0}, Ljava/util/concurrent/atomic/AtomicReference;-><init>()V
-
-    iput-object p1, p0, Ltr5;->a:Lj9e;
-
-    iput-object p2, p0, Ltr5;->b:Lesc;
-
-    iput-object p3, p0, Ltr5;->Y:Ldnb;
-
-    new-instance p1, Ljava/util/concurrent/atomic/AtomicReference;
-
-    invoke-direct {p1}, Ljava/util/concurrent/atomic/AtomicReference;-><init>()V
-
-    iput-object p1, p0, Ltr5;->c:Ljava/util/concurrent/atomic/AtomicReference;
-
-    new-instance p1, Ljava/util/concurrent/atomic/AtomicLong;
-
-    invoke-direct {p1}, Ljava/util/concurrent/atomic/AtomicLong;-><init>()V
-
-    iput-object p1, p0, Ltr5;->o:Ljava/util/concurrent/atomic/AtomicLong;
-
-    xor-int/lit8 p1, p4, 0x1
-
-    iput-boolean p1, p0, Ltr5;->X:Z
-
-    return-void
-.end method
+.field public a:Ljava/util/List;
 
 
 # virtual methods
-.method public final a(JLl9e;)V
+.method public f(J)I
     .locals 2
 
-    iget-boolean v0, p0, Ltr5;->X:Z
+    const-wide/16 v0, 0x0
 
-    if-nez v0, :cond_1
+    cmp-long p0, p1, v0
 
-    invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
+    if-gez p0, :cond_0
 
-    move-result-object v0
+    const/4 p0, 0x0
 
-    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
+    return p0
 
-    move-result-object v1
+    :cond_0
+    const/4 p0, -0x1
 
-    if-ne v0, v1, :cond_0
+    return p0
+.end method
+
+.method public g(I)J
+    .locals 0
+
+    if-nez p1, :cond_0
+
+    const/4 p0, 0x1
 
     goto :goto_0
 
     :cond_0
-    new-instance v0, Lsr5;
+    const/4 p0, 0x0
 
-    invoke-direct {v0, p1, p2, p3}, Lsr5;-><init>(JLl9e;)V
-
-    iget-object p0, p0, Ltr5;->b:Lesc;
-
-    invoke-virtual {p0, v0}, Lesc;->b(Ljava/lang/Runnable;)Lam4;
-
-    return-void
-
-    :cond_1
     :goto_0
-    invoke-interface {p3, p1, p2}, Ll9e;->i(J)V
+    invoke-static {p0}, Lxnd;->k(Z)V
 
-    return-void
+    const-wide/16 p0, 0x0
+
+    return-wide p0
 .end method
 
-.method public final b()V
-    .locals 1
-
-    iget-object v0, p0, Ltr5;->a:Lj9e;
-
-    invoke-interface {v0}, Lj9e;->b()V
-
-    iget-object p0, p0, Ltr5;->b:Lesc;
-
-    invoke-interface {p0}, Lam4;->f()V
-
-    return-void
-.end method
-
-.method public final cancel()V
-    .locals 1
-
-    iget-object v0, p0, Ltr5;->c:Ljava/util/concurrent/atomic/AtomicReference;
-
-    invoke-static {v0}, Ln9e;->a(Ljava/util/concurrent/atomic/AtomicReference;)V
-
-    iget-object p0, p0, Ltr5;->b:Lesc;
-
-    invoke-interface {p0}, Lam4;->f()V
-
-    return-void
-.end method
-
-.method public final d(Ll9e;)V
-    .locals 5
-
-    iget-object v0, p0, Ltr5;->c:Ljava/util/concurrent/atomic/AtomicReference;
-
-    invoke-static {v0, p1}, Ln9e;->c(Ljava/util/concurrent/atomic/AtomicReference;Ll9e;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Ltr5;->o:Ljava/util/concurrent/atomic/AtomicLong;
-
-    const-wide/16 v1, 0x0
-
-    invoke-virtual {v0, v1, v2}, Ljava/util/concurrent/atomic/AtomicLong;->getAndSet(J)J
-
-    move-result-wide v3
-
-    cmp-long v0, v3, v1
-
-    if-eqz v0, :cond_0
-
-    invoke-virtual {p0, v3, v4, p1}, Ltr5;->a(JLl9e;)V
-
-    :cond_0
-    return-void
-.end method
-
-.method public final h(Ljava/lang/Object;)V
-    .locals 0
-
-    iget-object p0, p0, Ltr5;->a:Lj9e;
-
-    invoke-interface {p0, p1}, Lj9e;->h(Ljava/lang/Object;)V
-
-    return-void
-.end method
-
-.method public final i(J)V
-    .locals 4
-
-    invoke-static {p1, p2}, Ln9e;->d(J)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    iget-object v0, p0, Ltr5;->c:Ljava/util/concurrent/atomic/AtomicReference;
-
-    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Ll9e;
-
-    if-eqz v1, :cond_0
-
-    invoke-virtual {p0, p1, p2, v1}, Ltr5;->a(JLl9e;)V
-
-    return-void
-
-    :cond_0
-    iget-object v1, p0, Ltr5;->o:Ljava/util/concurrent/atomic/AtomicLong;
-
-    invoke-static {v1, p1, p2}, Lsre;->a(Ljava/util/concurrent/atomic/AtomicLong;J)J
-
-    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Ll9e;
-
-    if-eqz p1, :cond_1
-
-    const-wide/16 v2, 0x0
-
-    invoke-virtual {v1, v2, v3}, Ljava/util/concurrent/atomic/AtomicLong;->getAndSet(J)J
-
-    move-result-wide v0
-
-    cmp-long p2, v0, v2
-
-    if-eqz p2, :cond_1
-
-    invoke-virtual {p0, v0, v1, p1}, Ltr5;->a(JLl9e;)V
-
-    :cond_1
-    return-void
-.end method
-
-.method public final onError(Ljava/lang/Throwable;)V
-    .locals 1
-
-    iget-object v0, p0, Ltr5;->a:Lj9e;
-
-    invoke-interface {v0, p1}, Lj9e;->onError(Ljava/lang/Throwable;)V
-
-    iget-object p0, p0, Ltr5;->b:Lesc;
-
-    invoke-interface {p0}, Lam4;->f()V
-
-    return-void
-.end method
-
-.method public final run()V
+.method public m(J)Ljava/util/List;
     .locals 2
 
-    invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
+    const-wide/16 v0, 0x0
 
-    move-result-object v0
+    cmp-long p1, p1, v0
 
-    invoke-virtual {p0, v0}, Ljava/util/concurrent/atomic/AtomicReference;->lazySet(Ljava/lang/Object;)V
+    if-ltz p1, :cond_0
 
-    iget-object v0, p0, Ltr5;->Y:Ldnb;
+    iget-object p0, p0, Ltr5;->a:Ljava/util/List;
 
-    const/4 v1, 0x0
+    return-object p0
 
-    iput-object v1, p0, Ltr5;->Y:Ldnb;
+    :cond_0
+    sget-object p0, Ljava/util/Collections;->EMPTY_LIST:Ljava/util/List;
 
-    check-cast v0, Llq5;
+    return-object p0
+.end method
 
-    invoke-virtual {v0, p0}, Llq5;->e(Lj9e;)V
+.method public r()I
+    .locals 0
 
-    return-void
+    const/4 p0, 0x1
+
+    return p0
 .end method

@@ -1,84 +1,190 @@
 .class public final Lnb3;
-.super Ljava/lang/Object;
+.super Lp2;
 .source "SourceFile"
-
-# interfaces
-.implements Lf6b;
 
 
 # instance fields
-.field public final a:Lagf;
+.field public final a:Ljava/lang/Object;
+
+.field public b:I
+
+.field public final synthetic c:Lob3;
 
 
 # direct methods
-.method public constructor <init>(Lagf;)V
-    .locals 0
+.method public constructor <init>(Lob3;I)V
+    .locals 1
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lnb3;->a:Lagf;
+    iput-object p1, p0, Lnb3;->c:Lob3;
+
+    sget-object v0, Lob3;->t0:Ljava/lang/Object;
+
+    invoke-virtual {p1}, Lob3;->i()[Ljava/lang/Object;
+
+    move-result-object p1
+
+    aget-object p1, p1, p2
+
+    iput-object p1, p0, Lnb3;->a:Ljava/lang/Object;
+
+    iput p2, p0, Lnb3;->b:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Landroid/content/Context;La53;Lpgf;Luq1;Ljava/util/List;)Le6b;
-    .locals 6
+.method public final a()V
+    .locals 4
 
-    :try_start_0
-    const-class v0, Landroidx/media3/effect/PreviewingSingleInputVideoGraph$Factory;
+    iget v0, p0, Lnb3;->b:I
 
-    const-class v1, Lagf;
+    const/4 v1, -0x1
 
-    filled-new-array {v1}, [Ljava/lang/Class;
+    iget-object v2, p0, Lnb3;->a:Ljava/lang/Object;
+
+    iget-object v3, p0, Lnb3;->c:Lob3;
+
+    if-eq v0, v1, :cond_1
+
+    invoke-virtual {v3}, Lob3;->size()I
+
+    move-result v1
+
+    if-ge v0, v1, :cond_1
+
+    iget v0, p0, Lnb3;->b:I
+
+    invoke-virtual {v3}, Lob3;->i()[Ljava/lang/Object;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Ljava/lang/Class;->getConstructor([Ljava/lang/Class;)Ljava/lang/reflect/Constructor;
+    aget-object v0, v1, v0
 
-    move-result-object v0
+    invoke-static {v2, v0}, Lhs9;->r(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    iget-object p0, p0, Lnb3;->a:Lagf;
+    move-result v0
 
-    filled-new-array {p0}, [Ljava/lang/Object;
+    if-nez v0, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    return-void
+
+    :cond_1
+    :goto_0
+    sget-object v0, Lob3;->t0:Ljava/lang/Object;
+
+    invoke-virtual {v3, v2}, Lob3;->d(Ljava/lang/Object;)I
+
+    move-result v0
+
+    iput v0, p0, Lnb3;->b:I
+
+    return-void
+.end method
+
+.method public final getKey()Ljava/lang/Object;
+    .locals 0
+
+    iget-object p0, p0, Lnb3;->a:Ljava/lang/Object;
+
+    return-object p0
+.end method
+
+.method public final getValue()Ljava/lang/Object;
+    .locals 2
+
+    iget-object v0, p0, Lnb3;->c:Lob3;
+
+    invoke-virtual {v0}, Lob3;->b()Ljava/util/Map;
+
+    move-result-object v1
+
+    if-eqz v1, :cond_0
+
+    iget-object p0, p0, Lnb3;->a:Ljava/lang/Object;
+
+    invoke-interface {v1, p0}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p0
-
-    invoke-virtual {v0, p0}, Ljava/lang/reflect/Constructor;->newInstance([Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    move-object v0, p0
-
-    check-cast v0, Lf6b;
-
-    move-object v1, p1
-
-    move-object v2, p2
-
-    move-object v3, p3
-
-    move-object v4, p4
-
-    move-object v5, p5
-
-    invoke-interface/range {v0 .. v5}, Lf6b;->a(Landroid/content/Context;La53;Lpgf;Luq1;Ljava/util/List;)Le6b;
-
-    move-result-object p0
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     return-object p0
 
-    :catch_0
-    move-exception v0
+    :cond_0
+    invoke-virtual {p0}, Lnb3;->a()V
 
-    move-object p0, v0
+    iget p0, p0, Lnb3;->b:I
 
-    invoke-static {p0}, Landroidx/media3/common/VideoFrameProcessingException;->a(Ljava/lang/Exception;)Landroidx/media3/common/VideoFrameProcessingException;
+    const/4 v1, -0x1
+
+    if-ne p0, v1, :cond_1
+
+    const/4 p0, 0x0
+
+    return-object p0
+
+    :cond_1
+    invoke-virtual {v0}, Lob3;->j()[Ljava/lang/Object;
+
+    move-result-object v0
+
+    aget-object p0, v0, p0
+
+    return-object p0
+.end method
+
+.method public final setValue(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 4
+
+    iget-object v0, p0, Lnb3;->c:Lob3;
+
+    invoke-virtual {v0}, Lob3;->b()Ljava/util/Map;
+
+    move-result-object v1
+
+    iget-object v2, p0, Lnb3;->a:Ljava/lang/Object;
+
+    if-eqz v1, :cond_0
+
+    invoke-interface {v1, v2, p1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p0
 
-    throw p0
+    return-object p0
+
+    :cond_0
+    invoke-virtual {p0}, Lnb3;->a()V
+
+    iget v1, p0, Lnb3;->b:I
+
+    const/4 v3, -0x1
+
+    if-ne v1, v3, :cond_1
+
+    invoke-virtual {v0, v2, p1}, Lob3;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    const/4 p0, 0x0
+
+    return-object p0
+
+    :cond_1
+    invoke-virtual {v0}, Lob3;->j()[Ljava/lang/Object;
+
+    move-result-object v2
+
+    aget-object v1, v2, v1
+
+    iget p0, p0, Lnb3;->b:I
+
+    invoke-virtual {v0}, Lob3;->j()[Ljava/lang/Object;
+
+    move-result-object v0
+
+    aput-object p1, v0, p0
+
+    return-object v1
 .end method

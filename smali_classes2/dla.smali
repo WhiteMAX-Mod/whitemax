@@ -1,54 +1,45 @@
-.class public final Ldla;
+.class public final synthetic Ldla;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Landroid/text/InputFilter;
+
 
 # instance fields
-.field public a:J
+.field public final synthetic a:Lfla;
 
-.field public b:Ljava/lang/String;
 
-.field public c:Llz;
+# direct methods
+.method public synthetic constructor <init>(Lfla;)V
+    .locals 0
 
-.field public d:Lgla;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-.field public e:Z
+    iput-object p1, p0, Ldla;->a:Lfla;
 
-.field public f:I
-
-.field public g:Z
-
-.field public h:Ljava/util/List;
-
-.field public i:Lug4;
-
-.field public j:I
-
-.field public k:Z
+    return-void
+.end method
 
 
 # virtual methods
-.method public final a()Lela;
-    .locals 2
+.method public final filter(Ljava/lang/CharSequence;IILandroid/text/Spanned;II)Ljava/lang/CharSequence;
+    .locals 0
 
-    iget-object v0, p0, Ldla;->d:Lgla;
+    iget-object p0, p0, Ldla;->a:Lfla;
 
-    if-eqz v0, :cond_0
+    iget-object p0, p0, Lfla;->o:Lmpc;
 
-    iget v0, v0, Lgla;->a:I
+    invoke-virtual {p0, p1}, Lmpc;->a(Ljava/lang/CharSequence;)Z
 
-    const/4 v1, 0x3
+    move-result p0
 
-    if-ne v0, v1, :cond_0
+    if-eqz p0, :cond_0
 
-    const/4 v0, 0x0
-
-    iput-object v0, p0, Ldla;->b:Ljava/lang/String;
+    return-object p1
 
     :cond_0
-    new-instance v0, Lela;
+    const-string p0, ""
 
-    invoke-direct {v0, p0}, Lela;-><init>(Ldla;)V
-
-    return-object v0
+    return-object p0
 .end method

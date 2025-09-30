@@ -1,288 +1,152 @@
 .class public final Lrj1;
-.super Ljava/lang/Object;
+.super Lure;
 .source "SourceFile"
 
-
-# static fields
-.field public static final g:Lrj1;
+# interfaces
+.implements Lpc6;
 
 
 # instance fields
-.field public final a:Z
+.field public X:I
 
-.field public final b:Z
+.field public final synthetic Y:Lone/me/calls/ui/ui/call/CallScreen;
 
-.field public final c:Lwf1;
+.field public final synthetic Z:I
 
-.field public final d:Z
-
-.field public final e:Z
-
-.field public final f:Z
+.field public final synthetic r0:Landroid/os/Bundle;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 7
-
-    new-instance v0, Lrj1;
-
-    const/4 v5, 0x0
-
-    const/4 v6, 0x0
-
-    const/4 v1, 0x0
-
-    const/4 v2, 0x0
-
-    const/4 v3, 0x0
-
-    const/4 v4, 0x0
-
-    invoke-direct/range {v0 .. v6}, Lrj1;-><init>(ZZLwf1;ZZZ)V
-
-    sput-object v0, Lrj1;->g:Lrj1;
-
-    return-void
-.end method
-
-.method public constructor <init>(ZZLwf1;ZZZ)V
+.method public constructor <init>(Lone/me/calls/ui/ui/call/CallScreen;ILandroid/os/Bundle;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lrj1;->Y:Lone/me/calls/ui/ui/call/CallScreen;
 
-    iput-boolean p1, p0, Lrj1;->a:Z
+    iput p2, p0, Lrj1;->Z:I
 
-    iput-boolean p2, p0, Lrj1;->b:Z
+    iput-object p3, p0, Lrj1;->r0:Landroid/os/Bundle;
 
-    iput-object p3, p0, Lrj1;->c:Lwf1;
+    const/4 p1, 0x2
 
-    iput-boolean p4, p0, Lrj1;->d:Z
-
-    iput-boolean p5, p0, Lrj1;->e:Z
-
-    iput-boolean p6, p0, Lrj1;->f:Z
+    invoke-direct {p0, p1, p4}, Lure;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Z
-    .locals 1
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    iget-boolean v0, p0, Lrj1;->a:Z
+    check-cast p1, Ly04;
 
-    if-eqz v0, :cond_0
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    iget-boolean p0, p0, Lrj1;->b:Z
+    invoke-virtual {p0, p1, p2}, Lrj1;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    if-eqz p0, :cond_0
+    move-result-object p0
 
-    const/4 p0, 0x1
+    check-cast p0, Lrj1;
 
-    return p0
+    sget-object p1, Lylf;->a:Lylf;
 
-    :cond_0
-    const/4 p0, 0x0
+    invoke-virtual {p0, p1}, Lrj1;->o(Ljava/lang/Object;)Ljava/lang/Object;
 
-    return p0
+    move-result-object p0
+
+    return-object p0
 .end method
 
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
 
-    const/4 v0, 0x1
+    new-instance p1, Lrj1;
 
-    if-ne p0, p1, :cond_0
+    iget v0, p0, Lrj1;->Z:I
 
-    return v0
+    iget-object v1, p0, Lrj1;->r0:Landroid/os/Bundle;
 
-    :cond_0
-    instance-of v1, p1, Lrj1;
+    iget-object p0, p0, Lrj1;->Y:Lone/me/calls/ui/ui/call/CallScreen;
 
-    const/4 v2, 0x0
+    invoke-direct {p1, p0, v0, v1, p2}, Lrj1;-><init>(Lone/me/calls/ui/ui/call/CallScreen;ILandroid/os/Bundle;Lkotlin/coroutines/Continuation;)V
 
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
-    check-cast p1, Lrj1;
-
-    iget-boolean v1, p0, Lrj1;->a:Z
-
-    iget-boolean v3, p1, Lrj1;->a:Z
-
-    if-eq v1, v3, :cond_2
-
-    return v2
-
-    :cond_2
-    iget-boolean v1, p0, Lrj1;->b:Z
-
-    iget-boolean v3, p1, Lrj1;->b:Z
-
-    if-eq v1, v3, :cond_3
-
-    return v2
-
-    :cond_3
-    iget-object v1, p0, Lrj1;->c:Lwf1;
-
-    iget-object v3, p1, Lrj1;->c:Lwf1;
-
-    invoke-static {v1, v3}, Lxq7;->d(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_4
-
-    return v2
-
-    :cond_4
-    iget-boolean v1, p0, Lrj1;->d:Z
-
-    iget-boolean v3, p1, Lrj1;->d:Z
-
-    if-eq v1, v3, :cond_5
-
-    return v2
-
-    :cond_5
-    iget-boolean v1, p0, Lrj1;->e:Z
-
-    iget-boolean v3, p1, Lrj1;->e:Z
-
-    if-eq v1, v3, :cond_6
-
-    return v2
-
-    :cond_6
-    iget-boolean p0, p0, Lrj1;->f:Z
-
-    iget-boolean p1, p1, Lrj1;->f:Z
-
-    if-eq p0, p1, :cond_7
-
-    return v2
-
-    :cond_7
-    return v0
+    return-object p1
 .end method
 
-.method public final hashCode()I
-    .locals 3
+.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 5
 
-    iget-boolean v0, p0, Lrj1;->a:Z
+    iget v0, p0, Lrj1;->X:I
 
-    invoke-static {v0}, Ljava/lang/Boolean;->hashCode(Z)I
+    const/4 v1, 0x1
 
-    move-result v0
+    if-eqz v0, :cond_1
 
-    const/16 v1, 0x1f
+    if-ne v0, v1, :cond_0
 
-    mul-int/2addr v0, v1
-
-    iget-boolean v2, p0, Lrj1;->b:Z
-
-    invoke-static {v0, v1, v2}, Luz1;->f(IIZ)I
-
-    move-result v0
-
-    iget-object v2, p0, Lrj1;->c:Lwf1;
-
-    if-nez v2, :cond_0
-
-    const/4 v2, 0x0
+    invoke-static {p1}, Lqe5;->V(Ljava/lang/Object;)V
 
     goto :goto_0
 
     :cond_0
-    invoke-virtual {v2}, Lwf1;->hashCode()I
+    new-instance p0, Ljava/lang/IllegalStateException;
 
-    move-result v2
+    const-string p1, "call to \'resume\' before \'invoke\' with coroutine"
 
-    :goto_0
-    add-int/2addr v0, v2
+    invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    mul-int/2addr v0, v1
+    throw p0
 
-    iget-boolean v2, p0, Lrj1;->d:Z
+    :cond_1
+    invoke-static {p1}, Lqe5;->V(Ljava/lang/Object;)V
 
-    invoke-static {v0, v1, v2}, Luz1;->f(IIZ)I
+    sget-object p1, Lone/me/calls/ui/ui/call/CallScreen;->N0:Lad4;
 
-    move-result v0
+    iget-object p1, p0, Lrj1;->Y:Lone/me/calls/ui/ui/call/CallScreen;
 
-    iget-boolean v2, p0, Lrj1;->e:Z
+    invoke-virtual {p1}, Lone/me/calls/ui/ui/call/CallScreen;->I0()Lqm1;
 
-    invoke-static {v0, v1, v2}, Luz1;->f(IIZ)I
+    move-result-object p1
 
-    move-result v0
+    iput v1, p0, Lrj1;->X:I
 
-    iget-boolean p0, p0, Lrj1;->f:Z
-
-    invoke-static {p0}, Ljava/lang/Boolean;->hashCode(Z)I
-
-    move-result p0
-
-    add-int/2addr p0, v0
-
-    return p0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 5
-
-    const-string v0, ", isSharingStateEnabled="
-
-    const-string v1, ", sharedScreenOpponentId="
-
-    const-string v2, "CallScreenSharingState(isMe="
-
-    iget-boolean v3, p0, Lrj1;->a:Z
-
-    iget-boolean v4, p0, Lrj1;->b:Z
-
-    invoke-static {v2, v3, v0, v4, v1}, Lm26;->o(Ljava/lang/String;ZLjava/lang/String;ZLjava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {p1}, Lqm1;->t()Lxwe;
 
     move-result-object v0
 
-    iget-object v1, p0, Lrj1;->c:Lwf1;
+    check-cast v0, Laga;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0}, Laga;->b()Ls04;
 
-    const-string v1, ", isAdminDisableScreenSharing="
+    move-result-object v0
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    new-instance v1, Lhm1;
 
-    iget-boolean v1, p0, Lrj1;->d:Z
+    const/4 v2, 0x0
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+    iget v3, p0, Lrj1;->Z:I
 
-    const-string v1, ", isMeAudioSharingEnabled="
+    iget-object v4, p0, Lrj1;->r0:Landroid/os/Bundle;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-direct {v1, p1, v3, v4, v2}, Lhm1;-><init>(Lqm1;ILandroid/os/Bundle;Lkotlin/coroutines/Continuation;)V
 
-    iget-boolean v1, p0, Lrj1;->e:Z
+    invoke-static {v0, v1, p0}, Lvyg;->H(Lq04;Lpc6;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+    move-result-object p1
 
-    const-string v1, ", isMeAdmin="
+    sget-object p0, Lz04;->a:Lz04;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    if-ne p1, p0, :cond_2
 
-    iget-boolean p0, p0, Lrj1;->f:Z
+    return-object p0
 
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+    :cond_2
+    :goto_0
+    check-cast p1, Ljava/lang/Boolean;
 
-    const-string p0, ")"
+    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
 
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
+    sget-object p0, Lylf;->a:Lylf;
 
     return-object p0
 .end method

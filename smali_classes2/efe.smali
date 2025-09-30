@@ -4,20 +4,8 @@
 
 
 # virtual methods
-.method public abstract c()I
+.method public abstract j(Lhfe;)V
 .end method
 
-.method public abstract f()I
-.end method
-
-.method public abstract g()V
-.end method
-
-.method public abstract l()Landroid/view/View;
-.end method
-
-.method public abstract onDismiss()V
-.end method
-
-.method public abstract p()I
+.method public abstract m(Lhfe;)V
 .end method

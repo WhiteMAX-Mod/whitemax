@@ -45,7 +45,7 @@
 
 
 # static fields
-.field private static final synthetic $ENTRIES:Lm25;
+.field private static final synthetic $ENTRIES:Lx75;
 
 .field private static final synthetic $VALUES:[Lru/ok/android/externcalls/sdk/connection/internal/MediaConnectionManagerImpl$State;
 
@@ -112,11 +112,11 @@
 
     sput-object v0, Lru/ok/android/externcalls/sdk/connection/internal/MediaConnectionManagerImpl$State;->$VALUES:[Lru/ok/android/externcalls/sdk/connection/internal/MediaConnectionManagerImpl$State;
 
-    new-instance v1, Ln25;
+    new-instance v1, Ly75;
 
-    invoke-direct {v1, v0}, Ln25;-><init>([Ljava/lang/Enum;)V
+    invoke-direct {v1, v0}, Ly75;-><init>([Ljava/lang/Enum;)V
 
-    sput-object v1, Lru/ok/android/externcalls/sdk/connection/internal/MediaConnectionManagerImpl$State;->$ENTRIES:Lm25;
+    sput-object v1, Lru/ok/android/externcalls/sdk/connection/internal/MediaConnectionManagerImpl$State;->$ENTRIES:Lx75;
 
     return-void
 .end method
@@ -134,16 +134,16 @@
     return-void
 .end method
 
-.method public static getEntries()Lm25;
+.method public static getEntries()Lx75;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
-            "Lm25;"
+            "Lx75;"
         }
     .end annotation
 
-    sget-object v0, Lru/ok/android/externcalls/sdk/connection/internal/MediaConnectionManagerImpl$State;->$ENTRIES:Lm25;
+    sget-object v0, Lru/ok/android/externcalls/sdk/connection/internal/MediaConnectionManagerImpl$State;->$ENTRIES:Lx75;
 
     return-object v0
 .end method

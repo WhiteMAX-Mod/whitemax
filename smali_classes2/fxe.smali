@@ -1,22 +1,14 @@
-.class public final Lfxe;
+.class public interface abstract Lfxe;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lgxe;
 
+# virtual methods
+.method public abstract a(DDDD)F
+.end method
 
-# instance fields
-.field public final a:Lg0a;
+.method public abstract b(DDDDLjx3;)Ljava/lang/Object;
+.end method
 
-
-# direct methods
-.method public constructor <init>(Lg0a;)V
-    .locals 0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lfxe;->a:Lg0a;
-
-    return-void
+.method public abstract c(DDDD)Z
 .end method

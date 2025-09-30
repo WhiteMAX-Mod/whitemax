@@ -1,122 +1,103 @@
 .class public final Lz02;
-.super Ljava/lang/Object;
+.super La12;
 .source "SourceFile"
 
 
-# static fields
-.field public static final c:Lz02;
-
-
 # instance fields
-.field public final a:Ljava/util/Set;
+.field public final synthetic X:Z
 
-.field public final b:Lgr0;
+.field public final synthetic c:Lqvg;
+
+.field public final synthetic o:Ljava/lang/String;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
-
-    new-instance v0, Ljava/util/ArrayList;
-
-    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
-
-    new-instance v1, Lz02;
-
-    invoke-static {v0}, Lp43;->a1(Ljava/util/Collection;)Ljava/util/Set;
-
-    move-result-object v0
-
-    const/4 v2, 0x0
-
-    invoke-direct {v1, v0, v2}, Lz02;-><init>(Ljava/util/Set;Lgr0;)V
-
-    sput-object v1, Lz02;->c:Lz02;
-
-    return-void
-.end method
-
-.method public constructor <init>(Ljava/util/Set;Lgr0;)V
+.method public constructor <init>(Lqvg;Ljava/lang/String;Z)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lz02;->c:Lqvg;
 
-    iput-object p1, p0, Lz02;->a:Ljava/util/Set;
+    iput-object p2, p0, Lz02;->o:Ljava/lang/String;
 
-    iput-object p2, p0, Lz02;->b:Lgr0;
+    iput-boolean p3, p0, Lz02;->X:Z
+
+    invoke-direct {p0}, La12;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 2
+.method public final c()V
+    .locals 4
 
-    instance-of v0, p1, Lz02;
+    iget-object v0, p0, Lz02;->c:Lqvg;
 
-    if-eqz v0, :cond_0
+    iget-object v1, v0, Lqvg;->c:Landroidx/work/impl/WorkDatabase;
 
-    check-cast p1, Lz02;
+    invoke-virtual {v1}, Lexc;->c()V
 
-    iget-object v0, p1, Lz02;->a:Ljava/util/Set;
+    :try_start_0
+    invoke-virtual {v1}, Landroidx/work/impl/WorkDatabase;->x()Lhwg;
 
-    iget-object v1, p0, Lz02;->a:Ljava/util/Set;
+    move-result-object v2
 
-    invoke-static {v0, v1}, Lxq7;->d(Ljava/lang/Object;Ljava/lang/Object;)Z
+    iget-object v3, p0, Lz02;->o:Ljava/lang/String;
 
-    move-result v0
+    invoke-virtual {v2, v3}, Lhwg;->n(Ljava/lang/String;)Ljava/util/ArrayList;
 
-    if-eqz v0, :cond_0
+    move-result-object v2
 
-    iget-object p1, p1, Lz02;->b:Lgr0;
+    invoke-virtual {v2}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
-    iget-object p0, p0, Lz02;->b:Lgr0;
+    move-result-object v2
 
-    invoke-static {p1, p0}, Lxq7;->d(Ljava/lang/Object;Ljava/lang/Object;)Z
+    :goto_0
+    invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
 
-    move-result p0
+    move-result v3
 
-    if-eqz p0, :cond_0
+    if-eqz v3, :cond_0
 
-    const/4 p0, 0x1
+    invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    return p0
+    move-result-object v3
 
-    :cond_0
-    const/4 p0, 0x0
+    check-cast v3, Ljava/lang/String;
 
-    return p0
-.end method
-
-.method public final hashCode()I
-    .locals 3
-
-    iget-object v0, p0, Lz02;->a:Ljava/util/Set;
-
-    const/16 v1, 0x29
-
-    const/16 v2, 0x5ed
-
-    invoke-static {v0, v2, v1}, Lm26;->e(Ljava/util/Set;II)I
-
-    move-result v0
-
-    iget-object p0, p0, Lz02;->b:Lgr0;
-
-    if-eqz p0, :cond_0
-
-    invoke-virtual {p0}, Ljava/lang/Object;->hashCode()I
-
-    move-result p0
+    invoke-static {v0, v3}, La12;->b(Lqvg;Ljava/lang/String;)V
 
     goto :goto_0
 
+    :catchall_0
+    move-exception p0
+
+    goto :goto_1
+
     :cond_0
-    const/4 p0, 0x0
+    invoke-virtual {v1}, Lexc;->q()V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    :goto_0
-    add-int/2addr v0, p0
+    invoke-virtual {v1}, Lexc;->k()V
 
-    return v0
+    iget-boolean p0, p0, Lz02;->X:Z
+
+    if-eqz p0, :cond_1
+
+    iget-object p0, v0, Lqvg;->b:Lmh3;
+
+    iget-object v1, v0, Lqvg;->c:Landroidx/work/impl/WorkDatabase;
+
+    iget-object v0, v0, Lqvg;->e:Ljava/util/List;
+
+    invoke-static {p0, v1, v0}, Lj6d;->a(Lmh3;Landroidx/work/impl/WorkDatabase;Ljava/util/List;)V
+
+    :cond_1
+    return-void
+
+    :goto_1
+    invoke-virtual {v1}, Lexc;->k()V
+
+    throw p0
 .end method

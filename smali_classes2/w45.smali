@@ -1,61 +1,48 @@
-.class public final synthetic Lw45;
+.class public final Lw45;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lts7;
 
-# instance fields
-.field public final synthetic a:I
 
-.field public final synthetic b:Lc55;
+# static fields
+.field public static final a:Lw45;
 
-.field public final synthetic c:J
+.field public static final b:I
 
 
 # direct methods
-.method public synthetic constructor <init>(Lc55;JI)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    iput p4, p0, Lw45;->a:I
+    new-instance v0, Lw45;
 
-    iput-object p1, p0, Lw45;->b:Lc55;
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    iput-wide p2, p0, Lw45;->c:J
+    sput-object v0, Lw45;->a:Lw45;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    sget v0, Lzja;->b:I
+
+    sput v0, Lw45;->b:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()J
-    .locals 3
+.method public final getItemId()J
+    .locals 2
 
-    iget v0, p0, Lw45;->a:I
+    const-wide/16 v0, 0x0
 
-    packed-switch v0, :pswitch_data_0
+    return-wide v0
+.end method
 
-    iget-object v0, p0, Lw45;->b:Lc55;
+.method public final m()I
+    .locals 0
 
-    iget-wide v1, p0, Lw45;->c:J
+    sget p0, Lw45;->b:I
 
-    invoke-virtual {v0, v1, v2}, Lc55;->f(J)V
-
-    return-wide v1
-
-    :pswitch_0
-    iget-object v0, p0, Lw45;->b:Lc55;
-
-    iget-wide v1, p0, Lw45;->c:J
-
-    invoke-virtual {v0, v1, v2}, Lc55;->f(J)V
-
-    return-wide v1
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return p0
 .end method

@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lle3;
+.implements Lsh3;
 
 
 # instance fields
@@ -11,22 +11,22 @@
 
 .field private final baseEndpoint:Ljava/lang/String;
 
-.field private sessionInfo:Lke3;
+.field private sessionInfo:Lrh3;
 
 
 # direct methods
-.method public constructor <init>(Lle3;)V
+.method public constructor <init>(Lsh3;)V
     .locals 1
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-interface {p1}, Lle3;->getAppKey()Ljava/lang/String;
+    invoke-interface {p1}, Lsh3;->getAppKey()Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Lru/ok/android/externcalls/sdk/SimpleConfigurationStore;->appKey:Ljava/lang/String;
 
-    invoke-interface {p1}, Lle3;->getBaseEndpoint()Ljava/lang/String;
+    invoke-interface {p1}, Lsh3;->getBaseEndpoint()Ljava/lang/String;
 
     move-result-object p1
 
@@ -53,18 +53,18 @@
     return-object p0
 .end method
 
-.method public getSessionInfo()Lke3;
+.method public getSessionInfo()Lrh3;
     .locals 0
 
-    iget-object p0, p0, Lru/ok/android/externcalls/sdk/SimpleConfigurationStore;->sessionInfo:Lke3;
+    iget-object p0, p0, Lru/ok/android/externcalls/sdk/SimpleConfigurationStore;->sessionInfo:Lrh3;
 
     return-object p0
 .end method
 
-.method public setSessionInfo(Lke3;)V
+.method public setSessionInfo(Lrh3;)V
     .locals 0
 
-    iput-object p1, p0, Lru/ok/android/externcalls/sdk/SimpleConfigurationStore;->sessionInfo:Lke3;
+    iput-object p1, p0, Lru/ok/android/externcalls/sdk/SimpleConfigurationStore;->sessionInfo:Lrh3;
 
     return-void
 .end method

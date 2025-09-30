@@ -1,61 +1,66 @@
-.class public final Lpi4;
+.class public final synthetic Lpi4;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lzm5;
+.implements Lhj4;
 
 
 # instance fields
-.field public final synthetic a:Lzm5;
-
-.field public final synthetic b:Lone/me/devmenu/DevMenuScreen;
-
-.field public final synthetic c:I
+.field public final synthetic a:Laj4;
 
 
 # direct methods
-.method public constructor <init>(Ltyd;Lone/me/devmenu/DevMenuScreen;I)V
+.method public synthetic constructor <init>(Laj4;)V
     .locals 0
 
+    iput-object p1, p0, Lpi4;->a:Laj4;
+
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lpi4;->a:Lzm5;
-
-    iput-object p2, p0, Lpi4;->b:Lone/me/devmenu/DevMenuScreen;
-
-    iput p3, p0, Lpi4;->c:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final d(Lbn5;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-    .locals 3
+.method public h(ILubf;[I)Llqc;
+    .locals 8
 
-    new-instance v0, Loq;
+    invoke-static {}, Ll37;->i()Li37;
 
-    iget-object v1, p0, Lpi4;->b:Lone/me/devmenu/DevMenuScreen;
+    move-result-object v0
 
-    iget v2, p0, Lpi4;->c:I
+    const/4 v1, 0x0
 
-    invoke-direct {v0, p1, v1, v2}, Loq;-><init>(Lbn5;Lone/me/devmenu/DevMenuScreen;I)V
+    move v5, v1
 
-    iget-object p0, p0, Lpi4;->a:Lzm5;
+    :goto_0
+    iget v1, p2, Lubf;->a:I
 
-    invoke-interface {p0, v0, p2}, Lzm5;->d(Lbn5;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    if-ge v5, v1, :cond_0
 
-    move-result-object p0
+    new-instance v2, Lvi4;
 
-    sget-object p1, Lpx3;->a:Lpx3;
+    aget v7, p3, v5
 
-    if-ne p0, p1, :cond_0
+    iget-object v6, p0, Lpi4;->a:Laj4;
 
-    return-object p0
+    move v3, p1
+
+    move-object v4, p2
+
+    invoke-direct/range {v2 .. v7}, Lvi4;-><init>(ILubf;ILaj4;I)V
+
+    invoke-virtual {v0, v2}, Lb37;->a(Ljava/lang/Object;)V
+
+    add-int/lit8 v5, v5, 0x1
+
+    goto :goto_0
 
     :cond_0
-    sget-object p0, Le5f;->a:Le5f;
+    invoke-virtual {v0}, Li37;->h()Llqc;
+
+    move-result-object p0
 
     return-object p0
 .end method

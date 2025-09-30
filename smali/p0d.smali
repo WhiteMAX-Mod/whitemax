@@ -1,240 +1,128 @@
 .class public final Lp0d;
-.super Ljava/lang/Object;
+.super Lii0;
 .source "SourceFile"
 
 
+# static fields
+.field public static final synthetic Z:I
+
+
 # instance fields
-.field public final a:[B
+.field public X:Lio/antmedia/rtmp_client/RtmpClient;
 
-.field public b:I
-
-.field public c:I
-
-.field public d:Z
-
-.field public final e:Z
-
-.field public f:Lp0d;
-
-.field public g:Lp0d;
+.field public Y:Landroid/net/Uri;
 
 
 # direct methods
-.method public constructor <init>()V
+.method static constructor <clinit>()V
     .locals 1
 
-    .line 1
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const-string v0, "media3.datasource.rtmp"
 
-    const/16 v0, 0x2000
-
-    new-array v0, v0, [B
-
-    iput-object v0, p0, Lp0d;->a:[B
-
-    const/4 v0, 0x1
-
-    .line 2
-    iput-boolean v0, p0, Lp0d;->e:Z
-
-    const/4 v0, 0x0
-
-    .line 3
-    iput-boolean v0, p0, Lp0d;->d:Z
+    invoke-static {v0}, Lti8;->a(Ljava/lang/String;)V
 
     return-void
 .end method
 
-.method public constructor <init>([BIIZZ)V
-    .locals 0
+.method public constructor <init>()V
+    .locals 1
 
-    .line 4
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/4 v0, 0x1
 
-    iput-object p1, p0, Lp0d;->a:[B
-
-    .line 5
-    iput p2, p0, Lp0d;->b:I
-
-    .line 6
-    iput p3, p0, Lp0d;->c:I
-
-    .line 7
-    iput-boolean p4, p0, Lp0d;->d:Z
-
-    .line 8
-    iput-boolean p5, p0, Lp0d;->e:Z
+    invoke-direct {p0, v0}, Lii0;-><init>(Z)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Lp0d;
-    .locals 4
+.method public final G(Ln74;)J
+    .locals 3
 
-    iget-object v0, p0, Lp0d;->f:Lp0d;
+    invoke-virtual {p0, p1}, Lii0;->c(Ln74;)V
+
+    new-instance v0, Lio/antmedia/rtmp_client/RtmpClient;
+
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    const-wide/16 v1, 0x0
+
+    iput-wide v1, v0, Lio/antmedia/rtmp_client/RtmpClient;->a:J
+
+    iput-object v0, p0, Lp0d;->X:Lio/antmedia/rtmp_client/RtmpClient;
+
+    iget-object v1, p1, Ln74;->a:Landroid/net/Uri;
+
+    invoke-virtual {v1}, Landroid/net/Uri;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Lio/antmedia/rtmp_client/RtmpClient;->b(Ljava/lang/String;)V
+
+    iget-object v0, p1, Ln74;->a:Landroid/net/Uri;
+
+    iput-object v0, p0, Lp0d;->Y:Landroid/net/Uri;
+
+    invoke-virtual {p0, p1}, Lii0;->e(Ln74;)V
+
+    const-wide/16 p0, -0x1
+
+    return-wide p0
+.end method
+
+.method public final close()V
+    .locals 2
+
+    iget-object v0, p0, Lp0d;->Y:Landroid/net/Uri;
 
     const/4 v1, 0x0
 
-    if-eq v0, p0, :cond_0
+    if-eqz v0, :cond_0
 
-    move-object v2, v0
+    iput-object v1, p0, Lp0d;->Y:Landroid/net/Uri;
 
-    goto :goto_0
-
-    :cond_0
-    move-object v2, v1
-
-    :goto_0
-    iget-object v3, p0, Lp0d;->g:Lp0d;
-
-    iput-object v0, v3, Lp0d;->f:Lp0d;
-
-    iget-object v0, p0, Lp0d;->f:Lp0d;
-
-    iput-object v3, v0, Lp0d;->g:Lp0d;
-
-    iput-object v1, p0, Lp0d;->f:Lp0d;
-
-    iput-object v1, p0, Lp0d;->g:Lp0d;
-
-    return-object v2
-.end method
-
-.method public final b(Lp0d;)V
-    .locals 1
-
-    iput-object p0, p1, Lp0d;->g:Lp0d;
-
-    iget-object v0, p0, Lp0d;->f:Lp0d;
-
-    iput-object v0, p1, Lp0d;->f:Lp0d;
-
-    iget-object v0, p0, Lp0d;->f:Lp0d;
-
-    iput-object p1, v0, Lp0d;->g:Lp0d;
-
-    iput-object p1, p0, Lp0d;->f:Lp0d;
-
-    return-void
-.end method
-
-.method public final c()Lp0d;
-    .locals 7
-
-    const/4 v0, 0x1
-
-    iput-boolean v0, p0, Lp0d;->d:Z
-
-    new-instance v1, Lp0d;
-
-    iget v3, p0, Lp0d;->b:I
-
-    iget v4, p0, Lp0d;->c:I
-
-    const/4 v5, 0x1
-
-    const/4 v6, 0x0
-
-    iget-object v2, p0, Lp0d;->a:[B
-
-    invoke-direct/range {v1 .. v6}, Lp0d;-><init>([BIIZZ)V
-
-    return-object v1
-.end method
-
-.method public final d(Lp0d;I)V
-    .locals 5
-
-    iget-boolean v0, p1, Lp0d;->e:Z
-
-    iget-object v1, p1, Lp0d;->a:[B
-
-    if-eqz v0, :cond_3
-
-    iget v0, p1, Lp0d;->c:I
-
-    add-int v2, v0, p2
-
-    const/16 v3, 0x2000
-
-    if-le v2, v3, :cond_2
-
-    iget-boolean v4, p1, Lp0d;->d:Z
-
-    if-nez v4, :cond_1
-
-    iget v4, p1, Lp0d;->b:I
-
-    sub-int/2addr v2, v4
-
-    if-gt v2, v3, :cond_0
-
-    invoke-static {v1, v4, v1, v0}, Lns;->Y([BI[BI)V
-
-    iget v0, p1, Lp0d;->c:I
-
-    iget v2, p1, Lp0d;->b:I
-
-    sub-int/2addr v0, v2
-
-    iput v0, p1, Lp0d;->c:I
-
-    const/4 v0, 0x0
-
-    iput v0, p1, Lp0d;->b:I
-
-    goto :goto_0
+    invoke-virtual {p0}, Lii0;->b()V
 
     :cond_0
-    new-instance p0, Ljava/lang/IllegalArgumentException;
+    iget-object v0, p0, Lp0d;->X:Lio/antmedia/rtmp_client/RtmpClient;
 
-    invoke-direct {p0}, Ljava/lang/IllegalArgumentException;-><init>()V
+    if-eqz v0, :cond_1
 
-    throw p0
+    invoke-virtual {v0}, Lio/antmedia/rtmp_client/RtmpClient;->a()V
+
+    iput-object v1, p0, Lp0d;->X:Lio/antmedia/rtmp_client/RtmpClient;
 
     :cond_1
-    new-instance p0, Ljava/lang/IllegalArgumentException;
-
-    invoke-direct {p0}, Ljava/lang/IllegalArgumentException;-><init>()V
-
-    throw p0
-
-    :cond_2
-    :goto_0
-    iget v0, p1, Lp0d;->c:I
-
-    iget v2, p0, Lp0d;->b:I
-
-    add-int v3, v2, p2
-
-    sub-int/2addr v3, v2
-
-    iget-object v4, p0, Lp0d;->a:[B
-
-    invoke-static {v4, v2, v1, v0, v3}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
-
-    iget v0, p1, Lp0d;->c:I
-
-    add-int/2addr v0, p2
-
-    iput v0, p1, Lp0d;->c:I
-
-    iget p1, p0, Lp0d;->b:I
-
-    add-int/2addr p1, p2
-
-    iput p1, p0, Lp0d;->b:I
-
     return-void
+.end method
 
-    :cond_3
-    new-instance p0, Ljava/lang/IllegalStateException;
+.method public final getUri()Landroid/net/Uri;
+    .locals 0
 
-    const-string p1, "only owner can write"
+    iget-object p0, p0, Lp0d;->Y:Landroid/net/Uri;
 
-    invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    return-object p0
+.end method
 
-    throw p0
+.method public final read([BII)I
+    .locals 2
+
+    iget-object v0, p0, Lp0d;->X:Lio/antmedia/rtmp_client/RtmpClient;
+
+    sget v1, Lnrf;->a:I
+
+    invoke-virtual {v0, p1, p2, p3}, Lio/antmedia/rtmp_client/RtmpClient;->c([BII)I
+
+    move-result p1
+
+    const/4 p2, -0x1
+
+    if-ne p1, p2, :cond_0
+
+    return p2
+
+    :cond_0
+    invoke-virtual {p0, p1}, Lii0;->a(I)V
+
+    return p1
 .end method

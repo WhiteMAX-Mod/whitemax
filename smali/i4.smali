@@ -1,117 +1,257 @@
-.class public abstract Li4;
+.class public abstract synthetic Li4;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # direct methods
-.method public static a()Landroid/view/accessibility/AccessibilityNodeInfo$AccessibilityAction;
+.method public static bridge synthetic A(Leg;)Z
+    .locals 0
+
+    invoke-static {p0}, Landroid/animation/ValueAnimator;->registerDurationScaleChangeListener(Landroid/animation/ValueAnimator$DurationScaleChangeListener;)Z
+
+    move-result p0
+
+    return p0
+.end method
+
+.method public static bridge synthetic a()F
     .locals 1
 
-    sget-object v0, Landroid/view/accessibility/AccessibilityNodeInfo$AccessibilityAction;->ACTION_SCROLL_IN_DIRECTION:Landroid/view/accessibility/AccessibilityNodeInfo$AccessibilityAction;
+    invoke-static {}, Landroid/animation/ValueAnimator;->getDurationScale()F
 
-    return-object v0
+    move-result v0
+
+    return v0
 .end method
 
-.method public static b(Landroid/view/accessibility/AccessibilityNodeInfo;Landroid/graphics/Rect;)V
+.method public static bridge synthetic b(III)I
     .locals 0
 
-    invoke-virtual {p0, p1}, Landroid/view/accessibility/AccessibilityNodeInfo;->getBoundsInWindow(Landroid/graphics/Rect;)V
+    invoke-static {p0, p1, p2}, Landroid/hardware/DataSpace;->pack(III)I
 
-    return-void
+    move-result p0
+
+    return p0
 .end method
 
-.method public static c(Landroid/view/accessibility/AccessibilityNodeInfo;)Ljava/lang/CharSequence;
+.method public static bridge synthetic c(Landroid/content/pm/PackageManager;Ljava/lang/String;Landroid/content/pm/PackageManager$ApplicationInfoFlags;)Landroid/content/pm/ApplicationInfo;
     .locals 0
 
-    invoke-virtual {p0}, Landroid/view/accessibility/AccessibilityNodeInfo;->getContainerTitle()Ljava/lang/CharSequence;
+    invoke-virtual {p0, p1, p2}, Landroid/content/pm/PackageManager;->getApplicationInfo(Ljava/lang/String;Landroid/content/pm/PackageManager$ApplicationInfoFlags;)Landroid/content/pm/ApplicationInfo;
 
     move-result-object p0
 
     return-object p0
 .end method
 
-.method public static d(Landroid/view/accessibility/AccessibilityNodeInfo;)J
-    .locals 2
+.method public static bridge synthetic d(Landroid/content/pm/PackageManager;Ljava/lang/String;Landroid/content/pm/PackageManager$PackageInfoFlags;)Landroid/content/pm/PackageInfo;
+    .locals 0
 
-    invoke-virtual {p0}, Landroid/view/accessibility/AccessibilityNodeInfo;->getMinDurationBetweenContentChanges()Ljava/time/Duration;
+    invoke-virtual {p0, p1, p2}, Landroid/content/pm/PackageManager;->getPackageInfo(Ljava/lang/String;Landroid/content/pm/PackageManager$PackageInfoFlags;)Landroid/content/pm/PackageInfo;
 
     move-result-object p0
 
-    invoke-virtual {p0}, Ljava/time/Duration;->toMillis()J
-
-    move-result-wide v0
-
-    return-wide v0
+    return-object p0
 .end method
 
-.method public static e(Landroid/view/accessibility/AccessibilityNodeInfo;)Z
+.method public static bridge synthetic e(J)Landroid/content/pm/PackageManager$ApplicationInfoFlags;
     .locals 0
 
-    invoke-virtual {p0}, Landroid/view/accessibility/AccessibilityNodeInfo;->hasRequestInitialAccessibilityFocus()Z
+    invoke-static {p0, p1}, Landroid/content/pm/PackageManager$ApplicationInfoFlags;->of(J)Landroid/content/pm/PackageManager$ApplicationInfoFlags;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static bridge synthetic f(J)Landroid/content/pm/PackageManager$PackageInfoFlags;
+    .locals 0
+
+    invoke-static {p0, p1}, Landroid/content/pm/PackageManager$PackageInfoFlags;->of(J)Landroid/content/pm/PackageManager$PackageInfoFlags;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static bridge synthetic g()Landroid/graphics/Bitmap$Config;
+    .locals 1
+
+    sget-object v0, Landroid/graphics/Bitmap$Config;->RGBA_1010102:Landroid/graphics/Bitmap$Config;
+
+    return-object v0
+.end method
+
+.method public static bridge synthetic h()Landroid/hardware/camera2/CameraCharacteristics$Key;
+    .locals 1
+
+    sget-object v0, Landroid/hardware/camera2/CameraCharacteristics;->REQUEST_AVAILABLE_DYNAMIC_RANGE_PROFILES:Landroid/hardware/camera2/CameraCharacteristics$Key;
+
+    return-object v0
+.end method
+
+.method public static bridge synthetic i(Ljava/lang/Object;)Landroid/hardware/camera2/params/DynamicRangeProfiles;
+    .locals 0
+
+    check-cast p0, Landroid/hardware/camera2/params/DynamicRangeProfiles;
+
+    return-object p0
+.end method
+
+.method public static bridge synthetic j(Landroid/media/metrics/MediaMetricsManager;)Landroid/media/metrics/EditingSession;
+    .locals 0
+
+    invoke-virtual {p0}, Landroid/media/metrics/MediaMetricsManager;->createEditingSession()Landroid/media/metrics/EditingSession;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static bridge synthetic k()Landroid/view/accessibility/AccessibilityNodeInfo$AccessibilityAction;
+    .locals 1
+
+    sget-object v0, Landroid/view/accessibility/AccessibilityNodeInfo$AccessibilityAction;->ACTION_SHOW_TEXT_SUGGESTIONS:Landroid/view/accessibility/AccessibilityNodeInfo$AccessibilityAction;
+
+    return-object v0
+.end method
+
+.method public static bridge synthetic l(Ljava/lang/Object;)Landroid/window/OnBackInvokedCallback;
+    .locals 0
+
+    check-cast p0, Landroid/window/OnBackInvokedCallback;
+
+    return-object p0
+.end method
+
+.method public static bridge synthetic m(Lrd3;)Landroid/window/OnBackInvokedDispatcher;
+    .locals 0
+
+    invoke-virtual {p0}, Landroid/app/Dialog;->getOnBackInvokedDispatcher()Landroid/window/OnBackInvokedDispatcher;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static bridge synthetic n(Landroid/app/Activity;)Landroid/window/OnBackInvokedDispatcher;
+    .locals 0
+
+    invoke-virtual {p0}, Landroid/app/Activity;->getOnBackInvokedDispatcher()Landroid/window/OnBackInvokedDispatcher;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static bridge synthetic o(Landroid/view/View;)Landroid/window/OnBackInvokedDispatcher;
+    .locals 0
+
+    invoke-virtual {p0}, Landroid/view/View;->findOnBackInvokedDispatcher()Landroid/window/OnBackInvokedDispatcher;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static bridge synthetic p(Ljava/lang/Object;)Landroid/window/OnBackInvokedDispatcher;
+    .locals 0
+
+    check-cast p0, Landroid/window/OnBackInvokedDispatcher;
+
+    return-object p0
+.end method
+
+.method public static bridge synthetic q(Ljava/lang/String;)Ljava/lang/String;
+    .locals 1
+
+    sget-object v0, Ljava/nio/charset/StandardCharsets;->UTF_8:Ljava/nio/charset/Charset;
+
+    invoke-static {p0, v0}, Ljava/net/URLDecoder;->decode(Ljava/lang/String;Ljava/nio/charset/Charset;)Ljava/lang/String;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static bridge synthetic r(Landroid/media/AudioManager;Landroid/media/AudioAttributes;)Ljava/util/List;
+    .locals 0
+
+    invoke-virtual {p0, p1}, Landroid/media/AudioManager;->getAudioDevicesForAttributes(Landroid/media/AudioAttributes;)Ljava/util/List;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static bridge synthetic s(Landroid/hardware/camera2/params/DynamicRangeProfiles;)Ljava/util/Set;
+    .locals 0
+
+    invoke-virtual {p0}, Landroid/hardware/camera2/params/DynamicRangeProfiles;->getSupportedProfiles()Ljava/util/Set;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static bridge synthetic t(Landroid/media/metrics/EditingSession;)V
+    .locals 0
+
+    invoke-virtual {p0}, Landroid/media/metrics/EditingSession;->close()V
+
+    return-void
+.end method
+
+.method public static bridge synthetic u(Landroid/window/OnBackInvokedDispatcher;ILandroid/window/OnBackInvokedCallback;)V
+    .locals 0
+
+    invoke-interface {p0, p1, p2}, Landroid/window/OnBackInvokedDispatcher;->registerOnBackInvokedCallback(ILandroid/window/OnBackInvokedCallback;)V
+
+    return-void
+.end method
+
+.method public static bridge synthetic v(Landroid/window/OnBackInvokedDispatcher;Lxm;)V
+    .locals 1
+
+    const v0, 0xf4240
+
+    invoke-interface {p0, v0, p1}, Landroid/window/OnBackInvokedDispatcher;->registerOnBackInvokedCallback(ILandroid/window/OnBackInvokedCallback;)V
+
+    return-void
+.end method
+
+.method public static bridge synthetic w(Landroid/window/OnBackInvokedDispatcher;Landroid/window/OnBackInvokedCallback;)V
+    .locals 0
+
+    invoke-interface {p0, p1}, Landroid/window/OnBackInvokedDispatcher;->unregisterOnBackInvokedCallback(Landroid/window/OnBackInvokedCallback;)V
+
+    return-void
+.end method
+
+.method public static bridge synthetic x(Leg;)Z
+    .locals 0
+
+    invoke-static {p0}, Landroid/animation/ValueAnimator;->unregisterDurationScaleChangeListener(Landroid/animation/ValueAnimator$DurationScaleChangeListener;)Z
 
     move-result p0
 
     return p0
 .end method
 
-.method public static f(Landroid/view/accessibility/AccessibilityNodeInfo;)Z
-    .locals 0
+.method public static bridge synthetic y()Landroid/hardware/camera2/CameraCharacteristics$Key;
+    .locals 1
 
-    invoke-virtual {p0}, Landroid/view/accessibility/AccessibilityNodeInfo;->isAccessibilityDataSensitive()Z
+    sget-object v0, Landroid/hardware/camera2/CameraCharacteristics;->SCALER_AVAILABLE_STREAM_USE_CASES:Landroid/hardware/camera2/CameraCharacteristics$Key;
 
-    move-result p0
-
-    return p0
+    return-object v0
 .end method
 
-.method public static g(Landroid/view/accessibility/AccessibilityNodeInfo;Z)V
+.method public static bridge synthetic z(Landroid/media/AudioManager;Landroid/media/AudioAttributes;)Ljava/util/List;
     .locals 0
 
-    invoke-virtual {p0, p1}, Landroid/view/accessibility/AccessibilityNodeInfo;->setAccessibilityDataSensitive(Z)V
+    invoke-virtual {p0, p1}, Landroid/media/AudioManager;->getDirectProfilesForAttributes(Landroid/media/AudioAttributes;)Ljava/util/List;
 
-    return-void
-.end method
+    move-result-object p0
 
-.method public static h(Landroid/view/accessibility/AccessibilityNodeInfo;Landroid/graphics/Rect;)V
-    .locals 0
-
-    invoke-virtual {p0, p1}, Landroid/view/accessibility/AccessibilityNodeInfo;->setBoundsInWindow(Landroid/graphics/Rect;)V
-
-    return-void
-.end method
-
-.method public static i(Landroid/view/accessibility/AccessibilityNodeInfo;Ljava/lang/CharSequence;)V
-    .locals 0
-
-    invoke-virtual {p0, p1}, Landroid/view/accessibility/AccessibilityNodeInfo;->setContainerTitle(Ljava/lang/CharSequence;)V
-
-    return-void
-.end method
-
-.method public static j(Landroid/view/accessibility/AccessibilityNodeInfo;J)V
-    .locals 0
-
-    invoke-static {p1, p2}, Ljava/time/Duration;->ofMillis(J)Ljava/time/Duration;
-
-    move-result-object p1
-
-    invoke-virtual {p0, p1}, Landroid/view/accessibility/AccessibilityNodeInfo;->setMinDurationBetweenContentChanges(Ljava/time/Duration;)V
-
-    return-void
-.end method
-
-.method public static k(Landroid/view/accessibility/AccessibilityNodeInfo;Landroid/view/View;Z)V
-    .locals 0
-
-    invoke-virtual {p0, p1, p2}, Landroid/view/accessibility/AccessibilityNodeInfo;->setQueryFromAppProcessEnabled(Landroid/view/View;Z)V
-
-    return-void
-.end method
-
-.method public static l(Landroid/view/accessibility/AccessibilityNodeInfo;Z)V
-    .locals 0
-
-    invoke-virtual {p0, p1}, Landroid/view/accessibility/AccessibilityNodeInfo;->setRequestInitialAccessibilityFocus(Z)V
-
-    return-void
+    return-object p0
 .end method

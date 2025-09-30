@@ -1,200 +1,181 @@
 .class public final Lk37;
-.super Ljava/lang/Object;
+.super Ll37;
 .source "SourceFile"
-
-# interfaces
-.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field public final X:F
+.field public final synthetic X:Ll37;
 
-.field public final Y:F
+.field public final transient c:I
 
-.field public final Z:F
-
-.field public final a:Ljava/lang/ref/WeakReference;
-
-.field public final b:J
-
-.field public final c:J
-
-.field public final o:F
-
-.field public final o0:F
-
-.field public final p0:F
-
-.field public final q0:Z
+.field public final transient o:I
 
 
 # direct methods
-.method public constructor <init>(Lm37;FFFFFFZ)V
-    .locals 2
+.method public constructor <init>(Ll37;II)V
+    .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lk37;->X:Ll37;
 
-    new-instance v0, Ljava/lang/ref/WeakReference;
+    invoke-direct {p0}, Ljava/util/AbstractCollection;-><init>()V
 
-    invoke-direct {v0, p1}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
+    iput p2, p0, Lk37;->c:I
 
-    iput-object v0, p0, Lk37;->a:Ljava/lang/ref/WeakReference;
-
-    const-wide/16 v0, 0x1f4
-
-    iput-wide v0, p0, Lk37;->b:J
-
-    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
-
-    move-result-wide v0
-
-    iput-wide v0, p0, Lk37;->c:J
-
-    iput p2, p0, Lk37;->o:F
-
-    iput p3, p0, Lk37;->X:F
-
-    iput p4, p0, Lk37;->Y:F
-
-    iput p5, p0, Lk37;->Z:F
-
-    iput p6, p0, Lk37;->o0:F
-
-    iput p7, p0, Lk37;->p0:F
-
-    iput-boolean p8, p0, Lk37;->q0:Z
+    iput p3, p0, Lk37;->o:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
-    .locals 8
+.method public final c()[Ljava/lang/Object;
+    .locals 0
 
-    iget-object v0, p0, Lk37;->a:Ljava/lang/ref/WeakReference;
+    iget-object p0, p0, Lk37;->X:Ll37;
 
-    invoke-virtual {v0}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
+    invoke-virtual {p0}, Lc37;->c()[Ljava/lang/Object;
 
-    move-result-object v0
+    move-result-object p0
 
-    check-cast v0, Lm37;
+    return-object p0
+.end method
 
-    if-nez v0, :cond_0
+.method public final d()I
+    .locals 2
 
-    goto :goto_0
+    iget-object v0, p0, Lk37;->X:Ll37;
 
-    :cond_0
-    iget-object v1, v0, Lm37;->y0:Landroid/graphics/RectF;
+    invoke-virtual {v0}, Lc37;->e()I
 
-    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+    move-result v0
 
-    move-result-wide v2
+    iget v1, p0, Lk37;->c:I
 
-    iget-wide v4, p0, Lk37;->c:J
+    add-int/2addr v0, v1
 
-    sub-long/2addr v2, v4
+    iget p0, p0, Lk37;->o:I
 
-    iget-wide v4, p0, Lk37;->b:J
+    add-int/2addr v0, p0
 
-    invoke-static {v4, v5, v2, v3}, Ljava/lang/Math;->min(JJ)J
+    return v0
+.end method
 
-    move-result-wide v2
+.method public final e()I
+    .locals 1
 
-    long-to-float v2, v2
+    iget-object v0, p0, Lk37;->X:Ll37;
 
-    long-to-float v3, v4
+    invoke-virtual {v0}, Lc37;->e()I
 
-    div-float v4, v2, v3
+    move-result v0
 
-    const/high16 v5, 0x3f800000    # 1.0f
+    iget p0, p0, Lk37;->c:I
 
-    sub-float/2addr v4, v5
+    add-int/2addr v0, p0
 
-    mul-float v6, v4, v4
+    return v0
+.end method
 
-    mul-float/2addr v6, v4
+.method public final f()Z
+    .locals 0
 
-    add-float/2addr v6, v5
+    const/4 p0, 0x1
 
-    iget v4, p0, Lk37;->Y:F
+    return p0
+.end method
 
-    mul-float/2addr v4, v6
+.method public final get(I)Ljava/lang/Object;
+    .locals 1
 
-    const/4 v5, 0x0
+    iget v0, p0, Lk37;->o:I
 
-    add-float/2addr v4, v5
+    invoke-static {p1, v0}, Lgy7;->m(II)V
 
-    iget v7, p0, Lk37;->Z:F
+    iget v0, p0, Lk37;->c:I
 
-    mul-float/2addr v6, v7
+    add-int/2addr p1, v0
 
-    add-float/2addr v6, v5
+    iget-object p0, p0, Lk37;->X:Ll37;
 
-    iget v5, p0, Lk37;->p0:F
+    invoke-interface {p0, p1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
-    invoke-static {v2, v5, v3}, Lild;->f(FFF)F
+    move-result-object p0
 
-    move-result v5
+    return-object p0
+.end method
 
-    cmpg-float v2, v2, v3
+.method public final iterator()Ljava/util/Iterator;
+    .locals 1
 
-    if-gez v2, :cond_2
+    const/4 v0, 0x0
 
-    iget-object v2, v0, Lfze;->o0:[F
+    invoke-virtual {p0, v0}, Ll37;->l(I)Lgx5;
 
-    const/4 v3, 0x0
+    move-result-object p0
 
-    aget v3, v2, v3
+    return-object p0
+.end method
 
-    iget v7, p0, Lk37;->o:F
+.method public final listIterator()Ljava/util/ListIterator;
+    .locals 1
 
-    sub-float/2addr v3, v7
+    const/4 v0, 0x0
 
-    sub-float/2addr v4, v3
+    .line 1
+    invoke-virtual {p0, v0}, Ll37;->l(I)Lgx5;
 
-    const/4 v3, 0x1
+    move-result-object p0
 
-    aget v2, v2, v3
+    return-object p0
+.end method
 
-    iget v3, p0, Lk37;->X:F
+.method public final bridge synthetic listIterator(I)Ljava/util/ListIterator;
+    .locals 0
 
-    sub-float/2addr v2, v3
+    .line 2
+    invoke-virtual {p0, p1}, Ll37;->l(I)Lgx5;
 
-    sub-float/2addr v6, v2
+    move-result-object p0
 
-    invoke-virtual {v0, v4, v6}, Lfze;->g(FF)V
+    return-object p0
+.end method
 
-    iget-boolean v2, p0, Lk37;->q0:Z
+.method public final r(II)Ll37;
+    .locals 1
 
-    if-nez v2, :cond_1
+    iget v0, p0, Lk37;->o:I
 
-    iget v2, p0, Lk37;->o0:F
+    invoke-static {p1, p2, v0}, Lgy7;->p(III)V
 
-    add-float/2addr v2, v5
+    iget v0, p0, Lk37;->c:I
 
-    invoke-virtual {v1}, Landroid/graphics/RectF;->centerX()F
+    add-int/2addr p1, v0
 
-    move-result v3
+    add-int/2addr p2, v0
 
-    invoke-virtual {v1}, Landroid/graphics/RectF;->centerY()F
+    iget-object p0, p0, Lk37;->X:Ll37;
 
-    move-result v1
+    invoke-virtual {p0, p1, p2}, Ll37;->r(II)Ll37;
 
-    invoke-virtual {v0, v2, v3, v1}, Lm37;->j(FFF)V
+    move-result-object p0
 
-    :cond_1
-    iget-object v1, v0, Lfze;->o:[F
+    return-object p0
+.end method
 
-    invoke-virtual {v0, v1}, Lm37;->i([F)Z
+.method public final size()I
+    .locals 0
 
-    move-result v1
+    iget p0, p0, Lk37;->o:I
 
-    if-nez v1, :cond_2
+    return p0
+.end method
 
-    invoke-virtual {v0, p0}, Landroid/view/View;->post(Ljava/lang/Runnable;)Z
+.method public final bridge synthetic subList(II)Ljava/util/List;
+    .locals 0
 
-    :cond_2
-    :goto_0
-    return-void
+    invoke-virtual {p0, p1, p2}, Lk37;->r(II)Ll37;
+
+    move-result-object p0
+
+    return-object p0
 .end method

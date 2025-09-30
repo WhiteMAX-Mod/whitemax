@@ -3,11 +3,11 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lpof;
+.implements Ld8g;
 
 
 # virtual methods
-.method public final a(Ljava/lang/Class;)Lkof;
+.method public final a(Ljava/lang/Class;)Ly7g;
     .locals 0
 
     new-instance p0, Landroidx/loader/app/LoaderManagerImpl$LoaderViewModel;

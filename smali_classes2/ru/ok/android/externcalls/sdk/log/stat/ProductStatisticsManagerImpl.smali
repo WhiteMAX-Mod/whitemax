@@ -29,7 +29,7 @@
         "getTime",
         "(J)J",
         "statItem",
-        "Le5f;",
+        "Lylf;",
         "log",
         "(Lru/ok/android/externcalls/sdk/log/stat/item/ProductStatItem;)V",
         "Lru/ok/android/externcalls/sdk/log/stat/StatisticsManager$TimeProvider;",

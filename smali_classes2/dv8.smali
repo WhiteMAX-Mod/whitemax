@@ -1,75 +1,182 @@
-.class public abstract synthetic Ldv8;
-.super Ljava/lang/Object;
+.class public final Ldv8;
+.super Lure;
 .source "SourceFile"
 
+# interfaces
+.implements Lpc6;
 
-# static fields
-.field public static final synthetic $EnumSwitchMapping$0:[I
+
+# instance fields
+.field public synthetic X:Ljava/lang/Object;
+
+.field public final synthetic Y:Lone/me/members/list/MembersListWidget;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 4
+.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/members/list/MembersListWidget;)V
+    .locals 0
 
-    invoke-static {}, Lcv8;->values()[Lcv8;
+    iput-object p2, p0, Ldv8;->Y:Lone/me/members/list/MembersListWidget;
+
+    const/4 p2, 0x2
+
+    invoke-direct {p0, p2, p1}, Lure;-><init>(ILkotlin/coroutines/Continuation;)V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
+
+    check-cast p1, Lgu8;
+
+    check-cast p2, Lkotlin/coroutines/Continuation;
+
+    invoke-virtual {p0, p1, p2}, Ldv8;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+
+    move-result-object p0
+
+    check-cast p0, Ldv8;
+
+    sget-object p1, Lylf;->a:Lylf;
+
+    invoke-virtual {p0, p1}, Ldv8;->o(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object p1
+.end method
+
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 1
+
+    new-instance v0, Ldv8;
+
+    iget-object p0, p0, Ldv8;->Y:Lone/me/members/list/MembersListWidget;
+
+    invoke-direct {v0, p2, p0}, Ldv8;-><init>(Lkotlin/coroutines/Continuation;Lone/me/members/list/MembersListWidget;)V
+
+    iput-object p1, v0, Ldv8;->X:Ljava/lang/Object;
+
+    return-object v0
+.end method
+
+.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 6
+
+    invoke-static {p1}, Lqe5;->V(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Ldv8;->X:Ljava/lang/Object;
+
+    check-cast p1, Lgu8;
+
+    instance-of v0, p1, Leu8;
+
+    const/4 v1, 0x0
+
+    iget-object p0, p0, Ldv8;->Y:Lone/me/members/list/MembersListWidget;
+
+    if-eqz v0, :cond_1
+
+    sget-object v0, Lone/me/members/list/MembersListWidget;->C0:[Lxi7;
+
+    invoke-virtual {p0}, Lone/me/members/list/MembersListWidget;->B0()Lxu8;
+
+    move-result-object p0
+
+    check-cast p1, Leu8;
+
+    iget-object p1, p1, Leu8;->a:Ljava/util/List;
+
+    iget-object v0, p0, Lxu8;->u0:Lcae;
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {v0}, Le0;->isActive()Z
+
+    move-result v0
+
+    const/4 v2, 0x1
+
+    if-ne v0, v2, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    iget-object v0, p0, Lxu8;->Z:Lcl7;
+
+    invoke-interface {v0}, Lcl7;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
-    array-length v0, v0
+    check-cast v0, Lxwe;
 
-    new-array v0, v0, [I
+    check-cast v0, Laga;
 
-    const/4 v1, 0x1
+    invoke-virtual {v0}, Laga;->a()Ls04;
 
-    const/4 v2, 0x0
+    move-result-object v0
 
-    :try_start_0
-    aput v1, v0, v2
-    :try_end_0
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
+    new-instance v2, Lvu8;
 
-    :catch_0
-    const/4 v2, 0x2
+    invoke-direct {v2, p0, p1, v1}, Lvu8;-><init>(Lxu8;Ljava/util/List;Lkotlin/coroutines/Continuation;)V
 
-    const/4 v3, 0x3
+    const/4 p1, 0x2
 
-    :try_start_1
-    aput v2, v0, v3
-    :try_end_1
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
+    invoke-static {p0, v0, v2, p1}, Lx7g;->n(Lx7g;Lq04;Lpc6;I)Lcae;
 
-    :catch_1
-    :try_start_2
-    aput v3, v0, v1
-    :try_end_2
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_2
+    move-result-object p1
 
-    :catch_2
-    const/4 v1, 0x4
+    iput-object p1, p0, Lxu8;->u0:Lcae;
 
-    :try_start_3
-    aput v1, v0, v2
-    :try_end_3
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_3 .. :try_end_3} :catch_3
+    goto :goto_0
 
-    :catch_3
-    const/4 v2, 0x5
+    :cond_1
+    instance-of p1, p1, Lfu8;
 
-    :try_start_4
-    aput v2, v0, v1
-    :try_end_4
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_4 .. :try_end_4} :catch_4
+    if-eqz p1, :cond_2
 
-    :catch_4
-    const/4 v1, 0x6
+    sget-object p1, Lone/me/members/list/MembersListWidget;->C0:[Lxi7;
 
-    :try_start_5
-    aput v1, v0, v2
-    :try_end_5
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_5 .. :try_end_5} :catch_5
+    invoke-virtual {p0}, Lone/me/members/list/MembersListWidget;->B0()Lxu8;
 
-    :catch_5
-    sput-object v0, Ldv8;->$EnumSwitchMapping$0:[I
+    move-result-object p0
 
-    return-void
+    iget-object p1, p0, Lxu8;->Y:Lau8;
+
+    new-instance v0, Lst8;
+
+    iget-wide v2, p0, Lxu8;->b:J
+
+    iget-object v4, p0, Lxu8;->c:Lsl2;
+
+    iget-object v5, p0, Lxu8;->t0:Ljava/util/Set;
+
+    invoke-direct {v0, v2, v3, v4, v5}, Lst8;-><init>(JLsl2;Ljava/util/Collection;)V
+
+    iget-object v2, p1, Lau8;->b:Lkotlinx/coroutines/internal/ContextScope;
+
+    new-instance v3, Lzt8;
+
+    invoke-direct {v3, p1, v0, v1}, Lzt8;-><init>(Lau8;Lvt8;Lkotlin/coroutines/Continuation;)V
+
+    const/4 p1, 0x3
+
+    invoke-static {v2, v1, v1, v3, p1}, Lvyg;->u(Ly04;Lq04;Lb14;Lpc6;I)Lcae;
+
+    sget-object p1, Lz45;->a:Lz45;
+
+    iput-object p1, p0, Lxu8;->t0:Ljava/util/Set;
+
+    :goto_0
+    sget-object p0, Lylf;->a:Lylf;
+
+    return-object p0
+
+    :cond_2
+    new-instance p0, Lkotlin/NoWhenBranchMatchedException;
+
+    invoke-direct {p0}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
+
+    throw p0
 .end method

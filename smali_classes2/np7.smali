@@ -3,426 +3,98 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lc36;
+.implements Ldq7;
 
 
 # static fields
-.field public static final synthetic i:[Lbc7;
+.field public static final CREATOR:Landroid/os/Parcelable$Creator;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroid/os/Parcelable$Creator<",
+            "Lnp7;",
+            ">;"
+        }
+    .end annotation
+.end field
 
-
-# instance fields
-.field public a:Lz26;
-
-.field public final b:Ljava/lang/String;
-
-.field public final c:Lkotlinx/coroutines/internal/ContextScope;
-
-.field public final d:Lazd;
-
-.field public final e:Ltkg;
-
-.field public final f:Lwfe;
-
-.field public final g:I
-
-.field public volatile h:J
+.field public static final a:Lnp7;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 4
+    .locals 2
 
-    new-instance v0, Lbh9;
+    new-instance v0, Lnp7;
 
-    const-string v1, "framesJob"
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    const-string v2, "getFramesJob()Lkotlinx/coroutines/Job;"
+    sput-object v0, Lnp7;->a:Lnp7;
 
-    const-class v3, Lnp7;
+    new-instance v0, Lra7;
 
-    invoke-direct {v0, v3, v1, v2}, Lbh9;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;)V
+    const/16 v1, 0x8
 
-    sget-object v1, Llcc;->a:Lmcc;
+    invoke-direct {v0, v1}, Lra7;-><init>(I)V
 
-    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    const/4 v1, 0x1
-
-    new-array v1, v1, [Lbc7;
-
-    const/4 v2, 0x0
-
-    aput-object v0, v1, v2
-
-    sput-object v1, Lnp7;->i:[Lbc7;
-
-    return-void
-.end method
-
-.method public constructor <init>(Lrie;Lwqa;)V
-    .locals 1
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    sget-object v0, Lz26;->d:Lz26;
-
-    iput-object v0, p0, Lnp7;->a:Lz26;
-
-    const-class v0, Lnp7;
-
-    invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lnp7;->b:Ljava/lang/String;
-
-    check-cast p1, Lo7a;
-
-    invoke-virtual {p1}, Lo7a;->b()Ljx3;
-
-    move-result-object p1
-
-    new-instance v0, Ljj;
-
-    invoke-direct {v0, p0}, Ljj;-><init>(Lnp7;)V
-
-    invoke-virtual {p1, v0}, Le0;->plus(Lhx3;)Lhx3;
-
-    move-result-object p1
-
-    invoke-static {p1}, Lvk9;->a(Lhx3;)Lkotlinx/coroutines/internal/ContextScope;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lnp7;->c:Lkotlinx/coroutines/internal/ContextScope;
-
-    sget-object p1, Lgz4;->a:Lgz4;
-
-    invoke-static {p1}, Lbzd;->a(Ljava/lang/Object;)Lazd;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lnp7;->d:Lazd;
-
-    invoke-static {}, Ltk9;->I()Ltkg;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lnp7;->e:Ltkg;
-
-    new-instance p1, Lr17;
-
-    const/16 v0, 0x16
-
-    invoke-direct {p1, v0}, Lr17;-><init>(I)V
-
-    new-instance v0, Lwfe;
-
-    invoke-direct {v0, p1}, Lwfe;-><init>(Lv56;)V
-
-    iput-object v0, p0, Lnp7;->f:Lwfe;
-
-    iget-object p1, p2, Lwqa;->a:Lyi4;
-
-    invoke-virtual {p1}, Ljava/lang/Enum;->ordinal()I
-
-    move-result p1
-
-    if-eqz p1, :cond_2
-
-    const/4 p2, 0x1
-
-    if-eq p1, p2, :cond_1
-
-    const/4 p2, 0x2
-
-    if-ne p1, p2, :cond_0
-
-    const/16 p1, 0x14
-
-    goto :goto_0
-
-    :cond_0
-    new-instance p0, Lkotlin/NoWhenBranchMatchedException;
-
-    invoke-direct {p0}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
-
-    throw p0
-
-    :cond_1
-    const/16 p1, 0xa
-
-    goto :goto_0
-
-    :cond_2
-    const/4 p1, 0x5
-
-    :goto_0
-    iput p1, p0, Lnp7;->g:I
+    sput-object v0, Lnp7;->CREATOR:Landroid/os/Parcelable$Creator;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Z
-    .locals 2
+.method public final describeContents()I
+    .locals 0
 
-    iget-object p0, p0, Lnp7;->a:Lz26;
+    const/4 p0, 0x0
 
-    iget-object p0, p0, Lz26;->a:Lief;
+    return p0
+.end method
 
-    const/4 v0, 0x0
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 1
 
-    if-eqz p0, :cond_2
+    const/4 v0, 0x1
 
-    invoke-interface {p0}, Lief;->h()Landroid/net/Uri;
+    if-ne p0, p1, :cond_0
 
-    move-result-object p0
-
-    sget v1, Lpaf;->a:I
-
-    invoke-virtual {p0}, Landroid/net/Uri;->getScheme()Ljava/lang/String;
-
-    move-result-object p0
-
-    invoke-static {p0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_1
-
-    const-string v1, "file"
-
-    invoke-virtual {v1, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result p0
-
-    if-eqz p0, :cond_0
-
-    goto :goto_0
-
-    :cond_0
     return v0
 
-    :cond_1
-    :goto_0
-    const/4 p0, 0x1
+    :cond_0
+    instance-of p0, p1, Lnp7;
+
+    if-nez p0, :cond_1
+
+    const/4 p0, 0x0
 
     return p0
 
-    :cond_2
+    :cond_1
     return v0
 .end method
 
-.method public final b()Lz26;
+.method public final hashCode()I
     .locals 0
 
-    iget-object p0, p0, Lnp7;->a:Lz26;
+    const p0, 0x4dc7cdd3    # 4.1901936E8f
+
+    return p0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 0
+
+    const-string p0, "ErrorPrivateChannel"
 
     return-object p0
 .end method
 
-.method public final c(JLkotlin/coroutines/Continuation;)Ljava/lang/Object;
-    .locals 9
+.method public final writeToParcel(Landroid/os/Parcel;I)V
+    .locals 0
 
-    instance-of v0, p3, Llp7;
+    const/4 p0, 0x1
 
-    if-eqz v0, :cond_0
-
-    move-object v0, p3
-
-    check-cast v0, Llp7;
-
-    iget v1, v0, Llp7;->o0:I
-
-    const/high16 v2, -0x80000000
-
-    and-int v3, v1, v2
-
-    if-eqz v3, :cond_0
-
-    sub-int/2addr v1, v2
-
-    iput v1, v0, Llp7;->o0:I
-
-    goto :goto_0
-
-    :cond_0
-    new-instance v0, Llp7;
-
-    check-cast p3, Lbu3;
-
-    invoke-direct {v0, p0, p3}, Llp7;-><init>(Lnp7;Lbu3;)V
-
-    :goto_0
-    iget-object p3, v0, Llp7;->Y:Ljava/lang/Object;
-
-    sget-object v1, Lpx3;->a:Lpx3;
-
-    iget v2, v0, Llp7;->o0:I
-
-    const/4 v3, 0x1
-
-    if-eqz v2, :cond_2
-
-    if-ne v2, v3, :cond_1
-
-    iget p0, v0, Llp7;->X:I
-
-    iget-object p1, v0, Llp7;->o:Lnp7;
-
-    invoke-static {p3}, Lsgg;->Z(Ljava/lang/Object;)V
-
-    goto :goto_1
-
-    :cond_1
-    new-instance p0, Ljava/lang/IllegalStateException;
-
-    const-string p1, "call to \'resume\' before \'invoke\' with coroutine"
-
-    invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p0
-
-    :cond_2
-    invoke-static {p3}, Lsgg;->Z(Ljava/lang/Object;)V
-
-    iget p3, p0, Lnp7;->g:I
-
-    sub-int/2addr p3, v3
-
-    int-to-double v4, p3
-
-    long-to-float p1, p1
-
-    iget-wide p2, p0, Lnp7;->h:J
-
-    iget v2, p0, Lnp7;->g:I
-
-    int-to-long v6, v2
-
-    div-long/2addr p2, v6
-
-    long-to-float p2, p2
-
-    div-float/2addr p1, p2
-
-    float-to-double p1, p1
-
-    invoke-static {p1, p2}, Ljava/lang/Math;->floor(D)D
-
-    move-result-wide p1
-
-    double-to-int p1, p1
-
-    int-to-double p1, p1
-
-    invoke-static {v4, v5, p1, p2}, Ljava/lang/Math;->min(DD)D
-
-    move-result-wide p1
-
-    double-to-int p1, p1
-
-    iget-object p2, p0, Lnp7;->d:Lazd;
-
-    new-instance p3, Lxo5;
-
-    const/4 v2, 0x1
-
-    invoke-direct {p3, p2, p1, v2}, Lxo5;-><init>(Lzm5;II)V
-
-    iput-object p0, v0, Llp7;->o:Lnp7;
-
-    iput p1, v0, Llp7;->X:I
-
-    iput v3, v0, Llp7;->o0:I
-
-    invoke-static {p3, v0}, Lsgg;->t(Lzm5;Lbu3;)Ljava/lang/Object;
-
-    move-result-object p3
-
-    if-ne p3, v1, :cond_3
-
-    return-object v1
-
-    :cond_3
-    move v8, p1
-
-    move-object p1, p0
-
-    move p0, v8
-
-    :goto_1
-    check-cast p3, Ljava/util/List;
-
-    if-eqz p3, :cond_4
-
-    new-instance p2, La36;
-
-    invoke-interface {p3, p0}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, Landroid/graphics/Bitmap;
-
-    iget-object p1, p1, Lnp7;->a:Lz26;
-
-    iget p3, p1, Lz26;->b:I
-
-    iget p1, p1, Lz26;->c:I
-
-    invoke-direct {p2, p3, p1, p0}, La36;-><init>(IILandroid/graphics/Bitmap;)V
-
-    return-object p2
-
-    :cond_4
-    const/4 p0, 0x0
-
-    return-object p0
-.end method
-
-.method public final prepare()V
-    .locals 4
-
-    iget-object v0, p0, Lnp7;->a:Lz26;
-
-    iget-object v0, v0, Lz26;->a:Lief;
-
-    const/4 v1, 0x0
-
-    if-nez v0, :cond_0
-
-    iget-object p0, p0, Lnp7;->b:Ljava/lang/String;
-
-    const-string v0, "You should call init before prepare!"
-
-    invoke-static {p0, v0, v1}, Lg47;->r(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    return-void
-
-    :cond_0
-    new-instance v2, Lmp7;
-
-    invoke-direct {v2, p0, v0, v1}, Lmp7;-><init>(Lnp7;Lief;Lkotlin/coroutines/Continuation;)V
-
-    const/4 v0, 0x3
-
-    iget-object v3, p0, Lnp7;->c:Lkotlinx/coroutines/internal/ContextScope;
-
-    invoke-static {v3, v1, v1, v2, v0}, Lzo3;->E(Lox3;Lhx3;Lrx3;Ll66;I)Ldwd;
-
-    move-result-object v0
-
-    sget-object v1, Lnp7;->i:[Lbc7;
-
-    const/4 v2, 0x0
-
-    aget-object v1, v1, v2
-
-    iget-object v2, p0, Lnp7;->e:Ltkg;
-
-    invoke-virtual {v2, p0, v1, v0}, Ltkg;->g0(Ljava/lang/Object;Lbc7;Ljava/lang/Object;)V
+    invoke-virtual {p1, p0}, Landroid/os/Parcel;->writeInt(I)V
 
     return-void
 .end method

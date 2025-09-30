@@ -3,13 +3,77 @@
 .source "SourceFile"
 
 
+# instance fields
+.field public final a:Landroid/animation/TimeInterpolator;
+
+.field public final b:Landroid/view/View;
+
+.field public final c:I
+
+.field public final d:I
+
+.field public final e:I
+
+.field public f:Lbe0;
+
+
 # direct methods
-.method public static a(Lh78;Ls78;)Z
-    .locals 0
+.method public constructor <init>(Landroid/view/View;)V
+    .locals 3
 
-    invoke-interface {p0, p1}, Lh78;->l(Ls78;)Z
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    move-result p0
+    iput-object p1, p0, Lp78;->b:Landroid/view/View;
 
-    return p0
+    invoke-virtual {p1}, Landroid/view/View;->getContext()Landroid/content/Context;
+
+    move-result-object p1
+
+    sget v0, Ls2c;->motionEasingStandardDecelerateInterpolator:I
+
+    const/4 v1, 0x0
+
+    const/high16 v2, 0x3f800000    # 1.0f
+
+    invoke-static {v1, v1, v1, v2}, Lzza;->b(FFFF)Landroid/view/animation/Interpolator;
+
+    move-result-object v1
+
+    invoke-static {p1, v0, v1}, Lf54;->H(Landroid/content/Context;ILandroid/animation/TimeInterpolator;)Landroid/animation/TimeInterpolator;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lp78;->a:Landroid/animation/TimeInterpolator;
+
+    sget v0, Ls2c;->motionDurationMedium2:I
+
+    const/16 v1, 0x12c
+
+    invoke-static {v0, v1, p1}, Lf54;->G(IILandroid/content/Context;)I
+
+    move-result v0
+
+    iput v0, p0, Lp78;->c:I
+
+    sget v0, Ls2c;->motionDurationShort3:I
+
+    const/16 v1, 0x96
+
+    invoke-static {v0, v1, p1}, Lf54;->G(IILandroid/content/Context;)I
+
+    move-result v0
+
+    iput v0, p0, Lp78;->d:I
+
+    sget v0, Ls2c;->motionDurationShort2:I
+
+    const/16 v1, 0x64
+
+    invoke-static {v0, v1, p1}, Lf54;->G(IILandroid/content/Context;)I
+
+    move-result p1
+
+    iput p1, p0, Lp78;->e:I
+
+    return-void
 .end method

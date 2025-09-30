@@ -3,39 +3,59 @@
 .source "SourceFile"
 
 
+# static fields
+.field public static final a:Lrb3;
+
+.field public static final b:Lsb3;
+
+.field public static final c:Lsb3;
+
+
 # direct methods
-.method public static a(Landroid/widget/CompoundButton;)Landroid/content/res/ColorStateList;
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 2
 
-    invoke-virtual {p0}, Landroid/widget/CompoundButton;->getButtonTintList()Landroid/content/res/ColorStateList;
+    new-instance v0, Lrb3;
 
-    move-result-object p0
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    return-object p0
-.end method
+    sput-object v0, Ltb3;->a:Lrb3;
 
-.method public static b(Landroid/widget/CompoundButton;)Landroid/graphics/PorterDuff$Mode;
-    .locals 0
+    new-instance v0, Lsb3;
 
-    invoke-virtual {p0}, Landroid/widget/CompoundButton;->getButtonTintMode()Landroid/graphics/PorterDuff$Mode;
+    const/4 v1, -0x1
 
-    move-result-object p0
+    invoke-direct {v0, v1}, Lsb3;-><init>(I)V
 
-    return-object p0
-.end method
+    sput-object v0, Ltb3;->b:Lsb3;
 
-.method public static c(Landroid/widget/CompoundButton;Landroid/content/res/ColorStateList;)V
-    .locals 0
+    new-instance v0, Lsb3;
 
-    invoke-virtual {p0, p1}, Landroid/widget/CompoundButton;->setButtonTintList(Landroid/content/res/ColorStateList;)V
+    const/4 v1, 0x1
 
-    return-void
-.end method
+    invoke-direct {v0, v1}, Lsb3;-><init>(I)V
 
-.method public static d(Landroid/widget/CompoundButton;Landroid/graphics/PorterDuff$Mode;)V
-    .locals 0
-
-    invoke-virtual {p0, p1}, Landroid/widget/CompoundButton;->setButtonTintMode(Landroid/graphics/PorterDuff$Mode;)V
+    sput-object v0, Ltb3;->c:Lsb3;
 
     return-void
+.end method
+
+
+# virtual methods
+.method public abstract a(II)Ltb3;
+.end method
+
+.method public abstract b(JJ)Ltb3;
+.end method
+
+.method public abstract c(Ljava/lang/Object;Ljava/lang/Object;Ljava/util/Comparator;)Ltb3;
+.end method
+
+.method public abstract d(ZZ)Ltb3;
+.end method
+
+.method public abstract e(ZZ)Ltb3;
+.end method
+
+.method public abstract f()I
 .end method

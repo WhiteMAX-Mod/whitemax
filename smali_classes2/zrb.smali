@@ -1,54 +1,112 @@
-.class public abstract Lzrb;
-.super Ljava/lang/Object;
+.class public final Lzrb;
+.super Llsb;
+.source "SourceFile"
 
 
-# static fields
-.field public static emoji_sprite_0:I = 0x7f0802e9
+# instance fields
+.field public final a:Ljava/lang/CharSequence;
 
-.field public static emoji_sprite_1:I = 0x7f0802ea
 
-.field public static emoji_sprite_10:I = 0x7f0802eb
+# direct methods
+.method public constructor <init>(Ljava/lang/CharSequence;)V
+    .locals 0
 
-.field public static emoji_sprite_11:I = 0x7f0802ec
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-.field public static emoji_sprite_12:I = 0x7f0802ed
+    iput-object p1, p0, Lzrb;->a:Ljava/lang/CharSequence;
 
-.field public static emoji_sprite_13:I = 0x7f0802ee
+    return-void
+.end method
 
-.field public static emoji_sprite_14:I = 0x7f0802ef
 
-.field public static emoji_sprite_15:I = 0x7f0802f0
+# virtual methods
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 3
 
-.field public static emoji_sprite_16:I = 0x7f0802f1
+    const/4 v0, 0x1
 
-.field public static emoji_sprite_17:I = 0x7f0802f2
+    if-ne p0, p1, :cond_0
 
-.field public static emoji_sprite_18:I = 0x7f0802f3
+    return v0
 
-.field public static emoji_sprite_19:I = 0x7f0802f4
+    :cond_0
+    instance-of v1, p1, Lzrb;
 
-.field public static emoji_sprite_2:I = 0x7f0802f5
+    const/4 v2, 0x0
 
-.field public static emoji_sprite_20:I = 0x7f0802f6
+    if-nez v1, :cond_1
 
-.field public static emoji_sprite_21:I = 0x7f0802f7
+    return v2
 
-.field public static emoji_sprite_22:I = 0x7f0802f8
+    :cond_1
+    check-cast p1, Lzrb;
 
-.field public static emoji_sprite_23:I = 0x7f0802f9
+    iget-object p0, p0, Lzrb;->a:Ljava/lang/CharSequence;
 
-.field public static emoji_sprite_24:I = 0x7f0802fa
+    iget-object p1, p1, Lzrb;->a:Ljava/lang/CharSequence;
 
-.field public static emoji_sprite_3:I = 0x7f0802fb
+    invoke-static {p0, p1}, Lvyg;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-.field public static emoji_sprite_4:I = 0x7f0802fc
+    move-result p0
 
-.field public static emoji_sprite_5:I = 0x7f0802fd
+    if-nez p0, :cond_2
 
-.field public static emoji_sprite_6:I = 0x7f0802fe
+    return v2
 
-.field public static emoji_sprite_7:I = 0x7f0802ff
+    :cond_2
+    return v0
+.end method
 
-.field public static emoji_sprite_8:I = 0x7f080300
+.method public final getItemId()J
+    .locals 2
 
-.field public static emoji_sprite_9:I = 0x7f080301
+    const/16 p0, 0x8
+
+    int-to-long v0, p0
+
+    return-wide v0
+.end method
+
+.method public final hashCode()I
+    .locals 0
+
+    iget-object p0, p0, Lzrb;->a:Ljava/lang/CharSequence;
+
+    invoke-virtual {p0}, Ljava/lang/Object;->hashCode()I
+
+    move-result p0
+
+    return p0
+.end method
+
+.method public final m()I
+    .locals 0
+
+    const/16 p0, 0x8
+
+    return p0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 2
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "ChatDescription(text="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object p0, p0, Lzrb;->a:Ljava/lang/CharSequence;
+
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string p0, ")"
+
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    return-object p0
+.end method

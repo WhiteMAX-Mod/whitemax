@@ -1,70 +1,61 @@
-.class public final synthetic Lfh3;
+.class public final Lfh3;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lv56;
 
-
-# instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Lih3;
+# static fields
+.field public static final a:Lfh3;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lih3;I)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    iput p2, p0, Lfh3;->a:I
+    new-instance v0, Lfh3;
 
-    iput-object p1, p0, Lfh3;->b:Lih3;
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    sput-object v0, Lfh3;->a:Lfh3;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke()Ljava/lang/Object;
+.method public final equals(Ljava/lang/Object;)Z
     .locals 1
 
-    iget v0, p0, Lfh3;->a:I
+    const/4 v0, 0x1
 
-    iget-object p0, p0, Lfh3;->b:Lih3;
+    if-ne p0, p1, :cond_0
 
-    packed-switch v0, :pswitch_data_0
+    return v0
 
-    iget-object p0, p0, Lih3;->a:Landroid/content/Context;
+    :cond_0
+    instance-of p0, p1, Lfh3;
 
-    const-string v0, "phone"
+    if-nez p0, :cond_1
 
-    invoke-virtual {p0, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+    const/4 p0, 0x0
 
-    move-result-object p0
+    return p0
 
-    check-cast p0, Landroid/telephony/TelephonyManager;
+    :cond_1
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 0
+
+    const p0, 0x385d4ca9
+
+    return p0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 0
+
+    const-string p0, "UserSettings"
 
     return-object p0
-
-    :pswitch_0
-    iget-object p0, p0, Lih3;->a:Landroid/content/Context;
-
-    const-string v0, "connectivity"
-
-    invoke-virtual {p0, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, Landroid/net/ConnectivityManager;
-
-    return-object p0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
 .end method

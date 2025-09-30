@@ -1,47 +1,66 @@
-.class public abstract Lbu0;
-.super Ljava/lang/Object;
+.class public final Lbu0;
+.super Ljx3;
 .source "SourceFile"
 
 
-# static fields
-.field public static final synthetic a:I
+# instance fields
+.field public final synthetic X:Lcu0;
+
+.field public Y:I
+
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 4
+.method public constructor <init>(Lcu0;Ljx3;)V
+    .locals 0
 
-    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
+    iput-object p1, p0, Lbu0;->X:Lcu0;
 
-    sget-object v1, Lau0;->a:Lau0;
+    invoke-direct {p0, p2}, Ljx3;-><init>(Lkotlin/coroutines/Continuation;)V
 
-    const/16 v2, 0x1e
+    return-void
+.end method
 
-    if-lt v0, v2, :cond_0
 
-    invoke-virtual {v1, v2}, Lau0;->a(I)I
+# virtual methods
+.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 6
+
+    iput-object p1, p0, Lbu0;->o:Ljava/lang/Object;
+
+    iget p1, p0, Lbu0;->Y:I
+
+    const/high16 v0, -0x80000000
+
+    or-int/2addr p1, v0
+
+    iput p1, p0, Lbu0;->Y:I
+
+    const/4 v2, 0x0
+
+    const-wide/16 v3, 0x0
+
+    iget-object v0, p0, Lbu0;->X:Lcu0;
+
+    const/4 v1, 0x0
+
+    move-object v5, p0
+
+    invoke-virtual/range {v0 .. v5}, Lcu0;->C(Lu62;IJLjx3;)Ljava/lang/Object;
+
+    move-result-object p0
+
+    sget-object p1, Lz04;->a:Lz04;
+
+    if-ne p0, p1, :cond_0
+
+    return-object p0
 
     :cond_0
-    if-lt v0, v2, :cond_1
+    new-instance p1, Lt62;
 
-    const/16 v3, 0x1f
+    invoke-direct {p1, p0}, Lt62;-><init>(Ljava/lang/Object;)V
 
-    invoke-virtual {v1, v3}, Lau0;->a(I)I
-
-    :cond_1
-    if-lt v0, v2, :cond_2
-
-    const/16 v3, 0x21
-
-    invoke-virtual {v1, v3}, Lau0;->a(I)I
-
-    :cond_2
-    if-lt v0, v2, :cond_3
-
-    const v0, 0xf4240
-
-    invoke-virtual {v1, v0}, Lau0;->a(I)I
-
-    :cond_3
-    return-void
+    return-object p1
 .end method

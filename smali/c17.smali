@@ -1,66 +1,189 @@
 .class public final Lc17;
-.super Landroid/view/inputmethod/InputConnectionWrapper;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Ljava/io/Closeable;
 
 
 # instance fields
-.field public final synthetic a:Ld17;
+.field public final a:Ljava/net/URL;
+
+.field public volatile b:Ljava/util/concurrent/Future;
+
+.field public c:Lz8h;
 
 
 # direct methods
-.method public constructor <init>(Landroid/view/inputmethod/InputConnection;Ld17;)V
+.method public constructor <init>(Ljava/net/URL;)V
     .locals 0
 
-    iput-object p2, p0, Lc17;->a:Ld17;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 p2, 0x0
-
-    invoke-direct {p0, p1, p2}, Landroid/view/inputmethod/InputConnectionWrapper;-><init>(Landroid/view/inputmethod/InputConnection;Z)V
+    iput-object p1, p0, Lc17;->a:Ljava/net/URL;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final commitContent(Landroid/view/inputmethod/InputContentInfo;ILandroid/os/Bundle;)Z
-    .locals 3
+.method public final close()V
+    .locals 1
 
-    if-nez p1, :cond_0
+    iget-object p0, p0, Lc17;->b:Ljava/util/concurrent/Future;
 
-    const/4 v0, 0x0
+    const/4 v0, 0x1
 
-    goto :goto_0
+    invoke-interface {p0, v0}, Ljava/util/concurrent/Future;->cancel(Z)Z
 
-    :cond_0
-    new-instance v0, Ltkg;
+    return-void
+.end method
 
-    new-instance v1, Lsag;
+.method public final m()Landroid/graphics/Bitmap;
+    .locals 4
 
-    const/16 v2, 0x11
+    const/4 v0, 0x4
 
-    invoke-direct {v1, v2, p1}, Lsag;-><init>(ILjava/lang/Object;)V
+    const-string v1, "FirebaseMessaging"
 
-    const/16 v2, 0xf
-
-    invoke-direct {v0, v2, v1}, Ltkg;-><init>(ILjava/lang/Object;)V
-
-    :goto_0
-    iget-object v1, p0, Lc17;->a:Ld17;
-
-    invoke-interface {v1, v0, p2, p3}, Ld17;->h(Ltkg;ILandroid/os/Bundle;)Z
+    invoke-static {v1, v0}, Landroid/util/Log;->isLoggable(Ljava/lang/String;I)Z
 
     move-result v0
 
+    iget-object p0, p0, Lc17;->a:Ljava/net/URL;
+
+    if-eqz v0, :cond_0
+
+    invoke-static {p0}, Ljava/util/Objects;->toString(Ljava/lang/Object;)Ljava/lang/String;
+
+    :cond_0
+    invoke-virtual {p0}, Ljava/net/URL;->openConnection()Ljava/net/URLConnection;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/net/URLConnection;->getContentLength()I
+
+    move-result v2
+
+    const/high16 v3, 0x100000
+
+    if-gt v2, v3, :cond_7
+
+    invoke-virtual {v0}, Ljava/net/URLConnection;->getInputStream()Ljava/io/InputStream;
+
+    move-result-object v0
+
+    :try_start_0
+    new-instance v2, Ldw0;
+
+    invoke-direct {v2, v0}, Ldw0;-><init>(Ljava/io/InputStream;)V
+
+    invoke-static {v2}, Ly30;->I(Ldw0;)[B
+
+    move-result-object v2
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
     if-eqz v0, :cond_1
 
-    const/4 p0, 0x1
-
-    return p0
+    invoke-virtual {v0}, Ljava/io/InputStream;->close()V
 
     :cond_1
-    invoke-super {p0, p1, p2, p3}, Landroid/view/inputmethod/InputConnectionWrapper;->commitContent(Landroid/view/inputmethod/InputContentInfo;ILandroid/os/Bundle;)Z
+    const/4 v0, 0x2
 
-    move-result p0
+    invoke-static {v1, v0}, Landroid/util/Log;->isLoggable(Ljava/lang/String;I)Z
 
-    return p0
+    move-result v0
+
+    if-eqz v0, :cond_2
+
+    array-length v0, v2
+
+    invoke-static {p0}, Ljava/util/Objects;->toString(Ljava/lang/Object;)Ljava/lang/String;
+
+    :cond_2
+    array-length v0, v2
+
+    if-gt v0, v3, :cond_5
+
+    const/4 v0, 0x0
+
+    array-length v3, v2
+
+    invoke-static {v2, v0, v3}, Landroid/graphics/BitmapFactory;->decodeByteArray([BII)Landroid/graphics/Bitmap;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_4
+
+    const/4 v2, 0x3
+
+    invoke-static {v1, v2}, Landroid/util/Log;->isLoggable(Ljava/lang/String;I)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_3
+
+    invoke-static {p0}, Ljava/util/Objects;->toString(Ljava/lang/Object;)Ljava/lang/String;
+
+    :cond_3
+    return-object v0
+
+    :cond_4
+    new-instance v0, Ljava/io/IOException;
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    const-string v2, "Failed to decode image: "
+
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-direct {v0, p0}, Ljava/io/IOException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+
+    :cond_5
+    new-instance p0, Ljava/io/IOException;
+
+    const-string v0, "Image exceeds max size of 1048576"
+
+    invoke-direct {p0, v0}, Ljava/io/IOException;-><init>(Ljava/lang/String;)V
+
+    throw p0
+
+    :catchall_0
+    move-exception p0
+
+    if-eqz v0, :cond_6
+
+    :try_start_1
+    invoke-virtual {v0}, Ljava/io/InputStream;->close()V
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_1
+
+    goto :goto_0
+
+    :catchall_1
+    move-exception v0
+
+    invoke-virtual {p0, v0}, Ljava/lang/Throwable;->addSuppressed(Ljava/lang/Throwable;)V
+
+    :cond_6
+    :goto_0
+    throw p0
+
+    :cond_7
+    new-instance p0, Ljava/io/IOException;
+
+    const-string v0, "Content-Length exceeds max size of 1048576"
+
+    invoke-direct {p0, v0}, Ljava/io/IOException;-><init>(Ljava/lang/String;)V
+
+    throw p0
 .end method

@@ -1,124 +1,169 @@
-.class public final Lp59;
+.class public final synthetic Lp59;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lq59;
+.implements Landroid/view/View$OnClickListener;
 
 
 # instance fields
-.field public final a:J
+.field public final synthetic a:I
 
-.field public final b:Ljava/lang/String;
+.field public final synthetic b:Lone/me/sdk/messagewrite/MessageWriteWidget;
 
 
 # direct methods
-.method public constructor <init>(JLjava/lang/String;)V
+.method public synthetic constructor <init>(Lone/me/sdk/messagewrite/MessageWriteWidget;I)V
     .locals 0
 
+    iput p2, p0, Lp59;->a:I
+
+    iput-object p1, p0, Lp59;->b:Lone/me/sdk/messagewrite/MessageWriteWidget;
+
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-wide p1, p0, Lp59;->a:J
-
-    iput-object p3, p0, Lp59;->b:Ljava/lang/String;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 7
+.method public final onClick(Landroid/view/View;)V
+    .locals 4
 
-    const/4 v0, 0x1
+    iget p1, p0, Lp59;->a:I
 
-    if-ne p0, p1, :cond_0
+    packed-switch p1, :pswitch_data_0
 
-    return v0
+    iget-object p0, p0, Lp59;->b:Lone/me/sdk/messagewrite/MessageWriteWidget;
+
+    iget-object p1, p0, Lone/me/sdk/messagewrite/MessageWriteWidget;->X:Lcx7;
+
+    invoke-virtual {p0}, Lone/me/sdk/messagewrite/MessageWriteWidget;->C0()Lk19;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lk19;->getText()Ljava/lang/CharSequence;
+
+    move-result-object v0
+
+    iget-object p1, p1, Lcx7;->f:Lmgd;
+
+    iput-object v0, p1, Lmgd;->k:Ljava/lang/CharSequence;
+
+    invoke-virtual {p0}, Lone/me/sdk/messagewrite/MessageWriteWidget;->H0()Ln59;
+
+    move-result-object p0
+
+    iget-object p0, p0, Ln59;->z0:Lv85;
+
+    sget-object p1, Ly49;->a:Ly49;
+
+    invoke-static {p0, p1}, Lx7g;->o(Lv85;Ljava/lang/Object;)V
+
+    return-void
+
+    :pswitch_0
+    iget-object p0, p0, Lp59;->b:Lone/me/sdk/messagewrite/MessageWriteWidget;
+
+    iget p1, p0, Lone/me/sdk/messagewrite/MessageWriteWidget;->D0:I
+
+    if-nez p1, :cond_0
+
+    goto :goto_0
 
     :cond_0
-    instance-of v1, p1, Lp59;
+    invoke-virtual {p0}, Lone/me/sdk/messagewrite/MessageWriteWidget;->H0()Ln59;
+
+    move-result-object v0
+
+    invoke-virtual {p0}, Lone/me/sdk/messagewrite/MessageWriteWidget;->C0()Lk19;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Lk19;->getMessageState()Lrce;
+
+    move-result-object v1
+
+    invoke-interface {v1}, Lrce;->getValue()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Ljava/lang/CharSequence;
+
+    invoke-virtual {p0}, Lone/me/sdk/messagewrite/MessageWriteWidget;->C0()Lk19;
+
+    move-result-object p0
+
+    invoke-virtual {p0}, Lk19;->getMessagePosition()Lrce;
+
+    move-result-object p0
+
+    invoke-interface {p0}, Lrce;->getValue()Ljava/lang/Object;
+
+    move-result-object p0
+
+    check-cast p0, Ljava/lang/Integer;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    invoke-static {p1}, Lmw1;->t(I)I
+
+    move-result p1
 
     const/4 v2, 0x0
 
-    if-nez v1, :cond_1
+    if-eqz p1, :cond_3
 
-    return v2
+    const/4 v3, 0x1
+
+    if-eq p1, v3, :cond_2
+
+    const/4 p0, 0x2
+
+    if-ne p1, p0, :cond_1
+
+    iget-object p0, v0, Ln59;->z0:Lv85;
+
+    new-instance p1, Lx49;
+
+    invoke-direct {p1}, Ljava/lang/Object;-><init>()V
+
+    invoke-static {p0, p1}, Lx7g;->o(Lv85;Ljava/lang/Object;)V
+
+    goto :goto_0
 
     :cond_1
-    check-cast p1, Lp59;
+    new-instance p0, Lkotlin/NoWhenBranchMatchedException;
 
-    iget-wide v3, p0, Lp59;->a:J
+    invoke-direct {p0}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
 
-    iget-wide v5, p1, Lp59;->a:J
-
-    cmp-long v1, v3, v5
-
-    if-eqz v1, :cond_2
-
-    return v2
+    throw p0
 
     :cond_2
-    iget-object p0, p0, Lp59;->b:Ljava/lang/String;
+    iget-object p1, v0, Ln59;->P0:Lyce;
 
-    iget-object p1, p1, Lp59;->b:Ljava/lang/String;
+    new-instance v3, Lq49;
 
-    invoke-static {p0, p1}, Lxq7;->d(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-direct {v3, v1, p0}, Lq49;-><init>(Ljava/lang/CharSequence;Ljava/lang/Integer;)V
 
-    move-result p0
+    invoke-virtual {p1, v2, v3}, Lyce;->m(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    if-nez p0, :cond_3
+    invoke-virtual {v0, v2}, Ln59;->D(Ljava/lang/Long;)V
 
-    return v2
+    goto :goto_0
 
     :cond_3
-    return v0
-.end method
+    const/16 p0, 0xe
 
-.method public final hashCode()I
-    .locals 2
+    invoke-static {v0, v2, v2, v2, p0}, Ln59;->C(Ln59;Ljava/lang/Long;Ljava/lang/CharSequence;Ljava/lang/Integer;I)V
 
-    iget-wide v0, p0, Lp59;->a:J
+    :goto_0
+    return-void
 
-    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
+    nop
 
-    move-result v0
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget-object p0, p0, Lp59;->b:Ljava/lang/String;
-
-    invoke-virtual {p0}, Ljava/lang/String;->hashCode()I
-
-    move-result p0
-
-    add-int/2addr p0, v0
-
-    return p0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 4
-
-    const-string v0, "DownloadFailed(messageId="
-
-    const-string v1, ", attachLocalId="
-
-    iget-wide v2, p0, Lp59;->a:J
-
-    iget-object p0, p0, Lp59;->b:Ljava/lang/String;
-
-    invoke-static {v0, v2, v3, v1, p0}, Lp3a;->k(Ljava/lang/String;JLjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object p0
-
-    const-string v0, ")"
-
-    invoke-virtual {p0, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

@@ -3,92 +3,52 @@
 .source "SourceFile"
 
 # interfaces
-.implements Landroid/os/Parcelable;
-
-
-# static fields
-.field public static final CREATOR:Landroid/os/Parcelable$Creator;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Landroid/os/Parcelable$Creator<",
-            "Lk16;",
-            ">;"
-        }
-    .end annotation
-.end field
+.implements Le16;
 
 
 # instance fields
-.field public final a:Landroid/os/Bundle;
+.field public final a:Ljava/util/ArrayList;
+
+.field public final b:I
+
+.field public final c:J
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public constructor <init>(Ljava/util/ArrayList;)V
     .locals 2
 
-    new-instance v0, Ly;
-
-    const/4 v1, 0x4
-
-    invoke-direct {v0, v1}, Ly;-><init>(I)V
-
-    sput-object v0, Lk16;->CREATOR:Landroid/os/Parcelable$Creator;
-
-    return-void
-.end method
-
-.method public constructor <init>(Landroid/os/Bundle;)V
-    .locals 0
-
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
-    iput-object p1, p0, Lk16;->a:Landroid/os/Bundle;
+    iput-object p1, p0, Lk16;->a:Ljava/util/ArrayList;
 
-    return-void
-.end method
+    sget p1, Lw5c;->oneme_folder_widget_section_view_type:I
 
-.method public constructor <init>(Landroid/os/Parcel;Ljava/lang/ClassLoader;)V
-    .locals 0
+    iput p1, p0, Lk16;->b:I
 
-    .line 3
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    sget p1, Lw5c;->oneme_folder_widget_section_id:I
 
-    .line 4
-    invoke-virtual {p1}, Landroid/os/Parcel;->readBundle()Landroid/os/Bundle;
+    int-to-long v0, p1
 
-    move-result-object p1
+    iput-wide v0, p0, Lk16;->c:J
 
-    iput-object p1, p0, Lk16;->a:Landroid/os/Bundle;
-
-    if-eqz p2, :cond_0
-
-    if-eqz p1, :cond_0
-
-    .line 5
-    invoke-virtual {p1, p2}, Landroid/os/Bundle;->setClassLoader(Ljava/lang/ClassLoader;)V
-
-    :cond_0
     return-void
 .end method
 
 
 # virtual methods
-.method public final describeContents()I
-    .locals 0
+.method public final getItemId()J
+    .locals 2
 
-    const/4 p0, 0x0
+    iget-wide v0, p0, Lk16;->c:J
 
-    return p0
+    return-wide v0
 .end method
 
-.method public final writeToParcel(Landroid/os/Parcel;I)V
+.method public final m()I
     .locals 0
 
-    iget-object p0, p0, Lk16;->a:Landroid/os/Bundle;
+    iget p0, p0, Lk16;->b:I
 
-    invoke-virtual {p1, p0}, Landroid/os/Parcel;->writeBundle(Landroid/os/Bundle;)V
-
-    return-void
+    return p0
 .end method

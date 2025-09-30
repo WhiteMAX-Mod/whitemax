@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lam4;
+.implements Loq4;
 
 
 # instance fields
@@ -23,7 +23,7 @@
 
 
 # virtual methods
-.method public final f()V
+.method public final e()V
     .locals 1
 
     invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
@@ -64,7 +64,7 @@
     :catchall_0
     move-exception p0
 
-    invoke-static {p0}, Lg45;->f(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;
+    invoke-static {p0}, Ls95;->f(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;
 
     move-result-object p0
 
@@ -81,7 +81,7 @@
     .end packed-switch
 .end method
 
-.method public final g()Z
+.method public final f()Z
     .locals 0
 
     invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
@@ -113,7 +113,7 @@
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {p0}, Lt6;->g()Z
+    invoke-virtual {p0}, Lt6;->f()Z
 
     move-result v1
 
@@ -146,7 +146,7 @@
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {p0}, Lt6;->g()Z
+    invoke-virtual {p0}, Lt6;->f()Z
 
     move-result v1
 

@@ -1,70 +1,37 @@
 .class public final Lm80;
-.super Ljava/lang/Object;
+.super Lnef;
 .source "SourceFile"
-
-# interfaces
-.implements Lqw9;
-
-
-# static fields
-.field public static final a:Lm80;
-
-.field public static final b:Lte5;
-
-.field public static final c:Lte5;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>()V
+    .locals 3
 
-    new-instance v0, Lm80;
+    invoke-direct {p0}, Lnef;-><init>()V
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    const/4 v0, 0x1
 
-    sput-object v0, Lm80;->a:Lm80;
+    invoke-virtual {p0, v0}, Lnef;->V(I)V
 
-    const-string v0, "networkType"
+    new-instance v1, Lzf5;
 
-    invoke-static {v0}, Lte5;->a(Ljava/lang/String;)Lte5;
+    const/4 v2, 0x2
 
-    move-result-object v0
+    invoke-direct {v1, v2}, Lzf5;-><init>(I)V
 
-    sput-object v0, Lm80;->b:Lte5;
+    invoke-virtual {p0, v1}, Lnef;->S(Lfef;)V
 
-    const-string v0, "mobileSubtype"
+    new-instance v1, Le42;
 
-    invoke-static {v0}, Lte5;->a(Ljava/lang/String;)Lte5;
+    invoke-direct {v1}, Lfef;-><init>()V
 
-    move-result-object v0
+    invoke-virtual {p0, v1}, Lnef;->S(Lfef;)V
 
-    sput-object v0, Lm80;->c:Lte5;
+    new-instance v1, Lzf5;
 
-    return-void
-.end method
+    invoke-direct {v1, v0}, Lzf5;-><init>(I)V
 
-
-# virtual methods
-.method public final a(Ljava/lang/Object;Ljava/lang/Object;)V
-    .locals 1
-
-    check-cast p1, Lfm9;
-
-    check-cast p2, Lrw9;
-
-    check-cast p1, Lta0;
-
-    iget-object p0, p1, Lta0;->a:Lem9;
-
-    sget-object v0, Lm80;->b:Lte5;
-
-    invoke-interface {p2, v0, p0}, Lrw9;->a(Lte5;Ljava/lang/Object;)Lrw9;
-
-    sget-object p0, Lm80;->c:Lte5;
-
-    iget-object p1, p1, Lta0;->b:Ldm9;
-
-    invoke-interface {p2, p0, p1}, Lrw9;->a(Lte5;Ljava/lang/Object;)Lrw9;
+    invoke-virtual {p0, v1}, Lnef;->S(Lfef;)V
 
     return-void
 .end method

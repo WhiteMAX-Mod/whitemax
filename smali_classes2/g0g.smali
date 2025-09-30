@@ -1,87 +1,55 @@
 .class public final Lg0g;
-.super Ljava/lang/Object;
+.super Ljx3;
 .source "SourceFile"
-
-# interfaces
-.implements Lm0g;
 
 
 # instance fields
-.field public final a:Ljava/lang/String;
+.field public X:Ljava/io/Serializable;
+
+.field public Y:Ljava/lang/String;
+
+.field public Z:Lyo9;
+
+.field public o:Ll0g;
+
+.field public synthetic r0:Ljava/lang/Object;
+
+.field public final synthetic s0:Ll0g;
+
+.field public t0:I
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;)V
+.method public constructor <init>(Ll0g;Ljx3;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lg0g;->s0:Ll0g;
 
-    iput-object p1, p0, Lg0g;->a:Ljava/lang/String;
+    invoke-direct {p0, p2}, Ljx3;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 3
+.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    const/4 v0, 0x1
+    iput-object p1, p0, Lg0g;->r0:Ljava/lang/Object;
 
-    if-ne p0, p1, :cond_0
+    iget p1, p0, Lg0g;->t0:I
 
-    return v0
+    const/high16 v0, -0x80000000
 
-    :cond_0
-    instance-of v1, p1, Lg0g;
+    or-int/2addr p1, v0
 
-    const/4 v2, 0x0
+    iput p1, p0, Lg0g;->t0:I
 
-    if-nez v1, :cond_1
+    iget-object p1, p0, Lg0g;->s0:Ll0g;
 
-    return v2
+    const/4 v0, 0x0
 
-    :cond_1
-    check-cast p1, Lg0g;
-
-    iget-object p0, p0, Lg0g;->a:Ljava/lang/String;
-
-    iget-object p1, p1, Lg0g;->a:Ljava/lang/String;
-
-    invoke-static {p0, p1}, Lxq7;->d(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p0
-
-    if-nez p0, :cond_2
-
-    return v2
-
-    :cond_2
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 0
-
-    iget-object p0, p0, Lg0g;->a:Ljava/lang/String;
-
-    invoke-virtual {p0}, Ljava/lang/String;->hashCode()I
-
-    move-result p0
-
-    return p0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 2
-
-    const-string v0, "ShowCloseDialog(appName="
-
-    const-string v1, ")"
-
-    iget-object p0, p0, Lg0g;->a:Ljava/lang/String;
-
-    invoke-static {v0, p0, v1}, Lu88;->k(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p1, v0, p0}, Ll0g;->b(Ll0g;Los7;Ljx3;)Ljava/lang/Object;
 
     move-result-object p0
 

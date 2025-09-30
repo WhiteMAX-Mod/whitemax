@@ -1,90 +1,214 @@
 .class public final Lcz8;
-.super Lqde;
+.super Ljava/lang/Object;
 .source "SourceFile"
-
-# interfaces
-.implements Ll66;
 
 
 # instance fields
-.field public synthetic X:Ljava/lang/Object;
+.field public final a:Lcl7;
 
-.field public final synthetic Y:Lone/me/sdk/messagewrite/MessageWriteWidget;
+.field public final b:Lcl7;
 
 
 # direct methods
-.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/sdk/messagewrite/MessageWriteWidget;)V
+.method public constructor <init>(Lcl7;Lcl7;)V
     .locals 0
 
-    iput-object p2, p0, Lcz8;->Y:Lone/me/sdk/messagewrite/MessageWriteWidget;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 p2, 0x2
+    iput-object p1, p0, Lcz8;->a:Lcl7;
 
-    invoke-direct {p0, p2, p1}, Lqde;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-object p2, p0, Lcz8;->b:Lcl7;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final a(JILj7e;I)V
+    .locals 3
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    iget-object v0, p0, Lcz8;->a:Lcl7;
 
-    invoke-virtual {p0, p1, p2}, Lcz8;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    invoke-interface {v0}, Lcl7;->getValue()Ljava/lang/Object;
 
-    move-result-object p0
+    move-result-object v0
 
-    check-cast p0, Lcz8;
+    check-cast v0, Lzc;
 
-    sget-object p1, Le5f;->a:Le5f;
-
-    invoke-virtual {p0, p1}, Lcz8;->o(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p1
-.end method
-
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 1
-
-    new-instance v0, Lcz8;
-
-    iget-object p0, p0, Lcz8;->Y:Lone/me/sdk/messagewrite/MessageWriteWidget;
-
-    invoke-direct {v0, p2, p0}, Lcz8;-><init>(Lkotlin/coroutines/Continuation;Lone/me/sdk/messagewrite/MessageWriteWidget;)V
-
-    iput-object p1, v0, Lcz8;->X:Ljava/lang/Object;
-
-    return-object v0
-.end method
-
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 2
-
-    invoke-static {p1}, Lsgg;->Z(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Lcz8;->X:Ljava/lang/Object;
-
-    check-cast p1, Le5f;
-
-    sget-object p1, Lone/me/sdk/messagewrite/MessageWriteWidget;->C0:[Lbc7;
-
-    iget-object p0, p0, Lcz8;->Y:Lone/me/sdk/messagewrite/MessageWriteWidget;
-
-    invoke-virtual {p0}, Lone/me/sdk/messagewrite/MessageWriteWidget;->t0()Lpu8;
+    invoke-static {p1, p2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object p1
 
-    new-instance v0, Lwz0;
+    new-instance p2, Lpxa;
 
-    const/4 v1, 0x5
+    const-string v1, "message_id"
 
-    invoke-direct {v0, v1, p0}, Lwz0;-><init>(ILjava/lang/Object;)V
+    invoke-direct {p2, v1, p1}, Lpxa;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
 
-    invoke-static {p1, v0}, Lq14;->v(Landroid/view/ViewGroup;Lx56;)V
+    const/4 p1, 0x1
 
-    sget-object p0, Le5f;->a:Le5f;
+    if-eq p3, p1, :cond_1
 
-    return-object p0
+    const/4 p1, 0x2
+
+    if-eq p3, p1, :cond_1
+
+    const/4 p1, 0x3
+
+    if-ne p3, p1, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    const/4 p0, 0x0
+
+    throw p0
+
+    :cond_1
+    :goto_0
+    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object p1
+
+    new-instance p3, Lpxa;
+
+    const-string v1, "element_type"
+
+    invoke-direct {p3, v1, p1}, Lpxa;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+
+    iget-wide v1, p4, Lj7e;->a:J
+
+    invoke-static {v1, v2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object p1
+
+    new-instance v1, Lpxa;
+
+    const-string v2, "source_id"
+
+    invoke-direct {v1, v2, p1}, Lpxa;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+
+    iget p1, p4, Lj7e;->b:I
+
+    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object p1
+
+    new-instance p4, Lpxa;
+
+    const-string v2, "source_type"
+
+    invoke-direct {p4, v2, p1}, Lpxa;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+
+    filled-new-array {p2, p3, v1, p4}, [Lpxa;
+
+    move-result-object p1
+
+    invoke-static {p1}, Lw7;->a([Lpxa;)Ltr;
+
+    move-result-object p1
+
+    new-instance p2, Lxa7;
+
+    invoke-direct {p2}, Ljava/lang/Object;-><init>()V
+
+    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+
+    move-result-wide p3
+
+    iput-wide p3, p2, Lxa7;->a:J
+
+    const-string p3, "MESSAGE_CLICKABLE_ELEMENT_ACTIONS"
+
+    iput-object p3, p2, Lxa7;->c:Ljava/lang/String;
+
+    const/4 p3, 0x1
+
+    if-eq p5, p3, :cond_6
+
+    const/4 p3, 0x2
+
+    if-eq p5, p3, :cond_5
+
+    const/4 p3, 0x3
+
+    if-eq p5, p3, :cond_4
+
+    const/4 p3, 0x4
+
+    if-eq p5, p3, :cond_3
+
+    const/4 p3, 0x5
+
+    if-ne p5, p3, :cond_2
+
+    const-string p3, "clicked_call"
+
+    goto :goto_1
+
+    :cond_2
+    const/4 p0, 0x0
+
+    throw p0
+
+    :cond_3
+    const-string p3, "clicked_open_mail"
+
+    goto :goto_1
+
+    :cond_4
+    const-string p3, "clicked_open_link"
+
+    goto :goto_1
+
+    :cond_5
+    const-string p3, "clicked_copy"
+
+    goto :goto_1
+
+    :cond_6
+    const-string p3, "clicked_clickable_element"
+
+    :goto_1
+    iput-object p3, p2, Lxa7;->o:Ljava/lang/String;
+
+    iget-object p0, p0, Lcz8;->b:Lcl7;
+
+    invoke-interface {p0}, Lcl7;->getValue()Ljava/lang/Object;
+
+    move-result-object p3
+
+    check-cast p3, Lf53;
+
+    check-cast p3, Lgad;
+
+    invoke-virtual {p3}, Lgad;->q()J
+
+    move-result-wide p3
+
+    iput-wide p3, p2, Lxa7;->b:J
+
+    invoke-virtual {p2, p1}, Lxa7;->b(Ljava/util/Map;)V
+
+    invoke-interface {p0}, Lcl7;->getValue()Ljava/lang/Object;
+
+    move-result-object p0
+
+    check-cast p0, Lf53;
+
+    check-cast p0, Lh53;
+
+    invoke-virtual {p0}, Lh53;->z()J
+
+    move-result-wide p0
+
+    iput-wide p0, p2, Lxa7;->X:J
+
+    invoke-virtual {p2}, Lxa7;->d()Llz7;
+
+    move-result-object p0
+
+    invoke-virtual {v0, p0}, Lzc;->j(Llz7;)Z
+
+    return-void
 .end method

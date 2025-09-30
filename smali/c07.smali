@@ -1,116 +1,106 @@
 .class public final Lc07;
-.super Lnv8;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public a:[B
+# static fields
+.field public static final a:Lh07;
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 1
+.method static constructor <clinit>()V
+    .locals 5
 
-    invoke-direct {p0}, Lnv8;-><init>()V
+    new-instance v0, Landroid/util/Size;
 
-    sget-object v0, Lwqd;->k:[B
+    const/16 v1, 0x280
 
-    iput-object v0, p0, Lc07;->a:[B
+    const/16 v2, 0x1e0
 
-    const/4 v0, -0x1
+    invoke-direct {v0, v1, v2}, Landroid/util/Size;-><init>(II)V
 
-    iput v0, p0, Lnv8;->cachedSize:I
+    sget-object v1, Lxq5;->c:Lxq5;
+
+    new-instance v2, Lbuc;
+
+    sget-object v3, Ll4e;->c:Landroid/util/Size;
+
+    invoke-direct {v2}, Ljava/lang/Object;-><init>()V
+
+    iput-object v3, v2, Lbuc;->a:Landroid/util/Size;
+
+    const/4 v3, 0x1
+
+    iput v3, v2, Lbuc;->b:I
+
+    new-instance v4, Lauc;
+
+    invoke-direct {v4, v1, v2}, Lauc;-><init>(Lxq5;Lbuc;)V
+
+    new-instance v1, Lb07;
+
+    const/4 v2, 0x0
+
+    invoke-direct {v1, v2}, Lb07;-><init>(I)V
+
+    sget-object v2, Lt17;->D:Ld90;
+
+    iget-object v1, v1, Lb07;->b:Lko9;
+
+    invoke-virtual {v1, v2, v0}, Lko9;->m(Ld90;Ljava/lang/Object;)V
+
+    sget-object v0, Loqf;->j0:Ld90;
+
+    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v1, v0, v2}, Lko9;->m(Ld90;Ljava/lang/Object;)V
+
+    sget-object v0, Lt17;->y:Ld90;
+
+    const/4 v2, 0x0
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v1, v0, v2}, Lko9;->m(Ld90;Ljava/lang/Object;)V
+
+    sget-object v0, Lt17;->G:Ld90;
+
+    invoke-virtual {v1, v0, v4}, Lko9;->m(Ld90;Ljava/lang/Object;)V
+
+    sget-object v0, Lgz4;->d:Lgz4;
+
+    invoke-virtual {v0, v0}, Lgz4;->equals(Ljava/lang/Object;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_0
+
+    sget-object v2, Lj17;->x:Ld90;
+
+    invoke-virtual {v1, v2, v0}, Lko9;->m(Ld90;Ljava/lang/Object;)V
+
+    new-instance v0, Lh07;
+
+    invoke-static {v1}, Lcva;->a(Lzf3;)Lcva;
+
+    move-result-object v1
+
+    invoke-direct {v0, v1}, Lh07;-><init>(Lcva;)V
+
+    sput-object v0, Lc07;->a:Lh07;
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final computeSerializedSize()I
-    .locals 2
-
-    iget-object v0, p0, Lc07;->a:[B
-
-    sget-object v1, Lwqd;->k:[B
-
-    invoke-static {v0, v1}, Ljava/util/Arrays;->equals([B[B)Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    const/4 v0, 0x1
-
-    iget-object p0, p0, Lc07;->a:[B
-
-    invoke-static {v0, p0}, Lq33;->b(I[B)I
-
-    move-result p0
-
-    return p0
 
     :cond_0
-    const/4 p0, 0x0
+    new-instance v0, Ljava/lang/UnsupportedOperationException;
 
-    return p0
-.end method
+    const-string v1, "ImageAnalysis currently only supports SDR"
 
-.method public final mergeFrom(Lp33;)Lnv8;
-    .locals 2
+    invoke-direct {v0, v1}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
 
-    :cond_0
-    :goto_0
-    invoke-virtual {p1}, Lp33;->s()I
-
-    move-result v0
-
-    if-eqz v0, :cond_2
-
-    const/16 v1, 0xa
-
-    if-eq v0, v1, :cond_1
-
-    invoke-virtual {p1, v0}, Lp33;->u(I)Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    goto :goto_1
-
-    :cond_1
-    invoke-virtual {p1}, Lp33;->g()[B
-
-    move-result-object v0
-
-    iput-object v0, p0, Lc07;->a:[B
-
-    goto :goto_0
-
-    :cond_2
-    :goto_1
-    return-object p0
-.end method
-
-.method public final writeTo(Lq33;)V
-    .locals 2
-
-    iget-object v0, p0, Lc07;->a:[B
-
-    sget-object v1, Lwqd;->k:[B
-
-    invoke-static {v0, v1}, Ljava/util/Arrays;->equals([B[B)Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    const/4 v0, 0x1
-
-    iget-object p0, p0, Lc07;->a:[B
-
-    invoke-virtual {p1, v0, p0}, Lq33;->s(I[B)V
-
-    :cond_0
-    return-void
+    throw v0
 .end method

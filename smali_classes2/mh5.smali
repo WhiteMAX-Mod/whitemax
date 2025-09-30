@@ -1,80 +1,158 @@
-.class public final Lmh5;
-.super Lqde;
+.class public final synthetic Lmh5;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Ll66;
+.implements Lc6;
 
 
 # instance fields
-.field public synthetic X:Ljava/lang/Object;
+.field public final synthetic a:I
 
-.field public final synthetic Y:Lnh5;
+.field public final synthetic b:Ljava/util/List;
 
 
 # direct methods
-.method public constructor <init>(Lnh5;Lkotlin/coroutines/Continuation;)V
+.method public synthetic constructor <init>(ILjava/util/List;)V
     .locals 0
 
-    iput-object p1, p0, Lmh5;->Y:Lnh5;
+    iput p1, p0, Lmh5;->a:I
 
-    const/4 p1, 0x2
+    iput-object p2, p0, Lmh5;->b:Ljava/util/List;
 
-    invoke-direct {p0, p1, p2}, Lqde;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final run()V
+    .locals 4
 
-    check-cast p1, Lqz;
+    iget v0, p0, Lmh5;->a:I
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    const-string v1, "vh5"
 
-    invoke-virtual {p0, p1, p2}, Lmh5;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    const-string v2, "kge"
+
+    const-string v3, "oi5"
+
+    iget-object p0, p0, Lmh5;->b:Ljava/util/List;
+
+    packed-switch v0, :pswitch_data_0
+
+    const-string v0, "awaitNoTasksByTypes: finished for types=%s"
+
+    filled-new-array {p0}, [Ljava/lang/Object;
 
     move-result-object p0
 
-    check-cast p0, Lmh5;
+    const-string v1, "o0f"
 
-    sget-object p1, Le5f;->a:Le5f;
+    invoke-static {v1, v0, p0}, Ljtg;->k(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    invoke-virtual {p0, p1}, Lmh5;->o(Ljava/lang/Object;)Ljava/lang/Object;
+    return-void
 
-    return-object p1
-.end method
+    :pswitch_0
+    const-string v0, "storeStickerSetsFromServer: success: %s"
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 1
+    filled-new-array {p0}, [Ljava/lang/Object;
 
-    new-instance v0, Lmh5;
+    move-result-object p0
 
-    iget-object p0, p0, Lmh5;->Y:Lnh5;
+    invoke-static {v2, v0, p0}, Ljtg;->k(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    invoke-direct {v0, p0, p2}, Lmh5;-><init>(Lnh5;Lkotlin/coroutines/Continuation;)V
+    return-void
 
-    iput-object p1, v0, Lmh5;->X:Ljava/lang/Object;
+    :pswitch_1
+    const-string v0, "storeStickerSets: success for sets = %s"
 
-    return-object v0
-.end method
+    filled-new-array {p0}, [Ljava/lang/Object;
 
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+    move-result-object p0
 
-    invoke-static {p1}, Lsgg;->Z(Ljava/lang/Object;)V
+    invoke-static {v2, v0, p0}, Ljtg;->k(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    iget-object p1, p0, Lmh5;->X:Ljava/lang/Object;
+    return-void
 
-    check-cast p1, Lqz;
+    :pswitch_2
+    const-string v0, "onNotifRemoved: removed stickers %s from cache"
 
-    iget-object p0, p0, Lmh5;->Y:Lnh5;
+    filled-new-array {p0}, [Ljava/lang/Object;
 
-    invoke-virtual {p0, p1}, Lnh5;->E(Lqz;)V
+    move-result-object p0
 
-    sget-object p0, Le5f;->a:Le5f;
+    invoke-static {v3, v0, p0}, Ljtg;->k(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    return-object p0
+    return-void
+
+    :pswitch_3
+    const-string v0, "onListUpdated: success store stickers %s"
+
+    filled-new-array {p0}, [Ljava/lang/Object;
+
+    move-result-object p0
+
+    invoke-static {v3, v0, p0}, Ljtg;->k(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    return-void
+
+    :pswitch_4
+    const-string v0, "removeFromFavorites: ids=%s"
+
+    filled-new-array {p0}, [Ljava/lang/Object;
+
+    move-result-object p0
+
+    invoke-static {v3, v0, p0}, Ljtg;->k(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    return-void
+
+    :pswitch_5
+    const-string v0, "onAssetsUpdate: success store stickers %s"
+
+    filled-new-array {p0}, [Ljava/lang/Object;
+
+    move-result-object p0
+
+    invoke-static {v3, v0, p0}, Ljtg;->k(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    return-void
+
+    :pswitch_6
+    const-string v0, "onListUpdated: success store stickers sets=%s"
+
+    filled-new-array {p0}, [Ljava/lang/Object;
+
+    move-result-object p0
+
+    invoke-static {v1, v0, p0}, Ljtg;->k(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    return-void
+
+    :pswitch_7
+    const-string v0, "onNotifRemoved: removed sticker sets %s from cache"
+
+    filled-new-array {p0}, [Ljava/lang/Object;
+
+    move-result-object p0
+
+    invoke-static {v1, v0, p0}, Ljtg;->k(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_7
+        :pswitch_6
+        :pswitch_5
+        :pswitch_4
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

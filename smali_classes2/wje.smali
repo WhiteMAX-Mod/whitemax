@@ -4,6 +4,10 @@
 
 
 # instance fields
-.field public a:I
+.field public a:Ljava/util/List;
 
-.field public b:J
+.field public b:Ljava/util/List;
+
+.field public c:Ljava/util/List;
+
+.field public d:Lc0e;

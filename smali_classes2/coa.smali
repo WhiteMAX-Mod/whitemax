@@ -1,297 +1,135 @@
-.class public final Lcoa;
-.super Lyi3;
+.class public abstract Lcoa;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final f:Ljava/util/ArrayList;
+# static fields
+.field public static final a:J
 
-.field public final g:Ljava/util/ArrayList;
+.field public static final b:J
 
-.field public final h:Ljava/util/ArrayList;
+.field public static final c:J
 
-.field public final i:Ljava/util/HashMap;
+.field public static final d:J
 
-.field public final j:Ljava/util/concurrent/ConcurrentHashMap;
+.field public static final e:J
 
-.field public final k:Ljava/util/concurrent/ConcurrentHashMap;
+.field public static final f:J
 
-.field public final l:Ljava/util/concurrent/ConcurrentHashMap;
+.field public static final g:J
+
+.field public static final h:J
+
+.field public static final i:J
+
+.field public static final j:J
+
+.field public static final k:J
+
+.field public static final l:J
+
+.field public static final m:J
+
+.field public static final n:J
+
+.field public static final o:J
+
+.field public static final synthetic p:I
 
 
 # direct methods
-.method public constructor <init>(Lzsd;Ls1c;Lwpa;Lsag;)V
-    .locals 0
-
-    invoke-direct {p0, p1, p2, p3, p4}, Lyi3;-><init>(Lzsd;Ls1c;Lwpa;Lsag;)V
-
-    new-instance p1, Ljava/util/ArrayList;
-
-    invoke-direct {p1}, Ljava/util/ArrayList;-><init>()V
-
-    iput-object p1, p0, Lcoa;->f:Ljava/util/ArrayList;
-
-    new-instance p1, Ljava/util/ArrayList;
-
-    invoke-direct {p1}, Ljava/util/ArrayList;-><init>()V
-
-    iput-object p1, p0, Lcoa;->g:Ljava/util/ArrayList;
-
-    new-instance p1, Ljava/util/ArrayList;
-
-    invoke-direct {p1}, Ljava/util/ArrayList;-><init>()V
-
-    iput-object p1, p0, Lcoa;->h:Ljava/util/ArrayList;
-
-    new-instance p1, Ljava/util/HashMap;
-
-    invoke-direct {p1}, Ljava/util/HashMap;-><init>()V
-
-    iput-object p1, p0, Lcoa;->i:Ljava/util/HashMap;
-
-    new-instance p1, Ljava/util/concurrent/ConcurrentHashMap;
-
-    invoke-direct {p1}, Ljava/util/concurrent/ConcurrentHashMap;-><init>()V
-
-    iput-object p1, p0, Lcoa;->j:Ljava/util/concurrent/ConcurrentHashMap;
-
-    new-instance p1, Ljava/util/concurrent/ConcurrentHashMap;
-
-    invoke-direct {p1}, Ljava/util/concurrent/ConcurrentHashMap;-><init>()V
-
-    iput-object p1, p0, Lcoa;->k:Ljava/util/concurrent/ConcurrentHashMap;
-
-    new-instance p1, Ljava/util/concurrent/ConcurrentHashMap;
-
-    invoke-direct {p1}, Ljava/util/concurrent/ConcurrentHashMap;-><init>()V
-
-    iput-object p1, p0, Lcoa;->l:Ljava/util/concurrent/ConcurrentHashMap;
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final a(Lrf1;Lorg/webrtc/VideoFrame;)V
+.method static constructor <clinit>()V
     .locals 2
 
-    new-instance v0, Lhjc;
+    sget v0, Ln7c;->oneme_settings_privacy_content_level_access:I
 
-    const/4 v1, 0x3
+    int-to-long v0, v0
 
-    invoke-direct {v0, v1}, Lhjc;-><init>(I)V
+    sput-wide v0, Lcoa;->a:J
 
-    iput-object p1, v0, Lhjc;->b:Ljava/lang/Object;
+    sget v0, Ln7c;->oneme_settings_privacy_info_header:I
 
-    sget-object p1, Lgmf;->b:Lgmf;
+    int-to-long v0, v0
 
-    iput-object p1, v0, Lhjc;->c:Ljava/lang/Object;
+    sput-wide v0, Lcoa;->b:J
 
-    invoke-virtual {v0}, Lhjc;->e()Ldp1;
+    sget v0, Ln7c;->oneme_settings_privacy_safe_files:I
 
-    move-result-object p1
+    int-to-long v0, v0
 
-    iget-object p0, p0, Lcoa;->j:Ljava/util/concurrent/ConcurrentHashMap;
+    sput-wide v0, Lcoa;->c:J
 
-    invoke-virtual {p0, p1}, Ljava/util/concurrent/ConcurrentHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    sget v0, Ln7c;->oneme_settings_privacy_screen_add_me_to_chat:I
 
-    move-result-object p0
+    int-to-long v0, v0
 
-    check-cast p0, Ljava/util/List;
+    sput-wide v0, Lcoa;->d:J
 
-    if-eqz p0, :cond_0
+    sget v0, Ln7c;->oneme_settings_privacy_screen_black_list:I
 
-    invoke-interface {p0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+    int-to-long v0, v0
 
-    move-result-object p0
+    sput-wide v0, Lcoa;->e:J
 
-    :goto_0
-    invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
+    sget v0, Ln7c;->oneme_settings_privacy_screen_call_me:I
 
-    move-result p1
+    int-to-long v0, v0
 
-    if-eqz p1, :cond_0
+    sput-wide v0, Lcoa;->f:J
 
-    invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    sget v0, Ln7c;->oneme_settings_privacy_screen_finished_sessions:I
 
-    move-result-object p1
+    int-to-long v0, v0
 
-    check-cast p1, Lorg/webrtc/VideoSink;
+    sput-wide v0, Lcoa;->g:J
 
-    invoke-interface {p1, p2}, Lorg/webrtc/VideoSink;->onFrame(Lorg/webrtc/VideoFrame;)V
+    sget v0, Ln7c;->oneme_settings_privacy_screen_how_session:I
 
-    goto :goto_0
+    int-to-long v0, v0
 
-    :cond_0
-    return-void
-.end method
+    sput-wide v0, Lcoa;->h:J
 
-.method public final d()V
-    .locals 1
+    sget v0, Ln7c;->oneme_settings_privacy_screen_safe_mode:I
 
-    invoke-static {}, Lz99;->e()V
+    int-to-long v0, v0
 
-    iget-object v0, p0, Lcoa;->j:Ljava/util/concurrent/ConcurrentHashMap;
+    sput-wide v0, Lcoa;->i:J
 
-    invoke-virtual {v0}, Ljava/util/concurrent/ConcurrentHashMap;->clear()V
+    sget v0, Ln7c;->oneme_settings_privacy_screen_search_by_phone:I
 
-    iget-object p0, p0, Lcoa;->i:Ljava/util/HashMap;
+    int-to-long v0, v0
 
-    invoke-virtual {p0}, Ljava/util/HashMap;->clear()V
+    sput-wide v0, Lcoa;->j:J
 
-    return-void
-.end method
+    sget v0, Ln7c;->oneme_settings_privacy_screen_see_online_state:I
 
-.method public final e(Lrf1;Ljava/lang/String;)V
-    .locals 3
+    int-to-long v0, v0
 
-    invoke-static {}, Lz99;->e()V
+    sput-wide v0, Lcoa;->k:J
 
-    iget-object p2, p0, Lcoa;->i:Ljava/util/HashMap;
+    sget v0, Ln7c;->oneme_settings_privacy_screen_twofa:I
 
-    invoke-virtual {p2, p1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    int-to-long v0, v0
 
-    move-result-object v0
+    sput-wide v0, Lcoa;->l:J
 
-    check-cast v0, Ljava/util/Set;
+    sget v0, Ln7c;->oneme_settings_privacy_screen_twofa_profile_delete:I
 
-    if-nez v0, :cond_0
+    int-to-long v0, v0
 
-    return-void
+    sput-wide v0, Lcoa;->m:J
 
-    :cond_0
-    invoke-interface {v0}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
+    sget v0, Ln7c;->oneme_settings_privacy_screen_twofa_warning_item:I
 
-    move-result-object v0
+    int-to-long v0, v0
 
-    :goto_0
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+    sput-wide v0, Lcoa;->n:J
 
-    move-result v1
+    sget v0, Ln7c;->oneme_settings_privacy_screen_web_apps:I
 
-    if-eqz v1, :cond_1
+    int-to-long v0, v0
 
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Ldp1;
-
-    iget-object v2, p0, Lcoa;->j:Ljava/util/concurrent/ConcurrentHashMap;
-
-    invoke-virtual {v2, v1}, Ljava/util/concurrent/ConcurrentHashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
-
-    goto :goto_0
-
-    :cond_1
-    invoke-virtual {p2, p1}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-void
-.end method
-
-.method public final f()V
-    .locals 3
-
-    iget-object v0, p0, Lyi3;->c:Ljava/lang/Object;
-
-    check-cast v0, Landroid/os/Handler;
-
-    const/4 v1, 0x0
-
-    invoke-virtual {v0, v1}, Landroid/os/Handler;->removeCallbacksAndMessages(Ljava/lang/Object;)V
-
-    iget-object v0, p0, Lyi3;->a:Ljava/lang/Object;
-
-    check-cast v0, Lzsd;
-
-    new-instance v1, Lz46;
-
-    const/16 v2, 0x1a
-
-    invoke-direct {v1, v2, p0}, Lz46;-><init>(ILjava/lang/Object;)V
-
-    iget-object p0, v0, Lzsd;->a:Ljava/lang/Object;
-
-    check-cast p0, Lfqa;
-
-    const-string v0, "ParticipantsAgnosticRemoteVideoTracks.closeInternal"
-
-    invoke-virtual {p0, v0, v1}, Lfqa;->i(Ljava/lang/String;Ljava/lang/Runnable;)V
-
-    return-void
-.end method
-
-.method public final k(Lorg/webrtc/RtpReceiver;[Lorg/webrtc/MediaStream;)V
-    .locals 3
-
-    iget-object v0, p0, Lyi3;->a:Ljava/lang/Object;
-
-    check-cast v0, Lzsd;
-
-    new-instance v1, Lld4;
-
-    const/4 v2, 0x1
-
-    invoke-direct {v1, p0, p1, p2, v2}, Lld4;-><init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/io/Serializable;I)V
-
-    const-string p0, "DefaultRemoteVideoTracks.handleVideoTracksOnExecutor"
-
-    invoke-virtual {v0, p0, v1}, Lzsd;->c(Ljava/lang/String;Lkj3;)V
-
-    return-void
-.end method
-
-.method public final p(Ljava/lang/String;Ldp1;Ljava/util/List;)V
-    .locals 0
-
-    invoke-static {}, Lz99;->e()V
-
-    iget-object p1, p0, Lcoa;->j:Ljava/util/concurrent/ConcurrentHashMap;
-
-    iget-object p0, p0, Lcoa;->i:Ljava/util/HashMap;
-
-    if-nez p3, :cond_1
-
-    invoke-virtual {p1, p2}, Ljava/util/concurrent/ConcurrentHashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
-
-    iget-object p1, p2, Ldp1;->b:Lrf1;
-
-    invoke-virtual {p0, p1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, Ljava/util/Set;
-
-    if-eqz p0, :cond_0
-
-    invoke-interface {p0, p2}, Ljava/util/Set;->remove(Ljava/lang/Object;)Z
-
-    :cond_0
-    return-void
-
-    :cond_1
-    invoke-virtual {p1, p2, p3}, Ljava/util/concurrent/ConcurrentHashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    iget-object p1, p2, Ldp1;->b:Lrf1;
-
-    invoke-virtual {p0, p1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Ljava/util/Set;
-
-    if-nez p1, :cond_2
-
-    new-instance p1, Ljava/util/HashSet;
-
-    invoke-direct {p1}, Ljava/util/HashSet;-><init>()V
-
-    iget-object p3, p2, Ldp1;->b:Lrf1;
-
-    invoke-virtual {p0, p3, p1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    :cond_2
-    invoke-interface {p1, p2}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
+    sput-wide v0, Lcoa;->o:J
 
     return-void
 .end method

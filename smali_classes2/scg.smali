@@ -1,45 +1,102 @@
-.class public abstract synthetic Lscg;
-.super Ljava/lang/Object;
+.class public final Lscg;
+.super Lb72;
 .source "SourceFile"
 
 
-# static fields
-.field public static final synthetic a:[I
+# instance fields
+.field public final c:J
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
+.method public constructor <init>(J)V
+    .locals 2
 
     const/4 v0, 0x2
 
-    invoke-static {v0}, Lzt1;->v(I)[I
+    invoke-static {p1, p2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v1
 
-    array-length v1, v1
+    invoke-direct {p0, v0, v1}, Lb72;-><init>(ILjava/lang/Long;)V
 
-    new-array v1, v1, [I
+    iput-wide p1, p0, Lscg;->c:J
 
-    sput-object v1, Lscg;->a:[I
+    return-void
+.end method
 
-    const/4 v2, 0x1
 
-    :try_start_0
-    aput v2, v1, v2
-    :try_end_0
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
+# virtual methods
+.method public final a()Ljava/lang/Long;
+    .locals 2
 
-    :catch_0
-    :try_start_1
-    sget-object v1, Lscg;->a:[I
+    iget-wide v0, p0, Lscg;->c:J
+
+    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 5
+
+    const/4 v0, 0x1
+
+    if-ne p0, p1, :cond_0
+
+    return v0
+
+    :cond_0
+    instance-of v1, p1, Lscg;
 
     const/4 v2, 0x0
 
-    aput v0, v1, v2
-    :try_end_1
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
+    if-nez v1, :cond_1
 
-    :catch_1
-    return-void
+    return v2
+
+    :cond_1
+    check-cast p1, Lscg;
+
+    iget-wide v3, p0, Lscg;->c:J
+
+    iget-wide p0, p1, Lscg;->c:J
+
+    cmp-long p0, v3, p0
+
+    if-eqz p0, :cond_2
+
+    return v2
+
+    :cond_2
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 2
+
+    iget-wide v0, p0, Lscg;->c:J
+
+    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
+
+    move-result p0
+
+    return p0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 4
+
+    const-string v0, "DialogBotId(sourceId="
+
+    const-string v1, ")"
+
+    iget-wide v2, p0, Lscg;->c:J
+
+    invoke-static {v2, v3, v0, v1}, Lwsf;->e(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p0
+
+    return-object p0
 .end method

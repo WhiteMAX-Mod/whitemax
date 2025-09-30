@@ -1,99 +1,55 @@
 .class public final Lvfa;
-.super Lyfa;
+.super Ljx3;
 .source "SourceFile"
 
 
-# static fields
-.field public static final CREATOR:Landroid/os/Parcelable$Creator;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Landroid/os/Parcelable$Creator<",
-            "Lvfa;",
-            ">;"
-        }
-    .end annotation
-.end field
+# instance fields
+.field public X:Luz8;
 
-.field public static final b:Lvfa;
+.field public Y:Ls72;
+
+.field public synthetic Z:Ljava/lang/Object;
+
+.field public o:Lyfa;
+
+.field public final synthetic r0:Lyfa;
+
+.field public s0:I
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
+.method public constructor <init>(Lyfa;Ljx3;)V
+    .locals 0
 
-    new-instance v0, Lvfa;
+    iput-object p1, p0, Lvfa;->r0:Lyfa;
 
-    const-wide v1, 0x7fffffffffffffffL
-
-    invoke-direct {v0, v1, v2}, Lyfa;-><init>(J)V
-
-    sput-object v0, Lvfa;->b:Lvfa;
-
-    new-instance v0, Lej9;
-
-    const/16 v1, 0x8
-
-    invoke-direct {v0, v1}, Lej9;-><init>(I)V
-
-    sput-object v0, Lvfa;->CREATOR:Landroid/os/Parcelable$Creator;
+    invoke-direct {p0, p2}, Ljx3;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final describeContents()I
-    .locals 0
-
-    const/4 p0, 0x0
-
-    return p0
-.end method
-
-.method public final equals(Ljava/lang/Object;)Z
+.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
 
-    const/4 v0, 0x1
+    iput-object p1, p0, Lvfa;->Z:Ljava/lang/Object;
 
-    if-ne p0, p1, :cond_0
+    iget p1, p0, Lvfa;->s0:I
 
-    return v0
+    const/high16 v0, -0x80000000
 
-    :cond_0
-    instance-of p0, p1, Lvfa;
+    or-int/2addr p1, v0
 
-    if-nez p0, :cond_1
+    iput p1, p0, Lvfa;->s0:I
 
-    const/4 p0, 0x0
+    iget-object p1, p0, Lvfa;->r0:Lyfa;
 
-    return p0
+    const/4 v0, 0x0
 
-    :cond_1
-    return v0
-.end method
+    invoke-virtual {p1, v0, p0, v0}, Lyfa;->k(Ls72;Ljx3;Luz8;)Ljava/lang/Object;
 
-.method public final hashCode()I
-    .locals 0
-
-    const p0, 0x6f5f0da2
-
-    return p0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 0
-
-    const-string p0, "Indeterminate"
+    move-result-object p0
 
     return-object p0
-.end method
-
-.method public final writeToParcel(Landroid/os/Parcel;I)V
-    .locals 0
-
-    const/4 p0, 0x1
-
-    invoke-virtual {p1, p0}, Landroid/os/Parcel;->writeInt(I)V
-
-    return-void
 .end method

@@ -1,78 +1,156 @@
 .class public final Ljt2;
-.super Ljava/lang/Object;
+.super Lure;
 .source "SourceFile"
 
 # interfaces
-.implements Llt2;
+.implements Lrc6;
 
 
-# static fields
-.field public static final a:Ljt2;
+# instance fields
+.field public final synthetic X:I
 
-.field public static final b:Lk00;
+.field public synthetic Y:Lbra;
+
+.field public synthetic Z:Lera;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public synthetic constructor <init>(ILkotlin/coroutines/Continuation;I)V
+    .locals 0
 
-    new-instance v0, Ljt2;
+    iput p3, p0, Ljt2;->X:I
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    sput-object v0, Ljt2;->a:Ljt2;
-
-    sget-object v0, Ln82;->J:Lk00;
-
-    sput-object v0, Ljt2;->b:Lk00;
+    invoke-direct {p0, p1, p2}, Lure;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 2
+
+    iget p0, p0, Ljt2;->X:I
+
+    check-cast p1, Lbra;
+
+    check-cast p2, Lera;
+
+    check-cast p3, Lkotlin/coroutines/Continuation;
+
+    packed-switch p0, :pswitch_data_0
+
+    new-instance p0, Ljt2;
+
+    const/4 v0, 0x3
+
+    const/4 v1, 0x2
+
+    invoke-direct {p0, v0, p3, v1}, Ljt2;-><init>(ILkotlin/coroutines/Continuation;I)V
+
+    iput-object p1, p0, Ljt2;->Y:Lbra;
+
+    iput-object p2, p0, Ljt2;->Z:Lera;
+
+    sget-object p1, Lylf;->a:Lylf;
+
+    invoke-virtual {p0, p1}, Ljt2;->o(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object p1
+
+    :pswitch_0
+    new-instance p0, Ljt2;
+
+    const/4 v0, 0x3
+
+    const/4 v1, 0x1
+
+    invoke-direct {p0, v0, p3, v1}, Ljt2;-><init>(ILkotlin/coroutines/Continuation;I)V
+
+    iput-object p1, p0, Ljt2;->Y:Lbra;
+
+    iput-object p2, p0, Ljt2;->Z:Lera;
+
+    sget-object p1, Lylf;->a:Lylf;
+
+    invoke-virtual {p0, p1}, Ljt2;->o(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object p1
+
+    :pswitch_1
+    new-instance p0, Ljt2;
+
+    const/4 v0, 0x3
+
+    const/4 v1, 0x0
+
+    invoke-direct {p0, v0, p3, v1}, Ljt2;-><init>(ILkotlin/coroutines/Continuation;I)V
+
+    iput-object p1, p0, Ljt2;->Y:Lbra;
+
+    iput-object p2, p0, Ljt2;->Z:Lera;
+
+    sget-object p1, Lylf;->a:Lylf;
+
+    invoke-virtual {p0, p1}, Ljt2;->o(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object p1
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
 
-    const/4 v0, 0x1
+    iget v0, p0, Ljt2;->X:I
 
-    if-ne p0, p1, :cond_0
+    packed-switch v0, :pswitch_data_0
 
-    return v0
+    invoke-static {p1}, Lqe5;->V(Ljava/lang/Object;)V
 
-    :cond_0
-    instance-of p0, p1, Ljt2;
+    iget-object p1, p0, Ljt2;->Y:Lbra;
 
-    if-nez p0, :cond_1
+    iget-object p0, p0, Ljt2;->Z:Lera;
 
-    const/4 p0, 0x0
+    invoke-virtual {p1, p0}, Lbra;->onThemeChanged(Lera;)V
 
-    return p0
-
-    :cond_1
-    return v0
-.end method
-
-.method public final getComparator()Ljava/util/Comparator;
-    .locals 0
-
-    sget-object p0, Ljt2;->b:Lk00;
+    sget-object p0, Lylf;->a:Lylf;
 
     return-object p0
-.end method
 
-.method public final hashCode()I
-    .locals 0
+    :pswitch_0
+    invoke-static {p1}, Lqe5;->V(Ljava/lang/Object;)V
 
-    const p0, -0xdf5b48b
+    iget-object p1, p0, Ljt2;->Y:Lbra;
 
-    return p0
-.end method
+    iget-object p0, p0, Ljt2;->Z:Lera;
 
-.method public final toString()Ljava/lang/String;
-    .locals 0
+    invoke-virtual {p1, p0}, Lbra;->onThemeChanged(Lera;)V
 
-    const-string p0, "All"
+    sget-object p0, Lylf;->a:Lylf;
 
     return-object p0
+
+    :pswitch_1
+    invoke-static {p1}, Lqe5;->V(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Ljt2;->Y:Lbra;
+
+    iget-object p0, p0, Ljt2;->Z:Lera;
+
+    invoke-virtual {p1, p0}, Lbra;->onThemeChanged(Lera;)V
+
+    sget-object p0, Lylf;->a:Lylf;
+
+    return-object p0
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

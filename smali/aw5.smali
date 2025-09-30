@@ -1,50 +1,42 @@
 .class public final Law5;
-.super Ljava/lang/Object;
+.super Lrv5;
 .source "SourceFile"
 
 # interfaces
-.implements Lvv5;
+.implements Lf4d;
 
 
-# instance fields
-.field public final a:I
-
-.field public final b:J
+# static fields
+.field public static final b:Law5;
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 2
+.method static constructor <clinit>()V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Law5;
 
-    sget v0, Lltb;->oneme_folder_widget_section_empty_view_type:I
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    iput v0, p0, Law5;->a:I
-
-    sget v0, Lltb;->oneme_folder_widget_section_empty_id:I
-
-    int-to-long v0, v0
-
-    iput-wide v0, p0, Law5;->b:J
+    sput-object v0, Law5;->b:Law5;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final getItemId()J
-    .locals 2
-
-    iget-wide v0, p0, Law5;->b:J
-
-    return-wide v0
-.end method
-
-.method public final m()I
+.method public final f(Lbx5;)V
     .locals 0
 
-    iget p0, p0, Law5;->a:I
+    invoke-static {p1}, Lf55;->a(Ljne;)V
 
-    return p0
+    return-void
+.end method
+
+.method public final get()Ljava/lang/Object;
+    .locals 0
+
+    const/4 p0, 0x0
+
+    return-object p0
 .end method

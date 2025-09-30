@@ -1,52 +1,41 @@
 .class public final Ldhb;
-.super Lbu3;
+.super Lux;
+.source "SourceFile"
 
 
 # instance fields
-.field public X:I
+.field public final X:Ljava/lang/Long;
 
-.field public Y:Loq;
+.field public final Y:Ljava/lang/Long;
 
-.field public Z:Ljava/lang/Object;
+.field public final Z:Ljava/lang/Long;
 
-.field public synthetic o:Ljava/lang/Object;
+.field public final o:Ljava/lang/Long;
 
-.field public final synthetic o0:Loq;
+.field public final r0:I
+
+.field public final s0:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>(Loq;Lkotlin/coroutines/Continuation;)V
-    .locals 0
-
-    iput-object p1, p0, Ldhb;->o0:Loq;
-
-    invoke-direct {p0, p2}, Lbu3;-><init>(Lkotlin/coroutines/Continuation;)V
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
+.method public constructor <init>(Ljava/lang/Long;Ljava/lang/Long;Ljava/lang/Long;Ljava/lang/Long;ILjava/lang/String;ZZ)V
     .locals 1
 
-    iput-object p1, p0, Ldhb;->o:Ljava/lang/Object;
+    sget-object v0, Lxz;->w0:Lxz;
 
-    iget p1, p0, Ldhb;->X:I
+    invoke-direct {p0, v0, p7, p8}, Lux;-><init>(Lxz;ZZ)V
 
-    const/high16 v0, -0x80000000
+    iput-object p1, p0, Ldhb;->o:Ljava/lang/Long;
 
-    or-int/2addr p1, v0
+    iput-object p2, p0, Ldhb;->X:Ljava/lang/Long;
 
-    iput p1, p0, Ldhb;->X:I
+    iput-object p3, p0, Ldhb;->Y:Ljava/lang/Long;
 
-    iget-object p1, p0, Ldhb;->o0:Loq;
+    iput-object p4, p0, Ldhb;->Z:Ljava/lang/Long;
 
-    const/4 v0, 0x0
+    iput p5, p0, Ldhb;->r0:I
 
-    invoke-virtual {p1, v0, p0}, Loq;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    iput-object p6, p0, Ldhb;->s0:Ljava/lang/String;
 
-    move-result-object p0
-
-    return-object p0
+    return-void
 .end method

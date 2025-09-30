@@ -12,9 +12,9 @@
 
 .field public static final o:Ljava/lang/String;
 
-.field public static final o0:Ljava/lang/String;
+.field public static final r0:Ljava/lang/String;
 
-.field public static final p0:Ljava/lang/String;
+.field public static final s0:Ljava/lang/String;
 
 
 # instance fields
@@ -29,7 +29,7 @@
 .method static constructor <clinit>()V
     .locals 2
 
-    sget v0, Lpaf;->a:I
+    sget v0, Lnrf;->a:I
 
     const/4 v0, 0x0
 
@@ -71,7 +71,7 @@
 
     move-result-object v0
 
-    sput-object v0, Landroidx/media3/common/PlaybackException;->o0:Ljava/lang/String;
+    sput-object v0, Landroidx/media3/common/PlaybackException;->r0:Ljava/lang/String;
 
     const/4 v0, 0x5
 
@@ -79,7 +79,7 @@
 
     move-result-object v0
 
-    sput-object v0, Landroidx/media3/common/PlaybackException;->p0:Ljava/lang/String;
+    sput-object v0, Landroidx/media3/common/PlaybackException;->s0:Ljava/lang/String;
 
     return-void
 .end method
@@ -147,7 +147,7 @@
 
     move-result-object v5
 
-    invoke-static {v4, v5}, Lpaf;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v4, v5}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v4
 
@@ -194,7 +194,7 @@
 
     move-result-object v3
 
-    invoke-static {v2, v3}, Lpaf;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v2, v3}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v2
 
@@ -615,67 +615,4 @@
         :pswitch_1
         :pswitch_0
     .end packed-switch
-.end method
-
-.method public c()Landroid/os/Bundle;
-    .locals 4
-
-    new-instance v0, Landroid/os/Bundle;
-
-    invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
-
-    sget-object v1, Landroidx/media3/common/PlaybackException;->o:Ljava/lang/String;
-
-    iget v2, p0, Landroidx/media3/common/PlaybackException;->a:I
-
-    invoke-virtual {v0, v1, v2}, Landroid/os/BaseBundle;->putInt(Ljava/lang/String;I)V
-
-    sget-object v1, Landroidx/media3/common/PlaybackException;->X:Ljava/lang/String;
-
-    iget-wide v2, p0, Landroidx/media3/common/PlaybackException;->b:J
-
-    invoke-virtual {v0, v1, v2, v3}, Landroid/os/BaseBundle;->putLong(Ljava/lang/String;J)V
-
-    sget-object v1, Landroidx/media3/common/PlaybackException;->Y:Ljava/lang/String;
-
-    invoke-virtual {p0}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/os/BaseBundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
-
-    sget-object v1, Landroidx/media3/common/PlaybackException;->p0:Ljava/lang/String;
-
-    iget-object v2, p0, Landroidx/media3/common/PlaybackException;->c:Landroid/os/Bundle;
-
-    invoke-virtual {v0, v1, v2}, Landroid/os/Bundle;->putBundle(Ljava/lang/String;Landroid/os/Bundle;)V
-
-    invoke-virtual {p0}, Ljava/lang/Throwable;->getCause()Ljava/lang/Throwable;
-
-    move-result-object p0
-
-    if-eqz p0, :cond_0
-
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/Class;->getName()Ljava/lang/String;
-
-    move-result-object v1
-
-    sget-object v2, Landroidx/media3/common/PlaybackException;->Z:Ljava/lang/String;
-
-    invoke-virtual {v0, v2, v1}, Landroid/os/BaseBundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
-
-    sget-object v1, Landroidx/media3/common/PlaybackException;->o0:Ljava/lang/String;
-
-    invoke-virtual {p0}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
-
-    move-result-object p0
-
-    invoke-virtual {v0, v1, p0}, Landroid/os/BaseBundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
-
-    :cond_0
-    return-object v0
 .end method

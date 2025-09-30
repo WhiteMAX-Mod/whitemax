@@ -4,12 +4,6 @@
     <androidx.viewpager.widget.ViewPager android:id="@id/act_attachments_view__vp_pager" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layoutDirection="ltr" />
     <FrameLayout android:id="@id/act_attachments_view__fl_transition" android:layout_width="fill_parent" android:layout_height="fill_parent" android:transitionGroup="true" />
     <include android:id="@id/toolbar" android:layout_width="fill_parent" android:layout_height="?actionBarSize" app:layout_constraintTop_toTopOf="parent" layout="@layout/toolbar" />
-    <FrameLayout android:id="@id/act_attachments_view__fl_timer" android:paddingLeft="0.0dip" android:paddingRight="16.0dip" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="?actionBarSize" android:layout_alignParentTop="true" android:layout_alignParentRight="true" android:paddingStart="0.0dip" android:paddingEnd="16.0dip" android:layout_alignParentEnd="true">
-        <LinearLayout android:layout_gravity="center_vertical" android:orientation="horizontal" android:padding="2.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content">
-            <ru.ok.messages.messages.widgets.Chronometer android:textColor="@color/white" android:layout_gravity="center_vertical" android:id="@id/act_attachments_view__chrono" android:paddingRight="5.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:paddingEnd="5.0dip" app:countDown="true" />
-            <ru.ok.messages.secret.widgets.TimerView android:layout_gravity="center_vertical" android:id="@id/act_attachments_view__timer" android:layout_width="wrap_content" android:layout_height="wrap_content" app:arrowResource="@drawable/viewer_timer_arrow_white" app:circleColor="@color/white" />
-        </LinearLayout>
-    </FrameLayout>
     <androidx.appcompat.widget.AppCompatImageView android:id="@id/act_attachments_view__info_separator" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_above="@id/act_attachments_view__rl_info" />
     <LinearLayout android:orientation="vertical" android:id="@id/act_attachments_view__rl_info" android:paddingTop="4.0dip" android:paddingBottom="4.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true">
         <FrameLayout android:id="@id/act_attachments_view__fl_caption" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content">

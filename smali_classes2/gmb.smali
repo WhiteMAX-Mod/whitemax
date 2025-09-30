@@ -1,236 +1,147 @@
 .class public final Lgmb;
-.super Lnv8;
+.super Lcb4;
 .source "SourceFile"
 
 
-# instance fields
-.field public a:F
+# static fields
+.field public static final b:Lgmb;
 
-.field public b:F
+.field public static final c:Lxa4;
 
-.field public c:I
+.field public static final d:Lxa4;
 
-.field public d:Z
+.field public static final e:Lxa4;
 
+.field public static final f:Lxa4;
 
-# virtual methods
-.method public final computeSerializedSize()I
-    .locals 3
+.field public static final g:Lxa4;
 
-    iget v0, p0, Lgmb;->a:F
+.field public static final h:Lxa4;
 
-    invoke-static {v0}, Ljava/lang/Float;->floatToIntBits(F)I
+.field public static final i:Lxa4;
 
-    move-result v0
+.field public static final j:Lxa4;
 
-    const/4 v1, 0x0
 
-    invoke-static {v1}, Ljava/lang/Float;->floatToIntBits(F)I
+# direct methods
+.method static constructor <clinit>()V
+    .locals 8
 
-    move-result v2
+    new-instance v0, Lgmb;
 
-    if-eq v0, v2, :cond_0
+    invoke-direct {v0}, Lcb4;-><init>()V
 
-    const/4 v0, 0x1
+    sput-object v0, Lgmb;->b:Lgmb;
 
-    invoke-static {v0}, Lq33;->e(I)I
+    const-string v6, "id"
 
-    move-result v0
+    const-string v7, "type"
 
-    goto :goto_0
+    filled-new-array {v6, v7}, [Ljava/lang/String;
 
-    :cond_0
-    const/4 v0, 0x0
+    move-result-object v2
 
-    :goto_0
-    iget v2, p0, Lgmb;->b:F
+    const/16 v5, 0xe
 
-    invoke-static {v2}, Ljava/lang/Float;->floatToIntBits(F)I
+    const/4 v4, 0x0
 
-    move-result v2
+    const-string v1, ":profile/avatars"
 
-    invoke-static {v1}, Ljava/lang/Float;->floatToIntBits(F)I
+    const/4 v3, 0x0
 
-    move-result v1
+    invoke-static/range {v0 .. v5}, Lcb4;->a(Lcb4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;II)Lxa4;
 
-    if-eq v2, v1, :cond_1
+    move-result-object v1
 
-    const/4 v1, 0x2
+    sput-object v1, Lgmb;->c:Lxa4;
 
-    invoke-static {v1}, Lq33;->e(I)I
+    filled-new-array {v6, v7}, [Ljava/lang/String;
 
-    move-result v1
+    move-result-object v2
 
-    add-int/2addr v0, v1
+    const-string v1, ":profile"
 
-    :cond_1
-    iget v1, p0, Lgmb;->c:I
+    invoke-static/range {v0 .. v5}, Lcb4;->a(Lcb4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;II)Lxa4;
 
-    if-eqz v1, :cond_2
+    move-result-object v1
 
-    const/4 v2, 0x3
+    sput-object v1, Lgmb;->d:Lxa4;
 
-    invoke-static {v2, v1}, Lq33;->f(II)I
+    filled-new-array {v6}, [Ljava/lang/String;
 
-    move-result v1
+    move-result-object v2
 
-    add-int/2addr v0, v1
+    const-string v1, ":profile/attaches"
 
-    :cond_2
-    iget-boolean p0, p0, Lgmb;->d:Z
+    invoke-static/range {v0 .. v5}, Lcb4;->a(Lcb4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;II)Lxa4;
 
-    if-eqz p0, :cond_3
+    move-result-object v1
 
-    const/4 p0, 0x4
+    sput-object v1, Lgmb;->e:Lxa4;
 
-    invoke-static {p0}, Lq33;->a(I)I
+    filled-new-array {v6, v7}, [Ljava/lang/String;
 
-    move-result p0
+    move-result-object v2
 
-    add-int/2addr p0, v0
+    const-string v1, ":profile/members"
 
-    return p0
+    invoke-static/range {v0 .. v5}, Lcb4;->a(Lcb4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;II)Lxa4;
 
-    :cond_3
-    return v0
-.end method
+    move-result-object v1
 
-.method public final mergeFrom(Lp33;)Lnv8;
-    .locals 2
+    sput-object v1, Lgmb;->f:Lxa4;
 
-    :cond_0
-    :goto_0
-    invoke-virtual {p1}, Lp33;->s()I
+    filled-new-array {v6}, [Ljava/lang/String;
 
-    move-result v0
+    move-result-object v2
 
-    if-eqz v0, :cond_5
+    const-string v1, ":profile/invite"
 
-    const/16 v1, 0xd
+    invoke-static/range {v0 .. v5}, Lcb4;->a(Lcb4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;II)Lxa4;
 
-    if-eq v0, v1, :cond_4
+    move-result-object v1
 
-    const/16 v1, 0x15
+    sput-object v1, Lgmb;->g:Lxa4;
 
-    if-eq v0, v1, :cond_3
+    const-string v6, "chat_id"
 
-    const/16 v1, 0x18
+    filled-new-array {v6}, [Ljava/lang/String;
 
-    if-eq v0, v1, :cond_2
+    move-result-object v2
 
-    const/16 v1, 0x20
+    const-string v1, ":profile/add-admins"
 
-    if-eq v0, v1, :cond_1
+    invoke-static/range {v0 .. v5}, Lcb4;->a(Lcb4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;II)Lxa4;
 
-    invoke-virtual {p1, v0}, Lp33;->u(I)Z
+    move-result-object v1
 
-    move-result v0
+    sput-object v1, Lgmb;->h:Lxa4;
 
-    if-nez v0, :cond_0
+    const-string v1, "is_chat"
 
-    goto :goto_1
+    filled-new-array {v6, v1}, [Ljava/lang/String;
 
-    :cond_1
-    invoke-virtual {p1}, Lp33;->f()Z
+    move-result-object v2
 
-    move-result v0
+    const-string v1, ":profile/add-members"
 
-    iput-boolean v0, p0, Lgmb;->d:Z
+    invoke-static/range {v0 .. v5}, Lcb4;->a(Lcb4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;II)Lxa4;
 
-    goto :goto_0
+    move-result-object v1
 
-    :cond_2
-    invoke-virtual {p1}, Lp33;->p()I
+    sput-object v1, Lgmb;->i:Lxa4;
 
-    move-result v0
+    filled-new-array {v6}, [Ljava/lang/String;
 
-    iput v0, p0, Lgmb;->c:I
+    move-result-object v2
 
-    goto :goto_0
+    const-string v1, ":profile/change-owner"
 
-    :cond_3
-    invoke-virtual {p1}, Lp33;->i()F
+    invoke-static/range {v0 .. v5}, Lcb4;->a(Lcb4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;II)Lxa4;
 
-    move-result v0
+    move-result-object v0
 
-    iput v0, p0, Lgmb;->b:F
+    sput-object v0, Lgmb;->j:Lxa4;
 
-    goto :goto_0
-
-    :cond_4
-    invoke-virtual {p1}, Lp33;->i()F
-
-    move-result v0
-
-    iput v0, p0, Lgmb;->a:F
-
-    goto :goto_0
-
-    :cond_5
-    :goto_1
-    return-object p0
-.end method
-
-.method public final writeTo(Lq33;)V
-    .locals 3
-
-    iget v0, p0, Lgmb;->a:F
-
-    invoke-static {v0}, Ljava/lang/Float;->floatToIntBits(F)I
-
-    move-result v0
-
-    const/4 v1, 0x0
-
-    invoke-static {v1}, Ljava/lang/Float;->floatToIntBits(F)I
-
-    move-result v2
-
-    if-eq v0, v2, :cond_0
-
-    const/4 v0, 0x1
-
-    iget v2, p0, Lgmb;->a:F
-
-    invoke-virtual {p1, v0, v2}, Lq33;->v(IF)V
-
-    :cond_0
-    iget v0, p0, Lgmb;->b:F
-
-    invoke-static {v0}, Ljava/lang/Float;->floatToIntBits(F)I
-
-    move-result v0
-
-    invoke-static {v1}, Ljava/lang/Float;->floatToIntBits(F)I
-
-    move-result v1
-
-    if-eq v0, v1, :cond_1
-
-    const/4 v0, 0x2
-
-    iget v1, p0, Lgmb;->b:F
-
-    invoke-virtual {p1, v0, v1}, Lq33;->v(IF)V
-
-    :cond_1
-    iget v0, p0, Lgmb;->c:I
-
-    if-eqz v0, :cond_2
-
-    const/4 v1, 0x3
-
-    invoke-virtual {p1, v1, v0}, Lq33;->w(II)V
-
-    :cond_2
-    iget-boolean p0, p0, Lgmb;->d:Z
-
-    if-eqz p0, :cond_3
-
-    const/4 v0, 0x4
-
-    invoke-virtual {p1, v0, p0}, Lq33;->r(IZ)V
-
-    :cond_3
     return-void
 .end method

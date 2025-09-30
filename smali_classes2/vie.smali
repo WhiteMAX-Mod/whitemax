@@ -1,94 +1,84 @@
-.class public Lvie;
-.super Lhi0;
+.class public final Lvie;
+.super Lj2e;
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/io/Serializable;
+.implements Lzcd;
 
 
 # instance fields
-.field public final X:Ljava/lang/String;
-
-.field public final Y:Lgie;
-
-.field public final c:Ljava/lang/String;
-
-.field public final o:Ljava/lang/String;
+.field public E0:Lxcd;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+.method public constructor <init>(Landroid/content/Context;)V
     .locals 2
 
-    const/4 v0, 0x0
+    new-instance v0, Lsrd;
 
-    invoke-direct {p0, v0}, Lhi0;-><init>(Z)V
+    const/4 v1, 0x0
 
-    iput-object p1, p0, Lvie;->c:Ljava/lang/String;
+    invoke-direct {v0, p1, v1}, Lsrd;-><init>(Landroid/content/Context;I)V
 
-    iput-object p2, p0, Lvie;->o:Ljava/lang/String;
-
-    iput-object p3, p0, Lvie;->X:Ljava/lang/String;
-
-    new-instance v0, Lgie;
-
-    const-string v1, " "
-
-    invoke-static {p1, v1, p2}, Lv04;->j(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-direct {v0, p1, p3}, Lgie;-><init>(Ljava/lang/String;Ljava/lang/String;)V
-
-    iput-object v0, p0, Lvie;->Y:Lgie;
+    invoke-direct {p0, v0}, Lzoc;-><init>(Landroid/view/View;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public toString()Ljava/lang/String;
+.method public final b(Lzie;)V
     .locals 3
 
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    iget-object v0, p0, Lzoc;->a:Landroid/view/View;
 
-    move-result-object v0
+    if-eqz p1, :cond_0
 
-    invoke-virtual {v0}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
+    new-instance v1, Lsfd;
 
-    move-result-object v0
+    const/16 v2, 0xf
 
-    new-instance v1, Ljava/lang/StringBuilder;
+    invoke-direct {v1, p0, v2, p1}, Lsfd;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
 
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+    invoke-static {v0, v1}, Lz48;->D(Landroid/view/View;Landroid/view/View$OnClickListener;)V
 
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    return-void
 
-    const-string v0, "{error=\'"
+    :cond_0
+    check-cast v0, Lsrd;
 
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    const/4 p0, 0x0
 
-    iget-object v0, p0, Lvie;->c:Ljava/lang/String;
+    invoke-virtual {v0, p0}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    return-void
+.end method
 
-    const-string v0, "\', message=\'"
+.method public final y(Lts7;)V
+    .locals 1
 
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    instance-of v0, p1, Lwcd;
 
-    iget-object v0, p0, Lvie;->o:Ljava/lang/String;
+    if-nez v0, :cond_0
 
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    return-void
 
-    const-string v0, "\', localizedMessage=\'"
+    :cond_0
+    move-object v0, p1
 
-    const-string v2, "\'}"
+    check-cast v0, Lxcd;
 
-    iget-object p0, p0, Lvie;->X:Ljava/lang/String;
+    iput-object v0, p0, Lvie;->E0:Lxcd;
 
-    invoke-static {v1, v0, p0, v2}, Lrqc;->j(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    iget-object p0, p0, Lzoc;->a:Landroid/view/View;
 
-    move-result-object p0
+    check-cast p0, Lsrd;
 
-    return-object p0
+    check-cast p1, Lwcd;
+
+    iget-object p1, p1, Lwcd;->a:Ltrd;
+
+    invoke-virtual {p0, p1}, Lsrd;->setModelItem(Lird;)V
+
+    return-void
 .end method

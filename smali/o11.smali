@@ -1,102 +1,213 @@
-.class public final Lo11;
-.super Lqde;
+.class public final synthetic Lo11;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Ll66;
+.implements Lyyc;
 
 
 # instance fields
-.field public synthetic X:J
+.field public final synthetic a:I
 
-.field public final synthetic Y:Lje7;
+.field public final synthetic b:Lp11;
 
 
 # direct methods
-.method public constructor <init>(Lje7;Lkotlin/coroutines/Continuation;)V
+.method public synthetic constructor <init>(Lp11;I)V
     .locals 0
 
-    iput-object p1, p0, Lo11;->Y:Lje7;
+    iput p2, p0, Lo11;->a:I
 
-    const/4 p1, 0x2
+    iput-object p1, p0, Lo11;->b:Lp11;
 
-    invoke-direct {p0, p1, p2}, Lqde;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 2
+.method public final b()V
+    .locals 10
 
-    check-cast p1, Ljava/lang/Number;
+    iget v0, p0, Lo11;->a:I
 
-    invoke-virtual {p1}, Ljava/lang/Number;->longValue()J
+    sget-object v1, Lfa8;->b:Lfa8;
 
-    move-result-wide v0
+    sget-object v2, Lfa8;->a:Lfa8;
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    sget-object v3, Lfa8;->c:Lfa8;
 
-    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    sget-object v4, Lfa8;->o:Lfa8;
 
-    move-result-object p1
+    sget-object v5, Lfa8;->X:Lfa8;
 
-    invoke-virtual {p0, p1, p2}, Lo11;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    const/4 v6, 0x4
+
+    const/4 v7, 0x3
+
+    const/4 v8, 0x2
+
+    const/4 v9, 0x1
+
+    iget-object p0, p0, Lo11;->b:Lp11;
+
+    packed-switch v0, :pswitch_data_0
+
+    iget-object p0, p0, Lp11;->L0:Lt11;
+
+    if-eqz p0, :cond_0
+
+    check-cast p0, Lq2e;
+
+    invoke-virtual {p0}, Lq2e;->g()V
+
+    :cond_0
+    return-void
+
+    :pswitch_0
+    invoke-static {p0}, Lp11;->v(Lp11;)V
+
+    return-void
+
+    :pswitch_1
+    iget-object v0, p0, Lp11;->N0:Lfa8;
+
+    if-eqz v0, :cond_6
+
+    iget-object p0, p0, Lp11;->L0:Lt11;
+
+    if-eqz p0, :cond_6
+
+    invoke-virtual {v0}, Ljava/lang/Enum;->ordinal()I
+
+    move-result v0
+
+    if-eqz v0, :cond_5
+
+    if-eq v0, v9, :cond_4
+
+    if-eq v0, v8, :cond_3
+
+    if-eq v0, v7, :cond_2
+
+    if-ne v0, v6, :cond_1
+
+    move-object v1, v5
+
+    goto :goto_0
+
+    :cond_1
+    new-instance p0, Lkotlin/NoWhenBranchMatchedException;
+
+    invoke-direct {p0}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
+
+    throw p0
+
+    :cond_2
+    move-object v1, v4
+
+    goto :goto_0
+
+    :cond_3
+    move-object v1, v3
+
+    goto :goto_0
+
+    :cond_4
+    move-object v1, v2
+
+    :cond_5
+    :goto_0
+    check-cast p0, Lq2e;
+
+    iget-object p0, p0, Lq2e;->a:Ljava/lang/Object;
+
+    check-cast p0, Lone/me/calls/ui/ui/call/panels/CallBottomPanelWidget;
+
+    sget-object v0, Lone/me/calls/ui/ui/call/panels/CallBottomPanelWidget;->r0:[Lxi7;
+
+    invoke-virtual {p0}, Lone/me/calls/ui/ui/call/panels/CallBottomPanelWidget;->z0()Lm21;
 
     move-result-object p0
 
-    check-cast p0, Lo11;
+    invoke-virtual {p0, v1}, Lm21;->u(Lfa8;)V
 
-    sget-object p1, Le5f;->a:Le5f;
+    :cond_6
+    return-void
 
-    invoke-virtual {p0, p1}, Lo11;->o(Ljava/lang/Object;)Ljava/lang/Object;
+    :pswitch_2
+    iget-object v0, p0, Lp11;->M0:Lfa8;
+
+    if-eqz v0, :cond_c
+
+    iget-object p0, p0, Lp11;->L0:Lt11;
+
+    if-eqz p0, :cond_c
+
+    invoke-virtual {v0}, Ljava/lang/Enum;->ordinal()I
+
+    move-result v0
+
+    if-eqz v0, :cond_b
+
+    if-eq v0, v9, :cond_a
+
+    if-eq v0, v8, :cond_9
+
+    if-eq v0, v7, :cond_8
+
+    if-ne v0, v6, :cond_7
+
+    move-object v1, v5
+
+    goto :goto_1
+
+    :cond_7
+    new-instance p0, Lkotlin/NoWhenBranchMatchedException;
+
+    invoke-direct {p0}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
+
+    throw p0
+
+    :cond_8
+    move-object v1, v4
+
+    goto :goto_1
+
+    :cond_9
+    move-object v1, v3
+
+    goto :goto_1
+
+    :cond_a
+    move-object v1, v2
+
+    :cond_b
+    :goto_1
+    check-cast p0, Lq2e;
+
+    iget-object p0, p0, Lq2e;->a:Ljava/lang/Object;
+
+    check-cast p0, Lone/me/calls/ui/ui/call/panels/CallBottomPanelWidget;
+
+    sget-object v0, Lone/me/calls/ui/ui/call/panels/CallBottomPanelWidget;->r0:[Lxi7;
+
+    invoke-virtual {p0}, Lone/me/calls/ui/ui/call/panels/CallBottomPanelWidget;->z0()Lm21;
 
     move-result-object p0
 
-    return-object p0
-.end method
+    invoke-virtual {p0, v1}, Lm21;->s(Lfa8;)V
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 1
+    :cond_c
+    return-void
 
-    new-instance v0, Lo11;
+    nop
 
-    iget-object p0, p0, Lo11;->Y:Lje7;
-
-    invoke-direct {v0, p0, p2}, Lo11;-><init>(Lje7;Lkotlin/coroutines/Continuation;)V
-
-    check-cast p1, Ljava/lang/Number;
-
-    invoke-virtual {p1}, Ljava/lang/Number;->longValue()J
-
-    move-result-wide p0
-
-    iput-wide p0, v0, Lo11;->X:J
-
-    return-object v0
-.end method
-
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 2
-
-    invoke-static {p1}, Lsgg;->Z(Ljava/lang/Object;)V
-
-    iget-wide v0, p0, Lo11;->X:J
-
-    iget-object p0, p0, Lo11;->Y:Lje7;
-
-    invoke-interface {p0}, Lje7;->getValue()Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, Lbx2;
-
-    check-cast p0, Lcy2;
-
-    invoke-virtual {p0, v0, v1}, Lcy2;->P(J)Lu5c;
-
-    move-result-object p0
-
-    return-object p0
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

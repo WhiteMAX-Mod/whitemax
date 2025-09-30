@@ -1,70 +1,50 @@
-.class public final Lcq9;
-.super Llje;
+.class public final synthetic Lcq9;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lsm3;
 
 
 # instance fields
-.field public o:Lee3;
+.field public final synthetic a:Z
 
 
 # direct methods
-.method public constructor <init>(Ldx8;)V
+.method public synthetic constructor <init>(Z)V
     .locals 0
 
-    invoke-direct {p0, p1}, Llje;-><init>(Ldx8;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-boolean p1, p0, Lcq9;->a:Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final c(Ldx8;Ljava/lang/String;)V
-    .locals 1
-
-    invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    const-string v0, "config"
-
-    invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result p2
-
-    if-nez p2, :cond_0
-
-    invoke-virtual {p1}, Ldx8;->B()V
-
-    return-void
-
-    :cond_0
-    invoke-static {p1}, Lkhg;->s(Ldx8;)Lee3;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lcq9;->o:Lee3;
-
-    return-void
-.end method
-
-.method public final toString()Ljava/lang/String;
+.method public final accept(Ljava/lang/Object;)V
     .locals 2
 
-    iget-object p0, p0, Lcq9;->o:Lee3;
+    check-cast p1, Lly7;
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    iget-boolean p0, p0, Lcq9;->a:Z
 
-    const-string v1, "{config="
+    iput-boolean p0, p1, Lly7;->b:Z
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    const/4 p0, 0x0
 
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    iput-boolean p0, p1, Lly7;->m:Z
 
-    const-string p0, "}"
+    iput-boolean p0, p1, Lly7;->n:Z
 
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    const-wide/16 v0, 0x0
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    iput-wide v0, p1, Lly7;->p:J
 
-    move-result-object p0
+    iput-wide v0, p1, Lly7;->q:J
 
-    return-object p0
+    iput-boolean p0, p1, Lly7;->r:Z
+
+    return-void
 .end method

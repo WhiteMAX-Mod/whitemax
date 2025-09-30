@@ -1,79 +1,48 @@
 .class public final Lcza;
-.super Ljava/lang/Object;
-.source "SourceFile"
+.super Ljx3;
+
+
+# instance fields
+.field public X:I
+
+.field public final synthetic Y:Lxya;
+
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method public static final a(Lcza;Landroid/view/View;Lng1;Landroid/graphics/RectF;)V
+.method public constructor <init>(Lxya;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    iget p0, p3, Landroid/graphics/RectF;->top:F
+    iput-object p1, p0, Lcza;->Y:Lxya;
 
-    invoke-virtual {p1, p0}, Landroid/view/View;->setPivotX(F)V
-
-    iget p0, p3, Landroid/graphics/RectF;->left:F
-
-    invoke-virtual {p1, p0}, Landroid/view/View;->setPivotY(F)V
-
-    iget p0, p3, Landroid/graphics/RectF;->top:F
-
-    invoke-virtual {p1, p0}, Landroid/view/View;->setX(F)V
-
-    iget p0, p3, Landroid/graphics/RectF;->left:F
-
-    invoke-virtual {p1, p0}, Landroid/view/View;->setY(F)V
-
-    const/high16 p0, 0x3f800000    # 1.0f
-
-    invoke-virtual {p1, p0}, Landroid/view/View;->setScaleX(F)V
-
-    invoke-virtual {p1, p0}, Landroid/view/View;->setScaleY(F)V
-
-    const/4 p3, 0x0
-
-    invoke-static {p1, p3}, Lxqd;->z(Landroid/view/View;F)V
-
-    invoke-virtual {p2, p0}, Landroid/view/View;->setAlpha(F)V
+    invoke-direct {p0, p2}, Ljx3;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
-.method public static b()Z
-    .locals 3
 
-    sget-object v0, Landroid/os/Build;->MANUFACTURER:Ljava/lang/String;
+# virtual methods
+.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    const/4 v1, 0x0
+    iput-object p1, p0, Lcza;->o:Ljava/lang/Object;
 
-    if-eqz v0, :cond_1
+    iget p1, p0, Lcza;->X:I
 
-    sget-object v2, Ljava/util/Locale;->ROOT:Ljava/util/Locale;
+    const/high16 v0, -0x80000000
 
-    invoke-virtual {v0, v2}, Ljava/lang/String;->toLowerCase(Ljava/util/Locale;)Ljava/lang/String;
+    or-int/2addr p1, v0
 
-    move-result-object v0
+    iput p1, p0, Lcza;->X:I
 
-    const-string v2, "huawei"
+    iget-object p1, p0, Lcza;->Y:Lxya;
 
-    invoke-static {v0, v2, v1}, Lj8e;->x0(Ljava/lang/CharSequence;Ljava/lang/CharSequence;Z)Z
+    const/4 v0, 0x0
 
-    move-result v2
+    invoke-virtual {p1, v0, p0}, Lxya;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
-    if-nez v2, :cond_0
+    move-result-object p0
 
-    const-string v2, "honor"
-
-    invoke-static {v0, v2, v1}, Lj8e;->x0(Ljava/lang/CharSequence;Ljava/lang/CharSequence;Z)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    :cond_0
-    const/4 v0, 0x1
-
-    return v0
-
-    :cond_1
-    return v1
+    return-object p0
 .end method

@@ -41,27 +41,27 @@
 
     invoke-direct {v0}, Lru/ok/messages/views/dialogs/SaveToGalleryDialog;-><init>()V
 
-    new-instance v1, Ldna;
+    new-instance v1, Lpxa;
 
     const-string v2, "ru.ok.tamtam.extra.EXTRA_URL"
 
-    invoke-direct {v1, v2, p0}, Ldna;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+    invoke-direct {v1, v2, p0}, Lpxa;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
 
     invoke-static {p1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object p0
 
-    new-instance p1, Ldna;
+    new-instance p1, Lpxa;
 
     const-string v2, "ru.ok.tamtam.extra.EXTRA_GIF"
 
-    invoke-direct {p1, v2, p0}, Ldna;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+    invoke-direct {p1, v2, p0}, Lpxa;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
 
-    filled-new-array {v1, p1}, [Ldna;
+    filled-new-array {v1, p1}, [Lpxa;
 
     move-result-object p0
 
-    invoke-static {p0}, Lp54;->d([Ldna;)Landroid/os/Bundle;
+    invoke-static {p0}, Lw7;->c([Lpxa;)Landroid/os/Bundle;
 
     move-result-object p0
 
@@ -79,7 +79,7 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lxja;->e(Landroid/content/Context;)Z
+    invoke-static {v0}, Lw48;->h(Landroid/content/Context;)Z
 
     move-result v0
 
@@ -90,16 +90,16 @@
     goto :goto_0
 
     :cond_0
-    invoke-static {}, Lxja;->s()[Ljava/lang/String;
+    invoke-static {}, Lw48;->p()[Ljava/lang/String;
 
     move-result-object v0
 
     const/16 v1, 0x9d
 
-    invoke-static {p0, v0, v1}, Lxja;->N(Landroidx/fragment/app/a;[Ljava/lang/String;I)V
+    invoke-static {p0, v0, v1}, Lw48;->y(Landroidx/fragment/app/a;[Ljava/lang/String;I)V
 
     :goto_0
-    iget-object v0, p0, Landroidx/fragment/app/a;->V0:Landroid/view/LayoutInflater;
+    iget-object v0, p0, Landroidx/fragment/app/a;->Y0:Landroid/view/LayoutInflater;
 
     const/4 v1, 0x0
 
@@ -109,16 +109,16 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Landroidx/fragment/app/a;->V0:Landroid/view/LayoutInflater;
+    iput-object v0, p0, Landroidx/fragment/app/a;->Y0:Landroid/view/LayoutInflater;
 
     :cond_1
-    sget v2, Lqwb;->dialog_progress_with_text:I
+    sget v2, Lz8c;->dialog_progress_with_text:I
 
     invoke-virtual {v0, v2, v1}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;)Landroid/view/View;
 
     move-result-object v0
 
-    sget v1, Lpvb;->dialog_progress__text:I
+    sget v1, Lb8c;->dialog_progress__text:I
 
     invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -126,7 +126,7 @@
 
     check-cast v1, Landroidx/appcompat/widget/AppCompatTextView;
 
-    sget v2, Lnnc;->w2:I
+    sget v2, Ld1d;->K2:I
 
     invoke-virtual {p0, v2}, Landroidx/fragment/app/a;->W(I)Ljava/lang/String;
 
@@ -140,7 +140,7 @@
 
     if-eqz v2, :cond_2
 
-    sget-object v2, Lle4;->e0:Lle4;
+    sget-object v2, Loi4;->e0:Loi4;
 
     goto :goto_1
 
@@ -149,18 +149,18 @@
 
     move-result-object v2
 
-    sget-object v3, Lvke;->a0:Lwfe;
+    sget-object v3, Lcze;->a0:Lzte;
 
-    invoke-static {v2}, Lp54;->M(Landroid/content/Context;)Lvke;
+    invoke-static {v2}, Ln4e;->I(Landroid/content/Context;)Lcze;
 
     move-result-object v2
 
     :goto_1
-    iget v2, v2, Lvke;->F:I
+    iget v2, v2, Lcze;->F:I
 
     invoke-virtual {v1, v2}, Landroid/widget/TextView;->setTextColor(I)V
 
-    new-instance v1, Ln08;
+    new-instance v1, Lm78;
 
     invoke-virtual {p0}, Landroidx/fragment/app/a;->I0()Landroid/content/Context;
 
@@ -168,13 +168,13 @@
 
     const/4 v2, 0x0
 
-    invoke-direct {v1, p0, v2}, Ln08;-><init>(Landroid/content/Context;I)V
+    invoke-direct {v1, p0, v2}, Lm78;-><init>(Landroid/content/Context;I)V
 
-    invoke-virtual {v1, v0}, Ln08;->e(Landroid/view/View;)Ln08;
+    invoke-virtual {v1, v0}, Lm78;->e(Landroid/view/View;)Lm78;
 
     move-result-object p0
 
-    invoke-virtual {p0}, Lmc;->a()Lnc;
+    invoke-virtual {p0}, Lrc;->a()Lsc;
 
     move-result-object p0
 
@@ -211,7 +211,7 @@
 
     move-result-object p1
 
-    check-cast p1, Lp5;
+    check-cast p1, Lt5;
 
     :goto_0
     move-object v0, p1
@@ -226,13 +226,13 @@
     :goto_1
     if-eqz v0, :cond_2
 
-    invoke-static {}, Lxja;->s()[Ljava/lang/String;
+    invoke-static {}, Lw48;->p()[Ljava/lang/String;
 
     move-result-object v4
 
-    sget v5, Lnnc;->i2:I
+    sget v5, Ld1d;->q2:I
 
-    sget v6, Lnnc;->h2:I
+    sget v6, Ld1d;->p2:I
 
     const/4 v1, 0x0
 
@@ -240,7 +240,7 @@
 
     move-object v3, p3
 
-    invoke-static/range {v0 .. v6}, Lxja;->a0(Lp5;Lru/ok/messages/views/fragments/base/FrgBase;[Ljava/lang/String;[I[Ljava/lang/String;II)Z
+    invoke-static/range {v0 .. v6}, Lw48;->E(Lt5;Lru/ok/messages/views/fragments/base/FrgBase;[Ljava/lang/String;[I[Ljava/lang/String;II)Z
 
     move-result p1
 
@@ -259,35 +259,35 @@
 .method public final c1(Z)V
     .locals 2
 
-    iget-object v0, p0, Lru/ok/messages/views/dialogs/FrgDlgBase;->A1:Lt4b;
+    iget-object v0, p0, Lru/ok/messages/views/dialogs/FrgDlgBase;->D1:Lr2b;
 
     if-eqz v0, :cond_1
 
-    iget-object v0, v0, Lt4b;->b:Ljava/lang/Object;
+    iget-object v0, v0, Lr2b;->a:Ljava/lang/Object;
 
-    check-cast v0, Lsb3;
+    check-cast v0, Lpe3;
 
     if-eqz v0, :cond_1
 
-    check-cast v0, Lq6a;
+    check-cast v0, Lbfa;
 
-    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lu4;
+    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lz4;
 
     move-result-object v0
 
-    const-class v1, Lop;
+    const-class v1, Lyp;
 
-    invoke-virtual {v0, v1}, Lu4;->c(Ljava/lang/Class;)Ljava/lang/Object;
+    invoke-virtual {v0, v1}, Lz4;->c(Ljava/lang/Class;)Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lop;
+    check-cast v0, Lyp;
 
     if-eqz v0, :cond_1
 
-    check-cast v0, Lcrf;
+    check-cast v0, Loag;
 
-    invoke-virtual {v0}, Lcrf;->c()Z
+    invoke-virtual {v0}, Loag;->c()Z
 
     move-result v0
 
@@ -301,12 +301,12 @@
 
     if-eqz p1, :cond_0
 
-    sget p1, Lnnc;->y2:I
+    sget p1, Ld1d;->M2:I
 
     goto :goto_0
 
     :cond_0
-    sget p1, Lnnc;->x2:I
+    sget p1, Ld1d;->L2:I
 
     :goto_0
     invoke-virtual {p0, p1}, Landroidx/fragment/app/a;->W(I)Ljava/lang/String;
@@ -315,7 +315,7 @@
 
     const/4 v1, 0x0
 
-    invoke-static {v1, v0, p1}, Lus;->F(ILandroid/content/Context;Ljava/lang/String;)V
+    invoke-static {v1, v0, p1}, Lte2;->M(ILandroid/content/Context;Ljava/lang/String;)V
 
     :cond_1
     invoke-virtual {p0}, Landroidx/fragment/app/DialogFragment;->S0()V
@@ -355,19 +355,19 @@
 
     move-result v1
 
-    invoke-static {p0}, Lou0;->t(Ldh7;)Lsg7;
+    invoke-static {p0}, Ljs9;->k(Lzn7;)Lon7;
 
     move-result-object v2
 
-    new-instance v3, Llpc;
+    new-instance v3, Ld3d;
 
     const/4 v4, 0x0
 
-    invoke-direct {v3, p0, v0, v1, v4}, Llpc;-><init>(Lru/ok/messages/views/dialogs/SaveToGalleryDialog;Ljava/lang/String;ZLkotlin/coroutines/Continuation;)V
+    invoke-direct {v3, p0, v0, v1, v4}, Ld3d;-><init>(Lru/ok/messages/views/dialogs/SaveToGalleryDialog;Ljava/lang/String;ZLkotlin/coroutines/Continuation;)V
 
     const/4 p0, 0x3
 
-    invoke-static {v2, v4, v4, v3, p0}, Lzo3;->E(Lox3;Lhx3;Lrx3;Ll66;I)Ldwd;
+    invoke-static {v2, v4, v4, v3, p0}, Lvyg;->u(Ly04;Lq04;Lb14;Lpc6;I)Lcae;
 
     return-void
 .end method

@@ -11,8 +11,8 @@
     d2 = {
         "Lone/me/calls/ui/view/mode/grid/CallGridLayoutManager;",
         "Landroidx/recyclerview/widget/GridLayoutManager;",
-        "y61",
-        "nh0",
+        "n71",
+        "rh0",
         "calls-ui_release"
     }
     k = 0x1
@@ -30,13 +30,13 @@
 
 .field public final N:I
 
-.field public final O:Lnh0;
+.field public final O:Lrh0;
 
-.field public P:Ly61;
+.field public P:Ln71;
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;ILnh0;)V
+.method public constructor <init>(Landroid/content/Context;ILrh0;)V
     .locals 1
 
     const/4 v0, 0x2
@@ -47,33 +47,31 @@
 
     iput p2, p0, Lone/me/calls/ui/view/mode/grid/CallGridLayoutManager;->N:I
 
-    iput-object p3, p0, Lone/me/calls/ui/view/mode/grid/CallGridLayoutManager;->O:Lnh0;
+    iput-object p3, p0, Lone/me/calls/ui/view/mode/grid/CallGridLayoutManager;->O:Lrh0;
 
-    new-instance p1, Ld3d;
+    new-instance p1, Lg8h;
 
-    const/4 p2, 0x5
+    invoke-direct {p1, p0}, Lg8h;-><init>(Ljava/lang/Object;)V
 
-    invoke-direct {p1, p2, p0}, Ld3d;-><init>(ILjava/lang/Object;)V
-
-    iput-object p1, p0, Lone/me/calls/ui/view/mode/grid/CallGridLayoutManager;->P:Ly61;
+    iput-object p1, p0, Lone/me/calls/ui/view/mode/grid/CallGridLayoutManager;->P:Ln71;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final B1(Lwg6;)V
+.method public final B1(Lhn6;)V
     .locals 3
 
-    iget-object v0, p0, Lone/me/calls/ui/view/mode/grid/CallGridLayoutManager;->P:Ly61;
+    iget-object v0, p0, Lone/me/calls/ui/view/mode/grid/CallGridLayoutManager;->P:Ln71;
 
-    invoke-interface {v0}, Ly61;->t()I
+    invoke-interface {v0}, Ln71;->h()I
 
     move-result v0
 
-    iget-object v1, p0, Lone/me/calls/ui/view/mode/grid/CallGridLayoutManager;->O:Lnh0;
+    iget-object v1, p0, Lone/me/calls/ui/view/mode/grid/CallGridLayoutManager;->O:Lrh0;
 
-    invoke-virtual {v1}, Lnh0;->g()I
+    invoke-virtual {v1}, Lrh0;->g()I
 
     move-result v2
 
@@ -85,7 +83,7 @@
 
     add-int/lit8 v0, v0, 0x1
 
-    invoke-virtual {v1}, Lnh0;->g()I
+    invoke-virtual {v1}, Lrh0;->g()I
 
     move-result p0
 
@@ -96,14 +94,14 @@
     return-void
 .end method
 
-.method public final g(Lobc;)Z
+.method public final g(Lloc;)Z
     .locals 2
 
-    invoke-virtual {p0}, Lone/me/calls/ui/view/mode/grid/CallGridLayoutManager;->s()Lobc;
+    invoke-virtual {p0}, Lone/me/calls/ui/view/mode/grid/CallGridLayoutManager;->s()Lloc;
 
     move-result-object p0
 
-    instance-of v0, p1, Lwg6;
+    instance-of v0, p1, Lhn6;
 
     if-eqz v0, :cond_0
 
@@ -129,50 +127,50 @@
     return p0
 .end method
 
-.method public final s()Lobc;
+.method public final s()Lloc;
     .locals 2
 
-    invoke-super {p0}, Landroidx/recyclerview/widget/GridLayoutManager;->s()Lobc;
+    invoke-super {p0}, Landroidx/recyclerview/widget/GridLayoutManager;->s()Lloc;
 
     move-result-object v0
 
     move-object v1, v0
 
-    check-cast v1, Lwg6;
+    check-cast v1, Lhn6;
 
-    invoke-virtual {p0, v1}, Lone/me/calls/ui/view/mode/grid/CallGridLayoutManager;->B1(Lwg6;)V
+    invoke-virtual {p0, v1}, Lone/me/calls/ui/view/mode/grid/CallGridLayoutManager;->B1(Lhn6;)V
 
     return-object v0
 .end method
 
-.method public final t(Landroid/content/Context;Landroid/util/AttributeSet;)Lobc;
+.method public final t(Landroid/content/Context;Landroid/util/AttributeSet;)Lloc;
     .locals 0
 
-    invoke-super {p0, p1, p2}, Landroidx/recyclerview/widget/GridLayoutManager;->t(Landroid/content/Context;Landroid/util/AttributeSet;)Lobc;
+    invoke-super {p0, p1, p2}, Landroidx/recyclerview/widget/GridLayoutManager;->t(Landroid/content/Context;Landroid/util/AttributeSet;)Lloc;
 
     move-result-object p1
 
     move-object p2, p1
 
-    check-cast p2, Lwg6;
+    check-cast p2, Lhn6;
 
-    invoke-virtual {p0, p2}, Lone/me/calls/ui/view/mode/grid/CallGridLayoutManager;->B1(Lwg6;)V
+    invoke-virtual {p0, p2}, Lone/me/calls/ui/view/mode/grid/CallGridLayoutManager;->B1(Lhn6;)V
 
     return-object p1
 .end method
 
-.method public final u(Landroid/view/ViewGroup$LayoutParams;)Lobc;
+.method public final u(Landroid/view/ViewGroup$LayoutParams;)Lloc;
     .locals 1
 
-    invoke-super {p0, p1}, Landroidx/recyclerview/widget/GridLayoutManager;->u(Landroid/view/ViewGroup$LayoutParams;)Lobc;
+    invoke-super {p0, p1}, Landroidx/recyclerview/widget/GridLayoutManager;->u(Landroid/view/ViewGroup$LayoutParams;)Lloc;
 
     move-result-object p1
 
     move-object v0, p1
 
-    check-cast v0, Lwg6;
+    check-cast v0, Lhn6;
 
-    invoke-virtual {p0, v0}, Lone/me/calls/ui/view/mode/grid/CallGridLayoutManager;->B1(Lwg6;)V
+    invoke-virtual {p0, v0}, Lone/me/calls/ui/view/mode/grid/CallGridLayoutManager;->B1(Lhn6;)V
 
     return-object p1
 .end method

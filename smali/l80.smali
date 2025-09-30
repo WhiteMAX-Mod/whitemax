@@ -2,149 +2,102 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lqw9;
 
+# instance fields
+.field public a:I
 
-# static fields
-.field public static final a:Ll80;
+.field public b:I
 
-.field public static final b:Lte5;
+.field public c:F
 
-.field public static final c:Lte5;
+.field public d:F
 
-.field public static final d:Lte5;
+.field public e:J
 
-.field public static final e:Lte5;
+.field public f:J
 
-.field public static final f:Lte5;
+.field public g:J
 
-.field public static final g:Lte5;
+.field public h:F
 
-.field public static final h:Lte5;
-
-
-# direct methods
-.method static constructor <clinit>()V
-    .locals 1
-
-    new-instance v0, Ll80;
-
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    sput-object v0, Ll80;->a:Ll80;
-
-    const-string v0, "requestTimeMs"
-
-    invoke-static {v0}, Lte5;->a(Ljava/lang/String;)Lte5;
-
-    move-result-object v0
-
-    sput-object v0, Ll80;->b:Lte5;
-
-    const-string v0, "requestUptimeMs"
-
-    invoke-static {v0}, Lte5;->a(Ljava/lang/String;)Lte5;
-
-    move-result-object v0
-
-    sput-object v0, Ll80;->c:Lte5;
-
-    const-string v0, "clientInfo"
-
-    invoke-static {v0}, Lte5;->a(Ljava/lang/String;)Lte5;
-
-    move-result-object v0
-
-    sput-object v0, Ll80;->d:Lte5;
-
-    const-string v0, "logSource"
-
-    invoke-static {v0}, Lte5;->a(Ljava/lang/String;)Lte5;
-
-    move-result-object v0
-
-    sput-object v0, Ll80;->e:Lte5;
-
-    const-string v0, "logSourceName"
-
-    invoke-static {v0}, Lte5;->a(Ljava/lang/String;)Lte5;
-
-    move-result-object v0
-
-    sput-object v0, Ll80;->f:Lte5;
-
-    const-string v0, "logEvent"
-
-    invoke-static {v0}, Lte5;->a(Ljava/lang/String;)Lte5;
-
-    move-result-object v0
-
-    sput-object v0, Ll80;->g:Lte5;
-
-    const-string v0, "qosTier"
-
-    invoke-static {v0}, Lte5;->a(Ljava/lang/String;)Lte5;
-
-    move-result-object v0
-
-    sput-object v0, Ll80;->h:Lte5;
-
-    return-void
-.end method
+.field public i:I
 
 
 # virtual methods
-.method public final a(Ljava/lang/Object;Ljava/lang/Object;)V
-    .locals 2
+.method public final a(J)F
+    .locals 8
 
-    check-cast p1, Lss7;
+    iget-wide v0, p0, Ll80;->e:J
 
-    check-cast p2, Lrw9;
+    cmp-long v2, p1, v0
 
-    check-cast p1, Lqa0;
+    const/4 v3, 0x0
 
-    iget-wide v0, p1, Lqa0;->a:J
+    if-gez v2, :cond_0
 
-    sget-object p0, Ll80;->b:Lte5;
+    return v3
 
-    invoke-interface {p2, p0, v0, v1}, Lrw9;->e(Lte5;J)Lrw9;
+    :cond_0
+    iget-wide v4, p0, Ll80;->g:J
 
-    sget-object p0, Ll80;->c:Lte5;
+    const-wide/16 v6, 0x0
 
-    iget-wide v0, p1, Lqa0;->b:J
+    cmp-long v2, v4, v6
 
-    invoke-interface {p2, p0, v0, v1}, Lrw9;->e(Lte5;J)Lrw9;
+    const/high16 v6, 0x3f800000    # 1.0f
 
-    sget-object p0, Ll80;->d:Lte5;
+    if-ltz v2, :cond_2
 
-    iget-object v0, p1, Lqa0;->c:Lr90;
+    cmp-long v2, p1, v4
 
-    invoke-interface {p2, p0, v0}, Lrw9;->a(Lte5;Ljava/lang/Object;)Lrw9;
+    if-gez v2, :cond_1
 
-    sget-object p0, Ll80;->e:Lte5;
+    goto :goto_0
 
-    iget-object v0, p1, Lqa0;->d:Ljava/lang/Integer;
+    :cond_1
+    sub-long/2addr p1, v4
 
-    invoke-interface {p2, p0, v0}, Lrw9;->a(Lte5;Ljava/lang/Object;)Lrw9;
+    iget v0, p0, Ll80;->h:F
 
-    sget-object p0, Ll80;->f:Lte5;
+    sub-float v1, v6, v0
 
-    iget-object v0, p1, Lqa0;->e:Ljava/lang/String;
+    long-to-float p1, p1
 
-    invoke-interface {p2, p0, v0}, Lrw9;->a(Lte5;Ljava/lang/Object;)Lrw9;
+    iget p0, p0, Ll80;->i:I
 
-    sget-object p0, Ll80;->g:Lte5;
+    int-to-float p0, p0
 
-    iget-object p1, p1, Lqa0;->f:Ljava/util/ArrayList;
+    div-float/2addr p1, p0
 
-    invoke-interface {p2, p0, p1}, Lrw9;->a(Lte5;Ljava/lang/Object;)Lrw9;
+    invoke-static {p1, v3, v6}, Ldt7;->b(FFF)F
 
-    sget-object p0, Ll80;->h:Lte5;
+    move-result p0
 
-    sget-object p1, Llnb;->a:Llnb;
+    mul-float/2addr p0, v0
 
-    invoke-interface {p2, p0, p1}, Lrw9;->a(Lte5;Ljava/lang/Object;)Lrw9;
+    add-float/2addr p0, v1
 
-    return-void
+    return p0
+
+    :cond_2
+    :goto_0
+    sub-long/2addr p1, v0
+
+    long-to-float p1, p1
+
+    iget p0, p0, Ll80;->a:I
+
+    int-to-float p0, p0
+
+    div-float/2addr p1, p0
+
+    invoke-static {p1, v3, v6}, Ldt7;->b(FFF)F
+
+    move-result p0
+
+    const/high16 p1, 0x3f000000    # 0.5f
+
+    mul-float/2addr p0, p1
+
+    return p0
 .end method

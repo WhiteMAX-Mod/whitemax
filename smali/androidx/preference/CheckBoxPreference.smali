@@ -7,17 +7,17 @@
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 2
 
-    sget v0, Lgqb;->checkBoxPreferenceStyle:I
+    sget v0, Lq2c;->checkBoxPreferenceStyle:I
 
     const v1, 0x101008f
 
-    invoke-static {v0, v1, p1}, Ltk9;->n(IILandroid/content/Context;)I
+    invoke-static {v0, v1, p1}, Ln2e;->k(IILandroid/content/Context;)I
 
     move-result v0
 
     invoke-direct {p0, p1, p2, v0}, Landroidx/preference/Preference;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
-    sget-object p0, Ln0c;->CheckBoxPreference:[I
+    sget-object p0, Ladc;->CheckBoxPreference:[I
 
     const/4 v1, 0x0
 
@@ -25,9 +25,9 @@
 
     move-result-object p0
 
-    sget p1, Ln0c;->CheckBoxPreference_summaryOn:I
+    sget p1, Ladc;->CheckBoxPreference_summaryOn:I
 
-    sget p2, Ln0c;->CheckBoxPreference_android_summaryOn:I
+    sget p2, Ladc;->CheckBoxPreference_android_summaryOn:I
 
     invoke-virtual {p0, p1}, Landroid/content/res/TypedArray;->getString(I)Ljava/lang/String;
 
@@ -38,9 +38,9 @@
     invoke-virtual {p0, p2}, Landroid/content/res/TypedArray;->getString(I)Ljava/lang/String;
 
     :cond_0
-    sget p1, Ln0c;->CheckBoxPreference_summaryOff:I
+    sget p1, Ladc;->CheckBoxPreference_summaryOff:I
 
-    sget p2, Ln0c;->CheckBoxPreference_android_summaryOff:I
+    sget p2, Ladc;->CheckBoxPreference_android_summaryOff:I
 
     invoke-virtual {p0, p1}, Landroid/content/res/TypedArray;->getString(I)Ljava/lang/String;
 
@@ -51,9 +51,9 @@
     invoke-virtual {p0, p2}, Landroid/content/res/TypedArray;->getString(I)Ljava/lang/String;
 
     :cond_1
-    sget p1, Ln0c;->CheckBoxPreference_disableDependentsState:I
+    sget p1, Ladc;->CheckBoxPreference_disableDependentsState:I
 
-    sget p2, Ln0c;->CheckBoxPreference_android_disableDependentsState:I
+    sget p2, Ladc;->CheckBoxPreference_android_disableDependentsState:I
 
     invoke-virtual {p0, p2, v1}, Landroid/content/res/TypedArray;->getBoolean(IZ)Z
 

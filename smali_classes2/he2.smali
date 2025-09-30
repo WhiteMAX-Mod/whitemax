@@ -1,165 +1,108 @@
 .class public final Lhe2;
-.super Lqde;
+.super Lug2;
 .source "SourceFile"
 
-# interfaces
-.implements Ll66;
 
+# virtual methods
+.method public final F(Lus8;Lbc6;Lpc6;)V
+    .locals 2
 
-# instance fields
-.field public synthetic X:Ljava/lang/Object;
+    check-cast p1, Lss8;
 
-.field public final synthetic Y:Lone/me/profile/screens/media/ChatMediaListWidget;
+    iget-object v0, p0, Lzoc;->a:Landroid/view/View;
 
+    check-cast v0, Lrg2;
 
-# direct methods
-.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/profile/screens/media/ChatMediaListWidget;)V
-    .locals 0
+    invoke-virtual {p0, p1}, Lhe2;->G(Lss8;)V
 
-    iput-object p2, p0, Lhe2;->Y:Lone/me/profile/screens/media/ChatMediaListWidget;
+    new-instance v1, Lqb;
 
-    const/4 p2, 0x2
+    invoke-direct {v1, p2, p1}, Lqb;-><init>(Lbc6;Lss8;)V
 
-    invoke-direct {p0, p2, p1}, Lqde;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-static {v0, v1}, Lz48;->D(Landroid/view/View;Landroid/view/View$OnClickListener;)V
+
+    new-instance p2, Ll82;
+
+    invoke-direct {p2, p3, p1, p0}, Ll82;-><init>(Lpc6;Lss8;Lhe2;)V
+
+    invoke-virtual {v0, p2}, Landroid/view/View;->setOnLongClickListener(Landroid/view/View$OnLongClickListener;)V
 
     return-void
 .end method
 
+.method public final G(Lss8;)V
+    .locals 4
 
-# virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+    iget-object p0, p0, Lzoc;->a:Landroid/view/View;
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    check-cast p0, Lrg2;
 
-    invoke-virtual {p0, p1, p2}, Lhe2;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    iget-wide v0, p1, Lss8;->a:J
 
-    move-result-object p0
+    long-to-int v0, v0
 
-    check-cast p0, Lhe2;
+    invoke-virtual {p0, v0}, Landroidx/constraintlayout/widget/ConstraintLayout;->setId(I)V
 
-    sget-object p1, Le5f;->a:Le5f;
+    iget-object v0, p1, Lss8;->X:Ljava/lang/String;
 
-    invoke-virtual {p0, p1}, Lhe2;->o(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {p0, v0}, Lrg2;->setTitle(Ljava/lang/CharSequence;)V
 
-    return-object p1
-.end method
+    iget-object v0, p1, Lss8;->Z:Ljava/lang/CharSequence;
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 1
+    invoke-virtual {p0, v0}, Lrg2;->setLink(Ljava/lang/CharSequence;)V
 
-    new-instance v0, Lhe2;
+    iget-object v0, p1, Lss8;->Y:Ljava/lang/CharSequence;
 
-    iget-object p0, p0, Lhe2;->Y:Lone/me/profile/screens/media/ChatMediaListWidget;
+    invoke-virtual {p0, v0}, Lrg2;->setSubtitle(Ljava/lang/CharSequence;)V
 
-    invoke-direct {v0, p2, p0}, Lhe2;-><init>(Lkotlin/coroutines/Continuation;Lone/me/profile/screens/media/ChatMediaListWidget;)V
+    iget-boolean v0, p1, Lss8;->r0:Z
 
-    iput-object p1, v0, Lhe2;->X:Ljava/lang/Object;
+    if-eqz v0, :cond_0
 
-    return-object v0
-.end method
+    iget-object p1, p0, Lrg2;->J0:Loba;
 
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 5
+    iget-object v0, p0, Lrg2;->F0:Ljava/lang/Object;
 
-    invoke-static {p1}, Lsgg;->Z(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Lhe2;->X:Ljava/lang/Object;
-
-    check-cast p1, Lbg2;
-
-    iget-object p0, p0, Lhe2;->Y:Lone/me/profile/screens/media/ChatMediaListWidget;
-
-    invoke-static {p0}, Lone/me/profile/screens/media/ChatMediaListWidget;->p0(Lone/me/profile/screens/media/ChatMediaListWidget;)Lone/me/sdk/lists/widgets/EndlessRecyclerView2;
+    invoke-interface {v0}, Lcl7;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
-    const/4 v1, 0x0
+    check-cast v0, Landroid/graphics/drawable/Drawable;
 
-    invoke-virtual {v0, v1}, Lone/me/sdk/lists/widgets/EndlessRecyclerView2;->setRefreshingNext(Z)V
+    new-instance v1, Lif1;
 
-    invoke-static {p0}, Lone/me/profile/screens/media/ChatMediaListWidget;->p0(Lone/me/profile/screens/media/ChatMediaListWidget;)Lone/me/sdk/lists/widgets/EndlessRecyclerView2;
+    const/16 v2, 0xe
 
-    move-result-object v0
+    invoke-direct {v1, v2}, Lif1;-><init>(I)V
 
-    invoke-virtual {v0}, Landroidx/recyclerview/widget/RecyclerView;->getLayoutManager()Landroidx/recyclerview/widget/a;
+    new-instance v2, Lif1;
 
-    move-result-object v0
+    const/16 v3, 0xf
 
-    instance-of v2, v0, Landroidx/recyclerview/widget/LinearLayoutManager;
+    invoke-direct {v2, v3}, Lif1;-><init>(I)V
 
-    const/4 v3, 0x0
+    const/4 v3, 0x6
 
-    if-eqz v2, :cond_0
+    invoke-static {p1, v0, v1, v2, v3}, Loba;->o(Loba;Landroid/graphics/drawable/Drawable;Lbc6;Lbc6;I)V
 
-    check-cast v0, Landroidx/recyclerview/widget/LinearLayoutManager;
+    invoke-virtual {p0}, Lrg2;->v()V
 
-    goto :goto_0
+    return-void
 
     :cond_0
-    move-object v0, v3
+    iget-object p1, p1, Lss8;->o:Ljava/lang/String;
 
-    :goto_0
-    if-eqz v0, :cond_1
+    invoke-virtual {p0, p1}, Lrg2;->setLinkPhoto(Ljava/lang/String;)V
 
-    invoke-virtual {v0}, Landroidx/recyclerview/widget/LinearLayoutManager;->S0()I
+    return-void
+.end method
 
-    move-result v0
+.method public final bridge synthetic y(Lts7;)V
+    .locals 0
 
-    new-instance v2, Ljava/lang/Integer;
+    check-cast p1, Lss8;
 
-    invoke-direct {v2, v0}, Ljava/lang/Integer;-><init>(I)V
+    invoke-virtual {p0, p1}, Lhe2;->G(Lss8;)V
 
-    goto :goto_1
-
-    :cond_1
-    move-object v2, v3
-
-    :goto_1
-    invoke-static {p0}, Lone/me/profile/screens/media/ChatMediaListWidget;->p0(Lone/me/profile/screens/media/ChatMediaListWidget;)Lone/me/sdk/lists/widgets/EndlessRecyclerView2;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroidx/recyclerview/widget/RecyclerView;->getAdapter()Lgbc;
-
-    move-result-object v0
-
-    instance-of v4, v0, Lee2;
-
-    if-eqz v4, :cond_2
-
-    move-object v3, v0
-
-    check-cast v3, Lee2;
-
-    :cond_2
-    if-eqz v3, :cond_3
-
-    iget-object p1, p1, Lbg2;->a:Ljava/util/List;
-
-    invoke-virtual {v3, p1}, Lhl7;->E(Ljava/util/List;)V
-
-    :cond_3
-    if-nez v2, :cond_4
-
-    goto :goto_2
-
-    :cond_4
-    invoke-virtual {v2}, Ljava/lang/Integer;->intValue()I
-
-    move-result p1
-
-    if-nez p1, :cond_5
-
-    invoke-static {p0}, Lone/me/profile/screens/media/ChatMediaListWidget;->p0(Lone/me/profile/screens/media/ChatMediaListWidget;)Lone/me/sdk/lists/widgets/EndlessRecyclerView2;
-
-    move-result-object p0
-
-    invoke-virtual {p0, v1}, Landroidx/recyclerview/widget/RecyclerView;->A0(I)V
-
-    :cond_5
-    :goto_2
-    sget-object p0, Le5f;->a:Le5f;
-
-    return-object p0
+    return-void
 .end method

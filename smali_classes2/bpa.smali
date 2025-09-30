@@ -1,325 +1,99 @@
 .class public final Lbpa;
-.super Ljava/lang/Object;
+.super Lcpa;
 .source "SourceFile"
 
-# interfaces
-.implements Lorg/webrtc/VideoEncoderFactory;
-.implements Lg38;
 
+# static fields
+.field public static final CREATOR:Landroid/os/Parcelable$Creator;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroid/os/Parcelable$Creator<",
+            "Lbpa;",
+            ">;"
+        }
+    .end annotation
+.end field
 
-# instance fields
-.field public final a:Lorg/webrtc/HardwareVideoEncoderFactory;
-
-.field public final b:Lorg/webrtc/SoftwareVideoEncoderFactory;
-
-.field public final c:Ldpa;
-
-.field public final d:Ls1c;
-
-.field public e:Lorg/webrtc/VideoCodecInfo;
-
-.field public final f:Ljava/util/concurrent/CopyOnWriteArraySet;
+.field public static final b:Lbpa;
 
 
 # direct methods
-.method public constructor <init>(Lorg/webrtc/EglBase$Context;ZLs1c;)V
-    .locals 2
+.method static constructor <clinit>()V
+    .locals 3
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lbpa;
 
-    new-instance v0, Lorg/webrtc/SoftwareVideoEncoderFactory;
+    const-wide/16 v1, 0x1388
 
-    invoke-direct {v0}, Lorg/webrtc/SoftwareVideoEncoderFactory;-><init>()V
+    invoke-direct {v0, v1, v2}, Lcpa;-><init>(J)V
 
-    iput-object v0, p0, Lbpa;->b:Lorg/webrtc/SoftwareVideoEncoderFactory;
+    sput-object v0, Lbpa;->b:Lbpa;
 
-    new-instance v0, Ljava/util/concurrent/CopyOnWriteArraySet;
+    new-instance v0, Lba8;
 
-    invoke-direct {v0}, Ljava/util/concurrent/CopyOnWriteArraySet;-><init>()V
+    const/16 v1, 0x1a
 
-    iput-object v0, p0, Lbpa;->f:Ljava/util/concurrent/CopyOnWriteArraySet;
+    invoke-direct {v0, v1}, Lba8;-><init>(I)V
 
-    new-instance v0, Lorg/webrtc/HardwareVideoEncoderFactory;
-
-    const/4 v1, 0x0
-
-    invoke-direct {v0, p1, v1, v1}, Lorg/webrtc/HardwareVideoEncoderFactory;-><init>(Lorg/webrtc/EglBase$Context;ZZ)V
-
-    iput-object v0, p0, Lbpa;->a:Lorg/webrtc/HardwareVideoEncoderFactory;
-
-    if-eqz p2, :cond_0
-
-    new-instance p1, Ldpa;
-
-    invoke-direct {p1, p0, p3}, Ldpa;-><init>(Lbpa;Ls1c;)V
-
-    goto :goto_0
-
-    :cond_0
-    const/4 p1, 0x0
-
-    :goto_0
-    iput-object p1, p0, Lbpa;->c:Ldpa;
-
-    iput-object p3, p0, Lbpa;->d:Ls1c;
+    sput-object v0, Lbpa;->CREATOR:Landroid/os/Parcelable$Creator;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final createEncoder(Lorg/webrtc/VideoCodecInfo;)Lorg/webrtc/VideoEncoder;
-    .locals 6
+.method public final describeContents()I
+    .locals 0
 
-    iget-object v0, p0, Lbpa;->c:Ldpa;
+    const/4 p0, 0x0
 
-    if-eqz v0, :cond_0
+    return p0
+.end method
 
-    iget-object v1, p1, Lorg/webrtc/VideoCodecInfo;->name:Ljava/lang/String;
-
-    const-string v2, "VP9"
-
-    invoke-static {v1, v2}, Lxq7;->d(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    iget-object v0, v0, Ldpa;->b:Ls1c;
-
-    new-instance v2, Ljava/lang/StringBuilder;
-
-    const-string v3, "isSoftwareCodecProhibited check for: "
-
-    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v2, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v3, ", resulted as "
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v2
-
-    const-string v3, "PatchedVideoEncoderFactoryCodecSelector"
-
-    invoke-interface {v0, v3, v2}, Ls1c;->log(Ljava/lang/String;Ljava/lang/String;)V
-
-    if-eqz v1, :cond_0
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 1
 
     const/4 v0, 0x1
 
-    goto :goto_0
+    if-ne p0, p1, :cond_0
+
+    return v0
 
     :cond_0
-    const/4 v0, 0x0
+    instance-of p0, p1, Lbpa;
 
-    :goto_0
-    iget-object v1, p0, Lbpa;->a:Lorg/webrtc/HardwareVideoEncoderFactory;
+    if-nez p0, :cond_1
 
-    invoke-virtual {v1, p1}, Lorg/webrtc/HardwareVideoEncoderFactory;->createEncoder(Lorg/webrtc/VideoCodecInfo;)Lorg/webrtc/VideoEncoder;
+    const/4 p0, 0x0
 
-    move-result-object v1
-
-    if-eqz v1, :cond_2
-
-    if-nez v0, :cond_1
-
-    goto :goto_1
+    return p0
 
     :cond_1
-    const/4 v0, 0x0
-
-    goto :goto_2
-
-    :cond_2
-    :goto_1
-    iget-object v0, p0, Lbpa;->b:Lorg/webrtc/SoftwareVideoEncoderFactory;
-
-    invoke-virtual {v0, p1}, Lorg/webrtc/SoftwareVideoEncoderFactory;->createEncoder(Lorg/webrtc/VideoCodecInfo;)Lorg/webrtc/VideoEncoder;
-
-    move-result-object v0
-
-    :goto_2
-    new-instance v2, Ljava/lang/StringBuilder;
-
-    const-string v3, "Encoder is about to create: "
-
-    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v3, p1, Lorg/webrtc/VideoCodecInfo;->name:Ljava/lang/String;
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v3, " hw="
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v3, "true"
-
-    const-string v4, "false"
-
-    if-nez v1, :cond_3
-
-    move-object v5, v4
-
-    goto :goto_3
-
-    :cond_3
-    move-object v5, v3
-
-    :goto_3
-    invoke-virtual {v2, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v5, " sw="
-
-    invoke-virtual {v2, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    if-nez v0, :cond_4
-
-    move-object v3, v4
-
-    :cond_4
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v2
-
-    iget-object v3, p0, Lbpa;->d:Ls1c;
-
-    const-string v4, "PatchedVideoEncoderFactory"
-
-    invoke-interface {v3, v4, v2}, Ls1c;->log(Ljava/lang/String;Ljava/lang/String;)V
-
-    iput-object p1, p0, Lbpa;->e:Lorg/webrtc/VideoCodecInfo;
-
-    iget-object p0, p0, Lbpa;->f:Ljava/util/concurrent/CopyOnWriteArraySet;
-
-    invoke-virtual {p0}, Ljava/util/concurrent/CopyOnWriteArraySet;->iterator()Ljava/util/Iterator;
-
-    move-result-object p0
-
-    :goto_4
-    invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result p1
-
-    if-eqz p1, :cond_5
-
-    invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lwdg;
-
-    check-cast p1, Lfqa;
-
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    new-instance v2, Lxpa;
-
-    const/4 v3, 0x0
-
-    invoke-direct {v2, p1, v3}, Lxpa;-><init>(Lfqa;I)V
-
-    new-instance v3, Ldeg;
-
-    const/4 v4, 0x1
-
-    invoke-direct {v3, p1, v2, v4}, Ldeg;-><init>(Lfqa;Lkj3;I)V
-
-    const-string v2, "onNewCodecIsCreating"
-
-    invoke-virtual {p1, v2, v3}, Lfqa;->i(Ljava/lang/String;Ljava/lang/Runnable;)V
-
-    goto :goto_4
-
-    :cond_5
-    if-eqz v1, :cond_6
-
-    if-eqz v0, :cond_6
-
-    new-instance p0, Lorg/webrtc/VideoEncoderFallback;
-
-    invoke-direct {p0, v0, v1}, Lorg/webrtc/VideoEncoderFallback;-><init>(Lorg/webrtc/VideoEncoder;Lorg/webrtc/VideoEncoder;)V
-
-    return-object p0
-
-    :cond_6
-    if-eqz v1, :cond_7
-
-    return-object v1
-
-    :cond_7
-    return-object v0
+    return v0
 .end method
 
-.method public final getEncoderSelector()Lorg/webrtc/VideoEncoderFactory$VideoEncoderSelector;
+.method public final hashCode()I
     .locals 0
 
-    iget-object p0, p0, Lbpa;->c:Ldpa;
+    const p0, -0x38a300d4
 
-    return-object p0
+    return p0
 .end method
 
-.method public final getSupportedCodecs()[Lorg/webrtc/VideoCodecInfo;
-    .locals 2
-
-    new-instance v0, Ljava/util/LinkedHashSet;
-
-    invoke-direct {v0}, Ljava/util/LinkedHashSet;-><init>()V
-
-    iget-object v1, p0, Lbpa;->a:Lorg/webrtc/HardwareVideoEncoderFactory;
-
-    invoke-virtual {v1}, Lorg/webrtc/HardwareVideoEncoderFactory;->getSupportedCodecs()[Lorg/webrtc/VideoCodecInfo;
-
-    move-result-object v1
-
-    invoke-static {v1}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Ljava/util/AbstractCollection;->addAll(Ljava/util/Collection;)Z
-
-    iget-object p0, p0, Lbpa;->b:Lorg/webrtc/SoftwareVideoEncoderFactory;
-
-    invoke-virtual {p0}, Lorg/webrtc/SoftwareVideoEncoderFactory;->getSupportedCodecs()[Lorg/webrtc/VideoCodecInfo;
-
-    move-result-object p0
-
-    invoke-static {p0}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
-
-    move-result-object p0
-
-    invoke-virtual {v0, p0}, Ljava/util/AbstractCollection;->addAll(Ljava/util/Collection;)Z
-
-    invoke-virtual {v0}, Ljava/util/AbstractCollection;->size()I
-
-    move-result p0
-
-    new-array p0, p0, [Lorg/webrtc/VideoCodecInfo;
-
-    invoke-virtual {v0, p0}, Ljava/util/AbstractCollection;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, [Lorg/webrtc/VideoCodecInfo;
-
-    return-object p0
-.end method
-
-.method public final q(Lh38;)V
+.method public final toString()Ljava/lang/String;
     .locals 0
 
-    iget-object p0, p0, Lbpa;->c:Ldpa;
+    const-string p0, "Timer"
 
-    if-eqz p0, :cond_0
+    return-object p0
+.end method
 
-    invoke-virtual {p0, p1}, Ldpa;->q(Lh38;)V
+.method public final writeToParcel(Landroid/os/Parcel;I)V
+    .locals 0
 
-    :cond_0
+    const/4 p0, 0x1
+
+    invoke-virtual {p1, p0}, Landroid/os/Parcel;->writeInt(I)V
+
     return-void
 .end method

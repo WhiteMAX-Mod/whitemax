@@ -14,7 +14,7 @@
     return-void
 .end method
 
-.method public static a(Ljava/lang/String;Law4;)[Ljava/lang/String;
+.method public static a(Ljava/lang/String;Lk15;)[Ljava/lang/String;
     .locals 3
 
     sget-boolean v0, Lcom/facebook/soloader/SoLoader;->a:Z
@@ -29,25 +29,25 @@
 
     :cond_0
     :try_start_0
-    instance-of v0, p1, Lbw4;
+    instance-of v0, p1, Ll15;
 
     if-eqz v0, :cond_2
 
-    check-cast p1, Lbw4;
+    check-cast p1, Ll15;
     :try_end_0
-    .catch Lb99; {:try_start_0 .. :try_end_0} :catch_1
+    .catch Lfg9; {:try_start_0 .. :try_end_0} :catch_1
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     const/4 v0, 0x0
 
     :goto_0
     :try_start_1
-    invoke-static {p1}, Lild;->h(Law4;)[Ljava/lang/String;
+    invoke-static {p1}, Lte2;->n(Lk15;)[Ljava/lang/String;
 
     move-result-object p0
     :try_end_1
     .catch Ljava/nio/channels/ClosedByInterruptException; {:try_start_1 .. :try_end_1} :catch_0
-    .catch Lb99; {:try_start_1 .. :try_end_1} :catch_1
+    .catch Lfg9; {:try_start_1 .. :try_end_1} :catch_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
     goto :goto_1
@@ -66,17 +66,17 @@
 
     new-instance v1, Ljava/io/FileInputStream;
 
-    iget-object v2, p1, Lbw4;->a:Ljava/io/File;
+    iget-object v2, p1, Ll15;->a:Ljava/io/File;
 
     invoke-direct {v1, v2}, Ljava/io/FileInputStream;-><init>(Ljava/io/File;)V
 
-    iput-object v1, p1, Lbw4;->b:Ljava/io/FileInputStream;
+    iput-object v1, p1, Ll15;->b:Ljava/io/FileInputStream;
 
     invoke-virtual {v1}, Ljava/io/FileInputStream;->getChannel()Ljava/nio/channels/FileChannel;
 
     move-result-object v1
 
-    iput-object v1, p1, Lbw4;->c:Ljava/nio/channels/FileChannel;
+    iput-object v1, p1, Ll15;->c:Ljava/nio/channels/FileChannel;
 
     goto :goto_0
 
@@ -84,11 +84,11 @@
     throw v1
 
     :cond_2
-    invoke-static {p1}, Lild;->h(Law4;)[Ljava/lang/String;
+    invoke-static {p1}, Lte2;->n(Lk15;)[Ljava/lang/String;
 
     move-result-object p0
     :try_end_2
-    .catch Lb99; {:try_start_2 .. :try_end_2} :catch_1
+    .catch Lfg9; {:try_start_2 .. :try_end_2} :catch_1
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
     :goto_1
@@ -105,7 +105,7 @@
     move-exception p1
 
     :try_start_3
-    invoke-static {p0, p1}, Lq46;->j(Ljava/lang/String;Ljava/lang/UnsatisfiedLinkError;)Lvsd;
+    invoke-static {p0, p1}, Lkua;->f(Ljava/lang/String;Ljava/lang/UnsatisfiedLinkError;)Lr6e;
 
     move-result-object p0
 

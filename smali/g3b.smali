@@ -1,168 +1,159 @@
-.class public Lg3b;
-.super Ljava/lang/Object;
+.class public final Lg3b;
+.super La3;
 .source "SourceFile"
-
-# interfaces
-.implements Lf3b;
 
 
 # instance fields
 .field public final a:[Ljava/lang/Object;
 
-.field public b:I
+.field public final b:[Ljava/lang/Object;
+
+.field public final c:I
+
+.field public final o:I
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 1
-
-    .line 4
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    const/16 v0, 0x100
-
-    .line 5
-    new-array v0, v0, [Ljava/lang/Object;
-
-    iput-object v0, p0, Lg3b;->a:[Ljava/lang/Object;
-
-    return-void
-.end method
-
-.method public constructor <init>(I)V
+.method public constructor <init>([Ljava/lang/Object;[Ljava/lang/Object;II)V
     .locals 0
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    if-lez p1, :cond_0
-
-    .line 2
-    new-array p1, p1, [Ljava/lang/Object;
 
     iput-object p1, p0, Lg3b;->a:[Ljava/lang/Object;
 
+    iput-object p2, p0, Lg3b;->b:[Ljava/lang/Object;
+
+    iput p3, p0, Lg3b;->c:I
+
+    iput p4, p0, Lg3b;->o:I
+
+    const/16 p0, 0x20
+
+    if-le p3, p0, :cond_0
+
     return-void
 
-    .line 3
     :cond_0
-    new-instance p0, Ljava/lang/IllegalArgumentException;
+    invoke-static {p3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    const-string p1, "The max pool size must be > 0"
+    move-result-object p0
 
-    invoke-direct {p0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+    new-instance p1, Ljava/lang/StringBuilder;
 
-    throw p0
+    const-string p2, "Trie-based persistent vector should have at least 33 elements, got "
+
+    invoke-direct {p1, p2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {p1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    new-instance p1, Ljava/lang/IllegalArgumentException;
+
+    invoke-virtual {p0}, Ljava/lang/Object;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-direct {p1, p0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw p1
 .end method
 
 
 # virtual methods
-.method public a(Lls;)V
-    .locals 3
+.method public final get(I)Ljava/lang/Object;
+    .locals 2
 
-    iget v0, p0, Lg3b;->b:I
+    iget v0, p0, Lg3b;->c:I
 
-    iget-object v1, p0, Lg3b;->a:[Ljava/lang/Object;
+    invoke-static {p1, v0}, Laec;->f(II)V
 
-    array-length v2, v1
+    add-int/lit8 v0, v0, -0x1
 
-    if-ge v0, v2, :cond_0
+    and-int/lit8 v0, v0, -0x20
 
-    aput-object p1, v1, v0
+    if-gt v0, p1, :cond_0
 
-    add-int/lit8 v0, v0, 0x1
-
-    iput v0, p0, Lg3b;->b:I
-
-    :cond_0
-    return-void
-.end method
-
-.method public f(Ljava/lang/Object;)Z
-    .locals 6
-
-    iget v0, p0, Lg3b;->b:I
-
-    const/4 v1, 0x0
-
-    move v2, v1
-
-    :goto_0
-    iget-object v3, p0, Lg3b;->a:[Ljava/lang/Object;
-
-    const/4 v4, 0x1
-
-    if-ge v2, v0, :cond_1
-
-    aget-object v5, v3, v2
-
-    if-ne v5, p1, :cond_0
-
-    move v0, v4
+    iget-object p0, p0, Lg3b;->b:[Ljava/lang/Object;
 
     goto :goto_1
 
     :cond_0
-    add-int/lit8 v2, v2, 0x1
+    iget-object v0, p0, Lg3b;->a:[Ljava/lang/Object;
+
+    iget p0, p0, Lg3b;->o:I
+
+    :goto_0
+    if-lez p0, :cond_2
+
+    invoke-static {p1, p0}, Lb0b;->p(II)I
+
+    move-result v1
+
+    aget-object v0, v0, v1
+
+    if-eqz v0, :cond_1
+
+    check-cast v0, [Ljava/lang/Object;
+
+    add-int/lit8 p0, p0, -0x5
 
     goto :goto_0
 
     :cond_1
-    move v0, v1
+    new-instance p0, Ljava/lang/NullPointerException;
 
-    :goto_1
-    if-nez v0, :cond_3
+    const-string p1, "null cannot be cast to non-null type kotlin.Array<kotlin.Any?>"
 
-    iget v0, p0, Lg3b;->b:I
-
-    array-length v2, v3
-
-    if-ge v0, v2, :cond_2
-
-    aput-object p1, v3, v0
-
-    add-int/2addr v0, v4
-
-    iput v0, p0, Lg3b;->b:I
-
-    return v4
-
-    :cond_2
-    return v1
-
-    :cond_3
-    new-instance p0, Ljava/lang/IllegalStateException;
-
-    const-string p1, "Already in the pool!"
-
-    invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p0, p1}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
 
     throw p0
+
+    :cond_2
+    move-object p0, v0
+
+    :goto_1
+    and-int/lit8 p1, p1, 0x1f
+
+    aget-object p0, p0, p1
+
+    return-object p0
 .end method
 
-.method public g()Ljava/lang/Object;
-    .locals 5
+.method public final getSize()I
+    .locals 0
 
-    iget v0, p0, Lg3b;->b:I
+    iget p0, p0, Lg3b;->c:I
 
-    const/4 v1, 0x0
+    return p0
+.end method
 
-    if-lez v0, :cond_0
+.method public final listIterator(I)Ljava/util/ListIterator;
+    .locals 7
 
-    add-int/lit8 v2, v0, -0x1
+    iget v0, p0, Lg3b;->c:I
 
-    iget-object v3, p0, Lg3b;->a:[Ljava/lang/Object;
+    invoke-static {p1, v0}, Laec;->g(II)V
 
-    aget-object v4, v3, v2
+    new-instance v1, Li3b;
 
-    aput-object v1, v3, v2
+    iget v0, p0, Lg3b;->o:I
 
-    add-int/lit8 v0, v0, -0x1
+    div-int/lit8 v0, v0, 0x5
 
-    iput v0, p0, Lg3b;->b:I
+    add-int/lit8 v4, v0, 0x1
 
-    return-object v4
+    iget v3, p0, Lg3b;->c:I
 
-    :cond_0
+    iget-object v5, p0, Lg3b;->a:[Ljava/lang/Object;
+
+    iget-object v6, p0, Lg3b;->b:[Ljava/lang/Object;
+
+    move v2, p1
+
+    invoke-direct/range {v1 .. v6}, Li3b;-><init>(III[Ljava/lang/Object;[Ljava/lang/Object;)V
+
     return-object v1
 .end method

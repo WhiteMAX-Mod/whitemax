@@ -3,228 +3,232 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lb01;
+.implements Lru/ok/android/externcalls/sdk/feature/ConversationFeatureManager$FeatureListener;
 
 
 # instance fields
-.field public final a:Lhoe;
-
-.field public final b:I
-
-.field public final c:I
+.field public final synthetic a:Ld01;
 
 
 # direct methods
-.method public constructor <init>(ILhoe;)V
-    .locals 1
-
-    sget v0, Lq5a;->c:I
+.method public constructor <init>(Ld01;)V
+    .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p2, p0, Lzz0;->a:Lhoe;
-
-    iput p1, p0, Lzz0;->b:I
-
-    sget p1, Lp5a;->f:I
-
-    iput p1, p0, Lzz0;->c:I
+    iput-object p1, p0, Lzz0;->a:Ld01;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()I
-    .locals 0
+.method public final onFeatureEnabledChanged(Ld71;Z)V
+    .locals 8
 
-    const/4 p0, 0x4
+    invoke-super {p0, p1, p2}, Lru/ok/android/externcalls/sdk/feature/ConversationFeatureManager$FeatureListener;->onFeatureEnabledChanged(Ld71;Z)V
 
-    return p0
-.end method
+    sget-object v0, Ld71;->b:Ld71;
 
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 3
+    if-eq p1, v0, :cond_0
 
-    const/4 v0, 0x1
-
-    if-ne p0, p1, :cond_0
-
-    return v0
+    goto :goto_2
 
     :cond_0
-    instance-of v1, p1, Lzz0;
+    sget-object p1, Ljtg;->g:Loja;
 
-    if-nez v1, :cond_1
+    if-nez p1, :cond_1
 
     goto :goto_0
 
     :cond_1
-    check-cast p1, Lzz0;
+    sget-object v0, Lqz7;->o:Lqz7;
 
-    iget-object v1, p0, Lzz0;->a:Lhoe;
-
-    iget-object v2, p1, Lzz0;->a:Lhoe;
-
-    invoke-virtual {v1, v2}, Lhoe;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {p1, v0}, Loja;->a(Lqz7;)Z
 
     move-result v1
 
-    if-nez v1, :cond_2
+    if-eqz v1, :cond_2
 
-    goto :goto_0
+    const-string v1, "Record in call was changed for me to "
+
+    invoke-static {v1, p2}, Lbg9;->j(Ljava/lang/String;Z)Ljava/lang/String;
+
+    move-result-object v1
+
+    const/4 v2, 0x0
+
+    const-string v3, "CallAdminSettingsController"
+
+    invoke-virtual {p1, v0, v3, v1, v2}, Loja;->b(Lqz7;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     :cond_2
-    iget p0, p0, Lzz0;->b:I
+    :goto_0
+    iget-object p0, p0, Lzz0;->a:Ld01;
 
-    iget p1, p1, Lzz0;->b:I
+    iget-object p0, p0, Ld01;->E0:Lyce;
 
-    if-eq p0, p1, :cond_3
+    :goto_1
+    invoke-virtual {p0}, Lyce;->getValue()Ljava/lang/Object;
+
+    move-result-object p1
+
+    move-object v0, p1
+
+    check-cast v0, Ly9;
+
+    const/4 v6, 0x0
+
+    const/16 v7, 0x6f
+
+    const/4 v1, 0x0
+
+    const/4 v2, 0x0
+
+    const/4 v3, 0x0
+
+    const/4 v4, 0x0
+
+    move v5, p2
+
+    invoke-static/range {v0 .. v7}, Ly9;->a(Ly9;ZZZZZZI)Ly9;
+
+    move-result-object p2
+
+    invoke-virtual {p0, p1, p2}, Lyce;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_3
+
+    :goto_2
+    return-void
+
+    :cond_3
+    move p2, v5
+
+    goto :goto_1
+.end method
+
+.method public final onFeatureRolesChanged(Ld71;Lru/ok/android/externcalls/sdk/feature/roles/FeatureRoles;)V
+    .locals 12
+
+    invoke-super {p0, p1, p2}, Lru/ok/android/externcalls/sdk/feature/ConversationFeatureManager$FeatureListener;->onFeatureRolesChanged(Ld71;Lru/ok/android/externcalls/sdk/feature/roles/FeatureRoles;)V
+
+    sget-object v0, Ld71;->b:Ld71;
+
+    if-eq p1, v0, :cond_0
+
+    goto :goto_2
+
+    :cond_0
+    sget-object p1, Ljtg;->g:Loja;
+
+    if-nez p1, :cond_1
 
     goto :goto_0
 
-    :cond_3
-    sget-wide p0, Lq5a;->b:J
+    :cond_1
+    sget-object v0, Lqz7;->o:Lqz7;
 
-    cmp-long p0, p0, p0
+    invoke-virtual {p1, v0}, Loja;->a(Lqz7;)Z
 
-    if-eqz p0, :cond_4
+    move-result v1
 
+    if-eqz v1, :cond_2
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    const-string v2, "Record in call was changed for role="
+
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v1, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    const/4 v2, 0x0
+
+    const-string v3, "CallAdminSettingsController"
+
+    invoke-virtual {p1, v0, v3, v1, v2}, Loja;->b(Lqz7;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    :cond_2
     :goto_0
-    const/4 p0, 0x0
+    instance-of v9, p2, Lru/ok/android/externcalls/sdk/feature/roles/FeatureRoles$EnabledForAll;
 
-    return p0
+    iget-object p1, p0, Lzz0;->a:Ld01;
+
+    iget-object p1, p1, Ld01;->E0:Lyce;
+
+    :cond_3
+    invoke-virtual {p1}, Lyce;->getValue()Ljava/lang/Object;
+
+    move-result-object p2
+
+    move-object v4, p2
+
+    check-cast v4, Ly9;
+
+    const/4 v10, 0x0
+
+    const/16 v11, 0x6f
+
+    const/4 v5, 0x0
+
+    const/4 v6, 0x0
+
+    const/4 v7, 0x0
+
+    const/4 v8, 0x0
+
+    invoke-static/range {v4 .. v11}, Ly9;->a(Ly9;ZZZZZZI)Ly9;
+
+    move-result-object v0
+
+    invoke-virtual {p1, p2, v0}, Lyce;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p2
+
+    if-eqz p2, :cond_3
+
+    iget-object p1, p0, Lzz0;->a:Ld01;
+
+    invoke-virtual {p1}, Ld01;->d()Ljz3;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Ljz3;->a()Lru/ok/android/externcalls/sdk/Conversation;
+
+    move-result-object p1
+
+    if-eqz p1, :cond_4
+
+    invoke-interface {p1}, Lru/ok/android/externcalls/sdk/Conversation;->isMeCreatorOrAdmin()Z
+
+    move-result p1
+
+    goto :goto_1
 
     :cond_4
-    return v0
-.end method
+    const/4 p1, 0x0
 
-.method public final g()Z
-    .locals 0
+    :goto_1
+    if-eqz p1, :cond_5
 
-    const/4 p0, 0x0
+    iget-object p0, p0, Lzz0;->a:Ld01;
 
-    return p0
-.end method
+    iget-object p0, p0, Ld01;->C0:Lnxd;
 
-.method public final getItemId()J
-    .locals 2
+    new-instance p1, Lab;
 
-    sget-wide v0, Lq5a;->b:J
+    invoke-direct {p1, v9}, Lab;-><init>(Z)V
 
-    return-wide v0
-.end method
+    invoke-virtual {p0, p1}, Lnxd;->h(Ljava/lang/Object;)Z
 
-.method public final getTitle()Lmoe;
-    .locals 0
-
-    iget-object p0, p0, Lzz0;->a:Lhoe;
-
-    return-object p0
-.end method
-
-.method public final hashCode()I
-    .locals 4
-
-    iget-object v0, p0, Lzz0;->a:Lhoe;
-
-    iget v0, v0, Lhoe;->b:I
-
-    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
-
-    move-result v0
-
-    const/16 v1, 0x1f
-
-    mul-int/2addr v0, v1
-
-    iget p0, p0, Lzz0;->b:I
-
-    invoke-static {p0, v0, v1}, Lrqc;->e(III)I
-
-    move-result p0
-
-    sget-wide v2, Lq5a;->b:J
-
-    invoke-static {p0, v1, v2, v3}, Lzge;->m(IIJ)I
-
-    move-result p0
-
-    const/4 v0, 0x4
-
-    invoke-static {v0}, Lzt1;->s(I)I
-
-    move-result v0
-
-    add-int/2addr v0, p0
-
-    return v0
-.end method
-
-.method public final m()I
-    .locals 0
-
-    iget p0, p0, Lzz0;->c:I
-
-    return p0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 4
-
-    sget-wide v0, Lq5a;->b:J
-
-    new-instance v2, Ljava/lang/StringBuilder;
-
-    const-string v3, "Header(title="
-
-    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v3, p0, Lzz0;->a:Lhoe;
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v3, ", sectionId="
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget p0, p0, Lzz0;->b:I
-
-    invoke-virtual {v2, p0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string p0, ", itemId="
-
-    invoke-virtual {v2, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v2, v0, v1}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    const-string p0, ", sectionItemType="
-
-    invoke-virtual {v2, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const/4 p0, 0x4
-
-    invoke-static {p0}, Lrqc;->t(I)Ljava/lang/String;
-
-    move-result-object p0
-
-    invoke-virtual {v2, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string p0, ")"
-
-    invoke-virtual {v2, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public final u()I
-    .locals 0
-
-    iget p0, p0, Lzz0;->b:I
-
-    return p0
+    :cond_5
+    :goto_2
+    return-void
 .end method

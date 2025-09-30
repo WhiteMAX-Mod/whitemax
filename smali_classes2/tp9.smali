@@ -1,85 +1,36 @@
-.class public final Ltp9;
+.class public final synthetic Ltp9;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lad6;
+
 
 # instance fields
-.field public final a:J
-
-.field public final b:Lq00;
+.field public final synthetic a:Z
 
 
 # direct methods
-.method public constructor <init>(JLq00;)V
+.method public synthetic constructor <init>(Z)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-wide p1, p0, Ltp9;->a:J
-
-    iput-object p3, p0, Ltp9;->b:Lq00;
+    iput-boolean p1, p0, Ltp9;->a:Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 7
+.method public final apply(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    const/4 v0, 0x1
+    check-cast p1, Ltx7;
 
-    if-ne p0, p1, :cond_0
+    iget-boolean p0, p0, Ltp9;->a:Z
 
-    return v0
+    iput-boolean p0, p1, Ltx7;->n:Z
 
-    :cond_0
-    instance-of v1, p1, Ltp9;
-
-    const/4 v2, 0x0
-
-    if-eqz v1, :cond_1
-
-    check-cast p1, Ltp9;
-
-    iget-wide v3, p0, Ltp9;->a:J
-
-    iget-wide v5, p1, Ltp9;->a:J
-
-    cmp-long v1, v3, v5
-
-    if-nez v1, :cond_1
-
-    iget-object p0, p0, Ltp9;->b:Lq00;
-
-    iget-object p1, p1, Ltp9;->b:Lq00;
-
-    if-ne p0, p1, :cond_1
-
-    return v0
-
-    :cond_1
-    return v2
-.end method
-
-.method public final hashCode()I
-    .locals 2
-
-    iget-wide v0, p0, Ltp9;->a:J
-
-    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
-
-    move-result v0
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget-object p0, p0, Ltp9;->b:Lq00;
-
-    invoke-static {p0}, Ljava/util/Objects;->hashCode(Ljava/lang/Object;)I
-
-    move-result p0
-
-    add-int/2addr p0, v0
-
-    return p0
+    return-object p1
 .end method

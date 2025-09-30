@@ -1,183 +1,81 @@
 .class public final Ln76;
-.super Ljava/util/concurrent/CountDownLatch;
+.super Lr6f;
 .source "SourceFile"
-
-# interfaces
-.implements Lu28;
-.implements Lnpd;
-.implements Lo93;
-.implements Ljava/util/concurrent/Future;
-.implements Lam4;
 
 
 # instance fields
-.field public a:Ljava/lang/Object;
-
-.field public b:Ljava/lang/Throwable;
-
-.field public final c:Ljava/util/concurrent/atomic/AtomicReference;
+.field public e:Lr6f;
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 1
+.method public constructor <init>(Lr6f;)V
+    .locals 0
 
-    const/4 v0, 0x1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, v0}, Ljava/util/concurrent/CountDownLatch;-><init>(I)V
-
-    new-instance v0, Ljava/util/concurrent/atomic/AtomicReference;
-
-    invoke-direct {v0}, Ljava/util/concurrent/atomic/AtomicReference;-><init>()V
-
-    iput-object v0, p0, Ln76;->c:Ljava/util/concurrent/atomic/AtomicReference;
+    iput-object p1, p0, Ln76;->e:Lr6f;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Ljava/lang/Object;)V
-    .locals 3
-
-    iget-object v0, p0, Ln76;->c:Ljava/util/concurrent/atomic/AtomicReference;
-
-    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lam4;
-
-    sget-object v2, Lem4;->a:Lem4;
-
-    if-ne v1, v2, :cond_0
-
-    return-void
-
-    :cond_0
-    iput-object p1, p0, Ln76;->a:Ljava/lang/Object;
-
-    :cond_1
-    invoke-virtual {v0, v1, p0}, Ljava/util/concurrent/atomic/AtomicReference;->compareAndSet(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_2
-
-    goto :goto_0
-
-    :cond_2
-    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
-
-    move-result-object p1
-
-    if-eq p1, v1, :cond_1
-
-    :goto_0
-    invoke-virtual {p0}, Ljava/util/concurrent/CountDownLatch;->countDown()V
-
-    return-void
-.end method
-
-.method public final b()V
-    .locals 3
-
-    iget-object v0, p0, Ln76;->c:Ljava/util/concurrent/atomic/AtomicReference;
-
-    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lam4;
-
-    sget-object v2, Lem4;->a:Lem4;
-
-    if-ne v1, v2, :cond_0
-
-    return-void
-
-    :cond_0
-    invoke-virtual {v0, v1, p0}, Ljava/util/concurrent/atomic/AtomicReference;->compareAndSet(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_1
-
-    goto :goto_0
-
-    :cond_1
-    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
-
-    move-result-object v2
-
-    if-eq v2, v1, :cond_0
-
-    :goto_0
-    invoke-virtual {p0}, Ljava/util/concurrent/CountDownLatch;->countDown()V
-
-    return-void
-.end method
-
-.method public final c(Lam4;)V
+.method public final a()Lr6f;
     .locals 0
 
-    iget-object p0, p0, Ln76;->c:Ljava/util/concurrent/atomic/AtomicReference;
+    iget-object p0, p0, Ln76;->e:Lr6f;
 
-    invoke-static {p0, p1}, Lem4;->e(Ljava/util/concurrent/atomic/AtomicReference;Lam4;)Z
+    invoke-virtual {p0}, Lr6f;->a()Lr6f;
 
-    return-void
+    move-result-object p0
+
+    return-object p0
 .end method
 
-.method public final cancel(Z)Z
-    .locals 3
+.method public final b()Lr6f;
+    .locals 0
 
-    :goto_0
-    iget-object p1, p0, Ln76;->c:Ljava/util/concurrent/atomic/AtomicReference;
+    iget-object p0, p0, Ln76;->e:Lr6f;
 
-    invoke-virtual {p1}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
+    invoke-virtual {p0}, Lr6f;->b()Lr6f;
 
-    move-result-object v0
+    move-result-object p0
 
-    check-cast v0, Lam4;
+    return-object p0
+.end method
 
-    if-eq v0, p0, :cond_3
+.method public final c()J
+    .locals 2
 
-    sget-object v1, Lem4;->a:Lem4;
+    iget-object p0, p0, Ln76;->e:Lr6f;
 
-    if-ne v0, v1, :cond_0
+    invoke-virtual {p0}, Lr6f;->c()J
 
-    goto :goto_1
+    move-result-wide v0
 
-    :cond_0
-    invoke-virtual {p1, v0, v1}, Ljava/util/concurrent/atomic/AtomicReference;->compareAndSet(Ljava/lang/Object;Ljava/lang/Object;)Z
+    return-wide v0
+.end method
 
-    move-result v2
+.method public final d(J)Lr6f;
+    .locals 0
 
-    if-eqz v2, :cond_2
+    iget-object p0, p0, Ln76;->e:Lr6f;
 
-    if-eqz v0, :cond_1
+    invoke-virtual {p0, p1, p2}, Lr6f;->d(J)Lr6f;
 
-    invoke-interface {v0}, Lam4;->f()V
+    move-result-object p0
 
-    :cond_1
-    invoke-virtual {p0}, Ljava/util/concurrent/CountDownLatch;->countDown()V
+    return-object p0
+.end method
 
-    const/4 p0, 0x1
+.method public final e()Z
+    .locals 0
 
-    return p0
+    iget-object p0, p0, Ln76;->e:Lr6f;
 
-    :cond_2
-    invoke-virtual {p1}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
+    invoke-virtual {p0}, Lr6f;->e()Z
 
-    move-result-object v2
-
-    if-eq v2, v0, :cond_0
-
-    goto :goto_0
-
-    :cond_3
-    :goto_1
-    const/4 p0, 0x0
+    move-result p0
 
     return p0
 .end method
@@ -185,223 +83,33 @@
 .method public final f()V
     .locals 0
 
+    iget-object p0, p0, Ln76;->e:Lr6f;
+
+    invoke-virtual {p0}, Lr6f;->f()V
+
     return-void
 .end method
 
-.method public final g()Z
+.method public final g(JLjava/util/concurrent/TimeUnit;)Lr6f;
     .locals 0
 
-    invoke-virtual {p0}, Ln76;->isDone()Z
+    iget-object p0, p0, Ln76;->e:Lr6f;
 
-    move-result p0
-
-    return p0
-.end method
-
-.method public final get()Ljava/lang/Object;
-    .locals 4
-
-    .line 1
-    invoke-virtual {p0}, Ljava/util/concurrent/CountDownLatch;->getCount()J
-
-    move-result-wide v0
-
-    const-wide/16 v2, 0x0
-
-    cmp-long v0, v0, v2
-
-    if-eqz v0, :cond_0
-
-    .line 2
-    invoke-virtual {p0}, Ljava/util/concurrent/CountDownLatch;->await()V
-
-    .line 3
-    :cond_0
-    invoke-virtual {p0}, Ln76;->isCancelled()Z
-
-    move-result v0
-
-    if-nez v0, :cond_2
-
-    .line 4
-    iget-object v0, p0, Ln76;->b:Ljava/lang/Throwable;
-
-    if-nez v0, :cond_1
-
-    .line 5
-    iget-object p0, p0, Ln76;->a:Ljava/lang/Object;
-
-    return-object p0
-
-    .line 6
-    :cond_1
-    new-instance p0, Ljava/util/concurrent/ExecutionException;
-
-    invoke-direct {p0, v0}, Ljava/util/concurrent/ExecutionException;-><init>(Ljava/lang/Throwable;)V
-
-    throw p0
-
-    .line 7
-    :cond_2
-    new-instance p0, Ljava/util/concurrent/CancellationException;
-
-    invoke-direct {p0}, Ljava/util/concurrent/CancellationException;-><init>()V
-
-    throw p0
-.end method
-
-.method public final get(JLjava/util/concurrent/TimeUnit;)Ljava/lang/Object;
-    .locals 4
-
-    .line 8
-    invoke-virtual {p0}, Ljava/util/concurrent/CountDownLatch;->getCount()J
-
-    move-result-wide v0
-
-    const-wide/16 v2, 0x0
-
-    cmp-long v0, v0, v2
-
-    if-eqz v0, :cond_1
-
-    .line 9
-    invoke-virtual {p0, p1, p2, p3}, Ljava/util/concurrent/CountDownLatch;->await(JLjava/util/concurrent/TimeUnit;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    goto :goto_0
-
-    .line 10
-    :cond_0
-    new-instance p0, Ljava/util/concurrent/TimeoutException;
-
-    invoke-static {p1, p2, p3}, Lg45;->e(JLjava/util/concurrent/TimeUnit;)Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-direct {p0, p1}, Ljava/util/concurrent/TimeoutException;-><init>(Ljava/lang/String;)V
-
-    throw p0
-
-    .line 11
-    :cond_1
-    :goto_0
-    invoke-virtual {p0}, Ln76;->isCancelled()Z
-
-    move-result p1
-
-    if-nez p1, :cond_3
-
-    .line 12
-    iget-object p1, p0, Ln76;->b:Ljava/lang/Throwable;
-
-    if-nez p1, :cond_2
-
-    .line 13
-    iget-object p0, p0, Ln76;->a:Ljava/lang/Object;
-
-    return-object p0
-
-    .line 14
-    :cond_2
-    new-instance p0, Ljava/util/concurrent/ExecutionException;
-
-    invoke-direct {p0, p1}, Ljava/util/concurrent/ExecutionException;-><init>(Ljava/lang/Throwable;)V
-
-    throw p0
-
-    .line 15
-    :cond_3
-    new-instance p0, Ljava/util/concurrent/CancellationException;
-
-    invoke-direct {p0}, Ljava/util/concurrent/CancellationException;-><init>()V
-
-    throw p0
-.end method
-
-.method public final isCancelled()Z
-    .locals 0
-
-    iget-object p0, p0, Ln76;->c:Ljava/util/concurrent/atomic/AtomicReference;
-
-    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
+    invoke-virtual {p0, p1, p2, p3}, Lr6f;->g(JLjava/util/concurrent/TimeUnit;)Lr6f;
 
     move-result-object p0
 
-    check-cast p0, Lam4;
-
-    invoke-static {p0}, Lem4;->b(Lam4;)Z
-
-    move-result p0
-
-    return p0
+    return-object p0
 .end method
 
-.method public final isDone()Z
-    .locals 4
+.method public final h()J
+    .locals 2
 
-    invoke-virtual {p0}, Ljava/util/concurrent/CountDownLatch;->getCount()J
+    iget-object p0, p0, Ln76;->e:Lr6f;
+
+    invoke-virtual {p0}, Lr6f;->h()J
 
     move-result-wide v0
 
-    const-wide/16 v2, 0x0
-
-    cmp-long p0, v0, v2
-
-    if-nez p0, :cond_0
-
-    const/4 p0, 0x1
-
-    return p0
-
-    :cond_0
-    const/4 p0, 0x0
-
-    return p0
-.end method
-
-.method public final onError(Ljava/lang/Throwable;)V
-    .locals 3
-
-    :goto_0
-    iget-object v0, p0, Ln76;->c:Ljava/util/concurrent/atomic/AtomicReference;
-
-    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lam4;
-
-    sget-object v2, Lem4;->a:Lem4;
-
-    if-ne v1, v2, :cond_0
-
-    invoke-static {p1}, Lou0;->x(Ljava/lang/Throwable;)V
-
-    return-void
-
-    :cond_0
-    iput-object p1, p0, Ln76;->b:Ljava/lang/Throwable;
-
-    :cond_1
-    invoke-virtual {v0, v1, p0}, Ljava/util/concurrent/atomic/AtomicReference;->compareAndSet(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_2
-
-    invoke-virtual {p0}, Ljava/util/concurrent/CountDownLatch;->countDown()V
-
-    return-void
-
-    :cond_2
-    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
-
-    move-result-object v2
-
-    if-eq v2, v1, :cond_1
-
-    goto :goto_0
+    return-wide v0
 .end method

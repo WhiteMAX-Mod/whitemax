@@ -2,99 +2,34 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ljbg;
-
 
 # instance fields
-.field public final a:F
+.field public final a:J
 
-.field public final b:F
+.field public final b:Lmb0;
 
-.field public final c:F
-
-.field public final d:F
+.field public final c:Lm90;
 
 
 # direct methods
-.method public constructor <init>(FFFF)V
+.method public constructor <init>(JLmb0;Lm90;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput p1, p0, Lka0;->a:F
+    iput-wide p1, p0, Lka0;->a:J
 
-    iput p2, p0, Lka0;->b:F
+    iput-object p3, p0, Lka0;->b:Lmb0;
 
-    iput p3, p0, Lka0;->c:F
-
-    iput p4, p0, Lka0;->d:F
+    iput-object p4, p0, Lka0;->c:Lm90;
 
     return-void
 .end method
 
-.method public static e(Ljbg;)Lka0;
-    .locals 4
-
-    new-instance v0, Lka0;
-
-    invoke-interface {p0}, Ljbg;->c()F
-
-    move-result v1
-
-    invoke-interface {p0}, Ljbg;->a()F
-
-    move-result v2
-
-    invoke-interface {p0}, Ljbg;->b()F
-
-    move-result v3
-
-    invoke-interface {p0}, Ljbg;->d()F
-
-    move-result p0
-
-    invoke-direct {v0, v1, v2, v3, p0}, Lka0;-><init>(FFFF)V
-
-    return-object v0
-.end method
-
 
 # virtual methods
-.method public final a()F
-    .locals 0
-
-    iget p0, p0, Lka0;->b:F
-
-    return p0
-.end method
-
-.method public final b()F
-    .locals 0
-
-    iget p0, p0, Lka0;->c:F
-
-    return p0
-.end method
-
-.method public final c()F
-    .locals 0
-
-    iget p0, p0, Lka0;->a:F
-
-    return p0
-.end method
-
-.method public final d()F
-    .locals 0
-
-    iget p0, p0, Lka0;->d:F
-
-    return p0
-.end method
-
 .method public final equals(Ljava/lang/Object;)Z
-    .locals 4
+    .locals 7
 
     const/4 v0, 0x1
 
@@ -111,61 +46,33 @@
 
     check-cast p1, Lka0;
 
-    iget v1, p0, Lka0;->a:F
+    iget-wide v3, p0, Lka0;->a:J
 
-    invoke-static {v1}, Ljava/lang/Float;->floatToIntBits(F)I
+    iget-wide v5, p1, Lka0;->a:J
 
-    move-result v1
+    cmp-long v1, v3, v5
 
-    iget v3, p1, Lka0;->a:F
+    if-nez v1, :cond_1
 
-    invoke-static {v3}, Ljava/lang/Float;->floatToIntBits(F)I
+    iget-object v1, p0, Lka0;->b:Lmb0;
 
-    move-result v3
+    iget-object v3, p1, Lka0;->b:Lmb0;
 
-    if-ne v1, v3, :cond_1
-
-    iget v1, p0, Lka0;->b:F
-
-    invoke-static {v1}, Ljava/lang/Float;->floatToIntBits(F)I
+    invoke-virtual {v1, v3}, Lmb0;->equals(Ljava/lang/Object;)Z
 
     move-result v1
 
-    iget v3, p1, Lka0;->b:F
+    if-eqz v1, :cond_1
 
-    invoke-static {v3}, Ljava/lang/Float;->floatToIntBits(F)I
+    iget-object p0, p0, Lka0;->c:Lm90;
 
-    move-result v3
+    iget-object p1, p1, Lka0;->c:Lm90;
 
-    if-ne v1, v3, :cond_1
-
-    iget v1, p0, Lka0;->c:F
-
-    invoke-static {v1}, Ljava/lang/Float;->floatToIntBits(F)I
-
-    move-result v1
-
-    iget v3, p1, Lka0;->c:F
-
-    invoke-static {v3}, Ljava/lang/Float;->floatToIntBits(F)I
-
-    move-result v3
-
-    if-ne v1, v3, :cond_1
-
-    iget p0, p0, Lka0;->d:F
-
-    invoke-static {p0}, Ljava/lang/Float;->floatToIntBits(F)I
+    invoke-virtual {p0, p1}, Lm90;->equals(Ljava/lang/Object;)Z
 
     move-result p0
 
-    iget p1, p1, Lka0;->d:F
-
-    invoke-static {p1}, Ljava/lang/Float;->floatToIntBits(F)I
-
-    move-result p1
-
-    if-ne p0, p1, :cond_1
+    if-eqz p0, :cond_1
 
     return v0
 
@@ -174,13 +81,17 @@
 .end method
 
 .method public final hashCode()I
-    .locals 3
+    .locals 5
 
-    iget v0, p0, Lka0;->a:F
+    const/16 v0, 0x20
 
-    invoke-static {v0}, Ljava/lang/Float;->floatToIntBits(F)I
+    iget-wide v1, p0, Lka0;->a:J
 
-    move-result v0
+    ushr-long v3, v1, v0
+
+    xor-long v0, v3, v1
+
+    long-to-int v0, v0
 
     const v1, 0xf4243
 
@@ -188,19 +99,9 @@
 
     mul-int/2addr v0, v1
 
-    iget v2, p0, Lka0;->b:F
+    iget-object v2, p0, Lka0;->b:Lmb0;
 
-    invoke-static {v2}, Ljava/lang/Float;->floatToIntBits(F)I
-
-    move-result v2
-
-    xor-int/2addr v0, v2
-
-    mul-int/2addr v0, v1
-
-    iget v2, p0, Lka0;->c:F
-
-    invoke-static {v2}, Ljava/lang/Float;->floatToIntBits(F)I
+    invoke-virtual {v2}, Lmb0;->hashCode()I
 
     move-result v2
 
@@ -208,9 +109,9 @@
 
     mul-int/2addr v0, v1
 
-    iget p0, p0, Lka0;->d:F
+    iget-object p0, p0, Lka0;->c:Lm90;
 
-    invoke-static {p0}, Ljava/lang/Float;->floatToIntBits(F)I
+    invoke-virtual {p0}, Lm90;->hashCode()I
 
     move-result p0
 
@@ -220,41 +121,33 @@
 .end method
 
 .method public final toString()Ljava/lang/String;
-    .locals 2
+    .locals 3
 
     new-instance v0, Ljava/lang/StringBuilder;
 
-    const-string v1, "ImmutableZoomState{zoomRatio="
+    const-string v1, "PersistedEvent{id="
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget v1, p0, Lka0;->a:F
+    iget-wide v1, p0, Lka0;->a:J
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
-    const-string v1, ", maxZoomRatio="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget v1, p0, Lka0;->b:F
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
-
-    const-string v1, ", minZoomRatio="
+    const-string v1, ", transportContext="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget v1, p0, Lka0;->c:F
+    iget-object v1, p0, Lka0;->b:Lmb0;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    const-string v1, ", linearZoom="
+    const-string v1, ", event="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget p0, p0, Lka0;->d:F
+    iget-object p0, p0, Lka0;->c:Lm90;
 
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
     const-string p0, "}"
 

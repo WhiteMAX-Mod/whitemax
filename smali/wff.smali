@@ -1,14 +1,14 @@
-.class public final synthetic Lwff;
+.class public interface abstract Lwff;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lyff;
-
 
 # virtual methods
-.method public final run()V
-    .locals 0
+.method public abstract a()V
+.end method
 
-    return-void
+.method public abstract b(ILcsf;)V
+.end method
+
+.method public abstract d(Lv6f;Lrf5;Lvff;)V
 .end method

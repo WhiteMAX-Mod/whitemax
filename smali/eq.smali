@@ -3,254 +3,104 @@
 .source "SourceFile"
 
 # interfaces
-.implements La18;
+.implements Lbc6;
 
 
 # instance fields
-.field public final synthetic a:Lone/me/appearancesettings/multitheme/AppearanceSettingsMultiThemeScreen;
+.field public final synthetic a:I
+
+.field public final synthetic b:Lone/me/appearancesettings/multitheme/AppearanceSettingsMultiThemeScreen;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lone/me/appearancesettings/multitheme/AppearanceSettingsMultiThemeScreen;)V
+.method public synthetic constructor <init>(Lone/me/appearancesettings/multitheme/AppearanceSettingsMultiThemeScreen;I)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput p2, p0, Leq;->a:I
 
-    iput-object p1, p0, Leq;->a:Lone/me/appearancesettings/multitheme/AppearanceSettingsMultiThemeScreen;
+    iput-object p1, p0, Leq;->b:Lone/me/appearancesettings/multitheme/AppearanceSettingsMultiThemeScreen;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(IZ)V
-    .locals 9
+.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    sget-object v0, Lone/me/appearancesettings/multitheme/AppearanceSettingsMultiThemeScreen;->o0:[Lbc7;
+    iget v0, p0, Leq;->a:I
 
-    if-eqz p2, :cond_b
+    iget-object p0, p0, Leq;->b:Lone/me/appearancesettings/multitheme/AppearanceSettingsMultiThemeScreen;
 
-    iget-object p0, p0, Leq;->a:Lone/me/appearancesettings/multitheme/AppearanceSettingsMultiThemeScreen;
+    packed-switch v0, :pswitch_data_0
 
-    invoke-virtual {p0}, Lone/me/appearancesettings/multitheme/AppearanceSettingsMultiThemeScreen;->p0()Lzq;
+    check-cast p1, Ljava/lang/Integer;
 
-    move-result-object p0
+    invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
 
-    iget-object p2, p0, Lzq;->u0:Lqp4;
+    move-result p1
 
-    iget-object v0, p0, Lzq;->c:Lzo;
+    iget-object p0, p0, Lone/me/appearancesettings/multitheme/AppearanceSettingsMultiThemeScreen;->Z:Lv06;
 
-    iget-object v1, p0, Lzq;->v0:Lazd;
+    invoke-virtual {p0}, Lv06;->j()I
 
-    invoke-virtual {v1}, Lazd;->getValue()Ljava/lang/Object;
+    move-result v0
 
-    move-result-object v2
-
-    check-cast v2, Ltq;
-
-    if-nez v2, :cond_0
-
-    goto/16 :goto_5
-
-    :cond_0
-    iget-object v2, v2, Ltq;->b:Ljava/util/ArrayList;
-
-    invoke-virtual {v2}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
-
-    move-result-object v2
-
-    :cond_1
-    invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v3
-
-    const/4 v4, 0x0
-
-    if-eqz v3, :cond_2
-
-    invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v3
-
-    move-object v5, v3
-
-    check-cast v5, Lup;
-
-    invoke-virtual {v5}, Lup;->getItemId()J
-
-    move-result-wide v5
-
-    long-to-int v5, v5
-
-    if-ne v5, p1, :cond_1
+    if-gtz v0, :cond_0
 
     goto :goto_0
 
-    :cond_2
-    move-object v3, v4
+    :cond_0
+    invoke-virtual {p0, p1}, Lls7;->C(I)Ljava/lang/Object;
 
+    move-result-object p0
+
+    check-cast p0, Lts7;
+
+    check-cast p0, Li4f;
+
+    iget-boolean p0, p0, Li4f;->a:Z
+
+    const/4 p1, 0x1
+
+    if-ne p0, p1, :cond_1
+
+    goto :goto_1
+
+    :cond_1
     :goto_0
-    check-cast v3, Lup;
+    const/4 p1, 0x0
 
-    if-nez v3, :cond_3
-
-    goto/16 :goto_5
-
-    :cond_3
-    iget-object v2, v3, Lup;->a:Lqp;
-
-    invoke-virtual {v2}, Ljava/lang/Enum;->ordinal()I
-
-    move-result v2
-
-    if-eqz v2, :cond_6
-
-    const/4 v3, 0x1
-
-    if-eq v2, v3, :cond_5
-
-    const/4 v3, 0x2
-
-    if-ne v2, v3, :cond_4
-
-    const-string v2, "app.night.mode.enabled"
-
-    invoke-virtual {v0, v2}, Lzo;->v(Ljava/lang/String;)V
-
-    sget-object v0, Lmo9;->b:Lmo9;
-
-    invoke-virtual {p2, v0}, Lqp4;->m(Lpo9;)V
-
-    goto :goto_1
-
-    :cond_4
-    new-instance p0, Lkotlin/NoWhenBranchMatchedException;
-
-    invoke-direct {p0}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
-
-    throw p0
-
-    :cond_5
-    const-string v2, "app.night.mode"
-
-    invoke-virtual {v0, v2}, Lzo;->v(Ljava/lang/String;)V
-
-    sget-object v0, Llo9;->b:Llo9;
-
-    invoke-virtual {p2, v0}, Lqp4;->m(Lpo9;)V
-
-    goto :goto_1
-
-    :cond_6
-    const-string v2, "app.night.mode.system"
-
-    invoke-virtual {v0, v2}, Lzo;->v(Ljava/lang/String;)V
-
-    sget-object v0, Loo9;->b:Loo9;
-
-    invoke-virtual {p2, v0}, Lqp4;->m(Lpo9;)V
-
-    :cond_7
     :goto_1
-    invoke-virtual {v1}, Lazd;->getValue()Ljava/lang/Object;
+    invoke-static {p1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
-    move-result-object p2
+    move-result-object p0
 
-    move-object v0, p2
+    return-object p0
 
-    check-cast v0, Ltq;
+    :pswitch_0
+    check-cast p1, Landroid/view/View;
 
-    if-eqz v0, :cond_a
+    sget-object p1, Lone/me/appearancesettings/multitheme/AppearanceSettingsMultiThemeScreen;->r0:[Lxi7;
 
-    iget-object v2, v0, Ltq;->b:Ljava/util/ArrayList;
+    invoke-virtual {p0}, Lone/me/appearancesettings/multitheme/AppearanceSettingsMultiThemeScreen;->y0()Lxq;
 
-    new-instance v3, Ljava/util/ArrayList;
+    move-result-object p0
 
-    const/16 v5, 0xa
+    iget-object p0, p0, Lxq;->G0:Lv85;
 
-    invoke-static {v2, v5}, Lr43;->k0(Ljava/lang/Iterable;I)I
+    sget-object p1, Lw53;->b:Lw53;
 
-    move-result v5
+    invoke-static {p0, p1}, Lx7g;->o(Lv85;Ljava/lang/Object;)V
 
-    invoke-direct {v3, v5}, Ljava/util/ArrayList;-><init>(I)V
+    sget-object p0, Lylf;->a:Lylf;
 
-    invoke-virtual {v2}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
+    return-object p0
 
-    move-result-object v2
-
-    :goto_2
-    invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v5
-
-    if-eqz v5, :cond_9
-
-    invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v5
-
-    check-cast v5, Lup;
-
-    invoke-virtual {v5}, Lup;->getItemId()J
-
-    move-result-wide v6
-
-    iget-object v8, v5, Lup;->c:Lhoe;
-
-    iget-object v5, v5, Lup;->a:Lqp;
-
-    long-to-int v6, v6
-
-    if-ne v6, p1, :cond_8
-
-    sget-object v6, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
-
-    new-instance v7, Lup;
-
-    invoke-direct {v7, v5, v6, v8}, Lup;-><init>(Lqp;Ljava/lang/Boolean;Lhoe;)V
-
-    goto :goto_3
-
-    :cond_8
-    sget-object v6, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
-
-    new-instance v7, Lup;
-
-    invoke-direct {v7, v5, v6, v8}, Lup;-><init>(Lqp;Ljava/lang/Boolean;Lhoe;)V
-
-    :goto_3
-    invoke-virtual {v3, v7}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    goto :goto_2
-
-    :cond_9
-    iget-object v0, v0, Ltq;->a:Ljava/util/ArrayList;
-
-    invoke-virtual {p0, v0}, Lzq;->t(Ljava/util/ArrayList;)Ljava/util/ArrayList;
-
-    move-result-object v0
-
-    invoke-virtual {p0}, Lzq;->s()Landroid/graphics/drawable/Drawable;
-
-    move-result-object v2
-
-    new-instance v5, Ltq;
-
-    invoke-direct {v5, v0, v3, v2}, Ltq;-><init>(Ljava/util/ArrayList;Ljava/util/ArrayList;Landroid/graphics/drawable/Drawable;)V
-
-    goto :goto_4
-
-    :cond_a
-    move-object v5, v4
-
-    :goto_4
-    invoke-virtual {v1, p2, v5}, Lazd;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p2
-
-    if-eqz p2, :cond_7
-
-    :cond_b
-    :goto_5
-    return-void
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

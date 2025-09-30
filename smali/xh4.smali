@@ -1,431 +1,1861 @@
-.class public Lxh4;
-.super Ljava/lang/Object;
+.class public final Lxh4;
+.super Lpi0;
 .source "SourceFile"
 
-# interfaces
-.implements Luh4;
+
+# static fields
+.field public static final w:Llqc;
+
+.field public static final x:[F
+
+.field public static final y:[F
 
 
 # instance fields
-.field public a:Lv6g;
+.field public final h:Lax;
 
-.field public b:Z
+.field public final i:Ll37;
 
-.field public c:Z
+.field public final j:Ll37;
 
-.field public final d:Lv6g;
+.field public final k:Z
 
-.field public e:I
+.field public final l:[[F
 
-.field public f:I
+.field public final m:[[F
 
-.field public g:I
+.field public final n:[F
 
-.field public h:I
+.field public final o:[F
 
-.field public i:Lfk4;
+.field public final p:[F
 
-.field public j:Z
+.field public final q:I
 
-.field public final k:Ljava/util/ArrayList;
+.field public r:Llqc;
 
-.field public final l:Ljava/util/ArrayList;
+.field public s:Landroid/graphics/Gainmap;
+
+.field public t:I
+
+.field public u:Z
+
+.field public v:Z
 
 
 # direct methods
-.method public constructor <init>(Lv6g;)V
-    .locals 3
+.method static constructor <clinit>()V
+    .locals 6
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/4 v0, 0x4
 
-    const/4 v0, 0x0
+    new-array v1, v0, [F
 
-    iput-object v0, p0, Lxh4;->a:Lv6g;
+    fill-array-data v1, :array_0
+
+    new-array v2, v0, [F
+
+    fill-array-data v2, :array_1
+
+    new-array v3, v0, [F
+
+    fill-array-data v3, :array_2
+
+    new-array v4, v0, [F
+
+    fill-array-data v4, :array_3
+
+    sget-object v5, Ll37;->b:Lgx5;
+
+    filled-new-array {v1, v2, v3, v4}, [Ljava/lang/Object;
+
+    move-result-object v1
+
+    invoke-static {v0, v1}, Ln4e;->l(I[Ljava/lang/Object;)V
+
+    invoke-static {v0, v1}, Ll37;->h(I[Ljava/lang/Object;)Llqc;
+
+    move-result-object v0
+
+    sput-object v0, Lxh4;->w:Llqc;
+
+    const/16 v0, 0x9
+
+    new-array v1, v0, [F
+
+    fill-array-data v1, :array_4
+
+    sput-object v1, Lxh4;->x:[F
+
+    new-array v0, v0, [F
+
+    fill-array-data v0, :array_5
+
+    sput-object v0, Lxh4;->y:[F
+
+    return-void
+
+    nop
+
+    :array_0
+    .array-data 4
+        -0x40800000    # -1.0f
+        -0x40800000    # -1.0f
+        0x0
+        0x3f800000    # 1.0f
+    .end array-data
+
+    :array_1
+    .array-data 4
+        -0x40800000    # -1.0f
+        0x3f800000    # 1.0f
+        0x0
+        0x3f800000    # 1.0f
+    .end array-data
+
+    :array_2
+    .array-data 4
+        0x3f800000    # 1.0f
+        0x3f800000    # 1.0f
+        0x0
+        0x3f800000    # 1.0f
+    .end array-data
+
+    :array_3
+    .array-data 4
+        0x3f800000    # 1.0f
+        -0x40800000    # -1.0f
+        0x0
+        0x3f800000    # 1.0f
+    .end array-data
+
+    :array_4
+    .array-data 4
+        0x3f800000    # 1.0f
+        0x3f800000    # 1.0f
+        0x3f800000    # 1.0f
+        0x0
+        -0x41d77319    # -0.1646f
+        0x3ff0d1b7    # 1.8814f
+        0x3fbcbfb1    # 1.4746f
+        -0x40edb8bb    # -0.5714f
+        0x0
+    .end array-data
+
+    :array_5
+    .array-data 4
+        0x3f959e84    # 1.1689f
+        0x3f959e84    # 1.1689f
+        0x3f959e84    # 1.1689f
+        0x0
+        -0x41bf62b7    # -0.1881f
+        0x40099ce0
+        0x3fd7b7e9    # 1.6853f
+        -0x40d8d4fe    # -0.653f
+        0x0
+    .end array-data
+.end method
+
+.method public constructor <init>(Lax;Ll37;Ll37;Z)V
+    .locals 4
+
+    invoke-direct {p0, p4}, Lpi0;-><init>(Z)V
+
+    iput-object p1, p0, Lxh4;->h:Lax;
+
+    iput-object p2, p0, Lxh4;->i:Ll37;
+
+    iput-object p3, p0, Lxh4;->j:Ll37;
+
+    iput-boolean p4, p0, Lxh4;->k:Z
+
+    invoke-virtual {p2}, Ljava/util/AbstractCollection;->size()I
+
+    move-result p1
+
+    const/4 p4, 0x2
+
+    new-array v0, p4, [I
+
+    const/4 v1, 0x1
+
+    const/16 v2, 0x10
+
+    aput v2, v0, v1
+
+    const/4 v3, 0x0
+
+    aput p1, v0, v3
+
+    sget-object p1, Ljava/lang/Float;->TYPE:Ljava/lang/Class;
+
+    invoke-static {p1, v0}, Ljava/lang/reflect/Array;->newInstance(Ljava/lang/Class;[I)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, [[F
+
+    iput-object v0, p0, Lxh4;->l:[[F
+
+    invoke-virtual {p3}, Ljava/util/AbstractCollection;->size()I
+
+    move-result p3
+
+    new-array p4, p4, [I
+
+    aput v2, p4, v1
+
+    aput p3, p4, v3
+
+    invoke-static {p1, p4}, Ljava/lang/reflect/Array;->newInstance(Ljava/lang/Class;[I)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, [[F
+
+    iput-object p1, p0, Lxh4;->m:[[F
+
+    invoke-static {}, Li4h;->s()[F
+
+    move-result-object p1
+
+    iput-object p1, p0, Lxh4;->n:[F
+
+    invoke-static {}, Li4h;->s()[F
+
+    move-result-object p1
+
+    iput-object p1, p0, Lxh4;->o:[F
+
+    new-array p1, v2, [F
+
+    iput-object p1, p0, Lxh4;->p:[F
+
+    sget-object p1, Lxh4;->w:Llqc;
+
+    iput-object p1, p0, Lxh4;->r:Llqc;
+
+    const/4 p1, -0x1
+
+    iput p1, p0, Lxh4;->t:I
+
+    const/16 p1, 0x2601
+
+    :goto_0
+    invoke-virtual {p2}, Ljava/util/AbstractCollection;->size()I
+
+    move-result p3
+
+    if-ge v3, p3, :cond_0
+
+    invoke-interface {p2, v3}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object p3
+
+    check-cast p3, Lt88;
+
+    invoke-interface {p3}, Lt88;->c()I
+
+    move-result p3
+
+    invoke-static {p1, p3}, Ljava/lang/Math;->max(II)I
+
+    move-result p1
+
+    add-int/lit8 v3, v3, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    iput p1, p0, Lxh4;->q:I
+
+    return-void
+.end method
+
+.method public static h(Landroid/content/Context;Llqc;Llqc;Z)Lxh4;
+    .locals 2
+
+    invoke-virtual {p2}, Ljava/util/AbstractCollection;->isEmpty()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    const-string v0, "shaders/fragment_shader_copy_es2.glsl"
+
+    goto :goto_0
+
+    :cond_0
+    const-string v0, "shaders/fragment_shader_transformation_es2.glsl"
+
+    :goto_0
+    const-string v1, "shaders/vertex_shader_transformation_es2.glsl"
+
+    invoke-static {p0, v1, v0}, Lxh4;->j(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)Lax;
+
+    move-result-object p0
+
+    new-instance v0, Lxh4;
+
+    invoke-static {p1}, Ll37;->j(Ljava/util/Collection;)Ll37;
+
+    move-result-object p1
+
+    invoke-static {p2}, Ll37;->j(Ljava/util/Collection;)Ll37;
+
+    move-result-object p2
+
+    invoke-direct {v0, p0, p1, p2, p3}, Lxh4;-><init>(Lax;Ll37;Ll37;Z)V
+
+    return-object v0
+.end method
+
+.method public static i(Landroid/content/Context;Llqc;Ljava/util/List;Lc83;I)Lxh4;
+    .locals 5
+
+    invoke-static {p3}, Lc83;->g(Lc83;)Z
+
+    move-result v0
+
+    const/4 v1, 0x2
+
+    const/4 v2, 0x0
+
+    const/4 v3, 0x1
+
+    if-ne p4, v1, :cond_0
+
+    move p4, v3
+
+    goto :goto_0
+
+    :cond_0
+    move p4, v2
+
+    :goto_0
+    if-eqz v0, :cond_1
+
+    const-string v1, "shaders/vertex_shader_transformation_es3.glsl"
+
+    goto :goto_1
+
+    :cond_1
+    const-string v1, "shaders/vertex_shader_transformation_es2.glsl"
+
+    :goto_1
+    if-eqz v0, :cond_2
+
+    const-string v4, "shaders/fragment_shader_oetf_es3.glsl"
+
+    goto :goto_2
+
+    :cond_2
+    if-eqz p4, :cond_3
+
+    const-string v4, "shaders/fragment_shader_transformation_sdr_oetf_es2.glsl"
+
+    goto :goto_2
+
+    :cond_3
+    invoke-interface {p2}, Ljava/util/List;->isEmpty()Z
+
+    move-result v4
+
+    if-eqz v4, :cond_4
+
+    const-string v4, "shaders/fragment_shader_copy_es2.glsl"
+
+    goto :goto_2
+
+    :cond_4
+    const-string v4, "shaders/fragment_shader_transformation_es2.glsl"
+
+    :goto_2
+    invoke-static {p0, v1, v4}, Lxh4;->j(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)Lax;
+
+    move-result-object p0
+
+    iget p3, p3, Lc83;->c:I
+
+    const-string v1, "uOutputColorTransfer"
+
+    if-eqz v0, :cond_7
+
+    const/4 p4, 0x7
+
+    if-eq p3, p4, :cond_5
+
+    const/4 p4, 0x6
+
+    if-ne p3, p4, :cond_6
+
+    :cond_5
+    move v2, v3
+
+    :cond_6
+    invoke-static {v2}, Lmq0;->c(Z)V
+
+    invoke-virtual {p0, p3, v1}, Lax;->A(ILjava/lang/String;)V
+
+    goto :goto_3
+
+    :cond_7
+    if-eqz p4, :cond_a
+
+    const/4 p4, 0x3
+
+    if-eq p3, p4, :cond_8
+
+    const/16 p4, 0xa
+
+    if-ne p3, p4, :cond_9
+
+    :cond_8
+    move v2, v3
+
+    :cond_9
+    invoke-static {v2}, Lmq0;->c(Z)V
+
+    invoke-virtual {p0, p3, v1}, Lax;->A(ILjava/lang/String;)V
+
+    :cond_a
+    :goto_3
+    new-instance p3, Lxh4;
+
+    invoke-static {p1}, Ll37;->j(Ljava/util/Collection;)Ll37;
+
+    move-result-object p1
+
+    invoke-static {p2}, Ll37;->j(Ljava/util/Collection;)Ll37;
+
+    move-result-object p2
+
+    invoke-direct {p3, p0, p1, p2, v0}, Lxh4;-><init>(Lax;Ll37;Ll37;Z)V
+
+    return-object p3
+.end method
+
+.method public static j(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)Lax;
+    .locals 1
+
+    :try_start_0
+    new-instance v0, Lax;
+
+    invoke-direct {v0, p0, p1, p2}, Lax;-><init>(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
+    :try_end_0
+    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
+    .catch Landroidx/media3/common/util/GlUtil$GlException; {:try_start_0 .. :try_end_0} :catch_0
+
+    const-string p0, "uTexTransformationMatrix"
+
+    invoke-static {}, Li4h;->s()[F
+
+    move-result-object p1
+
+    invoke-virtual {v0, p0, p1}, Lax;->w(Ljava/lang/String;[F)V
+
+    return-object v0
+
+    :catch_0
+    move-exception p0
+
+    new-instance p1, Landroidx/media3/common/VideoFrameProcessingException;
+
+    invoke-direct {p1, p0}, Ljava/lang/Exception;-><init>(Ljava/lang/Throwable;)V
+
+    throw p1
+.end method
+
+.method public static k(Lax;Lc83;Lc83;Ll37;)Lxh4;
+    .locals 8
+
+    invoke-static {p1}, Lc83;->g(Lc83;)Z
+
+    move-result v0
+
+    iget p1, p1, Lc83;->a:I
 
     const/4 v1, 0x0
 
-    iput-boolean v1, p0, Lxh4;->b:Z
+    const/4 v2, 0x6
 
-    iput-boolean v1, p0, Lxh4;->c:Z
+    const/4 v3, 0x1
 
-    const/4 v2, 0x1
+    if-eq p1, v3, :cond_0
 
-    iput v2, p0, Lxh4;->e:I
+    const/4 v4, 0x2
 
-    iput v2, p0, Lxh4;->h:I
+    if-ne p1, v4, :cond_1
 
-    iput-object v0, p0, Lxh4;->i:Lfk4;
+    :cond_0
+    iget p1, p2, Lc83;->a:I
 
-    iput-boolean v1, p0, Lxh4;->j:Z
+    if-ne p1, v2, :cond_1
 
-    new-instance v0, Ljava/util/ArrayList;
+    move p1, v3
 
-    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
+    goto :goto_0
 
-    iput-object v0, p0, Lxh4;->k:Ljava/util/ArrayList;
+    :cond_1
+    move p1, v1
 
-    new-instance v0, Ljava/util/ArrayList;
+    :goto_0
+    iget p2, p2, Lc83;->c:I
 
-    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
+    const/4 v4, 0x7
 
-    iput-object v0, p0, Lxh4;->l:Ljava/util/ArrayList;
+    const/4 v5, 0x3
 
-    iput-object p1, p0, Lxh4;->d:Lv6g;
+    const-string v6, "uOutputColorTransfer"
 
-    return-void
+    if-eqz v0, :cond_5
+
+    const/16 v7, 0xa
+
+    if-ne p2, v5, :cond_2
+
+    move p2, v7
+
+    :cond_2
+    if-eq p2, v3, :cond_4
+
+    if-eq p2, v7, :cond_4
+
+    if-eq p2, v2, :cond_4
+
+    if-ne p2, v4, :cond_3
+
+    goto :goto_1
+
+    :cond_3
+    move v2, v1
+
+    goto :goto_2
+
+    :cond_4
+    :goto_1
+    move v2, v3
+
+    :goto_2
+    invoke-static {v2}, Lmq0;->c(Z)V
+
+    invoke-virtual {p0, p2, v6}, Lax;->A(ILjava/lang/String;)V
+
+    goto :goto_7
+
+    :cond_5
+    if-eqz p1, :cond_8
+
+    if-eq p2, v3, :cond_7
+
+    if-eq p2, v2, :cond_7
+
+    if-ne p2, v4, :cond_6
+
+    goto :goto_3
+
+    :cond_6
+    move v2, v1
+
+    goto :goto_4
+
+    :cond_7
+    :goto_3
+    move v2, v3
+
+    :goto_4
+    invoke-static {v2}, Lmq0;->c(Z)V
+
+    invoke-virtual {p0, p2, v6}, Lax;->A(ILjava/lang/String;)V
+
+    goto :goto_7
+
+    :cond_8
+    const-string v2, "uSdrWorkingColorSpace"
+
+    invoke-virtual {p0, v1, v2}, Lax;->A(ILjava/lang/String;)V
+
+    if-eq p2, v5, :cond_a
+
+    if-ne p2, v3, :cond_9
+
+    goto :goto_5
+
+    :cond_9
+    move v2, v1
+
+    goto :goto_6
+
+    :cond_a
+    :goto_5
+    move v2, v3
+
+    :goto_6
+    invoke-static {v2}, Lmq0;->c(Z)V
+
+    invoke-virtual {p0, p2, v6}, Lax;->A(ILjava/lang/String;)V
+
+    :goto_7
+    new-instance p2, Lxh4;
+
+    sget-object v2, Llqc;->X:Llqc;
+
+    if-nez v0, :cond_b
+
+    if-eqz p1, :cond_c
+
+    :cond_b
+    move v1, v3
+
+    :cond_c
+    invoke-direct {p2, p0, p3, v2, v1}, Lxh4;-><init>(Lax;Ll37;Ll37;Z)V
+
+    return-object p2
+.end method
+
+.method public static n([[F[[F)Z
+    .locals 7
+
+    const/4 v0, 0x0
+
+    move v1, v0
+
+    move v2, v1
+
+    :goto_0
+    array-length v3, p0
+
+    if-ge v1, v3, :cond_2
+
+    aget-object v3, p0, v1
+
+    aget-object v4, p1, v1
+
+    invoke-static {v3, v4}, Ljava/util/Arrays;->equals([F[F)Z
+
+    move-result v5
+
+    if-nez v5, :cond_1
+
+    array-length v2, v4
+
+    const/16 v5, 0x10
+
+    const/4 v6, 0x1
+
+    if-ne v2, v5, :cond_0
+
+    move v2, v6
+
+    goto :goto_1
+
+    :cond_0
+    move v2, v0
+
+    :goto_1
+    const-string v5, "A 4x4 transformation matrix must have 16 elements"
+
+    invoke-static {v5, v2}, Lmq0;->g(Ljava/lang/Object;Z)V
+
+    array-length v2, v4
+
+    invoke-static {v4, v0, v3, v0, v2}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
+
+    move v2, v6
+
+    :cond_1
+    add-int/lit8 v1, v1, 0x1
+
+    goto :goto_0
+
+    :cond_2
+    return v2
 .end method
 
 
 # virtual methods
-.method public final a(Luh4;)V
-    .locals 5
+.method public final d(IJ)V
+    .locals 21
 
-    iget-object p1, p0, Lxh4;->l:Ljava/util/ArrayList;
+    move-object/from16 v0, p0
 
-    invoke-virtual {p1}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
+    iget-object v1, v0, Lxh4;->h:Lax;
 
-    move-result-object v0
+    iget-object v2, v0, Lxh4;->j:Ll37;
 
-    :cond_0
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_1
-
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lxh4;
-
-    iget-boolean v1, v1, Lxh4;->j:Z
-
-    if-nez v1, :cond_0
-
-    goto :goto_1
-
-    :cond_1
-    const/4 v0, 0x1
-
-    iput-boolean v0, p0, Lxh4;->c:Z
-
-    iget-object v1, p0, Lxh4;->a:Lv6g;
-
-    if-eqz v1, :cond_2
-
-    invoke-interface {v1, p0}, Luh4;->a(Luh4;)V
-
-    :cond_2
-    iget-boolean v1, p0, Lxh4;->b:Z
-
-    if-eqz v1, :cond_3
-
-    iget-object p1, p0, Lxh4;->d:Lv6g;
-
-    invoke-interface {p1, p0}, Luh4;->a(Luh4;)V
-
-    return-void
-
-    :cond_3
-    invoke-virtual {p1}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
-
-    move-result-object p1
-
-    const/4 v1, 0x0
-
-    const/4 v2, 0x0
-
-    :goto_0
-    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
+    invoke-virtual {v2}, Ljava/util/AbstractCollection;->size()I
 
     move-result v3
 
-    if-eqz v3, :cond_5
+    const/4 v4, 0x2
 
-    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    new-array v5, v4, [I
+
+    const/4 v6, 0x1
+
+    const/16 v7, 0x10
+
+    aput v7, v5, v6
+
+    const/4 v8, 0x0
+
+    aput v3, v5, v8
+
+    sget-object v3, Ljava/lang/Float;->TYPE:Ljava/lang/Class;
+
+    invoke-static {v3, v5}, Ljava/lang/reflect/Array;->newInstance(Ljava/lang/Class;[I)Ljava/lang/Object;
+
+    move-result-object v5
+
+    check-cast v5, [[F
+
+    invoke-virtual {v2}, Ljava/util/AbstractCollection;->size()I
+
+    move-result v9
+
+    if-gtz v9, :cond_16
+
+    iget-object v9, v0, Lxh4;->m:[[F
+
+    invoke-static {v9, v5}, Lxh4;->n([[F[[F)Z
+
+    move-result v5
+
+    iget-object v9, v0, Lxh4;->o:[F
+
+    if-nez v5, :cond_0
+
+    move v2, v8
+
+    goto :goto_0
+
+    :cond_0
+    invoke-static {v9, v8}, Landroid/opengl/Matrix;->setIdentityM([FI)V
+
+    invoke-virtual {v2}, Ljava/util/AbstractCollection;->size()I
+
+    move-result v5
+
+    if-gtz v5, :cond_15
+
+    move v2, v6
+
+    :goto_0
+    iget-object v5, v0, Lxh4;->i:Ll37;
+
+    invoke-virtual {v5}, Ljava/util/AbstractCollection;->size()I
+
+    move-result v10
+
+    new-array v11, v4, [I
+
+    aput v7, v11, v6
+
+    aput v10, v11, v8
+
+    invoke-static {v3, v11}, Ljava/lang/reflect/Array;->newInstance(Ljava/lang/Class;[I)Ljava/lang/Object;
 
     move-result-object v3
 
-    check-cast v3, Lxh4;
+    check-cast v3, [[F
 
-    instance-of v4, v3, Lfk4;
+    move v10, v8
 
-    if-eqz v4, :cond_4
+    :goto_1
+    invoke-virtual {v5}, Ljava/util/AbstractCollection;->size()I
 
-    goto :goto_0
+    move-result v11
+
+    const/4 v12, 0x3
+
+    const/4 v13, 0x4
+
+    if-ge v10, v11, :cond_5
+
+    invoke-interface {v5, v10}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object v11
+
+    check-cast v11, Lt88;
+
+    invoke-interface {v11}, Lt88;->b()Landroid/graphics/Matrix;
+
+    move-result-object v11
+
+    const/16 v14, 0x9
+
+    new-array v14, v14, [F
+
+    invoke-virtual {v11, v14}, Landroid/graphics/Matrix;->getValues([F)V
+
+    new-array v11, v7, [F
+
+    const/16 v15, 0xa
+
+    const/high16 v16, 0x3f800000    # 1.0f
+
+    aput v16, v11, v15
+
+    move v15, v8
+
+    :goto_2
+    if-ge v15, v12, :cond_4
+
+    move v6, v8
+
+    :goto_3
+    if-ge v6, v12, :cond_3
+
+    if-ne v15, v4, :cond_1
+
+    move/from16 v16, v12
+
+    goto :goto_4
+
+    :cond_1
+    move/from16 v16, v15
+
+    :goto_4
+    if-ne v6, v4, :cond_2
+
+    move/from16 v17, v12
+
+    goto :goto_5
+
+    :cond_2
+    move/from16 v17, v6
+
+    :goto_5
+    mul-int/lit8 v16, v16, 0x4
+
+    add-int v16, v16, v17
+
+    mul-int/lit8 v17, v15, 0x3
+
+    add-int v17, v17, v6
+
+    aget v17, v14, v17
+
+    aput v17, v11, v16
+
+    add-int/lit8 v6, v6, 0x1
+
+    goto :goto_3
+
+    :cond_3
+    add-int/lit8 v15, v15, 0x1
+
+    const/4 v6, 0x1
+
+    goto :goto_2
 
     :cond_4
-    add-int/lit8 v2, v2, 0x1
+    new-array v6, v7, [F
 
-    move-object v1, v3
+    invoke-static {v6, v8, v11, v8}, Landroid/opengl/Matrix;->transposeM([FI[FI)V
 
-    goto :goto_0
+    aput-object v6, v3, v10
 
-    :cond_5
-    if-eqz v1, :cond_7
+    add-int/lit8 v10, v10, 0x1
 
-    if-ne v2, v0, :cond_7
-
-    iget-boolean p1, v1, Lxh4;->j:Z
-
-    if-eqz p1, :cond_7
-
-    iget-object p1, p0, Lxh4;->i:Lfk4;
-
-    if-eqz p1, :cond_6
-
-    iget-boolean v0, p1, Lxh4;->j:Z
-
-    if-eqz v0, :cond_8
-
-    iget v0, p0, Lxh4;->h:I
-
-    iget p1, p1, Lxh4;->g:I
-
-    mul-int/2addr v0, p1
-
-    iput v0, p0, Lxh4;->f:I
-
-    :cond_6
-    iget p1, v1, Lxh4;->g:I
-
-    iget v0, p0, Lxh4;->f:I
-
-    add-int/2addr p1, v0
-
-    invoke-virtual {p0, p1}, Lxh4;->d(I)V
-
-    :cond_7
-    iget-object p1, p0, Lxh4;->a:Lv6g;
-
-    if-eqz p1, :cond_8
-
-    invoke-interface {p1, p0}, Luh4;->a(Luh4;)V
-
-    :cond_8
-    :goto_1
-    return-void
-.end method
-
-.method public final b(Lv6g;)V
-    .locals 1
-
-    iget-object v0, p0, Lxh4;->k:Ljava/util/ArrayList;
-
-    invoke-virtual {v0, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    iget-boolean p0, p0, Lxh4;->j:Z
-
-    if-eqz p0, :cond_0
-
-    invoke-interface {p1, p1}, Luh4;->a(Luh4;)V
-
-    :cond_0
-    return-void
-.end method
-
-.method public final c()V
-    .locals 1
-
-    iget-object v0, p0, Lxh4;->l:Ljava/util/ArrayList;
-
-    invoke-virtual {v0}, Ljava/util/ArrayList;->clear()V
-
-    iget-object v0, p0, Lxh4;->k:Ljava/util/ArrayList;
-
-    invoke-virtual {v0}, Ljava/util/ArrayList;->clear()V
-
-    const/4 v0, 0x0
-
-    iput-boolean v0, p0, Lxh4;->j:Z
-
-    iput v0, p0, Lxh4;->g:I
-
-    iput-boolean v0, p0, Lxh4;->c:Z
-
-    iput-boolean v0, p0, Lxh4;->b:Z
-
-    return-void
-.end method
-
-.method public d(I)V
-    .locals 1
-
-    iget-boolean v0, p0, Lxh4;->j:Z
-
-    if-eqz v0, :cond_0
+    const/4 v6, 0x1
 
     goto :goto_1
 
+    :cond_5
+    iget-object v4, v0, Lxh4;->l:[[F
+
+    invoke-static {v4, v3}, Lxh4;->n([[F[[F)Z
+
+    move-result v3
+
+    iget-object v5, v0, Lxh4;->n:[F
+
+    if-nez v3, :cond_6
+
+    move/from16 v17, v13
+
+    goto/16 :goto_c
+
+    :cond_6
+    invoke-static {v5, v8}, Landroid/opengl/Matrix;->setIdentityM([FI)V
+
+    sget-object v3, Lxh4;->w:Llqc;
+
+    iput-object v3, v0, Lxh4;->r:Llqc;
+
+    array-length v3, v4
+
+    move v6, v8
+
+    :goto_6
+    iget-object v7, v0, Lxh4;->p:[F
+
+    if-ge v6, v3, :cond_e
+
+    aget-object v16, v4, v6
+
+    iget-object v10, v0, Lxh4;->n:[F
+
+    const/16 v19, 0x0
+
+    iget-object v14, v0, Lxh4;->p:[F
+
+    const/4 v15, 0x0
+
+    const/16 v17, 0x0
+
+    move-object/from16 v18, v10
+
+    invoke-static/range {v14 .. v19}, Landroid/opengl/Matrix;->multiplyMM([FI[FI[FI)V
+
+    move-object/from16 v10, v16
+
+    array-length v11, v7
+
+    invoke-static {v7, v8, v5, v8, v11}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
+
+    iget-object v7, v0, Lxh4;->r:Llqc;
+
+    invoke-static {v10, v7}, Lte2;->O([FLl37;)Llqc;
+
+    move-result-object v7
+
+    iget v10, v7, Llqc;->o:I
+
+    const/4 v11, 0x3
+
+    if-lt v10, v11, :cond_7
+
+    const/4 v10, 0x1
+
+    goto :goto_7
+
+    :cond_7
+    const/4 v10, 0x0
+
+    :goto_7
+    const-string v11, "A polygon must have at least 3 vertices."
+
+    invoke-static {v11, v10}, Lmq0;->b(Ljava/lang/Object;Z)V
+
+    new-instance v10, Li37;
+
+    const/4 v11, 0x4
+
+    invoke-direct {v10, v11}, Lb37;-><init>(I)V
+
+    invoke-virtual {v10, v7}, Lb37;->d(Ljava/lang/Iterable;)V
+
+    sget-object v7, Lte2;->b:[[F
+
+    const/4 v14, 0x0
+
+    const/16 v16, 0x1
+
+    :goto_8
+    const/4 v15, 0x6
+
+    if-ge v14, v15, :cond_c
+
+    aget-object v15, v7, v14
+
+    invoke-virtual {v10}, Li37;->h()Llqc;
+
+    move-result-object v10
+
+    move/from16 v17, v13
+
+    new-instance v13, Li37;
+
+    invoke-direct {v13, v11}, Lb37;-><init>(I)V
+
+    const/4 v11, 0x0
+
+    :goto_9
+    iget v8, v10, Llqc;->o:I
+
+    if-ge v11, v8, :cond_b
+
+    invoke-virtual {v10, v11}, Llqc;->get(I)Ljava/lang/Object;
+
+    move-result-object v8
+
+    check-cast v8, [F
+
+    iget v12, v10, Llqc;->o:I
+
+    add-int v20, v12, v11
+
+    add-int/lit8 v20, v20, -0x1
+
+    rem-int v12, v20, v12
+
+    invoke-virtual {v10, v12}, Llqc;->get(I)Ljava/lang/Object;
+
+    move-result-object v12
+
+    check-cast v12, [F
+
+    invoke-static {v8, v15}, Lte2;->A([F[F)Z
+
+    move-result v20
+
+    if-eqz v20, :cond_9
+
+    invoke-static {v12, v15}, Lte2;->A([F[F)Z
+
+    move-result v20
+
+    if-nez v20, :cond_8
+
+    invoke-static {v15, v15, v12, v8}, Lte2;->f([F[F[F[F)[F
+
+    move-result-object v12
+
+    invoke-static {v8, v12}, Ljava/util/Arrays;->equals([F[F)Z
+
+    move-result v20
+
+    if-nez v20, :cond_8
+
+    invoke-virtual {v13, v12}, Lb37;->a(Ljava/lang/Object;)V
+
+    :cond_8
+    invoke-virtual {v13, v8}, Lb37;->a(Ljava/lang/Object;)V
+
+    goto :goto_a
+
+    :cond_9
+    invoke-static {v12, v15}, Lte2;->A([F[F)Z
+
+    move-result v20
+
+    if-eqz v20, :cond_a
+
+    invoke-static {v15, v15, v12, v8}, Lte2;->f([F[F[F[F)[F
+
+    move-result-object v8
+
+    invoke-static {v12, v8}, Ljava/util/Arrays;->equals([F[F)Z
+
+    move-result v12
+
+    if-nez v12, :cond_a
+
+    invoke-virtual {v13, v8}, Lb37;->a(Ljava/lang/Object;)V
+
+    :cond_a
+    :goto_a
+    add-int/lit8 v11, v11, 0x1
+
+    const/4 v12, 0x3
+
+    goto :goto_9
+
+    :cond_b
+    add-int/lit8 v14, v14, 0x1
+
+    move-object v10, v13
+
+    move/from16 v13, v17
+
+    const/4 v8, 0x0
+
+    const/4 v11, 0x4
+
+    const/4 v12, 0x3
+
+    goto :goto_8
+
+    :cond_c
+    move/from16 v17, v13
+
+    invoke-virtual {v10}, Li37;->h()Llqc;
+
+    move-result-object v7
+
+    iput-object v7, v0, Lxh4;->r:Llqc;
+
+    iget v7, v7, Llqc;->o:I
+
+    const/4 v8, 0x3
+
+    if-ge v7, v8, :cond_d
+
+    :goto_b
+    const/4 v8, 0x1
+
+    goto :goto_c
+
+    :cond_d
+    add-int/lit8 v6, v6, 0x1
+
+    move/from16 v13, v17
+
+    const/4 v8, 0x0
+
+    const/4 v12, 0x3
+
+    goto/16 :goto_6
+
+    :cond_e
+    move v6, v8
+
+    move/from16 v17, v13
+
+    invoke-static {v7, v6, v5, v6}, Landroid/opengl/Matrix;->invertM([FI[FI)Z
+
+    iget-object v3, v0, Lxh4;->r:Llqc;
+
+    invoke-static {v7, v3}, Lte2;->O([FLl37;)Llqc;
+
+    move-result-object v3
+
+    iput-object v3, v0, Lxh4;->r:Llqc;
+
+    goto :goto_b
+
+    :goto_c
+    if-nez v2, :cond_10
+
+    if-eqz v8, :cond_f
+
+    goto :goto_d
+
+    :cond_f
+    const/4 v2, 0x0
+
+    goto :goto_e
+
+    :cond_10
+    :goto_d
+    const/4 v2, 0x1
+
+    :goto_e
+    iget-object v3, v0, Lxh4;->r:Llqc;
+
+    iget v3, v3, Llqc;->o:I
+
+    const/4 v8, 0x3
+
+    if-ge v3, v8, :cond_11
+
+    goto :goto_f
+
+    :cond_11
+    iget-boolean v3, v0, Lxh4;->u:Z
+
+    if-eqz v3, :cond_12
+
+    if-nez v2, :cond_12
+
+    iget-boolean v2, v0, Lxh4;->v:Z
+
+    if-eqz v2, :cond_12
+
+    :goto_f
+    return-void
+
+    :cond_12
+    :try_start_0
+    iget v2, v1, Lax;->b:I
+
+    iget-object v3, v1, Lax;->Z:Ljava/lang/Object;
+
+    check-cast v3, Ljava/util/HashMap;
+
+    invoke-static {v2}, Landroid/opengl/GLES20;->glUseProgram(I)V
+
+    invoke-static {}, Li4h;->o()V
+
+    invoke-virtual {v0}, Lxh4;->m()V
+
+    const-string v2, "uTexSampler"
+
+    iget v4, v0, Lxh4;->q:I
+
+    invoke-virtual {v3, v2}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Lxj6;
+
+    invoke-virtual {v2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    move/from16 v6, p1
+
+    iput v6, v2, Lxj6;->e:I
+
+    const/4 v6, 0x0
+
+    iput v6, v2, Lxj6;->f:I
+
+    iput v4, v2, Lxj6;->g:I
+
+    const-string v2, "uTransformationMatrix"
+
+    invoke-virtual {v1, v2, v5}, Lax;->w(Ljava/lang/String;[F)V
+
+    const-string v2, "uRgbMatrix"
+
+    invoke-virtual {v3, v2}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Lxj6;
+
+    if-nez v2, :cond_13
+
+    goto :goto_10
+
+    :cond_13
+    iget-object v2, v2, Lxj6;->c:[F
+
+    array-length v3, v9
+
+    const/4 v6, 0x0
+
+    invoke-static {v9, v6, v2, v6, v3}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
+
+    :goto_10
+    iget-object v2, v0, Lxh4;->r:Llqc;
+
+    iget v3, v2, Llqc;->o:I
+
+    mul-int/lit8 v3, v3, 0x4
+
+    new-array v3, v3, [F
+
+    const/4 v6, 0x0
+
+    :goto_11
+    iget v4, v2, Llqc;->o:I
+
+    if-ge v6, v4, :cond_14
+
+    invoke-virtual {v2, v6}, Llqc;->get(I)Ljava/lang/Object;
+
+    move-result-object v4
+
+    mul-int/lit8 v5, v6, 0x4
+
+    move/from16 v7, v17
+
+    const/4 v8, 0x0
+
+    invoke-static {v4, v8, v3, v5, v7}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
+
+    add-int/lit8 v6, v6, 0x1
+
+    move/from16 v17, v7
+
+    goto :goto_11
+
+    :cond_14
+    invoke-virtual {v1, v3}, Lax;->s([F)V
+
+    invoke-virtual {v1}, Lax;->g()V
+
+    iget-object v1, v0, Lxh4;->r:Llqc;
+
+    iget v1, v1, Llqc;->o:I
+
+    const/4 v2, 0x6
+
+    const/4 v6, 0x0
+
+    invoke-static {v2, v6, v1}, Landroid/opengl/GLES20;->glDrawArrays(III)V
+
+    invoke-static {}, Li4h;->o()V
+    :try_end_0
+    .catch Landroidx/media3/common/util/GlUtil$GlException; {:try_start_0 .. :try_end_0} :catch_0
+
+    const/4 v1, 0x1
+
+    iput-boolean v1, v0, Lxh4;->v:Z
+
+    return-void
+
+    :catch_0
+    move-exception v0
+
+    new-instance v1, Landroidx/media3/common/VideoFrameProcessingException;
+
+    invoke-direct {v1, v0}, Ljava/lang/Exception;-><init>(Ljava/lang/Throwable;)V
+
+    throw v1
+
+    :cond_15
+    move v6, v8
+
+    invoke-interface {v2, v6}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    new-instance v0, Ljava/lang/ClassCastException;
+
+    invoke-direct {v0}, Ljava/lang/ClassCastException;-><init>()V
+
+    throw v0
+
+    :cond_16
+    move v6, v8
+
+    invoke-interface {v2, v6}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    new-instance v0, Ljava/lang/ClassCastException;
+
+    invoke-direct {v0}, Ljava/lang/ClassCastException;-><init>()V
+
+    throw v0
+.end method
+
+.method public final l(Landroid/graphics/Gainmap;)V
+    .locals 6
+
+    iget-boolean v0, p0, Lxh4;->k:Z
+
+    if-nez v0, :cond_0
+
+    goto :goto_0
+
     :cond_0
-    const/4 v0, 0x1
+    iget-object v0, p0, Lxh4;->s:Landroid/graphics/Gainmap;
 
-    iput-boolean v0, p0, Lxh4;->j:Z
+    if-eqz v0, :cond_1
 
-    iput p1, p0, Lxh4;->g:I
+    invoke-static {v0}, Ljo0;->k(Landroid/graphics/Gainmap;)[F
 
-    iget-object p0, p0, Lxh4;->k:Ljava/util/ArrayList;
+    move-result-object v1
 
-    invoke-virtual {p0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
+    invoke-static {p1}, Ljo0;->k(Landroid/graphics/Gainmap;)[F
 
-    move-result-object p0
+    move-result-object v2
+
+    if-ne v1, v2, :cond_1
+
+    invoke-static {v0}, Ljo0;->n(Landroid/graphics/Gainmap;)[F
+
+    move-result-object v1
+
+    invoke-static {p1}, Ljo0;->n(Landroid/graphics/Gainmap;)[F
+
+    move-result-object v2
+
+    if-ne v1, v2, :cond_1
+
+    invoke-static {v0}, Ljo0;->o(Landroid/graphics/Gainmap;)[F
+
+    move-result-object v1
+
+    invoke-static {p1}, Ljo0;->o(Landroid/graphics/Gainmap;)[F
+
+    move-result-object v2
+
+    if-ne v1, v2, :cond_1
+
+    invoke-static {v0}, Ljo0;->p(Landroid/graphics/Gainmap;)[F
+
+    move-result-object v1
+
+    invoke-static {p1}, Ljo0;->p(Landroid/graphics/Gainmap;)[F
+
+    move-result-object v2
+
+    if-ne v1, v2, :cond_1
+
+    invoke-static {v0}, Ljo0;->q(Landroid/graphics/Gainmap;)[F
+
+    move-result-object v1
+
+    invoke-static {p1}, Ljo0;->q(Landroid/graphics/Gainmap;)[F
+
+    move-result-object v2
+
+    if-ne v1, v2, :cond_1
+
+    invoke-static {v0}, Ljo0;->a(Landroid/graphics/Gainmap;)F
+
+    move-result v1
+
+    invoke-static {p1}, Ljo0;->a(Landroid/graphics/Gainmap;)F
+
+    move-result v2
+
+    cmpl-float v1, v1, v2
+
+    if-nez v1, :cond_1
+
+    invoke-static {v0}, Ljo0;->l(Landroid/graphics/Gainmap;)F
+
+    move-result v1
+
+    invoke-static {p1}, Ljo0;->l(Landroid/graphics/Gainmap;)F
+
+    move-result v2
+
+    cmpl-float v1, v1, v2
+
+    if-nez v1, :cond_1
+
+    invoke-static {v0}, Ljo0;->b(Landroid/graphics/Gainmap;)Landroid/graphics/Bitmap;
+
+    move-result-object v1
+
+    invoke-static {p1}, Ljo0;->b(Landroid/graphics/Gainmap;)Landroid/graphics/Bitmap;
+
+    move-result-object v2
+
+    if-ne v1, v2, :cond_1
+
+    invoke-static {v0}, Ljo0;->b(Landroid/graphics/Gainmap;)Landroid/graphics/Bitmap;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/graphics/Bitmap;->getGenerationId()I
+
+    move-result v0
+
+    invoke-static {p1}, Ljo0;->b(Landroid/graphics/Gainmap;)Landroid/graphics/Bitmap;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Landroid/graphics/Bitmap;->getGenerationId()I
+
+    move-result v1
+
+    if-ne v0, v1, :cond_1
 
     :goto_0
-    invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
+    return-void
 
-    move-result p1
+    :cond_1
+    const/4 v0, 0x0
 
-    if-eqz p1, :cond_1
+    iput-boolean v0, p0, Lxh4;->v:Z
 
-    invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    iput-object p1, p0, Lxh4;->s:Landroid/graphics/Gainmap;
+
+    iget v1, p0, Lxh4;->t:I
+
+    const/4 v2, -0x1
+
+    const/16 v3, 0x2601
+
+    const/16 v4, 0xde1
+
+    if-ne v1, v2, :cond_2
+
+    invoke-static {p1}, Ljo0;->b(Landroid/graphics/Gainmap;)Landroid/graphics/Bitmap;
 
     move-result-object p1
 
-    check-cast p1, Luh4;
+    const/4 v1, 0x1
 
-    invoke-interface {p1, p1}, Luh4;->a(Luh4;)V
+    new-array v2, v1, [I
+
+    invoke-static {v1, v2, v0}, Landroid/opengl/GLES20;->glGenTextures(I[II)V
+
+    invoke-static {}, Li4h;->o()V
+
+    aget v1, v2, v0
+
+    invoke-virtual {p1}, Landroid/graphics/Bitmap;->getWidth()I
+
+    move-result v2
+
+    invoke-virtual {p1}, Landroid/graphics/Bitmap;->getHeight()I
+
+    move-result v5
+
+    invoke-static {v2, v5}, Li4h;->j(II)V
+
+    invoke-static {v4, v1, v3}, Li4h;->k(III)V
+
+    invoke-static {v4, v0, p1, v0}, Landroid/opengl/GLUtils;->texImage2D(IILandroid/graphics/Bitmap;I)V
+
+    invoke-static {}, Li4h;->o()V
+
+    iput v1, p0, Lxh4;->t:I
+
+    return-void
+
+    :cond_2
+    invoke-static {p1}, Ljo0;->b(Landroid/graphics/Gainmap;)Landroid/graphics/Bitmap;
+
+    move-result-object p0
+
+    invoke-virtual {p0}, Landroid/graphics/Bitmap;->getWidth()I
+
+    move-result p1
+
+    invoke-virtual {p0}, Landroid/graphics/Bitmap;->getHeight()I
+
+    move-result v2
+
+    invoke-static {p1, v2}, Li4h;->j(II)V
+
+    invoke-static {v4, v1, v3}, Li4h;->k(III)V
+
+    invoke-static {v4, v0, p0, v0}, Landroid/opengl/GLUtils;->texImage2D(IILandroid/graphics/Bitmap;I)V
+
+    invoke-static {}, Li4h;->o()V
+
+    return-void
+.end method
+
+.method public final m()V
+    .locals 11
+
+    iget-object v0, p0, Lxh4;->s:Landroid/graphics/Gainmap;
+
+    if-nez v0, :cond_0
+
+    return-void
+
+    :cond_0
+    sget v0, Lnrf;->a:I
+
+    const/16 v1, 0x22
+
+    if-lt v0, v1, :cond_4
+
+    iget v0, p0, Lxh4;->t:I
+
+    iget-object v1, p0, Lxh4;->h:Lax;
+
+    iget-object v2, v1, Lax;->Z:Ljava/lang/Object;
+
+    check-cast v2, Ljava/util/HashMap;
+
+    const-string v3, "uGainmapTexSampler"
+
+    invoke-virtual {v2, v3}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Lxj6;
+
+    invoke-virtual {v2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    iput v0, v2, Lxj6;->e:I
+
+    const/4 v0, 0x1
+
+    iput v0, v2, Lxj6;->f:I
+
+    iget-object p0, p0, Lxh4;->s:Landroid/graphics/Gainmap;
+
+    invoke-static {p0}, Ljo0;->b(Landroid/graphics/Gainmap;)Landroid/graphics/Bitmap;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Landroid/graphics/Bitmap;->getConfig()Landroid/graphics/Bitmap$Config;
+
+    move-result-object v2
+
+    sget-object v3, Landroid/graphics/Bitmap$Config;->ALPHA_8:Landroid/graphics/Bitmap$Config;
+
+    const/4 v4, 0x0
+
+    if-ne v2, v3, :cond_1
+
+    move v2, v0
 
     goto :goto_0
 
     :cond_1
-    :goto_1
-    return-void
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 2
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
-    iget-object v1, p0, Lxh4;->d:Lv6g;
-
-    iget-object v1, v1, Lv6g;->b:Lbj3;
-
-    iget-object v1, v1, Lbj3;->h0:Ljava/lang/String;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, ":"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget v1, p0, Lxh4;->e:I
-
-    packed-switch v1, :pswitch_data_0
-
-    const-string v1, "null"
-
-    goto :goto_0
-
-    :pswitch_0
-    const-string v1, "BASELINE"
-
-    goto :goto_0
-
-    :pswitch_1
-    const-string v1, "BOTTOM"
-
-    goto :goto_0
-
-    :pswitch_2
-    const-string v1, "TOP"
-
-    goto :goto_0
-
-    :pswitch_3
-    const-string v1, "RIGHT"
-
-    goto :goto_0
-
-    :pswitch_4
-    const-string v1, "LEFT"
-
-    goto :goto_0
-
-    :pswitch_5
-    const-string v1, "VERTICAL_DIMENSION"
-
-    goto :goto_0
-
-    :pswitch_6
-    const-string v1, "HORIZONTAL_DIMENSION"
-
-    goto :goto_0
-
-    :pswitch_7
-    const-string v1, "UNKNOWN"
+    move v2, v4
 
     :goto_0
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {p0}, Ljo0;->k(Landroid/graphics/Gainmap;)[F
 
-    const-string v1, "("
+    move-result-object v3
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    aget v5, v3, v4
 
-    iget-boolean v1, p0, Lxh4;->j:Z
+    const/high16 v6, 0x3f800000    # 1.0f
 
-    if-eqz v1, :cond_0
+    cmpl-float v5, v5, v6
 
-    iget v1, p0, Lxh4;->g:I
+    const/4 v7, 0x2
 
-    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    if-nez v5, :cond_2
 
-    move-result-object v1
+    aget v5, v3, v0
+
+    cmpl-float v5, v5, v6
+
+    if-nez v5, :cond_2
+
+    aget v5, v3, v7
+
+    cmpl-float v5, v5, v6
+
+    if-nez v5, :cond_2
+
+    move v5, v0
 
     goto :goto_1
 
-    :cond_0
-    const-string v1, "unresolved"
+    :cond_2
+    move v5, v4
 
     :goto_1
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-static {v3}, Lf4h;->c([F)Z
 
-    const-string v1, ") <t="
+    move-result v6
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    if-eqz v6, :cond_3
 
-    iget-object v1, p0, Lxh4;->l:Ljava/util/ArrayList;
+    invoke-static {p0}, Ljo0;->n(Landroid/graphics/Gainmap;)[F
 
-    invoke-virtual {v1}, Ljava/util/ArrayList;->size()I
+    move-result-object v6
 
-    move-result v1
+    invoke-static {v6}, Lf4h;->c([F)Z
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    move-result v6
 
-    const-string v1, ":d="
+    if-eqz v6, :cond_3
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {p0}, Ljo0;->o(Landroid/graphics/Gainmap;)[F
 
-    iget-object p0, p0, Lxh4;->k:Ljava/util/ArrayList;
+    move-result-object v6
 
-    invoke-virtual {p0}, Ljava/util/ArrayList;->size()I
+    invoke-static {v6}, Lf4h;->c([F)Z
+
+    move-result v6
+
+    if-eqz v6, :cond_3
+
+    move v6, v0
+
+    goto :goto_2
+
+    :cond_3
+    move v6, v4
+
+    :goto_2
+    const-string v8, "uGainmapIsAlpha"
+
+    invoke-virtual {v1, v2, v8}, Lax;->A(ILjava/lang/String;)V
+
+    const-string v2, "uNoGamma"
+
+    invoke-virtual {v1, v5, v2}, Lax;->A(ILjava/lang/String;)V
+
+    const-string v2, "uSingleChannel"
+
+    invoke-virtual {v1, v6, v2}, Lax;->A(ILjava/lang/String;)V
+
+    invoke-static {p0}, Ljo0;->o(Landroid/graphics/Gainmap;)[F
+
+    move-result-object v2
+
+    aget v5, v2, v4
+
+    float-to-double v5, v5
+
+    invoke-static {v5, v6}, Ljava/lang/Math;->log(D)D
+
+    move-result-wide v5
+
+    double-to-float v5, v5
+
+    aget v6, v2, v0
+
+    float-to-double v8, v6
+
+    invoke-static {v8, v9}, Ljava/lang/Math;->log(D)D
+
+    move-result-wide v8
+
+    double-to-float v6, v8
+
+    aget v2, v2, v7
+
+    float-to-double v8, v2
+
+    invoke-static {v8, v9}, Ljava/lang/Math;->log(D)D
+
+    move-result-wide v8
+
+    double-to-float v2, v8
+
+    const/4 v8, 0x3
+
+    new-array v9, v8, [F
+
+    aput v5, v9, v4
+
+    aput v6, v9, v0
+
+    aput v2, v9, v7
+
+    const-string v2, "uLogRatioMin"
+
+    invoke-virtual {v1, v2, v9}, Lax;->w(Ljava/lang/String;[F)V
+
+    invoke-static {p0}, Ljo0;->n(Landroid/graphics/Gainmap;)[F
+
+    move-result-object v2
+
+    aget v5, v2, v4
+
+    float-to-double v5, v5
+
+    invoke-static {v5, v6}, Ljava/lang/Math;->log(D)D
+
+    move-result-wide v5
+
+    double-to-float v5, v5
+
+    aget v6, v2, v0
+
+    float-to-double v9, v6
+
+    invoke-static {v9, v10}, Ljava/lang/Math;->log(D)D
+
+    move-result-wide v9
+
+    double-to-float v6, v9
+
+    aget v2, v2, v7
+
+    float-to-double v9, v2
+
+    invoke-static {v9, v10}, Ljava/lang/Math;->log(D)D
+
+    move-result-wide v9
+
+    double-to-float v2, v9
+
+    new-array v8, v8, [F
+
+    aput v5, v8, v4
+
+    aput v6, v8, v0
+
+    aput v2, v8, v7
+
+    const-string v0, "uLogRatioMax"
+
+    invoke-virtual {v1, v0, v8}, Lax;->w(Ljava/lang/String;[F)V
+
+    const-string v0, "uEpsilonSdr"
+
+    invoke-static {p0}, Ljo0;->q(Landroid/graphics/Gainmap;)[F
+
+    move-result-object v2
+
+    invoke-virtual {v1, v0, v2}, Lax;->w(Ljava/lang/String;[F)V
+
+    const-string v0, "uEpsilonHdr"
+
+    invoke-static {p0}, Ljo0;->p(Landroid/graphics/Gainmap;)[F
+
+    move-result-object v2
+
+    invoke-virtual {v1, v0, v2}, Lax;->w(Ljava/lang/String;[F)V
+
+    const-string v0, "uGainmapGamma"
+
+    invoke-virtual {v1, v0, v3}, Lax;->w(Ljava/lang/String;[F)V
+
+    const-string v0, "uDisplayRatioHdr"
+
+    invoke-static {p0}, Ljo0;->a(Landroid/graphics/Gainmap;)F
+
+    move-result v2
+
+    invoke-virtual {v1, v0, v2}, Lax;->u(Ljava/lang/String;F)V
+
+    const-string v0, "uDisplayRatioSdr"
+
+    invoke-static {p0}, Ljo0;->l(Landroid/graphics/Gainmap;)F
 
     move-result p0
 
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-virtual {v1, v0, p0}, Lax;->u(Ljava/lang/String;F)V
 
-    const-string p0, ">"
+    invoke-static {}, Li4h;->o()V
 
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    return-void
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    :cond_4
+    new-instance p0, Ljava/lang/IllegalStateException;
+
+    const-string v0, "Gainmaps not supported under API 34."
+
+    invoke-direct {p0, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p0
+.end method
+
+.method public final release()V
+    .locals 2
+
+    :try_start_0
+    iget-object v0, p0, Lpi0;->a:Lfr0;
+
+    invoke-virtual {v0}, Lfr0;->h()V
+    :try_end_0
+    .catch Landroidx/media3/common/util/GlUtil$GlException; {:try_start_0 .. :try_end_0} :catch_1
+
+    :try_start_1
+    iget-object v0, p0, Lxh4;->h:Lax;
+
+    iget v0, v0, Lax;->b:I
+
+    invoke-static {v0}, Landroid/opengl/GLES20;->glDeleteProgram(I)V
+
+    invoke-static {}, Li4h;->o()V
+
+    iget p0, p0, Lxh4;->t:I
+
+    const/4 v0, -0x1
+
+    if-eq p0, v0, :cond_0
+
+    filled-new-array {p0}, [I
 
     move-result-object p0
 
-    return-object p0
+    const/4 v0, 0x0
 
-    :pswitch_data_0
-    .packed-switch 0x1
-        :pswitch_7
-        :pswitch_6
-        :pswitch_5
-        :pswitch_4
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    const/4 v1, 0x1
+
+    invoke-static {v1, p0, v0}, Landroid/opengl/GLES20;->glDeleteTextures(I[II)V
+
+    invoke-static {}, Li4h;->o()V
+    :try_end_1
+    .catch Landroidx/media3/common/util/GlUtil$GlException; {:try_start_1 .. :try_end_1} :catch_0
+
+    :cond_0
+    return-void
+
+    :catch_0
+    move-exception p0
+
+    new-instance v0, Landroidx/media3/common/VideoFrameProcessingException;
+
+    invoke-direct {v0, p0}, Ljava/lang/Exception;-><init>(Ljava/lang/Throwable;)V
+
+    throw v0
+
+    :catch_1
+    move-exception p0
+
+    new-instance v0, Landroidx/media3/common/VideoFrameProcessingException;
+
+    invoke-direct {v0, p0}, Ljava/lang/Exception;-><init>(Ljava/lang/Throwable;)V
+
+    throw v0
 .end method

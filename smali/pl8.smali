@@ -1,76 +1,51 @@
 .class public final Lpl8;
-.super Ljava/lang/Object;
+.super Landroid/media/MediaRouter2$RouteCallback;
 .source "SourceFile"
 
 
+# instance fields
+.field public final synthetic a:Lrl8;
+
+
+# direct methods
+.method public constructor <init>(Lrl8;)V
+    .locals 0
+
+    iput-object p1, p0, Lpl8;->a:Lrl8;
+
+    invoke-direct {p0}, Landroid/media/MediaRouter2$RouteCallback;-><init>()V
+
+    return-void
+.end method
+
+
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
+.method public final onRoutesAdded(Ljava/util/List;)V
     .locals 0
 
-    if-ne p0, p1, :cond_0
+    iget-object p0, p0, Lpl8;->a:Lrl8;
 
-    goto :goto_1
+    invoke-virtual {p0}, Lrl8;->j()V
 
-    :cond_0
-    instance-of p0, p1, Lpl8;
-
-    if-nez p0, :cond_1
-
-    goto :goto_0
-
-    :cond_1
-    check-cast p1, Lpl8;
-
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    sget-object p0, Lll8;->a:Lll8;
-
-    invoke-virtual {p0, p0}, Lll8;->equals(Ljava/lang/Object;)Z
-
-    move-result p0
-
-    if-nez p0, :cond_2
-
-    :goto_0
-    const/4 p0, 0x0
-
-    return p0
-
-    :cond_2
-    :goto_1
-    const/4 p0, 0x1
-
-    return p0
+    return-void
 .end method
 
-.method public final hashCode()I
+.method public final onRoutesChanged(Ljava/util/List;)V
     .locals 0
 
-    const p0, 0x72d9d95f
+    iget-object p0, p0, Lpl8;->a:Lrl8;
 
-    return p0
+    invoke-virtual {p0}, Lrl8;->j()V
+
+    return-void
 .end method
 
-.method public final toString()Ljava/lang/String;
-    .locals 1
+.method public final onRoutesRemoved(Ljava/util/List;)V
+    .locals 0
 
-    new-instance p0, Ljava/lang/StringBuilder;
+    iget-object p0, p0, Lpl8;->a:Lrl8;
 
-    const-string v0, "MediaTypePickerViewState(selectedButton="
+    invoke-virtual {p0}, Lrl8;->j()V
 
-    invoke-direct {p0, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    sget-object v0, Lll8;->a:Lll8;
-
-    invoke-virtual {p0, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v0, ")"
-
-    invoke-virtual {p0, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
+    return-void
 .end method

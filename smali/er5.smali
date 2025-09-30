@@ -1,85 +1,45 @@
 .class public final Ler5;
-.super Ljava/lang/Object;
+.super Lpm0;
 .source "SourceFile"
-
-# interfaces
-.implements La0a;
-.implements Ll9e;
-
-
-# instance fields
-.field public final a:Lj9e;
-
-.field public b:Lam4;
 
 
 # direct methods
-.method public constructor <init>(Lj9e;)V
-    .locals 0
+.method public static f(I[B)I
+    .locals 2
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    aget-byte v0, p1, p0
 
-    iput-object p1, p0, Ler5;->a:Lj9e;
+    and-int/lit16 v0, v0, 0xff
 
-    return-void
-.end method
+    shl-int/lit8 v0, v0, 0x18
 
+    add-int/lit8 v1, p0, 0x1
 
-# virtual methods
-.method public final b()V
-    .locals 0
+    aget-byte v1, p1, v1
 
-    iget-object p0, p0, Ler5;->a:Lj9e;
+    and-int/lit16 v1, v1, 0xff
 
-    invoke-interface {p0}, Lj9e;->b()V
+    shl-int/lit8 v1, v1, 0x10
 
-    return-void
-.end method
+    or-int/2addr v0, v1
 
-.method public final c(Lam4;)V
-    .locals 0
+    add-int/lit8 v1, p0, 0x2
 
-    iput-object p1, p0, Ler5;->b:Lam4;
+    aget-byte v1, p1, v1
 
-    iget-object p1, p0, Ler5;->a:Lj9e;
+    and-int/lit16 v1, v1, 0xff
 
-    invoke-interface {p1, p0}, Lj9e;->d(Ll9e;)V
+    shl-int/lit8 v1, v1, 0x8
 
-    return-void
-.end method
+    or-int/2addr v0, v1
 
-.method public final cancel()V
-    .locals 0
+    add-int/lit8 p0, p0, 0x3
 
-    iget-object p0, p0, Ler5;->b:Lam4;
+    aget-byte p0, p1, p0
 
-    invoke-interface {p0}, Lam4;->f()V
+    and-int/lit16 p0, p0, 0xff
 
-    return-void
-.end method
+    or-int/2addr p0, v0
 
-.method public final h(Ljava/lang/Object;)V
-    .locals 0
-
-    iget-object p0, p0, Ler5;->a:Lj9e;
-
-    invoke-interface {p0, p1}, Lj9e;->h(Ljava/lang/Object;)V
-
-    return-void
-.end method
-
-.method public final i(J)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public final onError(Ljava/lang/Throwable;)V
-    .locals 0
-
-    iget-object p0, p0, Ler5;->a:Lj9e;
-
-    invoke-interface {p0, p1}, Lj9e;->onError(Ljava/lang/Throwable;)V
-
-    return-void
+    return p0
 .end method

@@ -1,46 +1,82 @@
 .class public final Lyk1;
-.super Lbu3;
+.super Ldl1;
+.source "SourceFile"
 
 
 # instance fields
-.field public X:I
-
-.field public final synthetic Y:Ltb;
-
-.field public synthetic o:Ljava/lang/Object;
+.field public final D:Z
 
 
 # direct methods
-.method public constructor <init>(Ltb;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(Z)V
     .locals 0
 
-    iput-object p1, p0, Lyk1;->Y:Ltb;
+    invoke-direct {p0}, Ldl1;-><init>()V
 
-    invoke-direct {p0, p2}, Lbu3;-><init>(Lkotlin/coroutines/Continuation;)V
+    iput-boolean p1, p0, Lyk1;->D:Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final equals(Ljava/lang/Object;)Z
     .locals 1
 
-    iput-object p1, p0, Lyk1;->o:Ljava/lang/Object;
+    if-ne p0, p1, :cond_0
 
-    iget p1, p0, Lyk1;->X:I
+    goto :goto_1
 
-    const/high16 v0, -0x80000000
+    :cond_0
+    instance-of v0, p1, Lyk1;
 
-    or-int/2addr p1, v0
+    if-nez v0, :cond_1
 
-    iput p1, p0, Lyk1;->X:I
+    goto :goto_0
 
-    iget-object p1, p0, Lyk1;->Y:Ltb;
+    :cond_1
+    check-cast p1, Lyk1;
 
-    const/4 v0, 0x0
+    iget-boolean p0, p0, Lyk1;->D:Z
 
-    invoke-virtual {p1, v0, p0}, Ltb;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    iget-boolean p1, p1, Lyk1;->D:Z
+
+    if-eq p0, p1, :cond_2
+
+    :goto_0
+    const/4 p0, 0x0
+
+    return p0
+
+    :cond_2
+    :goto_1
+    const/4 p0, 0x1
+
+    return p0
+.end method
+
+.method public final hashCode()I
+    .locals 0
+
+    iget-boolean p0, p0, Lyk1;->D:Z
+
+    invoke-static {p0}, Ljava/lang/Boolean;->hashCode(Z)I
+
+    move-result p0
+
+    return p0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 2
+
+    const-string v0, "ShareScreen(isEnabled="
+
+    const-string v1, ")"
+
+    iget-boolean p0, p0, Lyk1;->D:Z
+
+    invoke-static {v0, v1, p0}, Lz7e;->r(Ljava/lang/String;Ljava/lang/String;Z)Ljava/lang/String;
 
     move-result-object p0
 

@@ -11,7 +11,7 @@
     d2 = {
         "Lru/ok/android/externcalls/sdk/contacts/listener/ContactCallListener;",
         "",
-        "Le5f;",
+        "Lylf;",
         "onContactCallMyAnonChanged",
         "()V",
         "calls-sdk_release"

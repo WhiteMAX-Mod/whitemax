@@ -1,25 +1,17 @@
-.class public final Lk27;
+.class public interface abstract Lk27;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:Lv2;
+# virtual methods
+.method public abstract a()Ljava/lang/String;
+.end method
 
-.field public b:Lvd4;
+.method public abstract b(Lk55;Lkw8;Lryc;Lztc;Landroid/graphics/ColorSpace;)Lxq5;
+.end method
 
-.field public c:La53;
+.method public abstract c(Le17;)Z
+.end method
 
-.field public d:Lvq0;
-
-
-# direct methods
-.method public constructor <init>(Lv2;)V
-    .locals 0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lk27;->a:Lv2;
-
-    return-void
+.method public abstract d(Lk55;Lryc;Lztc;)Z
 .end method

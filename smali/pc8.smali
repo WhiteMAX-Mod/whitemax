@@ -1,190 +1,197 @@
 .class public final Lpc8;
-.super Ljava/lang/Object;
+.super Lure;
 .source "SourceFile"
+
+# interfaces
+.implements Lpc6;
 
 
 # instance fields
-.field public A:Ljava/lang/CharSequence;
+.field public synthetic X:Ljava/lang/Object;
 
-.field public B:Ljava/lang/Integer;
+.field public final synthetic Y:Lone/me/chatscreen/mediabar/MediaBarWidget;
 
-.field public C:Ljava/lang/Integer;
 
-.field public D:Ljava/lang/CharSequence;
+# direct methods
+.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/chatscreen/mediabar/MediaBarWidget;)V
+    .locals 0
 
-.field public E:Ljava/lang/CharSequence;
+    iput-object p2, p0, Lpc8;->Y:Lone/me/chatscreen/mediabar/MediaBarWidget;
 
-.field public F:Ljava/lang/CharSequence;
+    const/4 p2, 0x2
 
-.field public G:Ljava/lang/Integer;
+    invoke-direct {p0, p2, p1}, Lure;-><init>(ILkotlin/coroutines/Continuation;)V
 
-.field public H:Landroid/os/Bundle;
-
-.field public a:Ljava/lang/CharSequence;
-
-.field public b:Ljava/lang/CharSequence;
-
-.field public c:Ljava/lang/CharSequence;
-
-.field public d:Ljava/lang/CharSequence;
-
-.field public e:Ljava/lang/CharSequence;
-
-.field public f:Ljava/lang/CharSequence;
-
-.field public g:Ljava/lang/CharSequence;
-
-.field public h:Ljava/lang/Long;
-
-.field public i:Lw2c;
-
-.field public j:Lw2c;
-
-.field public k:[B
-
-.field public l:Ljava/lang/Integer;
-
-.field public m:Landroid/net/Uri;
-
-.field public n:Ljava/lang/Integer;
-
-.field public o:Ljava/lang/Integer;
-
-.field public p:Ljava/lang/Integer;
-
-.field public q:Ljava/lang/Boolean;
-
-.field public r:Ljava/lang/Boolean;
-
-.field public s:Ljava/lang/Integer;
-
-.field public t:Ljava/lang/Integer;
-
-.field public u:Ljava/lang/Integer;
-
-.field public v:Ljava/lang/Integer;
-
-.field public w:Ljava/lang/Integer;
-
-.field public x:Ljava/lang/Integer;
-
-.field public y:Ljava/lang/CharSequence;
-
-.field public z:Ljava/lang/CharSequence;
+    return-void
+.end method
 
 
 # virtual methods
-.method public final a(I[B)V
-    .locals 3
-
-    const/4 v0, 0x3
-
-    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v0
-
-    iget-object v1, p0, Lpc8;->k:[B
-
-    if-eqz v1, :cond_1
-
-    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v1
-
-    sget v2, Lpaf;->a:I
-
-    invoke-virtual {v1, v0}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_1
-
-    iget-object v1, p0, Lpc8;->l:Ljava/lang/Integer;
-
-    invoke-static {v1, v0}, Lpaf;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    return-void
-
-    :cond_1
-    :goto_0
-    invoke-virtual {p2}, [B->clone()Ljava/lang/Object;
-
-    move-result-object p2
-
-    check-cast p2, [B
-
-    iput-object p2, p0, Lpc8;->k:[B
-
-    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lpc8;->l:Ljava/lang/Integer;
-
-    return-void
-.end method
-
-.method public final b([BLjava/lang/Integer;)V
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    if-nez p1, :cond_0
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    const/4 p1, 0x0
+    invoke-virtual {p0, p1, p2}, Lpc8;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    goto :goto_0
+    move-result-object p0
 
-    :cond_0
-    invoke-virtual {p1}, [B->clone()Ljava/lang/Object;
+    check-cast p0, Lpc8;
 
-    move-result-object p1
+    sget-object p1, Lylf;->a:Lylf;
 
-    check-cast p1, [B
+    invoke-virtual {p0, p1}, Lpc8;->o(Ljava/lang/Object;)Ljava/lang/Object;
 
-    :goto_0
-    iput-object p1, p0, Lpc8;->k:[B
-
-    iput-object p2, p0, Lpc8;->l:Ljava/lang/Integer;
-
-    return-void
+    return-object p1
 .end method
 
-.method public final c(Ljava/lang/Long;)V
-    .locals 4
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 1
 
-    if-eqz p1, :cond_1
+    new-instance v0, Lpc8;
 
-    invoke-virtual {p1}, Ljava/lang/Long;->longValue()J
+    iget-object p0, p0, Lpc8;->Y:Lone/me/chatscreen/mediabar/MediaBarWidget;
 
-    move-result-wide v0
+    invoke-direct {v0, p2, p0}, Lpc8;-><init>(Lkotlin/coroutines/Continuation;Lone/me/chatscreen/mediabar/MediaBarWidget;)V
 
-    const-wide/16 v2, 0x0
+    iput-object p1, v0, Lpc8;->X:Ljava/lang/Object;
 
-    cmp-long v0, v0, v2
+    return-object v0
+.end method
 
-    if-ltz v0, :cond_0
+.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 3
 
-    goto :goto_0
+    invoke-static {p1}, Lqe5;->V(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Lpc8;->X:Ljava/lang/Object;
+
+    check-cast p1, Lffd;
+
+    instance-of v0, p1, Lefd;
+
+    iget-object p0, p0, Lpc8;->Y:Lone/me/chatscreen/mediabar/MediaBarWidget;
+
+    if-eqz v0, :cond_0
+
+    sget-object p1, Lone/me/chatscreen/mediabar/MediaBarWidget;->c1:[Lxi7;
+
+    invoke-virtual {p0}, Lone/me/chatscreen/mediabar/MediaBarWidget;->L0()Ll42;
+
+    move-result-object p0
+
+    const/16 p1, 0x8
+
+    invoke-virtual {p0, p1}, Landroid/view/View;->setVisibility(I)V
+
+    goto :goto_1
 
     :cond_0
-    const/4 v0, 0x0
+    instance-of v0, p1, Lcfd;
+
+    if-eqz v0, :cond_1
+
+    check-cast p1, Lcfd;
+
+    iget v0, p1, Lcfd;->a:I
+
+    iput v0, p0, Lone/me/chatscreen/mediabar/MediaBarWidget;->F0:I
+
+    invoke-static {p0}, Lone/me/chatscreen/mediabar/MediaBarWidget;->A0(Lone/me/chatscreen/mediabar/MediaBarWidget;)V
+
+    iget p1, p1, Lcfd;->a:I
+
+    invoke-virtual {p0}, Lone/me/chatscreen/mediabar/MediaBarWidget;->M0()Ldsa;
+
+    move-result-object p0
+
+    int-to-float p1, p1
+
+    const/high16 v0, 0x44000000    # 512.0f
+
+    div-float/2addr p1, v0
+
+    invoke-virtual {p0, p1}, Ldsa;->setDropdownRotationProgress(F)V
 
     goto :goto_1
 
     :cond_1
+    instance-of v0, p1, Ldfd;
+
+    if-eqz v0, :cond_4
+
+    sget-object v0, Lone/me/chatscreen/mediabar/MediaBarWidget;->c1:[Lxi7;
+
+    invoke-virtual {p0}, Lone/me/chatscreen/mediabar/MediaBarWidget;->G0()Ljf6;
+
+    move-result-object v0
+
+    check-cast p1, Ldfd;
+
+    iget-object v1, p1, Ldfd;->a:Lse6;
+
+    iget-object v0, v0, Ljf6;->o:Lv85;
+
+    new-instance v2, Lze6;
+
+    invoke-direct {v2, v1}, Lze6;-><init>(Lse6;)V
+
+    invoke-static {v0, v2}, Lx7g;->o(Lv85;Ljava/lang/Object;)V
+
+    iget-object p1, p1, Ldfd;->a:Lse6;
+
+    iget-object p1, p1, Lse6;->a:Lre6;
+
+    invoke-virtual {p1}, Lre6;->c()Lr3;
+
+    move-result-object p1
+
+    instance-of v0, p1, Lge6;
+
+    if-eqz v0, :cond_2
+
+    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
+
+    move-result-object v0
+
+    check-cast p1, Lge6;
+
+    iget p1, p1, Lge6;->a:I
+
+    invoke-virtual {v0, p1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
+
+    move-result-object p1
+
+    goto :goto_0
+
+    :cond_2
+    instance-of v0, p1, Lhe6;
+
+    if-eqz v0, :cond_3
+
+    check-cast p1, Lhe6;
+
+    iget-object p1, p1, Lhe6;->a:Ljava/lang/String;
+
     :goto_0
-    const/4 v0, 0x1
+    invoke-virtual {p0}, Lone/me/chatscreen/mediabar/MediaBarWidget;->M0()Ldsa;
 
+    move-result-object p0
+
+    invoke-virtual {p0, p1}, Ldsa;->setTitle(Ljava/lang/CharSequence;)V
+
+    goto :goto_1
+
+    :cond_3
+    new-instance p0, Lkotlin/NoWhenBranchMatchedException;
+
+    invoke-direct {p0}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
+
+    throw p0
+
+    :cond_4
     :goto_1
-    invoke-static {v0}, Lu27;->f(Z)V
+    sget-object p0, Lylf;->a:Lylf;
 
-    iput-object p1, p0, Lpc8;->h:Ljava/lang/Long;
-
-    return-void
+    return-object p0
 .end method

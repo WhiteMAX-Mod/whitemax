@@ -1,91 +1,68 @@
 .class public final Lima;
-.super Ljava/lang/Object;
+.super Lmn;
 .source "SourceFile"
 
-
-# instance fields
-.field public final a:Lyec;
-
-.field public final b:Lhma;
-
-.field public final c:Ls1c;
-
-.field public final d:Lns2;
-
-.field public final e:Lba;
-
-.field public final f:Lay3;
-
-.field public volatile g:Ltd7;
-
-.field public volatile h:Lgsc;
-
-.field public i:D
-
-.field public j:J
-
-.field public final k:Lzvd;
-
-.field public l:D
-
-.field public m:D
-
-.field public final n:Lwv7;
-
-.field public final o:Lqo0;
-
-.field public final p:Lqo0;
+# interfaces
+.implements Lx3f;
 
 
-# direct methods
-.method public constructor <init>(Lyec;Lhma;Ls1c;Lns2;Lba;Lay3;)V
+# virtual methods
+.method public final b(ZLera;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    if-eqz p1, :cond_0
 
-    iput-object p1, p0, Lima;->a:Lyec;
+    invoke-interface {p2}, Lera;->getIcon()Lqy6;
 
-    iput-object p2, p0, Lima;->b:Lhma;
+    move-result-object p1
 
-    iput-object p3, p0, Lima;->c:Ls1c;
+    iget p1, p1, Lqy6;->k:I
 
-    iput-object p4, p0, Lima;->d:Lns2;
+    goto :goto_0
 
-    iput-object p5, p0, Lima;->e:Lba;
+    :cond_0
+    invoke-interface {p2}, Lera;->i()Lume;
 
-    iput-object p6, p0, Lima;->f:Lay3;
+    move-result-object p1
 
-    const-wide/high16 p1, 0x3ff0000000000000L    # 1.0
+    iget-object p1, p1, Lume;->b:Lzme;
 
-    iput-wide p1, p0, Lima;->i:D
+    iget p1, p1, Lzme;->b:I
 
-    new-instance p1, Lzvd;
+    :goto_0
+    invoke-static {p1}, Landroid/content/res/ColorStateList;->valueOf(I)Landroid/content/res/ColorStateList;
 
-    const/16 p2, 0x1d
+    move-result-object p1
 
-    invoke-direct {p1, p2}, Lzvd;-><init>(I)V
+    invoke-virtual {p0, p1}, Landroid/widget/CompoundButton;->setButtonTintList(Landroid/content/res/ColorStateList;)V
 
-    iput-object p1, p0, Lima;->k:Lzvd;
+    return-void
+.end method
 
-    new-instance p1, Lwv7;
+.method public final onThemeChanged(Lera;)V
+    .locals 1
 
-    invoke-direct {p1}, Ljava/lang/Object;-><init>()V
+    invoke-virtual {p0}, Landroid/widget/CompoundButton;->isChecked()Z
 
-    iput-object p1, p0, Lima;->n:Lwv7;
+    move-result v0
 
-    new-instance p1, Lqo0;
+    invoke-virtual {p0, v0, p1}, Lima;->b(ZLera;)V
 
-    const/4 p2, 0x0
+    return-void
+.end method
 
-    invoke-direct {p1, p2}, Lqo0;-><init>(I)V
+.method public setChecked(Z)V
+    .locals 1
 
-    iput-object p1, p0, Lima;->o:Lqo0;
+    invoke-super {p0, p1}, Landroid/widget/CompoundButton;->setChecked(Z)V
 
-    new-instance p1, Lqo0;
+    sget-object v0, Lyu4;->t0:Lbx9;
 
-    invoke-direct {p1, p2}, Lqo0;-><init>(I)V
+    invoke-virtual {v0, p0}, Lbx9;->l(Landroid/view/View;)Lera;
 
-    iput-object p1, p0, Lima;->p:Lqo0;
+    move-result-object v0
+
+    invoke-virtual {p0, p1, v0}, Lima;->b(ZLera;)V
 
     return-void
 .end method

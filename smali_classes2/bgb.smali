@@ -1,159 +1,118 @@
 .class public final Lbgb;
-.super Lcgb;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:Lhab;
+.field public final a:Ljava/lang/CharSequence;
 
-.field public final b:I
+.field public final b:[Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>(Lhab;I)V
+.method public constructor <init>(Ljava/lang/CharSequence;[Ljava/lang/String;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lbgb;->a:Lhab;
+    iput-object p1, p0, Lbgb;->a:Ljava/lang/CharSequence;
 
-    iput p2, p0, Lbgb;->b:I
+    iput-object p2, p0, Lbgb;->b:[Ljava/lang/String;
 
     return-void
+.end method
+
+.method public static a()Lbgb;
+    .locals 3
+
+    new-instance v0, Lbgb;
+
+    const/4 v1, 0x0
+
+    new-array v1, v1, [Ljava/lang/String;
+
+    const-string v2, ""
+
+    invoke-direct {v0, v2, v1}, Lbgb;-><init>(Ljava/lang/CharSequence;[Ljava/lang/String;)V
+
+    return-object v0
 .end method
 
 
 # virtual methods
 .method public final equals(Ljava/lang/Object;)Z
-    .locals 2
+    .locals 3
 
     if-ne p0, p1, :cond_0
 
-    goto :goto_0
+    const/4 p0, 0x1
+
+    return p0
 
     :cond_0
     instance-of v0, p1, Lbgb;
 
+    const/4 v1, 0x0
+
     if-nez v0, :cond_1
 
-    goto :goto_1
+    return v1
 
     :cond_1
     check-cast p1, Lbgb;
 
-    iget-object v0, p0, Lbgb;->a:Lhab;
+    iget-object v0, p0, Lbgb;->a:Ljava/lang/CharSequence;
 
-    iget-object v1, p1, Lbgb;->a:Lhab;
+    iget-object v2, p1, Lbgb;->a:Ljava/lang/CharSequence;
 
-    invoke-virtual {v0, v1}, Lhab;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v0, v2}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
     move-result v0
 
     if-nez v0, :cond_2
 
-    goto :goto_1
+    return v1
 
     :cond_2
-    iget p0, p0, Lbgb;->b:I
+    iget-object p0, p0, Lbgb;->b:[Ljava/lang/String;
 
-    iget p1, p1, Lbgb;->b:I
+    iget-object p1, p1, Lbgb;->b:[Ljava/lang/String;
 
-    if-ne p0, p1, :cond_3
-
-    :goto_0
-    const/4 p0, 0x1
-
-    return p0
-
-    :cond_3
-    :goto_1
-    const/4 p0, 0x0
-
-    return p0
-.end method
-
-.method public final getItemId()J
-    .locals 2
-
-    iget-object p0, p0, Lbgb;->a:Lhab;
-
-    iget-wide v0, p0, Lhab;->a:J
-
-    return-wide v0
-.end method
-
-.method public final hashCode()I
-    .locals 3
-
-    iget-object v0, p0, Lbgb;->a:Lhab;
-
-    invoke-virtual {v0}, Lhab;->hashCode()I
-
-    move-result v0
-
-    const/16 v1, 0x1f
-
-    mul-int/2addr v0, v1
-
-    const/4 v2, 0x1
-
-    invoke-static {v2, v0, v1}, Lp3a;->i(III)I
-
-    move-result v0
-
-    iget p0, p0, Lbgb;->b:I
-
-    invoke-static {p0}, Ljava/lang/Integer;->hashCode(I)I
+    invoke-static {p0, p1}, Ljava/util/Arrays;->equals([Ljava/lang/Object;[Ljava/lang/Object;)Z
 
     move-result p0
-
-    add-int/2addr p0, v0
-
-    return p0
-.end method
-
-.method public final m()I
-    .locals 0
-
-    iget p0, p0, Lbgb;->b:I
 
     return p0
 .end method
 
 .method public final toString()Ljava/lang/String;
-    .locals 3
+    .locals 2
 
-    iget v0, p0, Lbgb;->b:I
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    invoke-static {v0}, Lxqd;->D(I)Ljava/lang/String;
+    const-string v1, "PreProcessedText{text="
 
-    move-result-object v0
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    new-instance v1, Ljava/lang/StringBuilder;
+    iget-object v1, p0, Lbgb;->a:Ljava/lang/CharSequence;
 
-    const-string v2, "Result(cellModel="
+    invoke-static {v1}, Ljtg;->w(Ljava/lang/CharSequence;)Ljava/lang/String;
 
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    move-result-object v1
 
-    iget-object p0, p0, Lbgb;->a:Lhab;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    const-string v1, ", tokens="
 
-    const-string p0, ", type="
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    iget-object p0, p0, Lbgb;->b:[Ljava/lang/String;
 
-    const-string p0, "CHAT"
+    array-length p0, p0
 
-    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    const/16 v1, 0x7d
 
-    const-string p0, ", itemViewType="
-
-    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string p0, ")"
-
-    invoke-static {v1, v0, p0}, Lm26;->j(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0, p0, v1}, Lmw1;->i(Ljava/lang/StringBuilder;IC)Ljava/lang/String;
 
     move-result-object p0
 

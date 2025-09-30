@@ -1,161 +1,73 @@
-.class public final Lwif;
-.super Ljava/lang/Object;
+.class public final enum Lwif;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
-# interfaces
-.implements Lmj3;
 
+# static fields
+.field public static final enum a:Lwif;
 
-# instance fields
-.field public final a:Lede;
+.field public static final enum b:Lwif;
 
-.field public final b:Landroid/graphics/SurfaceTexture;
-
-.field public final c:Landroid/view/Surface;
-
-.field public final synthetic d:Lxif;
+.field public static final synthetic c:[Lwif;
 
 
 # direct methods
-.method public constructor <init>(Lxif;Lede;Landroid/graphics/SurfaceTexture;Landroid/view/Surface;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 4
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lwif;
 
-    iput-object p1, p0, Lwif;->d:Lxif;
+    const-string v1, "START"
 
-    iput-object p2, p0, Lwif;->a:Lede;
+    const/4 v2, 0x0
 
-    iput-object p3, p0, Lwif;->b:Landroid/graphics/SurfaceTexture;
+    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    iput-object p4, p0, Lwif;->c:Landroid/view/Surface;
+    sput-object v0, Lwif;->a:Lwif;
+
+    new-instance v1, Lwif;
+
+    const-string v2, "FINISH"
+
+    const/4 v3, 0x1
+
+    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v1, Lwif;->b:Lwif;
+
+    filled-new-array {v0, v1}, [Lwif;
+
+    move-result-object v0
+
+    sput-object v0, Lwif;->c:[Lwif;
 
     return-void
 .end method
 
+.method public static valueOf(Ljava/lang/String;)Lwif;
+    .locals 1
 
-# virtual methods
-.method public final accept(Ljava/lang/Object;)V
-    .locals 5
+    const-class v0, Lwif;
 
-    check-cast p1, Ltb0;
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
 
-    iget-object v0, p0, Lwif;->b:Landroid/graphics/SurfaceTexture;
+    move-result-object p0
 
-    iget-object v1, p0, Lwif;->d:Lxif;
+    check-cast p0, Lwif;
 
-    iget-object v2, v1, Lxif;->a:Ljava/lang/String;
+    return-object p0
+.end method
 
-    iget p1, p1, Ltb0;->a:I
+.method public static values()[Lwif;
+    .locals 1
 
-    if-eqz p1, :cond_4
+    sget-object v0, Lwif;->c:[Lwif;
 
-    const/4 v3, 0x1
+    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
 
-    if-eq p1, v3, :cond_3
+    move-result-object v0
 
-    const/4 v3, 0x2
+    check-cast v0, [Lwif;
 
-    if-eq p1, v3, :cond_2
-
-    const/4 v3, 0x3
-
-    if-eq p1, v3, :cond_1
-
-    const/4 v3, 0x4
-
-    if-eq p1, v3, :cond_0
-
-    const-string v3, "SerufaceRequest.Result_UNKNOWN_code_"
-
-    invoke-static {p1, v3}, Lm26;->h(ILjava/lang/String;)Ljava/lang/String;
-
-    move-result-object p1
-
-    goto :goto_0
-
-    :cond_0
-    const-string p1, "WILL_NOT_PROVIDE_SURFACE"
-
-    goto :goto_0
-
-    :cond_1
-    const-string p1, "SURFACE_ALREADY_PROVIDED"
-
-    goto :goto_0
-
-    :cond_2
-    const-string p1, "INVALID_SURFACE"
-
-    goto :goto_0
-
-    :cond_3
-    const-string p1, "REQUEST_CANCELLED"
-
-    goto :goto_0
-
-    :cond_4
-    const-string p1, "SURFACE_USED_SUCCESSFULLY"
-
-    :goto_0
-    new-instance v3, Ljava/lang/StringBuilder;
-
-    const-string v4, "onSurfaceRequestResult event="
-
-    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v3, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-static {v2, p1}, Lg47;->p(Ljava/lang/String;Ljava/lang/String;)V
-
-    invoke-virtual {v1}, Lxif;->e()V
-
-    iget-object p1, p0, Lwif;->a:Lede;
-
-    iget-object v2, p1, Lede;->a:Ljava/lang/Object;
-
-    monitor-enter v2
-
-    const/4 v3, 0x0
-
-    :try_start_0
-    iput-object v3, p1, Lede;->n:Ldde;
-
-    iput-object v3, p1, Lede;->o:Ljava/util/concurrent/Executor;
-
-    monitor-exit v2
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    invoke-virtual {v0, v3}, Landroid/graphics/SurfaceTexture;->setOnFrameAvailableListener(Landroid/graphics/SurfaceTexture$OnFrameAvailableListener;)V
-
-    invoke-virtual {v0}, Landroid/graphics/SurfaceTexture;->release()V
-
-    iget-object p0, p0, Lwif;->c:Landroid/view/Surface;
-
-    invoke-virtual {p0}, Landroid/view/Surface;->release()V
-
-    iget p0, v1, Lxif;->s0:I
-
-    add-int/lit8 p0, p0, -0x1
-
-    iput p0, v1, Lxif;->s0:I
-
-    invoke-virtual {v1}, Lxif;->f()V
-
-    return-void
-
-    :catchall_0
-    move-exception p0
-
-    :try_start_1
-    monitor-exit v2
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    throw p0
+    return-object v0
 .end method

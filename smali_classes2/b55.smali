@@ -3,60 +3,102 @@
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/lang/Runnable;
+.implements Ld55;
 
 
 # instance fields
-.field public final a:Ljava/lang/Runnable;
-
-.field public final b:Lw45;
-
-.field public final c:Lx45;
+.field public final a:Lhfe;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/Runnable;Lw45;Lx45;)V
+.method public constructor <init>(Lhfe;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lb55;->a:Ljava/lang/Runnable;
-
-    iput-object p2, p0, Lb55;->b:Lw45;
-
-    iput-object p3, p0, Lb55;->c:Lx45;
+    iput-object p1, p0, Lb55;->a:Lhfe;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
+.method public final equals(Ljava/lang/Object;)Z
     .locals 3
 
-    iget-object v0, p0, Lb55;->c:Lx45;
+    const/4 v0, 0x1
 
-    iget-object v1, p0, Lb55;->b:Lw45;
+    if-ne p0, p1, :cond_0
 
-    invoke-virtual {v1}, Lw45;->a()J
+    return v0
 
-    move-result-wide v1
+    :cond_0
+    instance-of v1, p1, Lb55;
 
-    :try_start_0
-    iget-object p0, p0, Lb55;->a:Ljava/lang/Runnable;
+    const/4 v2, 0x0
 
-    invoke-interface {p0}, Ljava/lang/Runnable;->run()V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    if-nez v1, :cond_1
 
-    invoke-virtual {v0, v1, v2}, Lx45;->a(J)V
+    return v2
 
-    return-void
+    :cond_1
+    check-cast p1, Lb55;
 
-    :catchall_0
-    move-exception p0
+    iget-object p0, p0, Lb55;->a:Lhfe;
 
-    invoke-virtual {v0, v1, v2}, Lx45;->a(J)V
+    iget-object p1, p1, Lb55;->a:Lhfe;
 
-    throw p0
+    invoke-static {p0, p1}, Lvyg;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p0
+
+    if-nez p0, :cond_2
+
+    return v2
+
+    :cond_2
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 0
+
+    iget-object p0, p0, Lb55;->a:Lhfe;
+
+    if-nez p0, :cond_0
+
+    const/4 p0, 0x0
+
+    return p0
+
+    :cond_0
+    invoke-virtual {p0}, Lhfe;->hashCode()I
+
+    move-result p0
+
+    return p0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 2
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "EmptyDialog(sticker="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object p0, p0, Lb55;->a:Lhfe;
+
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string p0, ")"
+
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    return-object p0
 .end method

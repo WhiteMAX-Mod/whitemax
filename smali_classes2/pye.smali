@@ -2,139 +2,147 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lxs0;
+
+# static fields
+.field public static final synthetic b:I
 
 
 # instance fields
-.field public final a:Lik4;
-
-.field public final b:Ljava/util/concurrent/atomic/LongAdder;
-
-.field public final c:Ljava/util/concurrent/atomic/LongAdder;
-
-.field public final d:Ljava/util/concurrent/atomic/AtomicLong;
-
-.field public final e:Ljava/util/concurrent/atomic/LongAccumulator;
-
-.field public final f:Ljava/util/concurrent/atomic/LongAdder;
-
-.field public final g:Ljava/util/concurrent/atomic/LongAdder;
+.field public final a:Lcl7;
 
 
 # direct methods
-.method public constructor <init>(Lik4;)V
-    .locals 3
+.method public constructor <init>(Lcl7;)V
+    .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lpye;->a:Lik4;
-
-    new-instance p1, Ljava/util/concurrent/atomic/LongAdder;
-
-    invoke-direct {p1}, Ljava/util/concurrent/atomic/LongAdder;-><init>()V
-
-    iput-object p1, p0, Lpye;->b:Ljava/util/concurrent/atomic/LongAdder;
-
-    new-instance p1, Ljava/util/concurrent/atomic/LongAdder;
-
-    invoke-direct {p1}, Ljava/util/concurrent/atomic/LongAdder;-><init>()V
-
-    iput-object p1, p0, Lpye;->c:Ljava/util/concurrent/atomic/LongAdder;
-
-    new-instance p1, Ljava/util/concurrent/atomic/AtomicLong;
-
-    invoke-direct {p1}, Ljava/util/concurrent/atomic/AtomicLong;-><init>()V
-
-    iput-object p1, p0, Lpye;->d:Ljava/util/concurrent/atomic/AtomicLong;
-
-    new-instance p1, Ljava/util/concurrent/atomic/LongAccumulator;
-
-    new-instance v0, Loye;
-
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    const-wide/16 v1, 0x0
-
-    invoke-direct {p1, v0, v1, v2}, Ljava/util/concurrent/atomic/LongAccumulator;-><init>(Ljava/util/function/LongBinaryOperator;J)V
-
-    iput-object p1, p0, Lpye;->e:Ljava/util/concurrent/atomic/LongAccumulator;
-
-    new-instance p1, Ljava/util/concurrent/atomic/LongAdder;
-
-    invoke-direct {p1}, Ljava/util/concurrent/atomic/LongAdder;-><init>()V
-
-    iput-object p1, p0, Lpye;->f:Ljava/util/concurrent/atomic/LongAdder;
-
-    new-instance p1, Ljava/util/concurrent/atomic/LongAdder;
-
-    invoke-direct {p1}, Ljava/util/concurrent/atomic/LongAdder;-><init>()V
-
-    iput-object p1, p0, Lpye;->g:Ljava/util/concurrent/atomic/LongAdder;
+    iput-object p1, p0, Lpye;->a:Lcl7;
 
     return-void
+.end method
+
+.method public static a(I)Z
+    .locals 1
+
+    const/4 v0, 0x2
+
+    if-eq p0, v0, :cond_1
+
+    const/4 v0, 0x3
+
+    if-ne p0, v0, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    const/4 p0, 0x0
+
+    return p0
+
+    :cond_1
+    :goto_0
+    const/4 p0, 0x1
+
+    return p0
+.end method
+
+.method public static c(Ljava/lang/Throwable;)Z
+    .locals 1
+
+    instance-of v0, p0, Lru/ok/tamtam/errors/TamErrorException;
+
+    if-eqz v0, :cond_0
+
+    check-cast p0, Lru/ok/tamtam/errors/TamErrorException;
+
+    iget-object p0, p0, Lru/ok/tamtam/errors/TamErrorException;->a:Lcxe;
+
+    iget-object p0, p0, Lcxe;->b:Ljava/lang/String;
+
+    invoke-static {p0}, Lxfc;->s(Ljava/lang/String;)Z
+
+    move-result p0
+
+    if-eqz p0, :cond_0
+
+    const/4 p0, 0x1
+
+    return p0
+
+    :cond_0
+    const/4 p0, 0x0
+
+    return p0
+.end method
+
+.method public static d(Ljava/lang/Throwable;)Z
+    .locals 1
+
+    instance-of v0, p0, Lru/ok/tamtam/errors/TamErrorException;
+
+    if-eqz v0, :cond_0
+
+    check-cast p0, Lru/ok/tamtam/errors/TamErrorException;
+
+    iget-object p0, p0, Lru/ok/tamtam/errors/TamErrorException;->a:Lcxe;
+
+    iget-object p0, p0, Lcxe;->b:Ljava/lang/String;
+
+    const-string v0, "io.exception"
+
+    invoke-virtual {v0, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p0
+
+    if-eqz p0, :cond_0
+
+    const/4 p0, 0x1
+
+    return p0
+
+    :cond_0
+    const/4 p0, 0x0
+
+    return p0
 .end method
 
 
 # virtual methods
-.method public final a(I)Ljava/nio/ByteBuffer;
-    .locals 3
+.method public final b()Lu7a;
+    .locals 4
 
-    int-to-long v0, p1
+    iget-object p0, p0, Lpye;->a:Lcl7;
 
-    iget-object v2, p0, Lpye;->b:Ljava/util/concurrent/atomic/LongAdder;
+    invoke-interface {p0}, Lcl7;->getValue()Ljava/lang/Object;
 
-    invoke-virtual {v2, v0, v1}, Ljava/util/concurrent/atomic/LongAdder;->add(J)V
+    move-result-object p0
 
-    iget-object v2, p0, Lpye;->d:Ljava/util/concurrent/atomic/AtomicLong;
+    check-cast p0, Ldnd;
 
-    invoke-virtual {v2, v0, v1}, Ljava/util/concurrent/atomic/AtomicLong;->addAndGet(J)J
+    check-cast p0, Lfnd;
 
-    iget-object p0, p0, Lpye;->f:Ljava/util/concurrent/atomic/LongAdder;
+    iget-object p0, p0, Lfnd;->e:Lnl0;
 
-    invoke-virtual {p0}, Ljava/util/concurrent/atomic/LongAdder;->increment()V
+    new-instance v0, Luge;
 
-    invoke-static {p1}, Ljava/nio/ByteBuffer;->allocateDirect(I)Ljava/nio/ByteBuffer;
+    const/4 v1, 0x4
+
+    invoke-direct {v0, v1}, Luge;-><init>(I)V
+
+    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    new-instance v1, Lb5a;
+
+    const/4 v2, 0x1
+
+    invoke-direct {v1, p0, v0, v2}, Lb5a;-><init>(Ly4a;Lggb;I)V
+
+    const-wide/16 v2, 0x1
+
+    invoke-virtual {v1, v2, v3}, Ly4a;->p(J)Lu7a;
 
     move-result-object p0
 
     return-object p0
-.end method
-
-.method public final b(Ljava/nio/ByteBuffer;)V
-    .locals 6
-
-    invoke-virtual {p1}, Ljava/nio/Buffer;->capacity()I
-
-    move-result v0
-
-    int-to-long v0, v0
-
-    iget-object v2, p0, Lpye;->c:Ljava/util/concurrent/atomic/LongAdder;
-
-    invoke-virtual {v2, v0, v1}, Ljava/util/concurrent/atomic/LongAdder;->add(J)V
-
-    iget-object v2, p0, Lpye;->d:Ljava/util/concurrent/atomic/AtomicLong;
-
-    invoke-virtual {v2}, Ljava/util/concurrent/atomic/AtomicLong;->longValue()J
-
-    move-result-wide v3
-
-    iget-object v5, p0, Lpye;->e:Ljava/util/concurrent/atomic/LongAccumulator;
-
-    invoke-virtual {v5, v3, v4}, Ljava/util/concurrent/atomic/LongAccumulator;->accumulate(J)V
-
-    neg-long v0, v0
-
-    invoke-virtual {v2, v0, v1}, Ljava/util/concurrent/atomic/AtomicLong;->addAndGet(J)J
-
-    iget-object v0, p0, Lpye;->g:Ljava/util/concurrent/atomic/LongAdder;
-
-    invoke-virtual {v0}, Ljava/util/concurrent/atomic/LongAdder;->increment()V
-
-    iget-object p0, p0, Lpye;->a:Lik4;
-
-    invoke-virtual {p0, p1}, Lik4;->b(Ljava/nio/ByteBuffer;)V
-
-    return-void
 .end method

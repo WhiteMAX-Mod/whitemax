@@ -1,289 +1,523 @@
 .class public final Lz32;
-.super Ljava/lang/Object;
+.super Lqd6;
 .source "SourceFile"
+
+# interfaces
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field public final a:I
+.field public final X:Ljava/util/concurrent/CountDownLatch;
 
-.field public final b:I
+.field public Y:Lgt7;
 
-.field public final c:[F
+.field public volatile Z:Lgt7;
 
-.field public final d:Z
+.field public c:Lvt;
 
-.field public final e:Z
+.field public final o:Ljava/util/concurrent/LinkedBlockingQueue;
 
 
 # direct methods
-.method public constructor <init>(II[F)V
-    .locals 10
+.method public constructor <init>(Lvt;Lgt7;)V
+    .locals 2
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Lqd6;-><init>()V
 
-    const/4 v0, 0x0
+    new-instance v0, Ljava/util/concurrent/LinkedBlockingQueue;
 
     const/4 v1, 0x1
 
-    if-lez p1, :cond_0
+    invoke-direct {v0, v1}, Ljava/util/concurrent/LinkedBlockingQueue;-><init>(I)V
 
-    move v2, v1
+    iput-object v0, p0, Lz32;->o:Ljava/util/concurrent/LinkedBlockingQueue;
 
-    goto :goto_0
+    new-instance v0, Ljava/util/concurrent/CountDownLatch;
 
-    :cond_0
-    move v2, v0
+    invoke-direct {v0, v1}, Ljava/util/concurrent/CountDownLatch;-><init>(I)V
 
-    :goto_0
-    const-string v3, "Input channel count must be positive."
+    iput-object v0, p0, Lz32;->X:Ljava/util/concurrent/CountDownLatch;
 
-    invoke-static {v3, v2}, Lu27;->e(Ljava/lang/Object;Z)V
+    iput-object p1, p0, Lz32;->c:Lvt;
 
-    if-lez p2, :cond_1
+    invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    move v2, v1
-
-    goto :goto_1
-
-    :cond_1
-    move v2, v0
-
-    :goto_1
-    const-string v3, "Output channel count must be positive."
-
-    invoke-static {v3, v2}, Lu27;->e(Ljava/lang/Object;Z)V
-
-    array-length v2, p3
-
-    mul-int v3, p1, p2
-
-    if-ne v2, v3, :cond_2
-
-    move v2, v1
-
-    goto :goto_2
-
-    :cond_2
-    move v2, v0
-
-    :goto_2
-    const-string v3, "Coefficient array length is invalid."
-
-    invoke-static {v3, v2}, Lu27;->e(Ljava/lang/Object;Z)V
-
-    iput p1, p0, Lz32;->a:I
-
-    iput p2, p0, Lz32;->b:I
-
-    move v2, v0
-
-    :goto_3
-    array-length v3, p3
-
-    const/4 v4, 0x0
-
-    if-ge v2, v3, :cond_4
-
-    aget v3, p3, v2
-
-    cmpg-float v3, v3, v4
-
-    if-ltz v3, :cond_3
-
-    add-int/lit8 v2, v2, 0x1
-
-    goto :goto_3
-
-    :cond_3
-    new-instance p0, Ljava/lang/IllegalArgumentException;
-
-    const-string p1, "Coefficient at index "
-
-    const-string p2, " is negative."
-
-    invoke-static {v2, p1, p2}, Lpg0;->e(ILjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-direct {p0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw p0
-
-    :cond_4
-    iput-object p3, p0, Lz32;->c:[F
-
-    move p3, v0
-
-    move v2, v1
-
-    move v3, v2
-
-    move v5, v3
-
-    :goto_4
-    if-ge p3, p1, :cond_9
-
-    move v6, v0
-
-    :goto_5
-    if-ge v6, p2, :cond_8
-
-    iget-object v7, p0, Lz32;->c:[F
-
-    iget v8, p0, Lz32;->b:I
-
-    mul-int/2addr v8, p3
-
-    add-int/2addr v8, v6
-
-    aget v7, v7, v8
-
-    if-ne p3, v6, :cond_5
-
-    move v8, v1
-
-    goto :goto_6
-
-    :cond_5
-    move v8, v0
-
-    :goto_6
-    const/high16 v9, 0x3f800000    # 1.0f
-
-    cmpl-float v9, v7, v9
-
-    if-eqz v9, :cond_6
-
-    if-eqz v8, :cond_6
-
-    move v5, v0
-
-    :cond_6
-    cmpl-float v7, v7, v4
-
-    if-eqz v7, :cond_7
-
-    move v2, v0
-
-    if-nez v8, :cond_7
-
-    move v3, v2
-
-    :cond_7
-    add-int/lit8 v6, v6, 0x1
-
-    goto :goto_5
-
-    :cond_8
-    add-int/lit8 p3, p3, 0x1
-
-    goto :goto_4
-
-    :cond_9
-    iput-boolean v2, p0, Lz32;->d:Z
-
-    iget p1, p0, Lz32;->a:I
-
-    iget p2, p0, Lz32;->b:I
-
-    if-ne p1, p2, :cond_a
-
-    if-eqz v3, :cond_a
-
-    if-eqz v5, :cond_a
-
-    move v0, v1
-
-    :cond_a
-    iput-boolean v0, p0, Lz32;->e:Z
+    iput-object p2, p0, Lz32;->Y:Lgt7;
 
     return-void
 .end method
 
-.method public static a(II)Lz32;
-    .locals 5
+.method public static b(Ljava/util/concurrent/LinkedBlockingQueue;)Ljava/lang/Object;
+    .locals 1
 
-    new-instance v0, Lz32;
-
-    if-ne p0, p1, :cond_0
-
-    mul-int v1, p1, p1
-
-    new-array v1, v1, [F
-
-    const/4 v2, 0x0
+    const/4 v0, 0x0
 
     :goto_0
-    if-ge v2, p1, :cond_2
+    :try_start_0
+    invoke-virtual {p0}, Ljava/util/concurrent/LinkedBlockingQueue;->take()Ljava/lang/Object;
 
-    mul-int v3, p1, v2
+    move-result-object p0
+    :try_end_0
+    .catch Ljava/lang/InterruptedException; {:try_start_0 .. :try_end_0} :catch_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    add-int/2addr v3, v2
+    if-eqz v0, :cond_0
 
-    const/high16 v4, 0x3f800000    # 1.0f
+    invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
 
-    aput v4, v1, v3
+    move-result-object v0
 
-    add-int/lit8 v2, v2, 0x1
+    invoke-virtual {v0}, Ljava/lang/Thread;->interrupt()V
+
+    :cond_0
+    return-object p0
+
+    :catchall_0
+    move-exception p0
+
+    if-eqz v0, :cond_1
+
+    invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/Thread;->interrupt()V
+
+    :cond_1
+    throw p0
+
+    :catch_0
+    const/4 v0, 0x1
+
+    goto :goto_0
+.end method
+
+
+# virtual methods
+.method public final cancel(Z)Z
+    .locals 4
+
+    iget-object v0, p0, Lqd6;->a:Lgt7;
+
+    invoke-interface {v0, p1}, Ljava/util/concurrent/Future;->cancel(Z)Z
+
+    move-result v0
+
+    const/4 v1, 0x0
+
+    if-eqz v0, :cond_4
+
+    iget-object v0, p0, Lz32;->o:Ljava/util/concurrent/LinkedBlockingQueue;
+
+    invoke-static {p1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object v2
+
+    :goto_0
+    const/4 v3, 0x1
+
+    :try_start_0
+    invoke-virtual {v0, v2}, Ljava/util/concurrent/LinkedBlockingQueue;->put(Ljava/lang/Object;)V
+    :try_end_0
+    .catch Ljava/lang/InterruptedException; {:try_start_0 .. :try_end_0} :catch_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    if-eqz v1, :cond_0
+
+    invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/Thread;->interrupt()V
+
+    :cond_0
+    iget-object v0, p0, Lz32;->Y:Lgt7;
+
+    if-eqz v0, :cond_1
+
+    invoke-interface {v0, p1}, Ljava/util/concurrent/Future;->cancel(Z)Z
+
+    :cond_1
+    iget-object p0, p0, Lz32;->Z:Lgt7;
+
+    if-eqz p0, :cond_2
+
+    invoke-interface {p0, p1}, Ljava/util/concurrent/Future;->cancel(Z)Z
+
+    :cond_2
+    return v3
+
+    :catchall_0
+    move-exception p0
+
+    if-eqz v1, :cond_3
+
+    invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Ljava/lang/Thread;->interrupt()V
+
+    :cond_3
+    throw p0
+
+    :catch_0
+    move v1, v3
 
     goto :goto_0
 
+    :cond_4
+    return v1
+.end method
+
+.method public final get()Ljava/lang/Object;
+    .locals 1
+
+    .line 1
+    iget-object v0, p0, Lqd6;->a:Lgt7;
+
+    invoke-interface {v0}, Ljava/util/concurrent/Future;->isDone()Z
+
+    move-result v0
+
+    if-nez v0, :cond_1
+
+    .line 2
+    iget-object v0, p0, Lz32;->Y:Lgt7;
+
+    if-eqz v0, :cond_0
+
+    .line 3
+    invoke-interface {v0}, Ljava/util/concurrent/Future;->get()Ljava/lang/Object;
+
+    .line 4
     :cond_0
-    const/4 v1, 0x2
+    iget-object v0, p0, Lz32;->X:Ljava/util/concurrent/CountDownLatch;
 
-    const/4 v2, 0x1
+    invoke-virtual {v0}, Ljava/util/concurrent/CountDownLatch;->await()V
 
-    if-ne p0, v2, :cond_1
+    .line 5
+    iget-object v0, p0, Lz32;->Z:Lgt7;
 
-    if-ne p1, v1, :cond_1
+    if-eqz v0, :cond_1
 
-    new-array v1, v1, [F
+    .line 6
+    invoke-interface {v0}, Ljava/util/concurrent/Future;->get()Ljava/lang/Object;
 
-    fill-array-data v1, :array_0
-
-    goto :goto_1
-
+    .line 7
     :cond_1
-    if-ne p0, v1, :cond_3
+    iget-object p0, p0, Lqd6;->a:Lgt7;
 
-    if-ne p1, v2, :cond_3
-
-    new-array v1, v1, [F
-
-    fill-array-data v1, :array_1
-
-    :cond_2
-    :goto_1
-    invoke-direct {v0, p0, p1, v1}, Lz32;-><init>(II[F)V
-
-    return-object v0
-
-    :cond_3
-    new-instance v0, Ljava/lang/UnsupportedOperationException;
-
-    const-string v1, "->"
-
-    const-string v2, " are not yet implemented."
-
-    const-string v3, "Default channel mixing coefficients for "
-
-    invoke-static {v3, p0, v1, p1, v2}, Lpg0;->f(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/String;
+    invoke-interface {p0}, Ljava/util/concurrent/Future;->get()Ljava/lang/Object;
 
     move-result-object p0
 
-    invoke-direct {v0, p0}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+    return-object p0
+.end method
 
-    throw v0
+.method public final get(JLjava/util/concurrent/TimeUnit;)Ljava/lang/Object;
+    .locals 7
 
-    :array_0
-    .array-data 4
-        0x3f800000    # 1.0f
-        0x3f800000    # 1.0f
-    .end array-data
+    .line 8
+    iget-object v0, p0, Lqd6;->a:Lgt7;
 
-    :array_1
-    .array-data 4
-        0x3f000000    # 0.5f
-        0x3f000000    # 0.5f
-    .end array-data
+    invoke-interface {v0}, Ljava/util/concurrent/Future;->isDone()Z
+
+    move-result v0
+
+    if-nez v0, :cond_3
+
+    .line 9
+    sget-object v0, Ljava/util/concurrent/TimeUnit;->NANOSECONDS:Ljava/util/concurrent/TimeUnit;
+
+    if-eq p3, v0, :cond_0
+
+    .line 10
+    invoke-virtual {v0, p1, p2, p3}, Ljava/util/concurrent/TimeUnit;->convert(JLjava/util/concurrent/TimeUnit;)J
+
+    move-result-wide p1
+
+    move-object p3, v0
+
+    .line 11
+    :cond_0
+    iget-object v0, p0, Lz32;->Y:Lgt7;
+
+    const-wide/16 v1, 0x0
+
+    if-eqz v0, :cond_1
+
+    .line 12
+    invoke-static {}, Ljava/lang/System;->nanoTime()J
+
+    move-result-wide v3
+
+    .line 13
+    invoke-interface {v0, p1, p2, p3}, Ljava/util/concurrent/Future;->get(JLjava/util/concurrent/TimeUnit;)Ljava/lang/Object;
+
+    .line 14
+    invoke-static {}, Ljava/lang/System;->nanoTime()J
+
+    move-result-wide v5
+
+    sub-long/2addr v5, v3
+
+    invoke-static {v1, v2, v5, v6}, Ljava/lang/Math;->max(JJ)J
+
+    move-result-wide v3
+
+    sub-long/2addr p1, v3
+
+    .line 15
+    :cond_1
+    invoke-static {}, Ljava/lang/System;->nanoTime()J
+
+    move-result-wide v3
+
+    .line 16
+    iget-object v0, p0, Lz32;->X:Ljava/util/concurrent/CountDownLatch;
+
+    invoke-virtual {v0, p1, p2, p3}, Ljava/util/concurrent/CountDownLatch;->await(JLjava/util/concurrent/TimeUnit;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_2
+
+    .line 17
+    invoke-static {}, Ljava/lang/System;->nanoTime()J
+
+    move-result-wide v5
+
+    sub-long/2addr v5, v3
+
+    invoke-static {v1, v2, v5, v6}, Ljava/lang/Math;->max(JJ)J
+
+    move-result-wide v0
+
+    sub-long/2addr p1, v0
+
+    .line 18
+    iget-object v0, p0, Lz32;->Z:Lgt7;
+
+    if-eqz v0, :cond_3
+
+    .line 19
+    invoke-interface {v0, p1, p2, p3}, Ljava/util/concurrent/Future;->get(JLjava/util/concurrent/TimeUnit;)Ljava/lang/Object;
+
+    goto :goto_0
+
+    .line 20
+    :cond_2
+    new-instance p0, Ljava/util/concurrent/TimeoutException;
+
+    invoke-direct {p0}, Ljava/util/concurrent/TimeoutException;-><init>()V
+
+    throw p0
+
+    .line 21
+    :cond_3
+    :goto_0
+    iget-object p0, p0, Lqd6;->a:Lgt7;
+
+    invoke-interface {p0, p1, p2, p3}, Ljava/util/concurrent/Future;->get(JLjava/util/concurrent/TimeUnit;)Ljava/lang/Object;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public final run()V
+    .locals 5
+
+    const/4 v0, 0x0
+
+    :try_start_0
+    iget-object v1, p0, Lz32;->Y:Lgt7;
+
+    invoke-static {v1}, Lf4h;->v(Ljava/util/concurrent/Future;)Ljava/lang/Object;
+
+    move-result-object v1
+    :try_end_0
+    .catch Ljava/util/concurrent/CancellationException; {:try_start_0 .. :try_end_0} :catch_4
+    .catch Ljava/util/concurrent/ExecutionException; {:try_start_0 .. :try_end_0} :catch_3
+    .catch Ljava/lang/reflect/UndeclaredThrowableException; {:try_start_0 .. :try_end_0} :catch_2
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_1
+    .catch Ljava/lang/Error; {:try_start_0 .. :try_end_0} :catch_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    :try_start_1
+    iget-object v2, p0, Lz32;->c:Lvt;
+
+    invoke-interface {v2, v1}, Lvt;->apply(Ljava/lang/Object;)Lgt7;
+
+    move-result-object v1
+
+    iput-object v1, p0, Lz32;->Z:Lgt7;
+
+    iget-object v2, p0, Lqd6;->a:Lgt7;
+
+    invoke-interface {v2}, Ljava/util/concurrent/Future;->isCancelled()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_1
+
+    iget-object v2, p0, Lz32;->o:Ljava/util/concurrent/LinkedBlockingQueue;
+
+    invoke-static {v2}, Lz32;->b(Ljava/util/concurrent/LinkedBlockingQueue;)Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Ljava/lang/Boolean;
+
+    invoke-virtual {v2}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result v2
+
+    invoke-interface {v1, v2}, Ljava/util/concurrent/Future;->cancel(Z)Z
+
+    iput-object v0, p0, Lz32;->Z:Lgt7;
+    :try_end_1
+    .catch Ljava/lang/reflect/UndeclaredThrowableException; {:try_start_1 .. :try_end_1} :catch_2
+    .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_1
+    .catch Ljava/lang/Error; {:try_start_1 .. :try_end_1} :catch_0
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    :cond_0
+    :goto_0
+    iput-object v0, p0, Lz32;->c:Lvt;
+
+    iput-object v0, p0, Lz32;->Y:Lgt7;
+
+    iget-object p0, p0, Lz32;->X:Ljava/util/concurrent/CountDownLatch;
+
+    invoke-virtual {p0}, Ljava/util/concurrent/CountDownLatch;->countDown()V
+
+    return-void
+
+    :catchall_0
+    move-exception v1
+
+    goto :goto_6
+
+    :catch_0
+    move-exception v1
+
+    goto :goto_1
+
+    :catch_1
+    move-exception v1
+
+    goto :goto_3
+
+    :catch_2
+    move-exception v1
+
+    goto :goto_4
+
+    :cond_1
+    :try_start_2
+    new-instance v2, Lxd6;
+
+    const/4 v3, 0x3
+
+    const/4 v4, 0x0
+
+    invoke-direct {v2, p0, v1, v4, v3}, Lxd6;-><init>(Ljava/lang/Object;Ljava/lang/Object;ZI)V
+
+    invoke-static {}, Ln4e;->q()Lep4;
+
+    move-result-object v3
+
+    invoke-interface {v1, v2, v3}, Lgt7;->d(Ljava/lang/Runnable;Ljava/util/concurrent/Executor;)V
+
+    goto :goto_0
+
+    :catch_3
+    move-exception v1
+
+    invoke-virtual {v1}, Ljava/lang/Throwable;->getCause()Ljava/lang/Throwable;
+
+    move-result-object v1
+
+    iget-object v2, p0, Lqd6;->b:Lqs1;
+
+    if-eqz v2, :cond_0
+
+    invoke-virtual {v2, v1}, Lqs1;->d(Ljava/lang/Throwable;)Z
+
+    goto :goto_0
+
+    :catch_4
+    const/4 v1, 0x0
+
+    invoke-virtual {p0, v1}, Lz32;->cancel(Z)Z
+    :try_end_2
+    .catch Ljava/lang/reflect/UndeclaredThrowableException; {:try_start_2 .. :try_end_2} :catch_2
+    .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_1
+    .catch Ljava/lang/Error; {:try_start_2 .. :try_end_2} :catch_0
+    .catchall {:try_start_2 .. :try_end_2} :catchall_0
+
+    goto :goto_0
+
+    :goto_1
+    :try_start_3
+    iget-object v2, p0, Lqd6;->b:Lqs1;
+
+    if-eqz v2, :cond_2
+
+    invoke-virtual {v2, v1}, Lqs1;->d(Ljava/lang/Throwable;)Z
+    :try_end_3
+    .catchall {:try_start_3 .. :try_end_3} :catchall_0
+
+    :cond_2
+    :goto_2
+    iput-object v0, p0, Lz32;->c:Lvt;
+
+    iput-object v0, p0, Lz32;->Y:Lgt7;
+
+    iget-object p0, p0, Lz32;->X:Ljava/util/concurrent/CountDownLatch;
+
+    invoke-virtual {p0}, Ljava/util/concurrent/CountDownLatch;->countDown()V
+
+    goto :goto_5
+
+    :goto_3
+    :try_start_4
+    iget-object v2, p0, Lqd6;->b:Lqs1;
+
+    if-eqz v2, :cond_2
+
+    invoke-virtual {v2, v1}, Lqs1;->d(Ljava/lang/Throwable;)Z
+
+    goto :goto_2
+
+    :goto_4
+    invoke-virtual {v1}, Ljava/lang/reflect/UndeclaredThrowableException;->getCause()Ljava/lang/Throwable;
+
+    move-result-object v1
+
+    iget-object v2, p0, Lqd6;->b:Lqs1;
+
+    if-eqz v2, :cond_2
+
+    invoke-virtual {v2, v1}, Lqs1;->d(Ljava/lang/Throwable;)Z
+    :try_end_4
+    .catchall {:try_start_4 .. :try_end_4} :catchall_0
+
+    goto :goto_2
+
+    :goto_5
+    return-void
+
+    :goto_6
+    iput-object v0, p0, Lz32;->c:Lvt;
+
+    iput-object v0, p0, Lz32;->Y:Lgt7;
+
+    iget-object p0, p0, Lz32;->X:Ljava/util/concurrent/CountDownLatch;
+
+    invoke-virtual {p0}, Ljava/util/concurrent/CountDownLatch;->countDown()V
+
+    throw v1
 .end method

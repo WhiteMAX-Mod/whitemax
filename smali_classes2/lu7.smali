@@ -1,48 +1,31 @@
-.class public final Llu7;
-.super Lbu3;
+.class public interface abstract Llu7;
+.super Ljava/lang/Object;
+.source "SourceFile"
 
 
-# instance fields
-.field public X:I
-
-.field public final synthetic Y:Lff7;
-
-.field public synthetic o:Ljava/lang/Object;
+# static fields
+.field public static final a:Lku7;
 
 
 # direct methods
-.method public constructor <init>(Lff7;Lkotlin/coroutines/Continuation;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    iput-object p1, p0, Llu7;->Y:Lff7;
+    new-instance v0, Lku7;
 
-    invoke-direct {p0, p2}, Lbu3;-><init>(Lkotlin/coroutines/Continuation;)V
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    sput-object v0, Llu7;->a:Lku7;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+.method public a(JLandroid/app/PendingIntent;)Landroid/app/Notification;
+    .locals 0
 
-    iput-object p1, p0, Llu7;->o:Ljava/lang/Object;
-
-    iget p1, p0, Llu7;->X:I
-
-    const/high16 v0, -0x80000000
-
-    or-int/2addr p1, v0
-
-    iput p1, p0, Llu7;->X:I
-
-    iget-object p1, p0, Llu7;->Y:Lff7;
-
-    const/4 v0, 0x0
-
-    invoke-virtual {p1, v0, p0}, Lff7;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p0
+    const/4 p0, 0x0
 
     return-object p0
 .end method

@@ -1,113 +1,90 @@
 .class public final Lj37;
-.super Ljava/util/concurrent/ConcurrentHashMap;
+.super Lz1;
 .source "SourceFile"
 
-
-# static fields
-.field public static final b:Lj37;
+# interfaces
+.implements Lm37;
 
 
 # instance fields
-.field public final a:Ljava/lang/Object;
+.field public final a:La3;
+
+.field public final b:I
+
+.field public final c:I
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(La3;II)V
+    .locals 0
 
-    new-instance v0, Lj37;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0}, Lj37;-><init>()V
+    iput-object p1, p0, Lj37;->a:La3;
 
-    sput-object v0, Lj37;->b:Lj37;
+    iput p2, p0, Lj37;->b:I
 
-    return-void
-.end method
+    invoke-virtual {p1}, Lc0;->getSize()I
 
-.method public constructor <init>()V
-    .locals 3
+    move-result p1
 
-    const v0, 0x3f4ccccd    # 0.8f
+    invoke-static {p2, p3, p1}, Laec;->h(III)V
 
-    const/4 v1, 0x4
+    sub-int/2addr p3, p2
 
-    const/16 v2, 0xb4
-
-    invoke-direct {p0, v2, v0, v1}, Ljava/util/concurrent/ConcurrentHashMap;-><init>(IFI)V
-
-    new-instance v0, Ljava/lang/Object;
-
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    iput-object v0, p0, Lj37;->a:Ljava/lang/Object;
+    iput p3, p0, Lj37;->c:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Ljava/lang/String;)Ljava/lang/String;
-    .locals 3
+.method public final get(I)Ljava/lang/Object;
+    .locals 1
 
-    invoke-virtual {p0, p1}, Ljava/util/AbstractMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    iget v0, p0, Lj37;->c:I
 
-    move-result-object v0
+    invoke-static {p1, v0}, Laec;->f(II)V
 
-    check-cast v0, Ljava/lang/String;
+    iget v0, p0, Lj37;->b:I
 
-    if-eqz v0, :cond_0
+    add-int/2addr v0, p1
+
+    iget-object p0, p0, Lj37;->a:La3;
+
+    invoke-interface {p0, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public final getSize()I
+    .locals 0
+
+    iget p0, p0, Lj37;->c:I
+
+    return p0
+.end method
+
+.method public final subList(II)Ljava/util/List;
+    .locals 2
+
+    iget v0, p0, Lj37;->c:I
+
+    invoke-static {p1, p2, v0}, Laec;->h(III)V
+
+    new-instance v0, Lj37;
+
+    iget v1, p0, Lj37;->b:I
+
+    add-int/2addr p1, v1
+
+    add-int/2addr v1, p2
+
+    iget-object p0, p0, Lj37;->a:La3;
+
+    invoke-direct {v0, p0, p1, v1}, Lj37;-><init>(La3;II)V
 
     return-object v0
-
-    :cond_0
-    invoke-virtual {p0}, Ljava/util/AbstractMap;->size()I
-
-    move-result v0
-
-    const/16 v1, 0xb4
-
-    if-lt v0, v1, :cond_2
-
-    iget-object v0, p0, Lj37;->a:Ljava/lang/Object;
-
-    monitor-enter v0
-
-    :try_start_0
-    invoke-virtual {p0}, Ljava/util/AbstractMap;->size()I
-
-    move-result v2
-
-    if-lt v2, v1, :cond_1
-
-    invoke-virtual {p0}, Ljava/util/AbstractMap;->clear()V
-
-    goto :goto_0
-
-    :catchall_0
-    move-exception p0
-
-    goto :goto_1
-
-    :cond_1
-    :goto_0
-    monitor-exit v0
-
-    goto :goto_2
-
-    :goto_1
-    monitor-exit v0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    throw p0
-
-    :cond_2
-    :goto_2
-    invoke-virtual {p1}, Ljava/lang/String;->intern()Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-virtual {p0, p1, p1}, Ljava/util/AbstractMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p1
 .end method

@@ -1,139 +1,281 @@
-.class public abstract synthetic Lo49;
+.class public final Lo49;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final synthetic $EnumSwitchMapping$0:[I
+# instance fields
+.field public final a:Ljava/util/Set;
 
-.field public static final synthetic $EnumSwitchMapping$1:[I
+.field public final b:Ljava/lang/Long;
 
-.field public static final synthetic $EnumSwitchMapping$2:[I
+.field public final c:Z
 
-.field public static final synthetic $EnumSwitchMapping$3:[I
+.field public final d:Lq49;
+
+.field public final e:Ls49;
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public constructor <init>(Ljava/util/Set;Ljava/lang/Long;ZLq49;Ls49;)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lo49;->a:Ljava/util/Set;
+
+    iput-object p2, p0, Lo49;->b:Ljava/lang/Long;
+
+    iput-boolean p3, p0, Lo49;->c:Z
+
+    iput-object p4, p0, Lo49;->d:Lq49;
+
+    iput-object p5, p0, Lo49;->e:Ls49;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final a()Ll56;
     .locals 6
 
-    invoke-static {}, Lsuc;->values()[Lsuc;
+    new-instance v0, Ll56;
 
-    move-result-object v0
+    iget-object v1, p0, Lo49;->d:Lq49;
 
-    array-length v0, v0
+    if-eqz v1, :cond_0
 
-    new-array v0, v0, [I
+    iget-object v1, v1, Lq49;->a:Ljava/lang/CharSequence;
 
-    const/4 v1, 0x1
+    :goto_0
+    move-object v4, v1
+
+    goto :goto_1
+
+    :cond_0
+    const/4 v1, 0x0
+
+    goto :goto_0
+
+    :goto_1
+    iget-object v1, p0, Lo49;->e:Ls49;
+
+    iget-boolean v5, v1, Ls49;->e:Z
+
+    iget-object v1, p0, Lo49;->a:Ljava/util/Set;
+
+    iget-object v2, p0, Lo49;->b:Ljava/lang/Long;
+
+    iget-boolean v3, p0, Lo49;->c:Z
+
+    invoke-direct/range {v0 .. v5}, Ll56;-><init>(Ljava/util/Set;Ljava/lang/Long;ZLjava/lang/CharSequence;Z)V
+
+    return-object v0
+.end method
+
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
+
+    const/4 v0, 0x1
+
+    if-ne p0, p1, :cond_0
+
+    return v0
+
+    :cond_0
+    instance-of v1, p1, Lo49;
 
     const/4 v2, 0x0
 
-    :try_start_0
-    aput v1, v0, v2
-    :try_end_0
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
+    if-nez v1, :cond_1
 
-    :catch_0
-    const/4 v3, 0x2
+    return v2
 
-    :try_start_1
-    aput v3, v0, v1
-    :try_end_1
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
+    :cond_1
+    check-cast p1, Lo49;
 
-    :catch_1
-    const/4 v4, 0x3
+    iget-object v1, p0, Lo49;->a:Ljava/util/Set;
 
-    :try_start_2
-    aput v4, v0, v3
-    :try_end_2
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_2
+    iget-object v3, p1, Lo49;->a:Ljava/util/Set;
 
-    :catch_2
-    sput-object v0, Lo49;->$EnumSwitchMapping$0:[I
+    invoke-static {v1, v3}, Lvyg;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    invoke-static {}, Llk7;->values()[Llk7;
+    move-result v1
 
-    move-result-object v0
+    if-nez v1, :cond_2
 
-    array-length v0, v0
+    return v2
 
-    new-array v0, v0, [I
+    :cond_2
+    iget-object v1, p0, Lo49;->b:Ljava/lang/Long;
 
-    const/4 v5, 0x6
+    iget-object v3, p1, Lo49;->b:Ljava/lang/Long;
 
-    :try_start_3
-    aput v1, v0, v5
-    :try_end_3
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_3 .. :try_end_3} :catch_3
+    invoke-static {v1, v3}, Lvyg;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    :catch_3
-    :try_start_4
-    aput v3, v0, v2
-    :try_end_4
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_4 .. :try_end_4} :catch_4
+    move-result v1
 
-    :catch_4
-    const/4 v5, 0x4
+    if-nez v1, :cond_3
 
-    :try_start_5
-    aput v4, v0, v5
-    :try_end_5
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_5 .. :try_end_5} :catch_5
+    return v2
 
-    :catch_5
-    :try_start_6
-    aput v5, v0, v3
-    :try_end_6
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_6 .. :try_end_6} :catch_6
+    :cond_3
+    iget-boolean v1, p0, Lo49;->c:Z
 
-    :catch_6
-    sput-object v0, Lo49;->$EnumSwitchMapping$1:[I
+    iget-boolean v3, p1, Lo49;->c:Z
 
-    invoke-static {}, Ljt8;->values()[Ljt8;
+    if-eq v1, v3, :cond_4
 
-    move-result-object v0
+    return v2
 
-    array-length v0, v0
+    :cond_4
+    iget-object v1, p0, Lo49;->d:Lq49;
 
-    new-array v0, v0, [I
+    iget-object v3, p1, Lo49;->d:Lq49;
 
-    :try_start_7
-    aput v1, v0, v2
-    :try_end_7
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_7 .. :try_end_7} :catch_7
+    invoke-static {v1, v3}, Lvyg;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    :catch_7
-    sput-object v0, Lo49;->$EnumSwitchMapping$2:[I
+    move-result v1
 
-    invoke-static {v4}, Lzt1;->v(I)[I
+    if-nez v1, :cond_5
 
-    move-result-object v0
+    return v2
 
-    array-length v0, v0
+    :cond_5
+    iget-object p0, p0, Lo49;->e:Ls49;
 
-    new-array v0, v0, [I
+    iget-object p1, p1, Lo49;->e:Ls49;
 
-    :try_start_8
-    aput v1, v0, v2
-    :try_end_8
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_8 .. :try_end_8} :catch_8
+    invoke-static {p0, p1}, Lvyg;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    :catch_8
-    :try_start_9
-    aput v3, v0, v1
-    :try_end_9
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_9 .. :try_end_9} :catch_9
+    move-result p0
 
-    :catch_9
-    :try_start_a
-    aput v4, v0, v3
-    :try_end_a
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_a .. :try_end_a} :catch_a
+    if-nez p0, :cond_6
 
-    :catch_a
-    sput-object v0, Lo49;->$EnumSwitchMapping$3:[I
+    return v2
 
-    return-void
+    :cond_6
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 4
+
+    iget-object v0, p0, Lo49;->a:Ljava/util/Set;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
+
+    move-result v0
+
+    const/16 v1, 0x1f
+
+    mul-int/2addr v0, v1
+
+    const/4 v2, 0x0
+
+    iget-object v3, p0, Lo49;->b:Ljava/lang/Long;
+
+    if-nez v3, :cond_0
+
+    move v3, v2
+
+    goto :goto_0
+
+    :cond_0
+    invoke-virtual {v3}, Ljava/lang/Object;->hashCode()I
+
+    move-result v3
+
+    :goto_0
+    add-int/2addr v0, v3
+
+    mul-int/2addr v0, v1
+
+    iget-boolean v3, p0, Lo49;->c:Z
+
+    invoke-static {v0, v1, v3}, Lsq3;->e(IIZ)I
+
+    move-result v0
+
+    iget-object v3, p0, Lo49;->d:Lq49;
+
+    if-nez v3, :cond_1
+
+    goto :goto_1
+
+    :cond_1
+    invoke-virtual {v3}, Lq49;->hashCode()I
+
+    move-result v2
+
+    :goto_1
+    add-int/2addr v0, v2
+
+    mul-int/2addr v0, v1
+
+    iget-object p0, p0, Lo49;->e:Ls49;
+
+    invoke-virtual {p0}, Ls49;->hashCode()I
+
+    move-result p0
+
+    add-int/2addr p0, v0
+
+    return p0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 2
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "ForwardMessagesData(messageIds="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v1, p0, Lo49;->a:Ljava/util/Set;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", fwdAttachId="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lo49;->b:Ljava/lang/Long;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", isForwardAttach="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-boolean v1, p0, Lo49;->c:Z
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string v1, ", inputData="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lo49;->d:Lq49;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", quoteData="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object p0, p0, Lo49;->e:Ls49;
+
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string p0, ")"
+
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    return-object p0
 .end method

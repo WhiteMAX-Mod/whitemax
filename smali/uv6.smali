@@ -1,109 +1,101 @@
-.class public final enum Luv6;
-.super Ljava/lang/Enum;
+.class public final Luv6;
+.super Lqv6;
 .source "SourceFile"
 
 
-# static fields
-.field public static final synthetic X:[Luv6;
-
-.field public static final enum b:Luv6;
-
-.field public static final enum c:Luv6;
-
-.field public static final enum o:Luv6;
-
-
 # instance fields
-.field public final a:I
+.field public o:Z
 
 
-# direct methods
-.method static constructor <clinit>()V
-    .locals 7
+# virtual methods
+.method public final b(Let0;J)J
+    .locals 3
 
-    new-instance v0, Luv6;
+    const-wide/16 v0, 0x0
 
-    const-string v1, "FULL_FETCH"
+    cmp-long v0, p2, v0
 
-    const/4 v2, 0x0
+    if-ltz v0, :cond_3
 
-    const/4 v3, 0x1
+    iget-boolean v0, p0, Lqv6;->b:Z
 
-    invoke-direct {v0, v1, v2, v3}, Luv6;-><init>(Ljava/lang/String;II)V
+    if-nez v0, :cond_2
 
-    sput-object v0, Luv6;->b:Luv6;
+    iget-boolean v0, p0, Luv6;->o:Z
 
-    new-instance v1, Luv6;
+    const-wide/16 v1, -0x1
 
-    const-string v2, "DISK_CACHE"
+    if-eqz v0, :cond_0
 
-    const/4 v4, 0x2
+    return-wide v1
 
-    invoke-direct {v1, v2, v3, v4}, Luv6;-><init>(Ljava/lang/String;II)V
+    :cond_0
+    invoke-super {p0, p1, p2, p3}, Lqv6;->b(Let0;J)J
 
-    sput-object v1, Luv6;->c:Luv6;
+    move-result-wide p1
 
-    new-instance v2, Luv6;
+    cmp-long p3, p1, v1
 
-    const-string v3, "ENCODED_MEMORY_CACHE"
+    if-nez p3, :cond_1
 
-    const/4 v5, 0x3
+    const/4 p1, 0x1
 
-    invoke-direct {v2, v3, v4, v5}, Luv6;-><init>(Ljava/lang/String;II)V
+    iput-boolean p1, p0, Luv6;->o:Z
 
-    new-instance v3, Luv6;
+    invoke-virtual {p0}, Lqv6;->m()V
 
-    const-string v4, "BITMAP_MEMORY_CACHE"
+    return-wide v1
 
-    const/4 v6, 0x4
+    :cond_1
+    return-wide p1
 
-    invoke-direct {v3, v4, v5, v6}, Luv6;-><init>(Ljava/lang/String;II)V
+    :cond_2
+    new-instance p0, Ljava/lang/IllegalStateException;
 
-    sput-object v3, Luv6;->o:Luv6;
+    const-string p1, "closed"
 
-    filled-new-array {v0, v1, v2, v3}, [Luv6;
+    invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    move-result-object v0
+    throw p0
 
-    sput-object v0, Luv6;->X:[Luv6;
+    :cond_3
+    const-string p0, "byteCount < 0: "
 
-    return-void
-.end method
-
-.method public constructor <init>(Ljava/lang/String;II)V
-    .locals 0
-
-    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    iput p3, p0, Luv6;->a:I
-
-    return-void
-.end method
-
-.method public static valueOf(Ljava/lang/String;)Luv6;
-    .locals 1
-
-    const-class v0, Luv6;
-
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+    invoke-static {p2, p3, p0}, Lbg9;->i(JLjava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
 
-    check-cast p0, Luv6;
+    new-instance p1, Ljava/lang/IllegalArgumentException;
 
-    return-object p0
+    invoke-virtual {p0}, Ljava/lang/Object;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-direct {p1, p0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw p1
 .end method
 
-.method public static values()[Luv6;
+.method public final close()V
     .locals 1
 
-    sget-object v0, Luv6;->X:[Luv6;
+    iget-boolean v0, p0, Lqv6;->b:Z
 
-    invoke-virtual {v0}, [Luv6;->clone()Ljava/lang/Object;
+    if-eqz v0, :cond_0
 
-    move-result-object v0
+    return-void
 
-    check-cast v0, [Luv6;
+    :cond_0
+    iget-boolean v0, p0, Luv6;->o:Z
 
-    return-object v0
+    if-nez v0, :cond_1
+
+    invoke-virtual {p0}, Lqv6;->m()V
+
+    :cond_1
+    const/4 v0, 0x1
+
+    iput-boolean v0, p0, Lqv6;->b:Z
+
+    return-void
 .end method

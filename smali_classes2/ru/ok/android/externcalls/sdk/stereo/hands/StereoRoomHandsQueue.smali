@@ -22,12 +22,12 @@
         "hasMore",
         "()Z",
         "Lkotlin/Function1;",
-        "Le5f;",
+        "Lylf;",
         "onSuccess",
         "",
         "onError",
         "loadMoreElements",
-        "(Lx56;Lx56;)V",
+        "(Lbc6;Lbc6;)V",
         "calls-sdk_release"
     }
     k = 0x1
@@ -41,7 +41,7 @@
 
 
 # direct methods
-.method public static synthetic loadMoreElements$default(Lru/ok/android/externcalls/sdk/stereo/hands/StereoRoomHandsQueue;Lx56;Lx56;ILjava/lang/Object;)V
+.method public static synthetic loadMoreElements$default(Lru/ok/android/externcalls/sdk/stereo/hands/StereoRoomHandsQueue;Lbc6;Lbc6;ILjava/lang/Object;)V
     .locals 1
 
     if-nez p4, :cond_2
@@ -62,7 +62,7 @@
     move-object p2, v0
 
     :cond_1
-    invoke-interface {p0, p1, p2}, Lru/ok/android/externcalls/sdk/stereo/hands/StereoRoomHandsQueue;->loadMoreElements(Lx56;Lx56;)V
+    invoke-interface {p0, p1, p2}, Lru/ok/android/externcalls/sdk/stereo/hands/StereoRoomHandsQueue;->loadMoreElements(Lbc6;Lbc6;)V
 
     return-void
 
@@ -95,12 +95,12 @@
 .method public abstract hasMore()Z
 .end method
 
-.method public abstract loadMoreElements(Lx56;Lx56;)V
+.method public abstract loadMoreElements(Lbc6;Lbc6;)V
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lx56;",
-            "Lx56;",
+            "Lbc6;",
+            "Lbc6;",
             ")V"
         }
     .end annotation

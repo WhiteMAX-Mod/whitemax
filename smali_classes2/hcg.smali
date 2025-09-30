@@ -1,142 +1,72 @@
-.class public final Lhcg;
+.class public final synthetic Lhcg;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lzb6;
+
 
 # instance fields
-.field public final a:[Z
+.field public final synthetic a:I
 
-.field public b:I
+.field public final synthetic b:Lmcg;
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 1
+.method public synthetic constructor <init>(Lmcg;I)V
+    .locals 0
+
+    iput p2, p0, Lhcg;->a:I
+
+    iput-object p1, p0, Lhcg;->b:Lmcg;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    const/4 v0, 0x0
-
-    iput v0, p0, Lhcg;->b:I
-
-    invoke-static {}, Lhf0;->values()[Lhf0;
-
-    move-result-object v0
-
-    array-length v0, v0
-
-    new-array v0, v0, [Z
-
-    iput-object v0, p0, Lhcg;->a:[Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Lhf0;Z)Z
-    .locals 2
+.method public final invoke()Ljava/lang/Object;
+    .locals 1
 
-    invoke-virtual {p1}, Ljava/lang/Enum;->ordinal()I
+    iget v0, p0, Lhcg;->a:I
 
-    move-result v0
+    packed-switch v0, :pswitch_data_0
 
-    iget-object v1, p0, Lhcg;->a:[Z
+    sget v0, Lq0d;->K0:I
 
-    aget-boolean v0, v1, v0
+    iget-object p0, p0, Lhcg;->b:Lmcg;
 
-    invoke-virtual {p1}, Ljava/lang/Enum;->ordinal()I
+    invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
 
-    move-result p1
+    move-result-object p0
 
-    aput-boolean p2, v1, p1
+    invoke-static {p0, v0}, Llw3;->b(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
 
-    if-eq v0, p2, :cond_1
+    move-result-object p0
 
-    iget p1, p0, Lhcg;->b:I
+    return-object p0
 
-    const/4 v0, 0x1
+    :pswitch_0
+    sget v0, Lq0d;->N0:I
 
-    if-eqz p2, :cond_0
+    iget-object p0, p0, Lhcg;->b:Lmcg;
 
-    move p2, v0
+    invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
 
-    goto :goto_0
+    move-result-object p0
 
-    :cond_0
-    const/4 p2, -0x1
+    invoke-static {p0, v0}, Llw3;->b(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
 
-    :goto_0
-    add-int/2addr p1, p2
+    move-result-object p0
 
-    iput p1, p0, Lhcg;->b:I
+    return-object p0
 
-    return v0
+    nop
 
-    :cond_1
-    const/4 p0, 0x0
-
-    return p0
-.end method
-
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
-
-    const/4 v0, 0x1
-
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    const/4 v1, 0x0
-
-    if-eqz p1, :cond_2
-
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    move-result-object v2
-
-    const-class v3, Lhcg;
-
-    if-eq v3, v2, :cond_1
-
-    goto :goto_0
-
-    :cond_1
-    check-cast p1, Lhcg;
-
-    iget v2, p0, Lhcg;->b:I
-
-    iget v3, p1, Lhcg;->b:I
-
-    if-ne v2, v3, :cond_2
-
-    iget-object p0, p0, Lhcg;->a:[Z
-
-    iget-object p1, p1, Lhcg;->a:[Z
-
-    invoke-static {p0, p1}, Ljava/util/Arrays;->equals([Z[Z)Z
-
-    move-result p0
-
-    if-eqz p0, :cond_2
-
-    return v0
-
-    :cond_2
-    :goto_0
-    return v1
-.end method
-
-.method public final hashCode()I
-    .locals 0
-
-    iget-object p0, p0, Lhcg;->a:[Z
-
-    invoke-static {p0}, Ljava/util/Arrays;->hashCode([Z)I
-
-    move-result p0
-
-    return p0
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

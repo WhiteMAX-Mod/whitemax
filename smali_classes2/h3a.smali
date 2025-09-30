@@ -1,80 +1,80 @@
 .class public final Lh3a;
-.super Ljava/lang/Object;
+.super Lure;
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/lang/Runnable;
+.implements Lpc6;
 
 
 # instance fields
-.field public final synthetic X:J
+.field public synthetic X:Ljava/lang/Object;
 
-.field public final synthetic a:I
-
-.field public final synthetic b:Lj3a;
-
-.field public final synthetic c:Landroid/graphics/drawable/Drawable;
-
-.field public final synthetic o:Ljava/lang/Runnable;
+.field public final synthetic Y:Lone/me/notifications/settings/NotificationsSettingsScreen;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lj3a;Landroid/graphics/drawable/Drawable;Ljava/lang/Runnable;JI)V
+.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/notifications/settings/NotificationsSettingsScreen;)V
     .locals 0
 
-    iput p6, p0, Lh3a;->a:I
+    iput-object p2, p0, Lh3a;->Y:Lone/me/notifications/settings/NotificationsSettingsScreen;
 
-    iput-object p1, p0, Lh3a;->b:Lj3a;
+    const/4 p2, 0x2
 
-    iput-object p2, p0, Lh3a;->c:Landroid/graphics/drawable/Drawable;
-
-    iput-object p3, p0, Lh3a;->o:Ljava/lang/Runnable;
-
-    iput-wide p4, p0, Lh3a;->X:J
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p2, p1}, Lure;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
-    .locals 4
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    iget v0, p0, Lh3a;->a:I
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    packed-switch v0, :pswitch_data_0
+    invoke-virtual {p0, p1, p2}, Lh3a;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    iget-object v0, p0, Lh3a;->o:Ljava/lang/Runnable;
+    move-result-object p0
 
-    iget-wide v1, p0, Lh3a;->X:J
+    check-cast p0, Lh3a;
 
-    iget-object v3, p0, Lh3a;->b:Lj3a;
+    sget-object p1, Lylf;->a:Lylf;
 
-    iget-object p0, p0, Lh3a;->c:Landroid/graphics/drawable/Drawable;
+    invoke-virtual {p0, p1}, Lh3a;->o(Ljava/lang/Object;)Ljava/lang/Object;
 
-    invoke-static {v3, p0, v0, v1, v2}, Lj3a;->c(Lj3a;Landroid/graphics/drawable/Drawable;Ljava/lang/Runnable;J)V
+    return-object p1
+.end method
 
-    return-void
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 1
 
-    :pswitch_0
-    iget-object v0, p0, Lh3a;->o:Ljava/lang/Runnable;
+    new-instance v0, Lh3a;
 
-    iget-wide v1, p0, Lh3a;->X:J
+    iget-object p0, p0, Lh3a;->Y:Lone/me/notifications/settings/NotificationsSettingsScreen;
 
-    iget-object v3, p0, Lh3a;->b:Lj3a;
+    invoke-direct {v0, p2, p0}, Lh3a;-><init>(Lkotlin/coroutines/Continuation;Lone/me/notifications/settings/NotificationsSettingsScreen;)V
 
-    iget-object p0, p0, Lh3a;->c:Landroid/graphics/drawable/Drawable;
+    iput-object p1, v0, Lh3a;->X:Ljava/lang/Object;
 
-    invoke-static {v3, p0, v0, v1, v2}, Lj3a;->c(Lj3a;Landroid/graphics/drawable/Drawable;Ljava/lang/Runnable;J)V
+    return-object v0
+.end method
 
-    return-void
+.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    nop
+    invoke-static {p1}, Lqe5;->V(Ljava/lang/Object;)V
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    iget-object p1, p0, Lh3a;->X:Ljava/lang/Object;
+
+    check-cast p1, Ljava/util/List;
+
+    iget-object p0, p0, Lh3a;->Y:Lone/me/notifications/settings/NotificationsSettingsScreen;
+
+    iget-object p0, p0, Lone/me/notifications/settings/NotificationsSettingsScreen;->X:Lkrd;
+
+    invoke-virtual {p0, p1}, Lls7;->E(Ljava/util/List;)V
+
+    sget-object p0, Lylf;->a:Lylf;
+
+    return-object p0
 .end method

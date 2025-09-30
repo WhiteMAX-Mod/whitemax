@@ -1,57 +1,103 @@
-.class public final Lyia;
-.super Landroid/webkit/WebViewClient;
+.class public abstract Lyia;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final synthetic a:Lzia;
+# static fields
+.field public static final a:I
 
-.field public final synthetic b:Laja;
+.field public static final b:I
+
+.field public static final c:I
+
+.field public static final d:I
+
+.field public static final e:I
+
+.field public static final f:I
+
+.field public static final g:I
+
+.field public static final h:I
+
+.field public static final i:I
+
+.field public static final j:I
+
+.field public static final k:I
+
+.field public static final l:I
+
+.field public static final m:I
+
+.field public static final n:I
+
+.field public static final o:I
 
 
 # direct methods
-.method public constructor <init>(Lzia;Laja;)V
-    .locals 0
-
-    iput-object p1, p0, Lyia;->a:Lzia;
-
-    iput-object p2, p0, Lyia;->b:Laja;
-
-    invoke-direct {p0}, Landroid/webkit/WebViewClient;-><init>()V
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final shouldOverrideUrlLoading(Landroid/webkit/WebView;Landroid/webkit/WebResourceRequest;)Z
+.method static constructor <clinit>()V
     .locals 1
 
-    invoke-interface {p2}, Landroid/webkit/WebResourceRequest;->getUrl()Landroid/net/Uri;
+    sget v0, Li6c;->oneme_contact_not_found_bottom_sheet_negative_button:I
 
-    move-result-object p1
+    sput v0, Lyia;->a:I
 
-    invoke-virtual {p1}, Landroid/net/Uri;->toString()Ljava/lang/String;
+    sget v0, Li6c;->oneme_contact_not_found_bottom_sheet_positive_button:I
 
-    move-result-object p1
+    sput v0, Lyia;->b:I
 
-    iget-object p2, p0, Lyia;->a:Lzia;
+    sget v0, Li6c;->oneme_invite_action_view_type:I
 
-    iget-object p2, p2, Lzia;->a:La1g;
+    sput v0, Lyia;->c:I
 
-    iget-object p2, p2, La1g;->J0:Lj35;
+    sget v0, Li6c;->oneme_invite_by_link_action_menu_item:I
 
-    new-instance v0, Ld0g;
+    sput v0, Lyia;->d:I
 
-    invoke-direct {v0, p1}, Ld0g;-><init>(Ljava/lang/String;)V
+    sget v0, Li6c;->oneme_invite_by_phone_action_menu_item:I
 
-    invoke-static {p2, v0}, Ljof;->o(Lj35;Ljava/lang/Object;)V
+    sput v0, Lyia;->e:I
 
-    iget-object p0, p0, Lyia;->b:Laja;
+    sget v0, Li6c;->oneme_invite_by_phone_continue_button:I
 
-    invoke-virtual {p0}, Landroid/webkit/WebView;->destroy()V
+    sput v0, Lyia;->f:I
 
-    const/4 p0, 0x1
+    sget v0, Li6c;->oneme_invite_by_phone_description:I
 
-    return p0
+    sput v0, Lyia;->g:I
+
+    sget v0, Li6c;->oneme_invite_by_phone_input:I
+
+    sput v0, Lyia;->h:I
+
+    sget v0, Li6c;->oneme_invite_by_phone_title:I
+
+    sput v0, Lyia;->i:I
+
+    sget v0, Li6c;->oneme_invite_by_phone_toolbar:I
+
+    sput v0, Lyia;->j:I
+
+    sget v0, Li6c;->oneme_invite_by_qr_bottom_sheet_qr_code:I
+
+    sput v0, Lyia;->k:I
+
+    sget v0, Li6c;->oneme_invite_by_qr_bottom_sheet_qr_code_share:I
+
+    sput v0, Lyia;->l:I
+
+    sget v0, Li6c;->oneme_invite_friends_to_max_bottom_sheet_image_stack:I
+
+    sput v0, Lyia;->m:I
+
+    sget v0, Li6c;->oneme_invite_friends_to_max_bottom_sheet_invite_button:I
+
+    sput v0, Lyia;->n:I
+
+    sget v0, Li6c;->oneme_invite_friends_to_max_bottom_sheet_title:I
+
+    sput v0, Lyia;->o:I
+
+    return-void
 .end method

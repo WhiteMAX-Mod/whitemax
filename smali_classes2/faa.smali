@@ -1,77 +1,77 @@
-.class public final synthetic Lfaa;
-.super Ljava/lang/Object;
+.class public final enum Lfaa;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
-# interfaces
-.implements Ljava/lang/Thread$UncaughtExceptionHandler;
 
+# static fields
+.field public static final enum a:Lfaa;
 
-# instance fields
-.field public final synthetic a:Lmaa;
-
-.field public final synthetic b:Ljava/lang/Thread$UncaughtExceptionHandler;
+.field public static final synthetic b:[Lfaa;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lmaa;Ljava/lang/Thread$UncaughtExceptionHandler;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 5
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lfaa;
 
-    iput-object p1, p0, Lfaa;->a:Lmaa;
+    const-string v1, "DISABLED"
 
-    iput-object p2, p0, Lfaa;->b:Ljava/lang/Thread$UncaughtExceptionHandler;
+    const/4 v2, 0x0
+
+    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Lfaa;->a:Lfaa;
+
+    new-instance v1, Lfaa;
+
+    const-string v2, "SOFT"
+
+    const/4 v3, 0x1
+
+    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    new-instance v2, Lfaa;
+
+    const-string v3, "HARD"
+
+    const/4 v4, 0x2
+
+    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    filled-new-array {v0, v1, v2}, [Lfaa;
+
+    move-result-object v0
+
+    sput-object v0, Lfaa;->b:[Lfaa;
 
     return-void
 .end method
 
+.method public static valueOf(Ljava/lang/String;)Lfaa;
+    .locals 1
 
-# virtual methods
-.method public final uncaughtException(Ljava/lang/Thread;Ljava/lang/Throwable;)V
-    .locals 8
+    const-class v0, Lfaa;
 
-    iget-object v0, p0, Lfaa;->a:Lmaa;
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
 
-    iget-object p0, p0, Lfaa;->b:Ljava/lang/Thread$UncaughtExceptionHandler;
+    move-result-object p0
 
-    iget-object v3, v0, Lmaa;->g:Ljava/lang/String;
+    check-cast p0, Lfaa;
 
-    sget-object v1, Lg47;->m:Llr6;
+    return-object p0
+.end method
 
-    if-nez v1, :cond_0
+.method public static values()[Lfaa;
+    .locals 1
 
-    move-object v6, p2
+    sget-object v0, Lfaa;->b:[Lfaa;
 
-    goto :goto_0
+    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
 
-    :cond_0
-    sget-object v2, Lqs7;->o0:Lqs7;
+    move-result-object v0
 
-    const/4 v5, 0x0
+    check-cast v0, [Lfaa;
 
-    const/16 v7, 0x8
-
-    const-string v4, "!!! APPCRASH !!!"
-
-    move-object v6, p2
-
-    invoke-static/range {v1 .. v7}, Llr6;->b(Llr6;Lqs7;Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;Ljava/lang/Throwable;I)V
-
-    :goto_0
-    invoke-virtual {v0}, Lmaa;->h()V
-
-    new-instance p2, Lkaa;
-
-    const/4 v1, 0x0
-
-    invoke-direct {p2, v0, v1}, Lkaa;-><init>(Lmaa;Lkotlin/coroutines/Continuation;)V
-
-    invoke-static {p2}, Lzo3;->Z(Ll66;)Ljava/lang/Object;
-
-    if-eqz p0, :cond_1
-
-    invoke-interface {p0, p1, v6}, Ljava/lang/Thread$UncaughtExceptionHandler;->uncaughtException(Ljava/lang/Thread;Ljava/lang/Throwable;)V
-
-    :cond_1
-    return-void
+    return-object v0
 .end method

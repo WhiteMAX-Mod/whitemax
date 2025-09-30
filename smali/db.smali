@@ -3,20 +3,24 @@
 .source "SourceFile"
 
 # interfaces
-.implements Leb;
+.implements Lhb;
 
 
 # instance fields
-.field public final a:Lwf1;
+.field public final a:Lxg1;
+
+.field public final b:Z
 
 
 # direct methods
-.method public constructor <init>(Lwf1;)V
+.method public constructor <init>(Lxg1;Z)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Ldb;->a:Lwf1;
+    iput-object p1, p0, Ldb;->a:Lxg1;
+
+    iput-boolean p2, p0, Ldb;->b:Z
 
     return-void
 .end method
@@ -26,61 +30,71 @@
 .method public final equals(Ljava/lang/Object;)Z
     .locals 2
 
-    const/4 v0, 0x1
-
     if-ne p0, p1, :cond_0
 
-    return v0
+    goto :goto_1
 
     :cond_0
-    instance-of v1, p1, Ldb;
+    instance-of v0, p1, Ldb;
 
-    if-nez v1, :cond_1
+    if-nez v0, :cond_1
 
     goto :goto_0
 
     :cond_1
     check-cast p1, Ldb;
 
-    iget-object p0, p0, Ldb;->a:Lwf1;
+    iget-object v0, p0, Ldb;->a:Lxg1;
 
-    iget-object p1, p1, Ldb;->a:Lwf1;
+    iget-object v1, p1, Ldb;->a:Lxg1;
 
-    invoke-virtual {p0, p1}, Lwf1;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v0, v1}, Lxg1;->equals(Ljava/lang/Object;)Z
 
-    move-result p0
+    move-result v0
 
-    if-nez p0, :cond_2
+    if-nez v0, :cond_2
+
+    goto :goto_0
+
+    :cond_2
+    iget-boolean p0, p0, Ldb;->b:Z
+
+    iget-boolean p1, p1, Ldb;->b:Z
+
+    if-eq p0, p1, :cond_3
 
     :goto_0
     const/4 p0, 0x0
 
     return p0
 
-    :cond_2
-    return v0
+    :cond_3
+    :goto_1
+    const/4 p0, 0x1
+
+    return p0
 .end method
 
 .method public final hashCode()I
     .locals 1
 
-    iget-object p0, p0, Ldb;->a:Lwf1;
+    iget-object v0, p0, Ldb;->a:Lxg1;
 
-    invoke-virtual {p0}, Lwf1;->hashCode()I
-
-    move-result p0
-
-    mul-int/lit8 p0, p0, 0x1f
-
-    const/4 v0, 0x1
-
-    invoke-static {v0}, Ljava/lang/Boolean;->hashCode(Z)I
+    invoke-virtual {v0}, Lxg1;->hashCode()I
 
     move-result v0
 
-    add-int/2addr v0, p0
+    mul-int/lit8 v0, v0, 0x1f
 
-    return v0
+    iget-boolean p0, p0, Ldb;->b:Z
+
+    invoke-static {p0}, Ljava/lang/Boolean;->hashCode(Z)I
+
+    move-result p0
+
+    add-int/2addr p0, v0
+
+    return p0
 .end method
 
 .method public final toString()Ljava/lang/String;
@@ -88,15 +102,23 @@
 
     new-instance v0, Ljava/lang/StringBuilder;
 
-    const-string v1, "DisableScreenSharingForParticipant(id="
+    const-string v1, "DisableMicForParticipant(id="
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-object p0, p0, Ldb;->a:Lwf1;
+    iget-object v1, p0, Ldb;->a:Lxg1;
 
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    const-string p0, ", isSuccess=true)"
+    const-string v1, ", isSuccess="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-boolean p0, p0, Ldb;->b:Z
+
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string p0, ")"
 
     invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 

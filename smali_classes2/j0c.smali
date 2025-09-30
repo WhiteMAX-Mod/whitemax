@@ -1,138 +1,167 @@
-.class public abstract Lj0c;
+.class public final Lj0c;
 .super Ljava/lang/Object;
+.source "SourceFile"
+
+# interfaces
+.implements Landroid/os/Parcelable;
 
 
 # static fields
-.field public static ActionBarTheme:I = 0x7f140000
+.field public static final CREATOR:Landroid/os/Parcelable$Creator;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroid/os/Parcelable$Creator<",
+            "Lj0c;",
+            ">;"
+        }
+    .end annotation
+.end field
 
-.field public static AttachButton:I = 0x7f14000c
 
-.field public static AttachButton_QuickCamera:I = 0x7f14000d
+# instance fields
+.field public final a:Lg0c;
 
-.field public static AttachButton_SmallQuickCameraButton:I = 0x7f14000e
 
-.field public static ComposeMessage:I = 0x7f14017e
+# direct methods
+.method static constructor <clinit>()V
+    .locals 2
 
-.field public static ContactLastSeen:I = 0x7f14017f
+    new-instance v0, Lgpa;
 
-.field public static ContactName:I = 0x7f140180
+    const/16 v1, 0x17
 
-.field public static DrawerArrowStyle:I = 0x7f140182
+    invoke-direct {v0, v1}, Lgpa;-><init>(I)V
 
-.field public static ExtraActionButton:I = 0x7f1401a4
+    sput-object v0, Lj0c;->CREATOR:Landroid/os/Parcelable$Creator;
 
-.field public static ExtraActionButton_Down:I = 0x7f1401a5
+    return-void
+.end method
 
-.field public static ExtraActionButton_Up:I = 0x7f1401a6
+.method public constructor <init>(Lg0c;)V
+    .locals 0
 
-.field public static LandscapeAttachButton:I = 0x7f1401ef
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-.field public static LandscapeAttachButton_LandscapeQuickCamera:I = 0x7f1401f0
+    iput-object p1, p0, Lj0c;->a:Lg0c;
 
-.field public static LandscapeAttachButton_LandscapeSmallQuickCameraButton:I = 0x7f1401f1
+    return-void
+.end method
 
-.field public static LayoutPadding:I = 0x7f1401f2
 
-.field public static MediaTabText:I = 0x7f140208
+# virtual methods
+.method public final describeContents()I
+    .locals 0
 
-.field public static MenuActionButtonNoCaps:I = 0x7f140209
+    const/4 p0, 0x0
 
-.field public static MenuOverflow:I = 0x7f14020a
+    return p0
+.end method
 
-.field public static MenuOverflowWhite:I = 0x7f14020b
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 3
 
-.field public static MessageActionButton:I = 0x7f14020c
+    const/4 v0, 0x1
 
-.field public static MessagesProgressBar:I = 0x7f14020d
+    if-ne p0, p1, :cond_0
 
-.field public static NavigationDrawerTheme:I = 0x7f14020e
+    return v0
 
-.field public static ProgressBarOrange:I = 0x7f140244
+    :cond_0
+    instance-of v1, p1, Lj0c;
 
-.field public static ProgressBarWhite:I = 0x7f140245
+    const/4 v2, 0x0
 
-.field public static RoundedButton24:I = 0x7f140246
+    if-nez v1, :cond_1
 
-.field public static RoundedButton24_Blue:I = 0x7f140247
+    return v2
 
-.field public static RoundedButton24_Blue_DisabledDark:I = 0x7f140248
+    :cond_1
+    check-cast p1, Lj0c;
 
-.field public static RoundedButton24_Orange:I = 0x7f140249
+    iget-object p0, p0, Lj0c;->a:Lg0c;
 
-.field public static RoundedButton24_Serif:I = 0x7f14024a
+    iget-object p1, p1, Lj0c;->a:Lg0c;
 
-.field public static RoundedButton24_Transparent:I = 0x7f14024b
+    invoke-static {p0, p1}, Lvyg;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-.field public static RoundedButton24_Transparent_WhiteText:I = 0x7f14024c
+    move-result p0
 
-.field public static RoundedButton24_White:I = 0x7f14024d
+    if-nez p0, :cond_2
 
-.field public static RowPadding:I = 0x7f14024e
+    return v2
 
-.field public static SearchTabText:I = 0x7f140269
+    :cond_2
+    return v0
+.end method
 
-.field public static SmallProgressBar:I = 0x7f1402a8
+.method public final hashCode()I
+    .locals 0
 
-.field public static SpinnerDropDown:I = 0x7f1402a9
+    iget-object p0, p0, Lj0c;->a:Lg0c;
 
-.field public static SubtitleCollapsed:I = 0x7f1402aa
+    invoke-virtual {p0}, Lg0c;->hashCode()I
 
-.field public static SubtitleExpanded:I = 0x7f1402ab
+    move-result p0
 
-.field public static TabText:I = 0x7f1402af
+    return p0
+.end method
 
-.field public static TamTamFab:I = 0x7f1402b0
+.method public final toString()Ljava/lang/String;
+    .locals 2
 
-.field public static TamTamTheme:I = 0x7f1402b1
+    new-instance v0, Ljava/lang/StringBuilder;
 
-.field public static TamTamTheme_Base:I = 0x7f1402b2
+    const-string v1, "QualityParc(value="
 
-.field public static TamTamTheme_Base_Dark:I = 0x7f1402b3
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-.field public static TamTamTheme_Base_PopupNotification:I = 0x7f1402b4
+    iget-object p0, p0, Lj0c;->a:Lg0c;
 
-.field public static TamTamTheme_CloseMode:I = 0x7f1402b5
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-.field public static Text:I = 0x7f1402b7
+    const-string p0, ")"
 
-.field public static TextInputLayoutHint:I = 0x7f140345
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-.field public static Text_Attach:I = 0x7f1402b8
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-.field public static Text_Large:I = 0x7f1402b9
+    move-result-object p0
 
-.field public static Text_Largest:I = 0x7f1402ba
+    return-object p0
+.end method
 
-.field public static Text_LocalMediaCount:I = 0x7f1402bb
+.method public final writeToParcel(Landroid/os/Parcel;I)V
+    .locals 2
 
-.field public static Text_LocalMediaCount_FullScreen:I = 0x7f1402bc
+    iget-object p0, p0, Lj0c;->a:Lg0c;
 
-.field public static Text_Normal:I = 0x7f1402bd
+    iget-object p2, p0, Lg0c;->a:Le0c;
 
-.field public static Text_Small:I = 0x7f1402be
+    iget-object p2, p2, Le0c;->a:Ljava/lang/String;
 
-.field public static Theme_Transparent:I = 0x7f1403b7
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-.field public static Theme_Transparent_DarkMenuOverflow:I = 0x7f1403b8
+    iget p2, p0, Lg0c;->b:I
 
-.field public static Theme_Transparent_WhiteMenuOverflow:I = 0x7f1403b9
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
 
-.field public static Theme_Transparent_WhiteMenuOverflow_NoCaps:I = 0x7f1403ba
+    iget p2, p0, Lg0c;->c:I
 
-.field public static TimePicker:I = 0x7f140431
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
 
-.field public static TimePickerShape:I = 0x7f140434
+    iget p2, p0, Lg0c;->d:I
 
-.field public static TimePicker_Day:I = 0x7f140432
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
 
-.field public static TimePicker_Night:I = 0x7f140433
+    iget-wide v0, p0, Lg0c;->e:J
 
-.field public static TitleCollapsed:I = 0x7f140435
+    invoke-virtual {p1, v0, v1}, Landroid/os/Parcel;->writeLong(J)V
 
-.field public static TitleExpanded:I = 0x7f140436
+    iget-boolean p0, p0, Lg0c;->f:Z
 
-.field public static TitleExpandedSmall:I = 0x7f140437
+    int-to-byte p0, p0
 
-.field public static frg_auth_native_ok__common:I = 0x7f140680
+    invoke-virtual {p1, p0}, Landroid/os/Parcel;->writeByte(B)V
 
-.field public static frg_auth_native_ok__et_login:I = 0x7f140681
+    return-void
+.end method

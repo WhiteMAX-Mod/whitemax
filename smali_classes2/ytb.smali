@@ -1,100 +1,88 @@
-.class public abstract Lytb;
-.super Ljava/lang/Object;
+.class public final Lytb;
+.super Luc0;
+.source "SourceFile"
 
 
-# static fields
-.field public static oneme_login_conductor:I = 0x7f0a06e3
+# instance fields
+.field public final b:Ljava/lang/String;
 
-.field public static oneme_login_confirm_description:I = 0x7f0a06e4
 
-.field public static oneme_login_confirm_resend_code:I = 0x7f0a06e5
+# direct methods
+.method public constructor <init>(Ljava/lang/String;)V
+    .locals 1
 
-.field public static oneme_login_confirm_sms_input:I = 0x7f0a06e6
+    const/16 v0, 0xf
 
-.field public static oneme_login_confirm_timer:I = 0x7f0a06e7
+    invoke-direct {p0, v0}, Luc0;-><init>(I)V
 
-.field public static oneme_login_confirm_title:I = 0x7f0a06e8
+    iput-object p1, p0, Lytb;->b:Ljava/lang/String;
 
-.field public static oneme_login_input_constraint_layout:I = 0x7f0a06ea
+    return-void
+.end method
 
-.field public static oneme_login_input_continue_button:I = 0x7f0a06eb
 
-.field public static oneme_login_input_description:I = 0x7f0a06ec
+# virtual methods
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 3
 
-.field public static oneme_login_input_gradient_bg:I = 0x7f0a06ef
+    const/4 v0, 0x1
 
-.field public static oneme_login_input_help_button:I = 0x7f0a06f0
+    if-ne p0, p1, :cond_0
 
-.field public static oneme_login_input_logo:I = 0x7f0a06f1
+    return v0
 
-.field public static oneme_login_input_name:I = 0x7f0a06f2
+    :cond_0
+    instance-of v1, p1, Lytb;
 
-.field public static oneme_login_input_name_btn_container:I = 0x7f0a06f3
+    const/4 v2, 0x0
 
-.field public static oneme_login_input_name_confirmation_cancel:I = 0x7f0a06f4
+    if-nez v1, :cond_1
 
-.field public static oneme_login_input_name_confirmation_return:I = 0x7f0a06f5
+    return v2
 
-.field public static oneme_login_input_name_continue_btn:I = 0x7f0a06f6
+    :cond_1
+    check-cast p1, Lytb;
 
-.field public static oneme_login_input_name_description:I = 0x7f0a06f7
+    iget-object p0, p0, Lytb;->b:Ljava/lang/String;
 
-.field public static oneme_login_input_name_title:I = 0x7f0a06f8
+    iget-object p1, p1, Lytb;->b:Ljava/lang/String;
 
-.field public static oneme_login_input_name_toolbar:I = 0x7f0a06f9
+    invoke-static {p0, p1}, Lvyg;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-.field public static oneme_login_input_phone_number_input:I = 0x7f0a06fa
+    move-result p0
 
-.field public static oneme_login_input_surname:I = 0x7f0a06fb
+    if-nez p0, :cond_2
 
-.field public static oneme_login_input_title:I = 0x7f0a06fc
+    return v2
 
-.field public static oneme_login_input_toolbar:I = 0x7f0a06fd
+    :cond_2
+    return v0
+.end method
 
-.field public static oneme_login_neuro_avatars_appbar:I = 0x7f0a06fe
+.method public final hashCode()I
+    .locals 0
 
-.field public static oneme_login_neuro_avatars_avatar:I = 0x7f0a06ff
+    iget-object p0, p0, Lytb;->b:Ljava/lang/String;
 
-.field public static oneme_login_neuro_avatars_button_background:I = 0x7f0a0700
+    invoke-virtual {p0}, Ljava/lang/String;->hashCode()I
 
-.field public static oneme_login_neuro_avatars_cancel_action:I = 0x7f0a0701
+    move-result p0
 
-.field public static oneme_login_neuro_avatars_collapsible:I = 0x7f0a0702
+    return p0
+.end method
 
-.field public static oneme_login_neuro_avatars_continue_btn:I = 0x7f0a0703
+.method public final toString()Ljava/lang/String;
+    .locals 2
 
-.field public static oneme_login_neuro_avatars_description:I = 0x7f0a0704
+    const-string v0, "OpenExternalLink(link="
 
-.field public static oneme_login_neuro_avatars_load_from_gallery_action:I = 0x7f0a0705
+    const-string v1, ")"
 
-.field public static oneme_login_neuro_avatars_recycler_view:I = 0x7f0a0706
+    iget-object p0, p0, Lytb;->b:Ljava/lang/String;
 
-.field public static oneme_login_neuro_avatars_remove_photo_action:I = 0x7f0a0707
+    invoke-static {v0, p0, v1}, Lyv7;->h(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
-.field public static oneme_login_neuro_avatars_root_container:I = 0x7f0a0708
+    move-result-object p0
 
-.field public static oneme_login_neuro_avatars_tabs:I = 0x7f0a0709
-
-.field public static oneme_login_neuro_avatars_tabs_shimmer:I = 0x7f0a070a
-
-.field public static oneme_login_neuro_avatars_take_photo_action:I = 0x7f0a070b
-
-.field public static oneme_login_neuro_avatars_title:I = 0x7f0a070c
-
-.field public static oneme_login_neuro_avatars_toolbar:I = 0x7f0a070d
-
-.field public static oneme_login_sms_code_exceeded_ok_btn:I = 0x7f0a070f
-
-.field public static oneme_login_welcome_continue_btn:I = 0x7f0a0710
-
-.field public static oneme_login_welcome_description:I = 0x7f0a0711
-
-.field public static oneme_login_welcome_placeholder:I = 0x7f0a0712
-
-.field public static oneme_login_welcome_switch_language_btn:I = 0x7f0a0713
-
-.field public static oneme_login_welcome_terms:I = 0x7f0a0714
-
-.field public static oneme_login_welcome_title:I = 0x7f0a0715
-
-.field public static oneme_login_welcome_toolbar:I = 0x7f0a0716
+    return-object p0
+.end method

@@ -1,53 +1,21 @@
 .class public final Ldhe;
-.super Lbu3;
+.super Lso;
 .source "SourceFile"
 
 
-# instance fields
-.field public X:Lone/me/sdk/vendor/SystemServicesManager$PushTokenGeneratedListener;
-
-.field public synthetic Y:Ljava/lang/Object;
-
-.field public final synthetic Z:Lhhe;
-
-.field public o:Lhhe;
-
-.field public o0:I
+# static fields
+.field public static final a:Ldhe;
 
 
 # direct methods
-.method public constructor <init>(Lhhe;Lbu3;)V
-    .locals 0
-
-    iput-object p1, p0, Ldhe;->Z:Lhhe;
-
-    invoke-direct {p0, p2}, Lbu3;-><init>(Lkotlin/coroutines/Continuation;)V
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
+.method static constructor <clinit>()V
     .locals 1
 
-    iput-object p1, p0, Ldhe;->Y:Ljava/lang/Object;
+    new-instance v0, Ldhe;
 
-    iget p1, p0, Ldhe;->o0:I
+    invoke-direct {v0}, Lso;-><init>()V
 
-    const/high16 v0, -0x80000000
+    sput-object v0, Ldhe;->a:Ldhe;
 
-    or-int/2addr p1, v0
-
-    iput p1, p0, Ldhe;->o0:I
-
-    iget-object p1, p0, Ldhe;->Z:Lhhe;
-
-    const/4 v0, 0x0
-
-    invoke-virtual {p1, v0, p0}, Lhhe;->H(Lone/me/sdk/vendor/SystemServicesManager$PushTokenGeneratedListener;Lbu3;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    return-object p0
+    return-void
 .end method

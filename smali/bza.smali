@@ -1,107 +1,48 @@
 .class public final Lbza;
-.super Landroid/animation/AnimatorListenerAdapter;
-.source "SourceFile"
+.super Ljx3;
 
 
 # instance fields
-.field public final synthetic a:Lcza;
+.field public X:I
 
-.field public final synthetic b:Landroid/view/View;
+.field public final synthetic Y:Leia;
 
-.field public final synthetic c:Lng1;
-
-.field public final synthetic d:Landroid/graphics/RectF;
-
-.field public final synthetic e:Laza;
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Lcza;Landroid/view/View;Lng1;Landroid/graphics/RectF;Laza;)V
+.method public constructor <init>(Leia;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    iput-object p1, p0, Lbza;->a:Lcza;
+    iput-object p1, p0, Lbza;->Y:Leia;
 
-    iput-object p2, p0, Lbza;->b:Landroid/view/View;
-
-    iput-object p3, p0, Lbza;->c:Lng1;
-
-    iput-object p4, p0, Lbza;->d:Landroid/graphics/RectF;
-
-    iput-object p5, p0, Lbza;->e:Laza;
-
-    invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
+    invoke-direct {p0, p2}, Ljx3;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onAnimationCancel(Landroid/animation/Animator;)V
-    .locals 3
+.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    iget-object p1, p0, Lbza;->d:Landroid/graphics/RectF;
+    iput-object p1, p0, Lbza;->o:Ljava/lang/Object;
 
-    iget-object v0, p0, Lbza;->a:Lcza;
+    iget p1, p0, Lbza;->X:I
 
-    iget-object v1, p0, Lbza;->b:Landroid/view/View;
+    const/high16 v0, -0x80000000
 
-    iget-object v2, p0, Lbza;->c:Lng1;
+    or-int/2addr p1, v0
 
-    invoke-static {v0, v1, v2, p1}, Lcza;->a(Lcza;Landroid/view/View;Lng1;Landroid/graphics/RectF;)V
+    iput p1, p0, Lbza;->X:I
 
-    iget-object p0, p0, Lbza;->e:Laza;
+    iget-object p1, p0, Lbza;->Y:Leia;
 
-    invoke-virtual {p0}, Laza;->invoke()Ljava/lang/Object;
+    const/4 v0, 0x0
 
-    invoke-static {}, Lcza;->b()Z
+    invoke-virtual {p1, v0, p0}, Leia;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
-    move-result p0
+    move-result-object p0
 
-    if-eqz p0, :cond_0
-
-    const/4 p0, 0x0
-
-    const/4 p1, 0x0
-
-    invoke-virtual {v1, p0, p1}, Landroid/view/View;->setLayerType(ILandroid/graphics/Paint;)V
-
-    invoke-virtual {v2, p0, p1}, Landroid/view/View;->setLayerType(ILandroid/graphics/Paint;)V
-
-    :cond_0
-    return-void
-.end method
-
-.method public final onAnimationEnd(Landroid/animation/Animator;)V
-    .locals 3
-
-    iget-object p1, p0, Lbza;->d:Landroid/graphics/RectF;
-
-    iget-object v0, p0, Lbza;->a:Lcza;
-
-    iget-object v1, p0, Lbza;->b:Landroid/view/View;
-
-    iget-object v2, p0, Lbza;->c:Lng1;
-
-    invoke-static {v0, v1, v2, p1}, Lcza;->a(Lcza;Landroid/view/View;Lng1;Landroid/graphics/RectF;)V
-
-    iget-object p0, p0, Lbza;->e:Laza;
-
-    invoke-virtual {p0}, Laza;->invoke()Ljava/lang/Object;
-
-    invoke-static {}, Lcza;->b()Z
-
-    move-result p0
-
-    if-eqz p0, :cond_0
-
-    const/4 p0, 0x0
-
-    const/4 p1, 0x0
-
-    invoke-virtual {v1, p0, p1}, Landroid/view/View;->setLayerType(ILandroid/graphics/Paint;)V
-
-    invoke-virtual {v2, p0, p1}, Landroid/view/View;->setLayerType(ILandroid/graphics/Paint;)V
-
-    :cond_0
-    return-void
+    return-object p0
 .end method

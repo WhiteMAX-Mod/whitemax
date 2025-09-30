@@ -1,134 +1,73 @@
-.class public final Loq1;
-.super Ljava/lang/Object;
+.class public final enum Loq1;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
-# interfaces
-.implements Lru/ok/android/externcalls/sdk/audio/Logger;
+
+# static fields
+.field public static final enum a:Loq1;
+
+.field public static final enum b:Loq1;
+
+.field public static final synthetic c:[Loq1;
 
 
-# virtual methods
-.method public final d(Ljava/lang/String;Ljava/lang/String;)V
-    .locals 0
+# direct methods
+.method static constructor <clinit>()V
+    .locals 4
 
-    .line 1
-    invoke-static {p1, p2}, Lg47;->p(Ljava/lang/String;Ljava/lang/String;)V
+    new-instance v0, Loq1;
 
-    return-void
-.end method
+    const-string v1, "NEGATIVE_POSITIVE"
 
-.method public final d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-    .locals 0
+    const/4 v2, 0x0
 
-    .line 2
-    invoke-static {p1, p2, p3}, Lg47;->n(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    return-void
-.end method
+    sput-object v0, Loq1;->a:Loq1;
 
-.method public final e(Ljava/lang/String;Ljava/lang/String;)V
-    .locals 0
+    new-instance v1, Loq1;
 
-    const/4 p0, 0x0
+    const-string v2, "NEUTRAL_POSITIVE"
 
-    .line 2
-    invoke-static {p1, p2, p0}, Lg47;->r(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    const/4 v3, 0x1
 
-    return-void
-.end method
+    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-.method public final e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-    .locals 0
+    sput-object v1, Loq1;->b:Loq1;
 
-    .line 1
-    invoke-static {p1, p2, p3}, Lg47;->r(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    filled-new-array {v0, v1}, [Loq1;
 
-    return-void
-.end method
+    move-result-object v0
 
-.method public final i(Ljava/lang/String;Ljava/lang/String;)V
-    .locals 0
-
-    const/4 p0, 0x0
-
-    .line 1
-    invoke-static {p1, p2, p0}, Lg47;->x(Ljava/lang/String;Ljava/lang/String;Ljava/util/concurrent/CancellationException;)V
+    sput-object v0, Loq1;->c:[Loq1;
 
     return-void
 .end method
 
-.method public final i(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-    .locals 0
+.method public static valueOf(Ljava/lang/String;)Loq1;
+    .locals 1
 
-    const/4 p0, 0x0
+    const-class v0, Loq1;
 
-    .line 2
-    invoke-static {p1, p2, p0}, Lg47;->x(Ljava/lang/String;Ljava/lang/String;Ljava/util/concurrent/CancellationException;)V
-
-    return-void
-.end method
-
-.method public final v(Ljava/lang/String;Ljava/lang/String;)V
-    .locals 0
-
-    .line 1
-    invoke-static {p1, p2}, Lg47;->M(Ljava/lang/String;Ljava/lang/String;)V
-
-    return-void
-.end method
-
-.method public final v(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-    .locals 7
-
-    .line 2
-    sget-object v0, Lg47;->m:Llr6;
-
-    if-eqz v0, :cond_0
-
-    sget-object v1, Lqs7;->c:Lqs7;
-
-    const/4 v4, 0x0
-
-    const/16 v6, 0x8
-
-    move-object v2, p1
-
-    move-object v3, p2
-
-    move-object v5, p3
-
-    invoke-static/range {v0 .. v6}, Llr6;->b(Llr6;Lqs7;Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;Ljava/lang/Throwable;I)V
-
-    :cond_0
-    return-void
-.end method
-
-.method public final w(Ljava/lang/String;Ljava/lang/String;)V
-    .locals 0
-
-    .line 1
-    invoke-static {p1, p2}, Lg47;->Q(Ljava/lang/String;Ljava/lang/String;)V
-
-    return-void
-.end method
-
-.method public final w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-    .locals 0
-
-    .line 2
-    invoke-static {p1, p2, p3}, Lg47;->O(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    return-void
-.end method
-
-.method public final w(Ljava/lang/String;Ljava/lang/Throwable;)V
-    .locals 0
-
-    .line 3
-    invoke-virtual {p2}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
 
     move-result-object p0
 
-    invoke-static {p1, p0}, Lg47;->Q(Ljava/lang/String;Ljava/lang/String;)V
+    check-cast p0, Loq1;
 
-    return-void
+    return-object p0
+.end method
+
+.method public static values()[Loq1;
+    .locals 1
+
+    sget-object v0, Loq1;->c:[Loq1;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, [Loq1;
+
+    return-object v0
 .end method

@@ -1,11 +1,21 @@
-.class public interface abstract Lhx4;
-.super Ljava/lang/Object;
+.class public final Lhx4;
+.super Lu64;
 .source "SourceFile"
 
 
-# virtual methods
-.method public abstract a()Lzm5;
-.end method
+# static fields
+.field public static final j:Lhx4;
 
-.method public abstract b(Landroid/app/Activity;)V
+
+# direct methods
+.method static constructor <clinit>()V
+    .locals 1
+
+    new-instance v0, Lhx4;
+
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    sput-object v0, Lhx4;->j:Lhx4;
+
+    return-void
 .end method

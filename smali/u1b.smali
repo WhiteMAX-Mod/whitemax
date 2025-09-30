@@ -3,37 +3,37 @@
 .source "SourceFile"
 
 
-# static fields
-.field public static final b:Lu1b;
-
-
 # instance fields
-.field public final a:Landroid/media/metrics/LogSessionId;
+.field public final a:Ljava/lang/String;
+
+.field public final b:J
+
+.field public final c:Ljava/util/List;
+
+.field public final d:Ljava/util/List;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
-
-    new-instance v0, Lu1b;
-
-    invoke-static {}, Lps3;->f()Landroid/media/metrics/LogSessionId;
-
-    move-result-object v1
-
-    invoke-direct {v0, v1}, Lu1b;-><init>(Landroid/media/metrics/LogSessionId;)V
-
-    sput-object v0, Lu1b;->b:Lu1b;
-
-    return-void
-.end method
-
-.method public constructor <init>(Landroid/media/metrics/LogSessionId;)V
+.method public constructor <init>(Ljava/lang/String;JLjava/util/ArrayList;Ljava/util/List;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lu1b;->a:Landroid/media/metrics/LogSessionId;
+    iput-object p1, p0, Lu1b;->a:Ljava/lang/String;
+
+    iput-wide p2, p0, Lu1b;->b:J
+
+    invoke-static {p4}, Ljava/util/Collections;->unmodifiableList(Ljava/util/List;)Ljava/util/List;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lu1b;->c:Ljava/util/List;
+
+    invoke-static {p5}, Ljava/util/Collections;->unmodifiableList(Ljava/util/List;)Ljava/util/List;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lu1b;->d:Ljava/util/List;
 
     return-void
 .end method

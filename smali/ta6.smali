@@ -3,338 +3,315 @@
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/util/Iterator;
-.implements Lqb7;
+.implements Ljava/util/concurrent/ExecutorService;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final a:Ljava/util/concurrent/ExecutorService;
 
-.field public b:I
-
-.field public c:Ljava/lang/Object;
-
-.field public final synthetic o:Li4d;
+.field public final b:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Lf9e;)V
+.method public constructor <init>(Ljava/util/concurrent/ExecutorService;)V
     .locals 1
 
-    const/4 v0, 0x1
-
-    iput v0, p0, Lta6;->a:I
-
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
-    iput-object p1, p0, Lta6;->o:Li4d;
+    iput-object p1, p0, Lta6;->a:Ljava/util/concurrent/ExecutorService;
 
-    .line 3
-    iget-object p1, p1, Lf9e;->a:Li4d;
+    new-instance p1, Ltm4;
 
-    .line 4
-    invoke-interface {p1}, Li4d;->iterator()Ljava/util/Iterator;
+    const/16 v0, 0x1b
+
+    invoke-direct {p1, v0}, Ltm4;-><init>(I)V
+
+    const/4 v0, 0x3
+
+    invoke-static {v0, p1}, Lcb7;->G(ILzb6;)Lcl7;
 
     move-result-object p1
 
-    iput-object p1, p0, Lta6;->c:Ljava/lang/Object;
-
-    return-void
-.end method
-
-.method public constructor <init>(Lrh4;)V
-    .locals 1
-
-    const/4 v0, 0x0
-
-    iput v0, p0, Lta6;->a:I
-
-    .line 5
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 6
-    iput-object p1, p0, Lta6;->o:Li4d;
-
-    const/4 p1, -0x2
-
-    .line 7
-    iput p1, p0, Lta6;->b:I
+    iput-object p1, p0, Lta6;->b:Ljava/lang/Object;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public a()V
-    .locals 3
+.method public final a()Z
+    .locals 1
 
-    iget-object v0, p0, Lta6;->o:Li4d;
-
-    check-cast v0, Lrh4;
-
-    iget v1, p0, Lta6;->b:I
-
-    const/4 v2, -0x2
-
-    if-ne v1, v2, :cond_0
-
-    iget-object v0, v0, Lrh4;->c:Ljava/lang/Object;
-
-    check-cast v0, Lsd7;
-
-    invoke-interface {v0}, Lv56;->invoke()Ljava/lang/Object;
+    invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
 
     move-result-object v0
 
-    goto :goto_0
+    iget-object p0, p0, Lta6;->b:Ljava/lang/Object;
+
+    invoke-interface {p0}, Lcl7;->getValue()Ljava/lang/Object;
+
+    move-result-object p0
+
+    check-cast p0, Ljava/lang/Thread;
+
+    if-ne v0, p0, :cond_0
+
+    const/4 p0, 0x1
+
+    return p0
 
     :cond_0
-    iget-object v0, v0, Lrh4;->b:Ljava/lang/Object;
+    const/4 p0, 0x0
 
-    check-cast v0, Lx56;
+    return p0
+.end method
 
-    iget-object v1, p0, Lta6;->c:Ljava/lang/Object;
+.method public final awaitTermination(JLjava/util/concurrent/TimeUnit;)Z
+    .locals 0
 
-    invoke-interface {v0, v1}, Lx56;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    iget-object p0, p0, Lta6;->a:Ljava/util/concurrent/ExecutorService;
 
-    move-result-object v0
+    invoke-interface {p0, p1, p2, p3}, Ljava/util/concurrent/ExecutorService;->awaitTermination(JLjava/util/concurrent/TimeUnit;)Z
 
-    :goto_0
-    iput-object v0, p0, Lta6;->c:Ljava/lang/Object;
+    move-result p0
 
-    if-nez v0, :cond_1
+    return p0
+.end method
 
-    const/4 v0, 0x0
+.method public final execute(Ljava/lang/Runnable;)V
+    .locals 2
 
-    goto :goto_1
+    invoke-virtual {p0}, Lta6;->a()Z
 
-    :cond_1
-    const/4 v0, 0x1
+    move-result v0
 
-    :goto_1
-    iput v0, p0, Lta6;->b:I
+    if-eqz v0, :cond_0
+
+    invoke-interface {p1}, Ljava/lang/Runnable;->run()V
+
+    return-void
+
+    :cond_0
+    new-instance v0, Lt20;
+
+    const/4 v1, 0x1
+
+    invoke-direct {v0, p1, v1}, Lt20;-><init>(Ljava/lang/Runnable;I)V
+
+    iget-object p0, p0, Lta6;->a:Ljava/util/concurrent/ExecutorService;
+
+    invoke-interface {p0, v0}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
 
     return-void
 .end method
 
-.method public final hasNext()Z
-    .locals 5
+.method public final invokeAll(Ljava/util/Collection;)Ljava/util/List;
+    .locals 0
 
-    iget v0, p0, Lta6;->a:I
+    .line 1
+    iget-object p0, p0, Lta6;->a:Ljava/util/concurrent/ExecutorService;
 
-    packed-switch v0, :pswitch_data_0
+    invoke-interface {p0, p1}, Ljava/util/concurrent/ExecutorService;->invokeAll(Ljava/util/Collection;)Ljava/util/List;
 
-    iget-object v0, p0, Lta6;->o:Li4d;
+    move-result-object p0
 
-    check-cast v0, Lf9e;
+    return-object p0
+.end method
 
-    iget-object v1, p0, Lta6;->c:Ljava/lang/Object;
+.method public final invokeAll(Ljava/util/Collection;JLjava/util/concurrent/TimeUnit;)Ljava/util/List;
+    .locals 0
 
-    check-cast v1, Ljava/util/Iterator;
+    .line 2
+    iget-object p0, p0, Lta6;->a:Ljava/util/concurrent/ExecutorService;
 
-    :goto_0
-    iget v2, p0, Lta6;->b:I
+    invoke-interface {p0, p1, p2, p3, p4}, Ljava/util/concurrent/ExecutorService;->invokeAll(Ljava/util/Collection;JLjava/util/concurrent/TimeUnit;)Ljava/util/List;
 
-    iget v3, v0, Lf9e;->b:I
+    move-result-object p0
 
-    const/4 v4, 0x1
+    return-object p0
+.end method
 
-    if-ge v2, v3, :cond_0
+.method public final invokeAny(Ljava/util/Collection;)Ljava/lang/Object;
+    .locals 0
 
-    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
+    .line 1
+    iget-object p0, p0, Lta6;->a:Ljava/util/concurrent/ExecutorService;
 
-    move-result v2
+    invoke-interface {p0, p1}, Ljava/util/concurrent/ExecutorService;->invokeAny(Ljava/util/Collection;)Ljava/lang/Object;
 
-    if-eqz v2, :cond_0
+    move-result-object p0
 
-    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    return-object p0
+.end method
 
-    iget v2, p0, Lta6;->b:I
+.method public final invokeAny(Ljava/util/Collection;JLjava/util/concurrent/TimeUnit;)Ljava/lang/Object;
+    .locals 0
 
-    add-int/2addr v2, v4
+    .line 2
+    iget-object p0, p0, Lta6;->a:Ljava/util/concurrent/ExecutorService;
 
-    iput v2, p0, Lta6;->b:I
+    invoke-interface {p0, p1, p2, p3, p4}, Ljava/util/concurrent/ExecutorService;->invokeAny(Ljava/util/Collection;JLjava/util/concurrent/TimeUnit;)Ljava/lang/Object;
 
-    goto :goto_0
+    move-result-object p0
 
-    :cond_0
-    iget p0, p0, Lta6;->b:I
+    return-object p0
+.end method
 
-    iget v0, v0, Lf9e;->c:I
+.method public final isShutdown()Z
+    .locals 0
 
-    if-ge p0, v0, :cond_1
+    iget-object p0, p0, Lta6;->a:Ljava/util/concurrent/ExecutorService;
 
-    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
+    invoke-interface {p0}, Ljava/util/concurrent/ExecutorService;->isShutdown()Z
 
     move-result p0
 
-    if-eqz p0, :cond_1
-
-    goto :goto_1
-
-    :cond_1
-    const/4 v4, 0x0
-
-    :goto_1
-    return v4
-
-    :pswitch_0
-    iget v0, p0, Lta6;->b:I
-
-    if-gez v0, :cond_2
-
-    invoke-virtual {p0}, Lta6;->a()V
-
-    :cond_2
-    iget p0, p0, Lta6;->b:I
-
-    const/4 v0, 0x1
-
-    if-ne p0, v0, :cond_3
-
-    goto :goto_2
-
-    :cond_3
-    const/4 v0, 0x0
-
-    :goto_2
-    return v0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return p0
 .end method
 
-.method public final next()Ljava/lang/Object;
-    .locals 4
+.method public final isTerminated()Z
+    .locals 0
 
-    iget v0, p0, Lta6;->a:I
+    iget-object p0, p0, Lta6;->a:Ljava/util/concurrent/ExecutorService;
 
-    packed-switch v0, :pswitch_data_0
+    invoke-interface {p0}, Ljava/util/concurrent/ExecutorService;->isTerminated()Z
 
-    iget-object v0, p0, Lta6;->o:Li4d;
+    move-result p0
 
-    check-cast v0, Lf9e;
+    return p0
+.end method
 
-    iget-object v1, p0, Lta6;->c:Ljava/lang/Object;
+.method public final shutdown()V
+    .locals 0
 
-    check-cast v1, Ljava/util/Iterator;
+    new-instance p0, Ljava/lang/UnsupportedOperationException;
 
-    :goto_0
-    iget v2, p0, Lta6;->b:I
+    invoke-direct {p0}, Ljava/lang/UnsupportedOperationException;-><init>()V
 
-    iget v3, v0, Lf9e;->b:I
+    throw p0
+.end method
 
-    if-ge v2, v3, :cond_0
+.method public final shutdownNow()Ljava/util/List;
+    .locals 0
 
-    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
+    new-instance p0, Ljava/lang/UnsupportedOperationException;
 
-    move-result v2
+    invoke-direct {p0}, Ljava/lang/UnsupportedOperationException;-><init>()V
 
-    if-eqz v2, :cond_0
+    throw p0
+.end method
 
-    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+.method public final submit(Ljava/lang/Runnable;)Ljava/util/concurrent/Future;
+    .locals 2
 
-    iget v2, p0, Lta6;->b:I
+    .line 1
+    invoke-virtual {p0}, Lta6;->a()Z
 
-    add-int/lit8 v2, v2, 0x1
+    move-result v0
 
-    iput v2, p0, Lta6;->b:I
+    if-eqz v0, :cond_0
 
-    goto :goto_0
+    .line 2
+    invoke-interface {p1}, Ljava/lang/Runnable;->run()V
 
-    :cond_0
-    iget v2, p0, Lta6;->b:I
+    .line 3
+    sget-object p0, Lylf;->a:Lylf;
 
-    iget v0, v0, Lf9e;->c:I
-
-    if-ge v2, v0, :cond_1
-
-    add-int/lit8 v2, v2, 0x1
-
-    iput v2, p0, Lta6;->b:I
-
-    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    invoke-static {p0}, Ljava/util/concurrent/CompletableFuture;->completedFuture(Ljava/lang/Object;)Ljava/util/concurrent/CompletableFuture;
 
     move-result-object p0
 
     return-object p0
 
-    :cond_1
-    new-instance p0, Ljava/util/NoSuchElementException;
+    .line 4
+    :cond_0
+    new-instance v0, Lt20;
 
-    invoke-direct {p0}, Ljava/util/NoSuchElementException;-><init>()V
+    const/4 v1, 0x3
 
-    throw p0
+    invoke-direct {v0, p1, v1}, Lt20;-><init>(Ljava/lang/Runnable;I)V
 
-    :pswitch_0
-    iget v0, p0, Lta6;->b:I
+    iget-object p0, p0, Lta6;->a:Ljava/util/concurrent/ExecutorService;
 
-    if-gez v0, :cond_2
+    invoke-interface {p0, v0}, Ljava/util/concurrent/ExecutorService;->submit(Ljava/lang/Runnable;)Ljava/util/concurrent/Future;
 
-    invoke-virtual {p0}, Lta6;->a()V
+    move-result-object p0
 
-    :cond_2
-    iget v0, p0, Lta6;->b:I
-
-    if-eqz v0, :cond_3
-
-    iget-object v0, p0, Lta6;->c:Ljava/lang/Object;
-
-    const/4 v1, -0x1
-
-    iput v1, p0, Lta6;->b:I
-
-    return-object v0
-
-    :cond_3
-    new-instance p0, Ljava/util/NoSuchElementException;
-
-    invoke-direct {p0}, Ljava/util/NoSuchElementException;-><init>()V
-
-    throw p0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-object p0
 .end method
 
-.method public final remove()V
-    .locals 1
+.method public final submit(Ljava/lang/Runnable;Ljava/lang/Object;)Ljava/util/concurrent/Future;
+    .locals 2
 
-    iget p0, p0, Lta6;->a:I
+    .line 5
+    invoke-virtual {p0}, Lta6;->a()Z
 
-    packed-switch p0, :pswitch_data_0
+    move-result v0
 
-    new-instance p0, Ljava/lang/UnsupportedOperationException;
+    if-eqz v0, :cond_0
 
-    const-string v0, "Operation is not supported for read-only collection"
+    .line 6
+    invoke-interface {p1}, Ljava/lang/Runnable;->run()V
 
-    invoke-direct {p0, v0}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+    .line 7
+    invoke-static {p2}, Ljava/util/concurrent/CompletableFuture;->completedFuture(Ljava/lang/Object;)Ljava/util/concurrent/CompletableFuture;
 
-    throw p0
+    move-result-object p0
 
-    :pswitch_0
-    new-instance p0, Ljava/lang/UnsupportedOperationException;
+    return-object p0
 
-    const-string v0, "Operation is not supported for read-only collection"
+    .line 8
+    :cond_0
+    new-instance v0, Lt20;
 
-    invoke-direct {p0, v0}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+    const/4 v1, 0x2
 
-    throw p0
+    invoke-direct {v0, p1, v1}, Lt20;-><init>(Ljava/lang/Runnable;I)V
 
-    nop
+    iget-object p0, p0, Lta6;->a:Ljava/util/concurrent/ExecutorService;
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    invoke-interface {p0, v0, p2}, Ljava/util/concurrent/ExecutorService;->submit(Ljava/lang/Runnable;Ljava/lang/Object;)Ljava/util/concurrent/Future;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public final submit(Ljava/util/concurrent/Callable;)Ljava/util/concurrent/Future;
+    .locals 2
+
+    .line 9
+    invoke-virtual {p0}, Lta6;->a()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    .line 10
+    invoke-interface {p1}, Ljava/util/concurrent/Callable;->call()Ljava/lang/Object;
+
+    move-result-object p0
+
+    .line 11
+    invoke-static {p0}, Ljava/util/concurrent/CompletableFuture;->completedFuture(Ljava/lang/Object;)Ljava/util/concurrent/CompletableFuture;
+
+    move-result-object p0
+
+    return-object p0
+
+    .line 12
+    :cond_0
+    new-instance v0, Lo5;
+
+    const/4 v1, 0x5
+
+    invoke-direct {v0, v1, p1}, Lo5;-><init>(ILjava/lang/Object;)V
+
+    iget-object p0, p0, Lta6;->a:Ljava/util/concurrent/ExecutorService;
+
+    invoke-interface {p0, v0}, Ljava/util/concurrent/ExecutorService;->submit(Ljava/util/concurrent/Callable;)Ljava/util/concurrent/Future;
+
+    move-result-object p0
+
+    return-object p0
 .end method

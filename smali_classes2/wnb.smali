@@ -1,247 +1,48 @@
-.class public final enum Lwnb;
-.super Ljava/lang/Enum;
+.class public final synthetic Lwnb;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
-
-# static fields
-.field public static final enum Y:Lwnb;
-
-.field public static final enum Z:Lwnb;
-
-.field public static final enum o0:Lwnb;
-
-.field public static final enum p0:Lwnb;
-
-.field public static final enum q0:Lwnb;
-
-.field public static final enum r0:Lwnb;
-
-.field public static final synthetic s0:[Lwnb;
+# interfaces
+.implements Leb4;
 
 
 # instance fields
-.field public final X:I
+.field public final synthetic a:J
 
-.field public final a:Ljava/lang/String;
+.field public final synthetic b:Laob;
 
-.field public final b:I
-
-.field public final c:I
-
-.field public final o:I
+.field public final synthetic c:Lznb;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 15
-
-    new-instance v0, Lwnb;
-
-    const/16 v6, 0x870
-
-    const v7, 0x13c6800
-
-    const-string v1, "P_2160"
-
-    const/4 v2, 0x0
-
-    const-string v3, "4K"
-
-    const/4 v4, 0x0
-
-    const/16 v5, 0xf00
-
-    invoke-direct/range {v0 .. v7}, Lwnb;-><init>(Ljava/lang/String;ILjava/lang/String;IIII)V
-
-    sput-object v0, Lwnb;->Y:Lwnb;
-
-    new-instance v1, Lwnb;
-
-    const/16 v7, 0x5a0
-
-    const v8, 0x8ca000
-
-    const-string v2, "P_1440"
-
-    const/4 v3, 0x1
-
-    const-string v4, "2K"
-
-    const/4 v5, 0x1
-
-    const/16 v6, 0xa00
-
-    invoke-direct/range {v1 .. v8}, Lwnb;-><init>(Ljava/lang/String;ILjava/lang/String;IIII)V
-
-    new-instance v2, Lwnb;
-
-    const/16 v8, 0x438
-
-    const v9, 0x4fb000
-
-    const-string v3, "P_1080"
-
-    const/4 v4, 0x2
-
-    const-string v5, "1080p"
-
-    const/4 v6, 0x2
-
-    const/16 v7, 0x780
-
-    invoke-direct/range {v2 .. v9}, Lwnb;-><init>(Ljava/lang/String;ILjava/lang/String;IIII)V
-
-    sput-object v2, Lwnb;->Z:Lwnb;
-
-    new-instance v3, Lwnb;
-
-    const/16 v9, 0x2d0
-
-    const v10, 0x232800
-
-    const-string v4, "P_720"
-
-    const/4 v5, 0x3
-
-    const-string v6, "720p"
-
-    const/4 v7, 0x3
-
-    const/16 v8, 0x500
-
-    invoke-direct/range {v3 .. v10}, Lwnb;-><init>(Ljava/lang/String;ILjava/lang/String;IIII)V
-
-    sput-object v3, Lwnb;->o0:Lwnb;
-
-    new-instance v4, Lwnb;
-
-    const/16 v10, 0x1e0
-
-    const v11, 0xfa000
-
-    const-string v5, "P_480"
-
-    const/4 v6, 0x4
-
-    const-string v7, "480p"
-
-    const/4 v8, 0x4
-
-    const/16 v9, 0x355
-
-    invoke-direct/range {v4 .. v11}, Lwnb;-><init>(Ljava/lang/String;ILjava/lang/String;IIII)V
-
-    sput-object v4, Lwnb;->p0:Lwnb;
-
-    new-instance v5, Lwnb;
-
-    const/16 v11, 0x168
-
-    const v12, 0x8ca00
-
-    const-string v6, "P_360"
-
-    const/4 v7, 0x5
-
-    const-string v8, "360p"
-
-    const/4 v9, 0x5
-
-    const/16 v10, 0x280
-
-    invoke-direct/range {v5 .. v12}, Lwnb;-><init>(Ljava/lang/String;ILjava/lang/String;IIII)V
-
-    sput-object v5, Lwnb;->q0:Lwnb;
-
-    new-instance v6, Lwnb;
-
-    const/16 v12, 0xf0
-
-    const v13, 0x3e6e8
-
-    const-string v7, "P_240"
-
-    const/4 v8, 0x6
-
-    const-string v9, "240p"
-
-    const/4 v10, 0x6
-
-    const/16 v11, 0x1aa
-
-    invoke-direct/range {v6 .. v13}, Lwnb;-><init>(Ljava/lang/String;ILjava/lang/String;IIII)V
-
-    new-instance v7, Lwnb;
-
-    const/16 v13, 0x90
-
-    const v14, 0x16800
-
-    const-string v8, "P_144"
-
-    const/4 v9, 0x7
-
-    const-string v10, "144p"
-
-    const/4 v11, 0x7
-
-    const/16 v12, 0x100
-
-    invoke-direct/range {v7 .. v14}, Lwnb;-><init>(Ljava/lang/String;ILjava/lang/String;IIII)V
-
-    sput-object v7, Lwnb;->r0:Lwnb;
-
-    filled-new-array/range {v0 .. v7}, [Lwnb;
-
-    move-result-object v0
-
-    sput-object v0, Lwnb;->s0:[Lwnb;
-
-    return-void
-.end method
-
-.method public constructor <init>(Ljava/lang/String;ILjava/lang/String;IIII)V
+.method public synthetic constructor <init>(JLaob;Lznb;)V
     .locals 0
 
-    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p3, p0, Lwnb;->a:Ljava/lang/String;
+    iput-wide p1, p0, Lwnb;->a:J
 
-    iput p4, p0, Lwnb;->b:I
+    iput-object p3, p0, Lwnb;->b:Laob;
 
-    iput p5, p0, Lwnb;->c:I
-
-    iput p6, p0, Lwnb;->o:I
-
-    iput p7, p0, Lwnb;->X:I
+    iput-object p4, p0, Lwnb;->c:Lznb;
 
     return-void
 .end method
 
-.method public static valueOf(Ljava/lang/String;)Lwnb;
-    .locals 1
 
-    const-class v0, Lwnb;
+# virtual methods
+.method public final a()Ljava/lang/Object;
+    .locals 4
 
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+    new-instance v0, Lone/me/profileedit/screens/changelink/ProfileChangeLinkScreen;
 
-    move-result-object p0
+    iget-wide v1, p0, Lwnb;->a:J
 
-    check-cast p0, Lwnb;
+    iget-object v3, p0, Lwnb;->b:Laob;
 
-    return-object p0
-.end method
+    iget-object p0, p0, Lwnb;->c:Lznb;
 
-.method public static values()[Lwnb;
-    .locals 1
-
-    sget-object v0, Lwnb;->s0:[Lwnb;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, [Lwnb;
+    invoke-direct {v0, v1, v2, v3, p0}, Lone/me/profileedit/screens/changelink/ProfileChangeLinkScreen;-><init>(JLaob;Lznb;)V
 
     return-object v0
 .end method

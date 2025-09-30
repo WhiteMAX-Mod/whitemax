@@ -1,400 +1,172 @@
 .class public final Lf04;
-.super Lqde;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Ll66;
+.implements Ljava/util/ListIterator;
 
 
 # instance fields
-.field public X:Llh9;
+.field public final a:[Ljava/lang/Object;
 
-.field public Y:Lg04;
-
-.field public Z:J
-
-.field public o0:I
-
-.field public final synthetic p0:J
-
-.field public final synthetic q0:Lg04;
-
-.field public final synthetic r0:Lg04;
-
-.field public final synthetic s0:Lqa2;
+.field public b:I
 
 
 # direct methods
-.method public constructor <init>(JLg04;Lkotlin/coroutines/Continuation;Lg04;Lqa2;)V
+.method public constructor <init>(I[Ljava/lang/Object;)V
     .locals 0
 
-    iput-wide p1, p0, Lf04;->p0:J
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p3, p0, Lf04;->q0:Lg04;
+    iput p1, p0, Lf04;->b:I
 
-    iput-object p5, p0, Lf04;->r0:Lg04;
-
-    iput-object p6, p0, Lf04;->s0:Lqa2;
-
-    const/4 p1, 0x2
-
-    invoke-direct {p0, p1, p4}, Lqde;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-object p2, p0, Lf04;->a:[Ljava/lang/Object;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+.method public final add(Ljava/lang/Object;)V
     .locals 0
 
-    check-cast p1, Lox3;
+    new-instance p0, Ljava/lang/UnsupportedOperationException;
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Lf04;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p0
-
-    check-cast p0, Lf04;
-
-    sget-object p1, Le5f;->a:Le5f;
-
-    invoke-virtual {p0, p1}, Lf04;->o(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 7
-
-    new-instance v0, Lf04;
-
-    iget-object v5, p0, Lf04;->r0:Lg04;
-
-    iget-object v6, p0, Lf04;->s0:Lqa2;
-
-    iget-wide v1, p0, Lf04;->p0:J
-
-    iget-object v3, p0, Lf04;->q0:Lg04;
-
-    move-object v4, p2
-
-    invoke-direct/range {v0 .. v6}, Lf04;-><init>(JLg04;Lkotlin/coroutines/Continuation;Lg04;Lqa2;)V
-
-    return-object v0
-.end method
-
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 11
-
-    sget-object v0, Le5f;->a:Le5f;
-
-    const-string v1, "Trying to update non-existing folder("
-
-    sget-object v2, Lpx3;->a:Lpx3;
-
-    iget v3, p0, Lf04;->o0:I
-
-    const/4 v4, 0x2
-
-    const/4 v5, 0x1
-
-    const/4 v6, 0x0
-
-    if-eqz v3, :cond_2
-
-    if-eq v3, v5, :cond_1
-
-    if-ne v3, v4, :cond_0
-
-    iget-wide v1, p0, Lf04;->Z:J
-
-    iget-object v3, p0, Lf04;->Y:Lg04;
-
-    iget-object p0, p0, Lf04;->X:Llh9;
-
-    :try_start_0
-    invoke-static {p1}, Lsgg;->Z(Ljava/lang/Object;)V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    goto/16 :goto_6
-
-    :catchall_0
-    move-exception p1
-
-    goto/16 :goto_8
-
-    :cond_0
-    new-instance p0, Ljava/lang/IllegalStateException;
-
-    const-string p1, "call to \'resume\' before \'invoke\' with coroutine"
-
-    invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p0}, Ljava/lang/UnsupportedOperationException;-><init>()V
 
     throw p0
+.end method
 
-    :cond_1
-    iget-wide v7, p0, Lf04;->Z:J
+.method public final hasNext()Z
+    .locals 1
 
-    iget-object v3, p0, Lf04;->Y:Lg04;
+    iget v0, p0, Lf04;->b:I
 
-    iget-object v5, p0, Lf04;->X:Llh9;
+    iget-object p0, p0, Lf04;->a:[Ljava/lang/Object;
 
-    invoke-static {p1}, Lsgg;->Z(Ljava/lang/Object;)V
+    array-length p0, p0
 
-    move-object p1, v3
+    if-ge v0, p0, :cond_0
 
-    move-object v3, v5
+    const/4 p0, 0x1
 
-    goto :goto_1
+    return p0
 
-    :cond_2
-    invoke-static {p1}, Lsgg;->Z(Ljava/lang/Object;)V
+    :cond_0
+    const/4 p0, 0x0
 
-    iget-wide v7, p0, Lf04;->p0:J
+    return p0
+.end method
 
-    iget-object p1, p0, Lf04;->q0:Lg04;
+.method public final hasPrevious()Z
+    .locals 0
 
-    invoke-virtual {p1}, Lg04;->J()Lh23;
+    iget p0, p0, Lf04;->b:I
 
-    move-result-object p1
+    if-lez p0, :cond_0
 
-    check-cast p1, Lj23;
+    const/4 p0, 0x1
 
-    invoke-virtual {p1}, Lj23;->w()J
+    return p0
 
-    move-result-wide v9
+    :cond_0
+    const/4 p0, 0x0
 
-    cmp-long p1, v7, v9
+    return p0
+.end method
 
-    if-gez p1, :cond_5
+.method public final next()Ljava/lang/Object;
+    .locals 2
 
-    iget-object p0, p0, Lf04;->q0:Lg04;
+    invoke-virtual {p0}, Lf04;->hasNext()Z
 
-    iget-object p0, p0, Lg04;->b:Ljava/lang/String;
+    move-result v0
 
-    sget-object p1, Lg47;->m:Llr6;
+    if-eqz v0, :cond_0
 
-    if-nez p1, :cond_3
+    iget v0, p0, Lf04;->b:I
 
-    goto :goto_0
+    add-int/lit8 v1, v0, 0x1
 
-    :cond_3
-    invoke-interface {p1}, Llr6;->c()Z
+    iput v1, p0, Lf04;->b:I
 
-    move-result v1
+    iget-object p0, p0, Lf04;->a:[Ljava/lang/Object;
 
-    if-eqz v1, :cond_4
+    aget-object p0, p0, v0
 
-    sget-object v1, Lqs7;->Y:Lqs7;
+    return-object p0
 
-    const-string v2, "Folder operation in non-actual, skipping it"
+    :cond_0
+    new-instance p0, Ljava/util/NoSuchElementException;
 
-    invoke-interface {p1, v1, p0, v2, v6}, Llr6;->d(Lqs7;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-direct {p0}, Ljava/util/NoSuchElementException;-><init>()V
 
-    :cond_4
-    :goto_0
-    return-object v0
+    throw p0
+.end method
 
-    :cond_5
-    iget-object p1, p0, Lf04;->q0:Lg04;
+.method public final nextIndex()I
+    .locals 0
 
-    iget-object v3, p1, Lg04;->u0:Loh9;
+    iget p0, p0, Lf04;->b:I
 
-    iget-wide v7, p0, Lf04;->p0:J
+    return p0
+.end method
 
-    iput-object v3, p0, Lf04;->X:Llh9;
+.method public final previous()Ljava/lang/Object;
+    .locals 1
 
-    iput-object p1, p0, Lf04;->Y:Lg04;
+    invoke-virtual {p0}, Lf04;->hasPrevious()Z
 
-    iput-wide v7, p0, Lf04;->Z:J
+    move-result v0
 
-    iput v5, p0, Lf04;->o0:I
+    if-eqz v0, :cond_0
 
-    invoke-virtual {v3, p0}, Loh9;->d(Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    iget v0, p0, Lf04;->b:I
 
-    move-result-object v5
+    add-int/lit8 v0, v0, -0x1
 
-    if-ne v5, v2, :cond_6
+    iput v0, p0, Lf04;->b:I
 
-    goto/16 :goto_5
+    iget-object p0, p0, Lf04;->a:[Ljava/lang/Object;
 
-    :cond_6
-    :goto_1
-    :try_start_1
-    iget-object v5, p0, Lf04;->r0:Lg04;
+    aget-object p0, p0, v0
 
-    iget-object v5, v5, Lg04;->q0:Ljava/util/concurrent/ConcurrentHashMap;
+    return-object p0
 
-    iget-object v9, p0, Lf04;->s0:Lqa2;
+    :cond_0
+    new-instance p0, Ljava/util/NoSuchElementException;
 
-    iget-object v9, v9, Lqa2;->a:Ljava/lang/String;
+    invoke-direct {p0}, Ljava/util/NoSuchElementException;-><init>()V
 
-    invoke-virtual {v5, v9}, Ljava/util/concurrent/ConcurrentHashMap;->containsKey(Ljava/lang/Object;)Z
+    throw p0
+.end method
 
-    move-result v5
+.method public final previousIndex()I
+    .locals 0
 
-    if-nez v5, :cond_9
+    iget p0, p0, Lf04;->b:I
 
-    iget-object v2, p0, Lf04;->r0:Lg04;
+    add-int/lit8 p0, p0, -0x1
 
-    iget-object v2, v2, Lg04;->b:Ljava/lang/String;
+    return p0
+.end method
 
-    sget-object v4, Lg47;->m:Llr6;
+.method public final remove()V
+    .locals 0
 
-    if-nez v4, :cond_7
+    new-instance p0, Ljava/lang/UnsupportedOperationException;
 
-    goto :goto_3
+    invoke-direct {p0}, Ljava/lang/UnsupportedOperationException;-><init>()V
 
-    :cond_7
-    invoke-interface {v4}, Llr6;->c()Z
+    throw p0
+.end method
 
-    move-result v5
+.method public final set(Ljava/lang/Object;)V
+    .locals 0
 
-    if-eqz v5, :cond_8
+    new-instance p0, Ljava/lang/UnsupportedOperationException;
 
-    sget-object v5, Lqs7;->Z:Lqs7;
+    invoke-direct {p0}, Ljava/lang/UnsupportedOperationException;-><init>()V
 
-    iget-object v9, p0, Lf04;->s0:Lqa2;
-
-    iget-object v9, v9, Lqa2;->a:Ljava/lang/String;
-
-    new-instance v10, Ljava/lang/StringBuilder;
-
-    invoke-direct {v10, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v10, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, ")"
-
-    invoke-virtual {v10, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v10}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-interface {v4, v5, v2, v1, v6}, Llr6;->d(Lqs7;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    goto :goto_3
-
-    :catchall_1
-    move-exception p1
-
-    :goto_2
-    move-object p0, v3
-
-    goto :goto_8
-
-    :cond_8
-    :goto_3
-    iget-object v1, p0, Lf04;->r0:Lg04;
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_1
-
-    :try_start_2
-    iget-object v1, v1, Lg04;->X:Lje7;
-
-    invoke-interface {v1}, Lje7;->getValue()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Le45;
-    :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_2
-
-    :try_start_3
-    new-instance v2, Lru/ok/tamtam/folders/usecases/NotFoundFolderException;
-
-    iget-object p0, p0, Lf04;->s0:Lqa2;
-
-    iget-object p0, p0, Lqa2;->a:Ljava/lang/String;
-
-    invoke-direct {v2, p0}, Lru/ok/tamtam/folders/usecases/NotFoundFolderException;-><init>(Ljava/lang/String;)V
-
-    invoke-static {v1, v2}, Liz7;->j(Le45;Ljava/lang/Exception;)V
-
-    move-object p0, v3
-
-    goto :goto_7
-
-    :goto_4
-    move-object p1, p0
-
-    goto :goto_2
-
-    :catchall_2
-    move-exception p0
-
-    goto :goto_4
-
-    :cond_9
-    iget-object v1, p0, Lf04;->r0:Lg04;
-
-    iget-object v5, p0, Lf04;->s0:Lqa2;
-
-    iput-object v3, p0, Lf04;->X:Llh9;
-
-    iput-object p1, p0, Lf04;->Y:Lg04;
-
-    iput-wide v7, p0, Lf04;->Z:J
-
-    iput v4, p0, Lf04;->o0:I
-
-    invoke-virtual {v1, v5, v6, p0}, Lg04;->L(Lqa2;Ljava/lang/Integer;Lbu3;)Ljava/lang/Object;
-
-    move-result-object p0
-    :try_end_3
-    .catchall {:try_start_3 .. :try_end_3} :catchall_1
-
-    if-ne p0, v2, :cond_a
-
-    :goto_5
-    return-object v2
-
-    :cond_a
-    move-object p0, v3
-
-    move-wide v1, v7
-
-    move-object v3, p1
-
-    :goto_6
-    move-wide v7, v1
-
-    move-object p1, v3
-
-    :goto_7
-    :try_start_4
-    invoke-virtual {p1}, Lg04;->J()Lh23;
-
-    move-result-object p1
-
-    check-cast p1, Lj23;
-
-    const-string v1, "folders_sync"
-
-    invoke-static {v7, v8}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v2
-
-    invoke-virtual {p1, v1, v2}, Le3;->i(Ljava/lang/String;Ljava/lang/Long;)V
-    :try_end_4
-    .catchall {:try_start_4 .. :try_end_4} :catchall_0
-
-    check-cast p0, Loh9;
-
-    invoke-virtual {p0, v6}, Loh9;->e(Ljava/lang/Object;)V
-
-    return-object v0
-
-    :goto_8
-    check-cast p0, Loh9;
-
-    invoke-virtual {p0, v6}, Loh9;->e(Ljava/lang/Object;)V
-
-    throw p1
+    throw p0
 .end method

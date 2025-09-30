@@ -1,122 +1,129 @@
 .class public final Lp45;
-.super Lo45;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Log4;
+.implements Ljava/util/List;
+.implements Ljava/io/Serializable;
+.implements Ljava/util/RandomAccess;
+.implements Lmi7;
 
 
-# instance fields
-.field public final a:Ljava/util/concurrent/Executor;
+# static fields
+.field public static final a:Lp45;
 
 
 # direct methods
-.method public constructor <init>(Ljava/util/concurrent/Executor;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    invoke-direct {p0}, Ljx3;-><init>()V
+    new-instance v0, Lp45;
 
-    iput-object p1, p0, Lp45;->a:Ljava/util/concurrent/Executor;
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    invoke-static {p1}, Lkotlinx/coroutines/internal/ConcurrentKt;->removeFutureOnCancel(Ljava/util/concurrent/Executor;)Z
+    sput-object v0, Lp45;->a:Lp45;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final close()V
-    .locals 1
-
-    iget-object p0, p0, Lp45;->a:Ljava/util/concurrent/Executor;
-
-    instance-of v0, p0, Ljava/util/concurrent/ExecutorService;
-
-    if-eqz v0, :cond_0
-
-    check-cast p0, Ljava/util/concurrent/ExecutorService;
-
-    goto :goto_0
-
-    :cond_0
-    const/4 p0, 0x0
-
-    :goto_0
-    if-eqz p0, :cond_1
-
-    invoke-interface {p0}, Ljava/util/concurrent/ExecutorService;->shutdown()V
-
-    :cond_1
-    return-void
-.end method
-
-.method public final delay(JLkotlin/coroutines/Continuation;)Ljava/lang/Object;
+.method public final bridge synthetic add(ILjava/lang/Object;)V
     .locals 0
 
-    invoke-static {p0, p1, p2, p3}, Lzo3;->t(Log4;JLkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    .line 1
+    new-instance p0, Ljava/lang/UnsupportedOperationException;
 
-    move-result-object p0
+    const-string p1, "Operation is not supported for read-only collection"
 
-    return-object p0
+    invoke-direct {p0, p1}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+
+    throw p0
 .end method
 
-.method public final dispatch(Lhx3;Ljava/lang/Runnable;)V
-    .locals 2
+.method public final bridge synthetic add(Ljava/lang/Object;)Z
+    .locals 0
 
-    :try_start_0
-    iget-object p0, p0, Lp45;->a:Ljava/util/concurrent/Executor;
+    .line 2
+    new-instance p0, Ljava/lang/UnsupportedOperationException;
 
-    invoke-interface {p0, p2}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
-    :try_end_0
-    .catch Ljava/util/concurrent/RejectedExecutionException; {:try_start_0 .. :try_end_0} :catch_0
+    const-string p1, "Operation is not supported for read-only collection"
 
-    return-void
+    invoke-direct {p0, p1}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
 
-    :catch_0
-    move-exception p0
+    throw p0
+.end method
 
-    new-instance v0, Ljava/util/concurrent/CancellationException;
+.method public final addAll(ILjava/util/Collection;)Z
+    .locals 0
 
-    const-string v1, "The task was rejected"
+    .line 1
+    new-instance p0, Ljava/lang/UnsupportedOperationException;
 
-    invoke-direct {v0, v1}, Ljava/util/concurrent/CancellationException;-><init>(Ljava/lang/String;)V
+    const-string p1, "Operation is not supported for read-only collection"
 
-    invoke-virtual {v0, p0}, Ljava/lang/Throwable;->initCause(Ljava/lang/Throwable;)Ljava/lang/Throwable;
+    invoke-direct {p0, p1}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
 
-    sget-object p0, Lxb6;->X:Lxb6;
+    throw p0
+.end method
 
-    invoke-interface {p1, p0}, Lhx3;->get(Lgx3;)Lfx3;
+.method public final addAll(Ljava/util/Collection;)Z
+    .locals 0
 
-    move-result-object p0
+    .line 2
+    new-instance p0, Ljava/lang/UnsupportedOperationException;
 
-    check-cast p0, Lv77;
+    const-string p1, "Operation is not supported for read-only collection"
 
-    if-eqz p0, :cond_0
+    invoke-direct {p0, p1}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
 
-    invoke-interface {p0, v0}, Lv77;->cancel(Ljava/util/concurrent/CancellationException;)V
+    throw p0
+.end method
 
-    :cond_0
-    sget-object p0, Lql4;->c:Lbc4;
+.method public final clear()V
+    .locals 1
 
-    invoke-virtual {p0, p1, p2}, Lbc4;->dispatch(Lhx3;Ljava/lang/Runnable;)V
+    new-instance p0, Ljava/lang/UnsupportedOperationException;
 
-    return-void
+    const-string v0, "Operation is not supported for read-only collection"
+
+    invoke-direct {p0, v0}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+
+    throw p0
+.end method
+
+.method public final bridge contains(Ljava/lang/Object;)Z
+    .locals 0
+
+    const/4 p0, 0x0
+
+    return p0
+.end method
+
+.method public final containsAll(Ljava/util/Collection;)Z
+    .locals 0
+
+    invoke-interface {p1}, Ljava/util/Collection;->isEmpty()Z
+
+    move-result p0
+
+    return p0
 .end method
 
 .method public final equals(Ljava/lang/Object;)Z
-    .locals 1
+    .locals 0
 
-    instance-of v0, p1, Lp45;
+    instance-of p0, p1, Ljava/util/List;
 
-    if-eqz v0, :cond_0
+    if-eqz p0, :cond_0
 
-    check-cast p1, Lp45;
+    check-cast p1, Ljava/util/List;
 
-    iget-object p1, p1, Lp45;->a:Ljava/util/concurrent/Executor;
+    invoke-interface {p1}, Ljava/util/List;->isEmpty()Z
 
-    iget-object p0, p0, Lp45;->a:Ljava/util/concurrent/Executor;
+    move-result p0
 
-    if-ne p1, p0, :cond_0
+    if-eqz p0, :cond_0
 
     const/4 p0, 0x1
 
@@ -128,196 +135,229 @@
     return p0
 .end method
 
+.method public final get(I)Ljava/lang/Object;
+    .locals 2
+
+    new-instance p0, Ljava/lang/IndexOutOfBoundsException;
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "Empty list doesn\'t contain element at index "
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const/16 p1, 0x2e
+
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-direct {p0, p1}, Ljava/lang/IndexOutOfBoundsException;-><init>(Ljava/lang/String;)V
+
+    throw p0
+.end method
+
 .method public final hashCode()I
     .locals 0
 
-    iget-object p0, p0, Lp45;->a:Ljava/util/concurrent/Executor;
-
-    invoke-static {p0}, Ljava/lang/System;->identityHashCode(Ljava/lang/Object;)I
-
-    move-result p0
+    const/4 p0, 0x1
 
     return p0
 .end method
 
-.method public final invokeOnTimeout(JLjava/lang/Runnable;Lhx3;)Ldm4;
-    .locals 3
-
-    iget-object p0, p0, Lp45;->a:Ljava/util/concurrent/Executor;
-
-    instance-of v0, p0, Ljava/util/concurrent/ScheduledExecutorService;
-
-    const/4 v1, 0x0
-
-    if-eqz v0, :cond_0
-
-    check-cast p0, Ljava/util/concurrent/ScheduledExecutorService;
-
-    goto :goto_0
-
-    :cond_0
-    move-object p0, v1
-
-    :goto_0
-    if-eqz p0, :cond_1
-
-    :try_start_0
-    sget-object v0, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;
-
-    invoke-interface {p0, p3, p1, p2, v0}, Ljava/util/concurrent/ScheduledExecutorService;->schedule(Ljava/lang/Runnable;JLjava/util/concurrent/TimeUnit;)Ljava/util/concurrent/ScheduledFuture;
-
-    move-result-object v1
-    :try_end_0
-    .catch Ljava/util/concurrent/RejectedExecutionException; {:try_start_0 .. :try_end_0} :catch_0
-
-    goto :goto_1
-
-    :catch_0
-    move-exception p0
-
-    new-instance v0, Ljava/util/concurrent/CancellationException;
-
-    const-string v2, "The task was rejected"
-
-    invoke-direct {v0, v2}, Ljava/util/concurrent/CancellationException;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v0, p0}, Ljava/lang/Throwable;->initCause(Ljava/lang/Throwable;)Ljava/lang/Throwable;
-
-    sget-object p0, Lxb6;->X:Lxb6;
-
-    invoke-interface {p4, p0}, Lhx3;->get(Lgx3;)Lfx3;
-
-    move-result-object p0
-
-    check-cast p0, Lv77;
-
-    if-eqz p0, :cond_1
-
-    invoke-interface {p0, v0}, Lv77;->cancel(Ljava/util/concurrent/CancellationException;)V
-
-    :cond_1
-    :goto_1
-    if-eqz v1, :cond_2
-
-    new-instance p0, Lcm4;
-
-    invoke-direct {p0, v1}, Lcm4;-><init>(Ljava/util/concurrent/ScheduledFuture;)V
-
-    return-object p0
-
-    :cond_2
-    sget-object p0, Lab4;->o0:Lab4;
-
-    invoke-virtual {p0, p1, p2, p3, p4}, Lab4;->invokeOnTimeout(JLjava/lang/Runnable;Lhx3;)Ldm4;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public final n()Ljava/util/concurrent/Executor;
+.method public final bridge indexOf(Ljava/lang/Object;)I
     .locals 0
 
-    iget-object p0, p0, Lp45;->a:Ljava/util/concurrent/Executor;
+    const/4 p0, -0x1
+
+    return p0
+.end method
+
+.method public final isEmpty()Z
+    .locals 0
+
+    const/4 p0, 0x1
+
+    return p0
+.end method
+
+.method public final iterator()Ljava/util/Iterator;
+    .locals 0
+
+    sget-object p0, Lo45;->a:Lo45;
 
     return-object p0
 .end method
 
-.method public final scheduleResumeAfterDelay(JLpy1;)V
-    .locals 4
+.method public final bridge lastIndexOf(Ljava/lang/Object;)I
+    .locals 0
 
-    iget-object v0, p0, Lp45;->a:Ljava/util/concurrent/Executor;
+    const/4 p0, -0x1
 
-    instance-of v1, v0, Ljava/util/concurrent/ScheduledExecutorService;
+    return p0
+.end method
 
-    const/4 v2, 0x0
+.method public final listIterator()Ljava/util/ListIterator;
+    .locals 0
 
-    if-eqz v1, :cond_0
+    .line 1
+    sget-object p0, Lo45;->a:Lo45;
 
-    check-cast v0, Ljava/util/concurrent/ScheduledExecutorService;
+    return-object p0
+.end method
 
-    goto :goto_0
+.method public final listIterator(I)Ljava/util/ListIterator;
+    .locals 1
+
+    if-nez p1, :cond_0
+
+    .line 2
+    sget-object p0, Lo45;->a:Lo45;
+
+    return-object p0
+
+    .line 3
+    :cond_0
+    new-instance p0, Ljava/lang/IndexOutOfBoundsException;
+
+    const-string v0, "Index: "
+
+    .line 4
+    invoke-static {p1, v0}, Lyv7;->e(ILjava/lang/String;)Ljava/lang/String;
+
+    move-result-object p1
+
+    .line 5
+    invoke-direct {p0, p1}, Ljava/lang/IndexOutOfBoundsException;-><init>(Ljava/lang/String;)V
+
+    throw p0
+.end method
+
+.method public final bridge synthetic remove(I)Ljava/lang/Object;
+    .locals 0
+
+    .line 1
+    new-instance p0, Ljava/lang/UnsupportedOperationException;
+
+    const-string p1, "Operation is not supported for read-only collection"
+
+    invoke-direct {p0, p1}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+
+    throw p0
+.end method
+
+.method public final remove(Ljava/lang/Object;)Z
+    .locals 0
+
+    .line 2
+    new-instance p0, Ljava/lang/UnsupportedOperationException;
+
+    const-string p1, "Operation is not supported for read-only collection"
+
+    invoke-direct {p0, p1}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+
+    throw p0
+.end method
+
+.method public final removeAll(Ljava/util/Collection;)Z
+    .locals 0
+
+    new-instance p0, Ljava/lang/UnsupportedOperationException;
+
+    const-string p1, "Operation is not supported for read-only collection"
+
+    invoke-direct {p0, p1}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+
+    throw p0
+.end method
+
+.method public final retainAll(Ljava/util/Collection;)Z
+    .locals 0
+
+    new-instance p0, Ljava/lang/UnsupportedOperationException;
+
+    const-string p1, "Operation is not supported for read-only collection"
+
+    invoke-direct {p0, p1}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+
+    throw p0
+.end method
+
+.method public final bridge synthetic set(ILjava/lang/Object;)Ljava/lang/Object;
+    .locals 0
+
+    new-instance p0, Ljava/lang/UnsupportedOperationException;
+
+    const-string p1, "Operation is not supported for read-only collection"
+
+    invoke-direct {p0, p1}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+
+    throw p0
+.end method
+
+.method public final bridge size()I
+    .locals 0
+
+    const/4 p0, 0x0
+
+    return p0
+.end method
+
+.method public final subList(II)Ljava/util/List;
+    .locals 2
+
+    if-nez p1, :cond_0
+
+    if-nez p2, :cond_0
+
+    return-object p0
 
     :cond_0
-    move-object v0, v2
+    new-instance p0, Ljava/lang/IndexOutOfBoundsException;
 
-    :goto_0
-    if-eqz v0, :cond_1
+    const-string v0, "fromIndex: "
 
-    new-instance v1, Lt76;
+    const-string v1, ", toIndex: "
 
-    const/16 v3, 0x13
+    invoke-static {v0, p1, p2, v1}, Lyv7;->f(Ljava/lang/String;IILjava/lang/String;)Ljava/lang/String;
 
-    invoke-direct {v1, p0, v3, p3}, Lt76;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+    move-result-object p1
 
-    invoke-interface {p3}, Lkotlin/coroutines/Continuation;->getContext()Lhx3;
+    invoke-direct {p0, p1}, Ljava/lang/IndexOutOfBoundsException;-><init>(Ljava/lang/String;)V
 
-    move-result-object p0
+    throw p0
+.end method
 
-    :try_start_0
-    sget-object v3, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;
+.method public final toArray()[Ljava/lang/Object;
+    .locals 0
 
-    invoke-interface {v0, v1, p1, p2, v3}, Ljava/util/concurrent/ScheduledExecutorService;->schedule(Ljava/lang/Runnable;JLjava/util/concurrent/TimeUnit;)Ljava/util/concurrent/ScheduledFuture;
-
-    move-result-object v2
-    :try_end_0
-    .catch Ljava/util/concurrent/RejectedExecutionException; {:try_start_0 .. :try_end_0} :catch_0
-
-    goto :goto_1
-
-    :catch_0
-    move-exception v0
-
-    new-instance v1, Ljava/util/concurrent/CancellationException;
-
-    const-string v3, "The task was rejected"
-
-    invoke-direct {v1, v3}, Ljava/util/concurrent/CancellationException;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v1, v0}, Ljava/lang/Throwable;->initCause(Ljava/lang/Throwable;)Ljava/lang/Throwable;
-
-    sget-object v0, Lxb6;->X:Lxb6;
-
-    invoke-interface {p0, v0}, Lhx3;->get(Lgx3;)Lfx3;
+    .line 1
+    invoke-static {p0}, Lqe5;->W(Ljava/util/Collection;)[Ljava/lang/Object;
 
     move-result-object p0
 
-    check-cast p0, Lv77;
+    return-object p0
+.end method
 
-    if-eqz p0, :cond_1
+.method public final toArray([Ljava/lang/Object;)[Ljava/lang/Object;
+    .locals 0
 
-    invoke-interface {p0, v1}, Lv77;->cancel(Ljava/util/concurrent/CancellationException;)V
+    .line 2
+    invoke-static {p0, p1}, Lqe5;->X(Ljava/util/Collection;[Ljava/lang/Object;)[Ljava/lang/Object;
 
-    :cond_1
-    :goto_1
-    if-eqz v2, :cond_2
+    move-result-object p0
 
-    new-instance p0, Lfy1;
-
-    const/4 p1, 0x0
-
-    invoke-direct {p0, p1, v2}, Lfy1;-><init>(ILjava/lang/Object;)V
-
-    invoke-static {p3, p0}, Ll23;->I(Lpy1;Lgy1;)V
-
-    return-void
-
-    :cond_2
-    sget-object p0, Lab4;->o0:Lab4;
-
-    invoke-virtual {p0, p1, p2, p3}, Lq35;->scheduleResumeAfterDelay(JLpy1;)V
-
-    return-void
+    return-object p0
 .end method
 
 .method public final toString()Ljava/lang/String;
     .locals 0
 
-    iget-object p0, p0, Lp45;->a:Ljava/util/concurrent/Executor;
-
-    invoke-virtual {p0}, Ljava/lang/Object;->toString()Ljava/lang/String;
-
-    move-result-object p0
+    const-string p0, "[]"
 
     return-object p0
 .end method

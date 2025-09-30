@@ -1,43 +1,43 @@
 .class public final Llh7;
-.super Lrbg;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public final c:Z
+.field public final a:Lg15;
 
-.field public final d:Lk8g;
+.field public b:Z
 
 
 # direct methods
-.method public constructor <init>(ZLk8g;)V
-    .locals 0
+.method public constructor <init>(Lqid;)V
+    .locals 9
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-boolean p1, p0, Llh7;->c:Z
+    new-instance v0, Lg15;
 
-    iput-object p2, p0, Llh7;->d:Lk8g;
+    new-instance v1, Lsv;
+
+    const/4 v7, 0x0
+
+    const/16 v8, 0x17
+
+    const/4 v2, 0x2
+
+    const-class v4, Llh7;
+
+    const-string v5, "readIfAbsent"
+
+    const-string v6, "readIfAbsent(Lkotlinx/serialization/descriptors/SerialDescriptor;I)Z"
+
+    move-object v3, p0
+
+    invoke-direct/range {v1 .. v8}, Lsv;-><init>(ILjava/lang/Object;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;II)V
+
+    invoke-direct {v0, p1, v1}, Lg15;-><init>(Lqid;Lsv;)V
+
+    iput-object v0, v3, Llh7;->a:Lg15;
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final J()Lpc3;
-    .locals 2
-
-    iget-object v0, p0, Llh7;->d:Lk8g;
-
-    invoke-virtual {v0}, Lk8g;->J()Ljka;
-
-    new-instance v0, Lpc3;
-
-    const/4 v1, 0x0
-
-    iget-boolean p0, p0, Llh7;->c:Z
-
-    invoke-direct {v0, p0, v1}, Lpc3;-><init>(ZZ)V
-
-    return-object v0
 .end method

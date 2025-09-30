@@ -1,23 +1,21 @@
 .class public final Lci;
-.super Ljava/lang/Object;
+.super Lzyd;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:Lyh;
-
-.field public final b:Landroid/content/Context;
+# static fields
+.field public static final Z:Lci;
 
 
 # direct methods
-.method public constructor <init>(Lyh;Landroid/content/Context;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lci;
 
-    iput-object p1, p0, Lci;->a:Lyh;
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p2, p0, Lci;->b:Landroid/content/Context;
+    sput-object v0, Lci;->Z:Lci;
 
     return-void
 .end method

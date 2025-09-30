@@ -1,126 +1,49 @@
 .class public final Lkwc;
-.super Ljava/lang/Object;
+.super Ljx3;
 .source "SourceFile"
-
-# interfaces
-.implements Lv56;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public synthetic X:Ljava/lang/Object;
 
-.field public final synthetic b:Lu4;
+.field public final synthetic Y:Lxwc;
+
+.field public Z:I
+
+.field public o:Lxwc;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lu4;I)V
+.method public constructor <init>(Lxwc;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    iput p2, p0, Lkwc;->a:I
+    iput-object p1, p0, Lkwc;->Y:Lxwc;
 
-    iput-object p1, p0, Lkwc;->b:Lu4;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p2}, Ljx3;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke()Ljava/lang/Object;
-    .locals 4
+.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    iget v0, p0, Lkwc;->a:I
+    iput-object p1, p0, Lkwc;->X:Ljava/lang/Object;
 
-    packed-switch v0, :pswitch_data_0
+    iget p1, p0, Lkwc;->Z:I
 
-    iget-object p0, p0, Lkwc;->b:Lu4;
+    const/high16 v0, -0x80000000
 
-    const-class v0, La9a;
+    or-int/2addr p1, v0
 
-    invoke-virtual {p0, v0}, Lu4;->c(Ljava/lang/Class;)Ljava/lang/Object;
+    iput p1, p0, Lkwc;->Z:I
 
-    move-result-object p0
+    iget-object p1, p0, Lkwc;->Y:Lxwc;
 
-    check-cast p0, La9a;
-
-    invoke-virtual {p0}, La9a;->c()Ljava/util/concurrent/ExecutorService;
+    invoke-static {p1, p0}, Lxwc;->c(Lxwc;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
     move-result-object p0
 
     return-object p0
-
-    :pswitch_0
-    const-class v0, Lrie;
-
-    iget-object p0, p0, Lkwc;->b:Lu4;
-
-    invoke-virtual {p0, v0}, Lu4;->c(Ljava/lang/Class;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lrie;
-
-    check-cast v0, Lo7a;
-
-    invoke-virtual {v0}, Lo7a;->b()Ljx3;
-
-    move-result-object v0
-
-    new-instance v1, Llfd;
-
-    const/4 v2, 0x0
-
-    invoke-direct {v1, p0, v2}, Llfd;-><init>(Lu4;Lkotlin/coroutines/Continuation;)V
-
-    const/4 p0, 0x2
-
-    sget-object v3, Lle6;->a:Lle6;
-
-    invoke-static {v3, v0, v2, v1, p0}, Lzo3;->E(Lox3;Lhx3;Lrx3;Ll66;I)Ldwd;
-
-    sget-object p0, Le5f;->a:Le5f;
-
-    return-object p0
-
-    :pswitch_1
-    iget-object p0, p0, Lkwc;->b:Lu4;
-
-    const-class v0, Lw9g;
-
-    invoke-virtual {p0, v0}, Lu4;->c(Ljava/lang/Class;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    return-object p0
-
-    :pswitch_2
-    iget-object p0, p0, Lkwc;->b:Lu4;
-
-    const-class v0, Lxs8;
-
-    invoke-virtual {p0, v0}, Lu4;->c(Ljava/lang/Class;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    return-object p0
-
-    :pswitch_3
-    iget-object p0, p0, Lkwc;->b:Lu4;
-
-    const-class v0, Lh23;
-
-    invoke-virtual {p0, v0}, Lu4;->c(Ljava/lang/Class;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    return-object p0
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
 .end method

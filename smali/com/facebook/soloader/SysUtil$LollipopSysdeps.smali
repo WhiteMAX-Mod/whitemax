@@ -8,7 +8,7 @@
     value = 0x15
 .end annotation
 
-.annotation build Lpm4;
+.annotation build Ldr4;
 .end annotation
 
 
@@ -29,7 +29,7 @@
         }
     .end annotation
 
-    .annotation build Lpm4;
+    .annotation build Ldr4;
     .end annotation
 
     const-wide/16 v0, 0x0
@@ -80,7 +80,7 @@
 
 .method public static getSupportedAbis()[Ljava/lang/String;
     .locals 7
-    .annotation build Lpm4;
+    .annotation build Ldr4;
     .end annotation
 
     sget-object v0, Landroid/os/Build;->SUPPORTED_ABIS:[Ljava/lang/String;
@@ -200,7 +200,7 @@
         }
     .end annotation
 
-    .annotation build Lpm4;
+    .annotation build Ldr4;
     .end annotation
 
     const-string v0, "/proc/self/exe"

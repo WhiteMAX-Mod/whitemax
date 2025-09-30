@@ -1,136 +1,42 @@
-.class public final Ltx3;
-.super Lqde;
+.class public final synthetic Ltx3;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Ll66;
+.implements Lszc;
 
 
 # instance fields
-.field public X:I
+.field public final synthetic a:Lxx3;
 
-.field public final synthetic Y:Landroidx/work/CoroutineWorker;
+.field public final synthetic b:Landroid/content/Intent;
 
 
 # direct methods
-.method public constructor <init>(Landroidx/work/CoroutineWorker;Lkotlin/coroutines/Continuation;)V
+.method public synthetic constructor <init>(Lxx3;Landroid/content/Intent;)V
     .locals 0
 
-    iput-object p1, p0, Ltx3;->Y:Landroidx/work/CoroutineWorker;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 p1, 0x2
+    iput-object p1, p0, Ltx3;->a:Lxx3;
 
-    invoke-direct {p0, p1, p2}, Lqde;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-object p2, p0, Ltx3;->b:Landroid/content/Intent;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final a()V
+    .locals 1
 
-    check-cast p1, Lox3;
+    iget-object v0, p0, Ltx3;->b:Landroid/content/Intent;
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    iget-object p0, p0, Ltx3;->a:Lxx3;
 
-    invoke-virtual {p0, p1, p2}, Ltx3;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    iget-object p0, p0, Lxx3;->router:Lrzc;
 
-    move-result-object p0
+    invoke-virtual {p0, v0}, Lrzc;->U(Landroid/content/Intent;)V
 
-    check-cast p0, Ltx3;
-
-    sget-object p1, Le5f;->a:Le5f;
-
-    invoke-virtual {p0, p1}, Ltx3;->o(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 0
-
-    new-instance p1, Ltx3;
-
-    iget-object p0, p0, Ltx3;->Y:Landroidx/work/CoroutineWorker;
-
-    invoke-direct {p1, p0, p2}, Ltx3;-><init>(Landroidx/work/CoroutineWorker;Lkotlin/coroutines/Continuation;)V
-
-    return-object p1
-.end method
-
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 4
-
-    iget-object v0, p0, Ltx3;->Y:Landroidx/work/CoroutineWorker;
-
-    iget-object v1, v0, Landroidx/work/CoroutineWorker;->b:Liad;
-
-    iget v2, p0, Ltx3;->X:I
-
-    const/4 v3, 0x1
-
-    if-eqz v2, :cond_1
-
-    if-ne v2, v3, :cond_0
-
-    :try_start_0
-    invoke-static {p1}, Lsgg;->Z(Ljava/lang/Object;)V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    goto :goto_0
-
-    :catchall_0
-    move-exception p0
-
-    goto :goto_1
-
-    :cond_0
-    new-instance p0, Ljava/lang/IllegalStateException;
-
-    const-string p1, "call to \'resume\' before \'invoke\' with coroutine"
-
-    invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p0
-
-    :cond_1
-    invoke-static {p1}, Lsgg;->Z(Ljava/lang/Object;)V
-
-    :try_start_1
-    iput v3, p0, Ltx3;->X:I
-
-    invoke-virtual {v0, p0}, Landroidx/work/CoroutineWorker;->doWork(Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p1
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    sget-object p0, Lpx3;->a:Lpx3;
-
-    if-ne p1, p0, :cond_2
-
-    return-object p0
-
-    :cond_2
-    :goto_0
-    :try_start_2
-    check-cast p1, Lfm7;
-
-    invoke-virtual {v1, p1}, Liad;->i(Ljava/lang/Object;)Z
-    :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_0
-
-    goto :goto_2
-
-    :goto_1
-    invoke-virtual {v1, p0}, Liad;->j(Ljava/lang/Throwable;)Z
-
-    :goto_2
-    sget-object p0, Le5f;->a:Le5f;
-
-    return-object p0
+    return-void
 .end method

@@ -1,188 +1,329 @@
 .class public final Lxt6;
-.super Lst6;
+.super Lzt6;
 .source "SourceFile"
 
 
+# static fields
+.field public static final l:Lxt6;
+
+
 # instance fields
-.field public final u0:Ljava/util/concurrent/Executor;
+.field public final d:Ljava/util/List;
 
-.field public final v0:Ljava/lang/Object;
+.field public final e:Ljava/util/List;
 
-.field public w0:Lnv6;
+.field public final f:Ljava/util/List;
 
-.field public x0:Lwt6;
+.field public final g:Ljava/util/List;
+
+.field public final h:Lx46;
+
+.field public final i:Ljava/util/List;
+
+.field public final j:Ljava/util/Map;
+
+.field public final k:Ljava/util/List;
 
 
 # direct methods
-.method public constructor <init>(Ljava/util/concurrent/Executor;)V
+.method static constructor <clinit>()V
+    .locals 13
+
+    new-instance v0, Lxt6;
+
+    sget-object v2, Ljava/util/Collections;->EMPTY_LIST:Ljava/util/List;
+
+    const/4 v10, 0x0
+
+    sget-object v11, Ljava/util/Collections;->EMPTY_MAP:Ljava/util/Map;
+
+    const-string v1, ""
+
+    const/4 v8, 0x0
+
+    move-object v3, v2
+
+    move-object v4, v2
+
+    move-object v5, v2
+
+    move-object v6, v2
+
+    move-object v7, v2
+
+    move-object v9, v2
+
+    move-object v12, v2
+
+    invoke-direct/range {v0 .. v12}, Lxt6;-><init>(Ljava/lang/String;Ljava/util/List;Ljava/util/List;Ljava/util/List;Ljava/util/List;Ljava/util/List;Ljava/util/List;Lx46;Ljava/util/List;ZLjava/util/Map;Ljava/util/List;)V
+
+    sput-object v0, Lxt6;->l:Lxt6;
+
+    return-void
+.end method
+
+.method public constructor <init>(Ljava/lang/String;Ljava/util/List;Ljava/util/List;Ljava/util/List;Ljava/util/List;Ljava/util/List;Ljava/util/List;Lx46;Ljava/util/List;ZLjava/util/Map;Ljava/util/List;)V
     .locals 1
 
-    invoke-direct {p0}, Lst6;-><init>()V
+    invoke-direct {p0, p1, p2, p10}, Lzt6;-><init>(Ljava/lang/String;Ljava/util/List;Z)V
 
-    new-instance v0, Ljava/lang/Object;
+    new-instance p1, Ljava/util/ArrayList;
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p1}, Ljava/util/ArrayList;-><init>()V
 
-    iput-object v0, p0, Lxt6;->v0:Ljava/lang/Object;
+    const/4 p2, 0x0
 
-    iput-object p1, p0, Lxt6;->u0:Ljava/util/concurrent/Executor;
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final a(Lpv6;)Lnv6;
-    .locals 0
-
-    invoke-interface {p1}, Lpv6;->d()Lnv6;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public final c()V
-    .locals 2
-
-    iget-object v0, p0, Lxt6;->v0:Ljava/lang/Object;
-
-    monitor-enter v0
-
-    :try_start_0
-    iget-object v1, p0, Lxt6;->w0:Lnv6;
-
-    if-eqz v1, :cond_0
-
-    invoke-interface {v1}, Ljava/lang/AutoCloseable;->close()V
-
-    const/4 v1, 0x0
-
-    iput-object v1, p0, Lxt6;->w0:Lnv6;
-
-    goto :goto_0
-
-    :catchall_0
-    move-exception p0
-
-    goto :goto_1
-
-    :cond_0
     :goto_0
-    monitor-exit v0
+    invoke-interface {p3}, Ljava/util/List;->size()I
 
-    return-void
+    move-result p10
 
-    :goto_1
-    monitor-exit v0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    if-ge p2, p10, :cond_1
 
-    throw p0
-.end method
+    invoke-interface {p3, p2}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
-.method public final f(Lnv6;)V
-    .locals 5
+    move-result-object p10
 
-    iget-object v0, p0, Lxt6;->v0:Ljava/lang/Object;
+    check-cast p10, Lvt6;
 
-    monitor-enter v0
+    iget-object p10, p10, Lvt6;->a:Landroid/net/Uri;
 
-    :try_start_0
-    iget-boolean v1, p0, Lst6;->t0:Z
+    invoke-virtual {p1, p10}, Ljava/util/ArrayList;->contains(Ljava/lang/Object;)Z
 
-    if-nez v1, :cond_0
+    move-result v0
 
-    invoke-interface {p1}, Ljava/lang/AutoCloseable;->close()V
+    if-nez v0, :cond_0
 
-    monitor-exit v0
-
-    return-void
-
-    :catchall_0
-    move-exception p0
-
-    goto :goto_1
+    invoke-virtual {p1, p10}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     :cond_0
-    iget-object v1, p0, Lxt6;->x0:Lwt6;
-
-    if-eqz v1, :cond_3
-
-    invoke-interface {p1}, Lnv6;->getImageInfo()Lvu6;
-
-    move-result-object v1
-
-    invoke-interface {v1}, Lvu6;->getTimestamp()J
-
-    move-result-wide v1
-
-    iget-object v3, p0, Lxt6;->x0:Lwt6;
-
-    iget-object v3, v3, Lx06;->b:Lnv6;
-
-    invoke-interface {v3}, Lnv6;->getImageInfo()Lvu6;
-
-    move-result-object v3
-
-    invoke-interface {v3}, Lvu6;->getTimestamp()J
-
-    move-result-wide v3
-
-    cmp-long v1, v1, v3
-
-    if-gtz v1, :cond_1
-
-    invoke-interface {p1}, Ljava/lang/AutoCloseable;->close()V
+    add-int/lit8 p2, p2, 0x1
 
     goto :goto_0
 
     :cond_1
-    iget-object v1, p0, Lxt6;->w0:Lnv6;
+    invoke-static {p1, p4}, Lxt6;->b(Ljava/util/ArrayList;Ljava/util/List;)V
 
-    if-eqz v1, :cond_2
+    invoke-static {p1, p5}, Lxt6;->b(Ljava/util/ArrayList;Ljava/util/List;)V
 
-    invoke-interface {v1}, Ljava/lang/AutoCloseable;->close()V
+    invoke-static {p1, p6}, Lxt6;->b(Ljava/util/ArrayList;Ljava/util/List;)V
+
+    invoke-static {p1, p7}, Lxt6;->b(Ljava/util/ArrayList;Ljava/util/List;)V
+
+    invoke-static {p1}, Ljava/util/Collections;->unmodifiableList(Ljava/util/List;)Ljava/util/List;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lxt6;->d:Ljava/util/List;
+
+    invoke-static {p3}, Ljava/util/Collections;->unmodifiableList(Ljava/util/List;)Ljava/util/List;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lxt6;->e:Ljava/util/List;
+
+    invoke-static {p4}, Ljava/util/Collections;->unmodifiableList(Ljava/util/List;)Ljava/util/List;
+
+    invoke-static {p5}, Ljava/util/Collections;->unmodifiableList(Ljava/util/List;)Ljava/util/List;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lxt6;->f:Ljava/util/List;
+
+    invoke-static {p6}, Ljava/util/Collections;->unmodifiableList(Ljava/util/List;)Ljava/util/List;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lxt6;->g:Ljava/util/List;
+
+    invoke-static {p7}, Ljava/util/Collections;->unmodifiableList(Ljava/util/List;)Ljava/util/List;
+
+    iput-object p8, p0, Lxt6;->h:Lx46;
+
+    if-eqz p9, :cond_2
+
+    invoke-static {p9}, Ljava/util/Collections;->unmodifiableList(Ljava/util/List;)Ljava/util/List;
+
+    move-result-object p1
+
+    goto :goto_1
 
     :cond_2
-    iput-object p1, p0, Lxt6;->w0:Lnv6;
+    const/4 p1, 0x0
 
-    :goto_0
-    monitor-exit v0
+    :goto_1
+    iput-object p1, p0, Lxt6;->i:Ljava/util/List;
+
+    invoke-static {p11}, Ljava/util/Collections;->unmodifiableMap(Ljava/util/Map;)Ljava/util/Map;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lxt6;->j:Ljava/util/Map;
+
+    invoke-static {p12}, Ljava/util/Collections;->unmodifiableList(Ljava/util/List;)Ljava/util/List;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lxt6;->k:Ljava/util/List;
 
     return-void
+.end method
 
-    :cond_3
-    new-instance v1, Lwt6;
+.method public static b(Ljava/util/ArrayList;Ljava/util/List;)V
+    .locals 3
 
-    invoke-direct {v1, p1, p0}, Lwt6;-><init>(Lnv6;Lxt6;)V
+    const/4 v0, 0x0
 
-    iput-object v1, p0, Lxt6;->x0:Lwt6;
+    :goto_0
+    invoke-interface {p1}, Ljava/util/List;->size()I
 
-    invoke-virtual {p0, v1}, Lst6;->b(Lnv6;)Lbm7;
+    move-result v1
 
-    move-result-object p0
+    if-ge v0, v1, :cond_1
 
-    new-instance p1, Lhd7;
-
-    const/16 v2, 0x10
-
-    invoke-direct {p1, v2, v1}, Lhd7;-><init>(ILjava/lang/Object;)V
-
-    invoke-static {}, Lsgg;->n()Lpk4;
+    invoke-interface {p1, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v1
 
-    invoke-static {p0, p1, v1}, Lu7;->e(Lbm7;Ll76;Ljava/util/concurrent/Executor;)V
+    check-cast v1, Ltt6;
 
-    monitor-exit v0
+    iget-object v1, v1, Ltt6;->a:Landroid/net/Uri;
 
+    invoke-virtual {p0, v1}, Ljava/util/ArrayList;->contains(Ljava/lang/Object;)Z
+
+    move-result v2
+
+    if-nez v2, :cond_0
+
+    invoke-virtual {p0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    :cond_0
+    add-int/lit8 v0, v0, 0x1
+
+    goto :goto_0
+
+    :cond_1
     return-void
+.end method
+
+.method public static c(ILjava/util/List;Ljava/util/List;)Ljava/util/ArrayList;
+    .locals 7
+
+    new-instance v0, Ljava/util/ArrayList;
+
+    invoke-interface {p2}, Ljava/util/List;->size()I
+
+    move-result v1
+
+    invoke-direct {v0, v1}, Ljava/util/ArrayList;-><init>(I)V
+
+    const/4 v1, 0x0
+
+    move v2, v1
+
+    :goto_0
+    invoke-interface {p1}, Ljava/util/List;->size()I
+
+    move-result v3
+
+    if-ge v2, v3, :cond_2
+
+    invoke-interface {p1, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object v3
+
+    move v4, v1
 
     :goto_1
-    monitor-exit v0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    invoke-interface {p2}, Ljava/util/List;->size()I
 
-    throw p0
+    move-result v5
+
+    if-ge v4, v5, :cond_1
+
+    invoke-interface {p2, v4}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object v5
+
+    check-cast v5, Lkle;
+
+    iget v6, v5, Lkle;->b:I
+
+    if-ne v6, p0, :cond_0
+
+    iget v5, v5, Lkle;->c:I
+
+    if-ne v5, v2, :cond_0
+
+    invoke-virtual {v0, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    goto :goto_2
+
+    :cond_0
+    add-int/lit8 v4, v4, 0x1
+
+    goto :goto_1
+
+    :cond_1
+    :goto_2
+    add-int/lit8 v2, v2, 0x1
+
+    goto :goto_0
+
+    :cond_2
+    return-object v0
+.end method
+
+
+# virtual methods
+.method public final a(Ljava/util/List;)Ljava/lang/Object;
+    .locals 13
+
+    new-instance v0, Lxt6;
+
+    iget-object v1, p0, Lxt6;->e:Ljava/util/List;
+
+    const/4 v2, 0x0
+
+    invoke-static {v2, v1, p1}, Lxt6;->c(ILjava/util/List;Ljava/util/List;)Ljava/util/ArrayList;
+
+    move-result-object v3
+
+    sget-object v4, Ljava/util/Collections;->EMPTY_LIST:Ljava/util/List;
+
+    iget-object v1, p0, Lxt6;->f:Ljava/util/List;
+
+    const/4 v2, 0x1
+
+    invoke-static {v2, v1, p1}, Lxt6;->c(ILjava/util/List;Ljava/util/List;)Ljava/util/ArrayList;
+
+    move-result-object v5
+
+    iget-object v1, p0, Lxt6;->g:Ljava/util/List;
+
+    const/4 v2, 0x2
+
+    invoke-static {v2, v1, p1}, Lxt6;->c(ILjava/util/List;Ljava/util/List;)Ljava/util/ArrayList;
+
+    move-result-object v6
+
+    iget-object v11, p0, Lxt6;->j:Ljava/util/Map;
+
+    iget-object v12, p0, Lxt6;->k:Ljava/util/List;
+
+    iget-object v1, p0, Lzt6;->a:Ljava/lang/String;
+
+    iget-object v2, p0, Lzt6;->b:Ljava/util/List;
+
+    iget-object v8, p0, Lxt6;->h:Lx46;
+
+    iget-object v9, p0, Lxt6;->i:Ljava/util/List;
+
+    iget-boolean v10, p0, Lzt6;->c:Z
+
+    move-object v7, v4
+
+    invoke-direct/range {v0 .. v12}, Lxt6;-><init>(Ljava/lang/String;Ljava/util/List;Ljava/util/List;Ljava/util/List;Ljava/util/List;Ljava/util/List;Ljava/util/List;Lx46;Ljava/util/List;ZLjava/util/Map;Ljava/util/List;)V
+
+    return-object v0
 .end method

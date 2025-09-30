@@ -1,285 +1,75 @@
 .class public final Lm2d;
-.super Laod;
+.super Lx7g;
 .source "SourceFile"
 
 
-# instance fields
-.field public final X:Lync;
+# static fields
+.field public static final synthetic Y:[Lxi7;
 
-.field public final Y:Ljava/util/concurrent/ExecutorService;
+
+# instance fields
+.field public final X:Lv85;
+
+.field public final b:Lcl7;
+
+.field public final c:Lcl7;
+
+.field public final o:Lncb;
 
 
 # direct methods
-.method public constructor <init>(Lync;Ljava/util/concurrent/ExecutorService;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 4
 
-    invoke-direct {p0, p2}, Laod;-><init>(Ljava/util/concurrent/Executor;)V
+    new-instance v0, Lmo9;
 
-    iput-object p1, p0, Lm2d;->X:Lync;
+    const-string v1, "enableSafeModeJob"
 
-    iput-object p2, p0, Lm2d;->Y:Ljava/util/concurrent/ExecutorService;
+    const-string v2, "getEnableSafeModeJob()Lkotlinx/coroutines/Job;"
 
-    return-void
-.end method
+    const-class v3, Lm2d;
 
+    invoke-direct {v0, v3, v1, v2}, Lmo9;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;)V
 
-# virtual methods
-.method public final H(Lsod;I)V
-    .locals 0
+    sget-object v1, Ljpc;->a:Lkpc;
 
-    check-cast p1, Ll2d;
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    invoke-virtual {p0, p2}, Lhl7;->C(I)Ljava/lang/Object;
+    const/4 v1, 0x1
 
-    move-result-object p0
+    new-array v1, v1, [Lxi7;
 
-    check-cast p0, Lol7;
+    const/4 v2, 0x0
 
-    check-cast p0, Ln86;
+    aput-object v0, v1, v2
 
-    invoke-virtual {p1, p0}, Ll2d;->D(Ln86;)V
+    sput-object v1, Lm2d;->Y:[Lxi7;
 
     return-void
 .end method
 
-.method public final r(Lccc;I)V
+.method public constructor <init>(Lcl7;Lcl7;)V
     .locals 0
 
-    check-cast p1, Ll2d;
+    invoke-direct {p0}, Lx7g;-><init>()V
 
-    invoke-virtual {p0, p2}, Lhl7;->C(I)Ljava/lang/Object;
+    iput-object p1, p0, Lm2d;->b:Lcl7;
 
-    move-result-object p0
+    iput-object p2, p0, Lm2d;->c:Lcl7;
 
-    check-cast p0, Lol7;
-
-    check-cast p0, Ln86;
-
-    invoke-virtual {p1, p0}, Ll2d;->D(Ln86;)V
-
-    return-void
-.end method
-
-.method public final t(Landroid/view/ViewGroup;I)Lccc;
-    .locals 6
-
-    sget p2, Ll2d;->F0:I
-
-    invoke-virtual {p1}, Landroid/view/View;->getContext()Landroid/content/Context;
+    invoke-static {}, Lmq0;->L()Lncb;
 
     move-result-object p1
 
-    new-instance p2, Lone/me/sdk/uikit/common/views/OneMeDraweeView;
+    iput-object p1, p0, Lm2d;->o:Lncb;
 
-    invoke-direct {p2, p1}, Lone/me/sdk/uikit/common/views/OneMeDraweeView;-><init>(Landroid/content/Context;)V
+    new-instance p1, Lv85;
 
-    new-instance v0, Landroid/widget/LinearLayout$LayoutParams;
+    const/4 p2, 0x0
 
-    const/16 v1, 0x2c
+    invoke-direct {p1, p2}, Lv85;-><init>(I)V
 
-    int-to-float v1, v1
+    iput-object p1, p0, Lm2d;->X:Lv85;
 
-    invoke-static {}, Lgk4;->d()Landroid/content/res/Resources;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v2
-
-    iget v2, v2, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v2, v1
-
-    invoke-static {v2}, Lkhg;->x(F)I
-
-    move-result v2
-
-    invoke-static {}, Lgk4;->d()Landroid/content/res/Resources;
-
-    move-result-object v3
-
-    invoke-virtual {v3}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v3
-
-    iget v3, v3, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v1, v3
-
-    invoke-static {v1}, Lkhg;->x(F)I
-
-    move-result v1
-
-    invoke-direct {v0, v2, v1}, Landroid/widget/LinearLayout$LayoutParams;-><init>(II)V
-
-    invoke-virtual {p2, v0}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
-
-    new-instance v0, Lex3;
-
-    invoke-static {}, Lgk4;->d()Landroid/content/res/Resources;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v1
-
-    iget v1, v1, Landroid/util/DisplayMetrics;->density:F
-
-    const/high16 v2, 0x41000000    # 8.0f
-
-    mul-float/2addr v1, v2
-
-    invoke-direct {v0, v1}, Lex3;-><init>(F)V
-
-    invoke-virtual {p2, v0}, Landroid/view/View;->setOutlineProvider(Landroid/view/ViewOutlineProvider;)V
-
-    new-instance v0, Landroidx/appcompat/widget/AppCompatTextView;
-
-    const/4 v1, 0x0
-
-    invoke-direct {v0, p1, v1}, Landroidx/appcompat/widget/AppCompatTextView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
-
-    sget-object v1, Lh4f;->l:Lnoe;
-
-    invoke-static {v1, v0}, Lnoe;->d(Lnoe;Landroid/widget/TextView;)V
-
-    const/16 v1, 0x8
-
-    int-to-float v1, v1
-
-    invoke-static {}, Lgk4;->d()Landroid/content/res/Resources;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v2
-
-    iget v2, v2, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v1, v2
-
-    invoke-static {v1}, Lkhg;->x(F)I
-
-    move-result v1
-
-    invoke-virtual {v0}, Landroid/view/View;->getPaddingTop()I
-
-    move-result v2
-
-    invoke-virtual {v0}, Landroid/view/View;->getPaddingRight()I
-
-    move-result v3
-
-    invoke-virtual {v0}, Landroid/view/View;->getPaddingBottom()I
-
-    move-result v4
-
-    invoke-virtual {v0, v1, v2, v3, v4}, Landroid/view/View;->setPadding(IIII)V
-
-    new-instance v1, Landroid/widget/LinearLayout;
-
-    invoke-direct {v1, p1}, Landroid/widget/LinearLayout;-><init>(Landroid/content/Context;)V
-
-    new-instance p1, Landroid/widget/FrameLayout$LayoutParams;
-
-    const/4 v2, -0x1
-
-    const/4 v3, -0x2
-
-    invoke-direct {p1, v2, v3}, Landroid/widget/FrameLayout$LayoutParams;-><init>(II)V
-
-    invoke-virtual {v1, p1}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
-
-    const/16 p1, 0x10
-
-    invoke-virtual {v1, p1}, Landroid/widget/LinearLayout;->setVerticalGravity(I)V
-
-    const/16 p1, 0xc
-
-    int-to-float p1, p1
-
-    invoke-static {}, Lgk4;->d()Landroid/content/res/Resources;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v2
-
-    iget v2, v2, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v2, p1
-
-    invoke-static {v2}, Lkhg;->x(F)I
-
-    move-result v2
-
-    invoke-static {}, Lgk4;->d()Landroid/content/res/Resources;
-
-    move-result-object v3
-
-    invoke-virtual {v3}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v3
-
-    iget v3, v3, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr p1, v3
-
-    invoke-static {p1}, Lkhg;->x(F)I
-
-    move-result p1
-
-    const/4 v3, 0x6
-
-    int-to-float v3, v3
-
-    invoke-static {}, Lgk4;->d()Landroid/content/res/Resources;
-
-    move-result-object v4
-
-    invoke-virtual {v4}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v4
-
-    iget v4, v4, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v4, v3
-
-    invoke-static {v4}, Lkhg;->x(F)I
-
-    move-result v4
-
-    invoke-static {}, Lgk4;->d()Landroid/content/res/Resources;
-
-    move-result-object v5
-
-    invoke-virtual {v5}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v5
-
-    iget v5, v5, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v3, v5
-
-    invoke-static {v3}, Lkhg;->x(F)I
-
-    move-result v3
-
-    invoke-virtual {v1, v2, v4, p1, v3}, Landroid/view/View;->setPadding(IIII)V
-
-    invoke-virtual {v1, p2}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
-
-    invoke-virtual {v1, v0}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
-
-    new-instance p1, Ll2d;
-
-    iget-object p0, p0, Lm2d;->X:Lync;
-
-    invoke-direct {p1, p0, p2, v0, v1}, Ll2d;-><init>(Lync;Lone/me/sdk/uikit/common/views/OneMeDraweeView;Landroidx/appcompat/widget/AppCompatTextView;Landroid/widget/LinearLayout;)V
-
-    return-object p1
+    return-void
 .end method

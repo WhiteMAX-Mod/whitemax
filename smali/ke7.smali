@@ -1,98 +1,62 @@
-.class public final Lke7;
+.class public abstract Lke7;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Llmb;
-
 
 # static fields
-.field public static final c:Ljava/lang/Object;
-
-
-# instance fields
-.field public volatile a:Ljava/lang/Object;
-
-.field public volatile b:Llmb;
+.field public static final a:Ljava/lang/Integer;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 1
+    .locals 3
 
-    new-instance v0, Ljava/lang/Object;
-
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    sput-object v0, Lke7;->c:Ljava/lang/Object;
-
-    return-void
-.end method
-
-.method public constructor <init>(Llmb;)V
-    .locals 1
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    sget-object v0, Lke7;->c:Ljava/lang/Object;
-
-    iput-object v0, p0, Lke7;->a:Ljava/lang/Object;
-
-    iput-object p1, p0, Lke7;->b:Llmb;
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final get()Ljava/lang/Object;
-    .locals 2
-
-    iget-object v0, p0, Lke7;->a:Ljava/lang/Object;
-
-    sget-object v1, Lke7;->c:Ljava/lang/Object;
-
-    if-ne v0, v1, :cond_1
-
-    monitor-enter p0
+    const/4 v0, 0x0
 
     :try_start_0
-    iget-object v0, p0, Lke7;->a:Ljava/lang/Object;
+    const-string v1, "android.os.Build$VERSION"
 
-    if-ne v0, v1, :cond_0
+    invoke-static {v1}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
 
-    iget-object v0, p0, Lke7;->b:Llmb;
+    move-result-object v1
 
-    invoke-interface {v0}, Llmb;->get()Ljava/lang/Object;
+    const-string v2, "SDK_INT"
 
-    move-result-object v0
+    invoke-virtual {v1, v2}, Ljava/lang/Class;->getField(Ljava/lang/String;)Ljava/lang/reflect/Field;
 
-    iput-object v0, p0, Lke7;->a:Ljava/lang/Object;
+    move-result-object v1
 
-    const/4 v1, 0x0
+    invoke-virtual {v1, v0}, Ljava/lang/reflect/Field;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
-    iput-object v1, p0, Lke7;->b:Llmb;
+    move-result-object v1
+
+    instance-of v2, v1, Ljava/lang/Integer;
+
+    if-eqz v2, :cond_0
+
+    check-cast v1, Ljava/lang/Integer;
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     goto :goto_0
 
     :catchall_0
-    move-exception v0
-
-    goto :goto_1
-
     :cond_0
+    move-object v1, v0
+
     :goto_0
-    monitor-exit p0
+    if-eqz v1, :cond_1
 
-    return-object v0
+    invoke-virtual {v1}, Ljava/lang/Number;->intValue()I
 
-    :goto_1
-    monitor-exit p0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    move-result v2
 
-    throw v0
+    if-lez v2, :cond_1
+
+    move-object v0, v1
 
     :cond_1
-    return-object v0
+    sput-object v0, Lke7;->a:Ljava/lang/Integer;
+
+    return-void
 .end method

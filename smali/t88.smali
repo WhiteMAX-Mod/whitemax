@@ -1,35 +1,45 @@
-.class public final Lt88;
+.class public interface abstract Lt88;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-
-# instance fields
-.field public final a:I
-
-.field public final b:Lu20;
-
-.field public final c:I
-
-.field public final d:I
-
-.field public final e:I
+# interfaces
+.implements Luj6;
 
 
-# direct methods
-.method public constructor <init>(ILu20;III)V
+# virtual methods
+.method public a(Landroid/content/Context;Z)Lbk6;
+    .locals 1
+
+    invoke-static {p0}, Ll37;->m(Ljava/lang/Object;)Llqc;
+
+    move-result-object p0
+
+    sget-object v0, Llqc;->X:Llqc;
+
+    invoke-static {p1, p0, v0, p2}, Lxh4;->h(Landroid/content/Context;Llqc;Llqc;Z)Lxh4;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public abstract b()Landroid/graphics/Matrix;
+.end method
+
+.method public c()I
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/16 p0, 0x2601
 
-    iput p1, p0, Lt88;->a:I
+    return p0
+.end method
 
-    iput-object p2, p0, Lt88;->b:Lu20;
+.method public e(II)Lk4e;
+    .locals 0
 
-    iput p3, p0, Lt88;->c:I
+    new-instance p0, Lk4e;
 
-    iput p4, p0, Lt88;->d:I
+    invoke-direct {p0, p1, p2}, Lk4e;-><init>(II)V
 
-    iput p5, p0, Lt88;->e:I
-
-    return-void
+    return-object p0
 .end method

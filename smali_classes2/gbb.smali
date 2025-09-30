@@ -1,135 +1,151 @@
 .class public final Lgbb;
-.super Lqde;
+.super Lspb;
 .source "SourceFile"
-
-# interfaces
-.implements Ll66;
 
 
 # instance fields
-.field public final synthetic X:Lpbb;
+.field public final synthetic E0:I
 
 
 # direct methods
-.method public constructor <init>(Lpbb;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(Landroid/content/Context;)V
+    .locals 1
+
+    const/4 v0, 0x1
+
+    iput v0, p0, Lgbb;->E0:I
+
+    .line 2
+    new-instance v0, Landroid/widget/TextView;
+
+    invoke-direct {v0, p1}, Landroid/widget/TextView;-><init>(Landroid/content/Context;)V
+
+    .line 3
+    invoke-direct {p0, v0}, Lzoc;-><init>(Landroid/view/View;)V
+
+    .line 4
+    new-instance p0, Landroid/view/ViewGroup$LayoutParams;
+
+    const/4 p1, -0x2
+
+    invoke-direct {p0, p1, p1}, Landroid/view/ViewGroup$LayoutParams;-><init>(II)V
+
+    invoke-virtual {v0, p0}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+
+    return-void
+.end method
+
+.method public synthetic constructor <init>(Landroid/view/View;I)V
     .locals 0
 
-    iput-object p1, p0, Lgbb;->X:Lpbb;
+    .line 1
+    iput p2, p0, Lgbb;->E0:I
 
-    const/4 p1, 0x2
-
-    invoke-direct {p0, p1, p2}, Lqde;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0, p1}, Lzoc;-><init>(Landroid/view/View;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
-
-    check-cast p1, Lox3;
-
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Lgbb;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p0
-
-    check-cast p0, Lgbb;
-
-    sget-object p1, Le5f;->a:Le5f;
-
-    invoke-virtual {p0, p1}, Lgbb;->o(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p1
-.end method
-
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 0
-
-    new-instance p1, Lgbb;
-
-    iget-object p0, p0, Lgbb;->X:Lpbb;
-
-    invoke-direct {p1, p0, p2}, Lgbb;-><init>(Lpbb;Lkotlin/coroutines/Continuation;)V
-
-    return-object p1
-.end method
-
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final y(Lts7;)V
     .locals 4
 
-    invoke-static {p1}, Lsgg;->Z(Ljava/lang/Object;)V
+    iget v0, p0, Lgbb;->E0:I
 
-    sget-object p1, Lpbb;->C0:[Lbc7;
+    const/4 v1, 0x0
 
-    iget-object p0, p0, Lgbb;->X:Lpbb;
+    const-string v2, ""
 
-    iget-object p1, p0, Lpbb;->t0:Lje7;
+    iget-object p0, p0, Lzoc;->a:Landroid/view/View;
 
-    invoke-interface {p1}, Lje7;->getValue()Ljava/lang/Object;
+    packed-switch v0, :pswitch_data_0
 
-    move-result-object p1
+    check-cast p1, Lpyd;
 
-    check-cast p1, Lh23;
+    return-void
 
-    check-cast p1, Lmwc;
+    :pswitch_0
+    check-cast p1, Lqcd;
 
-    invoke-virtual {p1}, Lmwc;->p()J
+    check-cast p0, Landroid/widget/TextView;
 
-    move-result-wide v0
+    iget-object v0, p1, Lqcd;->a:Lu2f;
 
-    iget-wide v2, p0, Lpbb;->c:J
+    invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
 
-    cmp-long p1, v0, v2
+    move-result-object v3
 
-    sget-object v0, Le5f;->a:Le5f;
+    invoke-virtual {v0, v3}, Lu2f;->b(Landroid/content/Context;)Ljava/lang/CharSequence;
 
-    if-nez p1, :cond_0
+    move-result-object v0
 
-    sget p1, Lmca;->g1:I
+    if-nez v0, :cond_0
 
-    new-instance v1, Lhoe;
-
-    invoke-direct {v1, p1}, Lhoe;-><init>(I)V
-
-    iget-object p0, p0, Lpbb;->y0:Lj35;
-
-    new-instance p1, Ltab;
-
-    const/4 v2, 0x0
-
-    invoke-direct {p1, v1, v2}, Ltab;-><init>(Lmoe;Ljava/lang/Integer;)V
-
-    invoke-static {p0, p1}, Ljof;->o(Lj35;Ljava/lang/Object;)V
-
-    return-object v0
+    goto :goto_0
 
     :cond_0
-    iget-object p0, p0, Lpbb;->x0:Lj35;
+    move-object v2, v0
 
-    sget-object p1, Lpcb;->c:Lpcb;
+    :goto_0
+    invoke-virtual {p0, v2}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    new-instance v0, Lhqc;
 
-    new-instance p1, Ljava/lang/StringBuilder;
+    const/4 v2, 0x1
 
-    const-string v1, ":profile?id="
+    invoke-direct {v0, p1, v1, v2}, Lhqc;-><init>(Ljava/lang/Object;Lkotlin/coroutines/Continuation;I)V
 
-    invoke-direct {p1, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-static {v0, p0}, Ljs9;->t(Lrc6;Landroid/view/View;)V
 
-    invoke-virtual {p1, v2, v3}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    sget-object v0, Lclf;->a:Lv2f;
 
-    const-string v1, "&type=contact"
+    iget-object p1, p1, Lqcd;->c:Lv2f;
 
-    invoke-virtual {p1, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {p1, p0}, Lv2f;->d(Lv2f;Landroid/widget/TextView;)V
 
-    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    return-void
+
+    :pswitch_1
+    check-cast p1, Lnbb;
+
+    check-cast p0, Landroid/widget/TextView;
+
+    iget-object p1, p1, Lnbb;->a:Lp2f;
+
+    invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
+
+    move-result-object v0
+
+    invoke-virtual {p1, v0}, Lu2f;->b(Landroid/content/Context;)Ljava/lang/CharSequence;
 
     move-result-object p1
 
-    invoke-static {p1, p0}, Lpg0;->l(Ljava/lang/String;Lj35;)V
+    if-nez p1, :cond_1
 
-    return-object v0
+    goto :goto_1
+
+    :cond_1
+    move-object v2, p1
+
+    :goto_1
+    invoke-virtual {p0, v2}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+
+    new-instance p1, Lt9;
+
+    const/4 v0, 0x3
+
+    const/16 v2, 0x15
+
+    invoke-direct {p1, v0, v1, v2}, Lt9;-><init>(ILkotlin/coroutines/Continuation;I)V
+
+    invoke-static {p1, p0}, Ljs9;->t(Lrc6;Landroid/view/View;)V
+
+    return-void
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

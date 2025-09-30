@@ -1,193 +1,142 @@
-.class public final synthetic Lg82;
-.super Ljava/lang/Object;
+.class public final Lg82;
+.super Lure;
 .source "SourceFile"
 
 # interfaces
-.implements Ljj3;
+.implements Lpc6;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public X:I
 
-.field public final synthetic b:J
+.field public synthetic Y:Ljava/lang/Object;
 
-.field public final synthetic c:J
+.field public final synthetic Z:Liic;
 
-.field public final synthetic o:Ljava/lang/Object;
+.field public final synthetic r0:Lj82;
+
+.field public final synthetic s0:J
 
 
 # direct methods
-.method public synthetic constructor <init>(JLjava/lang/String;J)V
-    .locals 1
+.method public constructor <init>(Liic;Lkotlin/coroutines/Continuation;Lj82;J)V
+    .locals 0
 
-    .line 1
-    const/4 v0, 0x0
+    iput-object p1, p0, Lg82;->Z:Liic;
 
-    iput v0, p0, Lg82;->a:I
+    iput-object p3, p0, Lg82;->r0:Lj82;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-wide p4, p0, Lg82;->s0:J
 
-    iput-wide p1, p0, Lg82;->b:J
+    const/4 p1, 0x2
 
-    iput-object p3, p0, Lg82;->o:Ljava/lang/Object;
-
-    iput-wide p4, p0, Lg82;->c:J
-
-    return-void
-.end method
-
-.method public synthetic constructor <init>(Lxs8;JJ)V
-    .locals 1
-
-    .line 2
-    const/4 v0, 0x1
-
-    iput v0, p0, Lg82;->a:I
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lg82;->o:Ljava/lang/Object;
-
-    iput-wide p2, p0, Lg82;->b:J
-
-    iput-wide p4, p0, Lg82;->c:J
+    invoke-direct {p0, p1, p2}, Lure;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final accept(Ljava/lang/Object;)V
-    .locals 11
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    iget v0, p0, Lg82;->a:I
+    check-cast p1, Lks5;
 
-    packed-switch v0, :pswitch_data_0
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    iget-object v0, p0, Lg82;->o:Ljava/lang/Object;
-
-    check-cast v0, Lxs8;
-
-    check-cast p1, Lx00;
-
-    iget-object v0, v0, Lxs8;->c:Lx4b;
-
-    iget-object v1, p1, Lx00;->e:Lw00;
-
-    if-eqz v1, :cond_4
-
-    iget-wide v1, p0, Lg82;->c:J
-
-    const-wide/16 v3, 0x0
-
-    cmp-long v5, v1, v3
-
-    if-nez v5, :cond_0
-
-    goto :goto_1
-
-    :cond_0
-    check-cast v0, La5b;
-
-    iget-object v0, v0, La5b;->b:Le6d;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    sget-object v5, Lru/ok/tamtam/android/prefs/PmsKey;->min-duration-save-audio-start-time:Lru/ok/tamtam/android/prefs/PmsKey;
-
-    const/16 v6, 0x14
-
-    int-to-long v6, v6
-
-    invoke-virtual {v0, v5, v6, v7}, Lvwc;->n(Ljava/lang/Enum;J)J
-
-    move-result-wide v5
-
-    long-to-int v0, v5
-
-    int-to-long v5, v0
-
-    cmp-long v0, v1, v5
-
-    if-gez v0, :cond_1
-
-    goto :goto_1
-
-    :cond_1
-    iget-wide v5, p0, Lg82;->b:J
-
-    sub-long v7, v1, v5
-
-    const-wide/16 v9, 0xbb8
-
-    cmp-long p0, v7, v9
-
-    if-gtz p0, :cond_2
-
-    goto :goto_0
-
-    :cond_2
-    move-wide v3, v5
-
-    :goto_0
-    iget-object p0, p1, Lx00;->e:Lw00;
-
-    if-nez p0, :cond_3
-
-    sget-object p0, Lw00;->j:Lw00;
-
-    :cond_3
-    invoke-virtual {p0}, Lw00;->a()Lv00;
+    invoke-virtual {p0, p1, p2}, Lg82;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
     move-result-object p0
 
-    iput-wide v3, p0, Lv00;->g:J
+    check-cast p0, Lg82;
 
-    iput-wide v1, p0, Lv00;->c:J
+    sget-object p1, Lylf;->a:Lylf;
 
-    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+    invoke-virtual {p0, p1}, Lg82;->o(Ljava/lang/Object;)Ljava/lang/Object;
 
-    move-result-wide v0
+    move-result-object p0
 
-    iput-wide v0, p0, Lv00;->h:J
+    return-object p0
+.end method
 
-    new-instance v0, Lw00;
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 6
 
-    invoke-direct {v0, p0}, Lw00;-><init>(Lv00;)V
+    new-instance v0, Lg82;
 
-    iput-object v0, p1, Lx00;->e:Lw00;
+    iget-object v3, p0, Lg82;->r0:Lj82;
 
-    :cond_4
-    :goto_1
-    return-void
+    iget-wide v4, p0, Lg82;->s0:J
 
-    :pswitch_0
-    iget-object v0, p0, Lg82;->o:Ljava/lang/Object;
+    iget-object v1, p0, Lg82;->Z:Liic;
 
-    move-object v4, v0
+    move-object v2, p2
 
-    check-cast v4, Ljava/lang/String;
+    invoke-direct/range {v0 .. v5}, Lg82;-><init>(Liic;Lkotlin/coroutines/Continuation;Lj82;J)V
 
-    check-cast p1, Ls82;
+    iput-object p1, v0, Lg82;->Y:Ljava/lang/Object;
 
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    return-object v0
+.end method
 
-    new-instance v1, Le92;
+.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 5
 
-    iget-wide v2, p0, Lg82;->c:J
+    iget v0, p0, Lg82;->X:I
 
-    iget-wide v5, p0, Lg82;->b:J
+    const/4 v1, 0x1
 
-    invoke-direct/range {v1 .. v6}, Le92;-><init>(JLjava/lang/String;J)V
+    if-eqz v0, :cond_1
 
-    iput-object v1, p1, Ls82;->m0:Le92;
+    if-ne v0, v1, :cond_0
 
-    return-void
+    invoke-static {p1}, Lqe5;->V(Ljava/lang/Object;)V
 
-    nop
+    goto :goto_0
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    :cond_0
+    new-instance p0, Ljava/lang/IllegalStateException;
+
+    const-string p1, "call to \'resume\' before \'invoke\' with coroutine"
+
+    invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p0
+
+    :cond_1
+    invoke-static {p1}, Lqe5;->V(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Lg82;->Y:Ljava/lang/Object;
+
+    check-cast p1, Lks5;
+
+    new-instance v0, Lf82;
+
+    iget-object v2, p0, Lg82;->r0:Lj82;
+
+    iget-wide v3, p0, Lg82;->s0:J
+
+    invoke-direct {v0, p1, v2, v3, v4}, Lf82;-><init>(Lks5;Lj82;J)V
+
+    iput v1, p0, Lg82;->X:I
+
+    iget-object p1, p0, Lg82;->Z:Liic;
+
+    iget-object p1, p1, Liic;->a:Lrce;
+
+    invoke-interface {p1, v0, p0}, Lis5;->d(Lks5;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p0
+
+    sget-object p1, Lz04;->a:Lz04;
+
+    if-ne p0, p1, :cond_2
+
+    return-object p1
+
+    :cond_2
+    :goto_0
+    sget-object p0, Lylf;->a:Lylf;
+
+    return-object p0
 .end method

@@ -1,68 +1,60 @@
-.class public final synthetic Luf4;
+.class public final Luf4;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lyff;
+.implements Lb74;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final a:Lzxc;
 
-.field public final synthetic b:Lyf4;
+.field public b:Ljava/lang/String;
 
-.field public final synthetic c:Lr36;
+.field public final c:I
+
+.field public final d:I
 
 
 # direct methods
-.method public synthetic constructor <init>(Lyf4;Lr36;I)V
-    .locals 0
-
-    iput p3, p0, Luf4;->a:I
-
-    iput-object p1, p0, Luf4;->b:Lyf4;
-
-    iput-object p2, p0, Luf4;->c:Lr36;
+.method public constructor <init>()V
+    .locals 2
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    new-instance v0, Lzxc;
+
+    const/16 v1, 0x15
+
+    invoke-direct {v0, v1}, Lzxc;-><init>(I)V
+
+    iput-object v0, p0, Luf4;->a:Lzxc;
+
+    const/16 v0, 0x1f40
+
+    iput v0, p0, Luf4;->c:I
+
+    iput v0, p0, Luf4;->d:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
-    .locals 2
+.method public final a()Ld74;
+    .locals 4
 
-    iget v0, p0, Luf4;->a:I
+    new-instance v0, Lyf4;
 
-    packed-switch v0, :pswitch_data_0
+    iget-object v1, p0, Luf4;->b:Ljava/lang/String;
 
-    iget-object v0, p0, Luf4;->c:Lr36;
+    iget v2, p0, Luf4;->d:I
 
-    const/4 v1, 0x0
+    iget-object v3, p0, Luf4;->a:Lzxc;
 
-    iget-object p0, p0, Luf4;->b:Lyf4;
+    iget p0, p0, Luf4;->c:I
 
-    invoke-virtual {p0, v0, v1}, Lyf4;->a(Lr36;Z)V
+    invoke-direct {v0, v1, p0, v2, v3}, Lyf4;-><init>(Ljava/lang/String;IILzxc;)V
 
-    return-void
-
-    :pswitch_0
-    iget-object v0, p0, Luf4;->c:Lr36;
-
-    const/4 v1, 0x1
-
-    iget-object p0, p0, Luf4;->b:Lyf4;
-
-    invoke-virtual {p0, v0, v1}, Lyf4;->a(Lr36;Z)V
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-object v0
 .end method

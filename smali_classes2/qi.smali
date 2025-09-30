@@ -1,53 +1,29 @@
 .class public final Lqi;
-.super Lbu3;
+.super Lrjc;
 .source "SourceFile"
 
 
-# instance fields
-.field public X:Lx4c;
-
-.field public synthetic Y:Ljava/lang/Object;
-
-.field public final synthetic Z:Lzi;
-
-.field public o:Lzi;
-
-.field public o0:I
-
-
 # direct methods
-.method public constructor <init>(Lzi;Lbu3;)V
-    .locals 0
+.method public constructor <init>()V
+    .locals 3
 
-    iput-object p1, p0, Lqi;->Z:Lzi;
+    .line 1
+    sget-object v0, Ldkc;->b:Ldkc;
 
-    invoke-direct {p0, p2}, Lbu3;-><init>(Lkotlin/coroutines/Continuation;)V
+    const-wide/16 v1, 0x0
+
+    invoke-direct {p0, v0, v1, v2}, Lrjc;-><init>(Ldkc;J)V
 
     return-void
 .end method
 
-
-# virtual methods
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
+.method public constructor <init>(J)V
     .locals 1
 
-    iput-object p1, p0, Lqi;->Y:Ljava/lang/Object;
+    .line 2
+    sget-object v0, Ldkc;->Y:Ldkc;
 
-    iget p1, p0, Lqi;->o0:I
+    invoke-direct {p0, v0, p1, p2}, Lrjc;-><init>(Ldkc;J)V
 
-    const/high16 v0, -0x80000000
-
-    or-int/2addr p1, v0
-
-    iput p1, p0, Lqi;->o0:I
-
-    iget-object p1, p0, Lqi;->Z:Lzi;
-
-    const/4 v0, 0x0
-
-    invoke-virtual {p1, v0, p0}, Lzi;->f(Lx4c;Lbu3;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    return-object p0
+    return-void
 .end method

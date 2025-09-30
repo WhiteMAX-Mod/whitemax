@@ -1,183 +1,117 @@
-.class public final enum Lwd5;
-.super Ljava/lang/Enum;
+.class public final Lwd5;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final enum X:Lwd5;
-
-.field public static final enum Y:Lwd5;
-
-.field public static final enum Z:Lwd5;
-
-.field public static final b:[Lwd5;
-
-.field public static final enum c:Lwd5;
-
-.field public static final enum o:Lwd5;
-
-.field public static final enum o0:Lwd5;
-
-.field public static final enum p0:Lwd5;
-
-.field public static final enum q0:Lwd5;
-
-.field public static final synthetic r0:[Lwd5;
-
-
 # instance fields
-.field public final a:Ljava/lang/String;
+.field public final a:J
+
+.field public final b:F
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 11
+.method public constructor <init>(I)V
+    .locals 4
 
-    new-instance v0, Lwd5;
+    and-int/lit8 v0, p1, 0x1
 
-    const/4 v1, 0x0
+    if-eqz v0, :cond_0
 
-    const-string v2, "Message"
+    const-wide/16 v0, 0x1f4
 
-    const-string v3, "MESSAGE"
+    goto :goto_0
 
-    invoke-direct {v0, v3, v1, v2}, Lwd5;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+    :cond_0
+    const-wide/16 v0, 0x3e8
 
-    sput-object v0, Lwd5;->c:Lwd5;
+    :goto_0
+    and-int/lit8 p1, p1, 0x4
 
-    new-instance v1, Lwd5;
+    if-eqz p1, :cond_1
 
-    const/4 v2, 0x1
+    const/high16 p1, 0x3fc00000    # 1.5f
 
-    const-string v3, "ChatMessage"
+    goto :goto_1
 
-    const-string v4, "CHAT_MESSAGE"
+    :cond_1
+    const/high16 p1, 0x40000000    # 2.0f
 
-    invoke-direct {v1, v4, v2, v3}, Lwd5;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+    :goto_1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    sput-object v1, Lwd5;->o:Lwd5;
+    iput-wide v0, p0, Lwd5;->a:J
 
-    new-instance v2, Lwd5;
+    iput p1, p0, Lwd5;->b:F
 
-    const/4 v3, 0x2
+    const-wide/16 v2, 0x1
 
-    const-string v4, "ChatMessage-channel"
+    cmp-long p0, v0, v2
 
-    const-string v5, "CHANNEL_MESSAGE"
+    if-ltz p0, :cond_5
 
-    invoke-direct {v2, v5, v3, v4}, Lwd5;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+    const-wide/16 v2, 0x7530
 
-    sput-object v2, Lwd5;->X:Lwd5;
+    cmp-long p0, v2, v0
 
-    new-instance v3, Lwd5;
+    if-ltz p0, :cond_4
 
-    const/4 v4, 0x3
+    float-to-double p0, p1
 
-    const-string v5, "ChatSystemMessage"
+    const-wide/high16 v0, 0x3ff0000000000000L    # 1.0
 
-    const-string v6, "CHAT_SYSTEM_MESSAGE"
+    cmpl-double p0, p0, v0
 
-    invoke-direct {v3, v6, v4, v5}, Lwd5;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+    if-ltz p0, :cond_3
 
-    sput-object v3, Lwd5;->Y:Lwd5;
+    const p0, 0x3e4ccccd    # 0.2f
 
-    new-instance v4, Lwd5;
+    float-to-double p0, p0
 
-    const/4 v5, 0x4
+    const-wide/16 v2, 0x0
 
-    const-string v6, "ChatReply"
+    cmpg-double v2, p0, v2
 
-    const-string v7, "CHAT_REPLY"
+    if-ltz v2, :cond_2
 
-    invoke-direct {v4, v7, v5, v6}, Lwd5;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+    cmpg-double p0, v0, p0
 
-    sput-object v4, Lwd5;->Z:Lwd5;
-
-    new-instance v5, Lwd5;
-
-    const/4 v6, 0x5
-
-    const-string v7, "GroupChat"
-
-    const-string v8, "GROUP_CHAT"
-
-    invoke-direct {v5, v8, v6, v7}, Lwd5;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v5, Lwd5;->o0:Lwd5;
-
-    new-instance v6, Lwd5;
-
-    const/4 v7, 0x6
-
-    const-string v8, "Scheduled"
-
-    const-string v9, "SCHEDULED"
-
-    invoke-direct {v6, v9, v7, v8}, Lwd5;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v6, Lwd5;->p0:Lwd5;
-
-    new-instance v7, Lwd5;
-
-    const/4 v8, 0x7
-
-    const-string v9, "Unknown"
-
-    const-string v10, "UNKNOWN"
-
-    invoke-direct {v7, v10, v8, v9}, Lwd5;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v7, Lwd5;->q0:Lwd5;
-
-    filled-new-array/range {v0 .. v7}, [Lwd5;
-
-    move-result-object v0
-
-    sput-object v0, Lwd5;->r0:[Lwd5;
-
-    invoke-static {}, Lwd5;->values()[Lwd5;
-
-    move-result-object v0
-
-    sput-object v0, Lwd5;->b:[Lwd5;
+    if-lez p0, :cond_2
 
     return-void
-.end method
 
-.method public constructor <init>(Ljava/lang/String;ILjava/lang/String;)V
-    .locals 0
+    :cond_2
+    new-instance p0, Ljava/lang/IllegalArgumentException;
 
-    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    const-string p1, "Range is invalid. Must be greater or equal 0.0 and lower than 1.0."
 
-    iput-object p3, p0, Lwd5;->a:Ljava/lang/String;
+    invoke-direct {p0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
-    return-void
-.end method
+    throw p0
 
-.method public static valueOf(Ljava/lang/String;)Lwd5;
-    .locals 1
+    :cond_3
+    new-instance p0, Ljava/lang/IllegalArgumentException;
 
-    const-class v0, Lwd5;
+    const-string p1, "Multiplier is invalid. Must be greater than 1.0."
 
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+    invoke-direct {p0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
-    move-result-object p0
+    throw p0
 
-    check-cast p0, Lwd5;
+    :cond_4
+    new-instance p0, Ljava/lang/IllegalArgumentException;
 
-    return-object p0
-.end method
+    const-string p1, "maxInterval is invalid. Must be greater or equal than Interval."
 
-.method public static values()[Lwd5;
-    .locals 1
+    invoke-direct {p0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
-    sget-object v0, Lwd5;->r0:[Lwd5;
+    throw p0
 
-    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
+    :cond_5
+    new-instance p0, Ljava/lang/IllegalArgumentException;
 
-    move-result-object v0
+    const-string p1, "Interval is invalid. Must be greater than 1."
 
-    check-cast v0, [Lwd5;
+    invoke-direct {p0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
-    return-object v0
+    throw p0
 .end method

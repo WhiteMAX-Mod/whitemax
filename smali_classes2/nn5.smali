@@ -1,50 +1,53 @@
-.class public final Lnn5;
-.super Lbu3;
+.class public interface abstract Lnn5;
+.super Ljava/lang/Object;
+.source "SourceFile"
 
 
-# instance fields
-.field public X:I
-
-.field public Y:Ljava/lang/Object;
-
-.field public Z:Lbn5;
-
-.field public synthetic o:Ljava/lang/Object;
-
-.field public final synthetic o0:Ltb;
+# static fields
+.field public static final a:[Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>(Ltb;Lkotlin/coroutines/Continuation;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 9
 
-    iput-object p1, p0, Lnn5;->o0:Ltb;
+    const-string v7, "/exo_files_cache/"
 
-    invoke-direct {p0, p2}, Lbu3;-><init>(Lkotlin/coroutines/Continuation;)V
+    const-string v8, "/font/"
+
+    const-string v0, "/videoCache/"
+
+    const-string v1, "/previewVideoCache/"
+
+    const-string v2, "/stickerCache/"
+
+    const-string v3, "/upload/"
+
+    const-string v4, "/imageCache/"
+
+    const-string v5, "/audioCache/"
+
+    const-string v6, "/gifCache/"
+
+    filled-new-array/range {v0 .. v8}, [Ljava/lang/String;
+
+    move-result-object v0
+
+    sput-object v0, Lnn5;->a:[Ljava/lang/String;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
+.method public a(Ljava/lang/String;)Ljava/io/File;
     .locals 1
-
-    iput-object p1, p0, Lnn5;->o:Ljava/lang/Object;
-
-    iget p1, p0, Lnn5;->X:I
-
-    const/high16 v0, -0x80000000
-
-    or-int/2addr p1, v0
-
-    iput p1, p0, Lnn5;->X:I
-
-    iget-object p1, p0, Lnn5;->o0:Ltb;
 
     const/4 v0, 0x0
 
-    invoke-virtual {p1, v0, p0}, Ltb;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    check-cast p0, Lcp5;
+
+    invoke-virtual {p0, v0, p1}, Lcp5;->o(Ljava/lang/String;Ljava/lang/String;)Ljava/io/File;
 
     move-result-object p0
 

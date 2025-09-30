@@ -1,55 +1,55 @@
-.class public abstract Lft9;
+.class public final Lft9;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
+# instance fields
+.field public final a:Ln9g;
+
+.field public final b:Lr9e;
+
+.field public final c:Lcoc;
+
+.field public final d:Lze3;
+
+.field public e:I
+
+.field public final f:Ls45;
+
+
 # direct methods
-.method public static a(Landroid/app/Notification$Action$Builder;Z)Landroid/app/Notification$Action$Builder;
-    .locals 0
+.method public constructor <init>(Lcoc;Lze3;Lo9g;Lr9e;)V
+    .locals 2
 
-    invoke-virtual {p0, p1}, Landroid/app/Notification$Action$Builder;->setAllowGeneratedReplies(Z)Landroid/app/Notification$Action$Builder;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    move-result-object p0
+    new-instance v0, Ls45;
 
-    return-object p0
-.end method
+    const/4 v1, 0x4
 
-.method public static b(Landroid/app/Notification$Builder;Landroid/widget/RemoteViews;)Landroid/app/Notification$Builder;
-    .locals 0
+    invoke-direct {v0, v1, p0}, Ls45;-><init>(ILjava/lang/Object;)V
 
-    invoke-virtual {p0, p1}, Landroid/app/Notification$Builder;->setCustomBigContentView(Landroid/widget/RemoteViews;)Landroid/app/Notification$Builder;
+    iput-object v0, p0, Lft9;->f:Ls45;
 
-    move-result-object p0
+    iput-object p1, p0, Lft9;->c:Lcoc;
 
-    return-object p0
-.end method
+    iput-object p2, p0, Lft9;->d:Lze3;
 
-.method public static c(Landroid/app/Notification$Builder;Landroid/widget/RemoteViews;)Landroid/app/Notification$Builder;
-    .locals 0
+    invoke-interface {p3, p0}, Lo9g;->e(Lft9;)Ln9g;
 
-    invoke-virtual {p0, p1}, Landroid/app/Notification$Builder;->setCustomContentView(Landroid/widget/RemoteViews;)Landroid/app/Notification$Builder;
+    move-result-object p2
 
-    move-result-object p0
+    iput-object p2, p0, Lft9;->a:Ln9g;
 
-    return-object p0
-.end method
+    iput-object p4, p0, Lft9;->b:Lr9e;
 
-.method public static d(Landroid/app/Notification$Builder;Landroid/widget/RemoteViews;)Landroid/app/Notification$Builder;
-    .locals 0
+    invoke-virtual {p1}, Lcoc;->j()I
 
-    invoke-virtual {p0, p1}, Landroid/app/Notification$Builder;->setCustomHeadsUpContentView(Landroid/widget/RemoteViews;)Landroid/app/Notification$Builder;
+    move-result p2
 
-    move-result-object p0
+    iput p2, p0, Lft9;->e:I
 
-    return-object p0
-.end method
+    invoke-virtual {p1, v0}, Lcoc;->z(Leoc;)V
 
-.method public static e(Landroid/app/Notification$Builder;[Ljava/lang/CharSequence;)Landroid/app/Notification$Builder;
-    .locals 0
-
-    invoke-virtual {p0, p1}, Landroid/app/Notification$Builder;->setRemoteInputHistory([Ljava/lang/CharSequence;)Landroid/app/Notification$Builder;
-
-    move-result-object p0
-
-    return-object p0
+    return-void
 .end method

@@ -1,843 +1,510 @@
 .class public final Lbc3;
-.super Lgbc;
+.super Lvx3;
 .source "SourceFile"
 
 
 # instance fields
-.field public final o:Lcc3;
+.field public final synthetic a:I
+
+.field public final b:Ljava/lang/Object;
 
 
 # direct methods
-.method public varargs constructor <init>(Lac3;[Lgbc;)V
-    .locals 2
+.method public synthetic constructor <init>(ILjava/lang/Object;)V
+    .locals 0
 
-    .line 2
-    invoke-static {p2}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
+    iput p1, p0, Lbc3;->a:I
 
-    move-result-object p2
+    iput-object p2, p0, Lbc3;->b:Ljava/lang/Object;
 
-    .line 3
-    invoke-direct {p0}, Lgbc;-><init>()V
-
-    .line 4
-    new-instance v0, Lcc3;
-
-    invoke-direct {v0, p0, p1}, Lcc3;-><init>(Lbc3;Lac3;)V
-
-    iput-object v0, p0, Lbc3;->o:Lcc3;
-
-    .line 5
-    invoke-interface {p2}, Ljava/util/List;->iterator()Ljava/util/Iterator;
-
-    move-result-object p1
-
-    :goto_0
-    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result p2
-
-    if-eqz p2, :cond_0
-
-    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object p2
-
-    check-cast p2, Lgbc;
-
-    .line 6
-    iget-object v0, p0, Lbc3;->o:Lcc3;
-
-    .line 7
-    iget-object v1, v0, Lcc3;->d:Ljava/util/ArrayList;
-
-    .line 8
-    invoke-virtual {v1}, Ljava/util/ArrayList;->size()I
-
-    move-result v1
-
-    invoke-virtual {v0, v1, p2}, Lcc3;->a(ILgbc;)Z
-
-    goto :goto_0
-
-    .line 9
-    :cond_0
-    iget-object p1, p0, Lbc3;->o:Lcc3;
-
-    .line 10
-    iget p1, p1, Lcc3;->b:I
-
-    const/4 p2, 0x1
-
-    if-eq p1, p2, :cond_1
-
-    goto :goto_1
-
-    :cond_1
-    const/4 p2, 0x0
-
-    .line 11
-    :goto_1
-    invoke-virtual {p0, p2}, Lgbc;->A(Z)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
-.method public varargs constructor <init>([Lgbc;)V
-    .locals 1
-
-    .line 1
-    sget-object v0, Lac3;->c:Lac3;
-
-    invoke-direct {p0, v0, p1}, Lbc3;-><init>(Lac3;[Lgbc;)V
+.method private final u(Lxx3;)V
+    .locals 0
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final C()Ljava/util/List;
-    .locals 2
+.method public d(Lxx3;)V
+    .locals 0
 
-    iget-object p0, p0, Lbc3;->o:Lcc3;
+    iget p1, p0, Lbc3;->a:I
 
-    iget-object p0, p0, Lcc3;->d:Ljava/util/ArrayList;
+    packed-switch p1, :pswitch_data_0
 
-    invoke-virtual {p0}, Ljava/util/ArrayList;->isEmpty()Z
+    return-void
 
-    move-result v0
+    :pswitch_0
+    iget-object p0, p0, Lbc3;->b:Ljava/lang/Object;
 
-    if-eqz v0, :cond_0
+    check-cast p0, Ljy3;
 
-    sget-object p0, Ljava/util/Collections;->EMPTY_LIST:Ljava/util/List;
+    iget-object p0, p0, Ljy3;->a:Lbo7;
 
-    goto :goto_1
+    sget-object p1, Lbn7;->ON_CREATE:Lbn7;
 
-    :cond_0
-    new-instance v0, Ljava/util/ArrayList;
+    invoke-virtual {p0, p1}, Lbo7;->d(Lbn7;)V
 
-    invoke-virtual {p0}, Ljava/util/ArrayList;->size()I
+    return-void
 
-    move-result v1
-
-    invoke-direct {v0, v1}, Ljava/util/ArrayList;-><init>(I)V
-
-    invoke-virtual {p0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
-
-    move-result-object p0
-
-    :goto_0
-    invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_1
-
-    invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lrl9;
-
-    iget-object v1, v1, Lrl9;->c:Lgbc;
-
-    invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    goto :goto_0
-
-    :cond_1
-    move-object p0, v0
-
-    :goto_1
-    invoke-static {p0}, Ljava/util/Collections;->unmodifiableList(Ljava/util/List;)Ljava/util/List;
-
-    move-result-object p0
-
-    return-object p0
+    :pswitch_data_0
+    .packed-switch 0x2
+        :pswitch_0
+    .end packed-switch
 .end method
 
-.method public final D(I)Landroid/util/Pair;
-    .locals 3
+.method public g(Lxx3;)V
+    .locals 0
 
-    iget-object p0, p0, Lbc3;->o:Lcc3;
+    iget p1, p0, Lbc3;->a:I
 
-    invoke-virtual {p0, p1}, Lcc3;->f(I)Lw;
+    packed-switch p1, :pswitch_data_0
+
+    :pswitch_0
+    return-void
+
+    :pswitch_1
+    sget-object p1, Ls38;->a:Ls38;
+
+    invoke-virtual {p1}, Lscout/Component;->getAccessor()Lz4;
 
     move-result-object p1
 
-    new-instance v0, Landroid/util/Pair;
-
-    iget-object v1, p1, Lw;->c:Ljava/lang/Object;
-
-    check-cast v1, Lrl9;
-
-    iget-object v1, v1, Lrl9;->c:Lgbc;
-
-    iget v2, p1, Lw;->a:I
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-direct {v0, v1, v2}, Landroid/util/Pair;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
-
-    const/4 v1, 0x0
-
-    iput-boolean v1, p1, Lw;->b:Z
-
-    const/4 v1, 0x0
-
-    iput-object v1, p1, Lw;->c:Ljava/lang/Object;
-
-    const/4 v1, -0x1
-
-    iput v1, p1, Lw;->a:I
-
-    iput-object p1, p0, Lcc3;->h:Ljava/lang/Object;
-
-    return-object v0
-.end method
-
-.method public final E(Lgbc;)V
-    .locals 4
-
-    iget-object p0, p0, Lbc3;->o:Lcc3;
-
-    iget-object v0, p0, Lcc3;->d:Ljava/util/ArrayList;
-
-    invoke-virtual {p0, p1}, Lcc3;->i(Lgbc;)I
-
-    move-result v1
-
-    const/4 v2, -0x1
-
-    if-ne v1, v2, :cond_0
-
-    return-void
-
-    :cond_0
-    invoke-virtual {v0, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Lrl9;
-
-    invoke-virtual {p0, v2}, Lcc3;->d(Lrl9;)I
-
-    move-result v3
-
-    invoke-virtual {v0, v1}, Ljava/util/ArrayList;->remove(I)Ljava/lang/Object;
-
-    iget-object v0, p0, Lcc3;->e:Ljava/lang/Object;
-
-    check-cast v0, Lbc3;
-
-    iget v1, v2, Lrl9;->e:I
-
-    iget-object v0, v0, Lgbc;->a:Lhbc;
-
-    invoke-virtual {v0, v3, v1}, Lhbc;->f(II)V
-
-    iget-object v0, p0, Lcc3;->c:Ljava/util/ArrayList;
-
-    invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
-
-    move-result-object v0
-
-    :cond_1
-    :goto_0
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_2
-
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Ljava/lang/ref/WeakReference;
-
-    invoke-virtual {v1}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Landroidx/recyclerview/widget/RecyclerView;
-
-    if-eqz v1, :cond_1
-
-    invoke-virtual {p1, v1}, Lgbc;->u(Landroidx/recyclerview/widget/RecyclerView;)V
-
-    goto :goto_0
-
-    :cond_2
-    iget-object p1, v2, Lrl9;->c:Lgbc;
-
-    iget-object v0, v2, Lrl9;->f:Liz4;
-
-    invoke-virtual {p1, v0}, Lgbc;->B(Libc;)V
-
-    iget-object p1, v2, Lrl9;->a:Laqf;
-
-    invoke-interface {p1}, Laqf;->dispose()V
-
-    invoke-virtual {p0}, Lcc3;->c()V
-
-    return-void
-.end method
-
-.method public final i(Lgbc;Lccc;I)I
-    .locals 4
-
-    iget-object p0, p0, Lbc3;->o:Lcc3;
-
-    iget-object v0, p0, Lcc3;->g:Ljava/io/Serializable;
-
-    check-cast v0, Ljava/util/IdentityHashMap;
-
-    invoke-virtual {v0, p2}, Ljava/util/IdentityHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lrl9;
-
-    if-nez v0, :cond_0
-
-    const/4 p0, -0x1
-
-    return p0
-
-    :cond_0
-    iget-object v1, v0, Lrl9;->c:Lgbc;
-
-    invoke-virtual {p0, v0}, Lcc3;->d(Lrl9;)I
-
-    move-result p0
-
-    sub-int/2addr p3, p0
-
-    invoke-virtual {v1}, Lgbc;->j()I
-
-    move-result p0
-
-    if-ltz p3, :cond_1
-
-    if-ge p3, p0, :cond_1
-
-    invoke-virtual {v1, p1, p2, p3}, Lgbc;->i(Lgbc;Lccc;I)I
-
-    move-result p0
-
-    return p0
-
-    :cond_1
-    new-instance v0, Ljava/lang/IllegalStateException;
-
-    const-string v1, " which is out of bounds for the adapter with size "
-
-    const-string v2, ".Make sure to immediately call notify methods in your adapter when you change the backing dataviewHolder:"
-
-    const-string v3, "Detected inconsistent adapter updates. The local position of the view holder maps to "
-
-    invoke-static {v3, p3, v1, p0, v2}, Lpg0;->j(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object p0
-
-    invoke-virtual {p0, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string p2, "adapter:"
-
-    invoke-virtual {p0, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    invoke-direct {v0, p0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-.end method
-
-.method public final j()I
-    .locals 2
-
-    iget-object p0, p0, Lbc3;->o:Lcc3;
-
-    iget-object p0, p0, Lcc3;->d:Ljava/util/ArrayList;
-
-    invoke-virtual {p0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
-
-    move-result-object p0
-
-    const/4 v0, 0x0
-
-    :goto_0
-    invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lrl9;
-
-    iget v1, v1, Lrl9;->e:I
-
-    add-int/2addr v0, v1
-
-    goto :goto_0
-
-    :cond_0
-    return v0
-.end method
-
-.method public final k(I)J
-    .locals 3
-
-    iget-object p0, p0, Lbc3;->o:Lcc3;
-
-    invoke-virtual {p0, p1}, Lcc3;->f(I)Lw;
+    invoke-virtual {p1}, Lz4;->e()Ljava/lang/Object;
 
     move-result-object p1
 
-    iget-object v0, p1, Lw;->c:Ljava/lang/Object;
+    check-cast p1, Lh47;
 
-    check-cast v0, Lrl9;
+    if-eqz p1, :cond_0
 
-    iget v1, p1, Lw;->a:I
+    iget-object p0, p0, Lbc3;->b:Ljava/lang/Object;
 
-    iget-object v2, v0, Lrl9;->c:Lgbc;
+    check-cast p0, Ls6d;
 
-    invoke-virtual {v2, v1}, Lgbc;->k(I)J
+    iget p0, p0, Ls6d;->a:I
 
-    move-result-wide v1
-
-    iget-object v0, v0, Lrl9;->b:Lsvd;
-
-    invoke-interface {v0, v1, v2}, Lsvd;->l(J)J
-
-    move-result-wide v0
-
-    const/4 v2, 0x0
-
-    iput-boolean v2, p1, Lw;->b:Z
-
-    const/4 v2, 0x0
-
-    iput-object v2, p1, Lw;->c:Ljava/lang/Object;
-
-    const/4 v2, -0x1
-
-    iput v2, p1, Lw;->a:I
-
-    iput-object p1, p0, Lcc3;->h:Ljava/lang/Object;
-
-    return-wide v0
-.end method
-
-.method public final l(I)I
-    .locals 3
-
-    iget-object p0, p0, Lbc3;->o:Lcc3;
-
-    invoke-virtual {p0, p1}, Lcc3;->f(I)Lw;
-
-    move-result-object p1
-
-    iget-object v0, p1, Lw;->c:Ljava/lang/Object;
-
-    check-cast v0, Lrl9;
-
-    iget v1, p1, Lw;->a:I
-
-    iget-object v2, v0, Lrl9;->a:Laqf;
-
-    iget-object v0, v0, Lrl9;->c:Lgbc;
-
-    invoke-virtual {v0, v1}, Lgbc;->l(I)I
-
-    move-result v0
-
-    invoke-interface {v2, v0}, Laqf;->o(I)I
-
-    move-result v0
-
-    const/4 v1, 0x0
-
-    iput-boolean v1, p1, Lw;->b:Z
-
-    const/4 v1, 0x0
-
-    iput-object v1, p1, Lw;->c:Ljava/lang/Object;
-
-    const/4 v1, -0x1
-
-    iput v1, p1, Lw;->a:I
-
-    iput-object p1, p0, Lcc3;->h:Ljava/lang/Object;
-
-    return v0
-.end method
-
-.method public final q(Landroidx/recyclerview/widget/RecyclerView;)V
-    .locals 3
-
-    iget-object p0, p0, Lbc3;->o:Lcc3;
-
-    iget-object v0, p0, Lcc3;->c:Ljava/util/ArrayList;
-
-    invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
-
-    move-result-object v1
-
-    :cond_0
-    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v2
-
-    if-eqz v2, :cond_1
-
-    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Ljava/lang/ref/WeakReference;
-
-    invoke-virtual {v2}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
-
-    move-result-object v2
-
-    if-ne v2, p1, :cond_0
-
-    goto :goto_1
-
-    :cond_1
-    new-instance v1, Ljava/lang/ref/WeakReference;
-
-    invoke-direct {v1, p1}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
-
-    invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    iget-object p0, p0, Lcc3;->d:Ljava/util/ArrayList;
-
-    invoke-virtual {p0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
+    invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p0
 
-    :goto_0
-    invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
+    invoke-virtual {p1, p0}, Lh47;->e(Ljava/lang/Integer;)V
 
-    move-result v0
-
-    if-eqz v0, :cond_2
-
-    invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lrl9;
-
-    iget-object v0, v0, Lrl9;->c:Lgbc;
-
-    invoke-virtual {v0, p1}, Lgbc;->q(Landroidx/recyclerview/widget/RecyclerView;)V
-
-    goto :goto_0
-
-    :cond_2
-    :goto_1
+    :cond_0
     return-void
-.end method
 
-.method public final r(Lccc;I)V
-    .locals 2
+    :pswitch_2
+    iget-object p0, p0, Lbc3;->b:Ljava/lang/Object;
 
-    iget-object p0, p0, Lbc3;->o:Lcc3;
+    check-cast p0, Ljy3;
 
-    invoke-virtual {p0, p2}, Lcc3;->f(I)Lw;
+    iget-object p0, p0, Ljy3;->a:Lbo7;
 
-    move-result-object p2
+    sget-object p1, Lbn7;->ON_RESUME:Lbn7;
 
-    iget-object v0, p0, Lcc3;->g:Ljava/io/Serializable;
-
-    check-cast v0, Ljava/util/IdentityHashMap;
-
-    iget-object v1, p2, Lw;->c:Ljava/lang/Object;
-
-    check-cast v1, Lrl9;
-
-    invoke-virtual {v0, p1, v1}, Ljava/util/IdentityHashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    iget-object v0, p2, Lw;->c:Ljava/lang/Object;
-
-    check-cast v0, Lrl9;
-
-    iget v1, p2, Lw;->a:I
-
-    iget-object v0, v0, Lrl9;->c:Lgbc;
-
-    invoke-virtual {v0, p1, v1}, Lgbc;->h(Lccc;I)V
-
-    const/4 p1, 0x0
-
-    iput-boolean p1, p2, Lw;->b:Z
-
-    const/4 p1, 0x0
-
-    iput-object p1, p2, Lw;->c:Ljava/lang/Object;
-
-    const/4 p1, -0x1
-
-    iput p1, p2, Lw;->a:I
-
-    iput-object p2, p0, Lcc3;->h:Ljava/lang/Object;
+    invoke-virtual {p0, p1}, Lbo7;->d(Lbn7;)V
 
     return-void
+
+    :pswitch_3
+    iget-object p0, p0, Lbc3;->b:Ljava/lang/Object;
+
+    check-cast p0, Lpz1;
+
+    iget-object p0, p0, Lpz1;->b:Lbo7;
+
+    sget-object p1, Lbn7;->ON_RESUME:Lbn7;
+
+    invoke-virtual {p0, p1}, Lbo7;->d(Lbn7;)V
+
+    return-void
+
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_3
+        :pswitch_2
+        :pswitch_0
+        :pswitch_1
+    .end packed-switch
 .end method
 
-.method public final t(Landroid/view/ViewGroup;I)Lccc;
+.method public h(Lxx3;)V
+    .locals 0
+
+    iget p1, p0, Lbc3;->a:I
+
+    packed-switch p1, :pswitch_data_0
+
+    return-void
+
+    :pswitch_0
+    iget-object p0, p0, Lbc3;->b:Ljava/lang/Object;
+
+    check-cast p0, Lpz1;
+
+    iget-object p0, p0, Lpz1;->b:Lbo7;
+
+    sget-object p1, Lbn7;->ON_CREATE:Lbn7;
+
+    invoke-virtual {p0, p1}, Lbo7;->d(Lbn7;)V
+
+    return-void
+
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public j(Lxx3;Landroid/view/View;)V
     .locals 1
 
-    iget-object p0, p0, Lbc3;->o:Lcc3;
+    iget v0, p0, Lbc3;->a:I
 
-    iget-object p0, p0, Lcc3;->f:Ljava/lang/Object;
+    packed-switch v0, :pswitch_data_0
 
-    check-cast p0, Lbqf;
-
-    invoke-interface {p0, p2}, Lbqf;->b(I)Lrl9;
-
-    move-result-object p0
-
-    iget-object v0, p0, Lrl9;->a:Laqf;
-
-    invoke-interface {v0, p2}, Laqf;->m(I)I
-
-    move-result p2
-
-    iget-object p0, p0, Lrl9;->c:Lgbc;
-
-    invoke-virtual {p0, p1, p2}, Lgbc;->t(Landroid/view/ViewGroup;I)Lccc;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public final u(Landroidx/recyclerview/widget/RecyclerView;)V
-    .locals 4
-
-    iget-object p0, p0, Lbc3;->o:Lcc3;
-
-    iget-object v0, p0, Lcc3;->c:Ljava/util/ArrayList;
-
-    invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
-
-    move-result v1
-
-    add-int/lit8 v1, v1, -0x1
-
-    :goto_0
-    if-ltz v1, :cond_2
-
-    invoke-virtual {v0, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Ljava/lang/ref/WeakReference;
-
-    invoke-virtual {v2}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
-
-    move-result-object v3
-
-    if-nez v3, :cond_0
-
-    invoke-virtual {v0, v1}, Ljava/util/ArrayList;->remove(I)Ljava/lang/Object;
-
-    goto :goto_1
-
-    :cond_0
-    invoke-virtual {v2}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
-
-    move-result-object v2
-
-    if-ne v2, p1, :cond_1
-
-    invoke-virtual {v0, v1}, Ljava/util/ArrayList;->remove(I)Ljava/lang/Object;
-
-    goto :goto_2
-
-    :cond_1
-    :goto_1
-    add-int/lit8 v1, v1, -0x1
-
-    goto :goto_0
-
-    :cond_2
-    :goto_2
-    iget-object p0, p0, Lcc3;->d:Ljava/util/ArrayList;
-
-    invoke-virtual {p0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
-
-    move-result-object p0
-
-    :goto_3
-    invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_3
-
-    invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lrl9;
-
-    iget-object v0, v0, Lrl9;->c:Lgbc;
-
-    invoke-virtual {v0, p1}, Lgbc;->u(Landroidx/recyclerview/widget/RecyclerView;)V
-
-    goto :goto_3
-
-    :cond_3
     return-void
-.end method
 
-.method public final v(Lccc;)Z
-    .locals 3
+    :pswitch_0
+    iget-object p0, p0, Lbc3;->b:Ljava/lang/Object;
 
-    iget-object p0, p0, Lbc3;->o:Lcc3;
+    check-cast p0, Ljy3;
 
-    iget-object v0, p0, Lcc3;->g:Ljava/io/Serializable;
+    invoke-static {p2, p0}, Lkua;->C(Landroid/view/View;Lzn7;)V
 
-    check-cast v0, Ljava/util/IdentityHashMap;
+    invoke-static {p1}, Lo97;->q0(Lxx3;)Z
 
-    invoke-virtual {v0, p1}, Ljava/util/IdentityHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    move-result p1
 
-    move-result-object v1
+    if-nez p1, :cond_0
 
-    check-cast v1, Lrl9;
+    iget-object p0, p0, Ljy3;->a:Lbo7;
 
-    if-eqz v1, :cond_0
+    sget-object p1, Lbn7;->ON_CREATE:Lbn7;
 
-    iget-object p0, v1, Lrl9;->c:Lgbc;
-
-    invoke-virtual {p0, p1}, Lgbc;->v(Lccc;)Z
-
-    move-result p0
-
-    invoke-virtual {v0, p1}, Ljava/util/IdentityHashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return p0
+    invoke-virtual {p0, p1}, Lbo7;->d(Lbn7;)V
 
     :cond_0
-    new-instance v0, Ljava/lang/IllegalStateException;
+    return-void
 
-    new-instance v1, Ljava/lang/StringBuilder;
+    :pswitch_1
+    iget-object p0, p0, Lbc3;->b:Ljava/lang/Object;
 
-    const-string v2, "Cannot find wrapper for "
+    check-cast p0, Lpz1;
 
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    iget-object p0, p0, Lpz1;->b:Lbo7;
 
-    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    sget-object p1, Lbn7;->ON_START:Lbn7;
 
-    const-string p1, ", seems like it is not bound by this adapter: "
+    invoke-virtual {p0, p1}, Lbo7;->d(Lbn7;)V
 
-    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    return-void
 
-    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    nop
 
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public k(Lxx3;)V
+    .locals 1
+
+    iget v0, p0, Lbc3;->a:I
+
+    iget-object p0, p0, Lbc3;->b:Ljava/lang/Object;
+
+    sparse-switch v0, :sswitch_data_0
+
+    return-void
+
+    :sswitch_0
+    check-cast p0, Lrzc;
+
+    iget-object p0, p0, Lrzc;->d:Ljava/util/ArrayList;
+
+    invoke-virtual {p0, p1}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
+
+    return-void
+
+    :sswitch_1
+    check-cast p0, Lone/me/filedownloadwarning/FileDownloadWarningBottomSheet;
+
+    sget p1, Lone/me/filedownloadwarning/FileDownloadWarningBottomSheet;->c:I
+
+    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    sget-object p0, Lgm5;->c:Lgm5;
+
+    invoke-virtual {p0}, Lx2;->F0()Lza4;
 
     move-result-object p0
 
-    invoke-direct {v0, p0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    invoke-virtual {p0}, Lza4;->d()Z
 
-    throw v0
+    return-void
+
+    :sswitch_2
+    check-cast p0, Lone/me/complaintbottomsheet/ComplaintBottomSheet;
+
+    sget-object p1, Lone/me/complaintbottomsheet/ComplaintBottomSheet;->X:[Lxi7;
+
+    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    sget-object p0, Lfc3;->c:Lfc3;
+
+    invoke-virtual {p0}, Lx2;->F0()Lza4;
+
+    move-result-object p0
+
+    invoke-virtual {p0}, Lza4;->d()Z
+
+    return-void
+
+    :sswitch_data_0
+    .sparse-switch
+        0x0 -> :sswitch_2
+        0x3 -> :sswitch_1
+        0x5 -> :sswitch_0
+    .end sparse-switch
 .end method
 
-.method public final w(Lccc;)V
+.method public l(Lxx3;)V
+    .locals 1
+
+    iget p1, p0, Lbc3;->a:I
+
+    packed-switch p1, :pswitch_data_0
+
+    return-void
+
+    :pswitch_0
+    iget-object p0, p0, Lbc3;->b:Ljava/lang/Object;
+
+    check-cast p0, Ljy3;
+
+    iget-object p1, p0, Ljy3;->a:Lbo7;
+
+    iget-object p1, p1, Lbo7;->d:Lcn7;
+
+    sget-object v0, Lcn7;->c:Lcn7;
+
+    invoke-virtual {p1, v0}, Lcn7;->a(Lcn7;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_0
+
+    iget-object p0, p0, Ljy3;->a:Lbo7;
+
+    sget-object p1, Lbn7;->ON_DESTROY:Lbn7;
+
+    invoke-virtual {p0, p1}, Lbo7;->d(Lbn7;)V
+
+    :cond_0
+    return-void
+
+    :pswitch_data_0
+    .packed-switch 0x2
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public n(Lxx3;Landroid/view/View;)V
     .locals 0
 
-    iget-object p0, p0, Lbc3;->o:Lcc3;
+    iget p1, p0, Lbc3;->a:I
 
-    invoke-virtual {p0, p1}, Lcc3;->g(Lccc;)Lrl9;
-
-    move-result-object p0
-
-    iget-object p0, p0, Lrl9;->c:Lgbc;
-
-    invoke-virtual {p0, p1}, Lgbc;->w(Lccc;)V
+    packed-switch p1, :pswitch_data_0
 
     return-void
+
+    :pswitch_0
+    iget-object p0, p0, Lbc3;->b:Ljava/lang/Object;
+
+    check-cast p0, Ljy3;
+
+    iget-object p0, p0, Ljy3;->a:Lbo7;
+
+    sget-object p1, Lbn7;->ON_START:Lbn7;
+
+    invoke-virtual {p0, p1}, Lbo7;->d(Lbn7;)V
+
+    return-void
+
+    :pswitch_data_0
+    .packed-switch 0x2
+        :pswitch_0
+    .end packed-switch
 .end method
 
-.method public final x(Lccc;)V
+.method public p(Lxx3;)V
     .locals 0
 
-    iget-object p0, p0, Lbc3;->o:Lcc3;
-
-    invoke-virtual {p0, p1}, Lcc3;->g(Lccc;)Lrl9;
-
-    move-result-object p0
-
-    iget-object p0, p0, Lrl9;->c:Lgbc;
-
-    invoke-virtual {p0, p1}, Lgbc;->x(Lccc;)V
+    iget p0, p0, Lbc3;->a:I
 
     return-void
 .end method
 
-.method public final y(Lccc;)V
-    .locals 3
+.method public q(Lxx3;)V
+    .locals 1
 
-    iget-object p0, p0, Lbc3;->o:Lcc3;
+    iget p1, p0, Lbc3;->a:I
 
-    iget-object v0, p0, Lcc3;->g:Ljava/io/Serializable;
-
-    check-cast v0, Ljava/util/IdentityHashMap;
-
-    invoke-virtual {v0, p1}, Ljava/util/IdentityHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lrl9;
-
-    if-eqz v1, :cond_0
-
-    iget-object p0, v1, Lrl9;->c:Lgbc;
-
-    invoke-virtual {p0, p1}, Lgbc;->y(Lccc;)V
-
-    invoke-virtual {v0, p1}, Ljava/util/IdentityHashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
+    packed-switch p1, :pswitch_data_0
 
     return-void
 
+    :pswitch_0
+    iget-object p0, p0, Lbc3;->b:Ljava/lang/Object;
+
+    check-cast p0, Ljy3;
+
+    iget-object p1, p0, Ljy3;->a:Lbo7;
+
+    iget-object p1, p1, Lbo7;->d:Lcn7;
+
+    sget-object v0, Lcn7;->a:Lcn7;
+
+    if-ne p1, v0, :cond_0
+
+    new-instance p1, Lbo7;
+
+    invoke-direct {p1, p0}, Lbo7;-><init>(Lzn7;)V
+
+    iput-object p1, p0, Ljy3;->a:Lbo7;
+
     :cond_0
-    new-instance v0, Ljava/lang/IllegalStateException;
+    return-void
 
-    new-instance v1, Ljava/lang/StringBuilder;
+    :pswitch_data_0
+    .packed-switch 0x2
+        :pswitch_0
+    .end packed-switch
+.end method
 
-    const-string v2, "Cannot find wrapper for "
+.method public r(Lxx3;)V
+    .locals 1
 
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    iget p1, p0, Lbc3;->a:I
 
-    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    packed-switch p1, :pswitch_data_0
 
-    const-string p1, ", seems like it is not bound by this adapter: "
+    return-void
 
-    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    :pswitch_0
+    iget-object p0, p0, Lbc3;->b:Ljava/lang/Object;
 
-    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    check-cast p0, Lpz1;
 
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    iget-object p0, p0, Lpz1;->b:Lbo7;
 
-    move-result-object p0
+    iget-object p1, p0, Lbo7;->d:Lcn7;
 
-    invoke-direct {v0, p0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    sget-object v0, Lcn7;->b:Lcn7;
 
-    throw v0
+    if-eq p1, v0, :cond_0
+
+    sget-object p1, Lbn7;->ON_DESTROY:Lbn7;
+
+    invoke-virtual {p0, p1}, Lbo7;->d(Lbn7;)V
+
+    :cond_0
+    return-void
+
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public s(Lxx3;Landroid/view/View;)V
+    .locals 0
+
+    iget p1, p0, Lbc3;->a:I
+
+    packed-switch p1, :pswitch_data_0
+
+    return-void
+
+    :pswitch_0
+    iget-object p0, p0, Lbc3;->b:Ljava/lang/Object;
+
+    check-cast p0, Ljy3;
+
+    iget-object p0, p0, Ljy3;->a:Lbo7;
+
+    sget-object p1, Lbn7;->ON_STOP:Lbn7;
+
+    invoke-virtual {p0, p1}, Lbo7;->d(Lbn7;)V
+
+    return-void
+
+    :pswitch_1
+    iget-object p0, p0, Lbc3;->b:Ljava/lang/Object;
+
+    check-cast p0, Lpz1;
+
+    iget-object p0, p0, Lpz1;->b:Lbo7;
+
+    sget-object p1, Lbn7;->ON_STOP:Lbn7;
+
+    invoke-virtual {p0, p1}, Lbo7;->d(Lbn7;)V
+
+    return-void
+
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public t(Lxx3;)V
+    .locals 0
+
+    iget p1, p0, Lbc3;->a:I
+
+    packed-switch p1, :pswitch_data_0
+
+    return-void
+
+    :pswitch_0
+    iget-object p0, p0, Lbc3;->b:Ljava/lang/Object;
+
+    check-cast p0, Ljy3;
+
+    iget-object p0, p0, Ljy3;->a:Lbo7;
+
+    sget-object p1, Lbn7;->ON_PAUSE:Lbn7;
+
+    invoke-virtual {p0, p1}, Lbo7;->d(Lbn7;)V
+
+    return-void
+
+    :pswitch_1
+    iget-object p0, p0, Lbc3;->b:Ljava/lang/Object;
+
+    check-cast p0, Lpz1;
+
+    iget-object p0, p0, Lpz1;->b:Lbo7;
+
+    sget-object p1, Lbn7;->ON_PAUSE:Lbn7;
+
+    invoke-virtual {p0, p1}, Lbo7;->d(Lbn7;)V
+
+    return-void
+
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

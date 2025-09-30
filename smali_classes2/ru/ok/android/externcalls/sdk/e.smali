@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lv56;
+.implements Lzb6;
 
 
 # instance fields

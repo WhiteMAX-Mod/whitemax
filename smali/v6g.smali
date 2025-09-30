@@ -1,626 +1,103 @@
-.class public abstract Lv6g;
+.class public final Lv6g;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Luh4;
+.implements Landroid/view/View$OnApplyWindowInsetsListener;
 
 
 # instance fields
-.field public a:I
+.field public a:Lvug;
 
-.field public b:Lbj3;
+.field public final synthetic b:Landroid/view/View;
 
-.field public c:Lsnc;
-
-.field public d:I
-
-.field public final e:Lfk4;
-
-.field public f:I
-
-.field public g:Z
-
-.field public final h:Lxh4;
-
-.field public final i:Lxh4;
-
-.field public j:I
+.field public final synthetic c:Lz8a;
 
 
 # direct methods
-.method public constructor <init>(Lbj3;)V
-    .locals 1
+.method public constructor <init>(Landroid/view/View;Lz8a;)V
+    .locals 0
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()V"
+        }
+    .end annotation
+
+    iput-object p1, p0, Lv6g;->b:Landroid/view/View;
+
+    iput-object p2, p0, Lv6g;->c:Lz8a;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    new-instance v0, Lfk4;
+    const/4 p1, 0x0
 
-    invoke-direct {v0, p0}, Lfk4;-><init>(Lv6g;)V
-
-    iput-object v0, p0, Lv6g;->e:Lfk4;
-
-    const/4 v0, 0x0
-
-    iput v0, p0, Lv6g;->f:I
-
-    iput-boolean v0, p0, Lv6g;->g:Z
-
-    new-instance v0, Lxh4;
-
-    invoke-direct {v0, p0}, Lxh4;-><init>(Lv6g;)V
-
-    iput-object v0, p0, Lv6g;->h:Lxh4;
-
-    new-instance v0, Lxh4;
-
-    invoke-direct {v0, p0}, Lxh4;-><init>(Lv6g;)V
-
-    iput-object v0, p0, Lv6g;->i:Lxh4;
-
-    const/4 v0, 0x1
-
-    iput v0, p0, Lv6g;->j:I
-
-    iput-object p1, p0, Lv6g;->b:Lbj3;
+    iput-object p1, p0, Lv6g;->a:Lvug;
 
     return-void
-.end method
-
-.method public static b(Lxh4;Lxh4;I)V
-    .locals 1
-
-    iget-object v0, p0, Lxh4;->l:Ljava/util/ArrayList;
-
-    invoke-virtual {v0, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    iput p2, p0, Lxh4;->f:I
-
-    iget-object p1, p1, Lxh4;->k:Ljava/util/ArrayList;
-
-    invoke-virtual {p1, p0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    return-void
-.end method
-
-.method public static h(Lji3;)Lxh4;
-    .locals 2
-
-    iget-object p0, p0, Lji3;->f:Lji3;
-
-    if-nez p0, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    iget-object v0, p0, Lji3;->d:Lbj3;
-
-    iget p0, p0, Lji3;->e:I
-
-    invoke-static {p0}, Lzt1;->s(I)I
-
-    move-result p0
-
-    const/4 v1, 0x1
-
-    if-eq p0, v1, :cond_5
-
-    const/4 v1, 0x2
-
-    if-eq p0, v1, :cond_4
-
-    const/4 v1, 0x3
-
-    if-eq p0, v1, :cond_3
-
-    const/4 v1, 0x4
-
-    if-eq p0, v1, :cond_2
-
-    const/4 v1, 0x5
-
-    if-eq p0, v1, :cond_1
-
-    :goto_0
-    const/4 p0, 0x0
-
-    return-object p0
-
-    :cond_1
-    iget-object p0, v0, Lbj3;->e:Lqcf;
-
-    iget-object p0, p0, Lqcf;->k:Lxh4;
-
-    return-object p0
-
-    :cond_2
-    iget-object p0, v0, Lbj3;->e:Lqcf;
-
-    iget-object p0, p0, Lv6g;->i:Lxh4;
-
-    return-object p0
-
-    :cond_3
-    iget-object p0, v0, Lbj3;->d:Llo6;
-
-    iget-object p0, p0, Lv6g;->i:Lxh4;
-
-    return-object p0
-
-    :cond_4
-    iget-object p0, v0, Lbj3;->e:Lqcf;
-
-    iget-object p0, p0, Lv6g;->h:Lxh4;
-
-    return-object p0
-
-    :cond_5
-    iget-object p0, v0, Lbj3;->d:Llo6;
-
-    iget-object p0, p0, Lv6g;->h:Lxh4;
-
-    return-object p0
-.end method
-
-.method public static i(Lji3;I)Lxh4;
-    .locals 1
-
-    iget-object p0, p0, Lji3;->f:Lji3;
-
-    if-nez p0, :cond_0
-
-    goto :goto_1
-
-    :cond_0
-    iget-object v0, p0, Lji3;->d:Lbj3;
-
-    if-nez p1, :cond_1
-
-    iget-object p1, v0, Lbj3;->d:Llo6;
-
-    goto :goto_0
-
-    :cond_1
-    iget-object p1, v0, Lbj3;->e:Lqcf;
-
-    :goto_0
-    iget p0, p0, Lji3;->e:I
-
-    invoke-static {p0}, Lzt1;->s(I)I
-
-    move-result p0
-
-    const/4 v0, 0x1
-
-    if-eq p0, v0, :cond_3
-
-    const/4 v0, 0x2
-
-    if-eq p0, v0, :cond_3
-
-    const/4 v0, 0x3
-
-    if-eq p0, v0, :cond_2
-
-    const/4 v0, 0x4
-
-    if-eq p0, v0, :cond_2
-
-    :goto_1
-    const/4 p0, 0x0
-
-    return-object p0
-
-    :cond_2
-    iget-object p0, p1, Lv6g;->i:Lxh4;
-
-    return-object p0
-
-    :cond_3
-    iget-object p0, p1, Lv6g;->h:Lxh4;
-
-    return-object p0
 .end method
 
 
 # virtual methods
-.method public final c(Lxh4;Lxh4;ILfk4;)V
-    .locals 1
+.method public onApplyWindowInsets(Landroid/view/View;Landroid/view/WindowInsets;)Landroid/view/WindowInsets;
+    .locals 5
 
-    iget-object v0, p1, Lxh4;->l:Ljava/util/ArrayList;
-
-    invoke-virtual {v0, p2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    iget-object v0, p1, Lxh4;->l:Ljava/util/ArrayList;
-
-    iget-object p0, p0, Lv6g;->e:Lfk4;
-
-    invoke-virtual {v0, p0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    iput p3, p1, Lxh4;->h:I
-
-    iput-object p4, p1, Lxh4;->i:Lfk4;
-
-    iget-object p0, p2, Lxh4;->k:Ljava/util/ArrayList;
-
-    invoke-virtual {p0, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    iget-object p0, p4, Lxh4;->k:Ljava/util/ArrayList;
-
-    invoke-virtual {p0, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    return-void
-.end method
-
-.method public abstract d()V
-.end method
-
-.method public abstract e()V
-.end method
-
-.method public abstract f()V
-.end method
-
-.method public final g(II)I
-    .locals 0
-
-    if-nez p2, :cond_1
-
-    iget-object p0, p0, Lv6g;->b:Lbj3;
-
-    iget p2, p0, Lbj3;->v:I
-
-    iget p0, p0, Lbj3;->u:I
-
-    invoke-static {p0, p1}, Ljava/lang/Math;->max(II)I
-
-    move-result p0
-
-    if-lez p2, :cond_0
-
-    invoke-static {p2, p1}, Ljava/lang/Math;->min(II)I
-
-    move-result p0
-
-    :cond_0
-    if-eq p0, p1, :cond_3
-
-    return p0
-
-    :cond_1
-    iget-object p0, p0, Lv6g;->b:Lbj3;
-
-    iget p2, p0, Lbj3;->y:I
-
-    iget p0, p0, Lbj3;->x:I
-
-    invoke-static {p0, p1}, Ljava/lang/Math;->max(II)I
-
-    move-result p0
-
-    if-lez p2, :cond_2
-
-    invoke-static {p2, p1}, Ljava/lang/Math;->min(II)I
-
-    move-result p0
-
-    :cond_2
-    if-eq p0, p1, :cond_3
-
-    return p0
-
-    :cond_3
-    return p1
-.end method
-
-.method public j()J
-    .locals 2
-
-    iget-object p0, p0, Lv6g;->e:Lfk4;
-
-    iget-boolean v0, p0, Lxh4;->j:Z
-
-    if-eqz v0, :cond_0
-
-    iget p0, p0, Lxh4;->g:I
-
-    int-to-long v0, p0
-
-    return-wide v0
-
-    :cond_0
-    const-wide/16 v0, 0x0
-
-    return-wide v0
-.end method
-
-.method public abstract k()Z
-.end method
-
-.method public final l(Lji3;Lji3;I)V
-    .locals 11
-
-    invoke-static {p1}, Lv6g;->h(Lji3;)Lxh4;
+    invoke-static {p1, p2}, Lvug;->f(Landroid/view/View;Landroid/view/WindowInsets;)Lvug;
 
     move-result-object v0
 
-    invoke-static {p2}, Lv6g;->h(Lji3;)Lxh4;
+    sget v1, Landroid/os/Build$VERSION;->SDK_INT:I
 
-    move-result-object v1
+    iget-object v2, p0, Lv6g;->c:Lz8a;
 
-    iget-boolean v2, v0, Lxh4;->j:Z
+    const/16 v3, 0x1e
 
-    if-eqz v2, :cond_f
+    if-ge v1, v3, :cond_0
 
-    iget-boolean v2, v1, Lxh4;->j:Z
+    iget-object v4, p0, Lv6g;->b:Landroid/view/View;
 
-    if-nez v2, :cond_0
+    invoke-static {p2, v4}, Lw6g;->a(Landroid/view/WindowInsets;Landroid/view/View;)V
 
-    goto/16 :goto_5
+    iget-object p2, p0, Lv6g;->a:Lvug;
 
-    :cond_0
-    iget v2, v0, Lxh4;->g:I
-
-    invoke-virtual {p1}, Lji3;->e()I
-
-    move-result p1
-
-    add-int/2addr p1, v2
-
-    iget v2, v1, Lxh4;->g:I
-
-    invoke-virtual {p2}, Lji3;->e()I
+    invoke-virtual {v0, p2}, Lvug;->equals(Ljava/lang/Object;)Z
 
     move-result p2
 
-    sub-int/2addr v2, p2
+    if-eqz p2, :cond_0
 
-    sub-int p2, v2, p1
+    invoke-interface {v2, p1, v0}, Lz8a;->O(Landroid/view/View;Lvug;)Lvug;
 
-    iget-object v3, p0, Lv6g;->e:Lfk4;
+    move-result-object p0
 
-    iget-boolean v4, v3, Lxh4;->j:Z
+    invoke-virtual {p0}, Lvug;->e()Landroid/view/WindowInsets;
 
-    const/high16 v5, 0x3f000000    # 0.5f
+    move-result-object p0
 
-    if-nez v4, :cond_a
+    return-object p0
 
-    iget v4, p0, Lv6g;->d:I
+    :cond_0
+    iput-object v0, p0, Lv6g;->a:Lvug;
 
-    const/4 v6, 0x3
+    invoke-interface {v2, p1, v0}, Lz8a;->O(Landroid/view/View;Lvug;)Lvug;
 
-    if-ne v4, v6, :cond_a
+    move-result-object p0
 
-    iget v4, p0, Lv6g;->a:I
+    if-lt v1, v3, :cond_1
 
-    if-eqz v4, :cond_9
+    invoke-virtual {p0}, Lvug;->e()Landroid/view/WindowInsets;
 
-    const/4 v7, 0x1
+    move-result-object p0
 
-    if-eq v4, v7, :cond_8
-
-    const/4 v8, 0x2
-
-    if-eq v4, v8, :cond_5
-
-    if-eq v4, v6, :cond_1
-
-    goto/16 :goto_3
+    return-object p0
 
     :cond_1
-    iget-object v4, p0, Lv6g;->b:Lbj3;
+    sget-object p2, Lh7g;->a:Ljava/util/WeakHashMap;
 
-    iget-object v8, v4, Lbj3;->d:Llo6;
+    invoke-static {p1}, Lu6g;->c(Landroid/view/View;)V
 
-    iget v9, v8, Lv6g;->d:I
+    invoke-virtual {p0}, Lvug;->e()Landroid/view/WindowInsets;
 
-    if-ne v9, v6, :cond_2
+    move-result-object p0
 
-    iget v9, v8, Lv6g;->a:I
-
-    if-ne v9, v6, :cond_2
-
-    iget-object v9, v4, Lbj3;->e:Lqcf;
-
-    iget v10, v9, Lv6g;->d:I
-
-    if-ne v10, v6, :cond_2
-
-    iget v9, v9, Lv6g;->a:I
-
-    if-ne v9, v6, :cond_2
-
-    goto :goto_3
-
-    :cond_2
-    if-nez p3, :cond_3
-
-    iget-object v8, v4, Lbj3;->e:Lqcf;
-
-    :cond_3
-    iget-object v6, v8, Lv6g;->e:Lfk4;
-
-    iget-boolean v8, v6, Lxh4;->j:Z
-
-    if-eqz v8, :cond_a
-
-    iget v4, v4, Lbj3;->W:F
-
-    if-ne p3, v7, :cond_4
-
-    iget v6, v6, Lxh4;->g:I
-
-    int-to-float v6, v6
-
-    div-float/2addr v6, v4
-
-    add-float/2addr v6, v5
-
-    float-to-int v4, v6
-
-    goto :goto_0
-
-    :cond_4
-    iget v6, v6, Lxh4;->g:I
-
-    int-to-float v6, v6
-
-    mul-float/2addr v4, v6
-
-    add-float/2addr v4, v5
-
-    float-to-int v4, v4
-
-    :goto_0
-    invoke-virtual {v3, v4}, Lfk4;->d(I)V
-
-    goto :goto_3
-
-    :cond_5
-    iget-object v4, p0, Lv6g;->b:Lbj3;
-
-    iget-object v6, v4, Lbj3;->T:Lbj3;
-
-    if-eqz v6, :cond_a
-
-    if-nez p3, :cond_6
-
-    iget-object v6, v6, Lbj3;->d:Llo6;
-
-    goto :goto_1
-
-    :cond_6
-    iget-object v6, v6, Lbj3;->e:Lqcf;
-
-    :goto_1
-    iget-object v6, v6, Lv6g;->e:Lfk4;
-
-    iget-boolean v7, v6, Lxh4;->j:Z
-
-    if-eqz v7, :cond_a
-
-    if-nez p3, :cond_7
-
-    iget v4, v4, Lbj3;->w:F
-
-    goto :goto_2
-
-    :cond_7
-    iget v4, v4, Lbj3;->z:F
-
-    :goto_2
-    iget v6, v6, Lxh4;->g:I
-
-    int-to-float v6, v6
-
-    mul-float/2addr v6, v4
-
-    add-float/2addr v6, v5
-
-    float-to-int v4, v6
-
-    invoke-virtual {p0, v4, p3}, Lv6g;->g(II)I
-
-    move-result v4
-
-    invoke-virtual {v3, v4}, Lfk4;->d(I)V
-
-    goto :goto_3
-
-    :cond_8
-    iget v4, v3, Lfk4;->m:I
-
-    invoke-virtual {p0, v4, p3}, Lv6g;->g(II)I
-
-    move-result v4
-
-    invoke-static {v4, p2}, Ljava/lang/Math;->min(II)I
-
-    move-result v4
-
-    invoke-virtual {v3, v4}, Lfk4;->d(I)V
-
-    goto :goto_3
-
-    :cond_9
-    invoke-virtual {p0, p2, p3}, Lv6g;->g(II)I
-
-    move-result v4
-
-    invoke-virtual {v3, v4}, Lfk4;->d(I)V
-
-    :cond_a
-    :goto_3
-    iget-boolean v4, v3, Lxh4;->j:Z
-
-    if-nez v4, :cond_b
-
-    goto :goto_5
-
-    :cond_b
-    iget v4, v3, Lxh4;->g:I
-
-    iget-object v6, p0, Lv6g;->i:Lxh4;
-
-    iget-object v7, p0, Lv6g;->h:Lxh4;
-
-    if-ne v4, p2, :cond_c
-
-    invoke-virtual {v7, p1}, Lxh4;->d(I)V
-
-    invoke-virtual {v6, v2}, Lxh4;->d(I)V
-
-    return-void
-
-    :cond_c
-    iget-object p0, p0, Lv6g;->b:Lbj3;
-
-    if-nez p3, :cond_d
-
-    iget p0, p0, Lbj3;->d0:F
-
-    goto :goto_4
-
-    :cond_d
-    iget p0, p0, Lbj3;->e0:F
-
-    :goto_4
-    if-ne v0, v1, :cond_e
-
-    iget p1, v0, Lxh4;->g:I
-
-    iget v2, v1, Lxh4;->g:I
-
-    move p0, v5
-
-    :cond_e
-    sub-int/2addr v2, p1
-
-    sub-int/2addr v2, v4
-
-    int-to-float p1, p1
-
-    add-float/2addr p1, v5
-
-    int-to-float p2, v2
-
-    mul-float/2addr p2, p0
-
-    add-float/2addr p2, p1
-
-    float-to-int p0, p2
-
-    invoke-virtual {v7, p0}, Lxh4;->d(I)V
-
-    iget p0, v7, Lxh4;->g:I
-
-    iget p1, v3, Lxh4;->g:I
-
-    add-int/2addr p0, p1
-
-    invoke-virtual {v6, p0}, Lxh4;->d(I)V
-
-    :cond_f
-    :goto_5
-    return-void
+    return-object p0
 .end method

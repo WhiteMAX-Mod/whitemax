@@ -1,145 +1,35 @@
 .class public final Lqxd;
-.super Lqde;
+.super Ljava/lang/Object;
 .source "SourceFile"
-
-# interfaces
-.implements Ll66;
 
 
 # instance fields
-.field public X:I
+.field public a:Ltxd;
 
-.field public final synthetic Y:Luxd;
+.field public b:Lx30;
 
-.field public final synthetic Z:J
+.field public c:Leo9;
 
+.field public d:Landroid/content/Context;
 
-# direct methods
-.method public constructor <init>(Luxd;JLkotlin/coroutines/Continuation;)V
-    .locals 0
+.field public e:Lfec;
 
-    iput-object p1, p0, Lqxd;->Y:Luxd;
+.field public f:Lrg1;
 
-    iput-wide p2, p0, Lqxd;->Z:J
+.field public g:Ldy0;
 
-    const/4 p1, 0x2
+.field public h:Lzjd;
 
-    invoke-direct {p0, p1, p4}, Lqde;-><init>(ILkotlin/coroutines/Continuation;)V
+.field public i:Ljava/lang/Integer;
 
-    return-void
-.end method
+.field public j:Z
 
+.field public k:Lorg/webrtc/EglBase$Context;
 
-# virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.field public l:Lgx7;
 
-    check-cast p1, Lox3;
+.field public m:Lc0d;
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+.field public n:Luyc;
 
-    invoke-virtual {p0, p1, p2}, Lqxd;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p0
-
-    check-cast p0, Lqxd;
-
-    sget-object p1, Le5f;->a:Le5f;
-
-    invoke-virtual {p0, p1}, Lqxd;->o(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 3
-
-    new-instance p1, Lqxd;
-
-    iget-object v0, p0, Lqxd;->Y:Luxd;
-
-    iget-wide v1, p0, Lqxd;->Z:J
-
-    invoke-direct {p1, v0, v1, v2, p2}, Lqxd;-><init>(Luxd;JLkotlin/coroutines/Continuation;)V
-
-    return-object p1
-.end method
-
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 4
-
-    iget v0, p0, Lqxd;->X:I
-
-    iget-object v1, p0, Lqxd;->Y:Luxd;
-
-    const/4 v2, 0x1
-
-    if-eqz v0, :cond_1
-
-    if-ne v0, v2, :cond_0
-
-    invoke-static {p1}, Lsgg;->Z(Ljava/lang/Object;)V
-
-    goto :goto_0
-
-    :cond_0
-    new-instance p0, Ljava/lang/IllegalStateException;
-
-    const-string p1, "call to \'resume\' before \'invoke\' with coroutine"
-
-    invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p0
-
-    :cond_1
-    invoke-static {p1}, Lsgg;->Z(Ljava/lang/Object;)V
-
-    iget-object p1, v1, Luxd;->Y:Lje7;
-
-    invoke-interface {p1}, Lje7;->getValue()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lbx2;
-
-    iput v2, p0, Lqxd;->X:I
-
-    check-cast p1, Lcy2;
-
-    iget-wide v2, p0, Lqxd;->Z:J
-
-    invoke-virtual {p1, v2, v3, p0}, Lcy2;->X(JLkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    sget-object p0, Lpx3;->a:Lpx3;
-
-    if-ne p1, p0, :cond_2
-
-    return-object p0
-
-    :cond_2
-    :goto_0
-    check-cast p1, Ly42;
-
-    if-eqz p1, :cond_3
-
-    iget-object p0, v1, Luxd;->v0:Lj35;
-
-    sget-object v0, Lcxd;->c:Lcxd;
-
-    iget-wide v1, p1, Ly42;->a:J
-
-    invoke-virtual {v0, v1, v2}, Lcxd;->T0(J)Lp64;
-
-    move-result-object p1
-
-    invoke-static {p0, p1}, Ljof;->o(Lj35;Ljava/lang/Object;)V
-
-    :cond_3
-    sget-object p0, Le5f;->a:Le5f;
-
-    return-object p0
-.end method
+.field public o:Lqzc;

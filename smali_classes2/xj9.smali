@@ -1,138 +1,229 @@
-.class public final synthetic Lxj9;
-.super Ljava/lang/Object;
+.class public Lxj9;
+.super Llk0;
 .source "SourceFile"
-
-# interfaces
-.implements Lc6;
 
 
 # instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Lyj9;
+.field public final j:Ljava/util/List;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lyj9;I)V
-    .locals 0
+.method public constructor <init>(JJLjava/util/List;Z)V
+    .locals 13
 
-    iput p2, p0, Lxj9;->a:I
+    const/4 v11, -0x1
 
-    iput-object p1, p0, Lxj9;->b:Lyj9;
+    const/4 v12, -0x1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/4 v1, 0x0
+
+    const-wide/16 v7, 0x0
+
+    const/4 v9, 0x0
+
+    move-object v0, p0
+
+    move-wide v3, p1
+
+    move-wide/from16 v5, p3
+
+    move-object/from16 v2, p5
+
+    move/from16 v10, p6
+
+    .line 3
+    invoke-direct/range {v0 .. v12}, Lxj9;-><init>(Ljava/lang/String;Ljava/util/List;JJJLox;ZII)V
+
+    return-void
+.end method
+
+.method public constructor <init>(Ljava/lang/String;Ljava/util/List;JJJLox;ZII)V
+    .locals 13
+
+    const/4 v11, 0x0
+
+    move-object v0, p0
+
+    move-object v10, p1
+
+    move-wide/from16 v5, p3
+
+    move-wide/from16 v3, p5
+
+    move-wide/from16 v7, p7
+
+    move-object/from16 v9, p9
+
+    move/from16 v12, p10
+
+    move/from16 v1, p11
+
+    move/from16 v2, p12
+
+    .line 1
+    invoke-direct/range {v0 .. v12}, Llk0;-><init>(IIJJJLox;Ljava/lang/String;ZZ)V
+
+    .line 2
+    iput-object p2, p0, Lxj9;->j:Ljava/util/List;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
+.method public equals(Ljava/lang/Object;)Z
+    .locals 3
+
+    if-ne p0, p1, :cond_0
+
+    const/4 p0, 0x1
+
+    return p0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    if-eqz p1, :cond_3
+
+    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    move-result-object v1
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    move-result-object v2
+
+    if-eq v1, v2, :cond_1
+
+    goto :goto_0
+
+    :cond_1
+    invoke-super {p0, p1}, Llk0;->equals(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_2
+
+    return v0
+
+    :cond_2
+    check-cast p1, Lxj9;
+
+    iget-object p0, p0, Lxj9;->j:Ljava/util/List;
+
+    iget-object p1, p1, Lxj9;->j:Ljava/util/List;
+
+    invoke-interface {p0, p1}, Ljava/util/List;->equals(Ljava/lang/Object;)Z
+
+    move-result p0
+
+    return p0
+
+    :cond_3
+    :goto_0
+    return v0
+.end method
+
+.method public final g()I
+    .locals 0
+
+    const/4 p0, 0x2
+
+    return p0
+.end method
+
+.method public final getHeight()I
     .locals 2
 
-    iget v0, p0, Lxj9;->a:I
+    iget-object p0, p0, Lxj9;->j:Ljava/util/List;
 
-    packed-switch v0, :pswitch_data_0
+    invoke-interface {p0}, Ljava/util/List;->isEmpty()Z
 
-    new-instance v0, Laj0;
+    move-result v0
 
-    const/16 v1, 0x12
+    const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Laj0;-><init>(I)V
+    if-eqz v0, :cond_0
 
-    iget-object p0, p0, Lxj9;->b:Lyj9;
+    return v1
 
-    invoke-virtual {p0, v0}, Lv2;->o(Lmj3;)V
+    :cond_0
+    invoke-interface {p0, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
-    return-void
+    move-result-object p0
 
-    :pswitch_0
-    new-instance v0, Loj9;
+    check-cast p0, Lvj9;
 
-    const/4 v1, 0x5
+    iget p0, p0, Lvj9;->c:I
 
-    invoke-direct {v0, v1}, Loj9;-><init>(I)V
+    return p0
+.end method
 
-    iget-object p0, p0, Lxj9;->b:Lyj9;
+.method public final getWidth()I
+    .locals 2
 
-    invoke-virtual {p0, v0}, Lv2;->o(Lmj3;)V
+    iget-object p0, p0, Lxj9;->j:Ljava/util/List;
 
-    return-void
+    invoke-interface {p0}, Ljava/util/List;->isEmpty()Z
 
-    :pswitch_1
-    new-instance v0, Loj9;
+    move-result v0
 
-    const/4 v1, 0x6
+    const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Loj9;-><init>(I)V
+    if-eqz v0, :cond_0
 
-    iget-object p0, p0, Lxj9;->b:Lyj9;
+    return v1
 
-    invoke-virtual {p0, v0}, Lv2;->o(Lmj3;)V
+    :cond_0
+    invoke-interface {p0, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
-    return-void
+    move-result-object p0
 
-    :pswitch_2
-    new-instance v0, Loj9;
+    check-cast p0, Lvj9;
 
-    const/4 v1, 0x7
+    iget p0, p0, Lvj9;->b:I
 
-    invoke-direct {v0, v1}, Loj9;-><init>(I)V
+    return p0
+.end method
 
-    iget-object p0, p0, Lxj9;->b:Lyj9;
+.method public hashCode()I
+    .locals 1
 
-    invoke-virtual {p0, v0}, Lv2;->o(Lmj3;)V
+    invoke-super {p0}, Llk0;->hashCode()I
 
-    return-void
+    move-result v0
 
-    :pswitch_3
-    new-instance v0, Laj0;
+    mul-int/lit8 v0, v0, 0x1f
 
-    const/16 v1, 0x19
+    iget-object p0, p0, Lxj9;->j:Ljava/util/List;
 
-    invoke-direct {v0, v1}, Laj0;-><init>(I)V
+    invoke-interface {p0}, Ljava/util/List;->hashCode()I
 
-    iget-object p0, p0, Lxj9;->b:Lyj9;
+    move-result p0
 
-    invoke-virtual {p0, v0}, Lv2;->o(Lmj3;)V
+    add-int/2addr p0, v0
 
-    return-void
+    return p0
+.end method
 
-    :pswitch_4
-    new-instance v0, Laj0;
+.method public final i()Landroid/net/Uri;
+    .locals 1
 
-    const/16 v1, 0x1b
+    iget-object p0, p0, Lxj9;->j:Ljava/util/List;
 
-    invoke-direct {v0, v1}, Laj0;-><init>(I)V
+    const/4 v0, 0x0
 
-    iget-object p0, p0, Lxj9;->b:Lyj9;
+    invoke-interface {p0, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
-    invoke-virtual {p0, v0}, Lv2;->o(Lmj3;)V
+    move-result-object p0
 
-    return-void
+    check-cast p0, Lvj9;
 
-    :pswitch_5
-    new-instance v0, Laj0;
+    iget-object p0, p0, Lvj9;->a:Ljava/lang/String;
 
-    const/16 v1, 0x12
+    invoke-static {p0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
 
-    invoke-direct {v0, v1}, Laj0;-><init>(I)V
+    move-result-object p0
 
-    iget-object p0, p0, Lxj9;->b:Lyj9;
-
-    invoke-virtual {p0, v0}, Lv2;->o(Lmj3;)V
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_5
-        :pswitch_4
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    return-object p0
 .end method

@@ -1,190 +1,242 @@
-.class public final synthetic Llb3;
+.class public final Llb3;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lvbe;
+.implements Ljava/util/Iterator;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final synthetic X:I
+
+.field public final synthetic Y:Lob3;
+
+.field public a:I
+
+.field public b:I
+
+.field public c:I
+
+.field public final synthetic o:Lob3;
 
 
 # direct methods
-.method public synthetic constructor <init>(I)V
+.method public constructor <init>(Lob3;I)V
     .locals 0
 
-    iput p1, p0, Llb3;->a:I
+    iput p2, p0, Llb3;->X:I
+
+    iput-object p1, p0, Llb3;->Y:Lob3;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Llb3;->o:Lob3;
+
+    iget p2, p1, Lob3;->X:I
+
+    iput p2, p0, Llb3;->a:I
+
+    invoke-virtual {p1}, Lob3;->isEmpty()Z
+
+    move-result p1
+
+    const/4 p2, -0x1
+
+    if-eqz p1, :cond_0
+
+    move p1, p2
+
+    goto :goto_0
+
+    :cond_0
+    const/4 p1, 0x0
+
+    :goto_0
+    iput p1, p0, Llb3;->b:I
+
+    iput p2, p0, Llb3;->c:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final get()Ljava/lang/Object;
-    .locals 7
+.method public final hasNext()Z
+    .locals 0
 
-    iget p0, p0, Llb3;->a:I
+    iget p0, p0, Llb3;->b:I
 
-    packed-switch p0, :pswitch_data_0
-
-    new-instance p0, Ljava/lang/IllegalStateException;
-
-    invoke-direct {p0}, Ljava/lang/IllegalStateException;-><init>()V
-
-    throw p0
-
-    :pswitch_0
-    new-instance v0, Lpc4;
-
-    new-instance v1, La74;
+    if-ltz p0, :cond_0
 
     const/4 p0, 0x1
 
-    invoke-direct {v1, p0}, La74;-><init>(I)V
+    return p0
 
-    const/16 v5, 0x1388
-
-    const/4 v6, 0x0
-
-    const v2, 0xc350
-
-    const v3, 0xc350
-
-    const/16 v4, 0x9c4
-
-    invoke-direct/range {v0 .. v6}, Lpc4;-><init>(La74;IIIIZ)V
-
-    return-object v0
-
-    :pswitch_1
-    new-instance v1, Loc4;
-
-    new-instance v2, La74;
-
+    :cond_0
     const/4 p0, 0x0
 
-    invoke-direct {v2, p0}, La74;-><init>(I)V
+    return p0
+.end method
 
-    const/16 v5, 0x9c4
+.method public final next()Ljava/lang/Object;
+    .locals 4
 
-    const/16 v6, 0x1388
+    iget-object v0, p0, Llb3;->o:Lob3;
 
-    const v3, 0xc350
+    iget v1, v0, Lob3;->X:I
 
-    const v4, 0xc350
+    iget v2, p0, Llb3;->a:I
 
-    invoke-direct/range {v1 .. v6}, Loc4;-><init>(La74;IIII)V
+    if-ne v1, v2, :cond_2
 
-    return-object v1
+    invoke-virtual {p0}, Llb3;->hasNext()Z
 
-    :pswitch_2
-    const/16 p0, 0xc
+    move-result v1
 
-    new-array p0, p0, [B
+    if-eqz v1, :cond_1
 
-    sget-object v0, Lhd4;->i:Ljava/util/Random;
+    iget v1, p0, Llb3;->b:I
 
-    invoke-virtual {v0, p0}, Ljava/util/Random;->nextBytes([B)V
+    iput v1, p0, Llb3;->c:I
 
-    const/16 v0, 0xa
+    iget v2, p0, Llb3;->X:I
 
-    invoke-static {p0, v0}, Landroid/util/Base64;->encodeToString([BI)Ljava/lang/String;
+    packed-switch v2, :pswitch_data_0
 
-    move-result-object p0
+    iget-object v2, p0, Llb3;->Y:Lob3;
 
-    return-object p0
+    invoke-virtual {v2}, Lob3;->j()[Ljava/lang/Object;
 
-    :pswitch_3
-    invoke-static {}, Ljava/util/concurrent/Executors;->newSingleThreadExecutor()Ljava/util/concurrent/ExecutorService;
+    move-result-object v2
 
-    move-result-object p0
+    aget-object v1, v2, v1
 
-    instance-of v0, p0, Lqm7;
+    goto :goto_0
 
-    if-eqz v0, :cond_0
+    :pswitch_0
+    new-instance v2, Lnb3;
 
-    check-cast p0, Lqm7;
+    iget-object v3, p0, Llb3;->Y:Lob3;
+
+    invoke-direct {v2, v3, v1}, Lnb3;-><init>(Lob3;I)V
+
+    move-object v1, v2
+
+    goto :goto_0
+
+    :pswitch_1
+    iget-object v2, p0, Llb3;->Y:Lob3;
+
+    invoke-virtual {v2}, Lob3;->i()[Ljava/lang/Object;
+
+    move-result-object v2
+
+    aget-object v1, v2, v1
+
+    :goto_0
+    iget v2, p0, Llb3;->b:I
+
+    add-int/lit8 v2, v2, 0x1
+
+    iget v0, v0, Lob3;->Y:I
+
+    if-ge v2, v0, :cond_0
 
     goto :goto_1
 
     :cond_0
-    instance-of v0, p0, Ljava/util/concurrent/ScheduledExecutorService;
-
-    if-eqz v0, :cond_1
-
-    new-instance v0, Lfb9;
-
-    check-cast p0, Ljava/util/concurrent/ScheduledExecutorService;
-
-    invoke-direct {v0, p0}, Lfb9;-><init>(Ljava/util/concurrent/ScheduledExecutorService;)V
-
-    :goto_0
-    move-object p0, v0
-
-    goto :goto_1
-
-    :cond_1
-    new-instance v0, Lcb9;
-
-    invoke-direct {v0, p0}, Lcb9;-><init>(Ljava/util/concurrent/ExecutorService;)V
-
-    goto :goto_0
+    const/4 v2, -0x1
 
     :goto_1
-    return-object p0
+    iput v2, p0, Llb3;->b:I
 
-    :pswitch_4
-    :try_start_0
-    const-class p0, Landroidx/media3/effect/DefaultVideoFrameProcessor$Factory$Builder;
+    return-object v1
 
-    const/4 v0, 0x0
+    :cond_1
+    new-instance p0, Ljava/util/NoSuchElementException;
 
-    invoke-virtual {p0, v0}, Ljava/lang/Class;->getConstructor([Ljava/lang/Class;)Ljava/lang/reflect/Constructor;
+    invoke-direct {p0}, Ljava/util/NoSuchElementException;-><init>()V
 
-    move-result-object v1
+    throw p0
 
-    invoke-virtual {v1, v0}, Ljava/lang/reflect/Constructor;->newInstance([Ljava/lang/Object;)Ljava/lang/Object;
+    :cond_2
+    new-instance p0, Ljava/util/ConcurrentModificationException;
 
-    move-result-object v1
+    invoke-direct {p0}, Ljava/util/ConcurrentModificationException;-><init>()V
 
-    const-string v2, "build"
-
-    invoke-virtual {p0, v2, v0}, Ljava/lang/Class;->getMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
-
-    move-result-object p0
-
-    invoke-virtual {p0, v1, v0}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    check-cast p0, Lagf;
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
-
-    return-object p0
-
-    :catch_0
-    move-exception v0
-
-    move-object p0, v0
-
-    new-instance v0, Ljava/lang/IllegalStateException;
-
-    invoke-direct {v0, p0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/Throwable;)V
-
-    throw v0
+    throw p0
 
     :pswitch_data_0
     .packed-switch 0x0
-        :pswitch_4
-        :pswitch_3
-        :pswitch_2
         :pswitch_1
         :pswitch_0
     .end packed-switch
+.end method
+
+.method public final remove()V
+    .locals 5
+
+    iget-object v0, p0, Llb3;->o:Lob3;
+
+    iget v1, v0, Lob3;->X:I
+
+    iget v2, p0, Llb3;->a:I
+
+    if-ne v1, v2, :cond_2
+
+    iget v1, p0, Llb3;->c:I
+
+    const/4 v3, 0x1
+
+    if-ltz v1, :cond_0
+
+    move v4, v3
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v4, 0x0
+
+    :goto_0
+    if-eqz v4, :cond_1
+
+    add-int/lit8 v2, v2, 0x20
+
+    iput v2, p0, Llb3;->a:I
+
+    invoke-virtual {v0}, Lob3;->i()[Ljava/lang/Object;
+
+    move-result-object v2
+
+    aget-object v1, v2, v1
+
+    invoke-virtual {v0, v1}, Lob3;->remove(Ljava/lang/Object;)Ljava/lang/Object;
+
+    iget v0, p0, Llb3;->b:I
+
+    sub-int/2addr v0, v3
+
+    iput v0, p0, Llb3;->b:I
+
+    const/4 v0, -0x1
+
+    iput v0, p0, Llb3;->c:I
+
+    return-void
+
+    :cond_1
+    new-instance p0, Ljava/lang/IllegalStateException;
+
+    const-string v0, "no calls to next() since the last call to remove()"
+
+    invoke-direct {p0, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p0
+
+    :cond_2
+    new-instance p0, Ljava/util/ConcurrentModificationException;
+
+    invoke-direct {p0}, Ljava/util/ConcurrentModificationException;-><init>()V
+
+    throw p0
 .end method

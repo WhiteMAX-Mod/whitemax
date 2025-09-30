@@ -1,180 +1,72 @@
 .class public final Lpnb;
-.super Lqde;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Ll66;
+.implements Lbc6;
 
 
 # instance fields
-.field public final synthetic X:Ljava/io/File;
+.field public final synthetic a:I
 
-.field public final synthetic Y:Ljava/io/File;
-
-.field public final synthetic Z:Lvj5;
-
-.field public final synthetic o0:Landroid/content/Context;
-
-.field public final synthetic p0:Landroid/graphics/Bitmap;
+.field public final synthetic b:Lone/me/profileedit/screens/adminpermissions/ProfileEditAdminPermissionsWidget;
 
 
 # direct methods
-.method public constructor <init>(Ljava/io/File;Ljava/io/File;Lvj5;Landroid/content/Context;Landroid/graphics/Bitmap;Lkotlin/coroutines/Continuation;)V
+.method public synthetic constructor <init>(Lone/me/profileedit/screens/adminpermissions/ProfileEditAdminPermissionsWidget;I)V
     .locals 0
 
-    iput-object p1, p0, Lpnb;->X:Ljava/io/File;
+    iput p2, p0, Lpnb;->a:I
 
-    iput-object p2, p0, Lpnb;->Y:Ljava/io/File;
+    iput-object p1, p0, Lpnb;->b:Lone/me/profileedit/screens/adminpermissions/ProfileEditAdminPermissionsWidget;
 
-    iput-object p3, p0, Lpnb;->Z:Lvj5;
-
-    iput-object p4, p0, Lpnb;->o0:Landroid/content/Context;
-
-    iput-object p5, p0, Lpnb;->p0:Landroid/graphics/Bitmap;
-
-    const/4 p1, 0x2
-
-    invoke-direct {p0, p1, p6}, Lqde;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 2
 
-    check-cast p1, Lox3;
+    iget v0, p0, Lpnb;->a:I
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    sget-object v1, Lylf;->a:Lylf;
 
-    invoke-virtual {p0, p1, p2}, Lpnb;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    iget-object p0, p0, Lpnb;->b:Lone/me/profileedit/screens/adminpermissions/ProfileEditAdminPermissionsWidget;
 
-    move-result-object p0
+    packed-switch v0, :pswitch_data_0
 
-    check-cast p0, Lpnb;
+    check-cast p1, Landroid/view/View;
 
-    sget-object p1, Le5f;->a:Le5f;
+    sget-object p1, Lone/me/profileedit/screens/adminpermissions/ProfileEditAdminPermissionsWidget;->w0:[Lxi7;
 
-    invoke-virtual {p0, p1}, Lpnb;->o(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 7
-
-    new-instance v0, Lpnb;
-
-    iget-object v4, p0, Lpnb;->o0:Landroid/content/Context;
-
-    iget-object v5, p0, Lpnb;->p0:Landroid/graphics/Bitmap;
-
-    iget-object v1, p0, Lpnb;->X:Ljava/io/File;
-
-    iget-object v2, p0, Lpnb;->Y:Ljava/io/File;
-
-    iget-object v3, p0, Lpnb;->Z:Lvj5;
-
-    move-object v6, p2
-
-    invoke-direct/range {v0 .. v6}, Lpnb;-><init>(Ljava/io/File;Ljava/io/File;Lvj5;Landroid/content/Context;Landroid/graphics/Bitmap;Lkotlin/coroutines/Continuation;)V
-
-    return-object v0
-.end method
-
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 5
-
-    invoke-static {p1}, Lsgg;->Z(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Lpnb;->X:Ljava/io/File;
-
-    invoke-virtual {p1}, Ljava/io/File;->exists()Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    invoke-virtual {p1}, Ljava/io/File;->mkdirs()Z
-
-    :cond_0
-    new-instance p1, Ljava/io/FileOutputStream;
-
-    iget-object v0, p0, Lpnb;->Y:Ljava/io/File;
-
-    invoke-direct {p1, v0}, Ljava/io/FileOutputStream;-><init>(Ljava/io/File;)V
-
-    iget-object v1, p0, Lpnb;->p0:Landroid/graphics/Bitmap;
-
-    :try_start_0
-    sget-object v2, Landroid/graphics/Bitmap$CompressFormat;->PNG:Landroid/graphics/Bitmap$CompressFormat;
-
-    const/16 v3, 0x64
-
-    invoke-virtual {v1, v2, v3, p1}, Landroid/graphics/Bitmap;->compress(Landroid/graphics/Bitmap$CompressFormat;ILjava/io/OutputStream;)Z
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    invoke-interface {p1}, Ljava/io/Closeable;->close()V
-
-    invoke-virtual {v0}, Ljava/io/File;->exists()Z
-
-    move-result p1
-
-    if-eqz p1, :cond_1
-
-    invoke-virtual {v0}, Ljava/io/File;->length()J
-
-    move-result-wide v1
-
-    const-wide/16 v3, 0x0
-
-    cmp-long p1, v1, v3
-
-    if-eqz p1, :cond_1
-
-    iget-object p1, p0, Lpnb;->Z:Lvj5;
-
-    iget-object p0, p0, Lpnb;->o0:Landroid/content/Context;
-
-    invoke-virtual {p1, p0, v0}, Lvj5;->f(Landroid/content/Context;Ljava/io/File;)Landroid/net/Uri;
+    invoke-virtual {p0}, Lone/me/profileedit/screens/adminpermissions/ProfileEditAdminPermissionsWidget;->A0()Lnnb;
 
     move-result-object p0
 
-    return-object p0
+    invoke-virtual {p0}, Lnnb;->r()V
 
-    :cond_1
-    new-instance p0, Ljava/io/IOException;
+    return-object v1
 
-    invoke-virtual {v0}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
+    :pswitch_0
+    check-cast p1, Landroid/view/View;
 
-    move-result-object p1
+    sget-object p1, Lone/me/profileedit/screens/adminpermissions/ProfileEditAdminPermissionsWidget;->w0:[Lxi7;
 
-    const-string v0, "Failed to create QR code file: "
+    invoke-virtual {p0}, Lone/me/profileedit/screens/adminpermissions/ProfileEditAdminPermissionsWidget;->A0()Lnnb;
 
-    invoke-static {v0, p1}, Lpg0;->g(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    move-result-object p0
 
-    move-result-object p1
+    invoke-virtual {p0}, Lnnb;->x()V
 
-    invoke-direct {p0, p1}, Ljava/io/IOException;-><init>(Ljava/lang/String;)V
+    return-object v1
 
-    throw p0
+    nop
 
-    :catchall_0
-    move-exception p0
-
-    :try_start_1
-    throw p0
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_1
-
-    :catchall_1
-    move-exception v0
-
-    invoke-static {p1, p0}, Liz7;->d(Ljava/io/Closeable;Ljava/lang/Throwable;)V
-
-    throw v0
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

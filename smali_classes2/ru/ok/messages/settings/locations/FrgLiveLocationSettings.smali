@@ -3,13 +3,13 @@
 .source "SourceFile"
 
 # interfaces
-.implements Li56;
+.implements Llb6;
 
 
 # instance fields
-.field public x1:Lhi9;
+.field public A1:Lqp9;
 
-.field public y1:Ljo7;
+.field public B1:Lktb;
 
 
 # direct methods
@@ -38,15 +38,13 @@
 
     if-ne p2, p3, :cond_0
 
-    sget p2, Ljo7;->p0:I
-
     const/16 p2, 0x12d
 
     if-ne p1, p2, :cond_0
 
-    iget-object p0, p0, Lru/ok/messages/settings/locations/FrgLiveLocationSettings;->y1:Ljo7;
+    iget-object p0, p0, Lru/ok/messages/settings/locations/FrgLiveLocationSettings;->B1:Lktb;
 
-    invoke-virtual {p0}, Ljo7;->H()V
+    invoke-virtual {p0}, Lktb;->u()V
 
     :cond_0
     return-void
@@ -54,8 +52,6 @@
 
 .method public final c1(I[Ljava/lang/String;[I)V
     .locals 1
-
-    sget v0, Ljo7;->p0:I
 
     const/16 v0, 0xa9
 
@@ -72,9 +68,9 @@
 
     :cond_1
     :goto_0
-    iget-object p0, p0, Lru/ok/messages/settings/locations/FrgLiveLocationSettings;->y1:Ljo7;
+    iget-object p0, p0, Lru/ok/messages/settings/locations/FrgLiveLocationSettings;->B1:Lktb;
 
-    invoke-virtual {p0, p1, p2, p3}, Ljo7;->F(I[Ljava/lang/String;[I)V
+    invoke-virtual {p0, p1, p2, p3}, Lktb;->r(I[Ljava/lang/String;[I)V
 
     return-void
 .end method
@@ -96,170 +92,172 @@
 
     const-string v0, "Context is null"
 
-    invoke-static {v13, v0, v12}, Lg47;->r(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-static {v13, v0, v12}, Ljtg;->m(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     return-object v12
 
     :cond_0
-    iget-object v1, p0, Lru/ok/messages/views/fragments/base/FrgBase;->l1:Lt4b;
+    iget-object v1, p0, Lru/ok/messages/views/fragments/base/FrgBase;->o1:Lr2b;
 
-    iget-object v1, v1, Lt4b;->b:Ljava/lang/Object;
+    iget-object v1, v1, Lr2b;->a:Ljava/lang/Object;
 
-    check-cast v1, Lsb3;
+    check-cast v1, Lpe3;
 
-    check-cast v1, Lq6a;
+    check-cast v1, Lbfa;
 
-    invoke-virtual {v1}, Lq6a;->p()Lqie;
+    invoke-virtual {v1}, Lbfa;->p()Lwwe;
 
     move-result-object v1
 
     invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    invoke-static {}, Lqie;->b()Lmie;
+    invoke-static {}, Lwwe;->b()Lswe;
 
     move-result-object v1
 
-    check-cast v1, Lowc;
+    check-cast v1, Liad;
 
-    invoke-virtual {v1}, Lscout/Component;->getAccessor()Lu4;
+    invoke-virtual {v1}, Lscout/Component;->getAccessor()Lz4;
 
     move-result-object v1
 
-    const-class v2, Lcn7;
+    const-class v2, Lhu7;
 
-    invoke-virtual {v1, v2}, Lu4;->c(Ljava/lang/Class;)Ljava/lang/Object;
+    invoke-virtual {v1, v2}, Lz4;->c(Ljava/lang/Class;)Ljava/lang/Object;
 
     move-result-object v1
 
     move-object v4, v1
 
-    check-cast v4, Lcn7;
+    check-cast v4, Lhu7;
 
-    iget-object v1, p0, Lru/ok/messages/views/fragments/base/FrgBase;->l1:Lt4b;
+    iget-object v1, p0, Lru/ok/messages/views/fragments/base/FrgBase;->o1:Lr2b;
 
-    iget-object v1, v1, Lt4b;->b:Ljava/lang/Object;
+    iget-object v1, v1, Lr2b;->a:Ljava/lang/Object;
 
-    check-cast v1, Lsb3;
+    check-cast v1, Lpe3;
 
-    check-cast v1, Lq6a;
+    check-cast v1, Lbfa;
 
-    invoke-virtual {v1}, Lq6a;->n()La5b;
+    invoke-virtual {v1}, Lbfa;->n()Ltgb;
 
     move-result-object v2
 
-    iget-object v1, p0, Lru/ok/messages/views/fragments/base/FrgBase;->l1:Lt4b;
+    iget-object v1, p0, Lru/ok/messages/views/fragments/base/FrgBase;->o1:Lr2b;
 
-    iget-object v1, v1, Lt4b;->b:Ljava/lang/Object;
+    iget-object v1, v1, Lr2b;->a:Ljava/lang/Object;
 
-    check-cast v1, Lsb3;
+    check-cast v1, Lpe3;
 
-    check-cast v1, Lq6a;
+    check-cast v1, Lbfa;
 
-    invoke-virtual {v1}, Lq6a;->e()Ln82;
+    invoke-virtual {v1}, Lbfa;->e()Lza2;
 
     move-result-object v3
 
-    iget-object v1, p0, Lru/ok/messages/views/fragments/base/FrgBase;->l1:Lt4b;
+    iget-object v1, p0, Lru/ok/messages/views/fragments/base/FrgBase;->o1:Lr2b;
 
-    iget-object v1, v1, Lt4b;->b:Ljava/lang/Object;
+    iget-object v1, v1, Lr2b;->a:Ljava/lang/Object;
 
-    check-cast v1, Lsb3;
+    check-cast v1, Lpe3;
 
-    check-cast v1, Lq6a;
+    check-cast v1, Lbfa;
 
-    invoke-virtual {v1}, Lscout/Component;->getAccessor()Lu4;
-
-    move-result-object v1
-
-    const-class v5, Laba;
-
-    invoke-virtual {v1, v5}, Lu4;->c(Ljava/lang/Class;)Ljava/lang/Object;
+    invoke-virtual {v1}, Lscout/Component;->getAccessor()Lz4;
 
     move-result-object v1
 
-    check-cast v1, Laba;
+    const-class v5, Ldka;
 
-    iget-object v1, p0, Lru/ok/messages/views/fragments/base/FrgBase;->l1:Lt4b;
+    invoke-virtual {v1, v5}, Lz4;->c(Ljava/lang/Class;)Ljava/lang/Object;
 
-    iget-object v1, v1, Lt4b;->b:Ljava/lang/Object;
+    move-result-object v1
 
-    check-cast v1, Lsb3;
+    check-cast v1, Ldka;
 
-    check-cast v1, Lq6a;
+    iget-object v1, p0, Lru/ok/messages/views/fragments/base/FrgBase;->o1:Lr2b;
 
-    invoke-virtual {v1}, Lq6a;->r()Lyx7;
+    iget-object v1, v1, Lr2b;->a:Ljava/lang/Object;
+
+    check-cast v1, Lpe3;
+
+    check-cast v1, Lbfa;
+
+    invoke-virtual {v1}, Lbfa;->r()Ly48;
 
     move-result-object v5
 
-    iget-object v1, p0, Lru/ok/messages/views/fragments/base/FrgBase;->l1:Lt4b;
+    iget-object v1, p0, Lru/ok/messages/views/fragments/base/FrgBase;->o1:Lr2b;
 
-    iget-object v1, v1, Lt4b;->b:Ljava/lang/Object;
+    iget-object v1, v1, Lr2b;->a:Ljava/lang/Object;
 
-    check-cast v1, Lsb3;
+    check-cast v1, Lpe3;
 
-    check-cast v1, Lq6a;
+    check-cast v1, Lbfa;
 
-    invoke-virtual {v1}, Lq6a;->q()Lmje;
+    invoke-virtual {v1}, Lbfa;->q()Ltxe;
 
     move-result-object v1
 
     invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    check-cast v1, Loje;
+    check-cast v1, Luxe;
 
-    invoke-virtual {v1}, Loje;->a()Lgsc;
+    invoke-virtual {v1}, Luxe;->a()Lv5d;
 
     move-result-object v8
 
-    new-instance v1, Llj9;
+    new-instance v1, Lvq9;
 
-    invoke-direct {v1, v0}, Lv2;-><init>(Landroid/content/Context;)V
+    invoke-direct {v1, v0}, Ly2;-><init>(Landroid/content/Context;)V
 
-    sget v0, Lqwb;->frg_live_location_settings:I
+    sget v0, Lz8c;->frg_live_location_settings:I
 
     move-object/from16 v6, p2
 
-    invoke-virtual {v1, v6, v0}, Lv2;->m(Landroid/view/ViewGroup;I)V
+    invoke-virtual {v1, v6, v0}, Ly2;->l(Landroid/view/ViewGroup;I)V
 
-    iget-object v0, p0, Lru/ok/messages/views/fragments/base/FrgBase;->l1:Lt4b;
+    iget-object v0, p0, Lru/ok/messages/views/fragments/base/FrgBase;->o1:Lr2b;
 
-    iget-object v0, v0, Lt4b;->b:Ljava/lang/Object;
+    iget-object v0, v0, Lr2b;->a:Ljava/lang/Object;
 
-    check-cast v0, Lsb3;
+    check-cast v0, Lpe3;
 
-    check-cast v0, Lq6a;
+    check-cast v0, Lbfa;
 
-    invoke-virtual {v0}, Lq6a;->b()Luc;
+    invoke-virtual {v0}, Lbfa;->b()Lzc;
 
     move-result-object v6
 
-    new-instance v0, Ljo7;
+    new-instance v0, Lktb;
 
-    iget-object v7, p0, Lru/ok/messages/views/fragments/base/FrgBase;->m1:Lowc;
+    iget-object v7, p0, Lru/ok/messages/views/fragments/base/FrgBase;->p1:Liad;
 
-    invoke-virtual {v7}, Lowc;->i()Le45;
+    invoke-virtual {v7}, Liad;->i()Lq95;
 
     move-result-object v7
 
-    invoke-direct {v0, v7, p0}, Ljo7;-><init>(Le45;Lru/ok/messages/views/fragments/base/FrgBase;)V
+    const/4 v9, 0x7
 
-    iput-object v0, p0, Lru/ok/messages/settings/locations/FrgLiveLocationSettings;->y1:Ljo7;
+    invoke-direct {v0, v7, v9, p0}, Lktb;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
 
-    new-instance v0, Lhi9;
+    iput-object v0, p0, Lru/ok/messages/settings/locations/FrgLiveLocationSettings;->B1:Lktb;
 
-    iget-object v7, p0, Lru/ok/messages/settings/locations/FrgLiveLocationSettings;->y1:Ljo7;
+    new-instance v0, Lqp9;
 
-    iget-object v9, p0, Lru/ok/messages/views/fragments/base/FrgBase;->m1:Lowc;
+    iget-object v7, p0, Lru/ok/messages/settings/locations/FrgLiveLocationSettings;->B1:Lktb;
 
-    invoke-virtual {v9}, Lowc;->h()Lti4;
+    iget-object v9, p0, Lru/ok/messages/views/fragments/base/FrgBase;->p1:Liad;
+
+    invoke-virtual {v9}, Liad;->h()Ljn4;
 
     move-result-object v9
 
     move-object v10, p0
 
-    invoke-direct/range {v0 .. v10}, Lhi9;-><init>(Llj9;La5b;Ln82;Lcn7;Lyx7;Luc;Ljo7;Lgsc;Lti4;Lru/ok/messages/settings/locations/FrgLiveLocationSettings;)V
+    invoke-direct/range {v0 .. v10}, Lqp9;-><init>(Lvq9;Ltgb;Lza2;Lhu7;Ly48;Lzc;Lktb;Lv5d;Ljn4;Lru/ok/messages/settings/locations/FrgLiveLocationSettings;)V
 
-    iput-object v0, p0, Lru/ok/messages/settings/locations/FrgLiveLocationSettings;->x1:Lhi9;
+    iput-object v0, p0, Lru/ok/messages/settings/locations/FrgLiveLocationSettings;->A1:Lqp9;
 
     if-eqz v11, :cond_1
 
@@ -269,27 +267,27 @@
 
     move-result v2
 
-    iput-boolean v2, v0, Lhi9;->s0:Z
+    iput-boolean v2, v0, Lqp9;->v0:Z
 
     :cond_1
-    invoke-virtual {p0}, Lru/ok/messages/views/fragments/base/FrgBase;->V0()Llx2;
+    invoke-virtual {p0}, Lru/ok/messages/views/fragments/base/FrgBase;->V0()Lgmd;
 
     move-result-object v0
 
     if-eqz v0, :cond_2
 
-    sget v2, Lnnc;->r0:I
+    sget v2, Ld1d;->x0:I
 
     invoke-virtual {p0, v2}, Landroidx/fragment/app/a;->W(I)Ljava/lang/String;
 
     move-result-object v2
 
-    invoke-virtual {v0, v2}, Llx2;->l(Ljava/lang/String;)V
+    invoke-virtual {v0, v2}, Lgmd;->e(Ljava/lang/String;)V
 
     :cond_2
-    invoke-virtual {v1}, Llj9;->e()V
+    invoke-virtual {v1}, Lvq9;->c()V
 
-    iget-object v0, v1, Lv2;->c:Ljava/lang/Object;
+    iget-object v0, v1, Ly2;->c:Ljava/lang/Object;
 
     check-cast v0, Landroid/view/View;
 
@@ -297,7 +295,7 @@
 
     const-string v0, "Root view is null"
 
-    invoke-static {v13, v0, v12}, Lg47;->r(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-static {v13, v0, v12}, Ljtg;->m(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     return-object v12
 
@@ -320,21 +318,21 @@
 
     const-string v0, "On stop now location click %d"
 
-    invoke-static {p2, v0, p1}, Lg47;->o(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {p2, v0, p1}, Ljtg;->k(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    iget-object p0, p0, Lru/ok/messages/settings/locations/FrgLiveLocationSettings;->x1:Lhi9;
+    iget-object p0, p0, Lru/ok/messages/settings/locations/FrgLiveLocationSettings;->A1:Lqp9;
 
-    iget-object p1, p0, Lhi9;->o:Lcn7;
+    iget-object p1, p0, Lqp9;->o:Lhu7;
 
     invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    iget-object p0, p0, Lhi9;->Y:Luc;
+    iget-object p0, p0, Lqp9;->Y:Lzc;
 
     const-string p1, "LIVE_LOCATION_STOP"
 
     const-string p2, "SETTINGS"
 
-    invoke-virtual {p0, p1, p2}, Luc;->g(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {p0, p1, p2}, Lzc;->g(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 .end method
@@ -344,37 +342,37 @@
 
     invoke-super {p0}, Lru/ok/messages/views/fragments/base/FrgBase;->v0()V
 
-    iget-object p0, p0, Lru/ok/messages/settings/locations/FrgLiveLocationSettings;->x1:Lhi9;
+    iget-object p0, p0, Lru/ok/messages/settings/locations/FrgLiveLocationSettings;->A1:Lqp9;
 
-    iget-object v0, p0, Lu2;->b:Ljava/lang/Object;
+    iget-object v0, p0, Lx2;->b:Ljava/lang/Object;
 
-    check-cast v0, Lyi9;
+    check-cast v0, Liq9;
 
-    check-cast v0, Llj9;
+    check-cast v0, Lvq9;
 
-    check-cast v0, Lv2;
+    check-cast v0, Ly2;
 
-    iget-object v0, v0, Lv2;->a:Ljava/lang/Object;
+    iget-object v0, v0, Ly2;->a:Ljava/lang/Object;
 
     check-cast v0, Ljava/util/Set;
 
     invoke-interface {v0, p0}, Ljava/util/Set;->remove(Ljava/lang/Object;)Z
 
-    iget-object v0, p0, Lhi9;->o:Lcn7;
+    iget-object v0, p0, Lqp9;->o:Lhu7;
 
     invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    iget-object v0, p0, Lhi9;->q0:Lc28;
+    iget-object v0, p0, Lqp9;->t0:Loq4;
 
-    invoke-static {v0}, Ldoc;->b(Lam4;)V
+    invoke-static {v0}, Ls1d;->b(Loq4;)V
 
-    iget-object v0, p0, Lhi9;->r0:Ltd7;
+    iget-object v0, p0, Lqp9;->u0:Lok7;
 
-    invoke-static {v0}, Ldoc;->b(Lam4;)V
+    invoke-static {v0}, Ls1d;->b(Loq4;)V
 
-    iget-object v0, p0, Lhi9;->X:Lvu0;
+    iget-object v0, p0, Lqp9;->X:Lfv0;
 
-    invoke-virtual {v0, p0}, Lvu0;->f(Ljava/lang/Object;)V
+    invoke-virtual {v0, p0}, Lfv0;->f(Ljava/lang/Object;)V
 
     return-void
 .end method
@@ -384,39 +382,39 @@
 
     invoke-super {p0}, Lru/ok/messages/views/fragments/base/FrgBase;->y0()V
 
-    iget-object p0, p0, Lru/ok/messages/settings/locations/FrgLiveLocationSettings;->x1:Lhi9;
+    iget-object p0, p0, Lru/ok/messages/settings/locations/FrgLiveLocationSettings;->A1:Lqp9;
 
-    iget-object v0, p0, Lu2;->b:Ljava/lang/Object;
+    iget-object v0, p0, Lx2;->b:Ljava/lang/Object;
 
-    check-cast v0, Lyi9;
+    check-cast v0, Liq9;
 
-    check-cast v0, Llj9;
+    check-cast v0, Lvq9;
 
     move-object v1, v0
 
-    check-cast v1, Lv2;
+    check-cast v1, Ly2;
 
-    invoke-virtual {v1, p0}, Lv2;->t(Ljava/lang/Object;)V
+    invoke-virtual {v1, p0}, Ly2;->t(Ljava/lang/Object;)V
 
     const/4 v1, 0x1
 
-    invoke-virtual {v0, v1}, Llj9;->A(Z)V
+    invoke-virtual {v0, v1}, Lvq9;->B(Z)V
 
-    iget-object v0, p0, Lhi9;->o:Lcn7;
+    iget-object v0, p0, Lqp9;->o:Lhu7;
 
     invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    invoke-virtual {p0}, Lhi9;->T0()V
+    invoke-virtual {p0}, Lqp9;->W0()V
 
-    iget-object v0, p0, Lhi9;->r0:Ltd7;
+    iget-object v0, p0, Lqp9;->u0:Lok7;
 
-    invoke-static {v0}, Ldoc;->b(Lam4;)V
+    invoke-static {v0}, Ls1d;->b(Loq4;)V
 
-    iget-object v0, p0, Lhi9;->c:Lx4b;
+    iget-object v0, p0, Lqp9;->c:Lqgb;
 
-    check-cast v0, La5b;
+    check-cast v0, Ltgb;
 
-    iget-object v0, v0, La5b;->b:Le6d;
+    iget-object v0, v0, Ltgb;->b:Lyjd;
 
     invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
@@ -426,7 +424,7 @@
 
     int-to-long v2, v2
 
-    invoke-virtual {v0, v1, v2, v3}, Lvwc;->n(Ljava/lang/Enum;J)J
+    invoke-virtual {v0, v1, v2, v3}, Lpad;->o(Ljava/lang/Enum;J)J
 
     move-result-wide v0
 
@@ -436,49 +434,49 @@
 
     sget-object v5, Ljava/util/concurrent/TimeUnit;->SECONDS:Ljava/util/concurrent/TimeUnit;
 
-    invoke-static {}, Ltsc;->a()Lgsc;
+    invoke-static {}, Li6d;->a()Lv5d;
 
     move-result-object v6
 
     move-wide v3, v1
 
-    invoke-static/range {v1 .. v6}, Lvw9;->j(JJLjava/util/concurrent/TimeUnit;Lgsc;)Loy9;
+    invoke-static/range {v1 .. v6}, Ly4a;->h(JJLjava/util/concurrent/TimeUnit;Lv5d;)Lr6a;
 
     move-result-object v0
 
-    invoke-static {}, Lud;->a()Lgsc;
+    invoke-static {}, Lzd;->a()Lv5d;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lvw9;->m(Lgsc;)Lry9;
+    invoke-virtual {v0, v1}, Ly4a;->k(Lv5d;)Lu6a;
 
     move-result-object v0
 
-    new-instance v1, Lgi9;
+    new-instance v1, Lpp9;
 
     const/4 v2, 0x0
 
-    invoke-direct {v1, p0, v2}, Lgi9;-><init>(Lhi9;I)V
+    invoke-direct {v1, p0, v2}, Lpp9;-><init>(Lqp9;I)V
 
-    new-instance v2, Lxh9;
+    new-instance v2, Lip9;
 
-    const/4 v3, 0x3
+    const/4 v3, 0x1
 
-    invoke-direct {v2, v3}, Lxh9;-><init>(I)V
+    invoke-direct {v2, v3}, Lip9;-><init>(I)V
 
-    sget-object v3, Lkhg;->c:Lc76;
+    sget-object v3, Lvyg;->c:Lgd6;
 
-    new-instance v4, Ltd7;
+    new-instance v4, Lok7;
 
-    invoke-direct {v4, v1, v2, v3}, Ltd7;-><init>(Ljj3;Ljj3;Lc6;)V
+    invoke-direct {v4, v1, v2, v3}, Lok7;-><init>(Lpm3;Lpm3;Lc6;)V
 
-    invoke-virtual {v0, v4}, Lvw9;->a(La0a;)V
+    invoke-virtual {v0, v4}, Ly4a;->a(Ld8a;)V
 
-    iput-object v4, p0, Lhi9;->r0:Ltd7;
+    iput-object v4, p0, Lqp9;->u0:Lok7;
 
-    iget-object v0, p0, Lhi9;->X:Lvu0;
+    iget-object v0, p0, Lqp9;->X:Lfv0;
 
-    invoke-virtual {v0, p0}, Lvu0;->d(Ljava/lang/Object;)V
+    invoke-virtual {v0, p0}, Lfv0;->d(Ljava/lang/Object;)V
 
     return-void
 .end method
@@ -488,11 +486,11 @@
 
     invoke-super {p0, p1}, Lru/ok/messages/views/fragments/base/FrgBase;->z0(Landroid/os/Bundle;)V
 
-    iget-object p0, p0, Lru/ok/messages/settings/locations/FrgLiveLocationSettings;->x1:Lhi9;
+    iget-object p0, p0, Lru/ok/messages/settings/locations/FrgLiveLocationSettings;->A1:Lqp9;
 
     const-string v0, "MvcControllerLiveLocationSettingsImpl.permissionChecked"
 
-    iget-boolean p0, p0, Lhi9;->s0:Z
+    iget-boolean p0, p0, Lqp9;->v0:Z
 
     invoke-virtual {p1, v0, p0}, Landroid/os/BaseBundle;->putBoolean(Ljava/lang/String;Z)V
 

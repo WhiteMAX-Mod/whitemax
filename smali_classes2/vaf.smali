@@ -1,38 +1,31 @@
-.class public interface abstract Lvaf;
+.class public final Lvaf;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# virtual methods
-.method public abstract a()Ljava/lang/String;
-.end method
+# instance fields
+.field public final a:Ljava/lang/String;
 
-.method public abstract c()Lgw6;
-.end method
+.field public final b:Ljava/lang/String;
 
-.method public abstract e()I
-.end method
+.field public final c:Ljava/lang/String;
 
-.method public abstract equals(Ljava/lang/Object;)Z
-.end method
+.field public final d:Ljava/lang/String;
 
-.method public abstract f()Luw6;
-.end method
 
-.method public abstract g()Ldx6;
-.end method
+# direct methods
+.method public constructor <init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    .locals 0
 
-.method public abstract l()Lqw6;
-.end method
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-.method public abstract m()Ljx6;
-.end method
+    iput-object p1, p0, Lvaf;->a:Ljava/lang/String;
 
-.method public abstract n()Lsw6;
-.end method
+    iput-object p2, p0, Lvaf;->b:Ljava/lang/String;
 
-.method public abstract o()Lkw6;
-.end method
+    iput-object p3, p0, Lvaf;->c:Ljava/lang/String;
 
-.method public abstract q()Lmw6;
+    iput-object p4, p0, Lvaf;->d:Ljava/lang/String;
+
+    return-void
 .end method

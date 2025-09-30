@@ -3,64 +3,40 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lf34;
+.implements Luj6;
 
 
 # instance fields
-.field public final a:Landroid/content/Context;
+.field public final a:Lbx0;
 
-.field public final b:Lf34;
+.field public final b:Lc83;
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;)V
-    .locals 1
-
-    .line 1
-    new-instance v0, Ltb4;
-
-    invoke-direct {v0}, Ltb4;-><init>()V
-
-    invoke-direct {p0, p1, v0}, Lt94;-><init>(Landroid/content/Context;Lf34;)V
-
-    return-void
-.end method
-
-.method public constructor <init>(Landroid/content/Context;Lf34;)V
+.method public constructor <init>(Lbx0;Lc83;)V
     .locals 0
 
-    .line 2
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 3
-    invoke-virtual {p1}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
+    iput-object p1, p0, Lt94;->a:Lbx0;
 
-    move-result-object p1
-
-    iput-object p1, p0, Lt94;->a:Landroid/content/Context;
-
-    .line 4
-    iput-object p2, p0, Lt94;->b:Lf34;
+    iput-object p2, p0, Lt94;->b:Lc83;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Li34;
-    .locals 2
+.method public final a(Landroid/content/Context;Z)Lbk6;
+    .locals 1
 
-    new-instance v0, Lv94;
+    new-instance p2, Lu94;
 
-    iget-object v1, p0, Lt94;->b:Lf34;
+    iget-object v0, p0, Lt94;->a:Lbx0;
 
-    invoke-interface {v1}, Lf34;->a()Li34;
+    iget-object p0, p0, Lt94;->b:Lc83;
 
-    move-result-object v1
+    invoke-direct {p2, p1, v0, p0}, Lu94;-><init>(Landroid/content/Context;Lbx0;Lc83;)V
 
-    iget-object p0, p0, Lt94;->a:Landroid/content/Context;
-
-    invoke-direct {v0, p0, v1}, Lv94;-><init>(Landroid/content/Context;Li34;)V
-
-    return-object v0
+    return-object p2
 .end method

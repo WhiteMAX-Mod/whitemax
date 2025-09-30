@@ -3,20 +3,24 @@
 .source "SourceFile"
 
 # interfaces
-.implements Leb;
+.implements Lhb;
 
 
 # instance fields
 .field public final a:Z
 
+.field public final b:Z
+
 
 # direct methods
-.method public constructor <init>(Z)V
+.method public constructor <init>(ZZ)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-boolean p1, p0, Lva;->a:Z
+
+    iput-boolean p2, p0, Lva;->b:Z
 
     return-void
 .end method
@@ -24,7 +28,7 @@
 
 # virtual methods
 .method public final equals(Ljava/lang/Object;)Z
-    .locals 1
+    .locals 2
 
     if-ne p0, p1, :cond_0
 
@@ -40,18 +44,27 @@
     :cond_1
     check-cast p1, Lva;
 
-    iget-boolean p0, p0, Lva;->a:Z
+    iget-boolean v0, p0, Lva;->a:Z
 
-    iget-boolean p1, p1, Lva;->a:Z
+    iget-boolean v1, p1, Lva;->a:Z
 
-    if-eq p0, p1, :cond_2
+    if-eq v0, v1, :cond_2
+
+    goto :goto_0
+
+    :cond_2
+    iget-boolean p0, p0, Lva;->b:Z
+
+    iget-boolean p1, p1, Lva;->b:Z
+
+    if-eq p0, p1, :cond_3
 
     :goto_0
     const/4 p0, 0x0
 
     return p0
 
-    :cond_2
+    :cond_3
     :goto_1
     const/4 p0, 0x1
 
@@ -59,13 +72,23 @@
 .end method
 
 .method public final hashCode()I
-    .locals 0
+    .locals 1
 
-    iget-boolean p0, p0, Lva;->a:Z
+    iget-boolean v0, p0, Lva;->a:Z
+
+    invoke-static {v0}, Ljava/lang/Boolean;->hashCode(Z)I
+
+    move-result v0
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget-boolean p0, p0, Lva;->b:Z
 
     invoke-static {p0}, Ljava/lang/Boolean;->hashCode(Z)I
 
     move-result p0
+
+    add-int/2addr p0, v0
 
     return p0
 .end method
@@ -73,13 +96,29 @@
 .method public final toString()Ljava/lang/String;
     .locals 2
 
-    const-string v0, "DisableAllMicOnce(isSuccess="
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    const-string v1, ")"
+    const-string v1, "DisableAllCameraInCall(isSuccess="
 
-    iget-boolean p0, p0, Lva;->a:Z
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-static {v0, v1, p0}, Lzge;->p(Ljava/lang/String;Ljava/lang/String;Z)Ljava/lang/String;
+    iget-boolean v1, p0, Lva;->a:Z
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string v1, ", isEnabled="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-boolean p0, p0, Lva;->b:Z
+
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string p0, ")"
+
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p0
 

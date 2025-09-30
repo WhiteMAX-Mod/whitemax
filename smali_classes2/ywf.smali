@@ -1,170 +1,115 @@
-.class public final Lywf;
+.class public final synthetic Lywf;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lzb6;
+
 
 # instance fields
-.field public final a:Lje7;
+.field public final synthetic a:I
 
-.field public final b:Lje7;
+.field public final synthetic b:Lzwf;
 
 
 # direct methods
-.method public constructor <init>(Lje7;Lje7;)V
+.method public synthetic constructor <init>(Lzwf;I)V
     .locals 0
 
+    iput p2, p0, Lywf;->a:I
+
+    iput-object p1, p0, Lywf;->b:Lzwf;
+
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lywf;->a:Lje7;
-
-    iput-object p2, p0, Lywf;->b:Lje7;
 
     return-void
 .end method
 
-.method public static a(Lywf;Ljava/lang/String;JLjava/lang/String;ZILjava/lang/Integer;Ljava/lang/Integer;I)V
-    .locals 3
 
-    and-int/lit8 v0, p9, 0x10
+# virtual methods
+.method public final invoke()Ljava/lang/Object;
+    .locals 5
 
-    if-eqz v0, :cond_0
+    iget v0, p0, Lywf;->a:I
 
-    const/4 p6, 0x0
+    iget-object p0, p0, Lywf;->b:Lzwf;
 
-    :cond_0
-    and-int/lit8 v0, p9, 0x20
+    packed-switch v0, :pswitch_data_0
+
+    new-instance v0, Landroid/util/Size;
+
+    iget v1, p0, Lzwf;->e:I
+
+    iget p0, p0, Lzwf;->f:I
+
+    invoke-direct {v0, v1, p0}, Landroid/util/Size;-><init>(II)V
+
+    return-object v0
+
+    :pswitch_0
+    iget-object v0, p0, Lzwf;->h:Lv96;
+
+    if-nez v0, :cond_1
+
+    sget-object v0, Lprf;->a:Ljava/util/concurrent/atomic/AtomicInteger;
+
+    iget v0, p0, Lzwf;->e:I
+
+    iget p0, p0, Lzwf;->f:I
+
+    invoke-static {v0, p0}, Ljava/lang/Math;->min(II)I
+
+    move-result p0
+
+    new-instance v0, Lw1;
 
     const/4 v1, 0x0
 
-    if-eqz v0, :cond_1
+    sget-object v2, Lv96;->v0:Ly75;
 
-    move-object p7, v1
+    invoke-direct {v0, v1, v2}, Lw1;-><init>(ILjava/lang/Object;)V
+
+    const v1, 0x7fffffff
+
+    sget-object v2, Lv96;->b:Lv96;
+
+    :goto_0
+    invoke-virtual {v0}, Lw1;->hasNext()Z
+
+    move-result v3
+
+    if-eqz v3, :cond_0
+
+    invoke-virtual {v0}, Lw1;->next()Ljava/lang/Object;
+
+    move-result-object v3
+
+    check-cast v3, Lv96;
+
+    iget v4, v3, Lv96;->a:I
+
+    sub-int/2addr v4, p0
+
+    invoke-static {v4}, Ljava/lang/Math;->abs(I)I
+
+    move-result v4
+
+    if-ge v4, v1, :cond_0
+
+    move-object v2, v3
+
+    move v1, v4
+
+    goto :goto_0
+
+    :cond_0
+    move-object v0, v2
 
     :cond_1
-    and-int/lit8 p9, p9, 0x40
+    return-object v0
 
-    if-eqz p9, :cond_2
-
-    move-object p8, v1
-
-    :cond_2
-    iget-object p9, p0, Lywf;->a:Lje7;
-
-    iget-object p0, p0, Lywf;->b:Lje7;
-
-    invoke-interface {p9}, Lje7;->getValue()Ljava/lang/Object;
-
-    move-result-object p9
-
-    check-cast p9, Luc;
-
-    new-instance v0, Lgy7;
-
-    invoke-direct {v0}, Lgy7;-><init>()V
-
-    invoke-interface {p0}, Lje7;->getValue()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lh23;
-
-    check-cast v1, Lj23;
-
-    invoke-virtual {v1}, Lj23;->z()J
-
-    move-result-wide v1
-
-    invoke-static {v1, v2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v1
-
-    const-string v2, "sessionId"
-
-    invoke-virtual {v0, v2, v1}, Lgy7;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    const-string v1, "botId"
-
-    invoke-static {p2, p3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object p2
-
-    invoke-virtual {v0, v1, p2}, Lgy7;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    const-string p2, "webAppName"
-
-    invoke-virtual {v0, p2, p4}, Lgy7;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    const-string p2, "success"
-
-    invoke-static {p5}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object p3
-
-    invoke-virtual {v0, p2, p3}, Lgy7;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    const-string p2, "type"
-
-    invoke-static {p6}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object p3
-
-    invoke-virtual {v0, p2, p3}, Lgy7;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    if-eqz p7, :cond_3
-
-    const-string p2, "method"
-
-    invoke-virtual {v0, p2, p7}, Lgy7;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    :cond_3
-    if-eqz p8, :cond_4
-
-    const-string p2, "code"
-
-    invoke-virtual {v0, p2, p8}, Lgy7;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    :cond_4
-    invoke-virtual {v0}, Lgy7;->b()Lgy7;
-
-    move-result-object p2
-
-    new-instance p3, Lb47;
-
-    invoke-direct {p3}, Ljava/lang/Object;-><init>()V
-
-    const-string p4, "WEBAPP_BRIDGE"
-
-    iput-object p4, p3, Lb47;->c:Ljava/lang/String;
-
-    invoke-interface {p0}, Lje7;->getValue()Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, Lh23;
-
-    check-cast p0, Lmwc;
-
-    invoke-virtual {p0}, Lmwc;->p()J
-
-    move-result-wide p4
-
-    iput-wide p4, p3, Lb47;->b:J
-
-    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
-
-    move-result-wide p4
-
-    iput-wide p4, p3, Lb47;->a:J
-
-    iput-object p1, p3, Lb47;->o:Ljava/lang/String;
-
-    invoke-virtual {p3, p2}, Lb47;->b(Ljava/util/Map;)V
-
-    invoke-virtual {p3}, Lb47;->d()Lis7;
-
-    move-result-object p0
-
-    invoke-virtual {p9, p0}, Luc;->j(Lis7;)Z
-
-    return-void
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

@@ -1,46 +1,103 @@
-.class public final synthetic Luv4;
-.super Ljava/lang/Object;
+.class public final Luv4;
+.super Lr66;
 .source "SourceFile"
-
-# interfaces
-.implements Lorg/webrtc/EglThread$RenderUpdate;
 
 
 # instance fields
-.field public final synthetic a:Lorg/webrtc/EglRenderer;
+.field public final X:Landroid/graphics/drawable/Drawable;
 
-.field public final synthetic b:Lorg/webrtc/VideoFrame;
+.field public final Y:I
 
-.field public final synthetic c:J
+.field public final Z:I
 
 
 # direct methods
-.method public synthetic constructor <init>(Lorg/webrtc/EglRenderer;Lorg/webrtc/VideoFrame;J)V
-    .locals 0
+.method public constructor <init>(Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;)V
+    .locals 2
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-virtual {p2}, Landroid/graphics/drawable/Drawable;->getIntrinsicWidth()I
 
-    iput-object p1, p0, Luv4;->a:Lorg/webrtc/EglRenderer;
+    move-result v0
 
-    iput-object p2, p0, Luv4;->b:Lorg/webrtc/VideoFrame;
+    invoke-virtual {p2}, Landroid/graphics/drawable/Drawable;->getIntrinsicHeight()I
 
-    iput-wide p3, p0, Luv4;->c:J
+    move-result v1
+
+    invoke-direct {p0, p1}, Lr66;-><init>(Landroid/graphics/drawable/Drawable;)V
+
+    iput-object p2, p0, Luv4;->X:Landroid/graphics/drawable/Drawable;
+
+    iput v0, p0, Luv4;->Y:I
+
+    iput v1, p0, Luv4;->Z:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final update(Z)V
-    .locals 3
+.method public final draw(Landroid/graphics/Canvas;)V
+    .locals 5
 
-    iget-object v0, p0, Luv4;->b:Lorg/webrtc/VideoFrame;
+    invoke-super {p0, p1}, Lr66;->draw(Landroid/graphics/Canvas;)V
 
-    iget-wide v1, p0, Luv4;->c:J
+    invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->getBounds()Landroid/graphics/Rect;
 
-    iget-object p0, p0, Luv4;->a:Lorg/webrtc/EglRenderer;
+    move-result-object v0
 
-    invoke-static {p0, v0, v1, v2, p1}, Lorg/webrtc/EglRenderer;->b(Lorg/webrtc/EglRenderer;Lorg/webrtc/VideoFrame;JZ)V
+    invoke-virtual {v0}, Landroid/graphics/Rect;->centerX()I
+
+    move-result v0
+
+    iget v1, p0, Luv4;->Y:I
+
+    div-int/lit8 v2, v1, 0x2
+
+    sub-int/2addr v0, v2
+
+    invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->getBounds()Landroid/graphics/Rect;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Landroid/graphics/Rect;->centerY()I
+
+    move-result v2
+
+    iget v3, p0, Luv4;->Z:I
+
+    div-int/lit8 v4, v3, 0x2
+
+    sub-int/2addr v2, v4
+
+    invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->getBounds()Landroid/graphics/Rect;
+
+    move-result-object v4
+
+    invoke-virtual {v4}, Landroid/graphics/Rect;->centerX()I
+
+    move-result v4
+
+    div-int/lit8 v1, v1, 0x2
+
+    add-int/2addr v1, v4
+
+    invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->getBounds()Landroid/graphics/Rect;
+
+    move-result-object v4
+
+    invoke-virtual {v4}, Landroid/graphics/Rect;->centerY()I
+
+    move-result v4
+
+    div-int/lit8 v3, v3, 0x2
+
+    add-int/2addr v3, v4
+
+    iget-object p0, p0, Luv4;->X:Landroid/graphics/drawable/Drawable;
+
+    invoke-virtual {p0, v0, v2, v1, v3}, Landroid/graphics/drawable/Drawable;->setBounds(IIII)V
+
+    invoke-virtual {p0, p1}, Landroid/graphics/drawable/Drawable;->draw(Landroid/graphics/Canvas;)V
 
     return-void
 .end method

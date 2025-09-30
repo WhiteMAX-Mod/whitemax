@@ -98,9 +98,9 @@
     invoke-virtual {v0, p1}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
 
     :cond_3
-    new-instance p1, Lilg;
+    new-instance p1, Lv8h;
 
-    invoke-direct {p1, p0}, Lilg;-><init>(Lcom/google/android/gms/auth/api/signin/RevocationBoundService;)V
+    invoke-direct {p1, p0}, Lv8h;-><init>(Lcom/google/android/gms/auth/api/signin/RevocationBoundService;)V
 
     return-object p1
 .end method

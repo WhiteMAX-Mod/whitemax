@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Ls1c;
+.implements Lfec;
 
 
 # annotations

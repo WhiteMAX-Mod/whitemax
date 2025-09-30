@@ -23,31 +23,31 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    sget v0, Lgwb;->btn_checkbox_checked_mtrl_animation_interpolator_0:I
+    sget v0, Lr8c;->btn_checkbox_checked_mtrl_animation_interpolator_0:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$interpolator;->btn_checkbox_checked_mtrl_animation_interpolator_0:I
 
-    sget v0, Lgwb;->btn_checkbox_checked_mtrl_animation_interpolator_1:I
+    sget v0, Lr8c;->btn_checkbox_checked_mtrl_animation_interpolator_1:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$interpolator;->btn_checkbox_checked_mtrl_animation_interpolator_1:I
 
-    sget v0, Lgwb;->btn_checkbox_unchecked_mtrl_animation_interpolator_0:I
+    sget v0, Lr8c;->btn_checkbox_unchecked_mtrl_animation_interpolator_0:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$interpolator;->btn_checkbox_unchecked_mtrl_animation_interpolator_0:I
 
-    sget v0, Lgwb;->btn_checkbox_unchecked_mtrl_animation_interpolator_1:I
+    sget v0, Lr8c;->btn_checkbox_unchecked_mtrl_animation_interpolator_1:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$interpolator;->btn_checkbox_unchecked_mtrl_animation_interpolator_1:I
 
-    sget v0, Lgwb;->btn_radio_to_off_mtrl_animation_interpolator_0:I
+    sget v0, Lr8c;->btn_radio_to_off_mtrl_animation_interpolator_0:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$interpolator;->btn_radio_to_off_mtrl_animation_interpolator_0:I
 
-    sget v0, Lgwb;->btn_radio_to_on_mtrl_animation_interpolator_0:I
+    sget v0, Lr8c;->btn_radio_to_on_mtrl_animation_interpolator_0:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$interpolator;->btn_radio_to_on_mtrl_animation_interpolator_0:I
 
-    sget v0, Lgwb;->fast_out_slow_in:I
+    sget v0, Lr8c;->fast_out_slow_in:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$interpolator;->fast_out_slow_in:I
 

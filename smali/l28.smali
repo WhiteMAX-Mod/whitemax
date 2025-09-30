@@ -1,87 +1,151 @@
-.class public final Ll28;
-.super Ln2;
+.class public abstract synthetic Ll28;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final synthetic b:I
-
-.field public final c:Ljava/lang/Object;
+# static fields
+.field public static final synthetic a:[I
 
 
 # direct methods
-.method public synthetic constructor <init>(Lb28;Ljava/lang/Object;I)V
-    .locals 0
-
-    iput p3, p0, Ll28;->b:I
-
-    invoke-direct {p0, p1}, Ln2;-><init>(Lb28;)V
-
-    iput-object p2, p0, Ll28;->c:Ljava/lang/Object;
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final g(Lu28;)V
+.method static constructor <clinit>()V
     .locals 3
 
-    iget v0, p0, Ll28;->b:I
+    invoke-static {}, Ljava/math/RoundingMode;->values()[Ljava/math/RoundingMode;
 
-    packed-switch v0, :pswitch_data_0
+    move-result-object v0
 
-    new-instance v0, Lfq1;
+    array-length v0, v0
 
-    iget-object v1, p0, Ll28;->c:Ljava/lang/Object;
+    new-array v0, v0, [I
 
-    check-cast v1, Lm28;
+    sput-object v0, Ll28;->a:[I
 
-    const/4 v2, 0x5
+    :try_start_0
+    sget-object v1, Ljava/math/RoundingMode;->UNNECESSARY:Ljava/math/RoundingMode;
 
-    invoke-direct {v0, p1, v2, v1}, Lfq1;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
 
-    iget-object p0, p0, Ln2;->a:Lb28;
+    move-result v1
 
-    invoke-virtual {p0, v0}, Lb28;->a(Lu28;)V
+    const/4 v2, 0x1
 
-    return-void
+    aput v2, v0, v1
+    :try_end_0
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
 
-    :pswitch_0
-    new-instance v0, Lq93;
+    :catch_0
+    :try_start_1
+    sget-object v0, Ll28;->a:[I
 
-    iget-object v1, p0, Ll28;->c:Ljava/lang/Object;
+    sget-object v1, Ljava/math/RoundingMode;->DOWN:Ljava/math/RoundingMode;
 
-    check-cast v1, Lm66;
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
+
+    move-result v1
 
     const/4 v2, 0x2
 
-    invoke-direct {v0, p1, v2, v1}, Lq93;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+    aput v2, v0, v1
+    :try_end_1
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
 
-    iget-object p0, p0, Ln2;->a:Lb28;
+    :catch_1
+    :try_start_2
+    sget-object v0, Ll28;->a:[I
 
-    invoke-virtual {p0, v0}, Lb28;->a(Lu28;)V
+    sget-object v1, Ljava/math/RoundingMode;->FLOOR:Ljava/math/RoundingMode;
 
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
+
+    move-result v1
+
+    const/4 v2, 0x3
+
+    aput v2, v0, v1
+    :try_end_2
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_2
+
+    :catch_2
+    :try_start_3
+    sget-object v0, Ll28;->a:[I
+
+    sget-object v1, Ljava/math/RoundingMode;->UP:Ljava/math/RoundingMode;
+
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
+
+    move-result v1
+
+    const/4 v2, 0x4
+
+    aput v2, v0, v1
+    :try_end_3
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_3 .. :try_end_3} :catch_3
+
+    :catch_3
+    :try_start_4
+    sget-object v0, Ll28;->a:[I
+
+    sget-object v1, Ljava/math/RoundingMode;->CEILING:Ljava/math/RoundingMode;
+
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
+
+    move-result v1
+
+    const/4 v2, 0x5
+
+    aput v2, v0, v1
+    :try_end_4
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_4 .. :try_end_4} :catch_4
+
+    :catch_4
+    :try_start_5
+    sget-object v0, Ll28;->a:[I
+
+    sget-object v1, Ljava/math/RoundingMode;->HALF_DOWN:Ljava/math/RoundingMode;
+
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
+
+    move-result v1
+
+    const/4 v2, 0x6
+
+    aput v2, v0, v1
+    :try_end_5
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_5 .. :try_end_5} :catch_5
+
+    :catch_5
+    :try_start_6
+    sget-object v0, Ll28;->a:[I
+
+    sget-object v1, Ljava/math/RoundingMode;->HALF_UP:Ljava/math/RoundingMode;
+
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
+
+    move-result v1
+
+    const/4 v2, 0x7
+
+    aput v2, v0, v1
+    :try_end_6
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_6 .. :try_end_6} :catch_6
+
+    :catch_6
+    :try_start_7
+    sget-object v0, Ll28;->a:[I
+
+    sget-object v1, Ljava/math/RoundingMode;->HALF_EVEN:Ljava/math/RoundingMode;
+
+    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
+
+    move-result v1
+
+    const/16 v2, 0x8
+
+    aput v2, v0, v1
+    :try_end_7
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_7 .. :try_end_7} :catch_7
+
+    :catch_7
     return-void
-
-    :pswitch_1
-    new-instance v0, Lc28;
-
-    iget-object v1, p0, Ll28;->c:Ljava/lang/Object;
-
-    check-cast v1, Lm66;
-
-    invoke-direct {v0, p1, v1}, Lc28;-><init>(Lu28;Lm66;)V
-
-    iget-object p0, p0, Ln2;->a:Lb28;
-
-    invoke-virtual {p0, v0}, Lb28;->a(Lu28;)V
-
-    return-void
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
 .end method

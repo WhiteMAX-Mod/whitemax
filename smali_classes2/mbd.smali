@@ -1,130 +1,76 @@
 .class public final Lmbd;
-.super Lqde;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Ll66;
+.implements Landroid/os/Parcelable;
+
+
+# static fields
+.field public static final CREATOR:Landroid/os/Parcelable$Creator;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroid/os/Parcelable$Creator<",
+            "Lmbd;",
+            ">;"
+        }
+    .end annotation
+.end field
 
 
 # instance fields
-.field public X:I
+.field public final a:Landroid/text/style/ForegroundColorSpan;
 
-.field public final synthetic Y:Ltbd;
-
-.field public final synthetic Z:Z
+.field public final b:Landroid/text/style/BackgroundColorSpan;
 
 
 # direct methods
-.method public constructor <init>(Ltbd;ZLkotlin/coroutines/Continuation;)V
+.method static constructor <clinit>()V
+    .locals 2
+
+    new-instance v0, Le5d;
+
+    const/4 v1, 0x2
+
+    invoke-direct {v0, v1}, Le5d;-><init>(I)V
+
+    sput-object v0, Lmbd;->CREATOR:Landroid/os/Parcelable$Creator;
+
+    return-void
+.end method
+
+.method public constructor <init>(Landroid/text/style/ForegroundColorSpan;Landroid/text/style/BackgroundColorSpan;)V
     .locals 0
 
-    iput-object p1, p0, Lmbd;->Y:Ltbd;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-boolean p2, p0, Lmbd;->Z:Z
+    iput-object p1, p0, Lmbd;->a:Landroid/text/style/ForegroundColorSpan;
 
-    const/4 p1, 0x2
-
-    invoke-direct {p0, p1, p3}, Lqde;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-object p2, p0, Lmbd;->b:Landroid/text/style/BackgroundColorSpan;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+.method public final describeContents()I
     .locals 0
 
-    check-cast p1, Lox3;
+    const/4 p0, 0x0
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Lmbd;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p0
-
-    check-cast p0, Lmbd;
-
-    sget-object p1, Le5f;->a:Le5f;
-
-    invoke-virtual {p0, p1}, Lmbd;->o(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    return-object p0
+    return p0
 .end method
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+.method public final writeToParcel(Landroid/os/Parcel;I)V
     .locals 1
 
-    new-instance p1, Lmbd;
+    iget-object v0, p0, Lmbd;->a:Landroid/text/style/ForegroundColorSpan;
 
-    iget-object v0, p0, Lmbd;->Y:Ltbd;
+    invoke-virtual {p1, v0, p2}, Landroid/os/Parcel;->writeParcelable(Landroid/os/Parcelable;I)V
 
-    iget-boolean p0, p0, Lmbd;->Z:Z
+    iget-object p0, p0, Lmbd;->b:Landroid/text/style/BackgroundColorSpan;
 
-    invoke-direct {p1, v0, p0, p2}, Lmbd;-><init>(Ltbd;ZLkotlin/coroutines/Continuation;)V
+    invoke-virtual {p1, p0, p2}, Landroid/os/Parcel;->writeParcelable(Landroid/os/Parcelable;I)V
 
-    return-object p1
-.end method
-
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 4
-
-    iget v0, p0, Lmbd;->X:I
-
-    const/4 v1, 0x1
-
-    if-eqz v0, :cond_1
-
-    if-ne v0, v1, :cond_0
-
-    invoke-static {p1}, Lsgg;->Z(Ljava/lang/Object;)V
-
-    goto :goto_0
-
-    :cond_0
-    new-instance p0, Ljava/lang/IllegalStateException;
-
-    const-string p1, "call to \'resume\' before \'invoke\' with coroutine"
-
-    invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p0
-
-    :cond_1
-    invoke-static {p1}, Lsgg;->Z(Ljava/lang/Object;)V
-
-    sget-object p1, Ltbd;->w0:[Lbc7;
-
-    iget-object p1, p0, Lmbd;->Y:Ltbd;
-
-    invoke-virtual {p1}, Ltbd;->r()Lqvc;
-
-    move-result-object v0
-
-    check-cast v0, Lzo;
-
-    const-string v2, "app.media.autoplay.gif"
-
-    iget-boolean v3, p0, Lmbd;->Z:Z
-
-    invoke-virtual {v0, v2, v3}, Le3;->g(Ljava/lang/String;Z)V
-
-    iput v1, p0, Lmbd;->X:I
-
-    invoke-static {p1, p0}, Ltbd;->q(Ltbd;Lqde;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    sget-object p1, Lpx3;->a:Lpx3;
-
-    if-ne p0, p1, :cond_2
-
-    return-object p1
-
-    :cond_2
-    :goto_0
-    sget-object p0, Le5f;->a:Le5f;
-
-    return-object p0
+    return-void
 .end method

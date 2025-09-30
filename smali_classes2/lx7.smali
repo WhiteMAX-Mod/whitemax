@@ -1,17 +1,19 @@
-.class public interface abstract Llx7;
-.super Ljava/lang/Object;
+.class public final Llx7;
+.super Lmx7;
 .source "SourceFile"
 
 
-# virtual methods
-.method public b(Ljava/lang/String;Ljava/util/List;)V
+# instance fields
+.field public final a:Ljava/util/List;
+
+
+# direct methods
+.method public constructor <init>(Ljava/util/List;)V
     .locals 0
 
-    return-void
-.end method
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-.method public j(Ljava/lang/String;Ljava/util/ArrayList;)V
-    .locals 0
+    iput-object p1, p0, Llx7;->a:Ljava/util/List;
 
     return-void
 .end method

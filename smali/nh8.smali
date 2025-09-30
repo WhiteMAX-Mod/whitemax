@@ -1,319 +1,212 @@
 .class public final Lnh8;
-.super Landroid/os/Handler;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lxu0;
+
+
+# static fields
+.field public static final Y:Lnh8;
 
 
 # instance fields
-.field public a:Z
+.field public final X:F
 
-.field public b:Z
+.field public final a:J
 
-.field public final synthetic c:Lqh8;
+.field public final b:J
+
+.field public final c:J
+
+.field public final o:F
 
 
 # direct methods
-.method public constructor <init>(Lqh8;Landroid/os/Looper;)V
+.method static constructor <clinit>()V
+    .locals 9
+
+    new-instance v0, Lnh8;
+
+    const-wide v1, -0x7fffffffffffffffL    # -4.9E-324
+
+    const v7, -0x800001
+
+    move-wide v3, v1
+
+    move-wide v5, v1
+
+    move v8, v7
+
+    invoke-direct/range {v0 .. v8}, Lnh8;-><init>(JJJFF)V
+
+    sput-object v0, Lnh8;->Y:Lnh8;
+
+    return-void
+.end method
+
+.method public constructor <init>(JJJFF)V
     .locals 0
 
-    iput-object p1, p0, Lnh8;->c:Lqh8;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, p2}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
+    iput-wide p1, p0, Lnh8;->a:J
 
-    const/4 p1, 0x1
+    iput-wide p3, p0, Lnh8;->b:J
 
-    iput-boolean p1, p0, Lnh8;->a:Z
+    iput-wide p5, p0, Lnh8;->c:J
 
-    iput-boolean p1, p0, Lnh8;->b:Z
+    iput p7, p0, Lnh8;->o:F
+
+    iput p8, p0, Lnh8;->X:F
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(ZZ)V
-    .locals 3
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 7
 
-    iget-boolean v0, p0, Lnh8;->a:Z
+    const/4 v0, 0x1
 
-    const/4 v1, 0x0
+    if-ne p0, p1, :cond_0
 
-    const/4 v2, 0x1
-
-    if-eqz v0, :cond_0
-
-    if-eqz p1, :cond_0
-
-    move p1, v2
-
-    goto :goto_0
+    return v0
 
     :cond_0
-    move p1, v1
+    instance-of v1, p1, Lnh8;
 
-    :goto_0
-    iput-boolean p1, p0, Lnh8;->a:Z
+    const/4 v2, 0x0
 
-    iget-boolean p1, p0, Lnh8;->b:Z
+    if-nez v1, :cond_1
 
-    if-eqz p1, :cond_1
-
-    if-eqz p2, :cond_1
-
-    move v1, v2
+    return v2
 
     :cond_1
-    iput-boolean v1, p0, Lnh8;->b:Z
+    check-cast p1, Lnh8;
 
-    invoke-virtual {p0, v2}, Landroid/os/Handler;->hasMessages(I)Z
+    iget-wide v3, p0, Lnh8;->a:J
 
-    move-result p1
+    iget-wide v5, p1, Lnh8;->a:J
 
-    if-nez p1, :cond_2
+    cmp-long v1, v3, v5
 
-    invoke-virtual {p0, v2}, Landroid/os/Handler;->sendEmptyMessage(I)Z
+    if-nez v1, :cond_2
+
+    iget-wide v3, p0, Lnh8;->b:J
+
+    iget-wide v5, p1, Lnh8;->b:J
+
+    cmp-long v1, v3, v5
+
+    if-nez v1, :cond_2
+
+    iget-wide v3, p0, Lnh8;->c:J
+
+    iget-wide v5, p1, Lnh8;->c:J
+
+    cmp-long v1, v3, v5
+
+    if-nez v1, :cond_2
+
+    iget v1, p0, Lnh8;->o:F
+
+    iget v3, p1, Lnh8;->o:F
+
+    cmpl-float v1, v1, v3
+
+    if-nez v1, :cond_2
+
+    iget p0, p0, Lnh8;->X:F
+
+    iget p1, p1, Lnh8;->X:F
+
+    cmpl-float p0, p0, p1
+
+    if-nez p0, :cond_2
+
+    return v0
 
     :cond_2
-    return-void
+    return v2
 .end method
 
-.method public final handleMessage(Landroid/os/Message;)V
-    .locals 16
+.method public final hashCode()I
+    .locals 7
 
-    move-object/from16 v1, p0
+    iget-wide v0, p0, Lnh8;->a:J
 
-    move-object/from16 v0, p1
+    const/16 v2, 0x20
 
-    iget-object v2, v1, Lnh8;->c:Lqh8;
+    ushr-long v3, v0, v2
 
-    iget-object v3, v2, Lqh8;->g:Lbj8;
+    xor-long/2addr v0, v3
 
-    iget v4, v0, Landroid/os/Message;->what:I
+    long-to-int v0, v0
 
-    const/4 v5, 0x1
+    mul-int/lit8 v0, v0, 0x1f
 
-    if-ne v4, v5, :cond_5
+    iget-wide v3, p0, Lnh8;->b:J
 
-    iget-object v0, v2, Lqh8;->r:Lz1b;
+    ushr-long v5, v3, v2
 
-    iget-object v4, v2, Lqh8;->s:Lk2b;
+    xor-long/2addr v3, v5
 
-    invoke-virtual {v4}, Lk2b;->E()Lqse;
+    long-to-int v1, v3
 
-    move-result-object v4
+    add-int/2addr v0, v1
 
-    iget-object v6, v2, Lqh8;->s:Lk2b;
+    mul-int/lit8 v0, v0, 0x1f
 
-    invoke-virtual {v6}, Lk2b;->n()Lv8d;
+    iget-wide v3, p0, Lnh8;->c:J
 
-    move-result-object v6
+    ushr-long v1, v3, v2
 
-    iget-object v7, v2, Lqh8;->r:Lz1b;
+    xor-long/2addr v1, v3
 
-    iget v7, v7, Lz1b;->k:I
+    long-to-int v1, v1
 
-    invoke-virtual {v0, v4, v6, v7}, Lz1b;->i(Lqse;Lv8d;I)Lz1b;
+    add-int/2addr v0, v1
 
-    move-result-object v0
+    mul-int/lit8 v0, v0, 0x1f
 
-    iput-object v0, v2, Lqh8;->r:Lz1b;
+    iget v1, p0, Lnh8;->o:F
 
-    iget-boolean v10, v1, Lnh8;->a:Z
+    const/4 v2, 0x0
 
-    iget-boolean v11, v1, Lnh8;->b:Z
+    cmpl-float v3, v1, v2
 
-    invoke-virtual {v3, v0}, Lbj8;->W(Lz1b;)Lz1b;
+    const/4 v4, 0x0
 
-    move-result-object v8
+    if-eqz v3, :cond_0
 
-    iget-object v4, v3, Lbj8;->e:Lr3d;
+    invoke-static {v1}, Ljava/lang/Float;->floatToIntBits(F)I
 
-    invoke-virtual {v4}, Lr3d;->m()Lxw6;
-
-    move-result-object v13
-
-    const/4 v14, 0x0
-
-    move v15, v14
-
-    :goto_0
-    invoke-interface {v13}, Ljava/util/List;->size()I
-
-    move-result v0
-
-    if-ge v15, v0, :cond_4
-
-    invoke-interface {v13, v15}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    move-result-object v0
-
-    move-object v6, v0
-
-    check-cast v6, Lwg8;
-
-    :try_start_0
-    invoke-virtual {v4, v6}, Lr3d;->o(Lwg8;)Lhh9;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_0
-
-    invoke-virtual {v0}, Lhh9;->c()I
-
-    move-result v0
-
-    move v7, v0
-
-    goto :goto_3
-
-    :catch_0
-    move-exception v0
-
-    move-object/from16 p1, v6
-
-    goto :goto_4
-
-    :catch_1
-    move-object/from16 p1, v6
-
-    goto :goto_5
-
-    :cond_0
-    iget-object v0, v3, Lbj8;->e:Lr3d;
-
-    invoke-virtual {v0, v6}, Lr3d;->q(Lwg8;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_2
-
-    iget-object v0, v2, Lqh8;->h:Lbi8;
-
-    iget-object v0, v0, Lbi8;->e:Lr3d;
-
-    invoke-virtual {v0, v6}, Lr3d;->q(Lwg8;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    goto :goto_1
-
-    :cond_1
-    move v0, v14
-
-    goto :goto_2
-
-    :cond_2
-    :goto_1
-    move v0, v5
-
-    :goto_2
-    if-nez v0, :cond_3
-
-    goto :goto_7
-
-    :cond_3
-    move v7, v14
-
-    :goto_3
-    invoke-virtual {v4, v6}, Lr3d;->l(Lwg8;)Lw0b;
-
-    move-result-object v0
-
-    iget-object v9, v2, Lqh8;->s:Lk2b;
-
-    invoke-virtual {v9}, Lk2b;->s()Lw0b;
-
-    move-result-object v9
-
-    invoke-static {v0, v9}, Ld46;->w(Lw0b;Lw0b;)Lw0b;
-
-    move-result-object v9
-
-    iget-object v0, v6, Lwg8;->d:Lvg8;
-
-    invoke-static {v0}, Lu27;->k(Ljava/lang/Object;)V
-
-    iget v12, v6, Lwg8;->c:I
-    :try_end_0
-    .catch Landroid/os/DeadObjectException; {:try_start_0 .. :try_end_0} :catch_1
-    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
-
-    move-object/from16 p1, v6
-
-    move-object v6, v0
-
-    :try_start_1
-    invoke-interface/range {v6 .. v12}, Lvg8;->d(ILz1b;Lw0b;ZZI)V
-    :try_end_1
-    .catch Landroid/os/DeadObjectException; {:try_start_1 .. :try_end_1} :catch_3
-    .catch Landroid/os/RemoteException; {:try_start_1 .. :try_end_1} :catch_2
-
-    goto :goto_6
-
-    :catch_2
-    move-exception v0
-
-    :goto_4
-    new-instance v6, Ljava/lang/StringBuilder;
-
-    const-string v7, "Exception in "
-
-    invoke-direct {v6, v7}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual/range {p1 .. p1}, Lwg8;->toString()Ljava/lang/String;
-
-    move-result-object v7
-
-    invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v6}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v6
-
-    invoke-static {v6, v0}, Lou0;->K(Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    goto :goto_6
-
-    :catch_3
-    :goto_5
-    iget-object v0, v3, Lbj8;->e:Lr3d;
-
-    move-object/from16 v6, p1
-
-    invoke-virtual {v0, v6}, Lr3d;->v(Lwg8;)V
-
-    :goto_6
-    add-int/lit8 v15, v15, 0x1
+    move-result v1
 
     goto :goto_0
 
-    :cond_4
-    :goto_7
-    iput-boolean v5, v1, Lnh8;->a:Z
+    :cond_0
+    move v1, v4
 
-    iput-boolean v5, v1, Lnh8;->b:Z
+    :goto_0
+    add-int/2addr v0, v1
 
-    return-void
+    mul-int/lit8 v0, v0, 0x1f
 
-    :cond_5
-    new-instance v1, Ljava/lang/IllegalStateException;
+    iget p0, p0, Lnh8;->X:F
 
-    new-instance v2, Ljava/lang/StringBuilder;
+    cmpl-float v1, p0, v2
 
-    const-string v3, "Invalid message what="
+    if-eqz v1, :cond_1
 
-    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-static {p0}, Ljava/lang/Float;->floatToIntBits(F)I
 
-    iget v0, v0, Landroid/os/Message;->what:I
+    move-result v4
 
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    :cond_1
+    add-int/2addr v0, v4
 
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-direct {v1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw v1
+    return v0
 .end method

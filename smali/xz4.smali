@@ -1,23 +1,19 @@
-.class public interface abstract Lxz4;
-.super Ljava/lang/Object;
+.class public final Lxz4;
+.super Lwz4;
 .source "SourceFile"
-
-# interfaces
-.implements Ljava/lang/AutoCloseable;
 
 
 # virtual methods
-.method public abstract F()Landroid/media/MediaCodec$BufferInfo;
-.end method
+.method public b(Landroid/view/Window;)V
+    .locals 0
 
-.method public abstract J()Z
-.end method
+    invoke-virtual {p1}, Landroid/view/Window;->getAttributes()Landroid/view/WindowManager$LayoutParams;
 
-.method public abstract b0()J
-.end method
+    move-result-object p0
 
-.method public abstract r()Ljava/nio/ByteBuffer;
-.end method
+    const/4 p1, 0x3
 
-.method public abstract size()J
+    iput p1, p0, Landroid/view/WindowManager$LayoutParams;->layoutInDisplayCutoutMode:I
+
+    return-void
 .end method

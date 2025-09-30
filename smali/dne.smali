@@ -1,50 +1,96 @@
 .class public final Ldne;
-.super Lu2;
+.super Lr3;
 .source "SourceFile"
 
 
 # static fields
-.field public static final c:Ldne;
+.field public static final CREATOR:Landroid/os/Parcelable$Creator;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroid/os/Parcelable$Creator<",
+            "Ldne;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+
+# instance fields
+.field public final a:Lane;
+
+.field public final b:D
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 3
+    .locals 2
 
-    new-instance v0, Ldne;
+    new-instance v0, Lfvf;
 
-    const/4 v1, 0x0
+    const/16 v1, 0x19
 
-    const/16 v2, 0xd
+    invoke-direct {v0, v1}, Lfvf;-><init>(I)V
 
-    invoke-direct {v0, v2, v1}, Lu2;-><init>(ILjava/lang/Object;)V
-
-    sput-object v0, Ldne;->c:Ldne;
+    sput-object v0, Ldne;->CREATOR:Landroid/os/Parcelable$Creator;
 
     return-void
 .end method
 
+.method public constructor <init>(Lane;D)V
+    .locals 2
 
-# virtual methods
-.method public final z0()Z
-    .locals 1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-static {}, Ljava/util/Locale;->getDefault()Ljava/util/Locale;
+    const-wide/16 v0, 0x0
 
-    move-result-object p0
+    cmpg-double v0, p2, v0
 
-    invoke-static {p0}, Landroid/text/TextUtils;->getLayoutDirectionFromLocale(Ljava/util/Locale;)I
+    if-lez v0, :cond_0
 
-    move-result p0
+    iput-object p1, p0, Ldne;->a:Lane;
 
-    const/4 v0, 0x1
+    iput-wide p2, p0, Ldne;->b:D
 
-    if-ne p0, v0, :cond_0
-
-    return v0
+    return-void
 
     :cond_0
-    const/4 p0, 0x0
+    new-instance p0, Ljava/lang/IllegalArgumentException;
 
-    return p0
+    const-string p1, "A style must be applied to some segments on a polyline."
+
+    invoke-direct {p0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw p0
+.end method
+
+
+# virtual methods
+.method public final writeToParcel(Landroid/os/Parcel;I)V
+    .locals 3
+
+    const/16 v0, 0x4f45
+
+    invoke-static {p1, v0}, Ljs9;->U(Landroid/os/Parcel;I)I
+
+    move-result v0
+
+    const/4 v1, 0x2
+
+    iget-object v2, p0, Ldne;->a:Lane;
+
+    invoke-static {p1, v1, v2, p2}, Ljs9;->O(Landroid/os/Parcel;ILandroid/os/Parcelable;I)V
+
+    const/16 p2, 0x8
+
+    const/4 v1, 0x3
+
+    invoke-static {p1, v1, p2}, Ljs9;->W(Landroid/os/Parcel;II)V
+
+    iget-wide v1, p0, Ldne;->b:D
+
+    invoke-virtual {p1, v1, v2}, Landroid/os/Parcel;->writeDouble(D)V
+
+    invoke-static {p1, v0}, Ljs9;->V(Landroid/os/Parcel;I)V
+
+    return-void
 .end method

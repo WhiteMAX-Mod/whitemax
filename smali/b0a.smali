@@ -1,8 +1,15 @@
-.class public interface abstract Lb0a;
+.class public abstract Lb0a;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# virtual methods
-.method public abstract a(Ljava/lang/Object;)V
+# direct methods
+.method public static a(Landroid/app/Notification$Action;)I
+    .locals 0
+
+    invoke-virtual {p0}, Landroid/app/Notification$Action;->getSemanticAction()I
+
+    move-result p0
+
+    return p0
 .end method

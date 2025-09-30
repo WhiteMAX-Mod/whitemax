@@ -1,29 +1,100 @@
-.class public abstract Lfs9;
+.class public final Lfs9;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ljava/io/FilenameFilter;
+
+
+# instance fields
+.field public final synthetic a:I
+
 
 # direct methods
-.method public static a(Landroid/app/Notification$BigPictureStyle;Landroid/graphics/drawable/Icon;)V
+.method public synthetic constructor <init>(I)V
     .locals 0
 
-    invoke-virtual {p0, p1}, Landroid/app/Notification$BigPictureStyle;->bigPicture(Landroid/graphics/drawable/Icon;)Landroid/app/Notification$BigPictureStyle;
+    iput p1, p0, Lfs9;->a:I
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
-.method public static b(Landroid/app/Notification$BigPictureStyle;Ljava/lang/CharSequence;)V
+
+# virtual methods
+.method public final accept(Ljava/io/File;Ljava/lang/String;)Z
     .locals 0
 
-    invoke-virtual {p0, p1}, Landroid/app/Notification$BigPictureStyle;->setContentDescription(Ljava/lang/CharSequence;)Landroid/app/Notification$BigPictureStyle;
+    iget p0, p0, Lfs9;->a:I
 
-    return-void
-.end method
+    packed-switch p0, :pswitch_data_0
 
-.method public static c(Landroid/app/Notification$BigPictureStyle;Z)V
-    .locals 0
+    const-string p0, "dso_state"
 
-    invoke-virtual {p0, p1}, Landroid/app/Notification$BigPictureStyle;->showBigPictureWhenCollapsed(Z)Landroid/app/Notification$BigPictureStyle;
+    invoke-virtual {p2, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    return-void
+    move-result p0
+
+    if-nez p0, :cond_0
+
+    const-string p0, "dso_lock"
+
+    invoke-virtual {p2, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p0
+
+    if-nez p0, :cond_0
+
+    const-string p0, "dso_deps"
+
+    invoke-virtual {p2, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p0
+
+    if-nez p0, :cond_0
+
+    const/4 p0, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    const/4 p0, 0x0
+
+    :goto_0
+    return p0
+
+    :pswitch_0
+    const-string p0, "liblz4-java-"
+
+    invoke-virtual {p2, p0}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+
+    move-result p0
+
+    if-eqz p0, :cond_1
+
+    const-string p0, ".lck"
+
+    invoke-virtual {p2, p0}, Ljava/lang/String;->endsWith(Ljava/lang/String;)Z
+
+    move-result p0
+
+    if-nez p0, :cond_1
+
+    const/4 p0, 0x1
+
+    goto :goto_1
+
+    :cond_1
+    const/4 p0, 0x0
+
+    :goto_1
+    return p0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

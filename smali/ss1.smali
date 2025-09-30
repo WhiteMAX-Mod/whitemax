@@ -1,406 +1,62 @@
 .class public final Lss1;
-.super Ljava/lang/Object;
+.super Lq3;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:Lje7;
-
-.field public final b:Lje7;
-
-.field public final c:Lje7;
-
-.field public final d:Lje7;
-
-.field public final e:Lwfe;
-
-.field public final f:Ljava/lang/Object;
-
-.field public final g:Ljava/lang/Object;
-
-.field public final h:Ljava/lang/Object;
-
-.field public final i:Ljava/lang/Object;
-
-.field public final j:Ljava/lang/Object;
-
-.field public final k:Ljava/lang/Object;
+.field public final synthetic r0:Lts1;
 
 
 # direct methods
-.method public constructor <init>(Lje7;Lje7;Lje7;Lje7;Lje7;)V
+.method public constructor <init>(Lts1;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p4, p0, Lss1;->a:Lje7;
-
-    iput-object p5, p0, Lss1;->b:Lje7;
-
-    iput-object p3, p0, Lss1;->c:Lje7;
-
-    iput-object p2, p0, Lss1;->d:Lje7;
-
-    new-instance p3, Lk30;
-
-    const/4 p4, 0x3
-
-    invoke-direct {p3, p2, p4}, Lk30;-><init>(Lje7;I)V
-
-    new-instance p2, Lwfe;
-
-    invoke-direct {p2, p3}, Lwfe;-><init>(Lv56;)V
-
-    iput-object p2, p0, Lss1;->e:Lwfe;
-
-    new-instance p2, Lk30;
-
-    const/4 p3, 0x4
-
-    invoke-direct {p2, p1, p3}, Lk30;-><init>(Lje7;I)V
-
-    const/4 p3, 0x3
-
-    invoke-static {p3, p2}, Lkhg;->o(ILv56;)Lje7;
-
-    move-result-object p2
-
-    iput-object p2, p0, Lss1;->f:Ljava/lang/Object;
-
-    new-instance p2, Lk30;
-
-    const/4 p4, 0x5
-
-    invoke-direct {p2, p1, p4}, Lk30;-><init>(Lje7;I)V
-
-    invoke-static {p3, p2}, Lkhg;->o(ILv56;)Lje7;
-
-    move-result-object p2
-
-    iput-object p2, p0, Lss1;->g:Ljava/lang/Object;
-
-    new-instance p2, Lk30;
-
-    const/4 p4, 0x6
-
-    invoke-direct {p2, p1, p4}, Lk30;-><init>(Lje7;I)V
-
-    invoke-static {p3, p2}, Lkhg;->o(ILv56;)Lje7;
-
-    move-result-object p2
-
-    iput-object p2, p0, Lss1;->h:Ljava/lang/Object;
-
-    new-instance p2, Lk30;
-
-    const/4 p4, 0x7
-
-    invoke-direct {p2, p1, p4}, Lk30;-><init>(Lje7;I)V
-
-    invoke-static {p3, p2}, Lkhg;->o(ILv56;)Lje7;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lss1;->i:Ljava/lang/Object;
-
-    new-instance p1, Lsh1;
-
-    const/16 p2, 0x1c
-
-    invoke-direct {p1, p2}, Lsh1;-><init>(I)V
-
-    invoke-static {p3, p1}, Lkhg;->o(ILv56;)Lje7;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lss1;->j:Ljava/lang/Object;
-
-    new-instance p1, Lsh1;
-
-    const/16 p2, 0x1d
-
-    invoke-direct {p1, p2}, Lsh1;-><init>(I)V
-
-    invoke-static {p3, p1}, Lkhg;->o(ILv56;)Lje7;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lss1;->k:Ljava/lang/Object;
+    iput-object p1, p0, Lss1;->r0:Lts1;
 
     return-void
-.end method
-
-.method public static b(Ljava/lang/CharSequence;Ljava/lang/String;Landroid/graphics/Bitmap;)Lasa;
-    .locals 2
-
-    invoke-static {p0}, Lj8e;->J0(Ljava/lang/CharSequence;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    invoke-static {p1}, Lj8e;->J0(Ljava/lang/CharSequence;)Z
-
-    move-result p0
-
-    if-nez p0, :cond_1
-
-    move-object p0, p1
-
-    goto :goto_0
-
-    :cond_1
-    const-string p0, "..."
-
-    :goto_0
-    const/4 p1, 0x0
-
-    if-eqz p2, :cond_2
-
-    new-instance v0, Landroidx/core/graphics/drawable/IconCompat;
-
-    const/4 v1, 0x5
-
-    invoke-direct {v0, v1}, Landroidx/core/graphics/drawable/IconCompat;-><init>(I)V
-
-    iput-object p2, v0, Landroidx/core/graphics/drawable/IconCompat;->b:Ljava/lang/Object;
-
-    goto :goto_1
-
-    :cond_2
-    move-object v0, p1
-
-    :goto_1
-    new-instance p2, Lasa;
-
-    invoke-direct {p2}, Ljava/lang/Object;-><init>()V
-
-    iput-object p0, p2, Lasa;->a:Ljava/lang/CharSequence;
-
-    iput-object v0, p2, Lasa;->b:Landroidx/core/graphics/drawable/IconCompat;
-
-    iput-object p1, p2, Lasa;->c:Ljava/lang/String;
-
-    iput-object p1, p2, Lasa;->d:Ljava/lang/String;
-
-    const/4 p0, 0x0
-
-    iput-boolean p0, p2, Lasa;->e:Z
-
-    const/4 p0, 0x1
-
-    iput-boolean p0, p2, Lasa;->f:Z
-
-    return-object p2
 .end method
 
 
 # virtual methods
-.method public final a()V
-    .locals 3
-
-    const-string v0, "CallsNotification"
-
-    const-string v1, "cancel call notification"
-
-    invoke-static {v0, v1}, Lg47;->p(Ljava/lang/String;Ljava/lang/String;)V
-
-    invoke-virtual {p0}, Lss1;->e()Lxt9;
-
-    move-result-object v0
-
-    const/16 v1, 0xef
-
-    iget-object v0, v0, Lxt9;->b:Landroid/app/NotificationManager;
-
-    const/4 v2, 0x0
-
-    invoke-virtual {v0, v2, v1}, Landroid/app/NotificationManager;->cancel(Ljava/lang/String;I)V
-
-    invoke-virtual {p0}, Lss1;->e()Lxt9;
-
-    move-result-object p0
-
-    const/16 v0, 0xf0
-
-    iget-object p0, p0, Lxt9;->b:Landroid/app/NotificationManager;
-
-    invoke-virtual {p0, v2, v0}, Landroid/app/NotificationManager;->cancel(Ljava/lang/String;I)V
-
-    return-void
-.end method
-
-.method public final c(Lone/me/calls/impl/service/CallServiceImpl;Lr21;ZZ)Landroid/app/Notification;
+.method public final h()Ljava/lang/String;
     .locals 2
 
-    const-string v0, "CallsNotification"
+    iget-object p0, p0, Lss1;->r0:Lts1;
 
-    const-string v1, "createTempNotification"
+    iget-object p0, p0, Lts1;->a:Ljava/lang/ref/WeakReference;
 
-    invoke-static {v0, v1}, Lg47;->p(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {p0}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
 
-    iget-object p2, p2, Lr21;->c:Ljava/lang/CharSequence;
+    move-result-object p0
 
-    if-nez p2, :cond_0
+    check-cast p0, Lqs1;
 
-    iget-object p2, p0, Lss1;->f:Ljava/lang/Object;
+    if-nez p0, :cond_0
 
-    invoke-interface {p2}, Lje7;->getValue()Ljava/lang/Object;
+    const-string p0, "Completer object has been garbage collected, future will fail soon"
 
-    move-result-object p2
-
-    check-cast p2, Ljava/lang/String;
+    return-object p0
 
     :cond_0
-    if-nez p4, :cond_1
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    iget-object p4, p0, Lss1;->i:Ljava/lang/Object;
+    const-string v1, "tag=["
 
-    invoke-interface {p4}, Lje7;->getValue()Ljava/lang/Object;
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    move-result-object p4
+    iget-object p0, p0, Lqs1;->a:Ljava/lang/Object;
 
-    check-cast p4, Ljava/lang/String;
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    goto :goto_0
+    const-string p0, "]"
 
-    :cond_1
-    if-eqz p3, :cond_2
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object p4, p0, Lss1;->h:Ljava/lang/Object;
-
-    invoke-interface {p4}, Lje7;->getValue()Ljava/lang/Object;
-
-    move-result-object p4
-
-    check-cast p4, Ljava/lang/String;
-
-    goto :goto_0
-
-    :cond_2
-    iget-object p4, p0, Lss1;->g:Ljava/lang/Object;
-
-    invoke-interface {p4}, Lje7;->getValue()Ljava/lang/Object;
-
-    move-result-object p4
-
-    check-cast p4, Ljava/lang/String;
-
-    :goto_0
-    if-eqz p3, :cond_3
-
-    iget-object p3, p0, Lss1;->k:Ljava/lang/Object;
-
-    invoke-interface {p3}, Lje7;->getValue()Ljava/lang/Object;
-
-    move-result-object p3
-
-    check-cast p3, Ljava/lang/Number;
-
-    invoke-virtual {p3}, Ljava/lang/Number;->intValue()I
-
-    move-result p3
-
-    goto :goto_1
-
-    :cond_3
-    iget-object p3, p0, Lss1;->j:Ljava/lang/Object;
-
-    invoke-interface {p3}, Lje7;->getValue()Ljava/lang/Object;
-
-    move-result-object p3
-
-    check-cast p3, Ljava/lang/Number;
-
-    invoke-virtual {p3}, Ljava/lang/Number;->intValue()I
-
-    move-result p3
-
-    :goto_1
-    iget-object v0, p0, Lss1;->d:Lje7;
-
-    invoke-interface {v0}, Lje7;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lsba;
-
-    invoke-virtual {v0}, Lsba;->l()V
-
-    new-instance v0, Ljs9;
-
-    iget-object p0, p0, Lss1;->c:Lje7;
-
-    invoke-interface {p0}, Lje7;->getValue()Ljava/lang/Object;
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p0
-
-    check-cast p0, Lb94;
-
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    const-string p0, "ru.oneme.app.new.activeCalls"
-
-    invoke-direct {v0, p1, p0}, Ljs9;-><init>(Landroid/content/Context;Ljava/lang/String;)V
-
-    const/4 p0, -0x1
-
-    iput p0, v0, Ljs9;->k:I
-
-    const-string p0, "call"
-
-    iput-object p0, v0, Ljs9;->v:Ljava/lang/String;
-
-    iget-object p0, v0, Ljs9;->F:Landroid/app/Notification;
-
-    iput p3, p0, Landroid/app/Notification;->icon:I
-
-    invoke-static {p2}, Ljs9;->b(Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
-
-    move-result-object p0
-
-    iput-object p0, v0, Ljs9;->e:Ljava/lang/CharSequence;
-
-    invoke-static {p4}, Ljs9;->b(Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
-
-    move-result-object p0
-
-    iput-object p0, v0, Ljs9;->f:Ljava/lang/CharSequence;
-
-    invoke-virtual {v0}, Ljs9;->a()Landroid/app/Notification;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public final d()Lqa1;
-    .locals 0
-
-    iget-object p0, p0, Lss1;->b:Lje7;
-
-    invoke-interface {p0}, Lje7;->getValue()Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, Lqa1;
-
-    return-object p0
-.end method
-
-.method public final e()Lxt9;
-    .locals 0
-
-    iget-object p0, p0, Lss1;->e:Lwfe;
-
-    invoke-virtual {p0}, Lwfe;->getValue()Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, Lxt9;
 
     return-object p0
 .end method

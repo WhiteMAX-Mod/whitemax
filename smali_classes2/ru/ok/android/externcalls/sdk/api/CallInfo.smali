@@ -4,10 +4,10 @@
 
 
 # static fields
-.field public static final PARSER:Lza7;
+.field public static final PARSER:Lvh7;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lza7;"
+            "Lvh7;"
         }
     .end annotation
 .end field
@@ -55,13 +55,13 @@
 .method static constructor <clinit>()V
     .locals 2
 
-    new-instance v0, Lxp0;
+    new-instance v0, Ldq0;
 
     const/4 v1, 0x6
 
-    invoke-direct {v0, v1}, Lxp0;-><init>(I)V
+    invoke-direct {v0, v1}, Ldq0;-><init>(I)V
 
-    sput-object v0, Lru/ok/android/externcalls/sdk/api/CallInfo;->PARSER:Lza7;
+    sput-object v0, Lru/ok/android/externcalls/sdk/api/CallInfo;->PARSER:Lvh7;
 
     return-void
 .end method
@@ -111,7 +111,7 @@
     return-void
 .end method
 
-.method public static parse(Ldb7;)Lru/ok/android/externcalls/sdk/api/CallInfo;
+.method public static parse(Lzh7;)Lru/ok/android/externcalls/sdk/api/CallInfo;
     .locals 14
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -122,7 +122,7 @@
 
     sget-object v0, Ljava/util/Collections;->EMPTY_LIST:Ljava/util/List;
 
-    invoke-interface {p0}, Ldb7;->s()V
+    invoke-interface {p0}, Lzh7;->s()V
 
     const/4 v1, 0x0
 
@@ -149,13 +149,13 @@
     move v13, v12
 
     :goto_0
-    invoke-interface {p0}, Ldb7;->hasNext()Z
+    invoke-interface {p0}, Lzh7;->hasNext()Z
 
     move-result v0
 
     if-eqz v0, :cond_a
 
-    invoke-interface {p0}, Ldb7;->name()Ljava/lang/String;
+    invoke-interface {p0}, Lzh7;->name()Ljava/lang/String;
 
     move-result-object v0
 
@@ -332,82 +332,82 @@
     :goto_1
     packed-switch v3, :pswitch_data_0
 
-    invoke-interface {p0}, Ldb7;->B()V
+    invoke-interface {p0}, Lzh7;->B()V
 
     goto/16 :goto_0
 
     :pswitch_0
-    invoke-interface {p0}, Ldb7;->H()Ljava/lang/String;
+    invoke-interface {p0}, Lzh7;->H()Ljava/lang/String;
 
     move-result-object v6
 
     goto/16 :goto_0
 
     :pswitch_1
-    invoke-static {p0}, Lru/ok/android/externcalls/sdk/api/TurnStunParser;->parseStun(Ldb7;)Ljava/util/List;
+    invoke-static {p0}, Lru/ok/android/externcalls/sdk/api/TurnStunParser;->parseStun(Lzh7;)Ljava/util/List;
 
     move-result-object v11
 
     goto/16 :goto_0
 
     :pswitch_2
-    invoke-static {p0}, Lru/ok/android/externcalls/sdk/api/TurnStunParser;->parseTurn(Ldb7;)Ljava/util/List;
+    invoke-static {p0}, Lru/ok/android/externcalls/sdk/api/TurnStunParser;->parseTurn(Lzh7;)Ljava/util/List;
 
     move-result-object v10
 
     goto/16 :goto_0
 
     :pswitch_3
-    invoke-interface {p0}, Ldb7;->e0()Z
+    invoke-interface {p0}, Lzh7;->e0()Z
 
     move-result v9
 
     goto/16 :goto_0
 
     :pswitch_4
-    invoke-interface {p0}, Ldb7;->E()I
+    invoke-interface {p0}, Lzh7;->E()I
 
     move-result v13
 
     goto/16 :goto_0
 
     :pswitch_5
-    invoke-interface {p0}, Ldb7;->H()Ljava/lang/String;
+    invoke-interface {p0}, Lzh7;->H()Ljava/lang/String;
 
     move-result-object v4
 
     goto/16 :goto_0
 
     :pswitch_6
-    invoke-interface {p0}, Ldb7;->H()Ljava/lang/String;
+    invoke-interface {p0}, Lzh7;->H()Ljava/lang/String;
 
     move-result-object v7
 
     goto/16 :goto_0
 
     :pswitch_7
-    invoke-interface {p0}, Ldb7;->e0()Z
+    invoke-interface {p0}, Lzh7;->e0()Z
 
     move-result v12
 
     goto/16 :goto_0
 
     :pswitch_8
-    invoke-interface {p0}, Ldb7;->H()Ljava/lang/String;
+    invoke-interface {p0}, Lzh7;->H()Ljava/lang/String;
 
     move-result-object v5
 
     goto/16 :goto_0
 
     :pswitch_9
-    invoke-interface {p0}, Ldb7;->H()Ljava/lang/String;
+    invoke-interface {p0}, Lzh7;->H()Ljava/lang/String;
 
     move-result-object v8
 
     goto/16 :goto_0
 
     :cond_a
-    invoke-interface {p0}, Ldb7;->q()V
+    invoke-interface {p0}, Lzh7;->q()V
 
     new-instance v3, Lru/ok/android/externcalls/sdk/api/CallInfo;
 
@@ -449,7 +449,7 @@
 .method public getFormattedJoinLink(Ljava/lang/String;)Ljava/lang/String;
     .locals 0
 
-    invoke-static {p1}, Lzt1;->l(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {p1}, Lmw1;->m(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object p1
 

@@ -1,172 +1,65 @@
-.class public final synthetic Lu5;
-.super Ljava/lang/Object;
+.class public abstract Lu5;
+.super Lt5;
 .source "SourceFile"
 
 # interfaces
-.implements Llj3;
+.implements Ls4e;
 
 
-# instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Ljava/lang/Object;
-
-
-# direct methods
-.method public synthetic constructor <init>(ILjava/lang/Object;)V
-    .locals 0
-
-    iput p1, p0, Lu5;->a:I
-
-    iput-object p2, p0, Lu5;->b:Ljava/lang/Object;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    return-void
-.end method
+# static fields
+.field public static final synthetic T0:I
 
 
 # virtual methods
-.method public final accept(Ljava/lang/Object;)V
-    .locals 3
+.method public X(I)Lgmd;
+    .locals 2
 
-    iget v0, p0, Lu5;->a:I
+    invoke-virtual {p0, p1}, Lt5;->setContentView(I)V
 
-    iget-object p0, p0, Lu5;->b:Ljava/lang/Object;
+    new-instance p1, Lzxc;
 
-    packed-switch v0, :pswitch_data_0
+    invoke-direct {p1, p0}, Lzxc;-><init>(Lt5;)V
 
-    check-cast p0, Ljava/util/ArrayList;
+    sget v0, Lb8c;->toolbar:I
 
-    check-cast p1, Ljava/util/List;
+    invoke-virtual {p0, v0}, Lkm;->findViewById(I)Landroid/view/View;
 
-    invoke-virtual {p0, p1}, Ljava/util/ArrayList;->addAll(Ljava/util/Collection;)Z
+    move-result-object v0
 
-    return-void
+    check-cast v0, Landroidx/appcompat/widget/Toolbar;
 
-    :pswitch_0
-    check-cast p0, Landroid/view/View;
+    new-instance v1, Lu8h;
 
-    check-cast p1, Landroid/graphics/Rect;
+    invoke-direct {v1, p1, v0}, Lu8h;-><init>(Lzxc;Landroidx/appcompat/widget/Toolbar;)V
 
-    invoke-virtual {p0, p1}, Landroid/view/View;->getWindowVisibleDisplayFrame(Landroid/graphics/Rect;)V
+    invoke-virtual {p0}, Lt5;->o()Lcze;
 
-    return-void
+    move-result-object p0
 
-    :pswitch_1
-    check-cast p0, Lru/ok/messages/settings/FrgMediaSettings;
+    iput-object p0, v1, Lu8h;->o:Ljava/lang/Object;
 
-    check-cast p1, Laef;
+    new-instance p0, Lgmd;
 
-    iget-object v0, p0, Lru/ok/messages/settings/FrgMediaSettings;->A1:Lzo;
+    invoke-direct {p0, v1}, Lgmd;-><init>(Lu8h;)V
 
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    iget-object p1, p0, Lgmd;->b:Ljava/lang/Object;
 
-    const-string v1, "app.media.video.compress"
+    check-cast p1, Landroidx/appcompat/widget/Toolbar;
 
-    invoke-virtual {p1}, Ljava/lang/Enum;->name()Ljava/lang/String;
+    if-nez p1, :cond_0
 
-    move-result-object v2
+    return-object p0
 
-    invoke-virtual {v0, v1, v2}, Le3;->j(Ljava/lang/String;Ljava/lang/String;)V
+    :cond_0
+    new-instance v0, Lywe;
 
-    iget-object v0, p0, Lru/ok/messages/settings/FrgMediaSettings;->C1:Luc;
+    const/4 v1, 0x5
 
-    const-string v1, "VIDEO_COMPRESSION_MODE_SELECTED"
+    invoke-direct {v0, v1, p0}, Lywe;-><init>(ILjava/lang/Object;)V
 
-    invoke-virtual {p1}, Ljava/lang/Enum;->ordinal()I
+    sget-object v1, Lh7g;->a:Ljava/util/WeakHashMap;
 
-    move-result p1
+    invoke-static {p1, v0}, Lw6g;->u(Landroid/view/View;Lz8a;)V
 
-    invoke-virtual {v0, p1, v1}, Luc;->d(ILjava/lang/String;)V
-
-    invoke-virtual {p0}, Lru/ok/messages/settings/FrgBaseSettings;->j1()V
-
-    return-void
-
-    :pswitch_2
-    check-cast p0, Lxw;
-
-    check-cast p1, Ljava/util/Collection;
-
-    iget-object v0, p0, Lxw;->a:Ljava/lang/String;
-
-    invoke-interface {p1}, Ljava/util/Collection;->size()I
-
-    move-result v1
-
-    const-string v2, "ValidateMessagesTimeUseCase find some items for delete, count = "
-
-    invoke-static {v1, v2, v0}, Lpg0;->k(ILjava/lang/String;Ljava/lang/String;)V
-
-    iget-object v0, p0, Lxw;->g:Ljava/lang/Object;
-
-    check-cast v0, Lkotlinx/coroutines/internal/ContextScope;
-
-    new-instance v1, Lww;
-
-    const/4 v2, 0x0
-
-    invoke-direct {v1, p0, p1, v2}, Lww;-><init>(Lxw;Ljava/util/Collection;Lkotlin/coroutines/Continuation;)V
-
-    const/4 p0, 0x3
-
-    invoke-static {v0, v2, v2, v1, p0}, Lzo3;->E(Lox3;Lhx3;Lrx3;Ll66;I)Ldwd;
-
-    return-void
-
-    :pswitch_3
-    check-cast p0, Lru/ok/messages/photoeditor/ActPhotoEditor;
-
-    check-cast p1, Lprc;
-
-    sget v0, Lru/ok/messages/photoeditor/ActPhotoEditor;->V0:I
-
-    new-instance v0, Lug4;
-
-    iget-object v1, p1, Lprc;->a:La44;
-
-    invoke-virtual {v1}, La44;->b()J
-
-    move-result-wide v1
-
-    iget-boolean p1, p1, Lprc;->b:Z
-
-    invoke-direct {v0, v1, v2, p1}, Lug4;-><init>(JZ)V
-
-    invoke-virtual {p0, v0}, Lru/ok/messages/photoeditor/ActPhotoEditor;->a0(Lug4;)V
-
-    return-void
-
-    :pswitch_4
-    check-cast p0, Lru/ok/messages/media/mediabar/ActLocalMedias;
-
-    check-cast p1, Lprc;
-
-    sget v0, Lru/ok/messages/media/mediabar/ActLocalMedias;->o1:I
-
-    new-instance v0, Lug4;
-
-    iget-object v1, p1, Lprc;->a:La44;
-
-    invoke-virtual {v1}, La44;->b()J
-
-    move-result-wide v1
-
-    iget-boolean p1, p1, Lprc;->b:Z
-
-    invoke-direct {v0, v1, v2, p1}, Lug4;-><init>(JZ)V
-
-    invoke-virtual {p0, v0}, Lru/ok/messages/media/mediabar/ActLocalMedias;->g0(Lug4;)V
-
-    return-void
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_4
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    return-object p0
 .end method

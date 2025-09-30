@@ -4,7 +4,7 @@
 
 
 # instance fields
-.field public j1:F
+.field public m1:F
 
 
 # direct methods
@@ -31,7 +31,7 @@
 
     move-result v0
 
-    iput v0, p0, Lru/ok/messages/media/chat/MediaViewPager;->j1:F
+    iput v0, p0, Lru/ok/messages/media/chat/MediaViewPager;->m1:F
 
     goto :goto_0
 
@@ -44,13 +44,13 @@
 
     if-ne v0, v1, :cond_1
 
-    invoke-static {p0}, Lfq0;->I(Landroid/view/View;)Z
+    invoke-static {p0}, Ljk7;->S(Landroid/view/View;)Z
 
     move-result v0
 
     if-nez v0, :cond_1
 
-    iget v0, p0, Lru/ok/messages/media/chat/MediaViewPager;->j1:F
+    iget v0, p0, Lru/ok/messages/media/chat/MediaViewPager;->m1:F
 
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getX()F
 

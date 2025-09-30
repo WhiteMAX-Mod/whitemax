@@ -1,39 +1,59 @@
-.class public final synthetic Lcj;
-.super Ljava/lang/Object;
+.class public final Lcj;
+.super Ljx3;
 .source "SourceFile"
-
-# interfaces
-.implements Lxmc;
 
 
 # instance fields
-.field public final synthetic a:Ldj;
+.field public X:Ljava/lang/Object;
+
+.field public Y:Lipc;
+
+.field public Z:Ljava/lang/Object;
+
+.field public o:Ljava/lang/Object;
+
+.field public r0:Lao9;
+
+.field public synthetic s0:Ljava/lang/Object;
+
+.field public final synthetic t0:Lij;
+
+.field public u0:I
 
 
 # direct methods
-.method public synthetic constructor <init>(Ldj;)V
+.method public constructor <init>(Lij;Ljx3;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lcj;->t0:Lij;
 
-    iput-object p1, p0, Lcj;->a:Ldj;
+    invoke-direct {p0, p2}, Ljx3;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Lu24;Z)V
-    .locals 0
+.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    iget-object p0, p0, Lcj;->a:Ldj;
+    iput-object p1, p0, Lcj;->s0:Ljava/lang/Object;
 
-    iget-object p0, p0, Ldj;->g:Ldt3;
+    iget p1, p0, Lcj;->u0:I
 
-    if-eqz p0, :cond_0
+    const/high16 v0, -0x80000000
 
-    invoke-virtual {p0}, Ldt3;->b()V
+    or-int/2addr p1, v0
 
-    :cond_0
-    return-void
+    iput p1, p0, Lcj;->u0:I
+
+    iget-object p1, p0, Lcj;->t0:Lij;
+
+    const/4 v0, 0x0
+
+    invoke-static {p1, v0, v0, p0}, Lij;->c(Lij;Ljava/util/List;Ljava/util/Map;Ljx3;)Ljava/lang/Object;
+
+    move-result-object p0
+
+    return-object p0
 .end method

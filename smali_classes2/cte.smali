@@ -1,96 +1,193 @@
-.class public final synthetic Lcte;
-.super Ljava/lang/Object;
+.class public final Lcte;
+.super Lcy3;
 .source "SourceFile"
-
-# interfaces
-.implements Lv56;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final X:Ljava/lang/String;
 
-.field public final synthetic b:Lwte;
+.field public final o:Lo88;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lwte;I)V
-    .locals 0
+.method public constructor <init>()V
+    .locals 1
 
-    iput p2, p0, Lcte;->a:I
+    const/4 v0, 0x0
 
-    iput-object p1, p0, Lcte;->b:Lwte;
+    .line 1
+    invoke-direct {p0, v0}, Lcte;-><init>(I)V
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    return-void
+.end method
+
+.method public constructor <init>(I)V
+    .locals 1
+
+    .line 2
+    new-instance p1, Lo88;
+
+    const/4 v0, 0x0
+
+    invoke-direct {p1, v0}, Lo88;-><init>(I)V
+
+    .line 3
+    invoke-direct {p0}, Lcy3;-><init>()V
+
+    .line 4
+    iput-object p1, p0, Lcte;->o:Lo88;
+
+    .line 5
+    const-class p1, Lcte;
+
+    invoke-virtual {p1}, Ljava/lang/Class;->getName()Ljava/lang/String;
+
+    move-result-object p1
+
+    .line 6
+    iput-object p1, p0, Lcte;->X:Ljava/lang/String;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke()Ljava/lang/Object;
-    .locals 1
+.method public final a()V
+    .locals 0
 
-    iget v0, p0, Lcte;->a:I
+    iget-object p0, p0, Lcte;->o:Lo88;
 
-    iget-object p0, p0, Lcte;->b:Lwte;
+    invoke-virtual {p0}, Leh;->a()V
 
-    packed-switch v0, :pswitch_data_0
+    return-void
+.end method
 
-    iget-object p0, p0, Lwte;->a:Ljavax/net/ssl/SSLEngine;
+.method public final f(Lcy3;Lxx3;)V
+    .locals 0
 
-    invoke-virtual {p0}, Ljavax/net/ssl/SSLEngine;->getDelegatedTask()Ljava/lang/Runnable;
+    iget-object p0, p0, Lcte;->o:Lo88;
 
-    move-result-object p0
+    invoke-virtual {p0, p1, p2}, Leh;->f(Lcy3;Lxx3;)V
 
-    if-eqz p0, :cond_0
+    return-void
+.end method
 
-    invoke-interface {p0}, Ljava/lang/Runnable;->run()V
+.method public final g(Landroid/view/ViewGroup;Landroid/view/View;Landroid/view/View;ZLay3;)V
+    .locals 11
 
-    sget-object p0, Le5f;->a:Le5f;
+    sget-object v0, Lqz7;->o:Lqz7;
+
+    const/4 v1, 0x0
+
+    if-nez p2, :cond_2
+
+    if-nez p4, :cond_2
+
+    iget-object p0, p0, Lcte;->X:Ljava/lang/String;
+
+    sget-object p1, Ljtg;->g:Loja;
+
+    if-nez p1, :cond_0
 
     goto :goto_0
 
     :cond_0
-    const/4 p0, 0x0
+    invoke-virtual {p1, v0}, Loja;->a(Lqz7;)Z
 
+    move-result p2
+
+    if-eqz p2, :cond_1
+
+    const-string p2, "Already swiped controller manually, skip performChange"
+
+    invoke-virtual {p1, v0, p0, p2, v1}, Loja;->b(Lqz7;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    :cond_1
     :goto_0
-    return-object p0
+    invoke-virtual/range {p5 .. p5}, Lay3;->n()V
 
-    :pswitch_0
-    iget-object p0, p0, Lwte;->a:Ljavax/net/ssl/SSLEngine;
+    return-void
 
-    invoke-virtual {p0}, Ljavax/net/ssl/SSLEngine;->beginHandshake()V
+    :cond_2
+    if-nez p2, :cond_5
 
-    sget-object p0, Le5f;->a:Le5f;
+    if-eqz p4, :cond_5
 
-    return-object p0
+    iget-object p0, p0, Lcte;->X:Ljava/lang/String;
 
-    :pswitch_1
-    iget-object p0, p0, Lwte;->a:Ljavax/net/ssl/SSLEngine;
+    sget-object v2, Ljtg;->g:Loja;
 
-    invoke-virtual {p0}, Ljavax/net/ssl/SSLEngine;->getDelegatedTask()Ljava/lang/Runnable;
-
-    move-result-object p0
-
-    if-eqz p0, :cond_1
-
-    invoke-interface {p0}, Ljava/lang/Runnable;->run()V
-
-    sget-object p0, Le5f;->a:Le5f;
+    if-nez v2, :cond_3
 
     goto :goto_1
 
-    :cond_1
-    const/4 p0, 0x0
+    :cond_3
+    invoke-virtual {v2, v0}, Loja;->a(Lqz7;)Z
 
+    move-result v3
+
+    if-eqz v3, :cond_4
+
+    const-string v3, "Showing controller without animation"
+
+    invoke-virtual {v2, v0, p0, v3, v1}, Loja;->b(Lqz7;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    :cond_4
     :goto_1
-    return-object p0
+    new-instance v4, Li2e;
 
-    nop
+    const/4 p0, 0x1
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    invoke-direct {v4, p0}, Li2e;-><init>(Z)V
+
+    move-object v5, p1
+
+    move-object v6, p2
+
+    move-object v7, p3
+
+    move v8, p4
+
+    move-object/from16 v9, p5
+
+    invoke-virtual/range {v4 .. v9}, Li2e;->g(Landroid/view/ViewGroup;Landroid/view/View;Landroid/view/View;ZLay3;)V
+
+    return-void
+
+    :cond_5
+    iget-object v5, p0, Lcte;->o:Lo88;
+
+    move-object v6, p1
+
+    move-object v7, p2
+
+    move-object v8, p3
+
+    move v9, p4
+
+    move-object/from16 v10, p5
+
+    invoke-virtual/range {v5 .. v10}, Leh;->g(Landroid/view/ViewGroup;Landroid/view/View;Landroid/view/View;ZLay3;)V
+
+    return-void
+.end method
+
+.method public final h(Landroid/os/Bundle;)V
+    .locals 0
+
+    iget-object p0, p0, Lcte;->o:Lo88;
+
+    invoke-virtual {p0, p1}, Leh;->h(Landroid/os/Bundle;)V
+
+    return-void
+.end method
+
+.method public final i(Landroid/os/Bundle;)V
+    .locals 0
+
+    iget-object p0, p0, Lcte;->o:Lo88;
+
+    invoke-virtual {p0, p1}, Leh;->i(Landroid/os/Bundle;)V
+
+    return-void
 .end method

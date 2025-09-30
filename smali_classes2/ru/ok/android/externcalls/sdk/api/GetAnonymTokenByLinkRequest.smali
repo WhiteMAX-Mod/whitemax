@@ -1,9 +1,9 @@
 .class public Lru/ok/android/externcalls/sdk/api/GetAnonymTokenByLinkRequest;
-.super Lb0;
+.super La0;
 .source "SourceFile"
 
 # interfaces
-.implements Lrk;
+.implements Lal;
 
 
 # annotations
@@ -15,17 +15,17 @@
 
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lb0;",
-        "Lrk;"
+        "La0;",
+        "Lal;"
     }
 .end annotation
 
 
 # static fields
-.field private static final PARSER:Lza7;
+.field private static final PARSER:Lvh7;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lza7;"
+            "Lvh7;"
         }
     .end annotation
 .end field
@@ -41,13 +41,13 @@
 .method static constructor <clinit>()V
     .locals 2
 
-    new-instance v0, Lpf5;
+    new-instance v0, Ljl5;
 
-    const/16 v1, 0x15
+    const/16 v1, 0x12
 
-    invoke-direct {v0, v1}, Lpf5;-><init>(I)V
+    invoke-direct {v0, v1}, Ljl5;-><init>(I)V
 
-    sput-object v0, Lru/ok/android/externcalls/sdk/api/GetAnonymTokenByLinkRequest;->PARSER:Lza7;
+    sput-object v0, Lru/ok/android/externcalls/sdk/api/GetAnonymTokenByLinkRequest;->PARSER:Lvh7;
 
     return-void
 .end method
@@ -78,10 +78,10 @@
     return-void
 .end method
 
-.method public static synthetic b(Ldb7;)Lru/ok/android/externcalls/sdk/api/GetAnonymTokenByLinkRequest$Response;
+.method public static synthetic b(Lzh7;)Lru/ok/android/externcalls/sdk/api/GetAnonymTokenByLinkRequest$Response;
     .locals 0
 
-    invoke-static {p0}, Lru/ok/android/externcalls/sdk/api/GetAnonymTokenByLinkRequest;->lambda$static$0(Ldb7;)Lru/ok/android/externcalls/sdk/api/GetAnonymTokenByLinkRequest$Response;
+    invoke-static {p0}, Lru/ok/android/externcalls/sdk/api/GetAnonymTokenByLinkRequest;->lambda$static$0(Lzh7;)Lru/ok/android/externcalls/sdk/api/GetAnonymTokenByLinkRequest$Response;
 
     move-result-object p0
 
@@ -107,7 +107,7 @@
     return p0
 .end method
 
-.method private static synthetic lambda$static$0(Ldb7;)Lru/ok/android/externcalls/sdk/api/GetAnonymTokenByLinkRequest$Response;
+.method private static synthetic lambda$static$0(Lzh7;)Lru/ok/android/externcalls/sdk/api/GetAnonymTokenByLinkRequest$Response;
     .locals 4
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -116,20 +116,20 @@
         }
     .end annotation
 
-    invoke-interface {p0}, Ldb7;->s()V
+    invoke-interface {p0}, Lzh7;->s()V
 
     const/4 v0, 0x0
 
     move-object v1, v0
 
     :goto_0
-    invoke-interface {p0}, Ldb7;->hasNext()Z
+    invoke-interface {p0}, Lzh7;->hasNext()Z
 
     move-result v2
 
     if-eqz v2, :cond_2
 
-    invoke-interface {p0}, Ldb7;->name()Ljava/lang/String;
+    invoke-interface {p0}, Lzh7;->name()Ljava/lang/String;
 
     move-result-object v2
 
@@ -151,26 +151,26 @@
 
     if-nez v2, :cond_0
 
-    invoke-interface {p0}, Ldb7;->B()V
+    invoke-interface {p0}, Lzh7;->B()V
 
     goto :goto_0
 
     :cond_0
-    invoke-interface {p0}, Ldb7;->H()Ljava/lang/String;
+    invoke-interface {p0}, Lzh7;->H()Ljava/lang/String;
 
     move-result-object v1
 
     goto :goto_0
 
     :cond_1
-    invoke-interface {p0}, Ldb7;->H()Ljava/lang/String;
+    invoke-interface {p0}, Lzh7;->H()Ljava/lang/String;
 
     move-result-object v0
 
     goto :goto_0
 
     :cond_2
-    invoke-interface {p0}, Ldb7;->q()V
+    invoke-interface {p0}, Lzh7;->q()V
 
     new-instance p0, Lru/ok/android/externcalls/sdk/api/GetAnonymTokenByLinkRequest$Response;
 
@@ -181,32 +181,32 @@
 
 
 # virtual methods
-.method public bridge synthetic getConfigExtractor()Lqk;
+.method public bridge synthetic getConfigExtractor()Lzk;
     .locals 0
 
-    sget-object p0, Lqk;->e:Lcwc;
+    sget-object p0, Lzk;->e:Lua6;
 
     return-object p0
 .end method
 
-.method public bridge synthetic getFailParser()Lza7;
+.method public bridge synthetic getFailParser()Lvh7;
     .locals 0
 
-    sget-object p0, Lec2;->b:Lec2;
+    sget-object p0, Lse2;->b:Lse2;
 
     return-object p0
 .end method
 
-.method public getOkParser()Lza7;
+.method public getOkParser()Lvh7;
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
-            "Lza7;"
+            "Lvh7;"
         }
     .end annotation
 
-    sget-object p0, Lru/ok/android/externcalls/sdk/api/GetAnonymTokenByLinkRequest;->PARSER:Lza7;
+    sget-object p0, Lru/ok/android/externcalls/sdk/api/GetAnonymTokenByLinkRequest;->PARSER:Lvh7;
 
     return-object p0
 .end method
@@ -219,18 +219,18 @@
     return p0
 .end method
 
-.method public bridge synthetic getScope()Ldl;
+.method public bridge synthetic getScope()Lnl;
     .locals 0
 
-    sget-object p0, Ldl;->o:Ldl;
+    sget-object p0, Lnl;->o:Lnl;
 
     return-object p0
 .end method
 
-.method public bridge synthetic getScopeAfter()Lel;
+.method public bridge synthetic getScopeAfter()Lol;
     .locals 0
 
-    sget-object p0, Lel;->a:Lel;
+    sget-object p0, Lol;->a:Lol;
 
     return-object p0
 .end method
@@ -240,27 +240,27 @@
 
     const-string p0, "vchat.getAnonymTokenByLink"
 
-    invoke-static {p0}, Lll;->a(Ljava/lang/String;)Landroid/net/Uri;
+    invoke-static {p0}, Lvl;->a(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object p0
 
     return-object p0
 .end method
 
-.method public populateParams(Lxk;)V
+.method public populateParams(Lgl;)V
     .locals 2
 
     const-string v0, "joinLink"
 
     iget-object v1, p0, Lru/ok/android/externcalls/sdk/api/GetAnonymTokenByLinkRequest;->joinLink:Ljava/lang/String;
 
-    invoke-virtual {p1, v0, v1}, Lxk;->b(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {p1, v0, v1}, Lgl;->b(Ljava/lang/String;Ljava/lang/String;)V
 
     const-string v0, "anonymName"
 
     iget-object p0, p0, Lru/ok/android/externcalls/sdk/api/GetAnonymTokenByLinkRequest;->name:Ljava/lang/String;
 
-    invoke-virtual {p1, v0, p0}, Lxk;->b(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {p1, v0, p0}, Lgl;->b(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 .end method

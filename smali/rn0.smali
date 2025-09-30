@@ -1,35 +1,59 @@
-.class public final Lrn0;
+.class public abstract Lrn0;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:Landroid/graphics/Bitmap;
+# static fields
+.field public static final a:I
 
-.field public final b:Ljava/lang/Exception;
+.field public static final b:I
+
+.field public static volatile c:Lqn0;
 
 
 # direct methods
-.method public constructor <init>(Landroid/graphics/Bitmap;Ll55;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 5
 
-    .line 1
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-static {}, Ljava/lang/Runtime;->getRuntime()Ljava/lang/Runtime;
 
-    .line 2
-    iput-object p1, p0, Lrn0;->a:Landroid/graphics/Bitmap;
+    move-result-object v0
 
-    return-void
-.end method
+    invoke-virtual {v0}, Ljava/lang/Runtime;->maxMemory()J
 
-.method public constructor <init>(Ljava/lang/Exception;)V
-    .locals 0
+    move-result-wide v0
 
-    .line 3
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const-wide/32 v2, 0x7fffffff
 
-    .line 4
-    iput-object p1, p0, Lrn0;->b:Ljava/lang/Exception;
+    invoke-static {v0, v1, v2, v3}, Ljava/lang/Math;->min(JJ)J
+
+    move-result-wide v0
+
+    long-to-int v0, v0
+
+    int-to-long v1, v0
+
+    const-wide/32 v3, 0x1000000
+
+    cmp-long v1, v1, v3
+
+    if-lez v1, :cond_0
+
+    div-int/lit8 v0, v0, 0x4
+
+    mul-int/lit8 v0, v0, 0x3
+
+    goto :goto_0
+
+    :cond_0
+    div-int/lit8 v0, v0, 0x2
+
+    :goto_0
+    sput v0, Lrn0;->a:I
+
+    const/16 v0, 0x180
+
+    sput v0, Lrn0;->b:I
 
     return-void
 .end method

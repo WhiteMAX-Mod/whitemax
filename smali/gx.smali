@@ -1,418 +1,315 @@
 .class public final Lgx;
-.super Lsg3;
+.super Landroid/media/MediaCodec$Callback;
 .source "SourceFile"
 
 
-# static fields
-.field public static final X:[Lfx;
-
-.field public static final o:[Lfx;
-
-
 # instance fields
-.field public final a:Ljava/util/concurrent/atomic/AtomicReference;
+.field public final a:Ljava/lang/Object;
 
-.field public b:Ljava/lang/Throwable;
+.field public final b:Landroid/os/HandlerThread;
 
-.field public c:Ljava/lang/Object;
+.field public c:Landroid/os/Handler;
+
+.field public final d:Lox;
+
+.field public final e:Lox;
+
+.field public final f:Ljava/util/ArrayDeque;
+
+.field public final g:Ljava/util/ArrayDeque;
+
+.field public h:Landroid/media/MediaFormat;
+
+.field public i:Landroid/media/MediaFormat;
+
+.field public j:Landroid/media/MediaCodec$CodecException;
+
+.field public k:J
+
+.field public l:Z
+
+.field public m:Ljava/lang/IllegalStateException;
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public constructor <init>(Landroid/os/HandlerThread;)V
     .locals 2
 
-    const/4 v0, 0x0
+    invoke-direct {p0}, Landroid/media/MediaCodec$Callback;-><init>()V
 
-    new-array v1, v0, [Lfx;
+    new-instance v0, Ljava/lang/Object;
 
-    sput-object v1, Lgx;->o:[Lfx;
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    new-array v0, v0, [Lfx;
+    iput-object v0, p0, Lgx;->a:Ljava/lang/Object;
 
-    sput-object v0, Lgx;->X:[Lfx;
+    iput-object p1, p0, Lgx;->b:Landroid/os/HandlerThread;
 
-    return-void
-.end method
+    new-instance p1, Lox;
 
-.method public constructor <init>()V
-    .locals 2
+    const/4 v0, 0x3
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/4 v1, 0x0
 
-    new-instance v0, Ljava/util/concurrent/atomic/AtomicReference;
+    invoke-direct {p1, v0, v1}, Lox;-><init>(IB)V
 
-    sget-object v1, Lgx;->o:[Lfx;
+    iput-object p1, p0, Lgx;->d:Lox;
 
-    invoke-direct {v0, v1}, Ljava/util/concurrent/atomic/AtomicReference;-><init>(Ljava/lang/Object;)V
+    new-instance p1, Lox;
 
-    iput-object v0, p0, Lgx;->a:Ljava/util/concurrent/atomic/AtomicReference;
+    invoke-direct {p1, v0, v1}, Lox;-><init>(IB)V
+
+    iput-object p1, p0, Lgx;->e:Lox;
+
+    new-instance p1, Ljava/util/ArrayDeque;
+
+    invoke-direct {p1}, Ljava/util/ArrayDeque;-><init>()V
+
+    iput-object p1, p0, Lgx;->f:Ljava/util/ArrayDeque;
+
+    new-instance p1, Ljava/util/ArrayDeque;
+
+    invoke-direct {p1}, Ljava/util/ArrayDeque;-><init>()V
+
+    iput-object p1, p0, Lgx;->g:Ljava/util/ArrayDeque;
 
     return-void
 .end method
 
 
 # virtual methods
+.method public final a(Landroid/media/MediaCodec;)V
+    .locals 5
+
+    iget-object v0, p0, Lgx;->a:Ljava/lang/Object;
+
+    monitor-enter v0
+
+    :try_start_0
+    iget-wide v1, p0, Lgx;->k:J
+
+    const-wide/16 v3, 0x1
+
+    add-long/2addr v1, v3
+
+    iput-wide v1, p0, Lgx;->k:J
+
+    iget-object v1, p0, Lgx;->c:Landroid/os/Handler;
+
+    sget v2, Llrf;->a:I
+
+    new-instance v2, Lc;
+
+    const/4 v3, 0x5
+
+    invoke-direct {v2, p0, v3, p1}, Lc;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+
+    invoke-virtual {v1, v2}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
+
+    monitor-exit v0
+
+    return-void
+
+    :catchall_0
+    move-exception p0
+
+    monitor-exit v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    throw p0
+.end method
+
 .method public final b()V
     .locals 4
 
-    iget-object v0, p0, Lgx;->a:Ljava/util/concurrent/atomic/AtomicReference;
+    iget-object v0, p0, Lgx;->g:Ljava/util/ArrayDeque;
 
-    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
+    invoke-virtual {v0}, Ljava/util/ArrayDeque;->isEmpty()Z
+
+    move-result v1
+
+    if-nez v1, :cond_0
+
+    invoke-virtual {v0}, Ljava/util/ArrayDeque;->getLast()Ljava/lang/Object;
 
     move-result-object v1
 
-    sget-object v2, Lgx;->X:[Lfx;
+    check-cast v1, Landroid/media/MediaFormat;
 
-    if-ne v1, v2, :cond_0
-
-    goto :goto_2
+    iput-object v1, p0, Lgx;->i:Landroid/media/MediaFormat;
 
     :cond_0
-    iget-object p0, p0, Lgx;->c:Ljava/lang/Object;
+    iget-object v1, p0, Lgx;->d:Lox;
 
-    invoke-virtual {v0, v2}, Ljava/util/concurrent/atomic/AtomicReference;->getAndSet(Ljava/lang/Object;)Ljava/lang/Object;
+    const/4 v2, 0x0
 
-    move-result-object v0
+    iput v2, v1, Lox;->b:I
 
-    check-cast v0, [Lfx;
+    const/4 v3, -0x1
 
-    const/4 v1, 0x0
+    iput v3, v1, Lox;->c:I
 
-    if-nez p0, :cond_2
+    iput v2, v1, Lox;->o:I
 
-    array-length p0, v0
+    iget-object v1, p0, Lgx;->e:Lox;
 
-    :goto_0
-    if-ge v1, p0, :cond_3
+    iput v2, v1, Lox;->b:I
 
-    aget-object v2, v0, v1
+    iput v3, v1, Lox;->c:I
 
-    invoke-virtual {v2}, Ljg4;->g()Z
+    iput v2, v1, Lox;->o:I
 
-    move-result v3
+    iget-object v1, p0, Lgx;->f:Ljava/util/ArrayDeque;
 
-    if-nez v3, :cond_1
+    invoke-virtual {v1}, Ljava/util/ArrayDeque;->clear()V
 
-    iget-object v2, v2, Ljg4;->a:La0a;
+    invoke-virtual {v0}, Ljava/util/ArrayDeque;->clear()V
 
-    invoke-interface {v2}, La0a;->b()V
+    const/4 v0, 0x0
 
-    :cond_1
-    add-int/lit8 v1, v1, 0x1
+    iput-object v0, p0, Lgx;->j:Landroid/media/MediaCodec$CodecException;
+
+    return-void
+.end method
+
+.method public final onError(Landroid/media/MediaCodec;Landroid/media/MediaCodec$CodecException;)V
+    .locals 0
+
+    iget-object p1, p0, Lgx;->a:Ljava/lang/Object;
+
+    monitor-enter p1
+
+    :try_start_0
+    iput-object p2, p0, Lgx;->j:Landroid/media/MediaCodec$CodecException;
+
+    monitor-exit p1
+
+    return-void
+
+    :catchall_0
+    move-exception p0
+
+    monitor-exit p1
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    throw p0
+.end method
+
+.method public final onInputBufferAvailable(Landroid/media/MediaCodec;I)V
+    .locals 0
+
+    iget-object p1, p0, Lgx;->a:Ljava/lang/Object;
+
+    monitor-enter p1
+
+    :try_start_0
+    iget-object p0, p0, Lgx;->d:Lox;
+
+    invoke-virtual {p0, p2}, Lox;->d(I)V
+
+    monitor-exit p1
+
+    return-void
+
+    :catchall_0
+    move-exception p0
+
+    monitor-exit p1
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    throw p0
+.end method
+
+.method public final onOutputBufferAvailable(Landroid/media/MediaCodec;ILandroid/media/MediaCodec$BufferInfo;)V
+    .locals 3
+
+    iget-object p1, p0, Lgx;->a:Ljava/lang/Object;
+
+    monitor-enter p1
+
+    :try_start_0
+    iget-object v0, p0, Lgx;->i:Landroid/media/MediaFormat;
+
+    if-eqz v0, :cond_0
+
+    iget-object v1, p0, Lgx;->e:Lox;
+
+    const/4 v2, -0x2
+
+    invoke-virtual {v1, v2}, Lox;->d(I)V
+
+    iget-object v1, p0, Lgx;->g:Ljava/util/ArrayDeque;
+
+    invoke-virtual {v1, v0}, Ljava/util/ArrayDeque;->add(Ljava/lang/Object;)Z
+
+    const/4 v0, 0x0
+
+    iput-object v0, p0, Lgx;->i:Landroid/media/MediaFormat;
 
     goto :goto_0
 
-    :cond_2
-    array-length v2, v0
-
-    :goto_1
-    if-ge v1, v2, :cond_3
-
-    aget-object v3, v0, v1
-
-    invoke-virtual {v3, p0}, Ljg4;->d(Ljava/lang/Object;)V
-
-    add-int/lit8 v1, v1, 0x1
+    :catchall_0
+    move-exception p0
 
     goto :goto_1
 
-    :cond_3
-    :goto_2
-    return-void
-.end method
-
-.method public final c(Lam4;)V
-    .locals 1
-
-    iget-object p0, p0, Lgx;->a:Ljava/util/concurrent/atomic/AtomicReference;
-
-    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
-
-    move-result-object p0
-
-    sget-object v0, Lgx;->X:[Lfx;
-
-    if-ne p0, v0, :cond_0
-
-    invoke-interface {p1}, Lam4;->f()V
-
     :cond_0
+    :goto_0
+    iget-object v0, p0, Lgx;->e:Lox;
+
+    invoke-virtual {v0, p2}, Lox;->d(I)V
+
+    iget-object p0, p0, Lgx;->f:Ljava/util/ArrayDeque;
+
+    invoke-virtual {p0, p3}, Ljava/util/ArrayDeque;->add(Ljava/lang/Object;)Z
+
+    monitor-exit p1
+
     return-void
+
+    :goto_1
+    monitor-exit p1
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    throw p0
 .end method
 
-.method public final h(Ljava/lang/Object;)V
+.method public final onOutputFormatChanged(Landroid/media/MediaCodec;Landroid/media/MediaFormat;)V
     .locals 2
 
-    const-string v0, "onNext called with a null value."
+    iget-object p1, p0, Lgx;->a:Ljava/lang/Object;
 
-    invoke-static {p1, v0}, Lg45;->c(Ljava/lang/Object;Ljava/lang/String;)V
+    monitor-enter p1
 
-    iget-object v0, p0, Lgx;->a:Ljava/util/concurrent/atomic/AtomicReference;
+    :try_start_0
+    iget-object v0, p0, Lgx;->e:Lox;
 
-    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
+    const/4 v1, -0x2
 
-    move-result-object v0
+    invoke-virtual {v0, v1}, Lox;->d(I)V
 
-    sget-object v1, Lgx;->X:[Lfx;
+    iget-object v0, p0, Lgx;->g:Ljava/util/ArrayDeque;
 
-    if-ne v0, v1, :cond_0
+    invoke-virtual {v0, p2}, Ljava/util/ArrayDeque;->add(Ljava/lang/Object;)Z
 
-    return-void
+    const/4 p2, 0x0
 
-    :cond_0
-    iput-object p1, p0, Lgx;->c:Ljava/lang/Object;
+    iput-object p2, p0, Lgx;->i:Landroid/media/MediaFormat;
 
-    return-void
-.end method
-
-.method public final onError(Ljava/lang/Throwable;)V
-    .locals 4
-
-    const-string v0, "onError called with a null Throwable."
-
-    invoke-static {p1, v0}, Lg45;->c(Ljava/lang/Object;Ljava/lang/String;)V
-
-    iget-object v0, p0, Lgx;->a:Ljava/util/concurrent/atomic/AtomicReference;
-
-    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
-
-    move-result-object v1
-
-    sget-object v2, Lgx;->X:[Lfx;
-
-    if-ne v1, v2, :cond_0
-
-    invoke-static {p1}, Lou0;->x(Ljava/lang/Throwable;)V
+    monitor-exit p1
 
     return-void
 
-    :cond_0
-    const/4 v1, 0x0
+    :catchall_0
+    move-exception p0
 
-    iput-object v1, p0, Lgx;->c:Ljava/lang/Object;
+    monitor-exit p1
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    iput-object p1, p0, Lgx;->b:Ljava/lang/Throwable;
-
-    invoke-virtual {v0, v2}, Ljava/util/concurrent/atomic/AtomicReference;->getAndSet(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, [Lfx;
-
-    array-length v0, p0
-
-    const/4 v1, 0x0
-
-    :goto_0
-    if-ge v1, v0, :cond_2
-
-    aget-object v2, p0, v1
-
-    invoke-virtual {v2}, Ljg4;->g()Z
-
-    move-result v3
-
-    if-eqz v3, :cond_1
-
-    invoke-static {p1}, Lou0;->x(Ljava/lang/Throwable;)V
-
-    goto :goto_1
-
-    :cond_1
-    iget-object v2, v2, Ljg4;->a:La0a;
-
-    invoke-interface {v2, p1}, La0a;->onError(Ljava/lang/Throwable;)V
-
-    :goto_1
-    add-int/lit8 v1, v1, 0x1
-
-    goto :goto_0
-
-    :cond_2
-    return-void
-.end method
-
-.method public final p(La0a;)V
-    .locals 6
-
-    new-instance v0, Lfx;
-
-    invoke-direct {v0, p1, p0}, Lfx;-><init>(La0a;Lgx;)V
-
-    invoke-interface {p1, v0}, La0a;->c(Lam4;)V
-
-    :goto_0
-    iget-object v1, p0, Lgx;->a:Ljava/util/concurrent/atomic/AtomicReference;
-
-    invoke-virtual {v1}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, [Lfx;
-
-    sget-object v3, Lgx;->X:[Lfx;
-
-    if-ne v2, v3, :cond_2
-
-    iget-object v1, p0, Lgx;->b:Ljava/lang/Throwable;
-
-    if-eqz v1, :cond_0
-
-    invoke-interface {p1, v1}, La0a;->onError(Ljava/lang/Throwable;)V
-
-    return-void
-
-    :cond_0
-    iget-object p0, p0, Lgx;->c:Ljava/lang/Object;
-
-    if-eqz p0, :cond_1
-
-    invoke-virtual {v0, p0}, Ljg4;->d(Ljava/lang/Object;)V
-
-    return-void
-
-    :cond_1
-    invoke-virtual {v0}, Ljg4;->g()Z
-
-    move-result p0
-
-    if-nez p0, :cond_4
-
-    iget-object p0, v0, Ljg4;->a:La0a;
-
-    invoke-interface {p0}, La0a;->b()V
-
-    return-void
-
-    :cond_2
-    array-length v3, v2
-
-    add-int/lit8 v4, v3, 0x1
-
-    new-array v4, v4, [Lfx;
-
-    const/4 v5, 0x0
-
-    invoke-static {v2, v5, v4, v5, v3}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
-
-    aput-object v0, v4, v3
-
-    :cond_3
-    invoke-virtual {v1, v2, v4}, Ljava/util/concurrent/atomic/AtomicReference;->compareAndSet(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v3
-
-    if-eqz v3, :cond_5
-
-    invoke-virtual {v0}, Ljg4;->g()Z
-
-    move-result p1
-
-    if-eqz p1, :cond_4
-
-    invoke-virtual {p0, v0}, Lgx;->y(Lfx;)V
-
-    :cond_4
-    return-void
-
-    :cond_5
-    invoke-virtual {v1}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
-
-    move-result-object v3
-
-    if-eq v3, v2, :cond_3
-
-    goto :goto_0
-.end method
-
-.method public final y(Lfx;)V
-    .locals 7
-
-    :goto_0
-    iget-object v0, p0, Lgx;->a:Ljava/util/concurrent/atomic/AtomicReference;
-
-    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, [Lfx;
-
-    array-length v2, v1
-
-    if-nez v2, :cond_0
-
-    goto :goto_4
-
-    :cond_0
-    const/4 v3, 0x0
-
-    move v4, v3
-
-    :goto_1
-    if-ge v4, v2, :cond_2
-
-    aget-object v5, v1, v4
-
-    if-ne v5, p1, :cond_1
-
-    goto :goto_2
-
-    :cond_1
-    add-int/lit8 v4, v4, 0x1
-
-    goto :goto_1
-
-    :cond_2
-    const/4 v4, -0x1
-
-    :goto_2
-    if-gez v4, :cond_3
-
-    goto :goto_4
-
-    :cond_3
-    const/4 v5, 0x1
-
-    if-ne v2, v5, :cond_4
-
-    sget-object v2, Lgx;->o:[Lfx;
-
-    goto :goto_3
-
-    :cond_4
-    add-int/lit8 v6, v2, -0x1
-
-    new-array v6, v6, [Lfx;
-
-    invoke-static {v1, v3, v6, v3, v4}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
-
-    add-int/lit8 v3, v4, 0x1
-
-    sub-int/2addr v2, v4
-
-    sub-int/2addr v2, v5
-
-    invoke-static {v1, v3, v6, v4, v2}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
-
-    move-object v2, v6
-
-    :cond_5
-    :goto_3
-    invoke-virtual {v0, v1, v2}, Ljava/util/concurrent/atomic/AtomicReference;->compareAndSet(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v3
-
-    if-eqz v3, :cond_6
-
-    :goto_4
-    return-void
-
-    :cond_6
-    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
-
-    move-result-object v3
-
-    if-eq v3, v1, :cond_5
-
-    goto :goto_0
+    throw p0
 .end method

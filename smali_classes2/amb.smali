@@ -1,298 +1,209 @@
-.class public final Lamb;
-.super Lnv8;
+.class public final synthetic Lamb;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Leb4;
 
 
 # instance fields
-.field public a:Lfmb;
+.field public final synthetic a:I
 
-.field public b:F
+.field public final synthetic b:J
 
-.field public c:[F
+.field public final synthetic c:Ljava/lang/Object;
+
+
+# direct methods
+.method public synthetic constructor <init>(JLandroid/os/Parcelable;I)V
+    .locals 0
+
+    .line 1
+    iput p4, p0, Lamb;->a:I
+
+    iput-wide p1, p0, Lamb;->b:J
+
+    iput-object p3, p0, Lamb;->c:Ljava/lang/Object;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+.method public synthetic constructor <init>(Ljava/lang/Enum;JI)V
+    .locals 0
+
+    .line 2
+    iput p4, p0, Lamb;->a:I
+
+    iput-object p1, p0, Lamb;->c:Ljava/lang/Object;
+
+    iput-wide p2, p0, Lamb;->b:J
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final computeSerializedSize()I
-    .locals 3
+.method public final a()Ljava/lang/Object;
+    .locals 13
 
-    iget-object v0, p0, Lamb;->a:Lfmb;
+    iget v0, p0, Lamb;->a:I
 
-    if-eqz v0, :cond_0
+    packed-switch v0, :pswitch_data_0
 
-    const/4 v1, 0x1
+    iget-object v0, p0, Lamb;->c:Ljava/lang/Object;
 
-    invoke-static {v1, v0}, Lq33;->i(ILnv8;)I
+    check-cast v0, Landroid/os/Bundle;
 
-    move-result v0
+    new-instance v1, Lone/me/stickerspreview/StickerPreviewScreen;
+
+    const-string v2, "chat_id"
+
+    invoke-static {v2, v0}, Lkua;->t(Ljava/lang/String;Landroid/os/Bundle;)Ljava/lang/Long;
+
+    move-result-object v2
+
+    const-wide/16 v3, 0x0
+
+    if-eqz v2, :cond_0
+
+    invoke-virtual {v2}, Ljava/lang/Long;->longValue()J
+
+    move-result-wide v5
 
     goto :goto_0
 
     :cond_0
-    const/4 v0, 0x0
+    move-wide v5, v3
 
     :goto_0
-    iget v1, p0, Lamb;->b:F
+    const-string v2, "forward_id"
 
-    invoke-static {v1}, Ljava/lang/Float;->floatToIntBits(F)I
+    invoke-static {v2, v0}, Lkua;->t(Ljava/lang/String;Landroid/os/Bundle;)Ljava/lang/Long;
 
-    move-result v1
+    move-result-object v0
 
-    const/4 v2, 0x0
+    if-eqz v0, :cond_1
 
-    invoke-static {v2}, Ljava/lang/Float;->floatToIntBits(F)I
+    invoke-virtual {v0}, Ljava/lang/Long;->longValue()J
 
-    move-result v2
-
-    if-eq v1, v2, :cond_1
-
-    const/4 v1, 0x2
-
-    invoke-static {v1}, Lq33;->e(I)I
-
-    move-result v1
-
-    add-int/2addr v0, v1
+    move-result-wide v3
 
     :cond_1
-    iget-object p0, p0, Lamb;->c:[F
+    iget-wide v7, p0, Lamb;->b:J
 
-    array-length v1, p0
+    move-wide v9, v5
 
-    if-lez v1, :cond_2
+    move-wide v11, v7
 
-    array-length v1, p0
+    move-wide v6, v3
 
-    mul-int/lit8 v1, v1, 0x4
+    move-wide v4, v9
 
-    add-int/2addr v1, v0
+    move-wide v2, v11
 
-    array-length p0, p0
+    invoke-direct/range {v1 .. v7}, Lone/me/stickerspreview/StickerPreviewScreen;-><init>(JJJ)V
 
-    add-int/2addr v1, p0
+    return-object v1
 
-    return v1
+    :pswitch_0
+    iget-object v0, p0, Lamb;->c:Ljava/lang/Object;
 
-    :cond_2
-    return v0
-.end method
+    check-cast v0, Laob;
 
-.method public final mergeFrom(Lp33;)Lnv8;
-    .locals 6
+    new-instance v1, Lone/me/profileedit/ProfileEditScreen;
 
-    :cond_0
-    :goto_0
-    invoke-virtual {p1}, Lp33;->s()I
+    iget-wide v2, p0, Lamb;->b:J
 
-    move-result v0
+    invoke-direct {v1, v2, v3, v0}, Lone/me/profileedit/ProfileEditScreen;-><init>(JLaob;)V
 
-    if-eqz v0, :cond_a
+    return-object v1
 
-    const/16 v1, 0xa
+    :pswitch_1
+    iget-object v0, p0, Lamb;->c:Ljava/lang/Object;
 
-    if-eq v0, v1, :cond_8
+    check-cast v0, Lsl2;
 
-    const/16 v1, 0x15
+    sget-object v1, Lsl2;->c:Lsl2;
 
-    if-eq v0, v1, :cond_7
+    iget-wide v2, p0, Lamb;->b:J
 
-    const/16 v1, 0x1a
+    if-ne v0, v1, :cond_2
 
-    const/4 v2, 0x0
+    new-instance p0, Lone/me/profile/screens/members/ChatAdminsScreen;
 
-    if-eq v0, v1, :cond_4
-
-    const/16 v1, 0x1d
-
-    if-eq v0, v1, :cond_1
-
-    invoke-virtual {p1, v0}, Lp33;->u(I)Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    goto :goto_3
-
-    :cond_1
-    invoke-static {p1, v1}, Lwqd;->s(Lp33;I)I
-
-    move-result v0
-
-    iget-object v1, p0, Lamb;->c:[F
-
-    array-length v3, v1
-
-    add-int/2addr v0, v3
-
-    new-array v4, v0, [F
-
-    if-eqz v3, :cond_2
-
-    invoke-static {v1, v2, v4, v2, v3}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
-
-    :cond_2
-    :goto_1
-    add-int/lit8 v1, v0, -0x1
-
-    if-ge v3, v1, :cond_3
-
-    invoke-virtual {p1}, Lp33;->i()F
-
-    move-result v1
-
-    aput v1, v4, v3
-
-    invoke-virtual {p1}, Lp33;->s()I
-
-    add-int/lit8 v3, v3, 0x1
+    invoke-direct {p0, v2, v3}, Lone/me/profile/screens/members/ChatAdminsScreen;-><init>(J)V
 
     goto :goto_1
 
-    :cond_3
-    invoke-virtual {p1}, Lp33;->i()F
+    :cond_2
+    new-instance p0, Lone/me/profile/screens/members/ChatMembersScreen;
 
-    move-result v0
+    invoke-direct {p0, v2, v3, v0}, Lone/me/profile/screens/members/ChatMembersScreen;-><init>(JLsl2;)V
 
-    aput v0, v4, v3
+    :goto_1
+    return-object p0
 
-    iput-object v4, p0, Lamb;->c:[F
+    :pswitch_2
+    iget-object v0, p0, Lamb;->c:Ljava/lang/Object;
 
-    goto :goto_0
+    check-cast v0, Lfmb;
 
-    :cond_4
-    invoke-virtual {p1}, Lp33;->p()I
+    sget-object v1, Ldmb;->$EnumSwitchMapping$0:[I
 
-    move-result v0
-
-    invoke-virtual {p1, v0}, Lp33;->e(I)I
-
-    move-result v1
-
-    div-int/lit8 v0, v0, 0x4
-
-    iget-object v3, p0, Lamb;->c:[F
-
-    array-length v4, v3
-
-    add-int/2addr v0, v4
-
-    new-array v5, v0, [F
-
-    if-eqz v4, :cond_5
-
-    invoke-static {v3, v2, v5, v2, v4}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
-
-    :cond_5
-    :goto_2
-    if-ge v4, v0, :cond_6
-
-    invoke-virtual {p1}, Lp33;->i()F
+    invoke-virtual {v0}, Ljava/lang/Enum;->ordinal()I
 
     move-result v2
 
-    aput v2, v5, v4
+    aget v1, v1, v2
 
-    add-int/lit8 v4, v4, 0x1
+    const/4 v2, 0x1
+
+    iget-wide v3, p0, Lamb;->b:J
+
+    if-eq v1, v2, :cond_5
+
+    const/4 p0, 0x2
+
+    if-eq v1, p0, :cond_4
+
+    const/4 p0, 0x3
+
+    if-ne v1, p0, :cond_3
+
+    sget-object p0, Lylf;->a:Lylf;
 
     goto :goto_2
 
-    :cond_6
-    iput-object v5, p0, Lamb;->c:[F
+    :cond_3
+    new-instance p0, Lkotlin/NoWhenBranchMatchedException;
 
-    invoke-virtual {p1, v1}, Lp33;->d(I)V
+    invoke-direct {p0}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
 
-    goto :goto_0
+    throw p0
 
-    :cond_7
-    invoke-virtual {p1}, Lp33;->i()F
+    :cond_4
+    new-instance p0, Lone/me/profile/screens/avatars/ProfileAvatarsScreen;
 
-    move-result v0
+    invoke-direct {p0, v3, v4, v0}, Lone/me/profile/screens/avatars/ProfileAvatarsScreen;-><init>(JLfmb;)V
 
-    iput v0, p0, Lamb;->b:F
+    goto :goto_2
 
-    goto :goto_0
+    :cond_5
+    new-instance p0, Lone/me/profile/screens/avatars/ProfileAvatarsScreen;
 
-    :cond_8
-    iget-object v0, p0, Lamb;->a:Lfmb;
+    invoke-direct {p0, v3, v4, v0}, Lone/me/profile/screens/avatars/ProfileAvatarsScreen;-><init>(JLfmb;)V
 
-    if-nez v0, :cond_9
-
-    new-instance v0, Lfmb;
-
-    invoke-direct {v0}, Lfmb;-><init>()V
-
-    iput-object v0, p0, Lamb;->a:Lfmb;
-
-    :cond_9
-    iget-object v0, p0, Lamb;->a:Lfmb;
-
-    invoke-virtual {p1, v0}, Lp33;->j(Lnv8;)V
-
-    goto/16 :goto_0
-
-    :cond_a
-    :goto_3
+    :goto_2
     return-object p0
-.end method
 
-.method public final writeTo(Lq33;)V
-    .locals 3
-
-    iget-object v0, p0, Lamb;->a:Lfmb;
-
-    if-eqz v0, :cond_0
-
-    const/4 v1, 0x1
-
-    invoke-virtual {p1, v1, v0}, Lq33;->y(ILnv8;)V
-
-    :cond_0
-    iget v0, p0, Lamb;->b:F
-
-    invoke-static {v0}, Ljava/lang/Float;->floatToIntBits(F)I
-
-    move-result v0
-
-    const/4 v1, 0x0
-
-    invoke-static {v1}, Ljava/lang/Float;->floatToIntBits(F)I
-
-    move-result v1
-
-    if-eq v0, v1, :cond_1
-
-    const/4 v0, 0x2
-
-    iget v1, p0, Lamb;->b:F
-
-    invoke-virtual {p1, v0, v1}, Lq33;->v(IF)V
-
-    :cond_1
-    iget-object v0, p0, Lamb;->c:[F
-
-    array-length v0, v0
-
-    if-lez v0, :cond_2
-
-    const/4 v0, 0x0
-
-    :goto_0
-    iget-object v1, p0, Lamb;->c:[F
-
-    array-length v2, v1
-
-    if-ge v0, v2, :cond_2
-
-    const/4 v2, 0x3
-
-    aget v1, v1, v0
-
-    invoke-virtual {p1, v2, v1}, Lq33;->v(IF)V
-
-    add-int/lit8 v0, v0, 0x1
-
-    goto :goto_0
-
-    :cond_2
-    return-void
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Labe;
+.implements Lcpe;
 
 
 # annotations
@@ -14,14 +14,14 @@
     d2 = {
         "Lone/me/sdk/messagewrite/mention/SuggestionsWidget;",
         "Lone/me/sdk/bottomsheet/BaseBottomSheetWidget;",
-        "Labe;",
+        "Lcpe;",
         "Landroid/os/Bundle;",
         "args",
         "<init>",
         "(Landroid/os/Bundle;)V",
-        "Lzsc;",
+        "Lo6d;",
         "scopeId",
-        "(Ljava/lang/String;Ll94;)V",
+        "(Ljava/lang/String;Lld4;)V",
         "message-write-widget_release"
     }
     k = 0x1
@@ -35,34 +35,34 @@
 
 
 # static fields
-.field public static final synthetic x0:[Lbc7;
+.field public static final synthetic C0:[Lxi7;
 
 
 # instance fields
-.field public final o0:Lje7;
+.field public final A0:Lrm0;
 
-.field public final p0:Lo5c;
+.field public final B0:Lrm0;
 
-.field public final q0:Ljava/lang/Object;
+.field public final t0:Lcl7;
 
-.field public final r0:Lkm0;
+.field public final u0:Lcic;
 
-.field public final s0:Lkm0;
+.field public final v0:Ljava/lang/Object;
 
-.field public final t0:Lkm0;
+.field public final w0:Lrm0;
 
-.field public final u0:Lkm0;
+.field public final x0:Lrm0;
 
-.field public final v0:Lkm0;
+.field public final y0:Lrm0;
 
-.field public final w0:Lkm0;
+.field public final z0:Lrm0;
 
 
 # direct methods
 .method static constructor <clinit>()V
     .locals 12
 
-    new-instance v0, Lbh9;
+    new-instance v0, Lmo9;
 
     const-class v1, Lone/me/sdk/messagewrite/mention/SuggestionsWidget;
 
@@ -70,9 +70,9 @@
 
     const-string v3, "getParentScopeId-IluPPks()Ljava/lang/String;"
 
-    invoke-direct {v0, v1, v2, v3}, Lbh9;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v0, v1, v2, v3}, Lmo9;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;)V
 
-    sget-object v2, Llcc;->a:Lmcc;
+    sget-object v2, Ljpc;->a:Lkpc;
 
     const-string v3, "suggestionsContainer"
 
@@ -80,61 +80,61 @@
 
     const/4 v5, 0x0
 
-    invoke-static {v2, v1, v3, v4, v5}, Lm26;->g(Lmcc;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)Lnlb;
+    invoke-static {v2, v1, v3, v4, v5}, Lee5;->h(Lkpc;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)Lsxb;
 
     move-result-object v2
 
-    new-instance v3, Lnlb;
+    new-instance v3, Lsxb;
 
     const-string v4, "dragView"
 
     const-string v6, "getDragView()Landroid/widget/FrameLayout;"
 
-    invoke-direct {v3, v1, v4, v6, v5}, Lnlb;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
+    invoke-direct {v3, v1, v4, v6, v5}, Lsxb;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
 
-    new-instance v4, Lnlb;
+    new-instance v4, Lsxb;
 
     const-string v6, "suggestionsRecyclerView"
 
     const-string v7, "getSuggestionsRecyclerView()Lone/me/sdk/lists/widgets/EndlessRecyclerView;"
 
-    invoke-direct {v4, v1, v6, v7, v5}, Lnlb;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
+    invoke-direct {v4, v1, v6, v7, v5}, Lsxb;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
 
-    new-instance v6, Lnlb;
+    new-instance v6, Lsxb;
 
     const-string v7, "closeView"
 
     const-string v8, "getCloseView()Landroidx/appcompat/widget/AppCompatImageView;"
 
-    invoke-direct {v6, v1, v7, v8, v5}, Lnlb;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
+    invoke-direct {v6, v1, v7, v8, v5}, Lsxb;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
 
-    new-instance v7, Lnlb;
+    new-instance v7, Lsxb;
 
     const-string v8, "titleView"
 
     const-string v9, "getTitleView()Landroidx/appcompat/widget/AppCompatTextView;"
 
-    invoke-direct {v7, v1, v8, v9, v5}, Lnlb;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
+    invoke-direct {v7, v1, v8, v9, v5}, Lsxb;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
 
-    new-instance v8, Lnlb;
+    new-instance v8, Lsxb;
 
     const-string v9, "closePanelView"
 
     const-string v10, "getClosePanelView()Landroid/widget/FrameLayout;"
 
-    invoke-direct {v8, v1, v9, v10, v5}, Lnlb;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
+    invoke-direct {v8, v1, v9, v10, v5}, Lsxb;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
 
-    new-instance v9, Lnlb;
+    new-instance v9, Lsxb;
 
     const-string v10, "notFoundView"
 
     const-string v11, "getNotFoundView()Landroidx/appcompat/widget/AppCompatTextView;"
 
-    invoke-direct {v9, v1, v10, v11, v5}, Lnlb;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
+    invoke-direct {v9, v1, v10, v11, v5}, Lsxb;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
 
     const/16 v1, 0x8
 
-    new-array v1, v1, [Lbc7;
+    new-array v1, v1, [Lxi7;
 
     aput-object v0, v1, v5
 
@@ -166,7 +166,7 @@
 
     aput-object v9, v1, v0
 
-    sput-object v1, Lone/me/sdk/messagewrite/mention/SuggestionsWidget;->x0:[Lbc7;
+    sput-object v1, Lone/me/sdk/messagewrite/mention/SuggestionsWidget;->C0:[Lxi7;
 
     return-void
 .end method
@@ -178,174 +178,174 @@
     invoke-direct {p0, p1}, Lone/me/sdk/bottomsheet/BaseBottomSheetWidget;-><init>(Landroid/os/Bundle;)V
 
     .line 5
-    new-instance p1, Lvr;
+    new-instance p1, Lfr;
 
-    const-class v0, Lzsc;
+    const-class v0, Lo6d;
 
     const-string v1, "arg_key_scope_id"
 
-    invoke-direct {p1, v0, v1}, Lvr;-><init>(Ljava/lang/Class;Ljava/lang/String;)V
+    invoke-direct {p1, v0, v1}, Lfr;-><init>(Ljava/lang/Class;Ljava/lang/String;)V
 
     .line 6
-    sget-object v0, Lone/me/sdk/messagewrite/mention/SuggestionsWidget;->x0:[Lbc7;
+    sget-object v0, Lone/me/sdk/messagewrite/mention/SuggestionsWidget;->C0:[Lxi7;
 
     const/4 v1, 0x0
 
     aget-object v0, v0, v1
 
-    invoke-virtual {p1, p0}, Lvr;->a(Lone/me/sdk/arch/Widget;)Ljava/lang/Object;
+    invoke-virtual {p1, p0}, Lfr;->a(Lone/me/sdk/arch/Widget;)Ljava/lang/Object;
 
     move-result-object p1
 
-    check-cast p1, Lzsc;
+    check-cast p1, Lo6d;
 
     .line 7
-    iget-object p1, p1, Lzsc;->a:Ljava/lang/String;
+    iget-object p1, p1, Lo6d;->a:Ljava/lang/String;
 
     const/4 v0, 0x0
 
     .line 8
-    const-class v2, Lkbe;
+    const-class v2, Lmpe;
 
     .line 9
-    invoke-virtual {p0, p1, v2, v0}, Lone/me/sdk/arch/Widget;->getSharedViewModel-cp94BC8(Ljava/lang/String;Ljava/lang/Class;Lv56;)Lje7;
+    invoke-virtual {p0, p1, v2, v0}, Lone/me/sdk/arch/Widget;->getSharedViewModel-cp94BC8(Ljava/lang/String;Ljava/lang/Class;Lzb6;)Lcl7;
 
     move-result-object p1
 
     .line 10
-    iput-object p1, p0, Lone/me/sdk/messagewrite/mention/SuggestionsWidget;->o0:Lje7;
+    iput-object p1, p0, Lone/me/sdk/messagewrite/mention/SuggestionsWidget;->t0:Lcl7;
 
     .line 11
-    sget p1, Lbea;->E:I
+    sget p1, Lena;->E:I
 
-    invoke-virtual {p0, p1}, Lone/me/sdk/arch/Widget;->viewBinding(I)Lo5c;
+    invoke-virtual {p0, p1}, Lone/me/sdk/arch/Widget;->viewBinding(I)Lcic;
 
     move-result-object p1
 
-    iput-object p1, p0, Lone/me/sdk/messagewrite/mention/SuggestionsWidget;->p0:Lo5c;
+    iput-object p1, p0, Lone/me/sdk/messagewrite/mention/SuggestionsWidget;->u0:Lcic;
 
     .line 12
-    new-instance p1, Llbe;
+    new-instance p1, Lnpe;
 
     const/4 v0, 0x0
 
-    invoke-direct {p1, p0, v0}, Llbe;-><init>(Lone/me/sdk/messagewrite/mention/SuggestionsWidget;I)V
+    invoke-direct {p1, p0, v0}, Lnpe;-><init>(Lone/me/sdk/messagewrite/mention/SuggestionsWidget;I)V
 
     const/4 v0, 0x3
 
     .line 13
-    invoke-static {v0, p1}, Lkhg;->o(ILv56;)Lje7;
+    invoke-static {v0, p1}, Lcb7;->G(ILzb6;)Lcl7;
 
     move-result-object p1
 
     .line 14
-    iput-object p1, p0, Lone/me/sdk/messagewrite/mention/SuggestionsWidget;->q0:Ljava/lang/Object;
+    iput-object p1, p0, Lone/me/sdk/messagewrite/mention/SuggestionsWidget;->v0:Ljava/lang/Object;
 
     .line 15
-    new-instance p1, Llbe;
+    new-instance p1, Lnpe;
 
     const/4 v0, 0x1
 
-    invoke-direct {p1, p0, v0}, Llbe;-><init>(Lone/me/sdk/messagewrite/mention/SuggestionsWidget;I)V
+    invoke-direct {p1, p0, v0}, Lnpe;-><init>(Lone/me/sdk/messagewrite/mention/SuggestionsWidget;I)V
 
-    invoke-virtual {p0, p1}, Lone/me/sdk/arch/Widget;->binding(Lv56;)Lkm0;
+    invoke-virtual {p0, p1}, Lone/me/sdk/arch/Widget;->binding(Lzb6;)Lrm0;
 
     move-result-object p1
 
-    iput-object p1, p0, Lone/me/sdk/messagewrite/mention/SuggestionsWidget;->r0:Lkm0;
+    iput-object p1, p0, Lone/me/sdk/messagewrite/mention/SuggestionsWidget;->w0:Lrm0;
 
     .line 16
-    new-instance p1, Llbe;
+    new-instance p1, Lnpe;
 
     const/4 v0, 0x2
 
-    invoke-direct {p1, p0, v0}, Llbe;-><init>(Lone/me/sdk/messagewrite/mention/SuggestionsWidget;I)V
+    invoke-direct {p1, p0, v0}, Lnpe;-><init>(Lone/me/sdk/messagewrite/mention/SuggestionsWidget;I)V
 
-    invoke-virtual {p0, p1}, Lone/me/sdk/arch/Widget;->binding(Lv56;)Lkm0;
+    invoke-virtual {p0, p1}, Lone/me/sdk/arch/Widget;->binding(Lzb6;)Lrm0;
 
     move-result-object p1
 
-    iput-object p1, p0, Lone/me/sdk/messagewrite/mention/SuggestionsWidget;->s0:Lkm0;
+    iput-object p1, p0, Lone/me/sdk/messagewrite/mention/SuggestionsWidget;->x0:Lrm0;
 
     .line 17
-    new-instance p1, Llbe;
+    new-instance p1, Lnpe;
 
     const/4 v0, 0x3
 
-    invoke-direct {p1, p0, v0}, Llbe;-><init>(Lone/me/sdk/messagewrite/mention/SuggestionsWidget;I)V
+    invoke-direct {p1, p0, v0}, Lnpe;-><init>(Lone/me/sdk/messagewrite/mention/SuggestionsWidget;I)V
 
-    invoke-virtual {p0, p1}, Lone/me/sdk/arch/Widget;->binding(Lv56;)Lkm0;
+    invoke-virtual {p0, p1}, Lone/me/sdk/arch/Widget;->binding(Lzb6;)Lrm0;
 
     move-result-object p1
 
-    iput-object p1, p0, Lone/me/sdk/messagewrite/mention/SuggestionsWidget;->t0:Lkm0;
+    iput-object p1, p0, Lone/me/sdk/messagewrite/mention/SuggestionsWidget;->y0:Lrm0;
 
     .line 18
-    new-instance p1, Llbe;
+    new-instance p1, Lnpe;
 
     const/4 v0, 0x4
 
-    invoke-direct {p1, p0, v0}, Llbe;-><init>(Lone/me/sdk/messagewrite/mention/SuggestionsWidget;I)V
+    invoke-direct {p1, p0, v0}, Lnpe;-><init>(Lone/me/sdk/messagewrite/mention/SuggestionsWidget;I)V
 
-    invoke-virtual {p0, p1}, Lone/me/sdk/arch/Widget;->binding(Lv56;)Lkm0;
+    invoke-virtual {p0, p1}, Lone/me/sdk/arch/Widget;->binding(Lzb6;)Lrm0;
 
     move-result-object p1
 
-    iput-object p1, p0, Lone/me/sdk/messagewrite/mention/SuggestionsWidget;->u0:Lkm0;
+    iput-object p1, p0, Lone/me/sdk/messagewrite/mention/SuggestionsWidget;->z0:Lrm0;
 
     .line 19
-    new-instance p1, Llbe;
+    new-instance p1, Lnpe;
 
     const/4 v0, 0x5
 
-    invoke-direct {p1, p0, v0}, Llbe;-><init>(Lone/me/sdk/messagewrite/mention/SuggestionsWidget;I)V
+    invoke-direct {p1, p0, v0}, Lnpe;-><init>(Lone/me/sdk/messagewrite/mention/SuggestionsWidget;I)V
 
-    invoke-virtual {p0, p1}, Lone/me/sdk/arch/Widget;->binding(Lv56;)Lkm0;
+    invoke-virtual {p0, p1}, Lone/me/sdk/arch/Widget;->binding(Lzb6;)Lrm0;
 
     move-result-object p1
 
-    iput-object p1, p0, Lone/me/sdk/messagewrite/mention/SuggestionsWidget;->v0:Lkm0;
+    iput-object p1, p0, Lone/me/sdk/messagewrite/mention/SuggestionsWidget;->A0:Lrm0;
 
     .line 20
-    new-instance p1, Llbe;
+    new-instance p1, Lnpe;
 
     const/4 v0, 0x6
 
-    invoke-direct {p1, p0, v0}, Llbe;-><init>(Lone/me/sdk/messagewrite/mention/SuggestionsWidget;I)V
+    invoke-direct {p1, p0, v0}, Lnpe;-><init>(Lone/me/sdk/messagewrite/mention/SuggestionsWidget;I)V
 
-    invoke-virtual {p0, p1}, Lone/me/sdk/arch/Widget;->binding(Lv56;)Lkm0;
+    invoke-virtual {p0, p1}, Lone/me/sdk/arch/Widget;->binding(Lzb6;)Lrm0;
 
     move-result-object p1
 
-    iput-object p1, p0, Lone/me/sdk/messagewrite/mention/SuggestionsWidget;->w0:Lkm0;
+    iput-object p1, p0, Lone/me/sdk/messagewrite/mention/SuggestionsWidget;->B0:Lrm0;
 
     .line 21
-    invoke-virtual {p0, v1}, Lone/me/sdk/bottomsheet/BaseBottomSheetWidget;->y0(Z)V
+    invoke-virtual {p0, v1}, Lone/me/sdk/bottomsheet/BaseBottomSheetWidget;->I0(Z)V
 
     return-void
 .end method
 
-.method public constructor <init>(Ljava/lang/String;Ll94;)V
+.method public constructor <init>(Ljava/lang/String;Lld4;)V
     .locals 1
 
     .line 1
-    new-instance p2, Lzsc;
+    new-instance p2, Lo6d;
 
-    invoke-direct {p2, p1}, Lzsc;-><init>(Ljava/lang/String;)V
+    invoke-direct {p2, p1}, Lo6d;-><init>(Ljava/lang/String;)V
 
     .line 2
-    new-instance p1, Ldna;
+    new-instance p1, Lpxa;
 
     const-string v0, "arg_key_scope_id"
 
-    invoke-direct {p1, v0, p2}, Ldna;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+    invoke-direct {p1, v0, p2}, Lpxa;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
 
     .line 3
-    filled-new-array {p1}, [Ldna;
+    filled-new-array {p1}, [Lpxa;
 
     move-result-object p1
 
-    invoke-static {p1}, Lp54;->d([Ldna;)Landroid/os/Bundle;
+    invoke-static {p1}, Lw7;->c([Lpxa;)Landroid/os/Bundle;
 
     move-result-object p1
 
@@ -356,231 +356,12 @@
 
 
 # virtual methods
-.method public final A0()Landroid/widget/FrameLayout;
-    .locals 2
-
-    sget-object v0, Lone/me/sdk/messagewrite/mention/SuggestionsWidget;->x0:[Lbc7;
-
-    const/4 v1, 0x6
-
-    aget-object v0, v0, v1
-
-    iget-object p0, p0, Lone/me/sdk/messagewrite/mention/SuggestionsWidget;->v0:Lkm0;
-
-    invoke-virtual {p0}, Lkm0;->getValue()Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, Landroid/widget/FrameLayout;
-
-    return-object p0
-.end method
-
-.method public final B0()Landroid/widget/FrameLayout;
-    .locals 2
-
-    sget-object v0, Lone/me/sdk/messagewrite/mention/SuggestionsWidget;->x0:[Lbc7;
-
-    const/4 v1, 0x2
-
-    aget-object v0, v0, v1
-
-    iget-object p0, p0, Lone/me/sdk/messagewrite/mention/SuggestionsWidget;->r0:Lkm0;
-
-    invoke-virtual {p0}, Lkm0;->getValue()Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, Landroid/widget/FrameLayout;
-
-    return-object p0
-.end method
-
-.method public final C0()Landroidx/appcompat/widget/AppCompatTextView;
-    .locals 2
-
-    sget-object v0, Lone/me/sdk/messagewrite/mention/SuggestionsWidget;->x0:[Lbc7;
-
-    const/4 v1, 0x7
-
-    aget-object v0, v0, v1
-
-    iget-object p0, p0, Lone/me/sdk/messagewrite/mention/SuggestionsWidget;->w0:Lkm0;
-
-    invoke-virtual {p0}, Lkm0;->getValue()Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, Landroidx/appcompat/widget/AppCompatTextView;
-
-    return-object p0
-.end method
-
-.method public final D0()Ls15;
-    .locals 2
-
-    sget-object v0, Lone/me/sdk/messagewrite/mention/SuggestionsWidget;->x0:[Lbc7;
-
-    const/4 v1, 0x3
-
-    aget-object v0, v0, v1
-
-    iget-object p0, p0, Lone/me/sdk/messagewrite/mention/SuggestionsWidget;->s0:Lkm0;
-
-    invoke-virtual {p0}, Lkm0;->getValue()Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, Ls15;
-
-    return-object p0
-.end method
-
-.method public final E0()Lkbe;
-    .locals 0
-
-    iget-object p0, p0, Lone/me/sdk/messagewrite/mention/SuggestionsWidget;->o0:Lje7;
-
-    invoke-interface {p0}, Lje7;->getValue()Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, Lkbe;
-
-    return-object p0
-.end method
-
-.method public final F0()V
-    .locals 3
-
-    invoke-virtual {p0}, Lone/me/sdk/messagewrite/mention/SuggestionsWidget;->E0()Lkbe;
-
-    move-result-object v0
-
-    iget-object v0, v0, Lkbe;->G0:Lazd;
-
-    :cond_0
-    invoke-virtual {v0}, Lazd;->getValue()Ljava/lang/Object;
-
-    move-result-object v1
-
-    move-object v2, v1
-
-    check-cast v2, Ldbe;
-
-    const/4 v2, 0x0
-
-    invoke-virtual {v0, v1, v2}, Lazd;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    const/4 v0, 0x1
-
-    invoke-virtual {p0, v0}, Lone/me/sdk/bottomsheet/BaseBottomSheetWidget;->v0(Z)V
-
-    return-void
-.end method
-
-.method public final handleBack()Z
-    .locals 0
-
-    invoke-virtual {p0}, Lone/me/sdk/messagewrite/mention/SuggestionsWidget;->F0()V
-
-    const/4 p0, 0x1
-
-    return p0
-.end method
-
-.method public final onDestroyView(Landroid/view/View;)V
-    .locals 0
-
-    invoke-super {p0, p1}, Lone/me/sdk/bottomsheet/BaseBottomSheetWidget;->onDestroyView(Landroid/view/View;)V
-
-    invoke-virtual {p0}, Lone/me/sdk/messagewrite/mention/SuggestionsWidget;->D0()Ls15;
-
-    move-result-object p0
-
-    const/4 p1, 0x0
-
-    invoke-virtual {p0, p1}, Lone/me/sdk/lists/widgets/EmptyRecyclerView;->setAdapter(Lgbc;)V
-
-    return-void
-.end method
-
-.method public final onViewCreated(Landroid/view/View;)V
-    .locals 5
-
-    invoke-super {p0, p1}, Lone/me/sdk/arch/Widget;->onViewCreated(Landroid/view/View;)V
-
-    invoke-virtual {p0}, Lone/me/sdk/messagewrite/mention/SuggestionsWidget;->D0()Ls15;
-
-    move-result-object v0
-
-    iget-object v1, p0, Lone/me/sdk/messagewrite/mention/SuggestionsWidget;->q0:Ljava/lang/Object;
-
-    invoke-interface {v1}, Lje7;->getValue()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lbbe;
-
-    invoke-virtual {v0, v1}, Lone/me/sdk/lists/widgets/EmptyRecyclerView;->setAdapter(Lgbc;)V
-
-    invoke-virtual {p0}, Lone/me/sdk/messagewrite/mention/SuggestionsWidget;->E0()Lkbe;
-
-    move-result-object v0
-
-    iget-object v0, v0, Lkbe;->B0:Lu5c;
-
-    new-instance v1, Lmbe;
-
-    const/4 v2, 0x0
-
-    invoke-direct {v1, p0, v2}, Lmbe;-><init>(Lone/me/sdk/messagewrite/mention/SuggestionsWidget;Lkotlin/coroutines/Continuation;)V
-
-    new-instance v3, Lgp5;
-
-    const/4 v4, 0x1
-
-    invoke-direct {v3, v0, v1, v4}, Lgp5;-><init>(Lzm5;Ll66;I)V
-
-    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleScope()Lqg7;
-
-    move-result-object v0
-
-    invoke-static {v3, v0}, Lsgg;->L(Lzm5;Lox3;)Ldwd;
-
-    new-instance v0, Lhza;
-
-    const/16 v1, 0x11
-
-    invoke-direct {v0, p0, v2, v1}, Lhza;-><init>(Ljava/lang/Object;Lkotlin/coroutines/Continuation;I)V
-
-    invoke-static {v0, p1}, Lxq7;->J(Ln66;Landroid/view/View;)V
-
-    return-void
-.end method
-
-.method public final q0()Ll3b;
-    .locals 2
-
-    new-instance v0, Lo9;
-
-    const/4 v1, 0x6
-
-    invoke-direct {v0, p0, v1}, Lo9;-><init>(Lone/me/sdk/arch/Widget;I)V
-
-    return-object v0
-.end method
-
-.method public final r0()Lp27;
+.method public final A0()Lj97;
     .locals 4
 
-    new-instance p0, Lp27;
+    new-instance p0, Lj97;
 
-    new-instance v0, Ltq0;
+    new-instance v0, Lar0;
 
     const/4 v1, 0x1
 
@@ -588,14 +369,14 @@
 
     const/4 v3, 0x0
 
-    invoke-direct {v0, v1, v2, v3}, Ltq0;-><init>(IIZ)V
+    invoke-direct {v0, v1, v2, v3}, Lar0;-><init>(IIZ)V
 
-    invoke-direct {p0, v3, v0, v1}, Lp27;-><init>(ILtq0;I)V
+    invoke-direct {p0, v3, v0, v1}, Lj97;-><init>(ILar0;I)V
 
     return-object p0
 .end method
 
-.method public final z0(Landroid/widget/FrameLayout;Landroid/view/LayoutInflater;Landroid/os/Bundle;)V
+.method public final J0(Landroid/widget/FrameLayout;Landroid/view/LayoutInflater;Landroid/os/Bundle;)V
     .locals 10
 
     new-instance p3, Landroid/view/ViewGroup$LayoutParams;
@@ -606,12 +387,6 @@
 
     invoke-virtual {p1, p3}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    invoke-virtual {p0}, Lone/me/sdk/messagewrite/mention/SuggestionsWidget;->B0()Landroid/widget/FrameLayout;
-
-    move-result-object p3
-
-    invoke-virtual {p1, p3}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
-
     new-instance p3, Landroidx/constraintlayout/widget/ConstraintLayout;
 
     invoke-virtual {p2}, Landroid/view/LayoutInflater;->getContext()Landroid/content/Context;
@@ -620,11 +395,11 @@
 
     invoke-direct {p3, p2}, Landroidx/constraintlayout/widget/ConstraintLayout;-><init>(Landroid/content/Context;)V
 
-    sget p2, Lbea;->E:I
+    sget p2, Lena;->E:I
 
     invoke-virtual {p3, p2}, Landroidx/constraintlayout/widget/ConstraintLayout;->setId(I)V
 
-    invoke-virtual {p0}, Lone/me/sdk/messagewrite/mention/SuggestionsWidget;->A0()Landroid/widget/FrameLayout;
+    invoke-virtual {p0}, Lone/me/sdk/messagewrite/mention/SuggestionsWidget;->K0()Landroid/widget/FrameLayout;
 
     move-result-object p2
 
@@ -632,23 +407,23 @@
 
     invoke-virtual {p3, p2, v0, v1}, Landroid/view/ViewGroup;->addView(Landroid/view/View;II)V
 
-    invoke-virtual {p0}, Lone/me/sdk/messagewrite/mention/SuggestionsWidget;->D0()Ls15;
+    invoke-virtual {p0}, Lone/me/sdk/messagewrite/mention/SuggestionsWidget;->N0()Lc75;
 
     move-result-object p2
 
     invoke-virtual {p3, p2}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
 
-    invoke-virtual {p0}, Lone/me/sdk/messagewrite/mention/SuggestionsWidget;->C0()Landroidx/appcompat/widget/AppCompatTextView;
+    invoke-virtual {p0}, Lone/me/sdk/messagewrite/mention/SuggestionsWidget;->M0()Landroidx/appcompat/widget/AppCompatTextView;
 
     move-result-object p2
 
     invoke-virtual {p3, p2}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
 
-    invoke-static {p3}, Lus;->k(Landroidx/constraintlayout/widget/ConstraintLayout;)Lxi3;
+    invoke-static {p3}, Ljs9;->d(Landroidx/constraintlayout/widget/ConstraintLayout;)Ldm3;
 
     move-result-object p2
 
-    invoke-virtual {p0}, Lone/me/sdk/messagewrite/mention/SuggestionsWidget;->B0()Landroid/widget/FrameLayout;
+    invoke-virtual {p0}, Lone/me/sdk/messagewrite/mention/SuggestionsWidget;->L0()Landroid/widget/FrameLayout;
 
     move-result-object v1
 
@@ -660,17 +435,17 @@
 
     const/4 v3, 0x0
 
-    invoke-virtual {p2, v1, v2, v3, v2}, Lxi3;->d(IIII)V
+    invoke-virtual {p2, v1, v2, v3, v2}, Ldm3;->d(IIII)V
 
     const/4 v4, 0x6
 
-    invoke-virtual {p2, v1, v4, v3, v4}, Lxi3;->d(IIII)V
+    invoke-virtual {p2, v1, v4, v3, v4}, Ldm3;->d(IIII)V
 
     const/4 v5, 0x7
 
-    invoke-virtual {p2, v1, v5, v3, v5}, Lxi3;->d(IIII)V
+    invoke-virtual {p2, v1, v5, v3, v5}, Ldm3;->d(IIII)V
 
-    invoke-virtual {p0}, Lone/me/sdk/messagewrite/mention/SuggestionsWidget;->A0()Landroid/widget/FrameLayout;
+    invoke-virtual {p0}, Lone/me/sdk/messagewrite/mention/SuggestionsWidget;->K0()Landroid/widget/FrameLayout;
 
     move-result-object v1
 
@@ -678,21 +453,21 @@
 
     move-result v1
 
-    invoke-virtual {p2, v1, v2, v3, v2}, Lxi3;->d(IIII)V
+    invoke-virtual {p2, v1, v2, v3, v2}, Ldm3;->d(IIII)V
 
-    invoke-virtual {p2, v1, v5, v3, v5}, Lxi3;->d(IIII)V
+    invoke-virtual {p2, v1, v5, v3, v5}, Ldm3;->d(IIII)V
 
-    new-instance v6, Lg0a;
+    new-instance v6, Ll8a;
 
     const/4 v7, 0x5
 
-    invoke-direct {v6, p2, v5, v1, v7}, Lg0a;-><init>(Ljava/lang/Object;III)V
+    invoke-direct {v6, p2, v5, v1, v7}, Ll8a;-><init>(Ljava/lang/Object;III)V
 
     const/16 v7, 0x8
 
     int-to-float v7, v7
 
-    invoke-static {}, Lgk4;->d()Landroid/content/res/Resources;
+    invoke-static {}, Lvo4;->d()Landroid/content/res/Resources;
 
     move-result-object v8
 
@@ -702,17 +477,17 @@
 
     iget v8, v8, Landroid/util/DisplayMetrics;->density:F
 
-    invoke-static {v7, v8, v6}, Lzt1;->p(FFLg0a;)V
+    invoke-static {v7, v8, v6}, Lmw1;->q(FFLl8a;)V
 
-    invoke-virtual {p2, v1, v4, v3, v4}, Lxi3;->d(IIII)V
+    invoke-virtual {p2, v1, v4, v3, v4}, Ldm3;->d(IIII)V
 
-    new-instance v6, Lg0a;
+    new-instance v6, Ll8a;
 
     const/4 v8, 0x5
 
-    invoke-direct {v6, p2, v4, v1, v8}, Lg0a;-><init>(Ljava/lang/Object;III)V
+    invoke-direct {v6, p2, v4, v1, v8}, Ll8a;-><init>(Ljava/lang/Object;III)V
 
-    invoke-static {}, Lgk4;->d()Landroid/content/res/Resources;
+    invoke-static {}, Lvo4;->d()Landroid/content/res/Resources;
 
     move-result-object v1
 
@@ -724,13 +499,13 @@
 
     mul-float/2addr v1, v7
 
-    invoke-static {v1}, Lkhg;->x(F)I
+    invoke-static {v1}, Lya6;->G(F)I
 
     move-result v1
 
-    invoke-virtual {v6, v1}, Lg0a;->e(I)V
+    invoke-virtual {v6, v1}, Ll8a;->e(I)V
 
-    invoke-virtual {p0}, Lone/me/sdk/messagewrite/mention/SuggestionsWidget;->C0()Landroidx/appcompat/widget/AppCompatTextView;
+    invoke-virtual {p0}, Lone/me/sdk/messagewrite/mention/SuggestionsWidget;->M0()Landroidx/appcompat/widget/AppCompatTextView;
 
     move-result-object v1
 
@@ -738,7 +513,7 @@
 
     move-result v1
 
-    invoke-virtual {p0}, Lone/me/sdk/messagewrite/mention/SuggestionsWidget;->A0()Landroid/widget/FrameLayout;
+    invoke-virtual {p0}, Lone/me/sdk/messagewrite/mention/SuggestionsWidget;->K0()Landroid/widget/FrameLayout;
 
     move-result-object v6
 
@@ -748,15 +523,15 @@
 
     const/4 v8, 0x4
 
-    invoke-virtual {p2, v1, v2, v6, v8}, Lxi3;->d(IIII)V
+    invoke-virtual {p2, v1, v2, v6, v8}, Ldm3;->d(IIII)V
 
-    new-instance v6, Lg0a;
+    new-instance v6, Ll8a;
 
     const/4 v9, 0x5
 
-    invoke-direct {v6, p2, v2, v1, v9}, Lg0a;-><init>(Ljava/lang/Object;III)V
+    invoke-direct {v6, p2, v2, v1, v9}, Ll8a;-><init>(Ljava/lang/Object;III)V
 
-    invoke-static {}, Lgk4;->d()Landroid/content/res/Resources;
+    invoke-static {}, Lvo4;->d()Landroid/content/res/Resources;
 
     move-result-object v9
 
@@ -766,11 +541,11 @@
 
     iget v9, v9, Landroid/util/DisplayMetrics;->density:F
 
-    invoke-static {v7, v9, v6}, Lzt1;->p(FFLg0a;)V
+    invoke-static {v7, v9, v6}, Lmw1;->q(FFLl8a;)V
 
-    invoke-virtual {p2, v1, v4, v3, v4}, Lxi3;->d(IIII)V
+    invoke-virtual {p2, v1, v4, v3, v4}, Ldm3;->d(IIII)V
 
-    invoke-virtual {p0}, Lone/me/sdk/messagewrite/mention/SuggestionsWidget;->D0()Ls15;
+    invoke-virtual {p0}, Lone/me/sdk/messagewrite/mention/SuggestionsWidget;->N0()Lc75;
 
     move-result-object v1
 
@@ -778,67 +553,300 @@
 
     move-result v1
 
-    invoke-virtual {p0}, Lone/me/sdk/messagewrite/mention/SuggestionsWidget;->A0()Landroid/widget/FrameLayout;
-
-    move-result-object p0
-
-    invoke-virtual {p0}, Landroid/view/View;->getId()I
-
-    move-result p0
-
-    invoke-virtual {p2, v1, v2, p0, v8}, Lxi3;->d(IIII)V
-
-    new-instance p0, Lg0a;
-
-    const/4 v6, 0x5
-
-    invoke-direct {p0, p2, v2, v1, v6}, Lg0a;-><init>(Ljava/lang/Object;III)V
-
-    const/16 v2, 0x14
-
-    int-to-float v2, v2
-
-    invoke-static {}, Lgk4;->d()Landroid/content/res/Resources;
+    invoke-virtual {p0}, Lone/me/sdk/messagewrite/mention/SuggestionsWidget;->K0()Landroid/widget/FrameLayout;
 
     move-result-object v6
 
-    invoke-virtual {v6}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+    invoke-virtual {v6}, Landroid/view/View;->getId()I
 
-    move-result-object v6
+    move-result v6
 
-    iget v6, v6, Landroid/util/DisplayMetrics;->density:F
+    invoke-virtual {p2, v1, v2, v6, v8}, Ldm3;->d(IIII)V
 
-    invoke-static {v2, v6, p0}, Lzt1;->p(FFLg0a;)V
+    new-instance v6, Ll8a;
 
-    invoke-virtual {p2, v1, v5, v3, v5}, Lxi3;->d(IIII)V
+    const/4 v7, 0x5
 
-    invoke-virtual {p2, v1, v4, v3, v4}, Lxi3;->d(IIII)V
+    invoke-direct {v6, p2, v2, v1, v7}, Ll8a;-><init>(Ljava/lang/Object;III)V
 
-    invoke-virtual {p2, v1, v8, v3, v8}, Lxi3;->d(IIII)V
+    const/16 v7, 0x14
 
-    invoke-virtual {p2, v1}, Lxi3;->g(I)Lsi3;
+    int-to-float v7, v7
 
-    move-result-object p0
+    invoke-static {}, Lvo4;->d()Landroid/content/res/Resources;
 
-    iget-object p0, p0, Lsi3;->d:Lti3;
+    move-result-object v9
 
-    const/4 v2, 0x1
+    invoke-virtual {v9}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
 
-    iput-boolean v2, p0, Lti3;->m0:Z
+    move-result-object v9
 
-    invoke-virtual {p2, v1}, Lxi3;->g(I)Lsi3;
+    iget v9, v9, Landroid/util/DisplayMetrics;->density:F
 
-    move-result-object p0
+    invoke-static {v7, v9, v6}, Lmw1;->q(FFLl8a;)V
 
-    iget-object p0, p0, Lsi3;->d:Lti3;
+    invoke-virtual {p2, v1, v5, v3, v5}, Ldm3;->d(IIII)V
 
-    const/4 v1, 0x0
+    invoke-virtual {p2, v1, v4, v3, v4}, Ldm3;->d(IIII)V
 
-    iput v1, p0, Lti3;->x:F
+    invoke-virtual {p2, v1, v8, v3, v8}, Ldm3;->d(IIII)V
 
-    invoke-virtual {p2, p3}, Lxi3;->a(Landroidx/constraintlayout/widget/ConstraintLayout;)V
+    invoke-virtual {p2, v1}, Ldm3;->g(I)Lyl3;
+
+    move-result-object v3
+
+    iget-object v3, v3, Lyl3;->d:Lzl3;
+
+    const/4 v4, 0x1
+
+    iput-boolean v4, v3, Lzl3;->m0:Z
+
+    invoke-virtual {p2, v1}, Ldm3;->g(I)Lyl3;
+
+    move-result-object v1
+
+    iget-object v1, v1, Lyl3;->d:Lzl3;
+
+    const/4 v3, 0x0
+
+    iput v3, v1, Lzl3;->x:F
+
+    new-instance v1, Ln26;
+
+    const/4 v3, 0x0
+
+    invoke-direct {v1, v2, v3, v4}, Ln26;-><init>(ILkotlin/coroutines/Continuation;I)V
+
+    invoke-static {v1, p3}, Ljs9;->t(Lrc6;Landroid/view/View;)V
+
+    invoke-virtual {p2, p3}, Ldm3;->a(Landroidx/constraintlayout/widget/ConstraintLayout;)V
 
     invoke-virtual {p1, p3, v0, v0}, Landroid/view/ViewGroup;->addView(Landroid/view/View;II)V
 
+    invoke-virtual {p0}, Lone/me/sdk/messagewrite/mention/SuggestionsWidget;->L0()Landroid/widget/FrameLayout;
+
+    move-result-object p0
+
+    invoke-virtual {p1, p0}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
+
     return-void
+.end method
+
+.method public final K0()Landroid/widget/FrameLayout;
+    .locals 2
+
+    sget-object v0, Lone/me/sdk/messagewrite/mention/SuggestionsWidget;->C0:[Lxi7;
+
+    const/4 v1, 0x6
+
+    aget-object v0, v0, v1
+
+    iget-object p0, p0, Lone/me/sdk/messagewrite/mention/SuggestionsWidget;->A0:Lrm0;
+
+    invoke-virtual {p0}, Lrm0;->getValue()Ljava/lang/Object;
+
+    move-result-object p0
+
+    check-cast p0, Landroid/widget/FrameLayout;
+
+    return-object p0
+.end method
+
+.method public final L0()Landroid/widget/FrameLayout;
+    .locals 2
+
+    sget-object v0, Lone/me/sdk/messagewrite/mention/SuggestionsWidget;->C0:[Lxi7;
+
+    const/4 v1, 0x2
+
+    aget-object v0, v0, v1
+
+    iget-object p0, p0, Lone/me/sdk/messagewrite/mention/SuggestionsWidget;->w0:Lrm0;
+
+    invoke-virtual {p0}, Lrm0;->getValue()Ljava/lang/Object;
+
+    move-result-object p0
+
+    check-cast p0, Landroid/widget/FrameLayout;
+
+    return-object p0
+.end method
+
+.method public final M0()Landroidx/appcompat/widget/AppCompatTextView;
+    .locals 2
+
+    sget-object v0, Lone/me/sdk/messagewrite/mention/SuggestionsWidget;->C0:[Lxi7;
+
+    const/4 v1, 0x7
+
+    aget-object v0, v0, v1
+
+    iget-object p0, p0, Lone/me/sdk/messagewrite/mention/SuggestionsWidget;->B0:Lrm0;
+
+    invoke-virtual {p0}, Lrm0;->getValue()Ljava/lang/Object;
+
+    move-result-object p0
+
+    check-cast p0, Landroidx/appcompat/widget/AppCompatTextView;
+
+    return-object p0
+.end method
+
+.method public final N0()Lc75;
+    .locals 2
+
+    sget-object v0, Lone/me/sdk/messagewrite/mention/SuggestionsWidget;->C0:[Lxi7;
+
+    const/4 v1, 0x3
+
+    aget-object v0, v0, v1
+
+    iget-object p0, p0, Lone/me/sdk/messagewrite/mention/SuggestionsWidget;->x0:Lrm0;
+
+    invoke-virtual {p0}, Lrm0;->getValue()Ljava/lang/Object;
+
+    move-result-object p0
+
+    check-cast p0, Lc75;
+
+    return-object p0
+.end method
+
+.method public final O0()Lmpe;
+    .locals 0
+
+    iget-object p0, p0, Lone/me/sdk/messagewrite/mention/SuggestionsWidget;->t0:Lcl7;
+
+    invoke-interface {p0}, Lcl7;->getValue()Ljava/lang/Object;
+
+    move-result-object p0
+
+    check-cast p0, Lmpe;
+
+    return-object p0
+.end method
+
+.method public final P0()V
+    .locals 3
+
+    invoke-virtual {p0}, Lone/me/sdk/messagewrite/mention/SuggestionsWidget;->O0()Lmpe;
+
+    move-result-object v0
+
+    iget-object v0, v0, Lmpe;->J0:Lyce;
+
+    :cond_0
+    invoke-virtual {v0}, Lyce;->getValue()Ljava/lang/Object;
+
+    move-result-object v1
+
+    move-object v2, v1
+
+    check-cast v2, Lfpe;
+
+    const/4 v2, 0x0
+
+    invoke-virtual {v0, v1, v2}, Lyce;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    const/4 v0, 0x1
+
+    invoke-virtual {p0, v0}, Lone/me/sdk/bottomsheet/BaseBottomSheetWidget;->E0(Z)V
+
+    return-void
+.end method
+
+.method public final handleBack()Z
+    .locals 0
+
+    invoke-virtual {p0}, Lone/me/sdk/messagewrite/mention/SuggestionsWidget;->P0()V
+
+    const/4 p0, 0x1
+
+    return p0
+.end method
+
+.method public final onDestroyView(Landroid/view/View;)V
+    .locals 0
+
+    invoke-super {p0, p1}, Lone/me/sdk/bottomsheet/BaseBottomSheetWidget;->onDestroyView(Landroid/view/View;)V
+
+    invoke-virtual {p0}, Lone/me/sdk/messagewrite/mention/SuggestionsWidget;->N0()Lc75;
+
+    move-result-object p0
+
+    const/4 p1, 0x0
+
+    invoke-virtual {p0, p1}, Lone/me/sdk/lists/widgets/EmptyRecyclerView;->setAdapter(Lcoc;)V
+
+    return-void
+.end method
+
+.method public final onViewCreated(Landroid/view/View;)V
+    .locals 5
+
+    invoke-super {p0, p1}, Lone/me/sdk/arch/Widget;->onViewCreated(Landroid/view/View;)V
+
+    invoke-virtual {p0}, Lone/me/sdk/messagewrite/mention/SuggestionsWidget;->N0()Lc75;
+
+    move-result-object v0
+
+    iget-object v1, p0, Lone/me/sdk/messagewrite/mention/SuggestionsWidget;->v0:Ljava/lang/Object;
+
+    invoke-interface {v1}, Lcl7;->getValue()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Ldpe;
+
+    invoke-virtual {v0, v1}, Lone/me/sdk/lists/widgets/EmptyRecyclerView;->setAdapter(Lcoc;)V
+
+    invoke-virtual {p0}, Lone/me/sdk/messagewrite/mention/SuggestionsWidget;->O0()Lmpe;
+
+    move-result-object v0
+
+    iget-object v0, v0, Lmpe;->E0:Liic;
+
+    new-instance v1, Lope;
+
+    const/4 v2, 0x0
+
+    invoke-direct {v1, p0, v2}, Lope;-><init>(Lone/me/sdk/messagewrite/mention/SuggestionsWidget;Lkotlin/coroutines/Continuation;)V
+
+    new-instance v3, Lnu5;
+
+    const/4 v4, 0x1
+
+    invoke-direct {v3, v0, v1, v4}, Lnu5;-><init>(Lis5;Lpc6;I)V
+
+    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleScope()Lmn7;
+
+    move-result-object v0
+
+    invoke-static {v3, v0}, Lo97;->u0(Lis5;Ly04;)Lcae;
+
+    new-instance v0, Lc9b;
+
+    const/16 v1, 0x13
+
+    invoke-direct {v0, p0, v2, v1}, Lc9b;-><init>(Ljava/lang/Object;Lkotlin/coroutines/Continuation;I)V
+
+    invoke-static {v0, p1}, Ljs9;->t(Lrc6;Landroid/view/View;)V
+
+    return-void
+.end method
+
+.method public final z0()Lffb;
+    .locals 2
+
+    new-instance v0, Lr9;
+
+    const/4 v1, 0x7
+
+    invoke-direct {v0, p0, v1}, Lr9;-><init>(Lone/me/sdk/arch/Widget;I)V
+
+    return-object v0
 .end method

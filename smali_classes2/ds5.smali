@@ -1,61 +1,134 @@
-.class public final Lds5;
+.class public final synthetic Lds5;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Landroid/animation/ValueAnimator$AnimatorUpdateListener;
 
-# static fields
-.field public static final a:Lds5;
+
+# instance fields
+.field public final synthetic X:I
+
+.field public final synthetic a:Lfs5;
+
+.field public final synthetic b:I
+
+.field public final synthetic c:I
+
+.field public final synthetic o:I
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public synthetic constructor <init>(Lfs5;IIII)V
+    .locals 0
 
-    new-instance v0, Lds5;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lds5;->a:Lfs5;
 
-    sput-object v0, Lds5;->a:Lds5;
+    iput p2, p0, Lds5;->b:I
+
+    iput p3, p0, Lds5;->c:I
+
+    iput p4, p0, Lds5;->o:I
+
+    iput p5, p0, Lds5;->X:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
+.method public final onAnimationUpdate(Landroid/animation/ValueAnimator;)V
+    .locals 5
 
-    const/4 v0, 0x1
+    iget-object v0, p0, Lds5;->a:Lfs5;
 
-    if-ne p0, p1, :cond_0
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    return v0
+    invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
 
-    :cond_0
-    instance-of p0, p1, Lds5;
+    move-result-object p1
 
-    if-nez p0, :cond_1
+    check-cast p1, Ljava/lang/Float;
 
-    const/4 p0, 0x0
+    invoke-virtual {p1}, Ljava/lang/Float;->floatValue()F
 
-    return p0
+    move-result p1
 
-    :cond_1
-    return v0
-.end method
+    iget v1, v0, Lfs5;->a:I
 
-.method public final hashCode()I
-    .locals 0
+    iget v2, p0, Lds5;->b:I
 
-    const p0, 0x333710ea
+    sub-int/2addr v2, v1
 
-    return p0
-.end method
+    int-to-float v2, v2
 
-.method public final toString()Ljava/lang/String;
-    .locals 0
+    mul-float/2addr v2, p1
 
-    const-string p0, "FlushSignal"
+    float-to-int v2, v2
 
-    return-object p0
+    add-int/2addr v1, v2
+
+    iget v2, v0, Lfs5;->b:I
+
+    iget v3, p0, Lds5;->c:I
+
+    sub-int/2addr v3, v2
+
+    int-to-float v3, v3
+
+    mul-float/2addr v3, p1
+
+    float-to-int v3, v3
+
+    add-int/2addr v2, v3
+
+    iget v3, v0, Lfs5;->c:F
+
+    iget v4, p0, Lds5;->o:I
+
+    int-to-float v4, v4
+
+    invoke-static {v4, v3, p1, v3}, Lbg9;->g(FFFF)F
+
+    move-result v3
+
+    float-to-int v3, v3
+
+    iget v4, v0, Lfs5;->o:F
+
+    iget p0, p0, Lds5;->X:I
+
+    int-to-float p0, p0
+
+    invoke-static {p0, v4, p1, v4}, Lbg9;->g(FFFF)F
+
+    move-result p0
+
+    float-to-int p0, p0
+
+    iget-object p1, v0, Lfs5;->s0:Lcom/facebook/drawee/view/SimpleDraweeView;
+
+    new-instance v4, Landroid/widget/FrameLayout$LayoutParams;
+
+    invoke-direct {v4, v1, v2}, Landroid/widget/FrameLayout$LayoutParams;-><init>(II)V
+
+    invoke-virtual {p1, v4}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+
+    iget-object p1, v0, Lfs5;->s0:Lcom/facebook/drawee/view/SimpleDraweeView;
+
+    int-to-float v1, v3
+
+    invoke-virtual {p1, v1}, Landroid/view/View;->setTranslationX(F)V
+
+    iget-object p1, v0, Lfs5;->s0:Lcom/facebook/drawee/view/SimpleDraweeView;
+
+    int-to-float p0, p0
+
+    invoke-virtual {p1, p0}, Landroid/view/View;->setTranslationY(F)V
+
+    invoke-virtual {v0}, Landroid/view/View;->invalidate()V
+
+    return-void
 .end method

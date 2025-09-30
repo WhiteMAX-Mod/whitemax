@@ -3,23 +3,42 @@
 .source "SourceFile"
 
 
+# instance fields
+.field public a:Lm0f;
+
+.field public b:J
+
+.field public final c:Ljava/lang/String;
+
+.field public final d:Z
+
+
 # direct methods
-.method public static a(Landroid/animation/Animator;)J
-    .locals 2
-
-    invoke-virtual {p0}, Landroid/animation/Animator;->getTotalDuration()J
-
-    move-result-wide v0
-
-    return-wide v0
-.end method
-
-.method public static b(Landroid/animation/Animator;J)V
+.method public constructor <init>(Ljava/lang/String;Z)V
     .locals 0
 
-    check-cast p0, Landroid/animation/AnimatorSet;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-virtual {p0, p1, p2}, Landroid/animation/AnimatorSet;->setCurrentPlayTime(J)V
+    iput-object p1, p0, Lwze;->c:Ljava/lang/String;
+
+    iput-boolean p2, p0, Lwze;->d:Z
+
+    const-wide/16 p1, -0x1
+
+    iput-wide p1, p0, Lwze;->b:J
 
     return-void
+.end method
+
+
+# virtual methods
+.method public abstract a()J
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 0
+
+    iget-object p0, p0, Lwze;->c:Ljava/lang/String;
+
+    return-object p0
 .end method

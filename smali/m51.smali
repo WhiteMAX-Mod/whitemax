@@ -3,20 +3,22 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lo51;
+.implements Lr51;
 
 
-# instance fields
-.field public final a:Ljava/util/Set;
+# static fields
+.field public static final a:Lm51;
 
 
 # direct methods
-.method public constructor <init>(Ljava/util/Set;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lm51;
 
-    iput-object p1, p0, Lm51;->a:Ljava/util/Set;
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    sput-object v0, Lm51;->a:Lm51;
 
     return-void
 .end method
@@ -24,7 +26,7 @@
 
 # virtual methods
 .method public final equals(Ljava/lang/Object;)Z
-    .locals 3
+    .locals 1
 
     const/4 v0, 0x1
 
@@ -33,65 +35,30 @@
     return v0
 
     :cond_0
-    instance-of v1, p1, Lm51;
+    instance-of p0, p1, Lm51;
 
-    const/4 v2, 0x0
+    if-nez p0, :cond_1
 
-    if-nez v1, :cond_1
+    const/4 p0, 0x0
 
-    return v2
+    return p0
 
     :cond_1
-    check-cast p1, Lm51;
-
-    iget-object p0, p0, Lm51;->a:Ljava/util/Set;
-
-    iget-object p1, p1, Lm51;->a:Ljava/util/Set;
-
-    invoke-static {p0, p1}, Lxq7;->d(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p0
-
-    if-nez p0, :cond_2
-
-    return v2
-
-    :cond_2
     return v0
 .end method
 
 .method public final hashCode()I
     .locals 0
 
-    iget-object p0, p0, Lm51;->a:Ljava/util/Set;
-
-    invoke-virtual {p0}, Ljava/lang/Object;->hashCode()I
-
-    move-result p0
+    const p0, -0x7c56e03f
 
     return p0
 .end method
 
 .method public final toString()Ljava/lang/String;
-    .locals 2
+    .locals 0
 
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "UpdateContacts(contactIds="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object p0, p0, Lm51;->a:Ljava/util/Set;
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string p0, ")"
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
+    const-string p0, "Finished"
 
     return-object p0
 .end method

@@ -1,70 +1,64 @@
 .class public final Ls44;
-.super Ld54;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Landroid/view/View$OnClickListener;
+.implements Lc74;
 
 
 # instance fields
-.field public final o:Landroid/view/View$OnClickListener;
+.field public final a:Lc74;
+
+.field public final b:Lnyc;
+
+.field public final c:Lok0;
+
+.field public d:Z
+
+.field public final e:Ltgd;
 
 
 # direct methods
-.method public constructor <init>(JLandroid/view/View$OnClickListener;)V
+.method public constructor <init>(Lc74;Lnyc;Lok0;)V
     .locals 0
 
-    .line 2
-    invoke-direct {p0, p1, p2}, Ld54;-><init>(J)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 3
-    iput-object p3, p0, Ls44;->o:Landroid/view/View$OnClickListener;
+    iput-object p1, p0, Ls44;->a:Lc74;
 
-    return-void
-.end method
+    iput-object p2, p0, Ls44;->b:Lnyc;
 
-.method public synthetic constructor <init>(Landroid/view/View$OnClickListener;I)V
-    .locals 2
+    iput-object p3, p0, Ls44;->c:Lok0;
 
-    const-wide/16 v0, 0x12c
+    new-instance p1, Ltgd;
 
-    .line 1
-    invoke-direct {p0, v0, v1, p1}, Ls44;-><init>(JLandroid/view/View$OnClickListener;)V
+    const/16 p2, 0xb
+
+    invoke-direct {p1, p2, p0}, Ltgd;-><init>(ILjava/lang/Object;)V
+
+    iput-object p1, p0, Ls44;->e:Ltgd;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onClick(Landroid/view/View;)V
+.method public final a()Lf74;
     .locals 3
 
-    iget-boolean v0, p0, Ld54;->b:Z
+    new-instance v0, Lt44;
 
-    if-nez v0, :cond_0
+    iget-object v1, p0, Ls44;->a:Lc74;
 
-    return-void
+    invoke-interface {v1}, Lc74;->a()Lf74;
 
-    :cond_0
-    const/4 v0, 0x0
+    move-result-object v1
 
-    iput-boolean v0, p0, Ld54;->b:Z
+    iget-object v2, p0, Ls44;->e:Ltgd;
 
-    iget-object v0, p0, Ls44;->o:Landroid/view/View$OnClickListener;
+    iget-object p0, p0, Ls44;->c:Lok0;
 
-    invoke-interface {v0, p1}, Landroid/view/View$OnClickListener;->onClick(Landroid/view/View;)V
+    invoke-direct {v0, v1, v2, p0}, Lt44;-><init>(Lf74;Ltgd;Lok0;)V
 
-    new-instance v0, Lje;
-
-    const/16 v1, 0xb
-
-    iget-object v2, p0, Ld54;->c:Lur3;
-
-    invoke-direct {v0, v1, v2}, Lje;-><init>(ILjava/lang/Object;)V
-
-    iget-wide v1, p0, Ld54;->a:J
-
-    invoke-virtual {p1, v0, v1, v2}, Landroid/view/View;->postDelayed(Ljava/lang/Runnable;J)Z
-
-    return-void
+    return-object v0
 .end method

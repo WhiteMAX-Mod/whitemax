@@ -1,62 +1,84 @@
 .class public final Lt92;
-.super Lsod;
+.super Loi0;
 .source "SourceFile"
 
 
-# virtual methods
-.method public final D(Lu92;)V
-    .locals 6
+# instance fields
+.field public final b:J
 
-    iget-object p0, p0, Lccc;->a:Landroid/view/View;
 
-    check-cast p0, Ls92;
+# direct methods
+.method public constructor <init>(J)V
+    .locals 0
 
-    iget-object v0, p1, Lu92;->a:Lmoe;
+    invoke-direct {p0}, Loi0;-><init>()V
 
-    invoke-virtual {p0, v0}, Ls92;->setTitle(Lmoe;)V
-
-    iget-object v0, p1, Lu92;->b:Lmoe;
-
-    invoke-virtual {p0, v0}, Ls92;->setSubtitle(Lmoe;)V
-
-    iget-object v0, p1, Lu92;->c:Ljava/lang/String;
-
-    iget-object v1, p1, Lu92;->o:Ljava/lang/CharSequence;
-
-    iget-wide v2, p1, Lu92;->X:J
-
-    iget-object v4, p1, Lu92;->Y:Lgd0;
-
-    iget-object v5, p0, Ls92;->a:Lj3a;
-
-    invoke-virtual {v5, v4}, Lj3a;->setCustomOverlay(Lgd0;)V
-
-    iget-object v4, p0, Ls92;->a:Lj3a;
-
-    invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v2
-
-    if-nez v1, :cond_0
-
-    const-string v1, ""
-
-    :cond_0
-    invoke-static {v4, v0, v2, v1}, Lj3a;->i(Lj3a;Ljava/lang/String;Ljava/lang/Long;Ljava/lang/CharSequence;)V
-
-    iget-object p1, p1, Lu92;->Z:Ljava/util/List;
-
-    invoke-virtual {p0, p1}, Ls92;->setDescriptions(Ljava/util/List;)V
+    iput-wide p1, p0, Lt92;->b:J
 
     return-void
 .end method
 
-.method public final bridge synthetic x(Lol7;)V
-    .locals 0
 
-    check-cast p1, Lu92;
+# virtual methods
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 5
 
-    invoke-virtual {p0, p1}, Lt92;->D(Lu92;)V
+    const/4 v0, 0x1
 
-    return-void
+    if-ne p0, p1, :cond_0
+
+    return v0
+
+    :cond_0
+    instance-of v1, p1, Lt92;
+
+    const/4 v2, 0x0
+
+    if-nez v1, :cond_1
+
+    return v2
+
+    :cond_1
+    check-cast p1, Lt92;
+
+    iget-wide v3, p0, Lt92;->b:J
+
+    iget-wide p0, p1, Lt92;->b:J
+
+    cmp-long p0, v3, p0
+
+    if-eqz p0, :cond_2
+
+    return v2
+
+    :cond_2
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 2
+
+    iget-wide v0, p0, Lt92;->b:J
+
+    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
+
+    move-result p0
+
+    return p0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 4
+
+    const-string v0, "ChatClearEvent(chatId="
+
+    const-string v1, ")"
+
+    iget-wide v2, p0, Lt92;->b:J
+
+    invoke-static {v2, v3, v0, v1}, Lwsf;->e(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p0
+
+    return-object p0
 .end method

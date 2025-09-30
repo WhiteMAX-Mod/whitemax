@@ -14,11 +14,11 @@
     d2 = {
         "Lru/ok/tamtam/logout/LogoutEventsByBus;",
         "Lru/ok/tamtam/logout/a;",
-        "Lku7;",
+        "Lk18;",
         "event",
-        "Le5f;",
+        "Lylf;",
         "onEvent",
-        "(Lku7;)V",
+        "(Lk18;)V",
         "tamtam-android-sdk_release"
     }
     k = 0x1
@@ -32,44 +32,44 @@
 
 
 # instance fields
-.field public final a:Lvu0;
+.field public final a:Lfv0;
 
-.field public final b:Lwjd;
+.field public final b:Lnxd;
 
 .field public final c:Lkotlinx/coroutines/internal/ContextScope;
 
 
 # direct methods
-.method public constructor <init>(Lvu0;Lrie;)V
+.method public constructor <init>(Lfv0;Lxwe;)V
     .locals 2
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lru/ok/tamtam/logout/LogoutEventsByBus;->a:Lvu0;
+    iput-object p1, p0, Lru/ok/tamtam/logout/LogoutEventsByBus;->a:Lfv0;
 
     const/4 v0, 0x0
 
     const/4 v1, 0x7
 
-    invoke-static {v0, v0, v1}, Lxjd;->b(III)Lwjd;
+    invoke-static {v0, v0, v1}, Loxd;->b(III)Lnxd;
 
     move-result-object v0
 
-    iput-object v0, p0, Lru/ok/tamtam/logout/LogoutEventsByBus;->b:Lwjd;
+    iput-object v0, p0, Lru/ok/tamtam/logout/LogoutEventsByBus;->b:Lnxd;
 
-    check-cast p2, Lo7a;
+    check-cast p2, Laga;
 
-    invoke-virtual {p2}, Lo7a;->c()Lxw7;
+    invoke-virtual {p2}, Laga;->c()Lt38;
 
     move-result-object p2
 
-    invoke-static {p2}, Lvk9;->a(Lhx3;)Lkotlinx/coroutines/internal/ContextScope;
+    invoke-static {p2}, Lb0b;->a(Lq04;)Lkotlinx/coroutines/internal/ContextScope;
 
     move-result-object p2
 
     iput-object p2, p0, Lru/ok/tamtam/logout/LogoutEventsByBus;->c:Lkotlinx/coroutines/internal/ContextScope;
 
-    invoke-virtual {p1, p0}, Lvu0;->d(Ljava/lang/Object;)V
+    invoke-virtual {p1, p0}, Lfv0;->d(Ljava/lang/Object;)V
 
     return-void
 .end method
@@ -79,36 +79,36 @@
 .method public final a()V
     .locals 1
 
-    new-instance v0, Lku7;
+    new-instance v0, Lk18;
 
-    invoke-direct {v0}, Lki0;-><init>()V
+    invoke-direct {v0}, Loi0;-><init>()V
 
-    iget-object p0, p0, Lru/ok/tamtam/logout/LogoutEventsByBus;->a:Lvu0;
+    iget-object p0, p0, Lru/ok/tamtam/logout/LogoutEventsByBus;->a:Lfv0;
 
-    invoke-virtual {p0, v0}, Lvu0;->c(Ljava/lang/Object;)V
+    invoke-virtual {p0, v0}, Lfv0;->c(Ljava/lang/Object;)V
 
     return-void
 .end method
 
-.method public final onEvent(Lku7;)V
+.method public final onEvent(Lk18;)V
     .locals 2
     .annotation build Landroidx/annotation/Keep;
     .end annotation
 
-    .annotation runtime Li9e;
+    .annotation runtime Line;
     .end annotation
 
     new-instance v0, Lru/ok/tamtam/logout/b;
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, p0, p1, v1}, Lru/ok/tamtam/logout/b;-><init>(Lru/ok/tamtam/logout/LogoutEventsByBus;Lku7;Lkotlin/coroutines/Continuation;)V
+    invoke-direct {v0, p0, p1, v1}, Lru/ok/tamtam/logout/b;-><init>(Lru/ok/tamtam/logout/LogoutEventsByBus;Lk18;Lkotlin/coroutines/Continuation;)V
 
     const/4 p1, 0x3
 
     iget-object p0, p0, Lru/ok/tamtam/logout/LogoutEventsByBus;->c:Lkotlinx/coroutines/internal/ContextScope;
 
-    invoke-static {p0, v1, v1, v0, p1}, Lzo3;->E(Lox3;Lhx3;Lrx3;Ll66;I)Ldwd;
+    invoke-static {p0, v1, v1, v0, p1}, Lvyg;->u(Ly04;Lq04;Lb14;Lpc6;I)Lcae;
 
     return-void
 .end method

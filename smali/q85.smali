@@ -3,22 +3,32 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lv85;
+.implements Lt85;
 
 
-# static fields
-.field public static final a:Lq85;
+# instance fields
+.field public final a:J
+
+.field public final b:J
+
+.field public final c:Ljava/lang/String;
+
+.field public final d:Lhs4;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(JJLjava/lang/String;Lhs4;)V
+    .locals 0
 
-    new-instance v0, Lq85;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    iput-wide p1, p0, Lq85;->a:J
 
-    sput-object v0, Lq85;->a:Lq85;
+    iput-wide p3, p0, Lq85;->b:J
+
+    iput-object p5, p0, Lq85;->c:Ljava/lang/String;
+
+    iput-object p6, p0, Lq85;->d:Lhs4;
 
     return-void
 .end method

@@ -1,188 +1,61 @@
 .class public final Le1f;
-.super Lm1;
+.super Lrde;
 .source "SourceFile"
-
-# interfaces
-.implements Ljava/util/concurrent/RunnableFuture;
-.implements Ld1;
 
 
 # instance fields
-.field public volatile o0:Ld1f;
+.field public final synthetic e:Landroid/content/Context;
+
+.field public final synthetic f:Landroid/text/TextPaint;
+
+.field public final synthetic g:Lrde;
+
+.field public final synthetic h:Lf1f;
 
 
 # direct methods
-.method public constructor <init>(Ljava/util/concurrent/Callable;)V
-    .locals 1
+.method public constructor <init>(Lf1f;Landroid/content/Context;Landroid/text/TextPaint;Lrde;)V
+    .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    new-instance v0, Ld1f;
+    iput-object p1, p0, Le1f;->h:Lf1f;
 
-    invoke-direct {v0, p0, p1}, Ld1f;-><init>(Le1f;Ljava/util/concurrent/Callable;)V
+    iput-object p2, p0, Le1f;->e:Landroid/content/Context;
 
-    iput-object v0, p0, Le1f;->o0:Ld1f;
+    iput-object p3, p0, Le1f;->f:Landroid/text/TextPaint;
+
+    iput-object p4, p0, Le1f;->g:Lrde;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final b()V
-    .locals 6
+.method public final q(I)V
+    .locals 0
 
-    iget-object v0, p0, Lm1;->a:Ljava/lang/Object;
+    iget-object p0, p0, Le1f;->g:Lrde;
 
-    instance-of v1, v0, Lq0;
-
-    if-eqz v1, :cond_1
-
-    check-cast v0, Lq0;
-
-    iget-boolean v0, v0, Lq0;->a:Z
-
-    if-eqz v0, :cond_1
-
-    iget-object v0, p0, Le1f;->o0:Ld1f;
-
-    if-eqz v0, :cond_1
-
-    sget-object v1, Ld1f;->o:Lzeg;
-
-    sget-object v2, Ld1f;->c:Lzeg;
-
-    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
-
-    move-result-object v3
-
-    check-cast v3, Ljava/lang/Runnable;
-
-    instance-of v4, v3, Ljava/lang/Thread;
-
-    if-eqz v4, :cond_1
-
-    new-instance v4, Lf47;
-
-    invoke-direct {v4, v0}, Lf47;-><init>(Ld1f;)V
-
-    invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
-
-    move-result-object v5
-
-    invoke-static {v4, v5}, Lf47;->a(Lf47;Ljava/lang/Thread;)V
-
-    invoke-virtual {v0, v3, v4}, Ljava/util/concurrent/atomic/AtomicReference;->compareAndSet(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v4
-
-    if-eqz v4, :cond_1
-
-    :try_start_0
-    move-object v4, v3
-
-    check-cast v4, Ljava/lang/Thread;
-
-    invoke-virtual {v4}, Ljava/lang/Thread;->interrupt()V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    invoke-virtual {v0, v2}, Ljava/util/concurrent/atomic/AtomicReference;->getAndSet(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/lang/Runnable;
-
-    if-ne v0, v1, :cond_1
-
-    check-cast v3, Ljava/lang/Thread;
-
-    invoke-static {v3}, Ljava/util/concurrent/locks/LockSupport;->unpark(Ljava/lang/Thread;)V
-
-    goto :goto_0
-
-    :catchall_0
-    move-exception p0
-
-    invoke-virtual {v0, v2}, Ljava/util/concurrent/atomic/AtomicReference;->getAndSet(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/lang/Runnable;
-
-    if-ne v0, v1, :cond_0
-
-    check-cast v3, Ljava/lang/Thread;
-
-    invoke-static {v3}, Ljava/util/concurrent/locks/LockSupport;->unpark(Ljava/lang/Thread;)V
-
-    :cond_0
-    throw p0
-
-    :cond_1
-    :goto_0
-    const/4 v0, 0x0
-
-    iput-object v0, p0, Le1f;->o0:Ld1f;
+    invoke-virtual {p0, p1}, Lrde;->q(I)V
 
     return-void
 .end method
 
-.method public final i()Ljava/lang/String;
-    .locals 2
+.method public final r(Landroid/graphics/Typeface;Z)V
+    .locals 3
 
-    iget-object v0, p0, Le1f;->o0:Ld1f;
+    iget-object v0, p0, Le1f;->e:Landroid/content/Context;
 
-    if-eqz v0, :cond_0
+    iget-object v1, p0, Le1f;->f:Landroid/text/TextPaint;
 
-    new-instance p0, Ljava/lang/StringBuilder;
+    iget-object v2, p0, Le1f;->h:Lf1f;
 
-    const-string v1, "task=["
+    invoke-virtual {v2, v0, v1, p1}, Lf1f;->g(Landroid/content/Context;Landroid/text/TextPaint;Landroid/graphics/Typeface;)V
 
-    invoke-direct {p0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    iget-object p0, p0, Le1f;->g:Lrde;
 
-    invoke-virtual {p0, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v0, "]"
-
-    invoke-virtual {p0, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
-
-    :cond_0
-    invoke-super {p0}, Lm1;->i()Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public final isCancelled()Z
-    .locals 0
-
-    iget-object p0, p0, Lm1;->a:Ljava/lang/Object;
-
-    instance-of p0, p0, Lq0;
-
-    return p0
-.end method
-
-.method public final run()V
-    .locals 1
-
-    iget-object v0, p0, Le1f;->o0:Ld1f;
-
-    if-eqz v0, :cond_0
-
-    invoke-virtual {v0}, Ld1f;->run()V
-
-    :cond_0
-    const/4 v0, 0x0
-
-    iput-object v0, p0, Le1f;->o0:Ld1f;
+    invoke-virtual {p0, p1, p2}, Lrde;->r(Landroid/graphics/Typeface;Z)V
 
     return-void
 .end method

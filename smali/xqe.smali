@@ -1,119 +1,128 @@
-.class public final Lxqe;
+.class public final synthetic Lxqe;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lm7b;
+.implements Lvt;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final synthetic X:Ldb0;
 
-.field public final b:Lm7b;
+.field public final synthetic a:Lzqe;
 
-.field public final c:Ljava/lang/Object;
+.field public final synthetic b:Lyqe;
+
+.field public final synthetic c:I
+
+.field public final synthetic o:Ldb0;
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public synthetic constructor <init>(Lzqe;Lyqe;ILdb0;Ldb0;)V
     .locals 0
-
-    return-void
-.end method
-
-.method public synthetic constructor <init>(Lm7b;Ljava/lang/Object;I)V
-    .locals 0
-
-    iput p3, p0, Lxqe;->a:I
-
-    iput-object p1, p0, Lxqe;->b:Lm7b;
-
-    iput-object p2, p0, Lxqe;->c:Ljava/lang/Object;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lxqe;->a:Lzqe;
+
+    iput-object p2, p0, Lxqe;->b:Lyqe;
+
+    iput p3, p0, Lxqe;->c:I
+
+    iput-object p4, p0, Lxqe;->o:Ldb0;
+
+    iput-object p5, p0, Lxqe;->X:Ldb0;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Lai0;Ln7b;)V
-    .locals 4
+.method public final apply(Ljava/lang/Object;)Lgt7;
+    .locals 7
 
-    iget v0, p0, Lxqe;->a:I
+    iget-object v0, p0, Lxqe;->b:Lyqe;
 
-    packed-switch v0, :pswitch_data_0
+    move-object v2, p1
 
-    new-instance v0, Lnr0;
+    check-cast v2, Landroid/view/Surface;
 
-    invoke-direct {v0, p0, p1, p2}, Lnr0;-><init>(Lxqe;Lai0;Ln7b;)V
+    iget-object p1, p0, Lxqe;->a:Lzqe;
 
-    iget-object p0, p0, Lxqe;->b:Lm7b;
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    check-cast p0, Lcgc;
-
-    invoke-virtual {p0, v0, p2}, Lcgc;->a(Lai0;Ln7b;)V
-
-    return-void
-
-    :pswitch_0
-    iget-object v0, p0, Lxqe;->c:Ljava/lang/Object;
-
-    check-cast v0, Llgb;
-
-    invoke-static {}, Lq46;->x()Lp46;
-
-    move-object v1, p2
-
-    check-cast v1, Ljj0;
-
-    iget-object v2, v1, Ljj0;->c:Lq7b;
-
-    iget-object v3, v1, Ljj0;->s0:Lkv6;
-
-    iget-object v3, v3, Lkv6;->v:Lhlg;
-
-    invoke-virtual {v3}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    new-instance v3, Lhp7;
-
-    invoke-direct {v3, p1, v2, p2, p0}, Lhp7;-><init>(Lai0;Lq7b;Ln7b;Lxqe;)V
-
-    new-instance p1, Lar6;
-
-    const/4 p2, 0x4
-
-    invoke-direct {p1, v3, p2, p0}, Lar6;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
-
-    invoke-virtual {v1, p1}, Ljj0;->a(Lkj0;)V
-
-    monitor-enter v0
+    invoke-virtual {v2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     :try_start_0
-    iget-object p0, v0, Llgb;->b:Ljava/lang/Object;
-
-    check-cast p0, Ljava/util/concurrent/Executor;
-
-    invoke-interface {p0, v3}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
+    invoke-virtual {v0}, Lpk4;->d()V
     :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    .catch Landroidx/camera/core/impl/DeferrableSurface$SurfaceClosedException; {:try_start_0 .. :try_end_0} :catch_0
 
-    monitor-exit v0
+    new-instance v1, Lbre;
 
-    return-void
+    iget-object p1, p1, Lzqe;->g:Lab0;
 
-    :catchall_0
-    move-exception p0
+    iget-object v4, p1, Lab0;->a:Landroid/util/Size;
 
-    :try_start_1
-    monitor-exit v0
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+    iget v3, p0, Lxqe;->c:I
 
-    throw p0
+    iget-object v5, p0, Lxqe;->o:Ldb0;
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    iget-object v6, p0, Lxqe;->X:Ldb0;
+
+    invoke-direct/range {v1 .. v6}, Lbre;-><init>(Landroid/view/Surface;ILandroid/util/Size;Ldb0;Ldb0;)V
+
+    new-instance p0, Lwqe;
+
+    const/4 p1, 0x1
+
+    invoke-direct {p0, v0, p1}, Lwqe;-><init>(Lyqe;I)V
+
+    invoke-static {}, Ln4e;->q()Lep4;
+
+    move-result-object p1
+
+    iget-object v2, v1, Lbre;->t0:Lts1;
+
+    iget-object v2, v2, Lts1;->b:Lss1;
+
+    invoke-virtual {v2, p0, p1}, Lq3;->d(Ljava/lang/Runnable;Ljava/util/concurrent/Executor;)V
+
+    iget-object p0, v0, Lyqe;->q:Lbre;
+
+    if-nez p0, :cond_0
+
+    const/4 p0, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    const/4 p0, 0x0
+
+    :goto_0
+    const-string p1, "Consumer can only be linked once."
+
+    invoke-static {p1, p0}, Ln4e;->n(Ljava/lang/String;Z)V
+
+    iput-object v1, v0, Lyqe;->q:Lbre;
+
+    invoke-static {v1}, Lf4h;->w(Ljava/lang/Object;)Lp27;
+
+    move-result-object p0
+
+    return-object p0
+
+    :catch_0
+    move-exception v0
+
+    move-object p0, v0
+
+    new-instance p1, Lp27;
+
+    const/4 v0, 0x1
+
+    invoke-direct {p1, v0, p0}, Lp27;-><init>(ILjava/lang/Object;)V
+
+    return-object p1
 .end method

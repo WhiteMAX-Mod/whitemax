@@ -4,115 +4,114 @@
 
 
 # instance fields
-.field public final a:Ls79;
+.field public final a:Lzn7;
 
-.field public final b:Lcb0;
+.field public final b:La90;
 
 
 # direct methods
-.method public constructor <init>(Ls79;Lcb0;)V
+.method public constructor <init>(Lzn7;La90;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Laa0;->a:Ls79;
+    if-eqz p1, :cond_1
 
-    iput-object p2, p0, Laa0;->b:Lcb0;
+    iput-object p1, p0, Laa0;->a:Lzn7;
+
+    if-eqz p2, :cond_0
+
+    iput-object p2, p0, Laa0;->b:La90;
 
     return-void
+
+    :cond_0
+    new-instance p0, Ljava/lang/NullPointerException;
+
+    const-string p1, "Null cameraId"
+
+    invoke-direct {p0, p1}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
+
+    throw p0
+
+    :cond_1
+    new-instance p0, Ljava/lang/NullPointerException;
+
+    const-string p1, "Null lifecycleOwner"
+
+    invoke-direct {p0, p1}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
+
+    throw p0
 .end method
 
 
 # virtual methods
 .method public final equals(Ljava/lang/Object;)Z
-    .locals 2
+    .locals 4
+
+    const/4 v0, 0x1
 
     if-ne p1, p0, :cond_0
 
-    goto :goto_0
+    return v0
 
     :cond_0
-    instance-of v0, p1, Laa0;
+    instance-of v1, p1, Laa0;
 
-    if-eqz v0, :cond_1
+    const/4 v2, 0x0
+
+    if-eqz v1, :cond_1
 
     check-cast p1, Laa0;
 
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    iget-object v1, p0, Laa0;->a:Lzn7;
 
-    iget-object v0, p1, Laa0;->a:Ls79;
+    iget-object v3, p1, Laa0;->a:Lzn7;
 
-    iget-object p1, p1, Laa0;->b:Lcb0;
+    invoke-virtual {v1, v3}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
-    iget-object v1, p0, Laa0;->a:Ls79;
+    move-result v1
 
-    invoke-virtual {v1, v0}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+    if-eqz v1, :cond_1
 
-    move-result v0
+    iget-object p0, p0, Laa0;->b:La90;
 
-    if-eqz v0, :cond_1
+    iget-object p1, p1, Laa0;->b:La90;
 
-    sget-object v0, Ll6b;->a:Ll6b;
-
-    invoke-virtual {v0, v0}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    iget-object p0, p0, Laa0;->b:Lcb0;
-
-    invoke-virtual {p0, p1}, Lcb0;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {p0, p1}, La90;->equals(Ljava/lang/Object;)Z
 
     move-result p0
 
     if-eqz p0, :cond_1
 
-    :goto_0
-    const/4 p0, 0x1
-
-    return p0
+    return v0
 
     :cond_1
-    const/4 p0, 0x0
-
-    return p0
+    return v2
 .end method
 
 .method public final hashCode()I
-    .locals 3
+    .locals 2
 
-    const v0, 0xf4243
+    iget-object v0, p0, Laa0;->a:Lzn7;
 
-    mul-int v1, v0, v0
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
 
-    iget-object v2, p0, Laa0;->a:Ls79;
+    move-result v0
 
-    invoke-virtual {v2}, Ljava/lang/Object;->hashCode()I
+    const v1, 0xf4243
 
-    move-result v2
+    xor-int/2addr v0, v1
 
-    xor-int/2addr v1, v2
+    mul-int/2addr v0, v1
 
-    mul-int/2addr v1, v0
+    iget-object p0, p0, Laa0;->b:La90;
 
-    sget-object v2, Ll6b;->a:Ll6b;
-
-    invoke-virtual {v2}, Ljava/lang/Object;->hashCode()I
-
-    move-result v2
-
-    xor-int/2addr v1, v2
-
-    mul-int/2addr v1, v0
-
-    iget-object p0, p0, Laa0;->b:Lcb0;
-
-    invoke-virtual {p0}, Lcb0;->hashCode()I
+    invoke-virtual {p0}, La90;->hashCode()I
 
     move-result p0
 
-    xor-int/2addr p0, v1
+    xor-int/2addr p0, v0
 
     return p0
 .end method
@@ -122,27 +121,19 @@
 
     new-instance v0, Ljava/lang/StringBuilder;
 
-    const-string v1, "Event{code=null, payload="
+    const-string v1, "Key{lifecycleOwner="
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-object v1, p0, Laa0;->a:Ls79;
+    iget-object v1, p0, Laa0;->a:Lzn7;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    const-string v1, ", priority="
+    const-string v1, ", cameraId="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    sget-object v1, Ll6b;->a:Ll6b;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", productData="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object p0, p0, Laa0;->b:Lcb0;
+    iget-object p0, p0, Laa0;->b:La90;
 
     invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 

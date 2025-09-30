@@ -1,166 +1,637 @@
-.class public Lio9;
-.super Lesc;
+.class public final Lio9;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Ljava/util/List;
+.implements Loi7;
 
 
 # instance fields
-.field public final a:Ljava/util/concurrent/ScheduledThreadPoolExecutor;
+.field public final a:Ljava/lang/Object;
 
-.field public volatile b:Z
+.field public final b:I
+
+.field public c:I
 
 
 # direct methods
-.method public constructor <init>(Ljava/util/concurrent/ThreadFactory;)V
-    .locals 2
+.method public constructor <init>(Ljava/util/List;II)V
+    .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    sget-boolean v0, Lnsc;->a:Z
+    iput-object p1, p0, Lio9;->a:Ljava/lang/Object;
 
-    new-instance v0, Ljava/util/concurrent/ScheduledThreadPoolExecutor;
+    iput p2, p0, Lio9;->b:I
 
-    const/4 v1, 0x1
-
-    invoke-direct {v0, v1, p1}, Ljava/util/concurrent/ScheduledThreadPoolExecutor;-><init>(ILjava/util/concurrent/ThreadFactory;)V
-
-    sget-boolean p1, Lnsc;->a:Z
-
-    invoke-virtual {v0, p1}, Ljava/util/concurrent/ScheduledThreadPoolExecutor;->setRemoveOnCancelPolicy(Z)V
-
-    iput-object v0, p0, Lio9;->a:Ljava/util/concurrent/ScheduledThreadPoolExecutor;
+    iput p3, p0, Lio9;->c:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final b(Ljava/lang/Runnable;)Lam4;
-    .locals 3
-
-    const-wide/16 v0, 0x0
-
-    const/4 v2, 0x0
-
-    invoke-virtual {p0, p1, v0, v1, v2}, Lio9;->c(Ljava/lang/Runnable;JLjava/util/concurrent/TimeUnit;)Lam4;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public final c(Ljava/lang/Runnable;JLjava/util/concurrent/TimeUnit;)Lam4;
-    .locals 6
-
-    iget-boolean v0, p0, Lio9;->b:Z
-
-    if-eqz v0, :cond_0
-
-    sget-object p0, Lbz4;->a:Lbz4;
-
-    return-object p0
-
-    :cond_0
-    const/4 v5, 0x0
-
-    move-object v0, p0
-
-    move-object v1, p1
-
-    move-wide v2, p2
-
-    move-object v4, p4
-
-    invoke-virtual/range {v0 .. v5}, Lio9;->e(Ljava/lang/Runnable;JLjava/util/concurrent/TimeUnit;Lbm4;)Ljrc;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public final e(Ljava/lang/Runnable;JLjava/util/concurrent/TimeUnit;Lbm4;)Ljrc;
-    .locals 3
-
-    new-instance v0, Ljrc;
-
-    invoke-direct {v0, p1, p5}, Ljrc;-><init>(Ljava/lang/Runnable;Lbm4;)V
-
-    if-eqz p5, :cond_0
-
-    invoke-interface {p5, v0}, Lbm4;->a(Lam4;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_0
-
-    return-object v0
-
-    :cond_0
-    const-wide/16 v1, 0x0
-
-    cmp-long p1, p2, v1
-
-    iget-object p0, p0, Lio9;->a:Ljava/util/concurrent/ScheduledThreadPoolExecutor;
-
-    if-gtz p1, :cond_1
-
-    :try_start_0
-    invoke-virtual {p0, v0}, Ljava/util/concurrent/ScheduledThreadPoolExecutor;->submit(Ljava/util/concurrent/Callable;)Ljava/util/concurrent/Future;
-
-    move-result-object p0
-
-    goto :goto_0
-
-    :catch_0
-    move-exception p0
-
-    goto :goto_1
-
-    :cond_1
-    invoke-virtual {p0, v0, p2, p3, p4}, Ljava/util/concurrent/ScheduledThreadPoolExecutor;->schedule(Ljava/util/concurrent/Callable;JLjava/util/concurrent/TimeUnit;)Ljava/util/concurrent/ScheduledFuture;
-
-    move-result-object p0
-
-    :goto_0
-    invoke-virtual {v0, p0}, Ljrc;->a(Ljava/util/concurrent/Future;)V
-    :try_end_0
-    .catch Ljava/util/concurrent/RejectedExecutionException; {:try_start_0 .. :try_end_0} :catch_0
-
-    return-object v0
-
-    :goto_1
-    if-eqz p5, :cond_2
-
-    invoke-interface {p5, v0}, Lbm4;->b(Lam4;)Z
-
-    :cond_2
-    invoke-static {p0}, Lou0;->x(Ljava/lang/Throwable;)V
-
-    return-object v0
-.end method
-
-.method public final f()V
+.method public final add(ILjava/lang/Object;)V
     .locals 1
 
-    iget-boolean v0, p0, Lio9;->b:Z
+    .line 2
+    iget v0, p0, Lio9;->b:I
 
-    if-nez v0, :cond_0
+    add-int/2addr p1, v0
 
-    const/4 v0, 0x1
+    iget-object v0, p0, Lio9;->a:Ljava/lang/Object;
 
-    iput-boolean v0, p0, Lio9;->b:Z
+    invoke-interface {v0, p1, p2}, Ljava/util/List;->add(ILjava/lang/Object;)V
 
-    iget-object p0, p0, Lio9;->a:Ljava/util/concurrent/ScheduledThreadPoolExecutor;
+    .line 3
+    iget p1, p0, Lio9;->c:I
 
-    invoke-virtual {p0}, Ljava/util/concurrent/ScheduledThreadPoolExecutor;->shutdownNow()Ljava/util/List;
+    add-int/lit8 p1, p1, 0x1
 
-    :cond_0
+    iput p1, p0, Lio9;->c:I
+
     return-void
 .end method
 
-.method public final g()Z
-    .locals 0
+.method public final add(Ljava/lang/Object;)Z
+    .locals 2
 
-    iget-boolean p0, p0, Lio9;->b:Z
+    .line 1
+    iget v0, p0, Lio9;->c:I
+
+    add-int/lit8 v1, v0, 0x1
+
+    iput v1, p0, Lio9;->c:I
+
+    iget-object p0, p0, Lio9;->a:Ljava/lang/Object;
+
+    invoke-interface {p0, v0, p1}, Ljava/util/List;->add(ILjava/lang/Object;)V
+
+    const/4 p0, 0x1
 
     return p0
+.end method
+
+.method public final addAll(ILjava/util/Collection;)Z
+    .locals 1
+
+    .line 1
+    iget v0, p0, Lio9;->b:I
+
+    add-int/2addr p1, v0
+
+    iget-object v0, p0, Lio9;->a:Ljava/lang/Object;
+
+    invoke-interface {v0, p1, p2}, Ljava/util/List;->addAll(ILjava/util/Collection;)Z
+
+    .line 2
+    iget p1, p0, Lio9;->c:I
+
+    invoke-interface {p2}, Ljava/util/Collection;->size()I
+
+    move-result v0
+
+    add-int/2addr v0, p1
+
+    iput v0, p0, Lio9;->c:I
+
+    .line 3
+    invoke-interface {p2}, Ljava/util/Collection;->size()I
+
+    move-result p0
+
+    if-lez p0, :cond_0
+
+    const/4 p0, 0x1
+
+    return p0
+
+    :cond_0
+    const/4 p0, 0x0
+
+    return p0
+.end method
+
+.method public final addAll(Ljava/util/Collection;)Z
+    .locals 2
+
+    .line 4
+    iget-object v0, p0, Lio9;->a:Ljava/lang/Object;
+
+    iget v1, p0, Lio9;->c:I
+
+    invoke-interface {v0, v1, p1}, Ljava/util/List;->addAll(ILjava/util/Collection;)Z
+
+    .line 5
+    iget v0, p0, Lio9;->c:I
+
+    invoke-interface {p1}, Ljava/util/Collection;->size()I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    iput v1, p0, Lio9;->c:I
+
+    .line 6
+    invoke-interface {p1}, Ljava/util/Collection;->size()I
+
+    move-result p0
+
+    if-lez p0, :cond_0
+
+    const/4 p0, 0x1
+
+    return p0
+
+    :cond_0
+    const/4 p0, 0x0
+
+    return p0
+.end method
+
+.method public final clear()V
+    .locals 3
+
+    iget v0, p0, Lio9;->c:I
+
+    add-int/lit8 v0, v0, -0x1
+
+    iget v1, p0, Lio9;->b:I
+
+    if-gt v1, v0, :cond_0
+
+    :goto_0
+    iget-object v2, p0, Lio9;->a:Ljava/lang/Object;
+
+    invoke-interface {v2, v0}, Ljava/util/List;->remove(I)Ljava/lang/Object;
+
+    if-eq v0, v1, :cond_0
+
+    add-int/lit8 v0, v0, -0x1
+
+    goto :goto_0
+
+    :cond_0
+    iput v1, p0, Lio9;->c:I
+
+    return-void
+.end method
+
+.method public final contains(Ljava/lang/Object;)Z
+    .locals 3
+
+    iget v0, p0, Lio9;->c:I
+
+    iget v1, p0, Lio9;->b:I
+
+    :goto_0
+    if-ge v1, v0, :cond_1
+
+    iget-object v2, p0, Lio9;->a:Ljava/lang/Object;
+
+    invoke-interface {v2, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object v2
+
+    invoke-static {v2, p1}, Lvyg;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_0
+
+    const/4 p0, 0x1
+
+    return p0
+
+    :cond_0
+    add-int/lit8 v1, v1, 0x1
+
+    goto :goto_0
+
+    :cond_1
+    const/4 p0, 0x0
+
+    return p0
+.end method
+
+.method public final containsAll(Ljava/util/Collection;)Z
+    .locals 1
+
+    invoke-interface {p1}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
+
+    move-result-object p1
+
+    :cond_0
+    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v0
+
+    invoke-virtual {p0, v0}, Lio9;->contains(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    const/4 p0, 0x0
+
+    return p0
+
+    :cond_1
+    const/4 p0, 0x1
+
+    return p0
+.end method
+
+.method public final get(I)Ljava/lang/Object;
+    .locals 1
+
+    invoke-static {p1, p0}, Lv4a;->a(ILjava/util/List;)V
+
+    iget v0, p0, Lio9;->b:I
+
+    add-int/2addr p1, v0
+
+    iget-object p0, p0, Lio9;->a:Ljava/lang/Object;
+
+    invoke-interface {p0, p1}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public final indexOf(Ljava/lang/Object;)I
+    .locals 4
+
+    iget v0, p0, Lio9;->c:I
+
+    iget v1, p0, Lio9;->b:I
+
+    move v2, v1
+
+    :goto_0
+    if-ge v2, v0, :cond_1
+
+    iget-object v3, p0, Lio9;->a:Ljava/lang/Object;
+
+    invoke-interface {v3, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object v3
+
+    invoke-static {v3, p1}, Lvyg;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v3
+
+    if-eqz v3, :cond_0
+
+    sub-int/2addr v2, v1
+
+    return v2
+
+    :cond_0
+    add-int/lit8 v2, v2, 0x1
+
+    goto :goto_0
+
+    :cond_1
+    const/4 p0, -0x1
+
+    return p0
+.end method
+
+.method public final isEmpty()Z
+    .locals 1
+
+    iget v0, p0, Lio9;->c:I
+
+    iget p0, p0, Lio9;->b:I
+
+    if-ne v0, p0, :cond_0
+
+    const/4 p0, 0x1
+
+    return p0
+
+    :cond_0
+    const/4 p0, 0x0
+
+    return p0
+.end method
+
+.method public final iterator()Ljava/util/Iterator;
+    .locals 2
+
+    new-instance v0, Lgo9;
+
+    const/4 v1, 0x0
+
+    invoke-direct {v0, v1, p0}, Lgo9;-><init>(ILjava/util/List;)V
+
+    return-object v0
+.end method
+
+.method public final lastIndexOf(Ljava/lang/Object;)I
+    .locals 3
+
+    iget v0, p0, Lio9;->c:I
+
+    add-int/lit8 v0, v0, -0x1
+
+    iget v1, p0, Lio9;->b:I
+
+    if-gt v1, v0, :cond_1
+
+    :goto_0
+    iget-object v2, p0, Lio9;->a:Ljava/lang/Object;
+
+    invoke-interface {v2, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object v2
+
+    invoke-static {v2, p1}, Lvyg;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_0
+
+    sub-int/2addr v0, v1
+
+    return v0
+
+    :cond_0
+    if-eq v0, v1, :cond_1
+
+    add-int/lit8 v0, v0, -0x1
+
+    goto :goto_0
+
+    :cond_1
+    const/4 p0, -0x1
+
+    return p0
+.end method
+
+.method public final listIterator()Ljava/util/ListIterator;
+    .locals 2
+
+    .line 1
+    new-instance v0, Lgo9;
+
+    const/4 v1, 0x0
+
+    invoke-direct {v0, v1, p0}, Lgo9;-><init>(ILjava/util/List;)V
+
+    return-object v0
+.end method
+
+.method public final listIterator(I)Ljava/util/ListIterator;
+    .locals 1
+
+    .line 2
+    new-instance v0, Lgo9;
+
+    invoke-direct {v0, p1, p0}, Lgo9;-><init>(ILjava/util/List;)V
+
+    return-object v0
+.end method
+
+.method public final remove(I)Ljava/lang/Object;
+    .locals 1
+
+    .line 5
+    invoke-static {p1, p0}, Lv4a;->a(ILjava/util/List;)V
+
+    .line 6
+    iget v0, p0, Lio9;->b:I
+
+    add-int/2addr p1, v0
+
+    iget-object v0, p0, Lio9;->a:Ljava/lang/Object;
+
+    invoke-interface {v0, p1}, Ljava/util/List;->remove(I)Ljava/lang/Object;
+
+    move-result-object p1
+
+    .line 7
+    iget v0, p0, Lio9;->c:I
+
+    add-int/lit8 v0, v0, -0x1
+
+    iput v0, p0, Lio9;->c:I
+
+    return-object p1
+.end method
+
+.method public final remove(Ljava/lang/Object;)Z
+    .locals 4
+
+    .line 1
+    iget v0, p0, Lio9;->c:I
+
+    iget v1, p0, Lio9;->b:I
+
+    :goto_0
+    if-ge v1, v0, :cond_1
+
+    .line 2
+    iget-object v2, p0, Lio9;->a:Ljava/lang/Object;
+
+    invoke-interface {v2, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object v3
+
+    invoke-static {v3, p1}, Lvyg;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v3
+
+    if-eqz v3, :cond_0
+
+    .line 3
+    invoke-interface {v2, v1}, Ljava/util/List;->remove(I)Ljava/lang/Object;
+
+    .line 4
+    iget p1, p0, Lio9;->c:I
+
+    add-int/lit8 p1, p1, -0x1
+
+    iput p1, p0, Lio9;->c:I
+
+    const/4 p0, 0x1
+
+    return p0
+
+    :cond_0
+    add-int/lit8 v1, v1, 0x1
+
+    goto :goto_0
+
+    :cond_1
+    const/4 p0, 0x0
+
+    return p0
+.end method
+
+.method public final removeAll(Ljava/util/Collection;)Z
+    .locals 2
+
+    iget v0, p0, Lio9;->c:I
+
+    invoke-interface {p1}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
+
+    move-result-object p1
+
+    :goto_0
+    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v1
+
+    invoke-virtual {p0, v1}, Lio9;->remove(Ljava/lang/Object;)Z
+
+    goto :goto_0
+
+    :cond_0
+    iget p0, p0, Lio9;->c:I
+
+    if-eq v0, p0, :cond_1
+
+    const/4 p0, 0x1
+
+    return p0
+
+    :cond_1
+    const/4 p0, 0x0
+
+    return p0
+.end method
+
+.method public final retainAll(Ljava/util/Collection;)Z
+    .locals 5
+
+    iget v0, p0, Lio9;->c:I
+
+    add-int/lit8 v1, v0, -0x1
+
+    iget v2, p0, Lio9;->b:I
+
+    if-gt v2, v1, :cond_1
+
+    :goto_0
+    iget-object v3, p0, Lio9;->a:Ljava/lang/Object;
+
+    invoke-interface {v3, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object v4
+
+    invoke-interface {p1, v4}, Ljava/util/Collection;->contains(Ljava/lang/Object;)Z
+
+    move-result v4
+
+    if-nez v4, :cond_0
+
+    invoke-interface {v3, v1}, Ljava/util/List;->remove(I)Ljava/lang/Object;
+
+    iget v3, p0, Lio9;->c:I
+
+    add-int/lit8 v3, v3, -0x1
+
+    iput v3, p0, Lio9;->c:I
+
+    :cond_0
+    if-eq v1, v2, :cond_1
+
+    add-int/lit8 v1, v1, -0x1
+
+    goto :goto_0
+
+    :cond_1
+    iget p0, p0, Lio9;->c:I
+
+    if-eq v0, p0, :cond_2
+
+    const/4 p0, 0x1
+
+    return p0
+
+    :cond_2
+    const/4 p0, 0x0
+
+    return p0
+.end method
+
+.method public final set(ILjava/lang/Object;)Ljava/lang/Object;
+    .locals 1
+
+    invoke-static {p1, p0}, Lv4a;->a(ILjava/util/List;)V
+
+    iget v0, p0, Lio9;->b:I
+
+    add-int/2addr p1, v0
+
+    iget-object p0, p0, Lio9;->a:Ljava/lang/Object;
+
+    invoke-interface {p0, p1, p2}, Ljava/util/List;->set(ILjava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public final size()I
+    .locals 1
+
+    iget v0, p0, Lio9;->c:I
+
+    iget p0, p0, Lio9;->b:I
+
+    sub-int/2addr v0, p0
+
+    return v0
+.end method
+
+.method public final subList(II)Ljava/util/List;
+    .locals 1
+
+    invoke-static {p0, p1, p2}, Lv4a;->b(Ljava/util/List;II)V
+
+    new-instance v0, Lio9;
+
+    invoke-direct {v0, p0, p1, p2}, Lio9;-><init>(Ljava/util/List;II)V
+
+    return-object v0
+.end method
+
+.method public final toArray()[Ljava/lang/Object;
+    .locals 0
+
+    .line 1
+    invoke-static {p0}, Lqe5;->W(Ljava/util/Collection;)[Ljava/lang/Object;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public final toArray([Ljava/lang/Object;)[Ljava/lang/Object;
+    .locals 0
+
+    .line 2
+    invoke-static {p0, p1}, Lqe5;->X(Ljava/util/Collection;[Ljava/lang/Object;)[Ljava/lang/Object;
+
+    move-result-object p0
+
+    return-object p0
 .end method

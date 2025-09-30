@@ -1,80 +1,115 @@
 .class public final Lqd4;
-.super Lksc;
+.super Lzi0;
 .source "SourceFile"
 
 
-# static fields
-.field public static final b:Lqd4;
+# instance fields
+.field public final synthetic X:I
+
+.field public final Y:Ljava/lang/Object;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 7
+.method public synthetic constructor <init>(IJJLjava/lang/Object;)V
+    .locals 0
 
-    new-instance v0, Lqd4;
+    iput p1, p0, Lqd4;->X:I
 
-    sget v5, Lmme;->c:I
+    const/4 p1, 0x1
 
-    sget v6, Lmme;->d:I
+    invoke-direct/range {p0 .. p5}, Lzi0;-><init>(IJJ)V
 
-    sget-wide v2, Lmme;->e:J
-
-    sget-object v4, Lmme;->a:Ljava/lang/String;
-
-    invoke-direct {v0}, Ljx3;-><init>()V
-
-    new-instance v1, Lnx3;
-
-    invoke-direct/range {v1 .. v6}, Lnx3;-><init>(JLjava/lang/String;II)V
-
-    iput-object v1, v0, Lksc;->a:Lnx3;
-
-    sput-object v0, Lqd4;->b:Lqd4;
+    iput-object p6, p0, Lqd4;->Y:Ljava/lang/Object;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final close()V
-    .locals 1
+.method public final a()J
+    .locals 3
 
-    new-instance p0, Ljava/lang/UnsupportedOperationException;
+    iget v0, p0, Lqd4;->X:I
 
-    const-string v0, "Dispatchers.Default cannot be closed"
+    packed-switch v0, :pswitch_data_0
 
-    invoke-direct {p0, v0}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+    invoke-virtual {p0}, Lzi0;->c()V
 
-    throw p0
+    iget-object v0, p0, Lqd4;->Y:Ljava/lang/Object;
+
+    check-cast v0, Lod4;
+
+    iget-wide v1, p0, Lzi0;->o:J
+
+    invoke-virtual {v0, v1, v2}, Lod4;->i(J)J
+
+    move-result-wide v0
+
+    return-wide v0
+
+    :pswitch_0
+    invoke-virtual {p0}, Lzi0;->c()V
+
+    iget-object v0, p0, Lqd4;->Y:Ljava/lang/Object;
+
+    check-cast v0, Lod4;
+
+    iget-wide v1, p0, Lzi0;->o:J
+
+    invoke-virtual {v0, v1, v2}, Lod4;->i(J)J
+
+    move-result-wide v0
+
+    return-wide v0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method
 
-.method public final limitedParallelism(ILjava/lang/String;)Ljx3;
-    .locals 1
+.method public final b()J
+    .locals 3
 
-    invoke-static {p1}, Lkotlinx/coroutines/internal/LimitedDispatcherKt;->checkParallelism(I)V
+    iget v0, p0, Lqd4;->X:I
 
-    sget v0, Lmme;->c:I
+    packed-switch v0, :pswitch_data_0
 
-    if-lt p1, v0, :cond_0
+    invoke-virtual {p0}, Lzi0;->c()V
 
-    invoke-static {p0, p2}, Lkotlinx/coroutines/internal/LimitedDispatcherKt;->namedOrThis(Ljx3;Ljava/lang/String;)Ljx3;
+    iget-object v0, p0, Lqd4;->Y:Ljava/lang/Object;
 
-    move-result-object p0
+    check-cast v0, Lod4;
 
-    return-object p0
+    iget-wide v1, p0, Lzi0;->o:J
 
-    :cond_0
-    invoke-super {p0, p1, p2}, Ljx3;->limitedParallelism(ILjava/lang/String;)Ljx3;
+    invoke-virtual {v0, v1, v2}, Lod4;->g(J)J
 
-    move-result-object p0
+    move-result-wide v0
 
-    return-object p0
-.end method
+    return-wide v0
 
-.method public final toString()Ljava/lang/String;
-    .locals 0
+    :pswitch_0
+    invoke-virtual {p0}, Lzi0;->c()V
 
-    const-string p0, "Dispatchers.Default"
+    iget-object v0, p0, Lqd4;->Y:Ljava/lang/Object;
 
-    return-object p0
+    check-cast v0, Lod4;
+
+    iget-wide v1, p0, Lzi0;->o:J
+
+    invoke-virtual {v0, v1, v2}, Lod4;->g(J)J
+
+    move-result-wide v0
+
+    return-wide v0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

@@ -1,23 +1,13 @@
-.class public abstract Lgb7;
-.super Ljava/lang/Object;
+.class public final Lgb7;
+.super Ljx3;
 .source "SourceFile"
 
 
-# static fields
-.field public static final synthetic a:I
+# virtual methods
+.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
+    invoke-static {p1}, Lqe5;->V(Ljava/lang/Object;)V
 
-# direct methods
-.method static constructor <clinit>()V
-    .locals 1
-
-    sget-object v0, Lq42;->a:[C
-
-    invoke-virtual {v0}, [C->clone()Ljava/lang/Object;
-
-    sget-object v0, Lq42;->b:[B
-
-    invoke-virtual {v0}, [B->clone()Ljava/lang/Object;
-
-    return-void
+    return-object p1
 .end method

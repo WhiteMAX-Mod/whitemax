@@ -1,214 +1,351 @@
-.class public final Lawf;
-.super Lqde;
+.class public final synthetic Lawf;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Ll66;
+.implements Lqc6;
+.implements Lpm3;
 
 
 # instance fields
-.field public X:I
+.field public final synthetic a:I
 
-.field public synthetic Y:Ljava/lang/Object;
-
-.field public final synthetic Z:Lqvf;
-
-.field public final synthetic o0:Llwf;
-
-.field public final synthetic p0:Luvf;
+.field public final synthetic b:Lbwf;
 
 
 # direct methods
-.method public constructor <init>(Lqvf;Luvf;Llwf;Lkotlin/coroutines/Continuation;)V
+.method public synthetic constructor <init>(Lbwf;I)V
     .locals 0
 
-    iput-object p1, p0, Lawf;->Z:Lqvf;
+    iput p2, p0, Lawf;->a:I
 
-    iput-object p3, p0, Lawf;->o0:Llwf;
+    iput-object p1, p0, Lawf;->b:Lbwf;
 
-    iput-object p2, p0, Lawf;->p0:Luvf;
-
-    const/4 p1, 0x2
-
-    invoke-direct {p0, p1, p4}, Lqde;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public accept(Ljava/lang/Object;)V
+    .locals 4
 
-    check-cast p1, Lgn0;
+    iget v0, p0, Lawf;->a:I
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    iget-object p0, p0, Lawf;->b:Lbwf;
 
-    invoke-virtual {p0, p1, p2}, Lawf;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    packed-switch v0, :pswitch_data_0
+
+    check-cast p1, Lrvf;
+
+    iget-object p0, p0, Lbwf;->b:Lewf;
+
+    invoke-virtual {p0}, Lewf;->a()Lu2e;
 
     move-result-object p0
 
-    check-cast p0, Lawf;
+    new-instance v0, Lzvf;
 
-    sget-object p1, Le5f;->a:Le5f;
+    const/4 v1, 0x2
 
-    invoke-virtual {p0, p1}, Lawf;->o(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-direct {v0, p1, v1}, Lzvf;-><init>(Lrvf;I)V
+
+    new-instance v1, Lic3;
+
+    const/4 v2, 0x2
+
+    invoke-direct {v1, p0, v2, v0}, Lic3;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+
+    invoke-virtual {v1}, Lhc3;->k()Ly4a;
+
+    move-result-object p0
+
+    sget-object v0, Lvyg;->d:Lsh9;
+
+    new-instance v1, Lzvf;
+
+    const/4 v2, 0x0
+
+    invoke-direct {v1, p1, v2}, Lzvf;-><init>(Lrvf;I)V
+
+    new-instance v2, Li5;
+
+    const/16 v3, 0x18
+
+    invoke-direct {v2, v3, p1}, Li5;-><init>(ILjava/lang/Object;)V
+
+    invoke-static {p0, v0, v1, v2}, Lzxa;->y(Ly4a;Lpm3;Lpm3;Lc6;)V
+
+    return-void
+
+    :pswitch_0
+    check-cast p1, Loq4;
+
+    monitor-enter p0
+
+    :try_start_0
+    iget-object v0, p0, Lbwf;->h:Lncg;
+
+    invoke-virtual {v0, p1}, Lncg;->a(Loq4;)Z
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    monitor-exit p0
+
+    return-void
+
+    :catchall_0
+    move-exception p1
+
+    :try_start_1
+    monitor-exit p0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    throw p1
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public apply(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 7
+
+    iget v0, p0, Lawf;->a:I
+
+    iget-object p0, p0, Lawf;->b:Lbwf;
+
+    const/4 v1, 0x1
+
+    check-cast p1, Lrvf;
+
+    packed-switch v0, :pswitch_data_0
+
+    new-instance v0, Lx1d;
+
+    const/16 v2, 0x14
+
+    invoke-direct {v0, p0, v2, p1}, Lx1d;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+
+    new-instance p1, Ls7a;
+
+    invoke-direct {p1, v1, v0}, Ls7a;-><init>(ILjava/lang/Object;)V
+
+    iget-object v0, p0, Lbwf;->e:Lb6d;
+
+    iget-object v0, v0, Lb6d;->a:Lv5d;
+
+    invoke-virtual {p1, v0}, Lk2e;->m(Lv5d;)Ld3e;
+
+    move-result-object p1
+
+    iget-object p0, p0, Lbwf;->f:Lv5d;
+
+    invoke-virtual {p1, p0}, Lk2e;->i(Lv5d;)Ld3e;
 
     move-result-object p0
 
     return-object p0
-.end method
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 3
+    :pswitch_0
+    iget-boolean v0, p1, Lrvf;->b:Z
 
-    new-instance v0, Lawf;
+    const-string v2, "bwf"
 
-    iget-object v1, p0, Lawf;->o0:Llwf;
+    if-eqz v0, :cond_0
 
-    iget-object v2, p0, Lawf;->p0:Luvf;
+    iget-object v0, p1, Lrvf;->d:Ljava/lang/String;
 
-    iget-object p0, p0, Lawf;->Z:Lqvf;
+    invoke-static {v0}, Lw9d;->e(Ljava/lang/String;)Z
 
-    invoke-direct {v0, p0, v2, v1, p2}, Lawf;-><init>(Lqvf;Luvf;Llwf;Lkotlin/coroutines/Continuation;)V
+    move-result v0
 
-    iput-object p1, v0, Lawf;->Y:Ljava/lang/Object;
+    if-eqz v0, :cond_0
 
-    return-object v0
-.end method
+    const-string p0, "convertVideo: exists result = %s"
 
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 12
-
-    iget v0, p0, Lawf;->X:I
-
-    iget-object v1, p0, Lawf;->p0:Luvf;
-
-    const/4 v2, 0x1
-
-    iget-object v3, p0, Lawf;->o0:Llwf;
-
-    if-eqz v0, :cond_1
-
-    if-ne v0, v2, :cond_0
-
-    invoke-static {p1}, Lsgg;->Z(Ljava/lang/Object;)V
-
-    goto :goto_1
-
-    :cond_0
-    new-instance p0, Ljava/lang/IllegalStateException;
-
-    const-string p1, "call to \'resume\' before \'invoke\' with coroutine"
-
-    invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p0
-
-    :cond_1
-    invoke-static {p1}, Lsgg;->Z(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Lawf;->Y:Ljava/lang/Object;
-
-    check-cast p1, Lgn0;
-
-    iget-boolean v0, p1, Lgn0;->a:Z
-
-    iget-object v4, p0, Lawf;->Z:Lqvf;
-
-    if-eqz v0, :cond_2
-
-    new-instance v5, Ltvf;
-
-    iget-object v6, v4, Lqvf;->b:Ljava/lang/String;
-
-    sget-object v7, Llwf;->i:Ljava/util/List;
-
-    iget-boolean v8, p1, Lgn0;->b:Z
-
-    iget-boolean v9, p1, Lgn0;->c:Z
-
-    iget-boolean v10, p1, Lgn0;->d:Z
-
-    iget-object p1, v3, Llwf;->d:Lje7;
-
-    invoke-interface {p1}, Lje7;->getValue()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lwi4;
-
-    invoke-virtual {p1}, Lti4;->a()Ljava/lang/String;
-
-    move-result-object v11
-
-    invoke-direct/range {v5 .. v11}, Ltvf;-><init>(Ljava/lang/String;Ljava/util/List;ZZZLjava/lang/String;)V
-
-    iget-object p1, v3, Llwf;->a:Lia7;
-
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    sget-object v0, Ltvf;->Companion:Lsvf;
-
-    invoke-virtual {v0}, Lsvf;->serializer()Lcc7;
+    filled-new-array {p1}, [Ljava/lang/Object;
 
     move-result-object v0
 
-    invoke-virtual {p1, v0, v5}, Lia7;->b(Lcc7;Ljava/lang/Object;)Ljava/lang/String;
+    invoke-static {v2, p0, v0}, Ljtg;->k(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    move-result-object p1
+    invoke-static {p1}, Lk2e;->g(Ljava/lang/Object;)Ls7a;
+
+    move-result-object p0
+
+    goto/16 :goto_1
+
+    :cond_0
+    const-string v0, "convertVideo: start convert = %s"
+
+    filled-new-array {p1}, [Ljava/lang/Object;
+
+    move-result-object v3
+
+    invoke-static {v2, v0, v3}, Ljtg;->k(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    iget-object v0, p1, Lrvf;->c:Ljava/lang/String;
+
+    invoke-static {v0}, Lm7g;->m(Ljava/lang/CharSequence;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_1
+
+    invoke-static {p1}, Lk2e;->g(Ljava/lang/Object;)Ls7a;
+
+    move-result-object v0
+
+    goto :goto_0
+
+    :cond_1
+    iget-object v0, p0, Lbwf;->a:Lhl8;
+
+    iget-object v2, p1, Lrvf;->a:Lsvf;
+
+    iget-object v2, v2, Lsvf;->a:Ljava/lang/String;
+
+    check-cast v0, Lbj0;
+
+    invoke-virtual {v0, v2}, Lbj0;->c(Ljava/lang/String;)Ljw3;
+
+    move-result-object v0
+
+    if-nez v0, :cond_2
+
+    new-instance v0, Lru/ok/tamtam/media/converter/VideoConverterException;
+
+    const-string v2, "failed to prepare videoConversion files"
+
+    invoke-direct {v0, v2}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
+
+    invoke-static {v0}, Lk2e;->f(Ljava/lang/Throwable;)Ls7a;
+
+    move-result-object v0
 
     goto :goto_0
 
     :cond_2
-    new-instance p1, Luwf;
+    iget-object v2, v0, Ljw3;->e:Ljava/lang/String;
 
-    iget-object v0, v4, Lqvf;->b:Ljava/lang/String;
+    iget-wide v3, v0, Ljw3;->b:J
 
-    invoke-direct {p1, v0}, Luwf;-><init>(Ljava/lang/String;)V
+    const-wide/16 v5, 0x0
 
-    iget-object v0, v3, Llwf;->a:Lia7;
+    cmp-long v3, v3, v5
 
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    if-nez v3, :cond_3
 
-    sget-object v4, Luwf;->Companion:Ltwf;
+    new-instance v0, Lru/ok/tamtam/media/converter/VideoConverterException;
 
-    invoke-virtual {v4}, Ltwf;->serializer()Lcc7;
+    const-string v2, "content is zero length"
 
-    move-result-object v4
+    invoke-direct {v0, v2}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {v0, v4, p1}, Lia7;->b(Lcc7;Ljava/lang/Object;)Ljava/lang/String;
+    invoke-static {v0}, Lk2e;->f(Ljava/lang/Throwable;)Ls7a;
 
-    move-result-object p1
+    move-result-object v0
 
-    :goto_0
-    iget-object v0, v3, Llwf;->g:Lst0;
-
-    new-instance v4, Lv97;
-
-    iget-object v5, v1, Luvf;->a:Ljava/lang/String;
-
-    invoke-direct {v4, v5, p1}, Lv97;-><init>(Ljava/lang/String;Ljava/lang/String;)V
-
-    iput v2, p0, Lawf;->X:I
-
-    invoke-interface {v0, v4, p0}, Lp3d;->h(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    sget-object p1, Lpx3;->a:Lpx3;
-
-    if-ne p0, p1, :cond_3
-
-    return-object p1
+    goto :goto_0
 
     :cond_3
+    invoke-static {v2}, Lm7g;->m(Ljava/lang/CharSequence;)Z
+
+    move-result v3
+
+    if-eqz v3, :cond_4
+
+    new-instance v2, Lqz;
+
+    const/16 v3, 0x1c
+
+    invoke-direct {v2, p0, p1, v0, v3}, Lqz;-><init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;I)V
+
+    new-instance v0, Ls7a;
+
+    invoke-direct {v0, v1, v2}, Ls7a;-><init>(ILjava/lang/Object;)V
+
+    iget-object v2, p0, Lbwf;->g:La6d;
+
+    iget-object v2, v2, La6d;->a:Lv5d;
+
+    invoke-virtual {v0, v2}, Lk2e;->m(Lv5d;)Ld3e;
+
+    move-result-object v0
+
+    iget-object v2, p0, Lbwf;->f:Lv5d;
+
+    invoke-virtual {v0, v2}, Lk2e;->i(Lv5d;)Ld3e;
+
+    move-result-object v0
+
+    goto :goto_0
+
+    :cond_4
+    invoke-virtual {p1}, Lrvf;->a()Lqa6;
+
+    move-result-object v0
+
+    iput-object v2, v0, Lqa6;->c:Ljava/lang/Object;
+
+    new-instance v2, Lrvf;
+
+    invoke-direct {v2, v0}, Lrvf;-><init>(Lqa6;)V
+
+    invoke-static {v2}, Lk2e;->g(Ljava/lang/Object;)Ls7a;
+
+    move-result-object v0
+
+    :goto_0
+    new-instance v2, Lawf;
+
+    const/4 v3, 0x2
+
+    invoke-direct {v2, p0, v3}, Lawf;-><init>(Lbwf;I)V
+
+    new-instance v4, Lr2e;
+
+    invoke-direct {v4, v0, v2, v1}, Lr2e;-><init>(Lk2e;Lpm3;I)V
+
+    new-instance v0, Lawf;
+
+    const/4 v2, 0x3
+
+    invoke-direct {v0, p0, v2}, Lawf;-><init>(Lbwf;I)V
+
+    new-instance v2, Lu2e;
+
+    const/4 v5, 0x0
+
+    invoke-direct {v2, v4, v0, v5}, Lu2e;-><init>(Lk2e;Lqc6;I)V
+
+    new-instance v0, Lzvf;
+
+    invoke-direct {v0, p1, v1}, Lzvf;-><init>(Lrvf;I)V
+
+    new-instance p1, Lr2e;
+
+    invoke-direct {p1, v2, v0, v5}, Lr2e;-><init>(Lk2e;Lpm3;I)V
+
+    new-instance v0, Lawf;
+
+    invoke-direct {v0, p0, v3}, Lawf;-><init>(Lbwf;I)V
+
+    new-instance p0, Lr2e;
+
+    invoke-direct {p0, p1, v0, v1}, Lr2e;-><init>(Lk2e;Lpm3;I)V
+
     :goto_1
-    iget-object p0, v1, Luvf;->a:Ljava/lang/String;
-
-    invoke-static {v3, p0}, Llwf;->e(Llwf;Ljava/lang/String;)V
-
-    sget-object p0, Le5f;->a:Le5f;
-
     return-object p0
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

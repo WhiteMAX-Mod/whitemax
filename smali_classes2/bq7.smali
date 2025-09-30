@@ -1,3 +1,8 @@
-.class public final Lbq7;
-.super Ldq7;
+.class public interface abstract Lbq7;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+
+# virtual methods
+.method public abstract n()Ljava/lang/String;
+.end method

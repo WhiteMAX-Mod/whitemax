@@ -1,69 +1,54 @@
-.class public final Lmh4;
-.super Lsdb;
+.class public final synthetic Lmh4;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lqm3;
+
+
+# instance fields
+.field public final synthetic a:Loh4;
+
+.field public final synthetic b:Ljava/lang/String;
+
+.field public final synthetic c:Lkr1;
+
+.field public final synthetic d:Ljava/util/List;
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;)V
-    .locals 2
+.method public synthetic constructor <init>(Loh4;Ljava/lang/String;Lkr1;Ljava/util/List;)V
+    .locals 0
 
-    new-instance v0, Lone/me/sdk/uikit/common/button/OneMeButton;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 v1, 0x0
+    iput-object p1, p0, Lmh4;->a:Loh4;
 
-    invoke-direct {v0, p1, v1}, Lone/me/sdk/uikit/common/button/OneMeButton;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
+    iput-object p2, p0, Lmh4;->b:Ljava/lang/String;
 
-    invoke-direct {p0, v0}, Lccc;-><init>(Landroid/view/View;)V
+    iput-object p3, p0, Lmh4;->c:Lkr1;
 
-    new-instance p0, Landroid/view/ViewGroup$LayoutParams;
-
-    const/4 p1, -0x1
-
-    const/4 v1, -0x2
-
-    invoke-direct {p0, p1, v1}, Landroid/view/ViewGroup$LayoutParams;-><init>(II)V
-
-    invoke-virtual {v0, p0}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
-
-    sget-object p0, Lt4a;->c:Lt4a;
-
-    invoke-virtual {v0, p0}, Lone/me/sdk/uikit/common/button/OneMeButton;->setSize(Lt4a;)V
-
-    sget-object p0, Ls4a;->c:Ls4a;
-
-    invoke-virtual {v0, p0}, Lone/me/sdk/uikit/common/button/OneMeButton;->setMode(Ls4a;)V
-
-    sget-object p0, Lq4a;->b:Lq4a;
-
-    invoke-virtual {v0, p0}, Lone/me/sdk/uikit/common/button/OneMeButton;->setAppearance(Lq4a;)V
+    iput-object p4, p0, Lmh4;->d:Ljava/util/List;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final x(Lol7;)V
-    .locals 1
+.method public final accept(Ljava/lang/Object;)V
+    .locals 2
 
-    check-cast p1, Lnh4;
+    check-cast p1, Lorg/webrtc/PeerConnection;
 
-    iget-object p0, p0, Lccc;->a:Landroid/view/View;
+    iget-object p1, p0, Lmh4;->a:Loh4;
 
-    move-object v0, p0
+    iget-object v0, p0, Lmh4;->b:Ljava/lang/String;
 
-    check-cast v0, Lone/me/sdk/uikit/common/button/OneMeButton;
+    iget-object v1, p0, Lmh4;->c:Lkr1;
 
-    iget-object p1, p1, Lnh4;->a:Lhoe;
+    iget-object p0, p0, Lmh4;->d:Ljava/util/List;
 
-    invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
-
-    move-result-object p0
-
-    invoke-virtual {p1, p0}, Lmoe;->b(Landroid/content/Context;)Ljava/lang/CharSequence;
-
-    move-result-object p0
-
-    invoke-virtual {v0, p0}, Lone/me/sdk/uikit/common/button/OneMeButton;->setText(Ljava/lang/CharSequence;)V
+    invoke-virtual {p1, v0, v1, p0}, Loh4;->u(Ljava/lang/String;Lkr1;Ljava/util/List;)V
 
     return-void
 .end method

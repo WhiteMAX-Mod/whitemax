@@ -26,7 +26,7 @@
         "Lkotlin/Function1;",
         "create",
         "<init>",
-        "(ILx56;)V",
+        "(ILbc6;)V",
         "tryForbidNewElements",
         "()I",
         "",
@@ -43,7 +43,7 @@
         "stateRepresentation",
         "toString",
         "I",
-        "Lx56;",
+        "Lbc6;",
         "Lkotlinx/atomicfu/AtomicInt;",
         "controlState",
         "Lkotlinx/atomicfu/AtomicArray;",
@@ -67,10 +67,10 @@
 # instance fields
 .field private volatile synthetic controlState$volatile:I
 
-.field private final create:Lx56;
+.field private final create:Lbc6;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lx56;"
+            "Lbc6;"
         }
     .end annotation
 .end field
@@ -97,12 +97,12 @@
     return-void
 .end method
 
-.method public constructor <init>(ILx56;)V
+.method public constructor <init>(ILbc6;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(I",
-            "Lx56;",
+            "Lbc6;",
             ")V"
         }
     .end annotation
@@ -111,7 +111,7 @@
 
     iput p1, p0, Lkotlinx/coroutines/internal/OnDemandAllocatingPool;->maxCapacity:I
 
-    iput-object p2, p0, Lkotlinx/coroutines/internal/OnDemandAllocatingPool;->create:Lx56;
+    iput-object p2, p0, Lkotlinx/coroutines/internal/OnDemandAllocatingPool;->create:Lbc6;
 
     new-instance p2, Ljava/util/concurrent/atomic/AtomicReferenceArray;
 
@@ -165,14 +165,14 @@
     return p0
 .end method
 
-.method private final synthetic loop$atomicfu(Ljava/lang/Object;Ljava/util/concurrent/atomic/AtomicIntegerFieldUpdater;Lx56;)V
+.method private final synthetic loop$atomicfu(Ljava/lang/Object;Ljava/util/concurrent/atomic/AtomicIntegerFieldUpdater;Lbc6;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Ljava/lang/Object;",
             "Ljava/util/concurrent/atomic/AtomicIntegerFieldUpdater;",
-            "Lx56;",
+            "Lbc6;",
             ")V"
         }
     .end annotation
@@ -186,7 +186,7 @@
 
     move-result-object p0
 
-    invoke-interface {p3, p0}, Lx56;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {p3, p0}, Lbc6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     goto :goto_0
 .end method
@@ -287,13 +287,13 @@
 
     move-result-object v0
 
-    iget-object p0, p0, Lkotlinx/coroutines/internal/OnDemandAllocatingPool;->create:Lx56;
+    iget-object p0, p0, Lkotlinx/coroutines/internal/OnDemandAllocatingPool;->create:Lbc6;
 
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v2
 
-    invoke-interface {p0, v2}, Lx56;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {p0, v2}, Lbc6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p0
 
@@ -347,7 +347,7 @@
     if-eqz v2, :cond_0
 
     :goto_0
-    invoke-static {v4, v1}, Lqo8;->H(II)Lc37;
+    invoke-static {v4, v1}, Lkp;->M(II)Lw97;
 
     move-result-object v0
 
@@ -355,7 +355,7 @@
 
     const/16 v2, 0xa
 
-    invoke-static {v0, v2}, Lr43;->k0(Ljava/lang/Iterable;I)I
+    invoke-static {v0, v2}, Ls73;->O(Ljava/lang/Iterable;I)I
 
     move-result v2
 
@@ -374,9 +374,9 @@
 
     move-object v2, v0
 
-    check-cast v2, Lb37;
+    check-cast v2, Lv97;
 
-    invoke-virtual {v2}, Lb37;->nextInt()I
+    invoke-virtual {v2}, Lv97;->nextInt()I
 
     move-result v2
 
@@ -418,7 +418,7 @@
 
     const/4 v2, 0x0
 
-    invoke-static {v2, v1}, Lqo8;->H(II)Lc37;
+    invoke-static {v2, v1}, Lkp;->M(II)Lw97;
 
     move-result-object v1
 
@@ -426,7 +426,7 @@
 
     const/16 v3, 0xa
 
-    invoke-static {v1, v3}, Lr43;->k0(Ljava/lang/Iterable;I)I
+    invoke-static {v1, v3}, Ls73;->O(Ljava/lang/Iterable;I)I
 
     move-result v3
 
@@ -445,9 +445,9 @@
 
     move-object v3, v1
 
-    check-cast v3, Lb37;
+    check-cast v3, Lv97;
 
-    invoke-virtual {v3}, Lb37;->nextInt()I
+    invoke-virtual {v3}, Lv97;->nextInt()I
 
     move-result v3
 
@@ -482,7 +482,7 @@
     const-string v0, ""
 
     :goto_1
-    invoke-static {p0, v0}, Lzt1;->g(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p0, v0}, Lmw1;->h(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
 

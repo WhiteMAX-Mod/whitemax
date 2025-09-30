@@ -1,190 +1,130 @@
-.class public final Lpa6;
+.class public final synthetic Lpa6;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-
-# static fields
-.field public static final c:Ljava/util/regex/Pattern;
+# interfaces
+.implements Lzb6;
 
 
 # instance fields
-.field public a:I
+.field public final synthetic a:I
 
-.field public b:I
+.field public final synthetic b:Lyvg;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public synthetic constructor <init>(Lyvg;I)V
+    .locals 0
 
-    const-string v0, "^ [0-9a-fA-F]{8} ([0-9a-fA-F]{8}) ([0-9a-fA-F]{8})"
+    iput p2, p0, Lpa6;->a:I
 
-    invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
-
-    move-result-object v0
-
-    sput-object v0, Lpa6;->c:Ljava/util/regex/Pattern;
-
-    return-void
-.end method
-
-.method public constructor <init>()V
-    .locals 1
+    iput-object p1, p0, Lpa6;->b:Lyvg;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    const/4 v0, -0x1
-
-    iput v0, p0, Lpa6;->a:I
-
-    iput v0, p0, Lpa6;->b:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Ljava/lang/String;)Z
-    .locals 4
+.method public final invoke()Ljava/lang/Object;
+    .locals 3
 
-    sget-object v0, Lpa6;->c:Ljava/util/regex/Pattern;
+    iget v0, p0, Lpa6;->a:I
 
-    invoke-virtual {v0, p1}, Ljava/util/regex/Pattern;->matcher(Ljava/lang/CharSequence;)Ljava/util/regex/Matcher;
+    iget-object p0, p0, Lpa6;->b:Lyvg;
 
-    move-result-object p1
+    packed-switch v0, :pswitch_data_0
 
-    invoke-virtual {p1}, Ljava/util/regex/Matcher;->find()Z
+    invoke-static {}, Ljava/lang/Runtime;->getRuntime()Ljava/lang/Runtime;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/Runtime;->availableProcessors()I
 
     move-result v0
 
-    if-eqz v0, :cond_1
+    iget-object p0, p0, Lyvg;->b:Ljava/lang/Object;
 
-    const/4 v0, 0x1
+    check-cast p0, Lcl7;
 
-    :try_start_0
-    invoke-virtual {p1, v0}, Ljava/util/regex/Matcher;->group(I)Ljava/lang/String;
+    invoke-interface {p0}, Lcl7;->getValue()Ljava/lang/Object;
 
-    move-result-object v1
+    move-result-object p0
 
-    sget v2, Lpaf;->a:I
+    check-cast p0, Lkha;
 
-    const/16 v2, 0x10
+    sget-object v1, Lkha;->p:[Lxi7;
 
-    invoke-static {v1, v2}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;I)I
+    const/4 v1, 0x5
 
-    move-result v1
+    const-string v2, "frsc-sch"
 
-    const/4 v3, 0x2
+    invoke-virtual {p0, v0, v2, v0, v1}, Lkha;->f(ILjava/lang/String;II)Ljava/util/concurrent/ExecutorService;
 
-    invoke-virtual {p1, v3}, Ljava/util/regex/Matcher;->group(I)Ljava/lang/String;
+    move-result-object v0
 
-    move-result-object p1
+    invoke-virtual {p0, v0, v2}, Lkha;->h(Ljava/util/concurrent/ExecutorService;Ljava/lang/String;)Ljava/util/concurrent/ScheduledExecutorService;
 
-    invoke-static {p1, v2}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;I)I
+    move-result-object p0
 
-    move-result p1
+    return-object p0
 
-    if-gtz v1, :cond_0
+    :pswitch_0
+    iget-object p0, p0, Lyvg;->b:Ljava/lang/Object;
 
-    if-lez p1, :cond_1
+    check-cast p0, Lcl7;
 
-    :cond_0
-    iput v1, p0, Lpa6;->a:I
+    invoke-interface {p0}, Lcl7;->getValue()Ljava/lang/Object;
 
-    iput p1, p0, Lpa6;->b:I
-    :try_end_0
-    .catch Ljava/lang/NumberFormatException; {:try_start_0 .. :try_end_0} :catch_0
+    move-result-object p0
 
-    return v0
+    check-cast p0, Lkha;
 
-    :catch_0
-    :cond_1
-    const/4 p0, 0x0
+    invoke-virtual {p0}, Lkha;->a()Ljava/util/concurrent/ExecutorService;
 
-    return p0
-.end method
+    move-result-object p0
 
-.method public final b(Lx79;)V
-    .locals 5
+    return-object p0
 
-    const/4 v0, 0x0
+    :pswitch_1
+    iget-object p0, p0, Lyvg;->b:Ljava/lang/Object;
 
-    :goto_0
-    iget-object v1, p1, Lx79;->a:[Lv79;
+    check-cast p0, Lcl7;
 
-    array-length v2, v1
+    invoke-interface {p0}, Lcl7;->getValue()Ljava/lang/Object;
 
-    if-ge v0, v2, :cond_2
+    move-result-object p0
 
-    aget-object v1, v1, v0
+    check-cast p0, Lkha;
 
-    instance-of v2, v1, Lx53;
+    invoke-virtual {p0}, Lkha;->a()Ljava/util/concurrent/ExecutorService;
 
-    const-string v3, "iTunSMPB"
+    move-result-object p0
 
-    if-eqz v2, :cond_0
+    return-object p0
 
-    check-cast v1, Lx53;
+    :pswitch_2
+    iget-object p0, p0, Lyvg;->b:Ljava/lang/Object;
 
-    iget-object v2, v1, Lx53;->c:Ljava/lang/String;
+    check-cast p0, Lcl7;
 
-    invoke-virtual {v3, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-interface {p0}, Lcl7;->getValue()Ljava/lang/Object;
 
-    move-result v2
+    move-result-object p0
 
-    if-eqz v2, :cond_1
+    check-cast p0, Lkha;
 
-    iget-object v1, v1, Lx53;->o:Ljava/lang/String;
+    invoke-virtual {p0}, Lkha;->c()Ljava/util/concurrent/ExecutorService;
 
-    invoke-virtual {p0, v1}, Lpa6;->a(Ljava/lang/String;)Z
+    move-result-object p0
 
-    move-result v1
+    return-object p0
 
-    if-eqz v1, :cond_1
-
-    goto :goto_1
-
-    :cond_0
-    instance-of v2, v1, Lo37;
-
-    if-eqz v2, :cond_1
-
-    check-cast v1, Lo37;
-
-    const-string v2, "com.apple.iTunes"
-
-    iget-object v4, v1, Lo37;->b:Ljava/lang/String;
-
-    invoke-virtual {v2, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_1
-
-    iget-object v2, v1, Lo37;->c:Ljava/lang/String;
-
-    invoke-virtual {v3, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_1
-
-    iget-object v1, v1, Lo37;->o:Ljava/lang/String;
-
-    invoke-virtual {p0, v1}, Lpa6;->a(Ljava/lang/String;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_1
-
-    goto :goto_1
-
-    :cond_1
-    add-int/lit8 v0, v0, 0x1
-
-    goto :goto_0
-
-    :cond_2
-    :goto_1
-    return-void
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

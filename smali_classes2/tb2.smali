@@ -1,77 +1,133 @@
-.class public final Ltb2;
-.super Lmjb;
+.class public final enum Ltb2;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
 
-# virtual methods
-.method public final x(Lol7;)V
-    .locals 5
+# static fields
+.field public static final enum X:Ltb2;
 
-    check-cast p1, Lyfb;
+.field public static final enum Y:Ltb2;
 
-    iget-object p0, p0, Lccc;->a:Landroid/view/View;
+.field public static final enum Z:Ltb2;
 
-    check-cast p0, Lqb2;
+.field public static final enum a:Ltb2;
 
-    iget-object p1, p1, Lyfb;->a:Lgb2;
+.field public static final enum b:Ltb2;
 
-    iget-object v0, p1, Lgb2;->e:Ljava/lang/String;
+.field public static final enum c:Ltb2;
 
-    invoke-virtual {p0, v0}, Lqb2;->setLink(Ljava/lang/String;)V
+.field public static final enum o:Ltb2;
 
-    iget-boolean v0, p1, Lgb2;->f:Z
+.field public static final synthetic r0:[Ltb2;
 
-    invoke-virtual {p0, v0}, Lqb2;->setLoading(Z)V
 
-    iget-object v0, p1, Lgb2;->d:Ljava/lang/String;
+# direct methods
+.method static constructor <clinit>()V
+    .locals 9
 
-    invoke-virtual {p0, v0}, Lqb2;->setChatTitle(Ljava/lang/String;)V
+    new-instance v0, Ltb2;
 
-    iget-wide v0, p1, Lgb2;->b:J
+    const-string v1, "ACTIVE"
 
-    iget-object v2, p1, Lgb2;->a:Ljava/lang/String;
+    const/4 v2, 0x0
 
-    iget-object v3, p1, Lgb2;->c:Ljava/lang/CharSequence;
+    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    iget-object v4, p0, Lqb2;->E0:Lj3a;
+    sput-object v0, Ltb2;->a:Ltb2;
 
-    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    new-instance v1, Ltb2;
+
+    const-string v2, "LEFT"
+
+    const/4 v3, 0x1
+
+    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v1, Ltb2;->b:Ltb2;
+
+    new-instance v2, Ltb2;
+
+    const-string v3, "LEAVING"
+
+    const/4 v4, 0x2
+
+    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v2, Ltb2;->c:Ltb2;
+
+    new-instance v3, Ltb2;
+
+    const-string v4, "REMOVED"
+
+    const/4 v5, 0x3
+
+    invoke-direct {v3, v4, v5}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v3, Ltb2;->o:Ltb2;
+
+    new-instance v4, Ltb2;
+
+    const-string v5, "REMOVING"
+
+    const/4 v6, 0x4
+
+    invoke-direct {v4, v5, v6}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v4, Ltb2;->X:Ltb2;
+
+    new-instance v5, Ltb2;
+
+    const-string v6, "CLOSED"
+
+    const/4 v7, 0x5
+
+    invoke-direct {v5, v6, v7}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v5, Ltb2;->Y:Ltb2;
+
+    new-instance v6, Ltb2;
+
+    const-string v7, "HIDDEN"
+
+    const/4 v8, 0x6
+
+    invoke-direct {v6, v7, v8}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v6, Ltb2;->Z:Ltb2;
+
+    filled-new-array/range {v0 .. v6}, [Ltb2;
 
     move-result-object v0
 
-    invoke-static {v4, v2, v0, v3}, Lj3a;->i(Lj3a;Ljava/lang/String;Ljava/lang/Long;Ljava/lang/CharSequence;)V
-
-    iget-boolean v0, p1, Lgb2;->g:Z
-
-    const/4 v1, 0x0
-
-    if-eqz v0, :cond_0
-
-    iget-boolean p1, p1, Lgb2;->h:Z
-
-    if-eqz p1, :cond_0
-
-    const/4 p1, 0x1
-
-    goto :goto_0
-
-    :cond_0
-    move p1, v1
-
-    :goto_0
-    iget-object v0, p0, Lqb2;->H0:Landroid/widget/ImageView;
-
-    if-eqz p1, :cond_1
-
-    goto :goto_1
-
-    :cond_1
-    const/16 v1, 0x8
-
-    :goto_1
-    invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
-
-    invoke-virtual {p0}, Lqb2;->u()V
+    sput-object v0, Ltb2;->r0:[Ltb2;
 
     return-void
+.end method
+
+.method public static valueOf(Ljava/lang/String;)Ltb2;
+    .locals 1
+
+    const-class v0, Ltb2;
+
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+
+    move-result-object p0
+
+    check-cast p0, Ltb2;
+
+    return-object p0
+.end method
+
+.method public static values()[Ltb2;
+    .locals 1
+
+    sget-object v0, Ltb2;->r0:[Ltb2;
+
+    invoke-virtual {v0}, [Ltb2;->clone()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, [Ltb2;
+
+    return-object v0
 .end method

@@ -1,3 +1,3 @@
-.class public final Lcl;
+.class public interface abstract Lcl;
 .super Ljava/lang/Object;
 .source "SourceFile"

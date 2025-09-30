@@ -1,112 +1,117 @@
 .class public final Lp49;
-.super Lqde;
+.super Ljava/lang/Object;
 .source "SourceFile"
-
-# interfaces
-.implements Ll66;
 
 
 # instance fields
-.field public synthetic X:Ljava/lang/Object;
+.field public final a:J
 
-.field public final synthetic Y:Lone/me/messages/list/ui/MessagesListWidget;
+.field public final b:Z
 
 
 # direct methods
-.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/messages/list/ui/MessagesListWidget;)V
+.method public constructor <init>(JZ)V
     .locals 0
 
-    iput-object p2, p0, Lp49;->Y:Lone/me/messages/list/ui/MessagesListWidget;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 p2, 0x2
+    iput-wide p1, p0, Lp49;->a:J
 
-    invoke-direct {p0, p2, p1}, Lqde;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-boolean p3, p0, Lp49;->b:Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 7
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    const/4 v0, 0x1
 
-    invoke-virtual {p0, p1, p2}, Lp49;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    if-ne p0, p1, :cond_0
 
-    move-result-object p0
+    return v0
 
-    check-cast p0, Lp49;
+    :cond_0
+    instance-of v1, p1, Lp49;
 
-    sget-object p1, Le5f;->a:Le5f;
+    const/4 v2, 0x0
 
-    invoke-virtual {p0, p1}, Lp49;->o(Ljava/lang/Object;)Ljava/lang/Object;
+    if-nez v1, :cond_1
 
-    return-object p1
+    return v2
+
+    :cond_1
+    check-cast p1, Lp49;
+
+    iget-wide v3, p0, Lp49;->a:J
+
+    iget-wide v5, p1, Lp49;->a:J
+
+    cmp-long v1, v3, v5
+
+    if-eqz v1, :cond_2
+
+    return v2
+
+    :cond_2
+    iget-boolean p0, p0, Lp49;->b:Z
+
+    iget-boolean p1, p1, Lp49;->b:Z
+
+    if-eq p0, p1, :cond_3
+
+    return v2
+
+    :cond_3
+    return v0
 .end method
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 1
-
-    new-instance v0, Lp49;
-
-    iget-object p0, p0, Lp49;->Y:Lone/me/messages/list/ui/MessagesListWidget;
-
-    invoke-direct {v0, p2, p0}, Lp49;-><init>(Lkotlin/coroutines/Continuation;Lone/me/messages/list/ui/MessagesListWidget;)V
-
-    iput-object p1, v0, Lp49;->X:Ljava/lang/Object;
-
-    return-object v0
-.end method
-
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final hashCode()I
     .locals 2
 
-    invoke-static {p1}, Lsgg;->Z(Ljava/lang/Object;)V
+    iget-wide v0, p0, Lp49;->a:J
 
-    iget-object p1, p0, Lp49;->X:Ljava/lang/Object;
-
-    check-cast p1, Livc;
-
-    sget-object v0, Lone/me/messages/list/ui/MessagesListWidget;->V0:[Lbc7;
-
-    iget-object p0, p0, Lp49;->Y:Lone/me/messages/list/ui/MessagesListWidget;
-
-    invoke-virtual {p0}, Lone/me/messages/list/ui/MessagesListWidget;->v0()Lone/me/messages/list/ui/recycler/MessagesLayoutManager;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroidx/recyclerview/widget/a;->w()I
+    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
 
     move-result v0
 
-    if-nez v0, :cond_0
+    mul-int/lit8 v0, v0, 0x1f
 
-    invoke-virtual {p0}, Lone/me/messages/list/ui/MessagesListWidget;->v0()Lone/me/messages/list/ui/recycler/MessagesLayoutManager;
+    iget-boolean p0, p0, Lp49;->b:Z
 
-    move-result-object v0
+    invoke-static {p0}, Ljava/lang/Boolean;->hashCode(Z)I
 
-    new-instance v1, Lq49;
+    move-result p0
 
-    invoke-direct {v1, p0, p1}, Lq49;-><init>(Lone/me/messages/list/ui/MessagesListWidget;Livc;)V
+    add-int/2addr p0, v0
 
-    invoke-virtual {v0, v1}, Lone/me/messages/list/ui/recycler/MessagesLayoutManager;->s1(Lw09;)V
+    return p0
+.end method
 
-    goto :goto_0
+.method public final toString()Ljava/lang/String;
+    .locals 4
 
-    :cond_0
-    invoke-virtual {p0}, Lone/me/messages/list/ui/MessagesListWidget;->v0()Lone/me/messages/list/ui/recycler/MessagesLayoutManager;
+    const-string v0, "InputEditData(messageId="
 
-    move-result-object v0
+    const-string v1, ", shouldInsertOriginalText="
 
-    const-string v1, "ScrollButton"
+    iget-wide v2, p0, Lp49;->a:J
 
-    invoke-virtual {v0, v1}, Lone/me/messages/list/ui/recycler/MessagesLayoutManager;->t1(Ljava/lang/String;)V
+    iget-boolean p0, p0, Lp49;->b:Z
 
-    invoke-static {p0, p1}, Lone/me/messages/list/ui/MessagesListWidget;->r0(Lone/me/messages/list/ui/MessagesListWidget;Livc;)V
+    invoke-static {v2, v3, v0, v1, p0}, Lsg0;->i(JLjava/lang/String;Ljava/lang/String;Z)Ljava/lang/StringBuilder;
 
-    :goto_0
-    sget-object p0, Le5f;->a:Le5f;
+    move-result-object p0
+
+    const-string v0, ")"
+
+    invoke-virtual {p0, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
 
     return-object p0
 .end method

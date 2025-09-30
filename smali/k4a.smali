@@ -1,212 +1,720 @@
-.class public final Lk4a;
+.class public abstract Lk4a;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:I
+# static fields
+.field public static final a:Ljava/lang/String;
 
-.field public final b:Lj4a;
+.field public static final b:Ljava/lang/String;
 
-.field public final c:I
-
-.field public final d:Ljava/lang/String;
-
-.field public final e:I
+.field public static final c:[I
 
 
 # direct methods
-.method public constructor <init>(ILj4a;ILjava/lang/String;I)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 9
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/high16 v0, -0x80000000
 
-    iput p1, p0, Lk4a;->a:I
+    invoke-static {v0}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
 
-    iput-object p2, p0, Lk4a;->b:Lj4a;
+    move-result-object v0
 
-    iput p3, p0, Lk4a;->c:I
+    sput-object v0, Lk4a;->a:Ljava/lang/String;
 
-    iput-object p4, p0, Lk4a;->d:Ljava/lang/String;
+    const-wide/high16 v0, -0x8000000000000000L
 
-    iput p5, p0, Lk4a;->e:I
+    invoke-static {v0, v1}, Ljava/lang/String;->valueOf(J)Ljava/lang/String;
 
+    move-result-object v0
+
+    sput-object v0, Lk4a;->b:Ljava/lang/String;
+
+    const/16 v0, 0x3e8
+
+    new-array v0, v0, [I
+
+    sput-object v0, Lk4a;->c:[I
+
+    const/4 v0, 0x0
+
+    move v1, v0
+
+    move v2, v1
+
+    :goto_0
+    const/16 v3, 0xa
+
+    if-ge v1, v3, :cond_2
+
+    move v4, v0
+
+    :goto_1
+    if-ge v4, v3, :cond_1
+
+    move v5, v0
+
+    :goto_2
+    if-ge v5, v3, :cond_0
+
+    add-int/lit8 v6, v1, 0x30
+
+    shl-int/lit8 v6, v6, 0x10
+
+    add-int/lit8 v7, v4, 0x30
+
+    shl-int/lit8 v7, v7, 0x8
+
+    or-int/2addr v6, v7
+
+    add-int/lit8 v7, v5, 0x30
+
+    or-int/2addr v6, v7
+
+    sget-object v7, Lk4a;->c:[I
+
+    add-int/lit8 v8, v2, 0x1
+
+    aput v6, v7, v2
+
+    add-int/lit8 v5, v5, 0x1
+
+    move v2, v8
+
+    goto :goto_2
+
+    :cond_0
+    add-int/lit8 v4, v4, 0x1
+
+    goto :goto_1
+
+    :cond_1
+    add-int/lit8 v1, v1, 0x1
+
+    goto :goto_0
+
+    :cond_2
     return-void
 .end method
 
+.method public static a([CII)I
+    .locals 3
 
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
+    sget-object v0, Lk4a;->c:[I
 
-    const/4 v0, 0x1
+    aget p1, v0, p1
 
-    if-ne p0, p1, :cond_0
+    add-int/lit8 v0, p2, 0x1
+
+    shr-int/lit8 v1, p1, 0x10
+
+    int-to-char v1, v1
+
+    aput-char v1, p0, p2
+
+    add-int/lit8 v1, p2, 0x2
+
+    shr-int/lit8 v2, p1, 0x8
+
+    and-int/lit8 v2, v2, 0x7f
+
+    int-to-char v2, v2
+
+    aput-char v2, p0, v0
+
+    add-int/lit8 p2, p2, 0x3
+
+    and-int/lit8 p1, p1, 0x7f
+
+    int-to-char p1, p1
+
+    aput-char p1, p0, v1
+
+    return p2
+.end method
+
+.method public static b([CII)I
+    .locals 2
+
+    sget-object v0, Lk4a;->c:[I
+
+    aget v0, v0, p1
+
+    const/16 v1, 0x9
+
+    if-le p1, v1, :cond_1
+
+    const/16 v1, 0x63
+
+    if-le p1, v1, :cond_0
+
+    add-int/lit8 p1, p2, 0x1
+
+    shr-int/lit8 v1, v0, 0x10
+
+    int-to-char v1, v1
+
+    aput-char v1, p0, p2
+
+    move p2, p1
+
+    :cond_0
+    add-int/lit8 p1, p2, 0x1
+
+    shr-int/lit8 v1, v0, 0x8
+
+    and-int/lit8 v1, v1, 0x7f
+
+    int-to-char v1, v1
+
+    aput-char v1, p0, p2
+
+    move p2, p1
+
+    :cond_1
+    add-int/lit8 p1, p2, 0x1
+
+    and-int/lit8 v0, v0, 0x7f
+
+    int-to-char v0, v0
+
+    aput-char v0, p0, p2
+
+    return p1
+.end method
+
+.method public static c([CII)I
+    .locals 7
+
+    div-int/lit16 v0, p1, 0x3e8
+
+    mul-int/lit16 v1, v0, 0x3e8
+
+    sub-int/2addr p1, v1
+
+    div-int/lit16 v1, v0, 0x3e8
+
+    sget-object v2, Lk4a;->c:[I
+
+    aget v3, v2, v1
+
+    add-int/lit8 v4, p2, 0x1
+
+    shr-int/lit8 v5, v3, 0x10
+
+    int-to-char v5, v5
+
+    aput-char v5, p0, p2
+
+    add-int/lit8 v5, p2, 0x2
+
+    shr-int/lit8 v6, v3, 0x8
+
+    and-int/lit8 v6, v6, 0x7f
+
+    int-to-char v6, v6
+
+    aput-char v6, p0, v4
+
+    add-int/lit8 v4, p2, 0x3
+
+    and-int/lit8 v3, v3, 0x7f
+
+    int-to-char v3, v3
+
+    aput-char v3, p0, v5
+
+    mul-int/lit16 v1, v1, 0x3e8
+
+    sub-int/2addr v0, v1
+
+    aget v0, v2, v0
+
+    add-int/lit8 v1, p2, 0x4
+
+    shr-int/lit8 v3, v0, 0x10
+
+    int-to-char v3, v3
+
+    aput-char v3, p0, v4
+
+    add-int/lit8 v3, p2, 0x5
+
+    shr-int/lit8 v4, v0, 0x8
+
+    and-int/lit8 v4, v4, 0x7f
+
+    int-to-char v4, v4
+
+    aput-char v4, p0, v1
+
+    add-int/lit8 v1, p2, 0x6
+
+    and-int/lit8 v0, v0, 0x7f
+
+    int-to-char v0, v0
+
+    aput-char v0, p0, v3
+
+    aget p1, v2, p1
+
+    add-int/lit8 v0, p2, 0x7
+
+    shr-int/lit8 v2, p1, 0x10
+
+    int-to-char v2, v2
+
+    aput-char v2, p0, v1
+
+    add-int/lit8 v1, p2, 0x8
+
+    shr-int/lit8 v2, p1, 0x8
+
+    and-int/lit8 v2, v2, 0x7f
+
+    int-to-char v2, v2
+
+    aput-char v2, p0, v0
+
+    add-int/lit8 p2, p2, 0x9
+
+    and-int/lit8 p1, p1, 0x7f
+
+    int-to-char p1, p1
+
+    aput-char p1, p0, v1
+
+    return p2
+.end method
+
+.method public static d([CII)I
+    .locals 3
+
+    if-gez p1, :cond_1
+
+    const/high16 v0, -0x80000000
+
+    if-ne p1, v0, :cond_0
+
+    sget-object p1, Lk4a;->a:Ljava/lang/String;
+
+    invoke-virtual {p1}, Ljava/lang/String;->length()I
+
+    move-result v0
+
+    const/4 v1, 0x0
+
+    invoke-virtual {p1, v1, v0, p0, p2}, Ljava/lang/String;->getChars(II[CI)V
+
+    add-int/2addr v0, p2
 
     return v0
 
     :cond_0
-    instance-of v1, p1, Lk4a;
+    add-int/lit8 v0, p2, 0x1
 
-    const/4 v2, 0x0
+    const/16 v1, 0x2d
 
-    if-nez v1, :cond_1
+    aput-char v1, p0, p2
 
-    return v2
+    neg-int p1, p1
+
+    move p2, v0
 
     :cond_1
-    check-cast p1, Lk4a;
+    const v0, 0xf4240
 
-    iget v1, p0, Lk4a;->a:I
+    if-ge p1, v0, :cond_4
 
-    iget v3, p1, Lk4a;->a:I
+    const/16 v0, 0x3e8
 
-    if-eq v1, v3, :cond_2
+    if-ge p1, v0, :cond_3
 
-    return v2
+    const/16 v0, 0xa
+
+    if-ge p1, v0, :cond_2
+
+    add-int/lit8 p1, p1, 0x30
+
+    int-to-char p1, p1
+
+    aput-char p1, p0, p2
+
+    add-int/lit8 p2, p2, 0x1
+
+    return p2
 
     :cond_2
-    iget-object v1, p0, Lk4a;->b:Lj4a;
-
-    iget-object v3, p1, Lk4a;->b:Lj4a;
-
-    invoke-static {v1, v3}, Lxq7;->d(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_3
-
-    return v2
-
-    :cond_3
-    iget v1, p0, Lk4a;->c:I
-
-    iget v3, p1, Lk4a;->c:I
-
-    if-eq v1, v3, :cond_4
-
-    return v2
-
-    :cond_4
-    iget-object v1, p0, Lk4a;->d:Ljava/lang/String;
-
-    iget-object v3, p1, Lk4a;->d:Ljava/lang/String;
-
-    invoke-static {v1, v3}, Lxq7;->d(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_5
-
-    return v2
-
-    :cond_5
-    iget p0, p0, Lk4a;->e:I
-
-    iget p1, p1, Lk4a;->e:I
-
-    if-eq p0, p1, :cond_6
-
-    return v2
-
-    :cond_6
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 3
-
-    iget v0, p0, Lk4a;->a:I
-
-    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
-
-    move-result v0
-
-    const/16 v1, 0x1f
-
-    mul-int/2addr v0, v1
-
-    iget-object v2, p0, Lk4a;->b:Lj4a;
-
-    invoke-virtual {v2}, Ljava/lang/Object;->hashCode()I
-
-    move-result v2
-
-    add-int/2addr v2, v0
-
-    mul-int/2addr v2, v1
-
-    iget v0, p0, Lk4a;->c:I
-
-    invoke-static {v0, v2, v1}, Lrqc;->e(III)I
-
-    move-result v0
-
-    iget-object v2, p0, Lk4a;->d:Ljava/lang/String;
-
-    invoke-static {v0, v1, v2}, Lv04;->d(IILjava/lang/String;)I
-
-    move-result v0
-
-    iget p0, p0, Lk4a;->e:I
-
-    invoke-static {p0}, Ljava/lang/Integer;->hashCode(I)I
+    invoke-static {p0, p1, p2}, Lk4a;->b([CII)I
 
     move-result p0
 
-    add-int/2addr p0, v0
+    return p0
+
+    :cond_3
+    div-int/lit16 v0, p1, 0x3e8
+
+    mul-int/lit16 v1, v0, 0x3e8
+
+    sub-int/2addr p1, v1
+
+    invoke-static {p0, v0, p2}, Lk4a;->b([CII)I
+
+    move-result p2
+
+    invoke-static {p0, p1, p2}, Lk4a;->a([CII)I
+
+    move-result p0
+
+    return p0
+
+    :cond_4
+    const v0, 0x3b9aca00
+
+    if-lt p1, v0, :cond_6
+
+    sub-int v1, p1, v0
+
+    if-lt v1, v0, :cond_5
+
+    const v0, 0x77359400
+
+    sub-int v1, p1, v0
+
+    add-int/lit8 p1, p2, 0x1
+
+    const/16 v0, 0x32
+
+    aput-char v0, p0, p2
+
+    goto :goto_0
+
+    :cond_5
+    add-int/lit8 p1, p2, 0x1
+
+    const/16 v0, 0x31
+
+    aput-char v0, p0, p2
+
+    :goto_0
+    invoke-static {p0, v1, p1}, Lk4a;->c([CII)I
+
+    move-result p0
+
+    return p0
+
+    :cond_6
+    div-int/lit16 v0, p1, 0x3e8
+
+    mul-int/lit16 v1, v0, 0x3e8
+
+    sub-int/2addr p1, v1
+
+    div-int/lit16 v1, v0, 0x3e8
+
+    mul-int/lit16 v2, v1, 0x3e8
+
+    sub-int/2addr v0, v2
+
+    invoke-static {p0, v1, p2}, Lk4a;->b([CII)I
+
+    move-result p2
+
+    invoke-static {p0, v0, p2}, Lk4a;->a([CII)I
+
+    move-result p2
+
+    invoke-static {p0, p1, p2}, Lk4a;->a([CII)I
+
+    move-result p0
 
     return p0
 .end method
 
-.method public final toString()Ljava/lang/String;
-    .locals 2
+.method public static e(J[CI)I
+    .locals 6
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    const-wide/16 v0, 0x0
 
-    const-string v1, "Item(title="
+    cmp-long v0, p0, v0
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    if-gez v0, :cond_2
 
-    iget v1, p0, Lk4a;->a:I
+    const-wide/32 v0, -0x80000000
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    cmp-long v0, p0, v0
 
-    const-string v1, ", icon="
+    if-lez v0, :cond_0
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    long-to-int p0, p0
 
-    iget-object v1, p0, Lk4a;->b:Lj4a;
+    invoke-static {p2, p0, p3}, Lk4a;->d([CII)I
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    move-result p0
 
-    const-string v1, ", screenId="
+    return p0
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    :cond_0
+    const-wide/high16 v0, -0x8000000000000000L
 
-    iget v1, p0, Lk4a;->c:I
+    cmp-long v0, p0, v0
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    if-nez v0, :cond_1
 
-    const-string v1, ", tag="
+    sget-object p0, Lk4a;->b:Ljava/lang/String;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {p0}, Ljava/lang/String;->length()I
 
-    iget-object v1, p0, Lk4a;->d:Ljava/lang/String;
+    move-result p1
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    const/4 v0, 0x0
 
-    const-string v1, ", bottomBarItemId="
+    invoke-virtual {p0, v0, p1, p2, p3}, Ljava/lang/String;->getChars(II[CI)V
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    add-int/2addr p1, p3
 
-    const-string v1, ")"
+    return p1
 
-    iget p0, p0, Lk4a;->e:I
+    :cond_1
+    add-int/lit8 v0, p3, 0x1
 
-    invoke-static {v0, p0, v1}, Lm26;->i(Ljava/lang/StringBuilder;ILjava/lang/String;)Ljava/lang/String;
+    const/16 v1, 0x2d
 
-    move-result-object p0
+    aput-char v1, p2, p3
 
-    return-object p0
+    neg-long p0, p0
+
+    move p3, v0
+
+    goto :goto_0
+
+    :cond_2
+    const-wide/32 v0, 0x7fffffff
+
+    cmp-long v0, p0, v0
+
+    if-gtz v0, :cond_3
+
+    long-to-int p0, p0
+
+    invoke-static {p2, p0, p3}, Lk4a;->d([CII)I
+
+    move-result p0
+
+    return p0
+
+    :cond_3
+    :goto_0
+    const-wide/32 v0, 0x3b9aca00
+
+    div-long v2, p0, v0
+
+    mul-long v4, v2, v0
+
+    sub-long/2addr p0, v4
+
+    cmp-long v4, v2, v0
+
+    if-gez v4, :cond_8
+
+    long-to-int v0, v2
+
+    const v1, 0xf4240
+
+    sget-object v2, Lk4a;->c:[I
+
+    if-ge v0, v1, :cond_7
+
+    const/16 v1, 0x3e8
+
+    if-ge v0, v1, :cond_4
+
+    invoke-static {p2, v0, p3}, Lk4a;->b([CII)I
+
+    move-result p3
+
+    goto/16 :goto_1
+
+    :cond_4
+    div-int/lit16 v1, v0, 0x3e8
+
+    mul-int/lit16 v3, v1, 0x3e8
+
+    sub-int/2addr v0, v3
+
+    aget v3, v2, v1
+
+    const/16 v4, 0x9
+
+    if-le v1, v4, :cond_6
+
+    const/16 v4, 0x63
+
+    if-le v1, v4, :cond_5
+
+    add-int/lit8 v1, p3, 0x1
+
+    shr-int/lit8 v4, v3, 0x10
+
+    int-to-char v4, v4
+
+    aput-char v4, p2, p3
+
+    move p3, v1
+
+    :cond_5
+    add-int/lit8 v1, p3, 0x1
+
+    shr-int/lit8 v4, v3, 0x8
+
+    and-int/lit8 v4, v4, 0x7f
+
+    int-to-char v4, v4
+
+    aput-char v4, p2, p3
+
+    move p3, v1
+
+    :cond_6
+    add-int/lit8 v1, p3, 0x1
+
+    and-int/lit8 v3, v3, 0x7f
+
+    int-to-char v3, v3
+
+    aput-char v3, p2, p3
+
+    aget v0, v2, v0
+
+    add-int/lit8 v2, p3, 0x2
+
+    shr-int/lit8 v3, v0, 0x10
+
+    int-to-char v3, v3
+
+    aput-char v3, p2, v1
+
+    add-int/lit8 v1, p3, 0x3
+
+    shr-int/lit8 v3, v0, 0x8
+
+    and-int/lit8 v3, v3, 0x7f
+
+    int-to-char v3, v3
+
+    aput-char v3, p2, v2
+
+    add-int/lit8 p3, p3, 0x4
+
+    and-int/lit8 v0, v0, 0x7f
+
+    int-to-char v0, v0
+
+    aput-char v0, p2, v1
+
+    goto :goto_1
+
+    :cond_7
+    div-int/lit16 v1, v0, 0x3e8
+
+    mul-int/lit16 v3, v1, 0x3e8
+
+    sub-int/2addr v0, v3
+
+    div-int/lit16 v3, v1, 0x3e8
+
+    mul-int/lit16 v4, v3, 0x3e8
+
+    sub-int/2addr v1, v4
+
+    invoke-static {p2, v3, p3}, Lk4a;->b([CII)I
+
+    move-result p3
+
+    aget v1, v2, v1
+
+    add-int/lit8 v3, p3, 0x1
+
+    shr-int/lit8 v4, v1, 0x10
+
+    int-to-char v4, v4
+
+    aput-char v4, p2, p3
+
+    add-int/lit8 v4, p3, 0x2
+
+    shr-int/lit8 v5, v1, 0x8
+
+    and-int/lit8 v5, v5, 0x7f
+
+    int-to-char v5, v5
+
+    aput-char v5, p2, v3
+
+    add-int/lit8 v3, p3, 0x3
+
+    and-int/lit8 v1, v1, 0x7f
+
+    int-to-char v1, v1
+
+    aput-char v1, p2, v4
+
+    aget v0, v2, v0
+
+    add-int/lit8 v1, p3, 0x4
+
+    shr-int/lit8 v2, v0, 0x10
+
+    int-to-char v2, v2
+
+    aput-char v2, p2, v3
+
+    add-int/lit8 v2, p3, 0x5
+
+    shr-int/lit8 v3, v0, 0x8
+
+    and-int/lit8 v3, v3, 0x7f
+
+    int-to-char v3, v3
+
+    aput-char v3, p2, v1
+
+    add-int/lit8 p3, p3, 0x6
+
+    and-int/lit8 v0, v0, 0x7f
+
+    int-to-char v0, v0
+
+    aput-char v0, p2, v2
+
+    goto :goto_1
+
+    :cond_8
+    div-long v4, v2, v0
+
+    mul-long/2addr v0, v4
+
+    sub-long/2addr v2, v0
+
+    long-to-int v0, v4
+
+    invoke-static {p2, v0, p3}, Lk4a;->b([CII)I
+
+    move-result p3
+
+    long-to-int v0, v2
+
+    invoke-static {p2, v0, p3}, Lk4a;->c([CII)I
+
+    move-result p3
+
+    :goto_1
+    long-to-int p0, p0
+
+    invoke-static {p2, p0, p3}, Lk4a;->c([CII)I
+
+    move-result p0
+
+    return p0
 .end method

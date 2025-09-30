@@ -1,69 +1,66 @@
-.class public final Ly8f;
+.class public final synthetic Ly8f;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lzb6;
+
 
 # instance fields
-.field public final a:Lkjc;
+.field public final synthetic a:I
 
-.field public final b:Llh;
-
-.field public final c:Lbjc;
-
-.field public final d:Lbjc;
-
-.field public final e:Lbjc;
-
-.field public final f:Lbjc;
+.field public final synthetic b:La9f;
 
 
 # direct methods
-.method public constructor <init>(Lru/ok/tamtam/android/db/room/OneMeRoomDatabase;)V
-    .locals 2
+.method public synthetic constructor <init>(La9f;I)V
+    .locals 0
+
+    iput p2, p0, Ly8f;->a:I
+
+    iput-object p1, p0, Ly8f;->b:La9f;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Ly8f;->a:Lkjc;
-
-    new-instance v0, Llh;
-
-    const/16 v1, 0x1c
-
-    invoke-direct {v0, p1, v1}, Llh;-><init>(Lkjc;I)V
-
-    iput-object v0, p0, Ly8f;->b:Llh;
-
-    new-instance v0, Lbjc;
-
-    const/16 v1, 0x13
-
-    invoke-direct {v0, p1, v1}, Lbjc;-><init>(Lkjc;I)V
-
-    iput-object v0, p0, Ly8f;->c:Lbjc;
-
-    new-instance v0, Lbjc;
-
-    const/16 v1, 0x14
-
-    invoke-direct {v0, p1, v1}, Lbjc;-><init>(Lkjc;I)V
-
-    iput-object v0, p0, Ly8f;->d:Lbjc;
-
-    new-instance v0, Lbjc;
-
-    const/16 v1, 0x15
-
-    invoke-direct {v0, p1, v1}, Lbjc;-><init>(Lkjc;I)V
-
-    iput-object v0, p0, Ly8f;->e:Lbjc;
-
-    new-instance v0, Lbjc;
-
-    const/16 v1, 0x16
-
-    invoke-direct {v0, p1, v1}, Lbjc;-><init>(Lkjc;I)V
-
-    iput-object v0, p0, Ly8f;->f:Lbjc;
-
     return-void
+.end method
+
+
+# virtual methods
+.method public final invoke()Ljava/lang/Object;
+    .locals 3
+
+    iget v0, p0, Ly8f;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    new-instance v0, Lu8f;
+
+    iget-object p0, p0, Ly8f;->b:La9f;
+
+    iget-object v1, p0, La9f;->c:Lzb6;
+
+    iget v2, p0, La9f;->X:I
+
+    iget p0, p0, La9f;->Y:I
+
+    invoke-direct {v0, v1, v2, p0}, Lu8f;-><init>(Lzb6;II)V
+
+    return-object v0
+
+    :pswitch_0
+    iget-object p0, p0, Ly8f;->b:La9f;
+
+    invoke-virtual {p0}, La9f;->dismiss()V
+
+    sget-object p0, Lylf;->a:Lylf;
+
+    return-object p0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

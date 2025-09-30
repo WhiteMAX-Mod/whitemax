@@ -6,26 +6,30 @@
 # instance fields
 .field public final X:Ljava/util/Map;
 
+.field public final Y:[B
+
 .field public final o:I
 
 
 # direct methods
-.method public constructor <init>(ILandroidx/media3/datasource/DataSourceException;Ljava/util/Map;)V
-    .locals 2
+.method public constructor <init>(ILjava/lang/String;Landroidx/media3/datasource/DataSourceException;Ljava/util/Map;[B)V
+    .locals 1
 
-    const-string v0, "Response code: "
+    const-string p2, "Response code: "
 
-    invoke-static {p1, v0}, Lm26;->h(ILjava/lang/String;)Ljava/lang/String;
+    invoke-static {p1, p2}, Lyv7;->e(ILjava/lang/String;)Ljava/lang/String;
 
-    move-result-object v0
+    move-result-object p2
 
-    const/16 v1, 0x7d4
+    const/16 v0, 0x7d4
 
-    invoke-direct {p0, v0, p2, v1}, Landroidx/media3/datasource/HttpDataSource$HttpDataSourceException;-><init>(Ljava/lang/String;Ljava/io/IOException;I)V
+    invoke-direct {p0, p2, p3, v0}, Landroidx/media3/datasource/HttpDataSource$HttpDataSourceException;-><init>(Ljava/lang/String;Ljava/io/IOException;I)V
 
     iput p1, p0, Landroidx/media3/datasource/HttpDataSource$InvalidResponseCodeException;->o:I
 
-    iput-object p3, p0, Landroidx/media3/datasource/HttpDataSource$InvalidResponseCodeException;->X:Ljava/util/Map;
+    iput-object p4, p0, Landroidx/media3/datasource/HttpDataSource$InvalidResponseCodeException;->X:Ljava/util/Map;
+
+    iput-object p5, p0, Landroidx/media3/datasource/HttpDataSource$InvalidResponseCodeException;->Y:[B
 
     return-void
 .end method

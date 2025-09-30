@@ -1,61 +1,65 @@
 .class public final Lr40;
-.super Lt40;
+.super Loi0;
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:Lr40;
+# instance fields
+.field public final b:J
+
+.field public final c:I
+
+.field public final o:J
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(IJJ)V
+    .locals 0
 
-    new-instance v0, Lr40;
+    invoke-direct {p0}, Loi0;-><init>()V
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    iput p1, p0, Lr40;->c:I
 
-    sput-object v0, Lr40;->a:Lr40;
+    iput-wide p2, p0, Lr40;->b:J
+
+    iput-wide p4, p0, Lr40;->o:J
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
-
-    const/4 v0, 0x1
-
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    instance-of p0, p1, Lr40;
-
-    if-nez p0, :cond_1
-
-    const/4 p0, 0x0
-
-    return p0
-
-    :cond_1
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 0
-
-    const p0, -0x41fc9265
-
-    return p0
-.end method
-
 .method public final toString()Ljava/lang/String;
-    .locals 0
+    .locals 3
 
-    const-string p0, "CloseTooltip"
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "AudioPlaybackEvent{type="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget v1, p0, Lr40;->c:I
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v1, ", messageId="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-wide v1, p0, Lr40;->b:J
+
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    const-string v1, ", chatId="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-wide v1, p0, Lr40;->o:J
+
+    const/16 p0, 0x7d
+
+    invoke-static {v0, v1, v2, p0}, Lbg9;->k(Ljava/lang/StringBuilder;JC)Ljava/lang/String;
+
+    move-result-object p0
 
     return-object p0
 .end method

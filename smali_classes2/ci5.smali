@@ -1,73 +1,118 @@
-.class public final enum Lci5;
-.super Ljava/lang/Enum;
+.class public final synthetic Lci5;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lype;
 
-# static fields
-.field public static final enum a:Lci5;
 
-.field public static final enum b:Lci5;
+# instance fields
+.field public final synthetic a:I
 
-.field public static final synthetic c:[Lci5;
+.field public final synthetic b:J
+
+.field public final synthetic c:Ljava/lang/Object;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 4
+.method public synthetic constructor <init>(Ljava/lang/Object;JI)V
+    .locals 0
 
-    new-instance v0, Lci5;
+    iput p4, p0, Lci5;->a:I
 
-    const-string v1, "Arrow"
+    iput-object p1, p0, Lci5;->c:Ljava/lang/Object;
 
-    const/4 v2, 0x0
+    iput-wide p2, p0, Lci5;->b:J
 
-    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v0, Lci5;->a:Lci5;
-
-    new-instance v1, Lci5;
-
-    const-string v2, "Progress"
-
-    const/4 v3, 0x1
-
-    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v1, Lci5;->b:Lci5;
-
-    filled-new-array {v0, v1}, [Lci5;
-
-    move-result-object v0
-
-    sput-object v0, Lci5;->c:[Lci5;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
-.method public static valueOf(Ljava/lang/String;)Lci5;
-    .locals 1
 
-    const-class v0, Lci5;
+# virtual methods
+.method public final get()Ljava/lang/Object;
+    .locals 9
 
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+    iget v0, p0, Lci5;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    iget-object v0, p0, Lci5;->c:Ljava/lang/Object;
+
+    check-cast v0, Lji5;
+
+    new-instance v1, Lx3e;
+
+    invoke-direct {v1}, Lx3e;-><init>()V
+
+    iget-object v2, v0, Lji5;->f:Ljava/util/concurrent/ConcurrentHashMap;
+
+    iget-object v0, v0, Lji5;->a:Lrk;
+
+    check-cast v0, Lgaa;
+
+    new-instance v3, Lxs;
+
+    invoke-virtual {v0}, Lgaa;->x()Lqgb;
+
+    move-result-object v4
+
+    check-cast v4, Ltgb;
+
+    iget-object v4, v4, Ltgb;->a:Lh53;
+
+    invoke-virtual {v4}, Lgad;->m()J
+
+    move-result-wide v5
+
+    const/4 v4, 0x4
+
+    iget-wide v7, p0, Lci5;->b:J
+
+    invoke-direct/range {v3 .. v8}, Lxs;-><init>(IJJ)V
+
+    invoke-virtual {v0}, Lgaa;->y()Lyye;
 
     move-result-object p0
 
-    check-cast p0, Lci5;
+    const/16 v0, 0xc
+
+    const/4 v4, 0x0
+
+    invoke-static {p0, v3, v4, v0}, Lyye;->d(Lyye;Lrl;ZI)J
+
+    move-result-wide v3
+
+    invoke-static {v3, v4}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object p0
+
+    invoke-virtual {v2, p0, v1}, Ljava/util/concurrent/ConcurrentHashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object v1
+
+    :pswitch_0
+    iget-object v0, p0, Lci5;->c:Ljava/lang/Object;
+
+    check-cast v0, Lgi5;
+
+    new-instance v1, Lbi5;
+
+    const/4 v2, 0x0
+
+    iget-wide v3, p0, Lci5;->b:J
+
+    invoke-direct {v1, v0, v3, v4, v2}, Lbi5;-><init>(Ljava/lang/Object;JI)V
+
+    invoke-virtual {v0, v1}, Lgi5;->a(Ljava/util/concurrent/Callable;)Lx3e;
+
+    move-result-object p0
 
     return-object p0
-.end method
 
-.method public static values()[Lci5;
-    .locals 1
-
-    sget-object v0, Lci5;->c:[Lci5;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, [Lci5;
-
-    return-object v0
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

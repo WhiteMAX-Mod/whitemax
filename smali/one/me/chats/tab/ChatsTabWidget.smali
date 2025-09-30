@@ -3,7 +3,9 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lil9;
+.implements Lws9;
+.implements Lyw3;
+.implements Ld9d;
 
 
 # annotations
@@ -15,12 +17,14 @@
 
 .annotation runtime Lkotlin/Metadata;
     d1 = {
-        "\u0000\u001c\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0003\n\u0002\u0010\u000e\n\u0002\u0008\u0003\u0008\u0007\u0018\u00002\u00020\u00012\u00020\u0002B\u000f\u0012\u0006\u0010\u0004\u001a\u00020\u0003\u00a2\u0006\u0004\u0008\u0005\u0010\u0006B\u0013\u0008\u0016\u0012\u0008\u0010\u0008\u001a\u0004\u0018\u00010\u0007\u00a2\u0006\u0004\u0008\u0005\u0010\t\u00a8\u0006\n"
+        "\u0000$\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0003\n\u0002\u0010\u000e\n\u0002\u0008\u0004\u0008\u0007\u0018\u00002\u00020\u00012\u00020\u00022\u00020\u00032\u00020\u0004:\u0001\u000cB\u000f\u0012\u0006\u0010\u0006\u001a\u00020\u0005\u00a2\u0006\u0004\u0008\u0007\u0010\u0008B\u0013\u0008\u0016\u0012\u0008\u0010\n\u001a\u0004\u0018\u00010\t\u00a2\u0006\u0004\u0008\u0007\u0010\u000b\u00a8\u0006\r"
     }
     d2 = {
         "Lone/me/chats/tab/ChatsTabWidget;",
         "Lone/me/sdk/arch/Widget;",
-        "Lil9;",
+        "Lws9;",
+        "Lyw3;",
+        "Ld9d;",
         "Landroid/os/Bundle;",
         "args",
         "<init>",
@@ -28,6 +32,7 @@
         "",
         "folderId",
         "(Ljava/lang/String;)V",
+        "f13",
         "chats-list_release"
     }
     k = 0x1
@@ -41,50 +46,52 @@
 
 
 # static fields
-.field public static final synthetic y0:[Lbc7;
+.field public static final synthetic C0:[Lxi7;
 
 
 # instance fields
-.field public final X:Lje7;
+.field public final A0:Lzte;
 
-.field public final Y:Lje7;
+.field public B0:Lcae;
 
-.field public final Z:Lo5c;
+.field public final X:Lcl7;
 
-.field public final a:Lp27;
+.field public final Y:Lcl7;
+
+.field public final Z:Lcic;
+
+.field public final a:Lj97;
 
 .field public final b:Ljava/lang/String;
 
-.field public c:Lvu5;
+.field public c:Lsw3;
 
-.field public final o:Lje7;
+.field public final o:Lcl7;
 
-.field public final o0:Lo5c;
+.field public final r0:Lcic;
 
-.field public final p0:Lo5c;
+.field public final s0:Lcic;
 
-.field public final q0:Lo5c;
+.field public final t0:Lcic;
 
-.field public final r0:Lje7;
+.field public final u0:Lcl7;
 
-.field public final s0:Lje7;
+.field public final v0:Lcl7;
 
-.field public t0:Lu40;
+.field public w0:Lx30;
 
-.field public final u0:Li30;
+.field public final x0:Lf36;
 
-.field public final v0:I
+.field public final y0:I
 
-.field public final w0:Lvw5;
-
-.field public x0:Ldwd;
+.field public final z0:I
 
 
 # direct methods
 .method static constructor <clinit>()V
     .locals 8
 
-    new-instance v0, Lnlb;
+    new-instance v0, Lsxb;
 
     const-class v1, Lone/me/chats/tab/ChatsTabWidget;
 
@@ -94,37 +101,37 @@
 
     const/4 v4, 0x0
 
-    invoke-direct {v0, v1, v2, v3, v4}, Lnlb;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
+    invoke-direct {v0, v1, v2, v3, v4}, Lsxb;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
 
-    sget-object v2, Llcc;->a:Lmcc;
+    sget-object v2, Ljpc;->a:Lkpc;
 
     const-string v3, "foldersTabs"
 
     const-string v5, "getFoldersTabs()Lone/me/common/tablayout/OneMeTabLayout;"
 
-    invoke-static {v2, v1, v3, v5, v4}, Lm26;->g(Lmcc;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)Lnlb;
+    invoke-static {v2, v1, v3, v5, v4}, Lee5;->h(Lkpc;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)Lsxb;
 
     move-result-object v2
 
-    new-instance v3, Lnlb;
+    new-instance v3, Lsxb;
 
     const-string v5, "foldersViewPager"
 
     const-string v6, "getFoldersViewPager()Landroidx/viewpager2/widget/ViewPager2;"
 
-    invoke-direct {v3, v1, v5, v6, v4}, Lnlb;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
+    invoke-direct {v3, v1, v5, v6, v4}, Lsxb;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
 
-    new-instance v5, Lnlb;
+    new-instance v5, Lsxb;
 
     const-string v6, "pinbarsContainer"
 
     const-string v7, "getPinbarsContainer()Landroid/view/ViewGroup;"
 
-    invoke-direct {v5, v1, v6, v7, v4}, Lnlb;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
+    invoke-direct {v5, v1, v6, v7, v4}, Lsxb;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
 
     const/4 v1, 0x4
 
-    new-array v1, v1, [Lbc7;
+    new-array v1, v1, [Lxi7;
 
     aput-object v0, v1, v4
 
@@ -140,13 +147,13 @@
 
     aput-object v5, v1, v0
 
-    sput-object v1, Lone/me/chats/tab/ChatsTabWidget;->y0:[Lbc7;
+    sput-object v1, Lone/me/chats/tab/ChatsTabWidget;->C0:[Lxi7;
 
     return-void
 .end method
 
 .method public constructor <init>(Landroid/os/Bundle;)V
-    .locals 9
+    .locals 7
 
     const/4 v0, 0x0
 
@@ -155,12 +162,12 @@
     const/4 v2, 0x0
 
     .line 3
-    invoke-direct {p0, p1, v0, v1, v2}, Lone/me/sdk/arch/Widget;-><init>(Landroid/os/Bundle;IILl94;)V
+    invoke-direct {p0, p1, v0, v1, v2}, Lone/me/sdk/arch/Widget;-><init>(Landroid/os/Bundle;IILld4;)V
 
     .line 4
-    sget-object p1, Lp27;->d:Lp27;
+    sget-object p1, Lj97;->d:Lj97;
 
-    iput-object p1, p0, Lone/me/chats/tab/ChatsTabWidget;->a:Lp27;
+    iput-object p1, p0, Lone/me/chats/tab/ChatsTabWidget;->a:Lj97;
 
     .line 5
     const-class p1, Lone/me/chats/tab/ChatsTabWidget;
@@ -173,321 +180,276 @@
     iput-object p1, p0, Lone/me/chats/tab/ChatsTabWidget;->b:Ljava/lang/String;
 
     .line 7
-    sget-object v0, Lxg0;->a:Lxg0;
+    sget-object v0, Lbh0;->a:Lbh0;
 
     .line 8
-    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lu4;
+    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lz4;
 
     move-result-object v0
 
-    const-class v1, Lura;
+    const-class v1, Lp2b;
 
-    invoke-virtual {v0, v1}, Lu4;->d(Ljava/lang/Class;)Lwfe;
+    invoke-virtual {v0, v1}, Lz4;->d(Ljava/lang/Class;)Lzte;
 
     move-result-object v0
 
     .line 9
-    iput-object v0, p0, Lone/me/chats/tab/ChatsTabWidget;->o:Lje7;
+    iput-object v0, p0, Lone/me/chats/tab/ChatsTabWidget;->o:Lcl7;
 
     .line 10
-    sget-object v0, Lnr2;->a:Lnr2;
+    sget-object v0, Llu2;->a:Llu2;
 
     .line 11
-    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lu4;
+    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lz4;
 
     move-result-object v1
 
-    const-class v3, Lh23;
+    const-class v3, Lf53;
 
-    invoke-virtual {v1, v3}, Lu4;->d(Ljava/lang/Class;)Lwfe;
+    invoke-virtual {v1, v3}, Lz4;->d(Ljava/lang/Class;)Lzte;
 
     move-result-object v1
 
     .line 12
-    iput-object v1, p0, Lone/me/chats/tab/ChatsTabWidget;->X:Lje7;
+    iput-object v1, p0, Lone/me/chats/tab/ChatsTabWidget;->X:Lcl7;
 
     .line 13
-    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lu4;
+    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lz4;
 
     move-result-object v1
 
-    const-class v3, Li67;
+    const-class v3, Led7;
 
-    invoke-virtual {v1, v3}, Lu4;->d(Ljava/lang/Class;)Lwfe;
+    invoke-virtual {v1, v3}, Lz4;->d(Ljava/lang/Class;)Lzte;
 
     move-result-object v1
 
     .line 14
-    iput-object v1, p0, Lone/me/chats/tab/ChatsTabWidget;->Y:Lje7;
+    iput-object v1, p0, Lone/me/chats/tab/ChatsTabWidget;->Y:Lcl7;
 
     .line 15
-    sget v1, Lg6a;->j:I
+    sget v1, Lsea;->j:I
 
-    invoke-virtual {p0, v1}, Lone/me/sdk/arch/Widget;->viewBinding(I)Lo5c;
+    invoke-virtual {p0, v1}, Lone/me/sdk/arch/Widget;->viewBinding(I)Lcic;
 
     move-result-object v1
 
-    iput-object v1, p0, Lone/me/chats/tab/ChatsTabWidget;->Z:Lo5c;
+    iput-object v1, p0, Lone/me/chats/tab/ChatsTabWidget;->Z:Lcic;
 
     .line 16
-    sget v1, Lg6a;->e:I
+    sget v1, Lsea;->e:I
 
-    invoke-virtual {p0, v1}, Lone/me/sdk/arch/Widget;->viewBinding(I)Lo5c;
+    invoke-virtual {p0, v1}, Lone/me/sdk/arch/Widget;->viewBinding(I)Lcic;
 
     move-result-object v1
 
-    iput-object v1, p0, Lone/me/chats/tab/ChatsTabWidget;->o0:Lo5c;
+    iput-object v1, p0, Lone/me/chats/tab/ChatsTabWidget;->r0:Lcic;
 
     .line 17
-    sget v1, Lg6a;->d:I
+    sget v1, Lsea;->d:I
 
-    invoke-virtual {p0, v1}, Lone/me/sdk/arch/Widget;->viewBinding(I)Lo5c;
+    invoke-virtual {p0, v1}, Lone/me/sdk/arch/Widget;->viewBinding(I)Lcic;
 
     move-result-object v1
 
-    iput-object v1, p0, Lone/me/chats/tab/ChatsTabWidget;->p0:Lo5c;
+    iput-object v1, p0, Lone/me/chats/tab/ChatsTabWidget;->s0:Lcic;
 
     .line 18
-    sget v1, Lg6a;->f:I
+    sget v1, Lsea;->f:I
 
-    invoke-virtual {p0, v1}, Lone/me/sdk/arch/Widget;->viewBinding(I)Lo5c;
+    invoke-virtual {p0, v1}, Lone/me/sdk/arch/Widget;->viewBinding(I)Lcic;
 
     move-result-object v1
 
-    iput-object v1, p0, Lone/me/chats/tab/ChatsTabWidget;->q0:Lo5c;
+    iput-object v1, p0, Lone/me/chats/tab/ChatsTabWidget;->t0:Lcic;
 
     .line 19
-    new-instance v1, Lhl2;
+    new-instance v1, Lam2;
 
-    const/16 v3, 0x15
+    const/16 v3, 0x1c
 
-    invoke-direct {v1, v3}, Lhl2;-><init>(I)V
+    invoke-direct {v1, v3}, Lam2;-><init>(I)V
 
     .line 20
-    new-instance v3, Lkh2;
+    new-instance v3, Lpi2;
 
-    const/16 v4, 0x1a
+    const/16 v4, 0x1b
 
-    invoke-direct {v3, v4, v1}, Lkh2;-><init>(ILjava/lang/Object;)V
+    invoke-direct {v3, v4, v1}, Lpi2;-><init>(ILjava/lang/Object;)V
 
-    const-class v1, Lay5;
+    const-class v1, Lq36;
 
-    invoke-virtual {p0, v1, v3}, Lone/me/sdk/arch/Widget;->createViewModelLazy(Ljava/lang/Class;Lv56;)Lje7;
+    invoke-virtual {p0, v1, v3}, Lone/me/sdk/arch/Widget;->createViewModelLazy(Ljava/lang/Class;Lzb6;)Lcl7;
 
     move-result-object v1
 
     .line 21
-    iput-object v1, p0, Lone/me/chats/tab/ChatsTabWidget;->r0:Lje7;
+    iput-object v1, p0, Lone/me/chats/tab/ChatsTabWidget;->u0:Lcl7;
 
     .line 22
-    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lu4;
+    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lz4;
 
     move-result-object v1
 
-    const-class v3, Lpl9;
+    const-class v3, Ldt9;
 
-    invoke-virtual {v1, v3}, Lu4;->d(Ljava/lang/Class;)Lwfe;
+    invoke-virtual {v1, v3}, Lz4;->d(Ljava/lang/Class;)Lzte;
 
     move-result-object v1
 
     .line 23
-    iput-object v1, p0, Lone/me/chats/tab/ChatsTabWidget;->s0:Lje7;
+    iput-object v1, p0, Lone/me/chats/tab/ChatsTabWidget;->v0:Lcl7;
 
     .line 24
-    new-instance v1, Li30;
+    new-instance v1, Lf36;
 
-    invoke-virtual {v0}, Lnr2;->c()La9a;
+    invoke-virtual {v0}, Llu2;->c()Lkha;
 
     move-result-object v3
 
-    invoke-virtual {v3}, La9a;->a()Ljava/util/concurrent/ExecutorService;
+    invoke-virtual {v3}, Lkha;->a()Ljava/util/concurrent/ExecutorService;
 
     move-result-object v3
 
     const/4 v4, 0x5
 
-    invoke-direct {v1, v3, v4}, Li30;-><init>(Ljava/util/concurrent/ExecutorService;I)V
+    invoke-direct {v1, v3, v4}, Lf36;-><init>(Ljava/util/concurrent/ExecutorService;I)V
 
-    iput-object v1, p0, Lone/me/chats/tab/ChatsTabWidget;->u0:Li30;
+    iput-object v1, p0, Lone/me/chats/tab/ChatsTabWidget;->x0:Lf36;
+
+    const/16 v1, 0xa
+
+    .line 25
+    iput v1, p0, Lone/me/chats/tab/ChatsTabWidget;->y0:I
 
     const/4 v1, 0x3
 
-    .line 25
-    iput v1, p0, Lone/me/chats/tab/ChatsTabWidget;->v0:I
-
     .line 26
-    new-instance v3, Landroidx/recyclerview/widget/b;
-
-    invoke-direct {v3}, Landroidx/recyclerview/widget/b;-><init>()V
+    iput v1, p0, Lone/me/chats/tab/ChatsTabWidget;->z0:I
 
     .line 27
-    sget v4, Lkr2;->a:I
+    new-instance v3, Lzb1;
 
-    const/16 v5, 0x1e
+    const/16 v4, 0x13
+
+    invoke-direct {v3, v4, p0}, Lzb1;-><init>(ILjava/lang/Object;)V
 
     .line 28
-    invoke-virtual {v3, v4, v5}, Landroidx/recyclerview/widget/b;->setMaxRecycledViews(II)V
+    new-instance v4, Lzte;
+
+    invoke-direct {v4, v3}, Lzte;-><init>(Lzb6;)V
 
     .line 29
-    sget v4, Lkr2;->b:I
-
-    const/16 v5, 0xf
+    iput-object v4, p0, Lone/me/chats/tab/ChatsTabWidget;->A0:Lzte;
 
     .line 30
-    invoke-virtual {v3, v4, v5}, Landroidx/recyclerview/widget/b;->setMaxRecycledViews(II)V
-
-    .line 31
-    sget v4, Lg6a;->u:I
-
-    const/16 v5, 0xa
-
-    int-to-double v5, v5
-
-    const-wide/high16 v7, 0x3ff8000000000000L    # 1.5
-
-    mul-double/2addr v5, v7
-
-    invoke-static {v5, v6}, Lkhg;->w(D)I
-
-    move-result v7
-
-    invoke-virtual {v3, v4, v7}, Landroidx/recyclerview/widget/b;->setMaxRecycledViews(II)V
-
-    .line 32
-    sget v4, Lg6a;->v:I
-
-    invoke-static {v5, v6}, Lkhg;->w(D)I
-
-    move-result v5
-
-    invoke-virtual {v3, v4, v5}, Landroidx/recyclerview/widget/b;->setMaxRecycledViews(II)V
-
-    .line 33
-    sget v4, Ly9a;->c:I
-
-    invoke-virtual {v3, v4, v1}, Landroidx/recyclerview/widget/b;->setMaxRecycledViews(II)V
-
-    .line 34
-    new-instance v4, Lvw5;
-
-    .line 35
-    sget-object v5, Lvw5;->w0:Llpd;
-
-    .line 36
-    invoke-direct {v4, p0, v3, v5}, Lvw5;-><init>(Lone/me/sdk/arch/Widget;Landroidx/recyclerview/widget/b;Luw5;)V
-
-    .line 37
-    iput-object v4, p0, Lone/me/chats/tab/ChatsTabWidget;->w0:Lvw5;
-
-    .line 38
-    invoke-virtual {v0}, Lnr2;->b()Lvw7;
+    invoke-virtual {v0}, Llu2;->b()Li48;
 
     move-result-object v0
 
     invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    .line 39
-    new-instance v3, Lrqa;
+    .line 31
+    new-instance v3, Lm1b;
 
-    .line 40
-    sget-object v4, Lsqa;->Y:Lsqa;
+    .line 32
+    sget-object v4, Ln1b;->Z:Ln1b;
 
-    .line 41
+    .line 33
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v5
 
-    .line 42
-    invoke-direct {v3, v4, v5, v6}, Lrqa;-><init>(Lsqa;J)V
+    .line 34
+    invoke-direct {v3, v4, v5, v6}, Lm1b;-><init>(Ln1b;J)V
 
-    .line 43
-    iget-object v5, v0, Lvw7;->e:Ldh9;
+    .line 35
+    iget-object v5, v0, Li48;->e:Loo9;
 
-    invoke-virtual {v5, v4, v3}, Ldh9;->k(Ljava/lang/Object;Ljava/lang/Object;)V
+    invoke-virtual {v5, v4, v3}, Loo9;->k(Ljava/lang/Object;Ljava/lang/Object;)V
 
-    .line 44
-    iget-object v3, v0, Lvw7;->d:Lkotlinx/coroutines/internal/ContextScope;
+    .line 36
+    iget-object v3, v0, Li48;->d:Lkotlinx/coroutines/internal/ContextScope;
 
-    new-instance v4, Luw7;
+    new-instance v4, Lh48;
 
-    invoke-direct {v4, v0, v2}, Luw7;-><init>(Lvw7;Lkotlin/coroutines/Continuation;)V
+    invoke-direct {v4, v0, v2}, Lh48;-><init>(Li48;Lkotlin/coroutines/Continuation;)V
 
-    invoke-static {v3, v2, v2, v4, v1}, Lzo3;->E(Lox3;Lhx3;Lrx3;Ll66;I)Ldwd;
+    invoke-static {v3, v2, v2, v4, v1}, Lvyg;->u(Ly04;Lq04;Lb14;Lpc6;I)Lcae;
 
     move-result-object v1
 
-    .line 45
-    iget-object v0, v0, Lvw7;->f:Ljava/util/LinkedHashMap;
+    .line 37
+    iget-object v0, v0, Li48;->f:Ljava/util/LinkedHashMap;
 
-    sget-object v3, Lpqa;->c:Lpqa;
+    sget-object v3, Lk1b;->c:Lk1b;
 
     invoke-interface {v0, v3, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 46
-    sget-object v0, Lg47;->m:Llr6;
+    .line 38
+    sget-object v0, Ljtg;->g:Loja;
 
     if-nez v0, :cond_0
 
     goto :goto_0
 
-    .line 47
+    .line 39
     :cond_0
-    invoke-interface {v0}, Llr6;->c()Z
+    sget-object v1, Lqz7;->o:Lqz7;
 
-    move-result v1
+    invoke-virtual {v0, v1}, Loja;->a(Lqz7;)Z
 
-    if-eqz v1, :cond_1
+    move-result v3
 
-    .line 48
-    sget-object v1, Lqs7;->o:Lqs7;
+    if-eqz v3, :cond_1
 
-    .line 49
-    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getLifecycleScope()Lqg7;
+    .line 40
+    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getLifecycleScope()Lmn7;
 
     move-result-object v3
 
-    invoke-static {v3}, Lvk9;->r(Lox3;)Z
+    invoke-static {v3}, Lb0b;->r(Ly04;)Z
 
     move-result v3
 
     const-string v4, "ONEME-6453|chats_list_lf | tabs subscribe on new data. Scope isActive: "
 
-    .line 50
-    invoke-static {v4, v3}, Lu88;->l(Ljava/lang/String;Z)Ljava/lang/String;
+    .line 41
+    invoke-static {v4, v3}, Lbg9;->j(Ljava/lang/String;Z)Ljava/lang/String;
 
     move-result-object v3
 
-    .line 51
-    invoke-interface {v0, v1, p1, v3, v2}, Llr6;->d(Lqs7;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    .line 42
+    invoke-virtual {v0, v1, p1, v3, v2}, Loja;->b(Lqz7;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    .line 52
+    .line 43
     :cond_1
     :goto_0
-    invoke-virtual {p0}, Lone/me/chats/tab/ChatsTabWidget;->s0()Lay5;
+    invoke-virtual {p0}, Lone/me/chats/tab/ChatsTabWidget;->C0()Lq36;
 
     move-result-object p1
 
-    .line 53
-    iget-object p1, p1, Lay5;->p0:Lu5c;
+    .line 44
+    iget-object p1, p1, Lq36;->t0:Liic;
 
-    .line 54
-    new-instance v0, Liy2;
+    .line 45
+    new-instance v0, Le13;
 
-    invoke-direct {v0, v2, p0}, Liy2;-><init>(Lkotlin/coroutines/Continuation;Lone/me/chats/tab/ChatsTabWidget;)V
+    invoke-direct {v0, v2, p0}, Le13;-><init>(Lkotlin/coroutines/Continuation;Lone/me/chats/tab/ChatsTabWidget;)V
 
-    .line 55
-    new-instance v1, Lgp5;
+    .line 46
+    new-instance v1, Lnu5;
 
     const/4 v2, 0x1
 
-    invoke-direct {v1, p1, v0, v2}, Lgp5;-><init>(Lzm5;Ll66;I)V
+    invoke-direct {v1, p1, v0, v2}, Lnu5;-><init>(Lis5;Lpc6;I)V
 
-    .line 56
-    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getLifecycleScope()Lqg7;
+    .line 47
+    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getLifecycleScope()Lmn7;
 
     move-result-object p0
 
-    invoke-static {v1, p0}, Lsgg;->L(Lzm5;Lox3;)Ldwd;
+    invoke-static {v1, p0}, Lo97;->u0(Lis5;Ly04;)Lcae;
 
     return-void
 .end method
@@ -496,18 +458,18 @@
     .locals 2
 
     .line 1
-    new-instance v0, Ldna;
+    new-instance v0, Lpxa;
 
     const-string v1, "folder_id"
 
-    invoke-direct {v0, v1, p1}, Ldna;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+    invoke-direct {v0, v1, p1}, Lpxa;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
 
     .line 2
-    filled-new-array {v0}, [Ldna;
+    filled-new-array {v0}, [Lpxa;
 
     move-result-object p1
 
-    invoke-static {p1}, Lp54;->d([Ldna;)Landroid/os/Bundle;
+    invoke-static {p1}, Lw7;->c([Lpxa;)Landroid/os/Bundle;
 
     move-result-object p1
 
@@ -518,42 +480,573 @@
 
 
 # virtual methods
-.method public final getInsetsConfig()Lp27;
-    .locals 0
+.method public final A0()Landroidx/viewpager2/widget/ViewPager2;
+    .locals 2
 
-    iget-object p0, p0, Lone/me/chats/tab/ChatsTabWidget;->a:Lp27;
+    sget-object v0, Lone/me/chats/tab/ChatsTabWidget;->C0:[Lxi7;
+
+    const/4 v1, 0x2
+
+    aget-object v0, v0, v1
+
+    iget-object v1, p0, Lone/me/chats/tab/ChatsTabWidget;->s0:Lcic;
+
+    invoke-interface {v1, p0, v0}, Lcic;->N(Ljava/lang/Object;Lxi7;)Ljava/lang/Object;
+
+    move-result-object p0
+
+    check-cast p0, Landroidx/viewpager2/widget/ViewPager2;
 
     return-object p0
+.end method
+
+.method public final B0()Ldsa;
+    .locals 2
+
+    sget-object v0, Lone/me/chats/tab/ChatsTabWidget;->C0:[Lxi7;
+
+    const/4 v1, 0x0
+
+    aget-object v0, v0, v1
+
+    iget-object v1, p0, Lone/me/chats/tab/ChatsTabWidget;->Z:Lcic;
+
+    invoke-interface {v1, p0, v0}, Lcic;->N(Ljava/lang/Object;Lxi7;)Ljava/lang/Object;
+
+    move-result-object p0
+
+    check-cast p0, Ldsa;
+
+    return-object p0
+.end method
+
+.method public final C0()Lq36;
+    .locals 0
+
+    iget-object p0, p0, Lone/me/chats/tab/ChatsTabWidget;->u0:Lcl7;
+
+    invoke-interface {p0}, Lcl7;->getValue()Ljava/lang/Object;
+
+    move-result-object p0
+
+    check-cast p0, Lq36;
+
+    return-object p0
+.end method
+
+.method public final D0(I)V
+    .locals 11
+
+    sget-object v0, Lqz7;->o:Lqz7;
+
+    invoke-virtual {p0}, Lone/me/chats/tab/ChatsTabWidget;->y0()Lg26;
+
+    move-result-object v1
+
+    iget-object v1, v1, Lv44;->Z:Landroid/util/SparseArray;
+
+    invoke-virtual {v1, p1}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lrzc;
+
+    const/4 v1, 0x0
+
+    if-eqz p1, :cond_0
+
+    invoke-virtual {p1}, Lrzc;->e()Ljava/util/ArrayList;
+
+    move-result-object p1
+
+    invoke-static {p1}, Lq73;->g0(Ljava/util/List;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Luzc;
+
+    if-eqz p1, :cond_0
+
+    iget-object p1, p1, Luzc;->a:Lxx3;
+
+    goto :goto_0
+
+    :cond_0
+    move-object p1, v1
+
+    :goto_0
+    instance-of v2, p1, Lone/me/chats/list/ChatsListWidget;
+
+    if-eqz v2, :cond_1
+
+    check-cast p1, Lone/me/chats/list/ChatsListWidget;
+
+    goto :goto_1
+
+    :cond_1
+    move-object p1, v1
+
+    :goto_1
+    if-nez p1, :cond_2
+
+    goto/16 :goto_8
+
+    :cond_2
+    iget-object p0, p0, Lone/me/chats/tab/ChatsTabWidget;->b:Ljava/lang/String;
+
+    sget-object v2, Ljtg;->g:Loja;
+
+    if-nez v2, :cond_3
+
+    goto :goto_4
+
+    :cond_3
+    invoke-virtual {v2, v0}, Loja;->a(Lqz7;)Z
+
+    move-result v3
+
+    if-eqz v3, :cond_6
+
+    invoke-virtual {p1}, Lxx3;->getView()Landroid/view/View;
+
+    move-result-object v3
+
+    if-eqz v3, :cond_4
+
+    invoke-virtual {v3}, Landroid/view/View;->getMeasuredWidth()I
+
+    move-result v3
+
+    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v3
+
+    goto :goto_2
+
+    :cond_4
+    move-object v3, v1
+
+    :goto_2
+    invoke-virtual {p1}, Lxx3;->getView()Landroid/view/View;
+
+    move-result-object v4
+
+    if-eqz v4, :cond_5
+
+    invoke-virtual {v4}, Landroid/view/View;->getMeasuredHeight()I
+
+    move-result v4
+
+    invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v4
+
+    goto :goto_3
+
+    :cond_5
+    move-object v4, v1
+
+    :goto_3
+    new-instance v5, Ljava/lang/StringBuilder;
+
+    const-string v6, "ONEME-6873|chats_list_page_state | root width:"
+
+    invoke-direct {v5, v6}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v5, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v3, ", root height:"
+
+    invoke-virtual {v5, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v5, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-virtual {v2, v0, p0, v3, v1}, Loja;->b(Lqz7;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    :cond_6
+    :goto_4
+    invoke-virtual {p1}, Lxx3;->getView()Landroid/view/View;
+
+    move-result-object p0
+
+    if-eqz p0, :cond_d
+
+    iget-object p0, p1, Lone/me/chats/list/ChatsListWidget;->b:Ljava/lang/String;
+
+    const-string v2, "all.chat.folder"
+
+    invoke-static {p0, v2}, Lvyg;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p0
+
+    if-eqz p0, :cond_7
+
+    goto/16 :goto_8
+
+    :cond_7
+    invoke-virtual {p1}, Lone/me/chats/list/ChatsListWidget;->A0()Lone/me/sdk/lists/widgets/EndlessRecyclerView2;
+
+    move-result-object p0
+
+    invoke-virtual {p0}, Landroid/view/View;->getMeasuredWidth()I
+
+    move-result p0
+
+    invoke-virtual {p1}, Lone/me/chats/list/ChatsListWidget;->A0()Lone/me/sdk/lists/widgets/EndlessRecyclerView2;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Landroid/view/View;->getMeasuredHeight()I
+
+    move-result v2
+
+    invoke-virtual {p1}, Lone/me/chats/list/ChatsListWidget;->A0()Lone/me/sdk/lists/widgets/EndlessRecyclerView2;
+
+    move-result-object v3
+
+    invoke-virtual {v3}, Landroidx/recyclerview/widget/RecyclerView;->getAdapter()Lcoc;
+
+    move-result-object v3
+
+    if-eqz v3, :cond_8
+
+    invoke-virtual {v3}, Lcoc;->j()I
+
+    move-result v3
+
+    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v3
+
+    goto :goto_5
+
+    :cond_8
+    move-object v3, v1
+
+    :goto_5
+    invoke-virtual {p1}, Lone/me/chats/list/ChatsListWidget;->A0()Lone/me/sdk/lists/widgets/EndlessRecyclerView2;
+
+    move-result-object v4
+
+    invoke-virtual {v4}, Landroid/view/ViewGroup;->getChildCount()I
+
+    move-result v4
+
+    invoke-virtual {p1}, Lone/me/chats/list/ChatsListWidget;->A0()Lone/me/sdk/lists/widgets/EndlessRecyclerView2;
+
+    move-result-object v5
+
+    const/4 v6, 0x0
+
+    move v7, v6
+
+    :goto_6
+    invoke-virtual {v5}, Landroid/view/ViewGroup;->getChildCount()I
+
+    move-result v8
+
+    if-ge v7, v8, :cond_b
+
+    add-int/lit8 v8, v7, 0x1
+
+    invoke-virtual {v5, v7}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
+
+    move-result-object v7
+
+    if-eqz v7, :cond_a
+
+    invoke-virtual {v7}, Landroid/view/View;->isAttachedToWindow()Z
+
+    move-result v7
+
+    if-eqz v7, :cond_9
+
+    const/4 v6, 0x1
+
+    goto :goto_7
+
+    :cond_9
+    move v7, v8
+
+    goto :goto_6
+
+    :cond_a
+    new-instance p0, Ljava/lang/IndexOutOfBoundsException;
+
+    invoke-direct {p0}, Ljava/lang/IndexOutOfBoundsException;-><init>()V
+
+    throw p0
+
+    :cond_b
+    :goto_7
+    iget-object v5, p1, Lone/me/chats/list/ChatsListWidget;->a:Ljava/lang/String;
+
+    sget-object v7, Ljtg;->g:Loja;
+
+    if-nez v7, :cond_c
+
+    goto :goto_8
+
+    :cond_c
+    invoke-virtual {v7, v0}, Loja;->a(Lqz7;)Z
+
+    move-result v8
+
+    if-eqz v8, :cond_d
+
+    iget-object p1, p1, Lone/me/chats/list/ChatsListWidget;->b:Ljava/lang/String;
+
+    const-string v8, " | width:"
+
+    const-string v9, "|height:"
+
+    const-string v10, "ONEME-6873|chats_list_page_state | chats list state. folderId:"
+
+    invoke-static {p0, v10, p1, v8, v9}, Lyv7;->m(ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object p0
+
+    const-string p1, " | child:"
+
+    const-string v8, "|childAttached:"
+
+    invoke-static {p0, v2, p1, v4, v8}, Lsq3;->o(Ljava/lang/StringBuilder;ILjava/lang/String;ILjava/lang/String;)V
+
+    invoke-virtual {p0, v6}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string p1, "|adapterCount:"
+
+    invoke-virtual {p0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-virtual {v7, v0, v5, p0, v1}, Loja;->b(Lqz7;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    :cond_d
+    :goto_8
+    return-void
+.end method
+
+.method public final E(ILandroid/os/Bundle;)V
+    .locals 3
+
+    if-eqz p2, :cond_2
+
+    const-string v0, "folder_id"
+
+    invoke-virtual {p2, v0}, Landroid/os/BaseBundle;->getString(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p2
+
+    if-nez p2, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    if-nez p1, :cond_1
+
+    sget-object p0, Lxz2;->c:Lxz2;
+
+    invoke-virtual {p0}, Lx2;->F0()Lza4;
+
+    move-result-object p0
+
+    const-string p1, ":settings/folder/edit?id="
+
+    invoke-virtual {p1, p2}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-virtual {p0, p1, v0}, Lza4;->b(Ljava/lang/String;Landroid/os/Bundle;)Z
+
+    return-void
+
+    :cond_1
+    const/4 v1, 0x1
+
+    if-ne p1, v1, :cond_2
+
+    invoke-virtual {p0}, Lone/me/chats/tab/ChatsTabWidget;->C0()Lq36;
+
+    move-result-object p0
+
+    iget-object p1, p0, Lx7g;->a:Lkotlinx/coroutines/internal/ContextScope;
+
+    iget-object v1, p0, Lq36;->b:Lxwe;
+
+    check-cast v1, Laga;
+
+    invoke-virtual {v1}, Laga;->a()Ls04;
+
+    move-result-object v1
+
+    new-instance v2, Lk36;
+
+    invoke-direct {v2, p0, p2, v0}, Lk36;-><init>(Lq36;Ljava/lang/String;Lkotlin/coroutines/Continuation;)V
+
+    const/4 p0, 0x2
+
+    invoke-static {p1, v1, v0, v2, p0}, Lvyg;->u(Ly04;Lq04;Lb14;Lpc6;I)Lcae;
+
+    :cond_2
+    :goto_0
+    return-void
+.end method
+
+.method public final E0()Lyxa;
+    .locals 10
+
+    invoke-virtual {p0}, Lone/me/chats/tab/ChatsTabWidget;->A0()Landroidx/viewpager2/widget/ViewPager2;
+
+    move-result-object p0
+
+    invoke-virtual {p0}, Landroidx/viewpager2/widget/ViewPager2;->getCurrentItem()I
+
+    move-result p0
+
+    if-nez p0, :cond_0
+
+    const-wide/16 v0, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    const-wide/16 v0, 0x2
+
+    :goto_0
+    new-instance v2, Lyxa;
+
+    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v6
+
+    const/16 v9, 0x33
+
+    const/4 v4, 0x0
+
+    const/4 v3, 0x0
+
+    sget-object v5, Li7e;->X:Li7e;
+
+    const/4 v7, 0x0
+
+    const/4 v8, 0x0
+
+    invoke-direct/range {v2 .. v9}, Lyxa;-><init>(Lcbb;ILi7e;Ljava/lang/Long;Ljava/lang/Long;Ltr;I)V
+
+    return-object v2
+.end method
+
+.method public final getInsetsConfig()Lj97;
+    .locals 0
+
+    iget-object p0, p0, Lone/me/chats/tab/ChatsTabWidget;->a:Lj97;
+
+    return-object p0
+.end method
+
+.method public final i0()V
+    .locals 2
+
+    invoke-virtual {p0}, Lone/me/chats/tab/ChatsTabWidget;->A0()Landroidx/viewpager2/widget/ViewPager2;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroidx/viewpager2/widget/ViewPager2;->getCurrentItem()I
+
+    move-result v0
+
+    invoke-virtual {p0}, Lone/me/chats/tab/ChatsTabWidget;->y0()Lg26;
+
+    move-result-object p0
+
+    iget-object p0, p0, Lv44;->Z:Landroid/util/SparseArray;
+
+    invoke-virtual {p0, v0}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
+
+    move-result-object p0
+
+    check-cast p0, Lrzc;
+
+    const/4 v0, 0x0
+
+    if-eqz p0, :cond_0
+
+    invoke-virtual {p0}, Lrzc;->e()Ljava/util/ArrayList;
+
+    move-result-object p0
+
+    invoke-static {p0}, Lq73;->g0(Ljava/util/List;)Ljava/lang/Object;
+
+    move-result-object p0
+
+    check-cast p0, Luzc;
+
+    if-eqz p0, :cond_0
+
+    iget-object p0, p0, Luzc;->a:Lxx3;
+
+    goto :goto_0
+
+    :cond_0
+    move-object p0, v0
+
+    :goto_0
+    instance-of v1, p0, Ld9d;
+
+    if-eqz v1, :cond_1
+
+    move-object v0, p0
+
+    check-cast v0, Ld9d;
+
+    :cond_1
+    if-eqz v0, :cond_2
+
+    invoke-interface {v0}, Ld9d;->i0()V
+
+    :cond_2
+    return-void
 .end method
 
 .method public final onAttach(Landroid/view/View;)V
     .locals 11
 
-    invoke-super {p0, p1}, Lou3;->onAttach(Landroid/view/View;)V
+    invoke-super {p0, p1}, Lxx3;->onAttach(Landroid/view/View;)V
 
-    iget-object p0, p0, Lone/me/chats/tab/ChatsTabWidget;->Y:Lje7;
+    iget-object p0, p0, Lone/me/chats/tab/ChatsTabWidget;->Y:Lcl7;
 
-    invoke-interface {p0}, Lje7;->getValue()Ljava/lang/Object;
+    invoke-interface {p0}, Lcl7;->getValue()Ljava/lang/Object;
 
     move-result-object p0
 
-    check-cast p0, Li67;
+    check-cast p0, Led7;
 
-    invoke-virtual {p0}, Li67;->a()Lh23;
+    invoke-virtual {p0}, Led7;->a()Lf53;
 
     move-result-object p1
 
-    check-cast p1, Lmwc;
+    check-cast p1, Lgad;
 
-    check-cast p1, Lj23;
+    check-cast p1, Lh53;
 
-    iget-object p1, p1, Le3;->g:Lme7;
+    iget-object p1, p1, Li3;->g:Lfl7;
 
     const-string v0, "app.already.invited.friends"
 
     const/4 v1, 0x0
 
-    invoke-virtual {p1, v0, v1}, Lme7;->getBoolean(Ljava/lang/String;Z)Z
+    invoke-virtual {p1, v0, v1}, Lfl7;->getBoolean(Ljava/lang/String;Z)Z
 
     move-result p1
 
@@ -562,73 +1055,71 @@
     goto :goto_0
 
     :cond_0
-    iget-object p1, p0, Li67;->a:Lje7;
+    iget-object p1, p0, Led7;->a:Lcl7;
 
-    invoke-interface {p1}, Lje7;->getValue()Ljava/lang/Object;
+    invoke-interface {p1}, Lcl7;->getValue()Ljava/lang/Object;
 
     move-result-object p1
 
-    check-cast p1, Ld6d;
+    check-cast p1, Lxjd;
 
-    check-cast p1, Lvwc;
+    check-cast p1, Lpad;
 
     invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     sget-object v0, Lru/ok/tamtam/android/prefs/PmsKey;->invite-friends-sheet-frequency:Lru/ok/tamtam/android/prefs/PmsKey;
 
-    sget-object v2, Lgz4;->a:Lgz4;
-
-    invoke-virtual {p1, v0, v2}, Lvwc;->l(Lru/ok/tamtam/android/prefs/PmsKey;Ljava/util/List;)Ljava/util/List;
+    invoke-virtual {p1, v0}, Lpad;->m(Lru/ok/tamtam/android/prefs/PmsKey;)Ljava/util/List;
 
     move-result-object p1
 
-    invoke-static {p1}, Lp43;->V0(Ljava/util/List;)[I
+    invoke-static {p1}, Lq73;->A0(Ljava/util/List;)[I
 
     move-result-object p1
 
-    invoke-virtual {p0}, Li67;->a()Lh23;
+    invoke-virtual {p0}, Led7;->a()Lf53;
 
     move-result-object v0
 
-    check-cast v0, Lmwc;
+    check-cast v0, Lgad;
 
-    iget-object v0, v0, Le3;->g:Lme7;
+    iget-object v0, v0, Li3;->g:Lfl7;
 
     const-string v2, "app.invite.friends.times.shown"
 
-    invoke-virtual {v0, v2, v1}, Lme7;->getInt(Ljava/lang/String;I)I
+    invoke-virtual {v0, v2, v1}, Lfl7;->getInt(Ljava/lang/String;I)I
 
     move-result v0
 
-    invoke-virtual {p0}, Li67;->a()Lh23;
+    invoke-virtual {p0}, Led7;->a()Lf53;
 
     move-result-object v1
 
-    check-cast v1, Lmwc;
+    check-cast v1, Lgad;
 
     const-wide/16 v3, -0x1
 
-    iget-object v1, v1, Le3;->g:Lme7;
+    iget-object v1, v1, Li3;->g:Lfl7;
 
     const-string v5, "app.first.invite.friends.time"
 
-    invoke-virtual {v1, v5, v3, v4}, Lme7;->getLong(Ljava/lang/String;J)J
+    invoke-virtual {v1, v5, v3, v4}, Lfl7;->getLong(Ljava/lang/String;J)J
 
     move-result-wide v3
 
-    invoke-virtual {p0}, Li67;->a()Lh23;
+    invoke-virtual {p0}, Led7;->a()Lf53;
 
     move-result-object v1
 
-    check-cast v1, Lmwc;
+    check-cast v1, Lgad;
 
     const-string v6, "app.first.login.time"
 
-    iget-object v1, v1, Le3;->g:Lme7;
+    iget-object v1, v1, Li3;->g:Lfl7;
 
     const-wide/16 v7, 0x0
 
-    invoke-virtual {v1, v6, v7, v8}, Lme7;->getLong(Ljava/lang/String;J)J
+    invoke-virtual {v1, v6, v7, v8}, Lfl7;->getLong(Ljava/lang/String;J)J
 
     move-result-wide v9
 
@@ -657,15 +1148,15 @@
     goto :goto_0
 
     :cond_3
-    sget v1, Lat4;->o:I
+    sget v1, Lfy4;->o:I
 
-    sget-object v1, Lft4;->Z:Lft4;
+    sget-object v1, Lky4;->Z:Lky4;
 
-    invoke-static {p1, v1}, La4f;->F(ILft4;)J
+    invoke-static {p1, v1}, Lr94;->b0(ILky4;)J
 
     move-result-wide v8
 
-    invoke-static {v8, v9}, Lat4;->e(J)J
+    invoke-static {v8, v9}, Lfy4;->e(J)J
 
     move-result-wide v8
 
@@ -679,35 +1170,35 @@
     return-void
 
     :cond_4
-    invoke-virtual {p0}, Li67;->a()Lh23;
+    invoke-virtual {p0}, Led7;->a()Lf53;
 
     move-result-object p1
 
     add-int/lit8 v0, v0, 0x1
 
-    check-cast p1, Lmwc;
+    check-cast p1, Lgad;
 
-    invoke-virtual {p1, v0, v2}, Le3;->h(ILjava/lang/String;)V
+    invoke-virtual {p1, v0, v2}, Li3;->i(ILjava/lang/String;)V
 
-    invoke-virtual {p0}, Li67;->a()Lh23;
+    invoke-virtual {p0}, Led7;->a()Lf53;
 
     move-result-object p1
 
-    check-cast p1, Lmwc;
+    check-cast p1, Lgad;
 
     invoke-static {v6, v7}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v0
 
-    invoke-virtual {p1, v5, v0}, Le3;->i(Ljava/lang/String;Ljava/lang/Long;)V
+    invoke-virtual {p1, v5, v0}, Li3;->j(Ljava/lang/String;Ljava/lang/Long;)V
 
-    iget-object p0, p0, Li67;->c:Lje7;
+    iget-object p0, p0, Led7;->c:Lcl7;
 
-    invoke-interface {p0}, Lje7;->getValue()Ljava/lang/Object;
+    invoke-interface {p0}, Lcl7;->getValue()Ljava/lang/Object;
 
     move-result-object p0
 
-    check-cast p0, Lj67;
+    check-cast p0, Lfd7;
 
     const-string p1, "main"
 
@@ -715,11 +1206,11 @@
 
     const-string v1, "show"
 
-    invoke-virtual {p0, v1, p1, v0}, Lj67;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {p0, v1, p1, v0}, Lfd7;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
-    sget-object p0, Lb57;->c:Lb57;
+    sget-object p0, Lyb7;->c:Lyb7;
 
-    invoke-virtual {p0}, Lu2;->D0()Ls64;
+    invoke-virtual {p0}, Lx2;->F0()Lza4;
 
     move-result-object p0
 
@@ -727,49 +1218,47 @@
 
     const/4 v0, 0x0
 
-    invoke-virtual {p0, p1, v0}, Ls64;->b(Ljava/lang/String;Landroid/os/Bundle;)Z
+    invoke-virtual {p0, p1, v0}, Lza4;->b(Ljava/lang/String;Landroid/os/Bundle;)Z
 
     return-void
 .end method
 
-.method public final onChangeEnded(Ltu3;Luu3;)V
+.method public final onChangeEnded(Lcy3;Ldy3;)V
     .locals 11
 
-    iget-boolean p1, p2, Luu3;->b:Z
+    iget-boolean p1, p2, Ldy3;->b:Z
 
     if-eqz p1, :cond_6
 
-    invoke-virtual {p0}, Lone/me/chats/tab/ChatsTabWidget;->s0()Lay5;
+    invoke-virtual {p0}, Lone/me/chats/tab/ChatsTabWidget;->C0()Lq36;
 
     move-result-object p1
 
-    iget-boolean p1, p1, Lay5;->t0:Z
+    iget-boolean p1, p1, Lq36;->x0:Z
 
     const/4 p2, 0x1
 
-    iget-object v1, p0, Lone/me/chats/tab/ChatsTabWidget;->o:Lje7;
+    iget-object v1, p0, Lone/me/chats/tab/ChatsTabWidget;->o:Lcl7;
 
     const/4 v2, 0x0
 
     if-nez p1, :cond_3
 
-    invoke-interface {v1}, Lje7;->getValue()Ljava/lang/Object;
+    invoke-interface {v1}, Lcl7;->getValue()Ljava/lang/Object;
 
     move-result-object p1
 
-    check-cast p1, Lura;
+    check-cast p1, Lp2b;
 
-    iget-object p1, p1, Lura;->b:Lccf;
+    iget-object p1, p1, Lp2b;->b:Lgtf;
 
-    iget-boolean v0, p1, Lccf;->a:Z
+    iget-boolean v0, p1, Lgtf;->a:Z
 
     if-eqz v0, :cond_1
 
-    iget-object p1, p1, Lccf;->b:Lsag;
+    iget-object p1, p1, Lgtf;->b:Lqxg;
 
-    iget-object p1, p1, Lsag;->b:Ljava/lang/Object;
-
-    check-cast p1, Landroid/content/Context;
+    iget-object p1, p1, Lqxg;->a:Landroid/content/Context;
 
     :try_start_0
     const-string v0, "appops"
@@ -844,17 +1333,17 @@
 
     move-object p1, v0
 
-    new-instance v0, Ljhc;
+    new-instance v0, Lhvc;
 
-    invoke-direct {v0, p1}, Ljhc;-><init>(Ljava/lang/Throwable;)V
+    invoke-direct {v0, p1}, Lhvc;-><init>(Ljava/lang/Throwable;)V
 
-    invoke-static {v0}, Llhc;->a(Ljava/lang/Object;)Ljava/lang/Throwable;
+    invoke-static {v0}, Ljvc;->a(Ljava/lang/Object;)Ljava/lang/Throwable;
 
     move-result-object p1
 
     if-eqz p1, :cond_2
 
-    const-class v0, Lsag;
+    const-class v0, Lqxg;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
 
@@ -872,7 +1361,7 @@
 
     move-result-object p1
 
-    invoke-static {v0, p1}, Lg47;->p(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, p1}, Ljtg;->l(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 
@@ -883,9 +1372,9 @@
 
     if-lt v0, v3, :cond_2
 
-    iget-object p1, p1, Lccf;->c:Landroid/app/NotificationManager;
+    iget-object p1, p1, Lgtf;->c:Landroid/app/NotificationManager;
 
-    invoke-static {p1}, Ldo0;->i(Landroid/app/NotificationManager;)Z
+    invoke-static {p1}, Ljo0;->i(Landroid/app/NotificationManager;)Z
 
     move-result p1
 
@@ -898,46 +1387,46 @@
     :goto_1
     if-nez p1, :cond_3
 
-    invoke-virtual {p0}, Lone/me/chats/tab/ChatsTabWidget;->s0()Lay5;
+    invoke-virtual {p0}, Lone/me/chats/tab/ChatsTabWidget;->C0()Lq36;
 
     move-result-object p1
 
-    iput-boolean p2, p1, Lay5;->t0:Z
+    iput-boolean p2, p1, Lq36;->x0:Z
 
-    invoke-interface {v1}, Lje7;->getValue()Ljava/lang/Object;
+    invoke-interface {v1}, Lcl7;->getValue()Ljava/lang/Object;
 
     move-result-object p1
 
-    check-cast p1, Lura;
+    check-cast p1, Lp2b;
 
-    new-instance v0, Lo6g;
+    new-instance v0, Litg;
 
     const/4 p2, 0x1
 
-    invoke-direct {v0, p0, p2}, Lo6g;-><init>(Lone/me/sdk/arch/Widget;I)V
+    invoke-direct {v0, p0, p2}, Litg;-><init>(Lone/me/sdk/arch/Widget;I)V
 
     invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    sget-object v1, Lura;->o:[Ljava/lang/String;
+    sget-object v1, Lp2b;->p:[Ljava/lang/String;
 
-    sget v3, Lczb;->permission_fsi_request:I
+    sget v3, Lpbc;->permission_fsi_request:I
 
-    sget v4, Lczb;->permission_fsi_request_rationale:I
+    sget v4, Lpbc;->permission_fsi_request_rationale:I
 
-    sget v5, Lczb;->permissions_fsi_request_positive_button:I
+    sget v5, Lpbc;->permissions_fsi_request_positive_button:I
 
     const/16 v2, 0xb4
 
-    invoke-virtual/range {v0 .. v5}, Lo6g;->c([Ljava/lang/String;IIII)V
+    invoke-virtual/range {v0 .. v5}, Litg;->c([Ljava/lang/String;IIII)V
 
     goto :goto_3
 
     :cond_3
-    invoke-interface {v1}, Lje7;->getValue()Ljava/lang/Object;
+    invoke-interface {v1}, Lcl7;->getValue()Ljava/lang/Object;
 
     move-result-object p1
 
-    check-cast p1, Lura;
+    check-cast p1, Lp2b;
 
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
@@ -945,9 +1434,9 @@
 
     if-lt v0, v3, :cond_4
 
-    sget-object v4, Lura;->k:[Ljava/lang/String;
+    sget-object v4, Lp2b;->l:[Ljava/lang/String;
 
-    invoke-virtual {p1, v4}, Lura;->b([Ljava/lang/String;)Z
+    invoke-virtual {p1, v4}, Lp2b;->b([Ljava/lang/String;)Z
 
     move-result p1
 
@@ -961,65 +1450,65 @@
     :goto_2
     if-nez p1, :cond_6
 
-    iget-object p1, p0, Lone/me/chats/tab/ChatsTabWidget;->X:Lje7;
+    iget-object p1, p0, Lone/me/chats/tab/ChatsTabWidget;->X:Lcl7;
 
-    invoke-interface {p1}, Lje7;->getValue()Ljava/lang/Object;
+    invoke-interface {p1}, Lcl7;->getValue()Ljava/lang/Object;
 
     move-result-object v4
 
-    check-cast v4, Lh23;
+    check-cast v4, Lf53;
 
-    check-cast v4, Lmwc;
+    check-cast v4, Lgad;
 
-    check-cast v4, Lj23;
+    check-cast v4, Lh53;
 
-    iget-object v4, v4, Le3;->g:Lme7;
+    iget-object v4, v4, Li3;->g:Lfl7;
 
     const-string v5, "app.pushNotificationsRequested"
 
-    invoke-virtual {v4, v5, v2}, Lme7;->getBoolean(Ljava/lang/String;Z)Z
+    invoke-virtual {v4, v5, v2}, Lfl7;->getBoolean(Ljava/lang/String;Z)Z
 
     move-result v2
 
     if-nez v2, :cond_6
 
-    invoke-interface {p1}, Lje7;->getValue()Ljava/lang/Object;
+    invoke-interface {p1}, Lcl7;->getValue()Ljava/lang/Object;
 
     move-result-object p1
 
-    check-cast p1, Lh23;
+    check-cast p1, Lf53;
 
-    check-cast p1, Lmwc;
+    check-cast p1, Lgad;
 
-    invoke-virtual {p1, v5, p2}, Le3;->g(Ljava/lang/String;Z)V
+    invoke-virtual {p1, v5, p2}, Li3;->h(Ljava/lang/String;Z)V
 
-    invoke-interface {v1}, Lje7;->getValue()Ljava/lang/Object;
+    invoke-interface {v1}, Lcl7;->getValue()Ljava/lang/Object;
 
     move-result-object p1
 
     move-object v4, p1
 
-    check-cast v4, Lura;
+    check-cast v4, Lp2b;
 
-    new-instance v5, Lo6g;
+    new-instance v5, Litg;
 
     const/4 p1, 0x1
 
-    invoke-direct {v5, p0, p1}, Lo6g;-><init>(Lone/me/sdk/arch/Widget;I)V
+    invoke-direct {v5, p0, p1}, Litg;-><init>(Lone/me/sdk/arch/Widget;I)V
 
     if-lt v0, v3, :cond_5
 
-    sget-object v6, Lura;->k:[Ljava/lang/String;
+    sget-object v6, Lp2b;->l:[Ljava/lang/String;
 
-    sget v8, Lczb;->permissions_post_notification_request_rationale:I
+    sget v8, Lpbc;->permissions_post_notification_request_rationale:I
 
-    sget v9, Lczb;->permissions_post_notification_request_title:I
+    sget v9, Lpbc;->permissions_post_notification_request_title:I
 
-    sget v10, Lczb;->permissions_post_notification_request_positive_button:I
+    sget v10, Lpbc;->permissions_post_notification_request_positive_button:I
 
     const/16 v7, 0xb1
 
-    invoke-virtual/range {v4 .. v10}, Lura;->d(Lo6g;[Ljava/lang/String;IIII)V
+    invoke-virtual/range {v4 .. v10}, Lp2b;->d(Litg;[Ljava/lang/String;IIII)V
 
     goto :goto_3
 
@@ -1042,11 +1531,11 @@
 
     invoke-direct {p0, p1}, Landroidx/constraintlayout/widget/ConstraintLayout;-><init>(Landroid/content/Context;)V
 
-    sget p1, Lg6a;->c:I
+    sget p1, Lsea;->c:I
 
     invoke-virtual {p0, p1}, Landroidx/constraintlayout/widget/ConstraintLayout;->setId(I)V
 
-    new-instance p1, Lvia;
+    new-instance p1, Ldsa;
 
     invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
 
@@ -1054,9 +1543,9 @@
 
     const/4 p3, 0x6
 
-    invoke-direct {p1, p2, p3}, Lvia;-><init>(Landroid/content/Context;I)V
+    invoke-direct {p1, p2, p3}, Ldsa;-><init>(Landroid/content/Context;I)V
 
-    sget p2, Lg6a;->j:I
+    sget p2, Lsea;->j:I
 
     invoke-virtual {p1, p2}, Landroid/view/View;->setId(I)V
 
@@ -1064,7 +1553,7 @@
 
     move-result-object p3
 
-    sget v0, Li6a;->q:I
+    sget v0, Luea;->q:I
 
     invoke-virtual {p3, v0}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -1072,104 +1561,113 @@
 
     invoke-virtual {p1, p3}, Landroid/view/View;->setTransitionName(Ljava/lang/String;)V
 
-    sget-object p3, Lnia;->b:Lnia;
+    sget-object p3, Lvra;->b:Lvra;
 
-    invoke-virtual {p1, p3}, Lvia;->setForm(Lnia;)V
+    invoke-virtual {p1, p3}, Ldsa;->setForm(Lvra;)V
 
-    new-instance p3, Loi3;
+    new-instance p3, Ltl3;
 
     const/4 v0, -0x1
 
     const/4 v1, -0x2
 
-    invoke-direct {p3, v0, v1}, Loi3;-><init>(II)V
+    invoke-direct {p3, v0, v1}, Ltl3;-><init>(II)V
 
     const/4 v0, 0x0
 
-    iput v0, p3, Loi3;->i:I
+    iput v0, p3, Ltl3;->i:I
 
-    sget v2, Lg6a;->e:I
+    sget v2, Lsea;->e:I
 
-    iput v2, p3, Loi3;->k:I
+    iput v2, p3, Ltl3;->k:I
 
-    iput v0, p3, Loi3;->e:I
+    iput v0, p3, Ltl3;->e:I
 
-    iput v0, p3, Loi3;->h:I
+    iput v0, p3, Ltl3;->h:I
 
     invoke-virtual {p1, p3}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    sget p3, Li6a;->p:I
+    sget p3, Luea;->p:I
 
-    invoke-virtual {p1, p3}, Lvia;->setTitle(I)V
+    invoke-virtual {p1, p3}, Ldsa;->setTitle(I)V
 
-    new-instance p3, Liia;
+    new-instance p3, Lqra;
 
-    new-instance v3, Lqia;
+    new-instance v3, Lyra;
 
-    new-instance v4, Lzo9;
+    new-instance v4, Lj13;
 
-    const/16 v5, 0x8
+    invoke-direct {v4, p1}, Lj13;-><init>(Ldsa;)V
 
-    invoke-direct {v4, v5}, Lzo9;-><init>(I)V
+    invoke-direct {v3, v4}, Lyra;-><init>(Luna;)V
 
-    invoke-direct {v3, v4}, Lqia;-><init>(Lrea;)V
+    new-instance v4, Lxra;
 
-    new-instance v4, Lpia;
+    sget v5, Lq0d;->O0:I
 
-    sget v5, Lanc;->M0:I
-
-    new-instance v6, Lme1;
+    new-instance v6, Lif1;
 
     const/16 v7, 0x1d
 
-    invoke-direct {v6, v7}, Lme1;-><init>(I)V
+    invoke-direct {v6, v7}, Lif1;-><init>(I)V
 
     const/16 v7, 0xe
 
-    invoke-direct {v4, v5, v6, v7}, Lpia;-><init>(ILx56;I)V
+    invoke-direct {v4, v5, v6, v7}, Lxra;-><init>(ILbc6;I)V
 
-    invoke-direct {p3, v3, v4}, Liia;-><init>(Lria;Lria;)V
+    const/4 v5, 0x0
 
-    invoke-virtual {p1, p3}, Lvia;->setRightActions(Llia;)V
+    invoke-direct {p3, v3, v4, v5}, Lqra;-><init>(Lzra;Lzra;Lwra;)V
 
-    invoke-virtual {p1}, Lvia;->getSearchView()Luea;
+    invoke-virtual {p1, p3}, Ldsa;->setRightActions(Ltra;)V
+
+    invoke-virtual {p1}, Ldsa;->getSearchView()Lxna;
 
     move-result-object p3
 
     if-eqz p3, :cond_0
 
-    invoke-virtual {p3, v0}, Luea;->setExpandable(Z)V
+    invoke-virtual {p3, v0}, Lxna;->setExpandable(Z)V
 
     :cond_0
+    invoke-virtual {p1}, Ldsa;->getSearchView()Lxna;
+
+    move-result-object p3
+
+    if-eqz p3, :cond_1
+
+    invoke-virtual {p3, v0}, Lxna;->setExpandWithAnimation(Z)V
+
+    :cond_1
     invoke-virtual {p0, p1}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
 
-    new-instance p1, Lmha;
+    new-instance p1, Ltqa;
 
     invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
 
     move-result-object p3
 
-    invoke-direct {p1, p3, v0}, Lmha;-><init>(Landroid/content/Context;I)V
+    invoke-direct {p1, p3, v0}, Ltqa;-><init>(Landroid/content/Context;I)V
 
     invoke-virtual {p1, v2}, Landroid/view/View;->setId(I)V
 
     invoke-virtual {p1, v0}, Lcom/google/android/material/tabs/TabLayout;->setTabMode(I)V
 
-    new-instance p3, Loi3;
+    new-instance p3, Ltl3;
 
-    invoke-direct {p3, v0, v1}, Loi3;-><init>(II)V
+    invoke-direct {p3, v0, v1}, Ltl3;-><init>(II)V
 
-    iput p2, p3, Loi3;->j:I
+    iput p2, p3, Ltl3;->j:I
 
-    sget p2, Lg6a;->f:I
+    sget p2, Lsea;->f:I
 
-    iput p2, p3, Loi3;->k:I
+    iput p2, p3, Ltl3;->k:I
 
-    iput v0, p3, Loi3;->e:I
+    iput v0, p3, Ltl3;->e:I
 
-    iput v0, p3, Loi3;->h:I
+    iput v0, p3, Ltl3;->h:I
 
-    invoke-virtual {p1, p3}, Lmha;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+    invoke-virtual {p1, p3}, Ltqa;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
     invoke-virtual {p0, p1}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
 
@@ -1177,25 +1675,25 @@
 
     move-result-object p1
 
-    invoke-static {p1}, Lou0;->a(Landroid/content/Context;)Ls12;
+    invoke-static {p1}, Lrde;->a(Landroid/content/Context;)Ll42;
 
     move-result-object p1
 
     invoke-virtual {p1, p2}, Landroid/view/View;->setId(I)V
 
-    new-instance p3, Loi3;
+    new-instance p3, Ltl3;
 
-    invoke-direct {p3, v0, v1}, Loi3;-><init>(II)V
+    invoke-direct {p3, v0, v1}, Ltl3;-><init>(II)V
 
-    iput v2, p3, Loi3;->j:I
+    iput v2, p3, Ltl3;->j:I
 
-    sget v1, Lg6a;->d:I
+    sget v1, Lsea;->d:I
 
-    iput v1, p3, Loi3;->k:I
+    iput v1, p3, Ltl3;->k:I
 
-    iput v0, p3, Loi3;->e:I
+    iput v0, p3, Ltl3;->e:I
 
-    iput v0, p3, Loi3;->h:I
+    iput v0, p3, Ltl3;->h:I
 
     invoke-virtual {p0, p1, p3}, Landroid/view/ViewGroup;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
@@ -1209,25 +1707,25 @@
 
     invoke-virtual {p1, v1}, Landroid/view/View;->setId(I)V
 
-    new-instance p3, Loi3;
+    new-instance p3, Ltl3;
 
-    invoke-direct {p3, v0, v0}, Loi3;-><init>(II)V
+    invoke-direct {p3, v0, v0}, Ltl3;-><init>(II)V
 
     const/high16 v1, 0x3f800000    # 1.0f
 
-    iput v1, p3, Loi3;->I:F
+    iput v1, p3, Ltl3;->I:F
 
-    iput p2, p3, Loi3;->j:I
+    iput p2, p3, Ltl3;->j:I
 
-    iput v0, p3, Loi3;->l:I
+    iput v0, p3, Ltl3;->l:I
 
-    iput v0, p3, Loi3;->e:I
+    iput v0, p3, Ltl3;->e:I
 
-    iput v0, p3, Loi3;->h:I
+    iput v0, p3, Ltl3;->h:I
 
     invoke-virtual {p1, p3}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    invoke-static {p1}, Lq46;->p(Landroidx/viewpager2/widget/ViewPager2;)V
+    invoke-static {p1}, Lz48;->n(Landroidx/viewpager2/widget/ViewPager2;)V
 
     invoke-virtual {p0, p1}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
 
@@ -1239,7 +1737,7 @@
 
     iget-object p1, p0, Lone/me/chats/tab/ChatsTabWidget;->b:Ljava/lang/String;
 
-    sget-object v0, Lg47;->m:Llr6;
+    sget-object v0, Ljtg;->g:Loja;
 
     const/4 v1, 0x0
 
@@ -1248,42 +1746,49 @@
     goto :goto_0
 
     :cond_0
-    invoke-interface {v0}, Llr6;->c()Z
+    sget-object v2, Lqz7;->o:Lqz7;
 
-    move-result v2
+    invoke-virtual {v0, v2}, Loja;->a(Lqz7;)Z
 
-    if-eqz v2, :cond_1
+    move-result v3
 
-    sget-object v2, Lqs7;->o:Lqs7;
+    if-eqz v3, :cond_1
 
-    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getLifecycleScope()Lqg7;
+    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getLifecycleScope()Lmn7;
 
     move-result-object v3
 
-    invoke-static {v3}, Lvk9;->r(Lox3;)Z
+    invoke-static {v3}, Lb0b;->r(Ly04;)Z
 
     move-result v3
 
     const-string v4, "ONEME-6453|chats_list_lf | tabs view destroy. Scope isActive: "
 
-    invoke-static {v4, v3}, Lu88;->l(Ljava/lang/String;Z)Ljava/lang/String;
+    invoke-static {v4, v3}, Lbg9;->j(Ljava/lang/String;Z)Ljava/lang/String;
 
     move-result-object v3
 
-    invoke-interface {v0, v2, p1, v3, v1}, Llr6;->d(Lqs7;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-virtual {v0, v2, p1, v3, v1}, Loja;->b(Lqz7;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     :cond_1
     :goto_0
-    iget-object p1, p0, Lone/me/chats/tab/ChatsTabWidget;->t0:Lu40;
+    iget-object p1, p0, Lone/me/chats/tab/ChatsTabWidget;->w0:Lx30;
 
     if-eqz p1, :cond_2
 
-    invoke-virtual {p1}, Lu40;->d()V
+    invoke-virtual {p1}, Lx30;->d()V
 
     :cond_2
-    iput-object v1, p0, Lone/me/chats/tab/ChatsTabWidget;->t0:Lu40;
+    iput-object v1, p0, Lone/me/chats/tab/ChatsTabWidget;->w0:Lx30;
 
-    iput-object v1, p0, Lone/me/chats/tab/ChatsTabWidget;->c:Lvu5;
+    iget-object p1, p0, Lone/me/chats/tab/ChatsTabWidget;->c:Lsw3;
+
+    if-eqz p1, :cond_3
+
+    invoke-interface {p1}, Lsw3;->dismiss()V
+
+    :cond_3
+    iput-object v1, p0, Lone/me/chats/tab/ChatsTabWidget;->c:Lsw3;
 
     return-void
 .end method
@@ -1299,11 +1804,11 @@
 
     move-result-object p1
 
-    invoke-virtual {p0}, Lone/me/chats/tab/ChatsTabWidget;->s0()Lay5;
+    invoke-virtual {p0}, Lone/me/chats/tab/ChatsTabWidget;->C0()Lq36;
 
     move-result-object p0
 
-    invoke-virtual {p0, p1}, Lay5;->q(Ljava/lang/String;)V
+    invoke-virtual {p0, p1}, Lq36;->q(Ljava/lang/String;)V
 
     return-void
 .end method
@@ -1313,7 +1818,7 @@
 
     iget-object v0, p0, Lone/me/chats/tab/ChatsTabWidget;->b:Ljava/lang/String;
 
-    sget-object v1, Lg47;->m:Llr6;
+    sget-object v1, Ljtg;->g:Loja;
 
     const/4 v8, 0x0
 
@@ -1322,60 +1827,64 @@
     goto :goto_0
 
     :cond_0
-    invoke-interface {v1}, Llr6;->c()Z
+    sget-object v3, Lqz7;->o:Lqz7;
 
-    move-result v3
+    invoke-virtual {v1, v3}, Loja;->a(Lqz7;)Z
 
-    if-eqz v3, :cond_1
+    move-result v4
 
-    sget-object v3, Lqs7;->o:Lqs7;
+    if-eqz v4, :cond_1
 
-    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getLifecycleScope()Lqg7;
+    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getLifecycleScope()Lmn7;
 
     move-result-object v4
 
-    invoke-static {v4}, Lvk9;->r(Lox3;)Z
+    invoke-static {v4}, Lb0b;->r(Ly04;)Z
 
     move-result v4
 
     const-string v5, "ONEME-6453|chats_list_lf | tabs view created. Scope isActive: "
 
-    invoke-static {v5, v4}, Lu88;->l(Ljava/lang/String;Z)Ljava/lang/String;
+    invoke-static {v5, v4}, Lbg9;->j(Ljava/lang/String;Z)Ljava/lang/String;
 
     move-result-object v4
 
-    invoke-interface {v1, v3, v0, v4, v8}, Llr6;->d(Lqs7;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-virtual {v1, v3, v0, v4, v8}, Loja;->b(Lqz7;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     :cond_1
     :goto_0
-    invoke-virtual {p0}, Lone/me/chats/tab/ChatsTabWidget;->q0()Landroidx/viewpager2/widget/ViewPager2;
+    invoke-virtual {p0}, Lone/me/chats/tab/ChatsTabWidget;->A0()Landroidx/viewpager2/widget/ViewPager2;
 
     move-result-object v0
 
-    iget-object v1, p0, Lone/me/chats/tab/ChatsTabWidget;->w0:Lvw5;
+    invoke-virtual {p0}, Lone/me/chats/tab/ChatsTabWidget;->y0()Lg26;
 
-    invoke-virtual {v0, v1}, Landroidx/viewpager2/widget/ViewPager2;->setAdapter(Lgbc;)V
+    move-result-object v1
 
-    iget-object v0, p0, Lone/me/chats/tab/ChatsTabWidget;->w0:Lvw5;
+    invoke-virtual {v0, v1}, Landroidx/viewpager2/widget/ViewPager2;->setAdapter(Lcoc;)V
+
+    invoke-virtual {p0}, Lone/me/chats/tab/ChatsTabWidget;->y0()Lg26;
+
+    move-result-object v0
 
     const/4 v9, 0x0
 
-    iput v9, v0, Lh14;->Z:I
+    iput v9, v0, Lv44;->Y:I
 
     :goto_1
-    iget-object v1, v0, Lh14;->q0:Ljava/lang/Cloneable;
+    iget-object v1, v0, Lv44;->t0:Ljava/lang/Cloneable;
 
-    check-cast v1, Ltv7;
+    check-cast v1, Lr28;
 
-    invoke-virtual {v1}, Ltv7;->g()I
+    invoke-virtual {v1}, Lr28;->g()I
 
     move-result v1
 
-    iget v3, v0, Lh14;->Z:I
+    iget v3, v0, Lv44;->Y:I
 
     if-le v1, v3, :cond_2
 
-    iget-object v1, v0, Lh14;->Y:Ljava/util/ArrayList;
+    iget-object v1, v0, Lv44;->X:Ljava/util/ArrayList;
 
     invoke-virtual {v1, v9}, Ljava/util/ArrayList;->remove(I)Ljava/lang/Object;
 
@@ -1387,44 +1896,44 @@
 
     move-result-wide v3
 
-    iget-object v1, v0, Lh14;->q0:Ljava/lang/Cloneable;
+    iget-object v1, v0, Lv44;->t0:Ljava/lang/Cloneable;
 
-    check-cast v1, Ltv7;
+    check-cast v1, Lr28;
 
-    invoke-virtual {v1, v3, v4}, Ltv7;->f(J)V
+    invoke-virtual {v1, v3, v4}, Lr28;->f(J)V
 
     goto :goto_1
 
     :cond_2
-    invoke-virtual {p0}, Lone/me/chats/tab/ChatsTabWidget;->q0()Landroidx/viewpager2/widget/ViewPager2;
+    invoke-virtual {p0}, Lone/me/chats/tab/ChatsTabWidget;->A0()Landroidx/viewpager2/widget/ViewPager2;
 
     move-result-object v0
 
-    iget v1, p0, Lone/me/chats/tab/ChatsTabWidget;->v0:I
+    iget v1, p0, Lone/me/chats/tab/ChatsTabWidget;->z0:I
 
     invoke-virtual {v0, v1}, Landroidx/viewpager2/widget/ViewPager2;->setOffscreenPageLimit(I)V
 
-    iget-object v10, p0, Lone/me/chats/tab/ChatsTabWidget;->u0:Li30;
+    iget-object v10, p0, Lone/me/chats/tab/ChatsTabWidget;->x0:Lf36;
 
-    invoke-virtual {p0}, Lone/me/chats/tab/ChatsTabWidget;->p0()Lmha;
+    invoke-virtual {p0}, Lone/me/chats/tab/ChatsTabWidget;->z0()Ltqa;
 
     move-result-object v11
 
-    invoke-virtual {p0}, Lone/me/chats/tab/ChatsTabWidget;->q0()Landroidx/viewpager2/widget/ViewPager2;
+    invoke-virtual {p0}, Lone/me/chats/tab/ChatsTabWidget;->A0()Landroidx/viewpager2/widget/ViewPager2;
 
     move-result-object v12
 
-    new-instance v13, Lns2;
+    new-instance v13, Lvl2;
 
-    const/4 v0, 0x5
+    const/16 v0, 0x9
 
-    invoke-direct {v13, v0, p0}, Lns2;-><init>(ILjava/lang/Object;)V
+    invoke-direct {v13, v0, p0}, Lvl2;-><init>(ILjava/lang/Object;)V
 
-    new-instance v0, Ljw;
+    new-instance v0, Lsv;
 
     const/4 v6, 0x0
 
-    const/16 v7, 0xc
+    const/16 v7, 0xb
 
     const/4 v1, 0x2
 
@@ -1436,53 +1945,53 @@
 
     move-object v2, p0
 
-    invoke-direct/range {v0 .. v7}, Ljw;-><init>(ILjava/lang/Object;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;II)V
+    invoke-direct/range {v0 .. v7}, Lsv;-><init>(ILjava/lang/Object;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;II)V
 
-    invoke-virtual {v10, v11, v12, v13, v0}, Li30;->a(Lmha;Landroidx/viewpager2/widget/ViewPager2;Lx56;Ll66;)Lu40;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lu40;->b()V
-
-    iput-object v0, p0, Lone/me/chats/tab/ChatsTabWidget;->t0:Lu40;
-
-    invoke-virtual {p0}, Lone/me/chats/tab/ChatsTabWidget;->s0()Lay5;
+    invoke-virtual {v10, v11, v12, v13, v0}, Lf36;->a(Ltqa;Landroidx/viewpager2/widget/ViewPager2;Lbc6;Lpc6;)Lx30;
 
     move-result-object v0
 
-    iget-object v0, v0, Lay5;->p0:Lu5c;
+    invoke-virtual {v0}, Lx30;->b()V
 
-    sget-object v1, Lgg7;->o:Lgg7;
+    iput-object v0, p0, Lone/me/chats/tab/ChatsTabWidget;->w0:Lx30;
 
-    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleOwner()Ldh7;
+    invoke-virtual {p0}, Lone/me/chats/tab/ChatsTabWidget;->C0()Lq36;
+
+    move-result-object v0
+
+    iget-object v0, v0, Lq36;->t0:Liic;
+
+    sget-object v1, Lcn7;->o:Lcn7;
+
+    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleOwner()Lzn7;
 
     move-result-object v3
 
-    invoke-interface {v3}, Ldh7;->L()Lfh7;
+    invoke-interface {v3}, Lzn7;->L()Lbo7;
 
     move-result-object v3
 
-    invoke-static {v0, v3, v1}, Lsbg;->m(Lzm5;Lfh7;Lgg7;)Lhq1;
+    invoke-static {v0, v3, v1}, Lya6;->n(Lis5;Lbo7;Lcn7;)Lps1;
 
     move-result-object v0
 
-    new-instance v1, Lky2;
+    new-instance v1, Lh13;
 
-    invoke-direct {v1, v8, p0}, Lky2;-><init>(Lkotlin/coroutines/Continuation;Lone/me/chats/tab/ChatsTabWidget;)V
+    invoke-direct {v1, v8, p0}, Lh13;-><init>(Lkotlin/coroutines/Continuation;Lone/me/chats/tab/ChatsTabWidget;)V
 
-    new-instance v3, Lgp5;
+    new-instance v3, Lnu5;
 
     const/4 v4, 0x1
 
-    invoke-direct {v3, v0, v1, v4}, Lgp5;-><init>(Lzm5;Ll66;I)V
+    invoke-direct {v3, v0, v1, v4}, Lnu5;-><init>(Lis5;Lpc6;I)V
 
-    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleScope()Lqg7;
+    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleScope()Lmn7;
 
     move-result-object v0
 
-    invoke-static {v3, v0}, Lsgg;->L(Lzm5;Lox3;)Ldwd;
+    invoke-static {v3, v0}, Lo97;->u0(Lis5;Ly04;)Lcae;
 
-    invoke-virtual {p0}, Lone/me/chats/tab/ChatsTabWidget;->q0()Landroidx/viewpager2/widget/ViewPager2;
+    invoke-virtual {p0}, Lone/me/chats/tab/ChatsTabWidget;->A0()Landroidx/viewpager2/widget/ViewPager2;
 
     move-result-object v0
 
@@ -1506,22 +2015,24 @@
 
     if-eqz v1, :cond_4
 
-    invoke-virtual {v1, v8}, Landroidx/recyclerview/widget/RecyclerView;->setItemAnimator(Llbc;)V
+    invoke-virtual {v1, v8}, Landroidx/recyclerview/widget/RecyclerView;->setItemAnimator(Lhoc;)V
 
     invoke-virtual {v1, v3}, Landroidx/recyclerview/widget/RecyclerView;->setHasFixedSize(Z)V
 
     :cond_4
-    new-instance v1, Lgh0;
+    new-instance v1, Lkh0;
 
     const/4 v4, 0x4
 
-    invoke-direct {v1, v4, p0}, Lgh0;-><init>(ILjava/lang/Object;)V
+    invoke-direct {v1, v4, p0}, Lkh0;-><init>(ILjava/lang/Object;)V
 
-    invoke-virtual {v0, v1}, Landroidx/viewpager2/widget/ViewPager2;->b(Lhpf;)V
+    invoke-virtual {v0, v1}, Landroidx/viewpager2/widget/ViewPager2;->b(Lv8g;)V
 
-    iget-object v1, p0, Lone/me/chats/tab/ChatsTabWidget;->w0:Lvw5;
+    invoke-virtual {p0}, Lone/me/chats/tab/ChatsTabWidget;->y0()Lg26;
 
-    iget-object v1, v1, Lvw5;->v0:Ljava/util/List;
+    move-result-object v1
+
+    iget-object v1, v1, Lg26;->y0:Ljava/util/List;
 
     invoke-interface {v1}, Ljava/util/List;->size()I
 
@@ -1569,9 +2080,11 @@
 
     invoke-virtual {v0, v1, v4}, Landroid/view/View;->measure(II)V
 
-    iget-object v0, p0, Lone/me/chats/tab/ChatsTabWidget;->w0:Lvw5;
+    invoke-virtual {p0}, Lone/me/chats/tab/ChatsTabWidget;->y0()Lg26;
 
-    iget-object v0, v0, Lvw5;->v0:Ljava/util/List;
+    move-result-object v0
+
+    iget-object v0, v0, Lg26;->y0:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->size()I
 
@@ -1579,32 +2092,32 @@
 
     if-le v0, v3, :cond_5
 
-    invoke-virtual {p0, v3}, Lone/me/chats/tab/ChatsTabWidget;->t0(I)V
+    invoke-virtual {p0, v3}, Lone/me/chats/tab/ChatsTabWidget;->D0(I)V
 
     :cond_5
-    iget-object v0, p0, Lone/me/chats/tab/ChatsTabWidget;->q0:Lo5c;
+    iget-object v0, p0, Lone/me/chats/tab/ChatsTabWidget;->t0:Lcic;
 
-    sget-object v1, Lone/me/chats/tab/ChatsTabWidget;->y0:[Lbc7;
+    sget-object v1, Lone/me/chats/tab/ChatsTabWidget;->C0:[Lxi7;
 
     const/4 v4, 0x3
 
     aget-object v1, v1, v4
 
-    invoke-interface {v0, p0, v1}, Lo5c;->M(Ljava/lang/Object;Lbc7;)Ljava/lang/Object;
+    invoke-interface {v0, p0, v1}, Lcic;->N(Ljava/lang/Object;Lxi7;)Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Landroid/view/ViewGroup;
 
-    invoke-virtual {p0, v0}, Lou3;->getChildRouter(Landroid/view/ViewGroup;)Lcmc;
+    invoke-virtual {p0, v0}, Lxx3;->getChildRouter(Landroid/view/ViewGroup;)Lrzc;
 
     move-result-object v0
 
-    iput v3, v0, Lcmc;->e:I
+    iput v3, v0, Lrzc;->e:I
 
-    invoke-virtual {v0, v9}, Lcmc;->R(Z)V
+    invoke-virtual {v0, v9}, Lrzc;->R(Z)V
 
-    invoke-virtual {v0}, Lcmc;->n()Z
+    invoke-virtual {v0}, Lrzc;->n()Z
 
     move-result v1
 
@@ -1612,30 +2125,30 @@
 
     new-instance v1, Lone/me/pinbars/PinBarsWidget;
 
-    invoke-direct {v1, v8, v3, v8}, Lone/me/pinbars/PinBarsWidget;-><init>(Landroid/os/Bundle;ILl94;)V
+    invoke-direct {v1, v8, v3, v8}, Lone/me/pinbars/PinBarsWidget;-><init>(Landroid/os/Bundle;ILld4;)V
 
-    invoke-virtual {p0}, Lou3;->getRetainViewMode()Lnu3;
+    invoke-virtual {p0}, Lxx3;->getRetainViewMode()Lwx3;
 
     move-result-object v3
 
-    invoke-virtual {v1, v3}, Lou3;->setRetainViewMode(Lnu3;)V
+    invoke-virtual {v1, v3}, Lxx3;->setRetainViewMode(Lwx3;)V
 
-    invoke-static {v1, v8, v8}, Lus;->d(Lou3;Lvg;Lvg;)Lfmc;
+    invoke-static {v1, v8, v8}, Lcb7;->d(Lxx3;Leh;Leh;)Luzc;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lcmc;->S(Lfmc;)V
+    invoke-virtual {v0, v1}, Lrzc;->S(Luzc;)V
 
     :cond_6
-    new-instance v0, Lvj;
+    new-instance v0, Lek;
 
     const/4 v1, 0x2
 
-    invoke-direct {v0, v1, p0}, Lvj;-><init>(ILjava/lang/Object;)V
+    invoke-direct {v0, v1, p0}, Lek;-><init>(ILjava/lang/Object;)V
 
     invoke-virtual {p1, v0}, Landroid/view/View;->addOnAttachStateChangeListener(Landroid/view/View$OnAttachStateChangeListener;)V
 
-    invoke-virtual {p0}, Lou3;->getArgs()Landroid/os/Bundle;
+    invoke-virtual {p0}, Lxx3;->getArgs()Landroid/os/Bundle;
 
     move-result-object v0
 
@@ -1645,462 +2158,81 @@
 
     move-result-object v0
 
-    invoke-virtual {p0}, Lone/me/chats/tab/ChatsTabWidget;->s0()Lay5;
+    invoke-virtual {p0}, Lone/me/chats/tab/ChatsTabWidget;->C0()Lq36;
 
     move-result-object v1
 
-    invoke-virtual {v1, v0}, Lay5;->q(Ljava/lang/String;)V
+    invoke-virtual {v1, v0}, Lq36;->q(Ljava/lang/String;)V
 
-    invoke-virtual {p0}, Lone/me/chats/tab/ChatsTabWidget;->s0()Lay5;
-
-    move-result-object v0
-
-    iget-object v0, v0, Lay5;->r0:Lu5c;
-
-    sget-object v1, Lgg7;->X:Lgg7;
-
-    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleOwner()Ldh7;
-
-    move-result-object v3
-
-    invoke-interface {v3}, Ldh7;->L()Lfh7;
-
-    move-result-object v3
-
-    invoke-static {v0, v3, v1}, Lsbg;->m(Lzm5;Lfh7;Lgg7;)Lhq1;
+    invoke-virtual {p0}, Lone/me/chats/tab/ChatsTabWidget;->C0()Lq36;
 
     move-result-object v0
 
-    new-instance v1, Ljy2;
+    iget-object v0, v0, Lq36;->v0:Liic;
 
-    invoke-direct {v1, v8, p0}, Ljy2;-><init>(Lkotlin/coroutines/Continuation;Lone/me/chats/tab/ChatsTabWidget;)V
+    sget-object v1, Lcn7;->X:Lcn7;
 
-    new-instance v3, Lgp5;
+    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleOwner()Lzn7;
+
+    move-result-object v3
+
+    invoke-interface {v3}, Lzn7;->L()Lbo7;
+
+    move-result-object v3
+
+    invoke-static {v0, v3, v1}, Lya6;->n(Lis5;Lbo7;Lcn7;)Lps1;
+
+    move-result-object v0
+
+    new-instance v1, Lg13;
+
+    invoke-direct {v1, v8, p0}, Lg13;-><init>(Lkotlin/coroutines/Continuation;Lone/me/chats/tab/ChatsTabWidget;)V
+
+    new-instance v3, Lnu5;
 
     const/4 v4, 0x1
 
-    invoke-direct {v3, v0, v1, v4}, Lgp5;-><init>(Lzm5;Ll66;I)V
+    invoke-direct {v3, v0, v1, v4}, Lnu5;-><init>(Lis5;Lpc6;I)V
 
-    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleScope()Lqg7;
+    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleScope()Lmn7;
 
     move-result-object v0
 
-    invoke-static {v3, v0}, Lsgg;->L(Lzm5;Lox3;)Ldwd;
+    invoke-static {v3, v0}, Lo97;->u0(Lis5;Ly04;)Lcae;
 
     return-void
 .end method
 
-.method public final p0()Lmha;
+.method public final y0()Lg26;
+    .locals 0
+
+    iget-object p0, p0, Lone/me/chats/tab/ChatsTabWidget;->A0:Lzte;
+
+    invoke-virtual {p0}, Lzte;->getValue()Ljava/lang/Object;
+
+    move-result-object p0
+
+    check-cast p0, Lg26;
+
+    return-object p0
+.end method
+
+.method public final z0()Ltqa;
     .locals 2
 
-    sget-object v0, Lone/me/chats/tab/ChatsTabWidget;->y0:[Lbc7;
+    sget-object v0, Lone/me/chats/tab/ChatsTabWidget;->C0:[Lxi7;
 
     const/4 v1, 0x1
 
     aget-object v0, v0, v1
 
-    iget-object v1, p0, Lone/me/chats/tab/ChatsTabWidget;->o0:Lo5c;
+    iget-object v1, p0, Lone/me/chats/tab/ChatsTabWidget;->r0:Lcic;
 
-    invoke-interface {v1, p0, v0}, Lo5c;->M(Ljava/lang/Object;Lbc7;)Ljava/lang/Object;
+    invoke-interface {v1, p0, v0}, Lcic;->N(Ljava/lang/Object;Lxi7;)Ljava/lang/Object;
 
     move-result-object p0
 
-    check-cast p0, Lmha;
+    check-cast p0, Ltqa;
 
     return-object p0
-.end method
-
-.method public final q0()Landroidx/viewpager2/widget/ViewPager2;
-    .locals 2
-
-    sget-object v0, Lone/me/chats/tab/ChatsTabWidget;->y0:[Lbc7;
-
-    const/4 v1, 0x2
-
-    aget-object v0, v0, v1
-
-    iget-object v1, p0, Lone/me/chats/tab/ChatsTabWidget;->p0:Lo5c;
-
-    invoke-interface {v1, p0, v0}, Lo5c;->M(Ljava/lang/Object;Lbc7;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, Landroidx/viewpager2/widget/ViewPager2;
-
-    return-object p0
-.end method
-
-.method public final r0()Lvia;
-    .locals 2
-
-    sget-object v0, Lone/me/chats/tab/ChatsTabWidget;->y0:[Lbc7;
-
-    const/4 v1, 0x0
-
-    aget-object v0, v0, v1
-
-    iget-object v1, p0, Lone/me/chats/tab/ChatsTabWidget;->Z:Lo5c;
-
-    invoke-interface {v1, p0, v0}, Lo5c;->M(Ljava/lang/Object;Lbc7;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, Lvia;
-
-    return-object p0
-.end method
-
-.method public final s0()Lay5;
-    .locals 0
-
-    iget-object p0, p0, Lone/me/chats/tab/ChatsTabWidget;->r0:Lje7;
-
-    invoke-interface {p0}, Lje7;->getValue()Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, Lay5;
-
-    return-object p0
-.end method
-
-.method public final t0(I)V
-    .locals 11
-
-    sget-object v0, Lqs7;->o:Lqs7;
-
-    iget-object v1, p0, Lone/me/chats/tab/ChatsTabWidget;->w0:Lvw5;
-
-    iget-object v1, v1, Lh14;->o0:Landroid/util/SparseArray;
-
-    invoke-virtual {v1, p1}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lcmc;
-
-    const/4 v1, 0x0
-
-    if-eqz p1, :cond_0
-
-    invoke-virtual {p1}, Lcmc;->e()Ljava/util/ArrayList;
-
-    move-result-object p1
-
-    invoke-static {p1}, Lp43;->B0(Ljava/util/List;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lfmc;
-
-    if-eqz p1, :cond_0
-
-    iget-object p1, p1, Lfmc;->a:Lou3;
-
-    goto :goto_0
-
-    :cond_0
-    move-object p1, v1
-
-    :goto_0
-    instance-of v2, p1, Lone/me/chats/list/ChatsListWidget;
-
-    if-eqz v2, :cond_1
-
-    check-cast p1, Lone/me/chats/list/ChatsListWidget;
-
-    goto :goto_1
-
-    :cond_1
-    move-object p1, v1
-
-    :goto_1
-    if-nez p1, :cond_2
-
-    goto/16 :goto_8
-
-    :cond_2
-    iget-object p0, p0, Lone/me/chats/tab/ChatsTabWidget;->b:Ljava/lang/String;
-
-    sget-object v2, Lg47;->m:Llr6;
-
-    if-nez v2, :cond_3
-
-    goto :goto_4
-
-    :cond_3
-    invoke-interface {v2}, Llr6;->c()Z
-
-    move-result v3
-
-    if-eqz v3, :cond_6
-
-    invoke-virtual {p1}, Lou3;->getView()Landroid/view/View;
-
-    move-result-object v3
-
-    if-eqz v3, :cond_4
-
-    invoke-virtual {v3}, Landroid/view/View;->getMeasuredWidth()I
-
-    move-result v3
-
-    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v3
-
-    goto :goto_2
-
-    :cond_4
-    move-object v3, v1
-
-    :goto_2
-    invoke-virtual {p1}, Lou3;->getView()Landroid/view/View;
-
-    move-result-object v4
-
-    if-eqz v4, :cond_5
-
-    invoke-virtual {v4}, Landroid/view/View;->getMeasuredHeight()I
-
-    move-result v4
-
-    invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v4
-
-    goto :goto_3
-
-    :cond_5
-    move-object v4, v1
-
-    :goto_3
-    new-instance v5, Ljava/lang/StringBuilder;
-
-    const-string v6, "ONEME-6873|chats_list_page_state | root width:"
-
-    invoke-direct {v5, v6}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v5, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v3, ", root height:"
-
-    invoke-virtual {v5, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v5, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v3
-
-    invoke-interface {v2, v0, p0, v3, v1}, Llr6;->d(Lqs7;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    :cond_6
-    :goto_4
-    invoke-virtual {p1}, Lou3;->getView()Landroid/view/View;
-
-    move-result-object p0
-
-    if-eqz p0, :cond_d
-
-    iget-object p0, p1, Lone/me/chats/list/ChatsListWidget;->b:Ljava/lang/String;
-
-    const-string v2, "all.chat.folder"
-
-    invoke-static {p0, v2}, Lxq7;->d(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p0
-
-    if-eqz p0, :cond_7
-
-    goto/16 :goto_8
-
-    :cond_7
-    invoke-virtual {p1}, Lone/me/chats/list/ChatsListWidget;->r0()Lone/me/sdk/lists/widgets/EndlessRecyclerView2;
-
-    move-result-object p0
-
-    invoke-virtual {p0}, Landroid/view/View;->getMeasuredWidth()I
-
-    move-result p0
-
-    invoke-virtual {p1}, Lone/me/chats/list/ChatsListWidget;->r0()Lone/me/sdk/lists/widgets/EndlessRecyclerView2;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Landroid/view/View;->getMeasuredHeight()I
-
-    move-result v2
-
-    invoke-virtual {p1}, Lone/me/chats/list/ChatsListWidget;->r0()Lone/me/sdk/lists/widgets/EndlessRecyclerView2;
-
-    move-result-object v3
-
-    invoke-virtual {v3}, Landroidx/recyclerview/widget/RecyclerView;->getAdapter()Lgbc;
-
-    move-result-object v3
-
-    if-eqz v3, :cond_8
-
-    invoke-virtual {v3}, Lgbc;->j()I
-
-    move-result v3
-
-    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v3
-
-    goto :goto_5
-
-    :cond_8
-    move-object v3, v1
-
-    :goto_5
-    invoke-virtual {p1}, Lone/me/chats/list/ChatsListWidget;->r0()Lone/me/sdk/lists/widgets/EndlessRecyclerView2;
-
-    move-result-object v4
-
-    invoke-virtual {v4}, Landroid/view/ViewGroup;->getChildCount()I
-
-    move-result v4
-
-    invoke-virtual {p1}, Lone/me/chats/list/ChatsListWidget;->r0()Lone/me/sdk/lists/widgets/EndlessRecyclerView2;
-
-    move-result-object v5
-
-    const/4 v6, 0x0
-
-    move v7, v6
-
-    :goto_6
-    invoke-virtual {v5}, Landroid/view/ViewGroup;->getChildCount()I
-
-    move-result v8
-
-    if-ge v7, v8, :cond_b
-
-    add-int/lit8 v8, v7, 0x1
-
-    invoke-virtual {v5, v7}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
-
-    move-result-object v7
-
-    if-eqz v7, :cond_a
-
-    invoke-virtual {v7}, Landroid/view/View;->isAttachedToWindow()Z
-
-    move-result v7
-
-    if-eqz v7, :cond_9
-
-    const/4 v6, 0x1
-
-    goto :goto_7
-
-    :cond_9
-    move v7, v8
-
-    goto :goto_6
-
-    :cond_a
-    new-instance p0, Ljava/lang/IndexOutOfBoundsException;
-
-    invoke-direct {p0}, Ljava/lang/IndexOutOfBoundsException;-><init>()V
-
-    throw p0
-
-    :cond_b
-    :goto_7
-    iget-object v5, p1, Lone/me/chats/list/ChatsListWidget;->a:Ljava/lang/String;
-
-    sget-object v7, Lg47;->m:Llr6;
-
-    if-nez v7, :cond_c
-
-    goto :goto_8
-
-    :cond_c
-    invoke-interface {v7}, Llr6;->c()Z
-
-    move-result v8
-
-    if-eqz v8, :cond_d
-
-    iget-object p1, p1, Lone/me/chats/list/ChatsListWidget;->b:Ljava/lang/String;
-
-    const-string v8, " | width:"
-
-    const-string v9, "|height:"
-
-    const-string v10, "ONEME-6873|chats_list_page_state | chats list state. folderId:"
-
-    invoke-static {p0, v10, p1, v8, v9}, Lm26;->m(ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object p0
-
-    const-string p1, " | child:"
-
-    const-string v8, "|childAttached:"
-
-    invoke-static {p0, v2, p1, v4, v8}, Lv04;->p(Ljava/lang/StringBuilder;ILjava/lang/String;ILjava/lang/String;)V
-
-    invoke-virtual {p0, v6}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    const-string p1, "|adapterCount:"
-
-    invoke-virtual {p0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    invoke-interface {v7, v0, v5, p0, v1}, Llr6;->d(Lqs7;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    :cond_d
-    :goto_8
-    return-void
-.end method
-
-.method public final u0()Llna;
-    .locals 9
-
-    invoke-virtual {p0}, Lone/me/chats/tab/ChatsTabWidget;->q0()Landroidx/viewpager2/widget/ViewPager2;
-
-    move-result-object p0
-
-    invoke-virtual {p0}, Landroidx/viewpager2/widget/ViewPager2;->getCurrentItem()I
-
-    move-result p0
-
-    if-nez p0, :cond_0
-
-    const-wide/16 v0, 0x1
-
-    goto :goto_0
-
-    :cond_0
-    const-wide/16 v0, 0x2
-
-    :goto_0
-    new-instance v2, Llna;
-
-    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v6
-
-    const/16 v8, 0x13
-
-    const/4 v4, 0x0
-
-    const/4 v3, 0x0
-
-    sget-object v5, Litd;->X:Litd;
-
-    const/4 v7, 0x0
-
-    invoke-direct/range {v2 .. v8}, Llna;-><init>(Lrza;ILitd;Ljava/lang/Long;Ljs;I)V
-
-    return-object v2
 .end method

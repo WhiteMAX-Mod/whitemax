@@ -19,7 +19,7 @@
         "(Landroid/content/Context;Landroid/util/AttributeSet;)V",
         "",
         "withAutoPlay",
-        "Le5f;",
+        "Lylf;",
         "setupNewController",
         "(Z)V",
         "common_release"
@@ -35,17 +35,17 @@
 
 
 # static fields
-.field public static final synthetic x0:I
+.field public static final synthetic A0:I
 
 
 # instance fields
-.field public final t0:Ljava/lang/String;
+.field public final w0:Ljava/lang/String;
 
-.field public final u0:Lthc;
+.field public final x0:Lqvc;
 
-.field public final v0:Lm5;
+.field public final y0:Lq5;
 
-.field public w0:Z
+.field public z0:Z
 
 
 # direct methods
@@ -65,23 +65,23 @@
     move-result-object p1
 
     .line 3
-    iput-object p1, p0, Lone/me/sdk/uikit/common/views/OneMeDraweeView;->t0:Ljava/lang/String;
+    iput-object p1, p0, Lone/me/sdk/uikit/common/views/OneMeDraweeView;->w0:Ljava/lang/String;
 
     .line 4
-    new-instance p1, Lthc;
+    new-instance p1, Lqvc;
 
-    invoke-direct {p1}, Lthc;-><init>()V
+    invoke-direct {p1}, Lqvc;-><init>()V
 
-    iput-object p1, p0, Lone/me/sdk/uikit/common/views/OneMeDraweeView;->u0:Lthc;
+    iput-object p1, p0, Lone/me/sdk/uikit/common/views/OneMeDraweeView;->x0:Lqvc;
 
     .line 5
-    new-instance p1, Lm5;
+    new-instance p1, Lq5;
 
-    const/4 v0, 0x3
+    const/4 v0, 0x4
 
-    invoke-direct {p1, v0, p0}, Lm5;-><init>(ILjava/lang/Object;)V
+    invoke-direct {p1, v0, p0}, Lq5;-><init>(ILjava/lang/Object;)V
 
-    iput-object p1, p0, Lone/me/sdk/uikit/common/views/OneMeDraweeView;->v0:Lm5;
+    iput-object p1, p0, Lone/me/sdk/uikit/common/views/OneMeDraweeView;->y0:Lq5;
 
     const/4 p1, 0x0
 
@@ -107,23 +107,23 @@
     move-result-object p1
 
     .line 9
-    iput-object p1, p0, Lone/me/sdk/uikit/common/views/OneMeDraweeView;->t0:Ljava/lang/String;
+    iput-object p1, p0, Lone/me/sdk/uikit/common/views/OneMeDraweeView;->w0:Ljava/lang/String;
 
     .line 10
-    new-instance p1, Lthc;
+    new-instance p1, Lqvc;
 
-    invoke-direct {p1}, Lthc;-><init>()V
+    invoke-direct {p1}, Lqvc;-><init>()V
 
-    iput-object p1, p0, Lone/me/sdk/uikit/common/views/OneMeDraweeView;->u0:Lthc;
+    iput-object p1, p0, Lone/me/sdk/uikit/common/views/OneMeDraweeView;->x0:Lqvc;
 
     .line 11
-    new-instance p1, Lm5;
+    new-instance p1, Lq5;
 
-    const/4 p2, 0x3
+    const/4 p2, 0x4
 
-    invoke-direct {p1, p2, p0}, Lm5;-><init>(ILjava/lang/Object;)V
+    invoke-direct {p1, p2, p0}, Lq5;-><init>(ILjava/lang/Object;)V
 
-    iput-object p1, p0, Lone/me/sdk/uikit/common/views/OneMeDraweeView;->v0:Lm5;
+    iput-object p1, p0, Lone/me/sdk/uikit/common/views/OneMeDraweeView;->y0:Lq5;
 
     const/4 p1, 0x0
 
@@ -167,32 +167,32 @@
 
     if-eqz v0, :cond_1
 
-    new-instance v1, Ls76;
+    new-instance v1, Lwd6;
 
-    const/16 v2, 0x12
+    const/16 v2, 0x11
 
-    invoke-direct {v1, p0, v2, p1}, Ls76;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+    invoke-direct {v1, p0, v2, p1}, Lwd6;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->postAtFrontOfQueue(Ljava/lang/Runnable;)Z
 
     return-void
 
     :cond_1
-    new-instance v0, Lt76;
+    new-instance v0, Lxd6;
 
-    const/16 v1, 0x10
+    const/16 v1, 0x11
 
-    invoke-direct {v0, p0, v1, p1}, Lt76;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+    invoke-direct {v0, p0, v1, p1}, Lxd6;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
 
     invoke-virtual {p0, v0}, Landroid/view/View;->post(Ljava/lang/Runnable;)Z
 
     return-void
 .end method
 
-.method public final o(Lvv6;Lvv6;)V
+.method public final o(Li27;Li27;)V
     .locals 4
 
-    iget-object v0, p0, Lone/me/sdk/uikit/common/views/OneMeDraweeView;->u0:Lthc;
+    iget-object v0, p0, Lone/me/sdk/uikit/common/views/OneMeDraweeView;->x0:Lqvc;
 
     const/4 v1, 0x0
 
@@ -200,29 +200,29 @@
 
     if-eqz p2, :cond_0
 
-    invoke-static {}, Ld46;->s()Liv6;
+    invoke-static {}, Lla6;->t()Lv17;
 
     move-result-object v2
 
     invoke-virtual {v2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    new-instance v3, Lhv6;
+    new-instance v3, Lu17;
 
-    invoke-direct {v3, v2, p1, v1}, Lhv6;-><init>(Liv6;Lvv6;Ljava/lang/Object;)V
+    invoke-direct {v3, v2, p1, v1}, Lu17;-><init>(Lv17;Li27;Ljava/lang/Object;)V
 
-    invoke-static {}, Ld46;->s()Liv6;
+    invoke-static {}, Lla6;->t()Lv17;
 
     move-result-object p1
 
     invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    new-instance v2, Lhv6;
+    new-instance v2, Lu17;
 
-    invoke-direct {v2, p1, p2, v1}, Lhv6;-><init>(Liv6;Lvv6;Ljava/lang/Object;)V
+    invoke-direct {v2, p1, p2, v1}, Lu17;-><init>(Lv17;Li27;Ljava/lang/Object;)V
 
     const/4 p1, 0x2
 
-    new-array p1, p1, [Lube;
+    new-array p1, p1, [Lwpe;
 
     const/4 p2, 0x0
 
@@ -232,39 +232,39 @@
 
     aput-object v2, p1, v1
 
-    invoke-static {p1}, Lq43;->e0([Ljava/lang/Object;)Ljava/util/List;
+    invoke-static {p1}, Lr73;->I([Ljava/lang/Object;)Ljava/util/List;
 
     move-result-object p1
 
-    new-instance v1, Ljz6;
+    new-instance v1, Ld67;
 
-    invoke-direct {v1, p1, p2}, Ljz6;-><init>(Ljava/util/List;Z)V
+    invoke-direct {v1, p1, p2}, Ld67;-><init>(Ljava/util/List;Z)V
 
     goto :goto_0
 
     :cond_0
-    invoke-static {}, Ld46;->s()Liv6;
+    invoke-static {}, Lla6;->t()Lv17;
 
     move-result-object p2
 
     invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    new-instance v2, Lhv6;
+    new-instance v2, Lu17;
 
-    invoke-direct {v2, p2, p1, v1}, Lhv6;-><init>(Liv6;Lvv6;Ljava/lang/Object;)V
+    invoke-direct {v2, p2, p1, v1}, Lu17;-><init>(Lv17;Li27;Ljava/lang/Object;)V
 
     move-object v1, v2
 
     :goto_0
-    invoke-virtual {v0, v1}, Lthc;->a(Lube;)V
+    invoke-virtual {v0, v1}, Lqvc;->a(Lwpe;)V
 
-    invoke-virtual {p0}, Luq4;->getController()Lmq4;
+    invoke-virtual {p0}, Ldw4;->getController()Lvv4;
 
     move-result-object p1
 
     if-nez p1, :cond_2
 
-    iget-boolean p1, p0, Lone/me/sdk/uikit/common/views/OneMeDraweeView;->w0:Z
+    iget-boolean p1, p0, Lone/me/sdk/uikit/common/views/OneMeDraweeView;->z0:Z
 
     invoke-virtual {p0, p1}, Lone/me/sdk/uikit/common/views/OneMeDraweeView;->setupNewController(Z)V
 
@@ -273,25 +273,25 @@
     :cond_1
     if-eqz p2, :cond_3
 
-    invoke-static {}, Ld46;->s()Liv6;
+    invoke-static {}, Lla6;->t()Lv17;
 
     move-result-object p1
 
     invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    new-instance v2, Lhv6;
+    new-instance v2, Lu17;
 
-    invoke-direct {v2, p1, p2, v1}, Lhv6;-><init>(Liv6;Lvv6;Ljava/lang/Object;)V
+    invoke-direct {v2, p1, p2, v1}, Lu17;-><init>(Lv17;Li27;Ljava/lang/Object;)V
 
-    invoke-virtual {v0, v2}, Lthc;->a(Lube;)V
+    invoke-virtual {v0, v2}, Lqvc;->a(Lwpe;)V
 
-    invoke-virtual {p0}, Luq4;->getController()Lmq4;
+    invoke-virtual {p0}, Ldw4;->getController()Lvv4;
 
     move-result-object p1
 
     if-nez p1, :cond_2
 
-    iget-boolean p1, p0, Lone/me/sdk/uikit/common/views/OneMeDraweeView;->w0:Z
+    iget-boolean p1, p0, Lone/me/sdk/uikit/common/views/OneMeDraweeView;->z0:Z
 
     invoke-virtual {p0, p1}, Lone/me/sdk/uikit/common/views/OneMeDraweeView;->setupNewController(Z)V
 
@@ -299,12 +299,12 @@
     return-void
 
     :cond_3
-    invoke-virtual {p0, v1}, Luq4;->setController(Lmq4;)V
+    invoke-virtual {p0, v1}, Ldw4;->setController(Lvv4;)V
 
     return-void
 .end method
 
-.method public p(Luu6;Landroid/graphics/drawable/Animatable;)V
+.method public p(Lh17;Landroid/graphics/drawable/Animatable;)V
     .locals 0
 
     return-void
@@ -313,35 +313,35 @@
 .method public final setupNewController(Z)V
     .locals 2
 
-    iput-boolean p1, p0, Lone/me/sdk/uikit/common/views/OneMeDraweeView;->w0:Z
+    iput-boolean p1, p0, Lone/me/sdk/uikit/common/views/OneMeDraweeView;->z0:Z
 
-    sget-object v0, Ld46;->a:Lhv6;
+    sget-object v0, Lla6;->a:Lu17;
 
-    invoke-virtual {v0}, Lhv6;->a()Luza;
+    invoke-virtual {v0}, Lu17;->a()Lfbb;
 
     move-result-object v0
 
-    iget-object v1, p0, Lone/me/sdk/uikit/common/views/OneMeDraweeView;->u0:Lthc;
+    iget-object v1, p0, Lone/me/sdk/uikit/common/views/OneMeDraweeView;->x0:Lqvc;
 
-    iput-object v1, v0, Ln0;->d:Lube;
+    iput-object v1, v0, Lo0;->d:Lwpe;
 
-    iget-object v1, p0, Lone/me/sdk/uikit/common/views/OneMeDraweeView;->v0:Lm5;
+    iget-object v1, p0, Lone/me/sdk/uikit/common/views/OneMeDraweeView;->y0:Lq5;
 
-    iput-object v1, v0, Ln0;->e:Lyu3;
+    iput-object v1, v0, Lo0;->e:Lhy3;
 
-    invoke-virtual {p0}, Luq4;->getController()Lmq4;
+    invoke-virtual {p0}, Ldw4;->getController()Lvv4;
 
     move-result-object v1
 
-    iput-object v1, v0, Ln0;->i:Lmq4;
+    iput-object v1, v0, Lo0;->i:Lvv4;
 
-    iput-boolean p1, v0, Ln0;->g:Z
+    iput-boolean p1, v0, Lo0;->g:Z
 
-    invoke-virtual {v0}, Ln0;->a()Ltza;
+    invoke-virtual {v0}, Lo0;->a()Lebb;
 
     move-result-object p1
 
-    invoke-virtual {p0, p1}, Luq4;->setController(Lmq4;)V
+    invoke-virtual {p0, p1}, Ldw4;->setController(Lvv4;)V
 
     return-void
 .end method

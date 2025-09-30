@@ -3,9 +3,12 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lfx3;
+.implements Lo04;
 
 
 # virtual methods
-.method public abstract i(Lhx3;Ljava/lang/Throwable;)V
+.method public abstract interceptContinuation(Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+.end method
+
+.method public abstract releaseInterceptedContinuation(Lkotlin/coroutines/Continuation;)V
 .end method

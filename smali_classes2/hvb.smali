@@ -1,28 +1,94 @@
-.class public abstract Lhvb;
-.super Ljava/lang/Object;
+.class public final Lhvb;
+.super Ljvb;
+.source "SourceFile"
 
 
-# static fields
-.field public static oneme_stickers_preview_action_favorite:I = 0x7f0a0856
+# instance fields
+.field public final a:Ljava/util/List;
 
-.field public static oneme_stickers_preview_action_forward:I = 0x7f0a0857
 
-.field public static oneme_stickers_preview_action_send:I = 0x7f0a0858
+# direct methods
+.method public constructor <init>(Ljava/util/List;)V
+    .locals 0
 
-.field public static oneme_stickers_preview_content_container:I = 0x7f0a0859
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-.field public static oneme_stickers_preview_lottie_cell:I = 0x7f0a085a
+    iput-object p1, p0, Lhvb;->a:Ljava/util/List;
 
-.field public static oneme_stickers_preview_static_cell:I = 0x7f0a085b
+    return-void
+.end method
 
-.field public static oneme_stickers_preview_sticker_container:I = 0x7f0a085c
 
-.field public static oneme_stickers_preview_stickers_set_container:I = 0x7f0a085d
+# virtual methods
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 3
 
-.field public static oneme_stickers_preview_stickers_set_content:I = 0x7f0a085e
+    const/4 v0, 0x1
 
-.field public static oneme_stickers_preview_stickers_set_header:I = 0x7f0a085f
+    if-ne p0, p1, :cond_0
 
-.field public static oneme_stickers_preview_toolbar:I = 0x7f0a0860
+    return v0
 
-.field public static oneme_stickers_preview_webm_cell:I = 0x7f0a0861
+    :cond_0
+    instance-of v1, p1, Lhvb;
+
+    const/4 v2, 0x0
+
+    if-nez v1, :cond_1
+
+    return v2
+
+    :cond_1
+    check-cast p1, Lhvb;
+
+    iget-object p0, p0, Lhvb;->a:Ljava/util/List;
+
+    iget-object p1, p1, Lhvb;->a:Ljava/util/List;
+
+    invoke-static {p0, p1}, Lvyg;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p0
+
+    if-nez p0, :cond_2
+
+    return v2
+
+    :cond_2
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 0
+
+    iget-object p0, p0, Lhvb;->a:Ljava/util/List;
+
+    invoke-virtual {p0}, Ljava/lang/Object;->hashCode()I
+
+    move-result p0
+
+    return p0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 2
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "ShowPhoneActionsMenu(actions="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object p0, p0, Lhvb;->a:Ljava/util/List;
+
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string p0, ")"
+
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    return-object p0
+.end method

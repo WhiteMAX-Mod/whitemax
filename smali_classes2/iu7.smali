@@ -1,3 +1,6 @@
 .class public final Liu7;
-.super Lije;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lhu7;

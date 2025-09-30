@@ -1,262 +1,454 @@
 .class public final Ly7e;
-.super Ljava/util/concurrent/atomic/AtomicInteger;
+.super Ljava/lang/Object;
 .source "SourceFile"
-
-# interfaces
-.implements Lvr5;
-.implements Ll9e;
 
 
 # instance fields
-.field public final X:Ljava/util/concurrent/atomic/AtomicBoolean;
+.field public a:I
 
-.field public volatile Y:Z
+.field public b:I
 
-.field public final a:Lj9e;
+.field public final c:Landroidx/fragment/app/a;
 
-.field public final b:Lpy;
+.field public final d:Ljava/util/ArrayList;
 
-.field public final c:Ljava/util/concurrent/atomic/AtomicLong;
+.field public e:Z
 
-.field public final o:Ljava/util/concurrent/atomic/AtomicReference;
+.field public f:Z
+
+.field public g:Z
+
+.field public h:Z
+
+.field public i:Z
+
+.field public final j:Ljava/util/ArrayList;
+
+.field public final k:Ljava/util/ArrayList;
+
+.field public final l:Landroidx/fragment/app/e;
 
 
 # direct methods
-.method public constructor <init>(Lj9e;)V
-    .locals 0
+.method public constructor <init>(IILandroidx/fragment/app/e;)V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/util/concurrent/atomic/AtomicInteger;-><init>()V
+    iget-object v0, p3, Landroidx/fragment/app/e;->c:Landroidx/fragment/app/a;
 
-    iput-object p1, p0, Ly7e;->a:Lj9e;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    new-instance p1, Lpy;
+    iput p1, p0, Ly7e;->a:I
 
-    invoke-direct {p1}, Ljava/util/concurrent/atomic/AtomicReference;-><init>()V
+    iput p2, p0, Ly7e;->b:I
 
-    iput-object p1, p0, Ly7e;->b:Lpy;
+    iput-object v0, p0, Ly7e;->c:Landroidx/fragment/app/a;
 
-    new-instance p1, Ljava/util/concurrent/atomic/AtomicLong;
+    new-instance p1, Ljava/util/ArrayList;
 
-    invoke-direct {p1}, Ljava/util/concurrent/atomic/AtomicLong;-><init>()V
+    invoke-direct {p1}, Ljava/util/ArrayList;-><init>()V
 
-    iput-object p1, p0, Ly7e;->c:Ljava/util/concurrent/atomic/AtomicLong;
+    iput-object p1, p0, Ly7e;->d:Ljava/util/ArrayList;
 
-    new-instance p1, Ljava/util/concurrent/atomic/AtomicReference;
+    const/4 p1, 0x1
 
-    invoke-direct {p1}, Ljava/util/concurrent/atomic/AtomicReference;-><init>()V
+    iput-boolean p1, p0, Ly7e;->i:Z
 
-    iput-object p1, p0, Ly7e;->o:Ljava/util/concurrent/atomic/AtomicReference;
+    new-instance p1, Ljava/util/ArrayList;
 
-    new-instance p1, Ljava/util/concurrent/atomic/AtomicBoolean;
+    invoke-direct {p1}, Ljava/util/ArrayList;-><init>()V
 
-    invoke-direct {p1}, Ljava/util/concurrent/atomic/AtomicBoolean;-><init>()V
+    iput-object p1, p0, Ly7e;->j:Ljava/util/ArrayList;
 
-    iput-object p1, p0, Ly7e;->X:Ljava/util/concurrent/atomic/AtomicBoolean;
+    iput-object p1, p0, Ly7e;->k:Ljava/util/ArrayList;
+
+    iput-object p3, p0, Ly7e;->l:Landroidx/fragment/app/e;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final b()V
-    .locals 2
-
-    const/4 v0, 0x1
-
-    iput-boolean v0, p0, Ly7e;->Y:Z
-
-    iget-object v0, p0, Ly7e;->a:Lj9e;
-
-    iget-object v1, p0, Ly7e;->b:Lpy;
-
-    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicInteger;->getAndIncrement()I
-
-    move-result p0
-
-    if-nez p0, :cond_0
-
-    invoke-virtual {v1, v0}, Lpy;->e(Lj9e;)V
-
-    :cond_0
-    return-void
-.end method
-
-.method public final cancel()V
-    .locals 1
-
-    iget-boolean v0, p0, Ly7e;->Y:Z
-
-    if-nez v0, :cond_0
-
-    iget-object p0, p0, Ly7e;->o:Ljava/util/concurrent/atomic/AtomicReference;
-
-    invoke-static {p0}, Ln9e;->a(Ljava/util/concurrent/atomic/AtomicReference;)V
-
-    :cond_0
-    return-void
-.end method
-
-.method public final d(Ll9e;)V
-    .locals 4
+.method public final a(Landroid/view/ViewGroup;)V
+    .locals 3
 
     const/4 v0, 0x0
 
-    const/4 v1, 0x1
+    iput-boolean v0, p0, Ly7e;->h:Z
 
-    iget-object v2, p0, Ly7e;->X:Ljava/util/concurrent/atomic/AtomicBoolean;
-
-    invoke-virtual {v2, v0, v1}, Ljava/util/concurrent/atomic/AtomicBoolean;->compareAndSet(ZZ)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    iget-object v0, p0, Ly7e;->a:Lj9e;
-
-    invoke-interface {v0, p0}, Lj9e;->d(Ll9e;)V
-
-    iget-object v0, p0, Ly7e;->o:Ljava/util/concurrent/atomic/AtomicReference;
-
-    invoke-static {v0, p1}, Ln9e;->c(Ljava/util/concurrent/atomic/AtomicReference;Ll9e;)Z
-
-    move-result v0
+    iget-boolean v0, p0, Ly7e;->e:Z
 
     if-eqz v0, :cond_0
 
-    iget-object p0, p0, Ly7e;->c:Ljava/util/concurrent/atomic/AtomicLong;
-
-    const-wide/16 v0, 0x0
-
-    invoke-virtual {p0, v0, v1}, Ljava/util/concurrent/atomic/AtomicLong;->getAndSet(J)J
-
-    move-result-wide v2
-
-    cmp-long p0, v2, v0
-
-    if-eqz p0, :cond_0
-
-    invoke-interface {p1, v2, v3}, Ll9e;->i(J)V
+    goto :goto_1
 
     :cond_0
+    const/4 v0, 0x1
+
+    iput-boolean v0, p0, Ly7e;->e:Z
+
+    iget-object v1, p0, Ly7e;->j:Ljava/util/ArrayList;
+
+    invoke-virtual {v1}, Ljava/util/ArrayList;->isEmpty()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_1
+
+    invoke-virtual {p0}, Ly7e;->b()V
+
     return-void
 
     :cond_1
-    invoke-interface {p1}, Ll9e;->cancel()V
+    iget-object p0, p0, Ly7e;->k:Ljava/util/ArrayList;
 
-    invoke-virtual {p0}, Ly7e;->cancel()V
+    invoke-static {p0}, Lq73;->B0(Ljava/lang/Iterable;)Ljava/util/List;
 
-    new-instance p1, Ljava/lang/IllegalStateException;
+    move-result-object p0
 
-    const-string v0, "\u00a72.12 violated: onSubscribe must be called at most once"
+    invoke-interface {p0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
-    invoke-direct {p1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    move-result-object p0
 
-    invoke-virtual {p0, p1}, Ly7e;->onError(Ljava/lang/Throwable;)V
+    :goto_0
+    invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
 
-    return-void
-.end method
+    move-result v1
 
-.method public final h(Ljava/lang/Object;)V
-    .locals 2
+    if-eqz v1, :cond_3
 
-    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicInteger;->get()I
+    invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    move-result v0
+    move-result-object v1
 
-    if-nez v0, :cond_1
+    check-cast v1, Lx7e;
 
-    const/4 v0, 0x0
+    iget-boolean v2, v1, Lx7e;->b:Z
 
-    const/4 v1, 0x1
+    if-nez v2, :cond_2
 
-    invoke-virtual {p0, v0, v1}, Ljava/util/concurrent/atomic/AtomicInteger;->compareAndSet(II)Z
+    invoke-virtual {v1, p1}, Lx7e;->a(Landroid/view/ViewGroup;)V
 
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    iget-object v0, p0, Ly7e;->a:Lj9e;
-
-    invoke-interface {v0, p1}, Lj9e;->h(Ljava/lang/Object;)V
-
-    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicInteger;->decrementAndGet()I
-
-    move-result p1
-
-    if-nez p1, :cond_0
+    :cond_2
+    iput-boolean v0, v1, Lx7e;->b:Z
 
     goto :goto_0
 
-    :cond_0
-    iget-object p0, p0, Ly7e;->b:Lpy;
+    :cond_3
+    :goto_1
+    return-void
+.end method
 
-    invoke-virtual {p0, v0}, Lpy;->e(Lj9e;)V
+.method public final b()V
+    .locals 3
+
+    const/4 v0, 0x0
+
+    iput-boolean v0, p0, Ly7e;->h:Z
+
+    iget-boolean v1, p0, Ly7e;->f:Z
+
+    if-eqz v1, :cond_0
+
+    goto :goto_1
+
+    :cond_0
+    const/4 v1, 0x2
+
+    invoke-static {v1}, Landroidx/fragment/app/c;->K(I)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_1
+
+    invoke-virtual {p0}, Ly7e;->toString()Ljava/lang/String;
 
     :cond_1
+    const/4 v1, 0x1
+
+    iput-boolean v1, p0, Ly7e;->f:Z
+
+    iget-object v1, p0, Ly7e;->d:Ljava/util/ArrayList;
+
+    invoke-virtual {v1}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
+
+    move-result-object v1
+
     :goto_0
-    return-void
-.end method
+    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
 
-.method public final i(J)V
-    .locals 2
+    move-result v2
 
-    const-wide/16 v0, 0x0
+    if-eqz v2, :cond_2
 
-    cmp-long v0, p1, v0
+    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    if-gtz v0, :cond_0
+    move-result-object v2
 
-    invoke-virtual {p0}, Ly7e;->cancel()V
+    check-cast v2, Ljava/lang/Runnable;
 
-    new-instance v0, Ljava/lang/IllegalArgumentException;
+    invoke-interface {v2}, Ljava/lang/Runnable;->run()V
 
-    const-string v1, "\u00a73.9 violated: positive request amount required but it was "
+    goto :goto_0
 
-    invoke-static {p1, p2, v1}, Lu88;->h(JLjava/lang/String;)Ljava/lang/String;
+    :cond_2
+    :goto_1
+    iget-object v1, p0, Ly7e;->c:Landroidx/fragment/app/a;
 
-    move-result-object p1
+    iput-boolean v0, v1, Landroidx/fragment/app/a;->x0:Z
 
-    invoke-direct {v0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+    iget-object p0, p0, Ly7e;->l:Landroidx/fragment/app/e;
 
-    invoke-virtual {p0, v0}, Ly7e;->onError(Ljava/lang/Throwable;)V
-
-    return-void
-
-    :cond_0
-    iget-object v0, p0, Ly7e;->o:Ljava/util/concurrent/atomic/AtomicReference;
-
-    iget-object p0, p0, Ly7e;->c:Ljava/util/concurrent/atomic/AtomicLong;
-
-    invoke-static {v0, p0, p1, p2}, Ln9e;->b(Ljava/util/concurrent/atomic/AtomicReference;Ljava/util/concurrent/atomic/AtomicLong;J)V
+    invoke-virtual {p0}, Landroidx/fragment/app/e;->k()V
 
     return-void
 .end method
 
-.method public final onError(Ljava/lang/Throwable;)V
-    .locals 2
+.method public final c(Lx7e;)V
+    .locals 1
 
-    const/4 v0, 0x1
+    iget-object v0, p0, Ly7e;->j:Ljava/util/ArrayList;
 
-    iput-boolean v0, p0, Ly7e;->Y:Z
-
-    iget-object v0, p0, Ly7e;->a:Lj9e;
-
-    iget-object v1, p0, Ly7e;->b:Lpy;
-
-    invoke-virtual {v1, p1}, Lpy;->a(Ljava/lang/Throwable;)Z
+    invoke-virtual {v0, p1}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
 
     move-result p1
 
     if-eqz p1, :cond_0
 
-    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicInteger;->getAndIncrement()I
+    invoke-virtual {v0}, Ljava/util/ArrayList;->isEmpty()Z
 
-    move-result p0
+    move-result p1
 
-    if-nez p0, :cond_0
+    if-eqz p1, :cond_0
 
-    invoke-virtual {v1, v0}, Lpy;->e(Lj9e;)V
+    invoke-virtual {p0}, Ly7e;->b()V
 
     :cond_0
     return-void
+.end method
+
+.method public final d(II)V
+    .locals 3
+
+    invoke-static {p2}, Lmw1;->t(I)I
+
+    move-result p2
+
+    iget-object v0, p0, Ly7e;->c:Landroidx/fragment/app/a;
+
+    const/4 v1, 0x1
+
+    const/4 v2, 0x2
+
+    if-eqz p2, :cond_4
+
+    if-eq p2, v1, :cond_2
+
+    if-eq p2, v2, :cond_0
+
+    goto :goto_1
+
+    :cond_0
+    invoke-static {v2}, Landroidx/fragment/app/c;->K(I)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_1
+
+    invoke-static {v0}, Ljava/util/Objects;->toString(Ljava/lang/Object;)Ljava/lang/String;
+
+    :cond_1
+    iput v1, p0, Ly7e;->a:I
+
+    const/4 p1, 0x3
+
+    iput p1, p0, Ly7e;->b:I
+
+    iput-boolean v1, p0, Ly7e;->i:Z
+
+    return-void
+
+    :cond_2
+    iget p1, p0, Ly7e;->a:I
+
+    if-ne p1, v1, :cond_7
+
+    invoke-static {v2}, Landroidx/fragment/app/c;->K(I)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_3
+
+    invoke-static {v0}, Ljava/util/Objects;->toString(Ljava/lang/Object;)Ljava/lang/String;
+
+    :cond_3
+    iput v2, p0, Ly7e;->a:I
+
+    iput v2, p0, Ly7e;->b:I
+
+    iput-boolean v1, p0, Ly7e;->i:Z
+
+    return-void
+
+    :cond_4
+    iget p2, p0, Ly7e;->a:I
+
+    if-eq p2, v1, :cond_7
+
+    invoke-static {v2}, Landroidx/fragment/app/c;->K(I)Z
+
+    move-result p2
+
+    if-eqz p2, :cond_6
+
+    invoke-static {v0}, Ljava/util/Objects;->toString(Ljava/lang/Object;)Ljava/lang/String;
+
+    const/4 p2, 0x1
+
+    if-eq p1, p2, :cond_6
+
+    const/4 p2, 0x2
+
+    if-eq p1, p2, :cond_6
+
+    const/4 p2, 0x3
+
+    if-eq p1, p2, :cond_6
+
+    const/4 p2, 0x4
+
+    if-ne p1, p2, :cond_5
+
+    goto :goto_0
+
+    :cond_5
+    const/4 p0, 0x0
+
+    throw p0
+
+    :cond_6
+    :goto_0
+    iput p1, p0, Ly7e;->a:I
+
+    :cond_7
+    :goto_1
+    return-void
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 3
+
+    invoke-static {p0}, Ljava/lang/System;->identityHashCode(Ljava/lang/Object;)I
+
+    move-result v0
+
+    invoke-static {v0}, Ljava/lang/Integer;->toHexString(I)Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v1, "Operation {"
+
+    const-string v2, "} {finalState = "
+
+    invoke-static {v1, v0, v2}, Lmw1;->n(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    iget v1, p0, Ly7e;->a:I
+
+    const/4 v2, 0x1
+
+    if-eq v1, v2, :cond_3
+
+    const/4 v2, 0x2
+
+    if-eq v1, v2, :cond_2
+
+    const/4 v2, 0x3
+
+    if-eq v1, v2, :cond_1
+
+    const/4 v2, 0x4
+
+    if-eq v1, v2, :cond_0
+
+    const-string v1, "null"
+
+    goto :goto_0
+
+    :cond_0
+    const-string v1, "INVISIBLE"
+
+    goto :goto_0
+
+    :cond_1
+    const-string v1, "GONE"
+
+    goto :goto_0
+
+    :cond_2
+    const-string v1, "VISIBLE"
+
+    goto :goto_0
+
+    :cond_3
+    const-string v1, "REMOVED"
+
+    :goto_0
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, " lifecycleImpact = "
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget v1, p0, Ly7e;->b:I
+
+    const/4 v2, 0x1
+
+    if-eq v1, v2, :cond_6
+
+    const/4 v2, 0x2
+
+    if-eq v1, v2, :cond_5
+
+    const/4 v2, 0x3
+
+    if-eq v1, v2, :cond_4
+
+    const-string v1, "null"
+
+    goto :goto_1
+
+    :cond_4
+    const-string v1, "REMOVING"
+
+    goto :goto_1
+
+    :cond_5
+    const-string v1, "ADDING"
+
+    goto :goto_1
+
+    :cond_6
+    const-string v1, "NONE"
+
+    :goto_1
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, " fragment = "
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object p0, p0, Ly7e;->c:Landroidx/fragment/app/a;
+
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const/16 p0, 0x7d
+
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    return-object p0
 .end method

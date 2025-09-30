@@ -1,163 +1,133 @@
 .class public final Lrz1;
-.super Lxh7;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public final synthetic p:I
+.field public final a:Lsz1;
+
+.field public final b:Landroid/util/ArrayMap;
 
 
 # direct methods
-.method public synthetic constructor <init>(Landroid/content/Context;I)V
-    .locals 0
+.method public constructor <init>(Lsz1;)V
+    .locals 2
 
-    .line 1
-    iput p2, p0, Lrz1;->p:I
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, p1}, Lxh7;-><init>(Landroid/content/Context;)V
+    new-instance v0, Landroid/util/ArrayMap;
 
-    return-void
-.end method
+    const/4 v1, 0x4
 
-.method public constructor <init>(Lcom/google/android/material/carousel/CarouselLayoutManager;Landroid/content/Context;)V
-    .locals 0
+    invoke-direct {v0, v1}, Landroid/util/ArrayMap;-><init>(I)V
 
-    const/4 p1, 0x0
+    iput-object v0, p0, Lrz1;->b:Landroid/util/ArrayMap;
 
-    iput p1, p0, Lrz1;->p:I
-
-    .line 2
-    invoke-direct {p0, p2}, Lxh7;-><init>(Landroid/content/Context;)V
+    iput-object p1, p0, Lrz1;->a:Lsz1;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public b(Landroid/view/View;I)I
-    .locals 1
+.method public final a(Ljava/lang/String;)Lly1;
+    .locals 3
 
-    iget v0, p0, Lrz1;->p:I
+    iget-object v0, p0, Lrz1;->b:Landroid/util/ArrayMap;
 
-    packed-switch v0, :pswitch_data_0
+    monitor-enter v0
 
-    invoke-super {p0, p1, p2}, Lxh7;->b(Landroid/view/View;I)I
+    :try_start_0
+    iget-object v1, p0, Lrz1;->b:Landroid/util/ArrayMap;
 
-    move-result p0
+    invoke-virtual {v1, p1}, Landroid/util/ArrayMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
-    return p0
+    move-result-object v1
 
-    :pswitch_0
-    const/4 p0, 0x0
+    check-cast v1, Lly1;
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    return p0
+    if-nez v1, :cond_0
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
+    :try_start_1
+    iget-object v1, p0, Lrz1;->a:Lsz1;
 
-.method public c(Landroid/view/View;I)I
-    .locals 1
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    :try_end_1
+    .catch Ljava/lang/AssertionError; {:try_start_1 .. :try_end_1} :catch_0
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    iget v0, p0, Lrz1;->p:I
+    :try_start_2
+    iget-object v1, v1, Lpxe;->b:Ljava/lang/Object;
 
-    packed-switch v0, :pswitch_data_0
+    check-cast v1, Landroid/hardware/camera2/CameraManager;
 
-    invoke-super {p0, p1, p2}, Lxh7;->c(Landroid/view/View;I)I
+    invoke-virtual {v1, p1}, Landroid/hardware/camera2/CameraManager;->getCameraCharacteristics(Ljava/lang/String;)Landroid/hardware/camera2/CameraCharacteristics;
 
-    move-result p0
+    move-result-object v1
+    :try_end_2
+    .catch Landroid/hardware/camera2/CameraAccessException; {:try_start_2 .. :try_end_2} :catch_1
+    .catch Ljava/lang/AssertionError; {:try_start_2 .. :try_end_2} :catch_0
+    .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    return p0
+    :try_start_3
+    new-instance v2, Lly1;
 
-    :pswitch_0
-    const/4 p0, 0x0
+    invoke-direct {v2, v1, p1}, Lly1;-><init>(Landroid/hardware/camera2/CameraCharacteristics;Ljava/lang/String;)V
 
-    return p0
+    iget-object p0, p0, Lrz1;->b:Landroid/util/ArrayMap;
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
+    invoke-virtual {p0, p1, v2}, Landroid/util/ArrayMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-.method public d(Landroid/util/DisplayMetrics;)F
-    .locals 1
+    move-object v1, v2
 
-    iget v0, p0, Lrz1;->p:I
+    goto :goto_1
 
-    packed-switch v0, :pswitch_data_0
+    :catchall_0
+    move-exception p0
 
-    invoke-super {p0, p1}, Lxh7;->d(Landroid/util/DisplayMetrics;)F
+    goto :goto_2
 
-    move-result p0
+    :catch_0
+    move-exception p0
 
-    return p0
+    goto :goto_0
 
-    :pswitch_0
-    iget p0, p1, Landroid/util/DisplayMetrics;->densityDpi:I
+    :catch_1
+    move-exception p0
 
-    int-to-float p0, p0
+    new-instance p1, Landroidx/camera/camera2/internal/compat/CameraAccessExceptionCompat;
 
-    const/high16 p1, 0x42c80000    # 100.0f
+    invoke-direct {p1, p0}, Landroidx/camera/camera2/internal/compat/CameraAccessExceptionCompat;-><init>(Landroid/hardware/camera2/CameraAccessException;)V
 
-    div-float/2addr p1, p0
+    throw p1
+    :try_end_3
+    .catch Ljava/lang/AssertionError; {:try_start_3 .. :try_end_3} :catch_0
+    .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
-    return p1
+    :goto_0
+    :try_start_4
+    new-instance p1, Landroidx/camera/camera2/internal/compat/CameraAccessExceptionCompat;
 
-    nop
+    invoke-virtual {p0}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
 
-    :pswitch_data_0
-    .packed-switch 0x2
-        :pswitch_0
-    .end packed-switch
-.end method
+    move-result-object v1
 
-.method public g(I)Landroid/graphics/PointF;
-    .locals 1
+    invoke-direct {p1, v1, p0}, Landroidx/camera/camera2/internal/compat/CameraAccessExceptionCompat;-><init>(Ljava/lang/String;Ljava/lang/AssertionError;)V
 
-    iget v0, p0, Lrz1;->p:I
+    throw p1
 
-    packed-switch v0, :pswitch_data_0
+    :cond_0
+    :goto_1
+    monitor-exit v0
 
-    invoke-super {p0, p1}, Lxh7;->g(I)Landroid/graphics/PointF;
+    return-object v1
 
-    move-result-object p0
+    :goto_2
+    monitor-exit v0
+    :try_end_4
+    .catchall {:try_start_4 .. :try_end_4} :catchall_0
 
-    return-object p0
-
-    :pswitch_0
-    const/4 p0, 0x0
-
-    return-object p0
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public h()I
-    .locals 1
-
-    iget v0, p0, Lrz1;->p:I
-
-    packed-switch v0, :pswitch_data_0
-
-    invoke-super {p0}, Lxh7;->h()I
-
-    move-result p0
-
-    return p0
-
-    :pswitch_0
-    const/4 p0, -0x1
-
-    return p0
-
-    :pswitch_data_0
-    .packed-switch 0x1
-        :pswitch_0
-    .end packed-switch
+    throw p0
 .end method

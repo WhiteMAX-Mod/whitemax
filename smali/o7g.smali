@@ -1,42 +1,23 @@
-.class public final Lo7g;
+.class public abstract Lo7g;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public a:Ln7g;
-
-
 # direct methods
-.method public constructor <init>(ILandroid/view/animation/Interpolator;J)V
-    .locals 2
+.method public static a(Landroid/view/ViewGroup;I)I
+    .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-virtual {p0, p1}, Landroid/view/ViewGroup;->getChildDrawingOrder(I)I
 
-    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
+    move-result p0
 
-    const/16 v1, 0x1e
+    return p0
+.end method
 
-    if-lt v0, v1, :cond_0
+.method public static b(Landroid/view/ViewGroup;Z)V
+    .locals 0
 
-    new-instance v0, Lm7g;
-
-    invoke-static {p1, p2, p3, p4}, Lnma;->k(ILandroid/view/animation/Interpolator;J)Landroid/view/WindowInsetsAnimation;
-
-    move-result-object p1
-
-    invoke-direct {v0, p1}, Lm7g;-><init>(Landroid/view/WindowInsetsAnimation;)V
-
-    iput-object v0, p0, Lo7g;->a:Ln7g;
-
-    return-void
-
-    :cond_0
-    new-instance v0, Lk7g;
-
-    invoke-direct {v0, p1, p2, p3, p4}, Ln7g;-><init>(ILandroid/view/animation/Interpolator;J)V
-
-    iput-object v0, p0, Lo7g;->a:Ln7g;
+    invoke-virtual {p0, p1}, Landroid/view/ViewGroup;->suppressLayout(Z)V
 
     return-void
 .end method

@@ -1,213 +1,200 @@
-.class public abstract Lea7;
+.class public final Lea7;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ljava/lang/Runnable;
+
 
 # instance fields
-.field public a:I
+.field public final X:F
 
-.field public final b:Ljava/lang/Object;
+.field public final Y:F
 
-.field public final c:Ljava/lang/Object;
+.field public final Z:F
+
+.field public final a:Ljava/lang/ref/WeakReference;
+
+.field public final b:J
+
+.field public final c:J
+
+.field public final o:F
+
+.field public final r0:F
+
+.field public final s0:F
+
+.field public final t0:Z
 
 
 # direct methods
-.method public constructor <init>(Landroidx/recyclerview/widget/a;)V
-    .locals 1
+.method public constructor <init>(Lga7;FFFFFFZ)V
+    .locals 2
 
-    .line 5
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/high16 v0, -0x80000000
+    new-instance v0, Ljava/lang/ref/WeakReference;
 
-    .line 6
-    iput v0, p0, Lea7;->a:I
+    invoke-direct {v0, p1}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
 
-    .line 7
-    new-instance v0, Landroid/graphics/Rect;
+    iput-object v0, p0, Lea7;->a:Ljava/lang/ref/WeakReference;
 
-    invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
+    const-wide/16 v0, 0x1f4
 
-    iput-object v0, p0, Lea7;->c:Ljava/lang/Object;
+    iput-wide v0, p0, Lea7;->b:J
 
-    .line 8
-    iput-object p1, p0, Lea7;->b:Ljava/lang/Object;
+    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
-    return-void
-.end method
+    move-result-wide v0
 
-.method public constructor <init>(Ljava/lang/String;ILfa7;)V
-    .locals 0
+    iput-wide v0, p0, Lea7;->c:J
 
-    .line 1
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput p2, p0, Lea7;->o:F
 
-    .line 2
-    iput-object p1, p0, Lea7;->b:Ljava/lang/Object;
+    iput p3, p0, Lea7;->X:F
 
-    .line 3
-    iput p2, p0, Lea7;->a:I
+    iput p4, p0, Lea7;->Y:F
 
-    .line 4
-    iput-object p3, p0, Lea7;->c:Ljava/lang/Object;
+    iput p5, p0, Lea7;->Z:F
+
+    iput p6, p0, Lea7;->r0:F
+
+    iput p7, p0, Lea7;->s0:F
+
+    iput-boolean p8, p0, Lea7;->t0:Z
 
     return-void
-.end method
-
-.method public static b(Landroidx/recyclerview/widget/a;I)Lea7;
-    .locals 1
-
-    if-eqz p1, :cond_1
-
-    const/4 v0, 0x1
-
-    if-ne p1, v0, :cond_0
-
-    new-instance p1, Luka;
-
-    const/4 v0, 0x1
-
-    invoke-direct {p1, p0, v0}, Luka;-><init>(Landroidx/recyclerview/widget/a;I)V
-
-    return-object p1
-
-    :cond_0
-    new-instance p0, Ljava/lang/IllegalArgumentException;
-
-    const-string p1, "invalid orientation"
-
-    invoke-direct {p0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw p0
-
-    :cond_1
-    new-instance p1, Luka;
-
-    const/4 v0, 0x0
-
-    invoke-direct {p1, p0, v0}, Luka;-><init>(Landroidx/recyclerview/widget/a;I)V
-
-    return-object p1
 .end method
 
 
 # virtual methods
-.method public a(Ljava/lang/String;)Ljava/lang/String;
-    .locals 3
+.method public final run()V
+    .locals 8
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    iget-object v0, p0, Lea7;->a:Ljava/lang/ref/WeakReference;
 
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+    invoke-virtual {v0}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
 
-    iget-object v1, p0, Lea7;->b:Ljava/lang/Object;
+    move-result-object v0
 
-    check-cast v1, Ljava/lang/String;
+    check-cast v0, Lga7;
 
-    const-string v2, "."
+    if-nez v0, :cond_0
 
-    invoke-virtual {v1, v2}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p0}, Lea7;->l()Lfa7;
-
-    move-result-object p0
-
-    if-eqz p0, :cond_0
-
-    iget-object p0, p0, Lfa7;->a:Ljava/lang/String;
-
-    invoke-virtual {v2, p0}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object p0
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    goto :goto_0
 
     :cond_0
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    iget-object v1, v0, Lga7;->B0:Landroid/graphics/RectF;
 
-    move-result-object p0
+    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
-    return-object p0
-.end method
+    move-result-wide v2
 
-.method public abstract c(Landroid/view/View;)I
-.end method
+    iget-wide v4, p0, Lea7;->c:J
 
-.method public abstract d(Landroid/view/View;)I
-.end method
+    sub-long/2addr v2, v4
 
-.method public abstract e(Landroid/view/View;)I
-.end method
+    iget-wide v4, p0, Lea7;->b:J
 
-.method public abstract f(Landroid/view/View;)I
-.end method
+    invoke-static {v4, v5, v2, v3}, Ljava/lang/Math;->min(JJ)J
 
-.method public abstract g()I
-.end method
+    move-result-wide v2
 
-.method public abstract h()I
-.end method
+    long-to-float v2, v2
 
-.method public abstract i()I
-.end method
+    long-to-float v3, v4
 
-.method public abstract j()I
-.end method
+    div-float v4, v2, v3
 
-.method public abstract k()I
-.end method
+    const/high16 v5, 0x3f800000    # 1.0f
 
-.method public l()Lfa7;
-    .locals 0
+    sub-float/2addr v4, v5
 
-    iget-object p0, p0, Lea7;->c:Ljava/lang/Object;
+    mul-float v6, v4, v4
 
-    check-cast p0, Lfa7;
+    mul-float/2addr v6, v4
 
-    return-object p0
-.end method
+    add-float/2addr v6, v5
 
-.method public abstract m()I
-.end method
+    iget v4, p0, Lea7;->Y:F
 
-.method public abstract n()I
-.end method
+    mul-float/2addr v4, v6
 
-.method public o()I
-    .locals 2
+    const/4 v5, 0x0
 
-    const/high16 v0, -0x80000000
+    add-float/2addr v4, v5
 
-    iget v1, p0, Lea7;->a:I
+    iget v7, p0, Lea7;->Z:F
 
-    if-ne v0, v1, :cond_0
+    mul-float/2addr v6, v7
 
-    const/4 p0, 0x0
+    add-float/2addr v6, v5
 
-    return p0
+    iget v5, p0, Lea7;->s0:F
 
-    :cond_0
-    invoke-virtual {p0}, Lea7;->n()I
+    invoke-static {v2, v5, v3}, Lgs3;->n(FFF)F
 
-    move-result v0
+    move-result v5
 
-    iget p0, p0, Lea7;->a:I
+    cmpg-float v2, v2, v3
 
-    sub-int/2addr v0, p0
+    if-gez v2, :cond_2
 
-    return v0
-.end method
+    iget-object v2, v0, Lkdf;->r0:[F
 
-.method public abstract p(Landroid/view/View;)I
-.end method
+    const/4 v3, 0x0
 
-.method public abstract q(Landroid/view/View;)I
-.end method
+    aget v3, v2, v3
 
-.method public abstract r(I)V
+    iget v7, p0, Lea7;->o:F
+
+    sub-float/2addr v3, v7
+
+    sub-float/2addr v4, v3
+
+    const/4 v3, 0x1
+
+    aget v2, v2, v3
+
+    iget v3, p0, Lea7;->X:F
+
+    sub-float/2addr v2, v3
+
+    sub-float/2addr v6, v2
+
+    invoke-virtual {v0, v4, v6}, Lkdf;->g(FF)V
+
+    iget-boolean v2, p0, Lea7;->t0:Z
+
+    if-nez v2, :cond_1
+
+    iget v2, p0, Lea7;->r0:F
+
+    add-float/2addr v2, v5
+
+    invoke-virtual {v1}, Landroid/graphics/RectF;->centerX()F
+
+    move-result v3
+
+    invoke-virtual {v1}, Landroid/graphics/RectF;->centerY()F
+
+    move-result v1
+
+    invoke-virtual {v0, v2, v3, v1}, Lga7;->j(FFF)V
+
+    :cond_1
+    iget-object v1, v0, Lkdf;->o:[F
+
+    invoke-virtual {v0, v1}, Lga7;->i([F)Z
+
+    move-result v1
+
+    if-nez v1, :cond_2
+
+    invoke-virtual {v0, p0}, Landroid/view/View;->post(Ljava/lang/Runnable;)Z
+
+    :cond_2
+    :goto_0
+    return-void
 .end method

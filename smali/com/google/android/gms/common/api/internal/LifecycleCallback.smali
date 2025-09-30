@@ -4,7 +4,7 @@
 
 
 # direct methods
-.method private static getChimeraLifecycleFragmentImpl(Lhg7;)Lwg7;
+.method private static getChimeraLifecycleFragmentImpl(Ldn7;)Lsn7;
     .locals 1
     .annotation build Landroidx/annotation/Keep;
     .end annotation

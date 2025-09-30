@@ -1,55 +1,88 @@
-.class public abstract Linc;
+.class public final Linc;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lvi1;
 
-# static fields
-.field public static final a:I
 
-.field public static final b:I
-
-.field public static final c:I
-
-.field public static final d:I
-
-.field public static final e:I
-
-.field public static final f:I
-
-.field public static final g:I
+# instance fields
+.field public final a:Ljava/util/concurrent/CopyOnWriteArraySet;
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public constructor <init>()V
     .locals 1
 
-    sget v0, Lvqb;->accent:I
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    sput v0, Linc;->a:I
+    new-instance v0, Ljava/util/concurrent/CopyOnWriteArraySet;
 
-    sget v0, Lvqb;->black_70:I
+    invoke-direct {v0}, Ljava/util/concurrent/CopyOnWriteArraySet;-><init>()V
 
-    sput v0, Linc;->b:I
+    iput-object v0, p0, Linc;->a:Ljava/util/concurrent/CopyOnWriteArraySet;
 
-    sget v0, Lvqb;->gray_66:I
+    return-void
+.end method
 
-    sput v0, Linc;->c:I
 
-    sget v0, Lvqb;->gray_88:I
+# virtual methods
+.method public final onRecordStarted(Lti1;)V
+    .locals 1
 
-    sput v0, Linc;->d:I
+    iget-object p0, p0, Linc;->a:Ljava/util/concurrent/CopyOnWriteArraySet;
 
-    sget v0, Lvqb;->range_seek_bar_border_shadow_color:I
+    invoke-virtual {p0}, Ljava/util/concurrent/CopyOnWriteArraySet;->iterator()Ljava/util/Iterator;
 
-    sput v0, Linc;->e:I
+    move-result-object p0
 
-    sget v0, Lvqb;->white:I
+    :goto_0
+    invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
 
-    sput v0, Linc;->f:I
+    move-result v0
 
-    sget v0, Lvqb;->white_50:I
+    if-eqz v0, :cond_0
 
-    sput v0, Linc;->g:I
+    invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
+    move-result-object v0
+
+    check-cast v0, Lvi1;
+
+    invoke-interface {v0, p1}, Lvi1;->onRecordStarted(Lti1;)V
+
+    goto :goto_0
+
+    :cond_0
+    return-void
+.end method
+
+.method public final onRecordStopped(Lui1;)V
+    .locals 1
+
+    iget-object p0, p0, Linc;->a:Ljava/util/concurrent/CopyOnWriteArraySet;
+
+    invoke-virtual {p0}, Ljava/util/concurrent/CopyOnWriteArraySet;->iterator()Ljava/util/Iterator;
+
+    move-result-object p0
+
+    :goto_0
+    invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lvi1;
+
+    invoke-interface {v0, p1}, Lvi1;->onRecordStopped(Lui1;)V
+
+    goto :goto_0
+
+    :cond_0
     return-void
 .end method

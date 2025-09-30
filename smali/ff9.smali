@@ -1,23 +1,7 @@
 .class public final Lff9;
-.super Ljava/lang/Object;
+.super Lga4;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:Ltd6;
-
-.field public final b:J
-
-
-# direct methods
-.method public constructor <init>(Ltd6;J)V
-    .locals 0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lff9;->a:Ltd6;
-
-    iput-wide p2, p0, Lff9;->b:J
-
-    return-void
-.end method
+.field public t0:J

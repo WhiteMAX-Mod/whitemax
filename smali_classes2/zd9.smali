@@ -1,165 +1,151 @@
 .class public final Lzd9;
-.super Llje;
+.super Lure;
 .source "SourceFile"
+
+# interfaces
+.implements Lpc6;
 
 
 # instance fields
-.field public X:Lz42;
+.field public X:I
 
-.field public Y:Ljava/lang/String;
+.field public final synthetic Y:Lfe9;
 
-.field public o:Lfr8;
+.field public final synthetic Z:J
 
 
 # direct methods
-.method public constructor <init>(Ldx8;)V
+.method public constructor <init>(Lfe9;JLkotlin/coroutines/Continuation;)V
     .locals 0
 
-    invoke-direct {p0, p1}, Llje;-><init>(Ldx8;)V
+    iput-object p1, p0, Lzd9;->Y:Lfe9;
+
+    iput-wide p2, p0, Lzd9;->Z:J
+
+    const/4 p1, 0x2
+
+    invoke-direct {p0, p1, p4}, Lure;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final c(Ldx8;Ljava/lang/String;)V
-    .locals 2
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    check-cast p1, Ly04;
 
-    invoke-virtual {p2}, Ljava/lang/String;->hashCode()I
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    move-result v0
+    invoke-virtual {p0, p1, p2}, Lzd9;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    const/4 v1, -0x1
+    move-result-object p0
 
-    sparse-switch v0, :sswitch_data_0
+    check-cast p0, Lzd9;
 
-    goto :goto_0
+    sget-object p1, Lylf;->a:Lylf;
 
-    :sswitch_0
-    const-string v0, "message"
+    invoke-virtual {p0, p1}, Lzd9;->o(Ljava/lang/Object;)Ljava/lang/Object;
 
-    invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    move-result-object p0
 
-    move-result p2
+    return-object p0
+.end method
 
-    if-nez p2, :cond_0
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 3
 
-    goto :goto_0
+    new-instance p1, Lzd9;
+
+    iget-object v0, p0, Lzd9;->Y:Lfe9;
+
+    iget-wide v1, p0, Lzd9;->Z:J
+
+    invoke-direct {p1, v0, v1, v2, p2}, Lzd9;-><init>(Lfe9;JLkotlin/coroutines/Continuation;)V
+
+    return-object p1
+.end method
+
+.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 7
+
+    sget-object v0, Lz04;->a:Lz04;
+
+    iget v1, p0, Lzd9;->X:I
+
+    const/4 v2, 0x1
+
+    if-eqz v1, :cond_1
+
+    if-ne v1, v2, :cond_0
+
+    invoke-static {p1}, Lqe5;->V(Ljava/lang/Object;)V
+
+    goto :goto_1
 
     :cond_0
-    const/4 v1, 0x2
+    new-instance p0, Ljava/lang/IllegalStateException;
 
-    goto :goto_0
+    const-string p1, "call to \'resume\' before \'invoke\' with coroutine"
 
-    :sswitch_1
-    const-string v0, "chat"
+    invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result p2
-
-    if-nez p2, :cond_1
-
-    goto :goto_0
+    throw p0
 
     :cond_1
-    const/4 v1, 0x1
+    invoke-static {p1}, Lqe5;->V(Ljava/lang/Object;)V
 
-    goto :goto_0
+    iget-object p1, p0, Lzd9;->Y:Lfe9;
 
-    :sswitch_2
-    const-string v0, "chatAccessToken"
+    iget-object p1, p1, Lfe9;->i:Ljava/lang/String;
 
-    invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    iget-wide v3, p0, Lzd9;->Z:J
 
-    move-result p2
+    sget-object v1, Ljtg;->g:Loja;
 
-    if-nez p2, :cond_2
+    if-nez v1, :cond_2
 
     goto :goto_0
 
     :cond_2
-    const/4 v1, 0x0
+    sget-object v5, Lqz7;->o:Lqz7;
 
+    invoke-virtual {v1, v5}, Loja;->a(Lqz7;)Z
+
+    move-result v6
+
+    if-eqz v6, :cond_3
+
+    const-string v6, "Scrolling to requested message with id="
+
+    invoke-static {v3, v4, v6}, Lbg9;->i(JLjava/lang/String;)Ljava/lang/String;
+
+    move-result-object v3
+
+    const/4 v4, 0x0
+
+    invoke-virtual {v1, v5, p1, v3, v4}, Loja;->b(Lqz7;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    :cond_3
     :goto_0
-    packed-switch v1, :pswitch_data_0
+    iget-object p1, p0, Lzd9;->Y:Lfe9;
 
-    invoke-virtual {p1}, Ldx8;->B()V
+    iget-wide v3, p0, Lzd9;->Z:J
 
-    return-void
+    iput v2, p0, Lzd9;->X:I
 
-    :pswitch_0
-    invoke-static {p1}, Lod7;->C(Ldx8;)Lfr8;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lzd9;->o:Lfr8;
-
-    return-void
-
-    :pswitch_1
-    invoke-static {p1}, Lz42;->d(Ldx8;)Lz42;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lzd9;->X:Lz42;
-
-    return-void
-
-    :pswitch_2
-    invoke-static {p1}, Lxq7;->f0(Ldx8;)Ljava/lang/String;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lzd9;->Y:Ljava/lang/String;
-
-    return-void
-
-    :sswitch_data_0
-    .sparse-switch
-        -0x7ca41f83 -> :sswitch_2
-        0x2e9358 -> :sswitch_1
-        0x38eb0007 -> :sswitch_0
-    .end sparse-switch
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 3
-
-    iget-object v0, p0, Lzd9;->o:Lfr8;
-
-    iget-object p0, p0, Lzd9;->X:Lz42;
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    const-string v2, "Response{, message="
-
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v0, ", chat="
-
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string p0, "}"
-
-    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-static {p1, v3, v4, p0}, Lfe9;->a(Lfe9;JLjx3;)Ljava/lang/Object;
 
     move-result-object p0
+
+    if-ne p0, v0, :cond_4
+
+    return-object v0
+
+    :cond_4
+    :goto_1
+    sget-object p0, Lylf;->a:Lylf;
 
     return-object p0
 .end method

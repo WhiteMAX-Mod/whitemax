@@ -3,26 +3,22 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lwl;
+.implements Landroid/view/View$OnClickListener;
 
 
 # instance fields
 .field public final synthetic a:I
 
-.field public final synthetic b:Lhb5;
-
-.field public final synthetic c:Lone/me/sdk/arch/Widget;
+.field public final synthetic b:Lone/me/calls/ui/bottomsheet/previewjoinlink/CallJoinLinkPreviewWidget;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lhb5;Lone/me/sdk/arch/Widget;I)V
+.method public synthetic constructor <init>(Lone/me/calls/ui/bottomsheet/previewjoinlink/CallJoinLinkPreviewWidget;I)V
     .locals 0
 
-    iput p3, p0, Llc1;->a:I
+    iput p2, p0, Llc1;->a:I
 
-    iput-object p1, p0, Llc1;->b:Lhb5;
-
-    iput-object p2, p0, Llc1;->c:Lone/me/sdk/arch/Widget;
+    iput-object p1, p0, Llc1;->b:Lone/me/calls/ui/bottomsheet/previewjoinlink/CallJoinLinkPreviewWidget;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -31,256 +27,77 @@
 
 
 # virtual methods
-.method public final Y(Lxl;I)V
-    .locals 6
+.method public final onClick(Landroid/view/View;)V
+    .locals 7
 
-    iget v0, p0, Llc1;->a:I
+    iget p1, p0, Llc1;->a:I
 
-    const/4 v1, 0x0
+    iget-object p0, p0, Llc1;->b:Lone/me/calls/ui/bottomsheet/previewjoinlink/CallJoinLinkPreviewWidget;
 
-    const v2, 0x3dcccccd    # 0.1f
+    packed-switch p1, :pswitch_data_0
 
-    const/4 v3, 0x3
+    sget-object p1, Lone/me/calls/ui/bottomsheet/previewjoinlink/CallJoinLinkPreviewWidget;->A0:[Lxi7;
 
-    const/high16 v4, 0x3f800000    # 1.0f
+    invoke-virtual {p0}, Lone/me/calls/ui/bottomsheet/previewjoinlink/CallJoinLinkPreviewWidget;->C0()Lic1;
 
-    iget-object v5, p0, Llc1;->c:Lone/me/sdk/arch/Widget;
+    move-result-object p0
 
-    iget-object p0, p0, Llc1;->b:Lhb5;
+    iget-object p1, p0, Lic1;->w0:Lyce;
 
-    packed-switch v0, :pswitch_data_0
-
-    check-cast v5, Lone/me/profile/ProfileScreen;
-
-    sget-object v0, Lone/me/profile/ProfileScreen;->z0:[Lbc7;
-
-    invoke-virtual {p1}, Lxl;->getTotalScrollRange()I
-
-    move-result p1
-
-    invoke-static {p2}, Ljava/lang/Math;->abs(I)I
-
-    move-result p2
-
-    int-to-float p2, p2
-
-    int-to-float p1, p1
-
-    div-float/2addr p2, p1
-
-    invoke-virtual {p0, p2}, Lvv7;->getInterpolation(F)F
-
-    move-result p0
-
-    iget-object p1, v5, Lone/me/profile/ProfileScreen;->o0:Lo5c;
-
-    sget-object p2, Lone/me/profile/ProfileScreen;->z0:[Lbc7;
-
-    aget-object p2, p2, v3
-
-    invoke-interface {p1, v5, p2}, Lo5c;->M(Ljava/lang/Object;Lbc7;)Ljava/lang/Object;
+    invoke-virtual {p1}, Lyce;->getValue()Ljava/lang/Object;
 
     move-result-object p1
 
-    check-cast p1, Landroid/widget/LinearLayout;
+    check-cast p1, Lbc1;
 
-    sub-float/2addr v4, p0
+    iget-object v0, p0, Lic1;->z0:Lv85;
 
-    invoke-virtual {p1, v4}, Landroid/view/View;->setAlpha(F)V
+    new-instance v1, Lua1;
 
-    invoke-virtual {v5}, Lone/me/profile/ProfileScreen;->s0()Lvia;
+    iget-object p0, p0, Lic1;->b:Ljava/lang/String;
 
-    move-result-object p1
+    iget-object v2, p1, Lbc1;->c:Lfa8;
 
-    invoke-virtual {p1, p0}, Lvia;->setTitleAlpha(F)V
+    const/4 v3, 0x0
+
+    const/4 v4, 0x1
+
+    sget-object v5, Lfa8;->b:Lfa8;
+
+    if-ne v2, v5, :cond_0
+
+    move v2, v4
+
+    goto :goto_0
+
+    :cond_0
+    move v2, v3
+
+    :goto_0
+    iget-object v6, p1, Lbc1;->b:Lfa8;
+
+    if-ne v6, v5, :cond_1
+
+    move v3, v4
+
+    :cond_1
+    iget-boolean p1, p1, Lbc1;->d:Z
+
+    invoke-direct {v1, p0, v2, v3, p1}, Lua1;-><init>(Ljava/lang/String;ZZZ)V
+
+    invoke-static {v0, v1}, Lx7g;->o(Lv85;Ljava/lang/Object;)V
 
     return-void
 
     :pswitch_0
-    check-cast v5, Lone/me/profileedit/ProfileEditScreen;
+    sget-object p1, Lone/me/calls/ui/bottomsheet/previewjoinlink/CallJoinLinkPreviewWidget;->A0:[Lxi7;
 
-    sget-object v0, Lone/me/profileedit/ProfileEditScreen;->u0:[Lbc7;
-
-    invoke-virtual {p1}, Lxl;->getTotalScrollRange()I
-
-    move-result p1
-
-    invoke-static {p2}, Ljava/lang/Math;->abs(I)I
-
-    move-result p2
-
-    int-to-float p2, p2
-
-    int-to-float p1, p1
-
-    div-float/2addr p2, p1
-
-    invoke-virtual {p0, p2}, Lvv7;->getInterpolation(F)F
-
-    move-result p0
-
-    iget-object p1, v5, Lone/me/profileedit/ProfileEditScreen;->p0:Lo5c;
-
-    sget-object p2, Lone/me/profileedit/ProfileEditScreen;->u0:[Lbc7;
-
-    aget-object p2, p2, v3
-
-    invoke-interface {p1, v5, p2}, Lo5c;->M(Ljava/lang/Object;Lbc7;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Landroid/widget/LinearLayout;
-
-    sub-float/2addr v4, p0
-
-    invoke-virtual {p1, v4}, Landroid/view/View;->setAlpha(F)V
-
-    invoke-virtual {v5}, Lone/me/profileedit/ProfileEditScreen;->p0()Lvia;
-
-    move-result-object p1
-
-    invoke-virtual {p1, p0}, Lvia;->setTitleAlpha(F)V
-
-    return-void
-
-    :pswitch_1
-    check-cast v5, Lone/me/calls/ui/bottomsheet/opponents/CallOpponentsListWidget;
-
-    sget-object v0, Lone/me/calls/ui/bottomsheet/opponents/CallOpponentsListWidget;->D0:[Lbc7;
-
-    invoke-virtual {p1}, Lxl;->getTotalScrollRange()I
-
-    move-result p1
-
-    invoke-static {p2}, Ljava/lang/Math;->abs(I)I
-
-    move-result p2
-
-    int-to-float p2, p2
-
-    int-to-float p1, p1
-
-    div-float/2addr p2, p1
-
-    invoke-virtual {p0, p2}, Lvv7;->getInterpolation(F)F
-
-    move-result p0
-
-    sub-float/2addr v4, p0
-
-    invoke-virtual {v5}, Lone/me/calls/ui/bottomsheet/opponents/CallOpponentsListWidget;->q0()Landroid/widget/LinearLayout;
-
-    move-result-object p1
-
-    invoke-virtual {p1, v4}, Landroid/view/View;->setAlpha(F)V
-
-    invoke-virtual {v5}, Lone/me/calls/ui/bottomsheet/opponents/CallOpponentsListWidget;->q0()Landroid/widget/LinearLayout;
-
-    move-result-object p1
-
-    cmpl-float p2, v4, v2
-
-    if-lez p2, :cond_0
-
-    const/4 v1, 0x1
-
-    :cond_0
-    invoke-static {p1, v1}, Lxqd;->H(Landroid/view/ViewGroup;Z)V
-
-    invoke-virtual {v5}, Lone/me/calls/ui/bottomsheet/opponents/CallOpponentsListWidget;->t0()Lvia;
-
-    move-result-object p1
-
-    invoke-virtual {p1, p0}, Lvia;->setTitleAlpha(F)V
-
-    return-void
-
-    :pswitch_2
-    check-cast v5, Lone/me/calllist/ui/callinfo/CallLinkInfoScreen;
-
-    sget-object v0, Lone/me/calllist/ui/callinfo/CallLinkInfoScreen;->x0:Lxo3;
-
-    invoke-virtual {p1}, Lxl;->getTotalScrollRange()I
-
-    move-result p1
-
-    invoke-static {p2}, Ljava/lang/Math;->abs(I)I
-
-    move-result p2
-
-    int-to-float p2, p2
-
-    int-to-float p1, p1
-
-    div-float/2addr p2, p1
-
-    invoke-virtual {p0, p2}, Lvv7;->getInterpolation(F)F
-
-    move-result p0
-
-    sub-float/2addr v4, p0
-
-    iget-object p1, v5, Lone/me/calllist/ui/callinfo/CallLinkInfoScreen;->Z:Lo5c;
-
-    sget-object p2, Lone/me/calllist/ui/callinfo/CallLinkInfoScreen;->y0:[Lbc7;
-
-    aget-object v0, p2, v1
-
-    invoke-interface {p1, v5, v0}, Lo5c;->M(Ljava/lang/Object;Lbc7;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/widget/LinearLayout;
-
-    invoke-virtual {v0, v4}, Landroid/view/View;->setAlpha(F)V
-
-    aget-object v0, p2, v1
-
-    invoke-interface {p1, v5, v0}, Lo5c;->M(Ljava/lang/Object;Lbc7;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Landroid/widget/LinearLayout;
-
-    cmpl-float v0, v4, v2
-
-    if-lez v0, :cond_1
-
-    goto :goto_0
-
-    :cond_1
-    const/4 v1, 0x4
-
-    :goto_0
-    invoke-virtual {p1}, Landroid/view/View;->getVisibility()I
-
-    move-result v0
-
-    if-eq v0, v1, :cond_2
-
-    invoke-virtual {p1, v1}, Landroid/view/View;->setVisibility(I)V
-
-    :cond_2
-    iget-object p1, v5, Lone/me/calllist/ui/callinfo/CallLinkInfoScreen;->p0:Lo5c;
-
-    const/4 v0, 0x2
-
-    aget-object p2, p2, v0
-
-    invoke-interface {p1, v5, p2}, Lo5c;->M(Ljava/lang/Object;Lbc7;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lvia;
-
-    invoke-virtual {p1, p0}, Lvia;->setTitleAlpha(F)V
+    invoke-virtual {p0}, Lone/me/calls/ui/bottomsheet/previewjoinlink/CallJoinLinkPreviewWidget;->D0()V
 
     return-void
 
     :pswitch_data_0
     .packed-switch 0x0
-        :pswitch_2
-        :pswitch_1
         :pswitch_0
     .end packed-switch
 .end method

@@ -1,89 +1,48 @@
 .class public final Lxt1;
-.super Landroid/hardware/camera2/CameraManager$AvailabilityCallback;
-.source "SourceFile"
+.super Ljx3;
 
 
 # instance fields
-.field public final a:Ljava/lang/String;
+.field public X:I
 
-.field public b:Z
+.field public final synthetic Y:Lcm1;
 
-.field public final synthetic c:Ldu1;
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Ldu1;Ljava/lang/String;)V
+.method public constructor <init>(Lcm1;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    iput-object p1, p0, Lxt1;->c:Ldu1;
+    iput-object p1, p0, Lxt1;->Y:Lcm1;
 
-    invoke-direct {p0}, Landroid/hardware/camera2/CameraManager$AvailabilityCallback;-><init>()V
-
-    const/4 p1, 0x1
-
-    iput-boolean p1, p0, Lxt1;->b:Z
-
-    iput-object p2, p0, Lxt1;->a:Ljava/lang/String;
+    invoke-direct {p0, p2}, Ljx3;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onCameraAvailable(Ljava/lang/String;)V
+.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
 
-    iget-object v0, p0, Lxt1;->a:Ljava/lang/String;
+    iput-object p1, p0, Lxt1;->o:Ljava/lang/Object;
 
-    invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    iget p1, p0, Lxt1;->X:I
 
-    move-result p1
+    const/high16 v0, -0x80000000
 
-    if-nez p1, :cond_0
+    or-int/2addr p1, v0
 
-    goto :goto_0
+    iput p1, p0, Lxt1;->X:I
 
-    :cond_0
-    const/4 p1, 0x1
+    iget-object p1, p0, Lxt1;->Y:Lcm1;
 
-    iput-boolean p1, p0, Lxt1;->b:Z
+    const/4 v0, 0x0
 
-    iget-object p1, p0, Lxt1;->c:Ldu1;
+    invoke-virtual {p1, v0, p0}, Lcm1;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
-    iget p1, p1, Ldu1;->O0:I
+    move-result-object p0
 
-    const/4 v0, 0x4
-
-    if-ne p1, v0, :cond_1
-
-    iget-object p0, p0, Lxt1;->c:Ldu1;
-
-    const/4 p1, 0x0
-
-    invoke-virtual {p0, p1}, Ldu1;->I(Z)V
-
-    :cond_1
-    :goto_0
-    return-void
-.end method
-
-.method public final onCameraUnavailable(Ljava/lang/String;)V
-    .locals 1
-
-    iget-object v0, p0, Lxt1;->a:Ljava/lang/String;
-
-    invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-nez p1, :cond_0
-
-    return-void
-
-    :cond_0
-    const/4 p1, 0x0
-
-    iput-boolean p1, p0, Lxt1;->b:Z
-
-    return-void
+    return-object p0
 .end method

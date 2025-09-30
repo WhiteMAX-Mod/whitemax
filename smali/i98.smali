@@ -1,243 +1,299 @@
 .class public final Li98;
-.super Ljava/lang/Object;
+.super Ljava/util/concurrent/atomic/AtomicReference;
 .source "SourceFile"
 
 # interfaces
-.implements Landroid/content/ServiceConnection;
+.implements Ld8a;
+.implements Lt98;
+.implements Loq4;
+.implements Le3e;
 
 
 # instance fields
-.field public final a:Landroid/os/Bundle;
+.field public final synthetic a:I
 
-.field public final synthetic b:Lj98;
+.field public final b:Ld8a;
+
+.field public final c:Lqc6;
 
 
 # direct methods
-.method public constructor <init>(Lj98;Landroid/os/Bundle;)V
+.method public synthetic constructor <init>(Ld8a;Lqc6;I)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput p3, p0, Li98;->a:I
 
-    iput-object p1, p0, Li98;->b:Lj98;
+    invoke-direct {p0}, Ljava/util/concurrent/atomic/AtomicReference;-><init>()V
 
-    iput-object p2, p0, Li98;->a:Landroid/os/Bundle;
+    iput-object p1, p0, Li98;->b:Ld8a;
+
+    iput-object p2, p0, Li98;->c:Lqc6;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onBindingDied(Landroid/content/ComponentName;)V
+.method public final a(Ljava/lang/Object;)V
     .locals 1
 
-    iget-object p0, p0, Li98;->b:Lj98;
+    iget v0, p0, Li98;->a:I
 
-    iget-object p0, p0, Lj98;->a:Lo88;
-
-    invoke-static {p0}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
-
-    new-instance p1, Lz46;
-
-    const/16 v0, 0xb
-
-    invoke-direct {p1, v0, p0}, Lz46;-><init>(ILjava/lang/Object;)V
-
-    invoke-virtual {p0, p1}, Lo88;->q(Ljava/lang/Runnable;)V
-
-    return-void
-.end method
-
-.method public final onServiceConnected(Landroid/content/ComponentName;Landroid/os/IBinder;)V
-    .locals 7
-
-    iget-object v0, p0, Li98;->b:Lj98;
-
-    iget-object v1, v0, Lj98;->e:Lt9d;
-
-    iget-object v2, v0, Lj98;->a:Lo88;
-
-    const-string v3, "Service "
-
-    const-string v4, "Expected connection to "
+    packed-switch v0, :pswitch_data_0
 
     :try_start_0
-    iget-object v5, v1, Lt9d;->a:Ls9d;
+    iget-object v0, p0, Li98;->c:Lqc6;
 
-    invoke-interface {v5}, Ls9d;->getPackageName()Ljava/lang/String;
+    invoke-interface {v0, p1}, Lqc6;->apply(Ljava/lang/Object;)Ljava/lang/Object;
 
-    move-result-object v5
+    move-result-object p1
 
-    invoke-virtual {p1}, Landroid/content/ComponentName;->getPackageName()Ljava/lang/String;
+    const-string v0, "The mapper returned a null Publisher"
 
-    move-result-object v6
+    invoke-static {p1, v0}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
-    invoke-virtual {v5, v6}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v5
-
-    if-nez v5, :cond_0
-
-    new-instance p0, Ljava/lang/StringBuilder;
-
-    invoke-direct {p0, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object p2, v1, Lt9d;->a:Ls9d;
-
-    invoke-interface {p2}, Ls9d;->getPackageName()Ljava/lang/String;
-
-    move-result-object p2
-
-    invoke-virtual {p0, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string p2, " but is connected to "
-
-    invoke-virtual {p0, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    invoke-static {p0}, Lou0;->m(Ljava/lang/String;)V
+    check-cast p1, Lt7a;
     :try_end_0
-    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    invoke-static {v2}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {p0}, Li98;->f()Z
 
-    new-instance p0, Lz46;
+    move-result v0
 
-    const/16 p1, 0xb
+    if-nez v0, :cond_0
 
-    invoke-direct {p0, p1, v2}, Lz46;-><init>(ILjava/lang/Object;)V
+    invoke-interface {p1, p0}, Lt7a;->a(Ld8a;)V
 
-    :goto_0
-    invoke-virtual {v2, p0}, Lo88;->q(Ljava/lang/Runnable;)V
-
-    return-void
+    goto :goto_0
 
     :catchall_0
-    move-exception p0
+    move-exception p1
+
+    invoke-static {p1}, Lzyd;->F(Ljava/lang/Throwable;)V
+
+    iget-object p0, p0, Li98;->b:Ld8a;
+
+    invoke-interface {p0, p1}, Ld8a;->onError(Ljava/lang/Throwable;)V
+
+    :cond_0
+    :goto_0
+    return-void
+
+    :pswitch_0
+    :try_start_1
+    iget-object v0, p0, Li98;->c:Lqc6;
+
+    invoke-interface {v0, p1}, Lqc6;->apply(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    const-string v0, "The mapper returned a null Publisher"
+
+    invoke-static {p1, v0}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
+
+    check-cast p1, Lt7a;
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_1
+
+    invoke-virtual {p0}, Li98;->f()Z
+
+    move-result v0
+
+    if-nez v0, :cond_1
+
+    invoke-interface {p1, p0}, Lt7a;->a(Ld8a;)V
 
     goto :goto_1
 
-    :cond_0
-    :try_start_1
-    invoke-static {p2}, Lji8;->j(Landroid/os/IBinder;)Lvr6;
+    :catchall_1
+    move-exception p1
 
-    move-result-object p2
+    invoke-static {p1}, Lzyd;->F(Ljava/lang/Throwable;)V
 
-    if-nez p2, :cond_1
+    iget-object p0, p0, Li98;->b:Ld8a;
 
-    const-string p0, "Service interface is missing."
-
-    invoke-static {p0}, Lou0;->m(Ljava/lang/String;)V
-    :try_end_1
-    .catch Landroid/os/RemoteException; {:try_start_1 .. :try_end_1} :catch_0
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    invoke-static {v2}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
-
-    new-instance p0, Lz46;
-
-    const/16 p1, 0xb
-
-    invoke-direct {p0, p1, v2}, Lz46;-><init>(ILjava/lang/Object;)V
-
-    goto :goto_0
+    invoke-interface {p0, p1}, Ld8a;->onError(Ljava/lang/Throwable;)V
 
     :cond_1
-    :try_start_2
-    new-instance v1, Llh3;
+    :goto_1
+    return-void
 
-    iget-object v4, v0, Lj98;->d:Landroid/content/Context;
+    nop
 
-    invoke-virtual {v4}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
 
-    move-result-object v4
+.method public final b()V
+    .locals 1
 
-    invoke-static {}, Landroid/os/Process;->myPid()I
+    iget v0, p0, Li98;->a:I
 
-    move-result v5
+    packed-switch v0, :pswitch_data_0
 
-    iget-object p0, p0, Li98;->a:Landroid/os/Bundle;
+    iget-object p0, p0, Li98;->b:Ld8a;
 
-    invoke-direct {v1, v4, v5, p0}, Llh3;-><init>(Ljava/lang/String;ILandroid/os/Bundle;)V
-
-    iget-object p0, v0, Lj98;->c:Ls98;
-
-    invoke-virtual {v1}, Llh3;->b()Landroid/os/Bundle;
-
-    move-result-object v0
-
-    invoke-interface {p2, p0, v0}, Lvr6;->I(Lnr6;Landroid/os/Bundle;)V
-    :try_end_2
-    .catch Landroid/os/RemoteException; {:try_start_2 .. :try_end_2} :catch_0
-    .catchall {:try_start_2 .. :try_end_2} :catchall_0
+    invoke-interface {p0}, Ld8a;->b()V
 
     return-void
 
-    :catch_0
-    :try_start_3
-    new-instance p0, Ljava/lang/StringBuilder;
+    :pswitch_0
+    iget-object p0, p0, Li98;->b:Ld8a;
 
-    invoke-direct {p0, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-interface {p0}, Ld8a;->b()V
 
-    invoke-virtual {p0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    return-void
 
-    const-string p1, " has died prematurely"
+    nop
 
-    invoke-virtual {p0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
 
-    invoke-virtual {p0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+.method public final c(Loq4;)V
+    .locals 1
+
+    iget v0, p0, Li98;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    invoke-static {p0, p1}, Lsq4;->c(Ljava/util/concurrent/atomic/AtomicReference;Loq4;)Z
+
+    return-void
+
+    :pswitch_0
+    invoke-static {p0, p1}, Lsq4;->c(Ljava/util/concurrent/atomic/AtomicReference;Loq4;)Z
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final e()V
+    .locals 1
+
+    iget v0, p0, Li98;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    invoke-static {p0}, Lsq4;->a(Ljava/util/concurrent/atomic/AtomicReference;)Z
+
+    return-void
+
+    :pswitch_0
+    invoke-static {p0}, Lsq4;->a(Ljava/util/concurrent/atomic/AtomicReference;)Z
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final f()Z
+    .locals 1
+
+    iget v0, p0, Li98;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
 
     move-result-object p0
 
-    invoke-static {p0}, Lou0;->J(Ljava/lang/String;)V
-    :try_end_3
-    .catchall {:try_start_3 .. :try_end_3} :catchall_0
+    check-cast p0, Loq4;
 
-    invoke-static {v2}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {p0}, Lsq4;->b(Loq4;)Z
 
-    new-instance p0, Lz46;
+    move-result p0
 
-    const/16 p1, 0xb
+    return p0
 
-    invoke-direct {p0, p1, v2}, Lz46;-><init>(ILjava/lang/Object;)V
+    :pswitch_0
+    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
 
-    goto :goto_0
+    move-result-object p0
 
-    :goto_1
-    invoke-static {v2}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
+    check-cast p0, Loq4;
 
-    new-instance p1, Lz46;
+    invoke-static {p0}, Lsq4;->b(Loq4;)Z
 
-    const/16 p2, 0xb
+    move-result p0
 
-    invoke-direct {p1, p2, v2}, Lz46;-><init>(ILjava/lang/Object;)V
+    return p0
 
-    invoke-virtual {v2, p1}, Lo88;->q(Ljava/lang/Runnable;)V
+    nop
 
-    throw p0
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method
 
-.method public final onServiceDisconnected(Landroid/content/ComponentName;)V
+.method public final onError(Ljava/lang/Throwable;)V
     .locals 1
 
-    iget-object p0, p0, Li98;->b:Lj98;
+    iget v0, p0, Li98;->a:I
 
-    iget-object p0, p0, Lj98;->a:Lo88;
+    packed-switch v0, :pswitch_data_0
 
-    invoke-static {p0}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
+    iget-object p0, p0, Li98;->b:Ld8a;
 
-    new-instance p1, Lz46;
-
-    const/16 v0, 0xb
-
-    invoke-direct {p1, v0, p0}, Lz46;-><init>(ILjava/lang/Object;)V
-
-    invoke-virtual {p0, p1}, Lo88;->q(Ljava/lang/Runnable;)V
+    invoke-interface {p0, p1}, Ld8a;->onError(Ljava/lang/Throwable;)V
 
     return-void
+
+    :pswitch_0
+    iget-object p0, p0, Li98;->b:Ld8a;
+
+    invoke-interface {p0, p1}, Ld8a;->onError(Ljava/lang/Throwable;)V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final s(Ljava/lang/Object;)V
+    .locals 1
+
+    iget v0, p0, Li98;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    iget-object p0, p0, Li98;->b:Ld8a;
+
+    invoke-interface {p0, p1}, Ld8a;->s(Ljava/lang/Object;)V
+
+    return-void
+
+    :pswitch_0
+    iget-object p0, p0, Li98;->b:Ld8a;
+
+    invoke-interface {p0, p1}, Ld8a;->s(Ljava/lang/Object;)V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

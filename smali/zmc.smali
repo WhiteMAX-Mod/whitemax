@@ -1,65 +1,84 @@
 .class public final Lzmc;
-.super Ljava/lang/Object;
+.super Lure;
 .source "SourceFile"
+
+# interfaces
+.implements Lpc6;
 
 
 # instance fields
-.field public a:I
+.field public synthetic X:Ljava/lang/Object;
 
-.field public b:I
+.field public final synthetic Y:Lone/me/calls/ui/bottomsheet/exit/RecordExitBottomSheet;
 
-.field public c:I
 
-.field public d:I
+# direct methods
+.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/calls/ui/bottomsheet/exit/RecordExitBottomSheet;)V
+    .locals 0
 
-.field public e:I
+    iput-object p2, p0, Lzmc;->Y:Lone/me/calls/ui/bottomsheet/exit/RecordExitBottomSheet;
 
-.field public f:I
+    const/4 p2, 0x2
 
-.field public g:Z
+    invoke-direct {p0, p2, p1}, Lure;-><init>(ILkotlin/coroutines/Continuation;)V
 
-.field public h:Z
+    return-void
+.end method
 
 
 # virtual methods
-.method public final a(II)V
-    .locals 2
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    iput p1, p0, Lzmc;->c:I
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    iput p2, p0, Lzmc;->d:I
+    invoke-virtual {p0, p1, p2}, Lzmc;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    const/4 v0, 0x1
+    move-result-object p0
 
-    iput-boolean v0, p0, Lzmc;->h:Z
+    check-cast p0, Lzmc;
 
-    iget-boolean v0, p0, Lzmc;->g:Z
+    sget-object p1, Lylf;->a:Lylf;
 
-    const/high16 v1, -0x80000000
+    invoke-virtual {p0, p1}, Lzmc;->o(Ljava/lang/Object;)Ljava/lang/Object;
 
-    if-eqz v0, :cond_1
+    return-object p1
+.end method
 
-    if-eq p2, v1, :cond_0
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 1
 
-    iput p2, p0, Lzmc;->a:I
+    new-instance v0, Lzmc;
 
-    :cond_0
-    if-eq p1, v1, :cond_3
+    iget-object p0, p0, Lzmc;->Y:Lone/me/calls/ui/bottomsheet/exit/RecordExitBottomSheet;
 
-    iput p1, p0, Lzmc;->b:I
+    invoke-direct {v0, p2, p0}, Lzmc;-><init>(Lkotlin/coroutines/Continuation;Lone/me/calls/ui/bottomsheet/exit/RecordExitBottomSheet;)V
 
-    return-void
+    iput-object p1, v0, Lzmc;->X:Ljava/lang/Object;
 
-    :cond_1
-    if-eq p1, v1, :cond_2
+    return-object v0
+.end method
 
-    iput p1, p0, Lzmc;->a:I
+.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    :cond_2
-    if-eq p2, v1, :cond_3
+    invoke-static {p1}, Lqe5;->V(Ljava/lang/Object;)V
 
-    iput p2, p0, Lzmc;->b:I
+    iget-object p1, p0, Lzmc;->X:Ljava/lang/Object;
 
-    :cond_3
-    return-void
+    check-cast p1, Ljava/lang/CharSequence;
+
+    sget-object v0, Lone/me/calls/ui/bottomsheet/exit/RecordExitBottomSheet;->H0:[Lxi7;
+
+    iget-object p0, p0, Lzmc;->Y:Lone/me/calls/ui/bottomsheet/exit/RecordExitBottomSheet;
+
+    invoke-virtual {p0}, Lone/me/calls/ui/bottomsheet/exit/RecordExitBottomSheet;->Q0()Lsrd;
+
+    move-result-object p0
+
+    invoke-virtual {p0, p1}, Lsrd;->setDescription(Ljava/lang/CharSequence;)V
+
+    sget-object p0, Lylf;->a:Lylf;
+
+    return-object p0
 .end method

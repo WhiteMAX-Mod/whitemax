@@ -1,14 +1,19 @@
-.class public interface abstract Lkna;
+.class public abstract Lkna;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# virtual methods
-.method public abstract d()Ljava/lang/Object;
-.end method
+# static fields
+.field public static final a:I
 
-.method public abstract h()Z
-.end method
 
-.method public abstract j()Ljava/lang/Object;
+# direct methods
+.method static constructor <clinit>()V
+    .locals 1
+
+    sget v0, Lqbc;->oneme_snackbar_cancel_btn_title:I
+
+    sput v0, Lkna;->a:I
+
+    return-void
 .end method

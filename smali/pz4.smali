@@ -3,203 +3,205 @@
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/util/Set;
-.implements Ljava/io/Serializable;
-.implements Lqb7;
+.implements Landroid/graphics/SurfaceTexture$OnFrameAvailableListener;
+.implements Ljava/lang/Runnable;
 
 
 # static fields
-.field public static final a:Lpz4;
+.field public static final r0:[I
+
+.field public static final s0:[I
+
+
+# instance fields
+.field public X:Landroid/opengl/EGLContext;
+
+.field public Y:Landroid/opengl/EGLSurface;
+
+.field public Z:Landroid/graphics/SurfaceTexture;
+
+.field public final synthetic a:I
+
+.field public final b:Landroid/os/Handler;
+
+.field public final c:[I
+
+.field public o:Landroid/opengl/EGLDisplay;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method static synthetic constructor <clinit>()V
+    .locals 2
 
-    new-instance v0, Lpz4;
+    const/16 v0, 0x11
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    new-array v1, v0, [I
 
-    sput-object v0, Lpz4;->a:Lpz4;
+    fill-array-data v1, :array_0
+
+    sput-object v1, Lpz4;->r0:[I
+
+    new-array v0, v0, [I
+
+    fill-array-data v0, :array_1
+
+    sput-object v0, Lpz4;->s0:[I
 
     return-void
+
+    nop
+
+    :array_0
+    .array-data 4
+        0x3040
+        0x4
+        0x3024
+        0x8
+        0x3023
+        0x8
+        0x3022
+        0x8
+        0x3021
+        0x8
+        0x3025
+        0x0
+        0x3027
+        0x3038
+        0x3033
+        0x4
+        0x3038
+    .end array-data
+
+    :array_1
+    .array-data 4
+        0x3040
+        0x4
+        0x3024
+        0x8
+        0x3023
+        0x8
+        0x3022
+        0x8
+        0x3021
+        0x8
+        0x3025
+        0x0
+        0x3027
+        0x3038
+        0x3033
+        0x4
+        0x3038
+    .end array-data
+.end method
+
+.method public constructor <init>(Landroid/os/Handler;I)V
+    .locals 0
+
+    iput p2, p0, Lpz4;->a:I
+
+    packed-switch p2, :pswitch_data_0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lpz4;->b:Landroid/os/Handler;
+
+    const/4 p1, 0x1
+
+    new-array p1, p1, [I
+
+    iput-object p1, p0, Lpz4;->c:[I
+
+    return-void
+
+    :pswitch_0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lpz4;->b:Landroid/os/Handler;
+
+    const/4 p1, 0x1
+
+    new-array p1, p1, [I
+
+    iput-object p1, p0, Lpz4;->c:[I
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_0
+    .end packed-switch
 .end method
 
 
 # virtual methods
-.method public final bridge synthetic add(Ljava/lang/Object;)Z
+.method public final onFrameAvailable(Landroid/graphics/SurfaceTexture;)V
     .locals 0
 
-    new-instance p0, Ljava/lang/UnsupportedOperationException;
+    iget p1, p0, Lpz4;->a:I
 
-    const-string p1, "Operation is not supported for read-only collection"
+    packed-switch p1, :pswitch_data_0
 
-    invoke-direct {p0, p1}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+    iget-object p1, p0, Lpz4;->b:Landroid/os/Handler;
 
-    throw p0
+    invoke-virtual {p1, p0}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
+
+    return-void
+
+    :pswitch_0
+    iget-object p1, p0, Lpz4;->b:Landroid/os/Handler;
+
+    invoke-virtual {p1, p0}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method
 
-.method public final addAll(Ljava/util/Collection;)Z
-    .locals 0
-
-    new-instance p0, Ljava/lang/UnsupportedOperationException;
-
-    const-string p1, "Operation is not supported for read-only collection"
-
-    invoke-direct {p0, p1}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
-
-    throw p0
-.end method
-
-.method public final clear()V
+.method public final run()V
     .locals 1
 
-    new-instance p0, Ljava/lang/UnsupportedOperationException;
+    iget v0, p0, Lpz4;->a:I
 
-    const-string v0, "Operation is not supported for read-only collection"
+    packed-switch v0, :pswitch_data_0
 
-    invoke-direct {p0, v0}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
-
-    throw p0
-.end method
-
-.method public final bridge contains(Ljava/lang/Object;)Z
-    .locals 0
-
-    const/4 p0, 0x0
-
-    return p0
-.end method
-
-.method public final containsAll(Ljava/util/Collection;)Z
-    .locals 0
-
-    invoke-interface {p1}, Ljava/util/Collection;->isEmpty()Z
-
-    move-result p0
-
-    return p0
-.end method
-
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 0
-
-    instance-of p0, p1, Ljava/util/Set;
+    iget-object p0, p0, Lpz4;->Z:Landroid/graphics/SurfaceTexture;
 
     if-eqz p0, :cond_0
 
-    check-cast p1, Ljava/util/Set;
+    :try_start_0
+    invoke-virtual {p0}, Landroid/graphics/SurfaceTexture;->updateTexImage()V
+    :try_end_0
+    .catch Ljava/lang/RuntimeException; {:try_start_0 .. :try_end_0} :catch_0
 
-    invoke-interface {p1}, Ljava/util/Set;->isEmpty()Z
-
-    move-result p0
-
-    if-eqz p0, :cond_0
-
-    const/4 p0, 0x1
-
-    return p0
-
+    :catch_0
     :cond_0
-    const/4 p0, 0x0
+    return-void
 
-    return p0
-.end method
+    :pswitch_0
+    iget-object p0, p0, Lpz4;->Z:Landroid/graphics/SurfaceTexture;
 
-.method public final hashCode()I
-    .locals 0
+    if-eqz p0, :cond_1
 
-    const/4 p0, 0x0
+    :try_start_1
+    invoke-virtual {p0}, Landroid/graphics/SurfaceTexture;->updateTexImage()V
+    :try_end_1
+    .catch Ljava/lang/RuntimeException; {:try_start_1 .. :try_end_1} :catch_1
 
-    return p0
-.end method
+    :catch_1
+    :cond_1
+    return-void
 
-.method public final isEmpty()Z
-    .locals 0
+    nop
 
-    const/4 p0, 0x1
-
-    return p0
-.end method
-
-.method public final iterator()Ljava/util/Iterator;
-    .locals 0
-
-    sget-object p0, Lfz4;->a:Lfz4;
-
-    return-object p0
-.end method
-
-.method public final remove(Ljava/lang/Object;)Z
-    .locals 0
-
-    new-instance p0, Ljava/lang/UnsupportedOperationException;
-
-    const-string p1, "Operation is not supported for read-only collection"
-
-    invoke-direct {p0, p1}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
-
-    throw p0
-.end method
-
-.method public final removeAll(Ljava/util/Collection;)Z
-    .locals 0
-
-    new-instance p0, Ljava/lang/UnsupportedOperationException;
-
-    const-string p1, "Operation is not supported for read-only collection"
-
-    invoke-direct {p0, p1}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
-
-    throw p0
-.end method
-
-.method public final retainAll(Ljava/util/Collection;)Z
-    .locals 0
-
-    new-instance p0, Ljava/lang/UnsupportedOperationException;
-
-    const-string p1, "Operation is not supported for read-only collection"
-
-    invoke-direct {p0, p1}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
-
-    throw p0
-.end method
-
-.method public final bridge size()I
-    .locals 0
-
-    const/4 p0, 0x0
-
-    return p0
-.end method
-
-.method public final toArray()[Ljava/lang/Object;
-    .locals 0
-
-    .line 1
-    invoke-static {p0}, Lq46;->J(Ljava/util/Collection;)[Ljava/lang/Object;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public final toArray([Ljava/lang/Object;)[Ljava/lang/Object;
-    .locals 0
-
-    .line 2
-    invoke-static {p0, p1}, Lq46;->K(Ljava/util/Collection;[Ljava/lang/Object;)[Ljava/lang/Object;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 0
-
-    const-string p0, "[]"
-
-    return-object p0
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

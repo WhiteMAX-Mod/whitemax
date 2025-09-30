@@ -1,49 +1,78 @@
-.class public final Lve0;
-.super Lbu3;
+.class public final synthetic Lve0;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lzb6;
 
 
 # instance fields
-.field public synthetic X:Ljava/lang/Object;
+.field public final synthetic a:I
 
-.field public final synthetic Y:Lru/ok/tamtam/workmanager/BacklogWorker;
-
-.field public Z:I
-
-.field public o:Lkcc;
+.field public final synthetic b:Lru/ok/tamtam/workmanager/BacklogWorker;
 
 
 # direct methods
-.method public constructor <init>(Lru/ok/tamtam/workmanager/BacklogWorker;Lbu3;)V
+.method public synthetic constructor <init>(Lru/ok/tamtam/workmanager/BacklogWorker;I)V
     .locals 0
 
-    iput-object p1, p0, Lve0;->Y:Lru/ok/tamtam/workmanager/BacklogWorker;
+    iput p2, p0, Lve0;->a:I
 
-    invoke-direct {p0, p2}, Lbu3;-><init>(Lkotlin/coroutines/Continuation;)V
+    iput-object p1, p0, Lve0;->b:Lru/ok/tamtam/workmanager/BacklogWorker;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final invoke()Ljava/lang/Object;
     .locals 1
 
-    iput-object p1, p0, Lve0;->X:Ljava/lang/Object;
+    iget v0, p0, Lve0;->a:I
 
-    iget p1, p0, Lve0;->Z:I
+    iget-object p0, p0, Lve0;->b:Lru/ok/tamtam/workmanager/BacklogWorker;
 
-    const/high16 v0, -0x80000000
+    packed-switch v0, :pswitch_data_0
 
-    or-int/2addr p1, v0
+    invoke-virtual {p0}, Lru/ok/tamtam/workmanager/SdkCoroutineWorker;->getTamComponent()Lswe;
 
-    iput p1, p0, Lve0;->Z:I
+    move-result-object p0
 
-    iget-object p1, p0, Lve0;->Y:Lru/ok/tamtam/workmanager/BacklogWorker;
+    check-cast p0, Liad;
 
-    invoke-virtual {p1, p0}, Lru/ok/tamtam/workmanager/BacklogWorker;->c(Lbu3;)Ljava/lang/Object;
+    invoke-virtual {p0}, Lscout/Component;->getAccessor()Lz4;
+
+    move-result-object p0
+
+    const-class v0, Luvg;
+
+    invoke-virtual {p0, v0}, Lz4;->c(Ljava/lang/Class;)Ljava/lang/Object;
+
+    move-result-object p0
+
+    check-cast p0, Luvg;
+
+    return-object p0
+
+    :pswitch_0
+    invoke-virtual {p0}, Lru/ok/tamtam/workmanager/SdkCoroutineWorker;->getTamComponent()Lswe;
+
+    move-result-object p0
+
+    check-cast p0, Liad;
+
+    invoke-virtual {p0}, Liad;->s()Lxwe;
 
     move-result-object p0
 
     return-object p0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

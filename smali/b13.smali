@@ -1,102 +1,41 @@
 .class public final Lb13;
-.super Ljava/lang/Object;
+.super Lcb4;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:I
+# static fields
+.field public static final b:Lb13;
 
-.field public final b:Ljava/lang/reflect/Method;
+.field public static final c:Lxa4;
 
 
 # direct methods
-.method public constructor <init>(ILjava/lang/reflect/Method;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 6
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lb13;
 
-    iput p1, p0, Lb13;->a:I
+    invoke-direct {v0}, Lcb4;-><init>()V
 
-    iput-object p2, p0, Lb13;->b:Ljava/lang/reflect/Method;
+    sput-object v0, Lb13;->b:Lb13;
 
-    const/4 p0, 0x1
+    const/4 v1, 0x0
 
-    invoke-virtual {p2, p0}, Ljava/lang/reflect/AccessibleObject;->setAccessible(Z)V
+    new-array v2, v1, [Ljava/lang/String;
+
+    const/16 v5, 0xe
+
+    const/4 v4, 0x0
+
+    const-string v1, ":chats-search"
+
+    const/4 v3, 0x0
+
+    invoke-static/range {v0 .. v5}, Lcb4;->a(Lcb4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;II)Lxa4;
+
+    move-result-object v0
+
+    sput-object v0, Lb13;->c:Lxa4;
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
-
-    const/4 v0, 0x1
-
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    instance-of v1, p1, Lb13;
-
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
-    check-cast p1, Lb13;
-
-    iget v1, p0, Lb13;->a:I
-
-    iget v3, p1, Lb13;->a:I
-
-    if-ne v1, v3, :cond_2
-
-    iget-object p0, p0, Lb13;->b:Ljava/lang/reflect/Method;
-
-    invoke-virtual {p0}, Ljava/lang/reflect/Method;->getName()Ljava/lang/String;
-
-    move-result-object p0
-
-    iget-object p1, p1, Lb13;->b:Ljava/lang/reflect/Method;
-
-    invoke-virtual {p1}, Ljava/lang/reflect/Method;->getName()Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-virtual {p0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result p0
-
-    if-eqz p0, :cond_2
-
-    return v0
-
-    :cond_2
-    return v2
-.end method
-
-.method public final hashCode()I
-    .locals 1
-
-    iget v0, p0, Lb13;->a:I
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget-object p0, p0, Lb13;->b:Ljava/lang/reflect/Method;
-
-    invoke-virtual {p0}, Ljava/lang/reflect/Method;->getName()Ljava/lang/String;
-
-    move-result-object p0
-
-    invoke-virtual {p0}, Ljava/lang/String;->hashCode()I
-
-    move-result p0
-
-    add-int/2addr p0, v0
-
-    return p0
 .end method

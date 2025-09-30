@@ -1,356 +1,253 @@
-.class public abstract Lo35;
-.super Ljava/lang/Object;
+.class public final Lo35;
+.super Lhv8;
 .source "SourceFile"
-
-# interfaces
-.implements Ljava/lang/Runnable;
-.implements Ljava/lang/Comparable;
-.implements Ldm4;
-.implements Lkotlinx/coroutines/internal/ThreadSafeHeapNode;
 
 
 # instance fields
-.field private volatile _heap:Ljava/lang/Object;
+.field public final l:Landroid/widget/TextView;
 
-.field public a:J
+.field public final m:Lr25;
 
-.field public b:I
+.field public n:Z
 
 
 # direct methods
-.method public constructor <init>(J)V
-    .locals 0
+.method public constructor <init>(Landroid/widget/TextView;)V
+    .locals 1
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-wide p1, p0, Lo35;->a:J
+    iput-object p1, p0, Lo35;->l:Landroid/widget/TextView;
 
-    const/4 p1, -0x1
+    const/4 v0, 0x1
 
-    iput p1, p0, Lo35;->b:I
+    iput-boolean v0, p0, Lo35;->n:Z
+
+    new-instance v0, Lr25;
+
+    invoke-direct {v0, p1}, Lr25;-><init>(Landroid/widget/TextView;)V
+
+    iput-object v0, p0, Lo35;->m:Lr25;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final b(JLp35;Lq35;)I
-    .locals 8
+.method public final E()Z
+    .locals 0
 
-    monitor-enter p0
-
-    :try_start_0
-    iget-object v0, p0, Lo35;->_heap:Ljava/lang/Object;
-
-    sget-object v1, Ls35;->a:Lkotlinx/coroutines/internal/Symbol;
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    if-ne v0, v1, :cond_0
-
-    monitor-exit p0
-
-    const/4 p0, 0x2
+    iget-boolean p0, p0, Lo35;->n:Z
 
     return p0
+.end method
 
-    :cond_0
-    :try_start_1
-    monitor-enter p3
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+.method public final V(Z)V
+    .locals 1
 
-    :try_start_2
-    invoke-virtual {p3}, Lkotlinx/coroutines/internal/ThreadSafeHeap;->firstImpl()Lkotlinx/coroutines/internal/ThreadSafeHeapNode;
+    if-eqz p1, :cond_0
+
+    iget-object p1, p0, Lo35;->l:Landroid/widget/TextView;
+
+    invoke-virtual {p1}, Landroid/widget/TextView;->getTransformationMethod()Landroid/text/method/TransformationMethod;
 
     move-result-object v0
 
-    check-cast v0, Lo35;
+    invoke-virtual {p0, v0}, Lo35;->Z(Landroid/text/method/TransformationMethod;)Landroid/text/method/TransformationMethod;
 
-    sget-object v1, Lq35;->Z:Ljava/util/concurrent/atomic/AtomicIntegerFieldUpdater;
+    move-result-object p0
 
-    invoke-virtual {v1, p4}, Ljava/util/concurrent/atomic/AtomicIntegerFieldUpdater;->get(Ljava/lang/Object;)I
+    invoke-virtual {p1, p0}, Landroid/widget/TextView;->setTransformationMethod(Landroid/text/method/TransformationMethod;)V
 
-    move-result p4
-    :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_1
+    :cond_0
+    return-void
+.end method
+
+.method public final W(Z)V
+    .locals 1
+
+    iput-boolean p1, p0, Lo35;->n:Z
+
+    iget-object p1, p0, Lo35;->l:Landroid/widget/TextView;
+
+    invoke-virtual {p1}, Landroid/widget/TextView;->getTransformationMethod()Landroid/text/method/TransformationMethod;
+
+    move-result-object v0
+
+    invoke-virtual {p0, v0}, Lo35;->Z(Landroid/text/method/TransformationMethod;)Landroid/text/method/TransformationMethod;
+
+    move-result-object v0
+
+    invoke-virtual {p1, v0}, Landroid/widget/TextView;->setTransformationMethod(Landroid/text/method/TransformationMethod;)V
+
+    invoke-virtual {p1}, Landroid/widget/TextView;->getFilters()[Landroid/text/InputFilter;
+
+    move-result-object v0
+
+    invoke-virtual {p0, v0}, Lo35;->m([Landroid/text/InputFilter;)[Landroid/text/InputFilter;
+
+    move-result-object p0
+
+    invoke-virtual {p1, p0}, Landroid/widget/TextView;->setFilters([Landroid/text/InputFilter;)V
+
+    return-void
+.end method
+
+.method public final Z(Landroid/text/method/TransformationMethod;)Landroid/text/method/TransformationMethod;
+    .locals 0
+
+    iget-boolean p0, p0, Lo35;->n:Z
+
+    if-eqz p0, :cond_2
+
+    instance-of p0, p1, Lt35;
+
+    if-eqz p0, :cond_0
+
+    return-object p1
+
+    :cond_0
+    instance-of p0, p1, Landroid/text/method/PasswordTransformationMethod;
+
+    if-eqz p0, :cond_1
+
+    return-object p1
+
+    :cond_1
+    new-instance p0, Lt35;
+
+    invoke-direct {p0, p1}, Lt35;-><init>(Landroid/text/method/TransformationMethod;)V
+
+    return-object p0
+
+    :cond_2
+    instance-of p0, p1, Lt35;
+
+    if-eqz p0, :cond_3
+
+    check-cast p1, Lt35;
+
+    iget-object p0, p1, Lt35;->a:Landroid/text/method/TransformationMethod;
+
+    return-object p0
+
+    :cond_3
+    return-object p1
+.end method
+
+.method public final m([Landroid/text/InputFilter;)[Landroid/text/InputFilter;
+    .locals 6
+
+    iget-boolean v0, p0, Lo35;->n:Z
 
     const/4 v1, 0x0
 
     const/4 v2, 0x1
 
-    if-eqz p4, :cond_1
+    if-nez v0, :cond_5
 
-    move p4, v2
+    new-instance p0, Landroid/util/SparseArray;
+
+    invoke-direct {p0, v2}, Landroid/util/SparseArray;-><init>(I)V
+
+    move v0, v1
+
+    :goto_0
+    array-length v2, p1
+
+    if-ge v0, v2, :cond_1
+
+    aget-object v2, p1, v0
+
+    instance-of v3, v2, Lr25;
+
+    if-eqz v3, :cond_0
+
+    invoke-virtual {p0, v0, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    :cond_0
+    add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
     :cond_1
-    move p4, v1
+    invoke-virtual {p0}, Landroid/util/SparseArray;->size()I
 
-    :goto_0
-    if-eqz p4, :cond_2
+    move-result v0
 
-    :try_start_3
-    monitor-exit p3
-    :try_end_3
-    .catchall {:try_start_3 .. :try_end_3} :catchall_0
+    if-nez v0, :cond_2
 
-    monitor-exit p0
-
-    return v2
-
-    :catchall_0
-    move-exception p1
-
-    goto :goto_4
+    return-object p1
 
     :cond_2
-    const-wide/16 v2, 0x0
+    array-length v0, p1
 
-    if-nez v0, :cond_3
+    array-length v2, p1
 
-    :try_start_4
-    iput-wide p1, p3, Lp35;->b:J
+    invoke-virtual {p0}, Landroid/util/SparseArray;->size()I
 
-    goto :goto_2
+    move-result v3
 
-    :catchall_1
-    move-exception p1
+    sub-int/2addr v2, v3
 
-    goto :goto_3
+    new-array v2, v2, [Landroid/text/InputFilter;
+
+    move v3, v1
+
+    :goto_1
+    if-ge v1, v0, :cond_4
+
+    invoke-virtual {p0, v1}, Landroid/util/SparseArray;->indexOfKey(I)I
+
+    move-result v4
+
+    if-gez v4, :cond_3
+
+    aget-object v4, p1, v1
+
+    aput-object v4, v2, v3
+
+    add-int/lit8 v3, v3, 0x1
 
     :cond_3
-    iget-wide v4, v0, Lo35;->a:J
-
-    sub-long v6, v4, p1
-
-    cmp-long p4, v6, v2
-
-    if-ltz p4, :cond_4
+    add-int/lit8 v1, v1, 0x1
 
     goto :goto_1
 
     :cond_4
-    move-wide p1, v4
-
-    :goto_1
-    iget-wide v4, p3, Lp35;->b:J
-
-    sub-long v4, p1, v4
-
-    cmp-long p4, v4, v2
-
-    if-lez p4, :cond_5
-
-    iput-wide p1, p3, Lp35;->b:J
+    return-object v2
 
     :cond_5
+    array-length v0, p1
+
+    move v3, v1
+
     :goto_2
-    iget-wide p1, p0, Lo35;->a:J
+    iget-object v4, p0, Lo35;->m:Lr25;
 
-    iget-wide v4, p3, Lp35;->b:J
+    if-ge v3, v0, :cond_7
 
-    sub-long/2addr p1, v4
+    aget-object v5, p1, v3
 
-    cmp-long p1, p1, v2
+    if-ne v5, v4, :cond_6
 
-    if-gez p1, :cond_6
-
-    iput-wide v4, p0, Lo35;->a:J
+    return-object p1
 
     :cond_6
-    invoke-virtual {p3, p0}, Lkotlinx/coroutines/internal/ThreadSafeHeap;->addImpl(Lkotlinx/coroutines/internal/ThreadSafeHeapNode;)V
-    :try_end_4
-    .catchall {:try_start_4 .. :try_end_4} :catchall_1
+    add-int/lit8 v3, v3, 0x1
 
-    :try_start_5
-    monitor-exit p3
-    :try_end_5
-    .catchall {:try_start_5 .. :try_end_5} :catchall_0
+    goto :goto_2
 
-    monitor-exit p0
+    :cond_7
+    array-length p0, p1
 
-    return v1
+    add-int/2addr p0, v2
 
-    :goto_3
-    :try_start_6
-    monitor-exit p3
+    new-array p0, p0, [Landroid/text/InputFilter;
 
-    throw p1
-    :try_end_6
-    .catchall {:try_start_6 .. :try_end_6} :catchall_0
+    invoke-static {p1, v1, p0, v1, v0}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
-    :goto_4
-    monitor-exit p0
-
-    throw p1
-.end method
-
-.method public final compareTo(Ljava/lang/Object;)I
-    .locals 2
-
-    check-cast p1, Lo35;
-
-    iget-wide v0, p0, Lo35;->a:J
-
-    iget-wide p0, p1, Lo35;->a:J
-
-    sub-long/2addr v0, p0
-
-    const-wide/16 p0, 0x0
-
-    cmp-long p0, v0, p0
-
-    if-lez p0, :cond_0
-
-    const/4 p0, 0x1
-
-    return p0
-
-    :cond_0
-    if-gez p0, :cond_1
-
-    const/4 p0, -0x1
-
-    return p0
-
-    :cond_1
-    const/4 p0, 0x0
-
-    return p0
-.end method
-
-.method public final dispose()V
-    .locals 3
-
-    monitor-enter p0
-
-    :try_start_0
-    iget-object v0, p0, Lo35;->_heap:Ljava/lang/Object;
-
-    sget-object v1, Ls35;->a:Lkotlinx/coroutines/internal/Symbol;
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    if-ne v0, v1, :cond_0
-
-    monitor-exit p0
-
-    return-void
-
-    :cond_0
-    :try_start_1
-    instance-of v2, v0, Lp35;
-
-    if-eqz v2, :cond_1
-
-    check-cast v0, Lp35;
-
-    goto :goto_0
-
-    :catchall_0
-    move-exception v0
-
-    goto :goto_1
-
-    :cond_1
-    const/4 v0, 0x0
-
-    :goto_0
-    if-eqz v0, :cond_2
-
-    invoke-virtual {v0, p0}, Lkotlinx/coroutines/internal/ThreadSafeHeap;->remove(Lkotlinx/coroutines/internal/ThreadSafeHeapNode;)Z
-
-    :cond_2
-    iput-object v1, p0, Lo35;->_heap:Ljava/lang/Object;
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    monitor-exit p0
-
-    return-void
-
-    :goto_1
-    monitor-exit p0
-
-    throw v0
-.end method
-
-.method public final getHeap()Lkotlinx/coroutines/internal/ThreadSafeHeap;
-    .locals 1
-
-    iget-object p0, p0, Lo35;->_heap:Ljava/lang/Object;
-
-    instance-of v0, p0, Lkotlinx/coroutines/internal/ThreadSafeHeap;
-
-    if-eqz v0, :cond_0
-
-    check-cast p0, Lkotlinx/coroutines/internal/ThreadSafeHeap;
-
-    return-object p0
-
-    :cond_0
-    const/4 p0, 0x0
-
-    return-object p0
-.end method
-
-.method public final getIndex()I
-    .locals 0
-
-    iget p0, p0, Lo35;->b:I
-
-    return p0
-.end method
-
-.method public final setHeap(Lkotlinx/coroutines/internal/ThreadSafeHeap;)V
-    .locals 2
-
-    iget-object v0, p0, Lo35;->_heap:Ljava/lang/Object;
-
-    sget-object v1, Ls35;->a:Lkotlinx/coroutines/internal/Symbol;
-
-    if-eq v0, v1, :cond_0
-
-    iput-object p1, p0, Lo35;->_heap:Ljava/lang/Object;
-
-    return-void
-
-    :cond_0
-    new-instance p0, Ljava/lang/IllegalArgumentException;
-
-    const-string p1, "Failed requirement."
-
-    invoke-direct {p0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw p0
-.end method
-
-.method public final setIndex(I)V
-    .locals 0
-
-    iput p1, p0, Lo35;->b:I
-
-    return-void
-.end method
-
-.method public toString()Ljava/lang/String;
-    .locals 3
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "Delayed[nanos="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-wide v1, p0, Lo35;->a:J
-
-    const/16 p0, 0x5d
-
-    invoke-static {v0, v1, v2, p0}, Lp3a;->j(Ljava/lang/StringBuilder;JC)Ljava/lang/String;
-
-    move-result-object p0
+    aput-object v4, p0, v0
 
     return-object p0
 .end method

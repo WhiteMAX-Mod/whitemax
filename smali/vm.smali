@@ -1,22 +1,25 @@
-.class public final synthetic Lvm;
+.class public abstract Lvm;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lgc7;
-
-
-# instance fields
-.field public final synthetic a:Lwm;
-
 
 # direct methods
-.method public synthetic constructor <init>(Lwm;)V
+.method public static a(Landroid/os/PowerManager;)Z
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-virtual {p0}, Landroid/os/PowerManager;->isPowerSaveMode()Z
 
-    iput-object p1, p0, Lvm;->a:Lwm;
+    move-result p0
 
-    return-void
+    return p0
+.end method
+
+.method public static b(Ljava/util/Locale;)Ljava/lang/String;
+    .locals 0
+
+    invoke-virtual {p0}, Ljava/util/Locale;->toLanguageTag()Ljava/lang/String;
+
+    move-result-object p0
+
+    return-object p0
 .end method

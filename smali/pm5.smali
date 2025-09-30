@@ -2,141 +2,188 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ljava/io/Closeable;
+.implements Lhx6;
+
 
 # instance fields
-.field public final a:J
+.field public final synthetic a:I
+
+.field public final b:Ljava/lang/Object;
+
+.field public final c:Ljava/lang/Object;
 
 
 # direct methods
-.method public synthetic constructor <init>(J)V
-    .locals 0
+.method public constructor <init>(Ljava/io/File;)V
+    .locals 1
 
+    const/4 v0, 0x0
+
+    iput v0, p0, Lpm5;->a:I
+
+    .line 2
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-wide p1, p0, Lpm5;->a:J
+    .line 3
+    new-instance v0, Ljava/io/FileOutputStream;
+
+    invoke-direct {v0, p1}, Ljava/io/FileOutputStream;-><init>(Ljava/io/File;)V
+
+    iput-object v0, p0, Lpm5;->b:Ljava/lang/Object;
+
+    .line 4
+    :try_start_0
+    invoke-virtual {v0}, Ljava/io/FileOutputStream;->getChannel()Ljava/nio/channels/FileChannel;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Ljava/nio/channels/FileChannel;->lock()Ljava/nio/channels/FileLock;
+
+    move-result-object p1
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    if-nez p1, :cond_0
+
+    .line 5
+    invoke-virtual {v0}, Ljava/io/FileOutputStream;->close()V
+
+    .line 6
+    :cond_0
+    iput-object p1, p0, Lpm5;->c:Ljava/lang/Object;
+
+    return-void
+
+    :catchall_0
+    move-exception p1
+
+    .line 7
+    iget-object p0, p0, Lpm5;->b:Ljava/lang/Object;
+
+    check-cast p0, Ljava/io/FileOutputStream;
+
+    invoke-virtual {p0}, Ljava/io/FileOutputStream;->close()V
+
+    .line 8
+    throw p1
+.end method
+
+.method public synthetic constructor <init>(Ljava/lang/Object;ILjava/lang/Object;)V
+    .locals 0
+
+    .line 1
+    iput p2, p0, Lpm5;->a:I
+
+    iput-object p1, p0, Lpm5;->b:Ljava/lang/Object;
+
+    iput-object p3, p0, Lpm5;->c:Ljava/lang/Object;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
-.method public static a(FF)J
-    .locals 4
+.method private final m()V
+    .locals 0
 
-    invoke-static {p0}, Ljava/lang/Float;->floatToRawIntBits(F)I
-
-    move-result p0
-
-    int-to-long v0, p0
-
-    invoke-static {p1}, Ljava/lang/Float;->floatToRawIntBits(F)I
-
-    move-result p0
-
-    int-to-long p0, p0
-
-    const/16 v2, 0x20
-
-    shl-long/2addr v0, v2
-
-    const-wide v2, 0xffffffffL
-
-    and-long/2addr p0, v2
-
-    or-long/2addr p0, v0
-
-    return-wide p0
+    return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 2
+.method public final close()V
+    .locals 1
 
-    instance-of v0, p1, Lpm5;
+    iget v0, p0, Lpm5;->a:I
 
-    if-nez v0, :cond_0
+    packed-switch v0, :pswitch_data_0
+
+    iget-object p0, p0, Lpm5;->c:Ljava/lang/Object;
+
+    check-cast p0, Ljava/io/InputStream;
+
+    invoke-virtual {p0}, Ljava/io/InputStream;->close()V
+
+    :pswitch_0
+    return-void
+
+    :pswitch_1
+    iget-object v0, p0, Lpm5;->b:Ljava/lang/Object;
+
+    check-cast v0, Ljava/io/FileOutputStream;
+
+    :try_start_0
+    iget-object p0, p0, Lpm5;->c:Ljava/lang/Object;
+
+    check-cast p0, Ljava/nio/channels/FileLock;
+
+    if-eqz p0, :cond_0
+
+    invoke-virtual {p0}, Ljava/nio/channels/FileLock;->release()V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     goto :goto_0
 
+    :catchall_0
+    move-exception p0
+
+    goto :goto_1
+
     :cond_0
-    check-cast p1, Lpm5;
-
-    iget-wide v0, p1, Lpm5;->a:J
-
-    iget-wide p0, p0, Lpm5;->a:J
-
-    cmp-long p0, p0, v0
-
-    if-eqz p0, :cond_1
-
     :goto_0
-    const/4 p0, 0x0
+    invoke-virtual {v0}, Ljava/io/FileOutputStream;->close()V
 
-    return p0
+    return-void
 
-    :cond_1
-    const/4 p0, 0x1
+    :goto_1
+    invoke-virtual {v0}, Ljava/io/FileOutputStream;->close()V
 
-    return p0
+    throw p0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method
 
-.method public final hashCode()I
+.method public getContentLength()J
     .locals 2
 
-    iget-wide v0, p0, Lpm5;->a:J
+    iget-object p0, p0, Lpm5;->c:Ljava/lang/Object;
 
-    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
+    check-cast p0, [B
 
-    move-result p0
+    array-length p0, p0
 
-    return p0
+    int-to-long v0, p0
+
+    return-wide v0
 .end method
 
-.method public final toString()Ljava/lang/String;
-    .locals 6
+.method public getContentType()Ljava/lang/String;
+    .locals 0
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    iget-object p0, p0, Lpm5;->b:Ljava/lang/Object;
 
-    const-string v1, "("
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    const/16 v1, 0x20
-
-    iget-wide v2, p0, Lpm5;->a:J
-
-    shr-long v4, v2, v1
-
-    long-to-int p0, v4
-
-    invoke-static {p0}, Ljava/lang/Float;->intBitsToFloat(I)F
-
-    move-result p0
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
-
-    const-string p0, ", "
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-wide v4, 0xffffffffL
-
-    and-long v1, v2, v4
-
-    long-to-int p0, v1
-
-    invoke-static {p0}, Ljava/lang/Float;->intBitsToFloat(I)F
-
-    move-result p0
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
-
-    const/16 p0, 0x29
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
+    check-cast p0, Ljava/lang/String;
 
     return-object p0
+.end method
+
+.method public writeTo(Ljava/io/OutputStream;)V
+    .locals 0
+
+    iget-object p0, p0, Lpm5;->c:Ljava/lang/Object;
+
+    check-cast p0, [B
+
+    invoke-virtual {p1, p0}, Ljava/io/OutputStream;->write([B)V
+
+    return-void
 .end method

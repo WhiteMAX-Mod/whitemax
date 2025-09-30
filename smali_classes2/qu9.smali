@@ -2,139 +2,165 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lnu7;
-
 
 # instance fields
-.field public final a:Lkjc;
+.field public final a:J
 
-.field public final b:Llh;
+.field public final b:Ljava/lang/String;
 
-.field public final c:Lm09;
+.field public final c:Ljava/lang/Boolean;
 
 
 # direct methods
-.method public constructor <init>(Lru/ok/tamtam/android/db/room/OneMeRoomDatabase;)V
-    .locals 2
+.method static constructor <clinit>()V
+    .locals 0
+
+    return-void
+.end method
+
+.method public constructor <init>(JLjava/lang/String;Ljava/lang/Boolean;)V
+    .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lqu9;->a:Lkjc;
+    iput-wide p1, p0, Lqu9;->a:J
 
-    new-instance v0, Llh;
+    iput-object p3, p0, Lqu9;->b:Ljava/lang/String;
 
-    const/16 v1, 0xd
-
-    invoke-direct {v0, p1, v1}, Llh;-><init>(Lkjc;I)V
-
-    iput-object v0, p0, Lqu9;->b:Llh;
-
-    new-instance v0, Lm09;
-
-    const/16 v1, 0x10
-
-    invoke-direct {v0, p1, v1}, Lm09;-><init>(Lkjc;I)V
-
-    iput-object v0, p0, Lqu9;->c:Lm09;
+    iput-object p4, p0, Lqu9;->c:Ljava/lang/Boolean;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final g()V
-    .locals 2
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 7
 
-    new-instance v0, Lpu9;
+    const/4 v0, 0x1
 
-    const/4 v1, 0x0
+    if-ne p0, p1, :cond_0
 
-    invoke-direct {v0, p0, v1}, Lpu9;-><init>(Lqu9;Lkotlin/coroutines/Continuation;)V
+    return v0
 
-    invoke-static {v0}, Lzo3;->Z(Ll66;)Ljava/lang/Object;
+    :cond_0
+    instance-of v1, p1, Lqu9;
 
-    return-void
-.end method
+    const/4 v2, 0x0
 
-.method public final m(Ljava/util/List;Lbu3;)Ljava/lang/Object;
-    .locals 4
+    if-nez v1, :cond_1
 
-    const-string v0, "SELECT * FROM notifications_read_marks WHERE chat_id IN ("
+    return v2
 
-    invoke-static {v0}, Lzt1;->l(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    :cond_1
+    check-cast p1, Lqu9;
 
-    move-result-object v0
+    iget-wide v3, p0, Lqu9;->a:J
 
-    invoke-interface {p1}, Ljava/util/List;->size()I
+    iget-wide v5, p1, Lqu9;->a:J
+
+    cmp-long v1, v3, v5
+
+    if-eqz v1, :cond_2
+
+    return v2
+
+    :cond_2
+    iget-object v1, p0, Lqu9;->b:Ljava/lang/String;
+
+    iget-object v3, p1, Lqu9;->b:Ljava/lang/String;
+
+    invoke-static {v1, v3}, Lvyg;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v1
 
-    invoke-static {v0, v1}, Lkhg;->c(Ljava/lang/StringBuilder;I)V
+    if-nez v1, :cond_3
 
-    const-string v2, ")"
+    return v2
 
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    :cond_3
+    iget-object p0, p0, Lqu9;->c:Ljava/lang/Boolean;
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    iget-object p1, p1, Lqu9;->c:Ljava/lang/Boolean;
 
-    move-result-object v0
+    invoke-static {p0, p1}, Lvyg;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    invoke-static {v1, v0}, Lakc;->c(ILjava/lang/String;)Lakc;
+    move-result p0
 
-    move-result-object v0
+    if-nez p0, :cond_4
 
-    invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+    return v2
 
-    move-result-object p1
+    :cond_4
+    return v0
+.end method
 
-    const/4 v1, 0x1
+.method public final hashCode()I
+    .locals 3
 
-    :goto_0
-    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
+    iget-wide v0, p0, Lqu9;->a:J
 
-    move-result v2
+    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
 
-    if-eqz v2, :cond_1
+    move-result v0
 
-    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    const/16 v1, 0x1f
 
-    move-result-object v2
+    mul-int/2addr v0, v1
 
-    check-cast v2, Ljava/lang/Long;
+    iget-object v2, p0, Lqu9;->b:Ljava/lang/String;
 
-    if-nez v2, :cond_0
+    invoke-static {v0, v1, v2}, Lsq3;->d(IILjava/lang/String;)I
 
-    invoke-virtual {v0, v1}, Lakc;->Z(I)V
+    move-result v0
 
-    goto :goto_1
+    iget-object p0, p0, Lqu9;->c:Ljava/lang/Boolean;
 
-    :cond_0
-    invoke-virtual {v2}, Ljava/lang/Long;->longValue()J
+    if-nez p0, :cond_0
 
-    move-result-wide v2
-
-    invoke-virtual {v0, v1, v2, v3}, Lakc;->k(IJ)V
-
-    :goto_1
-    add-int/lit8 v1, v1, 0x1
+    const/4 p0, 0x0
 
     goto :goto_0
 
-    :cond_1
-    new-instance p1, Landroid/os/CancellationSignal;
+    :cond_0
+    invoke-virtual {p0}, Ljava/lang/Object;->hashCode()I
 
-    invoke-direct {p1}, Landroid/os/CancellationSignal;-><init>()V
+    move-result p0
 
-    new-instance v1, Lnh;
+    :goto_0
+    add-int/2addr v0, p0
 
-    const/16 v2, 0x13
+    return v0
+.end method
 
-    invoke-direct {v1, p0, v2, v0}, Lnh;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+.method public final toString()Ljava/lang/String;
+    .locals 5
 
-    iget-object p0, p0, Lqu9;->a:Lkjc;
+    const-string v0, "NeuroAvatarInfo(id="
 
-    invoke-static {p0, p1, v1, p2}, Lxja;->l(Lkjc;Landroid/os/CancellationSignal;Ljava/util/concurrent/Callable;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    const-string v1, ", url="
+
+    iget-wide v2, p0, Lqu9;->a:J
+
+    iget-object v4, p0, Lqu9;->b:Ljava/lang/String;
+
+    invoke-static {v0, v2, v3, v1, v4}, Lmhc;->i(Ljava/lang/String;JLjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    const-string v1, ", default="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object p0, p0, Lqu9;->c:Ljava/lang/Boolean;
+
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string p0, ")"
+
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p0
 

@@ -1,428 +1,160 @@
 .class public final Lj0;
-.super Ljava/lang/Object;
+.super Lki0;
 .source "SourceFile"
-
-# interfaces
-.implements Lyu3;
 
 
 # instance fields
-.field public final a:Ljava/util/ArrayList;
+.field public final synthetic a:Ljava/lang/String;
+
+.field public final synthetic b:Z
+
+.field public final synthetic c:Ll0;
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 2
+.method public constructor <init>(Ll0;Ljava/lang/String;Z)V
+    .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    new-instance v0, Ljava/util/ArrayList;
+    iput-object p1, p0, Lj0;->c:Ll0;
 
-    const/4 v1, 0x2
+    iput-object p2, p0, Lj0;->a:Ljava/lang/String;
 
-    invoke-direct {v0, v1}, Ljava/util/ArrayList;-><init>(I)V
-
-    iput-object v0, p0, Lj0;->a:Ljava/util/ArrayList;
+    iput-boolean p3, p0, Lj0;->b:Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final declared-synchronized a(Lyu3;)V
-    .locals 1
-
-    monitor-enter p0
-
-    :try_start_0
-    iget-object v0, p0, Lj0;->a:Ljava/util/ArrayList;
-
-    invoke-virtual {v0, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    monitor-exit p0
-
-    return-void
-
-    :catchall_0
-    move-exception p1
-
-    :try_start_1
-    monitor-exit p0
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    throw p1
-.end method
-
-.method public final declared-synchronized c(Ljava/lang/String;Ljava/lang/Object;Landroid/graphics/drawable/Animatable;)V
+.method public final b(Lh0;)V
     .locals 3
 
-    monitor-enter p0
-
-    :try_start_0
-    iget-object v0, p0, Lj0;->a:Ljava/util/ArrayList;
-
-    invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
+    invoke-virtual {p1}, Lh0;->h()Z
 
     move-result v0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    invoke-virtual {p1}, Lh0;->d()F
+
+    move-result v1
+
+    iget-object v2, p0, Lj0;->a:Ljava/lang/String;
+
+    iget-object p0, p0, Lj0;->c:Ll0;
+
+    invoke-virtual {p0, v2, p1}, Ll0;->h(Ljava/lang/String;Lh0;)Z
+
+    move-result v2
+
+    if-nez v2, :cond_0
+
+    const-string v0, "ignore_old_datasource @ onProgress"
 
     const/4 v1, 0x0
 
-    :goto_0
-    if-ge v1, v0, :cond_1
+    invoke-virtual {p0, v0, v1}, Ll0;->i(Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    :try_start_1
-    iget-object v2, p0, Lj0;->a:Ljava/util/ArrayList;
+    invoke-virtual {p1}, Lh0;->a()Z
 
-    invoke-virtual {v2, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Lyu3;
-
-    if-eqz v2, :cond_0
-
-    invoke-interface {v2, p1, p2, p3}, Lyu3;->c(Ljava/lang/String;Ljava/lang/Object;Landroid/graphics/drawable/Animatable;)V
-    :try_end_1
-    .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    goto :goto_1
-
-    :catchall_0
-    move-exception p1
-
-    goto :goto_2
-
-    :catch_0
-    :try_start_2
-    monitor-enter p0
-
-    monitor-exit p0
-    :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_0
+    return-void
 
     :cond_0
-    :goto_1
-    add-int/lit8 v1, v1, 0x1
+    if-nez v0, :cond_2
+
+    iget-object p0, p0, Ll0;->h:Lch6;
+
+    iget-object p1, p0, Lch6;->e:Lbg5;
+
+    const/4 v0, 0x3
+
+    invoke-virtual {p1, v0}, Lbg5;->c(I)Landroid/graphics/drawable/Drawable;
+
+    move-result-object v0
+
+    if-nez v0, :cond_1
 
     goto :goto_0
 
     :cond_1
-    monitor-exit p0
+    iget v0, p1, Lbg5;->B0:I
 
-    return-void
+    add-int/lit8 v0, v0, 0x1
 
-    :goto_2
-    :try_start_3
-    monitor-exit p0
-    :try_end_3
-    .catchall {:try_start_3 .. :try_end_3} :catchall_0
+    iput v0, p1, Lbg5;->B0:I
 
-    throw p1
-.end method
+    invoke-virtual {p0, v1}, Lch6;->l(F)V
 
-.method public final declared-synchronized d(Ljava/lang/String;Ljava/lang/Throwable;)V
-    .locals 3
+    invoke-virtual {p1}, Lbg5;->a()V
 
-    monitor-enter p0
-
-    :try_start_0
-    iget-object v0, p0, Lj0;->a:Ljava/util/ArrayList;
-
-    invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
-
-    move-result v0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    const/4 v1, 0x0
-
+    :cond_2
     :goto_0
-    if-ge v1, v0, :cond_1
-
-    :try_start_1
-    iget-object v2, p0, Lj0;->a:Ljava/util/ArrayList;
-
-    invoke-virtual {v2, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Lyu3;
-
-    if-eqz v2, :cond_0
-
-    invoke-interface {v2, p1, p2}, Lyu3;->d(Ljava/lang/String;Ljava/lang/Throwable;)V
-    :try_end_1
-    .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    goto :goto_1
-
-    :catchall_0
-    move-exception p1
-
-    goto :goto_2
-
-    :catch_0
-    :try_start_2
-    monitor-enter p0
-
-    monitor-exit p0
-    :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_0
-
-    :cond_0
-    :goto_1
-    add-int/lit8 v1, v1, 0x1
-
-    goto :goto_0
-
-    :cond_1
-    monitor-exit p0
-
-    return-void
-
-    :goto_2
-    :try_start_3
-    monitor-exit p0
-    :try_end_3
-    .catchall {:try_start_3 .. :try_end_3} :catchall_0
-
-    throw p1
-.end method
-
-.method public final declared-synchronized e(Ljava/lang/String;)V
-    .locals 3
-
-    monitor-enter p0
-
-    :try_start_0
-    iget-object v0, p0, Lj0;->a:Ljava/util/ArrayList;
-
-    invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
-
-    move-result v0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    const/4 v1, 0x0
-
-    :goto_0
-    if-ge v1, v0, :cond_1
-
-    :try_start_1
-    iget-object v2, p0, Lj0;->a:Ljava/util/ArrayList;
-
-    invoke-virtual {v2, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Lyu3;
-
-    if-eqz v2, :cond_0
-
-    invoke-interface {v2, p1}, Lyu3;->e(Ljava/lang/String;)V
-    :try_end_1
-    .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    goto :goto_1
-
-    :catchall_0
-    move-exception p1
-
-    goto :goto_2
-
-    :catch_0
-    :try_start_2
-    monitor-enter p0
-
-    monitor-exit p0
-    :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_0
-
-    :cond_0
-    :goto_1
-    add-int/lit8 v1, v1, 0x1
-
-    goto :goto_0
-
-    :cond_1
-    monitor-exit p0
-
-    return-void
-
-    :goto_2
-    :try_start_3
-    monitor-exit p0
-    :try_end_3
-    .catchall {:try_start_3 .. :try_end_3} :catchall_0
-
-    throw p1
-.end method
-
-.method public final declared-synchronized g(Ljava/lang/String;)V
-    .locals 3
-
-    monitor-enter p0
-
-    :try_start_0
-    iget-object v0, p0, Lj0;->a:Ljava/util/ArrayList;
-
-    invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
-
-    move-result v0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    const/4 v1, 0x0
-
-    :goto_0
-    if-ge v1, v0, :cond_1
-
-    :try_start_1
-    iget-object v2, p0, Lj0;->a:Ljava/util/ArrayList;
-
-    invoke-virtual {v2, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Lyu3;
-
-    if-eqz v2, :cond_0
-
-    invoke-interface {v2, p1}, Lyu3;->g(Ljava/lang/String;)V
-    :try_end_1
-    .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    goto :goto_1
-
-    :catchall_0
-    move-exception p1
-
-    goto :goto_2
-
-    :catch_0
-    :try_start_2
-    monitor-enter p0
-
-    monitor-exit p0
-    :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_0
-
-    :cond_0
-    :goto_1
-    add-int/lit8 v1, v1, 0x1
-
-    goto :goto_0
-
-    :cond_1
-    monitor-exit p0
-
-    return-void
-
-    :goto_2
-    :try_start_3
-    monitor-exit p0
-    :try_end_3
-    .catchall {:try_start_3 .. :try_end_3} :catchall_0
-
-    throw p1
-.end method
-
-.method public final j(Ljava/lang/String;Ljava/lang/Throwable;)V
-    .locals 3
-
-    iget-object v0, p0, Lj0;->a:Ljava/util/ArrayList;
-
-    invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
-
-    move-result v0
-
-    const/4 v1, 0x0
-
-    :goto_0
-    if-ge v1, v0, :cond_1
-
-    :try_start_0
-    iget-object v2, p0, Lj0;->a:Ljava/util/ArrayList;
-
-    invoke-virtual {v2, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Lyu3;
-
-    if-eqz v2, :cond_0
-
-    invoke-interface {v2, p1, p2}, Lyu3;->j(Ljava/lang/String;Ljava/lang/Throwable;)V
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
-
-    goto :goto_1
-
-    :catch_0
-    monitor-enter p0
-
-    monitor-exit p0
-
-    :cond_0
-    :goto_1
-    add-int/lit8 v1, v1, 0x1
-
-    goto :goto_0
-
-    :cond_1
     return-void
 .end method
 
-.method public final onIntermediateImageSet(Ljava/lang/String;Ljava/lang/Object;)V
+.method public final e(Lh0;)V
     .locals 3
 
-    iget-object v0, p0, Lj0;->a:Ljava/util/ArrayList;
+    invoke-virtual {p1}, Lh0;->c()Ljava/lang/Throwable;
 
-    invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
+    move-result-object v0
 
-    move-result v0
+    const/4 v1, 0x1
 
-    const/4 v1, 0x0
+    iget-object v2, p0, Lj0;->c:Ll0;
 
-    :goto_0
-    if-ge v1, v0, :cond_1
+    iget-object p0, p0, Lj0;->a:Ljava/lang/String;
 
-    :try_start_0
-    iget-object v2, p0, Lj0;->a:Ljava/util/ArrayList;
+    invoke-virtual {v2, p0, p1, v0, v1}, Ll0;->l(Ljava/lang/String;Lh0;Ljava/lang/Throwable;Z)V
 
-    invoke-virtual {v2, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+    return-void
+.end method
 
-    move-result-object v2
+.method public final f(Lh0;)V
+    .locals 8
 
-    check-cast v2, Lyu3;
+    invoke-virtual {p1}, Lh0;->h()Z
 
-    if-eqz v2, :cond_0
+    move-result v5
 
-    invoke-interface {v2, p1, p2}, Lyu3;->onIntermediateImageSet(Ljava/lang/String;Ljava/lang/Object;)V
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+    instance-of v7, p1, Lpvc;
 
-    goto :goto_1
+    invoke-virtual {p1}, Lh0;->d()F
 
-    :catch_0
-    monitor-enter p0
+    move-result v4
 
-    monitor-exit p0
+    invoke-virtual {p1}, Lh0;->e()Ljava/lang/Object;
+
+    move-result-object v3
+
+    iget-object v0, p0, Lj0;->c:Ll0;
+
+    if-eqz v3, :cond_0
+
+    iget-object v1, p0, Lj0;->a:Ljava/lang/String;
+
+    iget-boolean v6, p0, Lj0;->b:Z
+
+    move-object v2, p1
+
+    invoke-virtual/range {v0 .. v7}, Ll0;->m(Ljava/lang/String;Lh0;Ljava/lang/Object;FZZZ)V
+
+    return-void
 
     :cond_0
-    :goto_1
-    add-int/lit8 v1, v1, 0x1
+    move-object v2, p1
 
-    goto :goto_0
+    if-eqz v5, :cond_1
+
+    new-instance p1, Ljava/lang/NullPointerException;
+
+    invoke-direct {p1}, Ljava/lang/NullPointerException;-><init>()V
+
+    const/4 v1, 0x1
+
+    iget-object p0, p0, Lj0;->a:Ljava/lang/String;
+
+    invoke-virtual {v0, p0, v2, p1, v1}, Ll0;->l(Ljava/lang/String;Lh0;Ljava/lang/Throwable;Z)V
 
     :cond_1
     return-void

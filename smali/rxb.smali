@@ -1,94 +1,37 @@
-.class public abstract Lrxb;
-.super Ljava/lang/Object;
+.class public Lrxb;
+.super Lqxb;
+.source "SourceFile"
 
 
-# static fields
-.field public static account_auth_service_name:I = 0x7f130020
+# direct methods
+.method public constructor <init>(Ljava/lang/String;Ljava/lang/String;)V
+    .locals 6
 
-.field public static account_auth_type:I = 0x7f130021
+    const/4 v5, 0x1
 
-.field public static app_gost_host_1:I = 0x7f130063
+    sget-object v1, Lks1;->NO_RECEIVER:Ljava/lang/Object;
 
-.field public static app_gost_host_2:I = 0x7f130064
+    const-class v2, Lfy3;
 
-.field public static app_gost_host_3:I = 0x7f130065
+    move-object v0, p0
 
-.field public static app_gost_host_4:I = 0x7f130066
+    move-object v3, p1
 
-.field public static app_host:I = 0x7f130067
+    move-object v4, p2
 
-.field public static app_host_1:I = 0x7f130068
+    invoke-direct/range {v0 .. v5}, Ltxb;-><init>(Ljava/lang/Object;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
 
-.field public static app_host_2:I = 0x7f130069
+    return-void
+.end method
 
-.field public static app_host_3:I = 0x7f13006a
 
-.field public static app_host_prod:I = 0x7f13006b
+# virtual methods
+.method public get()Ljava/lang/Object;
+    .locals 0
 
-.field public static app_host_prod_port:I = 0x7f13006c
+    invoke-virtual {p0}, Lqxb;->getGetter()Lui7;
 
-.field public static app_package_name:I = 0x7f13006f
+    const/4 p0, 0x0
 
-.field public static app_scheme:I = 0x7f130070
-
-.field public static folder_path:I = 0x7f130529
-
-.field public static gcm_defaultSenderId:I = 0x7f130570
-
-.field public static google_api_key:I = 0x7f13057d
-
-.field public static google_app_id:I = 0x7f13057e
-
-.field public static google_crash_reporting_api_key:I = 0x7f13057f
-
-.field public static google_storage_bucket:I = 0x7f130580
-
-.field public static join_chat_cancel_button:I = 0x7f13059d
-
-.field public static join_chat_confirm_channel_button:I = 0x7f13059e
-
-.field public static join_chat_confirm_chat_button:I = 0x7f13059f
-
-.field public static join_chat_title_channel:I = 0x7f1305a1
-
-.field public static join_chat_title_chat:I = 0x7f1305a2
-
-.field public static link_call_join_path:I = 0x7f1305a4
-
-.field public static link_chat_join_path:I = 0x7f1305a5
-
-.field public static link_chat_path:I = 0x7f1305a6
-
-.field public static link_host_api:I = 0x7f1305ae
-
-.field public static link_private_channel_path:I = 0x7f1305b4
-
-.field public static link_private_contact_path:I = 0x7f1305b5
-
-.field public static link_startwebapp_path:I = 0x7f1305b8
-
-.field public static link_stickerset_path:I = 0x7f1305b9
-
-.field public static oneme_app_name:I = 0x7f130797
-
-.field public static oneme_contact_saved_snackbar_title:I = 0x7f1307f0
-
-.field public static project_id:I = 0x7f130c13
-
-.field public static snackbar_contact_removed:I = 0x7f130cae
-
-.field public static snackbar_folder_link_error_caption:I = 0x7f130caf
-
-.field public static snackbar_folder_link_error_title:I = 0x7f130cb0
-
-.field public static snackbar_link_info_error:I = 0x7f130cb1
-
-.field public static snackbar_self_contact_open:I = 0x7f130cb2
-
-.field public static tracer_app_token:I = 0x7f130ce5
-
-.field public static tracer_environment:I = 0x7f130ce6
-
-.field public static tracer_mapping_uuid:I = 0x7f130ce7
-
-.field public static web_scheme:I = 0x7f130e22
+    throw p0
+.end method

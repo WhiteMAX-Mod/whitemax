@@ -1,26 +1,19 @@
-.class public interface abstract Lfbg;
-.super Ljava/lang/Object;
+.class public final Lfbg;
+.super Lx7g;
 .source "SourceFile"
 
 
-# virtual methods
-.method public abstract a(Landroid/hardware/camera2/TotalCaptureResult;)V
-.end method
+# instance fields
+.field public final b:Lot1;
 
-.method public abstract b()F
-.end method
 
-.method public abstract c()F
-.end method
+# direct methods
+.method public constructor <init>(Lot1;)V
+    .locals 0
 
-.method public abstract e()Landroid/graphics/Rect;
-.end method
+    invoke-direct {p0}, Lx7g;-><init>()V
 
-.method public abstract f(Lbv1;)V
-.end method
+    iput-object p1, p0, Lfbg;->b:Lot1;
 
-.method public abstract h(FLiq1;)V
-.end method
-
-.method public abstract i()V
+    return-void
 .end method

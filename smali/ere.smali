@@ -1,78 +1,114 @@
-.class public final Lere;
-.super Lqde;
+.class public final synthetic Lere;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Ll66;
+.implements Lrs1;
+
+
+# instance fields
+.field public final synthetic a:I
+
+.field public final synthetic b:Ljava/util/concurrent/atomic/AtomicReference;
+
+.field public final synthetic c:Ljava/lang/String;
+
+
+# direct methods
+.method public synthetic constructor <init>(Ljava/util/concurrent/atomic/AtomicReference;Ljava/lang/String;I)V
+    .locals 0
+
+    iput p3, p0, Lere;->a:I
+
+    iput-object p1, p0, Lere;->b:Ljava/util/concurrent/atomic/AtomicReference;
+
+    iput-object p2, p0, Lere;->c:Ljava/lang/String;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final t(Lqs1;)Ljava/lang/String;
+    .locals 1
 
-    check-cast p1, Lox3;
+    iget v0, p0, Lere;->a:I
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    packed-switch v0, :pswitch_data_0
 
-    invoke-virtual {p0, p1, p2}, Lere;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    iget-object v0, p0, Lere;->b:Ljava/util/concurrent/atomic/AtomicReference;
 
-    move-result-object p0
+    invoke-virtual {v0, p1}, Ljava/util/concurrent/atomic/AtomicReference;->set(Ljava/lang/Object;)V
 
-    check-cast p0, Lere;
+    new-instance p1, Ljava/lang/StringBuilder;
 
-    sget-object p1, Le5f;->a:Le5f;
+    invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-virtual {p0, p1}, Lere;->o(Ljava/lang/Object;)Ljava/lang/Object;
+    iget-object p0, p0, Lere;->c:Ljava/lang/String;
 
-    return-object p1
-.end method
+    invoke-virtual {p1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 0
+    const-string p0, "-Surface"
 
-    new-instance p0, Lere;
+    invoke-virtual {p1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const/4 p1, 0x2
-
-    invoke-direct {p0, p1, p2}, Lqde;-><init>(ILkotlin/coroutines/Continuation;)V
-
-    return-object p0
-.end method
-
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 2
-
-    invoke-static {p1}, Lsgg;->Z(Ljava/lang/Object;)V
-
-    invoke-static {}, Ltzd;->s()Lkab;
+    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p0
 
-    iget-object p1, p0, Lkab;->b:Ljava/lang/Object;
+    return-object p0
 
-    check-cast p1, Ljava/util/Map;
+    :pswitch_0
+    iget-object v0, p0, Lere;->b:Ljava/util/concurrent/atomic/AtomicReference;
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    invoke-virtual {v0, p1}, Ljava/util/concurrent/atomic/AtomicReference;->set(Ljava/lang/Object;)V
 
-    const-string v1, "Threads count: "
+    new-instance p1, Ljava/lang/StringBuilder;
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    iget-object p0, p0, Lere;->c:Ljava/lang/String;
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {p1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object p1
+    const-string p0, "-status"
 
-    iget-object p0, p0, Lkab;->c:Ljava/lang/Object;
+    invoke-virtual {p1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    check-cast p0, Ljava/lang/Throwable;
+    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    const-string v0, "ThreadsDeveloperTools"
-
-    invoke-static {v0, p1, p0}, Lg47;->n(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    sget-object p0, Le5f;->a:Le5f;
+    move-result-object p0
 
     return-object p0
+
+    :pswitch_1
+    iget-object v0, p0, Lere;->b:Ljava/util/concurrent/atomic/AtomicReference;
+
+    invoke-virtual {v0, p1}, Ljava/util/concurrent/atomic/AtomicReference;->set(Ljava/lang/Object;)V
+
+    new-instance p1, Ljava/lang/StringBuilder;
+
+    invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
+
+    iget-object p0, p0, Lere;->c:Ljava/lang/String;
+
+    invoke-virtual {p1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string p0, "-cancellation"
+
+    invoke-virtual {p1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    return-object p0
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

@@ -1,53 +1,83 @@
 .class public final Lgf6;
-.super Lbu3;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lif6;
 
 
 # instance fields
-.field public X:Ljava/lang/String;
-
-.field public Y:Ljava/io/Serializable;
-
-.field public synthetic Z:Ljava/lang/Object;
-
-.field public o:Ljf6;
-
-.field public final synthetic o0:Ljf6;
-
-.field public p0:I
+.field public final a:I
 
 
 # direct methods
-.method public constructor <init>(Ljf6;Lbu3;)V
+.method public constructor <init>(I)V
     .locals 0
 
-    iput-object p1, p0, Lgf6;->o0:Ljf6;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, p2}, Lbu3;-><init>(Lkotlin/coroutines/Continuation;)V
+    iput p1, p0, Lgf6;->a:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 3
 
-    iput-object p1, p0, Lgf6;->Z:Ljava/lang/Object;
+    const/4 v0, 0x1
 
-    iget p1, p0, Lgf6;->p0:I
+    if-ne p0, p1, :cond_0
 
-    const/high16 v0, -0x80000000
+    return v0
 
-    or-int/2addr p1, v0
+    :cond_0
+    instance-of v1, p1, Lgf6;
 
-    iput p1, p0, Lgf6;->p0:I
+    const/4 v2, 0x0
 
-    iget-object p1, p0, Lgf6;->o0:Ljf6;
+    if-nez v1, :cond_1
 
-    const/4 v0, 0x0
+    return v2
 
-    invoke-static {p1, v0, p0}, Ljf6;->a(Ljf6;Ljava/lang/String;Lbu3;)Ljava/lang/Object;
+    :cond_1
+    check-cast p1, Lgf6;
+
+    iget p0, p0, Lgf6;->a:I
+
+    iget p1, p1, Lgf6;->a:I
+
+    if-eq p0, p1, :cond_2
+
+    return v2
+
+    :cond_2
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 0
+
+    iget p0, p0, Lgf6;->a:I
+
+    invoke-static {p0}, Ljava/lang/Integer;->hashCode(I)I
+
+    move-result p0
+
+    return p0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 2
+
+    const-string v0, "UpdateCameraLayoutParams(size="
+
+    const-string v1, ")"
+
+    iget p0, p0, Lgf6;->a:I
+
+    invoke-static {p0, v0, v1}, Lsg0;->e(ILjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
 

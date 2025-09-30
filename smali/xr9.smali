@@ -1,61 +1,43 @@
-.class public abstract Lxr9;
+.class public final Lxr9;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
+# instance fields
+.field public final a:I
+
+.field public final b:Z
+
+.field public final c:I
+
+.field public final d:I
+
+.field public final e:[I
+
+.field public final f:I
+
+.field public final g:F
+
+
 # direct methods
-.method public static a()Landroid/app/Notification$MediaStyle;
-    .locals 1
-
-    new-instance v0, Landroid/app/Notification$MediaStyle;
-
-    invoke-direct {v0}, Landroid/app/Notification$MediaStyle;-><init>()V
-
-    return-object v0
-.end method
-
-.method public static b(Landroid/app/Notification$MediaStyle;[ILandroid/support/v4/media/session/MediaSessionCompat$Token;)Landroid/app/Notification$MediaStyle;
+.method public constructor <init>(IZII[IIIIF)V
     .locals 0
 
-    if-eqz p1, :cond_0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-static {p0, p1}, Lxr9;->e(Landroid/app/Notification$MediaStyle;[I)V
+    iput p1, p0, Lxr9;->a:I
 
-    :cond_0
-    if-eqz p2, :cond_1
+    iput-boolean p2, p0, Lxr9;->b:Z
 
-    invoke-virtual {p2}, Landroid/support/v4/media/session/MediaSessionCompat$Token;->getToken()Ljava/lang/Object;
+    iput p3, p0, Lxr9;->c:I
 
-    move-result-object p1
+    iput p4, p0, Lxr9;->d:I
 
-    check-cast p1, Landroid/media/session/MediaSession$Token;
+    iput-object p5, p0, Lxr9;->e:[I
 
-    invoke-static {p0, p1}, Lxr9;->c(Landroid/app/Notification$MediaStyle;Landroid/media/session/MediaSession$Token;)V
+    iput p6, p0, Lxr9;->f:I
 
-    :cond_1
-    return-object p0
-.end method
-
-.method public static c(Landroid/app/Notification$MediaStyle;Landroid/media/session/MediaSession$Token;)V
-    .locals 0
-
-    invoke-virtual {p0, p1}, Landroid/app/Notification$MediaStyle;->setMediaSession(Landroid/media/session/MediaSession$Token;)Landroid/app/Notification$MediaStyle;
-
-    return-void
-.end method
-
-.method public static d(Landroid/app/Notification$Builder;Landroid/app/Notification$MediaStyle;)V
-    .locals 0
-
-    invoke-virtual {p0, p1}, Landroid/app/Notification$Builder;->setStyle(Landroid/app/Notification$Style;)Landroid/app/Notification$Builder;
-
-    return-void
-.end method
-
-.method public static varargs e(Landroid/app/Notification$MediaStyle;[I)V
-    .locals 0
-
-    invoke-virtual {p0, p1}, Landroid/app/Notification$MediaStyle;->setShowActionsInCompactView([I)Landroid/app/Notification$MediaStyle;
+    iput p9, p0, Lxr9;->g:F
 
     return-void
 .end method

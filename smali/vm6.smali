@@ -1,102 +1,123 @@
-.class public abstract Lvm6;
-.super Ljava/lang/Object;
+.class public final Lvm6;
+.super Lmq0;
 .source "SourceFile"
-
-# interfaces
-.implements Ljava/lang/Comparable;
 
 
 # instance fields
-.field public final X:J
+.field public final synthetic s0:Lmq0;
 
-.field public final Y:Lcr4;
-
-.field public final Z:Ljava/lang/String;
-
-.field public final a:Ljava/lang/String;
-
-.field public final b:Ltm6;
-
-.field public final c:J
-
-.field public final o:I
-
-.field public final o0:Ljava/lang/String;
-
-.field public final p0:J
-
-.field public final q0:J
-
-.field public final r0:Z
+.field public final synthetic t0:Lmq0;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;Ltm6;JIJLcr4;Ljava/lang/String;Ljava/lang/String;JJZ)V
-    .locals 0
+.method public constructor <init>(Lmq0;Lmq0;)V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/16 v0, 0xa
 
-    iput-object p1, p0, Lvm6;->a:Ljava/lang/String;
+    invoke-direct {p0, v0}, Lmq0;-><init>(I)V
 
-    iput-object p2, p0, Lvm6;->b:Ltm6;
+    iput-object p1, p0, Lvm6;->s0:Lmq0;
 
-    iput-wide p3, p0, Lvm6;->c:J
-
-    iput p5, p0, Lvm6;->o:I
-
-    iput-wide p6, p0, Lvm6;->X:J
-
-    iput-object p8, p0, Lvm6;->Y:Lcr4;
-
-    iput-object p9, p0, Lvm6;->Z:Ljava/lang/String;
-
-    iput-object p10, p0, Lvm6;->o0:Ljava/lang/String;
-
-    iput-wide p11, p0, Lvm6;->p0:J
-
-    iput-wide p13, p0, Lvm6;->q0:J
-
-    iput-boolean p15, p0, Lvm6;->r0:Z
+    iput-object p2, p0, Lvm6;->t0:Lmq0;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final compareTo(Ljava/lang/Object;)I
-    .locals 4
+.method public final B()Ljava/lang/String;
+    .locals 2
 
-    check-cast p1, Ljava/lang/Long;
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    invoke-virtual {p1}, Ljava/lang/Long;->longValue()J
+    const-string v1, "SWITCHING[L:"
 
-    move-result-wide v0
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-wide v2, p0, Lvm6;->X:J
+    iget-object v1, p0, Lvm6;->s0:Lmq0;
 
-    cmp-long p0, v2, v0
+    invoke-virtual {v1}, Lmq0;->B()Ljava/lang/String;
 
-    if-lez p0, :cond_0
+    move-result-object v1
 
-    const/4 p0, 0x1
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    return p0
+    const-string v1, ", R:"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object p0, p0, Lvm6;->t0:Lmq0;
+
+    invoke-virtual {p0}, Lmq0;->B()Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string p0, "]"
+
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public final C(Landroid/view/View;I)I
+    .locals 2
+
+    sget-object v0, Lh7g;->a:Ljava/util/WeakHashMap;
+
+    invoke-virtual {p1}, Landroid/view/View;->getLayoutDirection()I
+
+    move-result v0
+
+    const/4 v1, 0x1
+
+    if-ne v0, v1, :cond_0
+
+    iget-object p0, p0, Lvm6;->t0:Lmq0;
+
+    goto :goto_0
 
     :cond_0
-    invoke-virtual {p1}, Ljava/lang/Long;->longValue()J
+    iget-object p0, p0, Lvm6;->s0:Lmq0;
 
-    move-result-wide p0
+    :goto_0
+    invoke-virtual {p0, p1, p2}, Lmq0;->C(Landroid/view/View;I)I
 
-    cmp-long p0, v2, p0
-
-    if-gez p0, :cond_1
-
-    const/4 p0, -0x1
+    move-result p0
 
     return p0
+.end method
 
-    :cond_1
-    const/4 p0, 0x0
+.method public final y(Landroid/view/View;II)I
+    .locals 2
+
+    sget-object v0, Lh7g;->a:Ljava/util/WeakHashMap;
+
+    invoke-virtual {p1}, Landroid/view/View;->getLayoutDirection()I
+
+    move-result v0
+
+    const/4 v1, 0x1
+
+    if-ne v0, v1, :cond_0
+
+    iget-object p0, p0, Lvm6;->t0:Lmq0;
+
+    goto :goto_0
+
+    :cond_0
+    iget-object p0, p0, Lvm6;->s0:Lmq0;
+
+    :goto_0
+    invoke-virtual {p0, p1, p2, p3}, Lmq0;->y(Landroid/view/View;II)I
+
+    move-result p0
 
     return p0
 .end method

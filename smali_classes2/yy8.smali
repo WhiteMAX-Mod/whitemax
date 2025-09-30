@@ -3,125 +3,85 @@
 .source "SourceFile"
 
 # interfaces
-.implements Landroid/view/View$OnKeyListener;
+.implements Landroid/view/View$OnClickListener;
 
 
 # instance fields
 .field public final synthetic a:I
 
-.field public final synthetic b:Ljava/lang/Object;
+.field public final synthetic b:Lbz8;
+
+.field public final synthetic c:Lsy8;
 
 
 # direct methods
-.method public synthetic constructor <init>(ILjava/lang/Object;)V
-    .locals 0
+.method public synthetic constructor <init>(Lbz8;Ltb9;)V
+    .locals 1
 
-    iput p1, p0, Lyy8;->a:I
+    .line 1
+    const/4 v0, 0x1
 
-    iput-object p2, p0, Lyy8;->b:Ljava/lang/Object;
+    iput v0, p0, Lyy8;->a:I
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lyy8;->b:Lbz8;
+
+    iput-object p2, p0, Lyy8;->c:Lsy8;
+
+    return-void
+.end method
+
+.method public synthetic constructor <init>(Ltb9;Lbz8;)V
+    .locals 1
+
+    .line 2
+    const/4 v0, 0x0
+
+    iput v0, p0, Lyy8;->a:I
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lyy8;->c:Lsy8;
+
+    iput-object p2, p0, Lyy8;->b:Lbz8;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onKey(Landroid/view/View;ILandroid/view/KeyEvent;)Z
-    .locals 2
+.method public final onClick(Landroid/view/View;)V
+    .locals 3
 
     iget p1, p0, Lyy8;->a:I
 
-    const/4 v0, 0x1
+    iget-object v0, p0, Lyy8;->c:Lsy8;
 
-    const/4 v1, 0x0
-
-    iget-object p0, p0, Lyy8;->b:Ljava/lang/Object;
+    iget-object p0, p0, Lyy8;->b:Lbz8;
 
     packed-switch p1, :pswitch_data_0
 
-    check-cast p0, Lcca;
+    const/4 p1, 0x0
 
-    invoke-virtual {p3}, Landroid/view/KeyEvent;->getAction()I
+    invoke-virtual {p0, v0, p1}, Lbz8;->L(Lsy8;Ljava/lang/String;)V
 
-    move-result p1
-
-    if-nez p1, :cond_0
-
-    const/16 p1, 0x43
-
-    if-ne p2, p1, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    move v0, v1
-
-    :goto_0
-    iput-boolean v0, p0, Lcca;->o0:Z
-
-    return v1
+    return-void
 
     :pswitch_0
-    check-cast p0, Lone/me/sdk/messagewrite/MessageWriteWidget;
+    iget-wide v1, p0, Lbz8;->I0:J
 
-    sget-object p1, Lone/me/sdk/messagewrite/MessageWriteWidget;->C0:[Lbc7;
+    iget-object p0, p0, Lbz8;->H0:Landroid/view/ViewGroup;
 
-    iget-object p1, p0, Lone/me/sdk/messagewrite/MessageWriteWidget;->q0:Ljava/lang/Object;
+    check-cast v0, Ltb9;
 
-    invoke-interface {p1}, Lje7;->getValue()Ljava/lang/Object;
+    iget-object p1, v0, Ltb9;->a:Lone/me/messages/list/ui/MessagesListWidget;
 
-    move-result-object p1
+    sget-object v0, Lone/me/messages/list/ui/MessagesListWidget;->Z0:[Lxi7;
 
-    check-cast p1, Ljava/lang/Boolean;
+    invoke-virtual {p1, v1, v2, p0}, Lone/me/messages/list/ui/MessagesListWidget;->M0(JLandroid/view/View;)V
 
-    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
-
-    move-result p1
-
-    if-eqz p1, :cond_2
-
-    const/16 p1, 0x42
-
-    if-ne p2, p1, :cond_2
-
-    invoke-virtual {p3}, Landroid/view/KeyEvent;->getAction()I
-
-    move-result p1
-
-    if-nez p1, :cond_2
-
-    invoke-virtual {p0}, Lone/me/sdk/messagewrite/MessageWriteWidget;->t0()Lpu8;
-
-    move-result-object p1
-
-    invoke-virtual {p1}, Lpu8;->getText()Ljava/lang/CharSequence;
-
-    move-result-object p1
-
-    if-eqz p1, :cond_2
-
-    invoke-static {p1}, Lj8e;->J0(Ljava/lang/CharSequence;)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_1
-
-    goto :goto_1
-
-    :cond_1
-    invoke-virtual {p0}, Lone/me/sdk/messagewrite/MessageWriteWidget;->C0()V
-
-    goto :goto_2
-
-    :cond_2
-    :goto_1
-    move v0, v1
-
-    :goto_2
-    return v0
-
-    nop
+    return-void
 
     :pswitch_data_0
     .packed-switch 0x0

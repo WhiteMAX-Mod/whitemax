@@ -1,108 +1,14 @@
-.class public final Lf4c;
+.class public abstract Lf4c;
 .super Ljava/lang/Object;
-.source "SourceFile"
-
-# interfaces
-.implements Landroid/animation/Animator$AnimatorListener;
 
 
-# instance fields
-.field public final synthetic a:Z
+# static fields
+.field public static calls:I = 0x7f0802de
 
-.field public final synthetic b:Lh4c;
+.field public static chats:I = 0x7f0802e8
 
-.field public final synthetic c:Landroid/view/View;
+.field public static contacts:I = 0x7f080318
 
+.field public static profile:I = 0x7f0808f3
 
-# direct methods
-.method public constructor <init>(ZLh4c;Landroid/view/View;)V
-    .locals 0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-boolean p1, p0, Lf4c;->a:Z
-
-    iput-object p2, p0, Lf4c;->b:Lh4c;
-
-    iput-object p3, p0, Lf4c;->c:Landroid/view/View;
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final onAnimationCancel(Landroid/animation/Animator;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public final onAnimationEnd(Landroid/animation/Animator;)V
-    .locals 1
-
-    iget-boolean p1, p0, Lf4c;->a:Z
-
-    if-eqz p1, :cond_2
-
-    iget-object p1, p0, Lf4c;->b:Lh4c;
-
-    iget-object p1, p1, Lh4c;->a:Ls3c;
-
-    invoke-virtual {p1}, Ls3c;->invoke()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Ljava/lang/Boolean;
-
-    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
-
-    move-result p1
-
-    iget-object p0, p0, Lf4c;->c:Landroid/view/View;
-
-    if-eqz p1, :cond_1
-
-    instance-of p1, p0, Lr3c;
-
-    if-eqz p1, :cond_0
-
-    move-object p1, p0
-
-    check-cast p1, Lr3c;
-
-    goto :goto_0
-
-    :cond_0
-    const/4 p1, 0x0
-
-    :goto_0
-    if-eqz p1, :cond_2
-
-    invoke-virtual {p1}, Lr3c;->b()Z
-
-    move-result p1
-
-    const/4 v0, 0x1
-
-    if-ne p1, v0, :cond_2
-
-    :cond_1
-    sget-object p1, Lyi6;->Y:Lyi6;
-
-    invoke-static {p0, p1}, Ln1c;->s(Landroid/view/View;Laj6;)Z
-
-    :cond_2
-    return-void
-.end method
-
-.method public final onAnimationRepeat(Landroid/animation/Animator;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public final onAnimationStart(Landroid/animation/Animator;)V
-    .locals 0
-
-    return-void
-.end method
+.field public static settings:I = 0x7f080924

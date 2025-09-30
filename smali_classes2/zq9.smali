@@ -1,156 +1,110 @@
-.class public final Lzq9;
-.super Llje;
+.class public final synthetic Lzq9;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lc6;
 
 
 # instance fields
-.field public final X:Ljava/util/Set;
+.field public final synthetic a:I
 
-.field public final Y:Z
-
-.field public final o:Lz42;
+.field public final synthetic b:Lbr9;
 
 
 # direct methods
-.method public constructor <init>(Lz42;Ljava/util/Set;Z)V
-    .locals 1
+.method public synthetic constructor <init>(Lbr9;I)V
+    .locals 0
 
-    const/4 v0, 0x0
+    iput p2, p0, Lzq9;->a:I
 
-    invoke-direct {p0, v0}, Lhi0;-><init>(Z)V
+    iput-object p1, p0, Lzq9;->b:Lbr9;
 
-    iput-object p1, p0, Lzq9;->o:Lz42;
-
-    iput-object p2, p0, Lzq9;->X:Ljava/util/Set;
-
-    iput-boolean p3, p0, Lzq9;->Y:Z
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
-
-    const/4 v0, 0x1
-
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    instance-of v1, p1, Lzq9;
-
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
-    check-cast p1, Lzq9;
-
-    iget-object v1, p0, Lzq9;->o:Lz42;
-
-    iget-object v3, p1, Lzq9;->o:Lz42;
-
-    invoke-static {v1, v3}, Lxq7;->d(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_2
-
-    return v2
-
-    :cond_2
-    iget-object v1, p0, Lzq9;->X:Ljava/util/Set;
-
-    iget-object v3, p1, Lzq9;->X:Ljava/util/Set;
-
-    invoke-static {v1, v3}, Lxq7;->d(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_3
-
-    return v2
-
-    :cond_3
-    iget-boolean p0, p0, Lzq9;->Y:Z
-
-    iget-boolean p1, p1, Lzq9;->Y:Z
-
-    if-eq p0, p1, :cond_4
-
-    return v2
-
-    :cond_4
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 3
-
-    iget-object v0, p0, Lzq9;->o:Lz42;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
-
-    move-result v0
-
-    const/16 v1, 0x1f
-
-    mul-int/2addr v0, v1
-
-    iget-object v2, p0, Lzq9;->X:Ljava/util/Set;
-
-    invoke-static {v2, v0, v1}, Lm26;->e(Ljava/util/Set;II)I
-
-    move-result v0
-
-    iget-boolean p0, p0, Lzq9;->Y:Z
-
-    invoke-static {p0}, Ljava/lang/Boolean;->hashCode(Z)I
-
-    move-result p0
-
-    add-int/2addr p0, v0
-
-    return p0
-.end method
-
-.method public final toString()Ljava/lang/String;
+.method public final run()V
     .locals 2
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    iget v0, p0, Lzq9;->a:I
 
-    const-string v1, "Response(chat="
+    packed-switch v0, :pswitch_data_0
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    new-instance v0, Lej0;
 
-    iget-object v1, p0, Lzq9;->o:Lz42;
+    const/16 v1, 0x1c
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-direct {v0, v1}, Lej0;-><init>(I)V
 
-    const-string v1, ", messageIds="
+    iget-object p0, p0, Lzq9;->b:Lbr9;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {p0, v0}, Ly2;->n(Lsm3;)V
 
-    iget-object v1, p0, Lzq9;->X:Ljava/util/Set;
+    return-void
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    :pswitch_0
+    new-instance v0, Lyq9;
 
-    const-string v1, ", isTtl="
+    const/4 v1, 0x2
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-direct {v0, v1}, Lyq9;-><init>(I)V
 
-    const-string v1, ")"
+    iget-object p0, p0, Lzq9;->b:Lbr9;
 
-    iget-boolean p0, p0, Lzq9;->Y:Z
+    invoke-virtual {p0, v0}, Ly2;->n(Lsm3;)V
 
-    invoke-static {v0, p0, v1}, Lzt1;->j(Ljava/lang/StringBuilder;ZLjava/lang/String;)Ljava/lang/String;
+    return-void
 
-    move-result-object p0
+    :pswitch_1
+    new-instance v0, Lej0;
 
-    return-object p0
+    const/16 v1, 0x1d
+
+    invoke-direct {v0, v1}, Lej0;-><init>(I)V
+
+    iget-object p0, p0, Lzq9;->b:Lbr9;
+
+    invoke-virtual {p0, v0}, Ly2;->n(Lsm3;)V
+
+    return-void
+
+    :pswitch_2
+    new-instance v0, Lyq9;
+
+    const/4 v1, 0x3
+
+    invoke-direct {v0, v1}, Lyq9;-><init>(I)V
+
+    iget-object p0, p0, Lzq9;->b:Lbr9;
+
+    invoke-virtual {p0, v0}, Ly2;->n(Lsm3;)V
+
+    return-void
+
+    :pswitch_3
+    new-instance v0, Lyq9;
+
+    const/4 v1, 0x1
+
+    invoke-direct {v0, v1}, Lyq9;-><init>(I)V
+
+    iget-object p0, p0, Lzq9;->b:Lbr9;
+
+    invoke-virtual {p0, v0}, Ly2;->n(Lsm3;)V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

@@ -1,45 +1,85 @@
 .class public final Lt0;
-.super Ljava/lang/Object;
+.super Ljava/lang/Throwable;
 .source "SourceFile"
 
 
-# static fields
-.field public static final b:Lt0;
-
-
 # instance fields
-.field public final a:Ljava/lang/Throwable;
+.field public final synthetic a:I
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 4
+.method public synthetic constructor <init>()V
+    .locals 1
 
-    new-instance v0, Lt0;
+    .line 1
+    const/4 v0, 0x4
 
-    new-instance v1, Ls0;
+    iput v0, p0, Lt0;->a:I
 
-    const-string v2, "Failure occurred while trying to finish a future."
-
-    const/4 v3, 0x0
-
-    invoke-direct {v1, v2, v3}, Ls0;-><init>(Ljava/lang/String;I)V
-
-    invoke-direct {v0, v1}, Lt0;-><init>(Ljava/lang/Throwable;)V
-
-    sput-object v0, Lt0;->b:Lt0;
+    invoke-direct {p0}, Ljava/lang/Throwable;-><init>()V
 
     return-void
 .end method
 
-.method public constructor <init>(Ljava/lang/Throwable;)V
+.method public synthetic constructor <init>(Ljava/lang/String;I)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    .line 2
+    iput p2, p0, Lt0;->a:I
 
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    iput-object p1, p0, Lt0;->a:Ljava/lang/Throwable;
+    invoke-direct {p0, p1}, Ljava/lang/Throwable;-><init>(Ljava/lang/String;)V
 
     return-void
+.end method
+
+
+# virtual methods
+.method public declared-synchronized fillInStackTrace()Ljava/lang/Throwable;
+    .locals 1
+
+    iget v0, p0, Lt0;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    invoke-super {p0}, Ljava/lang/Throwable;->fillInStackTrace()Ljava/lang/Throwable;
+
+    move-result-object p0
+
+    return-object p0
+
+    :pswitch_0
+    monitor-enter p0
+
+    monitor-exit p0
+
+    return-object p0
+
+    :pswitch_1
+    monitor-enter p0
+
+    monitor-exit p0
+
+    return-object p0
+
+    :pswitch_2
+    monitor-enter p0
+
+    monitor-exit p0
+
+    return-object p0
+
+    :pswitch_3
+    monitor-enter p0
+
+    monitor-exit p0
+
+    return-object p0
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

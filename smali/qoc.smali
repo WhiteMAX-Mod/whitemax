@@ -1,136 +1,39 @@
 .class public final Lqoc;
-.super Lroc;
+.super Ljava/lang/Object;
 .source "SourceFile"
-
-# interfaces
-.implements Ljava/util/Iterator;
 
 
 # instance fields
-.field public a:Lpoc;
+.field public final a:Ljava/util/ArrayList;
 
-.field public b:Z
+.field public b:I
 
-.field public final synthetic c:Lsoc;
+.field public c:J
+
+.field public d:J
 
 
 # direct methods
-.method public constructor <init>(Lsoc;)V
-    .locals 0
+.method public constructor <init>()V
+    .locals 2
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lqoc;->c:Lsoc;
+    new-instance v0, Ljava/util/ArrayList;
 
-    const/4 p1, 0x1
+    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    iput-boolean p1, p0, Lqoc;->b:Z
+    iput-object v0, p0, Lqoc;->a:Ljava/util/ArrayList;
+
+    const/4 v0, 0x5
+
+    iput v0, p0, Lqoc;->b:I
+
+    const-wide/16 v0, 0x0
+
+    iput-wide v0, p0, Lqoc;->c:J
+
+    iput-wide v0, p0, Lqoc;->d:J
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final a(Lpoc;)V
-    .locals 1
-
-    iget-object v0, p0, Lqoc;->a:Lpoc;
-
-    if-ne p1, v0, :cond_1
-
-    iget-object p1, v0, Lpoc;->o:Lpoc;
-
-    iput-object p1, p0, Lqoc;->a:Lpoc;
-
-    if-nez p1, :cond_0
-
-    const/4 p1, 0x1
-
-    goto :goto_0
-
-    :cond_0
-    const/4 p1, 0x0
-
-    :goto_0
-    iput-boolean p1, p0, Lqoc;->b:Z
-
-    :cond_1
-    return-void
-.end method
-
-.method public final hasNext()Z
-    .locals 3
-
-    iget-boolean v0, p0, Lqoc;->b:Z
-
-    const/4 v1, 0x0
-
-    const/4 v2, 0x1
-
-    if-eqz v0, :cond_1
-
-    iget-object p0, p0, Lqoc;->c:Lsoc;
-
-    iget-object p0, p0, Lsoc;->a:Lpoc;
-
-    if-eqz p0, :cond_0
-
-    return v2
-
-    :cond_0
-    return v1
-
-    :cond_1
-    iget-object p0, p0, Lqoc;->a:Lpoc;
-
-    if-eqz p0, :cond_2
-
-    iget-object p0, p0, Lpoc;->c:Lpoc;
-
-    if-eqz p0, :cond_2
-
-    return v2
-
-    :cond_2
-    return v1
-.end method
-
-.method public final next()Ljava/lang/Object;
-    .locals 1
-
-    iget-boolean v0, p0, Lqoc;->b:Z
-
-    if-eqz v0, :cond_0
-
-    const/4 v0, 0x0
-
-    iput-boolean v0, p0, Lqoc;->b:Z
-
-    iget-object v0, p0, Lqoc;->c:Lsoc;
-
-    iget-object v0, v0, Lsoc;->a:Lpoc;
-
-    iput-object v0, p0, Lqoc;->a:Lpoc;
-
-    goto :goto_1
-
-    :cond_0
-    iget-object v0, p0, Lqoc;->a:Lpoc;
-
-    if-eqz v0, :cond_1
-
-    iget-object v0, v0, Lpoc;->c:Lpoc;
-
-    goto :goto_0
-
-    :cond_1
-    const/4 v0, 0x0
-
-    :goto_0
-    iput-object v0, p0, Lqoc;->a:Lpoc;
-
-    :goto_1
-    iget-object p0, p0, Lqoc;->a:Lpoc;
-
-    return-object p0
 .end method

@@ -1,97 +1,163 @@
-.class public final enum Luma;
-.super Ljava/lang/Enum;
+.class public abstract Luma;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # static fields
-.field public static final synthetic X:[Luma;
+.field public static final a:I
 
-.field public static final enum a:Luma;
+.field public static final b:I
 
-.field public static final enum b:Luma;
+.field public static final c:I
 
-.field public static final enum c:Luma;
+.field public static final d:I
 
-.field public static final enum o:Luma;
+.field public static final e:I
+
+.field public static final f:I
+
+.field public static final g:I
+
+.field public static final h:I
+
+.field public static final i:I
+
+.field public static final j:I
+
+.field public static final k:I
+
+.field public static final l:I
+
+.field public static final m:I
+
+.field public static final n:I
+
+.field public static final o:I
+
+.field public static final p:I
+
+.field public static final q:I
+
+.field public static final r:I
+
+.field public static final s:I
+
+.field public static final t:I
+
+.field public static final u:I
+
+.field public static final v:I
+
+.field public static final w:I
+
+.field public static final x:I
+
+.field public static final y:I
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 6
+    .locals 1
 
-    new-instance v0, Luma;
+    sget v0, Lk4c;->emoji_sprite_0:I
 
-    const-string v1, "Loading"
+    sput v0, Luma;->a:I
 
-    const/4 v2, 0x0
+    sget v0, Lk4c;->emoji_sprite_1:I
 
-    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    sput v0, Luma;->b:I
 
-    sput-object v0, Luma;->a:Luma;
+    sget v0, Lk4c;->emoji_sprite_10:I
 
-    new-instance v1, Luma;
+    sput v0, Luma;->c:I
 
-    const-string v2, "PartialSuccess"
+    sget v0, Lk4c;->emoji_sprite_11:I
 
-    const/4 v3, 0x1
+    sput v0, Luma;->d:I
 
-    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    sget v0, Lk4c;->emoji_sprite_12:I
 
-    sput-object v1, Luma;->b:Luma;
+    sput v0, Luma;->e:I
 
-    new-instance v2, Luma;
+    sget v0, Lk4c;->emoji_sprite_13:I
 
-    const-string v3, "Success"
+    sput v0, Luma;->f:I
 
-    const/4 v4, 0x2
+    sget v0, Lk4c;->emoji_sprite_14:I
 
-    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    sput v0, Luma;->g:I
 
-    sput-object v2, Luma;->c:Luma;
+    sget v0, Lk4c;->emoji_sprite_15:I
 
-    new-instance v3, Luma;
+    sput v0, Luma;->h:I
 
-    const-string v4, "Error"
+    sget v0, Lk4c;->emoji_sprite_16:I
 
-    const/4 v5, 0x3
+    sput v0, Luma;->i:I
 
-    invoke-direct {v3, v4, v5}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    sget v0, Lk4c;->emoji_sprite_17:I
 
-    sput-object v3, Luma;->o:Luma;
+    sput v0, Luma;->j:I
 
-    filled-new-array {v0, v1, v2, v3}, [Luma;
+    sget v0, Lk4c;->emoji_sprite_18:I
 
-    move-result-object v0
+    sput v0, Luma;->k:I
 
-    sput-object v0, Luma;->X:[Luma;
+    sget v0, Lk4c;->emoji_sprite_19:I
+
+    sput v0, Luma;->l:I
+
+    sget v0, Lk4c;->emoji_sprite_2:I
+
+    sput v0, Luma;->m:I
+
+    sget v0, Lk4c;->emoji_sprite_20:I
+
+    sput v0, Luma;->n:I
+
+    sget v0, Lk4c;->emoji_sprite_21:I
+
+    sput v0, Luma;->o:I
+
+    sget v0, Lk4c;->emoji_sprite_22:I
+
+    sput v0, Luma;->p:I
+
+    sget v0, Lk4c;->emoji_sprite_23:I
+
+    sput v0, Luma;->q:I
+
+    sget v0, Lk4c;->emoji_sprite_24:I
+
+    sput v0, Luma;->r:I
+
+    sget v0, Lk4c;->emoji_sprite_3:I
+
+    sput v0, Luma;->s:I
+
+    sget v0, Lk4c;->emoji_sprite_4:I
+
+    sput v0, Luma;->t:I
+
+    sget v0, Lk4c;->emoji_sprite_5:I
+
+    sput v0, Luma;->u:I
+
+    sget v0, Lk4c;->emoji_sprite_6:I
+
+    sput v0, Luma;->v:I
+
+    sget v0, Lk4c;->emoji_sprite_7:I
+
+    sput v0, Luma;->w:I
+
+    sget v0, Lk4c;->emoji_sprite_8:I
+
+    sput v0, Luma;->x:I
+
+    sget v0, Lk4c;->emoji_sprite_9:I
+
+    sput v0, Luma;->y:I
 
     return-void
-.end method
-
-.method public static valueOf(Ljava/lang/String;)Luma;
-    .locals 1
-
-    const-class v0, Luma;
-
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
-
-    move-result-object p0
-
-    check-cast p0, Luma;
-
-    return-object p0
-.end method
-
-.method public static values()[Luma;
-    .locals 1
-
-    sget-object v0, Luma;->X:[Luma;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, [Luma;
-
-    return-object v0
 .end method

@@ -1,35 +1,23 @@
 .class public final Lhj5;
-.super Lbu3;
+.super Ljx3;
 .source "SourceFile"
 
 
 # instance fields
-.field public X:Lzte;
+.field public final synthetic X:Lij5;
 
-.field public Y:Lz6f;
+.field public Y:I
 
-.field public Z:Ljava/nio/channels/AsynchronousFileChannel;
-
-.field public o:Ljj5;
-
-.field public o0:Ll66;
-
-.field public p0:I
-
-.field public synthetic q0:Ljava/lang/Object;
-
-.field public final synthetic r0:Ljj5;
-
-.field public s0:I
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Ljj5;Lbu3;)V
+.method public constructor <init>(Lij5;Ljx3;)V
     .locals 0
 
-    iput-object p1, p0, Lhj5;->r0:Ljj5;
+    iput-object p1, p0, Lhj5;->X:Lij5;
 
-    invoke-direct {p0, p2}, Lbu3;-><init>(Lkotlin/coroutines/Continuation;)V
+    invoke-direct {p0, p2}, Ljx3;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
@@ -37,31 +25,23 @@
 
 # virtual methods
 .method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 6
+    .locals 1
 
-    iput-object p1, p0, Lhj5;->q0:Ljava/lang/Object;
+    iput-object p1, p0, Lhj5;->o:Ljava/lang/Object;
 
-    iget p1, p0, Lhj5;->s0:I
+    iget p1, p0, Lhj5;->Y:I
 
     const/high16 v0, -0x80000000
 
     or-int/2addr p1, v0
 
-    iput p1, p0, Lhj5;->s0:I
+    iput p1, p0, Lhj5;->Y:I
 
-    const/4 v3, 0x0
+    iget-object p1, p0, Lhj5;->X:Lij5;
 
-    const/4 v4, 0x0
+    const/4 v0, 0x0
 
-    iget-object v0, p0, Lhj5;->r0:Ljj5;
-
-    const/4 v1, 0x0
-
-    const/4 v2, 0x0
-
-    move-object v5, p0
-
-    invoke-virtual/range {v0 .. v5}, Ljj5;->e(Lzte;Lz6f;Ljava/nio/channels/AsynchronousFileChannel;Ll66;Lbu3;)Ljava/lang/Object;
+    invoke-static {p1, v0, p0}, Lij5;->X0(Lij5;Ljava/util/List;Ljx3;)Ljava/lang/Object;
 
     move-result-object p0
 

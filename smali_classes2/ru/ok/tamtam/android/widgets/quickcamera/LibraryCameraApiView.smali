@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lhv1;
+.implements Lvx1;
 
 
 # instance fields
@@ -109,7 +109,7 @@
     return p0
 .end method
 
-.method public setCameraListener(Lcx1;)V
+.method public setCameraListener(Lqz1;)V
     .locals 0
 
     return-void
@@ -121,13 +121,13 @@
     return-void
 .end method
 
-.method public setPictureSize(Lrob;)V
+.method public setPictureSize(La1c;)V
     .locals 0
 
     return-void
 .end method
 
-.method public setVideoQuality(Lblf;)V
+.method public setVideoQuality(Lm4g;)V
     .locals 0
 
     return-void

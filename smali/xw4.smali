@@ -1,48 +1,44 @@
-.class public final Lxw4;
-.super Landroid/text/Editable$Factory;
+.class public interface abstract Lxw4;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # static fields
-.field public static final a:Ljava/lang/Object;
-
-.field public static volatile b:Lxw4;
-
-.field public static c:Ljava/lang/Class;
+.field public static final a:Luw4;
 
 
 # direct methods
 .method static constructor <clinit>()V
     .locals 1
 
-    new-instance v0, Ljava/lang/Object;
+    new-instance v0, Luw4;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    sput-object v0, Lxw4;->a:Ljava/lang/Object;
+    sput-object v0, Lxw4;->a:Luw4;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final newEditable(Ljava/lang/CharSequence;)Landroid/text/Editable;
-    .locals 1
+.method public abstract a(Lz96;Lv46;)Lsk6;
+.end method
 
-    sget-object v0, Lxw4;->c:Ljava/lang/Class;
+.method public abstract b(Lv46;)I
+.end method
 
-    if-eqz v0, :cond_0
+.method public abstract c(Landroid/os/Looper;Lmdb;)V
+.end method
 
-    new-instance p0, Lotd;
+.method public prepare()V
+    .locals 0
 
-    invoke-direct {p0, v0, p1}, Lotd;-><init>(Ljava/lang/Class;Ljava/lang/CharSequence;)V
+    return-void
+.end method
 
-    return-object p0
+.method public release()V
+    .locals 0
 
-    :cond_0
-    invoke-super {p0, p1}, Landroid/text/Editable$Factory;->newEditable(Ljava/lang/CharSequence;)Landroid/text/Editable;
-
-    move-result-object p0
-
-    return-object p0
+    return-void
 .end method

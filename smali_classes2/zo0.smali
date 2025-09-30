@@ -2,123 +2,96 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lbp0;
+
 
 # instance fields
-.field public final a:Lje7;
-
-.field public final b:Lwjd;
-
-.field public final c:Lkotlinx/coroutines/internal/ContextScope;
+.field public final a:Lnv3;
 
 
 # direct methods
-.method public constructor <init>(Lje7;Lje7;)V
-    .locals 2
+.method public constructor <init>(Lnv3;)V
+    .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lzo0;->a:Lje7;
-
-    const/4 v0, 0x0
-
-    const/4 v1, 0x7
-
-    invoke-static {v0, v0, v1}, Lxjd;->b(III)Lwjd;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lzo0;->b:Lwjd;
-
-    invoke-interface {p2}, Lje7;->getValue()Ljava/lang/Object;
-
-    move-result-object p2
-
-    check-cast p2, Lrie;
-
-    check-cast p2, Lo7a;
-
-    invoke-virtual {p2}, Lo7a;->a()Ljx3;
-
-    move-result-object p2
-
-    invoke-static {p2}, Lvk9;->a(Lhx3;)Lkotlinx/coroutines/internal/ContextScope;
-
-    move-result-object p2
-
-    iput-object p2, p0, Lzo0;->c:Lkotlinx/coroutines/internal/ContextScope;
-
-    invoke-interface {p1}, Lje7;->getValue()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lvu0;
-
-    invoke-virtual {p1, p0}, Lvu0;->d(Ljava/lang/Object;)V
+    iput-object p1, p0, Lzo0;->a:Lnv3;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onEvent(Len3;)V
-    .locals 2
-    .annotation runtime Li9e;
-    .end annotation
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 3
 
-    .line 2
-    new-instance v0, Lxo0;
+    const/4 v0, 0x1
 
-    const/4 v1, 0x0
+    if-ne p0, p1, :cond_0
 
-    invoke-direct {v0, p0, p1, v1}, Lxo0;-><init>(Lzo0;Len3;Lkotlin/coroutines/Continuation;)V
+    return v0
 
-    const/4 p1, 0x3
+    :cond_0
+    instance-of v1, p1, Lzo0;
 
-    iget-object p0, p0, Lzo0;->c:Lkotlinx/coroutines/internal/ContextScope;
+    const/4 v2, 0x0
 
-    invoke-static {p0, v1, v1, v0, p1}, Lzo3;->E(Lox3;Lhx3;Lrx3;Ll66;I)Ldwd;
+    if-nez v1, :cond_1
 
-    return-void
+    return v2
+
+    :cond_1
+    check-cast p1, Lzo0;
+
+    iget-object p0, p0, Lzo0;->a:Lnv3;
+
+    iget-object p1, p1, Lzo0;->a:Lnv3;
+
+    invoke-static {p0, p1}, Lvyg;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p0
+
+    if-nez p0, :cond_2
+
+    return v2
+
+    :cond_2
+    return v0
 .end method
 
-.method public final onEvent(Lhs3;)V
-    .locals 2
-    .annotation runtime Li9e;
-    .end annotation
+.method public final hashCode()I
+    .locals 0
 
-    .line 1
-    new-instance v0, Lwo0;
+    iget-object p0, p0, Lzo0;->a:Lnv3;
 
-    const/4 v1, 0x0
+    invoke-virtual {p0}, Ljava/lang/Object;->hashCode()I
 
-    invoke-direct {v0, p0, p1, v1}, Lwo0;-><init>(Lzo0;Lhs3;Lkotlin/coroutines/Continuation;)V
+    move-result p0
 
-    const/4 p1, 0x3
-
-    iget-object p0, p0, Lzo0;->c:Lkotlinx/coroutines/internal/ContextScope;
-
-    invoke-static {p0, v1, v1, v0, p1}, Lzo3;->E(Lox3;Lhx3;Lrx3;Ll66;I)Ldwd;
-
-    return-void
+    return p0
 .end method
 
-.method public final onEvent(Lji0;)V
+.method public final toString()Ljava/lang/String;
     .locals 2
-    .annotation runtime Li9e;
-    .end annotation
 
-    .line 3
-    new-instance v0, Lyo0;
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    const/4 v1, 0x0
+    const-string v1, "ContactsUpdate(event="
 
-    invoke-direct {v0, p0, p1, v1}, Lyo0;-><init>(Lzo0;Lji0;Lkotlin/coroutines/Continuation;)V
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    const/4 p1, 0x3
+    iget-object p0, p0, Lzo0;->a:Lnv3;
 
-    iget-object p0, p0, Lzo0;->c:Lkotlinx/coroutines/internal/ContextScope;
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    invoke-static {p0, v1, v1, v0, p1}, Lzo3;->E(Lox3;Lhx3;Lrx3;Ll66;I)Ldwd;
+    const-string p0, ")"
 
-    return-void
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    return-object p0
 .end method

@@ -1,20 +1,17 @@
-.class public final Ls4e;
-.super Lsod;
+.class public interface abstract Ls4e;
+.super Ljava/lang/Object;
 .source "SourceFile"
-
-# interfaces
-.implements Lfzc;
 
 
 # virtual methods
-.method public final b(Lx4e;)V
-    .locals 0
-
-    return-void
+.method public abstract B()Z
 .end method
 
-.method public final x(Lol7;)V
-    .locals 0
+.method public abstract I(I)V
+.end method
 
-    return-void
+.method public abstract K()V
+.end method
+
+.method public abstract k()V
 .end method

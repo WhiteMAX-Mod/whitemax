@@ -1,103 +1,86 @@
 .class public final Lmw7;
-.super Lqde;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Ll66;
+.implements Lm5f;
 
 
 # instance fields
-.field public synthetic X:Ljava/lang/Object;
+.field public final a:Ljava/util/concurrent/Executor;
 
-.field public final synthetic Y:Lone/me/android/MainActivity;
+.field public final b:Lmgb;
+
+.field public final c:Landroid/content/ContentResolver;
 
 
 # direct methods
-.method public constructor <init>(Lone/me/android/MainActivity;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(Ljava/util/concurrent/Executor;Lmgb;Landroid/content/ContentResolver;)V
     .locals 0
 
-    iput-object p1, p0, Lmw7;->Y:Lone/me/android/MainActivity;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 p1, 0x2
+    iput-object p1, p0, Lmw7;->a:Ljava/util/concurrent/Executor;
 
-    invoke-direct {p0, p1, p2}, Lqde;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-object p2, p0, Lmw7;->b:Lmgb;
+
+    iput-object p3, p0, Lmw7;->c:Landroid/content/ContentResolver;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+.method public final a(Ldi0;Lejb;)V
+    .locals 7
+
+    move-object v0, p2
+
+    check-cast v0, Lmj0;
+
+    iget-object v4, v0, Lmj0;->c:Lhjb;
+
+    iget-object v6, v0, Lmj0;->a:Li27;
+
+    const-string v1, "local"
+
+    const-string v2, "exif"
+
+    invoke-virtual {v0, v1, v2}, Lmj0;->h(Ljava/lang/String;Ljava/lang/String;)V
+
+    new-instance v1, Llw7;
+
+    move-object v2, p0
+
+    move-object v3, p1
+
+    move-object v5, p2
+
+    invoke-direct/range {v1 .. v6}, Llw7;-><init>(Lmw7;Ldi0;Lhjb;Lejb;Li27;)V
+
+    new-instance p0, Lz94;
+
+    const/4 p1, 0x2
+
+    invoke-direct {p0, p1, v1}, Lz94;-><init>(ILjava/lang/Object;)V
+
+    invoke-virtual {v0, p0}, Lmj0;->a(Lnj0;)V
+
+    iget-object p0, v2, Lmw7;->a:Ljava/util/concurrent/Executor;
+
+    invoke-interface {p0, v1}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
+
+    return-void
+.end method
+
+.method public final b(Lztc;)Z
     .locals 0
 
-    check-cast p1, Lfj7;
+    const/16 p0, 0x200
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    invoke-static {p0, p0, p1}, Lb0b;->s(IILztc;)Z
 
-    invoke-virtual {p0, p1, p2}, Lmw7;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    move-result p0
 
-    move-result-object p0
-
-    check-cast p0, Lmw7;
-
-    sget-object p1, Le5f;->a:Le5f;
-
-    invoke-virtual {p0, p1}, Lmw7;->o(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p1
-.end method
-
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 1
-
-    new-instance v0, Lmw7;
-
-    iget-object p0, p0, Lmw7;->Y:Lone/me/android/MainActivity;
-
-    invoke-direct {v0, p0, p2}, Lmw7;-><init>(Lone/me/android/MainActivity;Lkotlin/coroutines/Continuation;)V
-
-    iput-object p1, v0, Lmw7;->X:Ljava/lang/Object;
-
-    return-object v0
-.end method
-
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 2
-
-    invoke-static {p1}, Lsgg;->Z(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Lmw7;->X:Ljava/lang/Object;
-
-    check-cast p1, Lfj7;
-
-    sget v0, Lone/me/android/deeplink/LinkInterceptorActivity;->G0:I
-
-    new-instance v0, Landroid/content/Intent;
-
-    const-class v1, Lone/me/android/deeplink/LinkInterceptorActivity;
-
-    iget-object p0, p0, Lmw7;->Y:Lone/me/android/MainActivity;
-
-    invoke-direct {v0, p0, v1}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
-
-    const-string v1, "link:result"
-
-    invoke-virtual {v0, v1, p1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Landroid/os/Parcelable;)Landroid/content/Intent;
-
-    invoke-virtual {p0, v0}, Landroid/app/Activity;->startActivity(Landroid/content/Intent;)V
-
-    iget-object p1, p0, Lone/me/android/MainActivity;->W0:Ldwd;
-
-    const/4 v0, 0x0
-
-    if-eqz p1, :cond_0
-
-    invoke-virtual {p1, v0}, Lx87;->cancel(Ljava/util/concurrent/CancellationException;)V
-
-    :cond_0
-    iput-object v0, p0, Lone/me/android/MainActivity;->W0:Ldwd;
-
-    sget-object p0, Le5f;->a:Le5f;
-
-    return-object p0
+    return p0
 .end method

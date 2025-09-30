@@ -12,7 +12,7 @@
 
 .annotation runtime Lkotlin/Metadata;
     d1 = {
-        "\u0000J\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0004\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0010\u0007\n\u0002\u0008\u0003\n\u0002\u0018\u0002\n\u0002\u0008\u0003\n\u0002\u0010\u000e\n\u0002\u0008\u0007\n\u0002\u0010!\n\u0002\u0008\t\u0008\u0001\u0018\u00002\u00020\u0001B\u0007\u00a2\u0006\u0004\u0008\u0002\u0010\u0003B\u0011\u0008\u0016\u0012\u0006\u0010\u0004\u001a\u00020\u0001\u00a2\u0006\u0004\u0008\u0002\u0010\u0005J\u0017\u0010\t\u001a\u00020\u00082\u0006\u0010\u0007\u001a\u00020\u0006H\u0016\u00a2\u0006\u0004\u0008\t\u0010\nJ\u0017\u0010\u000c\u001a\u00020\u00082\u0006\u0010\u0007\u001a\u00020\u000bH\u0016\u00a2\u0006\u0004\u0008\u000c\u0010\rJ\u0017\u0010\u000f\u001a\u00020\u00082\u0006\u0010\u0007\u001a\u00020\u000eH\u0016\u00a2\u0006\u0004\u0008\u000f\u0010\u0010J\u0017\u0010\u0013\u001a\u00020\u00082\u0006\u0010\u0012\u001a\u00020\u0011H\u0016\u00a2\u0006\u0004\u0008\u0013\u0010\u0014J\u0017\u0010\u0017\u001a\u00020\u00082\u0006\u0010\u0016\u001a\u00020\u0015H\u0016\u00a2\u0006\u0004\u0008\u0017\u0010\u0018J\u0019\u0010\u001b\u001a\u0004\u0018\u00010\u000b2\u0006\u0010\u001a\u001a\u00020\u0019H\u0016\u00a2\u0006\u0004\u0008\u001b\u0010\u001cJ\u0019\u0010\u001d\u001a\u0004\u0018\u00010\u00062\u0006\u0010\u001a\u001a\u00020\u0019H\u0016\u00a2\u0006\u0004\u0008\u001d\u0010\u001eJ\u0019\u0010\u001f\u001a\u0004\u0018\u00010\u000e2\u0006\u0010\u001a\u001a\u00020\u0019H\u0016\u00a2\u0006\u0004\u0008\u001f\u0010 R \u0010\"\u001a\u0008\u0012\u0004\u0012\u00020\u00060!8\u0016X\u0096\u0004\u00a2\u0006\u000c\n\u0004\u0008\"\u0010#\u001a\u0004\u0008$\u0010%R \u0010&\u001a\u0008\u0012\u0004\u0012\u00020\u000b0!8\u0016X\u0096\u0004\u00a2\u0006\u000c\n\u0004\u0008&\u0010#\u001a\u0004\u0008\'\u0010%R \u0010(\u001a\u0008\u0012\u0004\u0012\u00020\u000e0!8\u0016X\u0096\u0004\u00a2\u0006\u000c\n\u0004\u0008(\u0010#\u001a\u0004\u0008)\u0010%\u00a8\u0006*"
+        "\u0000R\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0004\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0010\u0007\n\u0002\u0008\u0003\n\u0002\u0018\u0002\n\u0002\u0008\u0003\n\u0002\u0010\u000e\n\u0002\u0008\u0007\n\u0002\u0018\u0002\n\u0002\u0008\u0006\n\u0002\u0010!\n\u0002\u0008\u0005\u0008\u0001\u0018\u00002\u00020\u0001B\u0007\u00a2\u0006\u0004\u0008\u0002\u0010\u0003B\u0011\u0008\u0016\u0012\u0006\u0010\u0004\u001a\u00020\u0001\u00a2\u0006\u0004\u0008\u0002\u0010\u0005J\u0017\u0010\t\u001a\u00020\u00082\u0006\u0010\u0007\u001a\u00020\u0006H\u0016\u00a2\u0006\u0004\u0008\t\u0010\nJ\u0017\u0010\u000c\u001a\u00020\u00082\u0006\u0010\u0007\u001a\u00020\u000bH\u0016\u00a2\u0006\u0004\u0008\u000c\u0010\rJ\u0017\u0010\u000f\u001a\u00020\u00082\u0006\u0010\u0007\u001a\u00020\u000eH\u0016\u00a2\u0006\u0004\u0008\u000f\u0010\u0010J\u0017\u0010\u0013\u001a\u00020\u00082\u0006\u0010\u0012\u001a\u00020\u0011H\u0016\u00a2\u0006\u0004\u0008\u0013\u0010\u0014J\u0017\u0010\u0017\u001a\u00020\u00082\u0006\u0010\u0016\u001a\u00020\u0015H\u0016\u00a2\u0006\u0004\u0008\u0017\u0010\u0018J\u0019\u0010\u001b\u001a\u0004\u0018\u00010\u000b2\u0006\u0010\u001a\u001a\u00020\u0019H\u0016\u00a2\u0006\u0004\u0008\u001b\u0010\u001cJ\u0019\u0010\u001d\u001a\u0004\u0018\u00010\u00062\u0006\u0010\u001a\u001a\u00020\u0019H\u0016\u00a2\u0006\u0004\u0008\u001d\u0010\u001eJ\u0019\u0010\u001f\u001a\u0004\u0018\u00010\u000e2\u0006\u0010\u001a\u001a\u00020\u0019H\u0016\u00a2\u0006\u0004\u0008\u001f\u0010 R \u0010\"\u001a\u0008\u0012\u0004\u0012\u00020\u00060!8\u0016X\u0096\u0004\u00a2\u0006\u000c\n\u0004\u0008\"\u0010#\u001a\u0004\u0008$\u0010%R \u0010&\u001a\u0008\u0012\u0004\u0012\u00020\u000b0!8\u0016X\u0096\u0004\u00a2\u0006\u000c\n\u0004\u0008&\u0010#\u001a\u0004\u0008\'\u0010%R \u0010)\u001a\u0008\u0012\u0004\u0012\u00020\u000e0(8\u0016X\u0096\u0004\u00a2\u0006\u000c\n\u0004\u0008)\u0010*\u001a\u0004\u0008+\u0010,\u00a8\u0006-"
     }
     d2 = {
         "Lone/me/sdk/richvector/internal/element/ElementHolderImpl;",
@@ -23,7 +23,7 @@
         "(Lone/me/sdk/richvector/internal/element/ElementHolder;)V",
         "Lone/me/sdk/richvector/internal/element/GroupElement;",
         "element",
-        "Le5f;",
+        "Lylf;",
         "addGroup",
         "(Lone/me/sdk/richvector/internal/element/GroupElement;)V",
         "Lone/me/sdk/richvector/internal/element/PathElement;",
@@ -48,15 +48,18 @@
         "(Ljava/lang/String;)Lone/me/sdk/richvector/internal/element/GroupElement;",
         "findClipPath",
         "(Ljava/lang/String;)Lone/me/sdk/richvector/internal/element/ClipPathElement;",
-        "",
+        "Ljava/util/ArrayList;",
         "groupElements",
-        "Ljava/util/List;",
+        "Ljava/util/ArrayList;",
         "getGroupElements",
-        "()Ljava/util/List;",
+        "()Ljava/util/ArrayList;",
         "pathElements",
         "getPathElements",
+        "",
         "clipPathElements",
+        "Ljava/util/List;",
         "getClipPathElements",
+        "()Ljava/util/List;",
         "rich-vector_release"
     }
     k = 0x1
@@ -80,20 +83,20 @@
     .end annotation
 .end field
 
-.field private final groupElements:Ljava/util/List;
+.field private final groupElements:Ljava/util/ArrayList;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Ljava/util/List<",
+            "Ljava/util/ArrayList<",
             "Lone/me/sdk/richvector/internal/element/GroupElement;",
             ">;"
         }
     .end annotation
 .end field
 
-.field private final pathElements:Ljava/util/List;
+.field private final pathElements:Ljava/util/ArrayList;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Ljava/util/List<",
+            "Ljava/util/ArrayList<",
             "Lone/me/sdk/richvector/internal/element/PathElement;",
             ">;"
         }
@@ -103,7 +106,7 @@
 
 # direct methods
 .method public constructor <init>()V
-    .locals 1
+    .locals 2
 
     .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -111,16 +114,20 @@
     .line 2
     new-instance v0, Ljava/util/ArrayList;
 
-    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
+    const/4 v1, 0x2
 
-    iput-object v0, p0, Lone/me/sdk/richvector/internal/element/ElementHolderImpl;->groupElements:Ljava/util/List;
+    invoke-direct {v0, v1}, Ljava/util/ArrayList;-><init>(I)V
+
+    iput-object v0, p0, Lone/me/sdk/richvector/internal/element/ElementHolderImpl;->groupElements:Ljava/util/ArrayList;
 
     .line 3
     new-instance v0, Ljava/util/ArrayList;
 
-    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
+    const/4 v1, 0x3
 
-    iput-object v0, p0, Lone/me/sdk/richvector/internal/element/ElementHolderImpl;->pathElements:Ljava/util/List;
+    invoke-direct {v0, v1}, Ljava/util/ArrayList;-><init>(I)V
+
+    iput-object v0, p0, Lone/me/sdk/richvector/internal/element/ElementHolderImpl;->pathElements:Ljava/util/ArrayList;
 
     .line 4
     new-instance v0, Ljava/util/ArrayList;
@@ -133,7 +140,7 @@
 .end method
 
 .method public constructor <init>(Lone/me/sdk/richvector/internal/element/ElementHolder;)V
-    .locals 6
+    .locals 9
 
     .line 5
     invoke-direct {p0}, Lone/me/sdk/richvector/internal/element/ElementHolderImpl;-><init>()V
@@ -144,115 +151,133 @@
     move-result-object v0
 
     .line 7
-    invoke-interface {v0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
-
-    move-result-object v0
-
-    :goto_0
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+    invoke-static {v0}, Lr73;->H(Ljava/util/List;)I
 
     move-result v1
 
-    if-eqz v1, :cond_0
+    const/4 v2, 0x0
 
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    if-ltz v1, :cond_1
 
-    move-result-object v1
-
-    check-cast v1, Lone/me/sdk/richvector/internal/element/GroupElement;
+    move v3, v2
 
     .line 8
-    invoke-virtual {p0}, Lone/me/sdk/richvector/internal/element/ElementHolderImpl;->getGroupElements()Ljava/util/List;
+    :goto_0
+    invoke-static {v3, v0}, Lq73;->h0(ILjava/util/List;)Ljava/lang/Object;
 
-    move-result-object v2
+    move-result-object v4
 
-    new-instance v3, Lone/me/sdk/richvector/internal/element/GroupElement;
+    if-eqz v4, :cond_0
 
-    const/4 v4, 0x2
+    check-cast v4, Lone/me/sdk/richvector/internal/element/GroupElement;
 
-    const/4 v5, 0x0
+    .line 9
+    invoke-virtual {p0}, Lone/me/sdk/richvector/internal/element/ElementHolderImpl;->getGroupElements()Ljava/util/ArrayList;
 
-    invoke-direct {v3, v1, v5, v4, v5}, Lone/me/sdk/richvector/internal/element/GroupElement;-><init>(Lone/me/sdk/richvector/internal/element/GroupElement;Lone/me/sdk/richvector/internal/element/GroupElement;ILl94;)V
+    move-result-object v5
 
-    invoke-interface {v2, v3}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+    new-instance v6, Lone/me/sdk/richvector/internal/element/GroupElement;
+
+    const/4 v7, 0x2
+
+    const/4 v8, 0x0
+
+    invoke-direct {v6, v4, v8, v7, v8}, Lone/me/sdk/richvector/internal/element/GroupElement;-><init>(Lone/me/sdk/richvector/internal/element/GroupElement;Lone/me/sdk/richvector/internal/element/GroupElement;ILld4;)V
+
+    invoke-virtual {v5, v6}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    :cond_0
+    if-eq v3, v1, :cond_1
+
+    add-int/lit8 v3, v3, 0x1
 
     goto :goto_0
 
-    .line 9
-    :cond_0
+    .line 10
+    :cond_1
     invoke-interface {p1}, Lone/me/sdk/richvector/internal/element/ElementHolder;->getPathElements()Ljava/util/List;
 
     move-result-object v0
 
-    .line 10
-    invoke-interface {v0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
-
-    move-result-object v0
-
-    :goto_1
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+    .line 11
+    invoke-static {v0}, Lr73;->H(Ljava/util/List;)I
 
     move-result v1
 
-    if-eqz v1, :cond_1
+    if-ltz v1, :cond_3
 
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    move v3, v2
 
-    move-result-object v1
+    .line 12
+    :goto_1
+    invoke-static {v3, v0}, Lq73;->h0(ILjava/util/List;)Ljava/lang/Object;
 
-    check-cast v1, Lone/me/sdk/richvector/internal/element/PathElement;
+    move-result-object v4
 
-    .line 11
-    invoke-virtual {p0}, Lone/me/sdk/richvector/internal/element/ElementHolderImpl;->getPathElements()Ljava/util/List;
+    if-eqz v4, :cond_2
 
-    move-result-object v2
+    check-cast v4, Lone/me/sdk/richvector/internal/element/PathElement;
 
-    new-instance v3, Lone/me/sdk/richvector/internal/element/PathElement;
+    .line 13
+    invoke-virtual {p0}, Lone/me/sdk/richvector/internal/element/ElementHolderImpl;->getPathElements()Ljava/util/ArrayList;
 
-    invoke-direct {v3, v1}, Lone/me/sdk/richvector/internal/element/PathElement;-><init>(Lone/me/sdk/richvector/internal/element/PathElement;)V
+    move-result-object v5
 
-    invoke-interface {v2, v3}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+    new-instance v6, Lone/me/sdk/richvector/internal/element/PathElement;
+
+    invoke-direct {v6, v4}, Lone/me/sdk/richvector/internal/element/PathElement;-><init>(Lone/me/sdk/richvector/internal/element/PathElement;)V
+
+    invoke-virtual {v5, v6}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    :cond_2
+    if-eq v3, v1, :cond_3
+
+    add-int/lit8 v3, v3, 0x1
 
     goto :goto_1
 
-    .line 12
-    :cond_1
+    .line 14
+    :cond_3
     invoke-interface {p1}, Lone/me/sdk/richvector/internal/element/ElementHolder;->getClipPathElements()Ljava/util/List;
 
     move-result-object p1
 
-    .line 13
-    invoke-interface {p1}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
-
-    move-result-object p1
-
-    :goto_2
-    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
+    .line 15
+    invoke-static {p1}, Lr73;->H(Ljava/util/List;)I
 
     move-result v0
 
-    if-eqz v0, :cond_2
+    if-ltz v0, :cond_5
 
-    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lone/me/sdk/richvector/internal/element/ClipPathElement;
-
-    .line 14
-    invoke-virtual {p0}, Lone/me/sdk/richvector/internal/element/ElementHolderImpl;->getClipPathElements()Ljava/util/List;
+    .line 16
+    :goto_2
+    invoke-static {v2, p1}, Lq73;->h0(ILjava/util/List;)Ljava/lang/Object;
 
     move-result-object v1
 
-    new-instance v2, Lone/me/sdk/richvector/internal/element/ClipPathElement;
+    if-eqz v1, :cond_4
 
-    invoke-direct {v2, v0}, Lone/me/sdk/richvector/internal/element/ClipPathElement;-><init>(Lone/me/sdk/richvector/internal/element/ClipPathElement;)V
+    check-cast v1, Lone/me/sdk/richvector/internal/element/ClipPathElement;
 
-    invoke-interface {v1, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+    .line 17
+    invoke-virtual {p0}, Lone/me/sdk/richvector/internal/element/ElementHolderImpl;->getClipPathElements()Ljava/util/List;
+
+    move-result-object v3
+
+    new-instance v4, Lone/me/sdk/richvector/internal/element/ClipPathElement;
+
+    invoke-direct {v4, v1}, Lone/me/sdk/richvector/internal/element/ClipPathElement;-><init>(Lone/me/sdk/richvector/internal/element/ClipPathElement;)V
+
+    invoke-interface {v3, v4}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+
+    :cond_4
+    if-eq v2, v0, :cond_5
+
+    add-int/lit8 v2, v2, 0x1
 
     goto :goto_2
 
-    :cond_2
+    :cond_5
     return-void
 .end method
 
@@ -273,11 +298,11 @@
 .method public addGroup(Lone/me/sdk/richvector/internal/element/GroupElement;)V
     .locals 0
 
-    invoke-virtual {p0}, Lone/me/sdk/richvector/internal/element/ElementHolderImpl;->getGroupElements()Ljava/util/List;
+    invoke-virtual {p0}, Lone/me/sdk/richvector/internal/element/ElementHolderImpl;->getGroupElements()Ljava/util/ArrayList;
 
     move-result-object p0
 
-    invoke-interface {p0, p1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+    invoke-virtual {p0, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     return-void
 .end method
@@ -285,100 +310,115 @@
 .method public addPath(Lone/me/sdk/richvector/internal/element/PathElement;)V
     .locals 0
 
-    invoke-virtual {p0}, Lone/me/sdk/richvector/internal/element/ElementHolderImpl;->getPathElements()Ljava/util/List;
+    invoke-virtual {p0}, Lone/me/sdk/richvector/internal/element/ElementHolderImpl;->getPathElements()Ljava/util/ArrayList;
 
     move-result-object p0
 
-    invoke-interface {p0, p1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+    invoke-virtual {p0, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     return-void
 .end method
 
 .method public draw(Landroid/graphics/Canvas;)V
-    .locals 2
+    .locals 5
 
     invoke-virtual {p0}, Lone/me/sdk/richvector/internal/element/ElementHolderImpl;->getClipPathElements()Ljava/util/List;
 
     move-result-object v0
 
-    invoke-interface {v0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
-
-    move-result-object v0
-
-    :goto_0
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+    invoke-static {v0}, Lr73;->H(Ljava/util/List;)I
 
     move-result v1
 
-    if-eqz v1, :cond_0
+    const/4 v2, 0x0
 
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    if-ltz v1, :cond_1
 
-    move-result-object v1
+    move v3, v2
 
-    check-cast v1, Lone/me/sdk/richvector/internal/element/ClipPathElement;
+    :goto_0
+    invoke-static {v3, v0}, Lq73;->h0(ILjava/util/List;)Ljava/lang/Object;
 
-    invoke-virtual {v1}, Lone/me/sdk/richvector/internal/element/ClipPathElement;->getPath()Landroid/graphics/Path;
+    move-result-object v4
 
-    move-result-object v1
+    if-eqz v4, :cond_0
 
-    invoke-virtual {p1, v1}, Landroid/graphics/Canvas;->clipPath(Landroid/graphics/Path;)Z
+    check-cast v4, Lone/me/sdk/richvector/internal/element/ClipPathElement;
+
+    invoke-virtual {v4}, Lone/me/sdk/richvector/internal/element/ClipPathElement;->getPath()Landroid/graphics/Path;
+
+    move-result-object v4
+
+    invoke-virtual {p1, v4}, Landroid/graphics/Canvas;->clipPath(Landroid/graphics/Path;)Z
+
+    :cond_0
+    if-eq v3, v1, :cond_1
+
+    add-int/lit8 v3, v3, 0x1
 
     goto :goto_0
 
-    :cond_0
-    invoke-virtual {p0}, Lone/me/sdk/richvector/internal/element/ElementHolderImpl;->getGroupElements()Ljava/util/List;
+    :cond_1
+    invoke-virtual {p0}, Lone/me/sdk/richvector/internal/element/ElementHolderImpl;->getGroupElements()Ljava/util/ArrayList;
 
     move-result-object v0
 
-    invoke-interface {v0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
-
-    move-result-object v0
-
-    :goto_1
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+    invoke-static {v0}, Lr73;->H(Ljava/util/List;)I
 
     move-result v1
 
-    if-eqz v1, :cond_1
+    if-ltz v1, :cond_3
 
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    move v3, v2
 
-    move-result-object v1
+    :goto_1
+    invoke-static {v3, v0}, Lq73;->h0(ILjava/util/List;)Ljava/lang/Object;
 
-    check-cast v1, Lone/me/sdk/richvector/internal/element/GroupElement;
+    move-result-object v4
 
-    invoke-virtual {v1, p1}, Lone/me/sdk/richvector/internal/element/GroupElement;->draw(Landroid/graphics/Canvas;)V
+    if-eqz v4, :cond_2
+
+    check-cast v4, Lone/me/sdk/richvector/internal/element/GroupElement;
+
+    invoke-virtual {v4, p1}, Lone/me/sdk/richvector/internal/element/GroupElement;->draw(Landroid/graphics/Canvas;)V
+
+    :cond_2
+    if-eq v3, v1, :cond_3
+
+    add-int/lit8 v3, v3, 0x1
 
     goto :goto_1
 
-    :cond_1
-    invoke-virtual {p0}, Lone/me/sdk/richvector/internal/element/ElementHolderImpl;->getPathElements()Ljava/util/List;
+    :cond_3
+    invoke-virtual {p0}, Lone/me/sdk/richvector/internal/element/ElementHolderImpl;->getPathElements()Ljava/util/ArrayList;
 
     move-result-object p0
 
-    invoke-interface {p0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
-
-    move-result-object p0
-
-    :goto_2
-    invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
+    invoke-static {p0}, Lr73;->H(Ljava/util/List;)I
 
     move-result v0
 
-    if-eqz v0, :cond_2
+    if-ltz v0, :cond_5
 
-    invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    :goto_2
+    invoke-static {v2, p0}, Lq73;->h0(ILjava/util/List;)Ljava/lang/Object;
 
-    move-result-object v0
+    move-result-object v1
 
-    check-cast v0, Lone/me/sdk/richvector/internal/element/PathElement;
+    if-eqz v1, :cond_4
 
-    invoke-virtual {v0, p1}, Lone/me/sdk/richvector/internal/element/PathElement;->draw(Landroid/graphics/Canvas;)V
+    check-cast v1, Lone/me/sdk/richvector/internal/element/PathElement;
+
+    invoke-virtual {v1, p1}, Lone/me/sdk/richvector/internal/element/PathElement;->draw(Landroid/graphics/Canvas;)V
+
+    :cond_4
+    if-eq v2, v0, :cond_5
+
+    add-int/lit8 v2, v2, 0x1
 
     goto :goto_2
 
-    :cond_2
+    :cond_5
     return-void
 .end method
 
@@ -414,7 +454,7 @@
 
     move-result-object v3
 
-    invoke-static {v3, p1}, Lxq7;->d(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v3, p1}, Lvyg;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v3
 
@@ -430,7 +470,7 @@
 
     if-nez v1, :cond_4
 
-    invoke-virtual {p0}, Lone/me/sdk/richvector/internal/element/ElementHolderImpl;->getGroupElements()Ljava/util/List;
+    invoke-virtual {p0}, Lone/me/sdk/richvector/internal/element/ElementHolderImpl;->getGroupElements()Ljava/util/ArrayList;
 
     move-result-object p0
 
@@ -469,7 +509,7 @@
 .method public findGroup(Ljava/lang/String;)Lone/me/sdk/richvector/internal/element/GroupElement;
     .locals 4
 
-    invoke-virtual {p0}, Lone/me/sdk/richvector/internal/element/ElementHolderImpl;->getGroupElements()Ljava/util/List;
+    invoke-virtual {p0}, Lone/me/sdk/richvector/internal/element/ElementHolderImpl;->getGroupElements()Ljava/util/ArrayList;
 
     move-result-object v0
 
@@ -498,7 +538,7 @@
 
     move-result-object v3
 
-    invoke-static {v3, p1}, Lxq7;->d(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v3, p1}, Lvyg;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v3
 
@@ -514,7 +554,7 @@
 
     if-nez v1, :cond_4
 
-    invoke-virtual {p0}, Lone/me/sdk/richvector/internal/element/ElementHolderImpl;->getGroupElements()Ljava/util/List;
+    invoke-virtual {p0}, Lone/me/sdk/richvector/internal/element/ElementHolderImpl;->getGroupElements()Ljava/util/ArrayList;
 
     move-result-object p0
 
@@ -553,7 +593,7 @@
 .method public findPath(Ljava/lang/String;)Lone/me/sdk/richvector/internal/element/PathElement;
     .locals 4
 
-    invoke-virtual {p0}, Lone/me/sdk/richvector/internal/element/ElementHolderImpl;->getPathElements()Ljava/util/List;
+    invoke-virtual {p0}, Lone/me/sdk/richvector/internal/element/ElementHolderImpl;->getPathElements()Ljava/util/ArrayList;
 
     move-result-object v0
 
@@ -582,7 +622,7 @@
 
     move-result-object v3
 
-    invoke-static {v3, p1}, Lxq7;->d(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v3, p1}, Lvyg;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v3
 
@@ -598,7 +638,7 @@
 
     if-nez v1, :cond_4
 
-    invoke-virtual {p0}, Lone/me/sdk/richvector/internal/element/ElementHolderImpl;->getGroupElements()Ljava/util/List;
+    invoke-virtual {p0}, Lone/me/sdk/richvector/internal/element/ElementHolderImpl;->getGroupElements()Ljava/util/ArrayList;
 
     move-result-object p0
 
@@ -650,92 +690,126 @@
     return-object p0
 .end method
 
-.method public getGroupElements()Ljava/util/List;
+.method public getGroupElements()Ljava/util/ArrayList;
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
-            "Ljava/util/List<",
+            "Ljava/util/ArrayList<",
             "Lone/me/sdk/richvector/internal/element/GroupElement;",
             ">;"
         }
     .end annotation
 
-    iget-object p0, p0, Lone/me/sdk/richvector/internal/element/ElementHolderImpl;->groupElements:Ljava/util/List;
+    .line 2
+    iget-object p0, p0, Lone/me/sdk/richvector/internal/element/ElementHolderImpl;->groupElements:Ljava/util/ArrayList;
 
     return-object p0
 .end method
 
-.method public getPathElements()Ljava/util/List;
+.method public bridge synthetic getGroupElements()Ljava/util/List;
+    .locals 0
+
+    .line 1
+    invoke-virtual {p0}, Lone/me/sdk/richvector/internal/element/ElementHolderImpl;->getGroupElements()Ljava/util/ArrayList;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public getPathElements()Ljava/util/ArrayList;
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
-            "Ljava/util/List<",
+            "Ljava/util/ArrayList<",
             "Lone/me/sdk/richvector/internal/element/PathElement;",
             ">;"
         }
     .end annotation
 
-    iget-object p0, p0, Lone/me/sdk/richvector/internal/element/ElementHolderImpl;->pathElements:Ljava/util/List;
+    .line 2
+    iget-object p0, p0, Lone/me/sdk/richvector/internal/element/ElementHolderImpl;->pathElements:Ljava/util/ArrayList;
+
+    return-object p0
+.end method
+
+.method public bridge synthetic getPathElements()Ljava/util/List;
+    .locals 0
+
+    .line 1
+    invoke-virtual {p0}, Lone/me/sdk/richvector/internal/element/ElementHolderImpl;->getPathElements()Ljava/util/ArrayList;
+
+    move-result-object p0
 
     return-object p0
 .end method
 
 .method public scaleAllStrokeWidth(F)V
-    .locals 2
+    .locals 5
 
-    invoke-virtual {p0}, Lone/me/sdk/richvector/internal/element/ElementHolderImpl;->getGroupElements()Ljava/util/List;
-
-    move-result-object v0
-
-    invoke-interface {v0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
+    invoke-virtual {p0}, Lone/me/sdk/richvector/internal/element/ElementHolderImpl;->getGroupElements()Ljava/util/ArrayList;
 
     move-result-object v0
 
-    :goto_0
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+    invoke-static {v0}, Lr73;->H(Ljava/util/List;)I
 
     move-result v1
 
-    if-eqz v1, :cond_0
+    const/4 v2, 0x0
 
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    if-ltz v1, :cond_1
 
-    move-result-object v1
+    move v3, v2
 
-    check-cast v1, Lone/me/sdk/richvector/internal/element/GroupElement;
+    :goto_0
+    invoke-static {v3, v0}, Lq73;->h0(ILjava/util/List;)Ljava/lang/Object;
 
-    invoke-virtual {v1, p1}, Lone/me/sdk/richvector/internal/element/GroupElement;->scaleAllStrokeWidth(F)V
+    move-result-object v4
+
+    if-eqz v4, :cond_0
+
+    check-cast v4, Lone/me/sdk/richvector/internal/element/GroupElement;
+
+    invoke-virtual {v4, p1}, Lone/me/sdk/richvector/internal/element/GroupElement;->scaleAllStrokeWidth(F)V
+
+    :cond_0
+    if-eq v3, v1, :cond_1
+
+    add-int/lit8 v3, v3, 0x1
 
     goto :goto_0
 
-    :cond_0
-    invoke-virtual {p0}, Lone/me/sdk/richvector/internal/element/ElementHolderImpl;->getPathElements()Ljava/util/List;
+    :cond_1
+    invoke-virtual {p0}, Lone/me/sdk/richvector/internal/element/ElementHolderImpl;->getPathElements()Ljava/util/ArrayList;
 
     move-result-object p0
 
-    invoke-interface {p0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
-
-    move-result-object p0
-
-    :goto_1
-    invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
+    invoke-static {p0}, Lr73;->H(Ljava/util/List;)I
 
     move-result v0
 
-    if-eqz v0, :cond_1
+    if-ltz v0, :cond_3
 
-    invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    :goto_1
+    invoke-static {v2, p0}, Lq73;->h0(ILjava/util/List;)Ljava/lang/Object;
 
-    move-result-object v0
+    move-result-object v1
 
-    check-cast v0, Lone/me/sdk/richvector/internal/element/PathElement;
+    if-eqz v1, :cond_2
 
-    invoke-virtual {v0, p1}, Lone/me/sdk/richvector/internal/element/PathElement;->setStrokeRatio(F)V
+    check-cast v1, Lone/me/sdk/richvector/internal/element/PathElement;
+
+    invoke-virtual {v1, p1}, Lone/me/sdk/richvector/internal/element/PathElement;->setStrokeRatio(F)V
+
+    :cond_2
+    if-eq v2, v0, :cond_3
+
+    add-int/lit8 v2, v2, 0x1
 
     goto :goto_1
 
-    :cond_1
+    :cond_3
     return-void
 .end method

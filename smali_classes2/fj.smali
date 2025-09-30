@@ -1,39 +1,55 @@
 .class public final Lfj;
-.super Ljava/lang/Object;
+.super Ljx3;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:J
+.field public X:Ljava/util/List;
 
-.field public final b:Ljava/lang/String;
+.field public Y:Lkhc;
 
-.field public final c:Ljava/lang/String;
+.field public synthetic Z:Ljava/lang/Object;
 
-.field public final d:Ljava/lang/String;
+.field public o:Lij;
 
-.field public final e:J
+.field public final synthetic r0:Lij;
 
-.field public final f:Ljava/util/List;
+.field public s0:I
 
 
 # direct methods
-.method public constructor <init>(JLjava/lang/String;Ljava/lang/String;Ljava/lang/String;JLjava/util/List;)V
+.method public constructor <init>(Lij;Ljx3;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lfj;->r0:Lij;
 
-    iput-wide p1, p0, Lfj;->a:J
-
-    iput-object p3, p0, Lfj;->b:Ljava/lang/String;
-
-    iput-object p4, p0, Lfj;->c:Ljava/lang/String;
-
-    iput-object p5, p0, Lfj;->d:Ljava/lang/String;
-
-    iput-wide p6, p0, Lfj;->e:J
-
-    iput-object p8, p0, Lfj;->f:Ljava/util/List;
+    invoke-direct {p0, p2}, Ljx3;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
+
+    iput-object p1, p0, Lfj;->Z:Ljava/lang/Object;
+
+    iget p1, p0, Lfj;->s0:I
+
+    const/high16 v0, -0x80000000
+
+    or-int/2addr p1, v0
+
+    iput p1, p0, Lfj;->s0:I
+
+    iget-object p1, p0, Lfj;->r0:Lij;
+
+    const/4 v0, 0x0
+
+    invoke-virtual {p1, v0, v0, p0}, Lij;->l(Ljava/util/List;Lkhc;Ljx3;)Ljava/lang/Object;
+
+    move-result-object p0
+
+    return-object p0
 .end method

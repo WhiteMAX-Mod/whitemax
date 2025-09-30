@@ -1,48 +1,96 @@
-.class public final Lr11;
-.super Lbu3;
+.class public final synthetic Lr11;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+# interfaces
+.implements Landroid/widget/PopupWindow$OnDismissListener;
 
 
 # instance fields
-.field public X:I
+.field public final synthetic a:I
 
-.field public final synthetic Y:Ldw;
-
-.field public synthetic o:Ljava/lang/Object;
+.field public final synthetic b:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Ldw;Lkotlin/coroutines/Continuation;)V
+.method public synthetic constructor <init>(ILjava/lang/Object;)V
     .locals 0
 
-    iput-object p1, p0, Lr11;->Y:Ldw;
+    iput p1, p0, Lr11;->a:I
 
-    invoke-direct {p0, p2}, Lbu3;-><init>(Lkotlin/coroutines/Continuation;)V
+    iput-object p2, p0, Lr11;->b:Ljava/lang/Object;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final onDismiss()V
     .locals 1
 
-    iput-object p1, p0, Lr11;->o:Ljava/lang/Object;
+    iget v0, p0, Lr11;->a:I
 
-    iget p1, p0, Lr11;->X:I
+    iget-object p0, p0, Lr11;->b:Ljava/lang/Object;
 
-    const/high16 v0, -0x80000000
+    packed-switch v0, :pswitch_data_0
 
-    or-int/2addr p1, v0
-
-    iput p1, p0, Lr11;->X:I
-
-    iget-object p1, p0, Lr11;->Y:Ldw;
+    check-cast p0, Lone/me/chats/forward/ForwardPickerScreen;
 
     const/4 v0, 0x0
 
-    invoke-virtual {p1, v0, p0}, Ldw;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    iput-object v0, p0, Lone/me/chats/forward/ForwardPickerScreen;->H0:La9f;
 
-    move-result-object p0
+    return-void
 
-    return-object p0
+    :pswitch_0
+    check-cast p0, Lqp1;
+
+    const/4 v0, 0x0
+
+    iput-object v0, p0, Lqp1;->I0:La9f;
+
+    return-void
+
+    :pswitch_1
+    check-cast p0, Lmp1;
+
+    iget-object p0, p0, Lmp1;->H0:Lbzc;
+
+    sget-object v0, Lyu4;->t0:Lbx9;
+
+    invoke-virtual {v0, p0}, Lbx9;->q(Landroid/view/View;)Llia;
+
+    move-result-object v0
+
+    iget-object v0, v0, Llia;->c:Lera;
+
+    invoke-interface {v0}, Lera;->getIcon()Lqy6;
+
+    move-result-object v0
+
+    iget v0, v0, Lqy6;->f:I
+
+    invoke-virtual {p0, v0}, Lbzc;->setIconTint(I)V
+
+    sget-object v0, Lwyc;->a:Lwyc;
+
+    invoke-virtual {p0, v0}, Lbzc;->setMode(Lwyc;)V
+
+    return-void
+
+    :pswitch_2
+    check-cast p0, Lzb6;
+
+    invoke-interface {p0}, Lzb6;->invoke()Ljava/lang/Object;
+
+    return-void
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

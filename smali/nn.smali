@@ -1,49 +1,99 @@
 .class public final Lnn;
-.super Ljava/lang/Object;
+.super Landroid/widget/RatingBar;
 .source "SourceFile"
-
-# interfaces
-.implements Landroid/widget/PopupWindow$OnDismissListener;
 
 
 # instance fields
-.field public final synthetic a:Lin;
-
-.field public final synthetic b:Lon;
+.field public final a:Lbh8;
 
 
 # direct methods
-.method public constructor <init>(Lon;Lin;)V
-    .locals 0
+.method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
+    .locals 2
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    sget v0, Lu2c;->ratingBarStyle:I
 
-    iput-object p1, p0, Lnn;->b:Lon;
+    invoke-direct {p0, p1, p2, v0}, Landroid/widget/RatingBar;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
-    iput-object p2, p0, Lnn;->a:Lin;
+    invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
+
+    move-result-object p1
+
+    invoke-static {p0, p1}, Lm4f;->a(Landroid/view/View;Landroid/content/Context;)V
+
+    new-instance p1, Lbh8;
+
+    const/4 v1, 0x1
+
+    invoke-direct {p1, v1, p0}, Lbh8;-><init>(ILjava/lang/Object;)V
+
+    iput-object p1, p0, Lnn;->a:Lbh8;
+
+    invoke-virtual {p1, p2, v0}, Lbh8;->i(Landroid/util/AttributeSet;I)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onDismiss()V
+.method public final declared-synchronized onMeasure(II)V
     .locals 1
 
-    iget-object v0, p0, Lnn;->b:Lon;
+    monitor-enter p0
 
-    iget-object v0, v0, Lon;->L0:Lrn;
+    :try_start_0
+    invoke-super {p0, p1, p2}, Landroid/widget/RatingBar;->onMeasure(II)V
 
-    invoke-virtual {v0}, Landroid/view/View;->getViewTreeObserver()Landroid/view/ViewTreeObserver;
+    iget-object p2, p0, Lnn;->a:Lbh8;
 
-    move-result-object v0
+    iget-object p2, p2, Lbh8;->c:Ljava/lang/Object;
 
-    if-eqz v0, :cond_0
+    check-cast p2, Landroid/graphics/Bitmap;
 
-    iget-object p0, p0, Lnn;->a:Lin;
+    if-eqz p2, :cond_0
 
-    invoke-virtual {v0, p0}, Landroid/view/ViewTreeObserver;->removeGlobalOnLayoutListener(Landroid/view/ViewTreeObserver$OnGlobalLayoutListener;)V
+    invoke-virtual {p2}, Landroid/graphics/Bitmap;->getWidth()I
+
+    move-result p2
+
+    invoke-virtual {p0}, Landroid/widget/RatingBar;->getNumStars()I
+
+    move-result v0
+
+    mul-int/2addr p2, v0
+
+    const/4 v0, 0x0
+
+    invoke-static {p2, p1, v0}, Landroid/view/View;->resolveSizeAndState(III)I
+
+    move-result p1
+
+    invoke-virtual {p0}, Landroid/view/View;->getMeasuredHeight()I
+
+    move-result p2
+
+    invoke-virtual {p0, p1, p2}, Landroid/view/View;->setMeasuredDimension(II)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    goto :goto_0
+
+    :catchall_0
+    move-exception p1
+
+    goto :goto_1
 
     :cond_0
+    :goto_0
+    monitor-exit p0
+
     return-void
+
+    :goto_1
+    :try_start_1
+    monitor-exit p0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    throw p1
 .end method

@@ -1,22 +1,21 @@
 .class public final Luob;
-.super Ljava/lang/Object;
+.super Luc0;
 .source "SourceFile"
-
-# interfaces
-.implements Lwob;
 
 
 # instance fields
-.field public final a:J
+.field public final b:J
 
 
 # direct methods
 .method public constructor <init>(J)V
-    .locals 0
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/16 v0, 0xd
 
-    iput-wide p1, p0, Luob;->a:J
+    invoke-direct {p0, v0}, Luc0;-><init>(I)V
+
+    iput-wide p1, p0, Luob;->b:J
 
     return-void
 .end method
@@ -44,9 +43,9 @@
     :cond_1
     check-cast p1, Luob;
 
-    iget-wide v3, p0, Luob;->a:J
+    iget-wide v3, p0, Luob;->b:J
 
-    iget-wide p0, p1, Luob;->a:J
+    iget-wide p0, p1, Luob;->b:J
 
     cmp-long p0, v3, p0
 
@@ -61,7 +60,7 @@
 .method public final hashCode()I
     .locals 2
 
-    iget-wide v0, p0, Luob;->a:J
+    iget-wide v0, p0, Luob;->b:J
 
     invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
 
@@ -73,13 +72,13 @@
 .method public final toString()Ljava/lang/String;
     .locals 4
 
-    const-string v0, "ModeRecordingVideo(startTimeMs="
+    const-string v0, "InviteByLink(id="
 
     const-string v1, ")"
 
-    iget-wide v2, p0, Luob;->a:J
+    iget-wide v2, p0, Luob;->b:J
 
-    invoke-static {v2, v3, v0, v1}, Lu88;->i(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v2, v3, v0, v1}, Lwsf;->e(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
 

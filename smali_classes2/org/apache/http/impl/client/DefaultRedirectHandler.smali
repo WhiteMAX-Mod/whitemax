@@ -322,7 +322,7 @@
 
     const-string p2, "Invalid redirect URI: "
 
-    invoke-static {p2, v0}, Lpg0;->g(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p2, v0}, Lsg0;->g(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p2
 

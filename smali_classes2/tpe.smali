@@ -4,20 +4,20 @@
 
 
 # instance fields
-.field public final a:[I
+.field public final a:Lnoe;
 
-.field public final b:F
+.field public final b:Z
 
 
 # direct methods
-.method public constructor <init>([IF)V
+.method public constructor <init>(Lnoe;Z)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Ltpe;->a:[I
+    iput-object p1, p0, Ltpe;->a:Lnoe;
 
-    iput p2, p0, Ltpe;->b:F
+    iput-boolean p2, p0, Ltpe;->b:Z
 
     return-void
 .end method
@@ -45,11 +45,11 @@
     :cond_1
     check-cast p1, Ltpe;
 
-    iget-object v1, p0, Ltpe;->a:[I
+    iget-object v1, p0, Ltpe;->a:Lnoe;
 
-    iget-object v3, p1, Ltpe;->a:[I
+    iget-object v3, p1, Ltpe;->a:Lnoe;
 
-    invoke-static {v1, v3}, Lxq7;->d(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v1, v3}, Lvyg;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v1
 
@@ -58,15 +58,11 @@
     return v2
 
     :cond_2
-    iget p0, p0, Ltpe;->b:F
+    iget-boolean p0, p0, Ltpe;->b:Z
 
-    iget p1, p1, Ltpe;->b:F
+    iget-boolean p1, p1, Ltpe;->b:Z
 
-    invoke-static {p0, p1}, Ljava/lang/Float;->compare(FF)I
-
-    move-result p0
-
-    if-eqz p0, :cond_3
+    if-eq p0, p1, :cond_3
 
     return v2
 
@@ -77,17 +73,17 @@
 .method public final hashCode()I
     .locals 1
 
-    iget-object v0, p0, Ltpe;->a:[I
+    iget-object v0, p0, Ltpe;->a:Lnoe;
 
-    invoke-static {v0}, Ljava/util/Arrays;->hashCode([I)I
+    invoke-virtual {v0}, Lnoe;->hashCode()I
 
     move-result v0
 
     mul-int/lit8 v0, v0, 0x1f
 
-    iget p0, p0, Ltpe;->b:F
+    iget-boolean p0, p0, Ltpe;->b:Z
 
-    invoke-static {p0}, Ljava/lang/Float;->hashCode(F)I
+    invoke-static {p0}, Ljava/lang/Boolean;->hashCode(Z)I
 
     move-result p0
 
@@ -97,35 +93,31 @@
 .end method
 
 .method public final toString()Ljava/lang/String;
-    .locals 3
+    .locals 2
 
-    iget-object v0, p0, Ltpe;->a:[I
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    invoke-static {v0}, Ljava/util/Arrays;->toString([I)Ljava/lang/String;
+    const-string v1, "Item(suggest="
 
-    move-result-object v0
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    new-instance v1, Ljava/lang/StringBuilder;
+    iget-object v1, p0, Ltpe;->a:Lnoe;
 
-    const-string v2, "Gradient(colors="
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    const-string v1, ", fromContacts="
 
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const-string v0, ", angle="
+    iget-boolean p0, p0, Ltpe;->b:Z
 
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget p0, p0, Ltpe;->b:F
-
-    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
     const-string p0, ")"
 
-    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p0
 

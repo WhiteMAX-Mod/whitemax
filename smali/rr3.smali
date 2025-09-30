@@ -1,49 +1,46 @@
-.class public abstract synthetic Lrr3;
+.class public final synthetic Lrr3;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lzb6;
 
-# static fields
-.field public static final synthetic $EnumSwitchMapping$0:[I
+
+# instance fields
+.field public final synthetic a:J
+
+.field public final synthetic b:Z
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
+.method public synthetic constructor <init>(JZ)V
+    .locals 0
 
-    invoke-static {}, Lvwa;->values()[Lvwa;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    move-result-object v0
+    iput-wide p1, p0, Lrr3;->a:J
 
-    array-length v0, v0
-
-    new-array v0, v0, [I
-
-    const/4 v1, 0x1
-
-    const/4 v2, 0x2
-
-    :try_start_0
-    aput v1, v0, v2
-    :try_end_0
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
-
-    :catch_0
-    :try_start_1
-    aput v2, v0, v1
-    :try_end_1
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
-
-    :catch_1
-    const/4 v1, 0x3
-
-    :try_start_2
-    aput v1, v0, v1
-    :try_end_2
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_2
-
-    :catch_2
-    sput-object v0, Lrr3;->$EnumSwitchMapping$0:[I
+    iput-boolean p3, p0, Lrr3;->b:Z
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final invoke()Ljava/lang/Object;
+    .locals 3
+
+    sget-object v0, Lone/me/contactlist/ContactListWidget;->O0:[Lxi7;
+
+    sget-object v0, Lqu3;->c:Lqu3;
+
+    iget-wide v1, p0, Lrr3;->a:J
+
+    iget-boolean p0, p0, Lrr3;->b:Z
+
+    invoke-virtual {v0, v1, v2, p0}, Lqu3;->W0(JZ)V
+
+    sget-object p0, Lylf;->a:Lylf;
+
+    return-object p0
 .end method

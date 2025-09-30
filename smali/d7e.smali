@@ -1,23 +1,14 @@
-.class public final Ld7e;
+.class public interface abstract Ld7e;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-
-# instance fields
-.field public final a:J
-
-.field public final b:J
+# interfaces
+.implements Ljava/io/Closeable;
 
 
-# direct methods
-.method public constructor <init>(JJ)V
-    .locals 0
+# virtual methods
+.method public abstract b(Let0;J)J
+.end method
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-wide p1, p0, Ld7e;->a:J
-
-    iput-wide p3, p0, Ld7e;->b:J
-
-    return-void
+.method public abstract p()Lr6f;
 .end method

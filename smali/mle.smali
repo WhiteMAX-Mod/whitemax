@@ -1,216 +1,116 @@
-.class public final Lmle;
-.super Ljava/lang/Object;
+.class public final enum Lmle;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
 # interfaces
-.implements Lau3;
+.implements Lle7;
+
+
+# static fields
+.field public static final synthetic b:[Lmle;
 
 
 # instance fields
-.field public final synthetic a:Ljava/lang/Object;
-
-.field public final synthetic b:Ljava/util/ArrayList;
-
-.field public final synthetic c:Ljava/util/concurrent/atomic/AtomicBoolean;
-
-.field public final synthetic d:Ljava/util/concurrent/atomic/AtomicInteger;
-
-.field public final synthetic e:Lule;
+.field public final a:I
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/Object;Ljava/util/ArrayList;Ljava/util/concurrent/atomic/AtomicBoolean;Ljava/util/concurrent/atomic/AtomicInteger;Lule;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 5
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lmle;
 
-    iput-object p1, p0, Lmle;->a:Ljava/lang/Object;
+    const-string v1, "DUPLICATE_PROPERTIES"
 
-    iput-object p2, p0, Lmle;->b:Ljava/util/ArrayList;
+    const/4 v2, 0x0
 
-    iput-object p3, p0, Lmle;->c:Ljava/util/concurrent/atomic/AtomicBoolean;
+    invoke-direct {v0, v1, v2}, Lmle;-><init>(Ljava/lang/String;I)V
 
-    iput-object p4, p0, Lmle;->d:Ljava/util/concurrent/atomic/AtomicInteger;
+    new-instance v1, Lmle;
 
-    iput-object p5, p0, Lmle;->e:Lule;
+    const-string v2, "SCALARS_AS_OBJECTS"
+
+    const/4 v3, 0x1
+
+    invoke-direct {v1, v2, v3}, Lmle;-><init>(Ljava/lang/String;I)V
+
+    new-instance v2, Lmle;
+
+    const-string v3, "UNTYPED_SCALARS"
+
+    const/4 v4, 0x2
+
+    invoke-direct {v2, v3, v4}, Lmle;-><init>(Ljava/lang/String;I)V
+
+    filled-new-array {v0, v1, v2}, [Lmle;
+
+    move-result-object v0
+
+    sput-object v0, Lmle;->b:[Lmle;
 
     return-void
 .end method
 
+.method public constructor <init>(Ljava/lang/String;I)V
+    .locals 0
 
-# virtual methods
-.method public final a(Lbolts/Task;)Ljava/lang/Object;
-    .locals 5
+    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    invoke-virtual {p1}, Lbolts/Task;->isFaulted()Z
+    const/4 p1, 0x1
 
-    move-result v0
+    invoke-virtual {p0}, Ljava/lang/Enum;->ordinal()I
 
-    if-eqz v0, :cond_0
+    move-result p2
 
-    iget-object v0, p0, Lmle;->a:Ljava/lang/Object;
+    shl-int/2addr p1, p2
 
-    monitor-enter v0
+    iput p1, p0, Lmle;->a:I
 
-    :try_start_0
-    iget-object v1, p0, Lmle;->b:Ljava/util/ArrayList;
+    return-void
+.end method
 
-    invoke-virtual {p1}, Lbolts/Task;->getError()Ljava/lang/Exception;
+.method public static valueOf(Ljava/lang/String;)Lmle;
+    .locals 1
 
-    move-result-object v2
+    const-class v0, Lmle;
 
-    invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    monitor-exit v0
-
-    goto :goto_0
-
-    :catchall_0
-    move-exception p0
-
-    monitor-exit v0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    throw p0
-
-    :cond_0
-    :goto_0
-    invoke-virtual {p1}, Lbolts/Task;->isCancelled()Z
-
-    move-result p1
-
-    const/4 v0, 0x1
-
-    if-eqz p1, :cond_1
-
-    iget-object p1, p0, Lmle;->c:Ljava/util/concurrent/atomic/AtomicBoolean;
-
-    invoke-virtual {p1, v0}, Ljava/util/concurrent/atomic/AtomicBoolean;->set(Z)V
-
-    :cond_1
-    iget-object p1, p0, Lmle;->d:Ljava/util/concurrent/atomic/AtomicInteger;
-
-    invoke-virtual {p1}, Ljava/util/concurrent/atomic/AtomicInteger;->decrementAndGet()I
-
-    move-result p1
-
-    const/4 v1, 0x0
-
-    if-nez p1, :cond_6
-
-    iget-object p1, p0, Lmle;->b:Ljava/util/ArrayList;
-
-    invoke-virtual {p1}, Ljava/util/ArrayList;->size()I
-
-    move-result p1
-
-    if-eqz p1, :cond_4
-
-    iget-object p1, p0, Lmle;->b:Ljava/util/ArrayList;
-
-    invoke-virtual {p1}, Ljava/util/ArrayList;->size()I
-
-    move-result p1
-
-    const/4 v2, 0x0
-
-    if-ne p1, v0, :cond_2
-
-    iget-object p1, p0, Lmle;->e:Lule;
-
-    iget-object p0, p0, Lmle;->b:Ljava/util/ArrayList;
-
-    invoke-virtual {p0, v2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
 
     move-result-object p0
 
-    check-cast p0, Ljava/lang/Exception;
+    check-cast p0, Lmle;
 
-    invoke-virtual {p1, p0}, Lule;->b(Ljava/lang/Exception;)V
+    return-object p0
+.end method
 
-    goto :goto_2
+.method public static values()[Lmle;
+    .locals 1
 
-    :cond_2
-    new-instance p1, Lbolts/AggregateException;
+    sget-object v0, Lmle;->b:[Lmle;
 
-    const-string v0, "There were %d exceptions."
-
-    iget-object v3, p0, Lmle;->b:Ljava/util/ArrayList;
-
-    invoke-virtual {v3}, Ljava/util/ArrayList;->size()I
-
-    move-result v3
-
-    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v3
-
-    filled-new-array {v3}, [Ljava/lang/Object;
-
-    move-result-object v3
-
-    invoke-static {v0, v3}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+    invoke-virtual {v0}, [Lmle;->clone()Ljava/lang/Object;
 
     move-result-object v0
 
-    iget-object v3, p0, Lmle;->b:Ljava/util/ArrayList;
+    check-cast v0, [Lmle;
 
-    if-eqz v3, :cond_3
+    return-object v0
+.end method
 
-    invoke-interface {v3}, Ljava/util/List;->size()I
 
-    move-result v4
+# virtual methods
+.method public final a()Z
+    .locals 0
 
-    if-lez v4, :cond_3
+    const/4 p0, 0x0
 
-    invoke-interface {v3, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
+    return p0
+.end method
 
-    move-result-object v2
+.method public final b()I
+    .locals 0
 
-    check-cast v2, Ljava/lang/Throwable;
+    iget p0, p0, Lmle;->a:I
 
-    goto :goto_1
-
-    :cond_3
-    move-object v2, v1
-
-    :goto_1
-    invoke-direct {p1, v0, v2}, Ljava/lang/Exception;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    invoke-static {v3}, Ljava/util/Collections;->unmodifiableList(Ljava/util/List;)Ljava/util/List;
-
-    move-result-object v0
-
-    iput-object v0, p1, Lbolts/AggregateException;->a:Ljava/util/List;
-
-    iget-object p0, p0, Lmle;->e:Lule;
-
-    invoke-virtual {p0, p1}, Lule;->b(Ljava/lang/Exception;)V
-
-    goto :goto_2
-
-    :cond_4
-    iget-object p1, p0, Lmle;->c:Ljava/util/concurrent/atomic/AtomicBoolean;
-
-    invoke-virtual {p1}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
-
-    move-result p1
-
-    if-eqz p1, :cond_5
-
-    iget-object p0, p0, Lmle;->e:Lule;
-
-    invoke-virtual {p0}, Lule;->a()V
-
-    goto :goto_2
-
-    :cond_5
-    iget-object p0, p0, Lmle;->e:Lule;
-
-    invoke-virtual {p0, v1}, Lule;->c(Ljava/lang/Object;)V
-
-    :cond_6
-    :goto_2
-    return-object v1
+    return p0
 .end method

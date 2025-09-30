@@ -1,34 +1,43 @@
-.class public abstract Lkrb;
+.class public abstract synthetic Lkrb;
 .super Ljava/lang/Object;
+.source "SourceFile"
 
 
 # static fields
-.field public static attach_bar_thumbnail_size:I = 0x7f070054
+.field public static final synthetic $EnumSwitchMapping$0:[I
 
-.field public static flash_close_button_height:I = 0x7f0700f8
 
-.field public static flash_close_button_width:I = 0x7f0700f9
+# direct methods
+.method static constructor <clinit>()V
+    .locals 4
 
-.field public static flash_close_wrapper_height:I = 0x7f0700fa
+    const/4 v0, 0x2
 
-.field public static flash_close_wrapper_width:I = 0x7f0700fb
+    invoke-static {v0}, Lmw1;->w(I)[I
 
-.field public static full_screen_mode_button_height:I = 0x7f070114
+    move-result-object v1
 
-.field public static full_screen_mode_button_width:I = 0x7f070115
+    array-length v1, v1
 
-.field public static gallery_album_cover_size:I = 0x7f070116
+    new-array v1, v1, [I
 
-.field public static progress_bar_medium:I = 0x7f0703ee
+    const/4 v2, 0x1
 
-.field public static quick_camera_button_margin:I = 0x7f0703f0
+    const/4 v3, 0x0
 
-.field public static quick_camera_button_margin_bottom:I = 0x7f0703f1
+    :try_start_0
+    aput v2, v1, v3
+    :try_end_0
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
 
-.field public static quick_camera_chronometer_text_size:I = 0x7f0703f2
+    :catch_0
+    :try_start_1
+    aput v0, v1, v2
+    :try_end_1
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
 
-.field public static quick_camera_wrapper_controllers_height:I = 0x7f0703f3
+    :catch_1
+    sput-object v1, Lkrb;->$EnumSwitchMapping$0:[I
 
-.field public static quick_camera_wrapper_height:I = 0x7f0703f4
-
-.field public static quick_camera_wrapper_width:I = 0x7f0703f5
+    return-void
+.end method

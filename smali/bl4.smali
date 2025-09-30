@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lv56;
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
@@ -11,18 +11,14 @@
 
 .field public final synthetic b:Lcl4;
 
-.field public final synthetic c:Ldl4;
-
 
 # direct methods
-.method public synthetic constructor <init>(Lcl4;Ldl4;I)V
+.method public synthetic constructor <init>(Lcl4;I)V
     .locals 0
 
-    iput p3, p0, Lbl4;->a:I
+    iput p2, p0, Lbl4;->a:I
 
     iput-object p1, p0, Lbl4;->b:Lcl4;
-
-    iput-object p2, p0, Lbl4;->c:Ldl4;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -31,204 +27,167 @@
 
 
 # virtual methods
-.method public final invoke()Ljava/lang/Object;
-    .locals 13
+.method public final run()V
+    .locals 7
 
     iget v0, p0, Lbl4;->a:I
 
-    packed-switch v0, :pswitch_data_0
-
-    iget-object v0, p0, Lbl4;->c:Ldl4;
-
-    iget-object v1, v0, Ldl4;->c:Le55;
-
-    iget-object v2, v0, Ldl4;->b:Ly2b;
-
     iget-object p0, p0, Lbl4;->b:Lcl4;
 
-    iget-object p0, p0, Lcl4;->e:Ljava/lang/Object;
+    packed-switch v0, :pswitch_data_0
 
-    invoke-interface {p0}, Lje7;->getValue()Ljava/lang/Object;
+    iget v0, p0, Lcl4;->Z:I
 
-    move-result-object p0
+    if-nez v0, :cond_1
 
-    check-cast p0, Ljava/util/Map;
+    const/4 v0, 0x1
 
-    new-instance v3, Ljava/util/LinkedHashMap;
+    iput v0, p0, Lcl4;->Z:I
 
-    invoke-interface {p0}, Ljava/util/Map;->size()I
+    invoke-static {}, Lmq0;->w()Lmq0;
 
-    move-result v4
+    move-result-object v0
 
-    invoke-static {v4}, Ljz7;->C(I)I
+    sget-object v1, Lcl4;->w0:Ljava/lang/String;
 
-    move-result v4
+    new-instance v2, Ljava/lang/StringBuilder;
 
-    invoke-direct {v3, v4}, Ljava/util/LinkedHashMap;-><init>(I)V
+    const-string v3, "onAllConstraintsMet for "
 
-    invoke-interface {p0}, Ljava/util/Map;->entrySet()Ljava/util/Set;
+    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    move-result-object p0
+    iget-object v3, p0, Lcl4;->c:Ljvg;
 
-    invoke-interface {p0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    move-result-object p0
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    :goto_0
-    invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
+    move-result-object v2
 
-    move-result v4
+    invoke-virtual {v0, v1, v2}, Lmq0;->q(Ljava/lang/String;Ljava/lang/String;)V
 
-    if-eqz v4, :cond_0
+    iget-object v0, p0, Lcl4;->o:Ldue;
 
-    invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    iget-object v0, v0, Ldue;->o:Lzib;
+
+    iget-object v1, p0, Lcl4;->v0:Lgce;
+
+    const/4 v2, 0x0
+
+    invoke-virtual {v0, v1, v2}, Lzib;->h(Lgce;Lfo8;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Lcl4;->o:Ldue;
+
+    iget-object v0, v0, Ldue;->c:Lmwg;
+
+    iget-object v1, p0, Lcl4;->c:Ljvg;
+
+    const-string v2, "Starting timer for "
+
+    iget-object v3, v0, Lmwg;->d:Ljava/lang/Object;
+
+    monitor-enter v3
+
+    :try_start_0
+    invoke-static {}, Lmq0;->w()Lmq0;
 
     move-result-object v4
 
-    check-cast v4, Ljava/util/Map$Entry;
+    sget-object v5, Lmwg;->e:Ljava/lang/String;
 
-    invoke-interface {v4}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
+    new-instance v6, Ljava/lang/StringBuilder;
 
-    move-result-object v5
+    invoke-direct {v6, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-interface {v4}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
+    invoke-virtual {v6, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    move-result-object v4
+    invoke-virtual {v6}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-object v7, v4
+    move-result-object v2
 
-    check-cast v7, Luf5;
+    invoke-virtual {v4, v5, v2}, Lmq0;->q(Ljava/lang/String;Ljava/lang/String;)V
 
-    new-instance v6, Lwt0;
+    invoke-virtual {v0, v1}, Lmwg;->a(Ljvg;)V
 
-    const/4 v4, 0x0
+    new-instance v2, Llwg;
 
-    invoke-virtual {v2, v4}, Ly2b;->c(I)Lb9g;
+    invoke-direct {v2, v0, v1}, Llwg;-><init>(Lmwg;Ljvg;)V
 
-    move-result-object v8
+    iget-object v4, v0, Lmwg;->b:Ljava/util/HashMap;
 
-    invoke-virtual {v2}, Ly2b;->d()Lnh0;
+    invoke-virtual {v4, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    move-result-object v9
+    iget-object v4, v0, Lmwg;->c:Ljava/util/HashMap;
 
-    invoke-interface {v1}, Le55;->m()Ljava/util/concurrent/ExecutorService;
+    invoke-virtual {v4, v1, p0}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    move-result-object v10
+    iget-object p0, v0, Lmwg;->a:Lck7;
 
-    invoke-interface {v1}, Le55;->j()Ljava/util/concurrent/ExecutorService;
+    iget-object p0, p0, Lck7;->b:Ljava/lang/Object;
 
-    move-result-object v11
+    check-cast p0, Landroid/os/Handler;
 
-    iget-object v12, v0, Ldl4;->d:Lyo9;
+    const-wide/32 v0, 0x927c0
 
-    invoke-direct/range {v6 .. v12}, Lwt0;-><init>(Luf5;Lb9g;Lnh0;Ljava/util/concurrent/Executor;Ljava/util/concurrent/Executor;Lyo9;)V
+    invoke-virtual {p0, v2, v0, v1}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
 
-    invoke-interface {v3, v5, v6}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    monitor-exit v3
 
     goto :goto_0
 
+    :catchall_0
+    move-exception p0
+
+    monitor-exit v3
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    throw p0
+
     :cond_0
-    new-instance p0, Lbx6;
+    invoke-virtual {p0}, Lcl4;->b()V
 
-    invoke-direct {p0, v3}, Ljava/util/HashMap;-><init>(Ljava/util/Map;)V
+    goto :goto_0
 
-    return-object p0
+    :cond_1
+    invoke-static {}, Lmq0;->w()Lmq0;
+
+    move-result-object v0
+
+    sget-object v1, Lcl4;->w0:Ljava/lang/String;
+
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    const-string v3, "Already started work for "
+
+    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object p0, p0, Lcl4;->c:Ljvg;
+
+    invoke-virtual {v2, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-virtual {v0, v1, p0}, Lmq0;->q(Ljava/lang/String;Ljava/lang/String;)V
+
+    :goto_0
+    return-void
 
     :pswitch_0
-    new-instance v4, Lwt0;
+    invoke-static {p0}, Lcl4;->a(Lcl4;)V
 
-    iget-object v0, p0, Lbl4;->b:Lcl4;
-
-    iget-object v0, v0, Lcl4;->c:Ljava/lang/Object;
-
-    invoke-interface {v0}, Lje7;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    move-object v5, v0
-
-    check-cast v5, Luf5;
-
-    iget-object p0, p0, Lbl4;->c:Ldl4;
-
-    iget-object v0, p0, Ldl4;->b:Ly2b;
-
-    const/4 v1, 0x0
-
-    invoke-virtual {v0, v1}, Ly2b;->c(I)Lb9g;
-
-    move-result-object v6
-
-    invoke-virtual {v0}, Ly2b;->d()Lnh0;
-
-    move-result-object v7
-
-    iget-object v0, p0, Ldl4;->c:Le55;
-
-    invoke-interface {v0}, Le55;->m()Ljava/util/concurrent/ExecutorService;
-
-    move-result-object v8
-
-    invoke-interface {v0}, Le55;->j()Ljava/util/concurrent/ExecutorService;
-
-    move-result-object v9
-
-    iget-object v10, p0, Ldl4;->d:Lyo9;
-
-    invoke-direct/range {v4 .. v10}, Lwt0;-><init>(Luf5;Lb9g;Lnh0;Ljava/util/concurrent/Executor;Ljava/util/concurrent/Executor;Lyo9;)V
-
-    return-object v4
-
-    :pswitch_1
-    new-instance v5, Lwt0;
-
-    iget-object v0, p0, Lbl4;->b:Lcl4;
-
-    iget-object v0, v0, Lcl4;->a:Ljava/lang/Object;
-
-    invoke-interface {v0}, Lje7;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    move-object v6, v0
-
-    check-cast v6, Luf5;
-
-    iget-object p0, p0, Lbl4;->c:Ldl4;
-
-    iget-object v0, p0, Ldl4;->b:Ly2b;
-
-    const/4 v1, 0x0
-
-    invoke-virtual {v0, v1}, Ly2b;->c(I)Lb9g;
-
-    move-result-object v7
-
-    invoke-virtual {v0}, Ly2b;->d()Lnh0;
-
-    move-result-object v8
-
-    iget-object v0, p0, Ldl4;->c:Le55;
-
-    invoke-interface {v0}, Le55;->m()Ljava/util/concurrent/ExecutorService;
-
-    move-result-object v9
-
-    invoke-interface {v0}, Le55;->j()Ljava/util/concurrent/ExecutorService;
-
-    move-result-object v10
-
-    iget-object v11, p0, Ldl4;->d:Lyo9;
-
-    invoke-direct/range {v5 .. v11}, Lwt0;-><init>(Luf5;Lb9g;Lnh0;Ljava/util/concurrent/Executor;Ljava/util/concurrent/Executor;Lyo9;)V
-
-    return-object v5
+    return-void
 
     nop
 
     :pswitch_data_0
     .packed-switch 0x0
-        :pswitch_1
         :pswitch_0
     .end packed-switch
 .end method

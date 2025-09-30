@@ -2,251 +2,381 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-
-# static fields
-.field public static final b:Lb8g;
+# interfaces
+.implements Lcl7;
 
 
 # instance fields
-.field public final a:Lz7g;
+.field public final X:Ljava/io/Serializable;
+
+.field public Y:Ljava/lang/Object;
+
+.field public final synthetic a:I
+
+.field public final b:Lzb6;
+
+.field public c:Ljava/lang/Object;
+
+.field public final o:Ljava/lang/Object;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
-
-    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
-
-    const/16 v1, 0x1e
-
-    if-lt v0, v1, :cond_0
-
-    sget-object v0, Ly7g;->q:Lb8g;
-
-    sput-object v0, Lb8g;->b:Lb8g;
-
-    return-void
-
-    :cond_0
-    sget-object v0, Lz7g;->b:Lb8g;
-
-    sput-object v0, Lb8g;->b:Lb8g;
-
-    return-void
-.end method
-
-.method public constructor <init>()V
+.method public constructor <init>(Lone/me/sdk/arch/Widget;Ljava/lang/String;Ljava/lang/Class;Lzb6;)V
     .locals 1
 
-    .line 5
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/4 v0, 0x1
+
+    iput v0, p0, Lb8g;->a:I
 
     .line 6
-    new-instance v0, Lz7g;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0, p0}, Lz7g;-><init>(Lb8g;)V
+    .line 7
+    iput-object p1, p0, Lb8g;->o:Ljava/lang/Object;
 
-    iput-object v0, p0, Lb8g;->a:Lz7g;
+    iput-object p2, p0, Lb8g;->X:Ljava/io/Serializable;
+
+    iput-object p3, p0, Lb8g;->Y:Ljava/lang/Object;
+
+    iput-object p4, p0, Lb8g;->b:Lzb6;
 
     return-void
 .end method
 
-.method public constructor <init>(Landroid/view/WindowInsets;)V
-    .locals 2
+.method public constructor <init>(Ly33;Ln5d;Lzb6;Ln5d;)V
+    .locals 1
+
+    const/4 v0, 0x0
+
+    iput v0, p0, Lb8g;->a:I
 
     .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 2
-    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
-
-    const/16 v1, 0x1e
-
-    if-lt v0, v1, :cond_0
+    iput-object p1, p0, Lb8g;->c:Ljava/lang/Object;
 
     .line 3
-    new-instance v0, Ly7g;
-
-    invoke-direct {v0, p0, p1}, Ly7g;-><init>(Lb8g;Landroid/view/WindowInsets;)V
-
-    iput-object v0, p0, Lb8g;->a:Lz7g;
-
-    return-void
+    iput-object p2, p0, Lb8g;->o:Ljava/lang/Object;
 
     .line 4
-    :cond_0
-    new-instance v0, Lw7g;
+    iput-object p3, p0, Lb8g;->b:Lzb6;
 
-    invoke-direct {v0, p0, p1}, Lw7g;-><init>(Lb8g;Landroid/view/WindowInsets;)V
-
-    iput-object v0, p0, Lb8g;->a:Lz7g;
+    .line 5
+    iput-object p4, p0, Lb8g;->X:Ljava/io/Serializable;
 
     return-void
-.end method
-
-.method public static f(Landroid/view/View;Landroid/view/WindowInsets;)Lb8g;
-    .locals 2
-
-    new-instance v0, Lb8g;
-
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    invoke-direct {v0, p1}, Lb8g;-><init>(Landroid/view/WindowInsets;)V
-
-    if-eqz p0, :cond_0
-
-    invoke-virtual {p0}, Landroid/view/View;->isAttachedToWindow()Z
-
-    move-result p1
-
-    if-eqz p1, :cond_0
-
-    sget-object p1, Ltnf;->a:Ljava/util/WeakHashMap;
-
-    invoke-static {p0}, Ljnf;->a(Landroid/view/View;)Lb8g;
-
-    move-result-object p1
-
-    iget-object v1, v0, Lb8g;->a:Lz7g;
-
-    invoke-virtual {v1, p1}, Lz7g;->q(Lb8g;)V
-
-    invoke-virtual {p0}, Landroid/view/View;->getRootView()Landroid/view/View;
-
-    move-result-object p0
-
-    invoke-virtual {v1, p0}, Lz7g;->d(Landroid/view/View;)V
-
-    :cond_0
-    return-object v0
 .end method
 
 
 # virtual methods
-.method public final a()I
-    .locals 0
-
-    iget-object p0, p0, Lb8g;->a:Lz7g;
-
-    invoke-virtual {p0}, Lz7g;->j()Ln27;
-
-    move-result-object p0
-
-    iget p0, p0, Ln27;->d:I
-
-    return p0
-.end method
-
-.method public final b()I
-    .locals 0
-
-    iget-object p0, p0, Lb8g;->a:Lz7g;
-
-    invoke-virtual {p0}, Lz7g;->j()Ln27;
-
-    move-result-object p0
-
-    iget p0, p0, Ln27;->a:I
-
-    return p0
-.end method
-
-.method public final c()I
-    .locals 0
-
-    iget-object p0, p0, Lb8g;->a:Lz7g;
-
-    invoke-virtual {p0}, Lz7g;->j()Ln27;
-
-    move-result-object p0
-
-    iget p0, p0, Ln27;->c:I
-
-    return p0
-.end method
-
-.method public final d()I
-    .locals 0
-
-    iget-object p0, p0, Lb8g;->a:Lz7g;
-
-    invoke-virtual {p0}, Lz7g;->j()Ln27;
-
-    move-result-object p0
-
-    iget p0, p0, Ln27;->b:I
-
-    return p0
-.end method
-
-.method public final e()Landroid/view/WindowInsets;
+.method public final a()Z
     .locals 1
 
-    iget-object p0, p0, Lb8g;->a:Lz7g;
+    iget v0, p0, Lb8g;->a:I
 
-    instance-of v0, p0, Lt7g;
+    packed-switch v0, :pswitch_data_0
 
-    if-eqz v0, :cond_0
+    iget-object p0, p0, Lb8g;->c:Ljava/lang/Object;
 
-    check-cast p0, Lt7g;
+    check-cast p0, Lx7g;
 
-    iget-object p0, p0, Lt7g;->c:Landroid/view/WindowInsets;
-
-    return-object p0
-
-    :cond_0
-    const/4 p0, 0x0
-
-    return-object p0
-.end method
-
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
-
-    if-ne p0, p1, :cond_0
+    if-eqz p0, :cond_0
 
     const/4 p0, 0x1
 
-    return p0
+    goto :goto_0
 
     :cond_0
-    instance-of v0, p1, Lb8g;
-
-    if-nez v0, :cond_1
-
     const/4 p0, 0x0
 
+    :goto_0
     return p0
+
+    :pswitch_0
+    iget-object p0, p0, Lb8g;->Y:Ljava/lang/Object;
+
+    check-cast p0, Ly7g;
+
+    if-eqz p0, :cond_1
+
+    const/4 p0, 0x1
+
+    goto :goto_1
 
     :cond_1
-    check-cast p1, Lb8g;
-
-    iget-object p0, p0, Lb8g;->a:Lz7g;
-
-    iget-object p1, p1, Lb8g;->a:Lz7g;
-
-    invoke-static {p0, p1}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p0
-
-    return p0
-.end method
-
-.method public final hashCode()I
-    .locals 0
-
-    iget-object p0, p0, Lb8g;->a:Lz7g;
-
-    if-nez p0, :cond_0
-
     const/4 p0, 0x0
 
+    :goto_1
     return p0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final getValue()Ljava/lang/Object;
+    .locals 8
+
+    iget v0, p0, Lb8g;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    iget-object v0, p0, Lb8g;->c:Ljava/lang/Object;
+
+    check-cast v0, Lx7g;
+
+    if-nez v0, :cond_7
+
+    sget-object v0, Lqz7;->o:Lqz7;
+
+    iget-object v1, p0, Lb8g;->o:Ljava/lang/Object;
+
+    check-cast v1, Lone/me/sdk/arch/Widget;
+
+    iget-object v2, p0, Lb8g;->X:Ljava/io/Serializable;
+
+    check-cast v2, Ljava/lang/String;
+
+    invoke-static {v1, v2}, Lone/me/sdk/arch/Widget;->access$findWidgetByScopeId-iP7A0G4(Lone/me/sdk/arch/Widget;Ljava/lang/String;)Lone/me/sdk/arch/Widget;
+
+    move-result-object v1
+
+    const/4 v2, 0x0
+
+    if-eqz v1, :cond_2
+
+    iget-object v3, p0, Lb8g;->o:Ljava/lang/Object;
+
+    check-cast v3, Lone/me/sdk/arch/Widget;
+
+    invoke-static {v3}, Lone/me/sdk/arch/Widget;->access$getTag$p(Lone/me/sdk/arch/Widget;)Ljava/lang/String;
+
+    move-result-object v3
+
+    iget-object v4, p0, Lb8g;->Y:Ljava/lang/Object;
+
+    check-cast v4, Ljava/lang/Class;
+
+    sget-object v5, Ljtg;->g:Loja;
+
+    if-nez v5, :cond_0
+
+    goto :goto_0
 
     :cond_0
-    invoke-virtual {p0}, Lz7g;->hashCode()I
+    invoke-virtual {v5, v0}, Loja;->a(Lqz7;)Z
 
-    move-result p0
+    move-result v6
 
-    return p0
+    if-eqz v6, :cond_1
+
+    invoke-virtual {v4}, Ljava/lang/Class;->getCanonicalName()Ljava/lang/String;
+
+    move-result-object v4
+
+    const-string v6, "Found vm="
+
+    const-string v7, " in parent scope, trying to access it"
+
+    invoke-static {v6, v4, v7}, Lyv7;->h(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v4
+
+    invoke-virtual {v5, v0, v3, v4, v2}, Loja;->b(Lqz7;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    :cond_1
+    :goto_0
+    invoke-virtual {v1}, Lone/me/sdk/arch/Widget;->getViewModelStore$arch_release()Lutg;
+
+    move-result-object v0
+
+    iget-object v1, p0, Lb8g;->Y:Ljava/lang/Object;
+
+    check-cast v1, Ljava/lang/Class;
+
+    invoke-virtual {v0, v1}, Lutg;->a(Ljava/lang/Class;)Lx7g;
+
+    move-result-object v0
+
+    goto :goto_2
+
+    :cond_2
+    iget-object v1, p0, Lb8g;->o:Ljava/lang/Object;
+
+    check-cast v1, Lone/me/sdk/arch/Widget;
+
+    invoke-static {v1}, Lone/me/sdk/arch/Widget;->access$getTag$p(Lone/me/sdk/arch/Widget;)Ljava/lang/String;
+
+    move-result-object v1
+
+    iget-object v3, p0, Lb8g;->Y:Ljava/lang/Object;
+
+    check-cast v3, Ljava/lang/Class;
+
+    iget-object v4, p0, Lb8g;->b:Lzb6;
+
+    sget-object v5, Ljtg;->g:Loja;
+
+    if-nez v5, :cond_3
+
+    goto :goto_1
+
+    :cond_3
+    invoke-virtual {v5, v0}, Loja;->a(Lqz7;)Z
+
+    move-result v6
+
+    if-eqz v6, :cond_4
+
+    invoke-virtual {v3}, Ljava/lang/Class;->getCanonicalName()Ljava/lang/String;
+
+    move-result-object v3
+
+    new-instance v6, Ljava/lang/StringBuilder;
+
+    const-string v7, "Not found vm="
+
+    invoke-direct {v6, v7}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v6, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v3, " in parent scope, trying to create it via fabric="
+
+    invoke-virtual {v6, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v6, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v6}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-virtual {v5, v0, v1, v3, v2}, Loja;->b(Lqz7;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    :cond_4
+    :goto_1
+    iget-object v0, p0, Lb8g;->b:Lzb6;
+
+    if-eqz v0, :cond_5
+
+    invoke-interface {v0}, Lzb6;->invoke()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lx7g;
+
+    goto :goto_2
+
+    :cond_5
+    move-object v0, v2
+
+    :goto_2
+    iget-object v1, p0, Lb8g;->X:Ljava/io/Serializable;
+
+    check-cast v1, Ljava/lang/String;
+
+    if-eqz v0, :cond_6
+
+    iput-object v0, p0, Lb8g;->c:Ljava/lang/Object;
+
+    goto :goto_3
+
+    :cond_6
+    invoke-static {v1}, Lo6d;->a(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p0
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "\n                    Cant find widget by given scopeId="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string p0, "!\n                    \n                    Please, either register such widget in hierarchy before lookup, or provide default factory for such VM\n                    "
+
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-static {p0}, Lkme;->P(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p0
+
+    new-instance v0, Ljava/lang/IllegalArgumentException;
+
+    invoke-virtual {p0}, Ljava/lang/Object;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-direct {v0, p0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+
+    :cond_7
+    :goto_3
+    return-object v0
+
+    :pswitch_0
+    iget-object v0, p0, Lb8g;->Y:Ljava/lang/Object;
+
+    check-cast v0, Ly7g;
+
+    if-nez v0, :cond_8
+
+    iget-object v0, p0, Lb8g;->o:Ljava/lang/Object;
+
+    check-cast v0, Ln5d;
+
+    invoke-virtual {v0}, Ln5d;->invoke()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lf8g;
+
+    iget-object v1, p0, Lb8g;->b:Lzb6;
+
+    invoke-interface {v1}, Lzb6;->invoke()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Ld8g;
+
+    iget-object v2, p0, Lb8g;->X:Ljava/io/Serializable;
+
+    check-cast v2, Ln5d;
+
+    invoke-virtual {v2}, Ln5d;->invoke()Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Lr24;
+
+    new-instance v3, Lj9e;
+
+    invoke-direct {v3, v0, v1, v2}, Lj9e;-><init>(Lf8g;Ld8g;Lr24;)V
+
+    iget-object v0, p0, Lb8g;->c:Ljava/lang/Object;
+
+    check-cast v0, Ly33;
+
+    invoke-virtual {v3, v0}, Lj9e;->b(Ly33;)Ly7g;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lb8g;->Y:Ljava/lang/Object;
+
+    :cond_8
+    return-object v0
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

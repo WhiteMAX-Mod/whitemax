@@ -83,20 +83,20 @@
     move-object v1, p3
 
     .line 46
-    invoke-static {v0}, Lnv0;->c(Ljava/nio/ByteBuffer;)Ljava/nio/ByteBuffer;
+    invoke-static {v0}, Lyv0;->c(Ljava/nio/ByteBuffer;)Ljava/nio/ByteBuffer;
 
     move-result-object p0
 
     .line 47
-    invoke-static {v1}, Lnv0;->c(Ljava/nio/ByteBuffer;)Ljava/nio/ByteBuffer;
+    invoke-static {v1}, Lyv0;->c(Ljava/nio/ByteBuffer;)Ljava/nio/ByteBuffer;
 
     move-result-object p1
 
     .line 48
-    invoke-static {p2, p0}, Lnv0;->a(ILjava/nio/ByteBuffer;)V
+    invoke-static {p2, p0}, Lyv0;->a(ILjava/nio/ByteBuffer;)V
 
     .line 49
-    invoke-static {p1, p4, p5}, Lnv0;->b(Ljava/nio/ByteBuffer;II)V
+    invoke-static {p1, p4, p5}, Lyv0;->b(Ljava/nio/ByteBuffer;II)V
 
     const/4 p3, 0x1
 
@@ -119,7 +119,7 @@
     new-instance p0, Lnet/jpountz/lz4/LZ4Exception;
 
     .line 53
-    invoke-static {p2, v0}, Lm26;->h(ILjava/lang/String;)Ljava/lang/String;
+    invoke-static {p2, v0}, Lyv7;->e(ILjava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
@@ -199,7 +199,7 @@
     new-instance p0, Lnet/jpountz/lz4/LZ4Exception;
 
     .line 59
-    invoke-static {v1, v0}, Lm26;->h(ILjava/lang/String;)Ljava/lang/String;
+    invoke-static {v1, v0}, Lyv7;->e(ILjava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
@@ -215,7 +215,7 @@
     add-int/2addr v1, v4
 
     .line 62
-    invoke-static {v1, p0}, Lnv0;->d(ILjava/nio/ByteBuffer;)I
+    invoke-static {v1, p0}, Lyv0;->d(ILjava/nio/ByteBuffer;)I
 
     move-result v2
 
@@ -271,7 +271,7 @@
     new-instance p0, Lnet/jpountz/lz4/LZ4Exception;
 
     .line 66
-    invoke-static {v1, v0}, Lm26;->h(ILjava/lang/String;)Ljava/lang/String;
+    invoke-static {v1, v0}, Lyv7;->e(ILjava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
@@ -294,7 +294,7 @@
     new-instance p0, Lnet/jpountz/lz4/LZ4Exception;
 
     .line 70
-    invoke-static {v1, v0}, Lm26;->h(ILjava/lang/String;)Ljava/lang/String;
+    invoke-static {v1, v0}, Lyv7;->e(ILjava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
@@ -308,13 +308,13 @@
     .locals 10
 
     .line 1
-    sget-object p0, Lz5f;->a:Lsun/misc/Unsafe;
+    sget-object p0, Ltmf;->a:Lsun/misc/Unsafe;
 
     .line 2
-    invoke-static {p2, p1}, Lwoc;->a(I[B)V
+    invoke-static {p2, p1}, Lo2d;->a(I[B)V
 
     .line 3
-    invoke-static {p4, p3, p5}, Lwoc;->b(I[BI)V
+    invoke-static {p4, p3, p5}, Lo2d;->b(I[BI)V
 
     const/4 p0, 0x1
 
@@ -324,7 +324,7 @@
     if-nez p5, :cond_1
 
     .line 5
-    invoke-static {p2, p1}, Lz5f;->a(I[B)B
+    invoke-static {p2, p1}, Ltmf;->a(I[B)B
 
     move-result p1
 
@@ -337,7 +337,7 @@
     new-instance p0, Lnet/jpountz/lz4/LZ4Exception;
 
     .line 7
-    invoke-static {p2, v0}, Lm26;->h(ILjava/lang/String;)Ljava/lang/String;
+    invoke-static {p2, v0}, Lyv7;->e(ILjava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
@@ -355,7 +355,7 @@
 
     .line 9
     :goto_0
-    invoke-static {v1, p1}, Lz5f;->a(I[B)B
+    invoke-static {v1, p1}, Ltmf;->a(I[B)B
 
     move-result v3
 
@@ -375,7 +375,7 @@
     add-int/lit8 v7, v1, 0x1
 
     .line 10
-    invoke-static {v1, p1}, Lz5f;->a(I[B)B
+    invoke-static {v1, p1}, Ltmf;->a(I[B)B
 
     move-result v1
 
@@ -417,7 +417,7 @@
     new-instance p0, Lnet/jpountz/lz4/LZ4Exception;
 
     .line 13
-    invoke-static {v1, v0}, Lm26;->h(ILjava/lang/String;)Ljava/lang/String;
+    invoke-static {v1, v0}, Lyv7;->e(ILjava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
@@ -433,12 +433,12 @@
     add-int/2addr v1, v4
 
     .line 16
-    invoke-static {v1, p1}, Lz5f;->f(I[B)S
+    invoke-static {v1, p1}, Ltmf;->f(I[B)S
 
     move-result v2
 
     .line 17
-    sget-object v4, Lqaf;->a:Ljava/nio/ByteOrder;
+    sget-object v4, Lorf;->a:Ljava/nio/ByteOrder;
 
     sget-object v9, Ljava/nio/ByteOrder;->BIG_ENDIAN:Ljava/nio/ByteOrder;
 
@@ -468,7 +468,7 @@
     add-int/lit8 v4, v1, 0x1
 
     .line 19
-    invoke-static {v1, p1}, Lz5f;->a(I[B)B
+    invoke-static {v1, p1}, Ltmf;->a(I[B)B
 
     move-result v1
 
@@ -506,7 +506,7 @@
     new-instance p0, Lnet/jpountz/lz4/LZ4Exception;
 
     .line 22
-    invoke-static {v1, v0}, Lm26;->h(ILjava/lang/String;)Ljava/lang/String;
+    invoke-static {v1, v0}, Lyv7;->e(ILjava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
@@ -529,7 +529,7 @@
     new-instance p0, Lnet/jpountz/lz4/LZ4Exception;
 
     .line 26
-    invoke-static {v1, v0}, Lm26;->h(ILjava/lang/String;)Ljava/lang/String;
+    invoke-static {v1, v0}, Lyv7;->e(ILjava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 

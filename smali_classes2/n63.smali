@@ -2,86 +2,54 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lo63;
-
 
 # instance fields
-.field public final a:J
+.field public final a:Lzte;
 
 
 # direct methods
-.method public constructor <init>(J)V
-    .locals 0
+.method public constructor <init>(I)V
+    .locals 1
+
+    packed-switch p1, :pswitch_data_0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-wide p1, p0, Ln63;->a:J
+    new-instance p1, Lfe;
+
+    const/16 v0, 0xe
+
+    invoke-direct {p1, v0, p0}, Lfe;-><init>(ILjava/lang/Object;)V
+
+    new-instance v0, Lzte;
+
+    invoke-direct {v0, p1}, Lzte;-><init>(Lzb6;)V
+
+    iput-object v0, p0, Ln63;->a:Lzte;
 
     return-void
-.end method
 
+    :pswitch_0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 5
+    new-instance p1, La5d;
 
-    const/4 v0, 0x1
+    const/16 v0, 0x1b
 
-    if-ne p0, p1, :cond_0
+    invoke-direct {p1, v0}, La5d;-><init>(I)V
 
-    return v0
+    new-instance v0, Lzte;
 
-    :cond_0
-    instance-of v1, p1, Ln63;
+    invoke-direct {v0, p1}, Lzte;-><init>(Lzb6;)V
 
-    const/4 v2, 0x0
+    iput-object v0, p0, Ln63;->a:Lzte;
 
-    if-nez v1, :cond_1
+    return-void
 
-    return v2
+    nop
 
-    :cond_1
-    check-cast p1, Ln63;
-
-    iget-wide v3, p0, Ln63;->a:J
-
-    iget-wide p0, p1, Ln63;->a:J
-
-    cmp-long p0, v3, p0
-
-    if-eqz p0, :cond_2
-
-    return v2
-
-    :cond_2
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 2
-
-    iget-wide v0, p0, Ln63;->a:J
-
-    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
-
-    move-result p0
-
-    return p0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 4
-
-    const-string v0, "Remove(chatId="
-
-    const-string v1, ")"
-
-    iget-wide v2, p0, Ln63;->a:J
-
-    invoke-static {v2, v3, v0, v1}, Lu88;->i(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_0
+    .end packed-switch
 .end method

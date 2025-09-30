@@ -1,306 +1,73 @@
-.class public final Lix1;
-.super Lqj0;
+.class public final synthetic Lix1;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public A0:Ld75;
+.field public final synthetic a:I
 
-.field public B0:J
-
-.field public final y0:Lc64;
-
-.field public final z0:Lpna;
+.field public final synthetic b:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 2
+.method public synthetic constructor <init>(ILjava/lang/Object;)V
+    .locals 0
 
-    const/4 v0, 0x6
+    iput p1, p0, Lix1;->a:I
 
-    invoke-direct {p0, v0}, Lqj0;-><init>(I)V
+    iput-object p2, p0, Lix1;->b:Ljava/lang/Object;
 
-    new-instance v0, Lc64;
-
-    const/4 v1, 0x1
-
-    invoke-direct {v0, v1}, Lc64;-><init>(I)V
-
-    iput-object v0, p0, Lix1;->y0:Lc64;
-
-    new-instance v0, Lpna;
-
-    invoke-direct {v0}, Lpna;-><init>()V
-
-    iput-object v0, p0, Lix1;->z0:Lpna;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(ILjava/lang/Object;)V
+.method public final a()V
     .locals 1
 
-    const/16 v0, 0x8
+    iget v0, p0, Lix1;->a:I
 
-    if-ne p1, v0, :cond_0
+    iget-object p0, p0, Lix1;->b:Ljava/lang/Object;
 
-    check-cast p2, Ld75;
+    packed-switch v0, :pswitch_data_0
 
-    iput-object p2, p0, Lix1;->A0:Ld75;
+    check-cast p0, Lc7d;
 
-    :cond_0
-    return-void
-.end method
+    iget-object v0, p0, Lc7d;->b:Ljava/lang/Object;
 
-.method public final g()Ljava/lang/String;
-    .locals 0
+    monitor-enter v0
 
-    const-string p0, "CameraMotionRenderer"
+    :try_start_0
+    invoke-virtual {p0}, Lc7d;->c()V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    return-object p0
-.end method
-
-.method public final i()Z
-    .locals 0
-
-    invoke-virtual {p0}, Lqj0;->h()Z
-
-    move-result p0
-
-    return p0
-.end method
-
-.method public final k()Z
-    .locals 0
-
-    const/4 p0, 0x1
-
-    return p0
-.end method
-
-.method public final l()V
-    .locals 0
-
-    iget-object p0, p0, Lix1;->A0:Ld75;
-
-    if-eqz p0, :cond_0
-
-    invoke-virtual {p0}, Ld75;->c()V
-
-    :cond_0
-    return-void
-.end method
-
-.method public final n(JZ)V
-    .locals 0
-
-    const-wide/high16 p1, -0x8000000000000000L
-
-    iput-wide p1, p0, Lix1;->B0:J
-
-    iget-object p0, p0, Lix1;->A0:Ld75;
-
-    if-eqz p0, :cond_0
-
-    invoke-virtual {p0}, Ld75;->c()V
-
-    :cond_0
-    return-void
-.end method
-
-.method public final t([Lfz5;JJ)V
-    .locals 0
+    monitor-exit v0
 
     return-void
-.end method
 
-.method public final v(JJ)V
-    .locals 5
+    :catchall_0
+    move-exception p0
 
-    :cond_0
-    :goto_0
-    invoke-virtual {p0}, Lqj0;->h()Z
+    monitor-exit v0
 
-    move-result p3
+    throw p0
 
-    if-nez p3, :cond_7
-
-    iget-wide p3, p0, Lix1;->B0:J
-
-    const-wide/32 v0, 0x186a0
-
-    add-long/2addr v0, p1
-
-    cmp-long p3, p3, v0
-
-    if-gez p3, :cond_7
-
-    iget-object p3, p0, Lix1;->y0:Lc64;
-
-    invoke-virtual {p3}, Lc64;->o()V
-
-    iget-object p4, p0, Lqj0;->c:Lha8;
-
-    invoke-virtual {p4}, Lha8;->f()V
+    :pswitch_0
+    check-cast p0, Lqs1;
 
     const/4 v0, 0x0
 
-    invoke-virtual {p0, p4, p3, v0}, Lqj0;->u(Lha8;Lc64;I)I
+    invoke-virtual {p0, v0}, Lqs1;->b(Ljava/lang/Object;)Z
 
-    move-result p4
-
-    const/4 v1, -0x4
-
-    if-ne p4, v1, :cond_7
-
-    const/4 p4, 0x4
-
-    invoke-virtual {p3, p4}, Ldy;->e(I)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_1
-
-    goto :goto_4
-
-    :cond_1
-    iget-wide v1, p3, Lc64;->Z:J
-
-    iput-wide v1, p0, Lix1;->B0:J
-
-    iget-wide v3, p0, Lqj0;->s0:J
-
-    cmp-long v1, v1, v3
-
-    if-gez v1, :cond_2
-
-    const/4 v1, 0x1
-
-    goto :goto_1
-
-    :cond_2
-    move v1, v0
-
-    :goto_1
-    iget-object v2, p0, Lix1;->A0:Ld75;
-
-    if-eqz v2, :cond_0
-
-    if-eqz v1, :cond_3
-
-    goto :goto_0
-
-    :cond_3
-    invoke-virtual {p3}, Lc64;->s()V
-
-    iget-object p3, p3, Lc64;->X:Ljava/nio/ByteBuffer;
-
-    sget v1, Lpaf;->a:I
-
-    invoke-virtual {p3}, Ljava/nio/Buffer;->remaining()I
-
-    move-result v1
-
-    const/16 v2, 0x10
-
-    if-eq v1, v2, :cond_4
-
-    const/4 p3, 0x0
-
-    goto :goto_3
-
-    :cond_4
-    invoke-virtual {p3}, Ljava/nio/ByteBuffer;->array()[B
-
-    move-result-object v1
-
-    invoke-virtual {p3}, Ljava/nio/Buffer;->limit()I
-
-    move-result v2
-
-    iget-object v3, p0, Lix1;->z0:Lpna;
-
-    invoke-virtual {v3, v2, v1}, Lpna;->E(I[B)V
-
-    invoke-virtual {p3}, Ljava/nio/ByteBuffer;->arrayOffset()I
-
-    move-result p3
-
-    add-int/2addr p3, p4
-
-    invoke-virtual {v3, p3}, Lpna;->G(I)V
-
-    const/4 p3, 0x3
-
-    new-array p4, p3, [F
-
-    :goto_2
-    if-ge v0, p3, :cond_5
-
-    invoke-virtual {v3}, Lpna;->i()I
-
-    move-result v1
-
-    invoke-static {v1}, Ljava/lang/Float;->intBitsToFloat(I)F
-
-    move-result v1
-
-    aput v1, p4, v0
-
-    add-int/lit8 v0, v0, 0x1
-
-    goto :goto_2
-
-    :cond_5
-    move-object p3, p4
-
-    :goto_3
-    if-nez p3, :cond_6
-
-    goto :goto_0
-
-    :cond_6
-    iget-object p3, p0, Lix1;->A0:Ld75;
-
-    invoke-virtual {p3}, Ld75;->b()V
-
-    goto :goto_0
-
-    :cond_7
-    :goto_4
     return-void
-.end method
 
-.method public final z(Lfz5;)I
-    .locals 0
+    nop
 
-    const-string p0, "application/x-camera-motion"
-
-    iget-object p1, p1, Lfz5;->m:Ljava/lang/String;
-
-    invoke-virtual {p0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result p0
-
-    const/4 p1, 0x0
-
-    if-eqz p0, :cond_0
-
-    const/4 p0, 0x4
-
-    invoke-static {p0, p1, p1, p1}, Lqj0;->c(IIII)I
-
-    move-result p0
-
-    return p0
-
-    :cond_0
-    invoke-static {p1, p1, p1, p1}, Lqj0;->c(IIII)I
-
-    move-result p0
-
-    return p0
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

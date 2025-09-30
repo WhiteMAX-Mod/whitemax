@@ -2,24 +2,23 @@
 .super Ljava/lang/Enum;
 .source "SourceFile"
 
+# interfaces
+.implements Ljava/util/concurrent/Executor;
+
 
 # static fields
 .field public static final enum a:Lbp4;
 
-.field public static final enum b:Lbp4;
-
-.field public static final enum c:Lbp4;
-
-.field public static final synthetic o:[Lbp4;
+.field public static final synthetic b:[Lbp4;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 5
+    .locals 3
 
     new-instance v0, Lbp4;
 
-    const-string v1, "ALWAYS"
+    const-string v1, "INSTANCE"
 
     const/4 v2, 0x0
 
@@ -27,31 +26,11 @@
 
     sput-object v0, Lbp4;->a:Lbp4;
 
-    new-instance v1, Lbp4;
-
-    const-string v2, "AUTO"
-
-    const/4 v3, 0x1
-
-    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v1, Lbp4;->b:Lbp4;
-
-    new-instance v2, Lbp4;
-
-    const-string v3, "NEVER"
-
-    const/4 v4, 0x2
-
-    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v2, Lbp4;->c:Lbp4;
-
-    filled-new-array {v0, v1, v2}, [Lbp4;
+    filled-new-array {v0}, [Lbp4;
 
     move-result-object v0
 
-    sput-object v0, Lbp4;->o:[Lbp4;
+    sput-object v0, Lbp4;->b:[Lbp4;
 
     return-void
 .end method
@@ -73,13 +52,31 @@
 .method public static values()[Lbp4;
     .locals 1
 
-    sget-object v0, Lbp4;->o:[Lbp4;
+    sget-object v0, Lbp4;->b:[Lbp4;
 
-    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
+    invoke-virtual {v0}, [Ljava/lang/Object;->clone()Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, [Lbp4;
 
     return-object v0
+.end method
+
+
+# virtual methods
+.method public final execute(Ljava/lang/Runnable;)V
+    .locals 0
+
+    invoke-interface {p1}, Ljava/lang/Runnable;->run()V
+
+    return-void
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 0
+
+    const-string p0, "DirectExecutor"
+
+    return-object p0
 .end method

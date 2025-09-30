@@ -1,284 +1,170 @@
 .class public final Lmve;
-.super Ljava/lang/Object;
+.super Lure;
 .source "SourceFile"
+
+# interfaces
+.implements Lpc6;
 
 
 # instance fields
-.field public final a:I
+.field public X:I
 
-.field public final b:I
+.field public synthetic Y:Ljava/lang/Object;
 
-.field public final c:I
-
-.field public final d:I
-
-.field public final e:I
-
-.field public final f:I
-
-.field public final g:I
-
-.field public final h:I
-
-.field public final i:I
+.field public final synthetic Z:Lnve;
 
 
 # direct methods
-.method public constructor <init>(IIIIIIIII)V
+.method public constructor <init>(Lnve;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lmve;->Z:Lnve;
 
-    iput p1, p0, Lmve;->a:I
+    const/4 p1, 0x2
 
-    iput p2, p0, Lmve;->b:I
-
-    iput p3, p0, Lmve;->c:I
-
-    iput p4, p0, Lmve;->d:I
-
-    iput p5, p0, Lmve;->e:I
-
-    iput p6, p0, Lmve;->f:I
-
-    iput p7, p0, Lmve;->g:I
-
-    iput p8, p0, Lmve;->h:I
-
-    iput p9, p0, Lmve;->i:I
+    invoke-direct {p0, p1, p2}, Lure;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 2
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    if-ne p0, p1, :cond_0
+    check-cast p1, Ly04;
+
+    check-cast p2, Lkotlin/coroutines/Continuation;
+
+    invoke-virtual {p0, p1, p2}, Lmve;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+
+    move-result-object p0
+
+    check-cast p0, Lmve;
+
+    sget-object p1, Lylf;->a:Lylf;
+
+    invoke-virtual {p0, p1}, Lmve;->o(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 1
+
+    new-instance v0, Lmve;
+
+    iget-object p0, p0, Lmve;->Z:Lnve;
+
+    invoke-direct {v0, p0, p2}, Lmve;-><init>(Lnve;Lkotlin/coroutines/Continuation;)V
+
+    iput-object p1, v0, Lmve;->Y:Ljava/lang/Object;
+
+    return-object v0
+.end method
+
+.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 7
+
+    iget-object v0, p0, Lmve;->Z:Lnve;
+
+    iget-object v1, v0, Lnve;->b:Ljava/lang/String;
+
+    iget v2, p0, Lmve;->X:I
+
+    const/4 v3, 0x1
+
+    const/4 v4, 0x0
+
+    if-eqz v2, :cond_1
+
+    if-ne v2, v3, :cond_0
+
+    :try_start_0
+    invoke-static {p1}, Lqe5;->V(Ljava/lang/Object;)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     goto :goto_1
 
-    :cond_0
-    instance-of v0, p1, Lmve;
-
-    if-nez v0, :cond_1
+    :catchall_0
+    move-exception p0
 
     goto :goto_0
+
+    :cond_0
+    new-instance p0, Ljava/lang/IllegalStateException;
+
+    const-string p1, "call to \'resume\' before \'invoke\' with coroutine"
+
+    invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p0
 
     :cond_1
-    check-cast p1, Lmve;
+    invoke-static {p1}, Lqe5;->V(Ljava/lang/Object;)V
 
-    iget v0, p0, Lmve;->a:I
+    iget-object p1, p0, Lmve;->Y:Ljava/lang/Object;
 
-    iget v1, p1, Lmve;->a:I
+    check-cast p1, Ly04;
 
-    if-eq v0, v1, :cond_2
+    :try_start_1
+    new-instance v2, Llve;
 
-    goto :goto_0
+    invoke-direct {v2, p1, v4, v0}, Llve;-><init>(Ljava/lang/Object;Lkotlin/coroutines/Continuation;Lnve;)V
 
-    :cond_2
-    iget v0, p0, Lmve;->b:I
+    iput v3, p0, Lmve;->X:I
 
-    iget v1, p1, Lmve;->b:I
+    const-wide/16 v5, 0xbb8
 
-    if-eq v0, v1, :cond_3
+    invoke-static {v5, v6, v2, p0}, Lsu0;->X(JLpc6;Ljx3;)Ljava/lang/Object;
 
-    goto :goto_0
+    move-result-object p1
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    :cond_3
-    iget v0, p0, Lmve;->c:I
+    sget-object p0, Lz04;->a:Lz04;
 
-    iget v1, p1, Lmve;->c:I
+    if-ne p1, p0, :cond_2
 
-    if-eq v0, v1, :cond_4
-
-    goto :goto_0
-
-    :cond_4
-    iget v0, p0, Lmve;->d:I
-
-    iget v1, p1, Lmve;->d:I
-
-    if-eq v0, v1, :cond_5
-
-    goto :goto_0
-
-    :cond_5
-    iget v0, p0, Lmve;->e:I
-
-    iget v1, p1, Lmve;->e:I
-
-    if-eq v0, v1, :cond_6
-
-    goto :goto_0
-
-    :cond_6
-    iget v0, p0, Lmve;->f:I
-
-    iget v1, p1, Lmve;->f:I
-
-    if-eq v0, v1, :cond_7
-
-    goto :goto_0
-
-    :cond_7
-    iget v0, p0, Lmve;->g:I
-
-    iget v1, p1, Lmve;->g:I
-
-    if-eq v0, v1, :cond_8
-
-    goto :goto_0
-
-    :cond_8
-    iget v0, p0, Lmve;->h:I
-
-    iget v1, p1, Lmve;->h:I
-
-    if-eq v0, v1, :cond_9
-
-    goto :goto_0
-
-    :cond_9
-    iget p0, p0, Lmve;->i:I
-
-    iget p1, p1, Lmve;->i:I
-
-    if-eq p0, p1, :cond_a
+    return-object p0
 
     :goto_0
-    const/4 p0, 0x0
+    new-instance p1, Lhvc;
 
-    return p0
+    invoke-direct {p1, p0}, Lhvc;-><init>(Ljava/lang/Throwable;)V
 
-    :cond_a
+    :cond_2
     :goto_1
-    const/4 p0, 0x1
+    instance-of p0, p1, Lhvc;
 
-    return p0
-.end method
+    if-nez p0, :cond_3
 
-.method public final hashCode()I
-    .locals 3
+    move-object p0, p1
 
-    iget v0, p0, Lmve;->a:I
+    check-cast p0, Lylf;
 
-    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
+    const-string p0, "deleted push token"
 
-    move-result v0
+    invoke-static {v1, p0, v4}, Ljtg;->r(Ljava/lang/String;Ljava/lang/String;Ljava/util/concurrent/CancellationException;)V
 
-    const/16 v1, 0x1f
-
-    mul-int/2addr v0, v1
-
-    iget v2, p0, Lmve;->b:I
-
-    invoke-static {v2, v0, v1}, Lrqc;->e(III)I
-
-    move-result v0
-
-    iget v2, p0, Lmve;->c:I
-
-    invoke-static {v2, v0, v1}, Lrqc;->e(III)I
-
-    move-result v0
-
-    iget v2, p0, Lmve;->d:I
-
-    invoke-static {v2, v0, v1}, Lrqc;->e(III)I
-
-    move-result v0
-
-    iget v2, p0, Lmve;->e:I
-
-    invoke-static {v2, v0, v1}, Lrqc;->e(III)I
-
-    move-result v0
-
-    iget v2, p0, Lmve;->f:I
-
-    invoke-static {v2, v0, v1}, Lrqc;->e(III)I
-
-    move-result v0
-
-    iget v2, p0, Lmve;->g:I
-
-    invoke-static {v2, v0, v1}, Lrqc;->e(III)I
-
-    move-result v0
-
-    iget v2, p0, Lmve;->h:I
-
-    invoke-static {v2, v0, v1}, Lrqc;->e(III)I
-
-    move-result v0
-
-    iget p0, p0, Lmve;->i:I
-
-    invoke-static {p0}, Ljava/lang/Integer;->hashCode(I)I
-
-    move-result p0
-
-    add-int/2addr p0, v0
-
-    return p0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 5
-
-    const-string v0, ", contrastStatic="
-
-    const-string v1, ", negative="
-
-    const-string v2, "TopbarIconDisabledColors(contrast="
-
-    iget v3, p0, Lmve;->a:I
-
-    iget v4, p0, Lmve;->b:I
-
-    invoke-static {v2, v3, v0, v4, v1}, Lpg0;->j(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    const-string v1, ", neutralFade="
-
-    const-string v2, ", primary="
-
-    iget v3, p0, Lmve;->c:I
-
-    iget v4, p0, Lmve;->d:I
-
-    invoke-static {v0, v3, v1, v4, v2}, Lv04;->p(Ljava/lang/StringBuilder;ILjava/lang/String;ILjava/lang/String;)V
-
-    const-string v1, ", quaternary="
-
-    const-string v2, ", secondary="
-
-    iget v3, p0, Lmve;->e:I
-
-    iget v4, p0, Lmve;->f:I
-
-    invoke-static {v0, v3, v1, v4, v2}, Lv04;->p(Ljava/lang/StringBuilder;ILjava/lang/String;ILjava/lang/String;)V
-
-    const-string v1, ", tertiary="
-
-    const-string v2, ", themed="
-
-    iget v3, p0, Lmve;->g:I
-
-    iget v4, p0, Lmve;->h:I
-
-    invoke-static {v0, v3, v1, v4, v2}, Lv04;->p(Ljava/lang/StringBuilder;ILjava/lang/String;ILjava/lang/String;)V
-
-    const-string v1, ")"
-
-    iget p0, p0, Lmve;->i:I
-
-    invoke-static {v0, p0, v1}, Lm26;->i(Ljava/lang/StringBuilder;ILjava/lang/String;)Ljava/lang/String;
+    :cond_3
+    invoke-static {p1}, Ljvc;->a(Ljava/lang/Object;)Ljava/lang/Throwable;
 
     move-result-object p0
+
+    if-eqz p0, :cond_4
+
+    const-string v0, "failed to delete push token"
+
+    invoke-static {v1, v0, p0}, Ljtg;->m(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    :cond_4
+    new-instance p0, Ljvc;
+
+    invoke-direct {p0, p1}, Ljvc;-><init>(Ljava/lang/Object;)V
 
     return-object p0
 .end method

@@ -1,9 +1,6 @@
 .class public final Lfua;
-.super Ljava/lang/Object;
+.super Liua;
 .source "SourceFile"
-
-# interfaces
-.implements Lhua;
 
 
 # static fields
@@ -50,7 +47,7 @@
 .method public final hashCode()I
     .locals 0
 
-    const p0, 0xfb17dc
+    const p0, -0x5d064544
 
     return p0
 .end method
@@ -58,7 +55,7 @@
 .method public final toString()Ljava/lang/String;
     .locals 0
 
-    const-string p0, "AddParticipantsError"
+    const-string p0, "NotFound"
 
     return-object p0
 .end method

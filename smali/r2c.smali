@@ -1,46 +1,24 @@
-.class public final synthetic Lr2c;
+.class public abstract Lr2c;
 .super Ljava/lang/Object;
-.source "SourceFile"
-
-# interfaces
-.implements Landroid/widget/CompoundButton$OnCheckedChangeListener;
 
 
-# instance fields
-.field public final synthetic a:Lt2c;
+# static fields
+.field public static fastScrollEnabled:I = 0x7f0403b0
 
-.field public final synthetic b:Lcom/google/android/material/chip/Chip;
+.field public static fastScrollHorizontalThumbDrawable:I = 0x7f0403b1
 
-.field public final synthetic c:I
+.field public static fastScrollHorizontalTrackDrawable:I = 0x7f0403b2
 
+.field public static fastScrollVerticalThumbDrawable:I = 0x7f0403b3
 
-# direct methods
-.method public synthetic constructor <init>(Lt2c;Lcom/google/android/material/chip/Chip;I)V
-    .locals 0
+.field public static fastScrollVerticalTrackDrawable:I = 0x7f0403b4
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+.field public static layoutManager:I = 0x7f040597
 
-    iput-object p1, p0, Lr2c;->a:Lt2c;
+.field public static recyclerViewStyle:I = 0x7f040714
 
-    iput-object p2, p0, Lr2c;->b:Lcom/google/android/material/chip/Chip;
+.field public static reverseLayout:I = 0x7f04071e
 
-    iput p3, p0, Lr2c;->c:I
+.field public static spanCount:I = 0x7f040791
 
-    return-void
-.end method
-
-
-# virtual methods
-.method public final onCheckedChanged(Landroid/widget/CompoundButton;Z)V
-    .locals 1
-
-    iget-object p1, p0, Lr2c;->b:Lcom/google/android/material/chip/Chip;
-
-    iget v0, p0, Lr2c;->c:I
-
-    iget-object p0, p0, Lr2c;->a:Lt2c;
-
-    invoke-virtual {p0, p1, p2, v0}, Lt2c;->b(Lcom/google/android/material/chip/Chip;ZI)V
-
-    return-void
-.end method
+.field public static stackFromEnd:I = 0x7f0407d6

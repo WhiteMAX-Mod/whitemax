@@ -4,5 +4,5 @@
 
 
 # virtual methods
-.method public abstract onThemeChanged(Lyha;)V
+.method public abstract clear()V
 .end method

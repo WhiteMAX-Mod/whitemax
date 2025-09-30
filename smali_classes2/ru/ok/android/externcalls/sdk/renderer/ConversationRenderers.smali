@@ -18,7 +18,7 @@
         "",
         "Lorg/webrtc/VideoSink;",
         "renderers",
-        "Le5f;",
+        "Lylf;",
         "setRenderers",
         "(Lru/ok/android/externcalls/sdk/layout/ConversationVideoTrackParticipantKey;Ljava/util/List;)V",
         "Lru/ok/android/externcalls/sdk/id/ParticipantId;",

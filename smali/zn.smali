@@ -1,31 +1,51 @@
 .class public final Lzn;
-.super Lnz7;
+.super Landroid/view/View$BaseSavedState;
 .source "SourceFile"
 
 
+# static fields
+.field public static final CREATOR:Landroid/os/Parcelable$Creator;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroid/os/Parcelable$Creator<",
+            "Lzn;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+
 # instance fields
-.field public final synthetic X:Landroidx/appcompat/widget/AppCompatTextView;
+.field public a:Z
 
 
 # direct methods
-.method public constructor <init>(Landroidx/appcompat/widget/AppCompatTextView;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 2
 
-    iput-object p1, p0, Lzn;->X:Landroidx/appcompat/widget/AppCompatTextView;
+    new-instance v0, Lz7;
 
-    invoke-direct {p0, p1}, Lnz7;-><init>(Landroidx/appcompat/widget/AppCompatTextView;)V
+    const/4 v1, 0x3
+
+    invoke-direct {v0, v1}, Lz7;-><init>(I)V
+
+    sput-object v0, Lzn;->CREATOR:Landroid/os/Parcelable$Creator;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final u(IF)V
+.method public final writeToParcel(Landroid/os/Parcel;I)V
     .locals 0
 
-    iget-object p0, p0, Lzn;->X:Landroidx/appcompat/widget/AppCompatTextView;
+    invoke-super {p0, p1, p2}, Landroid/view/View$BaseSavedState;->writeToParcel(Landroid/os/Parcel;I)V
 
-    invoke-static {p0, p1, p2}, Landroidx/appcompat/widget/AppCompatTextView;->h(Landroidx/appcompat/widget/AppCompatTextView;IF)V
+    iget-boolean p0, p0, Lzn;->a:Z
+
+    int-to-byte p0, p0
+
+    invoke-virtual {p1, p0}, Landroid/os/Parcel;->writeByte(B)V
 
     return-void
 .end method

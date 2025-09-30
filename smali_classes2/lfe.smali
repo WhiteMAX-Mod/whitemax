@@ -1,141 +1,52 @@
-.class public final Llfe;
-.super Llje;
+.class public final synthetic Llfe;
+.super Ls8;
 .source "SourceFile"
 
+# interfaces
+.implements Lrc6;
 
-# instance fields
-.field public X:Ljava/util/Map;
 
-.field public o:Ljava/util/List;
+# static fields
+.field public static final r0:Llfe;
 
 
 # direct methods
-.method public constructor <init>(Ldx8;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 5
 
-    invoke-direct {p0, p1}, Llje;-><init>(Ldx8;)V
+    new-instance v0, Llfe;
 
-    iget-object p1, p0, Llfe;->o:Ljava/util/List;
+    const-string v1, "<init>(Ljava/lang/Object;Ljava/lang/Object;)V"
 
-    if-nez p1, :cond_0
+    const/4 v2, 0x4
 
-    sget-object p1, Ljava/util/Collections;->EMPTY_LIST:Ljava/util/List;
+    const/4 v3, 0x3
 
-    iput-object p1, p0, Llfe;->o:Ljava/util/List;
+    const-class v4, Lpxa;
 
-    :cond_0
-    iget-object p1, p0, Llfe;->X:Ljava/util/Map;
+    invoke-direct {v0, v3, v4, v1, v2}, Ls8;-><init>(ILjava/lang/Class;Ljava/lang/String;I)V
 
-    if-nez p1, :cond_1
+    sput-object v0, Llfe;->r0:Llfe;
 
-    sget-object p1, Ljava/util/Collections;->EMPTY_MAP:Ljava/util/Map;
-
-    iput-object p1, p0, Llfe;->X:Ljava/util/Map;
-
-    :cond_1
     return-void
 .end method
 
 
 # virtual methods
-.method public final c(Ldx8;Ljava/lang/String;)V
-    .locals 5
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    check-cast p1, Lufe;
 
-    const-string v0, "phones"
+    check-cast p2, Ljava/lang/Boolean;
 
-    invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    check-cast p3, Lkotlin/coroutines/Continuation;
 
-    move-result v0
+    sget-object p0, Lqfe;->G0:[Lxi7;
 
-    if-nez v0, :cond_1
+    new-instance p0, Lpxa;
 
-    const-string v0, "contacts"
-
-    invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result p2
-
-    if-nez p2, :cond_0
-
-    invoke-virtual {p1}, Ldx8;->B()V
-
-    return-void
-
-    :cond_0
-    invoke-static {p1}, Llz;->c(Ldx8;)Llz;
-
-    move-result-object p1
-
-    iput-object p1, p0, Llfe;->o:Ljava/util/List;
-
-    return-void
-
-    :cond_1
-    new-instance p2, Ljava/util/HashMap;
-
-    invoke-direct {p2}, Ljava/util/HashMap;-><init>()V
-
-    iput-object p2, p0, Llfe;->X:Ljava/util/Map;
-
-    invoke-static {p1}, Lxq7;->d0(Ldx8;)I
-
-    move-result p2
-
-    const/4 v0, 0x0
-
-    :goto_0
-    if-ge v0, p2, :cond_2
-
-    iget-object v1, p0, Llfe;->X:Ljava/util/Map;
-
-    invoke-virtual {p1}, Ldx8;->D0()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {p1}, Ldx8;->A0()J
-
-    move-result-wide v3
-
-    invoke-static {v3, v4}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v3
-
-    invoke-interface {v1, v2, v3}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    add-int/lit8 v0, v0, 0x1
-
-    goto :goto_0
-
-    :cond_2
-    return-void
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 4
-
-    iget-object v0, p0, Llfe;->o:Ljava/util/List;
-
-    invoke-static {v0}, Lzx7;->n(Ljava/util/Collection;)I
-
-    move-result v0
-
-    iget-object p0, p0, Llfe;->X:Ljava/util/Map;
-
-    invoke-static {p0}, Lzx7;->P(Ljava/util/Map;)I
-
-    move-result p0
-
-    const-string v1, ", phones="
-
-    const-string v2, "}"
-
-    const-string v3, "{contacts="
-
-    invoke-static {v3, v0, v1, p0, v2}, Lpg0;->f(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/String;
-
-    move-result-object p0
+    invoke-direct {p0, p1, p2}, Lpxa;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
 
     return-object p0
 .end method

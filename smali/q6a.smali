@@ -1,348 +1,87 @@
 .class public final Lq6a;
-.super Lio;
+.super Ljava/util/concurrent/atomic/AtomicReference;
 .source "SourceFile"
 
 # interfaces
-.implements Lsb3;
+.implements Loq4;
+.implements Ljava/lang/Runnable;
 
 
-# static fields
-.field public static final a:Lq6a;
+# instance fields
+.field public final a:Ld8a;
+
+.field public b:J
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(Ld8a;)V
+    .locals 0
 
-    new-instance v0, Lq6a;
+    invoke-direct {p0}, Ljava/util/concurrent/atomic/AtomicReference;-><init>()V
 
-    invoke-direct {v0}, Lio;-><init>()V
-
-    sput-object v0, Lq6a;->a:Lq6a;
+    iput-object p1, p0, Lq6a;->a:Ld8a;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final b()Luc;
-    .locals 1
-
-    invoke-virtual {p0}, Lscout/Component;->getAccessor()Lu4;
-
-    move-result-object p0
-
-    const-class v0, Luc;
-
-    invoke-virtual {p0, v0}, Lu4;->c(Ljava/lang/Class;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, Luc;
-
-    return-object p0
-.end method
-
-.method public final c()Lmg;
-    .locals 1
-
-    invoke-virtual {p0}, Lscout/Component;->getAccessor()Lu4;
-
-    move-result-object p0
-
-    const-class v0, Lmg;
-
-    invoke-virtual {p0, v0}, Lu4;->c(Ljava/lang/Class;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, Lmg;
-
-    return-object p0
-.end method
-
-.method public final d()Lz10;
-    .locals 1
-
-    invoke-virtual {p0}, Lscout/Component;->getAccessor()Lu4;
-
-    move-result-object p0
-
-    const-class v0, Lz10;
-
-    invoke-virtual {p0, v0}, Lu4;->c(Ljava/lang/Class;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, Lz10;
-
-    return-object p0
-.end method
-
-.method public final e()Ln82;
-    .locals 1
-
-    invoke-virtual {p0}, Lscout/Component;->getAccessor()Lu4;
-
-    move-result-object p0
-
-    const-class v0, Ln82;
-
-    invoke-virtual {p0, v0}, Lu4;->c(Ljava/lang/Class;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, Ln82;
-
-    return-object p0
-.end method
-
-.method public final f()Lwi4;
-    .locals 1
-
-    invoke-virtual {p0}, Lscout/Component;->getAccessor()Lu4;
-
-    move-result-object p0
-
-    const-class v0, Lwi4;
-
-    invoke-virtual {p0, v0}, Lu4;->c(Ljava/lang/Class;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, Lwi4;
-
-    return-object p0
-.end method
-
-.method public final g()Le45;
-    .locals 1
-
-    invoke-virtual {p0}, Lscout/Component;->getAccessor()Lu4;
-
-    move-result-object p0
-
-    const-class v0, Le45;
-
-    invoke-virtual {p0, v0}, Lu4;->c(Ljava/lang/Class;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, Le45;
-
-    return-object p0
-.end method
-
-.method public final h()Lvj5;
-    .locals 1
-
-    invoke-virtual {p0}, Lscout/Component;->getAccessor()Lu4;
-
-    move-result-object p0
-
-    const-class v0, Lvj5;
-
-    invoke-virtual {p0, v0}, Lu4;->c(Ljava/lang/Class;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, Lvj5;
-
-    return-object p0
-.end method
-
-.method public final i()Lqx6;
+.method public final e()V
     .locals 0
 
-    invoke-virtual {p0}, Lscout/Component;->getAccessor()Lu4;
+    invoke-static {p0}, Lsq4;->a(Ljava/util/concurrent/atomic/AtomicReference;)Z
 
-    move-result-object p0
-
-    invoke-virtual {p0}, Lu4;->e()Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, Lqx6;
-
-    return-object p0
+    return-void
 .end method
 
-.method public final j()Lup7;
+.method public final f()Z
     .locals 1
 
-    invoke-virtual {p0}, Lscout/Component;->getAccessor()Lu4;
+    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
 
     move-result-object p0
 
-    const-class v0, Lup7;
+    sget-object v0, Lsq4;->a:Lsq4;
 
-    invoke-virtual {p0, v0}, Lu4;->c(Ljava/lang/Class;)Ljava/lang/Object;
+    if-ne p0, v0, :cond_0
 
-    move-result-object p0
+    const/4 p0, 0x1
 
-    check-cast p0, Lup7;
+    return p0
 
-    return-object p0
+    :cond_0
+    const/4 p0, 0x0
+
+    return p0
 .end method
 
-.method public final k()Lie8;
-    .locals 1
+.method public final run()V
+    .locals 4
 
-    invoke-virtual {p0}, Lscout/Component;->getAccessor()Lu4;
+    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
 
-    move-result-object p0
+    move-result-object v0
 
-    const-class v0, Lie8;
+    sget-object v1, Lsq4;->a:Lsq4;
 
-    invoke-virtual {p0, v0}, Lu4;->c(Ljava/lang/Class;)Ljava/lang/Object;
+    if-eq v0, v1, :cond_0
 
-    move-result-object p0
+    iget-wide v0, p0, Lq6a;->b:J
 
-    check-cast p0, Lie8;
+    const-wide/16 v2, 0x1
 
-    return-object p0
-.end method
+    add-long/2addr v2, v0
 
-.method public final l()Lxs8;
-    .locals 1
+    iput-wide v2, p0, Lq6a;->b:J
 
-    invoke-virtual {p0}, Lscout/Component;->getAccessor()Lu4;
+    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
-    move-result-object p0
+    move-result-object v0
 
-    const-class v0, Lxs8;
+    iget-object p0, p0, Lq6a;->a:Ld8a;
 
-    invoke-virtual {p0, v0}, Lu4;->c(Ljava/lang/Class;)Ljava/lang/Object;
+    invoke-interface {p0, v0}, Ld8a;->s(Ljava/lang/Object;)V
 
-    move-result-object p0
-
-    check-cast p0, Lxs8;
-
-    return-object p0
-.end method
-
-.method public final m()Lpl9;
-    .locals 1
-
-    invoke-virtual {p0}, Lscout/Component;->getAccessor()Lu4;
-
-    move-result-object p0
-
-    const-class v0, Lpl9;
-
-    invoke-virtual {p0, v0}, Lu4;->c(Ljava/lang/Class;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, Lpl9;
-
-    return-object p0
-.end method
-
-.method public final n()La5b;
-    .locals 1
-
-    invoke-virtual {p0}, Lscout/Component;->getAccessor()Lu4;
-
-    move-result-object p0
-
-    const-class v0, La5b;
-
-    invoke-virtual {p0, v0}, Lu4;->c(Ljava/lang/Class;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, La5b;
-
-    return-object p0
-.end method
-
-.method public final o()Lz7a;
-    .locals 1
-
-    invoke-virtual {p0}, Lscout/Component;->getAccessor()Lu4;
-
-    move-result-object p0
-
-    const-class v0, Lz7a;
-
-    invoke-virtual {p0, v0}, Lu4;->c(Ljava/lang/Class;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, Lz7a;
-
-    return-object p0
-.end method
-
-.method public final p()Lqie;
-    .locals 1
-
-    invoke-virtual {p0}, Lscout/Component;->getAccessor()Lu4;
-
-    move-result-object p0
-
-    const-class v0, Lqie;
-
-    invoke-virtual {p0, v0}, Lu4;->c(Ljava/lang/Class;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, Lqie;
-
-    return-object p0
-.end method
-
-.method public final q()Lmje;
-    .locals 1
-
-    invoke-virtual {p0}, Lscout/Component;->getAccessor()Lu4;
-
-    move-result-object p0
-
-    const-class v0, Lmje;
-
-    invoke-virtual {p0, v0}, Lu4;->c(Ljava/lang/Class;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, Lmje;
-
-    return-object p0
-.end method
-
-.method public final r()Lyx7;
-    .locals 1
-
-    invoke-virtual {p0}, Lscout/Component;->getAccessor()Lu4;
-
-    move-result-object p0
-
-    const-class v0, Lyx7;
-
-    invoke-virtual {p0, v0}, Lu4;->c(Ljava/lang/Class;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, Lyx7;
-
-    return-object p0
-.end method
-
-.method public final s()Lvlf;
-    .locals 1
-
-    invoke-virtual {p0}, Lscout/Component;->getAccessor()Lu4;
-
-    move-result-object p0
-
-    const-class v0, Lvlf;
-
-    invoke-virtual {p0, v0}, Lu4;->c(Ljava/lang/Class;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, Lvlf;
-
-    return-object p0
+    :cond_0
+    return-void
 .end method

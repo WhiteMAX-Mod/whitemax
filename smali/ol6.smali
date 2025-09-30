@@ -1,82 +1,93 @@
 .class public final Lol6;
-.super Lrl6;
+.super Lr3;
 .source "SourceFile"
 
 
+# static fields
+.field public static final CREATOR:Landroid/os/Parcelable$Creator;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroid/os/Parcelable$Creator<",
+            "Lol6;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+
 # instance fields
-.field public final a:Z
+.field public final a:I
+
+.field public final b:I
+
+.field public final c:Landroid/os/Bundle;
 
 
 # direct methods
-.method public constructor <init>(Z)V
+.method static constructor <clinit>()V
+    .locals 2
+
+    new-instance v0, Lfvf;
+
+    const/4 v1, 0x7
+
+    invoke-direct {v0, v1}, Lfvf;-><init>(I)V
+
+    sput-object v0, Lol6;->CREATOR:Landroid/os/Parcelable$Creator;
+
+    return-void
+.end method
+
+.method public constructor <init>(IILandroid/os/Bundle;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-boolean p1, p0, Lol6;->a:Z
+    iput p1, p0, Lol6;->a:I
+
+    iput p2, p0, Lol6;->b:I
+
+    iput-object p3, p0, Lol6;->c:Landroid/os/Bundle;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 3
+.method public final writeToParcel(Landroid/os/Parcel;I)V
+    .locals 2
+
+    const/16 p2, 0x4f45
+
+    invoke-static {p1, p2}, Ljs9;->U(Landroid/os/Parcel;I)I
+
+    move-result p2
 
     const/4 v0, 0x1
 
-    if-ne p0, p1, :cond_0
+    const/4 v1, 0x4
 
-    return v0
+    invoke-static {p1, v0, v1}, Ljs9;->W(Landroid/os/Parcel;II)V
 
-    :cond_0
-    instance-of v1, p1, Lol6;
+    iget v0, p0, Lol6;->a:I
 
-    const/4 v2, 0x0
+    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    if-nez v1, :cond_1
+    const/4 v0, 0x2
 
-    return v2
+    invoke-static {p1, v0, v1}, Ljs9;->W(Landroid/os/Parcel;II)V
 
-    :cond_1
-    check-cast p1, Lol6;
+    iget v0, p0, Lol6;->b:I
 
-    iget-boolean p0, p0, Lol6;->a:Z
+    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    iget-boolean p1, p1, Lol6;->a:Z
+    const/4 v0, 0x3
 
-    if-eq p0, p1, :cond_2
+    iget-object p0, p0, Lol6;->c:Landroid/os/Bundle;
 
-    return v2
+    invoke-static {p1, v0, p0}, Ljs9;->I(Landroid/os/Parcel;ILandroid/os/Bundle;)V
 
-    :cond_2
-    return v0
-.end method
+    invoke-static {p1, p2}, Ljs9;->V(Landroid/os/Parcel;I)V
 
-.method public final hashCode()I
-    .locals 0
-
-    iget-boolean p0, p0, Lol6;->a:Z
-
-    invoke-static {p0}, Ljava/lang/Boolean;->hashCode(Z)I
-
-    move-result p0
-
-    return p0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 2
-
-    const-string v0, "Missing(isMissing="
-
-    const-string v1, ")"
-
-    iget-boolean p0, p0, Lol6;->a:Z
-
-    invoke-static {v0, v1, p0}, Lzge;->p(Ljava/lang/String;Ljava/lang/String;Z)Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
+    return-void
 .end method

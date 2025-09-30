@@ -1,123 +1,89 @@
-.class public final synthetic Lmz1;
+.class public interface abstract Lmz1;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ljq1;
-
-
-# instance fields
-.field public final synthetic a:Loz1;
-
-
-# direct methods
-.method public synthetic constructor <init>(Loz1;)V
-    .locals 0
-
-    iput-object p1, p0, Lmz1;->a:Loz1;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    return-void
-.end method
-
 
 # virtual methods
-.method public L(Liq1;)Ljava/lang/String;
-    .locals 4
-
-    iget-object p0, p0, Lmz1;->a:Loz1;
-
-    const-string v0, "Release[session="
-
-    iget-object v1, p0, Loz1;->a:Ljava/lang/Object;
-
-    monitor-enter v1
-
-    :try_start_0
-    iget-object v2, p0, Loz1;->k:Liq1;
-
-    if-nez v2, :cond_0
-
-    const/4 v2, 0x1
-
-    goto :goto_0
-
-    :cond_0
-    const/4 v2, 0x0
-
-    :goto_0
-    const-string v3, "Release completer expected to be null"
-
-    invoke-static {v3, v2}, Lfq0;->q(Ljava/lang/String;Z)V
-
-    iput-object p1, p0, Loz1;->k:Liq1;
-
-    new-instance p1, Ljava/lang/StringBuilder;
-
-    invoke-direct {p1, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {p1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string p0, "]"
-
-    invoke-virtual {p1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    monitor-exit v1
-
-    return-object p0
-
-    :catchall_0
-    move-exception p0
-
-    monitor-exit v1
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    throw p0
+.method public abstract a()Ljava/util/Set;
 .end method
 
-.method public a()V
-    .locals 3
+.method public abstract b()I
+.end method
 
-    iget-object p0, p0, Lmz1;->a:Loz1;
+.method public abstract c()Z
+.end method
 
-    iget-object v0, p0, Loz1;->a:Ljava/lang/Object;
+.method public abstract d()Ljava/lang/String;
+.end method
 
-    monitor-enter v0
+.method public abstract e()Lcu7;
+.end method
 
-    :try_start_0
-    iget v1, p0, Loz1;->i:I
+.method public abstract f(Ljava/util/concurrent/Executor;Lbw1;)V
+.end method
 
-    const/4 v2, 0x5
+.method public g()Lmz1;
+    .locals 0
 
-    if-ne v1, v2, :cond_0
+    return-object p0
+.end method
 
-    iget-object v1, p0, Loz1;->f:Lk8d;
+.method public abstract h()I
+.end method
 
-    invoke-virtual {p0, v1}, Loz1;->k(Lk8d;)V
+.method public abstract i()Le6f;
+.end method
 
-    goto :goto_0
+.method public j()Lc02;
+    .locals 2
 
-    :catchall_0
-    move-exception p0
+    new-instance v0, Ljava/util/LinkedHashSet;
 
-    goto :goto_1
+    invoke-direct {v0}, Ljava/util/LinkedHashSet;-><init>()V
 
-    :cond_0
-    :goto_0
-    monitor-exit v0
+    new-instance v1, Llz1;
 
-    return-void
+    invoke-direct {v1, p0}, Llz1;-><init>(Lmz1;)V
 
-    :goto_1
-    monitor-exit v0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    invoke-virtual {v0, v1}, Ljava/util/AbstractCollection;->add(Ljava/lang/Object;)Z
 
-    throw p0
+    new-instance v1, Lqm7;
+
+    invoke-interface {p0}, Lmz1;->h()I
+
+    move-result p0
+
+    invoke-direct {v1, p0}, Lqm7;-><init>(I)V
+
+    invoke-virtual {v0, v1}, Ljava/util/AbstractCollection;->add(Ljava/lang/Object;)Z
+
+    new-instance p0, Lc02;
+
+    invoke-direct {p0, v0}, Lc02;-><init>(Ljava/util/LinkedHashSet;)V
+
+    return-object p0
+.end method
+
+.method public abstract k()Ljava/lang/String;
+.end method
+
+.method public abstract l(I)I
+.end method
+
+.method public abstract m()Z
+.end method
+
+.method public abstract n()Lh65;
+.end method
+
+.method public abstract o()Lkga;
+.end method
+
+.method public abstract p(I)Ljava/util/List;
+.end method
+
+.method public abstract q()Lcu7;
+.end method
+
+.method public abstract r(Lwx1;)V
 .end method

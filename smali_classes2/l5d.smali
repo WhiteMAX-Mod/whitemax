@@ -1,119 +1,125 @@
-.class public final synthetic Ll5d;
-.super Ljava/lang/Object;
+.class public final Ll5d;
+.super Lure;
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/lang/Runnable;
+.implements Lpc6;
 
 
 # instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Ln5d;
+.field public final synthetic X:Lru/ok/tamtam/messages/scheduled/ScheduledSendPickerDialogFragment;
 
 
 # direct methods
-.method public synthetic constructor <init>(Ln5d;I)V
+.method public constructor <init>(Lru/ok/tamtam/messages/scheduled/ScheduledSendPickerDialogFragment;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    iput p2, p0, Ll5d;->a:I
+    iput-object p1, p0, Ll5d;->X:Lru/ok/tamtam/messages/scheduled/ScheduledSendPickerDialogFragment;
 
-    iput-object p1, p0, Ll5d;->b:Ln5d;
+    const/4 p1, 0x2
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p1, p2}, Lure;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
-    .locals 3
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    iget v0, p0, Ll5d;->a:I
+    check-cast p1, Lvs9;
 
-    iget-object p0, p0, Ll5d;->b:Ln5d;
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    packed-switch v0, :pswitch_data_0
+    invoke-virtual {p0, p1, p2}, Ll5d;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    invoke-virtual {p0}, Lwn1;->I()Z
+    move-result-object p0
 
-    move-result v0
+    check-cast p0, Ll5d;
 
-    if-eqz v0, :cond_2
+    sget-object p1, Lylf;->a:Lylf;
 
-    iget-object p0, p0, Ln5d;->x:Ld5f;
+    invoke-virtual {p0, p1}, Ll5d;->o(Ljava/lang/Object;)Ljava/lang/Object;
 
-    iget-object v0, p0, Ld5f;->q:Lfqa;
+    return-object p1
+.end method
 
-    invoke-virtual {v0}, Lfqa;->B()Lorg/webrtc/PeerConnection$IceConnectionState;
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 0
 
-    move-result-object v0
+    new-instance p1, Ll5d;
 
-    sget-object v1, Lorg/webrtc/PeerConnection$IceConnectionState;->CONNECTED:Lorg/webrtc/PeerConnection$IceConnectionState;
+    iget-object p0, p0, Ll5d;->X:Lru/ok/tamtam/messages/scheduled/ScheduledSendPickerDialogFragment;
 
-    if-eq v0, v1, :cond_0
+    invoke-direct {p1, p0, p2}, Ll5d;-><init>(Lru/ok/tamtam/messages/scheduled/ScheduledSendPickerDialogFragment;Lkotlin/coroutines/Continuation;)V
 
-    const/4 v0, 0x1
+    return-object p1
+.end method
 
-    goto :goto_0
+.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 5
+
+    invoke-static {p1}, Lqe5;->V(Ljava/lang/Object;)V
+
+    iget-object p0, p0, Ll5d;->X:Lru/ok/tamtam/messages/scheduled/ScheduledSendPickerDialogFragment;
+
+    invoke-virtual {p0}, Lru/ok/tamtam/messages/scheduled/ScheduledSendPickerDialogFragment;->b1()Lru/ok/tamtam/messages/scheduled/ScheduledSendPickerViewModel;
+
+    move-result-object p1
+
+    iget-object p1, p1, Lru/ok/tamtam/messages/scheduled/ScheduledSendPickerViewModel;->f:Liic;
+
+    iget-object p1, p1, Liic;->a:Lrce;
+
+    invoke-interface {p1}, Lrce;->getValue()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lz74;
+
+    sget-object v0, Lylf;->a:Lylf;
+
+    if-nez p1, :cond_0
+
+    return-object v0
 
     :cond_0
-    const/4 v0, 0x0
+    new-instance v1, Lf5d;
 
-    :goto_0
-    if-eqz v0, :cond_1
+    invoke-virtual {p0}, Lru/ok/tamtam/messages/scheduled/ScheduledSendPickerDialogFragment;->b1()Lru/ok/tamtam/messages/scheduled/ScheduledSendPickerViewModel;
 
-    iget-object v0, p0, Ld5f;->e:Lv1c;
+    move-result-object v2
 
-    const-string v1, "in"
+    iget-object v2, v2, Lru/ok/tamtam/messages/scheduled/ScheduledSendPickerViewModel;->o:Lq5d;
 
-    const-string v2, "SERVER_CONNECTION_TIMEOUT"
+    sget-object v3, Lru/ok/tamtam/messages/scheduled/ScheduledSendPickerViewModel;->p:[Lxi7;
 
-    invoke-static {v0, v2, v1}, Lz99;->d(Lv1c;Ljava/lang/String;Ljava/lang/String;)V
+    const/4 v4, 0x0
 
-    :cond_1
-    iget-object v0, p0, Ld5f;->q:Lfqa;
+    aget-object v3, v3, v4
 
-    if-eqz v0, :cond_2
+    iget-object v2, v2, Lx2;->b:Ljava/lang/Object;
 
-    iget-object v0, p0, Ld5f;->q:Lfqa;
+    check-cast v2, Ljava/lang/Boolean;
 
-    iget-object p0, p0, Ld5f;->n:Ljqa;
+    invoke-virtual {v2}, Ljava/lang/Boolean;->booleanValue()Z
 
-    invoke-virtual {v0, p0}, Lfqa;->H(Ljqa;)V
+    move-result v2
 
-    :cond_2
-    return-void
+    iget-object v3, p0, Lru/ok/tamtam/messages/scheduled/ScheduledSendPickerDialogFragment;->E1:Ljava/lang/Object;
 
-    :pswitch_0
-    invoke-static {}, Lorg/webrtc/NetworkMonitor;->isOnline()Z
+    invoke-interface {v3}, Lcl7;->getValue()Ljava/lang/Object;
 
-    move-result v0
+    move-result-object v3
 
-    if-eqz v0, :cond_3
+    check-cast v3, Landroid/os/Parcelable;
 
-    iget-object v0, p0, Ln5d;->x:Ld5f;
+    invoke-direct {v1, p1, v2, v3}, Lf5d;-><init>(Lz74;ZLandroid/os/Parcelable;)V
 
-    iget-boolean v0, v0, Ld5f;->s:Z
+    invoke-virtual {p0, v1}, Lru/ok/tamtam/messages/scheduled/ScheduledSendPickerDialogFragment;->c1(Lg5d;)V
 
-    if-eqz v0, :cond_3
+    invoke-virtual {p0}, Lcom/google/android/material/bottomsheet/BottomSheetDialogFragment;->S0()V
 
-    iget-object v0, p0, Lwn1;->n:Liy0;
-
-    if-eqz v0, :cond_3
-
-    sget-object v1, Lorg/webrtc/PeerConnection$IceConnectionState;->FAILED:Lorg/webrtc/PeerConnection$IceConnectionState;
-
-    invoke-virtual {v0, p0, v1}, Liy0;->A(Lwn1;Lorg/webrtc/PeerConnection$IceConnectionState;)V
-
-    :cond_3
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-object v0
 .end method

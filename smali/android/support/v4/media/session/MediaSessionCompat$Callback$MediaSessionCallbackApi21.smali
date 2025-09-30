@@ -34,7 +34,7 @@
 
     const/4 p0, 0x0
 
-    invoke-interface {p1, p0}, Landroid/support/v4/media/session/MediaSessionCompat$MediaSessionImpl;->setCurrentControllerInfo(Lfi8;)V
+    invoke-interface {p1, p0}, Landroid/support/v4/media/session/MediaSessionCompat$MediaSessionImpl;->setCurrentControllerInfo(Lyo8;)V
 
     return-void
 .end method
@@ -152,11 +152,11 @@
     :goto_0
     invoke-virtual {p1, v3, v2}, Landroid/os/Bundle;->putBinder(Ljava/lang/String;Landroid/os/IBinder;)V
 
-    invoke-virtual {p2}, Landroid/support/v4/media/session/MediaSessionCompat$Token;->getSession2Token()Lncf;
+    invoke-virtual {p2}, Landroid/support/v4/media/session/MediaSessionCompat$Token;->getSession2Token()Lrtf;
 
     move-result-object p2
 
-    invoke-static {p1, p2}, Lmna;->B(Landroid/os/Bundle;Lncf;)V
+    invoke-static {p1, p2}, Lzxa;->t(Landroid/os/Bundle;Lrtf;)V
 
     const/4 p2, 0x0
 

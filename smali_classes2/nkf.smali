@@ -1,31 +1,14 @@
-.class public final Lnkf;
+.class public interface abstract Lnkf;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:Ljava/lang/String;
+# virtual methods
+.method public abstract a()Lu2f;
+.end method
 
-.field public final b:I
+.method public abstract getIcon()I
+.end method
 
-.field public final c:I
-
-.field public final d:J
-
-
-# direct methods
-.method public constructor <init>(JLjava/lang/String;II)V
-    .locals 0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p3, p0, Lnkf;->a:Ljava/lang/String;
-
-    iput p4, p0, Lnkf;->b:I
-
-    iput p5, p0, Lnkf;->c:I
-
-    iput-wide p1, p0, Lnkf;->d:J
-
-    return-void
+.method public abstract getTitle()Lu2f;
 .end method

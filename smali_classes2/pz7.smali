@@ -1,237 +1,136 @@
-.class public final enum Lpz7;
-.super Ljava/lang/Enum;
+.class public final Lpz7;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Ljava/lang/Comparable;
 
 
 # static fields
-.field public static final X:Ljava/util/LinkedHashSet;
+.field public static final X:Lpz7;
 
-.field public static final synthetic Y:[Lpz7;
+.field public static final Y:Lpz7;
 
-.field public static final c:Lmv9;
+.field public static final Z:Lpz7;
 
-.field public static final o:Ljava/util/LinkedHashSet;
+.field public static final b:Lpz7;
+
+.field public static final c:Lpz7;
+
+.field public static final o:Lpz7;
 
 
 # instance fields
-.field public final a:I
-
-.field public final b:I
+.field public final a:Lcvd;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 14
+    .locals 2
 
     new-instance v0, Lpz7;
 
-    sget v1, Lsvb;->markdown_original:I
+    sget-object v1, Lcvd;->c:Lcvd;
 
-    sget v2, Lnnc;->F0:I
+    invoke-direct {v0, v1}, Lpz7;-><init>(Lcvd;)V
 
-    const/4 v3, 0x0
+    sput-object v0, Lpz7;->b:Lpz7;
 
-    const-string v4, "ORIGINAL"
+    new-instance v0, Lpz7;
 
-    invoke-direct {v0, v3, v4, v1, v2}, Lpz7;-><init>(ILjava/lang/String;II)V
+    sget-object v1, Lcvd;->o:Lcvd;
 
-    new-instance v1, Lpz7;
+    invoke-direct {v0, v1}, Lpz7;-><init>(Lcvd;)V
 
-    sget v2, Lsvb;->markdown_heading:I
+    sput-object v0, Lpz7;->c:Lpz7;
 
-    sget v3, Lnnc;->C0:I
+    new-instance v0, Lpz7;
 
-    const/4 v4, 0x1
+    sget-object v1, Lcvd;->X:Lcvd;
 
-    const-string v5, "HEADING"
+    invoke-direct {v0, v1}, Lpz7;-><init>(Lcvd;)V
 
-    invoke-direct {v1, v4, v5, v2, v3}, Lpz7;-><init>(ILjava/lang/String;II)V
+    sput-object v0, Lpz7;->o:Lpz7;
 
-    new-instance v2, Lpz7;
+    new-instance v0, Lpz7;
 
-    sget v3, Lsvb;->markdown_bold:I
+    sget-object v1, Lcvd;->Y:Lcvd;
 
-    sget v4, Lnnc;->A0:I
+    invoke-direct {v0, v1}, Lpz7;-><init>(Lcvd;)V
 
-    const/4 v5, 0x2
+    sput-object v0, Lpz7;->X:Lpz7;
 
-    const-string v6, "BOLD"
+    new-instance v0, Lpz7;
 
-    invoke-direct {v2, v5, v6, v3, v4}, Lpz7;-><init>(ILjava/lang/String;II)V
+    sget-object v1, Lcvd;->Z:Lcvd;
 
-    new-instance v3, Lpz7;
+    invoke-direct {v0, v1}, Lpz7;-><init>(Lcvd;)V
 
-    sget v4, Lsvb;->markdown_code:I
+    sput-object v0, Lpz7;->Y:Lpz7;
 
-    sget v5, Lnnc;->B0:I
+    new-instance v0, Lpz7;
 
-    const/4 v6, 0x3
+    sget-object v1, Lcvd;->r0:Lcvd;
 
-    const-string v7, "RED"
+    invoke-direct {v0, v1}, Lpz7;-><init>(Lcvd;)V
 
-    invoke-direct {v3, v6, v7, v4, v5}, Lpz7;-><init>(ILjava/lang/String;II)V
-
-    new-instance v4, Lpz7;
-
-    sget v5, Lsvb;->markdown_italic:I
-
-    sget v6, Lnnc;->D0:I
-
-    const/4 v7, 0x4
-
-    const-string v8, "ITALIC"
-
-    invoke-direct {v4, v7, v8, v5, v6}, Lpz7;-><init>(ILjava/lang/String;II)V
-
-    new-instance v5, Lpz7;
-
-    sget v6, Lsvb;->markdown_underline:I
-
-    sget v7, Lnnc;->I0:I
-
-    const/4 v8, 0x5
-
-    const-string v9, "UNDERLINE"
-
-    invoke-direct {v5, v8, v9, v6, v7}, Lpz7;-><init>(ILjava/lang/String;II)V
-
-    new-instance v6, Lpz7;
-
-    sget v7, Lsvb;->markdown_mono:I
-
-    sget v8, Lnnc;->E0:I
-
-    const/4 v9, 0x6
-
-    const-string v10, "MONO"
-
-    invoke-direct {v6, v9, v10, v7, v8}, Lpz7;-><init>(ILjava/lang/String;II)V
-
-    new-instance v7, Lpz7;
-
-    sget v8, Lsvb;->markdown_strikethrough:I
-
-    sget v9, Lnnc;->H0:I
-
-    const/4 v10, 0x7
-
-    const-string v11, "STRIKETHROUGH"
-
-    invoke-direct {v7, v10, v11, v8, v9}, Lpz7;-><init>(ILjava/lang/String;II)V
-
-    new-instance v8, Lpz7;
-
-    sget v9, Lsvb;->markdown_link:I
-
-    sget v10, Lnnc;->z0:I
-
-    const/16 v11, 0x8
-
-    const-string v12, "LINK"
-
-    invoke-direct {v8, v11, v12, v9, v10}, Lpz7;-><init>(ILjava/lang/String;II)V
-
-    new-instance v9, Lpz7;
-
-    sget v10, Lsvb;->markdown_regular:I
-
-    sget v11, Lnnc;->G0:I
-
-    const/16 v12, 0x9
-
-    const-string v13, "REGULAR"
-
-    invoke-direct {v9, v12, v13, v10, v11}, Lpz7;-><init>(ILjava/lang/String;II)V
-
-    filled-new-array/range {v0 .. v9}, [Lpz7;
-
-    move-result-object v10
-
-    sput-object v10, Lpz7;->Y:[Lpz7;
-
-    new-instance v10, Lmv9;
-
-    invoke-direct {v10}, Ljava/lang/Object;-><init>()V
-
-    sput-object v10, Lpz7;->c:Lmv9;
-
-    filled-new-array {v0, v1, v2, v3}, [Lpz7;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lgad;->T([Ljava/lang/Object;)Ljava/util/LinkedHashSet;
-
-    move-result-object v0
-
-    sput-object v0, Lpz7;->o:Ljava/util/LinkedHashSet;
-
-    move-object v11, v3
-
-    move-object v10, v7
-
-    move-object v12, v8
-
-    move-object v13, v9
-
-    move-object v7, v4
-
-    move-object v8, v5
-
-    move-object v9, v6
-
-    move-object v5, v1
-
-    move-object v6, v2
-
-    filled-new-array/range {v5 .. v13}, [Lpz7;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lgad;->T([Ljava/lang/Object;)Ljava/util/LinkedHashSet;
-
-    move-result-object v0
-
-    sput-object v0, Lpz7;->X:Ljava/util/LinkedHashSet;
+    sput-object v0, Lpz7;->Z:Lpz7;
 
     return-void
 .end method
 
-.method public constructor <init>(ILjava/lang/String;II)V
+.method public constructor <init>(Lcvd;)V
     .locals 0
 
-    invoke-direct {p0, p2, p1}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput p3, p0, Lpz7;->a:I
-
-    iput p4, p0, Lpz7;->b:I
+    iput-object p1, p0, Lpz7;->a:Lcvd;
 
     return-void
 .end method
 
-.method public static valueOf(Ljava/lang/String;)Lpz7;
-    .locals 1
 
-    const-class v0, Lpz7;
+# virtual methods
+.method public final compareTo(Ljava/lang/Object;)I
+    .locals 0
 
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+    check-cast p1, Lpz7;
 
-    move-result-object p0
+    iget-object p1, p1, Lpz7;->a:Lcvd;
 
-    check-cast p0, Lpz7;
+    iget-object p0, p0, Lpz7;->a:Lcvd;
 
-    return-object p0
+    iget p0, p0, Lcvd;->b:I
+
+    iget p1, p1, Lcvd;->b:I
+
+    invoke-static {p0, p1}, Lvyg;->g(II)I
+
+    move-result p0
+
+    return p0
 .end method
 
-.method public static values()[Lpz7;
-    .locals 1
+.method public final hashCode()I
+    .locals 0
 
-    sget-object v0, Lpz7;->Y:[Lpz7;
+    iget-object p0, p0, Lpz7;->a:Lcvd;
 
-    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
+    iget-object p0, p0, Lcvd;->a:Ljava/lang/String;
 
-    move-result-object v0
+    invoke-virtual {p0}, Ljava/lang/String;->hashCode()I
 
-    check-cast v0, [Lpz7;
+    move-result p0
 
-    return-object v0
+    return p0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 0
+
+    iget-object p0, p0, Lpz7;->a:Lcvd;
+
+    iget-object p0, p0, Lcvd;->a:Ljava/lang/String;
+
+    return-object p0
 .end method

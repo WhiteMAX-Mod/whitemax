@@ -1,126 +1,149 @@
 .class public final Lz80;
-.super Lv06;
+.super Ljava/lang/Object;
 .source "SourceFile"
-
-# interfaces
-.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field public X:I
+.field public final a:Ljava/util/concurrent/Executor;
 
-.field public Y:Z
+.field public final b:Landroid/os/Handler;
 
-.field public Z:F
 
-.field public o0:Z
+# direct methods
+.method public constructor <init>(Ljava/util/concurrent/Executor;Landroid/os/Handler;)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    if-eqz p1, :cond_1
+
+    iput-object p1, p0, Lz80;->a:Ljava/util/concurrent/Executor;
+
+    if-eqz p2, :cond_0
+
+    iput-object p2, p0, Lz80;->b:Landroid/os/Handler;
+
+    return-void
+
+    :cond_0
+    new-instance p0, Ljava/lang/NullPointerException;
+
+    const-string p1, "Null schedulerHandler"
+
+    invoke-direct {p0, p1}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
+
+    throw p0
+
+    :cond_1
+    new-instance p0, Ljava/lang/NullPointerException;
+
+    const-string p1, "Null cameraExecutor"
+
+    invoke-direct {p0, p1}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
+
+    throw p0
+.end method
 
 
 # virtual methods
-.method public final draw(Landroid/graphics/Canvas;)V
-    .locals 7
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
 
-    invoke-virtual {p1}, Landroid/graphics/Canvas;->save()I
+    const/4 v0, 0x1
+
+    if-ne p1, p0, :cond_0
+
+    return v0
+
+    :cond_0
+    instance-of v1, p1, Lz80;
+
+    const/4 v2, 0x0
+
+    if-eqz v1, :cond_1
+
+    check-cast p1, Lz80;
+
+    iget-object v1, p0, Lz80;->a:Ljava/util/concurrent/Executor;
+
+    iget-object v3, p1, Lz80;->a:Ljava/util/concurrent/Executor;
+
+    invoke-virtual {v1, v3}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_1
+
+    iget-object p0, p0, Lz80;->b:Landroid/os/Handler;
+
+    iget-object p1, p1, Lz80;->b:Landroid/os/Handler;
+
+    invoke-virtual {p0, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+
+    move-result p0
+
+    if-eqz p0, :cond_1
+
+    return v0
+
+    :cond_1
+    return v2
+.end method
+
+.method public final hashCode()I
+    .locals 2
+
+    iget-object v0, p0, Lz80;->a:Ljava/util/concurrent/Executor;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
 
     move-result v0
 
-    invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->getBounds()Landroid/graphics/Rect;
+    const v1, 0xf4243
 
-    move-result-object v1
+    xor-int/2addr v0, v1
 
-    iget v2, v1, Landroid/graphics/Rect;->right:I
+    mul-int/2addr v0, v1
 
-    iget v3, v1, Landroid/graphics/Rect;->left:I
+    iget-object p0, p0, Lz80;->b:Landroid/os/Handler;
 
-    sub-int/2addr v2, v3
+    invoke-virtual {p0}, Ljava/lang/Object;->hashCode()I
 
-    iget v4, v1, Landroid/graphics/Rect;->bottom:I
+    move-result p0
 
-    iget v1, v1, Landroid/graphics/Rect;->top:I
+    xor-int/2addr p0, v0
 
-    sub-int/2addr v4, v1
-
-    iget v5, p0, Lz80;->Z:F
-
-    iget-boolean v6, p0, Lz80;->Y:Z
-
-    if-nez v6, :cond_0
-
-    const/high16 v6, 0x43b40000    # 360.0f
-
-    sub-float v5, v6, v5
-
-    :cond_0
-    div-int/lit8 v2, v2, 0x2
-
-    add-int/2addr v2, v3
-
-    int-to-float v2, v2
-
-    div-int/lit8 v4, v4, 0x2
-
-    add-int/2addr v4, v1
-
-    int-to-float v1, v4
-
-    invoke-virtual {p1, v5, v2, v1}, Landroid/graphics/Canvas;->rotate(FFF)V
-
-    invoke-super {p0, p1}, Lv06;->draw(Landroid/graphics/Canvas;)V
-
-    invoke-virtual {p1, v0}, Landroid/graphics/Canvas;->restoreToCount(I)V
-
-    iget-boolean p1, p0, Lz80;->o0:Z
-
-    if-nez p1, :cond_1
-
-    const/4 p1, 0x1
-
-    iput-boolean p1, p0, Lz80;->o0:Z
-
-    invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
-
-    move-result-wide v0
-
-    const-wide/16 v2, 0x14
-
-    add-long/2addr v0, v2
-
-    invoke-virtual {p0, p0, v0, v1}, Landroid/graphics/drawable/Drawable;->scheduleSelf(Ljava/lang/Runnable;J)V
-
-    :cond_1
-    return-void
+    return p0
 .end method
 
-.method public final run()V
-    .locals 3
+.method public final toString()Ljava/lang/String;
+    .locals 2
 
-    const/4 v0, 0x0
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    iput-boolean v0, p0, Lz80;->o0:Z
+    const-string v1, "CameraThreadConfig{cameraExecutor="
 
-    iget v0, p0, Lz80;->Z:F
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget v1, p0, Lz80;->X:I
+    iget-object v1, p0, Lz80;->a:Ljava/util/concurrent/Executor;
 
-    int-to-float v1, v1
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    const/high16 v2, 0x41a00000    # 20.0f
+    const-string v1, ", schedulerHandler="
 
-    div-float/2addr v2, v1
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const/high16 v1, 0x43b40000    # 360.0f
+    iget-object p0, p0, Lz80;->b:Landroid/os/Handler;
 
-    mul-float/2addr v2, v1
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    float-to-int v1, v2
+    const-string p0, "}"
 
-    int-to-float v1, v1
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    add-float/2addr v0, v1
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    iput v0, p0, Lz80;->Z:F
+    move-result-object p0
 
-    invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->invalidateSelf()V
-
-    return-void
+    return-object p0
 .end method

@@ -4,254 +4,121 @@
 
 
 # instance fields
-.field public final a:Lc2b;
-
-.field public final b:Ls75;
-
-.field public final c:Lbge;
-
-.field public d:I
-
-.field public e:Ljava/lang/Object;
-
-.field public final f:Landroid/os/Looper;
-
-.field public g:Z
-
-.field public h:Z
-
-.field public i:Z
+.field public final a:Lcl7;
 
 
 # direct methods
-.method public constructor <init>(Ls75;Lc2b;Lpse;ILbge;Landroid/os/Looper;)V
+.method public constructor <init>(Lcl7;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Le2b;->b:Ls75;
-
-    iput-object p2, p0, Le2b;->a:Lc2b;
-
-    iput-object p6, p0, Le2b;->f:Landroid/os/Looper;
-
-    iput-object p5, p0, Le2b;->c:Lbge;
+    iput-object p1, p0, Le2b;->a:Lcl7;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final declared-synchronized a(J)V
-    .locals 5
-
-    monitor-enter p0
-
-    :try_start_0
-    iget-boolean v0, p0, Le2b;->g:Z
-
-    invoke-static {v0}, Lq46;->f(Z)V
-
-    iget-object v0, p0, Le2b;->f:Landroid/os/Looper;
-
-    invoke-virtual {v0}, Landroid/os/Looper;->getThread()Ljava/lang/Thread;
-
-    move-result-object v0
-
-    invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
-
-    move-result-object v1
-
-    if-eq v0, v1, :cond_0
-
-    const/4 v0, 0x1
-
-    goto :goto_0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    :goto_0
-    invoke-static {v0}, Lq46;->f(Z)V
-
-    iget-object v0, p0, Le2b;->c:Lbge;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
-
-    move-result-wide v0
-
-    add-long/2addr v0, p1
-
-    :goto_1
-    iget-boolean v2, p0, Le2b;->i:Z
-
-    if-nez v2, :cond_1
-
-    const-wide/16 v3, 0x0
-
-    cmp-long v3, p1, v3
-
-    if-lez v3, :cond_1
-
-    iget-object v2, p0, Le2b;->c:Lbge;
-
-    invoke-virtual {v2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    invoke-virtual {p0, p1, p2}, Ljava/lang/Object;->wait(J)V
-
-    iget-object p1, p0, Le2b;->c:Lbge;
-
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
-
-    move-result-wide p1
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    sub-long p1, v0, p1
-
-    goto :goto_1
-
-    :catchall_0
-    move-exception p1
-
-    goto :goto_2
-
-    :cond_1
-    if-eqz v2, :cond_2
-
-    monitor-exit p0
-
-    return-void
-
-    :cond_2
-    :try_start_1
-    new-instance p1, Ljava/util/concurrent/TimeoutException;
-
-    const-string p2, "Message delivery timed out."
-
-    invoke-direct {p1, p2}, Ljava/util/concurrent/TimeoutException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-
-    :goto_2
-    monitor-exit p0
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    throw p1
-.end method
-
-.method public final declared-synchronized b(Z)V
+.method public final a(Z)Lfa8;
     .locals 1
 
-    monitor-enter p0
-
-    :try_start_0
-    iget-boolean v0, p0, Le2b;->h:Z
-
-    or-int/2addr p1, v0
-
-    iput-boolean p1, p0, Le2b;->h:Z
-
-    const/4 p1, 0x1
-
-    iput-boolean p1, p0, Le2b;->i:Z
-
-    invoke-virtual {p0}, Ljava/lang/Object;->notifyAll()V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    monitor-exit p0
-
-    return-void
-
-    :catchall_0
-    move-exception p1
-
-    :try_start_1
-    monitor-exit p0
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    throw p1
-.end method
-
-.method public final c()V
-    .locals 3
-
-    iget-boolean v0, p0, Le2b;->g:Z
-
-    const/4 v1, 0x1
-
-    xor-int/2addr v0, v1
-
-    invoke-static {v0}, Lq46;->f(Z)V
-
-    iput-boolean v1, p0, Le2b;->g:Z
-
-    iget-object v0, p0, Le2b;->b:Ls75;
-
-    monitor-enter v0
-
-    :try_start_0
-    iget-boolean v1, v0, Ls75;->E0:Z
-
-    if-nez v1, :cond_1
-
-    iget-object v1, v0, Ls75;->p0:Landroid/os/HandlerThread;
-
-    invoke-virtual {v1}, Ljava/lang/Thread;->isAlive()Z
-
-    move-result v1
-
-    if-nez v1, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    iget-object v1, v0, Ls75;->o0:Ljge;
-
-    const/16 v2, 0xe
-
-    invoke-virtual {v1, v2, p0}, Ljge;->a(ILjava/lang/Object;)Lhge;
+    invoke-virtual {p0}, Le2b;->b()Lp2b;
 
     move-result-object p0
 
-    invoke-virtual {p0}, Lhge;->b()V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    sget-object v0, Lp2b;->m:[Ljava/lang/String;
 
-    monitor-exit v0
+    invoke-virtual {p0, v0}, Lp2b;->b([Ljava/lang/String;)Z
 
-    return-void
+    move-result p0
 
-    :catchall_0
-    move-exception p0
+    if-nez p0, :cond_0
 
-    goto :goto_1
+    sget-object p0, Lfa8;->X:Lfa8;
+
+    return-object p0
+
+    :cond_0
+    if-eqz p1, :cond_1
+
+    sget-object p0, Lfa8;->b:Lfa8;
+
+    return-object p0
 
     :cond_1
+    sget-object p0, Lfa8;->a:Lfa8;
+
+    return-object p0
+.end method
+
+.method public final b()Lp2b;
+    .locals 0
+
+    iget-object p0, p0, Le2b;->a:Lcl7;
+
+    invoke-interface {p0}, Lcl7;->getValue()Ljava/lang/Object;
+
+    move-result-object p0
+
+    check-cast p0, Lp2b;
+
+    return-object p0
+.end method
+
+.method public final c(Litg;)Z
+    .locals 7
+
+    invoke-virtual {p0}, Le2b;->b()Lp2b;
+
+    move-result-object v0
+
+    sget-object v2, Lp2b;->h:[Ljava/lang/String;
+
+    invoke-virtual {v0, v2}, Lp2b;->b([Ljava/lang/String;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_1
+
+    invoke-virtual {p0}, Le2b;->b()Lp2b;
+
+    move-result-object p0
+
+    sget v5, Ldea;->G:I
+
+    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    sget v4, Lpbc;->permissions_audio_title:I
+
+    sget v6, Lhna;->g:I
+
+    invoke-static {p1, v2}, Lp2b;->i(Litg;[Ljava/lang/String;)Z
+
+    move-result v0
+
+    const/16 v3, 0xa0
+
+    if-eqz v0, :cond_0
+
+    move-object v1, p1
+
+    invoke-virtual/range {v1 .. v6}, Litg;->c([Ljava/lang/String;IIII)V
+
+    goto :goto_0
+
+    :cond_0
+    move-object v1, p1
+
+    invoke-virtual {p0, v1, v2, v3}, Lp2b;->f(Litg;[Ljava/lang/String;I)V
+
     :goto_0
-    const/4 v1, 0x0
+    const/4 p0, 0x1
 
-    :try_start_1
-    invoke-virtual {p0, v1}, Le2b;->b(Z)V
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+    return p0
 
-    monitor-exit v0
+    :cond_1
+    const/4 p0, 0x0
 
-    return-void
-
-    :goto_1
-    :try_start_2
-    monitor-exit v0
-    :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_0
-
-    throw p0
+    return p0
 .end method

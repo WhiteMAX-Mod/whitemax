@@ -1,102 +1,96 @@
-.class public final synthetic Lo65;
+.class public final Lo65;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ljm7;
-.implements Lkm7;
-.implements Lij3;
-
 
 # instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:F
+.field public final synthetic a:Lp65;
 
 
 # direct methods
-.method public synthetic constructor <init>(IF)V
+.method public constructor <init>(Lp65;)V
     .locals 0
 
-    iput p1, p0, Lo65;->a:I
-
-    iput p2, p0, Lo65;->b:F
-
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lo65;->a:Lp65;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public accept(Ljava/lang/Object;)V
-    .locals 1
+.method public final a(Lcom/google/android/material/textfield/TextInputLayout;)V
+    .locals 3
 
-    iget v0, p0, Lo65;->a:I
+    iget-object p0, p0, Lo65;->a:Lp65;
 
-    packed-switch v0, :pswitch_data_0
+    iget-object v0, p0, Lp65;->I0:Ln65;
 
-    check-cast p1, Lk2b;
+    iget-object v1, p0, Lp65;->F0:Landroid/widget/EditText;
 
-    invoke-virtual {p1}, Lk2b;->o0()V
+    invoke-virtual {p1}, Lcom/google/android/material/textfield/TextInputLayout;->getEditText()Landroid/widget/EditText;
 
-    iget-object p1, p1, Lk2b;->a:Lh75;
+    move-result-object v2
 
-    iget p0, p0, Lo65;->b:F
-
-    invoke-virtual {p1, p0}, Lh75;->x1(F)V
+    if-ne v1, v2, :cond_0
 
     return-void
 
-    :pswitch_0
-    iget p0, p0, Lo65;->b:F
+    :cond_0
+    iget-object v1, p0, Lp65;->F0:Landroid/widget/EditText;
 
-    check-cast p1, Lk2b;
+    if-eqz v1, :cond_1
 
-    invoke-virtual {p1, p0}, Lk2b;->j0(F)V
+    invoke-virtual {v1, v0}, Landroid/widget/TextView;->removeTextChangedListener(Landroid/text/TextWatcher;)V
+
+    iget-object v1, p0, Lp65;->F0:Landroid/widget/EditText;
+
+    invoke-virtual {v1}, Landroid/view/View;->getOnFocusChangeListener()Landroid/view/View$OnFocusChangeListener;
+
+    move-result-object v1
+
+    invoke-virtual {p0}, Lp65;->b()Lq65;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Lq65;->e()Landroid/view/View$OnFocusChangeListener;
+
+    move-result-object v2
+
+    if-ne v1, v2, :cond_1
+
+    iget-object v1, p0, Lp65;->F0:Landroid/widget/EditText;
+
+    const/4 v2, 0x0
+
+    invoke-virtual {v1, v2}, Landroid/view/View;->setOnFocusChangeListener(Landroid/view/View$OnFocusChangeListener;)V
+
+    :cond_1
+    invoke-virtual {p1}, Lcom/google/android/material/textfield/TextInputLayout;->getEditText()Landroid/widget/EditText;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lp65;->F0:Landroid/widget/EditText;
+
+    if-eqz p1, :cond_2
+
+    invoke-virtual {p1, v0}, Landroid/widget/TextView;->addTextChangedListener(Landroid/text/TextWatcher;)V
+
+    :cond_2
+    invoke-virtual {p0}, Lp65;->b()Lq65;
+
+    move-result-object p1
+
+    iget-object v0, p0, Lp65;->F0:Landroid/widget/EditText;
+
+    invoke-virtual {p1, v0}, Lq65;->m(Landroid/widget/EditText;)V
+
+    invoke-virtual {p0}, Lp65;->b()Lq65;
+
+    move-result-object p1
+
+    invoke-virtual {p0, p1}, Lp65;->j(Lq65;)V
 
     return-void
-
-    :pswitch_data_0
-    .packed-switch 0x3
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public invoke(Ljava/lang/Object;)V
-    .locals 1
-
-    iget v0, p0, Lo65;->a:I
-
-    iget p0, p0, Lo65;->b:F
-
-    packed-switch v0, :pswitch_data_0
-
-    check-cast p1, Lz0b;
-
-    invoke-interface {p1, p0}, Lz0b;->f(F)V
-
-    return-void
-
-    :pswitch_0
-    check-cast p1, Lz0b;
-
-    invoke-interface {p1, p0}, Lz0b;->f(F)V
-
-    return-void
-
-    :pswitch_1
-    check-cast p1, Ly0b;
-
-    invoke-interface {p1, p0}, Ly0b;->f(F)V
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
 .end method

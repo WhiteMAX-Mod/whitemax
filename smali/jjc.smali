@@ -1,119 +1,84 @@
 .class public final Ljjc;
-.super Ljava/lang/Object;
+.super Lj2e;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:Ljava/util/LinkedHashMap;
-
-
-# direct methods
-.method public constructor <init>(I)V
-    .locals 0
-
-    packed-switch p1, :pswitch_data_0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    new-instance p1, Ljava/util/LinkedHashMap;
-
-    invoke-direct {p1}, Ljava/util/LinkedHashMap;-><init>()V
-
-    iput-object p1, p0, Ljjc;->a:Ljava/util/LinkedHashMap;
-
-    return-void
-
-    :pswitch_0
-    new-instance p1, Ljava/util/LinkedHashMap;
-
-    invoke-direct {p1}, Ljava/util/LinkedHashMap;-><init>()V
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Ljjc;->a:Ljava/util/LinkedHashMap;
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x1
-        :pswitch_0
-    .end packed-switch
-.end method
-
-
 # virtual methods
-.method public varargs a([Lv89;)V
-    .locals 7
+.method public final F(Lhjc;)V
+    .locals 5
 
-    array-length v0, p1
+    iget-boolean v0, p1, Lhjc;->Z:Z
 
-    const/4 v1, 0x0
+    iget-object v1, p0, Lzoc;->a:Landroid/view/View;
 
-    :goto_0
-    if-ge v1, v0, :cond_2
+    if-eqz v0, :cond_0
 
-    aget-object v2, p1, v1
+    move-object v0, v1
 
-    iget v3, v2, Lv89;->a:I
+    check-cast v0, Lijc;
 
-    iget v4, v2, Lv89;->b:I
+    sget-object v2, Lhba;->a:Lhba;
 
-    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v3
-
-    iget-object v5, p0, Ljjc;->a:Ljava/util/LinkedHashMap;
-
-    invoke-virtual {v5, v3}, Ljava/util/LinkedHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v6
-
-    if-nez v6, :cond_0
-
-    new-instance v6, Ljava/util/TreeMap;
-
-    invoke-direct {v6}, Ljava/util/TreeMap;-><init>()V
-
-    invoke-interface {v5, v3, v6}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v0, v2}, Lijc;->setAvatarShape(Liba;)V
 
     :cond_0
-    check-cast v6, Ljava/util/TreeMap;
+    iget-object v0, p1, Lhjc;->c:Ljava/lang/String;
 
-    invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    move-object v2, v1
 
-    move-result-object v3
+    check-cast v2, Lijc;
 
-    invoke-interface {v6, v3}, Ljava/util/Map;->containsKey(Ljava/lang/Object;)Z
+    invoke-virtual {v2, v0}, Lijc;->setAvatar(Ljava/lang/String;)V
 
-    move-result v3
+    iget-object v0, p1, Lhjc;->o:Ljava/lang/CharSequence;
 
-    if-eqz v3, :cond_1
+    move-object v2, v1
 
-    invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    check-cast v2, Lijc;
 
-    move-result-object v3
+    iget-wide v3, p0, Lzoc;->X:J
 
-    invoke-virtual {v6, v3}, Ljava/util/TreeMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {v3, v4}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
-    move-result-object v3
+    move-result-object p0
 
-    invoke-static {v3}, Ljava/util/Objects;->toString(Ljava/lang/Object;)Ljava/lang/String;
+    invoke-static {v0, p0}, Ljk7;->a(Ljava/lang/CharSequence;Ljava/lang/Long;)Lyb0;
 
-    invoke-virtual {v2}, Ljava/lang/Object;->toString()Ljava/lang/String;
+    move-result-object p0
 
-    :cond_1
-    invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    invoke-virtual {v2, p0}, Lijc;->setAbbreviation(Lyb0;)V
 
-    move-result-object v3
+    iget-object p0, p1, Lhjc;->b:Ljava/lang/CharSequence;
 
-    invoke-interface {v6, v3, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    move-object v0, v1
 
-    add-int/lit8 v1, v1, 0x1
+    check-cast v0, Lijc;
 
-    goto :goto_0
+    invoke-virtual {v0, p0}, Lijc;->setName(Ljava/lang/CharSequence;)V
 
-    :cond_2
+    iget-boolean p0, p1, Lhjc;->Y:Z
+
+    move-object v0, v1
+
+    check-cast v0, Lijc;
+
+    invoke-virtual {v0, p0}, Lijc;->setVerified(Z)V
+
+    iget-boolean p0, p1, Lhjc;->X:Z
+
+    check-cast v1, Lijc;
+
+    invoke-virtual {v1, p0}, Lijc;->setOnline(Z)V
+
+    return-void
+.end method
+
+.method public final bridge synthetic y(Lts7;)V
+    .locals 0
+
+    check-cast p1, Lhjc;
+
+    invoke-virtual {p0, p1}, Ljjc;->F(Lhjc;)V
+
     return-void
 .end method

@@ -1,389 +1,182 @@
-.class public final Li91;
-.super Lqde;
+.class public final synthetic Li91;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lp66;
+.implements Lzb6;
 
 
 # instance fields
-.field public synthetic X:Lr21;
+.field public final synthetic a:I
 
-.field public synthetic Y:Lw04;
-
-.field public synthetic Z:Z
-
-.field public final synthetic o0:Lk91;
+.field public final synthetic b:Lrwa;
 
 
 # direct methods
-.method public constructor <init>(Lk91;Lkotlin/coroutines/Continuation;)V
+.method public synthetic constructor <init>(Lrwa;I)V
     .locals 0
 
-    iput-object p1, p0, Li91;->o0:Lk91;
+    iput p2, p0, Li91;->a:I
 
-    const/4 p1, 0x4
+    iput-object p1, p0, Li91;->b:Lrwa;
 
-    invoke-direct {p0, p1, p2}, Lqde;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final i(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+.method public final invoke()Ljava/lang/Object;
+    .locals 2
 
-    check-cast p1, Lr21;
+    iget v0, p0, Li91;->a:I
 
-    check-cast p2, Lw04;
+    iget-object p0, p0, Li91;->b:Lrwa;
 
-    check-cast p3, Ljava/lang/Boolean;
+    packed-switch v0, :pswitch_data_0
 
-    invoke-virtual {p3}, Ljava/lang/Boolean;->booleanValue()Z
+    iget-object p0, p0, Lrwa;->a:Ljava/lang/Object;
 
-    move-result p3
+    check-cast p0, Landroid/content/Context;
 
-    check-cast p4, Lkotlin/coroutines/Continuation;
+    sget v0, Lx3c;->ic_link_16:I
 
-    new-instance v0, Li91;
+    sget v1, Lpma;->a:I
 
-    iget-object p0, p0, Li91;->o0:Lk91;
+    invoke-static {p0, v0}, Llw3;->b(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
 
-    invoke-direct {v0, p0, p4}, Li91;-><init>(Lk91;Lkotlin/coroutines/Continuation;)V
+    move-result-object v0
 
-    iput-object p1, v0, Li91;->X:Lr21;
+    new-instance v1, Ly3f;
 
-    iput-object p2, v0, Li91;->Y:Lw04;
+    invoke-direct {v1, v0, p0}, Ly3f;-><init>(Landroid/graphics/drawable/Drawable;Landroid/content/Context;)V
 
-    iput-boolean p3, v0, Li91;->Z:Z
+    return-object v1
 
-    sget-object p0, Le5f;->a:Le5f;
+    :pswitch_0
+    iget-object p0, p0, Lrwa;->a:Ljava/lang/Object;
 
-    invoke-virtual {v0, p0}, Li91;->o(Ljava/lang/Object;)Ljava/lang/Object;
+    check-cast p0, Landroid/content/Context;
 
-    return-object p0
-.end method
+    sget v0, La1d;->h0:I
 
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 17
+    sget v1, Lpma;->a:I
 
-    move-object/from16 v0, p0
+    invoke-static {p0, v0}, Llw3;->b(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
 
-    invoke-static/range {p1 .. p1}, Lsgg;->Z(Ljava/lang/Object;)V
+    move-result-object v0
 
-    iget-object v1, v0, Li91;->X:Lr21;
+    new-instance v1, Ly3f;
 
-    iget-object v2, v0, Li91;->Y:Lw04;
+    invoke-direct {v1, v0, p0}, Ly3f;-><init>(Landroid/graphics/drawable/Drawable;Landroid/content/Context;)V
 
-    iget-boolean v3, v0, Li91;->Z:Z
+    return-object v1
 
-    iget-object v0, v0, Li91;->o0:Lk91;
+    :pswitch_1
+    iget-object p0, p0, Lrwa;->a:Ljava/lang/Object;
 
-    iget-object v4, v0, Lk91;->X:Lazd;
+    check-cast p0, Landroid/content/Context;
 
-    :goto_0
-    invoke-virtual {v4}, Lazd;->getValue()Ljava/lang/Object;
+    sget v0, La1d;->i0:I
 
-    move-result-object v5
+    sget v1, Lpma;->a:I
 
-    move-object v6, v5
+    invoke-static {p0, v0}, Llw3;->b(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
 
-    check-cast v6, Le91;
+    move-result-object v0
 
-    iget-object v7, v2, Lw04;->a:Ltk9;
+    new-instance v1, Ly3f;
 
-    iget-object v8, v2, Lw04;->j:Lv85;
+    invoke-direct {v1, v0, p0}, Ly3f;-><init>(Landroid/graphics/drawable/Drawable;Landroid/content/Context;)V
 
-    const/4 v10, 0x1
+    return-object v1
 
-    if-eqz v7, :cond_0
+    :pswitch_2
+    iget-object p0, p0, Lrwa;->a:Ljava/lang/Object;
 
-    invoke-virtual {v7}, Ltk9;->x()Z
+    check-cast p0, Landroid/content/Context;
 
-    move-result v7
+    sget v0, La1d;->X:I
 
-    if-ne v7, v10, :cond_0
+    sget v1, Lpma;->a:I
 
-    move v7, v10
+    invoke-static {p0, v0}, Llw3;->b(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
 
-    goto :goto_1
+    move-result-object v0
 
-    :cond_0
-    const/4 v7, 0x0
+    new-instance v1, Ly3f;
 
-    :goto_1
-    iget-boolean v11, v2, Lw04;->g:Z
+    invoke-direct {v1, v0, p0}, Ly3f;-><init>(Landroid/graphics/drawable/Drawable;Landroid/content/Context;)V
 
-    iget-boolean v12, v2, Lw04;->f:Z
+    return-object v1
 
-    if-eqz v12, :cond_1
+    :pswitch_3
+    iget-object p0, p0, Lrwa;->a:Ljava/lang/Object;
 
-    instance-of v13, v8, Lt85;
+    check-cast p0, Landroid/content/Context;
 
-    if-eqz v13, :cond_1
+    sget v0, La1d;->Y:I
 
-    sget-object v13, Lf91;->c:Lf91;
+    sget v1, Lpma;->a:I
 
-    goto :goto_2
+    invoke-static {p0, v0}, Llw3;->b(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
 
-    :cond_1
-    iget-object v13, v6, Le91;->b:Lf91;
+    move-result-object v0
 
-    sget-object v14, Lf91;->b:Lf91;
+    new-instance v1, Ly3f;
 
-    if-ne v13, v14, :cond_2
+    invoke-direct {v1, v0, p0}, Ly3f;-><init>(Landroid/graphics/drawable/Drawable;Landroid/content/Context;)V
 
-    goto :goto_2
+    return-object v1
 
-    :cond_2
-    if-nez v12, :cond_3
+    :pswitch_4
+    iget-object p0, p0, Lrwa;->a:Ljava/lang/Object;
 
-    sget-object v13, Lf91;->a:Lf91;
+    check-cast p0, Landroid/content/Context;
 
-    goto :goto_2
+    sget v0, La1d;->e0:I
 
-    :cond_3
-    move-object v13, v14
+    sget v1, Lpma;->a:I
 
-    :goto_2
-    iget-object v14, v0, Lk91;->o:Lzm1;
+    invoke-static {p0, v0}, Llw3;->b(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
 
-    iget-object v15, v1, Lr21;->c:Ljava/lang/CharSequence;
+    move-result-object v0
 
-    if-nez v15, :cond_4
+    new-instance v1, Ly3f;
 
-    const-string v15, ""
+    invoke-direct {v1, v0, p0}, Ly3f;-><init>(Landroid/graphics/drawable/Drawable;Landroid/content/Context;)V
 
-    :cond_4
-    if-eqz v3, :cond_5
+    return-object v1
 
-    instance-of v10, v8, Ls85;
+    :pswitch_5
+    iget-object p0, p0, Lrwa;->a:Ljava/lang/Object;
 
-    if-eqz v10, :cond_5
+    check-cast p0, Landroid/content/Context;
 
-    const/4 v10, 0x1
+    sget v0, La1d;->f0:I
 
-    goto :goto_3
+    sget v1, Lpma;->a:I
 
-    :cond_5
-    const/4 v10, 0x0
+    invoke-static {p0, v0}, Llw3;->b(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
 
-    :goto_3
-    instance-of v9, v8, Lt85;
+    move-result-object v0
 
-    iget-object v14, v14, Lzm1;->a:Landroid/content/Context;
+    new-instance v1, Ly3f;
 
-    instance-of v8, v8, Lu85;
+    invoke-direct {v1, v0, p0}, Ly3f;-><init>(Landroid/graphics/drawable/Drawable;Landroid/content/Context;)V
 
-    if-eqz v8, :cond_6
+    return-object v1
 
-    sget v8, Ls5a;->f0:I
+    nop
 
-    invoke-virtual {v14, v8}, Landroid/content/Context;->getString(I)Ljava/lang/String;
-
-    move-result-object v15
-
-    goto :goto_4
-
-    :cond_6
-    if-eqz v9, :cond_7
-
-    if-eqz v12, :cond_7
-
-    sget v8, Lyxb;->call_screen_connection_restoring:I
-
-    invoke-virtual {v14, v8}, Landroid/content/Context;->getString(I)Ljava/lang/String;
-
-    move-result-object v8
-
-    const-string v15, "..."
-
-    invoke-static {v8, v15}, Lzt1;->g(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v15
-
-    :cond_7
-    :goto_4
-    invoke-static {v15}, Lj8e;->J0(Ljava/lang/CharSequence;)Z
-
-    move-result v8
-
-    move-object/from16 v16, v0
-
-    const/4 v0, 0x0
-
-    if-eqz v8, :cond_8
-
-    goto/16 :goto_7
-
-    :cond_8
-    if-nez v12, :cond_9
-
-    if-eqz v11, :cond_9
-
-    if-eqz v7, :cond_9
-
-    sget v7, Lo5a;->T:I
-
-    goto :goto_5
-
-    :cond_9
-    if-nez v12, :cond_a
-
-    if-eqz v11, :cond_a
-
-    sget v7, Lo5a;->S:I
-
-    goto :goto_5
-
-    :cond_a
-    if-eqz v7, :cond_b
-
-    sget v7, Lo5a;->F0:I
-
-    goto :goto_5
-
-    :cond_b
-    if-nez v9, :cond_c
-
-    if-eqz v10, :cond_c
-
-    sget v7, Lorb;->ic_connection_fill_16:I
-
-    goto :goto_5
-
-    :cond_c
-    sget v7, Lo5a;->B:I
-
-    :goto_5
-    sget-object v8, Lqp4;->q0:Lap9;
-
-    invoke-virtual {v8, v14}, Lap9;->i(Landroid/content/Context;)Lk9a;
-
-    move-result-object v8
-
-    if-eqz v10, :cond_d
-
-    iget-object v8, v8, Lk9a;->c:Lyha;
-
-    invoke-interface {v8}, Lyha;->getIcon()Lds6;
-
-    move-result-object v8
-
-    iget v8, v8, Lds6;->c:I
-
-    goto :goto_6
-
-    :cond_d
-    iget-object v8, v8, Lk9a;->c:Lyha;
-
-    invoke-interface {v8}, Lyha;->getIcon()Lds6;
-
-    move-result-object v8
-
-    iget v8, v8, Lds6;->f:I
-
-    :goto_6
-    invoke-static {v7, v8, v14}, Lxqd;->v(IILandroid/content/Context;)Landroid/graphics/drawable/Drawable;
-
-    move-result-object v7
-
-    const/16 v8, 0x10
-
-    int-to-float v8, v8
-
-    invoke-static {}, Lgk4;->d()Landroid/content/res/Resources;
-
-    move-result-object v9
-
-    invoke-virtual {v9}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v9
-
-    iget v9, v9, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v9, v8
-
-    invoke-static {v9}, Lkhg;->x(F)I
-
-    move-result v9
-
-    invoke-static {}, Lgk4;->d()Landroid/content/res/Resources;
-
-    move-result-object v10
-
-    invoke-virtual {v10}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v10
-
-    iget v10, v10, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v8, v10
-
-    invoke-static {v8}, Lkhg;->x(F)I
-
-    move-result v8
-
-    const/4 v10, 0x0
-
-    invoke-virtual {v7, v10, v10, v9, v8}, Landroid/graphics/drawable/Drawable;->setBounds(IIII)V
-
-    new-instance v8, Landroid/text/SpannableString;
-
-    new-instance v9, Ljava/lang/StringBuilder;
-
-    const-string v10, "\u00a0\u00a0\u00a0"
-
-    invoke-direct {v9, v10}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v9, v15}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v10, "\u00a0"
-
-    invoke-virtual {v9, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v9}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v9
-
-    invoke-direct {v8, v9}, Landroid/text/SpannableString;-><init>(Ljava/lang/CharSequence;)V
-
-    new-instance v9, Ljl5;
-
-    const/4 v10, 0x6
-
-    invoke-direct {v9, v7, v0, v10}, Ljl5;-><init>(Landroid/graphics/drawable/Drawable;Ldl5;I)V
-
-    const/16 v0, 0x11
-
-    const/4 v7, 0x1
-
-    const/4 v10, 0x0
-
-    invoke-virtual {v8, v9, v10, v7, v0}, Landroid/text/SpannableString;->setSpan(Ljava/lang/Object;III)V
-
-    move-object v0, v8
-
-    :goto_7
-    invoke-virtual {v6}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    new-instance v6, Le91;
-
-    invoke-direct {v6, v0, v13}, Le91;-><init>(Landroid/text/SpannableString;Lf91;)V
-
-    invoke-virtual {v4, v5, v6}, Lazd;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_e
-
-    sget-object v0, Le5f;->a:Le5f;
-
-    return-object v0
-
-    :cond_e
-    move-object/from16 v0, v16
-
-    goto/16 :goto_0
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_5
+        :pswitch_4
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

@@ -1,43 +1,15 @@
-.class public final Lg97;
-.super Lv64;
+.class public abstract Lg97;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final b:Lg97;
-
-.field public static final c:Lr64;
-
-
 # direct methods
-.method static constructor <clinit>()V
-    .locals 5
+.method public static a(IIII)Landroid/graphics/Insets;
+    .locals 0
 
-    new-instance v0, Lg97;
+    invoke-static {p0, p1, p2, p3}, Landroid/graphics/Insets;->of(IIII)Landroid/graphics/Insets;
 
-    invoke-direct {v0}, Lv64;-><init>()V
+    move-result-object p0
 
-    sput-object v0, Lg97;->b:Lg97;
-
-    const-string v1, "id"
-
-    const-string v2, "link"
-
-    filled-new-array {v1, v2}, [Ljava/lang/String;
-
-    move-result-object v1
-
-    const/4 v2, 0x0
-
-    const/16 v3, 0xe
-
-    const-string v4, ":join"
-
-    invoke-static {v0, v4, v1, v2, v3}, Lv64;->a(Lv64;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lr64;
-
-    move-result-object v0
-
-    sput-object v0, Lg97;->c:Lr64;
-
-    return-void
+    return-object p0
 .end method

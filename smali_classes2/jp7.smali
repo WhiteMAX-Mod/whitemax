@@ -1,94 +1,100 @@
 .class public final Ljp7;
-.super Lb36;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ldq7;
 
-# instance fields
-.field public final f:Lgl0;
 
-.field public g:Ltd7;
+# static fields
+.field public static final CREATOR:Landroid/os/Parcelable$Creator;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroid/os/Parcelable$Creator<",
+            "Ljp7;",
+            ">;"
+        }
+    .end annotation
+.end field
 
-.field public final h:Landroid/media/MediaMetadataRetriever;
-
-.field public final i:I
-
-.field public volatile j:J
+.field public static final a:Ljp7;
 
 
 # direct methods
-.method public constructor <init>(Lmje;Le45;Lwi4;)V
+.method static constructor <clinit>()V
+    .locals 2
+
+    new-instance v0, Ljp7;
+
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    sput-object v0, Ljp7;->a:Ljp7;
+
+    new-instance v0, Lra7;
+
+    const/4 v1, 0x4
+
+    invoke-direct {v0, v1}, Lra7;-><init>(I)V
+
+    sput-object v0, Ljp7;->CREATOR:Landroid/os/Parcelable$Creator;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final describeContents()I
     .locals 0
 
-    invoke-direct {p0, p1, p2}, Lb36;-><init>(Lmje;Le45;)V
+    const/4 p0, 0x0
 
-    new-instance p1, Lgl0;
+    return p0
+.end method
 
-    const/4 p2, 0x0
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 1
 
-    invoke-direct {p1, p2}, Lgl0;-><init>(Ljava/lang/Object;)V
+    const/4 v0, 0x1
 
-    iput-object p1, p0, Ljp7;->f:Lgl0;
+    if-ne p0, p1, :cond_0
 
-    new-instance p1, Landroid/media/MediaMetadataRetriever;
-
-    invoke-direct {p1}, Landroid/media/MediaMetadataRetriever;-><init>()V
-
-    iput-object p1, p0, Ljp7;->h:Landroid/media/MediaMetadataRetriever;
-
-    invoke-virtual {p3}, Lti4;->b()Lyi4;
-
-    move-result-object p1
-
-    invoke-virtual {p1}, Ljava/lang/Enum;->ordinal()I
-
-    move-result p2
-
-    if-eqz p2, :cond_2
-
-    const/4 p3, 0x1
-
-    if-eq p2, p3, :cond_1
-
-    const/4 p3, 0x2
-
-    if-ne p2, p3, :cond_0
-
-    const/16 p1, 0x14
-
-    iput p1, p0, Ljp7;->i:I
-
-    return-void
+    return v0
 
     :cond_0
-    new-instance p0, Ljava/lang/IllegalStateException;
+    instance-of p0, p1, Ljp7;
 
-    new-instance p2, Ljava/lang/StringBuilder;
+    if-nez p0, :cond_1
 
-    const-string p3, "unknown performance class "
+    const/4 p0, 0x0
 
-    invoke-direct {p2, p3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {p2, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p0
+    return p0
 
     :cond_1
-    const/16 p1, 0xa
+    return v0
+.end method
 
-    iput p1, p0, Ljp7;->i:I
+.method public final hashCode()I
+    .locals 0
 
-    return-void
+    const p0, -0x501f9358
 
-    :cond_2
-    const/4 p1, 0x5
+    return p0
+.end method
 
-    iput p1, p0, Ljp7;->i:I
+.method public final toString()Ljava/lang/String;
+    .locals 0
+
+    const-string p0, "ContentLevelError"
+
+    return-object p0
+.end method
+
+.method public final writeToParcel(Landroid/os/Parcel;I)V
+    .locals 0
+
+    const/4 p0, 0x1
+
+    invoke-virtual {p1, p0}, Landroid/os/Parcel;->writeInt(I)V
 
     return-void
 .end method

@@ -2,159 +2,175 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lax1;
+
+# static fields
+.field public static final d:Ljava/util/List;
 
 
 # instance fields
-.field public final a:Lax1;
+.field public a:Lb9g;
 
-.field public final b:Lahc;
+.field public final b:Ljava/util/ArrayList;
 
-.field public final c:Luqf;
-
-.field public final o:Ltqf;
+.field public final c:Ljava/util/ArrayList;
 
 
 # direct methods
-.method public constructor <init>(Lax1;Ltqf;Lync;)V
+.method static constructor <clinit>()V
+    .locals 5
+
+    const/4 v0, 0x1
+
+    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v0
+
+    const/4 v1, 0x2
+
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v1
+
+    const/4 v2, 0x4
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    const/4 v3, 0x3
+
+    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v3
+
+    const/4 v4, 0x7
+
+    invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v4
+
+    filled-new-array {v0, v1, v2, v3, v4}, [Ljava/lang/Integer;
+
+    move-result-object v0
+
+    invoke-static {v0}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
+
+    move-result-object v0
+
+    sput-object v0, Lsqf;->d:Ljava/util/List;
+
+    return-void
+.end method
+
+.method public constructor <init>()V
     .locals 1
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lsqf;->a:Lax1;
+    new-instance v0, Ljava/util/ArrayList;
 
-    iput-object p2, p0, Lsqf;->o:Ltqf;
+    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    new-instance p2, Lahc;
+    iput-object v0, p0, Lsqf;->b:Ljava/util/ArrayList;
 
-    invoke-interface {p1}, Lax1;->f()Lhw1;
+    new-instance v0, Ljava/util/ArrayList;
 
-    move-result-object v0
+    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    invoke-direct {p2, v0, p3}, Lahc;-><init>(Lhw1;Lync;)V
-
-    iput-object p2, p0, Lsqf;->b:Lahc;
-
-    new-instance p2, Luqf;
-
-    invoke-interface {p1}, Lax1;->n()Lyw1;
-
-    move-result-object p1
-
-    invoke-direct {p2, p1}, Luqf;-><init>(Lyw1;)V
-
-    iput-object p2, p0, Lsqf;->c:Luqf;
+    iput-object v0, p0, Lsqf;->c:Ljava/util/ArrayList;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final b(Lm9f;)V
+.method public final a(Llqf;)V
     .locals 0
 
-    invoke-static {}, Lp6g;->c()V
+    iget-object p0, p0, Lsqf;->b:Ljava/util/ArrayList;
 
-    iget-object p0, p0, Lsqf;->o:Ltqf;
-
-    invoke-virtual {p0, p1}, Ltqf;->b(Lm9f;)V
+    invoke-virtual {p0, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     return-void
 .end method
 
-.method public final d(Lm9f;)V
-    .locals 0
+.method public final b()Lmr8;
+    .locals 6
 
-    invoke-static {}, Lp6g;->c()V
+    iget-object v0, p0, Lsqf;->b:Ljava/util/ArrayList;
 
-    iget-object p0, p0, Lsqf;->o:Ltqf;
+    invoke-virtual {v0}, Ljava/util/ArrayList;->isEmpty()Z
 
-    invoke-virtual {p0, p1}, Ltqf;->d(Lm9f;)V
+    move-result v1
 
-    return-void
-.end method
+    xor-int/lit8 v1, v1, 0x1
 
-.method public final e()Lww9;
-    .locals 0
+    const-string v2, "UseCase must not be empty."
 
-    iget-object p0, p0, Lsqf;->a:Lax1;
+    invoke-static {v2, v1}, Ln4e;->h(Ljava/lang/String;Z)V
 
-    invoke-interface {p0}, Lax1;->e()Lww9;
+    iget-object v1, p0, Lsqf;->c:Ljava/util/ArrayList;
 
-    move-result-object p0
+    invoke-virtual {v1}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
-    return-object p0
-.end method
+    move-result-object v2
 
-.method public final f()Lhw1;
-    .locals 0
+    const/4 v3, 0x0
 
-    iget-object p0, p0, Lsqf;->b:Lahc;
+    :goto_0
+    invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
 
-    return-object p0
-.end method
+    move-result v4
 
-.method public final h(Lm9f;)V
-    .locals 0
+    if-eqz v4, :cond_1
 
-    invoke-static {}, Lp6g;->c()V
+    invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    iget-object p0, p0, Lsqf;->o:Ltqf;
+    move-result-object v4
 
-    invoke-virtual {p0, p1}, Ltqf;->h(Lm9f;)V
+    check-cast v4, Llyf;
 
-    return-void
-.end method
+    iget v4, v4, Llyf;->a:I
 
-.method public final j(Ljava/util/ArrayList;)V
-    .locals 0
+    sget-object v5, Lsqf;->d:Ljava/util/List;
 
-    new-instance p0, Ljava/lang/UnsupportedOperationException;
+    invoke-static {v4, v5}, Lkua;->e(ILjava/util/Collection;)V
 
-    const-string p1, "Operation not supported by VirtualCamera."
+    and-int v5, v3, v4
 
-    invoke-direct {p0, p1}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+    if-gtz v5, :cond_0
+
+    or-int/2addr v3, v4
+
+    goto :goto_0
+
+    :cond_0
+    new-instance p0, Ljava/lang/IllegalArgumentException;
+
+    sget-object v0, Ljava/util/Locale;->US:Ljava/util/Locale;
+
+    invoke-static {v5}, Lkua;->m(I)Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v1, "More than one effects has targets "
+
+    const-string v2, "."
+
+    invoke-static {v1, v0, v2}, Lyv7;->h(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-direct {p0, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
     throw p0
-.end method
 
-.method public final k(Ljava/util/ArrayList;)V
-    .locals 0
+    :cond_1
+    new-instance v2, Lmr8;
 
-    new-instance p0, Ljava/lang/UnsupportedOperationException;
+    iget-object p0, p0, Lsqf;->a:Lb9g;
 
-    const-string p1, "Operation not supported by VirtualCamera."
+    invoke-direct {v2, p0, v0, v1}, Lmr8;-><init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V
 
-    invoke-direct {p0, p1}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
-
-    throw p0
-.end method
-
-.method public final l()Z
-    .locals 0
-
-    const/4 p0, 0x0
-
-    return p0
-.end method
-
-.method public final n()Lyw1;
-    .locals 0
-
-    iget-object p0, p0, Lsqf;->c:Luqf;
-
-    return-object p0
-.end method
-
-.method public final o(Lm9f;)V
-    .locals 0
-
-    invoke-static {}, Lp6g;->c()V
-
-    iget-object p0, p0, Lsqf;->o:Ltqf;
-
-    invoke-virtual {p0, p1}, Ltqf;->o(Lm9f;)V
-
-    return-void
+    return-object v2
 .end method

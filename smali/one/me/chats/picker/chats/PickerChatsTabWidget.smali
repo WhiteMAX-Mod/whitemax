@@ -22,16 +22,16 @@
         "args",
         "<init>",
         "(Landroid/os/Bundle;)V",
-        "Lzsc;",
+        "Lo6d;",
         "scopeId",
         "",
         "isInMultiSelect",
         "Lkotlin/Function1;",
-        "Le5f;",
+        "Lylf;",
         "onMultiSelectToggled",
-        "Lna2;",
+        "Lzc2;",
         "filter",
-        "(Ljava/lang/String;ZLx56;Lna2;Ll94;)V",
+        "(Ljava/lang/String;ZLbc6;Lzc2;Lld4;)V",
         "chats-list_release"
     }
     k = 0x1
@@ -45,42 +45,42 @@
 
 
 # static fields
-.field public static final synthetic u0:[Lbc7;
+.field public static final synthetic x0:[Lxi7;
 
 
 # instance fields
-.field public final X:Lx56;
+.field public final X:Lbc6;
 
-.field public final Y:Lkm0;
+.field public final Y:Lrm0;
 
-.field public final Z:Lkm0;
+.field public final Z:Lrm0;
 
-.field public final a:Lvr;
+.field public final a:Lfr;
 
-.field public final b:Lvr;
+.field public final b:Lfr;
 
-.field public final c:Lvr;
+.field public final c:Lfr;
 
-.field public final o:Lp27;
+.field public final o:Lj97;
 
-.field public final o0:Lje7;
+.field public final r0:Lcl7;
 
-.field public p0:Lu40;
+.field public s0:Lx30;
 
-.field public final q0:Li30;
+.field public final t0:Lf36;
 
-.field public final r0:I
+.field public final u0:I
 
-.field public final s0:Lvw5;
+.field public final v0:Lg26;
 
-.field public final t0:Lh0f;
+.field public final w0:Lnef;
 
 
 # direct methods
 .method static constructor <clinit>()V
     .locals 9
 
-    new-instance v0, Lnlb;
+    new-instance v0, Lsxb;
 
     const-class v1, Lone/me/chats/picker/chats/PickerChatsTabWidget;
 
@@ -90,45 +90,45 @@
 
     const/4 v4, 0x0
 
-    invoke-direct {v0, v1, v2, v3, v4}, Lnlb;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
+    invoke-direct {v0, v1, v2, v3, v4}, Lsxb;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
 
-    sget-object v2, Llcc;->a:Lmcc;
+    sget-object v2, Ljpc;->a:Lkpc;
 
     const-string v3, "isInMultiSelect"
 
     const-string v5, "isInMultiSelect()Z"
 
-    invoke-static {v2, v1, v3, v5}, Lm26;->f(Lmcc;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;)Lbh9;
+    invoke-static {v2, v1, v3, v5}, Lee5;->g(Lkpc;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;)Lmo9;
 
     move-result-object v2
 
-    new-instance v3, Lnlb;
+    new-instance v3, Lsxb;
 
     const-string v5, "itemsFilter"
 
     const-string v6, "getItemsFilter()Lone/me/chats/list/loader/ChatFilterEnum;"
 
-    invoke-direct {v3, v1, v5, v6, v4}, Lnlb;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
+    invoke-direct {v3, v1, v5, v6, v4}, Lsxb;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
 
-    new-instance v5, Lnlb;
+    new-instance v5, Lsxb;
 
     const-string v6, "foldersTabs"
 
     const-string v7, "getFoldersTabs()Lone/me/common/tablayout/OneMeTabLayout;"
 
-    invoke-direct {v5, v1, v6, v7, v4}, Lnlb;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
+    invoke-direct {v5, v1, v6, v7, v4}, Lsxb;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
 
-    new-instance v6, Lnlb;
+    new-instance v6, Lsxb;
 
     const-string v7, "foldersViewPager"
 
     const-string v8, "getFoldersViewPager()Landroidx/viewpager2/widget/ViewPager2;"
 
-    invoke-direct {v6, v1, v7, v8, v4}, Lnlb;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
+    invoke-direct {v6, v1, v7, v8, v4}, Lsxb;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
 
     const/4 v1, 0x5
 
-    new-array v1, v1, [Lbc7;
+    new-array v1, v1, [Lxi7;
 
     aput-object v0, v1, v4
 
@@ -148,7 +148,7 @@
 
     aput-object v6, v1, v0
 
-    sput-object v1, Lone/me/chats/picker/chats/PickerChatsTabWidget;->u0:[Lbc7;
+    sput-object v1, Lone/me/chats/picker/chats/PickerChatsTabWidget;->x0:[Lxi7;
 
     return-void
 .end method
@@ -163,136 +163,136 @@
     const/4 v2, 0x0
 
     .line 10
-    invoke-direct {p0, p1, v0, v1, v2}, Lone/me/sdk/arch/Widget;-><init>(Landroid/os/Bundle;IILl94;)V
+    invoke-direct {p0, p1, v0, v1, v2}, Lone/me/sdk/arch/Widget;-><init>(Landroid/os/Bundle;IILld4;)V
 
     .line 11
-    new-instance p1, Lvr;
+    new-instance p1, Lfr;
 
-    const-class v1, Lzsc;
+    const-class v1, Lo6d;
 
     const-string v3, "scope.id"
 
-    invoke-direct {p1, v1, v3}, Lvr;-><init>(Ljava/lang/Class;Ljava/lang/String;)V
+    invoke-direct {p1, v1, v3}, Lfr;-><init>(Ljava/lang/Class;Ljava/lang/String;)V
 
     .line 12
-    iput-object p1, p0, Lone/me/chats/picker/chats/PickerChatsTabWidget;->a:Lvr;
+    iput-object p1, p0, Lone/me/chats/picker/chats/PickerChatsTabWidget;->a:Lfr;
 
     .line 13
     sget-object v1, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
 
     .line 14
-    new-instance v3, Lvr;
+    new-instance v3, Lfr;
 
     const-class v4, Ljava/lang/Boolean;
 
     const-string v5, "is_in_multiselect"
 
-    invoke-direct {v3, v4, v1, v5}, Lvr;-><init>(Ljava/lang/Class;Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-direct {v3, v4, v1, v5}, Lfr;-><init>(Ljava/lang/Class;Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 15
-    iput-object v3, p0, Lone/me/chats/picker/chats/PickerChatsTabWidget;->b:Lvr;
+    iput-object v3, p0, Lone/me/chats/picker/chats/PickerChatsTabWidget;->b:Lfr;
 
     .line 16
-    new-instance v1, Lvr;
+    new-instance v1, Lfr;
 
-    const-class v3, Lna2;
+    const-class v3, Lzc2;
 
     const-string v4, "picker.filter"
 
-    invoke-direct {v1, v3, v4}, Lvr;-><init>(Ljava/lang/Class;Ljava/lang/String;)V
+    invoke-direct {v1, v3, v4}, Lfr;-><init>(Ljava/lang/Class;Ljava/lang/String;)V
 
     .line 17
-    iput-object v1, p0, Lone/me/chats/picker/chats/PickerChatsTabWidget;->c:Lvr;
+    iput-object v1, p0, Lone/me/chats/picker/chats/PickerChatsTabWidget;->c:Lfr;
 
     .line 18
-    sget-object v1, Lp27;->c:Lp27;
+    sget-object v1, Lj97;->c:Lj97;
 
-    iput-object v1, p0, Lone/me/chats/picker/chats/PickerChatsTabWidget;->o:Lp27;
+    iput-object v1, p0, Lone/me/chats/picker/chats/PickerChatsTabWidget;->o:Lj97;
 
     .line 19
-    new-instance v1, Lcwa;
+    new-instance v1, Ln7b;
 
     const/4 v3, 0x0
 
-    invoke-direct {v1, p0, v3}, Lcwa;-><init>(Lone/me/chats/picker/chats/PickerChatsTabWidget;I)V
+    invoke-direct {v1, p0, v3}, Ln7b;-><init>(Lone/me/chats/picker/chats/PickerChatsTabWidget;I)V
 
-    invoke-virtual {p0, v1}, Lone/me/sdk/arch/Widget;->binding(Lv56;)Lkm0;
+    invoke-virtual {p0, v1}, Lone/me/sdk/arch/Widget;->binding(Lzb6;)Lrm0;
 
     move-result-object v1
 
-    iput-object v1, p0, Lone/me/chats/picker/chats/PickerChatsTabWidget;->Y:Lkm0;
+    iput-object v1, p0, Lone/me/chats/picker/chats/PickerChatsTabWidget;->Y:Lrm0;
 
     .line 20
-    new-instance v1, Lcwa;
+    new-instance v1, Ln7b;
 
     const/4 v3, 0x1
 
-    invoke-direct {v1, p0, v3}, Lcwa;-><init>(Lone/me/chats/picker/chats/PickerChatsTabWidget;I)V
+    invoke-direct {v1, p0, v3}, Ln7b;-><init>(Lone/me/chats/picker/chats/PickerChatsTabWidget;I)V
 
-    invoke-virtual {p0, v1}, Lone/me/sdk/arch/Widget;->binding(Lv56;)Lkm0;
+    invoke-virtual {p0, v1}, Lone/me/sdk/arch/Widget;->binding(Lzb6;)Lrm0;
 
     move-result-object v1
 
-    iput-object v1, p0, Lone/me/chats/picker/chats/PickerChatsTabWidget;->Z:Lkm0;
+    iput-object v1, p0, Lone/me/chats/picker/chats/PickerChatsTabWidget;->Z:Lrm0;
 
     .line 21
-    sget-object v1, Lone/me/chats/picker/chats/PickerChatsTabWidget;->u0:[Lbc7;
+    sget-object v1, Lone/me/chats/picker/chats/PickerChatsTabWidget;->x0:[Lxi7;
 
     aget-object v1, v1, v0
 
-    invoke-virtual {p1, p0}, Lvr;->a(Lone/me/sdk/arch/Widget;)Ljava/lang/Object;
+    invoke-virtual {p1, p0}, Lfr;->a(Lone/me/sdk/arch/Widget;)Ljava/lang/Object;
 
     move-result-object p1
 
-    check-cast p1, Lzsc;
+    check-cast p1, Lo6d;
 
     .line 22
-    iget-object p1, p1, Lzsc;->a:Ljava/lang/String;
+    iget-object p1, p1, Lo6d;->a:Ljava/lang/String;
 
     .line 23
-    const-class v1, Lhva;
+    const-class v1, Ls6b;
 
     .line 24
-    invoke-virtual {p0, p1, v1, v2}, Lone/me/sdk/arch/Widget;->getSharedViewModel-cp94BC8(Ljava/lang/String;Ljava/lang/Class;Lv56;)Lje7;
+    invoke-virtual {p0, p1, v1, v2}, Lone/me/sdk/arch/Widget;->getSharedViewModel-cp94BC8(Ljava/lang/String;Ljava/lang/Class;Lzb6;)Lcl7;
 
     move-result-object p1
 
     .line 25
-    iput-object p1, p0, Lone/me/chats/picker/chats/PickerChatsTabWidget;->o0:Lje7;
+    iput-object p1, p0, Lone/me/chats/picker/chats/PickerChatsTabWidget;->r0:Lcl7;
 
     .line 26
-    new-instance p1, Ldwa;
+    new-instance p1, Lksa;
 
-    const/4 v1, 0x0
+    const/16 v1, 0xb
 
-    invoke-direct {p1, v1}, Ldwa;-><init>(I)V
+    invoke-direct {p1, v1}, Lksa;-><init>(I)V
 
     .line 27
-    new-instance v1, Lc68;
+    new-instance v1, Lcd8;
 
-    const/16 v3, 0x11
+    const/16 v3, 0x13
 
-    invoke-direct {v1, v3, p1}, Lc68;-><init>(ILjava/lang/Object;)V
+    invoke-direct {v1, v3, p1}, Lcd8;-><init>(ILjava/lang/Object;)V
 
-    const-class p1, Lbwa;
+    const-class p1, Lm7b;
 
-    invoke-virtual {p0, p1, v1}, Lone/me/sdk/arch/Widget;->createViewModelLazy(Ljava/lang/Class;Lv56;)Lje7;
+    invoke-virtual {p0, p1, v1}, Lone/me/sdk/arch/Widget;->createViewModelLazy(Ljava/lang/Class;Lzb6;)Lcl7;
 
     move-result-object p1
 
     .line 28
-    new-instance v1, Li30;
+    new-instance v1, Lf36;
 
     const/4 v3, 0x6
 
-    invoke-direct {v1, v2, v3}, Li30;-><init>(Ljava/util/concurrent/ExecutorService;I)V
+    invoke-direct {v1, v2, v3}, Lf36;-><init>(Ljava/util/concurrent/ExecutorService;I)V
 
-    iput-object v1, p0, Lone/me/chats/picker/chats/PickerChatsTabWidget;->q0:Li30;
+    iput-object v1, p0, Lone/me/chats/picker/chats/PickerChatsTabWidget;->t0:Lf36;
 
     const/4 v1, 0x3
 
     .line 29
-    iput v1, p0, Lone/me/chats/picker/chats/PickerChatsTabWidget;->r0:I
+    iput v1, p0, Lone/me/chats/picker/chats/PickerChatsTabWidget;->u0:I
 
     .line 30
     new-instance v1, Landroidx/recyclerview/widget/b;
@@ -300,7 +300,7 @@
     invoke-direct {v1}, Landroidx/recyclerview/widget/b;-><init>()V
 
     .line 31
-    sget v3, Lfva;->a:I
+    sget v3, Lq6b;->a:I
 
     const/16 v4, 0x1e
 
@@ -308,86 +308,86 @@
     invoke-virtual {v1, v3, v4}, Landroidx/recyclerview/widget/b;->setMaxRecycledViews(II)V
 
     .line 33
-    new-instance v3, Lax8;
+    new-instance v3, Ljy8;
 
-    const/16 v4, 0x10
+    const/16 v4, 0x12
 
-    invoke-direct {v3, v4, p0}, Lax8;-><init>(ILjava/lang/Object;)V
+    invoke-direct {v3, v4, p0}, Ljy8;-><init>(ILjava/lang/Object;)V
 
     .line 34
-    new-instance v4, Lvw5;
+    new-instance v4, Lg26;
 
-    invoke-direct {v4, p0, v1, v3}, Lvw5;-><init>(Lone/me/sdk/arch/Widget;Landroidx/recyclerview/widget/b;Luw5;)V
+    invoke-direct {v4, p0, v1, v3}, Lg26;-><init>(Lxx3;Landroidx/recyclerview/widget/b;Lf26;)V
 
-    iput-object v4, p0, Lone/me/chats/picker/chats/PickerChatsTabWidget;->s0:Lvw5;
+    iput-object v4, p0, Lone/me/chats/picker/chats/PickerChatsTabWidget;->v0:Lg26;
 
     .line 35
-    new-instance v1, Lh0f;
+    new-instance v1, Lnef;
 
-    invoke-direct {v1}, Lh0f;-><init>()V
+    invoke-direct {v1}, Lnef;-><init>()V
 
     .line 36
-    new-instance v3, Ll12;
+    new-instance v3, Le42;
 
     .line 37
-    invoke-direct {v3}, Lzze;-><init>()V
+    invoke-direct {v3}, Lfef;-><init>()V
 
     .line 38
-    invoke-virtual {v1, v3}, Lh0f;->S(Lzze;)V
+    invoke-virtual {v1, v3}, Lnef;->S(Lfef;)V
 
     .line 39
-    new-instance v3, Lha5;
+    new-instance v3, Lzf5;
 
     .line 40
-    invoke-direct {v3}, Lzqf;-><init>()V
+    invoke-direct {v3}, Llag;-><init>()V
 
     .line 41
-    invoke-virtual {v1, v3}, Lh0f;->S(Lzze;)V
+    invoke-virtual {v1, v3}, Lnef;->S(Lfef;)V
 
     .line 42
-    invoke-virtual {v1, v0}, Lh0f;->V(I)V
+    invoke-virtual {v1, v0}, Lnef;->V(I)V
 
     const-wide/16 v3, 0x96
 
     .line 43
-    invoke-virtual {v1, v3, v4}, Lh0f;->U(J)V
+    invoke-virtual {v1, v3, v4}, Lnef;->U(J)V
 
     .line 44
-    iput-object v1, p0, Lone/me/chats/picker/chats/PickerChatsTabWidget;->t0:Lh0f;
+    iput-object v1, p0, Lone/me/chats/picker/chats/PickerChatsTabWidget;->w0:Lnef;
 
     .line 45
-    invoke-interface {p1}, Lje7;->getValue()Ljava/lang/Object;
+    invoke-interface {p1}, Lcl7;->getValue()Ljava/lang/Object;
 
     move-result-object p1
 
-    check-cast p1, Lbwa;
+    check-cast p1, Lm7b;
 
     .line 46
-    iget-object p1, p1, Lbwa;->b:Lu5c;
+    iget-object p1, p1, Lm7b;->b:Liic;
 
     .line 47
-    new-instance v0, Lewa;
+    new-instance v0, Lo7b;
 
-    invoke-direct {v0, p0, v2}, Lewa;-><init>(Lone/me/chats/picker/chats/PickerChatsTabWidget;Lkotlin/coroutines/Continuation;)V
+    invoke-direct {v0, p0, v2}, Lo7b;-><init>(Lone/me/chats/picker/chats/PickerChatsTabWidget;Lkotlin/coroutines/Continuation;)V
 
     .line 48
-    new-instance v1, Lgp5;
+    new-instance v1, Lnu5;
 
     const/4 v2, 0x1
 
-    invoke-direct {v1, p1, v0, v2}, Lgp5;-><init>(Lzm5;Ll66;I)V
+    invoke-direct {v1, p1, v0, v2}, Lnu5;-><init>(Lis5;Lpc6;I)V
 
     .line 49
-    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getLifecycleScope()Lqg7;
+    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getLifecycleScope()Lmn7;
 
     move-result-object p0
 
-    invoke-static {v1, p0}, Lsgg;->L(Lzm5;Lox3;)Ldwd;
+    invoke-static {v1, p0}, Lo97;->u0(Lis5;Ly04;)Lcae;
 
     return-void
 .end method
 
-.method public synthetic constructor <init>(Ljava/lang/String;ZLx56;Lna2;ILl94;)V
+.method public synthetic constructor <init>(Ljava/lang/String;ZLbc6;Lzc2;ILld4;)V
     .locals 6
 
     and-int/lit8 p6, p5, 0x2
@@ -413,7 +413,7 @@
     if-eqz p2, :cond_2
 
     .line 50
-    sget-object p4, Lna2;->a:Lna2;
+    sget-object p4, Lzc2;->a:Lzc2;
 
     :cond_2
     move-object v4, p4
@@ -425,25 +425,25 @@
     move-object v1, p1
 
     .line 51
-    invoke-direct/range {v0 .. v5}, Lone/me/chats/picker/chats/PickerChatsTabWidget;-><init>(Ljava/lang/String;ZLx56;Lna2;Ll94;)V
+    invoke-direct/range {v0 .. v5}, Lone/me/chats/picker/chats/PickerChatsTabWidget;-><init>(Ljava/lang/String;ZLbc6;Lzc2;Lld4;)V
 
     return-void
 .end method
 
-.method public constructor <init>(Ljava/lang/String;ZLx56;Lna2;Ll94;)V
+.method public constructor <init>(Ljava/lang/String;ZLbc6;Lzc2;Lld4;)V
     .locals 1
 
     .line 1
-    new-instance p5, Lzsc;
+    new-instance p5, Lo6d;
 
-    invoke-direct {p5, p1}, Lzsc;-><init>(Ljava/lang/String;)V
+    invoke-direct {p5, p1}, Lo6d;-><init>(Ljava/lang/String;)V
 
     .line 2
-    new-instance p1, Ldna;
+    new-instance p1, Lpxa;
 
     const-string v0, "scope.id"
 
-    invoke-direct {p1, v0, p5}, Ldna;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+    invoke-direct {p1, v0, p5}, Lpxa;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
 
     .line 3
     invoke-static {p2}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
@@ -451,26 +451,26 @@
     move-result-object p2
 
     .line 4
-    new-instance p5, Ldna;
+    new-instance p5, Lpxa;
 
     const-string v0, "is_in_multiselect"
 
-    invoke-direct {p5, v0, p2}, Ldna;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+    invoke-direct {p5, v0, p2}, Lpxa;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
 
     .line 5
-    new-instance p2, Ldna;
+    new-instance p2, Lpxa;
 
     const-string v0, "picker.filter"
 
-    invoke-direct {p2, v0, p4}, Ldna;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+    invoke-direct {p2, v0, p4}, Lpxa;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
 
     .line 6
-    filled-new-array {p1, p5, p2}, [Ldna;
+    filled-new-array {p1, p5, p2}, [Lpxa;
 
     move-result-object p1
 
     .line 7
-    invoke-static {p1}, Lp54;->d([Ldna;)Landroid/os/Bundle;
+    invoke-static {p1}, Lw7;->c([Lpxa;)Landroid/os/Bundle;
 
     move-result-object p1
 
@@ -478,17 +478,17 @@
     invoke-direct {p0, p1}, Lone/me/chats/picker/chats/PickerChatsTabWidget;-><init>(Landroid/os/Bundle;)V
 
     .line 9
-    iput-object p3, p0, Lone/me/chats/picker/chats/PickerChatsTabWidget;->X:Lx56;
+    iput-object p3, p0, Lone/me/chats/picker/chats/PickerChatsTabWidget;->X:Lbc6;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final getInsetsConfig()Lp27;
+.method public final getInsetsConfig()Lj97;
     .locals 0
 
-    iget-object p0, p0, Lone/me/chats/picker/chats/PickerChatsTabWidget;->o:Lp27;
+    iget-object p0, p0, Lone/me/chats/picker/chats/PickerChatsTabWidget;->o:Lj97;
 
     return-object p0
 .end method
@@ -504,43 +504,43 @@
 
     invoke-direct {p2, p1}, Landroidx/constraintlayout/widget/ConstraintLayout;-><init>(Landroid/content/Context;)V
 
-    invoke-virtual {p0}, Lone/me/chats/picker/chats/PickerChatsTabWidget;->p0()Lmha;
+    invoke-virtual {p0}, Lone/me/chats/picker/chats/PickerChatsTabWidget;->y0()Ltqa;
 
     move-result-object p1
 
-    new-instance p3, Loi3;
+    new-instance p3, Ltl3;
 
     const/4 v0, -0x2
 
     const/4 v1, 0x0
 
-    invoke-direct {p3, v1, v0}, Loi3;-><init>(II)V
+    invoke-direct {p3, v1, v0}, Ltl3;-><init>(II)V
 
-    iput v1, p3, Loi3;->i:I
+    iput v1, p3, Ltl3;->i:I
 
-    iput v1, p3, Loi3;->e:I
+    iput v1, p3, Ltl3;->e:I
 
-    iput v1, p3, Loi3;->h:I
+    iput v1, p3, Ltl3;->h:I
 
     invoke-virtual {p2, p1, p3}, Landroid/view/ViewGroup;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    invoke-virtual {p0}, Lone/me/chats/picker/chats/PickerChatsTabWidget;->q0()Landroidx/viewpager2/widget/ViewPager2;
+    invoke-virtual {p0}, Lone/me/chats/picker/chats/PickerChatsTabWidget;->z0()Landroidx/viewpager2/widget/ViewPager2;
 
     move-result-object p0
 
-    new-instance p1, Loi3;
+    new-instance p1, Ltl3;
 
-    invoke-direct {p1, v1, v1}, Loi3;-><init>(II)V
+    invoke-direct {p1, v1, v1}, Ltl3;-><init>(II)V
 
-    sget p3, Lg6a;->e:I
+    sget p3, Lsea;->e:I
 
-    iput p3, p1, Loi3;->j:I
+    iput p3, p1, Ltl3;->j:I
 
-    iput v1, p1, Loi3;->l:I
+    iput v1, p1, Ltl3;->l:I
 
-    iput v1, p1, Loi3;->e:I
+    iput v1, p1, Ltl3;->e:I
 
-    iput v1, p1, Loi3;->h:I
+    iput v1, p1, Ltl3;->h:I
 
     invoke-virtual {p2, p0, p1}, Landroid/view/ViewGroup;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
@@ -550,16 +550,16 @@
 .method public final onDestroyView(Landroid/view/View;)V
     .locals 0
 
-    iget-object p1, p0, Lone/me/chats/picker/chats/PickerChatsTabWidget;->p0:Lu40;
+    iget-object p1, p0, Lone/me/chats/picker/chats/PickerChatsTabWidget;->s0:Lx30;
 
     if-eqz p1, :cond_0
 
-    invoke-virtual {p1}, Lu40;->d()V
+    invoke-virtual {p1}, Lx30;->d()V
 
     :cond_0
     const/4 p1, 0x0
 
-    iput-object p1, p0, Lone/me/chats/picker/chats/PickerChatsTabWidget;->p0:Lu40;
+    iput-object p1, p0, Lone/me/chats/picker/chats/PickerChatsTabWidget;->s0:Lx30;
 
     return-void
 .end method
@@ -567,53 +567,53 @@
 .method public final onViewCreated(Landroid/view/View;)V
     .locals 5
 
-    invoke-virtual {p0}, Lone/me/chats/picker/chats/PickerChatsTabWidget;->q0()Landroidx/viewpager2/widget/ViewPager2;
+    invoke-virtual {p0}, Lone/me/chats/picker/chats/PickerChatsTabWidget;->z0()Landroidx/viewpager2/widget/ViewPager2;
 
     move-result-object p1
 
-    iget-object v0, p0, Lone/me/chats/picker/chats/PickerChatsTabWidget;->s0:Lvw5;
+    iget-object v0, p0, Lone/me/chats/picker/chats/PickerChatsTabWidget;->v0:Lg26;
 
-    invoke-virtual {p1, v0}, Landroidx/viewpager2/widget/ViewPager2;->setAdapter(Lgbc;)V
+    invoke-virtual {p1, v0}, Landroidx/viewpager2/widget/ViewPager2;->setAdapter(Lcoc;)V
 
-    invoke-virtual {p0}, Lone/me/chats/picker/chats/PickerChatsTabWidget;->q0()Landroidx/viewpager2/widget/ViewPager2;
+    invoke-virtual {p0}, Lone/me/chats/picker/chats/PickerChatsTabWidget;->z0()Landroidx/viewpager2/widget/ViewPager2;
 
     move-result-object p1
 
-    iget v1, p0, Lone/me/chats/picker/chats/PickerChatsTabWidget;->r0:I
+    iget v1, p0, Lone/me/chats/picker/chats/PickerChatsTabWidget;->u0:I
 
     invoke-virtual {p1, v1}, Landroidx/viewpager2/widget/ViewPager2;->setOffscreenPageLimit(I)V
 
-    invoke-virtual {p0}, Lone/me/chats/picker/chats/PickerChatsTabWidget;->p0()Lmha;
+    invoke-virtual {p0}, Lone/me/chats/picker/chats/PickerChatsTabWidget;->y0()Ltqa;
 
     move-result-object p1
 
-    invoke-virtual {p0}, Lone/me/chats/picker/chats/PickerChatsTabWidget;->q0()Landroidx/viewpager2/widget/ViewPager2;
+    invoke-virtual {p0}, Lone/me/chats/picker/chats/PickerChatsTabWidget;->z0()Landroidx/viewpager2/widget/ViewPager2;
 
     move-result-object v1
 
-    new-instance v2, Lj2a;
+    new-instance v2, Lnaa;
 
     const/16 v3, 0x10
 
-    invoke-direct {v2, v3}, Lj2a;-><init>(I)V
+    invoke-direct {v2, v3}, Lnaa;-><init>(I)V
 
-    new-instance v3, Lvh0;
+    new-instance v3, Lyh0;
 
-    const/16 v4, 0x15
+    const/16 v4, 0x16
 
-    invoke-direct {v3, v4}, Lvh0;-><init>(I)V
+    invoke-direct {v3, v4}, Lyh0;-><init>(I)V
 
-    iget-object v4, p0, Lone/me/chats/picker/chats/PickerChatsTabWidget;->q0:Li30;
+    iget-object v4, p0, Lone/me/chats/picker/chats/PickerChatsTabWidget;->t0:Lf36;
 
-    invoke-virtual {v4, p1, v1, v2, v3}, Li30;->a(Lmha;Landroidx/viewpager2/widget/ViewPager2;Lx56;Ll66;)Lu40;
+    invoke-virtual {v4, p1, v1, v2, v3}, Lf36;->a(Ltqa;Landroidx/viewpager2/widget/ViewPager2;Lbc6;Lpc6;)Lx30;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Lu40;->b()V
+    invoke-virtual {p1}, Lx30;->b()V
 
-    iput-object p1, p0, Lone/me/chats/picker/chats/PickerChatsTabWidget;->p0:Lu40;
+    iput-object p1, p0, Lone/me/chats/picker/chats/PickerChatsTabWidget;->s0:Lx30;
 
-    invoke-virtual {p0}, Lone/me/chats/picker/chats/PickerChatsTabWidget;->q0()Landroidx/viewpager2/widget/ViewPager2;
+    invoke-virtual {p0}, Lone/me/chats/picker/chats/PickerChatsTabWidget;->z0()Landroidx/viewpager2/widget/ViewPager2;
 
     move-result-object p1
 
@@ -639,10 +639,10 @@
     :goto_0
     if-eqz p1, :cond_1
 
-    invoke-virtual {p1, v3}, Landroidx/recyclerview/widget/RecyclerView;->setItemAnimator(Llbc;)V
+    invoke-virtual {p1, v3}, Landroidx/recyclerview/widget/RecyclerView;->setItemAnimator(Lhoc;)V
 
     :cond_1
-    iget-object p1, v0, Lvw5;->v0:Ljava/util/List;
+    iget-object p1, v0, Lg26;->y0:Ljava/util/List;
 
     invoke-interface {p1}, Ljava/util/List;->size()I
 
@@ -650,13 +650,13 @@
 
     if-lez p1, :cond_2
 
-    invoke-virtual {p0}, Lone/me/chats/picker/chats/PickerChatsTabWidget;->q0()Landroidx/viewpager2/widget/ViewPager2;
+    invoke-virtual {p0}, Lone/me/chats/picker/chats/PickerChatsTabWidget;->z0()Landroidx/viewpager2/widget/ViewPager2;
 
     move-result-object p1
 
     invoke-virtual {p1, v1, v1}, Landroidx/viewpager2/widget/ViewPager2;->e(IZ)V
 
-    invoke-virtual {p0}, Lone/me/chats/picker/chats/PickerChatsTabWidget;->q0()Landroidx/viewpager2/widget/ViewPager2;
+    invoke-virtual {p0}, Lone/me/chats/picker/chats/PickerChatsTabWidget;->z0()Landroidx/viewpager2/widget/ViewPager2;
 
     move-result-object p1
 
@@ -701,77 +701,77 @@
     invoke-virtual {p1, v0, v1}, Landroid/view/View;->measure(II)V
 
     :cond_2
-    iget-object p1, p0, Lone/me/chats/picker/chats/PickerChatsTabWidget;->o0:Lje7;
+    iget-object p1, p0, Lone/me/chats/picker/chats/PickerChatsTabWidget;->r0:Lcl7;
 
-    invoke-interface {p1}, Lje7;->getValue()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lhva;
-
-    iget-object p1, p1, Lhva;->q0:Lu5c;
-
-    new-instance v0, Lat2;
-
-    const/16 v1, 0x1a
-
-    invoke-direct {v0, p1, v1}, Lat2;-><init>(Lzm5;I)V
-
-    invoke-static {v0}, Lsgg;->p(Lzm5;)Lzm5;
+    invoke-interface {p1}, Lcl7;->getValue()Ljava/lang/Object;
 
     move-result-object p1
 
-    new-instance v0, Lgwa;
+    check-cast p1, Ls6b;
 
-    invoke-direct {v0, p0, v3}, Lgwa;-><init>(Lone/me/chats/picker/chats/PickerChatsTabWidget;Lkotlin/coroutines/Continuation;)V
+    iget-object p1, p1, Ls6b;->t0:Liic;
 
-    new-instance v1, Lgp5;
+    new-instance v0, Lzv2;
+
+    const/16 v1, 0x1b
+
+    invoke-direct {v0, p1, v1}, Lzv2;-><init>(Lis5;I)V
+
+    invoke-static {v0}, Lo97;->R(Lis5;)Lis5;
+
+    move-result-object p1
+
+    new-instance v0, Lq7b;
+
+    invoke-direct {v0, p0, v3}, Lq7b;-><init>(Lone/me/chats/picker/chats/PickerChatsTabWidget;Lkotlin/coroutines/Continuation;)V
+
+    new-instance v1, Lnu5;
 
     const/4 v2, 0x1
 
-    invoke-direct {v1, p1, v0, v2}, Lgp5;-><init>(Lzm5;Ll66;I)V
+    invoke-direct {v1, p1, v0, v2}, Lnu5;-><init>(Lis5;Lpc6;I)V
 
-    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleScope()Lqg7;
+    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleScope()Lmn7;
 
     move-result-object p0
 
-    invoke-static {v1, p0}, Lsgg;->L(Lzm5;Lox3;)Ldwd;
+    invoke-static {v1, p0}, Lo97;->u0(Lis5;Ly04;)Lcae;
 
     return-void
 .end method
 
-.method public final p0()Lmha;
+.method public final y0()Ltqa;
     .locals 2
 
-    sget-object v0, Lone/me/chats/picker/chats/PickerChatsTabWidget;->u0:[Lbc7;
+    sget-object v0, Lone/me/chats/picker/chats/PickerChatsTabWidget;->x0:[Lxi7;
 
     const/4 v1, 0x3
 
     aget-object v0, v0, v1
 
-    iget-object p0, p0, Lone/me/chats/picker/chats/PickerChatsTabWidget;->Y:Lkm0;
+    iget-object p0, p0, Lone/me/chats/picker/chats/PickerChatsTabWidget;->Y:Lrm0;
 
-    invoke-virtual {p0}, Lkm0;->getValue()Ljava/lang/Object;
+    invoke-virtual {p0}, Lrm0;->getValue()Ljava/lang/Object;
 
     move-result-object p0
 
-    check-cast p0, Lmha;
+    check-cast p0, Ltqa;
 
     return-object p0
 .end method
 
-.method public final q0()Landroidx/viewpager2/widget/ViewPager2;
+.method public final z0()Landroidx/viewpager2/widget/ViewPager2;
     .locals 2
 
-    sget-object v0, Lone/me/chats/picker/chats/PickerChatsTabWidget;->u0:[Lbc7;
+    sget-object v0, Lone/me/chats/picker/chats/PickerChatsTabWidget;->x0:[Lxi7;
 
     const/4 v1, 0x4
 
     aget-object v0, v0, v1
 
-    iget-object p0, p0, Lone/me/chats/picker/chats/PickerChatsTabWidget;->Z:Lkm0;
+    iget-object p0, p0, Lone/me/chats/picker/chats/PickerChatsTabWidget;->Z:Lrm0;
 
-    invoke-virtual {p0}, Lkm0;->getValue()Ljava/lang/Object;
+    invoke-virtual {p0}, Lrm0;->getValue()Ljava/lang/Object;
 
     move-result-object p0
 

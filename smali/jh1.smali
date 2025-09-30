@@ -1,16 +1,23 @@
-.class public final synthetic Ljh1;
-.super Ljava/lang/Object;
+.class public final Ljh1;
+.super Lx2;
 .source "SourceFile"
 
-# interfaces
-.implements Landroid/media/MediaPlayer$OnPreparedListener;
+
+# static fields
+.field public static final c:Ljh1;
 
 
-# virtual methods
-.method public final onPrepared(Landroid/media/MediaPlayer;)V
-    .locals 0
+# direct methods
+.method static constructor <clinit>()V
+    .locals 2
 
-    invoke-virtual {p1}, Landroid/media/MediaPlayer;->start()V
+    new-instance v0, Ljh1;
+
+    const/16 v1, 0x8
+
+    invoke-direct {v0, v1}, Lx2;-><init>(I)V
+
+    sput-object v0, Ljh1;->c:Ljh1;
 
     return-void
 .end method

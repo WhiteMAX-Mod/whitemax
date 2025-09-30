@@ -1,178 +1,108 @@
-.class public final La3;
-.super Lqde;
+.class public abstract La3;
+.super Lz1;
 .source "SourceFile"
 
 # interfaces
-.implements Ln66;
-
-
-# instance fields
-.field public final synthetic X:I
-
-.field public synthetic Y:Landroid/view/View;
-
-.field public synthetic Z:Lyha;
-
-
-# direct methods
-.method public synthetic constructor <init>(ILkotlin/coroutines/Continuation;I)V
-    .locals 0
-
-    iput p3, p0, La3;->X:I
-
-    invoke-direct {p0, p1, p2}, Lqde;-><init>(ILkotlin/coroutines/Continuation;)V
-
-    return-void
-.end method
+.implements Lm37;
+.implements Ljava/util/Collection;
+.implements Lmi7;
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+.method public final contains(Ljava/lang/Object;)Z
+    .locals 0
+
+    invoke-virtual {p0, p1}, Lz1;->indexOf(Ljava/lang/Object;)I
+
+    move-result p0
+
+    const/4 p1, -0x1
+
+    if-eq p0, p1, :cond_0
+
+    const/4 p0, 0x1
+
+    return p0
+
+    :cond_0
+    const/4 p0, 0x0
+
+    return p0
+.end method
+
+.method public final containsAll(Ljava/util/Collection;)Z
     .locals 2
 
-    iget p0, p0, La3;->X:I
+    invoke-interface {p1}, Ljava/util/Collection;->isEmpty()Z
 
-    check-cast p1, Landroid/view/View;
-
-    check-cast p2, Lyha;
-
-    check-cast p3, Lkotlin/coroutines/Continuation;
-
-    packed-switch p0, :pswitch_data_0
-
-    new-instance p0, La3;
-
-    const/4 v0, 0x3
-
-    const/4 v1, 0x2
-
-    invoke-direct {p0, v0, p3, v1}, La3;-><init>(ILkotlin/coroutines/Continuation;I)V
-
-    iput-object p1, p0, La3;->Y:Landroid/view/View;
-
-    iput-object p2, p0, La3;->Z:Lyha;
-
-    sget-object p1, Le5f;->a:Le5f;
-
-    invoke-virtual {p0, p1}, La3;->o(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p1
-
-    :pswitch_0
-    new-instance p0, La3;
-
-    const/4 v0, 0x3
+    move-result v0
 
     const/4 v1, 0x1
 
-    invoke-direct {p0, v0, p3, v1}, La3;-><init>(ILkotlin/coroutines/Continuation;I)V
+    if-eqz v0, :cond_0
 
-    iput-object p1, p0, La3;->Y:Landroid/view/View;
+    return v1
 
-    iput-object p2, p0, La3;->Z:Lyha;
+    :cond_0
+    invoke-interface {p1}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
-    sget-object p1, Le5f;->a:Le5f;
+    move-result-object p1
 
-    invoke-virtual {p0, p1}, La3;->o(Ljava/lang/Object;)Ljava/lang/Object;
+    :cond_1
+    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
 
-    return-object p1
+    move-result v0
 
-    :pswitch_1
-    new-instance p0, La3;
+    if-eqz v0, :cond_2
 
-    const/4 v0, 0x3
+    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    const/4 v1, 0x0
+    move-result-object v0
 
-    invoke-direct {p0, v0, p3, v1}, La3;-><init>(ILkotlin/coroutines/Continuation;I)V
+    invoke-virtual {p0, v0}, La3;->contains(Ljava/lang/Object;)Z
 
-    iput-object p1, p0, La3;->Y:Landroid/view/View;
+    move-result v0
 
-    iput-object p2, p0, La3;->Z:Lyha;
+    if-nez v0, :cond_1
 
-    sget-object p1, Le5f;->a:Le5f;
+    const/4 p0, 0x0
 
-    invoke-virtual {p0, p1}, La3;->o(Ljava/lang/Object;)Ljava/lang/Object;
+    return p0
 
-    return-object p1
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    :cond_2
+    return v1
 .end method
 
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final iterator()Ljava/util/Iterator;
     .locals 1
 
-    iget v0, p0, La3;->X:I
+    const/4 v0, 0x0
 
-    packed-switch v0, :pswitch_data_0
-
-    invoke-static {p1}, Lsgg;->Z(Ljava/lang/Object;)V
-
-    iget-object p1, p0, La3;->Y:Landroid/view/View;
-
-    iget-object p0, p0, La3;->Z:Lyha;
-
-    invoke-interface {p0}, Lyha;->b()Lfe0;
+    invoke-virtual {p0, v0}, Lz1;->listIterator(I)Ljava/util/ListIterator;
 
     move-result-object p0
 
-    iget p0, p0, Lfe0;->l:I
-
-    invoke-virtual {p1, p0}, Landroid/view/View;->setBackgroundColor(I)V
-
-    sget-object p0, Le5f;->a:Le5f;
-
     return-object p0
+.end method
 
-    :pswitch_0
-    invoke-static {p1}, Lsgg;->Z(Ljava/lang/Object;)V
+.method public final listIterator()Ljava/util/ListIterator;
+    .locals 1
 
-    iget-object p1, p0, La3;->Y:Landroid/view/View;
+    const/4 v0, 0x0
 
-    iget-object p0, p0, La3;->Z:Lyha;
-
-    invoke-interface {p0}, Lyha;->i()Lu8e;
+    invoke-virtual {p0, v0}, Lz1;->listIterator(I)Ljava/util/ListIterator;
 
     move-result-object p0
 
-    iget-object p0, p0, Lu8e;->b:Lz8e;
-
-    iget p0, p0, Lz8e;->c:I
-
-    invoke-virtual {p1, p0}, Landroid/view/View;->setBackgroundColor(I)V
-
-    sget-object p0, Le5f;->a:Le5f;
-
     return-object p0
+.end method
 
-    :pswitch_1
-    invoke-static {p1}, Lsgg;->Z(Ljava/lang/Object;)V
+.method public final subList(II)Ljava/util/List;
+    .locals 1
 
-    iget-object p1, p0, La3;->Y:Landroid/view/View;
+    new-instance v0, Lj37;
 
-    iget-object p0, p0, La3;->Z:Lyha;
+    invoke-direct {v0, p0, p1, p2}, Lj37;-><init>(La3;II)V
 
-    invoke-interface {p0}, Lyha;->i()Lu8e;
-
-    move-result-object p0
-
-    iget-object p0, p0, Lu8e;->b:Lz8e;
-
-    iget p0, p0, Lz8e;->b:I
-
-    invoke-virtual {p1, p0}, Landroid/view/View;->setBackgroundColor(I)V
-
-    sget-object p0, Le5f;->a:Le5f;
-
-    return-object p0
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    return-object v0
 .end method

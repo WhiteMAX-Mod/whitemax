@@ -1,18 +1,25 @@
-.class public final synthetic Laoa;
+.class public abstract Laoa;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lru/ok/android/externcalls/sdk/ui/FrameDecorator;
+
+# static fields
+.field public static final a:I
+
+.field public static final b:I
 
 
-# virtual methods
-.method public final apply(Lorg/webrtc/VideoFrame;)Lorg/webrtc/VideoFrame;
-    .locals 0
+# direct methods
+.method static constructor <clinit>()V
+    .locals 1
 
-    invoke-static {p1}, Lru/ok/android/externcalls/sdk/video/ParticipantVideoViewManager;->b(Lorg/webrtc/VideoFrame;)Lorg/webrtc/VideoFrame;
+    sget v0, Lo4c;->oneme_settings_privacy_ic_remove_16:I
 
-    move-result-object p0
+    sput v0, Laoa;->a:I
 
-    return-object p0
+    sget v0, Lo4c;->oneme_settings_privacy_ic_success_28:I
+
+    sput v0, Laoa;->b:I
+
+    return-void
 .end method

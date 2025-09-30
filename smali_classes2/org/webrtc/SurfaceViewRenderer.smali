@@ -335,17 +335,17 @@
 
     const-string v10, "x"
 
-    invoke-static {v8, v2, v10, v3, v9}, Lpg0;->j(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {v8, v2, v10, v3, v9}, Lsg0;->j(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v2
 
     const-string v3, ", requested surface size: "
 
-    invoke-static {v2, v4, v10, v5, v3}, Lv04;->p(Ljava/lang/StringBuilder;ILjava/lang/String;ILjava/lang/String;)V
+    invoke-static {v2, v4, v10, v5, v3}, Lsq3;->o(Ljava/lang/StringBuilder;ILjava/lang/String;ILjava/lang/String;)V
 
     const-string v3, ", old surface size: "
 
-    invoke-static {v2, v0, v10, v1, v3}, Lv04;->p(Ljava/lang/StringBuilder;ILjava/lang/String;ILjava/lang/String;)V
+    invoke-static {v2, v0, v10, v1, v3}, Lsq3;->o(Ljava/lang/StringBuilder;ILjava/lang/String;ILjava/lang/String;)V
 
     invoke-virtual {v2, v6}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -545,11 +545,11 @@
     move p1, p2
 
     :cond_4
-    new-instance p2, Lat0;
+    new-instance p2, Ljt0;
 
     const/4 p3, 0x6
 
-    invoke-direct {p2, p0, v1, p1, p3}, Lat0;-><init>(Ljava/lang/Object;III)V
+    invoke-direct {p2, p0, v1, p1, p3}, Ljt0;-><init>(Ljava/lang/Object;III)V
 
     invoke-direct {p0, p2}, Lorg/webrtc/SurfaceViewRenderer;->postOrRun(Ljava/lang/Runnable;)V
 
@@ -609,7 +609,7 @@
 
     const-string v1, "x"
 
-    invoke-static {v0, p2, p1, v1}, Lv04;->h(Ljava/lang/String;IILjava/lang/String;)Ljava/lang/String;
+    invoke-static {v0, p2, p1, v1}, Lyv7;->f(Ljava/lang/String;IILjava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 

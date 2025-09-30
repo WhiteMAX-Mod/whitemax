@@ -1,219 +1,125 @@
-.class public final Ls88;
+.class public abstract Ls88;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:Landroid/media/session/MediaController;
+# static fields
+.field public static final a:[I
 
-.field public final b:Ljava/lang/Object;
-
-.field public final c:Ljava/util/ArrayList;
-
-.field public final d:Ljava/util/HashMap;
-
-.field public final e:Lih8;
+.field public static final b:[I
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;Lih8;)V
+.method static constructor <clinit>()V
     .locals 2
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/high16 v0, 0x1010000
 
-    new-instance v0, Ljava/lang/Object;
+    sget v1, Ls2c;->theme:I
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    iput-object v0, p0, Ls88;->b:Ljava/lang/Object;
-
-    new-instance v0, Ljava/util/ArrayList;
-
-    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
-
-    iput-object v0, p0, Ls88;->c:Ljava/util/ArrayList;
-
-    new-instance v0, Ljava/util/HashMap;
-
-    invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
-
-    iput-object v0, p0, Ls88;->d:Ljava/util/HashMap;
-
-    iput-object p2, p0, Ls88;->e:Lih8;
-
-    new-instance v0, Landroid/media/session/MediaController;
-
-    iget-object v1, p2, Lih8;->b:Ljava/lang/Object;
-
-    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    check-cast v1, Landroid/media/session/MediaSession$Token;
-
-    invoke-direct {v0, p1, v1}, Landroid/media/session/MediaController;-><init>(Landroid/content/Context;Landroid/media/session/MediaSession$Token;)V
-
-    iput-object v0, p0, Ls88;->a:Landroid/media/session/MediaController;
-
-    invoke-virtual {p2}, Lih8;->a()Lsr6;
-
-    move-result-object p1
-
-    if-nez p1, :cond_0
-
-    new-instance p1, Lq88;
-
-    const/4 p2, 0x0
-
-    invoke-direct {p1, p2}, Lq88;-><init>(Landroid/os/Handler;)V
-
-    new-instance v1, Ljava/lang/ref/WeakReference;
-
-    invoke-direct {v1, p0}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
-
-    iput-object v1, p1, Lq88;->b:Ljava/lang/Object;
-
-    const-string p0, "android.support.v4.media.session.command.GET_EXTRA_BINDER"
-
-    invoke-virtual {v0, p0, p2, p1}, Landroid/media/session/MediaController;->sendCommand(Ljava/lang/String;Landroid/os/Bundle;Landroid/os/ResultReceiver;)V
-
-    :cond_0
-    return-void
-.end method
-
-
-# virtual methods
-.method public final a()V
-    .locals 6
-
-    iget-object v0, p0, Ls88;->e:Lih8;
-
-    invoke-virtual {v0}, Lih8;->a()Lsr6;
+    filled-new-array {v0, v1}, [I
 
     move-result-object v0
 
-    if-nez v0, :cond_0
+    sput-object v0, Ls88;->a:[I
 
-    return-void
+    sget v0, Ls2c;->materialThemeOverlay:I
 
-    :cond_0
-    iget-object v1, p0, Ls88;->c:Ljava/util/ArrayList;
+    filled-new-array {v0}, [I
 
-    invoke-virtual {v1}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
+    move-result-object v0
 
-    move-result-object v2
-
-    :goto_0
-    invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v3
-
-    if-eqz v3, :cond_1
-
-    invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v3
-
-    check-cast v3, Ln98;
-
-    new-instance v4, Lr88;
-
-    invoke-direct {v4, v3}, Lr88;-><init>(Ln98;)V
-
-    iget-object v5, p0, Ls88;->d:Ljava/util/HashMap;
-
-    invoke-virtual {v5, v3, v4}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    iput-object v4, v3, Ln98;->c:Lr88;
-
-    :try_start_0
-    invoke-interface {v0, v4}, Lsr6;->J(Lpr6;)V
-    :try_end_0
-    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
-
-    const/16 v4, 0xd
-
-    const/4 v5, 0x0
-
-    invoke-virtual {v3, v4, v5, v5}, Ln98;->i(ILjava/lang/Object;Landroid/os/Bundle;)V
-
-    goto :goto_0
-
-    :catch_0
-    :cond_1
-    invoke-virtual {v1}, Ljava/util/ArrayList;->clear()V
+    sput-object v0, Ls88;->b:[I
 
     return-void
 .end method
 
-.method public final b(Ln98;)V
-    .locals 3
+.method public static a(Landroid/content/Context;Landroid/util/AttributeSet;II)Landroid/content/Context;
+    .locals 2
 
-    iget-object v0, p0, Ls88;->a:Landroid/media/session/MediaController;
+    sget-object v0, Ls88;->b:[I
 
-    iget-object v1, p1, Ln98;->a:Lp88;
+    invoke-virtual {p0, p1, v0, p2, p3}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[III)Landroid/content/res/TypedArray;
 
-    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    move-result-object p2
 
-    invoke-virtual {v0, v1}, Landroid/media/session/MediaController;->unregisterCallback(Landroid/media/session/MediaController$Callback;)V
+    const/4 p3, 0x0
 
-    iget-object v0, p0, Ls88;->b:Ljava/lang/Object;
+    invoke-virtual {p2, p3, p3}, Landroid/content/res/TypedArray;->getResourceId(II)I
 
-    monitor-enter v0
+    move-result v0
 
-    :try_start_0
-    iget-object v1, p0, Ls88;->e:Lih8;
+    invoke-virtual {p2}, Landroid/content/res/TypedArray;->recycle()V
 
-    invoke-virtual {v1}, Lih8;->a()Lsr6;
+    instance-of p2, p0, Lfx3;
 
-    move-result-object v1
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    const/4 v1, 0x1
 
-    if-eqz v1, :cond_0
+    if-eqz p2, :cond_0
 
-    :try_start_1
-    iget-object p0, p0, Ls88;->d:Ljava/util/HashMap;
+    move-object p2, p0
 
-    invoke-virtual {p0, p1}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
+    check-cast p2, Lfx3;
 
-    move-result-object p0
+    iget p2, p2, Lfx3;->a:I
 
-    check-cast p0, Lr88;
+    if-ne p2, v0, :cond_0
 
-    if-eqz p0, :cond_1
-
-    const/4 v2, 0x0
-
-    iput-object v2, p1, Ln98;->c:Lr88;
-
-    invoke-interface {v1, p0}, Lsr6;->C(Lpr6;)V
-    :try_end_1
-    .catch Landroid/os/RemoteException; {:try_start_1 .. :try_end_1} :catch_0
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+    move p2, v1
 
     goto :goto_0
 
-    :catchall_0
-    move-exception p0
+    :cond_0
+    move p2, p3
+
+    :goto_0
+    if-eqz v0, :cond_4
+
+    if-eqz p2, :cond_1
+
+    goto :goto_2
+
+    :cond_1
+    new-instance p2, Lfx3;
+
+    invoke-direct {p2, p0, v0}, Lfx3;-><init>(Landroid/content/Context;I)V
+
+    sget-object v0, Ls88;->a:[I
+
+    invoke-virtual {p0, p1, v0}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[I)Landroid/content/res/TypedArray;
+
+    move-result-object p0
+
+    invoke-virtual {p0, p3, p3}, Landroid/content/res/TypedArray;->getResourceId(II)I
+
+    move-result p1
+
+    invoke-virtual {p0, v1, p3}, Landroid/content/res/TypedArray;->getResourceId(II)I
+
+    move-result p3
+
+    invoke-virtual {p0}, Landroid/content/res/TypedArray;->recycle()V
+
+    if-eqz p1, :cond_2
 
     goto :goto_1
 
-    :cond_0
-    :try_start_2
-    iget-object p0, p0, Ls88;->c:Ljava/util/ArrayList;
-
-    invoke-virtual {p0, p1}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
-
-    :catch_0
-    :cond_1
-    :goto_0
-    monitor-exit v0
-
-    return-void
+    :cond_2
+    move p1, p3
 
     :goto_1
-    monitor-exit v0
-    :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_0
+    if-eqz p1, :cond_3
 
-    throw p0
+    invoke-virtual {p2}, Lfx3;->getTheme()Landroid/content/res/Resources$Theme;
+
+    move-result-object p0
+
+    invoke-virtual {p0, p1, v1}, Landroid/content/res/Resources$Theme;->applyStyle(IZ)V
+
+    :cond_3
+    return-object p2
+
+    :cond_4
+    :goto_2
+    return-object p0
 .end method

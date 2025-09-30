@@ -1,360 +1,273 @@
 .class public final Lyn4;
-.super Lqde;
+.super Lmi0;
 .source "SourceFile"
 
-# interfaces
-.implements Ll66;
+
+# static fields
+.field public static final synthetic r0:I
 
 
 # instance fields
-.field public final synthetic X:Lru/ok/tamtam/upload/workers/DownloadFileAttachWorker;
+.field public a:Lzb6;
+
+.field public final b:Landroidx/appcompat/widget/AppCompatTextView;
+
+.field public final c:Landroidx/appcompat/widget/AppCompatTextView;
+
+.field public final o:Lc38;
 
 
 # direct methods
-.method public constructor <init>(Lru/ok/tamtam/upload/workers/DownloadFileAttachWorker;Lkotlin/coroutines/Continuation;)V
-    .locals 0
+.method public constructor <init>(Landroid/content/Context;)V
+    .locals 9
 
-    iput-object p1, p0, Lyn4;->X:Lru/ok/tamtam/upload/workers/DownloadFileAttachWorker;
+    invoke-direct {p0, p1}, Lmi0;-><init>(Landroid/content/Context;)V
 
-    const/4 p1, 0x2
+    new-instance v0, Ltm4;
 
-    invoke-direct {p0, p1, p2}, Lqde;-><init>(ILkotlin/coroutines/Continuation;)V
+    const/4 v1, 0x2
+
+    invoke-direct {v0, v1}, Ltm4;-><init>(I)V
+
+    iput-object v0, p0, Lyn4;->a:Lzb6;
+
+    new-instance v0, Landroidx/appcompat/widget/AppCompatTextView;
+
+    const/4 v1, 0x0
+
+    invoke-direct {v0, p1, v1}, Landroidx/appcompat/widget/AppCompatTextView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
+
+    new-instance v2, Landroid/widget/LinearLayout$LayoutParams;
+
+    const/4 v3, -0x2
+
+    invoke-direct {v2, v3, v3}, Landroid/widget/LinearLayout$LayoutParams;-><init>(II)V
+
+    const/4 v4, 0x1
+
+    iput v4, v2, Landroid/widget/LinearLayout$LayoutParams;->gravity:I
+
+    const/16 v5, 0x8
+
+    int-to-float v5, v5
+
+    invoke-static {}, Lvo4;->d()Landroid/content/res/Resources;
+
+    move-result-object v6
+
+    invoke-virtual {v6}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object v6
+
+    iget v6, v6, Landroid/util/DisplayMetrics;->density:F
+
+    mul-float/2addr v6, v5
+
+    invoke-static {v6}, Lya6;->G(F)I
+
+    move-result v6
+
+    invoke-static {}, Lvo4;->d()Landroid/content/res/Resources;
+
+    move-result-object v7
+
+    invoke-virtual {v7}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object v7
+
+    iget v7, v7, Landroid/util/DisplayMetrics;->density:F
+
+    mul-float/2addr v7, v5
+
+    invoke-static {v7}, Lya6;->G(F)I
+
+    move-result v7
+
+    const/4 v8, 0x0
+
+    invoke-virtual {v0, v8, v6, v8, v7}, Landroid/view/View;->setPadding(IIII)V
+
+    invoke-virtual {v0, v2}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+
+    const/4 v2, 0x4
+
+    invoke-virtual {v0, v2}, Landroid/view/View;->setTextAlignment(I)V
+
+    invoke-direct {p0}, Lyn4;->getTitleColor()I
+
+    move-result v6
+
+    invoke-virtual {v0, v6}, Landroid/widget/TextView;->setTextColor(I)V
+
+    sget-object v6, Lclf;->k:Lv2f;
+
+    invoke-static {v6, v0}, Lv2f;->d(Lv2f;Landroid/widget/TextView;)V
+
+    iput-object v0, p0, Lyn4;->b:Landroidx/appcompat/widget/AppCompatTextView;
+
+    new-instance v6, Landroidx/appcompat/widget/AppCompatTextView;
+
+    invoke-direct {v6, p1, v1}, Landroidx/appcompat/widget/AppCompatTextView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
+
+    new-instance v1, Landroid/widget/LinearLayout$LayoutParams;
+
+    invoke-direct {v1, v3, v3}, Landroid/widget/LinearLayout$LayoutParams;-><init>(II)V
+
+    invoke-virtual {v6, v1}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+
+    invoke-virtual {v6, v4}, Landroid/widget/TextView;->setGravity(I)V
+
+    invoke-virtual {v6, v2}, Landroid/view/View;->setTextAlignment(I)V
+
+    invoke-direct {p0}, Lyn4;->getSubtitleColor()I
+
+    move-result v1
+
+    invoke-virtual {v6, v1}, Landroid/widget/TextView;->setTextColor(I)V
+
+    sget-object v1, Lclf;->o:Lv2f;
+
+    invoke-static {v1, v6}, Lv2f;->d(Lv2f;Landroid/widget/TextView;)V
+
+    iput-object v6, p0, Lyn4;->c:Landroidx/appcompat/widget/AppCompatTextView;
+
+    new-instance v1, Lc38;
+
+    invoke-direct {v1, p1}, Lc38;-><init>(Landroid/content/Context;)V
+
+    new-instance v7, Landroid/widget/LinearLayout$LayoutParams;
+
+    invoke-direct {v7, v3, v3}, Landroid/widget/LinearLayout$LayoutParams;-><init>(II)V
+
+    iput v4, v7, Landroid/widget/LinearLayout$LayoutParams;->gravity:I
+
+    invoke-static {}, Lvo4;->d()Landroid/content/res/Resources;
+
+    move-result-object v3
+
+    invoke-virtual {v3}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object v3
+
+    iget v3, v3, Landroid/util/DisplayMetrics;->density:F
+
+    mul-float/2addr v3, v5
+
+    invoke-static {v3}, Lya6;->G(F)I
+
+    move-result v3
+
+    invoke-static {}, Lvo4;->d()Landroid/content/res/Resources;
+
+    move-result-object v4
+
+    invoke-virtual {v4}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object v4
+
+    iget v4, v4, Landroid/util/DisplayMetrics;->density:F
+
+    mul-float/2addr v5, v4
+
+    invoke-static {v5}, Lya6;->G(F)I
+
+    move-result v4
+
+    invoke-virtual {v1, v8, v3, v8, v4}, Landroid/view/View;->setPadding(IIII)V
+
+    invoke-virtual {v1, v7}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+
+    invoke-virtual {v1, v2}, Landroid/view/View;->setTextAlignment(I)V
+
+    new-instance v2, Lg5;
+
+    const/16 v3, 0x1c
+
+    invoke-direct {v2, v3, p0}, Lg5;-><init>(ILjava/lang/Object;)V
+
+    invoke-static {v1, v2}, Lz48;->D(Landroid/view/View;Landroid/view/View$OnClickListener;)V
+
+    iput-object v1, p0, Lyn4;->o:Lc38;
+
+    invoke-virtual {p0, v0}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
+
+    invoke-virtual {p0, v6}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
+
+    invoke-virtual {p0, v1}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
+
+    sget-object v0, Lyu4;->t0:Lbx9;
+
+    invoke-virtual {v0, p1}, Lbx9;->k(Landroid/content/Context;)Lyu4;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Lyu4;->j()Lera;
+
+    move-result-object p1
+
+    invoke-virtual {p0, p1}, Lyn4;->onThemeChanged(Lera;)V
 
     return-void
 .end method
 
+.method private final getSubtitleColor()I
+    .locals 1
+
+    sget-object v0, Lyu4;->t0:Lbx9;
+
+    invoke-virtual {v0, p0}, Lbx9;->l(Landroid/view/View;)Lera;
+
+    move-result-object p0
+
+    invoke-interface {p0}, Lera;->getText()Lh1f;
+
+    move-result-object p0
+
+    iget p0, p0, Lh1f;->g:I
+
+    return p0
+.end method
+
+.method private final getTitleColor()I
+    .locals 1
+
+    sget-object v0, Lyu4;->t0:Lbx9;
+
+    invoke-virtual {v0, p0}, Lbx9;->l(Landroid/view/View;)Lera;
+
+    move-result-object p0
+
+    invoke-interface {p0}, Lera;->getText()Lh1f;
+
+    move-result-object p0
+
+    iget p0, p0, Lh1f;->e:I
+
+    return p0
+.end method
+
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final onThemeChanged(Lera;)V
+    .locals 1
 
-    check-cast p1, Lox3;
+    invoke-super {p0, p1}, Lmi0;->onThemeChanged(Lera;)V
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    iget-object p1, p0, Lyn4;->b:Landroidx/appcompat/widget/AppCompatTextView;
 
-    invoke-virtual {p0, p1, p2}, Lyn4;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    invoke-direct {p0}, Lyn4;->getTitleColor()I
 
-    move-result-object p0
+    move-result v0
 
-    check-cast p0, Lyn4;
+    invoke-virtual {p1, v0}, Landroid/widget/TextView;->setTextColor(I)V
 
-    sget-object p1, Le5f;->a:Le5f;
+    iget-object p1, p0, Lyn4;->c:Landroidx/appcompat/widget/AppCompatTextView;
 
-    invoke-virtual {p0, p1}, Lyn4;->o(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-direct {p0}, Lyn4;->getSubtitleColor()I
 
-    move-result-object p0
+    move-result p0
 
-    return-object p0
-.end method
+    invoke-virtual {p1, p0}, Landroid/widget/TextView;->setTextColor(I)V
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 0
-
-    new-instance p1, Lyn4;
-
-    iget-object p0, p0, Lyn4;->X:Lru/ok/tamtam/upload/workers/DownloadFileAttachWorker;
-
-    invoke-direct {p1, p0, p2}, Lyn4;-><init>(Lru/ok/tamtam/upload/workers/DownloadFileAttachWorker;Lkotlin/coroutines/Continuation;)V
-
-    return-object p1
-.end method
-
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 6
-
-    invoke-static {p1}, Lsgg;->Z(Ljava/lang/Object;)V
-
-    iget-object p0, p0, Lyn4;->X:Lru/ok/tamtam/upload/workers/DownloadFileAttachWorker;
-
-    invoke-virtual {p0}, Lru/ok/tamtam/upload/workers/DownloadFileAttachWorker;->g()Lsle;
-
-    move-result-object p1
-
-    iget-wide v0, p1, Lsle;->c:J
-
-    const-wide/16 v2, 0x0
-
-    cmp-long p1, v0, v2
-
-    if-lez p1, :cond_1
-
-    invoke-virtual {p0}, Lru/ok/tamtam/upload/workers/DownloadFileAttachWorker;->g()Lsle;
-
-    move-result-object p1
-
-    iget-boolean p1, p1, Lsle;->n:Z
-
-    if-eqz p1, :cond_0
-
-    invoke-virtual {p0}, Lru/ok/tamtam/upload/workers/DownloadFileAttachWorker;->c()Lhi5;
-
-    move-result-object p1
-
-    invoke-virtual {p0}, Lru/ok/tamtam/upload/workers/DownloadFileAttachWorker;->g()Lsle;
-
-    move-result-object p0
-
-    iget-wide v0, p0, Lsle;->c:J
-
-    check-cast p1, Lvj5;
-
-    invoke-virtual {p1, v0, v1}, Lvj5;->s(J)Ljava/io/File;
-
-    move-result-object p0
-
-    return-object p0
-
-    :cond_0
-    invoke-virtual {p0}, Lru/ok/tamtam/upload/workers/DownloadFileAttachWorker;->c()Lhi5;
-
-    move-result-object p1
-
-    invoke-virtual {p0}, Lru/ok/tamtam/upload/workers/DownloadFileAttachWorker;->g()Lsle;
-
-    move-result-object p0
-
-    iget-wide v0, p0, Lsle;->c:J
-
-    check-cast p1, Lvj5;
-
-    invoke-virtual {p1, v0, v1}, Lvj5;->t(J)Ljava/io/File;
-
-    move-result-object p0
-
-    return-object p0
-
-    :cond_1
-    invoke-virtual {p0}, Lru/ok/tamtam/upload/workers/DownloadFileAttachWorker;->g()Lsle;
-
-    move-result-object p1
-
-    iget-wide v0, p1, Lsle;->d:J
-
-    cmp-long p1, v0, v2
-
-    if-lez p1, :cond_2
-
-    invoke-virtual {p0}, Lru/ok/tamtam/upload/workers/DownloadFileAttachWorker;->c()Lhi5;
-
-    move-result-object p1
-
-    invoke-virtual {p0}, Lru/ok/tamtam/upload/workers/DownloadFileAttachWorker;->g()Lsle;
-
-    move-result-object p0
-
-    iget-wide v0, p0, Lsle;->d:J
-
-    check-cast p1, Lvj5;
-
-    invoke-virtual {p1, v0, v1}, Lvj5;->d(J)Ljava/io/File;
-
-    move-result-object p0
-
-    return-object p0
-
-    :cond_2
-    invoke-virtual {p0}, Lru/ok/tamtam/upload/workers/DownloadFileAttachWorker;->g()Lsle;
-
-    move-result-object p1
-
-    iget-wide v0, p1, Lsle;->e:J
-
-    cmp-long p1, v0, v2
-
-    if-lez p1, :cond_3
-
-    invoke-virtual {p0}, Lru/ok/tamtam/upload/workers/DownloadFileAttachWorker;->c()Lhi5;
-
-    move-result-object p1
-
-    invoke-virtual {p0}, Lru/ok/tamtam/upload/workers/DownloadFileAttachWorker;->g()Lsle;
-
-    move-result-object p0
-
-    iget-wide v0, p0, Lsle;->e:J
-
-    check-cast p1, Lvj5;
-
-    invoke-virtual {p1, v0, v1}, Lvj5;->k(J)Ljava/io/File;
-
-    move-result-object p0
-
-    return-object p0
-
-    :cond_3
-    invoke-virtual {p0}, Lru/ok/tamtam/upload/workers/DownloadFileAttachWorker;->g()Lsle;
-
-    move-result-object p1
-
-    iget-wide v0, p1, Lsle;->f:J
-
-    cmp-long p1, v0, v2
-
-    if-lez p1, :cond_4
-
-    invoke-virtual {p0}, Lru/ok/tamtam/upload/workers/DownloadFileAttachWorker;->c()Lhi5;
-
-    move-result-object p1
-
-    invoke-virtual {p0}, Lru/ok/tamtam/upload/workers/DownloadFileAttachWorker;->g()Lsle;
-
-    move-result-object p0
-
-    iget-wide v0, p0, Lsle;->f:J
-
-    check-cast p1, Lvj5;
-
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    invoke-virtual {p1}, Lvj5;->b()Ljava/lang/String;
-
-    move-result-object p0
-
-    const-string p1, "stickerCache"
-
-    invoke-static {p0, p1}, Lvj5;->g(Ljava/lang/String;Ljava/lang/String;)Ljava/io/File;
-
-    move-result-object p0
-
-    new-instance p1, Ljava/io/File;
-
-    const-string v2, "sticker_"
-
-    invoke-static {v0, v1, v2}, Lu88;->h(JLjava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-direct {p1, p0, v0}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
-
-    return-object p1
-
-    :cond_4
-    invoke-virtual {p0}, Lru/ok/tamtam/upload/workers/DownloadFileAttachWorker;->g()Lsle;
-
-    move-result-object p1
-
-    iget-wide v0, p1, Lsle;->j:J
-
-    cmp-long p1, v0, v2
-
-    const/4 v0, 0x0
-
-    if-lez p1, :cond_a
-
-    invoke-virtual {p0}, Lru/ok/tamtam/upload/workers/DownloadFileAttachWorker;->e()Lxs8;
-
-    move-result-object p1
-
-    invoke-virtual {p0}, Lru/ok/tamtam/upload/workers/DownloadFileAttachWorker;->g()Lsle;
-
-    move-result-object v1
-
-    iget-wide v1, v1, Lsle;->a:J
-
-    invoke-virtual {p1, v1, v2}, Lxs8;->q(J)Lzs8;
-
-    move-result-object p1
-
-    if-nez p1, :cond_5
-
-    goto :goto_0
-
-    :cond_5
-    iget-object p1, p1, Lzs8;->v0:Lo9g;
-
-    if-eqz p1, :cond_9
-
-    sget-object v1, Ls10;->q0:Ls10;
-
-    invoke-virtual {p1, v1}, Lo9g;->i(Ls10;)Lw10;
-
-    move-result-object p1
-
-    if-eqz p1, :cond_7
-
-    iget-object v1, p1, Lw10;->j:Lf10;
-
-    if-eqz v1, :cond_7
-
-    iget-object v2, p1, Lw10;->s:Ljava/lang/String;
-
-    if-eqz v2, :cond_7
-
-    invoke-virtual {v2}, Ljava/lang/String;->length()I
-
-    move-result v3
-
-    if-nez v3, :cond_6
-
-    goto :goto_0
-
-    :cond_6
-    new-instance v3, Ljava/io/File;
-
-    invoke-direct {v3, v2}, Ljava/io/File;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v3}, Ljava/io/File;->exists()Z
-
-    move-result v2
-
-    if-eqz v2, :cond_7
-
-    invoke-virtual {v3}, Ljava/io/File;->length()J
-
-    move-result-wide v4
-
-    iget-wide v1, v1, Lf10;->b:J
-
-    cmp-long v1, v4, v1
-
-    if-nez v1, :cond_7
-
-    invoke-virtual {v3}, Ljava/io/File;->lastModified()J
-
-    move-result-wide v1
-
-    iget-wide v4, p1, Lw10;->w:J
-
-    cmp-long p1, v1, v4
-
-    if-nez p1, :cond_7
-
-    move-object v0, v3
-
-    :cond_7
-    :goto_0
-    if-nez v0, :cond_8
-
-    invoke-virtual {p0}, Lru/ok/tamtam/upload/workers/DownloadFileAttachWorker;->c()Lhi5;
-
-    move-result-object p1
-
-    invoke-virtual {p0}, Lru/ok/tamtam/upload/workers/DownloadFileAttachWorker;->g()Lsle;
-
-    move-result-object p0
-
-    iget-object p0, p0, Lsle;->k:Ljava/lang/String;
-
-    check-cast p1, Lvj5;
-
-    invoke-virtual {p1, p0}, Lvj5;->i(Ljava/lang/String;)Ljava/io/File;
-
-    move-result-object p0
-
-    return-object p0
-
-    :cond_8
-    return-object v0
-
-    :cond_9
-    new-instance p0, Ljava/lang/IllegalArgumentException;
-
-    const-string p1, "Required value was null."
-
-    invoke-direct {p0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw p0
-
-    :cond_a
-    return-object v0
+    return-void
 .end method

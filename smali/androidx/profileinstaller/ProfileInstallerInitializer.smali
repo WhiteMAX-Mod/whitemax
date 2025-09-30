@@ -3,14 +3,14 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lp07;
+.implements Lj77;
 
 
 # annotations
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Ljava/lang/Object;",
-        "Lp07;"
+        "Lj77;"
     }
 .end annotation
 
@@ -41,17 +41,15 @@
 
     move-result-object p1
 
-    new-instance v0, Lfm;
+    new-instance v0, Lpm;
 
-    invoke-direct {v0, p0, p1}, Lfm;-><init>(Landroidx/profileinstaller/ProfileInstallerInitializer;Landroid/content/Context;)V
+    invoke-direct {v0, p0, p1}, Lpm;-><init>(Landroidx/profileinstaller/ProfileInstallerInitializer;Landroid/content/Context;)V
 
-    invoke-static {v0}, Lreb;->a(Ljava/lang/Runnable;)V
+    invoke-static {v0}, Lsqb;->a(Ljava/lang/Runnable;)V
 
-    new-instance p0, Lgu9;
+    new-instance p0, Les3;
 
-    const/16 p1, 0xe
-
-    invoke-direct {p0, p1}, Lgu9;-><init>(I)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-object p0
 .end method

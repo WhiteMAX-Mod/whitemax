@@ -1,53 +1,19 @@
-.class public interface abstract Lgce;
+.class public final Lgce;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Landroid/view/MenuItem;
+
+# instance fields
+.field public final a:Ljvg;
 
 
-# virtual methods
-.method public abstract a(Lg7;)Lgce;
-.end method
+# direct methods
+.method public constructor <init>(Ljvg;)V
+    .locals 0
 
-.method public abstract b()Lg7;
-.end method
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-.method public abstract getAlphabeticModifiers()I
-.end method
+    iput-object p1, p0, Lgce;->a:Ljvg;
 
-.method public abstract getContentDescription()Ljava/lang/CharSequence;
-.end method
-
-.method public abstract getIconTintList()Landroid/content/res/ColorStateList;
-.end method
-
-.method public abstract getIconTintMode()Landroid/graphics/PorterDuff$Mode;
-.end method
-
-.method public abstract getNumericModifiers()I
-.end method
-
-.method public abstract getTooltipText()Ljava/lang/CharSequence;
-.end method
-
-.method public abstract setAlphabeticShortcut(CI)Landroid/view/MenuItem;
-.end method
-
-.method public abstract setContentDescription(Ljava/lang/CharSequence;)Lgce;
-.end method
-
-.method public abstract setIconTintList(Landroid/content/res/ColorStateList;)Landroid/view/MenuItem;
-.end method
-
-.method public abstract setIconTintMode(Landroid/graphics/PorterDuff$Mode;)Landroid/view/MenuItem;
-.end method
-
-.method public abstract setNumericShortcut(CI)Landroid/view/MenuItem;
-.end method
-
-.method public abstract setShortcut(CCII)Landroid/view/MenuItem;
-.end method
-
-.method public abstract setTooltipText(Ljava/lang/CharSequence;)Lgce;
+    return-void
 .end method

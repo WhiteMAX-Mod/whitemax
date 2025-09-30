@@ -1,231 +1,158 @@
 .class public final Le61;
-.super Lqde;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Ll66;
+.implements Lts7;
 
 
 # instance fields
-.field public synthetic X:Ljava/lang/Object;
+.field public final a:J
 
-.field public final synthetic Y:Landroid/view/View;
+.field public final b:Landroid/text/SpannableStringBuilder;
 
-.field public final synthetic Z:Lone/me/calls/ui/ui/call/panels/CallEventsWidget;
+.field public final c:J
+
+.field public final o:I
 
 
 # direct methods
-.method public constructor <init>(Lkotlin/coroutines/Continuation;Landroid/view/View;Lone/me/calls/ui/ui/call/panels/CallEventsWidget;)V
+.method public constructor <init>(JLandroid/text/SpannableStringBuilder;)V
     .locals 0
 
-    iput-object p2, p0, Le61;->Y:Landroid/view/View;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p3, p0, Le61;->Z:Lone/me/calls/ui/ui/call/panels/CallEventsWidget;
+    iput-wide p1, p0, Le61;->a:J
 
-    const/4 p2, 0x2
+    iput-object p3, p0, Le61;->b:Landroid/text/SpannableStringBuilder;
 
-    invoke-direct {p0, p2, p1}, Lqde;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-wide p1, p0, Le61;->c:J
+
+    sget p1, Lt5c;->call_event_view_item:I
+
+    iput p1, p0, Le61;->o:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    if-ne p0, p1, :cond_0
 
-    invoke-virtual {p0, p1, p2}, Le61;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    goto :goto_1
 
-    move-result-object p0
+    :cond_0
+    instance-of v0, p1, Le61;
 
-    check-cast p0, Le61;
-
-    sget-object p1, Le5f;->a:Le5f;
-
-    invoke-virtual {p0, p1}, Le61;->o(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p1
-.end method
-
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
-
-    new-instance v0, Le61;
-
-    iget-object v1, p0, Le61;->Y:Landroid/view/View;
-
-    iget-object p0, p0, Le61;->Z:Lone/me/calls/ui/ui/call/panels/CallEventsWidget;
-
-    invoke-direct {v0, p2, v1, p0}, Le61;-><init>(Lkotlin/coroutines/Continuation;Landroid/view/View;Lone/me/calls/ui/ui/call/panels/CallEventsWidget;)V
-
-    iput-object p1, v0, Le61;->X:Ljava/lang/Object;
-
-    return-object v0
-.end method
-
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 6
-
-    iget-object v0, p0, Le61;->Z:Lone/me/calls/ui/ui/call/panels/CallEventsWidget;
-
-    iget-object v1, v0, Lone/me/calls/ui/ui/call/panels/CallEventsWidget;->Y:Ljava/lang/Object;
-
-    iget-object v2, v0, Lone/me/calls/ui/ui/call/panels/CallEventsWidget;->Z:Lo5c;
-
-    invoke-static {p1}, Lsgg;->Z(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Le61;->X:Ljava/lang/Object;
-
-    check-cast p1, Ljava/util/List;
-
-    iget-object p0, p0, Le61;->Y:Landroid/view/View;
-
-    invoke-virtual {p0}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
-
-    move-result-object p0
-
-    check-cast p0, Landroid/view/View;
-
-    invoke-virtual {p0}, Landroid/view/View;->getVisibility()I
-
-    move-result p0
-
-    const/4 v3, 0x0
-
-    if-nez p0, :cond_3
-
-    sget-object p0, Lone/me/calls/ui/ui/call/panels/CallEventsWidget;->o0:[Lbc7;
-
-    sget-object p0, Lone/me/calls/ui/ui/call/panels/CallEventsWidget;->o0:[Lbc7;
-
-    aget-object v4, p0, v3
-
-    invoke-interface {v2, v0, v4}, Lo5c;->M(Ljava/lang/Object;Lbc7;)Ljava/lang/Object;
-
-    move-result-object v4
-
-    check-cast v4, Landroidx/recyclerview/widget/RecyclerView;
-
-    invoke-virtual {v4}, Landroidx/recyclerview/widget/RecyclerView;->getItemAnimator()Llbc;
-
-    move-result-object v4
-
-    invoke-interface {v1}, Lje7;->getValue()Ljava/lang/Object;
-
-    move-result-object v5
-
-    check-cast v5, Ld61;
-
-    invoke-static {v4, v5}, Lxq7;->d(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v4
-
-    if-eqz v4, :cond_0
+    if-nez v0, :cond_1
 
     goto :goto_0
 
-    :cond_0
-    aget-object p0, p0, v3
-
-    invoke-interface {v2, v0, p0}, Lo5c;->M(Ljava/lang/Object;Lbc7;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, Landroidx/recyclerview/widget/RecyclerView;
-
-    invoke-interface {v1}, Lje7;->getValue()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Ld61;
-
-    invoke-virtual {p0, v1}, Landroidx/recyclerview/widget/RecyclerView;->setItemAnimator(Llbc;)V
-
-    :goto_0
-    iget-object p0, v0, Lone/me/calls/ui/ui/call/panels/CallEventsWidget;->X:Lef6;
-
-    invoke-interface {p1}, Ljava/util/List;->size()I
-
-    move-result v1
-
-    iget-object v2, p0, Lef6;->b:Ljava/lang/Object;
-
-    check-cast v2, Landroidx/recyclerview/widget/RecyclerView;
-
-    if-eqz v2, :cond_4
-
-    invoke-virtual {v2}, Landroidx/recyclerview/widget/RecyclerView;->getAdapter()Lgbc;
-
-    move-result-object v3
-
-    if-nez v3, :cond_1
-
-    goto :goto_1
-
     :cond_1
-    invoke-virtual {v3}, Lgbc;->j()I
+    check-cast p1, Le61;
 
-    move-result v3
+    iget-wide v0, p0, Le61;->a:J
 
-    if-le v3, v1, :cond_4
+    iget-wide v2, p1, Le61;->a:J
 
-    invoke-virtual {v2}, Landroid/view/View;->getHeight()I
+    cmp-long v0, v0, v2
 
-    move-result v1
+    if-eqz v0, :cond_2
 
-    iget-object p0, p0, Lef6;->b:Ljava/lang/Object;
-
-    check-cast p0, Landroidx/recyclerview/widget/RecyclerView;
-
-    if-eqz p0, :cond_4
-
-    invoke-virtual {p0}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
-
-    move-result-object v2
-
-    if-eqz v2, :cond_2
-
-    iput v1, v2, Landroid/view/ViewGroup$LayoutParams;->height:I
-
-    invoke-virtual {p0, v2}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
-
-    goto :goto_1
+    goto :goto_0
 
     :cond_2
-    new-instance p0, Ljava/lang/NullPointerException;
+    iget-object p0, p0, Le61;->b:Landroid/text/SpannableStringBuilder;
 
-    const-string p1, "null cannot be cast to non-null type android.view.ViewGroup.LayoutParams"
+    iget-object p1, p1, Le61;->b:Landroid/text/SpannableStringBuilder;
 
-    invoke-direct {p0, p1}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
+    invoke-virtual {p0, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
-    throw p0
+    move-result p0
+
+    if-nez p0, :cond_3
+
+    :goto_0
+    const/4 p0, 0x0
+
+    return p0
 
     :cond_3
-    sget-object p0, Lone/me/calls/ui/ui/call/panels/CallEventsWidget;->o0:[Lbc7;
+    :goto_1
+    const/4 p0, 0x1
 
-    sget-object p0, Lone/me/calls/ui/ui/call/panels/CallEventsWidget;->o0:[Lbc7;
+    return p0
+.end method
 
-    aget-object p0, p0, v3
+.method public final getItemId()J
+    .locals 2
 
-    invoke-interface {v2, v0, p0}, Lo5c;->M(Ljava/lang/Object;Lbc7;)Ljava/lang/Object;
+    iget-wide v0, p0, Le61;->c:J
+
+    return-wide v0
+.end method
+
+.method public final hashCode()I
+    .locals 2
+
+    iget-wide v0, p0, Le61;->a:J
+
+    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
+
+    move-result v0
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget-object p0, p0, Le61;->b:Landroid/text/SpannableStringBuilder;
+
+    invoke-virtual {p0}, Ljava/lang/Object;->hashCode()I
+
+    move-result p0
+
+    add-int/2addr p0, v0
+
+    return p0
+.end method
+
+.method public final m()I
+    .locals 0
+
+    iget p0, p0, Le61;->o:I
+
+    return p0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 3
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "CallEventItemView(id="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-wide v1, p0, Le61;->a:J
+
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    const-string v1, ", text="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object p0, p0, Le61;->b:Landroid/text/SpannableStringBuilder;
+
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string p0, ")"
+
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p0
-
-    check-cast p0, Landroidx/recyclerview/widget/RecyclerView;
-
-    const/4 v1, 0x0
-
-    invoke-virtual {p0, v1}, Landroidx/recyclerview/widget/RecyclerView;->setItemAnimator(Llbc;)V
-
-    :cond_4
-    :goto_1
-    iget-object p0, v0, Lone/me/calls/ui/ui/call/panels/CallEventsWidget;->b:Ls51;
-
-    invoke-virtual {p0, p1}, Lhl7;->E(Ljava/util/List;)V
-
-    sget-object p0, Le5f;->a:Le5f;
 
     return-object p0
 .end method

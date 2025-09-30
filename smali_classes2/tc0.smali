@@ -1,24 +1,23 @@
 .class public final Ltc0;
-.super Ljava/lang/Object;
+.super Luc0;
 .source "SourceFile"
-
-# interfaces
-.implements Lwc0;
 
 
 # static fields
-.field public static final a:Ltc0;
+.field public static final b:Ltc0;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 1
+    .locals 2
 
     new-instance v0, Ltc0;
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    const/4 v1, 0x0
 
-    sput-object v0, Ltc0;->a:Ltc0;
+    invoke-direct {v0, v1}, Luc0;-><init>(I)V
+
+    sput-object v0, Ltc0;->b:Ltc0;
 
     return-void
 .end method
@@ -50,7 +49,7 @@
 .method public final hashCode()I
     .locals 0
 
-    const p0, 0x41a3d8e8
+    const p0, -0x66bc794f
 
     return p0
 .end method
@@ -58,7 +57,7 @@
 .method public final toString()Ljava/lang/String;
     .locals 0
 
-    const-string p0, "CameraPermissionDeclined"
+    const-string p0, "ShowCropError"
 
     return-object p0
 .end method

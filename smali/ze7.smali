@@ -1,48 +1,51 @@
 .class public final Lze7;
-.super Ljava/lang/Object;
+.super Laf7;
 .source "SourceFile"
 
 
+# instance fields
+.field public final c:Landroid/app/job/JobInfo;
+
+.field public final d:Landroid/app/job/JobScheduler;
+
+
 # direct methods
-.method public static a(Ljava/util/Date;)Ljava/lang/String;
-    .locals 4
+.method public constructor <init>(Landroid/content/Context;Landroid/content/ComponentName;I)V
+    .locals 1
 
-    sget-object v0, Lwx7;->v:Ljava/lang/Object;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    monitor-enter v0
+    invoke-virtual {p0, p3}, Laf7;->a(I)V
 
-    :try_start_0
-    sget-object v1, Lwx7;->u:Ljava/text/SimpleDateFormat;
+    new-instance v0, Landroid/app/job/JobInfo$Builder;
 
-    if-nez v1, :cond_0
+    invoke-direct {v0, p3, p2}, Landroid/app/job/JobInfo$Builder;-><init>(ILandroid/content/ComponentName;)V
 
-    new-instance v1, Ljava/text/SimpleDateFormat;
+    const-wide/16 p2, 0x0
 
-    const-string v2, "yyyyMMdd_HHmmss"
+    invoke-virtual {v0, p2, p3}, Landroid/app/job/JobInfo$Builder;->setOverrideDeadline(J)Landroid/app/job/JobInfo$Builder;
 
-    sget-object v3, Ljava/util/Locale;->ENGLISH:Ljava/util/Locale;
+    move-result-object p2
 
-    invoke-direct {v1, v2, v3}, Ljava/text/SimpleDateFormat;-><init>(Ljava/lang/String;Ljava/util/Locale;)V
+    invoke-virtual {p2}, Landroid/app/job/JobInfo$Builder;->build()Landroid/app/job/JobInfo;
 
-    sput-object v1, Lwx7;->u:Ljava/text/SimpleDateFormat;
+    move-result-object p2
 
-    :cond_0
-    sget-object v1, Lwx7;->u:Ljava/text/SimpleDateFormat;
+    iput-object p2, p0, Lze7;->c:Landroid/app/job/JobInfo;
 
-    invoke-virtual {v1, p0}, Ljava/text/DateFormat;->format(Ljava/util/Date;)Ljava/lang/String;
+    invoke-virtual {p1}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
 
-    move-result-object p0
+    move-result-object p1
 
-    monitor-exit v0
+    const-string p2, "jobscheduler"
 
-    return-object p0
+    invoke-virtual {p1, p2}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
-    :catchall_0
-    move-exception p0
+    move-result-object p1
 
-    monitor-exit v0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    check-cast p1, Landroid/app/job/JobScheduler;
 
-    throw p0
+    iput-object p1, p0, Lze7;->d:Landroid/app/job/JobScheduler;
+
+    return-void
 .end method

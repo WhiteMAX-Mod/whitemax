@@ -3,95 +3,19 @@
 .source "SourceFile"
 
 
-# instance fields
-.field public a:Z
-
-.field public final b:Ljava/util/concurrent/CopyOnWriteArrayList;
-
-.field public c:La76;
-
-
 # direct methods
-.method public constructor <init>(Z)V
+.method public static a(Landroid/app/Person;)Landroid/os/Parcelable;
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-boolean p1, p0, Lv0a;->a:Z
-
-    new-instance p1, Ljava/util/concurrent/CopyOnWriteArrayList;
-
-    invoke-direct {p1}, Ljava/util/concurrent/CopyOnWriteArrayList;-><init>()V
-
-    iput-object p1, p0, Lv0a;->b:Ljava/util/concurrent/CopyOnWriteArrayList;
-
-    return-void
+    return-object p0
 .end method
 
-
-# virtual methods
-.method public a()V
-    .locals 0
-
-    return-void
-.end method
-
-.method public abstract b()V
-.end method
-
-.method public c(Lyd0;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public d()V
-    .locals 0
-
-    return-void
-.end method
-
-.method public final e()V
+.method public static b(Ljava/lang/CharSequence;JLandroid/app/Person;)Landroid/app/Notification$MessagingStyle$Message;
     .locals 1
 
-    iget-object p0, p0, Lv0a;->b:Ljava/util/concurrent/CopyOnWriteArrayList;
+    new-instance v0, Landroid/app/Notification$MessagingStyle$Message;
 
-    invoke-interface {p0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
+    invoke-direct {v0, p0, p1, p2, p3}, Landroid/app/Notification$MessagingStyle$Message;-><init>(Ljava/lang/CharSequence;JLandroid/app/Person;)V
 
-    move-result-object p0
-
-    :goto_0
-    invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Loy1;
-
-    invoke-interface {v0}, Loy1;->cancel()V
-
-    goto :goto_0
-
-    :cond_0
-    return-void
-.end method
-
-.method public final f(Z)V
-    .locals 0
-
-    iput-boolean p1, p0, Lv0a;->a:Z
-
-    iget-object p0, p0, Lv0a;->c:La76;
-
-    if-eqz p0, :cond_0
-
-    invoke-interface {p0}, Lv56;->invoke()Ljava/lang/Object;
-
-    :cond_0
-    return-void
+    return-object v0
 .end method

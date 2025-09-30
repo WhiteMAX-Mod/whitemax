@@ -1,61 +1,16 @@
-.class public final Lyi1;
-.super Lnj1;
+.class public final synthetic Lyi1;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
-
-# static fields
-.field public static final D:Lyi1;
-
-
-# direct methods
-.method static constructor <clinit>()V
-    .locals 1
-
-    new-instance v0, Lyi1;
-
-    invoke-direct {v0}, Lnj1;-><init>()V
-
-    sput-object v0, Lyi1;->D:Lyi1;
-
-    return-void
-.end method
+# interfaces
+.implements Landroid/media/MediaPlayer$OnPreparedListener;
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
-
-    const/4 v0, 0x1
-
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    instance-of p0, p1, Lyi1;
-
-    if-nez p0, :cond_1
-
-    const/4 p0, 0x0
-
-    return p0
-
-    :cond_1
-    return v0
-.end method
-
-.method public final hashCode()I
+.method public final onPrepared(Landroid/media/MediaPlayer;)V
     .locals 0
 
-    const p0, -0x343cebf4    # -2.5569304E7f
+    invoke-virtual {p1}, Landroid/media/MediaPlayer;->start()V
 
-    return p0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 0
-
-    const-string p0, "OpenCallChat"
-
-    return-object p0
+    return-void
 .end method

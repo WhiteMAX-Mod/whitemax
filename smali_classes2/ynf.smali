@@ -3,48 +3,72 @@
 .source "SourceFile"
 
 # interfaces
-.implements Landroid/view/View$OnLayoutChangeListener;
+.implements Lc6;
 
 
 # instance fields
-.field public final synthetic a:Landroid/os/Handler;
+.field public final synthetic a:I
 
-.field public final synthetic b:Lkcc;
+.field public final synthetic b:Ldof;
 
 
 # direct methods
-.method public synthetic constructor <init>(Landroid/os/Handler;Lkcc;)V
+.method public synthetic constructor <init>(Ldof;I)V
     .locals 0
 
+    iput p2, p0, Lynf;->a:I
+
+    iput-object p1, p0, Lynf;->b:Ldof;
+
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lynf;->a:Landroid/os/Handler;
-
-    iput-object p2, p0, Lynf;->b:Lkcc;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onLayoutChange(Landroid/view/View;IIIIIIII)V
-    .locals 0
+.method public final run()V
+    .locals 3
 
-    const/4 p1, 0x0
+    iget v0, p0, Lynf;->a:I
 
-    iget-object p2, p0, Lynf;->a:Landroid/os/Handler;
+    const-string v1, "cof"
 
-    invoke-virtual {p2, p1}, Landroid/os/Handler;->removeCallbacksAndMessages(Ljava/lang/Object;)V
+    iget-object p0, p0, Lynf;->b:Ldof;
 
-    iget-object p0, p0, Lynf;->b:Lkcc;
+    packed-switch v0, :pswitch_data_0
 
-    iget-object p0, p0, Lkcc;->a:Ljava/lang/Object;
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    check-cast p0, Ljava/lang/Runnable;
+    const-string v2, "removeUploadFromRepository: finished for data="
 
-    const-wide/16 p3, 0x12c
+    invoke-direct {v0, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {p2, p0, p3, p4}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-static {v1, p0}, Ljtg;->l(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
+
+    :pswitch_0
+    const-string v0, "getUploadFromRepository: upload not found in cache,  uploadData=%s"
+
+    filled-new-array {p0}, [Ljava/lang/Object;
+
+    move-result-object p0
+
+    invoke-static {v1, v0, p0}, Ljtg;->k(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

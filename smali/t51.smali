@@ -3,57 +3,62 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lsm1;
+.implements Lu51;
 
 
-# instance fields
-.field public final synthetic a:Lr7b;
+# static fields
+.field public static final a:Lt51;
 
 
 # direct methods
-.method public constructor <init>(Lr7b;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lt51;
 
-    iput-object p1, p0, Lt51;->a:Lr7b;
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    sput-object v0, Lt51;->a:Lt51;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onMediaConnected(Lru/ok/android/externcalls/sdk/connection/MediaConnectionListener$ConnectedInfo;)V
-    .locals 0
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 1
 
-    invoke-virtual {p1}, Lru/ok/android/externcalls/sdk/connection/MediaConnectionListener$ConnectedInfo;->isFirstConnection()Z
+    const/4 v0, 0x1
 
-    move-result p1
+    if-ne p0, p1, :cond_0
 
-    if-nez p1, :cond_0
-
-    sget-object p1, La51;->c:La51;
-
-    iget-object p0, p0, Lt51;->a:Lr7b;
-
-    check-cast p0, Lo7b;
-
-    invoke-virtual {p0, p1}, Lo7b;->g(Ljava/lang/Object;)Ljava/lang/Object;
+    return v0
 
     :cond_0
-    return-void
+    instance-of p0, p1, Lt51;
+
+    if-nez p0, :cond_1
+
+    const/4 p0, 0x0
+
+    return p0
+
+    :cond_1
+    return v0
 .end method
 
-.method public final onMediaDisconnected(Lru/ok/android/externcalls/sdk/connection/MediaConnectionListener$DisconnectedInfo;)V
+.method public final hashCode()I
     .locals 0
 
-    sget-object p1, Lb51;->c:Lb51;
+    const p0, -0x293f37ba
 
-    iget-object p0, p0, Lt51;->a:Lr7b;
+    return p0
+.end method
 
-    check-cast p0, Lo7b;
+.method public final toString()Ljava/lang/String;
+    .locals 0
 
-    invoke-virtual {p0, p1}, Lo7b;->g(Ljava/lang/Object;)Ljava/lang/Object;
+    const-string p0, "Restored"
 
-    return-void
+    return-object p0
 .end method

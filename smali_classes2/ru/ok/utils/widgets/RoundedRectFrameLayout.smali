@@ -26,13 +26,13 @@
     goto :goto_0
 
     :cond_0
-    sget-object v0, La1c;->RoundedRectFrameLayout:[I
+    sget-object v0, Lndc;->RoundedRectFrameLayout:[I
 
     invoke-virtual {p1, p2, v0}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[I)Landroid/content/res/TypedArray;
 
     move-result-object p1
 
-    sget p2, La1c;->RoundedRectFrameLayout_cornersRadius:I
+    sget p2, Lndc;->RoundedRectFrameLayout_cornersRadius:I
 
     const/4 v0, -0x1
 
@@ -145,7 +145,7 @@
     return-void
 
     :cond_2
-    new-instance p1, Lxlc;
+    new-instance p1, Lmzc;
 
     iget-object p2, p0, Lru/ok/utils/widgets/RoundedRectFrameLayout;->c:[F
 
@@ -153,7 +153,7 @@
 
     const/4 p4, 0x1
 
-    invoke-direct {p1, p3, p2, p4}, Lxlc;-><init>(Landroid/graphics/Rect;FI)V
+    invoke-direct {p1, p3, p2, p4}, Lmzc;-><init>(Landroid/graphics/Rect;FI)V
 
     invoke-virtual {p0, p1}, Landroid/view/View;->setOutlineProvider(Landroid/view/ViewOutlineProvider;)V
 

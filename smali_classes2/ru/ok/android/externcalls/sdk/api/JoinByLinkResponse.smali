@@ -4,10 +4,10 @@
 
 
 # static fields
-.field public static final PARSER:Lza7;
+.field public static final PARSER:Lvh7;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lza7;"
+            "Lvh7;"
         }
     .end annotation
 .end field
@@ -51,13 +51,13 @@
 .method static constructor <clinit>()V
     .locals 2
 
-    new-instance v0, Lz87;
+    new-instance v0, Ljl5;
 
-    const/4 v1, 0x0
+    const/16 v1, 0x1b
 
-    invoke-direct {v0, v1}, Lz87;-><init>(I)V
+    invoke-direct {v0, v1}, Ljl5;-><init>(I)V
 
-    sput-object v0, Lru/ok/android/externcalls/sdk/api/JoinByLinkResponse;->PARSER:Lza7;
+    sput-object v0, Lru/ok/android/externcalls/sdk/api/JoinByLinkResponse;->PARSER:Lvh7;
 
     return-void
 .end method
@@ -102,17 +102,17 @@
     return-void
 .end method
 
-.method public static synthetic a(Ldb7;)Lru/ok/android/externcalls/sdk/api/JoinByLinkResponse;
+.method public static synthetic a(Lzh7;)Lru/ok/android/externcalls/sdk/api/JoinByLinkResponse;
     .locals 0
 
-    invoke-static {p0}, Lru/ok/android/externcalls/sdk/api/JoinByLinkResponse;->lambda$static$0(Ldb7;)Lru/ok/android/externcalls/sdk/api/JoinByLinkResponse;
+    invoke-static {p0}, Lru/ok/android/externcalls/sdk/api/JoinByLinkResponse;->lambda$static$0(Lzh7;)Lru/ok/android/externcalls/sdk/api/JoinByLinkResponse;
 
     move-result-object p0
 
     return-object p0
 .end method
 
-.method private static synthetic lambda$static$0(Ldb7;)Lru/ok/android/externcalls/sdk/api/JoinByLinkResponse;
+.method private static synthetic lambda$static$0(Lzh7;)Lru/ok/android/externcalls/sdk/api/JoinByLinkResponse;
     .locals 12
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -123,7 +123,7 @@
 
     sget-object v0, Ljava/util/Collections;->EMPTY_LIST:Ljava/util/List;
 
-    invoke-interface {p0}, Ldb7;->s()V
+    invoke-interface {p0}, Lzh7;->s()V
 
     const/4 v1, 0x0
 
@@ -146,13 +146,13 @@
     move v11, v10
 
     :goto_0
-    invoke-interface {p0}, Ldb7;->hasNext()Z
+    invoke-interface {p0}, Lzh7;->hasNext()Z
 
     move-result v0
 
     if-eqz v0, :cond_8
 
-    invoke-interface {p0}, Ldb7;->name()Ljava/lang/String;
+    invoke-interface {p0}, Lzh7;->name()Ljava/lang/String;
 
     move-result-object v0
 
@@ -297,68 +297,68 @@
     :goto_1
     packed-switch v3, :pswitch_data_0
 
-    invoke-interface {p0}, Ldb7;->B()V
+    invoke-interface {p0}, Lzh7;->B()V
 
     goto :goto_0
 
     :pswitch_0
-    invoke-interface {p0}, Ldb7;->H()Ljava/lang/String;
+    invoke-interface {p0}, Lzh7;->H()Ljava/lang/String;
 
     move-result-object v7
 
     goto :goto_0
 
     :pswitch_1
-    invoke-static {p0}, Lru/ok/android/externcalls/sdk/api/TurnStunParser;->parseStun(Ldb7;)Ljava/util/List;
+    invoke-static {p0}, Lru/ok/android/externcalls/sdk/api/TurnStunParser;->parseStun(Lzh7;)Ljava/util/List;
 
     move-result-object v6
 
     goto :goto_0
 
     :pswitch_2
-    invoke-static {p0}, Lru/ok/android/externcalls/sdk/api/TurnStunParser;->parseTurn(Ldb7;)Ljava/util/List;
+    invoke-static {p0}, Lru/ok/android/externcalls/sdk/api/TurnStunParser;->parseTurn(Lzh7;)Ljava/util/List;
 
     move-result-object v5
 
     goto/16 :goto_0
 
     :pswitch_3
-    invoke-interface {p0}, Ldb7;->E()I
+    invoke-interface {p0}, Lzh7;->E()I
 
     move-result v11
 
     goto/16 :goto_0
 
     :pswitch_4
-    invoke-interface {p0}, Ldb7;->H()Ljava/lang/String;
+    invoke-interface {p0}, Lzh7;->H()Ljava/lang/String;
 
     move-result-object v8
 
     goto/16 :goto_0
 
     :pswitch_5
-    invoke-interface {p0}, Ldb7;->H()Ljava/lang/String;
+    invoke-interface {p0}, Lzh7;->H()Ljava/lang/String;
 
     move-result-object v4
 
     goto/16 :goto_0
 
     :pswitch_6
-    invoke-interface {p0}, Ldb7;->e0()Z
+    invoke-interface {p0}, Lzh7;->e0()Z
 
     move-result v10
 
     goto/16 :goto_0
 
     :pswitch_7
-    invoke-interface {p0}, Ldb7;->H()Ljava/lang/String;
+    invoke-interface {p0}, Lzh7;->H()Ljava/lang/String;
 
     move-result-object v9
 
     goto/16 :goto_0
 
     :cond_8
-    invoke-interface {p0}, Ldb7;->q()V
+    invoke-interface {p0}, Lzh7;->q()V
 
     new-instance v3, Lru/ok/android/externcalls/sdk/api/JoinByLinkResponse;
 
@@ -562,7 +562,7 @@
 
     const-string v1, "\'}"
 
-    invoke-static {v0, p0, v1}, Lm26;->j(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0, p0, v1}, Lyv7;->k(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
 

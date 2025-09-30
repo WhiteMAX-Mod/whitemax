@@ -1,182 +1,173 @@
-.class public abstract La30;
+.class public final La30;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
+# instance fields
+.field public final a:Landroid/media/AudioManager;
+
+.field public final b:Lz20;
+
+.field public final c:Lmc5;
+
+.field public d:I
+
+.field public e:F
+
+
 # direct methods
-.method public static a(Ls20;)Lxw6;
-    .locals 6
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Ls20;",
-            ")",
-            "Lxw6;"
-        }
-    .end annotation
+.method public constructor <init>(Landroid/content/Context;Landroid/os/Handler;Lmc5;)V
+    .locals 1
 
-    invoke-static {}, Lxw6;->i()Lvw6;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    move-result-object v0
+    const/high16 v0, 0x3f800000    # 1.0f
 
-    sget-object v1, Le30;->e:Lax6;
+    iput v0, p0, La30;->e:F
 
-    invoke-virtual {v1}, Lax6;->g()Lhx6;
+    invoke-virtual {p1}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
 
-    move-result-object v1
+    move-result-object p1
 
-    invoke-virtual {v1}, Lpw6;->g()Lm5f;
+    const-string v0, "audio"
 
-    move-result-object v1
+    invoke-virtual {p1, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Landroid/media/AudioManager;
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    iput-object p1, p0, La30;->a:Landroid/media/AudioManager;
+
+    iput-object p3, p0, La30;->c:Lmc5;
+
+    new-instance p1, Lz20;
+
+    invoke-direct {p1, p0, p2}, Lz20;-><init>(La30;Landroid/os/Handler;)V
+
+    iput-object p1, p0, La30;->b:Lz20;
+
+    const/4 p1, 0x0
+
+    iput p1, p0, La30;->d:I
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final a()V
+    .locals 2
+
+    iget v0, p0, La30;->d:I
+
+    if-nez v0, :cond_0
+
+    return-void
 
     :cond_0
-    :goto_0
-    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
+    sget v0, Llrf;->a:I
 
-    move-result v2
+    const/16 v1, 0x1a
 
-    if-eqz v2, :cond_2
-
-    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Ljava/lang/Integer;
-
-    invoke-virtual {v2}, Ljava/lang/Integer;->intValue()I
-
-    move-result v3
-
-    sget v4, Lpaf;->a:I
-
-    invoke-static {v3}, Lpaf;->q(I)I
-
-    move-result v5
-
-    if-ge v4, v5, :cond_1
+    if-lt v0, v1, :cond_1
 
     goto :goto_0
 
     :cond_1
-    new-instance v4, Landroid/media/AudioFormat$Builder;
+    iget-object v0, p0, La30;->b:Lz20;
 
-    invoke-direct {v4}, Landroid/media/AudioFormat$Builder;-><init>()V
+    iget-object v1, p0, La30;->a:Landroid/media/AudioManager;
 
-    const/16 v5, 0xc
-
-    invoke-virtual {v4, v5}, Landroid/media/AudioFormat$Builder;->setChannelMask(I)Landroid/media/AudioFormat$Builder;
-
-    move-result-object v4
-
-    invoke-virtual {v4, v3}, Landroid/media/AudioFormat$Builder;->setEncoding(I)Landroid/media/AudioFormat$Builder;
-
-    move-result-object v3
-
-    const v4, 0xbb80
-
-    invoke-virtual {v3, v4}, Landroid/media/AudioFormat$Builder;->setSampleRate(I)Landroid/media/AudioFormat$Builder;
-
-    move-result-object v3
-
-    invoke-virtual {v3}, Landroid/media/AudioFormat$Builder;->build()Landroid/media/AudioFormat;
-
-    move-result-object v3
-
-    invoke-virtual {p0}, Ls20;->b()Ld3d;
-
-    move-result-object v4
-
-    iget-object v4, v4, Ld3d;->b:Ljava/lang/Object;
-
-    check-cast v4, Landroid/media/AudioAttributes;
-
-    invoke-static {v3, v4}, Landroid/media/AudioTrack;->isDirectPlaybackSupported(Landroid/media/AudioFormat;Landroid/media/AudioAttributes;)Z
-
-    move-result v3
-
-    if-eqz v3, :cond_0
-
-    invoke-virtual {v0, v2}, Low6;->a(Ljava/lang/Object;)V
-
-    goto :goto_0
-
-    :cond_2
-    const/4 p0, 0x2
-
-    invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object p0
-
-    invoke-virtual {v0, p0}, Low6;->a(Ljava/lang/Object;)V
-
-    invoke-virtual {v0}, Lvw6;->h()Lddc;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static b(IILs20;)I
-    .locals 3
-
-    const/16 v0, 0xa
+    invoke-virtual {v1, v0}, Landroid/media/AudioManager;->abandonAudioFocus(Landroid/media/AudioManager$OnAudioFocusChangeListener;)I
 
     :goto_0
-    if-lez v0, :cond_2
+    const/4 v0, 0x0
 
-    invoke-static {v0}, Lpaf;->s(I)I
+    invoke-virtual {p0, v0}, La30;->b(I)V
 
-    move-result v1
+    return-void
+.end method
 
-    if-nez v1, :cond_0
+.method public final b(I)V
+    .locals 2
+
+    iget v0, p0, La30;->d:I
+
+    if-ne v0, p1, :cond_0
 
     goto :goto_1
 
     :cond_0
-    new-instance v2, Landroid/media/AudioFormat$Builder;
+    iput p1, p0, La30;->d:I
 
-    invoke-direct {v2}, Landroid/media/AudioFormat$Builder;-><init>()V
+    const/4 v0, 0x3
 
-    invoke-virtual {v2, p0}, Landroid/media/AudioFormat$Builder;->setEncoding(I)Landroid/media/AudioFormat$Builder;
+    if-ne p1, v0, :cond_1
 
-    move-result-object v2
-
-    invoke-virtual {v2, p1}, Landroid/media/AudioFormat$Builder;->setSampleRate(I)Landroid/media/AudioFormat$Builder;
-
-    move-result-object v2
-
-    invoke-virtual {v2, v1}, Landroid/media/AudioFormat$Builder;->setChannelMask(I)Landroid/media/AudioFormat$Builder;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Landroid/media/AudioFormat$Builder;->build()Landroid/media/AudioFormat;
-
-    move-result-object v1
-
-    invoke-virtual {p2}, Ls20;->b()Ld3d;
-
-    move-result-object v2
-
-    iget-object v2, v2, Ld3d;->b:Ljava/lang/Object;
-
-    check-cast v2, Landroid/media/AudioAttributes;
-
-    invoke-static {v1, v2}, Landroid/media/AudioTrack;->isDirectPlaybackSupported(Landroid/media/AudioFormat;Landroid/media/AudioAttributes;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_1
-
-    return v0
-
-    :cond_1
-    :goto_1
-    add-int/lit8 v0, v0, -0x1
+    const p1, 0x3e4ccccd    # 0.2f
 
     goto :goto_0
 
+    :cond_1
+    const/high16 p1, 0x3f800000    # 1.0f
+
+    :goto_0
+    iget v0, p0, La30;->e:F
+
+    cmpl-float v0, v0, p1
+
+    if-nez v0, :cond_2
+
+    goto :goto_1
+
     :cond_2
-    const/4 p0, 0x0
+    iput p1, p0, La30;->e:F
+
+    iget-object p0, p0, La30;->c:Lmc5;
+
+    if-eqz p0, :cond_3
+
+    iget-object p0, p0, Lmc5;->a:Lsc5;
+
+    iget p1, p0, Lsc5;->d1:F
+
+    iget-object v0, p0, Lsc5;->H0:La30;
+
+    iget v0, v0, La30;->e:F
+
+    mul-float/2addr p1, v0
+
+    const/4 v0, 0x2
+
+    invoke-static {p1}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+
+    move-result-object p1
+
+    const/4 v1, 0x1
+
+    invoke-virtual {p0, v1, v0, p1}, Lsc5;->g1(IILjava/lang/Object;)V
+
+    :cond_3
+    :goto_1
+    return-void
+.end method
+
+.method public final c(IZ)I
+    .locals 0
+
+    invoke-virtual {p0}, La30;->a()V
+
+    if-eqz p2, :cond_0
+
+    const/4 p0, 0x1
+
+    return p0
+
+    :cond_0
+    const/4 p0, -0x1
 
     return p0
 .end method

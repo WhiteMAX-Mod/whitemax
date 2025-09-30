@@ -1,13 +1,22 @@
 .class public final Lj85;
-.super Ljava/io/ByteArrayOutputStream;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lt85;
 
-# virtual methods
-.method public final m()[B
+
+# instance fields
+.field public final a:Ljava/lang/Integer;
+
+
+# direct methods
+.method public constructor <init>(Ljava/lang/Integer;)V
     .locals 0
 
-    iget-object p0, p0, Ljava/io/ByteArrayOutputStream;->buf:[B
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    return-object p0
+    iput-object p1, p0, Lj85;->a:Ljava/lang/Integer;
+
+    return-void
 .end method

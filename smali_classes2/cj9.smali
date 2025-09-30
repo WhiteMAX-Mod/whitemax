@@ -1,68 +1,73 @@
-.class public final synthetic Lcj9;
-.super Ljava/lang/Object;
+.class public final enum Lcj9;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
-# interfaces
-.implements Lc6;
 
+# static fields
+.field public static final enum a:Lcj9;
 
-# instance fields
-.field public final synthetic a:I
+.field public static final enum b:Lcj9;
 
-.field public final synthetic b:Ldj9;
+.field public static final synthetic c:[Lcj9;
 
 
 # direct methods
-.method public synthetic constructor <init>(Ldj9;I)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 4
 
-    iput p2, p0, Lcj9;->a:I
+    new-instance v0, Lcj9;
 
-    iput-object p1, p0, Lcj9;->b:Ldj9;
+    const-string v1, "MOVIE"
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/4 v2, 0x0
+
+    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Lcj9;->a:Lcj9;
+
+    new-instance v1, Lcj9;
+
+    const-string v2, "STREAM"
+
+    const/4 v3, 0x1
+
+    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v1, Lcj9;->b:Lcj9;
+
+    filled-new-array {v0, v1}, [Lcj9;
+
+    move-result-object v0
+
+    sput-object v0, Lcj9;->c:[Lcj9;
 
     return-void
 .end method
 
+.method public static valueOf(Ljava/lang/String;)Lcj9;
+    .locals 1
 
-# virtual methods
-.method public final run()V
-    .locals 2
+    const-class v0, Lcj9;
 
-    iget v0, p0, Lcj9;->a:I
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
 
-    packed-switch v0, :pswitch_data_0
+    move-result-object p0
 
-    new-instance v0, Laj0;
+    check-cast p0, Lcj9;
 
-    const/16 v1, 0x16
+    return-object p0
+.end method
 
-    invoke-direct {v0, v1}, Laj0;-><init>(I)V
+.method public static values()[Lcj9;
+    .locals 1
 
-    iget-object p0, p0, Lcj9;->b:Ldj9;
+    sget-object v0, Lcj9;->c:[Lcj9;
 
-    invoke-virtual {p0, v0}, Lv2;->o(Lmj3;)V
+    invoke-virtual {v0}, [Ljava/lang/Object;->clone()Ljava/lang/Object;
 
-    return-void
+    move-result-object v0
 
-    :pswitch_0
-    new-instance v0, Laj0;
+    check-cast v0, [Lcj9;
 
-    const/16 v1, 0x15
-
-    invoke-direct {v0, v1}, Laj0;-><init>(I)V
-
-    iget-object p0, p0, Lcj9;->b:Ldj9;
-
-    invoke-virtual {p0, v0}, Lv2;->o(Lmj3;)V
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-object v0
 .end method

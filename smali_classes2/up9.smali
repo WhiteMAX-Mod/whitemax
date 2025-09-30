@@ -1,86 +1,124 @@
-.class public final Lup9;
+.class public final synthetic Lup9;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lad6;
+
 
 # instance fields
-.field public final a:Ltm4;
+.field public final synthetic a:I
 
-.field public final b:Ltm4;
+.field public final synthetic b:Lwp9;
 
-.field public final c:Ltm4;
-
-.field public final d:Ltm4;
-
-.field public final e:Ltm4;
+.field public final synthetic c:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Ltm4;Ltm4;Ltm4;Ltm4;Ltm4;)V
+.method public synthetic constructor <init>(Lwp9;Ljava/lang/Object;I)V
     .locals 0
 
+    iput p3, p0, Lup9;->a:I
+
+    iput-object p1, p0, Lup9;->b:Lwp9;
+
+    iput-object p2, p0, Lup9;->c:Ljava/lang/Object;
+
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lup9;->a:Ltm4;
-
-    iput-object p2, p0, Lup9;->b:Ltm4;
-
-    iput-object p3, p0, Lup9;->c:Ltm4;
-
-    iput-object p4, p0, Lup9;->d:Ltm4;
-
-    iput-object p5, p0, Lup9;->e:Ltm4;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Lvp9;)V
-    .locals 4
+.method public final apply(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 3
 
-    iget-wide v0, p1, Lvp9;->p0:J
+    iget v0, p0, Lup9;->a:I
 
-    const-wide/16 v2, 0x0
+    packed-switch v0, :pswitch_data_0
 
-    cmp-long v2, v0, v2
+    iget-object v0, p0, Lup9;->c:Ljava/lang/Object;
 
-    if-eqz v2, :cond_0
+    check-cast v0, Le0c;
 
-    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    check-cast p1, Ltx7;
 
-    move-result-object v0
+    iget-object p0, p0, Lup9;->b:Lwp9;
 
-    filled-new-array {v0}, [Ljava/lang/Object;
+    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    move-result-object v0
+    const/4 v1, 0x0
 
-    const-string v1, "up9"
+    iput-boolean v1, p1, Ltx7;->a:Z
 
-    const-string v2, "setFavoritesSync: %d"
+    const/4 v2, 0x1
 
-    invoke-static {v1, v2, v0}, Lg47;->o(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    iput-boolean v2, p1, Ltx7;->b:Z
 
-    iget-object p0, p0, Lup9;->c:Ltm4;
+    iput-boolean v1, p1, Ltx7;->c:Z
 
-    invoke-virtual {p0}, Ltm4;->get()Ljava/lang/Object;
+    iput-object v0, p1, Ltx7;->i:Le0c;
 
-    move-result-object p0
+    iput-boolean v1, p1, Ltx7;->g:Z
 
-    check-cast p0, Lh23;
+    iput-boolean v1, p1, Ltx7;->h:Z
 
-    iget-wide v0, p1, Lvp9;->p0:J
+    iget-object p0, p0, Lwp9;->s0:Lxvf;
 
-    check-cast p0, Lmwc;
+    iget-boolean p0, p0, Lxvf;->d:Z
 
-    const-string p1, "user.favoritesLastSync"
+    iput-boolean p0, p1, Ltx7;->n:Z
 
-    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    return-object p1
 
-    move-result-object v0
+    :pswitch_0
+    iget-object v0, p0, Lup9;->c:Ljava/lang/Object;
 
-    invoke-virtual {p0, p1, v0}, Le3;->i(Ljava/lang/String;Ljava/lang/Long;)V
+    check-cast v0, Lvp9;
 
-    :cond_0
-    return-void
+    check-cast p1, Ltx7;
+
+    iget-object p0, p0, Lup9;->b:Lwp9;
+
+    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    iget-object v1, v0, Lvp9;->b:Lxvf;
+
+    iget-object v1, v1, Lxvf;->a:Le0c;
+
+    iput-object v1, p1, Ltx7;->i:Le0c;
+
+    const/4 v1, 0x1
+
+    iput-boolean v1, p1, Ltx7;->a:Z
+
+    iput-boolean v1, p1, Ltx7;->b:Z
+
+    const/4 v1, 0x0
+
+    iput-boolean v1, p1, Ltx7;->g:Z
+
+    iput-boolean v1, p1, Ltx7;->h:Z
+
+    iput-boolean v1, p1, Ltx7;->c:Z
+
+    iget-object p0, p0, Lwp9;->s0:Lxvf;
+
+    iget-boolean p0, p0, Lxvf;->d:Z
+
+    iput-boolean p0, p1, Ltx7;->n:Z
+
+    iget-boolean p0, v0, Lvp9;->e:Z
+
+    iput-boolean p0, p1, Ltx7;->o:Z
+
+    return-object p1
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

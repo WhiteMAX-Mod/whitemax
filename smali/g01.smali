@@ -1,75 +1,65 @@
-.class public final synthetic Lg01;
+.class public final Lg01;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Ljavax/inject/Provider;
-.implements Lxbe;
+.implements Lby3;
 
 
 # instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Lje7;
+.field public final synthetic a:Lone/me/calls/ui/ui/settings/CallAdminSettingsScreen;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lje7;I)V
+.method public constructor <init>(Lone/me/calls/ui/ui/settings/CallAdminSettingsScreen;)V
     .locals 0
 
-    iput p2, p0, Lg01;->a:I
-
-    iput-object p1, p0, Lg01;->b:Lje7;
-
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lg01;->a:Lone/me/calls/ui/ui/settings/CallAdminSettingsScreen;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final get()Ljava/lang/Object;
-    .locals 1
+.method public final a(Lxx3;Lxx3;Z)V
+    .locals 0
 
-    iget v0, p0, Lg01;->a:I
+    return-void
+.end method
 
-    iget-object p0, p0, Lg01;->b:Lje7;
+.method public final b(Lxx3;Lxx3;Z)V
+    .locals 0
 
-    packed-switch v0, :pswitch_data_0
+    if-eqz p3, :cond_0
 
-    invoke-interface {p0}, Lje7;->getValue()Ljava/lang/Object;
+    sget-object p1, Lone/me/calls/ui/ui/settings/CallAdminSettingsScreen;->s0:[Lxi7;
 
-    move-result-object p0
+    iget-object p0, p0, Lg01;->a:Lone/me/calls/ui/ui/settings/CallAdminSettingsScreen;
 
-    check-cast p0, Laf6;
-
-    return-object p0
-
-    :pswitch_0
-    invoke-interface {p0}, Lje7;->getValue()Ljava/lang/Object;
+    invoke-virtual {p0}, Lone/me/calls/ui/ui/settings/CallAdminSettingsScreen;->y0()Lp01;
 
     move-result-object p0
 
-    check-cast p0, Lye6;
+    invoke-virtual {p0}, Lp01;->q()Liz0;
 
-    return-object p0
+    move-result-object p1
 
-    :pswitch_1
-    invoke-interface {p0}, Lje7;->getValue()Ljava/lang/Object;
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    move-result-object p0
+    check-cast p1, Ld01;
 
-    check-cast p0, Lti4;
+    iget-object p1, p1, Ld01;->F0:Lyce;
 
-    invoke-virtual {p0}, Lti4;->a()Ljava/lang/String;
+    invoke-virtual {p1}, Lyce;->getValue()Ljava/lang/Object;
 
-    move-result-object p0
+    move-result-object p1
 
-    return-object p0
+    check-cast p1, Ly9;
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    invoke-virtual {p0, p1}, Lp01;->r(Ly9;)V
+
+    :cond_0
+    return-void
 .end method

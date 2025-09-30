@@ -1,137 +1,64 @@
 .class public final Lt6b;
-.super Lcud;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lv6b;
 
 
 # static fields
-.field public static final CREATOR:Landroid/os/Parcelable$Creator;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Landroid/os/Parcelable$Creator<",
-            "Lt6b;",
-            ">;"
-        }
-    .end annotation
-.end field
-
-
-# instance fields
-.field public final a:J
-
-.field public final b:J
-
-.field public final c:[B
+.field public static final a:Lt6b;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 2
+    .locals 1
 
-    new-instance v0, Lo5b;
+    new-instance v0, Lt6b;
 
-    const/4 v1, 0x4
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0, v1}, Lo5b;-><init>(I)V
-
-    sput-object v0, Lt6b;->CREATOR:Landroid/os/Parcelable$Creator;
-
-    return-void
-.end method
-
-.method public constructor <init>(J[BJ)V
-    .locals 0
-
-    .line 1
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 2
-    iput-wide p4, p0, Lt6b;->a:J
-
-    .line 3
-    iput-wide p1, p0, Lt6b;->b:J
-
-    .line 4
-    iput-object p3, p0, Lt6b;->c:[B
-
-    return-void
-.end method
-
-.method public constructor <init>(Landroid/os/Parcel;)V
-    .locals 2
-
-    .line 5
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 6
-    invoke-virtual {p1}, Landroid/os/Parcel;->readLong()J
-
-    move-result-wide v0
-
-    iput-wide v0, p0, Lt6b;->a:J
-
-    .line 7
-    invoke-virtual {p1}, Landroid/os/Parcel;->readLong()J
-
-    move-result-wide v0
-
-    iput-wide v0, p0, Lt6b;->b:J
-
-    .line 8
-    invoke-virtual {p1}, Landroid/os/Parcel;->createByteArray()[B
-
-    move-result-object p1
-
-    sget v0, Lpaf;->a:I
-
-    iput-object p1, p0, Lt6b;->c:[B
+    sput-object v0, Lt6b;->a:Lt6b;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final toString()Ljava/lang/String;
-    .locals 3
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 1
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    const/4 v0, 0x1
 
-    const-string v1, "SCTE-35 PrivateCommand { ptsAdjustment="
+    if-ne p0, p1, :cond_0
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    return v0
 
-    iget-wide v1, p0, Lt6b;->a:J
+    :cond_0
+    instance-of p0, p1, Lt6b;
 
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    if-nez p0, :cond_1
 
-    const-string v1, ", identifier= "
+    const/4 p0, 0x0
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    return p0
 
-    iget-wide v1, p0, Lt6b;->b:J
-
-    const-string p0, " }"
-
-    invoke-static {v0, v1, v2, p0}, Lu88;->m(Ljava/lang/StringBuilder;JLjava/lang/String;)Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
+    :cond_1
+    return v0
 .end method
 
-.method public final writeToParcel(Landroid/os/Parcel;I)V
-    .locals 2
+.method public final hashCode()I
+    .locals 0
 
-    iget-wide v0, p0, Lt6b;->a:J
+    const p0, 0x1e302f13
 
-    invoke-virtual {p1, v0, v1}, Landroid/os/Parcel;->writeLong(J)V
+    return p0
+.end method
 
-    iget-wide v0, p0, Lt6b;->b:J
+.method public final toString()Ljava/lang/String;
+    .locals 0
 
-    invoke-virtual {p1, v0, v1}, Landroid/os/Parcel;->writeLong(J)V
+    const-string p0, "ClearSearch"
 
-    iget-object p0, p0, Lt6b;->c:[B
-
-    invoke-virtual {p1, p0}, Landroid/os/Parcel;->writeByteArray([B)V
-
-    return-void
+    return-object p0
 .end method

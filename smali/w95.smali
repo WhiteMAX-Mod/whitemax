@@ -4,33 +4,29 @@
 
 
 # virtual methods
-.method public abstract W(Laa5;)V
+.method public abstract a(Lpuc;)Ld7e;
 .end method
 
-.method public abstract X(Ly95;Lh7;)I
+.method public abstract b()V
 .end method
 
-.method public abstract d(JJ)V
+.method public abstract c(Lctc;J)Lj4e;
 .end method
 
-.method public m()Lw95;
-    .locals 0
-
-    return-object p0
+.method public abstract cancel()V
 .end method
 
-.method public abstract n(Ly95;)Z
+.method public abstract d(Lpuc;)J
 .end method
 
-.method public o()Ljava/util/List;
-    .locals 0
-
-    sget-object p0, Lxw6;->b:Las5;
-
-    sget-object p0, Lddc;->X:Lddc;
-
-    return-object p0
+.method public abstract e(Z)Louc;
 .end method
 
-.method public abstract release()V
+.method public abstract f()Lric;
+.end method
+
+.method public abstract g(Lctc;)V
+.end method
+
+.method public abstract h()V
 .end method

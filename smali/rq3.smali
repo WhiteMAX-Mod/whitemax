@@ -1,176 +1,89 @@
 .class public final Lrq3;
-.super Ljava/lang/Object;
+.super Lure;
 .source "SourceFile"
+
+# interfaces
+.implements Lpc6;
 
 
 # instance fields
-.field public final a:I
+.field public synthetic X:Ljava/lang/Object;
 
-.field public final b:Z
+.field public final synthetic Y:Lyq3;
 
 
 # direct methods
-.method public constructor <init>(I)V
-    .locals 1
+.method public constructor <init>(Lyq3;Lkotlin/coroutines/Continuation;)V
+    .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lrq3;->Y:Lyq3;
 
-    iput p1, p0, Lrq3;->a:I
+    const/4 p1, 0x2
 
-    const/4 v0, 0x2
-
-    if-eq p1, v0, :cond_1
-
-    const/4 v0, 0x3
-
-    if-ne p1, v0, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    const/4 p1, 0x0
-
-    goto :goto_1
-
-    :cond_1
-    :goto_0
-    const/4 p1, 0x1
-
-    :goto_1
-    iput-boolean p1, p0, Lrq3;->b:Z
+    invoke-direct {p0, p1, p2}, Lure;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 2
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    const/4 v0, 0x1
+    check-cast p1, Lz1b;
 
-    if-ne p0, p1, :cond_0
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    return v0
-
-    :cond_0
-    instance-of v1, p1, Lrq3;
-
-    if-nez v1, :cond_1
-
-    goto :goto_0
-
-    :cond_1
-    check-cast p1, Lrq3;
-
-    iget p0, p0, Lrq3;->a:I
-
-    iget p1, p1, Lrq3;->a:I
-
-    if-eq p0, p1, :cond_2
-
-    :goto_0
-    const/4 p0, 0x0
-
-    return p0
-
-    :cond_2
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 1
-
-    iget p0, p0, Lrq3;->a:I
-
-    invoke-static {p0}, Lzt1;->s(I)I
-
-    move-result p0
-
-    mul-int/lit8 p0, p0, 0x1f
-
-    const/4 v0, 0x0
-
-    invoke-static {v0}, Ljava/lang/Boolean;->hashCode(Z)I
-
-    move-result v0
-
-    add-int/2addr v0, p0
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 2
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "ContactsBannerListItem(bannerType="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget p0, p0, Lrq3;->a:I
-
-    packed-switch p0, :pswitch_data_0
-
-    const-string p0, "null"
-
-    goto :goto_0
-
-    :pswitch_0
-    const-string p0, "PERMIT_MIC_COMPACT"
-
-    goto :goto_0
-
-    :pswitch_1
-    const-string p0, "PERMIT_MIC_MIDDLE"
-
-    goto :goto_0
-
-    :pswitch_2
-    const-string p0, "PERMIT_NOTIFICATIONS_CONTACTS_COMPACT"
-
-    goto :goto_0
-
-    :pswitch_3
-    const-string p0, "PERMIT_NOTIFICATIONS_CONTACTS_MIDDLE"
-
-    goto :goto_0
-
-    :pswitch_4
-    const-string p0, "PERMIT_PHONE_BOOK_CONTACTS_MIDDLE"
-
-    goto :goto_0
-
-    :pswitch_5
-    const-string p0, "PERMIT_PHONE_BOOK_CONTACTS_COMPACT"
-
-    goto :goto_0
-
-    :pswitch_6
-    const-string p0, "PERMIT_PHONE_BOOK_CONTACTS_BIG"
-
-    :goto_0
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string p0, ", isCloseable=false)"
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {p0, p1, p2}, Lrq3;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
     move-result-object p0
 
+    check-cast p0, Lrq3;
+
+    sget-object p1, Lylf;->a:Lylf;
+
+    invoke-virtual {p0, p1}, Lrq3;->o(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object p1
+.end method
+
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 1
+
+    new-instance v0, Lrq3;
+
+    iget-object p0, p0, Lrq3;->Y:Lyq3;
+
+    invoke-direct {v0, p0, p2}, Lrq3;-><init>(Lyq3;Lkotlin/coroutines/Continuation;)V
+
+    iput-object p1, v0, Lrq3;->X:Ljava/lang/Object;
+
+    return-object v0
+.end method
+
+.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
+
+    invoke-static {p1}, Lqe5;->V(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Lrq3;->X:Ljava/lang/Object;
+
+    check-cast p1, Lz1b;
+
+    if-eqz p1, :cond_0
+
+    iget-object p0, p0, Lrq3;->Y:Lyq3;
+
+    invoke-virtual {p0}, Lyq3;->b()V
+
+    sget-object p0, Lylf;->a:Lylf;
+
     return-object p0
 
-    :pswitch_data_0
-    .packed-switch 0x1
-        :pswitch_6
-        :pswitch_5
-        :pswitch_4
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    :cond_0
+    new-instance p0, Lkotlin/NoWhenBranchMatchedException;
+
+    invoke-direct {p0}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
+
+    throw p0
 .end method

@@ -1,59 +1,81 @@
 .class public final Ls5e;
-.super Lbu3;
+.super Lzoc;
 .source "SourceFile"
+
+# interfaces
+.implements Ly77;
 
 
 # instance fields
-.field public X:Ljava/util/Collection;
+.field public final E0:I
 
-.field public Y:Ljava/util/Iterator;
+.field public final F0:Ls77;
 
-.field public Z:Lt1e;
+.field public final G0:Lej3;
 
-.field public o:Lu5e;
-
-.field public o0:Ljava/util/Collection;
-
-.field public synthetic p0:Ljava/lang/Object;
-
-.field public final synthetic q0:Lu5e;
-
-.field public r0:I
+.field public final synthetic H0:Lt5e;
 
 
 # direct methods
-.method public constructor <init>(Lu5e;Lbu3;)V
+.method public constructor <init>(Lt5e;ILs77;Lej3;)V
     .locals 0
 
-    iput-object p1, p0, Ls5e;->q0:Lu5e;
+    iput-object p1, p0, Ls5e;->H0:Lt5e;
 
-    invoke-direct {p0, p2}, Lbu3;-><init>(Lkotlin/coroutines/Continuation;)V
+    invoke-direct {p0, p4}, Lzoc;-><init>(Landroid/view/View;)V
+
+    iput p2, p0, Ls5e;->E0:I
+
+    iput-object p3, p0, Ls5e;->F0:Ls77;
+
+    iput-object p4, p0, Ls5e;->G0:Lej3;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+.method public final A(Ljava/lang/String;)V
+    .locals 0
 
-    iput-object p1, p0, Ls5e;->p0:Ljava/lang/Object;
+    iget-object p0, p0, Ls5e;->G0:Lej3;
 
-    iget p1, p0, Ls5e;->r0:I
+    invoke-virtual {p0, p1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    const/high16 v0, -0x80000000
+    invoke-virtual {p0}, Landroid/widget/TextView;->length()I
 
-    or-int/2addr p1, v0
+    move-result p1
 
-    iput p1, p0, Ls5e;->r0:I
+    invoke-virtual {p0, p1}, Landroid/widget/EditText;->setSelection(I)V
 
-    iget-object p1, p0, Ls5e;->q0:Lu5e;
+    return-void
+.end method
 
-    const/4 v0, 0x0
+.method public final y()Ljava/lang/String;
+    .locals 0
 
-    invoke-virtual {p1, v0, p0}, Lu5e;->t(Ljava/util/List;Lbu3;)Ljava/lang/Object;
+    iget-object p0, p0, Ls5e;->G0:Lej3;
+
+    invoke-virtual {p0}, Landroid/widget/EditText;->getText()Landroid/text/Editable;
 
     move-result-object p0
 
+    if-eqz p0, :cond_0
+
+    invoke-virtual {p0}, Ljava/lang/Object;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    goto :goto_0
+
+    :cond_0
+    const/4 p0, 0x0
+
+    :goto_0
+    if-nez p0, :cond_1
+
+    const-string p0, ""
+
+    :cond_1
     return-object p0
 .end method

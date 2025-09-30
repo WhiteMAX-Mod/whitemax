@@ -1,95 +1,61 @@
 .class public final Lgha;
-.super Lbu3;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public A0:J
-
-.field public B0:I
-
-.field public synthetic C0:Ljava/lang/Object;
-
-.field public final synthetic D0:Liha;
-
-.field public E0:I
-
-.field public X:Lsgc;
-
-.field public Y:Laha;
-
-.field public Z:Ljava/io/File;
-
-.field public o:Liha;
-
-.field public o0:Ljava/io/Serializable;
-
-.field public p0:Ljava/lang/Object;
-
-.field public q0:Ljcc;
-
-.field public r0:Ljcc;
-
-.field public s0:Ljava/io/File;
-
-.field public t0:Ljava/io/Closeable;
-
-.field public u0:Ljava/io/InputStream;
-
-.field public v0:Ljava/io/Closeable;
-
-.field public w0:Ljava/io/OutputStream;
-
-.field public x0:[B
-
-.field public y0:Ljava/util/Iterator;
-
-.field public z0:Z
+.field public final a:Lay7;
 
 
 # direct methods
-.method public constructor <init>(Liha;Lbu3;)V
+.method public constructor <init>(Lay7;)V
     .locals 0
 
-    iput-object p1, p0, Lgha;->D0:Liha;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, p2}, Lbu3;-><init>(Lkotlin/coroutines/Continuation;)V
+    iput-object p1, p0, Lgha;->a:Lay7;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 7
+.method public final a(ILjava/lang/String;)Llp5;
+    .locals 8
 
-    iput-object p1, p0, Lgha;->C0:Ljava/lang/Object;
+    new-instance v6, Lfha;
 
-    iget p1, p0, Lgha;->E0:I
+    invoke-direct {v6}, Ljava/util/concurrent/LinkedTransferQueue;-><init>()V
 
-    const/high16 v0, -0x80000000
+    sget-object v5, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;
 
-    or-int/2addr p1, v0
+    iget-object p0, p0, Lgha;->a:Lay7;
 
-    iput p1, p0, Lgha;->E0:I
+    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    const/4 v4, 0x0
+    move-result-object p1
 
-    const/4 v5, 0x0
+    invoke-virtual {p0, p2, p1}, Lay7;->y(Ljava/lang/String;Ljava/lang/Integer;)Ljava/util/concurrent/ThreadFactory;
 
-    iget-object v0, p0, Lgha;->D0:Liha;
+    move-result-object v7
 
-    const/4 v1, 0x0
+    new-instance v0, Llp5;
 
-    const/4 v2, 0x0
+    const/4 v1, 0x1
 
-    const/4 v3, 0x0
+    const/4 v2, 0x1
 
-    move-object v6, p0
+    const-wide/16 v3, 0x0
 
-    invoke-virtual/range {v0 .. v6}, Liha;->h(Lsgc;Laha;Ljava/io/File;Ljava/io/File;ZLbu3;)Ljava/lang/Object;
+    invoke-direct/range {v0 .. v7}, Ljava/util/concurrent/ThreadPoolExecutor;-><init>(IIJLjava/util/concurrent/TimeUnit;Ljava/util/concurrent/BlockingQueue;Ljava/util/concurrent/ThreadFactory;)V
 
-    move-result-object p0
+    new-instance p0, Lez1;
 
-    return-object p0
+    const/4 p1, 0x1
+
+    invoke-direct {p0, p1}, Lez1;-><init>(I)V
+
+    invoke-virtual {v0, p0}, Ljava/util/concurrent/ThreadPoolExecutor;->setRejectedExecutionHandler(Ljava/util/concurrent/RejectedExecutionHandler;)V
+
+    return-object v0
 .end method

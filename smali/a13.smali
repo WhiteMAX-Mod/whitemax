@@ -2,179 +2,117 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lua4;
 
-# instance fields
-.field public final a:Ljava/util/HashMap;
 
-.field public final b:Ljava/util/HashMap;
+# static fields
+.field public static final a:La13;
+
+.field public static final b:Lb13;
 
 
 # direct methods
-.method public constructor <init>(Ljava/util/HashMap;)V
-    .locals 4
+.method static constructor <clinit>()V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, La13;
 
-    iput-object p1, p0, La13;->b:Ljava/util/HashMap;
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    new-instance v0, Ljava/util/HashMap;
+    sput-object v0, La13;->a:La13;
 
-    invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
+    sget-object v0, Lb13;->b:Lb13;
 
-    iput-object v0, p0, La13;->a:Ljava/util/HashMap;
+    sput-object v0, La13;->b:Lb13;
 
-    invoke-virtual {p1}, Ljava/util/HashMap;->entrySet()Ljava/util/Set;
-
-    move-result-object p1
-
-    invoke-interface {p1}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
-
-    move-result-object p1
-
-    :goto_0
-    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/util/Map$Entry;
-
-    invoke-interface {v0}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lfg7;
-
-    iget-object v2, p0, La13;->a:Ljava/util/HashMap;
-
-    invoke-virtual {v2, v1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Ljava/util/List;
-
-    if-nez v2, :cond_0
-
-    new-instance v2, Ljava/util/ArrayList;
-
-    invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
-
-    iget-object v3, p0, La13;->a:Ljava/util/HashMap;
-
-    invoke-virtual {v3, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    :cond_0
-    invoke-interface {v0}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lb13;
-
-    invoke-interface {v2, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
-
-    goto :goto_0
-
-    :cond_1
     return-void
 .end method
 
-.method public static a(Ljava/util/List;Ldh7;Lfg7;Ljava/lang/Object;)V
-    .locals 5
 
-    if-eqz p0, :cond_3
+# virtual methods
+.method public final a()Lcb4;
+    .locals 0
 
-    invoke-interface {p0}, Ljava/util/List;->size()I
+    sget-object p0, La13;->b:Lb13;
 
-    move-result v0
+    return-object p0
+.end method
 
-    const/4 v1, 0x1
+.method public final b(Ljava/lang/String;Lxa4;Landroid/os/Bundle;)Lfb4;
+    .locals 7
 
-    sub-int/2addr v0, v1
+    sget-object p0, La13;->b:Lb13;
 
-    :goto_0
-    if-ltz v0, :cond_3
+    iget-object p0, p0, Lcb4;->a:Ljava/util/LinkedHashSet;
 
-    invoke-interface {p0, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
+    invoke-interface {p0, p2}, Ljava/util/Collection;->contains(Ljava/lang/Object;)Z
 
-    move-result-object v2
+    move-result p0
 
-    check-cast v2, Lb13;
+    if-nez p0, :cond_0
 
-    iget-object v3, v2, Lb13;->b:Ljava/lang/reflect/Method;
+    const/4 p0, 0x0
 
-    :try_start_0
-    iget v2, v2, Lb13;->a:I
-
-    if-eqz v2, :cond_2
-
-    if-eq v2, v1, :cond_1
-
-    const/4 v4, 0x2
-
-    if-eq v2, v4, :cond_0
-
-    goto :goto_1
+    return-object p0
 
     :cond_0
-    filled-new-array {p1, p2}, [Ljava/lang/Object;
+    new-instance v5, Ldb4;
 
-    move-result-object v2
+    new-instance p0, Lam2;
 
-    invoke-virtual {v3, p3, v2}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
+    const/16 v0, 0x1a
 
-    goto :goto_1
+    invoke-direct {p0, v0}, Lam2;-><init>(I)V
+
+    new-instance v0, Lam2;
+
+    const/16 v1, 0x1b
+
+    invoke-direct {v0, v1}, Lam2;-><init>(I)V
+
+    invoke-direct {v5, p0, v0}, Ldb4;-><init>(Lzb6;Lzb6;)V
+
+    sget-object p0, Lb13;->c:Lxa4;
+
+    invoke-virtual {p2, p0}, Lxa4;->equals(Ljava/lang/Object;)Z
+
+    move-result p0
+
+    if-eqz p0, :cond_1
+
+    new-instance v0, Lfb4;
+
+    new-instance v6, Lh;
+
+    const/16 p0, 0x8
+
+    invoke-direct {v6, p0}, Lh;-><init>(I)V
+
+    const/4 v4, 0x1
+
+    move-object v1, p1
+
+    move-object v2, p2
+
+    move-object v3, p3
+
+    invoke-direct/range {v0 .. v6}, Lfb4;-><init>(Ljava/lang/String;Lxa4;Landroid/os/Bundle;ILdb4;Leb4;)V
+
+    return-object v0
 
     :cond_1
-    filled-new-array {p1}, [Ljava/lang/Object;
+    move-object v2, p2
 
-    move-result-object v2
+    new-instance p0, Ljava/lang/IllegalStateException;
 
-    invoke-virtual {v3, p3, v2}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
+    const-string p1, "invalid route "
 
-    goto :goto_1
+    invoke-static {p1, v2}, Lmw1;->g(Ljava/lang/String;Lxa4;)Ljava/lang/String;
 
-    :cond_2
-    const/4 v2, 0x0
+    move-result-object p1
 
-    invoke-virtual {v3, p3, v2}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
-    :try_end_0
-    .catch Ljava/lang/reflect/InvocationTargetException; {:try_start_0 .. :try_end_0} :catch_1
-    .catch Ljava/lang/IllegalAccessException; {:try_start_0 .. :try_end_0} :catch_0
+    invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    :goto_1
-    add-int/lit8 v0, v0, -0x1
-
-    goto :goto_0
-
-    :catch_0
-    move-exception p0
-
-    new-instance p1, Ljava/lang/RuntimeException;
-
-    invoke-direct {p1, p0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V
-
-    throw p1
-
-    :catch_1
-    move-exception p0
-
-    new-instance p1, Ljava/lang/RuntimeException;
-
-    const-string p2, "Failed to call observer method"
-
-    invoke-virtual {p0}, Ljava/lang/reflect/InvocationTargetException;->getCause()Ljava/lang/Throwable;
-
-    move-result-object p0
-
-    invoke-direct {p1, p2, p0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    throw p1
-
-    :cond_3
-    return-void
+    throw p0
 .end method

@@ -1,86 +1,49 @@
 .class public final Lj12;
-.super Lc0f;
+.super Ljx3;
 .source "SourceFile"
 
 
 # instance fields
-.field public a:Z
+.field public final synthetic X:Lcm1;
 
-.field public final b:Landroid/view/ViewGroup;
+.field public Y:I
+
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Landroid/view/ViewGroup;)V
-    .locals 1
+.method public constructor <init>(Lcm1;Lkotlin/coroutines/Continuation;)V
+    .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lj12;->X:Lcm1;
 
-    const/4 v0, 0x0
-
-    iput-boolean v0, p0, Lj12;->a:Z
-
-    iput-object p1, p0, Lj12;->b:Landroid/view/ViewGroup;
+    invoke-direct {p0, p2}, Ljx3;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final b()V
+.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
 
-    iget-object p0, p0, Lj12;->b:Landroid/view/ViewGroup;
+    iput-object p1, p0, Lj12;->o:Ljava/lang/Object;
+
+    iget p1, p0, Lj12;->Y:I
+
+    const/high16 v0, -0x80000000
+
+    or-int/2addr p1, v0
+
+    iput p1, p0, Lj12;->Y:I
+
+    iget-object p1, p0, Lj12;->X:Lcm1;
 
     const/4 v0, 0x0
 
-    invoke-static {p0, v0}, Laof;->b(Landroid/view/ViewGroup;Z)V
+    invoke-virtual {p1, v0, p0}, Lcm1;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
-    return-void
-.end method
+    move-result-object p0
 
-.method public final c(Lzze;)V
-    .locals 2
-
-    iget-boolean v0, p0, Lj12;->a:Z
-
-    if-nez v0, :cond_0
-
-    iget-object v0, p0, Lj12;->b:Landroid/view/ViewGroup;
-
-    const/4 v1, 0x0
-
-    invoke-static {v0, v1}, Laof;->b(Landroid/view/ViewGroup;Z)V
-
-    :cond_0
-    invoke-virtual {p1, p0}, Lzze;->E(Lyze;)Lzze;
-
-    return-void
-.end method
-
-.method public final f()V
-    .locals 1
-
-    iget-object p0, p0, Lj12;->b:Landroid/view/ViewGroup;
-
-    const/4 v0, 0x1
-
-    invoke-static {p0, v0}, Laof;->b(Landroid/view/ViewGroup;Z)V
-
-    return-void
-.end method
-
-.method public final g(Lzze;)V
-    .locals 1
-
-    iget-object p1, p0, Lj12;->b:Landroid/view/ViewGroup;
-
-    const/4 v0, 0x0
-
-    invoke-static {p1, v0}, Laof;->b(Landroid/view/ViewGroup;Z)V
-
-    const/4 p1, 0x1
-
-    iput-boolean p1, p0, Lj12;->a:Z
-
-    return-void
+    return-object p0
 .end method

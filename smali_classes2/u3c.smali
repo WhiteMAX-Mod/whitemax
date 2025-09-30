@@ -1,125 +1,34 @@
-.class public final Lu3c;
+.class public abstract Lu3c;
 .super Ljava/lang/Object;
-.source "SourceFile"
 
 
-# instance fields
-.field public final a:Lv3c;
+# static fields
+.field public static attach_bar_thumbnail_size:I = 0x7f070054
 
-.field public final b:Ln3c;
+.field public static flash_close_button_height:I = 0x7f0700f8
 
+.field public static flash_close_button_width:I = 0x7f0700f9
 
-# direct methods
-.method public constructor <init>(Lv3c;Ln3c;)V
-    .locals 0
+.field public static flash_close_wrapper_height:I = 0x7f0700fa
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+.field public static flash_close_wrapper_width:I = 0x7f0700fb
 
-    iput-object p1, p0, Lu3c;->a:Lv3c;
+.field public static full_screen_mode_button_height:I = 0x7f070114
 
-    iput-object p2, p0, Lu3c;->b:Ln3c;
+.field public static full_screen_mode_button_width:I = 0x7f070115
 
-    return-void
-.end method
+.field public static gallery_album_cover_size:I = 0x7f070116
 
+.field public static progress_bar_medium:I = 0x7f0703ee
 
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
+.field public static quick_camera_button_margin:I = 0x7f0703f0
 
-    const/4 v0, 0x1
+.field public static quick_camera_button_margin_bottom:I = 0x7f0703f1
 
-    if-ne p0, p1, :cond_0
+.field public static quick_camera_chronometer_text_size:I = 0x7f0703f2
 
-    return v0
+.field public static quick_camera_wrapper_controllers_height:I = 0x7f0703f3
 
-    :cond_0
-    instance-of v1, p1, Lu3c;
+.field public static quick_camera_wrapper_height:I = 0x7f0703f4
 
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
-    check-cast p1, Lu3c;
-
-    iget-object v1, p0, Lu3c;->a:Lv3c;
-
-    iget-object v3, p1, Lu3c;->a:Lv3c;
-
-    if-eq v1, v3, :cond_2
-
-    return v2
-
-    :cond_2
-    iget-object p0, p0, Lu3c;->b:Ln3c;
-
-    iget-object p1, p1, Lu3c;->b:Ln3c;
-
-    invoke-static {p0, p1}, Lxq7;->d(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p0
-
-    if-nez p0, :cond_3
-
-    return v2
-
-    :cond_3
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 1
-
-    iget-object v0, p0, Lu3c;->a:Lv3c;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
-
-    move-result v0
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget-object p0, p0, Lu3c;->b:Ln3c;
-
-    invoke-virtual {p0}, Ln3c;->hashCode()I
-
-    move-result p0
-
-    add-int/2addr p0, v0
-
-    return p0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 2
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "ReactionData(type="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v1, p0, Lu3c;->a:Lv3c;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", id="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object p0, p0, Lu3c;->b:Ln3c;
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string p0, ")"
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
-.end method
+.field public static quick_camera_wrapper_width:I = 0x7f0703f5

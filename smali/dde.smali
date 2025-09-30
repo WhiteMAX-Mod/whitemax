@@ -4,5 +4,8 @@
 
 
 # virtual methods
-.method public abstract g(Lub0;)V
+.method public abstract a()Landroid/os/Parcelable;
+.end method
+
+.method public abstract c(Landroid/os/Parcelable;)V
 .end method

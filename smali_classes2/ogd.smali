@@ -1,32 +1,33 @@
 .class public final Logd;
-.super Lsod;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# virtual methods
-.method public final C()V
-    .locals 0
+# instance fields
+.field public final a:Lzw7;
 
-    return-void
-.end method
+.field public b:Lxvf;
 
-.method public final x(Lol7;)V
+.field public c:La5b;
+
+.field public d:Ljava/lang/String;
+
+.field public e:Z
+
+.field public f:Z
+
+
+# direct methods
+.method public constructor <init>(Lzw7;)V
     .locals 1
 
-    instance-of v0, p1, Lqzc;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    if-nez v0, :cond_0
+    const/4 v0, 0x1
 
-    return-void
+    iput-boolean v0, p0, Logd;->f:Z
 
-    :cond_0
-    iget-object p0, p0, Lccc;->a:Landroid/view/View;
-
-    check-cast p0, Lded;
-
-    check-cast p1, Lsdd;
-
-    invoke-virtual {p0, p1}, Lded;->setModelItem(Lsdd;)V
+    iput-object p1, p0, Logd;->a:Lzw7;
 
     return-void
 .end method

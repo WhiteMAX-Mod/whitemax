@@ -1,64 +1,32 @@
-.class public final La8c;
+.class public abstract La8c;
 .super Ljava/lang/Object;
-.source "SourceFile"
-
-# interfaces
-.implements Lg8c;
 
 
 # static fields
-.field public static final a:La8c;
+.field public static one_chat_react_default_react_anim_view:I = 0x7f0a0626
 
+.field public static one_chat_react_lottie_debug_big_view:I = 0x7f0a0627
 
-# direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.field public static one_chat_react_lottie_debug_centered_view:I = 0x7f0a0628
 
-    new-instance v0, La8c;
+.field public static one_chat_react_lottie_react_anim_view:I = 0x7f0a0629
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+.field public static one_chat_react_panel_layout:I = 0x7f0a062a
 
-    sput-object v0, La8c;->a:La8c;
+.field public static one_chat_reactions_expand_view_type:I = 0x7f0a062b
 
-    return-void
-.end method
+.field public static one_chat_reactions_selection_animoji_view_type:I = 0x7f0a062c
 
+.field public static one_chat_reactions_selection_emoji_view_type:I = 0x7f0a062d
 
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
+.field public static onechat_react_badge_container:I = 0x7f0a062f
 
-    const/4 v0, 0x1
+.field public static onechat_react_bubble:I = 0x7f0a0630
 
-    if-ne p0, p1, :cond_0
+.field public static onechat_react_bubble_counter:I = 0x7f0a0631
 
-    return v0
+.field public static onechat_react_bubble_counter_container:I = 0x7f0a0632
 
-    :cond_0
-    instance-of p0, p1, La8c;
+.field public static onechat_react_message_reaction_bubble:I = 0x7f0a0633
 
-    if-nez p0, :cond_1
-
-    const/4 p0, 0x0
-
-    return p0
-
-    :cond_1
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 0
-
-    const p0, -0x5ce2dfa5
-
-    return p0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 0
-
-    const-string p0, "CloseTooltip"
-
-    return-object p0
-.end method
+.field public static tag_reaction_effects_view:I = 0x7f0a0c0f

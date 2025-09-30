@@ -19,10 +19,10 @@
         "errorResponse",
         "Lkotlin/Function1;",
         "",
-        "Le5f;",
+        "Lylf;",
         "onError",
         "parseErrorResponse",
-        "(Ljava/lang/String;Lorg/json/JSONObject;Lx56;)V",
+        "(Ljava/lang/String;Lorg/json/JSONObject;Lbc6;)V",
         "calls-sdk_release"
     }
     k = 0x1
@@ -46,14 +46,14 @@
 
 
 # virtual methods
-.method public final parseErrorResponse(Ljava/lang/String;Lorg/json/JSONObject;Lx56;)V
+.method public final parseErrorResponse(Ljava/lang/String;Lorg/json/JSONObject;Lbc6;)V
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Ljava/lang/String;",
             "Lorg/json/JSONObject;",
-            "Lx56;",
+            "Lbc6;",
             ")V"
         }
     .end annotation
@@ -68,7 +68,7 @@
 
     const-string v0, "rooms.roomInactive"
 
-    invoke-static {p0, v0}, Lxq7;->d(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {p0, v0}, Lvyg;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -83,7 +83,7 @@
     :cond_0
     const-string v0, "rooms.notAdmin"
 
-    invoke-static {p0, v0}, Lxq7;->d(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {p0, v0}, Lvyg;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p0
 
@@ -120,10 +120,10 @@
 
     const/4 v0, 0x0
 
-    invoke-direct {p0, p1, v0, p2, v0}, Lru/ok/android/externcalls/sdk/sessionroom/exceptions/SessionRoomException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;ILl94;)V
+    invoke-direct {p0, p1, v0, p2, v0}, Lru/ok/android/externcalls/sdk/sessionroom/exceptions/SessionRoomException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;ILld4;)V
 
     :goto_0
-    invoke-interface {p3, p0}, Lx56;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {p3, p0}, Lbc6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     :cond_2
     return-void

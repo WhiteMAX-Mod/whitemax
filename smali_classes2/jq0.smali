@@ -1,176 +1,180 @@
 .class public final Ljq0;
-.super Ljava/lang/Object;
+.super Lsxe;
 .source "SourceFile"
 
 
-# static fields
-.field public static final c:Ljq0;
-
-
 # instance fields
-.field public a:Z
+.field public final X:Lzbe;
 
-.field public b:Z
+.field public final c:Ljava/util/List;
+
+.field public final o:Lvp3;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public constructor <init>(Ljava/util/List;Lvp3;Lzbe;)V
+    .locals 0
 
-    new-instance v0, Ljq0;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 v1, 0x0
+    iput-object p1, p0, Ljq0;->c:Ljava/util/List;
 
-    invoke-direct {v0, v1, v1}, Ljq0;-><init>(ZZ)V
+    iput-object p2, p0, Ljq0;->o:Lvp3;
 
-    sput-object v0, Ljq0;->c:Ljq0;
+    iput-object p3, p0, Ljq0;->X:Lzbe;
 
     return-void
 .end method
 
-.method public constructor <init>(Lly4;I)V
-    .locals 1
 
-    packed-switch p2, :pswitch_data_0
+# virtual methods
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
 
-    .line 2
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/4 v0, 0x1
 
-    .line 3
-    const-class p2, Landroidx/camera/camera2/internal/compat/quirk/ImageCaptureFailWithAutoFlashQuirk;
+    if-ne p0, p1, :cond_0
 
-    .line 4
-    invoke-virtual {p1, p2}, Lly4;->f(Ljava/lang/Class;)Z
+    return v0
 
-    move-result p1
+    :cond_0
+    instance-of v1, p1, Ljq0;
 
-    iput-boolean p1, p0, Ljq0;->a:Z
+    const/4 v2, 0x0
 
-    .line 5
-    const-class p1, Landroidx/camera/camera2/internal/compat/quirk/CrashWhenTakingPhotoWithAutoFlashAEModeQuirk;
+    if-nez v1, :cond_1
 
-    .line 6
-    sget-object p2, Lcj4;->a:Lly4;
+    return v2
 
-    invoke-virtual {p2, p1}, Lly4;->g(Ljava/lang/Class;)Lkpb;
+    :cond_1
+    check-cast p1, Ljq0;
 
-    move-result-object p1
+    iget-object v1, p0, Ljq0;->c:Ljava/util/List;
 
-    if-eqz p1, :cond_0
+    iget-object v3, p1, Ljq0;->c:Ljava/util/List;
 
-    const/4 p1, 0x1
+    invoke-static {v1, v3}, Lvyg;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_2
+
+    return v2
+
+    :cond_2
+    iget-object v1, p0, Ljq0;->o:Lvp3;
+
+    iget-object v3, p1, Ljq0;->o:Lvp3;
+
+    invoke-static {v1, v3}, Lvyg;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_3
+
+    return v2
+
+    :cond_3
+    iget-object p0, p0, Ljq0;->X:Lzbe;
+
+    iget-object p1, p1, Ljq0;->X:Lzbe;
+
+    invoke-static {p0, p1}, Lvyg;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p0
+
+    if-nez p0, :cond_4
+
+    return v2
+
+    :cond_4
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 3
+
+    iget-object v0, p0, Ljq0;->c:Ljava/util/List;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
+
+    move-result v0
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    const/4 v1, 0x0
+
+    iget-object v2, p0, Ljq0;->o:Lvp3;
+
+    if-nez v2, :cond_0
+
+    move v2, v1
 
     goto :goto_0
 
     :cond_0
-    const/4 p1, 0x0
+    invoke-virtual {v2}, Ljava/lang/Object;->hashCode()I
 
-    .line 7
+    move-result v2
+
     :goto_0
-    iput-boolean p1, p0, Ljq0;->b:Z
+    add-int/2addr v0, v2
 
-    return-void
+    mul-int/lit8 v0, v0, 0x1f
 
-    .line 8
-    :pswitch_0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iget-object p0, p0, Ljq0;->X:Lzbe;
 
-    .line 9
-    const-class p2, Landroidx/camera/camera2/internal/compat/quirk/CaptureIntentPreviewQuirk;
-
-    invoke-virtual {p1, p2}, Lly4;->i(Ljava/lang/Class;)Ljava/util/ArrayList;
-
-    move-result-object p2
-
-    invoke-virtual {p2}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
-
-    move-result-object p2
-
-    :cond_1
-    invoke-interface {p2}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_2
-
-    invoke-interface {p2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Landroidx/camera/camera2/internal/compat/quirk/CaptureIntentPreviewQuirk;
-
-    .line 10
-    invoke-interface {v0}, Landroidx/camera/camera2/internal/compat/quirk/CaptureIntentPreviewQuirk;->d()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    const/4 p2, 0x1
+    if-nez p0, :cond_1
 
     goto :goto_1
 
-    :cond_2
-    const/4 p2, 0x0
+    :cond_1
+    invoke-virtual {p0}, Lzbe;->hashCode()I
 
-    .line 11
+    move-result v1
+
     :goto_1
-    iput-boolean p2, p0, Ljq0;->a:Z
+    add-int/2addr v0, v1
 
-    .line 12
-    const-class p2, Landroidx/camera/camera2/internal/compat/quirk/ImageCaptureFailedForVideoSnapshotQuirk;
-
-    invoke-virtual {p1, p2}, Lly4;->f(Ljava/lang/Class;)Z
-
-    move-result p1
-
-    iput-boolean p1, p0, Ljq0;->b:Z
-
-    return-void
-
-    .line 13
-    :pswitch_1
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    const/4 p2, 0x0
-
-    .line 14
-    iput-boolean p2, p0, Ljq0;->b:Z
-
-    .line 15
-    const-class v0, Landroidx/camera/camera2/internal/compat/quirk/AutoFlashUnderExposedQuirk;
-
-    invoke-virtual {p1, v0}, Lly4;->g(Ljava/lang/Class;)Lkpb;
-
-    move-result-object p1
-
-    if-eqz p1, :cond_3
-
-    const/4 p2, 0x1
-
-    :cond_3
-    iput-boolean p2, p0, Ljq0;->a:Z
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x4
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    return v0
 .end method
 
-.method public synthetic constructor <init>(ZZ)V
-    .locals 0
+.method public final toString()Ljava/lang/String;
+    .locals 2
 
-    .line 1
-    iput-boolean p1, p0, Ljq0;->a:Z
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    iput-boolean p2, p0, Ljq0;->b:Z
+    const-string v1, "Response(botCommands="
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    return-void
+    iget-object v1, p0, Ljq0;->c:Ljava/util/List;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", contact="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Ljq0;->o:Lvp3;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", startMessage="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object p0, p0, Ljq0;->X:Lzbe;
+
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string p0, ")"
+
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    return-object p0
 .end method

@@ -1,398 +1,134 @@
-.class public final synthetic Leh4;
+.class public final Leh4;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lih4;
-.implements Lppd;
+.implements Ltdd;
 
 
 # instance fields
-.field public final synthetic X:J
-
-.field public final synthetic Y:Ljava/lang/Object;
-
-.field public final synthetic a:I
-
-.field public final synthetic b:Ljava/lang/Object;
-
-.field public final synthetic c:Ljava/lang/Object;
-
-.field public final synthetic o:J
+.field public final synthetic a:Lfh4;
 
 
 # direct methods
-.method public synthetic constructor <init>(Ljava/lang/Object;Ljava/lang/Object;JJLjava/lang/Object;I)V
+.method public constructor <init>(Lfh4;)V
     .locals 0
 
-    iput p8, p0, Leh4;->a:I
-
-    iput-object p1, p0, Leh4;->b:Ljava/lang/Object;
-
-    iput-object p2, p0, Leh4;->c:Ljava/lang/Object;
-
-    iput-wide p3, p0, Leh4;->o:J
-
-    iput-wide p5, p0, Leh4;->X:J
-
-    iput-object p7, p0, Leh4;->Y:Ljava/lang/Object;
-
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Leh4;->a:Lfh4;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public b(Lef6;)Ljava/util/concurrent/ScheduledFuture;
-    .locals 10
+.method public final c()Z
+    .locals 0
 
-    iget v0, p0, Leh4;->a:I
+    const/4 p0, 0x1
 
-    packed-switch v0, :pswitch_data_0
-
-    iget-object v0, p0, Leh4;->b:Ljava/lang/Object;
-
-    check-cast v0, Lhh4;
-
-    iget-object v1, p0, Leh4;->c:Ljava/lang/Object;
-
-    check-cast v1, Ljava/lang/Runnable;
-
-    iget-object v2, p0, Leh4;->Y:Ljava/lang/Object;
-
-    move-object v9, v2
-
-    check-cast v9, Ljava/util/concurrent/TimeUnit;
-
-    iget-object v3, v0, Lhh4;->b:Ljava/util/concurrent/ScheduledExecutorService;
-
-    new-instance v4, Lfh4;
-
-    const/4 v2, 0x2
-
-    invoke-direct {v4, v0, v1, p1, v2}, Lfh4;-><init>(Lhh4;Ljava/lang/Runnable;Lef6;I)V
-
-    iget-wide v5, p0, Leh4;->o:J
-
-    iget-wide v7, p0, Leh4;->X:J
-
-    invoke-interface/range {v3 .. v9}, Ljava/util/concurrent/ScheduledExecutorService;->scheduleWithFixedDelay(Ljava/lang/Runnable;JJLjava/util/concurrent/TimeUnit;)Ljava/util/concurrent/ScheduledFuture;
-
-    move-result-object p0
-
-    return-object p0
-
-    :pswitch_0
-    iget-object v0, p0, Leh4;->b:Ljava/lang/Object;
-
-    check-cast v0, Lhh4;
-
-    iget-object v1, p0, Leh4;->c:Ljava/lang/Object;
-
-    check-cast v1, Ljava/lang/Runnable;
-
-    iget-object v2, p0, Leh4;->Y:Ljava/lang/Object;
-
-    move-object v9, v2
-
-    check-cast v9, Ljava/util/concurrent/TimeUnit;
-
-    iget-object v3, v0, Lhh4;->b:Ljava/util/concurrent/ScheduledExecutorService;
-
-    new-instance v4, Lfh4;
-
-    const/4 v2, 0x0
-
-    invoke-direct {v4, v0, v1, p1, v2}, Lfh4;-><init>(Lhh4;Ljava/lang/Runnable;Lef6;I)V
-
-    iget-wide v5, p0, Leh4;->o:J
-
-    iget-wide v7, p0, Leh4;->X:J
-
-    invoke-interface/range {v3 .. v9}, Ljava/util/concurrent/ScheduledExecutorService;->scheduleAtFixedRate(Ljava/lang/Runnable;JJLjava/util/concurrent/TimeUnit;)Ljava/util/concurrent/ScheduledFuture;
-
-    move-result-object p0
-
-    return-object p0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return p0
 .end method
 
-.method public h(Lxod;)V
-    .locals 23
+.method public final e(J)Lrdd;
+    .locals 12
 
-    move-object/from16 v0, p0
+    iget-object p0, p0, Leh4;->a:Lfh4;
 
-    move-object/from16 v1, p1
+    iget-object v0, p0, Lfh4;->w0:Ljava/lang/Object;
 
-    iget-object v2, v0, Leh4;->b:Ljava/lang/Object;
+    check-cast v0, Lnle;
 
-    check-cast v2, Lvlf;
+    iget v0, v0, Lnle;->f:I
 
-    iget-object v3, v0, Leh4;->c:Ljava/lang/Object;
+    int-to-long v0, v0
 
-    check-cast v3, Lw10;
+    mul-long/2addr v0, p1
 
-    iget-object v4, v0, Leh4;->Y:Ljava/lang/Object;
+    const-wide/32 v2, 0xf4240
 
-    check-cast v4, Lv10;
+    div-long/2addr v0, v2
 
-    iget-object v5, v2, Lvlf;->b:Landroid/content/Context;
+    iget-wide v2, p0, Lfh4;->b:J
 
-    invoke-virtual {v3}, Lw10;->i()Z
-
-    move-result v6
-
-    iget-object v7, v3, Lw10;->d:Lv10;
-
-    invoke-static {v3}, Lzx7;->L(Lw10;)Z
-
-    move-result v8
-
-    invoke-virtual {v2, v3}, Lvlf;->b(Lw10;)Ljava/lang/String;
-
-    move-result-object v9
-
-    invoke-static {v9}, Lxja;->v(Ljava/lang/CharSequence;)Z
-
-    move-result v10
-
-    if-nez v10, :cond_0
-
-    new-instance v0, Lqq7;
-
-    invoke-direct {v0, v5, v9}, Lqq7;-><init>(Landroid/content/Context;Ljava/lang/String;)V
-
-    goto/16 :goto_2
-
-    :cond_0
-    const/4 v9, 0x0
-
-    if-nez v6, :cond_1
-
-    if-nez v8, :cond_1
-
-    :goto_0
-    move-object v0, v9
-
-    goto/16 :goto_2
-
-    :cond_1
-    iget-wide v10, v0, Leh4;->o:J
-
-    iget-wide v12, v0, Leh4;->X:J
-
-    const-string v0, "VideoRipper"
-
-    if-eqz v6, :cond_2
-
-    iget-object v6, v7, Lv10;->h:Ljava/lang/String;
-
-    invoke-static {v6}, Lxja;->v(Ljava/lang/CharSequence;)Z
-
-    move-result v6
-
-    if-eqz v6, :cond_2
-
-    const-string v5, "buildFetcher: video from ok"
-
-    invoke-static {v0, v5}, Lg47;->p(Ljava/lang/String;Ljava/lang/String;)V
-
-    move-wide/from16 v16, v10
-
-    new-instance v10, La47;
-
-    iget-object v11, v2, Lvlf;->j:Lzg3;
-
-    move-wide/from16 v18, v12
-
-    iget-object v12, v2, Lvlf;->i:Like;
-
-    iget-object v13, v2, Lvlf;->e:Loje;
-
-    iget-object v14, v2, Lvlf;->k:Lvu0;
-
-    iget-object v15, v2, Lvlf;->h:Lik;
-
-    iget-wide v5, v7, Lv10;->a:J
-
-    iget-object v0, v7, Lv10;->m:Ljava/lang/String;
-
-    move-object/from16 v22, v0
-
-    move-wide/from16 v20, v18
-
-    move-wide/from16 v18, v16
-
-    move-wide/from16 v16, v5
-
-    invoke-direct/range {v10 .. v22}, La47;-><init>(Lzg3;Like;Lmje;Lvu0;Lik;JJJLjava/lang/String;)V
-
-    :goto_1
-    move-object v0, v10
-
-    goto :goto_2
-
-    :cond_2
-    move-wide/from16 v16, v10
-
-    move-wide/from16 v18, v12
-
-    if-eqz v8, :cond_3
-
-    const-string v5, "buildFetcher: video file"
-
-    invoke-static {v0, v5}, Lg47;->p(Ljava/lang/String;Ljava/lang/String;)V
-
-    new-instance v10, Lsj5;
-
-    iget-object v11, v2, Lvlf;->h:Lik;
-
-    iget-object v12, v2, Lvlf;->f:Lgsc;
-
-    iget-object v13, v2, Lvlf;->i:Like;
-
-    iget-object v0, v3, Lw10;->j:Lf10;
-
-    iget-wide v14, v0, Lf10;->a:J
-
-    invoke-direct/range {v10 .. v19}, Lsj5;-><init>(Lik;Lgsc;Like;JJJ)V
-
-    goto :goto_1
-
-    :cond_3
-    iget-object v6, v7, Lv10;->h:Ljava/lang/String;
-
-    invoke-static {v6}, Labg;->b(Ljava/lang/String;)Z
-
-    move-result v7
-
-    if-eqz v7, :cond_4
-
-    const-string v7, "buildFetcher: youtube video"
-
-    invoke-static {v0, v7}, Lg47;->p(Ljava/lang/String;Ljava/lang/String;)V
-
-    new-instance v0, Labg;
-
-    invoke-direct {v0, v5, v6}, Labg;-><init>(Landroid/content/Context;Ljava/lang/String;)V
-
-    goto :goto_2
-
-    :cond_4
-    invoke-static {v6}, Lrqf;->b(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v5
-
-    invoke-static {v5}, Lxja;->v(Ljava/lang/CharSequence;)Z
-
-    move-result v6
-
-    if-nez v6, :cond_5
-
-    const-string v6, "buildFetcher: vimeo"
-
-    invoke-static {v0, v6}, Lg47;->p(Ljava/lang/String;Ljava/lang/String;)V
-
-    new-instance v0, Lrqf;
-
-    invoke-direct {v0, v5}, Lrqf;-><init>(Ljava/lang/String;)V
-
-    goto :goto_2
-
-    :cond_5
-    const/4 v5, 0x0
-
-    new-array v6, v5, [Ljava/lang/Object;
-
-    invoke-static {v6, v5}, Ljava/util/Arrays;->copyOf([Ljava/lang/Object;I)[Ljava/lang/Object;
-
-    move-result-object v5
-
-    const-string v6, "buildFetcher: unknown type! null"
-
-    invoke-static {v0, v9, v6, v5}, Lg47;->N(Ljava/lang/String;Ljava/lang/Exception;Ljava/lang/String;[Ljava/lang/Object;)V
-
-    goto/16 :goto_0
-
-    :goto_2
-    if-nez v0, :cond_8
-
-    iget-object v0, v3, Lw10;->x:Lm10;
-
-    sget-object v3, Lm10;->b:Lm10;
-
-    if-ne v0, v3, :cond_6
-
-    invoke-virtual {v1}, Lxod;->g()Z
-
-    move-result v0
-
-    if-nez v0, :cond_9
-
-    new-instance v0, Lru/ok/messages/video/fetcher/FetcherException;
-
-    const/16 v2, 0x9
-
-    const-string v3, "video is processing"
-
-    invoke-direct {v0, v2, v3}, Lru/ok/messages/video/fetcher/FetcherException;-><init>(ILjava/lang/String;)V
-
-    invoke-virtual {v1, v0}, Lxod;->onError(Ljava/lang/Throwable;)V
-
-    return-void
-
-    :cond_6
-    iget-object v0, v2, Lvlf;->c:Ldf7;
-
-    invoke-virtual {v0}, Ldf7;->get()Ljava/lang/Object;
+    invoke-static {v0, v1}, Ljava/math/BigInteger;->valueOf(J)Ljava/math/BigInteger;
 
     move-result-object v0
 
-    check-cast v0, Luc;
+    iget-wide v4, p0, Lfh4;->c:J
 
-    if-eqz v0, :cond_7
+    sub-long v6, v4, v2
 
-    const-string v2, "ACTION_VIDEO_FETCH_UNSUPPORTED"
+    invoke-static {v6, v7}, Ljava/math/BigInteger;->valueOf(J)Ljava/math/BigInteger;
 
-    iget-object v3, v4, Lv10;->h:Ljava/lang/String;
+    move-result-object v1
 
-    invoke-virtual {v0, v2, v3}, Luc;->g(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {v0, v1}, Ljava/math/BigInteger;->multiply(Ljava/math/BigInteger;)Ljava/math/BigInteger;
 
-    :cond_7
-    invoke-virtual {v1}, Lxod;->g()Z
+    move-result-object v0
 
-    move-result v0
+    iget-wide v6, p0, Lfh4;->X:J
 
-    if-nez v0, :cond_9
+    invoke-static {v6, v7}, Ljava/math/BigInteger;->valueOf(J)Ljava/math/BigInteger;
 
-    new-instance v0, Lru/ok/messages/video/fetcher/FetcherException;
+    move-result-object v1
 
-    const/4 v2, 0x3
+    invoke-virtual {v0, v1}, Ljava/math/BigInteger;->divide(Ljava/math/BigInteger;)Ljava/math/BigInteger;
 
-    const-string v3, "Unsupported video hosting"
+    move-result-object v0
 
-    invoke-direct {v0, v2, v3}, Lru/ok/messages/video/fetcher/FetcherException;-><init>(ILjava/lang/String;)V
+    invoke-virtual {v0}, Ljava/math/BigInteger;->longValue()J
 
-    invoke-virtual {v1, v0}, Lxod;->onError(Ljava/lang/Throwable;)V
+    move-result-wide v0
 
-    return-void
+    add-long/2addr v0, v2
 
-    :cond_8
-    invoke-virtual {v1}, Lxod;->g()Z
+    const-wide/16 v2, 0x7530
 
-    move-result v2
+    sub-long v6, v0, v2
 
-    if-nez v2, :cond_9
+    iget-wide v8, p0, Lfh4;->b:J
 
-    invoke-virtual {v1, v0}, Lxod;->a(Ljava/lang/Object;)V
+    const-wide/16 v0, 0x1
 
-    :cond_9
-    return-void
+    sub-long v10, v4, v0
+
+    invoke-static/range {v6 .. v11}, Lnrf;->j(JJJ)J
+
+    move-result-wide v0
+
+    new-instance p0, Lrdd;
+
+    new-instance v2, Lxdd;
+
+    invoke-direct {v2, p1, p2, v0, v1}, Lxdd;-><init>(JJ)V
+
+    invoke-direct {p0, v2, v2}, Lrdd;-><init>(Lxdd;Lxdd;)V
+
+    return-object p0
+.end method
+
+.method public final f()J
+    .locals 5
+
+    iget-object p0, p0, Leh4;->a:Lfh4;
+
+    iget-object v0, p0, Lfh4;->w0:Ljava/lang/Object;
+
+    check-cast v0, Lnle;
+
+    iget-wide v1, p0, Lfh4;->X:J
+
+    const-wide/32 v3, 0xf4240
+
+    mul-long/2addr v1, v3
+
+    iget p0, v0, Lnle;->f:I
+
+    int-to-long v3, p0
+
+    div-long/2addr v1, v3
+
+    return-wide v1
 .end method

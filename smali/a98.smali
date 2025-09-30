@@ -1,98 +1,182 @@
-.class public final synthetic La98;
+.class public abstract La98;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lh98;
-
-
-# instance fields
-.field public final synthetic a:Lj98;
-
-.field public final synthetic b:Ljava/util/List;
-
-.field public final synthetic c:I
-
-.field public final synthetic o:J
+.implements Ly98;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lj98;Ljava/util/List;IJ)V
-    .locals 0
+.method public static e(Ljava/lang/Object;)Lm98;
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const-string v0, "item is null"
 
-    iput-object p1, p0, La98;->a:Lj98;
+    invoke-static {p0, v0}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
-    iput-object p2, p0, La98;->b:Ljava/util/List;
+    new-instance v0, Lm98;
 
-    iput p3, p0, La98;->c:I
+    invoke-direct {v0, p0}, Lm98;-><init>(Ljava/lang/Object;)V
 
-    iput-wide p4, p0, La98;->o:J
-
-    return-void
+    return-object v0
 .end method
 
 
 # virtual methods
-.method public final d(Ltr6;I)V
-    .locals 8
+.method public final a(Lt98;)V
+    .locals 1
 
-    iget-object v0, p0, La98;->a:Lj98;
+    :try_start_0
+    invoke-virtual {p0, p1}, La98;->g(Lt98;)V
+    :try_end_0
+    .catch Ljava/lang/NullPointerException; {:try_start_0 .. :try_end_0} :catch_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    iget-object v2, v0, Lj98;->c:Ls98;
+    return-void
 
-    new-instance v4, Lku0;
+    :catchall_0
+    move-exception p0
 
-    invoke-static {}, Lxw6;->i()Lvw6;
+    invoke-static {p0}, Lzyd;->F(Ljava/lang/Throwable;)V
 
-    move-result-object v0
+    new-instance p1, Ljava/lang/NullPointerException;
 
-    const/4 v1, 0x0
+    const-string v0, "subscribeActual failed"
 
-    :goto_0
-    iget-object v3, p0, La98;->b:Ljava/util/List;
+    invoke-direct {p1, v0}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
 
-    invoke-interface {v3}, Ljava/util/List;->size()I
+    invoke-virtual {p1, p0}, Ljava/lang/Throwable;->initCause(Ljava/lang/Throwable;)Ljava/lang/Throwable;
 
-    move-result v5
+    throw p1
 
-    if-ge v1, v5, :cond_0
+    :catch_0
+    move-exception p0
 
-    invoke-interface {v3, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
+    throw p0
+.end method
 
-    move-result-object v3
+.method public final b()Ljava/lang/Object;
+    .locals 2
 
-    check-cast v3, Leb8;
+    new-instance v0, Lnp0;
 
-    const/4 v5, 0x1
+    const/4 v1, 0x1
 
-    invoke-virtual {v3, v5}, Leb8;->d(Z)Landroid/os/Bundle;
+    invoke-direct {v0, v1}, Ljava/util/concurrent/CountDownLatch;-><init>(I)V
 
-    move-result-object v3
+    invoke-virtual {p0, v0}, La98;->a(Lt98;)V
 
-    invoke-virtual {v0, v3}, Low6;->a(Ljava/lang/Object;)V
+    invoke-virtual {v0}, Lnp0;->d()Ljava/lang/Object;
 
-    add-int/lit8 v1, v1, 0x1
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public final c(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 6
+
+    const-string v0, "defaultValue is null"
+
+    invoke-static {p1, v0}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
+
+    new-instance v0, Lnp0;
+
+    const/4 v1, 0x1
+
+    invoke-direct {v0, v1}, Ljava/util/concurrent/CountDownLatch;-><init>(I)V
+
+    invoke-virtual {p0, v0}, La98;->a(Lt98;)V
+
+    invoke-virtual {v0}, Ljava/util/concurrent/CountDownLatch;->getCount()J
+
+    move-result-wide v2
+
+    const-wide/16 v4, 0x0
+
+    cmp-long p0, v2, v4
+
+    if-eqz p0, :cond_1
+
+    :try_start_0
+    invoke-virtual {v0}, Ljava/util/concurrent/CountDownLatch;->await()V
+    :try_end_0
+    .catch Ljava/lang/InterruptedException; {:try_start_0 .. :try_end_0} :catch_0
 
     goto :goto_0
 
+    :catch_0
+    move-exception p0
+
+    iput-boolean v1, v0, Lnp0;->o:Z
+
+    iget-object p1, v0, Lnp0;->c:Loq4;
+
+    if-eqz p1, :cond_0
+
+    invoke-interface {p1}, Loq4;->e()V
+
     :cond_0
-    invoke-virtual {v0}, Lvw6;->h()Lddc;
+    invoke-static {p0}, Ls95;->f(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;
 
-    move-result-object v0
+    move-result-object p0
 
-    invoke-direct {v4, v0}, Lku0;-><init>(Ljava/util/List;)V
+    throw p0
 
-    iget v5, p0, La98;->c:I
+    :cond_1
+    :goto_0
+    iget-object p0, v0, Lnp0;->b:Ljava/lang/Throwable;
 
-    iget-wide v6, p0, La98;->o:J
+    if-nez p0, :cond_3
 
-    move-object v1, p1
+    iget-object p0, v0, Lnp0;->a:Ljava/lang/Object;
 
-    move v3, p2
+    if-eqz p0, :cond_2
 
-    invoke-interface/range {v1 .. v7}, Ltr6;->r(Lnr6;ILandroid/os/IBinder;IJ)V
+    return-object p0
 
-    return-void
+    :cond_2
+    return-object p1
+
+    :cond_3
+    invoke-static {p0}, Ls95;->f(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;
+
+    move-result-object p0
+
+    throw p0
+.end method
+
+.method public final f(Lv5d;)Ls98;
+    .locals 2
+
+    const-string v0, "scheduler is null"
+
+    invoke-static {p1, v0}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
+
+    new-instance v0, Ls98;
+
+    const/4 v1, 0x0
+
+    invoke-direct {v0, p0, p1, v1}, Ls98;-><init>(La98;Lv5d;I)V
+
+    return-object v0
+.end method
+
+.method public abstract g(Lt98;)V
+.end method
+
+.method public final h(Lv5d;)Ls98;
+    .locals 2
+
+    const-string v0, "scheduler is null"
+
+    invoke-static {p1, v0}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
+
+    new-instance v0, Ls98;
+
+    const/4 v1, 0x1
+
+    invoke-direct {v0, p0, p1, v1}, Ls98;-><init>(La98;Lv5d;I)V
+
+    return-object v0
 .end method

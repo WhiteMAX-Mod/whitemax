@@ -1,350 +1,86 @@
 .class public final Lo7b;
-.super Ld0;
+.super Lure;
 .source "SourceFile"
 
 # interfaces
-.implements Lr7b;
-.implements Lb32;
+.implements Lpc6;
 
 
 # instance fields
-.field public final a:Lst0;
+.field public synthetic X:Ljava/lang/Object;
+
+.field public final synthetic Y:Lone/me/chats/picker/chats/PickerChatsTabWidget;
 
 
 # direct methods
-.method public constructor <init>(Lhx3;Lst0;)V
-    .locals 1
+.method public constructor <init>(Lone/me/chats/picker/chats/PickerChatsTabWidget;Lkotlin/coroutines/Continuation;)V
+    .locals 0
 
-    const/4 v0, 0x1
+    iput-object p1, p0, Lo7b;->Y:Lone/me/chats/picker/chats/PickerChatsTabWidget;
 
-    invoke-direct {p0, p1, v0, v0}, Ld0;-><init>(Lhx3;ZZ)V
+    const/4 p1, 0x2
 
-    iput-object p2, p0, Lo7b;->a:Lst0;
+    invoke-direct {p0, p1, p2}, Lure;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final D(Ljava/lang/Throwable;)Z
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
+
+    check-cast p1, Ljava/util/List;
+
+    check-cast p2, Lkotlin/coroutines/Continuation;
+
+    invoke-virtual {p0, p1, p2}, Lo7b;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+
+    move-result-object p0
+
+    check-cast p0, Lo7b;
+
+    sget-object p1, Lylf;->a:Lylf;
+
+    invoke-virtual {p0, p1}, Lo7b;->o(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object p1
+.end method
+
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
     .locals 1
 
-    iget-object p0, p0, Lo7b;->a:Lst0;
+    new-instance v0, Lo7b;
 
-    const/4 v0, 0x0
+    iget-object p0, p0, Lo7b;->Y:Lone/me/chats/picker/chats/PickerChatsTabWidget;
 
-    invoke-virtual {p0, p1, v0}, Lst0;->k(Ljava/lang/Throwable;Z)Z
+    invoke-direct {v0, p0, p2}, Lo7b;-><init>(Lone/me/chats/picker/chats/PickerChatsTabWidget;Lkotlin/coroutines/Continuation;)V
 
-    move-result p0
-
-    return p0
-.end method
-
-.method public final E(Lwz0;)V
-    .locals 4
-
-    iget-object p0, p0, Lo7b;->a:Lst0;
-
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    sget-object v0, Lst0;->q0:Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;
-
-    :cond_0
-    const/4 v1, 0x0
-
-    invoke-virtual {v0, p0, v1, p1}, Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;->compareAndSet(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_1
-
-    return-void
-
-    :cond_1
-    invoke-virtual {v0, p0}, Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v1
-
-    if-eqz v1, :cond_0
-
-    :goto_0
-    invoke-virtual {v0, p0}, Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v1
-
-    sget-object v2, Lut0;->q:Lkotlinx/coroutines/internal/Symbol;
-
-    if-ne v1, v2, :cond_4
-
-    sget-object v3, Lut0;->r:Lkotlinx/coroutines/internal/Symbol;
-
-    :cond_2
-    invoke-virtual {v0, p0, v2, v3}, Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;->compareAndSet(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_3
-
-    invoke-virtual {p0}, Lst0;->p()Ljava/lang/Throwable;
-
-    move-result-object p0
-
-    invoke-virtual {p1, p0}, Lwz0;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-void
-
-    :cond_3
-    invoke-virtual {v0, p0}, Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v1
-
-    if-eq v1, v2, :cond_2
-
-    goto :goto_0
-
-    :cond_4
-    sget-object p0, Lut0;->r:Lkotlinx/coroutines/internal/Symbol;
-
-    if-ne v1, p0, :cond_5
-
-    new-instance p0, Ljava/lang/IllegalStateException;
-
-    const-string p1, "Another handler was already registered and successfully invoked"
-
-    invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p0
-
-    :cond_5
-    new-instance p0, Ljava/lang/IllegalStateException;
-
-    new-instance p1, Ljava/lang/StringBuilder;
-
-    const-string v0, "Another handler is already registered: "
-
-    invoke-direct {p1, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {p1, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-virtual {p1}, Ljava/lang/Object;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p0
-.end method
-
-.method public final a()Lb2d;
-    .locals 0
-
-    iget-object p0, p0, Lo7b;->a:Lst0;
-
-    invoke-virtual {p0}, Lst0;->a()Lb2d;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public final b()Ljava/lang/Object;
-    .locals 0
-
-    iget-object p0, p0, Lo7b;->a:Lst0;
-
-    invoke-virtual {p0}, Lst0;->b()Ljava/lang/Object;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public final synthetic cancel()V
-    .locals 3
-
-    .line 4
-    new-instance v0, Lkotlinx/coroutines/JobCancellationException;
-
-    invoke-static {p0}, Lx87;->access$cancellationExceptionMessage(Lx87;)Ljava/lang/String;
-
-    move-result-object v1
-
-    const/4 v2, 0x0
-
-    invoke-direct {v0, v1, v2, p0}, Lkotlinx/coroutines/JobCancellationException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;Lv77;)V
-
-    .line 5
-    invoke-virtual {p0, v0}, Lo7b;->cancelInternal(Ljava/lang/Throwable;)V
-
-    return-void
-.end method
-
-.method public final cancel(Ljava/util/concurrent/CancellationException;)V
-    .locals 2
-
-    .line 1
-    invoke-virtual {p0}, Lx87;->isCancelled()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    return-void
-
-    :cond_0
-    if-nez p1, :cond_1
-
-    .line 2
-    new-instance p1, Lkotlinx/coroutines/JobCancellationException;
-
-    invoke-static {p0}, Lx87;->access$cancellationExceptionMessage(Lx87;)Ljava/lang/String;
-
-    move-result-object v0
-
-    const/4 v1, 0x0
-
-    invoke-direct {p1, v0, v1, p0}, Lkotlinx/coroutines/JobCancellationException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;Lv77;)V
-
-    .line 3
-    :cond_1
-    invoke-virtual {p0, p1}, Lo7b;->cancelInternal(Ljava/lang/Throwable;)V
-
-    return-void
-.end method
-
-.method public final synthetic cancel(Ljava/lang/Throwable;)Z
-    .locals 2
-
-    .line 6
-    new-instance p1, Lkotlinx/coroutines/JobCancellationException;
-
-    invoke-static {p0}, Lx87;->access$cancellationExceptionMessage(Lx87;)Ljava/lang/String;
-
-    move-result-object v0
-
-    const/4 v1, 0x0
-
-    invoke-direct {p1, v0, v1, p0}, Lkotlinx/coroutines/JobCancellationException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;Lv77;)V
-
-    .line 7
-    invoke-virtual {p0, p1}, Lo7b;->cancelInternal(Ljava/lang/Throwable;)V
-
-    const/4 p0, 0x1
-
-    return p0
-.end method
-
-.method public final cancelInternal(Ljava/lang/Throwable;)V
-    .locals 2
-
-    const/4 v0, 0x0
-
-    const/4 v1, 0x1
-
-    invoke-static {p0, p1, v0, v1, v0}, Lx87;->toCancellationException$default(Lx87;Ljava/lang/Throwable;Ljava/lang/String;ILjava/lang/Object;)Ljava/util/concurrent/CancellationException;
-
-    move-result-object p1
-
-    iget-object v0, p0, Lo7b;->a:Lst0;
-
-    invoke-virtual {v0, p1}, Lst0;->cancel(Ljava/util/concurrent/CancellationException;)V
-
-    invoke-virtual {p0, p1}, Lx87;->cancelCoroutine(Ljava/lang/Throwable;)Z
-
-    return-void
-.end method
-
-.method public final g(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
-
-    iget-object p0, p0, Lo7b;->a:Lst0;
-
-    invoke-interface {p0, p1}, Lp3d;->g(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public final h(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-    .locals 0
-
-    iget-object p0, p0, Lo7b;->a:Lst0;
-
-    invoke-interface {p0, p1, p2}, Lp3d;->h(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public final iterator()Lnt0;
-    .locals 1
-
-    iget-object p0, p0, Lo7b;->a:Lst0;
-
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    new-instance v0, Lnt0;
-
-    invoke-direct {v0, p0}, Lnt0;-><init>(Lst0;)V
+    iput-object p1, v0, Lo7b;->X:Ljava/lang/Object;
 
     return-object v0
 .end method
 
-.method public final j(Lp53;)Ljava/lang/Object;
-    .locals 0
+.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    iget-object p0, p0, Lo7b;->a:Lst0;
+    invoke-static {p1}, Lqe5;->V(Ljava/lang/Object;)V
 
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    iget-object p1, p0, Lo7b;->X:Ljava/lang/Object;
 
-    invoke-static {p0, p1}, Lst0;->A(Lst0;Lbu3;)Ljava/lang/Object;
+    check-cast p1, Ljava/util/List;
 
-    move-result-object p0
+    iget-object p0, p0, Lo7b;->Y:Lone/me/chats/picker/chats/PickerChatsTabWidget;
+
+    iget-object v0, p0, Lone/me/chats/picker/chats/PickerChatsTabWidget;->t0:Lf36;
+
+    invoke-virtual {v0, p1}, Lf36;->e(Ljava/util/List;)V
+
+    iget-object p0, p0, Lone/me/chats/picker/chats/PickerChatsTabWidget;->v0:Lg26;
+
+    invoke-virtual {p0, p1}, Lg26;->M(Ljava/util/List;)V
+
+    sget-object p0, Lylf;->a:Lylf;
 
     return-object p0
-.end method
-
-.method public final onCancelled(Ljava/lang/Throwable;Z)V
-    .locals 2
-
-    iget-object v0, p0, Lo7b;->a:Lst0;
-
-    const/4 v1, 0x0
-
-    invoke-virtual {v0, p1, v1}, Lst0;->k(Ljava/lang/Throwable;Z)Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    if-nez p2, :cond_0
-
-    invoke-virtual {p0}, Ld0;->getContext()Lhx3;
-
-    move-result-object p0
-
-    invoke-static {p0, p1}, Lqo8;->q(Lhx3;Ljava/lang/Throwable;)V
-
-    :cond_0
-    return-void
-.end method
-
-.method public final onCompleted(Ljava/lang/Object;)V
-    .locals 0
-
-    check-cast p1, Le5f;
-
-    iget-object p0, p0, Lo7b;->a:Lst0;
-
-    const/4 p1, 0x0
-
-    invoke-virtual {p0, p1}, Lst0;->i(Ljava/lang/Throwable;)Z
-
-    return-void
 .end method

@@ -1,11 +1,23 @@
-.class public interface abstract Lmn6;
+.class public final Lmn6;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# virtual methods
-.method public abstract b()Lrna;
-.end method
+# instance fields
+.field public final a:F
 
-.method public abstract m(Lgn6;Lym6;)Lrna;
+.field public final b:I
+
+
+# direct methods
+.method public constructor <init>(IF)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput p2, p0, Lmn6;->a:F
+
+    iput p1, p0, Lmn6;->b:I
+
+    return-void
 .end method

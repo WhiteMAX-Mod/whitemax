@@ -3,10 +3,10 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lde3;
-.implements Llie;
-.implements Ldj6;
-.implements Lej6;
+.implements Lkh3;
+.implements Lrwe;
+.implements Lpp6;
+.implements Lqp6;
 
 
 # annotations
@@ -17,16 +17,16 @@
     d2 = {
         "Lone/me/android/OneMeApplication;",
         "Landroid/app/Application;",
-        "Lde3;",
-        "Llie;",
+        "Lkh3;",
+        "Lrwe;",
         "",
-        "Ldj6;",
-        "Lej6;",
+        "Lpp6;",
+        "Lqp6;",
         "<init>",
         "()V",
-        "Lmwe;",
+        "Lmaf;",
         "tracer",
-        "Lrwe;",
+        "Lraf;",
         "report",
         "oneme_playGoogleRelease"
     }
@@ -41,48 +41,50 @@
 
 
 # static fields
-.field public static final synthetic o0:I
+.field public static final synthetic s0:I
 
 
 # instance fields
-.field public final X:J
+.field public final X:Lzte;
 
-.field public final Y:Ljava/lang/String;
+.field public final Y:J
 
-.field public final Z:Lwfe;
+.field public final Z:Ljava/lang/String;
 
 .field public final a:Ljava/lang/Object;
 
-.field public final b:Lno;
+.field public final b:Lxo;
 
 .field public final c:Ljava/util/ArrayList;
 
-.field public final o:Lwfe;
+.field public final o:Loja;
+
+.field public final r0:Lzte;
 
 
 # direct methods
 .method public constructor <init>()V
-    .locals 5
+    .locals 6
 
     invoke-direct {p0}, Landroid/app/Application;-><init>()V
 
-    new-instance v0, Lf2a;
+    new-instance v0, Lne9;
 
-    const/16 v1, 0x9
+    const/16 v1, 0x10
 
-    invoke-direct {v0, v1}, Lf2a;-><init>(I)V
+    invoke-direct {v0, v1}, Lne9;-><init>(I)V
 
-    const/4 v1, 0x3
+    const/4 v2, 0x3
 
-    invoke-static {v1, v0}, Lkhg;->o(ILv56;)Lje7;
+    invoke-static {v2, v0}, Lcb7;->G(ILzb6;)Lcl7;
 
     move-result-object v0
 
     iput-object v0, p0, Lone/me/android/OneMeApplication;->a:Ljava/lang/Object;
 
-    sget-object v0, Lno;->a:Lno;
+    sget-object v0, Lxo;->a:Lxo;
 
-    iput-object v0, p0, Lone/me/android/OneMeApplication;->b:Lno;
+    iput-object v0, p0, Lone/me/android/OneMeApplication;->b:Lxo;
 
     new-instance v0, Ljava/util/ArrayList;
 
@@ -90,23 +92,23 @@
 
     iput-object v0, p0, Lone/me/android/OneMeApplication;->c:Ljava/util/ArrayList;
 
-    new-instance v0, Lf2a;
+    new-instance v0, Lne9;
 
-    const/16 v1, 0xa
+    const/16 v2, 0x11
 
-    invoke-direct {v0, v1}, Lf2a;-><init>(I)V
+    invoke-direct {v0, v2}, Lne9;-><init>(I)V
 
-    new-instance v1, Lwfe;
+    new-instance v2, Lzte;
 
-    invoke-direct {v1, v0}, Lwfe;-><init>(Lv56;)V
+    invoke-direct {v2, v0}, Lzte;-><init>(Lzb6;)V
 
-    iput-object v1, p0, Lone/me/android/OneMeApplication;->o:Lwfe;
+    iput-object v2, p0, Lone/me/android/OneMeApplication;->X:Lzte;
 
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
-    move-result-wide v0
+    move-result-wide v2
 
-    iput-wide v0, p0, Lone/me/android/OneMeApplication;->X:J
+    iput-wide v2, p0, Lone/me/android/OneMeApplication;->Y:J
 
     const-class v0, Lone/me/android/OneMeApplication;
 
@@ -114,104 +116,123 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lone/me/android/OneMeApplication;->Y:Ljava/lang/String;
+    iput-object v0, p0, Lone/me/android/OneMeApplication;->Z:Ljava/lang/String;
 
     invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
 
-    new-instance v1, Lcx7;
+    new-instance v0, Ly38;
 
-    invoke-direct {v1}, Lcx7;-><init>()V
+    invoke-direct {v0}, Ly38;-><init>()V
 
-    new-instance v1, Lrqa;
+    new-instance v0, Lm1b;
 
-    sget-object v2, Lsqa;->b:Lsqa;
+    sget-object v2, Ln1b;->b:Ln1b;
 
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v3
 
-    invoke-direct {v1, v2, v3, v4}, Lrqa;-><init>(Lsqa;J)V
+    invoke-direct {v0, v2, v3, v4}, Lm1b;-><init>(Ln1b;J)V
 
-    sget-object v3, Lno;->b:Ldh9;
+    sget-object v3, Lxo;->b:Loo9;
 
-    invoke-virtual {v3, v2, v1}, Ldh9;->k(Ljava/lang/Object;Ljava/lang/Object;)V
+    invoke-virtual {v3, v2, v0}, Loo9;->k(Ljava/lang/Object;Ljava/lang/Object;)V
 
-    new-instance v1, Lr9a;
+    sget-object v0, Lpf3;->f:Lzte;
 
-    invoke-direct {v1}, Lr9a;-><init>()V
+    invoke-virtual {v0}, Lzte;->getValue()Ljava/lang/Object;
 
-    sput-object v1, Lg47;->m:Llr6;
+    move-result-object v0
 
-    sget v1, Lw7e;->a:I
+    check-cast v0, Lkha;
 
-    sget-object v1, Lg47;->m:Llr6;
+    iget-object v0, v0, Lkha;->l:Lzte;
 
-    if-nez v1, :cond_0
+    invoke-virtual {v0}, Lzte;->getValue()Ljava/lang/Object;
 
-    goto :goto_0
+    move-result-object v0
 
-    :cond_0
-    invoke-interface {v1}, Llr6;->c()Z
+    check-cast v0, Ljava/util/concurrent/ScheduledExecutorService;
 
-    move-result v2
+    new-instance v2, Lca5;
 
-    if-eqz v2, :cond_1
+    invoke-direct {v2, v0}, Lca5;-><init>(Ljava/util/concurrent/Executor;)V
 
-    sget-object v2, Lqs7;->o:Lqs7;
+    invoke-static {v2}, Lb0b;->a(Lq04;)Lkotlinx/coroutines/internal/ContextScope;
 
-    const-string v3, "AppVersion 25.9.0(6395)--1"
+    move-result-object v0
 
-    const/4 v4, 0x0
+    new-instance v2, Loja;
 
-    invoke-interface {v1, v2, v0, v3, v4}, Llr6;->d(Lqs7;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    new-instance v3, Llaa;
 
-    :cond_1
-    :goto_0
-    new-instance v0, Lg2a;
+    const/16 v4, 0xe
 
-    const/4 v1, 0x4
+    invoke-direct {v3, p0, v4}, Llaa;-><init>(Lone/me/android/OneMeApplication;I)V
 
-    invoke-direct {v0, p0, v1}, Lg2a;-><init>(Lone/me/android/OneMeApplication;I)V
+    new-instance v4, Llaa;
 
-    new-instance v1, Lwfe;
+    const/16 v5, 0xf
 
-    invoke-direct {v1, v0}, Lwfe;-><init>(Lv56;)V
+    invoke-direct {v4, p0, v5}, Llaa;-><init>(Lone/me/android/OneMeApplication;I)V
 
-    iput-object v1, p0, Lone/me/android/OneMeApplication;->Z:Lwfe;
+    new-instance v5, Llaa;
+
+    invoke-direct {v5, p0, v1}, Llaa;-><init>(Lone/me/android/OneMeApplication;I)V
+
+    invoke-direct {v2, v3, v4, v5, v0}, Loja;-><init>(Llaa;Llaa;Llaa;Lkotlinx/coroutines/internal/ContextScope;)V
+
+    iput-object v2, p0, Lone/me/android/OneMeApplication;->o:Loja;
+
+    sput-object v2, Ljtg;->g:Loja;
+
+    sget v0, Lwle;->a:I
+
+    new-instance v0, Llaa;
+
+    const/4 v1, 0x5
+
+    invoke-direct {v0, p0, v1}, Llaa;-><init>(Lone/me/android/OneMeApplication;I)V
+
+    new-instance v1, Lzte;
+
+    invoke-direct {v1, v0}, Lzte;-><init>(Lzb6;)V
+
+    iput-object v1, p0, Lone/me/android/OneMeApplication;->r0:Lzte;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Lfe3;
+.method public final a()Lmh3;
     .locals 1
 
-    sget-object p0, Lq6a;->a:Lq6a;
+    sget-object p0, Lbfa;->a:Lbfa;
 
-    invoke-virtual {p0}, Lscout/Component;->getAccessor()Lu4;
-
-    move-result-object p0
-
-    const-class v0, Lfe3;
-
-    invoke-virtual {p0, v0}, Lu4;->c(Ljava/lang/Class;)Ljava/lang/Object;
+    invoke-virtual {p0}, Lscout/Component;->getAccessor()Lz4;
 
     move-result-object p0
 
-    check-cast p0, Lfe3;
+    const-class v0, Lmh3;
+
+    invoke-virtual {p0, v0}, Lz4;->c(Ljava/lang/Class;)Ljava/lang/Object;
+
+    move-result-object p0
+
+    check-cast p0, Lmh3;
 
     return-object p0
 .end method
 
 .method public final attachBaseContext(Landroid/content/Context;)V
-    .locals 10
+    .locals 9
 
-    sget v0, Ld46;->g:I
+    sget v0, Ll1h;->d:I
 
     const-string v0, "ru"
 
-    invoke-static {v0}, Lxja;->v(Ljava/lang/CharSequence;)Z
+    invoke-static {v0}, Lm7g;->m(Ljava/lang/CharSequence;)Z
 
     move-result v1
 
@@ -251,31 +272,31 @@
     return-void
 
     :cond_1
-    new-instance v0, Lt2a;
+    new-instance v0, Lxaa;
 
-    invoke-direct {v0, p1, p0}, Lt2a;-><init>(Landroid/content/Context;Lone/me/android/OneMeApplication;)V
+    invoke-direct {v0, p1, p0}, Lxaa;-><init>(Landroid/content/Context;Lone/me/android/OneMeApplication;)V
 
-    invoke-static {v0}, Lgad;->Q(Landroid/content/Context;)Z
+    invoke-static {v0}, Ln2e;->r(Landroid/content/Context;)Z
 
     move-result p1
 
-    sput-boolean p1, Lgad;->a:Z
+    sput-boolean p1, Ln2e;->a:Z
 
-    invoke-virtual {p0}, Lone/me/android/OneMeApplication;->c()Laz5;
+    invoke-virtual {p0}, Lone/me/android/OneMeApplication;->c()Ls46;
 
     move-result-object p1
 
-    new-instance v1, Ltf3;
+    new-instance v1, Ljv3;
 
-    const/16 v2, 0x15
+    const/16 v2, 0x18
 
-    invoke-direct {v1, v0, v2, p0}, Ltf3;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+    invoke-direct {v1, v0, v2, p0}, Ljv3;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
 
     const-string v2, "Tracer"
 
-    sget-object v3, Lgz4;->a:Lgz4;
+    sget-object v3, Lp45;->a:Lp45;
 
-    invoke-virtual {p1, v2, v3, v1}, Laz5;->a(Ljava/lang/String;Ljava/lang/Iterable;Lv56;)Lxy5;
+    invoke-virtual {p1, v2, v3, v1}, Ls46;->a(Ljava/lang/String;Ljava/lang/Iterable;Lzb6;)Lp46;
 
     move-result-object p1
 
@@ -283,7 +304,7 @@
 
     invoke-virtual {v1, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    invoke-virtual {p0}, Lone/me/android/OneMeApplication;->c()Laz5;
+    invoke-virtual {p0}, Lone/me/android/OneMeApplication;->c()Ls46;
 
     move-result-object v2
 
@@ -291,21 +312,31 @@
 
     move-result-object v4
 
-    new-instance v5, Lub1;
+    new-instance v5, Lfv2;
 
-    const/4 v6, 0x4
+    iget-object v6, p0, Lone/me/android/OneMeApplication;->o:Loja;
 
-    invoke-direct {v5, p0, v6, v0}, Lub1;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+    if-eqz v6, :cond_2
+
+    goto :goto_0
+
+    :cond_2
+    const/4 v6, 0x0
+
+    :goto_0
+    const/4 v7, 0x1
+
+    invoke-direct {v5, p0, v0, v6, v7}, Lfv2;-><init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;I)V
 
     const-string v0, "Scout"
 
-    invoke-virtual {v2, v0, v4, v5}, Laz5;->a(Ljava/lang/String;Ljava/lang/Iterable;Lv56;)Lxy5;
+    invoke-virtual {v2, v0, v4, v5}, Ls46;->a(Ljava/lang/String;Ljava/lang/Iterable;Lzb6;)Lp46;
 
     move-result-object v0
 
     invoke-virtual {v1, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    invoke-virtual {p0}, Lone/me/android/OneMeApplication;->c()Laz5;
+    invoke-virtual {p0}, Lone/me/android/OneMeApplication;->c()Ls46;
 
     move-result-object v2
 
@@ -313,35 +344,35 @@
 
     move-result-object p1
 
-    new-instance v4, Lf2a;
+    new-instance v4, Lne9;
 
-    const/4 v5, 0x2
+    const/16 v5, 0xa
 
-    invoke-direct {v4, v5}, Lf2a;-><init>(I)V
+    invoke-direct {v4, v5}, Lne9;-><init>(I)V
 
-    const-string v7, "Protobuf"
+    const-string v5, "Protobuf"
 
-    invoke-virtual {v2, v7, p1, v4}, Laz5;->a(Ljava/lang/String;Ljava/lang/Iterable;Lv56;)Lxy5;
+    invoke-virtual {v2, v5, p1, v4}, Ls46;->a(Ljava/lang/String;Ljava/lang/Iterable;Lzb6;)Lp46;
 
     move-result-object p1
 
     invoke-virtual {v1, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    invoke-virtual {p0}, Lone/me/android/OneMeApplication;->c()Laz5;
+    invoke-virtual {p0}, Lone/me/android/OneMeApplication;->c()Ls46;
 
     move-result-object p1
 
-    new-instance v1, Lg2a;
+    new-instance v1, Llaa;
 
     const/4 v2, 0x0
 
-    invoke-direct {v1, p0, v2}, Lg2a;-><init>(Lone/me/android/OneMeApplication;I)V
+    invoke-direct {v1, p0, v2}, Llaa;-><init>(Lone/me/android/OneMeApplication;I)V
 
     const-string v4, "LibraryUpgrade"
 
-    invoke-virtual {p0, p1, v4, v3, v1}, Lone/me/android/OneMeApplication;->b(Laz5;Ljava/lang/String;Ljava/lang/Iterable;Lv56;)Lxy5;
+    invoke-virtual {p0, p1, v4, v3, v1}, Lone/me/android/OneMeApplication;->b(Ls46;Ljava/lang/String;Ljava/lang/Iterable;Lzb6;)Lp46;
 
-    invoke-virtual {p0}, Lone/me/android/OneMeApplication;->c()Laz5;
+    invoke-virtual {p0}, Lone/me/android/OneMeApplication;->c()Ls46;
 
     move-result-object p1
 
@@ -349,149 +380,147 @@
 
     move-result-object v0
 
-    new-instance v1, Lf2a;
+    new-instance v1, Lne9;
 
-    const/4 v4, 0x5
+    const/16 v4, 0xd
 
-    invoke-direct {v1, v4}, Lf2a;-><init>(I)V
+    invoke-direct {v1, v4}, Lne9;-><init>(I)V
 
-    const-string v4, "Account"
+    const-string v5, "Account"
 
-    invoke-virtual {p1, v4, v0, v1}, Laz5;->a(Ljava/lang/String;Ljava/lang/Iterable;Lv56;)Lxy5;
+    invoke-virtual {p1, v5, v0, v1}, Ls46;->a(Ljava/lang/String;Ljava/lang/Iterable;Lzb6;)Lp46;
 
-    invoke-virtual {p0}, Lone/me/android/OneMeApplication;->c()Laz5;
-
-    move-result-object p1
-
-    new-instance v0, Lg2a;
-
-    const/4 v1, 0x1
-
-    invoke-direct {v0, p0, v1}, Lg2a;-><init>(Lone/me/android/OneMeApplication;I)V
-
-    const-string v4, "AnrWatcher"
-
-    invoke-virtual {p0, p1, v4, v3, v0}, Lone/me/android/OneMeApplication;->b(Laz5;Ljava/lang/String;Ljava/lang/Iterable;Lv56;)Lxy5;
-
-    invoke-virtual {p0}, Lone/me/android/OneMeApplication;->c()Laz5;
+    invoke-virtual {p0}, Lone/me/android/OneMeApplication;->c()Ls46;
 
     move-result-object p1
 
-    new-instance v0, Lf2a;
+    new-instance v0, Llaa;
 
-    const/4 v4, 0x6
+    invoke-direct {v0, p0, v7}, Llaa;-><init>(Lone/me/android/OneMeApplication;I)V
 
-    invoke-direct {v0, v4}, Lf2a;-><init>(I)V
+    const-string v1, "AnrWatcher"
 
-    const-string v4, "SetupRx"
+    invoke-virtual {p0, p1, v1, v3, v0}, Lone/me/android/OneMeApplication;->b(Ls46;Ljava/lang/String;Ljava/lang/Iterable;Lzb6;)Lp46;
 
-    invoke-static {p1, v4, v0}, Laz5;->b(Laz5;Ljava/lang/String;Lv56;)Lxy5;
-
-    invoke-virtual {p0}, Lone/me/android/OneMeApplication;->c()Laz5;
+    invoke-virtual {p0}, Lone/me/android/OneMeApplication;->c()Ls46;
 
     move-result-object p1
 
-    new-instance v0, Lg2a;
+    new-instance v0, Lne9;
 
-    invoke-direct {v0, p0, v5}, Lg2a;-><init>(Lone/me/android/OneMeApplication;I)V
+    const/16 v1, 0xe
 
-    const-string v4, "RxJavaPlugins.setErrorHandler"
+    invoke-direct {v0, v1}, Lne9;-><init>(I)V
 
-    invoke-static {p1, v4, v0}, Laz5;->b(Laz5;Ljava/lang/String;Lv56;)Lxy5;
+    const-string v1, "SetupRx"
 
-    invoke-virtual {p0}, Lone/me/android/OneMeApplication;->c()Laz5;
+    invoke-static {p1, v1, v0}, Ls46;->b(Ls46;Ljava/lang/String;Lzb6;)Lp46;
 
-    move-result-object p1
-
-    new-instance v0, Lg2a;
-
-    const/4 v4, 0x3
-
-    invoke-direct {v0, p0, v4}, Lg2a;-><init>(Lone/me/android/OneMeApplication;I)V
-
-    const-string v5, "Chroma.init"
-
-    invoke-virtual {p1, v5, v3, v0}, Laz5;->a(Ljava/lang/String;Ljava/lang/Iterable;Lv56;)Lxy5;
+    invoke-virtual {p0}, Lone/me/android/OneMeApplication;->c()Ls46;
 
     move-result-object p1
 
-    invoke-virtual {p0}, Lone/me/android/OneMeApplication;->c()Laz5;
+    new-instance v0, Llaa;
+
+    const/4 v1, 0x2
+
+    invoke-direct {v0, p0, v1}, Llaa;-><init>(Lone/me/android/OneMeApplication;I)V
+
+    const-string v1, "RxJavaPlugins.setErrorHandler"
+
+    invoke-static {p1, v1, v0}, Ls46;->b(Ls46;Ljava/lang/String;Lzb6;)Lp46;
+
+    invoke-virtual {p0}, Lone/me/android/OneMeApplication;->c()Ls46;
+
+    move-result-object p1
+
+    new-instance v0, Llaa;
+
+    const/4 v1, 0x3
+
+    invoke-direct {v0, p0, v1}, Llaa;-><init>(Lone/me/android/OneMeApplication;I)V
+
+    const-string v1, "Chroma.init"
+
+    invoke-virtual {p1, v1, v3, v0}, Ls46;->a(Ljava/lang/String;Ljava/lang/Iterable;Lzb6;)Lp46;
+
+    move-result-object p1
+
+    invoke-virtual {p0}, Lone/me/android/OneMeApplication;->c()Ls46;
 
     move-result-object v0
 
-    new-instance v5, Lf2a;
+    new-instance v1, Lne9;
 
-    const/4 v7, 0x7
+    const/16 v5, 0xf
 
-    invoke-direct {v5, v7}, Lf2a;-><init>(I)V
+    invoke-direct {v1, v5}, Lne9;-><init>(I)V
 
-    const-string v7, "AppTracerCrashService"
+    const-string v5, "AppTracerCrashService"
 
-    invoke-virtual {p0, v0, v7, v3, v5}, Lone/me/android/OneMeApplication;->b(Laz5;Ljava/lang/String;Ljava/lang/Iterable;Lv56;)Lxy5;
+    invoke-virtual {p0, v0, v5, v3, v1}, Lone/me/android/OneMeApplication;->b(Ls46;Ljava/lang/String;Ljava/lang/Iterable;Lzb6;)Lp46;
 
-    invoke-virtual {p0}, Lone/me/android/OneMeApplication;->c()Laz5;
-
-    move-result-object v0
-
-    new-instance v5, Lf2a;
-
-    const/16 v7, 0x8
-
-    invoke-direct {v5, v7}, Lf2a;-><init>(I)V
-
-    const-string v7, "Logger"
-
-    invoke-virtual {p0, v0, v7, v3, v5}, Lone/me/android/OneMeApplication;->b(Laz5;Ljava/lang/String;Ljava/lang/Iterable;Lv56;)Lxy5;
+    invoke-virtual {p0}, Lone/me/android/OneMeApplication;->c()Ls46;
 
     move-result-object v0
 
-    invoke-virtual {p0}, Lone/me/android/OneMeApplication;->c()Laz5;
+    new-instance v1, Llaa;
 
-    move-result-object v5
+    const/4 v5, 0x4
+
+    invoke-direct {v1, p0, v5}, Llaa;-><init>(Lone/me/android/OneMeApplication;I)V
+
+    const-string v5, "Logger"
+
+    invoke-virtual {p0, v0, v5, v3, v1}, Lone/me/android/OneMeApplication;->b(Ls46;Ljava/lang/String;Ljava/lang/Iterable;Lzb6;)Lp46;
+
+    move-result-object v0
+
+    invoke-virtual {p0}, Lone/me/android/OneMeApplication;->c()Ls46;
+
+    move-result-object v1
 
     invoke-static {v0}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
 
     move-result-object v0
 
-    new-instance v7, Lf2a;
+    new-instance v5, Lne9;
 
-    const/16 v8, 0xb
+    const/16 v6, 0x12
 
-    invoke-direct {v7, v8}, Lf2a;-><init>(I)V
+    invoke-direct {v5, v6}, Lne9;-><init>(I)V
 
-    const-string v9, "IoPoolSize"
+    const-string v8, "IoPoolSize"
 
-    invoke-virtual {p0, v5, v9, v0, v7}, Lone/me/android/OneMeApplication;->b(Laz5;Ljava/lang/String;Ljava/lang/Iterable;Lv56;)Lxy5;
+    invoke-virtual {p0, v1, v8, v0, v5}, Lone/me/android/OneMeApplication;->b(Ls46;Ljava/lang/String;Ljava/lang/Iterable;Lzb6;)Lp46;
 
-    invoke-virtual {p0}, Lone/me/android/OneMeApplication;->c()Laz5;
-
-    move-result-object v0
-
-    new-instance v5, Lf2a;
-
-    const/16 v7, 0x13
-
-    invoke-direct {v5, v7}, Lf2a;-><init>(I)V
-
-    const-string v7, "Fresco"
-
-    invoke-virtual {p0, v0, v7, v3, v5}, Lone/me/android/OneMeApplication;->b(Laz5;Ljava/lang/String;Ljava/lang/Iterable;Lv56;)Lxy5;
-
-    invoke-virtual {p0}, Lone/me/android/OneMeApplication;->c()Laz5;
+    invoke-virtual {p0}, Lone/me/android/OneMeApplication;->c()Ls46;
 
     move-result-object v0
 
-    new-instance v5, Lg2a;
+    new-instance v1, Lne9;
 
-    const/16 v7, 0xd
+    const/16 v5, 0x1a
 
-    invoke-direct {v5, p0, v7}, Lg2a;-><init>(Lone/me/android/OneMeApplication;I)V
+    invoke-direct {v1, v5}, Lne9;-><init>(I)V
 
-    const-string v7, "Theme background warmup"
+    const-string v5, "Fresco"
 
-    invoke-virtual {p0, v0, v7, v3, v5}, Lone/me/android/OneMeApplication;->b(Laz5;Ljava/lang/String;Ljava/lang/Iterable;Lv56;)Lxy5;
+    invoke-virtual {p0, v0, v5, v3, v1}, Lone/me/android/OneMeApplication;->b(Ls46;Ljava/lang/String;Ljava/lang/Iterable;Lzb6;)Lp46;
 
-    invoke-virtual {p0}, Lone/me/android/OneMeApplication;->c()Laz5;
+    invoke-virtual {p0}, Lone/me/android/OneMeApplication;->c()Ls46;
+
+    move-result-object v0
+
+    new-instance v1, Llaa;
+
+    invoke-direct {v1, p0, v4}, Llaa;-><init>(Lone/me/android/OneMeApplication;I)V
+
+    const-string v4, "Theme background warmup"
+
+    invoke-virtual {p0, v0, v4, v3, v1}, Lone/me/android/OneMeApplication;->b(Ls46;Ljava/lang/String;Ljava/lang/Iterable;Lzb6;)Lp46;
+
+    invoke-virtual {p0}, Lone/me/android/OneMeApplication;->c()Ls46;
 
     move-result-object v0
 
@@ -499,186 +528,194 @@
 
     move-result-object p1
 
-    new-instance v5, Lg2a;
+    new-instance v1, Llaa;
 
-    const/16 v7, 0xe
+    const/16 v4, 0x11
 
-    invoke-direct {v5, p0, v7}, Lg2a;-><init>(Lone/me/android/OneMeApplication;I)V
+    invoke-direct {v1, p0, v4}, Llaa;-><init>(Lone/me/android/OneMeApplication;I)V
 
-    const-string v7, "Chroma.dynamicChange"
+    const-string v4, "Chroma.dynamicChange"
 
-    invoke-virtual {p0, v0, v7, p1, v5}, Lone/me/android/OneMeApplication;->b(Laz5;Ljava/lang/String;Ljava/lang/Iterable;Lv56;)Lxy5;
+    invoke-virtual {p0, v0, v4, p1, v1}, Lone/me/android/OneMeApplication;->b(Ls46;Ljava/lang/String;Ljava/lang/Iterable;Lzb6;)Lp46;
 
-    invoke-virtual {p0}, Lone/me/android/OneMeApplication;->c()Laz5;
-
-    move-result-object p1
-
-    new-instance v0, Lg2a;
-
-    const/16 v5, 0x11
-
-    invoke-direct {v0, p0, v5}, Lg2a;-><init>(Lone/me/android/OneMeApplication;I)V
-
-    const-string v5, "DynamicFont"
-
-    invoke-virtual {p0, p1, v5, v3, v0}, Lone/me/android/OneMeApplication;->b(Laz5;Ljava/lang/String;Ljava/lang/Iterable;Lv56;)Lxy5;
-
-    invoke-virtual {p0}, Lone/me/android/OneMeApplication;->c()Laz5;
+    invoke-virtual {p0}, Lone/me/android/OneMeApplication;->c()Ls46;
 
     move-result-object p1
 
-    new-instance v0, Lh2a;
+    new-instance v0, Llaa;
 
-    const/16 v5, 0xa
+    const/16 v1, 0x13
 
-    invoke-direct {v0, v5}, Lh2a;-><init>(I)V
+    invoke-direct {v0, p0, v1}, Llaa;-><init>(Lone/me/android/OneMeApplication;I)V
 
-    const-string v5, "NativeMedia"
+    const-string v4, "DynamicFont"
 
-    invoke-virtual {p0, p1, v5, v3, v0}, Lone/me/android/OneMeApplication;->b(Laz5;Ljava/lang/String;Ljava/lang/Iterable;Lv56;)Lxy5;
+    invoke-virtual {p0, p1, v4, v3, v0}, Lone/me/android/OneMeApplication;->b(Ls46;Ljava/lang/String;Ljava/lang/Iterable;Lzb6;)Lp46;
 
-    invoke-virtual {p0}, Lone/me/android/OneMeApplication;->c()Laz5;
-
-    move-result-object p1
-
-    new-instance v0, Lh2a;
-
-    invoke-direct {v0, v8}, Lh2a;-><init>(I)V
-
-    const-string v5, "EmojiProvider"
-
-    invoke-virtual {p0, p1, v5, v3, v0}, Lone/me/android/OneMeApplication;->b(Laz5;Ljava/lang/String;Ljava/lang/Iterable;Lv56;)Lxy5;
-
-    invoke-virtual {p0}, Lone/me/android/OneMeApplication;->c()Laz5;
+    invoke-virtual {p0}, Lone/me/android/OneMeApplication;->c()Ls46;
 
     move-result-object p1
 
-    new-instance v0, Lh2a;
+    new-instance v0, Lmaa;
 
-    const/16 v5, 0xc
+    invoke-direct {v0, v6}, Lmaa;-><init>(I)V
 
-    invoke-direct {v0, v5}, Lh2a;-><init>(I)V
+    const-string v4, "NativeMedia"
 
-    const-string v5, "Animoji warmup"
+    invoke-virtual {p0, p1, v4, v3, v0}, Lone/me/android/OneMeApplication;->b(Ls46;Ljava/lang/String;Ljava/lang/Iterable;Lzb6;)Lp46;
 
-    invoke-virtual {p0, p1, v5, v3, v0}, Lone/me/android/OneMeApplication;->b(Laz5;Ljava/lang/String;Ljava/lang/Iterable;Lv56;)Lxy5;
-
-    invoke-virtual {p0}, Lone/me/android/OneMeApplication;->c()Laz5;
+    invoke-virtual {p0}, Lone/me/android/OneMeApplication;->c()Ls46;
 
     move-result-object p1
 
-    new-instance v0, Lf2a;
+    new-instance v0, Lmaa;
 
-    invoke-direct {v0, v2}, Lf2a;-><init>(I)V
+    invoke-direct {v0, v1}, Lmaa;-><init>(I)V
 
-    const-string v5, "VisibilityController"
+    const-string v1, "EmojiProvider"
 
-    invoke-virtual {p0, p1, v5, v3, v0}, Lone/me/android/OneMeApplication;->b(Laz5;Ljava/lang/String;Ljava/lang/Iterable;Lv56;)Lxy5;
+    invoke-virtual {p0, p1, v1, v3, v0}, Lone/me/android/OneMeApplication;->b(Ls46;Ljava/lang/String;Ljava/lang/Iterable;Lzb6;)Lp46;
 
-    invoke-virtual {p0}, Lone/me/android/OneMeApplication;->c()Laz5;
+    invoke-virtual {p0}, Lone/me/android/OneMeApplication;->c()Ls46;
 
     move-result-object p1
 
-    new-instance v0, Lf2a;
+    new-instance v0, Lmaa;
 
-    invoke-direct {v0, v1}, Lf2a;-><init>(I)V
+    const/16 v1, 0x14
 
-    const-string v5, "ProxyChangeListener"
+    invoke-direct {v0, v1}, Lmaa;-><init>(I)V
 
-    invoke-virtual {p0, p1, v5, v3, v0}, Lone/me/android/OneMeApplication;->b(Laz5;Ljava/lang/String;Ljava/lang/Iterable;Lv56;)Lxy5;
+    const-string v1, "Animoji warmup"
+
+    invoke-virtual {p0, p1, v1, v3, v0}, Lone/me/android/OneMeApplication;->b(Ls46;Ljava/lang/String;Ljava/lang/Iterable;Lzb6;)Lp46;
+
+    invoke-virtual {p0}, Lone/me/android/OneMeApplication;->c()Ls46;
+
+    move-result-object p1
+
+    new-instance v0, Lne9;
+
+    const/16 v1, 0x8
+
+    invoke-direct {v0, v1}, Lne9;-><init>(I)V
+
+    const-string v1, "VisibilityController"
+
+    invoke-virtual {p0, p1, v1, v3, v0}, Lone/me/android/OneMeApplication;->b(Ls46;Ljava/lang/String;Ljava/lang/Iterable;Lzb6;)Lp46;
+
+    invoke-virtual {p0}, Lone/me/android/OneMeApplication;->c()Ls46;
+
+    move-result-object p1
+
+    new-instance v0, Lne9;
+
+    const/16 v1, 0x9
+
+    invoke-direct {v0, v1}, Lne9;-><init>(I)V
+
+    const-string v1, "ProxyChangeListener"
+
+    invoke-virtual {p0, p1, v1, v3, v0}, Lone/me/android/OneMeApplication;->b(Ls46;Ljava/lang/String;Ljava/lang/Iterable;Lzb6;)Lp46;
 
     new-instance p1, Ljava/util/concurrent/atomic/AtomicBoolean;
 
     invoke-direct {p1, v2}, Ljava/util/concurrent/atomic/AtomicBoolean;-><init>(Z)V
 
-    invoke-virtual {p0}, Lone/me/android/OneMeApplication;->c()Laz5;
+    invoke-virtual {p0}, Lone/me/android/OneMeApplication;->c()Ls46;
 
     move-result-object v0
 
-    new-instance v2, Lj57;
+    new-instance v1, Lq47;
 
-    const/16 v5, 0x14
+    const/16 v2, 0x15
 
-    invoke-direct {v2, v5, p1}, Lj57;-><init>(ILjava/lang/Object;)V
+    invoke-direct {v1, v2, p1}, Lq47;-><init>(ILjava/lang/Object;)V
 
-    const-string v5, "InitialDataStorage.Banners"
+    const-string v2, "InitialDataStorage.Banners"
 
-    invoke-virtual {p0, v0, v5, v3, v2}, Lone/me/android/OneMeApplication;->b(Laz5;Ljava/lang/String;Ljava/lang/Iterable;Lv56;)Lxy5;
+    invoke-virtual {p0, v0, v2, v3, v1}, Lone/me/android/OneMeApplication;->b(Ls46;Ljava/lang/String;Ljava/lang/Iterable;Lzb6;)Lp46;
 
     move-result-object v0
 
-    new-instance v2, Ljava/util/concurrent/atomic/AtomicReference;
+    new-instance v1, Ljava/util/concurrent/atomic/AtomicReference;
 
-    sget-object v5, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
+    sget-object v2, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
 
-    invoke-direct {v2, v5}, Ljava/util/concurrent/atomic/AtomicReference;-><init>(Ljava/lang/Object;)V
+    invoke-direct {v1, v2}, Ljava/util/concurrent/atomic/AtomicReference;-><init>(Ljava/lang/Object;)V
 
-    invoke-virtual {p0}, Lone/me/android/OneMeApplication;->c()Laz5;
+    invoke-virtual {p0}, Lone/me/android/OneMeApplication;->c()Ls46;
 
-    move-result-object v5
+    move-result-object v2
 
     invoke-static {v0}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
 
-    move-result-object v7
+    move-result-object v4
 
-    new-instance v8, Lfw3;
+    new-instance v5, Loz3;
 
-    invoke-direct {v8, v2, v1}, Lfw3;-><init>(Ljava/util/concurrent/atomic/AtomicReference;I)V
+    invoke-direct {v5, v1, v7}, Loz3;-><init>(Ljava/util/concurrent/atomic/AtomicReference;I)V
 
-    const-string v1, "InitialDataStorage.Chats&Folders"
+    const-string v6, "InitialDataStorage.Chats&Folders"
 
-    invoke-virtual {p0, v5, v1, v7, v8}, Lone/me/android/OneMeApplication;->b(Laz5;Ljava/lang/String;Ljava/lang/Iterable;Lv56;)Lxy5;
+    invoke-virtual {p0, v2, v6, v4, v5}, Lone/me/android/OneMeApplication;->b(Ls46;Ljava/lang/String;Ljava/lang/Iterable;Lzb6;)Lp46;
 
-    move-result-object v1
+    move-result-object v2
 
-    invoke-virtual {p0}, Lone/me/android/OneMeApplication;->c()Laz5;
+    invoke-virtual {p0}, Lone/me/android/OneMeApplication;->c()Ls46;
 
-    move-result-object v5
+    move-result-object v4
 
-    filled-new-array {v1, v0}, [Lxy5;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lq43;->e0([Ljava/lang/Object;)Ljava/util/List;
+    filled-new-array {v2, v0}, [Lp46;
 
     move-result-object v0
 
-    new-instance v1, Lt71;
+    invoke-static {v0}, Lr73;->I([Ljava/lang/Object;)Ljava/util/List;
 
-    invoke-direct {v1, p0, p1, v2, v6}, Lt71;-><init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;I)V
+    move-result-object v0
+
+    new-instance v2, Lk81;
+
+    const/4 v5, 0x5
+
+    invoke-direct {v2, p0, p1, v1, v5}, Lk81;-><init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;I)V
 
     const-string p1, "LegacyChats"
 
-    invoke-virtual {p0, v5, p1, v0, v1}, Lone/me/android/OneMeApplication;->b(Laz5;Ljava/lang/String;Ljava/lang/Iterable;Lv56;)Lxy5;
+    invoke-virtual {p0, v4, p1, v0, v2}, Lone/me/android/OneMeApplication;->b(Ls46;Ljava/lang/String;Ljava/lang/Iterable;Lzb6;)Lp46;
 
-    invoke-virtual {p0}, Lone/me/android/OneMeApplication;->c()Laz5;
+    invoke-virtual {p0}, Lone/me/android/OneMeApplication;->c()Ls46;
 
     move-result-object p1
 
-    new-instance v0, Lf2a;
+    new-instance v0, Lne9;
 
-    invoke-direct {v0, v4}, Lf2a;-><init>(I)V
+    const/16 v1, 0xb
+
+    invoke-direct {v0, v1}, Lne9;-><init>(I)V
 
     const-string v1, "RemoveAccountIfNeed"
 
-    invoke-virtual {p0, p1, v1, v3, v0}, Lone/me/android/OneMeApplication;->b(Laz5;Ljava/lang/String;Ljava/lang/Iterable;Lv56;)Lxy5;
+    invoke-virtual {p0, p1, v1, v3, v0}, Lone/me/android/OneMeApplication;->b(Ls46;Ljava/lang/String;Ljava/lang/Iterable;Lzb6;)Lp46;
 
-    invoke-virtual {p0}, Lone/me/android/OneMeApplication;->c()Laz5;
+    invoke-virtual {p0}, Lone/me/android/OneMeApplication;->c()Ls46;
 
     move-result-object p1
 
-    new-instance v0, Lf2a;
+    new-instance v0, Lne9;
 
-    invoke-direct {v0, v6}, Lf2a;-><init>(I)V
+    const/16 v1, 0xc
+
+    invoke-direct {v0, v1}, Lne9;-><init>(I)V
 
     const-string v1, "Folders Warmup"
 
-    invoke-virtual {p0, p1, v1, v3, v0}, Lone/me/android/OneMeApplication;->b(Laz5;Ljava/lang/String;Ljava/lang/Iterable;Lv56;)Lxy5;
+    invoke-virtual {p0, p1, v1, v3, v0}, Lone/me/android/OneMeApplication;->b(Ls46;Ljava/lang/String;Ljava/lang/Iterable;Lzb6;)Lp46;
 
     return-void
 .end method
 
-.method public final b(Laz5;Ljava/lang/String;Ljava/lang/Iterable;Lv56;)Lxy5;
+.method public final b(Ls46;Ljava/lang/String;Ljava/lang/Iterable;Lzb6;)Lp46;
     .locals 2
 
     iget-object p0, p0, Lone/me/android/OneMeApplication;->c:Ljava/util/ArrayList;
@@ -709,9 +746,9 @@
 
     move-result-object v1
 
-    check-cast v1, Lxy5;
+    check-cast v1, Lp46;
 
-    iget-object v1, v1, Lxy5;->a:Ljava/lang/String;
+    iget-object v1, v1, Lp46;->a:Ljava/lang/String;
 
     invoke-virtual {v1, p2}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
@@ -750,27 +787,27 @@
 
     :cond_2
     :goto_1
-    invoke-static {p0, p3}, Lp43;->M0(Ljava/util/Collection;Ljava/lang/Iterable;)Ljava/util/ArrayList;
+    invoke-static {p0, p3}, Lq73;->r0(Ljava/util/Collection;Ljava/lang/Iterable;)Ljava/util/ArrayList;
 
     move-result-object p0
 
-    invoke-virtual {p1, p2, p0, p4}, Laz5;->a(Ljava/lang/String;Ljava/lang/Iterable;Lv56;)Lxy5;
+    invoke-virtual {p1, p2, p0, p4}, Ls46;->a(Ljava/lang/String;Ljava/lang/Iterable;Lzb6;)Lp46;
 
     move-result-object p0
 
     return-object p0
 .end method
 
-.method public final c()Laz5;
+.method public final c()Ls46;
     .locals 0
 
     iget-object p0, p0, Lone/me/android/OneMeApplication;->a:Ljava/lang/Object;
 
-    invoke-interface {p0}, Lje7;->getValue()Ljava/lang/Object;
+    invoke-interface {p0}, Lcl7;->getValue()Ljava/lang/Object;
 
     move-result-object p0
 
-    check-cast p0, Laz5;
+    check-cast p0, Ls46;
 
     return-object p0
 .end method
@@ -793,33 +830,33 @@
 .method public final getSharedPreferences(Ljava/lang/String;I)Landroid/content/SharedPreferences;
     .locals 2
 
-    iget-object p0, p0, Lone/me/android/OneMeApplication;->Z:Lwfe;
+    iget-object p0, p0, Lone/me/android/OneMeApplication;->r0:Lzte;
 
-    invoke-virtual {p0}, Lwfe;->getValue()Ljava/lang/Object;
+    invoke-virtual {p0}, Lzte;->getValue()Ljava/lang/Object;
 
     move-result-object p0
 
-    check-cast p0, Lekd;
+    check-cast p0, Lvxd;
 
-    iget-object p2, p0, Lekd;->b:Lwfe;
+    iget-object p2, p0, Lvxd;->b:Lzte;
 
-    invoke-virtual {p2}, Lwfe;->getValue()Ljava/lang/Object;
+    invoke-virtual {p2}, Lzte;->getValue()Ljava/lang/Object;
 
     move-result-object p2
 
     check-cast p2, Ljava/util/concurrent/ConcurrentHashMap;
 
-    new-instance v0, Lywc;
+    new-instance v0, Lxrc;
 
-    const/4 v1, 0x4
+    const/4 v1, 0x7
 
-    invoke-direct {v0, p0, v1, p1}, Lywc;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+    invoke-direct {v0, p0, v1, p1}, Lxrc;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
 
-    new-instance p0, Lwh;
+    new-instance p0, Lfi;
 
     const/16 v1, 0x15
 
-    invoke-direct {p0, v1, v0}, Lwh;-><init>(ILjava/lang/Object;)V
+    invoke-direct {p0, v1, v0}, Lfi;-><init>(ILjava/lang/Object;)V
 
     invoke-virtual {p2, p1, p0}, Ljava/util/concurrent/ConcurrentHashMap;->computeIfAbsent(Ljava/lang/Object;Ljava/util/function/Function;)Ljava/lang/Object;
 
@@ -835,19 +872,19 @@
 
     invoke-super {p0, p1}, Landroid/app/Application;->onConfigurationChanged(Landroid/content/res/Configuration;)V
 
-    iget-object p0, p0, Lone/me/android/OneMeApplication;->o:Lwfe;
+    iget-object p0, p0, Lone/me/android/OneMeApplication;->X:Lzte;
 
-    invoke-virtual {p0}, Lwfe;->getValue()Ljava/lang/Object;
+    invoke-virtual {p0}, Lzte;->getValue()Ljava/lang/Object;
 
     move-result-object p0
 
-    check-cast p0, Lxd3;
+    check-cast p0, Ldh3;
 
-    iget-object v0, p0, Lxd3;->a:Lsc6;
+    iget-object v0, p0, Ldh3;->a:Lcec;
 
-    iget-object v1, v0, Lsc6;->b:Ljava/lang/Object;
+    iget-object v1, v0, Lcec;->Y:Ljava/lang/Object;
 
-    check-cast v1, Lje7;
+    check-cast v1, Lcl7;
 
     iget v2, p1, Landroid/content/res/Configuration;->uiMode:I
 
@@ -867,7 +904,7 @@
     const/4 v2, 0x0
 
     :goto_0
-    iget-object v3, p0, Lxd3;->b:Ljava/lang/Boolean;
+    iget-object v3, p0, Ldh3;->b:Ljava/lang/Boolean;
 
     if-nez v3, :cond_1
 
@@ -875,7 +912,7 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lxd3;->b:Ljava/lang/Boolean;
+    iput-object v0, p0, Ldh3;->b:Ljava/lang/Boolean;
 
     iget p1, p1, Landroid/content/res/Configuration;->fontScale:F
 
@@ -883,15 +920,15 @@
 
     move-result-object p1
 
-    iput-object p1, p0, Lxd3;->c:Ljava/lang/Float;
+    iput-object p1, p0, Ldh3;->c:Ljava/lang/Float;
 
-    invoke-interface {v1}, Lje7;->getValue()Ljava/lang/Object;
+    invoke-interface {v1}, Lcl7;->getValue()Ljava/lang/Object;
 
     move-result-object p0
 
-    check-cast p0, Lwke;
+    check-cast p0, Ldze;
 
-    invoke-virtual {p0, v4}, Lwke;->b(Z)V
+    invoke-virtual {p0, v4}, Ldze;->b(Z)V
 
     return-void
 
@@ -900,7 +937,7 @@
 
     move-result v3
 
-    const-string v5, "xd3"
+    const-string v5, "dh3"
 
     if-eq v3, v2, :cond_2
 
@@ -916,24 +953,24 @@
 
     move-result-object v3
 
-    invoke-static {v5, v3}, Lg47;->p(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v5, v3}, Ljtg;->l(Ljava/lang/String;Ljava/lang/String;)V
 
     invoke-static {v2}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object v2
 
-    iput-object v2, p0, Lxd3;->b:Ljava/lang/Boolean;
+    iput-object v2, p0, Ldh3;->b:Ljava/lang/Boolean;
 
-    invoke-interface {v1}, Lje7;->getValue()Ljava/lang/Object;
+    invoke-interface {v1}, Lcl7;->getValue()Ljava/lang/Object;
 
     move-result-object v1
 
-    check-cast v1, Lwke;
+    check-cast v1, Ldze;
 
-    invoke-virtual {v1, v4}, Lwke;->b(Z)V
+    invoke-virtual {v1, v4}, Ldze;->b(Z)V
 
     :cond_2
-    iget-object v1, p0, Lxd3;->c:Ljava/lang/Float;
+    iget-object v1, p0, Ldh3;->c:Ljava/lang/Float;
 
     invoke-virtual {v1}, Ljava/lang/Float;->floatValue()F
 
@@ -951,7 +988,7 @@
 
     invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-object v2, p0, Lxd3;->c:Ljava/lang/Float;
+    iget-object v2, p0, Ldh3;->c:Ljava/lang/Float;
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
@@ -967,7 +1004,7 @@
 
     move-result-object v1
 
-    invoke-static {v5, v1}, Lg47;->p(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v5, v1}, Ljtg;->l(Ljava/lang/String;Ljava/lang/String;)V
 
     iget p1, p1, Landroid/content/res/Configuration;->fontScale:F
 
@@ -975,78 +1012,78 @@
 
     move-result-object p1
 
-    iput-object p1, p0, Lxd3;->c:Ljava/lang/Float;
+    iput-object p1, p0, Ldh3;->c:Ljava/lang/Float;
 
-    iget-object p0, v0, Lsc6;->a:Ljava/lang/Object;
+    iget-object p0, v0, Lcec;->b:Ljava/lang/Object;
 
-    check-cast p0, Lu4;
+    check-cast p0, Lz4;
 
     const-class p1, Landroid/content/Context;
 
-    invoke-virtual {p0, p1}, Lu4;->c(Ljava/lang/Class;)Ljava/lang/Object;
+    invoke-virtual {p0, p1}, Lz4;->c(Ljava/lang/Class;)Ljava/lang/Object;
 
     move-result-object p0
 
     check-cast p0, Landroid/content/Context;
 
-    invoke-static {}, Lck4;->b()Lck4;
+    invoke-static {}, Lro4;->b()Lro4;
 
     move-result-object p0
 
-    invoke-virtual {p0}, Lck4;->c()V
+    invoke-virtual {p0}, Lro4;->c()V
 
-    iget-object p0, v0, Lsc6;->c:Ljava/lang/Object;
+    iget-object p0, v0, Lcec;->c:Ljava/lang/Object;
 
-    check-cast p0, Lje7;
+    check-cast p0, Lcl7;
 
-    invoke-interface {p0}, Lje7;->getValue()Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, Lf4b;
-
-    invoke-virtual {p0}, Lf4b;->a()V
-
-    iget-object p0, v0, Lsc6;->o:Ljava/lang/Object;
-
-    check-cast p0, Lje7;
-
-    invoke-interface {p0}, Lje7;->getValue()Ljava/lang/Object;
+    invoke-interface {p0}, Lcl7;->getValue()Ljava/lang/Object;
 
     move-result-object p0
 
-    check-cast p0, Lxk3;
+    check-cast p0, Lyfb;
 
-    invoke-virtual {p0}, Lxk3;->e()V
+    invoke-virtual {p0}, Lyfb;->a()V
 
-    iget-object p0, v0, Lsc6;->X:Ljava/lang/Object;
+    iget-object p0, v0, Lcec;->o:Ljava/lang/Object;
 
-    check-cast p0, Lje7;
+    check-cast p0, Lcl7;
 
-    invoke-interface {p0}, Lje7;->getValue()Ljava/lang/Object;
+    invoke-interface {p0}, Lcl7;->getValue()Ljava/lang/Object;
 
     move-result-object p0
 
-    check-cast p0, Ln82;
+    check-cast p0, Lco3;
 
-    invoke-virtual {p0}, Ln82;->s()V
+    invoke-virtual {p0}, Lco3;->e()V
+
+    iget-object p0, v0, Lcec;->X:Ljava/lang/Object;
+
+    check-cast p0, Lcl7;
+
+    invoke-interface {p0}, Lcl7;->getValue()Ljava/lang/Object;
+
+    move-result-object p0
+
+    check-cast p0, Lza2;
+
+    invoke-virtual {p0}, Lza2;->s()V
 
     :cond_3
     return-void
 .end method
 
 .method public final onCreate()V
-    .locals 22
+    .locals 17
 
     move-object/from16 v0, p0
 
-    sget-object v1, Lgz4;->a:Lgz4;
+    sget-object v1, Lp45;->a:Lp45;
 
-    iget-object v2, v0, Lone/me/android/OneMeApplication;->Y:Ljava/lang/String;
+    iget-object v2, v0, Lone/me/android/OneMeApplication;->Z:Ljava/lang/String;
 
     const-string v3, "onCreate"
 
-    invoke-static {v2, v3}, Lg47;->p(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v3}, Ljtg;->l(Ljava/lang/String;Ljava/lang/String;)V
 
     invoke-super {v0}, Landroid/app/Application;->onCreate()V
 
@@ -1059,51 +1096,51 @@
     goto/16 :goto_4
 
     :cond_0
-    invoke-virtual {v0}, Lone/me/android/OneMeApplication;->c()Laz5;
+    invoke-virtual {v0}, Lone/me/android/OneMeApplication;->c()Ls46;
 
     move-result-object v2
 
-    new-instance v3, Lg2a;
+    new-instance v3, Llaa;
 
-    const/4 v4, 0x5
+    const/4 v4, 0x6
 
-    invoke-direct {v3, v0, v4}, Lg2a;-><init>(Lone/me/android/OneMeApplication;I)V
+    invoke-direct {v3, v0, v4}, Llaa;-><init>(Lone/me/android/OneMeApplication;I)V
 
     const-string v5, "DevicePerformanceClass"
 
-    invoke-virtual {v0, v2, v5, v1, v3}, Lone/me/android/OneMeApplication;->b(Laz5;Ljava/lang/String;Ljava/lang/Iterable;Lv56;)Lxy5;
+    invoke-virtual {v0, v2, v5, v1, v3}, Lone/me/android/OneMeApplication;->b(Ls46;Ljava/lang/String;Ljava/lang/Iterable;Lzb6;)Lp46;
 
-    invoke-virtual {v0}, Lone/me/android/OneMeApplication;->c()Laz5;
+    invoke-virtual {v0}, Lone/me/android/OneMeApplication;->c()Ls46;
 
     move-result-object v2
 
-    new-instance v3, Lf2a;
+    new-instance v3, Lne9;
 
-    const/16 v5, 0x14
+    const/16 v5, 0x1b
 
-    invoke-direct {v3, v5}, Lf2a;-><init>(I)V
+    invoke-direct {v3, v5}, Lne9;-><init>(I)V
 
     const-string v5, "ServerPayloadCatchMode"
 
-    invoke-virtual {v0, v2, v5, v1, v3}, Lone/me/android/OneMeApplication;->b(Laz5;Ljava/lang/String;Ljava/lang/Iterable;Lv56;)Lxy5;
+    invoke-virtual {v0, v2, v5, v1, v3}, Lone/me/android/OneMeApplication;->b(Ls46;Ljava/lang/String;Ljava/lang/Iterable;Lzb6;)Lp46;
 
     move-result-object v2
 
-    invoke-virtual {v0}, Lone/me/android/OneMeApplication;->c()Laz5;
+    invoke-virtual {v0}, Lone/me/android/OneMeApplication;->c()Ls46;
 
     move-result-object v3
 
-    new-instance v5, Lf2a;
+    new-instance v5, Lmaa;
 
-    const/16 v6, 0x18
+    const/4 v6, 0x2
 
-    invoke-direct {v5, v6}, Lf2a;-><init>(I)V
+    invoke-direct {v5, v6}, Lmaa;-><init>(I)V
 
-    const-string v6, "Connect"
+    const-string v7, "Connect"
 
-    invoke-virtual {v0, v3, v6, v1, v5}, Lone/me/android/OneMeApplication;->b(Laz5;Ljava/lang/String;Ljava/lang/Iterable;Lv56;)Lxy5;
+    invoke-virtual {v0, v3, v7, v1, v5}, Lone/me/android/OneMeApplication;->b(Ls46;Ljava/lang/String;Ljava/lang/Iterable;Lzb6;)Lp46;
 
-    invoke-virtual {v0}, Lone/me/android/OneMeApplication;->c()Laz5;
+    invoke-virtual {v0}, Lone/me/android/OneMeApplication;->c()Ls46;
 
     move-result-object v3
 
@@ -1111,15 +1148,15 @@
 
     move-result-object v2
 
-    new-instance v5, Lg2a;
+    new-instance v5, Llaa;
 
-    const/16 v6, 0xc
+    const/16 v7, 0xc
 
-    invoke-direct {v5, v0, v6}, Lg2a;-><init>(Lone/me/android/OneMeApplication;I)V
+    invoke-direct {v5, v0, v7}, Llaa;-><init>(Lone/me/android/OneMeApplication;I)V
 
-    const-string v7, "LocaleHelper"
+    const-string v8, "LocaleHelper"
 
-    invoke-virtual {v0, v3, v7, v2, v5}, Lone/me/android/OneMeApplication;->b(Laz5;Ljava/lang/String;Ljava/lang/Iterable;Lv56;)Lxy5;
+    invoke-virtual {v0, v3, v8, v2, v5}, Lone/me/android/OneMeApplication;->b(Ls46;Ljava/lang/String;Ljava/lang/Iterable;Lzb6;)Lp46;
 
     move-result-object v2
 
@@ -1127,311 +1164,307 @@
 
     move-result-object v2
 
-    invoke-virtual {v0}, Lone/me/android/OneMeApplication;->c()Laz5;
+    invoke-virtual {v0}, Lone/me/android/OneMeApplication;->c()Ls46;
 
     move-result-object v3
 
-    new-instance v5, Lf2a;
+    new-instance v5, Lmaa;
 
-    const/16 v7, 0x19
+    const/4 v8, 0x3
 
-    invoke-direct {v5, v7}, Lf2a;-><init>(I)V
+    invoke-direct {v5, v8}, Lmaa;-><init>(I)V
 
-    const-string v7, "Legacy.Stickers"
+    const-string v9, "Legacy.Stickers"
 
-    invoke-virtual {v0, v3, v7, v2, v5}, Lone/me/android/OneMeApplication;->b(Laz5;Ljava/lang/String;Ljava/lang/Iterable;Lv56;)Lxy5;
+    invoke-virtual {v0, v3, v9, v2, v5}, Lone/me/android/OneMeApplication;->b(Ls46;Ljava/lang/String;Ljava/lang/Iterable;Lzb6;)Lp46;
 
-    invoke-virtual {v0}, Lone/me/android/OneMeApplication;->c()Laz5;
-
-    move-result-object v3
-
-    new-instance v5, Lf2a;
-
-    const/16 v7, 0x1a
-
-    invoke-direct {v5, v7}, Lf2a;-><init>(I)V
-
-    const-string v7, "ForceUpdateLogic.clearForceUpdateVersionIfNeed"
-
-    invoke-virtual {v0, v3, v7, v2, v5}, Lone/me/android/OneMeApplication;->b(Laz5;Ljava/lang/String;Ljava/lang/Iterable;Lv56;)Lxy5;
-
-    invoke-virtual {v0}, Lone/me/android/OneMeApplication;->c()Laz5;
+    invoke-virtual {v0}, Lone/me/android/OneMeApplication;->c()Ls46;
 
     move-result-object v3
 
-    new-instance v5, Lf2a;
+    new-instance v5, Lmaa;
 
-    const/16 v7, 0x1b
+    const/4 v9, 0x4
 
-    invoke-direct {v5, v7}, Lf2a;-><init>(I)V
+    invoke-direct {v5, v9}, Lmaa;-><init>(I)V
 
-    const-string v7, "ServiceTaskCheckProcessingTasks"
+    const-string v10, "ForceUpdateLogic.clearForceUpdateVersionIfNeed"
 
-    invoke-virtual {v0, v3, v7, v2, v5}, Lone/me/android/OneMeApplication;->b(Laz5;Ljava/lang/String;Ljava/lang/Iterable;Lv56;)Lxy5;
+    invoke-virtual {v0, v3, v10, v2, v5}, Lone/me/android/OneMeApplication;->b(Ls46;Ljava/lang/String;Ljava/lang/Iterable;Lzb6;)Lp46;
 
-    invoke-virtual {v0}, Lone/me/android/OneMeApplication;->c()Laz5;
-
-    move-result-object v3
-
-    new-instance v5, Lf2a;
-
-    const/16 v7, 0x1c
-
-    invoke-direct {v5, v7}, Lf2a;-><init>(I)V
-
-    const-string v7, "Legacy.ContactsLoader"
-
-    invoke-virtual {v0, v3, v7, v2, v5}, Lone/me/android/OneMeApplication;->b(Laz5;Ljava/lang/String;Ljava/lang/Iterable;Lv56;)Lxy5;
-
-    invoke-virtual {v0}, Lone/me/android/OneMeApplication;->c()Laz5;
+    invoke-virtual {v0}, Lone/me/android/OneMeApplication;->c()Ls46;
 
     move-result-object v3
 
-    new-instance v5, Lf2a;
+    new-instance v5, Lmaa;
 
-    const/16 v7, 0x1d
+    const/4 v10, 0x5
 
-    invoke-direct {v5, v7}, Lf2a;-><init>(I)V
+    invoke-direct {v5, v10}, Lmaa;-><init>(I)V
 
-    const-string v7, "Legacy.CallsHistoryLoader"
+    const-string v10, "ServiceTaskCheckProcessingTasks"
 
-    invoke-virtual {v0, v3, v7, v2, v5}, Lone/me/android/OneMeApplication;->b(Laz5;Ljava/lang/String;Ljava/lang/Iterable;Lv56;)Lxy5;
+    invoke-virtual {v0, v3, v10, v2, v5}, Lone/me/android/OneMeApplication;->b(Ls46;Ljava/lang/String;Ljava/lang/Iterable;Lzb6;)Lp46;
 
-    invoke-virtual {v0}, Lone/me/android/OneMeApplication;->c()Laz5;
-
-    move-result-object v3
-
-    new-instance v5, Lh2a;
-
-    const/4 v7, 0x0
-
-    invoke-direct {v5, v7}, Lh2a;-><init>(I)V
-
-    const-string v8, "Legacy.MessageControllerConsumer"
-
-    invoke-virtual {v0, v3, v8, v2, v5}, Lone/me/android/OneMeApplication;->b(Laz5;Ljava/lang/String;Ljava/lang/Iterable;Lv56;)Lxy5;
-
-    invoke-virtual {v0}, Lone/me/android/OneMeApplication;->c()Laz5;
+    invoke-virtual {v0}, Lone/me/android/OneMeApplication;->c()Ls46;
 
     move-result-object v3
 
-    new-instance v5, Lg2a;
+    new-instance v5, Lmaa;
 
-    const/4 v8, 0x6
+    invoke-direct {v5, v4}, Lmaa;-><init>(I)V
 
-    invoke-direct {v5, v0, v8}, Lg2a;-><init>(Lone/me/android/OneMeApplication;I)V
+    const-string v4, "Legacy.ContactsLoader"
 
-    const-string v9, "Legacy.ActivityLifecycleCallbacks"
+    invoke-virtual {v0, v3, v4, v2, v5}, Lone/me/android/OneMeApplication;->b(Ls46;Ljava/lang/String;Ljava/lang/Iterable;Lzb6;)Lp46;
 
-    invoke-virtual {v0, v3, v9, v2, v5}, Lone/me/android/OneMeApplication;->b(Laz5;Ljava/lang/String;Ljava/lang/Iterable;Lv56;)Lxy5;
-
-    invoke-virtual {v0}, Lone/me/android/OneMeApplication;->c()Laz5;
+    invoke-virtual {v0}, Lone/me/android/OneMeApplication;->c()Ls46;
 
     move-result-object v3
 
-    new-instance v5, Lf2a;
+    new-instance v4, Lmaa;
 
-    invoke-direct {v5, v6}, Lf2a;-><init>(I)V
+    const/4 v5, 0x7
 
-    const-string v6, "RestoreMessageUploads"
+    invoke-direct {v4, v5}, Lmaa;-><init>(I)V
 
-    invoke-virtual {v0, v3, v6, v2, v5}, Lone/me/android/OneMeApplication;->b(Laz5;Ljava/lang/String;Ljava/lang/Iterable;Lv56;)Lxy5;
+    const-string v10, "Legacy.CallsHistoryLoader"
 
-    invoke-virtual {v0}, Lone/me/android/OneMeApplication;->c()Laz5;
+    invoke-virtual {v0, v3, v10, v2, v4}, Lone/me/android/OneMeApplication;->b(Ls46;Ljava/lang/String;Ljava/lang/Iterable;Lzb6;)Lp46;
 
-    move-result-object v3
-
-    new-instance v5, Lf2a;
-
-    const/16 v6, 0xd
-
-    invoke-direct {v5, v6}, Lf2a;-><init>(I)V
-
-    const-string v9, "Legacy.Drafts"
-
-    invoke-virtual {v0, v3, v9, v2, v5}, Lone/me/android/OneMeApplication;->b(Laz5;Ljava/lang/String;Ljava/lang/Iterable;Lv56;)Lxy5;
-
-    invoke-virtual {v0}, Lone/me/android/OneMeApplication;->c()Laz5;
+    invoke-virtual {v0}, Lone/me/android/OneMeApplication;->c()Ls46;
 
     move-result-object v3
 
-    new-instance v5, Lf2a;
+    new-instance v4, Lmaa;
 
-    const/16 v9, 0xe
+    const/16 v10, 0x8
 
-    invoke-direct {v5, v9}, Lf2a;-><init>(I)V
+    invoke-direct {v4, v10}, Lmaa;-><init>(I)V
 
-    const-string v9, "Legacy.Phonebook"
+    const-string v11, "Legacy.MessageControllerConsumer"
 
-    invoke-virtual {v0, v3, v9, v2, v5}, Lone/me/android/OneMeApplication;->b(Laz5;Ljava/lang/String;Ljava/lang/Iterable;Lv56;)Lxy5;
+    invoke-virtual {v0, v3, v11, v2, v4}, Lone/me/android/OneMeApplication;->b(Ls46;Ljava/lang/String;Ljava/lang/Iterable;Lzb6;)Lp46;
 
-    invoke-virtual {v0}, Lone/me/android/OneMeApplication;->c()Laz5;
-
-    move-result-object v3
-
-    new-instance v5, Lf2a;
-
-    const/16 v9, 0xf
-
-    invoke-direct {v5, v9}, Lf2a;-><init>(I)V
-
-    const-string v10, "Legacy.SystemServicesManager"
-
-    invoke-virtual {v0, v3, v10, v1, v5}, Lone/me/android/OneMeApplication;->b(Laz5;Ljava/lang/String;Ljava/lang/Iterable;Lv56;)Lxy5;
-
-    invoke-virtual {v0}, Lone/me/android/OneMeApplication;->c()Laz5;
+    invoke-virtual {v0}, Lone/me/android/OneMeApplication;->c()Ls46;
 
     move-result-object v3
 
-    new-instance v5, Lf2a;
+    new-instance v4, Llaa;
 
-    const/16 v10, 0x10
+    invoke-direct {v4, v0, v5}, Llaa;-><init>(Lone/me/android/OneMeApplication;I)V
 
-    invoke-direct {v5, v10}, Lf2a;-><init>(I)V
+    const-string v5, "Legacy.ActivityLifecycleCallbacks"
+
+    invoke-virtual {v0, v3, v5, v2, v4}, Lone/me/android/OneMeApplication;->b(Ls46;Ljava/lang/String;Ljava/lang/Iterable;Lzb6;)Lp46;
+
+    invoke-virtual {v0}, Lone/me/android/OneMeApplication;->c()Ls46;
+
+    move-result-object v3
+
+    new-instance v4, Lne9;
+
+    const/16 v5, 0x13
+
+    invoke-direct {v4, v5}, Lne9;-><init>(I)V
+
+    const-string v5, "RestoreMessageUploads"
+
+    invoke-virtual {v0, v3, v5, v2, v4}, Lone/me/android/OneMeApplication;->b(Ls46;Ljava/lang/String;Ljava/lang/Iterable;Lzb6;)Lp46;
+
+    invoke-virtual {v0}, Lone/me/android/OneMeApplication;->c()Ls46;
+
+    move-result-object v3
+
+    new-instance v4, Lne9;
+
+    const/16 v5, 0x14
+
+    invoke-direct {v4, v5}, Lne9;-><init>(I)V
+
+    const-string v11, "Legacy.Drafts"
+
+    invoke-virtual {v0, v3, v11, v2, v4}, Lone/me/android/OneMeApplication;->b(Ls46;Ljava/lang/String;Ljava/lang/Iterable;Lzb6;)Lp46;
+
+    invoke-virtual {v0}, Lone/me/android/OneMeApplication;->c()Ls46;
+
+    move-result-object v3
+
+    new-instance v4, Lne9;
+
+    const/16 v11, 0x15
+
+    invoke-direct {v4, v11}, Lne9;-><init>(I)V
+
+    const-string v11, "Legacy.Phonebook"
+
+    invoke-virtual {v0, v3, v11, v2, v4}, Lone/me/android/OneMeApplication;->b(Ls46;Ljava/lang/String;Ljava/lang/Iterable;Lzb6;)Lp46;
+
+    invoke-virtual {v0}, Lone/me/android/OneMeApplication;->c()Ls46;
+
+    move-result-object v3
+
+    new-instance v4, Lne9;
+
+    const/16 v11, 0x16
+
+    invoke-direct {v4, v11}, Lne9;-><init>(I)V
+
+    const-string v11, "Legacy.SystemServicesManager"
+
+    invoke-virtual {v0, v3, v11, v1, v4}, Lone/me/android/OneMeApplication;->b(Ls46;Ljava/lang/String;Ljava/lang/Iterable;Lzb6;)Lp46;
+
+    invoke-virtual {v0}, Lone/me/android/OneMeApplication;->c()Ls46;
+
+    move-result-object v3
+
+    new-instance v4, Lne9;
+
+    const/16 v11, 0x17
+
+    invoke-direct {v4, v11}, Lne9;-><init>(I)V
 
     const-string v11, "Legacy.ShortcutsHelper"
 
-    invoke-virtual {v0, v3, v11, v2, v5}, Lone/me/android/OneMeApplication;->b(Laz5;Ljava/lang/String;Ljava/lang/Iterable;Lv56;)Lxy5;
+    invoke-virtual {v0, v3, v11, v2, v4}, Lone/me/android/OneMeApplication;->b(Ls46;Ljava/lang/String;Ljava/lang/Iterable;Lzb6;)Lp46;
 
-    invoke-virtual {v0}, Lone/me/android/OneMeApplication;->c()Laz5;
-
-    move-result-object v3
-
-    new-instance v5, Lg2a;
-
-    const/4 v11, 0x7
-
-    invoke-direct {v5, v0, v11}, Lg2a;-><init>(Lone/me/android/OneMeApplication;I)V
-
-    const-string v12, "Legacy.Permissions"
-
-    invoke-virtual {v0, v3, v12, v1, v5}, Lone/me/android/OneMeApplication;->b(Laz5;Ljava/lang/String;Ljava/lang/Iterable;Lv56;)Lxy5;
-
-    invoke-virtual {v0}, Lone/me/android/OneMeApplication;->c()Laz5;
+    invoke-virtual {v0}, Lone/me/android/OneMeApplication;->c()Ls46;
 
     move-result-object v3
 
-    new-instance v5, Lg2a;
+    new-instance v4, Llaa;
 
-    const/16 v12, 0x8
+    invoke-direct {v4, v0, v10}, Llaa;-><init>(Lone/me/android/OneMeApplication;I)V
 
-    invoke-direct {v5, v0, v12}, Lg2a;-><init>(Lone/me/android/OneMeApplication;I)V
+    const-string v10, "PermissionStats"
 
-    const-string v13, "PermissionStats"
+    invoke-virtual {v0, v3, v10, v1, v4}, Lone/me/android/OneMeApplication;->b(Ls46;Ljava/lang/String;Ljava/lang/Iterable;Lzb6;)Lp46;
 
-    invoke-virtual {v0, v3, v13, v1, v5}, Lone/me/android/OneMeApplication;->b(Laz5;Ljava/lang/String;Ljava/lang/Iterable;Lv56;)Lxy5;
-
-    invoke-virtual {v0}, Lone/me/android/OneMeApplication;->c()Laz5;
+    invoke-virtual {v0}, Lone/me/android/OneMeApplication;->c()Ls46;
 
     move-result-object v3
 
-    new-instance v5, Lf2a;
+    new-instance v4, Lne9;
 
-    const/16 v13, 0x11
+    const/16 v10, 0x18
 
-    invoke-direct {v5, v13}, Lf2a;-><init>(I)V
+    invoke-direct {v4, v10}, Lne9;-><init>(I)V
 
-    const-string v13, "Legacy.PhoneNumberUtil"
+    const-string v10, "Legacy.PhoneNumberUtil"
 
-    invoke-virtual {v0, v3, v13, v2, v5}, Lone/me/android/OneMeApplication;->b(Laz5;Ljava/lang/String;Ljava/lang/Iterable;Lv56;)Lxy5;
+    invoke-virtual {v0, v3, v10, v2, v4}, Lone/me/android/OneMeApplication;->b(Ls46;Ljava/lang/String;Ljava/lang/Iterable;Lzb6;)Lp46;
 
-    invoke-virtual {v0}, Lone/me/android/OneMeApplication;->c()Laz5;
-
-    move-result-object v3
-
-    new-instance v5, Lf2a;
-
-    const/16 v13, 0x12
-
-    invoke-direct {v5, v13}, Lf2a;-><init>(I)V
-
-    const-string v13, "Legacy.CallLinksLoader"
-
-    invoke-virtual {v0, v3, v13, v2, v5}, Lone/me/android/OneMeApplication;->b(Laz5;Ljava/lang/String;Ljava/lang/Iterable;Lv56;)Lxy5;
-
-    invoke-virtual {v0}, Lone/me/android/OneMeApplication;->c()Laz5;
+    invoke-virtual {v0}, Lone/me/android/OneMeApplication;->c()Ls46;
 
     move-result-object v3
 
-    new-instance v5, Lg2a;
+    new-instance v4, Lne9;
 
-    const/16 v13, 0x9
+    const/16 v10, 0x19
 
-    invoke-direct {v5, v0, v13}, Lg2a;-><init>(Lone/me/android/OneMeApplication;I)V
+    invoke-direct {v4, v10}, Lne9;-><init>(I)V
 
-    const-string v13, "Legacy.StartupListeners"
+    const-string v10, "Legacy.CallLinksLoader"
 
-    invoke-virtual {v0, v3, v13, v2, v5}, Lone/me/android/OneMeApplication;->b(Laz5;Ljava/lang/String;Ljava/lang/Iterable;Lv56;)Lxy5;
+    invoke-virtual {v0, v3, v10, v2, v4}, Lone/me/android/OneMeApplication;->b(Ls46;Ljava/lang/String;Ljava/lang/Iterable;Lzb6;)Lp46;
 
-    invoke-virtual {v0}, Lone/me/android/OneMeApplication;->c()Laz5;
+    invoke-virtual {v0}, Lone/me/android/OneMeApplication;->c()Ls46;
 
-    move-result-object v2
+    move-result-object v3
 
-    new-instance v3, Lf2a;
+    new-instance v4, Llaa;
 
-    const/16 v5, 0x15
+    const/16 v10, 0x9
 
-    invoke-direct {v3, v5}, Lf2a;-><init>(I)V
+    invoke-direct {v4, v0, v10}, Llaa;-><init>(Lone/me/android/OneMeApplication;I)V
 
-    const-string v5, "Shortcuts and badge warmup"
+    const-string v10, "Legacy.StartupListeners"
 
-    invoke-virtual {v0, v2, v5, v1, v3}, Lone/me/android/OneMeApplication;->b(Laz5;Ljava/lang/String;Ljava/lang/Iterable;Lv56;)Lxy5;
+    invoke-virtual {v0, v3, v10, v2, v4}, Lone/me/android/OneMeApplication;->b(Ls46;Ljava/lang/String;Ljava/lang/Iterable;Lzb6;)Lp46;
 
-    invoke-virtual {v0}, Lone/me/android/OneMeApplication;->c()Laz5;
-
-    move-result-object v2
-
-    new-instance v3, Lg2a;
-
-    const/16 v5, 0xa
-
-    invoke-direct {v3, v0, v5}, Lg2a;-><init>(Lone/me/android/OneMeApplication;I)V
-
-    const-string v5, "InAppReviewUncaughtExceptionHandler"
-
-    invoke-virtual {v0, v2, v5, v1, v3}, Lone/me/android/OneMeApplication;->b(Laz5;Ljava/lang/String;Ljava/lang/Iterable;Lv56;)Lxy5;
-
-    invoke-virtual {v0}, Lone/me/android/OneMeApplication;->c()Laz5;
+    invoke-virtual {v0}, Lone/me/android/OneMeApplication;->c()Ls46;
 
     move-result-object v2
 
-    new-instance v3, Lf2a;
+    new-instance v3, Lne9;
 
-    const/16 v5, 0x16
+    const/16 v4, 0x1c
 
-    invoke-direct {v3, v5}, Lf2a;-><init>(I)V
+    invoke-direct {v3, v4}, Lne9;-><init>(I)V
 
-    const-string v5, "HeartbeatScheduler"
+    const-string v4, "Shortcuts and badge warmup"
 
-    invoke-virtual {v0, v2, v5, v1, v3}, Lone/me/android/OneMeApplication;->b(Laz5;Ljava/lang/String;Ljava/lang/Iterable;Lv56;)Lxy5;
+    invoke-virtual {v0, v2, v4, v1, v3}, Lone/me/android/OneMeApplication;->b(Ls46;Ljava/lang/String;Ljava/lang/Iterable;Lzb6;)Lp46;
 
-    invoke-virtual {v0}, Lone/me/android/OneMeApplication;->c()Laz5;
-
-    move-result-object v2
-
-    new-instance v3, Lf2a;
-
-    invoke-direct {v3, v0}, Lf2a;-><init>(Lone/me/android/OneMeApplication;)V
-
-    const-string v5, "Db.NotMainThreadListener"
-
-    invoke-virtual {v0, v2, v5, v1, v3}, Lone/me/android/OneMeApplication;->b(Laz5;Ljava/lang/String;Ljava/lang/Iterable;Lv56;)Lxy5;
-
-    invoke-virtual {v0}, Lone/me/android/OneMeApplication;->c()Laz5;
+    invoke-virtual {v0}, Lone/me/android/OneMeApplication;->c()Ls46;
 
     move-result-object v2
 
-    new-instance v3, Lg2a;
+    new-instance v3, Llaa;
 
-    const/16 v5, 0xb
+    const/16 v4, 0xa
 
-    invoke-direct {v3, v0, v5}, Lg2a;-><init>(Lone/me/android/OneMeApplication;I)V
+    invoke-direct {v3, v0, v4}, Llaa;-><init>(Lone/me/android/OneMeApplication;I)V
 
-    const-string v5, "Mytracker"
+    const-string v10, "InAppReviewUncaughtExceptionHandler"
 
-    invoke-virtual {v0, v2, v5, v1, v3}, Lone/me/android/OneMeApplication;->b(Laz5;Ljava/lang/String;Ljava/lang/Iterable;Lv56;)Lxy5;
+    invoke-virtual {v0, v2, v10, v1, v3}, Lone/me/android/OneMeApplication;->b(Ls46;Ljava/lang/String;Ljava/lang/Iterable;Lzb6;)Lp46;
 
-    invoke-virtual {v0}, Lone/me/android/OneMeApplication;->c()Laz5;
+    invoke-virtual {v0}, Lone/me/android/OneMeApplication;->c()Ls46;
+
+    move-result-object v2
+
+    new-instance v3, Lne9;
+
+    const/16 v10, 0x1d
+
+    invoke-direct {v3, v10}, Lne9;-><init>(I)V
+
+    const-string v10, "HeartbeatScheduler"
+
+    invoke-virtual {v0, v2, v10, v1, v3}, Lone/me/android/OneMeApplication;->b(Ls46;Ljava/lang/String;Ljava/lang/Iterable;Lzb6;)Lp46;
+
+    invoke-virtual {v0}, Lone/me/android/OneMeApplication;->c()Ls46;
+
+    move-result-object v2
+
+    new-instance v3, Lmaa;
+
+    const/4 v10, 0x0
+
+    invoke-direct {v3, v10}, Lmaa;-><init>(I)V
+
+    const-string v11, "DbCleanUpScheduler"
+
+    invoke-virtual {v0, v2, v11, v1, v3}, Lone/me/android/OneMeApplication;->b(Ls46;Ljava/lang/String;Ljava/lang/Iterable;Lzb6;)Lp46;
+
+    invoke-virtual {v0}, Lone/me/android/OneMeApplication;->c()Ls46;
+
+    move-result-object v2
+
+    new-instance v3, Lmaa;
+
+    invoke-direct {v3, v0}, Lmaa;-><init>(Lone/me/android/OneMeApplication;)V
+
+    const-string v11, "Db.NotMainThreadListener"
+
+    invoke-virtual {v0, v2, v11, v1, v3}, Lone/me/android/OneMeApplication;->b(Ls46;Ljava/lang/String;Ljava/lang/Iterable;Lzb6;)Lp46;
+
+    invoke-virtual {v0}, Lone/me/android/OneMeApplication;->c()Ls46;
+
+    move-result-object v2
+
+    new-instance v3, Llaa;
+
+    const/16 v11, 0xb
+
+    invoke-direct {v3, v0, v11}, Llaa;-><init>(Lone/me/android/OneMeApplication;I)V
+
+    const-string v12, "Mytracker"
+
+    invoke-virtual {v0, v2, v12, v1, v3}, Lone/me/android/OneMeApplication;->b(Ls46;Ljava/lang/String;Ljava/lang/Iterable;Lzb6;)Lp46;
+
+    invoke-virtual {v0}, Lone/me/android/OneMeApplication;->c()Ls46;
 
     move-result-object v2
 
@@ -1440,65 +1473,59 @@
     const/4 v3, 0x1
 
     :try_start_0
-    iget-object v5, v2, Laz5;->c:Ljava/util/ArrayList;
+    iget-object v12, v2, Ls46;->c:Ljava/util/ArrayList;
 
-    invoke-static {v5}, Ljava/util/concurrent/ForkJoinTask;->invokeAll(Ljava/util/Collection;)Ljava/util/Collection;
+    invoke-static {v12}, Ljava/util/concurrent/ForkJoinTask;->invokeAll(Ljava/util/Collection;)Ljava/util/Collection;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
-    iget-object v2, v2, Laz5;->c:Ljava/util/ArrayList;
+    iget-object v2, v2, Ls46;->c:Ljava/util/ArrayList;
 
     invoke-virtual {v2}, Ljava/util/ArrayList;->clear()V
 
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
-    move-result-wide v13
+    move-result-wide v12
 
-    move-wide v15, v13
+    iget-wide v14, v0, Lone/me/android/OneMeApplication;->Y:J
 
-    iget-wide v12, v0, Lone/me/android/OneMeApplication;->X:J
+    sub-long/2addr v12, v14
 
-    sub-long v13, v15, v12
-
-    invoke-static {v0}, Ln1c;->p(Landroid/content/Context;)Lwqa;
+    invoke-static {v0}, Lyu0;->t(Landroid/content/Context;)Lr1b;
 
     move-result-object v2
 
-    sget-object v12, Lq6a;->a:Lq6a;
+    sget-object v14, Lbfa;->a:Lbfa;
 
-    invoke-virtual {v12}, Lq6a;->n()La5b;
+    invoke-virtual {v14}, Lbfa;->n()Ltgb;
 
-    move-result-object v12
+    move-result-object v14
 
-    iget-object v12, v12, La5b;->b:Le6d;
+    iget-object v14, v14, Ltgb;->b:Lyjd;
 
-    invoke-virtual {v12}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    invoke-virtual {v14}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    sget-object v12, Ld6d;->c:[J
+    sget-object v14, Lxjd;->c:[J
 
-    array-length v15, v12
+    array-length v15, v14
 
-    const/4 v5, 0x3
+    if-ne v15, v8, :cond_b
 
-    if-ne v15, v5, :cond_b
-
-    iget-object v2, v2, Lwqa;->a:Lyi4;
+    iget-object v2, v2, Lr1b;->a:Lon4;
 
     invoke-virtual {v2}, Ljava/lang/Enum;->ordinal()I
 
     move-result v2
 
-    const/4 v15, 0x2
-
     if-eqz v2, :cond_4
 
     if-eq v2, v3, :cond_3
 
-    if-ne v2, v15, :cond_2
+    if-ne v2, v6, :cond_2
 
-    aget-wide v17, v12, v15
+    aget-wide v14, v14, v6
 
-    cmp-long v2, v13, v17
+    cmp-long v2, v12, v14
 
     if-gez v2, :cond_1
 
@@ -1508,7 +1535,7 @@
     goto :goto_1
 
     :cond_1
-    move v2, v7
+    move v2, v10
 
     goto :goto_1
 
@@ -1520,153 +1547,147 @@
     throw v0
 
     :cond_3
-    aget-wide v17, v12, v3
+    aget-wide v14, v14, v3
 
-    cmp-long v2, v13, v17
+    cmp-long v2, v12, v14
 
     if-gez v2, :cond_1
 
     goto :goto_0
 
     :cond_4
-    aget-wide v17, v12, v7
+    aget-wide v14, v14, v10
 
-    cmp-long v2, v13, v17
+    cmp-long v2, v12, v14
 
     if-gez v2, :cond_1
 
     goto :goto_0
 
     :goto_1
-    new-instance v12, Ljava/lang/StringBuilder;
+    new-instance v8, Ljava/lang/StringBuilder;
 
-    invoke-direct {v12}, Ljava/lang/StringBuilder;-><init>()V
+    invoke-direct {v8}, Ljava/lang/StringBuilder;-><init>()V
 
-    new-instance v11, Ljava/lang/StringBuilder;
+    new-instance v14, Ljava/lang/StringBuilder;
 
-    invoke-direct {v11}, Ljava/lang/StringBuilder;-><init>()V
+    invoke-direct {v14}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-virtual {v11, v13, v14}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    invoke-virtual {v14, v12, v13}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
-    const-string v8, "ms from start!\n"
+    const-string v15, "ms from start!\n"
 
-    invoke-virtual {v11, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v14, v15}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v11}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v14}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object v8
+    move-result-object v14
 
-    invoke-virtual {v12, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v8, v14}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const-string v8, "Total tasks durations: "
+    const-string v14, "Total tasks durations: "
 
-    invoke-virtual {v12, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v8, v14}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0}, Lone/me/android/OneMeApplication;->c()Laz5;
+    invoke-virtual {v0}, Lone/me/android/OneMeApplication;->c()Ls46;
 
-    move-result-object v8
+    move-result-object v14
 
-    iget-object v8, v8, Laz5;->b:Lzy5;
+    iget-object v14, v14, Ls46;->b:Lr46;
 
-    iget-object v8, v8, Lzy5;->b:Ljava/lang/Object;
+    iget-object v14, v14, Lr46;->b:Ljava/lang/Object;
 
-    check-cast v8, Ljava/util/concurrent/ConcurrentSkipListSet;
+    check-cast v14, Ljava/util/concurrent/ConcurrentSkipListSet;
 
-    invoke-virtual {v8}, Ljava/util/concurrent/ConcurrentSkipListSet;->iterator()Ljava/util/Iterator;
+    invoke-virtual {v14}, Ljava/util/concurrent/ConcurrentSkipListSet;->iterator()Ljava/util/Iterator;
 
-    move-result-object v8
+    move-result-object v14
 
-    const-wide/16 v19, 0x0
+    const-wide/16 v15, 0x0
 
-    move-wide/from16 v10, v19
+    move-wide v4, v15
 
     :goto_2
-    invoke-interface {v8}, Ljava/util/Iterator;->hasNext()Z
+    invoke-interface {v14}, Ljava/util/Iterator;->hasNext()Z
 
-    move-result v19
+    move-result v15
 
-    if-eqz v19, :cond_5
+    if-eqz v15, :cond_5
 
-    invoke-interface {v8}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    invoke-interface {v14}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    move-result-object v19
+    move-result-object v15
 
-    move-object/from16 v4, v19
+    check-cast v15, Lea8;
 
-    check-cast v4, Le38;
+    invoke-virtual {v15}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    invoke-virtual {v4}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    sget-object v7, Ljava/util/concurrent/TimeUnit;->NANOSECONDS:Ljava/util/concurrent/TimeUnit;
 
-    sget-object v9, Ljava/util/concurrent/TimeUnit;->NANOSECONDS:Ljava/util/concurrent/TimeUnit;
+    iget-wide v10, v15, Lea8;->c:J
 
-    move-object/from16 v21, v8
+    invoke-virtual {v7, v10, v11}, Ljava/util/concurrent/TimeUnit;->toMillis(J)J
 
-    iget-wide v7, v4, Le38;->c:J
+    move-result-wide v10
 
-    invoke-virtual {v9, v7, v8}, Ljava/util/concurrent/TimeUnit;->toMillis(J)J
+    add-long/2addr v4, v10
 
-    move-result-wide v7
+    const/16 v7, 0xc
 
-    add-long/2addr v10, v7
+    const/4 v10, 0x0
 
-    move-object/from16 v8, v21
-
-    const/4 v4, 0x5
-
-    const/4 v7, 0x0
-
-    const/16 v9, 0xf
+    const/16 v11, 0xb
 
     goto :goto_2
 
     :cond_5
-    invoke-virtual {v12, v10, v11}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    invoke-virtual {v8, v4, v5}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
     const-string v4, "ms \nTopmost by durations:\n"
 
-    invoke-virtual {v12, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v8, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0}, Lone/me/android/OneMeApplication;->c()Laz5;
+    invoke-virtual {v0}, Lone/me/android/OneMeApplication;->c()Ls46;
 
     move-result-object v4
 
-    iget-object v4, v4, Laz5;->b:Lzy5;
+    iget-object v4, v4, Ls46;->b:Lr46;
 
     invoke-static {}, Ljava/util/Comparator;->reverseOrder()Ljava/util/Comparator;
 
-    move-result-object v7
+    move-result-object v5
 
-    new-instance v8, Ljava/util/TreeSet;
+    new-instance v7, Ljava/util/TreeSet;
 
-    invoke-direct {v8, v7}, Ljava/util/TreeSet;-><init>(Ljava/util/Comparator;)V
+    invoke-direct {v7, v5}, Ljava/util/TreeSet;-><init>(Ljava/util/Comparator;)V
 
-    invoke-static {v4, v8}, Lp43;->T0(Ljava/lang/Iterable;Ljava/util/AbstractCollection;)V
+    invoke-static {v4, v7}, Lq73;->y0(Ljava/lang/Iterable;Ljava/util/AbstractCollection;)V
 
-    new-instance v4, Lj2a;
+    new-instance v4, Lnaa;
 
-    invoke-direct {v4, v3}, Lj2a;-><init>(I)V
+    invoke-direct {v4, v3}, Lnaa;-><init>(I)V
 
-    const/16 v7, 0x2c
+    const/16 v5, 0x2c
 
-    invoke-static {v8, v12, v4, v7}, Lp43;->F0(Ljava/lang/Iterable;Ljava/lang/Appendable;Lx56;I)V
+    invoke-static {v7, v8, v4, v5}, Lq73;->k0(Ljava/lang/Iterable;Ljava/lang/Appendable;Lbc6;I)V
 
     const-string v4, "\nTopmost by waiting:\n"
 
-    invoke-virtual {v12, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v8, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0}, Lone/me/android/OneMeApplication;->c()Laz5;
+    invoke-virtual {v0}, Lone/me/android/OneMeApplication;->c()Ls46;
 
     move-result-object v4
 
-    iget-object v4, v4, Laz5;->b:Lzy5;
+    iget-object v4, v4, Ls46;->b:Lr46;
 
-    sget-object v8, Lu2a;->a:Lu2a;
+    sget-object v7, Lyaa;->a:Lyaa;
 
-    new-instance v8, Ldz6;
+    new-instance v7, Lx57;
 
-    invoke-direct {v8, v3}, Ldz6;-><init>(I)V
+    invoke-direct {v7, v3}, Lx57;-><init>(I)V
 
-    invoke-static {v8}, Ljava/util/Comparator;->comparingLong(Ljava/util/function/ToLongFunction;)Ljava/util/Comparator;
+    invoke-static {v7}, Ljava/util/Comparator;->comparingLong(Ljava/util/function/ToLongFunction;)Ljava/util/Comparator;
 
     move-result-object v3
 
@@ -1674,33 +1695,33 @@
 
     move-result-object v3
 
-    new-instance v8, Ljava/util/TreeSet;
+    new-instance v7, Ljava/util/TreeSet;
 
-    invoke-direct {v8, v3}, Ljava/util/TreeSet;-><init>(Ljava/util/Comparator;)V
+    invoke-direct {v7, v3}, Ljava/util/TreeSet;-><init>(Ljava/util/Comparator;)V
 
-    invoke-static {v4, v8}, Lp43;->T0(Ljava/lang/Iterable;Ljava/util/AbstractCollection;)V
+    invoke-static {v4, v7}, Lq73;->y0(Ljava/lang/Iterable;Ljava/util/AbstractCollection;)V
 
-    new-instance v3, Lj2a;
+    new-instance v3, Lnaa;
 
-    invoke-direct {v3, v15}, Lj2a;-><init>(I)V
+    invoke-direct {v3, v6}, Lnaa;-><init>(I)V
 
-    invoke-static {v8, v12, v3, v7}, Lp43;->F0(Ljava/lang/Iterable;Ljava/lang/Appendable;Lx56;I)V
+    invoke-static {v7, v8, v3, v5}, Lq73;->k0(Ljava/lang/Iterable;Ljava/lang/Appendable;Lbc6;I)V
 
     const-string v3, "\nThreads info:\n"
 
-    invoke-virtual {v12, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v8, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0}, Lone/me/android/OneMeApplication;->c()Laz5;
+    invoke-virtual {v0}, Lone/me/android/OneMeApplication;->c()Ls46;
 
     move-result-object v3
 
-    iget-object v3, v3, Laz5;->b:Lzy5;
+    iget-object v3, v3, Ls46;->b:Lr46;
 
     new-instance v4, Ljava/util/LinkedHashMap;
 
     invoke-direct {v4}, Ljava/util/LinkedHashMap;-><init>()V
 
-    iget-object v3, v3, Lzy5;->b:Ljava/lang/Object;
+    iget-object v3, v3, Lr46;->b:Ljava/lang/Object;
 
     check-cast v3, Ljava/util/concurrent/ConcurrentSkipListSet;
 
@@ -1711,130 +1732,134 @@
     :goto_3
     invoke-interface {v3}, Ljava/util/Iterator;->hasNext()Z
 
-    move-result v7
+    move-result v5
 
-    if-eqz v7, :cond_7
+    if-eqz v5, :cond_7
 
     invoke-interface {v3}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
+    move-result-object v5
+
+    move-object v6, v5
+
+    check-cast v6, Lea8;
+
+    iget-object v6, v6, Lea8;->o:Ljava/lang/String;
+
+    invoke-virtual {v4, v6}, Ljava/util/LinkedHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
     move-result-object v7
 
-    move-object v8, v7
+    if-nez v7, :cond_6
 
-    check-cast v8, Le38;
+    new-instance v7, Ljava/util/ArrayList;
 
-    iget-object v8, v8, Le38;->o:Ljava/lang/String;
+    invoke-direct {v7}, Ljava/util/ArrayList;-><init>()V
 
-    invoke-virtual {v4, v8}, Ljava/util/LinkedHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v9
-
-    if-nez v9, :cond_6
-
-    new-instance v9, Ljava/util/ArrayList;
-
-    invoke-direct {v9}, Ljava/util/ArrayList;-><init>()V
-
-    invoke-interface {v4, v8, v9}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v4, v6, v7}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     :cond_6
-    check-cast v9, Ljava/util/List;
+    check-cast v7, Ljava/util/List;
 
-    invoke-interface {v9, v7}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+    invoke-interface {v7, v5}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     goto :goto_3
 
     :cond_7
-    new-instance v3, Luj;
+    new-instance v3, Ldk;
 
-    invoke-direct {v3, v6, v12}, Luj;-><init>(ILjava/lang/Object;)V
+    const/16 v5, 0xe
 
-    new-instance v6, Li23;
+    invoke-direct {v3, v5, v8}, Ldk;-><init>(ILjava/lang/Object;)V
 
-    const/4 v7, 0x4
+    new-instance v6, Lg53;
 
-    invoke-direct {v6, v7, v3}, Li23;-><init>(ILjava/lang/Object;)V
+    invoke-direct {v6, v9, v3}, Lg53;-><init>(ILjava/lang/Object;)V
 
     invoke-virtual {v4, v6}, Ljava/util/LinkedHashMap;->forEach(Ljava/util/function/BiConsumer;)V
 
-    invoke-virtual {v12}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v8}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v3
 
-    iget-object v4, v0, Lone/me/android/OneMeApplication;->Y:Ljava/lang/String;
+    iget-object v4, v0, Lone/me/android/OneMeApplication;->Z:Ljava/lang/String;
 
-    invoke-static {v4, v3}, Lg47;->p(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v4, v3}, Ljtg;->l(Ljava/lang/String;Ljava/lang/String;)V
 
-    sget-object v4, Ldcf;->a:Ldcf;
+    sget-object v4, Lhtf;->a:Lhtf;
 
-    invoke-virtual {v4}, Ldcf;->c()Lpy3;
+    invoke-virtual {v4}, Lhtf;->c()La24;
 
     move-result-object v6
 
-    check-cast v6, Ldp;
+    check-cast v6, Lnp;
 
     invoke-virtual {v6}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    invoke-static {}, Ldp;->c()Lrwe;
+    sget-object v6, Lnp;->d:Lzte;
+
+    invoke-virtual {v6}, Lzte;->getValue()Ljava/lang/Object;
 
     move-result-object v6
 
+    check-cast v6, Lraf;
+
     if-eqz v6, :cond_8
 
-    invoke-static {v3}, Lrwe;->a(Ljava/lang/String;)V
+    invoke-static {v3}, Lraf;->a(Ljava/lang/String;)V
 
     :cond_8
     if-nez v2, :cond_9
 
-    invoke-virtual {v4}, Ldcf;->c()Lpy3;
+    invoke-virtual {v4}, Lhtf;->c()La24;
 
     move-result-object v2
 
-    invoke-static {v0}, Ln1c;->p(Landroid/content/Context;)Lwqa;
+    invoke-static {v0}, Lyu0;->t(Landroid/content/Context;)Lr1b;
 
     move-result-object v3
 
-    sget-object v4, Lq6a;->a:Lq6a;
+    sget-object v4, Lbfa;->a:Lbfa;
 
-    invoke-virtual {v4}, Lscout/Component;->getAccessor()Lu4;
-
-    move-result-object v4
-
-    const-class v6, Lw2a;
-
-    invoke-virtual {v4, v6}, Lu4;->c(Ljava/lang/Class;)Ljava/lang/Object;
+    invoke-virtual {v4}, Lscout/Component;->getAccessor()Lz4;
 
     move-result-object v4
 
-    check-cast v4, Lw2a;
+    const-class v6, Laba;
 
-    invoke-virtual {v4}, Lw2a;->d()Z
+    invoke-virtual {v4, v6}, Lz4;->c(Ljava/lang/Class;)Ljava/lang/Object;
+
+    move-result-object v4
+
+    check-cast v4, Laba;
+
+    invoke-virtual {v4}, Laba;->d()Z
 
     move-result v4
 
     new-instance v6, Lone/me/android/perfomance/ApplicationCreationOvertimeException;
 
-    new-instance v8, Ljava/lang/StringBuilder;
+    new-instance v7, Ljava/lang/StringBuilder;
 
-    const-string v9, "isLoggedIn="
+    const-string v8, "isLoggedIn="
 
-    invoke-direct {v8, v9}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-direct {v7, v8}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {v8, v4}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+    invoke-virtual {v7, v4}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
     const-string v4, " creationTime="
 
-    invoke-virtual {v8, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v7, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v8, v13, v14}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    invoke-virtual {v7, v12, v13}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
     const-string v4, " perfClass="
 
-    invoke-virtual {v8, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v7, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v8, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-virtual {v7, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v8}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v7}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v3
 
@@ -1842,134 +1867,136 @@
 
     const-string v3, "ONEME-1862"
 
-    invoke-virtual {v2, v3, v6}, Lpy3;->a(Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-virtual {v2, v3, v6}, La24;->a(Ljava/lang/String;Ljava/lang/Throwable;)V
 
     :cond_9
     const-string v2, "app_creation_duration"
 
     const/4 v3, 0x0
 
-    new-array v4, v3, [Ldna;
+    new-array v4, v3, [Lpxa;
 
     :try_start_1
-    sget-object v6, Lhxe;->a:Lhxe;
+    sget-object v6, Lhbf;->a:Lhbf;
 
     sget-object v6, Ljava/util/concurrent/TimeUnit;->NANOSECONDS:Ljava/util/concurrent/TimeUnit;
 
     sget-object v6, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;
 
-    invoke-virtual {v6, v13, v14}, Ljava/util/concurrent/TimeUnit;->toNanos(J)J
+    invoke-virtual {v6, v12, v13}, Ljava/util/concurrent/TimeUnit;->toNanos(J)J
 
-    move-result-wide v8
+    move-result-wide v6
 
     invoke-static {v4, v3}, Ljava/util/Arrays;->copyOf([Ljava/lang/Object;I)[Ljava/lang/Object;
 
     move-result-object v3
 
-    check-cast v3, [Ldna;
+    check-cast v3, [Lpxa;
 
-    invoke-static {v2, v8, v9, v3}, Lhxe;->a(Ljava/lang/String;J[Ldna;)V
+    invoke-static {v2, v6, v7, v3}, Lhbf;->a(Ljava/lang/String;J[Lpxa;)V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
     :catchall_0
-    invoke-virtual {v0}, Lone/me/android/OneMeApplication;->c()Laz5;
+    invoke-virtual {v0}, Lone/me/android/OneMeApplication;->c()Ls46;
 
     move-result-object v2
 
-    new-instance v3, Lh2a;
+    new-instance v3, Lmaa;
 
-    invoke-direct {v3, v5}, Lh2a;-><init>(I)V
+    const/16 v4, 0xa
+
+    invoke-direct {v3, v4}, Lmaa;-><init>(I)V
 
     const-string v4, "GalleryPrefetch"
 
-    invoke-static {v2, v4, v3}, Laz5;->b(Laz5;Ljava/lang/String;Lv56;)Lxy5;
+    invoke-static {v2, v4, v3}, Ls46;->b(Ls46;Ljava/lang/String;Lzb6;)Lp46;
 
-    new-instance v3, Lg2a;
+    new-instance v3, Llaa;
 
-    const/16 v4, 0xf
+    const/16 v4, 0x12
 
-    invoke-direct {v3, v0, v4}, Lg2a;-><init>(Lone/me/android/OneMeApplication;I)V
+    invoke-direct {v3, v0, v4}, Llaa;-><init>(Lone/me/android/OneMeApplication;I)V
 
     const-string v4, "Legacy.TimeChangeReceiver"
 
-    invoke-virtual {v2, v4, v1, v3}, Laz5;->a(Ljava/lang/String;Ljava/lang/Iterable;Lv56;)Lxy5;
+    invoke-virtual {v2, v4, v1, v3}, Ls46;->a(Ljava/lang/String;Ljava/lang/Iterable;Lzb6;)Lp46;
 
-    new-instance v3, Lh2a;
+    new-instance v3, Lmaa;
 
-    invoke-direct {v3, v7}, Lh2a;-><init>(I)V
+    const/16 v4, 0xb
+
+    invoke-direct {v3, v4}, Lmaa;-><init>(I)V
 
     const-string v4, "Legacy.Theme.ScheduleNightModeCheckIfNeed"
 
-    invoke-virtual {v2, v4, v1, v3}, Laz5;->a(Ljava/lang/String;Ljava/lang/Iterable;Lv56;)Lxy5;
+    invoke-virtual {v2, v4, v1, v3}, Ls46;->a(Ljava/lang/String;Ljava/lang/Iterable;Lzb6;)Lp46;
 
-    new-instance v3, Lg2a;
+    new-instance v3, Llaa;
 
-    const/16 v4, 0x10
+    const/16 v4, 0x14
 
-    invoke-direct {v3, v0, v4}, Lg2a;-><init>(Lone/me/android/OneMeApplication;I)V
+    invoke-direct {v3, v0, v4}, Llaa;-><init>(Lone/me/android/OneMeApplication;I)V
 
     const-string v4, "Legacy.SendInstallInfo"
 
-    invoke-virtual {v2, v4, v1, v3}, Laz5;->a(Ljava/lang/String;Ljava/lang/Iterable;Lv56;)Lxy5;
+    invoke-virtual {v2, v4, v1, v3}, Ls46;->a(Ljava/lang/String;Ljava/lang/Iterable;Lzb6;)Lp46;
 
-    new-instance v3, Lh2a;
+    new-instance v3, Lmaa;
 
-    const/4 v4, 0x5
+    const/16 v4, 0xc
 
-    invoke-direct {v3, v4}, Lh2a;-><init>(I)V
+    invoke-direct {v3, v4}, Lmaa;-><init>(I)V
 
     const-string v4, "Legacy.DailyAnalytics"
 
-    invoke-virtual {v2, v4, v1, v3}, Laz5;->a(Ljava/lang/String;Ljava/lang/Iterable;Lv56;)Lxy5;
+    invoke-virtual {v2, v4, v1, v3}, Ls46;->a(Ljava/lang/String;Ljava/lang/Iterable;Lzb6;)Lp46;
 
-    new-instance v3, Lh2a;
+    new-instance v3, Lmaa;
 
-    const/4 v4, 0x6
+    const/16 v4, 0xd
 
-    invoke-direct {v3, v4}, Lh2a;-><init>(I)V
+    invoke-direct {v3, v4}, Lmaa;-><init>(I)V
 
     const-string v4, "NotificationTrackerCleanupScheduler"
 
-    invoke-virtual {v2, v4, v1, v3}, Laz5;->a(Ljava/lang/String;Ljava/lang/Iterable;Lv56;)Lxy5;
+    invoke-virtual {v2, v4, v1, v3}, Ls46;->a(Ljava/lang/String;Ljava/lang/Iterable;Lzb6;)Lp46;
 
-    new-instance v3, Lh2a;
+    new-instance v3, Lmaa;
 
-    const/4 v4, 0x7
-
-    invoke-direct {v3, v4}, Lh2a;-><init>(I)V
+    invoke-direct {v3, v5}, Lmaa;-><init>(I)V
 
     const-string v4, "Stickers warmup"
 
-    invoke-virtual {v2, v4, v1, v3}, Laz5;->a(Ljava/lang/String;Ljava/lang/Iterable;Lv56;)Lxy5;
+    invoke-virtual {v2, v4, v1, v3}, Ls46;->a(Ljava/lang/String;Ljava/lang/Iterable;Lzb6;)Lp46;
 
-    new-instance v3, Lh2a;
+    new-instance v3, Lmaa;
 
-    const/16 v5, 0x8
+    const/16 v4, 0xf
 
-    invoke-direct {v3, v5}, Lh2a;-><init>(I)V
+    invoke-direct {v3, v4}, Lmaa;-><init>(I)V
 
     const-string v4, "QrCodeGenerator"
 
-    invoke-virtual {v2, v4, v1, v3}, Laz5;->a(Ljava/lang/String;Ljava/lang/Iterable;Lv56;)Lxy5;
+    invoke-virtual {v2, v4, v1, v3}, Ls46;->a(Ljava/lang/String;Ljava/lang/Iterable;Lzb6;)Lp46;
 
-    iget-object v0, v0, Lone/me/android/OneMeApplication;->b:Lno;
+    iget-object v0, v0, Lone/me/android/OneMeApplication;->b:Lxo;
 
     invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    sget-object v0, Lno;->b:Ldh9;
+    sget-object v0, Lxo;->b:Loo9;
 
-    sget-object v1, Lsqa;->b:Lsqa;
+    sget-object v1, Ln1b;->b:Ln1b;
 
-    invoke-virtual {v0, v1}, Ldh9;->f(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v0, v1}, Loo9;->f(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v2
 
-    check-cast v2, Lrqa;
+    check-cast v2, Lm1b;
 
     if-eqz v2, :cond_a
 
-    iget-wide v2, v2, Lrqa;->c:J
+    iget-wide v2, v2, Lm1b;->c:J
 
     const-wide/16 v4, -0x1
 
@@ -1977,11 +2004,11 @@
 
     if-nez v2, :cond_a
 
-    invoke-virtual {v0, v1}, Ldh9;->f(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v0, v1}, Loo9;->f(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lrqa;
+    check-cast v0, Lm1b;
 
     if-eqz v0, :cond_a
 
@@ -1989,11 +2016,11 @@
 
     move-result-wide v1
 
-    iget-wide v3, v0, Lrqa;->b:J
+    iget-wide v3, v0, Lm1b;->b:J
 
     sub-long/2addr v1, v3
 
-    iput-wide v1, v0, Lrqa;->c:J
+    iput-wide v1, v0, Lm1b;->c:J
 
     :cond_a
     :goto_4
@@ -2012,7 +2039,7 @@
     move-exception v0
 
     :try_start_2
-    iget-object v1, v2, Laz5;->c:Ljava/util/ArrayList;
+    iget-object v1, v2, Ls46;->c:Ljava/util/ArrayList;
 
     invoke-virtual {v1}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
@@ -2031,9 +2058,9 @@
 
     move-result-object v5
 
-    check-cast v5, Lyy5;
+    check-cast v5, Lq46;
 
-    iget-object v6, v5, Lyy5;->o:Ljava/lang/Throwable;
+    iget-object v6, v5, Lq46;->o:Ljava/lang/Throwable;
 
     if-eqz v6, :cond_c
 
@@ -2056,7 +2083,7 @@
 
     move-result-object v8
 
-    invoke-static {v7, v8}, Lxq7;->d(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v7, v8}, Lvyg;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v7
 
@@ -2077,7 +2104,7 @@
     .catchall {:try_start_2 .. :try_end_2} :catchall_2
 
     :goto_7
-    iget-object v1, v2, Laz5;->c:Ljava/util/ArrayList;
+    iget-object v1, v2, Ls46;->c:Ljava/util/ArrayList;
 
     invoke-virtual {v1}, Ljava/util/ArrayList;->clear()V
 
@@ -2099,64 +2126,64 @@
 
     if-nez p1, :cond_0
 
-    iget-object p0, p0, Lone/me/android/OneMeApplication;->Y:Ljava/lang/String;
+    iget-object p0, p0, Lone/me/android/OneMeApplication;->Z:Ljava/lang/String;
 
     const-string p1, "onTrimMemory: TRIM_MEMORY_BACKGROUND"
 
-    invoke-static {p0, p1}, Lg47;->p(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {p0, p1}, Ljtg;->l(Ljava/lang/String;Ljava/lang/String;)V
 
-    sget-object p0, Lq6a;->a:Lq6a;
+    sget-object p0, Lbfa;->a:Lbfa;
 
-    invoke-virtual {p0}, Lscout/Component;->getAccessor()Lu4;
-
-    move-result-object p0
-
-    const-class p1, Llu6;
-
-    invoke-virtual {p0, p1}, Lu4;->c(Ljava/lang/Class;)Ljava/lang/Object;
+    invoke-virtual {p0}, Lscout/Component;->getAccessor()Lz4;
 
     move-result-object p0
 
-    check-cast p0, Llu6;
+    const-class p1, Ly07;
 
-    iget-object p1, p0, Llu6;->d:Lje7;
+    invoke-virtual {p0, p1}, Lz4;->c(Ljava/lang/Class;)Ljava/lang/Object;
 
-    invoke-interface {p1}, Lje7;->getValue()Ljava/lang/Object;
+    move-result-object p0
+
+    check-cast p0, Ly07;
+
+    iget-object p1, p0, Ly07;->d:Lcl7;
+
+    invoke-interface {p1}, Lcl7;->getValue()Ljava/lang/Object;
 
     move-result-object p1
 
-    check-cast p1, La9a;
+    check-cast p1, Lkha;
 
-    invoke-virtual {p1}, La9a;->a()Ljava/util/concurrent/ExecutorService;
+    invoke-virtual {p1}, Lkha;->a()Ljava/util/concurrent/ExecutorService;
 
     move-result-object p1
 
-    new-instance v0, Lz46;
+    new-instance v0, Ls36;
 
-    const/4 v1, 0x5
+    const/16 v1, 0x8
 
-    invoke-direct {v0, v1, p0}, Lz46;-><init>(ILjava/lang/Object;)V
+    invoke-direct {v0, v1, p0}, Ls36;-><init>(ILjava/lang/Object;)V
 
     invoke-interface {p1, v0}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
 
-    sget-object p0, Lspe;->a:Landroid/util/LruCache;
+    sget-object p0, La4f;->a:Landroid/util/LruCache;
 
     const-string p0, "ThemeBackgroundCache"
 
     const-string p1, "clear cache of themes."
 
-    invoke-static {p0, p1}, Lg47;->p(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {p0, p1}, Ljtg;->l(Ljava/lang/String;Ljava/lang/String;)V
 
-    sget-object p0, Lspe;->a:Landroid/util/LruCache;
+    sget-object p0, La4f;->a:Landroid/util/LruCache;
 
     invoke-virtual {p0}, Landroid/util/LruCache;->evictAll()V
 
     :cond_0
-    sget-object p0, Luz4;->a:Liw7;
+    sget-object p0, Le55;->a:Li38;
 
     const/4 p1, -0x1
 
-    invoke-virtual {p0, p1}, Liw7;->j(I)V
+    invoke-virtual {p0, p1}, Li38;->j(I)V
 
     return-void
 .end method

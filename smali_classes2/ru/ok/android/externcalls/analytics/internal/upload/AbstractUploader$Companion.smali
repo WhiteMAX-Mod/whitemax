@@ -56,7 +56,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Ll94;)V
+.method public synthetic constructor <init>(Lld4;)V
     .locals 0
 
     .line 1
@@ -91,7 +91,7 @@
     goto :goto_0
 
     :cond_0
-    invoke-static {}, Lq14;->C()Landroid/app/Application;
+    invoke-static {}, Lx4h;->l()Landroid/app/Application;
 
     move-result-object p0
 
@@ -138,7 +138,7 @@
     goto :goto_1
 
     :cond_2
-    invoke-static {}, Lq14;->C()Landroid/app/Application;
+    invoke-static {}, Lx4h;->l()Landroid/app/Application;
 
     move-result-object v1
 
@@ -146,7 +146,7 @@
 
     move-result-object v1
 
-    invoke-static {}, Lq14;->C()Landroid/app/Application;
+    invoke-static {}, Lx4h;->l()Landroid/app/Application;
 
     move-result-object v2
 
@@ -219,13 +219,13 @@
 
     if-eqz p0, :cond_1
 
-    invoke-virtual {p0}, Lru/ok/android/externcalls/analytics/config/EventMetaParamsConfig;->getAppName()Lv56;
+    invoke-virtual {p0}, Lru/ok/android/externcalls/analytics/config/EventMetaParamsConfig;->getAppName()Lzb6;
 
     move-result-object p0
 
     if-eqz p0, :cond_1
 
-    invoke-interface {p0}, Lv56;->invoke()Ljava/lang/Object;
+    invoke-interface {p0}, Lzb6;->invoke()Ljava/lang/Object;
 
     move-result-object p0
 

@@ -1,143 +1,198 @@
-.class public abstract Lv64;
-.super Ljava/lang/Object;
+.class public final Lv64;
+.super Lpw7;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:Ljava/util/LinkedHashSet;
+.field public final synthetic c:I
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 2
+.method public synthetic constructor <init>(Ljava/util/concurrent/Executor;Lmgb;I)V
+    .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput p3, p0, Lv64;->c:I
 
-    new-instance v0, Ljava/util/LinkedHashSet;
-
-    const/4 v1, 0x1
-
-    invoke-direct {v0, v1}, Ljava/util/LinkedHashSet;-><init>(I)V
-
-    iput-object v0, p0, Lv64;->a:Ljava/util/LinkedHashSet;
+    invoke-direct {p0, p1, p2}, Lpw7;-><init>(Ljava/util/concurrent/Executor;Lmgb;)V
 
     return-void
 .end method
 
-.method public static a(Lv64;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lr64;
-    .locals 6
 
-    and-int/lit8 v0, p4, 0x2
+# virtual methods
+.method public final d(Li27;)Lk55;
+    .locals 4
 
-    if-eqz v0, :cond_0
+    iget v0, p0, Lv64;->c:I
 
-    const/4 p3, 0x0
+    packed-switch v0, :pswitch_data_0
 
-    :cond_0
-    move-object v5, p3
+    new-instance v0, Ljava/io/FileInputStream;
 
-    and-int/lit8 p3, p4, 0x4
-
-    const/4 v0, 0x1
-
-    if-eqz p3, :cond_1
-
-    const/4 p3, 0x2
-
-    move v2, p3
-
-    goto :goto_0
-
-    :cond_1
-    move v2, v0
-
-    :goto_0
-    and-int/lit8 p3, p4, 0x8
-
-    const/4 p4, 0x0
-
-    if-eqz p3, :cond_2
-
-    move v4, v0
-
-    goto :goto_1
-
-    :cond_2
-    move v4, p4
-
-    :goto_1
-    const/16 p3, 0x3a
-
-    invoke-static {p1, p3}, Lj8e;->Y0(Ljava/lang/String;C)Z
-
-    move-result p3
-
-    if-eqz p3, :cond_4
-
-    new-instance p3, Ljava/util/ArrayList;
-
-    array-length v0, p2
-
-    invoke-direct {p3, v0}, Ljava/util/ArrayList;-><init>(I)V
-
-    array-length v0, p2
-
-    :goto_2
-    if-ge p4, v0, :cond_3
-
-    aget-object v1, p2, p4
-
-    sget-object v3, Ljava/util/Locale;->ROOT:Ljava/util/Locale;
-
-    invoke-virtual {v1, v3}, Ljava/lang/String;->toLowerCase(Ljava/util/Locale;)Ljava/lang/String;
+    invoke-virtual {p1}, Li27;->d()Ljava/io/File;
 
     move-result-object v1
 
-    invoke-virtual {p3, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+    invoke-virtual {v1}, Ljava/io/File;->toString()Ljava/lang/String;
 
-    add-int/lit8 p4, p4, 0x1
+    move-result-object v1
 
-    goto :goto_2
+    invoke-direct {v0, v1}, Ljava/io/FileInputStream;-><init>(Ljava/lang/String;)V
 
-    :cond_3
-    new-instance v3, Ljava/util/LinkedHashSet;
-
-    invoke-direct {v3, p3}, Ljava/util/LinkedHashSet;-><init>(Ljava/util/Collection;)V
-
-    sget-object p2, Ljava/util/Locale;->ROOT:Ljava/util/Locale;
-
-    invoke-virtual {p1, p2}, Ljava/lang/String;->toLowerCase(Ljava/util/Locale;)Ljava/lang/String;
+    invoke-virtual {p1}, Li27;->d()Ljava/io/File;
 
     move-result-object p1
 
-    invoke-static {p1}, Liu0;->f(Ljava/lang/String;)Landroid/net/Uri;
+    invoke-virtual {p1}, Ljava/io/File;->length()J
 
-    move-result-object v1
+    move-result-wide v1
 
-    new-instance v0, Lr64;
+    long-to-int p1, v1
 
-    invoke-direct/range {v0 .. v5}, Lr64;-><init>(Landroid/net/Uri;ILjava/util/LinkedHashSet;ZLjava/util/Set;)V
-
-    iget-object p0, p0, Lv64;->a:Ljava/util/LinkedHashSet;
-
-    invoke-virtual {p0, v0}, Ljava/util/AbstractCollection;->add(Ljava/lang/Object;)Z
-
-    return-object v0
-
-    :cond_4
-    const-string p0, "invalid route "
-
-    invoke-virtual {p0, p1}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {p0, v0, p1}, Lpw7;->c(Ljava/io/InputStream;I)Lk55;
 
     move-result-object p0
 
-    new-instance p1, Ljava/lang/IllegalStateException;
+    return-object p0
 
-    invoke-virtual {p0}, Ljava/lang/Object;->toString()Ljava/lang/String;
+    :pswitch_0
+    iget-object p1, p1, Li27;->b:Landroid/net/Uri;
+
+    invoke-virtual {p1}, Landroid/net/Uri;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    const/4 v0, 0x5
+
+    const/4 v1, 0x0
+
+    invoke-virtual {p1, v1, v0}, Ljava/lang/String;->substring(II)Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v2, "data:"
+
+    invoke-virtual {v0, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_2
+
+    const/16 v0, 0x2c
+
+    invoke-virtual {p1, v0}, Ljava/lang/String;->indexOf(I)I
+
+    move-result v0
+
+    add-int/lit8 v2, v0, 0x1
+
+    invoke-virtual {p1}, Ljava/lang/String;->length()I
+
+    move-result v3
+
+    invoke-virtual {p1, v2, v3}, Ljava/lang/String;->substring(II)Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {p1, v1, v0}, Ljava/lang/String;->substring(II)Ljava/lang/String;
+
+    move-result-object p1
+
+    const-string v0, ";"
+
+    invoke-virtual {p1, v0}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
+
+    move-result v3
+
+    if-nez v3, :cond_0
+
+    move p1, v1
+
+    goto :goto_0
+
+    :cond_0
+    invoke-virtual {p1, v0}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
+
+    move-result-object p1
+
+    array-length v0, p1
+
+    add-int/lit8 v0, v0, -0x1
+
+    aget-object p1, p1, v0
+
+    const-string v0, "base64"
+
+    invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    :goto_0
+    if-eqz p1, :cond_1
+
+    invoke-static {v2, v1}, Landroid/util/Base64;->decode(Ljava/lang/String;I)[B
+
+    move-result-object p1
+
+    goto :goto_1
+
+    :cond_1
+    invoke-static {v2}, Landroid/net/Uri;->decode(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    invoke-virtual {p1}, Ljava/lang/String;->getBytes()[B
+
+    move-result-object p1
+
+    :goto_1
+    new-instance v0, Ljava/io/ByteArrayInputStream;
+
+    invoke-direct {v0, p1}, Ljava/io/ByteArrayInputStream;-><init>([B)V
+
+    array-length p1, p1
+
+    invoke-virtual {p0, v0, p1}, Lpw7;->c(Ljava/io/InputStream;I)Lk55;
 
     move-result-object p0
 
-    invoke-direct {p1, p0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    return-object p0
 
-    throw p1
+    :cond_2
+    new-instance p0, Ljava/lang/IllegalArgumentException;
+
+    invoke-direct {p0}, Ljava/lang/IllegalArgumentException;-><init>()V
+
+    throw p0
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final e()Ljava/lang/String;
+    .locals 0
+
+    iget p0, p0, Lv64;->c:I
+
+    packed-switch p0, :pswitch_data_0
+
+    const-string p0, "LocalFileFetchProducer"
+
+    return-object p0
+
+    :pswitch_0
+    const-string p0, "DataFetchProducer"
+
+    return-object p0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

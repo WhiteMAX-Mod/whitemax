@@ -1,507 +1,411 @@
-.class public final enum Loyd;
-.super Ljava/lang/Enum;
+.class public final Loyd;
+.super Landroid/graphics/drawable/LayerDrawable;
 .source "SourceFile"
 
-
-# static fields
-.field public static final enum X:Loyd;
-
-.field public static final enum Y:Loyd;
-
-.field public static final enum Z:Loyd;
-
-.field public static final enum b:Loyd;
-
-.field public static final enum c:Loyd;
-
-.field public static final enum o:Loyd;
-
-.field public static final enum o0:Loyd;
-
-.field public static final enum p0:Loyd;
-
-.field public static final enum q0:Loyd;
-
-.field public static final enum r0:Loyd;
-
-.field public static final enum s0:Loyd;
-
-.field public static final enum t0:Loyd;
-
-.field public static final enum u0:Loyd;
-
-.field public static final enum v0:Loyd;
-
-.field public static final synthetic w0:[Loyd;
+# interfaces
+.implements Landroid/graphics/drawable/Animatable;
+.implements Lx3f;
 
 
 # instance fields
-.field public final a:Ljava/lang/String;
+.field public X:I
+
+.field public final Y:Z
+
+.field public final a:I
+
+.field public final b:Lnyd;
+
+.field public final c:I
+
+.field public o:I
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 38
+.method public constructor <init>(Landroid/content/Context;)V
+    .locals 4
 
-    new-instance v1, Loyd;
+    const/4 v0, 0x0
 
-    const-string v0, "callStart"
+    new-array v1, v0, [Landroid/graphics/drawable/Drawable;
 
-    const/4 v2, 0x0
+    invoke-direct {p0, v1}, Landroid/graphics/drawable/LayerDrawable;-><init>([Landroid/graphics/drawable/Drawable;)V
 
-    invoke-direct {v1, v0, v2, v0}, Loyd;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+    new-instance v1, Lnyd;
 
-    sput-object v1, Loyd;->b:Loyd;
+    invoke-direct {v1, p1}, Lnyd;-><init>(Landroid/content/Context;)V
 
-    new-instance v2, Loyd;
+    iput-object v1, p0, Loyd;->b:Lnyd;
 
-    const-string v0, "callSpecError"
+    const/16 v2, 0x50
 
-    const/4 v3, 0x1
+    int-to-float v2, v2
 
-    invoke-direct {v2, v0, v3, v0}, Loyd;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+    invoke-static {}, Lvo4;->d()Landroid/content/res/Resources;
 
-    new-instance v3, Loyd;
+    move-result-object v3
 
-    const-string v0, "callError"
+    invoke-virtual {v3}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
 
-    const/4 v4, 0x2
+    move-result-object v3
 
-    invoke-direct {v3, v0, v4, v0}, Loyd;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+    iget v3, v3, Landroid/util/DisplayMetrics;->density:F
 
-    sput-object v3, Loyd;->c:Loyd;
+    mul-float/2addr v2, v3
 
-    new-instance v4, Loyd;
+    invoke-static {v2}, Lya6;->G(F)I
 
-    const-string v0, "callDevices"
+    move-result v2
 
-    const/4 v5, 0x3
+    iput v2, p0, Loyd;->o:I
 
-    invoke-direct {v4, v0, v5, v0}, Loyd;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+    const/4 v2, -0x1
 
-    sput-object v4, Loyd;->o:Loyd;
+    iput v2, p0, Loyd;->X:I
 
-    new-instance v5, Loyd;
+    invoke-static {p1}, Ljtg;->x(Landroid/content/Context;)Lon4;
 
-    const-string v0, "callIceConnectionState"
+    move-result-object v2
 
-    const/4 v6, 0x4
+    sget-object v3, Lon4;->o:Lon4;
 
-    invoke-direct {v5, v0, v6, v0}, Loyd;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+    invoke-virtual {v2, v3}, Ljava/lang/Enum;->compareTo(Ljava/lang/Enum;)I
 
-    sput-object v5, Loyd;->X:Loyd;
+    move-result v2
 
-    new-instance v6, Loyd;
+    if-ltz v2, :cond_0
 
-    const-string v0, "callIceRestart"
+    const/4 v0, 0x1
 
-    const/4 v7, 0x5
+    :cond_0
+    iput-boolean v0, p0, Loyd;->Y:Z
 
-    invoke-direct {v6, v0, v7, v0}, Loyd;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+    new-instance v0, Landroid/graphics/drawable/ColorDrawable;
 
-    new-instance v7, Loyd;
+    invoke-direct {v0}, Landroid/graphics/drawable/ColorDrawable;-><init>()V
 
-    const-string v0, "callPush"
+    invoke-virtual {v0, p0}, Landroid/graphics/drawable/Drawable;->setCallback(Landroid/graphics/drawable/Drawable$Callback;)V
 
-    const/4 v8, 0x6
+    invoke-virtual {p0, v0}, Landroid/graphics/drawable/LayerDrawable;->addLayer(Landroid/graphics/drawable/Drawable;)I
 
-    invoke-direct {v7, v0, v8, v0}, Loyd;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+    move-result v0
 
-    new-instance v8, Loyd;
+    iput v0, p0, Loyd;->a:I
 
-    const-string v0, "callAcceptedOutgoing"
+    const/16 v2, 0x77
 
-    const/4 v9, 0x7
+    invoke-virtual {p0, v0, v2}, Landroid/graphics/drawable/LayerDrawable;->setLayerGravity(II)V
 
-    invoke-direct {v8, v0, v9, v0}, Loyd;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+    invoke-virtual {p0, v1}, Landroid/graphics/drawable/LayerDrawable;->addLayer(Landroid/graphics/drawable/Drawable;)I
 
-    sput-object v8, Loyd;->Y:Loyd;
+    move-result v0
 
-    new-instance v9, Loyd;
+    iput v0, p0, Loyd;->c:I
 
-    const-string v0, "callAcceptIncoming"
-
-    const/16 v10, 0x8
-
-    invoke-direct {v9, v0, v10, v0}, Loyd;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v9, Loyd;->Z:Loyd;
-
-    new-instance v10, Loyd;
-
-    const-string v0, "callAcceptConcurrent"
-
-    const/16 v11, 0x9
-
-    invoke-direct {v10, v0, v11, v0}, Loyd;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v10, Loyd;->o0:Loyd;
-
-    new-instance v11, Loyd;
-
-    const-string v0, "callMediaStatus"
-
-    const/16 v12, 0xa
-
-    invoke-direct {v11, v0, v12, v0}, Loyd;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    new-instance v12, Loyd;
-
-    const-string v0, "callDeviceChanged"
-
-    const/16 v13, 0xb
-
-    invoke-direct {v12, v0, v13, v0}, Loyd;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    new-instance v13, Loyd;
-
-    const-string v0, "callSelectAudioDevice"
-
-    const/16 v14, 0xc
-
-    invoke-direct {v13, v0, v14, v0}, Loyd;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    new-instance v14, Loyd;
-
-    const-string v0, "callUiAction"
-
-    const/16 v15, 0xd
-
-    invoke-direct {v14, v0, v15, v0}, Loyd;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    new-instance v15, Loyd;
-
-    const-string v0, "callPreferH264Sdp"
-
-    move-object/from16 v16, v1
-
-    const/16 v1, 0xe
-
-    invoke-direct {v15, v0, v1, v0}, Loyd;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v15, Loyd;->p0:Loyd;
-
-    new-instance v0, Loyd;
-
-    const-string v1, "callSocketAction"
-
-    move-object/from16 v17, v2
-
-    const/16 v2, 0xf
-
-    invoke-direct {v0, v1, v2, v1}, Loyd;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    new-instance v1, Loyd;
-
-    const-string v2, "callHangup"
-
-    move-object/from16 v18, v0
-
-    const/16 v0, 0x10
-
-    invoke-direct {v1, v2, v0, v2}, Loyd;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v1, Loyd;->q0:Loyd;
-
-    new-instance v0, Loyd;
-
-    const-string v2, "callDeclineIncoming"
-
-    move-object/from16 v19, v1
+    invoke-virtual {v1, p0}, Landroid/graphics/drawable/Drawable;->setCallback(Landroid/graphics/drawable/Drawable$Callback;)V
 
     const/16 v1, 0x11
 
-    invoke-direct {v0, v2, v1, v2}, Loyd;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+    invoke-virtual {p0, v0, v1}, Landroid/graphics/drawable/LayerDrawable;->setLayerGravity(II)V
 
-    new-instance v1, Loyd;
+    sget-object v0, Lyu4;->t0:Lbx9;
 
-    const-string v2, "app_event"
+    invoke-virtual {v0, p1}, Lbx9;->k(Landroid/content/Context;)Lyu4;
 
-    move-object/from16 v20, v0
+    move-result-object p1
 
-    const/16 v0, 0x12
+    invoke-virtual {p1}, Lyu4;->j()Lera;
 
-    invoke-direct {v1, v2, v0, v2}, Loyd;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+    move-result-object p1
 
-    sput-object v1, Loyd;->r0:Loyd;
-
-    new-instance v0, Loyd;
-
-    const-string v2, "rtc_enc_avg"
-
-    move-object/from16 v21, v1
-
-    const/16 v1, 0x13
-
-    invoke-direct {v0, v2, v1, v2}, Loyd;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    new-instance v1, Loyd;
-
-    const-string v2, "rtc_adapt"
-
-    move-object/from16 v22, v0
-
-    const/16 v0, 0x14
-
-    invoke-direct {v1, v2, v0, v2}, Loyd;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    new-instance v0, Loyd;
-
-    const-string v2, "rtc_br_tr"
-
-    move-object/from16 v23, v1
-
-    const/16 v1, 0x15
-
-    invoke-direct {v0, v2, v1, v2}, Loyd;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    new-instance v1, Loyd;
-
-    const-string v2, "rtc_br_rtr"
-
-    move-object/from16 v24, v0
-
-    const/16 v0, 0x16
-
-    invoke-direct {v1, v2, v0, v2}, Loyd;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    new-instance v0, Loyd;
-
-    const-string v2, "rtc_br_enc"
-
-    move-object/from16 v25, v1
-
-    const/16 v1, 0x17
-
-    invoke-direct {v0, v2, v1, v2}, Loyd;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    new-instance v1, Loyd;
-
-    const-string v2, "rtc_lost_video"
-
-    move-object/from16 v26, v0
-
-    const/16 v0, 0x18
-
-    invoke-direct {v1, v2, v0, v2}, Loyd;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    new-instance v0, Loyd;
-
-    const-string v2, "rtc_lost_audio"
-
-    move-object/from16 v27, v1
-
-    const/16 v1, 0x19
-
-    invoke-direct {v0, v2, v1, v2}, Loyd;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    new-instance v1, Loyd;
-
-    const-string v2, "rtc_rtt"
-
-    move-object/from16 v28, v0
-
-    const/16 v0, 0x1a
-
-    invoke-direct {v1, v2, v0, v2}, Loyd;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    new-instance v0, Loyd;
-
-    const-string v2, "rtc_transport"
-
-    move-object/from16 v29, v1
-
-    const/16 v1, 0x1b
-
-    invoke-direct {v0, v2, v1, v2}, Loyd;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    new-instance v1, Loyd;
-
-    const-string v2, "callJoinConversation"
-
-    move-object/from16 v30, v0
-
-    const/16 v0, 0x1c
-
-    invoke-direct {v1, v2, v0, v2}, Loyd;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    new-instance v0, Loyd;
-
-    const-string v2, "callStartMultiparty"
-
-    move-object/from16 v31, v1
-
-    const/16 v1, 0x1d
-
-    invoke-direct {v0, v2, v1, v2}, Loyd;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v0, Loyd;->s0:Loyd;
-
-    new-instance v1, Loyd;
-
-    const-string v2, "callPoorConnection"
-
-    move-object/from16 v32, v0
-
-    const/16 v0, 0x1e
-
-    invoke-direct {v1, v2, v0, v2}, Loyd;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    new-instance v0, Loyd;
-
-    const-string v2, "callSignalingConnected"
-
-    move-object/from16 v33, v1
-
-    const/16 v1, 0x1f
-
-    invoke-direct {v0, v2, v1, v2}, Loyd;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    new-instance v1, Loyd;
-
-    const-string v2, "callReconnect"
-
-    move-object/from16 v34, v0
-
-    const/16 v0, 0x20
-
-    invoke-direct {v1, v2, v0, v2}, Loyd;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v1, Loyd;->t0:Loyd;
-
-    new-instance v0, Loyd;
-
-    const-string v2, "switches_to_bad_net"
-
-    move-object/from16 v35, v1
-
-    const/16 v1, 0x21
-
-    invoke-direct {v0, v2, v1, v2}, Loyd;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v0, Loyd;->u0:Loyd;
-
-    new-instance v1, Loyd;
-
-    const-string v2, "switches_to_good_net"
-
-    move-object/from16 v36, v0
-
-    const/16 v0, 0x22
-
-    invoke-direct {v1, v2, v0, v2}, Loyd;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    sput-object v1, Loyd;->v0:Loyd;
-
-    new-instance v0, Loyd;
-
-    const-string v2, "callEventualStat"
-
-    move-object/from16 v37, v1
-
-    const/16 v1, 0x23
-
-    invoke-direct {v0, v2, v1, v2}, Loyd;-><init>(Ljava/lang/String;ILjava/lang/String;)V
-
-    move-object/from16 v1, v16
-
-    move-object/from16 v2, v17
-
-    move-object/from16 v16, v18
-
-    move-object/from16 v17, v19
-
-    move-object/from16 v18, v20
-
-    move-object/from16 v19, v21
-
-    move-object/from16 v20, v22
-
-    move-object/from16 v21, v23
-
-    move-object/from16 v22, v24
-
-    move-object/from16 v23, v25
-
-    move-object/from16 v24, v26
-
-    move-object/from16 v25, v27
-
-    move-object/from16 v26, v28
-
-    move-object/from16 v27, v29
-
-    move-object/from16 v28, v30
-
-    move-object/from16 v29, v31
-
-    move-object/from16 v30, v32
-
-    move-object/from16 v31, v33
-
-    move-object/from16 v32, v34
-
-    move-object/from16 v33, v35
-
-    move-object/from16 v34, v36
-
-    move-object/from16 v35, v37
-
-    move-object/from16 v36, v0
-
-    filled-new-array/range {v1 .. v36}, [Loyd;
-
-    move-result-object v0
-
-    sput-object v0, Loyd;->w0:[Loyd;
+    invoke-virtual {p0, p1}, Loyd;->onThemeChanged(Lera;)V
 
     return-void
-.end method
-
-.method public constructor <init>(Ljava/lang/String;ILjava/lang/String;)V
-    .locals 0
-
-    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    iput-object p3, p0, Loyd;->a:Ljava/lang/String;
-
-    return-void
-.end method
-
-.method public static valueOf(Ljava/lang/String;)Loyd;
-    .locals 1
-
-    const-class v0, Loyd;
-
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
-
-    move-result-object p0
-
-    check-cast p0, Loyd;
-
-    return-object p0
-.end method
-
-.method public static values()[Loyd;
-    .locals 1
-
-    sget-object v0, Loyd;->w0:[Loyd;
-
-    invoke-virtual {v0}, [Loyd;->clone()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, [Loyd;
-
-    return-object v0
 .end method
 
 
 # virtual methods
-.method public final toString()Ljava/lang/String;
+.method public final a(I)V
+    .locals 1
+
+    iput p1, p0, Loyd;->X:I
+
+    invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->getBounds()Landroid/graphics/Rect;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/graphics/Rect;->isEmpty()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    return-void
+
+    :cond_0
+    invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->getBounds()Landroid/graphics/Rect;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/graphics/Rect;->centerY()I
+
+    move-result v0
+
+    sub-int/2addr v0, p1
+
+    iget p1, p0, Loyd;->c:I
+
+    invoke-virtual {p0, p1, v0}, Landroid/graphics/drawable/LayerDrawable;->setLayerInsetBottom(II)V
+
+    return-void
+.end method
+
+.method public final b(Landroid/graphics/drawable/Drawable;)Z
+    .locals 4
+
+    if-ne p1, p0, :cond_0
+
+    goto :goto_1
+
+    :cond_0
+    invoke-virtual {p0}, Landroid/graphics/drawable/LayerDrawable;->getNumberOfLayers()I
+
+    move-result v0
+
+    const/4 v1, 0x0
+
+    move v2, v1
+
+    :goto_0
+    if-ge v2, v0, :cond_2
+
+    invoke-virtual {p0, v2}, Landroid/graphics/drawable/LayerDrawable;->getDrawable(I)Landroid/graphics/drawable/Drawable;
+
+    move-result-object v3
+
+    if-ne v3, p1, :cond_1
+
+    :goto_1
+    const/4 p0, 0x1
+
+    return p0
+
+    :cond_1
+    add-int/lit8 v2, v2, 0x1
+
+    goto :goto_0
+
+    :cond_2
+    return v1
+.end method
+
+.method public final getAlpha()I
     .locals 0
 
-    iget-object p0, p0, Loyd;->a:Ljava/lang/String;
+    iget-object p0, p0, Loyd;->b:Lnyd;
 
-    return-object p0
+    invoke-virtual {p0}, Lnyd;->getAlpha()I
+
+    move-result p0
+
+    return p0
+.end method
+
+.method public final invalidateDrawable(Landroid/graphics/drawable/Drawable;)V
+    .locals 0
+
+    invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->getCallback()Landroid/graphics/drawable/Drawable$Callback;
+
+    move-result-object p0
+
+    if-eqz p0, :cond_0
+
+    invoke-interface {p0, p1}, Landroid/graphics/drawable/Drawable$Callback;->invalidateDrawable(Landroid/graphics/drawable/Drawable;)V
+
+    :cond_0
+    return-void
+.end method
+
+.method public final isRunning()Z
+    .locals 1
+
+    iget-boolean v0, p0, Loyd;->Y:Z
+
+    if-eqz v0, :cond_0
+
+    iget-object p0, p0, Loyd;->b:Lnyd;
+
+    invoke-virtual {p0}, Lnyd;->isRunning()Z
+
+    move-result p0
+
+    if-eqz p0, :cond_0
+
+    const/4 p0, 0x1
+
+    return p0
+
+    :cond_0
+    const/4 p0, 0x0
+
+    return p0
+.end method
+
+.method public final onBoundsChange(Landroid/graphics/Rect;)V
+    .locals 4
+
+    invoke-virtual {p1}, Landroid/graphics/Rect;->width()I
+
+    move-result v0
+
+    iget v1, p0, Loyd;->o:I
+
+    mul-int/lit8 v1, v1, 0x2
+
+    sub-int/2addr v0, v1
+
+    invoke-virtual {p1}, Landroid/graphics/Rect;->height()I
+
+    move-result v1
+
+    iget v2, p0, Loyd;->o:I
+
+    mul-int/lit8 v2, v2, 0x2
+
+    sub-int/2addr v1, v2
+
+    invoke-static {v0, v1}, Ljava/lang/Math;->min(II)I
+
+    move-result v0
+
+    iget v1, p0, Loyd;->c:I
+
+    invoke-virtual {p0, v1, v0, v0}, Landroid/graphics/drawable/LayerDrawable;->setLayerSize(III)V
+
+    iget v2, p0, Loyd;->X:I
+
+    if-lez v2, :cond_0
+
+    invoke-virtual {p1}, Landroid/graphics/Rect;->centerY()I
+
+    move-result v3
+
+    sub-int/2addr v3, v2
+
+    invoke-virtual {p0, v1, v3}, Landroid/graphics/drawable/LayerDrawable;->setLayerInsetBottom(II)V
+
+    :cond_0
+    new-instance v1, Landroid/graphics/Rect;
+
+    const/4 v2, 0x0
+
+    invoke-direct {v1, v2, v2, v0, v0}, Landroid/graphics/Rect;-><init>(IIII)V
+
+    iget-object v0, p0, Loyd;->b:Lnyd;
+
+    invoke-virtual {v0, v1}, Landroid/graphics/drawable/Drawable;->setBounds(Landroid/graphics/Rect;)V
+
+    invoke-super {p0, p1}, Landroid/graphics/drawable/LayerDrawable;->onBoundsChange(Landroid/graphics/Rect;)V
+
+    return-void
+.end method
+
+.method public final onThemeChanged(Lera;)V
+    .locals 1
+
+    iget-object v0, p0, Loyd;->b:Lnyd;
+
+    invoke-virtual {v0, p1}, Lnyd;->onThemeChanged(Lera;)V
+
+    iget v0, p0, Loyd;->a:I
+
+    invoke-virtual {p0, v0}, Landroid/graphics/drawable/LayerDrawable;->getDrawable(I)Landroid/graphics/drawable/Drawable;
+
+    move-result-object p0
+
+    check-cast p0, Landroid/graphics/drawable/ColorDrawable;
+
+    invoke-interface {p1}, Lera;->b()Lie0;
+
+    move-result-object p1
+
+    iget p1, p1, Lie0;->l:I
+
+    invoke-virtual {p0, p1}, Landroid/graphics/drawable/ColorDrawable;->setColor(I)V
+
+    return-void
+.end method
+
+.method public final setAlpha(I)V
+    .locals 0
+
+    invoke-super {p0, p1}, Landroid/graphics/drawable/LayerDrawable;->setAlpha(I)V
+
+    iget-object p0, p0, Loyd;->b:Lnyd;
+
+    invoke-virtual {p0, p1}, Lnyd;->setAlpha(I)V
+
+    return-void
+.end method
+
+.method public final setColorFilter(Landroid/graphics/ColorFilter;)V
+    .locals 0
+
+    invoke-super {p0, p1}, Landroid/graphics/drawable/LayerDrawable;->setColorFilter(Landroid/graphics/ColorFilter;)V
+
+    iget-object p0, p0, Loyd;->b:Lnyd;
+
+    invoke-virtual {p0, p1}, Lnyd;->setColorFilter(Landroid/graphics/ColorFilter;)V
+
+    return-void
+.end method
+
+.method public final setVisible(ZZ)Z
+    .locals 0
+
+    if-eqz p1, :cond_0
+
+    invoke-virtual {p0}, Loyd;->start()V
+
+    goto :goto_0
+
+    :cond_0
+    invoke-virtual {p0}, Loyd;->stop()V
+
+    :goto_0
+    invoke-super {p0, p1, p2}, Landroid/graphics/drawable/LayerDrawable;->setVisible(ZZ)Z
+
+    move-result p0
+
+    return p0
+.end method
+
+.method public final start()V
+    .locals 1
+
+    iget-boolean v0, p0, Loyd;->Y:Z
+
+    if-eqz v0, :cond_0
+
+    iget-object p0, p0, Loyd;->b:Lnyd;
+
+    invoke-virtual {p0}, Lnyd;->start()V
+
+    :cond_0
+    return-void
+.end method
+
+.method public final stop()V
+    .locals 1
+
+    iget-boolean v0, p0, Loyd;->Y:Z
+
+    if-eqz v0, :cond_0
+
+    iget-object p0, p0, Loyd;->b:Lnyd;
+
+    invoke-virtual {p0}, Lnyd;->stop()V
+
+    :cond_0
+    return-void
 .end method

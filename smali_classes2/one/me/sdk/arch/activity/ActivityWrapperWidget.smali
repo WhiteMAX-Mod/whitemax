@@ -21,9 +21,9 @@
         "activityName",
         "Lkotlin/Function1;",
         "Landroid/content/Context;",
-        "Le5f;",
+        "Lylf;",
         "startActivity",
-        "(Ljava/lang/String;Lx56;)V",
+        "(Ljava/lang/String;Lbc6;)V",
         "arch_release"
     }
     k = 0x1
@@ -39,7 +39,7 @@
 # instance fields
 .field public final a:Ljava/lang/String;
 
-.field public final b:Lx56;
+.field public final b:Lbc6;
 
 
 # direct methods
@@ -53,18 +53,18 @@
     const/4 v2, 0x0
 
     .line 1
-    invoke-direct {p0, v2, v0, v1, v2}, Lone/me/sdk/arch/Widget;-><init>(Landroid/os/Bundle;IILl94;)V
+    invoke-direct {p0, v2, v0, v1, v2}, Lone/me/sdk/arch/Widget;-><init>(Landroid/os/Bundle;IILld4;)V
 
     return-void
 .end method
 
-.method public constructor <init>(Ljava/lang/String;Lx56;)V
+.method public constructor <init>(Ljava/lang/String;Lbc6;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Ljava/lang/String;",
-            "Lx56;",
+            "Lbc6;",
             ")V"
         }
     .end annotation
@@ -76,7 +76,7 @@
     iput-object p1, p0, Lone/me/sdk/arch/activity/ActivityWrapperWidget;->a:Ljava/lang/String;
 
     .line 4
-    iput-object p2, p0, Lone/me/sdk/arch/activity/ActivityWrapperWidget;->b:Lx56;
+    iput-object p2, p0, Lone/me/sdk/arch/activity/ActivityWrapperWidget;->b:Lbc6;
 
     return-void
 .end method
@@ -96,27 +96,27 @@
 
     move-result-object p1
 
-    invoke-static {p1}, Llcc;->a(Ljava/lang/Class;)Lz03;
+    invoke-static {p1}, Ljpc;->a(Ljava/lang/Class;)Ly33;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Lz03;->b()Ljava/lang/String;
+    invoke-virtual {p1}, Ly33;->b()Ljava/lang/String;
 
     move-result-object p1
 
     iget-object v0, p0, Lone/me/sdk/arch/activity/ActivityWrapperWidget;->a:Ljava/lang/String;
 
-    invoke-static {p1, v0}, Lxq7;->d(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {p1, v0}, Lvyg;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 
     if-eqz p1, :cond_0
 
-    invoke-virtual {p0}, Lou3;->getRouter()Lcmc;
+    invoke-virtual {p0}, Lxx3;->getRouter()Lrzc;
 
     move-result-object p1
 
-    invoke-virtual {p1, p0}, Lcmc;->B(Lou3;)Z
+    invoke-virtual {p1, p0}, Lrzc;->B(Lxx3;)Z
 
     :cond_0
     return-void
@@ -167,7 +167,7 @@
 
     invoke-virtual {p1, p0}, Landroid/app/Application;->registerActivityLifecycleCallbacks(Landroid/app/Application$ActivityLifecycleCallbacks;)V
 
-    iget-object p0, p0, Lone/me/sdk/arch/activity/ActivityWrapperWidget;->b:Lx56;
+    iget-object p0, p0, Lone/me/sdk/arch/activity/ActivityWrapperWidget;->b:Lbc6;
 
     if-eqz p0, :cond_0
 
@@ -175,7 +175,7 @@
 
     move-result-object p1
 
-    invoke-interface {p0, p1}, Lx56;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {p0, p1}, Lbc6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     :cond_0
     new-instance p0, Landroid/widget/FrameLayout;
@@ -186,7 +186,7 @@
 
     invoke-direct {p0, p1}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;)V
 
-    sget p1, Ljub;->arch_activity_wrapper_view_id:I
+    sget p1, Lw6c;->arch_activity_wrapper_view_id:I
 
     invoke-virtual {p0, p1}, Landroid/view/View;->setId(I)V
 
@@ -208,7 +208,7 @@
 
     invoke-virtual {v0, p0}, Landroid/app/Application;->unregisterActivityLifecycleCallbacks(Landroid/app/Application$ActivityLifecycleCallbacks;)V
 
-    invoke-super {p0, p1}, Lou3;->onDestroyView(Landroid/view/View;)V
+    invoke-super {p0, p1}, Lxx3;->onDestroyView(Landroid/view/View;)V
 
     return-void
 .end method

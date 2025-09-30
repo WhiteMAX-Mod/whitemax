@@ -1,393 +1,404 @@
 .class public final Luha;
-.super Lu2;
+.super Lure;
 .source "SourceFile"
+
+# interfaces
+.implements Lpc6;
 
 
 # instance fields
-.field public final synthetic c:I
+.field public X:Ljava/lang/Object;
 
-.field public final synthetic o:Lvha;
+.field public Y:Ljava/nio/file/Path;
+
+.field public Z:I
+
+.field public synthetic r0:Ljava/lang/Object;
+
+.field public final synthetic s0:Laia;
 
 
 # direct methods
-.method public synthetic constructor <init>(Ljava/lang/Object;Lvha;I)V
+.method public constructor <init>(Laia;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    .line 2
-    iput p3, p0, Luha;->c:I
+    iput-object p1, p0, Luha;->s0:Laia;
 
-    iput-object p2, p0, Luha;->o:Lvha;
+    const/4 p1, 0x2
 
-    const/16 p2, 0x9
-
-    invoke-direct {p0, p2, p1}, Lu2;-><init>(ILjava/lang/Object;)V
-
-    return-void
-.end method
-
-.method public constructor <init>(Lvha;I)V
-    .locals 0
-
-    iput p2, p0, Luha;->c:I
-
-    packed-switch p2, :pswitch_data_0
-
-    :pswitch_0
-    const/4 p2, 0x0
-
-    invoke-static {p2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object p2
-
-    iput-object p1, p0, Luha;->o:Lvha;
-
-    const/16 p1, 0x9
-
-    .line 3
-    invoke-direct {p0, p1, p2}, Lu2;-><init>(ILjava/lang/Object;)V
-
-    return-void
-
-    .line 4
-    :pswitch_1
-    iput-object p1, p0, Luha;->o:Lvha;
-
-    const/16 p1, 0x9
-
-    .line 5
-    const-string p2, ""
-
-    invoke-direct {p0, p1, p2}, Lu2;-><init>(ILjava/lang/Object;)V
-
-    return-void
-
-    .line 6
-    :pswitch_2
-    iput-object p1, p0, Luha;->o:Lvha;
-
-    const/16 p1, 0x9
-
-    .line 7
-    sget-object p2, Ltha;->a:Ltha;
-
-    invoke-direct {p0, p1, p2}, Lu2;-><init>(ILjava/lang/Object;)V
-
-    return-void
-
-    :pswitch_data_0
-    .packed-switch 0x2
-        :pswitch_2
-        :pswitch_0
-        :pswitch_1
-    .end packed-switch
-.end method
-
-.method public synthetic constructor <init>(Lvha;IZ)V
-    .locals 0
-
-    .line 1
-    iput p2, p0, Luha;->c:I
-
-    iput-object p1, p0, Luha;->o:Lvha;
-
-    const/4 p1, 0x0
-
-    const/16 p2, 0x9
-
-    invoke-direct {p0, p2, p1}, Lu2;-><init>(ILjava/lang/Object;)V
+    invoke-direct {p0, p1, p2}, Lure;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final x0(Ljava/lang/Object;Ljava/lang/Object;)V
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
+
+    check-cast p1, Ly04;
+
+    check-cast p2, Lkotlin/coroutines/Continuation;
+
+    invoke-virtual {p0, p1, p2}, Luha;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+
+    move-result-object p0
+
+    check-cast p0, Luha;
+
+    sget-object p1, Lylf;->a:Lylf;
+
+    invoke-virtual {p0, p1}, Luha;->o(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
     .locals 1
 
-    iget v0, p0, Luha;->c:I
+    new-instance v0, Luha;
 
-    packed-switch v0, :pswitch_data_0
+    iget-object p0, p0, Luha;->s0:Laia;
 
-    invoke-static {p1, p2}, Lxq7;->d(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-direct {v0, p0, p2}, Luha;-><init>(Laia;Lkotlin/coroutines/Continuation;)V
 
-    move-result v0
+    iput-object p1, v0, Luha;->r0:Ljava/lang/Object;
 
-    if-nez v0, :cond_0
+    return-object v0
+.end method
 
-    check-cast p2, Lsha;
+.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 12
 
-    check-cast p1, Lsha;
+    iget v0, p0, Luha;->Z:I
 
-    if-eqz p2, :cond_0
+    const/4 v1, 0x3
 
-    sget-object p1, Lqp4;->q0:Lap9;
+    const/4 v2, 0x2
 
-    iget-object p0, p0, Luha;->o:Lvha;
+    const/4 v3, 0x1
 
-    invoke-virtual {p1, p0}, Lap9;->h(Landroid/view/View;)Lyha;
+    sget-object v4, Lylf;->a:Lylf;
 
-    move-result-object p1
+    const/4 v5, 0x0
 
-    invoke-virtual {p0, p1, p2}, Lvha;->h(Lyha;Lsha;)V
+    iget-object v6, p0, Luha;->s0:Laia;
 
-    :cond_0
-    return-void
+    sget-object v7, Lz04;->a:Lz04;
 
-    :pswitch_0
-    invoke-static {p1, p2}, Lxq7;->d(Ljava/lang/Object;Ljava/lang/Object;)Z
+    if-eqz v0, :cond_3
 
-    move-result v0
+    if-eq v0, v3, :cond_2
 
-    if-nez v0, :cond_1
+    if-eq v0, v2, :cond_1
 
-    check-cast p2, Ljava/lang/Number;
+    if-ne v0, v1, :cond_0
 
-    invoke-virtual {p2}, Ljava/lang/Number;->intValue()I
+    iget-object v0, p0, Luha;->r0:Ljava/lang/Object;
 
-    check-cast p1, Ljava/lang/Number;
+    check-cast v0, Ly04;
 
-    invoke-virtual {p1}, Ljava/lang/Number;->intValue()I
+    invoke-static {p1}, Lqe5;->V(Ljava/lang/Object;)V
 
-    sget-object p1, Lqp4;->q0:Lap9;
-
-    iget-object p0, p0, Luha;->o:Lvha;
-
-    invoke-virtual {p1, p0}, Lap9;->h(Landroid/view/View;)Lyha;
-
-    move-result-object p1
-
-    invoke-virtual {p0, p1}, Lvha;->onThemeChanged(Lyha;)V
-
-    :cond_1
-    return-void
-
-    :pswitch_1
-    invoke-static {p1, p2}, Lxq7;->d(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_2
-
-    check-cast p2, Ljava/lang/Number;
-
-    invoke-virtual {p2}, Ljava/lang/Number;->intValue()I
-
-    check-cast p1, Ljava/lang/Number;
-
-    invoke-virtual {p1}, Ljava/lang/Number;->intValue()I
-
-    sget-object p1, Lqp4;->q0:Lap9;
-
-    iget-object p0, p0, Luha;->o:Lvha;
-
-    invoke-virtual {p1, p0}, Lap9;->h(Landroid/view/View;)Lyha;
-
-    move-result-object p1
-
-    invoke-virtual {p0, p1}, Lvha;->onThemeChanged(Lyha;)V
-
-    :cond_2
-    return-void
-
-    :pswitch_2
-    invoke-static {p1, p2}, Lxq7;->d(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_3
-
-    check-cast p2, [Landroid/text/InputFilter;
-
-    check-cast p1, [Landroid/text/InputFilter;
-
-    iget-object p0, p0, Luha;->o:Lvha;
-
-    iget-object p0, p0, Lvha;->a:Landroid/widget/EditText;
-
-    invoke-virtual {p0, p2}, Landroid/widget/TextView;->setFilters([Landroid/text/InputFilter;)V
-
-    :cond_3
-    return-void
-
-    :pswitch_3
-    invoke-static {p1, p2}, Lxq7;->d(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_4
-
-    check-cast p2, Ljava/lang/String;
-
-    check-cast p1, Ljava/lang/String;
-
-    iget-object p0, p0, Luha;->o:Lvha;
-
-    iget-object p0, p0, Lvha;->a:Landroid/widget/EditText;
-
-    invoke-virtual {p0, p2}, Landroid/widget/TextView;->setHint(Ljava/lang/CharSequence;)V
-
-    :cond_4
-    return-void
-
-    :pswitch_4
-    invoke-static {p1, p2}, Lxq7;->d(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_5
-
-    check-cast p2, Ljava/lang/Integer;
-
-    check-cast p1, Ljava/lang/Integer;
-
-    sget-object p1, Lqp4;->q0:Lap9;
-
-    iget-object p0, p0, Luha;->o:Lvha;
-
-    invoke-virtual {p1, p0}, Lap9;->h(Landroid/view/View;)Lyha;
-
-    move-result-object p1
-
-    invoke-virtual {p0, p1}, Lvha;->onThemeChanged(Lyha;)V
-
-    :cond_5
-    return-void
-
-    :pswitch_5
-    invoke-static {p1, p2}, Lxq7;->d(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_9
-
-    check-cast p2, Ltha;
-
-    check-cast p1, Ltha;
-
-    iget-object p0, p0, Luha;->o:Lvha;
-
-    iget-object p1, p0, Lvha;->a:Landroid/widget/EditText;
-
-    invoke-virtual {p2}, Ljava/lang/Enum;->ordinal()I
-
-    move-result p2
-
-    if-eqz p2, :cond_7
-
-    const/4 v0, 0x1
-
-    if-ne p2, v0, :cond_6
-
-    invoke-static {}, Landroid/text/method/PasswordTransformationMethod;->getInstance()Landroid/text/method/PasswordTransformationMethod;
-
-    move-result-object p2
-
-    invoke-virtual {p1, p2}, Landroid/widget/TextView;->setTransformationMethod(Landroid/text/method/TransformationMethod;)V
-
-    iget-object p1, p0, Lvha;->o:Ljava/lang/Object;
-
-    invoke-virtual {p0, p1}, Lvha;->setEndIconDrawable(Lje7;)V
+    move-object v9, v0
 
     goto :goto_0
 
-    :cond_6
-    new-instance p0, Lkotlin/NoWhenBranchMatchedException;
+    :cond_0
+    new-instance p0, Ljava/lang/IllegalStateException;
 
-    invoke-direct {p0}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
+    const-string p1, "call to \'resume\' before \'invoke\' with coroutine"
+
+    invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
     throw p0
 
-    :cond_7
-    invoke-virtual {p0}, Lvha;->getEndIconDrawable()Lje7;
+    :cond_1
+    iget-object v0, p0, Luha;->X:Ljava/lang/Object;
 
-    move-result-object p2
+    iget-object v8, p0, Luha;->r0:Ljava/lang/Object;
 
-    if-eqz p2, :cond_8
+    check-cast v8, Ly04;
 
-    iget-object p2, p0, Lvha;->c:Ljava/lang/Object;
+    :try_start_0
+    invoke-static {p1}, Lqe5;->V(Ljava/lang/Object;)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    invoke-virtual {p0, p2}, Lvha;->setEndIconDrawable(Lje7;)V
+    goto/16 :goto_4
 
-    :cond_8
-    invoke-virtual {p1}, Landroid/widget/TextView;->getTransformationMethod()Landroid/text/method/TransformationMethod;
+    :catchall_0
+    move-exception p1
 
-    move-result-object p0
+    goto/16 :goto_5
 
-    instance-of p0, p0, Landroid/text/method/PasswordTransformationMethod;
+    :cond_2
+    iget-object v0, p0, Luha;->Y:Ljava/nio/file/Path;
 
-    if-eqz p0, :cond_9
+    iget-object v8, p0, Luha;->X:Ljava/lang/Object;
 
-    invoke-static {}, Landroid/text/method/SingleLineTransformationMethod;->getInstance()Landroid/text/method/SingleLineTransformationMethod;
+    check-cast v8, Laia;
 
-    move-result-object p0
+    iget-object v9, p0, Luha;->r0:Ljava/lang/Object;
 
-    invoke-virtual {p1, p0}, Landroid/widget/TextView;->setTransformationMethod(Landroid/text/method/TransformationMethod;)V
+    check-cast v9, Ly04;
 
-    :cond_9
+    :try_start_1
+    invoke-static {p1}, Lqe5;->V(Ljava/lang/Object;)V
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_1
+
+    goto :goto_1
+
+    :catchall_1
+    move-exception p1
+
+    goto :goto_2
+
+    :cond_3
+    invoke-static {p1}, Lqe5;->V(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Luha;->r0:Ljava/lang/Object;
+
+    check-cast p1, Ly04;
+
+    invoke-virtual {v6}, Laia;->f()Ljava/nio/file/Path;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Ljava/nio/file/Path;->toFile()Ljava/io/File;
+
+    move-result-object v0
+
+    new-instance v8, Lmha;
+
+    const/4 v9, 0x3
+
+    invoke-direct {v8, v9}, Lmha;-><init>(I)V
+
+    invoke-virtual {v0, v8}, Ljava/io/File;->listFiles(Ljava/io/FileFilter;)[Ljava/io/File;
+
+    move-result-object v0
+
+    new-instance v8, Lsha;
+
+    invoke-direct {v8, v0, v6, v5}, Lsha;-><init>([Ljava/io/File;Laia;Lkotlin/coroutines/Continuation;)V
+
+    invoke-static {p1, v5, v5, v8, v1}, Lvyg;->u(Ly04;Lq04;Lb14;Lpc6;I)Lcae;
+
+    move-object v9, p1
+
+    :cond_4
     :goto_0
-    return-void
+    iget-object p1, v6, Laia;->g:Lcu0;
 
-    :pswitch_6
-    invoke-static {p1, p2}, Lxq7;->d(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_a
-
-    check-cast p2, Ljava/lang/Number;
-
-    invoke-virtual {p2}, Ljava/lang/Number;->intValue()I
-
-    move-result p2
-
-    check-cast p1, Ljava/lang/Number;
-
-    invoke-virtual {p1}, Ljava/lang/Number;->intValue()I
-
-    iget-object p0, p0, Luha;->o:Lvha;
-
-    invoke-virtual {p0}, Lvha;->getText()Ljava/lang/CharSequence;
-
-    move-result-object p1
-
-    invoke-interface {p1}, Ljava/lang/CharSequence;->length()I
+    invoke-virtual {p1}, Lcu0;->v()Z
 
     move-result p1
 
-    invoke-static {p0, p2, p1}, Lvha;->c(Lvha;II)V
+    if-nez p1, :cond_9
 
-    :cond_a
-    return-void
+    :try_start_2
+    iget-object p1, v6, Laia;->d:Ljava/text/SimpleDateFormat;
 
-    :pswitch_7
-    invoke-static {p1, p2}, Lxq7;->d(Ljava/lang/Object;Ljava/lang/Object;)Z
+    new-instance v0, Ljava/util/Date;
 
-    move-result v0
+    invoke-direct {v0}, Ljava/util/Date;-><init>()V
 
-    if-nez v0, :cond_b
+    invoke-virtual {p1, v0}, Ljava/text/DateFormat;->format(Ljava/util/Date;)Ljava/lang/String;
 
-    check-cast p2, Lje7;
+    move-result-object p1
 
-    check-cast p1, Lje7;
+    const-string v0, ".log"
 
-    iget-object p0, p0, Luha;->o:Lvha;
+    invoke-static {p1, v0}, Lmw1;->h(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
-    invoke-static {p0, p2}, Lvha;->b(Lvha;Lje7;)V
+    move-result-object p1
 
-    :cond_b
-    return-void
+    invoke-virtual {v6}, Laia;->f()Ljava/nio/file/Path;
 
-    nop
+    move-result-object v0
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_7
-        :pswitch_6
-        :pswitch_5
-        :pswitch_4
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    invoke-interface {v0}, Ljava/nio/file/Path;->toFile()Ljava/io/File;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/io/File;->mkdirs()Z
+
+    invoke-virtual {v6}, Laia;->f()Ljava/nio/file/Path;
+
+    move-result-object v0
+
+    invoke-interface {v0, p1}, Ljava/nio/file/Path;->resolve(Ljava/lang/String;)Ljava/nio/file/Path;
+
+    move-result-object v0
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_5
+
+    :try_start_3
+    iput-object v9, p0, Luha;->r0:Ljava/lang/Object;
+
+    iput-object v6, p0, Luha;->X:Ljava/lang/Object;
+
+    iput-object v0, p0, Luha;->Y:Ljava/nio/file/Path;
+
+    iput v3, p0, Luha;->Z:I
+
+    invoke-static {v6, v0, p0}, Laia;->b(Laia;Ljava/nio/file/Path;Ljx3;)Ljava/lang/Object;
+
+    move-result-object p1
+    :try_end_3
+    .catchall {:try_start_3 .. :try_end_3} :catchall_2
+
+    if-ne p1, v7, :cond_5
+
+    goto/16 :goto_8
+
+    :cond_5
+    move-object v8, v6
+
+    :goto_1
+    move-object p1, v0
+
+    move-object v0, v4
+
+    goto :goto_3
+
+    :catchall_2
+    move-exception p1
+
+    move-object v8, v6
+
+    :goto_2
+    :try_start_4
+    new-instance v10, Lhvc;
+
+    invoke-direct {v10, p1}, Lhvc;-><init>(Ljava/lang/Throwable;)V
+    :try_end_4
+    .catchall {:try_start_4 .. :try_end_4} :catchall_5
+
+    move-object p1, v0
+
+    move-object v0, v10
+
+    :goto_3
+    :try_start_5
+    sget-object v10, Lhx9;->a:Lhx9;
+
+    new-instance v11, Ltha;
+
+    invoke-direct {v11, v8, p1, v5}, Ltha;-><init>(Laia;Ljava/nio/file/Path;Lkotlin/coroutines/Continuation;)V
+
+    iput-object v9, p0, Luha;->r0:Ljava/lang/Object;
+
+    iput-object v0, p0, Luha;->X:Ljava/lang/Object;
+
+    iput-object v5, p0, Luha;->Y:Ljava/nio/file/Path;
+
+    iput v2, p0, Luha;->Z:I
+
+    invoke-static {v10, v11, p0}, Lvyg;->H(Lq04;Lpc6;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p1
+    :try_end_5
+    .catchall {:try_start_5 .. :try_end_5} :catchall_4
+
+    if-ne p1, v7, :cond_6
+
+    goto :goto_8
+
+    :cond_6
+    move-object v8, v9
+
+    :goto_4
+    :try_start_6
+    invoke-static {v0}, Lqe5;->V(Ljava/lang/Object;)V
+
+    move-object v0, v4
+
+    move-object v9, v8
+
+    goto :goto_7
+
+    :catchall_3
+    move-exception p1
+
+    move-object v9, v8
+
+    goto :goto_6
+
+    :catchall_4
+    move-exception p1
+
+    move-object v8, v9
+
+    :goto_5
+    invoke-static {v0}, Ljvc;->a(Ljava/lang/Object;)Ljava/lang/Throwable;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_7
+
+    instance-of v9, v0, Ljava/util/concurrent/CancellationException;
+
+    if-nez v9, :cond_7
+
+    invoke-static {p1, v0}, Ln2e;->a(Ljava/lang/Throwable;Ljava/lang/Throwable;)V
+
+    :cond_7
+    throw p1
+    :try_end_6
+    .catchall {:try_start_6 .. :try_end_6} :catchall_3
+
+    :catchall_5
+    move-exception p1
+
+    :goto_6
+    new-instance v0, Lhvc;
+
+    invoke-direct {v0, p1}, Lhvc;-><init>(Ljava/lang/Throwable;)V
+
+    :goto_7
+    invoke-static {v0}, Ljvc;->a(Ljava/lang/Object;)Ljava/lang/Throwable;
+
+    move-result-object p1
+
+    if-eqz p1, :cond_4
+
+    instance-of v8, p1, Ljava/nio/file/NoSuchFileException;
+
+    if-eqz v8, :cond_8
+
+    const-string v8, "OneMeFileLogger"
+
+    const-string v10, "Log file not found!"
+
+    invoke-static {v8, v10, p1}, Ljtg;->m(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    iput-object v9, p0, Luha;->r0:Ljava/lang/Object;
+
+    iput-object v0, p0, Luha;->X:Ljava/lang/Object;
+
+    iput-object v5, p0, Luha;->Y:Ljava/nio/file/Path;
+
+    iput v1, p0, Luha;->Z:I
+
+    const-wide/16 v10, 0x7d0
+
+    invoke-static {v10, v11, p0}, Ln2e;->h(JLkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    if-ne p1, v7, :cond_4
+
+    :goto_8
+    return-object v7
+
+    :cond_8
+    throw p1
+
+    :cond_9
+    return-object v4
 .end method

@@ -1,21 +1,25 @@
-.class public abstract Lrsc;
-.super Ljava/lang/Object;
+.class public Lrsc;
+.super Landroid/app/Fragment;
 .source "SourceFile"
 
 
+# annotations
+.annotation system Ldalvik/annotation/MemberClasses;
+    value = {
+        Lrsc$a;
+    }
+.end annotation
+
+
 # static fields
-.field public static final a:Lho9;
+.field public static final synthetic a:I
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>()V
+    .locals 0
 
-    new-instance v0, Lho9;
-
-    invoke-direct {v0}, Lho9;-><init>()V
-
-    sput-object v0, Lrsc;->a:Lho9;
+    invoke-direct {p0}, Landroid/app/Fragment;-><init>()V
 
     return-void
 .end method

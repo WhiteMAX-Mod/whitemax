@@ -1,125 +1,100 @@
-.class public final Llma;
-.super Lmma;
+.class public final synthetic Llma;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field public final d:Ljava/nio/ByteBuffer;
+.field public final synthetic a:I
+
+.field public final synthetic b:Lmma;
 
 
 # direct methods
-.method public constructor <init>([BII)V
-    .locals 1
+.method public synthetic constructor <init>(Lmma;I)V
+    .locals 0
 
-    shr-int/lit8 v0, p3, 0x2
+    iput p2, p0, Llma;->a:I
 
-    invoke-direct {p0, p1, v0, p2}, Lmma;-><init>([BII)V
+    iput-object p1, p0, Llma;->b:Lmma;
 
-    invoke-static {p1, p2, p3}, Ljava/nio/ByteBuffer;->wrap([BII)Ljava/nio/ByteBuffer;
-
-    move-result-object p1
-
-    sget-object p2, Ljava/nio/ByteOrder;->LITTLE_ENDIAN:Ljava/nio/ByteOrder;
-
-    invoke-virtual {p1, p2}, Ljava/nio/ByteBuffer;->order(Ljava/nio/ByteOrder;)Ljava/nio/ByteBuffer;
-
-    move-result-object p1
-
-    iput-object p1, p0, Llma;->d:Ljava/nio/ByteBuffer;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(I)S
-    .locals 2
-
-    shl-int/lit8 p1, p1, 0x2
-
-    iget-object p0, p0, Llma;->d:Ljava/nio/ByteBuffer;
-
-    invoke-virtual {p0, p1}, Ljava/nio/ByteBuffer;->getFloat(I)F
-
-    move-result p0
-
-    float-to-double p0, p0
-
-    const-wide/high16 v0, 0x3ff0000000000000L    # 1.0
-
-    add-double/2addr p0, v0
-
-    const-wide v0, 0x40dfffe000000000L    # 32767.5
-
-    mul-double/2addr p0, v0
-
-    double-to-int p0, p0
-
-    add-int/lit16 p0, p0, -0x8000
-
-    int-to-short p0, p0
-
-    return p0
-.end method
-
-.method public final toString()Ljava/lang/String;
+.method public final run()V
     .locals 4
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    iget v0, p0, Llma;->a:I
 
-    const-string v1, "PCM float ("
+    packed-switch v0, :pswitch_data_0
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    iget-object p0, p0, Llma;->b:Lmma;
 
-    iget v1, p0, Lmma;->a:I
+    iget-object v0, p0, Lmma;->c:Ljava/util/concurrent/atomic/AtomicBoolean;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
 
-    const-string v2, ") {"
+    move-result v0
 
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    if-lez v1, :cond_0
-
-    const/4 v2, 0x0
-
-    iget-object p0, p0, Llma;->d:Ljava/nio/ByteBuffer;
-
-    invoke-virtual {p0, v2}, Ljava/nio/ByteBuffer;->getFloat(I)F
-
-    move-result v2
-
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
-
-    const/4 v2, 0x1
-
-    :goto_0
-    if-ge v2, v1, :cond_0
-
-    const-string v3, ", "
-
-    invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    shl-int/lit8 v3, v2, 0x2
-
-    invoke-virtual {p0, v3}, Ljava/nio/ByteBuffer;->getFloat(I)F
-
-    move-result v3
-
-    invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
-
-    add-int/lit8 v2, v2, 0x1
+    if-eqz v0, :cond_0
 
     goto :goto_0
 
     :cond_0
-    const/16 p0, 0x7d
+    iget-object v0, p0, Lmma;->b:Ljava/util/concurrent/ExecutorService;
 
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+    new-instance v1, Lm50;
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    const/16 v2, 0x9
 
-    move-result-object p0
+    const/4 v3, 0x0
 
-    return-object p0
+    invoke-direct {v1, p0, v3, v2}, Lm50;-><init>(Ljava/lang/Object;ZI)V
+
+    invoke-interface {v0, v1}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
+
+    :goto_0
+    return-void
+
+    :pswitch_0
+    iget-object p0, p0, Llma;->b:Lmma;
+
+    iget-object v0, p0, Lmma;->c:Ljava/util/concurrent/atomic/AtomicBoolean;
+
+    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    goto :goto_1
+
+    :cond_1
+    iget-object v0, p0, Lmma;->b:Ljava/util/concurrent/ExecutorService;
+
+    new-instance v1, Lm50;
+
+    const/16 v2, 0x9
+
+    const/4 v3, 0x1
+
+    invoke-direct {v1, p0, v3, v2}, Lm50;-><init>(Ljava/lang/Object;ZI)V
+
+    invoke-interface {v0, v1}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
+
+    :goto_1
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

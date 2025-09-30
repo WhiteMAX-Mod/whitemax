@@ -1,294 +1,121 @@
-.class public final Lzx1;
-.super Ljava/lang/Object;
+.class public final enum Lzx1;
+.super Ljava/lang/Enum;
 .source "SourceFile"
-
-# interfaces
-.implements Lfle;
 
 
 # static fields
-.field public static final X:Ls90;
+.field public static final enum X:Lzx1;
 
-.field public static final Y:Ls90;
+.field public static final enum Y:Lzx1;
 
-.field public static final Z:Ls90;
+.field public static final synthetic Z:[Lzx1;
 
-.field public static final b:Ls90;
+.field public static final enum a:Lzx1;
 
-.field public static final c:Ls90;
+.field public static final enum b:Lzx1;
 
-.field public static final o:Ls90;
+.field public static final enum c:Lzx1;
 
-.field public static final o0:Ls90;
-
-.field public static final p0:Ls90;
-
-.field public static final q0:Ls90;
-
-.field public static final r0:Ls90;
-
-
-# instance fields
-.field public final a:Lqka;
+.field public static final enum o:Lzx1;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 4
+    .locals 8
 
-    new-instance v0, Ls90;
+    new-instance v0, Lzx1;
 
-    const-string v1, "camerax.core.appConfig.cameraFactoryProvider"
+    const-string v1, "UNKNOWN"
 
-    const-class v2, Lyu1;
+    const/4 v2, 0x0
 
-    const/4 v3, 0x0
+    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    invoke-direct {v0, v1, v2, v3}, Ls90;-><init>(Ljava/lang/String;Ljava/lang/Class;Landroid/hardware/camera2/CaptureRequest$Key;)V
+    sput-object v0, Lzx1;->a:Lzx1;
 
-    sput-object v0, Lzx1;->b:Ls90;
+    new-instance v1, Lzx1;
 
-    new-instance v0, Ls90;
+    const-string v2, "INACTIVE"
 
-    const-string v1, "camerax.core.appConfig.deviceSurfaceManagerProvider"
+    const/4 v3, 0x1
 
-    const-class v2, Lzu1;
+    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    invoke-direct {v0, v1, v2, v3}, Ls90;-><init>(Ljava/lang/String;Ljava/lang/Class;Landroid/hardware/camera2/CaptureRequest$Key;)V
+    sput-object v1, Lzx1;->b:Lzx1;
 
-    sput-object v0, Lzx1;->c:Ls90;
+    new-instance v2, Lzx1;
 
-    new-instance v0, Ls90;
+    const-string v3, "SEARCHING"
 
-    const-string v1, "camerax.core.appConfig.useCaseConfigFactoryProvider"
+    const/4 v4, 0x2
 
-    const-class v2, Lav1;
+    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    invoke-direct {v0, v1, v2, v3}, Ls90;-><init>(Ljava/lang/String;Ljava/lang/Class;Landroid/hardware/camera2/CaptureRequest$Key;)V
+    sput-object v2, Lzx1;->c:Lzx1;
 
-    sput-object v0, Lzx1;->o:Ls90;
+    new-instance v3, Lzx1;
 
-    new-instance v0, Ls90;
+    const-string v4, "FLASH_REQUIRED"
 
-    const-string v1, "camerax.core.appConfig.cameraExecutor"
+    const/4 v5, 0x3
 
-    const-class v2, Ljava/util/concurrent/Executor;
+    invoke-direct {v3, v4, v5}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    invoke-direct {v0, v1, v2, v3}, Ls90;-><init>(Ljava/lang/String;Ljava/lang/Class;Landroid/hardware/camera2/CaptureRequest$Key;)V
+    sput-object v3, Lzx1;->o:Lzx1;
 
-    sput-object v0, Lzx1;->X:Ls90;
+    new-instance v4, Lzx1;
 
-    new-instance v0, Ls90;
+    const-string v5, "CONVERGED"
 
-    const-string v1, "camerax.core.appConfig.schedulerHandler"
+    const/4 v6, 0x4
 
-    const-class v2, Landroid/os/Handler;
+    invoke-direct {v4, v5, v6}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    invoke-direct {v0, v1, v2, v3}, Ls90;-><init>(Ljava/lang/String;Ljava/lang/Class;Landroid/hardware/camera2/CaptureRequest$Key;)V
+    sput-object v4, Lzx1;->X:Lzx1;
 
-    sput-object v0, Lzx1;->Y:Ls90;
+    new-instance v5, Lzx1;
 
-    new-instance v0, Ls90;
+    const-string v6, "LOCKED"
 
-    const-string v1, "camerax.core.appConfig.minimumLoggingLevel"
+    const/4 v7, 0x5
 
-    sget-object v2, Ljava/lang/Integer;->TYPE:Ljava/lang/Class;
+    invoke-direct {v5, v6, v7}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    invoke-direct {v0, v1, v2, v3}, Ls90;-><init>(Ljava/lang/String;Ljava/lang/Class;Landroid/hardware/camera2/CaptureRequest$Key;)V
+    sput-object v5, Lzx1;->Y:Lzx1;
 
-    sput-object v0, Lzx1;->Z:Ls90;
+    filled-new-array/range {v0 .. v5}, [Lzx1;
 
-    new-instance v0, Ls90;
+    move-result-object v0
 
-    const-string v1, "camerax.core.appConfig.availableCamerasLimiter"
-
-    const-class v2, Lox1;
-
-    invoke-direct {v0, v1, v2, v3}, Ls90;-><init>(Ljava/lang/String;Ljava/lang/Class;Landroid/hardware/camera2/CaptureRequest$Key;)V
-
-    sput-object v0, Lzx1;->o0:Ls90;
-
-    new-instance v0, Ls90;
-
-    const-string v1, "camerax.core.appConfig.cameraOpenRetryMaxTimeoutInMillisWhileResuming"
-
-    sget-object v2, Ljava/lang/Long;->TYPE:Ljava/lang/Class;
-
-    invoke-direct {v0, v1, v2, v3}, Ls90;-><init>(Ljava/lang/String;Ljava/lang/Class;Landroid/hardware/camera2/CaptureRequest$Key;)V
-
-    sput-object v0, Lzx1;->p0:Ls90;
-
-    new-instance v0, Ls90;
-
-    const-string v1, "camerax.core.appConfig.cameraProviderInitRetryPolicy"
-
-    const-class v2, Lxhc;
-
-    invoke-direct {v0, v1, v2, v3}, Ls90;-><init>(Ljava/lang/String;Ljava/lang/Class;Landroid/hardware/camera2/CaptureRequest$Key;)V
-
-    sput-object v0, Lzx1;->q0:Ls90;
-
-    new-instance v0, Ls90;
-
-    const-string v1, "camerax.core.appConfig.quirksSettings"
-
-    const-class v2, Llpb;
-
-    invoke-direct {v0, v1, v2, v3}, Ls90;-><init>(Ljava/lang/String;Ljava/lang/Class;Landroid/hardware/camera2/CaptureRequest$Key;)V
-
-    sput-object v0, Lzx1;->r0:Ls90;
+    sput-object v0, Lzx1;->Z:[Lzx1;
 
     return-void
 .end method
 
-.method public constructor <init>(Lqka;)V
-    .locals 0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lzx1;->a:Lqka;
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final a()Lox1;
+.method public static valueOf(Ljava/lang/String;)Lzx1;
     .locals 1
 
-    iget-object p0, p0, Lzx1;->a:Lqka;
+    const-class v0, Lzx1;
 
-    sget-object v0, Lzx1;->o0:Ls90;
-
-    :try_start_0
-    invoke-virtual {p0, v0}, Lqka;->i(Ls90;)Ljava/lang/Object;
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
 
     move-result-object p0
-    :try_end_0
-    .catch Ljava/lang/IllegalArgumentException; {:try_start_0 .. :try_end_0} :catch_0
 
-    goto :goto_0
-
-    :catch_0
-    const/4 p0, 0x0
-
-    :goto_0
-    check-cast p0, Lox1;
+    check-cast p0, Lzx1;
 
     return-object p0
 .end method
 
-.method public final b()Lyu1;
+.method public static values()[Lzx1;
     .locals 1
 
-    iget-object p0, p0, Lzx1;->a:Lqka;
+    sget-object v0, Lzx1;->Z:[Lzx1;
 
-    sget-object v0, Lzx1;->b:Ls90;
+    invoke-virtual {v0}, [Lzx1;->clone()Ljava/lang/Object;
 
-    :try_start_0
-    invoke-virtual {p0, v0}, Lqka;->i(Ls90;)Ljava/lang/Object;
+    move-result-object v0
 
-    move-result-object p0
-    :try_end_0
-    .catch Ljava/lang/IllegalArgumentException; {:try_start_0 .. :try_end_0} :catch_0
+    check-cast v0, [Lzx1;
 
-    goto :goto_0
-
-    :catch_0
-    const/4 p0, 0x0
-
-    :goto_0
-    check-cast p0, Lyu1;
-
-    return-object p0
-.end method
-
-.method public final d()J
-    .locals 3
-
-    sget-object v0, Lzx1;->p0:Ls90;
-
-    const-wide/16 v1, -0x1
-
-    invoke-static {v1, v2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v1
-
-    iget-object p0, p0, Lzx1;->a:Lqka;
-
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    :try_start_0
-    invoke-virtual {p0, v0}, Lqka;->i(Ls90;)Ljava/lang/Object;
-
-    move-result-object v1
-    :try_end_0
-    .catch Ljava/lang/IllegalArgumentException; {:try_start_0 .. :try_end_0} :catch_0
-
-    :catch_0
-    check-cast v1, Ljava/lang/Long;
-
-    invoke-virtual {v1}, Ljava/lang/Long;->longValue()J
-
-    move-result-wide v0
-
-    return-wide v0
-.end method
-
-.method public final e()Lzu1;
-    .locals 1
-
-    iget-object p0, p0, Lzx1;->a:Lqka;
-
-    sget-object v0, Lzx1;->c:Ls90;
-
-    :try_start_0
-    invoke-virtual {p0, v0}, Lqka;->i(Ls90;)Ljava/lang/Object;
-
-    move-result-object p0
-    :try_end_0
-    .catch Ljava/lang/IllegalArgumentException; {:try_start_0 .. :try_end_0} :catch_0
-
-    goto :goto_0
-
-    :catch_0
-    const/4 p0, 0x0
-
-    :goto_0
-    check-cast p0, Lzu1;
-
-    return-object p0
-.end method
-
-.method public final getConfig()Lrc3;
-    .locals 0
-
-    iget-object p0, p0, Lzx1;->a:Lqka;
-
-    return-object p0
-.end method
-
-.method public final h()Lav1;
-    .locals 1
-
-    iget-object p0, p0, Lzx1;->a:Lqka;
-
-    sget-object v0, Lzx1;->o:Ls90;
-
-    :try_start_0
-    invoke-virtual {p0, v0}, Lqka;->i(Ls90;)Ljava/lang/Object;
-
-    move-result-object p0
-    :try_end_0
-    .catch Ljava/lang/IllegalArgumentException; {:try_start_0 .. :try_end_0} :catch_0
-
-    goto :goto_0
-
-    :catch_0
-    const/4 p0, 0x0
-
-    :goto_0
-    check-cast p0, Lav1;
-
-    return-object p0
+    return-object v0
 .end method

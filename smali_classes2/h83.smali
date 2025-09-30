@@ -1,271 +1,91 @@
 .class public final Lh83;
-.super Ljava/lang/Object;
+.super Landroid/view/View;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:I
+.field public a:Landroid/graphics/Paint;
 
-.field public final b:I
+.field public b:Landroid/graphics/Paint;
 
-.field public final c:I
-
-.field public final d:I
-
-.field public final e:I
-
-.field public final f:I
-
-.field public final g:I
-
-.field public final h:I
+.field public c:I
 
 
-# direct methods
-.method public constructor <init>(IIIIIIII)V
+# virtual methods
+.method public getColor()I
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iget-object p0, p0, Lh83;->a:Landroid/graphics/Paint;
 
-    iput p1, p0, Lh83;->a:I
+    invoke-virtual {p0}, Landroid/graphics/Paint;->getColor()I
 
-    iput p2, p0, Lh83;->b:I
+    move-result p0
 
-    iput p3, p0, Lh83;->c:I
+    return p0
+.end method
 
-    iput p4, p0, Lh83;->d:I
+.method public final onDraw(Landroid/graphics/Canvas;)V
+    .locals 4
 
-    iput p5, p0, Lh83;->e:I
+    invoke-super {p0, p1}, Landroid/view/View;->onDraw(Landroid/graphics/Canvas;)V
 
-    iput p6, p0, Lh83;->f:I
+    invoke-virtual {p0}, Landroid/view/View;->getWidth()I
 
-    iput p7, p0, Lh83;->g:I
+    move-result v0
 
-    iput p8, p0, Lh83;->h:I
+    div-int/lit8 v0, v0, 0x2
+
+    invoke-virtual {p0}, Landroid/view/View;->getHeight()I
+
+    move-result v1
+
+    div-int/lit8 v1, v1, 0x2
+
+    int-to-float v0, v0
+
+    int-to-float v1, v1
+
+    invoke-virtual {p0}, Landroid/view/View;->getWidth()I
+
+    move-result v2
+
+    div-int/lit8 v2, v2, 0x2
+
+    int-to-float v2, v2
+
+    iget-object v3, p0, Lh83;->b:Landroid/graphics/Paint;
+
+    invoke-virtual {p1, v0, v1, v2, v3}, Landroid/graphics/Canvas;->drawCircle(FFFLandroid/graphics/Paint;)V
+
+    invoke-virtual {p0}, Landroid/view/View;->getWidth()I
+
+    move-result v2
+
+    iget v3, p0, Lh83;->c:I
+
+    mul-int/lit8 v3, v3, 0x2
+
+    sub-int/2addr v2, v3
+
+    div-int/lit8 v2, v2, 0x2
+
+    int-to-float v2, v2
+
+    iget-object p0, p0, Lh83;->a:Landroid/graphics/Paint;
+
+    invoke-virtual {p1, v0, v1, v2, p0}, Landroid/graphics/Canvas;->drawCircle(FFFLandroid/graphics/Paint;)V
 
     return-void
 .end method
 
+.method public setColor(I)V
+    .locals 1
 
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 2
+    iget-object v0, p0, Lh83;->a:Landroid/graphics/Paint;
 
-    if-ne p0, p1, :cond_0
+    invoke-virtual {v0, p1}, Landroid/graphics/Paint;->setColor(I)V
 
-    goto :goto_1
+    invoke-virtual {p0}, Landroid/view/View;->invalidate()V
 
-    :cond_0
-    instance-of v0, p1, Lh83;
-
-    if-nez v0, :cond_1
-
-    goto :goto_0
-
-    :cond_1
-    check-cast p1, Lh83;
-
-    iget v0, p0, Lh83;->a:I
-
-    iget v1, p1, Lh83;->a:I
-
-    if-eq v0, v1, :cond_2
-
-    goto :goto_0
-
-    :cond_2
-    iget v0, p0, Lh83;->b:I
-
-    iget v1, p1, Lh83;->b:I
-
-    if-eq v0, v1, :cond_3
-
-    goto :goto_0
-
-    :cond_3
-    iget v0, p0, Lh83;->c:I
-
-    iget v1, p1, Lh83;->c:I
-
-    if-eq v0, v1, :cond_4
-
-    goto :goto_0
-
-    :cond_4
-    iget v0, p0, Lh83;->d:I
-
-    iget v1, p1, Lh83;->d:I
-
-    if-eq v0, v1, :cond_5
-
-    goto :goto_0
-
-    :cond_5
-    iget v0, p0, Lh83;->e:I
-
-    iget v1, p1, Lh83;->e:I
-
-    if-eq v0, v1, :cond_6
-
-    goto :goto_0
-
-    :cond_6
-    iget v0, p0, Lh83;->f:I
-
-    iget v1, p1, Lh83;->f:I
-
-    if-eq v0, v1, :cond_7
-
-    goto :goto_0
-
-    :cond_7
-    iget v0, p0, Lh83;->g:I
-
-    iget v1, p1, Lh83;->g:I
-
-    if-eq v0, v1, :cond_8
-
-    goto :goto_0
-
-    :cond_8
-    iget p0, p0, Lh83;->h:I
-
-    iget p1, p1, Lh83;->h:I
-
-    if-eq p0, p1, :cond_9
-
-    :goto_0
-    const/4 p0, 0x0
-
-    return p0
-
-    :cond_9
-    :goto_1
-    const/4 p0, 0x1
-
-    return p0
-.end method
-
-.method public final hashCode()I
-    .locals 3
-
-    iget v0, p0, Lh83;->a:I
-
-    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
-
-    move-result v0
-
-    const/16 v1, 0x1f
-
-    mul-int/2addr v0, v1
-
-    iget v2, p0, Lh83;->b:I
-
-    invoke-static {v2, v0, v1}, Lrqc;->e(III)I
-
-    move-result v0
-
-    iget v2, p0, Lh83;->c:I
-
-    invoke-static {v2, v0, v1}, Lrqc;->e(III)I
-
-    move-result v0
-
-    const/4 v2, -0x1
-
-    invoke-static {v2, v0, v1}, Lrqc;->e(III)I
-
-    move-result v0
-
-    const v2, -0x1f000001
-
-    invoke-static {v2, v0, v1}, Lrqc;->e(III)I
-
-    move-result v0
-
-    iget v2, p0, Lh83;->d:I
-
-    invoke-static {v2, v0, v1}, Lrqc;->e(III)I
-
-    move-result v0
-
-    iget v2, p0, Lh83;->e:I
-
-    invoke-static {v2, v0, v1}, Lrqc;->e(III)I
-
-    move-result v0
-
-    iget v2, p0, Lh83;->f:I
-
-    invoke-static {v2, v0, v1}, Lrqc;->e(III)I
-
-    move-result v0
-
-    iget v2, p0, Lh83;->g:I
-
-    invoke-static {v2, v0, v1}, Lrqc;->e(III)I
-
-    move-result v0
-
-    iget p0, p0, Lh83;->h:I
-
-    invoke-static {p0}, Ljava/lang/Integer;->hashCode(I)I
-
-    move-result p0
-
-    add-int/2addr p0, v0
-
-    return p0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 5
-
-    const-string v0, ", capsuleSecondary="
-
-    const-string v1, ", contrast="
-
-    const-string v2, "CommonTextColors(capsule="
-
-    iget v3, p0, Lh83;->a:I
-
-    iget v4, p0, Lh83;->b:I
-
-    invoke-static {v2, v3, v0, v4, v1}, Lpg0;->j(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    const-string v1, ", contrastStatic=-1, fileType=-520093697, negative="
-
-    const-string v2, ", primary="
-
-    iget v3, p0, Lh83;->c:I
-
-    iget v4, p0, Lh83;->d:I
-
-    invoke-static {v0, v3, v1, v4, v2}, Lv04;->p(Ljava/lang/StringBuilder;ILjava/lang/String;ILjava/lang/String;)V
-
-    const-string v1, ", secondary="
-
-    const-string v2, ", tertiary="
-
-    iget v3, p0, Lh83;->e:I
-
-    iget v4, p0, Lh83;->f:I
-
-    invoke-static {v0, v3, v1, v4, v2}, Lv04;->p(Ljava/lang/StringBuilder;ILjava/lang/String;ILjava/lang/String;)V
-
-    const-string v1, ", themed="
-
-    const-string v2, ")"
-
-    iget v3, p0, Lh83;->g:I
-
-    iget p0, p0, Lh83;->h:I
-
-    invoke-static {v0, v3, v1, p0, v2}, Lpg0;->h(Ljava/lang/StringBuilder;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
+    return-void
 .end method

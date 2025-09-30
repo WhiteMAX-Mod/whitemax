@@ -4,24 +4,30 @@
 
 
 # instance fields
-.field public final a:Landroid/net/Uri;
-
-.field public final b:Lfz5;
-
-.field public final c:Ljava/lang/String;
+.field public a:I
 
 
 # direct methods
-.method public constructor <init>(Landroid/net/Uri;Lfz5;Ljava/lang/String;)V
+.method public constructor <init>(I)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Ldn6;->a:Landroid/net/Uri;
-
-    iput-object p2, p0, Ldn6;->b:Lfz5;
-
-    iput-object p3, p0, Ldn6;->c:Ljava/lang/String;
+    iput p1, p0, Ldn6;->a:I
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final toString()Ljava/lang/String;
+    .locals 0
+
+    iget p0, p0, Ldn6;->a:I
+
+    invoke-static {p0}, Ljava/lang/Integer;->toString(I)Ljava/lang/String;
+
+    move-result-object p0
+
+    return-object p0
 .end method

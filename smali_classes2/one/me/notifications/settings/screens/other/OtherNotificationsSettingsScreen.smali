@@ -32,26 +32,26 @@
 
 
 # static fields
-.field public static final synthetic Y:[Lbc7;
+.field public static final synthetic Y:[Lxi7;
 
 
 # instance fields
-.field public final X:Lkm0;
+.field public final X:Lrm0;
 
-.field public final a:Lp27;
+.field public final a:Lj97;
 
-.field public final b:Lje7;
+.field public final b:Lcl7;
 
-.field public final c:Ludd;
+.field public final c:Lkrd;
 
-.field public final o:Lkm0;
+.field public final o:Lrm0;
 
 
 # direct methods
 .method static constructor <clinit>()V
     .locals 6
 
-    new-instance v0, Lnlb;
+    new-instance v0, Lsxb;
 
     const-class v1, Lone/me/notifications/settings/screens/other/OtherNotificationsSettingsScreen;
 
@@ -61,21 +61,21 @@
 
     const/4 v4, 0x0
 
-    invoke-direct {v0, v1, v2, v3, v4}, Lnlb;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
+    invoke-direct {v0, v1, v2, v3, v4}, Lsxb;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
 
-    sget-object v2, Llcc;->a:Lmcc;
+    sget-object v2, Ljpc;->a:Lkpc;
 
     const-string v3, "recyclerView"
 
     const-string v5, "getRecyclerView()Lone/me/sdk/lists/widgets/EndlessRecyclerView2;"
 
-    invoke-static {v2, v1, v3, v5, v4}, Lm26;->g(Lmcc;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)Lnlb;
+    invoke-static {v2, v1, v3, v5, v4}, Lee5;->h(Lkpc;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)Lsxb;
 
     move-result-object v1
 
     const/4 v2, 0x2
 
-    new-array v2, v2, [Lbc7;
+    new-array v2, v2, [Lxi7;
 
     aput-object v0, v2, v4
 
@@ -83,7 +83,7 @@
 
     aput-object v1, v2, v0
 
-    sput-object v2, Lone/me/notifications/settings/screens/other/OtherNotificationsSettingsScreen;->Y:[Lbc7;
+    sput-object v2, Lone/me/notifications/settings/screens/other/OtherNotificationsSettingsScreen;->Y:[Lxi7;
 
     return-void
 .end method
@@ -97,87 +97,85 @@
 
     const/4 v2, 0x0
 
-    invoke-direct {p0, v2, v0, v1, v2}, Lone/me/sdk/arch/Widget;-><init>(Landroid/os/Bundle;IILl94;)V
+    invoke-direct {p0, v2, v0, v1, v2}, Lone/me/sdk/arch/Widget;-><init>(Landroid/os/Bundle;IILld4;)V
 
-    sget-object v0, Lp27;->d:Lp27;
+    sget-object v0, Lj97;->d:Lj97;
 
-    iput-object v0, p0, Lone/me/notifications/settings/screens/other/OtherNotificationsSettingsScreen;->a:Lp27;
+    iput-object v0, p0, Lone/me/notifications/settings/screens/other/OtherNotificationsSettingsScreen;->a:Lj97;
 
-    new-instance v0, Lh2a;
+    new-instance v0, Lksa;
 
-    const/16 v1, 0x18
+    const/4 v1, 0x4
 
-    invoke-direct {v0, v1}, Lh2a;-><init>(I)V
+    invoke-direct {v0, v1}, Lksa;-><init>(I)V
 
-    new-instance v1, Lc68;
-
-    const/16 v2, 0xf
-
-    invoke-direct {v1, v2, v0}, Lc68;-><init>(ILjava/lang/Object;)V
-
-    const-class v0, Lbla;
-
-    invoke-virtual {p0, v0, v1}, Lone/me/sdk/arch/Widget;->createViewModelLazy(Ljava/lang/Class;Lv56;)Lje7;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lone/me/notifications/settings/screens/other/OtherNotificationsSettingsScreen;->b:Lje7;
-
-    new-instance v0, Ludd;
-
-    new-instance v1, Lwc1;
+    new-instance v1, Lcd8;
 
     const/16 v2, 0x11
 
-    invoke-direct {v1, v2, p0}, Lwc1;-><init>(ILjava/lang/Object;)V
+    invoke-direct {v1, v2, v0}, Lcd8;-><init>(ILjava/lang/Object;)V
 
-    sget-object v2, Lyu9;->a:Lyu9;
+    const-class v0, Lnva;
 
-    invoke-virtual {v2}, Lyu9;->getExecutors()La9a;
+    invoke-virtual {p0, v0, v1}, Lone/me/sdk/arch/Widget;->createViewModelLazy(Ljava/lang/Class;Lzb6;)Lcl7;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lone/me/notifications/settings/screens/other/OtherNotificationsSettingsScreen;->b:Lcl7;
+
+    new-instance v0, Lkrd;
+
+    new-instance v1, Lsd1;
+
+    invoke-direct {v1, v2, p0}, Lsd1;-><init>(ILjava/lang/Object;)V
+
+    sget-object v2, Lb3a;->a:Lb3a;
+
+    invoke-virtual {v2}, Lb3a;->getExecutors()Lkha;
 
     move-result-object v2
 
-    invoke-virtual {v2}, La9a;->a()Ljava/util/concurrent/ExecutorService;
+    invoke-virtual {v2}, Lkha;->a()Ljava/util/concurrent/ExecutorService;
 
     move-result-object v2
 
-    invoke-direct {v0, v1, v2}, Ludd;-><init>(Ltdd;Ljava/util/concurrent/ExecutorService;)V
+    invoke-direct {v0, v1, v2}, Lkrd;-><init>(Ljrd;Ljava/util/concurrent/ExecutorService;)V
 
-    iput-object v0, p0, Lone/me/notifications/settings/screens/other/OtherNotificationsSettingsScreen;->c:Ludd;
+    iput-object v0, p0, Lone/me/notifications/settings/screens/other/OtherNotificationsSettingsScreen;->c:Lkrd;
 
-    new-instance v0, Lyka;
+    new-instance v0, Lkva;
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, p0, v1}, Lyka;-><init>(Lone/me/notifications/settings/screens/other/OtherNotificationsSettingsScreen;I)V
+    invoke-direct {v0, p0, v1}, Lkva;-><init>(Lone/me/notifications/settings/screens/other/OtherNotificationsSettingsScreen;I)V
 
-    invoke-virtual {p0, v0}, Lone/me/sdk/arch/Widget;->binding(Lv56;)Lkm0;
+    invoke-virtual {p0, v0}, Lone/me/sdk/arch/Widget;->binding(Lzb6;)Lrm0;
 
     move-result-object v0
 
-    iput-object v0, p0, Lone/me/notifications/settings/screens/other/OtherNotificationsSettingsScreen;->o:Lkm0;
+    iput-object v0, p0, Lone/me/notifications/settings/screens/other/OtherNotificationsSettingsScreen;->o:Lrm0;
 
-    new-instance v0, Lyka;
+    new-instance v0, Lkva;
 
     const/4 v1, 0x1
 
-    invoke-direct {v0, p0, v1}, Lyka;-><init>(Lone/me/notifications/settings/screens/other/OtherNotificationsSettingsScreen;I)V
+    invoke-direct {v0, p0, v1}, Lkva;-><init>(Lone/me/notifications/settings/screens/other/OtherNotificationsSettingsScreen;I)V
 
-    invoke-virtual {p0, v0}, Lone/me/sdk/arch/Widget;->binding(Lv56;)Lkm0;
+    invoke-virtual {p0, v0}, Lone/me/sdk/arch/Widget;->binding(Lzb6;)Lrm0;
 
     move-result-object v0
 
-    iput-object v0, p0, Lone/me/notifications/settings/screens/other/OtherNotificationsSettingsScreen;->X:Lkm0;
+    iput-object v0, p0, Lone/me/notifications/settings/screens/other/OtherNotificationsSettingsScreen;->X:Lrm0;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final getInsetsConfig()Lp27;
+.method public final getInsetsConfig()Lj97;
     .locals 0
 
-    iget-object p0, p0, Lone/me/notifications/settings/screens/other/OtherNotificationsSettingsScreen;->a:Lp27;
+    iget-object p0, p0, Lone/me/notifications/settings/screens/other/OtherNotificationsSettingsScreen;->a:Lj97;
 
     return-object p0
 .end method
@@ -193,7 +191,7 @@
 
     invoke-direct {p1, p2}, Landroid/widget/LinearLayout;-><init>(Landroid/content/Context;)V
 
-    sget p2, Luba;->p:I
+    sget p2, Lxka;->p:I
 
     invoke-virtual {p1, p2}, Landroid/view/View;->setId(I)V
 
@@ -213,7 +211,7 @@
 
     int-to-float p3, p3
 
-    invoke-static {}, Lgk4;->d()Landroid/content/res/Resources;
+    invoke-static {}, Lvo4;->d()Landroid/content/res/Resources;
 
     move-result-object v0
 
@@ -225,11 +223,11 @@
 
     mul-float/2addr v0, p3
 
-    invoke-static {v0}, Lkhg;->x(F)I
+    invoke-static {v0}, Lya6;->G(F)I
 
     move-result v0
 
-    invoke-static {}, Lgk4;->d()Landroid/content/res/Resources;
+    invoke-static {}, Lvo4;->d()Landroid/content/res/Resources;
 
     move-result-object v1
 
@@ -241,7 +239,7 @@
 
     mul-float/2addr p3, v1
 
-    invoke-static {p3}, Lkhg;->x(F)I
+    invoke-static {p3}, Lya6;->G(F)I
 
     move-result p3
 
@@ -249,25 +247,25 @@
 
     invoke-virtual {p1, v0, v1, p3, v1}, Landroid/view/View;->setPaddingRelative(IIII)V
 
-    sget-object p3, Lone/me/notifications/settings/screens/other/OtherNotificationsSettingsScreen;->Y:[Lbc7;
+    sget-object p3, Lone/me/notifications/settings/screens/other/OtherNotificationsSettingsScreen;->Y:[Lxi7;
 
     aget-object v0, p3, v1
 
-    iget-object v0, p0, Lone/me/notifications/settings/screens/other/OtherNotificationsSettingsScreen;->o:Lkm0;
+    iget-object v0, p0, Lone/me/notifications/settings/screens/other/OtherNotificationsSettingsScreen;->o:Lrm0;
 
-    invoke-virtual {v0}, Lkm0;->getValue()Ljava/lang/Object;
+    invoke-virtual {v0}, Lrm0;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lvia;
+    check-cast v0, Ldsa;
 
     invoke-virtual {p1, v0}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
 
     aget-object p2, p3, p2
 
-    iget-object p0, p0, Lone/me/notifications/settings/screens/other/OtherNotificationsSettingsScreen;->X:Lkm0;
+    iget-object p0, p0, Lone/me/notifications/settings/screens/other/OtherNotificationsSettingsScreen;->X:Lrm0;
 
-    invoke-virtual {p0}, Lkm0;->getValue()Ljava/lang/Object;
+    invoke-virtual {p0}, Lrm0;->getValue()Ljava/lang/Object;
 
     move-result-object p0
 
@@ -275,17 +273,17 @@
 
     invoke-virtual {p1, p0}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
 
-    new-instance p0, Lo;
+    new-instance p0, Ln;
 
     const/4 p2, 0x3
 
-    const/16 p3, 0x8
+    const/16 p3, 0x9
 
     const/4 v0, 0x0
 
-    invoke-direct {p0, p2, v0, p3}, Lo;-><init>(ILkotlin/coroutines/Continuation;I)V
+    invoke-direct {p0, p2, v0, p3}, Ln;-><init>(ILkotlin/coroutines/Continuation;I)V
 
-    invoke-static {p0, p1}, Lxq7;->J(Ln66;Landroid/view/View;)V
+    invoke-static {p0, p1}, Ljs9;->t(Lrc6;Landroid/view/View;)V
 
     return-object p1
 .end method
@@ -293,47 +291,47 @@
 .method public final onViewCreated(Landroid/view/View;)V
     .locals 3
 
-    iget-object p1, p0, Lone/me/notifications/settings/screens/other/OtherNotificationsSettingsScreen;->b:Lje7;
+    iget-object p1, p0, Lone/me/notifications/settings/screens/other/OtherNotificationsSettingsScreen;->b:Lcl7;
 
-    invoke-interface {p1}, Lje7;->getValue()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lbla;
-
-    iget-object p1, p1, Lbla;->Y:Lu5c;
-
-    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleOwner()Ldh7;
-
-    move-result-object v0
-
-    invoke-interface {v0}, Ldh7;->L()Lfh7;
-
-    move-result-object v0
-
-    sget-object v1, Lgg7;->o:Lgg7;
-
-    invoke-static {p1, v0, v1}, Lsbg;->m(Lzm5;Lfh7;Lgg7;)Lhq1;
+    invoke-interface {p1}, Lcl7;->getValue()Ljava/lang/Object;
 
     move-result-object p1
 
-    new-instance v0, Lzka;
+    check-cast p1, Lnva;
+
+    iget-object p1, p1, Lnva;->Y:Liic;
+
+    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleOwner()Lzn7;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Lzn7;->L()Lbo7;
+
+    move-result-object v0
+
+    sget-object v1, Lcn7;->o:Lcn7;
+
+    invoke-static {p1, v0, v1}, Lya6;->n(Lis5;Lbo7;Lcn7;)Lps1;
+
+    move-result-object p1
+
+    new-instance v0, Llva;
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1, p0}, Lzka;-><init>(Lkotlin/coroutines/Continuation;Lone/me/notifications/settings/screens/other/OtherNotificationsSettingsScreen;)V
+    invoke-direct {v0, v1, p0}, Llva;-><init>(Lkotlin/coroutines/Continuation;Lone/me/notifications/settings/screens/other/OtherNotificationsSettingsScreen;)V
 
-    new-instance v1, Lgp5;
+    new-instance v1, Lnu5;
 
     const/4 v2, 0x1
 
-    invoke-direct {v1, p1, v0, v2}, Lgp5;-><init>(Lzm5;Ll66;I)V
+    invoke-direct {v1, p1, v0, v2}, Lnu5;-><init>(Lis5;Lpc6;I)V
 
-    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleScope()Lqg7;
+    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleScope()Lmn7;
 
     move-result-object p0
 
-    invoke-static {v1, p0}, Lsgg;->L(Lzm5;Lox3;)Ldwd;
+    invoke-static {v1, p0}, Lo97;->u0(Lis5;Ly04;)Lcae;
 
     return-void
 .end method

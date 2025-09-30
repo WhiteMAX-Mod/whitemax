@@ -3,244 +3,145 @@
 .source "SourceFile"
 
 
+# static fields
+.field public static final q:Lk4d;
+
+.field public static final r:Lk4d;
+
+
 # instance fields
-.field public a:I
+.field public final a:Landroid/content/res/Resources;
 
 .field public b:I
 
 .field public c:F
 
-.field public d:I
+.field public d:Landroid/graphics/drawable/Drawable;
 
-.field public e:Z
+.field public e:Lj4d;
 
-.field public f:I
+.field public f:Landroid/graphics/drawable/Drawable;
+
+.field public g:Lj4d;
+
+.field public h:Landroid/graphics/drawable/Drawable;
+
+.field public i:Lj4d;
+
+.field public j:Landroid/graphics/drawable/Drawable;
+
+.field public k:Lj4d;
+
+.field public l:Lj4d;
+
+.field public m:Landroid/graphics/drawable/Drawable;
+
+.field public n:Ljava/util/List;
+
+.field public o:Landroid/graphics/drawable/StateListDrawable;
+
+.field public p:Lnzc;
+
+
+# direct methods
+.method static constructor <clinit>()V
+    .locals 1
+
+    sget-object v0, Lk4d;->j:Lk4d;
+
+    sput-object v0, Ldh6;->q:Lk4d;
+
+    sget-object v0, Lk4d;->i:Lk4d;
+
+    sput-object v0, Ldh6;->r:Lk4d;
+
+    return-void
+.end method
+
+.method public constructor <init>(Landroid/content/res/Resources;)V
+    .locals 1
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Ldh6;->a:Landroid/content/res/Resources;
+
+    const/16 p1, 0x12c
+
+    iput p1, p0, Ldh6;->b:I
+
+    const/4 p1, 0x0
+
+    iput p1, p0, Ldh6;->c:F
+
+    const/4 p1, 0x0
+
+    iput-object p1, p0, Ldh6;->d:Landroid/graphics/drawable/Drawable;
+
+    sget-object v0, Ldh6;->q:Lk4d;
+
+    iput-object v0, p0, Ldh6;->e:Lj4d;
+
+    iput-object p1, p0, Ldh6;->f:Landroid/graphics/drawable/Drawable;
+
+    iput-object v0, p0, Ldh6;->g:Lj4d;
+
+    iput-object p1, p0, Ldh6;->h:Landroid/graphics/drawable/Drawable;
+
+    iput-object v0, p0, Ldh6;->i:Lj4d;
+
+    iput-object p1, p0, Ldh6;->j:Landroid/graphics/drawable/Drawable;
+
+    iput-object v0, p0, Ldh6;->k:Lj4d;
+
+    sget-object v0, Ldh6;->r:Lk4d;
+
+    iput-object v0, p0, Ldh6;->l:Lj4d;
+
+    iput-object p1, p0, Ldh6;->m:Landroid/graphics/drawable/Drawable;
+
+    iput-object p1, p0, Ldh6;->n:Ljava/util/List;
+
+    iput-object p1, p0, Ldh6;->o:Landroid/graphics/drawable/StateListDrawable;
+
+    iput-object p1, p0, Ldh6;->p:Lnzc;
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
+.method public final a()Lch6;
     .locals 2
 
-    if-ne p0, p1, :cond_0
+    iget-object v0, p0, Ldh6;->n:Ljava/util/List;
 
-    goto :goto_1
+    if-eqz v0, :cond_0
 
-    :cond_0
-    instance-of v0, p1, Ldh6;
-
-    if-nez v0, :cond_1
-
-    goto :goto_0
-
-    :cond_1
-    check-cast p1, Ldh6;
-
-    iget v0, p0, Ldh6;->a:I
-
-    iget v1, p1, Ldh6;->a:I
-
-    if-eq v0, v1, :cond_2
-
-    goto :goto_0
-
-    :cond_2
-    iget v0, p0, Ldh6;->b:I
-
-    iget v1, p1, Ldh6;->b:I
-
-    if-eq v0, v1, :cond_3
-
-    goto :goto_0
-
-    :cond_3
-    iget v0, p0, Ldh6;->c:F
-
-    iget v1, p1, Ldh6;->c:F
-
-    invoke-static {v0, v1}, Ljava/lang/Float;->compare(FF)I
-
-    move-result v0
-
-    if-eqz v0, :cond_4
-
-    goto :goto_0
-
-    :cond_4
-    iget v0, p0, Ldh6;->d:I
-
-    iget v1, p1, Ldh6;->d:I
-
-    if-eq v0, v1, :cond_5
-
-    goto :goto_0
-
-    :cond_5
-    iget-boolean v0, p0, Ldh6;->e:Z
-
-    iget-boolean v1, p1, Ldh6;->e:Z
-
-    if-eq v0, v1, :cond_6
-
-    goto :goto_0
-
-    :cond_6
-    iget p0, p0, Ldh6;->f:I
-
-    iget p1, p1, Ldh6;->f:I
-
-    if-eq p0, p1, :cond_7
-
-    :goto_0
-    const/4 p0, 0x0
-
-    return p0
-
-    :cond_7
-    :goto_1
-    const/4 p0, 0x1
-
-    return p0
-.end method
-
-.method public final hashCode()I
-    .locals 3
-
-    iget v0, p0, Ldh6;->a:I
-
-    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
-
-    move-result v0
-
-    const/16 v1, 0x1f
-
-    mul-int/2addr v0, v1
-
-    iget v2, p0, Ldh6;->b:I
-
-    invoke-static {v2, v0, v1}, Lrqc;->e(III)I
-
-    move-result v0
-
-    iget v2, p0, Ldh6;->c:F
-
-    invoke-static {v0, v2, v1}, Luz1;->e(IFI)I
-
-    move-result v0
-
-    iget v2, p0, Ldh6;->d:I
-
-    invoke-static {v2, v0, v1}, Lrqc;->e(III)I
-
-    move-result v0
-
-    iget-boolean v2, p0, Ldh6;->e:Z
-
-    invoke-static {v0, v1, v2}, Luz1;->f(IIZ)I
-
-    move-result v0
-
-    iget p0, p0, Ldh6;->f:I
-
-    invoke-static {p0}, Lzt1;->s(I)I
-
-    move-result p0
-
-    add-int/2addr p0, v0
-
-    return p0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 8
-
-    iget v0, p0, Ldh6;->a:I
-
-    iget v1, p0, Ldh6;->b:I
-
-    iget v2, p0, Ldh6;->c:F
-
-    iget v3, p0, Ldh6;->d:I
-
-    iget-boolean v4, p0, Ldh6;->e:Z
-
-    iget p0, p0, Ldh6;->f:I
-
-    const-string v5, ", selectedPageIndex="
-
-    const-string v6, ", pageOffsetFraction="
-
-    const-string v7, "PageState(pagesNumber="
-
-    invoke-static {v7, v0, v5, v1, v6}, Lpg0;->j(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
 
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
+    :goto_0
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
 
-    const-string v1, ", selectedBigDotIndex="
+    move-result v1
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    if-eqz v1, :cond_0
 
-    invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    const-string v1, ", wasShiftedFromZeroToZero="
+    move-result-object v1
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    check-cast v1, Landroid/graphics/drawable/Drawable;
 
-    invoke-virtual {v0, v4}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    const-string v1, ", dotsAnimationType="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const/4 v1, 0x1
-
-    if-eq p0, v1, :cond_3
-
-    const/4 v1, 0x2
-
-    if-eq p0, v1, :cond_2
-
-    const/4 v1, 0x3
-
-    if-eq p0, v1, :cond_1
-
-    const/4 v1, 0x4
-
-    if-eq p0, v1, :cond_0
-
-    const-string p0, "null"
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     goto :goto_0
 
     :cond_0
-    const-string p0, "ALL_DOTS_TO_RIGHT"
+    new-instance v0, Lch6;
 
-    goto :goto_0
+    invoke-direct {v0, p0}, Lch6;-><init>(Ldh6;)V
 
-    :cond_1
-    const-string p0, "ALL_DOTS_TO_LEFT"
-
-    goto :goto_0
-
-    :cond_2
-    const-string p0, "BIG_DOTS_CHANGE"
-
-    goto :goto_0
-
-    :cond_3
-    const-string p0, "NONE"
-
-    :goto_0
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string p0, ")"
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
+    return-object v0
 .end method

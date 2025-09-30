@@ -1,154 +1,266 @@
 .class public final Luk0;
-.super Ljava/lang/Object;
+.super Lxfc;
 .source "SourceFile"
-
-# interfaces
-.implements Lc1f;
 
 
 # instance fields
-.field public final a:Ljava/util/LinkedHashMap;
+.field public final g:Lnff;
 
 
 # direct methods
-.method public varargs constructor <init>([Ljava/security/cert/X509Certificate;)V
-    .locals 6
+.method public constructor <init>(Lnff;)V
+    .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    new-instance v0, Ljava/util/LinkedHashMap;
-
-    invoke-direct {v0}, Ljava/util/LinkedHashMap;-><init>()V
-
-    array-length v1, p1
-
-    const/4 v2, 0x0
-
-    :goto_0
-    if-ge v2, v1, :cond_1
-
-    aget-object v3, p1, v2
-
-    invoke-virtual {v3}, Ljava/security/cert/X509Certificate;->getSubjectX500Principal()Ljavax/security/auth/x500/X500Principal;
-
-    move-result-object v4
-
-    invoke-virtual {v0, v4}, Ljava/util/LinkedHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v5
-
-    if-nez v5, :cond_0
-
-    new-instance v5, Ljava/util/LinkedHashSet;
-
-    invoke-direct {v5}, Ljava/util/LinkedHashSet;-><init>()V
-
-    invoke-interface {v0, v4, v5}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    :cond_0
-    check-cast v5, Ljava/util/Set;
-
-    invoke-interface {v5, v3}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
-
-    add-int/lit8 v2, v2, 0x1
-
-    goto :goto_0
-
-    :cond_1
-    iput-object v0, p0, Luk0;->a:Ljava/util/LinkedHashMap;
+    iput-object p1, p0, Luk0;->g:Lnff;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Ljava/security/cert/X509Certificate;)Ljava/security/cert/X509Certificate;
-    .locals 3
+.method public final e(Ljava/lang/String;Ljava/util/List;)Ljava/util/List;
+    .locals 8
 
-    invoke-virtual {p1}, Ljava/security/cert/X509Certificate;->getIssuerX500Principal()Ljavax/security/auth/x500/X500Principal;
+    new-instance p1, Ljava/util/ArrayDeque;
+
+    invoke-direct {p1, p2}, Ljava/util/ArrayDeque;-><init>(Ljava/util/Collection;)V
+
+    new-instance p2, Ljava/util/ArrayList;
+
+    invoke-direct {p2}, Ljava/util/ArrayList;-><init>()V
+
+    invoke-virtual {p1}, Ljava/util/ArrayDeque;->removeFirst()Ljava/lang/Object;
 
     move-result-object v0
 
-    iget-object p0, p0, Luk0;->a:Ljava/util/LinkedHashMap;
-
-    invoke-virtual {p0, v0}, Ljava/util/LinkedHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, Ljava/util/Set;
+    invoke-virtual {p2, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     const/4 v0, 0x0
 
-    if-eqz p0, :cond_1
+    move v1, v0
 
-    invoke-interface {p0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
+    :goto_0
+    const/16 v2, 0x9
 
-    move-result-object p0
+    if-ge v0, v2, :cond_9
 
-    :catch_0
-    invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
+    const/4 v2, 0x1
+
+    invoke-static {p2, v2}, Lb22;->e(Ljava/util/ArrayList;I)Ljava/lang/Object;
+
+    move-result-object v3
+
+    const-string v4, "null cannot be cast to non-null type java.security.cert.X509Certificate"
+
+    if-eqz v3, :cond_8
+
+    check-cast v3, Ljava/security/cert/X509Certificate;
+
+    iget-object v5, p0, Luk0;->g:Lnff;
+
+    invoke-interface {v5, v3}, Lnff;->a(Ljava/security/cert/X509Certificate;)Ljava/security/cert/X509Certificate;
+
+    move-result-object v5
+
+    if-eqz v5, :cond_3
+
+    invoke-virtual {p2}, Ljava/util/ArrayList;->size()I
 
     move-result v1
 
-    if-eqz v1, :cond_0
+    if-gt v1, v2, :cond_0
 
-    invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    invoke-virtual {v3, v5}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_1
+
+    :cond_0
+    invoke-virtual {p2, v5}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    :cond_1
+    invoke-virtual {v5}, Ljava/security/cert/X509Certificate;->getIssuerDN()Ljava/security/Principal;
 
     move-result-object v1
 
-    move-object v2, v1
+    invoke-virtual {v5}, Ljava/security/cert/X509Certificate;->getSubjectDN()Ljava/security/Principal;
 
-    check-cast v2, Ljava/security/cert/X509Certificate;
+    move-result-object v3
 
+    invoke-static {v1, v3}, Lvyg;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_2
+
+    goto :goto_1
+
+    :cond_2
     :try_start_0
-    invoke-virtual {v2}, Ljava/security/cert/Certificate;->getPublicKey()Ljava/security/PublicKey;
+    invoke-virtual {v5}, Ljava/security/cert/Certificate;->getPublicKey()Ljava/security/PublicKey;
+
+    move-result-object v1
+
+    invoke-virtual {v5, v1}, Ljava/security/cert/Certificate;->verify(Ljava/security/PublicKey;)V
+    :try_end_0
+    .catch Ljava/security/GeneralSecurityException; {:try_start_0 .. :try_end_0} :catch_0
+
+    goto :goto_4
+
+    :catch_0
+    :goto_1
+    move v1, v2
+
+    goto :goto_3
+
+    :cond_3
+    invoke-virtual {p1}, Ljava/util/ArrayDeque;->iterator()Ljava/util/Iterator;
 
     move-result-object v2
 
-    invoke-virtual {p1, v2}, Ljava/security/cert/Certificate;->verify(Ljava/security/PublicKey;)V
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+    :catch_1
+    :goto_2
+    invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
 
-    move-object v0, v1
+    move-result v5
 
-    :cond_0
-    check-cast v0, Ljava/security/cert/X509Certificate;
+    if-eqz v5, :cond_6
 
-    :cond_1
-    return-object v0
-.end method
+    invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
+    move-result-object v5
 
-    if-eq p1, p0, :cond_1
+    if-eqz v5, :cond_5
 
-    instance-of v0, p1, Luk0;
+    check-cast v5, Ljava/security/cert/X509Certificate;
 
-    if-eqz v0, :cond_0
+    invoke-virtual {v3}, Ljava/security/cert/X509Certificate;->getIssuerDN()Ljava/security/Principal;
 
-    check-cast p1, Luk0;
+    move-result-object v6
 
-    iget-object p1, p1, Luk0;->a:Ljava/util/LinkedHashMap;
+    invoke-virtual {v5}, Ljava/security/cert/X509Certificate;->getSubjectDN()Ljava/security/Principal;
 
-    iget-object p0, p0, Luk0;->a:Ljava/util/LinkedHashMap;
+    move-result-object v7
 
-    invoke-static {p1, p0}, Lxq7;->d(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v6, v7}, Lvyg;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    move-result p0
+    move-result v6
 
-    if-eqz p0, :cond_0
+    if-nez v6, :cond_4
+
+    goto :goto_2
+
+    :cond_4
+    :try_start_1
+    invoke-virtual {v5}, Ljava/security/cert/Certificate;->getPublicKey()Ljava/security/PublicKey;
+
+    move-result-object v6
+
+    invoke-virtual {v3, v6}, Ljava/security/cert/Certificate;->verify(Ljava/security/PublicKey;)V
+    :try_end_1
+    .catch Ljava/security/GeneralSecurityException; {:try_start_1 .. :try_end_1} :catch_1
+
+    invoke-interface {v2}, Ljava/util/Iterator;->remove()V
+
+    invoke-virtual {p2, v5}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    :goto_3
+    add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    :cond_0
-    const/4 p0, 0x0
+    :cond_5
+    new-instance p0, Ljava/lang/NullPointerException;
 
-    return p0
+    invoke-direct {p0, v4}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
+
+    throw p0
+
+    :cond_6
+    if-eqz v1, :cond_7
+
+    :goto_4
+    return-object p2
+
+    :cond_7
+    new-instance p0, Ljavax/net/ssl/SSLPeerUnverifiedException;
+
+    new-instance p1, Ljava/lang/StringBuilder;
+
+    const-string p2, "Failed to find a trusted cert that signed "
+
+    invoke-direct {p1, p2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {p1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-direct {p0, p1}, Ljavax/net/ssl/SSLPeerUnverifiedException;-><init>(Ljava/lang/String;)V
+
+    throw p0
+
+    :cond_8
+    new-instance p0, Ljava/lang/NullPointerException;
+
+    invoke-direct {p0, v4}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
+
+    throw p0
+
+    :cond_9
+    new-instance p0, Ljavax/net/ssl/SSLPeerUnverifiedException;
+
+    new-instance p1, Ljava/lang/StringBuilder;
+
+    const-string v0, "Certificate chain too long: "
+
+    invoke-direct {p1, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {p1, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-direct {p0, p1}, Ljavax/net/ssl/SSLPeerUnverifiedException;-><init>(Ljava/lang/String;)V
+
+    throw p0
+.end method
+
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 2
+
+    const/4 v0, 0x1
+
+    if-ne p1, p0, :cond_0
+
+    return v0
+
+    :cond_0
+    instance-of v1, p1, Luk0;
+
+    if-eqz v1, :cond_1
+
+    check-cast p1, Luk0;
+
+    iget-object p1, p1, Luk0;->g:Lnff;
+
+    iget-object p0, p0, Luk0;->g:Lnff;
+
+    invoke-static {p1, p0}, Lvyg;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p0
+
+    if-eqz p0, :cond_1
+
+    return v0
 
     :cond_1
-    :goto_0
-    const/4 p0, 0x1
+    const/4 p0, 0x0
 
     return p0
 .end method
@@ -156,7 +268,7 @@
 .method public final hashCode()I
     .locals 0
 
-    iget-object p0, p0, Luk0;->a:Ljava/util/LinkedHashMap;
+    iget-object p0, p0, Luk0;->g:Lnff;
 
     invoke-virtual {p0}, Ljava/lang/Object;->hashCode()I
 

@@ -40,7 +40,7 @@
     return p0
 .end method
 
-.method public final g(Lobc;)Z
+.method public final g(Lloc;)Z
     .locals 0
 
     if-eqz p1, :cond_0
@@ -55,19 +55,19 @@
     return p0
 .end method
 
-.method public final s()Lobc;
+.method public final s()Lloc;
     .locals 1
 
-    invoke-super {p0}, Landroidx/recyclerview/widget/LinearLayoutManager;->s()Lobc;
+    invoke-super {p0}, Landroidx/recyclerview/widget/LinearLayoutManager;->s()Lloc;
 
     move-result-object v0
 
-    invoke-virtual {p0, v0}, Lru/ok/tamtam/markdown/ui/markdownmenu/HorizontalMenuLinearLayoutManager;->s1(Lobc;)V
+    invoke-virtual {p0, v0}, Lru/ok/tamtam/markdown/ui/markdownmenu/HorizontalMenuLinearLayoutManager;->s1(Lloc;)V
 
     return-object v0
 .end method
 
-.method public final s1(Lobc;)V
+.method public final s1(Lloc;)V
     .locals 4
 
     iget v0, p0, Landroidx/recyclerview/widget/a;->n:I
@@ -94,7 +94,7 @@
 
     div-double/2addr v0, v2
 
-    invoke-static {v0, v1}, Lkhg;->w(D)I
+    invoke-static {v0, v1}, Lya6;->F(D)I
 
     move-result p0
 
@@ -103,26 +103,26 @@
     return-void
 .end method
 
-.method public final t(Landroid/content/Context;Landroid/util/AttributeSet;)Lobc;
+.method public final t(Landroid/content/Context;Landroid/util/AttributeSet;)Lloc;
     .locals 1
 
-    new-instance v0, Lobc;
+    new-instance v0, Lloc;
 
-    invoke-direct {v0, p1, p2}, Lobc;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
+    invoke-direct {v0, p1, p2}, Lloc;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    invoke-virtual {p0, v0}, Lru/ok/tamtam/markdown/ui/markdownmenu/HorizontalMenuLinearLayoutManager;->s1(Lobc;)V
+    invoke-virtual {p0, v0}, Lru/ok/tamtam/markdown/ui/markdownmenu/HorizontalMenuLinearLayoutManager;->s1(Lloc;)V
 
     return-object v0
 .end method
 
-.method public final u(Landroid/view/ViewGroup$LayoutParams;)Lobc;
+.method public final u(Landroid/view/ViewGroup$LayoutParams;)Lloc;
     .locals 0
 
-    invoke-super {p0, p1}, Landroidx/recyclerview/widget/a;->u(Landroid/view/ViewGroup$LayoutParams;)Lobc;
+    invoke-super {p0, p1}, Landroidx/recyclerview/widget/a;->u(Landroid/view/ViewGroup$LayoutParams;)Lloc;
 
     move-result-object p1
 
-    invoke-virtual {p0, p1}, Lru/ok/tamtam/markdown/ui/markdownmenu/HorizontalMenuLinearLayoutManager;->s1(Lobc;)V
+    invoke-virtual {p0, p1}, Lru/ok/tamtam/markdown/ui/markdownmenu/HorizontalMenuLinearLayoutManager;->s1(Lloc;)V
 
     return-object p1
 .end method

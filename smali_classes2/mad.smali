@@ -1,225 +1,142 @@
-.class public final enum Lmad;
-.super Ljava/lang/Enum;
+.class public final Lmad;
+.super Lure;
 .source "SourceFile"
 
-
-# static fields
-.field public static final enum X:Lmad;
-
-.field public static final enum Y:Lmad;
-
-.field public static final enum Z:Lmad;
-
-.field public static final enum b:Lmad;
-
-.field public static final enum c:Lmad;
-
-.field public static final enum o:Lmad;
-
-.field public static final enum o0:Lmad;
-
-.field public static final enum p0:Lmad;
-
-.field public static final enum q0:Lmad;
-
-.field public static final enum r0:Lmad;
-
-.field public static final enum s0:Lmad;
-
-.field public static final enum t0:Lmad;
-
-.field public static final enum u0:Lmad;
-
-.field public static final synthetic v0:[Lmad;
+# interfaces
+.implements Lpc6;
 
 
 # instance fields
-.field public final a:J
+.field public X:I
+
+.field public final synthetic Y:Lru/ok/tamtam/workmanager/SdkCoroutineWorker;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 15
-
-    new-instance v0, Lmad;
-
-    const-string v1, "FOLDERS"
-
-    const/4 v2, 0x0
-
-    invoke-direct {v0, v1, v2}, Lmad;-><init>(Ljava/lang/String;I)V
-
-    sput-object v0, Lmad;->b:Lmad;
-
-    new-instance v1, Lmad;
-
-    const-string v2, "APPEARANCE"
-
-    const/4 v3, 0x1
-
-    invoke-direct {v1, v2, v3}, Lmad;-><init>(Ljava/lang/String;I)V
-
-    sput-object v1, Lmad;->c:Lmad;
-
-    new-instance v2, Lmad;
-
-    const-string v3, "NOTIFICATIONS"
-
-    const/4 v4, 0x2
-
-    invoke-direct {v2, v3, v4}, Lmad;-><init>(Ljava/lang/String;I)V
-
-    sput-object v2, Lmad;->o:Lmad;
-
-    new-instance v3, Lmad;
-
-    const-string v4, "PRIVACY"
-
-    const/4 v5, 0x3
-
-    invoke-direct {v3, v4, v5}, Lmad;-><init>(Ljava/lang/String;I)V
-
-    sput-object v3, Lmad;->X:Lmad;
-
-    new-instance v4, Lmad;
-
-    const-string v5, "MESSAGES"
-
-    const/4 v6, 0x4
-
-    invoke-direct {v4, v5, v6}, Lmad;-><init>(Ljava/lang/String;I)V
-
-    sput-object v4, Lmad;->Y:Lmad;
-
-    new-instance v5, Lmad;
-
-    const-string v6, "SAVED_MESSAGES"
-
-    const/4 v7, 0x5
-
-    invoke-direct {v5, v6, v7}, Lmad;-><init>(Ljava/lang/String;I)V
-
-    sput-object v5, Lmad;->Z:Lmad;
-
-    new-instance v6, Lmad;
-
-    const-string v7, "BATTERY"
-
-    const/4 v8, 0x6
-
-    invoke-direct {v6, v7, v8}, Lmad;-><init>(Ljava/lang/String;I)V
-
-    sput-object v6, Lmad;->o0:Lmad;
-
-    new-instance v7, Lmad;
-
-    const-string v8, "STORAGE"
-
-    const/4 v9, 0x7
-
-    invoke-direct {v7, v8, v9}, Lmad;-><init>(Ljava/lang/String;I)V
-
-    sput-object v7, Lmad;->p0:Lmad;
-
-    new-instance v8, Lmad;
-
-    const-string v9, "SUPPORT"
-
-    const/16 v10, 0x8
-
-    invoke-direct {v8, v9, v10}, Lmad;-><init>(Ljava/lang/String;I)V
-
-    sput-object v8, Lmad;->q0:Lmad;
-
-    new-instance v9, Lmad;
-
-    const-string v10, "ABOUT"
-
-    const/16 v11, 0x9
-
-    invoke-direct {v9, v10, v11}, Lmad;-><init>(Ljava/lang/String;I)V
-
-    sput-object v9, Lmad;->r0:Lmad;
-
-    new-instance v10, Lmad;
-
-    const-string v11, "DEV_MENU"
-
-    const/16 v12, 0xa
-
-    invoke-direct {v10, v11, v12}, Lmad;-><init>(Ljava/lang/String;I)V
-
-    sput-object v10, Lmad;->s0:Lmad;
-
-    new-instance v11, Lmad;
-
-    const-string v12, "ESIA_CONNECT"
-
-    const/16 v13, 0xb
-
-    invoke-direct {v11, v12, v13}, Lmad;-><init>(Ljava/lang/String;I)V
-
-    sput-object v11, Lmad;->t0:Lmad;
-
-    new-instance v12, Lmad;
-
-    const-string v13, "INVITE_FRIENDS"
-
-    const/16 v14, 0xc
-
-    invoke-direct {v12, v13, v14}, Lmad;-><init>(Ljava/lang/String;I)V
-
-    sput-object v12, Lmad;->u0:Lmad;
-
-    filled-new-array/range {v0 .. v12}, [Lmad;
-
-    move-result-object v0
-
-    sput-object v0, Lmad;->v0:[Lmad;
-
-    return-void
-.end method
-
-.method public constructor <init>(Ljava/lang/String;I)V
+.method public constructor <init>(Lru/ok/tamtam/workmanager/SdkCoroutineWorker;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    iput-object p1, p0, Lmad;->Y:Lru/ok/tamtam/workmanager/SdkCoroutineWorker;
 
-    invoke-virtual {p0}, Ljava/lang/Enum;->ordinal()I
+    const/4 p1, 0x2
 
-    move-result p1
-
-    int-to-long p1, p1
-
-    iput-wide p1, p0, Lmad;->a:J
+    invoke-direct {p0, p1, p2}, Lure;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
-.method public static valueOf(Ljava/lang/String;)Lmad;
-    .locals 1
 
-    const-class v0, Lmad;
+# virtual methods
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+    check-cast p1, Ly04;
+
+    check-cast p2, Lkotlin/coroutines/Continuation;
+
+    invoke-virtual {p0, p1, p2}, Lmad;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
     move-result-object p0
 
     check-cast p0, Lmad;
 
+    sget-object p1, Lylf;->a:Lylf;
+
+    invoke-virtual {p0, p1}, Lmad;->o(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p0
+
     return-object p0
 .end method
 
-.method public static values()[Lmad;
-    .locals 1
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 0
 
-    sget-object v0, Lmad;->v0:[Lmad;
+    new-instance p1, Lmad;
 
-    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
+    iget-object p0, p0, Lmad;->Y:Lru/ok/tamtam/workmanager/SdkCoroutineWorker;
 
-    move-result-object v0
+    invoke-direct {p1, p0, p2}, Lmad;-><init>(Lru/ok/tamtam/workmanager/SdkCoroutineWorker;Lkotlin/coroutines/Continuation;)V
 
-    check-cast v0, [Lmad;
+    return-object p1
+.end method
 
-    return-object v0
+.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 3
+
+    iget v0, p0, Lmad;->X:I
+
+    const/4 v1, 0x1
+
+    iget-object v2, p0, Lmad;->Y:Lru/ok/tamtam/workmanager/SdkCoroutineWorker;
+
+    if-eqz v0, :cond_1
+
+    if-ne v0, v1, :cond_0
+
+    :try_start_0
+    invoke-static {p1}, Lqe5;->V(Ljava/lang/Object;)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    goto :goto_0
+
+    :catchall_0
+    move-exception p0
+
+    goto :goto_1
+
+    :cond_0
+    new-instance p0, Ljava/lang/IllegalStateException;
+
+    const-string p1, "call to \'resume\' before \'invoke\' with coroutine"
+
+    invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p0
+
+    :cond_1
+    invoke-static {p1}, Lqe5;->V(Ljava/lang/Object;)V
+
+    :try_start_1
+    iput v1, p0, Lmad;->X:I
+
+    invoke-virtual {v2, p0}, Lru/ok/tamtam/workmanager/SdkCoroutineWorker;->doWork(Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p1
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    sget-object p0, Lz04;->a:Lz04;
+
+    if-ne p1, p0, :cond_2
+
+    return-object p0
+
+    :cond_2
+    :goto_0
+    :try_start_2
+    check-cast p1, Lkt7;
+
+    invoke-static {v2}, Lru/ok/tamtam/workmanager/SdkCoroutineWorker;->access$getFuture$p(Lru/ok/tamtam/workmanager/SdkCoroutineWorker;)Lznd;
+
+    move-result-object p0
+
+    invoke-virtual {p0, p1}, Lznd;->i(Ljava/lang/Object;)Z
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_0
+
+    goto :goto_2
+
+    :goto_1
+    invoke-static {v2}, Lru/ok/tamtam/workmanager/SdkCoroutineWorker;->access$getFuture$p(Lru/ok/tamtam/workmanager/SdkCoroutineWorker;)Lznd;
+
+    move-result-object p1
+
+    invoke-virtual {p1, p0}, Lznd;->j(Ljava/lang/Throwable;)Z
+
+    :goto_2
+    sget-object p0, Lylf;->a:Lylf;
+
+    return-object p0
 .end method

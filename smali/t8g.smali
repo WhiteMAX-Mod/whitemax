@@ -1,49 +1,45 @@
-.class public abstract Lt8g;
+.class public final Lt8g;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lmoc;
+
 
 # virtual methods
-.method public final a(Landroidx/work/WorkRequest;)V
-    .locals 6
+.method public final b(Landroid/view/View;)V
+    .locals 0
 
-    invoke-static {p1}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
+    return-void
+.end method
 
-    move-result-object v4
+.method public final d(Landroid/view/View;)V
+    .locals 1
 
-    move-object v1, p0
+    invoke-virtual {p1}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
-    check-cast v1, Lw8g;
+    move-result-object p0
 
-    invoke-interface {v4}, Ljava/util/List;->isEmpty()Z
+    check-cast p0, Lloc;
 
-    move-result p0
+    iget p1, p0, Landroid/view/ViewGroup$MarginLayoutParams;->width:I
 
-    if-nez p0, :cond_0
+    const/4 v0, -0x1
 
-    new-instance v0, Lk8g;
+    if-ne p1, v0, :cond_0
 
-    sget-object v3, Lx55;->b:Lx55;
+    iget p0, p0, Landroid/view/ViewGroup$MarginLayoutParams;->height:I
 
-    const/4 v5, 0x0
-
-    const/4 v2, 0x0
-
-    invoke-direct/range {v0 .. v5}, Lk8g;-><init>(Lw8g;Ljava/lang/String;Lx55;Ljava/util/List;I)V
-
-    invoke-virtual {v0}, Lk8g;->J()Ljka;
+    if-ne p0, v0, :cond_0
 
     return-void
 
     :cond_0
-    new-instance p0, Ljava/lang/IllegalArgumentException;
+    new-instance p0, Ljava/lang/IllegalStateException;
 
-    const-string p1, "enqueue needs at least one WorkRequest."
+    const-string p1, "Pages must fill the whole ViewPager2 (use match_parent)"
 
-    invoke-direct {p0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
     throw p0
-.end method
-
-.method public abstract b(Ljava/lang/String;ILcra;)Ljka;
 .end method

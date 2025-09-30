@@ -1,134 +1,36 @@
-.class public final Lsdc;
+.class public abstract Lsdc;
 .super Ljava/lang/Object;
-.source "SourceFile"
 
 
-# instance fields
-.field public final a:Ljava/lang/String;
+# static fields
+.field public static EmojiEditText:[I
 
-.field public final b:Ljava/lang/CharSequence;
+.field public static EmojiEditText_maxEmojiCount:I
 
-.field public final c:[Ljava/lang/CharSequence;
+.field public static EmojiExtractTextLayout:[I
 
-.field public final d:Z
-
-.field public final e:I
-
-.field public final f:Landroid/os/Bundle;
-
-.field public final g:Ljava/util/Set;
+.field public static EmojiExtractTextLayout_emojiReplaceStrategy:I
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;Ljava/lang/CharSequence;[Ljava/lang/CharSequence;ZILandroid/os/Bundle;Ljava/util/HashSet;)V
-    .locals 0
+.method public static constructor <clinit>()V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const v0, 0x7f040645
 
-    iput-object p1, p0, Lsdc;->a:Ljava/lang/String;
+    filled-new-array {v0}, [I
 
-    iput-object p2, p0, Lsdc;->b:Ljava/lang/CharSequence;
+    move-result-object v0
 
-    iput-object p3, p0, Lsdc;->c:[Ljava/lang/CharSequence;
+    sput-object v0, Lsdc;->EmojiEditText:[I
 
-    iput-boolean p4, p0, Lsdc;->d:Z
+    const v0, 0x7f040374
 
-    iput p5, p0, Lsdc;->e:I
+    filled-new-array {v0}, [I
 
-    iput-object p6, p0, Lsdc;->f:Landroid/os/Bundle;
+    move-result-object v0
 
-    iput-object p7, p0, Lsdc;->g:Ljava/util/Set;
+    sput-object v0, Lsdc;->EmojiExtractTextLayout:[I
 
-    const/4 p0, 0x2
-
-    if-ne p5, p0, :cond_1
-
-    if-eqz p4, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    new-instance p0, Ljava/lang/IllegalArgumentException;
-
-    const-string p1, "setEditChoicesBeforeSending requires setAllowFreeFormInput"
-
-    invoke-direct {p0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw p0
-
-    :cond_1
-    :goto_0
     return-void
-.end method
-
-.method public static a(Lsdc;)Landroid/app/RemoteInput;
-    .locals 4
-
-    new-instance v0, Landroid/app/RemoteInput$Builder;
-
-    iget-object v1, p0, Lsdc;->a:Ljava/lang/String;
-
-    invoke-direct {v0, v1}, Landroid/app/RemoteInput$Builder;-><init>(Ljava/lang/String;)V
-
-    iget-object v1, p0, Lsdc;->b:Ljava/lang/CharSequence;
-
-    invoke-virtual {v0, v1}, Landroid/app/RemoteInput$Builder;->setLabel(Ljava/lang/CharSequence;)Landroid/app/RemoteInput$Builder;
-
-    move-result-object v0
-
-    iget-object v1, p0, Lsdc;->c:[Ljava/lang/CharSequence;
-
-    invoke-virtual {v0, v1}, Landroid/app/RemoteInput$Builder;->setChoices([Ljava/lang/CharSequence;)Landroid/app/RemoteInput$Builder;
-
-    move-result-object v0
-
-    iget-boolean v1, p0, Lsdc;->d:Z
-
-    invoke-virtual {v0, v1}, Landroid/app/RemoteInput$Builder;->setAllowFreeFormInput(Z)Landroid/app/RemoteInput$Builder;
-
-    move-result-object v0
-
-    iget-object v1, p0, Lsdc;->f:Landroid/os/Bundle;
-
-    invoke-virtual {v0, v1}, Landroid/app/RemoteInput$Builder;->addExtras(Landroid/os/Bundle;)Landroid/app/RemoteInput$Builder;
-
-    move-result-object v0
-
-    iget-object v1, p0, Lsdc;->g:Ljava/util/Set;
-
-    if-eqz v1, :cond_0
-
-    invoke-interface {v1}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
-
-    move-result-object v1
-
-    :goto_0
-    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v2
-
-    if-eqz v2, :cond_0
-
-    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Ljava/lang/String;
-
-    const/4 v3, 0x1
-
-    invoke-static {v0, v2, v3}, Lqdc;->d(Landroid/app/RemoteInput$Builder;Ljava/lang/String;Z)Landroid/app/RemoteInput$Builder;
-
-    goto :goto_0
-
-    :cond_0
-    iget p0, p0, Lsdc;->e:I
-
-    invoke-static {v0, p0}, Lrdc;->b(Landroid/app/RemoteInput$Builder;I)Landroid/app/RemoteInput$Builder;
-
-    invoke-virtual {v0}, Landroid/app/RemoteInput$Builder;->build()Landroid/app/RemoteInput;
-
-    move-result-object p0
-
-    return-object p0
 .end method

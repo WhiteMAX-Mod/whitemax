@@ -1,51 +1,70 @@
-.class public final Lo71;
-.super Lv64;
+.class public final synthetic Lo71;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lzb6;
 
-# static fields
-.field public static final b:Lo71;
 
-.field public static final c:Lr64;
+# instance fields
+.field public final synthetic a:I
 
-.field public static final d:Lr64;
+.field public final synthetic b:Lq71;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 6
+.method public synthetic constructor <init>(Lq71;I)V
+    .locals 0
 
-    new-instance v0, Lo71;
+    iput p2, p0, Lo71;->a:I
 
-    invoke-direct {v0}, Lv64;-><init>()V
+    iput-object p1, p0, Lo71;->b:Lq71;
 
-    sput-object v0, Lo71;->b:Lo71;
-
-    const/4 v1, 0x0
-
-    new-array v2, v1, [Ljava/lang/String;
-
-    const-string v3, ":calls-history"
-
-    const/4 v4, 0x0
-
-    const/16 v5, 0xe
-
-    invoke-static {v0, v3, v2, v4, v5}, Lv64;->a(Lv64;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lr64;
-
-    move-result-object v2
-
-    sput-object v2, Lo71;->c:Lr64;
-
-    const-string v2, ":call-history-info"
-
-    new-array v1, v1, [Ljava/lang/String;
-
-    invoke-static {v0, v2, v1, v4, v5}, Lv64;->a(Lv64;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lr64;
-
-    move-result-object v0
-
-    sput-object v0, Lo71;->d:Lr64;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final invoke()Ljava/lang/Object;
+    .locals 2
+
+    iget v0, p0, Lo71;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    iget-object p0, p0, Lo71;->b:Lq71;
+
+    iget-object p0, p0, Lq71;->M0:Landroidx/recyclerview/widget/b;
+
+    return-object p0
+
+    :pswitch_0
+    iget-object p0, p0, Lo71;->b:Lq71;
+
+    iget-object p0, p0, Lq71;->O0:Lzxf;
+
+    return-object p0
+
+    :pswitch_1
+    new-instance v0, Lln6;
+
+    iget-object p0, p0, Lo71;->b:Lq71;
+
+    iget-object v1, p0, Lq71;->I0:Landroidx/viewpager2/widget/ViewPager2;
+
+    iget-object p0, p0, Lq71;->J0:Lpn6;
+
+    invoke-direct {v0, v1, p0}, Lln6;-><init>(Landroidx/viewpager2/widget/ViewPager2;Lpn6;)V
+
+    return-object v0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

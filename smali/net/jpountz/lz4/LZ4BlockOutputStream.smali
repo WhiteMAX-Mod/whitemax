@@ -114,7 +114,7 @@
     .locals 0
 
     .line 13
-    invoke-static {}, Lrag;->s()Lrag;
+    invoke-static {}, Lpxg;->b()Lpxg;
 
     const/4 p0, 0x0
 
@@ -215,7 +215,7 @@
 
     const-string v1, "blockSize must be <= 33554432, got "
 
-    invoke-static {p0, v1}, Lm26;->h(ILjava/lang/String;)Ljava/lang/String;
+    invoke-static {p0, v1}, Lyv7;->e(ILjava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
 
@@ -228,7 +228,7 @@
 
     const-string v1, "blockSize must be >= 64, got "
 
-    invoke-static {p0, v1}, Lm26;->h(ILjava/lang/String;)Ljava/lang/String;
+    invoke-static {p0, v1}, Lyv7;->e(ILjava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
 
@@ -657,7 +657,7 @@
     .end annotation
 
     .line 5
-    invoke-static {p2, p1, p3}, Lwoc;->b(I[BI)V
+    invoke-static {p2, p1, p3}, Lo2d;->b(I[BI)V
 
     .line 6
     invoke-direct {p0}, Lnet/jpountz/lz4/LZ4BlockOutputStream;->ensureNotFinished()V

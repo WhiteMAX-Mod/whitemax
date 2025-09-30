@@ -1,139 +1,371 @@
-.class public abstract Li5a;
-.super Ljava/lang/Object;
+.class public final Li5a;
+.super Ljava/util/concurrent/atomic/AtomicInteger;
 .source "SourceFile"
 
+# interfaces
+.implements Ld8a;
+.implements Loq4;
 
-# static fields
-.field public static final a:I
 
-.field public static final b:I
+# instance fields
+.field public X:Lf2e;
 
-.field public static final c:I
+.field public Y:Loq4;
 
-.field public static final d:I
+.field public volatile Z:Z
 
-.field public static final e:I
+.field public final a:Lxid;
 
-.field public static final f:I
+.field public final b:Lqc6;
 
-.field public static final g:I
+.field public final c:Lg5a;
 
-.field public static final h:I
+.field public final o:I
 
-.field public static final i:I
+.field public volatile r0:Z
 
-.field public static final j:I
+.field public volatile s0:Z
 
-.field public static final k:I
-
-.field public static final l:I
-
-.field public static final m:I
-
-.field public static final n:I
-
-.field public static final o:I
-
-.field public static final p:I
-
-.field public static final q:I
-
-.field public static final r:I
-
-.field public static final s:I
-
-.field public static final t:I
-
-.field public static final u:I
+.field public t0:I
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public constructor <init>(Lxid;Lqc6;I)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/util/concurrent/atomic/AtomicInteger;-><init>()V
+
+    iput-object p1, p0, Li5a;->a:Lxid;
+
+    iput-object p2, p0, Li5a;->b:Lqc6;
+
+    iput p3, p0, Li5a;->o:I
+
+    new-instance p2, Lg5a;
+
+    const/4 p3, 0x1
+
+    invoke-direct {p2, p1, p0, p3}, Lg5a;-><init>(Ld8a;Ljava/util/concurrent/atomic/AtomicInteger;I)V
+
+    iput-object p2, p0, Li5a;->c:Lg5a;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final a()V
+    .locals 4
+
+    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicInteger;->getAndIncrement()I
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    goto :goto_2
+
+    :cond_0
+    iget-boolean v0, p0, Li5a;->r0:Z
+
+    if-eqz v0, :cond_1
+
+    iget-object p0, p0, Li5a;->X:Lf2e;
+
+    invoke-interface {p0}, Lf2e;->clear()V
+
+    return-void
+
+    :cond_1
+    iget-boolean v0, p0, Li5a;->Z:Z
+
+    if-nez v0, :cond_4
+
+    iget-boolean v0, p0, Li5a;->s0:Z
+
+    :try_start_0
+    iget-object v1, p0, Li5a;->X:Lf2e;
+
+    invoke-interface {v1}, Lf2e;->poll()Ljava/lang/Object;
+
+    move-result-object v1
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_1
+
+    const/4 v2, 0x1
+
+    if-nez v1, :cond_2
+
+    move v3, v2
+
+    goto :goto_0
+
+    :cond_2
+    const/4 v3, 0x0
+
+    :goto_0
+    if-eqz v0, :cond_3
+
+    if-eqz v3, :cond_3
+
+    iput-boolean v2, p0, Li5a;->r0:Z
+
+    iget-object p0, p0, Li5a;->a:Lxid;
+
+    invoke-virtual {p0}, Lxid;->b()V
+
+    return-void
+
+    :cond_3
+    if-nez v3, :cond_4
+
+    :try_start_1
+    iget-object v0, p0, Li5a;->b:Lqc6;
+
+    invoke-interface {v0, v1}, Lqc6;->apply(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    const-string v1, "The mapper returned a null ObservableSource"
+
+    invoke-static {v0, v1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
+
+    check-cast v0, Lt7a;
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    iput-boolean v2, p0, Li5a;->Z:Z
+
+    iget-object v1, p0, Li5a;->c:Lg5a;
+
+    invoke-interface {v0, v1}, Lt7a;->a(Ld8a;)V
+
+    goto :goto_1
+
+    :catchall_0
+    move-exception v0
+
+    invoke-static {v0}, Lzyd;->F(Ljava/lang/Throwable;)V
+
+    invoke-virtual {p0}, Li5a;->e()V
+
+    iget-object v1, p0, Li5a;->X:Lf2e;
+
+    invoke-interface {v1}, Lf2e;->clear()V
+
+    iget-object p0, p0, Li5a;->a:Lxid;
+
+    invoke-virtual {p0, v0}, Lxid;->onError(Ljava/lang/Throwable;)V
+
+    return-void
+
+    :catchall_1
+    move-exception v0
+
+    invoke-static {v0}, Lzyd;->F(Ljava/lang/Throwable;)V
+
+    invoke-virtual {p0}, Li5a;->e()V
+
+    iget-object v1, p0, Li5a;->X:Lf2e;
+
+    invoke-interface {v1}, Lf2e;->clear()V
+
+    iget-object p0, p0, Li5a;->a:Lxid;
+
+    invoke-virtual {p0, v0}, Lxid;->onError(Ljava/lang/Throwable;)V
+
+    return-void
+
+    :cond_4
+    :goto_1
+    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicInteger;->decrementAndGet()I
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    :goto_2
+    return-void
+.end method
+
+.method public final b()V
     .locals 1
 
-    sget v0, Lgtb;->call_history_info_copy_link:I
+    iget-boolean v0, p0, Li5a;->s0:Z
 
-    sput v0, Li5a;->a:I
+    if-eqz v0, :cond_0
 
-    sget v0, Lgtb;->call_history_info_open_chat_call:I
+    return-void
 
-    sput v0, Li5a;->b:I
+    :cond_0
+    const/4 v0, 0x1
 
-    sget v0, Lgtb;->call_history_info_recreate:I
+    iput-boolean v0, p0, Li5a;->s0:Z
 
-    sput v0, Li5a;->c:I
+    invoke-virtual {p0}, Li5a;->a()V
 
-    sget v0, Lgtb;->call_history_info_send_to_chat:I
+    return-void
+.end method
 
-    sput v0, Li5a;->d:I
+.method public final c(Loq4;)V
+    .locals 2
 
-    sget v0, Lgtb;->call_history_info_share_link:I
+    iget-object v0, p0, Li5a;->Y:Loq4;
 
-    sput v0, Li5a;->e:I
+    invoke-static {v0, p1}, Lsq4;->h(Loq4;Loq4;)Z
 
-    sget v0, Lgtb;->call_history_info_start_call:I
+    move-result v0
 
-    sput v0, Li5a;->f:I
+    if-eqz v0, :cond_2
 
-    sget v0, Lgtb;->call_history_screen_banner:I
+    iput-object p1, p0, Li5a;->Y:Loq4;
 
-    sput v0, Li5a;->g:I
+    instance-of v0, p1, Lr0c;
 
-    sget v0, Lgtb;->call_history_screen_contact_call:I
+    if-eqz v0, :cond_1
 
-    sput v0, Li5a;->h:I
+    check-cast p1, Lr0c;
 
-    sget v0, Lgtb;->call_history_screen_container:I
+    const/4 v0, 0x3
 
-    sput v0, Li5a;->i:I
+    invoke-interface {p1, v0}, Ls0c;->q(I)I
 
-    sget v0, Lgtb;->call_history_screen_group_call:I
+    move-result v0
 
-    sput v0, Li5a;->j:I
+    const/4 v1, 0x1
 
-    sget v0, Lgtb;->call_history_screen_toolbar:I
+    if-ne v0, v1, :cond_0
 
-    sput v0, Li5a;->k:I
+    iput v0, p0, Li5a;->t0:I
 
-    sget v0, Lgtb;->call_info_action_list:I
+    iput-object p1, p0, Li5a;->X:Lf2e;
 
-    sput v0, Li5a;->l:I
+    iput-boolean v1, p0, Li5a;->s0:Z
 
-    sget v0, Lgtb;->call_info_action_vh:I
+    iget-object p1, p0, Li5a;->a:Lxid;
 
-    sput v0, Li5a;->m:I
+    invoke-virtual {p1, p0}, Lxid;->c(Loq4;)V
 
-    sget v0, Lgtb;->call_info_appbarlayout:I
+    invoke-virtual {p0}, Li5a;->a()V
 
-    sput v0, Li5a;->n:I
+    return-void
 
-    sget v0, Lgtb;->call_info_button:I
+    :cond_0
+    const/4 v1, 0x2
 
-    sput v0, Li5a;->o:I
+    if-ne v0, v1, :cond_1
 
-    sget v0, Lgtb;->call_info_collapsiblecontainerlinearlayout:I
+    iput v0, p0, Li5a;->t0:I
 
-    sput v0, Li5a;->p:I
+    iput-object p1, p0, Li5a;->X:Lf2e;
 
-    sget v0, Lgtb;->call_info_coordinator_layout:I
+    iget-object p1, p0, Li5a;->a:Lxid;
 
-    sput v0, Li5a;->q:I
+    invoke-virtual {p1, p0}, Lxid;->c(Loq4;)V
 
-    sget v0, Lgtb;->call_info_icon:I
+    return-void
 
-    sput v0, Li5a;->r:I
+    :cond_1
+    new-instance p1, Lv8e;
 
-    sget v0, Lgtb;->call_info_link_state:I
+    iget v0, p0, Li5a;->o:I
 
-    sput v0, Li5a;->s:I
+    invoke-direct {p1, v0}, Lv8e;-><init>(I)V
 
-    sget v0, Lgtb;->call_info_onemetoolbar:I
+    iput-object p1, p0, Li5a;->X:Lf2e;
 
-    sput v0, Li5a;->t:I
+    iget-object p1, p0, Li5a;->a:Lxid;
 
-    sget v0, Lgtb;->call_info_title:I
+    invoke-virtual {p1, p0}, Lxid;->c(Loq4;)V
 
-    sput v0, Li5a;->u:I
+    :cond_2
+    return-void
+.end method
+
+.method public final e()V
+    .locals 1
+
+    const/4 v0, 0x1
+
+    iput-boolean v0, p0, Li5a;->r0:Z
+
+    iget-object v0, p0, Li5a;->c:Lg5a;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    invoke-static {v0}, Lsq4;->a(Ljava/util/concurrent/atomic/AtomicReference;)Z
+
+    iget-object v0, p0, Li5a;->Y:Loq4;
+
+    invoke-interface {v0}, Loq4;->e()V
+
+    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicInteger;->getAndIncrement()I
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    iget-object p0, p0, Li5a;->X:Lf2e;
+
+    invoke-interface {p0}, Lf2e;->clear()V
+
+    :cond_0
+    return-void
+.end method
+
+.method public final f()Z
+    .locals 0
+
+    iget-boolean p0, p0, Li5a;->r0:Z
+
+    return p0
+.end method
+
+.method public final onError(Ljava/lang/Throwable;)V
+    .locals 1
+
+    iget-boolean v0, p0, Li5a;->s0:Z
+
+    if-eqz v0, :cond_0
+
+    invoke-static {p1}, Ln4e;->D(Ljava/lang/Throwable;)V
+
+    return-void
+
+    :cond_0
+    const/4 v0, 0x1
+
+    iput-boolean v0, p0, Li5a;->s0:Z
+
+    invoke-virtual {p0}, Li5a;->e()V
+
+    iget-object p0, p0, Li5a;->a:Lxid;
+
+    invoke-virtual {p0, p1}, Lxid;->onError(Ljava/lang/Throwable;)V
+
+    return-void
+.end method
+
+.method public final s(Ljava/lang/Object;)V
+    .locals 1
+
+    iget-boolean v0, p0, Li5a;->s0:Z
+
+    if-eqz v0, :cond_0
+
+    return-void
+
+    :cond_0
+    iget v0, p0, Li5a;->t0:I
+
+    if-nez v0, :cond_1
+
+    iget-object v0, p0, Li5a;->X:Lf2e;
+
+    invoke-interface {v0, p1}, Lf2e;->offer(Ljava/lang/Object;)Z
+
+    :cond_1
+    invoke-virtual {p0}, Li5a;->a()V
 
     return-void
 .end method

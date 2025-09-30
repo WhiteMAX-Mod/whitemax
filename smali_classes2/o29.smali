@@ -1,49 +1,73 @@
-.class public final Lo29;
-.super Lbu3;
+.class public abstract Lo29;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final synthetic X:Lh49;
+# static fields
+.field public static final a:Ljava/nio/charset/Charset;
 
-.field public Y:I
+.field public static final b:Lm29;
 
-.field public synthetic o:Ljava/lang/Object;
+.field public static final c:Ln29;
 
 
 # direct methods
-.method public constructor <init>(Lh49;Lbu3;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 2
 
-    iput-object p1, p0, Lo29;->X:Lh49;
+    const-string v0, "UTF-8"
 
-    invoke-direct {p0, p2}, Lbu3;-><init>(Lkotlin/coroutines/Continuation;)V
+    invoke-static {v0}, Ljava/nio/charset/Charset;->forName(Ljava/lang/String;)Ljava/nio/charset/Charset;
+
+    move-result-object v0
+
+    sput-object v0, Lo29;->a:Ljava/nio/charset/Charset;
+
+    new-instance v0, Lm29;
+
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    sput-object v0, Lo29;->b:Lm29;
+
+    new-instance v0, Ln29;
+
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    sget-object v1, Ljava/nio/charset/CodingErrorAction;->REPLACE:Ljava/nio/charset/CodingErrorAction;
+
+    iput-object v1, v0, Ln29;->a:Ljava/nio/charset/CodingErrorAction;
+
+    iput-object v1, v0, Ln29;->b:Ljava/nio/charset/CodingErrorAction;
+
+    const v1, 0x7fffffff
+
+    iput v1, v0, Ln29;->c:I
+
+    const/16 v1, 0x2000
+
+    iput v1, v0, Ln29;->o:I
+
+    iput v1, v0, Ln29;->X:I
+
+    sput-object v0, Lo29;->c:Ln29;
 
     return-void
 .end method
 
-
-# virtual methods
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
+.method public static a([B)Lt39;
     .locals 2
 
-    iput-object p1, p0, Lo29;->o:Ljava/lang/Object;
+    sget-object v0, Lo29;->c:Ln29;
 
-    iget p1, p0, Lo29;->Y:I
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    const/high16 v0, -0x80000000
+    new-instance v1, Lorg/msgpack/core/buffer/ArrayBufferInput;
 
-    or-int/2addr p1, v0
+    invoke-direct {v1, p0}, Lorg/msgpack/core/buffer/ArrayBufferInput;-><init>([B)V
 
-    iput p1, p0, Lo29;->Y:I
+    new-instance p0, Lt39;
 
-    iget-object p1, p0, Lo29;->X:Lh49;
-
-    const-wide/16 v0, 0x0
-
-    invoke-virtual {p1, v0, v1, p0}, Lh49;->y(JLbu3;)Ljava/lang/Object;
-
-    move-result-object p0
+    invoke-direct {p0, v1, v0}, Lt39;-><init>(Lorg/msgpack/core/buffer/ArrayBufferInput;Ln29;)V
 
     return-object p0
 .end method

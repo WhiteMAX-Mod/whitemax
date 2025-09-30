@@ -1,43 +1,61 @@
 .class public final Lju;
-.super Ljava/lang/Object;
+.super Lnu;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:Lv0e;
-
-.field public final b:Lx4b;
-
-.field public final c:Lik;
-
-.field public final d:Ldc5;
-
-.field public final e:Lwc5;
-
-.field public final f:Lawc;
-
-.field public final g:Lzi;
+# static fields
+.field public static final a:Lju;
 
 
 # direct methods
-.method public constructor <init>(Lv0e;Lx4b;Ln82;Lik;Ldc5;Lwc5;Lawc;Lzi;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lju;
 
-    iput-object p1, p0, Lju;->a:Lv0e;
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p2, p0, Lju;->b:Lx4b;
-
-    iput-object p4, p0, Lju;->c:Lik;
-
-    iput-object p5, p0, Lju;->d:Ldc5;
-
-    iput-object p6, p0, Lju;->e:Lwc5;
-
-    iput-object p7, p0, Lju;->f:Lawc;
-
-    iput-object p8, p0, Lju;->g:Lzi;
+    sput-object v0, Lju;->a:Lju;
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 1
+
+    const/4 v0, 0x1
+
+    if-ne p0, p1, :cond_0
+
+    return v0
+
+    :cond_0
+    instance-of p0, p1, Lju;
+
+    if-nez p0, :cond_1
+
+    const/4 p0, 0x0
+
+    return p0
+
+    :cond_1
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 0
+
+    const p0, 0x2c75b5e3
+
+    return p0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 0
+
+    const-string p0, "Idle"
+
+    return-object p0
 .end method

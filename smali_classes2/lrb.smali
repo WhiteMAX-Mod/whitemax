@@ -1,50 +1,174 @@
-.class public abstract Llrb;
-.super Ljava/lang/Object;
+.class public final Llrb;
+.super Lure;
+.source "SourceFile"
+
+# interfaces
+.implements Lpc6;
 
 
-# static fields
-.field public static onechat_react_add_tension:I = 0x7f0703c0
+# instance fields
+.field public synthetic X:Ljava/lang/Object;
 
-.field public static onechat_react_animation_drawable_size:I = 0x7f0703c1
+.field public final synthetic Y:Ltrb;
 
-.field public static onechat_react_badge_corners_radius:I = 0x7f0703c2
 
-.field public static onechat_react_bubble_width_tension:I = 0x7f0703c3
+# direct methods
+.method public constructor <init>(Ltrb;Lkotlin/coroutines/Continuation;)V
+    .locals 0
 
-.field public static onechat_react_change_tension:I = 0x7f0703c4
+    iput-object p1, p0, Llrb;->Y:Ltrb;
 
-.field public static onechat_react_counter_padding:I = 0x7f0703c5
+    const/4 p1, 0x2
 
-.field public static onechat_react_default_small_height_fallback:I = 0x7f0703c6
+    invoke-direct {p0, p1, p2}, Lure;-><init>(ILkotlin/coroutines/Continuation;)V
 
-.field public static onechat_react_default_small_width_fallback:I = 0x7f0703c7
+    return-void
+.end method
 
-.field public static onechat_react_move_tension:I = 0x7f0703c8
 
-.field public static onechat_react_next_change_delay_coef:I = 0x7f0703c9
+# virtual methods
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-.field public static onechat_react_next_move_delay_coef:I = 0x7f0703ca
+    check-cast p1, Ly04;
 
-.field public static onechat_react_panel_corner_radius:I = 0x7f0703cb
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-.field public static onechat_react_panel_popup_side_margin:I = 0x7f0703cc
+    invoke-virtual {p0, p1, p2}, Llrb;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-.field public static onechat_react_panel_selected_text_size:I = 0x7f0703cd
+    move-result-object p0
 
-.field public static onechat_react_panel_side_margin:I = 0x7f0703ce
+    check-cast p0, Llrb;
 
-.field public static onechat_react_panel_size:I = 0x7f0703cf
+    sget-object p1, Lylf;->a:Lylf;
 
-.field public static onechat_react_panel_text_size:I = 0x7f0703d0
+    invoke-virtual {p0, p1}, Llrb;->o(Ljava/lang/Object;)Ljava/lang/Object;
 
-.field public static onechat_react_panel_vertical_margin:I = 0x7f0703d1
+    return-object p1
+.end method
 
-.field public static onechat_react_scale_1_step:I = 0x7f0703d2
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 1
 
-.field public static onechat_react_scale_2_step:I = 0x7f0703d3
+    new-instance v0, Llrb;
 
-.field public static onechat_react_scale_3_step:I = 0x7f0703d4
+    iget-object p0, p0, Llrb;->Y:Ltrb;
 
-.field public static onechat_react_side_margin:I = 0x7f0703d5
+    invoke-direct {v0, p0, p2}, Llrb;-><init>(Ltrb;Lkotlin/coroutines/Continuation;)V
 
-.field public static onechat_react_text_size_small:I = 0x7f0703d6
+    iput-object p1, v0, Llrb;->X:Ljava/lang/Object;
+
+    return-object v0
+.end method
+
+.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 12
+
+    invoke-static {p1}, Lqe5;->V(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Llrb;->X:Ljava/lang/Object;
+
+    check-cast p1, Ly04;
+
+    sget-object v0, Ltrb;->G0:[Lxi7;
+
+    iget-object p0, p0, Llrb;->Y:Ltrb;
+
+    invoke-virtual {p0}, Ltrb;->r()Ls72;
+
+    move-result-object v0
+
+    sget-object v1, Lylf;->a:Lylf;
+
+    if-nez v0, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    iget-object v2, v0, Ls72;->b:Lvb2;
+
+    invoke-virtual {v0}, Ls72;->Z()Z
+
+    move-result v3
+
+    if-nez v3, :cond_1
+
+    :goto_0
+    return-object v1
+
+    :cond_1
+    iget-wide v3, v2, Lvb2;->a:J
+
+    const-wide/16 v5, 0x0
+
+    cmp-long v3, v3, v5
+
+    if-nez v3, :cond_2
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Ljava/lang/Class;->getName()Ljava/lang/String;
+
+    move-result-object p1
+
+    const-string v0, "Try update revokePrivateLink with charServerId == 0"
+
+    invoke-static {p1, v0}, Ljtg;->S(Ljava/lang/String;Ljava/lang/String;)V
+
+    iget-object p0, p0, Ltrb;->v0:Lcl7;
+
+    invoke-interface {p0}, Lcl7;->getValue()Ljava/lang/Object;
+
+    move-result-object p0
+
+    check-cast p0, La24;
+
+    new-instance p1, Ljava/lang/IllegalArgumentException;
+
+    const-string v0, "Try update revokePrivateLink with charServerId == 0. ProfileInvite"
+
+    invoke-direct {p1, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    const-string v0, "ONEME-18920"
+
+    invoke-virtual {p0, v0, p1}, La24;->a(Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    return-object v1
+
+    :cond_2
+    iget-object p1, p0, Ltrb;->Y:Lcl7;
+
+    invoke-interface {p1}, Lcl7;->getValue()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lrk;
+
+    iget-wide v4, v0, Ls72;->a:J
+
+    iget-wide v6, v2, Lvb2;->a:J
+
+    move-object v3, p1
+
+    check-cast v3, Lgaa;
+
+    const/4 v8, 0x0
+
+    const/4 v9, 0x0
+
+    const/4 v10, 0x1
+
+    const/4 v11, 0x0
+
+    invoke-virtual/range {v3 .. v11}, Lgaa;->k(JJILjava/lang/String;ZLjava/util/HashMap;)J
+
+    move-result-wide v2
+
+    iget-object p0, p0, Ltrb;->y0:Ljava/util/concurrent/atomic/AtomicLong;
+
+    invoke-virtual {p0, v2, v3}, Ljava/util/concurrent/atomic/AtomicLong;->set(J)V
+
+    return-object v1
+.end method

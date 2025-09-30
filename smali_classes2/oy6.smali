@@ -1,158 +1,192 @@
-.class public final synthetic Loy6;
+.class public final Loy6;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lx56;
+
+# static fields
+.field public static final h:Ljava/util/regex/Pattern;
+
+.field public static final i:Ljava/util/regex/Pattern;
+
+.field public static final j:Ljava/util/regex/Pattern;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final a:Liec;
 
-.field public final synthetic b:I
+.field public final b:Lfec;
+
+.field public final c:Ljava/util/HashMap;
+
+.field public d:J
+
+.field public e:J
+
+.field public f:Z
+
+.field public g:Ljava/lang/String;
 
 
 # direct methods
-.method public synthetic constructor <init>(II)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    .line 1
-    iput p2, p0, Loy6;->a:I
+    const-string v0, ".*typ (host|prflx|srflx|relay+).*"
 
-    iput p1, p0, Loy6;->b:I
+    invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    move-result-object v0
+
+    sput-object v0, Loy6;->h:Ljava/util/regex/Pattern;
+
+    const-string v0, ".*transport=(tcp|udp).*"
+
+    invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
+
+    move-result-object v0
+
+    sput-object v0, Loy6;->i:Ljava/util/regex/Pattern;
+
+    const-string v0, ".*(?:tcp|udp) \\d+ (\\S+).*"
+
+    invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
+
+    move-result-object v0
+
+    sput-object v0, Loy6;->j:Ljava/util/regex/Pattern;
 
     return-void
 .end method
 
-.method public synthetic constructor <init>(Ljsd;I)V
-    .locals 0
-
-    .line 2
-    const/4 p1, 0x2
-
-    iput p1, p0, Loy6;->a:I
+.method public constructor <init>(Lfec;Liec;)V
+    .locals 5
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput p2, p0, Loy6;->b:I
+    const/4 v0, 0x0
 
+    iput-boolean v0, p0, Loy6;->f:Z
+
+    iput-object p2, p0, Loy6;->a:Liec;
+
+    iput-object p1, p0, Loy6;->b:Lfec;
+
+    new-instance p1, Ljava/util/HashMap;
+
+    invoke-direct {p1}, Ljava/util/HashMap;-><init>()V
+
+    iput-object p1, p0, Loy6;->c:Ljava/util/HashMap;
+
+    invoke-static {}, Ln0h;->values()[Ln0h;
+
+    move-result-object p1
+
+    array-length p2, p1
+
+    move v1, v0
+
+    :goto_0
+    if-ge v1, p2, :cond_0
+
+    aget-object v2, p1, v1
+
+    iget-object v3, p0, Loy6;->c:Ljava/util/HashMap;
+
+    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v4
+
+    invoke-virtual {v3, v2, v4}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    add-int/lit8 v1, v1, 0x1
+
+    goto :goto_0
+
+    :cond_0
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 5
+.method public final a(Z)V
+    .locals 6
 
-    iget v0, p0, Loy6;->a:I
+    iget-wide v0, p0, Loy6;->e:J
 
-    const-string v1, "prefetch "
+    const-wide/16 v2, 0x0
 
-    sget-object v2, Le5f;->a:Le5f;
+    cmp-long v0, v0, v2
 
-    iget p0, p0, Loy6;->b:I
+    if-eqz v0, :cond_3
 
-    packed-switch v0, :pswitch_data_0
+    iget-boolean v0, p0, Loy6;->f:Z
 
-    check-cast p1, Le17;
+    if-eqz v0, :cond_0
 
-    const/4 v0, 0x2
+    goto :goto_2
 
-    new-array v1, v0, [F
+    :cond_0
+    const/4 v0, 0x1
 
-    fill-array-data v1, :array_0
+    iput-boolean v0, p0, Loy6;->f:Z
 
-    invoke-static {v1}, Landroid/animation/ValueAnimator;->ofFloat([F)Landroid/animation/ValueAnimator;
+    new-instance v0, Ljava/util/HashMap;
+
+    invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
+
+    iget-object v1, p0, Loy6;->g:Ljava/lang/String;
+
+    if-eqz v1, :cond_1
+
+    goto :goto_0
+
+    :cond_1
+    const-string v1, "direct"
+
+    iput-object v1, p0, Loy6;->g:Ljava/lang/String;
+
+    :goto_0
+    const-string v2, ":"
+
+    invoke-static {v1, v2}, Lee5;->m(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v1
 
-    const-wide/16 v3, 0xc8
+    if-eqz p1, :cond_2
 
-    invoke-virtual {v1, v3, v4}, Landroid/animation/ValueAnimator;->setDuration(J)Landroid/animation/ValueAnimator;
+    invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
-    new-instance v3, Ldsd;
+    move-result-wide v2
 
-    const/4 v4, 0x0
+    iget-wide v4, p0, Loy6;->e:J
 
-    invoke-direct {v3, p1, v4}, Ldsd;-><init>(Le17;I)V
+    sub-long/2addr v2, v4
 
-    invoke-virtual {v1, v3}, Landroid/animation/ValueAnimator;->addUpdateListener(Landroid/animation/ValueAnimator$AnimatorUpdateListener;)V
+    goto :goto_1
 
-    new-instance v3, Ljg;
+    :cond_2
+    const-wide/16 v2, -0x1
 
-    invoke-direct {v3, p0, v0, p1}, Ljg;-><init>(IILjava/lang/Object;)V
+    :goto_1
+    invoke-virtual {v1, v2, v3}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v1, v3}, Landroid/animation/Animator;->addListener(Landroid/animation/Animator$AnimatorListener;)V
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    invoke-virtual {v1}, Landroid/animation/ValueAnimator;->start()V
+    move-result-object p1
 
-    return-object v2
+    const-string v1, "param"
 
-    :pswitch_0
-    check-cast p1, Ljava/lang/Throwable;
+    invoke-virtual {v0, v1, p1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    if-eqz p1, :cond_0
+    sget-object p1, Liec;->COLLECTOR_VIDEO:Ljava/lang/String;
 
-    sget-object v0, Lxy6;->A0:Ljava/lang/String;
+    const-string v1, "callCandidatesApply"
 
-    new-instance v3, Ljava/lang/StringBuilder;
+    iget-object p0, p0, Loy6;->a:Liec;
 
-    invoke-direct {v3, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {p0, p1, v1, v0}, Liec;->log(Ljava/lang/String;Ljava/lang/String;Ljava/util/Map;)V
 
-    invoke-virtual {v3, p0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string p0, " fetchRealAlbums() completed by error"
-
-    invoke-virtual {v3, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    invoke-static {v0, p0, p1}, Lg47;->r(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    :cond_0
-    return-object v2
-
-    :pswitch_1
-    check-cast p1, Ljava/lang/Throwable;
-
-    if-eqz p1, :cond_1
-
-    sget-object v0, Lxy6;->A0:Ljava/lang/String;
-
-    new-instance v3, Ljava/lang/StringBuilder;
-
-    invoke-direct {v3, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v3, p0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string p0, " fetchVirtualAlbums() completed by error"
-
-    invoke-virtual {v3, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    invoke-static {v0, p0, p1}, Lg47;->r(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    :cond_1
-    return-object v2
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
-
-    :array_0
-    .array-data 4
-        0x3f800000    # 1.0f
-        0x0
-    .end array-data
+    :cond_3
+    :goto_2
+    return-void
 .end method

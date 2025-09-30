@@ -1,160 +1,132 @@
-.class public final Lz1g;
-.super Ljava/lang/Object;
+.class public final enum Lz1g;
+.super Ljava/lang/Enum;
 .source "SourceFile"
+
+# interfaces
+.implements Lb2g;
 
 
 # static fields
-.field public static final Companion:Ly1g;
+.field public static final enum X:Lz1g;
+
+.field public static final synthetic Y:[Lz1g;
+
+.field public static final enum b:Lz1g;
+
+.field public static final enum c:Lz1g;
+
+.field public static final enum o:Lz1g;
 
 
 # instance fields
 .field public final a:Ljava/lang/String;
 
-.field public final b:Z
-
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 1
+    .locals 7
 
-    new-instance v0, Ly1g;
+    new-instance v0, Lz1g;
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    const/4 v1, 0x0
 
-    sput-object v0, Lz1g;->Companion:Ly1g;
+    const-string v2, "cancel_1s"
+
+    const-string v3, "CANCEL_1S"
+
+    invoke-direct {v0, v3, v1, v2}, Lz1g;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v0, Lz1g;->b:Lz1g;
+
+    new-instance v1, Lz1g;
+
+    const/4 v2, 0x1
+
+    const-string v3, "swipe"
+
+    const-string v4, "SWIPE"
+
+    invoke-direct {v1, v4, v2, v3}, Lz1g;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v1, Lz1g;->c:Lz1g;
+
+    new-instance v2, Lz1g;
+
+    const/4 v3, 0x2
+
+    const-string v4, "delete_on_preview"
+
+    const-string v5, "DELETE_ON_PREVIEW"
+
+    invoke-direct {v2, v5, v3, v4}, Lz1g;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v2, Lz1g;->o:Lz1g;
+
+    new-instance v3, Lz1g;
+
+    const/4 v4, 0x3
+
+    const-string v5, "delete_on_record"
+
+    const-string v6, "DELETE_ON_RECORD"
+
+    invoke-direct {v3, v6, v4, v5}, Lz1g;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v3, Lz1g;->X:Lz1g;
+
+    filled-new-array {v0, v1, v2, v3}, [Lz1g;
+
+    move-result-object v0
+
+    sput-object v0, Lz1g;->Y:[Lz1g;
 
     return-void
 .end method
 
-.method public synthetic constructor <init>(Ljava/lang/String;IZ)V
-    .locals 2
+.method public constructor <init>(Ljava/lang/String;ILjava/lang/String;)V
+    .locals 0
 
-    and-int/lit8 v0, p2, 0x3
+    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    const/4 v1, 0x3
-
-    if-ne v1, v0, :cond_0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lz1g;->a:Ljava/lang/String;
-
-    iput-boolean p3, p0, Lz1g;->b:Z
+    iput-object p3, p0, Lz1g;->a:Ljava/lang/String;
 
     return-void
+.end method
 
-    :cond_0
-    sget-object p0, Lx1g;->a:Lx1g;
+.method public static valueOf(Ljava/lang/String;)Lz1g;
+    .locals 1
 
-    invoke-virtual {p0}, Lx1g;->d()Lx4d;
+    const-class v0, Lz1g;
+
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
 
     move-result-object p0
 
-    invoke-static {p2, v1, p0}, Lrbg;->G(IILx4d;)V
+    check-cast p0, Lz1g;
 
-    const/4 p0, 0x0
+    return-object p0
+.end method
 
-    throw p0
+.method public static values()[Lz1g;
+    .locals 1
+
+    sget-object v0, Lz1g;->Y:[Lz1g;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, [Lz1g;
+
+    return-object v0
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
+.method public final getTitle()Ljava/lang/String;
+    .locals 0
 
-    const/4 v0, 0x1
-
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    instance-of v1, p1, Lz1g;
-
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
-    check-cast p1, Lz1g;
-
-    iget-object v1, p0, Lz1g;->a:Ljava/lang/String;
-
-    iget-object v3, p1, Lz1g;->a:Ljava/lang/String;
-
-    invoke-static {v1, v3}, Lxq7;->d(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_2
-
-    return v2
-
-    :cond_2
-    iget-boolean p0, p0, Lz1g;->b:Z
-
-    iget-boolean p1, p1, Lz1g;->b:Z
-
-    if-eq p0, p1, :cond_3
-
-    return v2
-
-    :cond_3
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 1
-
-    iget-object v0, p0, Lz1g;->a:Ljava/lang/String;
-
-    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
-
-    move-result v0
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget-boolean p0, p0, Lz1g;->b:Z
-
-    invoke-static {p0}, Ljava/lang/Boolean;->hashCode(Z)I
-
-    move-result p0
-
-    add-int/2addr p0, v0
-
-    return p0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 2
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "WebAppSetupScreenCaptureBehaviorRequest(requestId="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v1, p0, Lz1g;->a:Ljava/lang/String;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", isScreenCaptureEnabled="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-boolean p0, p0, Lz1g;->b:Z
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    const-string p0, ")"
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
+    iget-object p0, p0, Lz1g;->a:Ljava/lang/String;
 
     return-object p0
 .end method

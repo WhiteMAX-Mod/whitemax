@@ -1,114 +1,374 @@
-.class public final synthetic Lla7;
+.class public abstract Lla7;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lqw9;
 
+# static fields
+.field public static final a:Ljava/nio/charset/Charset;
 
-# instance fields
-.field public final synthetic a:I
+.field public static final b:Ljava/lang/Object;
 
 
 # direct methods
-.method public synthetic constructor <init>(I)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    iput p1, p0, Lla7;->a:I
+    const-string v0, "UTF-8"
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-static {v0}, Ljava/nio/charset/Charset;->forName(Ljava/lang/String;)Ljava/nio/charset/Charset;
+
+    move-result-object v0
+
+    sput-object v0, Lla7;->a:Ljava/nio/charset/Charset;
+
+    const-string v0, "ISO-8859-1"
+
+    invoke-static {v0}, Ljava/nio/charset/Charset;->forName(Ljava/lang/String;)Ljava/nio/charset/Charset;
+
+    new-instance v0, Ljava/lang/Object;
+
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    sput-object v0, Lla7;->b:Ljava/lang/Object;
 
     return-void
 .end method
 
+.method public static a(Ljava/util/Map;III)I
+    .locals 4
 
-# virtual methods
-.method public final a(Ljava/lang/Object;Ljava/lang/Object;)V
-    .locals 1
+    invoke-static {p1}, Lr63;->m(I)I
 
-    iget p0, p0, Lla7;->a:I
+    move-result p1
 
-    packed-switch p0, :pswitch_data_0
+    invoke-interface {p0}, Ljava/util/Map;->entrySet()Ljava/util/Set;
 
-    new-instance p0, Lcom/google/firebase/encoders/EncodingException;
+    move-result-object p0
 
-    new-instance p2, Ljava/lang/StringBuilder;
+    invoke-interface {p0}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
 
-    const-string v0, "Couldn\'t find encoder for type "
+    move-result-object p0
 
-    invoke-direct {p2, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    const/4 v0, 0x0
 
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    :goto_0
+    invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
 
-    move-result-object p1
+    move-result v1
 
-    invoke-virtual {p1}, Ljava/lang/Class;->getCanonicalName()Ljava/lang/String;
+    if-eqz v1, :cond_1
 
-    move-result-object p1
+    invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    invoke-virtual {p2, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    move-result-object v1
 
-    invoke-virtual {p2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    check-cast v1, Ljava/util/Map$Entry;
 
-    move-result-object p1
+    invoke-interface {v1}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
-    invoke-direct {p0, p1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
+    move-result-object v2
+
+    invoke-interface {v1}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
+
+    move-result-object v1
+
+    if-eqz v2, :cond_0
+
+    if-eqz v1, :cond_0
+
+    const/4 v3, 0x1
+
+    invoke-static {v3, p2, v2}, Lr63;->d(IILjava/lang/Object;)I
+
+    move-result v2
+
+    const/4 v3, 0x2
+
+    invoke-static {v3, p3, v1}, Lr63;->d(IILjava/lang/Object;)I
+
+    move-result v1
+
+    add-int/2addr v1, v2
+
+    add-int v2, p1, v1
+
+    invoke-static {v1}, Lr63;->j(I)I
+
+    move-result v1
+
+    add-int/2addr v1, v2
+
+    add-int/2addr v0, v1
+
+    goto :goto_0
+
+    :cond_0
+    new-instance p0, Ljava/lang/IllegalStateException;
+
+    const-string p1, "keys and values in maps cannot be null"
+
+    invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
     throw p0
 
-    :pswitch_0
-    check-cast p1, Ljava/util/Map$Entry;
+    :cond_1
+    return v0
+.end method
 
-    check-cast p2, Lrw9;
+.method public static final b(Lq63;Ljava/util/Map;Lm58;IILj29;II)Ljava/util/Map;
+    .locals 2
 
-    sget-object p0, Lwlb;->g:Lte5;
+    invoke-interface {p2, p1}, Lm58;->c(Ljava/util/Map;)Ljava/util/Map;
 
-    invoke-interface {p1}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
+    move-result-object p1
+
+    invoke-virtual {p0}, Lq63;->p()I
+
+    move-result p2
+
+    invoke-virtual {p0, p2}, Lq63;->e(I)I
+
+    move-result p2
+
+    const/4 v0, 0x0
+
+    :cond_0
+    :goto_0
+    invoke-virtual {p0}, Lq63;->s()I
+
+    move-result v1
+
+    if-nez v1, :cond_1
+
+    goto :goto_1
+
+    :cond_1
+    if-ne v1, p6, :cond_2
+
+    invoke-virtual {p0, p3}, Lq63;->k(I)Ljava/io/Serializable;
 
     move-result-object v0
 
-    invoke-interface {p2, p0, v0}, Lrw9;->a(Lte5;Ljava/lang/Object;)Lrw9;
+    goto :goto_0
 
-    sget-object p0, Lwlb;->h:Lte5;
+    :cond_2
+    if-ne v1, p7, :cond_4
 
-    invoke-interface {p1}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
+    const/16 v1, 0xb
 
-    move-result-object p1
+    if-ne p4, v1, :cond_3
 
-    invoke-interface {p2, p0, p1}, Lrw9;->a(Lte5;Ljava/lang/Object;)Lrw9;
+    move-object v1, p5
 
-    return-void
+    check-cast v1, Lj29;
+
+    invoke-virtual {p0, v1}, Lq63;->j(Lj29;)V
+
+    goto :goto_0
+
+    :cond_3
+    invoke-virtual {p0, p4}, Lq63;->k(I)Ljava/io/Serializable;
+
+    move-result-object p5
+
+    goto :goto_0
+
+    :cond_4
+    invoke-virtual {p0, v1}, Lq63;->u(I)Z
+
+    move-result v1
+
+    if-nez v1, :cond_0
+
+    :goto_1
+    const/4 p6, 0x0
+
+    invoke-virtual {p0, p6}, Lq63;->a(I)V
+
+    invoke-virtual {p0, p2}, Lq63;->d(I)V
+
+    if-nez v0, :cond_5
+
+    invoke-static {p3}, Lla7;->c(I)Ljava/io/Serializable;
+
+    move-result-object v0
+
+    :cond_5
+    if-nez p5, :cond_6
+
+    invoke-static {p4}, Lla7;->c(I)Ljava/io/Serializable;
+
+    move-result-object p5
+
+    :cond_6
+    invoke-interface {p1, v0, p5}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object p1
+.end method
+
+.method public static c(I)Ljava/io/Serializable;
+    .locals 3
+
+    packed-switch p0, :pswitch_data_0
+
+    :pswitch_0
+    new-instance v0, Ljava/lang/IllegalArgumentException;
+
+    const-string v1, "Type: "
+
+    const-string v2, " is not a primitive type."
+
+    invoke-static {p0, v1, v2}, Lsg0;->e(ILjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-direct {v0, p0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw v0
 
     :pswitch_1
-    new-instance p0, Lcom/google/firebase/encoders/EncodingException;
+    sget-object p0, Lxnd;->m:[B
 
-    new-instance p2, Ljava/lang/StringBuilder;
+    return-object p0
 
-    const-string v0, "Couldn\'t find encoder for type "
+    :pswitch_2
+    const-string p0, ""
 
-    invoke-direct {p2, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    return-object p0
 
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    :pswitch_3
+    sget-object p0, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
+
+    return-object p0
+
+    :pswitch_4
+    const/4 p0, 0x0
+
+    invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object p0
+
+    return-object p0
+
+    :pswitch_5
+    const-wide/16 v0, 0x0
+
+    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object p0
+
+    return-object p0
+
+    :pswitch_6
+    const/4 p0, 0x0
+
+    invoke-static {p0}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+
+    move-result-object p0
+
+    return-object p0
+
+    :pswitch_7
+    const-wide/16 v0, 0x0
+
+    invoke-static {v0, v1}, Ljava/lang/Double;->valueOf(D)Ljava/lang/Double;
+
+    move-result-object p0
+
+    return-object p0
+
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_7
+        :pswitch_6
+        :pswitch_5
+        :pswitch_5
+        :pswitch_4
+        :pswitch_5
+        :pswitch_4
+        :pswitch_3
+        :pswitch_2
+        :pswitch_0
+        :pswitch_0
+        :pswitch_1
+        :pswitch_4
+        :pswitch_4
+        :pswitch_4
+        :pswitch_5
+        :pswitch_4
+        :pswitch_5
+    .end packed-switch
+.end method
+
+.method public static d(Lr63;Ljava/util/Map;III)V
+    .locals 6
+
+    invoke-interface {p1}, Ljava/util/Map;->entrySet()Ljava/util/Set;
 
     move-result-object p1
 
-    invoke-virtual {p1}, Ljava/lang/Class;->getCanonicalName()Ljava/lang/String;
+    invoke-interface {p1}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
 
     move-result-object p1
 
-    invoke-virtual {p2, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    :goto_0
+    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
 
-    invoke-virtual {p2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    move-result v0
 
-    move-result-object p1
+    if-eqz v0, :cond_1
 
-    invoke-direct {p0, p1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
+    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/util/Map$Entry;
+
+    invoke-interface {v0}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
+
+    move-result-object v1
+
+    invoke-interface {v0}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    if-eqz v1, :cond_0
+
+    if-eqz v0, :cond_0
+
+    const/4 v2, 0x1
+
+    invoke-static {v2, p3, v1}, Lr63;->d(IILjava/lang/Object;)I
+
+    move-result v3
+
+    const/4 v4, 0x2
+
+    invoke-static {v4, p4, v0}, Lr63;->d(IILjava/lang/Object;)I
+
+    move-result v5
+
+    add-int/2addr v5, v3
+
+    invoke-virtual {p0, p2, v4}, Lr63;->F(II)V
+
+    invoke-virtual {p0, v5}, Lr63;->C(I)V
+
+    invoke-virtual {p0, v2, p3, v1}, Lr63;->u(IILjava/lang/Object;)V
+
+    invoke-virtual {p0, v4, p4, v0}, Lr63;->u(IILjava/lang/Object;)V
+
+    goto :goto_0
+
+    :cond_0
+    new-instance p0, Ljava/lang/IllegalStateException;
+
+    const-string p1, "keys and values in maps cannot be null"
+
+    invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
     throw p0
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    :cond_1
+    return-void
 .end method

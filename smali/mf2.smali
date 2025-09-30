@@ -1,302 +1,60 @@
-.class public final Lmf2;
-.super Lqde;
+.class public final synthetic Lmf2;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lp66;
+.implements Leb4;
 
 
 # instance fields
-.field public final synthetic X:I
+.field public final synthetic X:Z
 
-.field public synthetic Y:Ljava/lang/Throwable;
+.field public final synthetic a:J
 
-.field public synthetic Z:J
+.field public final synthetic b:Ljava/lang/String;
 
-.field public final synthetic o0:Ljava/lang/Object;
+.field public final synthetic c:J
+
+.field public final synthetic o:Z
 
 
 # direct methods
-.method public synthetic constructor <init>(Ljava/lang/Object;Lkotlin/coroutines/Continuation;I)V
+.method public synthetic constructor <init>(JLjava/lang/String;JZZ)V
     .locals 0
 
-    iput p3, p0, Lmf2;->X:I
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lmf2;->o0:Ljava/lang/Object;
+    iput-wide p1, p0, Lmf2;->a:J
 
-    const/4 p1, 0x4
+    iput-object p3, p0, Lmf2;->b:Ljava/lang/String;
 
-    invoke-direct {p0, p1, p2}, Lqde;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-wide p4, p0, Lmf2;->c:J
+
+    iput-boolean p6, p0, Lmf2;->o:Z
+
+    iput-boolean p7, p0, Lmf2;->X:Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final i(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 2
+.method public final a()Ljava/lang/Object;
+    .locals 8
 
-    iget v0, p0, Lmf2;->X:I
+    new-instance v0, Lone/me/chatmedia/viewer/ChatMediaViewerScreen;
 
-    check-cast p1, Lbn5;
+    iget-wide v1, p0, Lmf2;->a:J
 
-    check-cast p2, Ljava/lang/Throwable;
+    iget-object v3, p0, Lmf2;->b:Ljava/lang/String;
 
-    check-cast p3, Ljava/lang/Number;
+    iget-wide v4, p0, Lmf2;->c:J
 
-    packed-switch v0, :pswitch_data_0
+    iget-boolean v6, p0, Lmf2;->o:Z
 
-    invoke-virtual {p3}, Ljava/lang/Number;->longValue()J
+    iget-boolean v7, p0, Lmf2;->X:Z
 
-    move-result-wide v0
+    invoke-direct/range {v0 .. v7}, Lone/me/chatmedia/viewer/ChatMediaViewerScreen;-><init>(JLjava/lang/String;JZZ)V
 
-    check-cast p4, Lkotlin/coroutines/Continuation;
-
-    new-instance p1, Lmf2;
-
-    iget-object p0, p0, Lmf2;->o0:Ljava/lang/Object;
-
-    check-cast p0, Ltff;
-
-    const/4 p3, 0x1
-
-    invoke-direct {p1, p0, p4, p3}, Lmf2;-><init>(Ljava/lang/Object;Lkotlin/coroutines/Continuation;I)V
-
-    iput-object p2, p1, Lmf2;->Y:Ljava/lang/Throwable;
-
-    iput-wide v0, p1, Lmf2;->Z:J
-
-    sget-object p0, Le5f;->a:Le5f;
-
-    invoke-virtual {p1, p0}, Lmf2;->o(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    return-object p0
-
-    :pswitch_0
-    invoke-virtual {p3}, Ljava/lang/Number;->longValue()J
-
-    move-result-wide v0
-
-    check-cast p4, Lkotlin/coroutines/Continuation;
-
-    new-instance p1, Lmf2;
-
-    iget-object p0, p0, Lmf2;->o0:Ljava/lang/Object;
-
-    check-cast p0, Lpf2;
-
-    const/4 p3, 0x0
-
-    invoke-direct {p1, p0, p4, p3}, Lmf2;-><init>(Ljava/lang/Object;Lkotlin/coroutines/Continuation;I)V
-
-    iput-object p2, p1, Lmf2;->Y:Ljava/lang/Throwable;
-
-    iput-wide v0, p1, Lmf2;->Z:J
-
-    sget-object p0, Le5f;->a:Le5f;
-
-    invoke-virtual {p1, p0}, Lmf2;->o(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    return-object p0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 7
-
-    iget v0, p0, Lmf2;->X:I
-
-    packed-switch v0, :pswitch_data_0
-
-    iget-object v0, p0, Lmf2;->o0:Ljava/lang/Object;
-
-    check-cast v0, Ltff;
-
-    iget-object v0, v0, Ltff;->f:Ljava/lang/String;
-
-    invoke-static {p1}, Lsgg;->Z(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Lmf2;->Y:Ljava/lang/Throwable;
-
-    iget-wide v1, p0, Lmf2;->Z:J
-
-    instance-of p0, p1, Lru/ok/tamtam/errors/TamErrorException;
-
-    const/4 v3, 0x0
-
-    const-string v4, "Fetch video. Request failed with "
-
-    if-eqz p0, :cond_0
-
-    move-object p0, p1
-
-    check-cast p0, Lru/ok/tamtam/errors/TamErrorException;
-
-    iget-object p0, p0, Lru/ok/tamtam/errors/TamErrorException;->a:Lvie;
-
-    iget-object p0, p0, Lvie;->c:Ljava/lang/String;
-
-    invoke-static {p0}, Lou0;->w(Ljava/lang/String;)Z
-
-    move-result p0
-
-    if-eqz p0, :cond_0
-
-    const-wide/16 v5, 0x2
-
-    cmp-long p0, v1, v5
-
-    if-gtz p0, :cond_0
-
-    new-instance p0, Ljava/lang/StringBuilder;
-
-    invoke-direct {p0, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {p0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string p1, ". Retrying"
-
-    invoke-virtual {p0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    invoke-static {v0, p0, v3}, Lg47;->r(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    const/4 p0, 0x1
-
-    goto :goto_0
-
-    :cond_0
-    new-instance p0, Ljava/lang/StringBuilder;
-
-    invoke-direct {p0, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {p0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string p1, ". Couldn\'t recover"
-
-    invoke-virtual {p0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    invoke-static {v0, p0, v3}, Lg47;->r(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    const/4 p0, 0x0
-
-    :goto_0
-    invoke-static {p0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
-
-    move-result-object p0
-
-    return-object p0
-
-    :pswitch_0
-    iget-object v0, p0, Lmf2;->o0:Ljava/lang/Object;
-
-    check-cast v0, Lpf2;
-
-    iget-object v0, v0, Lpf2;->e:Ljava/lang/Object;
-
-    check-cast v0, Ljava/lang/String;
-
-    invoke-static {p1}, Lsgg;->Z(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Lmf2;->Y:Ljava/lang/Throwable;
-
-    iget-wide v1, p0, Lmf2;->Z:J
-
-    instance-of p0, p1, Lru/ok/tamtam/errors/TamErrorException;
-
-    const/4 v3, 0x0
-
-    const-string v4, "request failed with "
-
-    if-eqz p0, :cond_1
-
-    move-object p0, p1
-
-    check-cast p0, Lru/ok/tamtam/errors/TamErrorException;
-
-    iget-object p0, p0, Lru/ok/tamtam/errors/TamErrorException;->a:Lvie;
-
-    iget-object p0, p0, Lvie;->c:Ljava/lang/String;
-
-    invoke-static {p0}, Lou0;->w(Ljava/lang/String;)Z
-
-    move-result p0
-
-    if-eqz p0, :cond_1
-
-    const-wide/16 v5, 0x2
-
-    cmp-long p0, v1, v5
-
-    if-gtz p0, :cond_1
-
-    new-instance p0, Ljava/lang/StringBuilder;
-
-    invoke-direct {p0, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {p0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string p1, ". Retrying"
-
-    invoke-virtual {p0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    invoke-static {v0, p0, v3}, Lg47;->r(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    const/4 p0, 0x1
-
-    goto :goto_1
-
-    :cond_1
-    new-instance p0, Ljava/lang/StringBuilder;
-
-    invoke-direct {p0, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {p0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string p1, ". Couldn\'t recover"
-
-    invoke-virtual {p0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    invoke-static {v0, p0, v3}, Lg47;->r(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    const/4 p0, 0x0
-
-    :goto_1
-    invoke-static {p0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
-
-    move-result-object p0
-
-    return-object p0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-object v0
 .end method

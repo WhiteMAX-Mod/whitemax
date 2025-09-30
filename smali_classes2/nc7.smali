@@ -1,145 +1,99 @@
 .class public final Lnc7;
-.super Lxg6;
+.super Lure;
 .source "SourceFile"
+
+# interfaces
+.implements Lpc6;
 
 
 # instance fields
-.field public final synthetic c:I
+.field public final synthetic X:Lcl7;
 
-.field public final d:Ljava/lang/Object;
-
-.field public final e:Ljava/lang/Object;
+.field public final synthetic Y:Liga;
 
 
 # direct methods
-.method public constructor <init>(Landroidx/recyclerview/widget/GridLayoutManager;Lgbc;)V
-    .locals 1
+.method public constructor <init>(Lcl7;Liga;Lkotlin/coroutines/Continuation;)V
+    .locals 0
 
-    const/4 v0, 0x1
+    iput-object p1, p0, Lnc7;->X:Lcl7;
 
-    iput v0, p0, Lnc7;->c:I
+    iput-object p2, p0, Lnc7;->Y:Liga;
 
-    .line 1
-    invoke-direct {p0}, Lxg6;-><init>()V
+    const/4 p1, 0x2
 
-    .line 2
-    iput-object p1, p0, Lnc7;->d:Ljava/lang/Object;
-
-    .line 3
-    iput-object p2, p0, Lnc7;->e:Ljava/lang/Object;
-
-    return-void
-.end method
-
-.method public constructor <init>(Lone/me/keyboardmedia/emoji/KeyboardEmojiWidget;Landroidx/recyclerview/widget/RecyclerView;)V
-    .locals 1
-
-    const/4 v0, 0x0
-
-    iput v0, p0, Lnc7;->c:I
-
-    iput-object p1, p0, Lnc7;->d:Ljava/lang/Object;
-
-    iput-object p2, p0, Lnc7;->e:Ljava/lang/Object;
-
-    .line 4
-    invoke-direct {p0}, Lxg6;-><init>()V
+    invoke-direct {p0, p1, p3}, Lure;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final c(I)I
-    .locals 3
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    iget v0, p0, Lnc7;->c:I
+    check-cast p1, Ly04;
 
-    packed-switch v0, :pswitch_data_0
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    iget-object v0, p0, Lnc7;->e:Ljava/lang/Object;
-
-    check-cast v0, Lgbc;
-
-    invoke-virtual {v0}, Lgbc;->j()I
-
-    move-result v1
-
-    if-ge p1, v1, :cond_1
-
-    invoke-virtual {v0, p1}, Lgbc;->l(I)I
-
-    move-result p1
-
-    sget v0, Ljea;->k:I
-
-    if-eq p1, v0, :cond_0
-
-    sget v0, Ljea;->l:I
-
-    if-eq p1, v0, :cond_0
-
-    sget v0, Lbaa;->r:I
-
-    if-ne p1, v0, :cond_1
-
-    :cond_0
-    iget-object p0, p0, Lnc7;->d:Ljava/lang/Object;
-
-    check-cast p0, Landroidx/recyclerview/widget/GridLayoutManager;
-
-    iget p0, p0, Landroidx/recyclerview/widget/GridLayoutManager;->F:I
-
-    goto :goto_0
-
-    :cond_1
-    const/4 p0, 0x1
-
-    :goto_0
-    return p0
-
-    :pswitch_0
-    iget-object v0, p0, Lnc7;->d:Ljava/lang/Object;
-
-    check-cast v0, Lone/me/keyboardmedia/emoji/KeyboardEmojiWidget;
-
-    iget-object v1, v0, Lone/me/keyboardmedia/emoji/KeyboardEmojiWidget;->X:Lmv5;
-
-    invoke-virtual {v1}, Lhl7;->j()I
-
-    move-result v1
-
-    const/4 v2, 0x1
-
-    if-ge p1, v1, :cond_2
-
-    iget-object v0, v0, Lone/me/keyboardmedia/emoji/KeyboardEmojiWidget;->X:Lmv5;
-
-    invoke-virtual {v0, p1}, Lmv5;->l(I)I
-
-    move-result p1
-
-    sget v0, Lbaa;->q:I
-
-    if-ne p1, v0, :cond_2
-
-    iget-object p0, p0, Lnc7;->e:Ljava/lang/Object;
-
-    check-cast p0, Landroidx/recyclerview/widget/RecyclerView;
-
-    invoke-static {p0}, Lgad;->E(Landroidx/recyclerview/widget/RecyclerView;)Landroidx/recyclerview/widget/GridLayoutManager;
+    invoke-virtual {p0, p1, p2}, Lnc7;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
     move-result-object p0
 
-    if-eqz p0, :cond_2
+    check-cast p0, Lnc7;
 
-    iget v2, p0, Landroidx/recyclerview/widget/GridLayoutManager;->F:I
+    sget-object p1, Lylf;->a:Lylf;
 
-    :cond_2
-    return v2
+    invoke-virtual {p0, p1}, Lnc7;->o(Ljava/lang/Object;)Ljava/lang/Object;
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 1
+
+    new-instance p1, Lnc7;
+
+    iget-object v0, p0, Lnc7;->X:Lcl7;
+
+    iget-object p0, p0, Lnc7;->Y:Liga;
+
+    invoke-direct {p1, v0, p0, p2}, Lnc7;-><init>(Lcl7;Liga;Lkotlin/coroutines/Continuation;)V
+
+    return-object p1
+.end method
+
+.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
+
+    invoke-static {p1}, Lqe5;->V(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Lnc7;->X:Lcl7;
+
+    invoke-interface {p1}, Lcl7;->getValue()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, La4b;
+
+    iget-object p0, p0, Lnc7;->Y:Liga;
+
+    iget-object p0, p0, Liga;->a:Ljava/lang/String;
+
+    invoke-static {p1, p0}, Lf54;->r(La4b;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p0
+
+    if-nez p0, :cond_0
+
+    const-string p0, ""
+
+    :cond_0
+    new-instance p1, Lt2f;
+
+    invoke-direct {p1, p0}, Lt2f;-><init>(Ljava/lang/CharSequence;)V
+
+    return-object p1
 .end method

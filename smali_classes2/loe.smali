@@ -1,135 +1,141 @@
-.class public final Lloe;
-.super Lmoe;
+.class public final enum Lloe;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
 
+# annotations
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Ljava/lang/Enum<",
+        "Lloe;",
+        ">;"
+    }
+.end annotation
+
+
 # static fields
-.field public static final CREATOR:Lkoe;
+.field public static final Companion:Lkoe;
 
+.field public static final enum X:Lloe;
 
-# instance fields
-.field public final b:Ljava/lang/CharSequence;
+.field public static final enum Y:Lloe;
+
+.field public static final synthetic Z:[Lloe;
+
+.field public static final a:Ljava/lang/Object;
+
+.field public static final enum b:Lloe;
+
+.field public static final enum c:Lloe;
+
+.field public static final enum o:Lloe;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 1
+    .locals 8
+
+    new-instance v0, Lloe;
+
+    const-string v1, "UPDATED"
+
+    const/4 v2, 0x0
+
+    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Lloe;->b:Lloe;
+
+    new-instance v1, Lloe;
+
+    const-string v2, "REMOVED"
+
+    const/4 v3, 0x1
+
+    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v1, Lloe;->c:Lloe;
+
+    new-instance v2, Lloe;
+
+    const-string v3, "CLEARED"
+
+    const/4 v4, 0x2
+
+    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v2, Lloe;->o:Lloe;
+
+    new-instance v3, Lloe;
+
+    const-string v5, "OPENED"
+
+    const/4 v6, 0x3
+
+    invoke-direct {v3, v5, v6}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v3, Lloe;->X:Lloe;
+
+    new-instance v5, Lloe;
+
+    const-string v6, "AUTHORIZED"
+
+    const/4 v7, 0x4
+
+    invoke-direct {v5, v6, v7}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v5, Lloe;->Y:Lloe;
+
+    filled-new-array {v0, v1, v2, v3, v5}, [Lloe;
+
+    move-result-object v0
+
+    sput-object v0, Lloe;->Z:[Lloe;
 
     new-instance v0, Lkoe;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    sput-object v0, Lloe;->CREATOR:Lkoe;
+    sput-object v0, Lloe;->Companion:Lkoe;
+
+    new-instance v0, Ly5e;
+
+    const/16 v1, 0xd
+
+    invoke-direct {v0, v1}, Ly5e;-><init>(I)V
+
+    invoke-static {v4, v0}, Lcb7;->G(ILzb6;)Lcl7;
+
+    move-result-object v0
+
+    sput-object v0, Lloe;->a:Ljava/lang/Object;
 
     return-void
 .end method
 
-.method public constructor <init>(Ljava/lang/CharSequence;)V
-    .locals 0
+.method public static valueOf(Ljava/lang/String;)Lloe;
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const-class v0, Lloe;
 
-    iput-object p1, p0, Lloe;->b:Ljava/lang/CharSequence;
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final describeContents()I
-    .locals 0
-
-    const/4 p0, 0x0
-
-    return p0
-.end method
-
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 3
-
-    const/4 v0, 0x1
-
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    instance-of v1, p1, Lloe;
-
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
-    check-cast p1, Lloe;
-
-    iget-object p0, p0, Lloe;->b:Ljava/lang/CharSequence;
-
-    iget-object p1, p1, Lloe;->b:Ljava/lang/CharSequence;
-
-    invoke-static {p0, p1}, Lxq7;->d(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p0
-
-    if-nez p0, :cond_2
-
-    return v2
-
-    :cond_2
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 0
-
-    iget-object p0, p0, Lloe;->b:Ljava/lang/CharSequence;
-
-    if-nez p0, :cond_0
-
-    const/4 p0, 0x0
-
-    return p0
-
-    :cond_0
-    invoke-virtual {p0}, Ljava/lang/Object;->hashCode()I
-
-    move-result p0
-
-    return p0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 2
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "SimpleText(text="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object p0, p0, Lloe;->b:Ljava/lang/CharSequence;
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string p0, ")"
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
 
     move-result-object p0
+
+    check-cast p0, Lloe;
 
     return-object p0
 .end method
 
-.method public final writeToParcel(Landroid/os/Parcel;I)V
-    .locals 0
+.method public static values()[Lloe;
+    .locals 1
 
-    iget-object p0, p0, Lloe;->b:Ljava/lang/CharSequence;
+    sget-object v0, Lloe;->Z:[Lloe;
 
-    invoke-static {p0, p1, p2}, Landroid/text/TextUtils;->writeToParcel(Ljava/lang/CharSequence;Landroid/os/Parcel;I)V
+    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
 
-    return-void
+    move-result-object v0
+
+    check-cast v0, [Lloe;
+
+    return-object v0
 .end method

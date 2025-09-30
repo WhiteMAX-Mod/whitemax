@@ -1,63 +1,67 @@
-.class public Ls12;
-.super Landroid/widget/FrameLayout;
+.class public final Ls12;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lsu3;
+
+# static fields
+.field public static final g:Ls12;
 
 
 # instance fields
-.field public a:I
+.field public final a:I
+
+.field public final b:I
+
+.field public final c:I
+
+.field public final d:I
+
+.field public final e:I
+
+.field public final f:Landroid/graphics/Typeface;
 
 
-# virtual methods
-.method public final a(Lou3;Lou3;Z)V
-    .locals 0
+# direct methods
+.method static constructor <clinit>()V
+    .locals 7
 
-    iget p1, p0, Ls12;->a:I
+    new-instance v0, Ls12;
 
-    add-int/lit8 p1, p1, 0x1
+    const/4 v5, -0x1
 
-    iput p1, p0, Ls12;->a:I
+    const/4 v6, 0x0
+
+    const/4 v1, -0x1
+
+    const/high16 v2, -0x1000000
+
+    const/4 v3, 0x0
+
+    const/4 v4, 0x0
+
+    invoke-direct/range {v0 .. v6}, Ls12;-><init>(IIIIILandroid/graphics/Typeface;)V
+
+    sput-object v0, Ls12;->g:Ls12;
 
     return-void
 .end method
 
-.method public final b(Lou3;Lou3;Z)V
+.method public constructor <init>(IIIIILandroid/graphics/Typeface;)V
     .locals 0
 
-    iget p1, p0, Ls12;->a:I
-
-    add-int/lit8 p1, p1, -0x1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput p1, p0, Ls12;->a:I
 
+    iput p2, p0, Ls12;->b:I
+
+    iput p3, p0, Ls12;->c:I
+
+    iput p4, p0, Ls12;->d:I
+
+    iput p5, p0, Ls12;->e:I
+
+    iput-object p6, p0, Ls12;->f:Landroid/graphics/Typeface;
+
     return-void
-.end method
-
-.method public final onInterceptTouchEvent(Landroid/view/MotionEvent;)Z
-    .locals 1
-
-    iget v0, p0, Ls12;->a:I
-
-    if-gtz v0, :cond_1
-
-    invoke-super {p0, p1}, Landroid/view/ViewGroup;->onInterceptTouchEvent(Landroid/view/MotionEvent;)Z
-
-    move-result p0
-
-    if-eqz p0, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    const/4 p0, 0x0
-
-    return p0
-
-    :cond_1
-    :goto_0
-    const/4 p0, 0x1
-
-    return p0
 .end method

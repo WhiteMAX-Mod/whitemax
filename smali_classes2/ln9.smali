@@ -1,92 +1,103 @@
-.class public final synthetic Lln9;
-.super Ljava/lang/Object;
+.class public final Lln9;
+.super Lure;
 .source "SourceFile"
 
 # interfaces
-.implements Lwl;
+.implements Lpc6;
 
 
 # instance fields
-.field public final synthetic a:Lone/me/login/neuroavatars/NeuroAvatarsScreen;
+.field public final synthetic X:Lon9;
+
+.field public final synthetic Y:F
 
 
 # direct methods
-.method public synthetic constructor <init>(Lone/me/login/neuroavatars/NeuroAvatarsScreen;)V
+.method public constructor <init>(Lon9;FLkotlin/coroutines/Continuation;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lln9;->X:Lon9;
 
-    iput-object p1, p0, Lln9;->a:Lone/me/login/neuroavatars/NeuroAvatarsScreen;
+    iput p2, p0, Lln9;->Y:F
+
+    const/4 p1, 0x2
+
+    invoke-direct {p0, p1, p3}, Lure;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final Y(Lxl;I)V
-    .locals 2
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    sget-object p1, Lone/me/login/neuroavatars/NeuroAvatarsScreen;->I0:[Lbc7;
+    check-cast p1, Ly04;
 
-    iget-object p0, p0, Lln9;->a:Lone/me/login/neuroavatars/NeuroAvatarsScreen;
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    invoke-virtual {p0}, Lone/me/login/neuroavatars/NeuroAvatarsScreen;->p0()Lxl;
-
-    move-result-object p1
-
-    invoke-virtual {p1}, Lxl;->getTotalScrollRange()I
-
-    move-result p1
-
-    iget-object v0, p0, Lone/me/login/neuroavatars/NeuroAvatarsScreen;->u0:Lhb5;
-
-    invoke-static {p2}, Ljava/lang/Math;->abs(I)I
-
-    move-result p2
-
-    int-to-float p2, p2
-
-    int-to-float p1, p1
-
-    div-float/2addr p2, p1
-
-    invoke-virtual {v0, p2}, Lvv7;->getInterpolation(F)F
-
-    move-result p1
-
-    iget-object p2, p0, Lone/me/login/neuroavatars/NeuroAvatarsScreen;->Z:Lo5c;
-
-    sget-object v0, Lone/me/login/neuroavatars/NeuroAvatarsScreen;->I0:[Lbc7;
-
-    const/4 v1, 0x2
-
-    aget-object v1, v0, v1
-
-    invoke-interface {p2, p0, v1}, Lo5c;->M(Ljava/lang/Object;Lbc7;)Ljava/lang/Object;
-
-    move-result-object p2
-
-    check-cast p2, Landroid/view/ViewGroup;
-
-    const/high16 v1, 0x3f800000    # 1.0f
-
-    sub-float/2addr v1, p1
-
-    invoke-virtual {p2, v1}, Landroid/view/View;->setAlpha(F)V
-
-    iget-object p2, p0, Lone/me/login/neuroavatars/NeuroAvatarsScreen;->p0:Lo5c;
-
-    const/4 v1, 0x4
-
-    aget-object v0, v0, v1
-
-    invoke-interface {p2, p0, v0}, Lo5c;->M(Ljava/lang/Object;Lbc7;)Ljava/lang/Object;
+    invoke-virtual {p0, p1, p2}, Lln9;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
     move-result-object p0
 
-    check-cast p0, Lvia;
+    check-cast p0, Lln9;
 
-    invoke-virtual {p0, p1}, Lvia;->setTitleAlpha(F)V
+    sget-object p1, Lylf;->a:Lylf;
 
-    return-void
+    invoke-virtual {p0, p1}, Lln9;->o(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object p1
+.end method
+
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 1
+
+    new-instance p1, Lln9;
+
+    iget-object v0, p0, Lln9;->X:Lon9;
+
+    iget p0, p0, Lln9;->Y:F
+
+    invoke-direct {p1, v0, p0, p2}, Lln9;-><init>(Lon9;FLkotlin/coroutines/Continuation;)V
+
+    return-object p1
+.end method
+
+.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
+
+    invoke-static {p1}, Lqe5;->V(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Lln9;->X:Lon9;
+
+    iget-object p1, p1, Lon9;->m:Ljf8;
+
+    if-eqz p1, :cond_1
+
+    invoke-virtual {p1}, Ljf8;->t()V
+
+    iget-object p1, p1, Ljf8;->c:Lif8;
+
+    invoke-interface {p1}, Lif8;->isConnected()Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    const-string p0, "The controller is not connected. Ignoring setPlaybackSpeed()."
+
+    invoke-static {p0}, Lxnd;->l0(Ljava/lang/String;)V
+
+    goto :goto_0
+
+    :cond_0
+    iget p0, p0, Lln9;->Y:F
+
+    invoke-interface {p1, p0}, Lif8;->setPlaybackSpeed(F)V
+
+    :cond_1
+    :goto_0
+    sget-object p0, Lylf;->a:Lylf;
+
+    return-object p0
 .end method

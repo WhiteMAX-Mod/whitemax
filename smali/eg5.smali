@@ -1,381 +1,128 @@
 .class public final Leg5;
-.super Lfi0;
+.super Lure;
 .source "SourceFile"
+
+# interfaces
+.implements Lpc6;
 
 
 # instance fields
-.field public X:Ljava/io/RandomAccessFile;
+.field public X:I
 
-.field public Y:Landroid/net/Uri;
+.field public final synthetic Y:Lfg5;
 
-.field public Z:J
 
-.field public o0:Z
+# direct methods
+.method public constructor <init>(Lfg5;Lkotlin/coroutines/Continuation;)V
+    .locals 0
+
+    iput-object p1, p0, Leg5;->Y:Lfg5;
+
+    const/4 p1, 0x2
+
+    invoke-direct {p0, p1, p2}, Lure;-><init>(ILkotlin/coroutines/Continuation;)V
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final F(Lp34;)J
-    .locals 8
-
-    iget-object v0, p1, Lp34;->a:Landroid/net/Uri;
-
-    iget-wide v1, p1, Lp34;->f:J
-
-    iput-object v0, p0, Leg5;->Y:Landroid/net/Uri;
-
-    invoke-virtual {p0}, Lfi0;->c()V
-
-    const/16 v3, 0x7d0
-
-    const/16 v4, 0x7d6
-
-    :try_start_0
-    new-instance v5, Ljava/io/RandomAccessFile;
-
-    invoke-virtual {v0}, Landroid/net/Uri;->getPath()Ljava/lang/String;
-
-    move-result-object v6
-
-    invoke-virtual {v6}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    const-string v7, "r"
-
-    invoke-direct {v5, v6, v7}, Ljava/io/RandomAccessFile;-><init>(Ljava/lang/String;Ljava/lang/String;)V
-    :try_end_0
-    .catch Ljava/io/FileNotFoundException; {:try_start_0 .. :try_end_0} :catch_3
-    .catch Ljava/lang/SecurityException; {:try_start_0 .. :try_end_0} :catch_2
-    .catch Ljava/lang/RuntimeException; {:try_start_0 .. :try_end_0} :catch_1
-
-    iput-object v5, p0, Leg5;->X:Ljava/io/RandomAccessFile;
-
-    :try_start_1
-    invoke-virtual {v5, v1, v2}, Ljava/io/RandomAccessFile;->seek(J)V
-
-    iget-wide v4, p1, Lp34;->g:J
-
-    const-wide/16 v6, -0x1
-
-    cmp-long v0, v4, v6
-
-    if-nez v0, :cond_0
-
-    iget-object v0, p0, Leg5;->X:Ljava/io/RandomAccessFile;
-
-    invoke-virtual {v0}, Ljava/io/RandomAccessFile;->length()J
-
-    move-result-wide v4
-
-    sub-long/2addr v4, v1
-
-    goto :goto_0
-
-    :catch_0
-    move-exception p0
-
-    goto :goto_1
-
-    :cond_0
-    :goto_0
-    iput-wide v4, p0, Leg5;->Z:J
-    :try_end_1
-    .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_0
-
-    const-wide/16 v0, 0x0
-
-    cmp-long v0, v4, v0
-
-    if-ltz v0, :cond_1
-
-    const/4 v0, 0x1
-
-    iput-boolean v0, p0, Leg5;->o0:Z
-
-    invoke-virtual {p0, p1}, Lfi0;->d(Lp34;)V
-
-    iget-wide p0, p0, Leg5;->Z:J
-
-    return-wide p0
-
-    :cond_1
-    new-instance p0, Landroidx/media3/datasource/FileDataSource$FileDataSourceException;
-
-    const/16 p1, 0x7d8
-
-    const/4 v0, 0x0
-
-    invoke-direct {p0, v0, v0, p1}, Landroidx/media3/datasource/DataSourceException;-><init>(Ljava/lang/String;Ljava/lang/Exception;I)V
-
-    throw p0
-
-    :goto_1
-    new-instance p1, Landroidx/media3/datasource/FileDataSource$FileDataSourceException;
-
-    invoke-direct {p1, p0, v3}, Landroidx/media3/datasource/DataSourceException;-><init>(Ljava/lang/Exception;I)V
-
-    throw p1
-
-    :catch_1
-    move-exception p0
-
-    goto :goto_2
-
-    :catch_2
-    move-exception p0
-
-    goto :goto_3
-
-    :catch_3
-    move-exception p0
-
-    goto :goto_4
-
-    :goto_2
-    new-instance p1, Landroidx/media3/datasource/FileDataSource$FileDataSourceException;
-
-    invoke-direct {p1, p0, v3}, Landroidx/media3/datasource/DataSourceException;-><init>(Ljava/lang/Exception;I)V
-
-    throw p1
-
-    :goto_3
-    new-instance p1, Landroidx/media3/datasource/FileDataSource$FileDataSourceException;
-
-    invoke-direct {p1, p0, v4}, Landroidx/media3/datasource/DataSourceException;-><init>(Ljava/lang/Exception;I)V
-
-    throw p1
-
-    :goto_4
-    invoke-virtual {v0}, Landroid/net/Uri;->getQuery()Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_3
-
-    invoke-virtual {v0}, Landroid/net/Uri;->getFragment()Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_3
-
-    new-instance p1, Landroidx/media3/datasource/FileDataSource$FileDataSourceException;
-
-    sget v0, Lpaf;->a:I
-
-    const/16 v1, 0x15
-
-    if-lt v0, v1, :cond_2
-
-    invoke-virtual {p0}, Ljava/lang/Throwable;->getCause()Ljava/lang/Throwable;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lag5;->a(Ljava/lang/Throwable;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_2
-
-    goto :goto_5
-
-    :cond_2
-    const/16 v4, 0x7d5
-
-    :goto_5
-    invoke-direct {p1, p0, v4}, Landroidx/media3/datasource/DataSourceException;-><init>(Ljava/lang/Exception;I)V
-
-    throw p1
-
-    :cond_3
-    new-instance p1, Landroidx/media3/datasource/FileDataSource$FileDataSourceException;
-
-    invoke-virtual {v0}, Landroid/net/Uri;->getPath()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v0}, Landroid/net/Uri;->getQuery()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {v0}, Landroid/net/Uri;->getFragment()Ljava/lang/String;
-
-    move-result-object v0
-
-    const-string v3, ",query="
-
-    const-string v4, ",fragment="
-
-    const-string v5, "uri has query and/or fragment, which are not supported. Did you call Uri.parse() on a string containing \'?\' or \'#\'? Use Uri.fromFile(new File(path)) to avoid this. path="
-
-    invoke-static {v5, v1, v3, v2, v4}, Lzge;->r(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    const/16 v1, 0x3ec
-
-    invoke-direct {p1, v0, p0, v1}, Landroidx/media3/datasource/DataSourceException;-><init>(Ljava/lang/String;Ljava/lang/Exception;I)V
-
-    throw p1
-.end method
-
-.method public final close()V
-    .locals 5
-
-    const/4 v0, 0x0
-
-    iput-object v0, p0, Leg5;->Y:Landroid/net/Uri;
-
-    const/4 v1, 0x0
-
-    :try_start_0
-    iget-object v2, p0, Leg5;->X:Ljava/io/RandomAccessFile;
-
-    if-eqz v2, :cond_0
-
-    invoke-virtual {v2}, Ljava/io/RandomAccessFile;->close()V
-    :try_end_0
-    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    goto :goto_0
-
-    :catchall_0
-    move-exception v2
-
-    goto :goto_2
-
-    :catch_0
-    move-exception v2
-
-    goto :goto_1
-
-    :cond_0
-    :goto_0
-    iput-object v0, p0, Leg5;->X:Ljava/io/RandomAccessFile;
-
-    iget-boolean v0, p0, Leg5;->o0:Z
-
-    if-eqz v0, :cond_1
-
-    iput-boolean v1, p0, Leg5;->o0:Z
-
-    invoke-virtual {p0}, Lfi0;->b()V
-
-    :cond_1
-    return-void
-
-    :goto_1
-    :try_start_1
-    new-instance v3, Landroidx/media3/datasource/FileDataSource$FileDataSourceException;
-
-    const/16 v4, 0x7d0
-
-    invoke-direct {v3, v2, v4}, Landroidx/media3/datasource/DataSourceException;-><init>(Ljava/lang/Exception;I)V
-
-    throw v3
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    :goto_2
-    iput-object v0, p0, Leg5;->X:Ljava/io/RandomAccessFile;
-
-    iget-boolean v0, p0, Leg5;->o0:Z
-
-    if-eqz v0, :cond_2
-
-    iput-boolean v1, p0, Leg5;->o0:Z
-
-    invoke-virtual {p0}, Lfi0;->b()V
-
-    :cond_2
-    throw v2
-.end method
-
-.method public final getUri()Landroid/net/Uri;
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    iget-object p0, p0, Leg5;->Y:Landroid/net/Uri;
+    check-cast p1, Ly04;
+
+    check-cast p2, Lkotlin/coroutines/Continuation;
+
+    invoke-virtual {p0, p1, p2}, Leg5;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+
+    move-result-object p0
+
+    check-cast p0, Leg5;
+
+    sget-object p1, Lylf;->a:Lylf;
+
+    invoke-virtual {p0, p1}, Leg5;->o(Ljava/lang/Object;)Ljava/lang/Object;
+
+    sget-object p0, Lz04;->a:Lz04;
 
     return-object p0
 .end method
 
-.method public final read([BII)I
-    .locals 5
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 0
 
-    if-nez p3, :cond_0
+    new-instance p1, Leg5;
 
-    const/4 p0, 0x0
+    iget-object p0, p0, Leg5;->Y:Lfg5;
 
-    return p0
+    invoke-direct {p1, p0, p2}, Leg5;-><init>(Lfg5;Lkotlin/coroutines/Continuation;)V
+
+    return-object p1
+.end method
+
+.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 4
+
+    iget v0, p0, Leg5;->X:I
+
+    const/4 v1, 0x1
+
+    if-eqz v0, :cond_1
+
+    if-eq v0, v1, :cond_0
+
+    new-instance p0, Ljava/lang/IllegalStateException;
+
+    const-string p1, "call to \'resume\' before \'invoke\' with coroutine"
+
+    invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p0
 
     :cond_0
-    iget-wide v0, p0, Leg5;->Z:J
+    invoke-static {p1}, Lqe5;->V(Ljava/lang/Object;)V
 
-    const-wide/16 v2, 0x0
-
-    cmp-long v2, v0, v2
-
-    if-nez v2, :cond_1
-
-    const/4 p0, -0x1
-
-    return p0
+    goto :goto_0
 
     :cond_1
-    :try_start_0
-    iget-object v2, p0, Leg5;->X:Ljava/io/RandomAccessFile;
+    invoke-static {p1}, Lqe5;->V(Ljava/lang/Object;)V
 
-    sget v3, Lpaf;->a:I
+    sget-object p1, Lfg5;->i:[Lxi7;
 
-    int-to-long v3, p3
+    iget-object p1, p0, Leg5;->Y:Lfg5;
 
-    invoke-static {v0, v1, v3, v4}, Ljava/lang/Math;->min(JJ)J
+    invoke-virtual {p1}, Lfg5;->b()Ltab;
 
-    move-result-wide v0
+    move-result-object v0
 
-    long-to-int p3, v0
+    iget-object v0, v0, Ltab;->X:Liic;
 
-    invoke-virtual {v2, p1, p2, p3}, Ljava/io/RandomAccessFile;->read([BII)I
+    new-instance v2, Luv;
 
-    move-result p1
-    :try_end_0
-    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
+    const/4 v3, 0x6
 
-    if-lez p1, :cond_2
+    invoke-direct {v2, v3, p1}, Luv;-><init>(ILjava/lang/Object;)V
 
-    iget-wide p2, p0, Leg5;->Z:J
+    iput v1, p0, Leg5;->X:I
 
-    int-to-long v0, p1
+    iget-object p1, v0, Liic;->a:Lrce;
 
-    sub-long/2addr p2, v0
+    invoke-interface {p1, v2, p0}, Lis5;->d(Lks5;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
-    iput-wide p2, p0, Leg5;->Z:J
+    move-result-object p0
 
-    invoke-virtual {p0, p1}, Lfi0;->a(I)V
+    sget-object p1, Lz04;->a:Lz04;
+
+    if-ne p0, p1, :cond_2
+
+    return-object p1
 
     :cond_2
-    return p1
+    :goto_0
+    new-instance p0, Lkotlin/KotlinNothingValueException;
 
-    :catch_0
-    move-exception p0
+    invoke-direct {p0}, Lkotlin/KotlinNothingValueException;-><init>()V
 
-    new-instance p1, Landroidx/media3/datasource/FileDataSource$FileDataSourceException;
-
-    const/16 p2, 0x7d0
-
-    invoke-direct {p1, p0, p2}, Landroidx/media3/datasource/DataSourceException;-><init>(Ljava/lang/Exception;I)V
-
-    throw p1
+    throw p0
 .end method

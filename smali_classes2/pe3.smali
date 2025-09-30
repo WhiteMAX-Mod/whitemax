@@ -1,63 +1,29 @@
-.class public final Lpe3;
-.super Lca1;
+.class public interface abstract Lpe3;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final b:Lpe3;
-
-
-# direct methods
-.method static constructor <clinit>()V
+# virtual methods
+.method public a(II)Ltp0;
     .locals 2
 
-    new-instance v0, Lpe3;
+    new-instance v0, Ltp0;
 
-    const/4 v1, 0x3
+    check-cast p0, Lbfa;
 
-    invoke-direct {v0, v1}, Lca1;-><init>(I)V
+    invoke-virtual {p0}, Lscout/Component;->getAccessor()Lz4;
 
-    sput-object v0, Lpe3;->b:Lpe3;
+    move-result-object p0
 
-    return-void
-.end method
+    const-class v1, Lr07;
 
+    invoke-virtual {p0, v1}, Lz4;->c(Ljava/lang/Class;)Ljava/lang/Object;
 
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
+    move-result-object p0
 
-    const/4 v0, 0x1
+    check-cast p0, Lr07;
 
-    if-ne p0, p1, :cond_0
+    invoke-direct {v0, p0, p1, p2}, Ltp0;-><init>(Lr07;II)V
 
-    return v0
-
-    :cond_0
-    instance-of p0, p1, Lpe3;
-
-    if-nez p0, :cond_1
-
-    const/4 p0, 0x0
-
-    return p0
-
-    :cond_1
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 0
-
-    const p0, 0x420fd21c
-
-    return p0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 0
-
-    const-string p0, "MainScreen"
-
-    return-object p0
+    return-object v0
 .end method

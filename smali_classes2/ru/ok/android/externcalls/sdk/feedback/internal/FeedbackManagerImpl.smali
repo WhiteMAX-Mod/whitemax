@@ -26,12 +26,12 @@
         "key",
         "Lkotlin/Function1;",
         "",
-        "Le5f;",
+        "Lylf;",
         "onError",
         "Lkotlin/Function0;",
         "onSuccess",
         "sendFeedback",
-        "(Ljava/lang/String;Lx56;Lv56;)V",
+        "(Ljava/lang/String;Lbc6;Lzb6;)V",
         "Lru/ok/android/externcalls/sdk/feedback/listener/FeedbackListener;",
         "listener",
         "addListener",
@@ -48,7 +48,7 @@
         "millis",
         "setTimeout",
         "(J)V",
-        "(Ljava/lang/String;Lru/ok/android/externcalls/sdk/feedback/ParticipantFeedbackSource;Lx56;Lv56;)V",
+        "(Ljava/lang/String;Lru/ok/android/externcalls/sdk/feedback/ParticipantFeedbackSource;Lbc6;Lzb6;)V",
         "Lru/ok/android/externcalls/sdk/feedback/internal/commands/FeedbackCommandsExecutor;",
         "Lru/ok/android/externcalls/sdk/feedback/internal/listeners/FeedbackListenerManager;",
         "calls-sdk_release"
@@ -126,40 +126,14 @@
     return-void
 .end method
 
-.method public sendFeedback(Ljava/lang/String;Lru/ok/android/externcalls/sdk/feedback/ParticipantFeedbackSource;Lx56;Lv56;)V
-    .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Ljava/lang/String;",
-            "Lru/ok/android/externcalls/sdk/feedback/ParticipantFeedbackSource;",
-            "Lx56;",
-            "Lv56;",
-            ")V"
-        }
-    .end annotation
-
-    .line 2
-    iget-object v0, p0, Lru/ok/android/externcalls/sdk/feedback/internal/FeedbackManagerImpl;->commandExecutor:Lru/ok/android/externcalls/sdk/feedback/internal/commands/FeedbackCommandsExecutor;
-
-    invoke-interface {v0, p1, p3, p4}, Lru/ok/android/externcalls/sdk/feedback/internal/commands/FeedbackCommandsExecutor;->sendFeedback(Ljava/lang/String;Lx56;Lv56;)V
-
-    .line 3
-    iget-object p0, p0, Lru/ok/android/externcalls/sdk/feedback/internal/FeedbackManagerImpl;->listenerManager:Lru/ok/android/externcalls/sdk/feedback/internal/listeners/FeedbackListenerManager;
-
-    invoke-interface {p0, p1, p2}, Lru/ok/android/externcalls/sdk/feedback/internal/listeners/FeedbackListenerManager;->ownFeedbackSent(Ljava/lang/String;Lru/ok/android/externcalls/sdk/feedback/ParticipantFeedbackSource;)V
-
-    return-void
-.end method
-
-.method public sendFeedback(Ljava/lang/String;Lx56;Lv56;)V
+.method public sendFeedback(Ljava/lang/String;Lbc6;Lzb6;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Ljava/lang/String;",
-            "Lx56;",
-            "Lv56;",
+            "Lbc6;",
+            "Lzb6;",
             ")V"
         }
     .end annotation
@@ -167,7 +141,33 @@
     .line 1
     iget-object p0, p0, Lru/ok/android/externcalls/sdk/feedback/internal/FeedbackManagerImpl;->commandExecutor:Lru/ok/android/externcalls/sdk/feedback/internal/commands/FeedbackCommandsExecutor;
 
-    invoke-interface {p0, p1, p2, p3}, Lru/ok/android/externcalls/sdk/feedback/internal/commands/FeedbackCommandsExecutor;->sendFeedback(Ljava/lang/String;Lx56;Lv56;)V
+    invoke-interface {p0, p1, p2, p3}, Lru/ok/android/externcalls/sdk/feedback/internal/commands/FeedbackCommandsExecutor;->sendFeedback(Ljava/lang/String;Lbc6;Lzb6;)V
+
+    return-void
+.end method
+
+.method public sendFeedback(Ljava/lang/String;Lru/ok/android/externcalls/sdk/feedback/ParticipantFeedbackSource;Lbc6;Lzb6;)V
+    .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/lang/String;",
+            "Lru/ok/android/externcalls/sdk/feedback/ParticipantFeedbackSource;",
+            "Lbc6;",
+            "Lzb6;",
+            ")V"
+        }
+    .end annotation
+
+    .line 2
+    iget-object v0, p0, Lru/ok/android/externcalls/sdk/feedback/internal/FeedbackManagerImpl;->commandExecutor:Lru/ok/android/externcalls/sdk/feedback/internal/commands/FeedbackCommandsExecutor;
+
+    invoke-interface {v0, p1, p3, p4}, Lru/ok/android/externcalls/sdk/feedback/internal/commands/FeedbackCommandsExecutor;->sendFeedback(Ljava/lang/String;Lbc6;Lzb6;)V
+
+    .line 3
+    iget-object p0, p0, Lru/ok/android/externcalls/sdk/feedback/internal/FeedbackManagerImpl;->listenerManager:Lru/ok/android/externcalls/sdk/feedback/internal/listeners/FeedbackListenerManager;
+
+    invoke-interface {p0, p1, p2}, Lru/ok/android/externcalls/sdk/feedback/internal/listeners/FeedbackListenerManager;->ownFeedbackSent(Ljava/lang/String;Lru/ok/android/externcalls/sdk/feedback/ParticipantFeedbackSource;)V
 
     return-void
 .end method

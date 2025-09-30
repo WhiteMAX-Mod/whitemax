@@ -1,84 +1,142 @@
 .class public final Lxv0;
-.super Ljava/lang/Object;
+.super Lfva;
 .source "SourceFile"
+
+# interfaces
+.implements Ljava/io/Serializable;
 
 
 # instance fields
-.field public a:Z
+.field public final a:Llc6;
 
-.field public b:J
+.field public final b:Lfva;
 
-.field public c:J
+
+# direct methods
+.method public constructor <init>(Llc6;Lfva;)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lxv0;->a:Llc6;
+
+    iput-object p2, p0, Lxv0;->b:Lfva;
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public declared-synchronized a()J
-    .locals 2
+.method public final compare(Ljava/lang/Object;Ljava/lang/Object;)I
+    .locals 1
 
-    monitor-enter p0
+    iget-object v0, p0, Lxv0;->a:Llc6;
 
-    :try_start_0
-    iget-wide v0, p0, Lxv0;->b:J
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    invoke-interface {v0, p1}, Llc6;->apply(Ljava/lang/Object;)Ljava/lang/Object;
 
-    monitor-exit p0
+    move-result-object p1
 
-    return-wide v0
+    invoke-interface {v0, p2}, Llc6;->apply(Ljava/lang/Object;)Ljava/lang/Object;
 
-    :catchall_0
-    move-exception v0
+    move-result-object p2
 
-    :try_start_1
-    monitor-exit p0
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+    iget-object p0, p0, Lxv0;->b:Lfva;
 
-    throw v0
+    invoke-interface {p0, p1, p2}, Ljava/util/Comparator;->compare(Ljava/lang/Object;Ljava/lang/Object;)I
+
+    move-result p0
+
+    return p0
 .end method
 
-.method public declared-synchronized b(JJ)V
-    .locals 2
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
 
-    monitor-enter p0
+    const/4 v0, 0x1
 
-    :try_start_0
-    iget-boolean v0, p0, Lxv0;->a:Z
+    if-ne p1, p0, :cond_0
 
-    if-eqz v0, :cond_0
-
-    iget-wide v0, p0, Lxv0;->b:J
-
-    add-long/2addr v0, p1
-
-    iput-wide v0, p0, Lxv0;->b:J
-
-    iget-wide p1, p0, Lxv0;->c:J
-
-    add-long/2addr p1, p3
-
-    iput-wide p1, p0, Lxv0;->c:J
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    goto :goto_0
-
-    :catchall_0
-    move-exception p1
-
-    goto :goto_1
+    return v0
 
     :cond_0
-    :goto_0
-    monitor-exit p0
+    instance-of v1, p1, Lxv0;
 
-    return-void
+    const/4 v2, 0x0
 
-    :goto_1
-    :try_start_1
-    monitor-exit p0
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+    if-eqz v1, :cond_1
 
-    throw p1
+    check-cast p1, Lxv0;
+
+    iget-object v1, p0, Lxv0;->a:Llc6;
+
+    iget-object v3, p1, Lxv0;->a:Llc6;
+
+    invoke-interface {v1, v3}, Llc6;->equals(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_1
+
+    iget-object p0, p0, Lxv0;->b:Lfva;
+
+    iget-object p1, p1, Lxv0;->b:Lfva;
+
+    invoke-virtual {p0, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+
+    move-result p0
+
+    if-eqz p0, :cond_1
+
+    return v0
+
+    :cond_1
+    return v2
+.end method
+
+.method public final hashCode()I
+    .locals 1
+
+    iget-object v0, p0, Lxv0;->a:Llc6;
+
+    iget-object p0, p0, Lxv0;->b:Lfva;
+
+    filled-new-array {v0, p0}, [Ljava/lang/Object;
+
+    move-result-object p0
+
+    invoke-static {p0}, Ljava/util/Arrays;->hashCode([Ljava/lang/Object;)I
+
+    move-result p0
+
+    return p0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 2
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    iget-object v1, p0, Lxv0;->b:Lfva;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ".onResultOf("
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object p0, p0, Lxv0;->a:Llc6;
+
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string p0, ")"
+
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    return-object p0
 .end method

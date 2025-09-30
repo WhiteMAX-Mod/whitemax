@@ -1,22 +1,117 @@
-.class public abstract Lgub;
-.super Ljava/lang/Object;
+.class public final enum Lgub;
+.super Ljava/lang/Enum;
+.source "SourceFile"
 
 
 # static fields
-.field public static pinbars_group_call_bar:I = 0x7f0a08c9
+.field public static final synthetic X:[Lgub;
 
-.field public static pinbars_group_call_bar_button:I = 0x7f0a08ca
+.field public static final synthetic Y:Ly75;
 
-.field public static pinbars_group_call_bar_stack:I = 0x7f0a08cb
+.field public static final enum b:Lgub;
 
-.field public static pinbars_group_call_bar_subtitle:I = 0x7f0a08cc
+.field public static final enum c:Lgub;
 
-.field public static pinbars_group_call_bar_title:I = 0x7f0a08cd
+.field public static final enum o:Lgub;
 
-.field public static pinbars_message:I = 0x7f0a08ce
 
-.field public static pinbars_miniplayer:I = 0x7f0a08cf
+# instance fields
+.field public final a:I
 
-.field public static pinbars_root:I = 0x7f0a08d0
 
-.field public static unknown_contact:I = 0x7f0a0c39
+# direct methods
+.method static constructor <clinit>()V
+    .locals 7
+
+    new-instance v0, Lgub;
+
+    const-string v1, "ESIA_CONNECTION"
+
+    const/4 v2, 0x0
+
+    const/4 v3, 0x1
+
+    invoke-direct {v0, v1, v2, v3}, Lgub;-><init>(Ljava/lang/String;II)V
+
+    sput-object v0, Lgub;->b:Lgub;
+
+    new-instance v1, Lgub;
+
+    const-string v2, "SECOND_FACTOR_PASSWORD_ENABLED"
+
+    const/4 v4, 0x2
+
+    invoke-direct {v1, v2, v3, v4}, Lgub;-><init>(Ljava/lang/String;II)V
+
+    sput-object v1, Lgub;->c:Lgub;
+
+    new-instance v2, Lgub;
+
+    const-string v3, "SECOND_FACTOR_HAS_EMAIL"
+
+    const/4 v5, 0x3
+
+    invoke-direct {v2, v3, v4, v5}, Lgub;-><init>(Ljava/lang/String;II)V
+
+    sput-object v2, Lgub;->o:Lgub;
+
+    new-instance v3, Lgub;
+
+    const-string v4, "SECOND_FACTOR_HAS_HINT"
+
+    const/4 v6, 0x4
+
+    invoke-direct {v3, v4, v5, v6}, Lgub;-><init>(Ljava/lang/String;II)V
+
+    filled-new-array {v0, v1, v2, v3}, [Lgub;
+
+    move-result-object v0
+
+    sput-object v0, Lgub;->X:[Lgub;
+
+    new-instance v1, Ly75;
+
+    invoke-direct {v1, v0}, Ly75;-><init>([Ljava/lang/Enum;)V
+
+    sput-object v1, Lgub;->Y:Ly75;
+
+    return-void
+.end method
+
+.method public constructor <init>(Ljava/lang/String;II)V
+    .locals 0
+
+    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    iput p3, p0, Lgub;->a:I
+
+    return-void
+.end method
+
+.method public static valueOf(Ljava/lang/String;)Lgub;
+    .locals 1
+
+    const-class v0, Lgub;
+
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+
+    move-result-object p0
+
+    check-cast p0, Lgub;
+
+    return-object p0
+.end method
+
+.method public static values()[Lgub;
+    .locals 1
+
+    sget-object v0, Lgub;->X:[Lgub;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, [Lgub;
+
+    return-object v0
+.end method

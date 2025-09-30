@@ -1,277 +1,103 @@
 .class public final Lr8g;
-.super Ljava/lang/Object;
+.super Leoc;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:Ljava/util/UUID;
+.field public final synthetic a:I
 
-.field public final b:Lq8g;
-
-.field public final c:Lt24;
-
-.field public final d:Ljava/util/HashSet;
-
-.field public final e:Lt24;
-
-.field public final f:I
-
-.field public final g:I
+.field public final synthetic b:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Ljava/util/UUID;Lq8g;Lt24;Ljava/util/ArrayList;Lt24;II)V
+.method public synthetic constructor <init>(ILjava/lang/Object;)V
     .locals 0
 
+    iput p1, p0, Lr8g;->a:I
+
+    iput-object p2, p0, Lr8g;->b:Ljava/lang/Object;
+
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lr8g;->a:Ljava/util/UUID;
-
-    iput-object p2, p0, Lr8g;->b:Lq8g;
-
-    iput-object p3, p0, Lr8g;->c:Lt24;
-
-    new-instance p1, Ljava/util/HashSet;
-
-    invoke-direct {p1, p4}, Ljava/util/HashSet;-><init>(Ljava/util/Collection;)V
-
-    iput-object p1, p0, Lr8g;->d:Ljava/util/HashSet;
-
-    iput-object p5, p0, Lr8g;->e:Lt24;
-
-    iput p6, p0, Lr8g;->f:I
-
-    iput p7, p0, Lr8g;->g:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 2
+.method public final a()V
+    .locals 1
 
-    if-ne p0, p1, :cond_0
+    iget v0, p0, Lr8g;->a:I
 
-    const/4 p0, 0x1
+    packed-switch v0, :pswitch_data_0
 
-    return p0
+    iget-object p0, p0, Lr8g;->b:Ljava/lang/Object;
 
-    :cond_0
-    if-eqz p1, :cond_8
+    check-cast p0, Lbkd;
 
-    const-class v0, Lr8g;
+    invoke-virtual {p0}, Lbkd;->A()V
 
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    return-void
 
-    move-result-object v1
+    :pswitch_0
+    iget-object p0, p0, Lr8g;->b:Ljava/lang/Object;
 
-    if-eq v0, v1, :cond_1
+    check-cast p0, Landroidx/viewpager2/widget/ViewPager2;
 
-    goto :goto_0
+    const/4 v0, 0x1
 
-    :cond_1
-    check-cast p1, Lr8g;
+    iput-boolean v0, p0, Landroidx/viewpager2/widget/ViewPager2;->r0:Z
 
-    iget v0, p0, Lr8g;->f:I
+    iget-object p0, p0, Landroidx/viewpager2/widget/ViewPager2;->y0:Ls8d;
 
-    iget v1, p1, Lr8g;->f:I
+    iput-boolean v0, p0, Ls8d;->l:Z
 
-    if-eq v0, v1, :cond_2
+    return-void
 
-    goto :goto_0
+    nop
 
-    :cond_2
-    iget v0, p0, Lr8g;->g:I
-
-    iget v1, p1, Lr8g;->g:I
-
-    if-eq v0, v1, :cond_3
-
-    goto :goto_0
-
-    :cond_3
-    iget-object v0, p0, Lr8g;->a:Ljava/util/UUID;
-
-    iget-object v1, p1, Lr8g;->a:Ljava/util/UUID;
-
-    invoke-virtual {v0, v1}, Ljava/util/UUID;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_4
-
-    goto :goto_0
-
-    :cond_4
-    iget-object v0, p0, Lr8g;->b:Lq8g;
-
-    iget-object v1, p1, Lr8g;->b:Lq8g;
-
-    if-eq v0, v1, :cond_5
-
-    goto :goto_0
-
-    :cond_5
-    iget-object v0, p0, Lr8g;->c:Lt24;
-
-    iget-object v1, p1, Lr8g;->c:Lt24;
-
-    invoke-virtual {v0, v1}, Lt24;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_6
-
-    goto :goto_0
-
-    :cond_6
-    iget-object v0, p0, Lr8g;->d:Ljava/util/HashSet;
-
-    iget-object v1, p1, Lr8g;->d:Ljava/util/HashSet;
-
-    invoke-interface {v0, v1}, Ljava/util/Set;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_7
-
-    goto :goto_0
-
-    :cond_7
-    iget-object p0, p0, Lr8g;->e:Lt24;
-
-    iget-object p1, p1, Lr8g;->e:Lt24;
-
-    invoke-virtual {p0, p1}, Lt24;->equals(Ljava/lang/Object;)Z
-
-    move-result p0
-
-    return p0
-
-    :cond_8
-    :goto_0
-    const/4 p0, 0x0
-
-    return p0
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method
 
-.method public final hashCode()I
-    .locals 2
+.method public final b(II)V
+    .locals 0
 
-    iget-object v0, p0, Lr8g;->a:Ljava/util/UUID;
+    invoke-virtual {p0}, Lr8g;->a()V
 
-    invoke-virtual {v0}, Ljava/util/UUID;->hashCode()I
-
-    move-result v0
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget-object v1, p0, Lr8g;->b:Lq8g;
-
-    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    mul-int/lit8 v1, v1, 0x1f
-
-    iget-object v0, p0, Lr8g;->c:Lt24;
-
-    invoke-virtual {v0}, Lt24;->hashCode()I
-
-    move-result v0
-
-    add-int/2addr v0, v1
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget-object v1, p0, Lr8g;->d:Ljava/util/HashSet;
-
-    invoke-interface {v1}, Ljava/util/Set;->hashCode()I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    mul-int/lit8 v1, v1, 0x1f
-
-    iget-object v0, p0, Lr8g;->e:Lt24;
-
-    invoke-virtual {v0}, Lt24;->hashCode()I
-
-    move-result v0
-
-    add-int/2addr v0, v1
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget v1, p0, Lr8g;->f:I
-
-    add-int/2addr v0, v1
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget p0, p0, Lr8g;->g:I
-
-    add-int/2addr v0, p0
-
-    return v0
+    return-void
 .end method
 
-.method public final toString()Ljava/lang/String;
-    .locals 2
+.method public final c(IILjava/lang/Object;)V
+    .locals 0
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    invoke-virtual {p0}, Lr8g;->a()V
 
-    const-string v1, "WorkInfo{mId=\'"
+    return-void
+.end method
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+.method public final d(II)V
+    .locals 0
 
-    iget-object v1, p0, Lr8g;->a:Ljava/util/UUID;
+    invoke-virtual {p0}, Lr8g;->a()V
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    return-void
+.end method
 
-    const-string v1, "\', mState="
+.method public final e(II)V
+    .locals 0
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {p0}, Lr8g;->a()V
 
-    iget-object v1, p0, Lr8g;->b:Lq8g;
+    return-void
+.end method
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+.method public final f(II)V
+    .locals 0
 
-    const-string v1, ", mOutputData="
+    invoke-virtual {p0}, Lr8g;->a()V
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lr8g;->c:Lt24;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", mTags="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lr8g;->d:Ljava/util/HashSet;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", mProgress="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object p0, p0, Lr8g;->e:Lt24;
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const/16 p0, 0x7d
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
+    return-void
 .end method

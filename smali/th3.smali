@@ -1,147 +1,91 @@
 .class public final Lth3;
-.super Ln3;
+.super Lure;
 .source "SourceFile"
 
-
-# static fields
-.field public static final CREATOR:Landroid/os/Parcelable$Creator;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Landroid/os/Parcelable$Creator<",
-            "Lth3;",
-            ">;"
-        }
-    .end annotation
-.end field
+# interfaces
+.implements Lpc6;
 
 
 # instance fields
-.field public final X:I
+.field public synthetic X:Ljava/lang/Object;
 
-.field public final Y:[I
-
-.field public final a:Lzkc;
-
-.field public final b:Z
-
-.field public final c:Z
-
-.field public final o:[I
+.field public final synthetic Y:Lone/me/calls/ui/bottomsheet/opponent/ConfirmAddOpponentToCallBottomSheet;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
-
-    new-instance v0, Ltgg;
-
-    const/16 v1, 0xd
-
-    invoke-direct {v0, v1}, Ltgg;-><init>(I)V
-
-    sput-object v0, Lth3;->CREATOR:Landroid/os/Parcelable$Creator;
-
-    return-void
-.end method
-
-.method public constructor <init>(Lzkc;ZZ[II[I)V
+.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/calls/ui/bottomsheet/opponent/ConfirmAddOpponentToCallBottomSheet;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p2, p0, Lth3;->Y:Lone/me/calls/ui/bottomsheet/opponent/ConfirmAddOpponentToCallBottomSheet;
 
-    iput-object p1, p0, Lth3;->a:Lzkc;
+    const/4 p2, 0x2
 
-    iput-boolean p2, p0, Lth3;->b:Z
-
-    iput-boolean p3, p0, Lth3;->c:Z
-
-    iput-object p4, p0, Lth3;->o:[I
-
-    iput p5, p0, Lth3;->X:I
-
-    iput-object p6, p0, Lth3;->Y:[I
+    invoke-direct {p0, p2, p1}, Lure;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final writeToParcel(Landroid/os/Parcel;I)V
-    .locals 3
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    const/16 v0, 0x4f45
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    invoke-static {p1, v0}, Lq14;->B0(Landroid/os/Parcel;I)I
+    invoke-virtual {p0, p1, p2}, Lth3;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    move-result v0
+    move-result-object p0
 
-    const/4 v1, 0x1
+    check-cast p0, Lth3;
 
-    iget-object v2, p0, Lth3;->a:Lzkc;
+    sget-object p1, Lylf;->a:Lylf;
 
-    invoke-static {p1, v1, v2, p2}, Lq14;->x0(Landroid/os/Parcel;ILandroid/os/Parcelable;I)V
+    invoke-virtual {p0, p1}, Lth3;->o(Ljava/lang/Object;)Ljava/lang/Object;
 
-    const/4 p2, 0x2
+    return-object p1
+.end method
 
-    const/4 v1, 0x4
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 1
 
-    invoke-static {p1, p2, v1}, Lq14;->D0(Landroid/os/Parcel;II)V
+    new-instance v0, Lth3;
 
-    iget-boolean p2, p0, Lth3;->b:Z
+    iget-object p0, p0, Lth3;->Y:Lone/me/calls/ui/bottomsheet/opponent/ConfirmAddOpponentToCallBottomSheet;
 
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
+    invoke-direct {v0, p2, p0}, Lth3;-><init>(Lkotlin/coroutines/Continuation;Lone/me/calls/ui/bottomsheet/opponent/ConfirmAddOpponentToCallBottomSheet;)V
 
-    const/4 p2, 0x3
+    iput-object p1, v0, Lth3;->X:Ljava/lang/Object;
 
-    invoke-static {p1, p2, v1}, Lq14;->D0(Landroid/os/Parcel;II)V
+    return-object v0
+.end method
 
-    iget-boolean p2, p0, Lth3;->c:Z
+.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
+    invoke-static {p1}, Lqe5;->V(Ljava/lang/Object;)V
 
-    iget-object p2, p0, Lth3;->o:[I
+    iget-object p1, p0, Lth3;->X:Ljava/lang/Object;
 
-    if-nez p2, :cond_0
+    check-cast p1, Lys9;
 
-    goto :goto_0
+    instance-of v0, p1, Lva4;
+
+    if-eqz v0, :cond_0
+
+    sget-object v0, Lue1;->c:Lue1;
+
+    check-cast p1, Lva4;
+
+    invoke-virtual {v0, p1}, Lx2;->H0(Lva4;)V
+
+    const/4 p1, 0x1
+
+    iget-object p0, p0, Lth3;->Y:Lone/me/calls/ui/bottomsheet/opponent/ConfirmAddOpponentToCallBottomSheet;
+
+    invoke-virtual {p0, p1}, Lone/me/sdk/bottomsheet/BaseBottomSheetWidget;->E0(Z)V
 
     :cond_0
-    invoke-static {p1, v1}, Lq14;->B0(Landroid/os/Parcel;I)I
+    sget-object p0, Lylf;->a:Lylf;
 
-    move-result v2
-
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeIntArray([I)V
-
-    invoke-static {p1, v2}, Lq14;->C0(Landroid/os/Parcel;I)V
-
-    :goto_0
-    const/4 p2, 0x5
-
-    invoke-static {p1, p2, v1}, Lq14;->D0(Landroid/os/Parcel;II)V
-
-    iget p2, p0, Lth3;->X:I
-
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
-
-    iget-object p0, p0, Lth3;->Y:[I
-
-    if-nez p0, :cond_1
-
-    goto :goto_1
-
-    :cond_1
-    const/4 p2, 0x6
-
-    invoke-static {p1, p2}, Lq14;->B0(Landroid/os/Parcel;I)I
-
-    move-result p2
-
-    invoke-virtual {p1, p0}, Landroid/os/Parcel;->writeIntArray([I)V
-
-    invoke-static {p1, p2}, Lq14;->C0(Landroid/os/Parcel;I)V
-
-    :goto_1
-    invoke-static {p1, v0}, Lq14;->C0(Landroid/os/Parcel;I)V
-
-    return-void
+    return-object p0
 .end method

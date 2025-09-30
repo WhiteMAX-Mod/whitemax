@@ -1,68 +1,48 @@
-.class public final Llsa;
+.class public final synthetic Llsa;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Landroid/webkit/ValueCallback;
+
 
 # instance fields
-.field public a:J
+.field public final synthetic a:I
 
-.field public b:I
 
-.field public c:Ljava/lang/String;
+# direct methods
+.method public synthetic constructor <init>(I)V
+    .locals 0
 
-.field public d:J
+    iput p1, p0, Llsa;->a:I
 
-.field public e:Ljava/lang/String;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-.field public f:Ljava/lang/String;
-
-.field public g:Ljava/lang/String;
+    return-void
+.end method
 
 
 # virtual methods
-.method public final a()Ljava/lang/String;
-    .locals 2
+.method public final onReceiveValue(Ljava/lang/Object;)V
+    .locals 0
 
-    iget-object v0, p0, Llsa;->e:Ljava/lang/String;
+    iget p0, p0, Llsa;->a:I
 
-    invoke-static {v0}, Lxja;->w(Ljava/lang/CharSequence;)Z
+    check-cast p1, Ljava/lang/String;
 
-    move-result v0
+    packed-switch p0, :pswitch_data_0
 
-    if-eqz v0, :cond_0
+    return-void
 
-    iget-object v0, p0, Llsa;->f:Ljava/lang/String;
+    :pswitch_0
+    sget p0, Lmsa;->d:I
 
-    invoke-static {v0}, Lxja;->w(Ljava/lang/CharSequence;)Z
+    return-void
 
-    move-result v0
+    nop
 
-    if-eqz v0, :cond_0
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
-    iget-object v1, p0, Llsa;->e:Ljava/lang/String;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, " "
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object p0, p0, Llsa;->f:Ljava/lang/String;
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
-
-    :cond_0
-    iget-object p0, p0, Llsa;->e:Ljava/lang/String;
-
-    return-object p0
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

@@ -1,97 +1,107 @@
-.class public final enum Lkmd;
-.super Ljava/lang/Enum;
+.class public final Lkmd;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # static fields
-.field public static final synthetic X:[Lkmd;
+.field public static final synthetic e:[Lxi7;
 
-.field public static final enum a:Lkmd;
+.field public static final f:Ljava/lang/String;
 
-.field public static final enum b:Lkmd;
 
-.field public static final enum c:Lkmd;
+# instance fields
+.field public final a:Lgr4;
 
-.field public static final enum o:Lkmd;
+.field public final b:Lgr4;
+
+.field public final c:Lgr4;
+
+.field public final d:Lgr4;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 6
+    .locals 8
 
-    new-instance v0, Lkmd;
+    new-instance v0, Lsxb;
 
-    const-string v1, "LOADING"
+    const-class v1, Lkmd;
 
-    const/4 v2, 0x0
+    const-string v2, "exceptionHandler"
 
-    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    const-string v3, "getExceptionHandler()Lru/ok/tamtam/ExceptionHandler;"
 
-    sput-object v0, Lkmd;->a:Lkmd;
+    const/4 v4, 0x0
 
-    new-instance v1, Lkmd;
+    invoke-direct {v0, v1, v2, v3, v4}, Lsxb;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
 
-    const-string v2, "CONTENT"
+    sget-object v2, Ljpc;->a:Lkpc;
 
-    const/4 v3, 0x1
+    const-string v3, "sessionStateInfo"
 
-    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    const-string v5, "getSessionStateInfo()Lru/ok/tamtam/session/SessionStateInfo;"
 
-    sput-object v1, Lkmd;->b:Lkmd;
+    invoke-static {v2, v1, v3, v5, v4}, Lee5;->h(Lkpc;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)Lsxb;
 
-    new-instance v2, Lkmd;
+    move-result-object v2
 
-    const-string v3, "CONTENT_SEARCH"
+    new-instance v3, Lsxb;
 
-    const/4 v4, 0x2
+    const-string v5, "api"
 
-    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    const-string v6, "getApi()Lru/ok/tamtam/api/Api;"
 
-    sput-object v2, Lkmd;->c:Lkmd;
+    invoke-direct {v3, v1, v5, v6, v4}, Lsxb;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
 
-    new-instance v3, Lkmd;
+    new-instance v5, Lsxb;
 
-    const-string v4, "EMPTY_SEARCH"
+    const-string v6, "tamSessionController"
 
-    const/4 v5, 0x3
+    const-string v7, "getTamSessionController()Lru/ok/tamtam/services/TamSessionController;"
 
-    invoke-direct {v3, v4, v5}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    invoke-direct {v5, v1, v6, v7, v4}, Lsxb;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
 
-    sput-object v3, Lkmd;->o:Lkmd;
+    const/4 v6, 0x4
 
-    filled-new-array {v0, v1, v2, v3}, [Lkmd;
+    new-array v6, v6, [Lxi7;
+
+    aput-object v0, v6, v4
+
+    const/4 v0, 0x1
+
+    aput-object v2, v6, v0
+
+    const/4 v0, 0x2
+
+    aput-object v3, v6, v0
+
+    const/4 v0, 0x3
+
+    aput-object v5, v6, v0
+
+    sput-object v6, Lkmd;->e:[Lxi7;
+
+    invoke-virtual {v1}, Ljava/lang/Class;->getName()Ljava/lang/String;
 
     move-result-object v0
 
-    sput-object v0, Lkmd;->X:[Lkmd;
+    sput-object v0, Lkmd;->f:Ljava/lang/String;
 
     return-void
 .end method
 
-.method public static valueOf(Ljava/lang/String;)Lkmd;
-    .locals 1
+.method public constructor <init>(Lgr4;Lgr4;Lgr4;Lgr4;)V
+    .locals 0
 
-    const-class v0, Lkmd;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+    iput-object p1, p0, Lkmd;->a:Lgr4;
 
-    move-result-object p0
+    iput-object p2, p0, Lkmd;->b:Lgr4;
 
-    check-cast p0, Lkmd;
+    iput-object p3, p0, Lkmd;->c:Lgr4;
 
-    return-object p0
-.end method
+    iput-object p4, p0, Lkmd;->d:Lgr4;
 
-.method public static values()[Lkmd;
-    .locals 1
-
-    sget-object v0, Lkmd;->X:[Lkmd;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, [Lkmd;
-
-    return-object v0
+    return-void
 .end method

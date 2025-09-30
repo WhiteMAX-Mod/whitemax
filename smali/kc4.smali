@@ -1,123 +1,109 @@
-.class public abstract synthetic Lkc4;
+.class public final Lkc4;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final synthetic $EnumSwitchMapping$0:[I
+# instance fields
+.field public final a:Lx46;
+
+.field public final b:I
+
+.field public final c:I
+
+.field public final d:I
+
+.field public final e:I
+
+.field public final f:I
+
+.field public final g:I
+
+.field public final h:I
+
+.field public final i:Ly40;
+
+.field public final j:Z
+
+.field public final k:Z
+
+.field public final l:Z
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public constructor <init>(Lx46;IIIIIIILy40;ZZZ)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lkc4;->a:Lx46;
+
+    iput p2, p0, Lkc4;->b:I
+
+    iput p3, p0, Lkc4;->c:I
+
+    iput p4, p0, Lkc4;->d:I
+
+    iput p5, p0, Lkc4;->e:I
+
+    iput p6, p0, Lkc4;->f:I
+
+    iput p7, p0, Lkc4;->g:I
+
+    iput p8, p0, Lkc4;->h:I
+
+    iput-object p9, p0, Lkc4;->i:Ly40;
+
+    iput-boolean p10, p0, Lkc4;->j:Z
+
+    iput-boolean p11, p0, Lkc4;->k:Z
+
+    iput-boolean p12, p0, Lkc4;->l:Z
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final a()La4;
     .locals 3
 
-    invoke-static {}, Lfg7;->values()[Lfg7;
+    new-instance v0, La4;
 
-    move-result-object v0
-
-    array-length v0, v0
-
-    new-array v0, v0, [I
-
-    :try_start_0
-    sget-object v1, Lfg7;->ON_CREATE:Lfg7;
-
-    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
-
-    move-result v1
+    iget v1, p0, Lkc4;->c:I
 
     const/4 v2, 0x1
 
-    aput v2, v0, v1
-    :try_end_0
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
+    if-ne v1, v2, :cond_0
 
-    :catch_0
-    :try_start_1
-    sget-object v1, Lfg7;->ON_START:Lfg7;
+    goto :goto_0
 
-    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
+    :cond_0
+    const/4 v2, 0x0
 
-    move-result v1
+    :goto_0
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    const/4 v2, 0x2
+    iget v1, p0, Lkc4;->g:I
 
-    aput v2, v0, v1
-    :try_end_1
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
+    iput v1, v0, La4;->a:I
 
-    :catch_1
-    :try_start_2
-    sget-object v1, Lfg7;->ON_RESUME:Lfg7;
+    iget v1, p0, Lkc4;->e:I
 
-    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
+    iput v1, v0, La4;->b:I
 
-    move-result v1
+    iget v1, p0, Lkc4;->f:I
 
-    const/4 v2, 0x3
+    iput v1, v0, La4;->c:I
 
-    aput v2, v0, v1
-    :try_end_2
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_2
+    iget-boolean v1, p0, Lkc4;->l:Z
 
-    :catch_2
-    :try_start_3
-    sget-object v1, Lfg7;->ON_PAUSE:Lfg7;
+    iput-boolean v1, v0, La4;->d:Z
 
-    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
+    iput-boolean v2, v0, La4;->e:Z
 
-    move-result v1
+    iget p0, p0, Lkc4;->h:I
 
-    const/4 v2, 0x4
+    iput p0, v0, La4;->f:I
 
-    aput v2, v0, v1
-    :try_end_3
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_3 .. :try_end_3} :catch_3
-
-    :catch_3
-    :try_start_4
-    sget-object v1, Lfg7;->ON_STOP:Lfg7;
-
-    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
-
-    move-result v1
-
-    const/4 v2, 0x5
-
-    aput v2, v0, v1
-    :try_end_4
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_4 .. :try_end_4} :catch_4
-
-    :catch_4
-    :try_start_5
-    sget-object v1, Lfg7;->ON_DESTROY:Lfg7;
-
-    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
-
-    move-result v1
-
-    const/4 v2, 0x6
-
-    aput v2, v0, v1
-    :try_end_5
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_5 .. :try_end_5} :catch_5
-
-    :catch_5
-    :try_start_6
-    sget-object v1, Lfg7;->ON_ANY:Lfg7;
-
-    invoke-virtual {v1}, Ljava/lang/Enum;->ordinal()I
-
-    move-result v1
-
-    const/4 v2, 0x7
-
-    aput v2, v0, v1
-    :try_end_6
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_6 .. :try_end_6} :catch_6
-
-    :catch_6
-    sput-object v0, Lkc4;->$EnumSwitchMapping$0:[I
-
-    return-void
+    return-object v0
 .end method

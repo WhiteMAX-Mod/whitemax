@@ -1,146 +1,100 @@
-.class public final synthetic Lpp7;
+.class public final Lpp7;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/util/concurrent/Callable;
+.implements Ldq7;
 
 
-# instance fields
-.field public final synthetic X:J
+# static fields
+.field public static final CREATOR:Landroid/os/Parcelable$Creator;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroid/os/Parcelable$Creator<",
+            "Lpp7;",
+            ">;"
+        }
+    .end annotation
+.end field
 
-.field public final synthetic a:Lqp7;
-
-.field public final synthetic b:J
-
-.field public final synthetic c:Z
-
-.field public final synthetic o:J
+.field public static final a:Lpp7;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lqp7;JZJJ)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 2
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lpp7;
 
-    iput-object p1, p0, Lpp7;->a:Lqp7;
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    iput-wide p2, p0, Lpp7;->b:J
+    sput-object v0, Lpp7;->a:Lpp7;
 
-    iput-boolean p4, p0, Lpp7;->c:Z
+    new-instance v0, Lra7;
 
-    iput-wide p5, p0, Lpp7;->o:J
+    const/16 v1, 0xa
 
-    iput-wide p7, p0, Lpp7;->X:J
+    invoke-direct {v0, v1}, Lra7;-><init>(I)V
+
+    sput-object v0, Lpp7;->CREATOR:Landroid/os/Parcelable$Creator;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final call()Ljava/lang/Object;
-    .locals 8
+.method public final describeContents()I
+    .locals 0
 
-    iget-object v0, p0, Lpp7;->a:Lqp7;
+    const/4 p0, 0x0
 
-    iget-object v1, v0, Lqp7;->a:Lje7;
+    return p0
+.end method
 
-    const-wide/16 v2, 0x0
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 1
 
-    iget-wide v4, p0, Lpp7;->o:J
+    const/4 v0, 0x1
 
-    cmp-long v2, v4, v2
+    if-ne p0, p1, :cond_0
 
-    const/4 v3, 0x0
-
-    if-nez v2, :cond_0
-
-    invoke-interface {v1}, Lje7;->getValue()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lxs8;
-
-    iget-wide v4, p0, Lpp7;->b:J
-
-    invoke-virtual {v1, v4, v5}, Lxs8;->q(J)Lzs8;
-
-    move-result-object v1
-
-    goto :goto_0
+    return v0
 
     :cond_0
-    invoke-interface {v1}, Lje7;->getValue()Ljava/lang/Object;
+    instance-of p0, p1, Lpp7;
 
-    move-result-object v1
+    if-nez p0, :cond_1
 
-    check-cast v1, Lxs8;
+    const/4 p0, 0x0
 
-    iget-object v1, v1, Lxs8;->a:Lr34;
-
-    check-cast v1, Lz24;
-
-    iget-object v1, v1, Lz24;->c:Lyjc;
-
-    invoke-virtual {v1}, Lyjc;->d()Lq09;
-
-    move-result-object v2
-
-    iget-wide v6, p0, Lpp7;->X:J
-
-    invoke-virtual {v2, v6, v7, v4, v5}, Lq09;->h(JJ)Lot8;
-
-    move-result-object v2
-
-    if-eqz v2, :cond_1
-
-    invoke-virtual {v1, v2}, Lyjc;->b(Lot8;)Lzs8;
-
-    move-result-object v1
-
-    goto :goto_0
+    return p0
 
     :cond_1
-    move-object v1, v3
+    return v0
+.end method
 
-    :goto_0
-    if-eqz v1, :cond_3
+.method public final hashCode()I
+    .locals 0
 
-    iget-boolean p0, p0, Lpp7;->c:Z
+    const p0, 0x41c1f0cc
 
-    if-nez p0, :cond_2
+    return p0
+.end method
 
-    iget-object p0, v1, Lzs8;->r0:Lsw8;
+.method public final toString()Ljava/lang/String;
+    .locals 0
 
-    sget-object v2, Lsw8;->c:Lsw8;
+    const-string p0, "ItsYou"
 
-    if-eq p0, v2, :cond_3
+    return-object p0
+.end method
 
-    :cond_2
-    iget-object p0, v0, Lqp7;->b:Lje7;
+.method public final writeToParcel(Landroid/os/Parcel;I)V
+    .locals 0
 
-    invoke-interface {p0}, Lje7;->getValue()Ljava/lang/Object;
+    const/4 p0, 0x1
 
-    move-result-object p0
+    invoke-virtual {p1, p0}, Landroid/os/Parcel;->writeInt(I)V
 
-    check-cast p0, Lwt8;
-
-    invoke-static {p0, v1}, Lwt8;->a(Lwt8;Lzs8;)Ler8;
-
-    move-result-object v3
-
-    :cond_3
-    if-eqz v3, :cond_4
-
-    return-object v3
-
-    :cond_4
-    new-instance p0, Ljava/lang/IllegalStateException;
-
-    const-string v0, "message not found or deleted"
-
-    invoke-direct {p0, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p0
+    return-void
 .end method

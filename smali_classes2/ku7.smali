@@ -1,3 +1,6 @@
 .class public final Lku7;
-.super Lki0;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Llu7;

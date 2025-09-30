@@ -1,55 +1,48 @@
 .class public final Lrs5;
-.super Lxh0;
-.source "SourceFile"
+.super Ljx3;
 
 
 # instance fields
-.field public final c:Lxh0;
+.field public X:I
 
-.field public d:Lns5;
+.field public final synthetic Y:Lmy2;
+
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Lxh0;Lms2;Lrie;)V
-    .locals 2
+.method public constructor <init>(Lmy2;Lkotlin/coroutines/Continuation;)V
+    .locals 0
 
-    invoke-direct {p0, p3}, Lxh0;-><init>(Lrie;)V
+    iput-object p1, p0, Lrs5;->Y:Lmy2;
 
-    iput-object p1, p0, Lrs5;->c:Lxh0;
+    invoke-direct {p0, p2}, Ljx3;-><init>(Lkotlin/coroutines/Continuation;)V
 
-    check-cast p3, Lo7a;
+    return-void
+.end method
 
-    invoke-virtual {p3}, Lo7a;->a()Ljx3;
 
-    move-result-object p1
+# virtual methods
+.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    invoke-static {p1}, Lvk9;->a(Lhx3;)Lkotlinx/coroutines/internal/ContextScope;
+    iput-object p1, p0, Lrs5;->o:Ljava/lang/Object;
 
-    move-result-object p1
+    iget p1, p0, Lrs5;->X:I
 
-    new-instance p3, Lps5;
+    const/high16 v0, -0x80000000
+
+    or-int/2addr p1, v0
+
+    iput p1, p0, Lrs5;->X:I
+
+    iget-object p1, p0, Lrs5;->Y:Lmy2;
 
     const/4 v0, 0x0
 
-    invoke-direct {p3, p0, v0}, Lps5;-><init>(Lrs5;Lkotlin/coroutines/Continuation;)V
+    invoke-virtual {p1, v0, p0}, Lmy2;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
-    const/4 v1, 0x3
+    move-result-object p0
 
-    invoke-static {p1, v0, v0, p3, v1}, Lzo3;->E(Lox3;Lhx3;Lrx3;Ll66;I)Ldwd;
-
-    iget-object p2, p2, Lms2;->d:Lat2;
-
-    new-instance p3, Lqs5;
-
-    invoke-direct {p3, p0, v0}, Lqs5;-><init>(Lrs5;Lkotlin/coroutines/Continuation;)V
-
-    new-instance p0, Lgp5;
-
-    const/4 v0, 0x1
-
-    invoke-direct {p0, p2, p3, v0}, Lgp5;-><init>(Lzm5;Ll66;I)V
-
-    invoke-static {p0, p1}, Lsgg;->L(Lzm5;Lox3;)Ldwd;
-
-    return-void
+    return-object p0
 .end method

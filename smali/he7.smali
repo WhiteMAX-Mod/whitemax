@@ -1,85 +1,96 @@
-.class public final Lhe7;
-.super Ljava/lang/Object;
+.class public final enum Lhe7;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
-
-# instance fields
-.field public a:Z
-
-.field public b:I
-
-.field public c:I
-
-.field public d:I
-
-.field public e:I
-
-.field public f:I
-
-.field public g:I
-
-.field public h:Z
-
-.field public i:Z
+# interfaces
+.implements Ljava/util/Iterator;
 
 
-# virtual methods
-.method public final toString()Ljava/lang/String;
-    .locals 2
+# static fields
+.field public static final enum a:Lhe7;
 
-    new-instance v0, Ljava/lang/StringBuilder;
+.field public static final synthetic b:[Lhe7;
 
-    const-string v1, "LayoutState{mAvailable="
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+# direct methods
+.method static constructor <clinit>()V
+    .locals 3
 
-    iget v1, p0, Lhe7;->b:I
+    new-instance v0, Lhe7;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    const-string v1, "INSTANCE"
 
-    const-string v1, ", mCurrentPosition="
+    const/4 v2, 0x0
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    iget v1, p0, Lhe7;->c:I
+    sput-object v0, Lhe7;->a:Lhe7;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    filled-new-array {v0}, [Lhe7;
 
-    const-string v1, ", mItemDirection="
+    move-result-object v0
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    sput-object v0, Lhe7;->b:[Lhe7;
 
-    iget v1, p0, Lhe7;->d:I
+    return-void
+.end method
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+.method public static valueOf(Ljava/lang/String;)Lhe7;
+    .locals 1
 
-    const-string v1, ", mLayoutDirection="
+    const-class v0, Lhe7;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget v1, p0, Lhe7;->e:I
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string v1, ", mStartLine="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget v1, p0, Lhe7;->f:I
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string v1, ", mEndLine="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget p0, p0, Lhe7;->g:I
-
-    const/16 v1, 0x7d
-
-    invoke-static {v0, p0, v1}, Lzt1;->h(Ljava/lang/StringBuilder;IC)Ljava/lang/String;
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
 
     move-result-object p0
 
+    check-cast p0, Lhe7;
+
     return-object p0
+.end method
+
+.method public static values()[Lhe7;
+    .locals 1
+
+    sget-object v0, Lhe7;->b:[Lhe7;
+
+    invoke-virtual {v0}, [Lhe7;->clone()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, [Lhe7;
+
+    return-object v0
+.end method
+
+
+# virtual methods
+.method public final hasNext()Z
+    .locals 0
+
+    const/4 p0, 0x0
+
+    return p0
+.end method
+
+.method public final next()Ljava/lang/Object;
+    .locals 0
+
+    new-instance p0, Ljava/util/NoSuchElementException;
+
+    invoke-direct {p0}, Ljava/util/NoSuchElementException;-><init>()V
+
+    throw p0
+.end method
+
+.method public final remove()V
+    .locals 1
+
+    new-instance p0, Ljava/lang/IllegalStateException;
+
+    const-string v0, "no calls to next() since the last call to remove()"
+
+    invoke-direct {p0, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p0
 .end method

@@ -1,47 +1,58 @@
-.class public abstract synthetic Lxzc;
+.class public interface abstract Lxzc;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final synthetic $EnumSwitchMapping$0:[I
+# virtual methods
+.method public abstract G(Z)Z
+.end method
 
+.method public abstract H()Lrzc;
+.end method
 
-# direct methods
-.method static constructor <clinit>()V
-    .locals 3
+.method public abstract K()Z
+.end method
 
-    const/4 v0, 0x4
+.method public abstract Y()Lrzc;
+.end method
 
-    invoke-static {v0}, Lzt1;->v(I)[I
+.method public abstract d0()Lrzc;
+.end method
 
-    move-result-object v0
+.method public abstract g(Lone/me/calls/ui/ui/indicator/CallIndicatorWidget;Z)Z
+.end method
 
-    array-length v0, v0
+.method public abstract k(Lone/me/calls/ui/ui/indicator/CallIndicatorWidget;)Z
+.end method
 
-    new-array v0, v0, [I
+.method public abstract x()I
+.end method
 
-    const/4 v1, 0x1
+.method public y()Lxx3;
+    .locals 0
 
-    const/4 v2, 0x0
+    invoke-interface {p0}, Lxzc;->H()Lrzc;
 
-    :try_start_0
-    aput v1, v0, v2
-    :try_end_0
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
+    move-result-object p0
 
-    :catch_0
-    const/4 v1, 0x3
+    invoke-virtual {p0}, Lrzc;->e()Ljava/util/ArrayList;
 
-    const/4 v2, 0x2
+    move-result-object p0
 
-    :try_start_1
-    aput v2, v0, v1
-    :try_end_1
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
+    invoke-static {p0}, Lq73;->o0(Ljava/util/List;)Ljava/lang/Object;
 
-    :catch_1
-    sput-object v0, Lxzc;->$EnumSwitchMapping$0:[I
+    move-result-object p0
 
-    return-void
+    check-cast p0, Luzc;
+
+    if-eqz p0, :cond_0
+
+    iget-object p0, p0, Luzc;->a:Lxx3;
+
+    return-object p0
+
+    :cond_0
+    const/4 p0, 0x0
+
+    return-object p0
 .end method

@@ -3,22 +3,18 @@
 .source "SourceFile"
 
 # interfaces
-.implements Landroid/view/View$OnClickListener;
+.implements Lrc6;
 
 
 # instance fields
 .field public final synthetic a:I
 
-.field public final synthetic b:Lru/ok/messages/media/mediabar/MediaBarPreviewLayout;
-
 
 # direct methods
-.method public synthetic constructor <init>(Lru/ok/messages/media/mediabar/MediaBarPreviewLayout;I)V
+.method public synthetic constructor <init>(I)V
     .locals 0
 
-    iput p2, p0, Lj48;->a:I
-
-    iput-object p1, p0, Lj48;->b:Lru/ok/messages/media/mediabar/MediaBarPreviewLayout;
+    iput p1, p0, Lj48;->a:I
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -27,227 +23,318 @@
 
 
 # virtual methods
-.method public final onClick(Landroid/view/View;)V
-    .locals 4
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    iget p1, p0, Lj48;->a:I
+    iget p0, p0, Lj48;->a:I
 
-    const/4 v0, 0x1
+    packed-switch p0, :pswitch_data_0
 
-    iget-object p0, p0, Lj48;->b:Lru/ok/messages/media/mediabar/MediaBarPreviewLayout;
+    check-cast p1, Lqz7;
 
-    packed-switch p1, :pswitch_data_0
+    check-cast p2, Ljava/lang/String;
 
-    iget-object p1, p0, Lru/ok/messages/media/mediabar/MediaBarPreviewLayout;->N0:Lup7;
+    check-cast p3, Ljava/lang/String;
 
-    iget-object p1, p1, Lup7;->f:Lw2d;
+    sget-object p0, Lylf;->a:Lylf;
 
-    iget-object v0, p1, Lw2d;->a:Ljava/util/concurrent/CopyOnWriteArraySet;
+    return-object p0
 
-    invoke-virtual {v0}, Ljava/util/concurrent/CopyOnWriteArraySet;->clear()V
+    :pswitch_0
+    check-cast p1, Landroid/widget/ImageView;
 
-    invoke-virtual {p1}, Lw2d;->n()V
+    check-cast p2, Ljava/lang/Boolean;
 
-    iget-object p1, p0, Lru/ok/messages/media/mediabar/MediaBarPreviewLayout;->P0:Lk48;
+    invoke-virtual {p2}, Ljava/lang/Boolean;->booleanValue()Z
 
-    if-eqz p1, :cond_1
+    move-result p0
 
-    check-cast p1, Lru/ok/messages/media/mediabar/ActLocalMedias;
+    check-cast p3, Lera;
 
-    iget-object v0, p1, Lru/ok/messages/media/mediabar/ActLocalMedias;->T0:Ljava/lang/String;
+    invoke-virtual {p1}, Landroid/widget/ImageView;->getDrawable()Landroid/graphics/drawable/Drawable;
 
-    const-string v1, "SELECTED_MEDIA_ALBUM"
+    move-result-object p1
 
-    invoke-static {v0, v1}, Lxq7;->d(Ljava/lang/Object;Ljava/lang/Object;)Z
+    instance-of p2, p1, Lone/me/sdk/richvector/EnhancedAnimatedVectorDrawable;
 
-    move-result v0
+    if-eqz p2, :cond_0
 
-    if-eqz v0, :cond_0
-
-    invoke-virtual {p1}, Lp5;->O()V
+    check-cast p1, Lone/me/sdk/richvector/EnhancedAnimatedVectorDrawable;
 
     goto :goto_0
 
     :cond_0
-    invoke-virtual {p1}, Lru/ok/messages/media/mediabar/ActLocalMedias;->j0()V
+    const/4 p1, 0x0
 
-    :cond_1
     :goto_0
-    iget-object p0, p0, Lru/ok/messages/media/mediabar/MediaBarPreviewLayout;->O0:Ll48;
+    if-eqz p1, :cond_3
 
-    invoke-virtual {p0}, Lgbc;->m()V
+    invoke-interface {p3}, Lera;->b()Lie0;
 
-    return-void
+    move-result-object p2
 
-    :pswitch_0
-    sget p1, Lru/ok/messages/media/mediabar/MediaBarPreviewLayout;->X0:I
+    iget p2, p2, Lie0;->j:I
 
-    iget-object p1, p0, Lru/ok/messages/media/mediabar/MediaBarPreviewLayout;->N0:Lup7;
+    const-string v0, "second_body"
 
-    iget-object v1, p1, Lup7;->f:Lw2d;
+    invoke-static {p1, v0, p2}, Lkua;->D(Latf;Ljava/lang/String;I)V
 
-    iget v2, v1, Lw2d;->l:I
+    invoke-interface {p3}, Lera;->b()Lie0;
 
-    const/4 v3, 0x3
+    move-result-object p2
 
-    if-ne v2, v3, :cond_2
+    iget p2, p2, Lie0;->j:I
+
+    const-string v0, "second_head"
+
+    invoke-static {p1, v0, p2}, Lkua;->D(Latf;Ljava/lang/String;I)V
+
+    invoke-interface {p3}, Lera;->b()Lie0;
+
+    move-result-object p2
+
+    iget p2, p2, Lie0;->j:I
+
+    const-string v0, "first_body"
+
+    invoke-static {p1, v0, p2}, Lkua;->D(Latf;Ljava/lang/String;I)V
+
+    invoke-interface {p3}, Lera;->b()Lie0;
+
+    move-result-object p2
+
+    iget p2, p2, Lie0;->j:I
+
+    const-string v0, "first_head"
+
+    invoke-static {p1, v0, p2}, Lkua;->D(Latf;Ljava/lang/String;I)V
+
+    invoke-interface {p3}, Lera;->getIcon()Lqy6;
+
+    move-result-object p2
+
+    iget-object p2, p2, Lqy6;->a:Lwy6;
+
+    iget-object p2, p2, Lwy6;->c:Lyy6;
+
+    if-eqz p0, :cond_1
+
+    iget p2, p2, Lyy6;->a:I
 
     goto :goto_1
 
-    :cond_2
-    move v0, v3
+    :cond_1
+    iget p2, p2, Lyy6;->b:I
 
     :goto_1
-    invoke-virtual {v1, v0}, Lw2d;->p(I)V
+    const-string v0, "border"
 
-    invoke-virtual {p0}, Lru/ok/messages/media/mediabar/MediaBarPreviewLayout;->u()V
+    invoke-static {p1, v0, p2}, Lkua;->E(Latf;Ljava/lang/String;I)V
 
-    iget-object p1, p1, Lup7;->f:Lw2d;
+    if-eqz p0, :cond_2
 
-    iget p1, p1, Lw2d;->l:I
+    invoke-interface {p3}, Lera;->getIcon()Lqy6;
 
-    if-ne p1, v3, :cond_3
+    move-result-object p0
 
-    sget p1, Lnnc;->G2:I
+    iget-object p0, p0, Lqy6;->a:Lwy6;
 
-    invoke-virtual {p0, p1}, Lru/ok/messages/media/mediabar/MediaBarPreviewLayout;->x(I)V
+    iget-object p0, p0, Lwy6;->c:Lyy6;
+
+    iget p0, p0, Lyy6;->a:I
 
     goto :goto_2
 
-    :cond_3
-    sget p1, Lnnc;->L2:I
+    :cond_2
+    invoke-interface {p3}, Lera;->getIcon()Lqy6;
 
-    invoke-virtual {p0, p1}, Lru/ok/messages/media/mediabar/MediaBarPreviewLayout;->x(I)V
+    move-result-object p0
+
+    iget-object p0, p0, Lqy6;->a:Lwy6;
+
+    iget-object p0, p0, Lwy6;->c:Lyy6;
+
+    iget p0, p0, Lyy6;->b:I
 
     :goto_2
-    return-void
+    const-string p2, "background"
+
+    invoke-static {p1, p2, p0}, Lkua;->D(Latf;Ljava/lang/String;I)V
+
+    :cond_3
+    sget-object p0, Lylf;->a:Lylf;
+
+    return-object p0
 
     :pswitch_1
-    sget p1, Lru/ok/messages/media/mediabar/MediaBarPreviewLayout;->X0:I
+    check-cast p1, Landroid/widget/ImageView;
 
-    iget-object p1, p0, Lru/ok/messages/media/mediabar/MediaBarPreviewLayout;->N0:Lup7;
+    check-cast p2, Ljava/lang/Boolean;
 
-    iget-object v1, p1, Lup7;->f:Lw2d;
+    invoke-virtual {p2}, Ljava/lang/Boolean;->booleanValue()Z
 
-    iget v2, v1, Lw2d;->l:I
+    move-result p0
 
-    const/4 v3, 0x2
+    check-cast p3, Lera;
 
-    if-ne v2, v3, :cond_4
+    invoke-virtual {p1}, Landroid/widget/ImageView;->getDrawable()Landroid/graphics/drawable/Drawable;
 
-    move v2, v0
+    move-result-object p1
+
+    instance-of p2, p1, Lone/me/sdk/richvector/EnhancedAnimatedVectorDrawable;
+
+    if-eqz p2, :cond_4
+
+    check-cast p1, Lone/me/sdk/richvector/EnhancedAnimatedVectorDrawable;
 
     goto :goto_3
 
     :cond_4
-    move v2, v3
+    const/4 p1, 0x0
 
     :goto_3
-    invoke-virtual {v1, v2}, Lw2d;->p(I)V
+    if-eqz p1, :cond_6
 
-    invoke-virtual {p0}, Lru/ok/messages/media/mediabar/MediaBarPreviewLayout;->u()V
+    invoke-interface {p3}, Lera;->b()Lie0;
 
-    iget-object p1, p1, Lup7;->f:Lw2d;
+    move-result-object p2
 
-    iget v1, p1, Lw2d;->l:I
+    iget p2, p2, Lie0;->j:I
 
-    if-ne v1, v3, :cond_6
+    const-string v0, "cutout"
 
-    invoke-virtual {p1}, Lw2d;->b()I
+    invoke-static {p1, v0, p2}, Lkua;->D(Latf;Ljava/lang/String;I)V
 
-    move-result p1
+    if-eqz p0, :cond_5
 
-    if-le p1, v0, :cond_5
+    invoke-interface {p3}, Lera;->getIcon()Lqy6;
 
-    sget p1, Lnnc;->I2:I
+    move-result-object p0
+
+    iget-object p0, p0, Lqy6;->a:Lwy6;
+
+    iget-object p0, p0, Lwy6;->c:Lyy6;
+
+    iget p0, p0, Lyy6;->a:I
 
     goto :goto_4
 
     :cond_5
-    sget p1, Lnnc;->H2:I
+    invoke-interface {p3}, Lera;->getIcon()Lqy6;
+
+    move-result-object p0
+
+    iget-object p0, p0, Lqy6;->a:Lwy6;
+
+    iget-object p0, p0, Lwy6;->c:Lyy6;
+
+    iget p0, p0, Lyy6;->b:I
 
     :goto_4
-    invoke-virtual {p0, p1}, Lru/ok/messages/media/mediabar/MediaBarPreviewLayout;->x(I)V
+    const-string p2, "gear"
+
+    invoke-static {p1, p2, p0}, Lkua;->D(Latf;Ljava/lang/String;I)V
+
+    :cond_6
+    sget-object p0, Lylf;->a:Lylf;
+
+    return-object p0
+
+    :pswitch_2
+    check-cast p1, Landroid/widget/ImageView;
+
+    check-cast p2, Ljava/lang/Boolean;
+
+    invoke-virtual {p2}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result p0
+
+    check-cast p3, Lera;
+
+    invoke-virtual {p1}, Landroid/widget/ImageView;->getDrawable()Landroid/graphics/drawable/Drawable;
+
+    move-result-object p1
+
+    instance-of p2, p1, Lone/me/sdk/richvector/EnhancedAnimatedVectorDrawable;
+
+    if-eqz p2, :cond_7
+
+    check-cast p1, Lone/me/sdk/richvector/EnhancedAnimatedVectorDrawable;
 
     goto :goto_5
 
-    :cond_6
-    sget p1, Lnnc;->J2:I
-
-    invoke-virtual {p0, p1}, Lru/ok/messages/media/mediabar/MediaBarPreviewLayout;->x(I)V
-
-    :goto_5
-    return-void
-
-    :pswitch_2
-    iget-object p1, p0, Lru/ok/messages/media/mediabar/MediaBarPreviewLayout;->P0:Lk48;
-
-    if-nez p1, :cond_7
-
-    goto :goto_6
-
     :cond_7
-    iget-boolean p1, p0, Lru/ok/messages/media/mediabar/MediaBarPreviewLayout;->T0:Z
-
-    if-eqz p1, :cond_8
-
-    iget-object p1, p0, Lru/ok/messages/media/mediabar/MediaBarPreviewLayout;->S0:La5b;
-
-    iget-object p1, p1, La5b;->b:Le6d;
-
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    sget-object v0, Lru/ok/tamtam/android/prefs/PmsKey;->max-attach-count:Lru/ok/tamtam/android/prefs/PmsKey;
-
-    const/16 v1, 0xc
-
-    int-to-long v1, v1
-
-    invoke-virtual {p1, v0, v1, v2}, Lvwc;->n(Ljava/lang/Enum;J)J
-
-    move-result-wide v0
-
-    long-to-int p1, v0
-
-    iget-object v0, p0, Lru/ok/messages/media/mediabar/MediaBarPreviewLayout;->N0:Lup7;
-
-    iget-object v0, v0, Lup7;->f:Lw2d;
-
-    invoke-virtual {v0}, Lw2d;->b()I
-
-    move-result v0
-
-    if-le v0, p1, :cond_8
-
-    invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
-
-    move-result-object v0
-
-    invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
-
-    move-result-object p0
-
-    sget v1, Lmnc;->a:I
-
-    invoke-static {v1, p1, p0}, Lfpe;->p(IILandroid/content/Context;)Ljava/lang/String;
-
-    move-result-object p0
-
     const/4 p1, 0x0
 
-    invoke-static {p1, v0, p0}, Lus;->F(ILandroid/content/Context;Ljava/lang/String;)V
+    :goto_5
+    if-eqz p1, :cond_9
+
+    invoke-interface {p3}, Lera;->b()Lie0;
+
+    move-result-object p2
+
+    iget p2, p2, Lie0;->j:I
+
+    const-string v0, "left_dot"
+
+    invoke-static {p1, v0, p2}, Lkua;->D(Latf;Ljava/lang/String;I)V
+
+    invoke-interface {p3}, Lera;->b()Lie0;
+
+    move-result-object p2
+
+    iget p2, p2, Lie0;->j:I
+
+    const-string v0, "middle_dot"
+
+    invoke-static {p1, v0, p2}, Lkua;->D(Latf;Ljava/lang/String;I)V
+
+    invoke-interface {p3}, Lera;->b()Lie0;
+
+    move-result-object p2
+
+    iget p2, p2, Lie0;->j:I
+
+    const-string v0, "right_dot"
+
+    invoke-static {p1, v0, p2}, Lkua;->D(Latf;Ljava/lang/String;I)V
+
+    if-eqz p0, :cond_8
+
+    invoke-interface {p3}, Lera;->getIcon()Lqy6;
+
+    move-result-object p0
+
+    iget-object p0, p0, Lqy6;->a:Lwy6;
+
+    iget-object p0, p0, Lwy6;->c:Lyy6;
+
+    iget p0, p0, Lyy6;->a:I
 
     goto :goto_6
 
     :cond_8
-    iget-object p0, p0, Lru/ok/messages/media/mediabar/MediaBarPreviewLayout;->P0:Lk48;
+    invoke-interface {p3}, Lera;->getIcon()Lqy6;
 
-    check-cast p0, Lru/ok/messages/media/mediabar/ActLocalMedias;
+    move-result-object p0
 
-    invoke-virtual {p0}, Lru/ok/messages/media/mediabar/ActLocalMedias;->e0()V
+    iget-object p0, p0, Lqy6;->a:Lwy6;
+
+    iget-object p0, p0, Lwy6;->c:Lyy6;
+
+    iget p0, p0, Lyy6;->b:I
 
     :goto_6
-    return-void
+    const-string p2, "shape"
+
+    invoke-static {p1, p2, p0}, Lkua;->D(Latf;Ljava/lang/String;I)V
+
+    :cond_9
+    sget-object p0, Lylf;->a:Lylf;
+
+    return-object p0
+
+    nop
 
     :pswitch_data_0
     .packed-switch 0x0

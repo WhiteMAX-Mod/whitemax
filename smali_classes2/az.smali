@@ -1,85 +1,48 @@
-.class public abstract Laz;
-.super Ljava/lang/Object;
-.source "SourceFile"
+.class public final Laz;
+.super Ljx3;
 
 
 # instance fields
-.field public final a:Lw10;
+.field public X:I
 
-.field public volatile b:Z
+.field public final synthetic Y:Lbz;
+
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Lw10;)V
+.method public constructor <init>(Lbz;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Laz;->Y:Lbz;
 
-    iput-object p1, p0, Laz;->a:Lw10;
+    invoke-direct {p0, p2}, Ljx3;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public abstract a()V
-.end method
-
-.method public final b(Lgx;Ljava/lang/Throwable;)V
-    .locals 0
-
-    if-eqz p1, :cond_0
-
-    invoke-virtual {p1, p2}, Lgx;->onError(Ljava/lang/Throwable;)V
-
-    :cond_0
-    const/4 p1, 0x1
-
-    iput-boolean p1, p0, Laz;->b:Z
-
-    return-void
-.end method
-
-.method public c(Lgx;Ljava/io/File;)V
-    .locals 0
-
-    iget-boolean p0, p0, Laz;->b:Z
-
-    if-nez p0, :cond_0
-
-    invoke-virtual {p1, p2}, Lgx;->h(Ljava/lang/Object;)V
-
-    invoke-virtual {p1}, Lgx;->b()V
-
-    :cond_0
-    return-void
-.end method
-
-.method public d()Lvw9;
+.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
 
-    iget-object p0, p0, Laz;->a:Lw10;
+    iput-object p1, p0, Laz;->o:Ljava/lang/Object;
 
-    iget-object p0, p0, Lw10;->s:Ljava/lang/String;
+    iget p1, p0, Laz;->X:I
 
-    invoke-static {p0}, Lmna;->h(Ljava/lang/String;)Z
+    const/high16 v0, -0x80000000
 
-    move-result v0
+    or-int/2addr p1, v0
 
-    if-eqz v0, :cond_0
+    iput p1, p0, Laz;->X:I
 
-    new-instance v0, Ljava/io/File;
+    iget-object p1, p0, Laz;->Y:Lbz;
 
-    invoke-direct {v0, p0}, Ljava/io/File;-><init>(Ljava/lang/String;)V
+    const/4 v0, 0x0
 
-    invoke-static {v0}, Lvw9;->l(Ljava/lang/Object;)Lpy9;
+    invoke-virtual {p1, v0, p0}, Lbz;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
     move-result-object p0
-
-    return-object p0
-
-    :cond_0
-    const/4 p0, 0x0
 
     return-object p0
 .end method

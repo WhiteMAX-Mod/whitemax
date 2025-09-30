@@ -2,52 +2,26 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-
-# static fields
-.field public static final a:Lzk;
-
-
-# direct methods
-.method static constructor <clinit>()V
-    .locals 1
-
-    new-instance v0, Lzk;
-
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    sput-object v0, Lal;->a:Lzk;
-
-    return-void
-.end method
+# interfaces
+.implements Lhl;
 
 
 # virtual methods
-.method public debugApiException(Lok;Lyk;Lru/ok/android/api/core/ApiException;)V
+.method public getFailParser()Lvh7;
     .locals 0
 
-    return-void
+    sget-object p0, Lse2;->b:Lse2;
+
+    return-object p0
 .end method
 
-.method public debugApiRequest(Lok;Lyk;Lpk;)V
-    .locals 0
-
-    return-void
+.method public abstract getOkParser()Lvh7;
 .end method
 
-.method public debugApiResponseFail(Lok;Lyk;Ldb7;)Ldb7;
+.method public getScopeAfter()Lol;
     .locals 0
 
-    return-object p3
-.end method
+    sget-object p0, Lol;->a:Lol;
 
-.method public debugApiResponseOk(Lok;Lyk;Ldb7;)Ldb7;
-    .locals 0
-
-    return-object p3
-.end method
-
-.method public debugIoException(Lok;Lyk;Ljava/io/IOException;)V
-    .locals 0
-
-    return-void
+    return-object p0
 .end method

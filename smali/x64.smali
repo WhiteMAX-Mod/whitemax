@@ -4,5 +4,5 @@
 
 
 # virtual methods
-.method public abstract a()Ljava/lang/Object;
+.method public abstract read([BII)I
 .end method

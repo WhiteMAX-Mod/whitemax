@@ -1,559 +1,146 @@
-.class public abstract Lo5a;
-.super Ljava/lang/Object;
+.class public final Lo5a;
+.super Lz2;
 .source "SourceFile"
 
 
-# static fields
-.field public static final A:I
+# instance fields
+.field public final synthetic b:I
 
-.field public static final A0:I
-
-.field public static final B:I
-
-.field public static final B0:I
-
-.field public static final C:I
-
-.field public static final C0:I
-
-.field public static final D:I
-
-.field public static final D0:I
-
-.field public static final E:I
-
-.field public static final E0:I
-
-.field public static final F:I
-
-.field public static final F0:I
-
-.field public static final G:I
-
-.field public static final G0:I
-
-.field public static final H:I
-
-.field public static final H0:I
-
-.field public static final I:I
-
-.field public static final I0:I
-
-.field public static final J:I
-
-.field public static final J0:I
-
-.field public static final K:I
-
-.field public static final K0:I
-
-.field public static final L:I
-
-.field public static final L0:I
-
-.field public static final M:I
-
-.field public static final M0:I
-
-.field public static final N:I
-
-.field public static final O:I
-
-.field public static final P:I
-
-.field public static final Q:I
-
-.field public static final R:I
-
-.field public static final S:I
-
-.field public static final T:I
-
-.field public static final U:I
-
-.field public static final V:I
-
-.field public static final W:I
-
-.field public static final X:I
-
-.field public static final Y:I
-
-.field public static final Z:I
-
-.field public static final a:I
-
-.field public static final a0:I
-
-.field public static final b:I
-
-.field public static final b0:I
-
-.field public static final c:I
-
-.field public static final c0:I
-
-.field public static final d:I
-
-.field public static final d0:I
-
-.field public static final e:I
-
-.field public static final e0:I
-
-.field public static final f:I
-
-.field public static final f0:I
-
-.field public static final g:I
-
-.field public static final g0:I
-
-.field public static final h:I
-
-.field public static final h0:I
-
-.field public static final i:I
-
-.field public static final i0:I
-
-.field public static final j:I
-
-.field public static final j0:I
-
-.field public static final k:I
-
-.field public static final k0:I
-
-.field public static final l:I
-
-.field public static final l0:I
-
-.field public static final m:I
-
-.field public static final m0:I
-
-.field public static final n:I
-
-.field public static final n0:I
-
-.field public static final o:I
-
-.field public static final o0:I
-
-.field public static final p:I
-
-.field public static final p0:I
-
-.field public static final q:I
-
-.field public static final q0:I
-
-.field public static final r:I
-
-.field public static final r0:I
-
-.field public static final s:I
-
-.field public static final s0:I
-
-.field public static final t:I
-
-.field public static final t0:I
-
-.field public static final u:I
-
-.field public static final u0:I
-
-.field public static final v:I
-
-.field public static final v0:I
-
-.field public static final w:I
-
-.field public static final w0:I
-
-.field public static final x:I
-
-.field public static final x0:I
-
-.field public static final y:I
-
-.field public static final y0:I
-
-.field public static final z:I
-
-.field public static final z0:I
+.field public final c:Lv5d;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(Ljzb;Lv5d;I)V
+    .locals 0
 
-    sget v0, Lorb;->call_audio_32:I
+    iput p3, p0, Lo5a;->b:I
 
-    sput v0, Lo5a;->a:I
+    packed-switch p3, :pswitch_data_0
 
-    sget v0, Lorb;->call_video_32:I
+    sget-object p3, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;
 
-    sput v0, Lo5a;->b:I
+    .line 3
+    invoke-direct {p0, p1}, Lz2;-><init>(Lt7a;)V
 
-    sget v0, Lorb;->cancel_outline_32:I
-
-    sput v0, Lo5a;->c:I
-
-    sget v0, Lorb;->ic_add_to_call_24:I
-
-    sput v0, Lo5a;->d:I
-
-    sget v0, Lorb;->ic_admin_camera_and_mic_disabled_28:I
-
-    sput v0, Lo5a;->e:I
-
-    sget v0, Lorb;->ic_admin_camera_disable_24:I
-
-    sput v0, Lo5a;->f:I
-
-    sget v0, Lorb;->ic_admin_camera_disable_28:I
-
-    sput v0, Lo5a;->g:I
-
-    sget v0, Lorb;->ic_admin_camera_setting_24:I
-
-    sput v0, Lo5a;->h:I
-
-    sget v0, Lorb;->ic_admin_mic_disable_24:I
-
-    sput v0, Lo5a;->i:I
-
-    sget v0, Lorb;->ic_admin_mic_disable_28:I
-
-    sput v0, Lo5a;->j:I
-
-    sget v0, Lorb;->ic_admin_mic_setting_24:I
-
-    sput v0, Lo5a;->k:I
-
-    sget v0, Lorb;->ic_admin_record_setting_24:I
-
-    sput v0, Lo5a;->l:I
-
-    sget v0, Lorb;->ic_admin_screen_action_disable_28:I
-
-    sput v0, Lo5a;->m:I
-
-    sget v0, Lorb;->ic_admin_screen_action_disable_me_28:I
-
-    sput v0, Lo5a;->n:I
-
-    sget v0, Lorb;->ic_admin_screen_record_action_disable_28:I
-
-    sput v0, Lo5a;->o:I
-
-    sget v0, Lorb;->ic_admin_setting_camera_disable_24:I
-
-    sput v0, Lo5a;->p:I
-
-    sget v0, Lorb;->ic_admin_setting_mic_disable_24:I
-
-    sput v0, Lo5a;->q:I
-
-    sget v0, Lorb;->ic_admin_setting_remove_user_24:I
-
-    sput v0, Lo5a;->r:I
-
-    sget v0, Lorb;->ic_admin_setting_sharing_disable_24:I
-
-    sput v0, Lo5a;->s:I
-
-    sget v0, Lorb;->ic_admin_settings_24:I
-
-    sput v0, Lo5a;->t:I
-
-    sget v0, Lorb;->ic_admin_settings_low_hand_24:I
-
-    sput v0, Lo5a;->u:I
-
-    sget v0, Lorb;->ic_admin_sharing_setting_24:I
-
-    sput v0, Lo5a;->v:I
-
-    sget v0, Lorb;->ic_apply_16:I
-
-    sput v0, Lo5a;->w:I
-
-    sget v0, Lorb;->ic_bluetooth_32:I
-
-    sput v0, Lo5a;->x:I
-
-    sget v0, Lorb;->ic_bluetooth_fill_28:I
-
-    sput v0, Lo5a;->y:I
-
-    sget v0, Lorb;->ic_call_90:I
-
-    sput v0, Lo5a;->z:I
-
-    sget v0, Lorb;->ic_call_add_user_24:I
-
-    sput v0, Lo5a;->A:I
-
-    sget v0, Lorb;->ic_call_fill_16:I
-
-    sput v0, Lo5a;->B:I
-
-    sget v0, Lorb;->ic_call_mode_default_18:I
-
-    sput v0, Lo5a;->C:I
-
-    sget v0, Lorb;->ic_call_mode_grid_24:I
-
-    sput v0, Lo5a;->D:I
-
-    sget v0, Lorb;->ic_call_settings_28:I
-
-    sput v0, Lo5a;->E:I
-
-    sget v0, Lorb;->ic_chevron_left_12:I
-
-    sput v0, Lo5a;->F:I
-
-    sget v0, Lorb;->ic_close_16:I
-
-    sput v0, Lo5a;->G:I
-
-    sget v0, Lorb;->ic_close_24:I
-
-    sput v0, Lo5a;->H:I
-
-    sget v0, Lorb;->ic_connection_fill_16:I
-
-    sput v0, Lo5a;->I:I
-
-    sget v0, Lorb;->ic_copy_21:I
-
-    sput v0, Lo5a;->J:I
-
-    sget v0, Lorb;->ic_grid_mode_24:I
-
-    sput v0, Lo5a;->K:I
-
-    sget v0, Lorb;->ic_hand_40:I
-
-    sput v0, Lo5a;->L:I
-
-    sget v0, Lorb;->ic_hand_fill_left_28:I
-
-    sput v0, Lo5a;->M:I
-
-    sget v0, Lorb;->ic_handdown_24:I
-
-    sput v0, Lo5a;->N:I
-
-    sget v0, Lorb;->ic_handdown_fill_28:I
-
-    sput v0, Lo5a;->O:I
-
-    sget v0, Lorb;->ic_handup_fill_20:I
-
-    sput v0, Lo5a;->P:I
-
-    sget v0, Lorb;->ic_headphones_24:I
-
-    sput v0, Lo5a;->Q:I
-
-    sget v0, Lorb;->ic_headphones_fill_28:I
-
-    sput v0, Lo5a;->R:I
-
-    sget v0, Lorb;->ic_incoming_call_fill_16:I
-
-    sput v0, Lo5a;->S:I
-
-    sget v0, Lorb;->ic_incoming_video_call_fill_16:I
-
-    sput v0, Lo5a;->T:I
-
-    sget v0, Lorb;->ic_link_24:I
-
-    sput v0, Lo5a;->U:I
-
-    sget v0, Lorb;->ic_loading_16:I
-
-    sput v0, Lo5a;->V:I
-
-    sget v0, Lorb;->ic_lock_36:I
-
-    sput v0, Lo5a;->W:I
-
-    sget v0, Lorb;->ic_logo_21:I
-
-    sput v0, Lo5a;->X:I
-
-    sget v0, Lorb;->ic_message_fill_28:I
-
-    sput v0, Lo5a;->Y:I
-
-    sget v0, Lorb;->ic_mic_disabled_24:I
-
-    sput v0, Lo5a;->Z:I
-
-    sget v0, Lorb;->ic_microphone_22:I
-
-    sput v0, Lo5a;->a0:I
-
-    sget v0, Lorb;->ic_microphone_off_fill_28:I
-
-    sput v0, Lo5a;->b0:I
-
-    sget v0, Lorb;->ic_microphone_on_fill_28:I
-
-    sput v0, Lo5a;->c0:I
-
-    sget v0, Lorb;->ic_more_22:I
-
-    sput v0, Lo5a;->d0:I
-
-    sget v0, Lorb;->ic_open_chat_20:I
-
-    sput v0, Lo5a;->e0:I
-
-    sget v0, Lorb;->ic_phone_off_fill_28:I
-
-    sput v0, Lo5a;->f0:I
-
-    sget v0, Lorb;->ic_pin_13:I
-
-    sput v0, Lo5a;->g0:I
-
-    sget v0, Lorb;->ic_pin_21:I
-
-    sput v0, Lo5a;->h0:I
-
-    sget v0, Lorb;->ic_pip_mic_none_24:I
-
-    sput v0, Lo5a;->i0:I
-
-    sget v0, Lorb;->ic_pip_mic_off_24:I
-
-    sput v0, Lo5a;->j0:I
-
-    sget v0, Lorb;->ic_record_24:I
-
-    sput v0, Lo5a;->k0:I
-
-    sget v0, Lorb;->ic_record_screen_20:I
-
-    sput v0, Lo5a;->l0:I
-
-    sget v0, Lorb;->ic_reject_16:I
-
-    sput v0, Lo5a;->m0:I
-
-    sget v0, Lorb;->ic_rotation_view_16:I
-
-    sput v0, Lo5a;->n0:I
-
-    sget v0, Lorb;->ic_save_favorite_28:I
-
-    sput v0, Lo5a;->o0:I
-
-    sget v0, Lorb;->ic_search_32:I
-
-    sput v0, Lo5a;->p0:I
-
-    sget v0, Lorb;->ic_send_21:I
-
-    sput v0, Lo5a;->q0:I
-
-    sget v0, Lorb;->ic_services_fill_24:I
-
-    sput v0, Lo5a;->r0:I
-
-    sget v0, Lorb;->ic_share_24:I
-
-    sput v0, Lo5a;->s0:I
-
-    sget v0, Lorb;->ic_share_screen_20:I
-
-    sput v0, Lo5a;->t0:I
-
-    sget v0, Lorb;->ic_share_screen_41:I
-
-    sput v0, Lo5a;->u0:I
-
-    sget v0, Lorb;->ic_share_sound_22:I
-
-    sput v0, Lo5a;->v0:I
-
-    sget v0, Lorb;->ic_sound_on_fill_28:I
-
-    sput v0, Lo5a;->w0:I
-
-    sget v0, Lorb;->ic_speaker_mode_24:I
-
-    sput v0, Lo5a;->x0:I
-
-    sget v0, Lorb;->ic_stop_record_24:I
-
-    sput v0, Lo5a;->y0:I
-
-    sget v0, Lorb;->ic_unpin_21:I
-
-    sput v0, Lo5a;->z0:I
-
-    sget v0, Lorb;->ic_user_more_24:I
-
-    sput v0, Lo5a;->A0:I
-
-    sget v0, Lorb;->ic_user_waiting_room_48:I
-
-    sput v0, Lo5a;->B0:I
-
-    sget v0, Lorb;->ic_user_was_removed_28:I
-
-    sput v0, Lo5a;->C0:I
-
-    sget v0, Lorb;->ic_video_22:I
-
-    sput v0, Lo5a;->D0:I
-
-    sget v0, Lorb;->ic_videocam_off_fill_28:I
-
-    sput v0, Lo5a;->E0:I
-
-    sget v0, Lorb;->ic_videocam_on_fill_16:I
-
-    sput v0, Lo5a;->F0:I
-
-    sget v0, Lorb;->ic_videocam_on_fill_28:I
-
-    sput v0, Lo5a;->G0:I
-
-    sget v0, Lorb;->ic_volume_bluetooth_23:I
-
-    sput v0, Lo5a;->H0:I
-
-    sget v0, Lorb;->ic_volume_phone_24:I
-
-    sput v0, Lo5a;->I0:I
-
-    sget v0, Lorb;->ic_volume_speakerphone_25:I
-
-    sput v0, Lo5a;->J0:I
-
-    sget v0, Lorb;->ic_waitin_room_24:I
-
-    sput v0, Lo5a;->K0:I
-
-    sget v0, Lorb;->saved_group_call_avatar:I
-
-    sput v0, Lo5a;->L0:I
-
-    sget v0, Lorb;->show_profile_24:I
-
-    sput v0, Lo5a;->M0:I
+    .line 4
+    iput-object p2, p0, Lo5a;->c:Lv5d;
 
     return-void
+
+    .line 5
+    :pswitch_0
+    sget-object p3, Ljava/util/concurrent/TimeUnit;->SECONDS:Ljava/util/concurrent/TimeUnit;
+
+    .line 6
+    invoke-direct {p0, p1}, Lz2;-><init>(Lt7a;)V
+
+    .line 7
+    iput-object p2, p0, Lo5a;->c:Lv5d;
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x2
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public constructor <init>(Ly4a;Lv5d;)V
+    .locals 1
+
+    const/4 v0, 0x1
+
+    iput v0, p0, Lo5a;->b:I
+
+    .line 1
+    invoke-direct {p0, p1}, Lz2;-><init>(Lt7a;)V
+
+    .line 2
+    iput-object p2, p0, Lo5a;->c:Lv5d;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final n(Ld8a;)V
+    .locals 3
+
+    iget v0, p0, Lo5a;->b:I
+
+    packed-switch v0, :pswitch_data_0
+
+    new-instance v0, Lx7a;
+
+    sget-object v1, Ljava/util/concurrent/TimeUnit;->SECONDS:Ljava/util/concurrent/TimeUnit;
+
+    iget-object v1, p0, Lo5a;->c:Lv5d;
+
+    invoke-virtual {v1}, Lv5d;->a()Lt5d;
+
+    move-result-object v1
+
+    invoke-direct {v0, p1, v1}, Lx7a;-><init>(Ld8a;Lt5d;)V
+
+    iget-object p0, p0, Lz2;->a:Lt7a;
+
+    invoke-interface {p0, v0}, Lt7a;->a(Ld8a;)V
+
+    return-void
+
+    :pswitch_0
+    new-instance v0, Lns1;
+
+    invoke-direct {v0, p1}, Lns1;-><init>(Ld8a;)V
+
+    invoke-interface {p1, v0}, Ld8a;->c(Loq4;)V
+
+    new-instance p1, Lwd6;
+
+    const/16 v1, 0x10
+
+    const/4 v2, 0x0
+
+    invoke-direct {p1, p0, v0, v2, v1}, Lwd6;-><init>(Ljava/lang/Object;Ljava/lang/Object;ZI)V
+
+    iget-object p0, p0, Lo5a;->c:Lv5d;
+
+    invoke-virtual {p0, p1}, Lv5d;->b(Ljava/lang/Runnable;)Loq4;
+
+    move-result-object p0
+
+    invoke-static {v0, p0}, Lsq4;->g(Ljava/util/concurrent/atomic/AtomicReference;Loq4;)Z
+
+    return-void
+
+    :pswitch_1
+    new-instance v0, Ln5a;
+
+    new-instance v1, Lxid;
+
+    invoke-direct {v1, p1}, Lxid;-><init>(Ld8a;)V
+
+    sget-object p1, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;
+
+    iget-object p1, p0, Lo5a;->c:Lv5d;
+
+    invoke-virtual {p1}, Lv5d;->a()Lt5d;
+
+    move-result-object p1
+
+    invoke-direct {v0, v1, p1}, Ln5a;-><init>(Lxid;Lt5d;)V
+
+    iget-object p0, p0, Lz2;->a:Lt7a;
+
+    invoke-interface {p0, v0}, Lt7a;->a(Ld8a;)V
+
+    return-void
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

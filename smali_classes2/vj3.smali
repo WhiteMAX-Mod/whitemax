@@ -4,150 +4,45 @@
 
 
 # instance fields
-.field public final a:Lje7;
+.field public volatile a:J
 
-.field public final b:Lje7;
+.field public volatile b:J
 
-.field public final c:Lje7;
+.field public volatile c:I
 
-.field public final d:Lje7;
+.field public volatile d:J
 
-.field public final e:Lje7;
+.field public volatile e:J
+
+.field public volatile f:J
+
+.field public volatile g:Ljava/lang/String;
+
+.field public volatile h:I
 
 
 # direct methods
-.method public constructor <init>(Lje7;Lje7;Lje7;Lje7;Lje7;)V
-    .locals 0
+.method public constructor <init>(Z)V
+    .locals 2
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lvj3;->a:Lje7;
+    const-string v0, ""
 
-    iput-object p2, p0, Lvj3;->b:Lje7;
+    iput-object v0, p0, Lvj3;->g:Ljava/lang/String;
 
-    iput-object p3, p0, Lvj3;->c:Lje7;
+    const/4 v0, -0x1
 
-    iput-object p4, p0, Lvj3;->d:Lje7;
+    iput v0, p0, Lvj3;->h:I
 
-    iput-object p5, p0, Lvj3;->e:Lje7;
+    if-eqz p1, :cond_0
 
-    return-void
-.end method
+    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
+    move-result-wide v0
 
-# virtual methods
-.method public final a(J)V
-    .locals 11
+    iput-wide v0, p0, Lvj3;->a:J
 
-    const-class v0, Lvj3;
-
-    invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
-
-    move-result-object v0
-
-    const-string v1, "block, id = "
-
-    invoke-static {p1, p2, v1, v0}, Luz1;->n(JLjava/lang/String;Ljava/lang/String;)V
-
-    iget-object v0, p0, Lvj3;->a:Lje7;
-
-    invoke-interface {v0}, Lje7;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lxk3;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    new-instance v1, Liz1;
-
-    const/16 v2, 0x12
-
-    sget-object v3, Lgl3;->a:Lgl3;
-
-    invoke-direct {v1, v2, v3}, Liz1;-><init>(ILjava/lang/Object;)V
-
-    invoke-virtual {v0, p1, p2, v1}, Lxk3;->c(JLjj3;)Lnj3;
-
-    iget-object v0, p0, Lvj3;->d:Lje7;
-
-    invoke-interface {v0}, Lje7;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lik;
-
-    check-cast v0, La2a;
-
-    new-instance v1, Llq3;
-
-    invoke-virtual {v0}, La2a;->x()Lx4b;
-
-    move-result-object v2
-
-    check-cast v2, La5b;
-
-    iget-object v2, v2, La5b;->a:Lj23;
-
-    invoke-virtual {v2}, Lmwc;->l()J
-
-    move-result-wide v3
-
-    const/4 v9, 0x0
-
-    const/4 v10, 0x0
-
-    const/4 v2, 0x1
-
-    const/4 v7, 0x0
-
-    const/4 v8, 0x0
-
-    move-wide v5, p1
-
-    invoke-direct/range {v1 .. v10}, Llq3;-><init>(IJJLjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
-
-    invoke-static {v0, v1}, La2a;->v(La2a;Lhl;)J
-
-    iget-object p1, p0, Lvj3;->b:Lje7;
-
-    invoke-interface {p1}, Lje7;->getValue()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Ln82;
-
-    sget-object p2, Lh92;->X:Lh92;
-
-    invoke-virtual {p1, v5, v6, p2}, Ln82;->j(JLh92;)V
-
-    iget-object p1, p0, Lvj3;->c:Lje7;
-
-    invoke-interface {p1}, Lje7;->getValue()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lpie;
-
-    invoke-static {v5, v6}, Luz1;->k(J)Ljava/util/List;
-
-    move-result-object p2
-
-    invoke-virtual {p1, p2}, Lpie;->f(Ljava/util/Collection;)V
-
-    iget-object p0, p0, Lvj3;->e:Lje7;
-
-    invoke-interface {p0}, Lje7;->getValue()Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, Lvu0;
-
-    new-instance p1, Lhs3;
-
-    invoke-direct {p1, v5, v6}, Lhs3;-><init>(J)V
-
-    invoke-virtual {p0, p1}, Lvu0;->c(Ljava/lang/Object;)V
-
+    :cond_0
     return-void
 .end method

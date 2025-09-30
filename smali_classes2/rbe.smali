@@ -1,125 +1,242 @@
 .class public final Lrbe;
-.super Ljava/lang/Object;
+.super Lure;
 .source "SourceFile"
+
+# interfaces
+.implements Lpc6;
 
 
 # instance fields
-.field public final a:Llae;
+.field public X:Lsbe;
 
-.field public final b:Z
+.field public Y:Lv85;
+
+.field public Z:I
+
+.field public final synthetic r0:Lsbe;
 
 
 # direct methods
-.method public constructor <init>(Llae;Z)V
+.method public constructor <init>(Lsbe;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lrbe;->r0:Lsbe;
 
-    iput-object p1, p0, Lrbe;->a:Llae;
+    const/4 p1, 0x2
 
-    iput-boolean p2, p0, Lrbe;->b:Z
+    invoke-direct {p0, p1, p2}, Lure;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    const/4 v0, 0x1
+    check-cast p1, Ly04;
 
-    if-ne p0, p1, :cond_0
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    return v0
-
-    :cond_0
-    instance-of v1, p1, Lrbe;
-
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
-    check-cast p1, Lrbe;
-
-    iget-object v1, p0, Lrbe;->a:Llae;
-
-    iget-object v3, p1, Lrbe;->a:Llae;
-
-    invoke-static {v1, v3}, Lxq7;->d(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_2
-
-    return v2
-
-    :cond_2
-    iget-boolean p0, p0, Lrbe;->b:Z
-
-    iget-boolean p1, p1, Lrbe;->b:Z
-
-    if-eq p0, p1, :cond_3
-
-    return v2
-
-    :cond_3
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 1
-
-    iget-object v0, p0, Lrbe;->a:Llae;
-
-    invoke-virtual {v0}, Llae;->hashCode()I
-
-    move-result v0
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget-boolean p0, p0, Lrbe;->b:Z
-
-    invoke-static {p0}, Ljava/lang/Boolean;->hashCode(Z)I
-
-    move-result p0
-
-    add-int/2addr p0, v0
-
-    return p0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 2
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "Item(suggest="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v1, p0, Lrbe;->a:Llae;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", fromContacts="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-boolean p0, p0, Lrbe;->b:Z
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    const-string p0, ")"
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {p0, p1, p2}, Lrbe;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
     move-result-object p0
+
+    check-cast p0, Lrbe;
+
+    sget-object p1, Lylf;->a:Lylf;
+
+    invoke-virtual {p0, p1}, Lrbe;->o(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 0
+
+    new-instance p1, Lrbe;
+
+    iget-object p0, p0, Lrbe;->r0:Lsbe;
+
+    invoke-direct {p1, p0, p2}, Lrbe;-><init>(Lsbe;Lkotlin/coroutines/Continuation;)V
+
+    return-object p1
+.end method
+
+.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 10
+
+    iget v0, p0, Lrbe;->Z:I
+
+    const/4 v1, 0x1
+
+    const/4 v2, 0x2
+
+    iget-object v3, p0, Lrbe;->r0:Lsbe;
+
+    sget-object v4, Lz04;->a:Lz04;
+
+    if-eqz v0, :cond_2
+
+    if-eq v0, v1, :cond_1
+
+    if-ne v0, v2, :cond_0
+
+    invoke-static {p1}, Lqe5;->V(Ljava/lang/Object;)V
+
+    goto/16 :goto_3
+
+    :cond_0
+    new-instance p0, Ljava/lang/IllegalStateException;
+
+    const-string p1, "call to \'resume\' before \'invoke\' with coroutine"
+
+    invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p0
+
+    :cond_1
+    iget-object v0, p0, Lrbe;->Y:Lv85;
+
+    iget-object v1, p0, Lrbe;->X:Lsbe;
+
+    invoke-static {p1}, Lqe5;->V(Ljava/lang/Object;)V
+
+    goto :goto_0
+
+    :cond_2
+    invoke-static {p1}, Lqe5;->V(Ljava/lang/Object;)V
+
+    iget-object v0, v3, Lsbe;->z0:Lv85;
+
+    iget-object p1, v3, Lsbe;->r0:Lcl7;
+
+    invoke-interface {p1}, Lcl7;->getValue()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lhj6;
+
+    new-instance v5, Lzzb;
+
+    iget-object v6, v3, Lsbe;->o:Lcl7;
+
+    invoke-interface {v6}, Lcl7;->getValue()Ljava/lang/Object;
+
+    move-result-object v6
+
+    check-cast v6, Lf53;
+
+    check-cast v6, Lgad;
+
+    invoke-virtual {v6}, Lgad;->q()J
+
+    move-result-wide v6
+
+    iget-object v8, v3, Lsbe;->b:Lcl7;
+
+    invoke-interface {v8}, Lcl7;->getValue()Ljava/lang/Object;
+
+    move-result-object v8
+
+    check-cast v8, Landroid/content/Context;
+
+    sget-object v9, Lyu4;->t0:Lbx9;
+
+    invoke-virtual {v9, v8}, Lbx9;->k(Landroid/content/Context;)Lyu4;
+
+    move-result-object v8
+
+    invoke-virtual {v8}, Lyu4;->j()Lera;
+
+    move-result-object v8
+
+    invoke-interface {v8}, Lera;->getName()Ljava/lang/String;
+
+    move-result-object v8
+
+    invoke-direct {v5, v6, v7, v8}, La0c;-><init>(JLjava/lang/String;)V
+
+    iput-object v3, p0, Lrbe;->X:Lsbe;
+
+    iput-object v0, p0, Lrbe;->Y:Lv85;
+
+    iput v1, p0, Lrbe;->Z:I
+
+    invoke-virtual {p1, v5, v1, p0}, Lhj6;->a(La0c;ZLure;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    if-ne p1, v4, :cond_3
+
+    goto :goto_2
+
+    :cond_3
+    move-object v1, v3
+
+    :goto_0
+    check-cast p1, Luzb;
+
+    const/4 v5, 0x0
+
+    if-eqz p1, :cond_4
+
+    iget-object p1, p1, Luzb;->a:Landroid/net/Uri;
+
+    goto :goto_1
+
+    :cond_4
+    move-object p1, v5
+
+    :goto_1
+    new-instance v6, Labe;
+
+    invoke-direct {v6, p1}, Labe;-><init>(Landroid/net/Uri;)V
+
+    sget-object p1, Lsbe;->A0:[Lxi7;
+
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    invoke-static {v0, v6}, Lx7g;->o(Lv85;Ljava/lang/Object;)V
+
+    iget-object p1, v3, Lsbe;->X:Lcl7;
+
+    invoke-interface {p1}, Lcl7;->getValue()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lxwe;
+
+    check-cast p1, Laga;
+
+    invoke-virtual {p1}, Laga;->a()Ls04;
+
+    move-result-object p1
+
+    new-instance v0, Lqbe;
+
+    invoke-direct {v0, v2, v5}, Lure;-><init>(ILkotlin/coroutines/Continuation;)V
+
+    iput-object v5, p0, Lrbe;->X:Lsbe;
+
+    iput-object v5, p0, Lrbe;->Y:Lv85;
+
+    iput v2, p0, Lrbe;->Z:I
+
+    invoke-static {p1, v0, p0}, Lvyg;->H(Lq04;Lpc6;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p0
+
+    if-ne p0, v4, :cond_5
+
+    :goto_2
+    return-object v4
+
+    :cond_5
+    :goto_3
+    sget-object p0, Lylf;->a:Lylf;
 
     return-object p0
 .end method

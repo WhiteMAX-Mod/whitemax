@@ -1,1204 +1,152 @@
-.class public final Lw5c;
+.class public abstract Lw5c;
 .super Ljava/lang/Object;
-.source "SourceFile"
 
-# interfaces
-.implements Lyt0;
 
+# static fields
+.field public static chat_item_view_type:I = 0x7f0a026f
 
-# instance fields
-.field public final a:Lvs0;
+.field public static chat_item_view_type_pinned:I = 0x7f0a0270
 
-.field public b:Z
+.field public static chats_list_folders_container:I = 0x7f0a0297
 
-.field public final c:Lhtd;
+.field public static chats_list_folders_pager:I = 0x7f0a0298
 
+.field public static chats_list_folders_tabs:I = 0x7f0a0299
 
-# direct methods
-.method public constructor <init>(Lhtd;)V
-    .locals 0
+.field public static chats_list_pinbars_view:I = 0x7f0a029a
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+.field public static chats_list_search_recycler_view:I = 0x7f0a029b
 
-    iput-object p1, p0, Lw5c;->c:Lhtd;
+.field public static chats_list_search_root_view:I = 0x7f0a029c
 
-    new-instance p1, Lvs0;
+.field public static chats_list_search_toolbar:I = 0x7f0a029d
 
-    invoke-direct {p1}, Ljava/lang/Object;-><init>()V
+.field public static chats_list_toolbar:I = 0x7f0a029e
 
-    iput-object p1, p0, Lw5c;->a:Lvs0;
+.field public static chats_list_view:I = 0x7f0a029f
 
-    return-void
-.end method
+.field public static chats_search_chat_view_type:I = 0x7f0a02a0
 
+.field public static chats_search_contact_view_type:I = 0x7f0a02a1
 
-# virtual methods
-.method public final N(Ljx;)J
-    .locals 10
+.field public static chats_search_empty_view_type:I = 0x7f0a02a2
 
-    const-wide/16 v0, 0x0
+.field public static chats_search_global_chat_view_type:I = 0x7f0a02a3
 
-    move-wide v2, v0
+.field public static chats_search_global_contact_view_type:I = 0x7f0a02a4
 
-    :cond_0
-    :goto_0
-    const/16 v4, 0x2000
+.field public static chats_search_loading_view_type:I = 0x7f0a02a5
 
-    int-to-long v4, v4
+.field public static chats_search_message_view_type:I = 0x7f0a02a6
 
-    iget-object v6, p0, Lw5c;->c:Lhtd;
+.field public static chats_search_recent_header_view_type:I = 0x7f0a02a7
 
-    iget-object v7, p0, Lw5c;->a:Lvs0;
+.field public static chats_search_recent_view_type:I = 0x7f0a02a8
 
-    invoke-interface {v6, v7, v4, v5}, Lhtd;->b(Lvs0;J)J
+.field public static fake_chat_contact_item_view_type:I = 0x7f0a0380
 
-    move-result-wide v4
+.field public static fake_chat_phone_item_view_type:I = 0x7f0a0381
 
-    const-wide/16 v8, -0x1
+.field public static oneme_big_folder_widget_view_type:I = 0x7f0a0635
 
-    cmp-long v4, v4, v8
+.field public static oneme_chat_action_add_favorite:I = 0x7f0a0647
 
-    if-eqz v4, :cond_1
+.field public static oneme_chat_action_add_to_folder:I = 0x7f0a0648
 
-    invoke-virtual {v7}, Lvs0;->n()J
+.field public static oneme_chat_action_block:I = 0x7f0a0649
 
-    move-result-wide v4
+.field public static oneme_chat_action_clear_chat_history:I = 0x7f0a064a
 
-    cmp-long v6, v4, v0
+.field public static oneme_chat_action_clear_saved_messages:I = 0x7f0a064b
 
-    if-lez v6, :cond_0
+.field public static oneme_chat_action_close_channel:I = 0x7f0a064c
 
-    add-long/2addr v2, v4
+.field public static oneme_chat_action_close_chat:I = 0x7f0a064d
 
-    invoke-virtual {p1, v7, v4, v5}, Ljx;->R(Lvs0;J)V
+.field public static oneme_chat_action_delete_channel:I = 0x7f0a064e
 
-    goto :goto_0
+.field public static oneme_chat_action_delete_chat:I = 0x7f0a064f
 
-    :cond_1
-    iget-wide v4, v7, Lvs0;->b:J
+.field public static oneme_chat_action_leave:I = 0x7f0a0650
 
-    cmp-long p0, v4, v0
+.field public static oneme_chat_action_mark_as_read:I = 0x7f0a0651
 
-    if-lez p0, :cond_2
+.field public static oneme_chat_action_mark_as_unread:I = 0x7f0a0652
 
-    add-long/2addr v2, v4
+.field public static oneme_chat_action_move_rights_and_leave:I = 0x7f0a0653
 
-    invoke-virtual {p1, v7, v4, v5}, Ljx;->R(Lvs0;J)V
+.field public static oneme_chat_action_mute:I = 0x7f0a0654
 
-    :cond_2
-    return-wide v2
-.end method
+.field public static oneme_chat_action_remove_favorite:I = 0x7f0a0655
 
-.method public final S(Ljava/nio/charset/Charset;)Ljava/lang/String;
-    .locals 2
+.field public static oneme_chat_action_remove_from_folder:I = 0x7f0a0656
 
-    iget-object v0, p0, Lw5c;->c:Lhtd;
+.field public static oneme_chat_action_select:I = 0x7f0a0657
 
-    iget-object p0, p0, Lw5c;->a:Lvs0;
+.field public static oneme_chat_action_suspend_and_delete_bot:I = 0x7f0a0658
 
-    invoke-virtual {p0, v0}, Lvs0;->y0(Lhtd;)V
+.field public static oneme_chat_action_suspend_bot:I = 0x7f0a0659
 
-    iget-wide v0, p0, Lvs0;->b:J
+.field public static oneme_chat_action_unmute:I = 0x7f0a065a
 
-    invoke-virtual {p0, v0, v1, p1}, Lvs0;->s0(JLjava/nio/charset/Charset;)Ljava/lang/String;
+.field public static oneme_chat_list_loading_id:I = 0x7f0a065b
 
-    move-result-object p0
+.field public static oneme_chat_list_loading_view_type:I = 0x7f0a065c
 
-    return-object p0
-.end method
+.field public static oneme_confirm_block:I = 0x7f0a0679
 
-.method public final V(Lvs0;J)V
-    .locals 1
+.field public static oneme_confirm_cancel:I = 0x7f0a067a
 
-    iget-object v0, p0, Lw5c;->a:Lvs0;
+.field public static oneme_confirm_delete:I = 0x7f0a067b
 
-    :try_start_0
-    invoke-virtual {p0, p2, p3}, Lw5c;->l0(J)V
-    :try_end_0
-    .catch Ljava/io/EOFException; {:try_start_0 .. :try_end_0} :catch_0
+.field public static oneme_confirm_delete_for_all:I = 0x7f0a067c
 
-    invoke-virtual {v0, p1, p2, p3}, Lvs0;->V(Lvs0;J)V
+.field public static oneme_confirm_leave:I = 0x7f0a067d
 
-    return-void
+.field public static oneme_confirm_mute_1_day:I = 0x7f0a067e
 
-    :catch_0
-    move-exception p0
+.field public static oneme_confirm_mute_1_hour:I = 0x7f0a067f
 
-    invoke-virtual {p1, v0}, Lvs0;->y0(Lhtd;)V
+.field public static oneme_confirm_mute_4_hour:I = 0x7f0a0680
 
-    throw p0
-.end method
+.field public static oneme_confirm_mute_infinite:I = 0x7f0a0681
 
-.method public final W(J)Z
-    .locals 4
+.field public static oneme_contacts_picker_toolbar:I = 0x7f0a06b0
 
-    const-wide/16 v0, 0x0
+.field public static oneme_folder_tag:I = 0x7f0a06be
 
-    cmp-long v0, p1, v0
+.field public static oneme_folder_widget_description:I = 0x7f0a06bf
 
-    if-ltz v0, :cond_3
+.field public static oneme_folder_widget_icon:I = 0x7f0a06c0
 
-    iget-boolean v0, p0, Lw5c;->b:Z
+.field public static oneme_folder_widget_section_empty_id:I = 0x7f0a06c1
 
-    if-nez v0, :cond_2
+.field public static oneme_folder_widget_section_empty_view_type:I = 0x7f0a06c2
 
-    :cond_0
-    iget-object v0, p0, Lw5c;->a:Lvs0;
+.field public static oneme_folder_widget_section_id:I = 0x7f0a06c3
 
-    iget-wide v1, v0, Lvs0;->b:J
+.field public static oneme_folder_widget_section_view_type:I = 0x7f0a06c4
 
-    cmp-long v1, v1, p1
+.field public static oneme_folder_widget_title:I = 0x7f0a06c5
 
-    if-gez v1, :cond_1
+.field public static oneme_folder_widget_view_type:I = 0x7f0a06c6
 
-    const/16 v1, 0x2000
+.field public static oneme_picker_chat_item_view_type:I = 0x7f0a078c
 
-    int-to-long v1, v1
+.field public static oneme_picker_confirm_cancel:I = 0x7f0a078d
 
-    iget-object v3, p0, Lw5c;->c:Lhtd;
+.field public static oneme_picker_confirm_close:I = 0x7f0a078e
 
-    invoke-interface {v3, v0, v1, v2}, Lhtd;->b(Lvs0;J)J
+.field public static oneme_picker_container_chats:I = 0x7f0a078f
 
-    move-result-wide v0
+.field public static oneme_picker_input_view:I = 0x7f0a0790
 
-    const-wide/16 v2, -0x1
+.field public static oneme_picker_main_container:I = 0x7f0a0791
 
-    cmp-long v0, v0, v2
+.field public static oneme_picker_media_keyboard_container:I = 0x7f0a0792
 
-    if-nez v0, :cond_0
+.field public static oneme_picker_members_list_view:I = 0x7f0a0793
 
-    const/4 p0, 0x0
+.field public static oneme_picker_quote_view:I = 0x7f0a0794
 
-    return p0
-
-    :cond_1
-    const/4 p0, 0x1
-
-    return p0
-
-    :cond_2
-    new-instance p0, Ljava/lang/IllegalStateException;
-
-    const-string p1, "closed"
-
-    invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p0
-
-    :cond_3
-    const-string p0, "byteCount < 0: "
-
-    invoke-static {p1, p2, p0}, Lu88;->h(JLjava/lang/String;)Ljava/lang/String;
-
-    move-result-object p0
-
-    new-instance p1, Ljava/lang/IllegalArgumentException;
-
-    invoke-virtual {p0}, Ljava/lang/Object;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    invoke-direct {p1, p0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-.end method
-
-.method public final a0()Ljava/lang/String;
-    .locals 2
-
-    const-wide v0, 0x7fffffffffffffffL
-
-    invoke-virtual {p0, v0, v1}, Lw5c;->j(J)Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public final b(Lvs0;J)J
-    .locals 5
-
-    const-wide/16 v0, 0x0
-
-    cmp-long v2, p2, v0
-
-    if-ltz v2, :cond_2
-
-    iget-boolean v2, p0, Lw5c;->b:Z
-
-    if-nez v2, :cond_1
-
-    iget-object v2, p0, Lw5c;->a:Lvs0;
-
-    iget-wide v3, v2, Lvs0;->b:J
-
-    cmp-long v0, v3, v0
-
-    if-nez v0, :cond_0
-
-    const/16 v0, 0x2000
-
-    int-to-long v0, v0
-
-    iget-object p0, p0, Lw5c;->c:Lhtd;
-
-    invoke-interface {p0, v2, v0, v1}, Lhtd;->b(Lvs0;J)J
-
-    move-result-wide v0
-
-    const-wide/16 v3, -0x1
-
-    cmp-long p0, v0, v3
-
-    if-nez p0, :cond_0
-
-    return-wide v3
-
-    :cond_0
-    iget-wide v0, v2, Lvs0;->b:J
-
-    invoke-static {p2, p3, v0, v1}, Ljava/lang/Math;->min(JJ)J
-
-    move-result-wide p2
-
-    invoke-virtual {v2, p1, p2, p3}, Lvs0;->b(Lvs0;J)J
-
-    move-result-wide p0
-
-    return-wide p0
-
-    :cond_1
-    new-instance p0, Ljava/lang/IllegalStateException;
-
-    const-string p1, "closed"
-
-    invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p0
-
-    :cond_2
-    const-string p0, "byteCount < 0: "
-
-    invoke-static {p2, p3, p0}, Lu88;->h(JLjava/lang/String;)Ljava/lang/String;
-
-    move-result-object p0
-
-    new-instance p1, Ljava/lang/IllegalArgumentException;
-
-    invoke-virtual {p0}, Ljava/lang/Object;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    invoke-direct {p1, p0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-.end method
-
-.method public final close()V
-    .locals 1
-
-    iget-boolean v0, p0, Lw5c;->b:Z
-
-    if-eqz v0, :cond_0
-
-    return-void
-
-    :cond_0
-    const/4 v0, 0x1
-
-    iput-boolean v0, p0, Lw5c;->b:Z
-
-    iget-object v0, p0, Lw5c;->c:Lhtd;
-
-    invoke-interface {v0}, Ljava/io/Closeable;->close()V
-
-    iget-object p0, p0, Lw5c;->a:Lvs0;
-
-    invoke-virtual {p0}, Lvs0;->m()V
-
-    return-void
-.end method
-
-.method public final e(J)Luv0;
-    .locals 0
-
-    invoke-virtual {p0, p1, p2}, Lw5c;->l0(J)V
-
-    iget-object p0, p0, Lw5c;->a:Lvs0;
-
-    invoke-virtual {p0, p1, p2}, Lvs0;->e(J)Luv0;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public final h0(Lpka;)I
-    .locals 6
-
-    iget-boolean v0, p0, Lw5c;->b:Z
-
-    if-nez v0, :cond_3
-
-    :cond_0
-    const/4 v0, 0x1
-
-    iget-object v1, p0, Lw5c;->a:Lvs0;
-
-    invoke-static {v1, p1, v0}, Let0;->b(Lvs0;Lpka;Z)I
-
-    move-result v0
-
-    const/4 v2, -0x2
-
-    const/4 v3, -0x1
-
-    if-eq v0, v2, :cond_1
-
-    if-eq v0, v3, :cond_2
-
-    iget-object p0, p1, Lpka;->a:[Luv0;
-
-    aget-object p0, p0, v0
-
-    invoke-virtual {p0}, Luv0;->c()I
-
-    move-result p0
-
-    int-to-long p0, p0
-
-    invoke-virtual {v1, p0, p1}, Lvs0;->skip(J)V
-
-    return v0
-
-    :cond_1
-    const/16 v0, 0x2000
-
-    int-to-long v4, v0
-
-    iget-object v0, p0, Lw5c;->c:Lhtd;
-
-    invoke-interface {v0, v1, v4, v5}, Lhtd;->b(Lvs0;J)J
-
-    move-result-wide v0
-
-    const-wide/16 v4, -0x1
-
-    cmp-long v0, v0, v4
-
-    if-nez v0, :cond_0
-
-    :cond_2
-    return v3
-
-    :cond_3
-    new-instance p0, Ljava/lang/IllegalStateException;
-
-    const-string p1, "closed"
-
-    invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p0
-.end method
-
-.method public final isOpen()Z
-    .locals 0
-
-    iget-boolean p0, p0, Lw5c;->b:Z
-
-    xor-int/lit8 p0, p0, 0x1
-
-    return p0
-.end method
-
-.method public final j(J)Ljava/lang/String;
-    .locals 19
-
-    move-wide/from16 v6, p1
-
-    const-wide/16 v0, 0x0
-
-    cmp-long v0, v6, v0
-
-    if-ltz v0, :cond_3
-
-    const-wide v8, 0x7fffffffffffffffL
-
-    cmp-long v0, v6, v8
-
-    const-wide/16 v10, 0x1
-
-    if-nez v0, :cond_0
-
-    move-wide v4, v8
-
-    goto :goto_0
-
-    :cond_0
-    add-long v0, v6, v10
-
-    move-wide v4, v0
-
-    :goto_0
-    const/16 v0, 0xa
-
-    int-to-byte v1, v0
-
-    const-wide/16 v2, 0x0
-
-    move-object/from16 v0, p0
-
-    invoke-virtual/range {v0 .. v5}, Lw5c;->n(BJJ)J
-
-    move-result-wide v2
-
-    const-wide/16 v12, -0x1
-
-    cmp-long v12, v2, v12
-
-    iget-object v13, v0, Lw5c;->a:Lvs0;
-
-    if-eqz v12, :cond_1
-
-    invoke-static {v13, v2, v3}, Let0;->a(Lvs0;J)Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
-
-    :cond_1
-    cmp-long v2, v4, v8
-
-    if-gez v2, :cond_2
-
-    invoke-virtual {v0, v4, v5}, Lw5c;->W(J)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_2
-
-    sub-long v2, v4, v10
-
-    invoke-virtual {v13, v2, v3}, Lvs0;->X(J)B
-
-    move-result v2
-
-    const/16 v3, 0xd
-
-    int-to-byte v3, v3
-
-    if-ne v2, v3, :cond_2
-
-    add-long v2, v4, v10
-
-    invoke-virtual {v0, v2, v3}, Lw5c;->W(J)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_2
-
-    invoke-virtual {v13, v4, v5}, Lvs0;->X(J)B
-
-    move-result v0
-
-    if-ne v0, v1, :cond_2
-
-    invoke-static {v13, v4, v5}, Let0;->a(Lvs0;J)Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
-
-    :cond_2
-    new-instance v14, Lvs0;
-
-    invoke-direct {v14}, Ljava/lang/Object;-><init>()V
-
-    iget-wide v0, v13, Lvs0;->b:J
-
-    const/16 v2, 0x20
-
-    int-to-long v2, v2
-
-    invoke-static {v2, v3, v0, v1}, Ljava/lang/Math;->min(JJ)J
-
-    move-result-wide v17
-
-    const-wide/16 v15, 0x0
-
-    invoke-virtual/range {v13 .. v18}, Lvs0;->o(Lvs0;JJ)V
-
-    new-instance v0, Ljava/io/EOFException;
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    const-string v2, "\\n not found: limit="
-
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-wide v2, v13, Lvs0;->b:J
-
-    invoke-static {v2, v3, v6, v7}, Ljava/lang/Math;->min(JJ)J
-
-    move-result-wide v2
-
-    invoke-virtual {v1, v2, v3}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    const-string v2, " content="
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-wide v2, v14, Lvs0;->b:J
-
-    invoke-virtual {v14, v2, v3}, Lvs0;->e(J)Luv0;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Luv0;->d()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v2, "\u2026"
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-direct {v0, v1}, Ljava/io/EOFException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-
-    :cond_3
-    const-string v0, "limit < 0: "
-
-    invoke-static {v6, v7, v0}, Lu88;->h(JLjava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    new-instance v1, Ljava/lang/IllegalArgumentException;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-direct {v1, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw v1
-.end method
-
-.method public final l0(J)V
-    .locals 0
-
-    invoke-virtual {p0, p1, p2}, Lw5c;->W(J)Z
-
-    move-result p0
-
-    if-eqz p0, :cond_0
-
-    return-void
-
-    :cond_0
-    new-instance p0, Ljava/io/EOFException;
-
-    invoke-direct {p0}, Ljava/io/EOFException;-><init>()V
-
-    throw p0
-.end method
-
-.method public final m()Z
-    .locals 4
-
-    iget-boolean v0, p0, Lw5c;->b:Z
-
-    if-nez v0, :cond_1
-
-    iget-object v0, p0, Lw5c;->a:Lvs0;
-
-    invoke-virtual {v0}, Lvs0;->W()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    const/16 v1, 0x2000
-
-    int-to-long v1, v1
-
-    iget-object p0, p0, Lw5c;->c:Lhtd;
-
-    invoke-interface {p0, v0, v1, v2}, Lhtd;->b(Lvs0;J)J
-
-    move-result-wide v0
-
-    const-wide/16 v2, -0x1
-
-    cmp-long p0, v0, v2
-
-    if-nez p0, :cond_0
-
-    const/4 p0, 0x1
-
-    return p0
-
-    :cond_0
-    const/4 p0, 0x0
-
-    return p0
-
-    :cond_1
-    new-instance p0, Ljava/lang/IllegalStateException;
-
-    const-string v0, "closed"
-
-    invoke-direct {p0, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p0
-.end method
-
-.method public final n(BJJ)J
-    .locals 9
-
-    iget-boolean p2, p0, Lw5c;->b:Z
-
-    if-nez p2, :cond_4
-
-    const-wide/16 p2, 0x0
-
-    cmp-long v0, p4, p2
-
-    if-ltz v0, :cond_3
-
-    move-wide v3, p2
-
-    :goto_0
-    cmp-long p2, v3, p4
-
-    const-wide/16 v7, -0x1
-
-    if-gez p2, :cond_2
-
-    iget-object v1, p0, Lw5c;->a:Lvs0;
-
-    move v2, p1
-
-    move-wide v5, p4
-
-    invoke-virtual/range {v1 .. v6}, Lvs0;->i0(BJJ)J
-
-    move-result-wide p1
-
-    cmp-long p3, p1, v7
-
-    if-eqz p3, :cond_0
-
-    return-wide p1
-
-    :cond_0
-    iget-wide p1, v1, Lvs0;->b:J
-
-    cmp-long p3, p1, v5
-
-    if-gez p3, :cond_2
-
-    const/16 p3, 0x2000
-
-    int-to-long p3, p3
-
-    iget-object p5, p0, Lw5c;->c:Lhtd;
-
-    invoke-interface {p5, v1, p3, p4}, Lhtd;->b(Lvs0;J)J
-
-    move-result-wide p3
-
-    cmp-long p3, p3, v7
-
-    if-nez p3, :cond_1
-
-    goto :goto_1
-
-    :cond_1
-    invoke-static {v3, v4, p1, p2}, Ljava/lang/Math;->max(JJ)J
-
-    move-result-wide v3
-
-    move p1, v2
-
-    move-wide p4, v5
-
-    goto :goto_0
-
-    :cond_2
-    :goto_1
-    return-wide v7
-
-    :cond_3
-    move-wide v5, p4
-
-    const-string p0, "fromIndex=0 toIndex="
-
-    invoke-static {v5, v6, p0}, Lu88;->h(JLjava/lang/String;)Ljava/lang/String;
-
-    move-result-object p0
-
-    new-instance p1, Ljava/lang/IllegalArgumentException;
-
-    invoke-virtual {p0}, Ljava/lang/Object;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    invoke-direct {p1, p0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-
-    :cond_4
-    new-instance p0, Ljava/lang/IllegalStateException;
-
-    const-string p1, "closed"
-
-    invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p0
-.end method
-
-.method public final o()I
-    .locals 2
-
-    const-wide/16 v0, 0x4
-
-    invoke-virtual {p0, v0, v1}, Lw5c;->l0(J)V
-
-    iget-object p0, p0, Lw5c;->a:Lvs0;
-
-    invoke-virtual {p0}, Lvs0;->readInt()I
-
-    move-result p0
-
-    const/high16 v0, -0x1000000
-
-    and-int/2addr v0, p0
-
-    ushr-int/lit8 v0, v0, 0x18
-
-    const/high16 v1, 0xff0000
-
-    and-int/2addr v1, p0
-
-    ushr-int/lit8 v1, v1, 0x8
-
-    or-int/2addr v0, v1
-
-    const v1, 0xff00
-
-    and-int/2addr v1, p0
-
-    shl-int/lit8 v1, v1, 0x8
-
-    or-int/2addr v0, v1
-
-    and-int/lit16 p0, p0, 0xff
-
-    shl-int/lit8 p0, p0, 0x18
-
-    or-int/2addr p0, v0
-
-    return p0
-.end method
-
-.method public final o0()J
-    .locals 6
-
-    const-wide/16 v0, 0x1
-
-    invoke-virtual {p0, v0, v1}, Lw5c;->l0(J)V
-
-    const/4 v0, 0x0
-
-    :goto_0
-    add-int/lit8 v1, v0, 0x1
-
-    int-to-long v2, v1
-
-    invoke-virtual {p0, v2, v3}, Lw5c;->W(J)Z
-
-    move-result v2
-
-    iget-object v3, p0, Lw5c;->a:Lvs0;
-
-    if-eqz v2, :cond_5
-
-    int-to-long v4, v0
-
-    invoke-virtual {v3, v4, v5}, Lvs0;->X(J)B
-
-    move-result v2
-
-    const/16 v4, 0x30
-
-    int-to-byte v4, v4
-
-    if-lt v2, v4, :cond_0
-
-    const/16 v4, 0x39
-
-    int-to-byte v4, v4
-
-    if-le v2, v4, :cond_2
-
-    :cond_0
-    const/16 v4, 0x61
-
-    int-to-byte v4, v4
-
-    if-lt v2, v4, :cond_1
-
-    const/16 v4, 0x66
-
-    int-to-byte v4, v4
-
-    if-le v2, v4, :cond_2
-
-    :cond_1
-    const/16 v4, 0x41
-
-    int-to-byte v4, v4
-
-    if-lt v2, v4, :cond_3
-
-    const/16 v4, 0x46
-
-    int-to-byte v4, v4
-
-    if-le v2, v4, :cond_2
-
-    goto :goto_1
-
-    :cond_2
-    move v0, v1
-
-    goto :goto_0
-
-    :cond_3
-    :goto_1
-    if-eqz v0, :cond_4
-
-    goto :goto_2
-
-    :cond_4
-    new-instance p0, Ljava/lang/NumberFormatException;
-
-    const/16 v0, 0x10
-
-    invoke-static {v0}, Lwqd;->h(I)V
-
-    invoke-static {v0}, Lwqd;->h(I)V
-
-    invoke-static {v2, v0}, Ljava/lang/Integer;->toString(II)Ljava/lang/String;
-
-    move-result-object v0
-
-    const-string v1, "Expected leading [0-9a-fA-F] character but was 0x"
-
-    invoke-virtual {v1, v0}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-direct {p0, v0}, Ljava/lang/NumberFormatException;-><init>(Ljava/lang/String;)V
-
-    throw p0
-
-    :cond_5
-    :goto_2
-    invoke-virtual {v3}, Lvs0;->o0()J
-
-    move-result-wide v0
-
-    return-wide v0
-.end method
-
-.method public final p()Lsse;
-    .locals 0
-
-    iget-object p0, p0, Lw5c;->c:Lhtd;
-
-    invoke-interface {p0}, Lhtd;->p()Lsse;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public final p0()Ljava/io/InputStream;
-    .locals 2
-
-    new-instance v0, Los0;
-
-    const/4 v1, 0x1
-
-    invoke-direct {v0, p0, v1}, Los0;-><init>(Lyt0;I)V
-
-    return-object v0
-.end method
-
-.method public final read(Ljava/nio/ByteBuffer;)I
-    .locals 5
-
-    iget-object v0, p0, Lw5c;->a:Lvs0;
-
-    iget-wide v1, v0, Lvs0;->b:J
-
-    const-wide/16 v3, 0x0
-
-    cmp-long v1, v1, v3
-
-    if-nez v1, :cond_0
-
-    const/16 v1, 0x2000
-
-    int-to-long v1, v1
-
-    iget-object p0, p0, Lw5c;->c:Lhtd;
-
-    invoke-interface {p0, v0, v1, v2}, Lhtd;->b(Lvs0;J)J
-
-    move-result-wide v1
-
-    const-wide/16 v3, -0x1
-
-    cmp-long p0, v1, v3
-
-    if-nez p0, :cond_0
-
-    const/4 p0, -0x1
-
-    return p0
-
-    :cond_0
-    invoke-virtual {v0, p1}, Lvs0;->read(Ljava/nio/ByteBuffer;)I
-
-    move-result p0
-
-    return p0
-.end method
-
-.method public final readByte()B
-    .locals 2
-
-    const-wide/16 v0, 0x1
-
-    invoke-virtual {p0, v0, v1}, Lw5c;->l0(J)V
-
-    iget-object p0, p0, Lw5c;->a:Lvs0;
-
-    invoke-virtual {p0}, Lvs0;->readByte()B
-
-    move-result p0
-
-    return p0
-.end method
-
-.method public final readFully([B)V
-    .locals 6
-
-    iget-object v0, p0, Lw5c;->a:Lvs0;
-
-    :try_start_0
-    array-length v1, p1
-
-    int-to-long v1, v1
-
-    invoke-virtual {p0, v1, v2}, Lw5c;->l0(J)V
-    :try_end_0
-    .catch Ljava/io/EOFException; {:try_start_0 .. :try_end_0} :catch_0
-
-    invoke-virtual {v0, p1}, Lvs0;->readFully([B)V
-
-    return-void
-
-    :catch_0
-    move-exception p0
-
-    const/4 v1, 0x0
-
-    :goto_0
-    iget-wide v2, v0, Lvs0;->b:J
-
-    const-wide/16 v4, 0x0
-
-    cmp-long v4, v2, v4
-
-    if-lez v4, :cond_1
-
-    long-to-int v2, v2
-
-    invoke-virtual {v0, p1, v1, v2}, Lvs0;->read([BII)I
-
-    move-result v2
-
-    const/4 v3, -0x1
-
-    if-eq v2, v3, :cond_0
-
-    add-int/2addr v1, v2
-
-    goto :goto_0
-
-    :cond_0
-    new-instance p0, Ljava/lang/AssertionError;
-
-    invoke-direct {p0}, Ljava/lang/AssertionError;-><init>()V
-
-    throw p0
-
-    :cond_1
-    throw p0
-.end method
-
-.method public final readInt()I
-    .locals 2
-
-    const-wide/16 v0, 0x4
-
-    invoke-virtual {p0, v0, v1}, Lw5c;->l0(J)V
-
-    iget-object p0, p0, Lw5c;->a:Lvs0;
-
-    invoke-virtual {p0}, Lvs0;->readInt()I
-
-    move-result p0
-
-    return p0
-.end method
-
-.method public final readLong()J
-    .locals 2
-
-    const-wide/16 v0, 0x8
-
-    invoke-virtual {p0, v0, v1}, Lw5c;->l0(J)V
-
-    iget-object p0, p0, Lw5c;->a:Lvs0;
-
-    invoke-virtual {p0}, Lvs0;->readLong()J
-
-    move-result-wide v0
-
-    return-wide v0
-.end method
-
-.method public final readShort()S
-    .locals 2
-
-    const-wide/16 v0, 0x2
-
-    invoke-virtual {p0, v0, v1}, Lw5c;->l0(J)V
-
-    iget-object p0, p0, Lw5c;->a:Lvs0;
-
-    invoke-virtual {p0}, Lvs0;->readShort()S
-
-    move-result p0
-
-    return p0
-.end method
-
-.method public final skip(J)V
-    .locals 5
-
-    iget-boolean v0, p0, Lw5c;->b:Z
-
-    if-nez v0, :cond_3
-
-    :goto_0
-    const-wide/16 v0, 0x0
-
-    cmp-long v2, p1, v0
-
-    if-lez v2, :cond_2
-
-    iget-object v2, p0, Lw5c;->a:Lvs0;
-
-    iget-wide v3, v2, Lvs0;->b:J
-
-    cmp-long v0, v3, v0
-
-    if-nez v0, :cond_1
-
-    const/16 v0, 0x2000
-
-    int-to-long v0, v0
-
-    iget-object v3, p0, Lw5c;->c:Lhtd;
-
-    invoke-interface {v3, v2, v0, v1}, Lhtd;->b(Lvs0;J)J
-
-    move-result-wide v0
-
-    const-wide/16 v3, -0x1
-
-    cmp-long v0, v0, v3
-
-    if-eqz v0, :cond_0
-
-    goto :goto_1
-
-    :cond_0
-    new-instance p0, Ljava/io/EOFException;
-
-    invoke-direct {p0}, Ljava/io/EOFException;-><init>()V
-
-    throw p0
-
-    :cond_1
-    :goto_1
-    iget-wide v0, v2, Lvs0;->b:J
-
-    invoke-static {p1, p2, v0, v1}, Ljava/lang/Math;->min(JJ)J
-
-    move-result-wide v0
-
-    invoke-virtual {v2, v0, v1}, Lvs0;->skip(J)V
-
-    sub-long/2addr p1, v0
-
-    goto :goto_0
-
-    :cond_2
-    return-void
-
-    :cond_3
-    new-instance p0, Ljava/lang/IllegalStateException;
-
-    const-string p1, "closed"
-
-    invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 2
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "buffer("
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object p0, p0, Lw5c;->c:Lhtd;
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const/16 p0, 0x29
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
-.end method
+.field public static oneme_saved_messages_clear_history:I = 0x7f0a079b

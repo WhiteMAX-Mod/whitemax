@@ -1,27 +1,26 @@
-.class public final Lvn0;
-.super Lzn0;
+.class public interface abstract Lvn0;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # virtual methods
-.method public final c()Ljava/lang/String;
-    .locals 0
-
-    const-string p0, "pipe_ui"
-
-    return-object p0
+.method public abstract a(I)Z
 .end method
 
-.method public final d()Ljava/lang/String;
-    .locals 0
-
-    const-string p0, "BitmapMemoryCacheGetProducer"
-
-    return-object p0
+.method public abstract clear()V
 .end method
 
-.method public final e(Lai0;Lwn0;Z)Lai0;
-    .locals 0
+.method public abstract d()Lf63;
+.end method
 
-    return-object p1
+.method public abstract e(ILf63;)V
+.end method
+
+.method public abstract f(ILf63;)V
+.end method
+
+.method public abstract i()Lf63;
+.end method
+
+.method public abstract k(I)Lf63;
 .end method

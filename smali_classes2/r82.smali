@@ -1,87 +1,109 @@
-.class public final Lr82;
-.super Ljava/lang/Object;
+.class public final enum Lr82;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:J
+# static fields
+.field public static final enum X:Lr82;
 
-.field public final b:I
+.field public static final synthetic Y:[Lr82;
 
-.field public final c:J
+.field public static final enum a:Lr82;
 
-.field public final d:Ljava/lang/String;
+.field public static final enum b:Lr82;
+
+.field public static final enum c:Lr82;
+
+.field public static final enum o:Lr82;
 
 
 # direct methods
-.method public constructor <init>(Lq82;)V
-    .locals 2
+.method static constructor <clinit>()V
+    .locals 7
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lr82;
 
-    iget-wide v0, p1, Lq82;->b:J
+    const-string v1, "NONE"
 
-    iput-wide v0, p0, Lr82;->a:J
+    const/4 v2, 0x0
 
-    iget v0, p1, Lq82;->a:I
+    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    iput v0, p0, Lr82;->b:I
+    sput-object v0, Lr82;->a:Lr82;
 
-    iget-wide v0, p1, Lq82;->c:J
+    new-instance v1, Lr82;
 
-    iput-wide v0, p0, Lr82;->c:J
+    const-string v2, "IN_PROGRESS"
 
-    iget-object p1, p1, Lq82;->d:Ljava/io/Serializable;
+    const/4 v3, 0x1
 
-    check-cast p1, Ljava/lang/String;
+    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    iput-object p1, p0, Lr82;->d:Ljava/lang/String;
+    sput-object v1, Lr82;->b:Lr82;
+
+    new-instance v2, Lr82;
+
+    const-string v3, "SENT"
+
+    const/4 v4, 0x2
+
+    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v2, Lr82;->c:Lr82;
+
+    new-instance v3, Lr82;
+
+    const-string v4, "READ"
+
+    const/4 v5, 0x3
+
+    invoke-direct {v3, v4, v5}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v3, Lr82;->o:Lr82;
+
+    new-instance v4, Lr82;
+
+    const-string v5, "ERROR"
+
+    const/4 v6, 0x4
+
+    invoke-direct {v4, v5, v6}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v4, Lr82;->X:Lr82;
+
+    filled-new-array {v0, v1, v2, v3, v4}, [Lr82;
+
+    move-result-object v0
+
+    sput-object v0, Lr82;->Y:[Lr82;
 
     return-void
 .end method
 
+.method public static valueOf(Ljava/lang/String;)Lr82;
+    .locals 1
 
-# virtual methods
-.method public final toString()Ljava/lang/String;
-    .locals 3
+    const-class v0, Lr82;
 
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "AdminParticipant{id="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-wide v1, p0, Lr82;->a:J
-
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    const-string v1, ", permissions="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget v1, p0, Lr82;->b:I
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string v1, ", inviterId="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-wide v1, p0, Lr82;->c:J
-
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    const-string v1, ", alias=\'"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object p0, p0, Lr82;->d:Ljava/lang/String;
-
-    const-string v1, "\'}"
-
-    invoke-static {v0, p0, v1}, Lm26;->j(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
 
     move-result-object p0
 
+    check-cast p0, Lr82;
+
     return-object p0
+.end method
+
+.method public static values()[Lr82;
+    .locals 1
+
+    sget-object v0, Lr82;->Y:[Lr82;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, [Lr82;
+
+    return-object v0
 .end method

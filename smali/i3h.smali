@@ -1,0 +1,6 @@
+.class public interface abstract Li3h;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+# interfaces
+.implements Landroid/os/IInterface;

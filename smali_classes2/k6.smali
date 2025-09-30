@@ -1,5 +1,5 @@
 .class public final Lk6;
-.super Lsdb;
+.super Lspb;
 .source "SourceFile"
 
 
@@ -7,51 +7,51 @@
 .method public constructor <init>(Landroid/content/Context;)V
     .locals 2
 
-    new-instance v0, Lded;
+    new-instance v0, Lsrd;
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, p1, v1}, Lded;-><init>(Landroid/content/Context;I)V
+    invoke-direct {v0, p1, v1}, Lsrd;-><init>(Landroid/content/Context;I)V
 
-    invoke-direct {p0, v0}, Lccc;-><init>(Landroid/view/View;)V
+    invoke-direct {p0, v0}, Lzoc;-><init>(Landroid/view/View;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final C()V
+.method public final E()V
     .locals 2
 
-    iget-object p0, p0, Lccc;->a:Landroid/view/View;
+    iget-object p0, p0, Lzoc;->a:Landroid/view/View;
 
     move-object v0, p0
 
-    check-cast v0, Lded;
+    check-cast v0, Lsrd;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    check-cast p0, Lded;
+    check-cast p0, Lsrd;
 
-    invoke-virtual {p0, v1}, Lded;->setOnSwitchListener(Lzdd;)V
+    invoke-virtual {p0, v1}, Lsrd;->setOnSwitchListener(Lord;)V
 
     return-void
 .end method
 
-.method public final x(Lol7;)V
+.method public final y(Lts7;)V
     .locals 0
 
     check-cast p1, Lu6;
 
-    iget-object p0, p0, Lccc;->a:Landroid/view/View;
+    iget-object p0, p0, Lzoc;->a:Landroid/view/View;
 
-    check-cast p0, Lded;
+    check-cast p0, Lsrd;
 
-    iget-object p1, p1, Lu6;->b:Leed;
+    iget-object p1, p1, Lu6;->b:Ltrd;
 
-    invoke-virtual {p0, p1}, Lded;->setModelItem(Lsdd;)V
+    invoke-virtual {p0, p1}, Lsrd;->setModelItem(Lird;)V
 
     return-void
 .end method

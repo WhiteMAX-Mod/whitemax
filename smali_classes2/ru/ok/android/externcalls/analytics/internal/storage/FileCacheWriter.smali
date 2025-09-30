@@ -313,22 +313,22 @@
     invoke-virtual {p3, p0}, Ljava/io/OutputStream;->write([B)V
 
     :cond_0
-    new-instance p0, Le0b;
+    new-instance p0, Lqbb;
 
-    new-instance p1, Lqla;
+    new-instance p1, Lcwa;
 
-    invoke-direct {p1, p3}, Lqla;-><init>(Ljava/io/OutputStream;)V
+    invoke-direct {p1, p3}, Lcwa;-><init>(Ljava/io/OutputStream;)V
 
-    invoke-direct {p0, p1}, Le0b;-><init>(Ljava/io/Writer;)V
+    invoke-direct {p0, p1}, Lqbb;-><init>(Ljava/io/Writer;)V
 
     :try_start_0
     sget-object p1, Lru/ok/android/externcalls/analytics/internal/event/EventSerializer;->INSTANCE:Lru/ok/android/externcalls/analytics/internal/event/EventSerializer;
 
-    invoke-virtual {p1, p0, p2}, Lru/ok/android/externcalls/analytics/internal/event/EventSerializer;->serialize(Lkb7;Lru/ok/android/externcalls/analytics/events/CallAnalyticsEvent;)V
+    invoke-virtual {p1, p0, p2}, Lru/ok/android/externcalls/analytics/internal/event/EventSerializer;->serialize(Lgi7;Lru/ok/android/externcalls/analytics/events/CallAnalyticsEvent;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    invoke-virtual {p0}, Le0b;->close()V
+    invoke-virtual {p0}, Lqbb;->close()V
 
     return-void
 
@@ -336,7 +336,7 @@
     move-exception p1
 
     :try_start_1
-    invoke-virtual {p0}, Le0b;->close()V
+    invoke-virtual {p0}, Lqbb;->close()V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 

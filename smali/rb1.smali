@@ -1,77 +1,82 @@
 .class public final Lrb1;
-.super Ljava/lang/Object;
+.super Lub1;
 .source "SourceFile"
-
-# interfaces
-.implements Lvo1;
 
 
 # instance fields
-.field public final synthetic a:Lone/me/calls/ui/bottomsheet/previewjoinlink/CallJoinLinkPreviewWidget;
+.field public final a:Z
 
 
 # direct methods
-.method public constructor <init>(Lone/me/calls/ui/bottomsheet/previewjoinlink/CallJoinLinkPreviewWidget;)V
+.method public constructor <init>(Z)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lrb1;->a:Lone/me/calls/ui/bottomsheet/previewjoinlink/CallJoinLinkPreviewWidget;
+    iput-boolean p1, p0, Lrb1;->a:Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final B()V
-    .locals 10
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 3
 
-    sget-object v0, Lone/me/calls/ui/bottomsheet/previewjoinlink/CallJoinLinkPreviewWidget;->x0:[Lbc7;
+    const/4 v0, 0x1
 
-    iget-object p0, p0, Lrb1;->a:Lone/me/calls/ui/bottomsheet/previewjoinlink/CallJoinLinkPreviewWidget;
+    if-ne p0, p1, :cond_0
 
-    invoke-virtual {p0}, Lone/me/calls/ui/bottomsheet/previewjoinlink/CallJoinLinkPreviewWidget;->t0()Lnb1;
-
-    move-result-object p0
-
-    iget-object p0, p0, Lnb1;->s0:Lazd;
+    return v0
 
     :cond_0
-    invoke-virtual {p0}, Lazd;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    move-object v1, v0
-
-    check-cast v1, Lfb1;
-
-    iget-boolean v2, v1, Lfb1;->d:Z
-
-    xor-int/lit8 v5, v2, 0x1
-
-    const/4 v8, 0x0
-
-    const/16 v9, 0x77
+    instance-of v1, p1, Lrb1;
 
     const/4 v2, 0x0
 
-    const/4 v3, 0x0
+    if-nez v1, :cond_1
 
-    const/4 v4, 0x0
+    return v2
 
-    const/4 v6, 0x0
+    :cond_1
+    check-cast p1, Lrb1;
 
-    const/4 v7, 0x0
+    iget-boolean p0, p0, Lrb1;->a:Z
 
-    invoke-static/range {v1 .. v9}, Lfb1;->a(Lfb1;Led0;Lf38;Lf38;ZLmoe;Ljava/util/ArrayList;Lmoe;I)Lfb1;
+    iget-boolean p1, p1, Lrb1;->a:Z
 
-    move-result-object v1
+    if-eq p0, p1, :cond_2
 
-    invoke-virtual {p0, v0, v1}, Lazd;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
+    return v2
 
-    move-result v0
+    :cond_2
+    return v0
+.end method
 
-    if-eqz v0, :cond_0
+.method public final hashCode()I
+    .locals 0
 
-    return-void
+    iget-boolean p0, p0, Lrb1;->a:Z
+
+    invoke-static {p0}, Ljava/lang/Boolean;->hashCode(Z)I
+
+    move-result p0
+
+    return p0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 2
+
+    const-string v0, "RaiseHand(isRaised="
+
+    const-string v1, ")"
+
+    iget-boolean p0, p0, Lrb1;->a:Z
+
+    invoke-static {v0, v1, p0}, Lz7e;->r(Ljava/lang/String;Ljava/lang/String;Z)Ljava/lang/String;
+
+    move-result-object p0
+
+    return-object p0
 .end method

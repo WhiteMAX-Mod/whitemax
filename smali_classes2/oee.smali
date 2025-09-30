@@ -3,98 +3,62 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lzm5;
+.implements Lps9;
 
 
 # instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Lat2;
-
-.field public final synthetic c:Lree;
+.field public final synthetic a:Lqee;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lat2;Lree;I)V
+.method public constructor <init>(Lqee;)V
     .locals 0
 
-    iput p3, p0, Loee;->a:I
-
-    iput-object p1, p0, Loee;->b:Lat2;
-
-    iput-object p2, p0, Loee;->c:Lree;
-
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Loee;->a:Lqee;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final d(Lbn5;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-    .locals 3
+.method public final onFailed(Ljava/lang/Throwable;)V
+    .locals 1
 
-    iget v0, p0, Loee;->a:I
+    iget-object p0, p0, Loee;->a:Lqee;
 
-    packed-switch v0, :pswitch_data_0
+    iget-object v0, p0, Lqee;->f:Lpw;
 
-    new-instance v0, Lnee;
+    invoke-virtual {p0, v0, p1}, Lfy;->b(Lpw;Ljava/lang/Throwable;)V
 
-    iget-object v1, p0, Loee;->c:Lree;
+    return-void
+.end method
 
-    const/4 v2, 0x1
+.method public final onFinished(Ljava/lang/String;Ljava/io/File;Ljava/lang/String;)V
+    .locals 2
 
-    invoke-direct {v0, p1, v1, v2}, Lnee;-><init>(Lbn5;Lree;I)V
+    iget-object p1, p0, Loee;->a:Lqee;
 
-    iget-object p0, p0, Loee;->b:Lat2;
+    iget-object p1, p1, Lqee;->c:Lzte;
 
-    invoke-virtual {p0, v0, p2}, Lat2;->d(Lbn5;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    invoke-virtual {p1}, Lzte;->getValue()Ljava/lang/Object;
 
-    move-result-object p0
+    move-result-object p1
 
-    sget-object p1, Lpx3;->a:Lpx3;
+    check-cast p1, Lkha;
 
-    if-ne p0, p1, :cond_0
+    invoke-virtual {p1}, Lkha;->c()Ljava/util/concurrent/ExecutorService;
 
-    goto :goto_0
+    move-result-object p1
 
-    :cond_0
-    sget-object p0, Le5f;->a:Le5f;
+    new-instance v0, Ljxc;
 
-    :goto_0
-    return-object p0
+    const/4 v1, 0x6
 
-    :pswitch_0
-    new-instance v0, Lnee;
+    invoke-direct {v0, p0, p2, p3, v1}, Ljxc;-><init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;I)V
 
-    iget-object v1, p0, Loee;->c:Lree;
+    invoke-interface {p1, v0}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
 
-    const/4 v2, 0x0
-
-    invoke-direct {v0, p1, v1, v2}, Lnee;-><init>(Lbn5;Lree;I)V
-
-    iget-object p0, p0, Loee;->b:Lat2;
-
-    invoke-virtual {p0, v0, p2}, Lat2;->d(Lbn5;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    sget-object p1, Lpx3;->a:Lpx3;
-
-    if-ne p0, p1, :cond_1
-
-    goto :goto_1
-
-    :cond_1
-    sget-object p0, Le5f;->a:Le5f;
-
-    :goto_1
-    return-object p0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-void
 .end method

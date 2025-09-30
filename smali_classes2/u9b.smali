@@ -1,100 +1,78 @@
 .class public final Lu9b;
-.super Lqde;
+.super Lrl;
 .source "SourceFile"
 
 # interfaces
-.implements Ll66;
+.implements Lvye;
 
 
 # instance fields
-.field public synthetic X:Ljava/lang/Object;
-
-.field public final synthetic Y:Lone/me/profileedit/screens/changelink/ProfileChangeLinkScreen;
+.field public final o:Z
 
 
 # direct methods
-.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/profileedit/screens/changelink/ProfileChangeLinkScreen;)V
+.method public constructor <init>(JZ)V
     .locals 0
 
-    iput-object p2, p0, Lu9b;->Y:Lone/me/profileedit/screens/changelink/ProfileChangeLinkScreen;
+    invoke-direct {p0, p1, p2}, Lrl;-><init>(J)V
 
-    const/4 p2, 0x2
-
-    invoke-direct {p0, p2, p1}, Lqde;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-boolean p3, p0, Lu9b;->o:Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+.method public final e(Lsxe;)V
     .locals 0
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Lu9b;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p0
-
-    check-cast p0, Lu9b;
-
-    sget-object p1, Le5f;->a:Le5f;
-
-    invoke-virtual {p0, p1}, Lu9b;->o(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p1
+    return-void
 .end method
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 1
+.method public final h()Lpxe;
+    .locals 3
 
-    new-instance v0, Lu9b;
+    new-instance v0, Ljk9;
 
-    iget-object p0, p0, Lu9b;->Y:Lone/me/profileedit/screens/changelink/ProfileChangeLinkScreen;
+    const/4 v1, 0x0
 
-    invoke-direct {v0, p2, p0}, Lu9b;-><init>(Lkotlin/coroutines/Continuation;Lone/me/profileedit/screens/changelink/ProfileChangeLinkScreen;)V
+    const/16 v2, 0xf
 
-    iput-object p1, v0, Lu9b;->X:Ljava/lang/Object;
+    invoke-direct {v0, v1, v2}, Ljk9;-><init>(Lyta;I)V
+
+    const-string v1, "interactive"
+
+    iget-boolean p0, p0, Lu9b;->o:Z
+
+    invoke-virtual {v0, v1, p0}, Lpxe;->e(Ljava/lang/String;Z)V
 
     return-object v0
 .end method
 
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final j(Lcxe;)V
+    .locals 4
 
-    invoke-static {p1}, Lsgg;->Z(Ljava/lang/Object;)V
+    iget-object v0, p0, Lrl;->c:Lsl;
 
-    iget-object p1, p0, Lu9b;->X:Ljava/lang/Object;
+    if-eqz v0, :cond_0
 
-    check-cast p1, Lkl9;
-
-    instance-of p1, p1, Lx23;
-
-    if-eqz p1, :cond_1
-
-    sget-object p1, Lone/me/profileedit/screens/changelink/ProfileChangeLinkScreen;->r0:[Lbc7;
-
-    iget-object p0, p0, Lu9b;->Y:Lone/me/profileedit/screens/changelink/ProfileChangeLinkScreen;
-
-    invoke-virtual {p0}, Lou3;->getView()Landroid/view/View;
-
-    move-result-object p1
-
-    if-eqz p1, :cond_0
-
-    invoke-virtual {p1}, Landroid/view/View;->clearFocus()V
+    goto :goto_0
 
     :cond_0
-    invoke-static {p0}, Lsbg;->u(Lou3;)V
+    const/4 v0, 0x0
 
-    invoke-virtual {p0}, Lou3;->getRouter()Lcmc;
+    :goto_0
+    invoke-virtual {v0}, Lsl;->b()Lfv0;
 
-    move-result-object p1
+    move-result-object v0
 
-    invoke-virtual {p1, p0}, Lcmc;->B(Lou3;)Z
+    new-instance v1, Lni0;
 
-    :cond_1
-    sget-object p0, Le5f;->a:Le5f;
+    iget-wide v2, p0, Lrl;->a:J
 
-    return-object p0
+    invoke-direct {v1, v2, v3, p1}, Lni0;-><init>(JLcxe;)V
+
+    invoke-virtual {v0, v1}, Lfv0;->c(Ljava/lang/Object;)V
+
+    return-void
 .end method

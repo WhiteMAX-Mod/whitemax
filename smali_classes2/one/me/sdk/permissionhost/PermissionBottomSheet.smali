@@ -42,34 +42,34 @@
 
 
 # static fields
-.field public static final synthetic D0:[Lbc7;
+.field public static final synthetic I0:[Lxi7;
 
 
 # instance fields
-.field public final A0:Lvr;
+.field public final A0:Lfr;
 
-.field public final B0:Lvr;
+.field public final B0:Lfr;
 
-.field public C0:Z
+.field public final C0:Lfr;
 
-.field public final u0:Lje7;
+.field public final D0:Lfr;
 
-.field public final v0:Lvr;
+.field public final E0:Lfr;
 
-.field public final w0:Lvr;
+.field public final F0:Lfr;
 
-.field public final x0:Lvr;
+.field public final G0:Lfr;
 
-.field public final y0:Lvr;
+.field public H0:Z
 
-.field public final z0:Lvr;
+.field public final z0:Lcl7;
 
 
 # direct methods
 .method static constructor <clinit>()V
     .locals 10
 
-    new-instance v0, Lbh9;
+    new-instance v0, Lmo9;
 
     const-string v1, "settingsMode"
 
@@ -77,61 +77,61 @@
 
     const-class v3, Lone/me/sdk/permissionhost/PermissionBottomSheet;
 
-    invoke-direct {v0, v3, v1, v2}, Lbh9;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v0, v3, v1, v2}, Lmo9;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;)V
 
-    sget-object v1, Llcc;->a:Lmcc;
+    sget-object v1, Ljpc;->a:Lkpc;
 
     const-string v2, "titleId"
 
     const-string v4, "getTitleId()I"
 
-    invoke-static {v1, v3, v2, v4}, Lm26;->f(Lmcc;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;)Lbh9;
+    invoke-static {v1, v3, v2, v4}, Lee5;->g(Lkpc;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;)Lmo9;
 
     move-result-object v1
 
-    new-instance v2, Lbh9;
+    new-instance v2, Lmo9;
 
     const-string v4, "rationaleId"
 
     const-string v5, "getRationaleId()I"
 
-    invoke-direct {v2, v3, v4, v5}, Lbh9;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v2, v3, v4, v5}, Lmo9;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;)V
 
-    new-instance v4, Lbh9;
+    new-instance v4, Lmo9;
 
     const-string v5, "positiveButtonId"
 
     const-string v6, "getPositiveButtonId()I"
 
-    invoke-direct {v4, v3, v5, v6}, Lbh9;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v4, v3, v5, v6}, Lmo9;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;)V
 
-    new-instance v5, Lbh9;
+    new-instance v5, Lmo9;
 
     const-string v6, "requestedPermissions"
 
     const-string v7, "getRequestedPermissions()[Ljava/lang/String;"
 
-    invoke-direct {v5, v3, v6, v7}, Lbh9;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v5, v3, v6, v7}, Lmo9;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;)V
 
-    new-instance v6, Lbh9;
+    new-instance v6, Lmo9;
 
     const-string v7, "requestCode"
 
     const-string v8, "getRequestCode()I"
 
-    invoke-direct {v6, v3, v7, v8}, Lbh9;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v6, v3, v7, v8}, Lmo9;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;)V
 
-    new-instance v7, Lbh9;
+    new-instance v7, Lmo9;
 
     const-string v8, "isCallbackSent"
 
     const-string v9, "isCallbackSent()Z"
 
-    invoke-direct {v7, v3, v8, v9}, Lbh9;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v7, v3, v8, v9}, Lmo9;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;)V
 
     const/4 v3, 0x7
 
-    new-array v3, v3, [Lbc7;
+    new-array v3, v3, [Lxi7;
 
     const/4 v8, 0x0
 
@@ -161,7 +161,7 @@
 
     aput-object v7, v3, v0
 
-    sput-object v3, Lone/me/sdk/permissionhost/PermissionBottomSheet;->D0:[Lbc7;
+    sput-object v3, Lone/me/sdk/permissionhost/PermissionBottomSheet;->I0:[Lxi7;
 
     return-void
 .end method
@@ -174,98 +174,98 @@
     const/4 v1, 0x1
 
     .line 1
-    invoke-direct {p0, v0, v1, v0}, Lone/me/sdk/bottomsheet/BottomSheetWidget;-><init>(Landroid/os/Bundle;ILl94;)V
+    invoke-direct {p0, v0, v1, v0}, Lone/me/sdk/bottomsheet/BottomSheetWidget;-><init>(Landroid/os/Bundle;ILld4;)V
 
     .line 2
-    sget-object v0, Lvra;->a:Lvra;
+    sget-object v0, Lq2b;->a:Lq2b;
 
-    invoke-virtual {v0}, Lvra;->b()Lje7;
+    invoke-virtual {v0}, Lq2b;->b()Lcl7;
 
     move-result-object v0
 
-    iput-object v0, p0, Lone/me/sdk/permissionhost/PermissionBottomSheet;->u0:Lje7;
+    iput-object v0, p0, Lone/me/sdk/permissionhost/PermissionBottomSheet;->z0:Lcl7;
 
     .line 3
     sget-object v0, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
 
     .line 4
-    new-instance v1, Lvr;
+    new-instance v1, Lfr;
 
     const-class v2, Ljava/lang/Boolean;
 
     const-string v3, "PermissionBottomSheet.settings_mode"
 
-    invoke-direct {v1, v2, v0, v3}, Lvr;-><init>(Ljava/lang/Class;Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-direct {v1, v2, v0, v3}, Lfr;-><init>(Ljava/lang/Class;Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 5
-    iput-object v1, p0, Lone/me/sdk/permissionhost/PermissionBottomSheet;->v0:Lvr;
+    iput-object v1, p0, Lone/me/sdk/permissionhost/PermissionBottomSheet;->A0:Lfr;
 
     .line 6
-    new-instance v0, Lvr;
+    new-instance v0, Lfr;
 
     const-class v1, Ljava/lang/Integer;
 
     const-string v3, "PermissionBottomSheet.title_res"
 
-    invoke-direct {v0, v1, v3}, Lvr;-><init>(Ljava/lang/Class;Ljava/lang/String;)V
+    invoke-direct {v0, v1, v3}, Lfr;-><init>(Ljava/lang/Class;Ljava/lang/String;)V
 
     .line 7
-    iput-object v0, p0, Lone/me/sdk/permissionhost/PermissionBottomSheet;->w0:Lvr;
+    iput-object v0, p0, Lone/me/sdk/permissionhost/PermissionBottomSheet;->B0:Lfr;
 
     .line 8
-    new-instance v0, Lvr;
+    new-instance v0, Lfr;
 
     const-string v3, "PermissionBottomSheet.rationale_res"
 
-    invoke-direct {v0, v1, v3}, Lvr;-><init>(Ljava/lang/Class;Ljava/lang/String;)V
+    invoke-direct {v0, v1, v3}, Lfr;-><init>(Ljava/lang/Class;Ljava/lang/String;)V
 
     .line 9
-    iput-object v0, p0, Lone/me/sdk/permissionhost/PermissionBottomSheet;->x0:Lvr;
+    iput-object v0, p0, Lone/me/sdk/permissionhost/PermissionBottomSheet;->C0:Lfr;
 
     .line 10
-    new-instance v0, Lvr;
+    new-instance v0, Lfr;
 
     const-string v3, "PermissionBottomSheet.positive_button_res"
 
-    invoke-direct {v0, v1, v3}, Lvr;-><init>(Ljava/lang/Class;Ljava/lang/String;)V
+    invoke-direct {v0, v1, v3}, Lfr;-><init>(Ljava/lang/Class;Ljava/lang/String;)V
 
     .line 11
-    iput-object v0, p0, Lone/me/sdk/permissionhost/PermissionBottomSheet;->y0:Lvr;
+    iput-object v0, p0, Lone/me/sdk/permissionhost/PermissionBottomSheet;->D0:Lfr;
 
     .line 12
-    new-instance v0, Lvr;
+    new-instance v0, Lfr;
 
     const-class v3, [Ljava/lang/String;
 
     const-string v4, "PermissionBottomSheet.permissions"
 
-    invoke-direct {v0, v3, v4}, Lvr;-><init>(Ljava/lang/Class;Ljava/lang/String;)V
+    invoke-direct {v0, v3, v4}, Lfr;-><init>(Ljava/lang/Class;Ljava/lang/String;)V
 
     .line 13
-    iput-object v0, p0, Lone/me/sdk/permissionhost/PermissionBottomSheet;->z0:Lvr;
+    iput-object v0, p0, Lone/me/sdk/permissionhost/PermissionBottomSheet;->E0:Lfr;
 
     .line 14
-    new-instance v0, Lvr;
+    new-instance v0, Lfr;
 
     const-string v3, "PermissionBottomSheet.request_code"
 
-    invoke-direct {v0, v1, v3}, Lvr;-><init>(Ljava/lang/Class;Ljava/lang/String;)V
+    invoke-direct {v0, v1, v3}, Lfr;-><init>(Ljava/lang/Class;Ljava/lang/String;)V
 
     .line 15
-    iput-object v0, p0, Lone/me/sdk/permissionhost/PermissionBottomSheet;->A0:Lvr;
+    iput-object v0, p0, Lone/me/sdk/permissionhost/PermissionBottomSheet;->F0:Lfr;
 
     .line 16
     sget-object v0, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
 
     .line 17
-    new-instance v1, Lvr;
+    new-instance v1, Lfr;
 
     const-string v3, "callback_sent"
 
-    invoke-direct {v1, v2, v0, v3}, Lvr;-><init>(Ljava/lang/Class;Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-direct {v1, v2, v0, v3}, Lfr;-><init>(Ljava/lang/Class;Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 18
-    iput-object v1, p0, Lone/me/sdk/permissionhost/PermissionBottomSheet;->B0:Lvr;
+    iput-object v1, p0, Lone/me/sdk/permissionhost/PermissionBottomSheet;->G0:Lfr;
 
     return-void
 .end method
@@ -277,11 +277,11 @@
     invoke-direct {p0}, Lone/me/sdk/permissionhost/PermissionBottomSheet;-><init>()V
 
     .line 25
-    iget-object v0, p0, Lone/me/sdk/permissionhost/PermissionBottomSheet;->w0:Lvr;
+    iget-object v0, p0, Lone/me/sdk/permissionhost/PermissionBottomSheet;->B0:Lfr;
 
     const/4 v1, 0x1
 
-    sget-object v2, Lone/me/sdk/permissionhost/PermissionBottomSheet;->D0:[Lbc7;
+    sget-object v2, Lone/me/sdk/permissionhost/PermissionBottomSheet;->I0:[Lxi7;
 
     aget-object v1, v2, v1
 
@@ -289,10 +289,10 @@
 
     move-result-object p1
 
-    invoke-virtual {v0, p0, p1}, Lvr;->b(Lone/me/sdk/arch/Widget;Ljava/lang/Object;)V
+    invoke-virtual {v0, p0, p1}, Lfr;->b(Lone/me/sdk/arch/Widget;Ljava/lang/Object;)V
 
     .line 26
-    iget-object p1, p0, Lone/me/sdk/permissionhost/PermissionBottomSheet;->x0:Lvr;
+    iget-object p1, p0, Lone/me/sdk/permissionhost/PermissionBottomSheet;->C0:Lfr;
 
     const/4 v0, 0x2
 
@@ -302,7 +302,7 @@
 
     move-result-object p2
 
-    invoke-virtual {p1, p0, p2}, Lvr;->b(Lone/me/sdk/arch/Widget;Ljava/lang/Object;)V
+    invoke-virtual {p1, p0, p2}, Lfr;->b(Lone/me/sdk/arch/Widget;Ljava/lang/Object;)V
 
     return-void
 .end method
@@ -314,18 +314,18 @@
     invoke-direct {p0, p3, p4}, Lone/me/sdk/permissionhost/PermissionBottomSheet;-><init>(II)V
 
     .line 20
-    iget-object p3, p0, Lone/me/sdk/permissionhost/PermissionBottomSheet;->z0:Lvr;
+    iget-object p3, p0, Lone/me/sdk/permissionhost/PermissionBottomSheet;->E0:Lfr;
 
     const/4 p4, 0x4
 
-    sget-object v0, Lone/me/sdk/permissionhost/PermissionBottomSheet;->D0:[Lbc7;
+    sget-object v0, Lone/me/sdk/permissionhost/PermissionBottomSheet;->I0:[Lxi7;
 
     aget-object p4, v0, p4
 
-    invoke-virtual {p3, p0, p1}, Lvr;->b(Lone/me/sdk/arch/Widget;Ljava/lang/Object;)V
+    invoke-virtual {p3, p0, p1}, Lfr;->b(Lone/me/sdk/arch/Widget;Ljava/lang/Object;)V
 
     .line 21
-    iget-object p1, p0, Lone/me/sdk/permissionhost/PermissionBottomSheet;->A0:Lvr;
+    iget-object p1, p0, Lone/me/sdk/permissionhost/PermissionBottomSheet;->F0:Lfr;
 
     const/4 p3, 0x5
 
@@ -335,10 +335,10 @@
 
     move-result-object p2
 
-    invoke-virtual {p1, p0, p2}, Lvr;->b(Lone/me/sdk/arch/Widget;Ljava/lang/Object;)V
+    invoke-virtual {p1, p0, p2}, Lfr;->b(Lone/me/sdk/arch/Widget;Ljava/lang/Object;)V
 
     .line 22
-    iget-object p1, p0, Lone/me/sdk/permissionhost/PermissionBottomSheet;->y0:Lvr;
+    iget-object p1, p0, Lone/me/sdk/permissionhost/PermissionBottomSheet;->D0:Lfr;
 
     const/4 p2, 0x3
 
@@ -348,10 +348,10 @@
 
     move-result-object p2
 
-    invoke-virtual {p1, p0, p2}, Lvr;->b(Lone/me/sdk/arch/Widget;Ljava/lang/Object;)V
+    invoke-virtual {p1, p0, p2}, Lfr;->b(Lone/me/sdk/arch/Widget;Ljava/lang/Object;)V
 
     .line 23
-    iget-object p1, p0, Lone/me/sdk/permissionhost/PermissionBottomSheet;->v0:Lvr;
+    iget-object p1, p0, Lone/me/sdk/permissionhost/PermissionBottomSheet;->A0:Lfr;
 
     const/4 p2, 0x0
 
@@ -359,14 +359,14 @@
 
     sget-object p2, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
 
-    invoke-virtual {p1, p0, p2}, Lvr;->b(Lone/me/sdk/arch/Widget;Ljava/lang/Object;)V
+    invoke-virtual {p1, p0, p2}, Lfr;->b(Lone/me/sdk/arch/Widget;Ljava/lang/Object;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final A0(Landroid/view/LayoutInflater;Landroid/widget/FrameLayout;)Landroid/view/View;
+.method public final K0(Landroid/view/LayoutInflater;Landroid/widget/FrameLayout;)Landroid/view/View;
     .locals 10
 
     new-instance p2, Landroid/widget/LinearLayout;
@@ -391,17 +391,17 @@
 
     invoke-direct {v0, v1, v2}, Landroidx/appcompat/widget/AppCompatTextView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    sget v1, Ldea;->e:I
+    sget v1, Lgna;->e:I
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setId(I)V
 
-    sget-object v1, Lone/me/sdk/permissionhost/PermissionBottomSheet;->D0:[Lbc7;
+    sget-object v1, Lone/me/sdk/permissionhost/PermissionBottomSheet;->I0:[Lxi7;
 
     aget-object v3, v1, p1
 
-    iget-object v3, p0, Lone/me/sdk/permissionhost/PermissionBottomSheet;->w0:Lvr;
+    iget-object v3, p0, Lone/me/sdk/permissionhost/PermissionBottomSheet;->B0:Lfr;
 
-    invoke-virtual {v3, p0}, Lvr;->a(Lone/me/sdk/arch/Widget;)Ljava/lang/Object;
+    invoke-virtual {v3, p0}, Lfr;->a(Lone/me/sdk/arch/Widget;)Ljava/lang/Object;
 
     move-result-object v3
 
@@ -419,37 +419,33 @@
 
     invoke-virtual {v0, v3}, Landroid/view/View;->setTextAlignment(I)V
 
-    sget-object v4, Lh4f;->c:Lnoe;
+    sget-object v4, Lclf;->c:Lv2f;
 
-    invoke-static {v4, v0}, Lnoe;->d(Lnoe;Landroid/widget/TextView;)V
+    invoke-static {v4, v0}, Lv2f;->d(Lv2f;Landroid/widget/TextView;)V
 
-    sget-object v4, Lqp4;->q0:Lap9;
+    new-instance v4, Lp22;
 
-    invoke-virtual {v4, v0}, Lap9;->h(Landroid/view/View;)Lyha;
+    const/4 v5, 0x2
 
-    move-result-object v5
+    const/4 v6, 0x3
 
-    invoke-interface {v5}, Lyha;->getText()Lane;
+    invoke-direct {v4, v6, v2, v5}, Lp22;-><init>(ILkotlin/coroutines/Continuation;I)V
 
-    move-result-object v5
+    invoke-static {v4, v0}, Ljs9;->t(Lrc6;Landroid/view/View;)V
 
-    iget v5, v5, Lane;->e:I
+    new-instance v4, Landroid/widget/LinearLayout$LayoutParams;
 
-    invoke-virtual {v0, v5}, Landroid/widget/TextView;->setTextColor(I)V
-
-    new-instance v5, Landroid/widget/LinearLayout$LayoutParams;
-
-    const/4 v6, -0x1
+    const/4 v5, -0x1
 
     const/4 v7, -0x2
 
-    invoke-direct {v5, v6, v7}, Landroid/widget/LinearLayout$LayoutParams;-><init>(II)V
+    invoke-direct {v4, v5, v7}, Landroid/widget/LinearLayout$LayoutParams;-><init>(II)V
 
     const/16 v8, 0x10
 
     int-to-float v8, v8
 
-    invoke-static {}, Lgk4;->d()Landroid/content/res/Resources;
+    invoke-static {}, Lvo4;->d()Landroid/content/res/Resources;
 
     move-result-object v9
 
@@ -461,69 +457,65 @@
 
     mul-float/2addr v8, v9
 
-    invoke-static {v8}, Lkhg;->x(F)I
+    invoke-static {v8}, Lya6;->G(F)I
 
     move-result v8
 
-    iput v8, v5, Landroid/widget/LinearLayout$LayoutParams;->topMargin:I
+    iput v8, v4, Landroid/widget/LinearLayout$LayoutParams;->topMargin:I
 
-    invoke-virtual {p2, v0, v5}, Landroid/view/ViewGroup;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
+    invoke-virtual {p2, v0, v4}, Landroid/view/ViewGroup;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
     new-instance v0, Landroidx/appcompat/widget/AppCompatTextView;
 
     invoke-virtual {p2}, Landroid/view/View;->getContext()Landroid/content/Context;
 
-    move-result-object v5
+    move-result-object v4
 
-    invoke-direct {v0, v5, v2}, Landroidx/appcompat/widget/AppCompatTextView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
+    invoke-direct {v0, v4, v2}, Landroidx/appcompat/widget/AppCompatTextView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    sget v5, Ldea;->d:I
+    sget v4, Lgna;->d:I
 
-    invoke-virtual {v0, v5}, Landroid/view/View;->setId(I)V
+    invoke-virtual {v0, v4}, Landroid/view/View;->setId(I)V
 
-    const/4 v5, 0x2
+    const/4 v4, 0x2
 
-    aget-object v5, v1, v5
+    aget-object v4, v1, v4
 
-    iget-object v5, p0, Lone/me/sdk/permissionhost/PermissionBottomSheet;->x0:Lvr;
+    iget-object v4, p0, Lone/me/sdk/permissionhost/PermissionBottomSheet;->C0:Lfr;
 
-    invoke-virtual {v5, p0}, Lvr;->a(Lone/me/sdk/arch/Widget;)Ljava/lang/Object;
+    invoke-virtual {v4, p0}, Lfr;->a(Lone/me/sdk/arch/Widget;)Ljava/lang/Object;
 
-    move-result-object v5
+    move-result-object v4
 
-    check-cast v5, Ljava/lang/Number;
+    check-cast v4, Ljava/lang/Number;
 
-    invoke-virtual {v5}, Ljava/lang/Number;->intValue()I
+    invoke-virtual {v4}, Ljava/lang/Number;->intValue()I
 
-    move-result v5
+    move-result v4
 
-    invoke-virtual {v0, v5}, Landroid/widget/TextView;->setText(I)V
+    invoke-virtual {v0, v4}, Landroid/widget/TextView;->setText(I)V
 
     invoke-virtual {v0, p1}, Landroid/widget/TextView;->setGravity(I)V
 
     invoke-virtual {v0, v3}, Landroid/view/View;->setTextAlignment(I)V
 
-    sget-object v3, Lh4f;->n:Lnoe;
+    sget-object v3, Lclf;->o:Lv2f;
 
-    invoke-static {v3, v0}, Lnoe;->d(Lnoe;Landroid/widget/TextView;)V
+    invoke-static {v3, v0}, Lv2f;->d(Lv2f;Landroid/widget/TextView;)V
 
-    invoke-virtual {v4, v0}, Lap9;->h(Landroid/view/View;)Lyha;
+    new-instance v3, Lp22;
 
-    move-result-object v3
+    const/4 v4, 0x1
 
-    invoke-interface {v3}, Lyha;->getText()Lane;
+    invoke-direct {v3, v6, v2, v4}, Lp22;-><init>(ILkotlin/coroutines/Continuation;I)V
 
-    move-result-object v3
-
-    iget v3, v3, Lane;->h:I
-
-    invoke-virtual {v0, v3}, Landroid/widget/TextView;->setTextColor(I)V
+    invoke-static {v3, v0}, Ljs9;->t(Lrc6;Landroid/view/View;)V
 
     const/16 v3, 0xc
 
     int-to-float v3, v3
 
-    invoke-static {}, Lgk4;->d()Landroid/content/res/Resources;
+    invoke-static {}, Lvo4;->d()Landroid/content/res/Resources;
 
     move-result-object v4
 
@@ -535,39 +527,39 @@
 
     mul-float/2addr v4, v3
 
-    invoke-static {v4}, Lkhg;->x(F)I
+    invoke-static {v4}, Lya6;->G(F)I
 
     move-result v4
 
-    invoke-static {}, Lgk4;->d()Landroid/content/res/Resources;
+    invoke-static {}, Lvo4;->d()Landroid/content/res/Resources;
 
-    move-result-object v5
+    move-result-object v8
 
-    invoke-virtual {v5}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+    invoke-virtual {v8}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
 
-    move-result-object v5
+    move-result-object v8
 
-    iget v5, v5, Landroid/util/DisplayMetrics;->density:F
+    iget v8, v8, Landroid/util/DisplayMetrics;->density:F
 
-    mul-float/2addr v3, v5
+    mul-float/2addr v3, v8
 
-    invoke-static {v3}, Lkhg;->x(F)I
+    invoke-static {v3}, Lya6;->G(F)I
 
     move-result v3
 
     invoke-virtual {v0}, Landroid/view/View;->getPaddingLeft()I
 
-    move-result v5
+    move-result v8
 
     invoke-virtual {v0}, Landroid/view/View;->getPaddingRight()I
 
-    move-result v8
+    move-result v9
 
-    invoke-virtual {v0, v5, v4, v8, v3}, Landroid/view/View;->setPadding(IIII)V
+    invoke-virtual {v0, v8, v4, v9, v3}, Landroid/view/View;->setPadding(IIII)V
 
     new-instance v3, Landroid/widget/LinearLayout$LayoutParams;
 
-    invoke-direct {v3, v6, v7}, Landroid/widget/LinearLayout$LayoutParams;-><init>(II)V
+    invoke-direct {v3, v5, v7}, Landroid/widget/LinearLayout$LayoutParams;-><init>(II)V
 
     invoke-virtual {p2, v0, v3}, Landroid/view/ViewGroup;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
@@ -575,9 +567,9 @@
 
     aget-object v0, v1, v0
 
-    iget-object v0, p0, Lone/me/sdk/permissionhost/PermissionBottomSheet;->v0:Lvr;
+    iget-object v0, p0, Lone/me/sdk/permissionhost/PermissionBottomSheet;->A0:Lfr;
 
-    invoke-virtual {v0, p0}, Lvr;->a(Lone/me/sdk/arch/Widget;)Ljava/lang/Object;
+    invoke-virtual {v0, p0}, Lfr;->a(Lone/me/sdk/arch/Widget;)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -587,11 +579,11 @@
 
     move-result v0
 
-    sget-object v3, Lq4a;->o:Lq4a;
+    sget-object v3, Lxca;->o:Lxca;
 
-    sget-object v4, Lt4a;->c:Lt4a;
+    sget-object v4, Lada;->c:Lada;
 
-    sget-object v5, Ls4a;->o:Ls4a;
+    sget-object v5, Lzca;->o:Lzca;
 
     if-eqz v0, :cond_0
 
@@ -603,25 +595,25 @@
 
     invoke-direct {v0, v1, v2}, Lone/me/sdk/uikit/common/button/OneMeButton;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    sget v1, Ldea;->b:I
+    sget v1, Lgna;->b:I
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setId(I)V
 
-    invoke-virtual {v0, v5}, Lone/me/sdk/uikit/common/button/OneMeButton;->setMode(Ls4a;)V
+    invoke-virtual {v0, v5}, Lone/me/sdk/uikit/common/button/OneMeButton;->setMode(Lzca;)V
 
-    invoke-virtual {v0, v4}, Lone/me/sdk/uikit/common/button/OneMeButton;->setSize(Lt4a;)V
+    invoke-virtual {v0, v4}, Lone/me/sdk/uikit/common/button/OneMeButton;->setSize(Lada;)V
 
-    invoke-virtual {v0, v3}, Lone/me/sdk/uikit/common/button/OneMeButton;->setAppearance(Lq4a;)V
+    invoke-virtual {v0, v3}, Lone/me/sdk/uikit/common/button/OneMeButton;->setAppearance(Lxca;)V
 
-    sget v1, Leea;->f:I
+    sget v1, Lhna;->f:I
 
     invoke-virtual {v0, v1}, Lone/me/sdk/uikit/common/button/OneMeButton;->setText(I)V
 
-    new-instance v1, Lwp;
+    new-instance v1, Lfs1;
 
-    const/4 v2, 0x3
+    const/4 v2, 0x2
 
-    invoke-direct {v1, p2, v2, p0}, Lwp;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+    invoke-direct {v1, p2, v2, p0}, Lfs1;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
@@ -640,27 +632,25 @@
 
     invoke-virtual {p2}, Landroid/view/View;->getContext()Landroid/content/Context;
 
-    move-result-object v6
+    move-result-object v8
 
-    invoke-direct {v0, v6, v2}, Lone/me/sdk/uikit/common/button/OneMeButton;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
+    invoke-direct {v0, v8, v2}, Lone/me/sdk/uikit/common/button/OneMeButton;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    sget v6, Ldea;->c:I
+    sget v8, Lgna;->c:I
 
-    invoke-virtual {v0, v6}, Landroid/view/View;->setId(I)V
+    invoke-virtual {v0, v8}, Landroid/view/View;->setId(I)V
 
-    invoke-virtual {v0, v5}, Lone/me/sdk/uikit/common/button/OneMeButton;->setMode(Ls4a;)V
+    invoke-virtual {v0, v5}, Lone/me/sdk/uikit/common/button/OneMeButton;->setMode(Lzca;)V
 
-    invoke-virtual {v0, v4}, Lone/me/sdk/uikit/common/button/OneMeButton;->setSize(Lt4a;)V
+    invoke-virtual {v0, v4}, Lone/me/sdk/uikit/common/button/OneMeButton;->setSize(Lada;)V
 
-    invoke-virtual {v0, v3}, Lone/me/sdk/uikit/common/button/OneMeButton;->setAppearance(Lq4a;)V
-
-    const/4 v6, 0x3
+    invoke-virtual {v0, v3}, Lone/me/sdk/uikit/common/button/OneMeButton;->setAppearance(Lxca;)V
 
     aget-object v1, v1, v6
 
-    iget-object v1, p0, Lone/me/sdk/permissionhost/PermissionBottomSheet;->y0:Lvr;
+    iget-object v1, p0, Lone/me/sdk/permissionhost/PermissionBottomSheet;->D0:Lfr;
 
-    invoke-virtual {v1, p0}, Lvr;->a(Lone/me/sdk/arch/Widget;)Ljava/lang/Object;
+    invoke-virtual {v1, p0}, Lfr;->a(Lone/me/sdk/arch/Widget;)Ljava/lang/Object;
 
     move-result-object v1
 
@@ -672,11 +662,11 @@
 
     invoke-virtual {v0, v1}, Lone/me/sdk/uikit/common/button/OneMeButton;->setText(I)V
 
-    new-instance v1, Lwp;
+    new-instance v1, Lfs1;
 
-    const/4 v6, 0x4
+    const/4 v6, 0x3
 
-    invoke-direct {v1, p0, v6, p0}, Lwp;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+    invoke-direct {v1, p0, v6, p0}, Lfs1;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
@@ -696,25 +686,25 @@
 
     invoke-direct {v0, v1, v2}, Lone/me/sdk/uikit/common/button/OneMeButton;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    sget v1, Ldea;->a:I
+    sget v1, Lgna;->a:I
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setId(I)V
 
-    invoke-virtual {v0, v5}, Lone/me/sdk/uikit/common/button/OneMeButton;->setMode(Ls4a;)V
+    invoke-virtual {v0, v5}, Lone/me/sdk/uikit/common/button/OneMeButton;->setMode(Lzca;)V
 
-    invoke-virtual {v0, v4}, Lone/me/sdk/uikit/common/button/OneMeButton;->setSize(Lt4a;)V
+    invoke-virtual {v0, v4}, Lone/me/sdk/uikit/common/button/OneMeButton;->setSize(Lada;)V
 
-    invoke-virtual {v0, v3}, Lone/me/sdk/uikit/common/button/OneMeButton;->setAppearance(Lq4a;)V
+    invoke-virtual {v0, v3}, Lone/me/sdk/uikit/common/button/OneMeButton;->setAppearance(Lxca;)V
 
-    sget v1, Leea;->e:I
+    sget v1, Lhna;->e:I
 
     invoke-virtual {v0, v1}, Lone/me/sdk/uikit/common/button/OneMeButton;->setText(I)V
 
-    new-instance v1, Ljyc;
+    new-instance v1, Lccd;
 
-    const/16 v2, 0xa
+    const/16 v2, 0xb
 
-    invoke-direct {v1, v2, p0}, Ljyc;-><init>(ILjava/lang/Object;)V
+    invoke-direct {v1, v2, p0}, Lccd;-><init>(ILjava/lang/Object;)V
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
@@ -734,38 +724,38 @@
 
     invoke-super {p0, p1}, Lone/me/sdk/bottomsheet/BaseBottomSheetWidget;->onAttach(Landroid/view/View;)V
 
-    new-instance p1, Lepa;
+    new-instance p1, Lkra;
 
-    const/4 v0, 0x1
+    const/4 v0, 0x3
 
-    invoke-direct {p1, v0, p0}, Lepa;-><init>(ILjava/lang/Object;)V
+    invoke-direct {p1, v0, p0}, Lkra;-><init>(ILjava/lang/Object;)V
 
-    new-instance v0, Ler0;
+    new-instance v0, Llr0;
 
-    invoke-direct {v0, p0, p1}, Ler0;-><init>(Lou3;Lv56;)V
+    invoke-direct {v0, p0, p1}, Llr0;-><init>(Lxx3;Lzb6;)V
 
-    invoke-virtual {p0}, Lou3;->getRouter()Lcmc;
+    invoke-virtual {p0}, Lxx3;->getRouter()Lrzc;
 
     move-result-object p1
 
     if-eqz p1, :cond_0
 
-    invoke-virtual {p0}, Lou3;->getRouter()Lcmc;
+    invoke-virtual {p0}, Lxx3;->getRouter()Lrzc;
 
     move-result-object p0
 
-    invoke-virtual {p0, v0}, Lcmc;->a(Lsu3;)V
+    invoke-virtual {p0, v0}, Lrzc;->a(Lby3;)V
 
     return-void
 
     :cond_0
-    new-instance p1, Lj9;
+    new-instance p1, Lm9;
 
     const/16 v1, 0xa
 
-    invoke-direct {p1, p0, v1, v0}, Lj9;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+    invoke-direct {p1, p0, v1, v0}, Lm9;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
 
-    invoke-virtual {p0, p1}, Lou3;->addLifecycleListener(Lmu3;)V
+    invoke-virtual {p0, p1}, Lxx3;->addLifecycleListener(Lvx3;)V
 
     return-void
 .end method

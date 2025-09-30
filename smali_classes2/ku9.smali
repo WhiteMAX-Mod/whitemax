@@ -1,110 +1,120 @@
 .class public final Lku9;
-.super Ljava/lang/Object;
+.super Lure;
 .source "SourceFile"
 
 # interfaces
-.implements Lnu7;
+.implements Lpc6;
 
 
 # instance fields
-.field public final a:Lkjc;
+.field public final synthetic X:Lnu9;
 
-.field public final b:Llh;
+.field public final synthetic Y:Landroid/graphics/Rect;
 
-.field public final c:Lm09;
-
-.field public final o:Lm09;
+.field public final synthetic Z:Landroid/graphics/RectF;
 
 
 # direct methods
-.method public constructor <init>(Lru/ok/tamtam/android/db/room/OneMeRoomDatabase;)V
-    .locals 2
+.method public constructor <init>(Lnu9;Landroid/graphics/Rect;Landroid/graphics/RectF;Lkotlin/coroutines/Continuation;)V
+    .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lku9;->X:Lnu9;
 
-    iput-object p1, p0, Lku9;->a:Lkjc;
+    iput-object p2, p0, Lku9;->Y:Landroid/graphics/Rect;
 
-    new-instance v0, Llh;
+    iput-object p3, p0, Lku9;->Z:Landroid/graphics/RectF;
 
-    const/16 v1, 0xc
+    const/4 p1, 0x2
 
-    invoke-direct {v0, p1, v1}, Llh;-><init>(Lkjc;I)V
-
-    iput-object v0, p0, Lku9;->b:Llh;
-
-    new-instance v0, Lm09;
-
-    invoke-direct {v0, p1, v1}, Lm09;-><init>(Lkjc;I)V
-
-    new-instance v0, Lm09;
-
-    const/16 v1, 0xd
-
-    invoke-direct {v0, p1, v1}, Lm09;-><init>(Lkjc;I)V
-
-    new-instance v0, Lm09;
-
-    const/16 v1, 0xe
-
-    invoke-direct {v0, p1, v1}, Lm09;-><init>(Lkjc;I)V
-
-    iput-object v0, p0, Lku9;->c:Lm09;
-
-    new-instance v0, Lm09;
-
-    const/16 v1, 0xf
-
-    invoke-direct {v0, p1, v1}, Lm09;-><init>(Lkjc;I)V
-
-    iput-object v0, p0, Lku9;->o:Lm09;
+    invoke-direct {p0, p1, p4}, Lure;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final g()V
-    .locals 2
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    new-instance v0, Lju9;
+    check-cast p1, Ly04;
 
-    const/4 v1, 0x0
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    invoke-direct {v0, p0, v1}, Lju9;-><init>(Lku9;Lkotlin/coroutines/Continuation;)V
+    invoke-virtual {p0, p1, p2}, Lku9;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    invoke-static {v0}, Lzo3;->Z(Ll66;)Ljava/lang/Object;
+    move-result-object p0
 
-    return-void
+    check-cast p0, Lku9;
+
+    sget-object p1, Lylf;->a:Lylf;
+
+    invoke-virtual {p0, p1}, Lku9;->o(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object p1
 .end method
 
-.method public final m(JLmd5;)Ljava/lang/Object;
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
     .locals 2
 
-    const/4 v0, 0x1
+    new-instance p1, Lku9;
 
-    const-string v1, "SELECT * FROM fcm_notifications where time > ? ORDER BY time ASC"
+    iget-object v0, p0, Lku9;->Y:Landroid/graphics/Rect;
 
-    invoke-static {v0, v1}, Lakc;->c(ILjava/lang/String;)Lakc;
+    iget-object v1, p0, Lku9;->Z:Landroid/graphics/RectF;
+
+    iget-object p0, p0, Lku9;->X:Lnu9;
+
+    invoke-direct {p1, p0, v0, v1, p2}, Lku9;-><init>(Lnu9;Landroid/graphics/Rect;Landroid/graphics/RectF;Lkotlin/coroutines/Continuation;)V
+
+    return-object p1
+.end method
+
+.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 7
+
+    invoke-static {p1}, Lqe5;->V(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Lku9;->X:Lnu9;
+
+    invoke-virtual {p1}, Lnu9;->a()Lcp5;
+
+    move-result-object p1
+
+    iget-object v0, p0, Lku9;->X:Lnu9;
+
+    iget-object v0, v0, Lnu9;->m:Ljava/lang/String;
+
+    invoke-virtual {p1, v0}, Lcp5;->r(Ljava/lang/String;)Ljava/io/File;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
 
     move-result-object v1
 
-    invoke-virtual {v1, v0, p1, p2}, Lakc;->k(IJ)V
+    iget-object v2, p0, Lku9;->X:Lnu9;
 
-    new-instance p1, Landroid/os/CancellationSignal;
+    iget-object v5, p0, Lku9;->Y:Landroid/graphics/Rect;
 
-    invoke-direct {p1}, Landroid/os/CancellationSignal;-><init>()V
+    iget-object v3, p0, Lku9;->Z:Landroid/graphics/RectF;
 
-    new-instance p2, Lnh;
+    iget-object p0, v2, Lnu9;->h:Lkotlinx/coroutines/internal/ContextScope;
 
-    const/16 v0, 0x11
+    new-instance v0, Lju9;
 
-    invoke-direct {p2, p0, v0, v1}, Lnh;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+    const/4 v6, 0x0
 
-    iget-object p0, p0, Lku9;->a:Lkjc;
+    const/4 v4, 0x1
 
-    invoke-static {p0, p1, p2, p3}, Lxja;->l(Lkjc;Landroid/os/CancellationSignal;Ljava/util/concurrent/Callable;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    invoke-direct/range {v0 .. v6}, Lju9;-><init>(Ljava/lang/String;Lnu9;Landroid/graphics/RectF;ILandroid/graphics/Rect;Lkotlin/coroutines/Continuation;)V
 
-    move-result-object p0
+    const/4 p1, 0x3
+
+    const/4 v1, 0x0
+
+    invoke-static {p0, v1, v1, v0, p1}, Lvyg;->u(Ly04;Lq04;Lb14;Lpc6;I)Lcae;
+
+    sget-object p0, Lylf;->a:Lylf;
 
     return-object p0
 .end method

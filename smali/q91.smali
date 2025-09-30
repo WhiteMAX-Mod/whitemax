@@ -1,90 +1,85 @@
-.class public final Lq91;
-.super Lqde;
+.class public final enum Lq91;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
-# interfaces
-.implements Ll66;
 
+# static fields
+.field public static final enum a:Lq91;
 
-# instance fields
-.field public synthetic X:Ljava/lang/Object;
+.field public static final enum b:Lq91;
 
-.field public final synthetic Y:Lone/me/calls/ui/ui/indicator/CallIndicatorWidget;
+.field public static final enum c:Lq91;
+
+.field public static final synthetic o:[Lq91;
 
 
 # direct methods
-.method public constructor <init>(Lone/me/calls/ui/ui/indicator/CallIndicatorWidget;Lkotlin/coroutines/Continuation;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 5
 
-    iput-object p1, p0, Lq91;->Y:Lone/me/calls/ui/ui/indicator/CallIndicatorWidget;
+    new-instance v0, Lq91;
 
-    const/4 p1, 0x2
+    const-string v1, "Old"
 
-    invoke-direct {p0, p1, p2}, Lqde;-><init>(ILkotlin/coroutines/Continuation;)V
+    const/4 v2, 0x0
+
+    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Lq91;->a:Lq91;
+
+    new-instance v1, Lq91;
+
+    const-string v2, "Strategy1"
+
+    const/4 v3, 0x1
+
+    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v1, Lq91;->b:Lq91;
+
+    new-instance v2, Lq91;
+
+    const-string v3, "Strategy2"
+
+    const/4 v4, 0x2
+
+    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v2, Lq91;->c:Lq91;
+
+    filled-new-array {v0, v1, v2}, [Lq91;
+
+    move-result-object v0
+
+    sput-object v0, Lq91;->o:[Lq91;
 
     return-void
 .end method
 
+.method public static valueOf(Ljava/lang/String;)Lq91;
+    .locals 1
 
-# virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+    const-class v0, Lq91;
 
-    check-cast p1, Le91;
-
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Lq91;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
 
     move-result-object p0
 
     check-cast p0, Lq91;
 
-    sget-object p1, Le5f;->a:Le5f;
-
-    invoke-virtual {p0, p1}, Lq91;->o(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p1
+    return-object p0
 .end method
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+.method public static values()[Lq91;
     .locals 1
 
-    new-instance v0, Lq91;
+    sget-object v0, Lq91;->o:[Lq91;
 
-    iget-object p0, p0, Lq91;->Y:Lone/me/calls/ui/ui/indicator/CallIndicatorWidget;
+    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
 
-    invoke-direct {v0, p0, p2}, Lq91;-><init>(Lone/me/calls/ui/ui/indicator/CallIndicatorWidget;Lkotlin/coroutines/Continuation;)V
+    move-result-object v0
 
-    iput-object p1, v0, Lq91;->X:Ljava/lang/Object;
+    check-cast v0, [Lq91;
 
     return-object v0
-.end method
-
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
-
-    invoke-static {p1}, Lsgg;->Z(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Lq91;->X:Ljava/lang/Object;
-
-    check-cast p1, Le91;
-
-    iget-object p0, p0, Lq91;->Y:Lone/me/calls/ui/ui/indicator/CallIndicatorWidget;
-
-    invoke-static {p0}, Lone/me/calls/ui/ui/indicator/CallIndicatorWidget;->p0(Lone/me/calls/ui/ui/indicator/CallIndicatorWidget;)Lg91;
-
-    move-result-object p0
-
-    iget-object v0, p1, Le91;->a:Ljava/lang/CharSequence;
-
-    invoke-virtual {p0, v0}, Lg91;->setTitle(Ljava/lang/CharSequence;)V
-
-    iget-object p1, p1, Le91;->b:Lf91;
-
-    invoke-virtual {p0, p1}, Lg91;->setIndicatorState(Lf91;)V
-
-    sget-object p0, Le5f;->a:Le5f;
-
-    return-object p0
 .end method

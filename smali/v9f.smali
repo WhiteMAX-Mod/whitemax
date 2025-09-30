@@ -1,97 +1,153 @@
-.class public final enum Lv9f;
-.super Ljava/lang/Enum;
+.class public final synthetic Lv9f;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ljava/util/concurrent/Callable;
 
-# static fields
-.field public static final synthetic X:[Lv9f;
 
-.field public static final enum a:Lv9f;
+# instance fields
+.field public final synthetic X:Lbl3;
 
-.field public static final enum b:Lv9f;
+.field public final synthetic a:Landroid/content/Context;
 
-.field public static final enum c:Lv9f;
+.field public final synthetic b:Ljava/util/concurrent/ScheduledThreadPoolExecutor;
 
-.field public static final enum o:Lv9f;
+.field public final synthetic c:Lcom/google/firebase/messaging/FirebaseMessaging;
+
+.field public final synthetic o:Lh2g;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 6
+.method public synthetic constructor <init>(Landroid/content/Context;Ljava/util/concurrent/ScheduledThreadPoolExecutor;Lcom/google/firebase/messaging/FirebaseMessaging;Lh2g;Lbl3;)V
+    .locals 0
 
-    new-instance v0, Lv9f;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const-string v1, "ENABLED"
+    iput-object p1, p0, Lv9f;->a:Landroid/content/Context;
 
-    const/4 v2, 0x0
+    iput-object p2, p0, Lv9f;->b:Ljava/util/concurrent/ScheduledThreadPoolExecutor;
 
-    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    iput-object p3, p0, Lv9f;->c:Lcom/google/firebase/messaging/FirebaseMessaging;
 
-    sput-object v0, Lv9f;->a:Lv9f;
+    iput-object p4, p0, Lv9f;->o:Lh2g;
 
-    new-instance v1, Lv9f;
-
-    const-string v2, "DISABLED"
-
-    const/4 v3, 0x1
-
-    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v1, Lv9f;->b:Lv9f;
-
-    new-instance v2, Lv9f;
-
-    const-string v3, "USER_IGNORED"
-
-    const/4 v4, 0x2
-
-    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v2, Lv9f;->c:Lv9f;
-
-    new-instance v3, Lv9f;
-
-    const-string v4, "UNKNOWN"
-
-    const/4 v5, 0x3
-
-    invoke-direct {v3, v4, v5}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v3, Lv9f;->o:Lv9f;
-
-    filled-new-array {v0, v1, v2, v3}, [Lv9f;
-
-    move-result-object v0
-
-    sput-object v0, Lv9f;->X:[Lv9f;
+    iput-object p5, p0, Lv9f;->X:Lbl3;
 
     return-void
 .end method
 
-.method public static valueOf(Ljava/lang/String;)Lv9f;
-    .locals 1
 
-    const-class v0, Lv9f;
+# virtual methods
+.method public final call()Ljava/lang/Object;
+    .locals 7
 
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+    iget-object v5, p0, Lv9f;->a:Landroid/content/Context;
 
-    move-result-object p0
+    iget-object v6, p0, Lv9f;->b:Ljava/util/concurrent/ScheduledThreadPoolExecutor;
 
-    check-cast p0, Lv9f;
+    iget-object v1, p0, Lv9f;->c:Lcom/google/firebase/messaging/FirebaseMessaging;
 
-    return-object p0
-.end method
+    iget-object v2, p0, Lv9f;->o:Lh2g;
 
-.method public static values()[Lv9f;
-    .locals 1
+    iget-object v4, p0, Lv9f;->X:Lbl3;
 
-    sget-object v0, Lv9f;->X:[Lv9f;
+    const-class p0, Lu9f;
 
-    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
+    monitor-enter p0
+
+    :try_start_0
+    sget-object v0, Lu9f;->c:Ljava/lang/ref/WeakReference;
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {v0}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, [Lv9f;
+    check-cast v0, Lu9f;
+
+    goto :goto_0
+
+    :catchall_0
+    move-exception v0
+
+    goto :goto_2
+
+    :cond_0
+    const/4 v0, 0x0
+
+    :goto_0
+    if-nez v0, :cond_1
+
+    const-string v0, "com.google.android.gms.appid"
+
+    const/4 v3, 0x0
+
+    invoke-virtual {v5, v0, v3}, Landroid/content/Context;->getSharedPreferences(Ljava/lang/String;I)Landroid/content/SharedPreferences;
+
+    move-result-object v0
+
+    new-instance v3, Lu9f;
+
+    invoke-direct {v3, v0, v6}, Lu9f;-><init>(Landroid/content/SharedPreferences;Ljava/util/concurrent/ScheduledThreadPoolExecutor;)V
+
+    monitor-enter v3
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    :try_start_1
+    invoke-static {v0, v6}, Ltk4;->e(Landroid/content/SharedPreferences;Ljava/util/concurrent/ScheduledThreadPoolExecutor;)Ltk4;
+
+    move-result-object v0
+
+    iput-object v0, v3, Lu9f;->a:Ltk4;
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_1
+
+    :try_start_2
+    monitor-exit v3
+
+    new-instance v0, Ljava/lang/ref/WeakReference;
+
+    invoke-direct {v0, v3}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
+
+    sput-object v0, Lu9f;->c:Ljava/lang/ref/WeakReference;
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_0
+
+    goto :goto_1
+
+    :catchall_1
+    move-exception v0
+
+    :try_start_3
+    monitor-exit v3
+    :try_end_3
+    .catchall {:try_start_3 .. :try_end_3} :catchall_1
+
+    :try_start_4
+    throw v0
+    :try_end_4
+    .catchall {:try_start_4 .. :try_end_4} :catchall_0
+
+    :cond_1
+    move-object v3, v0
+
+    :goto_1
+    monitor-exit p0
+
+    new-instance v0, Lw9f;
+
+    invoke-direct/range {v0 .. v6}, Lw9f;-><init>(Lcom/google/firebase/messaging/FirebaseMessaging;Lh2g;Lu9f;Lbl3;Landroid/content/Context;Ljava/util/concurrent/ScheduledThreadPoolExecutor;)V
 
     return-object v0
+
+    :goto_2
+    :try_start_5
+    monitor-exit p0
+    :try_end_5
+    .catchall {:try_start_5 .. :try_end_5} :catchall_0
+
+    throw v0
 .end method

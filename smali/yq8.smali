@@ -1,97 +1,88 @@
 .class public final Lyq8;
-.super Ljava/lang/Object;
+.super Ly0a;
 .source "SourceFile"
-
-# interfaces
-.implements Lgpc;
 
 
 # instance fields
-.field public final a:Lgpc;
+.field public final e:Lvn8;
 
-.field public final b:J
+.field public f:[I
 
 
 # direct methods
-.method public constructor <init>(Lgpc;J)V
+.method public constructor <init>(Lvn8;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ly0a;-><init>()V
 
-    iput-object p1, p0, Lyq8;->a:Lgpc;
-
-    iput-wide p2, p0, Lyq8;->b:J
+    iput-object p1, p0, Lyq8;->e:Lvn8;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final b()V
-    .locals 0
+.method public final b(Lyvg;)V
+    .locals 3
 
-    iget-object p0, p0, Lyq8;->a:Lgpc;
+    iget-object p1, p1, Lyvg;->c:Ljava/lang/Object;
 
-    invoke-interface {p0}, Lgpc;->b()V
+    check-cast p1, Landroid/app/Notification$Builder;
 
-    return-void
-.end method
+    new-instance v0, Landroid/app/Notification$MediaStyle;
 
-.method public final c()Z
-    .locals 0
+    invoke-direct {v0}, Landroid/app/Notification$MediaStyle;-><init>()V
 
-    iget-object p0, p0, Lyq8;->a:Lgpc;
+    iget-object v1, p0, Lyq8;->e:Lvn8;
 
-    invoke-interface {p0}, Lgpc;->c()Z
+    iget-object v2, v1, Lvn8;->a:Llo8;
 
-    move-result p0
+    iget-object v2, v2, Llo8;->h:Luo8;
 
-    return p0
-.end method
+    iget-object v2, v2, Luo8;->j:Lfo8;
 
-.method public final e(J)I
-    .locals 2
+    iget-object v2, v2, Lfo8;->a:Ljava/lang/Object;
 
-    iget-wide v0, p0, Lyq8;->b:J
+    check-cast v2, Lbo8;
 
-    sub-long/2addr p1, v0
+    iget-object v2, v2, Lao8;->c:Leo8;
 
-    iget-object p0, p0, Lyq8;->a:Lgpc;
+    iget-object v2, v2, Leo8;->b:Ljava/lang/Object;
 
-    invoke-interface {p0, p1, p2}, Lgpc;->e(J)I
+    check-cast v2, Landroid/media/session/MediaSession$Token;
 
-    move-result p0
+    invoke-virtual {v0, v2}, Landroid/app/Notification$MediaStyle;->setMediaSession(Landroid/media/session/MediaSession$Token;)Landroid/app/Notification$MediaStyle;
 
-    return p0
-.end method
+    move-result-object v0
 
-.method public final h(Lnz7;Lb64;I)I
-    .locals 4
+    iget-object p0, p0, Lyq8;->f:[I
 
-    iget-object v0, p0, Lyq8;->a:Lgpc;
+    if-eqz p0, :cond_0
 
-    invoke-interface {v0, p1, p2, p3}, Lgpc;->h(Lnz7;Lb64;I)I
-
-    move-result p1
-
-    const/4 p3, -0x4
-
-    if-ne p1, p3, :cond_0
-
-    iget-wide v0, p2, Lb64;->Y:J
-
-    iget-wide v2, p0, Lyq8;->b:J
-
-    add-long/2addr v0, v2
-
-    const-wide/16 v2, 0x0
-
-    invoke-static {v2, v3, v0, v1}, Ljava/lang/Math;->max(JJ)J
-
-    move-result-wide v0
-
-    iput-wide v0, p2, Lb64;->Y:J
+    invoke-virtual {v0, p0}, Landroid/app/Notification$MediaStyle;->setShowActionsInCompactView([I)Landroid/app/Notification$MediaStyle;
 
     :cond_0
-    return p1
+    sget p0, Lnrf;->a:I
+
+    invoke-virtual {p1, v0}, Landroid/app/Notification$Builder;->setStyle(Landroid/app/Notification$Style;)Landroid/app/Notification$Builder;
+
+    new-instance p0, Landroid/os/Bundle;
+
+    invoke-direct {p0}, Landroid/os/Bundle;-><init>()V
+
+    iget-object v0, v1, Lvn8;->a:Llo8;
+
+    iget-object v0, v0, Llo8;->j:Lknd;
+
+    invoke-virtual {v0}, Lknd;->b()Landroid/os/Bundle;
+
+    move-result-object v0
+
+    const-string v1, "androidx.media3.session"
+
+    invoke-virtual {p0, v1, v0}, Landroid/os/Bundle;->putBundle(Ljava/lang/String;Landroid/os/Bundle;)V
+
+    invoke-virtual {p1, p0}, Landroid/app/Notification$Builder;->addExtras(Landroid/os/Bundle;)Landroid/app/Notification$Builder;
+
+    return-void
 .end method

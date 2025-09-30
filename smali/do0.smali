@@ -1,171 +1,377 @@
-.class public abstract synthetic Ldo0;
+.class public final Ldo0;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ldjb;
+
+
+# instance fields
+.field public final a:Ljava/util/HashMap;
+
+.field public final b:Ldjb;
+
+.field public final c:Ljava/lang/String;
+
+.field public final d:Ljava/lang/String;
+
+.field public final synthetic e:I
+
+.field public final f:Lad4;
+
 
 # direct methods
-.method public static bridge synthetic a(Landroid/graphics/Gainmap;)F
-    .locals 0
-
-    invoke-virtual {p0}, Landroid/graphics/Gainmap;->getDisplayRatioForFullHdr()F
-
-    move-result p0
-
-    return p0
-.end method
-
-.method public static bridge synthetic b(Landroid/graphics/Gainmap;)Landroid/graphics/Bitmap;
-    .locals 0
-
-    invoke-virtual {p0}, Landroid/graphics/Gainmap;->getGainmapContents()Landroid/graphics/Bitmap;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static bridge synthetic c(Landroid/graphics/Bitmap;)Landroid/graphics/Gainmap;
-    .locals 0
-
-    invoke-virtual {p0}, Landroid/graphics/Bitmap;->getGainmap()Landroid/graphics/Gainmap;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static bridge synthetic d(Ljava/lang/Object;)Landroid/graphics/Gainmap;
-    .locals 0
-
-    check-cast p0, Landroid/graphics/Gainmap;
-
-    return-object p0
-.end method
-
-.method public static bridge synthetic e()Landroid/hardware/camera2/CameraCharacteristics$Key;
-    .locals 1
-
-    sget-object v0, Landroid/hardware/camera2/CameraCharacteristics;->CONTROL_AVAILABLE_SETTINGS_OVERRIDES:Landroid/hardware/camera2/CameraCharacteristics$Key;
-
-    return-object v0
-.end method
-
-.method public static bridge synthetic f()Landroid/hardware/camera2/CaptureRequest$Key;
-    .locals 1
-
-    sget-object v0, Landroid/hardware/camera2/CaptureRequest;->CONTROL_SETTINGS_OVERRIDE:Landroid/hardware/camera2/CaptureRequest$Key;
-
-    return-object v0
-.end method
-
-.method public static bridge synthetic g(Lkotlinx/coroutines/internal/ClassValueCtorCache$cache$1;Ljava/lang/Class;)Ljava/lang/Object;
-    .locals 0
-
-    invoke-virtual {p0, p1}, Ljava/lang/ClassValue;->get(Ljava/lang/Class;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static bridge synthetic h(Lone/me/android/deeplink/LinkInterceptorActivity;)V
-    .locals 1
-
-    const/4 v0, 0x0
-
-    invoke-virtual {p0, v0, v0, v0}, Landroid/app/Activity;->overrideActivityTransition(III)V
-
-    return-void
-.end method
-
-.method public static bridge synthetic i(Landroid/app/NotificationManager;)Z
-    .locals 0
-
-    invoke-virtual {p0}, Landroid/app/NotificationManager;->canUseFullScreenIntent()Z
-
-    move-result p0
-
-    return p0
-.end method
-
-.method public static bridge synthetic j(Landroid/graphics/Bitmap;)Z
-    .locals 0
-
-    invoke-virtual {p0}, Landroid/graphics/Bitmap;->hasGainmap()Z
-
-    move-result p0
-
-    return p0
-.end method
-
-.method public static bridge synthetic k(Landroid/graphics/Gainmap;)[F
-    .locals 0
-
-    invoke-virtual {p0}, Landroid/graphics/Gainmap;->getGamma()[F
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static bridge synthetic l(Landroid/graphics/Gainmap;)F
-    .locals 0
-
-    invoke-virtual {p0}, Landroid/graphics/Gainmap;->getMinDisplayRatioForHdrTransition()F
-
-    move-result p0
-
-    return p0
-.end method
-
-.method public static bridge synthetic m(Lone/me/android/deeplink/LinkInterceptorActivity;)V
+.method public constructor <init>(Lad4;Ldjb;)V
     .locals 2
 
     const/4 v0, 0x1
 
-    const/4 v1, 0x0
+    iput v0, p0, Ldo0;->e:I
 
-    invoke-virtual {p0, v0, v1, v1}, Landroid/app/Activity;->overrideActivityTransition(III)V
+    .line 4
+    const-string v0, "EncodedCacheKeyMultiplexProducer"
+
+    const-string v1, "multiplex_enc_cnt"
+
+    invoke-direct {p0, p2, v0, v1}, Ldo0;-><init>(Ldjb;Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 5
+    iput-object p1, p0, Ldo0;->f:Lad4;
 
     return-void
 .end method
 
-.method public static bridge synthetic n(Landroid/graphics/Gainmap;)[F
-    .locals 0
+.method public constructor <init>(Lad4;Lfo0;)V
+    .locals 2
 
-    invoke-virtual {p0}, Landroid/graphics/Gainmap;->getRatioMax()[F
+    const/4 v0, 0x0
 
-    move-result-object p0
+    iput v0, p0, Ldo0;->e:I
 
-    return-object p0
+    .line 1
+    const-string v0, "BitmapMemoryCacheKeyMultiplexProducer"
+
+    const-string v1, "multiplex_bmp_cnt"
+
+    .line 2
+    invoke-direct {p0, p2, v0, v1}, Ldo0;-><init>(Ldjb;Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 3
+    iput-object p1, p0, Ldo0;->f:Lad4;
+
+    return-void
 .end method
 
-.method public static bridge synthetic o(Landroid/graphics/Gainmap;)[F
+.method public constructor <init>(Ldjb;Ljava/lang/String;Ljava/lang/String;)V
     .locals 0
 
-    invoke-virtual {p0}, Landroid/graphics/Gainmap;->getRatioMin()[F
+    .line 6
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    move-result-object p0
+    .line 7
+    iput-object p1, p0, Ldo0;->b:Ldjb;
 
-    return-object p0
+    .line 8
+    new-instance p1, Ljava/util/HashMap;
+
+    invoke-direct {p1}, Ljava/util/HashMap;-><init>()V
+
+    iput-object p1, p0, Ldo0;->a:Ljava/util/HashMap;
+
+    .line 9
+    iput-object p2, p0, Ldo0;->c:Ljava/lang/String;
+
+    .line 10
+    iput-object p3, p0, Ldo0;->d:Ljava/lang/String;
+
+    return-void
 .end method
 
-.method public static bridge synthetic p(Landroid/graphics/Gainmap;)[F
-    .locals 0
 
-    invoke-virtual {p0}, Landroid/graphics/Gainmap;->getEpsilonHdr()[F
+# virtual methods
+.method public final a(Ldi0;Lejb;)V
+    .locals 5
 
-    move-result-object p0
+    :try_start_0
+    invoke-static {}, Lya6;->q()Lxa6;
 
-    return-object p0
+    move-object v0, p2
+
+    check-cast v0, Lmj0;
+
+    iget-object v0, v0, Lmj0;->c:Lhjb;
+
+    iget-object v1, p0, Ldo0;->c:Ljava/lang/String;
+
+    invoke-interface {v0, p2, v1}, Lhjb;->j(Lejb;Ljava/lang/String;)V
+
+    invoke-virtual {p0, p2}, Ldo0;->d(Lejb;)Landroid/util/Pair;
+
+    move-result-object v0
+
+    :cond_0
+    monitor-enter p0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_3
+
+    :try_start_1
+    monitor-enter p0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_1
+
+    :try_start_2
+    iget-object v1, p0, Ldo0;->a:Ljava/util/HashMap;
+
+    invoke-virtual {v1, v0}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lqm9;
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_2
+
+    :try_start_3
+    monitor-exit p0
+
+    const/4 v2, 0x1
+
+    if-nez v1, :cond_1
+
+    monitor-enter p0
+    :try_end_3
+    .catchall {:try_start_3 .. :try_end_3} :catchall_1
+
+    :try_start_4
+    new-instance v1, Lqm9;
+
+    invoke-direct {v1, p0, v0}, Lqm9;-><init>(Ldo0;Ljava/lang/Object;)V
+
+    iget-object v3, p0, Ldo0;->a:Ljava/util/HashMap;
+
+    invoke-virtual {v3, v0, v1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    :try_end_4
+    .catchall {:try_start_4 .. :try_end_4} :catchall_0
+
+    :try_start_5
+    monitor-exit p0
+    :try_end_5
+    .catchall {:try_start_5 .. :try_end_5} :catchall_1
+
+    move v3, v2
+
+    goto :goto_0
+
+    :catchall_0
+    move-exception p1
+
+    :try_start_6
+    monitor-exit p0
+    :try_end_6
+    .catchall {:try_start_6 .. :try_end_6} :catchall_0
+
+    :try_start_7
+    throw p1
+
+    :cond_1
+    const/4 v3, 0x0
+
+    :goto_0
+    monitor-exit p0
+    :try_end_7
+    .catchall {:try_start_7 .. :try_end_7} :catchall_1
+
+    :try_start_8
+    invoke-virtual {v1, p1, p2}, Lqm9;->a(Ldi0;Lejb;)Z
+
+    move-result v4
+
+    if-eqz v4, :cond_0
+
+    if-eqz v3, :cond_3
+
+    check-cast p2, Lmj0;
+
+    invoke-virtual {p2}, Lmj0;->g()Z
+
+    move-result p0
+
+    if-eqz p0, :cond_2
+
+    goto :goto_1
+
+    :cond_2
+    const/4 v2, 0x2
+
+    :goto_1
+    invoke-virtual {v1, v2}, Lqm9;->i(I)V
+    :try_end_8
+    .catchall {:try_start_8 .. :try_end_8} :catchall_3
+
+    :cond_3
+    invoke-static {}, Lya6;->q()Lxa6;
+
+    return-void
+
+    :catchall_1
+    move-exception p1
+
+    goto :goto_2
+
+    :catchall_2
+    move-exception p1
+
+    :try_start_9
+    monitor-exit p0
+    :try_end_9
+    .catchall {:try_start_9 .. :try_end_9} :catchall_2
+
+    :try_start_a
+    throw p1
+
+    :goto_2
+    monitor-exit p0
+    :try_end_a
+    .catchall {:try_start_a .. :try_end_a} :catchall_1
+
+    :try_start_b
+    throw p1
+    :try_end_b
+    .catchall {:try_start_b .. :try_end_b} :catchall_3
+
+    :catchall_3
+    move-exception p0
+
+    invoke-static {}, Lya6;->q()Lxa6;
+
+    throw p0
 .end method
 
-.method public static bridge synthetic q(Landroid/graphics/Gainmap;)[F
+.method public final c(Ljava/io/Closeable;)Ljava/io/Closeable;
     .locals 0
 
-    invoke-virtual {p0}, Landroid/graphics/Gainmap;->getEpsilonSdr()[F
+    iget p0, p0, Ldo0;->e:I
+
+    packed-switch p0, :pswitch_data_0
+
+    check-cast p1, Lk55;
+
+    invoke-static {p1}, Lk55;->c(Lk55;)Lk55;
 
     move-result-object p0
 
     return-object p0
+
+    :pswitch_0
+    check-cast p1, Lf63;
+
+    invoke-static {p1}, Lf63;->o(Lf63;)Lf63;
+
+    move-result-object p0
+
+    return-object p0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final d(Lejb;)Landroid/util/Pair;
+    .locals 2
+
+    iget v0, p0, Ldo0;->e:I
+
+    packed-switch v0, :pswitch_data_0
+
+    check-cast p1, Lmj0;
+
+    iget-object v0, p1, Lmj0;->a:Li27;
+
+    iget-object p0, p0, Ldo0;->f:Lad4;
+
+    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    iget-object v0, v0, Li27;->b:Landroid/net/Uri;
+
+    invoke-virtual {p0, v0}, Lad4;->q(Landroid/net/Uri;)Lu1e;
+
+    move-result-object p0
+
+    iget-object p1, p1, Lmj0;->X:Lh27;
+
+    invoke-static {p0, p1}, Landroid/util/Pair;->create(Ljava/lang/Object;Ljava/lang/Object;)Landroid/util/Pair;
+
+    move-result-object p0
+
+    return-object p0
+
+    :pswitch_0
+    check-cast p1, Lmj0;
+
+    iget-object v0, p1, Lmj0;->a:Li27;
+
+    iget-object v1, p1, Lmj0;->o:Ljava/lang/Object;
+
+    iget-object p0, p0, Ldo0;->f:Lad4;
+
+    invoke-virtual {p0, v0, v1}, Lad4;->l(Li27;Ljava/lang/Object;)Lco0;
+
+    move-result-object p0
+
+    iget-object p1, p1, Lmj0;->X:Lh27;
+
+    invoke-static {p0, p1}, Landroid/util/Pair;->create(Ljava/lang/Object;Ljava/lang/Object;)Landroid/util/Pair;
+
+    move-result-object p0
+
+    return-object p0
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final declared-synchronized e(Ljava/lang/Object;Lqm9;)V
+    .locals 1
+
+    monitor-enter p0
+
+    :try_start_0
+    iget-object v0, p0, Ldo0;->a:Ljava/util/HashMap;
+
+    invoke-virtual {v0, p1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    if-ne v0, p2, :cond_0
+
+    iget-object p2, p0, Ldo0;->a:Ljava/util/HashMap;
+
+    invoke-virtual {p2, p1}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    goto :goto_0
+
+    :catchall_0
+    move-exception p1
+
+    goto :goto_1
+
+    :cond_0
+    :goto_0
+    monitor-exit p0
+
+    return-void
+
+    :goto_1
+    :try_start_1
+    monitor-exit p0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    throw p1
 .end method

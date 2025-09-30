@@ -2,55 +2,58 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lp9f;
-.implements Lgv6;
-.implements Ltqe;
-
 
 # static fields
-.field public static final b:Ls90;
+.field public static final e:Lkj4;
+
+.field public static final f:Lkj4;
 
 
 # instance fields
-.field public final a:Lqka;
+.field public final a:I
+
+.field public final b:I
+
+.field public final c:Ljava/lang/String;
+
+.field public final d:Ljava/lang/String;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 4
+    .locals 2
 
-    new-instance v0, Ls90;
+    new-instance v0, Lkj4;
 
-    const-string v1, "camerax.core.streamSharing.captureTypes"
+    const/16 v1, 0x18
 
-    const-class v2, Ljava/util/List;
+    invoke-direct {v0, v1}, Lkj4;-><init>(I)V
 
-    const/4 v3, 0x0
+    sput-object v0, Lr7e;->e:Lkj4;
 
-    invoke-direct {v0, v1, v2, v3}, Ls90;-><init>(Ljava/lang/String;Ljava/lang/Class;Landroid/hardware/camera2/CaptureRequest$Key;)V
+    new-instance v0, Lkj4;
 
-    sput-object v0, Lr7e;->b:Ls90;
+    const/16 v1, 0x19
+
+    invoke-direct {v0, v1}, Lkj4;-><init>(I)V
+
+    sput-object v0, Lr7e;->f:Lkj4;
 
     return-void
 .end method
 
-.method public constructor <init>(Lqka;)V
+.method public constructor <init>(Ljava/lang/String;IILjava/lang/String;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lr7e;->a:Lqka;
+    iput p2, p0, Lr7e;->a:I
+
+    iput p3, p0, Lr7e;->b:I
+
+    iput-object p1, p0, Lr7e;->c:Ljava/lang/String;
+
+    iput-object p4, p0, Lr7e;->d:Ljava/lang/String;
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final getConfig()Lrc3;
-    .locals 0
-
-    iget-object p0, p0, Lr7e;->a:Lqka;
-
-    return-object p0
 .end method

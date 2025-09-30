@@ -1,34 +1,76 @@
-.class public abstract Lwub;
+.class public final synthetic Lwub;
 .super Ljava/lang/Object;
+.source "SourceFile"
+
+# interfaces
+.implements Landroid/view/View$OnLongClickListener;
 
 
-# static fields
-.field public static oneme_section_avatar:I = 0x7f0a0785
+# instance fields
+.field public final synthetic a:Lzub;
 
-.field public static oneme_section_description:I = 0x7f0a0786
+.field public final synthetic b:Lmsb;
 
-.field public static oneme_section_end_arrow:I = 0x7f0a0787
+.field public final synthetic c:I
 
-.field public static oneme_section_end_container:I = 0x7f0a0788
 
-.field public static oneme_section_end_text:I = 0x7f0a0789
+# direct methods
+.method public synthetic constructor <init>(Lzub;Lmsb;I)V
+    .locals 0
 
-.field public static oneme_section_start_icon:I = 0x7f0a078a
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-.field public static oneme_section_title:I = 0x7f0a078b
+    iput-object p1, p0, Lwub;->a:Lzub;
 
-.field public static oneme_section_upper_text:I = 0x7f0a078c
+    iput-object p2, p0, Lwub;->b:Lmsb;
 
-.field public static oneme_settings_itemcontent_container:I = 0x7f0a0795
+    iput p3, p0, Lwub;->c:I
 
-.field public static oneme_settings_itemcontent_counter:I = 0x7f0a0796
+    return-void
+.end method
 
-.field public static oneme_settings_itemcontent_end_icon:I = 0x7f0a0797
 
-.field public static oneme_settings_itemcontent_end_radio:I = 0x7f0a0798
+# virtual methods
+.method public final onLongClick(Landroid/view/View;)Z
+    .locals 3
 
-.field public static oneme_settings_itemcontent_end_switch:I = 0x7f0a0799
+    iget-object p1, p0, Lwub;->a:Lzub;
 
-.field public static oneme_settings_itemcontent_end_text:I = 0x7f0a079a
+    iget-object p1, p1, Lzub;->X:Lyub;
 
-.field public static oneme_settingslist_rv:I = 0x7f0a083c
+    iget-object v0, p0, Lwub;->b:Lmsb;
+
+    check-cast v0, Ldsb;
+
+    iget-object v0, v0, Ldsb;->a:Lwlb;
+
+    iget-wide v0, v0, Lwlb;->a:J
+
+    check-cast p1, Lone/me/profile/ProfileScreen;
+
+    invoke-virtual {p1}, Lone/me/profile/ProfileScreen;->D0()Lnwb;
+
+    move-result-object p1
+
+    iget-object v2, p1, Lnwb;->Q0:Lojb;
+
+    iget p0, p0, Lwub;->c:I
+
+    invoke-virtual {v2, p0, v0, v1}, Lojb;->z(IJ)Ljvb;
+
+    move-result-object p0
+
+    if-nez p0, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    iget-object p1, p1, Lnwb;->B0:Lv85;
+
+    invoke-static {p1, p0}, Lx7g;->o(Lv85;Ljava/lang/Object;)V
+
+    :goto_0
+    const/4 p0, 0x1
+
+    return p0
+.end method

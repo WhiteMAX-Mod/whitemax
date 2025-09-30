@@ -9,8 +9,8 @@ sdkInfo:
 packageInfo:
   forcedPackageId: 127
 versionInfo:
-  versionCode: 6395
-  versionName: 25.9.0
+  versionCode: 6409
+  versionName: 25.11.0
 doNotCompress:
 - arsc
 - mp3
@@ -68,6 +68,7 @@ doNotCompress:
 - META-INF/androidx.media_media.version
 - META-INF/androidx.mediarouter_mediarouter.version
 - META-INF/androidx.palette_palette.version
+- META-INF/androidx.preference_preference-ktx.version
 - META-INF/androidx.preference_preference.version
 - META-INF/androidx.print_print.version
 - META-INF/androidx.profileinstaller_profileinstaller.version
@@ -103,8 +104,9 @@ doNotCompress:
 - META-INF/kotlinx_coroutines_reactive.version
 - META-INF/kotlinx_coroutines_rx3.version
 - META-INF/kotlinx_coroutines_test.version
-- META-INF/services/cxe
-- META-INF/services/qa7
+- META-INF/services/cbf
+- META-INF/services/mh7
+- META-INF/services/y9a
 - assets/dexopt/baseline.prof
 - assets/dexopt/baseline.profm
 - okhttp3/internal/publicsuffix/publicsuffixes.gz

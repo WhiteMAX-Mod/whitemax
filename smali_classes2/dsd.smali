@@ -1,94 +1,104 @@
-.class public final synthetic Ldsd;
-.super Ljava/lang/Object;
+.class public final Ldsd;
+.super Lure;
 .source "SourceFile"
 
 # interfaces
-.implements Landroid/animation/ValueAnimator$AnimatorUpdateListener;
+.implements Lpc6;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public synthetic X:Ljava/lang/Object;
 
-.field public final synthetic b:Le17;
+.field public final synthetic Y:Lone/me/settings/SettingsListScreen;
 
 
 # direct methods
-.method public synthetic constructor <init>(Le17;I)V
+.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/settings/SettingsListScreen;)V
     .locals 0
 
-    iput p2, p0, Ldsd;->a:I
+    iput-object p2, p0, Ldsd;->Y:Lone/me/settings/SettingsListScreen;
 
-    iput-object p1, p0, Ldsd;->b:Le17;
+    const/4 p2, 0x2
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p2, p1}, Lure;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onAnimationUpdate(Landroid/animation/ValueAnimator;)V
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
+
+    check-cast p1, Lfud;
+
+    check-cast p2, Lkotlin/coroutines/Continuation;
+
+    invoke-virtual {p0, p1, p2}, Ldsd;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+
+    move-result-object p0
+
+    check-cast p0, Ldsd;
+
+    sget-object p1, Lylf;->a:Lylf;
+
+    invoke-virtual {p0, p1}, Ldsd;->o(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object p1
+.end method
+
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
     .locals 1
 
-    iget v0, p0, Ldsd;->a:I
+    new-instance v0, Ldsd;
 
-    packed-switch v0, :pswitch_data_0
+    iget-object p0, p0, Ldsd;->Y:Lone/me/settings/SettingsListScreen;
 
-    invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
+    invoke-direct {v0, p2, p0}, Ldsd;-><init>(Lkotlin/coroutines/Continuation;Lone/me/settings/SettingsListScreen;)V
 
-    move-result-object p1
+    iput-object p1, v0, Ldsd;->X:Ljava/lang/Object;
 
-    check-cast p1, Ljava/lang/Integer;
+    return-object v0
+.end method
 
-    invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
+.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 3
 
-    move-result p1
+    invoke-static {p1}, Lqe5;->V(Ljava/lang/Object;)V
 
-    iget-object p0, p0, Ldsd;->b:Le17;
+    iget-object p1, p0, Ldsd;->X:Ljava/lang/Object;
 
-    check-cast p0, Lxrd;
+    check-cast p1, Lfud;
 
-    iget-object p0, p0, Lxrd;->D0:Lyf3;
+    sget-object v0, Lone/me/settings/SettingsListScreen;->A0:[Lxi7;
 
-    invoke-virtual {p0, p1}, Landroid/widget/TextView;->setTextColor(I)V
+    iget-object p0, p0, Ldsd;->Y:Lone/me/settings/SettingsListScreen;
 
-    return-void
+    invoke-virtual {p0}, Lone/me/settings/SettingsListScreen;->B0()Lyud;
 
-    :pswitch_0
-    invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
+    move-result-object v0
 
-    move-result-object p1
+    invoke-virtual {v0, p1}, Lyud;->setTopBarContent(Lfud;)V
 
-    check-cast p1, Ljava/lang/Float;
+    iget-object v0, p0, Lone/me/settings/SettingsListScreen;->s0:Lcic;
 
-    invoke-virtual {p1}, Ljava/lang/Float;->floatValue()F
+    sget-object v1, Lone/me/settings/SettingsListScreen;->A0:[Lxi7;
 
-    move-result p1
+    const/4 v2, 0x1
 
-    iget-object p0, p0, Ldsd;->b:Le17;
+    aget-object v1, v1, v2
 
-    check-cast p0, Lxrd;
+    invoke-interface {v0, p0, v1}, Lcic;->N(Ljava/lang/Object;Lxi7;)Ljava/lang/Object;
 
-    iget-object v0, p0, Lxrd;->D0:Lyf3;
+    move-result-object p0
 
-    invoke-virtual {v0}, Landroid/widget/TextView;->getCurrentTextColor()I
+    check-cast p0, Ldsa;
 
-    move-result v0
+    iget-object p1, p1, Lfud;->c:Ljava/lang/String;
 
-    invoke-static {v0, p1}, Ln1c;->D(IF)I
+    invoke-virtual {p0, p1}, Ldsa;->setTitle(Ljava/lang/CharSequence;)V
 
-    move-result p1
+    sget-object p0, Lylf;->a:Lylf;
 
-    iget-object p0, p0, Lxrd;->D0:Lyf3;
-
-    invoke-virtual {p0, p1}, Landroid/widget/TextView;->setTextColor(I)V
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-object p0
 .end method

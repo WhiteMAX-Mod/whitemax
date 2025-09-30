@@ -1,4 +1,4 @@
-.class public final synthetic Liue;
+.class public final Liue;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -9,18 +9,26 @@
 # instance fields
 .field public final synthetic a:I
 
-.field public final synthetic b:Landroidx/appcompat/widget/Toolbar;
+.field public final synthetic b:Landroid/app/Notification;
+
+.field public final synthetic c:I
+
+.field public final synthetic o:Landroidx/work/impl/foreground/SystemForegroundService;
 
 
 # direct methods
-.method public synthetic constructor <init>(Landroidx/appcompat/widget/Toolbar;I)V
+.method public constructor <init>(Landroidx/work/impl/foreground/SystemForegroundService;ILandroid/app/Notification;I)V
     .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Liue;->o:Landroidx/work/impl/foreground/SystemForegroundService;
 
     iput p2, p0, Liue;->a:I
 
-    iput-object p1, p0, Liue;->b:Landroidx/appcompat/widget/Toolbar;
+    iput-object p3, p0, Liue;->b:Landroid/app/Notification;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput p4, p0, Liue;->c:I
 
     return-void
 .end method
@@ -28,42 +36,28 @@
 
 # virtual methods
 .method public final run()V
-    .locals 1
+    .locals 5
 
-    iget v0, p0, Liue;->a:I
+    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
-    iget-object p0, p0, Liue;->b:Landroidx/appcompat/widget/Toolbar;
+    const/16 v1, 0x1f
 
-    packed-switch v0, :pswitch_data_0
+    iget v2, p0, Liue;->c:I
 
-    invoke-virtual {p0}, Landroidx/appcompat/widget/Toolbar;->n()V
+    iget-object v3, p0, Liue;->b:Landroid/app/Notification;
+
+    iget v4, p0, Liue;->a:I
+
+    iget-object p0, p0, Liue;->o:Landroidx/work/impl/foreground/SystemForegroundService;
+
+    if-lt v0, v1, :cond_0
+
+    invoke-static {p0, v4, v3, v2}, Lkue;->a(Landroid/app/Service;ILandroid/app/Notification;I)V
 
     return-void
-
-    :pswitch_0
-    iget-object p0, p0, Landroidx/appcompat/widget/Toolbar;->W0:Lkue;
-
-    if-nez p0, :cond_0
-
-    const/4 p0, 0x0
-
-    goto :goto_0
 
     :cond_0
-    iget-object p0, p0, Lkue;->b:Lbq8;
+    invoke-static {p0, v4, v3, v2}, Ljue;->a(Landroid/app/Service;ILandroid/app/Notification;I)V
 
-    :goto_0
-    if-eqz p0, :cond_1
-
-    invoke-virtual {p0}, Lbq8;->collapseActionView()Z
-
-    :cond_1
     return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
 .end method

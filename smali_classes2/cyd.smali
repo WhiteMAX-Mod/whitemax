@@ -17,7 +17,7 @@
 
     new-instance v0, Lcyd;
 
-    const-string v1, "EXPANDED"
+    const-string v1, "NONE"
 
     const/4 v2, 0x0
 
@@ -27,7 +27,7 @@
 
     new-instance v1, Lcyd;
 
-    const-string v2, "COLLAPSED"
+    const-string v2, "SURFACE"
 
     const/4 v3, 0x1
 

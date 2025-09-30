@@ -1,124 +1,154 @@
 .class public final Lyp3;
-.super Lsdb;
+.super Lsxe;
 .source "SourceFile"
+
+# interfaces
+.implements La08;
+
+
+# instance fields
+.field public final c:Ljava/util/List;
+
+
+# direct methods
+.method public constructor <init>(Ljava/util/List;)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lyp3;->c:Ljava/util/List;
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final x(Lol7;)V
+.method public final a(ZZ)Ljava/lang/String;
+    .locals 2
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "CONTACT_INFO.Response(contacts="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object p0, p0, Lyp3;->c:Ljava/util/List;
+
+    invoke-static {p0, p1, p2}, Li4h;->M(Ljava/util/List;ZZ)Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const/16 p0, 0x29
+
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public final d()Ljava/util/List;
     .locals 4
 
-    check-cast p1, Ltm3;
+    new-instance v0, Ljava/util/ArrayList;
 
-    iget-object p0, p0, Lccc;->a:Landroid/view/View;
+    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    check-cast p0, Lek3;
+    iget-object p0, p0, Lyp3;->c:Ljava/util/List;
 
-    iget-boolean v0, p1, Ltm3;->p0:Z
+    invoke-interface {p0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
-    if-eqz v0, :cond_1
+    move-result-object p0
 
-    iget-object v0, p1, Ltm3;->Z:Labb;
-
-    sget-object v1, Labb;->c:Labb;
-
-    if-ne v0, v1, :cond_1
-
-    const/16 v0, 0x40
-
-    int-to-float v0, v0
-
-    invoke-static {}, Lgk4;->d()Landroid/content/res/Resources;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v1
-
-    iget v1, v1, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v0, v1
-
-    invoke-static {v0}, Lkhg;->x(F)I
-
-    move-result v0
-
-    const/16 v1, 0x50
-
-    int-to-float v1, v1
-
-    invoke-static {}, Lgk4;->d()Landroid/content/res/Resources;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v2
-
-    iget v2, v2, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v1, v2
-
-    invoke-static {v1}, Lkhg;->x(F)I
+    :cond_0
+    :goto_0
+    invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
 
     move-result v1
 
-    iget-object v2, p0, Lek3;->X0:Lagc;
+    if-eqz v1, :cond_1
 
-    sget-object v3, Luj6;->X:Luj6;
+    invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    iput-object v3, v2, Lagc;->b:Ljava/lang/Object;
+    move-result-object v1
 
-    invoke-virtual {p0}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+    move-object v2, v1
 
-    move-result-object v2
+    check-cast v2, Lvp3;
 
-    if-eqz v2, :cond_0
+    sget-object v3, Ltp3;->z0:Ltp3;
 
-    iput v1, v2, Landroid/view/ViewGroup$LayoutParams;->height:I
+    if-eq v2, v3, :cond_0
 
-    invoke-virtual {p0, v2}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
-
-    iput v0, p0, Lek3;->c1:I
-
-    invoke-virtual {p0}, Lek3;->I()V
+    invoke-interface {v0, v1}, Ljava/util/Collection;->add(Ljava/lang/Object;)Z
 
     goto :goto_0
 
+    :cond_1
+    return-object v0
+.end method
+
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 3
+
+    const/4 v0, 0x1
+
+    if-ne p0, p1, :cond_0
+
+    return v0
+
     :cond_0
-    new-instance p0, Ljava/lang/NullPointerException;
+    instance-of v1, p1, Lyp3;
 
-    const-string p1, "null cannot be cast to non-null type android.view.ViewGroup.LayoutParams"
+    const/4 v2, 0x0
 
-    invoke-direct {p0, p1}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
+    if-nez v1, :cond_1
 
-    throw p0
+    return v2
 
     :cond_1
-    :goto_0
-    iget-wide v0, p1, Ltm3;->a:J
+    check-cast p1, Lyp3;
 
-    iget-object v2, p1, Ltm3;->Y:Ljava/lang/CharSequence;
+    iget-object p0, p0, Lyp3;->c:Ljava/util/List;
 
-    iget-object v3, p1, Ltm3;->o:Ljava/lang/String;
+    iget-object p1, p1, Lyp3;->c:Ljava/util/List;
 
-    invoke-virtual {p0, v0, v1, v2, v3}, Lek3;->L(JLjava/lang/CharSequence;Ljava/lang/String;)V
+    invoke-static {p0, p1}, Lvyg;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    iget-object v0, p1, Ltm3;->b:Ljava/lang/String;
+    move-result p0
 
-    invoke-virtual {p0, v0}, Lek3;->setName(Ljava/lang/CharSequence;)V
+    if-nez p0, :cond_2
 
-    iget-object p1, p1, Ltm3;->c:Lmoe;
+    return v2
 
-    invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
+    :cond_2
+    return v0
+.end method
 
-    move-result-object v0
+.method public final hashCode()I
+    .locals 0
 
-    invoke-virtual {p1, v0}, Lmoe;->b(Landroid/content/Context;)Ljava/lang/CharSequence;
+    iget-object p0, p0, Lyp3;->c:Ljava/util/List;
 
-    move-result-object p1
+    invoke-virtual {p0}, Ljava/lang/Object;->hashCode()I
 
-    invoke-virtual {p0, p1}, Lek3;->setMessage(Ljava/lang/CharSequence;)V
+    move-result p0
 
-    return-void
+    return p0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 1
+
+    const/4 v0, 0x0
+
+    invoke-virtual {p0, v0, v0}, Lyp3;->a(ZZ)Ljava/lang/String;
+
+    move-result-object p0
+
+    return-object p0
 .end method

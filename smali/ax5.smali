@@ -1,70 +1,51 @@
-.class public final synthetic Lax5;
-.super Ljava/lang/Object;
+.class public final Lax5;
+.super Lq0;
 .source "SourceFile"
-
-# interfaces
-.implements Lv56;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final c:Lv5d;
 
-.field public final synthetic b:Landroidx/recyclerview/widget/RecyclerView;
+.field public final o:Z
 
 
 # direct methods
-.method public synthetic constructor <init>(Landroidx/recyclerview/widget/RecyclerView;I)V
+.method public constructor <init>(Ltv5;Lv5d;)V
     .locals 0
 
-    iput p2, p0, Lax5;->a:I
+    invoke-direct {p0, p1}, Lq0;-><init>(Lrv5;)V
 
-    iput-object p1, p0, Lax5;->b:Landroidx/recyclerview/widget/RecyclerView;
+    iput-object p2, p0, Lax5;->c:Lv5d;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/4 p1, 0x1
+
+    iput-boolean p1, p0, Lax5;->o:Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke()Ljava/lang/Object;
-    .locals 1
+.method public final f(Lbx5;)V
+    .locals 3
 
-    iget v0, p0, Lax5;->a:I
+    iget-object v0, p0, Lax5;->c:Lv5d;
 
-    iget-object p0, p0, Lax5;->b:Landroidx/recyclerview/widget/RecyclerView;
+    invoke-virtual {v0}, Lv5d;->a()Lt5d;
 
-    packed-switch v0, :pswitch_data_0
+    move-result-object v0
 
-    sget-object v0, Lone/me/chats/picker/contacts/PickerContactsListWidget;->v0:[Lbc7;
+    new-instance v1, Lzw5;
 
-    invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
+    iget-object v2, p0, Lq0;->b:Lrv5;
 
-    move-result-object p0
+    iget-boolean p0, p0, Lax5;->o:Z
 
-    invoke-static {p0}, Lgr0;->h(Landroid/content/Context;)Landroid/graphics/drawable/StateListDrawable;
+    invoke-direct {v1, p1, v0, v2, p0}, Lzw5;-><init>(Ljne;Lt5d;Lkzb;Z)V
 
-    move-result-object p0
+    invoke-interface {p1, v1}, Ljne;->d(Llne;)V
 
-    return-object p0
+    invoke-virtual {v0, v1}, Lt5d;->b(Ljava/lang/Runnable;)Loq4;
 
-    :pswitch_0
-    sget-object v0, Lone/me/folders/pickerfolders/FoldersPickerScreen;->o0:[Lbc7;
-
-    invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
-
-    move-result-object p0
-
-    invoke-static {p0}, Lgr0;->h(Landroid/content/Context;)Landroid/graphics/drawable/StateListDrawable;
-
-    move-result-object p0
-
-    return-object p0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-void
 .end method

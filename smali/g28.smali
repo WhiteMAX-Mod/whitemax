@@ -1,51 +1,48 @@
 .class public final Lg28;
-.super Lb28;
-.source "SourceFile"
+.super Ljx3;
 
 
 # instance fields
-.field public final a:Lx28;
+.field public X:I
+
+.field public final synthetic Y:Lyf7;
+
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Lx28;)V
+.method public constructor <init>(Lyf7;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lg28;->Y:Lyf7;
 
-    iput-object p1, p0, Lg28;->a:Lx28;
+    invoke-direct {p0, p2}, Ljx3;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final g(Lu28;)V
-    .locals 2
+.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    new-instance v0, Lf28;
+    iput-object p1, p0, Lg28;->o:Ljava/lang/Object;
 
-    const/4 v1, 0x0
+    iget p1, p0, Lg28;->X:I
 
-    invoke-direct {v0, v1, p1}, Lf28;-><init>(ILjava/lang/Object;)V
+    const/high16 v0, -0x80000000
 
-    invoke-interface {p1, v0}, Lu28;->c(Lam4;)V
+    or-int/2addr p1, v0
 
-    :try_start_0
-    iget-object p0, p0, Lg28;->a:Lx28;
+    iput p1, p0, Lg28;->X:I
 
-    invoke-interface {p0, v0}, Lx28;->b(Lf28;)V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    iget-object p1, p0, Lg28;->Y:Lyf7;
 
-    return-void
+    const/4 v0, 0x0
 
-    :catchall_0
-    move-exception p0
+    invoke-virtual {p1, v0, p0}, Lyf7;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
-    invoke-static {p0}, Lfc2;->G(Ljava/lang/Throwable;)V
+    move-result-object p0
 
-    invoke-virtual {v0, p0}, Lf28;->onError(Ljava/lang/Throwable;)V
-
-    return-void
+    return-object p0
 .end method

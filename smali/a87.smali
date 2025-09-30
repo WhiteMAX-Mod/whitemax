@@ -1,52 +1,28 @@
-.class public final La87;
+.class public abstract La87;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lb87;
 
-
-# instance fields
-.field public final a:Landroid/content/Intent;
-
-.field public final b:I
-
-.field public final synthetic c:Lg87;
+# static fields
+.field public static final a:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>(Lg87;Landroid/content/Intent;I)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const-string v0, "InputMerger"
 
-    iput-object p1, p0, La87;->c:Lg87;
+    invoke-static {v0}, Lmq0;->M(Ljava/lang/String;)Ljava/lang/String;
 
-    iput-object p2, p0, La87;->a:Landroid/content/Intent;
+    move-result-object v0
 
-    iput p3, p0, La87;->b:I
+    sput-object v0, La87;->a:Ljava/lang/String;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()V
-    .locals 1
-
-    iget-object v0, p0, La87;->c:Lg87;
-
-    iget p0, p0, La87;->b:I
-
-    invoke-virtual {v0, p0}, Landroid/app/Service;->stopSelf(I)V
-
-    return-void
-.end method
-
-.method public final getIntent()Landroid/content/Intent;
-    .locals 0
-
-    iget-object p0, p0, La87;->a:Landroid/content/Intent;
-
-    return-object p0
+.method public abstract a(Ljava/util/ArrayList;)Lp64;
 .end method

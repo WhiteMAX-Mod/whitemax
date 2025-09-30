@@ -2,75 +2,118 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lau3;
+
+# static fields
+.field public static final d:J
+
+.field public static final synthetic e:I
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final a:Ljava/lang/String;
 
-.field public final synthetic b:Lule;
+.field public final b:Ljava/lang/String;
 
-.field public final synthetic c:Lau3;
-
-.field public final synthetic d:Ljava/util/concurrent/Executor;
+.field public final c:J
 
 
 # direct methods
-.method public synthetic constructor <init>(Lule;Lau3;Ljava/util/concurrent/Executor;I)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 3
 
-    iput p4, p0, Lgle;->a:I
+    sget-object v0, Ljava/util/concurrent/TimeUnit;->DAYS:Ljava/util/concurrent/TimeUnit;
 
-    iput-object p1, p0, Lgle;->b:Lule;
+    const-wide/16 v1, 0x7
 
-    iput-object p2, p0, Lgle;->c:Lau3;
+    invoke-virtual {v0, v1, v2}, Ljava/util/concurrent/TimeUnit;->toMillis(J)J
 
-    iput-object p3, p0, Lgle;->d:Ljava/util/concurrent/Executor;
+    move-result-wide v0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    sput-wide v0, Lgle;->d:J
 
     return-void
 .end method
 
+.method public constructor <init>(JLjava/lang/String;Ljava/lang/String;)V
+    .locals 0
 
-# virtual methods
-.method public final a(Lbolts/Task;)Ljava/lang/Object;
-    .locals 3
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iget v0, p0, Lgle;->a:I
+    iput-object p3, p0, Lgle;->a:Ljava/lang/String;
 
-    packed-switch v0, :pswitch_data_0
+    iput-object p4, p0, Lgle;->b:Ljava/lang/String;
 
-    iget-object v0, p0, Lgle;->b:Lule;
+    iput-wide p1, p0, Lgle;->c:J
 
-    iget-object v1, p0, Lgle;->c:Lau3;
+    return-void
+.end method
 
-    iget-object p0, p0, Lgle;->d:Ljava/util/concurrent/Executor;
+.method public static a(Ljava/lang/String;)Lgle;
+    .locals 6
 
-    const/4 v2, 0x0
+    invoke-static {p0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
-    invoke-static {v0, v1, p1, p0, v2}, Lbolts/Task;->access$100(Lule;Lau3;Lbolts/Task;Ljava/util/concurrent/Executor;Lxy1;)V
+    move-result v0
 
-    return-object v2
+    const/4 v1, 0x0
 
-    :pswitch_0
-    iget-object v0, p0, Lgle;->b:Lule;
+    if-eqz v0, :cond_0
 
-    iget-object v1, p0, Lgle;->c:Lau3;
+    return-object v1
 
-    iget-object p0, p0, Lgle;->d:Ljava/util/concurrent/Executor;
+    :cond_0
+    const-string v0, "{"
 
-    const/4 v2, 0x0
+    invoke-virtual {p0, v0}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
-    invoke-static {v0, v1, p1, p0, v2}, Lbolts/Task;->access$000(Lule;Lau3;Lbolts/Task;Ljava/util/concurrent/Executor;Lxy1;)V
+    move-result v0
 
-    return-object v2
+    if-eqz v0, :cond_1
 
-    nop
+    :try_start_0
+    new-instance v0, Lorg/json/JSONObject;
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    invoke-direct {v0, p0}, Lorg/json/JSONObject;-><init>(Ljava/lang/String;)V
+
+    new-instance p0, Lgle;
+
+    const-string v2, "token"
+
+    invoke-virtual {v0, v2}, Lorg/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v2
+
+    const-string v3, "appVersion"
+
+    invoke-virtual {v0, v3}, Lorg/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v3
+
+    const-string v4, "timestamp"
+
+    invoke-virtual {v0, v4}, Lorg/json/JSONObject;->getLong(Ljava/lang/String;)J
+
+    move-result-wide v4
+
+    invoke-direct {p0, v4, v5, v2, v3}, Lgle;-><init>(JLjava/lang/String;Ljava/lang/String;)V
+    :try_end_0
+    .catch Lorg/json/JSONException; {:try_start_0 .. :try_end_0} :catch_0
+
+    return-object p0
+
+    :catch_0
+    move-exception p0
+
+    invoke-virtual {p0}, Ljava/lang/Object;->toString()Ljava/lang/String;
+
+    return-object v1
+
+    :cond_1
+    new-instance v0, Lgle;
+
+    const-wide/16 v2, 0x0
+
+    invoke-direct {v0, v2, v3, p0, v1}, Lgle;-><init>(JLjava/lang/String;Ljava/lang/String;)V
+
+    return-object v0
 .end method

@@ -1,284 +1,260 @@
 .class public final Lzo8;
-.super Lqde;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ll66;
+
+# static fields
+.field public static final b:Z
+
+.field public static final c:Ljava/lang/Object;
+
+.field public static volatile d:Lzo8;
 
 
 # instance fields
-.field public X:Ljava/lang/Object;
-
-.field public Y:I
-
-.field public final synthetic Z:Lm9g;
+.field public a:Lwo8;
 
 
 # direct methods
-.method public constructor <init>(Lm9g;Lkotlin/coroutines/Continuation;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 2
 
-    iput-object p1, p0, Lzo8;->Z:Lm9g;
+    const-string v0, "MediaSessionManager"
 
-    const/4 p1, 0x2
+    const/4 v1, 0x3
 
-    invoke-direct {p0, p1, p2}, Lqde;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-static {v0, v1}, Landroid/util/Log;->isLoggable(Ljava/lang/String;I)Z
+
+    move-result v0
+
+    sput-boolean v0, Lzo8;->b:Z
+
+    new-instance v0, Ljava/lang/Object;
+
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    sput-object v0, Lzo8;->c:Ljava/lang/Object;
 
     return-void
 .end method
 
+.method public static a(Landroid/content/Context;)Lzo8;
+    .locals 4
 
-# virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+    if-eqz p0, :cond_1
 
-    check-cast p1, Lox3;
+    sget-object v0, Lzo8;->c:Ljava/lang/Object;
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    monitor-enter v0
 
-    invoke-virtual {p0, p1, p2}, Lzo8;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    :try_start_0
+    sget-object v1, Lzo8;->d:Lzo8;
+
+    if-nez v1, :cond_0
+
+    new-instance v1, Lzo8;
+
+    invoke-virtual {p0}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
 
     move-result-object p0
 
-    check-cast p0, Lzo8;
+    invoke-direct {v1}, Ljava/lang/Object;-><init>()V
 
-    sget-object p1, Le5f;->a:Le5f;
+    new-instance v2, Lwo8;
 
-    invoke-virtual {p0, p1}, Lzo8;->o(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-direct {v2}, Ljava/lang/Object;-><init>()V
+
+    iput-object p0, v2, Lwo8;->a:Landroid/content/Context;
+
+    invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
+
+    move-result-object v3
+
+    iput-object v3, v2, Lwo8;->b:Landroid/content/ContentResolver;
+
+    iput-object p0, v2, Lwo8;->a:Landroid/content/Context;
+
+    const-string v3, "media_session"
+
+    invoke-virtual {p0, v3}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object p0
 
-    return-object p0
-.end method
+    check-cast p0, Landroid/media/session/MediaSessionManager;
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 0
+    iput-object v2, v1, Lzo8;->a:Lwo8;
 
-    new-instance p1, Lzo8;
+    sput-object v1, Lzo8;->d:Lzo8;
 
-    iget-object p0, p0, Lzo8;->Z:Lm9g;
+    goto :goto_0
 
-    invoke-direct {p1, p0, p2}, Lzo8;-><init>(Lm9g;Lkotlin/coroutines/Continuation;)V
+    :catchall_0
+    move-exception p0
 
-    return-object p1
-.end method
-
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 8
-
-    iget v0, p0, Lzo8;->Y:I
-
-    const/4 v1, 0x4
-
-    const/4 v2, 0x3
-
-    const/4 v3, 0x2
-
-    const/4 v4, 0x1
-
-    iget-object v5, p0, Lzo8;->Z:Lm9g;
-
-    sget-object v6, Lpx3;->a:Lpx3;
-
-    if-eqz v0, :cond_4
-
-    if-eq v0, v4, :cond_3
-
-    if-eq v0, v3, :cond_2
-
-    if-eq v0, v2, :cond_1
-
-    if-ne v0, v1, :cond_0
-
-    iget-object p0, p0, Lzo8;->X:Ljava/lang/Object;
-
-    check-cast p0, Ljava/util/Collection;
-
-    invoke-static {p1}, Lsgg;->Z(Ljava/lang/Object;)V
-
-    goto :goto_4
+    goto :goto_1
 
     :cond_0
-    new-instance p0, Ljava/lang/IllegalStateException;
+    :goto_0
+    sget-object p0, Lzo8;->d:Lzo8;
 
-    const-string p1, "call to \'resume\' before \'invoke\' with coroutine"
+    monitor-exit v0
 
-    invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    return-object p0
+
+    :goto_1
+    monitor-exit v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     throw p0
 
     :cond_1
-    iget-object v0, p0, Lzo8;->X:Ljava/lang/Object;
+    new-instance p0, Ljava/lang/IllegalArgumentException;
 
-    check-cast v0, Ljava/util/Collection;
+    const-string v0, "context cannot be null"
 
-    invoke-static {p1}, Lsgg;->Z(Ljava/lang/Object;)V
+    invoke-direct {p0, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
-    goto :goto_2
+    throw p0
+.end method
 
-    :cond_2
-    iget-object v0, p0, Lzo8;->X:Ljava/lang/Object;
 
-    check-cast v0, Li4d;
+# virtual methods
+.method public final b(Lxo8;)Z
+    .locals 4
 
-    invoke-static {p1}, Lsgg;->Z(Ljava/lang/Object;)V
+    if-eqz p1, :cond_5
 
-    goto :goto_1
+    iget-object p0, p0, Lzo8;->a:Lwo8;
 
-    :cond_3
-    invoke-static {p1}, Lsgg;->Z(Ljava/lang/Object;)V
+    iget-object p1, p1, Lxo8;->a:Lvo8;
 
-    goto :goto_0
+    iget-object v0, p0, Lwo8;->a:Landroid/content/Context;
 
-    :cond_4
-    invoke-static {p1}, Lsgg;->Z(Ljava/lang/Object;)V
+    iget v1, p1, Lvo8;->b:I
 
-    iput v4, p0, Lzo8;->Y:I
+    iget v2, p1, Lvo8;->c:I
 
-    invoke-static {v5, p0}, Lm9g;->c(Lm9g;Lbu3;)Ljava/lang/Object;
+    const-string v3, "android.permission.MEDIA_CONTENT_CONTROL"
 
-    move-result-object p1
-
-    if-ne p1, v6, :cond_5
-
-    goto :goto_3
-
-    :cond_5
-    :goto_0
-    move-object v0, p1
-
-    check-cast v0, Li4d;
-
-    iput-object v0, p0, Lzo8;->X:Ljava/lang/Object;
-
-    iput v3, p0, Lzo8;->Y:I
-
-    invoke-static {v5, p0}, Lm9g;->d(Lm9g;Lbu3;)Ljava/io/Serializable;
-
-    move-result-object p1
-
-    if-ne p1, v6, :cond_6
-
-    goto :goto_3
-
-    :cond_6
-    :goto_1
-    check-cast p1, Ljava/util/Collection;
-
-    invoke-static {v0}, Lr4d;->X(Li4d;)Ljava/util/List;
-
-    move-result-object v0
-
-    iput-object p1, p0, Lzo8;->X:Ljava/lang/Object;
-
-    iput v2, p0, Lzo8;->Y:I
-
-    invoke-static {v0, p0}, Lild;->b(Ljava/util/Collection;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    if-ne v0, v6, :cond_7
-
-    goto :goto_3
-
-    :cond_7
-    move-object v7, v0
-
-    move-object v0, p1
-
-    move-object p1, v7
-
-    :goto_2
-    check-cast p1, Ljava/util/Collection;
-
-    iput-object p1, p0, Lzo8;->X:Ljava/lang/Object;
-
-    iput v1, p0, Lzo8;->Y:I
-
-    invoke-static {v0, p0}, Lild;->b(Ljava/util/Collection;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    if-ne p0, v6, :cond_8
-
-    :goto_3
-    return-object v6
-
-    :cond_8
-    move-object v7, p1
-
-    move-object p1, p0
-
-    move-object p0, v7
-
-    :goto_4
-    check-cast p1, Ljava/lang/Iterable;
-
-    invoke-static {p0, p1}, Lp43;->M0(Ljava/util/Collection;Ljava/lang/Iterable;)Ljava/util/ArrayList;
-
-    move-result-object p0
-
-    new-instance p1, Ljava/util/ArrayList;
-
-    invoke-direct {p1, p0}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
-
-    iget-object p0, v5, Lm9g;->c:Ljava/lang/Object;
-
-    check-cast p0, Lje7;
-
-    invoke-interface {p0}, Lje7;->getValue()Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, Lhq3;
-
-    new-instance v0, Lx37;
-
-    const/16 v1, 0xf
-
-    invoke-direct {v0, v1}, Lx37;-><init>(I)V
-
-    invoke-virtual {p0, p1, v0}, Lhq3;->c(Ljava/util/ArrayList;Lx56;)V
-
-    new-instance p0, Lqg9;
-
-    invoke-virtual {p1}, Ljava/util/ArrayList;->size()I
+    invoke-virtual {v0, v3, v1, v2}, Landroid/content/Context;->checkPermission(Ljava/lang/String;II)I
 
     move-result v0
 
-    invoke-direct {p0, v0}, Lqg9;-><init>(I)V
+    if-nez v0, :cond_0
 
-    new-instance v0, Lxu;
+    goto :goto_1
 
-    const/4 v1, 0x2
-
-    invoke-direct {v0, p0, v1}, Lxu;-><init>(Lqg9;I)V
-
-    new-instance p0, Lut5;
-
-    const/4 v1, 0x1
-
-    invoke-direct {p0, v1, v0}, Lut5;-><init>(ILx56;)V
-
-    invoke-virtual {p1, p0}, Ljava/util/ArrayList;->removeIf(Ljava/util/function/Predicate;)Z
-
-    iget-object p0, v5, Lm9g;->j:Ljava/lang/Object;
-
-    check-cast p0, Lazd;
-
+    :cond_0
     const/4 v0, 0x0
 
-    invoke-virtual {p0, v0, p1}, Lazd;->m(Ljava/lang/Object;Ljava/lang/Object;)Z
+    :try_start_0
+    iget-object v1, p0, Lwo8;->a:Landroid/content/Context;
 
-    iget-object p0, v5, Lm9g;->g:Ljava/lang/Object;
+    invoke-virtual {v1}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
-    check-cast p0, Ljava/util/concurrent/atomic/AtomicBoolean;
+    move-result-object v1
 
-    const/4 p1, 0x0
+    iget-object v2, p1, Lvo8;->a:Ljava/lang/String;
 
-    invoke-virtual {p0, p1}, Ljava/util/concurrent/atomic/AtomicBoolean;->set(Z)V
+    invoke-virtual {v1, v2, v0}, Landroid/content/pm/PackageManager;->getApplicationInfo(Ljava/lang/String;I)Landroid/content/pm/ApplicationInfo;
 
-    sget-object p0, Le5f;->a:Le5f;
+    move-result-object v1
+    :try_end_0
+    .catch Landroid/content/pm/PackageManager$NameNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
 
-    return-object p0
+    if-nez v1, :cond_1
+
+    goto :goto_2
+
+    :cond_1
+    const-string v1, "android.permission.STATUS_BAR_SERVICE"
+
+    invoke-virtual {p0, p1, v1}, Lwo8;->a(Lvo8;Ljava/lang/String;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_3
+
+    invoke-virtual {p0, p1, v3}, Lwo8;->a(Lvo8;Ljava/lang/String;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_3
+
+    iget v1, p1, Lvo8;->c:I
+
+    const/16 v2, 0x3e8
+
+    if-eq v1, v2, :cond_3
+
+    iget-object p0, p0, Lwo8;->b:Landroid/content/ContentResolver;
+
+    const-string v1, "enabled_notification_listeners"
+
+    invoke-static {p0, v1}, Landroid/provider/Settings$Secure;->getString(Landroid/content/ContentResolver;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p0
+
+    if-eqz p0, :cond_4
+
+    const-string v1, ":"
+
+    invoke-virtual {p0, v1}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
+
+    move-result-object p0
+
+    move v1, v0
+
+    :goto_0
+    array-length v2, p0
+
+    if-ge v1, v2, :cond_4
+
+    aget-object v2, p0, v1
+
+    invoke-static {v2}, Landroid/content/ComponentName;->unflattenFromString(Ljava/lang/String;)Landroid/content/ComponentName;
+
+    move-result-object v2
+
+    if-eqz v2, :cond_2
+
+    invoke-virtual {v2}, Landroid/content/ComponentName;->getPackageName()Ljava/lang/String;
+
+    move-result-object v2
+
+    iget-object v3, p1, Lvo8;->a:Ljava/lang/String;
+
+    invoke-virtual {v2, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_2
+
+    goto :goto_1
+
+    :cond_2
+    add-int/lit8 v1, v1, 0x1
+
+    goto :goto_0
+
+    :cond_3
+    :goto_1
+    const/4 p0, 0x1
+
+    return p0
+
+    :catch_0
+    :cond_4
+    :goto_2
+    return v0
+
+    :cond_5
+    new-instance p0, Ljava/lang/IllegalArgumentException;
+
+    const-string p1, "userInfo should not be null"
+
+    invoke-direct {p0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw p0
 .end method

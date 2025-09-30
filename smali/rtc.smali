@@ -1,246 +1,150 @@
 .class public final Lrtc;
-.super Ljava/lang/Object;
+.super Landroid/net/ConnectivityManager$NetworkCallback;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:J
+.field public a:Z
 
-.field public final b:Ljava/lang/String;
+.field public b:Z
 
-.field public final c:Lwf1;
-
-.field public final d:J
-
-.field public final e:I
+.field public final synthetic c:Lla0;
 
 
 # direct methods
-.method public constructor <init>(JLjava/lang/String;Lwf1;JI)V
+.method public constructor <init>(Lla0;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lrtc;->c:Lla0;
 
-    iput-wide p1, p0, Lrtc;->a:J
-
-    iput-object p3, p0, Lrtc;->b:Ljava/lang/String;
-
-    iput-object p4, p0, Lrtc;->c:Lwf1;
-
-    iput-wide p5, p0, Lrtc;->d:J
-
-    iput p7, p0, Lrtc;->e:I
+    invoke-direct {p0}, Landroid/net/ConnectivityManager$NetworkCallback;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
+.method public final onAvailable(Landroid/net/Network;)V
+    .locals 2
 
-    if-ne p0, p1, :cond_0
+    iget-object p1, p0, Lrtc;->c:Lla0;
 
-    goto :goto_1
+    iget-object p1, p1, Lla0;->e:Ljava/lang/Object;
+
+    check-cast p1, Landroid/os/Handler;
+
+    new-instance v0, Lqtc;
+
+    const/4 v1, 0x0
+
+    invoke-direct {v0, p0, v1}, Lqtc;-><init>(Lrtc;I)V
+
+    invoke-virtual {p1, v0}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
+
+    return-void
+.end method
+
+.method public final onBlockedStatusChanged(Landroid/net/Network;Z)V
+    .locals 1
+
+    if-nez p2, :cond_0
+
+    iget-object p1, p0, Lrtc;->c:Lla0;
+
+    iget-object p1, p1, Lla0;->e:Ljava/lang/Object;
+
+    check-cast p1, Landroid/os/Handler;
+
+    new-instance p2, Lqtc;
+
+    const/4 v0, 0x1
+
+    invoke-direct {p2, p0, v0}, Lqtc;-><init>(Lrtc;I)V
+
+    invoke-virtual {p1, p2}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
     :cond_0
-    instance-of v0, p1, Lrtc;
-
-    if-nez v0, :cond_1
-
-    goto :goto_0
-
-    :cond_1
-    check-cast p1, Lrtc;
-
-    iget-wide v0, p0, Lrtc;->a:J
-
-    iget-wide v2, p1, Lrtc;->a:J
-
-    cmp-long v0, v0, v2
-
-    if-eqz v0, :cond_2
-
-    goto :goto_0
-
-    :cond_2
-    iget-object v0, p0, Lrtc;->b:Ljava/lang/String;
-
-    iget-object v1, p1, Lrtc;->b:Ljava/lang/String;
-
-    invoke-static {v0, v1}, Lxq7;->d(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_3
-
-    goto :goto_0
-
-    :cond_3
-    iget-object v0, p0, Lrtc;->c:Lwf1;
-
-    iget-object v1, p1, Lrtc;->c:Lwf1;
-
-    invoke-virtual {v0, v1}, Lwf1;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_4
-
-    goto :goto_0
-
-    :cond_4
-    iget-wide v0, p0, Lrtc;->d:J
-
-    iget-wide v2, p1, Lrtc;->d:J
-
-    cmp-long v0, v0, v2
-
-    if-eqz v0, :cond_5
-
-    goto :goto_0
-
-    :cond_5
-    iget p0, p0, Lrtc;->e:I
-
-    iget p1, p1, Lrtc;->e:I
-
-    if-eq p0, p1, :cond_6
-
-    :goto_0
-    const/4 p0, 0x0
-
-    return p0
-
-    :cond_6
-    :goto_1
-    const/4 p0, 0x1
-
-    return p0
+    return-void
 .end method
 
-.method public final hashCode()I
-    .locals 5
+.method public final onCapabilitiesChanged(Landroid/net/Network;Landroid/net/NetworkCapabilities;)V
+    .locals 1
 
-    iget-wide v0, p0, Lrtc;->a:J
+    const/16 p1, 0x10
 
-    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
+    invoke-virtual {p2, p1}, Landroid/net/NetworkCapabilities;->hasCapability(I)Z
 
-    move-result v0
+    move-result p1
 
-    const/16 v1, 0x1f
+    iget-boolean p2, p0, Lrtc;->a:Z
 
-    mul-int/2addr v0, v1
+    iget-object v0, p0, Lrtc;->c:Lla0;
 
-    iget-object v2, p0, Lrtc;->b:Ljava/lang/String;
+    if-eqz p2, :cond_2
 
-    invoke-static {v0, v1, v2}, Lv04;->d(IILjava/lang/String;)I
+    iget-boolean p2, p0, Lrtc;->b:Z
 
-    move-result v0
-
-    iget-object v2, p0, Lrtc;->c:Lwf1;
-
-    invoke-virtual {v2}, Lwf1;->hashCode()I
-
-    move-result v2
-
-    add-int/2addr v2, v0
-
-    mul-int/2addr v2, v1
-
-    iget-wide v3, p0, Lrtc;->d:J
-
-    invoke-static {v2, v1, v3, v4}, Lzge;->m(IIJ)I
-
-    move-result v0
-
-    iget p0, p0, Lrtc;->e:I
-
-    invoke-static {p0}, Lzt1;->s(I)I
-
-    move-result p0
-
-    add-int/2addr p0, v0
-
-    return p0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 5
-
-    const-string v0, "ScreenRecordBroadcastData(id="
-
-    const-string v1, ", streamId="
-
-    iget-wide v2, p0, Lrtc;->a:J
-
-    iget-object v4, p0, Lrtc;->b:Ljava/lang/String;
-
-    invoke-static {v0, v2, v3, v1, v4}, Lp3a;->k(Ljava/lang/String;JLjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    const-string v1, ", initiatorId="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lrtc;->c:Lwf1;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", startTimeMs="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-wide v1, p0, Lrtc;->d:J
-
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    const-string v1, ", recordType="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const/4 v1, 0x1
-
-    iget p0, p0, Lrtc;->e:I
-
-    if-eq p0, v1, :cond_2
-
-    const/4 v1, 0x2
-
-    if-eq p0, v1, :cond_1
-
-    const/4 v1, 0x3
-
-    if-eq p0, v1, :cond_0
-
-    const-string p0, "null"
+    if-eq p2, p1, :cond_0
 
     goto :goto_0
 
     :cond_0
-    const-string p0, "RECORD"
+    if-eqz p1, :cond_1
 
-    goto :goto_0
+    iget-object p1, v0, Lla0;->e:Ljava/lang/Object;
+
+    check-cast p1, Landroid/os/Handler;
+
+    new-instance p2, Lqtc;
+
+    const/4 v0, 0x1
+
+    invoke-direct {p2, p0, v0}, Lqtc;-><init>(Lrtc;I)V
+
+    invoke-virtual {p1, p2}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
     :cond_1
-    const-string p0, "STREAM"
-
-    goto :goto_0
+    return-void
 
     :cond_2
-    const-string p0, "NOTHING"
-
     :goto_0
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    const/4 p2, 0x1
 
-    const-string p0, ")"
+    iput-boolean p2, p0, Lrtc;->a:Z
 
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    iput-boolean p1, p0, Lrtc;->b:Z
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    iget-object p1, v0, Lla0;->e:Ljava/lang/Object;
 
-    move-result-object p0
+    check-cast p1, Landroid/os/Handler;
 
-    return-object p0
+    new-instance p2, Lqtc;
+
+    const/4 v0, 0x0
+
+    invoke-direct {p2, p0, v0}, Lqtc;-><init>(Lrtc;I)V
+
+    invoke-virtual {p1, p2}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
+
+    return-void
+.end method
+
+.method public final onLost(Landroid/net/Network;)V
+    .locals 2
+
+    iget-object p1, p0, Lrtc;->c:Lla0;
+
+    iget-object p1, p1, Lla0;->e:Ljava/lang/Object;
+
+    check-cast p1, Landroid/os/Handler;
+
+    new-instance v0, Lqtc;
+
+    const/4 v1, 0x0
+
+    invoke-direct {v0, p0, v1}, Lqtc;-><init>(Lrtc;I)V
+
+    invoke-virtual {p1, v0}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
+
+    return-void
 .end method

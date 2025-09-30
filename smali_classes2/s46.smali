@@ -1,80 +1,91 @@
-.class public final synthetic Ls46;
+.class public final Ls46;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lc6;
-
 
 # instance fields
-.field public final synthetic a:I
+.field public final a:Ljava/util/concurrent/ConcurrentSkipListSet;
 
-.field public final synthetic b:Lru/ok/messages/media/attaches/fragments/FrgAttachPhoto;
+.field public final b:Lr46;
+
+.field public final c:Ljava/util/ArrayList;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lru/ok/messages/media/attaches/fragments/FrgAttachPhoto;I)V
-    .locals 0
-
-    iput p2, p0, Ls46;->a:I
-
-    iput-object p1, p0, Ls46;->b:Lru/ok/messages/media/attaches/fragments/FrgAttachPhoto;
+.method public constructor <init>()V
+    .locals 1
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    new-instance v0, Ljava/util/concurrent/ConcurrentSkipListSet;
+
+    invoke-direct {v0}, Ljava/util/concurrent/ConcurrentSkipListSet;-><init>()V
+
+    iput-object v0, p0, Ls46;->a:Ljava/util/concurrent/ConcurrentSkipListSet;
+
+    new-instance v0, Lr46;
+
+    invoke-direct {v0, p0}, Lr46;-><init>(Ls46;)V
+
+    iput-object v0, p0, Ls46;->b:Lr46;
+
+    new-instance v0, Ljava/util/ArrayList;
+
+    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
+
+    iput-object v0, p0, Ls46;->c:Ljava/util/ArrayList;
 
     return-void
 .end method
 
+.method public static synthetic b(Ls46;Ljava/lang/String;Lzb6;)Lp46;
+    .locals 1
+
+    sget-object v0, Lp45;->a:Lp45;
+
+    invoke-virtual {p0, p1, v0, p2}, Ls46;->a(Ljava/lang/String;Ljava/lang/Iterable;Lzb6;)Lp46;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
 
 # virtual methods
-.method public final run()V
-    .locals 3
+.method public final a(Ljava/lang/String;Ljava/lang/Iterable;Lzb6;)Lp46;
+    .locals 7
 
-    iget v0, p0, Ls46;->a:I
+    new-instance v0, Lp46;
 
-    packed-switch v0, :pswitch_data_0
+    new-instance v1, Lak3;
 
-    iget-object p0, p0, Ls46;->b:Lru/ok/messages/media/attaches/fragments/FrgAttachPhoto;
+    const/4 v6, 0x3
 
-    invoke-virtual {p0}, Lru/ok/messages/media/attaches/fragments/FrgAttachView;->i1()Ly46;
+    move-object v4, p0
 
-    move-result-object p0
+    move-object v5, p1
 
-    if-eqz p0, :cond_0
+    move-object v2, p2
 
-    check-cast p0, Lru/ok/messages/media/attaches/ActAttachesView;
+    move-object v3, p3
 
-    invoke-virtual {p0}, Lru/ok/messages/media/attaches/ActAttachesView;->d()V
+    invoke-direct/range {v1 .. v6}, Lak3;-><init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;I)V
 
-    :cond_0
-    return-void
+    invoke-direct {v0, v5, v1}, Lp46;-><init>(Ljava/lang/String;Lak3;)V
 
-    :pswitch_0
-    iget-object p0, p0, Ls46;->b:Lru/ok/messages/media/attaches/fragments/FrgAttachPhoto;
+    iget-object p0, v4, Ls46;->c:Ljava/util/ArrayList;
 
-    iget-object v0, p0, Lru/ok/messages/media/attaches/fragments/FrgAttachPhoto;->F1:Lru/ok/messages/media/attaches/AttachPhotoView;
+    const/4 p1, 0x0
 
-    iget-object v1, p0, Lru/ok/messages/media/attaches/fragments/FrgAttachView;->z1:Lw10;
+    iget-object p2, v0, Lp46;->b:Lq46;
 
-    iget-object v2, p0, Lru/ok/messages/media/attaches/fragments/FrgAttachView;->y1:Ler8;
+    invoke-virtual {p0, p1, p2}, Ljava/util/ArrayList;->add(ILjava/lang/Object;)V
 
-    invoke-virtual {v0, v1, v2}, Lru/ok/messages/media/attaches/AttachPhotoView;->r(Lw10;Ler8;)V
-
-    invoke-virtual {p0}, Landroidx/fragment/app/a;->Q()Landroidx/fragment/app/b;
+    invoke-static {}, Ljava/util/concurrent/ForkJoinPool;->commonPool()Ljava/util/concurrent/ForkJoinPool;
 
     move-result-object p0
 
-    instance-of v0, p0, Lam;
+    invoke-virtual {p0, p2}, Ljava/util/concurrent/ForkJoinPool;->execute(Ljava/util/concurrent/ForkJoinTask;)V
 
-    if-eqz v0, :cond_1
-
-    invoke-virtual {p0}, Landroid/app/Activity;->invalidateOptionsMenu()V
-
-    :cond_1
-    return-void
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-object v0
 .end method

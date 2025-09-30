@@ -1,152 +1,48 @@
 .class public final Lv18;
-.super Ljava/lang/Object;
-.source "SourceFile"
+.super Ljx3;
 
 
 # instance fields
-.field public A:I
+.field public X:I
 
-.field public B:I
+.field public final synthetic Y:Lyf7;
 
-.field public C:I
+.field public synthetic o:Ljava/lang/Object;
 
-.field public D:F
 
-.field public E:F
+# direct methods
+.method public constructor <init>(Lyf7;Lkotlin/coroutines/Continuation;)V
+    .locals 0
 
-.field public F:F
+    iput-object p1, p0, Lv18;->Y:Lyf7;
 
-.field public G:F
+    invoke-direct {p0, p2}, Ljx3;-><init>(Lkotlin/coroutines/Continuation;)V
 
-.field public H:F
-
-.field public I:F
-
-.field public J:F
-
-.field public K:F
-
-.field public L:F
-
-.field public M:F
-
-.field public N:[B
-
-.field public O:I
-
-.field public P:I
-
-.field public Q:I
-
-.field public R:J
-
-.field public S:J
-
-.field public T:Lb1f;
-
-.field public U:Z
-
-.field public V:Z
-
-.field public W:Ljava/lang/String;
-
-.field public X:Laye;
-
-.field public Y:I
-
-.field public a:Ljava/lang/String;
-
-.field public b:Ljava/lang/String;
-
-.field public c:I
-
-.field public d:I
-
-.field public e:I
-
-.field public f:I
-
-.field public g:I
-
-.field public h:Z
-
-.field public i:[B
-
-.field public j:Lyxe;
-
-.field public k:[B
-
-.field public l:Lcr4;
-
-.field public m:I
-
-.field public n:I
-
-.field public o:I
-
-.field public p:I
-
-.field public q:I
-
-.field public r:I
-
-.field public s:F
-
-.field public t:F
-
-.field public u:F
-
-.field public v:[B
-
-.field public w:I
-
-.field public x:Z
-
-.field public y:I
-
-.field public z:I
+    return-void
+.end method
 
 
 # virtual methods
-.method public final a(Ljava/lang/String;)[B
+.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
 
-    iget-object p0, p0, Lv18;->k:[B
+    iput-object p1, p0, Lv18;->o:Ljava/lang/Object;
 
-    if-nez p0, :cond_1
+    iget p1, p0, Lv18;->X:I
 
-    invoke-static {p1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+    const/high16 v0, -0x80000000
 
-    move-result-object p0
+    or-int/2addr p1, v0
 
-    invoke-virtual {p0}, Ljava/lang/String;->length()I
+    iput p1, p0, Lv18;->X:I
 
-    move-result p1
+    iget-object p1, p0, Lv18;->Y:Lyf7;
 
-    const-string v0, "Missing CodecPrivate for codec "
+    const/4 v0, 0x0
 
-    if-eqz p1, :cond_0
-
-    invoke-virtual {v0, p0}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {p1, v0, p0}, Lyf7;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
     move-result-object p0
 
-    goto :goto_0
-
-    :cond_0
-    new-instance p0, Ljava/lang/String;
-
-    invoke-direct {p0, v0}, Ljava/lang/String;-><init>(Ljava/lang/String;)V
-
-    :goto_0
-    const/4 p1, 0x0
-
-    invoke-static {p1, p0}, Lcom/google/android/exoplayer2/ParserException;->a(Ljava/lang/RuntimeException;Ljava/lang/String;)Lcom/google/android/exoplayer2/ParserException;
-
-    move-result-object p0
-
-    throw p0
-
-    :cond_1
     return-object p0
 .end method

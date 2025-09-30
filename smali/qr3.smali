@@ -1,194 +1,195 @@
-.class public final Lqr3;
-.super Lqde;
+.class public final synthetic Lqr3;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Ln66;
+.implements Lbc6;
 
 
 # instance fields
-.field public final synthetic X:I
+.field public final synthetic a:I
 
-.field public synthetic Y:Landroid/view/View;
+.field public final synthetic b:Lone/me/contactlist/ContactListWidget;
 
 
 # direct methods
-.method public synthetic constructor <init>(ILkotlin/coroutines/Continuation;I)V
+.method public synthetic constructor <init>(Lone/me/contactlist/ContactListWidget;I)V
     .locals 0
 
-    iput p3, p0, Lqr3;->X:I
+    iput p2, p0, Lqr3;->a:I
 
-    invoke-direct {p0, p1, p2}, Lqde;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-object p1, p0, Lqr3;->b:Lone/me/contactlist/ContactListWidget;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 6
 
-    iget p0, p0, Lqr3;->X:I
+    iget v0, p0, Lqr3;->a:I
 
-    check-cast p1, Landroid/view/View;
+    sget-object v1, Lylf;->a:Lylf;
 
-    check-cast p2, Lyha;
-
-    check-cast p3, Lkotlin/coroutines/Continuation;
-
-    packed-switch p0, :pswitch_data_0
-
-    new-instance p0, Lqr3;
-
-    const/4 p2, 0x3
-
-    const/4 v0, 0x2
-
-    invoke-direct {p0, p2, p3, v0}, Lqr3;-><init>(ILkotlin/coroutines/Continuation;I)V
-
-    iput-object p1, p0, Lqr3;->Y:Landroid/view/View;
-
-    sget-object p1, Le5f;->a:Le5f;
-
-    invoke-virtual {p0, p1}, Lqr3;->o(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p1
-
-    :pswitch_0
-    new-instance p0, Lqr3;
-
-    const/4 p2, 0x3
-
-    const/4 v0, 0x1
-
-    invoke-direct {p0, p2, p3, v0}, Lqr3;-><init>(ILkotlin/coroutines/Continuation;I)V
-
-    iput-object p1, p0, Lqr3;->Y:Landroid/view/View;
-
-    sget-object p1, Le5f;->a:Le5f;
-
-    invoke-virtual {p0, p1}, Lqr3;->o(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p1
-
-    :pswitch_1
-    new-instance p0, Lqr3;
-
-    const/4 p2, 0x3
-
-    const/4 v0, 0x0
-
-    invoke-direct {p0, p2, p3, v0}, Lqr3;-><init>(ILkotlin/coroutines/Continuation;I)V
-
-    iput-object p1, p0, Lqr3;->Y:Landroid/view/View;
-
-    sget-object p1, Le5f;->a:Le5f;
-
-    invoke-virtual {p0, p1}, Lqr3;->o(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p1
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
-
-    iget v0, p0, Lqr3;->X:I
+    iget-object p0, p0, Lqr3;->b:Lone/me/contactlist/ContactListWidget;
 
     packed-switch v0, :pswitch_data_0
 
-    invoke-static {p1}, Lsgg;->Z(Ljava/lang/Object;)V
+    check-cast p1, Landroid/view/View;
 
-    iget-object p0, p0, Lqr3;->Y:Landroid/view/View;
+    sget-object p1, Lone/me/contactlist/ContactListWidget;->O0:[Lxi7;
 
-    invoke-virtual {p0}, Landroid/view/View;->getBackground()Landroid/graphics/drawable/Drawable;
+    invoke-virtual {p0}, Lxx3;->getRouter()Lrzc;
 
     move-result-object p1
 
-    instance-of v0, p1, Landroid/graphics/drawable/GradientDrawable;
+    invoke-virtual {p1, p0}, Lrzc;->B(Lxx3;)Z
 
-    if-eqz v0, :cond_0
+    return-object v1
 
-    check-cast p1, Landroid/graphics/drawable/GradientDrawable;
+    :pswitch_0
+    check-cast p1, Landroid/view/View;
+
+    iget-object v0, p0, Lone/me/contactlist/ContactListWidget;->o:Lcl7;
+
+    invoke-interface {v0}, Lcl7;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lfd7;
+
+    const-string v2, "plus"
+
+    const-string v3, "invite_friends"
+
+    const-string v4, "show"
+
+    invoke-virtual {v0, v4, v2, v3}, Lfd7;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+
+    const/4 v0, 0x1
+
+    invoke-static {v0}, Luyg;->a(I)Lrw3;
+
+    move-result-object v0
+
+    invoke-interface {v0, p1}, Lrw3;->N(Landroid/view/View;)Lrw3;
+
+    move-result-object p1
+
+    iget-object v0, p0, Lone/me/contactlist/ContactListWidget;->D0:Ljava/util/List;
+
+    invoke-interface {p1, v0}, Lrw3;->x(Ljava/util/Collection;)Lrw3;
+
+    move-result-object p1
+
+    invoke-interface {p1}, Lrw3;->o()Lrw3;
+
+    move-result-object p1
+
+    invoke-interface {p1}, Lrw3;->build()Lsw3;
+
+    move-result-object p1
+
+    invoke-interface {p1, p0}, Lsw3;->u(Lone/me/sdk/arch/Widget;)V
+
+    return-object v1
+
+    :pswitch_1
+    check-cast p1, Ljava/lang/Integer;
+
+    invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
+
+    move-result p1
+
+    iget-object v0, p0, Lone/me/contactlist/ContactListWidget;->t0:Ljh0;
+
+    invoke-virtual {v0}, Lls7;->j()I
+
+    move-result v0
+
+    iget-object v1, p0, Lone/me/contactlist/ContactListWidget;->Y:Lwqg;
+
+    invoke-virtual {v1}, Lls7;->j()I
+
+    move-result v2
+
+    add-int/2addr v2, v0
+
+    iget-object v3, p0, Lone/me/contactlist/ContactListWidget;->r0:Lwqg;
+
+    invoke-virtual {v3}, Lls7;->j()I
+
+    move-result v4
+
+    add-int/2addr v4, v2
+
+    iget-object v5, p0, Lone/me/contactlist/ContactListWidget;->s0:Ljh0;
+
+    invoke-virtual {v5}, Lls7;->j()I
+
+    move-result v5
+
+    invoke-virtual {p0}, Lone/me/contactlist/ContactListWidget;->z0()Ljava/lang/CharSequence;
+
+    move-result-object p0
+
+    if-eqz p0, :cond_0
+
+    invoke-interface {p0}, Ljava/lang/CharSequence;->length()I
+
+    move-result p0
+
+    if-nez p0, :cond_3
+
+    :cond_0
+    if-lt p1, v0, :cond_3
+
+    if-ge p1, v5, :cond_1
 
     goto :goto_0
 
-    :cond_0
-    const/4 p1, 0x0
-
-    :goto_0
-    if-eqz p1, :cond_1
-
-    sget-object v0, Lqp4;->q0:Lap9;
-
-    invoke-virtual {v0, p0}, Lap9;->h(Landroid/view/View;)Lyha;
-
-    move-result-object p0
-
-    invoke-interface {p0}, Lyha;->getText()Lane;
-
-    move-result-object p0
-
-    iget p0, p0, Lane;->b:I
-
-    invoke-virtual {p1, p0}, Landroid/graphics/drawable/GradientDrawable;->setColor(I)V
-
     :cond_1
-    sget-object p0, Le5f;->a:Le5f;
+    if-ge p1, v2, :cond_2
 
-    return-object p0
+    sub-int/2addr p1, v0
 
-    :pswitch_0
-    invoke-static {p1}, Lsgg;->Z(Ljava/lang/Object;)V
+    invoke-virtual {v1, p1}, Lls7;->C(I)Ljava/lang/Object;
 
-    iget-object p0, p0, Lqr3;->Y:Landroid/view/View;
+    move-result-object p0
 
-    sget-object p1, Lqp4;->q0:Lap9;
+    check-cast p0, Lts7;
 
-    invoke-virtual {p1, p0}, Lap9;->h(Landroid/view/View;)Lyha;
+    check-cast p0, Lmq3;
 
-    move-result-object p1
+    iget-object p0, p0, Lmq3;->b:Ljava/lang/CharSequence;
 
-    invoke-interface {p1}, Lyha;->i()Lu8e;
+    goto :goto_1
 
-    move-result-object p1
+    :cond_2
+    if-ge p1, v4, :cond_3
 
-    iget-object p1, p1, Lu8e;->b:Lz8e;
+    sub-int/2addr p1, v2
 
-    iget p1, p1, Lz8e;->c:I
+    invoke-virtual {v3, p1}, Lls7;->C(I)Ljava/lang/Object;
 
-    invoke-virtual {p0, p1}, Landroid/view/View;->setBackgroundColor(I)V
+    move-result-object p0
 
-    sget-object p0, Le5f;->a:Le5f;
+    check-cast p0, Lts7;
 
-    return-object p0
+    check-cast p0, Lmq3;
 
-    :pswitch_1
-    invoke-static {p1}, Lsgg;->Z(Ljava/lang/Object;)V
+    iget-object p0, p0, Lmq3;->b:Ljava/lang/CharSequence;
 
-    iget-object p0, p0, Lqr3;->Y:Landroid/view/View;
+    goto :goto_1
 
-    sget-object p1, Lqp4;->q0:Lap9;
+    :cond_3
+    :goto_0
+    const/4 p0, 0x0
 
-    invoke-virtual {p1, p0}, Lap9;->h(Landroid/view/View;)Lyha;
-
-    move-result-object p1
-
-    invoke-interface {p1}, Lyha;->b()Lfe0;
-
-    move-result-object p1
-
-    iget p1, p1, Lfe0;->l:I
-
-    invoke-virtual {p0, p1}, Landroid/view/View;->setBackgroundColor(I)V
-
-    sget-object p0, Le5f;->a:Le5f;
-
+    :goto_1
     return-object p0
 
     :pswitch_data_0

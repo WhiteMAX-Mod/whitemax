@@ -1,234 +1,120 @@
 .class public final Lae2;
-.super Ljava/lang/Object;
+.super Lure;
 .source "SourceFile"
+
+# interfaces
+.implements Lpc6;
 
 
 # instance fields
-.field public final a:J
+.field public X:I
 
-.field public final b:Lwjd;
+.field public final synthetic Y:Lbe2;
 
-.field public final c:Lkotlinx/coroutines/internal/ContextScope;
+.field public final synthetic Z:Lzd2;
 
 
 # direct methods
-.method public constructor <init>(JLvu0;Lrie;)V
+.method public constructor <init>(Lbe2;Lzd2;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lae2;->Y:Lbe2;
 
-    iput-wide p1, p0, Lae2;->a:J
+    iput-object p2, p0, Lae2;->Z:Lzd2;
 
-    const/4 p1, 0x0
+    const/4 p1, 0x2
 
-    const/4 p2, 0x7
-
-    invoke-static {p1, p1, p2}, Lxjd;->b(III)Lwjd;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lae2;->b:Lwjd;
-
-    check-cast p4, Lo7a;
-
-    invoke-virtual {p4}, Lo7a;->a()Ljx3;
-
-    move-result-object p1
-
-    invoke-static {p1}, Lvk9;->a(Lhx3;)Lkotlinx/coroutines/internal/ContextScope;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lae2;->c:Lkotlinx/coroutines/internal/ContextScope;
-
-    invoke-virtual {p3, p0}, Lvu0;->d(Ljava/lang/Object;)V
+    invoke-direct {p0, p1, p3}, Lure;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Lyd2;)V
-    .locals 2
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    new-instance v0, Lzd2;
+    check-cast p1, Ly04;
 
-    const/4 v1, 0x0
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    invoke-direct {v0, p0, p1, v1}, Lzd2;-><init>(Lae2;Lyd2;Lkotlin/coroutines/Continuation;)V
+    invoke-virtual {p0, p1, p2}, Lae2;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    const/4 p1, 0x3
+    move-result-object p0
 
-    iget-object p0, p0, Lae2;->c:Lkotlinx/coroutines/internal/ContextScope;
+    check-cast p0, Lae2;
 
-    invoke-static {p0, v1, v1, v0, p1}, Lzo3;->E(Lox3;Lhx3;Lrx3;Ll66;I)Ldwd;
+    sget-object p1, Lylf;->a:Lylf;
 
-    return-void
+    invoke-virtual {p0, p1}, Lae2;->o(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p0
+
+    return-object p0
 .end method
 
-.method public final onEvent(Lcz6;)V
-    .locals 4
-    .annotation runtime Li9e;
-    .end annotation
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 1
 
-    .line 1
-    iget-wide v0, p1, Lcz6;->b:J
+    new-instance p1, Lae2;
 
-    .line 2
-    iget-wide v2, p0, Lae2;->a:J
+    iget-object v0, p0, Lae2;->Y:Lbe2;
 
-    cmp-long v0, v0, v2
+    iget-object p0, p0, Lae2;->Z:Lzd2;
 
-    if-nez v0, :cond_1
+    invoke-direct {p1, v0, p0, p2}, Lae2;-><init>(Lbe2;Lzd2;Lkotlin/coroutines/Continuation;)V
 
-    iget-boolean v0, p1, Lcz6;->Y:Z
+    return-object p1
+.end method
 
-    if-eqz v0, :cond_0
+.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 2
+
+    iget v0, p0, Lae2;->X:I
+
+    const/4 v1, 0x1
+
+    if-eqz v0, :cond_1
+
+    if-ne v0, v1, :cond_0
+
+    invoke-static {p1}, Lqe5;->V(Ljava/lang/Object;)V
 
     goto :goto_0
 
-    .line 3
     :cond_0
-    new-instance v0, Lsd2;
+    new-instance p0, Ljava/lang/IllegalStateException;
 
-    .line 4
-    iget-wide v1, p1, Lcz6;->c:J
+    const-string p1, "call to \'resume\' before \'invoke\' with coroutine"
 
-    .line 5
-    invoke-direct {v0, v1, v2}, Lsd2;-><init>(J)V
+    invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {p0, v0}, Lae2;->a(Lyd2;)V
+    throw p0
 
     :cond_1
+    invoke-static {p1}, Lqe5;->V(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Lae2;->Y:Lbe2;
+
+    iget-object p1, p1, Lbe2;->a:Lnxd;
+
+    iput v1, p0, Lae2;->X:I
+
+    iget-object v0, p0, Lae2;->Z:Lzd2;
+
+    invoke-virtual {p1, v0, p0}, Lnxd;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p0
+
+    sget-object p1, Lz04;->a:Lz04;
+
+    if-ne p0, p1, :cond_2
+
+    return-object p1
+
+    :cond_2
     :goto_0
-    return-void
-.end method
+    sget-object p0, Lylf;->a:Lylf;
 
-.method public final onEvent(Led9;)V
-    .locals 4
-    .annotation runtime Li9e;
-    .end annotation
-
-    .line 18
-    iget-wide v0, p1, Led9;->b:J
-
-    iget-wide v2, p0, Lae2;->a:J
-
-    cmp-long v0, v0, v2
-
-    if-eqz v0, :cond_0
-
-    return-void
-
-    .line 19
-    :cond_0
-    new-instance v0, Lvd2;
-
-    iget-object p1, p1, Led9;->X:Ljava/util/List;
-
-    invoke-direct {v0, p1}, Lvd2;-><init>(Ljava/util/List;)V
-
-    invoke-virtual {p0, v0}, Lae2;->a(Lyd2;)V
-
-    return-void
-.end method
-
-.method public final onEvent(Lfla;)V
-    .locals 4
-    .annotation runtime Li9e;
-    .end annotation
-
-    .line 6
-    iget-wide v0, p1, Lfla;->b:J
-
-    .line 7
-    iget-wide v2, p0, Lae2;->a:J
-
-    cmp-long v0, v0, v2
-
-    if-eqz v0, :cond_0
-
-    return-void
-
-    .line 8
-    :cond_0
-    new-instance v0, Lsd2;
-
-    .line 9
-    iget-wide v1, p1, Lfla;->o:J
-
-    .line 10
-    invoke-direct {v0, v1, v2}, Lsd2;-><init>(J)V
-
-    invoke-virtual {p0, v0}, Lae2;->a(Lyd2;)V
-
-    return-void
-.end method
-
-.method public final onEvent(Lhn4;)V
-    .locals 3
-    .annotation runtime Li9e;
-    .end annotation
-
-    .line 16
-    new-instance v0, Ltd2;
-
-    iget-wide v1, p1, Lhn4;->X:J
-
-    iget-object p1, p1, Lhn4;->o:Ljava/lang/String;
-
-    invoke-direct {v0, v1, v2, p1}, Ltd2;-><init>(JLjava/lang/String;)V
-
-    invoke-virtual {p0, v0}, Lae2;->a(Lyd2;)V
-
-    return-void
-.end method
-
-.method public final onEvent(Ljn4;)V
-    .locals 3
-    .annotation runtime Li9e;
-    .end annotation
-
-    .line 17
-    new-instance v0, Lud2;
-
-    iget-wide v1, p1, Ljn4;->o:J
-
-    invoke-direct {v0, v1, v2}, Lud2;-><init>(J)V
-
-    invoke-virtual {p0, v0}, Lae2;->a(Lyd2;)V
-
-    return-void
-.end method
-
-.method public final onEvent(Lo6f;)V
-    .locals 4
-    .annotation runtime Li9e;
-    .end annotation
-
-    .line 11
-    iget-wide v0, p1, Lo6f;->b:J
-
-    .line 12
-    iget-wide v2, p0, Lae2;->a:J
-
-    cmp-long v0, v0, v2
-
-    if-eqz v0, :cond_0
-
-    return-void
-
-    .line 13
-    :cond_0
-    new-instance v0, Lwd2;
-
-    .line 14
-    iget-wide v1, p1, Lo6f;->c:J
-
-    .line 15
-    invoke-direct {v0, v1, v2}, Lwd2;-><init>(J)V
-
-    invoke-virtual {p0, v0}, Lae2;->a(Lyd2;)V
-
-    return-void
+    return-object p0
 .end method

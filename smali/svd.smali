@@ -4,5 +4,5 @@
 
 
 # virtual methods
-.method public abstract l(J)J
+.method public abstract setShapeAppearanceModel(Lhvd;)V
 .end method

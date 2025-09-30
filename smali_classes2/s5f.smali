@@ -2,94 +2,78 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lu5f;
-
 
 # instance fields
-.field public final a:J
+.field public final a:Ljava/lang/String;
+
+.field public final b:I
+
+.field public final c:I
+
+.field public final d:I
+
+.field public final e:I
+
+.field public f:F
+
+.field public g:Landroid/graphics/Paint;
+
+.field public final h:Lzte;
+
+.field public final i:Landroid/graphics/Shader$TileMode;
+
+.field public j:Z
 
 
 # direct methods
-.method public constructor <init>(J)V
+.method public constructor <init>(Ljava/lang/String;II)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-wide p1, p0, Ls5f;->a:J
+    iput-object p1, p0, Ls5f;->a:Ljava/lang/String;
+
+    iput p2, p0, Ls5f;->b:I
+
+    iput p3, p0, Ls5f;->c:I
+
+    iput p2, p0, Ls5f;->d:I
+
+    iput p3, p0, Ls5f;->e:I
+
+    const/high16 p1, 0x3f800000    # 1.0f
+
+    iput p1, p0, Ls5f;->f:F
+
+    new-instance p1, Landroid/graphics/Paint;
+
+    const/4 p2, 0x2
+
+    invoke-direct {p1, p2}, Landroid/graphics/Paint;-><init>(I)V
+
+    const/4 p2, 0x1
+
+    invoke-virtual {p1, p2}, Landroid/graphics/Paint;->setAntiAlias(Z)V
+
+    invoke-virtual {p1, p2}, Landroid/graphics/Paint;->setFilterBitmap(Z)V
+
+    iput-object p1, p0, Ls5f;->g:Landroid/graphics/Paint;
+
+    new-instance p1, Lyxc;
+
+    const/16 p2, 0x12
+
+    invoke-direct {p1, p2, p0}, Lyxc;-><init>(ILjava/lang/Object;)V
+
+    new-instance p2, Lzte;
+
+    invoke-direct {p2, p1}, Lzte;-><init>(Lzb6;)V
+
+    iput-object p2, p0, Ls5f;->h:Lzte;
+
+    sget-object p1, Landroid/graphics/Shader$TileMode;->REPEAT:Landroid/graphics/Shader$TileMode;
+
+    iput-object p1, p0, Ls5f;->i:Landroid/graphics/Shader$TileMode;
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final a()J
-    .locals 2
-
-    iget-wide v0, p0, Ls5f;->a:J
-
-    return-wide v0
-.end method
-
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 5
-
-    const/4 v0, 0x1
-
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    instance-of v1, p1, Ls5f;
-
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
-    check-cast p1, Ls5f;
-
-    iget-wide v3, p0, Ls5f;->a:J
-
-    iget-wide p0, p1, Ls5f;->a:J
-
-    cmp-long p0, v3, p0
-
-    if-eqz p0, :cond_2
-
-    return v2
-
-    :cond_2
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 2
-
-    iget-wide v0, p0, Ls5f;->a:J
-
-    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
-
-    move-result p0
-
-    return p0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 4
-
-    const-string v0, "InitialEvent(mark="
-
-    const-string v1, ")"
-
-    iget-wide v2, p0, Ls5f;->a:J
-
-    invoke-static {v2, v3, v0, v1}, Lu88;->i(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
 .end method

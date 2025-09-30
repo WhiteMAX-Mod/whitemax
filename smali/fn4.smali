@@ -2,143 +2,60 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lis5;
+
 
 # instance fields
-.field public final a:Lxo4;
+.field public final synthetic a:Lis5;
 
-.field public final b:I
+.field public final synthetic b:Lone/me/devmenu/DevMenuScreen;
 
-.field public final c:J
-
-.field public final d:J
-
-.field public final e:J
-
-.field public final f:I
-
-.field public final g:I
-
-.field public final h:Lwo4;
+.field public final synthetic c:I
 
 
 # direct methods
-.method public constructor <init>(Lxo4;IJJI)V
-    .locals 12
+.method public constructor <init>(Lrce;Lone/me/devmenu/DevMenuScreen;I)V
+    .locals 0
 
-    .line 1
-    new-instance v11, Lwo4;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2
-    invoke-direct {v11}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lfn4;->a:Lis5;
 
-    const-wide/16 v7, -0x1
+    iput-object p2, p0, Lfn4;->b:Lone/me/devmenu/DevMenuScreen;
 
-    const/4 v10, 0x0
-
-    move-object v0, p0
-
-    move-object v1, p1
-
-    move v2, p2
-
-    move-wide v3, p3
-
-    move-wide/from16 v5, p5
-
-    move/from16 v9, p7
-
-    .line 3
-    invoke-direct/range {v0 .. v11}, Lfn4;-><init>(Lxo4;IJJJIILwo4;)V
+    iput p3, p0, Lfn4;->c:I
 
     return-void
 .end method
 
-.method public constructor <init>(Lxo4;IJJJIILwo4;)V
-    .locals 4
 
-    .line 4
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+# virtual methods
+.method public final d(Lks5;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    .locals 3
 
-    .line 5
-    invoke-virtual {p11}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    new-instance v0, Lk92;
 
-    const/4 v0, 0x0
+    iget-object v1, p0, Lfn4;->b:Lone/me/devmenu/DevMenuScreen;
 
-    const/4 v1, 0x1
+    iget v2, p0, Lfn4;->c:I
 
-    if-nez p10, :cond_0
+    invoke-direct {v0, p1, v1, v2}, Lk92;-><init>(Lks5;Lone/me/devmenu/DevMenuScreen;I)V
 
-    move v2, v1
+    iget-object p0, p0, Lfn4;->a:Lis5;
 
-    goto :goto_0
+    invoke-interface {p0, v0, p2}, Lis5;->d(Lks5;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p0
+
+    sget-object p1, Lz04;->a:Lz04;
+
+    if-ne p0, p1, :cond_0
+
+    return-object p0
 
     :cond_0
-    move v2, v0
+    sget-object p0, Lylf;->a:Lylf;
 
-    :goto_0
-    const/4 v3, 0x4
-
-    if-eq p2, v3, :cond_1
-
-    move v3, v1
-
-    goto :goto_1
-
-    :cond_1
-    move v3, v0
-
-    :goto_1
-    if-ne v2, v3, :cond_2
-
-    move v2, v1
-
-    goto :goto_2
-
-    :cond_2
-    move v2, v0
-
-    .line 6
-    :goto_2
-    invoke-static {v2}, Lu27;->f(Z)V
-
-    if-eqz p9, :cond_4
-
-    const/4 v2, 0x2
-
-    if-eq p2, v2, :cond_3
-
-    if-eqz p2, :cond_3
-
-    move v0, v1
-
-    .line 7
-    :cond_3
-    invoke-static {v0}, Lu27;->f(Z)V
-
-    .line 8
-    :cond_4
-    iput-object p1, p0, Lfn4;->a:Lxo4;
-
-    .line 9
-    iput p2, p0, Lfn4;->b:I
-
-    .line 10
-    iput-wide p3, p0, Lfn4;->c:J
-
-    .line 11
-    iput-wide p5, p0, Lfn4;->d:J
-
-    .line 12
-    iput-wide p7, p0, Lfn4;->e:J
-
-    .line 13
-    iput p9, p0, Lfn4;->f:I
-
-    .line 14
-    iput p10, p0, Lfn4;->g:I
-
-    .line 15
-    iput-object p11, p0, Lfn4;->h:Lwo4;
-
-    return-void
+    return-object p0
 .end method

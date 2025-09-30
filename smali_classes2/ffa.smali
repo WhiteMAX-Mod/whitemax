@@ -1,150 +1,66 @@
-.class public final Lffa;
-.super Landroidx/appcompat/widget/AppCompatImageView;
+.class public final synthetic Lffa;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Landroid/widget/CompoundButton$OnCheckedChangeListener;
 
 
 # instance fields
-.field public o:F
+.field public final synthetic a:Ljfa;
 
-.field public o0:Landroid/graphics/Path;
+.field public final synthetic b:Lcom/google/android/material/chip/Chip;
 
-.field public p0:I
+.field public final synthetic c:J
 
-.field public final q0:Landroid/graphics/Paint;
+.field public final synthetic d:J
+
+.field public final synthetic e:Ljava/lang/CharSequence;
+
+.field public final synthetic f:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;)V
-    .locals 3
+.method public synthetic constructor <init>(Ljfa;Lcom/google/android/material/chip/Chip;JJLjava/lang/CharSequence;Ljava/lang/String;)V
+    .locals 0
 
-    const/4 v0, 0x0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, p1, v0}, Landroidx/appcompat/widget/AppCompatImageView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
+    iput-object p1, p0, Lffa;->a:Ljfa;
 
-    sget-object p1, Lqp4;->q0:Lap9;
+    iput-object p2, p0, Lffa;->b:Lcom/google/android/material/chip/Chip;
 
-    invoke-virtual {p1, p0}, Lap9;->h(Landroid/view/View;)Lyha;
+    iput-wide p3, p0, Lffa;->c:J
 
-    move-result-object p1
+    iput-wide p5, p0, Lffa;->d:J
 
-    invoke-interface {p1}, Lyha;->f()Lucf;
+    iput-object p7, p0, Lffa;->e:Ljava/lang/CharSequence;
 
-    const/high16 p1, 0x29000000
-
-    iput p1, p0, Lffa;->p0:I
-
-    new-instance p1, Landroid/graphics/Paint;
-
-    invoke-direct {p1}, Landroid/graphics/Paint;-><init>()V
-
-    const/4 v1, 0x0
-
-    invoke-virtual {p1, v1}, Landroid/graphics/Paint;->setColor(I)V
-
-    iput-object p1, p0, Lffa;->q0:Landroid/graphics/Paint;
-
-    new-instance p1, Lsh0;
-
-    const/4 v1, 0x3
-
-    const/16 v2, 0x19
-
-    invoke-direct {p1, v1, v0, v2}, Lsh0;-><init>(ILkotlin/coroutines/Continuation;I)V
-
-    invoke-static {p1, p0}, Lxq7;->J(Ln66;Landroid/view/View;)V
+    iput-object p8, p0, Lffa;->f:Ljava/lang/String;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onDraw(Landroid/graphics/Canvas;)V
-    .locals 6
+.method public final onCheckedChanged(Landroid/widget/CompoundButton;Z)V
+    .locals 9
 
-    iget-object v0, p0, Lffa;->o0:Landroid/graphics/Path;
+    iget-object v7, p0, Lffa;->e:Ljava/lang/CharSequence;
 
-    if-eqz v0, :cond_0
+    iget-object v8, p0, Lffa;->f:Ljava/lang/String;
 
-    invoke-virtual {p1}, Landroid/graphics/Canvas;->save()I
+    iget-object v0, p0, Lffa;->a:Ljfa;
 
-    invoke-virtual {p0}, Landroid/view/View;->getWidth()I
+    iget-object v1, p0, Lffa;->b:Lcom/google/android/material/chip/Chip;
 
-    move-result v1
+    iget-wide v3, p0, Lffa;->c:J
 
-    int-to-float v1, v1
+    iget-wide v5, p0, Lffa;->d:J
 
-    iget v2, p0, Lffa;->o:F
+    move v2, p2
 
-    div-float/2addr v1, v2
-
-    invoke-static {}, Lgk4;->d()Landroid/content/res/Resources;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v2
-
-    iget v2, v2, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v1, v2
-
-    invoke-virtual {p1, v1, v1}, Landroid/graphics/Canvas;->scale(FF)V
-
-    invoke-static {}, Lgk4;->d()Landroid/content/res/Resources;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v1
-
-    iget v1, v1, Landroid/util/DisplayMetrics;->density:F
-
-    const/high16 v2, 0x3f800000    # 1.0f
-
-    mul-float/2addr v1, v2
-
-    invoke-static {}, Lgk4;->d()Landroid/content/res/Resources;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v2
-
-    iget v2, v2, Landroid/util/DisplayMetrics;->density:F
-
-    const/4 v3, 0x0
-
-    mul-float/2addr v2, v3
-
-    invoke-static {}, Lgk4;->d()Landroid/content/res/Resources;
-
-    move-result-object v4
-
-    invoke-virtual {v4}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v4
-
-    iget v4, v4, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v4, v3
-
-    iget v3, p0, Lffa;->p0:I
-
-    iget-object v5, p0, Lffa;->q0:Landroid/graphics/Paint;
-
-    invoke-virtual {v5, v1, v2, v4, v3}, Landroid/graphics/Paint;->setShadowLayer(FFFI)V
-
-    invoke-virtual {p1, v0, v5}, Landroid/graphics/Canvas;->drawPath(Landroid/graphics/Path;Landroid/graphics/Paint;)V
-
-    invoke-virtual {v5}, Landroid/graphics/Paint;->clearShadowLayer()V
-
-    invoke-virtual {p1}, Landroid/graphics/Canvas;->restore()V
-
-    :cond_0
-    invoke-super {p0, p1}, Landroid/view/View;->onDraw(Landroid/graphics/Canvas;)V
+    invoke-virtual/range {v0 .. v8}, Ljfa;->b(Lcom/google/android/material/chip/Chip;ZJJLjava/lang/CharSequence;Ljava/lang/String;)V
 
     return-void
 .end method

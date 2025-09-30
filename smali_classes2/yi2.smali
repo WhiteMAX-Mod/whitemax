@@ -1,158 +1,49 @@
-.class public final synthetic Lyi2;
-.super Ljava/lang/Object;
+.class public final Lyi2;
+.super Ljx3;
 .source "SourceFile"
-
-# interfaces
-.implements Ljava/util/function/Consumer;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final synthetic X:Lpj2;
 
-.field public final synthetic b:Lq8;
+.field public Y:I
+
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lq8;I)V
+.method public constructor <init>(Lpj2;Ljx3;)V
     .locals 0
 
-    iput p2, p0, Lyi2;->a:I
+    iput-object p1, p0, Lyi2;->X:Lpj2;
 
-    iput-object p1, p0, Lyi2;->b:Lq8;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p2}, Ljx3;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final accept(Ljava/lang/Object;)V
-    .locals 1
+.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 2
 
-    iget v0, p0, Lyi2;->a:I
+    iput-object p1, p0, Lyi2;->o:Ljava/lang/Object;
 
-    iget-object p0, p0, Lyi2;->b:Lq8;
+    iget p1, p0, Lyi2;->Y:I
 
-    check-cast p0, Laj2;
+    const/high16 v0, -0x80000000
 
-    packed-switch v0, :pswitch_data_0
+    or-int/2addr p1, v0
 
-    sget-object v0, Lone/me/webapp/rootscreen/WebAppRootScreen;->C0:[Lbc7;
+    iput p1, p0, Lyi2;->Y:I
 
-    invoke-virtual {p0, p1}, Laj2;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    iget-object p1, p0, Lyi2;->X:Lpj2;
 
-    return-void
+    const-wide/16 v0, 0x0
 
-    :pswitch_0
-    sget-object v0, Lone/me/webapp/rootscreen/WebAppRootScreen;->C0:[Lbc7;
+    invoke-virtual {p1, v0, v1, p0}, Lpj2;->y(JLjx3;)Ljava/lang/Object;
 
-    invoke-virtual {p0, p1}, Laj2;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    move-result-object p0
 
-    return-void
-
-    :pswitch_1
-    sget-object v0, Lone/me/settings/twofa/creation/TwoFACreationScreen;->p0:[Lbc7;
-
-    invoke-virtual {p0, p1}, Laj2;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-void
-
-    :pswitch_2
-    sget-object v0, Lone/me/stickerssettings/StickersSettingsScreen;->Y:[Lbc7;
-
-    invoke-virtual {p0, p1}, Laj2;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-void
-
-    :pswitch_3
-    sget-object v0, Lone/me/stickerssettings/stickersscreen/StickersScreen;->r0:[Lbc7;
-
-    invoke-virtual {p0, p1}, Laj2;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-void
-
-    :pswitch_4
-    invoke-virtual {p0, p1}, Laj2;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-void
-
-    :pswitch_5
-    invoke-virtual {p0, p1}, Laj2;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-void
-
-    :pswitch_6
-    invoke-virtual {p0, p1}, Laj2;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-void
-
-    :pswitch_7
-    sget-object v0, Lone/me/messages/list/ui/MessagesListWidget;->V0:[Lbc7;
-
-    invoke-virtual {p0, p1}, Laj2;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-void
-
-    :pswitch_8
-    sget-object v0, Lone/me/messages/list/ui/MessagesListWidget;->V0:[Lbc7;
-
-    invoke-virtual {p0, p1}, Laj2;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-void
-
-    :pswitch_9
-    sget-object v0, Lone/me/contactlist/ContactListWidget;->L0:[Lbc7;
-
-    invoke-virtual {p0, p1}, Laj2;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-void
-
-    :pswitch_a
-    sget-object v0, Lone/me/chats/list/ChatsListWidget;->I0:[Lbc7;
-
-    invoke-virtual {p0, p1}, Laj2;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-void
-
-    :pswitch_b
-    sget-object v0, Lone/me/chats/list/ChatsListWidget;->I0:[Lbc7;
-
-    invoke-virtual {p0, p1}, Laj2;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-void
-
-    :pswitch_c
-    sget-object v0, Lone/me/chats/search/ChatsListSearchScreen;->F0:[Lbc7;
-
-    invoke-virtual {p0, p1}, Laj2;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-void
-
-    :pswitch_d
-    sget-object v0, Lone/me/profile/screens/members/compact/ChatMembersCompactWidget;->Z:[Lbc7;
-
-    invoke-virtual {p0, p1}, Laj2;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_d
-        :pswitch_c
-        :pswitch_b
-        :pswitch_a
-        :pswitch_9
-        :pswitch_8
-        :pswitch_7
-        :pswitch_6
-        :pswitch_5
-        :pswitch_4
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    return-object p0
 .end method

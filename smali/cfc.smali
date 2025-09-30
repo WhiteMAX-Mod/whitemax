@@ -1,193 +1,185 @@
 .class public final Lcfc;
-.super Lgfc;
+.super Ljava/lang/Object;
 .source "SourceFile"
-
-# interfaces
-.implements Lq24;
 
 
 # instance fields
-.field public final Y:Lr0d;
+.field public final a:I
+
+.field public final b:I
+
+.field public final c:I
+
+.field public final d:J
+
+.field public final e:Z
 
 
 # direct methods
-.method public constructor <init>(Lfz5;Lxw6;Lr0d;Ljava/util/ArrayList;)V
+.method public constructor <init>(JIII)V
     .locals 0
 
-    invoke-direct {p0, p1, p2, p3, p4}, Lgfc;-><init>(Lfz5;Ljava/util/List;La1d;Ljava/util/List;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p3, p0, Lcfc;->Y:Lr0d;
+    iput p3, p0, Lcfc;->a:I
+
+    iput p4, p0, Lcfc;->b:I
+
+    iput p5, p0, Lcfc;->c:I
+
+    iput-wide p1, p0, Lcfc;->d:J
+
+    if-lez p3, :cond_0
+
+    const/4 p1, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    const/4 p1, 0x0
+
+    :goto_0
+    iput-boolean p1, p0, Lcfc;->e:Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final B()J
-    .locals 2
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 5
 
-    iget-object p0, p0, Lcfc;->Y:Lr0d;
+    const/4 v0, 0x1
 
-    iget-wide v0, p0, Lr0d;->d:J
+    if-ne p0, p1, :cond_0
 
-    return-wide v0
-.end method
-
-.method public final C(J)J
-    .locals 0
-
-    iget-object p0, p0, Lcfc;->Y:Lr0d;
-
-    invoke-virtual {p0, p1, p2}, Lr0d;->e(J)J
-
-    move-result-wide p0
-
-    return-wide p0
-.end method
-
-.method public final D(JJ)J
-    .locals 0
-
-    iget-object p0, p0, Lcfc;->Y:Lr0d;
-
-    invoke-virtual {p0, p1, p2, p3, p4}, Lr0d;->c(JJ)J
-
-    move-result-wide p0
-
-    return-wide p0
-.end method
-
-.method public final a(J)J
-    .locals 0
-
-    iget-object p0, p0, Lcfc;->Y:Lr0d;
-
-    invoke-virtual {p0, p1, p2}, Lr0d;->h(J)J
-
-    move-result-wide p0
-
-    return-wide p0
-.end method
-
-.method public final b()Ljava/lang/String;
-    .locals 0
-
-    const/4 p0, 0x0
-
-    return-object p0
-.end method
-
-.method public final c()Lq24;
-    .locals 0
-
-    return-object p0
-.end method
-
-.method public final d()Lj2c;
-    .locals 0
-
-    const/4 p0, 0x0
-
-    return-object p0
-.end method
-
-.method public final e(JJ)J
-    .locals 0
-
-    iget-object p0, p0, Lcfc;->Y:Lr0d;
-
-    invoke-virtual {p0, p1, p2, p3, p4}, Lr0d;->f(JJ)J
-
-    move-result-wide p0
-
-    return-wide p0
-.end method
-
-.method public final h(JJ)J
-    .locals 0
-
-    iget-object p0, p0, Lcfc;->Y:Lr0d;
-
-    invoke-virtual {p0, p1, p2, p3, p4}, Lr0d;->d(JJ)J
-
-    move-result-wide p0
-
-    return-wide p0
-.end method
-
-.method public final j(JJ)J
-    .locals 2
-
-    iget-object p0, p0, Lcfc;->Y:Lr0d;
-
-    iget-object v0, p0, Lr0d;->f:Ljava/util/List;
-
-    if-eqz v0, :cond_0
-
-    const-wide p0, -0x7fffffffffffffffL    # -4.9E-324
-
-    return-wide p0
+    return v0
 
     :cond_0
-    invoke-virtual {p0, p1, p2, p3, p4}, Lr0d;->d(JJ)J
+    instance-of v1, p1, Lcfc;
 
-    move-result-wide v0
+    const/4 v2, 0x0
 
-    invoke-virtual {p0, p1, p2, p3, p4}, Lr0d;->c(JJ)J
+    if-nez v1, :cond_1
 
-    move-result-wide p3
+    return v2
 
-    add-long/2addr p3, v0
+    :cond_1
+    check-cast p1, Lcfc;
 
-    invoke-virtual {p0, p3, p4}, Lr0d;->h(J)J
+    iget v1, p0, Lcfc;->a:I
 
-    move-result-wide v0
+    iget v3, p1, Lcfc;->a:I
 
-    invoke-virtual {p0, p3, p4, p1, p2}, Lr0d;->f(JJ)J
+    if-eq v1, v3, :cond_2
 
-    move-result-wide p1
+    return v2
 
-    add-long/2addr p1, v0
+    :cond_2
+    iget v1, p0, Lcfc;->b:I
 
-    iget-wide p3, p0, Lr0d;->i:J
+    iget v3, p1, Lcfc;->b:I
 
-    sub-long/2addr p1, p3
+    if-eq v1, v3, :cond_3
 
-    return-wide p1
+    return v2
+
+    :cond_3
+    iget v1, p0, Lcfc;->c:I
+
+    iget v3, p1, Lcfc;->c:I
+
+    if-eq v1, v3, :cond_4
+
+    return v2
+
+    :cond_4
+    iget-wide v3, p0, Lcfc;->d:J
+
+    iget-wide p0, p1, Lcfc;->d:J
+
+    cmp-long p0, v3, p0
+
+    if-eqz p0, :cond_5
+
+    return v2
+
+    :cond_5
+    return v0
 .end method
 
-.method public final k(J)Lj2c;
-    .locals 1
+.method public final hashCode()I
+    .locals 3
 
-    iget-object v0, p0, Lcfc;->Y:Lr0d;
+    iget v0, p0, Lcfc;->a:I
 
-    invoke-virtual {v0, p0, p1, p2}, Lr0d;->i(Lcfc;J)Lj2c;
+    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
+
+    move-result v0
+
+    const/16 v1, 0x1f
+
+    mul-int/2addr v0, v1
+
+    iget v2, p0, Lcfc;->b:I
+
+    invoke-static {v2, v0, v1}, Lz7e;->m(III)I
+
+    move-result v0
+
+    iget v2, p0, Lcfc;->c:I
+
+    invoke-static {v2, v0, v1}, Lz7e;->m(III)I
+
+    move-result v0
+
+    iget-wide v1, p0, Lcfc;->d:J
+
+    invoke-static {v1, v2}, Ljava/lang/Long;->hashCode(J)I
+
+    move-result p0
+
+    add-int/2addr p0, v0
+
+    return p0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 5
+
+    const-string v0, ", sdkThreshold="
+
+    const-string v1, ", minimumCallDuration="
+
+    const-string v2, "RateCallParams(threshold="
+
+    iget v3, p0, Lcfc;->a:I
+
+    iget v4, p0, Lcfc;->b:I
+
+    invoke-static {v2, v3, v0, v4, v1}, Lsg0;->j(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    iget v1, p0, Lcfc;->c:I
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v1, ", delaySec="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-wide v1, p0, Lcfc;->d:J
+
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    const-string p0, ")"
+
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p0
 
     return-object p0
-.end method
-
-.method public final t(JJ)J
-    .locals 0
-
-    iget-object p0, p0, Lcfc;->Y:Lr0d;
-
-    invoke-virtual {p0, p1, p2, p3, p4}, Lr0d;->g(JJ)J
-
-    move-result-wide p0
-
-    return-wide p0
-.end method
-
-.method public final z()Z
-    .locals 0
-
-    iget-object p0, p0, Lcfc;->Y:Lr0d;
-
-    invoke-virtual {p0}, Lr0d;->j()Z
-
-    move-result p0
-
-    return p0
 .end method

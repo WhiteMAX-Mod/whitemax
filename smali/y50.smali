@@ -1,63 +1,37 @@
-.class public interface abstract Ly50;
-.super Ljava/lang/Object;
+.class public final Ly50;
+.super Lx2;
 .source "SourceFile"
 
 
 # static fields
-.field public static final a:Ljava/nio/ByteBuffer;
+.field public static final Y:[I
+
+
+# instance fields
+.field public X:I
+
+.field public c:Z
+
+.field public o:Z
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 2
+    .locals 4
 
-    const/4 v0, 0x0
+    const/16 v0, 0x5622
 
-    invoke-static {v0}, Ljava/nio/ByteBuffer;->allocateDirect(I)Ljava/nio/ByteBuffer;
+    const v1, 0xac44
 
-    move-result-object v0
+    const/16 v2, 0x1588
 
-    invoke-static {}, Ljava/nio/ByteOrder;->nativeOrder()Ljava/nio/ByteOrder;
+    const/16 v3, 0x2b11
 
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Ljava/nio/ByteBuffer;->order(Ljava/nio/ByteOrder;)Ljava/nio/ByteBuffer;
+    filled-new-array {v2, v3, v0, v1}, [I
 
     move-result-object v0
 
-    sput-object v0, Ly50;->a:Ljava/nio/ByteBuffer;
+    sput-object v0, Ly50;->Y:[I
 
     return-void
-.end method
-
-
-# virtual methods
-.method public abstract a()Ljava/nio/ByteBuffer;
-.end method
-
-.method public abstract b(Ljava/nio/ByteBuffer;)V
-.end method
-
-.method public abstract c()V
-.end method
-
-.method public abstract d()Z
-.end method
-
-.method public abstract e(Lv50;)Lv50;
-.end method
-
-.method public f(J)J
-    .locals 0
-
-    return-wide p1
-.end method
-
-.method public abstract flush()V
-.end method
-
-.method public abstract isActive()Z
-.end method
-
-.method public abstract reset()V
 .end method

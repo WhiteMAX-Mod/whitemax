@@ -1,67 +1,85 @@
-.class public interface abstract Lfff;
-.super Ljava/lang/Object;
+.class public final Lfff;
+.super Leff;
 .source "SourceFile"
 
 
+# instance fields
+.field public final synthetic o:I
+
+
+# direct methods
+.method public synthetic constructor <init>(I)V
+    .locals 0
+
+    iput p1, p0, Lfff;->o:I
+
+    invoke-direct {p0}, Leff;-><init>()V
+
+    return-void
+.end method
+
+
 # virtual methods
-.method public K(II)Z
-    .locals 1
+.method public final next()Ljava/lang/Object;
+    .locals 3
 
-    invoke-interface {p0, p1, p2}, Lfff;->p0(II)Z
+    iget v0, p0, Lfff;->o:I
 
-    move-result v0
+    packed-switch v0, :pswitch_data_0
 
-    if-nez v0, :cond_1
+    iget v0, p0, Leff;->c:I
 
-    invoke-interface {p0}, Lfff;->a0()Z
+    add-int/lit8 v1, v0, 0x2
 
-    move-result v0
+    iput v1, p0, Leff;->c:I
 
-    if-eqz v0, :cond_0
+    iget-object p0, p0, Leff;->a:[Ljava/lang/Object;
 
-    invoke-interface {p0, p2, p1}, Lfff;->p0(II)Z
+    add-int/lit8 v0, v0, 0x1
 
-    move-result p0
+    aget-object p0, p0, v0
 
-    if-eqz p0, :cond_0
+    return-object p0
 
-    goto :goto_0
+    :pswitch_0
+    iget v0, p0, Leff;->c:I
 
-    :cond_0
-    const/4 p0, 0x0
+    add-int/lit8 v1, v0, 0x2
 
-    return p0
+    iput v1, p0, Leff;->c:I
 
-    :cond_1
-    :goto_0
-    const/4 p0, 0x1
+    iget-object p0, p0, Leff;->a:[Ljava/lang/Object;
 
-    return p0
-.end method
+    aget-object p0, p0, v0
 
-.method public abstract T()I
-.end method
+    return-object p0
 
-.method public abstract U()Landroid/util/Range;
-.end method
+    :pswitch_1
+    iget v0, p0, Leff;->c:I
 
-.method public abstract a0()Z
-.end method
+    add-int/lit8 v1, v0, 0x2
 
-.method public abstract i0(I)Landroid/util/Range;
-.end method
+    iput v1, p0, Leff;->c:I
 
-.method public abstract m0(I)Landroid/util/Range;
-.end method
+    new-instance v1, Ll58;
 
-.method public abstract n0()I
-.end method
+    iget-object p0, p0, Leff;->a:[Ljava/lang/Object;
 
-.method public abstract o0()Landroid/util/Range;
-.end method
+    aget-object v2, p0, v0
 
-.method public abstract p0(II)Z
-.end method
+    add-int/lit8 v0, v0, 0x1
 
-.method public abstract s0()Landroid/util/Range;
+    aget-object p0, p0, v0
+
+    const/4 v0, 0x0
+
+    invoke-direct {v1, v2, v0, p0}, Ll58;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+
+    return-object v1
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

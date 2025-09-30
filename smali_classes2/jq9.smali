@@ -1,113 +1,80 @@
-.class public final Ljq9;
+.class public final synthetic Ljq9;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-
-# static fields
-.field public static final synthetic d:[Lbc7;
-
-.field public static final e:Ljava/lang/String;
+# interfaces
+.implements Lc6;
 
 
 # instance fields
-.field public final a:Ltm4;
+.field public final synthetic a:I
 
-.field public final b:Ltm4;
-
-.field public final c:Ltm4;
+.field public final synthetic b:Lkq9;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 7
-
-    new-instance v0, Lnlb;
-
-    const-class v1, Ljq9;
-
-    const-string v2, "prefs"
-
-    const-string v3, "getPrefs()Lru/ok/tamtam/Prefs;"
-
-    const/4 v4, 0x0
-
-    invoke-direct {v0, v1, v2, v3, v4}, Lnlb;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
-
-    sget-object v2, Llcc;->a:Lmcc;
-
-    const-string v3, "discardServerDraftUseCase"
-
-    const-string v5, "getDiscardServerDraftUseCase()Lru/ok/tamtam/draft/DiscardServerDraftUseCase;"
-
-    invoke-static {v2, v1, v3, v5, v4}, Lm26;->g(Lmcc;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)Lnlb;
-
-    move-result-object v2
-
-    new-instance v3, Lnlb;
-
-    const-string v5, "downloadDraftUseCase"
-
-    const-string v6, "getDownloadDraftUseCase()Lru/ok/tamtam/draft/DownloadDraftUseCase;"
-
-    invoke-direct {v3, v1, v5, v6, v4}, Lnlb;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
-
-    const/4 v5, 0x3
-
-    new-array v5, v5, [Lbc7;
-
-    aput-object v0, v5, v4
-
-    const/4 v0, 0x1
-
-    aput-object v2, v5, v0
-
-    const/4 v0, 0x2
-
-    aput-object v3, v5, v0
-
-    sput-object v5, Ljq9;->d:[Lbc7;
-
-    invoke-virtual {v1}, Ljava/lang/Class;->getName()Ljava/lang/String;
-
-    move-result-object v0
-
-    sput-object v0, Ljq9;->e:Ljava/lang/String;
-
-    return-void
-.end method
-
-.method public constructor <init>(Ltm4;Ltm4;Ltm4;)V
+.method public synthetic constructor <init>(Lkq9;I)V
     .locals 0
 
+    iput p2, p0, Ljq9;->a:I
+
+    iput-object p1, p0, Ljq9;->b:Lkq9;
+
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Ljq9;->a:Ltm4;
-
-    iput-object p2, p0, Ljq9;->b:Ltm4;
-
-    iput-object p3, p0, Ljq9;->c:Ltm4;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Lx4b;
+.method public final run()V
     .locals 2
 
-    sget-object v0, Ljq9;->d:[Lbc7;
+    iget v0, p0, Ljq9;->a:I
 
-    const/4 v1, 0x0
+    packed-switch v0, :pswitch_data_0
 
-    aget-object v0, v0, v1
+    new-instance v0, Lej0;
 
-    iget-object p0, p0, Ljq9;->a:Ltm4;
+    const/16 v1, 0x13
 
-    invoke-virtual {p0}, Ltm4;->get()Ljava/lang/Object;
+    invoke-direct {v0, v1}, Lej0;-><init>(I)V
 
-    move-result-object p0
+    iget-object p0, p0, Ljq9;->b:Lkq9;
 
-    check-cast p0, Lx4b;
+    invoke-virtual {p0, v0}, Ly2;->n(Lsm3;)V
 
-    return-object p0
+    return-void
+
+    :pswitch_0
+    new-instance v0, Lej0;
+
+    const/16 v1, 0x11
+
+    invoke-direct {v0, v1}, Lej0;-><init>(I)V
+
+    iget-object p0, p0, Ljq9;->b:Lkq9;
+
+    invoke-virtual {p0, v0}, Ly2;->n(Lsm3;)V
+
+    return-void
+
+    :pswitch_1
+    new-instance v0, Lej0;
+
+    const/16 v1, 0x11
+
+    invoke-direct {v0, v1}, Lej0;-><init>(I)V
+
+    iget-object p0, p0, Ljq9;->b:Lkq9;
+
+    invoke-virtual {p0, v0}, Ly2;->n(Lsm3;)V
+
+    return-void
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

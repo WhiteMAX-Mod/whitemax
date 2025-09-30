@@ -1,82 +1,41 @@
-.class public final Lera;
+.class public interface abstract Lera;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:Z
-
-
-# direct methods
-.method public constructor <init>(Z)V
-    .locals 0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-boolean p1, p0, Lera;->a:Z
-
-    return-void
-.end method
-
-
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 3
-
-    const/4 v0, 0x1
-
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    instance-of v1, p1, Lera;
-
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
-    check-cast p1, Lera;
-
-    iget-boolean p0, p0, Lera;->a:Z
-
-    iget-boolean p1, p1, Lera;->a:Z
-
-    if-eq p0, p1, :cond_2
-
-    return v2
-
-    :cond_2
-    return v0
+.method public abstract a()Lzs2;
 .end method
 
-.method public final hashCode()I
-    .locals 0
-
-    iget-boolean p0, p0, Lera;->a:Z
-
-    invoke-static {p0}, Ljava/lang/Boolean;->hashCode(Z)I
-
-    move-result p0
-
-    return p0
+.method public abstract b()Lie0;
 .end method
 
-.method public final toString()Ljava/lang/String;
-    .locals 2
+.method public abstract c()Lide;
+.end method
 
-    const-string v0, "ContactsPermissionChange(isGranted="
+.method public abstract d()Lam6;
+.end method
 
-    const-string v1, ")"
+.method public abstract e()Lb4;
+.end method
 
-    iget-boolean p0, p0, Lera;->a:Z
+.method public abstract f(I)I
+.end method
 
-    invoke-static {v0, v1, p0}, Lzge;->p(Ljava/lang/String;Ljava/lang/String;Z)Ljava/lang/String;
+.method public abstract g()Lytf;
+.end method
 
-    move-result-object p0
+.method public abstract getIcon()Lqy6;
+.end method
 
-    return-object p0
+.method public abstract getName()Ljava/lang/String;
+.end method
+
+.method public abstract getText()Lh1f;
+.end method
+
+.method public abstract h()Lf83;
+.end method
+
+.method public abstract i()Lume;
 .end method

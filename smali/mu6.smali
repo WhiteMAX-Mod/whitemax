@@ -1,239 +1,385 @@
-.class public Lmu6;
+.class public final Lmu6;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lbcf;
+
 
 # static fields
-.field public static final c:Lmu6;
+.field public static final f:Lx46;
+
+.field public static final g:Lx46;
 
 
 # instance fields
-.field public final a:Landroid/graphics/Bitmap$Config;
+.field public final a:Lbcf;
 
-.field public final b:Landroid/graphics/Bitmap$Config;
+.field public final b:Lx46;
+
+.field public c:Lx46;
+
+.field public d:[B
+
+.field public e:I
 
 
 # direct methods
 .method static constructor <clinit>()V
     .locals 2
 
-    new-instance v0, Lha8;
+    new-instance v0, Lu46;
 
-    const/16 v1, 0x15
+    invoke-direct {v0}, Lu46;-><init>()V
 
-    invoke-direct {v0, v1}, Lha8;-><init>(I)V
+    const-string v1, "application/id3"
 
-    new-instance v1, Lmu6;
+    invoke-static {v1}, Leg9;->n(Ljava/lang/String;)Ljava/lang/String;
 
-    invoke-direct {v1, v0}, Lmu6;-><init>(Lha8;)V
+    move-result-object v1
 
-    sput-object v1, Lmu6;->c:Lmu6;
+    iput-object v1, v0, Lu46;->m:Ljava/lang/String;
+
+    new-instance v1, Lx46;
+
+    invoke-direct {v1, v0}, Lx46;-><init>(Lu46;)V
+
+    sput-object v1, Lmu6;->f:Lx46;
+
+    new-instance v0, Lu46;
+
+    invoke-direct {v0}, Lu46;-><init>()V
+
+    const-string v1, "application/x-emsg"
+
+    invoke-static {v1}, Leg9;->n(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v1
+
+    iput-object v1, v0, Lu46;->m:Ljava/lang/String;
+
+    new-instance v1, Lx46;
+
+    invoke-direct {v1, v0}, Lx46;-><init>(Lu46;)V
+
+    sput-object v1, Lmu6;->g:Lx46;
 
     return-void
 .end method
 
-.method public constructor <init>(Lha8;)V
-    .locals 1
+.method public constructor <init>(Lbcf;I)V
+    .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iget-object v0, p1, Lha8;->a:Ljava/lang/Object;
+    iput-object p1, p0, Lmu6;->a:Lbcf;
 
-    check-cast v0, Landroid/graphics/Bitmap$Config;
+    const/4 p1, 0x1
 
-    iput-object v0, p0, Lmu6;->a:Landroid/graphics/Bitmap$Config;
+    if-eq p2, p1, :cond_1
 
-    iget-object p1, p1, Lha8;->b:Ljava/lang/Object;
+    const/4 p1, 0x3
 
-    check-cast p1, Landroid/graphics/Bitmap$Config;
+    if-ne p2, p1, :cond_0
 
-    iput-object p1, p0, Lmu6;->b:Landroid/graphics/Bitmap$Config;
+    sget-object p1, Lmu6;->g:Lx46;
+
+    iput-object p1, p0, Lmu6;->b:Lx46;
+
+    goto :goto_0
+
+    :cond_0
+    new-instance p0, Ljava/lang/IllegalArgumentException;
+
+    const-string p1, "Unknown metadataType: "
+
+    invoke-static {p2, p1}, Lyv7;->e(ILjava/lang/String;)Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-direct {p0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw p0
+
+    :cond_1
+    sget-object p1, Lmu6;->f:Lx46;
+
+    iput-object p1, p0, Lmu6;->b:Lx46;
+
+    :goto_0
+    const/4 p1, 0x0
+
+    new-array p2, p1, [B
+
+    iput-object p2, p0, Lmu6;->d:[B
+
+    iput p1, p0, Lmu6;->e:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
+.method public final a(JIIILzbf;)V
+    .locals 3
 
-    const/4 v0, 0x1
+    iget-object v0, p0, Lmu6;->c:Lx46;
 
-    if-ne p0, p1, :cond_0
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    return v0
+    iget v0, p0, Lmu6;->e:I
 
-    :cond_0
-    const/4 v1, 0x0
+    sub-int/2addr v0, p5
 
-    if-eqz p1, :cond_4
+    sub-int p4, v0, p4
 
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    iget-object v1, p0, Lmu6;->d:[B
 
-    move-result-object v2
+    invoke-static {v1, p4, v0}, Ljava/util/Arrays;->copyOfRange([BII)[B
 
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    move-result-object p4
 
-    move-result-object v3
+    new-instance v1, Lcya;
 
-    if-eq v2, v3, :cond_1
+    invoke-direct {v1, p4}, Lcya;-><init>([B)V
+
+    iget-object p4, p0, Lmu6;->d:[B
+
+    const/4 v2, 0x0
+
+    invoke-static {p4, v0, p4, v2, p5}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
+
+    iput p5, p0, Lmu6;->e:I
+
+    iget-object p4, p0, Lmu6;->c:Lx46;
+
+    iget-object p4, p4, Lx46;->n:Ljava/lang/String;
+
+    iget-object p5, p0, Lmu6;->b:Lx46;
+
+    iget-object v0, p5, Lx46;->n:Ljava/lang/String;
+
+    iget-object p5, p5, Lx46;->n:Ljava/lang/String;
+
+    invoke-static {p4, v0}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p4
+
+    if-eqz p4, :cond_0
 
     goto :goto_0
 
-    :cond_1
-    check-cast p1, Lmu6;
+    :cond_0
+    iget-object p4, p0, Lmu6;->c:Lx46;
 
-    iget-object v2, p0, Lmu6;->a:Landroid/graphics/Bitmap$Config;
+    iget-object p4, p4, Lx46;->n:Ljava/lang/String;
 
-    iget-object v3, p1, Lmu6;->a:Landroid/graphics/Bitmap$Config;
+    const-string v0, "application/x-emsg"
 
-    if-eq v2, v3, :cond_2
+    invoke-virtual {v0, p4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    return v1
+    move-result p4
 
-    :cond_2
-    iget-object p0, p0, Lmu6;->b:Landroid/graphics/Bitmap$Config;
+    if-eqz p4, :cond_2
 
-    iget-object p1, p1, Lmu6;->b:Landroid/graphics/Bitmap$Config;
+    invoke-static {v1}, Lwo;->J(Lcya;)Lg95;
 
-    if-eq p0, p1, :cond_3
+    move-result-object p4
 
-    return v1
+    invoke-virtual {p4}, Lg95;->l()Lx46;
 
-    :cond_3
-    return v0
+    move-result-object v0
 
-    :cond_4
-    :goto_0
-    return v1
-.end method
+    if-eqz v0, :cond_1
 
-.method public final hashCode()I
-    .locals 2
+    iget-object v0, v0, Lx46;->n:Ljava/lang/String;
 
-    iget-object v0, p0, Lmu6;->a:Landroid/graphics/Bitmap$Config;
-
-    invoke-virtual {v0}, Ljava/lang/Enum;->ordinal()I
+    invoke-static {p5, v0}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
-    const v1, -0x20f0b425
+    if-eqz v0, :cond_1
 
-    add-int/2addr v0, v1
+    new-instance v1, Lcya;
 
-    mul-int/lit8 v0, v0, 0x1f
+    invoke-virtual {p4}, Lg95;->o()[B
 
-    iget-object p0, p0, Lmu6;->b:Landroid/graphics/Bitmap$Config;
+    move-result-object p4
 
-    if-eqz p0, :cond_0
+    invoke-virtual {p4}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    invoke-virtual {p0}, Ljava/lang/Enum;->ordinal()I
-
-    move-result p0
-
-    goto :goto_0
-
-    :cond_0
-    const/4 p0, 0x0
+    invoke-direct {v1, p4}, Lcya;-><init>([B)V
 
     :goto_0
-    add-int/2addr v0, p0
+    invoke-virtual {v1}, Lcya;->a()I
 
-    mul-int/lit16 v0, v0, 0x745f
+    move-result p4
 
-    return v0
+    iget-object p0, p0, Lmu6;->a:Lbcf;
+
+    invoke-interface {p0, v1, p4, v2}, Lbcf;->b(Lcya;II)V
+
+    const/4 p5, 0x0
+
+    invoke-interface/range {p0 .. p6}, Lbcf;->a(JIIILzbf;)V
+
+    return-void
+
+    :cond_1
+    invoke-virtual {p4}, Lg95;->l()Lx46;
+
+    move-result-object p0
+
+    new-instance p1, Ljava/lang/StringBuilder;
+
+    const-string p2, "Ignoring EMSG. Expected it to contain wrapped "
+
+    invoke-direct {p1, p2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {p1, p5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string p2, " but actual wrapped format: "
+
+    invoke-virtual {p1, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-static {p0}, Lxnd;->l0(Ljava/lang/String;)V
+
+    return-void
+
+    :cond_2
+    new-instance p1, Ljava/lang/StringBuilder;
+
+    const-string p2, "Ignoring sample for unsupported format: "
+
+    invoke-direct {p1, p2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object p0, p0, Lmu6;->c:Lx46;
+
+    iget-object p0, p0, Lx46;->n:Ljava/lang/String;
+
+    invoke-virtual {p1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-static {p0}, Lxnd;->l0(Ljava/lang/String;)V
+
+    return-void
 .end method
 
-.method public final toString()Ljava/lang/String;
-    .locals 4
+.method public final b(Lcya;II)V
+    .locals 2
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    iget p3, p0, Lmu6;->e:I
 
-    const-string v1, "ImageDecodeOptions{"
+    add-int/2addr p3, p2
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    iget-object v0, p0, Lmu6;->d:[B
 
-    invoke-static {p0}, Lou0;->E(Ljava/lang/Object;)Luk8;
+    array-length v1, v0
 
-    move-result-object v1
+    if-ge v1, p3, :cond_0
 
-    const-string v2, "minDecodeIntervalMs"
+    div-int/lit8 v1, p3, 0x2
 
-    const/16 v3, 0x64
+    add-int/2addr v1, p3
 
-    invoke-virtual {v1, v3, v2}, Luk8;->i(ILjava/lang/String;)V
+    invoke-static {v0, v1}, Ljava/util/Arrays;->copyOf([BI)[B
 
-    const-string v2, "maxDimensionPx"
+    move-result-object p3
 
-    const v3, 0x7fffffff
+    iput-object p3, p0, Lmu6;->d:[B
 
-    invoke-virtual {v1, v3, v2}, Luk8;->i(ILjava/lang/String;)V
+    :cond_0
+    iget-object p3, p0, Lmu6;->d:[B
 
-    const-string v2, "decodePreviewFrame"
+    iget v0, p0, Lmu6;->e:I
 
-    const/4 v3, 0x0
+    invoke-virtual {p1, v0, p3, p2}, Lcya;->e(I[BI)V
 
-    invoke-virtual {v1, v2, v3}, Luk8;->l(Ljava/lang/String;Z)V
+    iget p1, p0, Lmu6;->e:I
 
-    const-string v2, "useLastFrameForPreview"
+    add-int/2addr p1, p2
 
-    invoke-virtual {v1, v2, v3}, Luk8;->l(Ljava/lang/String;Z)V
+    iput p1, p0, Lmu6;->e:I
 
-    const-string v2, "useEncodedImageForPreview"
+    return-void
+.end method
 
-    invoke-virtual {v1, v2, v3}, Luk8;->l(Ljava/lang/String;Z)V
+.method public final c(Ly64;IZ)I
+    .locals 3
 
-    const-string v2, "decodeAllFrames"
+    iget v0, p0, Lmu6;->e:I
 
-    invoke-virtual {v1, v2, v3}, Luk8;->l(Ljava/lang/String;Z)V
+    add-int/2addr v0, p2
 
-    const-string v2, "forceStaticImage"
+    iget-object v1, p0, Lmu6;->d:[B
 
-    invoke-virtual {v1, v2, v3}, Luk8;->l(Ljava/lang/String;Z)V
+    array-length v2, v1
 
-    iget-object v2, p0, Lmu6;->a:Landroid/graphics/Bitmap$Config;
+    if-ge v2, v0, :cond_0
 
-    invoke-virtual {v2}, Ljava/lang/Enum;->name()Ljava/lang/String;
+    div-int/lit8 v2, v0, 0x2
 
-    move-result-object v2
+    add-int/2addr v2, v0
 
-    const-string v3, "bitmapConfigName"
+    invoke-static {v1, v2}, Ljava/util/Arrays;->copyOf([BI)[B
 
-    invoke-virtual {v1, v2, v3}, Luk8;->m(Ljava/lang/Object;Ljava/lang/String;)V
+    move-result-object v0
 
-    iget-object p0, p0, Lmu6;->b:Landroid/graphics/Bitmap$Config;
+    iput-object v0, p0, Lmu6;->d:[B
 
-    invoke-virtual {p0}, Ljava/lang/Enum;->name()Ljava/lang/String;
+    :cond_0
+    iget-object v0, p0, Lmu6;->d:[B
 
-    move-result-object p0
+    iget v1, p0, Lmu6;->e:I
 
-    const-string v2, "animatedBitmapConfigName"
+    invoke-interface {p1, v0, v1, p2}, Ly64;->read([BII)I
 
-    invoke-virtual {v1, p0, v2}, Luk8;->m(Ljava/lang/Object;Ljava/lang/String;)V
+    move-result p1
 
-    const/4 p0, 0x0
+    const/4 p2, -0x1
 
-    const-string v2, "customImageDecoder"
+    if-ne p1, p2, :cond_2
 
-    invoke-virtual {v1, p0, v2}, Luk8;->m(Ljava/lang/Object;Ljava/lang/String;)V
+    if-eqz p3, :cond_1
 
-    const-string v2, "bitmapTransformation"
+    return p2
 
-    invoke-virtual {v1, p0, v2}, Luk8;->m(Ljava/lang/Object;Ljava/lang/String;)V
+    :cond_1
+    new-instance p0, Ljava/io/EOFException;
 
-    const-string v2, "colorSpace"
+    invoke-direct {p0}, Ljava/io/EOFException;-><init>()V
 
-    invoke-virtual {v1, p0, v2}, Luk8;->m(Ljava/lang/Object;Ljava/lang/String;)V
+    throw p0
 
-    invoke-virtual {v1}, Luk8;->toString()Ljava/lang/String;
+    :cond_2
+    iget p2, p0, Lmu6;->e:I
 
-    move-result-object p0
+    add-int/2addr p2, p1
 
-    const-string v1, "}"
+    iput p2, p0, Lmu6;->e:I
 
-    invoke-static {v0, p0, v1}, Lm26;->j(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    return p1
+.end method
 
-    move-result-object p0
+.method public final d(Lx46;)V
+    .locals 0
 
-    return-object p0
+    iput-object p1, p0, Lmu6;->c:Lx46;
+
+    iget-object p1, p0, Lmu6;->a:Lbcf;
+
+    iget-object p0, p0, Lmu6;->b:Lx46;
+
+    invoke-interface {p1, p0}, Lbcf;->d(Lx46;)V
+
+    return-void
 .end method

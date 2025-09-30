@@ -2,258 +2,326 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lyp;
+
+
+# static fields
+.field public static final synthetic n:I
+
 
 # instance fields
-.field public final a:I
+.field public final a:Lcl7;
 
-.field public final b:I
+.field public final b:Lcl7;
 
-.field public final c:I
+.field public final c:Lcl7;
 
-.field public final d:I
+.field public final d:Ls04;
 
-.field public final e:I
+.field public final e:Lcl7;
 
-.field public final f:I
+.field public f:I
 
-.field public final g:I
+.field public g:J
 
-.field public final h:I
+.field public volatile h:I
+
+.field public final i:Ljava/util/concurrent/CopyOnWriteArraySet;
+
+.field public final j:Lf7d;
+
+.field public volatile k:Z
+
+.field public volatile l:Z
+
+.field public final m:Lnag;
 
 
 # direct methods
-.method public constructor <init>(IIIIIIII)V
-    .locals 0
+.method public constructor <init>(Landroid/app/Application;Lf7d;Lcl7;Lcl7;Lcl7;Ls04;Lcl7;)V
+    .locals 2
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput p1, p0, Loag;->a:I
+    const/4 v0, 0x0
 
-    iput p2, p0, Loag;->b:I
+    iput v0, p0, Loag;->f:I
 
-    iput p3, p0, Loag;->c:I
+    new-instance v1, Ljava/util/concurrent/CopyOnWriteArraySet;
 
-    iput p4, p0, Loag;->d:I
+    invoke-direct {v1}, Ljava/util/concurrent/CopyOnWriteArraySet;-><init>()V
 
-    iput p5, p0, Loag;->e:I
+    iput-object v1, p0, Loag;->i:Ljava/util/concurrent/CopyOnWriteArraySet;
 
-    iput p6, p0, Loag;->f:I
+    iput-boolean v0, p0, Loag;->k:Z
 
-    iput p7, p0, Loag;->g:I
+    const/4 v0, 0x1
 
-    iput p8, p0, Loag;->h:I
+    iput-boolean v0, p0, Loag;->l:Z
+
+    new-instance v0, Lnag;
+
+    invoke-direct {v0, p0}, Lnag;-><init>(Loag;)V
+
+    iput-object v0, p0, Loag;->m:Lnag;
+
+    iput-object p2, p0, Loag;->j:Lf7d;
+
+    iput-object p3, p0, Loag;->a:Lcl7;
+
+    iput-object p4, p0, Loag;->b:Lcl7;
+
+    iput-object p6, p0, Loag;->d:Ls04;
+
+    iput-object p5, p0, Loag;->c:Lcl7;
+
+    iput-object p7, p0, Loag;->e:Lcl7;
+
+    new-instance p2, Ljg0;
+
+    const/4 p3, 0x1
+
+    invoke-direct {p2, p3, p0}, Ljg0;-><init>(ILjava/lang/Object;)V
+
+    invoke-virtual {p1, p2}, Landroid/app/Application;->registerActivityLifecycleCallbacks(Landroid/app/Application$ActivityLifecycleCallbacks;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 2
+.method public final a()V
+    .locals 7
 
-    if-ne p0, p1, :cond_0
+    invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
-    goto :goto_1
+    move-result-wide v0
+
+    iget-wide v2, p0, Loag;->g:J
+
+    sub-long/2addr v0, v2
+
+    sget-object v2, Ljtg;->g:Loja;
+
+    if-nez v2, :cond_0
+
+    goto :goto_0
 
     :cond_0
-    instance-of v0, p1, Loag;
+    sget-object v3, Lqz7;->o:Lqz7;
 
-    if-nez v0, :cond_1
+    invoke-virtual {v2, v3}, Loja;->a(Lqz7;)Z
+
+    move-result v4
+
+    if-nez v4, :cond_1
 
     goto :goto_0
 
     :cond_1
-    check-cast p1, Loag;
+    new-instance v4, Ljava/lang/StringBuilder;
 
-    iget v0, p0, Loag;->a:I
+    const-string v5, "app enter background, time="
 
-    iget v1, p1, Loag;->a:I
+    invoke-direct {v4, v5}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    if-eq v0, v1, :cond_2
+    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
-    goto :goto_0
+    move-result-wide v5
 
-    :cond_2
-    iget v0, p0, Loag;->b:I
+    invoke-static {v5, v6}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
-    iget v1, p1, Loag;->b:I
+    move-result-object v5
 
-    if-eq v0, v1, :cond_3
+    invoke-static {v5}, Lgy7;->F(Ljava/lang/Long;)Ljava/lang/String;
 
-    goto :goto_0
+    move-result-object v5
 
-    :cond_3
-    iget v0, p0, Loag;->c:I
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget v1, p1, Loag;->c:I
+    const-string v5, ", interactiveTime="
 
-    if-eq v0, v1, :cond_4
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    goto :goto_0
+    invoke-virtual {v4, v0, v1}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
-    :cond_4
-    iget v0, p0, Loag;->d:I
+    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    iget v1, p1, Loag;->d:I
+    move-result-object v4
 
-    if-eq v0, v1, :cond_5
+    const/4 v5, 0x0
 
-    goto :goto_0
+    const-string v6, "oag"
 
-    :cond_5
-    iget v0, p0, Loag;->e:I
-
-    iget v1, p1, Loag;->e:I
-
-    if-eq v0, v1, :cond_6
-
-    goto :goto_0
-
-    :cond_6
-    iget v0, p0, Loag;->f:I
-
-    iget v1, p1, Loag;->f:I
-
-    if-eq v0, v1, :cond_7
-
-    goto :goto_0
-
-    :cond_7
-    iget v0, p0, Loag;->g:I
-
-    iget v1, p1, Loag;->g:I
-
-    if-eq v0, v1, :cond_8
-
-    goto :goto_0
-
-    :cond_8
-    iget p0, p0, Loag;->h:I
-
-    iget p1, p1, Loag;->h:I
-
-    if-eq p0, p1, :cond_9
+    invoke-virtual {v2, v3, v6, v4, v5}, Loja;->b(Lqz7;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     :goto_0
-    const/4 p0, 0x0
+    iget-object v2, p0, Loag;->b:Lcl7;
 
-    return p0
+    invoke-interface {v2}, Lcl7;->getValue()Ljava/lang/Object;
 
-    :cond_9
-    :goto_1
-    const/4 p0, 0x1
+    move-result-object v2
 
-    return p0
-.end method
+    check-cast v2, Lzc;
 
-.method public final hashCode()I
-    .locals 3
+    const-string v3, "INTERACTIVE_SESSION"
 
-    iget v0, p0, Loag;->a:I
+    invoke-virtual {v2, v0, v1, v3}, Lzc;->i(JLjava/lang/String;)V
 
-    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
+    iget-object v0, p0, Loag;->d:Ls04;
 
-    move-result v0
+    sget-object v1, Lj45;->a:Lj45;
 
-    const/16 v1, 0x1f
+    new-instance v2, Lmag;
 
-    mul-int/2addr v0, v1
+    const/4 v3, 0x1
 
-    iget v2, p0, Loag;->b:I
+    invoke-direct {v2, p0, v3}, Lmag;-><init>(Loag;I)V
 
-    invoke-static {v2, v0, v1}, Lrqc;->e(III)I
+    invoke-virtual {v0, v1, v2}, Ls04;->dispatch(Lq04;Ljava/lang/Runnable;)V
 
-    move-result v0
+    iget-object p0, p0, Loag;->i:Ljava/util/concurrent/CopyOnWriteArraySet;
 
-    iget v2, p0, Loag;->c:I
-
-    invoke-static {v2, v0, v1}, Lrqc;->e(III)I
-
-    move-result v0
-
-    iget v2, p0, Loag;->d:I
-
-    invoke-static {v2, v0, v1}, Lrqc;->e(III)I
-
-    move-result v0
-
-    iget v2, p0, Loag;->e:I
-
-    invoke-static {v2, v0, v1}, Lrqc;->e(III)I
-
-    move-result v0
-
-    iget v2, p0, Loag;->f:I
-
-    invoke-static {v2, v0, v1}, Lrqc;->e(III)I
-
-    move-result v0
-
-    iget v2, p0, Loag;->g:I
-
-    invoke-static {v2, v0, v1}, Lrqc;->e(III)I
-
-    move-result v0
-
-    iget p0, p0, Loag;->h:I
-
-    invoke-static {p0}, Ljava/lang/Integer;->hashCode(I)I
-
-    move-result p0
-
-    add-int/2addr p0, v0
-
-    return p0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 5
-
-    const-string v0, ", inputMDLink="
-
-    const-string v1, ", inputPlaceholder="
-
-    const-string v2, "WritebarTextColors(input="
-
-    iget v3, p0, Loag;->a:I
-
-    iget v4, p0, Loag;->b:I
-
-    invoke-static {v2, v3, v0, v4, v1}, Lpg0;->j(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    const-string v1, ", primary="
-
-    const-string v2, ", replyMessage="
-
-    iget v3, p0, Loag;->c:I
-
-    iget v4, p0, Loag;->d:I
-
-    invoke-static {v0, v3, v1, v4, v2}, Lv04;->p(Ljava/lang/StringBuilder;ILjava/lang/String;ILjava/lang/String;)V
-
-    const-string v1, ", replyTo="
-
-    const-string v2, ", secondary="
-
-    iget v3, p0, Loag;->e:I
-
-    iget v4, p0, Loag;->f:I
-
-    invoke-static {v0, v3, v1, v4, v2}, Lv04;->p(Ljava/lang/StringBuilder;ILjava/lang/String;ILjava/lang/String;)V
-
-    const-string v1, ", themed="
-
-    const-string v2, ")"
-
-    iget v3, p0, Loag;->g:I
-
-    iget p0, p0, Loag;->h:I
-
-    invoke-static {v0, v3, v1, p0, v2}, Lpg0;->h(Ljava/lang/StringBuilder;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/String;
+    invoke-virtual {p0}, Ljava/util/concurrent/CopyOnWriteArraySet;->iterator()Ljava/util/Iterator;
 
     move-result-object p0
 
-    return-object p0
+    :goto_1
+    invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_2
+
+    invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lxp;
+
+    invoke-interface {v0}, Lxp;->a()V
+
+    goto :goto_1
+
+    :cond_2
+    return-void
+.end method
+
+.method public final b()V
+    .locals 5
+
+    sget-object v0, Ljtg;->g:Loja;
+
+    if-nez v0, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    sget-object v1, Lqz7;->o:Lqz7;
+
+    invoke-virtual {v0, v1}, Loja;->a(Lqz7;)Z
+
+    move-result v2
+
+    if-nez v2, :cond_1
+
+    goto :goto_0
+
+    :cond_1
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    const-string v3, "app enter foreground, time = "
+
+    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+
+    move-result-wide v3
+
+    invoke-static {v3, v4}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v3
+
+    invoke-static {v3}, Lgy7;->F(Ljava/lang/Long;)Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    const/4 v3, 0x0
+
+    const-string v4, "oag"
+
+    invoke-virtual {v0, v1, v4, v2, v3}, Loja;->b(Lqz7;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    :goto_0
+    invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
+
+    move-result-wide v0
+
+    iput-wide v0, p0, Loag;->g:J
+
+    iget-object v0, p0, Loag;->d:Ls04;
+
+    sget-object v1, Lj45;->a:Lj45;
+
+    new-instance v2, Lmag;
+
+    const/4 v3, 0x2
+
+    invoke-direct {v2, p0, v3}, Lmag;-><init>(Loag;I)V
+
+    invoke-virtual {v0, v1, v2}, Ls04;->dispatch(Lq04;Ljava/lang/Runnable;)V
+
+    iget-object p0, p0, Loag;->i:Ljava/util/concurrent/CopyOnWriteArraySet;
+
+    invoke-virtual {p0}, Ljava/util/concurrent/CopyOnWriteArraySet;->iterator()Ljava/util/Iterator;
+
+    move-result-object p0
+
+    :goto_1
+    invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_2
+
+    invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lxp;
+
+    invoke-interface {v0}, Lxp;->b()V
+
+    goto :goto_1
+
+    :cond_2
+    return-void
+.end method
+
+.method public final c()Z
+    .locals 1
+
+    iget-boolean v0, p0, Loag;->k:Z
+
+    if-eqz v0, :cond_0
+
+    iget-boolean p0, p0, Loag;->l:Z
+
+    if-eqz p0, :cond_0
+
+    const/4 p0, 0x1
+
+    return p0
+
+    :cond_0
+    const/4 p0, 0x0
+
+    return p0
 .end method

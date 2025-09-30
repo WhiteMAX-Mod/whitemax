@@ -1,36 +1,20 @@
-.class public final Lwac;
+.class public abstract Lwac;
 .super Ljava/lang/Object;
-.source "SourceFile"
-
-# interfaces
-.implements Lxac;
 
 
-# instance fields
-.field public final synthetic a:Lfb0;
+# static fields
+.field public static call_notification_answer_action:I = 0x7f1301b5
 
+.field public static call_notification_answer_video_action:I = 0x7f1301b6
 
-# direct methods
-.method public constructor <init>(Lfb0;)V
-    .locals 0
+.field public static call_notification_decline_action:I = 0x7f1301b9
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+.field public static call_notification_hang_up_action:I = 0x7f1301ba
 
-    iput-object p1, p0, Lwac;->a:Lfb0;
+.field public static call_notification_incoming_text:I = 0x7f1301be
 
-    return-void
-.end method
+.field public static call_notification_ongoing_text:I = 0x7f1301c1
 
+.field public static call_notification_screening_text:I = 0x7f1301c2
 
-# virtual methods
-.method public final a(Lf90;Ljava/util/concurrent/Executor;)Lp60;
-    .locals 1
-
-    new-instance p0, Lp60;
-
-    const/4 v0, 0x0
-
-    invoke-direct {p0, p1, p2, v0}, Lp60;-><init>(Lf90;Ljava/util/concurrent/Executor;Landroid/content/Context;)V
-
-    return-object p0
-.end method
+.field public static status_bar_notification_info_overflow:I = 0x7f130ce6

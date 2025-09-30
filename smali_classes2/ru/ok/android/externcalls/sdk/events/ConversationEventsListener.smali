@@ -196,7 +196,7 @@
     return-void
 .end method
 
-.method public onMuteChanged(Ljh9;)V
+.method public onMuteChanged(Lto9;)V
     .locals 0
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
@@ -204,7 +204,7 @@
     return-void
 .end method
 
-.method public onMuteStateInitialized(Ljh9;)V
+.method public onMuteStateInitialized(Lto9;)V
     .locals 0
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
@@ -330,7 +330,7 @@
     return-void
 .end method
 
-.method public onStateChanged(Lru/ok/android/externcalls/sdk/ConversationParticipant;Ltf1;)V
+.method public onStateChanged(Lru/ok/android/externcalls/sdk/ConversationParticipant;Lug1;)V
     .locals 0
 
     return-void

@@ -1,17 +1,15 @@
-.class public interface abstract La0a;
+.class public abstract La0a;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# virtual methods
-.method public abstract b()V
-.end method
+# direct methods
+.method public static a(Landroid/app/Notification$Action;)Z
+    .locals 0
 
-.method public abstract c(Lam4;)V
-.end method
+    invoke-virtual {p0}, Landroid/app/Notification$Action;->getAllowGeneratedReplies()Z
 
-.method public abstract h(Ljava/lang/Object;)V
-.end method
+    move-result p0
 
-.method public abstract onError(Ljava/lang/Throwable;)V
+    return p0
 .end method

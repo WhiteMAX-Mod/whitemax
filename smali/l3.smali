@@ -3,41 +3,39 @@
 .source "SourceFile"
 
 
-# static fields
-.field public static final c:Ll3;
-
-
 # instance fields
-.field public volatile a:Ljava/lang/Thread;
-
-.field public volatile b:Ll3;
+.field public final a:Ljava/lang/Throwable;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 1
+    .locals 4
 
     new-instance v0, Ll3;
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    new-instance v1, Lt0;
 
-    sput-object v0, Ll3;->c:Ll3;
+    const-string v2, "Failure occurred while trying to finish a future."
+
+    const/4 v3, 0x2
+
+    invoke-direct {v1, v2, v3}, Lt0;-><init>(Ljava/lang/String;I)V
+
+    invoke-direct {v0, v1}, Ll3;-><init>(Ljava/lang/Throwable;)V
 
     return-void
 .end method
 
-.method public constructor <init>()V
-    .locals 2
+.method public constructor <init>(Ljava/lang/Throwable;)V
+    .locals 1
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    sget-object v0, Lm3;->Y:Ltk9;
+    sget-boolean v0, Lq3;->o:Z
 
-    invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    move-result-object v1
-
-    invoke-virtual {v0, p0, v1}, Ltk9;->F(Ll3;Ljava/lang/Thread;)V
+    iput-object p1, p0, Ll3;->a:Ljava/lang/Throwable;
 
     return-void
 .end method

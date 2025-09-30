@@ -2,58 +2,23 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lvmd;
 
-# instance fields
-.field public A:I
 
-.field public a:Land;
+# static fields
+.field public static final a:Ltmd;
 
-.field public b:F
 
-.field public c:F
+# direct methods
+.method static constructor <clinit>()V
+    .locals 1
 
-.field public d:Z
+    new-instance v0, Ltmd;
 
-.field public e:Z
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-.field public f:Z
+    sput-object v0, Ltmd;->a:Ltmd;
 
-.field public g:Z
-
-.field public h:I
-
-.field public i:I
-
-.field public j:I
-
-.field public k:Z
-
-.field public l:I
-
-.field public m:Z
-
-.field public n:J
-
-.field public o:Z
-
-.field public p:[Ljava/lang/String;
-
-.field public q:F
-
-.field public r:F
-
-.field public s:Z
-
-.field public t:Ljava/lang/String;
-
-.field public u:I
-
-.field public v:I
-
-.field public w:I
-
-.field public x:I
-
-.field public y:Z
-
-.field public z:Z
+    return-void
+.end method

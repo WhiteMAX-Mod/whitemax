@@ -1,6 +1,3 @@
-.class public interface abstract Lfg9;
-.super Ljava/lang/Object;
+.class public final Lfg9;
+.super Ljava/lang/UnsatisfiedLinkError;
 .source "SourceFile"
-
-# interfaces
-.implements Lrc3;

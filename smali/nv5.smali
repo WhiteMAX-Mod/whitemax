@@ -1,65 +1,80 @@
 .class public final Lnv5;
-.super Ls8a;
+.super Lure;
 .source "SourceFile"
+
+# interfaces
+.implements Lpc6;
+
+
+# instance fields
+.field public final synthetic X:Lcu7;
+
+.field public final synthetic Y:Le8a;
+
+
+# direct methods
+.method public constructor <init>(Lcu7;Le8a;Lkotlin/coroutines/Continuation;)V
+    .locals 0
+
+    iput-object p1, p0, Lnv5;->X:Lcu7;
+
+    iput-object p2, p0, Lnv5;->Y:Le8a;
+
+    const/4 p1, 0x2
+
+    invoke-direct {p0, p1, p3}, Lure;-><init>(ILkotlin/coroutines/Continuation;)V
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final onMeasure(II)V
-    .locals 3
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    invoke-static {p2}, Landroid/view/View$MeasureSpec;->getSize(I)I
+    check-cast p1, Ly04;
 
-    move-result p2
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    const/16 v0, 0x8
+    invoke-virtual {p0, p1, p2}, Lnv5;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    int-to-float v0, v0
+    move-result-object p0
 
-    invoke-static {}, Lgk4;->d()Landroid/content/res/Resources;
+    check-cast p0, Lnv5;
 
-    move-result-object v1
+    sget-object p1, Lylf;->a:Lylf;
 
-    invoke-virtual {v1}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+    invoke-virtual {p0, p1}, Lnv5;->o(Ljava/lang/Object;)Ljava/lang/Object;
 
-    move-result-object v1
+    return-object p1
+.end method
 
-    iget v1, v1, Landroid/util/DisplayMetrics;->density:F
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 1
 
-    const/4 v2, 0x2
+    new-instance p1, Lnv5;
 
-    invoke-static {v0, v1, v2, p2}, Lpg0;->n(FFII)I
+    iget-object v0, p0, Lnv5;->X:Lcu7;
 
-    move-result p2
+    iget-object p0, p0, Lnv5;->Y:Le8a;
 
-    const/16 v0, 0x80
+    invoke-direct {p1, v0, p0, p2}, Lnv5;-><init>(Lcu7;Le8a;Lkotlin/coroutines/Continuation;)V
 
-    int-to-float v0, v0
+    return-object p1
+.end method
 
-    invoke-static {}, Lgk4;->d()Landroid/content/res/Resources;
+.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    move-result-object v1
+    invoke-static {p1}, Lqe5;->V(Ljava/lang/Object;)V
 
-    invoke-virtual {v1}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+    iget-object p1, p0, Lnv5;->X:Lcu7;
 
-    move-result-object v1
+    iget-object p0, p0, Lnv5;->Y:Le8a;
 
-    iget v1, v1, Landroid/util/DisplayMetrics;->density:F
+    invoke-virtual {p1, p0}, Lcu7;->f(Le8a;)V
 
-    mul-float/2addr v0, v1
+    sget-object p0, Lylf;->a:Lylf;
 
-    invoke-static {v0}, Lkhg;->x(F)I
-
-    move-result v0
-
-    sub-int/2addr p2, v0
-
-    const/high16 v0, 0x40000000    # 2.0f
-
-    invoke-static {p2, v0}, Landroid/view/View$MeasureSpec;->makeMeasureSpec(II)I
-
-    move-result p2
-
-    invoke-super {p0, p1, p2}, Landroidx/constraintlayout/widget/ConstraintLayout;->onMeasure(II)V
-
-    return-void
+    return-object p0
 .end method

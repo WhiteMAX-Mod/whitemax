@@ -1,5 +1,5 @@
 .class public Lru/ok/android/externcalls/analytics/internal/upload/UploadService;
-.super Ltoc;
+.super Li2d;
 .source "SourceFile"
 
 
@@ -15,7 +15,7 @@
 .method public constructor <init>()V
     .locals 0
 
-    invoke-direct {p0}, Lg87;-><init>()V
+    invoke-direct {p0}, Lbf7;-><init>()V
 
     return-void
 .end method
@@ -55,7 +55,7 @@
 
     sget-object v0, Lru/ok/android/commons/app/ApplicationProvider;->a:Landroid/app/Application;
 
-    invoke-static {}, Lq14;->C()Landroid/app/Application;
+    invoke-static {}, Lx4h;->l()Landroid/app/Application;
 
     move-result-object v0
 
@@ -97,7 +97,7 @@
 
     move-result v2
 
-    invoke-static {v0, v1, v2, p0}, Lg87;->enqueueWork(Landroid/content/Context;Ljava/lang/Class;ILandroid/content/Intent;)V
+    invoke-static {v0, v1, v2, p0}, Lbf7;->enqueueWork(Landroid/content/Context;Ljava/lang/Class;ILandroid/content/Intent;)V
 
     return-void
 .end method

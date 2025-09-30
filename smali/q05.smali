@@ -1,141 +1,56 @@
-.class public final synthetic Lq05;
+.class public final Lq05;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/lang/Runnable;
+.implements Ljava/lang/AutoCloseable;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public a:Landroid/media/metrics/EditingSession;
 
-.field public final synthetic b:Ls05;
-
-.field public final synthetic c:Liq1;
-
-
-# direct methods
-.method public synthetic constructor <init>(Ls05;Liq1;I)V
-    .locals 0
-
-    iput p3, p0, Lq05;->a:I
-
-    iput-object p1, p0, Lq05;->b:Ls05;
-
-    iput-object p2, p0, Lq05;->c:Liq1;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    return-void
-.end method
+.field public b:Z
 
 
 # virtual methods
-.method public final run()V
-    .locals 5
+.method public final c(Landroid/media/metrics/EditingEndedEvent;)V
+    .locals 3
 
-    iget v0, p0, Lq05;->a:I
+    iget-boolean v0, p0, Lq05;->b:Z
 
-    packed-switch v0, :pswitch_data_0
+    const/4 v1, 0x1
 
-    iget-object v0, p0, Lq05;->b:Ls05;
+    xor-int/2addr v0, v1
 
-    iget-object v1, v0, Ls05;->o:Lw05;
+    const-string v2, "Metrics have already been reported."
 
-    iget-object v2, v0, Ls05;->b:Lgt0;
+    invoke-static {v2, v0}, Lmq0;->g(Ljava/lang/Object;Z)V
 
-    sget-object v3, Lgt0;->a:Lgt0;
+    iget-object v0, p0, Lq05;->a:Landroid/media/metrics/EditingSession;
 
-    iget-object p0, p0, Lq05;->c:Liq1;
+    if-eqz v0, :cond_0
 
-    if-ne v2, v3, :cond_0
+    invoke-static {v0, p1}, Lvw;->n(Landroid/media/metrics/EditingSession;Landroid/media/metrics/EditingEndedEvent;)V
 
-    invoke-virtual {v1}, Lw05;->a()Lbm7;
-
-    move-result-object v2
-
-    invoke-static {v2, p0}, Lu7;->I(Lbm7;Liq1;)V
-
-    new-instance v3, Lr05;
-
-    const/4 v4, 0x0
-
-    invoke-direct {v3, v0, v2, v4}, Lr05;-><init>(Ls05;Lbm7;I)V
-
-    invoke-static {}, Lsgg;->n()Lpk4;
-
-    move-result-object v4
-
-    invoke-virtual {p0, v3, v4}, Liq1;->a(Ljava/lang/Runnable;Ljava/util/concurrent/Executor;)V
-
-    iget-object p0, v0, Ls05;->c:Ljava/util/ArrayList;
-
-    invoke-virtual {p0, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    new-instance p0, Lr05;
-
-    const/4 v3, 0x1
-
-    invoke-direct {p0, v0, v2, v3}, Lr05;-><init>(Ls05;Lbm7;I)V
-
-    iget-object v0, v1, Lw05;->g:Lw4d;
-
-    invoke-interface {v2, p0, v0}, Lbm7;->d(Ljava/lang/Runnable;Ljava/util/concurrent/Executor;)V
-
-    goto :goto_0
+    iput-boolean v1, p0, Lq05;->b:Z
 
     :cond_0
-    sget-object v1, Lgt0;->b:Lgt0;
-
-    if-ne v2, v1, :cond_1
-
-    new-instance v0, Ljava/lang/IllegalStateException;
-
-    const-string v1, "BufferProvider is not active."
-
-    invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {p0, v0}, Liq1;->d(Ljava/lang/Throwable;)Z
-
-    goto :goto_0
-
-    :cond_1
-    new-instance v1, Ljava/lang/IllegalStateException;
-
-    new-instance v2, Ljava/lang/StringBuilder;
-
-    const-string v3, "Unknown state: "
-
-    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v0, v0, Ls05;->b:Lgt0;
-
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-direct {v1, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {p0, v1}, Liq1;->d(Ljava/lang/Throwable;)Z
-
-    :goto_0
     return-void
+.end method
 
-    :pswitch_0
-    iget-object v0, p0, Lq05;->c:Liq1;
+.method public final close()V
+    .locals 1
 
-    iget-object p0, p0, Lq05;->b:Ls05;
+    iget-object v0, p0, Lq05;->a:Landroid/media/metrics/EditingSession;
 
-    iget-object p0, p0, Ls05;->b:Lgt0;
+    if-eqz v0, :cond_0
 
-    invoke-virtual {v0, p0}, Liq1;->b(Ljava/lang/Object;)Z
+    invoke-static {v0}, Li4;->t(Landroid/media/metrics/EditingSession;)V
 
+    const/4 v0, 0x0
+
+    iput-object v0, p0, Lq05;->a:Landroid/media/metrics/EditingSession;
+
+    :cond_0
     return-void
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
 .end method

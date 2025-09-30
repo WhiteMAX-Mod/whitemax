@@ -1,3 +1,3 @@
-.class public abstract Ls43;
-.super Lr43;
+.class public final Ls43;
+.super Ljv2;
 .source "SourceFile"

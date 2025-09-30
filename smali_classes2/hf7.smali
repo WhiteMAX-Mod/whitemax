@@ -1,66 +1,131 @@
-.class public final synthetic Lhf7;
+.class public final Lhf7;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lx64;
-
 
 # instance fields
-.field public final synthetic X:Z
+.field public final a:Ljava/lang/String;
 
-.field public final synthetic Y:Z
-
-.field public final synthetic a:Ler8;
-
-.field public final synthetic b:Ljava/lang/String;
-
-.field public final synthetic c:Z
-
-.field public final synthetic o:Z
+.field public final b:Lcae;
 
 
 # direct methods
-.method public synthetic constructor <init>(Ler8;Ljava/lang/String;ZZZZ)V
+.method public constructor <init>(Ljava/lang/String;Lcae;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lhf7;->a:Ler8;
+    iput-object p1, p0, Lhf7;->a:Ljava/lang/String;
 
-    iput-object p2, p0, Lhf7;->b:Ljava/lang/String;
-
-    iput-boolean p3, p0, Lhf7;->c:Z
-
-    iput-boolean p4, p0, Lhf7;->o:Z
-
-    iput-boolean p5, p0, Lhf7;->X:Z
-
-    iput-boolean p6, p0, Lhf7;->Y:Z
+    iput-object p2, p0, Lhf7;->b:Lcae;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Ljava/lang/Object;
-    .locals 7
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 2
 
-    new-instance v0, Ljf7;
+    if-ne p0, p1, :cond_0
 
-    iget-object v1, p0, Lhf7;->a:Ler8;
+    goto :goto_1
 
-    iget-object v2, p0, Lhf7;->b:Ljava/lang/String;
+    :cond_0
+    instance-of v0, p1, Lhf7;
 
-    iget-boolean v3, p0, Lhf7;->c:Z
+    if-nez v0, :cond_1
 
-    iget-boolean v4, p0, Lhf7;->o:Z
+    goto :goto_0
 
-    iget-boolean v5, p0, Lhf7;->X:Z
+    :cond_1
+    check-cast p1, Lhf7;
 
-    iget-boolean v6, p0, Lhf7;->Y:Z
+    iget-object v0, p0, Lhf7;->a:Ljava/lang/String;
 
-    invoke-direct/range {v0 .. v6}, Ljf7;-><init>(Ler8;Ljava/lang/String;ZZZZ)V
+    iget-object v1, p1, Lhf7;->a:Ljava/lang/String;
 
-    return-object v0
+    invoke-static {v0, v1}, Lvyg;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_2
+
+    goto :goto_0
+
+    :cond_2
+    iget-object p0, p0, Lhf7;->b:Lcae;
+
+    iget-object p1, p1, Lhf7;->b:Lcae;
+
+    invoke-virtual {p0, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+
+    move-result p0
+
+    if-nez p0, :cond_3
+
+    :goto_0
+    const/4 p0, 0x0
+
+    return p0
+
+    :cond_3
+    :goto_1
+    const/4 p0, 0x1
+
+    return p0
+.end method
+
+.method public final hashCode()I
+    .locals 1
+
+    iget-object v0, p0, Lhf7;->a:Ljava/lang/String;
+
+    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
+
+    move-result v0
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget-object p0, p0, Lhf7;->b:Lcae;
+
+    invoke-virtual {p0}, Ljava/lang/Object;->hashCode()I
+
+    move-result p0
+
+    add-int/2addr p0, v0
+
+    return p0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 2
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "JobWrapper(name="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v1, p0, Lhf7;->a:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", job="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object p0, p0, Lhf7;->b:Lcae;
+
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string p0, ")"
+
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    return-object p0
 .end method

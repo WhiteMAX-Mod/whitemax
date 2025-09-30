@@ -1,64 +1,26 @@
-.class public final Ld8c;
+.class public abstract Ld8c;
 .super Ljava/lang/Object;
-.source "SourceFile"
-
-# interfaces
-.implements Lg8c;
 
 
 # static fields
-.field public static final a:Ld8c;
+.field public static link_context_menu_action_copy_call:I = 0x7f0a046b
 
+.field public static link_context_menu_action_copy_link:I = 0x7f0a046c
 
-# direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.field public static link_context_menu_action_copy_mail:I = 0x7f0a046d
 
-    new-instance v0, Ld8c;
+.field public static link_context_menu_action_copy_profile:I = 0x7f0a046e
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+.field public static link_context_menu_action_open_call:I = 0x7f0a046f
 
-    sput-object v0, Ld8c;->a:Ld8c;
+.field public static link_context_menu_action_open_link:I = 0x7f0a0470
 
-    return-void
-.end method
+.field public static link_context_menu_action_open_mail:I = 0x7f0a0471
 
+.field public static link_context_menu_action_open_profile:I = 0x7f0a0472
 
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
+.field public static notification_cancel_request_id:I = 0x7f0a061c
 
-    const/4 v0, 0x1
+.field public static notification_content_request_id:I = 0x7f0a061d
 
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    instance-of p0, p1, Ld8c;
-
-    if-nez p0, :cond_1
-
-    const/4 p0, 0x0
-
-    return p0
-
-    :cond_1
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 0
-
-    const p0, -0x3c2612a4
-
-    return p0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 0
-
-    const-string p0, "PopUp"
-
-    return-object p0
-.end method
+.field public static text_view_animation_pending_text_tag:I = 0x7f0a0c28

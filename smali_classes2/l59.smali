@@ -1,41 +1,48 @@
 .class public final Ll59;
-.super Ld77;
-.source "SourceFile"
-
-# interfaces
-.implements Lppe;
+.super Ljx3;
 
 
 # instance fields
-.field public final synthetic J0:Lone/me/messages/list/ui/MessagesListWidget;
+.field public X:I
+
+.field public final synthetic Y:Lyf7;
+
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Lone/me/messages/list/ui/MessagesListWidget;Lgfe;)V
+.method public constructor <init>(Lyf7;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    iput-object p1, p0, Ll59;->J0:Lone/me/messages/list/ui/MessagesListWidget;
+    iput-object p1, p0, Ll59;->Y:Lyf7;
 
-    invoke-direct {p0, p2}, Ld77;-><init>(Lc77;)V
+    invoke-direct {p0, p2}, Ljx3;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onThemeChanged(Lyha;)V
-    .locals 0
+.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    iget-object p0, p0, Ll59;->J0:Lone/me/messages/list/ui/MessagesListWidget;
+    iput-object p1, p0, Ll59;->o:Ljava/lang/Object;
 
-    iget-object p0, p0, Lone/me/messages/list/ui/MessagesListWidget;->v0:Lgfe;
+    iget p1, p0, Ll59;->X:I
 
-    if-nez p0, :cond_0
+    const/high16 v0, -0x80000000
 
-    const/4 p0, 0x0
+    or-int/2addr p1, v0
 
-    :cond_0
-    invoke-virtual {p0, p1}, Lgfe;->onThemeChanged(Lyha;)V
+    iput p1, p0, Ll59;->X:I
 
-    return-void
+    iget-object p1, p0, Ll59;->Y:Lyf7;
+
+    const/4 v0, 0x0
+
+    invoke-virtual {p1, v0, p0}, Lyf7;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p0
+
+    return-object p0
 .end method

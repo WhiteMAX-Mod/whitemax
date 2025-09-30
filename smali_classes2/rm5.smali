@@ -1,115 +1,80 @@
-.class public final Lrm5;
+.class public final synthetic Lrm5;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Landroid/graphics/drawable/Drawable$Callback;
+.implements Lzb6;
 
 
 # instance fields
-.field public final a:Lka4;
+.field public final synthetic a:I
 
-.field public final b:Los4;
-
-.field public final synthetic c:Lsm5;
+.field public final synthetic b:Lum5;
 
 
 # direct methods
-.method public constructor <init>(Lsm5;)V
-    .locals 2
+.method public synthetic constructor <init>(Lum5;I)V
+    .locals 0
+
+    iput p2, p0, Lrm5;->a:I
+
+    iput-object p1, p0, Lrm5;->b:Lum5;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lrm5;->c:Lsm5;
-
-    new-instance v0, Lka4;
-
-    const/16 v1, 0x18
-
-    invoke-direct {v0, v1, p1}, Lka4;-><init>(ILjava/lang/Object;)V
-
-    iput-object v0, p0, Lrm5;->a:Lka4;
-
-    new-instance v0, Los4;
-
-    const/16 v1, 0x14
-
-    invoke-direct {v0, p1, v1, p0}, Los4;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
-
-    iput-object v0, p0, Lrm5;->b:Los4;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invalidateDrawable(Landroid/graphics/drawable/Drawable;)V
+.method public final invoke()Ljava/lang/Object;
     .locals 1
 
-    iget-object p1, p0, Lrm5;->c:Lsm5;
+    iget v0, p0, Lrm5;->a:I
 
-    iget-object v0, p1, Lsm5;->p0:Lone/me/sdk/lists/widgets/EndlessRecyclerView2;
+    packed-switch v0, :pswitch_data_0
 
-    iget-object p0, p0, Lrm5;->b:Los4;
+    iget-object p0, p0, Lrm5;->b:Lum5;
 
-    if-eqz v0, :cond_0
+    invoke-static {p0}, Lum5;->x(Lum5;)Landroid/graphics/drawable/Drawable;
 
-    invoke-virtual {v0, p0}, Landroid/view/View;->removeCallbacks(Ljava/lang/Runnable;)Z
+    move-result-object p0
 
-    :cond_0
-    iget-object p1, p1, Lsm5;->p0:Lone/me/sdk/lists/widgets/EndlessRecyclerView2;
+    return-object p0
 
-    if-eqz p1, :cond_1
+    :pswitch_0
+    sget v0, Lq0d;->L1:I
 
-    invoke-virtual {p1, p0}, Landroid/view/View;->post(Ljava/lang/Runnable;)Z
+    iget-object p0, p0, Lrm5;->b:Lum5;
 
-    :cond_1
-    return-void
-.end method
+    invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
 
-.method public final scheduleDrawable(Landroid/graphics/drawable/Drawable;Ljava/lang/Runnable;J)V
-    .locals 2
+    move-result-object p0
 
-    iget-object p1, p0, Lrm5;->c:Lsm5;
+    invoke-static {p0, v0}, Llw3;->b(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
 
-    iget-object p2, p1, Lsm5;->p0:Lone/me/sdk/lists/widgets/EndlessRecyclerView2;
+    move-result-object p0
 
-    iget-object p0, p0, Lrm5;->b:Los4;
+    return-object p0
 
-    if-eqz p2, :cond_0
+    :pswitch_1
+    sget v0, Lq0d;->v0:I
 
-    invoke-virtual {p2, p0}, Landroid/view/View;->removeCallbacks(Ljava/lang/Runnable;)Z
+    iget-object p0, p0, Lrm5;->b:Lum5;
 
-    :cond_0
-    iget-object p1, p1, Lsm5;->p0:Lone/me/sdk/lists/widgets/EndlessRecyclerView2;
+    invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
 
-    if-eqz p1, :cond_1
+    move-result-object p0
 
-    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+    invoke-static {p0, v0}, Llw3;->b(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
 
-    move-result-wide v0
+    move-result-object p0
 
-    sub-long/2addr p3, v0
+    return-object p0
 
-    invoke-virtual {p1, p0, p3, p4}, Landroid/view/View;->postDelayed(Ljava/lang/Runnable;J)Z
-
-    :cond_1
-    return-void
-.end method
-
-.method public final unscheduleDrawable(Landroid/graphics/drawable/Drawable;Ljava/lang/Runnable;)V
-    .locals 0
-
-    iget-object p1, p0, Lrm5;->c:Lsm5;
-
-    iget-object p1, p1, Lsm5;->p0:Lone/me/sdk/lists/widgets/EndlessRecyclerView2;
-
-    if-eqz p1, :cond_0
-
-    iget-object p0, p0, Lrm5;->b:Los4;
-
-    invoke-virtual {p1, p0}, Landroid/view/View;->removeCallbacks(Ljava/lang/Runnable;)Z
-
-    :cond_0
-    return-void
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

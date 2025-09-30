@@ -47,19 +47,19 @@
 
     invoke-virtual {p0, p1}, Landroid/app/Activity;->setTurnScreenOn(Z)V
 
-    sget-object p1, Lq6a;->a:Lq6a;
+    sget-object p1, Lbfa;->a:Lbfa;
 
-    invoke-virtual {p1}, Lscout/Component;->getAccessor()Lu4;
-
-    move-result-object p1
-
-    const-class v0, Lmy0;
-
-    invoke-virtual {p1, v0}, Lu4;->c(Ljava/lang/Class;)Ljava/lang/Object;
+    invoke-virtual {p1}, Lscout/Component;->getAccessor()Lz4;
 
     move-result-object p1
 
-    check-cast p1, Lmy0;
+    const-class v0, Lxy0;
+
+    invoke-virtual {p1, v0}, Lz4;->c(Ljava/lang/Class;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Lxy0;
 
     invoke-virtual {p0}, Landroid/app/Activity;->getIntent()Landroid/content/Intent;
 
@@ -67,7 +67,7 @@
 
     const-string v1, "CallNotifierFixActivity"
 
-    invoke-virtual {p1, p0, v0, v1}, Lmy0;->a(Landroid/content/Context;Landroid/content/Intent;Ljava/lang/String;)Z
+    invoke-virtual {p1, p0, v0, v1}, Lxy0;->a(Landroid/content/Context;Landroid/content/Intent;Ljava/lang/String;)Z
 
     invoke-virtual {p0}, Landroid/app/Activity;->finish()V
 

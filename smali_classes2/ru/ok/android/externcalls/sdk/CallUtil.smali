@@ -4,9 +4,9 @@
 
 
 # static fields
-.field static final LOG:Ls1c;
+.field static final LOG:Lfec;
 
-.field static final LOG_CONFIGURATION:Lt1c;
+.field static final LOG_CONFIGURATION:Lgec;
 
 
 # direct methods
@@ -17,13 +17,13 @@
 
     invoke-direct {v0}, Lru/ok/android/externcalls/sdk/CallUtil$1;-><init>()V
 
-    sput-object v0, Lru/ok/android/externcalls/sdk/CallUtil;->LOG:Ls1c;
+    sput-object v0, Lru/ok/android/externcalls/sdk/CallUtil;->LOG:Lfec;
 
     new-instance v0, Lru/ok/android/externcalls/sdk/CallUtil$2;
 
     invoke-direct {v0}, Lru/ok/android/externcalls/sdk/CallUtil$2;-><init>()V
 
-    sput-object v0, Lru/ok/android/externcalls/sdk/CallUtil;->LOG_CONFIGURATION:Lt1c;
+    sput-object v0, Lru/ok/android/externcalls/sdk/CallUtil;->LOG_CONFIGURATION:Lgec;
 
     return-void
 .end method
@@ -102,13 +102,13 @@
     return-object v0
 .end method
 
-.method public static collectOpponentInternalIds(Lru/ok/android/externcalls/sdk/participant/collection/ParticipantStore;Lrf1;)Ljava/util/List;
+.method public static collectOpponentInternalIds(Lru/ok/android/externcalls/sdk/participant/collection/ParticipantStore;Lsg1;)Ljava/util/List;
     .locals 3
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Lru/ok/android/externcalls/sdk/participant/collection/ParticipantStore;",
-            "Lrf1;",
+            "Lsg1;",
             ")",
             "Ljava/util/List<",
             "Ljava/lang/Long;",
@@ -138,27 +138,27 @@
 
     check-cast v1, Lru/ok/android/externcalls/sdk/ConversationParticipant;
 
-    invoke-virtual {v1}, Lru/ok/android/externcalls/sdk/ConversationParticipant;->getInternalId()Lrf1;
+    invoke-virtual {v1}, Lru/ok/android/externcalls/sdk/ConversationParticipant;->getInternalId()Lsg1;
 
     move-result-object v2
 
     if-eqz v2, :cond_0
 
-    invoke-virtual {v1}, Lru/ok/android/externcalls/sdk/ConversationParticipant;->getInternalId()Lrf1;
+    invoke-virtual {v1}, Lru/ok/android/externcalls/sdk/ConversationParticipant;->getInternalId()Lsg1;
 
     move-result-object v2
 
-    invoke-virtual {v2, p1}, Lrf1;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v2, p1}, Lsg1;->equals(Ljava/lang/Object;)Z
 
     move-result v2
 
     if-nez v2, :cond_0
 
-    invoke-virtual {v1}, Lru/ok/android/externcalls/sdk/ConversationParticipant;->getInternalId()Lrf1;
+    invoke-virtual {v1}, Lru/ok/android/externcalls/sdk/ConversationParticipant;->getInternalId()Lsg1;
 
     move-result-object v1
 
-    iget-wide v1, v1, Lrf1;->a:J
+    iget-wide v1, v1, Lsg1;->a:J
 
     invoke-static {v1, v2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
@@ -172,72 +172,72 @@
     return-object v0
 .end method
 
-.method public static createBitrates()Lnf1;
+.method public static createBitrates()Log1;
     .locals 1
 
-    new-instance v0, Lnf1;
+    new-instance v0, Log1;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
     return-object v0
 .end method
 
-.method public static createCallParams(Lru/ok/android/externcalls/sdk/ConversationBuilder;)Lqf1;
+.method public static createCallParams(Lru/ok/android/externcalls/sdk/ConversationBuilder;)Lrg1;
     .locals 30
 
     move-object/from16 v0, p0
 
-    iget-object v1, v0, Lru/ok/android/externcalls/sdk/ConversationBuilder;->bitrates:Lnf1;
+    iget-object v1, v0, Lru/ok/android/externcalls/sdk/ConversationBuilder;->bitrates:Log1;
 
     if-nez v1, :cond_0
 
-    invoke-static {}, Lru/ok/android/externcalls/sdk/CallUtil;->createBitrates()Lnf1;
+    invoke-static {}, Lru/ok/android/externcalls/sdk/CallUtil;->createBitrates()Log1;
 
     move-result-object v1
 
     :cond_0
     move-object v3, v1
 
-    iget-object v1, v0, Lru/ok/android/externcalls/sdk/ConversationBuilder;->experiments:Lof1;
+    iget-object v1, v0, Lru/ok/android/externcalls/sdk/ConversationBuilder;->experiments:Lpg1;
 
-    iget-object v2, v1, Lof1;->f:Lpf1;
+    iget-object v2, v1, Lpg1;->f:Lqg1;
 
     if-nez v2, :cond_1
 
-    new-instance v2, Lpf1;
+    new-instance v2, Lqg1;
 
     iget-wide v4, v0, Lru/ok/android/externcalls/sdk/ConversationBuilder;->mediaReceivingTimeoutMs:J
 
-    invoke-direct {v2, v4, v5}, Lpf1;-><init>(J)V
+    invoke-direct {v2, v4, v5}, Lqg1;-><init>(J)V
 
     :cond_1
     move-object v4, v2
 
-    new-instance v2, Lnz7;
+    new-instance v2, Lim4;
 
-    new-instance v5, Lvq0;
+    new-instance v5, Lcr0;
 
     iget-boolean v6, v0, Lru/ok/android/externcalls/sdk/ConversationBuilder;->isMediaAdaptationFeatureEnabledForP2PCall:Z
 
-    iget-object v7, v0, Lru/ok/android/externcalls/sdk/ConversationBuilder;->ptpCallMediaAdaptationConfig:Lk38;
+    iget-object v7, v0, Lru/ok/android/externcalls/sdk/ConversationBuilder;->ptpCallMediaAdaptationConfig:Lka8;
 
-    invoke-direct {v5, v6, v7}, Lvq0;-><init>(ZLk38;)V
+    invoke-direct {v5, v6, v7}, Lcr0;-><init>(ZLka8;)V
 
-    new-instance v6, Lvq0;
+    new-instance v6, Lcr0;
 
     iget-boolean v7, v0, Lru/ok/android/externcalls/sdk/ConversationBuilder;->isMediaAdaptationFeatureEnabledForGroupCall:Z
 
-    iget-object v8, v0, Lru/ok/android/externcalls/sdk/ConversationBuilder;->groupCallMediaAdaptationConfig:Lk38;
+    iget-object v8, v0, Lru/ok/android/externcalls/sdk/ConversationBuilder;->groupCallMediaAdaptationConfig:Lka8;
 
-    invoke-direct {v6, v7, v8}, Lvq0;-><init>(ZLk38;)V
+    invoke-direct {v6, v7, v8}, Lcr0;-><init>(ZLka8;)V
 
     const/16 v7, 0x8
 
-    invoke-direct {v2, v5, v7, v6}, Lnz7;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+    invoke-direct {v2, v5, v7, v6}, Lim4;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
 
     move-object/from16 v22, v2
 
-    new-instance v2, Lqf1;
+    new-instance v2, Lrg1;
 
     iget-boolean v5, v0, Lru/ok/android/externcalls/sdk/ConversationBuilder;->dnsResolverEnabled:Z
 
@@ -305,17 +305,17 @@
 
     iget-boolean v1, v0, Lru/ok/android/externcalls/sdk/ConversationBuilder;->isDeviceAudioShareEnabled:Z
 
-    iget-object v0, v0, Lru/ok/android/externcalls/sdk/ConversationBuilder;->badNetworkIndicatorConfig:Lmf0;
+    iget-object v0, v0, Lru/ok/android/externcalls/sdk/ConversationBuilder;->badNetworkIndicatorConfig:Lpf0;
 
     move-object/from16 v29, v0
 
     move/from16 v28, v1
 
-    invoke-direct/range {v2 .. v29}, Lqf1;-><init>(Lnf1;Lpf1;ZZZZLjava/util/List;ZZIZZZZZ[Ljava/lang/String;[Ljava/lang/String;ZZLnz7;ZLof1;ZZZZLmf0;)V
+    invoke-direct/range {v2 .. v29}, Lrg1;-><init>(Log1;Lqg1;ZZZZLjava/util/List;ZZIZZZZZ[Ljava/lang/String;[Ljava/lang/String;ZZLim4;ZLpg1;ZZZZLpf0;)V
 
     const/4 v0, 0x1
 
-    iput-boolean v0, v2, Lqf1;->c:Z
+    iput-boolean v0, v2, Lrg1;->c:Z
 
     return-object v2
 .end method

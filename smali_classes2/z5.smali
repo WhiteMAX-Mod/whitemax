@@ -1,152 +1,85 @@
 .class public final Lz5;
-.super Ljava/lang/Object;
+.super Landroid/app/SharedElementCallback;
 .source "SourceFile"
-
-# interfaces
-.implements Landroid/transition/Transition$TransitionListener;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final synthetic a:Landroid/graphics/Rect;
 
-.field public final synthetic b:Ljava/lang/Object;
+.field public final synthetic b:Lru/ok/messages/media/mediabar/ActLocalMedias;
 
 
 # direct methods
-.method public synthetic constructor <init>(ILjava/lang/Object;)V
+.method public constructor <init>(Lru/ok/messages/media/mediabar/ActLocalMedias;Landroid/graphics/Rect;)V
     .locals 0
 
-    iput p1, p0, Lz5;->a:I
+    iput-object p1, p0, Lz5;->b:Lru/ok/messages/media/mediabar/ActLocalMedias;
 
-    iput-object p2, p0, Lz5;->b:Ljava/lang/Object;
+    iput-object p2, p0, Lz5;->a:Landroid/graphics/Rect;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    return-void
-.end method
-
-.method private final a(Landroid/transition/Transition;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method private final b(Landroid/transition/Transition;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method private final c(Landroid/transition/Transition;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method private final d(Landroid/transition/Transition;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method private final e(Landroid/transition/Transition;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method private final f(Landroid/transition/Transition;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method private final g(Landroid/transition/Transition;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method private final h(Landroid/transition/Transition;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method private final i(Landroid/transition/Transition;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method private final j(Landroid/transition/Transition;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method private final k(Landroid/transition/Transition;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method private final l(Landroid/transition/Transition;)V
-    .locals 0
+    invoke-direct {p0}, Landroid/app/SharedElementCallback;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onTransitionCancel(Landroid/transition/Transition;)V
+.method public final onMapSharedElements(Ljava/util/List;Ljava/util/Map;)V
     .locals 0
 
-    iget p0, p0, Lz5;->a:I
+    if-eqz p2, :cond_0
 
+    iget-object p0, p0, Lz5;->a:Landroid/graphics/Rect;
+
+    if-eqz p0, :cond_0
+
+    invoke-interface {p2}, Ljava/util/Map;->values()Ljava/util/Collection;
+
+    move-result-object p1
+
+    invoke-interface {p1}, Ljava/util/Collection;->iterator()Ljava/util/Iterator;
+
+    move-result-object p1
+
+    :goto_0
+    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result p2
+
+    if-eqz p2, :cond_0
+
+    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object p2
+
+    check-cast p2, Landroid/view/View;
+
+    invoke-static {p0, p2}, Ly30;->f(Landroid/graphics/Rect;Landroid/view/View;)V
+
+    goto :goto_0
+
+    :cond_0
     return-void
 .end method
 
-.method public final onTransitionEnd(Landroid/transition/Transition;)V
+.method public final onRejectSharedElements(Ljava/util/List;)V
     .locals 3
 
-    iget v0, p0, Lz5;->a:I
+    if-eqz p1, :cond_0
 
-    packed-switch v0, :pswitch_data_0
+    invoke-interface {p1}, Ljava/util/List;->isEmpty()Z
 
-    iget-object p0, p0, Lz5;->b:Ljava/lang/Object;
+    move-result p1
 
-    check-cast p0, Lt3c;
+    if-nez p1, :cond_0
 
-    iget-object p0, p0, Lt3c;->p0:Lv56;
+    iget-object p1, p0, Lz5;->b:Lru/ok/messages/media/mediabar/ActLocalMedias;
 
-    invoke-interface {p0}, Lv56;->invoke()Ljava/lang/Object;
-
-    return-void
-
-    :pswitch_0
-    iget-object p0, p0, Lz5;->b:Ljava/lang/Object;
-
-    check-cast p0, Lone/me/chats/forward/ForwardPickerScreen;
-
-    iget-object p0, p0, Lone/me/chats/forward/ForwardPickerScreen;->v0:Lv56;
-
-    invoke-interface {p0}, Lv56;->invoke()Ljava/lang/Object;
-
-    return-void
-
-    :pswitch_1
-    invoke-virtual {p1, p0}, Landroid/transition/Transition;->removeListener(Landroid/transition/Transition$TransitionListener;)Landroid/transition/Transition;
-
-    iget-object p1, p0, Lz5;->b:Ljava/lang/Object;
-
-    check-cast p1, Lru/ok/messages/media/mediabar/ActLocalMedias;
-
-    iget-object p1, p1, Lru/ok/messages/media/mediabar/ActLocalMedias;->Y0:Landroidx/viewpager2/widget/ViewPager2;
+    iget-object p1, p1, Lru/ok/messages/media/mediabar/ActLocalMedias;->b1:Landroidx/viewpager2/widget/ViewPager2;
 
     new-instance v0, Lb;
 
-    const/4 v1, 0x5
+    const/4 v1, 0x3
 
     invoke-direct {v0, v1, p0}, Lb;-><init>(ILjava/lang/Object;)V
 
@@ -154,35 +87,6 @@
 
     invoke-virtual {p1, v0, v1, v2}, Landroid/view/View;->postDelayed(Ljava/lang/Runnable;J)Z
 
-    return-void
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public final onTransitionPause(Landroid/transition/Transition;)V
-    .locals 0
-
-    iget p0, p0, Lz5;->a:I
-
-    return-void
-.end method
-
-.method public final onTransitionResume(Landroid/transition/Transition;)V
-    .locals 0
-
-    iget p0, p0, Lz5;->a:I
-
-    return-void
-.end method
-
-.method public final onTransitionStart(Landroid/transition/Transition;)V
-    .locals 0
-
-    iget p0, p0, Lz5;->a:I
-
+    :cond_0
     return-void
 .end method

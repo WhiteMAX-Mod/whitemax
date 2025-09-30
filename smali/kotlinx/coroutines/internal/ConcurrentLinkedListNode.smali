@@ -28,12 +28,12 @@
         "",
         "onClosedAction",
         "nextOrIfClosed",
-        "(Lv56;)Lkotlinx/coroutines/internal/ConcurrentLinkedListNode;",
+        "(Lzb6;)Lkotlinx/coroutines/internal/ConcurrentLinkedListNode;",
         "value",
         "",
         "trySetNext",
         "(Lkotlinx/coroutines/internal/ConcurrentLinkedListNode;)Z",
-        "Le5f;",
+        "Lylf;",
         "cleanPrev",
         "()V",
         "markAsClosed",
@@ -267,14 +267,14 @@
     return-void
 .end method
 
-.method private final synthetic update$atomicfu(Ljava/lang/Object;Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;Lx56;)V
+.method private final synthetic update$atomicfu(Ljava/lang/Object;Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;Lbc6;)V
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Ljava/lang/Object;",
             "Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;",
-            "Lx56;",
+            "Lbc6;",
             ")V"
         }
     .end annotation
@@ -284,7 +284,7 @@
 
     move-result-object p0
 
-    invoke-interface {p3, p0}, Lx56;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {p3, p0}, Lbc6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -430,12 +430,12 @@
     return p0
 .end method
 
-.method public final nextOrIfClosed(Lv56;)Lkotlinx/coroutines/internal/ConcurrentLinkedListNode;
+.method public final nextOrIfClosed(Lzb6;)Lkotlinx/coroutines/internal/ConcurrentLinkedListNode;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lv56;",
+            "Lzb6;",
             ")TN;"
         }
     .end annotation
@@ -455,7 +455,7 @@
     return-object p0
 
     :cond_0
-    invoke-interface {p1}, Lv56;->invoke()Ljava/lang/Object;
+    invoke-interface {p1}, Lzb6;->invoke()Ljava/lang/Object;
 
     new-instance p0, Lkotlin/KotlinNothingValueException;
 

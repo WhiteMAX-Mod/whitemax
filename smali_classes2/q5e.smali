@@ -1,51 +1,119 @@
-.class public final Lq5e;
-.super Lbu3;
+.class public final synthetic Lq5e;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Landroid/view/View$OnKeyListener;
 
 
 # instance fields
-.field public synthetic X:Ljava/lang/Object;
+.field public final synthetic a:Ls5e;
 
-.field public final synthetic Y:Lu5e;
-
-.field public Z:I
-
-.field public o:Lu5e;
+.field public final synthetic b:I
 
 
 # direct methods
-.method public constructor <init>(Lu5e;Lbu3;)V
+.method public synthetic constructor <init>(Ls5e;I)V
     .locals 0
 
-    iput-object p1, p0, Lq5e;->Y:Lu5e;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, p2}, Lbu3;-><init>(Lkotlin/coroutines/Continuation;)V
+    iput-object p1, p0, Lq5e;->a:Ls5e;
+
+    iput p2, p0, Lq5e;->b:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+.method public final onKey(Landroid/view/View;ILandroid/view/KeyEvent;)Z
+    .locals 2
 
-    iput-object p1, p0, Lq5e;->X:Ljava/lang/Object;
+    const/16 p1, 0x43
 
-    iget p1, p0, Lq5e;->Z:I
+    if-ne p2, p1, :cond_4
 
-    const/high16 v0, -0x80000000
+    invoke-virtual {p3}, Landroid/view/KeyEvent;->getAction()I
 
-    or-int/2addr p1, v0
+    move-result p1
 
-    iput p1, p0, Lq5e;->Z:I
+    if-nez p1, :cond_4
 
-    iget-object p1, p0, Lq5e;->Y:Lu5e;
+    iget-object p1, p0, Lq5e;->a:Ls5e;
 
-    const/4 v0, 0x0
+    iget-object p1, p1, Ls5e;->F0:Ls77;
 
-    invoke-static {p1, v0, v0, p0}, Lu5e;->q(Lu5e;Ljava/util/List;Lo4e;Lbu3;)Ljava/lang/Object;
+    check-cast p1, Ljj3;
+
+    iget p0, p0, Lq5e;->b:I
+
+    add-int/lit8 p2, p0, -0x1
+
+    invoke-virtual {p1, p0}, Ljj3;->G0(I)Ly77;
 
     move-result-object p0
 
-    return-object p0
+    if-eqz p0, :cond_0
+
+    move-object p3, p0
+
+    check-cast p3, Ls5e;
+
+    invoke-virtual {p3}, Ls5e;->y()Ljava/lang/String;
+
+    move-result-object p3
+
+    goto :goto_0
+
+    :cond_0
+    const/4 p3, 0x0
+
+    :goto_0
+    const/4 v0, 0x1
+
+    const-string v1, ""
+
+    if-eqz p3, :cond_2
+
+    invoke-virtual {p3}, Ljava/lang/String;->length()I
+
+    move-result p3
+
+    if-nez p3, :cond_1
+
+    goto :goto_1
+
+    :cond_1
+    if-eqz p0, :cond_3
+
+    check-cast p0, Ls5e;
+
+    invoke-virtual {p0, v1}, Ls5e;->A(Ljava/lang/String;)V
+
+    return v0
+
+    :cond_2
+    :goto_1
+    invoke-virtual {p1, p2}, Ljj3;->G0(I)Ly77;
+
+    move-result-object p0
+
+    if-eqz p0, :cond_3
+
+    check-cast p0, Ls5e;
+
+    invoke-virtual {p0, v1}, Ls5e;->A(Ljava/lang/String;)V
+
+    iget-object p0, p0, Ls5e;->G0:Lej3;
+
+    invoke-virtual {p0}, Landroid/view/View;->requestFocus()Z
+
+    :cond_3
+    return v0
+
+    :cond_4
+    const/4 p0, 0x0
+
+    return p0
 .end method

@@ -1,21 +1,22 @@
 .class public final Ldfd;
-.super Lca1;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lffd;
 
 
 # instance fields
-.field public final b:Landroid/content/Intent;
+.field public final a:Lse6;
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Intent;)V
-    .locals 1
+.method public constructor <init>(Lse6;)V
+    .locals 0
 
-    const/16 v0, 0xe
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, v0}, Lca1;-><init>(I)V
-
-    iput-object p1, p0, Ldfd;->b:Landroid/content/Intent;
+    iput-object p1, p0, Ldfd;->a:Lse6;
 
     return-void
 .end method
@@ -43,11 +44,11 @@
     :cond_1
     check-cast p1, Ldfd;
 
-    iget-object p0, p0, Ldfd;->b:Landroid/content/Intent;
+    iget-object p0, p0, Ldfd;->a:Lse6;
 
-    iget-object p1, p1, Ldfd;->b:Landroid/content/Intent;
+    iget-object p1, p1, Ldfd;->a:Lse6;
 
-    invoke-static {p0, p1}, Lxq7;->d(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {p0, p1}, Lvyg;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p0
 
@@ -62,9 +63,9 @@
 .method public final hashCode()I
     .locals 0
 
-    iget-object p0, p0, Ldfd;->b:Landroid/content/Intent;
+    iget-object p0, p0, Ldfd;->a:Lse6;
 
-    invoke-virtual {p0}, Ljava/lang/Object;->hashCode()I
+    invoke-virtual {p0}, Lse6;->hashCode()I
 
     move-result p0
 
@@ -76,11 +77,11 @@
 
     new-instance v0, Ljava/lang/StringBuilder;
 
-    const-string v1, "CropAvatar(intent="
+    const-string v1, "OnAlbumSelected(album="
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-object p0, p0, Ldfd;->b:Landroid/content/Intent;
+    iget-object p0, p0, Ldfd;->a:Lse6;
 
     invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 

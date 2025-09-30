@@ -2,10 +2,8 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-
-# virtual methods
-.method public abstract f(Ljava/lang/Object;)Z
-.end method
-
-.method public abstract g()Ljava/lang/Object;
-.end method
+# interfaces
+.implements Ljava/util/List;
+.implements Ljava/util/Collection;
+.implements Lni7;
+.implements Loi7;

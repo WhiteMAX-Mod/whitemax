@@ -1,81 +1,31 @@
-.class public final Lcqa;
-.super Liz7;
+.class public abstract Lcqa;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final synthetic d:I
+# static fields
+.field public static final a:I
 
-.field public final synthetic e:Lfqa;
+.field public static final b:I
+
+.field public static final c:I
 
 
 # direct methods
-.method public synthetic constructor <init>(Lfqa;I)V
-    .locals 0
-
-    iput p2, p0, Lcqa;->d:I
-
-    iput-object p1, p0, Lcqa;->e:Lfqa;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final onCreateFailure(Ljava/lang/String;)V
+.method static constructor <clinit>()V
     .locals 1
 
-    iget v0, p0, Lcqa;->d:I
+    sget v0, Lq4c;->dragger_24:I
 
-    packed-switch v0, :pswitch_data_0
+    sput v0, Lcqa;->a:I
 
-    iget-object p0, p0, Lcqa;->e:Lfqa;
+    sget v0, Lq4c;->draw_sticker_24_gradient:I
 
-    invoke-virtual {p0, p1}, Lfqa;->h(Ljava/lang/String;)V
+    sput v0, Lcqa;->b:I
 
-    return-void
+    sget v0, Lq4c;->recent_24:I
 
-    :pswitch_0
-    iget-object p0, p0, Lcqa;->e:Lfqa;
-
-    invoke-virtual {p0, p1}, Lfqa;->h(Ljava/lang/String;)V
+    sput v0, Lcqa;->c:I
 
     return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public final onCreateSuccess(Lorg/webrtc/SessionDescription;)V
-    .locals 1
-
-    iget v0, p0, Lcqa;->d:I
-
-    packed-switch v0, :pswitch_data_0
-
-    iget-object p0, p0, Lcqa;->e:Lfqa;
-
-    invoke-virtual {p0, p1}, Lfqa;->m(Lorg/webrtc/SessionDescription;)V
-
-    return-void
-
-    :pswitch_0
-    iget-object p0, p0, Lcqa;->e:Lfqa;
-
-    invoke-virtual {p0, p1}, Lfqa;->m(Lorg/webrtc/SessionDescription;)V
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
 .end method

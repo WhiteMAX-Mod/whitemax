@@ -1,164 +1,83 @@
 .class public final Lym0;
-.super Lf80;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Ljava/util/concurrent/Executor;
 
 
 # instance fields
-.field public final a:Ljava/lang/ref/WeakReference;
+.field public final synthetic a:I
+
+.field public final b:Landroid/os/Handler;
 
 
 # direct methods
-.method public constructor <init>(Landroidx/biometric/BiometricViewModel;)V
-    .locals 1
+.method public constructor <init>()V
+    .locals 2
 
+    const/4 v0, 0x0
+
+    iput v0, p0, Lym0;->a:I
+
+    .line 2
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    new-instance v0, Ljava/lang/ref/WeakReference;
+    .line 3
+    new-instance v0, Landroid/os/Handler;
 
-    invoke-direct {v0, p1}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
+    invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
 
-    iput-object v0, p0, Lym0;->a:Ljava/lang/ref/WeakReference;
+    move-result-object v1
+
+    invoke-direct {v0, v1}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
+
+    iput-object v0, p0, Lym0;->b:Landroid/os/Handler;
+
+    return-void
+.end method
+
+.method public synthetic constructor <init>(Lzh9;)V
+    .locals 1
+
+    const/4 v0, 0x1
+
+    iput v0, p0, Lym0;->a:I
+
+    .line 1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lym0;->b:Landroid/os/Handler;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(ILjava/lang/CharSequence;)V
+.method public final execute(Ljava/lang/Runnable;)V
     .locals 1
 
-    iget-object p0, p0, Lym0;->a:Ljava/lang/ref/WeakReference;
+    iget v0, p0, Lym0;->a:I
 
-    invoke-virtual {p0}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
+    packed-switch v0, :pswitch_data_0
 
-    move-result-object v0
+    iget-object p0, p0, Lym0;->b:Landroid/os/Handler;
 
-    if-eqz v0, :cond_0
+    invoke-virtual {p0, p1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    invoke-virtual {p0}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Landroidx/biometric/BiometricViewModel;
-
-    iget-boolean v0, v0, Landroidx/biometric/BiometricViewModel;->j:Z
-
-    if-nez v0, :cond_0
-
-    invoke-virtual {p0}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Landroidx/biometric/BiometricViewModel;
-
-    iget-boolean v0, v0, Landroidx/biometric/BiometricViewModel;->i:Z
-
-    if-eqz v0, :cond_0
-
-    invoke-virtual {p0}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, Landroidx/biometric/BiometricViewModel;
-
-    new-instance v0, Llm0;
-
-    invoke-direct {v0, p1, p2}, Llm0;-><init>(ILjava/lang/CharSequence;)V
-
-    invoke-virtual {p0, v0}, Landroidx/biometric/BiometricViewModel;->e(Llm0;)V
-
-    :cond_0
     return-void
-.end method
 
-.method public final b(Lvm0;)V
-    .locals 4
+    :pswitch_0
+    iget-object p0, p0, Lym0;->b:Landroid/os/Handler;
 
-    iget-object p0, p0, Lym0;->a:Ljava/lang/ref/WeakReference;
+    invoke-virtual {p0, p1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    invoke-virtual {p0}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_4
-
-    invoke-virtual {p0}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Landroidx/biometric/BiometricViewModel;
-
-    iget-boolean v0, v0, Landroidx/biometric/BiometricViewModel;->i:Z
-
-    if-eqz v0, :cond_4
-
-    iget v0, p1, Lvm0;->b:I
-
-    const/4 v1, -0x1
-
-    if-ne v0, v1, :cond_2
-
-    new-instance v0, Lvm0;
-
-    iget-object p1, p1, Lvm0;->a:Lh6d;
-
-    invoke-virtual {p0}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Landroidx/biometric/BiometricViewModel;
-
-    iget-object v2, v2, Landroidx/biometric/BiometricViewModel;->c:Lhjc;
-
-    if-eqz v2, :cond_0
-
-    const/16 v2, 0xf
-
-    goto :goto_0
-
-    :cond_0
-    const/4 v2, 0x0
-
-    :goto_0
-    and-int/lit16 v3, v2, 0x7fff
-
-    if-eqz v3, :cond_1
-
-    invoke-static {v2}, Lmna;->s(I)Z
-
-    move-result v2
-
-    if-nez v2, :cond_1
-
-    const/4 v1, 0x2
-
-    :cond_1
-    invoke-direct {v0, p1, v1}, Lvm0;-><init>(Lh6d;I)V
-
-    move-object p1, v0
-
-    :cond_2
-    invoke-virtual {p0}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, Landroidx/biometric/BiometricViewModel;
-
-    iget-object v0, p0, Landroidx/biometric/BiometricViewModel;->m:Lmg9;
-
-    if-nez v0, :cond_3
-
-    new-instance v0, Lmg9;
-
-    invoke-direct {v0}, Lxm7;-><init>()V
-
-    iput-object v0, p0, Landroidx/biometric/BiometricViewModel;->m:Lmg9;
-
-    :cond_3
-    iget-object p0, p0, Landroidx/biometric/BiometricViewModel;->m:Lmg9;
-
-    invoke-static {p0, p1}, Landroidx/biometric/BiometricViewModel;->i(Lmg9;Ljava/lang/Object;)V
-
-    :cond_4
     return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

@@ -1,141 +1,154 @@
-.class public final enum Lgn4;
-.super Ljava/lang/Enum;
+.class public final Lgn4;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lhn4;
 
-# static fields
-.field public static final enum X:Lgn4;
 
-.field public static final enum Y:Lgn4;
+# instance fields
+.field public final a:J
 
-.field public static final enum Z:Lgn4;
+.field public final b:J
 
-.field public static final enum a:Lgn4;
-
-.field public static final enum b:Lgn4;
-
-.field public static final enum c:Lgn4;
-
-.field public static final enum o:Lgn4;
-
-.field public static final synthetic o0:[Lgn4;
-
-.field public static final synthetic p0:Ln25;
+.field public final c:Liic;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 9
+.method public constructor <init>()V
+    .locals 12
 
-    new-instance v0, Lgn4;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const-string v1, "SHARE_VIDEO"
+    sget-object v0, Lxm4;->b:Ljava/util/concurrent/atomic/AtomicLong;
 
-    const/4 v2, 0x0
+    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicLong;->incrementAndGet()J
 
-    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    move-result-wide v2
 
-    sput-object v0, Lgn4;->a:Lgn4;
+    iput-wide v2, p0, Lgn4;->a:J
 
-    new-instance v1, Lgn4;
+    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicLong;->incrementAndGet()J
 
-    const-string v2, "DOWNLOAD_VIDEO"
+    move-result-wide v9
 
-    const/4 v3, 0x1
+    iput-wide v9, p0, Lgn4;->b:J
 
-    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    new-instance v1, Lq94;
 
-    sput-object v1, Lgn4;->b:Lgn4;
+    sget v0, Lsac;->oneme_settings_old_dev_menu:I
 
-    new-instance v2, Lgn4;
+    new-instance v4, Lp2f;
 
-    const-string v3, "SHARE_PHOTO"
+    invoke-direct {v4, v0}, Lp2f;-><init>(I)V
 
-    const/4 v4, 0x2
+    sget v5, Lq0d;->S:I
 
-    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    sget-object v7, Lo94;->l:Lo94;
 
-    sput-object v2, Lgn4;->c:Lgn4;
+    const/16 v8, 0x8
 
-    new-instance v3, Lgn4;
+    const/4 v6, 0x0
 
-    const-string v4, "DOWNLOAD_PHOTO"
+    invoke-direct/range {v1 .. v8}, Lq94;-><init>(JLu2f;ILu2f;Lhv8;I)V
 
-    const/4 v5, 0x3
+    new-instance v4, Lq94;
 
-    invoke-direct {v3, v4, v5}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    sget v0, Lsac;->oneme_settings_old_logs_menu:I
 
-    sput-object v3, Lgn4;->o:Lgn4;
+    move-wide v5, v9
 
-    new-instance v4, Lgn4;
+    move-object v10, v7
 
-    const-string v5, "SHARE_GIF"
+    new-instance v7, Lp2f;
 
-    const/4 v6, 0x4
+    invoke-direct {v7, v0}, Lp2f;-><init>(I)V
 
-    invoke-direct {v4, v5, v6}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    sget v8, Lq0d;->e:I
 
-    sput-object v4, Lgn4;->X:Lgn4;
+    const/4 v9, 0x0
 
-    new-instance v5, Lgn4;
+    const/16 v11, 0x8
 
-    const-string v6, "DOWNLOAD_GIF"
+    invoke-direct/range {v4 .. v11}, Lq94;-><init>(JLu2f;ILu2f;Lhv8;I)V
 
-    const/4 v7, 0x5
-
-    invoke-direct {v5, v6, v7}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v5, Lgn4;->Y:Lgn4;
-
-    new-instance v6, Lgn4;
-
-    const-string v7, "SHARE_FILE"
-
-    const/4 v8, 0x6
-
-    invoke-direct {v6, v7, v8}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v6, Lgn4;->Z:Lgn4;
-
-    filled-new-array/range {v0 .. v6}, [Lgn4;
+    filled-new-array {v1, v4}, [Lq94;
 
     move-result-object v0
 
-    sput-object v0, Lgn4;->o0:[Lgn4;
+    invoke-static {v0}, Lr73;->I([Ljava/lang/Object;)Ljava/util/List;
 
-    new-instance v1, Ln25;
+    move-result-object v0
 
-    invoke-direct {v1, v0}, Ln25;-><init>([Ljava/lang/Enum;)V
+    invoke-static {v0}, Lzce;->a(Ljava/lang/Object;)Lyce;
 
-    sput-object v1, Lgn4;->p0:Ln25;
+    move-result-object v0
+
+    new-instance v1, Liic;
+
+    invoke-direct {v1, v0}, Liic;-><init>(Lro9;)V
+
+    iput-object v1, p0, Lgn4;->c:Liic;
 
     return-void
 .end method
 
-.method public static valueOf(Ljava/lang/String;)Lgn4;
-    .locals 1
 
-    const-class v0, Lgn4;
+# virtual methods
+.method public final c()Lrce;
+    .locals 0
 
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
-
-    move-result-object p0
-
-    check-cast p0, Lgn4;
+    iget-object p0, p0, Lgn4;->c:Liic;
 
     return-object p0
 .end method
 
-.method public static values()[Lgn4;
-    .locals 1
+.method public final d(Lq94;)V
+    .locals 4
 
-    sget-object v0, Lgn4;->o0:[Lgn4;
+    iget-wide v0, p1, Lq94;->a:J
 
-    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
+    iget-wide v2, p0, Lgn4;->b:J
 
-    move-result-object v0
+    invoke-static {v0, v1, v2, v3}, Lxm4;->a(JJ)Z
 
-    check-cast v0, [Lgn4;
+    move-result p1
 
-    return-object v0
+    const/4 v2, 0x0
+
+    if-eqz p1, :cond_0
+
+    sget-object p0, Lbn4;->c:Lbn4;
+
+    invoke-virtual {p0}, Lx2;->F0()Lza4;
+
+    move-result-object p0
+
+    const-string p1, ":743233864"
+
+    invoke-virtual {p0, p1, v2}, Lza4;->b(Ljava/lang/String;Landroid/os/Bundle;)Z
+
+    return-void
+
+    :cond_0
+    iget-wide p0, p0, Lgn4;->a:J
+
+    invoke-static {v0, v1, p0, p1}, Lxm4;->a(JJ)Z
+
+    move-result p0
+
+    if-eqz p0, :cond_1
+
+    sget-object p0, Lbn4;->c:Lbn4;
+
+    invoke-virtual {p0}, Lx2;->F0()Lza4;
+
+    move-result-object p0
+
+    const-string p1, ":1462995683"
+
+    invoke-virtual {p0, p1, v2}, Lza4;->b(Ljava/lang/String;Landroid/os/Bundle;)Z
+
+    :cond_1
+    return-void
 .end method

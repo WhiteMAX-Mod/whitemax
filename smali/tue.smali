@@ -4,10 +4,22 @@
 
 
 # direct methods
-.method public static a(Landroid/view/View;Ljava/lang/CharSequence;)V
+.method public static a(Landroid/app/job/JobParameters;)[Ljava/lang/String;
     .locals 0
 
-    invoke-virtual {p0, p1}, Landroid/view/View;->setTooltipText(Ljava/lang/CharSequence;)V
+    invoke-virtual {p0}, Landroid/app/job/JobParameters;->getTriggeredContentAuthorities()[Ljava/lang/String;
 
-    return-void
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static b(Landroid/app/job/JobParameters;)[Landroid/net/Uri;
+    .locals 0
+
+    invoke-virtual {p0}, Landroid/app/job/JobParameters;->getTriggeredContentUris()[Landroid/net/Uri;
+
+    move-result-object p0
+
+    return-object p0
 .end method

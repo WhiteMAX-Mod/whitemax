@@ -1,204 +1,49 @@
-.class public final Lhq9;
-.super Llje;
+.class public interface abstract Lhq9;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public X:J
-
-.field public Y:J
-
-.field public Z:Ls5d;
-
-.field public o:J
-
-
-# direct methods
-.method public constructor <init>(Ldx8;)V
+# virtual methods
+.method public E(ILandroid/view/KeyEvent;)Z
     .locals 0
 
-    invoke-direct {p0, p1}, Llje;-><init>(Ldx8;)V
+    const/4 p0, 0x0
+
+    return p0
+.end method
+
+.method public R()V
+    .locals 0
 
     return-void
 .end method
 
-
-# virtual methods
-.method public final c(Ldx8;Ljava/lang/String;)V
-    .locals 4
-
-    invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    invoke-virtual {p2}, Ljava/lang/String;->hashCode()I
-
-    move-result v0
-
-    const/4 v1, -0x1
-
-    sparse-switch v0, :sswitch_data_0
-
-    goto :goto_0
-
-    :sswitch_0
-    const-string v0, "draft"
-
-    invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result p2
-
-    if-nez p2, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    const/4 v1, 0x3
-
-    goto :goto_0
-
-    :sswitch_1
-    const-string v0, "time"
-
-    invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result p2
-
-    if-nez p2, :cond_1
-
-    goto :goto_0
-
-    :cond_1
-    const/4 v1, 0x2
-
-    goto :goto_0
-
-    :sswitch_2
-    const-string v0, "userId"
-
-    invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result p2
-
-    if-nez p2, :cond_2
-
-    goto :goto_0
-
-    :cond_2
-    const/4 v1, 0x1
-
-    goto :goto_0
-
-    :sswitch_3
-    const-string v0, "chatId"
-
-    invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result p2
-
-    if-nez p2, :cond_3
-
-    goto :goto_0
-
-    :cond_3
-    const/4 v1, 0x0
-
-    :goto_0
-    const-wide/16 v2, 0x0
-
-    packed-switch v1, :pswitch_data_0
-
-    invoke-virtual {p1}, Ldx8;->B()V
-
-    return-void
-
-    :pswitch_0
-    invoke-static {p1}, Ln1c;->r(Ldx8;)Ls5d;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lhq9;->Z:Ls5d;
-
-    return-void
-
-    :pswitch_1
-    invoke-static {p1, v2, v3}, Lxq7;->c0(Ldx8;J)J
-
-    move-result-wide p1
-
-    iput-wide p1, p0, Lhq9;->Y:J
-
-    return-void
-
-    :pswitch_2
-    invoke-static {p1, v2, v3}, Lxq7;->c0(Ldx8;J)J
-
-    move-result-wide p1
-
-    iput-wide p1, p0, Lhq9;->X:J
-
-    return-void
-
-    :pswitch_3
-    invoke-static {p1, v2, v3}, Lxq7;->c0(Ldx8;J)J
-
-    move-result-wide p1
-
-    iput-wide p1, p0, Lhq9;->o:J
-
-    return-void
-
-    :sswitch_data_0
-    .sparse-switch
-        -0x5128d96d -> :sswitch_3
-        -0x31d4d1ba -> :sswitch_2
-        0x3652cd -> :sswitch_1
-        0x5b679a1 -> :sswitch_0
-    .end sparse-switch
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+.method public abstract b()Z
 .end method
 
-.method public final toString()Ljava/lang/String;
-    .locals 8
+.method public abstract c()J
+.end method
 
-    iget-wide v0, p0, Lhq9;->o:J
+.method public e0(Z)V
+    .locals 0
 
-    iget-wide v2, p0, Lhq9;->X:J
+    return-void
+.end method
 
-    iget-wide v4, p0, Lhq9;->Y:J
+.method public abstract f0(Z)V
+.end method
 
-    iget-object p0, p0, Lhq9;->Z:Ls5d;
+.method public abstract getDuration()J
+.end method
 
-    const-string v6, "Response{chatId="
+.method public abstract m0()Landroid/view/View;
+.end method
 
-    const-string v7, "userId="
+.method public t0()V
+    .locals 0
 
-    invoke-static {v0, v1, v6, v7}, Lzt1;->k(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+    return-void
+.end method
 
-    move-result-object v0
-
-    invoke-virtual {v0, v2, v3}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    const-string v1, ", time="
-
-    const-string v2, ", draft="
-
-    invoke-static {v4, v5, v1, v2, v0}, Lzt1;->q(JLjava/lang/String;Ljava/lang/String;Ljava/lang/StringBuilder;)V
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string p0, "}"
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
+.method public abstract x()Z
 .end method

@@ -1,136 +1,64 @@
-.class public final Lcr;
-.super Lqde;
+.class public final synthetic Lcr;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Ll66;
+.implements Ljava/util/concurrent/Executor;
 
 
 # instance fields
-.field public X:Lt52;
-
-.field public Y:I
-
-.field public final synthetic Z:Lt52;
-
-.field public final synthetic o0:Lone/me/appearancesettings/singletheme/AppearanceSettingsScreen;
+.field public final synthetic a:I
 
 
 # direct methods
-.method public constructor <init>(Lt52;Lone/me/appearancesettings/singletheme/AppearanceSettingsScreen;Lkotlin/coroutines/Continuation;)V
+.method public synthetic constructor <init>(I)V
     .locals 0
 
-    iput-object p1, p0, Lcr;->Z:Lt52;
+    iput p1, p0, Lcr;->a:I
 
-    iput-object p2, p0, Lcr;->o0:Lone/me/appearancesettings/singletheme/AppearanceSettingsScreen;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 p1, 0x2
+    return-void
+.end method
 
-    invoke-direct {p0, p1, p3}, Lqde;-><init>(ILkotlin/coroutines/Continuation;)V
+.method private final a(Ljava/lang/Runnable;)V
+    .locals 0
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+.method public final execute(Ljava/lang/Runnable;)V
     .locals 0
 
-    check-cast p1, Lox3;
+    iget p0, p0, Lcr;->a:I
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    packed-switch p0, :pswitch_data_0
 
-    invoke-virtual {p0, p1, p2}, Lcr;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    invoke-interface {p1}, Ljava/lang/Runnable;->run()V
 
-    move-result-object p0
+    :pswitch_0
+    return-void
 
-    check-cast p0, Lcr;
-
-    sget-object p1, Le5f;->a:Le5f;
-
-    invoke-virtual {p0, p1}, Lcr;->o(Ljava/lang/Object;)Ljava/lang/Object;
+    :pswitch_1
+    invoke-static {}, Ldr;->E()Ldr;
 
     move-result-object p0
 
-    return-object p0
-.end method
+    iget-object p0, p0, Ldr;->c:Lni4;
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 1
+    iget-object p0, p0, Lni4;->d:Ljava/util/concurrent/ExecutorService;
 
-    new-instance p1, Lcr;
+    invoke-interface {p0, p1}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
 
-    iget-object v0, p0, Lcr;->Z:Lt52;
+    return-void
 
-    iget-object p0, p0, Lcr;->o0:Lone/me/appearancesettings/singletheme/AppearanceSettingsScreen;
+    nop
 
-    invoke-direct {p1, v0, p0, p2}, Lcr;-><init>(Lt52;Lone/me/appearancesettings/singletheme/AppearanceSettingsScreen;Lkotlin/coroutines/Continuation;)V
-
-    return-object p1
-.end method
-
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 2
-
-    iget v0, p0, Lcr;->Y:I
-
-    const/4 v1, 0x1
-
-    if-eqz v0, :cond_1
-
-    if-ne v0, v1, :cond_0
-
-    iget-object p0, p0, Lcr;->X:Lt52;
-
-    invoke-static {p1}, Lsgg;->Z(Ljava/lang/Object;)V
-
-    goto :goto_0
-
-    :cond_0
-    new-instance p0, Ljava/lang/IllegalStateException;
-
-    const-string p1, "call to \'resume\' before \'invoke\' with coroutine"
-
-    invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p0
-
-    :cond_1
-    invoke-static {p1}, Lsgg;->Z(Ljava/lang/Object;)V
-
-    sget-object p1, Lone/me/appearancesettings/singletheme/AppearanceSettingsScreen;->Z:[Lbc7;
-
-    iget-object p1, p0, Lcr;->o0:Lone/me/appearancesettings/singletheme/AppearanceSettingsScreen;
-
-    invoke-virtual {p1}, Lone/me/appearancesettings/singletheme/AppearanceSettingsScreen;->p0()Lor;
-
-    move-result-object p1
-
-    iget-object v0, p0, Lcr;->Z:Lt52;
-
-    iput-object v0, p0, Lcr;->X:Lt52;
-
-    iput v1, p0, Lcr;->Y:I
-
-    invoke-virtual {p1, p0}, Lor;->r(Lbu3;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    sget-object p0, Lpx3;->a:Lpx3;
-
-    if-ne p1, p0, :cond_2
-
-    return-object p0
-
-    :cond_2
-    move-object p0, v0
-
-    :goto_0
-    check-cast p1, Ldl2;
-
-    invoke-virtual {p0, p1}, Lt52;->a(Ldl2;)V
-
-    sget-object p0, Le5f;->a:Le5f;
-
-    return-object p0
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

@@ -1,195 +1,165 @@
-.class public abstract Ljcf;
+.class public final Ljcf;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # static fields
-.field public static final synthetic a:I
+.field public static final d:Ljcf;
+
+.field public static final e:Ljava/lang/String;
+
+.field public static final f:Ljava/lang/String;
+
+.field public static final g:Ljava/lang/String;
+
+
+# instance fields
+.field public final a:I
+
+.field public final b:Z
+
+.field public final c:Z
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 1
+    .locals 2
 
-    const-string v0, "media3.database"
+    new-instance v0, Loq9;
 
-    invoke-static {v0}, Lyb8;->a(Ljava/lang/String;)V
+    invoke-direct {v0}, Loq9;-><init>()V
+
+    new-instance v1, Ljcf;
+
+    invoke-direct {v1, v0}, Ljcf;-><init>(Loq9;)V
+
+    sput-object v1, Ljcf;->d:Ljcf;
+
+    sget v0, Lnrf;->a:I
+
+    const/4 v0, 0x1
+
+    const/16 v1, 0x24
+
+    invoke-static {v0, v1}, Ljava/lang/Integer;->toString(II)Ljava/lang/String;
+
+    move-result-object v0
+
+    sput-object v0, Ljcf;->e:Ljava/lang/String;
+
+    const/4 v0, 0x2
+
+    invoke-static {v0, v1}, Ljava/lang/Integer;->toString(II)Ljava/lang/String;
+
+    move-result-object v0
+
+    sput-object v0, Ljcf;->f:Ljava/lang/String;
+
+    const/4 v0, 0x3
+
+    invoke-static {v0, v1}, Ljava/lang/Integer;->toString(II)Ljava/lang/String;
+
+    move-result-object v0
+
+    sput-object v0, Ljcf;->g:Ljava/lang/String;
 
     return-void
 .end method
 
-.method public static a(Landroid/database/sqlite/SQLiteDatabase;ILjava/lang/String;)I
-    .locals 10
+.method public constructor <init>(Loq9;)V
+    .locals 1
 
-    :try_start_0
-    const-string v0, "ExoPlayerVersions"
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-static {p0, v0}, Lpaf;->c0(Landroid/database/sqlite/SQLiteDatabase;Ljava/lang/String;)Z
+    iget v0, p1, Loq9;->a:I
 
-    move-result v0
+    iput v0, p0, Ljcf;->a:I
 
-    const/4 v1, -0x1
+    iget-boolean v0, p1, Loq9;->b:Z
 
-    if-nez v0, :cond_0
+    iput-boolean v0, p0, Ljcf;->b:Z
 
-    return v1
+    iget-boolean p1, p1, Loq9;->c:Z
+
+    iput-boolean p1, p0, Ljcf;->c:Z
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
+
+    const/4 v0, 0x1
+
+    if-ne p0, p1, :cond_0
+
+    return v0
 
     :cond_0
-    const-string v3, "ExoPlayerVersions"
+    const/4 v1, 0x0
 
-    const-string v0, "version"
+    if-eqz p1, :cond_2
 
-    filled-new-array {v0}, [Ljava/lang/String;
+    const-class v2, Ljcf;
 
-    move-result-object v4
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    const-string v5, "feature = ? AND instance_uid = ?"
+    move-result-object v3
 
-    invoke-static {p1}, Ljava/lang/Integer;->toString(I)Ljava/lang/String;
-
-    move-result-object p1
-
-    filled-new-array {p1, p2}, [Ljava/lang/String;
-
-    move-result-object v6
-
-    const/4 v8, 0x0
-
-    const/4 v9, 0x0
-
-    const/4 v7, 0x0
-
-    move-object v2, p0
-
-    invoke-virtual/range {v2 .. v9}, Landroid/database/sqlite/SQLiteDatabase;->query(Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Landroid/database/Cursor;
-
-    move-result-object p0
-    :try_end_0
-    .catch Landroid/database/SQLException; {:try_start_0 .. :try_end_0} :catch_0
-
-    :try_start_1
-    invoke-interface {p0}, Landroid/database/Cursor;->getCount()I
-
-    move-result p1
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    if-nez p1, :cond_1
-
-    :try_start_2
-    invoke-interface {p0}, Landroid/database/Cursor;->close()V
-    :try_end_2
-    .catch Landroid/database/SQLException; {:try_start_2 .. :try_end_2} :catch_0
-
-    return v1
-
-    :cond_1
-    :try_start_3
-    invoke-interface {p0}, Landroid/database/Cursor;->moveToNext()Z
-
-    const/4 p1, 0x0
-
-    invoke-interface {p0, p1}, Landroid/database/Cursor;->getInt(I)I
-
-    move-result p1
-    :try_end_3
-    .catchall {:try_start_3 .. :try_end_3} :catchall_0
-
-    :try_start_4
-    invoke-interface {p0}, Landroid/database/Cursor;->close()V
-    :try_end_4
-    .catch Landroid/database/SQLException; {:try_start_4 .. :try_end_4} :catch_0
-
-    return p1
-
-    :catchall_0
-    move-exception v0
-
-    move-object p1, v0
-
-    if-eqz p0, :cond_2
-
-    :try_start_5
-    invoke-interface {p0}, Landroid/database/Cursor;->close()V
-    :try_end_5
-    .catchall {:try_start_5 .. :try_end_5} :catchall_1
+    if-eq v2, v3, :cond_1
 
     goto :goto_0
 
-    :catchall_1
-    move-exception v0
+    :cond_1
+    check-cast p1, Ljcf;
 
-    move-object p0, v0
+    iget v2, p0, Ljcf;->a:I
 
-    :try_start_6
-    invoke-virtual {p1, p0}, Ljava/lang/Throwable;->addSuppressed(Ljava/lang/Throwable;)V
+    iget v3, p1, Ljcf;->a:I
+
+    if-ne v2, v3, :cond_2
+
+    iget-boolean v2, p0, Ljcf;->b:Z
+
+    iget-boolean v3, p1, Ljcf;->b:Z
+
+    if-ne v2, v3, :cond_2
+
+    iget-boolean p0, p0, Ljcf;->c:Z
+
+    iget-boolean p1, p1, Ljcf;->c:Z
+
+    if-ne p0, p1, :cond_2
+
+    return v0
 
     :cond_2
     :goto_0
-    throw p1
-    :try_end_6
-    .catch Landroid/database/SQLException; {:try_start_6 .. :try_end_6} :catch_0
-
-    :catch_0
-    move-exception v0
-
-    move-object p0, v0
-
-    new-instance p1, Landroidx/media3/database/DatabaseIOException;
-
-    invoke-direct {p1, p0}, Ljava/io/IOException;-><init>(Ljava/lang/Throwable;)V
-
-    throw p1
+    return v1
 .end method
 
-.method public static b(Landroid/database/sqlite/SQLiteDatabase;ILjava/lang/String;I)V
-    .locals 2
+.method public final hashCode()I
+    .locals 3
 
-    :try_start_0
-    const-string v0, "CREATE TABLE IF NOT EXISTS ExoPlayerVersions (feature INTEGER NOT NULL,instance_uid TEXT NOT NULL,version INTEGER NOT NULL,PRIMARY KEY (feature, instance_uid))"
+    iget v0, p0, Ljcf;->a:I
 
-    invoke-virtual {p0, v0}, Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V
+    const/16 v1, 0x1f
 
-    new-instance v0, Landroid/content/ContentValues;
+    add-int/2addr v0, v1
 
-    invoke-direct {v0}, Landroid/content/ContentValues;-><init>()V
+    mul-int/2addr v0, v1
 
-    const-string v1, "feature"
+    iget-boolean v2, p0, Ljcf;->b:Z
 
-    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    add-int/2addr v0, v2
 
-    move-result-object p1
+    mul-int/2addr v0, v1
 
-    invoke-virtual {v0, v1, p1}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
+    iget-boolean p0, p0, Ljcf;->c:Z
 
-    const-string p1, "instance_uid"
+    add-int/2addr v0, p0
 
-    invoke-virtual {v0, p1, p2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
-
-    const-string p1, "version"
-
-    invoke-static {p3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object p2
-
-    invoke-virtual {v0, p1, p2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
-
-    const-string p1, "ExoPlayerVersions"
-
-    const/4 p2, 0x0
-
-    invoke-virtual {p0, p1, p2, v0}, Landroid/database/sqlite/SQLiteDatabase;->replaceOrThrow(Ljava/lang/String;Ljava/lang/String;Landroid/content/ContentValues;)J
-    :try_end_0
-    .catch Landroid/database/SQLException; {:try_start_0 .. :try_end_0} :catch_0
-
-    return-void
-
-    :catch_0
-    move-exception p0
-
-    new-instance p1, Landroidx/media3/database/DatabaseIOException;
-
-    invoke-direct {p1, p0}, Ljava/io/IOException;-><init>(Ljava/lang/Throwable;)V
-
-    throw p1
+    return v0
 .end method

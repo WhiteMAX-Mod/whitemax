@@ -1,46 +1,43 @@
-.class public final Lyaa;
-.super Lbu3;
+.class public final synthetic Lyaa;
+.super Lsxb;
+.source "SourceFile"
 
 
-# instance fields
-.field public X:I
-
-.field public final synthetic Y:Lff7;
-
-.field public synthetic o:Ljava/lang/Object;
+# static fields
+.field public static final a:Lyaa;
 
 
 # direct methods
-.method public constructor <init>(Lff7;Lkotlin/coroutines/Continuation;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 5
 
-    iput-object p1, p0, Lyaa;->Y:Lff7;
+    new-instance v0, Lyaa;
 
-    invoke-direct {p0, p2}, Lbu3;-><init>(Lkotlin/coroutines/Continuation;)V
+    const-string v1, "getDependencyDuration()J"
+
+    const/4 v2, 0x0
+
+    const-class v3, Lea8;
+
+    const-string v4, "dependencyDuration"
+
+    invoke-direct {v0, v3, v4, v1, v2}, Lsxb;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
+
+    sput-object v0, Lyaa;->a:Lyaa;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+.method public final get(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    iput-object p1, p0, Lyaa;->o:Ljava/lang/Object;
+    check-cast p1, Lea8;
 
-    iget p1, p0, Lyaa;->X:I
+    iget-wide p0, p1, Lea8;->b:J
 
-    const/high16 v0, -0x80000000
-
-    or-int/2addr p1, v0
-
-    iput p1, p0, Lyaa;->X:I
-
-    iget-object p1, p0, Lyaa;->Y:Lff7;
-
-    const/4 v0, 0x0
-
-    invoke-virtual {p1, v0, p0}, Lff7;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    invoke-static {p0, p1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object p0
 

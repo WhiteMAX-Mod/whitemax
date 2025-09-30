@@ -1,160 +1,347 @@
 .class public final Ly71;
-.super Lh14;
+.super Lq1e;
 .source "SourceFile"
 
 
 # instance fields
-.field public final s0:Ljava/lang/String;
+.field public final synthetic X:I
 
-.field public t0:Ljava/util/List;
+.field public final Y:Ljava/lang/Object;
+
+.field public final Z:Ljava/lang/Object;
+
+.field public final r0:Ljava/lang/Object;
+
+.field public final s0:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Lone/me/calllist/ui/CallHistoryScreen;)V
+.method public constructor <init>(Ljava/util/concurrent/ExecutorService;La38;Lq02;)V
     .locals 1
 
     const/4 v0, 0x1
 
-    invoke-direct {p0, p1, v0}, Lh14;-><init>(Lone/me/sdk/arch/Widget;I)V
+    iput v0, p0, Ly71;->X:I
 
-    const-class p1, Ly71;
+    .line 1
+    invoke-direct {p0, p1}, Lq1e;-><init>(Ljava/util/concurrent/Executor;)V
 
-    invoke-virtual {p1}, Ljava/lang/Class;->getName()Ljava/lang/String;
+    .line 2
+    iput-object p1, p0, Ly71;->Y:Ljava/lang/Object;
 
-    move-result-object p1
+    .line 3
+    iput-object p2, p0, Ly71;->Z:Ljava/lang/Object;
 
-    iput-object p1, p0, Ly71;->s0:Ljava/lang/String;
+    .line 4
+    iput-object p3, p0, Ly71;->r0:Ljava/lang/Object;
 
-    sget-object p1, Lgz4;->a:Lgz4;
+    .line 5
+    new-instance p1, Lzjd;
 
-    iput-object p1, p0, Ly71;->t0:Ljava/util/List;
+    const/4 p2, 0x3
+
+    invoke-direct {p1, p2, p0}, Lzjd;-><init>(ILjava/lang/Object;)V
+
+    iput-object p1, p0, Ly71;->s0:Ljava/lang/Object;
+
+    return-void
+.end method
+
+.method public constructor <init>(Lnyc;Lq02;Lo71;Lo71;)V
+    .locals 1
+
+    const/4 v0, 0x0
+
+    iput v0, p0, Ly71;->X:I
+
+    .line 6
+    sget-object v0, Liad;->a:Liad;
+
+    invoke-virtual {v0}, Liad;->p()Lkha;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lkha;->a()Ljava/util/concurrent/ExecutorService;
+
+    move-result-object v0
+
+    invoke-direct {p0, v0}, Lq1e;-><init>(Ljava/util/concurrent/Executor;)V
+
+    .line 7
+    iput-object p1, p0, Ly71;->Y:Ljava/lang/Object;
+
+    .line 8
+    iput-object p2, p0, Ly71;->Z:Ljava/lang/Object;
+
+    .line 9
+    iput-object p3, p0, Ly71;->r0:Ljava/lang/Object;
+
+    .line 10
+    iput-object p4, p0, Ly71;->s0:Ljava/lang/Object;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final E(Lcmc;I)V
-    .locals 7
+.method public H(Lj2e;I)V
+    .locals 1
 
-    invoke-virtual {p1}, Lcmc;->n()Z
+    iget v0, p0, Ly71;->X:I
 
-    move-result v0
+    packed-switch v0, :pswitch_data_0
 
-    if-eqz v0, :cond_0
+    invoke-super {p0, p1, p2}, Lq1e;->H(Lj2e;I)V
 
     return-void
 
-    :cond_0
-    iget-object p0, p0, Ly71;->t0:Ljava/util/List;
+    :pswitch_0
+    check-cast p1, Lx71;
 
-    invoke-interface {p0, p2}, Ljava/util/List;->get(I)Ljava/lang/Object;
+    invoke-virtual {p0, p2}, Lls7;->C(I)Ljava/lang/Object;
 
     move-result-object p0
 
-    check-cast p0, Lp81;
+    check-cast p0, Lts7;
 
-    iget-object p0, p0, Lp81;->c:Lo81;
+    check-cast p0, Lyua;
 
-    invoke-virtual {p0}, Ljava/lang/Enum;->ordinal()I
+    iget-object p1, p1, Lx71;->E0:Lw71;
+
+    invoke-virtual {p1, p0}, Lw71;->setOpponents(Lyua;)V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public j()I
+    .locals 1
+
+    iget v0, p0, Ly71;->X:I
+
+    packed-switch v0, :pswitch_data_0
+
+    invoke-super {p0}, Lls7;->j()I
 
     move-result p0
 
-    if-eqz p0, :cond_2
+    return p0
 
-    const/4 p2, 0x1
+    :pswitch_0
+    iget-object p0, p0, Lls7;->o:Lfu;
 
-    if-ne p0, p2, :cond_1
-
-    sget-object p0, Lone/me/calllist/ui/page/CallHistoryPageScreen;->q0:Lz22;
-
-    sget-object p2, Lo81;->c:Lo81;
-
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    new-instance p0, Lone/me/calllist/ui/page/CallHistoryPageScreen;
-
-    invoke-direct {p0, p2}, Lone/me/calllist/ui/page/CallHistoryPageScreen;-><init>(Lo81;)V
-
-    :goto_0
-    move-object v1, p0
-
-    goto :goto_1
-
-    :cond_1
-    new-instance p0, Lkotlin/NoWhenBranchMatchedException;
-
-    invoke-direct {p0}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
-
-    throw p0
-
-    :cond_2
-    sget-object p0, Lone/me/calllist/ui/page/CallHistoryPageScreen;->q0:Lz22;
-
-    sget-object p2, Lo81;->b:Lo81;
-
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    new-instance p0, Lone/me/calllist/ui/page/CallHistoryPageScreen;
-
-    invoke-direct {p0, p2}, Lone/me/calllist/ui/page/CallHistoryPageScreen;-><init>(Lo81;)V
-
-    goto :goto_0
-
-    :goto_1
-    sget-object p0, Lnu3;->b:Lnu3;
-
-    invoke-virtual {v1, p0}, Lou3;->setRetainViewMode(Lnu3;)V
-
-    new-instance v0, Lfmc;
-
-    const/4 v5, 0x0
-
-    const/4 v6, -0x1
-
-    const/4 v2, 0x0
-
-    const/4 v3, 0x0
-
-    const/4 v4, 0x0
-
-    invoke-direct/range {v0 .. v6}, Lfmc;-><init>(Lou3;Ljava/lang/String;Ltu3;Ltu3;ZI)V
-
-    invoke-virtual {p1, v0}, Lcmc;->S(Lfmc;)V
-
-    return-void
-.end method
-
-.method public final J(Lhmc;)V
-    .locals 1
-
-    const/4 v0, 0x0
-
-    iput-object v0, p1, Lhmc;->C0:Lcmc;
-
-    invoke-super {p0, p1}, Lh14;->J(Lhmc;)V
-
-    return-void
-.end method
-
-.method public final j()I
-    .locals 0
-
-    iget-object p0, p0, Ly71;->t0:Ljava/util/List;
+    iget-object p0, p0, Lfu;->f:Ljava/util/List;
 
     invoke-interface {p0}, Ljava/util/List;->size()I
 
     move-result p0
 
     return p0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method
 
-.method public final bridge synthetic y(Lccc;)V
-    .locals 0
+.method public r(Lzoc;I)V
+    .locals 1
 
-    check-cast p1, Lhmc;
+    iget v0, p0, Ly71;->X:I
 
-    invoke-virtual {p0, p1}, Ly71;->J(Lhmc;)V
+    packed-switch v0, :pswitch_data_0
+
+    invoke-super {p0, p1, p2}, Lq1e;->r(Lzoc;I)V
 
     return-void
+
+    :pswitch_0
+    check-cast p1, Lx71;
+
+    invoke-virtual {p0, p2}, Lls7;->C(I)Ljava/lang/Object;
+
+    move-result-object p0
+
+    check-cast p0, Lts7;
+
+    check-cast p0, Lyua;
+
+    iget-object p1, p1, Lx71;->E0:Lw71;
+
+    invoke-virtual {p1, p0}, Lw71;->setOpponents(Lyua;)V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public s(Lzoc;ILjava/util/List;)V
+    .locals 1
+
+    iget v0, p0, Ly71;->X:I
+
+    packed-switch v0, :pswitch_data_0
+
+    invoke-super {p0, p1, p2, p3}, Lcoc;->s(Lzoc;ILjava/util/List;)V
+
+    return-void
+
+    :pswitch_0
+    check-cast p1, Lx71;
+
+    invoke-interface {p3}, Ljava/util/List;->isEmpty()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {p0, p2}, Lls7;->C(I)Ljava/lang/Object;
+
+    move-result-object p0
+
+    check-cast p0, Lts7;
+
+    check-cast p0, Lyua;
+
+    iget-object p1, p1, Lx71;->E0:Lw71;
+
+    invoke-virtual {p1, p0}, Lw71;->setOpponents(Lyua;)V
+
+    goto :goto_0
+
+    :cond_0
+    iget-object p0, p0, Lls7;->o:Lfu;
+
+    iget-object p0, p0, Lfu;->f:Ljava/util/List;
+
+    invoke-interface {p0, p2}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object p0
+
+    check-cast p0, Lyua;
+
+    invoke-virtual {p1, p0, p3}, Lx71;->F(Lyua;Ljava/lang/Object;)V
+
+    :goto_0
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final t(Landroid/view/ViewGroup;I)Lzoc;
+    .locals 2
+
+    iget p2, p0, Ly71;->X:I
+
+    packed-switch p2, :pswitch_data_0
+
+    new-instance p2, Lww3;
+
+    invoke-virtual {p1}, Landroid/view/View;->getContext()Landroid/content/Context;
+
+    move-result-object p1
+
+    iget-object v0, p0, Ly71;->Z:Ljava/lang/Object;
+
+    check-cast v0, La38;
+
+    iget-object v1, p0, Ly71;->Y:Ljava/lang/Object;
+
+    check-cast v1, Ljava/util/concurrent/ExecutorService;
+
+    iget-object p0, p0, Ly71;->s0:Ljava/lang/Object;
+
+    check-cast p0, Lzjd;
+
+    invoke-direct {p2, p1, v0, v1, p0}, Lww3;-><init>(Landroid/content/Context;La38;Ljava/util/concurrent/ExecutorService;Liie;)V
+
+    return-object p2
+
+    :pswitch_0
+    new-instance p2, Landroid/widget/FrameLayout;
+
+    invoke-virtual {p1}, Landroid/view/View;->getContext()Landroid/content/Context;
+
+    move-result-object v0
+
+    invoke-direct {p2, v0}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;)V
+
+    new-instance v0, Landroid/view/ViewGroup$LayoutParams;
+
+    const/4 v1, -0x1
+
+    invoke-direct {v0, v1, v1}, Landroid/view/ViewGroup$LayoutParams;-><init>(II)V
+
+    invoke-virtual {p2, v0}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+
+    new-instance v0, Lw71;
+
+    invoke-virtual {p1}, Landroid/view/View;->getContext()Landroid/content/Context;
+
+    move-result-object p1
+
+    invoke-direct {v0, p1}, Lw71;-><init>(Landroid/content/Context;)V
+
+    sget p1, Lt5c;->call_opponents:I
+
+    invoke-virtual {v0, p1}, Landroidx/constraintlayout/widget/ConstraintLayout;->setId(I)V
+
+    iget-object p1, p0, Ly71;->Y:Ljava/lang/Object;
+
+    check-cast p1, Lnyc;
+
+    invoke-virtual {v0, p1}, Lw71;->setParentSizeProvider(Ln71;)V
+
+    iget-object p1, p0, Ly71;->r0:Ljava/lang/Object;
+
+    check-cast p1, Lo71;
+
+    invoke-virtual {v0, p1}, Lw71;->setVideoLayoutUpdatesControllerProvider(Lzb6;)V
+
+    iget-object p1, p0, Ly71;->Z:Ljava/lang/Object;
+
+    check-cast p1, Lq02;
+
+    invoke-virtual {v0, p1}, Lw71;->setListener(Lu71;)V
+
+    iget-object p0, p0, Ly71;->s0:Ljava/lang/Object;
+
+    check-cast p0, Lo71;
+
+    iget-object p0, p0, Lo71;->b:Lq71;
+
+    iget-object p0, p0, Lq71;->M0:Landroidx/recyclerview/widget/b;
+
+    invoke-virtual {v0, p0}, Lw71;->setOpponentsViewPool(Landroidx/recyclerview/widget/b;)V
+
+    invoke-virtual {p2, v0, v1, v1}, Landroid/view/ViewGroup;->addView(Landroid/view/View;II)V
+
+    new-instance p0, Lx71;
+
+    invoke-direct {p0, p2}, Lx71;-><init>(Landroid/widget/FrameLayout;)V
+
+    return-object p0
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

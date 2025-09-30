@@ -1,107 +1,100 @@
 .class public final Leee;
-.super Lqde;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lp66;
+.implements Lkh1;
 
 
 # instance fields
-.field public X:I
+.field public final a:Lyce;
 
-.field public synthetic Y:Ljava/lang/Throwable;
+.field public final b:Liic;
 
-.field public final synthetic Z:Llee;
+.field public final c:Lcl7;
 
 
 # direct methods
-.method public constructor <init>(Llee;Lkotlin/coroutines/Continuation;)V
-    .locals 0
+.method public constructor <init>()V
+    .locals 2
 
-    iput-object p1, p0, Leee;->Z:Llee;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 p1, 0x4
+    sget-object v0, Ldee;->a:Ldee;
 
-    invoke-direct {p0, p1, p2}, Lqde;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-static {v0}, Lzce;->a(Ljava/lang/Object;)Lyce;
+
+    move-result-object v0
+
+    iput-object v0, p0, Leee;->a:Lyce;
+
+    new-instance v1, Liic;
+
+    invoke-direct {v1, v0}, Liic;-><init>(Lro9;)V
+
+    iput-object v1, p0, Leee;->b:Liic;
+
+    sget-object v0, Ltde;->a:Ltde;
+
+    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lz4;
+
+    move-result-object v0
+
+    const-class v1, Llv1;
+
+    invoke-virtual {v0, v1}, Lz4;->d(Ljava/lang/Class;)Lzte;
+
+    move-result-object v0
+
+    iput-object v0, p0, Leee;->c:Lcl7;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final i(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final a(Ljava/lang/String;Z)V
+    .locals 8
 
-    check-cast p1, Lbn5;
+    iget-object p0, p0, Leee;->c:Lcl7;
 
-    check-cast p2, Ljava/lang/Throwable;
-
-    check-cast p3, Ljava/lang/Number;
-
-    invoke-virtual {p3}, Ljava/lang/Number;->longValue()J
-
-    check-cast p4, Lkotlin/coroutines/Continuation;
-
-    new-instance p1, Leee;
-
-    iget-object p0, p0, Leee;->Z:Llee;
-
-    invoke-direct {p1, p0, p4}, Leee;-><init>(Llee;Lkotlin/coroutines/Continuation;)V
-
-    iput-object p2, p1, Leee;->Y:Ljava/lang/Throwable;
-
-    sget-object p0, Le5f;->a:Le5f;
-
-    invoke-virtual {p1, p0}, Leee;->o(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {p0}, Lcl7;->getValue()Ljava/lang/Object;
 
     move-result-object p0
 
-    return-object p0
-.end method
+    move-object v0, p0
 
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 2
+    check-cast v0, Llv1;
 
-    iget v0, p0, Leee;->X:I
+    if-eqz p2, :cond_0
 
-    const/4 v1, 0x1
+    const-wide/16 v1, 0x1
 
-    if-eqz v0, :cond_1
-
-    if-ne v0, v1, :cond_0
-
-    invoke-static {p1}, Lsgg;->Z(Ljava/lang/Object;)V
-
-    return-object p1
+    goto :goto_0
 
     :cond_0
-    new-instance p0, Ljava/lang/IllegalStateException;
+    const-wide/16 v1, 0x0
 
-    const-string p1, "call to \'resume\' before \'invoke\' with coroutine"
+    :goto_0
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    invoke-static {v1, v2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
-    throw p0
+    move-result-object v4
 
-    :cond_1
-    invoke-static {p1}, Lsgg;->Z(Ljava/lang/Object;)V
+    const/4 v6, 0x0
 
-    iget-object p1, p0, Leee;->Y:Ljava/lang/Throwable;
+    const/16 v7, 0x74
 
-    iput v1, p0, Leee;->X:I
+    const-string v1, "PIP_ENABLED"
 
-    iget-object v0, p0, Leee;->Z:Llee;
+    const/4 v3, 0x0
 
-    invoke-static {v0, p1, p0}, Llee;->c(Llee;Ljava/lang/Throwable;Lbu3;)Ljava/lang/Object;
+    const/4 v5, 0x0
 
-    move-result-object p0
+    move-object v2, p1
 
-    sget-object p1, Lpx3;->a:Lpx3;
+    invoke-static/range {v0 .. v7}, Llv1;->c(Llv1;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Long;Ljava/lang/String;ZI)V
 
-    if-ne p0, p1, :cond_2
-
-    return-object p1
-
-    :cond_2
-    return-object p0
+    return-void
 .end method

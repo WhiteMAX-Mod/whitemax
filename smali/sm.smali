@@ -1,136 +1,232 @@
-.class public final Lsm;
-.super Landroidx/appcompat/widget/ContentFrameLayout;
+.class public abstract Lsm;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final synthetic s0:Lum;
+# static fields
+.field public static X:Ljava/lang/Boolean;
+
+.field public static Y:Z
+
+.field public static final Z:Lwr;
+
+.field public static final a:Ltid;
+
+.field public static final b:I
+
+.field public static c:Ldy7;
+
+.field public static o:Ldy7;
+
+.field public static final r0:Ljava/lang/Object;
+
+.field public static final s0:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Lum;Lxt3;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 3
 
-    iput-object p1, p0, Lsm;->s0:Lum;
+    new-instance v0, Ltid;
 
-    const/4 p1, 0x0
+    new-instance v1, Lep4;
 
-    invoke-direct {p0, p2, p1}, Landroidx/appcompat/widget/ContentFrameLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
+    const/4 v2, 0x4
+
+    invoke-direct {v1, v2}, Lep4;-><init>(I)V
+
+    invoke-direct {v0, v1}, Ltid;-><init>(Lep4;)V
+
+    sput-object v0, Lsm;->a:Ltid;
+
+    const/16 v0, -0x64
+
+    sput v0, Lsm;->b:I
+
+    const/4 v0, 0x0
+
+    sput-object v0, Lsm;->c:Ldy7;
+
+    sput-object v0, Lsm;->o:Ldy7;
+
+    sput-object v0, Lsm;->X:Ljava/lang/Boolean;
+
+    const/4 v0, 0x0
+
+    sput-boolean v0, Lsm;->Y:Z
+
+    new-instance v1, Lwr;
+
+    invoke-direct {v1, v0}, Lwr;-><init>(I)V
+
+    sput-object v1, Lsm;->Z:Lwr;
+
+    new-instance v0, Ljava/lang/Object;
+
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    sput-object v0, Lsm;->r0:Ljava/lang/Object;
+
+    new-instance v0, Ljava/lang/Object;
+
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    sput-object v0, Lsm;->s0:Ljava/lang/Object;
 
     return-void
+.end method
+
+.method public static b(Landroid/content/Context;)Z
+    .locals 4
+
+    sget-object v0, Lsm;->X:Ljava/lang/Boolean;
+
+    if-nez v0, :cond_0
+
+    :try_start_0
+    sget v0, Lzo;->a:I
+
+    invoke-static {}, Lyo;->a()I
+
+    move-result v0
+
+    or-int/lit16 v0, v0, 0x80
+
+    invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
+
+    move-result-object v1
+
+    new-instance v2, Landroid/content/ComponentName;
+
+    const-class v3, Lzo;
+
+    invoke-direct {v2, p0, v3}, Landroid/content/ComponentName;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
+
+    invoke-virtual {v1, v2, v0}, Landroid/content/pm/PackageManager;->getServiceInfo(Landroid/content/ComponentName;I)Landroid/content/pm/ServiceInfo;
+
+    move-result-object p0
+
+    iget-object p0, p0, Landroid/content/pm/ServiceInfo;->metaData:Landroid/os/Bundle;
+
+    if-eqz p0, :cond_0
+
+    const-string v0, "autoStoreLocales"
+
+    invoke-virtual {p0, v0}, Landroid/os/BaseBundle;->getBoolean(Ljava/lang/String;)Z
+
+    move-result p0
+
+    invoke-static {p0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object p0
+
+    sput-object p0, Lsm;->X:Ljava/lang/Boolean;
+    :try_end_0
+    .catch Landroid/content/pm/PackageManager$NameNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
+
+    goto :goto_0
+
+    :catch_0
+    sget-object p0, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
+
+    sput-object p0, Lsm;->X:Ljava/lang/Boolean;
+
+    :cond_0
+    :goto_0
+    sget-object p0, Lsm;->X:Ljava/lang/Boolean;
+
+    invoke-virtual {p0}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result p0
+
+    return p0
+.end method
+
+.method public static f(Len;)V
+    .locals 3
+
+    sget-object v0, Lsm;->r0:Ljava/lang/Object;
+
+    monitor-enter v0
+
+    :try_start_0
+    sget-object v1, Lsm;->Z:Lwr;
+
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    new-instance v2, Lpr;
+
+    invoke-direct {v2, v1}, Lpr;-><init>(Lwr;)V
+
+    :cond_0
+    :goto_0
+    invoke-virtual {v2}, Lpr;->hasNext()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_2
+
+    invoke-virtual {v2}, Lpr;->next()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Ljava/lang/ref/WeakReference;
+
+    invoke-virtual {v1}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lsm;
+
+    if-eq v1, p0, :cond_1
+
+    if-nez v1, :cond_0
+
+    :cond_1
+    invoke-virtual {v2}, Lpr;->remove()V
+
+    goto :goto_0
+
+    :catchall_0
+    move-exception p0
+
+    goto :goto_1
+
+    :cond_2
+    monitor-exit v0
+
+    return-void
+
+    :goto_1
+    monitor-exit v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    throw p0
 .end method
 
 
 # virtual methods
-.method public final dispatchKeyEvent(Landroid/view/KeyEvent;)Z
-    .locals 1
-
-    iget-object v0, p0, Lsm;->s0:Lum;
-
-    invoke-virtual {v0, p1}, Lum;->s(Landroid/view/KeyEvent;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_1
-
-    invoke-super {p0, p1}, Landroid/view/View;->dispatchKeyEvent(Landroid/view/KeyEvent;)Z
-
-    move-result p0
-
-    if-eqz p0, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    const/4 p0, 0x0
-
-    return p0
-
-    :cond_1
-    :goto_0
-    const/4 p0, 0x1
-
-    return p0
+.method public abstract a()V
 .end method
 
-.method public final onInterceptTouchEvent(Landroid/view/MotionEvent;)Z
-    .locals 3
-
-    invoke-virtual {p1}, Landroid/view/MotionEvent;->getAction()I
-
-    move-result v0
-
-    if-nez v0, :cond_1
-
-    invoke-virtual {p1}, Landroid/view/MotionEvent;->getX()F
-
-    move-result v0
-
-    float-to-int v0, v0
-
-    invoke-virtual {p1}, Landroid/view/MotionEvent;->getY()F
-
-    move-result v1
-
-    float-to-int v1, v1
-
-    const/4 v2, -0x5
-
-    if-lt v0, v2, :cond_0
-
-    if-lt v1, v2, :cond_0
-
-    invoke-virtual {p0}, Landroid/view/View;->getWidth()I
-
-    move-result v2
-
-    add-int/lit8 v2, v2, 0x5
-
-    if-gt v0, v2, :cond_0
-
-    invoke-virtual {p0}, Landroid/view/View;->getHeight()I
-
-    move-result v0
-
-    add-int/lit8 v0, v0, 0x5
-
-    if-le v1, v0, :cond_1
-
-    :cond_0
-    const/4 p1, 0x0
-
-    iget-object p0, p0, Lsm;->s0:Lum;
-
-    invoke-virtual {p0, p1}, Lum;->y(I)Ltm;
-
-    move-result-object p1
-
-    const/4 v0, 0x1
-
-    invoke-virtual {p0, p1, v0}, Lum;->q(Ltm;Z)V
-
-    return v0
-
-    :cond_1
-    invoke-super {p0, p1}, Landroid/view/ViewGroup;->onInterceptTouchEvent(Landroid/view/MotionEvent;)Z
-
-    move-result p0
-
-    return p0
+.method public abstract c()V
 .end method
 
-.method public final setBackgroundResource(I)V
-    .locals 1
+.method public abstract e()V
+.end method
 
-    invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
+.method public abstract g(I)Z
+.end method
 
-    move-result-object v0
+.method public abstract h(I)V
+.end method
 
-    invoke-static {v0, p1}, Liu0;->p(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
+.method public abstract i(Landroid/view/View;)V
+.end method
 
-    move-result-object p1
+.method public abstract j(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
+.end method
 
-    invoke-virtual {p0, p1}, Landroid/view/View;->setBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
-
-    return-void
+.method public abstract k(Ljava/lang/CharSequence;)V
 .end method

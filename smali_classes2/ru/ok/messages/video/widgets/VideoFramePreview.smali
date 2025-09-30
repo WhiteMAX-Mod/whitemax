@@ -3,17 +3,17 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lsqe;
+.implements Lp4f;
 
 
 # instance fields
-.field public final o0:Landroidx/appcompat/widget/AppCompatImageView;
+.field public final r0:Landroidx/appcompat/widget/AppCompatImageView;
 
-.field public final p0:Landroidx/appcompat/widget/AppCompatTextView;
+.field public final s0:Landroidx/appcompat/widget/AppCompatTextView;
 
-.field public final q0:Landroid/widget/ProgressBar;
+.field public final t0:Landroid/widget/ProgressBar;
 
-.field public final r0:Landroid/view/View;
+.field public final u0:Landroid/view/View;
 
 
 # direct methods
@@ -22,7 +22,7 @@
 
     invoke-direct {p0, p1, p2}, Lru/ok/utils/widgets/RoundedRectFrameLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    invoke-static {}, Lck4;->b()Lck4;
+    invoke-static {}, Lro4;->b()Lro4;
 
     move-result-object p2
 
@@ -32,7 +32,7 @@
 
     invoke-direct {v0, p1, v1}, Landroidx/appcompat/widget/AppCompatImageView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    iput-object v0, p0, Lru/ok/messages/video/widgets/VideoFramePreview;->o0:Landroidx/appcompat/widget/AppCompatImageView;
+    iput-object v0, p0, Lru/ok/messages/video/widgets/VideoFramePreview;->r0:Landroidx/appcompat/widget/AppCompatImageView;
 
     sget-object v2, Landroid/widget/ImageView$ScaleType;->CENTER_CROP:Landroid/widget/ImageView$ScaleType;
 
@@ -44,7 +44,7 @@
 
     invoke-direct {v0, v2, v2}, Landroid/widget/FrameLayout$LayoutParams;-><init>(II)V
 
-    iget-object v3, p0, Lru/ok/messages/video/widgets/VideoFramePreview;->o0:Landroidx/appcompat/widget/AppCompatImageView;
+    iget-object v3, p0, Lru/ok/messages/video/widgets/VideoFramePreview;->r0:Landroidx/appcompat/widget/AppCompatImageView;
 
     invoke-virtual {p0, v3, v0}, Landroid/view/ViewGroup;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
@@ -52,7 +52,7 @@
 
     invoke-direct {v0, p1}, Landroid/widget/ProgressBar;-><init>(Landroid/content/Context;)V
 
-    iput-object v0, p0, Lru/ok/messages/video/widgets/VideoFramePreview;->q0:Landroid/widget/ProgressBar;
+    iput-object v0, p0, Lru/ok/messages/video/widgets/VideoFramePreview;->t0:Landroid/widget/ProgressBar;
 
     const/4 v3, 0x1
 
@@ -60,7 +60,7 @@
 
     new-instance v0, Landroid/widget/FrameLayout$LayoutParams;
 
-    iget v4, p2, Lck4;->n:I
+    iget v4, p2, Lro4;->n:I
 
     invoke-direct {v0, v4, v4}, Landroid/widget/FrameLayout$LayoutParams;-><init>(II)V
 
@@ -68,7 +68,7 @@
 
     iput v4, v0, Landroid/widget/FrameLayout$LayoutParams;->gravity:I
 
-    iget-object v5, p0, Lru/ok/messages/video/widgets/VideoFramePreview;->q0:Landroid/widget/ProgressBar;
+    iget-object v5, p0, Lru/ok/messages/video/widgets/VideoFramePreview;->t0:Landroid/widget/ProgressBar;
 
     invoke-virtual {p0, v5, v0}, Landroid/view/ViewGroup;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
@@ -76,29 +76,29 @@
 
     invoke-direct {v0, p1, v1}, Landroidx/appcompat/widget/AppCompatTextView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    iput-object v0, p0, Lru/ok/messages/video/widgets/VideoFramePreview;->p0:Landroidx/appcompat/widget/AppCompatTextView;
+    iput-object v0, p0, Lru/ok/messages/video/widgets/VideoFramePreview;->s0:Landroidx/appcompat/widget/AppCompatTextView;
 
     invoke-virtual {v0, v2}, Landroid/widget/TextView;->setTextColor(I)V
 
-    iget-object p1, p0, Lru/ok/messages/video/widgets/VideoFramePreview;->p0:Landroidx/appcompat/widget/AppCompatTextView;
+    iget-object p1, p0, Lru/ok/messages/video/widgets/VideoFramePreview;->s0:Landroidx/appcompat/widget/AppCompatTextView;
 
-    iget v0, p2, Lck4;->E:F
+    iget v0, p2, Lro4;->D:F
 
     invoke-virtual {p1, v0}, Landroid/widget/TextView;->setTextSize(F)V
 
-    iget-object p1, p0, Lru/ok/messages/video/widgets/VideoFramePreview;->p0:Landroidx/appcompat/widget/AppCompatTextView;
+    iget-object p1, p0, Lru/ok/messages/video/widgets/VideoFramePreview;->s0:Landroidx/appcompat/widget/AppCompatTextView;
 
     invoke-virtual {p1, v4}, Landroid/widget/TextView;->setGravity(I)V
 
-    iget-object p1, p0, Lru/ok/messages/video/widgets/VideoFramePreview;->p0:Landroidx/appcompat/widget/AppCompatTextView;
+    iget-object p1, p0, Lru/ok/messages/video/widgets/VideoFramePreview;->s0:Landroidx/appcompat/widget/AppCompatTextView;
 
-    iget v0, p2, Lck4;->f:I
+    iget v0, p2, Lro4;->f:I
 
-    iget v4, p2, Lck4;->b:I
+    iget v4, p2, Lro4;->b:I
 
     invoke-virtual {p1, v0, v4, v0, v4}, Landroid/widget/TextView;->setPadding(IIII)V
 
-    iget p1, p2, Lck4;->s:I
+    iget p1, p2, Lro4;->s:I
 
     int-to-float p1, p1
 
@@ -160,7 +160,7 @@
 
     invoke-virtual {v0, p1}, Landroid/graphics/drawable/ShapeDrawable;->setAlpha(I)V
 
-    iget-object p1, p0, Lru/ok/messages/video/widgets/VideoFramePreview;->p0:Landroidx/appcompat/widget/AppCompatTextView;
+    iget-object p1, p0, Lru/ok/messages/video/widgets/VideoFramePreview;->s0:Landroidx/appcompat/widget/AppCompatTextView;
 
     invoke-virtual {p1, v0}, Landroid/view/View;->setBackground(Landroid/graphics/drawable/Drawable;)V
 
@@ -174,11 +174,11 @@
 
     iput v0, p1, Landroid/widget/FrameLayout$LayoutParams;->gravity:I
 
-    iget v0, p2, Lck4;->d:I
+    iget v0, p2, Lro4;->d:I
 
     iput v0, p1, Landroid/widget/FrameLayout$LayoutParams;->bottomMargin:I
 
-    iget-object v0, p0, Lru/ok/messages/video/widgets/VideoFramePreview;->p0:Landroidx/appcompat/widget/AppCompatTextView;
+    iget-object v0, p0, Lru/ok/messages/video/widgets/VideoFramePreview;->s0:Landroidx/appcompat/widget/AppCompatTextView;
 
     invoke-virtual {p0, v0, p1}, Landroid/view/ViewGroup;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
@@ -190,33 +190,33 @@
 
     invoke-direct {p1, v0}, Landroid/view/View;-><init>(Landroid/content/Context;)V
 
-    iput-object p1, p0, Lru/ok/messages/video/widgets/VideoFramePreview;->r0:Landroid/view/View;
+    iput-object p1, p0, Lru/ok/messages/video/widgets/VideoFramePreview;->u0:Landroid/view/View;
 
     invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
 
     move-result-object p1
 
-    sget v0, Linc;->g:I
+    sget v0, Ly0d;->g:I
 
-    invoke-static {p1, v0}, Lft3;->a(Landroid/content/Context;I)I
+    invoke-static {p1, v0}, Lmw3;->a(Landroid/content/Context;I)I
 
     move-result p1
 
-    iget-object v0, p0, Lru/ok/messages/video/widgets/VideoFramePreview;->r0:Landroid/view/View;
+    iget-object v0, p0, Lru/ok/messages/video/widgets/VideoFramePreview;->u0:Landroid/view/View;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object p1
 
-    iget v3, p2, Lck4;->a:I
+    iget v3, p2, Lro4;->a:I
 
     invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v3
 
-    iget v4, p2, Lck4;->g:I
+    iget v4, p2, Lro4;->g:I
 
-    invoke-static {v1, p1, v3, v4}, Ld46;->F(Ljava/lang/Integer;Ljava/lang/Integer;Ljava/lang/Integer;I)Landroid/graphics/drawable/GradientDrawable;
+    invoke-static {v1, p1, v3, v4}, Lhv8;->Q(Ljava/lang/Integer;Ljava/lang/Integer;Ljava/lang/Integer;I)Landroid/graphics/drawable/GradientDrawable;
 
     move-result-object p1
 
@@ -226,17 +226,17 @@
 
     invoke-direct {p1, v2, v2}, Landroid/widget/FrameLayout$LayoutParams;-><init>(II)V
 
-    iget-object v0, p0, Lru/ok/messages/video/widgets/VideoFramePreview;->r0:Landroid/view/View;
+    iget-object v0, p0, Lru/ok/messages/video/widgets/VideoFramePreview;->u0:Landroid/view/View;
 
     invoke-virtual {p0, v0, p1}, Landroid/view/ViewGroup;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    iget p1, p2, Lck4;->h:I
+    iget p1, p2, Lro4;->h:I
 
     int-to-float p1, p1
 
     invoke-virtual {p0, p1}, Lru/ok/utils/widgets/RoundedRectFrameLayout;->setCornerRadius(F)V
 
-    invoke-virtual {p0}, Lru/ok/messages/video/widgets/VideoFramePreview;->e()V
+    invoke-virtual {p0}, Lru/ok/messages/video/widgets/VideoFramePreview;->c()V
 
     return-void
 .end method
@@ -248,7 +248,7 @@
 
     if-eqz p1, :cond_0
 
-    iget-object p0, p0, Lru/ok/messages/video/widgets/VideoFramePreview;->q0:Landroid/widget/ProgressBar;
+    iget-object p0, p0, Lru/ok/messages/video/widgets/VideoFramePreview;->t0:Landroid/widget/ProgressBar;
 
     const/4 p1, 0x0
 
@@ -257,7 +257,7 @@
     return-void
 
     :cond_0
-    iget-object p0, p0, Lru/ok/messages/video/widgets/VideoFramePreview;->q0:Landroid/widget/ProgressBar;
+    iget-object p0, p0, Lru/ok/messages/video/widgets/VideoFramePreview;->t0:Landroid/widget/ProgressBar;
 
     const/16 p1, 0x8
 
@@ -266,24 +266,24 @@
     return-void
 .end method
 
-.method public final e()V
+.method public final c()V
     .locals 2
 
     invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
-    sget-object v1, Lvke;->a0:Lwfe;
+    sget-object v1, Lcze;->a0:Lzte;
 
-    invoke-static {v0}, Lp54;->M(Landroid/content/Context;)Lvke;
+    invoke-static {v0}, Ln4e;->I(Landroid/content/Context;)Lcze;
 
     move-result-object v0
 
-    iget-object p0, p0, Lru/ok/messages/video/widgets/VideoFramePreview;->q0:Landroid/widget/ProgressBar;
+    iget-object p0, p0, Lru/ok/messages/video/widgets/VideoFramePreview;->t0:Landroid/widget/ProgressBar;
 
-    iget v0, v0, Lvke;->k:I
+    iget v0, v0, Lcze;->k:I
 
-    invoke-static {p0, v0}, Lgad;->k0(Landroid/widget/ProgressBar;I)V
+    invoke-static {p0, v0}, Li4h;->U(Landroid/widget/ProgressBar;I)V
 
     return-void
 .end method
@@ -291,9 +291,9 @@
 .method public setPreviewEnabled(Z)V
     .locals 3
 
-    iget-object v0, p0, Lru/ok/messages/video/widgets/VideoFramePreview;->r0:Landroid/view/View;
+    iget-object v0, p0, Lru/ok/messages/video/widgets/VideoFramePreview;->u0:Landroid/view/View;
 
-    iget-object v1, p0, Lru/ok/messages/video/widgets/VideoFramePreview;->o0:Landroidx/appcompat/widget/AppCompatImageView;
+    iget-object v1, p0, Lru/ok/messages/video/widgets/VideoFramePreview;->r0:Landroidx/appcompat/widget/AppCompatImageView;
 
     if-eqz p1, :cond_0
 
@@ -305,13 +305,13 @@
 
     move-result-object v1
 
-    sget-object v2, Lvke;->a0:Lwfe;
+    sget-object v2, Lcze;->a0:Lzte;
 
-    invoke-static {v1}, Lp54;->M(Landroid/content/Context;)Lvke;
+    invoke-static {v1}, Ln4e;->I(Landroid/content/Context;)Lcze;
 
     move-result-object v1
 
-    iget v1, v1, Lvke;->w:I
+    iget v1, v1, Lcze;->w:I
 
     invoke-virtual {p0, v1}, Landroid/view/View;->setBackgroundColor(I)V
 

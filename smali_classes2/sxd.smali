@@ -1,242 +1,113 @@
-.class public final Lsxd;
-.super Lqde;
+.class public final synthetic Lsxd;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Ll66;
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field public X:Luxd;
+.field public final synthetic a:I
 
-.field public Y:Lj35;
-
-.field public Z:I
-
-.field public final synthetic o0:Luxd;
+.field public final synthetic b:Ltxd;
 
 
 # direct methods
-.method public constructor <init>(Luxd;Lkotlin/coroutines/Continuation;)V
+.method public synthetic constructor <init>(Ltxd;I)V
     .locals 0
 
-    iput-object p1, p0, Lsxd;->o0:Luxd;
+    iput p2, p0, Lsxd;->a:I
 
-    const/4 p1, 0x2
+    iput-object p1, p0, Lsxd;->b:Ltxd;
 
-    invoke-direct {p0, p1, p2}, Lqde;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final run()V
+    .locals 5
 
-    check-cast p1, Lox3;
+    iget v0, p0, Lsxd;->a:I
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    iget-object p0, p0, Lsxd;->b:Ltxd;
 
-    invoke-virtual {p0, p1, p2}, Lsxd;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    packed-switch v0, :pswitch_data_0
 
-    move-result-object p0
+    iget-object v0, p0, Ltxd;->b:Lfec;
 
-    check-cast p0, Lsxd;
+    const-string v1, "releaseInternal"
 
-    sget-object p1, Le5f;->a:Le5f;
+    const-string v2, "SharedPeerConnectionFac"
 
-    invoke-virtual {p0, p1}, Lsxd;->o(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v1}, Lfec;->log(Ljava/lang/String;Ljava/lang/String;)V
 
-    move-result-object p0
+    iget-object v0, p0, Ltxd;->d:Lorg/webrtc/PeerConnectionFactory;
 
-    return-object p0
-.end method
+    const/4 v1, 0x0
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 0
+    if-eqz v0, :cond_0
 
-    new-instance p1, Lsxd;
+    iget-object v3, p0, Ltxd;->i:Lll4;
 
-    iget-object p0, p0, Lsxd;->o0:Luxd;
+    iget-object v4, p0, Ltxd;->j:Lrza;
 
-    invoke-direct {p1, p0, p2}, Lsxd;-><init>(Luxd;Lkotlin/coroutines/Continuation;)V
+    invoke-virtual {v3, v4}, Lll4;->b(Lga8;)V
 
-    return-object p1
-.end method
+    invoke-virtual {v0}, Lorg/webrtc/PeerConnectionFactory;->dispose()V
 
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 10
+    iget-object v3, p0, Ltxd;->b:Lfec;
 
-    iget v0, p0, Lsxd;->Z:I
+    new-instance v4, Ljava/lang/StringBuilder;
 
-    const/4 v1, 0x1
+    invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
 
-    const/4 v2, 0x2
+    invoke-static {v0}, Ldh9;->c(Ljava/lang/Object;)Ljava/lang/String;
 
-    iget-object v3, p0, Lsxd;->o0:Luxd;
+    move-result-object v0
 
-    sget-object v4, Lpx3;->a:Lpx3;
+    invoke-virtual {v4, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    if-eqz v0, :cond_2
+    const-string v0, " was disposed."
 
-    if-eq v0, v1, :cond_1
+    invoke-virtual {v4, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    if-ne v0, v2, :cond_0
+    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    invoke-static {p1}, Lsgg;->Z(Ljava/lang/Object;)V
+    move-result-object v0
 
-    goto/16 :goto_3
+    invoke-interface {v3, v2, v0}, Lfec;->log(Ljava/lang/String;Ljava/lang/String;)V
+
+    iput-object v1, p0, Ltxd;->d:Lorg/webrtc/PeerConnectionFactory;
 
     :cond_0
-    new-instance p0, Ljava/lang/IllegalStateException;
+    iget-object v0, p0, Ltxd;->g:Lorg/webrtc/audio/JavaAudioDeviceModule;
 
-    const-string p1, "call to \'resume\' before \'invoke\' with coroutine"
+    if-eqz v0, :cond_1
 
-    invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    invoke-interface {v0}, Lorg/webrtc/audio/AudioDeviceModule;->release()V
 
-    throw p0
+    iput-object v1, p0, Ltxd;->g:Lorg/webrtc/audio/JavaAudioDeviceModule;
 
     :cond_1
-    iget-object v0, p0, Lsxd;->Y:Lj35;
+    return-void
 
-    iget-object v1, p0, Lsxd;->X:Luxd;
+    :pswitch_0
+    iget-object p0, p0, Ltxd;->g:Lorg/webrtc/audio/JavaAudioDeviceModule;
 
-    invoke-static {p1}, Lsgg;->Z(Ljava/lang/Object;)V
+    if-eqz p0, :cond_2
 
-    goto :goto_0
+    invoke-interface {p0}, Lorg/webrtc/audio/AudioDeviceModule;->restartAudioRecording()V
 
     :cond_2
-    invoke-static {p1}, Lsgg;->Z(Ljava/lang/Object;)V
+    return-void
 
-    iget-object v0, v3, Luxd;->w0:Lj35;
+    nop
 
-    iget-object p1, v3, Luxd;->o0:Lje7;
-
-    invoke-interface {p1}, Lje7;->getValue()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lad6;
-
-    new-instance v5, Lrnb;
-
-    iget-object v6, v3, Luxd;->o:Lje7;
-
-    invoke-interface {v6}, Lje7;->getValue()Ljava/lang/Object;
-
-    move-result-object v6
-
-    check-cast v6, Lh23;
-
-    check-cast v6, Lmwc;
-
-    invoke-virtual {v6}, Lmwc;->p()J
-
-    move-result-wide v6
-
-    iget-object v8, v3, Luxd;->b:Lje7;
-
-    invoke-interface {v8}, Lje7;->getValue()Ljava/lang/Object;
-
-    move-result-object v8
-
-    check-cast v8, Landroid/content/Context;
-
-    sget-object v9, Lqp4;->q0:Lap9;
-
-    invoke-virtual {v9, v8}, Lap9;->g(Landroid/content/Context;)Lqp4;
-
-    move-result-object v8
-
-    invoke-virtual {v8}, Lqp4;->k()Lyha;
-
-    move-result-object v8
-
-    invoke-interface {v8}, Lyha;->getName()Ljava/lang/String;
-
-    move-result-object v8
-
-    invoke-direct {v5, v6, v7, v8}, Lsnb;-><init>(JLjava/lang/String;)V
-
-    iput-object v3, p0, Lsxd;->X:Luxd;
-
-    iput-object v0, p0, Lsxd;->Y:Lj35;
-
-    iput v1, p0, Lsxd;->Z:I
-
-    invoke-virtual {p1, v5, v1, p0}, Lad6;->a(Lsnb;ZLkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    if-ne p1, v4, :cond_3
-
-    goto :goto_2
-
-    :cond_3
-    move-object v1, v3
-
-    :goto_0
-    check-cast p1, Lmnb;
-
-    const/4 v5, 0x0
-
-    if-eqz p1, :cond_4
-
-    iget-object p1, p1, Lmnb;->a:Landroid/net/Uri;
-
-    goto :goto_1
-
-    :cond_4
-    move-object p1, v5
-
-    :goto_1
-    new-instance v6, Lbxd;
-
-    invoke-direct {v6, p1}, Lbxd;-><init>(Landroid/net/Uri;)V
-
-    sget-object p1, Luxd;->x0:[Lbc7;
-
-    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    invoke-static {v0, v6}, Ljof;->o(Lj35;Ljava/lang/Object;)V
-
-    iget-object p1, v3, Luxd;->X:Lje7;
-
-    invoke-interface {p1}, Lje7;->getValue()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lrie;
-
-    check-cast p1, Lo7a;
-
-    invoke-virtual {p1}, Lo7a;->a()Ljx3;
-
-    move-result-object p1
-
-    new-instance v0, Lrxd;
-
-    invoke-direct {v0, v2, v5}, Lqde;-><init>(ILkotlin/coroutines/Continuation;)V
-
-    iput-object v5, p0, Lsxd;->X:Luxd;
-
-    iput-object v5, p0, Lsxd;->Y:Lj35;
-
-    iput v2, p0, Lsxd;->Z:I
-
-    invoke-static {p1, v0, p0}, Lzo3;->j0(Lhx3;Ll66;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    if-ne p0, v4, :cond_5
-
-    :goto_2
-    return-object v4
-
-    :cond_5
-    :goto_3
-    sget-object p0, Le5f;->a:Le5f;
-
-    return-object p0
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

@@ -1,17 +1,32 @@
-.class public interface abstract Lxv6;
+.class public abstract Lxv6;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
+# static fields
+.field public static final a:Lwv6;
+
+
+# direct methods
+.method static constructor <clinit>()V
+    .locals 1
+
+    new-instance v0, Lwv6;
+
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    sput-object v0, Lxv6;->a:Lwv6;
+
+    return-void
+.end method
+
+
 # virtual methods
-.method public abstract a()Ljava/lang/String;
+.method public a(Lcqd;)V
+    .locals 0
+
+    return-void
 .end method
 
-.method public abstract b(La05;Lsp8;Lclc;Ldgc;Landroid/graphics/ColorSpace;)Lql5;
-.end method
-
-.method public abstract c(Lru6;)Z
-.end method
-
-.method public abstract d(La05;Lclc;Ldgc;)Z
+.method public abstract b(Llw6;)V
 .end method

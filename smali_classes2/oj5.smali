@@ -1,270 +1,183 @@
-.class public final Loj5;
-.super La4f;
+.class public final enum Loj5;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
 
+# static fields
+.field public static final enum X:Loj5;
+
+.field public static final enum Y:Loj5;
+
+.field public static final enum Z:Loj5;
+
+.field public static final b:[Loj5;
+
+.field public static final enum c:Loj5;
+
+.field public static final enum o:Loj5;
+
+.field public static final enum r0:Loj5;
+
+.field public static final enum s0:Loj5;
+
+.field public static final enum t0:Loj5;
+
+.field public static final synthetic u0:[Loj5;
+
+
 # instance fields
-.field public final b:Ljava/io/File;
-
-.field public final c:Lwk8;
-
-.field public final d:J
-
-.field public final e:Lu8d;
-
-.field public final f:Lwq6;
-
-.field public final g:I
+.field public final a:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>(Ljava/io/File;Lwk8;JLu8d;Lwq6;I)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 11
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Loj5;
 
-    iput p7, p0, Loj5;->g:I
+    const/4 v1, 0x0
 
-    iput-object p1, p0, Loj5;->b:Ljava/io/File;
+    const-string v2, "Message"
 
-    iput-object p2, p0, Loj5;->c:Lwk8;
+    const-string v3, "MESSAGE"
 
-    iput-wide p3, p0, Loj5;->d:J
+    invoke-direct {v0, v3, v1, v2}, Loj5;-><init>(Ljava/lang/String;ILjava/lang/String;)V
 
-    iput-object p5, p0, Loj5;->e:Lu8d;
+    sput-object v0, Loj5;->c:Loj5;
 
-    iput-object p6, p0, Loj5;->f:Lwq6;
+    new-instance v1, Loj5;
+
+    const/4 v2, 0x1
+
+    const-string v3, "ChatMessage"
+
+    const-string v4, "CHAT_MESSAGE"
+
+    invoke-direct {v1, v4, v2, v3}, Loj5;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v1, Loj5;->o:Loj5;
+
+    new-instance v2, Loj5;
+
+    const/4 v3, 0x2
+
+    const-string v4, "ChatMessage-channel"
+
+    const-string v5, "CHANNEL_MESSAGE"
+
+    invoke-direct {v2, v5, v3, v4}, Loj5;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v2, Loj5;->X:Loj5;
+
+    new-instance v3, Loj5;
+
+    const/4 v4, 0x3
+
+    const-string v5, "ChatSystemMessage"
+
+    const-string v6, "CHAT_SYSTEM_MESSAGE"
+
+    invoke-direct {v3, v6, v4, v5}, Loj5;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v3, Loj5;->Y:Loj5;
+
+    new-instance v4, Loj5;
+
+    const/4 v5, 0x4
+
+    const-string v6, "ChatReply"
+
+    const-string v7, "CHAT_REPLY"
+
+    invoke-direct {v4, v7, v5, v6}, Loj5;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v4, Loj5;->Z:Loj5;
+
+    new-instance v5, Loj5;
+
+    const/4 v6, 0x5
+
+    const-string v7, "GroupChat"
+
+    const-string v8, "GROUP_CHAT"
+
+    invoke-direct {v5, v8, v6, v7}, Loj5;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v5, Loj5;->r0:Loj5;
+
+    new-instance v6, Loj5;
+
+    const/4 v7, 0x6
+
+    const-string v8, "Scheduled"
+
+    const-string v9, "SCHEDULED"
+
+    invoke-direct {v6, v9, v7, v8}, Loj5;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v6, Loj5;->s0:Loj5;
+
+    new-instance v7, Loj5;
+
+    const/4 v8, 0x7
+
+    const-string v9, "Unknown"
+
+    const-string v10, "UNKNOWN"
+
+    invoke-direct {v7, v10, v8, v9}, Loj5;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v7, Loj5;->t0:Loj5;
+
+    filled-new-array/range {v0 .. v7}, [Loj5;
+
+    move-result-object v0
+
+    sput-object v0, Loj5;->u0:[Loj5;
+
+    invoke-static {}, Loj5;->values()[Loj5;
+
+    move-result-object v0
+
+    sput-object v0, Loj5;->b:[Loj5;
 
     return-void
 .end method
 
+.method public constructor <init>(Ljava/lang/String;ILjava/lang/String;)V
+    .locals 0
 
-# virtual methods
-.method public final L(Lxt0;)V
-    .locals 14
+    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    iget-object v0, p0, Loj5;->b:Ljava/io/File;
+    iput-object p3, p0, Loj5;->a:Ljava/lang/String;
 
-    sget-object v1, Ls0a;->a:Ljava/util/logging/Logger;
+    return-void
+.end method
 
-    new-instance v1, Ljava/io/FileInputStream;
+.method public static valueOf(Ljava/lang/String;)Loj5;
+    .locals 1
 
-    invoke-direct {v1, v0}, Ljava/io/FileInputStream;-><init>(Ljava/io/File;)V
+    const-class v0, Loj5;
 
-    new-instance v0, Lkx;
-
-    new-instance v2, Lsse;
-
-    invoke-direct {v2}, Ljava/lang/Object;-><init>()V
-
-    const/4 v3, 0x1
-
-    invoke-direct {v0, v1, v3, v2}, Lkx;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
-
-    new-instance v1, Lw5c;
-
-    invoke-direct {v1, v0}, Lw5c;-><init>(Lhtd;)V
-
-    :try_start_0
-    iget-wide v4, p0, Loj5;->d:J
-
-    const-wide/16 v6, 0x0
-
-    cmp-long v0, v4, v6
-
-    if-lez v0, :cond_0
-
-    invoke-virtual {v1, v4, v5}, Lw5c;->skip(J)V
-
-    goto :goto_0
-
-    :catchall_0
-    move-exception v0
-
-    move-object p0, v0
-
-    goto/16 :goto_4
-
-    :cond_0
-    :goto_0
-    iget v0, p0, Loj5;->g:I
-
-    new-array v0, v0, [B
-
-    :goto_1
-    new-instance v2, Los0;
-
-    invoke-direct {v2, v1, v3}, Los0;-><init>(Lyt0;I)V
-
-    iget v8, p0, Loj5;->g:I
-
-    const/4 v9, 0x0
-
-    invoke-virtual {v2, v0, v9, v8}, Los0;->read([BII)I
-
-    move-result v2
-
-    const/4 v8, -0x1
-
-    if-eq v2, v8, :cond_6
-
-    invoke-interface {p1, v2, v0}, Lxt0;->K(I[B)Lxt0;
-
-    int-to-long v8, v2
-
-    add-long/2addr v4, v8
-
-    iget-object v8, p0, Loj5;->e:Lu8d;
-
-    iget v9, v8, Lu8d;->b:I
-
-    add-int/2addr v9, v2
-
-    iput v9, v8, Lu8d;->b:I
-
-    iget-object v2, p0, Loj5;->b:Ljava/io/File;
-
-    invoke-virtual {v2}, Ljava/io/File;->exists()Z
-
-    move-result v2
-
-    if-eqz v2, :cond_5
-
-    iget-object v2, p0, Loj5;->b:Ljava/io/File;
-
-    invoke-virtual {v2}, Ljava/io/File;->length()J
-
-    move-result-wide v11
-
-    cmp-long v2, v11, v6
-
-    if-eqz v2, :cond_4
-
-    long-to-float v2, v4
-
-    const/high16 v8, 0x42c80000    # 100.0f
-
-    mul-float/2addr v2, v8
-
-    long-to-float v9, v11
-
-    div-float/2addr v2, v9
-
-    cmpl-float v9, v2, v8
-
-    if-lez v9, :cond_1
-
-    :goto_2
-    move v10, v8
-
-    goto :goto_3
-
-    :cond_1
-    const/4 v8, 0x0
-
-    cmpg-float v9, v2, v8
-
-    if-gez v9, :cond_2
-
-    goto :goto_2
-
-    :cond_2
-    move v10, v2
-
-    :goto_3
-    iget-object v9, p0, Loj5;->f:Lwq6;
-
-    iget-object v2, v9, Lwq6;->o0:Ljava/util/concurrent/atomic/AtomicBoolean;
-
-    invoke-virtual {v2}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
-
-    move-result v2
-
-    if-eqz v2, :cond_3
-
-    goto :goto_1
-
-    :cond_3
-    iget-object v2, v9, Lwq6;->Y:Lesc;
-
-    new-instance v8, Leq6;
-
-    const/4 v13, 0x1
-
-    invoke-direct/range {v8 .. v13}, Leq6;-><init>(Lam4;FJI)V
-
-    invoke-virtual {v2, v8}, Lesc;->b(Ljava/lang/Runnable;)Lam4;
-
-    goto :goto_1
-
-    :cond_4
-    new-instance p0, Ljava/io/IOException;
-
-    const-string p1, "FILE_ZERO_LENGTH"
-
-    invoke-direct {p0, p1}, Ljava/io/IOException;-><init>(Ljava/lang/String;)V
-
-    throw p0
-
-    :cond_5
-    new-instance p1, Ljava/io/FileNotFoundException;
-
-    iget-object p0, p0, Loj5;->b:Ljava/io/File;
-
-    invoke-virtual {p0}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
 
     move-result-object p0
 
-    invoke-direct {p1, p0}, Ljava/io/FileNotFoundException;-><init>(Ljava/lang/String;)V
-
-    throw p1
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    :cond_6
-    invoke-virtual {v1}, Lw5c;->close()V
-
-    return-void
-
-    :goto_4
-    :try_start_1
-    invoke-virtual {v1}, Lw5c;->close()V
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_1
-
-    goto :goto_5
-
-    :catchall_1
-    move-exception v0
-
-    move-object p1, v0
-
-    invoke-virtual {p0, p1}, Ljava/lang/Throwable;->addSuppressed(Ljava/lang/Throwable;)V
-
-    :goto_5
-    throw p0
-.end method
-
-.method public final f()J
-    .locals 4
-
-    iget-object v0, p0, Loj5;->b:Ljava/io/File;
-
-    invoke-virtual {v0}, Ljava/io/File;->length()J
-
-    move-result-wide v0
-
-    iget-wide v2, p0, Loj5;->d:J
-
-    sub-long/2addr v0, v2
-
-    return-wide v0
-.end method
-
-.method public final g()Lwk8;
-    .locals 0
-
-    iget-object p0, p0, Loj5;->c:Lwk8;
+    check-cast p0, Loj5;
 
     return-object p0
+.end method
+
+.method public static values()[Loj5;
+    .locals 1
+
+    sget-object v0, Loj5;->u0:[Loj5;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, [Loj5;
+
+    return-object v0
 .end method

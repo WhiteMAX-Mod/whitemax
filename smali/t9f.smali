@@ -4,173 +4,161 @@
 
 
 # static fields
-.field public static final d:Ljava/util/List;
+.field public static final d:Ljava/util/regex/Pattern;
 
 
 # instance fields
-.field public a:Lopf;
+.field public final a:Ljava/lang/String;
 
-.field public final b:Ljava/util/ArrayList;
+.field public final b:Ljava/lang/String;
 
-.field public final c:Ljava/util/ArrayList;
+.field public final c:Ljava/lang/String;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 5
+    .locals 1
 
-    const/4 v0, 0x1
+    const-string v0, "[a-zA-Z0-9-_.~%]{1,900}"
 
-    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v0
-
-    const/4 v1, 0x2
-
-    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v1
-
-    const/4 v2, 0x4
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    const/4 v3, 0x3
-
-    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v3
-
-    const/4 v4, 0x7
-
-    invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v4
-
-    filled-new-array {v0, v1, v2, v3, v4}, [Ljava/lang/Integer;
+    invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
 
     move-result-object v0
 
-    invoke-static {v0}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
-
-    move-result-object v0
-
-    sput-object v0, Lt9f;->d:Ljava/util/List;
+    sput-object v0, Lt9f;->d:Ljava/util/regex/Pattern;
 
     return-void
 .end method
 
-.method public constructor <init>()V
-    .locals 1
+.method public constructor <init>(Ljava/lang/String;Ljava/lang/String;)V
+    .locals 2
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    new-instance v0, Ljava/util/ArrayList;
+    if-eqz p2, :cond_0
 
-    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
+    const-string v0, "/topics/"
 
-    iput-object v0, p0, Lt9f;->b:Ljava/util/ArrayList;
+    invoke-virtual {p2, v0}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
-    new-instance v0, Ljava/util/ArrayList;
+    move-result v0
 
-    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
+    if-eqz v0, :cond_0
 
-    iput-object v0, p0, Lt9f;->c:Ljava/util/ArrayList;
+    const/16 v0, 0x8
 
-    return-void
-.end method
+    invoke-virtual {p2, v0}, Ljava/lang/String;->substring(I)Ljava/lang/String;
 
-
-# virtual methods
-.method public final a(Lm9f;)V
-    .locals 0
-
-    iget-object p0, p0, Lt9f;->b:Ljava/util/ArrayList;
-
-    invoke-virtual {p0, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    return-void
-.end method
-
-.method public final b()Ljab;
-    .locals 6
-
-    iget-object v0, p0, Lt9f;->b:Ljava/util/ArrayList;
-
-    invoke-virtual {v0}, Ljava/util/ArrayList;->isEmpty()Z
-
-    move-result v1
-
-    xor-int/lit8 v1, v1, 0x1
-
-    const-string v2, "UseCase must not be empty."
-
-    invoke-static {v2, v1}, Lfq0;->k(Ljava/lang/String;Z)V
-
-    iget-object v1, p0, Lt9f;->c:Ljava/util/ArrayList;
-
-    invoke-virtual {v1}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
-
-    move-result-object v2
-
-    const/4 v3, 0x0
-
-    :goto_0
-    invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v4
-
-    if-eqz v4, :cond_1
-
-    invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v4
-
-    check-cast v4, Lzgf;
-
-    iget v4, v4, Lzgf;->a:I
-
-    sget-object v5, Lt9f;->d:Ljava/util/List;
-
-    invoke-static {v4, v5}, Lg47;->l(ILjava/util/Collection;)V
-
-    and-int v5, v3, v4
-
-    if-gtz v5, :cond_0
-
-    or-int/2addr v3, v4
+    move-result-object v0
 
     goto :goto_0
 
     :cond_0
-    new-instance p0, Ljava/lang/IllegalArgumentException;
+    move-object v0, p2
 
-    sget-object v0, Ljava/util/Locale;->US:Ljava/util/Locale;
+    :goto_0
+    if-eqz v0, :cond_1
 
-    invoke-static {v5}, Lg47;->v(I)Ljava/lang/String;
+    sget-object v1, Lt9f;->d:Ljava/util/regex/Pattern;
 
-    move-result-object v0
+    invoke-virtual {v1, v0}, Ljava/util/regex/Pattern;->matcher(Ljava/lang/CharSequence;)Ljava/util/regex/Matcher;
 
-    const-string v1, "More than one effects has targets "
+    move-result-object v1
 
-    const-string v2, "."
+    invoke-virtual {v1}, Ljava/util/regex/Matcher;->matches()Z
 
-    invoke-static {v1, v0, v2}, Lu88;->k(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    move-result v1
 
-    move-result-object v0
+    if-eqz v1, :cond_1
 
-    invoke-direct {p0, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+    iput-object v0, p0, Lt9f;->a:Ljava/lang/String;
 
-    throw p0
+    iput-object p1, p0, Lt9f;->b:Ljava/lang/String;
+
+    const-string v0, "!"
+
+    invoke-static {p1, v0, p2}, Lsq3;->h(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lt9f;->c:Ljava/lang/String;
+
+    return-void
 
     :cond_1
-    new-instance v2, Ljab;
+    new-instance p0, Ljava/lang/IllegalArgumentException;
 
-    iget-object p0, p0, Lt9f;->a:Lopf;
+    const-string p1, "Invalid topic name: "
 
-    invoke-direct {v2, p0, v0, v1}, Ljab;-><init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V
+    const-string p2, " does not match the allowed format [a-zA-Z0-9-_.~%]{1,900}."
 
-    return-object v2
+    invoke-static {p1, v0, p2}, Lyv7;->h(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-direct {p0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw p0
+.end method
+
+
+# virtual methods
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 3
+
+    instance-of v0, p1, Lt9f;
+
+    const/4 v1, 0x0
+
+    if-nez v0, :cond_0
+
+    return v1
+
+    :cond_0
+    check-cast p1, Lt9f;
+
+    iget-object v0, p0, Lt9f;->a:Ljava/lang/String;
+
+    iget-object v2, p1, Lt9f;->a:Ljava/lang/String;
+
+    invoke-virtual {v0, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    iget-object p0, p0, Lt9f;->b:Ljava/lang/String;
+
+    iget-object p1, p1, Lt9f;->b:Ljava/lang/String;
+
+    invoke-virtual {p0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result p0
+
+    if-eqz p0, :cond_1
+
+    const/4 p0, 0x1
+
+    return p0
+
+    :cond_1
+    return v1
+.end method
+
+.method public final hashCode()I
+    .locals 1
+
+    iget-object v0, p0, Lt9f;->b:Ljava/lang/String;
+
+    iget-object p0, p0, Lt9f;->a:Ljava/lang/String;
+
+    filled-new-array {v0, p0}, [Ljava/lang/Object;
+
+    move-result-object p0
+
+    invoke-static {p0}, Ljava/util/Arrays;->hashCode([Ljava/lang/Object;)I
+
+    move-result p0
+
+    return p0
 .end method

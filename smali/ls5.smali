@@ -1,19 +1,24 @@
 .class public final Lls5;
-.super Ljava/lang/Object;
+.super Lkotlinx/coroutines/internal/ScopeCoroutine;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:Z
+# virtual methods
+.method public final childCancelled(Ljava/lang/Throwable;)Z
+    .locals 1
 
+    instance-of v0, p1, Lkotlinx/coroutines/flow/internal/ChildCancelledException;
 
-# direct methods
-.method public constructor <init>(Z)V
-    .locals 0
+    if-eqz v0, :cond_0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/4 p0, 0x1
 
-    iput-boolean p1, p0, Lls5;->a:Z
+    return p0
 
-    return-void
+    :cond_0
+    invoke-virtual {p0, p1}, Lsf7;->cancelImpl$kotlinx_coroutines_core(Ljava/lang/Object;)Z
+
+    move-result p0
+
+    return p0
 .end method

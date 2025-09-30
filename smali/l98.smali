@@ -1,63 +1,104 @@
-.class public final synthetic Ll98;
-.super Ljava/lang/Object;
+.class public final Ll98;
+.super La98;
 .source "SourceFile"
 
 # interfaces
-.implements Lkm7;
-.implements Lmm7;
+.implements Lype;
 
 
 # instance fields
-.field public final synthetic a:Lp98;
+.field public final a:Ljava/util/concurrent/Callable;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lp98;)V
+.method public constructor <init>(Ljava/util/concurrent/Callable;)V
     .locals 0
 
-    iput-object p1, p0, Ll98;->a:Lp98;
-
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Ll98;->a:Ljava/util/concurrent/Callable;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public c(Ljava/lang/Object;Lfm5;)V
-    .locals 1
+.method public final g(Lt98;)V
+    .locals 3
 
-    check-cast p1, Lz0b;
+    sget-object v0, Lvyg;->b:Lf2h;
 
-    iget-object p0, p0, Ll98;->a:Lp98;
+    new-instance v1, Lt6;
 
-    iget-object p0, p0, Lp98;->b:Lo88;
+    const/4 v2, 0x1
 
-    new-instance v0, Lx0b;
+    invoke-direct {v1, v2, v0}, Lt6;-><init>(ILjava/lang/Object;)V
 
-    invoke-direct {v0, p2}, Lx0b;-><init>(Lfm5;)V
+    invoke-interface {p1, v1}, Lt98;->c(Loq4;)V
 
-    invoke-interface {p1, p0, v0}, Lz0b;->X(Lc1b;Lx0b;)V
+    invoke-virtual {v1}, Lt6;->f()Z
 
+    move-result v0
+
+    if-nez v0, :cond_2
+
+    :try_start_0
+    iget-object p0, p0, Ll98;->a:Ljava/util/concurrent/Callable;
+
+    invoke-interface {p0}, Ljava/util/concurrent/Callable;->call()Ljava/lang/Object;
+
+    move-result-object p0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    invoke-virtual {v1}, Lt6;->f()Z
+
+    move-result v0
+
+    if-nez v0, :cond_2
+
+    if-nez p0, :cond_0
+
+    invoke-interface {p1}, Lt98;->b()V
+
+    return-void
+
+    :cond_0
+    invoke-interface {p1, p0}, Lt98;->a(Ljava/lang/Object;)V
+
+    return-void
+
+    :catchall_0
+    move-exception p0
+
+    invoke-static {p0}, Lzyd;->F(Ljava/lang/Throwable;)V
+
+    invoke-virtual {v1}, Lt6;->f()Z
+
+    move-result v0
+
+    if-nez v0, :cond_1
+
+    invoke-interface {p1, p0}, Lt98;->onError(Ljava/lang/Throwable;)V
+
+    goto :goto_0
+
+    :cond_1
+    invoke-static {p0}, Ln4e;->D(Ljava/lang/Throwable;)V
+
+    :cond_2
+    :goto_0
     return-void
 .end method
 
-.method public invoke(Ljava/lang/Object;)V
+.method public final get()Ljava/lang/Object;
     .locals 0
 
-    check-cast p1, Lz0b;
+    iget-object p0, p0, Ll98;->a:Ljava/util/concurrent/Callable;
 
-    iget-object p0, p0, Ll98;->a:Lp98;
+    invoke-interface {p0}, Ljava/util/concurrent/Callable;->call()Ljava/lang/Object;
 
-    iget-object p0, p0, Lp98;->m:Lq13;
+    move-result-object p0
 
-    iget-object p0, p0, Lq13;->b:Ljava/lang/Object;
-
-    check-cast p0, Lz1b;
-
-    iget-object p0, p0, Lz1b;->z:Lrc8;
-
-    invoke-interface {p1, p0}, Lz0b;->a0(Lrc8;)V
-
-    return-void
+    return-object p0
 .end method

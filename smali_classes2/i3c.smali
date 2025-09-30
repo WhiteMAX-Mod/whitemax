@@ -1,154 +1,200 @@
-.class public final Li3c;
-.super Lj3c;
-.source "SourceFile"
+.class public abstract Li3c;
+.super Ljava/lang/Object;
 
 
-# instance fields
-.field public final a:J
+# static fields
+.field public static attach_bar_thumbnail_size:I = 0x7f070054
 
-.field public final b:J
+.field public static attach_drawable:I = 0x7f070055
 
-.field public final c:F
+.field public static audio_record_static_circle_size:I = 0x7f070056
 
+.field public static big_success_button_corner_radius:I = 0x7f07005a
 
-# direct methods
-.method public constructor <init>(FJJ)V
-    .locals 0
+.field public static bottom_bar_height:I = 0x7f07005b
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+.field public static bottom_picker_height:I = 0x7f07005c
 
-    iput-wide p2, p0, Li3c;->a:J
+.field public static call_button_max_width:I = 0x7f070060
 
-    iput-wide p4, p0, Li3c;->b:J
+.field public static call_button_size:I = 0x7f070061
 
-    iput p1, p0, Li3c;->c:F
+.field public static call_finished_controls_buttons_height:I = 0x7f070062
 
-    return-void
-.end method
+.field public static call_finished_controls_buttons_text_size:I = 0x7f070063
 
+.field public static call_finished_controls_margin_bottom:I = 0x7f070064
 
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 7
+.field public static call_pip_margin_bottom:I = 0x7f070065
 
-    const/4 v0, 0x1
+.field public static call_rate_details__rate_margin:I = 0x7f070066
 
-    if-ne p0, p1, :cond_0
+.field public static call_rate_details__title_margin:I = 0x7f070067
 
-    return v0
+.field public static call_rate_details__title_textsize:I = 0x7f070068
 
-    :cond_0
-    instance-of v1, p1, Li3c;
+.field public static call_rate_item__padding_top:I = 0x7f070069
 
-    const/4 v2, 0x0
+.field public static call_title_padding:I = 0x7f07006a
 
-    if-nez v1, :cond_1
+.field public static change_profile_big_padding:I = 0x7f07006f
 
-    return v2
+.field public static change_profile_small_padding:I = 0x7f070070
 
-    :cond_1
-    check-cast p1, Li3c;
+.field public static chat_bottom_panel_height:I = 0x7f070071
 
-    iget-wide v3, p0, Li3c;->a:J
+.field public static chat_control_message_spacing:I = 0x7f070072
 
-    iget-wide v5, p1, Li3c;->a:J
+.field public static chat_folder_item_height:I = 0x7f070073
 
-    cmp-long v1, v3, v5
+.field public static chat_folders_container_height:I = 0x7f070074
 
-    if-eqz v1, :cond_2
+.field public static chat_folders_container_horizontal_padding:I = 0x7f070075
 
-    return v2
+.field public static chat_folders_item_horizontal_offset:I = 0x7f070076
 
-    :cond_2
-    iget-wide v3, p0, Li3c;->b:J
+.field public static chat_folders_item_vertical_offset:I = 0x7f070077
 
-    iget-wide v5, p1, Li3c;->b:J
+.field public static chat_messages_padding_bottom:I = 0x7f070078
 
-    cmp-long v1, v3, v5
+.field public static chat_series_spacing:I = 0x7f070079
 
-    if-eqz v1, :cond_3
+.field public static chat_top_panel_height:I = 0x7f07007a
 
-    return v2
+.field public static chat_top_panel_horizontal_padding:I = 0x7f07007b
 
-    :cond_3
-    iget p0, p0, Li3c;->c:F
+.field public static compose_view_item_height:I = 0x7f070084
 
-    iget p1, p1, Li3c;->c:F
+.field public static contact_picker_selected_height:I = 0x7f070085
 
-    invoke-static {p0, p1}, Ljava/lang/Float;->compare(FF)I
+.field public static context_dialog_item_height:I = 0x7f070086
 
-    move-result p0
+.field public static control_with_action_big_margin:I = 0x7f070087
 
-    if-eqz p0, :cond_4
+.field public static control_with_action_normal_margin:I = 0x7f070088
 
-    return v2
+.field public static design_bottom_navigation_height:I = 0x7f070097
 
-    :cond_4
-    return v0
-.end method
+.field public static design_fab_size_mini:I = 0x7f0700a5
 
-.method public final hashCode()I
-    .locals 4
+.field public static divider_item_collage:I = 0x7f0700c4
 
-    iget-wide v0, p0, Li3c;->a:J
+.field public static expansion_area__audio_controls:I = 0x7f0700e8
 
-    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
+.field public static expansion_area__audio_controls_container:I = 0x7f0700e9
 
-    move-result v0
+.field public static fast_chat_actions_button_size:I = 0x7f0700ea
 
-    const/16 v1, 0x1f
+.field public static fast_chat_actions_space:I = 0x7f0700eb
 
-    mul-int/2addr v0, v1
+.field public static flash_close_button_height:I = 0x7f0700f8
 
-    iget-wide v2, p0, Li3c;->b:J
+.field public static flash_close_button_width:I = 0x7f0700f9
 
-    invoke-static {v0, v1, v2, v3}, Lzge;->m(IIJ)I
+.field public static flash_close_wrapper_height:I = 0x7f0700fa
 
-    move-result v0
+.field public static flash_close_wrapper_width:I = 0x7f0700fb
 
-    iget p0, p0, Li3c;->c:F
+.field public static folder_context_menu_margin:I = 0x7f0700fc
 
-    invoke-static {p0}, Ljava/lang/Float;->hashCode(F)I
+.field public static folder_grabberview_height:I = 0x7f0700fe
 
-    move-result p0
+.field public static frg_auth_button_spacing:I = 0x7f07010b
 
-    add-int/2addr p0, v0
+.field public static frg_auth_button_spacing_2х:I = 0x7f07010c
 
-    return p0
-.end method
+.field public static frg_auth_ok_content_bottom_margin:I = 0x7f07010d
 
-.method public final toString()Ljava/lang/String;
-    .locals 4
+.field public static frg_call__center_layout_bottom_margin:I = 0x7f07010e
 
-    const-string v0, "Uploading(messageId="
+.field public static frg_call__incoming_buttons_bottom_margin:I = 0x7f07010f
 
-    const-string v1, ", totalBytes="
+.field public static frg_call__incoming_buttons_top_margin:I = 0x7f070110
 
-    iget-wide v2, p0, Li3c;->a:J
+.field public static frg_location_map_contact_markers_panel_height:I = 0x7f070111
 
-    invoke-static {v2, v3, v0, v1}, Lzt1;->k(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+.field public static frg_location_map_current_contact_panel_height:I = 0x7f070112
 
-    move-result-object v0
+.field public static frg_location_map_panel_height:I = 0x7f070113
 
-    iget-wide v1, p0, Li3c;->b:J
+.field public static full_screen_mode_button_height:I = 0x7f070114
 
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+.field public static full_screen_mode_button_width:I = 0x7f070115
 
-    const-string v1, ", progress="
+.field public static gallery_album_cover_size:I = 0x7f070116
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+.field public static message_max_attach_width:I = 0x7f0702d4
 
-    iget p0, p0, Li3c;->c:F
+.field public static message_min_attach_height:I = 0x7f0702d5
 
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
+.field public static message_min_width:I = 0x7f0702d6
 
-    const-string p0, ")"
+.field public static message_min_width_contact_content:I = 0x7f0702d7
 
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+.field public static music_player_cover_size:I = 0x7f0703ad
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+.field public static music_player_top_margin:I = 0x7f0703ae
 
-    move-result-object p0
+.field public static music_player_waves_height:I = 0x7f0703af
 
-    return-object p0
-.end method
+.field public static notif_large_icon_width:I = 0x7f0703b0
+
+.field public static phone_permissions_promo_margin_top:I = 0x7f0703d8
+
+.field public static popup_notification__height:I = 0x7f0703e1
+
+.field public static profile_ava_frame_size:I = 0x7f0703ea
+
+.field public static profile_ava_top_space:I = 0x7f0703eb
+
+.field public static profile_button_elevation:I = 0x7f0703ec
+
+.field public static profile_top_padding:I = 0x7f0703ed
+
+.field public static quick_camera_button_margin:I = 0x7f0703f0
+
+.field public static quick_camera_button_margin_bottom:I = 0x7f0703f1
+
+.field public static quick_camera_chronometer_text_size:I = 0x7f0703f2
+
+.field public static quick_camera_wrapper_controllers_height:I = 0x7f0703f3
+
+.field public static quick_camera_wrapper_height:I = 0x7f0703f4
+
+.field public static quick_camera_wrapper_width:I = 0x7f0703f5
+
+.field public static rounded_button_margin:I = 0x7f0703f6
+
+.field public static row_chat_height:I = 0x7f0703f7
+
+.field public static row_profile_icon_size:I = 0x7f0703f8
+
+.field public static row_profile_with_icon__space_between_icon_and_text:I = 0x7f0703f9
+
+.field public static row_profile_with_icon__start_padding:I = 0x7f0703fa
+
+.field public static secret_button_layout_height:I = 0x7f0703fb
+
+.field public static secret_button_layout_height_no_bottom_shadow:I = 0x7f0703fc
+
+.field public static settings_start_padding:I = 0x7f0703fd
+
+.field public static stickers_puller_height:I = 0x7f070414
+
+.field public static stickers_puller_height_chat:I = 0x7f070415
+
+.field public static stickers_puller_shadow_height_chat:I = 0x7f070416
+
+.field public static suggest_name_picker_item_height:I = 0x7f070417
+
+.field public static suggests_header_height:I = 0x7f070418
+
+.field public static suggests_max_height_with_header:I = 0x7f070419
+
+.field public static suggests_max_height_without_header:I = 0x7f07041a
+
+.field public static suggests_row_height:I = 0x7f07041b
+
+.field public static toolbar_main_screen_subtitle_margin_top:I = 0x7f07041f
+
+.field public static view_call_controls__hangup_top_margin:I = 0x7f070428

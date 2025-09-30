@@ -1,67 +1,19 @@
-.class public abstract Lv68;
-.super La03;
+.class public final Lv68;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public final q0:J
+.field public final a:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Lg34;Lo34;Ldz5;ILjava/lang/Object;JJJ)V
-    .locals 11
+.method public constructor <init>(Ljava/lang/Object;)V
+    .locals 0
 
-    const/4 v3, 0x1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    move-object v0, p0
-
-    move-object v1, p1
-
-    move-object v2, p2
-
-    move-object v4, p3
-
-    move v5, p4
-
-    move-object/from16 v6, p5
-
-    move-wide/from16 v7, p6
-
-    move-wide/from16 v9, p8
-
-    invoke-direct/range {v0 .. v10}, La03;-><init>(Lg34;Lo34;ILdz5;ILjava/lang/Object;JJ)V
-
-    invoke-virtual {p3}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    move-wide/from16 p1, p10
-
-    iput-wide p1, p0, Lv68;->q0:J
+    iput-object p1, p0, Lv68;->a:Ljava/lang/Object;
 
     return-void
-.end method
-
-
-# virtual methods
-.method public a()J
-    .locals 4
-
-    iget-wide v0, p0, Lv68;->q0:J
-
-    const-wide/16 v2, -0x1
-
-    cmp-long p0, v0, v2
-
-    if-eqz p0, :cond_0
-
-    const-wide/16 v2, 0x1
-
-    add-long/2addr v0, v2
-
-    return-wide v0
-
-    :cond_0
-    return-wide v2
-.end method
-
-.method public abstract b()Z
 .end method

@@ -1,372 +1,121 @@
-.class public Lorf;
-.super Ljava/lang/Object;
+.class public abstract enum Lorf;
+.super Ljava/lang/Enum;
 .source "SourceFile"
-
-# interfaces
-.implements Lu79;
 
 
 # static fields
-.field public static final CREATOR:Landroid/os/Parcelable$Creator;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Landroid/os/Parcelable$Creator<",
-            "Lorf;",
-            ">;"
-        }
-    .end annotation
-.end field
+.field public static final a:Ljava/nio/ByteOrder;
 
+.field public static final b:Z
 
-# instance fields
-.field public final a:Ljava/lang/String;
-
-.field public final b:Ljava/lang/String;
+.field public static final synthetic c:[Lorf;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 2
+    .locals 3
 
-    new-instance v0, Lmrf;
+    const/4 v0, 0x0
 
-    const/4 v1, 0x0
+    new-array v1, v0, [Lorf;
 
-    invoke-direct {v0, v1}, Lmrf;-><init>(I)V
+    sput-object v1, Lorf;->c:[Lorf;
 
-    sput-object v0, Lorf;->CREATOR:Landroid/os/Parcelable$Creator;
+    invoke-static {}, Ljava/nio/ByteOrder;->nativeOrder()Ljava/nio/ByteOrder;
 
-    return-void
-.end method
+    move-result-object v1
 
-.method public constructor <init>(Landroid/os/Parcel;)V
-    .locals 2
+    sput-object v1, Lorf;->a:Ljava/nio/ByteOrder;
 
-    .line 4
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const-string v1, "os.arch"
 
-    .line 5
-    invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
+    invoke-static {v1}, Ljava/lang/System;->getProperty(Ljava/lang/String;)Ljava/lang/String;
 
-    move-result-object v0
+    move-result-object v1
 
-    sget v1, Lnaf;->a:I
+    const-string v2, "i386"
 
-    iput-object v0, p0, Lorf;->a:Ljava/lang/String;
-
-    .line 6
-    invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lorf;->b:Ljava/lang/String;
-
-    return-void
-.end method
-
-.method public constructor <init>(Ljava/lang/String;Ljava/lang/String;)V
-    .locals 0
-
-    .line 1
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 2
-    iput-object p1, p0, Lorf;->a:Ljava/lang/String;
-
-    .line 3
-    iput-object p2, p0, Lorf;->b:Ljava/lang/String;
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final describeContents()I
-    .locals 0
-
-    const/4 p0, 0x0
-
-    return p0
-.end method
-
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
-
-    const/4 v0, 0x1
-
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    const/4 v1, 0x0
-
-    if-eqz p1, :cond_2
-
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    move-result-object v2
-
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    move-result-object v3
-
-    if-eq v2, v3, :cond_1
-
-    goto :goto_0
-
-    :cond_1
-    check-cast p1, Lorf;
-
-    iget-object v2, p0, Lorf;->a:Ljava/lang/String;
-
-    iget-object v3, p1, Lorf;->a:Ljava/lang/String;
-
-    invoke-virtual {v2, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v2
 
-    if-eqz v2, :cond_2
+    if-nez v2, :cond_0
 
-    iget-object p0, p0, Lorf;->b:Ljava/lang/String;
+    const-string v2, "x86"
 
-    iget-object p1, p1, Lorf;->b:Ljava/lang/String;
+    invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    invoke-virtual {p0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    move-result v2
 
-    move-result p0
+    if-nez v2, :cond_0
 
-    if-eqz p0, :cond_2
+    const-string v2, "amd64"
 
-    return v0
+    invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    :cond_2
-    :goto_0
-    return v1
-.end method
+    move-result v2
 
-.method public final hashCode()I
-    .locals 3
+    if-nez v2, :cond_0
 
-    iget-object v0, p0, Lorf;->a:Ljava/lang/String;
+    const-string v2, "x86_64"
 
-    const/16 v1, 0x1f
+    invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    const/16 v2, 0x20f
+    move-result v2
 
-    invoke-static {v2, v1, v0}, Lv04;->d(IILjava/lang/String;)I
+    if-nez v2, :cond_0
 
-    move-result v0
+    const-string v2, "aarch64"
 
-    iget-object p0, p0, Lorf;->b:Ljava/lang/String;
+    invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    invoke-virtual {p0}, Ljava/lang/String;->hashCode()I
+    move-result v2
 
-    move-result p0
+    if-nez v2, :cond_0
 
-    add-int/2addr p0, v0
+    const-string v2, "ppc64le"
 
-    return p0
-.end method
-
-.method public final p(Loc8;)V
-    .locals 3
-
-    iget-object v0, p0, Lorf;->a:Ljava/lang/String;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
+    invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
 
-    const/4 v2, -0x1
-
-    sparse-switch v1, :sswitch_data_0
-
-    goto :goto_0
-
-    :sswitch_0
-    const-string v1, "ARTIST"
-
-    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    goto :goto_0
+    if-eqz v1, :cond_1
 
     :cond_0
-    const/4 v2, 0x4
-
-    goto :goto_0
-
-    :sswitch_1
-    const-string v1, "ALBUMARTIST"
-
-    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_1
-
-    goto :goto_0
+    const/4 v0, 0x1
 
     :cond_1
-    const/4 v2, 0x3
-
-    goto :goto_0
-
-    :sswitch_2
-    const-string v1, "DESCRIPTION"
-
-    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_2
-
-    goto :goto_0
-
-    :cond_2
-    const/4 v2, 0x2
-
-    goto :goto_0
-
-    :sswitch_3
-    const-string v1, "TITLE"
-
-    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_3
-
-    goto :goto_0
-
-    :cond_3
-    const/4 v2, 0x1
-
-    goto :goto_0
-
-    :sswitch_4
-    const-string v1, "ALBUM"
-
-    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_4
-
-    goto :goto_0
-
-    :cond_4
-    const/4 v2, 0x0
-
-    :goto_0
-    iget-object p0, p0, Lorf;->b:Ljava/lang/String;
-
-    packed-switch v2, :pswitch_data_0
+    sput-boolean v0, Lorf;->b:Z
 
     return-void
-
-    :pswitch_0
-    iput-object p0, p1, Loc8;->b:Ljava/lang/CharSequence;
-
-    return-void
-
-    :pswitch_1
-    iput-object p0, p1, Loc8;->d:Ljava/lang/CharSequence;
-
-    return-void
-
-    :pswitch_2
-    iput-object p0, p1, Loc8;->g:Ljava/lang/CharSequence;
-
-    return-void
-
-    :pswitch_3
-    iput-object p0, p1, Loc8;->a:Ljava/lang/CharSequence;
-
-    return-void
-
-    :pswitch_4
-    iput-object p0, p1, Loc8;->c:Ljava/lang/CharSequence;
-
-    return-void
-
-    nop
-
-    :sswitch_data_0
-    .sparse-switch
-        0x3b7864f -> :sswitch_4
-        0x4c22a38 -> :sswitch_3
-        0x198917dc -> :sswitch_2
-        0x681d2256 -> :sswitch_1
-        0x7395d347 -> :sswitch_0
-    .end sparse-switch
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_4
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
 .end method
 
-.method public final toString()Ljava/lang/String;
-    .locals 3
+.method public static valueOf(Ljava/lang/String;)Lorf;
+    .locals 1
 
-    const/4 v0, 0x5
+    const-class v0, Lorf;
 
-    iget-object v1, p0, Lorf;->a:Ljava/lang/String;
-
-    invoke-static {v0, v1}, Lv04;->e(ILjava/lang/String;)I
-
-    move-result v0
-
-    iget-object p0, p0, Lorf;->b:Ljava/lang/String;
-
-    invoke-static {v0, p0}, Lv04;->e(ILjava/lang/String;)I
-
-    move-result v0
-
-    new-instance v2, Ljava/lang/StringBuilder;
-
-    invoke-direct {v2, v0}, Ljava/lang/StringBuilder;-><init>(I)V
-
-    const-string v0, "VC: "
-
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v0, "="
-
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v2, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
 
     move-result-object p0
 
-    return-object p0
+    invoke-static {p0}, Lsq3;->r(Ljava/lang/Object;)V
+
+    const/4 p0, 0x0
+
+    throw p0
 .end method
 
-.method public final writeToParcel(Landroid/os/Parcel;I)V
-    .locals 0
+.method public static values()[Lorf;
+    .locals 1
 
-    iget-object p2, p0, Lorf;->a:Ljava/lang/String;
+    sget-object v0, Lorf;->c:[Lorf;
 
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
+    invoke-virtual {v0}, [Lorf;->clone()Ljava/lang/Object;
 
-    iget-object p0, p0, Lorf;->b:Ljava/lang/String;
+    move-result-object v0
 
-    invoke-virtual {p1, p0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
+    check-cast v0, [Lorf;
 
-    return-void
+    return-object v0
 .end method

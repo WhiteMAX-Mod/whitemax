@@ -4,5 +4,5 @@
 
 
 # virtual methods
-.method public abstract a(Lkotlinx/coroutines/internal/Segment;I)V
+.method public abstract f(Ljava/lang/Object;)I
 .end method

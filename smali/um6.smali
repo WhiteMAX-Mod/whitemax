@@ -1,97 +1,230 @@
 .class public final Lum6;
-.super Lwm6;
+.super Lmq0;
 .source "SourceFile"
 
 
 # instance fields
-.field public final s0:Ljava/lang/String;
-
-.field public final t0:Lxw6;
+.field public final synthetic s0:I
 
 
 # direct methods
-.method public constructor <init>(JJLjava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
-    .locals 19
+.method public synthetic constructor <init>(I)V
+    .locals 0
 
-    .line 1
-    sget-object v0, Lxw6;->b:Las5;
+    iput p1, p0, Lum6;->s0:I
 
-    .line 2
-    sget-object v18, Lddc;->X:Lddc;
+    const/16 p1, 0xa
 
-    const/4 v3, 0x0
-
-    .line 3
-    const-string v4, ""
-
-    const-wide/16 v5, 0x0
-
-    const/4 v7, -0x1
-
-    const-wide v8, -0x7fffffffffffffffL    # -4.9E-324
-
-    const/4 v10, 0x0
-
-    const/16 v17, 0x0
-
-    move-object/from16 v1, p0
-
-    move-wide/from16 v13, p1
-
-    move-wide/from16 v15, p3
-
-    move-object/from16 v2, p5
-
-    move-object/from16 v11, p6
-
-    move-object/from16 v12, p7
-
-    invoke-direct/range {v1 .. v18}, Lum6;-><init>(Ljava/lang/String;Lum6;Ljava/lang/String;JIJLdr4;Ljava/lang/String;Ljava/lang/String;JJZLjava/util/List;)V
+    invoke-direct {p0, p1}, Lmq0;-><init>(I)V
 
     return-void
 .end method
 
-.method public constructor <init>(Ljava/lang/String;Lum6;Ljava/lang/String;JIJLdr4;Ljava/lang/String;Ljava/lang/String;JJZLjava/util/List;)V
-    .locals 16
 
-    move-object/from16 v0, p0
+# virtual methods
+.method public final B()Ljava/lang/String;
+    .locals 0
 
-    move-object/from16 v1, p1
+    iget p0, p0, Lum6;->s0:I
 
-    move-object/from16 v2, p2
+    packed-switch p0, :pswitch_data_0
 
-    move-wide/from16 v3, p4
+    const-string p0, "FILL"
 
-    move/from16 v5, p6
+    return-object p0
 
-    move-wide/from16 v6, p7
+    :pswitch_0
+    const-string p0, "BASELINE"
 
-    move-object/from16 v8, p9
+    return-object p0
 
-    move-object/from16 v9, p10
+    :pswitch_1
+    const-string p0, "CENTER"
 
-    move-object/from16 v10, p11
+    return-object p0
 
-    move-wide/from16 v11, p12
+    :pswitch_2
+    const-string p0, "TRAILING"
 
-    move-wide/from16 v13, p14
+    return-object p0
 
-    move/from16 v15, p16
+    :pswitch_3
+    const-string p0, "LEADING"
 
-    .line 4
-    invoke-direct/range {v0 .. v15}, Lwm6;-><init>(Ljava/lang/String;Lum6;JIJLdr4;Ljava/lang/String;Ljava/lang/String;JJZ)V
+    return-object p0
 
-    move-object/from16 v1, p3
+    :pswitch_4
+    const-string p0, "UNDEFINED"
 
-    .line 5
-    iput-object v1, v0, Lum6;->s0:Ljava/lang/String;
+    return-object p0
 
-    .line 6
-    invoke-static/range {p17 .. p17}, Lxw6;->j(Ljava/util/Collection;)Lxw6;
+    nop
 
-    move-result-object v1
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_4
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
+.end method
 
-    iput-object v1, v0, Lum6;->t0:Lxw6;
+.method public final C(Landroid/view/View;I)I
+    .locals 0
 
-    return-void
+    iget p0, p0, Lum6;->s0:I
+
+    packed-switch p0, :pswitch_data_0
+
+    const/4 p0, 0x0
+
+    return p0
+
+    :pswitch_0
+    const/4 p0, 0x0
+
+    return p0
+
+    :pswitch_1
+    shr-int/lit8 p0, p2, 0x1
+
+    return p0
+
+    :pswitch_2
+    return p2
+
+    :pswitch_3
+    const/4 p0, 0x0
+
+    return p0
+
+    :pswitch_4
+    const/high16 p0, -0x80000000
+
+    return p0
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_4
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public D(II)I
+    .locals 0
+
+    iget p0, p0, Lum6;->s0:I
+
+    packed-switch p0, :pswitch_data_0
+
+    return p1
+
+    :pswitch_0
+    return p2
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x5
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final y(Landroid/view/View;II)I
+    .locals 0
+
+    iget p0, p0, Lum6;->s0:I
+
+    packed-switch p0, :pswitch_data_0
+
+    const/high16 p0, -0x80000000
+
+    return p0
+
+    :pswitch_0
+    invoke-virtual {p1}, Landroid/view/View;->getVisibility()I
+
+    move-result p0
+
+    const/16 p2, 0x8
+
+    if-ne p0, p2, :cond_0
+
+    const/4 p0, 0x0
+
+    goto :goto_0
+
+    :cond_0
+    invoke-virtual {p1}, Landroid/view/View;->getBaseline()I
+
+    move-result p0
+
+    const/4 p1, -0x1
+
+    if-ne p0, p1, :cond_1
+
+    const/high16 p0, -0x80000000
+
+    :cond_1
+    :goto_0
+    return p0
+
+    :pswitch_1
+    shr-int/lit8 p0, p2, 0x1
+
+    return p0
+
+    :pswitch_2
+    return p2
+
+    :pswitch_3
+    const/4 p0, 0x0
+
+    return p0
+
+    :pswitch_4
+    const/high16 p0, -0x80000000
+
+    return p0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_4
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public z()Lan6;
+    .locals 1
+
+    iget v0, p0, Lum6;->s0:I
+
+    packed-switch v0, :pswitch_data_0
+
+    invoke-super {p0}, Lmq0;->z()Lan6;
+
+    move-result-object p0
+
+    return-object p0
+
+    :pswitch_0
+    new-instance p0, Lwm6;
+
+    invoke-direct {p0}, Lan6;-><init>()V
+
+    return-object p0
+
+    :pswitch_data_0
+    .packed-switch 0x4
+        :pswitch_0
+    .end packed-switch
 .end method

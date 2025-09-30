@@ -1,109 +1,150 @@
-.class public final enum Lp7a;
-.super Ljava/lang/Enum;
+.class public abstract Lp7a;
+.super Ljava/util/concurrent/atomic/AtomicReference;
 .source "SourceFile"
 
+# interfaces
+.implements Ld8a;
+.implements Loq4;
+.implements Ljava/lang/Runnable;
 
-# static fields
-.field public static final enum X:Lp7a;
 
-.field public static final synthetic Y:[Lp7a;
+# instance fields
+.field public final X:Ljava/util/concurrent/atomic/AtomicReference;
 
-.field public static final enum a:Lp7a;
+.field public Y:Loq4;
 
-.field public static final enum b:Lp7a;
+.field public final a:Lxid;
 
-.field public static final enum c:Lp7a;
+.field public final b:J
 
-.field public static final enum o:Lp7a;
+.field public final c:Ljava/util/concurrent/TimeUnit;
+
+.field public final o:Lv5d;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 7
+.method public constructor <init>(Lxid;JLjava/util/concurrent/TimeUnit;Lv5d;)V
+    .locals 1
 
-    new-instance v0, Lp7a;
+    invoke-direct {p0}, Ljava/util/concurrent/atomic/AtomicReference;-><init>()V
 
-    const-string v1, "Themed"
+    new-instance v0, Ljava/util/concurrent/atomic/AtomicReference;
 
-    const/4 v2, 0x0
+    invoke-direct {v0}, Ljava/util/concurrent/atomic/AtomicReference;-><init>()V
 
-    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    iput-object v0, p0, Lp7a;->X:Ljava/util/concurrent/atomic/AtomicReference;
 
-    sput-object v0, Lp7a;->a:Lp7a;
+    iput-object p1, p0, Lp7a;->a:Lxid;
 
-    new-instance v1, Lp7a;
+    iput-wide p2, p0, Lp7a;->b:J
 
-    const-string v2, "ContrastPinned"
+    iput-object p4, p0, Lp7a;->c:Ljava/util/concurrent/TimeUnit;
 
-    const/4 v3, 0x1
-
-    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v1, Lp7a;->b:Lp7a;
-
-    new-instance v2, Lp7a;
-
-    const-string v3, "NeutralStack"
-
-    const/4 v4, 0x2
-
-    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v2, Lp7a;->c:Lp7a;
-
-    new-instance v3, Lp7a;
-
-    const-string v4, "AccentRed"
-
-    const/4 v5, 0x3
-
-    invoke-direct {v3, v4, v5}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v3, Lp7a;->o:Lp7a;
-
-    new-instance v4, Lp7a;
-
-    const-string v5, "Contrast"
-
-    const/4 v6, 0x4
-
-    invoke-direct {v4, v5, v6}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    sput-object v4, Lp7a;->X:Lp7a;
-
-    filled-new-array {v0, v1, v2, v3, v4}, [Lp7a;
-
-    move-result-object v0
-
-    sput-object v0, Lp7a;->Y:[Lp7a;
+    iput-object p5, p0, Lp7a;->o:Lv5d;
 
     return-void
 .end method
 
-.method public static valueOf(Ljava/lang/String;)Lp7a;
+
+# virtual methods
+.method public abstract a()V
+.end method
+
+.method public final b()V
     .locals 1
 
-    const-class v0, Lp7a;
+    iget-object v0, p0, Lp7a;->X:Ljava/util/concurrent/atomic/AtomicReference;
 
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+    invoke-static {v0}, Lsq4;->a(Ljava/util/concurrent/atomic/AtomicReference;)Z
+
+    invoke-virtual {p0}, Lp7a;->a()V
+
+    return-void
+.end method
+
+.method public final c(Loq4;)V
+    .locals 7
+
+    iget-object v0, p0, Lp7a;->Y:Loq4;
+
+    invoke-static {v0, p1}, Lsq4;->h(Loq4;Loq4;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    iput-object p1, p0, Lp7a;->Y:Loq4;
+
+    iget-object p1, p0, Lp7a;->a:Lxid;
+
+    invoke-virtual {p1, p0}, Lxid;->c(Loq4;)V
+
+    iget-wide v2, p0, Lp7a;->b:J
+
+    iget-object v6, p0, Lp7a;->c:Ljava/util/concurrent/TimeUnit;
+
+    iget-object v0, p0, Lp7a;->o:Lv5d;
+
+    move-wide v4, v2
+
+    move-object v1, p0
+
+    invoke-virtual/range {v0 .. v6}, Lv5d;->d(Ljava/lang/Runnable;JJLjava/util/concurrent/TimeUnit;)Loq4;
 
     move-result-object p0
 
-    check-cast p0, Lp7a;
+    iget-object p1, v1, Lp7a;->X:Ljava/util/concurrent/atomic/AtomicReference;
 
-    return-object p0
+    invoke-static {p1, p0}, Lsq4;->c(Ljava/util/concurrent/atomic/AtomicReference;Loq4;)Z
+
+    :cond_0
+    return-void
 .end method
 
-.method public static values()[Lp7a;
+.method public final e()V
     .locals 1
 
-    sget-object v0, Lp7a;->Y:[Lp7a;
+    iget-object v0, p0, Lp7a;->X:Ljava/util/concurrent/atomic/AtomicReference;
 
-    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
+    invoke-static {v0}, Lsq4;->a(Ljava/util/concurrent/atomic/AtomicReference;)Z
 
-    move-result-object v0
+    iget-object p0, p0, Lp7a;->Y:Loq4;
 
-    check-cast v0, [Lp7a;
+    invoke-interface {p0}, Loq4;->e()V
 
-    return-object v0
+    return-void
+.end method
+
+.method public final f()Z
+    .locals 0
+
+    iget-object p0, p0, Lp7a;->Y:Loq4;
+
+    invoke-interface {p0}, Loq4;->f()Z
+
+    move-result p0
+
+    return p0
+.end method
+
+.method public final onError(Ljava/lang/Throwable;)V
+    .locals 1
+
+    iget-object v0, p0, Lp7a;->X:Ljava/util/concurrent/atomic/AtomicReference;
+
+    invoke-static {v0}, Lsq4;->a(Ljava/util/concurrent/atomic/AtomicReference;)Z
+
+    iget-object p0, p0, Lp7a;->a:Lxid;
+
+    invoke-virtual {p0, p1}, Lxid;->onError(Ljava/lang/Throwable;)V
+
+    return-void
+.end method
+
+.method public final s(Ljava/lang/Object;)V
+    .locals 0
+
+    invoke-virtual {p0, p1}, Ljava/util/concurrent/atomic/AtomicReference;->getAndSet(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-void
 .end method

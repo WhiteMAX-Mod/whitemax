@@ -1,18 +1,86 @@
-.class public abstract Luqb;
-.super Ljava/lang/Object;
+.class public final Luqb;
+.super Lyqb;
+.source "SourceFile"
 
 
-# static fields
-.field public static led_1:I = 0x7f0600bf
+# instance fields
+.field public final a:Ljava/lang/String;
 
-.field public static led_2:I = 0x7f0600c0
 
-.field public static led_3:I = 0x7f0600c1
+# direct methods
+.method public constructor <init>(Ljava/lang/String;)V
+    .locals 0
 
-.field public static led_4:I = 0x7f0600c2
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-.field public static led_5:I = 0x7f0600c3
+    iput-object p1, p0, Luqb;->a:Ljava/lang/String;
 
-.field public static led_6:I = 0x7f0600c4
+    return-void
+.end method
 
-.field public static led_7:I = 0x7f0600c5
+
+# virtual methods
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 3
+
+    const/4 v0, 0x1
+
+    if-ne p0, p1, :cond_0
+
+    return v0
+
+    :cond_0
+    instance-of v1, p1, Luqb;
+
+    const/4 v2, 0x0
+
+    if-nez v1, :cond_1
+
+    return v2
+
+    :cond_1
+    check-cast p1, Luqb;
+
+    iget-object p0, p0, Luqb;->a:Ljava/lang/String;
+
+    iget-object p1, p1, Luqb;->a:Ljava/lang/String;
+
+    invoke-static {p0, p1}, Lvyg;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p0
+
+    if-nez p0, :cond_2
+
+    return v2
+
+    :cond_2
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 0
+
+    iget-object p0, p0, Luqb;->a:Ljava/lang/String;
+
+    invoke-virtual {p0}, Ljava/lang/String;->hashCode()I
+
+    move-result p0
+
+    return p0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 2
+
+    const-string v0, "CopyToClipboard(text="
+
+    const-string v1, ")"
+
+    iget-object p0, p0, Luqb;->a:Ljava/lang/String;
+
+    invoke-static {v0, p0, v1}, Lyv7;->h(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p0
+
+    return-object p0
+.end method

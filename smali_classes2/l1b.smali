@@ -1,17 +1,35 @@
-.class public interface abstract Ll1b;
+.class public final Ll1b;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# virtual methods
-.method public abstract a()V
-.end method
+# instance fields
+.field public final a:J
 
-.method public abstract b()V
-.end method
+.field public final b:Ljava/lang/String;
 
-.method public abstract c(Lq0b;)V
-.end method
+.field public final c:J
 
-.method public abstract d(Ljava/lang/Long;Z)Lp64;
+.field public final d:Ljava/lang/String;
+
+.field public final e:Ljava/util/Map;
+
+
+# direct methods
+.method public constructor <init>(JLjava/lang/String;JLjava/lang/String;Ljava/util/Map;)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-wide p1, p0, Ll1b;->a:J
+
+    iput-object p3, p0, Ll1b;->b:Ljava/lang/String;
+
+    iput-wide p4, p0, Ll1b;->c:J
+
+    iput-object p6, p0, Ll1b;->d:Ljava/lang/String;
+
+    iput-object p7, p0, Ll1b;->e:Ljava/util/Map;
+
+    return-void
 .end method

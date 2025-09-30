@@ -1,29 +1,21 @@
-.class public interface abstract Ler4;
+.class public interface abstract annotation Ler4;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ljava/lang/annotation/Annotation;
 
-# virtual methods
-.method public abstract a()Ljava/util/UUID;
-.end method
 
-.method public abstract b()Z
-.end method
+# annotations
+.annotation runtime Ljava/lang/annotation/Retention;
+    value = .enum Ljava/lang/annotation/RetentionPolicy;->CLASS:Ljava/lang/annotation/RetentionPolicy;
+.end annotation
 
-.method public abstract c(Lir4;)V
-.end method
-
-.method public abstract d(Lir4;)V
-.end method
-
-.method public abstract e(Ljava/lang/String;)Z
-.end method
-
-.method public abstract f()Landroidx/media3/exoplayer/drm/DrmSession$DrmSessionException;
-.end method
-
-.method public abstract g()Li04;
-.end method
-
-.method public abstract getState()I
-.end method
+.annotation runtime Ljava/lang/annotation/Target;
+    value = {
+        .enum Ljava/lang/annotation/ElementType;->TYPE:Ljava/lang/annotation/ElementType;,
+        .enum Ljava/lang/annotation/ElementType;->FIELD:Ljava/lang/annotation/ElementType;,
+        .enum Ljava/lang/annotation/ElementType;->METHOD:Ljava/lang/annotation/ElementType;,
+        .enum Ljava/lang/annotation/ElementType;->CONSTRUCTOR:Ljava/lang/annotation/ElementType;
+    }
+.end annotation

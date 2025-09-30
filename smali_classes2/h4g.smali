@@ -1,24 +1,21 @@
 .class public final Lh4g;
-.super Ljava/lang/Object;
+.super Ljs9;
 .source "SourceFile"
-
-# interfaces
-.implements Lv56;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final synthetic f:I
 
-.field public final synthetic b:Lv56;
+.field public final synthetic g:Lru/ok/messages/video/widgets/VideoPlayerSeekBarPreview;
 
 
 # direct methods
-.method public synthetic constructor <init>(ILv56;)V
+.method public synthetic constructor <init>(Lru/ok/messages/video/widgets/VideoPlayerSeekBarPreview;I)V
     .locals 0
 
-    iput p1, p0, Lh4g;->a:I
+    iput p2, p0, Lh4g;->f:I
 
-    iput-object p2, p0, Lh4g;->b:Lv56;
+    iput-object p1, p0, Lh4g;->g:Lru/ok/messages/video/widgets/VideoPlayerSeekBarPreview;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -27,37 +24,73 @@
 
 
 # virtual methods
-.method public final invoke()Ljava/lang/Object;
+.method public final q()V
     .locals 2
 
-    iget v0, p0, Lh4g;->a:I
+    iget v0, p0, Lh4g;->f:I
 
     packed-switch v0, :pswitch_data_0
 
-    new-instance v0, Lr;
+    iget-object p0, p0, Lh4g;->g:Lru/ok/messages/video/widgets/VideoPlayerSeekBarPreview;
 
-    iget-object p0, p0, Lh4g;->b:Lv56;
+    iget-object v0, p0, Lru/ok/messages/video/widgets/VideoPlayerSeekBarPreview;->c:Lru/ok/messages/video/widgets/VideoFramePreview;
 
-    check-cast p0, Lvf2;
+    const/4 v1, 0x4
 
-    const/16 v1, 0x1d
+    invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
 
-    invoke-direct {v0, v1, p0}, Lr;-><init>(ILv56;)V
+    iget-object v0, p0, Lru/ok/messages/video/widgets/VideoPlayerSeekBarPreview;->c:Lru/ok/messages/video/widgets/VideoFramePreview;
 
-    return-object v0
+    const/high16 v1, 0x3f800000    # 1.0f
+
+    invoke-virtual {v0, v1}, Landroid/view/View;->setAlpha(F)V
+
+    const/4 v0, 0x0
+
+    iput-object v0, p0, Lru/ok/messages/video/widgets/VideoPlayerSeekBarPreview;->w0:Lim4;
+
+    return-void
 
     :pswitch_0
-    new-instance v0, Lufd;
+    iget-object p0, p0, Lh4g;->g:Lru/ok/messages/video/widgets/VideoPlayerSeekBarPreview;
 
-    iget-object p0, p0, Lh4g;->b:Lv56;
+    const/4 v0, 0x0
 
-    check-cast p0, Lkxf;
+    iput-object v0, p0, Lru/ok/messages/video/widgets/VideoPlayerSeekBarPreview;->v0:Lim4;
 
-    const/16 v1, 0x15
+    return-void
 
-    invoke-direct {v0, v1, p0}, Lufd;-><init>(ILv56;)V
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
 
-    return-object v0
+.method public s()V
+    .locals 2
+
+    iget v0, p0, Lh4g;->f:I
+
+    packed-switch v0, :pswitch_data_0
+
+    return-void
+
+    :pswitch_0
+    iget-object p0, p0, Lh4g;->g:Lru/ok/messages/video/widgets/VideoPlayerSeekBarPreview;
+
+    iget-object v0, p0, Lru/ok/messages/video/widgets/VideoPlayerSeekBarPreview;->c:Lru/ok/messages/video/widgets/VideoFramePreview;
+
+    const/4 v1, 0x0
+
+    invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
+
+    iget-object p0, p0, Lru/ok/messages/video/widgets/VideoPlayerSeekBarPreview;->c:Lru/ok/messages/video/widgets/VideoFramePreview;
+
+    const/4 v0, 0x0
+
+    invoke-virtual {p0, v0}, Landroid/view/View;->setAlpha(F)V
+
+    return-void
 
     nop
 

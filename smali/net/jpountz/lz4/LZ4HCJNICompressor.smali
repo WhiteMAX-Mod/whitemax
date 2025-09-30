@@ -64,10 +64,10 @@
     if-nez v0, :cond_7
 
     .line 6
-    invoke-static {p1, p2, p3}, Lnv0;->b(Ljava/nio/ByteBuffer;II)V
+    invoke-static {p1, p2, p3}, Lyv0;->b(Ljava/nio/ByteBuffer;II)V
 
     .line 7
-    invoke-static {p4, p5, p6}, Lnv0;->b(Ljava/nio/ByteBuffer;II)V
+    invoke-static {p4, p5, p6}, Lyv0;->b(Ljava/nio/ByteBuffer;II)V
 
     .line 8
     invoke-virtual {p1}, Ljava/nio/ByteBuffer;->hasArray()Z
@@ -236,10 +236,10 @@
     .locals 9
 
     .line 1
-    invoke-static {p2, p1, p3}, Lwoc;->b(I[BI)V
+    invoke-static {p2, p1, p3}, Lo2d;->b(I[BI)V
 
     .line 2
-    invoke-static {p5, p4, p6}, Lwoc;->b(I[BI)V
+    invoke-static {p5, p4, p6}, Lo2d;->b(I[BI)V
 
     const/4 v5, 0x0
 

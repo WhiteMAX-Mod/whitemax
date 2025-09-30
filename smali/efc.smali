@@ -1,107 +1,46 @@
-.class public final Lefc;
-.super Lgfc;
+.class public final synthetic Lefc;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Landroid/widget/CompoundButton$OnCheckedChangeListener;
 
 
 # instance fields
-.field public final Y:Lj2c;
+.field public final synthetic a:Lgfc;
 
-.field public final Z:Ltkg;
+.field public final synthetic b:Lcom/google/android/material/chip/Chip;
+
+.field public final synthetic c:I
 
 
 # direct methods
-.method public constructor <init>(Lfz5;Lxw6;Lz0d;Ljava/util/ArrayList;)V
-    .locals 6
+.method public synthetic constructor <init>(Lgfc;Lcom/google/android/material/chip/Chip;I)V
+    .locals 0
 
-    invoke-direct {p0, p1, p2, p3, p4}, Lgfc;-><init>(Lfz5;Ljava/util/List;La1d;Ljava/util/List;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 p1, 0x0
+    iput-object p1, p0, Lefc;->a:Lgfc;
 
-    invoke-interface {p2, p1}, Ljava/util/List;->get(I)Ljava/lang/Object;
+    iput-object p2, p0, Lefc;->b:Lcom/google/android/material/chip/Chip;
 
-    move-result-object p1
-
-    check-cast p1, Lgk0;
-
-    iget-object p1, p1, Lgk0;->a:Ljava/lang/String;
-
-    invoke-static {p1}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
-
-    iget-wide v4, p3, Lz0d;->e:J
-
-    const-wide/16 p1, 0x0
-
-    cmp-long p1, v4, p1
-
-    const/4 p2, 0x0
-
-    if-gtz p1, :cond_0
-
-    move-object v0, p2
-
-    goto :goto_0
-
-    :cond_0
-    new-instance v0, Lj2c;
-
-    const/4 v3, 0x0
-
-    iget-wide v1, p3, Lz0d;->d:J
-
-    invoke-direct/range {v0 .. v5}, Lj2c;-><init>(JLjava/lang/String;J)V
-
-    :goto_0
-    iput-object v0, p0, Lefc;->Y:Lj2c;
-
-    if-eqz v0, :cond_1
-
-    goto :goto_1
-
-    :cond_1
-    new-instance p2, Ltkg;
-
-    new-instance v0, Lj2c;
-
-    const/4 v3, 0x0
-
-    const-wide/16 v1, 0x0
-
-    const-wide/16 v4, -0x1
-
-    invoke-direct/range {v0 .. v5}, Lj2c;-><init>(JLjava/lang/String;J)V
-
-    const/16 p1, 0x1a
-
-    invoke-direct {p2, p1, v0}, Ltkg;-><init>(ILjava/lang/Object;)V
-
-    :goto_1
-    iput-object p2, p0, Lefc;->Z:Ltkg;
+    iput p3, p0, Lefc;->c:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final b()Ljava/lang/String;
-    .locals 0
+.method public final onCheckedChanged(Landroid/widget/CompoundButton;Z)V
+    .locals 1
 
-    const/4 p0, 0x0
+    iget-object p1, p0, Lefc;->b:Lcom/google/android/material/chip/Chip;
 
-    return-object p0
-.end method
+    iget v0, p0, Lefc;->c:I
 
-.method public final c()Lq24;
-    .locals 0
+    iget-object p0, p0, Lefc;->a:Lgfc;
 
-    iget-object p0, p0, Lefc;->Z:Ltkg;
+    invoke-virtual {p0, p1, p2, v0}, Lgfc;->b(Lcom/google/android/material/chip/Chip;ZI)V
 
-    return-object p0
-.end method
-
-.method public final d()Lj2c;
-    .locals 0
-
-    iget-object p0, p0, Lefc;->Y:Lj2c;
-
-    return-object p0
+    return-void
 .end method

@@ -4,102 +4,103 @@
 
 
 # instance fields
-.field public final a:J
+.field public final a:Ljava/lang/String;
 
-.field public final b:J
-
-.field public final c:Ljava/lang/String;
-
-.field public final d:Ljava/lang/String;
-
-.field public final e:Ljava/util/Map;
-
-.field public final f:J
+.field public final b:Z
 
 
 # direct methods
-.method public constructor <init>(JJJLjava/lang/String;Ljava/lang/String;Ljava/util/Map;)V
+.method public constructor <init>(Ljava/lang/String;Z)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-wide p1, p0, Lis7;->a:J
+    iput-object p1, p0, Lis7;->a:Ljava/lang/String;
 
-    iput-wide p3, p0, Lis7;->b:J
-
-    iput-object p7, p0, Lis7;->c:Ljava/lang/String;
-
-    iput-object p8, p0, Lis7;->d:Ljava/lang/String;
-
-    iput-object p9, p0, Lis7;->e:Ljava/util/Map;
-
-    iput-wide p5, p0, Lis7;->f:J
+    iput-boolean p2, p0, Lis7;->b:Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final toString()Ljava/lang/String;
-    .locals 3
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 8
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    instance-of v0, p1, Lis7;
 
-    const-string v1, "LogEntry{time="
+    const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    if-nez v0, :cond_0
 
-    iget-wide v1, p0, Lis7;->a:J
+    goto :goto_0
 
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    :cond_0
+    check-cast p1, Lis7;
 
-    const-string v1, ", userId="
+    iget-object v5, p0, Lis7;->a:Ljava/lang/String;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {v5}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
-    iget-wide v1, p0, Lis7;->b:J
+    move-result v0
 
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    if-nez v0, :cond_3
 
-    const-string v1, ", sessionId="
+    iget-object v2, p1, Lis7;->a:Ljava/lang/String;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {v2}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
-    iget-wide v1, p0, Lis7;->f:J
+    move-result p1
 
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    if-eqz p1, :cond_1
 
-    const-string v1, ", type=\'"
+    goto :goto_0
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    :cond_1
+    iget-boolean p0, p0, Lis7;->b:Z
 
-    iget-object v1, p0, Lis7;->c:Ljava/lang/String;
+    if-eqz p0, :cond_2
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v5, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    const-string v1, "\', event=\'"
+    move-result p0
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    return p0
 
-    iget-object v1, p0, Lis7;->d:Ljava/lang/String;
+    :cond_2
+    sget-object p0, Lp3f;->a:Ljava/util/regex/Pattern;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v5}, Ljava/lang/String;->length()I
 
-    const-string v1, "\', params="
+    move-result p0
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v2}, Ljava/lang/String;->length()I
 
-    iget-object p0, p0, Lis7;->e:Ljava/util/Map;
+    move-result p1
 
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    if-ne p0, p1, :cond_3
 
-    const/16 p0, 0x7d
+    const/4 v6, 0x0
 
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+    invoke-virtual {v5}, Ljava/lang/String;->length()I
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    move-result v7
 
-    move-result-object p0
+    const/4 v3, 0x1
 
-    return-object p0
+    const/4 v4, 0x0
+
+    invoke-virtual/range {v2 .. v7}, Ljava/lang/String;->regionMatches(ZILjava/lang/String;II)Z
+
+    move-result p0
+
+    if-eqz p0, :cond_3
+
+    const/4 p0, 0x1
+
+    return p0
+
+    :cond_3
+    :goto_0
+    return v1
 .end method

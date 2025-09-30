@@ -1,81 +1,61 @@
 .class public final Lcw7;
-.super Ljava/lang/Object;
+.super Ljx3;
 .source "SourceFile"
 
 
 # instance fields
-.field public a:Ljava/util/Set;
+.field public X:Ljava/util/List;
+
+.field public Y:Ljava/util/LinkedHashMap;
+
+.field public Z:Ljava/util/Iterator;
+
+.field public o:Lfw7;
+
+.field public r0:Ls72;
+
+.field public s0:Z
+
+.field public synthetic t0:Ljava/lang/Object;
+
+.field public final synthetic u0:Lfw7;
+
+.field public v0:I
 
 
-# virtual methods
-.method public final a()V
-    .locals 1
+# direct methods
+.method public constructor <init>(Lfw7;Ljx3;)V
+    .locals 0
 
-    iget-object p0, p0, Lcw7;->a:Ljava/util/Set;
+    iput-object p1, p0, Lcw7;->u0:Lfw7;
 
-    if-nez p0, :cond_0
+    invoke-direct {p0, p2}, Ljx3;-><init>(Lkotlin/coroutines/Continuation;)V
 
-    goto :goto_1
-
-    :cond_0
-    invoke-interface {p0}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
-
-    move-result-object p0
-
-    :goto_0
-    invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Law7;
-
-    invoke-interface {v0}, Law7;->a()V
-
-    goto :goto_0
-
-    :cond_1
-    :goto_1
     return-void
 .end method
 
-.method public final b()V
+
+# virtual methods
+.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
 
-    iget-object p0, p0, Lcw7;->a:Ljava/util/Set;
+    iput-object p1, p0, Lcw7;->t0:Ljava/lang/Object;
 
-    if-nez p0, :cond_0
+    iget p1, p0, Lcw7;->v0:I
 
-    goto :goto_1
+    const/high16 v0, -0x80000000
 
-    :cond_0
-    invoke-interface {p0}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
+    or-int/2addr p1, v0
+
+    iput p1, p0, Lcw7;->v0:I
+
+    iget-object p1, p0, Lcw7;->u0:Lfw7;
+
+    const/4 v0, 0x0
+
+    invoke-virtual {p1, v0, p0}, Lfw7;->X0(Lao9;Ljx3;)Ljava/lang/Object;
 
     move-result-object p0
 
-    :goto_0
-    invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Law7;
-
-    invoke-interface {v0}, Law7;->c()V
-
-    goto :goto_0
-
-    :cond_1
-    :goto_1
-    return-void
+    return-object p0
 .end method

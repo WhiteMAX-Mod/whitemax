@@ -1,82 +1,44 @@
-.class public final Lwh7;
-.super Loj0;
+.class public abstract Lwh7;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Ljava/io/Closeable;
 
 
 # instance fields
-.field public h:I
+.field public a:I
 
-.field public i:I
 
-.field public j:Z
+# direct methods
+.method static constructor <clinit>()V
+    .locals 1
 
-.field public k:I
+    invoke-static {}, Lmle;->values()[Lmle;
+
+    move-result-object v0
+
+    invoke-static {v0}, Les3;->d([Lle7;)Les3;
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final a()V
-    .locals 1
+.method public abstract W()I
+.end method
 
-    invoke-super {p0}, Loj0;->a()V
+.method public abstract X()I
+.end method
 
-    iget v0, p0, Lwh7;->k:I
+.method public abstract i0()Ldi7;
+.end method
 
-    if-ltz v0, :cond_4
+.method public abstract m()Lsh7;
+.end method
 
-    iget v0, p0, Lwh7;->h:I
+.method public abstract n()Ljava/lang/String;
+.end method
 
-    if-nez v0, :cond_3
-
-    iget v0, p0, Loj0;->b:I
-
-    if-lez v0, :cond_1
-
-    iget v0, p0, Loj0;->g:I
-
-    if-eqz v0, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    new-instance p0, Ljava/lang/IllegalArgumentException;
-
-    const-string v0, "Rounded corners without gap are not supported in contiguous indeterminate animation."
-
-    invoke-direct {p0, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw p0
-
-    :cond_1
-    :goto_0
-    iget-object p0, p0, Loj0;->c:[I
-
-    array-length p0, p0
-
-    const/4 v0, 0x3
-
-    if-lt p0, v0, :cond_2
-
-    goto :goto_1
-
-    :cond_2
-    new-instance p0, Ljava/lang/IllegalArgumentException;
-
-    const-string v0, "Contiguous indeterminate animation must be used with 3 or more indicator colors."
-
-    invoke-direct {p0, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw p0
-
-    :cond_3
-    :goto_1
-    return-void
-
-    :cond_4
-    new-instance p0, Ljava/lang/IllegalArgumentException;
-
-    const-string v0, "Stop indicator size must be >= 0."
-
-    invoke-direct {p0, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw p0
+.method public abstract o()[C
 .end method

@@ -1,123 +1,69 @@
 .class public final Lok8;
-.super Lqk8;
+.super Lcb4;
 .source "SourceFile"
 
 
-# instance fields
-.field public final e:Lone/me/sdk/media/transformer/MediaTransformException;
+# static fields
+.field public static final b:Lok8;
+
+.field public static final c:Lxa4;
+
+.field public static final d:Lxa4;
 
 
 # direct methods
-.method public constructor <init>(JJLkk8;Lrk8;Lone/me/sdk/media/transformer/MediaTransformException;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 7
 
-    invoke-direct/range {p0 .. p6}, Lqk8;-><init>(JJLkk8;Lrk8;)V
+    new-instance v0, Lok8;
 
-    iput-object p7, p0, Lok8;->e:Lone/me/sdk/media/transformer/MediaTransformException;
+    invoke-direct {v0}, Lcb4;-><init>()V
 
-    return-void
-.end method
+    sput-object v0, Lok8;->b:Lok8;
 
+    const/4 v6, 0x0
 
-# virtual methods
-.method public final toString()Ljava/lang/String;
-    .locals 10
+    new-array v2, v6, [Ljava/lang/String;
 
-    iget-object v0, p0, Lqk8;->d:Lrk8;
+    const/4 v4, 0x1
 
-    iget-object v1, v0, Lrk8;->a:Lkk8;
+    const/4 v5, 0x2
 
-    iget-object v1, v1, Lkk8;->b:Ljava/util/ArrayList;
+    const-string v1, ":media-picker/select/photo"
 
-    invoke-static {v1}, Lou0;->F(Ljava/util/ArrayList;)Ljava/lang/String;
+    const/4 v3, 0x0
+
+    invoke-static/range {v0 .. v5}, Lcb4;->a(Lcb4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;II)Lxa4;
 
     move-result-object v1
 
-    iget-object v0, v0, Lrk8;->c:Ljava/util/ArrayList;
+    sput-object v1, Lok8;->c:Lxa4;
 
-    invoke-static {v0}, Lou0;->B(Ljava/util/List;)Ljava/lang/String;
+    new-array v2, v6, [Ljava/lang/String;
 
-    move-result-object v0
+    const-string v1, "image_uri"
 
-    iget-object v2, p0, Lqk8;->c:Lkk8;
+    const-string v3, "file_path"
 
-    iget-object v3, v2, Lkk8;->c:Ljava/lang/String;
+    filled-new-array {v1, v3}, [Ljava/lang/String;
 
-    invoke-static {v2}, Lou0;->C(Lkk8;)Ljava/lang/String;
+    move-result-object v1
 
-    move-result-object v4
+    invoke-static {v1}, Lxnd;->g0([Ljava/lang/Object;)Ljava/util/Set;
 
-    const-string v5, "                  "
+    move-result-object v3
 
-    invoke-static {v2, v5}, Lou0;->D(Lkk8;Ljava/lang/String;)Ljava/lang/String;
+    const/16 v5, 0xc
 
-    move-result-object v2
+    const/4 v4, 0x0
 
-    iget-wide v5, p0, Lqk8;->a:J
+    const-string v1, ":media-picker/edit/avatar"
 
-    iget-wide v7, p0, Lqk8;->b:J
-
-    invoke-static {v5, v6, v7, v8}, Lou0;->q(JJ)Ljava/lang/String;
-
-    move-result-object v9
-
-    sub-long/2addr v7, v5
-
-    long-to-float v5, v7
-
-    const/high16 v6, 0x447a0000    # 1000.0f
-
-    div-float/2addr v5, v6
-
-    const-string v6, "\n              }\n              inputMedias={"
-
-    const-string v7, "\n              }\n              out="
-
-    const-string v8, "\n            MediaTransformResult.Failure(\n              in={"
-
-    invoke-static {v8, v1, v6, v0, v7}, Lzge;->r(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static/range {v0 .. v5}, Lcb4;->a(Lcb4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;II)Lxa4;
 
     move-result-object v0
 
-    const-string v1, "\n              request={"
+    sput-object v0, Lok8;->d:Lxa4;
 
-    const-string v6, "\n                  settings={"
-
-    invoke-static {v0, v3, v1, v4, v6}, Lm26;->p(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
-
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, "\n                  }\n              }\n              took="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", "
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0, v5}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
-
-    const-string v1, " s\n              error="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object p0, p0, Lok8;->e:Lone/me/sdk/media/transformer/MediaTransformException;
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string p0, "\n            )\n        "
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    invoke-static {p0}, Lk8e;->k0(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
+    return-void
 .end method

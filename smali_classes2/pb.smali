@@ -1,28 +1,26 @@
 .class public final Lpb;
-.super Lqde;
+.super Lure;
 .source "SourceFile"
 
 # interfaces
-.implements Ll66;
+.implements Lpc6;
 
 
 # instance fields
-.field public X:I
+.field public synthetic X:Ljava/lang/Object;
 
-.field public synthetic Y:Ljava/lang/Object;
-
-.field public final synthetic Z:Lvb;
+.field public final synthetic Y:Lone/me/profile/screens/addadmins/fromcontacts/AdminsFromContactsScreen;
 
 
 # direct methods
-.method public constructor <init>(Lvb;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/profile/screens/addadmins/fromcontacts/AdminsFromContactsScreen;)V
     .locals 0
 
-    iput-object p1, p0, Lpb;->Z:Lvb;
+    iput-object p2, p0, Lpb;->Y:Lone/me/profile/screens/addadmins/fromcontacts/AdminsFromContactsScreen;
 
-    const/4 p1, 0x2
+    const/4 p2, 0x2
 
-    invoke-direct {p0, p1, p2}, Lqde;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0, p2, p1}, Lure;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
@@ -32,8 +30,6 @@
 .method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    check-cast p1, Ljava/util/List;
-
     check-cast p2, Lkotlin/coroutines/Continuation;
 
     invoke-virtual {p0, p1, p2}, Lpb;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
@@ -42,13 +38,11 @@
 
     check-cast p0, Lpb;
 
-    sget-object p1, Le5f;->a:Le5f;
+    sget-object p1, Lylf;->a:Lylf;
 
     invoke-virtual {p0, p1}, Lpb;->o(Ljava/lang/Object;)Ljava/lang/Object;
 
-    move-result-object p0
-
-    return-object p0
+    return-object p1
 .end method
 
 .method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
@@ -56,65 +50,41 @@
 
     new-instance v0, Lpb;
 
-    iget-object p0, p0, Lpb;->Z:Lvb;
+    iget-object p0, p0, Lpb;->Y:Lone/me/profile/screens/addadmins/fromcontacts/AdminsFromContactsScreen;
 
-    invoke-direct {v0, p0, p2}, Lpb;-><init>(Lvb;Lkotlin/coroutines/Continuation;)V
+    invoke-direct {v0, p2, p0}, Lpb;-><init>(Lkotlin/coroutines/Continuation;Lone/me/profile/screens/addadmins/fromcontacts/AdminsFromContactsScreen;)V
 
-    iput-object p1, v0, Lpb;->Y:Ljava/lang/Object;
+    iput-object p1, v0, Lpb;->X:Ljava/lang/Object;
 
     return-object v0
 .end method
 
 .method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 2
+    .locals 1
 
-    iget v0, p0, Lpb;->X:I
+    invoke-static {p1}, Lqe5;->V(Ljava/lang/Object;)V
 
-    const/4 v1, 0x1
+    iget-object p1, p0, Lpb;->X:Ljava/lang/Object;
 
-    if-eqz v0, :cond_1
+    check-cast p1, Ljava/lang/String;
 
-    if-ne v0, v1, :cond_0
+    sget-object v0, Lone/me/profile/screens/addadmins/fromcontacts/AdminsFromContactsScreen;->t0:[Lxi7;
 
-    invoke-static {p1}, Lsgg;->Z(Ljava/lang/Object;)V
+    iget-object p0, p0, Lpb;->Y:Lone/me/profile/screens/addadmins/fromcontacts/AdminsFromContactsScreen;
 
-    goto :goto_0
+    iget-object p0, p0, Lone/me/profile/screens/addadmins/fromcontacts/AdminsFromContactsScreen;->c:Lcl7;
 
-    :cond_0
-    new-instance p0, Ljava/lang/IllegalStateException;
-
-    const-string p1, "call to \'resume\' before \'invoke\' with coroutine"
-
-    invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p0
-
-    :cond_1
-    invoke-static {p1}, Lsgg;->Z(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Lpb;->Y:Ljava/lang/Object;
-
-    check-cast p1, Ljava/util/List;
-
-    iget-object v0, p0, Lpb;->Z:Lvb;
-
-    iget-object v0, v0, Lvb;->Y:Lwjd;
-
-    iput v1, p0, Lpb;->X:I
-
-    invoke-virtual {v0, p1, p0}, Lwjd;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    invoke-interface {p0}, Lcl7;->getValue()Ljava/lang/Object;
 
     move-result-object p0
 
-    sget-object p1, Lpx3;->a:Lpx3;
+    check-cast p0, Lyb;
 
-    if-ne p0, p1, :cond_2
+    iget-object p0, p0, Lyb;->Z:Lyce;
 
-    return-object p1
+    invoke-virtual {p0, p1}, Lyce;->setValue(Ljava/lang/Object;)V
 
-    :cond_2
-    :goto_0
-    sget-object p0, Le5f;->a:Le5f;
+    sget-object p0, Lylf;->a:Lylf;
 
     return-object p0
 .end method

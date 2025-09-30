@@ -12,7 +12,7 @@
         "Lone/me/net/client/impl/internal/SocketFactoryCreateException;",
         "Ljava/lang/RuntimeException;",
         "Lkotlin/RuntimeException;",
-        "default_release"
+        "client-default_release"
     }
     k = 0x1
     mv = {

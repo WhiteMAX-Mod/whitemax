@@ -19,7 +19,7 @@
         "",
         "",
         "chatId",
-        "Le5f;",
+        "Lylf;",
         "onChatCreated",
         "(J)V",
         "onChatUpdated",

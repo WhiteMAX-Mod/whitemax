@@ -1,9 +1,9 @@
 .class public final Lp;
-.super Lqde;
+.super Lure;
 .source "SourceFile"
 
 # interfaces
-.implements Ll66;
+.implements Lpc6;
 
 
 # instance fields
@@ -20,7 +20,7 @@
 
     const/4 p2, 0x2
 
-    invoke-direct {p0, p2, p1}, Lqde;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0, p2, p1}, Lure;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
@@ -38,7 +38,7 @@
 
     check-cast p0, Lp;
 
-    sget-object p1, Le5f;->a:Le5f;
+    sget-object p1, Lylf;->a:Lylf;
 
     invoke-virtual {p0, p1}, Lp;->o(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -60,21 +60,50 @@
 .end method
 
 .method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+    .locals 1
 
-    invoke-static {p1}, Lsgg;->Z(Ljava/lang/Object;)V
+    invoke-static {p1}, Lqe5;->V(Ljava/lang/Object;)V
 
     iget-object p1, p0, Lp;->X:Ljava/lang/Object;
 
-    check-cast p1, Ljava/util/List;
+    check-cast p1, Lys9;
+
+    sget-object v0, Lw53;->b:Lw53;
+
+    invoke-static {p1, v0}, Lvyg;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v0
 
     iget-object p0, p0, Lp;->Y:Lone/me/aboutappsettings/AboutAppSettingsScreen;
 
-    iget-object p0, p0, Lone/me/aboutappsettings/AboutAppSettingsScreen;->b:Lmv5;
+    if-eqz v0, :cond_0
 
-    invoke-virtual {p0, p1}, Lhl7;->E(Ljava/util/List;)V
+    invoke-virtual {p0}, Lxx3;->getRouter()Lrzc;
 
-    sget-object p0, Le5f;->a:Le5f;
+    move-result-object p0
+
+    invoke-virtual {p0}, Lrzc;->C()Z
+
+    goto :goto_0
+
+    :cond_0
+    instance-of v0, p1, Lt;
+
+    if-eqz v0, :cond_1
+
+    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
+
+    move-result-object p0
+
+    check-cast p1, Lt;
+
+    iget-object p1, p1, Lt;->b:Ljava/lang/String;
+
+    invoke-static {p0, p1}, Lb0b;->e(Landroid/content/Context;Ljava/lang/String;)V
+
+    :cond_1
+    :goto_0
+    sget-object p0, Lylf;->a:Lylf;
 
     return-object p0
 .end method

@@ -1,29 +1,25 @@
 .class public final Lu7f;
-.super Lbu3;
+.super Ljx3;
 .source "SourceFile"
 
 
 # instance fields
-.field public X:Lfm7;
+.field public synthetic X:Ljava/lang/Object;
 
-.field public Y:Lru/ok/tamtam/upload/workers/UploadExternalGifWorker;
+.field public final synthetic Y:Lv7f;
 
-.field public synthetic Z:Ljava/lang/Object;
+.field public Z:I
 
-.field public o:Lru/ok/tamtam/upload/workers/UploadExternalGifWorker;
-
-.field public final synthetic o0:Lru/ok/tamtam/upload/workers/UploadExternalGifWorker;
-
-.field public p0:I
+.field public o:Lv7f;
 
 
 # direct methods
-.method public constructor <init>(Lru/ok/tamtam/upload/workers/UploadExternalGifWorker;Lbu3;)V
+.method public constructor <init>(Lv7f;Ljx3;)V
     .locals 0
 
-    iput-object p1, p0, Lu7f;->o0:Lru/ok/tamtam/upload/workers/UploadExternalGifWorker;
+    iput-object p1, p0, Lu7f;->Y:Lv7f;
 
-    invoke-direct {p0, p2}, Lbu3;-><init>(Lkotlin/coroutines/Continuation;)V
+    invoke-direct {p0, p2}, Ljx3;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
@@ -33,19 +29,19 @@
 .method public final o(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
 
-    iput-object p1, p0, Lu7f;->Z:Ljava/lang/Object;
+    iput-object p1, p0, Lu7f;->X:Ljava/lang/Object;
 
-    iget p1, p0, Lu7f;->p0:I
+    iget p1, p0, Lu7f;->Z:I
 
     const/high16 v0, -0x80000000
 
     or-int/2addr p1, v0
 
-    iput p1, p0, Lu7f;->p0:I
+    iput p1, p0, Lu7f;->Z:I
 
-    iget-object p1, p0, Lu7f;->o0:Lru/ok/tamtam/upload/workers/UploadExternalGifWorker;
+    iget-object p1, p0, Lu7f;->Y:Lv7f;
 
-    invoke-virtual {p1, p0}, Lru/ok/tamtam/upload/workers/UploadExternalGifWorker;->doForegroundWork(Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    invoke-virtual {p1, p0}, Lv7f;->p(Ljx3;)Ljava/lang/Object;
 
     move-result-object p0
 

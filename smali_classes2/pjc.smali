@@ -1,60 +1,107 @@
-.class public final synthetic Lpjc;
-.super Ljava/lang/Object;
+.class public final enum Lpjc;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
-# interfaces
-.implements Ljava/util/concurrent/Callable;
+
+# static fields
+.field public static final synthetic X:[Lpjc;
+
+.field public static final synthetic Y:Ly75;
+
+.field public static final enum b:Lpjc;
+
+.field public static final enum c:Lpjc;
+
+.field public static final enum o:Lpjc;
 
 
 # instance fields
-.field public final synthetic a:Lyjc;
-
-.field public final synthetic b:J
-
-.field public final synthetic c:Lfr8;
-
-.field public final synthetic o:J
+.field public final a:Ljava/lang/String;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lyjc;JLfr8;J)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 5
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lpjc;
 
-    iput-object p1, p0, Lpjc;->a:Lyjc;
+    const-string v1, "UNKNOWN"
 
-    iput-wide p2, p0, Lpjc;->b:J
+    const/4 v2, 0x0
 
-    iput-object p4, p0, Lpjc;->c:Lfr8;
+    invoke-direct {v0, v1, v2, v1}, Lpjc;-><init>(Ljava/lang/String;ILjava/lang/String;)V
 
-    iput-wide p5, p0, Lpjc;->o:J
+    sput-object v0, Lpjc;->b:Lpjc;
+
+    new-instance v1, Lpjc;
+
+    const-string v2, "EMOJI"
+
+    const/4 v3, 0x1
+
+    invoke-direct {v1, v2, v3, v2}, Lpjc;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v1, Lpjc;->c:Lpjc;
+
+    new-instance v2, Lpjc;
+
+    const-string v3, "ANIMOJI"
+
+    const/4 v4, 0x2
+
+    invoke-direct {v2, v3, v4, v3}, Lpjc;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v2, Lpjc;->o:Lpjc;
+
+    filled-new-array {v0, v1, v2}, [Lpjc;
+
+    move-result-object v0
+
+    sput-object v0, Lpjc;->X:[Lpjc;
+
+    new-instance v1, Ly75;
+
+    invoke-direct {v1, v0}, Ly75;-><init>([Ljava/lang/Enum;)V
+
+    sput-object v1, Lpjc;->Y:Ly75;
 
     return-void
 .end method
 
+.method public constructor <init>(Ljava/lang/String;ILjava/lang/String;)V
+    .locals 0
 
-# virtual methods
-.method public final call()Ljava/lang/Object;
-    .locals 7
+    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    iget-wide v3, p0, Lpjc;->o:J
+    iput-object p3, p0, Lpjc;->a:Ljava/lang/String;
 
-    const/4 v6, 0x0
+    return-void
+.end method
 
-    iget-object v0, p0, Lpjc;->a:Lyjc;
+.method public static valueOf(Ljava/lang/String;)Lpjc;
+    .locals 1
 
-    iget-wide v1, p0, Lpjc;->b:J
+    const-class v0, Lpjc;
 
-    iget-object v5, p0, Lpjc;->c:Lfr8;
-
-    invoke-virtual/range {v0 .. v6}, Lyjc;->f(JJLfr8;Z)J
-
-    move-result-wide v0
-
-    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
 
     move-result-object p0
 
+    check-cast p0, Lpjc;
+
     return-object p0
+.end method
+
+.method public static values()[Lpjc;
+    .locals 1
+
+    sget-object v0, Lpjc;->X:[Lpjc;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, [Lpjc;
+
+    return-object v0
 .end method

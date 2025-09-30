@@ -1,125 +1,201 @@
 .class public final Lvq9;
-.super Lqde;
+.super Ly2;
 .source "SourceFile"
 
 # interfaces
-.implements Ll66;
+.implements Lp4f;
+.implements Liq9;
 
 
 # instance fields
-.field public X:I
+.field public X:Landroid/widget/ProgressBar;
 
-.field public final synthetic Y:Lyq9;
+.field public Y:Landroid/widget/TextView;
 
-.field public final synthetic Z:J
+.field public Z:Lpu7;
+
+.field public o:Landroidx/recyclerview/widget/RecyclerView;
 
 
-# direct methods
-.method public constructor <init>(Lyq9;JLkotlin/coroutines/Continuation;)V
+# virtual methods
+.method public final B(Z)V
     .locals 0
 
-    iput-object p1, p0, Lvq9;->Y:Lyq9;
+    if-eqz p1, :cond_0
 
-    iput-wide p2, p0, Lvq9;->Z:J
+    iget-object p0, p0, Lvq9;->X:Landroid/widget/ProgressBar;
 
-    const/4 p1, 0x2
+    const/4 p1, 0x0
 
-    invoke-direct {p0, p1, p4}, Lqde;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-virtual {p0, p1}, Landroid/view/View;->setVisibility(I)V
+
+    return-void
+
+    :cond_0
+    iget-object p0, p0, Lvq9;->X:Landroid/widget/ProgressBar;
+
+    const/16 p1, 0x8
+
+    invoke-virtual {p0, p1}, Landroid/view/View;->setVisibility(I)V
 
     return-void
 .end method
 
-
-# virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
-
-    check-cast p1, Lox3;
-
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Lvq9;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p0
-
-    check-cast p0, Lvq9;
-
-    sget-object p1, Le5f;->a:Le5f;
-
-    invoke-virtual {p0, p1}, Lvq9;->o(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+.method public final C(Ljava/util/List;)V
     .locals 3
 
-    new-instance p1, Lvq9;
+    invoke-interface {p1}, Ljava/util/List;->isEmpty()Z
 
-    iget-object v0, p0, Lvq9;->Y:Lyq9;
+    move-result v0
 
-    iget-wide v1, p0, Lvq9;->Z:J
+    const/16 v1, 0x8
 
-    invoke-direct {p1, v0, v1, v2, p2}, Lvq9;-><init>(Lyq9;JLkotlin/coroutines/Continuation;)V
+    const/4 v2, 0x0
 
-    return-object p1
-.end method
+    if-eqz v0, :cond_0
 
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 3
+    iget-object p1, p0, Lvq9;->Y:Landroid/widget/TextView;
 
-    iget v0, p0, Lvq9;->X:I
+    invoke-virtual {p1, v2}, Landroid/view/View;->setVisibility(I)V
 
-    const/4 v1, 0x1
+    iget-object p0, p0, Lvq9;->o:Landroidx/recyclerview/widget/RecyclerView;
 
-    if-eqz v0, :cond_1
+    invoke-virtual {p0, v1}, Landroid/view/View;->setVisibility(I)V
 
-    if-ne v0, v1, :cond_0
-
-    invoke-static {p1}, Lsgg;->Z(Ljava/lang/Object;)V
-
-    return-object p1
+    return-void
 
     :cond_0
-    new-instance p0, Ljava/lang/IllegalStateException;
+    iget-object v0, p0, Lvq9;->Z:Lpu7;
 
-    const-string p1, "call to \'resume\' before \'invoke\' with coroutine"
+    iput-object p1, v0, Lpu7;->X:Ljava/lang/Object;
 
-    invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v0}, Lcoc;->m()V
 
-    throw p0
+    iget-object p1, p0, Lvq9;->Y:Landroid/widget/TextView;
 
-    :cond_1
-    invoke-static {p1}, Lsgg;->Z(Ljava/lang/Object;)V
+    invoke-virtual {p1, v1}, Landroid/view/View;->setVisibility(I)V
 
-    iget-object p1, p0, Lvq9;->Y:Lyq9;
+    iget-object p0, p0, Lvq9;->o:Landroidx/recyclerview/widget/RecyclerView;
 
-    iget-object p1, p1, Lyq9;->f:Lje7;
+    invoke-virtual {p0, v2}, Landroid/view/View;->setVisibility(I)V
 
-    invoke-interface {p1}, Lje7;->getValue()Ljava/lang/Object;
+    return-void
+.end method
 
-    move-result-object p1
+.method public final c()V
+    .locals 3
 
-    check-cast p1, Lpb6;
+    iget-object v0, p0, Ly2;->c:Ljava/lang/Object;
 
-    iput v1, p0, Lvq9;->X:I
+    check-cast v0, Landroid/view/View;
 
-    const/4 v0, 0x0
+    invoke-virtual {v0}, Landroid/view/View;->getContext()Landroid/content/Context;
 
-    iget-wide v1, p0, Lvq9;->Z:J
+    move-result-object v0
 
-    invoke-virtual {p1, v1, v2, v0, p0}, Lpb6;->a(JZLbu3;)Ljava/lang/Comparable;
+    sget-object v1, Lcze;->a0:Lzte;
 
-    move-result-object p0
+    invoke-static {v0}, Ln4e;->I(Landroid/content/Context;)Lcze;
 
-    sget-object p1, Lpx3;->a:Lpx3;
+    move-result-object v0
 
-    if-ne p0, p1, :cond_2
+    iget-object v1, p0, Ly2;->c:Ljava/lang/Object;
 
-    return-object p1
+    check-cast v1, Landroid/view/View;
 
-    :cond_2
-    return-object p0
+    iget v2, v0, Lcze;->m:I
+
+    invoke-virtual {v1, v2}, Landroid/view/View;->setBackgroundColor(I)V
+
+    iget-object v1, p0, Lvq9;->X:Landroid/widget/ProgressBar;
+
+    iget v2, v0, Lcze;->k:I
+
+    invoke-static {v1, v2}, Li4h;->U(Landroid/widget/ProgressBar;I)V
+
+    iget-object p0, p0, Lvq9;->Y:Landroid/widget/TextView;
+
+    iget v0, v0, Lcze;->F:I
+
+    invoke-virtual {p0, v0}, Landroid/widget/TextView;->setTextColor(I)V
+
+    return-void
+.end method
+
+.method public final m()V
+    .locals 4
+
+    iget-object v0, p0, Ly2;->c:Ljava/lang/Object;
+
+    check-cast v0, Landroid/view/View;
+
+    sget v1, Lb8c;->frg_live_location_settings__rv_chats:I
+
+    invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Landroidx/recyclerview/widget/RecyclerView;
+
+    iput-object v0, p0, Lvq9;->o:Landroidx/recyclerview/widget/RecyclerView;
+
+    iget-object v0, p0, Ly2;->c:Ljava/lang/Object;
+
+    check-cast v0, Landroid/view/View;
+
+    sget v1, Lb8c;->frg_live_location_settings__pb_loading:I
+
+    invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/widget/ProgressBar;
+
+    iput-object v0, p0, Lvq9;->X:Landroid/widget/ProgressBar;
+
+    iget-object v0, p0, Ly2;->c:Ljava/lang/Object;
+
+    check-cast v0, Landroid/view/View;
+
+    sget v1, Lb8c;->frg_live_location_settings__tv_empty:I
+
+    invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/widget/TextView;
+
+    iput-object v0, p0, Lvq9;->Y:Landroid/widget/TextView;
+
+    new-instance v0, Lpu7;
+
+    sget-object v1, Ljava/util/Collections;->EMPTY_LIST:Ljava/util/List;
+
+    invoke-direct {v0}, Lpu7;-><init>()V
+
+    iput-object v1, v0, Lpu7;->X:Ljava/lang/Object;
+
+    iput-object v0, p0, Lvq9;->Z:Lpu7;
+
+    iget-object v1, p0, Lvq9;->o:Landroidx/recyclerview/widget/RecyclerView;
+
+    invoke-virtual {v1, v0}, Landroidx/recyclerview/widget/RecyclerView;->setAdapter(Lcoc;)V
+
+    iget-object v0, p0, Lvq9;->o:Landroidx/recyclerview/widget/RecyclerView;
+
+    new-instance v1, Landroidx/recyclerview/widget/LinearLayoutManager;
+
+    const/4 v2, 0x0
+
+    const/4 v3, 0x1
+
+    invoke-direct {v1, v3, v2}, Landroidx/recyclerview/widget/LinearLayoutManager;-><init>(IZ)V
+
+    invoke-virtual {v0, v1}, Landroidx/recyclerview/widget/RecyclerView;->setLayoutManager(Landroidx/recyclerview/widget/a;)V
+
+    iget-object p0, p0, Lvq9;->o:Landroidx/recyclerview/widget/RecyclerView;
+
+    invoke-virtual {p0, v3}, Landroidx/recyclerview/widget/RecyclerView;->setHasFixedSize(Z)V
+
+    return-void
 .end method

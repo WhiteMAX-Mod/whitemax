@@ -1,183 +1,159 @@
 .class public final Ln41;
-.super Lv64;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lq41;
 
-# static fields
-.field public static final b:Ln41;
 
-.field public static final c:Lr64;
+# instance fields
+.field public final a:J
 
-.field public static final d:Lr64;
+.field public final b:Z
 
-.field public static final e:Lr64;
-
-.field public static final f:Lr64;
-
-.field public static final g:Lr64;
-
-.field public static final h:Lr64;
-
-.field public static final i:Lr64;
-
-.field public static final j:Lr64;
-
-.field public static final k:Lr64;
-
-.field public static final l:Lr64;
-
-.field public static final m:Lr64;
+.field public final c:Z
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public constructor <init>(JZZ)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-wide p1, p0, Ln41;->a:J
+
+    iput-boolean p3, p0, Ln41;->b:Z
+
+    iput-boolean p4, p0, Ln41;->c:Z
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final a()Z
+    .locals 0
+
+    iget-boolean p0, p0, Ln41;->b:Z
+
+    return p0
+.end method
+
+.method public final b()Z
+    .locals 0
+
+    iget-boolean p0, p0, Ln41;->c:Z
+
+    return p0
+.end method
+
+.method public final equals(Ljava/lang/Object;)Z
     .locals 7
 
-    new-instance v0, Ln41;
+    const/4 v0, 0x1
 
-    invoke-direct {v0}, Lv64;-><init>()V
+    if-ne p0, p1, :cond_0
 
-    sput-object v0, Ln41;->b:Ln41;
+    return v0
 
-    const-string v1, "opponent_id"
-
-    filled-new-array {v1}, [Ljava/lang/String;
-
-    move-result-object v1
-
-    const-string v2, ":call-user"
-
-    const/4 v3, 0x0
-
-    const/16 v4, 0xe
-
-    invoke-static {v0, v2, v1, v3, v4}, Lv64;->a(Lv64;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lr64;
-
-    move-result-object v1
-
-    sput-object v1, Ln41;->c:Lr64;
-
-    const-string v1, "link"
-
-    filled-new-array {v1}, [Ljava/lang/String;
-
-    move-result-object v2
-
-    const-string v5, ":call-join-link"
-
-    invoke-static {v0, v5, v2, v3, v4}, Lv64;->a(Lv64;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lr64;
-
-    move-result-object v2
-
-    sput-object v2, Ln41;->d:Lr64;
-
-    const-string v2, "chat_id"
-
-    filled-new-array {v2}, [Ljava/lang/String;
-
-    move-result-object v5
-
-    const-string v6, ":call-chat"
-
-    invoke-static {v0, v6, v5, v3, v4}, Lv64;->a(Lv64;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lr64;
-
-    move-result-object v5
-
-    sput-object v5, Ln41;->e:Lr64;
-
-    const-string v5, "call_name"
-
-    filled-new-array {v2, v5}, [Ljava/lang/String;
-
-    move-result-object v2
-
-    const-string v5, ":call-incoming"
-
-    invoke-static {v0, v5, v2, v3, v4}, Lv64;->a(Lv64;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lr64;
-
-    move-result-object v2
-
-    sput-object v2, Ln41;->f:Lr64;
+    :cond_0
+    instance-of v1, p1, Ln41;
 
     const/4 v2, 0x0
 
-    new-array v5, v2, [Ljava/lang/String;
+    if-nez v1, :cond_1
 
-    const-string v6, ":call-active"
+    return v2
 
-    invoke-static {v0, v6, v5, v3, v4}, Lv64;->a(Lv64;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lr64;
+    :cond_1
+    check-cast p1, Ln41;
 
-    move-result-object v5
+    iget-wide v3, p0, Ln41;->a:J
 
-    sput-object v5, Ln41;->g:Lr64;
+    iget-wide v5, p1, Ln41;->a:J
 
-    const-string v5, ":call-join-preview"
+    cmp-long v1, v3, v5
 
-    filled-new-array {v1}, [Ljava/lang/String;
+    if-eqz v1, :cond_2
 
-    move-result-object v1
+    return v2
 
-    invoke-static {v0, v5, v1, v3, v4}, Lv64;->a(Lv64;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lr64;
+    :cond_2
+    iget-boolean v1, p0, Ln41;->b:Z
 
-    move-result-object v1
+    iget-boolean v3, p1, Ln41;->b:Z
 
-    sput-object v1, Ln41;->h:Lr64;
+    if-eq v1, v3, :cond_3
 
-    const-string v1, ":call-opponents-list"
+    return v2
 
-    new-array v5, v2, [Ljava/lang/String;
+    :cond_3
+    iget-boolean p0, p0, Ln41;->c:Z
 
-    invoke-static {v0, v1, v5, v3, v4}, Lv64;->a(Lv64;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lr64;
+    iget-boolean p1, p1, Ln41;->c:Z
 
-    move-result-object v1
+    if-eq p0, p1, :cond_4
 
-    sput-object v1, Ln41;->i:Lr64;
+    return v2
 
-    const-string v1, ":call-admin-settings"
+    :cond_4
+    return v0
+.end method
 
-    new-array v5, v2, [Ljava/lang/String;
+.method public final hashCode()I
+    .locals 3
 
-    invoke-static {v0, v1, v5, v3, v4}, Lv64;->a(Lv64;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lr64;
+    iget-wide v0, p0, Ln41;->a:J
 
-    move-result-object v1
+    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
 
-    sput-object v1, Ln41;->j:Lr64;
+    move-result v0
 
-    const-string v1, ":call-pip"
+    const/16 v1, 0x1f
 
-    new-array v5, v2, [Ljava/lang/String;
+    mul-int/2addr v0, v1
 
-    invoke-static {v0, v1, v5, v3, v4}, Lv64;->a(Lv64;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lr64;
+    iget-boolean v2, p0, Ln41;->b:Z
 
-    move-result-object v1
+    invoke-static {v0, v1, v2}, Lsq3;->e(IIZ)I
 
-    sput-object v1, Ln41;->k:Lr64;
+    move-result v0
 
-    const-string v1, ":call-admin-waiting-room"
+    iget-boolean p0, p0, Ln41;->c:Z
 
-    new-array v2, v2, [Ljava/lang/String;
+    invoke-static {p0}, Ljava/lang/Boolean;->hashCode(Z)I
 
-    invoke-static {v0, v1, v2, v3, v4}, Lv64;->a(Lv64;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lr64;
+    move-result p0
 
-    move-result-object v1
+    add-int/2addr p0, v0
 
-    sput-object v1, Ln41;->l:Lr64;
+    return p0
+.end method
 
-    const-string v1, "call_id"
+.method public final toString()Ljava/lang/String;
+    .locals 5
 
-    const-string v2, "is_video"
+    const-string v0, "Chat(chatId="
 
-    filled-new-array {v1, v2}, [Ljava/lang/String;
+    const-string v1, ", isVideoEnabled="
 
-    move-result-object v1
+    iget-wide v2, p0, Ln41;->a:J
 
-    const-string v2, ":call-rate"
+    iget-boolean v4, p0, Ln41;->b:Z
 
-    invoke-static {v0, v2, v1, v3, v4}, Lv64;->a(Lv64;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;I)Lr64;
+    invoke-static {v2, v3, v0, v1, v4}, Lsg0;->i(JLjava/lang/String;Ljava/lang/String;Z)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    sput-object v0, Ln41;->m:Lr64;
+    const-string v1, ", isAudioEnabled="
 
-    return-void
+    const-string v2, ")"
+
+    iget-boolean p0, p0, Ln41;->c:Z
+
+    invoke-static {v0, v1, p0, v2}, Lyv7;->l(Ljava/lang/StringBuilder;Ljava/lang/String;ZLjava/lang/String;)Ljava/lang/String;
+
+    move-result-object p0
+
+    return-object p0
 .end method

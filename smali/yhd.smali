@@ -1,31 +1,45 @@
 .class public final Lyhd;
-.super Lzhd;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lks5;
 
 
 # instance fields
-.field public b:F
+.field public final a:Ljhd;
 
-.field public c:F
+
+# direct methods
+.method public constructor <init>(Lijb;)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lyhd;->a:Ljhd;
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final a(Landroid/graphics/Matrix;Landroid/graphics/Path;)V
-    .locals 1
+.method public final a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    .locals 0
 
-    iget-object v0, p0, Lzhd;->a:Landroid/graphics/Matrix;
+    iget-object p0, p0, Lyhd;->a:Ljhd;
 
-    invoke-virtual {p1, v0}, Landroid/graphics/Matrix;->invert(Landroid/graphics/Matrix;)Z
+    invoke-interface {p0, p1, p2}, Ljhd;->h(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
-    invoke-virtual {p2, v0}, Landroid/graphics/Path;->transform(Landroid/graphics/Matrix;)V
+    move-result-object p0
 
-    iget v0, p0, Lyhd;->b:F
+    sget-object p1, Lz04;->a:Lz04;
 
-    iget p0, p0, Lyhd;->c:F
+    if-ne p0, p1, :cond_0
 
-    invoke-virtual {p2, v0, p0}, Landroid/graphics/Path;->lineTo(FF)V
+    return-object p0
 
-    invoke-virtual {p2, p1}, Landroid/graphics/Path;->transform(Landroid/graphics/Matrix;)V
+    :cond_0
+    sget-object p0, Lylf;->a:Lylf;
 
-    return-void
+    return-object p0
 .end method

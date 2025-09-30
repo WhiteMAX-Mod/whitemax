@@ -36,7 +36,7 @@
         "Lkotlin/Function2;",
         "block",
         "withState",
-        "(JLl66;)Ljava/lang/Object;",
+        "(JLpc6;)Ljava/lang/Object;",
         "addFailReason",
         "(J)I",
         "INITIAL_CAPACITY",
@@ -81,7 +81,7 @@
     return-void
 .end method
 
-.method public synthetic constructor <init>(Ll94;)V
+.method public synthetic constructor <init>(Lld4;)V
     .locals 0
 
     .line 1
@@ -151,14 +151,14 @@
     return-wide p0
 .end method
 
-.method public final withState(JLl66;)Ljava/lang/Object;
+.method public final withState(JLpc6;)Ljava/lang/Object;
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<T:",
             "Ljava/lang/Object;",
             ">(J",
-            "Ll66;",
+            "Lpc6;",
             ")TT;"
         }
     .end annotation
@@ -187,7 +187,7 @@
 
     move-result-object p1
 
-    invoke-interface {p3, p0, p1}, Ll66;->invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {p3, p0, p1}, Lpc6;->invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p0
 

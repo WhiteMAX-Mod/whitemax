@@ -34,12 +34,6 @@
         <item quantity="other">Вы переслали сообщения</item>
         <item quantity="one">Вы переслали сообщение</item>
     </plurals>
-    <plurals name="forward_snackbar_to_chats">
-        <item quantity="other">в %d чатов</item>
-        <item quantity="one">в %d чат</item>
-        <item quantity="few">в %d чата</item>
-        <item quantity="many">в %d чатов</item>
-    </plurals>
     <plurals name="inactive_ttl">
         <item quantity="other">%d месяцев</item>
         <item quantity="zero">%d месяцев</item>
@@ -104,6 +98,11 @@
         <item quantity="few">%1$d звезды</item>
         <item quantity="many">%1$d звёзд</item>
     </plurals>
+    <plurals name="oneme_settings_privacy_twofa_delete_user_days_left_notif">
+        <item quantity="other">Удаляем ваш профиль, осталось %1$d дней</item>
+        <item quantity="one">Удаляем ваш профиль, остался %1$d день</item>
+        <item quantity="few">Удаляем ваш профиль, осталось %1$d дня</item>
+    </plurals>
     <plurals name="oneme_settings_twofa_creation_password_error_symbols_count">
         <item quantity="other">Введите минимум %1$d символов</item>
         <item quantity="one">Введите минимум %1$d символ</item>
@@ -113,6 +112,16 @@
         <item quantity="other">"От %1$d символов, заглавные и строчные буквы, цифры и специальные символы: $ #  _ @ &amp; *"</item>
         <item quantity="one">"От %1$d символа, заглавные и строчные буквы, цифры и специальные символы: $ #  _ @ &amp; *"</item>
         <item quantity="few">"От %1$d символов, заглавные и строчные буквы, цифры и специальные символы: $ #  _ @ &amp; *"</item>
+    </plurals>
+    <plurals name="oneme_settings_twofa_delete_user_days_left_description">
+        <item quantity="other">Все ваши чаты и контакты пропадут через %1$d дней — ещё есть время передумать</item>
+        <item quantity="one">Все ваши чаты и контакты пропадут через %1$d день — ещё есть время передумать</item>
+        <item quantity="few">Все ваши чаты и контакты пропадут через %1$d дня — ещё есть время передумать</item>
+    </plurals>
+    <plurals name="oneme_settings_twofa_delete_user_days_notif">
+        <item quantity="other">Удаляем ваш профиль, это займёт %1$d дней</item>
+        <item quantity="one">Удаляем ваш профиль, это займёт %1$d день</item>
+        <item quantity="few">Удаляем ваш профиль, это займёт %1$d дня</item>
     </plurals>
     <plurals name="oneme_stickers_set_count">
         <item quantity="other">%d стикеров</item>
@@ -195,6 +204,14 @@
     <plurals name="profile_members_list_restore_in_chat_snackbar">
         <item quantity="other">Контакты добавлены</item>
         <item quantity="one">Контакт добавлен</item>
+    </plurals>
+    <plurals name="to_chats">
+        <item quantity="other">в %d чатов</item>
+        <item quantity="zero">в %d чатов</item>
+        <item quantity="one">в %d чат</item>
+        <item quantity="two">в %d чата</item>
+        <item quantity="few">в %d чата</item>
+        <item quantity="many">в %d чатов</item>
     </plurals>
     <plurals name="tt_channel_subtitle_count">
         <item quantity="other">%d подписчиков</item>
@@ -363,5 +380,13 @@
         <item quantity="two">%d сообщения</item>
         <item quantity="few">%d сообщения</item>
         <item quantity="many">%d сообщений</item>
+    </plurals>
+    <plurals name="you_sent_messages">
+        <item quantity="other">Вы отправили сообщения</item>
+        <item quantity="zero">Вы отправили сообщения</item>
+        <item quantity="one">@string/tt_you_send_message</item>
+        <item quantity="two">Вы отправили сообщения</item>
+        <item quantity="few">Вы отправили сообщения</item>
+        <item quantity="many">Вы отправили сообщения</item>
     </plurals>
 </resources>

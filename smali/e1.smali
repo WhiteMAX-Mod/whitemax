@@ -1,18 +1,6 @@
-.class public abstract Le1;
-.super Lm1;
+.class public interface abstract Le1;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Ld1;
-
-
-# virtual methods
-.method public final isCancelled()Z
-    .locals 0
-
-    iget-object p0, p0, Lm1;->a:Ljava/lang/Object;
-
-    instance-of p0, p0, Lq0;
-
-    return p0
-.end method
+.implements Lgt7;

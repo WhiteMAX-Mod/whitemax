@@ -1,63 +1,54 @@
-.class public final Liy8;
-.super Lbu3;
+.class public final synthetic Liy8;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field public X:Ljava/lang/Object;
+.field public final synthetic a:I
 
-.field public Y:Ljava/lang/Object;
-
-.field public Z:Ljava/lang/Long;
-
-.field public o:Ljava/lang/Object;
-
-.field public o0:Z
-
-.field public p0:Z
-
-.field public synthetic q0:Ljava/lang/Object;
-
-.field public final synthetic r0:Luy8;
-
-.field public s0:I
+.field public final synthetic b:Loy8;
 
 
 # direct methods
-.method public constructor <init>(Luy8;Lbu3;)V
+.method public synthetic constructor <init>(Loy8;I)V
     .locals 0
 
-    iput-object p1, p0, Liy8;->r0:Luy8;
+    iput p2, p0, Liy8;->a:I
 
-    invoke-direct {p0, p2}, Lbu3;-><init>(Lkotlin/coroutines/Continuation;)V
+    iput-object p1, p0, Liy8;->b:Loy8;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 2
+.method public final run()V
+    .locals 1
 
-    iput-object p1, p0, Liy8;->q0:Ljava/lang/Object;
+    iget v0, p0, Liy8;->a:I
 
-    iget p1, p0, Liy8;->s0:I
+    iget-object p0, p0, Liy8;->b:Loy8;
 
-    const/high16 v0, -0x80000000
+    packed-switch v0, :pswitch_data_0
 
-    or-int/2addr p1, v0
+    invoke-virtual {p0}, Loy8;->S()V
 
-    iput p1, p0, Liy8;->s0:I
+    return-void
 
-    const/4 p1, 0x0
+    :pswitch_0
+    invoke-static {p0}, Loy8;->n(Loy8;)V
 
-    const/4 v0, 0x0
+    return-void
 
-    iget-object v1, p0, Liy8;->r0:Luy8;
+    nop
 
-    invoke-static {v1, p1, p1, v0, p0}, Luy8;->q(Luy8;Lvx8;Lyx8;ZLbu3;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    return-object p0
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

@@ -1,21 +1,31 @@
 .class public final Lfv6;
-.super Ljava/lang/Object;
+.super Lj2e;
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:Lfv6;
+# virtual methods
+.method public final y(Lts7;)V
+    .locals 2
 
+    check-cast p1, Ldv6;
 
-# direct methods
-.method static constructor <clinit>()V
-    .locals 1
+    iget-object p0, p0, Lzoc;->a:Landroid/view/View;
 
-    new-instance v0, Lfv6;
+    check-cast p0, Lev6;
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    iget-object v0, p1, Ldv6;->a:Ljava/lang/String;
 
-    sput-object v0, Lfv6;->a:Lfv6;
+    iget-object v1, p0, Lev6;->F0:Landroidx/appcompat/widget/AppCompatTextView;
+
+    invoke-virtual {v1, v0}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+
+    iget-object p1, p1, Ldv6;->b:Ljava/lang/Boolean;
+
+    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result p1
+
+    invoke-virtual {p0, p1}, Lev6;->setSelected(Z)V
 
     return-void
 .end method

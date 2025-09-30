@@ -1,464 +1,348 @@
 .class public final Ld8;
-.super Lsd7;
+.super Lcb7;
 .source "SourceFile"
-
-# interfaces
-.implements Lv56;
-
-
-# static fields
-.field public static final X:Ld8;
-
-.field public static final Y:Ld8;
-
-.field public static final Z:Ld8;
-
-.field public static final b:Ld8;
-
-.field public static final c:Ld8;
-
-.field public static final o:Ld8;
-
-.field public static final o0:Ld8;
-
-.field public static final p0:Ld8;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final synthetic d:I
 
 
 # direct methods
-.method static synthetic constructor <clinit>()V
-    .locals 3
-
-    new-instance v0, Ld8;
-
-    const/4 v1, 0x0
-
-    const/4 v2, 0x0
-
-    invoke-direct {v0, v1, v2}, Ld8;-><init>(II)V
-
-    sput-object v0, Ld8;->b:Ld8;
-
-    new-instance v0, Ld8;
-
-    const/4 v2, 0x1
-
-    invoke-direct {v0, v1, v2}, Ld8;-><init>(II)V
-
-    sput-object v0, Ld8;->c:Ld8;
-
-    new-instance v0, Ld8;
-
-    const/4 v2, 0x2
-
-    invoke-direct {v0, v1, v2}, Ld8;-><init>(II)V
-
-    sput-object v0, Ld8;->o:Ld8;
-
-    new-instance v0, Ld8;
-
-    const/4 v2, 0x3
-
-    invoke-direct {v0, v1, v2}, Ld8;-><init>(II)V
-
-    sput-object v0, Ld8;->X:Ld8;
-
-    new-instance v0, Ld8;
-
-    const/4 v2, 0x4
-
-    invoke-direct {v0, v1, v2}, Ld8;-><init>(II)V
-
-    sput-object v0, Ld8;->Y:Ld8;
-
-    new-instance v0, Ld8;
-
-    const/4 v2, 0x5
-
-    invoke-direct {v0, v1, v2}, Ld8;-><init>(II)V
-
-    sput-object v0, Ld8;->Z:Ld8;
-
-    new-instance v0, Ld8;
-
-    const/4 v2, 0x6
-
-    invoke-direct {v0, v1, v2}, Ld8;-><init>(II)V
-
-    sput-object v0, Ld8;->o0:Ld8;
-
-    new-instance v0, Ld8;
-
-    const/4 v2, 0x7
-
-    invoke-direct {v0, v1, v2}, Ld8;-><init>(II)V
-
-    sput-object v0, Ld8;->p0:Ld8;
-
-    return-void
-.end method
-
-.method public synthetic constructor <init>(II)V
+.method public synthetic constructor <init>(I)V
     .locals 0
 
-    iput p2, p0, Ld8;->a:I
+    iput p1, p0, Ld8;->d:I
 
-    invoke-direct {p0, p1}, Lsd7;-><init>(I)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke()Ljava/lang/Object;
-    .locals 5
+.method public A(Landroidx/fragment/app/b;Ljava/lang/Object;)Lg8h;
+    .locals 3
 
-    iget p0, p0, Ld8;->a:I
+    iget v0, p0, Ld8;->d:I
 
-    const/4 v0, 0x0
+    packed-switch v0, :pswitch_data_0
 
-    const/16 v1, 0xe
-
-    const/4 v2, 0x0
-
-    packed-switch p0, :pswitch_data_0
-
-    sget p0, Landroid/system/OsConstants;->_SC_NPROCESSORS_CONF:I
-
-    invoke-static {p0}, Landroid/system/Os;->sysconf(I)J
-
-    move-result-wide v0
-
-    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    invoke-super {p0, p1, p2}, Lcb7;->A(Landroidx/fragment/app/b;Ljava/lang/Object;)Lg8h;
 
     move-result-object p0
 
     return-object p0
 
     :pswitch_0
-    sget p0, Landroid/system/OsConstants;->_SC_CLK_TCK:I
+    check-cast p2, [Ljava/lang/String;
 
-    invoke-static {p0}, Landroid/system/Os;->sysconf(I)J
+    array-length p0, p2
 
-    move-result-wide v0
+    if-nez p0, :cond_0
 
-    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    new-instance p0, Lg8h;
 
-    move-result-object p0
+    sget-object p1, Lq45;->a:Lq45;
+
+    invoke-direct {p0, p1}, Lg8h;-><init>(Ljava/lang/Object;)V
+
+    goto :goto_2
+
+    :cond_0
+    array-length p0, p2
+
+    const/4 v0, 0x0
+
+    move v1, v0
+
+    :goto_0
+    if-ge v1, p0, :cond_2
+
+    aget-object v2, p2, v1
+
+    invoke-static {p1, v2}, Lw7;->d(Landroid/content/Context;Ljava/lang/String;)I
+
+    move-result v2
+
+    if-nez v2, :cond_1
+
+    add-int/lit8 v1, v1, 0x1
+
+    goto :goto_0
+
+    :cond_1
+    const/4 p0, 0x0
+
+    goto :goto_2
+
+    :cond_2
+    array-length p0, p2
+
+    invoke-static {p0}, Li68;->I(I)I
+
+    move-result p0
+
+    const/16 p1, 0x10
+
+    if-ge p0, p1, :cond_3
+
+    move p0, p1
+
+    :cond_3
+    new-instance p1, Ljava/util/LinkedHashMap;
+
+    invoke-direct {p1, p0}, Ljava/util/LinkedHashMap;-><init>(I)V
+
+    array-length p0, p2
+
+    :goto_1
+    if-ge v0, p0, :cond_4
+
+    aget-object v1, p2, v0
+
+    sget-object v2, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
+
+    invoke-interface {p1, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    add-int/lit8 v0, v0, 0x1
+
+    goto :goto_1
+
+    :cond_4
+    new-instance p0, Lg8h;
+
+    invoke-direct {p0, p1}, Lg8h;-><init>(Ljava/lang/Object;)V
+
+    :goto_2
+    return-object p0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final J(Landroid/content/Intent;I)Ljava/lang/Object;
+    .locals 4
+
+    iget p0, p0, Ld8;->d:I
+
+    packed-switch p0, :pswitch_data_0
+
+    new-instance p0, Lb8;
+
+    invoke-direct {p0, p1, p2}, Lb8;-><init>(Landroid/content/Intent;I)V
+
+    return-object p0
+
+    :pswitch_0
+    new-instance p0, Lb8;
+
+    invoke-direct {p0, p1, p2}, Lb8;-><init>(Landroid/content/Intent;I)V
 
     return-object p0
 
     :pswitch_1
-    sget-object p0, Lmwe;->a:Lmwe;
+    const/4 p0, -0x1
 
-    invoke-static {}, Lmwe;->c()Ljava/util/Map;
+    if-eq p2, p0, :cond_0
 
-    move-result-object p0
-
-    sget-object v3, Lild;->c:Lrsd;
-
-    invoke-interface {p0, v3}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    instance-of v3, p0, Lcx3;
-
-    if-eqz v3, :cond_0
-
-    move-object v2, p0
-
-    check-cast v2, Lcx3;
+    goto :goto_2
 
     :cond_0
-    if-nez v2, :cond_1
+    if-nez p1, :cond_1
 
-    new-instance p0, Lvh4;
-
-    invoke-direct {p0, v1}, Lvh4;-><init>(I)V
-
-    invoke-virtual {p0}, Lvh4;->l()Lcx3;
+    goto :goto_2
 
     :cond_1
-    new-instance p0, Ljava/util/concurrent/atomic/AtomicInteger;
+    const-string p0, "androidx.activity.result.contract.extra.PERMISSIONS"
 
-    invoke-direct {p0, v0}, Ljava/util/concurrent/atomic/AtomicInteger;-><init>(I)V
-
-    new-instance v0, Ldc3;
-
-    const/4 v1, 0x4
-
-    invoke-direct {v0, v1, p0}, Ldc3;-><init>(ILjava/io/Serializable;)V
-
-    invoke-static {v0}, Ljava/util/concurrent/Executors;->newCachedThreadPool(Ljava/util/concurrent/ThreadFactory;)Ljava/util/concurrent/ExecutorService;
+    invoke-virtual {p1, p0}, Landroid/content/Intent;->getStringArrayExtra(Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object p0
 
-    return-object p0
+    const-string p2, "androidx.activity.result.contract.extra.PERMISSION_GRANT_RESULTS"
 
-    :pswitch_2
-    sget-object p0, Lmwe;->a:Lmwe;
+    invoke-virtual {p1, p2}, Landroid/content/Intent;->getIntArrayExtra(Ljava/lang/String;)[I
 
-    invoke-static {}, Lmwe;->c()Ljava/util/Map;
+    move-result-object p1
 
-    move-result-object p0
+    if-eqz p1, :cond_5
 
-    sget-object v0, Lild;->c:Lrsd;
+    if-nez p0, :cond_2
 
-    invoke-interface {p0, v0}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    instance-of v0, p0, Lcx3;
-
-    if-eqz v0, :cond_2
-
-    move-object v2, p0
-
-    check-cast v2, Lcx3;
+    goto :goto_2
 
     :cond_2
-    if-nez v2, :cond_3
+    new-instance p2, Ljava/util/ArrayList;
 
-    new-instance p0, Lvh4;
+    array-length v0, p1
 
-    invoke-direct {p0, v1}, Lvh4;-><init>(I)V
+    invoke-direct {p2, v0}, Ljava/util/ArrayList;-><init>(I)V
 
-    invoke-virtual {p0}, Lvh4;->l()Lcx3;
+    array-length v0, p1
+
+    const/4 v1, 0x0
+
+    move v2, v1
+
+    :goto_0
+    if-ge v2, v0, :cond_4
+
+    aget v3, p1, v2
+
+    if-nez v3, :cond_3
+
+    const/4 v3, 0x1
+
+    goto :goto_1
 
     :cond_3
-    new-instance p0, Lbg;
+    move v3, v1
 
-    const/4 v0, 0x1
+    :goto_1
+    invoke-static {v3}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
-    invoke-direct {p0, v0}, Lbg;-><init>(I)V
+    move-result-object v3
 
-    invoke-static {p0}, Ljava/util/concurrent/Executors;->newSingleThreadExecutor(Ljava/util/concurrent/ThreadFactory;)Ljava/util/concurrent/ExecutorService;
+    invoke-virtual {p2, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    move-result-object p0
-
-    return-object p0
-
-    :pswitch_3
-    sget-object p0, Lmwe;->d:Landroid/content/Context;
-
-    if-eqz p0, :cond_4
+    add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 
     :cond_4
-    move-object p0, v2
+    invoke-static {p0}, Lxr;->P([Ljava/lang/Object;)Ljava/util/ArrayList;
 
-    :goto_0
-    sget-object v0, Lmwe;->a:Lmwe;
+    move-result-object p0
 
-    invoke-static {}, Lmwe;->c()Ljava/util/Map;
+    invoke-static {p0, p2}, Lq73;->H0(Ljava/lang/Iterable;Ljava/util/List;)Ljava/util/ArrayList;
 
-    move-result-object v0
+    move-result-object p0
 
-    sget-object v3, Lild;->c:Lrsd;
+    invoke-static {p0}, Li68;->M(Ljava/util/ArrayList;)Ljava/util/Map;
 
-    invoke-interface {v0, v3}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    move-result-object p0
 
-    move-result-object v0
-
-    instance-of v3, v0, Lcx3;
-
-    if-eqz v3, :cond_5
-
-    move-object v2, v0
-
-    check-cast v2, Lcx3;
+    goto :goto_3
 
     :cond_5
-    if-nez v2, :cond_6
-
-    new-instance v0, Lvh4;
-
-    invoke-direct {v0, v1}, Lvh4;-><init>(I)V
-
-    new-instance v2, Lcx3;
-
-    invoke-direct {v2, v0}, Lcx3;-><init>(Lvh4;)V
-
-    :cond_6
-    iget v0, v2, Lcx3;->b:I
-
-    new-instance v1, Lzq6;
-
-    invoke-virtual {p0}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
-
-    move-result-object v2
-
-    const-string v3, "TracerSDK/1.1.1 App/"
-
-    const-string v4, " "
-
-    invoke-static {v3, v2, v4}, Lzt1;->m(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v2
-
-    const-string v3, "http.agent"
-
-    invoke-static {v3}, Ljava/lang/System;->getProperty(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v3
-
-    if-eqz v3, :cond_7
-
-    goto :goto_1
-
-    :cond_7
-    const-string v3, "Dalvik/Unknown (Linux; U; Android Unknown; Device Unknown Build/Unknown)"
-
-    :goto_1
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-direct {v1, v0, p0, v2}, Lzq6;-><init>(ILandroid/content/Context;Ljava/lang/String;)V
-
-    return-object v1
-
-    :pswitch_4
-    new-instance p0, Lcs4;
-
-    sget-object v0, Lmwe;->d:Landroid/content/Context;
-
-    if-eqz v0, :cond_8
-
-    move-object v2, v0
-
-    :cond_8
-    invoke-static {}, Liu0;->q()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-virtual {v2}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_9
-
-    const-string v0, "tracer"
-
-    goto :goto_2
-
-    :cond_9
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    const-string v3, "tracer-"
-
-    invoke-direct {v1, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    const/16 v3, 0x3a
-
-    const/16 v4, 0x2d
-
-    invoke-virtual {v0, v3, v4}, Ljava/lang/String;->replace(CC)Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {v0}, Landroid/net/Uri;->encode(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
     :goto_2
-    new-instance v1, Ljava/io/File;
+    sget-object p0, Lq45;->a:Lq45;
 
-    invoke-virtual {v2}, Landroid/content/Context;->getCacheDir()Ljava/io/File;
-
-    move-result-object v2
-
-    invoke-direct {v1, v2, v0}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
-
-    const-string v0, "drops.json"
-
-    invoke-static {v1, v0}, Lwj5;->I(Ljava/io/File;Ljava/lang/String;)Ljava/io/File;
-
-    move-result-object v0
-
-    invoke-direct {p0, v0}, Lcs4;-><init>(Ljava/io/File;)V
-
+    :goto_3
     return-object p0
 
-    :pswitch_5
-    sget-object p0, Lmwe;->a:Lmwe;
-
-    invoke-static {}, Lmwe;->c()Ljava/util/Map;
-
-    move-result-object p0
-
-    sget-object v1, Lsre;->a:Lrsd;
-
-    invoke-interface {p0, v1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    instance-of v1, p0, Lgl4;
-
-    if-eqz v1, :cond_a
-
-    move-object v2, p0
-
-    check-cast v2, Lgl4;
-
-    :cond_a
-    if-nez v2, :cond_b
-
-    new-instance p0, Ly7a;
-
-    const/16 v1, 0xd
-
-    invoke-direct {p0, v1, v0}, Ly7a;-><init>(IZ)V
-
-    new-instance v2, Lgl4;
-
-    invoke-direct {v2, p0}, Lgl4;-><init>(Ly7a;)V
-
-    :cond_b
-    return-object v2
-
-    :pswitch_6
-    const/high16 p0, 0x7fff0000
-
-    sget-object v0, Lg2c;->b:Ld3;
-
-    invoke-virtual {v0, p0}, Ld3;->c(I)I
-
-    move-result p0
-
-    const/high16 v0, 0x10000
-
-    add-int/2addr p0, v0
-
-    invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object p0
-
-    return-object p0
+    nop
 
     :pswitch_data_0
     .packed-switch 0x0
-        :pswitch_6
-        :pswitch_5
-        :pswitch_4
-        :pswitch_3
-        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final l(Ljava/lang/Object;)Landroid/content/Intent;
+    .locals 4
+
+    iget p0, p0, Ld8;->d:I
+
+    packed-switch p0, :pswitch_data_0
+
+    check-cast p1, Laa7;
+
+    new-instance p0, Landroid/content/Intent;
+
+    const-string v0, "androidx.activity.result.contract.action.INTENT_SENDER_REQUEST"
+
+    invoke-direct {p0, v0}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
+
+    iget-object v0, p1, Laa7;->b:Landroid/content/Intent;
+
+    if-eqz v0, :cond_0
+
+    const-string v1, "androidx.activity.result.contract.extra.ACTIVITY_OPTIONS_BUNDLE"
+
+    invoke-virtual {v0, v1}, Landroid/content/Intent;->getBundleExtra(Ljava/lang/String;)Landroid/os/Bundle;
+
+    move-result-object v2
+
+    if-eqz v2, :cond_0
+
+    invoke-virtual {p0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Landroid/os/Bundle;)Landroid/content/Intent;
+
+    invoke-virtual {v0, v1}, Landroid/content/Intent;->removeExtra(Ljava/lang/String;)V
+
+    const-string v1, "androidx.fragment.extra.ACTIVITY_OPTIONS_BUNDLE"
+
+    const/4 v2, 0x0
+
+    invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->getBooleanExtra(Ljava/lang/String;Z)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p1, Laa7;->a:Landroid/content/IntentSender;
+
+    iget v1, p1, Laa7;->o:I
+
+    iget p1, p1, Laa7;->c:I
+
+    new-instance v2, Laa7;
+
+    const/4 v3, 0x0
+
+    invoke-direct {v2, v0, v3, p1, v1}, Laa7;-><init>(Landroid/content/IntentSender;Landroid/content/Intent;II)V
+
+    move-object p1, v2
+
+    :cond_0
+    const-string v0, "androidx.activity.result.contract.extra.INTENT_SENDER_REQUEST"
+
+    invoke-virtual {p0, v0, p1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Landroid/os/Parcelable;)Landroid/content/Intent;
+
+    const/4 p1, 0x2
+
+    invoke-static {p1}, Landroidx/fragment/app/c;->K(I)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_1
+
+    invoke-virtual {p0}, Ljava/lang/Object;->toString()Ljava/lang/String;
+
+    :cond_1
+    return-object p0
+
+    :pswitch_0
+    check-cast p1, Landroid/content/Intent;
+
+    return-object p1
+
+    :pswitch_1
+    check-cast p1, [Ljava/lang/String;
+
+    new-instance p0, Landroid/content/Intent;
+
+    const-string v0, "androidx.activity.result.contract.action.REQUEST_PERMISSIONS"
+
+    invoke-direct {p0, v0}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
+
+    const-string v0, "androidx.activity.result.contract.extra.PERMISSIONS"
+
+    invoke-virtual {p0, v0, p1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;[Ljava/lang/String;)Landroid/content/Intent;
+
+    move-result-object p0
+
+    return-object p0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
         :pswitch_1
         :pswitch_0
     .end packed-switch

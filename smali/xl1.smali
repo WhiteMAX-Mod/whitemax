@@ -1,284 +1,264 @@
 .class public final Lxl1;
-.super Lvg;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
-
-# static fields
-.field public static final synthetic s0:I
+# interfaces
+.implements Lis5;
 
 
 # instance fields
-.field public final r0:Lje7;
+.field public final synthetic a:I
+
+.field public final synthetic b:Liic;
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 2
+.method public synthetic constructor <init>(Liic;I)V
+    .locals 0
 
-    const-wide/16 v0, -0x1
+    iput p2, p0, Lxl1;->a:I
 
-    .line 1
-    invoke-direct {p0, v0, v1}, Lxl1;-><init>(J)V
+    iput-object p1, p0, Lxl1;->b:Liic;
 
-    return-void
-.end method
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-.method public constructor <init>(J)V
-    .locals 1
-
-    const/4 v0, 0x2
-
-    .line 2
-    invoke-direct {p0, p1, p2, v0}, Lvg;-><init>(JI)V
-
-    .line 3
-    sget-object p1, Lqi1;->a:Lqi1;
-
-    invoke-virtual {p1}, Lqi1;->c()Lje7;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lxl1;->r0:Lje7;
-
-    return-void
-.end method
-
-.method public static final o(Lxl1;Landroid/view/View;Z)V
-    .locals 2
-
-    instance-of p0, p1, Lsj1;
-
-    if-eqz p0, :cond_0
-
-    move-object p0, p1
-
-    check-cast p0, Lsj1;
-
-    goto :goto_0
-
-    :cond_0
-    const/4 p0, 0x0
-
-    :goto_0
-    if-eqz p0, :cond_1
-
-    invoke-interface {p0, p2}, Lsj1;->a(Z)V
-
-    :cond_1
-    if-eqz p2, :cond_2
-
-    const/4 p0, 0x1
-
-    invoke-virtual {p1, p0}, Landroid/view/View;->setClipToOutline(Z)V
-
-    new-instance p0, Landroid/graphics/Rect;
-
-    invoke-virtual {p1}, Landroid/view/View;->getWidth()I
-
-    move-result p2
-
-    invoke-virtual {p1}, Landroid/view/View;->getHeight()I
-
-    move-result v0
-
-    const/4 v1, 0x0
-
-    invoke-direct {p0, v1, v1, p2, v0}, Landroid/graphics/Rect;-><init>(IIII)V
-
-    invoke-static {}, Lgk4;->d()Landroid/content/res/Resources;
-
-    move-result-object p2
-
-    invoke-virtual {p2}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object p2
-
-    iget p2, p2, Landroid/util/DisplayMetrics;->density:F
-
-    const/4 v0, 0x0
-
-    mul-float/2addr p2, v0
-
-    invoke-static {p1, p0, p2}, Lxqd;->i(Landroid/view/View;Landroid/graphics/Rect;F)V
-
-    :cond_2
     return-void
 .end method
 
 
 # virtual methods
-.method public final l(Landroid/view/ViewGroup;Landroid/view/View;Landroid/view/View;ZZ)Landroid/animation/AnimatorSet;
-    .locals 0
+.method public final d(Lks5;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    .locals 2
 
-    new-instance p1, Landroid/animation/AnimatorSet;
+    iget v0, p0, Lxl1;->a:I
 
-    invoke-direct {p1}, Landroid/animation/AnimatorSet;-><init>()V
+    packed-switch v0, :pswitch_data_0
 
-    if-eqz p4, :cond_0
+    new-instance v0, Lqmg;
 
-    if-eqz p3, :cond_0
+    const/4 v1, 0x0
 
-    const/4 p2, 0x1
+    invoke-direct {v0, p1, v1}, Lqmg;-><init>(Lks5;I)V
 
-    invoke-virtual {p0, p1, p3, p2}, Lxl1;->p(Landroid/animation/AnimatorSet;Landroid/view/View;Z)V
+    iget-object p0, p0, Lxl1;->b:Liic;
 
-    return-object p1
+    iget-object p0, p0, Liic;->a:Lrce;
 
-    :cond_0
-    if-nez p4, :cond_1
-
-    if-eqz p2, :cond_1
-
-    const/4 p3, 0x0
-
-    invoke-virtual {p0, p1, p2, p3}, Lxl1;->p(Landroid/animation/AnimatorSet;Landroid/view/View;Z)V
-
-    :cond_1
-    return-object p1
-.end method
-
-.method public final n(Landroid/view/View;)V
-    .locals 0
-
-    return-void
-.end method
-
-.method public final p(Landroid/animation/AnimatorSet;Landroid/view/View;Z)V
-    .locals 10
-
-    new-instance v0, Landroid/view/animation/DecelerateInterpolator;
-
-    invoke-direct {v0}, Landroid/view/animation/DecelerateInterpolator;-><init>()V
-
-    invoke-virtual {p1, v0}, Landroid/animation/AnimatorSet;->setInterpolator(Landroid/animation/TimeInterpolator;)V
-
-    new-instance v1, Lqh1;
-
-    const/4 v9, 0x1
-
-    move-object v5, p2
-
-    move v6, p3
-
-    move-object v7, p2
-
-    move v8, p3
-
-    move-object v2, p0
-
-    move-object v3, p2
-
-    move v4, p3
-
-    invoke-direct/range {v1 .. v9}, Lqh1;-><init>(Lvg;Landroid/view/View;ZLandroid/view/View;ZLandroid/view/View;ZI)V
-
-    invoke-virtual {p1, v1}, Landroid/animation/Animator;->addListener(Landroid/animation/Animator$AnimatorListener;)V
-
-    invoke-static {}, Lxja;->i()Lkl7;
+    invoke-interface {p0, v0, p2}, Lis5;->d(Lks5;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
     move-result-object p0
 
-    if-eqz v4, :cond_0
+    sget-object p1, Lz04;->a:Lz04;
 
-    iget-object p2, v2, Lxl1;->r0:Lje7;
-
-    invoke-interface {p2}, Lje7;->getValue()Ljava/lang/Object;
-
-    move-result-object p2
-
-    check-cast p2, Ls91;
-
-    check-cast p2, Lt91;
-
-    invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    const/16 p2, 0xae
-
-    int-to-float p2, p2
-
-    invoke-static {}, Lgk4;->d()Landroid/content/res/Resources;
-
-    move-result-object p3
-
-    invoke-virtual {p3}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object p3
-
-    iget p3, p3, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr p2, p3
-
-    invoke-static {p2}, Lkhg;->x(F)I
-
-    move-result p2
+    if-ne p0, p1, :cond_0
 
     goto :goto_0
 
     :cond_0
-    invoke-virtual {v3}, Landroid/view/View;->getHeight()I
-
-    move-result p2
+    sget-object p0, Lylf;->a:Lylf;
 
     :goto_0
-    if-eqz v4, :cond_1
+    return-object p0
 
-    invoke-virtual {v3}, Landroid/view/View;->getHeight()I
+    :pswitch_0
+    new-instance v0, Lyf7;
 
-    move-result p3
+    const/16 v1, 0x1d
+
+    invoke-direct {v0, p1, v1}, Lyf7;-><init>(Lks5;I)V
+
+    iget-object p0, p0, Lxl1;->b:Liic;
+
+    iget-object p0, p0, Liic;->a:Lrce;
+
+    invoke-interface {p0, v0, p2}, Lis5;->d(Lks5;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p0
+
+    sget-object p1, Lz04;->a:Lz04;
+
+    if-ne p0, p1, :cond_1
 
     goto :goto_1
 
     :cond_1
-    const/4 p3, 0x0
+    sget-object p0, Lylf;->a:Lylf;
 
     :goto_1
-    new-instance v0, Lag;
+    return-object p0
 
-    const-string v1, "bounds"
+    :pswitch_1
+    new-instance v0, Lyf7;
 
-    invoke-direct {v0, v1, p2}, Lag;-><init>(Ljava/lang/String;I)V
+    const/16 v1, 0xc
 
-    filled-new-array {p2, p3}, [I
+    invoke-direct {v0, p1, v1}, Lyf7;-><init>(Lks5;I)V
 
-    move-result-object p2
+    iget-object p0, p0, Lxl1;->b:Liic;
 
-    const/4 p3, 0x0
+    iget-object p0, p0, Liic;->a:Lrce;
 
-    invoke-static {p3, v0, p2}, Landroid/animation/ObjectAnimator;->ofInt(Ljava/lang/Object;Landroid/util/Property;[I)Landroid/animation/ObjectAnimator;
-
-    move-result-object p2
-
-    new-instance v1, Lig;
-
-    const/4 v5, 0x1
-
-    invoke-direct {v1, v3, v0, v5}, Lig;-><init>(Landroid/view/View;Lag;I)V
-
-    invoke-virtual {p2, v1}, Landroid/animation/ValueAnimator;->addUpdateListener(Landroid/animation/ValueAnimator$AnimatorUpdateListener;)V
-
-    invoke-virtual {p0, p2}, Lkl7;->add(Ljava/lang/Object;)Z
-
-    instance-of p2, v3, Lsj1;
-
-    if-eqz p2, :cond_2
-
-    move-object p3, v3
-
-    check-cast p3, Lsj1;
-
-    :cond_2
-    if-eqz p3, :cond_3
-
-    iget-wide v0, v2, Lvg;->o:J
-
-    invoke-interface {p3, p0, v4, v0, v1}, Lsj1;->g(Lkl7;ZJ)V
-
-    :cond_3
-    invoke-static {p0}, Lxja;->b(Ljava/util/List;)Lkl7;
+    invoke-interface {p0, v0, p2}, Lis5;->d(Lks5;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
     move-result-object p0
 
-    invoke-virtual {p1, p0}, Landroid/animation/AnimatorSet;->playTogether(Ljava/util/Collection;)V
+    sget-object p1, Lz04;->a:Lz04;
 
-    return-void
+    if-ne p0, p1, :cond_2
+
+    goto :goto_2
+
+    :cond_2
+    sget-object p0, Lylf;->a:Lylf;
+
+    :goto_2
+    return-object p0
+
+    :pswitch_2
+    new-instance v0, Lmy2;
+
+    const/16 v1, 0x1b
+
+    invoke-direct {v0, p1, v1}, Lmy2;-><init>(Lks5;I)V
+
+    iget-object p0, p0, Lxl1;->b:Liic;
+
+    iget-object p0, p0, Liic;->a:Lrce;
+
+    invoke-interface {p0, v0, p2}, Lis5;->d(Lks5;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p0
+
+    sget-object p1, Lz04;->a:Lz04;
+
+    if-ne p0, p1, :cond_3
+
+    goto :goto_3
+
+    :cond_3
+    sget-object p0, Lylf;->a:Lylf;
+
+    :goto_3
+    return-object p0
+
+    :pswitch_3
+    new-instance v0, Lmy2;
+
+    const/16 v1, 0x1a
+
+    invoke-direct {v0, p1, v1}, Lmy2;-><init>(Lks5;I)V
+
+    iget-object p0, p0, Lxl1;->b:Liic;
+
+    iget-object p0, p0, Liic;->a:Lrce;
+
+    invoke-interface {p0, v0, p2}, Lis5;->d(Lks5;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p0
+
+    sget-object p1, Lz04;->a:Lz04;
+
+    if-ne p0, p1, :cond_4
+
+    goto :goto_4
+
+    :cond_4
+    sget-object p0, Lylf;->a:Lylf;
+
+    :goto_4
+    return-object p0
+
+    :pswitch_4
+    new-instance v0, Lqmg;
+
+    const/4 v1, 0x1
+
+    invoke-direct {v0, p1, v1}, Lqmg;-><init>(Lks5;I)V
+
+    iget-object p0, p0, Lxl1;->b:Liic;
+
+    iget-object p0, p0, Liic;->a:Lrce;
+
+    invoke-interface {p0, v0, p2}, Lis5;->d(Lks5;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p0
+
+    sget-object p1, Lz04;->a:Lz04;
+
+    if-ne p0, p1, :cond_5
+
+    goto :goto_5
+
+    :cond_5
+    sget-object p0, Lylf;->a:Lylf;
+
+    :goto_5
+    return-object p0
+
+    :pswitch_5
+    new-instance v0, Lmv;
+
+    const/16 v1, 0x1c
+
+    invoke-direct {v0, p1, v1}, Lmv;-><init>(Lks5;I)V
+
+    iget-object p0, p0, Lxl1;->b:Liic;
+
+    iget-object p0, p0, Liic;->a:Lrce;
+
+    invoke-interface {p0, v0, p2}, Lis5;->d(Lks5;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p0
+
+    sget-object p1, Lz04;->a:Lz04;
+
+    if-ne p0, p1, :cond_6
+
+    goto :goto_6
+
+    :cond_6
+    sget-object p0, Lylf;->a:Lylf;
+
+    :goto_6
+    return-object p0
+
+    :pswitch_6
+    new-instance v0, Lmv;
+
+    const/16 v1, 0x1b
+
+    invoke-direct {v0, p1, v1}, Lmv;-><init>(Lks5;I)V
+
+    iget-object p0, p0, Lxl1;->b:Liic;
+
+    iget-object p0, p0, Liic;->a:Lrce;
+
+    invoke-interface {p0, v0, p2}, Lis5;->d(Lks5;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p0
+
+    sget-object p1, Lz04;->a:Lz04;
+
+    if-ne p0, p1, :cond_7
+
+    goto :goto_7
+
+    :cond_7
+    sget-object p0, Lylf;->a:Lylf;
+
+    :goto_7
+    return-object p0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_6
+        :pswitch_5
+        :pswitch_4
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

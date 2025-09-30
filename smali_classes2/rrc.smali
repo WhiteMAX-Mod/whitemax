@@ -1,47 +1,70 @@
 .class public final Lrrc;
-.super Lcr0;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
+# instance fields
+.field public final a:Lcta;
+
+.field public final b:Landroid/view/Surface;
+
+
+# direct methods
+.method public constructor <init>(Lcta;Landroid/view/Surface;)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lrrc;->a:Lcta;
+
+    iput-object p2, p0, Lrrc;->b:Landroid/view/Surface;
+
+    return-void
+.end method
+
+
 # virtual methods
-.method public final onCreate(Landroid/os/Bundle;)V
-    .locals 2
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 1
 
-    invoke-super {p0, p1}, Lcr0;->onCreate(Landroid/os/Bundle;)V
+    instance-of v0, p1, Lrrc;
 
-    const/4 p1, -0x1
+    if-eqz v0, :cond_0
 
-    :try_start_0
-    invoke-virtual {p0}, Landroid/app/Dialog;->getContext()Landroid/content/Context;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v0
-
-    sget v1, Larb;->picker_width:I
-
-    invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
-
-    move-result v0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    check-cast p1, Lrrc;
 
     goto :goto_0
 
-    :catchall_0
-    move v0, p1
+    :cond_0
+    const/4 p1, 0x0
 
     :goto_0
-    invoke-virtual {p0}, Landroid/app/Dialog;->getWindow()Landroid/view/Window;
+    if-nez p1, :cond_1
 
-    move-result-object p0
+    const/4 p0, 0x0
 
-    if-eqz p0, :cond_0
+    return p0
 
-    invoke-virtual {p0, v0, p1}, Landroid/view/Window;->setLayout(II)V
+    :cond_1
+    iget-object p0, p0, Lrrc;->a:Lcta;
 
-    :cond_0
-    return-void
+    iget-object p1, p1, Lrrc;->a:Lcta;
+
+    invoke-virtual {p0, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+
+    move-result p0
+
+    return p0
+.end method
+
+.method public final hashCode()I
+    .locals 0
+
+    iget-object p0, p0, Lrrc;->a:Lcta;
+
+    invoke-virtual {p0}, Ljava/lang/Object;->hashCode()I
+
+    move-result p0
+
+    return p0
 .end method

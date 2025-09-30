@@ -3,41 +3,77 @@
 .source "SourceFile"
 
 
+# static fields
+.field public static final g:Lupe;
+
+
 # instance fields
-.field public final a:F
+.field public final a:Ljava/lang/String;
 
-.field public final b:F
+.field public final b:I
 
-.field public final c:[I
+.field public final c:I
 
-.field public final d:[F
+.field public final d:Ljava/lang/Object;
 
-.field public final e:F
+.field public final e:I
 
-.field public final f:F
-
-.field public final g:F
+.field public final f:Z
 
 
 # direct methods
-.method public constructor <init>(FFFFF[F[I)V
+.method static constructor <clinit>()V
+    .locals 4
+
+    new-instance v0, Lupe;
+
+    const/4 v1, 0x0
+
+    sget-object v2, Lp45;->a:Lp45;
+
+    const/4 v3, 0x0
+
+    invoke-direct {v0, v3, v1, v1, v2}, Lupe;-><init>(Ljava/lang/String;IILjava/util/List;)V
+
+    sput-object v0, Lupe;->g:Lupe;
+
+    return-void
+.end method
+
+.method public constructor <init>(Ljava/lang/String;IILjava/util/List;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput p1, p0, Lupe;->a:F
+    iput-object p1, p0, Lupe;->a:Ljava/lang/String;
 
-    iput p2, p0, Lupe;->b:F
+    iput p2, p0, Lupe;->b:I
 
-    iput-object p7, p0, Lupe;->c:[I
+    iput p3, p0, Lupe;->c:I
 
-    iput-object p6, p0, Lupe;->d:[F
+    iput-object p4, p0, Lupe;->d:Ljava/lang/Object;
 
-    iput p3, p0, Lupe;->e:F
+    invoke-interface {p4}, Ljava/util/List;->size()I
 
-    iput p4, p0, Lupe;->f:F
+    move-result p1
 
-    iput p5, p0, Lupe;->g:F
+    iput p1, p0, Lupe;->e:I
+
+    invoke-interface {p4}, Ljava/util/List;->size()I
+
+    move-result p1
+
+    if-ge p1, p3, :cond_0
+
+    const/4 p1, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    const/4 p1, 0x0
+
+    :goto_0
+    iput-boolean p1, p0, Lupe;->f:Z
 
     return-void
 .end method
@@ -45,174 +81,111 @@
 
 # virtual methods
 .method public final equals(Ljava/lang/Object;)Z
-    .locals 4
-
-    const/4 v0, 0x1
+    .locals 2
 
     if-ne p0, p1, :cond_0
 
-    return v0
+    goto :goto_1
 
     :cond_0
-    instance-of v1, p1, Lupe;
+    instance-of v0, p1, Lupe;
 
-    const/4 v2, 0x0
+    if-nez v0, :cond_1
 
-    if-nez v1, :cond_1
-
-    return v2
+    goto :goto_0
 
     :cond_1
     check-cast p1, Lupe;
 
-    iget v1, p0, Lupe;->a:F
+    iget-object v0, p0, Lupe;->a:Ljava/lang/String;
 
-    iget v3, p1, Lupe;->a:F
+    iget-object v1, p1, Lupe;->a:Ljava/lang/String;
 
-    invoke-static {v1, v3}, Ljava/lang/Float;->compare(FF)I
+    invoke-static {v0, v1}, Lvyg;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    move-result v1
+    move-result v0
 
-    if-eqz v1, :cond_2
+    if-nez v0, :cond_2
 
-    return v2
+    goto :goto_0
 
     :cond_2
-    iget v1, p0, Lupe;->b:F
+    iget v0, p0, Lupe;->b:I
 
-    iget v3, p1, Lupe;->b:F
+    iget v1, p1, Lupe;->b:I
 
-    invoke-static {v1, v3}, Ljava/lang/Float;->compare(FF)I
+    if-eq v0, v1, :cond_3
 
-    move-result v1
-
-    if-eqz v1, :cond_3
-
-    return v2
+    goto :goto_0
 
     :cond_3
-    iget-object v1, p0, Lupe;->c:[I
+    iget v0, p0, Lupe;->c:I
 
-    iget-object v3, p1, Lupe;->c:[I
+    iget v1, p1, Lupe;->c:I
 
-    invoke-static {v1, v3}, Lxq7;->d(Ljava/lang/Object;Ljava/lang/Object;)Z
+    if-eq v0, v1, :cond_4
 
-    move-result v1
-
-    if-nez v1, :cond_4
-
-    return v2
+    goto :goto_0
 
     :cond_4
-    iget-object v1, p0, Lupe;->d:[F
+    iget-object p0, p0, Lupe;->d:Ljava/lang/Object;
 
-    iget-object v3, p1, Lupe;->d:[F
+    iget-object p1, p1, Lupe;->d:Ljava/lang/Object;
 
-    invoke-static {v1, v3}, Lxq7;->d(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_5
-
-    return v2
-
-    :cond_5
-    iget v1, p0, Lupe;->e:F
-
-    iget v3, p1, Lupe;->e:F
-
-    invoke-static {v1, v3}, Ljava/lang/Float;->compare(FF)I
-
-    move-result v1
-
-    if-eqz v1, :cond_6
-
-    return v2
-
-    :cond_6
-    iget v1, p0, Lupe;->f:F
-
-    iget v3, p1, Lupe;->f:F
-
-    invoke-static {v1, v3}, Ljava/lang/Float;->compare(FF)I
-
-    move-result v1
-
-    if-eqz v1, :cond_7
-
-    return v2
-
-    :cond_7
-    iget p0, p0, Lupe;->g:F
-
-    iget p1, p1, Lupe;->g:F
-
-    invoke-static {p0, p1}, Ljava/lang/Float;->compare(FF)I
+    invoke-virtual {p0, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
     move-result p0
 
-    if-eqz p0, :cond_8
+    if-nez p0, :cond_5
 
-    return v2
+    :goto_0
+    const/4 p0, 0x0
 
-    :cond_8
-    return v0
+    return p0
+
+    :cond_5
+    :goto_1
+    const/4 p0, 0x1
+
+    return p0
 .end method
 
 .method public final hashCode()I
     .locals 3
 
-    iget v0, p0, Lupe;->a:F
+    iget-object v0, p0, Lupe;->a:Ljava/lang/String;
 
-    invoke-static {v0}, Ljava/lang/Float;->hashCode(F)I
+    if-nez v0, :cond_0
+
+    const/4 v0, 0x0
+
+    goto :goto_0
+
+    :cond_0
+    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
 
     move-result v0
 
+    :goto_0
     const/16 v1, 0x1f
 
     mul-int/2addr v0, v1
 
-    iget v2, p0, Lupe;->b:F
+    iget v2, p0, Lupe;->b:I
 
-    invoke-static {v0, v2, v1}, Luz1;->e(IFI)I
-
-    move-result v0
-
-    iget-object v2, p0, Lupe;->c:[I
-
-    invoke-static {v2}, Ljava/util/Arrays;->hashCode([I)I
-
-    move-result v2
-
-    add-int/2addr v2, v0
-
-    mul-int/2addr v2, v1
-
-    iget-object v0, p0, Lupe;->d:[F
-
-    invoke-static {v0}, Ljava/util/Arrays;->hashCode([F)I
+    invoke-static {v2, v0, v1}, Lz7e;->m(III)I
 
     move-result v0
 
-    add-int/2addr v0, v2
+    iget v2, p0, Lupe;->c:I
 
-    mul-int/2addr v0, v1
-
-    iget v2, p0, Lupe;->e:F
-
-    invoke-static {v0, v2, v1}, Luz1;->e(IFI)I
+    invoke-static {v2, v0, v1}, Lz7e;->m(III)I
 
     move-result v0
 
-    iget v2, p0, Lupe;->f:F
+    iget-object p0, p0, Lupe;->d:Ljava/lang/Object;
 
-    invoke-static {v0, v2, v1}, Luz1;->e(IFI)I
-
-    move-result v0
-
-    iget p0, p0, Lupe;->g:F
-
-    invoke-static {p0}, Ljava/lang/Float;->hashCode(F)I
+    invoke-virtual {p0}, Ljava/lang/Object;->hashCode()I
 
     move-result p0
 
@@ -224,71 +197,37 @@
 .method public final toString()Ljava/lang/String;
     .locals 5
 
-    iget-object v0, p0, Lupe;->c:[I
+    const-string v0, ", cursorPosition="
 
-    invoke-static {v0}, Ljava/util/Arrays;->toString([I)Ljava/lang/String;
+    const-string v1, ", totalCount="
+
+    iget v2, p0, Lupe;->b:I
+
+    const-string v3, "SuggestsResult(query="
+
+    iget-object v4, p0, Lupe;->a:Ljava/lang/String;
+
+    invoke-static {v2, v3, v4, v0, v1}, Lyv7;->m(ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    iget-object v1, p0, Lupe;->d:[F
+    iget v1, p0, Lupe;->c:I
 
-    invoke-static {v1}, Ljava/util/Arrays;->toString([F)Ljava/lang/String;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    move-result-object v1
+    const-string v1, ", result="
 
-    new-instance v2, Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const-string v3, "GradientEllipse(x="
+    iget-object p0, p0, Lupe;->d:Ljava/lang/Object;
 
-    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget v3, p0, Lupe;->a:F
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
-
-    const-string v3, ", y="
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget v3, p0, Lupe;->b:F
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
-
-    const-string v3, ", color="
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v3, ", stops="
-
-    const-string v4, ", radiusX="
-
-    invoke-static {v2, v0, v3, v1, v4}, Lm26;->p(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
-
-    iget v0, p0, Lupe;->e:F
-
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
-
-    const-string v0, ", radiusY="
-
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget v0, p0, Lupe;->f:F
-
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
-
-    const-string v0, ", angle="
-
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget p0, p0, Lupe;->g:F
-
-    invoke-virtual {v2, p0}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
     const-string p0, ")"
 
-    invoke-virtual {v2, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p0
 

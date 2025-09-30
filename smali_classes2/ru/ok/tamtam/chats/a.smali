@@ -4,14 +4,14 @@
 
 
 # direct methods
-.method public static final a(Lvu0;Lrie;)Lxh0;
+.method public static final a(Lfv0;Lxwe;)Lai0;
     .locals 1
 
     new-instance v0, Lru/ok/tamtam/chats/ChatsEventsByBus;
 
-    invoke-direct {v0, p1}, Lxh0;-><init>(Lrie;)V
+    invoke-direct {v0, p1}, Lai0;-><init>(Lxwe;)V
 
-    invoke-virtual {p0, v0}, Lvu0;->d(Ljava/lang/Object;)V
+    invoke-virtual {p0, v0}, Lfv0;->d(Ljava/lang/Object;)V
 
     return-object v0
 .end method

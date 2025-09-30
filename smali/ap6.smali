@@ -1,138 +1,81 @@
-.class public abstract Lap6;
-.super Ljava/lang/Object;
+.class public final Lap6;
+.super Lv5d;
 .source "SourceFile"
-
-# interfaces
-.implements Lhtd;
 
 
 # instance fields
-.field public final a:Lg16;
-
-.field public b:Z
-
-.field public final synthetic c:Ls8;
+.field public final c:Landroid/os/Handler;
 
 
 # direct methods
-.method public constructor <init>(Ls8;)V
-    .locals 1
+.method public constructor <init>(Landroid/os/Handler;)V
+    .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lap6;->c:Ls8;
-
-    new-instance v0, Lg16;
-
-    iget-object p1, p1, Ls8;->e:Ljava/lang/Object;
-
-    check-cast p1, Lyt0;
-
-    invoke-interface {p1}, Lhtd;->p()Lsse;
-
-    move-result-object p1
-
-    invoke-direct {v0, p1}, Lg16;-><init>(Lsse;)V
-
-    iput-object v0, p0, Lap6;->a:Lg16;
+    iput-object p1, p0, Lap6;->c:Landroid/os/Handler;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public b(Lvs0;J)J
+.method public final a()Lt5d;
+    .locals 1
+
+    new-instance v0, Lyo6;
+
+    iget-object p0, p0, Lap6;->c:Landroid/os/Handler;
+
+    invoke-direct {v0, p0}, Lyo6;-><init>(Landroid/os/Handler;)V
+
+    return-object v0
+.end method
+
+.method public final c(Ljava/lang/Runnable;JLjava/util/concurrent/TimeUnit;)Loq4;
     .locals 2
 
-    iget-object v0, p0, Lap6;->c:Ls8;
+    if-eqz p1, :cond_1
 
-    :try_start_0
-    iget-object v1, v0, Ls8;->e:Ljava/lang/Object;
+    if-eqz p4, :cond_0
 
-    check-cast v1, Lyt0;
+    new-instance v0, Lzo6;
 
-    invoke-interface {v1, p1, p2, p3}, Lhtd;->b(Lvs0;J)J
+    iget-object p0, p0, Lap6;->c:Landroid/os/Handler;
 
-    move-result-wide p0
-    :try_end_0
-    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
+    invoke-direct {v0, p0, p1}, Lzo6;-><init>(Landroid/os/Handler;Ljava/lang/Runnable;)V
 
-    return-wide p0
+    invoke-static {p0, v0}, Landroid/os/Message;->obtain(Landroid/os/Handler;Ljava/lang/Runnable;)Landroid/os/Message;
 
-    :catch_0
-    move-exception p1
+    move-result-object p1
 
-    iget-object p2, v0, Ls8;->d:Ljava/lang/Object;
+    const/4 v1, 0x1
 
-    check-cast p2, Ld6c;
+    invoke-virtual {p1, v1}, Landroid/os/Message;->setAsynchronous(Z)V
 
-    invoke-virtual {p2}, Ld6c;->k()V
+    invoke-virtual {p4, p2, p3}, Ljava/util/concurrent/TimeUnit;->toMillis(J)J
 
-    invoke-virtual {p0}, Lap6;->m()V
+    move-result-wide p2
 
-    throw p1
-.end method
+    invoke-virtual {p0, p1, p2, p3}, Landroid/os/Handler;->sendMessageDelayed(Landroid/os/Message;J)Z
 
-.method public final m()V
-    .locals 4
-
-    iget-object v0, p0, Lap6;->c:Ls8;
-
-    iget v1, v0, Ls8;->a:I
-
-    const/4 v2, 0x6
-
-    if-ne v1, v2, :cond_0
-
-    return-void
+    return-object v0
 
     :cond_0
-    const/4 v3, 0x5
+    new-instance p0, Ljava/lang/NullPointerException;
 
-    if-ne v1, v3, :cond_1
+    const-string p1, "unit == null"
 
-    iget-object p0, p0, Lap6;->a:Lg16;
-
-    iget-object v1, p0, Lg16;->e:Lsse;
-
-    sget-object v3, Lsse;->d:Lrse;
-
-    iput-object v3, p0, Lg16;->e:Lsse;
-
-    invoke-virtual {v1}, Lsse;->a()Lsse;
-
-    invoke-virtual {v1}, Lsse;->b()Lsse;
-
-    iput v2, v0, Ls8;->a:I
-
-    return-void
-
-    :cond_1
-    new-instance p0, Ljava/lang/IllegalStateException;
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    const-string v2, "state: "
-
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget v0, v0, Ls8;->a:I
-
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-direct {p0, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    invoke-direct {p0, p1}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
 
     throw p0
-.end method
 
-.method public final p()Lsse;
-    .locals 0
+    :cond_1
+    new-instance p0, Ljava/lang/NullPointerException;
 
-    iget-object p0, p0, Lap6;->a:Lg16;
+    const-string p1, "run == null"
 
-    return-object p0
+    invoke-direct {p0, p1}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
+
+    throw p0
 .end method

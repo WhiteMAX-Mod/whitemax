@@ -1,66 +1,93 @@
-.class public final Lf0;
+.class public abstract Lf0;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/lang/Runnable;
+.implements Lo04;
 
 
 # instance fields
-.field public final synthetic a:Z
-
-.field public final synthetic b:Lq34;
-
-.field public final synthetic c:Z
-
-.field public final synthetic o:Lg0;
+.field private final key:Lp04;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Lp04;"
+        }
+    .end annotation
+.end field
 
 
 # direct methods
-.method public constructor <init>(Lg0;ZLq34;Z)V
+.method public constructor <init>(Lp04;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lf0;->o:Lg0;
-
-    iput-boolean p2, p0, Lf0;->a:Z
-
-    iput-object p3, p0, Lf0;->b:Lq34;
-
-    iput-boolean p4, p0, Lf0;->c:Z
+    iput-object p1, p0, Lf0;->key:Lp04;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
-    .locals 3
+.method public fold(Ljava/lang/Object;Lpc6;)Ljava/lang/Object;
+    .locals 0
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "<R:",
+            "Ljava/lang/Object;",
+            ">(TR;",
+            "Lpc6;",
+            ")TR;"
+        }
+    .end annotation
 
-    iget-boolean v0, p0, Lf0;->a:Z
+    invoke-interface {p2, p1, p0}, Lpc6;->invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    iget-object v1, p0, Lf0;->o:Lg0;
+    move-result-object p0
 
-    iget-object v2, p0, Lf0;->b:Lq34;
+    return-object p0
+.end method
 
-    if-eqz v0, :cond_0
+.method public get(Lp04;)Lo04;
+    .locals 0
 
-    invoke-interface {v2, v1}, Lq34;->c(Lg0;)V
+    invoke-static {p0, p1}, Lkp;->n(Lo04;Lp04;)Lo04;
 
-    return-void
+    move-result-object p0
 
-    :cond_0
-    iget-boolean p0, p0, Lf0;->c:Z
+    return-object p0
+.end method
 
-    if-eqz p0, :cond_1
+.method public getKey()Lp04;
+    .locals 0
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Lp04;"
+        }
+    .end annotation
 
-    invoke-interface {v2}, Lq34;->d()V
+    iget-object p0, p0, Lf0;->key:Lp04;
 
-    return-void
+    return-object p0
+.end method
 
-    :cond_1
-    invoke-interface {v2, v1}, Lq34;->a(Lg0;)V
+.method public minusKey(Lp04;)Lq04;
+    .locals 0
 
-    return-void
+    invoke-static {p0, p1}, Lkp;->z(Lo04;Lp04;)Lq04;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public plus(Lq04;)Lq04;
+    .locals 0
+
+    invoke-static {p0, p1}, Lw7;->B(Lq04;Lq04;)Lq04;
+
+    move-result-object p0
+
+    return-object p0
 .end method

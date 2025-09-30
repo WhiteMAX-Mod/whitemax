@@ -1,64 +1,89 @@
 .class public final Lyy1;
-.super Lz93;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
-
-# static fields
-.field public static final synthetic c:Ljava/util/concurrent/atomic/AtomicIntegerFieldUpdater;
+# interfaces
+.implements Lsm3;
 
 
 # instance fields
-.field private volatile synthetic _resumed$volatile:I
+.field public final synthetic a:Ljava/util/concurrent/Executor;
+
+.field public final synthetic b:Lo02;
+
+.field public final synthetic c:Lzy1;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public constructor <init>(Lzy1;Ljava/util/concurrent/Executor;Lo02;)V
+    .locals 0
 
-    const-class v0, Lyy1;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const-string v1, "_resumed$volatile"
+    iput-object p1, p0, Lyy1;->c:Lzy1;
 
-    invoke-static {v0, v1}, Ljava/util/concurrent/atomic/AtomicIntegerFieldUpdater;->newUpdater(Ljava/lang/Class;Ljava/lang/String;)Ljava/util/concurrent/atomic/AtomicIntegerFieldUpdater;
+    iput-object p2, p0, Lyy1;->a:Ljava/util/concurrent/Executor;
 
-    move-result-object v0
-
-    sput-object v0, Lyy1;->c:Ljava/util/concurrent/atomic/AtomicIntegerFieldUpdater;
+    iput-object p3, p0, Lyy1;->b:Lo02;
 
     return-void
 .end method
 
-.method public constructor <init>(Lqy1;Ljava/lang/Throwable;Z)V
-    .locals 2
 
-    if-nez p2, :cond_0
+# virtual methods
+.method public final accept(Ljava/lang/Object;)V
+    .locals 3
 
-    new-instance p2, Ljava/util/concurrent/CancellationException;
+    check-cast p1, Lz4g;
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    instance-of v0, p1, Lu4g;
 
-    const-string v1, "Continuation "
+    if-eqz v0, :cond_1
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-static {}, Les;->n()Z
 
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    move-result v0
 
-    const-string p1, " was cancelled normally"
+    if-nez v0, :cond_0
 
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    new-instance v0, Liw1;
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    const/4 v1, 0x5
 
-    move-result-object p1
+    invoke-direct {v0, v1, p0}, Liw1;-><init>(ILjava/lang/Object;)V
 
-    invoke-direct {p2, p1}, Ljava/util/concurrent/CancellationException;-><init>(Ljava/lang/String;)V
+    iget-object v1, p0, Lyy1;->a:Ljava/util/concurrent/Executor;
+
+    invoke-interface {v1, v0}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
+
+    goto :goto_0
 
     :cond_0
-    invoke-direct {p0, p2, p3}, Lz93;-><init>(Ljava/lang/Throwable;Z)V
+    iget-object v0, p0, Lyy1;->c:Lzy1;
 
-    const/4 p1, 0x0
+    iget-object v1, v0, Lzy1;->h:Ljava/util/HashMap;
 
-    iput p1, p0, Lyy1;->_resumed$volatile:I
+    invoke-virtual {v1, p0}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lxnc;
+
+    if-eqz v1, :cond_1
+
+    iget-object v2, v0, Lzy1;->g:Lxnc;
+
+    if-ne v2, v1, :cond_1
+
+    const/4 v1, 0x0
+
+    iput-object v1, v0, Lzy1;->g:Lxnc;
+
+    :cond_1
+    :goto_0
+    iget-object p0, p0, Lyy1;->b:Lo02;
+
+    invoke-virtual {p0, p1}, Lo02;->accept(Ljava/lang/Object;)V
 
     return-void
 .end method

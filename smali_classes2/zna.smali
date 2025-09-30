@@ -1,58 +1,163 @@
-.class public final Lzna;
+.class public abstract Lzna;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lzf1;
 
+# static fields
+.field public static final a:I
 
-# instance fields
-.field public final a:Ljava/util/concurrent/CopyOnWriteArraySet;
+.field public static final b:I
+
+.field public static final c:I
+
+.field public static final d:I
+
+.field public static final e:I
+
+.field public static final f:I
+
+.field public static final g:I
+
+.field public static final h:I
+
+.field public static final i:I
+
+.field public static final j:I
+
+.field public static final k:I
+
+.field public static final l:I
+
+.field public static final m:I
+
+.field public static final n:I
+
+.field public static final o:I
+
+.field public static final p:I
+
+.field public static final q:I
+
+.field public static final r:I
+
+.field public static final s:I
+
+.field public static final t:I
+
+.field public static final u:I
+
+.field public static final v:I
+
+.field public static final w:I
+
+.field public static final x:I
+
+.field public static final y:I
 
 
 # direct methods
-.method public constructor <init>()V
+.method static constructor <clinit>()V
     .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    sget v0, Lubc;->oneme_settings_media_action_always:I
 
-    new-instance v0, Ljava/util/concurrent/CopyOnWriteArraySet;
+    sput v0, Lzna;->a:I
 
-    invoke-direct {v0}, Ljava/util/concurrent/CopyOnWriteArraySet;-><init>()V
+    sget v0, Lubc;->oneme_settings_media_action_disabled:I
 
-    iput-object v0, p0, Lzna;->a:Ljava/util/concurrent/CopyOnWriteArraySet;
+    sput v0, Lzna;->b:I
 
-    return-void
-.end method
+    sget v0, Lubc;->oneme_settings_media_action_dont_load:I
 
+    sput v0, Lzna;->c:I
 
-# virtual methods
-.method public final onStateChanged(Lrf1;Ltf1;)V
-    .locals 1
+    sget v0, Lubc;->oneme_settings_media_action_video_quality_1080:I
 
-    iget-object p0, p0, Lzna;->a:Ljava/util/concurrent/CopyOnWriteArraySet;
+    sput v0, Lzna;->d:I
 
-    invoke-virtual {p0}, Ljava/util/concurrent/CopyOnWriteArraySet;->iterator()Ljava/util/Iterator;
+    sget v0, Lubc;->oneme_settings_media_action_video_quality_480:I
 
-    move-result-object p0
+    sput v0, Lzna;->e:I
 
-    :goto_0
-    invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
+    sget v0, Lubc;->oneme_settings_media_action_video_quality_720:I
 
-    move-result v0
+    sput v0, Lzna;->f:I
 
-    if-eqz v0, :cond_0
+    sget v0, Lubc;->oneme_settings_media_action_wifi:I
 
-    invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    sput v0, Lzna;->g:I
 
-    move-result-object v0
+    sget v0, Lubc;->oneme_settings_media_animoji:I
 
-    check-cast v0, Lzf1;
+    sput v0, Lzna;->h:I
 
-    invoke-interface {v0, p1, p2}, Lzf1;->onStateChanged(Lrf1;Ltf1;)V
+    sget v0, Lubc;->oneme_settings_media_audio:I
 
-    goto :goto_0
+    sput v0, Lzna;->i:I
 
-    :cond_0
+    sget v0, Lubc;->oneme_settings_media_audio_title:I
+
+    sput v0, Lzna;->j:I
+
+    sget v0, Lubc;->oneme_settings_media_caching:I
+
+    sput v0, Lzna;->k:I
+
+    sget v0, Lubc;->oneme_settings_media_gif:I
+
+    sput v0, Lzna;->l:I
+
+    sget v0, Lubc;->oneme_settings_media_gif_play:I
+
+    sput v0, Lzna;->m:I
+
+    sget v0, Lubc;->oneme_settings_media_gif_title:I
+
+    sput v0, Lzna;->n:I
+
+    sget v0, Lubc;->oneme_settings_media_load_media_in_roaming:I
+
+    sput v0, Lzna;->o:I
+
+    sget v0, Lubc;->oneme_settings_media_photo:I
+
+    sput v0, Lzna;->p:I
+
+    sget v0, Lubc;->oneme_settings_media_photo_title:I
+
+    sput v0, Lzna;->q:I
+
+    sget v0, Lubc;->oneme_settings_media_screen_autoloading_section:I
+
+    sput v0, Lzna;->r:I
+
+    sget v0, Lubc;->oneme_settings_media_screen_autoplaying_section:I
+
+    sput v0, Lzna;->s:I
+
+    sget v0, Lubc;->oneme_settings_media_screen_datapressing_section:I
+
+    sput v0, Lzna;->t:I
+
+    sget v0, Lubc;->oneme_settings_media_screen_toolbar_title:I
+
+    sput v0, Lzna;->u:I
+
+    sget v0, Lubc;->oneme_settings_media_video:I
+
+    sput v0, Lzna;->v:I
+
+    sget v0, Lubc;->oneme_settings_media_video_quality:I
+
+    sput v0, Lzna;->w:I
+
+    sget v0, Lubc;->oneme_settings_media_video_quality_title:I
+
+    sput v0, Lzna;->x:I
+
+    sget v0, Lubc;->oneme_settings_media_video_title:I
+
+    sput v0, Lzna;->y:I
+
     return-void
 .end method

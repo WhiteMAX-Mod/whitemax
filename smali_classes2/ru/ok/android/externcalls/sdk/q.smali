@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lx56;
+.implements Lbc6;
 
 
 # instance fields
@@ -38,7 +38,7 @@
 
     check-cast p1, Ljava/util/List;
 
-    invoke-static {p0, p1}, Lru/ok/android/externcalls/sdk/ConversationImpl;->J(Lru/ok/android/externcalls/sdk/ConversationImpl;Ljava/util/List;)Le5f;
+    invoke-static {p0, p1}, Lru/ok/android/externcalls/sdk/ConversationImpl;->J(Lru/ok/android/externcalls/sdk/ConversationImpl;Ljava/util/List;)Lylf;
 
     move-result-object p0
 
@@ -47,7 +47,7 @@
     :pswitch_0
     check-cast p1, Lru/ok/android/externcalls/sdk/id/ParticipantId;
 
-    invoke-static {p0, p1}, Lru/ok/android/externcalls/sdk/ConversationImpl;->f(Lru/ok/android/externcalls/sdk/ConversationImpl;Lru/ok/android/externcalls/sdk/id/ParticipantId;)Lrf1;
+    invoke-static {p0, p1}, Lru/ok/android/externcalls/sdk/ConversationImpl;->f(Lru/ok/android/externcalls/sdk/ConversationImpl;Lru/ok/android/externcalls/sdk/id/ParticipantId;)Lsg1;
 
     move-result-object p0
 

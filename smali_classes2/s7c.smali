@@ -1,51 +1,44 @@
-.class public final Ls7c;
-.super Lbu3;
-.source "SourceFile"
+.class public abstract Ls7c;
+.super Ljava/lang/Object;
 
 
-# instance fields
-.field public X:Ljava/util/ArrayList;
+# static fields
+.field public static oneme_startconversation_chat_titleicon_avatars_cancel_action:I = 0x7f0a0873
 
-.field public synthetic Y:Ljava/lang/Object;
+.field public static oneme_startconversation_chat_titleicon_avatars_load_from_gallery_action:I = 0x7f0a0874
 
-.field public final synthetic Z:Lu7c;
+.field public static oneme_startconversation_chat_titleicon_avatars_take_photo_action:I = 0x7f0a0875
 
-.field public o:Lu7c;
+.field public static oneme_startconversation_chat_titleicon_constraint_layout:I = 0x7f0a0876
 
-.field public o0:I
+.field public static oneme_startconversation_chat_titleicon_create_button_view:I = 0x7f0a0877
 
+.field public static oneme_startconversation_chat_titleicon_create_hint_text_view:I = 0x7f0a0878
 
-# direct methods
-.method public constructor <init>(Lu7c;Lbu3;)V
-    .locals 0
+.field public static oneme_startconversation_chat_titleicon_description_view:I = 0x7f0a0879
 
-    iput-object p1, p0, Ls7c;->Z:Lu7c;
+.field public static oneme_startconversation_chat_titleicon_icon_view:I = 0x7f0a087a
 
-    invoke-direct {p0, p2}, Lbu3;-><init>(Lkotlin/coroutines/Continuation;)V
+.field public static oneme_startconversation_chat_titleicon_scroll_view:I = 0x7f0a087b
 
-    return-void
-.end method
+.field public static oneme_startconversation_chat_titleicon_title_view:I = 0x7f0a087c
 
+.field public static oneme_startconversation_chat_titleicon_toolbar:I = 0x7f0a087d
 
-# virtual methods
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+.field public static oneme_startconversation_chat_toolbar:I = 0x7f0a087e
 
-    iput-object p1, p0, Ls7c;->Y:Ljava/lang/Object;
+.field public static oneme_startconversation_confirm_add_subscribers_button:I = 0x7f0a087f
 
-    iget p1, p0, Ls7c;->o0:I
+.field public static oneme_startconversation_container:I = 0x7f0a0880
 
-    const/high16 v0, -0x80000000
+.field public static oneme_startconversation_create_button_view_type:I = 0x7f0a0881
 
-    or-int/2addr p1, v0
+.field public static oneme_startconversation_recyclerview:I = 0x7f0a0882
 
-    iput p1, p0, Ls7c;->o0:I
+.field public static oneme_startconversation_select_channel_subscribers_toolbar:I = 0x7f0a0883
 
-    iget-object p1, p0, Ls7c;->Z:Lu7c;
+.field public static oneme_startconversation_toolbar:I = 0x7f0a0884
 
-    invoke-virtual {p1, p0}, Lu7c;->a(Lbu3;)Ljava/lang/Object;
+.field public static oneme_startconversations_create_channel:I = 0x7f0a0885
 
-    move-result-object p0
-
-    return-object p0
-.end method
+.field public static oneme_startconversations_create_chat:I = 0x7f0a0886

@@ -16,7 +16,7 @@
         "",
         "",
         "token",
-        "Le5f;",
+        "Lylf;",
         "onPushTokenGenerated",
         "(Ljava/lang/String;)V",
         "vendor_release"

@@ -1,312 +1,147 @@
 .class public final Lf3;
-.super Lai0;
+.super Lure;
 .source "SourceFile"
+
+# interfaces
+.implements Lpc6;
 
 
 # instance fields
-.field public final synthetic b:I
+.field public synthetic X:Ljava/lang/Object;
 
-.field public final synthetic c:Ljava/lang/Object;
+.field public final synthetic Y:Lone/me/chats/picker/AbstractPickerScreen;
 
 
 # direct methods
-.method public synthetic constructor <init>(ILjava/lang/Object;)V
+.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/chats/picker/AbstractPickerScreen;)V
     .locals 0
 
-    iput p1, p0, Lf3;->b:I
+    iput-object p2, p0, Lf3;->Y:Lone/me/chats/picker/AbstractPickerScreen;
 
-    iput-object p2, p0, Lf3;->c:Ljava/lang/Object;
+    const/4 p2, 0x2
 
-    invoke-direct {p0}, Lai0;-><init>()V
+    invoke-direct {p0, p2, p1}, Lure;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final d()V
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
+
+    check-cast p2, Lkotlin/coroutines/Continuation;
+
+    invoke-virtual {p0, p1, p2}, Lf3;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+
+    move-result-object p0
+
+    check-cast p0, Lf3;
+
+    sget-object p1, Lylf;->a:Lylf;
+
+    invoke-virtual {p0, p1}, Lf3;->o(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object p1
+.end method
+
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 1
+
+    new-instance v0, Lf3;
+
+    iget-object p0, p0, Lf3;->Y:Lone/me/chats/picker/AbstractPickerScreen;
+
+    invoke-direct {v0, p2, p0}, Lf3;-><init>(Lkotlin/coroutines/Continuation;Lone/me/chats/picker/AbstractPickerScreen;)V
+
+    iput-object p1, v0, Lf3;->X:Ljava/lang/Object;
+
+    return-object v0
+.end method
+
+.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 2
 
-    iget v0, p0, Lf3;->b:I
+    invoke-static {p1}, Lqe5;->V(Ljava/lang/Object;)V
 
-    packed-switch v0, :pswitch_data_0
+    iget-object p1, p0, Lf3;->X:Ljava/lang/Object;
 
-    :try_start_0
-    invoke-static {}, Lq46;->x()Lp46;
+    check-cast p1, Lv6b;
 
-    iget-object v0, p0, Lf3;->c:Ljava/lang/Object;
+    sget-object v0, Lt6b;->a:Lt6b;
 
-    check-cast v0, Lhf9;
-
-    monitor-enter v0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_1
-
-    :try_start_1
-    iget-object v1, v0, Lhf9;->g:Lf3;
-
-    if-eq v1, p0, :cond_0
-
-    monitor-exit v0
-
-    goto :goto_0
-
-    :catchall_0
-    move-exception p0
-
-    goto :goto_1
-
-    :cond_0
-    const/4 p0, 0x0
-
-    iput-object p0, v0, Lhf9;->g:Lf3;
-
-    iput-object p0, v0, Lhf9;->f:Ljj0;
-
-    iget-object v1, v0, Lhf9;->c:Ljava/io/Closeable;
-
-    invoke-static {v1}, Lhf9;->b(Ljava/io/Closeable;)V
-
-    iput-object p0, v0, Lhf9;->c:Ljava/io/Closeable;
-
-    monitor-exit v0
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    const/4 p0, 0x3
-
-    :try_start_2
-    invoke-virtual {v0, p0}, Lhf9;->i(I)V
-    :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_1
-
-    :goto_0
-    invoke-static {}, Lq46;->x()Lp46;
-
-    return-void
-
-    :goto_1
-    :try_start_3
-    monitor-exit v0
-    :try_end_3
-    .catchall {:try_start_3 .. :try_end_3} :catchall_0
-
-    :try_start_4
-    throw p0
-    :try_end_4
-    .catchall {:try_start_4 .. :try_end_4} :catchall_1
-
-    :catchall_1
-    move-exception p0
-
-    invoke-static {}, Lq46;->x()Lp46;
-
-    throw p0
-
-    :pswitch_0
-    iget-object p0, p0, Lf3;->c:Ljava/lang/Object;
-
-    check-cast p0, Ld33;
-
-    monitor-enter p0
-
-    :try_start_5
-    invoke-virtual {p0}, Lg0;->g()Z
+    invoke-static {p1, v0}, Lvyg;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
-    invoke-static {v0}, Ll23;->l(Z)V
-    :try_end_5
-    .catchall {:try_start_5 .. :try_end_5} :catchall_2
+    iget-object p0, p0, Lf3;->Y:Lone/me/chats/picker/AbstractPickerScreen;
 
-    monitor-exit p0
+    if-eqz v0, :cond_0
 
-    return-void
+    invoke-virtual {p0}, Lone/me/chats/picker/AbstractPickerScreen;->D0()Ljfa;
 
-    :catchall_2
-    move-exception v0
+    move-result-object p0
 
-    :try_start_6
-    monitor-exit p0
-    :try_end_6
-    .catchall {:try_start_6 .. :try_end_6} :catchall_2
+    if-eqz p0, :cond_2
 
-    throw v0
+    invoke-virtual {p0}, Ljfa;->getEditText()Landroid/widget/EditText;
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
+    move-result-object p0
 
-.method public final f(Ljava/lang/Throwable;)V
-    .locals 2
+    if-eqz p0, :cond_2
 
-    iget v0, p0, Lf3;->b:I
+    const/4 p1, 0x0
 
-    packed-switch v0, :pswitch_data_0
-
-    :try_start_0
-    invoke-static {}, Lq46;->x()Lp46;
-
-    iget-object v0, p0, Lf3;->c:Ljava/lang/Object;
-
-    check-cast v0, Lhf9;
-
-    invoke-virtual {v0, p0, p1}, Lhf9;->f(Lf3;Ljava/lang/Throwable;)V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    invoke-static {}, Lq46;->x()Lp46;
-
-    return-void
-
-    :catchall_0
-    move-exception p0
-
-    invoke-static {}, Lq46;->x()Lp46;
-
-    throw p0
-
-    :pswitch_0
-    iget-object p0, p0, Lf3;->c:Ljava/lang/Object;
-
-    check-cast p0, Ld33;
-
-    iget-object v0, p0, Ld33;->h:Lkad;
-
-    iget-object v1, v0, Ljj0;->Y:Ljava/util/HashMap;
-
-    invoke-virtual {p0, p1, v1}, Lg0;->j(Ljava/lang/Throwable;Ljava/util/Map;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    iget-object p0, p0, Ld33;->i:Lu37;
-
-    invoke-virtual {p0, v0, p1}, Lu37;->f(Ln7b;Ljava/lang/Throwable;)V
-
-    :cond_0
-    return-void
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public final h(ILjava/lang/Object;)V
-    .locals 2
-
-    iget v0, p0, Lf3;->b:I
-
-    packed-switch v0, :pswitch_data_0
-
-    check-cast p2, Ljava/io/Closeable;
-
-    :try_start_0
-    invoke-static {}, Lq46;->x()Lp46;
-
-    iget-object v0, p0, Lf3;->c:Ljava/lang/Object;
-
-    check-cast v0, Lhf9;
-
-    invoke-virtual {v0, p0, p2, p1}, Lhf9;->g(Lf3;Ljava/io/Closeable;I)V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    invoke-static {}, Lq46;->x()Lp46;
-
-    return-void
-
-    :catchall_0
-    move-exception p0
-
-    invoke-static {}, Lq46;->x()Lp46;
-
-    throw p0
-
-    :pswitch_0
-    iget-object p0, p0, Lf3;->c:Ljava/lang/Object;
-
-    check-cast p0, Ld33;
-
-    iget-object v0, p0, Ld33;->h:Lkad;
-
-    iget v1, p0, Ld33;->j:I
-
-    packed-switch v1, :pswitch_data_1
-
-    invoke-virtual {p0, p2, p1, v0}, Ld33;->o(Ljava/lang/Object;ILn7b;)V
+    invoke-virtual {p0, p1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
     goto :goto_0
 
-    :pswitch_1
-    check-cast p2, Lf33;
+    :cond_0
+    instance-of v0, p1, Lu6b;
 
-    invoke-static {p2}, Lf33;->o(Lf33;)Lf33;
+    if-eqz v0, :cond_3
 
-    move-result-object p2
+    iget-object v0, p0, Lone/me/chats/picker/AbstractPickerScreen;->r0:Lpoa;
 
-    invoke-virtual {p0, p2, p1, v0}, Ld33;->o(Ljava/lang/Object;ILn7b;)V
+    if-eqz v0, :cond_1
 
+    invoke-virtual {v0}, Lpoa;->a()V
+
+    :cond_1
+    new-instance v0, Lqoa;
+
+    invoke-direct {v0, p0}, Lqoa;-><init>(Lone/me/sdk/arch/Widget;)V
+
+    check-cast p1, Lu6b;
+
+    iget-object p1, p1, Lu6b;->a:Lp2f;
+
+    invoke-virtual {v0, p1}, Lqoa;->g(Lu2f;)V
+
+    new-instance p1, Lepa;
+
+    sget v1, La1d;->Q0:I
+
+    invoke-direct {p1, v1}, Lepa;-><init>(I)V
+
+    invoke-virtual {v0, p1}, Lqoa;->e(Ljpa;)V
+
+    invoke-virtual {v0}, Lqoa;->i()Lpoa;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lone/me/chats/picker/AbstractPickerScreen;->r0:Lpoa;
+
+    :cond_2
     :goto_0
-    return-void
+    sget-object p0, Lylf;->a:Lylf;
 
-    nop
+    return-object p0
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    :cond_3
+    new-instance p0, Lkotlin/NoWhenBranchMatchedException;
 
-    :pswitch_data_1
-    .packed-switch 0x0
-        :pswitch_1
-    .end packed-switch
-.end method
-
-.method public final j(F)V
-    .locals 1
-
-    iget v0, p0, Lf3;->b:I
-
-    packed-switch v0, :pswitch_data_0
-
-    :try_start_0
-    invoke-static {}, Lq46;->x()Lp46;
-
-    iget-object v0, p0, Lf3;->c:Ljava/lang/Object;
-
-    check-cast v0, Lhf9;
-
-    invoke-virtual {v0, p0, p1}, Lhf9;->h(Lf3;F)V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    invoke-static {}, Lq46;->x()Lp46;
-
-    return-void
-
-    :catchall_0
-    move-exception p0
-
-    invoke-static {}, Lq46;->x()Lp46;
+    invoke-direct {p0}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
 
     throw p0
-
-    :pswitch_0
-    iget-object p0, p0, Lf3;->c:Ljava/lang/Object;
-
-    check-cast p0, Ld33;
-
-    invoke-virtual {p0, p1}, Lg0;->k(F)Z
-
-    return-void
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
 .end method

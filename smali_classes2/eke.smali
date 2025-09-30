@@ -1,123 +1,48 @@
 .class public final Leke;
-.super Ljava/lang/Object;
-.source "SourceFile"
-
-# interfaces
-.implements Ljp0;
+.super Ljx3;
 
 
 # instance fields
-.field public final a:Landroid/graphics/Paint;
+.field public X:I
 
-.field public final b:Ljava/lang/Object;
+.field public final synthetic Y:Leia;
+
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;)V
-    .locals 2
+.method public constructor <init>(Leia;Lkotlin/coroutines/Continuation;)V
+    .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Leke;->Y:Leia;
 
-    new-instance v0, Landroid/graphics/Paint;
-
-    invoke-direct {v0}, Landroid/graphics/Paint;-><init>()V
-
-    const/4 v1, 0x1
-
-    invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setDither(Z)V
-
-    invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setAntiAlias(Z)V
-
-    iput-object v0, p0, Leke;->a:Landroid/graphics/Paint;
-
-    new-instance v0, Lgpd;
-
-    const/16 v1, 0x9
-
-    invoke-direct {v0, p1, v1}, Lgpd;-><init>(Landroid/content/Context;I)V
-
-    const/4 p1, 0x2
-
-    invoke-static {p1, v0}, Lkhg;->o(ILv56;)Lje7;
-
-    move-result-object p1
-
-    iput-object p1, p0, Leke;->b:Ljava/lang/Object;
+    invoke-direct {p0, p2}, Ljx3;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final b()V
+.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
 
-    iget-object p0, p0, Leke;->b:Ljava/lang/Object;
+    iput-object p1, p0, Leke;->o:Ljava/lang/Object;
 
-    invoke-interface {p0}, Lje7;->getValue()Ljava/lang/Object;
+    iget p1, p0, Leke;->X:I
 
-    move-result-object p0
+    const/high16 v0, -0x80000000
 
-    check-cast p0, Leu6;
+    or-int/2addr p1, v0
 
-    iget-object p0, p0, Leu6;->a:Lwfe;
+    iput p1, p0, Leke;->X:I
 
-    invoke-virtual {p0}, Lwfe;->a()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    invoke-virtual {p0}, Lwfe;->getValue()Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, Landroid/renderscript/RenderScript;
-
-    invoke-virtual {p0}, Landroid/renderscript/RenderScript;->destroy()V
-
-    :cond_0
-    return-void
-.end method
-
-.method public final c(I)V
-    .locals 0
-
-    iget-object p0, p0, Leke;->a:Landroid/graphics/Paint;
-
-    invoke-virtual {p0, p1}, Landroid/graphics/Paint;->setAlpha(I)V
-
-    return-void
-.end method
-
-.method public final h(Landroid/graphics/Canvas;Landroid/graphics/Bitmap;)V
-    .locals 1
+    iget-object p1, p0, Leke;->Y:Leia;
 
     const/4 v0, 0x0
 
-    iget-object p0, p0, Leke;->a:Landroid/graphics/Paint;
-
-    invoke-virtual {p1, p2, v0, v0, p0}, Landroid/graphics/Canvas;->drawBitmap(Landroid/graphics/Bitmap;FFLandroid/graphics/Paint;)V
-
-    return-void
-.end method
-
-.method public final j(Landroid/graphics/Bitmap;F)V
-    .locals 0
-
-    iget-object p0, p0, Leke;->b:Ljava/lang/Object;
-
-    invoke-interface {p0}, Lje7;->getValue()Ljava/lang/Object;
+    invoke-virtual {p1, v0, p0}, Leia;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
     move-result-object p0
 
-    check-cast p0, Leu6;
-
-    invoke-static {p2}, Lkhg;->x(F)I
-
-    move-result p2
-
-    invoke-virtual {p0, p1, p2}, Leu6;->a(Landroid/graphics/Bitmap;I)Landroid/graphics/Bitmap;
-
-    return-void
+    return-object p0
 .end method

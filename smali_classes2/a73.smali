@@ -1,110 +1,64 @@
 .class public final La73;
-.super Lqde;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Ll66;
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field public X:I
+.field public final synthetic a:I
 
-.field public final synthetic Y:Lc73;
+.field public final synthetic b:Ld73;
+
+.field public final synthetic c:Landroid/graphics/drawable/Drawable;
 
 
 # direct methods
-.method public constructor <init>(Lc73;Lkotlin/coroutines/Continuation;)V
+.method public synthetic constructor <init>(Ld73;Landroid/graphics/drawable/Drawable;I)V
     .locals 0
 
-    iput-object p1, p0, La73;->Y:Lc73;
+    iput p3, p0, La73;->a:I
 
-    const/4 p1, 0x2
+    iput-object p1, p0, La73;->b:Ld73;
 
-    invoke-direct {p0, p1, p2}, Lqde;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-object p2, p0, La73;->c:Landroid/graphics/drawable/Drawable;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final run()V
+    .locals 1
 
-    check-cast p1, Lox3;
+    iget v0, p0, La73;->a:I
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    packed-switch v0, :pswitch_data_0
 
-    invoke-virtual {p0, p1, p2}, La73;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    iget-object v0, p0, La73;->b:Ld73;
 
-    move-result-object p0
+    iget-object p0, p0, La73;->c:Landroid/graphics/drawable/Drawable;
 
-    check-cast p0, La73;
+    invoke-static {v0, p0}, Ld73;->y(Ld73;Landroid/graphics/drawable/Drawable;)V
 
-    sget-object p1, Le5f;->a:Le5f;
+    return-void
 
-    invoke-virtual {p0, p1}, La73;->o(Ljava/lang/Object;)Ljava/lang/Object;
+    :pswitch_0
+    iget-object v0, p0, La73;->b:Ld73;
 
-    move-result-object p0
+    iget-object p0, p0, La73;->c:Landroid/graphics/drawable/Drawable;
 
-    return-object p0
-.end method
+    invoke-static {v0, p0}, Ld73;->f(Ld73;Landroid/graphics/drawable/Drawable;)V
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 0
+    return-void
 
-    new-instance p1, La73;
+    nop
 
-    iget-object p0, p0, La73;->Y:Lc73;
-
-    invoke-direct {p1, p0, p2}, La73;-><init>(Lc73;Lkotlin/coroutines/Continuation;)V
-
-    return-object p1
-.end method
-
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 2
-
-    iget v0, p0, La73;->X:I
-
-    const/4 v1, 0x1
-
-    if-eqz v0, :cond_1
-
-    if-ne v0, v1, :cond_0
-
-    invoke-static {p1}, Lsgg;->Z(Ljava/lang/Object;)V
-
-    goto :goto_0
-
-    :cond_0
-    new-instance p0, Ljava/lang/IllegalStateException;
-
-    const-string p1, "call to \'resume\' before \'invoke\' with coroutine"
-
-    invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p0
-
-    :cond_1
-    invoke-static {p1}, Lsgg;->Z(Ljava/lang/Object;)V
-
-    iput v1, p0, La73;->X:I
-
-    iget-object p1, p0, La73;->Y:Lc73;
-
-    invoke-static {p1, p0}, Lc73;->b(Lc73;Lbu3;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    sget-object p1, Lpx3;->a:Lpx3;
-
-    if-ne p0, p1, :cond_2
-
-    return-object p1
-
-    :cond_2
-    :goto_0
-    sget-object p0, Le5f;->a:Le5f;
-
-    return-object p0
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

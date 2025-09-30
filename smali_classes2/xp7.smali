@@ -2,157 +2,92 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ldq7;
+.implements Lbq7;
+
+
+# static fields
+.field public static final CREATOR:Landroid/os/Parcelable$Creator;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroid/os/Parcelable$Creator<",
+            "Lxp7;",
+            ">;"
+        }
+    .end annotation
+.end field
+
 
 # instance fields
-.field public final a:Landroid/content/Context;
+.field public final a:J
 
-.field public final b:Ls1c;
+.field public final b:Ljava/lang/String;
 
-.field public volatile c:Z
-
-.field public volatile d:Z
+.field public final c:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;Ls1c;)V
+.method static constructor <clinit>()V
     .locals 2
+
+    new-instance v0, Lra7;
+
+    const/16 v1, 0x12
+
+    invoke-direct {v0, v1}, Lra7;-><init>(I)V
+
+    sput-object v0, Lxp7;->CREATOR:Landroid/os/Parcelable$Creator;
+
+    return-void
+.end method
+
+.method public constructor <init>(JLjava/lang/String;Ljava/lang/String;)V
+    .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lxp7;->a:Landroid/content/Context;
+    iput-wide p1, p0, Lxp7;->a:J
 
-    iput-object p2, p0, Lxp7;->b:Ls1c;
+    iput-object p3, p0, Lxp7;->b:Ljava/lang/String;
 
-    const-string p2, "android.permission.RECORD_AUDIO"
-
-    invoke-static {p1, p2}, Lu7;->p(Landroid/content/Context;Ljava/lang/String;)I
-
-    move-result p2
-
-    const/4 v0, 0x0
-
-    const/4 v1, 0x1
-
-    if-nez p2, :cond_0
-
-    move p2, v1
-
-    goto :goto_0
-
-    :cond_0
-    move p2, v0
-
-    :goto_0
-    iput-boolean p2, p0, Lxp7;->c:Z
-
-    const-string p2, "android.permission.CAMERA"
-
-    invoke-static {p1, p2}, Lu7;->p(Landroid/content/Context;Ljava/lang/String;)I
-
-    move-result p1
-
-    if-nez p1, :cond_1
-
-    move v0, v1
-
-    :cond_1
-    iput-boolean v0, p0, Lxp7;->d:Z
+    iput-object p4, p0, Lxp7;->c:Ljava/lang/String;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Z
-    .locals 10
+.method public final describeContents()I
+    .locals 0
 
-    const-string v0, "android.permission.RECORD_AUDIO"
+    const/4 p0, 0x0
 
-    iget-object v1, p0, Lxp7;->a:Landroid/content/Context;
+    return p0
+.end method
 
-    invoke-static {v1, v0}, Lu7;->p(Landroid/content/Context;Ljava/lang/String;)I
+.method public final n()Ljava/lang/String;
+    .locals 0
 
-    move-result v0
+    iget-object p0, p0, Lxp7;->c:Ljava/lang/String;
 
-    const/4 v1, 0x1
+    return-object p0
+.end method
 
-    const/4 v2, 0x0
+.method public final writeToParcel(Landroid/os/Parcel;I)V
+    .locals 2
 
-    if-nez v0, :cond_0
+    iget-wide v0, p0, Lxp7;->a:J
 
-    move v0, v1
+    invoke-virtual {p1, v0, v1}, Landroid/os/Parcel;->writeLong(J)V
 
-    goto :goto_0
+    iget-object p2, p0, Lxp7;->b:Ljava/lang/String;
 
-    :cond_0
-    move v0, v2
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    :goto_0
-    const-string v3, "android.permission.CAMERA"
+    iget-object p0, p0, Lxp7;->c:Ljava/lang/String;
 
-    iget-object v4, p0, Lxp7;->a:Landroid/content/Context;
+    invoke-virtual {p1, p0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    invoke-static {v4, v3}, Lu7;->p(Landroid/content/Context;Ljava/lang/String;)I
-
-    move-result v3
-
-    if-nez v3, :cond_1
-
-    move v3, v1
-
-    goto :goto_1
-
-    :cond_1
-    move v3, v2
-
-    :goto_1
-    iget-object v4, p0, Lxp7;->b:Ls1c;
-
-    iget-boolean v5, p0, Lxp7;->c:Z
-
-    iget-boolean v6, p0, Lxp7;->d:Z
-
-    const-string v7, ", video: "
-
-    const-string v8, "call permissions state updated, audio: "
-
-    const-string v9, "->"
-
-    invoke-static {v8, v5, v9, v0, v7}, Lm26;->o(Ljava/lang/String;ZLjava/lang/String;ZLjava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v5
-
-    invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v5, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v5, v3}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v5
-
-    const-string v6, "LocalMediaPermissionProvider"
-
-    invoke-interface {v4, v6, v5}, Ls1c;->log(Ljava/lang/String;Ljava/lang/String;)V
-
-    iget-boolean v4, p0, Lxp7;->c:Z
-
-    if-eq v4, v0, :cond_2
-
-    iput-boolean v0, p0, Lxp7;->c:Z
-
-    move v2, v1
-
-    :cond_2
-    iget-boolean v0, p0, Lxp7;->d:Z
-
-    if-eq v0, v3, :cond_3
-
-    iput-boolean v3, p0, Lxp7;->d:Z
-
-    return v1
-
-    :cond_3
-    return v2
+    return-void
 .end method

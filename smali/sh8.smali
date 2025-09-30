@@ -1,72 +1,222 @@
-.class public final synthetic Lsh8;
+.class public final Lsh8;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lai8;
+
+# static fields
+.field public static final d:Lsh8;
+
+.field public static final e:Ljava/lang/String;
+
+.field public static final f:Ljava/lang/String;
+
+.field public static final g:Ljava/lang/String;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final a:Landroid/net/Uri;
 
-.field public final synthetic b:Lbi8;
+.field public final b:Ljava/lang/String;
 
-.field public final synthetic c:J
+.field public final c:Landroid/os/Bundle;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lbi8;JI)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 2
 
-    iput p4, p0, Lsh8;->a:I
+    new-instance v0, Ls15;
 
-    iput-object p1, p0, Lsh8;->b:Lbi8;
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    iput-wide p2, p0, Lsh8;->c:J
+    new-instance v1, Lsh8;
+
+    invoke-direct {v1, v0}, Lsh8;-><init>(Ls15;)V
+
+    sput-object v1, Lsh8;->d:Lsh8;
+
+    sget v0, Lnrf;->a:I
+
+    const/4 v0, 0x0
+
+    const/16 v1, 0x24
+
+    invoke-static {v0, v1}, Ljava/lang/Integer;->toString(II)Ljava/lang/String;
+
+    move-result-object v0
+
+    sput-object v0, Lsh8;->e:Ljava/lang/String;
+
+    const/4 v0, 0x1
+
+    invoke-static {v0, v1}, Ljava/lang/Integer;->toString(II)Ljava/lang/String;
+
+    move-result-object v0
+
+    sput-object v0, Lsh8;->f:Ljava/lang/String;
+
+    const/4 v0, 0x2
+
+    invoke-static {v0, v1}, Ljava/lang/Integer;->toString(II)Ljava/lang/String;
+
+    move-result-object v0
+
+    sput-object v0, Lsh8;->g:Ljava/lang/String;
+
+    return-void
+.end method
+
+.method public constructor <init>(Ls15;)V
+    .locals 1
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iget-object v0, p1, Ls15;->a:Ljava/lang/Object;
+
+    check-cast v0, Landroid/net/Uri;
+
+    iput-object v0, p0, Lsh8;->a:Landroid/net/Uri;
+
+    iget-object v0, p1, Ls15;->b:Ljava/lang/Object;
+
+    check-cast v0, Ljava/lang/String;
+
+    iput-object v0, p0, Lsh8;->b:Ljava/lang/String;
+
+    iget-object p1, p1, Ls15;->c:Ljava/lang/Object;
+
+    check-cast p1, Landroid/os/Bundle;
+
+    iput-object p1, p0, Lsh8;->c:Landroid/os/Bundle;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final b(Lwg8;)V
-    .locals 2
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
 
-    iget p1, p0, Lsh8;->a:I
+    const/4 v0, 0x1
 
-    packed-switch p1, :pswitch_data_0
+    if-ne p0, p1, :cond_0
 
-    iget-object p1, p0, Lsh8;->b:Lbi8;
+    return v0
 
-    iget-object p1, p1, Lbi8;->f:Lqh8;
+    :cond_0
+    instance-of v1, p1, Lsh8;
 
-    iget-object p1, p1, Lqh8;->s:Lk2b;
+    const/4 v2, 0x0
 
-    iget-wide v0, p0, Lsh8;->c:J
+    if-nez v1, :cond_1
 
-    invoke-virtual {p1, v0, v1}, Lk2b;->Z(J)V
+    return v2
 
-    return-void
+    :cond_1
+    check-cast p1, Lsh8;
 
-    :pswitch_0
-    iget-object p1, p0, Lsh8;->b:Lbi8;
+    iget-object v1, p0, Lsh8;->a:Landroid/net/Uri;
 
-    iget-object p1, p1, Lbi8;->f:Lqh8;
+    iget-object v3, p1, Lsh8;->a:Landroid/net/Uri;
 
-    iget-object p1, p1, Lqh8;->s:Lk2b;
+    invoke-static {v1, v3}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    iget-wide v0, p0, Lsh8;->c:J
+    move-result v1
 
-    long-to-int p0, v0
+    if-eqz v1, :cond_4
 
-    invoke-virtual {p1, p0}, Lk2b;->a0(I)V
+    iget-object v1, p0, Lsh8;->b:Ljava/lang/String;
 
-    return-void
+    iget-object v3, p1, Lsh8;->b:Ljava/lang/String;
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    invoke-static {v1, v3}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_4
+
+    iget-object p0, p0, Lsh8;->c:Landroid/os/Bundle;
+
+    if-nez p0, :cond_2
+
+    move p0, v0
+
+    goto :goto_0
+
+    :cond_2
+    move p0, v2
+
+    :goto_0
+    iget-object p1, p1, Lsh8;->c:Landroid/os/Bundle;
+
+    if-nez p1, :cond_3
+
+    move p1, v0
+
+    goto :goto_1
+
+    :cond_3
+    move p1, v2
+
+    :goto_1
+    if-ne p0, p1, :cond_4
+
+    return v0
+
+    :cond_4
+    return v2
+.end method
+
+.method public final hashCode()I
+    .locals 3
+
+    const/4 v0, 0x0
+
+    iget-object v1, p0, Lsh8;->a:Landroid/net/Uri;
+
+    if-nez v1, :cond_0
+
+    move v1, v0
+
+    goto :goto_0
+
+    :cond_0
+    invoke-virtual {v1}, Landroid/net/Uri;->hashCode()I
+
+    move-result v1
+
+    :goto_0
+    mul-int/lit8 v1, v1, 0x1f
+
+    iget-object v2, p0, Lsh8;->b:Ljava/lang/String;
+
+    if-nez v2, :cond_1
+
+    move v2, v0
+
+    goto :goto_1
+
+    :cond_1
+    invoke-virtual {v2}, Ljava/lang/String;->hashCode()I
+
+    move-result v2
+
+    :goto_1
+    add-int/2addr v1, v2
+
+    mul-int/lit8 v1, v1, 0x1f
+
+    iget-object p0, p0, Lsh8;->c:Landroid/os/Bundle;
+
+    if-nez p0, :cond_2
+
+    goto :goto_2
+
+    :cond_2
+    const/4 v0, 0x1
+
+    :goto_2
+    add-int/2addr v1, v0
+
+    return v1
 .end method

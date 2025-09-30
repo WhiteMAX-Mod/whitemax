@@ -1,13 +1,19 @@
-.class public Lb42;
-.super Ljava/lang/Object;
+.class public final Lb42;
+.super Landroid/animation/AnimatorListenerAdapter;
 .source "SourceFile"
 
 
-# virtual methods
-.method public toString()Ljava/lang/String;
+# instance fields
+.field private final mViewBounds:Ld42;
+
+
+# direct methods
+.method public constructor <init>(Ld42;)V
     .locals 0
 
-    const-string p0, "Failed"
+    invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
 
-    return-object p0
+    iput-object p1, p0, Lb42;->mViewBounds:Ld42;
+
+    return-void
 .end method

@@ -1,23 +1,11 @@
-.class public final Lna4;
+.class public interface abstract Lna4;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:I
+# virtual methods
+.method public abstract setWindowCallback(Landroid/view/Window$Callback;)V
+.end method
 
-.field public final b:J
-
-
-# direct methods
-.method public constructor <init>(IJ)V
-    .locals 0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput p1, p0, Lna4;->a:I
-
-    iput-wide p2, p0, Lna4;->b:J
-
-    return-void
+.method public abstract setWindowTitle(Ljava/lang/CharSequence;)V
 .end method

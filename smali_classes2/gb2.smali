@@ -2,298 +2,439 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ll9a;
+
 
 # instance fields
-.field public final a:Ljava/lang/String;
+.field public X:Ljava/lang/Object;
 
-.field public final b:J
+.field public a:I
 
-.field public final c:Ljava/lang/CharSequence;
+.field public b:J
 
-.field public final d:Ljava/lang/String;
+.field public c:J
 
-.field public final e:Ljava/lang/String;
-
-.field public final f:Z
-
-.field public final g:Z
-
-.field public final h:Z
+.field public o:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;JLjava/lang/CharSequence;Ljava/lang/String;Ljava/lang/String;ZZZ)V
-    .locals 0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lgb2;->a:Ljava/lang/String;
-
-    iput-wide p2, p0, Lgb2;->b:J
-
-    iput-object p4, p0, Lgb2;->c:Ljava/lang/CharSequence;
-
-    iput-object p5, p0, Lgb2;->d:Ljava/lang/String;
-
-    iput-object p6, p0, Lgb2;->e:Ljava/lang/String;
-
-    iput-boolean p7, p0, Lgb2;->f:Z
-
-    iput-boolean p8, p0, Lgb2;->g:Z
-
-    iput-boolean p9, p0, Lgb2;->h:Z
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 7
-
-    const/4 v0, 0x1
-
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    instance-of v1, p1, Lgb2;
-
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
-    check-cast p1, Lgb2;
-
-    iget-object v1, p0, Lgb2;->a:Ljava/lang/String;
-
-    iget-object v3, p1, Lgb2;->a:Ljava/lang/String;
-
-    invoke-static {v1, v3}, Lxq7;->d(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_2
-
-    return v2
-
-    :cond_2
-    iget-wide v3, p0, Lgb2;->b:J
-
-    iget-wide v5, p1, Lgb2;->b:J
-
-    cmp-long v1, v3, v5
-
-    if-eqz v1, :cond_3
-
-    return v2
-
-    :cond_3
-    iget-object v1, p0, Lgb2;->c:Ljava/lang/CharSequence;
-
-    iget-object v3, p1, Lgb2;->c:Ljava/lang/CharSequence;
-
-    invoke-static {v1, v3}, Lxq7;->d(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_4
-
-    return v2
-
-    :cond_4
-    iget-object v1, p0, Lgb2;->d:Ljava/lang/String;
-
-    iget-object v3, p1, Lgb2;->d:Ljava/lang/String;
-
-    invoke-static {v1, v3}, Lxq7;->d(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_5
-
-    return v2
-
-    :cond_5
-    iget-object v1, p0, Lgb2;->e:Ljava/lang/String;
-
-    iget-object v3, p1, Lgb2;->e:Ljava/lang/String;
-
-    invoke-static {v1, v3}, Lxq7;->d(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_6
-
-    return v2
-
-    :cond_6
-    iget-boolean v1, p0, Lgb2;->f:Z
-
-    iget-boolean v3, p1, Lgb2;->f:Z
-
-    if-eq v1, v3, :cond_7
-
-    return v2
-
-    :cond_7
-    iget-boolean v1, p0, Lgb2;->g:Z
-
-    iget-boolean v3, p1, Lgb2;->g:Z
-
-    if-eq v1, v3, :cond_8
-
-    return v2
-
-    :cond_8
-    iget-boolean p0, p0, Lgb2;->h:Z
-
-    iget-boolean p1, p1, Lgb2;->h:Z
-
-    if-eq p0, p1, :cond_9
-
-    return v2
-
-    :cond_9
-    return v0
-.end method
-
-.method public final hashCode()I
+.method public static b(Lt1h;Lcom/google/android/gms/common/internal/a;I)Lyk3;
     .locals 4
 
-    iget-object v0, p0, Lgb2;->a:Ljava/lang/String;
-
-    if-nez v0, :cond_0
+    iget-object p1, p1, Lcom/google/android/gms/common/internal/a;->E0:Ld7h;
 
     const/4 v0, 0x0
+
+    if-nez p1, :cond_0
+
+    move-object p1, v0
 
     goto :goto_0
 
     :cond_0
-    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
-
-    move-result v0
+    iget-object p1, p1, Ld7h;->o:Lyk3;
 
     :goto_0
-    const/16 v1, 0x1f
+    if-eqz p1, :cond_6
 
-    mul-int/2addr v0, v1
+    iget-boolean v1, p1, Lyk3;->b:Z
 
-    iget-wide v2, p0, Lgb2;->b:J
+    if-eqz v1, :cond_6
 
-    invoke-static {v0, v1, v2, v3}, Lzge;->m(IIJ)I
+    iget-object v1, p1, Lyk3;->o:[I
 
-    move-result v0
+    const/4 v2, 0x0
 
-    iget-object v2, p0, Lgb2;->c:Ljava/lang/CharSequence;
+    if-nez v1, :cond_3
 
-    invoke-static {v2, v0, v1}, Lm26;->d(Ljava/lang/CharSequence;II)I
+    iget-object v1, p1, Lyk3;->Y:[I
 
-    move-result v0
+    if-nez v1, :cond_1
 
-    iget-object v2, p0, Lgb2;->d:Ljava/lang/String;
+    goto :goto_3
 
-    invoke-static {v0, v1, v2}, Lv04;->d(IILjava/lang/String;)I
+    :cond_1
+    :goto_1
+    array-length v3, v1
 
-    move-result v0
+    if-ge v2, v3, :cond_4
 
-    iget-object v2, p0, Lgb2;->e:Ljava/lang/String;
+    aget v3, v1, v2
 
-    invoke-static {v0, v1, v2}, Lv04;->d(IILjava/lang/String;)I
+    if-ne v3, p2, :cond_2
 
-    move-result v0
+    goto :goto_4
 
-    iget-boolean v2, p0, Lgb2;->f:Z
+    :cond_2
+    add-int/lit8 v2, v2, 0x1
 
-    invoke-static {v0, v1, v2}, Luz1;->f(IIZ)I
+    goto :goto_1
 
-    move-result v0
+    :cond_3
+    :goto_2
+    array-length v3, v1
 
-    iget-boolean v2, p0, Lgb2;->g:Z
+    if-ge v2, v3, :cond_6
 
-    invoke-static {v0, v1, v2}, Luz1;->f(IIZ)I
+    aget v3, v1, v2
 
-    move-result v0
+    if-ne v3, p2, :cond_5
 
-    iget-boolean p0, p0, Lgb2;->h:Z
+    :cond_4
+    :goto_3
+    iget p0, p0, Lt1h;->n:I
 
-    invoke-static {p0}, Ljava/lang/Boolean;->hashCode(Z)I
+    iget p2, p1, Lyk3;->X:I
 
-    move-result p0
+    if-ge p0, p2, :cond_6
 
-    add-int/2addr p0, v0
+    return-object p1
 
-    return p0
+    :cond_5
+    add-int/lit8 v2, v2, 0x1
+
+    goto :goto_2
+
+    :cond_6
+    :goto_4
+    return-object v0
 .end method
 
-.method public final toString()Ljava/lang/String;
-    .locals 5
 
-    const-string v0, "ChatItemModel(avatarUrl="
+# virtual methods
+.method public a()Lhb2;
+    .locals 9
 
-    const-string v1, ", avatarSourceId="
+    iget-object v0, p0, Lgb2;->X:Ljava/lang/Object;
 
-    iget-wide v2, p0, Lgb2;->b:J
+    check-cast v0, Ljava/util/List;
 
-    iget-object v4, p0, Lgb2;->a:Ljava/lang/String;
+    if-nez v0, :cond_0
 
-    invoke-static {v0, v2, v3, v4, v1}, Lzge;->q(Ljava/lang/String;JLjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+    sget-object v0, Ljava/util/Collections;->EMPTY_LIST:Ljava/util/List;
 
-    move-result-object v0
+    iput-object v0, p0, Lgb2;->X:Ljava/lang/Object;
 
-    const-string v1, ", avatarAbbreviation="
+    :cond_0
+    new-instance v1, Lhb2;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    iget-object v0, p0, Lgb2;->o:Ljava/lang/Object;
 
-    iget-object v1, p0, Lgb2;->c:Ljava/lang/CharSequence;
+    move-object v2, v0
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    check-cast v2, Lnb2;
 
-    const-string v1, ", chatName="
+    iget v3, p0, Lgb2;->a:I
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    iget-wide v4, p0, Lgb2;->b:J
 
-    iget-object v1, p0, Lgb2;->d:Ljava/lang/String;
+    iget-wide v6, p0, Lgb2;->c:J
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    iget-object p0, p0, Lgb2;->X:Ljava/lang/Object;
 
-    const-string v1, ", chatLink="
+    move-object v8, p0
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    check-cast v8, Ljava/util/List;
 
-    iget-object v1, p0, Lgb2;->e:Ljava/lang/String;
+    invoke-direct/range {v1 .. v8}, Lhb2;-><init>(Lnb2;IJJLjava/util/List;)V
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    return-object v1
+.end method
 
-    const-string v1, ", isLoading="
+.method public p(Lcom/google/android/gms/tasks/Task;)V
+    .locals 21
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    move-object/from16 v0, p0
 
-    iget-boolean v1, p0, Lgb2;->f:Z
+    iget-object v1, v0, Lgb2;->o:Ljava/lang/Object;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+    check-cast v1, Lfl6;
 
-    const-string v1, ", isPrivate="
+    invoke-virtual {v1}, Lfl6;->a()Z
 
-    const-string v2, ", hasEditLinkPermission="
+    move-result v1
 
-    iget-boolean v3, p0, Lgb2;->g:Z
+    if-nez v1, :cond_0
 
-    iget-boolean p0, p0, Lgb2;->h:Z
+    goto/16 :goto_8
 
-    invoke-static {v1, v2, v0, v3, p0}, Lv04;->o(Ljava/lang/String;Ljava/lang/String;Ljava/lang/StringBuilder;ZZ)V
+    :cond_0
+    invoke-static {}, Lnyc;->A()Lnyc;
 
-    const-string p0, ")"
+    move-result-object v1
 
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    iget-object v1, v1, Lnyc;->b:Ljava/lang/Object;
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    check-cast v1, Loyc;
 
-    move-result-object p0
+    if-eqz v1, :cond_1
 
-    return-object p0
+    iget-boolean v2, v1, Loyc;->b:Z
+
+    if-eqz v2, :cond_b
+
+    :cond_1
+    iget-object v2, v0, Lgb2;->o:Ljava/lang/Object;
+
+    check-cast v2, Lfl6;
+
+    iget-object v3, v0, Lgb2;->X:Ljava/lang/Object;
+
+    check-cast v3, Lbl;
+
+    iget-object v2, v2, Lfl6;->t0:Ljava/util/concurrent/ConcurrentHashMap;
+
+    invoke-virtual {v2, v3}, Ljava/util/concurrent/ConcurrentHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Lt1h;
+
+    if-eqz v2, :cond_b
+
+    iget-object v3, v2, Lt1h;->d:Lqk;
+
+    instance-of v4, v3, Lcom/google/android/gms/common/internal/a;
+
+    if-eqz v4, :cond_b
+
+    check-cast v3, Lcom/google/android/gms/common/internal/a;
+
+    iget-wide v4, v0, Lgb2;->b:J
+
+    const-wide/16 v6, 0x0
+
+    cmp-long v4, v4, v6
+
+    const/4 v5, 0x1
+
+    const/4 v8, 0x0
+
+    if-lez v4, :cond_2
+
+    move v4, v5
+
+    goto :goto_0
+
+    :cond_2
+    move v4, v8
+
+    :goto_0
+    iget v9, v3, Lcom/google/android/gms/common/internal/a;->z0:I
+
+    const/16 v10, 0x64
+
+    if-eqz v1, :cond_5
+
+    iget-boolean v11, v1, Loyc;->c:Z
+
+    and-int/2addr v4, v11
+
+    iget v11, v1, Loyc;->o:I
+
+    iget v12, v1, Loyc;->X:I
+
+    iget v1, v1, Loyc;->a:I
+
+    iget-object v13, v3, Lcom/google/android/gms/common/internal/a;->E0:Ld7h;
+
+    if-eqz v13, :cond_4
+
+    invoke-virtual {v3}, Lcom/google/android/gms/common/internal/a;->c()Z
+
+    move-result v13
+
+    if-nez v13, :cond_4
+
+    iget v4, v0, Lgb2;->a:I
+
+    invoke-static {v2, v3, v4}, Lgb2;->b(Lt1h;Lcom/google/android/gms/common/internal/a;I)Lyk3;
+
+    move-result-object v2
+
+    if-eqz v2, :cond_b
+
+    iget-boolean v3, v2, Lyk3;->c:Z
+
+    if-eqz v3, :cond_3
+
+    iget-wide v3, v0, Lgb2;->b:J
+
+    cmp-long v3, v3, v6
+
+    if-lez v3, :cond_3
+
+    goto :goto_1
+
+    :cond_3
+    move v5, v8
+
+    :goto_1
+    iget v12, v2, Lyk3;->X:I
+
+    move v4, v5
+
+    :cond_4
+    move v2, v11
+
+    move v3, v12
+
+    goto :goto_2
+
+    :cond_5
+    const/16 v11, 0x1388
+
+    move v1, v8
+
+    move v3, v10
+
+    move v2, v11
+
+    :goto_2
+    iget-object v5, v0, Lgb2;->o:Ljava/lang/Object;
+
+    check-cast v5, Lfl6;
+
+    invoke-virtual/range {p1 .. p1}, Lcom/google/android/gms/tasks/Task;->h()Z
+
+    move-result v11
+
+    const/4 v12, -0x1
+
+    if-eqz v11, :cond_6
+
+    move v11, v8
+
+    goto :goto_5
+
+    :cond_6
+    move-object/from16 v8, p1
+
+    check-cast v8, Lz8h;
+
+    iget-boolean v8, v8, Lz8h;->d:Z
+
+    if-eqz v8, :cond_7
+
+    :goto_3
+    move v11, v10
+
+    :goto_4
+    move v8, v12
+
+    goto :goto_5
+
+    :cond_7
+    invoke-virtual/range {p1 .. p1}, Lcom/google/android/gms/tasks/Task;->e()Ljava/lang/Exception;
+
+    move-result-object v8
+
+    instance-of v10, v8, Lcom/google/android/gms/common/api/ApiException;
+
+    if-eqz v10, :cond_9
+
+    check-cast v8, Lcom/google/android/gms/common/api/ApiException;
+
+    iget-object v8, v8, Lcom/google/android/gms/common/api/ApiException;->a:Lcom/google/android/gms/common/api/Status;
+
+    iget v10, v8, Lcom/google/android/gms/common/api/Status;->a:I
+
+    iget-object v8, v8, Lcom/google/android/gms/common/api/Status;->o:Lrk3;
+
+    if-nez v8, :cond_8
+
+    goto :goto_3
+
+    :cond_8
+    iget v8, v8, Lrk3;->b:I
+
+    move v11, v10
+
+    goto :goto_5
+
+    :cond_9
+    const/16 v8, 0x65
+
+    move v11, v8
+
+    goto :goto_4
+
+    :goto_5
+    if-eqz v4, :cond_a
+
+    iget-wide v6, v0, Lgb2;->b:J
+
+    iget-wide v12, v0, Lgb2;->c:J
+
+    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+
+    move-result-wide v14
+
+    invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
+
+    move-result-wide v16
+
+    sub-long v12, v16, v12
+
+    long-to-int v12, v12
+
+    move-wide v15, v14
+
+    move-wide v13, v6
+
+    :goto_6
+    move/from16 v20, v12
+
+    goto :goto_7
+
+    :cond_a
+    move-wide v13, v6
+
+    move-wide v15, v13
+
+    goto :goto_6
+
+    :goto_7
+    iget v10, v0, Lgb2;->a:I
+
+    move/from16 v19, v9
+
+    new-instance v9, Ltf9;
+
+    const/16 v17, 0x0
+
+    const/16 v18, 0x0
+
+    move v12, v8
+
+    invoke-direct/range {v9 .. v20}, Ltf9;-><init>(IIIJJLjava/lang/String;Ljava/lang/String;II)V
+
+    int-to-long v6, v2
+
+    new-instance v12, Lc2h;
+
+    move v14, v1
+
+    move/from16 v17, v3
+
+    move-wide v15, v6
+
+    move-object v13, v9
+
+    invoke-direct/range {v12 .. v17}, Lc2h;-><init>(Ltf9;IJI)V
+
+    iget-object v0, v5, Lfl6;->w0:Lzh9;
+
+    const/16 v1, 0x12
+
+    invoke-virtual {v0, v1, v12}, Landroid/os/Handler;->obtainMessage(ILjava/lang/Object;)Landroid/os/Message;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
+
+    :cond_b
+    :goto_8
+    return-void
 .end method

@@ -2,128 +2,246 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ly9a;
+
+
+# static fields
+.field public static final Z:Ljava/util/concurrent/ConcurrentHashMap;
+
+.field public static r0:Ly73;
+
 
 # instance fields
-.field public final a:Lx73;
+.field public final X:Ljava/util/concurrent/locks/ReentrantLock;
 
-.field public final b:Lz73;
+.field public final Y:Ljava/util/concurrent/atomic/AtomicReference;
+
+.field public final a:Landroid/app/Application;
+
+.field public final b:Ljava/lang/String;
+
+.field public final c:Ljava/util/concurrent/atomic/AtomicReference;
+
+.field public final o:Lfo8;
 
 
 # direct methods
-.method public constructor <init>(Lx73;Lz73;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Ljava/util/concurrent/ConcurrentHashMap;
 
-    iput-object p1, p0, Ly73;->a:Lx73;
+    invoke-direct {v0}, Ljava/util/concurrent/ConcurrentHashMap;-><init>()V
 
-    iput-object p2, p0, Ly73;->b:Lz73;
+    sput-object v0, Ly73;->Z:Ljava/util/concurrent/ConcurrentHashMap;
 
     return-void
 .end method
 
-
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
-
-    const/4 v0, 0x1
-
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    instance-of v1, p1, Ly73;
-
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
-    check-cast p1, Ly73;
-
-    iget-object v1, p0, Ly73;->a:Lx73;
-
-    iget-object v3, p1, Ly73;->a:Lx73;
-
-    invoke-static {v1, v3}, Lxq7;->d(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_2
-
-    return v2
-
-    :cond_2
-    iget-object p0, p0, Ly73;->b:Lz73;
-
-    iget-object p1, p1, Ly73;->b:Lz73;
-
-    invoke-static {p0, p1}, Lxq7;->d(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p0
-
-    if-nez p0, :cond_3
-
-    return v2
-
-    :cond_3
-    return v0
-.end method
-
-.method public final hashCode()I
+.method public constructor <init>(Ljava/lang/String;Landroid/app/Application;)V
     .locals 1
 
-    iget-object v0, p0, Ly73;->a:Lx73;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-virtual {v0}, Lx73;->hashCode()I
+    new-instance v0, Ljava/util/concurrent/atomic/AtomicReference;
 
-    move-result v0
+    invoke-direct {v0}, Ljava/util/concurrent/atomic/AtomicReference;-><init>()V
 
-    mul-int/lit8 v0, v0, 0x1f
+    iput-object v0, p0, Ly73;->c:Ljava/util/concurrent/atomic/AtomicReference;
 
-    iget-object p0, p0, Ly73;->b:Lz73;
+    new-instance v0, Ljava/util/concurrent/atomic/AtomicReference;
 
-    invoke-virtual {p0}, Lz73;->hashCode()I
+    invoke-direct {v0}, Ljava/util/concurrent/atomic/AtomicReference;-><init>()V
 
-    move-result p0
+    iput-object v0, p0, Ly73;->Y:Ljava/util/concurrent/atomic/AtomicReference;
 
-    add-int/2addr p0, v0
+    iput-object p2, p0, Ly73;->a:Landroid/app/Application;
 
-    return p0
+    iput-object p1, p0, Ly73;->b:Ljava/lang/String;
+
+    new-instance p1, Lfo8;
+
+    const-string p2, "upload"
+
+    invoke-direct {p1, p0, p2}, Lfo8;-><init>(Ly73;Ljava/lang/String;)V
+
+    iput-object p1, p0, Ly73;->o:Lfo8;
+
+    new-instance p1, Ljava/util/concurrent/locks/ReentrantLock;
+
+    invoke-direct {p1}, Ljava/util/concurrent/locks/ReentrantLock;-><init>()V
+
+    iput-object p1, p0, Ly73;->X:Ljava/util/concurrent/locks/ReentrantLock;
+
+    return-void
 .end method
 
-.method public final toString()Ljava/lang/String;
-    .locals 2
+.method public static a(Ljava/lang/String;)Ly73;
+    .locals 3
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    sget-object v0, Lru/ok/android/commons/app/ApplicationProvider;->a:Landroid/app/Application;
 
-    const-string v1, "CommonStatesBackgroundColors(active="
+    invoke-static {}, Lx4h;->l()Landroid/app/Application;
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    move-result-object v0
 
-    iget-object v1, p0, Ly73;->a:Lx73;
+    sget-object v1, Ly73;->r0:Ly73;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    if-eqz v1, :cond_0
 
-    const-string v1, ", disabled="
+    iget-object v2, v1, Ly73;->b:Ljava/lang/String;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {p0, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    iget-object p0, p0, Ly73;->b:Lz73;
+    move-result v2
 
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    if-eqz v2, :cond_0
 
-    const-string p0, ")"
+    return-object v1
 
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    :cond_0
+    sget-object v1, Ly73;->Z:Ljava/util/concurrent/ConcurrentHashMap;
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v1, p0}, Ljava/util/concurrent/ConcurrentHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Ly73;
+
+    if-eqz v2, :cond_1
+
+    sput-object v2, Ly73;->r0:Ly73;
+
+    return-object v2
+
+    :cond_1
+    new-instance v2, Ly73;
+
+    invoke-direct {v2, p0, v0}, Ly73;-><init>(Ljava/lang/String;Landroid/app/Application;)V
+
+    invoke-virtual {v1, p0, v2}, Ljava/util/concurrent/ConcurrentHashMap;->putIfAbsent(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p0
 
+    check-cast p0, Ly73;
+
+    if-eqz p0, :cond_2
+
+    sput-object p0, Ly73;->r0:Ly73;
+
     return-object p0
+
+    :cond_2
+    sput-object v2, Ly73;->r0:Ly73;
+
+    return-object v2
+.end method
+
+
+# virtual methods
+.method public final b()Lowg;
+    .locals 4
+
+    iget-object v0, p0, Ly73;->c:Ljava/util/concurrent/atomic/AtomicReference;
+
+    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lowg;
+
+    if-eqz v1, :cond_0
+
+    return-object v1
+
+    :cond_0
+    new-instance v1, Lfo8;
+
+    const-string v2, "append"
+
+    invoke-direct {v1, p0, v2}, Lfo8;-><init>(Ly73;Ljava/lang/String;)V
+
+    new-instance v2, Ljava/util/concurrent/locks/ReentrantLock;
+
+    invoke-direct {v2}, Ljava/util/concurrent/locks/ReentrantLock;-><init>()V
+
+    new-instance v3, Lowg;
+
+    iget-object p0, p0, Ly73;->b:Ljava/lang/String;
+
+    invoke-direct {v3, v1, v2, p0}, Lowg;-><init>(Lfo8;Ljava/util/concurrent/locks/ReentrantLock;Ljava/lang/String;)V
+
+    :cond_1
+    const/4 p0, 0x0
+
+    invoke-virtual {v0, p0, v3}, Ljava/util/concurrent/atomic/AtomicReference;->compareAndSet(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p0
+
+    if-eqz p0, :cond_2
+
+    return-object v3
+
+    :cond_2
+    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
+
+    move-result-object p0
+
+    if-eqz p0, :cond_1
+
+    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
+
+    move-result-object p0
+
+    check-cast p0, Lowg;
+
+    return-object p0
+.end method
+
+.method public final c(Lbaa;)V
+    .locals 2
+
+    iget-object v0, p1, Lbaa;->a:Ljava/lang/String;
+
+    iget-object v1, p0, Ly73;->b:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    invoke-virtual {p0}, Ly73;->b()Lowg;
+
+    move-result-object p0
+
+    invoke-virtual {p0, p1}, Lowg;->c(Lbaa;)V
+
+    return-void
+
+    :cond_0
+    new-instance p0, Ljava/lang/IllegalArgumentException;
+
+    const-string p1, "Unexpected collector "
+
+    invoke-virtual {p1, v0}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-direct {p0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw p0
+.end method
+
+.method public final flush()V
+    .locals 0
+
+    invoke-virtual {p0}, Ly73;->b()Lowg;
+
+    move-result-object p0
+
+    invoke-virtual {p0}, Lowg;->flush()V
+
+    return-void
 .end method

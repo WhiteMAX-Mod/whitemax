@@ -1,114 +1,99 @@
 .class public final Le13;
-.super Ljava/lang/Object;
+.super Lure;
 .source "SourceFile"
 
-
-# static fields
-.field public static final b:Le13;
+# interfaces
+.implements Lpc6;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public synthetic X:Ljava/lang/Object;
+
+.field public final synthetic Y:Lone/me/chats/tab/ChatsTabWidget;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
-
-    new-instance v0, Le13;
-
-    const/4 v1, 0x0
-
-    invoke-direct {v0, v1}, Le13;-><init>(I)V
-
-    sput-object v0, Le13;->b:Le13;
-
-    return-void
-.end method
-
-.method public synthetic constructor <init>(I)V
+.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/chats/tab/ChatsTabWidget;)V
     .locals 0
 
-    iput p1, p0, Le13;->a:I
+    iput-object p2, p0, Le13;->Y:Lone/me/chats/tab/ChatsTabWidget;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/4 p2, 0x2
+
+    invoke-direct {p0, p2, p1}, Lure;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Lv36;)V
-    .locals 4
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    iget p0, p0, Le13;->a:I
+    check-cast p1, Ljava/util/List;
 
-    packed-switch p0, :pswitch_data_0
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    iget-object p0, p1, Lv36;->a:Landroid/database/sqlite/SQLiteDatabase;
-
-    invoke-virtual {p0}, Landroid/database/sqlite/SQLiteDatabase;->isWriteAheadLoggingEnabled()Z
-
-    move-result p0
-
-    if-eqz p0, :cond_0
-
-    const-string p0, "PRAGMA synchronous = NORMAL"
-
-    invoke-virtual {p1, p0}, Lv36;->z(Ljava/lang/String;)V
-
-    :cond_0
-    return-void
-
-    :pswitch_0
-    invoke-virtual {p1}, Lv36;->v()V
-
-    :try_start_0
-    new-instance p0, Ljava/lang/StringBuilder;
-
-    const-string v0, "DELETE FROM workspec WHERE state IN (2, 3, 5) AND (last_enqueue_time + minimum_retention_duration) < "
-
-    invoke-direct {p0, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
-
-    move-result-wide v0
-
-    sget-wide v2, Ll8g;->a:J
-
-    sub-long/2addr v0, v2
-
-    invoke-virtual {p0, v0, v1}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    const-string v0, " AND (SELECT COUNT(*)=0 FROM dependency WHERE     prerequisite_id=id AND     work_spec_id NOT IN         (SELECT id FROM workspec WHERE state IN (2, 3, 5)))"
-
-    invoke-virtual {p0, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {p0, p1, p2}, Le13;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
     move-result-object p0
 
-    invoke-virtual {p1, p0}, Lv36;->z(Ljava/lang/String;)V
+    check-cast p0, Le13;
 
-    invoke-virtual {p1}, Lv36;->G()V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    sget-object p1, Lylf;->a:Lylf;
 
-    invoke-virtual {p1}, Lv36;->T()V
+    invoke-virtual {p0, p1}, Le13;->o(Ljava/lang/Object;)Ljava/lang/Object;
 
-    return-void
+    return-object p1
+.end method
 
-    :catchall_0
-    move-exception p0
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 1
 
-    invoke-virtual {p1}, Lv36;->T()V
+    new-instance v0, Le13;
 
-    throw p0
+    iget-object p0, p0, Le13;->Y:Lone/me/chats/tab/ChatsTabWidget;
 
-    nop
+    invoke-direct {v0, p2, p0}, Le13;-><init>(Lkotlin/coroutines/Continuation;Lone/me/chats/tab/ChatsTabWidget;)V
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    iput-object p1, v0, Le13;->X:Ljava/lang/Object;
+
+    return-object v0
+.end method
+
+.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
+
+    invoke-static {p1}, Lqe5;->V(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Le13;->X:Ljava/lang/Object;
+
+    check-cast p1, Ljava/util/List;
+
+    iget-object p0, p0, Le13;->Y:Lone/me/chats/tab/ChatsTabWidget;
+
+    iget-object v0, p0, Lone/me/chats/tab/ChatsTabWidget;->x0:Lf36;
+
+    invoke-virtual {v0, p1}, Lf36;->e(Ljava/util/List;)V
+
+    invoke-virtual {p0}, Lone/me/chats/tab/ChatsTabWidget;->y0()Lg26;
+
+    move-result-object v0
+
+    invoke-virtual {v0, p1}, Lg26;->M(Ljava/util/List;)V
+
+    iget-object p1, p0, Lone/me/chats/tab/ChatsTabWidget;->c:Lsw3;
+
+    if-eqz p1, :cond_0
+
+    invoke-interface {p1}, Lsw3;->dismiss()V
+
+    :cond_0
+    const/4 p1, 0x0
+
+    iput-object p1, p0, Lone/me/chats/tab/ChatsTabWidget;->c:Lsw3;
+
+    sget-object p0, Lylf;->a:Lylf;
+
+    return-object p0
 .end method

@@ -96,14 +96,14 @@
     iput-object v1, p0, Lru/ok/messages/views/ActProfilePhoto$a;->b:Ljava/util/List;
 
     .line 12
-    invoke-static {p1}, Ltk9;->H(Landroid/os/Parcel;)Ljava/lang/String;
+    invoke-static {p1}, Lxnd;->d0(Landroid/os/Parcel;)Ljava/lang/String;
 
     move-result-object p1
 
     iput-object p1, p0, Lru/ok/messages/views/ActProfilePhoto$a;->c:Ljava/lang/String;
 
     .line 13
-    invoke-static {v1}, Lq14;->A(Ljava/util/List;)Ljava/lang/Object;
+    invoke-static {v1}, Lxfc;->j(Ljava/util/List;)Ljava/lang/Object;
 
     move-result-object p1
 
@@ -128,7 +128,7 @@
     iput-object p2, p0, Lru/ok/messages/views/ActProfilePhoto$a;->c:Ljava/lang/String;
 
     .line 4
-    invoke-static {p1}, Lq14;->A(Ljava/util/List;)Ljava/lang/Object;
+    invoke-static {p1}, Lxfc;->j(Ljava/util/List;)Ljava/lang/Object;
 
     move-result-object p1
 
@@ -180,7 +180,7 @@
     :cond_1
     iget-object p0, p0, Lru/ok/messages/views/ActProfilePhoto$a;->c:Ljava/lang/String;
 
-    invoke-static {p1, p0}, Ltk9;->M(Landroid/os/Parcel;Ljava/lang/String;)V
+    invoke-static {p1, p0}, Lxnd;->n0(Landroid/os/Parcel;Ljava/lang/String;)V
 
     return-void
 .end method

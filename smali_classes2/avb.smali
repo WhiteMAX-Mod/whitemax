@@ -1,66 +1,96 @@
-.class public abstract Lavb;
-.super Ljava/lang/Object;
+.class public final Lavb;
+.super Ljvb;
+.source "SourceFile"
 
 
-# static fields
-.field public static oneme_settings_media_audio_always:I = 0x7f0a079d
+# instance fields
+.field public final a:Lr2f;
 
-.field public static oneme_settings_media_audio_dont_load:I = 0x7f0a079e
 
-.field public static oneme_settings_media_audio_wifi:I = 0x7f0a079f
+# direct methods
+.method public constructor <init>(Lr2f;)V
+    .locals 0
 
-.field public static oneme_settings_media_auto_play_video_always:I = 0x7f0a07a0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-.field public static oneme_settings_media_auto_play_video_disable:I = 0x7f0a07a1
+    iput-object p1, p0, Lavb;->a:Lr2f;
 
-.field public static oneme_settings_media_auto_play_video_wifi:I = 0x7f0a07a2
+    return-void
+.end method
 
-.field public static oneme_settings_media_gif_always:I = 0x7f0a07a3
 
-.field public static oneme_settings_media_gif_dont_load:I = 0x7f0a07a4
+# virtual methods
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 1
 
-.field public static oneme_settings_media_gif_wifi:I = 0x7f0a07a5
+    if-ne p0, p1, :cond_0
 
-.field public static oneme_settings_media_item_animoji_enabled:I = 0x7f0a07a6
+    goto :goto_1
 
-.field public static oneme_settings_media_item_audio:I = 0x7f0a07a7
+    :cond_0
+    instance-of v0, p1, Lavb;
 
-.field public static oneme_settings_media_item_gif:I = 0x7f0a07a8
+    if-nez v0, :cond_1
 
-.field public static oneme_settings_media_item_gif_available:I = 0x7f0a07a9
+    goto :goto_0
 
-.field public static oneme_settings_media_item_load_in_roaming:I = 0x7f0a07aa
+    :cond_1
+    check-cast p1, Lavb;
 
-.field public static oneme_settings_media_item_photo:I = 0x7f0a07ab
+    iget-object p0, p0, Lavb;->a:Lr2f;
 
-.field public static oneme_settings_media_item_video:I = 0x7f0a07ac
+    iget-object p1, p1, Lavb;->a:Lr2f;
 
-.field public static oneme_settings_media_item_video_caching:I = 0x7f0a07ad
+    invoke-virtual {p0, p1}, Lr2f;->equals(Ljava/lang/Object;)Z
 
-.field public static oneme_settings_media_item_video_quality:I = 0x7f0a07ae
+    move-result p0
 
-.field public static oneme_settings_media_photo_always:I = 0x7f0a07af
+    if-nez p0, :cond_2
 
-.field public static oneme_settings_media_photo_dont_load:I = 0x7f0a07b0
+    :goto_0
+    const/4 p0, 0x0
 
-.field public static oneme_settings_media_photo_wifi:I = 0x7f0a07b1
+    return p0
 
-.field public static oneme_settings_media_quality_1080:I = 0x7f0a07b2
+    :cond_2
+    :goto_1
+    const/4 p0, 0x1
 
-.field public static oneme_settings_media_quality_480:I = 0x7f0a07b3
+    return p0
+.end method
 
-.field public static oneme_settings_media_quality_720:I = 0x7f0a07b4
+.method public final hashCode()I
+    .locals 0
 
-.field public static oneme_settings_media_screen_autoloading_section_header:I = 0x7f0a07b5
+    iget-object p0, p0, Lavb;->a:Lr2f;
 
-.field public static oneme_settings_media_screen_autoplaying_section_header:I = 0x7f0a07b6
+    invoke-virtual {p0}, Lr2f;->hashCode()I
 
-.field public static oneme_settings_media_screen_datapressing_section_header:I = 0x7f0a07b7
+    move-result p0
 
-.field public static oneme_settings_media_screen_list:I = 0x7f0a07b8
+    return p0
+.end method
 
-.field public static oneme_settings_media_screen_settings_header_vh:I = 0x7f0a07b9
+.method public final toString()Ljava/lang/String;
+    .locals 2
 
-.field public static oneme_settings_media_screen_settings_item_vh:I = 0x7f0a07ba
+    new-instance v0, Ljava/lang/StringBuilder;
 
-.field public static oneme_settings_media_screen_toolbar:I = 0x7f0a07bb
+    const-string v1, "ExternalShareChannelLink(text="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object p0, p0, Lavb;->a:Lr2f;
+
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string p0, ")"
+
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    return-object p0
+.end method

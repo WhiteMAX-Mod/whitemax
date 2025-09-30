@@ -1,54 +1,91 @@
-.class public abstract Lvyb;
+.class public final Lvyb;
 .super Ljava/lang/Object;
+.source "SourceFile"
+
+# interfaces
+.implements Lru/ok/android/externcalls/sdk/audio/ProximityTracker;
 
 
-# static fields
-.field public static default_notification_channel_name:I = 0x7f130430
+# instance fields
+.field public final a:Lcl7;
 
-.field public static error_message_authentication_expired:I = 0x7f13048b
 
-.field public static error_message_bad_value:I = 0x7f13048c
+# direct methods
+.method public constructor <init>(Lcl7;)V
+    .locals 0
 
-.field public static error_message_concurrent_stream_limit:I = 0x7f13048d
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-.field public static error_message_content_already_playing:I = 0x7f13048e
+    iput-object p1, p0, Lvyb;->a:Lcl7;
 
-.field public static error_message_disconnected:I = 0x7f13048f
+    return-void
+.end method
 
-.field public static error_message_end_of_playlist:I = 0x7f130490
 
-.field public static error_message_fallback:I = 0x7f130491
+# virtual methods
+.method public final getCanUseSpeaker()Z
+    .locals 1
 
-.field public static error_message_info_cancelled:I = 0x7f130492
+    iget-object p0, p0, Lvyb;->a:Lcl7;
 
-.field public static error_message_invalid_state:I = 0x7f130493
+    invoke-interface {p0}, Lcl7;->getValue()Ljava/lang/Object;
 
-.field public static error_message_io:I = 0x7f130494
+    move-result-object v0
 
-.field public static error_message_not_available_in_region:I = 0x7f130495
+    check-cast v0, Luyb;
 
-.field public static error_message_not_supported:I = 0x7f130496
+    iget-object v0, v0, Luyb;->f:Landroid/os/PowerManager$WakeLock;
 
-.field public static error_message_parental_control_restricted:I = 0x7f130497
+    if-eqz v0, :cond_0
 
-.field public static error_message_permission_denied:I = 0x7f130498
+    invoke-interface {p0}, Lcl7;->getValue()Ljava/lang/Object;
 
-.field public static error_message_premium_account_required:I = 0x7f130499
+    move-result-object p0
 
-.field public static error_message_setup_required:I = 0x7f13049a
+    check-cast p0, Luyb;
 
-.field public static error_message_skip_limit_reached:I = 0x7f13049b
+    iget-boolean p0, p0, Luyb;->e:Z
 
-.field public static media3_controls_pause_description:I = 0x7f13060f
+    if-nez p0, :cond_0
 
-.field public static media3_controls_play_description:I = 0x7f130610
+    const/4 p0, 0x1
 
-.field public static media3_controls_seek_back_description:I = 0x7f130611
+    return p0
 
-.field public static media3_controls_seek_forward_description:I = 0x7f130612
+    :cond_0
+    const/4 p0, 0x0
 
-.field public static media3_controls_seek_to_next_description:I = 0x7f130613
+    return p0
+.end method
 
-.field public static media3_controls_seek_to_previous_description:I = 0x7f130614
+.method public final startTrackingProximity()V
+    .locals 0
 
-.field public static status_bar_notification_info_overflow:I = 0x7f130cb4
+    iget-object p0, p0, Lvyb;->a:Lcl7;
+
+    invoke-interface {p0}, Lcl7;->getValue()Ljava/lang/Object;
+
+    move-result-object p0
+
+    check-cast p0, Luyb;
+
+    invoke-virtual {p0}, Luyb;->a()V
+
+    return-void
+.end method
+
+.method public final stopTrackingProximity()V
+    .locals 0
+
+    iget-object p0, p0, Lvyb;->a:Lcl7;
+
+    invoke-interface {p0}, Lcl7;->getValue()Ljava/lang/Object;
+
+    move-result-object p0
+
+    check-cast p0, Luyb;
+
+    invoke-virtual {p0}, Luyb;->b()V
+
+    return-void
+.end method

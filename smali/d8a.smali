@@ -1,19 +1,17 @@
-.class public abstract Ld8a;
+.class public interface abstract Ld8a;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:I
+# virtual methods
+.method public abstract b()V
+.end method
 
+.method public abstract c(Loq4;)V
+.end method
 
-# direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public abstract onError(Ljava/lang/Throwable;)V
+.end method
 
-    sget v0, Lstb;->oneme_complaint_action_cancel:I
-
-    sput v0, Ld8a;->a:I
-
-    return-void
+.method public abstract s(Ljava/lang/Object;)V
 .end method

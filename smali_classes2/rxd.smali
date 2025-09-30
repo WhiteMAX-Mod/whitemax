@@ -1,102 +1,89 @@
-.class public final Lrxd;
-.super Lqde;
+.class public final synthetic Lrxd;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Ll66;
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field public X:I
+.field public final synthetic a:I
+
+.field public final synthetic b:Ltxd;
+
+.field public final synthetic c:Z
+
+
+# direct methods
+.method public synthetic constructor <init>(Ltxd;ZI)V
+    .locals 0
+
+    iput p3, p0, Lrxd;->a:I
+
+    iput-object p1, p0, Lrxd;->b:Ltxd;
+
+    iput-boolean p2, p0, Lrxd;->c:Z
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final run()V
+    .locals 1
 
-    check-cast p1, Lox3;
+    iget v0, p0, Lrxd;->a:I
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    packed-switch v0, :pswitch_data_0
 
-    invoke-virtual {p0, p1, p2}, Lrxd;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    iget-object v0, p0, Lrxd;->b:Ltxd;
 
-    move-result-object p0
+    iget-object v0, v0, Ltxd;->g:Lorg/webrtc/audio/JavaAudioDeviceModule;
 
-    check-cast p0, Lrxd;
+    if-eqz v0, :cond_0
 
-    sget-object p1, Le5f;->a:Le5f;
+    iget-boolean p0, p0, Lrxd;->c:Z
 
-    invoke-virtual {p0, p1}, Lrxd;->o(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, p0}, Lorg/webrtc/audio/AudioDeviceModule;->setNoiseSuppressorEnabled(Z)Z
 
-    move-result-object p0
+    :cond_0
+    return-void
 
-    return-object p0
-.end method
+    :pswitch_0
+    iget-object v0, p0, Lrxd;->b:Ltxd;
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 0
-
-    new-instance p0, Lrxd;
-
-    const/4 p1, 0x2
-
-    invoke-direct {p0, p1, p2}, Lqde;-><init>(ILkotlin/coroutines/Continuation;)V
-
-    return-object p0
-.end method
-
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 4
-
-    iget v0, p0, Lrxd;->X:I
-
-    const/4 v1, 0x1
+    iget-object v0, v0, Ltxd;->g:Lorg/webrtc/audio/JavaAudioDeviceModule;
 
     if-eqz v0, :cond_1
 
-    if-ne v0, v1, :cond_0
+    iget-boolean p0, p0, Lrxd;->c:Z
 
-    invoke-static {p1}, Lsgg;->Z(Ljava/lang/Object;)V
-
-    goto :goto_0
-
-    :cond_0
-    new-instance p0, Ljava/lang/IllegalStateException;
-
-    const-string p1, "call to \'resume\' before \'invoke\' with coroutine"
-
-    invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p0
+    invoke-interface {v0, p0}, Lorg/webrtc/audio/AudioDeviceModule;->setSpeakerMute(Z)V
 
     :cond_1
-    invoke-static {p1}, Lsgg;->Z(Ljava/lang/Object;)V
+    return-void
 
-    sget p1, Lat4;->o:I
+    :pswitch_1
+    iget-object v0, p0, Lrxd;->b:Ltxd;
 
-    const/4 p1, 0x2
+    iget-object v0, v0, Ltxd;->g:Lorg/webrtc/audio/JavaAudioDeviceModule;
 
-    sget-object v0, Lft4;->o:Lft4;
+    if-eqz v0, :cond_2
 
-    invoke-static {p1, v0}, La4f;->F(ILft4;)J
+    iget-boolean p0, p0, Lrxd;->c:Z
 
-    move-result-wide v2
-
-    iput v1, p0, Lrxd;->X:I
-
-    invoke-static {v2, v3, p0}, Lq14;->t(JLkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    sget-object p1, Lpx3;->a:Lpx3;
-
-    if-ne p0, p1, :cond_2
-
-    return-object p1
+    invoke-interface {v0, p0}, Lorg/webrtc/audio/AudioDeviceModule;->setMicrophoneMute(Z)V
 
     :cond_2
-    :goto_0
-    sget-object p0, Le5f;->a:Le5f;
+    return-void
 
-    return-object p0
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

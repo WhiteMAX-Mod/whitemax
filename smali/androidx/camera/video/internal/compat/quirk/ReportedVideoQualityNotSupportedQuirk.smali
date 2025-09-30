@@ -176,7 +176,7 @@
 
 
 # virtual methods
-.method public final a(Lyw1;Leb0;)Z
+.method public final a(Lmz1;Lra0;)Z
     .locals 2
 
     invoke-static {}, Landroidx/camera/video/internal/compat/quirk/ReportedVideoQualityNotSupportedQuirk;->e()Z
@@ -216,11 +216,11 @@
 
     if-eqz p0, :cond_1
 
-    sget-object p0, Leb0;->e:Leb0;
+    sget-object p0, Lra0;->e:Lra0;
 
     if-eq p2, p0, :cond_4
 
-    sget-object p0, Leb0;->f:Leb0;
+    sget-object p0, Lra0;->f:Lra0;
 
     if-ne p2, p0, :cond_5
 
@@ -233,17 +233,17 @@
 
     if-eqz p0, :cond_2
 
-    invoke-interface {p1}, Lyw1;->h()I
+    invoke-interface {p1}, Lmz1;->h()I
 
     move-result p0
 
     if-nez p0, :cond_5
 
-    sget-object p0, Leb0;->f:Leb0;
+    sget-object p0, Lra0;->f:Lra0;
 
     if-eq p2, p0, :cond_4
 
-    sget-object p0, Leb0;->e:Leb0;
+    sget-object p0, Lra0;->e:Lra0;
 
     if-ne p2, p0, :cond_5
 
@@ -256,13 +256,13 @@
 
     if-eqz p0, :cond_5
 
-    invoke-interface {p1}, Lyw1;->h()I
+    invoke-interface {p1}, Lmz1;->h()I
 
     move-result p0
 
     if-ne p0, v0, :cond_5
 
-    sget-object p0, Leb0;->g:Leb0;
+    sget-object p0, Lra0;->g:Lra0;
 
     if-ne p2, p0, :cond_5
 
@@ -270,7 +270,7 @@
 
     :cond_3
     :goto_0
-    sget-object p0, Leb0;->g:Leb0;
+    sget-object p0, Lra0;->g:Lra0;
 
     if-ne p2, p0, :cond_5
 
@@ -284,7 +284,7 @@
     return p0
 .end method
 
-.method public final c()Z
+.method public final b()Z
     .locals 0
 
     invoke-static {}, Landroidx/camera/video/internal/compat/quirk/ReportedVideoQualityNotSupportedQuirk;->e()Z

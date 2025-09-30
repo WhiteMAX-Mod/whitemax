@@ -1,138 +1,125 @@
-.class public final synthetic Ldq6;
-.super Ljava/lang/Object;
+.class public final Ldq6;
+.super Landroid/text/style/RelativeSizeSpan;
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/lang/Runnable;
+.implements Lt68;
+.implements Landroid/os/Parcelable;
+
+
+# static fields
+.field public static final CREATOR:Landroid/os/Parcelable$Creator;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroid/os/Parcelable$Creator<",
+            "Ldq6;",
+            ">;"
+        }
+    .end annotation
+.end field
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final a:F
 
-.field public final synthetic b:Lfq6;
+.field public final b:I
 
 
 # direct methods
-.method public synthetic constructor <init>(Lfq6;I)V
+.method static constructor <clinit>()V
+    .locals 2
+
+    new-instance v0, Li84;
+
+    const/16 v1, 0x16
+
+    invoke-direct {v0, v1}, Li84;-><init>(I)V
+
+    sput-object v0, Ldq6;->CREATOR:Landroid/os/Parcelable$Creator;
+
+    return-void
+.end method
+
+.method public synthetic constructor <init>()V
+    .locals 1
+
+    const v0, 0x3fa66666    # 1.3f
+
+    .line 1
+    invoke-direct {p0, v0}, Ldq6;-><init>(F)V
+
+    return-void
+.end method
+
+.method public constructor <init>(F)V
     .locals 0
 
-    iput p2, p0, Ldq6;->a:I
+    .line 2
+    invoke-direct {p0, p1}, Landroid/text/style/RelativeSizeSpan;-><init>(F)V
 
-    iput-object p1, p0, Ldq6;->b:Lfq6;
+    .line 3
+    iput p1, p0, Ldq6;->a:F
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/16 p1, 0x8
+
+    .line 4
+    iput p1, p0, Ldq6;->b:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
-    .locals 5
+.method public final copy()Lzz3;
+    .locals 1
 
-    iget v0, p0, Ldq6;->a:I
+    new-instance v0, Ldq6;
 
-    const-string v1, "onFileDownloadInterrupted"
+    iget p0, p0, Ldq6;->a:F
 
-    const/4 v2, 0x0
+    invoke-direct {v0, p0}, Ldq6;-><init>(F)V
 
-    const-string v3, "gq6"
+    return-object v0
+.end method
 
-    iget-object p0, p0, Ldq6;->b:Lfq6;
+.method public final getType()I
+    .locals 0
 
-    const/4 v4, 0x0
+    iget p0, p0, Ldq6;->b:I
 
-    packed-switch v0, :pswitch_data_0
+    return p0
+.end method
 
-    iget-object v0, p0, Lfq6;->Y:Ljava/util/concurrent/atomic/AtomicBoolean;
+.method public final updateDrawState(Landroid/text/TextPaint;)V
+    .locals 0
 
-    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
+    invoke-super {p0, p1}, Landroid/text/style/RelativeSizeSpan;->updateDrawState(Landroid/text/TextPaint;)V
 
-    move-result v0
+    const/4 p0, 0x1
 
-    if-eqz v0, :cond_0
+    invoke-virtual {p1, p0}, Landroid/graphics/Paint;->setFakeBoldText(Z)V
 
-    goto :goto_0
-
-    :cond_0
-    invoke-static {v3, v1, v4}, Lg47;->r(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    new-instance v0, Lone/me/sdk/transfer/exceptions/HttpErrorException;
-
-    invoke-direct {v0, v1, v4}, Lone/me/sdk/transfer/exceptions/HttpErrorException;-><init>(Ljava/lang/String;Lhq6;)V
-
-    iget-object v1, p0, Lfq6;->X:La0a;
-
-    invoke-interface {v1, v0}, La0a;->onError(Ljava/lang/Throwable;)V
-
-    invoke-virtual {p0, v2}, Lfq6;->b(Z)V
-
-    :goto_0
     return-void
+.end method
 
-    :pswitch_0
-    iget-object v0, p0, Lfq6;->Y:Ljava/util/concurrent/atomic/AtomicBoolean;
+.method public final updateMeasureState(Landroid/text/TextPaint;)V
+    .locals 0
 
-    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
+    invoke-super {p0, p1}, Landroid/text/style/RelativeSizeSpan;->updateMeasureState(Landroid/text/TextPaint;)V
 
-    move-result v0
+    const/4 p0, 0x1
 
-    if-eqz v0, :cond_1
+    invoke-virtual {p1, p0}, Landroid/graphics/Paint;->setFakeBoldText(Z)V
 
-    goto :goto_1
-
-    :cond_1
-    const-string v0, "onFileDownloadFailed"
-
-    invoke-static {v3, v0, v4}, Lg47;->r(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    new-instance v1, Lone/me/sdk/transfer/exceptions/HttpErrorException;
-
-    invoke-direct {v1, v0, v4}, Lone/me/sdk/transfer/exceptions/HttpErrorException;-><init>(Ljava/lang/String;Lhq6;)V
-
-    iget-object v0, p0, Lfq6;->X:La0a;
-
-    invoke-interface {v0, v1}, La0a;->onError(Ljava/lang/Throwable;)V
-
-    invoke-virtual {p0, v2}, Lfq6;->b(Z)V
-
-    :goto_1
     return-void
+.end method
 
-    :pswitch_1
-    iget-object v0, p0, Lfq6;->Y:Ljava/util/concurrent/atomic/AtomicBoolean;
+.method public final writeToParcel(Landroid/os/Parcel;I)V
+    .locals 0
 
-    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
+    iget p0, p0, Ldq6;->a:F
 
-    move-result v0
+    invoke-virtual {p1, p0}, Landroid/os/Parcel;->writeFloat(F)V
 
-    if-eqz v0, :cond_2
-
-    goto :goto_2
-
-    :cond_2
-    invoke-static {v3, v1, v4}, Lg47;->r(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    new-instance v0, Lone/me/sdk/transfer/exceptions/HttpErrorException;
-
-    const-string v1, "url expired"
-
-    invoke-direct {v0, v1, v4}, Lone/me/sdk/transfer/exceptions/HttpErrorException;-><init>(Ljava/lang/String;Lhq6;)V
-
-    iget-object v1, p0, Lfq6;->X:La0a;
-
-    invoke-interface {v1, v0}, La0a;->onError(Ljava/lang/Throwable;)V
-
-    invoke-virtual {p0, v2}, Lfq6;->b(Z)V
-
-    :goto_2
     return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
 .end method

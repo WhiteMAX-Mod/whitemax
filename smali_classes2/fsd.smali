@@ -1,34 +1,26 @@
 .class public final Lfsd;
-.super Lqde;
+.super Lure;
 .source "SourceFile"
 
 # interfaces
-.implements Ll66;
+.implements Lpc6;
 
 
 # instance fields
-.field public X:I
+.field public synthetic X:Ljava/lang/Object;
 
-.field public final synthetic Y:I
-
-.field public final synthetic Z:Lcsd;
-
-.field public final synthetic o0:Le17;
+.field public final synthetic Y:Lone/me/settings/SettingsListScreen;
 
 
 # direct methods
-.method public constructor <init>(ILcsd;Le17;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/settings/SettingsListScreen;)V
     .locals 0
 
-    iput p1, p0, Lfsd;->Y:I
+    iput-object p2, p0, Lfsd;->Y:Lone/me/settings/SettingsListScreen;
 
-    iput-object p2, p0, Lfsd;->Z:Lcsd;
+    const/4 p2, 0x2
 
-    iput-object p3, p0, Lfsd;->o0:Le17;
-
-    const/4 p1, 0x2
-
-    invoke-direct {p0, p1, p4}, Lqde;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0, p2, p1}, Lure;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
@@ -38,8 +30,6 @@
 .method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    check-cast p1, Lox3;
-
     check-cast p2, Lkotlin/coroutines/Continuation;
 
     invoke-virtual {p0, p1, p2}, Lfsd;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
@@ -48,87 +38,168 @@
 
     check-cast p0, Lfsd;
 
-    sget-object p1, Le5f;->a:Le5f;
+    sget-object p1, Lylf;->a:Lylf;
 
     invoke-virtual {p0, p1}, Lfsd;->o(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
-
-    new-instance p1, Lfsd;
-
-    iget-object v0, p0, Lfsd;->Z:Lcsd;
-
-    iget-object v1, p0, Lfsd;->o0:Le17;
-
-    iget p0, p0, Lfsd;->Y:I
-
-    invoke-direct {p1, p0, v0, v1, p2}, Lfsd;-><init>(ILcsd;Le17;Lkotlin/coroutines/Continuation;)V
 
     return-object p1
 .end method
 
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 1
+
+    new-instance v0, Lfsd;
+
+    iget-object p0, p0, Lfsd;->Y:Lone/me/settings/SettingsListScreen;
+
+    invoke-direct {v0, p2, p0}, Lfsd;-><init>(Lkotlin/coroutines/Continuation;Lone/me/settings/SettingsListScreen;)V
+
+    iput-object p1, v0, Lfsd;->X:Ljava/lang/Object;
+
+    return-object v0
+.end method
+
 .method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 6
+    .locals 2
 
-    iget v0, p0, Lfsd;->X:I
+    invoke-static {p1}, Lqe5;->V(Ljava/lang/Object;)V
 
-    const/4 v1, 0x1
+    iget-object p1, p0, Lfsd;->X:Ljava/lang/Object;
 
-    if-eqz v0, :cond_1
+    check-cast p1, Lr85;
 
-    if-ne v0, v1, :cond_0
+    instance-of v0, p1, Lasd;
 
-    invoke-static {p1}, Lsgg;->Z(Ljava/lang/Object;)V
+    if-eqz v0, :cond_0
+
+    check-cast p1, Lasd;
 
     goto :goto_0
 
     :cond_0
-    new-instance p0, Ljava/lang/IllegalStateException;
+    const/4 p1, 0x0
 
-    const-string p1, "call to \'resume\' before \'invoke\' with coroutine"
+    :goto_0
+    instance-of v0, p1, Lxrd;
 
-    invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    iget-object p0, p0, Lfsd;->Y:Lone/me/settings/SettingsListScreen;
 
-    throw p0
+    if-eqz v0, :cond_2
 
-    :cond_1
-    invoke-static {p1}, Lsgg;->Z(Ljava/lang/Object;)V
+    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
 
-    iget p1, p0, Lfsd;->Y:I
+    move-result-object v0
 
-    int-to-long v2, p1
+    check-cast p1, Lxrd;
 
-    const-wide/16 v4, 0x64
+    iget-object v1, p1, Lxrd;->a:Ljava/lang/String;
 
-    mul-long/2addr v2, v4
+    invoke-static {v0, v1}, Lb0b;->e(Landroid/content/Context;Ljava/lang/String;)V
 
-    iput v1, p0, Lfsd;->X:I
+    iget-object p1, p1, Lxrd;->b:Lp2f;
 
-    invoke-static {v2, v3, p0}, Lq14;->s(JLkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
+
+    move-result-object v0
+
+    invoke-virtual {p1, v0}, Lu2f;->b(Landroid/content/Context;)Ljava/lang/CharSequence;
 
     move-result-object p1
 
-    sget-object v0, Lpx3;->a:Lpx3;
+    if-nez p1, :cond_1
 
-    if-ne p1, v0, :cond_2
+    goto :goto_1
 
-    return-object v0
+    :cond_1
+    invoke-static {}, Lb0b;->l()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_4
+
+    iget-object p0, p0, Lone/me/settings/SettingsListScreen;->t0:Ljava/lang/Object;
+
+    invoke-interface {p0}, Lcl7;->getValue()Ljava/lang/Object;
+
+    move-result-object p0
+
+    check-cast p0, Lqoa;
+
+    new-instance v0, Lepa;
+
+    sget v1, Lq0d;->r:I
+
+    invoke-direct {v0, v1}, Lepa;-><init>(I)V
+
+    invoke-virtual {p0, v0}, Lqoa;->e(Ljpa;)V
+
+    invoke-virtual {p0, p1}, Lqoa;->h(Ljava/lang/CharSequence;)V
+
+    invoke-virtual {p0}, Lqoa;->i()Lpoa;
+
+    goto :goto_1
 
     :cond_2
-    :goto_0
-    iget-object p1, p0, Lfsd;->Z:Lcsd;
+    instance-of v0, p1, Lzrd;
 
-    iget-object p0, p0, Lfsd;->o0:Le17;
+    if-eqz v0, :cond_3
 
-    invoke-virtual {p1, p0}, Lcsd;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    iget-object v0, p0, Lone/me/settings/SettingsListScreen;->Y:Lzte;
 
-    sget-object p0, Le5f;->a:Le5f;
+    invoke-virtual {v0}, Lzte;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lbq3;
+
+    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
+
+    move-result-object p0
+
+    check-cast p1, Lzrd;
+
+    iget-object p1, p1, Lzrd;->a:Landroid/net/Uri;
+
+    invoke-virtual {v0, p0, p1}, Lbq3;->a(Landroid/content/Context;Landroid/net/Uri;)V
+
+    goto :goto_1
+
+    :cond_3
+    sget-object v0, Lyrd;->a:Lyrd;
+
+    invoke-static {p1, v0}, Lvyg;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_4
+
+    iget-object p1, p0, Lone/me/sdk/sections/SectionRecyclerWidget;->a:Lcic;
+
+    sget-object v0, Lone/me/sdk/sections/SectionRecyclerWidget;->c:[Lxi7;
+
+    const/4 v1, 0x0
+
+    aget-object v0, v0, v1
+
+    invoke-interface {p1, p0, v0}, Lcic;->N(Ljava/lang/Object;Lxi7;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Landroidx/recyclerview/widget/RecyclerView;
+
+    invoke-virtual {p1, v1}, Landroidx/recyclerview/widget/RecyclerView;->w0(I)V
+
+    iget-object p0, p0, Lone/me/settings/SettingsListScreen;->x0:Lhm;
+
+    if-eqz p0, :cond_4
+
+    const/4 p1, 0x1
+
+    invoke-virtual {p0, p1, p1, p1}, Lhm;->f(ZZZ)V
+
+    :cond_4
+    :goto_1
+    sget-object p0, Lylf;->a:Lylf;
 
     return-object p0
 .end method

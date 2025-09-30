@@ -1,76 +1,117 @@
-.class public final Lob6;
+.class public final synthetic Lob6;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Landroid/view/View$OnTouchListener;
+
 
 # instance fields
-.field public volatile a:J
+.field public final synthetic a:I
 
-.field public volatile b:J
-
-.field public final synthetic c:Lpb6;
+.field public final synthetic b:Landroid/view/GestureDetector;
 
 
 # direct methods
-.method public constructor <init>(Lpb6;)V
+.method public synthetic constructor <init>(Landroid/view/GestureDetector;I)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput p2, p0, Lob6;->a:I
 
-    iput-object p1, p0, Lob6;->c:Lpb6;
+    iput-object p1, p0, Lob6;->b:Landroid/view/GestureDetector;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onEvent(Lfb2;)V
-    .locals 4
-    .annotation runtime Li9e;
-    .end annotation
+.method public final onTouch(Landroid/view/View;Landroid/view/MotionEvent;)Z
+    .locals 1
 
-    iget-wide v0, p1, Lki0;->a:J
+    iget p1, p0, Lob6;->a:I
 
-    iget-wide v2, p0, Lob6;->b:J
+    const/4 v0, 0x0
 
-    cmp-long v0, v0, v2
+    iget-object p0, p0, Lob6;->b:Landroid/view/GestureDetector;
 
-    if-eqz v0, :cond_0
+    packed-switch p1, :pswitch_data_0
 
-    return-void
+    invoke-virtual {p0, p2}, Landroid/view/GestureDetector;->onTouchEvent(Landroid/view/MotionEvent;)Z
+
+    move-result p0
+
+    return p0
+
+    :pswitch_0
+    invoke-virtual {p0, p2}, Landroid/view/GestureDetector;->onTouchEvent(Landroid/view/MotionEvent;)Z
+
+    move-result p0
+
+    return p0
+
+    :pswitch_1
+    sget-object p1, Lone/me/profile/screens/avatars/ProfileAvatarWidget;->X:[Lxi7;
+
+    if-eqz p2, :cond_0
+
+    invoke-virtual {p0, p2}, Landroid/view/GestureDetector;->onTouchEvent(Landroid/view/MotionEvent;)Z
+
+    return v0
 
     :cond_0
-    new-instance v0, Ljava/lang/StringBuilder;
+    new-instance p0, Ljava/lang/IllegalArgumentException;
 
-    const-string v1, "onEvent "
+    const-string p1, "Required value was null."
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-direct {p0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    throw p0
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    :pswitch_2
+    sget-object p1, Lone/me/sdk/messagewrite/MessageWriteWidget;->E0:[Lxi7;
 
-    move-result-object p1
+    invoke-virtual {p0, p2}, Landroid/view/GestureDetector;->onTouchEvent(Landroid/view/MotionEvent;)Z
 
-    const-string v0, "pb6"
+    move-result p0
 
-    invoke-static {v0, p1}, Lg47;->p(Ljava/lang/String;Ljava/lang/String;)V
+    return p0
 
-    iget-object p1, p0, Lob6;->c:Lpb6;
+    :pswitch_3
+    invoke-virtual {p0, p2}, Landroid/view/GestureDetector;->onTouchEvent(Landroid/view/MotionEvent;)Z
 
-    iget-object p1, p1, Lpb6;->c:Ln82;
+    move-result p0
 
-    iget-wide v0, p0, Lob6;->a:J
+    return p0
 
-    invoke-virtual {p1, v0, v1}, Ln82;->z(J)Ly42;
+    :pswitch_4
+    invoke-virtual {p0, p2}, Landroid/view/GestureDetector;->onTouchEvent(Landroid/view/MotionEvent;)Z
 
-    move-result-object p1
+    move-result p0
 
-    iget-object p0, p0, Lob6;->c:Lpb6;
+    return p0
 
-    iget-object p0, p0, Lpb6;->d:Lj93;
+    :pswitch_5
+    invoke-virtual {p0, p2}, Landroid/view/GestureDetector;->onTouchEvent(Landroid/view/MotionEvent;)Z
 
-    invoke-virtual {p0, p1}, Lx87;->makeCompleting$kotlinx_coroutines_core(Ljava/lang/Object;)Z
+    move-result p0
 
-    return-void
+    return p0
+
+    :pswitch_6
+    invoke-virtual {p0, p2}, Landroid/view/GestureDetector;->onTouchEvent(Landroid/view/MotionEvent;)Z
+
+    return v0
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_6
+        :pswitch_5
+        :pswitch_4
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

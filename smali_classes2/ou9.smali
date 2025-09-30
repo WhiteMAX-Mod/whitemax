@@ -1,198 +1,127 @@
 .class public final Lou9;
-.super Lgi0;
+.super Leyd;
 .source "SourceFile"
 
 
-# instance fields
-.field public final synthetic a:I
+# static fields
+.field public static final synthetic j:[Lxi7;
 
-.field public final synthetic b:Lqy1;
+
+# instance fields
+.field public final g:Landroid/graphics/Path;
+
+.field public final h:Landroid/graphics/RectF;
+
+.field public final i:Lak;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lqy1;I)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 4
 
-    iput p2, p0, Lou9;->a:I
+    new-instance v0, Lmo9;
 
-    iput-object p1, p0, Lou9;->b:Lqy1;
+    const-string v1, "cornerRadius"
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const-string v2, "getCornerRadius()F"
+
+    const-class v3, Lou9;
+
+    invoke-direct {v0, v3, v1, v2}, Lmo9;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;)V
+
+    sget-object v1, Ljpc;->a:Lkpc;
+
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    const/4 v1, 0x1
+
+    new-array v1, v1, [Lxi7;
+
+    const/4 v2, 0x0
+
+    aput-object v0, v1, v2
+
+    sput-object v1, Lou9;->j:[Lxi7;
+
+    return-void
+.end method
+
+.method public constructor <init>()V
+    .locals 1
+
+    invoke-direct {p0}, Leyd;-><init>()V
+
+    new-instance v0, Landroid/graphics/Path;
+
+    invoke-direct {v0}, Landroid/graphics/Path;-><init>()V
+
+    iput-object v0, p0, Lou9;->g:Landroid/graphics/Path;
+
+    new-instance v0, Landroid/graphics/RectF;
+
+    invoke-direct {v0}, Landroid/graphics/RectF;-><init>()V
+
+    iput-object v0, p0, Lou9;->h:Landroid/graphics/RectF;
+
+    new-instance v0, Lak;
+
+    invoke-direct {v0, p0}, Lak;-><init>(Lou9;)V
+
+    iput-object v0, p0, Lou9;->i:Lak;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final d()V
-    .locals 2
+.method public final draw(Landroid/graphics/Canvas;)V
+    .locals 6
 
-    iget v0, p0, Lou9;->a:I
+    invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->getBounds()Landroid/graphics/Rect;
 
-    packed-switch v0, :pswitch_data_0
+    move-result-object v0
 
-    iget-object p0, p0, Lou9;->b:Lqy1;
+    iget-object v1, p0, Lou9;->h:Landroid/graphics/RectF;
 
-    invoke-virtual {p0}, Lqy1;->r()Z
+    invoke-virtual {v1, v0}, Landroid/graphics/RectF;->set(Landroid/graphics/Rect;)V
 
-    move-result v0
+    iget-object v0, p0, Lou9;->g:Landroid/graphics/Path;
 
-    if-eqz v0, :cond_0
+    invoke-virtual {v0}, Landroid/graphics/Path;->reset()V
 
-    new-instance v0, Ljava/lang/Throwable;
+    sget-object v2, Lou9;->j:[Lxi7;
 
-    const-string v1, "Cancelled with fresco pipeline"
+    const/4 v3, 0x0
 
-    invoke-direct {v0, v1}, Ljava/lang/Throwable;-><init>(Ljava/lang/String;)V
+    aget-object v4, v2, v3
 
-    invoke-virtual {p0, v0}, Lqy1;->h(Ljava/lang/Throwable;)Z
+    iget-object v4, p0, Lou9;->i:Lak;
 
-    :cond_0
-    return-void
+    iget-object v5, v4, Lx2;->b:Ljava/lang/Object;
 
-    :pswitch_0
-    iget-object p0, p0, Lou9;->b:Lqy1;
+    check-cast v5, Ljava/lang/Number;
 
-    invoke-virtual {p0}, Lqy1;->r()Z
+    invoke-virtual {v5}, Ljava/lang/Number;->floatValue()F
 
-    move-result v0
+    move-result v5
 
-    if-eqz v0, :cond_1
+    aget-object v2, v2, v3
 
-    new-instance v0, Ljava/lang/Throwable;
+    iget-object v2, v4, Lx2;->b:Ljava/lang/Object;
 
-    const-string v1, "Cancelled with fresco pipeline"
+    check-cast v2, Ljava/lang/Number;
 
-    invoke-direct {v0, v1}, Ljava/lang/Throwable;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v2}, Ljava/lang/Number;->floatValue()F
 
-    invoke-virtual {p0, v0}, Lqy1;->h(Ljava/lang/Throwable;)Z
+    move-result v2
 
-    :cond_1
-    return-void
+    sget-object v3, Landroid/graphics/Path$Direction;->CW:Landroid/graphics/Path$Direction;
 
-    nop
+    invoke-virtual {v0, v1, v5, v2, v3}, Landroid/graphics/Path;->addRoundRect(Landroid/graphics/RectF;FFLandroid/graphics/Path$Direction;)V
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
+    invoke-virtual {p1, v0}, Landroid/graphics/Canvas;->clipPath(Landroid/graphics/Path;)Z
 
-.method public final e(Lg0;)V
-    .locals 2
-
-    iget v0, p0, Lou9;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    iget-object p0, p0, Lou9;->b:Lqy1;
-
-    const/4 p1, 0x0
-
-    invoke-virtual {p0, p1}, Lqy1;->resumeWith(Ljava/lang/Object;)V
+    invoke-super {p0, p1}, Leyd;->draw(Landroid/graphics/Canvas;)V
 
     return-void
-
-    :pswitch_0
-    iget-object p0, p0, Lou9;->b:Lqy1;
-
-    invoke-virtual {p0}, Lqy1;->r()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    new-instance v0, Ljava/lang/Throwable;
-
-    const-string v1, "Fetch failed"
-
-    invoke-virtual {p1}, Lg0;->c()Ljava/lang/Throwable;
-
-    move-result-object p1
-
-    invoke-direct {v0, v1, p1}, Ljava/lang/Throwable;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    new-instance p1, Ljhc;
-
-    invoke-direct {p1, v0}, Ljhc;-><init>(Ljava/lang/Throwable;)V
-
-    invoke-virtual {p0, p1}, Lqy1;->resumeWith(Ljava/lang/Object;)V
-
-    :cond_0
-    return-void
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public final f(Lg0;)V
-    .locals 2
-
-    iget v0, p0, Lou9;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    invoke-virtual {p1}, Lg0;->h()Z
-
-    move-result v0
-
-    const/4 v1, 0x0
-
-    iget-object p0, p0, Lou9;->b:Lqy1;
-
-    if-nez v0, :cond_0
-
-    invoke-virtual {p0, v1}, Lqy1;->resumeWith(Ljava/lang/Object;)V
-
-    goto :goto_0
-
-    :cond_0
-    invoke-virtual {p1}, Lg0;->e()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lf33;
-
-    invoke-static {p1}, Lf33;->o(Lf33;)Lf33;
-
-    move-result-object p1
-
-    if-nez p1, :cond_1
-
-    invoke-virtual {p0, v1}, Lqy1;->resumeWith(Ljava/lang/Object;)V
-
-    goto :goto_0
-
-    :cond_1
-    invoke-virtual {p1}, Lf33;->i0()Ljava/lang/Object;
-
-    move-result-object p1
-
-    invoke-virtual {p0, p1}, Lqy1;->resumeWith(Ljava/lang/Object;)V
-
-    :goto_0
-    return-void
-
-    :pswitch_0
-    iget-object p0, p0, Lou9;->b:Lqy1;
-
-    invoke-virtual {p0}, Lqy1;->r()Z
-
-    move-result p1
-
-    if-eqz p1, :cond_2
-
-    sget-object p1, Le5f;->a:Le5f;
-
-    invoke-virtual {p0, p1}, Lqy1;->resumeWith(Ljava/lang/Object;)V
-
-    :cond_2
-    return-void
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
 .end method

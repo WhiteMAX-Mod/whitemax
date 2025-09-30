@@ -3,14 +3,14 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lbx3;
+.implements Lk04;
 
 
 # annotations
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Ljava/util/concurrent/CancellationException;",
-        "Lbx3;"
+        "Lk04;"
     }
 .end annotation
 
@@ -22,7 +22,7 @@
         "Lkotlinx/coroutines/TimeoutCancellationException;",
         "Ljava/util/concurrent/CancellationException;",
         "Lkotlinx/coroutines/CancellationException;",
-        "Lbx3;",
+        "Lk04;",
         "kotlinx-coroutines-core"
     }
     k = 0x1
@@ -36,16 +36,16 @@
 
 
 # instance fields
-.field public final transient a:Lv77;
+.field public final transient a:Lqe7;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;Lv77;)V
+.method public constructor <init>(Ljava/lang/String;Lqe7;)V
     .locals 0
 
     invoke-direct {p0, p1}, Ljava/util/concurrent/CancellationException;-><init>(Ljava/lang/String;)V
 
-    iput-object p2, p0, Lkotlinx/coroutines/TimeoutCancellationException;->a:Lv77;
+    iput-object p2, p0, Lkotlinx/coroutines/TimeoutCancellationException;->a:Lqe7;
 
     return-void
 .end method
@@ -66,9 +66,9 @@
     const-string v1, ""
 
     :cond_0
-    iget-object v2, p0, Lkotlinx/coroutines/TimeoutCancellationException;->a:Lv77;
+    iget-object v2, p0, Lkotlinx/coroutines/TimeoutCancellationException;->a:Lqe7;
 
-    invoke-direct {v0, v1, v2}, Lkotlinx/coroutines/TimeoutCancellationException;-><init>(Ljava/lang/String;Lv77;)V
+    invoke-direct {v0, v1, v2}, Lkotlinx/coroutines/TimeoutCancellationException;-><init>(Ljava/lang/String;Lqe7;)V
 
     invoke-virtual {v0, p0}, Ljava/lang/Throwable;->initCause(Ljava/lang/Throwable;)Ljava/lang/Throwable;
 

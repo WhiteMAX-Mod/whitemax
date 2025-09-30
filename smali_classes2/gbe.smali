@@ -1,26 +1,26 @@
 .class public final Lgbe;
-.super Lqde;
+.super Lure;
 .source "SourceFile"
 
 # interfaces
-.implements Ll66;
+.implements Lpc6;
 
 
 # instance fields
 .field public synthetic X:Ljava/lang/Object;
 
-.field public final synthetic Y:Lkbe;
+.field public final synthetic Y:Lone/me/startconversation/StartConversationScreen;
 
 
 # direct methods
-.method public constructor <init>(Lkbe;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/startconversation/StartConversationScreen;)V
     .locals 0
 
-    iput-object p1, p0, Lgbe;->Y:Lkbe;
+    iput-object p2, p0, Lgbe;->Y:Lone/me/startconversation/StartConversationScreen;
 
-    const/4 p1, 0x2
+    const/4 p2, 0x2
 
-    invoke-direct {p0, p1, p2}, Lqde;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0, p2, p1}, Lure;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
@@ -30,7 +30,7 @@
 .method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    check-cast p1, Ljava/lang/String;
+    check-cast p1, Ljava/util/List;
 
     check-cast p2, Lkotlin/coroutines/Continuation;
 
@@ -40,11 +40,13 @@
 
     check-cast p0, Lgbe;
 
-    sget-object p1, Le5f;->a:Le5f;
+    sget-object p1, Lylf;->a:Lylf;
 
     invoke-virtual {p0, p1}, Lgbe;->o(Ljava/lang/Object;)Ljava/lang/Object;
 
-    return-object p1
+    move-result-object p0
+
+    return-object p0
 .end method
 
 .method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
@@ -52,9 +54,9 @@
 
     new-instance v0, Lgbe;
 
-    iget-object p0, p0, Lgbe;->Y:Lkbe;
+    iget-object p0, p0, Lgbe;->Y:Lone/me/startconversation/StartConversationScreen;
 
-    invoke-direct {v0, p0, p2}, Lgbe;-><init>(Lkbe;Lkotlin/coroutines/Continuation;)V
+    invoke-direct {v0, p2, p0}, Lgbe;-><init>(Lkotlin/coroutines/Continuation;Lone/me/startconversation/StartConversationScreen;)V
 
     iput-object p1, v0, Lgbe;->X:Ljava/lang/Object;
 
@@ -62,144 +64,52 @@
 .end method
 
 .method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 5
+    .locals 2
 
-    invoke-static {p1}, Lsgg;->Z(Ljava/lang/Object;)V
+    invoke-static {p1}, Lqe5;->V(Ljava/lang/Object;)V
 
     iget-object p1, p0, Lgbe;->X:Ljava/lang/Object;
 
-    check-cast p1, Ljava/lang/String;
+    check-cast p1, Ljava/util/List;
 
-    iget-object p0, p0, Lgbe;->Y:Lkbe;
+    sget-object v0, Lone/me/startconversation/StartConversationScreen;->H0:[Lxi7;
 
-    iget-object v0, p0, Lkbe;->F0:Lazd;
+    iget-object p0, p0, Lgbe;->Y:Lone/me/startconversation/StartConversationScreen;
 
-    invoke-virtual {v0}, Lazd;->getValue()Ljava/lang/Object;
+    invoke-virtual {p0}, Lone/me/startconversation/StartConversationScreen;->y0()Ljava/lang/CharSequence;
 
     move-result-object v0
 
-    check-cast v0, Ljava/lang/Number;
+    if-eqz v0, :cond_1
 
-    invoke-virtual {v0}, Ljava/lang/Number;->intValue()I
+    invoke-interface {v0}, Ljava/lang/CharSequence;->length()I
 
     move-result v0
 
-    iget-object v1, p0, Lkbe;->G0:Lazd;
-
-    const/4 v2, 0x0
-
-    const/4 v3, 0x0
-
-    if-eqz p1, :cond_4
-
-    invoke-static {p1}, Lj8e;->J0(Ljava/lang/CharSequence;)Z
-
-    move-result v4
-
-    if-eqz v4, :cond_0
-
-    goto :goto_1
-
-    :cond_0
-    invoke-virtual {v1}, Lazd;->getValue()Ljava/lang/Object;
-
-    move-result-object v4
-
-    check-cast v4, Ldbe;
-
-    if-nez v4, :cond_1
+    if-nez v0, :cond_0
 
     goto :goto_0
 
+    :cond_0
+    const/4 v0, 0x0
+
+    goto :goto_1
+
     :cond_1
-    invoke-virtual {v4}, Ldbe;->l()Ljava/lang/CharSequence;
+    :goto_0
+    const/4 v0, 0x1
 
-    move-result-object v4
+    :goto_1
+    sget-object v1, Lylf;->a:Lylf;
 
-    invoke-static {p1, v4, v2}, Lj8e;->x0(Ljava/lang/CharSequence;Ljava/lang/CharSequence;Z)Z
+    if-nez v0, :cond_2
 
-    move-result v2
-
-    if-nez v2, :cond_3
+    return-object v1
 
     :cond_2
-    invoke-virtual {v1}, Lazd;->getValue()Ljava/lang/Object;
+    iget-object p0, p0, Lone/me/startconversation/StartConversationScreen;->x0:Lwqg;
 
-    move-result-object v2
+    invoke-virtual {p0, p1}, Lls7;->E(Ljava/util/List;)V
 
-    move-object v4, v2
-
-    check-cast v4, Ldbe;
-
-    invoke-virtual {v1, v2, v3}, Lazd;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_2
-
-    :cond_3
-    :goto_0
-    invoke-virtual {p1}, Ljava/lang/Object;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-virtual {p0, v0, p1}, Lkbe;->q(ILjava/lang/String;)V
-
-    goto :goto_2
-
-    :cond_4
-    :goto_1
-    iget-object p1, p0, Lkbe;->K0:Ltkg;
-
-    sget-object v0, Lkbe;->Q0:[Lbc7;
-
-    aget-object v0, v0, v2
-
-    invoke-virtual {p1, p0, v0}, Ltkg;->M(Ljava/lang/Object;Lbc7;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lv77;
-
-    if-eqz p1, :cond_5
-
-    invoke-interface {p1, v3}, Lv77;->cancel(Ljava/util/concurrent/CancellationException;)V
-
-    :cond_5
-    iget-object p0, p0, Lkbe;->A0:Lazd;
-
-    :cond_6
-    invoke-virtual {p0}, Lazd;->getValue()Ljava/lang/Object;
-
-    move-result-object p1
-
-    move-object v0, p1
-
-    check-cast v0, Lwae;
-
-    invoke-virtual {p0, p1, v3}, Lazd;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_6
-
-    :cond_7
-    invoke-virtual {v1}, Lazd;->getValue()Ljava/lang/Object;
-
-    move-result-object p0
-
-    move-object p1, p0
-
-    check-cast p1, Ldbe;
-
-    invoke-virtual {v1, p0, v3}, Lazd;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p0
-
-    if-eqz p0, :cond_7
-
-    :goto_2
-    sget-object p0, Le5f;->a:Le5f;
-
-    return-object p0
+    return-object v1
 .end method

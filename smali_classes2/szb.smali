@@ -1,60 +1,109 @@
-.class public abstract Lszb;
+.class public final Lszb;
 .super Ljava/lang/Object;
+.source "SourceFile"
 
 
 # static fields
-.field public static web_app_root_biometry_open_settings_dialog_accept:I = 0x7f130e06
+.field public static final synthetic e:[Lxi7;
 
-.field public static web_app_root_biometry_open_settings_dialog_title:I = 0x7f130e07
+.field public static final f:Ljava/lang/String;
 
-.field public static web_app_root_biometry_request_dialog_accept:I = 0x7f130e08
 
-.field public static web_app_root_biometry_request_dialog_decline:I = 0x7f130e09
+# instance fields
+.field public final a:Lxjd;
 
-.field public static web_app_root_biometry_request_dialog_default_reason:I = 0x7f130e0a
+.field public final b:Ljava/util/concurrent/atomic/AtomicLong;
 
-.field public static web_app_root_biometry_request_dialog_title:I = 0x7f130e0b
+.field public final c:Lgr4;
 
-.field public static web_app_root_biometry_setting:I = 0x7f130e0c
+.field public final d:Lgr4;
 
-.field public static web_app_root_biometry_setting_description:I = 0x7f130e0d
 
-.field public static web_app_root_close_dialog_accept:I = 0x7f130e0e
+# direct methods
+.method static constructor <clinit>()V
+    .locals 6
 
-.field public static web_app_root_close_dialog_decline:I = 0x7f130e0f
+    new-instance v0, Lsxb;
 
-.field public static web_app_root_close_dialog_subtitle:I = 0x7f130e10
+    const-class v1, Lszb;
 
-.field public static web_app_root_close_dialog_title:I = 0x7f130e11
+    const-string v2, "connectionController"
 
-.field public static web_app_root_dots_menu_refresh:I = 0x7f130e12
+    const-string v3, "getConnectionController()Lru/ok/tamtam/controllers/ConnectionController;"
 
-.field public static web_app_root_download_file_bottomsheet_accept:I = 0x7f130e13
+    const/4 v4, 0x0
 
-.field public static web_app_root_download_file_bottomsheet_decline:I = 0x7f130e14
+    invoke-direct {v0, v1, v2, v3, v4}, Lsxb;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)V
 
-.field public static web_app_root_download_file_bottomsheet_subtitle:I = 0x7f130e15
+    sget-object v2, Ljpc;->a:Lkpc;
 
-.field public static web_app_root_download_file_bottomsheet_title:I = 0x7f130e16
+    const-string v3, "device"
 
-.field public static web_app_root_error_retry_button:I = 0x7f130e17
+    const-string v5, "getDevice()Lru/ok/tamtam/Device;"
 
-.field public static web_app_root_error_subtitle:I = 0x7f130e18
+    invoke-static {v2, v1, v3, v5, v4}, Lee5;->h(Lkpc;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;I)Lsxb;
 
-.field public static web_app_root_error_title:I = 0x7f130e19
+    move-result-object v2
 
-.field public static web_app_root_phone_request_dialog_accept:I = 0x7f130e1a
+    const/4 v3, 0x2
 
-.field public static web_app_root_phone_request_dialog_decline:I = 0x7f130e1b
+    new-array v3, v3, [Lxi7;
 
-.field public static web_app_root_phone_request_dialog_subtitle:I = 0x7f130e1c
+    aput-object v0, v3, v4
 
-.field public static web_app_root_phone_request_dialog_title:I = 0x7f130e1d
+    const/4 v0, 0x1
 
-.field public static web_app_root_setting_open_webapp:I = 0x7f130e1e
+    aput-object v2, v3, v0
 
-.field public static web_app_root_settings_header_subtitle:I = 0x7f130e1f
+    sput-object v3, Lszb;->e:[Lxi7;
 
-.field public static web_app_root_settings_header_title:I = 0x7f130e20
+    invoke-virtual {v1}, Ljava/lang/Class;->getName()Ljava/lang/String;
 
-.field public static web_app_root_settings_webapps:I = 0x7f130e21
+    move-result-object v0
+
+    sput-object v0, Lszb;->f:Ljava/lang/String;
+
+    return-void
+.end method
+
+.method public constructor <init>(Lxjd;Lgr4;Lgr4;)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lszb;->a:Lxjd;
+
+    new-instance p1, Ljava/util/concurrent/atomic/AtomicLong;
+
+    invoke-direct {p1}, Ljava/util/concurrent/atomic/AtomicLong;-><init>()V
+
+    iput-object p1, p0, Lszb;->b:Ljava/util/concurrent/atomic/AtomicLong;
+
+    iput-object p2, p0, Lszb;->c:Lgr4;
+
+    iput-object p3, p0, Lszb;->d:Lgr4;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final a()Ljn4;
+    .locals 2
+
+    sget-object v0, Lszb;->e:[Lxi7;
+
+    const/4 v1, 0x1
+
+    aget-object v0, v0, v1
+
+    iget-object p0, p0, Lszb;->d:Lgr4;
+
+    invoke-virtual {p0}, Lgr4;->get()Ljava/lang/Object;
+
+    move-result-object p0
+
+    check-cast p0, Ljn4;
+
+    return-object p0
+.end method

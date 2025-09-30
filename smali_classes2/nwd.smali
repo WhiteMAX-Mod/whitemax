@@ -1,183 +1,201 @@
 .class public final Lnwd;
-.super Ljava/lang/Object;
+.super Lure;
 .source "SourceFile"
+
+# interfaces
+.implements Lpc6;
 
 
 # instance fields
-.field public final a:Lje7;
+.field public synthetic X:Ljava/lang/Object;
 
-.field public final b:Lje7;
+.field public final synthetic Y:Lone/me/sharedata/ShareDataPickerScreen;
+
+.field public final synthetic Z:Landroid/view/View;
 
 
 # direct methods
-.method public constructor <init>(Lje7;Lje7;)V
+.method public constructor <init>(Lone/me/sharedata/ShareDataPickerScreen;Landroid/view/View;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lnwd;->Y:Lone/me/sharedata/ShareDataPickerScreen;
 
-    iput-object p1, p0, Lnwd;->a:Lje7;
+    iput-object p2, p0, Lnwd;->Z:Landroid/view/View;
 
-    iput-object p2, p0, Lnwd;->b:Lje7;
+    const/4 p1, 0x2
+
+    invoke-direct {p0, p1, p3}, Lure;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(JLjava/lang/String;Lbu3;)Ljava/lang/Object;
-    .locals 4
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    instance-of v0, p4, Lmwd;
+    check-cast p1, Ljava/util/Set;
 
-    if-eqz v0, :cond_0
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    move-object v0, p4
+    invoke-virtual {p0, p1, p2}, Lnwd;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    check-cast v0, Lmwd;
+    move-result-object p0
 
-    iget v1, v0, Lmwd;->o0:I
+    check-cast p0, Lnwd;
 
-    const/high16 v2, -0x80000000
+    sget-object p1, Lylf;->a:Lylf;
 
-    and-int v3, v1, v2
+    invoke-virtual {p0, p1}, Lnwd;->o(Ljava/lang/Object;)Ljava/lang/Object;
 
-    if-eqz v3, :cond_0
+    return-object p1
+.end method
 
-    sub-int/2addr v1, v2
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
 
-    iput v1, v0, Lmwd;->o0:I
+    new-instance v0, Lnwd;
+
+    iget-object v1, p0, Lnwd;->Y:Lone/me/sharedata/ShareDataPickerScreen;
+
+    iget-object p0, p0, Lnwd;->Z:Landroid/view/View;
+
+    invoke-direct {v0, v1, p0, p2}, Lnwd;-><init>(Lone/me/sharedata/ShareDataPickerScreen;Landroid/view/View;Lkotlin/coroutines/Continuation;)V
+
+    iput-object p1, v0, Lnwd;->X:Ljava/lang/Object;
+
+    return-object v0
+.end method
+
+.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 5
+
+    invoke-static {p1}, Lqe5;->V(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Lnwd;->X:Ljava/lang/Object;
+
+    check-cast p1, Ljava/util/Set;
+
+    invoke-interface {p1}, Ljava/util/Set;->size()I
+
+    move-result p1
+
+    iget-object v0, p0, Lnwd;->Y:Lone/me/sharedata/ShareDataPickerScreen;
+
+    iget-object v1, v0, Lone/me/sharedata/ShareDataPickerScreen;->w0:Landroid/transition/AutoTransition;
+
+    sget-object v2, Lone/me/sharedata/ShareDataPickerScreen;->D0:[Lxi7;
+
+    invoke-virtual {v0}, Lone/me/sharedata/ShareDataPickerScreen;->J0()Lk19;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Landroid/view/View;->getVisibility()I
+
+    move-result v2
+
+    const/4 v3, 0x0
+
+    const/4 v4, 0x1
+
+    if-nez v2, :cond_0
+
+    move v2, v4
 
     goto :goto_0
 
     :cond_0
-    new-instance v0, Lmwd;
-
-    invoke-direct {v0, p0, p4}, Lmwd;-><init>(Lnwd;Lbu3;)V
+    move v2, v3
 
     :goto_0
-    iget-object p4, v0, Lmwd;->Y:Ljava/lang/Object;
+    iget-object p0, p0, Lnwd;->Z:Landroid/view/View;
 
-    iget v1, v0, Lmwd;->o0:I
+    if-nez v2, :cond_1
 
-    const/4 v2, 0x1
+    if-lez p1, :cond_1
 
-    if-eqz v1, :cond_2
+    check-cast p0, Landroid/view/ViewGroup;
 
-    if-ne v1, v2, :cond_1
+    invoke-static {p0, v1}, Landroid/transition/TransitionManager;->beginDelayedTransition(Landroid/view/ViewGroup;Landroid/transition/Transition;)V
 
-    iget-object p3, v0, Lmwd;->X:Ljava/lang/String;
+    invoke-virtual {v0}, Lone/me/sharedata/ShareDataPickerScreen;->J0()Lk19;
 
-    iget-object p0, v0, Lmwd;->o:Lnwd;
+    move-result-object p0
 
-    invoke-static {p4}, Lsgg;->Z(Ljava/lang/Object;)V
+    invoke-virtual {p0, v3}, Landroid/view/View;->setVisibility(I)V
 
     goto :goto_1
 
     :cond_1
-    new-instance p0, Ljava/lang/IllegalStateException;
+    if-eqz v2, :cond_4
 
-    const-string p1, "call to \'resume\' before \'invoke\' with coroutine"
+    if-nez p1, :cond_4
 
-    invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    check-cast p0, Landroid/view/ViewGroup;
 
-    throw p0
+    invoke-static {p0, v1}, Landroid/transition/TransitionManager;->beginDelayedTransition(Landroid/view/ViewGroup;Landroid/transition/Transition;)V
 
-    :cond_2
-    invoke-static {p4}, Lsgg;->Z(Ljava/lang/Object;)V
+    iget-object p0, v0, Lone/me/sharedata/ShareDataPickerScreen;->x0:Lrm0;
 
-    iget-object p4, p0, Lnwd;->b:Lje7;
-
-    invoke-interface {p4}, Lje7;->getValue()Ljava/lang/Object;
-
-    move-result-object p4
-
-    check-cast p4, Lbx2;
-
-    iput-object p0, v0, Lmwd;->o:Lnwd;
-
-    iput-object p3, v0, Lmwd;->X:Ljava/lang/String;
-
-    iput v2, v0, Lmwd;->o0:I
-
-    invoke-interface {p4, p1, p2, v0}, Lbx2;->m(JLbu3;)Ljava/lang/Object;
-
-    move-result-object p4
-
-    sget-object p1, Lpx3;->a:Lpx3;
-
-    if-ne p4, p1, :cond_3
-
-    return-object p1
-
-    :cond_3
-    :goto_1
-    check-cast p4, Ly42;
-
-    invoke-virtual {p4}, Ly42;->l()Lnj3;
-
-    move-result-object p1
-
-    sget-object p2, Le5f;->a:Le5f;
-
-    if-eqz p1, :cond_4
-
-    invoke-virtual {p1}, Lnj3;->v()Z
+    invoke-virtual {p0}, Lrm0;->a()Z
 
     move-result p1
 
-    if-nez p1, :cond_5
+    if-eqz p1, :cond_2
 
-    :cond_4
-    invoke-virtual {p4}, Ly42;->e0()Z
-
-    move-result p1
-
-    if-eqz p1, :cond_6
-
-    :cond_5
-    return-object p2
-
-    :cond_6
-    sget p1, Ld10;->p:I
-
-    new-instance p1, Lb10;
-
-    invoke-direct {p1}, Ljava/lang/Object;-><init>()V
-
-    sget-object v0, Lc10;->r0:Lc10;
-
-    iput-object v0, p1, Lb10;->a:Lc10;
-
-    if-eqz p3, :cond_7
-
-    iput-object p3, p1, Lb10;->o:Ljava/lang/String;
-
-    :cond_7
-    invoke-virtual {p1}, Lb10;->a()Ld10;
-
-    move-result-object p1
-
-    iget-wide p3, p4, Ly42;->a:J
-
-    new-instance v0, Lm6d;
-
-    invoke-direct {v0, p3, p4, p1, v2}, Lm6d;-><init>(JLjava/lang/Object;I)V
-
-    new-instance p1, Ln6d;
-
-    const/4 p3, 0x0
-
-    invoke-direct {p1, v0, p3}, Ln6d;-><init>(Lm6d;B)V
-
-    iget-object p0, p0, Lnwd;->a:Lje7;
-
-    invoke-interface {p0}, Lje7;->getValue()Ljava/lang/Object;
+    invoke-virtual {p0}, Lrm0;->getValue()Ljava/lang/Object;
 
     move-result-object p0
 
-    check-cast p0, Lw9g;
+    check-cast p0, Lk19;
 
-    invoke-virtual {p0, p1}, Lw9g;->a(Li6d;)V
+    const/16 p1, 0x8
 
-    return-object p2
+    invoke-virtual {p0, p1}, Landroid/view/View;->setVisibility(I)V
+
+    :cond_2
+    iget-object p0, v0, Lone/me/sharedata/ShareDataPickerScreen;->A0:Lrzc;
+
+    if-eqz p0, :cond_3
+
+    invoke-virtual {p0}, Lrzc;->n()Z
+
+    move-result p0
+
+    if-ne p0, v4, :cond_3
+
+    invoke-virtual {v0}, Lone/me/chats/picker/AbstractPickerScreen;->H0()Ls6b;
+
+    move-result-object p0
+
+    iget-object p0, p0, Ls6b;->c:Lr8b;
+
+    check-cast p0, Ldwd;
+
+    iget-object p0, p0, Ldwd;->l:Lmgb;
+
+    invoke-virtual {p0, v4}, Lmgb;->H(I)V
+
+    goto :goto_1
+
+    :cond_3
+    sget p0, Lsj7;->a:I
+
+    sget p0, Lsj7;->c:I
+
+    invoke-static {p0}, Lsj7;->b(I)Z
+
+    move-result p0
+
+    if-eqz p0, :cond_4
+
+    iget-object p0, v0, Lone/me/sharedata/ShareDataPickerScreen;->B0:Ld66;
+
+    invoke-virtual {p0}, Ld66;->l()V
+
+    :cond_4
+    :goto_1
+    sget-object p0, Lylf;->a:Lylf;
+
+    return-object p0
 .end method

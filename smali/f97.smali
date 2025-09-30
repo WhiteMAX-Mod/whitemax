@@ -3,122 +3,140 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lo64;
+.implements Landroid/view/View$OnTouchListener;
 
 
-# static fields
-.field public static final a:Lf97;
+# instance fields
+.field public final a:Landroid/app/Dialog;
 
-.field public static final b:Lg97;
+.field public final b:I
+
+.field public final c:I
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public constructor <init>(Landroid/app/Dialog;Landroid/graphics/Rect;)V
     .locals 1
 
-    new-instance v0, Lf97;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lf97;->a:Landroid/app/Dialog;
 
-    sput-object v0, Lf97;->a:Lf97;
+    iget v0, p2, Landroid/graphics/Rect;->left:I
 
-    sget-object v0, Lg97;->b:Lg97;
+    iput v0, p0, Lf97;->b:I
 
-    sput-object v0, Lf97;->b:Lg97;
+    iget p2, p2, Landroid/graphics/Rect;->top:I
+
+    iput p2, p0, Lf97;->c:I
+
+    invoke-virtual {p1}, Landroid/app/Dialog;->getContext()Landroid/content/Context;
+
+    move-result-object p0
+
+    invoke-static {p0}, Landroid/view/ViewConfiguration;->get(Landroid/content/Context;)Landroid/view/ViewConfiguration;
+
+    move-result-object p0
+
+    invoke-virtual {p0}, Landroid/view/ViewConfiguration;->getScaledWindowTouchSlop()I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Lv64;
-    .locals 0
+.method public final onTouch(Landroid/view/View;Landroid/view/MotionEvent;)Z
+    .locals 5
 
-    sget-object p0, Lf97;->b:Lg97;
+    const v0, 0x1020002
 
-    return-object p0
-.end method
+    invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
-.method public final b(Ljava/lang/String;Lr64;Landroid/os/Bundle;)Ly64;
-    .locals 8
+    move-result-object v0
 
-    sget-object p0, Lf97;->b:Lg97;
+    iget v1, p0, Lf97;->b:I
 
-    iget-object p0, p0, Lv64;->a:Ljava/util/LinkedHashSet;
+    invoke-virtual {v0}, Landroid/view/View;->getLeft()I
 
-    invoke-interface {p0, p2}, Ljava/util/Collection;->contains(Ljava/lang/Object;)Z
+    move-result v2
 
-    move-result p0
+    add-int/2addr v2, v1
 
-    if-nez p0, :cond_0
+    invoke-virtual {v0}, Landroid/view/View;->getWidth()I
+
+    move-result v1
+
+    add-int/2addr v1, v2
+
+    iget v3, p0, Lf97;->c:I
+
+    invoke-virtual {v0}, Landroid/view/View;->getTop()I
+
+    move-result v4
+
+    add-int/2addr v4, v3
+
+    invoke-virtual {v0}, Landroid/view/View;->getHeight()I
+
+    move-result v0
+
+    add-int/2addr v0, v4
+
+    new-instance v3, Landroid/graphics/RectF;
+
+    int-to-float v2, v2
+
+    int-to-float v4, v4
+
+    int-to-float v1, v1
+
+    int-to-float v0, v0
+
+    invoke-direct {v3, v2, v4, v1, v0}, Landroid/graphics/RectF;-><init>(FFFF)V
+
+    invoke-virtual {p2}, Landroid/view/MotionEvent;->getX()F
+
+    move-result v0
+
+    invoke-virtual {p2}, Landroid/view/MotionEvent;->getY()F
+
+    move-result v1
+
+    invoke-virtual {v3, v0, v1}, Landroid/graphics/RectF;->contains(FF)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
 
     const/4 p0, 0x0
 
-    return-object p0
+    return p0
 
     :cond_0
-    new-instance v5, Lw64;
+    invoke-static {p2}, Landroid/view/MotionEvent;->obtain(Landroid/view/MotionEvent;)Landroid/view/MotionEvent;
 
-    new-instance p0, Lr17;
+    move-result-object v0
 
-    const/16 v0, 0xc
+    invoke-virtual {p2}, Landroid/view/MotionEvent;->getAction()I
 
-    invoke-direct {p0, v0}, Lr17;-><init>(I)V
+    move-result p2
 
-    new-instance v0, Lr17;
+    const/4 v1, 0x1
 
-    const/16 v1, 0xd
+    if-ne p2, v1, :cond_1
 
-    invoke-direct {v0, v1}, Lr17;-><init>(I)V
+    const/4 p2, 0x4
 
-    invoke-direct {v5, p0, v0}, Lw64;-><init>(Lv56;Lv56;)V
+    invoke-virtual {v0, p2}, Landroid/view/MotionEvent;->setAction(I)V
 
-    sget-object p0, Lg97;->b:Lg97;
+    :cond_1
+    invoke-virtual {p1}, Landroid/view/View;->performClick()Z
 
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    iget-object p0, p0, Lf97;->a:Landroid/app/Dialog;
 
-    sget-object p0, Lg97;->c:Lr64;
-
-    invoke-virtual {p2, p0}, Lr64;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {p0, v0}, Landroid/app/Dialog;->onTouchEvent(Landroid/view/MotionEvent;)Z
 
     move-result p0
 
-    if-eqz p0, :cond_1
-
-    new-instance v6, Ll92;
-
-    const/4 p0, 0x6
-
-    invoke-direct {v6, p3, p0}, Ll92;-><init>(Landroid/os/Bundle;I)V
-
-    new-instance v0, Ly64;
-
-    const/16 v7, 0x8
-
-    const/4 v4, 0x0
-
-    move-object v1, p1
-
-    move-object v2, p2
-
-    move-object v3, p3
-
-    invoke-direct/range {v0 .. v7}, Ly64;-><init>(Ljava/lang/String;Lr64;Landroid/os/Bundle;ILw64;Lx64;I)V
-
-    return-object v0
-
-    :cond_1
-    move-object v2, p2
-
-    new-instance p0, Ljava/lang/IllegalStateException;
-
-    const-string p1, "unknown screen "
-
-    invoke-static {p1, v2}, Lzt1;->f(Ljava/lang/String;Lr64;)Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p0
+    return p0
 .end method

@@ -1,119 +1,125 @@
 .class public final Lb59;
-.super Lqde;
+.super Lure;
 .source "SourceFile"
 
 # interfaces
-.implements Ll66;
+.implements Ltc6;
 
 
 # instance fields
-.field public synthetic X:Ljava/lang/Object;
+.field public X:I
 
-.field public final synthetic Y:Lone/me/messages/list/ui/MessagesListWidget;
+.field public synthetic Y:Ln49;
+
+.field public synthetic Z:Lq49;
+
+.field public synthetic r0:Z
+
+.field public final synthetic s0:Ln59;
 
 
 # direct methods
-.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/messages/list/ui/MessagesListWidget;)V
+.method public constructor <init>(Ln59;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    iput-object p2, p0, Lb59;->Y:Lone/me/messages/list/ui/MessagesListWidget;
+    iput-object p1, p0, Lb59;->s0:Ln59;
 
-    const/4 p2, 0x2
+    const/4 p1, 0x4
 
-    invoke-direct {p0, p2, p1}, Lqde;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0, p1, p2}, Lure;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
-
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Lb59;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p0
-
-    check-cast p0, Lb59;
-
-    sget-object p1, Le5f;->a:Le5f;
-
-    invoke-virtual {p0, p1}, Lb59;->o(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p1
-.end method
-
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+.method public final i(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
+
+    check-cast p1, Ln49;
+
+    check-cast p2, Lq49;
+
+    check-cast p3, Ljava/lang/Boolean;
+
+    invoke-virtual {p3}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result p3
+
+    check-cast p4, Lkotlin/coroutines/Continuation;
 
     new-instance v0, Lb59;
 
-    iget-object p0, p0, Lb59;->Y:Lone/me/messages/list/ui/MessagesListWidget;
+    iget-object p0, p0, Lb59;->s0:Ln59;
 
-    invoke-direct {v0, p2, p0}, Lb59;-><init>(Lkotlin/coroutines/Continuation;Lone/me/messages/list/ui/MessagesListWidget;)V
+    invoke-direct {v0, p0, p4}, Lb59;-><init>(Ln59;Lkotlin/coroutines/Continuation;)V
 
-    iput-object p1, v0, Lb59;->X:Ljava/lang/Object;
+    iput-object p1, v0, Lb59;->Y:Ln49;
 
-    return-object v0
+    iput-object p2, v0, Lb59;->Z:Lq49;
+
+    iput-boolean p3, v0, Lb59;->r0:Z
+
+    sget-object p0, Lylf;->a:Lylf;
+
+    invoke-virtual {v0, p0}, Lb59;->o(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p0
+
+    return-object p0
 .end method
 
 .method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 3
+    .locals 4
 
-    invoke-static {p1}, Lsgg;->Z(Ljava/lang/Object;)V
+    iget v0, p0, Lb59;->X:I
 
-    iget-object p1, p0, Lb59;->X:Ljava/lang/Object;
-
-    check-cast p1, Lk4c;
-
-    sget-object v0, Lone/me/messages/list/ui/MessagesListWidget;->V0:[Lbc7;
-
-    iget-object p0, p0, Lb59;->Y:Lone/me/messages/list/ui/MessagesListWidget;
-
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    if-eqz p1, :cond_2
-
-    iget-boolean v0, p1, Lk4c;->e:Z
-
-    if-eqz v0, :cond_0
-
-    invoke-virtual {p0}, Lone/me/messages/list/ui/MessagesListWidget;->w0()Le79;
-
-    move-result-object v0
-
-    iget-wide v1, p1, Lk4c;->c:J
-
-    invoke-virtual {v0, v1, v2}, Le79;->a(J)Z
-
-    move-result v0
+    const/4 v1, 0x1
 
     if-eqz v0, :cond_1
 
+    if-ne v0, v1, :cond_0
+
+    invoke-static {p1}, Lqe5;->V(Ljava/lang/Object;)V
+
+    return-object p1
+
     :cond_0
-    iget-object p0, p0, Lone/me/messages/list/ui/MessagesListWidget;->U0:Ls4c;
+    new-instance p0, Ljava/lang/IllegalStateException;
 
-    if-eqz p0, :cond_1
+    const-string p1, "call to \'resume\' before \'invoke\' with coroutine"
 
-    iget-wide v0, p1, Lk4c;->b:J
-
-    iget-object v2, p1, Lk4c;->d:Ljava/lang/String;
-
-    iget-object p1, p1, Lk4c;->a:Ln3c;
-
-    invoke-virtual {p0, v0, v1, p1, v2}, Ls4c;->d(JLn3c;Ljava/lang/String;)V
-
-    :cond_1
-    sget-object p0, Le5f;->a:Le5f;
-
-    return-object p0
-
-    :cond_2
-    new-instance p0, Lkotlin/NoWhenBranchMatchedException;
-
-    invoke-direct {p0}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
+    invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
     throw p0
+
+    :cond_1
+    invoke-static {p1}, Lqe5;->V(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Lb59;->Y:Ln49;
+
+    iget-object v0, p0, Lb59;->Z:Lq49;
+
+    iget-boolean v2, p0, Lb59;->r0:Z
+
+    const/4 v3, 0x0
+
+    iput-object v3, p0, Lb59;->Y:Ln49;
+
+    iput v1, p0, Lb59;->X:I
+
+    iget-object v1, p0, Lb59;->s0:Ln59;
+
+    invoke-static {v1, p1, v0, v2, p0}, Ln59;->q(Ln59;Ln49;Lq49;ZLjx3;)Ljava/lang/Object;
+
+    move-result-object p0
+
+    sget-object p1, Lz04;->a:Lz04;
+
+    if-ne p0, p1, :cond_2
+
+    return-object p1
+
+    :cond_2
+    return-object p0
 .end method

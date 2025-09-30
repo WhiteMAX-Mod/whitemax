@@ -1,270 +1,55 @@
-.class public Lq8;
+.class public final Lq8;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ly66;
-.implements Ljava/io/Serializable;
-
 
 # instance fields
-.field public final X:Z
+.field public final a:I
 
-.field public final Y:I
+.field public final b:I
 
-.field public final Z:I
+.field public final c:Ljava/util/List;
 
-.field public final a:Ljava/lang/Object;
+.field public final d:Ljava/util/List;
 
-.field public final b:Ljava/lang/Class;
+.field public final e:Ljava/util/List;
 
-.field public final c:Ljava/lang/String;
-
-.field public final o:Ljava/lang/String;
+.field public final f:Ljava/util/List;
 
 
 # direct methods
-.method public constructor <init>(IILjava/lang/Class;Ljava/lang/Object;Ljava/lang/String;Ljava/lang/String;)V
+.method public constructor <init>(IILjava/util/ArrayList;Ljava/util/List;Ljava/util/List;Ljava/util/List;)V
     .locals 0
 
-    .line 2
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 3
-    iput-object p4, p0, Lq8;->a:Ljava/lang/Object;
+    iput p1, p0, Lq8;->a:I
 
-    .line 4
-    iput-object p3, p0, Lq8;->b:Ljava/lang/Class;
+    iput p2, p0, Lq8;->b:I
 
-    .line 5
-    iput-object p5, p0, Lq8;->c:Ljava/lang/String;
+    invoke-static {p3}, Ljava/util/Collections;->unmodifiableList(Ljava/util/List;)Ljava/util/List;
 
-    .line 6
-    iput-object p6, p0, Lq8;->o:Ljava/lang/String;
+    move-result-object p1
 
-    const/4 p3, 0x0
+    iput-object p1, p0, Lq8;->c:Ljava/util/List;
 
-    .line 7
-    iput-boolean p3, p0, Lq8;->X:Z
+    invoke-static {p4}, Ljava/util/Collections;->unmodifiableList(Ljava/util/List;)Ljava/util/List;
 
-    .line 8
-    iput p1, p0, Lq8;->Y:I
+    move-result-object p1
 
-    shr-int/lit8 p1, p2, 0x1
+    iput-object p1, p0, Lq8;->d:Ljava/util/List;
 
-    .line 9
-    iput p1, p0, Lq8;->Z:I
+    invoke-static {p5}, Ljava/util/Collections;->unmodifiableList(Ljava/util/List;)Ljava/util/List;
 
-    return-void
-.end method
+    move-result-object p1
 
-.method public constructor <init>(ILjava/lang/Class;Ljava/lang/String;I)V
-    .locals 7
+    iput-object p1, p0, Lq8;->e:Ljava/util/List;
 
-    const-string v5, "<init>"
+    invoke-static {p6}, Ljava/util/Collections;->unmodifiableList(Ljava/util/List;)Ljava/util/List;
 
-    .line 1
-    sget-object v4, Lcq1;->NO_RECEIVER:Ljava/lang/Object;
+    move-result-object p1
 
-    move-object v0, p0
-
-    move v1, p1
-
-    move-object v3, p2
-
-    move-object v6, p3
-
-    move v2, p4
-
-    invoke-direct/range {v0 .. v6}, Lq8;-><init>(IILjava/lang/Class;Ljava/lang/Object;Ljava/lang/String;Ljava/lang/String;)V
+    iput-object p1, p0, Lq8;->f:Ljava/util/List;
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 2
-
-    if-ne p0, p1, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    instance-of v0, p1, Lq8;
-
-    if-nez v0, :cond_1
-
-    goto :goto_1
-
-    :cond_1
-    check-cast p1, Lq8;
-
-    iget-boolean v0, p0, Lq8;->X:Z
-
-    iget-boolean v1, p1, Lq8;->X:Z
-
-    if-ne v0, v1, :cond_2
-
-    iget v0, p0, Lq8;->Y:I
-
-    iget v1, p1, Lq8;->Y:I
-
-    if-ne v0, v1, :cond_2
-
-    iget v0, p0, Lq8;->Z:I
-
-    iget v1, p1, Lq8;->Z:I
-
-    if-ne v0, v1, :cond_2
-
-    iget-object v0, p0, Lq8;->a:Ljava/lang/Object;
-
-    iget-object v1, p1, Lq8;->a:Ljava/lang/Object;
-
-    invoke-static {v0, v1}, Lxq7;->d(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_2
-
-    iget-object v0, p0, Lq8;->b:Ljava/lang/Class;
-
-    iget-object v1, p1, Lq8;->b:Ljava/lang/Class;
-
-    invoke-static {v0, v1}, Lxq7;->d(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_2
-
-    iget-object v0, p0, Lq8;->c:Ljava/lang/String;
-
-    iget-object v1, p1, Lq8;->c:Ljava/lang/String;
-
-    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_2
-
-    iget-object p0, p0, Lq8;->o:Ljava/lang/String;
-
-    iget-object p1, p1, Lq8;->o:Ljava/lang/String;
-
-    invoke-virtual {p0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result p0
-
-    if-eqz p0, :cond_2
-
-    :goto_0
-    const/4 p0, 0x1
-
-    return p0
-
-    :cond_2
-    :goto_1
-    const/4 p0, 0x0
-
-    return p0
-.end method
-
-.method public final getArity()I
-    .locals 0
-
-    iget p0, p0, Lq8;->Y:I
-
-    return p0
-.end method
-
-.method public final hashCode()I
-    .locals 4
-
-    const/4 v0, 0x0
-
-    iget-object v1, p0, Lq8;->a:Ljava/lang/Object;
-
-    if-eqz v1, :cond_0
-
-    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
-
-    move-result v1
-
-    goto :goto_0
-
-    :cond_0
-    move v1, v0
-
-    :goto_0
-    const/16 v2, 0x1f
-
-    mul-int/2addr v1, v2
-
-    iget-object v3, p0, Lq8;->b:Ljava/lang/Class;
-
-    if-eqz v3, :cond_1
-
-    invoke-virtual {v3}, Ljava/lang/Object;->hashCode()I
-
-    move-result v0
-
-    :cond_1
-    add-int/2addr v1, v0
-
-    mul-int/2addr v1, v2
-
-    iget-object v0, p0, Lq8;->c:Ljava/lang/String;
-
-    invoke-static {v1, v2, v0}, Lv04;->d(IILjava/lang/String;)I
-
-    move-result v0
-
-    iget-object v1, p0, Lq8;->o:Ljava/lang/String;
-
-    invoke-static {v0, v2, v1}, Lv04;->d(IILjava/lang/String;)I
-
-    move-result v0
-
-    iget-boolean v1, p0, Lq8;->X:Z
-
-    if-eqz v1, :cond_2
-
-    const/16 v1, 0x4cf
-
-    goto :goto_1
-
-    :cond_2
-    const/16 v1, 0x4d5
-
-    :goto_1
-    add-int/2addr v0, v1
-
-    mul-int/2addr v0, v2
-
-    iget v1, p0, Lq8;->Y:I
-
-    add-int/2addr v0, v1
-
-    mul-int/2addr v0, v2
-
-    iget p0, p0, Lq8;->Z:I
-
-    add-int/2addr v0, p0
-
-    return v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 1
-
-    sget-object v0, Llcc;->a:Lmcc;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    invoke-static {p0}, Lmcc;->a(Ly66;)Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
 .end method

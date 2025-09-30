@@ -1,104 +1,61 @@
-.class public final synthetic Lwe6;
-.super Ljava/lang/Object;
+.class public final Lwe6;
+.super Lxe6;
 .source "SourceFile"
 
-# interfaces
-.implements Lf1a;
-.implements Lh1a;
 
-
-# instance fields
-.field public final synthetic a:Lef6;
+# static fields
+.field public static final a:Lwe6;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lef6;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    iput-object p1, p0, Lwe6;->a:Lef6;
+    new-instance v0, Lwe6;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    sput-object v0, Lwe6;->a:Lwe6;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public l(Lcom/google/android/gms/tasks/Task;)V
-    .locals 10
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 1
 
-    iget-object p0, p0, Lwe6;->a:Lef6;
+    const/4 v0, 0x1
 
-    iget-object p0, p0, Lef6;->b:Ljava/lang/Object;
+    if-ne p0, p1, :cond_0
 
-    check-cast p0, Lhr7;
-
-    invoke-virtual {p1}, Lcom/google/android/gms/tasks/Task;->h()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    invoke-virtual {p1}, Lcom/google/android/gms/tasks/Task;->f()Ljava/lang/Object;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_0
-
-    invoke-virtual {p1}, Lcom/google/android/gms/tasks/Task;->f()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Landroid/location/Location;
-
-    new-instance v0, Lar7;
-
-    invoke-virtual {p1}, Landroid/location/Location;->getLatitude()D
-
-    move-result-wide v1
-
-    invoke-virtual {p1}, Landroid/location/Location;->getLongitude()D
-
-    move-result-wide v3
-
-    invoke-virtual {p1}, Landroid/location/Location;->getAltitude()D
-
-    move-result-wide v5
-
-    invoke-virtual {p1}, Landroid/location/Location;->getAccuracy()F
-
-    move-result v7
-
-    invoke-virtual {p1}, Landroid/location/Location;->getBearing()F
-
-    move-result v8
-
-    invoke-virtual {p1}, Landroid/location/Location;->getSpeed()F
-
-    move-result v9
-
-    invoke-direct/range {v0 .. v9}, Lar7;-><init>(DDDFFF)V
-
-    invoke-interface {p0, v0}, Lhr7;->h0(Lar7;)V
-
-    return-void
+    return v0
 
     :cond_0
-    invoke-interface {p0}, Lhr7;->N()V
+    instance-of p0, p1, Lwe6;
 
-    return-void
+    if-nez p0, :cond_1
+
+    const/4 p0, 0x0
+
+    return p0
+
+    :cond_1
+    return v0
 .end method
 
-.method public onFailure(Ljava/lang/Exception;)V
+.method public final hashCode()I
     .locals 0
 
-    iget-object p0, p0, Lwe6;->a:Lef6;
+    const p0, 0x36203517
 
-    iget-object p0, p0, Lef6;->b:Ljava/lang/Object;
+    return p0
+.end method
 
-    check-cast p0, Lhr7;
+.method public final toString()Ljava/lang/String;
+    .locals 0
 
-    invoke-interface {p0}, Lhr7;->N()V
+    const-string p0, "CameraPermission"
 
-    return-void
+    return-object p0
 .end method

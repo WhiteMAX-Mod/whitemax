@@ -1,106 +1,138 @@
-.class public final Lah6;
-.super Ljava/lang/Object;
+.class public Lah6;
+.super Lkj0;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:Landroidx/viewpager2/widget/ViewPager2;
-
-.field public final b:Leh6;
-
-.field public c:Z
-
-.field public d:Lgbc;
-
-.field public e:Lzg6;
-
-.field public f:Liz4;
+.field public final t0:[I
 
 
 # direct methods
-.method public constructor <init>(Landroidx/viewpager2/widget/ViewPager2;Leh6;)V
-    .locals 0
+.method public constructor <init>(Llw8;Lteb;Lbx9;)V
+    .locals 2
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p1, p2, p3}, Lkj0;-><init>(Llw8;Lteb;Lueb;)V
 
-    iput-object p1, p0, Lah6;->a:Landroidx/viewpager2/widget/ViewPager2;
+    iget-object p1, p2, Lteb;->c:Landroid/util/SparseIntArray;
 
-    iput-object p2, p0, Lah6;->b:Leh6;
+    const/4 p2, 0x0
+
+    if-eqz p1, :cond_0
+
+    invoke-virtual {p1}, Landroid/util/SparseIntArray;->size()I
+
+    move-result p3
+
+    new-array p3, p3, [I
+
+    iput-object p3, p0, Lah6;->t0:[I
+
+    invoke-virtual {p1}, Landroid/util/SparseIntArray;->size()I
+
+    move-result p3
+
+    :goto_0
+    if-ge p2, p3, :cond_1
+
+    iget-object v0, p0, Lah6;->t0:[I
+
+    invoke-virtual {p1, p2}, Landroid/util/SparseIntArray;->keyAt(I)I
+
+    move-result v1
+
+    aput v1, v0, p2
+
+    add-int/lit8 p2, p2, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    new-array p1, p2, [I
+
+    iput-object p1, p0, Lah6;->t0:[I
+
+    :cond_1
+    iget-object p1, p0, Lkj0;->b:Llw8;
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    iget-object p0, p0, Lkj0;->s0:Lueb;
+
+    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()V
-    .locals 4
+.method public final a(I)Ljava/lang/Object;
+    .locals 0
 
-    iget-object v0, p0, Lah6;->d:Lgbc;
+    new-array p0, p1, [B
 
-    if-nez v0, :cond_0
+    return-object p0
+.end method
+
+.method public final bridge synthetic c(Ljava/lang/Object;)V
+    .locals 0
+
+    check-cast p1, [B
 
     return-void
+.end method
 
-    :cond_0
-    :try_start_0
-    invoke-virtual {v0}, Lgbc;->j()I
+.method public final f(I)I
+    .locals 3
 
-    move-result v0
+    if-lez p1, :cond_2
 
-    if-nez v0, :cond_1
+    iget-object p0, p0, Lah6;->t0:[I
+
+    array-length v0, p0
 
     const/4 v1, 0x0
+
+    :goto_0
+    if-ge v1, v0, :cond_1
+
+    aget v2, p0, v1
+
+    if-lt v2, p1, :cond_0
+
+    return v2
+
+    :cond_0
+    add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
     :cond_1
-    iget-object v1, p0, Lah6;->a:Landroidx/viewpager2/widget/ViewPager2;
+    return p1
 
-    invoke-virtual {v1}, Landroidx/viewpager2/widget/ViewPager2;->getCurrentItem()I
+    :cond_2
+    new-instance p0, Lcom/facebook/imagepipeline/memory/BasePool$InvalidSizeException;
 
-    move-result v1
+    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    add-int/lit8 v2, v0, -0x1
+    move-result-object p1
 
-    invoke-static {v1, v2}, Ljava/lang/Math;->min(II)I
+    invoke-direct {p0, p1}, Lcom/facebook/imagepipeline/memory/BasePool$InvalidSizeException;-><init>(Ljava/lang/Integer;)V
 
-    move-result v1
+    throw p0
+.end method
 
-    :goto_0
-    iget-object p0, p0, Lah6;->b:Leh6;
+.method public final g(Ljava/lang/Object;)I
+    .locals 0
 
-    invoke-virtual {p0, v0, v1}, Leh6;->b(II)V
-    :try_end_0
-    .catch Ljava/lang/IllegalArgumentException; {:try_start_0 .. :try_end_0} :catch_0
+    check-cast p1, [B
 
-    return-void
+    array-length p0, p1
 
-    :catch_0
-    move-exception p0
+    return p0
+.end method
 
-    const-class v0, Lah6;
+.method public final h(I)I
+    .locals 0
 
-    invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-virtual {p0}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
-
-    move-result-object v1
-
-    new-instance v2, Ljava/lang/StringBuilder;
-
-    const-string v3, "updatePagesNumber error: "
-
-    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {v0, v1, p0}, Lg47;->O(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    return-void
+    return p1
 .end method

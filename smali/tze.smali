@@ -3,249 +3,214 @@
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/util/Iterator;
-.implements Lqb7;
+.implements Lix3;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final synthetic a:Ljava/lang/Object;
 
-.field public b:Ljava/util/Iterator;
+.field public final synthetic b:Ljava/util/ArrayList;
 
-.field public final c:Ljava/lang/Object;
+.field public final synthetic c:Ljava/util/concurrent/atomic/AtomicBoolean;
+
+.field public final synthetic d:Ljava/util/concurrent/atomic/AtomicInteger;
+
+.field public final synthetic e:Lb0f;
 
 
 # direct methods
-.method public constructor <init>(Luze;)V
-    .locals 1
+.method public constructor <init>(Ljava/lang/Object;Ljava/util/ArrayList;Ljava/util/concurrent/atomic/AtomicBoolean;Ljava/util/concurrent/atomic/AtomicInteger;Lb0f;)V
+    .locals 0
 
-    const/4 v0, 0x0
-
-    iput v0, p0, Ltze;->a:I
-
-    .line 4
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 5
-    iput-object p1, p0, Ltze;->c:Ljava/lang/Object;
+    iput-object p1, p0, Ltze;->a:Ljava/lang/Object;
 
-    .line 6
-    iget-object p1, p1, Luze;->a:Li4d;
+    iput-object p2, p0, Ltze;->b:Ljava/util/ArrayList;
 
-    .line 7
-    invoke-interface {p1}, Li4d;->iterator()Ljava/util/Iterator;
+    iput-object p3, p0, Ltze;->c:Ljava/util/concurrent/atomic/AtomicBoolean;
 
-    move-result-object p1
+    iput-object p4, p0, Ltze;->d:Ljava/util/concurrent/atomic/AtomicInteger;
 
-    iput-object p1, p0, Ltze;->b:Ljava/util/Iterator;
-
-    return-void
-.end method
-
-.method public constructor <init>(Lv1;)V
-    .locals 1
-
-    const/4 v0, 0x1
-
-    iput v0, p0, Ltze;->a:I
-
-    .line 1
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 2
-    new-instance v0, Ljava/util/ArrayList;
-
-    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
-
-    iput-object v0, p0, Ltze;->c:Ljava/lang/Object;
-
-    .line 3
-    iput-object p1, p0, Ltze;->b:Ljava/util/Iterator;
+    iput-object p5, p0, Ltze;->e:Lb0f;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final hasNext()Z
-    .locals 1
-
-    iget v0, p0, Ltze;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    iget-object p0, p0, Ltze;->b:Ljava/util/Iterator;
-
-    invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result p0
-
-    return p0
-
-    :pswitch_0
-    iget-object p0, p0, Ltze;->b:Ljava/util/Iterator;
-
-    invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result p0
-
-    return p0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public final next()Ljava/lang/Object;
+.method public final a(Lbolts/Task;)Ljava/lang/Object;
     .locals 5
 
-    iget v0, p0, Ltze;->a:I
+    invoke-virtual {p1}, Lbolts/Task;->isFaulted()Z
 
-    packed-switch v0, :pswitch_data_0
+    move-result v0
 
-    iget-object v0, p0, Ltze;->b:Ljava/util/Iterator;
+    if-eqz v0, :cond_0
 
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    iget-object v0, p0, Ltze;->a:Ljava/lang/Object;
 
-    move-result-object v0
+    monitor-enter v0
 
-    iget-object v1, p0, Ltze;->c:Ljava/lang/Object;
+    :try_start_0
+    iget-object v1, p0, Ltze;->b:Ljava/util/ArrayList;
 
-    check-cast v1, Ljava/util/ArrayList;
+    invoke-virtual {p1}, Lbolts/Task;->getError()Ljava/lang/Exception;
 
-    move-object v2, v0
-
-    check-cast v2, Landroid/view/View;
-
-    instance-of v3, v2, Landroid/view/ViewGroup;
-
-    const/4 v4, 0x0
-
-    if-eqz v3, :cond_0
-
-    check-cast v2, Landroid/view/ViewGroup;
-
-    goto :goto_0
-
-    :cond_0
-    move-object v2, v4
-
-    :goto_0
-    if-eqz v2, :cond_1
-
-    new-instance v4, Lv1;
-
-    const/4 v3, 0x5
-
-    invoke-direct {v4, v3, v2}, Lv1;-><init>(ILjava/lang/Object;)V
-
-    :cond_1
-    if-eqz v4, :cond_2
-
-    invoke-interface {v4}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v2
-
-    if-eqz v2, :cond_2
-
-    iget-object v2, p0, Ltze;->b:Ljava/util/Iterator;
+    move-result-object v2
 
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    iput-object v4, p0, Ltze;->b:Ljava/util/Iterator;
+    monitor-exit v0
+
+    goto :goto_0
+
+    :catchall_0
+    move-exception p0
+
+    monitor-exit v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    throw p0
+
+    :cond_0
+    :goto_0
+    invoke-virtual {p1}, Lbolts/Task;->isCancelled()Z
+
+    move-result p1
+
+    const/4 v0, 0x1
+
+    if-eqz p1, :cond_1
+
+    iget-object p1, p0, Ltze;->c:Ljava/util/concurrent/atomic/AtomicBoolean;
+
+    invoke-virtual {p1, v0}, Ljava/util/concurrent/atomic/AtomicBoolean;->set(Z)V
+
+    :cond_1
+    iget-object p1, p0, Ltze;->d:Ljava/util/concurrent/atomic/AtomicInteger;
+
+    invoke-virtual {p1}, Ljava/util/concurrent/atomic/AtomicInteger;->decrementAndGet()I
+
+    move-result p1
+
+    const/4 v1, 0x0
+
+    if-nez p1, :cond_6
+
+    iget-object p1, p0, Ltze;->b:Ljava/util/ArrayList;
+
+    invoke-virtual {p1}, Ljava/util/ArrayList;->size()I
+
+    move-result p1
+
+    if-eqz p1, :cond_4
+
+    iget-object p1, p0, Ltze;->b:Ljava/util/ArrayList;
+
+    invoke-virtual {p1}, Ljava/util/ArrayList;->size()I
+
+    move-result p1
+
+    const/4 v2, 0x0
+
+    if-ne p1, v0, :cond_2
+
+    iget-object p1, p0, Ltze;->e:Lb0f;
+
+    iget-object p0, p0, Ltze;->b:Ljava/util/ArrayList;
+
+    invoke-virtual {p0, v2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+
+    move-result-object p0
+
+    check-cast p0, Ljava/lang/Exception;
+
+    invoke-virtual {p1, p0}, Lb0f;->b(Ljava/lang/Exception;)V
 
     goto :goto_2
 
     :cond_2
-    :goto_1
-    iget-object v2, p0, Ltze;->b:Ljava/util/Iterator;
+    new-instance p1, Lbolts/AggregateException;
 
-    invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
+    const-string v0, "There were %d exceptions."
 
-    move-result v2
+    iget-object v3, p0, Ltze;->b:Ljava/util/ArrayList;
 
-    if-nez v2, :cond_3
+    invoke-virtual {v3}, Ljava/util/ArrayList;->size()I
 
-    invoke-virtual {v1}, Ljava/util/ArrayList;->isEmpty()Z
+    move-result v3
 
-    move-result v2
+    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    if-nez v2, :cond_3
+    move-result-object v3
 
-    invoke-static {v1}, Lp43;->I0(Ljava/util/List;)Ljava/lang/Object;
+    filled-new-array {v3}, [Ljava/lang/Object;
+
+    move-result-object v3
+
+    invoke-static {v0, v3}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v0
+
+    iget-object v3, p0, Ltze;->b:Ljava/util/ArrayList;
+
+    if-eqz v3, :cond_3
+
+    invoke-interface {v3}, Ljava/util/List;->size()I
+
+    move-result v4
+
+    if-lez v4, :cond_3
+
+    invoke-interface {v3, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v2
 
-    check-cast v2, Ljava/util/Iterator;
-
-    iput-object v2, p0, Ltze;->b:Ljava/util/Iterator;
-
-    invoke-static {v1}, Lv43;->r0(Ljava/util/ArrayList;)V
+    check-cast v2, Ljava/lang/Throwable;
 
     goto :goto_1
 
     :cond_3
+    move-object v2, v1
+
+    :goto_1
+    invoke-direct {p1, v0, v2}, Ljava/lang/Exception;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    invoke-static {v3}, Ljava/util/Collections;->unmodifiableList(Ljava/util/List;)Ljava/util/List;
+
+    move-result-object v0
+
+    iput-object v0, p1, Lbolts/AggregateException;->a:Ljava/util/List;
+
+    iget-object p0, p0, Ltze;->e:Lb0f;
+
+    invoke-virtual {p0, p1}, Lb0f;->b(Ljava/lang/Exception;)V
+
+    goto :goto_2
+
+    :cond_4
+    iget-object p1, p0, Ltze;->c:Ljava/util/concurrent/atomic/AtomicBoolean;
+
+    invoke-virtual {p1}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
+
+    move-result p1
+
+    if-eqz p1, :cond_5
+
+    iget-object p0, p0, Ltze;->e:Lb0f;
+
+    invoke-virtual {p0}, Lb0f;->a()V
+
+    goto :goto_2
+
+    :cond_5
+    iget-object p0, p0, Ltze;->e:Lb0f;
+
+    invoke-virtual {p0, v1}, Lb0f;->c(Ljava/lang/Object;)V
+
+    :cond_6
     :goto_2
-    return-object v0
-
-    :pswitch_0
-    iget-object v0, p0, Ltze;->c:Ljava/lang/Object;
-
-    check-cast v0, Luze;
-
-    iget-object v0, v0, Luze;->b:Lx56;
-
-    iget-object p0, p0, Ltze;->b:Ljava/util/Iterator;
-
-    invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object p0
-
-    invoke-interface {v0, p0}, Lx56;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    return-object p0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public final remove()V
-    .locals 1
-
-    iget p0, p0, Ltze;->a:I
-
-    packed-switch p0, :pswitch_data_0
-
-    new-instance p0, Ljava/lang/UnsupportedOperationException;
-
-    const-string v0, "Operation is not supported for read-only collection"
-
-    invoke-direct {p0, v0}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
-
-    throw p0
-
-    :pswitch_0
-    new-instance p0, Ljava/lang/UnsupportedOperationException;
-
-    const-string v0, "Operation is not supported for read-only collection"
-
-    invoke-direct {p0, v0}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
-
-    throw p0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-object v1
 .end method

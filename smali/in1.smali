@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lv56;
+.implements Landroid/view/View$OnClickListener;
 
 
 # instance fields
@@ -27,82 +27,60 @@
 
 
 # virtual methods
-.method public final invoke()Ljava/lang/Object;
-    .locals 4
+.method public final onClick(Landroid/view/View;)V
+    .locals 0
 
-    iget v0, p0, Lin1;->a:I
+    iget p1, p0, Lin1;->a:I
 
     iget-object p0, p0, Lin1;->b:Lkn1;
 
-    packed-switch v0, :pswitch_data_0
+    packed-switch p1, :pswitch_data_0
 
-    iget-object p0, p0, Lkn1;->C0:Ljn1;
+    iget-object p0, p0, Lkn1;->F0:Ljn1;
+
+    if-eqz p0, :cond_0
+
+    invoke-interface {p0}, Ljn1;->j()V
+
+    :cond_0
+    return-void
+
+    :pswitch_0
+    iget-object p0, p0, Lkn1;->F0:Ljn1;
 
     if-eqz p0, :cond_1
 
-    check-cast p0, Lzvd;
-
-    iget-object p0, p0, Lzvd;->b:Ljava/lang/Object;
-
-    check-cast p0, Lone/me/calls/ui/ui/call/panels/CallTopPanelWidget;
-
-    sget-object v0, Lone/me/calls/ui/ui/call/panels/CallTopPanelWidget;->o:[Lbc7;
-
-    invoke-virtual {p0}, Lone/me/calls/ui/ui/call/panels/CallTopPanelWidget;->q0()Lrn1;
-
-    move-result-object p0
-
-    iget-object p0, p0, Lrn1;->c:Lfr1;
-
-    iget-object p0, p0, Lfr1;->i:Lstc;
-
-    check-cast p0, Lbuc;
-
-    iget-object p0, p0, Lbuc;->o0:Lazd;
-
-    :cond_0
-    invoke-virtual {p0}, Lazd;->getValue()Ljava/lang/Object;
-
-    move-result-object v0
-
-    move-object v1, v0
-
-    check-cast v1, Lcuc;
-
-    const/16 v2, 0xb
-
-    const/4 v3, 0x0
-
-    invoke-static {v1, v3, v3, v3, v2}, Lcuc;->a(Lcuc;Lduc;Lrtc;Ljava/lang/String;I)Lcuc;
-
-    move-result-object v1
-
-    invoke-virtual {p0, v0, v1}, Lazd;->c(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
+    invoke-interface {p0}, Ljn1;->d()V
 
     :cond_1
-    sget-object p0, Le5f;->a:Le5f;
+    return-void
 
-    return-object p0
+    :pswitch_1
+    iget-object p0, p0, Lkn1;->F0:Ljn1;
 
-    :pswitch_0
-    sget-object v0, Lqp4;->q0:Lap9;
+    if-eqz p0, :cond_2
 
-    invoke-virtual {v0, p0}, Lap9;->j(Landroid/view/View;)Lk9a;
+    invoke-interface {p0}, Ljn1;->e()V
 
-    move-result-object p0
+    :cond_2
+    return-void
 
-    iget-object p0, p0, Lk9a;->c:Lyha;
+    :pswitch_2
+    iget-object p0, p0, Lkn1;->F0:Ljn1;
 
-    return-object p0
+    if-eqz p0, :cond_3
+
+    invoke-interface {p0}, Ljn1;->f()V
+
+    :cond_3
+    return-void
 
     nop
 
     :pswitch_data_0
     .packed-switch 0x0
+        :pswitch_2
+        :pswitch_1
         :pswitch_0
     .end packed-switch
 .end method

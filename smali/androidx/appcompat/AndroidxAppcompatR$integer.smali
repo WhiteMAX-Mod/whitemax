@@ -17,19 +17,19 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    sget v0, Ldwb;->abc_config_activityDefaultDur:I
+    sget v0, Lo8c;->abc_config_activityDefaultDur:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$integer;->abc_config_activityDefaultDur:I
 
-    sget v0, Ldwb;->abc_config_activityShortDur:I
+    sget v0, Lo8c;->abc_config_activityShortDur:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$integer;->abc_config_activityShortDur:I
 
-    sget v0, Ldwb;->cancel_button_image_alpha:I
+    sget v0, Lo8c;->cancel_button_image_alpha:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$integer;->cancel_button_image_alpha:I
 
-    sget v0, Ldwb;->config_tooltipAnimTime:I
+    sget v0, Lo8c;->config_tooltipAnimTime:I
 
     sput v0, Landroidx/appcompat/AndroidxAppcompatR$integer;->config_tooltipAnimTime:I
 

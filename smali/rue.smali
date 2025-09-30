@@ -1,204 +1,47 @@
 .class public final Lrue;
-.super Lspf;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
+# static fields
+.field public static final b:Ljava/lang/String;
+
+
 # instance fields
-.field public final synthetic a:I
-
-.field public b:Z
-
-.field public c:I
-
-.field public final synthetic d:Ljava/lang/Object;
+.field public final a:Landroid/content/ComponentName;
 
 
 # direct methods
-.method public constructor <init>(Lqpf;)V
+.method static constructor <clinit>()V
     .locals 1
 
-    const/4 v0, 0x1
+    const-string v0, "SystemJobInfoConverter"
 
-    iput v0, p0, Lrue;->a:I
+    invoke-static {v0}, Lmq0;->M(Ljava/lang/String;)Ljava/lang/String;
 
-    .line 4
+    move-result-object v0
+
+    sput-object v0, Lrue;->b:Ljava/lang/String;
+
+    return-void
+.end method
+
+.method public constructor <init>(Landroid/content/Context;)V
+    .locals 2
+
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 5
-    iput-object p1, p0, Lrue;->d:Ljava/lang/Object;
+    invoke-virtual {p1}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
 
-    const/4 p1, 0x0
+    move-result-object p1
 
-    .line 6
-    iput-boolean p1, p0, Lrue;->b:Z
+    new-instance v0, Landroid/content/ComponentName;
 
-    .line 7
-    iput p1, p0, Lrue;->c:I
+    const-class v1, Landroidx/work/impl/background/systemjob/SystemJobService;
 
-    return-void
-.end method
+    invoke-direct {v0, p1, v1}, Landroid/content/ComponentName;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
 
-.method public constructor <init>(Lsue;I)V
-    .locals 1
-
-    const/4 v0, 0x0
-
-    iput v0, p0, Lrue;->a:I
-
-    .line 1
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 2
-    iput-object p1, p0, Lrue;->d:Ljava/lang/Object;
-
-    iput p2, p0, Lrue;->c:I
-
-    const/4 p1, 0x0
-
-    .line 3
-    iput-boolean p1, p0, Lrue;->b:Z
+    iput-object v0, p0, Lrue;->a:Landroid/content/ComponentName;
 
     return-void
-.end method
-
-
-# virtual methods
-.method public a()V
-    .locals 1
-
-    iget v0, p0, Lrue;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    return-void
-
-    :pswitch_0
-    const/4 v0, 0x1
-
-    iput-boolean v0, p0, Lrue;->b:Z
-
-    return-void
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public final b()V
-    .locals 1
-
-    iget v0, p0, Lrue;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    iget-boolean v0, p0, Lrue;->b:Z
-
-    if-eqz v0, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    const/4 v0, 0x1
-
-    iput-boolean v0, p0, Lrue;->b:Z
-
-    iget-object p0, p0, Lrue;->d:Ljava/lang/Object;
-
-    check-cast p0, Lqpf;
-
-    iget-object p0, p0, Lqpf;->d:Lrpf;
-
-    if-eqz p0, :cond_1
-
-    invoke-interface {p0}, Lrpf;->b()V
-
-    :cond_1
-    :goto_0
-    return-void
-
-    :pswitch_0
-    iget-object p0, p0, Lrue;->d:Ljava/lang/Object;
-
-    check-cast p0, Lsue;
-
-    iget-object p0, p0, Lsue;->a:Landroidx/appcompat/widget/Toolbar;
-
-    const/4 v0, 0x0
-
-    invoke-virtual {p0, v0}, Landroid/view/View;->setVisibility(I)V
-
-    return-void
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public final c()V
-    .locals 3
-
-    iget v0, p0, Lrue;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    iget v0, p0, Lrue;->c:I
-
-    add-int/lit8 v0, v0, 0x1
-
-    iput v0, p0, Lrue;->c:I
-
-    iget-object v1, p0, Lrue;->d:Ljava/lang/Object;
-
-    check-cast v1, Lqpf;
-
-    iget-object v2, v1, Lqpf;->a:Ljava/util/ArrayList;
-
-    invoke-virtual {v2}, Ljava/util/ArrayList;->size()I
-
-    move-result v2
-
-    if-ne v0, v2, :cond_1
-
-    iget-object v0, v1, Lqpf;->d:Lrpf;
-
-    if-eqz v0, :cond_0
-
-    invoke-interface {v0}, Lrpf;->c()V
-
-    :cond_0
-    const/4 v0, 0x0
-
-    iput v0, p0, Lrue;->c:I
-
-    iput-boolean v0, p0, Lrue;->b:Z
-
-    iput-boolean v0, v1, Lqpf;->e:Z
-
-    :cond_1
-    return-void
-
-    :pswitch_0
-    iget-boolean v0, p0, Lrue;->b:Z
-
-    if-nez v0, :cond_2
-
-    iget-object v0, p0, Lrue;->d:Ljava/lang/Object;
-
-    check-cast v0, Lsue;
-
-    iget-object v0, v0, Lsue;->a:Landroidx/appcompat/widget/Toolbar;
-
-    iget p0, p0, Lrue;->c:I
-
-    invoke-virtual {v0, p0}, Landroid/view/View;->setVisibility(I)V
-
-    :cond_2
-    return-void
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
 .end method

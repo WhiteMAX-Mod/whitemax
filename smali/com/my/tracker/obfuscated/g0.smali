@@ -286,11 +286,11 @@
     .locals 2
 
     .line 1
-    new-instance v0, Lojc;
+    new-instance v0, Ljxc;
 
     const/16 v1, 0x13
 
-    invoke-direct {v0, p2, p0, p1, v1}, Lojc;-><init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;I)V
+    invoke-direct {v0, p2, p0, p1, v1}, Ljxc;-><init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;I)V
 
     invoke-static {v0}, Lcom/my/tracker/obfuscated/h;->a(Ljava/lang/Runnable;)V
 

@@ -1,70 +1,102 @@
-.class public final Laq9;
-.super Llje;
+.class public final synthetic Laq9;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lqc6;
 
 
 # instance fields
-.field public o:Lz42;
+.field public final synthetic a:Ldq9;
+
+.field public final synthetic b:Lz68;
+
+.field public final synthetic c:D
+
+.field public final synthetic o:D
 
 
 # direct methods
-.method public constructor <init>(Ldx8;)V
+.method public synthetic constructor <init>(Ldq9;Lz68;DD)V
     .locals 0
 
-    invoke-direct {p0, p1}, Llje;-><init>(Ldx8;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Laq9;->a:Ldq9;
+
+    iput-object p2, p0, Laq9;->b:Lz68;
+
+    iput-wide p3, p0, Laq9;->c:D
+
+    iput-wide p5, p0, Laq9;->o:D
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final c(Ldx8;Ljava/lang/String;)V
-    .locals 1
+.method public final apply(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 12
 
-    invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    check-cast p1, Ljava/lang/String;
 
-    const-string v0, "chat"
+    iget-object v0, p0, Laq9;->b:Lz68;
 
-    invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    iget-wide v1, v0, Lz68;->c:J
 
-    move-result p2
+    const-wide/16 v3, 0x0
 
-    if-nez p2, :cond_0
+    cmp-long v1, v1, v3
 
-    invoke-virtual {p1}, Ldx8;->B()V
+    if-eqz v1, :cond_0
 
-    return-void
+    iget-object v1, p0, Laq9;->a:Ldq9;
+
+    iget-object v2, v1, Ldq9;->C0:Ljy7;
+
+    invoke-virtual {v2}, Ljy7;->a()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_0
+
+    iget-object v3, v1, Ldq9;->Z:Lfxe;
+
+    iget-object v1, v1, Ldq9;->C0:Ljy7;
+
+    iget-wide v8, v1, Ljy7;->a:D
+
+    iget-wide v10, v1, Ljy7;->b:D
+
+    iget-wide v4, p0, Laq9;->c:D
+
+    iget-wide v6, p0, Laq9;->o:D
+
+    invoke-interface/range {v3 .. v11}, Lfxe;->a(DDDD)F
+
+    move-result p0
+
+    goto :goto_0
 
     :cond_0
-    invoke-static {p1}, Lz42;->d(Ldx8;)Lz42;
+    const/high16 p0, -0x40800000    # -1.0f
 
-    move-result-object p1
+    :goto_0
+    invoke-virtual {v0}, Lz68;->a()Ly68;
 
-    iput-object p1, p0, Laq9;->o:Lz42;
+    move-result-object v0
 
-    return-void
-.end method
+    iput-object p1, v0, Ly68;->f:Ljava/lang/String;
 
-.method public final toString()Ljava/lang/String;
-    .locals 2
+    iput p0, v0, Ly68;->g:F
 
-    iget-object p0, p0, Laq9;->o:Lz42;
+    const/4 p0, 0x0
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    iput-boolean p0, v0, Ly68;->i:Z
 
-    const-string v1, "{chat="
+    new-instance p0, Lz68;
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string p0, "}"
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
+    invoke-direct {p0, v0}, Lz68;-><init>(Ly68;)V
 
     return-object p0
 .end method

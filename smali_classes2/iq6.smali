@@ -1,26 +1,50 @@
-.class public interface abstract Liq6;
+.class public final Liq6;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# virtual methods
-.method public abstract a()V
+# static fields
+.field public static final a:Liq6;
+
+.field public static final b:Ljava/util/concurrent/atomic/AtomicBoolean;
+
+.field public static c:Landroid/content/Context;
+
+
+# direct methods
+.method static constructor <clinit>()V
+    .locals 2
+
+    new-instance v0, Liq6;
+
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    sput-object v0, Liq6;->a:Liq6;
+
+    new-instance v0, Ljava/util/concurrent/atomic/AtomicBoolean;
+
+    const/4 v1, 0x1
+
+    invoke-direct {v0, v1}, Ljava/util/concurrent/atomic/AtomicBoolean;-><init>(Z)V
+
+    sput-object v0, Liq6;->b:Ljava/util/concurrent/atomic/AtomicBoolean;
+
+    return-void
 .end method
 
-.method public abstract c()V
-.end method
+.method public static a(Ljava/io/File;)V
+    .locals 1
 
-.method public abstract getDownloadContext()Ljava/lang/String;
-.end method
+    invoke-virtual {p0}, Ljava/io/File;->exists()Z
 
-.method public abstract i()V
-.end method
+    move-result v0
 
-.method public abstract j(Ljava/io/File;)V
-.end method
+    if-eqz v0, :cond_0
 
-.method public abstract k()V
-.end method
+    invoke-virtual {p0}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
-.method public abstract n(FJ)V
+    invoke-virtual {p0}, Ljava/io/File;->delete()Z
+
+    :cond_0
+    return-void
 .end method

@@ -3,75 +3,134 @@
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/lang/Runnable;
+.implements Lqdg;
 
 
 # instance fields
-.field public final synthetic X:Ljma;
+.field public final a:Lp2f;
 
-.field public final a:Ljava/lang/String;
-
-.field public final b:Ljava/lang/Runnable;
-
-.field public volatile c:Z
-
-.field public o:I
+.field public final b:Ljava/util/List;
 
 
 # direct methods
-.method public constructor <init>(Ljma;Ljava/lang/String;Ljava/lang/Runnable;)V
+.method public constructor <init>(Lp2f;Ljava/util/List;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lpdg;->X:Ljma;
+    iput-object p1, p0, Lpdg;->a:Lp2f;
 
-    const/4 p1, 0x0
-
-    iput-boolean p1, p0, Lpdg;->c:Z
-
-    iput p1, p0, Lpdg;->o:I
-
-    iput-object p2, p0, Lpdg;->a:Ljava/lang/String;
-
-    iput-object p3, p0, Lpdg;->b:Ljava/lang/Runnable;
+    iput-object p2, p0, Lpdg;->b:Ljava/util/List;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
-    .locals 4
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 2
 
-    iget-object v0, p0, Lpdg;->X:Ljma;
+    if-ne p0, p1, :cond_0
 
-    iget-object v0, v0, Ljma;->b:Landroid/os/Handler;
-
-    if-eqz v0, :cond_0
-
-    invoke-virtual {v0}, Landroid/os/Handler;->obtainMessage()Landroid/os/Message;
-
-    move-result-object v0
-
-    iput-object p0, v0, Landroid/os/Message;->obj:Ljava/lang/Object;
-
-    iget-object v1, p0, Lpdg;->X:Ljma;
-
-    iget-object v1, v1, Ljma;->b:Landroid/os/Handler;
-
-    const-wide/16 v2, 0x1388
-
-    invoke-virtual {v1, v0, v2, v3}, Landroid/os/Handler;->sendMessageDelayed(Landroid/os/Message;J)Z
+    goto :goto_1
 
     :cond_0
-    iget-object v0, p0, Lpdg;->b:Ljava/lang/Runnable;
+    instance-of v0, p1, Lpdg;
 
-    invoke-interface {v0}, Ljava/lang/Runnable;->run()V
+    if-nez v0, :cond_1
 
-    const/4 v0, 0x1
+    goto :goto_0
 
-    iput-boolean v0, p0, Lpdg;->c:Z
+    :cond_1
+    check-cast p1, Lpdg;
 
-    return-void
+    iget-object v0, p0, Lpdg;->a:Lp2f;
+
+    iget-object v1, p1, Lpdg;->a:Lp2f;
+
+    invoke-virtual {v0, v1}, Lp2f;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_2
+
+    goto :goto_0
+
+    :cond_2
+    iget-object p0, p0, Lpdg;->b:Ljava/util/List;
+
+    iget-object p1, p1, Lpdg;->b:Ljava/util/List;
+
+    invoke-virtual {p0, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+
+    move-result p0
+
+    if-nez p0, :cond_3
+
+    :goto_0
+    const/4 p0, 0x0
+
+    return p0
+
+    :cond_3
+    :goto_1
+    const/4 p0, 0x1
+
+    return p0
+.end method
+
+.method public final hashCode()I
+    .locals 1
+
+    iget-object v0, p0, Lpdg;->a:Lp2f;
+
+    iget v0, v0, Lp2f;->b:I
+
+    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
+
+    move-result v0
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget-object p0, p0, Lpdg;->b:Ljava/util/List;
+
+    invoke-virtual {p0}, Ljava/lang/Object;->hashCode()I
+
+    move-result p0
+
+    add-int/2addr p0, v0
+
+    return p0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 2
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "RequestOpenSettings(title="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v1, p0, Lpdg;->a:Lp2f;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", buttons="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object p0, p0, Lpdg;->b:Ljava/util/List;
+
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string p0, ")"
+
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    return-object p0
 .end method

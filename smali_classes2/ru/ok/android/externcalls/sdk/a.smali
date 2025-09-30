@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lv56;
+.implements Lzb6;
 
 
 # instance fields
@@ -69,21 +69,21 @@
     return-object p0
 
     :pswitch_3
-    invoke-static {p0}, Lru/ok/android/externcalls/sdk/ConversationImpl;->P(Lru/ok/android/externcalls/sdk/ConversationImpl;)Liy0;
+    invoke-static {p0}, Lru/ok/android/externcalls/sdk/ConversationImpl;->P(Lru/ok/android/externcalls/sdk/ConversationImpl;)Lty0;
 
     move-result-object p0
 
     return-object p0
 
     :pswitch_4
-    invoke-static {p0}, Lru/ok/android/externcalls/sdk/ConversationImpl;->r(Lru/ok/android/externcalls/sdk/ConversationImpl;)Liy0;
+    invoke-static {p0}, Lru/ok/android/externcalls/sdk/ConversationImpl;->r(Lru/ok/android/externcalls/sdk/ConversationImpl;)Lty0;
 
     move-result-object p0
 
     return-object p0
 
     :pswitch_5
-    invoke-static {p0}, Lru/ok/android/externcalls/sdk/ConversationImpl;->s(Lru/ok/android/externcalls/sdk/ConversationImpl;)Liy0;
+    invoke-static {p0}, Lru/ok/android/externcalls/sdk/ConversationImpl;->s(Lru/ok/android/externcalls/sdk/ConversationImpl;)Lty0;
 
     move-result-object p0
 

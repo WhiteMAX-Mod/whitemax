@@ -1,126 +1,86 @@
 .class public final Lc42;
-.super Ljava/lang/Object;
+.super Lief;
 .source "SourceFile"
 
 
-# static fields
-.field public static final b:Lb42;
-
-
 # instance fields
-.field public final a:Ljava/lang/Object;
+.field public a:Z
+
+.field public final b:Landroid/view/ViewGroup;
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public constructor <init>(Landroid/view/ViewGroup;)V
     .locals 1
-
-    new-instance v0, Lb42;
-
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    sput-object v0, Lc42;->b:Lb42;
-
-    return-void
-.end method
-
-.method public synthetic constructor <init>(Ljava/lang/Object;)V
-    .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lc42;->a:Ljava/lang/Object;
+    const/4 v0, 0x0
+
+    iput-boolean v0, p0, Lc42;->a:Z
+
+    iput-object p1, p0, Lc42;->b:Landroid/view/ViewGroup;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
+.method public final b()V
     .locals 1
 
-    instance-of v0, p1, Lc42;
+    iget-object p0, p0, Lc42;->b:Landroid/view/ViewGroup;
+
+    const/4 v0, 0x0
+
+    invoke-static {p0, v0}, Lo7g;->b(Landroid/view/ViewGroup;Z)V
+
+    return-void
+.end method
+
+.method public final c(Lfef;)V
+    .locals 2
+
+    iget-boolean v0, p0, Lc42;->a:Z
 
     if-nez v0, :cond_0
 
-    goto :goto_0
+    iget-object v0, p0, Lc42;->b:Landroid/view/ViewGroup;
+
+    const/4 v1, 0x0
+
+    invoke-static {v0, v1}, Lo7g;->b(Landroid/view/ViewGroup;Z)V
 
     :cond_0
-    check-cast p1, Lc42;
+    invoke-virtual {p1, p0}, Lfef;->E(Ldef;)Lfef;
 
-    iget-object p1, p1, Lc42;->a:Ljava/lang/Object;
-
-    iget-object p0, p0, Lc42;->a:Ljava/lang/Object;
-
-    invoke-static {p0, p1}, Lxq7;->d(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p0
-
-    if-nez p0, :cond_1
-
-    :goto_0
-    const/4 p0, 0x0
-
-    return p0
-
-    :cond_1
-    const/4 p0, 0x1
-
-    return p0
+    return-void
 .end method
 
-.method public final hashCode()I
-    .locals 0
+.method public final f()V
+    .locals 1
 
-    iget-object p0, p0, Lc42;->a:Ljava/lang/Object;
+    iget-object p0, p0, Lc42;->b:Landroid/view/ViewGroup;
 
-    if-nez p0, :cond_0
+    const/4 v0, 0x1
 
-    const/4 p0, 0x0
+    invoke-static {p0, v0}, Lo7g;->b(Landroid/view/ViewGroup;Z)V
 
-    return p0
-
-    :cond_0
-    invoke-virtual {p0}, Ljava/lang/Object;->hashCode()I
-
-    move-result p0
-
-    return p0
+    return-void
 .end method
 
-.method public final toString()Ljava/lang/String;
-    .locals 2
+.method public final h(Lfef;)V
+    .locals 1
 
-    iget-object p0, p0, Lc42;->a:Ljava/lang/Object;
+    iget-object p1, p0, Lc42;->b:Landroid/view/ViewGroup;
 
-    instance-of v0, p0, La42;
+    const/4 v0, 0x0
 
-    if-eqz v0, :cond_0
+    invoke-static {p1, v0}, Lo7g;->b(Landroid/view/ViewGroup;Z)V
 
-    check-cast p0, La42;
+    const/4 p1, 0x1
 
-    invoke-virtual {p0}, La42;->toString()Ljava/lang/String;
+    iput-boolean p1, p0, Lc42;->a:Z
 
-    move-result-object p0
-
-    return-object p0
-
-    :cond_0
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "Value("
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const/16 p0, 0x29
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
+    return-void
 .end method

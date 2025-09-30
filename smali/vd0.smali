@@ -2,144 +2,404 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-
-# static fields
-.field public static final synthetic b:Ljava/util/concurrent/atomic/AtomicIntegerFieldUpdater;
+# interfaces
+.implements Lof5;
 
 
 # instance fields
-.field public final a:[Lfg4;
+.field public final synthetic a:I
 
-.field private volatile synthetic notCompletedCount$volatile:I
+.field public final b:Lcya;
+
+.field public final c:Lk3e;
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public constructor <init>(I)V
     .locals 2
 
-    const-class v0, Lvd0;
+    iput p1, p0, Lvd0;->a:I
 
-    const-string v1, "notCompletedCount$volatile"
+    packed-switch p1, :pswitch_data_0
 
-    invoke-static {v0, v1}, Ljava/util/concurrent/atomic/AtomicIntegerFieldUpdater;->newUpdater(Ljava/lang/Class;Ljava/lang/String;)Ljava/util/concurrent/atomic/AtomicIntegerFieldUpdater;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    move-result-object v0
+    new-instance p1, Lcya;
 
-    sput-object v0, Lvd0;->b:Ljava/util/concurrent/atomic/AtomicIntegerFieldUpdater;
+    const/4 v0, 0x4
+
+    invoke-direct {p1, v0}, Lcya;-><init>(I)V
+
+    iput-object p1, p0, Lvd0;->b:Lcya;
+
+    new-instance p1, Lk3e;
+
+    const/4 v0, -0x1
+
+    const-string v1, "image/avif"
+
+    invoke-direct {p1, v0, v0, v1}, Lk3e;-><init>(IILjava/lang/String;)V
+
+    iput-object p1, p0, Lvd0;->c:Lk3e;
+
+    return-void
+
+    :pswitch_0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    new-instance p1, Lcya;
+
+    const/4 v0, 0x4
+
+    invoke-direct {p1, v0}, Lcya;-><init>(I)V
+
+    iput-object p1, p0, Lvd0;->b:Lcya;
+
+    new-instance p1, Lk3e;
+
+    const/4 v0, -0x1
+
+    const-string v1, "image/webp"
+
+    invoke-direct {p1, v0, v0, v1}, Lk3e;-><init>(IILjava/lang/String;)V
+
+    iput-object p1, p0, Lvd0;->c:Lk3e;
+
+    return-void
+
+    :pswitch_1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    new-instance p1, Lcya;
+
+    const/4 v0, 0x4
+
+    invoke-direct {p1, v0}, Lcya;-><init>(I)V
+
+    iput-object p1, p0, Lvd0;->b:Lcya;
+
+    new-instance p1, Lk3e;
+
+    const/4 v0, -0x1
+
+    const-string v1, "image/heif"
+
+    invoke-direct {p1, v0, v0, v1}, Lk3e;-><init>(IILjava/lang/String;)V
+
+    iput-object p1, p0, Lvd0;->c:Lk3e;
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method private final a()V
+    .locals 0
 
     return-void
 .end method
 
-.method public constructor <init>([Lfg4;)V
+.method private final b()V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    return-void
+.end method
 
-    iput-object p1, p0, Lvd0;->a:[Lfg4;
-
-    array-length p1, p1
-
-    iput p1, p0, Lvd0;->notCompletedCount$volatile:I
+.method private final c()V
+    .locals 0
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-    .locals 8
+.method public final d(JJ)V
+    .locals 1
 
-    new-instance v0, Lqy1;
+    iget v0, p0, Lvd0;->a:I
 
-    invoke-static {p1}, Lwx7;->E(Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    packed-switch v0, :pswitch_data_0
 
-    move-result-object p1
+    iget-object p0, p0, Lvd0;->c:Lk3e;
 
-    const/4 v1, 0x1
+    invoke-virtual {p0, p1, p2, p3, p4}, Lk3e;->d(JJ)V
 
-    invoke-direct {v0, v1, p1}, Lqy1;-><init>(ILkotlin/coroutines/Continuation;)V
+    return-void
 
-    invoke-virtual {v0}, Lqy1;->o()V
+    :pswitch_0
+    iget-object p0, p0, Lvd0;->c:Lk3e;
 
-    iget-object p1, p0, Lvd0;->a:[Lfg4;
+    invoke-virtual {p0, p1, p2, p3, p4}, Lk3e;->d(JJ)V
 
-    array-length v2, p1
+    return-void
 
-    new-array v3, v2, [Ltd0;
+    :pswitch_1
+    iget-object p0, p0, Lvd0;->c:Lk3e;
 
-    const/4 v4, 0x0
+    invoke-virtual {p0, p1, p2, p3, p4}, Lk3e;->d(JJ)V
 
-    move v5, v4
+    return-void
 
-    :goto_0
-    if-ge v5, v2, :cond_0
+    nop
 
-    aget-object v6, p1, v5
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
+.end method
 
-    move-object v7, v6
+.method public final i(Lqf5;)Z
+    .locals 7
 
-    check-cast v7, Lx87;
+    iget v0, p0, Lvd0;->a:I
 
-    invoke-virtual {v7}, Lx87;->start()Z
+    packed-switch v0, :pswitch_data_0
 
-    new-instance v7, Ltd0;
+    iget-object p0, p0, Lvd0;->b:Lcya;
 
-    invoke-direct {v7, p0, v0}, Ltd0;-><init>(Lvd0;Lqy1;)V
+    const/4 v0, 0x4
 
-    invoke-static {v6, v1, v7}, Lk3c;->r(Lv77;ZLi87;)Ldm4;
+    invoke-virtual {p0, v0}, Lcya;->D(I)V
 
-    move-result-object v6
+    iget-object v1, p0, Lcya;->a:[B
 
-    iput-object v6, v7, Ltd0;->c:Ldm4;
+    const/4 v2, 0x0
 
-    aput-object v7, v3, v5
+    invoke-interface {p1, v2, v1, v0}, Lqf5;->i(I[BI)V
 
-    add-int/lit8 v5, v5, 0x1
+    invoke-virtual {p0}, Lcya;->w()J
+
+    move-result-wide v3
+
+    const-wide/32 v5, 0x52494646
+
+    cmp-long v1, v3, v5
+
+    if-eqz v1, :cond_0
 
     goto :goto_0
 
     :cond_0
-    new-instance p0, Lud0;
+    invoke-interface {p1, v0}, Lqf5;->p(I)V
 
-    invoke-direct {p0, v3}, Lud0;-><init>([Ltd0;)V
+    invoke-virtual {p0, v0}, Lcya;->D(I)V
 
-    :goto_1
-    if-ge v4, v2, :cond_1
+    iget-object v1, p0, Lcya;->a:[B
 
-    aget-object p1, v3, v4
+    invoke-interface {p1, v2, v1, v0}, Lqf5;->i(I[BI)V
 
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    invoke-virtual {p0}, Lcya;->w()J
 
-    sget-object v1, Ltd0;->X:Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;
+    move-result-wide p0
 
-    invoke-virtual {v1, p1, p0}, Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;->set(Ljava/lang/Object;Ljava/lang/Object;)V
+    const-wide/32 v0, 0x57454250
 
-    add-int/lit8 v4, v4, 0x1
+    cmp-long p0, p0, v0
 
-    goto :goto_1
+    if-nez p0, :cond_1
+
+    const/4 v2, 0x1
 
     :cond_1
-    sget-object p1, Lqy1;->o:Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;
+    :goto_0
+    return v2
 
-    invoke-virtual {p1, v0}, Ljava/util/concurrent/atomic/AtomicReferenceFieldUpdater;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    :pswitch_0
+    const/4 v0, 0x4
 
-    move-result-object p1
+    invoke-interface {p1, v0}, Lqf5;->p(I)V
 
-    instance-of p1, p1, Lrp9;
+    iget-object p0, p0, Lvd0;->b:Lcya;
 
-    if-nez p1, :cond_2
+    invoke-virtual {p0, v0}, Lcya;->D(I)V
 
-    invoke-virtual {p0}, Lud0;->a()V
+    iget-object v1, p0, Lcya;->a:[B
 
-    goto :goto_2
+    const/4 v2, 0x0
+
+    invoke-interface {p1, v2, v1, v0}, Lqf5;->i(I[BI)V
+
+    invoke-virtual {p0}, Lcya;->w()J
+
+    move-result-wide v3
+
+    const v1, 0x66747970
+
+    int-to-long v5, v1
+
+    cmp-long v1, v3, v5
+
+    if-nez v1, :cond_2
+
+    invoke-virtual {p0, v0}, Lcya;->D(I)V
+
+    iget-object v1, p0, Lcya;->a:[B
+
+    invoke-interface {p1, v2, v1, v0}, Lqf5;->i(I[BI)V
+
+    invoke-virtual {p0}, Lcya;->w()J
+
+    move-result-wide p0
+
+    const v0, 0x68656963
+
+    int-to-long v0, v0
+
+    cmp-long p0, p0, v0
+
+    if-nez p0, :cond_2
+
+    const/4 v2, 0x1
 
     :cond_2
-    invoke-static {v0, p0}, Ll23;->I(Lpy1;Lgy1;)V
+    return v2
 
-    :goto_2
-    invoke-virtual {v0}, Lqy1;->m()Ljava/lang/Object;
+    :pswitch_1
+    const/4 v0, 0x4
 
-    move-result-object p0
+    invoke-interface {p1, v0}, Lqf5;->p(I)V
 
-    return-object p0
+    iget-object p0, p0, Lvd0;->b:Lcya;
+
+    invoke-virtual {p0, v0}, Lcya;->D(I)V
+
+    iget-object v1, p0, Lcya;->a:[B
+
+    const/4 v2, 0x0
+
+    invoke-interface {p1, v2, v1, v0}, Lqf5;->i(I[BI)V
+
+    invoke-virtual {p0}, Lcya;->w()J
+
+    move-result-wide v3
+
+    const v1, 0x66747970
+
+    int-to-long v5, v1
+
+    cmp-long v1, v3, v5
+
+    if-nez v1, :cond_3
+
+    invoke-virtual {p0, v0}, Lcya;->D(I)V
+
+    iget-object v1, p0, Lcya;->a:[B
+
+    invoke-interface {p1, v2, v1, v0}, Lqf5;->i(I[BI)V
+
+    invoke-virtual {p0}, Lcya;->w()J
+
+    move-result-wide p0
+
+    const v0, 0x61766966
+
+    int-to-long v0, v0
+
+    cmp-long p0, p0, v0
+
+    if-nez p0, :cond_3
+
+    const/4 v2, 0x1
+
+    :cond_3
+    return v2
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final n(Lsf5;)V
+    .locals 1
+
+    iget v0, p0, Lvd0;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    iget-object p0, p0, Lvd0;->c:Lk3e;
+
+    invoke-virtual {p0, p1}, Lk3e;->n(Lsf5;)V
+
+    return-void
+
+    :pswitch_0
+    iget-object p0, p0, Lvd0;->c:Lk3e;
+
+    invoke-virtual {p0, p1}, Lk3e;->n(Lsf5;)V
+
+    return-void
+
+    :pswitch_1
+    iget-object p0, p0, Lvd0;->c:Lk3e;
+
+    invoke-virtual {p0, p1}, Lk3e;->n(Lsf5;)V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final o(Lqf5;Lj7;)I
+    .locals 1
+
+    iget v0, p0, Lvd0;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    iget-object p0, p0, Lvd0;->c:Lk3e;
+
+    invoke-virtual {p0, p1, p2}, Lk3e;->o(Lqf5;Lj7;)I
+
+    move-result p0
+
+    return p0
+
+    :pswitch_0
+    iget-object p0, p0, Lvd0;->c:Lk3e;
+
+    invoke-virtual {p0, p1, p2}, Lk3e;->o(Lqf5;Lj7;)I
+
+    move-result p0
+
+    return p0
+
+    :pswitch_1
+    iget-object p0, p0, Lvd0;->c:Lk3e;
+
+    invoke-virtual {p0, p1, p2}, Lk3e;->o(Lqf5;Lj7;)I
+
+    move-result p0
+
+    return p0
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final release()V
+    .locals 0
+
+    iget p0, p0, Lvd0;->a:I
+
+    return-void
 .end method

@@ -1,313 +1,1084 @@
-.class public abstract Lmda;
-.super Ljava/lang/Object;
+.class public final Lmda;
+.super Landroid/view/ViewGroup;
 .source "SourceFile"
 
 
 # static fields
-.field public static final A:I
+.field public static final synthetic y0:[Lxi7;
 
-.field public static final B:I
 
-.field public static final C:I
+# instance fields
+.field public a:Lkda;
 
-.field public static final D:I
+.field public final b:Llda;
 
-.field public static final E:I
+.field public final c:Llda;
 
-.field public static final F:I
+.field public final o:Llda;
 
-.field public static final G:I
+.field public final r0:Ljo9;
 
-.field public static final H:I
+.field public final s0:Ljo9;
 
-.field public static final I:I
+.field public final t0:Ljo9;
 
-.field public static final J:I
+.field public final u0:Landroid/graphics/Rect;
 
-.field public static final K:I
+.field public v0:I
 
-.field public static final L:I
+.field public w0:I
 
-.field public static final M:I
-
-.field public static final N:I
-
-.field public static final O:I
-
-.field public static final P:I
-
-.field public static final Q:I
-
-.field public static final R:I
-
-.field public static final S:I
-
-.field public static final T:I
-
-.field public static final U:I
-
-.field public static final V:I
-
-.field public static final W:I
-
-.field public static final X:I
-
-.field public static final a:I
-
-.field public static final b:I
-
-.field public static final c:I
-
-.field public static final d:I
-
-.field public static final e:I
-
-.field public static final f:I
-
-.field public static final g:I
-
-.field public static final h:I
-
-.field public static final i:I
-
-.field public static final j:I
-
-.field public static final k:I
-
-.field public static final l:I
-
-.field public static final m:I
-
-.field public static final n:I
-
-.field public static final o:I
-
-.field public static final p:I
-
-.field public static final q:I
-
-.field public static final r:I
-
-.field public static final s:I
-
-.field public static final t:I
-
-.field public static final u:I
-
-.field public static final v:I
-
-.field public static final w:I
-
-.field public static final x:I
-
-.field public static final y:I
-
-.field public static final z:I
+.field public x0:I
 
 
 # direct methods
 .method static constructor <clinit>()V
+    .locals 6
+
+    new-instance v0, Lmo9;
+
+    const-string v1, "mode"
+
+    const-string v2, "getMode()Lone/me/sdk/uikit/common/buttontool/OneMeButtonTool$Mode;"
+
+    const-class v3, Lmda;
+
+    invoke-direct {v0, v3, v1, v2}, Lmo9;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;)V
+
+    sget-object v1, Ljpc;->a:Lkpc;
+
+    const-string v2, "appearance"
+
+    const-string v4, "getAppearance()Lone/me/sdk/uikit/common/buttontool/OneMeButtonTool$Appearance;"
+
+    invoke-static {v1, v3, v2, v4}, Lee5;->g(Lkpc;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;)Lmo9;
+
+    move-result-object v1
+
+    new-instance v2, Lmo9;
+
+    const-string v4, "customTheme"
+
+    const-string v5, "getCustomTheme()Lone/me/sdk/design/OneMeTheme;"
+
+    invoke-direct {v2, v3, v4, v5}, Lmo9;-><init>(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;)V
+
+    const/4 v3, 0x3
+
+    new-array v3, v3, [Lxi7;
+
+    const/4 v4, 0x0
+
+    aput-object v0, v3, v4
+
+    const/4 v0, 0x1
+
+    aput-object v1, v3, v0
+
+    const/4 v0, 0x2
+
+    aput-object v2, v3, v0
+
+    sput-object v3, Lmda;->y0:[Lxi7;
+
+    return-void
+.end method
+
+.method public constructor <init>(Landroid/content/Context;)V
     .locals 1
 
-    sget v0, Laqb;->chat_common_background_fileType_archiveBadge:I
+    invoke-direct {p0, p1}, Landroid/view/ViewGroup;-><init>(Landroid/content/Context;)V
 
-    sput v0, Lmda;->a:I
+    new-instance p1, Llda;
 
-    sget v0, Laqb;->chat_common_background_fileType_archiveBkg:I
+    const/4 v0, 0x0
 
-    sput v0, Lmda;->b:I
+    invoke-direct {p1, p0, v0}, Llda;-><init>(Lmda;I)V
 
-    sget v0, Laqb;->chat_common_background_fileType_archiveElement:I
+    iput-object p1, p0, Lmda;->b:Llda;
 
-    sput v0, Lmda;->c:I
+    new-instance p1, Llda;
 
-    sget v0, Laqb;->chat_common_background_fileType_archiveIcon:I
+    const/4 v0, 0x1
 
-    sput v0, Lmda;->d:I
+    invoke-direct {p1, p0, v0}, Llda;-><init>(Lmda;I)V
 
-    sget v0, Laqb;->chat_common_background_fileType_dataBadge:I
+    iput-object p1, p0, Lmda;->c:Llda;
 
-    sput v0, Lmda;->e:I
+    new-instance p1, Llda;
 
-    sget v0, Laqb;->chat_common_background_fileType_dataBkg:I
+    const/4 v0, 0x2
 
-    sput v0, Lmda;->f:I
+    invoke-direct {p1, p0, v0}, Llda;-><init>(Lmda;I)V
 
-    sget v0, Laqb;->chat_common_background_fileType_dataElement:I
+    iput-object p1, p0, Lmda;->o:Llda;
 
-    sput v0, Lmda;->g:I
+    new-instance p1, Ljo9;
 
-    sget v0, Laqb;->chat_common_background_fileType_dataIcon:I
+    const/4 v0, 0x4
 
-    sput v0, Lmda;->h:I
+    invoke-direct {p1, v0}, Ljo9;-><init>(I)V
 
-    sget v0, Laqb;->chat_common_background_fileType_imageBadge:I
+    iput-object p1, p0, Lmda;->r0:Ljo9;
 
-    sput v0, Lmda;->i:I
+    new-instance p1, Ljo9;
 
-    sget v0, Laqb;->chat_common_background_fileType_imageBkg:I
+    invoke-direct {p1, v0}, Ljo9;-><init>(I)V
 
-    sput v0, Lmda;->j:I
+    iput-object p1, p0, Lmda;->s0:Ljo9;
 
-    sget v0, Laqb;->chat_common_background_fileType_imageElement:I
+    new-instance p1, Ljo9;
 
-    sput v0, Lmda;->k:I
+    invoke-direct {p1}, Ljo9;-><init>()V
 
-    sget v0, Laqb;->chat_common_background_fileType_imageIcon:I
+    iput-object p1, p0, Lmda;->t0:Ljo9;
 
-    sput v0, Lmda;->l:I
+    new-instance p1, Landroid/graphics/Rect;
 
-    sget v0, Laqb;->chat_common_background_fileType_musicBadge:I
+    invoke-direct {p1}, Landroid/graphics/Rect;-><init>()V
 
-    sput v0, Lmda;->m:I
+    iput-object p1, p0, Lmda;->u0:Landroid/graphics/Rect;
 
-    sget v0, Laqb;->chat_common_background_fileType_musicBkg:I
+    const/4 p1, -0x1
 
-    sput v0, Lmda;->n:I
+    iput p1, p0, Lmda;->v0:I
 
-    sget v0, Laqb;->chat_common_background_fileType_musicElement:I
+    iput p1, p0, Lmda;->w0:I
 
-    sput v0, Lmda;->o:I
+    iput p1, p0, Lmda;->x0:I
 
-    sget v0, Laqb;->chat_common_background_fileType_musicIcon:I
+    return-void
+.end method
 
-    sput v0, Lmda;->p:I
+.method public static a(Lmda;II)Lida;
+    .locals 2
 
-    sget v0, Laqb;->chat_common_background_fileType_presentationBadge:I
+    and-int/lit8 v0, p2, 0x1
 
-    sput v0, Lmda;->q:I
+    if-eqz v0, :cond_0
 
-    sget v0, Laqb;->chat_common_background_fileType_presentationBkg:I
+    invoke-virtual {p0}, Landroid/view/ViewGroup;->getChildCount()I
 
-    sput v0, Lmda;->r:I
+    move-result p1
 
-    sget v0, Laqb;->chat_common_background_fileType_presentationElement:I
+    :cond_0
+    and-int/lit8 p2, p2, 0x2
 
-    sput v0, Lmda;->s:I
+    if-eqz p2, :cond_1
 
-    sget v0, Laqb;->chat_common_background_fileType_presentationIcon:I
+    const/4 p2, 0x0
 
-    sput v0, Lmda;->t:I
+    goto :goto_0
 
-    sget v0, Laqb;->chat_common_background_fileType_programBadge:I
+    :cond_1
+    const/4 p2, 0x1
 
-    sput v0, Lmda;->u:I
+    :goto_0
+    invoke-virtual {p0, p1}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
 
-    sget v0, Laqb;->chat_common_background_fileType_programBkg:I
+    move-result-object p1
 
-    sput v0, Lmda;->v:I
+    check-cast p1, Lida;
 
-    sget v0, Laqb;->chat_common_background_fileType_programElement:I
+    const/4 v0, -0x2
 
-    sput v0, Lmda;->w:I
+    if-nez p1, :cond_3
 
-    sget v0, Laqb;->chat_common_background_fileType_programIcon:I
+    new-instance p1, Lida;
 
-    sput v0, Lmda;->x:I
+    invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
 
-    sget v0, Laqb;->chat_common_background_fileType_textBadge:I
+    move-result-object v1
 
-    sput v0, Lmda;->y:I
+    invoke-direct {p1, v1}, Lida;-><init>(Landroid/content/Context;)V
 
-    sget v0, Laqb;->chat_common_background_fileType_textBkg:I
+    if-eqz p2, :cond_2
 
-    sput v0, Lmda;->z:I
+    invoke-virtual {p0}, Landroid/view/ViewGroup;->getChildCount()I
 
-    sget v0, Laqb;->chat_common_background_fileType_textElement:I
+    move-result p2
 
-    sput v0, Lmda;->A:I
+    new-instance v1, Landroid/view/ViewGroup$LayoutParams;
 
-    sget v0, Laqb;->chat_common_background_fileType_textIcon:I
+    invoke-direct {v1, v0, v0}, Landroid/view/ViewGroup$LayoutParams;-><init>(II)V
 
-    sput v0, Lmda;->B:I
+    invoke-virtual {p0, p1, p2, v1}, Landroid/view/ViewGroup;->addViewInLayout(Landroid/view/View;ILandroid/view/ViewGroup$LayoutParams;)Z
 
-    sget v0, Laqb;->chat_common_background_fileType_unknownBadge:I
+    goto :goto_1
 
-    sput v0, Lmda;->C:I
+    :cond_2
+    invoke-virtual {p0, p1}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
 
-    sget v0, Laqb;->chat_common_background_fileType_unknownBkg:I
+    :cond_3
+    :goto_1
+    sget p2, Lz7c;->oneme_buttonstack_more_btn:I
 
-    sput v0, Lmda;->D:I
+    invoke-virtual {p1, p2}, Landroid/view/View;->setId(I)V
 
-    sget v0, Laqb;->chat_common_background_fileType_unknownElement:I
+    new-instance p2, Landroid/view/ViewGroup$LayoutParams;
 
-    sput v0, Lmda;->E:I
+    invoke-direct {p2, v0, v0}, Landroid/view/ViewGroup$LayoutParams;-><init>(II)V
 
-    sget v0, Laqb;->chat_common_background_fileType_unknownIcon:I
+    invoke-virtual {p1, p2}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    sput v0, Lmda;->F:I
+    invoke-virtual {p0}, Lmda;->getMode()Lfda;
 
-    sget v0, Laqb;->chat_common_background_fileType_videoBadge:I
+    move-result-object p2
 
-    sput v0, Lmda;->G:I
+    invoke-virtual {p1, p2}, Lida;->setMode(Lfda;)V
 
-    sget v0, Laqb;->chat_common_background_fileType_videoBkg:I
+    invoke-virtual {p0}, Lmda;->getAppearance()Leda;
 
-    sput v0, Lmda;->H:I
+    move-result-object p2
 
-    sget v0, Laqb;->chat_common_background_fileType_videoElement:I
+    invoke-virtual {p1, p2}, Lida;->setAppearance(Leda;)V
 
-    sput v0, Lmda;->I:I
+    invoke-virtual {p0}, Lmda;->getCustomTheme()Lera;
 
-    sget v0, Laqb;->chat_common_background_fileType_videoIcon:I
+    move-result-object p2
 
-    sput v0, Lmda;->J:I
+    invoke-virtual {p1, p2}, Lida;->setCustomTheme(Lera;)V
 
-    sget v0, Laqb;->chat_common_text_fileType:I
+    sget p2, Lhcc;->oneme_button_stack_more:I
 
-    sput v0, Lmda;->K:I
+    invoke-virtual {p1, p2}, Lida;->setText(I)V
 
-    sget v0, Laqb;->global_background_accent_neutralFade:I
+    sget p2, Lq0d;->t1:I
 
-    sput v0, Lmda;->L:I
+    invoke-virtual {p1, p2}, Lida;->setIcon(I)V
 
-    sget v0, Laqb;->global_background_accent_neutralFadeSecondary:I
+    new-instance p2, Lux5;
 
-    sput v0, Lmda;->M:I
+    const/16 v0, 0x1b
 
-    sget v0, Laqb;->global_background_surfaceCard:I
+    invoke-direct {p2, v0, p0}, Lux5;-><init>(ILjava/lang/Object;)V
 
-    sput v0, Lmda;->N:I
+    invoke-static {p1, p2}, Lz48;->D(Landroid/view/View;Landroid/view/View$OnClickListener;)V
 
-    sget v0, Laqb;->global_icon_contrastStatic:I
+    return-object p1
+.end method
 
-    sput v0, Lmda;->O:I
+.method public static final c(Ljda;)Lx1e;
+    .locals 6
 
-    sget v0, Laqb;->global_icon_negative:I
+    iget v1, p0, Ljda;->a:I
 
-    sput v0, Lmda;->P:I
+    iget-object v0, p0, Ljda;->b:Ljava/lang/Integer;
 
-    sget v0, Laqb;->global_icon_primary:I
+    if-eqz v0, :cond_0
 
-    sput v0, Lmda;->Q:I
+    invoke-virtual {v0}, Ljava/lang/Number;->intValue()I
 
-    sget v0, Laqb;->global_icon_tertiary:I
+    move-result v0
 
-    sput v0, Lmda;->R:I
+    new-instance v2, Lp2f;
 
-    sget v0, Laqb;->global_icon_themed:I
+    invoke-direct {v2, v0}, Lp2f;-><init>(I)V
 
-    sput v0, Lmda;->S:I
+    goto :goto_0
 
-    sget v0, Laqb;->global_states_text_disabled_primary:I
+    :cond_0
+    sget-object v2, Lu2f;->a:Lt2f;
 
-    sput v0, Lmda;->T:I
+    :goto_0
+    iget-object v4, p0, Ljda;->d:Ljava/lang/Integer;
 
-    sget v0, Laqb;->global_text_negative:I
+    iget-object v5, p0, Ljda;->e:Ljava/lang/Integer;
 
-    sput v0, Lmda;->U:I
+    iget-object v3, p0, Ljda;->c:Ljava/lang/Integer;
 
-    sget v0, Laqb;->global_text_positive:I
+    new-instance v0, Lx1e;
 
-    sput v0, Lmda;->V:I
+    invoke-direct/range {v0 .. v5}, Lx1e;-><init>(ILu2f;Ljava/lang/Integer;Ljava/lang/Integer;Ljava/lang/Integer;)V
 
-    sget v0, Laqb;->global_text_primary:I
+    return-object v0
+.end method
 
-    sput v0, Lmda;->W:I
 
-    sget v0, Laqb;->global_text_secondary:I
+# virtual methods
+.method public final b(Ljava/util/List;Ljava/util/List;Z)V
+    .locals 8
 
-    sput v0, Lmda;->X:I
+    iget-object v0, p0, Lmda;->r0:Ljo9;
+
+    invoke-virtual {v0}, Ljo9;->d()V
+
+    iget-object v1, p0, Lmda;->t0:Ljo9;
+
+    invoke-virtual {v1}, Ljo9;->d()V
+
+    const/4 v2, 0x0
+
+    move v3, v2
+
+    :goto_0
+    const/4 v4, 0x4
+
+    if-ge v3, v4, :cond_3
+
+    invoke-static {v3, p1}, Lq73;->h0(ILjava/util/List;)Ljava/lang/Object;
+
+    move-result-object v5
+
+    check-cast v5, Ljda;
+
+    if-eqz v5, :cond_3
+
+    invoke-virtual {p0, v3}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
+
+    move-result-object v4
+
+    check-cast v4, Lida;
+
+    if-nez v4, :cond_0
+
+    new-instance v4, Lida;
+
+    invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
+
+    move-result-object v6
+
+    invoke-direct {v4, v6}, Lida;-><init>(Landroid/content/Context;)V
+
+    invoke-virtual {p0, v4}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
+
+    :cond_0
+    iget v6, v5, Ljda;->a:I
+
+    invoke-virtual {v4, v6}, Landroid/view/View;->setId(I)V
+
+    new-instance v6, Landroid/view/ViewGroup$LayoutParams;
+
+    const/4 v7, -0x2
+
+    invoke-direct {v6, v7, v7}, Landroid/view/ViewGroup$LayoutParams;-><init>(II)V
+
+    invoke-virtual {v4, v6}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+
+    invoke-virtual {v4, v2}, Landroid/view/View;->setVisibility(I)V
+
+    iget-boolean v6, v5, Ljda;->f:Z
+
+    invoke-virtual {v4, v6}, Lida;->setEnabled(Z)V
+
+    invoke-virtual {p0}, Lmda;->getMode()Lfda;
+
+    move-result-object v6
+
+    invoke-virtual {v4, v6}, Lida;->setMode(Lfda;)V
+
+    invoke-virtual {p0}, Lmda;->getAppearance()Leda;
+
+    move-result-object v6
+
+    invoke-virtual {v4, v6}, Lida;->setAppearance(Leda;)V
+
+    invoke-virtual {p0}, Lmda;->getCustomTheme()Lera;
+
+    move-result-object v6
+
+    invoke-virtual {v4, v6}, Lida;->setCustomTheme(Lera;)V
+
+    iget-object v6, v5, Ljda;->b:Ljava/lang/Integer;
+
+    if-eqz v6, :cond_1
+
+    invoke-virtual {v6}, Ljava/lang/Number;->intValue()I
+
+    move-result v6
+
+    invoke-virtual {v4, v6}, Lida;->setText(I)V
+
+    :cond_1
+    iget-object v6, v5, Ljda;->d:Ljava/lang/Integer;
+
+    if-eqz v6, :cond_2
+
+    invoke-virtual {v6}, Ljava/lang/Number;->intValue()I
+
+    move-result v6
+
+    invoke-virtual {v4, v6}, Lida;->setIcon(I)V
+
+    :cond_2
+    new-instance v6, Lq15;
+
+    const/16 v7, 0x17
+
+    invoke-direct {v6, p0, v7, v5}, Lq15;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+
+    invoke-static {v4, v6}, Lz48;->D(Landroid/view/View;Landroid/view/View$OnClickListener;)V
+
+    invoke-virtual {v0, v5}, Ljo9;->b(Ljava/lang/Object;)V
+
+    add-int/lit8 v3, v3, 0x1
+
+    goto :goto_0
+
+    :cond_3
+    if-ne v3, v4, :cond_4
+
+    invoke-interface {p1}, Ljava/util/List;->size()I
+
+    move-result v0
+
+    if-le v0, v4, :cond_4
+
+    const/4 v0, 0x1
+
+    goto :goto_1
+
+    :cond_4
+    move v0, v2
+
+    :goto_1
+    invoke-interface {p2}, Ljava/util/Collection;->isEmpty()Z
+
+    move-result v4
+
+    if-nez v0, :cond_6
+
+    if-nez v4, :cond_5
+
+    goto :goto_2
+
+    :cond_5
+    const/4 p1, -0x1
+
+    iput p1, p0, Lmda;->v0:I
+
+    goto :goto_6
+
+    :cond_6
+    :goto_2
+    invoke-interface {p1}, Ljava/util/List;->size()I
+
+    move-result v0
+
+    move v4, v3
+
+    :goto_3
+    if-ge v4, v0, :cond_7
+
+    invoke-interface {p1, v4}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object v5
+
+    invoke-virtual {v1, v5}, Ljo9;->b(Ljava/lang/Object;)V
+
+    add-int/lit8 v4, v4, 0x1
+
+    goto :goto_3
+
+    :cond_7
+    invoke-interface {p2}, Ljava/util/Collection;->size()I
+
+    move-result p1
+
+    move v0, v2
+
+    :goto_4
+    if-ge v0, p1, :cond_8
+
+    invoke-interface {p2, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object v4
+
+    invoke-virtual {v1, v4}, Ljo9;->b(Ljava/lang/Object;)V
+
+    add-int/lit8 v0, v0, 0x1
+
+    goto :goto_4
+
+    :cond_8
+    const/4 p1, 0x2
+
+    invoke-static {p0, v3, p1}, Lmda;->a(Lmda;II)Lida;
+
+    move-result-object p1
+
+    invoke-virtual {p1, v2}, Landroid/view/View;->setVisibility(I)V
+
+    invoke-virtual {p1, p3}, Lida;->setEnabled(Z)V
+
+    iput v3, p0, Lmda;->v0:I
+
+    :cond_9
+    :goto_5
+    add-int/lit8 v3, v3, 0x1
+
+    :goto_6
+    invoke-virtual {p0}, Landroid/view/ViewGroup;->getChildCount()I
+
+    move-result p1
+
+    if-ge v3, p1, :cond_a
+
+    invoke-virtual {p0, v3}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
+
+    move-result-object p1
+
+    if-eqz p1, :cond_9
+
+    const/16 p2, 0x8
+
+    invoke-virtual {p1, p2}, Landroid/view/View;->setVisibility(I)V
+
+    goto :goto_5
+
+    :cond_a
+    return-void
+.end method
+
+.method public final getAppearance()Leda;
+    .locals 2
+
+    sget-object v0, Lmda;->y0:[Lxi7;
+
+    const/4 v1, 0x1
+
+    aget-object v0, v0, v1
+
+    iget-object p0, p0, Lmda;->c:Llda;
+
+    iget-object p0, p0, Lx2;->b:Ljava/lang/Object;
+
+    check-cast p0, Leda;
+
+    return-object p0
+.end method
+
+.method public final getCustomTheme()Lera;
+    .locals 2
+
+    sget-object v0, Lmda;->y0:[Lxi7;
+
+    const/4 v1, 0x2
+
+    aget-object v0, v0, v1
+
+    iget-object p0, p0, Lmda;->o:Llda;
+
+    iget-object p0, p0, Lx2;->b:Ljava/lang/Object;
+
+    check-cast p0, Lera;
+
+    return-object p0
+.end method
+
+.method public final getListener()Lkda;
+    .locals 0
+
+    iget-object p0, p0, Lmda;->a:Lkda;
+
+    return-object p0
+.end method
+
+.method public final getMode()Lfda;
+    .locals 2
+
+    sget-object v0, Lmda;->y0:[Lxi7;
+
+    const/4 v1, 0x0
+
+    aget-object v0, v0, v1
+
+    iget-object p0, p0, Lmda;->b:Llda;
+
+    iget-object p0, p0, Lx2;->b:Ljava/lang/Object;
+
+    check-cast p0, Lfda;
+
+    return-object p0
+.end method
+
+.method public final onLayout(ZIIII)V
+    .locals 2
+
+    invoke-virtual {p0}, Landroid/view/ViewGroup;->getChildCount()I
+
+    move-result p1
+
+    const/4 p2, 0x0
+
+    move p3, p2
+
+    move p4, p3
+
+    :goto_0
+    if-ge p3, p1, :cond_1
+
+    invoke-virtual {p0, p3}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
+
+    move-result-object p5
+
+    iget v0, p0, Lmda;->w0:I
+
+    iget v1, p0, Lmda;->x0:I
+
+    if-gt p3, v1, :cond_0
+
+    if-gt v0, p3, :cond_0
+
+    invoke-static {p5, p2, p2, p2, p2}, Lzyd;->u(Landroid/view/View;IIII)V
+
+    goto :goto_1
+
+    :cond_0
+    const/16 v0, 0xc
+
+    invoke-static {p5, p4, p2, p2, v0}, Lzyd;->w(Landroid/view/View;IIII)V
+
+    invoke-virtual {p5}, Landroid/view/View;->getMeasuredWidth()I
+
+    move-result p5
+
+    const/16 v0, 0x8
+
+    int-to-float v0, v0
+
+    invoke-static {}, Lvo4;->d()Landroid/content/res/Resources;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object v1
+
+    iget v1, v1, Landroid/util/DisplayMetrics;->density:F
+
+    invoke-static {v0, v1, p5, p4}, Lsg0;->b(FFII)I
+
+    move-result p4
+
+    :goto_1
+    add-int/lit8 p3, p3, 0x1
+
+    goto :goto_0
+
+    :cond_1
+    return-void
+.end method
+
+.method public final onMeasure(II)V
+    .locals 13
+
+    invoke-static {p1}, Landroid/view/View$MeasureSpec;->getSize(I)I
+
+    move-result v0
+
+    invoke-static {p2}, Landroid/view/View$MeasureSpec;->getMode(I)I
+
+    move-result v1
+
+    invoke-static {p1}, Landroid/view/View$MeasureSpec;->getMode(I)I
+
+    move-result v2
+
+    const/high16 v3, -0x80000000
+
+    const/16 v4, 0x8
+
+    const/high16 v5, 0x40000000    # 2.0f
+
+    const/4 v6, 0x1
+
+    const/4 v7, 0x0
+
+    if-eq v2, v3, :cond_1
+
+    if-eq v2, v5, :cond_1
+
+    invoke-virtual {p0}, Landroid/view/ViewGroup;->getChildCount()I
+
+    move-result v0
+
+    move v1, v7
+
+    move v2, v1
+
+    :goto_0
+    if-ge v7, v0, :cond_0
+
+    invoke-virtual {p0, v7}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
+
+    move-result-object v3
+
+    invoke-virtual {v3, p1, p2}, Landroid/view/View;->measure(II)V
+
+    invoke-virtual {v3}, Landroid/view/View;->getMeasuredWidth()I
+
+    move-result v5
+
+    add-int/2addr v1, v5
+
+    invoke-virtual {v3}, Landroid/view/View;->getMeasuredHeight()I
+
+    move-result v3
+
+    invoke-static {v2, v3}, Ljava/lang/Math;->max(II)I
+
+    move-result v2
+
+    add-int/lit8 v7, v7, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    invoke-virtual {p0}, Landroid/view/ViewGroup;->getChildCount()I
+
+    move-result p1
+
+    sub-int/2addr p1, v6
+
+    int-to-float p2, v4
+
+    invoke-static {}, Lvo4;->d()Landroid/content/res/Resources;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object v0
+
+    iget v0, v0, Landroid/util/DisplayMetrics;->density:F
+
+    mul-float/2addr p2, v0
+
+    invoke-static {p2}, Lya6;->G(F)I
+
+    move-result p2
+
+    mul-int/2addr p2, p1
+
+    add-int/2addr p2, v1
+
+    invoke-virtual {p0, p2, v2}, Landroid/view/View;->setMeasuredDimension(II)V
+
+    return-void
+
+    :cond_1
+    invoke-virtual {p0}, Landroid/view/ViewGroup;->getChildCount()I
+
+    move-result p1
+
+    sub-int/2addr p1, v6
+
+    :goto_1
+    const/4 v2, -0x1
+
+    if-ge v2, p1, :cond_3
+
+    invoke-virtual {p0, p1}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
+
+    move-result-object v3
+
+    if-eqz v3, :cond_2
+
+    invoke-virtual {v3}, Landroid/view/View;->getVisibility()I
+
+    move-result v3
+
+    if-nez v3, :cond_2
+
+    goto :goto_2
+
+    :cond_2
+    add-int/lit8 p1, p1, -0x1
+
+    goto :goto_1
+
+    :cond_3
+    move p1, v2
+
+    :goto_2
+    if-ne p1, v2, :cond_4
+
+    invoke-virtual {p0, v7, v7}, Landroid/view/View;->setMeasuredDimension(II)V
+
+    return-void
+
+    :cond_4
+    iput v2, p0, Lmda;->w0:I
+
+    iput v2, p0, Lmda;->x0:I
+
+    iget-object v3, p0, Lmda;->s0:Ljo9;
+
+    invoke-virtual {v3}, Ljo9;->d()V
+
+    add-int/lit8 v8, p1, 0x1
+
+    int-to-float v4, v4
+
+    invoke-static {}, Lvo4;->d()Landroid/content/res/Resources;
+
+    move-result-object v9
+
+    invoke-virtual {v9}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object v9
+
+    iget v9, v9, Landroid/util/DisplayMetrics;->density:F
+
+    mul-float/2addr v9, v4
+
+    invoke-static {v9}, Lya6;->G(F)I
+
+    move-result v9
+
+    mul-int/2addr v9, p1
+
+    sub-int p1, v0, v9
+
+    div-int/2addr p1, v8
+
+    :goto_3
+    const/16 v9, 0x43
+
+    int-to-float v9, v9
+
+    invoke-static {}, Lvo4;->d()Landroid/content/res/Resources;
+
+    move-result-object v10
+
+    invoke-virtual {v10}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object v10
+
+    iget v10, v10, Landroid/util/DisplayMetrics;->density:F
+
+    mul-float/2addr v9, v10
+
+    invoke-static {v9}, Lya6;->G(F)I
+
+    move-result v9
+
+    if-ge p1, v9, :cond_b
+
+    iget p1, p0, Lmda;->v0:I
+
+    if-ne p1, v2, :cond_5
+
+    move v9, v6
+
+    goto :goto_4
+
+    :cond_5
+    move v9, v7
+
+    :goto_4
+    if-ne p1, v2, :cond_6
+
+    invoke-virtual {p0}, Landroid/view/ViewGroup;->getChildCount()I
+
+    move-result p1
+
+    iput p1, p0, Lmda;->v0:I
+
+    invoke-static {p0, v7, v6}, Lmda;->a(Lmda;II)Lida;
+
+    :cond_6
+    iget p1, p0, Lmda;->x0:I
+
+    const/4 v10, 0x2
+
+    if-ne p1, v2, :cond_9
+
+    iget p1, p0, Lmda;->v0:I
+
+    if-eqz v9, :cond_7
+
+    move v11, v10
+
+    goto :goto_5
+
+    :cond_7
+    move v11, v6
+
+    :goto_5
+    sub-int v11, p1, v11
+
+    iput v11, p0, Lmda;->w0:I
+
+    if-eqz v9, :cond_8
+
+    goto :goto_6
+
+    :cond_8
+    move v10, v6
+
+    :goto_6
+    sub-int/2addr p1, v10
+
+    iput p1, p0, Lmda;->x0:I
+
+    goto :goto_8
+
+    :cond_9
+    if-eqz v9, :cond_a
+
+    goto :goto_7
+
+    :cond_a
+    move v10, v6
+
+    :goto_7
+    sub-int/2addr p1, v10
+
+    iput p1, p0, Lmda;->w0:I
+
+    :goto_8
+    iget-object p1, p0, Lmda;->r0:Ljo9;
+
+    iget v9, p0, Lmda;->w0:I
+
+    invoke-virtual {p1, v9}, Ljo9;->f(I)Ljava/lang/Object;
+
+    move-result-object p1
+
+    invoke-virtual {v3, v7, p1}, Ljo9;->a(ILjava/lang/Object;)V
+
+    add-int/lit8 p1, v8, -0x1
+
+    add-int/lit8 v8, v8, -0x2
+
+    invoke-static {}, Lvo4;->d()Landroid/content/res/Resources;
+
+    move-result-object v9
+
+    invoke-virtual {v9}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object v9
+
+    iget v9, v9, Landroid/util/DisplayMetrics;->density:F
+
+    mul-float/2addr v9, v4
+
+    invoke-static {v9}, Lya6;->G(F)I
+
+    move-result v9
+
+    mul-int/2addr v9, v8
+
+    sub-int v8, v0, v9
+
+    div-int/2addr v8, p1
+
+    move v12, v8
+
+    move v8, p1
+
+    move p1, v12
+
+    goto :goto_3
+
+    :cond_b
+    invoke-virtual {p0}, Landroid/view/ViewGroup;->getChildCount()I
+
+    move-result v2
+
+    move v3, v7
+
+    :goto_9
+    if-ge v7, v2, :cond_d
+
+    iget v4, p0, Lmda;->w0:I
+
+    iget v6, p0, Lmda;->x0:I
+
+    if-gt v7, v6, :cond_c
+
+    if-gt v4, v7, :cond_c
+
+    goto :goto_a
+
+    :cond_c
+    invoke-static {p1, v5}, Landroid/view/View$MeasureSpec;->makeMeasureSpec(II)I
+
+    move-result v4
+
+    invoke-virtual {p0, v7}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
+
+    move-result-object v6
+
+    invoke-virtual {v6, v4, p2}, Landroid/view/View;->measure(II)V
+
+    invoke-virtual {v6}, Landroid/view/View;->getMeasuredHeight()I
+
+    move-result v4
+
+    invoke-static {v3, v4}, Ljava/lang/Math;->max(II)I
+
+    move-result v3
+
+    :goto_a
+    add-int/lit8 v7, v7, 0x1
+
+    goto :goto_9
+
+    :cond_d
+    invoke-static {v1, v3}, Ljava/lang/Math;->max(II)I
+
+    move-result p1
+
+    invoke-virtual {p0, v0, p1}, Landroid/view/View;->setMeasuredDimension(II)V
+
+    return-void
+.end method
+
+.method public final setAppearance(Leda;)V
+    .locals 2
+
+    sget-object v0, Lmda;->y0:[Lxi7;
+
+    const/4 v1, 0x1
+
+    aget-object v0, v0, v1
+
+    iget-object v1, p0, Lmda;->c:Llda;
+
+    invoke-virtual {v1, p0, v0, p1}, Lx2;->h0(Ljava/lang/Object;Lxi7;Ljava/lang/Object;)V
+
+    return-void
+.end method
+
+.method public final setCustomTheme(Lera;)V
+    .locals 2
+
+    sget-object v0, Lmda;->y0:[Lxi7;
+
+    const/4 v1, 0x2
+
+    aget-object v0, v0, v1
+
+    iget-object v1, p0, Lmda;->o:Llda;
+
+    invoke-virtual {v1, p0, v0, p1}, Lx2;->h0(Ljava/lang/Object;Lxi7;Ljava/lang/Object;)V
+
+    return-void
+.end method
+
+.method public final setListener(Lkda;)V
+    .locals 0
+
+    iput-object p1, p0, Lmda;->a:Lkda;
+
+    return-void
+.end method
+
+.method public final setMode(Lfda;)V
+    .locals 2
+
+    sget-object v0, Lmda;->y0:[Lxi7;
+
+    const/4 v1, 0x0
+
+    aget-object v0, v0, v1
+
+    iget-object v1, p0, Lmda;->b:Llda;
+
+    invoke-virtual {v1, p0, v0, p1}, Lx2;->h0(Ljava/lang/Object;Lxi7;Ljava/lang/Object;)V
 
     return-void
 .end method

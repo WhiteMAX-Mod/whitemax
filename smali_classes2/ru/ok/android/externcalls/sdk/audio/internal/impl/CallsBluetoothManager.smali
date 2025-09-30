@@ -30,7 +30,7 @@
         "logger",
         "<init>",
         "(Landroid/content/Context;Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsAudioManagerV2Impl;Lru/ok/android/externcalls/sdk/audio/Logger;)V",
-        "Le5f;",
+        "Lylf;",
         "start",
         "()V",
         "stop",
@@ -177,7 +177,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager$Companion;-><init>(Ll94;)V
+    invoke-direct {v0, v1}, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager$Companion;-><init>(Lld4;)V
 
     sput-object v0, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager;->Companion:Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager$Companion;
 
@@ -223,19 +223,19 @@
 
     iput-object p2, p0, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager;->bluetoothHeadsetReceiver:Landroid/content/BroadcastReceiver;
 
-    new-instance p2, Lvq1;
+    new-instance p2, Let1;
 
     const/4 v0, 0x0
 
-    invoke-direct {p2, p0, v0}, Lvq1;-><init>(Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager;I)V
+    invoke-direct {p2, p0, v0}, Let1;-><init>(Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager;I)V
 
     iput-object p2, p0, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager;->bluetoothTimeoutRunnable:Ljava/lang/Runnable;
 
-    new-instance p2, Lvq1;
+    new-instance p2, Let1;
 
     const/4 v0, 0x1
 
-    invoke-direct {p2, p0, v0}, Lvq1;-><init>(Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager;I)V
+    invoke-direct {p2, p0, v0}, Let1;-><init>(Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager;I)V
 
     iput-object p2, p0, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager;->updateAudioManagerRunnable:Ljava/lang/Runnable;
 
@@ -532,7 +532,7 @@
     return-object p0
 
     :cond_0
-    invoke-static {p1}, Lc4;->p(Landroid/bluetooth/BluetoothDevice;)Ljava/lang/String;
+    invoke-static {p1}, Lg4;->q(Landroid/bluetooth/BluetoothDevice;)Ljava/lang/String;
 
     move-result-object p0
 
@@ -757,7 +757,7 @@
 
     const-string v0, "android.permission.BLUETOOTH"
 
-    invoke-static {p0, v0}, Lu7;->p(Landroid/content/Context;Ljava/lang/String;)I
+    invoke-static {p0, v0}, Lw7;->d(Landroid/content/Context;Ljava/lang/String;)I
 
     move-result p0
 
@@ -773,7 +773,7 @@
 
     const-string v0, "android.permission.BLUETOOTH_CONNECT"
 
-    invoke-static {p0, v0}, Lu7;->p(Landroid/content/Context;Ljava/lang/String;)I
+    invoke-static {p0, v0}, Lw7;->d(Landroid/content/Context;Ljava/lang/String;)I
 
     move-result p0
 
@@ -1403,7 +1403,7 @@
 
     sget-object v0, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager$HeadsetState$None;->INSTANCE:Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager$HeadsetState$None;
 
-    invoke-static {p1, v0}, Lxq7;->d(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {p1, v0}, Lvyg;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 
@@ -1472,7 +1472,7 @@
 
     sget-object v0, Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager$HeadsetState$None;->INSTANCE:Lru/ok/android/externcalls/sdk/audio/internal/impl/CallsBluetoothManager$HeadsetState$None;
 
-    invoke-static {p1, v0}, Lxq7;->d(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {p1, v0}, Lvyg;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p1
 

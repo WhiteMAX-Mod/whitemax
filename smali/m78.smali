@@ -1,1474 +1,486 @@
 .class public final Lm78;
-.super Ljava/lang/Object;
+.super Lrc;
 .source "SourceFile"
 
 
+# static fields
+.field public static final e:I
+
+.field public static final f:I
+
+.field public static final g:I
+
+
 # instance fields
-.field public final a:Ljava/lang/String;
+.field public final c:Lk88;
 
-.field public final b:Ljava/lang/String;
-
-.field public final c:Ljava/lang/String;
-
-.field public final d:Landroid/media/MediaCodecInfo$CodecCapabilities;
-
-.field public final e:Z
-
-.field public final f:Z
-
-.field public final g:Z
-
-.field public final h:Z
+.field public final d:Landroid/graphics/Rect;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Landroid/media/MediaCodecInfo$CodecCapabilities;ZZZ)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    sget v0, Ls2c;->alertDialogStyle:I
 
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    sput v0, Lm78;->e:I
 
-    iput-object p1, p0, Lm78;->a:Ljava/lang/String;
+    sget v0, Ltcc;->MaterialAlertDialog_MaterialComponents:I
 
-    iput-object p2, p0, Lm78;->b:Ljava/lang/String;
+    sput v0, Lm78;->f:I
 
-    iput-object p3, p0, Lm78;->c:Ljava/lang/String;
+    sget v0, Ls2c;->materialAlertDialogTheme:I
 
-    iput-object p4, p0, Lm78;->d:Landroid/media/MediaCodecInfo$CodecCapabilities;
-
-    iput-boolean p5, p0, Lm78;->g:Z
-
-    iput-boolean p6, p0, Lm78;->e:Z
-
-    iput-boolean p7, p0, Lm78;->f:Z
-
-    invoke-static {p2}, Lz89;->j(Ljava/lang/String;)Z
-
-    move-result p1
-
-    iput-boolean p1, p0, Lm78;->h:Z
+    sput v0, Lm78;->g:I
 
     return-void
 .end method
 
-.method public static a(Landroid/media/MediaCodecInfo$VideoCapabilities;IID)Z
-    .locals 3
+.method public constructor <init>(Landroid/content/Context;I)V
+    .locals 11
 
-    invoke-virtual {p0}, Landroid/media/MediaCodecInfo$VideoCapabilities;->getWidthAlignment()I
+    sget p2, Lm78;->g:I
 
-    move-result v0
+    invoke-static {p1, p2}, Lu64;->A(Landroid/content/Context;I)Landroid/util/TypedValue;
 
-    invoke-virtual {p0}, Landroid/media/MediaCodecInfo$VideoCapabilities;->getHeightAlignment()I
-
-    move-result v1
-
-    new-instance v2, Landroid/graphics/Point;
-
-    invoke-static {p1, v0}, Lnaf;->f(II)I
-
-    move-result p1
-
-    mul-int/2addr p1, v0
-
-    invoke-static {p2, v1}, Lnaf;->f(II)I
-
-    move-result p2
-
-    mul-int/2addr p2, v1
-
-    invoke-direct {v2, p1, p2}, Landroid/graphics/Point;-><init>(II)V
-
-    iget p1, v2, Landroid/graphics/Point;->x:I
-
-    iget p2, v2, Landroid/graphics/Point;->y:I
-
-    const-wide/high16 v0, -0x4010000000000000L    # -1.0
-
-    cmpl-double v0, p3, v0
-
-    if-eqz v0, :cond_1
-
-    const-wide/high16 v0, 0x3ff0000000000000L    # 1.0
-
-    cmpg-double v0, p3, v0
-
-    if-gez v0, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    invoke-static {p3, p4}, Ljava/lang/Math;->floor(D)D
-
-    move-result-wide p3
-
-    invoke-virtual {p0, p1, p2, p3, p4}, Landroid/media/MediaCodecInfo$VideoCapabilities;->areSizeAndRateSupported(IID)Z
-
-    move-result p0
-
-    return p0
-
-    :cond_1
-    :goto_0
-    invoke-virtual {p0, p1, p2}, Landroid/media/MediaCodecInfo$VideoCapabilities;->isSizeSupported(II)Z
-
-    move-result p0
-
-    return p0
-.end method
-
-.method public static g(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Landroid/media/MediaCodecInfo$CodecCapabilities;ZZ)Lm78;
-    .locals 8
-
-    new-instance v0, Lm78;
+    move-result-object v0
 
     const/4 v1, 0x0
 
-    const/4 v2, 0x1
+    if-nez v0, :cond_0
 
-    if-eqz p3, :cond_2
-
-    sget v3, Lnaf;->a:I
-
-    const/16 v4, 0x13
-
-    if-lt v3, v4, :cond_2
-
-    const-string v4, "adaptive-playback"
-
-    invoke-virtual {p3, v4}, Landroid/media/MediaCodecInfo$CodecCapabilities;->isFeatureSupported(Ljava/lang/String;)Z
-
-    move-result v4
-
-    if-eqz v4, :cond_2
-
-    const/16 v4, 0x16
-
-    if-gt v3, v4, :cond_1
-
-    sget-object v3, Lnaf;->d:Ljava/lang/String;
-
-    const-string v4, "ODROID-XU3"
-
-    invoke-virtual {v4, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v4
-
-    if-nez v4, :cond_0
-
-    const-string v4, "Nexus 10"
-
-    invoke-virtual {v4, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v3
-
-    if-eqz v3, :cond_1
-
-    :cond_0
-    const-string v3, "OMX.Exynos.AVC.Decoder"
-
-    invoke-virtual {v3, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v3
-
-    if-nez v3, :cond_2
-
-    const-string v3, "OMX.Exynos.AVC.Decoder.secure"
-
-    invoke-virtual {v3, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v3
-
-    if-eqz v3, :cond_1
+    move v0, v1
 
     goto :goto_0
 
-    :cond_1
-    move v6, v2
+    :cond_0
+    iget v0, v0, Landroid/util/TypedValue;->data:I
+
+    :goto_0
+    const/4 v2, 0x0
+
+    sget v6, Lm78;->e:I
+
+    sget v7, Lm78;->f:I
+
+    invoke-static {p1, v2, v6, v7}, Ls88;->a(Landroid/content/Context;Landroid/util/AttributeSet;II)Landroid/content/Context;
+
+    move-result-object v3
+
+    if-nez v0, :cond_1
 
     goto :goto_1
 
-    :cond_2
-    :goto_0
-    move v6, v1
+    :cond_1
+    new-instance v4, Lfx3;
+
+    invoke-direct {v4, v3, v0}, Lfx3;-><init>(Landroid/content/Context;I)V
+
+    move-object v3, v4
 
     :goto_1
-    const/16 v3, 0x15
+    invoke-static {p1, p2}, Lu64;->A(Landroid/content/Context;I)Landroid/util/TypedValue;
 
-    if-eqz p3, :cond_3
+    move-result-object p1
 
-    sget v4, Lnaf;->a:I
+    if-nez p1, :cond_2
 
-    if-lt v4, v3, :cond_3
-
-    const-string v4, "tunneled-playback"
-
-    invoke-virtual {p3, v4}, Landroid/media/MediaCodecInfo$CodecCapabilities;->isFeatureSupported(Ljava/lang/String;)Z
-
-    move-result v4
-
-    :cond_3
-    if-nez p5, :cond_5
-
-    if-eqz p3, :cond_4
-
-    sget p5, Lnaf;->a:I
-
-    if-lt p5, v3, :cond_4
-
-    const-string p5, "secure-playback"
-
-    invoke-virtual {p3, p5}, Landroid/media/MediaCodecInfo$CodecCapabilities;->isFeatureSupported(Ljava/lang/String;)Z
-
-    move-result p5
-
-    if-eqz p5, :cond_4
+    move p1, v1
 
     goto :goto_2
 
-    :cond_4
-    move v7, v1
+    :cond_2
+    iget p1, p1, Landroid/util/TypedValue;->data:I
 
-    move-object v2, p1
-
-    move-object v3, p2
-
-    move-object v4, p3
-
-    move v5, p4
-
-    move-object v1, p0
-
-    goto :goto_3
-
-    :cond_5
     :goto_2
-    move v7, v2
+    invoke-direct {p0, v3, p1}, Lrc;-><init>(Landroid/content/Context;I)V
 
-    move-object v1, p0
+    invoke-virtual {p0}, Lrc;->getContext()Landroid/content/Context;
 
-    move-object v3, p2
+    move-result-object v3
 
-    move-object v4, p3
+    invoke-virtual {v3}, Landroid/content/Context;->getTheme()Landroid/content/res/Resources$Theme;
 
-    move v5, p4
+    move-result-object p1
 
-    move-object v2, p1
+    sget-object v5, Lgdc;->MaterialAlertDialog:[I
 
-    :goto_3
-    invoke-direct/range {v0 .. v7}, Lm78;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Landroid/media/MediaCodecInfo$CodecCapabilities;ZZZ)V
+    new-array v8, v1, [I
 
-    return-object v0
+    const/4 v4, 0x0
+
+    invoke-static {v3, v4, v6, v7}, Lg4f;->a(Landroid/content/Context;Landroid/util/AttributeSet;II)V
+
+    invoke-static/range {v3 .. v8}, Lg4f;->b(Landroid/content/Context;Landroid/util/AttributeSet;[III[I)V
+
+    invoke-virtual {v3, v4, v5, v6, v7}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[III)Landroid/content/res/TypedArray;
+
+    move-result-object p2
+
+    sget v0, Lgdc;->MaterialAlertDialog_backgroundInsetStart:I
+
+    invoke-virtual {v3}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v1
+
+    sget v4, Lr3c;->mtrl_alert_dialog_background_inset_start:I
+
+    invoke-virtual {v1, v4}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
+
+    move-result v1
+
+    invoke-virtual {p2, v0, v1}, Landroid/content/res/TypedArray;->getDimensionPixelSize(II)I
+
+    move-result v0
+
+    sget v1, Lgdc;->MaterialAlertDialog_backgroundInsetTop:I
+
+    invoke-virtual {v3}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v4
+
+    sget v5, Lr3c;->mtrl_alert_dialog_background_inset_top:I
+
+    invoke-virtual {v4, v5}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
+
+    move-result v4
+
+    invoke-virtual {p2, v1, v4}, Landroid/content/res/TypedArray;->getDimensionPixelSize(II)I
+
+    move-result v1
+
+    sget v4, Lgdc;->MaterialAlertDialog_backgroundInsetEnd:I
+
+    invoke-virtual {v3}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v5
+
+    sget v8, Lr3c;->mtrl_alert_dialog_background_inset_end:I
+
+    invoke-virtual {v5, v8}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
+
+    move-result v5
+
+    invoke-virtual {p2, v4, v5}, Landroid/content/res/TypedArray;->getDimensionPixelSize(II)I
+
+    move-result v4
+
+    sget v5, Lgdc;->MaterialAlertDialog_backgroundInsetBottom:I
+
+    invoke-virtual {v3}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v8
+
+    sget v9, Lr3c;->mtrl_alert_dialog_background_inset_bottom:I
+
+    invoke-virtual {v8, v9}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
+
+    move-result v8
+
+    invoke-virtual {p2, v5, v8}, Landroid/content/res/TypedArray;->getDimensionPixelSize(II)I
+
+    move-result v5
+
+    invoke-virtual {p2}, Landroid/content/res/TypedArray;->recycle()V
+
+    invoke-virtual {v3}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object p2
+
+    invoke-virtual {p2}, Landroid/content/res/Resources;->getConfiguration()Landroid/content/res/Configuration;
+
+    move-result-object p2
+
+    invoke-virtual {p2}, Landroid/content/res/Configuration;->getLayoutDirection()I
+
+    move-result p2
+
+    const/4 v8, 0x1
+
+    if-ne p2, v8, :cond_3
+
+    move v10, v4
+
+    move v4, v0
+
+    move v0, v10
+
+    :cond_3
+    new-instance p2, Landroid/graphics/Rect;
+
+    invoke-direct {p2, v0, v1, v4, v5}, Landroid/graphics/Rect;-><init>(IIII)V
+
+    iput-object p2, p0, Lm78;->d:Landroid/graphics/Rect;
+
+    sget p2, Ls2c;->colorSurface:I
+
+    const-class v0, Lm78;
+
+    invoke-virtual {v0}, Ljava/lang/Class;->getCanonicalName()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {p2, v3, v0}, Lr94;->s(ILandroid/content/Context;Ljava/lang/String;)I
+
+    move-result p2
+
+    sget-object v0, Lgdc;->MaterialAlertDialog:[I
+
+    invoke-virtual {v3, v2, v0, v6, v7}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[III)Landroid/content/res/TypedArray;
+
+    move-result-object v0
+
+    sget v1, Lgdc;->MaterialAlertDialog_backgroundTint:I
+
+    invoke-virtual {v0, v1, p2}, Landroid/content/res/TypedArray;->getColor(II)I
+
+    move-result p2
+
+    invoke-virtual {v0}, Landroid/content/res/TypedArray;->recycle()V
+
+    new-instance v0, Lk88;
+
+    invoke-direct {v0, v3, v2, v6, v7}, Lk88;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;II)V
+
+    invoke-virtual {v0, v3}, Lk88;->i(Landroid/content/Context;)V
+
+    invoke-static {p2}, Landroid/content/res/ColorStateList;->valueOf(I)Landroid/content/res/ColorStateList;
+
+    move-result-object p2
+
+    invoke-virtual {v0, p2}, Lk88;->k(Landroid/content/res/ColorStateList;)V
+
+    new-instance p2, Landroid/util/TypedValue;
+
+    invoke-direct {p2}, Landroid/util/TypedValue;-><init>()V
+
+    const v1, 0x1010571
+
+    invoke-virtual {p1, v1, p2, v8}, Landroid/content/res/Resources$Theme;->resolveAttribute(ILandroid/util/TypedValue;Z)Z
+
+    invoke-virtual {p0}, Lrc;->getContext()Landroid/content/Context;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object p1
+
+    invoke-virtual {p2, p1}, Landroid/util/TypedValue;->getDimension(Landroid/util/DisplayMetrics;)F
+
+    move-result p1
+
+    iget p2, p2, Landroid/util/TypedValue;->type:I
+
+    const/4 v1, 0x5
+
+    if-ne p2, v1, :cond_4
+
+    const/4 p2, 0x0
+
+    cmpl-float p2, p1, p2
+
+    if-ltz p2, :cond_4
+
+    iget-object p2, v0, Lk88;->a:Lj88;
+
+    iget-object p2, p2, Lj88;->a:Lhvd;
+
+    invoke-virtual {p2}, Lhvd;->e()Lhwg;
+
+    move-result-object p2
+
+    new-instance v1, Lz;
+
+    invoke-direct {v1, p1}, Lz;-><init>(F)V
+
+    iput-object v1, p2, Lhwg;->e:Ljava/lang/Object;
+
+    new-instance v1, Lz;
+
+    invoke-direct {v1, p1}, Lz;-><init>(F)V
+
+    iput-object v1, p2, Lhwg;->f:Ljava/lang/Object;
+
+    new-instance v1, Lz;
+
+    invoke-direct {v1, p1}, Lz;-><init>(F)V
+
+    iput-object v1, p2, Lhwg;->g:Ljava/lang/Object;
+
+    new-instance v1, Lz;
+
+    invoke-direct {v1, p1}, Lz;-><init>(F)V
+
+    iput-object v1, p2, Lhwg;->h:Ljava/lang/Object;
+
+    invoke-virtual {p2}, Lhwg;->f()Lhvd;
+
+    move-result-object p1
+
+    invoke-virtual {v0, p1}, Lk88;->setShapeAppearanceModel(Lhvd;)V
+
+    :cond_4
+    iput-object v0, p0, Lm78;->c:Lk88;
+
+    return-void
 .end method
 
 
 # virtual methods
-.method public final b(Ldz5;Ldz5;)Le64;
-    .locals 8
-
-    iget-object v0, p1, Ldz5;->s0:Ljava/lang/String;
-
-    iget-object v1, p2, Ldz5;->s0:Ljava/lang/String;
-
-    invoke-static {v0, v1}, Lnaf;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    const/16 v0, 0x8
-
-    goto :goto_0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    :goto_0
-    iget-boolean v1, p0, Lm78;->h:Z
-
-    if-eqz v1, :cond_9
-
-    iget v1, p1, Ldz5;->A0:I
-
-    iget v2, p2, Ldz5;->A0:I
-
-    if-eq v1, v2, :cond_1
-
-    or-int/lit16 v0, v0, 0x400
-
-    :cond_1
-    iget-boolean v1, p0, Lm78;->e:Z
-
-    if-nez v1, :cond_3
-
-    iget v1, p1, Ldz5;->x0:I
-
-    iget v2, p2, Ldz5;->x0:I
-
-    if-ne v1, v2, :cond_2
-
-    iget v1, p1, Ldz5;->y0:I
-
-    iget v2, p2, Ldz5;->y0:I
-
-    if-eq v1, v2, :cond_3
-
-    :cond_2
-    or-int/lit16 v0, v0, 0x200
-
-    :cond_3
-    iget-object v1, p1, Ldz5;->E0:Lz43;
-
-    iget-object v2, p2, Ldz5;->E0:Lz43;
-
-    invoke-static {v1, v2}, Lnaf;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_4
-
-    or-int/lit16 v0, v0, 0x800
-
-    :cond_4
-    sget-object v1, Lnaf;->d:Ljava/lang/String;
-
-    const-string v2, "SM-T230"
-
-    invoke-virtual {v1, v2}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_5
-
-    const-string v1, "OMX.MARVELL.VIDEO.HW.CODA7542DECODER"
-
-    iget-object v2, p0, Lm78;->a:Ljava/lang/String;
-
-    invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_5
-
-    invoke-virtual {p1, p2}, Ldz5;->b(Ldz5;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_5
-
-    or-int/lit8 v0, v0, 0x2
-
-    :cond_5
-    if-nez v0, :cond_7
-
-    new-instance v1, Le64;
-
-    invoke-virtual {p1, p2}, Ldz5;->b(Ldz5;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_6
-
-    const/4 v0, 0x3
-
-    :goto_1
-    move v5, v0
-
-    goto :goto_2
-
-    :cond_6
-    const/4 v0, 0x2
-
-    goto :goto_1
-
-    :goto_2
-    const/4 v6, 0x0
-
-    iget-object v2, p0, Lm78;->a:Ljava/lang/String;
-
-    move-object v3, p1
-
-    move-object v4, p2
-
-    invoke-direct/range {v1 .. v6}, Le64;-><init>(Ljava/lang/String;Ldz5;Ldz5;II)V
-
-    return-object v1
-
-    :cond_7
-    move-object v4, p1
-
-    move-object v5, p2
-
-    :cond_8
-    move v7, v0
-
-    goto/16 :goto_3
-
-    :cond_9
-    move-object v4, p1
-
-    move-object v5, p2
-
-    iget p1, v4, Ldz5;->F0:I
-
-    iget p2, v5, Ldz5;->F0:I
-
-    if-eq p1, p2, :cond_a
-
-    or-int/lit16 v0, v0, 0x1000
-
-    :cond_a
-    iget p1, v4, Ldz5;->G0:I
-
-    iget p2, v5, Ldz5;->G0:I
-
-    if-eq p1, p2, :cond_b
-
-    or-int/lit16 v0, v0, 0x2000
-
-    :cond_b
-    iget p1, v4, Ldz5;->H0:I
-
-    iget p2, v5, Ldz5;->H0:I
-
-    if-eq p1, p2, :cond_c
-
-    or-int/lit16 v0, v0, 0x4000
-
-    :cond_c
-    iget-object p1, p0, Lm78;->b:Ljava/lang/String;
-
-    if-nez v0, :cond_d
-
-    const-string p2, "audio/mp4a-latm"
-
-    invoke-virtual {p2, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result p2
-
-    if-eqz p2, :cond_d
-
-    invoke-static {v4}, Ld88;->d(Ldz5;)Landroid/util/Pair;
-
-    move-result-object p2
-
-    invoke-static {v5}, Ld88;->d(Ldz5;)Landroid/util/Pair;
-
-    move-result-object v1
-
-    if-eqz p2, :cond_d
-
-    if-eqz v1, :cond_d
-
-    iget-object p2, p2, Landroid/util/Pair;->first:Ljava/lang/Object;
-
-    check-cast p2, Ljava/lang/Integer;
-
-    invoke-virtual {p2}, Ljava/lang/Integer;->intValue()I
-
-    move-result p2
-
-    iget-object v1, v1, Landroid/util/Pair;->first:Ljava/lang/Object;
-
-    check-cast v1, Ljava/lang/Integer;
-
-    invoke-virtual {v1}, Ljava/lang/Integer;->intValue()I
-
-    move-result v1
-
-    const/16 v2, 0x2a
-
-    if-ne p2, v2, :cond_d
-
-    if-ne v1, v2, :cond_d
-
-    new-instance v2, Le64;
-
-    const/4 v6, 0x3
-
-    const/4 v7, 0x0
-
-    iget-object v3, p0, Lm78;->a:Ljava/lang/String;
-
-    invoke-direct/range {v2 .. v7}, Le64;-><init>(Ljava/lang/String;Ldz5;Ldz5;II)V
-
-    return-object v2
-
-    :cond_d
-    invoke-virtual {v4, v5}, Ldz5;->b(Ldz5;)Z
-
-    move-result p2
-
-    if-nez p2, :cond_e
-
-    or-int/lit8 v0, v0, 0x20
-
-    :cond_e
-    const-string p2, "audio/opus"
-
-    invoke-virtual {p2, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result p1
-
-    if-eqz p1, :cond_f
-
-    or-int/lit8 p1, v0, 0x2
-
-    move v0, p1
-
-    :cond_f
-    if-nez v0, :cond_8
-
-    new-instance v2, Le64;
-
-    const/4 v6, 0x1
-
-    const/4 v7, 0x0
-
-    iget-object v3, p0, Lm78;->a:Ljava/lang/String;
-
-    invoke-direct/range {v2 .. v7}, Le64;-><init>(Ljava/lang/String;Ldz5;Ldz5;II)V
-
-    return-object v2
-
-    :goto_3
-    new-instance v2, Le64;
-
-    iget-object v3, p0, Lm78;->a:Ljava/lang/String;
-
-    const/4 v6, 0x0
-
-    invoke-direct/range {v2 .. v7}, Le64;-><init>(Ljava/lang/String;Ldz5;Ldz5;II)V
-
-    return-object v2
-.end method
-
-.method public final c(Ldz5;)Z
-    .locals 17
-
-    move-object/from16 v0, p0
-
-    move-object/from16 v1, p1
-
-    iget-object v2, v1, Ldz5;->s0:Ljava/lang/String;
-
-    iget v3, v1, Ldz5;->y0:I
-
-    iget v4, v1, Ldz5;->x0:I
-
-    iget-object v5, v1, Ldz5;->p0:Ljava/lang/String;
-
-    iget-object v6, v0, Lm78;->b:Ljava/lang/String;
-
-    invoke-virtual {v6, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v2
-
-    const/4 v7, 0x0
-
-    if-nez v2, :cond_1
-
-    invoke-static {v1}, Ld88;->b(Ldz5;)Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {v6, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    return v7
-
-    :cond_1
-    :goto_0
-    iget-boolean v8, v0, Lm78;->h:Z
-
-    iget-object v9, v0, Lm78;->d:Landroid/media/MediaCodecInfo$CodecCapabilities;
-
-    const/4 v10, 0x1
-
-    if-nez v5, :cond_2
-
-    :goto_1
-    move/from16 v16, v7
-
-    goto/16 :goto_6
-
-    :cond_2
-    invoke-static {v1}, Ld88;->d(Ldz5;)Landroid/util/Pair;
-
-    move-result-object v11
-
-    if-nez v11, :cond_3
-
-    goto :goto_1
-
-    :cond_3
-    iget-object v12, v11, Landroid/util/Pair;->first:Ljava/lang/Object;
-
-    check-cast v12, Ljava/lang/Integer;
-
-    invoke-virtual {v12}, Ljava/lang/Integer;->intValue()I
-
-    move-result v12
-
-    iget-object v11, v11, Landroid/util/Pair;->second:Ljava/lang/Object;
-
-    check-cast v11, Ljava/lang/Integer;
-
-    invoke-virtual {v11}, Ljava/lang/Integer;->intValue()I
-
-    move-result v11
-
-    const-string v13, "video/dolby-vision"
-
-    iget-object v14, v1, Ldz5;->s0:Ljava/lang/String;
-
-    invoke-virtual {v13, v14}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v13
-
-    const/4 v14, 0x2
-
-    const/16 v15, 0x8
-
-    if-eqz v13, :cond_5
-
-    const-string v13, "video/avc"
-
-    invoke-virtual {v13, v6}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v13
-
-    if-eqz v13, :cond_4
-
-    move v11, v7
-
-    move v12, v15
-
-    goto :goto_2
-
-    :cond_4
-    const-string v13, "video/hevc"
-
-    invoke-virtual {v13, v6}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v13
-
-    if-eqz v13, :cond_5
-
-    move v11, v7
-
-    move v12, v14
-
-    :cond_5
-    :goto_2
-    if-nez v8, :cond_6
-
-    const/16 v13, 0x2a
-
-    if-eq v12, v13, :cond_6
-
-    goto :goto_1
-
-    :cond_6
-    if-eqz v9, :cond_7
-
-    iget-object v13, v9, Landroid/media/MediaCodecInfo$CodecCapabilities;->profileLevels:[Landroid/media/MediaCodecInfo$CodecProfileLevel;
-
-    if-nez v13, :cond_8
-
-    :cond_7
-    new-array v13, v7, [Landroid/media/MediaCodecInfo$CodecProfileLevel;
-
-    :cond_8
-    sget v2, Lnaf;->a:I
-
-    move/from16 v16, v7
-
-    const/16 v7, 0x17
-
-    if-gt v2, v7, :cond_14
-
-    const-string v2, "video/x-vnd.on2.vp9"
-
-    invoke-virtual {v2, v6}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_14
-
-    array-length v2, v13
-
-    if-nez v2, :cond_14
-
-    if-eqz v9, :cond_9
-
-    invoke-virtual {v9}, Landroid/media/MediaCodecInfo$CodecCapabilities;->getVideoCapabilities()Landroid/media/MediaCodecInfo$VideoCapabilities;
-
-    move-result-object v2
-
-    if-eqz v2, :cond_9
-
-    invoke-virtual {v2}, Landroid/media/MediaCodecInfo$VideoCapabilities;->getBitrateRange()Landroid/util/Range;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Landroid/util/Range;->getUpper()Ljava/lang/Comparable;
-
-    move-result-object v2
-
-    check-cast v2, Ljava/lang/Integer;
-
-    invoke-virtual {v2}, Ljava/lang/Integer;->intValue()I
-
-    move-result v2
-
-    goto :goto_3
-
-    :cond_9
-    move/from16 v2, v16
-
-    :goto_3
-    const v7, 0xaba9500
-
-    if-lt v2, v7, :cond_a
-
-    const/16 v14, 0x400
-
-    goto :goto_4
-
-    :cond_a
-    const v7, 0x7270e00
-
-    if-lt v2, v7, :cond_b
-
-    const/16 v14, 0x200
-
-    goto :goto_4
-
-    :cond_b
-    const v7, 0x3938700
-
-    if-lt v2, v7, :cond_c
-
-    const/16 v14, 0x100
-
-    goto :goto_4
-
-    :cond_c
-    const v7, 0x1c9c380
-
-    if-lt v2, v7, :cond_d
-
-    const/16 v14, 0x80
-
-    goto :goto_4
-
-    :cond_d
-    const v7, 0x112a880
-
-    if-lt v2, v7, :cond_e
-
-    const/16 v14, 0x40
-
-    goto :goto_4
-
-    :cond_e
-    const v7, 0xb71b00
-
-    if-lt v2, v7, :cond_f
-
-    const/16 v14, 0x20
-
-    goto :goto_4
-
-    :cond_f
-    const v7, 0x6ddd00
-
-    if-lt v2, v7, :cond_10
-
-    const/16 v14, 0x10
-
-    goto :goto_4
-
-    :cond_10
-    const v7, 0x36ee80
-
-    if-lt v2, v7, :cond_11
-
-    move v14, v15
-
-    goto :goto_4
-
-    :cond_11
-    const v7, 0x1b7740
-
-    if-lt v2, v7, :cond_12
-
-    const/4 v14, 0x4
-
-    goto :goto_4
-
-    :cond_12
-    const v7, 0xc3500
-
-    if-lt v2, v7, :cond_13
-
-    goto :goto_4
-
-    :cond_13
-    move v14, v10
-
-    :goto_4
-    new-instance v2, Landroid/media/MediaCodecInfo$CodecProfileLevel;
-
-    invoke-direct {v2}, Landroid/media/MediaCodecInfo$CodecProfileLevel;-><init>()V
-
-    iput v10, v2, Landroid/media/MediaCodecInfo$CodecProfileLevel;->profile:I
-
-    iput v14, v2, Landroid/media/MediaCodecInfo$CodecProfileLevel;->level:I
-
-    filled-new-array {v2}, [Landroid/media/MediaCodecInfo$CodecProfileLevel;
-
-    move-result-object v13
-
-    :cond_14
-    array-length v2, v13
-
-    move/from16 v7, v16
-
-    :goto_5
-    if-ge v7, v2, :cond_26
-
-    aget-object v14, v13, v7
-
-    iget v15, v14, Landroid/media/MediaCodecInfo$CodecProfileLevel;->profile:I
-
-    if-ne v15, v12, :cond_25
-
-    iget v14, v14, Landroid/media/MediaCodecInfo$CodecProfileLevel;->level:I
-
-    if-lt v14, v11, :cond_25
-
-    :goto_6
-    const/16 v2, 0x15
-
-    if-eqz v8, :cond_19
-
-    if-lez v4, :cond_24
-
-    if-gtz v3, :cond_15
-
-    goto/16 :goto_a
-
-    :cond_15
-    sget v5, Lnaf;->a:I
-
-    if-lt v5, v2, :cond_16
-
-    iget v1, v1, Ldz5;->z0:F
-
-    float-to-double v1, v1
-
-    invoke-virtual {v0, v4, v3, v1, v2}, Lm78;->e(IID)Z
-
-    move-result v0
-
-    return v0
-
-    :cond_16
-    mul-int v1, v4, v3
-
-    invoke-static {}, Ld88;->i()I
-
-    move-result v2
-
-    if-gt v1, v2, :cond_17
-
-    move v7, v10
-
-    goto :goto_7
-
-    :cond_17
-    move/from16 v7, v16
-
-    :goto_7
-    if-nez v7, :cond_18
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    const/16 v2, 0x28
-
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(I)V
-
-    const-string v2, "legacyFrameSize, "
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1, v4}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string v2, "x"
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Lm78;->f(Ljava/lang/String;)V
-
-    :cond_18
-    return v7
-
-    :cond_19
-    sget v3, Lnaf;->a:I
-
-    if-lt v3, v2, :cond_24
-
-    iget v2, v1, Ldz5;->G0:I
-
-    const/4 v4, -0x1
-
-    if-eq v2, v4, :cond_1c
-
-    if-nez v9, :cond_1a
-
-    const-string v1, "sampleRate.caps"
-
-    invoke-virtual {v0, v1}, Lm78;->f(Ljava/lang/String;)V
-
-    return v16
-
-    :cond_1a
-    invoke-virtual {v9}, Landroid/media/MediaCodecInfo$CodecCapabilities;->getAudioCapabilities()Landroid/media/MediaCodecInfo$AudioCapabilities;
-
-    move-result-object v5
-
-    if-nez v5, :cond_1b
-
-    const-string v1, "sampleRate.aCaps"
-
-    invoke-virtual {v0, v1}, Lm78;->f(Ljava/lang/String;)V
-
-    return v16
-
-    :cond_1b
-    invoke-virtual {v5, v2}, Landroid/media/MediaCodecInfo$AudioCapabilities;->isSampleRateSupported(I)Z
-
-    move-result v5
-
-    if-nez v5, :cond_1c
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    const/16 v3, 0x1f
-
-    invoke-direct {v1, v3}, Ljava/lang/StringBuilder;-><init>(I)V
-
-    const-string v3, "sampleRate.support, "
-
-    invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Lm78;->f(Ljava/lang/String;)V
-
-    return v16
-
-    :cond_1c
-    iget v1, v1, Ldz5;->F0:I
-
-    if-eq v1, v4, :cond_24
-
-    if-nez v9, :cond_1d
-
-    const-string v1, "channelCount.caps"
-
-    invoke-virtual {v0, v1}, Lm78;->f(Ljava/lang/String;)V
-
-    return v16
-
-    :cond_1d
-    invoke-virtual {v9}, Landroid/media/MediaCodecInfo$CodecCapabilities;->getAudioCapabilities()Landroid/media/MediaCodecInfo$AudioCapabilities;
-
-    move-result-object v2
-
-    if-nez v2, :cond_1e
-
-    const-string v1, "channelCount.aCaps"
-
-    invoke-virtual {v0, v1}, Lm78;->f(Ljava/lang/String;)V
-
-    return v16
-
-    :cond_1e
-    invoke-virtual {v2}, Landroid/media/MediaCodecInfo$AudioCapabilities;->getMaxInputChannelCount()I
-
-    move-result v2
-
-    if-gt v2, v10, :cond_23
-
-    const/16 v4, 0x1a
-
-    if-lt v3, v4, :cond_1f
-
-    if-lez v2, :cond_1f
-
-    goto/16 :goto_9
-
-    :cond_1f
-    const-string v3, "audio/mpeg"
-
-    invoke-virtual {v3, v6}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v3
-
-    if-nez v3, :cond_23
-
-    const-string v3, "audio/3gpp"
-
-    invoke-virtual {v3, v6}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v3
-
-    if-nez v3, :cond_23
-
-    const-string v3, "audio/amr-wb"
-
-    invoke-virtual {v3, v6}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v3
-
-    if-nez v3, :cond_23
-
-    const-string v3, "audio/mp4a-latm"
-
-    invoke-virtual {v3, v6}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v3
-
-    if-nez v3, :cond_23
-
-    const-string v3, "audio/vorbis"
-
-    invoke-virtual {v3, v6}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v3
-
-    if-nez v3, :cond_23
-
-    const-string v3, "audio/opus"
-
-    invoke-virtual {v3, v6}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v3
-
-    if-nez v3, :cond_23
-
-    const-string v3, "audio/raw"
-
-    invoke-virtual {v3, v6}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v3
-
-    if-nez v3, :cond_23
-
-    const-string v3, "audio/flac"
-
-    invoke-virtual {v3, v6}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v3
-
-    if-nez v3, :cond_23
-
-    const-string v3, "audio/g711-alaw"
-
-    invoke-virtual {v3, v6}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v3
-
-    if-nez v3, :cond_23
-
-    const-string v3, "audio/g711-mlaw"
-
-    invoke-virtual {v3, v6}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v3
-
-    if-nez v3, :cond_23
-
-    const-string v3, "audio/gsm"
-
-    invoke-virtual {v3, v6}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v3
-
-    if-eqz v3, :cond_20
-
-    goto :goto_9
-
-    :cond_20
-    const-string v2, "audio/ac3"
-
-    invoke-virtual {v2, v6}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_21
-
-    const/4 v2, 0x6
-
-    goto :goto_8
-
-    :cond_21
-    const-string v2, "audio/eac3"
-
-    invoke-virtual {v2, v6}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_22
-
-    const/16 v2, 0x10
-
-    goto :goto_8
-
-    :cond_22
-    const/16 v2, 0x1e
-
-    :goto_8
-    const/16 v3, 0x3b
-
-    iget-object v4, v0, Lm78;->a:Ljava/lang/String;
-
-    invoke-static {v3, v4}, Lv04;->e(ILjava/lang/String;)I
-
-    move-result v3
-
-    new-instance v4, Ljava/lang/StringBuilder;
-
-    invoke-direct {v4, v3}, Ljava/lang/StringBuilder;-><init>(I)V
-
-    :cond_23
-    :goto_9
-    if-ge v2, v1, :cond_24
-
-    new-instance v2, Ljava/lang/StringBuilder;
-
-    const/16 v3, 0x21
-
-    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(I)V
-
-    const-string v3, "channelCount.support, "
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Lm78;->f(Ljava/lang/String;)V
-
-    return v16
-
-    :cond_24
-    :goto_a
-    return v10
-
-    :cond_25
-    add-int/lit8 v7, v7, 0x1
-
-    goto/16 :goto_5
-
-    :cond_26
-    invoke-virtual {v5}, Ljava/lang/String;->length()I
-
-    move-result v1
-
-    add-int/lit8 v1, v1, 0x16
-
-    iget-object v2, v0, Lm78;->c:Ljava/lang/String;
-
-    invoke-virtual {v2}, Ljava/lang/String;->length()I
-
-    move-result v3
-
-    add-int/2addr v3, v1
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    invoke-direct {v1, v3}, Ljava/lang/StringBuilder;-><init>(I)V
-
-    const-string v3, "codec.profileLevel, "
-
-    invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v3, ", "
-
-    invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Lm78;->f(Ljava/lang/String;)V
-
-    return v16
-.end method
-
-.method public final d(Ldz5;)Z
+.method public final b(Lib6;)Lm78;
     .locals 1
 
-    iget-boolean v0, p0, Lm78;->h:Z
+    sget v0, Lx0d;->K:I
 
-    if-eqz v0, :cond_0
-
-    iget-boolean p0, p0, Lm78;->e:Z
-
-    return p0
-
-    :cond_0
-    invoke-static {p1}, Ld88;->d(Ldz5;)Landroid/util/Pair;
+    invoke-super {p0, v0, p1}, Lrc;->setNegativeButton(ILandroid/content/DialogInterface$OnClickListener;)Lrc;
 
     move-result-object p0
 
-    if-eqz p0, :cond_1
+    check-cast p0, Lm78;
 
-    iget-object p0, p0, Landroid/util/Pair;->first:Ljava/lang/Object;
-
-    check-cast p0, Ljava/lang/Integer;
-
-    invoke-virtual {p0}, Ljava/lang/Integer;->intValue()I
-
-    move-result p0
-
-    const/16 p1, 0x2a
-
-    if-ne p0, p1, :cond_1
-
-    const/4 p0, 0x1
-
-    return p0
-
-    :cond_1
-    const/4 p0, 0x0
-
-    return p0
+    return-object p0
 .end method
 
-.method public final e(IID)Z
-    .locals 7
+.method public final c(ILandroid/content/DialogInterface$OnClickListener;)Lm78;
+    .locals 0
 
-    const/4 v0, 0x0
+    invoke-super {p0, p1, p2}, Lrc;->setPositiveButton(ILandroid/content/DialogInterface$OnClickListener;)Lrc;
 
-    iget-object v1, p0, Lm78;->d:Landroid/media/MediaCodecInfo$CodecCapabilities;
+    move-result-object p0
 
-    if-nez v1, :cond_0
+    check-cast p0, Lm78;
 
-    const-string p1, "sizeAndRate.caps"
+    return-object p0
+.end method
 
-    invoke-virtual {p0, p1}, Lm78;->f(Ljava/lang/String;)V
+.method public final create()Lsc;
+    .locals 11
 
-    return v0
+    invoke-super {p0}, Lrc;->create()Lsc;
 
-    :cond_0
-    invoke-virtual {v1}, Landroid/media/MediaCodecInfo$CodecCapabilities;->getVideoCapabilities()Landroid/media/MediaCodecInfo$VideoCapabilities;
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/app/Dialog;->getWindow()Landroid/view/Window;
 
     move-result-object v1
 
-    if-nez v1, :cond_1
+    invoke-virtual {v1}, Landroid/view/Window;->getDecorView()Landroid/view/View;
 
-    const-string p1, "sizeAndRate.vCaps"
+    move-result-object v2
 
-    invoke-virtual {p0, p1}, Lm78;->f(Ljava/lang/String;)V
+    iget-object v3, p0, Lm78;->c:Lk88;
 
-    return v0
+    if-eqz v3, :cond_0
 
-    :cond_1
-    invoke-static {v1, p1, p2, p3, p4}, Lm78;->a(Landroid/media/MediaCodecInfo$VideoCapabilities;IID)Z
+    sget-object v4, Lh7g;->a:Ljava/util/WeakHashMap;
 
-    move-result v2
-
-    if-nez v2, :cond_5
-
-    const/16 v2, 0x45
-
-    const-string v3, "x"
-
-    if-ge p1, p2, :cond_4
-
-    const-string v4, "OMX.MTK.VIDEO.DECODER.HEVC"
-
-    iget-object v5, p0, Lm78;->a:Ljava/lang/String;
-
-    invoke-virtual {v4, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-static {v2}, Lw6g;->i(Landroid/view/View;)F
 
     move-result v4
 
-    if-eqz v4, :cond_2
+    invoke-virtual {v3, v4}, Lk88;->j(F)V
 
-    const-string v4, "mcv5a"
+    :cond_0
+    new-instance v5, Landroid/graphics/drawable/InsetDrawable;
 
-    sget-object v6, Lnaf;->b:Ljava/lang/String;
+    iget-object v3, p0, Lm78;->d:Landroid/graphics/Rect;
 
-    invoke-virtual {v4, v6}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    iget v7, v3, Landroid/graphics/Rect;->left:I
 
-    move-result v4
+    iget v8, v3, Landroid/graphics/Rect;->top:I
 
-    if-eqz v4, :cond_2
+    iget v9, v3, Landroid/graphics/Rect;->right:I
 
-    goto :goto_0
+    iget v10, v3, Landroid/graphics/Rect;->bottom:I
 
-    :cond_2
-    invoke-static {v1, p2, p1, p3, p4}, Lm78;->a(Landroid/media/MediaCodecInfo$VideoCapabilities;IID)Z
+    iget-object v6, p0, Lm78;->c:Lk88;
 
-    move-result v1
+    invoke-direct/range {v5 .. v10}, Landroid/graphics/drawable/InsetDrawable;-><init>(Landroid/graphics/drawable/Drawable;IIII)V
 
-    if-nez v1, :cond_3
+    invoke-virtual {v1, v5}, Landroid/view/Window;->setBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    goto :goto_0
+    new-instance p0, Lf97;
 
-    :cond_3
-    new-instance v0, Ljava/lang/StringBuilder;
+    invoke-direct {p0, v0, v3}, Lf97;-><init>(Landroid/app/Dialog;Landroid/graphics/Rect;)V
 
-    invoke-direct {v0, v2}, Ljava/lang/StringBuilder;-><init>(I)V
+    invoke-virtual {v2, p0}, Landroid/view/View;->setOnTouchListener(Landroid/view/View$OnTouchListener;)V
 
-    const-string v1, "sizeAndRate.rotated, "
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0, p2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0, p3, p4}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    sget-object p2, Lnaf;->e:Ljava/lang/String;
-
-    const/16 p3, 0x19
-
-    invoke-static {p3, p1}, Lv04;->e(ILjava/lang/String;)I
-
-    move-result p1
-
-    invoke-static {p1, v5}, Lv04;->e(ILjava/lang/String;)I
-
-    move-result p1
-
-    iget-object p0, p0, Lm78;->b:Ljava/lang/String;
-
-    invoke-static {p1, p0}, Lv04;->e(ILjava/lang/String;)I
-
-    move-result p0
-
-    invoke-static {p0, p2}, Lv04;->e(ILjava/lang/String;)I
-
-    move-result p0
-
-    new-instance p1, Ljava/lang/StringBuilder;
-
-    invoke-direct {p1, p0}, Ljava/lang/StringBuilder;-><init>(I)V
-
-    goto :goto_1
-
-    :cond_4
-    :goto_0
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(I)V
-
-    const-string v2, "sizeAndRate.support, "
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1, p2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1, p3, p4}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-virtual {p0, p1}, Lm78;->f(Ljava/lang/String;)V
-
-    return v0
-
-    :cond_5
-    :goto_1
-    const/4 p0, 0x1
-
-    return p0
+    return-object v0
 .end method
 
-.method public final f(Ljava/lang/String;)V
-    .locals 2
-
-    sget-object v0, Lnaf;->e:Ljava/lang/String;
-
-    const/16 v1, 0x14
-
-    invoke-static {v1, p1}, Lv04;->e(ILjava/lang/String;)I
-
-    move-result p1
-
-    iget-object v1, p0, Lm78;->a:Ljava/lang/String;
-
-    invoke-static {p1, v1}, Lv04;->e(ILjava/lang/String;)I
-
-    move-result p1
-
-    iget-object p0, p0, Lm78;->b:Ljava/lang/String;
-
-    invoke-static {p1, p0}, Lv04;->e(ILjava/lang/String;)I
-
-    move-result p0
-
-    invoke-static {p0, v0}, Lv04;->e(ILjava/lang/String;)I
-
-    move-result p0
-
-    new-instance p1, Ljava/lang/StringBuilder;
-
-    invoke-direct {p1, p0}, Ljava/lang/StringBuilder;-><init>(I)V
-
-    return-void
-.end method
-
-.method public final toString()Ljava/lang/String;
+.method public final d(Ljava/lang/CharSequence;)Lm78;
     .locals 0
 
-    iget-object p0, p0, Lm78;->a:Ljava/lang/String;
+    invoke-super {p0, p1}, Lrc;->setTitle(Ljava/lang/CharSequence;)Lrc;
+
+    move-result-object p0
+
+    check-cast p0, Lm78;
+
+    return-object p0
+.end method
+
+.method public final e(Landroid/view/View;)Lm78;
+    .locals 0
+
+    invoke-super {p0, p1}, Lrc;->setView(Landroid/view/View;)Lrc;
+
+    move-result-object p0
+
+    check-cast p0, Lm78;
+
+    return-object p0
+.end method
+
+.method public final setNegativeButton(ILandroid/content/DialogInterface$OnClickListener;)Lrc;
+    .locals 0
+
+    invoke-super {p0, p1, p2}, Lrc;->setNegativeButton(ILandroid/content/DialogInterface$OnClickListener;)Lrc;
+
+    move-result-object p0
+
+    check-cast p0, Lm78;
+
+    return-object p0
+.end method
+
+.method public final setPositiveButton(ILandroid/content/DialogInterface$OnClickListener;)Lrc;
+    .locals 0
+
+    invoke-super {p0, p1, p2}, Lrc;->setPositiveButton(ILandroid/content/DialogInterface$OnClickListener;)Lrc;
+
+    move-result-object p0
+
+    check-cast p0, Lm78;
+
+    return-object p0
+.end method
+
+.method public final setTitle(Ljava/lang/CharSequence;)Lrc;
+    .locals 0
+
+    invoke-super {p0, p1}, Lrc;->setTitle(Ljava/lang/CharSequence;)Lrc;
+
+    move-result-object p0
+
+    check-cast p0, Lm78;
+
+    return-object p0
+.end method
+
+.method public final setView(Landroid/view/View;)Lrc;
+    .locals 0
+
+    invoke-super {p0, p1}, Lrc;->setView(Landroid/view/View;)Lrc;
+
+    move-result-object p0
+
+    check-cast p0, Lm78;
 
     return-object p0
 .end method

@@ -1,298 +1,265 @@
-.class public final synthetic Li1e;
+.class public final Li1e;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lv56;
-
 
 # instance fields
-.field public final synthetic a:I
+.field public final a:J
 
-.field public final synthetic b:Lone/me/stickerspreview/StickerPreviewScreen;
+.field public final b:Lknc;
+
+.field public final c:Lsg1;
+
+.field public final d:J
+
+.field public final e:Ljava/lang/String;
+
+.field public final f:Ljava/lang/String;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lone/me/stickerspreview/StickerPreviewScreen;I)V
+.method public constructor <init>(JLknc;Lsg1;JLjava/lang/String;Ljava/lang/String;)V
     .locals 0
 
-    iput p2, p0, Li1e;->a:I
-
-    iput-object p1, p0, Li1e;->b:Lone/me/stickerspreview/StickerPreviewScreen;
-
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-wide p1, p0, Li1e;->a:J
+
+    iput-object p3, p0, Li1e;->b:Lknc;
+
+    iput-object p4, p0, Li1e;->c:Lsg1;
+
+    iput-wide p5, p0, Li1e;->d:J
+
+    iput-object p7, p0, Li1e;->e:Ljava/lang/String;
+
+    iput-object p8, p0, Li1e;->f:Ljava/lang/String;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke()Ljava/lang/Object;
-    .locals 12
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 7
 
-    iget v0, p0, Li1e;->a:I
+    const/4 v0, 0x1
 
-    const/16 v1, 0x11
+    if-ne p0, p1, :cond_0
 
-    const/16 v2, 0xa0
+    return v0
 
-    iget-object p0, p0, Li1e;->b:Lone/me/stickerspreview/StickerPreviewScreen;
+    :cond_0
+    instance-of v1, p1, Li1e;
 
-    packed-switch v0, :pswitch_data_0
+    const/4 v2, 0x0
 
-    sget-object v0, Lone/me/stickerspreview/StickerPreviewScreen;->w0:[Lbc7;
+    if-nez v1, :cond_1
 
-    new-instance v0, Ld5g;
+    return v2
 
-    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
+    :cond_1
+    check-cast p1, Li1e;
 
-    move-result-object p0
+    iget-wide v3, p0, Li1e;->a:J
 
-    invoke-direct {v0, p0}, Ld5g;-><init>(Landroid/content/Context;)V
+    iget-wide v5, p1, Li1e;->a:J
 
-    sget p0, Lrga;->l:I
+    cmp-long v1, v3, v5
 
-    invoke-virtual {v0, p0}, Landroid/view/View;->setId(I)V
+    if-eqz v1, :cond_2
 
-    int-to-float p0, v2
+    return v2
 
-    invoke-static {}, Lgk4;->d()Landroid/content/res/Resources;
+    :cond_2
+    iget-object v1, p0, Li1e;->b:Lknc;
 
-    move-result-object v2
+    iget-object v3, p1, Li1e;->b:Lknc;
 
-    invoke-virtual {v2}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+    if-eq v1, v3, :cond_3
 
-    move-result-object v2
+    return v2
 
-    iget v2, v2, Landroid/util/DisplayMetrics;->density:F
+    :cond_3
+    iget-object v1, p0, Li1e;->c:Lsg1;
 
-    mul-float/2addr p0, v2
+    iget-object v3, p1, Li1e;->c:Lsg1;
 
-    invoke-static {p0}, Lkhg;->x(F)I
+    invoke-static {v1, v3}, Lvyg;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    move-result p0
+    move-result v1
 
-    new-instance v2, Landroid/widget/FrameLayout$LayoutParams;
+    if-nez v1, :cond_4
 
-    invoke-direct {v2, p0, p0}, Landroid/widget/FrameLayout$LayoutParams;-><init>(II)V
+    return v2
 
-    iput v1, v2, Landroid/widget/FrameLayout$LayoutParams;->gravity:I
+    :cond_4
+    iget-wide v3, p0, Li1e;->d:J
 
-    invoke-virtual {v0, v2}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+    iget-wide v5, p1, Li1e;->d:J
 
-    return-object v0
+    cmp-long v1, v3, v5
 
-    :pswitch_0
-    sget-object v0, Lone/me/stickerspreview/StickerPreviewScreen;->w0:[Lbc7;
+    if-eqz v1, :cond_5
 
-    new-instance v0, Lew7;
+    return v2
 
-    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
+    :cond_5
+    iget-object v1, p0, Li1e;->e:Ljava/lang/String;
 
-    move-result-object p0
+    iget-object v3, p1, Li1e;->e:Ljava/lang/String;
 
-    invoke-direct {v0, p0}, Lew7;-><init>(Landroid/content/Context;)V
+    invoke-static {v1, v3}, Lvyg;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    sget p0, Lrga;->e:I
+    move-result v1
 
-    invoke-virtual {v0, p0}, Landroid/view/View;->setId(I)V
+    if-nez v1, :cond_6
 
-    int-to-float p0, v2
+    return v2
 
-    invoke-static {}, Lgk4;->d()Landroid/content/res/Resources;
+    :cond_6
+    iget-object p0, p0, Li1e;->f:Ljava/lang/String;
 
-    move-result-object v2
+    iget-object p1, p1, Li1e;->f:Ljava/lang/String;
 
-    invoke-virtual {v2}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v2
-
-    iget v2, v2, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr p0, v2
-
-    invoke-static {p0}, Lkhg;->x(F)I
+    invoke-static {p0, p1}, Lvyg;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p0
 
-    new-instance v2, Landroid/widget/FrameLayout$LayoutParams;
+    if-nez p0, :cond_7
 
-    invoke-direct {v2, p0, p0}, Landroid/widget/FrameLayout$LayoutParams;-><init>(II)V
+    return v2
 
-    iput v1, v2, Landroid/widget/FrameLayout$LayoutParams;->gravity:I
+    :cond_7
+    return v0
+.end method
 
-    invoke-virtual {v0, v2}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+.method public final hashCode()I
+    .locals 4
 
-    return-object v0
+    iget-wide v0, p0, Li1e;->a:J
 
-    :pswitch_1
-    sget-object v0, Lone/me/stickerspreview/StickerPreviewScreen;->w0:[Lbc7;
+    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
 
-    new-instance v0, Lq0e;
+    move-result v0
 
-    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
+    const/16 v1, 0x1f
+
+    mul-int/2addr v0, v1
+
+    iget-object v2, p0, Li1e;->b:Lknc;
+
+    invoke-virtual {v2}, Ljava/lang/Object;->hashCode()I
+
+    move-result v2
+
+    add-int/2addr v2, v0
+
+    mul-int/2addr v2, v1
+
+    iget-object v0, p0, Li1e;->c:Lsg1;
+
+    invoke-virtual {v0}, Lsg1;->hashCode()I
+
+    move-result v0
+
+    add-int/2addr v0, v2
+
+    mul-int/2addr v0, v1
+
+    iget-wide v2, p0, Li1e;->d:J
+
+    invoke-static {v0, v1, v2, v3}, Lwsf;->d(IIJ)I
+
+    move-result v0
+
+    const/4 v2, 0x0
+
+    iget-object v3, p0, Li1e;->e:Ljava/lang/String;
+
+    if-nez v3, :cond_0
+
+    move v3, v2
+
+    goto :goto_0
+
+    :cond_0
+    invoke-virtual {v3}, Ljava/lang/String;->hashCode()I
+
+    move-result v3
+
+    :goto_0
+    add-int/2addr v0, v3
+
+    mul-int/2addr v0, v1
+
+    iget-object p0, p0, Li1e;->f:Ljava/lang/String;
+
+    if-nez p0, :cond_1
+
+    goto :goto_1
+
+    :cond_1
+    invoke-virtual {p0}, Ljava/lang/String;->hashCode()I
+
+    move-result v2
+
+    :goto_1
+    add-int/2addr v0, v2
+
+    return v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 5
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "SignalingRecordInfo(recordMovieId="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-wide v1, p0, Li1e;->a:J
+
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    const-string v1, ", recordType="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Li1e;->b:Lknc;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", initiator="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Li1e;->c:Lsg1;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", recordStartTime="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", recordExternalMovieId="
+
+    iget-wide v2, p0, Li1e;->d:J
+
+    iget-object v4, p0, Li1e;->e:Ljava/lang/String;
+
+    invoke-static {v2, v3, v1, v4, v0}, Lsq3;->l(JLjava/lang/String;Ljava/lang/String;Ljava/lang/StringBuilder;)V
+
+    const-string v1, ", recordExternalOwnerId="
+
+    const-string v2, ")"
+
+    iget-object p0, p0, Li1e;->f:Ljava/lang/String;
+
+    invoke-static {v0, v1, p0, v2}, Lz7e;->s(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
 
-    invoke-direct {v0, p0}, Lq0e;-><init>(Landroid/content/Context;)V
-
-    sget p0, Lrga;->f:I
-
-    invoke-virtual {v0, p0}, Landroid/view/View;->setId(I)V
-
-    int-to-float p0, v2
-
-    invoke-static {}, Lgk4;->d()Landroid/content/res/Resources;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v2
-
-    iget v2, v2, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr p0, v2
-
-    invoke-static {p0}, Lkhg;->x(F)I
-
-    move-result p0
-
-    new-instance v2, Landroid/widget/FrameLayout$LayoutParams;
-
-    invoke-direct {v2, p0, p0}, Landroid/widget/FrameLayout$LayoutParams;-><init>(II)V
-
-    iput v1, v2, Landroid/widget/FrameLayout$LayoutParams;->gravity:I
-
-    invoke-virtual {v0, v2}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
-
-    return-object v0
-
-    :pswitch_2
-    sget-object v0, Lone/me/stickerspreview/StickerPreviewScreen;->w0:[Lbc7;
-
-    new-instance v1, Lp1e;
-
-    iget-object v0, p0, Lone/me/stickerspreview/StickerPreviewScreen;->a:Lvr;
-
-    sget-object v2, Lone/me/stickerspreview/StickerPreviewScreen;->w0:[Lbc7;
-
-    const/4 v3, 0x1
-
-    aget-object v2, v2, v3
-
-    invoke-virtual {v0, p0}, Lvr;->a(Lone/me/sdk/arch/Widget;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, Ljava/lang/Number;
-
-    invoke-virtual {p0}, Ljava/lang/Number;->longValue()J
-
-    move-result-wide v2
-
-    sget-object p0, La3e;->a:La3e;
-
-    invoke-virtual {p0}, Lscout/Component;->getAccessor()Lu4;
-
-    move-result-object v0
-
-    const-class v4, Lrie;
-
-    invoke-virtual {v0, v4}, Lu4;->c(Ljava/lang/Class;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    move-object v4, v0
-
-    check-cast v4, Lrie;
-
-    invoke-virtual {p0}, Lscout/Component;->getAccessor()Lu4;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    invoke-virtual {p0}, Lscout/Component;->getAccessor()Lu4;
-
-    move-result-object v0
-
-    const-class v5, Lj3e;
-
-    invoke-virtual {v0, v5}, Lu4;->d(Ljava/lang/Class;)Lwfe;
-
-    move-result-object v5
-
-    invoke-virtual {p0}, Lscout/Component;->getAccessor()Lu4;
-
-    move-result-object v0
-
-    const-class v6, Lj2e;
-
-    invoke-virtual {v0, v6}, Lu4;->d(Ljava/lang/Class;)Lwfe;
-
-    move-result-object v6
-
-    invoke-virtual {p0}, Lscout/Component;->getAccessor()Lu4;
-
-    move-result-object v0
-
-    const-class v7, Lwc5;
-
-    invoke-virtual {v0, v7}, Lu4;->d(Ljava/lang/Class;)Lwfe;
-
-    move-result-object v7
-
-    invoke-virtual {p0}, Lscout/Component;->getAccessor()Lu4;
-
-    move-result-object v0
-
-    const-class v8, Ldc5;
-
-    invoke-virtual {v0, v8}, Lu4;->d(Ljava/lang/Class;)Lwfe;
-
-    move-result-object v8
-
-    invoke-virtual {p0}, Lscout/Component;->getAccessor()Lu4;
-
-    move-result-object v0
-
-    const-class v9, Lbx2;
-
-    invoke-virtual {v0, v9}, Lu4;->d(Ljava/lang/Class;)Lwfe;
-
-    move-result-object v9
-
-    invoke-virtual {p0}, Lscout/Component;->getAccessor()Lu4;
-
-    move-result-object v0
-
-    const-class v10, Lw9g;
-
-    invoke-virtual {v0, v10}, Lu4;->d(Ljava/lang/Class;)Lwfe;
-
-    move-result-object v10
-
-    invoke-virtual {p0}, Lscout/Component;->getAccessor()Lu4;
-
-    move-result-object p0
-
-    const-class v0, Lzd5;
-
-    invoke-virtual {p0, v0}, Lu4;->d(Ljava/lang/Class;)Lwfe;
-
-    move-result-object v11
-
-    invoke-direct/range {v1 .. v11}, Lp1e;-><init>(JLrie;Lje7;Lje7;Lje7;Lje7;Lje7;Lje7;Lje7;)V
-
-    return-object v1
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    return-object p0
 .end method

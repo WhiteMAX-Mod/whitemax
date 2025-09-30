@@ -1,97 +1,59 @@
 .class public final Ld59;
-.super Lqde;
+.super Ljx3;
 .source "SourceFile"
-
-# interfaces
-.implements Ll66;
 
 
 # instance fields
-.field public synthetic X:Ljava/lang/Object;
+.field public X:Luz8;
 
-.field public final synthetic Y:Lone/me/messages/list/ui/MessagesListWidget;
+.field public Y:Z
+
+.field public Z:I
+
+.field public o:Ljava/lang/Object;
+
+.field public synthetic r0:Ljava/lang/Object;
+
+.field public final synthetic s0:Ln59;
+
+.field public t0:I
 
 
 # direct methods
-.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/messages/list/ui/MessagesListWidget;)V
+.method public constructor <init>(Ln59;Ljx3;)V
     .locals 0
 
-    iput-object p2, p0, Ld59;->Y:Lone/me/messages/list/ui/MessagesListWidget;
+    iput-object p1, p0, Ld59;->s0:Ln59;
 
-    const/4 p2, 0x2
-
-    invoke-direct {p0, p2, p1}, Lqde;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0, p2}, Ljx3;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
-
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Ld59;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p0
-
-    check-cast p0, Ld59;
-
-    sget-object p1, Le5f;->a:Le5f;
-
-    invoke-virtual {p0, p1}, Ld59;->o(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p1
-.end method
-
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 1
-
-    new-instance v0, Ld59;
-
-    iget-object p0, p0, Ld59;->Y:Lone/me/messages/list/ui/MessagesListWidget;
-
-    invoke-direct {v0, p2, p0}, Ld59;-><init>(Lkotlin/coroutines/Continuation;Lone/me/messages/list/ui/MessagesListWidget;)V
-
-    iput-object p1, v0, Ld59;->X:Ljava/lang/Object;
-
-    return-object v0
-.end method
-
 .method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+    .locals 2
 
-    invoke-static {p1}, Lsgg;->Z(Ljava/lang/Object;)V
+    iput-object p1, p0, Ld59;->r0:Ljava/lang/Object;
 
-    iget-object p1, p0, Ld59;->X:Ljava/lang/Object;
+    iget p1, p0, Ld59;->t0:I
 
-    check-cast p1, Le5f;
+    const/high16 v0, -0x80000000
 
-    sget-object p1, Lone/me/messages/list/ui/MessagesListWidget;->V0:[Lbc7;
+    or-int/2addr p1, v0
 
-    iget-object p0, p0, Ld59;->Y:Lone/me/messages/list/ui/MessagesListWidget;
+    iput p1, p0, Ld59;->t0:I
 
-    invoke-virtual {p0}, Lone/me/messages/list/ui/MessagesListWidget;->y0()Lone/me/sdk/lists/widgets/EndlessRecyclerView2;
-
-    move-result-object p1
-
-    invoke-virtual {p1}, Landroidx/recyclerview/widget/RecyclerView;->getScrollState()I
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    invoke-virtual {p0}, Lone/me/messages/list/ui/MessagesListWidget;->s0()Ljdf;
-
-    move-result-object p0
+    const/4 p1, 0x0
 
     const/4 v0, 0x0
 
-    invoke-virtual {p0, p1, v0}, Ljdf;->e(Landroidx/recyclerview/widget/RecyclerView;Z)V
+    iget-object v1, p0, Ld59;->s0:Ln59;
 
-    :cond_0
-    sget-object p0, Le5f;->a:Le5f;
+    invoke-virtual {v1, p1, v0, p0}, Ln59;->x(Ljava/lang/Long;ZLjx3;)Ljava/lang/Object;
+
+    move-result-object p0
 
     return-object p0
 .end method

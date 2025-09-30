@@ -32,11 +32,11 @@
         "Lkotlin/Function1;",
         "Landroid/content/Context;",
         "factory",
-        "Le5f;",
+        "Lylf;",
         "ownCameraCallback",
         "Lru/ok/android/externcalls/sdk/video/ParticipantVideoViewManager;",
         "newInstance",
-        "(Lv56;Lx56;Lv56;)Lru/ok/android/externcalls/sdk/video/ParticipantVideoViewManager;",
+        "(Lzb6;Lbc6;Lzb6;)Lru/ok/android/externcalls/sdk/video/ParticipantVideoViewManager;",
         "calls-sdk_release"
     }
     k = 0x1
@@ -74,7 +74,7 @@
     return-void
 .end method
 
-.method public static synthetic newInstance$default(Lru/ok/android/externcalls/sdk/video/ParticipantVideoViewManager$Companion;Lv56;Lx56;Lv56;ILjava/lang/Object;)Lru/ok/android/externcalls/sdk/video/ParticipantVideoViewManager;
+.method public static synthetic newInstance$default(Lru/ok/android/externcalls/sdk/video/ParticipantVideoViewManager$Companion;Lzb6;Lbc6;Lzb6;ILjava/lang/Object;)Lru/ok/android/externcalls/sdk/video/ParticipantVideoViewManager;
     .locals 0
 
     and-int/lit8 p4, p4, 0x4
@@ -84,7 +84,7 @@
     sget-object p3, Lru/ok/android/externcalls/sdk/video/ParticipantVideoViewManager$Companion$newInstance$1;->INSTANCE:Lru/ok/android/externcalls/sdk/video/ParticipantVideoViewManager$Companion$newInstance$1;
 
     :cond_0
-    invoke-virtual {p0, p1, p2, p3}, Lru/ok/android/externcalls/sdk/video/ParticipantVideoViewManager$Companion;->newInstance(Lv56;Lx56;Lv56;)Lru/ok/android/externcalls/sdk/video/ParticipantVideoViewManager;
+    invoke-virtual {p0, p1, p2, p3}, Lru/ok/android/externcalls/sdk/video/ParticipantVideoViewManager$Companion;->newInstance(Lzb6;Lbc6;Lzb6;)Lru/ok/android/externcalls/sdk/video/ParticipantVideoViewManager;
 
     move-result-object p0
 
@@ -93,7 +93,7 @@
 
 
 # virtual methods
-.method public final newInstance(Lv56;Lx56;Lv56;)Lru/ok/android/externcalls/sdk/video/ParticipantVideoViewManager;
+.method public final newInstance(Lzb6;Lbc6;Lzb6;)Lru/ok/android/externcalls/sdk/video/ParticipantVideoViewManager;
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -104,9 +104,9 @@
             ":",
             "Lru/ok/android/externcalls/sdk/ui/RendererView;",
             ">(",
-            "Lv56;",
-            "Lx56;",
-            "Lv56;",
+            "Lzb6;",
+            "Lbc6;",
+            "Lzb6;",
             ")",
             "Lru/ok/android/externcalls/sdk/video/ParticipantVideoViewManager<",
             "TT;>;"
@@ -115,7 +115,7 @@
 
     new-instance p0, Lru/ok/android/externcalls/sdk/video/internal/ParticipantVideoViewManagerImpl;
 
-    invoke-direct {p0, p1, p2, p3}, Lru/ok/android/externcalls/sdk/video/internal/ParticipantVideoViewManagerImpl;-><init>(Lv56;Lx56;Lv56;)V
+    invoke-direct {p0, p1, p2, p3}, Lru/ok/android/externcalls/sdk/video/internal/ParticipantVideoViewManagerImpl;-><init>(Lzb6;Lbc6;Lzb6;)V
 
     return-object p0
 .end method

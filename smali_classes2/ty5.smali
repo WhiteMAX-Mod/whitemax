@@ -1,3 +1,3 @@
-.class public final Lty5;
+.class public interface abstract Lty5;
 .super Ljava/lang/Object;
 .source "SourceFile"

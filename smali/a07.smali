@@ -1,24 +1,12 @@
-.class public interface abstract La07;
+.class public interface abstract annotation La07;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-
-# static fields
-.field public static final J:Lzz6;
-
-
-# direct methods
-.method static constructor <clinit>()V
-    .locals 1
-
-    sget-object v0, Lzz6;->a:Lzz6;
-
-    sput-object v0, La07;->J:Lzz6;
-
-    return-void
-.end method
+# interfaces
+.implements Ljava/lang/annotation/Annotation;
 
 
-# virtual methods
-.method public abstract m()Lcs2;
-.end method
+# annotations
+.annotation runtime Ljava/lang/annotation/Retention;
+    value = .enum Ljava/lang/annotation/RetentionPolicy;->SOURCE:Ljava/lang/annotation/RetentionPolicy;
+.end annotation

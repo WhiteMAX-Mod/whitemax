@@ -1,1248 +1,729 @@
 .class public final Lp33;
-.super Ljava/lang/Object;
+.super Lfw4;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:[B
+.field public b:F
 
-.field public final b:I
+.field public c:F
 
-.field public c:I
+.field public d:F
 
-.field public d:I
+.field public e:Z
 
-.field public e:I
-
-.field public f:I
-
-.field public g:I
-
-.field public h:I
-
-
-# direct methods
-.method public constructor <init>([BII)V
-    .locals 1
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    const v0, 0x7fffffff
-
-    iput v0, p0, Lp33;->g:I
-
-    iput-object p1, p0, Lp33;->a:[B
-
-    iput p2, p0, Lp33;->b:I
-
-    add-int/2addr p3, p2
-
-    iput p3, p0, Lp33;->c:I
-
-    iput p2, p0, Lp33;->e:I
-
-    return-void
-.end method
+.field public f:F
 
 
 # virtual methods
-.method public final a(I)V
-    .locals 0
+.method public final a(Landroid/graphics/Canvas;Landroid/graphics/Rect;FZZ)V
+    .locals 8
 
-    iget p0, p0, Lp33;->f:I
-
-    if-ne p0, p1, :cond_0
-
-    return-void
-
-    :cond_0
-    new-instance p0, Lcom/google/protobuf/nano/InvalidProtocolBufferNanoException;
-
-    const-string p1, "Protocol message end-group tag did not match expected tag."
-
-    invoke-direct {p0, p1}, Ljava/io/IOException;-><init>(Ljava/lang/String;)V
-
-    throw p0
-.end method
-
-.method public final b()I
-    .locals 2
-
-    iget v0, p0, Lp33;->g:I
-
-    const v1, 0x7fffffff
-
-    if-ne v0, v1, :cond_0
-
-    const/4 p0, -0x1
-
-    return p0
-
-    :cond_0
-    iget p0, p0, Lp33;->e:I
-
-    sub-int/2addr v0, p0
-
-    return v0
-.end method
-
-.method public final c()I
-    .locals 1
-
-    iget v0, p0, Lp33;->e:I
-
-    iget p0, p0, Lp33;->b:I
-
-    sub-int/2addr v0, p0
-
-    return v0
-.end method
-
-.method public final d(I)V
-    .locals 2
-
-    iput p1, p0, Lp33;->g:I
-
-    iget v0, p0, Lp33;->c:I
-
-    iget v1, p0, Lp33;->d:I
-
-    add-int/2addr v0, v1
-
-    iput v0, p0, Lp33;->c:I
-
-    if-le v0, p1, :cond_0
-
-    sub-int p1, v0, p1
-
-    iput p1, p0, Lp33;->d:I
-
-    sub-int/2addr v0, p1
-
-    iput v0, p0, Lp33;->c:I
-
-    return-void
-
-    :cond_0
-    const/4 p1, 0x0
-
-    iput p1, p0, Lp33;->d:I
-
-    return-void
-.end method
-
-.method public final e(I)I
-    .locals 3
-
-    if-ltz p1, :cond_2
-
-    iget v0, p0, Lp33;->e:I
-
-    add-int/2addr p1, v0
-
-    iget v0, p0, Lp33;->g:I
-
-    if-gt p1, v0, :cond_1
-
-    iput p1, p0, Lp33;->g:I
-
-    iget v1, p0, Lp33;->c:I
-
-    iget v2, p0, Lp33;->d:I
-
-    add-int/2addr v1, v2
-
-    iput v1, p0, Lp33;->c:I
-
-    if-le v1, p1, :cond_0
-
-    sub-int p1, v1, p1
-
-    iput p1, p0, Lp33;->d:I
-
-    sub-int/2addr v1, p1
-
-    iput v1, p0, Lp33;->c:I
-
-    return v0
-
-    :cond_0
-    const/4 p1, 0x0
-
-    iput p1, p0, Lp33;->d:I
-
-    return v0
-
-    :cond_1
-    invoke-static {}, Lcom/google/protobuf/nano/InvalidProtocolBufferNanoException;->a()Lcom/google/protobuf/nano/InvalidProtocolBufferNanoException;
-
-    move-result-object p0
-
-    throw p0
-
-    :cond_2
-    new-instance p0, Lcom/google/protobuf/nano/InvalidProtocolBufferNanoException;
-
-    const-string p1, "CodedInputStream encountered an embedded string or message which claimed to have negative size."
-
-    invoke-direct {p0, p1}, Ljava/io/IOException;-><init>(Ljava/lang/String;)V
-
-    throw p0
-.end method
-
-.method public final f()Z
-    .locals 0
-
-    invoke-virtual {p0}, Lp33;->p()I
-
-    move-result p0
-
-    if-eqz p0, :cond_0
-
-    const/4 p0, 0x1
-
-    return p0
-
-    :cond_0
-    const/4 p0, 0x0
-
-    return p0
-.end method
-
-.method public final g()[B
-    .locals 5
-
-    invoke-virtual {p0}, Lp33;->p()I
+    invoke-virtual {p2}, Landroid/graphics/Rect;->width()I
 
     move-result v0
 
-    iget v1, p0, Lp33;->c:I
+    int-to-float v0, v0
 
-    iget v2, p0, Lp33;->e:I
-
-    sub-int/2addr v1, v2
-
-    if-gt v0, v1, :cond_0
-
-    if-lez v0, :cond_0
-
-    new-array v1, v0, [B
-
-    iget-object v3, p0, Lp33;->a:[B
-
-    const/4 v4, 0x0
-
-    invoke-static {v3, v2, v1, v4, v0}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
-
-    iget v2, p0, Lp33;->e:I
-
-    add-int/2addr v2, v0
-
-    iput v2, p0, Lp33;->e:I
-
-    return-object v1
-
-    :cond_0
-    if-nez v0, :cond_1
-
-    sget-object p0, Lwqd;->k:[B
-
-    return-object p0
-
-    :cond_1
-    invoke-virtual {p0, v0}, Lp33;->m(I)[B
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public final h()D
-    .locals 2
-
-    invoke-virtual {p0}, Lp33;->o()J
-
-    move-result-wide v0
-
-    invoke-static {v0, v1}, Ljava/lang/Double;->longBitsToDouble(J)D
-
-    move-result-wide v0
-
-    return-wide v0
-.end method
-
-.method public final i()F
-    .locals 0
-
-    invoke-virtual {p0}, Lp33;->n()I
-
-    move-result p0
-
-    invoke-static {p0}, Ljava/lang/Float;->intBitsToFloat(I)F
-
-    move-result p0
-
-    return p0
-.end method
-
-.method public final j(Lnv8;)V
-    .locals 3
-
-    invoke-virtual {p0}, Lp33;->p()I
-
-    move-result v0
-
-    iget v1, p0, Lp33;->h:I
-
-    const/16 v2, 0x40
-
-    if-ge v1, v2, :cond_0
-
-    invoke-virtual {p0, v0}, Lp33;->e(I)I
-
-    move-result v0
-
-    iget v1, p0, Lp33;->h:I
-
-    add-int/lit8 v1, v1, 0x1
-
-    iput v1, p0, Lp33;->h:I
-
-    invoke-virtual {p1, p0}, Lnv8;->mergeFrom(Lp33;)Lnv8;
-
-    const/4 p1, 0x0
-
-    invoke-virtual {p0, p1}, Lp33;->a(I)V
-
-    iget p1, p0, Lp33;->h:I
-
-    add-int/lit8 p1, p1, -0x1
-
-    iput p1, p0, Lp33;->h:I
-
-    invoke-virtual {p0, v0}, Lp33;->d(I)V
-
-    return-void
-
-    :cond_0
-    new-instance p0, Lcom/google/protobuf/nano/InvalidProtocolBufferNanoException;
-
-    const-string p1, "Protocol message had too many levels of nesting.  May be malicious.  Use CodedInputStream.setRecursionLimit() to increase the depth limit."
-
-    invoke-direct {p0, p1}, Ljava/io/IOException;-><init>(Ljava/lang/String;)V
-
-    throw p0
-.end method
-
-.method public final k(I)Ljava/io/Serializable;
-    .locals 4
-
-    const/4 v0, 0x1
-
-    packed-switch p1, :pswitch_data_0
-
-    :pswitch_0
-    new-instance p0, Ljava/lang/IllegalArgumentException;
-
-    const-string v0, "Unknown type "
-
-    invoke-static {p1, v0}, Lm26;->h(ILjava/lang/String;)Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-direct {p0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw p0
-
-    :pswitch_1
-    invoke-virtual {p0}, Lp33;->q()J
-
-    move-result-wide p0
-
-    ushr-long v0, p0, v0
-
-    const-wide/16 v2, 0x1
-
-    and-long/2addr p0, v2
-
-    neg-long p0, p0
-
-    xor-long/2addr p0, v0
-
-    invoke-static {p0, p1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object p0
-
-    return-object p0
-
-    :pswitch_2
-    invoke-virtual {p0}, Lp33;->p()I
-
-    move-result p0
-
-    ushr-int/lit8 p1, p0, 0x1
-
-    and-int/2addr p0, v0
-
-    neg-int p0, p0
-
-    xor-int/2addr p0, p1
-
-    invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object p0
-
-    return-object p0
-
-    :pswitch_3
-    invoke-virtual {p0}, Lp33;->o()J
-
-    move-result-wide p0
-
-    invoke-static {p0, p1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object p0
-
-    return-object p0
-
-    :pswitch_4
-    invoke-virtual {p0}, Lp33;->n()I
-
-    move-result p0
-
-    invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object p0
-
-    return-object p0
-
-    :pswitch_5
-    invoke-virtual {p0}, Lp33;->p()I
-
-    move-result p0
-
-    invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object p0
-
-    return-object p0
-
-    :pswitch_6
-    invoke-virtual {p0}, Lp33;->p()I
-
-    move-result p0
-
-    invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object p0
-
-    return-object p0
-
-    :pswitch_7
-    invoke-virtual {p0}, Lp33;->g()[B
-
-    move-result-object p0
-
-    return-object p0
-
-    :pswitch_8
-    invoke-virtual {p0}, Lp33;->r()Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
-
-    :pswitch_9
-    invoke-virtual {p0}, Lp33;->f()Z
-
-    move-result p0
-
-    invoke-static {p0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
-
-    move-result-object p0
-
-    return-object p0
-
-    :pswitch_a
-    invoke-virtual {p0}, Lp33;->n()I
-
-    move-result p0
-
-    invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object p0
-
-    return-object p0
-
-    :pswitch_b
-    invoke-virtual {p0}, Lp33;->o()J
-
-    move-result-wide p0
-
-    invoke-static {p0, p1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object p0
-
-    return-object p0
-
-    :pswitch_c
-    invoke-virtual {p0}, Lp33;->p()I
-
-    move-result p0
-
-    invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object p0
-
-    return-object p0
-
-    :pswitch_d
-    invoke-virtual {p0}, Lp33;->q()J
-
-    move-result-wide p0
-
-    invoke-static {p0, p1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object p0
-
-    return-object p0
-
-    :pswitch_e
-    invoke-virtual {p0}, Lp33;->q()J
-
-    move-result-wide p0
-
-    invoke-static {p0, p1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object p0
-
-    return-object p0
-
-    :pswitch_f
-    invoke-virtual {p0}, Lp33;->i()F
-
-    move-result p0
-
-    invoke-static {p0}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
-
-    move-result-object p0
-
-    return-object p0
-
-    :pswitch_10
-    invoke-virtual {p0}, Lp33;->h()D
-
-    move-result-wide p0
-
-    invoke-static {p0, p1}, Ljava/lang/Double;->valueOf(D)Ljava/lang/Double;
-
-    move-result-object p0
-
-    return-object p0
-
-    :pswitch_data_0
-    .packed-switch 0x1
-        :pswitch_10
-        :pswitch_f
-        :pswitch_e
-        :pswitch_d
-        :pswitch_c
-        :pswitch_b
-        :pswitch_a
-        :pswitch_9
-        :pswitch_8
-        :pswitch_0
-        :pswitch_0
-        :pswitch_7
-        :pswitch_6
-        :pswitch_5
-        :pswitch_4
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-    .end packed-switch
-.end method
-
-.method public final l()B
-    .locals 2
-
-    iget v0, p0, Lp33;->e:I
-
-    iget v1, p0, Lp33;->c:I
-
-    if-eq v0, v1, :cond_0
-
-    add-int/lit8 v1, v0, 0x1
-
-    iput v1, p0, Lp33;->e:I
-
-    iget-object p0, p0, Lp33;->a:[B
-
-    aget-byte p0, p0, v0
-
-    return p0
-
-    :cond_0
-    invoke-static {}, Lcom/google/protobuf/nano/InvalidProtocolBufferNanoException;->a()Lcom/google/protobuf/nano/InvalidProtocolBufferNanoException;
-
-    move-result-object p0
-
-    throw p0
-.end method
-
-.method public final m(I)[B
-    .locals 4
-
-    if-ltz p1, :cond_2
-
-    iget v0, p0, Lp33;->e:I
-
-    add-int v1, v0, p1
-
-    iget v2, p0, Lp33;->g:I
-
-    if-gt v1, v2, :cond_1
-
-    iget v1, p0, Lp33;->c:I
-
-    sub-int/2addr v1, v0
-
-    if-gt p1, v1, :cond_0
-
-    new-array v1, p1, [B
-
-    iget-object v2, p0, Lp33;->a:[B
-
-    const/4 v3, 0x0
-
-    invoke-static {v2, v0, v1, v3, p1}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
-
-    iget v0, p0, Lp33;->e:I
-
-    add-int/2addr v0, p1
-
-    iput v0, p0, Lp33;->e:I
-
-    return-object v1
-
-    :cond_0
-    invoke-static {}, Lcom/google/protobuf/nano/InvalidProtocolBufferNanoException;->a()Lcom/google/protobuf/nano/InvalidProtocolBufferNanoException;
-
-    move-result-object p0
-
-    throw p0
-
-    :cond_1
-    sub-int/2addr v2, v0
-
-    invoke-virtual {p0, v2}, Lp33;->v(I)V
-
-    invoke-static {}, Lcom/google/protobuf/nano/InvalidProtocolBufferNanoException;->a()Lcom/google/protobuf/nano/InvalidProtocolBufferNanoException;
-
-    move-result-object p0
-
-    throw p0
-
-    :cond_2
-    new-instance p0, Lcom/google/protobuf/nano/InvalidProtocolBufferNanoException;
-
-    const-string p1, "CodedInputStream encountered an embedded string or message which claimed to have negative size."
-
-    invoke-direct {p0, p1}, Ljava/io/IOException;-><init>(Ljava/lang/String;)V
-
-    throw p0
-.end method
-
-.method public final n()I
-    .locals 3
-
-    invoke-virtual {p0}, Lp33;->l()B
-
-    move-result v0
-
-    invoke-virtual {p0}, Lp33;->l()B
+    invoke-virtual {p0}, Lp33;->i()I
 
     move-result v1
 
-    invoke-virtual {p0}, Lp33;->l()B
+    int-to-float v1, v1
+
+    div-float/2addr v0, v1
+
+    invoke-virtual {p2}, Landroid/graphics/Rect;->height()I
+
+    move-result v1
+
+    int-to-float v1, v1
+
+    invoke-virtual {p0}, Lp33;->i()I
 
     move-result v2
 
-    invoke-virtual {p0}, Lp33;->l()B
+    int-to-float v2, v2
 
-    move-result p0
+    div-float/2addr v1, v2
 
-    and-int/lit16 v0, v0, 0xff
+    iget-object v2, p0, Lfw4;->a:Lrj0;
 
-    and-int/lit16 v1, v1, 0xff
+    check-cast v2, Lv33;
 
-    shl-int/lit8 v1, v1, 0x8
+    iget v3, v2, Lv33;->h:I
 
-    or-int/2addr v0, v1
+    int-to-float v3, v3
 
-    and-int/lit16 v1, v2, 0xff
+    const/high16 v4, 0x40000000    # 2.0f
 
-    shl-int/lit8 v1, v1, 0x10
+    div-float/2addr v3, v4
 
-    or-int/2addr v0, v1
+    iget v5, v2, Lv33;->i:I
 
-    and-int/lit16 p0, p0, 0xff
+    int-to-float v5, v5
 
-    shl-int/lit8 p0, p0, 0x18
+    add-float/2addr v3, v5
 
-    or-int/2addr p0, v0
+    mul-float v5, v3, v0
 
-    return p0
-.end method
+    mul-float v6, v3, v1
 
-.method public final o()J
-    .locals 12
+    iget v7, p2, Landroid/graphics/Rect;->left:I
 
-    invoke-virtual {p0}, Lp33;->l()B
+    int-to-float v7, v7
 
-    move-result v0
+    add-float/2addr v5, v7
 
-    invoke-virtual {p0}, Lp33;->l()B
+    iget p2, p2, Landroid/graphics/Rect;->top:I
 
-    move-result v1
+    int-to-float p2, p2
 
-    invoke-virtual {p0}, Lp33;->l()B
+    add-float/2addr v6, p2
 
-    move-result v2
+    invoke-virtual {p1, v5, v6}, Landroid/graphics/Canvas;->translate(FF)V
 
-    invoke-virtual {p0}, Lp33;->l()B
+    const/high16 p2, -0x3d4c0000    # -90.0f
 
-    move-result v3
+    invoke-virtual {p1, p2}, Landroid/graphics/Canvas;->rotate(F)V
 
-    invoke-virtual {p0}, Lp33;->l()B
+    invoke-virtual {p1, v0, v1}, Landroid/graphics/Canvas;->scale(FF)V
 
-    move-result v4
+    iget p2, v2, Lv33;->j:I
 
-    invoke-virtual {p0}, Lp33;->l()B
+    const/high16 v0, 0x3f800000    # 1.0f
 
-    move-result v5
+    if-eqz p2, :cond_0
 
-    invoke-virtual {p0}, Lp33;->l()B
+    const/high16 p2, -0x40800000    # -1.0f
 
-    move-result v6
-
-    invoke-virtual {p0}, Lp33;->l()B
-
-    move-result p0
-
-    int-to-long v7, v0
-
-    const-wide/16 v9, 0xff
-
-    and-long/2addr v7, v9
-
-    int-to-long v0, v1
-
-    and-long/2addr v0, v9
-
-    const/16 v11, 0x8
-
-    shl-long/2addr v0, v11
-
-    or-long/2addr v0, v7
-
-    int-to-long v7, v2
-
-    and-long/2addr v7, v9
-
-    const/16 v2, 0x10
-
-    shl-long/2addr v7, v2
-
-    or-long/2addr v0, v7
-
-    int-to-long v2, v3
-
-    and-long/2addr v2, v9
-
-    const/16 v7, 0x18
-
-    shl-long/2addr v2, v7
-
-    or-long/2addr v0, v2
-
-    int-to-long v2, v4
-
-    and-long/2addr v2, v9
-
-    const/16 v4, 0x20
-
-    shl-long/2addr v2, v4
-
-    or-long/2addr v0, v2
-
-    int-to-long v2, v5
-
-    and-long/2addr v2, v9
-
-    const/16 v4, 0x28
-
-    shl-long/2addr v2, v4
-
-    or-long/2addr v0, v2
-
-    int-to-long v2, v6
-
-    and-long/2addr v2, v9
-
-    const/16 v4, 0x30
-
-    shl-long/2addr v2, v4
-
-    or-long/2addr v0, v2
-
-    int-to-long v2, p0
-
-    and-long/2addr v2, v9
-
-    const/16 p0, 0x38
-
-    shl-long/2addr v2, p0
-
-    or-long/2addr v0, v2
-
-    return-wide v0
-.end method
-
-.method public final p()I
-    .locals 3
-
-    invoke-virtual {p0}, Lp33;->l()B
-
-    move-result v0
-
-    if-ltz v0, :cond_0
-
-    return v0
+    invoke-virtual {p1, v0, p2}, Landroid/graphics/Canvas;->scale(FF)V
 
     :cond_0
-    and-int/lit8 v0, v0, 0x7f
+    neg-float p2, v3
 
-    invoke-virtual {p0}, Lp33;->l()B
+    invoke-virtual {p1, p2, p2, v3, v3}, Landroid/graphics/Canvas;->clipRect(FFFF)Z
 
-    move-result v1
+    iget p1, v2, Lrj0;->a:I
 
-    if-ltz v1, :cond_1
+    div-int/lit8 p2, p1, 0x2
 
-    shl-int/lit8 p0, v1, 0x7
+    iget v1, v2, Lrj0;->b:I
+
+    const/4 v3, 0x1
+
+    if-gt p2, v1, :cond_1
+
+    move p2, v3
+
+    goto :goto_0
+
+    :cond_1
+    const/4 p2, 0x0
 
     :goto_0
-    or-int/2addr p0, v0
+    iput-boolean p2, p0, Lp33;->e:Z
 
-    return p0
+    int-to-float p2, p1
 
-    :cond_1
-    and-int/lit8 v1, v1, 0x7f
+    mul-float/2addr p2, p3
 
-    shl-int/lit8 v1, v1, 0x7
+    iput p2, p0, Lp33;->b:F
 
-    or-int/2addr v0, v1
+    const/4 p2, 0x2
 
-    invoke-virtual {p0}, Lp33;->l()B
+    div-int/2addr p1, p2
 
-    move-result v1
+    invoke-static {p1, v1}, Ljava/lang/Math;->min(II)I
 
-    if-ltz v1, :cond_2
+    move-result p1
 
-    shl-int/lit8 p0, v1, 0xe
+    int-to-float p1, p1
 
-    goto :goto_0
+    mul-float/2addr p1, p3
+
+    iput p1, p0, Lp33;->c:F
+
+    iget p1, v2, Lv33;->h:I
+
+    iget v1, v2, Lrj0;->a:I
+
+    sub-int/2addr p1, v1
+
+    int-to-float p1, p1
+
+    div-float/2addr p1, v4
+
+    iput p1, p0, Lp33;->d:F
+
+    if-nez p4, :cond_2
+
+    if-eqz p5, :cond_8
 
     :cond_2
-    and-int/lit8 v1, v1, 0x7f
+    if-eqz p4, :cond_3
 
-    shl-int/lit8 v1, v1, 0xe
+    iget v5, v2, Lrj0;->e:I
 
-    or-int/2addr v0, v1
-
-    invoke-virtual {p0}, Lp33;->l()B
-
-    move-result v1
-
-    if-ltz v1, :cond_3
-
-    shl-int/lit8 p0, v1, 0x15
-
-    goto :goto_0
+    if-eq v5, p2, :cond_4
 
     :cond_3
-    and-int/lit8 v1, v1, 0x7f
+    if-eqz p5, :cond_5
 
-    shl-int/lit8 v1, v1, 0x15
+    iget v5, v2, Lrj0;->f:I
 
-    or-int/2addr v0, v1
-
-    invoke-virtual {p0}, Lp33;->l()B
-
-    move-result v1
-
-    shl-int/lit8 v2, v1, 0x1c
-
-    or-int/2addr v0, v2
-
-    if-gez v1, :cond_6
-
-    const/4 v1, 0x0
-
-    :goto_1
-    const/4 v2, 0x5
-
-    if-ge v1, v2, :cond_5
-
-    invoke-virtual {p0}, Lp33;->l()B
-
-    move-result v2
-
-    if-ltz v2, :cond_4
-
-    goto :goto_2
+    if-ne v5, v3, :cond_5
 
     :cond_4
-    add-int/lit8 v1, v1, 0x1
+    sub-float p2, v0, p3
+
+    int-to-float p4, v1
+
+    mul-float/2addr p2, p4
+
+    div-float/2addr p2, v4
+
+    add-float/2addr p2, p1
+
+    iput p2, p0, Lp33;->d:F
 
     goto :goto_1
 
     :cond_5
-    new-instance p0, Lcom/google/protobuf/nano/InvalidProtocolBufferNanoException;
+    if-eqz p4, :cond_6
 
-    const-string v0, "CodedInputStream encountered a malformed varint."
+    iget p4, v2, Lrj0;->e:I
 
-    invoke-direct {p0, v0}, Ljava/io/IOException;-><init>(Ljava/lang/String;)V
-
-    throw p0
+    if-eq p4, v3, :cond_7
 
     :cond_6
-    :goto_2
-    return v0
+    if-eqz p5, :cond_8
+
+    iget p4, v2, Lrj0;->f:I
+
+    if-ne p4, p2, :cond_8
+
+    :cond_7
+    sub-float p2, v0, p3
+
+    int-to-float p4, v1
+
+    mul-float/2addr p2, p4
+
+    div-float/2addr p2, v4
+
+    sub-float/2addr p1, p2
+
+    iput p1, p0, Lp33;->d:F
+
+    :cond_8
+    :goto_1
+    if-eqz p5, :cond_9
+
+    iget p1, v2, Lrj0;->f:I
+
+    const/4 p2, 0x3
+
+    if-ne p1, p2, :cond_9
+
+    iput p3, p0, Lp33;->f:F
+
+    return-void
+
+    :cond_9
+    iput v0, p0, Lp33;->f:F
+
+    return-void
 .end method
 
-.method public final q()J
-    .locals 6
+.method public final b(Landroid/graphics/Canvas;Landroid/graphics/Paint;II)V
+    .locals 0
 
-    const/4 v0, 0x0
+    return-void
+.end method
 
-    const-wide/16 v1, 0x0
+.method public final c(Landroid/graphics/Canvas;Landroid/graphics/Paint;Lew4;I)V
+    .locals 9
 
-    :goto_0
-    const/16 v3, 0x40
+    iget v0, p3, Lew4;->c:I
 
-    if-ge v0, v3, :cond_1
+    invoke-static {v0, p4}, Lr94;->k(II)I
 
-    invoke-virtual {p0}, Lp33;->l()B
+    move-result v6
 
-    move-result v3
+    iget v4, p3, Lew4;->a:F
 
-    and-int/lit8 v4, v3, 0x7f
+    iget v5, p3, Lew4;->b:F
 
-    int-to-long v4, v4
+    iget v7, p3, Lew4;->d:I
 
-    shl-long/2addr v4, v0
+    move v8, v7
 
-    or-long/2addr v1, v4
+    move-object v1, p0
 
-    and-int/lit16 v3, v3, 0x80
+    move-object v2, p1
 
-    if-nez v3, :cond_0
+    move-object v3, p2
 
-    return-wide v1
+    invoke-virtual/range {v1 .. v8}, Lp33;->g(Landroid/graphics/Canvas;Landroid/graphics/Paint;FFIII)V
 
-    :cond_0
-    add-int/lit8 v0, v0, 0x7
+    return-void
+.end method
+
+.method public final d(Landroid/graphics/Canvas;Landroid/graphics/Paint;FFIII)V
+    .locals 0
+
+    invoke-static {p5, p6}, Lr94;->k(II)I
+
+    move-result p5
+
+    move p6, p7
+
+    invoke-virtual/range {p0 .. p7}, Lp33;->g(Landroid/graphics/Canvas;Landroid/graphics/Paint;FFIII)V
+
+    return-void
+.end method
+
+.method public final e()I
+    .locals 0
+
+    invoke-virtual {p0}, Lp33;->i()I
+
+    move-result p0
+
+    return p0
+.end method
+
+.method public final f()I
+    .locals 0
+
+    invoke-virtual {p0}, Lp33;->i()I
+
+    move-result p0
+
+    return p0
+.end method
+
+.method public final g(Landroid/graphics/Canvas;Landroid/graphics/Paint;FFIII)V
+    .locals 12
+
+    cmpl-float v1, p4, p3
+
+    const/high16 v2, 0x3f800000    # 1.0f
+
+    if-ltz v1, :cond_0
+
+    sub-float v1, p4, p3
 
     goto :goto_0
 
-    :cond_1
-    new-instance p0, Lcom/google/protobuf/nano/InvalidProtocolBufferNanoException;
-
-    const-string v0, "CodedInputStream encountered a malformed varint."
-
-    invoke-direct {p0, v0}, Ljava/io/IOException;-><init>(Ljava/lang/String;)V
-
-    throw p0
-.end method
-
-.method public final r()Ljava/lang/String;
-    .locals 5
-
-    invoke-virtual {p0}, Lp33;->p()I
-
-    move-result v0
-
-    iget v1, p0, Lp33;->c:I
-
-    iget v2, p0, Lp33;->e:I
-
-    sub-int/2addr v1, v2
-
-    if-gt v0, v1, :cond_0
-
-    if-lez v0, :cond_0
-
-    new-instance v1, Ljava/lang/String;
-
-    iget-object v3, p0, Lp33;->a:[B
-
-    sget-object v4, Lr37;->a:Ljava/nio/charset/Charset;
-
-    invoke-direct {v1, v3, v2, v0, v4}, Ljava/lang/String;-><init>([BIILjava/nio/charset/Charset;)V
-
-    iget v2, p0, Lp33;->e:I
-
-    add-int/2addr v2, v0
-
-    iput v2, p0, Lp33;->e:I
-
-    return-object v1
-
     :cond_0
-    new-instance v1, Ljava/lang/String;
+    add-float v1, p4, v2
 
-    invoke-virtual {p0, v0}, Lp33;->m(I)[B
+    sub-float/2addr v1, p3
 
-    move-result-object p0
+    :goto_0
+    rem-float v3, p3, v2
 
-    sget-object v0, Lr37;->a:Ljava/nio/charset/Charset;
+    iget v4, p0, Lp33;->f:F
 
-    invoke-direct {v1, p0, v0}, Ljava/lang/String;-><init>([BLjava/nio/charset/Charset;)V
+    cmpg-float v4, v4, v2
 
-    return-object v1
-.end method
+    if-gez v4, :cond_1
 
-.method public final s()I
-    .locals 2
+    add-float v8, v3, v1
 
-    iget v0, p0, Lp33;->e:I
+    cmpl-float v4, v8, v2
 
-    iget v1, p0, Lp33;->c:I
+    if-lez v4, :cond_1
 
-    if-ne v0, v1, :cond_0
+    const/high16 v4, 0x3f800000    # 1.0f
 
-    const/4 v0, 0x0
+    const/4 v7, 0x0
 
-    iput v0, p0, Lp33;->f:I
+    move-object v0, p0
 
-    return v0
+    move-object v1, p1
 
-    :cond_0
-    invoke-virtual {p0}, Lp33;->p()I
+    move-object v2, p2
 
-    move-result v0
+    move/from16 v5, p5
 
-    iput v0, p0, Lp33;->f:I
+    move/from16 v6, p6
 
-    if-eqz v0, :cond_1
+    invoke-virtual/range {v0 .. v7}, Lp33;->g(Landroid/graphics/Canvas;Landroid/graphics/Paint;FFIII)V
 
-    return v0
+    const/high16 v3, 0x3f800000    # 1.0f
 
-    :cond_1
-    new-instance p0, Lcom/google/protobuf/nano/InvalidProtocolBufferNanoException;
+    const/4 v6, 0x0
 
-    const-string v0, "Protocol message contained an invalid tag (zero)."
+    move/from16 v7, p7
 
-    invoke-direct {p0, v0}, Ljava/io/IOException;-><init>(Ljava/lang/String;)V
+    move v4, v8
 
-    throw p0
-.end method
-
-.method public final t(I)V
-    .locals 4
-
-    iget v0, p0, Lp33;->e:I
-
-    iget v1, p0, Lp33;->b:I
-
-    sub-int/2addr v0, v1
-
-    if-gt p1, v0, :cond_1
-
-    if-ltz p1, :cond_0
-
-    add-int/2addr v1, p1
-
-    iput v1, p0, Lp33;->e:I
+    invoke-virtual/range {v0 .. v7}, Lp33;->g(Landroid/graphics/Canvas;Landroid/graphics/Paint;FFIII)V
 
     return-void
 
-    :cond_0
-    new-instance p0, Ljava/lang/IllegalArgumentException;
-
-    const-string v0, "Bad position "
-
-    invoke-static {p1, v0}, Lm26;->h(ILjava/lang/String;)Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-direct {p0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw p0
-
     :cond_1
-    new-instance v0, Ljava/lang/IllegalArgumentException;
+    iget v4, p0, Lp33;->c:F
 
-    const-string v2, "Position "
+    iget v6, p0, Lp33;->d:F
 
-    const-string v3, " is beyond current "
+    div-float/2addr v4, v6
 
-    invoke-static {p1, v2, v3}, Lm26;->l(ILjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+    float-to-double v6, v4
 
-    move-result-object p1
+    invoke-static {v6, v7}, Ljava/lang/Math;->toDegrees(D)D
 
-    iget p0, p0, Lp33;->e:I
+    move-result-wide v6
 
-    sub-int/2addr p0, v1
+    double-to-float v7, v6
 
-    invoke-virtual {p1, p0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    const/4 v6, 0x0
 
-    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    cmpl-float v4, v3, v6
 
-    move-result-object p0
+    const/high16 v8, 0x43b40000    # 360.0f
 
-    invoke-direct {v0, p0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+    const/high16 v9, 0x40000000    # 2.0f
 
-    throw v0
-.end method
+    if-nez v4, :cond_2
 
-.method public final u(I)Z
-    .locals 4
+    const v4, 0x3f7d70a4    # 0.99f
 
-    and-int/lit8 v0, p1, 0x7
+    cmpl-float v10, v1, v4
 
-    const/4 v1, 0x1
+    if-ltz v10, :cond_2
 
-    if-eqz v0, :cond_6
+    sub-float v4, v1, v4
 
-    if-eq v0, v1, :cond_5
+    mul-float v10, v7, v9
 
-    const/4 v2, 0x2
+    div-float/2addr v10, v8
 
-    if-eq v0, v2, :cond_4
+    mul-float/2addr v10, v4
 
-    const/4 v2, 0x4
+    const v4, 0x3c23d70a    # 0.01f
 
-    const/4 v3, 0x3
+    div-float/2addr v10, v4
 
-    if-eq v0, v3, :cond_2
-
-    if-eq v0, v2, :cond_1
-
-    const/4 p1, 0x5
-
-    if-ne v0, p1, :cond_0
-
-    invoke-virtual {p0}, Lp33;->n()I
-
-    return v1
-
-    :cond_0
-    new-instance p0, Lcom/google/protobuf/nano/InvalidProtocolBufferNanoException;
-
-    const-string p1, "Protocol message tag had invalid wire type."
-
-    invoke-direct {p0, p1}, Ljava/io/IOException;-><init>(Ljava/lang/String;)V
-
-    throw p0
-
-    :cond_1
-    const/4 p0, 0x0
-
-    return p0
+    add-float/2addr v1, v10
 
     :cond_2
-    invoke-virtual {p0}, Lp33;->s()I
+    iget v4, p0, Lp33;->f:F
 
-    move-result v0
+    sub-float v4, v2, v4
 
-    if-eqz v0, :cond_3
+    invoke-static {v4, v2, v3}, Lcb7;->I(FFF)F
 
-    invoke-virtual {p0, v0}, Lp33;->u(I)Z
+    move-result v2
 
-    move-result v0
+    iget v3, p0, Lp33;->f:F
 
-    if-nez v0, :cond_2
+    invoke-static {v6, v3, v1}, Lcb7;->I(FFF)F
+
+    move-result v1
+
+    move/from16 v3, p6
+
+    int-to-float v3, v3
+
+    iget v4, p0, Lp33;->d:F
+
+    div-float/2addr v3, v4
+
+    float-to-double v3, v3
+
+    invoke-static {v3, v4}, Ljava/lang/Math;->toDegrees(D)D
+
+    move-result-wide v3
+
+    double-to-float v3, v3
+
+    move/from16 v4, p7
+
+    int-to-float v4, v4
+
+    iget v10, p0, Lp33;->d:F
+
+    div-float/2addr v4, v10
+
+    float-to-double v10, v4
+
+    invoke-static {v10, v11}, Ljava/lang/Math;->toDegrees(D)D
+
+    move-result-wide v10
+
+    double-to-float v4, v10
+
+    mul-float/2addr v1, v8
+
+    sub-float/2addr v1, v3
+
+    sub-float v10, v1, v4
+
+    mul-float/2addr v2, v8
+
+    add-float v8, v2, v3
+
+    cmpg-float v1, v10, v6
+
+    if-gtz v1, :cond_3
+
+    goto/16 :goto_2
 
     :cond_3
-    ushr-int/2addr p1, v3
+    const/4 v1, 0x1
 
-    shl-int/2addr p1, v3
+    invoke-virtual {p2, v1}, Landroid/graphics/Paint;->setAntiAlias(Z)V
 
-    or-int/2addr p1, v2
+    move/from16 v1, p5
 
-    invoke-virtual {p0, p1}, Lp33;->a(I)V
+    invoke-virtual {p2, v1}, Landroid/graphics/Paint;->setColor(I)V
 
-    return v1
+    iget v1, p0, Lp33;->b:F
 
-    :cond_4
-    invoke-virtual {p0}, Lp33;->p()I
+    invoke-virtual {p2, v1}, Landroid/graphics/Paint;->setStrokeWidth(F)V
 
-    move-result p1
+    mul-float v1, v7, v9
 
-    invoke-virtual {p0, p1}, Lp33;->v(I)V
+    cmpg-float v2, v10, v1
 
-    return v1
+    if-gez v2, :cond_4
 
-    :cond_5
-    invoke-virtual {p0}, Lp33;->o()J
+    div-float v6, v10, v1
 
-    return v1
+    sget-object v1, Landroid/graphics/Paint$Style;->FILL:Landroid/graphics/Paint$Style;
 
-    :cond_6
-    invoke-virtual {p0}, Lp33;->p()I
+    invoke-virtual {p2, v1}, Landroid/graphics/Paint;->setStyle(Landroid/graphics/Paint$Style;)V
 
-    return v1
-.end method
+    mul-float/2addr v7, v6
 
-.method public final v(I)V
-    .locals 3
+    add-float v3, v7, v8
 
-    if-ltz p1, :cond_2
+    iget v1, p0, Lp33;->c:F
 
-    iget v0, p0, Lp33;->e:I
+    mul-float v4, v1, v9
 
-    add-int v1, v0, p1
+    iget v5, p0, Lp33;->b:F
 
-    iget v2, p0, Lp33;->g:I
+    move-object v0, p0
 
-    if-gt v1, v2, :cond_1
+    move-object v1, p1
 
-    iget v2, p0, Lp33;->c:I
+    move-object v2, p2
 
-    sub-int/2addr v2, v0
-
-    if-gt p1, v2, :cond_0
-
-    iput v1, p0, Lp33;->e:I
+    invoke-virtual/range {v0 .. v6}, Lp33;->h(Landroid/graphics/Canvas;Landroid/graphics/Paint;FFFF)V
 
     return-void
 
-    :cond_0
-    invoke-static {}, Lcom/google/protobuf/nano/InvalidProtocolBufferNanoException;->a()Lcom/google/protobuf/nano/InvalidProtocolBufferNanoException;
+    :cond_4
+    move v0, v1
 
-    move-result-object p0
+    new-instance v1, Landroid/graphics/RectF;
 
-    throw p0
+    iget v3, p0, Lp33;->d:F
 
-    :cond_1
-    sub-int/2addr v2, v0
+    neg-float v4, v3
 
-    invoke-virtual {p0, v2}, Lp33;->v(I)V
+    invoke-direct {v1, v4, v4, v3, v3}, Landroid/graphics/RectF;-><init>(FFFF)V
 
-    invoke-static {}, Lcom/google/protobuf/nano/InvalidProtocolBufferNanoException;->a()Lcom/google/protobuf/nano/InvalidProtocolBufferNanoException;
+    sget-object v3, Landroid/graphics/Paint$Style;->STROKE:Landroid/graphics/Paint$Style;
 
-    move-result-object p0
+    invoke-virtual {p2, v3}, Landroid/graphics/Paint;->setStyle(Landroid/graphics/Paint$Style;)V
 
-    throw p0
+    iget-boolean v3, p0, Lp33;->e:Z
 
-    :cond_2
-    new-instance p0, Lcom/google/protobuf/nano/InvalidProtocolBufferNanoException;
+    if-eqz v3, :cond_5
 
-    const-string p1, "CodedInputStream encountered an embedded string or message which claimed to have negative size."
+    sget-object v3, Landroid/graphics/Paint$Cap;->ROUND:Landroid/graphics/Paint$Cap;
 
-    invoke-direct {p0, p1}, Ljava/io/IOException;-><init>(Ljava/lang/String;)V
+    goto :goto_1
 
-    throw p0
+    :cond_5
+    sget-object v3, Landroid/graphics/Paint$Cap;->BUTT:Landroid/graphics/Paint$Cap;
+
+    :goto_1
+    invoke-virtual {p2, v3}, Landroid/graphics/Paint;->setStrokeCap(Landroid/graphics/Paint$Cap;)V
+
+    add-float v3, v8, v7
+
+    sub-float v0, v10, v0
+
+    const/4 v4, 0x0
+
+    move-object v5, p2
+
+    move v2, v3
+
+    move v3, v0
+
+    move-object v0, p1
+
+    invoke-virtual/range {v0 .. v5}, Landroid/graphics/Canvas;->drawArc(Landroid/graphics/RectF;FFZLandroid/graphics/Paint;)V
+
+    move v3, v2
+
+    iget-boolean v0, p0, Lp33;->e:Z
+
+    if-nez v0, :cond_6
+
+    iget v0, p0, Lp33;->c:F
+
+    cmpl-float v0, v0, v6
+
+    if-lez v0, :cond_6
+
+    sget-object v0, Landroid/graphics/Paint$Style;->FILL:Landroid/graphics/Paint$Style;
+
+    invoke-virtual {p2, v0}, Landroid/graphics/Paint;->setStyle(Landroid/graphics/Paint$Style;)V
+
+    iget v0, p0, Lp33;->c:F
+
+    mul-float v4, v0, v9
+
+    iget v5, p0, Lp33;->b:F
+
+    const/high16 v6, 0x3f800000    # 1.0f
+
+    move-object v0, p0
+
+    move-object v1, p1
+
+    move-object v2, p2
+
+    invoke-virtual/range {v0 .. v6}, Lp33;->h(Landroid/graphics/Canvas;Landroid/graphics/Paint;FFFF)V
+
+    add-float/2addr v8, v10
+
+    sub-float v3, v8, v7
+
+    iget v1, p0, Lp33;->c:F
+
+    mul-float v4, v1, v9
+
+    iget v5, p0, Lp33;->b:F
+
+    move-object v1, p1
+
+    invoke-virtual/range {v0 .. v6}, Lp33;->h(Landroid/graphics/Canvas;Landroid/graphics/Paint;FFFF)V
+
+    :cond_6
+    :goto_2
+    return-void
+.end method
+
+.method public final h(Landroid/graphics/Canvas;Landroid/graphics/Paint;FFFF)V
+    .locals 6
+
+    iget v0, p0, Lp33;->b:F
+
+    invoke-static {p5, v0}, Ljava/lang/Math;->min(FF)F
+
+    move-result p5
+
+    float-to-int p5, p5
+
+    int-to-float p5, p5
+
+    iget v0, p0, Lp33;->c:F
+
+    mul-float/2addr v0, p5
+
+    iget v1, p0, Lp33;->b:F
+
+    div-float/2addr v0, v1
+
+    const/high16 v1, 0x40000000    # 2.0f
+
+    div-float v2, p4, v1
+
+    invoke-static {v2, v0}, Ljava/lang/Math;->min(FF)F
+
+    move-result v0
+
+    new-instance v3, Landroid/graphics/RectF;
+
+    neg-float v4, p5
+
+    div-float/2addr v4, v1
+
+    neg-float p4, p4
+
+    div-float/2addr p4, v1
+
+    div-float/2addr p5, v1
+
+    invoke-direct {v3, v4, p4, p5, v2}, Landroid/graphics/RectF;-><init>(FFFF)V
+
+    invoke-virtual {p1}, Landroid/graphics/Canvas;->save()I
+
+    iget p4, p0, Lp33;->d:F
+
+    float-to-double p4, p4
+
+    float-to-double v1, p3
+
+    invoke-static {v1, v2}, Ljava/lang/Math;->toRadians(D)D
+
+    move-result-wide v4
+
+    invoke-static {v4, v5}, Ljava/lang/Math;->cos(D)D
+
+    move-result-wide v4
+
+    mul-double/2addr v4, p4
+
+    double-to-float p4, v4
+
+    iget p0, p0, Lp33;->d:F
+
+    float-to-double v4, p0
+
+    invoke-static {v1, v2}, Ljava/lang/Math;->toRadians(D)D
+
+    move-result-wide v1
+
+    invoke-static {v1, v2}, Ljava/lang/Math;->sin(D)D
+
+    move-result-wide v1
+
+    mul-double/2addr v1, v4
+
+    double-to-float p0, v1
+
+    invoke-virtual {p1, p4, p0}, Landroid/graphics/Canvas;->translate(FF)V
+
+    invoke-virtual {p1, p3}, Landroid/graphics/Canvas;->rotate(F)V
+
+    invoke-virtual {p1, p6, p6}, Landroid/graphics/Canvas;->scale(FF)V
+
+    invoke-virtual {p1, v3, v0, v0, p2}, Landroid/graphics/Canvas;->drawRoundRect(Landroid/graphics/RectF;FFLandroid/graphics/Paint;)V
+
+    invoke-virtual {p1}, Landroid/graphics/Canvas;->restore()V
+
+    return-void
+.end method
+
+.method public final i()I
+    .locals 1
+
+    iget-object p0, p0, Lfw4;->a:Lrj0;
+
+    move-object v0, p0
+
+    check-cast v0, Lv33;
+
+    iget v0, v0, Lv33;->h:I
+
+    check-cast p0, Lv33;
+
+    iget p0, p0, Lv33;->i:I
+
+    mul-int/lit8 p0, p0, 0x2
+
+    add-int/2addr p0, v0
+
+    return p0
 .end method

@@ -1,290 +1,118 @@
-.class public final synthetic Ly52;
-.super Ljava/lang/Object;
+.class public final Ly52;
+.super Lure;
 .source "SourceFile"
 
 # interfaces
-.implements Lv56;
+.implements Lpc6;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public X:I
 
-.field public final synthetic b:La62;
+.field public synthetic Y:Ljava/lang/Object;
+
+.field public final synthetic Z:Lz52;
 
 
 # direct methods
-.method public synthetic constructor <init>(La62;I)V
+.method public constructor <init>(Lz52;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    iput p2, p0, Ly52;->a:I
+    iput-object p1, p0, Ly52;->Z:Lz52;
 
-    iput-object p1, p0, Ly52;->b:La62;
+    const/4 p1, 0x2
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p1, p2}, Lure;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke()Ljava/lang/Object;
-    .locals 8
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    iget v0, p0, Ly52;->a:I
+    check-cast p1, Lijb;
 
-    const/4 v1, 0x2
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    const/4 v2, 0x4
-
-    const/4 v3, 0x0
-
-    const/4 v4, 0x3
-
-    sget-object v5, Lqp4;->q0:Lap9;
-
-    iget-object p0, p0, Ly52;->b:La62;
-
-    const/4 v6, 0x1
-
-    packed-switch v0, :pswitch_data_0
-
-    invoke-virtual {v5, p0}, Lap9;->h(Landroid/view/View;)Lyha;
-
-    move-result-object v0
-
-    new-array v4, v4, [Landroid/graphics/drawable/Drawable;
-
-    new-instance v5, Landroid/graphics/drawable/ShapeDrawable;
-
-    new-instance v7, Landroid/graphics/drawable/shapes/OvalShape;
-
-    invoke-direct {v7}, Landroid/graphics/drawable/shapes/OvalShape;-><init>()V
-
-    invoke-direct {v5, v7}, Landroid/graphics/drawable/ShapeDrawable;-><init>(Landroid/graphics/drawable/shapes/Shape;)V
-
-    invoke-virtual {v5}, Landroid/graphics/drawable/ShapeDrawable;->getPaint()Landroid/graphics/Paint;
-
-    move-result-object v7
-
-    invoke-interface {v0}, Lyha;->b()Lfe0;
-
-    const/high16 v0, -0x67000000
-
-    invoke-virtual {v7, v0}, Landroid/graphics/Paint;->setColor(I)V
-
-    aput-object v5, v4, v3
-
-    new-instance v0, Landroid/graphics/drawable/InsetDrawable;
-
-    sget v5, Lanc;->m:I
-
-    invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
-
-    move-result-object v7
-
-    invoke-static {v7, v5}, Let3;->b(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
-
-    move-result-object v5
-
-    int-to-float v2, v2
-
-    invoke-static {}, Lgk4;->d()Landroid/content/res/Resources;
-
-    move-result-object v7
-
-    invoke-virtual {v7}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v7
-
-    iget v7, v7, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v2, v7
-
-    invoke-static {v2}, Lkhg;->x(F)I
-
-    move-result v2
-
-    invoke-direct {v0, v5, v2}, Landroid/graphics/drawable/InsetDrawable;-><init>(Landroid/graphics/drawable/Drawable;I)V
-
-    const/4 v2, -0x1
-
-    invoke-static {v0, v2}, Lgad;->j0(Landroid/graphics/drawable/Drawable;I)V
-
-    aput-object v0, v4, v6
-
-    iget-object p0, p0, La62;->a:Ljava/lang/Object;
-
-    invoke-interface {p0}, Lje7;->getValue()Ljava/lang/Object;
+    invoke-virtual {p0, p1, p2}, Ly52;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
     move-result-object p0
 
-    aput-object p0, v4, v1
+    check-cast p0, Ly52;
 
-    new-instance p0, Landroid/graphics/drawable/LayerDrawable;
+    sget-object p1, Lylf;->a:Lylf;
 
-    invoke-direct {p0, v4}, Landroid/graphics/drawable/LayerDrawable;-><init>([Landroid/graphics/drawable/Drawable;)V
-
-    const/16 v0, 0x11
-
-    invoke-virtual {p0, v3, v0}, Landroid/graphics/drawable/LayerDrawable;->setLayerGravity(II)V
-
-    invoke-virtual {p0, v6, v0}, Landroid/graphics/drawable/LayerDrawable;->setLayerGravity(II)V
-
-    invoke-virtual {p0, v1, v0}, Landroid/graphics/drawable/LayerDrawable;->setLayerGravity(II)V
-
-    const/16 v0, 0x1c
-
-    int-to-float v0, v0
-
-    invoke-static {}, Lgk4;->d()Landroid/content/res/Resources;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v2
-
-    iget v2, v2, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v0, v2
-
-    invoke-static {v0}, Lkhg;->x(F)I
-
-    move-result v0
-
-    invoke-virtual {p0, v3, v0, v0}, Landroid/graphics/drawable/LayerDrawable;->setLayerSize(III)V
-
-    invoke-virtual {p0, v6, v0, v0}, Landroid/graphics/drawable/LayerDrawable;->setLayerSize(III)V
-
-    const/16 v0, 0x40
-
-    int-to-float v0, v0
-
-    invoke-static {}, Lgk4;->d()Landroid/content/res/Resources;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v2
-
-    iget v2, v2, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v2, v0
-
-    invoke-static {v2}, Lkhg;->x(F)I
-
-    move-result v2
-
-    invoke-static {}, Lgk4;->d()Landroid/content/res/Resources;
-
-    move-result-object v3
-
-    invoke-virtual {v3}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v3
-
-    iget v3, v3, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v0, v3
-
-    invoke-static {v0}, Lkhg;->x(F)I
-
-    move-result v0
-
-    invoke-virtual {p0, v1, v2, v0}, Landroid/graphics/drawable/LayerDrawable;->setLayerSize(III)V
-
-    return-object p0
-
-    :pswitch_0
-    invoke-virtual {v5, p0}, Lap9;->h(Landroid/view/View;)Lyha;
-
-    move-result-object p0
-
-    invoke-interface {p0}, Lyha;->i()Lu8e;
-
-    move-result-object p0
-
-    iget-object p0, p0, Lu8e;->b:Lz8e;
-
-    iget p0, p0, Lz8e;->b:I
-
-    invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object p0
-
-    int-to-float v0, v6
-
-    invoke-static {}, Lgk4;->d()Landroid/content/res/Resources;
-
-    move-result-object v5
-
-    invoke-virtual {v5}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v5
-
-    iget v5, v5, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v0, v5
-
-    invoke-static {v0}, Lkhg;->x(F)I
-
-    move-result v0
-
-    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v0
-
-    invoke-static {}, Lgk4;->d()Landroid/content/res/Resources;
-
-    move-result-object v5
-
-    invoke-virtual {v5}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v5
-
-    iget v5, v5, Landroid/util/DisplayMetrics;->density:F
-
-    const/high16 v7, 0x41400000    # 12.0f
-
-    mul-float/2addr v5, v7
-
-    const/16 v7, 0x8
-
-    new-array v7, v7, [F
-
-    aput v5, v7, v3
-
-    aput v5, v7, v6
-
-    aput v5, v7, v1
-
-    aput v5, v7, v4
-
-    aput v5, v7, v2
-
-    const/4 v1, 0x5
-
-    aput v5, v7, v1
-
-    const/4 v1, 0x6
-
-    aput v5, v7, v1
-
-    const/4 v1, 0x7
-
-    aput v5, v7, v1
-
-    const/4 v1, 0x0
-
-    invoke-static {v1, p0, v0, v7}, Ld46;->G(Ljava/lang/Integer;Ljava/lang/Integer;Ljava/lang/Integer;[F)Landroid/graphics/drawable/GradientDrawable;
+    invoke-virtual {p0, p1}, Ly52;->o(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p0
 
     return-object p0
+.end method
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 1
+
+    new-instance v0, Ly52;
+
+    iget-object p0, p0, Ly52;->Z:Lz52;
+
+    invoke-direct {v0, p0, p2}, Ly52;-><init>(Lz52;Lkotlin/coroutines/Continuation;)V
+
+    iput-object p1, v0, Ly52;->Y:Ljava/lang/Object;
+
+    return-object v0
+.end method
+
+.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 2
+
+    iget v0, p0, Ly52;->X:I
+
+    const/4 v1, 0x1
+
+    if-eqz v0, :cond_1
+
+    if-ne v0, v1, :cond_0
+
+    invoke-static {p1}, Lqe5;->V(Ljava/lang/Object;)V
+
+    goto :goto_0
+
+    :cond_0
+    new-instance p0, Ljava/lang/IllegalStateException;
+
+    const-string p1, "call to \'resume\' before \'invoke\' with coroutine"
+
+    invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p0
+
+    :cond_1
+    invoke-static {p1}, Lqe5;->V(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Ly52;->Y:Ljava/lang/Object;
+
+    check-cast p1, Lijb;
+
+    iput v1, p0, Ly52;->X:I
+
+    iget-object v0, p0, Ly52;->Z:Lz52;
+
+    invoke-virtual {v0, p1, p0}, Lz52;->i(Lijb;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p0
+
+    sget-object p1, Lz04;->a:Lz04;
+
+    if-ne p0, p1, :cond_2
+
+    return-object p1
+
+    :cond_2
+    :goto_0
+    sget-object p0, Lylf;->a:Lylf;
+
+    return-object p0
 .end method

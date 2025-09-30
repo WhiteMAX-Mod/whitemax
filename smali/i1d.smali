@@ -4,385 +4,210 @@
 
 
 # instance fields
-.field public final synthetic a:I
+.field public a:Lptg;
 
-.field public final b:Ljava/util/List;
-
-.field public final c:[Laye;
+.field public b:Ljava/util/ArrayList;
 
 
 # direct methods
-.method public constructor <init>(ILjava/util/List;)V
-    .locals 0
+.method public static a(Lkm4;J)J
+    .locals 9
 
-    iput p1, p0, Li1d;->a:I
+    iget-object v0, p0, Lkm4;->d:Lptg;
 
-    packed-switch p1, :pswitch_data_0
+    iget-object v1, p0, Lkm4;->k:Ljava/util/ArrayList;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    instance-of v2, v0, Lrq6;
 
-    iput-object p2, p0, Li1d;->b:Ljava/util/List;
+    if-eqz v2, :cond_0
 
-    invoke-interface {p2}, Ljava/util/List;->size()I
-
-    move-result p1
-
-    new-array p1, p1, [Laye;
-
-    iput-object p1, p0, Li1d;->c:[Laye;
-
-    return-void
-
-    :pswitch_0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p2, p0, Li1d;->b:Ljava/util/List;
-
-    invoke-interface {p2}, Ljava/util/List;->size()I
-
-    move-result p1
-
-    new-array p1, p1, [Laye;
-
-    iput-object p1, p0, Li1d;->c:[Laye;
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x1
-        :pswitch_0
-    .end packed-switch
-.end method
-
-
-# virtual methods
-.method public a(JLabf;)V
-    .locals 4
-
-    invoke-virtual {p3}, Labf;->c()I
-
-    move-result v0
-
-    const/16 v1, 0x9
-
-    if-ge v0, v1, :cond_0
-
-    goto :goto_0
+    return-wide p1
 
     :cond_0
-    invoke-virtual {p3}, Labf;->f()I
-
-    move-result v0
-
-    invoke-virtual {p3}, Labf;->f()I
-
-    move-result v1
-
-    invoke-virtual {p3}, Labf;->s()I
+    invoke-virtual {v1}, Ljava/util/ArrayList;->size()I
 
     move-result v2
 
-    const/16 v3, 0x1b2
+    const/4 v3, 0x0
 
-    if-ne v0, v3, :cond_1
-
-    const v0, 0x47413934
-
-    if-ne v1, v0, :cond_1
-
-    const/4 v0, 0x3
-
-    if-ne v2, v0, :cond_1
-
-    iget-object p0, p0, Li1d;->c:[Laye;
-
-    invoke-static {p1, p2, p3, p0}, Lus;->m(JLabf;[Laye;)V
-
-    :cond_1
-    :goto_0
-    return-void
-.end method
-
-.method public final b(Lz95;Lk1f;)V
-    .locals 10
-
-    iget v0, p0, Li1d;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    const/4 v0, 0x0
-
-    move v1, v0
+    move-wide v4, p1
 
     :goto_0
-    iget-object v2, p0, Li1d;->c:[Laye;
+    if-ge v3, v2, :cond_3
 
-    array-length v3, v2
+    invoke-virtual {v1, v3}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
-    if-ge v1, v3, :cond_3
+    move-result-object v6
 
-    invoke-virtual {p2}, Lk1f;->a()V
+    check-cast v6, Lhm4;
 
-    invoke-virtual {p2}, Lk1f;->b()V
+    instance-of v7, v6, Lkm4;
 
-    iget v3, p2, Lk1f;->e:I
+    if-eqz v7, :cond_2
 
-    const/4 v4, 0x3
+    check-cast v6, Lkm4;
 
-    invoke-interface {p1, v3, v4}, Lz95;->A(II)Laye;
+    iget-object v7, v6, Lkm4;->d:Lptg;
 
-    move-result-object v3
-
-    iget-object v4, p0, Li1d;->b:Ljava/util/List;
-
-    invoke-interface {v4, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    move-result-object v4
-
-    check-cast v4, Ldz5;
-
-    iget-object v5, v4, Ldz5;->s0:Ljava/lang/String;
-
-    const-string v6, "application/cea-608"
-
-    invoke-virtual {v6, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v6
-
-    if-nez v6, :cond_1
-
-    const-string v6, "application/cea-708"
-
-    invoke-virtual {v6, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v6
-
-    if-eqz v6, :cond_0
+    if-ne v7, v0, :cond_1
 
     goto :goto_1
 
-    :cond_0
-    move v6, v0
-
-    goto :goto_2
-
     :cond_1
-    :goto_1
-    const/4 v6, 0x1
+    iget v7, v6, Lkm4;->f:I
 
-    :goto_2
-    invoke-static {v5}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+    int-to-long v7, v7
 
-    move-result-object v7
+    add-long/2addr v7, p1
 
-    invoke-virtual {v7}, Ljava/lang/String;->length()I
+    invoke-static {v6, v7, v8}, Li1d;->a(Lkm4;J)J
 
-    move-result v8
+    move-result-wide v6
 
-    const-string v9, "Invalid closed caption mime type provided: "
+    invoke-static {v4, v5, v6, v7}, Ljava/lang/Math;->min(JJ)J
 
-    if-eqz v8, :cond_2
-
-    invoke-virtual {v9, v7}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v7
-
-    goto :goto_3
+    move-result-wide v4
 
     :cond_2
-    new-instance v7, Ljava/lang/String;
-
-    invoke-direct {v7, v9}, Ljava/lang/String;-><init>(Ljava/lang/String;)V
-
-    :goto_3
-    invoke-static {v7, v6}, Lq46;->c(Ljava/lang/String;Z)V
-
-    new-instance v6, Lbz5;
-
-    invoke-direct {v6}, Lbz5;-><init>()V
-
-    invoke-virtual {p2}, Lk1f;->b()V
-
-    iget-object v7, p2, Lk1f;->f:Ljava/lang/String;
-
-    iput-object v7, v6, Lbz5;->a:Ljava/lang/String;
-
-    iput-object v5, v6, Lbz5;->k:Ljava/lang/String;
-
-    iget v5, v4, Ldz5;->o:I
-
-    iput v5, v6, Lbz5;->d:I
-
-    iget-object v5, v4, Ldz5;->c:Ljava/lang/String;
-
-    iput-object v5, v6, Lbz5;->c:Ljava/lang/String;
-
-    iget v5, v4, Ldz5;->K0:I
-
-    iput v5, v6, Lbz5;->C:I
-
-    iget-object v4, v4, Ldz5;->u0:Ljava/util/List;
-
-    iput-object v4, v6, Lbz5;->m:Ljava/util/List;
-
-    new-instance v4, Ldz5;
-
-    invoke-direct {v4, v6}, Ldz5;-><init>(Lbz5;)V
-
-    invoke-interface {v3, v4}, Laye;->d(Ldz5;)V
-
-    aput-object v3, v2, v1
-
-    add-int/lit8 v1, v1, 0x1
+    :goto_1
+    add-int/lit8 v3, v3, 0x1
 
     goto :goto_0
 
     :cond_3
-    return-void
+    iget-object v1, v0, Lptg;->i:Lkm4;
 
-    :pswitch_0
-    const/4 v0, 0x0
+    iget-object v2, v0, Lptg;->h:Lkm4;
 
-    move v1, v0
+    if-ne p0, v1, :cond_4
 
-    :goto_4
-    iget-object v2, p0, Li1d;->c:[Laye;
+    invoke-virtual {v0}, Lptg;->j()J
 
-    array-length v3, v2
+    move-result-wide v0
 
-    if-ge v1, v3, :cond_8
+    sub-long/2addr p1, v0
 
-    invoke-virtual {p2}, Lk1f;->a()V
+    invoke-static {v2, p1, p2}, Li1d;->a(Lkm4;J)J
 
-    invoke-virtual {p2}, Lk1f;->b()V
+    move-result-wide v0
 
-    iget v3, p2, Lk1f;->e:I
+    invoke-static {v4, v5, v0, v1}, Ljava/lang/Math;->min(JJ)J
 
-    const/4 v4, 0x3
+    move-result-wide v0
 
-    invoke-interface {p1, v3, v4}, Lz95;->A(II)Laye;
+    iget p0, v2, Lkm4;->f:I
 
-    move-result-object v3
+    int-to-long v2, p0
 
-    iget-object v4, p0, Li1d;->b:Ljava/util/List;
+    sub-long/2addr p1, v2
 
-    invoke-interface {v4, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
+    invoke-static {v0, v1, p1, p2}, Ljava/lang/Math;->min(JJ)J
 
-    move-result-object v4
+    move-result-wide p0
 
-    check-cast v4, Ldz5;
-
-    iget-object v5, v4, Ldz5;->s0:Ljava/lang/String;
-
-    const-string v6, "application/cea-608"
-
-    invoke-virtual {v6, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v6
-
-    if-nez v6, :cond_5
-
-    const-string v6, "application/cea-708"
-
-    invoke-virtual {v6, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v6
-
-    if-eqz v6, :cond_4
-
-    goto :goto_5
+    return-wide p0
 
     :cond_4
-    move v6, v0
+    return-wide v4
+.end method
 
-    goto :goto_6
+.method public static b(Lkm4;J)J
+    .locals 9
 
-    :cond_5
-    :goto_5
-    const/4 v6, 0x1
+    iget-object v0, p0, Lkm4;->d:Lptg;
 
-    :goto_6
-    invoke-static {v5}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+    iget-object v1, p0, Lkm4;->k:Ljava/util/ArrayList;
 
-    move-result-object v7
+    instance-of v2, v0, Lrq6;
 
-    invoke-virtual {v7}, Ljava/lang/String;->length()I
+    if-eqz v2, :cond_0
 
-    move-result v8
+    return-wide p1
 
-    const-string v9, "Invalid closed caption mime type provided: "
+    :cond_0
+    invoke-virtual {v1}, Ljava/util/ArrayList;->size()I
 
-    if-eqz v8, :cond_6
+    move-result v2
 
-    invoke-virtual {v9, v7}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+    const/4 v3, 0x0
 
-    move-result-object v7
+    move-wide v4, p1
 
-    goto :goto_7
+    :goto_0
+    if-ge v3, v2, :cond_3
 
-    :cond_6
-    new-instance v7, Ljava/lang/String;
+    invoke-virtual {v1, v3}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
-    invoke-direct {v7, v9}, Ljava/lang/String;-><init>(Ljava/lang/String;)V
+    move-result-object v6
 
-    :goto_7
-    invoke-static {v7, v6}, Lq46;->c(Ljava/lang/String;Z)V
+    check-cast v6, Lhm4;
 
-    iget-object v6, v4, Ldz5;->a:Ljava/lang/String;
+    instance-of v7, v6, Lkm4;
 
-    if-eqz v6, :cond_7
+    if-eqz v7, :cond_2
 
-    goto :goto_8
+    check-cast v6, Lkm4;
 
-    :cond_7
-    invoke-virtual {p2}, Lk1f;->b()V
+    iget-object v7, v6, Lkm4;->d:Lptg;
 
-    iget-object v6, p2, Lk1f;->f:Ljava/lang/String;
+    if-ne v7, v0, :cond_1
 
-    :goto_8
-    new-instance v7, Lbz5;
+    goto :goto_1
 
-    invoke-direct {v7}, Lbz5;-><init>()V
+    :cond_1
+    iget v7, v6, Lkm4;->f:I
 
-    iput-object v6, v7, Lbz5;->a:Ljava/lang/String;
+    int-to-long v7, v7
 
-    iput-object v5, v7, Lbz5;->k:Ljava/lang/String;
+    add-long/2addr v7, p1
 
-    iget v5, v4, Ldz5;->o:I
+    invoke-static {v6, v7, v8}, Li1d;->b(Lkm4;J)J
 
-    iput v5, v7, Lbz5;->d:I
+    move-result-wide v6
 
-    iget-object v5, v4, Ldz5;->c:Ljava/lang/String;
+    invoke-static {v4, v5, v6, v7}, Ljava/lang/Math;->max(JJ)J
 
-    iput-object v5, v7, Lbz5;->c:Ljava/lang/String;
+    move-result-wide v4
 
-    iget v5, v4, Ldz5;->K0:I
+    :cond_2
+    :goto_1
+    add-int/lit8 v3, v3, 0x1
 
-    iput v5, v7, Lbz5;->C:I
+    goto :goto_0
 
-    iget-object v4, v4, Ldz5;->u0:Ljava/util/List;
+    :cond_3
+    iget-object v1, v0, Lptg;->h:Lkm4;
 
-    iput-object v4, v7, Lbz5;->m:Ljava/util/List;
+    iget-object v2, v0, Lptg;->i:Lkm4;
 
-    new-instance v4, Ldz5;
+    if-ne p0, v1, :cond_4
 
-    invoke-direct {v4, v7}, Ldz5;-><init>(Lbz5;)V
+    invoke-virtual {v0}, Lptg;->j()J
 
-    invoke-interface {v3, v4}, Laye;->d(Ldz5;)V
+    move-result-wide v0
 
-    aput-object v3, v2, v1
+    add-long/2addr v0, p1
 
-    add-int/lit8 v1, v1, 0x1
+    invoke-static {v2, v0, v1}, Li1d;->b(Lkm4;J)J
 
-    goto :goto_4
+    move-result-wide p0
 
-    :cond_8
-    return-void
+    invoke-static {v4, v5, p0, p1}, Ljava/lang/Math;->max(JJ)J
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    move-result-wide p0
+
+    iget p2, v2, Lkm4;->f:I
+
+    int-to-long v2, p2
+
+    sub-long/2addr v0, v2
+
+    invoke-static {p0, p1, v0, v1}, Ljava/lang/Math;->max(JJ)J
+
+    move-result-wide p0
+
+    return-wide p0
+
+    :cond_4
+    return-wide v4
 .end method

@@ -1,44 +1,24 @@
-.class public final Ld4c;
+.class public abstract Ld4c;
 .super Ljava/lang/Object;
-.source "SourceFile"
 
 
-# instance fields
-.field public final a:Landroid/content/Context;
+# static fields
+.field public static add_8:I = 0x7f0802ab
 
+.field public static apple_outline_24:I = 0x7f0802b3
 
-# direct methods
-.method public constructor <init>(Landroid/content/Context;)V
-    .locals 0
+.field public static ball_outline_24:I = 0x7f0802c0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+.field public static car_outline_24:I = 0x7f0802e3
 
-    iput-object p1, p0, Ld4c;->a:Landroid/content/Context;
+.field public static fire_24:I = 0x7f0803bc
 
-    return-void
-.end method
+.field public static flags_outline_24:I = 0x7f0804b4
 
+.field public static lamp_outline_24:I = 0x7f0807f2
 
-# virtual methods
-.method public final a()I
-    .locals 1
+.field public static paw_outline_24:I = 0x7f0808d9
 
-    iget-object p0, p0, Ld4c;->a:Landroid/content/Context;
+.field public static remove_outline_24:I = 0x7f080900
 
-    invoke-static {p0}, Lp54;->v(Landroid/content/Context;)I
-
-    move-result p0
-
-    const/16 v0, 0x168
-
-    if-lt p0, v0, :cond_0
-
-    const/16 p0, 0x20
-
-    return p0
-
-    :cond_0
-    const/16 p0, 0x1c
-
-    return p0
-.end method
+.field public static symbols_outline_24:I = 0x7f08093e

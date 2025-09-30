@@ -1,71 +1,49 @@
 .class public final Luq3;
-.super Log0;
+.super Ljx3;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:Lk00;
+.field public synthetic X:Ljava/lang/Object;
 
-.field public final b:Lvy2;
+.field public final synthetic Y:Lyq3;
 
-.field public final c:Lgc3;
+.field public Z:I
+
+.field public o:Lyq3;
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 2
+.method public constructor <init>(Lyq3;Ljx3;)V
+    .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Luq3;->Y:Lyq3;
 
-    new-instance v0, Lk00;
-
-    const/16 v1, 0xf
-
-    invoke-direct {v0, v1}, Lk00;-><init>(I)V
-
-    iput-object v0, p0, Luq3;->a:Lk00;
-
-    new-instance v0, Lvy2;
-
-    const/16 v1, 0x8
-
-    invoke-direct {v0, v1}, Lvy2;-><init>(I)V
-
-    iput-object v0, p0, Luq3;->b:Lvy2;
-
-    new-instance v0, Lgc3;
-
-    const/16 v1, 0x10
-
-    invoke-direct {v0, v1}, Lgc3;-><init>(I)V
-
-    iput-object v0, p0, Luq3;->c:Lgc3;
+    invoke-direct {p0, p2}, Ljx3;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Ljava/util/Comparator;
-    .locals 0
+.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    iget-object p0, p0, Luq3;->a:Lk00;
+    iput-object p1, p0, Luq3;->X:Ljava/lang/Object;
 
-    return-object p0
-.end method
+    iget p1, p0, Luq3;->Z:I
 
-.method public final b()Lx56;
-    .locals 0
+    const/high16 v0, -0x80000000
 
-    iget-object p0, p0, Luq3;->b:Lvy2;
+    or-int/2addr p1, v0
 
-    return-object p0
-.end method
+    iput p1, p0, Luq3;->Z:I
 
-.method public final c()Lv56;
-    .locals 0
+    iget-object p1, p0, Luq3;->Y:Lyq3;
 
-    iget-object p0, p0, Luq3;->c:Lgc3;
+    invoke-static {p1, p0}, Lyq3;->c(Lyq3;Ljx3;)Ljava/io/Serializable;
+
+    move-result-object p0
 
     return-object p0
 .end method

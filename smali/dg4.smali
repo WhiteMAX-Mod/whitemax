@@ -1,136 +1,138 @@
-.class public final synthetic Ldg4;
-.super Ljava/lang/Object;
+.class public final Ldg4;
+.super Lba5;
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/lang/Runnable;
+.implements Ljava/util/concurrent/Executor;
 
 
-# instance fields
-.field public final synthetic a:I
+# static fields
+.field public static final a:Ldg4;
 
-.field public final synthetic b:Leg4;
+.field public static final b:Ls04;
 
 
 # direct methods
-.method public synthetic constructor <init>(Leg4;I)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 9
 
-    .line 1
-    iput p2, p0, Ldg4;->a:I
+    new-instance v0, Ldg4;
 
-    iput-object p1, p0, Ldg4;->b:Leg4;
+    invoke-direct {v0}, Ls04;-><init>()V
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    sput-object v0, Ldg4;->a:Ldg4;
 
-    return-void
-.end method
+    sget-object v0, Lfmf;->a:Lfmf;
 
-.method public synthetic constructor <init>(Leg4;Ljava/lang/String;)V
-    .locals 0
+    invoke-static {}, Lkotlinx/coroutines/internal/SystemPropsKt;->getAVAILABLE_PROCESSORS()I
 
-    .line 2
-    const/4 p2, 0x0
+    move-result v1
 
-    iput p2, p0, Ldg4;->a:I
+    const/16 v2, 0x40
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    if-ge v2, v1, :cond_0
 
-    iput-object p1, p0, Ldg4;->b:Leg4;
+    move v4, v1
+
+    goto :goto_0
+
+    :cond_0
+    move v4, v2
+
+    :goto_0
+    const/16 v7, 0xc
+
+    const/4 v8, 0x0
+
+    const-string v3, "kotlinx.coroutines.io.parallelism"
+
+    const/4 v5, 0x0
+
+    const/4 v6, 0x0
+
+    invoke-static/range {v3 .. v8}, Lkotlinx/coroutines/internal/SystemPropsKt;->systemProp$default(Ljava/lang/String;IIIILjava/lang/Object;)I
+
+    move-result v1
+
+    const/4 v2, 0x2
+
+    const/4 v3, 0x0
+
+    invoke-static {v0, v1, v3, v2, v3}, Ls04;->limitedParallelism$default(Ls04;ILjava/lang/String;ILjava/lang/Object;)Ls04;
+
+    move-result-object v0
+
+    sput-object v0, Ldg4;->b:Ls04;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
-    .locals 6
+.method public final close()V
+    .locals 1
 
-    iget v0, p0, Ldg4;->a:I
+    new-instance p0, Ljava/lang/IllegalStateException;
 
-    iget-object p0, p0, Ldg4;->b:Leg4;
+    const-string v0, "Cannot be invoked on Dispatchers.IO"
 
-    packed-switch v0, :pswitch_data_0
-
-    invoke-virtual {p0}, Leg4;->b()V
-
-    return-void
-
-    :pswitch_0
-    invoke-virtual {p0}, Leg4;->a()V
-
-    return-void
-
-    :pswitch_1
-    :try_start_0
-    iget-object v0, p0, Leg4;->e:Llq1;
-
-    invoke-virtual {v0}, Llq1;->get()Ljava/lang/Object;
-
-    sget-object v0, Leg4;->m:Ljava/util/concurrent/atomic/AtomicInteger;
-
-    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicInteger;->decrementAndGet()I
-
-    sget-object v0, Leg4;->l:Ljava/util/concurrent/atomic/AtomicInteger;
-
-    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicInteger;->get()I
-
-    invoke-virtual {p0}, Ljava/lang/Object;->toString()Ljava/lang/String;
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
-
-    return-void
-
-    :catch_0
-    move-exception v0
-
-    invoke-virtual {p0}, Ljava/lang/Object;->toString()Ljava/lang/String;
-
-    iget-object v1, p0, Leg4;->a:Ljava/lang/Object;
-
-    monitor-enter v1
-
-    :try_start_1
-    new-instance v2, Ljava/lang/IllegalArgumentException;
-
-    const-string v3, "DeferrableSurface %s [closed: %b, use_count: %s] terminated with unexpected exception."
-
-    iget-boolean v4, p0, Leg4;->c:Z
-
-    invoke-static {v4}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
-
-    move-result-object v4
-
-    iget v5, p0, Leg4;->b:I
-
-    invoke-static {v5}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v5
-
-    filled-new-array {p0, v4, v5}, [Ljava/lang/Object;
-
-    move-result-object p0
-
-    invoke-static {v3, p0}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object p0
-
-    invoke-direct {v2, p0, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    throw v2
-
-    :catchall_0
-    move-exception p0
-
-    monitor-exit v1
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+    invoke-direct {p0, v0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
     throw p0
+.end method
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+.method public final dispatch(Lq04;Ljava/lang/Runnable;)V
+    .locals 0
+
+    sget-object p0, Ldg4;->b:Ls04;
+
+    invoke-virtual {p0, p1, p2}, Ls04;->dispatch(Lq04;Ljava/lang/Runnable;)V
+
+    return-void
+.end method
+
+.method public final dispatchYield(Lq04;Ljava/lang/Runnable;)V
+    .locals 0
+
+    sget-object p0, Ldg4;->b:Ls04;
+
+    invoke-virtual {p0, p1, p2}, Ls04;->dispatchYield(Lq04;Ljava/lang/Runnable;)V
+
+    return-void
+.end method
+
+.method public final execute(Ljava/lang/Runnable;)V
+    .locals 1
+
+    sget-object v0, Lj45;->a:Lj45;
+
+    invoke-virtual {p0, v0, p1}, Ldg4;->dispatch(Lq04;Ljava/lang/Runnable;)V
+
+    return-void
+.end method
+
+.method public final limitedParallelism(ILjava/lang/String;)Ls04;
+    .locals 0
+
+    sget-object p0, Lfmf;->a:Lfmf;
+
+    invoke-virtual {p0, p1, p2}, Lfmf;->limitedParallelism(ILjava/lang/String;)Ls04;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public final n()Ljava/util/concurrent/Executor;
+    .locals 0
+
+    return-object p0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 0
+
+    const-string p0, "Dispatchers.IO"
+
+    return-object p0
 .end method

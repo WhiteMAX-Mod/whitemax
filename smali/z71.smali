@@ -1,318 +1,82 @@
-.class public final synthetic Lz71;
+.class public final Lz71;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lv56;
-
 
 # instance fields
-.field public final synthetic a:I
+.field public final a:Lcl7;
 
-.field public final synthetic b:Lone/me/calllist/ui/page/CallHistoryPageScreen;
+.field public final b:Lcl7;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lone/me/calllist/ui/page/CallHistoryPageScreen;I)V
+.method public constructor <init>(Lcl7;Lcl7;)V
     .locals 0
 
-    iput p2, p0, Lz71;->a:I
-
-    iput-object p1, p0, Lz71;->b:Lone/me/calllist/ui/page/CallHistoryPageScreen;
-
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lz71;->a:Lcl7;
+
+    iput-object p2, p0, Lz71;->b:Lcl7;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke()Ljava/lang/Object;
-    .locals 5
+.method public final a()V
+    .locals 2
 
-    iget v0, p0, Lz71;->a:I
+    const-string v0, "HandleSilenceMode"
 
-    const/4 v1, 0x0
+    const-string v1, "try mute ringtones"
 
-    const/4 v2, 0x5
+    invoke-static {v0, v1}, Ljtg;->l(Ljava/lang/String;Ljava/lang/String;)V
 
-    const/4 v3, 0x0
+    iget-object p0, p0, Lz71;->b:Lcl7;
 
-    iget-object p0, p0, Lz71;->b:Lone/me/calllist/ui/page/CallHistoryPageScreen;
-
-    packed-switch v0, :pswitch_data_0
-
-    sget-object v0, Lone/me/calllist/ui/page/CallHistoryPageScreen;->q0:Lz22;
-
-    invoke-virtual {p0}, Lou3;->getRouter()Lcmc;
+    invoke-interface {p0}, Lcl7;->getValue()Ljava/lang/Object;
 
     move-result-object p0
 
-    return-object p0
+    check-cast p0, Lewc;
 
-    :pswitch_0
-    sget-object v0, Lone/me/calllist/ui/page/CallHistoryPageScreen;->q0:Lz22;
-
-    new-instance v0, Lx71;
-
-    new-instance v1, Lsag;
-
-    invoke-direct {v1, v2, p0}, Lsag;-><init>(ILjava/lang/Object;)V
-
-    sget-object p0, Lowc;->a:Lowc;
-
-    invoke-virtual {p0}, Lowc;->p()La9a;
+    invoke-virtual {p0}, Lewc;->a()Lcj1;
 
     move-result-object p0
 
-    invoke-virtual {p0}, La9a;->c()Ljava/util/concurrent/ExecutorService;
+    iget-object v0, p0, Lcj1;->i:Landroid/media/MediaPlayer;
 
-    move-result-object p0
+    const-string v1, "RingtoneManagerTag"
 
-    invoke-direct {v0, v1, p0}, Lx71;-><init>(Lsag;Ljava/util/concurrent/ExecutorService;)V
+    if-nez v0, :cond_1
 
-    return-object v0
+    iget-object v0, p0, Lcj1;->g:Lzte;
 
-    :pswitch_1
-    sget-object v0, Lone/me/calllist/ui/page/CallHistoryPageScreen;->q0:Lz22;
-
-    new-instance v0, Lone/me/sdk/lists/widgets/EndlessRecyclerView2;
-
-    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
-
-    move-result-object v2
-
-    const/4 v4, 0x6
-
-    invoke-direct {v0, v2, v1, v4}, Lone/me/sdk/lists/widgets/EndlessRecyclerView2;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
-
-    sget v1, Lgtb;->call_history_list:I
-
-    invoke-virtual {v0, v1}, Landroid/view/View;->setId(I)V
-
-    new-instance v1, Landroidx/recyclerview/widget/LinearLayoutManager;
-
-    invoke-virtual {v0}, Landroid/view/View;->getContext()Landroid/content/Context;
-
-    invoke-direct {v1}, Landroidx/recyclerview/widget/LinearLayoutManager;-><init>()V
-
-    invoke-virtual {v0, v1}, Lone/me/sdk/lists/widgets/EndlessRecyclerView2;->setLayoutManager(Landroidx/recyclerview/widget/a;)V
-
-    iget-object v1, p0, Lone/me/calllist/ui/page/CallHistoryPageScreen;->Z:Lwfe;
-
-    invoke-virtual {v1}, Lwfe;->getValue()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lx71;
-
-    invoke-virtual {v0, v1}, Lone/me/sdk/lists/widgets/EmptyRecyclerView;->setAdapter(Lgbc;)V
-
-    invoke-static {v0}, Lgad;->r(Landroidx/recyclerview/widget/RecyclerView;)Lbve;
-
-    move-result-object v1
-
-    iput-object v1, p0, Lone/me/calllist/ui/page/CallHistoryPageScreen;->o:Lbve;
-
-    iget-object v1, p0, Lone/me/calllist/ui/page/CallHistoryPageScreen;->X:Lzfc;
-
-    invoke-virtual {v1}, Lzfc;->getValue()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Ls8a;
-
-    if-eqz v1, :cond_0
-
-    invoke-virtual {v0, v1}, Lone/me/sdk/lists/widgets/EmptyRecyclerView;->setEmptyView(Landroid/view/View;)V
-
-    :cond_0
-    new-instance v1, Lc81;
-
-    invoke-direct {v1, p0, v3}, Lc81;-><init>(Lone/me/sdk/arch/Widget;I)V
-
-    invoke-virtual {v0, v1}, Lone/me/sdk/lists/widgets/EndlessRecyclerView2;->setPager(Lm15;)V
-
-    const/4 p0, 0x1
-
-    invoke-virtual {v0, p0}, Lone/me/sdk/lists/widgets/EndlessRecyclerView2;->setIgnoreRefreshingFlagsForScrollEvent(Z)V
-
-    const/16 p0, 0xa
-
-    invoke-virtual {v0, p0}, Lone/me/sdk/lists/widgets/EndlessRecyclerView2;->setThreshold(I)V
-
-    invoke-virtual {v0, v3}, Landroidx/recyclerview/widget/RecyclerView;->setClipToPadding(Z)V
-
-    int-to-float v1, v3
-
-    invoke-static {}, Lgk4;->d()Landroid/content/res/Resources;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v2
-
-    iget v2, v2, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v2, v1
-
-    invoke-static {v2}, Lkhg;->x(F)I
-
-    move-result v2
-
-    int-to-float p0, p0
-
-    invoke-static {}, Lgk4;->d()Landroid/content/res/Resources;
-
-    move-result-object v3
-
-    invoke-virtual {v3}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v3
-
-    iget v3, v3, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v3, p0
-
-    invoke-static {v3}, Lkhg;->x(F)I
-
-    move-result v3
-
-    invoke-static {}, Lgk4;->d()Landroid/content/res/Resources;
-
-    move-result-object v4
-
-    invoke-virtual {v4}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v4
-
-    iget v4, v4, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v1, v4
-
-    invoke-static {v1}, Lkhg;->x(F)I
-
-    move-result v1
-
-    invoke-static {}, Lgk4;->d()Landroid/content/res/Resources;
-
-    move-result-object v4
-
-    invoke-virtual {v4}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v4
-
-    iget v4, v4, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr p0, v4
-
-    invoke-static {p0}, Lkhg;->x(F)I
-
-    move-result p0
-
-    invoke-virtual {v0, v2, v3, v1, p0}, Lone/me/sdk/lists/widgets/EmptyRecyclerView;->setPadding(IIII)V
-
-    return-object v0
-
-    :pswitch_2
-    sget-object v0, Lone/me/calllist/ui/page/CallHistoryPageScreen;->q0:Lz22;
-
-    invoke-virtual {p0}, Lone/me/calllist/ui/page/CallHistoryPageScreen;->p0()Lo81;
+    invoke-virtual {v0}, Lzte;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
-    sget-object v2, Lo81;->c:Lo81;
+    check-cast v0, Landroid/os/Vibrator;
 
-    if-ne v0, v2, :cond_1
+    if-eqz v0, :cond_0
 
-    new-instance v1, Ls8a;
+    goto :goto_0
 
-    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
+    :cond_0
+    const-string p0, " mute already set"
 
-    move-result-object p0
+    invoke-static {v1, p0}, Ljtg;->l(Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-direct {v1, p0, v3}, Ls8a;-><init>(Landroid/content/Context;I)V
-
-    const/16 p0, 0x8
-
-    invoke-virtual {v1, p0}, Ls8a;->setVisibility(I)V
-
-    sget p0, Lgtb;->call_history_page_empty:I
-
-    invoke-virtual {v1, p0}, Landroidx/constraintlayout/widget/ConstraintLayout;->setId(I)V
-
-    sget p0, Lanc;->f0:I
-
-    invoke-virtual {v1, p0}, Ls8a;->setIcon(I)V
-
-    sget p0, Lvxb;->call_history_missed_calls_empty_state_title:I
-
-    new-instance v0, Lhoe;
-
-    invoke-direct {v0, p0}, Lhoe;-><init>(I)V
-
-    invoke-virtual {v1, v0}, Ls8a;->setTitle(Lmoe;)V
+    return-void
 
     :cond_1
-    return-object v1
+    :goto_0
+    const-string v0, " set mute"
 
-    :pswitch_3
-    sget-object v0, Lone/me/calllist/ui/page/CallHistoryPageScreen;->q0:Lz22;
+    invoke-static {v1, v0}, Ljtg;->l(Ljava/lang/String;Ljava/lang/String;)V
 
-    new-instance v0, Lhg1;
+    invoke-virtual {p0}, Lcj1;->d()V
 
-    new-instance v1, Lz71;
-
-    invoke-direct {v1, p0, v2}, Lz71;-><init>(Lone/me/calllist/ui/page/CallHistoryPageScreen;I)V
-
-    new-instance v2, Lwfe;
-
-    invoke-direct {v2, v1}, Lwfe;-><init>(Lv56;)V
-
-    new-instance v1, Lo6g;
-
-    invoke-direct {v1, p0, v3}, Lo6g;-><init>(Lone/me/sdk/arch/Widget;I)V
-
-    invoke-direct {v0, v2, v1}, Lhg1;-><init>(Lwfe;Lo6g;)V
-
-    return-object v0
-
-    :pswitch_4
-    sget-object v0, Lone/me/calllist/ui/page/CallHistoryPageScreen;->q0:Lz22;
-
-    new-instance v0, Lf81;
-
-    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->requireActivity()Lam;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
-
-    move-result-object v1
-
-    invoke-virtual {p0}, Lone/me/calllist/ui/page/CallHistoryPageScreen;->p0()Lo81;
-
-    move-result-object v2
-
-    iget-object p0, p0, Lone/me/calllist/ui/page/CallHistoryPageScreen;->c:Ljava/lang/Object;
-
-    invoke-interface {p0}, Lje7;->getValue()Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, Lhg1;
-
-    invoke-direct {v0, v1, v2, p0}, Lf81;-><init>(Landroid/content/Context;Lo81;Lhg1;)V
-
-    return-object v0
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_4
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    return-void
 .end method

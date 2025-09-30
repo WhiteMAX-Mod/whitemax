@@ -1,70 +1,252 @@
 .class public final Lsu5;
-.super Lsod;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lks5;
+
+
+# instance fields
+.field public final synthetic a:I
+
+.field public final synthetic b:Lpc6;
+
+.field public final synthetic c:Lipc;
+
+
+# direct methods
+.method public synthetic constructor <init>(Lpc6;Lipc;I)V
+    .locals 0
+
+    iput p3, p0, Lsu5;->a:I
+
+    iput-object p1, p0, Lsu5;->b:Lpc6;
+
+    iput-object p2, p0, Lsu5;->c:Lipc;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public final C()V
-    .locals 1
+.method public final a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    .locals 4
 
-    iget-object p0, p0, Lccc;->a:Landroid/view/View;
+    iget v0, p0, Lsu5;->a:I
 
-    check-cast p0, Ly02;
+    packed-switch v0, :pswitch_data_0
 
-    const/4 v0, 0x0
+    instance-of v0, p2, Lvu5;
 
-    invoke-virtual {p0, v0}, Ly02;->setOnTrailClick(Landroid/view/View$OnClickListener;)V
+    if-eqz v0, :cond_0
 
-    return-void
-.end method
+    move-object v0, p2
 
-.method public final D(Lmu5;)V
-    .locals 5
+    check-cast v0, Lvu5;
 
-    iget-object p0, p0, Lccc;->a:Landroid/view/View;
+    iget v1, v0, Lvu5;->Y:I
 
-    check-cast p0, Ly02;
+    const/high16 v2, -0x80000000
 
-    iget-object v0, p1, Lmu5;->c:Ljava/lang/CharSequence;
+    and-int v3, v1, v2
 
-    invoke-virtual {p0, v0}, Ly02;->setTitle(Ljava/lang/CharSequence;)V
+    if-eqz v3, :cond_0
 
-    iget-object v0, p1, Lmu5;->b:Ljava/lang/String;
+    sub-int/2addr v1, v2
 
-    iget-object v1, p1, Lmu5;->X:Ljava/lang/CharSequence;
+    iput v1, v0, Lvu5;->Y:I
 
-    iget-wide v2, p1, Lmu5;->o:J
-
-    iget-object v4, p0, Ly02;->a:Lj3a;
-
-    invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v2
-
-    if-nez v1, :cond_0
-
-    const-string v1, ""
+    goto :goto_0
 
     :cond_0
-    invoke-static {v4, v0, v2, v1}, Lj3a;->i(Lj3a;Ljava/lang/String;Ljava/lang/Long;Ljava/lang/CharSequence;)V
+    new-instance v0, Lvu5;
 
-    invoke-virtual {p0}, Landroid/view/View;->requestLayout()V
+    invoke-direct {v0, p0, p2}, Lvu5;-><init>(Lsu5;Lkotlin/coroutines/Continuation;)V
 
-    invoke-virtual {p0}, Landroid/view/View;->invalidate()V
+    :goto_0
+    iget-object p2, v0, Lvu5;->X:Ljava/lang/Object;
 
-    iget-boolean p1, p1, Lmu5;->Y:Z
+    iget v1, v0, Lvu5;->Y:I
 
-    invoke-virtual {p0, p1}, Ly02;->setVerified(Z)V
+    const/4 v2, 0x1
 
-    return-void
-.end method
+    if-eqz v1, :cond_2
 
-.method public final bridge synthetic x(Lol7;)V
-    .locals 0
+    if-ne v1, v2, :cond_1
 
-    check-cast p1, Lmu5;
+    iget-object p1, v0, Lvu5;->r0:Ljava/lang/Object;
 
-    invoke-virtual {p0, p1}, Lsu5;->D(Lmu5;)V
+    iget-object p0, v0, Lvu5;->o:Lsu5;
 
-    return-void
+    invoke-static {p2}, Lqe5;->V(Ljava/lang/Object;)V
+
+    goto :goto_1
+
+    :cond_1
+    new-instance p0, Ljava/lang/IllegalStateException;
+
+    const-string p1, "call to \'resume\' before \'invoke\' with coroutine"
+
+    invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p0
+
+    :cond_2
+    invoke-static {p2}, Lqe5;->V(Ljava/lang/Object;)V
+
+    iput-object p0, v0, Lvu5;->o:Lsu5;
+
+    iput-object p1, v0, Lvu5;->r0:Ljava/lang/Object;
+
+    iput v2, v0, Lvu5;->Y:I
+
+    iget-object p2, p0, Lsu5;->b:Lpc6;
+
+    invoke-interface {p2, p1, v0}, Lpc6;->invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p2
+
+    sget-object v0, Lz04;->a:Lz04;
+
+    if-ne p2, v0, :cond_3
+
+    goto :goto_2
+
+    :cond_3
+    :goto_1
+    check-cast p2, Ljava/lang/Boolean;
+
+    invoke-virtual {p2}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result p2
+
+    if-nez p2, :cond_4
+
+    sget-object v0, Lylf;->a:Lylf;
+
+    :goto_2
+    return-object v0
+
+    :cond_4
+    iget-object p2, p0, Lsu5;->c:Lipc;
+
+    iput-object p1, p2, Lipc;->a:Ljava/lang/Object;
+
+    new-instance p1, Lkotlinx/coroutines/flow/internal/AbortFlowException;
+
+    invoke-direct {p1, p0}, Lkotlinx/coroutines/flow/internal/AbortFlowException;-><init>(Ljava/lang/Object;)V
+
+    throw p1
+
+    :pswitch_0
+    instance-of v0, p2, Lru5;
+
+    if-eqz v0, :cond_5
+
+    move-object v0, p2
+
+    check-cast v0, Lru5;
+
+    iget v1, v0, Lru5;->Y:I
+
+    const/high16 v2, -0x80000000
+
+    and-int v3, v1, v2
+
+    if-eqz v3, :cond_5
+
+    sub-int/2addr v1, v2
+
+    iput v1, v0, Lru5;->Y:I
+
+    goto :goto_3
+
+    :cond_5
+    new-instance v0, Lru5;
+
+    invoke-direct {v0, p0, p2}, Lru5;-><init>(Lsu5;Lkotlin/coroutines/Continuation;)V
+
+    :goto_3
+    iget-object p2, v0, Lru5;->X:Ljava/lang/Object;
+
+    iget v1, v0, Lru5;->Y:I
+
+    const/4 v2, 0x1
+
+    if-eqz v1, :cond_7
+
+    if-ne v1, v2, :cond_6
+
+    iget-object p1, v0, Lru5;->r0:Ljava/lang/Object;
+
+    iget-object p0, v0, Lru5;->o:Lsu5;
+
+    invoke-static {p2}, Lqe5;->V(Ljava/lang/Object;)V
+
+    goto :goto_4
+
+    :cond_6
+    new-instance p0, Ljava/lang/IllegalStateException;
+
+    const-string p1, "call to \'resume\' before \'invoke\' with coroutine"
+
+    invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p0
+
+    :cond_7
+    invoke-static {p2}, Lqe5;->V(Ljava/lang/Object;)V
+
+    iput-object p0, v0, Lru5;->o:Lsu5;
+
+    iput-object p1, v0, Lru5;->r0:Ljava/lang/Object;
+
+    iput v2, v0, Lru5;->Y:I
+
+    iget-object p2, p0, Lsu5;->b:Lpc6;
+
+    invoke-interface {p2, p1, v0}, Lpc6;->invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p2
+
+    sget-object v0, Lz04;->a:Lz04;
+
+    if-ne p2, v0, :cond_8
+
+    goto :goto_5
+
+    :cond_8
+    :goto_4
+    check-cast p2, Ljava/lang/Boolean;
+
+    invoke-virtual {p2}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result p2
+
+    if-nez p2, :cond_9
+
+    sget-object v0, Lylf;->a:Lylf;
+
+    :goto_5
+    return-object v0
+
+    :cond_9
+    iget-object p2, p0, Lsu5;->c:Lipc;
+
+    iput-object p1, p2, Lipc;->a:Ljava/lang/Object;
+
+    new-instance p1, Lkotlinx/coroutines/flow/internal/AbortFlowException;
+
+    invoke-direct {p1, p0}, Lkotlinx/coroutines/flow/internal/AbortFlowException;-><init>(Ljava/lang/Object;)V
+
+    throw p1
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

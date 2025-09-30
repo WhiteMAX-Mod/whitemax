@@ -13,11 +13,11 @@
         "",
         "<init>",
         "()V",
-        "Ls1c;",
+        "Lfec;",
         "log",
-        "Le5f;",
+        "Lylf;",
         "setLog",
-        "(Ls1c;)V",
+        "(Lfec;)V",
         "",
         "tag",
         "msg",
@@ -48,7 +48,7 @@
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/lang/ref/WeakReference<",
-            "Ls1c;",
+            "Lfec;",
             ">;"
         }
     .end annotation
@@ -93,11 +93,11 @@
 
     move-result-object v0
 
-    check-cast v0, Ls1c;
+    check-cast v0, Lfec;
 
     if-eqz v0, :cond_0
 
-    invoke-interface {v0, p0, p1}, Ls1c;->log(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-interface {v0, p0, p1}, Lfec;->log(Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_0
     return-void
@@ -112,11 +112,11 @@
 
     move-result-object v0
 
-    check-cast v0, Ls1c;
+    check-cast v0, Lfec;
 
     if-eqz v0, :cond_0
 
-    invoke-interface {v0, p0, p1, p2}, Ls1c;->logException(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-interface {v0, p0, p1, p2}, Lfec;->logException(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     :cond_0
     return-void
@@ -131,17 +131,17 @@
 
     move-result-object v0
 
-    check-cast v0, Ls1c;
+    check-cast v0, Lfec;
 
     if-eqz v0, :cond_0
 
-    invoke-interface {v0, p0, p1, p2}, Ls1c;->reportException(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-interface {v0, p0, p1, p2}, Lfec;->reportException(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     :cond_0
     return-void
 .end method
 
-.method public static final setLog(Ls1c;)V
+.method public static final setLog(Lfec;)V
     .locals 1
 
     new-instance v0, Ljava/lang/ref/WeakReference;

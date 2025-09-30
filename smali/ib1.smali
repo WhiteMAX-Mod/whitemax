@@ -3,108 +3,62 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lv56;
+.implements Lkb1;
 
 
-# instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:[Lzm5;
+# static fields
+.field public static final a:Lib1;
 
 
 # direct methods
-.method public synthetic constructor <init>([Lzm5;I)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    iput p2, p0, Lib1;->a:I
+    new-instance v0, Lib1;
 
-    iput-object p1, p0, Lib1;->b:[Lzm5;
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    sput-object v0, Lib1;->a:Lib1;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke()Ljava/lang/Object;
+.method public final equals(Ljava/lang/Object;)Z
     .locals 1
 
-    iget v0, p0, Lib1;->a:I
+    const/4 v0, 0x1
 
-    packed-switch v0, :pswitch_data_0
+    if-ne p0, p1, :cond_0
 
-    iget-object p0, p0, Lib1;->b:[Lzm5;
+    return v0
 
-    array-length p0, p0
+    :cond_0
+    instance-of p0, p1, Lib1;
 
-    new-array p0, p0, [Lhwa;
+    if-nez p0, :cond_1
 
-    return-object p0
+    const/4 p0, 0x0
 
-    :pswitch_0
-    iget-object p0, p0, Lib1;->b:[Lzm5;
+    return p0
 
-    array-length p0, p0
+    :cond_1
+    return v0
+.end method
 
-    new-array p0, p0, [Lc9a;
+.method public final hashCode()I
+    .locals 0
 
-    return-object p0
+    const p0, 0xe924260
 
-    :pswitch_1
-    iget-object p0, p0, Lib1;->b:[Lzm5;
+    return p0
+.end method
 
-    array-length p0, p0
+.method public final toString()Ljava/lang/String;
+    .locals 0
 
-    new-array p0, p0, [Lnj3;
-
-    return-object p0
-
-    :pswitch_2
-    iget-object p0, p0, Lib1;->b:[Lzm5;
-
-    array-length p0, p0
-
-    new-array p0, p0, [Ljava/lang/Object;
+    const-string p0, "ShowRateCallBottomSheet"
 
     return-object p0
-
-    :pswitch_3
-    iget-object p0, p0, Lib1;->b:[Lzm5;
-
-    array-length p0, p0
-
-    new-array p0, p0, [Ljava/util/List;
-
-    return-object p0
-
-    :pswitch_4
-    iget-object p0, p0, Lib1;->b:[Lzm5;
-
-    array-length p0, p0
-
-    new-array p0, p0, [Lns5;
-
-    return-object p0
-
-    :pswitch_5
-    iget-object p0, p0, Lib1;->b:[Lzm5;
-
-    array-length p0, p0
-
-    new-array p0, p0, [Lnj3;
-
-    return-object p0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_5
-        :pswitch_4
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
 .end method

@@ -1,83 +1,42 @@
-.class public final synthetic Lv71;
-.super Ljava/lang/Object;
+.class public final Lv71;
+.super Lkg4;
 .source "SourceFile"
-
-# interfaces
-.implements Lx56;
 
 
 # instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Lw71;
+.field public final synthetic t:Lw71;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lw71;I)V
+.method public constructor <init>(Lw71;)V
     .locals 0
 
-    iput p2, p0, Lv71;->a:I
+    iput-object p1, p0, Lv71;->t:Lw71;
 
-    iput-object p1, p0, Lv71;->b:Lw71;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Lkg4;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+.method public final f()J
+    .locals 2
 
-    iget v0, p0, Lv71;->a:I
+    iget-object p0, p0, Lv71;->t:Lw71;
 
-    check-cast p1, Lyha;
+    iget-object p0, p0, Lw71;->K0:Lyua;
 
-    packed-switch v0, :pswitch_data_0
+    iget p0, p0, Lyua;->a:I
 
-    sget-object p1, Lqp4;->q0:Lap9;
+    if-nez p0, :cond_0
 
-    iget-object p0, p0, Lv71;->b:Lw71;
+    const-wide/16 v0, 0x96
 
-    iget-object p0, p0, Lccc;->a:Landroid/view/View;
+    return-wide v0
 
-    invoke-virtual {p1, p0}, Lap9;->h(Landroid/view/View;)Lyha;
+    :cond_0
+    const-wide/16 v0, 0x0
 
-    move-result-object p0
-
-    invoke-interface {p0}, Lyha;->b()Lfe0;
-
-    const/4 p0, 0x0
-
-    :goto_0
-    invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object p0
-
-    return-object p0
-
-    :pswitch_0
-    sget-object p1, Lqp4;->q0:Lap9;
-
-    iget-object p0, p0, Lv71;->b:Lw71;
-
-    iget-object p0, p0, Lccc;->a:Landroid/view/View;
-
-    invoke-virtual {p1, p0}, Lap9;->h(Landroid/view/View;)Lyha;
-
-    move-result-object p0
-
-    invoke-interface {p0}, Lyha;->getIcon()Lds6;
-
-    const/4 p0, -0x1
-
-    goto :goto_0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-wide v0
 .end method

@@ -1,135 +1,672 @@
-.class public final Lee6;
-.super Lsod;
+.class public abstract Lee6;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# virtual methods
-.method public final D(Lde6;)V
-    .locals 7
+# static fields
+.field public static final a:[I
 
-    iget-object v0, p1, Lde6;->Z:Ljava/util/List;
+.field public static final b:[I
 
-    iget-object v1, p1, Lde6;->o:Li4b;
+.field public static final c:Ljava/lang/String;
 
-    iget-object p0, p0, Lccc;->a:Landroid/view/View;
+.field public static final d:Ljava/lang/String;
 
-    check-cast p0, Lek3;
+.field public static final e:Lzd6;
 
-    iget-wide v2, p1, Lde6;->q0:J
+.field public static final f:Lzd6;
 
-    invoke-static {v2, v3}, Ljava/lang/Long;->hashCode(J)I
+.field public static final g:Lzd6;
 
-    move-result v2
+.field public static final h:Ljava/nio/FloatBuffer;
 
-    invoke-virtual {p0, v2}, Landroidx/constraintlayout/widget/ConstraintLayout;->setId(I)V
+.field public static final i:Ljava/nio/FloatBuffer;
 
-    iget-object v2, p1, Lde6;->c:Li4b;
+.field public static final j:Lia0;
 
-    iget-object v3, v2, Li4b;->a:Ljava/lang/CharSequence;
 
-    iget-object v4, v2, Li4b;->a:Ljava/lang/CharSequence;
+# direct methods
+.method static constructor <clinit>()V
+    .locals 6
 
-    invoke-virtual {v3}, Ljava/lang/Object;->toString()Ljava/lang/String;
+    const/16 v0, 0x3038
+
+    filled-new-array {v0}, [I
+
+    move-result-object v1
+
+    sput-object v1, Lee6;->a:[I
+
+    const/16 v1, 0x309d
+
+    const/16 v2, 0x3540
+
+    filled-new-array {v1, v2, v0}, [I
+
+    move-result-object v0
+
+    sput-object v0, Lee6;->b:[I
+
+    sget-object v0, Ljava/util/Locale;->US:Ljava/util/Locale;
+
+    const-string v0, "uniform mat4 uTexMatrix;\nuniform mat4 uTransMatrix;\nattribute vec4 aPosition;\nattribute vec4 aTextureCoord;\nvarying vec2 vTextureCoord;\nvoid main() {\n    gl_Position = uTransMatrix * aPosition;\n    vTextureCoord = (uTexMatrix * aTextureCoord).xy;\n}\n"
+
+    sput-object v0, Lee6;->c:Ljava/lang/String;
+
+    const-string v0, "#version 300 es\nin vec4 aPosition;\nin vec4 aTextureCoord;\nuniform mat4 uTexMatrix;\nuniform mat4 uTransMatrix;\nout vec2 vTextureCoord;\nvoid main() {\n  gl_Position = uTransMatrix * aPosition;\n  vTextureCoord = (uTexMatrix * aTextureCoord).xy;\n}\n"
+
+    sput-object v0, Lee6;->d:Ljava/lang/String;
+
+    new-instance v0, Lzd6;
+
+    const/4 v1, 0x0
+
+    invoke-direct {v0, v1}, Lzd6;-><init>(I)V
+
+    sput-object v0, Lee6;->e:Lzd6;
+
+    new-instance v0, Lzd6;
+
+    const/4 v2, 0x1
+
+    invoke-direct {v0, v2}, Lzd6;-><init>(I)V
+
+    sput-object v0, Lee6;->f:Lzd6;
+
+    new-instance v0, Lzd6;
+
+    const/4 v2, 0x2
+
+    invoke-direct {v0, v2}, Lzd6;-><init>(I)V
+
+    sput-object v0, Lee6;->g:Lzd6;
+
+    const/16 v0, 0x8
+
+    new-array v2, v0, [F
+
+    fill-array-data v2, :array_0
+
+    const/16 v3, 0x20
+
+    invoke-static {v3}, Ljava/nio/ByteBuffer;->allocateDirect(I)Ljava/nio/ByteBuffer;
+
+    move-result-object v4
+
+    invoke-static {}, Ljava/nio/ByteOrder;->nativeOrder()Ljava/nio/ByteOrder;
+
+    move-result-object v5
+
+    invoke-virtual {v4, v5}, Ljava/nio/ByteBuffer;->order(Ljava/nio/ByteOrder;)Ljava/nio/ByteBuffer;
+
+    invoke-virtual {v4}, Ljava/nio/ByteBuffer;->asFloatBuffer()Ljava/nio/FloatBuffer;
+
+    move-result-object v4
+
+    invoke-virtual {v4, v2}, Ljava/nio/FloatBuffer;->put([F)Ljava/nio/FloatBuffer;
+
+    invoke-virtual {v4, v1}, Ljava/nio/FloatBuffer;->position(I)Ljava/nio/Buffer;
+
+    sput-object v4, Lee6;->h:Ljava/nio/FloatBuffer;
+
+    new-array v0, v0, [F
+
+    fill-array-data v0, :array_1
+
+    invoke-static {v3}, Ljava/nio/ByteBuffer;->allocateDirect(I)Ljava/nio/ByteBuffer;
+
+    move-result-object v2
+
+    invoke-static {}, Ljava/nio/ByteOrder;->nativeOrder()Ljava/nio/ByteOrder;
 
     move-result-object v3
 
-    iget-object v5, p0, Lek3;->D0:Landroidx/appcompat/widget/AppCompatTextView;
+    invoke-virtual {v2, v3}, Ljava/nio/ByteBuffer;->order(Ljava/nio/ByteOrder;)Ljava/nio/ByteBuffer;
 
-    if-eqz v3, :cond_1
+    invoke-virtual {v2}, Ljava/nio/ByteBuffer;->asFloatBuffer()Ljava/nio/FloatBuffer;
 
-    invoke-virtual {v3}, Ljava/lang/String;->length()I
+    move-result-object v2
 
-    move-result v6
+    invoke-virtual {v2, v0}, Ljava/nio/FloatBuffer;->put([F)Ljava/nio/FloatBuffer;
 
-    if-nez v6, :cond_0
+    invoke-virtual {v2, v1}, Ljava/nio/FloatBuffer;->position(I)Ljava/nio/Buffer;
+
+    sput-object v2, Lee6;->i:Ljava/nio/FloatBuffer;
+
+    sget-object v0, Landroid/opengl/EGL14;->EGL_NO_SURFACE:Landroid/opengl/EGLSurface;
+
+    new-instance v2, Lia0;
+
+    invoke-direct {v2, v0, v1, v1}, Lia0;-><init>(Landroid/opengl/EGLSurface;II)V
+
+    sput-object v2, Lee6;->j:Lia0;
+
+    return-void
+
+    :array_0
+    .array-data 4
+        -0x40800000    # -1.0f
+        -0x40800000    # -1.0f
+        0x3f800000    # 1.0f
+        -0x40800000    # -1.0f
+        -0x40800000    # -1.0f
+        0x3f800000    # 1.0f
+        0x3f800000    # 1.0f
+        0x3f800000    # 1.0f
+    .end array-data
+
+    :array_1
+    .array-data 4
+        0x0
+        0x0
+        0x3f800000    # 1.0f
+        0x0
+        0x0
+        0x3f800000    # 1.0f
+        0x3f800000    # 1.0f
+        0x3f800000    # 1.0f
+    .end array-data
+.end method
+
+.method public static a(Ljava/lang/String;)V
+    .locals 3
+
+    invoke-static {}, Landroid/opengl/EGL14;->eglGetError()I
+
+    move-result v0
+
+    const/16 v1, 0x3000
+
+    if-ne v0, v1, :cond_0
+
+    return-void
+
+    :cond_0
+    new-instance v1, Ljava/lang/IllegalStateException;
+
+    const-string v2, ": EGL error: 0x"
+
+    invoke-static {p0, v2}, Lee5;->m(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object p0
+
+    invoke-static {v0}, Ljava/lang/Integer;->toHexString(I)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {p0, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-direct {v1, p0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw v1
+.end method
+
+.method public static b(Ljava/lang/String;)V
+    .locals 3
+
+    invoke-static {}, Landroid/opengl/GLES20;->glGetError()I
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    return-void
+
+    :cond_0
+    new-instance v1, Ljava/lang/IllegalStateException;
+
+    const-string v2, ": GL error 0x"
+
+    invoke-static {p0, v2}, Lee5;->m(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object p0
+
+    invoke-static {v0}, Ljava/lang/Integer;->toHexString(I)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {p0, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-direct {v1, p0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw v1
+.end method
+
+.method public static c(Ljava/lang/Thread;)V
+    .locals 1
+
+    invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
+
+    move-result-object v0
+
+    if-ne p0, v0, :cond_0
+
+    const/4 p0, 0x1
 
     goto :goto_0
 
     :cond_0
-    invoke-virtual {v5}, Landroid/widget/TextView;->getPaint()Landroid/text/TextPaint;
+    const/4 p0, 0x0
 
-    move-result-object v6
-
-    invoke-virtual {v6, v3}, Landroid/graphics/Paint;->measureText(Ljava/lang/String;)F
-
-    move-result v3
-
-    invoke-virtual {v5}, Landroid/view/View;->getMeasuredWidth()I
-
-    move-result v5
-
-    int-to-float v5, v5
-
-    cmpl-float v3, v3, v5
-
-    if-lez v3, :cond_1
-
-    iget-object v2, v2, Li4b;->b:[Ljava/lang/String;
-
-    invoke-static {v4, v0, v2}, Lu27;->E(Ljava/lang/CharSequence;Ljava/util/List;[Ljava/lang/String;)Ljava/lang/CharSequence;
-
-    move-result-object v4
-
-    :cond_1
     :goto_0
-    invoke-virtual {p0, v4}, Lek3;->setName(Ljava/lang/CharSequence;)V
+    const-string v0, "Method call must be called on the GL thread."
 
-    iget-object v2, v1, Li4b;->a:Ljava/lang/CharSequence;
-
-    iget-object v3, v1, Li4b;->a:Ljava/lang/CharSequence;
-
-    invoke-virtual {v2}, Ljava/lang/Object;->toString()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {p0, v2}, Lek3;->J(Ljava/lang/String;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_2
-
-    iget-object v1, v1, Li4b;->b:[Ljava/lang/String;
-
-    invoke-static {v3, v0, v1}, Lu27;->E(Ljava/lang/CharSequence;Ljava/util/List;[Ljava/lang/String;)Ljava/lang/CharSequence;
-
-    move-result-object v3
-
-    :cond_2
-    invoke-virtual {p0, v3}, Lek3;->setMessage(Ljava/lang/CharSequence;)V
-
-    iget-wide v0, p1, Lde6;->a:J
-
-    iget-object v2, p1, Lde6;->b:Ljava/lang/String;
-
-    iget-object p1, p1, Lde6;->X:Landroid/net/Uri;
-
-    if-eqz p1, :cond_3
-
-    invoke-virtual {p1}, Landroid/net/Uri;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    if-nez p1, :cond_4
-
-    :cond_3
-    sget-object p1, Landroid/net/Uri;->EMPTY:Landroid/net/Uri;
-
-    invoke-virtual {p1}, Landroid/net/Uri;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    :cond_4
-    invoke-virtual {p0, v0, v1, v2, p1}, Lek3;->L(JLjava/lang/CharSequence;Ljava/lang/String;)V
+    invoke-static {v0, p0}, Ln4e;->n(Ljava/lang/String;Z)V
 
     return-void
 .end method
 
-.method public final bridge synthetic x(Lol7;)V
+.method public static d(Ljava/util/concurrent/atomic/AtomicBoolean;Z)V
     .locals 0
 
-    check-cast p1, Lde6;
+    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
 
-    invoke-virtual {p0, p1}, Lee6;->D(Lde6;)V
+    move-result p0
+
+    if-ne p1, p0, :cond_0
+
+    const/4 p0, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    const/4 p0, 0x0
+
+    :goto_0
+    if-eqz p1, :cond_1
+
+    const-string p1, "OpenGlRenderer is not initialized"
+
+    goto :goto_1
+
+    :cond_1
+    const-string p1, "OpenGlRenderer is already initialized"
+
+    :goto_1
+    invoke-static {p1, p0}, Ln4e;->n(Ljava/lang/String;Z)V
 
     return-void
+.end method
+
+.method public static e(ILjava/lang/String;)V
+    .locals 2
+
+    if-ltz p0, :cond_0
+
+    return-void
+
+    :cond_0
+    new-instance p0, Ljava/lang/IllegalStateException;
+
+    const-string v0, "Unable to locate \'"
+
+    const-string v1, "\' in program"
+
+    invoke-static {v0, p1, v1}, Lyv7;->h(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p0
+.end method
+
+.method public static f(Lgz4;)Ljava/util/HashMap;
+    .locals 11
+
+    sget-object v0, Ljava/util/Collections;->EMPTY_MAP:Ljava/util/Map;
+
+    new-instance v1, Ljava/util/HashMap;
+
+    invoke-direct {v1}, Ljava/util/HashMap;-><init>()V
+
+    invoke-static {}, Lbe6;->values()[Lbe6;
+
+    move-result-object v2
+
+    array-length v3, v2
+
+    const/4 v4, 0x0
+
+    move v5, v4
+
+    :goto_0
+    if-ge v5, v3, :cond_6
+
+    aget-object v6, v2, v5
+
+    invoke-interface {v0, v6}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v7
+
+    check-cast v7, Lzd6;
+
+    if-eqz v7, :cond_0
+
+    new-instance v8, Lde6;
+
+    invoke-direct {v8, p0, v7}, Lde6;-><init>(Lgz4;Lzd6;)V
+
+    goto :goto_3
+
+    :cond_0
+    sget-object v7, Lbe6;->c:Lbe6;
+
+    if-eq v6, v7, :cond_5
+
+    sget-object v7, Lbe6;->b:Lbe6;
+
+    if-ne v6, v7, :cond_1
+
+    goto :goto_2
+
+    :cond_1
+    sget-object v8, Lbe6;->a:Lbe6;
+
+    if-ne v6, v8, :cond_2
+
+    const/4 v8, 0x1
+
+    goto :goto_1
+
+    :cond_2
+    move v8, v4
+
+    :goto_1
+    new-instance v9, Ljava/lang/StringBuilder;
+
+    const-string v10, "Unhandled input format: "
+
+    invoke-direct {v9, v10}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v9, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v9}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v9
+
+    invoke-static {v9, v8}, Ln4e;->n(Ljava/lang/String;Z)V
+
+    invoke-virtual {p0}, Lgz4;->a()Z
+
+    move-result v8
+
+    if-eqz v8, :cond_3
+
+    new-instance v8, Lae6;
+
+    const-string v7, "uniform mat4 uTransMatrix;\nattribute vec4 aPosition;\nvoid main() {\n    gl_Position = uTransMatrix * aPosition;\n}\n"
+
+    const-string v9, "precision mediump float;\nuniform float uAlphaScale;\nvoid main() {\n    gl_FragColor = vec4(0.0, 0.0, 0.0, uAlphaScale);\n}\n"
+
+    invoke-direct {v8, v7, v9}, Lce6;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+
+    goto :goto_3
+
+    :cond_3
+    invoke-interface {v0, v7}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v8
+
+    check-cast v8, Lzd6;
+
+    if-eqz v8, :cond_4
+
+    new-instance v7, Lde6;
+
+    invoke-direct {v7, p0, v8}, Lde6;-><init>(Lgz4;Lzd6;)V
+
+    move-object v8, v7
+
+    goto :goto_3
+
+    :cond_4
+    new-instance v8, Lde6;
+
+    invoke-direct {v8, p0, v7}, Lde6;-><init>(Lgz4;Lbe6;)V
+
+    goto :goto_3
+
+    :cond_5
+    :goto_2
+    new-instance v8, Lde6;
+
+    invoke-direct {v8, p0, v6}, Lde6;-><init>(Lgz4;Lbe6;)V
+
+    :goto_3
+    invoke-static {v6}, Ljava/util/Objects;->toString(Ljava/lang/Object;)Ljava/lang/String;
+
+    invoke-virtual {v8}, Ljava/lang/Object;->toString()Ljava/lang/String;
+
+    invoke-virtual {v1, v6, v8}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    add-int/lit8 v5, v5, 0x1
+
+    goto :goto_0
+
+    :cond_6
+    return-object v1
+.end method
+
+.method public static g()I
+    .locals 4
+
+    const/4 v0, 0x1
+
+    new-array v1, v0, [I
+
+    const/4 v2, 0x0
+
+    invoke-static {v0, v1, v2}, Landroid/opengl/GLES20;->glGenTextures(I[II)V
+
+    const-string v0, "glGenTextures"
+
+    invoke-static {v0}, Lee6;->b(Ljava/lang/String;)V
+
+    aget v0, v1, v2
+
+    const v1, 0x8d65
+
+    invoke-static {v1, v0}, Landroid/opengl/GLES20;->glBindTexture(II)V
+
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    const-string v3, "glBindTexture "
+
+    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-static {v2}, Lee6;->b(Ljava/lang/String;)V
+
+    const/16 v2, 0x2801
+
+    const/16 v3, 0x2600
+
+    invoke-static {v1, v2, v3}, Landroid/opengl/GLES20;->glTexParameteri(III)V
+
+    const/16 v2, 0x2800
+
+    const/16 v3, 0x2601
+
+    invoke-static {v1, v2, v3}, Landroid/opengl/GLES20;->glTexParameteri(III)V
+
+    const/16 v2, 0x2802
+
+    const v3, 0x812f
+
+    invoke-static {v1, v2, v3}, Landroid/opengl/GLES20;->glTexParameteri(III)V
+
+    const/16 v2, 0x2803
+
+    invoke-static {v1, v2, v3}, Landroid/opengl/GLES20;->glTexParameteri(III)V
+
+    const-string v1, "glTexParameter"
+
+    invoke-static {v1}, Lee6;->b(Ljava/lang/String;)V
+
+    return v0
+.end method
+
+.method public static h(Landroid/opengl/EGLDisplay;Landroid/opengl/EGLConfig;Landroid/view/Surface;[I)Landroid/opengl/EGLSurface;
+    .locals 1
+
+    const/4 v0, 0x0
+
+    invoke-static {p0, p1, p2, p3, v0}, Landroid/opengl/EGL14;->eglCreateWindowSurface(Landroid/opengl/EGLDisplay;Landroid/opengl/EGLConfig;Ljava/lang/Object;[II)Landroid/opengl/EGLSurface;
+
+    move-result-object p0
+
+    const-string p1, "eglCreateWindowSurface"
+
+    invoke-static {p1}, Lee6;->a(Ljava/lang/String;)V
+
+    if-eqz p0, :cond_0
+
+    return-object p0
+
+    :cond_0
+    new-instance p0, Ljava/lang/IllegalStateException;
+
+    const-string p1, "surface was null"
+
+    invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p0
+.end method
+
+.method public static i()Ljava/lang/String;
+    .locals 3
+
+    const/16 v0, 0x1f02
+
+    invoke-static {v0}, Landroid/opengl/GLES20;->glGetString(I)Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v1, "OpenGL ES ([0-9]+)\\.([0-9]+).*"
+
+    invoke-static {v1}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
+
+    move-result-object v1
+
+    invoke-virtual {v1, v0}, Ljava/util/regex/Pattern;->matcher(Ljava/lang/CharSequence;)Ljava/util/regex/Matcher;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/util/regex/Matcher;->find()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    const/4 v1, 0x1
+
+    invoke-virtual {v0, v1}, Ljava/util/regex/Matcher;->group(I)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    const/4 v2, 0x2
+
+    invoke-virtual {v0, v2}, Ljava/util/regex/Matcher;->group(I)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    const-string v2, "."
+
+    invoke-static {v1, v2, v0}, Lsq3;->h(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+
+    :cond_0
+    const-string v0, "0.0"
+
+    return-object v0
+.end method
+
+.method public static j(ILjava/lang/String;)I
+    .locals 3
+
+    invoke-static {p0}, Landroid/opengl/GLES20;->glCreateShader(I)I
+
+    move-result v0
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    const-string v2, "glCreateShader type="
+
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v1}, Lee6;->b(Ljava/lang/String;)V
+
+    invoke-static {v0, p1}, Landroid/opengl/GLES20;->glShaderSource(ILjava/lang/String;)V
+
+    invoke-static {v0}, Landroid/opengl/GLES20;->glCompileShader(I)V
+
+    const/4 p1, 0x1
+
+    new-array p1, p1, [I
+
+    const v1, 0x8b81
+
+    const/4 v2, 0x0
+
+    invoke-static {v0, v1, p1, v2}, Landroid/opengl/GLES20;->glGetShaderiv(II[II)V
+
+    aget p1, p1, v2
+
+    if-eqz p1, :cond_0
+
+    return v0
+
+    :cond_0
+    invoke-static {v0}, Landroid/opengl/GLES20;->glDeleteShader(I)V
+
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    const-string v1, "Could not compile shader type "
+
+    const-string v2, ":"
+
+    invoke-static {p0, v1, v2}, Lee5;->l(ILjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object p0
+
+    invoke-static {v0}, Landroid/opengl/GLES20;->glGetShaderInfoLog(I)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {p0, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-direct {p1, p0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
 .end method

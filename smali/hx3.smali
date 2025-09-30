@@ -4,14 +4,5 @@
 
 
 # virtual methods
-.method public abstract fold(Ljava/lang/Object;Ll66;)Ljava/lang/Object;
-.end method
-
-.method public abstract get(Lgx3;)Lfx3;
-.end method
-
-.method public abstract minusKey(Lgx3;)Lhx3;
-.end method
-
-.method public abstract plus(Lhx3;)Lhx3;
+.method public abstract d(Lcom/google/android/gms/tasks/Task;)Ljava/lang/Object;
 .end method

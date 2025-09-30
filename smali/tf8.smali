@@ -1,77 +1,68 @@
-.class public final Ltf8;
-.super Lccc;
+.class public final synthetic Ltf8;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lbg8;
 
 
 # instance fields
-.field public final B0:Landroid/view/View;
+.field public final synthetic a:I
 
-.field public final C0:Landroid/widget/ImageView;
+.field public final synthetic b:Ldg8;
 
-.field public final D0:Landroid/widget/ProgressBar;
-
-.field public final E0:Landroid/widget/TextView;
-
-.field public final F0:F
-
-.field public G0:Lmg8;
-
-.field public final synthetic H0:Lwf8;
+.field public final synthetic c:F
 
 
 # direct methods
-.method public constructor <init>(Lwf8;Landroid/view/View;)V
-    .locals 2
+.method public synthetic constructor <init>(Ldg8;FI)V
+    .locals 0
 
-    iput-object p1, p0, Ltf8;->H0:Lwf8;
+    iput p3, p0, Ltf8;->a:I
 
-    invoke-direct {p0, p2}, Lccc;-><init>(Landroid/view/View;)V
+    iput-object p1, p0, Ltf8;->b:Ldg8;
 
-    iput-object p2, p0, Ltf8;->B0:Landroid/view/View;
+    iput p2, p0, Ltf8;->c:F
 
-    sget v0, Lusb;->mr_cast_group_icon:I
-
-    invoke-virtual {p2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/widget/ImageView;
-
-    iput-object v0, p0, Ltf8;->C0:Landroid/widget/ImageView;
-
-    sget v0, Lusb;->mr_cast_group_progress_bar:I
-
-    invoke-virtual {p2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/widget/ProgressBar;
-
-    iput-object v0, p0, Ltf8;->D0:Landroid/widget/ProgressBar;
-
-    sget v1, Lusb;->mr_cast_group_name:I
-
-    invoke-virtual {p2, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
-
-    move-result-object p2
-
-    check-cast p2, Landroid/widget/TextView;
-
-    iput-object p2, p0, Ltf8;->E0:Landroid/widget/TextView;
-
-    iget-object p1, p1, Lwf8;->t0:Lyf8;
-
-    iget-object p2, p1, Lyf8;->u0:Landroid/content/Context;
-
-    invoke-static {p2}, Ltg8;->c(Landroid/content/Context;)F
-
-    move-result p2
-
-    iput p2, p0, Ltf8;->F0:F
-
-    iget-object p0, p1, Lyf8;->u0:Landroid/content/Context;
-
-    invoke-static {p0, v0}, Ltg8;->i(Landroid/content/Context;Landroid/widget/ProgressBar;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final c(Lgy6;I)V
+    .locals 1
+
+    iget v0, p0, Ltf8;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    iget v0, p0, Ltf8;->c:F
+
+    iget-object p0, p0, Ltf8;->b:Ldg8;
+
+    iget-object p0, p0, Ldg8;->c:Lng8;
+
+    invoke-interface {p1, p0, p2, v0}, Lgy6;->t(Lay6;IF)V
+
+    return-void
+
+    :pswitch_0
+    iget v0, p0, Ltf8;->c:F
+
+    iget-object p0, p0, Ltf8;->b:Ldg8;
+
+    iget-object p0, p0, Ldg8;->c:Lng8;
+
+    invoke-interface {p1, p0, p2, v0}, Lgy6;->u(Lay6;IF)V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

@@ -294,11 +294,11 @@
 
     .line 27
     :try_start_0
-    new-instance v1, Ljff;
+    new-instance v1, Lrvg;
 
-    const/16 v2, 0x18
+    const/16 v2, 0xb
 
-    invoke-direct {v1, p1, v2, v0}, Ljff;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+    invoke-direct {v1, p1, v2, v0}, Lrvg;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
 
     invoke-virtual {p0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
     :try_end_0

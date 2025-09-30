@@ -3,12 +3,12 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lpp8;
+.implements Lhw8;
 .implements Ljava/io/Closeable;
 
 
 # annotations
-.annotation build Lqm4;
+.annotation build Ler4;
 .end annotation
 
 
@@ -26,7 +26,7 @@
 
     const-string v0, "imagepipeline"
 
-    invoke-static {v0}, Lvk9;->u(Ljava/lang/String;)Z
+    invoke-static {v0}, Ljs9;->p(Ljava/lang/String;)Z
 
     return-void
 .end method
@@ -100,32 +100,32 @@
 .end method
 
 .method private static native nativeAllocate(I)J
-    .annotation build Lqm4;
+    .annotation build Ler4;
     .end annotation
 .end method
 
 .method private static native nativeCopyFromByteArray(J[BII)V
-    .annotation build Lqm4;
+    .annotation build Ler4;
     .end annotation
 .end method
 
 .method private static native nativeCopyToByteArray(J[BII)V
-    .annotation build Lqm4;
+    .annotation build Ler4;
     .end annotation
 .end method
 
 .method private static native nativeFree(J)V
-    .annotation build Lqm4;
+    .annotation build Ler4;
     .end annotation
 .end method
 
 .method private static native nativeMemcpy(JJI)V
-    .annotation build Lqm4;
+    .annotation build Ler4;
     .end annotation
 .end method
 
 .method private static native nativeReadByte(J)B
-    .annotation build Lqm4;
+    .annotation build Ler4;
     .end annotation
 .end method
 
@@ -143,11 +143,11 @@
 
     xor-int/lit8 v0, v0, 0x1
 
-    invoke-static {v0}, Ll23;->l(Z)V
+    invoke-static {v0}, Lcb7;->j(Z)V
 
     iget v0, p0, Lcom/facebook/imagepipeline/memory/NativeMemoryChunk;->b:I
 
-    invoke-static {p1, p3, v0}, Lg47;->c(III)I
+    invoke-static {p1, p3, v0}, Luyg;->d(III)I
 
     move-result p3
 
@@ -155,7 +155,7 @@
 
     iget v1, p0, Lcom/facebook/imagepipeline/memory/NativeMemoryChunk;->b:I
 
-    invoke-static {p1, v0, p2, p3, v1}, Lg47;->k(IIIII)V
+    invoke-static {p1, v0, p2, p3, v1}, Luyg;->h(IIIII)V
 
     iget-wide v0, p0, Lcom/facebook/imagepipeline/memory/NativeMemoryChunk;->a:J
 
@@ -194,11 +194,11 @@
 
     xor-int/lit8 v0, v0, 0x1
 
-    invoke-static {v0}, Ll23;->l(Z)V
+    invoke-static {v0}, Lcb7;->j(Z)V
 
     iget v0, p0, Lcom/facebook/imagepipeline/memory/NativeMemoryChunk;->b:I
 
-    invoke-static {p1, p3, v0}, Lg47;->c(III)I
+    invoke-static {p1, p3, v0}, Luyg;->d(III)I
 
     move-result p3
 
@@ -206,7 +206,7 @@
 
     iget v1, p0, Lcom/facebook/imagepipeline/memory/NativeMemoryChunk;->b:I
 
-    invoke-static {p1, v0, p2, p3, v1}, Lg47;->k(IIIII)V
+    invoke-static {p1, v0, p2, p3, v1}, Luyg;->h(IIIII)V
 
     iget-wide v0, p0, Lcom/facebook/imagepipeline/memory/NativeMemoryChunk;->a:J
 
@@ -233,7 +233,7 @@
     throw p1
 .end method
 
-.method public final c(Lpp8;I)V
+.method public final c(Lhw8;I)V
     .locals 4
 
     instance-of v0, p1, Lcom/facebook/imagepipeline/memory/NativeMemoryChunk;
@@ -246,7 +246,7 @@
 
     xor-int/lit8 v0, v0, 0x1
 
-    invoke-static {v0}, Ll23;->l(Z)V
+    invoke-static {v0}, Lcb7;->j(Z)V
 
     check-cast p1, Lcom/facebook/imagepipeline/memory/NativeMemoryChunk;
 
@@ -256,7 +256,7 @@
 
     xor-int/lit8 v0, v0, 0x1
 
-    invoke-static {v0}, Ll23;->l(Z)V
+    invoke-static {v0}, Lcb7;->j(Z)V
 
     iget v0, p1, Lcom/facebook/imagepipeline/memory/NativeMemoryChunk;->b:I
 
@@ -264,7 +264,7 @@
 
     const/4 v2, 0x0
 
-    invoke-static {v2, v0, v2, p2, v1}, Lg47;->k(IIIII)V
+    invoke-static {v2, v0, v2, p2, v1}, Luyg;->h(IIIII)V
 
     iget-wide v0, p1, Lcom/facebook/imagepipeline/memory/NativeMemoryChunk;->a:J
 
@@ -416,12 +416,12 @@
     return-wide v0
 .end method
 
-.method public final n(Lpp8;I)V
+.method public final n(Lhw8;I)V
     .locals 4
 
     invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    invoke-interface {p1}, Lpp8;->m()J
+    invoke-interface {p1}, Lhw8;->m()J
 
     move-result-wide v0
 
@@ -449,10 +449,10 @@
 
     sget-object v0, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
 
-    invoke-static {v0}, Ll23;->g(Ljava/lang/Boolean;)V
+    invoke-static {v0}, Lcb7;->e(Ljava/lang/Boolean;)V
 
     :cond_0
-    invoke-interface {p1}, Lpp8;->m()J
+    invoke-interface {p1}, Lhw8;->m()J
 
     move-result-wide v0
 
@@ -470,7 +470,7 @@
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     :try_start_1
-    invoke-virtual {p0, p1, p2}, Lcom/facebook/imagepipeline/memory/NativeMemoryChunk;->c(Lpp8;I)V
+    invoke-virtual {p0, p1, p2}, Lcom/facebook/imagepipeline/memory/NativeMemoryChunk;->c(Lhw8;I)V
 
     monitor-exit p0
     :try_end_1
@@ -515,7 +515,7 @@
     .catchall {:try_start_5 .. :try_end_5} :catchall_2
 
     :try_start_6
-    invoke-virtual {p0, p1, p2}, Lcom/facebook/imagepipeline/memory/NativeMemoryChunk;->c(Lpp8;I)V
+    invoke-virtual {p0, p1, p2}, Lcom/facebook/imagepipeline/memory/NativeMemoryChunk;->c(Lhw8;I)V
 
     monitor-exit p1
     :try_end_6
@@ -566,7 +566,7 @@
 
     xor-int/2addr v0, v1
 
-    invoke-static {v0}, Ll23;->l(Z)V
+    invoke-static {v0}, Lcb7;->j(Z)V
 
     const/4 v0, 0x0
 

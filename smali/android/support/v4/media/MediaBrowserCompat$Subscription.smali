@@ -81,7 +81,7 @@
 
     check-cast v1, Landroid/os/Bundle;
 
-    invoke-static {v1, p1}, Lcu0;->d(Landroid/os/Bundle;Landroid/os/Bundle;)Z
+    invoke-static {v1, p1}, Lz48;->d(Landroid/os/Bundle;Landroid/os/Bundle;)Z
 
     move-result v1
 
@@ -174,7 +174,7 @@
 
     check-cast v1, Landroid/os/Bundle;
 
-    invoke-static {v1, p1}, Lcu0;->d(Landroid/os/Bundle;Landroid/os/Bundle;)Z
+    invoke-static {v1, p1}, Lz48;->d(Landroid/os/Bundle;Landroid/os/Bundle;)Z
 
     move-result v1
 

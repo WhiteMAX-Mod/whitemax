@@ -1,61 +1,43 @@
 .class public final Lzh5;
-.super Lbi5;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:Lzh5;
+# instance fields
+.field public final a:Ljma;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(Ljma;)V
+    .locals 0
 
-    new-instance v0, Lzh5;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    sput-object v0, Lzh5;->a:Lzh5;
+    iput-object p1, p0, Lzh5;->a:Ljma;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
+.method public final a()Lu2e;
+    .locals 2
 
-    const/4 v0, 0x1
+    iget-object p0, p0, Lzh5;->a:Ljma;
 
-    if-ne p0, p1, :cond_0
+    invoke-virtual {p0}, Lfxc;->n()Ls7a;
 
-    return v0
+    move-result-object p0
 
-    :cond_0
-    instance-of p0, p1, Lzh5;
+    new-instance v0, Lth5;
 
-    if-nez p0, :cond_1
+    const/4 v1, 0x6
 
-    const/4 p0, 0x0
+    invoke-direct {v0, v1}, Lth5;-><init>(I)V
 
-    return p0
+    invoke-virtual {p0, v0}, Lk2e;->h(Lqc6;)Lu2e;
 
-    :cond_1
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 0
-
-    const p0, 0x443b70c7
-
-    return p0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 0
-
-    const-string p0, "Failed"
+    move-result-object p0
 
     return-object p0
 .end method

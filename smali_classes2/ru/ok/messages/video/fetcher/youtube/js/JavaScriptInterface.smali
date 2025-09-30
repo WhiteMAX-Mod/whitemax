@@ -4,16 +4,16 @@
 
 
 # instance fields
-.field public final a:Le9g;
+.field public final a:Llhd;
 
 
 # direct methods
-.method public constructor <init>(Le9g;)V
+.method public constructor <init>(Llhd;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lru/ok/messages/video/fetcher/youtube/js/JavaScriptInterface;->a:Le9g;
+    iput-object p1, p0, Lru/ok/messages/video/fetcher/youtube/js/JavaScriptInterface;->a:Llhd;
 
     return-void
 .end method
@@ -28,9 +28,9 @@
     .annotation build Landroidx/annotation/Keep;
     .end annotation
 
-    iget-object p0, p0, Lru/ok/messages/video/fetcher/youtube/js/JavaScriptInterface;->a:Le9g;
+    iget-object p0, p0, Lru/ok/messages/video/fetcher/youtube/js/JavaScriptInterface;->a:Llhd;
 
-    iget-object v0, p0, Le9g;->c:Ljava/lang/Object;
+    iget-object v0, p0, Llhd;->c:Ljava/lang/Object;
 
     check-cast v0, Ljava/util/concurrent/atomic/AtomicReference;
 
@@ -40,22 +40,22 @@
 
     move-result-object v0
 
-    check-cast v0, Lyag;
+    check-cast v0, Layg;
 
     if-nez v0, :cond_0
 
     return-void
 
     :cond_0
-    iget-object p0, p0, Le9g;->d:Ljava/lang/Object;
+    iget-object p0, p0, Llhd;->o:Ljava/lang/Object;
 
     check-cast p0, Landroid/os/Handler;
 
-    new-instance v1, Lt76;
+    new-instance v1, Lxd6;
 
     const/16 v2, 0x9
 
-    invoke-direct {v1, p1, v2, v0}, Lt76;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+    invoke-direct {v1, p1, v2, v0}, Lxd6;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
 
     invoke-virtual {p0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 

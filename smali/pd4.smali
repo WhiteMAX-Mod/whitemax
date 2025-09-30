@@ -1,31 +1,61 @@
 .class public final Lpd4;
-.super Ljava/lang/Object;
+.super Lzi0;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:I
-
-.field public final b:I
-
-.field public final c:I
-
-.field public final d:I
+.field public final X:Lod4;
 
 
 # direct methods
-.method public constructor <init>(IIII)V
-    .locals 0
+.method public constructor <init>(Lod4;JJ)V
+    .locals 6
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/4 v1, 0x0
 
-    iput p1, p0, Lpd4;->a:I
+    move-object v0, p0
 
-    iput p2, p0, Lpd4;->b:I
+    move-wide v2, p2
 
-    iput p3, p0, Lpd4;->c:I
+    move-wide v4, p4
 
-    iput p4, p0, Lpd4;->d:I
+    invoke-direct/range {v0 .. v5}, Lzi0;-><init>(IJJ)V
+
+    iput-object p1, v0, Lpd4;->X:Lod4;
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final a()J
+    .locals 3
+
+    invoke-virtual {p0}, Lzi0;->c()V
+
+    iget-object v0, p0, Lpd4;->X:Lod4;
+
+    iget-wide v1, p0, Lzi0;->o:J
+
+    invoke-virtual {v0, v1, v2}, Lod4;->i(J)J
+
+    move-result-wide v0
+
+    return-wide v0
+.end method
+
+.method public final b()J
+    .locals 3
+
+    invoke-virtual {p0}, Lzi0;->c()V
+
+    iget-object v0, p0, Lpd4;->X:Lod4;
+
+    iget-wide v1, p0, Lzi0;->o:J
+
+    invoke-virtual {v0, v1, v2}, Lod4;->g(J)J
+
+    move-result-wide v0
+
+    return-wide v0
 .end method

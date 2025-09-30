@@ -1,358 +1,312 @@
-.class public final synthetic Ldu8;
+.class public final Ldu8;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lm1a;
+.implements Landroid/os/Parcelable;
+
+
+# static fields
+.field public static final CREATOR:Landroid/os/Parcelable$Creator;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroid/os/Parcelable$Creator<",
+            "Ldu8;",
+            ">;"
+        }
+    .end annotation
+.end field
 
 
 # instance fields
-.field public final synthetic a:Lxy8;
+.field public final a:J
+
+.field public final b:Lsl2;
+
+.field public final c:Z
+
+.field public final o:Ljava/lang/Integer;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lxy8;)V
+.method static constructor <clinit>()V
+    .locals 2
+
+    new-instance v0, Lba8;
+
+    const/16 v1, 0x8
+
+    invoke-direct {v0, v1}, Lba8;-><init>(I)V
+
+    sput-object v0, Ldu8;->CREATOR:Landroid/os/Parcelable$Creator;
+
+    return-void
+.end method
+
+.method public synthetic constructor <init>(JLsl2;I)V
+    .locals 7
+
+    const/16 v0, 0xa
+
+    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v0
+
+    and-int/lit8 p4, p4, 0x8
+
+    if-eqz p4, :cond_0
+
+    const/4 v0, 0x0
+
+    :cond_0
+    move-object v6, v0
+
+    const/4 v5, 0x1
+
+    move-object v1, p0
+
+    move-wide v2, p1
+
+    move-object v4, p3
+
+    .line 1
+    invoke-direct/range {v1 .. v6}, Ldu8;-><init>(JLsl2;ZLjava/lang/Integer;)V
+
+    return-void
+.end method
+
+.method public constructor <init>(JLsl2;ZLjava/lang/Integer;)V
     .locals 0
 
+    .line 2
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Ldu8;->a:Lxy8;
+    .line 3
+    iput-wide p1, p0, Ldu8;->a:J
+
+    .line 4
+    iput-object p3, p0, Ldu8;->b:Lsl2;
+
+    .line 5
+    iput-boolean p4, p0, Ldu8;->c:Z
+
+    .line 6
+    iput-object p5, p0, Ldu8;->o:Ljava/lang/Integer;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Landroid/view/View;Lts3;)Lts3;
-    .locals 8
+.method public final describeContents()I
+    .locals 0
 
-    iget-object p1, p2, Lts3;->a:Lss3;
+    const/4 p0, 0x0
 
-    invoke-interface {p1}, Lss3;->b()Landroid/content/ClipData;
+    return p0
+.end method
 
-    move-result-object v0
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 7
 
-    invoke-virtual {v0}, Landroid/content/ClipData;->getItemCount()I
+    const/4 v0, 0x1
 
-    move-result v1
+    if-ne p0, p1, :cond_0
+
+    return v0
+
+    :cond_0
+    instance-of v1, p1, Ldu8;
 
     const/4 v2, 0x0
 
-    const/4 v3, 0x0
+    if-nez v1, :cond_1
 
-    const/4 v4, 0x1
+    return v2
 
-    if-ne v1, v4, :cond_3
+    :cond_1
+    check-cast p1, Ldu8;
 
-    invoke-virtual {v0, v2}, Landroid/content/ClipData;->getItemAt(I)Landroid/content/ClipData$Item;
+    iget-wide v3, p0, Ldu8;->a:J
 
-    move-result-object p1
+    iget-wide v5, p1, Ldu8;->a:J
 
-    invoke-virtual {p1}, Landroid/content/ClipData$Item;->getUri()Landroid/net/Uri;
+    cmp-long v1, v3, v5
 
-    move-result-object p1
+    if-eqz v1, :cond_2
 
-    if-eqz p1, :cond_0
+    return v2
+
+    :cond_2
+    iget-object v1, p0, Ldu8;->b:Lsl2;
+
+    iget-object v3, p1, Ldu8;->b:Lsl2;
+
+    if-eq v1, v3, :cond_3
+
+    return v2
+
+    :cond_3
+    iget-boolean v1, p0, Ldu8;->c:Z
+
+    iget-boolean v3, p1, Ldu8;->c:Z
+
+    if-eq v1, v3, :cond_4
+
+    return v2
+
+    :cond_4
+    iget-object p0, p0, Ldu8;->o:Ljava/lang/Integer;
+
+    iget-object p1, p1, Ldu8;->o:Ljava/lang/Integer;
+
+    invoke-static {p0, p1}, Lvyg;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result p0
+
+    if-nez p0, :cond_5
+
+    return v2
+
+    :cond_5
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 3
+
+    iget-wide v0, p0, Ldu8;->a:J
+
+    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
+
+    move-result v0
+
+    const/16 v1, 0x1f
+
+    mul-int/2addr v0, v1
+
+    iget-object v2, p0, Ldu8;->b:Lsl2;
+
+    invoke-virtual {v2}, Ljava/lang/Object;->hashCode()I
+
+    move-result v2
+
+    add-int/2addr v2, v0
+
+    mul-int/2addr v2, v1
+
+    iget-boolean v0, p0, Ldu8;->c:Z
+
+    invoke-static {v2, v1, v0}, Lsq3;->e(IIZ)I
+
+    move-result v0
+
+    iget-object p0, p0, Ldu8;->o:Ljava/lang/Integer;
+
+    if-nez p0, :cond_0
+
+    const/4 p0, 0x0
 
     goto :goto_0
 
     :cond_0
-    move v4, v2
+    invoke-virtual {p0}, Ljava/lang/Object;->hashCode()I
+
+    move-result p0
 
     :goto_0
-    if-eqz v4, :cond_1
+    add-int/2addr v0, p0
 
-    move-object p1, p2
+    return v0
+.end method
 
-    goto :goto_1
+.method public final toString()Ljava/lang/String;
+    .locals 3
 
-    :cond_1
-    move-object p1, v3
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    :goto_1
-    if-eqz v4, :cond_2
+    const-string v1, "MembersListArgs(chatId="
 
-    move-object p2, v3
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    :cond_2
-    invoke-static {p1, p2}, Landroid/util/Pair;->create(Ljava/lang/Object;Ljava/lang/Object;)Landroid/util/Pair;
+    iget-wide v1, p0, Ldu8;->a:J
 
-    move-result-object p1
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
-    goto/16 :goto_7
+    const-string v1, ", chatMemberType="
 
-    :cond_3
-    move v1, v2
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-object v4, v3
+    iget-object v1, p0, Ldu8;->b:Lsl2;
 
-    move-object v5, v4
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    :goto_2
-    invoke-virtual {v0}, Landroid/content/ClipData;->getItemCount()I
+    const-string v1, ", isLongClickEnabled="
 
-    move-result v6
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    if-ge v1, v6, :cond_7
+    iget-boolean v1, p0, Ldu8;->c:Z
 
-    invoke-virtual {v0, v1}, Landroid/content/ClipData;->getItemAt(I)Landroid/content/ClipData$Item;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
-    move-result-object v6
+    const-string v1, ", memberLimit="
 
-    invoke-virtual {v6}, Landroid/content/ClipData$Item;->getUri()Landroid/net/Uri;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object v7
+    iget-object p0, p0, Ldu8;->o:Ljava/lang/Integer;
 
-    if-eqz v7, :cond_5
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    if-nez v4, :cond_4
+    const-string p0, ")"
 
-    new-instance v4, Ljava/util/ArrayList;
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-direct {v4}, Ljava/util/ArrayList;-><init>()V
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    :cond_4
-    invoke-virtual {v4, v6}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+    move-result-object p0
 
-    goto :goto_3
+    return-object p0
+.end method
 
-    :cond_5
-    if-nez v5, :cond_6
+.method public final writeToParcel(Landroid/os/Parcel;I)V
+    .locals 2
 
-    new-instance v5, Ljava/util/ArrayList;
+    iget-wide v0, p0, Ldu8;->a:J
 
-    invoke-direct {v5}, Ljava/util/ArrayList;-><init>()V
+    invoke-virtual {p1, v0, v1}, Landroid/os/Parcel;->writeLong(J)V
 
-    :cond_6
-    invoke-virtual {v5, v6}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+    iget-object p2, p0, Ldu8;->b:Lsl2;
 
-    :goto_3
-    add-int/lit8 v1, v1, 0x1
-
-    goto :goto_2
-
-    :cond_7
-    if-nez v4, :cond_8
-
-    invoke-static {v3, v0}, Landroid/util/Pair;->create(Ljava/lang/Object;Ljava/lang/Object;)Landroid/util/Pair;
-
-    move-result-object v0
-
-    goto :goto_4
-
-    :cond_8
-    if-nez v5, :cond_9
-
-    invoke-static {v0, v3}, Landroid/util/Pair;->create(Ljava/lang/Object;Ljava/lang/Object;)Landroid/util/Pair;
-
-    move-result-object v0
-
-    goto :goto_4
-
-    :cond_9
-    invoke-virtual {v0}, Landroid/content/ClipData;->getDescription()Landroid/content/ClipDescription;
-
-    move-result-object v1
-
-    invoke-static {v1, v4}, Lts3;->a(Landroid/content/ClipDescription;Ljava/util/ArrayList;)Landroid/content/ClipData;
-
-    move-result-object v1
-
-    invoke-virtual {v0}, Landroid/content/ClipData;->getDescription()Landroid/content/ClipDescription;
-
-    move-result-object v0
-
-    invoke-static {v0, v5}, Lts3;->a(Landroid/content/ClipDescription;Ljava/util/ArrayList;)Landroid/content/ClipData;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, Landroid/util/Pair;->create(Ljava/lang/Object;Ljava/lang/Object;)Landroid/util/Pair;
-
-    move-result-object v0
-
-    :goto_4
-    iget-object v1, v0, Landroid/util/Pair;->first:Ljava/lang/Object;
-
-    if-nez v1, :cond_a
-
-    invoke-static {v3, p2}, Landroid/util/Pair;->create(Ljava/lang/Object;Ljava/lang/Object;)Landroid/util/Pair;
-
-    move-result-object p1
-
-    goto/16 :goto_7
-
-    :cond_a
-    iget-object v1, v0, Landroid/util/Pair;->second:Ljava/lang/Object;
-
-    if-nez v1, :cond_b
-
-    invoke-static {p2, v3}, Landroid/util/Pair;->create(Ljava/lang/Object;Ljava/lang/Object;)Landroid/util/Pair;
-
-    move-result-object p1
-
-    goto/16 :goto_7
-
-    :cond_b
-    sget v1, Landroid/os/Build$VERSION;->SDK_INT:I
-
-    const/16 v4, 0x1f
-
-    if-lt v1, v4, :cond_c
-
-    new-instance v5, Ld3d;
-
-    invoke-direct {v5, p2}, Ld3d;-><init>(Lts3;)V
-
-    goto :goto_5
-
-    :cond_c
-    new-instance v5, Lrs3;
-
-    invoke-direct {v5}, Lrs3;-><init>()V
-
-    invoke-interface {p1}, Lss3;->b()Landroid/content/ClipData;
-
-    move-result-object v6
-
-    iput-object v6, v5, Lrs3;->b:Landroid/content/ClipData;
-
-    invoke-interface {p1}, Lss3;->C()I
-
-    move-result v6
-
-    iput v6, v5, Lrs3;->c:I
-
-    invoke-interface {p1}, Lss3;->getFlags()I
-
-    move-result v6
-
-    iput v6, v5, Lrs3;->o:I
-
-    invoke-interface {p1}, Lss3;->u()Landroid/net/Uri;
-
-    move-result-object v6
-
-    iput-object v6, v5, Lrs3;->X:Landroid/net/Uri;
-
-    invoke-interface {p1}, Lss3;->getExtras()Landroid/os/Bundle;
-
-    move-result-object v6
-
-    iput-object v6, v5, Lrs3;->Y:Landroid/os/Bundle;
-
-    :goto_5
-    iget-object v6, v0, Landroid/util/Pair;->first:Ljava/lang/Object;
-
-    check-cast v6, Landroid/content/ClipData;
-
-    invoke-interface {v5, v6}, Lqs3;->j(Landroid/content/ClipData;)V
-
-    invoke-interface {v5}, Lqs3;->build()Lts3;
-
-    move-result-object v5
-
-    if-lt v1, v4, :cond_d
-
-    new-instance p1, Ld3d;
-
-    invoke-direct {p1, p2}, Ld3d;-><init>(Lts3;)V
-
-    goto :goto_6
-
-    :cond_d
-    new-instance p2, Lrs3;
-
-    invoke-direct {p2}, Lrs3;-><init>()V
-
-    invoke-interface {p1}, Lss3;->b()Landroid/content/ClipData;
-
-    move-result-object v1
-
-    iput-object v1, p2, Lrs3;->b:Landroid/content/ClipData;
-
-    invoke-interface {p1}, Lss3;->C()I
-
-    move-result v1
-
-    iput v1, p2, Lrs3;->c:I
-
-    invoke-interface {p1}, Lss3;->getFlags()I
-
-    move-result v1
-
-    iput v1, p2, Lrs3;->o:I
-
-    invoke-interface {p1}, Lss3;->u()Landroid/net/Uri;
-
-    move-result-object v1
-
-    iput-object v1, p2, Lrs3;->X:Landroid/net/Uri;
-
-    invoke-interface {p1}, Lss3;->getExtras()Landroid/os/Bundle;
-
-    move-result-object p1
-
-    iput-object p1, p2, Lrs3;->Y:Landroid/os/Bundle;
-
-    move-object p1, p2
-
-    :goto_6
-    iget-object p2, v0, Landroid/util/Pair;->second:Ljava/lang/Object;
-
-    check-cast p2, Landroid/content/ClipData;
-
-    invoke-interface {p1, p2}, Lqs3;->j(Landroid/content/ClipData;)V
-
-    invoke-interface {p1}, Lqs3;->build()Lts3;
-
-    move-result-object p1
-
-    invoke-static {v5, p1}, Landroid/util/Pair;->create(Ljava/lang/Object;Ljava/lang/Object;)Landroid/util/Pair;
-
-    move-result-object p1
-
-    :goto_7
-    iget-object p2, p1, Landroid/util/Pair;->first:Ljava/lang/Object;
-
-    check-cast p2, Lts3;
-
-    iget-object p1, p1, Landroid/util/Pair;->second:Ljava/lang/Object;
-
-    check-cast p1, Lts3;
-
-    if-eqz p2, :cond_e
-
-    iget-object p2, p2, Lts3;->a:Lss3;
-
-    invoke-interface {p2}, Lss3;->b()Landroid/content/ClipData;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/content/ClipData;->getItemCount()I
-
-    move-result v0
-
-    if-lez v0, :cond_e
-
-    invoke-interface {p2}, Lss3;->b()Landroid/content/ClipData;
+    invoke-virtual {p2}, Ljava/lang/Enum;->name()Ljava/lang/String;
 
     move-result-object p2
 
-    invoke-virtual {p2, v2}, Landroid/content/ClipData;->getItemAt(I)Landroid/content/ClipData$Item;
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    move-result-object p2
+    iget-boolean p2, p0, Ldu8;->c:Z
 
-    invoke-virtual {p2}, Landroid/content/ClipData$Item;->getUri()Landroid/net/Uri;
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
 
-    move-result-object v3
+    iget-object p0, p0, Ldu8;->o:Ljava/lang/Integer;
 
-    :cond_e
-    if-eqz v3, :cond_f
+    if-nez p0, :cond_0
 
-    iget-object p0, p0, Ldu8;->a:Lxy8;
+    const/4 p0, 0x0
 
-    invoke-virtual {p0, v3}, Lxy8;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {p1, p0}, Landroid/os/Parcel;->writeInt(I)V
 
-    :cond_f
-    return-object p1
+    return-void
+
+    :cond_0
+    const/4 p2, 0x1
+
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
+
+    invoke-virtual {p0}, Ljava/lang/Integer;->intValue()I
+
+    move-result p0
+
+    invoke-virtual {p1, p0}, Landroid/os/Parcel;->writeInt(I)V
+
+    return-void
 .end method

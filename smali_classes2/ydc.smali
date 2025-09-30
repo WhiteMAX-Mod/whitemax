@@ -1,236 +1,103 @@
-.class public final Lydc;
-.super Lhl;
+.class public final synthetic Lydc;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Loke;
-.implements Lxra;
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field public final o:J
+.field public final synthetic a:I
+
+.field public final synthetic b:Lone/me/rlottie/RLottieDrawable;
+
+.field public final synthetic c:Ljava/lang/Runnable;
 
 
 # direct methods
-.method public constructor <init>(JJ)V
+.method public synthetic constructor <init>(Lone/me/rlottie/RLottieDrawable;Ljava/lang/Runnable;I)V
     .locals 0
 
-    invoke-direct {p0, p1, p2}, Lhl;-><init>(J)V
+    iput p3, p0, Lydc;->a:I
 
-    iput-wide p3, p0, Lydc;->o:J
+    iput-object p1, p0, Lydc;->b:Lone/me/rlottie/RLottieDrawable;
+
+    iput-object p2, p0, Lydc;->c:Ljava/lang/Runnable;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final c()I
-    .locals 0
+.method public final run()V
+    .locals 3
 
-    const/4 p0, 0x1
+    iget v0, p0, Lydc;->a:I
 
-    return p0
-.end method
+    iget-object v1, p0, Lydc;->c:Ljava/lang/Runnable;
 
-.method public final d()V
-    .locals 8
+    iget-object p0, p0, Lydc;->b:Lone/me/rlottie/RLottieDrawable;
 
-    invoke-virtual {p0}, Lhl;->r()Lx4b;
+    packed-switch v0, :pswitch_data_0
 
-    move-result-object v0
+    sget-object v0, Lone/me/rlottie/RLottieDrawable;->gson:Lcom/google/gson/Gson;
 
-    check-cast v0, La5b;
+    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    iget-object v0, v0, La5b;->a:Lj23;
+    invoke-interface {v1}, Ljava/lang/Runnable;->run()V
 
-    invoke-virtual {v0}, Lmwc;->p()J
-
-    move-result-wide v0
-
-    const-wide/16 v2, 0x0
-
-    cmp-long v2, v0, v2
-
-    if-lez v2, :cond_0
-
-    invoke-virtual {p0}, Lhl;->j()Lik;
-
-    move-result-object v2
-
-    check-cast v2, La2a;
-
-    new-instance v3, Lqm3;
-
-    invoke-virtual {v2}, La2a;->x()Lx4b;
-
-    move-result-object v4
-
-    check-cast v4, La5b;
-
-    iget-object v4, v4, La5b;->a:Lj23;
-
-    invoke-virtual {v4}, Lmwc;->l()J
-
-    move-result-wide v4
-
-    const/4 v6, 0x1
-
-    new-array v6, v6, [J
-
-    const/4 v7, 0x0
-
-    aput-wide v0, v6, v7
-
-    invoke-direct {v3, v4, v5, v6, v7}, Lqm3;-><init>(JLjava/lang/Object;I)V
-
-    invoke-static {v2, v3}, La2a;->u(La2a;Lhl;)J
-
-    :cond_0
-    invoke-virtual {p0}, Lhl;->t()Lhme;
-
-    move-result-object v0
-
-    iget-wide v1, p0, Lhl;->a:J
-
-    invoke-virtual {v0, v1, v2}, Lhme;->d(J)V
-
-    return-void
-.end method
-
-.method public final e(Llje;)V
-    .locals 4
-
-    check-cast p1, Lzdc;
-
-    invoke-virtual {p0}, Lhl;->r()Lx4b;
-
-    move-result-object v0
-
-    check-cast v0, La5b;
-
-    iget-object v0, v0, La5b;->a:Lj23;
-
-    const-string v1, "user.deviceAvatarPath"
-
-    const/4 v2, 0x0
-
-    invoke-virtual {v0, v1, v2}, Le3;->j(Ljava/lang/String;Ljava/lang/String;)V
-
-    iget-object v0, p0, Lhl;->c:Lil;
+    iget-object v0, p0, Lone/me/rlottie/RLottieDrawable;->F0:Ljava/lang/Runnable;
 
     if-eqz v0, :cond_0
 
-    move-object v2, v0
+    const/4 v0, 0x0
+
+    iput-object v0, p0, Lone/me/rlottie/RLottieDrawable;->F0:Ljava/lang/Runnable;
+
+    invoke-static {}, Lvo0;->c()V
 
     :cond_0
-    iget-object v0, v2, Lil;->W:Lje7;
+    return-void
 
-    invoke-interface {v0}, Lje7;->getValue()Ljava/lang/Object;
+    :pswitch_0
+    sget-object v0, Lone/me/rlottie/RLottieDrawable;->gson:Lcom/google/gson/Gson;
 
-    move-result-object v0
+    :try_start_0
+    iget-object v0, p0, Lone/me/rlottie/RLottieDrawable;->r1:Lvo0;
 
-    check-cast v0, Liib;
+    if-eqz v0, :cond_1
 
-    iget-object v1, p1, Lzdc;->o:Lv7b;
+    invoke-virtual {v0}, Lvo0;->b()V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    invoke-virtual {v0, v1}, Liib;->b(Lv7b;)V
+    goto :goto_0
 
-    invoke-virtual {p0}, Lhl;->l()Lvu0;
+    :catchall_0
+    move-exception v0
 
-    move-result-object v0
+    invoke-static {}, Lone/me/rlottie/RLottie;->getLogger()Lns9;
 
-    new-instance v1, Laec;
+    move-result-object v2
 
-    iget-object p1, p1, Lzdc;->o:Lv7b;
+    invoke-interface {v2, v0}, Lns9;->F(Ljava/lang/Throwable;)V
 
-    iget-object p1, p1, Lv7b;->a:Lpm3;
+    :cond_1
+    :goto_0
+    new-instance v0, Lydc;
 
-    iget-wide v2, p0, Lhl;->a:J
+    const/4 v2, 0x1
 
-    invoke-direct {v1, v2, v3, p1}, Laec;-><init>(JLpm3;)V
+    invoke-direct {v0, p0, v1, v2}, Lydc;-><init>(Lone/me/rlottie/RLottieDrawable;Ljava/lang/Runnable;I)V
 
-    invoke-virtual {v0, v1}, Lvu0;->c(Ljava/lang/Object;)V
+    invoke-static {v0}, Lee;->d(Ljava/lang/Runnable;)V
 
     return-void
-.end method
 
-.method public final f(Lvie;)V
-    .locals 4
-
-    iget-object v0, p1, Lvie;->c:Ljava/lang/String;
-
-    invoke-static {v0}, Lou0;->w(Ljava/lang/String;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    invoke-virtual {p0}, Lydc;->d()V
-
-    :cond_0
-    invoke-virtual {p0}, Lhl;->l()Lvu0;
-
-    move-result-object v0
-
-    new-instance v1, Lji0;
-
-    iget-wide v2, p0, Lhl;->a:J
-
-    invoke-direct {v1, v2, v3, p1}, Lji0;-><init>(JLvie;)V
-
-    invoke-virtual {v0, v1}, Lvu0;->c(Ljava/lang/Object;)V
-
-    return-void
-.end method
-
-.method public final g()[B
-    .locals 3
-
-    new-instance v0, Lru/ok/tamtam/nano/Tasks$RemoveContactPhoto;
-
-    invoke-direct {v0}, Lru/ok/tamtam/nano/Tasks$RemoveContactPhoto;-><init>()V
-
-    iget-wide v1, p0, Lhl;->a:J
-
-    iput-wide v1, v0, Lru/ok/tamtam/nano/Tasks$RemoveContactPhoto;->requestId:J
-
-    iget-wide v1, p0, Lydc;->o:J
-
-    iput-wide v1, v0, Lru/ok/tamtam/nano/Tasks$RemoveContactPhoto;->photoId:J
-
-    invoke-static {v0}, Lnv8;->toByteArray(Lnv8;)[B
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public final getId()J
-    .locals 2
-
-    iget-wide v0, p0, Lhl;->a:J
-
-    return-wide v0
-.end method
-
-.method public final getType()Lyra;
-    .locals 0
-
-    sget-object p0, Lyra;->D0:Lyra;
-
-    return-object p0
-.end method
-
-.method public final i()Lije;
-    .locals 3
-
-    new-instance v0, Lpd9;
-
-    iget-wide v1, p0, Lydc;->o:J
-
-    const/16 p0, 0xc
-
-    invoke-direct {v0, v1, v2, p0}, Lpd9;-><init>(JI)V
-
-    return-object v0
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

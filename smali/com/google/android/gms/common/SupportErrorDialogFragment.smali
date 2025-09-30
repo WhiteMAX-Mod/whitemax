@@ -4,11 +4,11 @@
 
 
 # instance fields
-.field public x1:Landroid/app/Dialog;
+.field public A1:Landroid/app/Dialog;
 
-.field public y1:Landroid/content/DialogInterface$OnCancelListener;
+.field public B1:Landroid/content/DialogInterface$OnCancelListener;
 
-.field public z1:Landroid/app/AlertDialog;
+.field public C1:Landroid/app/AlertDialog;
 
 
 # direct methods
@@ -25,15 +25,15 @@
 .method public final V0()Landroid/app/Dialog;
     .locals 2
 
-    iget-object v0, p0, Lcom/google/android/gms/common/SupportErrorDialogFragment;->x1:Landroid/app/Dialog;
+    iget-object v0, p0, Lcom/google/android/gms/common/SupportErrorDialogFragment;->A1:Landroid/app/Dialog;
 
     if-nez v0, :cond_1
 
     const/4 v0, 0x0
 
-    iput-boolean v0, p0, Landroidx/fragment/app/DialogFragment;->o1:Z
+    iput-boolean v0, p0, Landroidx/fragment/app/DialogFragment;->r1:Z
 
-    iget-object v0, p0, Lcom/google/android/gms/common/SupportErrorDialogFragment;->z1:Landroid/app/AlertDialog;
+    iget-object v0, p0, Lcom/google/android/gms/common/SupportErrorDialogFragment;->C1:Landroid/app/AlertDialog;
 
     if-nez v0, :cond_0
 
@@ -43,7 +43,7 @@
 
     move-result-object v1
 
-    invoke-static {v1}, Lkhg;->k(Ljava/lang/Object;)V
+    invoke-static {v1}, Ljk7;->t(Ljava/lang/Object;)V
 
     invoke-direct {v0, v1}, Landroid/app/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
 
@@ -51,10 +51,10 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/google/android/gms/common/SupportErrorDialogFragment;->z1:Landroid/app/AlertDialog;
+    iput-object v0, p0, Lcom/google/android/gms/common/SupportErrorDialogFragment;->C1:Landroid/app/AlertDialog;
 
     :cond_0
-    iget-object p0, p0, Lcom/google/android/gms/common/SupportErrorDialogFragment;->z1:Landroid/app/AlertDialog;
+    iget-object p0, p0, Lcom/google/android/gms/common/SupportErrorDialogFragment;->C1:Landroid/app/AlertDialog;
 
     return-object p0
 
@@ -65,7 +65,7 @@
 .method public final onCancel(Landroid/content/DialogInterface;)V
     .locals 0
 
-    iget-object p0, p0, Lcom/google/android/gms/common/SupportErrorDialogFragment;->y1:Landroid/content/DialogInterface$OnCancelListener;
+    iget-object p0, p0, Lcom/google/android/gms/common/SupportErrorDialogFragment;->B1:Landroid/content/DialogInterface$OnCancelListener;
 
     if-eqz p0, :cond_0
 

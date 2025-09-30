@@ -1,293 +1,303 @@
-.class public abstract Lp97;
+.class public final Lp97;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ljava/util/concurrent/Callable;
+.implements Loq4;
+
 
 # static fields
-.field public static final a:Llz;
+.field public static final Y:Ljava/util/concurrent/FutureTask;
+
+
+# instance fields
+.field public X:Ljava/lang/Thread;
+
+.field public final a:Ljava/util/concurrent/atomic/AtomicReference;
+
+.field public final b:Ljava/util/concurrent/atomic/AtomicReference;
+
+.field public final c:Ljava/util/concurrent/atomic/AtomicReference;
+
+.field public final o:Ljava/util/concurrent/ExecutorService;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 5
+    .locals 3
 
-    const/4 v0, 0x2
+    new-instance v0, Ljava/util/concurrent/FutureTask;
 
-    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    sget-object v1, Lvyg;->b:Lf2h;
 
-    move-result-object v0
+    const/4 v2, 0x0
 
-    const/4 v1, 0x7
+    invoke-direct {v0, v1, v2}, Ljava/util/concurrent/FutureTask;-><init>(Ljava/lang/Runnable;Ljava/lang/Object;)V
 
-    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v1
-
-    const/4 v2, 0x4
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v3
-
-    const/4 v4, 0x5
-
-    invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v4
-
-    filled-new-array {v0, v1, v3, v4}, [Ljava/lang/Integer;
-
-    move-result-object v0
-
-    new-instance v1, Llz;
-
-    invoke-direct {v1, v2}, Ljava/util/ArrayList;-><init>(I)V
-
-    invoke-static {v1, v0}, Ljava/util/Collections;->addAll(Ljava/util/Collection;[Ljava/lang/Object;)Z
-
-    sput-object v1, Lp97;->a:Llz;
+    sput-object v0, Lp97;->Y:Ljava/util/concurrent/FutureTask;
 
     return-void
 .end method
 
-.method public static final a(Lclc;La05;)I
-    .locals 1
+.method public constructor <init>(Ljava/lang/Runnable;Ljava/util/concurrent/ScheduledExecutorService;)V
+    .locals 0
 
-    invoke-virtual {p1}, La05;->r0()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iget p0, p1, La05;->o:I
+    check-cast p1, Ljava/util/concurrent/atomic/AtomicReference;
 
-    invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    iput-object p1, p0, Lp97;->a:Ljava/util/concurrent/atomic/AtomicReference;
 
-    move-result-object p0
+    new-instance p1, Ljava/util/concurrent/atomic/AtomicReference;
 
-    sget-object p1, Lp97;->a:Llz;
+    invoke-direct {p1}, Ljava/util/concurrent/atomic/AtomicReference;-><init>()V
 
-    invoke-virtual {p1, p0}, Ljava/util/AbstractList;->indexOf(Ljava/lang/Object;)I
+    iput-object p1, p0, Lp97;->c:Ljava/util/concurrent/atomic/AtomicReference;
 
-    move-result p0
+    new-instance p1, Ljava/util/concurrent/atomic/AtomicReference;
 
-    if-ltz p0, :cond_0
+    invoke-direct {p1}, Ljava/util/concurrent/atomic/AtomicReference;-><init>()V
 
-    invoke-virtual {p1}, Ljava/util/AbstractCollection;->size()I
+    iput-object p1, p0, Lp97;->b:Ljava/util/concurrent/atomic/AtomicReference;
 
-    move-result v0
+    iput-object p2, p0, Lp97;->o:Ljava/util/concurrent/ExecutorService;
 
-    rem-int/2addr p0, v0
-
-    invoke-virtual {p1, p0}, Ljava/util/AbstractList;->get(I)Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, Ljava/lang/Number;
-
-    invoke-virtual {p0}, Ljava/lang/Number;->intValue()I
-
-    move-result p0
-
-    return p0
-
-    :cond_0
-    new-instance p0, Ljava/lang/IllegalArgumentException;
-
-    const-string p1, "Only accepts inverted exif orientations"
-
-    invoke-direct {p0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw p0
+    return-void
 .end method
 
-.method public static final b(Lclc;La05;)I
-    .locals 1
 
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    invoke-virtual {p1}, La05;->r0()V
-
-    iget p0, p1, La05;->c:I
-
-    const/16 v0, 0x5a
-
-    if-eq p0, v0, :cond_0
-
-    const/16 v0, 0xb4
-
-    if-eq p0, v0, :cond_0
-
-    const/16 v0, 0x10e
-
-    if-eq p0, v0, :cond_0
-
-    const/4 p0, 0x0
-
-    goto :goto_0
-
-    :cond_0
-    invoke-virtual {p1}, La05;->r0()V
-
-    iget p0, p1, La05;->c:I
+# virtual methods
+.method public final a(Ljava/util/concurrent/Future;)V
+    .locals 3
 
     :goto_0
-    return p0
-.end method
+    iget-object v0, p0, Lp97;->c:Ljava/util/concurrent/atomic/AtomicReference;
 
-.method public static final c(Lclc;Ldgc;La05;Z)I
-    .locals 4
-
-    const/16 v0, 0x8
-
-    if-nez p3, :cond_0
-
-    goto/16 :goto_3
-
-    :cond_0
-    if-nez p1, :cond_1
-
-    goto/16 :goto_3
-
-    :cond_1
-    invoke-static {p0, p2}, Lp97;->b(Lclc;La05;)I
-
-    move-result p3
-
-    invoke-virtual {p2}, La05;->r0()V
-
-    iget v1, p2, La05;->o:I
-
-    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
 
     move-result-object v1
 
-    sget-object v2, Lp97;->a:Llz;
+    check-cast v1, Ljava/util/concurrent/Future;
 
-    invoke-virtual {v2, v1}, Ljava/util/AbstractCollection;->contains(Ljava/lang/Object;)Z
+    sget-object v2, Lp97;->Y:Ljava/util/concurrent/FutureTask;
 
-    move-result v1
+    if-ne v1, v2, :cond_1
 
-    const/4 v2, 0x0
+    iget-object p0, p0, Lp97;->X:Ljava/lang/Thread;
 
-    if-eqz v1, :cond_2
+    invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
 
-    invoke-static {p0, p2}, Lp97;->a(Lclc;La05;)I
+    move-result-object v0
 
-    move-result p0
+    if-eq p0, v0, :cond_0
 
-    goto :goto_0
-
-    :cond_2
-    move p0, v2
-
-    :goto_0
-    const/16 v1, 0x5a
-
-    const/4 v3, 0x1
-
-    if-eq p3, v1, :cond_3
-
-    const/16 v1, 0x10e
-
-    if-eq p3, v1, :cond_3
-
-    const/4 p3, 0x5
-
-    if-eq p0, p3, :cond_3
-
-    const/4 p3, 0x7
-
-    if-ne p0, p3, :cond_4
-
-    :cond_3
-    move v2, v3
-
-    :cond_4
-    if-eqz v2, :cond_5
-
-    invoke-virtual {p2}, La05;->r0()V
-
-    iget p0, p2, La05;->Y:I
+    const/4 p0, 0x1
 
     goto :goto_1
 
-    :cond_5
-    invoke-virtual {p2}, La05;->r0()V
-
-    iget p0, p2, La05;->X:I
+    :cond_0
+    const/4 p0, 0x0
 
     :goto_1
-    if-eqz v2, :cond_6
+    invoke-interface {p1, p0}, Ljava/util/concurrent/Future;->cancel(Z)Z
 
-    invoke-virtual {p2}, La05;->r0()V
+    return-void
 
-    iget p2, p2, La05;->X:I
+    :cond_1
+    invoke-virtual {v0, v1, p1}, Ljava/util/concurrent/atomic/AtomicReference;->compareAndSet(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    goto :goto_2
+    move-result v2
 
-    :cond_6
-    invoke-virtual {p2}, La05;->r0()V
+    if-eqz v2, :cond_2
 
-    iget p2, p2, La05;->Y:I
+    return-void
 
-    :goto_2
-    iget p3, p1, Ldgc;->a:I
+    :cond_2
+    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
 
-    int-to-float p3, p3
+    move-result-object v2
 
-    int-to-float p0, p0
+    if-eq v2, v1, :cond_1
 
-    div-float/2addr p3, p0
+    goto :goto_0
+.end method
 
-    iget v1, p1, Ldgc;->b:I
+.method public final call()Ljava/lang/Object;
+    .locals 5
 
-    int-to-float v1, v1
+    invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
 
-    int-to-float p2, p2
+    move-result-object v0
 
-    div-float/2addr v1, p2
+    iput-object v0, p0, Lp97;->X:Ljava/lang/Thread;
 
-    invoke-static {p3, v1}, Ljava/lang/Math;->max(FF)F
+    const/4 v0, 0x0
 
-    move-result p3
+    :try_start_0
+    iget-object v1, p0, Lp97;->a:Ljava/util/concurrent/atomic/AtomicReference;
 
-    mul-float v1, p0, p3
+    invoke-interface {v1}, Ljava/lang/Runnable;->run()V
 
-    iget v2, p1, Ldgc;->c:F
+    iput-object v0, p0, Lp97;->X:Ljava/lang/Thread;
 
-    cmpl-float v1, v1, v2
+    iget-object v1, p0, Lp97;->o:Ljava/util/concurrent/ExecutorService;
 
-    if-lez v1, :cond_7
+    invoke-interface {v1, p0}, Ljava/util/concurrent/ExecutorService;->submit(Ljava/util/concurrent/Callable;)Ljava/util/concurrent/Future;
 
-    div-float p3, v2, p0
+    move-result-object v1
 
-    :cond_7
-    mul-float p0, p2, p3
+    iget-object v2, p0, Lp97;->b:Ljava/util/concurrent/atomic/AtomicReference;
 
-    cmpl-float p0, p0, v2
+    :goto_0
+    invoke-virtual {v2}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
 
-    if-lez p0, :cond_8
+    move-result-object v3
 
-    div-float p3, v2, p2
+    check-cast v3, Ljava/util/concurrent/Future;
 
-    :cond_8
-    iget p0, p1, Ldgc;->d:F
+    sget-object v4, Lp97;->Y:Ljava/util/concurrent/FutureTask;
 
-    int-to-float p1, v0
+    if-ne v3, v4, :cond_1
 
-    mul-float/2addr p3, p1
+    iget-object v2, p0, Lp97;->X:Ljava/lang/Thread;
 
-    add-float/2addr p3, p0
+    invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
 
-    float-to-int p0, p3
+    move-result-object v3
 
-    if-le p0, v0, :cond_9
+    if-eq v2, v3, :cond_0
 
-    :goto_3
-    return v0
+    const/4 v2, 0x1
 
-    :cond_9
-    if-ge p0, v3, :cond_a
+    goto :goto_1
 
-    return v3
+    :cond_0
+    const/4 v2, 0x0
 
-    :cond_a
+    :goto_1
+    invoke-interface {v1, v2}, Ljava/util/concurrent/Future;->cancel(Z)Z
+
+    return-object v0
+
+    :cond_1
+    invoke-virtual {v2, v3, v1}, Ljava/util/concurrent/atomic/AtomicReference;->compareAndSet(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v4
+
+    if-eqz v4, :cond_2
+
+    return-object v0
+
+    :cond_2
+    invoke-virtual {v2}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
+
+    move-result-object v4
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    if-eq v4, v3, :cond_1
+
+    goto :goto_0
+
+    :catchall_0
+    move-exception v1
+
+    iput-object v0, p0, Lp97;->X:Ljava/lang/Thread;
+
+    invoke-static {v1}, Ln4e;->D(Ljava/lang/Throwable;)V
+
+    throw v1
+.end method
+
+.method public final e()V
+    .locals 6
+
+    iget-object v0, p0, Lp97;->c:Ljava/util/concurrent/atomic/AtomicReference;
+
+    sget-object v1, Lp97;->Y:Ljava/util/concurrent/FutureTask;
+
+    invoke-virtual {v0, v1}, Ljava/util/concurrent/atomic/AtomicReference;->getAndSet(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/util/concurrent/Future;
+
+    const/4 v2, 0x0
+
+    const/4 v3, 0x1
+
+    if-eqz v0, :cond_1
+
+    if-eq v0, v1, :cond_1
+
+    iget-object v4, p0, Lp97;->X:Ljava/lang/Thread;
+
+    invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
+
+    move-result-object v5
+
+    if-eq v4, v5, :cond_0
+
+    move v4, v3
+
+    goto :goto_0
+
+    :cond_0
+    move v4, v2
+
+    :goto_0
+    invoke-interface {v0, v4}, Ljava/util/concurrent/Future;->cancel(Z)Z
+
+    :cond_1
+    iget-object v0, p0, Lp97;->b:Ljava/util/concurrent/atomic/AtomicReference;
+
+    invoke-virtual {v0, v1}, Ljava/util/concurrent/atomic/AtomicReference;->getAndSet(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/util/concurrent/Future;
+
+    if-eqz v0, :cond_3
+
+    if-eq v0, v1, :cond_3
+
+    iget-object p0, p0, Lp97;->X:Ljava/lang/Thread;
+
+    invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
+
+    move-result-object v1
+
+    if-eq p0, v1, :cond_2
+
+    move v2, v3
+
+    :cond_2
+    invoke-interface {v0, v2}, Ljava/util/concurrent/Future;->cancel(Z)Z
+
+    :cond_3
+    return-void
+.end method
+
+.method public final f()Z
+    .locals 1
+
+    iget-object p0, p0, Lp97;->c:Ljava/util/concurrent/atomic/AtomicReference;
+
+    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
+
+    move-result-object p0
+
+    sget-object v0, Lp97;->Y:Ljava/util/concurrent/FutureTask;
+
+    if-ne p0, v0, :cond_0
+
+    const/4 p0, 0x1
+
+    return p0
+
+    :cond_0
+    const/4 p0, 0x0
+
     return p0
 .end method

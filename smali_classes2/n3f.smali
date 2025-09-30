@@ -1,216 +1,183 @@
-.class public final Ln3f;
+.class public abstract Ln3f;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lt3f;
 
-
-# instance fields
-.field public final a:I
-
-.field public final b:Lmoe;
-
-.field public final c:Lmoe;
-
-.field public final d:Lr3f;
+# static fields
+.field public static final synthetic a:I
 
 
 # direct methods
-.method public constructor <init>(ILmoe;Lmoe;Lr3f;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const-string v0, "#(?i)([\\p{L}0-9_]+)"
 
-    iput p1, p0, Ln3f;->a:I
-
-    iput-object p2, p0, Ln3f;->b:Lmoe;
-
-    iput-object p3, p0, Ln3f;->c:Lmoe;
-
-    iput-object p4, p0, Ln3f;->d:Lr3f;
+    invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
 
     return-void
 .end method
 
-
-# virtual methods
-.method public final a()Lmoe;
-    .locals 0
-
-    iget-object p0, p0, Ln3f;->c:Lmoe;
-
-    return-object p0
-.end method
-
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
-
-    const/4 v0, 0x1
-
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    instance-of v1, p1, Ln3f;
-
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
-    check-cast p1, Ln3f;
-
-    iget v1, p0, Ln3f;->a:I
-
-    iget v3, p1, Ln3f;->a:I
-
-    if-eq v1, v3, :cond_2
-
-    return v2
-
-    :cond_2
-    iget-object v1, p0, Ln3f;->b:Lmoe;
-
-    iget-object v3, p1, Ln3f;->b:Lmoe;
-
-    invoke-static {v1, v3}, Lxq7;->d(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_3
-
-    return v2
-
-    :cond_3
-    iget-object v1, p0, Ln3f;->c:Lmoe;
-
-    iget-object v3, p1, Ln3f;->c:Lmoe;
-
-    invoke-static {v1, v3}, Lxq7;->d(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_4
-
-    return v2
-
-    :cond_4
-    iget-object p0, p0, Ln3f;->d:Lr3f;
-
-    iget-object p1, p1, Ln3f;->d:Lr3f;
-
-    invoke-static {p0, p1}, Lxq7;->d(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p0
-
-    if-nez p0, :cond_5
-
-    return v2
-
-    :cond_5
-    return v0
-.end method
-
-.method public final getIcon()I
-    .locals 0
-
-    iget p0, p0, Ln3f;->a:I
-
-    return p0
-.end method
-
-.method public final getTitle()Lmoe;
-    .locals 0
-
-    iget-object p0, p0, Ln3f;->b:Lmoe;
-
-    return-object p0
-.end method
-
-.method public final hashCode()I
-    .locals 3
-
-    iget v0, p0, Ln3f;->a:I
-
-    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
-
-    move-result v0
-
-    const/16 v1, 0x1f
-
-    mul-int/2addr v0, v1
-
-    iget-object v2, p0, Ln3f;->b:Lmoe;
-
-    invoke-static {v0, v1, v2}, Lpg0;->c(IILmoe;)I
-
-    move-result v0
-
-    iget-object v2, p0, Ln3f;->c:Lmoe;
-
-    invoke-static {v0, v1, v2}, Lpg0;->c(IILmoe;)I
-
-    move-result v0
-
-    iget-object p0, p0, Ln3f;->d:Lr3f;
-
-    invoke-virtual {p0}, Lr3f;->hashCode()I
-
-    move-result p0
-
-    add-int/2addr p0, v0
-
-    return p0
-.end method
-
-.method public final toString()Ljava/lang/String;
+.method public static a(La4b;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
     .locals 2
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    const-string v0, "+"
 
-    const-string v1, "AddEmail(icon="
+    invoke-static {p2}, Lm7g;->m(Ljava/lang/CharSequence;)Z
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    move-result v1
 
-    iget v1, p0, Ln3f;->a:I
+    if-eqz v1, :cond_0
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    move-object p2, p3
 
-    const-string v1, ", title="
+    :cond_0
+    invoke-static {p2}, Lm7g;->m(Ljava/lang/CharSequence;)Z
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    move-result p3
 
-    iget-object v1, p0, Ln3f;->b:Lmoe;
+    const-string v1, "RU"
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    if-eqz p3, :cond_1
 
-    const-string v1, ", subtitle="
+    goto :goto_0
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    :cond_1
+    invoke-virtual {p2}, Ljava/lang/String;->toUpperCase()Ljava/lang/String;
 
-    iget-object v1, p0, Ln3f;->c:Lmoe;
+    move-result-object p2
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    iget-object p3, p0, La4b;->f:Ljava/util/HashSet;
 
-    const-string v1, ", inputState="
+    invoke-static {p3}, Ljava/util/Collections;->unmodifiableSet(Ljava/util/Set;)Ljava/util/Set;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    move-result-object p3
 
-    iget-object p0, p0, Ln3f;->d:Lr3f;
+    invoke-interface {p3, p2}, Ljava/util/Set;->contains(Ljava/lang/Object;)Z
 
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    move-result p3
 
-    const-string p0, ")"
+    if-nez p3, :cond_2
 
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    goto :goto_0
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    :cond_2
+    move-object v1, p2
+
+    :goto_0
+    :try_start_0
+    invoke-virtual {p1, v0}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+
+    move-result p2
+
+    if-nez p2, :cond_3
+
+    invoke-virtual {v0, p1}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p2
+
+    goto :goto_1
+
+    :cond_3
+    move-object p2, p1
+
+    :goto_1
+    invoke-virtual {p0, p2, v1}, La4b;->t(Ljava/lang/String;Ljava/lang/String;)Lr4b;
+
+    move-result-object p2
+    :try_end_0
+    .catch Lio/michaelrocks/libphonenumber/android/NumberParseException; {:try_start_0 .. :try_end_0} :catch_0
+
+    goto :goto_2
+
+    :catch_0
+    const/4 p2, 0x0
+
+    :goto_2
+    if-nez p2, :cond_4
+
+    return-object p1
+
+    :cond_4
+    const/4 p1, 0x2
+
+    invoke-virtual {p0, p2, p1}, La4b;->d(Lr4b;I)Ljava/lang/String;
 
     move-result-object p0
 
     return-object p0
+.end method
+
+.method public static b(Landroid/content/Context;Ljava/lang/Throwable;)Ljava/lang/String;
+    .locals 1
+
+    instance-of v0, p1, Lru/ok/messages/video/fetcher/FetcherException;
+
+    if-eqz v0, :cond_0
+
+    check-cast p1, Lru/ok/messages/video/fetcher/FetcherException;
+
+    iget p1, p1, Lru/ok/messages/video/fetcher/FetcherException;->a:I
+
+    invoke-static {p1}, Lmw1;->t(I)I
+
+    move-result p1
+
+    packed-switch p1, :pswitch_data_0
+
+    sget p1, Ld1d;->M:I
+
+    goto :goto_0
+
+    :pswitch_0
+    sget p1, Ld1d;->y3:I
+
+    goto :goto_0
+
+    :pswitch_1
+    sget p1, Ld1d;->F3:I
+
+    goto :goto_0
+
+    :pswitch_2
+    sget p1, Ld1d;->G3:I
+
+    goto :goto_0
+
+    :pswitch_3
+    sget p1, Ld1d;->H3:I
+
+    goto :goto_0
+
+    :pswitch_4
+    sget p1, Ld1d;->J3:I
+
+    goto :goto_0
+
+    :pswitch_5
+    sget p1, Ld1d;->C3:I
+
+    goto :goto_0
+
+    :cond_0
+    sget p1, Ld1d;->y3:I
+
+    :goto_0
+    invoke-virtual {p0, p1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
+
+    move-result-object p0
+
+    return-object p0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x5
+        :pswitch_5
+        :pswitch_4
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

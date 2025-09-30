@@ -3,49 +3,51 @@
 .source "SourceFile"
 
 
+# instance fields
+.field public final a:Lwk;
+
+.field public final b:Lv5d;
+
+
+# direct methods
+.method public constructor <init>(Lwk;)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lk1d;->a:Lwk;
+
+    invoke-static {}, Li6d;->b()Lv5d;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lk1d;->b:Lv5d;
+
+    return-void
+.end method
+
+
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
+.method public final a(Lal;)Ld3e;
+    .locals 2
 
-    const/4 v0, 0x1
+    new-instance v0, Lh74;
 
-    if-ne p0, p1, :cond_0
+    const/4 v1, 0x6
 
-    return v0
+    invoke-direct {v0, p0, v1, p1}, Lh74;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
 
-    :cond_0
-    instance-of p0, p1, Lk1d;
+    new-instance p1, Ls7a;
 
-    if-nez p0, :cond_1
+    const/4 v1, 0x4
 
-    const/4 p0, 0x0
+    invoke-direct {p1, v1, v0}, Ls7a;-><init>(ILjava/lang/Object;)V
 
-    return p0
+    iget-object p0, p0, Lk1d;->b:Lv5d;
 
-    :cond_1
-    check-cast p1, Lk1d;
+    invoke-virtual {p1, p0}, Lk2e;->m(Lv5d;)Ld3e;
 
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 0
-
-    const/4 p0, 0x1
-
-    invoke-static {p0}, Ljava/lang/Boolean;->hashCode(Z)I
-
-    move-result p0
-
-    return p0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 0
-
-    const-string p0, "Close(isAnimated=true)"
+    move-result-object p0
 
     return-object p0
 .end method

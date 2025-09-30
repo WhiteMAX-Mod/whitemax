@@ -1,23 +1,31 @@
 .class public final Lj1f;
-.super Ljava/lang/Object;
+.super Lx2;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:Ljava/lang/String;
-
-.field public final b:[B
+.field public final c:Z
 
 
 # direct methods
-.method public constructor <init>([BLjava/lang/String;)V
-    .locals 0
+.method public constructor <init>(Li1f;Z)V
+    .locals 1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/16 v0, 0xd
 
-    iput-object p2, p0, Lj1f;->a:Ljava/lang/String;
+    invoke-direct {p0, v0, p1}, Lx2;-><init>(ILjava/lang/Object;)V
 
-    iput-object p1, p0, Lj1f;->b:[B
+    iput-boolean p2, p0, Lj1f;->c:Z
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final A0()Z
+    .locals 0
+
+    iget-boolean p0, p0, Lj1f;->c:Z
+
+    return p0
 .end method

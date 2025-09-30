@@ -1,111 +1,237 @@
 .class public final Lh95;
-.super Lqde;
+.super Ljava/lang/Object;
 .source "SourceFile"
-
-# interfaces
-.implements Ll66;
 
 
 # instance fields
-.field public synthetic X:Ljava/lang/Object;
+.field public final a:Ljava/lang/Object;
 
-.field public final synthetic Y:Lone/me/android/externalcallback/ExternalCallbackWidget;
+.field public final b:Ljava/lang/reflect/Method;
+
+.field public final c:I
+
+.field public d:Z
 
 
 # direct methods
-.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/android/externalcallback/ExternalCallbackWidget;)V
-    .locals 0
+.method public constructor <init>(Ljava/lang/Object;Ljava/lang/reflect/Method;)V
+    .locals 1
 
-    iput-object p2, p0, Lh95;->Y:Lone/me/android/externalcallback/ExternalCallbackWidget;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 p2, 0x2
+    const/4 v0, 0x1
 
-    invoke-direct {p0, p2, p1}, Lqde;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-boolean v0, p0, Lh95;->d:Z
+
+    if-eqz p1, :cond_1
+
+    if-eqz p2, :cond_0
+
+    iput-object p1, p0, Lh95;->a:Ljava/lang/Object;
+
+    iput-object p2, p0, Lh95;->b:Ljava/lang/reflect/Method;
+
+    invoke-virtual {p2, v0}, Ljava/lang/reflect/AccessibleObject;->setAccessible(Z)V
+
+    invoke-virtual {p2}, Ljava/lang/reflect/Method;->hashCode()I
+
+    move-result p2
+
+    add-int/lit8 p2, p2, 0x1f
+
+    mul-int/lit8 p2, p2, 0x1f
+
+    invoke-virtual {p1}, Ljava/lang/Object;->hashCode()I
+
+    move-result p1
+
+    add-int/2addr p1, p2
+
+    iput p1, p0, Lh95;->c:I
 
     return-void
+
+    :cond_0
+    new-instance p0, Ljava/lang/NullPointerException;
+
+    const-string p1, "EventProducer method cannot be null."
+
+    invoke-direct {p0, p1}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
+
+    throw p0
+
+    :cond_1
+    new-instance p0, Ljava/lang/NullPointerException;
+
+    const-string p1, "EventProducer target cannot be null."
+
+    invoke-direct {p0, p1}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
+
+    throw p0
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final a()Ljava/lang/Object;
+    .locals 2
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Lh95;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p0
-
-    check-cast p0, Lh95;
-
-    sget-object p1, Le5f;->a:Le5f;
-
-    invoke-virtual {p0, p1}, Lh95;->o(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p1
-.end method
-
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 1
-
-    new-instance v0, Lh95;
-
-    iget-object p0, p0, Lh95;->Y:Lone/me/android/externalcallback/ExternalCallbackWidget;
-
-    invoke-direct {v0, p2, p0}, Lh95;-><init>(Lkotlin/coroutines/Continuation;Lone/me/android/externalcallback/ExternalCallbackWidget;)V
-
-    iput-object p1, v0, Lh95;->X:Ljava/lang/Object;
-
-    return-object v0
-.end method
-
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
-
-    invoke-static {p1}, Lsgg;->Z(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Lh95;->X:Ljava/lang/Object;
-
-    check-cast p1, Lkl9;
-
-    instance-of v0, p1, Lp64;
-
-    iget-object p0, p0, Lh95;->Y:Lone/me/android/externalcallback/ExternalCallbackWidget;
-
-    if-eqz v0, :cond_0
-
-    sget-object v0, Lqw7;->c:Lqw7;
-
-    check-cast p1, Lp64;
-
-    invoke-virtual {v0, p1}, Lu2;->F0(Lp64;)V
-
-    goto :goto_0
-
-    :cond_0
-    instance-of v0, p1, Lc95;
+    iget-boolean v0, p0, Lh95;->d:Z
 
     if-eqz v0, :cond_1
 
-    new-instance v0, Lmfa;
+    :try_start_0
+    iget-object v0, p0, Lh95;->b:Ljava/lang/reflect/Method;
 
-    invoke-direct {v0, p0}, Lmfa;-><init>(Lone/me/sdk/arch/Widget;)V
+    iget-object p0, p0, Lh95;->a:Ljava/lang/Object;
 
-    check-cast p1, Lc95;
+    const/4 v1, 0x0
 
-    iget-object p1, p1, Lc95;->b:Lhoe;
+    invoke-virtual {v0, p0, v1}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
 
-    invoke-virtual {v0, p1}, Lmfa;->g(Lmoe;)V
+    move-result-object p0
+    :try_end_0
+    .catch Ljava/lang/IllegalAccessException; {:try_start_0 .. :try_end_0} :catch_1
+    .catch Ljava/lang/reflect/InvocationTargetException; {:try_start_0 .. :try_end_0} :catch_0
 
-    invoke-virtual {v0}, Lmfa;->i()Llfa;
+    return-object p0
+
+    :catch_0
+    move-exception p0
+
+    invoke-virtual {p0}, Ljava/lang/reflect/InvocationTargetException;->getCause()Ljava/lang/Throwable;
+
+    move-result-object v0
+
+    instance-of v0, v0, Ljava/lang/Error;
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {p0}, Ljava/lang/reflect/InvocationTargetException;->getCause()Ljava/lang/Throwable;
+
+    move-result-object p0
+
+    check-cast p0, Ljava/lang/Error;
+
+    throw p0
+
+    :cond_0
+    throw p0
+
+    :catch_1
+    move-exception p0
+
+    new-instance v0, Ljava/lang/AssertionError;
+
+    invoke-direct {v0, p0}, Ljava/lang/AssertionError;-><init>(Ljava/lang/Object;)V
+
+    throw v0
 
     :cond_1
-    :goto_0
-    const/4 p1, 0x0
+    new-instance v0, Ljava/lang/IllegalStateException;
 
-    invoke-virtual {p0, p1}, Lone/me/sdk/bottomsheet/BaseBottomSheetWidget;->v0(Z)V
+    new-instance v1, Ljava/lang/StringBuilder;
 
-    sget-object p0, Le5f;->a:Le5f;
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {p0}, Lh95;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string p0, " has been invalidated and can no longer produce events."
+
+    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-direct {v0, p0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+.end method
+
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
+
+    const/4 v0, 0x1
+
+    if-ne p0, p1, :cond_0
+
+    return v0
+
+    :cond_0
+    const/4 v1, 0x0
+
+    if-nez p1, :cond_1
+
+    return v1
+
+    :cond_1
+    const-class v2, Lh95;
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    move-result-object v3
+
+    if-eq v2, v3, :cond_2
+
+    return v1
+
+    :cond_2
+    check-cast p1, Lh95;
+
+    iget-object v2, p0, Lh95;->b:Ljava/lang/reflect/Method;
+
+    iget-object v3, p1, Lh95;->b:Ljava/lang/reflect/Method;
+
+    invoke-virtual {v2, v3}, Ljava/lang/reflect/Method;->equals(Ljava/lang/Object;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_3
+
+    iget-object p0, p0, Lh95;->a:Ljava/lang/Object;
+
+    iget-object p1, p1, Lh95;->a:Ljava/lang/Object;
+
+    if-ne p0, p1, :cond_3
+
+    return v0
+
+    :cond_3
+    return v1
+.end method
+
+.method public final hashCode()I
+    .locals 0
+
+    iget p0, p0, Lh95;->c:I
+
+    return p0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 2
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "[EventProducer "
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object p0, p0, Lh95;->b:Ljava/lang/reflect/Method;
+
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string p0, "]"
+
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
 
     return-object p0
 .end method

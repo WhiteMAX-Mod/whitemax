@@ -1,116 +1,85 @@
-.class public abstract Lca1;
-.super Lkl9;
+.class public final enum Lca1;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
 
+# static fields
+.field public static final enum a:Lca1;
+
+.field public static final enum b:Lca1;
+
+.field public static final enum c:Lca1;
+
+.field public static final synthetic o:[Lca1;
+
+
 # direct methods
-.method public constructor <init>(I)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 5
 
-    packed-switch p1, :pswitch_data_0
+    new-instance v0, Lca1;
 
-    :pswitch_0
-    sget-object p1, Le5f;->a:Le5f;
+    const-string v1, "CALLING"
 
-    invoke-direct {p0, p1}, Lkl9;-><init>(Ljava/lang/Object;)V
+    const/4 v2, 0x0
 
-    return-void
+    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    :pswitch_1
-    sget-object p1, Le5f;->a:Le5f;
+    sput-object v0, Lca1;->a:Lca1;
 
-    invoke-direct {p0, p1}, Lkl9;-><init>(Ljava/lang/Object;)V
+    new-instance v1, Lca1;
 
-    return-void
+    const-string v2, "ACTIVE"
 
-    :pswitch_2
-    sget-object p1, Le5f;->a:Le5f;
+    const/4 v3, 0x1
 
-    invoke-direct {p0, p1}, Lkl9;-><init>(Ljava/lang/Object;)V
+    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    return-void
+    sput-object v1, Lca1;->b:Lca1;
 
-    :pswitch_3
-    sget-object p1, Le5f;->a:Le5f;
+    new-instance v2, Lca1;
 
-    invoke-direct {p0, p1}, Lkl9;-><init>(Ljava/lang/Object;)V
+    const-string v3, "NO_CONNECTION"
 
-    return-void
+    const/4 v4, 0x2
 
-    :pswitch_4
-    sget-object p1, Le5f;->a:Le5f;
+    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    invoke-direct {p0, p1}, Lkl9;-><init>(Ljava/lang/Object;)V
+    sput-object v2, Lca1;->c:Lca1;
 
-    return-void
+    filled-new-array {v0, v1, v2}, [Lca1;
 
-    :pswitch_5
-    sget-object p1, Le5f;->a:Le5f;
+    move-result-object v0
 
-    invoke-direct {p0, p1}, Lkl9;-><init>(Ljava/lang/Object;)V
+    sput-object v0, Lca1;->o:[Lca1;
 
     return-void
+.end method
 
-    :pswitch_6
-    sget-object p1, Le5f;->a:Le5f;
+.method public static valueOf(Ljava/lang/String;)Lca1;
+    .locals 1
 
-    invoke-direct {p0, p1}, Lkl9;-><init>(Ljava/lang/Object;)V
+    const-class v0, Lca1;
 
-    return-void
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
 
-    :pswitch_7
-    sget-object p1, Le5f;->a:Le5f;
+    move-result-object p0
 
-    invoke-direct {p0, p1}, Lkl9;-><init>(Ljava/lang/Object;)V
+    check-cast p0, Lca1;
 
-    return-void
+    return-object p0
+.end method
 
-    :pswitch_8
-    sget-object p1, Le5f;->a:Le5f;
+.method public static values()[Lca1;
+    .locals 1
 
-    invoke-direct {p0, p1}, Lkl9;-><init>(Ljava/lang/Object;)V
+    sget-object v0, Lca1;->o:[Lca1;
 
-    return-void
+    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
 
-    :pswitch_9
-    sget-object p1, Le5f;->a:Le5f;
+    move-result-object v0
 
-    invoke-direct {p0, p1}, Lkl9;-><init>(Ljava/lang/Object;)V
+    check-cast v0, [Lca1;
 
-    return-void
-
-    :pswitch_a
-    sget-object p1, Le5f;->a:Le5f;
-
-    invoke-direct {p0, p1}, Lkl9;-><init>(Ljava/lang/Object;)V
-
-    return-void
-
-    :pswitch_b
-    sget-object p1, Le5f;->a:Le5f;
-
-    invoke-direct {p0, p1}, Lkl9;-><init>(Ljava/lang/Object;)V
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x1
-        :pswitch_b
-        :pswitch_0
-        :pswitch_a
-        :pswitch_0
-        :pswitch_9
-        :pswitch_0
-        :pswitch_0
-        :pswitch_8
-        :pswitch_7
-        :pswitch_6
-        :pswitch_5
-        :pswitch_4
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-    .end packed-switch
+    return-object v0
 .end method

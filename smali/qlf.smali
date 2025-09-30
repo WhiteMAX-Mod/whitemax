@@ -1,217 +1,275 @@
-.class public final synthetic Lqlf;
+.class public final Lqlf;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ljava/lang/Runnable;
-
 
 # instance fields
-.field public final synthetic a:I
+.field public final a:Ljava/lang/CharSequence;
 
-.field public final synthetic b:Lkab;
+.field public final b:Ljava/lang/CharSequence;
+
+.field public final c:Lu31;
+
+.field public final d:Z
+
+.field public final e:Z
+
+.field public final f:Z
 
 
 # direct methods
-.method public synthetic constructor <init>(Lkab;JI)V
+.method public constructor <init>(Ljava/lang/CharSequence;Ljava/lang/String;Lu31;ZZZ)V
     .locals 0
-
-    .line 1
-    const/4 p2, 0x4
-
-    iput p2, p0, Lqlf;->a:I
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lqlf;->b:Lkab;
+    iput-object p1, p0, Lqlf;->a:Ljava/lang/CharSequence;
 
-    return-void
-.end method
+    iput-object p2, p0, Lqlf;->b:Ljava/lang/CharSequence;
 
-.method public synthetic constructor <init>(Lkab;Ldz5;Le64;)V
-    .locals 0
+    iput-object p3, p0, Lqlf;->c:Lu31;
 
-    .line 2
-    const/4 p2, 0x3
+    iput-boolean p4, p0, Lqlf;->d:Z
 
-    iput p2, p0, Lqlf;->a:I
+    iput-boolean p5, p0, Lqlf;->e:Z
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lqlf;->b:Lkab;
-
-    return-void
-.end method
-
-.method public synthetic constructor <init>(Lkab;Ljava/lang/Object;I)V
-    .locals 0
-
-    .line 3
-    iput p3, p0, Lqlf;->a:I
-
-    iput-object p1, p0, Lqlf;->b:Lkab;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-boolean p6, p0, Lqlf;->f:Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
-    .locals 3
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
 
-    iget v0, p0, Lqlf;->a:I
+    const/4 v0, 0x1
 
-    iget-object p0, p0, Lqlf;->b:Lkab;
+    if-ne p0, p1, :cond_0
 
-    packed-switch v0, :pswitch_data_0
+    return v0
 
-    iget-object p0, p0, Lkab;->c:Ljava/lang/Object;
+    :cond_0
+    instance-of v1, p1, Lqlf;
 
-    check-cast p0, La75;
+    const/4 v2, 0x0
 
-    sget v0, Lnaf;->a:I
+    if-nez v1, :cond_1
 
-    iget-object p0, p0, La75;->a:Lg75;
+    return v2
 
-    iget-object p0, p0, Lg75;->y0:Lu74;
+    :cond_1
+    check-cast p1, Lqlf;
 
-    iget-object v0, p0, Lu74;->o:Lc40;
+    iget-object v1, p0, Lqlf;->a:Ljava/lang/CharSequence;
 
-    iget-object v0, v0, Lc40;->e:Ljava/lang/Object;
+    iget-object v3, p1, Lqlf;->a:Ljava/lang/CharSequence;
 
-    check-cast v0, Lej8;
+    invoke-static {v1, v3}, Lvyg;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    invoke-virtual {p0, v0}, Lu74;->G(Lej8;)Lyc;
+    move-result v1
 
-    move-result-object v0
+    if-nez v1, :cond_2
 
-    new-instance v1, Li74;
+    return v2
 
-    const/16 v2, 0x15
+    :cond_2
+    iget-object v1, p0, Lqlf;->b:Ljava/lang/CharSequence;
 
-    invoke-direct {v1, v2}, Li74;-><init>(I)V
+    iget-object v3, p1, Lqlf;->b:Ljava/lang/CharSequence;
 
-    const/16 v2, 0x3fd
+    invoke-static {v1, v3}, Lvyg;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    invoke-virtual {p0, v0, v2, v1}, Lu74;->K(Lyc;ILjm7;)V
+    move-result v1
 
-    return-void
+    if-nez v1, :cond_3
 
-    :pswitch_0
-    iget-object p0, p0, Lkab;->c:Ljava/lang/Object;
+    return v2
 
-    check-cast p0, La75;
+    :cond_3
+    iget-object v1, p0, Lqlf;->c:Lu31;
 
-    sget v0, Lnaf;->a:I
+    iget-object v3, p1, Lqlf;->c:Lu31;
 
-    iget-object p0, p0, La75;->a:Lg75;
+    invoke-static {v1, v3}, Lvyg;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    iget-object p0, p0, Lg75;->y0:Lu74;
+    move-result v1
 
-    invoke-virtual {p0}, Lu74;->J()Lyc;
+    if-nez v1, :cond_4
 
-    move-result-object v0
+    return v2
 
-    new-instance v1, Li74;
+    :cond_4
+    iget-boolean v1, p0, Lqlf;->d:Z
 
-    const/4 v2, 0x3
+    iget-boolean v3, p1, Lqlf;->d:Z
 
-    invoke-direct {v1, v2}, Li74;-><init>(I)V
+    if-eq v1, v3, :cond_5
 
-    const/16 v2, 0x3f9
+    return v2
 
-    invoke-virtual {p0, v0, v2, v1}, Lu74;->K(Lyc;ILjm7;)V
+    :cond_5
+    iget-boolean v1, p0, Lqlf;->e:Z
 
-    return-void
+    iget-boolean v3, p1, Lqlf;->e:Z
 
-    :pswitch_1
-    iget-object p0, p0, Lkab;->c:Ljava/lang/Object;
+    if-eq v1, v3, :cond_6
 
-    check-cast p0, La75;
+    return v2
 
-    sget v0, Lnaf;->a:I
+    :cond_6
+    iget-boolean p0, p0, Lqlf;->f:Z
 
-    iget-object p0, p0, La75;->a:Lg75;
+    iget-boolean p1, p1, Lqlf;->f:Z
 
-    iget-object p0, p0, Lg75;->y0:Lu74;
+    if-eq p0, p1, :cond_7
 
-    invoke-virtual {p0}, Lu74;->J()Lyc;
+    return v2
 
-    move-result-object v0
+    :cond_7
+    return v0
+.end method
 
-    new-instance v1, Li74;
+.method public final hashCode()I
+    .locals 4
 
-    const/4 v2, 0x5
+    const/4 v0, 0x0
 
-    invoke-direct {v1, v2}, Li74;-><init>(I)V
+    iget-object v1, p0, Lqlf;->a:Ljava/lang/CharSequence;
 
-    const/16 v2, 0x3f7
+    if-nez v1, :cond_0
 
-    invoke-virtual {p0, v0, v2, v1}, Lu74;->K(Lyc;ILjm7;)V
+    move v1, v0
 
-    return-void
+    goto :goto_0
 
-    :pswitch_2
-    iget-object p0, p0, Lkab;->c:Ljava/lang/Object;
+    :cond_0
+    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
 
-    check-cast p0, La75;
+    move-result v1
 
-    sget v0, Lnaf;->a:I
+    :goto_0
+    const/16 v2, 0x1f
 
-    iget-object p0, p0, La75;->a:Lg75;
+    mul-int/2addr v1, v2
 
-    iget-object p0, p0, Lg75;->y0:Lu74;
+    iget-object v3, p0, Lqlf;->b:Ljava/lang/CharSequence;
 
-    invoke-virtual {p0}, Lu74;->J()Lyc;
+    if-nez v3, :cond_1
 
-    move-result-object v0
+    move v3, v0
 
-    new-instance v1, Lo74;
+    goto :goto_1
 
-    const/16 v2, 0x13
+    :cond_1
+    invoke-virtual {v3}, Ljava/lang/Object;->hashCode()I
 
-    invoke-direct {v1, v2}, Lo74;-><init>(I)V
+    move-result v3
 
-    const/16 v2, 0x406
+    :goto_1
+    add-int/2addr v1, v3
 
-    invoke-virtual {p0, v0, v2, v1}, Lu74;->K(Lyc;ILjm7;)V
+    mul-int/2addr v1, v2
 
-    return-void
+    iget-object v3, p0, Lqlf;->c:Lu31;
 
-    :pswitch_3
-    iget-object p0, p0, Lkab;->c:Ljava/lang/Object;
+    if-nez v3, :cond_2
 
-    check-cast p0, La75;
+    goto :goto_2
 
-    sget v0, Lnaf;->a:I
+    :cond_2
+    invoke-virtual {v3}, Lu31;->hashCode()I
 
-    iget-object p0, p0, La75;->a:Lg75;
+    move-result v0
 
-    iget-object p0, p0, Lg75;->y0:Lu74;
+    :goto_2
+    add-int/2addr v1, v0
 
-    invoke-virtual {p0}, Lu74;->J()Lyc;
+    mul-int/2addr v1, v2
 
-    move-result-object v0
+    iget-boolean v0, p0, Lqlf;->d:Z
 
-    new-instance v1, Lo74;
+    invoke-static {v1, v2, v0}, Lsq3;->e(IIZ)I
 
-    const/16 v2, 0x8
+    move-result v0
 
-    invoke-direct {v1, v2}, Lo74;-><init>(I)V
+    iget-boolean v1, p0, Lqlf;->e:Z
 
-    const/16 v2, 0x3fb
+    invoke-static {v0, v2, v1}, Lsq3;->e(IIZ)I
 
-    invoke-virtual {p0, v0, v2, v1}, Lu74;->K(Lyc;ILjm7;)V
+    move-result v0
 
-    return-void
+    iget-boolean p0, p0, Lqlf;->f:Z
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    invoke-static {p0}, Ljava/lang/Boolean;->hashCode(Z)I
+
+    move-result p0
+
+    add-int/2addr p0, v0
+
+    return p0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 2
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "UnavailableCallState(callDescription="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v1, p0, Lqlf;->a:Ljava/lang/CharSequence;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", callStateStatus="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lqlf;->b:Ljava/lang/CharSequence;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", chatInfo="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v1, p0, Lqlf;->c:Lu31;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", isCallBackAvailable="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-boolean v1, p0, Lqlf;->d:Z
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string v1, ", isVideoCall="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-boolean v1, p0, Lqlf;->e:Z
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string v1, ", isPrivacyReason="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-boolean p0, p0, Lqlf;->f:Z
+
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string p0, ")"
+
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    return-object p0
 .end method

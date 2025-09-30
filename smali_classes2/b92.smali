@@ -1,116 +1,49 @@
 .class public final Lb92;
-.super Ljava/lang/Object;
+.super Ljx3;
 .source "SourceFile"
-
-# interfaces
-.implements Ljava/io/Serializable;
-.implements Lb03;
 
 
 # instance fields
-.field public final a:J
+.field public synthetic X:Ljava/lang/Object;
 
-.field public final b:J
+.field public final synthetic Y:Lr92;
+
+.field public Z:I
+
+.field public o:Lr92;
 
 
 # direct methods
-.method public constructor <init>(JJ)V
-    .locals 3
+.method public constructor <init>(Lr92;Ljx3;)V
+    .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lb92;->Y:Lr92;
 
-    iput-wide p1, p0, Lb92;->a:J
+    invoke-direct {p0, p2}, Ljx3;-><init>(Lkotlin/coroutines/Continuation;)V
 
-    iput-wide p3, p0, Lb92;->b:J
-
-    const-wide/16 v0, -0x1
-
-    cmp-long p0, p1, v0
-
-    const-string p1, ""
-
-    const-string p2, "Chunk"
-
-    if-nez p0, :cond_0
-
-    new-instance p0, Ljava/lang/IllegalStateException;
-
-    const-string v2, "start time is -1"
-
-    invoke-direct {p0, v2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    invoke-static {p2, p1, p0}, Lg47;->O(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    :cond_0
-    cmp-long p0, p3, v0
-
-    if-nez p0, :cond_1
-
-    new-instance p0, Ljava/lang/IllegalStateException;
-
-    const-string p3, "end time is -1"
-
-    invoke-direct {p0, p3}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    invoke-static {p2, p1, p0}, Lg47;->O(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    :cond_1
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()J
-    .locals 2
+.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    iget-wide v0, p0, Lb92;->a:J
+    iput-object p1, p0, Lb92;->X:Ljava/lang/Object;
 
-    return-wide v0
-.end method
+    iget p1, p0, Lb92;->Z:I
 
-.method public final b()J
-    .locals 2
+    const/high16 v0, -0x80000000
 
-    iget-wide v0, p0, Lb92;->b:J
+    or-int/2addr p1, v0
 
-    return-wide v0
-.end method
+    iput p1, p0, Lb92;->Z:I
 
-.method public final c()Lqo0;
-    .locals 6
+    iget-object p1, p0, Lb92;->Y:Lr92;
 
-    new-instance v0, Lqo0;
+    invoke-virtual {p1, p0}, Lr92;->n(Ljx3;)Ljava/lang/Object;
 
-    const/4 v1, 0x2
+    move-result-object p0
 
-    invoke-direct {v0, v1}, Lqo0;-><init>(I)V
-
-    const-wide/16 v1, -0x1
-
-    iget-wide v3, p0, Lb92;->a:J
-
-    cmp-long v1, v3, v1
-
-    if-nez v1, :cond_0
-
-    new-instance v1, Ljava/lang/IllegalStateException;
-
-    const-string v2, "start time is -1"
-
-    invoke-direct {v1, v2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    const-string v2, "Chunk.Builder"
-
-    const-string v5, ""
-
-    invoke-static {v2, v5, v1}, Lg47;->O(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    :cond_0
-    iput-wide v3, v0, Lqo0;->b:J
-
-    iget-wide v1, p0, Lb92;->b:J
-
-    invoke-virtual {v0, v1, v2}, Lqo0;->b(J)V
-
-    return-object v0
+    return-object p0
 .end method

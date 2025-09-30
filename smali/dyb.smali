@@ -1,106 +1,157 @@
-.class public abstract Ldyb;
-.super Ljava/lang/Object;
+.class public final enum Ldyb;
+.super Ljava/lang/Enum;
+.source "SourceFile"
 
 
 # static fields
-.field public static audio_record_click_to_cancel:I = 0x7f130088
+.field public static final enum X:Ldyb;
 
-.field public static audio_record_swipe_to_cancel:I = 0x7f13009a
+.field public static final enum Y:Ldyb;
 
-.field public static chat_screen__cancel:I = 0x7f130341
+.field public static final enum Z:Ldyb;
 
-.field public static chat_screen__leave_chat_action:I = 0x7f130342
+.field public static final enum b:Ldyb;
 
-.field public static chat_screen__leave_chat_title:I = 0x7f130343
+.field public static final enum c:Ldyb;
 
-.field public static chat_screen__remove_chat_action:I = 0x7f130344
+.field public static final enum o:Ldyb;
 
-.field public static chat_screen__remove_chat_title:I = 0x7f130345
+.field public static final synthetic r0:[Ldyb;
 
-.field public static chat_screen__search_result_down_button_accessibility:I = 0x7f130346
 
-.field public static chat_screen__search_result_not_found:I = 0x7f130347
+# instance fields
+.field public final a:Ljava/lang/String;
 
-.field public static chat_screen__search_result_success:I = 0x7f130348
 
-.field public static chat_screen__search_result_up_button_accessibility:I = 0x7f130349
+# direct methods
+.method static constructor <clinit>()V
+    .locals 9
 
-.field public static chat_screen__start_chat_with_bot:I = 0x7f13034a
+    new-instance v0, Ldyb;
 
-.field public static chat_screen_channel_search_hint:I = 0x7f13035f
+    const/4 v1, 0x0
 
-.field public static chat_screen_file_too_big_caption:I = 0x7f130373
+    const-string v2, "http/1.0"
 
-.field public static chat_screen_file_too_big_title:I = 0x7f130374
+    const-string v3, "HTTP_1_0"
 
-.field public static chat_screen_join_channel:I = 0x7f13037b
+    invoke-direct {v0, v3, v1, v2}, Ldyb;-><init>(Ljava/lang/String;ILjava/lang/String;)V
 
-.field public static chat_screen_join_chat:I = 0x7f13037c
+    sput-object v0, Ldyb;->b:Ldyb;
 
-.field public static chat_screen_leave_chat:I = 0x7f13037d
+    new-instance v1, Ldyb;
 
-.field public static chat_screen_remove_chat:I = 0x7f130398
+    const/4 v2, 0x1
 
-.field public static chat_screen_search_hint:I = 0x7f13039f
+    const-string v3, "http/1.1"
 
-.field public static chat_screen_status_mute_chat:I = 0x7f1303a2
+    const-string v4, "HTTP_1_1"
 
-.field public static chat_screen_status_subscribe_chat:I = 0x7f1303a3
+    invoke-direct {v1, v4, v2, v3}, Ldyb;-><init>(Ljava/lang/String;ILjava/lang/String;)V
 
-.field public static chat_screen_status_unmute_chat:I = 0x7f1303a4
+    sput-object v1, Ldyb;->c:Ldyb;
 
-.field public static chat_screen_unblock_contact:I = 0x7f1303a6
+    new-instance v2, Ldyb;
 
-.field public static media_bar_recent:I = 0x7f130616
+    const/4 v3, 0x2
 
-.field public static media_bar_restricted_media_action:I = 0x7f130617
+    const-string v4, "spdy/3.1"
 
-.field public static media_bar_restricted_media_subtitle:I = 0x7f130618
+    const-string v5, "SPDY_3"
 
-.field public static media_bar_restricted_media_title:I = 0x7f130619
+    invoke-direct {v2, v5, v3, v4}, Ldyb;-><init>(Ljava/lang/String;ILjava/lang/String;)V
 
-.field public static media_type_picker__close_dialog__accept:I = 0x7f13065d
+    sput-object v2, Ldyb;->o:Ldyb;
 
-.field public static media_type_picker__close_dialog__decline:I = 0x7f13065e
+    new-instance v3, Ldyb;
 
-.field public static media_type_picker__close_dialog__title:I = 0x7f13065f
+    const/4 v4, 0x3
 
-.field public static media_type_picker__contact:I = 0x7f130660
+    const-string v5, "h2"
 
-.field public static media_type_picker__file:I = 0x7f130661
+    const-string v6, "HTTP_2"
 
-.field public static media_type_picker__file_dialog__decline:I = 0x7f130662
+    invoke-direct {v3, v6, v4, v5}, Ldyb;-><init>(Ljava/lang/String;ILjava/lang/String;)V
 
-.field public static media_type_picker__file_dialog__from_file_manager:I = 0x7f130663
+    sput-object v3, Ldyb;->X:Ldyb;
 
-.field public static media_type_picker__file_dialog__from_gallery:I = 0x7f130664
+    new-instance v4, Ldyb;
 
-.field public static media_type_picker__file_dialog__title:I = 0x7f130665
+    const/4 v5, 0x4
 
-.field public static media_type_picker__gallery:I = 0x7f130666
+    const-string v6, "h2_prior_knowledge"
 
-.field public static media_type_picker__input_hint:I = 0x7f130667
+    const-string v7, "H2_PRIOR_KNOWLEDGE"
 
-.field public static media_type_picker__money:I = 0x7f130668
+    invoke-direct {v4, v7, v5, v6}, Ldyb;-><init>(Ljava/lang/String;ILjava/lang/String;)V
 
-.field public static media_type_picker__permissions_dialog__button:I = 0x7f130669
+    sput-object v4, Ldyb;->Y:Ldyb;
 
-.field public static media_type_picker__permissions_dialog__camera_permission:I = 0x7f13066a
+    new-instance v5, Ldyb;
 
-.field public static media_type_picker__permissions_dialog__gallery_camera_subtitle:I = 0x7f13066b
+    const/4 v6, 0x5
 
-.field public static media_type_picker__permissions_dialog__gallery_camera_title:I = 0x7f13066c
+    const-string v7, "quic"
 
-.field public static media_type_picker__permissions_dialog__gallery_subtitle:I = 0x7f13066d
+    const-string v8, "QUIC"
 
-.field public static media_type_picker__permissions_dialog__gallery_title:I = 0x7f13066e
+    invoke-direct {v5, v8, v6, v7}, Ldyb;-><init>(Ljava/lang/String;ILjava/lang/String;)V
 
-.field public static media_type_picker__permissions_dialog__subtitle:I = 0x7f13066f
+    sput-object v5, Ldyb;->Z:Ldyb;
 
-.field public static media_type_picker__permissions_dialog__title:I = 0x7f130670
+    filled-new-array/range {v0 .. v5}, [Ldyb;
 
-.field public static media_type_picker__place:I = 0x7f130671
+    move-result-object v0
 
-.field public static media_type_picker__snack_file:I = 0x7f130672
+    sput-object v0, Ldyb;->r0:[Ldyb;
 
-.field public static media_type_picker__snack_media:I = 0x7f130673
+    return-void
+.end method
+
+.method public constructor <init>(Ljava/lang/String;ILjava/lang/String;)V
+    .locals 0
+
+    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    iput-object p3, p0, Ldyb;->a:Ljava/lang/String;
+
+    return-void
+.end method
+
+.method public static valueOf(Ljava/lang/String;)Ldyb;
+    .locals 1
+
+    const-class v0, Ldyb;
+
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+
+    move-result-object p0
+
+    check-cast p0, Ldyb;
+
+    return-object p0
+.end method
+
+.method public static values()[Ldyb;
+    .locals 1
+
+    sget-object v0, Ldyb;->r0:[Ldyb;
+
+    invoke-virtual {v0}, [Ldyb;->clone()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, [Ldyb;
+
+    return-object v0
+.end method
+
+
+# virtual methods
+.method public final toString()Ljava/lang/String;
+    .locals 0
+
+    iget-object p0, p0, Ldyb;->a:Ljava/lang/String;
+
+    return-object p0
+.end method

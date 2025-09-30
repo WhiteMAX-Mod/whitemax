@@ -1,157 +1,115 @@
 .class public final Ljd;
-.super Ljava/lang/Object;
+.super Lxfc;
 .source "SourceFile"
-
-# interfaces
-.implements Lnv6;
 
 
 # instance fields
-.field public final a:Landroid/media/Image;
+.field public final g:Ljavax/net/ssl/X509TrustManager;
 
-.field public final b:[Lly4;
-
-.field public final c:Lja0;
+.field public final h:Landroid/net/http/X509TrustManagerExtensions;
 
 
 # direct methods
-.method public constructor <init>(Landroid/media/Image;)V
-    .locals 7
+.method public constructor <init>(Ljavax/net/ssl/X509TrustManager;Landroid/net/http/X509TrustManagerExtensions;)V
+    .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Ljd;->a:Landroid/media/Image;
+    iput-object p1, p0, Ljd;->g:Ljavax/net/ssl/X509TrustManager;
 
-    invoke-virtual {p1}, Landroid/media/Image;->getPlanes()[Landroid/media/Image$Plane;
-
-    move-result-object v0
-
-    const/4 v1, 0x0
-
-    if-eqz v0, :cond_0
-
-    array-length v2, v0
-
-    new-array v2, v2, [Lly4;
-
-    iput-object v2, p0, Ljd;->b:[Lly4;
-
-    :goto_0
-    array-length v2, v0
-
-    if-ge v1, v2, :cond_1
-
-    iget-object v2, p0, Ljd;->b:[Lly4;
-
-    new-instance v3, Lly4;
-
-    aget-object v4, v0, v1
-
-    const/4 v5, 0x1
-
-    invoke-direct {v3, v5, v4}, Lly4;-><init>(ILjava/lang/Object;)V
-
-    aput-object v3, v2, v1
-
-    add-int/lit8 v1, v1, 0x1
-
-    goto :goto_0
-
-    :cond_0
-    new-array v0, v1, [Lly4;
-
-    iput-object v0, p0, Ljd;->b:[Lly4;
-
-    :cond_1
-    sget-object v2, Lxhe;->b:Lxhe;
-
-    invoke-virtual {p1}, Landroid/media/Image;->getTimestamp()J
-
-    move-result-wide v3
-
-    new-instance v6, Landroid/graphics/Matrix;
-
-    invoke-direct {v6}, Landroid/graphics/Matrix;-><init>()V
-
-    new-instance v1, Lja0;
-
-    const/4 v5, 0x0
-
-    invoke-direct/range {v1 .. v6}, Lja0;-><init>(Lxhe;JILandroid/graphics/Matrix;)V
-
-    iput-object v1, p0, Ljd;->c:Lja0;
+    iput-object p2, p0, Ljd;->h:Landroid/net/http/X509TrustManagerExtensions;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final close()V
-    .locals 0
+.method public final e(Ljava/lang/String;Ljava/util/List;)Ljava/util/List;
+    .locals 1
 
-    iget-object p0, p0, Ljd;->a:Landroid/media/Image;
+    const/4 v0, 0x0
 
-    invoke-virtual {p0}, Landroid/media/Image;->close()V
+    new-array v0, v0, [Ljava/security/cert/X509Certificate;
 
-    return-void
-.end method
+    invoke-interface {p2, v0}, Ljava/util/Collection;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;
 
-.method public final d0()Landroid/media/Image;
-    .locals 0
+    move-result-object p2
 
-    iget-object p0, p0, Ljd;->a:Landroid/media/Image;
+    if-eqz p2, :cond_0
+
+    check-cast p2, [Ljava/security/cert/X509Certificate;
+
+    :try_start_0
+    iget-object p0, p0, Ljd;->h:Landroid/net/http/X509TrustManagerExtensions;
+
+    const-string v0, "RSA"
+
+    invoke-virtual {p0, p2, v0, p1}, Landroid/net/http/X509TrustManagerExtensions;->checkServerTrusted([Ljava/security/cert/X509Certificate;Ljava/lang/String;Ljava/lang/String;)Ljava/util/List;
+
+    move-result-object p0
+    :try_end_0
+    .catch Ljava/security/cert/CertificateException; {:try_start_0 .. :try_end_0} :catch_0
 
     return-object p0
+
+    :catch_0
+    move-exception p0
+
+    new-instance p1, Ljavax/net/ssl/SSLPeerUnverifiedException;
+
+    invoke-virtual {p0}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
+
+    move-result-object p2
+
+    invoke-direct {p1, p2}, Ljavax/net/ssl/SSLPeerUnverifiedException;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {p1, p0}, Ljava/lang/Throwable;->initCause(Ljava/lang/Throwable;)Ljava/lang/Throwable;
+
+    throw p1
+
+    :cond_0
+    new-instance p0, Ljava/lang/NullPointerException;
+
+    const-string p1, "null cannot be cast to non-null type kotlin.Array<T>"
+
+    invoke-direct {p0, p1}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
+
+    throw p0
 .end method
 
-.method public final getFormat()I
-    .locals 0
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 1
 
-    iget-object p0, p0, Ljd;->a:Landroid/media/Image;
+    instance-of v0, p1, Ljd;
 
-    invoke-virtual {p0}, Landroid/media/Image;->getFormat()I
+    if-eqz v0, :cond_0
 
-    move-result p0
+    check-cast p1, Ljd;
+
+    iget-object p1, p1, Ljd;->g:Ljavax/net/ssl/X509TrustManager;
+
+    iget-object p0, p0, Ljd;->g:Ljavax/net/ssl/X509TrustManager;
+
+    if-ne p1, p0, :cond_0
+
+    const/4 p0, 0x1
+
+    return p0
+
+    :cond_0
+    const/4 p0, 0x0
 
     return p0
 .end method
 
-.method public final getHeight()I
+.method public final hashCode()I
     .locals 0
 
-    iget-object p0, p0, Ljd;->a:Landroid/media/Image;
+    iget-object p0, p0, Ljd;->g:Ljavax/net/ssl/X509TrustManager;
 
-    invoke-virtual {p0}, Landroid/media/Image;->getHeight()I
+    invoke-static {p0}, Ljava/lang/System;->identityHashCode(Ljava/lang/Object;)I
 
     move-result p0
 
     return p0
-.end method
-
-.method public final getImageInfo()Lvu6;
-    .locals 0
-
-    iget-object p0, p0, Ljd;->c:Lja0;
-
-    return-object p0
-.end method
-
-.method public final getWidth()I
-    .locals 0
-
-    iget-object p0, p0, Ljd;->a:Landroid/media/Image;
-
-    invoke-virtual {p0}, Landroid/media/Image;->getWidth()I
-
-    move-result p0
-
-    return p0
-.end method
-
-.method public final w()[Lly4;
-    .locals 0
-
-    iget-object p0, p0, Ljd;->b:[Lly4;
-
-    return-object p0
 .end method

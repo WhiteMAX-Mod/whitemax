@@ -1,55 +1,72 @@
-.class public final Lxq9;
-.super Lbu3;
+.class public final synthetic Lxq9;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field public X:Lfr8;
+.field public final synthetic a:I
 
-.field public synthetic Y:Ljava/lang/Object;
+.field public final synthetic b:Z
 
-.field public final synthetic Z:Lyq9;
-
-.field public o:Lyq9;
-
-.field public o0:I
+.field public final synthetic c:Landroid/view/View;
 
 
 # direct methods
-.method public constructor <init>(Lyq9;Lbu3;)V
+.method public synthetic constructor <init>(ILandroid/view/View;Z)V
     .locals 0
 
-    iput-object p1, p0, Lxq9;->Z:Lyq9;
+    iput p1, p0, Lxq9;->a:I
 
-    invoke-direct {p0, p2}, Lbu3;-><init>(Lkotlin/coroutines/Continuation;)V
+    iput-boolean p3, p0, Lxq9;->b:Z
+
+    iput-object p2, p0, Lxq9;->c:Landroid/view/View;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 3
+.method public final run()V
+    .locals 1
 
-    iput-object p1, p0, Lxq9;->Y:Ljava/lang/Object;
+    iget v0, p0, Lxq9;->a:I
 
-    iget p1, p0, Lxq9;->o0:I
+    packed-switch v0, :pswitch_data_0
 
-    const/high16 v0, -0x80000000
+    iget-boolean v0, p0, Lxq9;->b:Z
 
-    or-int/2addr p1, v0
+    if-nez v0, :cond_0
 
-    iput p1, p0, Lxq9;->o0:I
+    const/16 v0, 0x8
 
-    const-wide/16 v0, 0x0
+    iget-object p0, p0, Lxq9;->c:Landroid/view/View;
 
-    const/4 p1, 0x0
+    invoke-virtual {p0, v0}, Landroid/view/View;->setVisibility(I)V
 
-    iget-object v2, p0, Lxq9;->Z:Lyq9;
+    :cond_0
+    return-void
 
-    invoke-static {v2, v0, v1, p1, p0}, Lyq9;->a(Lyq9;JLfr8;Lbu3;)Ljava/lang/Object;
+    :pswitch_0
+    iget-boolean v0, p0, Lxq9;->b:Z
 
-    move-result-object p0
+    if-eqz v0, :cond_1
 
-    return-object p0
+    const/4 v0, 0x0
+
+    iget-object p0, p0, Lxq9;->c:Landroid/view/View;
+
+    invoke-virtual {p0, v0}, Landroid/view/View;->setVisibility(I)V
+
+    :cond_1
+    return-void
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

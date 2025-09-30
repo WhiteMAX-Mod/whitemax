@@ -3,63 +3,72 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lx64;
+.implements Les5;
 
 
 # instance fields
 .field public final synthetic a:I
 
-.field public final synthetic b:J
-
-.field public final synthetic c:Z
+.field public final synthetic b:Lpab;
 
 
 # direct methods
-.method public synthetic constructor <init>(IJZ)V
-    .locals 0
+.method public synthetic constructor <init>(Lpab;)V
+    .locals 1
 
-    iput p1, p0, Loab;->a:I
+    .line 1
+    const/4 v0, 0x0
 
-    iput-wide p2, p0, Loab;->b:J
-
-    iput-boolean p4, p0, Loab;->c:Z
+    iput v0, p0, Loab;->a:I
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Loab;->b:Lpab;
+
+    return-void
+.end method
+
+.method public synthetic constructor <init>(Lpab;Lxx8;Ld10;)V
+    .locals 0
+
+    .line 2
+    const/4 p2, 0x1
+
+    iput p2, p0, Loab;->a:I
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Loab;->b:Lpab;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Ljava/lang/Object;
-    .locals 3
+.method public final a()V
+    .locals 1
 
     iget v0, p0, Loab;->a:I
 
+    iget-object p0, p0, Loab;->b:Lpab;
+
     packed-switch v0, :pswitch_data_0
 
-    new-instance v0, Lone/me/profile/screens/changeowner/ChangeOwnerScreen;
+    iget-object p0, p0, Lpab;->B0:Lru/ok/messages/video/widgets/FloatingVideoView;
 
-    iget-wide v1, p0, Loab;->b:J
+    if-eqz p0, :cond_0
 
-    iget-boolean p0, p0, Loab;->c:Z
+    invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
 
-    invoke-direct {v0, v1, v2, p0}, Lone/me/profile/screens/changeowner/ChangeOwnerScreen;-><init>(JZ)V
-
-    return-object v0
+    :cond_0
+    return-void
 
     :pswitch_0
-    new-instance v0, Lone/me/profile/screens/addmembers/AddChatMembersScreen;
+    const/4 v0, 0x1
 
-    iget-wide v1, p0, Loab;->b:J
+    invoke-virtual {p0, v0}, Lpab;->k(Z)V
 
-    iget-boolean p0, p0, Loab;->c:Z
-
-    invoke-direct {v0, v1, v2, p0}, Lone/me/profile/screens/addmembers/AddChatMembersScreen;-><init>(JZ)V
-
-    return-object v0
-
-    nop
+    return-void
 
     :pswitch_data_0
     .packed-switch 0x0

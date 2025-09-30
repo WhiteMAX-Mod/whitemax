@@ -2,39 +2,38 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lj33;
 
+# instance fields
+.field public final a:Lcl7;
 
-# static fields
-.field public static final a:Lz70;
+.field public final b:Lcl7;
 
-.field public static final b:Lz70;
-
-.field public static final c:Lz70;
+.field public final c:Ljava/lang/Object;
 
 
 # direct methods
-.method static synthetic constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(Lcl7;Lcl7;Lr1b;)V
+    .locals 0
 
-    new-instance v0, Lz70;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lz70;->a:Lcl7;
 
-    sput-object v0, Lz70;->a:Lz70;
+    iput-object p2, p0, Lz70;->b:Lcl7;
 
-    new-instance v0, Lz70;
+    new-instance p1, Lb3;
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    const/4 p2, 0x4
 
-    sput-object v0, Lz70;->b:Lz70;
+    invoke-direct {p1, p3, p2, p0}, Lb3;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
 
-    new-instance v0, Lz70;
+    const/4 p2, 0x3
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    invoke-static {p2, p1}, Lcb7;->G(ILzb6;)Lcl7;
 
-    sput-object v0, Lz70;->c:Lz70;
+    move-result-object p1
+
+    iput-object p1, p0, Lz70;->c:Ljava/lang/Object;
 
     return-void
 .end method

@@ -1,76 +1,51 @@
-.class public final synthetic Lif7;
-.super Ljava/lang/Object;
+.class public final Lif7;
+.super Ljx3;
 .source "SourceFile"
-
-# interfaces
-.implements Lx64;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public X:Ljava/util/Iterator;
 
-.field public final synthetic b:J
+.field public synthetic Y:Ljava/lang/Object;
+
+.field public final synthetic Z:Lvz5;
+
+.field public o:Ljava/util/concurrent/ConcurrentHashMap;
+
+.field public r0:I
 
 
 # direct methods
-.method public synthetic constructor <init>(IJ)V
+.method public constructor <init>(Lvz5;Ljx3;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lif7;->Z:Lvz5;
 
-    iput p1, p0, Lif7;->a:I
-
-    iput-wide p2, p0, Lif7;->b:J
+    invoke-direct {p0, p2}, Ljx3;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Ljava/lang/Object;
-    .locals 5
+.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    new-instance v0, Landroidx/fragment/app/FragmentWrapperWidget;
+    iput-object p1, p0, Lif7;->Y:Ljava/lang/Object;
 
-    iget v1, p0, Lif7;->a:I
+    iget p1, p0, Lif7;->r0:I
 
-    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    const/high16 v0, -0x80000000
 
-    move-result-object v1
+    or-int/2addr p1, v0
 
-    new-instance v2, Ldna;
+    iput p1, p0, Lif7;->r0:I
 
-    const-string v3, "ru.ok.tamtam.extra.REQUEST_CODE"
+    iget-object p1, p0, Lif7;->Z:Lvz5;
 
-    invoke-direct {v2, v3, v1}, Ldna;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
-
-    iget-wide v3, p0, Lif7;->b:J
-
-    invoke-static {v3, v4}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    invoke-virtual {p1, p0}, Lvz5;->c(Ljx3;)Ljava/lang/Object;
 
     move-result-object p0
 
-    new-instance v1, Ldna;
-
-    const-string v3, "ru.ok.tamtam.extra.CHAT_ID"
-
-    invoke-direct {v1, v3, p0}, Ldna;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
-
-    filled-new-array {v2, v1}, [Ldna;
-
-    move-result-object p0
-
-    invoke-static {p0}, Lp54;->d([Ldna;)Landroid/os/Bundle;
-
-    move-result-object p0
-
-    const v1, 0x7a3a1dca
-
-    const-class v2, Lru/ok/messages/location/FrgLocationMap;
-
-    const-string v3, "ru.ok.messages.location.FrgLocationMap"
-
-    invoke-direct {v0, v1, v2, v3, p0}, Landroidx/fragment/app/FragmentWrapperWidget;-><init>(ILjava/lang/Class;Ljava/lang/String;Landroid/os/Bundle;)V
-
-    return-object v0
+    return-object p0
 .end method

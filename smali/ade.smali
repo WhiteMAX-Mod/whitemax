@@ -1,114 +1,70 @@
-.class public final synthetic Lade;
-.super Ljava/lang/Object;
+.class public final Lade;
+.super Lt3;
 .source "SourceFile"
-
-# interfaces
-.implements Ljq1;
 
 
 # instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Ljava/util/concurrent/atomic/AtomicReference;
-
-.field public final synthetic c:Ljava/lang/String;
+.field public final a:Ljava/util/concurrent/atomic/AtomicReference;
 
 
 # direct methods
-.method public synthetic constructor <init>(Ljava/util/concurrent/atomic/AtomicReference;Ljava/lang/String;I)V
-    .locals 0
-
-    iput p3, p0, Lade;->a:I
-
-    iput-object p1, p0, Lade;->b:Ljava/util/concurrent/atomic/AtomicReference;
-
-    iput-object p2, p0, Lade;->c:Ljava/lang/String;
+.method public constructor <init>()V
+    .locals 2
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    new-instance v0, Ljava/util/concurrent/atomic/AtomicReference;
+
+    const/4 v1, 0x0
+
+    invoke-direct {v0, v1}, Ljava/util/concurrent/atomic/AtomicReference;-><init>(Ljava/lang/Object;)V
+
+    iput-object v0, p0, Lade;->a:Ljava/util/concurrent/atomic/AtomicReference;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final L(Liq1;)Ljava/lang/String;
-    .locals 1
+.method public final a(Ls3;)Z
+    .locals 0
 
-    iget v0, p0, Lade;->a:I
+    check-cast p1, Lyce;
 
-    packed-switch v0, :pswitch_data_0
+    iget-object p0, p0, Lade;->a:Ljava/util/concurrent/atomic/AtomicReference;
 
-    iget-object v0, p0, Lade;->b:Ljava/util/concurrent/atomic/AtomicReference;
+    invoke-static {p0}, Lkotlinx/coroutines/internal/Concurrent_commonKt;->getValue(Ljava/util/concurrent/atomic/AtomicReference;)Ljava/lang/Object;
 
-    invoke-virtual {v0, p1}, Ljava/util/concurrent/atomic/AtomicReference;->set(Ljava/lang/Object;)V
+    move-result-object p1
 
-    new-instance p1, Ljava/lang/StringBuilder;
+    if-eqz p1, :cond_0
 
-    invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
+    const/4 p0, 0x0
 
-    iget-object p0, p0, Lade;->c:Ljava/lang/String;
+    return p0
 
-    invoke-virtual {p1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    :cond_0
+    sget-object p1, Lzce;->a:Lkotlinx/coroutines/internal/Symbol;
 
-    const-string p0, "-Surface"
+    invoke-static {p0, p1}, Lkotlinx/coroutines/internal/Concurrent_commonKt;->setValue(Ljava/util/concurrent/atomic/AtomicReference;Ljava/lang/Object;)V
 
-    invoke-virtual {p1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    const/4 p0, 0x1
 
-    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    return p0
+.end method
 
-    move-result-object p0
+.method public final b(Ls3;)[Lkotlin/coroutines/Continuation;
+    .locals 0
 
-    return-object p0
+    check-cast p1, Lyce;
 
-    :pswitch_0
-    iget-object v0, p0, Lade;->b:Ljava/util/concurrent/atomic/AtomicReference;
+    iget-object p0, p0, Lade;->a:Ljava/util/concurrent/atomic/AtomicReference;
 
-    invoke-virtual {v0, p1}, Ljava/util/concurrent/atomic/AtomicReference;->set(Ljava/lang/Object;)V
+    const/4 p1, 0x0
 
-    new-instance p1, Ljava/lang/StringBuilder;
+    invoke-static {p0, p1}, Lkotlinx/coroutines/internal/Concurrent_commonKt;->setValue(Ljava/util/concurrent/atomic/AtomicReference;Ljava/lang/Object;)V
 
-    invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
-
-    iget-object p0, p0, Lade;->c:Ljava/lang/String;
-
-    invoke-virtual {p1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string p0, "-status"
-
-    invoke-virtual {p1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
+    sget-object p0, Les;->a:[Lkotlin/coroutines/Continuation;
 
     return-object p0
-
-    :pswitch_1
-    iget-object v0, p0, Lade;->b:Ljava/util/concurrent/atomic/AtomicReference;
-
-    invoke-virtual {v0, p1}, Ljava/util/concurrent/atomic/AtomicReference;->set(Ljava/lang/Object;)V
-
-    new-instance p1, Ljava/lang/StringBuilder;
-
-    invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
-
-    iget-object p0, p0, Lade;->c:Ljava/lang/String;
-
-    invoke-virtual {p1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string p0, "-cancellation"
-
-    invoke-virtual {p1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
 .end method

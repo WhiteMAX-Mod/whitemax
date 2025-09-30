@@ -3,153 +3,94 @@
 .source "SourceFile"
 
 # interfaces
-.implements Landroid/view/MenuItem$OnMenuItemClickListener;
-
-
-# static fields
-.field public static final d:[Ljava/lang/Class;
+.implements Lsdd;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final synthetic a:Lsdd;
 
-.field public b:Ljava/lang/Object;
-
-.field public c:Ljava/lang/Object;
+.field public final synthetic b:Lz13;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
-
-    const-class v0, Landroid/view/MenuItem;
-
-    filled-new-array {v0}, [Ljava/lang/Class;
-
-    move-result-object v0
-
-    sput-object v0, Ldce;->d:[Ljava/lang/Class;
-
-    return-void
-.end method
-
-.method public synthetic constructor <init>()V
-    .locals 1
-
-    .line 1
-    const/4 v0, 0x0
-
-    iput v0, p0, Ldce;->a:I
+.method public constructor <init>(Lz13;Lsdd;)V
+    .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    return-void
-.end method
+    iput-object p1, p0, Ldce;->b:Lz13;
 
-.method public constructor <init>(Lfq8;Landroid/view/MenuItem$OnMenuItemClickListener;)V
-    .locals 1
-
-    const/4 v0, 0x1
-
-    iput v0, p0, Ldce;->a:I
-
-    .line 2
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Ldce;->c:Ljava/lang/Object;
-
-    .line 3
-    iput-object p2, p0, Ldce;->b:Ljava/lang/Object;
+    iput-object p2, p0, Ldce;->a:Lsdd;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onMenuItemClick(Landroid/view/MenuItem;)Z
-    .locals 3
+.method public final c()Z
+    .locals 0
 
-    iget v0, p0, Ldce;->a:I
+    iget-object p0, p0, Ldce;->a:Lsdd;
 
-    packed-switch v0, :pswitch_data_0
-
-    iget-object v0, p0, Ldce;->b:Ljava/lang/Object;
-
-    check-cast v0, Landroid/view/MenuItem$OnMenuItemClickListener;
-
-    iget-object p0, p0, Ldce;->c:Ljava/lang/Object;
-
-    check-cast p0, Lfq8;
-
-    invoke-virtual {p0, p1}, Lije;->K(Landroid/view/MenuItem;)Landroid/view/MenuItem;
-
-    move-result-object p0
-
-    invoke-interface {v0, p0}, Landroid/view/MenuItem$OnMenuItemClickListener;->onMenuItemClick(Landroid/view/MenuItem;)Z
+    invoke-interface {p0}, Lsdd;->c()Z
 
     move-result p0
 
     return p0
+.end method
 
-    :pswitch_0
-    iget-object v0, p0, Ldce;->b:Ljava/lang/Object;
+.method public final e(J)Lqdd;
+    .locals 8
 
-    iget-object p0, p0, Ldce;->c:Ljava/lang/Object;
+    iget-object v0, p0, Ldce;->a:Lsdd;
 
-    check-cast p0, Ljava/lang/reflect/Method;
-
-    :try_start_0
-    invoke-virtual {p0}, Ljava/lang/reflect/Method;->getReturnType()Ljava/lang/Class;
-
-    move-result-object v1
-
-    sget-object v2, Ljava/lang/Boolean;->TYPE:Ljava/lang/Class;
-
-    if-ne v1, v2, :cond_0
-
-    filled-new-array {p1}, [Ljava/lang/Object;
+    invoke-interface {v0, p1, p2}, Lsdd;->e(J)Lqdd;
 
     move-result-object p1
 
-    invoke-virtual {p0, v0, p1}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
+    new-instance p2, Lqdd;
 
-    move-result-object p0
+    new-instance v0, Lwdd;
 
-    check-cast p0, Ljava/lang/Boolean;
+    iget-object v1, p1, Lqdd;->a:Lwdd;
 
-    invoke-virtual {p0}, Ljava/lang/Boolean;->booleanValue()Z
+    iget-wide v2, v1, Lwdd;->a:J
 
-    move-result p0
+    iget-wide v4, v1, Lwdd;->b:J
 
-    goto :goto_0
+    iget-object p0, p0, Ldce;->b:Lz13;
 
-    :cond_0
-    filled-new-array {p1}, [Ljava/lang/Object;
+    iget-wide v6, p0, Lz13;->b:J
 
-    move-result-object p1
+    add-long/2addr v4, v6
 
-    invoke-virtual {p0, v0, p1}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+    invoke-direct {v0, v2, v3, v4, v5}, Lwdd;-><init>(JJ)V
 
-    const/4 p0, 0x1
+    new-instance p0, Lwdd;
 
-    :goto_0
-    return p0
+    iget-object p1, p1, Lqdd;->b:Lwdd;
 
-    :catch_0
-    move-exception p0
+    iget-wide v1, p1, Lwdd;->a:J
 
-    new-instance p1, Ljava/lang/RuntimeException;
+    iget-wide v3, p1, Lwdd;->b:J
 
-    invoke-direct {p1, p0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V
+    add-long/2addr v3, v6
 
-    throw p1
+    invoke-direct {p0, v1, v2, v3, v4}, Lwdd;-><init>(JJ)V
 
-    nop
+    invoke-direct {p2, v0, p0}, Lqdd;-><init>(Lwdd;Lwdd;)V
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-object p2
+.end method
+
+.method public final f()J
+    .locals 2
+
+    iget-object p0, p0, Ldce;->a:Lsdd;
+
+    invoke-interface {p0}, Lsdd;->f()J
+
+    move-result-wide v0
+
+    return-wide v0
 .end method

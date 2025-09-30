@@ -1,193 +1,175 @@
 .class public final Lev8;
-.super Lu2;
+.super Lure;
 .source "SourceFile"
+
+# interfaces
+.implements Lpc6;
 
 
 # instance fields
-.field public final synthetic c:I
+.field public final synthetic X:Lone/me/members/list/MembersListWidget;
 
-.field public final synthetic o:Lfv8;
+.field public final synthetic Y:J
+
+.field public final synthetic Z:Landroid/view/View;
 
 
 # direct methods
-.method public constructor <init>(Lfv8;I)V
+.method public constructor <init>(Lone/me/members/list/MembersListWidget;JLandroid/view/View;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    iput p2, p0, Lev8;->c:I
+    iput-object p1, p0, Lev8;->X:Lone/me/members/list/MembersListWidget;
 
-    packed-switch p2, :pswitch_data_0
+    iput-wide p2, p0, Lev8;->Y:J
 
-    iput-object p1, p0, Lev8;->o:Lfv8;
+    iput-object p4, p0, Lev8;->Z:Landroid/view/View;
 
-    const/16 p1, 0x9
+    const/4 p1, 0x2
 
-    sget-object p2, Lcv8;->a:Lcv8;
-
-    invoke-direct {p0, p1, p2}, Lu2;-><init>(ILjava/lang/Object;)V
+    invoke-direct {p0, p1, p5}, Lure;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
-
-    :pswitch_0
-    sget-object p2, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
-
-    iput-object p1, p0, Lev8;->o:Lfv8;
-
-    const/16 p1, 0x9
-
-    invoke-direct {p0, p1, p2}, Lu2;-><init>(ILjava/lang/Object;)V
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x1
-        :pswitch_0
-    .end packed-switch
 .end method
 
 
 # virtual methods
-.method public final x0(Ljava/lang/Object;Ljava/lang/Object;)V
-    .locals 2
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    iget v0, p0, Lev8;->c:I
+    check-cast p1, Ly04;
 
-    packed-switch v0, :pswitch_data_0
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    invoke-static {p1, p2}, Lxq7;->d(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-virtual {p0, p1, p2}, Lev8;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    move-result v0
+    move-result-object p0
 
-    if-nez v0, :cond_1
+    check-cast p0, Lev8;
 
-    check-cast p2, Ljava/lang/Boolean;
+    sget-object p1, Lylf;->a:Lylf;
 
-    invoke-virtual {p2}, Ljava/lang/Boolean;->booleanValue()Z
+    invoke-virtual {p0, p1}, Lev8;->o(Ljava/lang/Object;)Ljava/lang/Object;
 
-    move-result p2
+    return-object p1
+.end method
 
-    check-cast p1, Ljava/lang/Boolean;
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 6
 
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    new-instance v0, Lev8;
 
-    iget-object p0, p0, Lev8;->o:Lfv8;
+    iget-wide v2, p0, Lev8;->Y:J
 
-    iget-object p1, p0, Lfv8;->C0:Landroid/graphics/Paint;
+    iget-object v4, p0, Lev8;->Z:Landroid/view/View;
 
-    if-eqz p2, :cond_0
+    iget-object v1, p0, Lev8;->X:Lone/me/members/list/MembersListWidget;
 
-    invoke-static {}, Lgk4;->d()Landroid/content/res/Resources;
+    move-object v5, p2
 
-    move-result-object p2
+    invoke-direct/range {v0 .. v5}, Lev8;-><init>(Lone/me/members/list/MembersListWidget;JLandroid/view/View;Lkotlin/coroutines/Continuation;)V
 
-    invoke-virtual {p2}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+    return-object v0
+.end method
 
-    move-result-object p2
+.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 6
 
-    iget p2, p2, Landroid/util/DisplayMetrics;->density:F
+    invoke-static {p1}, Lqe5;->V(Ljava/lang/Object;)V
 
-    const/high16 v0, 0x40800000    # 4.0f
+    sget-object p1, Lone/me/members/list/MembersListWidget;->C0:[Lxi7;
 
-    :goto_0
-    mul-float/2addr p2, v0
+    iget-object p1, p0, Lev8;->X:Lone/me/members/list/MembersListWidget;
 
-    goto :goto_1
+    invoke-virtual {p1}, Lone/me/members/list/MembersListWidget;->A0()Lou8;
 
-    :cond_0
-    invoke-static {}, Lgk4;->d()Landroid/content/res/Resources;
+    move-result-object v0
 
-    move-result-object p2
+    iget-object v0, v0, Lou8;->b:Lbc6;
 
-    invoke-virtual {p2}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+    iget-wide v1, p0, Lev8;->Y:J
 
-    move-result-object p2
+    invoke-static {v1, v2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
-    iget p2, p2, Landroid/util/DisplayMetrics;->density:F
+    move-result-object v3
 
-    const/high16 v0, 0x40000000    # 2.0f
+    invoke-interface {v0, v3}, Lbc6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/util/List;
+
+    invoke-virtual {p1}, Lone/me/members/list/MembersListWidget;->y0()Ldu8;
+
+    move-result-object v3
+
+    iget-boolean v3, v3, Ldu8;->c:Z
+
+    sget-object v4, Lylf;->a:Lylf;
+
+    if-eqz v3, :cond_1
+
+    invoke-interface {v0}, Ljava/util/List;->isEmpty()Z
+
+    move-result v3
+
+    if-eqz v3, :cond_0
 
     goto :goto_0
 
-    :goto_1
-    invoke-virtual {p1, p2}, Landroid/graphics/Paint;->setStrokeWidth(F)V
+    :cond_0
+    new-instance v3, Ljava/lang/Long;
 
-    invoke-virtual {p0}, Landroid/view/View;->requestLayout()V
+    invoke-direct {v3, v1, v2}, Ljava/lang/Long;-><init>(J)V
 
-    invoke-virtual {p0}, Landroid/view/View;->invalidate()V
+    iget-object v1, p1, Lone/me/members/list/MembersListWidget;->Z:Lfr;
+
+    sget-object v2, Lone/me/members/list/MembersListWidget;->C0:[Lxi7;
+
+    const/4 v5, 0x2
+
+    aget-object v2, v2, v5
+
+    invoke-virtual {v1, p1, v3}, Lfr;->b(Lone/me/sdk/arch/Widget;Ljava/lang/Object;)V
+
+    invoke-static {v5}, Luyg;->a(I)Lrw3;
+
+    move-result-object v1
+
+    invoke-interface {v1, v0}, Lrw3;->x(Ljava/util/Collection;)Lrw3;
+
+    move-result-object v0
+
+    iget-object p0, p0, Lev8;->Z:Landroid/view/View;
+
+    invoke-interface {v0, p0}, Lrw3;->N(Landroid/view/View;)Lrw3;
+
+    move-result-object p0
+
+    invoke-static {}, Lvo4;->d()Landroid/content/res/Resources;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object v0
+
+    iget v0, v0, Landroid/util/DisplayMetrics;->density:F
+
+    const/high16 v1, 0x41400000    # 12.0f
+
+    mul-float/2addr v0, v1
+
+    invoke-interface {p0, v0}, Lrw3;->J(F)Lrw3;
+
+    move-result-object p0
+
+    invoke-interface {p0}, Lrw3;->build()Lsw3;
+
+    move-result-object p0
+
+    invoke-interface {p0, p1}, Lsw3;->u(Lone/me/sdk/arch/Widget;)V
 
     :cond_1
-    return-void
-
-    :pswitch_0
-    check-cast p2, Lcv8;
-
-    check-cast p1, Lcv8;
-
-    iget-object p0, p0, Lev8;->o:Lfv8;
-
-    const/4 p1, 0x0
-
-    iput-object p1, p0, Lfv8;->o:Landroid/text/Layout;
-
-    iput-object p1, p0, Lfv8;->o0:Landroid/text/Layout;
-
-    iput-object p1, p0, Lfv8;->p0:Landroid/text/Layout;
-
-    iput-object p1, p0, Lfv8;->q0:Landroid/text/Layout;
-
-    iget-object p2, p0, Lfv8;->r0:Ljava/lang/Object;
-
-    invoke-interface {p2}, Lje7;->a()Z
-
-    move-result v0
-
-    const/16 v1, 0x8
-
-    if-eqz v0, :cond_2
-
-    invoke-interface {p2}, Lje7;->getValue()Ljava/lang/Object;
-
-    move-result-object p2
-
-    check-cast p2, Lj3a;
-
-    invoke-virtual {p2, v1}, Landroid/view/View;->setVisibility(I)V
-
-    :cond_2
-    iput-object p1, p0, Lfv8;->v0:Landroid/text/Layout;
-
-    iget-object p2, p0, Lfv8;->y0:Ljava/lang/Object;
-
-    invoke-interface {p2}, Lje7;->a()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_3
-
-    invoke-interface {p2}, Lje7;->getValue()Ljava/lang/Object;
-
-    move-result-object p2
-
-    check-cast p2, Lone/me/sdk/uikit/common/views/OneMeDraweeView;
-
-    invoke-virtual {p2, v1}, Landroid/view/View;->setVisibility(I)V
-
-    :cond_3
-    iput-object p1, p0, Lfv8;->t0:Landroid/text/Layout;
-
-    iput-object p1, p0, Lfv8;->s0:Landroid/text/Layout;
-
-    invoke-virtual {p0}, Landroid/view/View;->requestLayout()V
-
-    invoke-virtual {p0}, Landroid/view/View;->invalidate()V
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    :goto_0
+    return-object v4
 .end method

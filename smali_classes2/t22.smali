@@ -1,107 +1,197 @@
 .class public final Lt22;
-.super Lqde;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Ll66;
+.implements Lu22;
 
 
 # instance fields
-.field public synthetic X:Ljava/lang/Object;
+.field public final X:I
 
-.field public final synthetic Y:Lone/me/profile/screens/changeowner/ChangeOwnerScreen;
+.field public final Y:J
+
+.field public final a:J
+
+.field public final b:Lfge;
+
+.field public final c:Lu2f;
+
+.field public final o:Ljava/lang/Integer;
 
 
 # direct methods
-.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/profile/screens/changeowner/ChangeOwnerScreen;)V
+.method public constructor <init>(JLfge;)V
     .locals 0
 
-    iput-object p2, p0, Lt22;->Y:Lone/me/profile/screens/changeowner/ChangeOwnerScreen;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 p2, 0x2
+    iput-wide p1, p0, Lt22;->a:J
 
-    invoke-direct {p0, p2, p1}, Lqde;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-object p3, p0, Lt22;->b:Lfge;
+
+    iget-object p1, p3, Lfge;->b:Lu2f;
+
+    iput-object p1, p0, Lt22;->c:Lu2f;
+
+    iget-object p1, p3, Lfge;->o:Ljava/lang/Integer;
+
+    iput-object p1, p0, Lt22;->o:Ljava/lang/Integer;
+
+    iget p1, p3, Lfge;->s0:I
+
+    iput p1, p0, Lt22;->X:I
+
+    iget-wide p1, p3, Lfge;->t0:J
+
+    iput-wide p1, p0, Lt22;->Y:J
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 7
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    const/4 v0, 0x1
 
-    invoke-virtual {p0, p1, p2}, Lt22;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    if-ne p0, p1, :cond_0
 
-    move-result-object p0
+    return v0
 
-    check-cast p0, Lt22;
+    :cond_0
+    instance-of v1, p1, Lt22;
 
-    sget-object p1, Le5f;->a:Le5f;
+    const/4 v2, 0x0
 
-    invoke-virtual {p0, p1}, Lt22;->o(Ljava/lang/Object;)Ljava/lang/Object;
+    if-nez v1, :cond_1
 
-    return-object p1
-.end method
+    return v2
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 1
+    :cond_1
+    check-cast p1, Lt22;
 
-    new-instance v0, Lt22;
+    iget-wide v3, p0, Lt22;->a:J
 
-    iget-object p0, p0, Lt22;->Y:Lone/me/profile/screens/changeowner/ChangeOwnerScreen;
+    iget-wide v5, p1, Lt22;->a:J
 
-    invoke-direct {v0, p2, p0}, Lt22;-><init>(Lkotlin/coroutines/Continuation;Lone/me/profile/screens/changeowner/ChangeOwnerScreen;)V
+    cmp-long v1, v3, v5
 
-    iput-object p1, v0, Lt22;->X:Ljava/lang/Object;
+    if-eqz v1, :cond_2
 
-    return-object v0
-.end method
+    return v2
 
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+    :cond_2
+    iget-object p0, p0, Lt22;->b:Lfge;
 
-    invoke-static {p1}, Lsgg;->Z(Ljava/lang/Object;)V
+    iget-object p1, p1, Lt22;->b:Lfge;
 
-    iget-object p1, p0, Lt22;->X:Ljava/lang/Object;
-
-    check-cast p1, Lu22;
-
-    if-eqz p1, :cond_0
-
-    new-instance v0, Lmfa;
-
-    iget-object p0, p0, Lt22;->Y:Lone/me/profile/screens/changeowner/ChangeOwnerScreen;
-
-    invoke-direct {v0, p0}, Lmfa;-><init>(Lone/me/sdk/arch/Widget;)V
-
-    iget-object p0, p1, Lu22;->a:Lhoe;
-
-    invoke-virtual {v0, p0}, Lmfa;->g(Lmoe;)V
-
-    iget-object p0, p1, Lu22;->b:Ljava/lang/Integer;
-
-    new-instance p1, Laga;
-
-    invoke-virtual {p0}, Ljava/lang/Integer;->intValue()I
+    invoke-static {p0, p1}, Lvyg;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p0
 
-    invoke-direct {p1, p0}, Laga;-><init>(I)V
+    if-nez p0, :cond_3
 
-    invoke-virtual {v0, p1}, Lmfa;->e(Lega;)V
+    return v2
 
-    invoke-virtual {v0}, Lmfa;->i()Llfa;
+    :cond_3
+    return v0
+.end method
 
-    sget-object p0, Le5f;->a:Le5f;
+.method public final getItemId()J
+    .locals 2
+
+    iget-wide v0, p0, Lt22;->Y:J
+
+    return-wide v0
+.end method
+
+.method public final getName()Lu2f;
+    .locals 0
+
+    iget-object p0, p0, Lt22;->c:Lu2f;
 
     return-object p0
+.end method
+
+.method public final hashCode()I
+    .locals 2
+
+    iget-wide v0, p0, Lt22;->a:J
+
+    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
+
+    move-result v0
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget-object p0, p0, Lt22;->b:Lfge;
+
+    invoke-virtual {p0}, Lfge;->hashCode()I
+
+    move-result p0
+
+    add-int/2addr p0, v0
+
+    return p0
+.end method
+
+.method public final m()I
+    .locals 0
+
+    iget p0, p0, Lt22;->X:I
+
+    return p0
+.end method
+
+.method public final s()Z
+    .locals 1
+
+    iget-object p0, p0, Lt22;->b:Lfge;
+
+    iget p0, p0, Lfge;->Y:I
+
+    const/4 v0, 0x1
+
+    if-ne p0, v0, :cond_0
+
+    return v0
 
     :cond_0
-    new-instance p0, Lkotlin/NoWhenBranchMatchedException;
+    const/4 p0, 0x0
 
-    invoke-direct {p0}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
+    return p0
+.end method
 
-    throw p0
+.method public final toString()Ljava/lang/String;
+    .locals 3
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "StickerSet(setId="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-wide v1, p0, Lt22;->a:J
+
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    const-string v1, ", model="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object p0, p0, Lt22;->b:Lfge;
+
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string p0, ")"
+
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    return-object p0
 .end method

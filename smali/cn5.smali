@@ -1,24 +1,15 @@
-.class public final Lcn5;
-.super Lkotlinx/coroutines/internal/ScopeCoroutine;
+.class public abstract Lcn5;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# virtual methods
-.method public final childCancelled(Ljava/lang/Throwable;)Z
-    .locals 1
+# direct methods
+.method public static a(Landroid/content/Context;)[Ljava/io/File;
+    .locals 0
 
-    instance-of v0, p1, Lkotlinx/coroutines/flow/internal/ChildCancelledException;
+    invoke-virtual {p0}, Landroid/content/Context;->getExternalMediaDirs()[Ljava/io/File;
 
-    if-eqz v0, :cond_0
+    move-result-object p0
 
-    const/4 p0, 0x1
-
-    return p0
-
-    :cond_0
-    invoke-virtual {p0, p1}, Lx87;->cancelImpl$kotlinx_coroutines_core(Ljava/lang/Object;)Z
-
-    move-result p0
-
-    return p0
+    return-object p0
 .end method

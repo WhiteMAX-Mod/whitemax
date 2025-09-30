@@ -3,98 +3,341 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lzm5;
+.implements Ln0d;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public volatile a:Z
 
-.field public final synthetic b:Lzm5;
+.field public volatile b:Lq64;
 
-.field public final synthetic c:Lka6;
+.field public final c:Ljava/util/concurrent/ConcurrentLinkedQueue;
+
+.field public final d:Ljava/util/concurrent/atomic/AtomicInteger;
+
+.field public final e:Ljava/util/concurrent/atomic/AtomicInteger;
+
+.field public final f:Lf6f;
+
+.field public volatile g:Lgzg;
+
+.field public volatile h:Z
 
 
 # direct methods
-.method public synthetic constructor <init>(Lzm5;Lka6;I)V
-    .locals 0
-
-    iput p3, p0, Lu96;->a:I
-
-    iput-object p1, p0, Lu96;->b:Lzm5;
-
-    iput-object p2, p0, Lu96;->c:Lka6;
+.method public constructor <init>()V
+    .locals 1
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    new-instance v0, Ljava/util/concurrent/atomic/AtomicInteger;
+
+    invoke-direct {v0}, Ljava/util/concurrent/atomic/AtomicInteger;-><init>()V
+
+    iput-object v0, p0, Lu96;->d:Ljava/util/concurrent/atomic/AtomicInteger;
+
+    new-instance v0, Ljava/util/concurrent/atomic/AtomicLong;
+
+    invoke-direct {v0}, Ljava/util/concurrent/atomic/AtomicLong;-><init>()V
+
+    new-instance v0, Ljava/util/concurrent/atomic/AtomicInteger;
+
+    invoke-direct {v0}, Ljava/util/concurrent/atomic/AtomicInteger;-><init>()V
+
+    iput-object v0, p0, Lu96;->e:Ljava/util/concurrent/atomic/AtomicInteger;
+
+    new-instance v0, Ljava/util/concurrent/ConcurrentLinkedQueue;
+
+    invoke-direct {v0}, Ljava/util/concurrent/ConcurrentLinkedQueue;-><init>()V
+
+    iput-object v0, p0, Lu96;->c:Ljava/util/concurrent/ConcurrentLinkedQueue;
+
+    new-instance v0, Lf6f;
+
+    invoke-direct {v0}, Lf6f;-><init>()V
+
+    iput-object v0, p0, Lu96;->f:Lf6f;
+
+    return-void
+.end method
+
+.method public static b(Lgzg;)V
+    .locals 1
+
+    if-eqz p0, :cond_0
+
+    iget-object v0, p0, Lgzg;->a:Ljava/lang/Object;
+
+    monitor-enter v0
+
+    :try_start_0
+    iget-object p0, p0, Lgzg;->a:Ljava/lang/Object;
+
+    invoke-virtual {p0}, Ljava/lang/Object;->notify()V
+
+    monitor-exit v0
+
+    return-void
+
+    :catchall_0
+    move-exception p0
+
+    monitor-exit v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    throw p0
+
+    :cond_0
     return-void
 .end method
 
 
 # virtual methods
-.method public final d(Lbn5;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+.method public final a(Lq64;[BI)V
+    .locals 0
+
+    invoke-static {p2}, Ljava/nio/ByteBuffer;->wrap([B)Ljava/nio/ByteBuffer;
+
+    move-result-object p1
+
+    invoke-virtual {p1}, Ljava/nio/ByteBuffer;->get()B
+
+    invoke-virtual {p1}, Ljava/nio/ByteBuffer;->get()B
+
+    move-result p2
+
+    invoke-virtual {p1}, Ljava/nio/ByteBuffer;->getShort()S
+
+    const/4 p1, 0x1
+
+    if-ne p2, p1, :cond_0
+
+    iput-boolean p1, p0, Lu96;->h:Z
+
+    :cond_0
+    return-void
+.end method
+
+.method public final declared-synchronized c(Z)V
     .locals 3
 
-    iget v0, p0, Lu96;->a:I
+    monitor-enter p0
 
-    packed-switch v0, :pswitch_data_0
+    :try_start_0
+    iget-boolean v0, p0, Lu96;->a:Z
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
-    new-instance v0, Lt96;
+    if-nez v0, :cond_0
 
-    iget-object v1, p0, Lu96;->c:Lka6;
+    monitor-exit p0
 
-    const/4 v2, 0x1
+    return-void
 
-    invoke-direct {v0, p1, v1, v2}, Lt96;-><init>(Lbn5;Lka6;I)V
+    :cond_0
+    const/4 v0, 0x0
 
-    iget-object p0, p0, Lu96;->b:Lzm5;
+    :try_start_1
+    iput-boolean v0, p0, Lu96;->a:Z
 
-    invoke-interface {p0, v0, p2}, Lzm5;->d(Lbn5;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    iget-object v0, p0, Lu96;->g:Lgzg;
 
-    move-result-object p0
+    if-eqz v0, :cond_1
 
-    sget-object p1, Lpx3;->a:Lpx3;
+    const/4 v1, 0x1
 
-    if-ne p0, p1, :cond_0
+    iput-boolean v1, v0, Lgzg;->o:Z
+
+    if-eqz p1, :cond_1
+
+    iget-object p1, v0, Lgzg;->b:Ljava/lang/Object;
+
+    monitor-enter p1
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_1
+
+    const/4 v1, 0x0
+
+    :try_start_2
+    iput-object v1, v0, Lgzg;->c:Lq64;
+
+    monitor-exit p1
 
     goto :goto_0
 
-    :cond_0
-    sget-object p0, Le5f;->a:Le5f;
+    :catchall_0
+    move-exception v0
 
+    monitor-exit p1
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_0
+
+    :try_start_3
+    throw v0
+
+    :catchall_1
+    move-exception p1
+
+    goto :goto_2
+
+    :cond_1
     :goto_0
-    return-object p0
+    invoke-static {v0}, Lu96;->b(Lgzg;)V
 
-    :pswitch_0
-    new-instance v0, Lt96;
+    iget-object p1, p0, Lu96;->c:Ljava/util/concurrent/ConcurrentLinkedQueue;
 
-    iget-object v1, p0, Lu96;->c:Lka6;
+    invoke-virtual {p1}, Ljava/util/concurrent/ConcurrentLinkedQueue;->iterator()Ljava/util/Iterator;
 
-    const/4 v2, 0x0
+    move-result-object p1
 
-    invoke-direct {v0, p1, v1, v2}, Lt96;-><init>(Lbn5;Lka6;I)V
+    :goto_1
+    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
 
-    iget-object p0, p0, Lu96;->b:Lzm5;
+    move-result v0
 
-    invoke-interface {p0, v0, p2}, Lzm5;->d(Lbn5;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    if-eqz v0, :cond_2
 
-    move-result-object p0
+    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    sget-object p1, Lpx3;->a:Lpx3;
+    move-result-object v0
 
-    if-ne p0, p1, :cond_1
+    check-cast v0, Lorg/webrtc/EncodedImage;
+
+    iget-object v1, p0, Lu96;->d:Ljava/util/concurrent/atomic/AtomicInteger;
+
+    iget-object v2, v0, Lorg/webrtc/EncodedImage;->buffer:Ljava/nio/ByteBuffer;
+
+    invoke-virtual {v2}, Ljava/nio/Buffer;->remaining()I
+
+    move-result v2
+
+    neg-int v2, v2
+
+    invoke-virtual {v1, v2}, Ljava/util/concurrent/atomic/AtomicInteger;->addAndGet(I)I
+
+    invoke-virtual {v0}, Lorg/webrtc/EncodedImage;->release()V
+
+    invoke-interface {p1}, Ljava/util/Iterator;->remove()V
+    :try_end_3
+    .catchall {:try_start_3 .. :try_end_3} :catchall_1
 
     goto :goto_1
 
+    :cond_2
+    monitor-exit p0
+
+    return-void
+
+    :goto_2
+    :try_start_4
+    monitor-exit p0
+    :try_end_4
+    .catchall {:try_start_4 .. :try_end_4} :catchall_1
+
+    throw p1
+.end method
+
+.method public final declared-synchronized d(Lq64;)V
+    .locals 1
+
+    monitor-enter p0
+
+    :try_start_0
+    iget-object v0, p0, Lu96;->b:Lq64;
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Lu96;->b:Lq64;
+
+    iget-object v0, v0, Lq64;->e:Ljava/util/concurrent/CopyOnWriteArrayList;
+
+    invoke-virtual {v0, p0}, Ljava/util/concurrent/CopyOnWriteArrayList;->remove(Ljava/lang/Object;)Z
+
+    iget-object v0, p0, Lu96;->b:Lq64;
+
+    invoke-virtual {v0, p0}, Lq64;->c(Ln0d;)V
+
+    goto :goto_0
+
+    :catchall_0
+    move-exception p1
+
+    goto :goto_1
+
+    :cond_0
+    :goto_0
+    const/4 v0, 0x1
+
+    invoke-virtual {p0, v0}, Lu96;->c(Z)V
+
+    iput-object p1, p0, Lu96;->b:Lq64;
+
+    iget-object p1, p0, Lu96;->b:Lq64;
+
+    if-eqz p1, :cond_1
+
+    iget-object p1, p0, Lu96;->b:Lq64;
+
+    iget-object p1, p1, Lq64;->e:Ljava/util/concurrent/CopyOnWriteArrayList;
+
+    invoke-virtual {p1, p0}, Ljava/util/concurrent/CopyOnWriteArrayList;->add(Ljava/lang/Object;)Z
+
+    iget-object p1, p0, Lu96;->b:Lq64;
+
+    invoke-virtual {p1, p0}, Lq64;->a(Ln0d;)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
     :cond_1
-    sget-object p0, Le5f;->a:Le5f;
+    monitor-exit p0
+
+    return-void
 
     :goto_1
-    return-object p0
+    :try_start_1
+    monitor-exit p0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    nop
+    throw p1
+.end method
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+.method public final declared-synchronized e()V
+    .locals 2
+
+    monitor-enter p0
+
+    const/4 v0, 0x1
+
+    :try_start_0
+    invoke-virtual {p0, v0}, Lu96;->c(Z)V
+
+    iput-boolean v0, p0, Lu96;->a:Z
+
+    new-instance v0, Lgzg;
+
+    iget-object v1, p0, Lu96;->b:Lq64;
+
+    invoke-direct {v0, p0, v1}, Lgzg;-><init>(Lu96;Lq64;)V
+
+    iput-object v0, p0, Lu96;->g:Lgzg;
+
+    invoke-virtual {v0}, Ljava/lang/Thread;->start()V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    monitor-exit p0
+
+    return-void
+
+    :catchall_0
+    move-exception v0
+
+    :try_start_1
+    monitor-exit p0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    throw v0
 .end method

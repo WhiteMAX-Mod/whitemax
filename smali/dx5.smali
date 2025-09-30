@@ -1,94 +1,79 @@
 .class public final Ldx5;
-.super Lqde;
+.super Lrv5;
 .source "SourceFile"
-
-# interfaces
-.implements Ll66;
 
 
 # instance fields
-.field public synthetic X:Ljava/lang/Object;
+.field public final b:Lv5d;
 
-.field public final synthetic Y:Lone/me/folders/pickerfolders/FoldersPickerScreen;
+.field public final c:J
 
 
 # direct methods
-.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/folders/pickerfolders/FoldersPickerScreen;)V
-    .locals 0
+.method public constructor <init>(JLv5d;)V
+    .locals 1
 
-    iput-object p2, p0, Ldx5;->Y:Lone/me/folders/pickerfolders/FoldersPickerScreen;
+    sget-object v0, Ljava/util/concurrent/TimeUnit;->SECONDS:Ljava/util/concurrent/TimeUnit;
 
-    const/4 p2, 0x2
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0, p2, p1}, Lqde;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-wide p1, p0, Ldx5;->c:J
+
+    iput-object p3, p0, Ldx5;->b:Lv5d;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final f(Lbx5;)V
+    .locals 3
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    new-instance v0, Lcx5;
 
-    invoke-virtual {p0, p1, p2}, Ldx5;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    invoke-direct {v0, p1}, Lcx5;-><init>(Ljne;)V
 
-    move-result-object p0
+    invoke-interface {p1, v0}, Ljne;->d(Llne;)V
 
-    check-cast p0, Ldx5;
+    iget-wide v1, p0, Ldx5;->c:J
 
-    sget-object p1, Le5f;->a:Le5f;
+    sget-object p1, Ljava/util/concurrent/TimeUnit;->SECONDS:Ljava/util/concurrent/TimeUnit;
 
-    invoke-virtual {p0, p1}, Ldx5;->o(Ljava/lang/Object;)Ljava/lang/Object;
+    iget-object p0, p0, Ldx5;->b:Lv5d;
 
-    return-object p1
-.end method
-
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 1
-
-    new-instance v0, Ldx5;
-
-    iget-object p0, p0, Ldx5;->Y:Lone/me/folders/pickerfolders/FoldersPickerScreen;
-
-    invoke-direct {v0, p2, p0}, Ldx5;-><init>(Lkotlin/coroutines/Continuation;Lone/me/folders/pickerfolders/FoldersPickerScreen;)V
-
-    iput-object p1, v0, Ldx5;->X:Ljava/lang/Object;
-
-    return-object v0
-.end method
-
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 2
-
-    invoke-static {p1}, Lsgg;->Z(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Ldx5;->X:Ljava/lang/Object;
-
-    check-cast p1, Ljava/util/Set;
-
-    sget-object p1, Lone/me/folders/pickerfolders/FoldersPickerScreen;->o0:[Lbc7;
-
-    iget-object p0, p0, Ldx5;->Y:Lone/me/folders/pickerfolders/FoldersPickerScreen;
-
-    iget-object p1, p0, Lone/me/folders/pickerfolders/FoldersPickerScreen;->X:Lo5c;
-
-    sget-object v0, Lone/me/folders/pickerfolders/FoldersPickerScreen;->o0:[Lbc7;
-
-    const/4 v1, 0x1
-
-    aget-object v0, v0, v1
-
-    invoke-interface {p1, p0, v0}, Lo5c;->M(Ljava/lang/Object;Lbc7;)Ljava/lang/Object;
+    invoke-virtual {p0, v0, v1, v2, p1}, Lv5d;->c(Ljava/lang/Runnable;JLjava/util/concurrent/TimeUnit;)Loq4;
 
     move-result-object p0
 
-    check-cast p0, Landroidx/recyclerview/widget/RecyclerView;
+    :cond_0
+    const/4 p1, 0x0
 
-    invoke-virtual {p0}, Landroid/view/View;->invalidate()V
+    invoke-virtual {v0, p1, p0}, Ljava/util/concurrent/atomic/AtomicReference;->compareAndSet(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    sget-object p0, Le5f;->a:Le5f;
+    move-result p1
 
-    return-object p0
+    if-eqz p1, :cond_1
+
+    goto :goto_0
+
+    :cond_1
+    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
+
+    move-result-object p1
+
+    if-eqz p1, :cond_0
+
+    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
+
+    move-result-object p1
+
+    sget-object v0, Lsq4;->a:Lsq4;
+
+    if-ne p1, v0, :cond_2
+
+    invoke-interface {p0}, Loq4;->e()V
+
+    :cond_2
+    :goto_0
+    return-void
 .end method

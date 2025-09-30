@@ -1,221 +1,269 @@
 .class public final Llcg;
-.super Landroid/os/Handler;
+.super Lure;
 .source "SourceFile"
+
+# interfaces
+.implements Lpc6;
 
 
 # instance fields
-.field public final a:Ls1c;
+.field public X:I
 
-.field public final b:Ljava/lang/String;
+.field public final synthetic Y:[B
 
-.field public final c:Ltl8;
-
-.field public d:D
-
-.field public e:D
-
-.field public f:D
-
-.field public g:J
-
-.field public h:J
-
-.field public i:D
+.field public final synthetic Z:Lmcg;
 
 
 # direct methods
-.method public constructor <init>(Landroid/os/Looper;Ls1c;Ljava/lang/String;Ltl8;)V
+.method public constructor <init>(Lmcg;Lkotlin/coroutines/Continuation;[B)V
     .locals 0
 
-    invoke-direct {p0, p1}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
+    iput-object p3, p0, Llcg;->Y:[B
 
-    iput-object p2, p0, Llcg;->a:Ls1c;
+    iput-object p1, p0, Llcg;->Z:Lmcg;
 
-    iput-object p3, p0, Llcg;->b:Ljava/lang/String;
+    const/4 p1, 0x2
 
-    iput-object p4, p0, Llcg;->c:Ltl8;
+    invoke-direct {p0, p1, p2}, Lure;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(J)V
-    .locals 10
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
+    check-cast p1, Ly04;
 
-    move-result-wide v0
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    iget-wide v2, p0, Llcg;->e:D
+    invoke-virtual {p0, p1, p2}, Llcg;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    const-wide/high16 v4, 0x3ff0000000000000L    # 1.0
+    move-result-object p0
 
-    add-double/2addr v2, v4
+    check-cast p0, Llcg;
 
-    iput-wide v2, p0, Llcg;->e:D
+    sget-object p1, Lylf;->a:Lylf;
 
-    sub-long p1, v0, p1
+    invoke-virtual {p0, p1}, Llcg;->o(Ljava/lang/Object;)Ljava/lang/Object;
 
-    iget-wide v4, p0, Llcg;->d:D
+    move-result-object p0
 
-    long-to-double p1, p1
-
-    add-double/2addr v4, p1
-
-    iput-wide v4, p0, Llcg;->d:D
-
-    div-double/2addr v4, v2
-
-    iget-wide p1, p0, Llcg;->i:D
-
-    const-wide/16 v2, 0x0
-
-    cmpl-double v6, p1, v2
-
-    if-lez v6, :cond_0
-
-    iget-wide v6, p0, Llcg;->f:D
-
-    div-double/2addr v6, p1
-
-    invoke-static {v6, v7}, Ljava/lang/Double;->valueOf(D)Ljava/lang/Double;
-
-    move-result-object p1
-
-    goto :goto_0
-
-    :cond_0
-    const/4 p1, 0x0
-
-    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object p1
-
-    :goto_0
-    iget-wide v6, p0, Llcg;->g:J
-
-    sub-long v6, v0, v6
-
-    const-wide/16 v8, 0x2710
-
-    cmp-long p2, v6, v8
-
-    if-lez p2, :cond_1
-
-    iget-wide v6, p0, Llcg;->d:D
-
-    new-instance p2, Ljava/lang/StringBuilder;
-
-    const-string v8, "Total calls: "
-
-    invoke-direct {p2, v8}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {p2, v6, v7}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
-
-    const-string v6, ", average call time: "
-
-    invoke-virtual {p2, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p2, v4, v5}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
-
-    const-string v4, ", average idle time "
-
-    invoke-virtual {p2, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p2, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p1
-
-    iget-object p2, p0, Llcg;->a:Ls1c;
-
-    iget-object v4, p0, Llcg;->b:Ljava/lang/String;
-
-    invoke-interface {p2, v4, p1}, Ls1c;->log(Ljava/lang/String;Ljava/lang/String;)V
-
-    iput-wide v0, p0, Llcg;->g:J
-
-    iput-wide v2, p0, Llcg;->e:D
-
-    iput-wide v2, p0, Llcg;->d:D
-
-    iput-wide v2, p0, Llcg;->i:D
-
-    iput-wide v2, p0, Llcg;->f:D
-
-    const-wide/16 p1, 0x0
-
-    iput-wide p1, p0, Llcg;->h:J
-
-    :cond_1
-    return-void
+    return-object p0
 .end method
 
-.method public final dispatchMessage(Landroid/os/Message;)V
-    .locals 6
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 1
 
-    invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
+    new-instance p1, Llcg;
 
-    move-result-wide v0
+    iget-object v0, p0, Llcg;->Y:[B
 
-    :try_start_0
-    iget-wide v2, p0, Llcg;->h:J
+    iget-object p0, p0, Llcg;->Z:Lmcg;
 
-    const-wide/16 v4, 0x0
+    invoke-direct {p1, p0, p2, v0}, Llcg;-><init>(Lmcg;Lkotlin/coroutines/Continuation;[B)V
 
-    cmp-long v4, v2, v4
+    return-object p1
+.end method
 
-    if-lez v4, :cond_0
+.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 11
 
-    sub-long v2, v0, v2
+    iget v0, p0, Llcg;->X:I
 
-    long-to-double v2, v2
+    const/4 v1, 0x1
 
-    iput-wide v2, p0, Llcg;->f:D
+    if-eqz v0, :cond_1
 
-    iget-wide v2, p0, Llcg;->i:D
+    if-ne v0, v1, :cond_0
 
-    const-wide/high16 v4, 0x3ff0000000000000L    # 1.0
+    invoke-static {p1}, Lqe5;->V(Ljava/lang/Object;)V
 
-    add-double/2addr v2, v4
+    goto/16 :goto_4
 
-    iput-wide v2, p0, Llcg;->i:D
+    :cond_0
+    new-instance p0, Ljava/lang/IllegalStateException;
 
-    goto :goto_0
+    const-string p1, "call to \'resume\' before \'invoke\' with coroutine"
 
-    :catchall_0
-    move-exception v2
+    invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p0
+
+    :cond_1
+    invoke-static {p1}, Lqe5;->V(Ljava/lang/Object;)V
+
+    const/4 p1, 0x0
+
+    iget-object v0, p0, Llcg;->Z:Lmcg;
+
+    iget-object v2, p0, Llcg;->Y:[B
+
+    if-eqz v2, :cond_8
+
+    sget-object v3, Li60;->F0:Landroid/animation/IntEvaluator;
+
+    invoke-virtual {v0}, Lmcg;->getWaveView()Li60;
+
+    move-result-object v3
+
+    invoke-virtual {v3}, Li60;->getPeaksCount()I
+
+    move-result v3
+
+    array-length v4, v2
+
+    if-nez v4, :cond_2
+
+    goto :goto_3
+
+    :cond_2
+    new-array v4, v3, [B
+
+    const/4 v5, 0x0
+
+    move v6, v5
+
+    :goto_0
+    if-ge v6, v3, :cond_7
+
+    if-eqz v6, :cond_6
+
+    array-length v7, v2
+
+    if-ne v7, v1, :cond_3
 
     goto :goto_1
 
-    :cond_0
-    :goto_0
-    invoke-super {p0, p1}, Landroid/os/Handler;->dispatchMessage(Landroid/os/Message;)V
+    :cond_3
+    add-int/lit8 v7, v3, -0x1
 
-    invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
+    if-ne v6, v7, :cond_4
 
-    move-result-wide v2
+    array-length v7, v2
 
-    iput-wide v2, p0, Llcg;->h:J
+    sub-int/2addr v7, v1
 
-    invoke-virtual {p1}, Landroid/os/Message;->getCallback()Ljava/lang/Runnable;
+    aget-byte v7, v2, v7
 
-    invoke-virtual {p0, v0, v1}, Llcg;->a(J)V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    goto :goto_2
 
-    return-void
+    :cond_4
+    int-to-float v7, v6
 
+    int-to-float v8, v3
+
+    div-float/2addr v7, v8
+
+    array-length v8, v2
+
+    sub-int/2addr v8, v1
+
+    int-to-float v8, v8
+
+    mul-float/2addr v7, v8
+
+    float-to-int v8, v7
+
+    add-int/lit8 v9, v8, 0x1
+
+    array-length v10, v2
+
+    sub-int/2addr v10, v1
+
+    if-ge v8, v10, :cond_5
+
+    array-length v10, v2
+
+    sub-int/2addr v10, v1
+
+    if-ge v9, v10, :cond_5
+
+    int-to-float v10, v8
+
+    sub-float/2addr v7, v10
+
+    aget-byte v8, v2, v8
+
+    aget-byte v9, v2, v9
+
+    sget-object v10, Li60;->F0:Landroid/animation/IntEvaluator;
+
+    invoke-static {v8}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v8
+
+    invoke-static {v9}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v9
+
+    invoke-virtual {v10, v7, v8, v9}, Landroid/animation/IntEvaluator;->evaluate(FLjava/lang/Integer;Ljava/lang/Integer;)Ljava/lang/Integer;
+
+    move-result-object v7
+
+    invoke-virtual {v7}, Ljava/lang/Integer;->intValue()I
+
+    move-result v7
+
+    goto :goto_2
+
+    :cond_5
+    move v7, v5
+
+    goto :goto_2
+
+    :cond_6
     :goto_1
-    invoke-virtual {p1}, Landroid/os/Message;->getCallback()Ljava/lang/Runnable;
+    aget-byte v7, v2, v5
 
-    invoke-virtual {p0, v0, v1}, Llcg;->a(J)V
+    :goto_2
+    int-to-byte v7, v7
 
-    iget-object p0, p0, Llcg;->c:Ltl8;
+    aput-byte v7, v4, v6
 
-    invoke-virtual {p0, v2}, Ltl8;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    add-int/lit8 v6, v6, 0x1
 
-    return-void
+    goto :goto_0
+
+    :cond_7
+    move-object v2, v4
+
+    goto :goto_3
+
+    :cond_8
+    move-object v2, p1
+
+    :goto_3
+    invoke-static {v0}, Lmcg;->a(Lmcg;)Lxwe;
+
+    move-result-object v3
+
+    check-cast v3, Laga;
+
+    invoke-virtual {v3}, Laga;->c()Lt38;
+
+    move-result-object v3
+
+    new-instance v4, Lkcg;
+
+    invoke-direct {v4, v0, p1, v2}, Lkcg;-><init>(Lmcg;Lkotlin/coroutines/Continuation;[B)V
+
+    iput v1, p0, Llcg;->X:I
+
+    invoke-static {v3, v4, p0}, Lvyg;->H(Lq04;Lpc6;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p0
+
+    sget-object p1, Lz04;->a:Lz04;
+
+    if-ne p0, p1, :cond_9
+
+    return-object p1
+
+    :cond_9
+    :goto_4
+    sget-object p0, Lylf;->a:Lylf;
+
+    return-object p0
 .end method

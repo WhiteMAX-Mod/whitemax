@@ -4,209 +4,67 @@
 
 
 # instance fields
-.field public final a:J
+.field public final a:Landroid/graphics/drawable/BitmapDrawable;
 
-.field public final b:J
+.field public b:F
 
-.field public final c:Ljava/lang/String;
+.field public final c:Landroid/graphics/Rect;
 
-.field public final d:Ljava/lang/String;
+.field public d:Landroid/view/animation/Interpolator;
 
-.field public final e:Ljava/lang/CharSequence;
+.field public e:J
+
+.field public final f:Landroid/graphics/Rect;
+
+.field public g:I
+
+.field public h:F
+
+.field public i:J
+
+.field public j:Z
+
+.field public k:Z
+
+.field public l:Lbh8;
 
 
 # direct methods
-.method public constructor <init>(JJLjava/lang/CharSequence;Ljava/lang/String;Ljava/lang/String;)V
-    .locals 0
+.method public constructor <init>(Landroid/graphics/drawable/BitmapDrawable;Landroid/graphics/Rect;)V
+    .locals 1
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-wide p1, p0, Lhwa;->a:J
+    const/high16 v0, 0x3f800000    # 1.0f
 
-    iput-wide p3, p0, Lhwa;->b:J
+    iput v0, p0, Lhwa;->b:F
 
-    iput-object p6, p0, Lhwa;->c:Ljava/lang/String;
+    iput v0, p0, Lhwa;->h:F
 
-    iput-object p7, p0, Lhwa;->d:Ljava/lang/String;
+    iput-object p1, p0, Lhwa;->a:Landroid/graphics/drawable/BitmapDrawable;
 
-    iput-object p5, p0, Lhwa;->e:Ljava/lang/CharSequence;
+    iput-object p2, p0, Lhwa;->f:Landroid/graphics/Rect;
 
-    return-void
-.end method
+    new-instance v0, Landroid/graphics/Rect;
 
+    invoke-direct {v0, p2}, Landroid/graphics/Rect;-><init>(Landroid/graphics/Rect;)V
 
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 7
+    iput-object v0, p0, Lhwa;->c:Landroid/graphics/Rect;
 
-    const/4 v0, 0x1
+    if-eqz p1, :cond_0
 
-    if-ne p0, p1, :cond_0
+    iget p0, p0, Lhwa;->b:F
 
-    return v0
+    const/high16 p2, 0x437f0000    # 255.0f
+
+    mul-float/2addr p0, p2
+
+    float-to-int p0, p0
+
+    invoke-virtual {p1, p0}, Landroid/graphics/drawable/BitmapDrawable;->setAlpha(I)V
+
+    invoke-virtual {p1, v0}, Landroid/graphics/drawable/Drawable;->setBounds(Landroid/graphics/Rect;)V
 
     :cond_0
-    instance-of v1, p1, Lhwa;
-
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
-    check-cast p1, Lhwa;
-
-    iget-wide v3, p0, Lhwa;->a:J
-
-    iget-wide v5, p1, Lhwa;->a:J
-
-    cmp-long v1, v3, v5
-
-    if-eqz v1, :cond_2
-
-    return v2
-
-    :cond_2
-    iget-wide v3, p0, Lhwa;->b:J
-
-    iget-wide v5, p1, Lhwa;->b:J
-
-    cmp-long v1, v3, v5
-
-    if-eqz v1, :cond_3
-
-    return v2
-
-    :cond_3
-    iget-object v1, p0, Lhwa;->c:Ljava/lang/String;
-
-    iget-object v3, p1, Lhwa;->c:Ljava/lang/String;
-
-    invoke-static {v1, v3}, Lxq7;->d(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_4
-
-    return v2
-
-    :cond_4
-    iget-object v1, p0, Lhwa;->d:Ljava/lang/String;
-
-    iget-object v3, p1, Lhwa;->d:Ljava/lang/String;
-
-    invoke-static {v1, v3}, Lxq7;->d(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_5
-
-    return v2
-
-    :cond_5
-    iget-object p0, p0, Lhwa;->e:Ljava/lang/CharSequence;
-
-    iget-object p1, p1, Lhwa;->e:Ljava/lang/CharSequence;
-
-    invoke-static {p0, p1}, Lxq7;->d(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p0
-
-    if-nez p0, :cond_6
-
-    return v2
-
-    :cond_6
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 4
-
-    iget-wide v0, p0, Lhwa;->a:J
-
-    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
-
-    move-result v0
-
-    const/16 v1, 0x1f
-
-    mul-int/2addr v0, v1
-
-    iget-wide v2, p0, Lhwa;->b:J
-
-    invoke-static {v0, v1, v2, v3}, Lzge;->m(IIJ)I
-
-    move-result v0
-
-    iget-object v2, p0, Lhwa;->c:Ljava/lang/String;
-
-    invoke-static {v0, v1, v2}, Lv04;->d(IILjava/lang/String;)I
-
-    move-result v0
-
-    iget-object v2, p0, Lhwa;->d:Ljava/lang/String;
-
-    invoke-static {v0, v1, v2}, Lv04;->d(IILjava/lang/String;)I
-
-    move-result v0
-
-    iget-object p0, p0, Lhwa;->e:Ljava/lang/CharSequence;
-
-    invoke-virtual {p0}, Ljava/lang/Object;->hashCode()I
-
-    move-result p0
-
-    add-int/2addr p0, v0
-
-    return p0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 5
-
-    const-string v0, "PickerChip(id="
-
-    const-string v1, ", avatarSourceId="
-
-    iget-wide v2, p0, Lhwa;->a:J
-
-    invoke-static {v2, v3, v0, v1}, Lzt1;->k(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    const-string v1, ", title="
-
-    iget-wide v2, p0, Lhwa;->b:J
-
-    iget-object v4, p0, Lhwa;->c:Ljava/lang/String;
-
-    invoke-static {v2, v3, v1, v4, v0}, Lv04;->m(JLjava/lang/String;Ljava/lang/String;Ljava/lang/StringBuilder;)V
-
-    const-string v1, ", avatarUrl="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lhwa;->d:Ljava/lang/String;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", abbreviation="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object p0, p0, Lhwa;->e:Ljava/lang/CharSequence;
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string p0, ")"
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
+    return-void
 .end method

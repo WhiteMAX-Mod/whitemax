@@ -4,17 +4,19 @@
 
 
 # instance fields
-.field public a:I
+.field public a:Ljava/util/concurrent/ExecutorService;
 
-.field public b:Ljava/util/concurrent/ExecutorService;
+.field public b:Lvj6;
 
-.field public c:Lmd6;
+.field public c:Ldk6;
 
-.field public d:Lud6;
+.field public d:I
 
-.field public e:I
+.field public e:Z
 
 .field public f:Z
+
+.field public g:Z
 
 
 # direct methods
@@ -23,48 +25,41 @@
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 v0, 0x0
-
-    iput v0, p0, Landroidx/media3/effect/DefaultVideoFrameProcessor$Factory$Builder;->a:I
-
     const/4 v0, 0x1
 
+    iput-boolean v0, p0, Landroidx/media3/effect/DefaultVideoFrameProcessor$Factory$Builder;->e:Z
+
     iput-boolean v0, p0, Landroidx/media3/effect/DefaultVideoFrameProcessor$Factory$Builder;->f:Z
+
+    iput-boolean v0, p0, Landroidx/media3/effect/DefaultVideoFrameProcessor$Factory$Builder;->g:Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public build()Lxf4;
-    .locals 7
+.method public build()Ldk4;
+    .locals 8
 
-    new-instance v0, Lxf4;
+    new-instance v0, Ldk4;
 
-    iget v1, p0, Landroidx/media3/effect/DefaultVideoFrameProcessor$Factory$Builder;->a:I
+    iget-boolean v1, p0, Landroidx/media3/effect/DefaultVideoFrameProcessor$Factory$Builder;->e:Z
 
-    iget-boolean v2, p0, Landroidx/media3/effect/DefaultVideoFrameProcessor$Factory$Builder;->f:Z
+    xor-int/lit8 v1, v1, 0x1
 
-    xor-int/lit8 v2, v2, 0x1
+    iget-object v2, p0, Landroidx/media3/effect/DefaultVideoFrameProcessor$Factory$Builder;->b:Lvj6;
 
-    iget-object v3, p0, Landroidx/media3/effect/DefaultVideoFrameProcessor$Factory$Builder;->c:Lmd6;
+    iget-object v3, p0, Landroidx/media3/effect/DefaultVideoFrameProcessor$Factory$Builder;->a:Ljava/util/concurrent/ExecutorService;
 
-    if-nez v3, :cond_0
+    iget-object v4, p0, Landroidx/media3/effect/DefaultVideoFrameProcessor$Factory$Builder;->c:Ldk6;
 
-    new-instance v3, Lnz7;
+    iget v5, p0, Landroidx/media3/effect/DefaultVideoFrameProcessor$Factory$Builder;->d:I
 
-    const/16 v4, 0x10
+    iget-boolean v6, p0, Landroidx/media3/effect/DefaultVideoFrameProcessor$Factory$Builder;->f:Z
 
-    invoke-direct {v3, v4}, Lnz7;-><init>(I)V
+    iget-boolean v7, p0, Landroidx/media3/effect/DefaultVideoFrameProcessor$Factory$Builder;->g:Z
 
-    :cond_0
-    iget-object v4, p0, Landroidx/media3/effect/DefaultVideoFrameProcessor$Factory$Builder;->b:Ljava/util/concurrent/ExecutorService;
-
-    iget-object v5, p0, Landroidx/media3/effect/DefaultVideoFrameProcessor$Factory$Builder;->d:Lud6;
-
-    iget v6, p0, Landroidx/media3/effect/DefaultVideoFrameProcessor$Factory$Builder;->e:I
-
-    invoke-direct/range {v0 .. v6}, Lxf4;-><init>(IZLmd6;Ljava/util/concurrent/ExecutorService;Lud6;I)V
+    invoke-direct/range {v0 .. v7}, Ldk4;-><init>(ZLvj6;Ljava/util/concurrent/ExecutorService;Ldk6;IZZ)V
 
     return-object v0
 .end method

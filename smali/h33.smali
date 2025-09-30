@@ -1,76 +1,220 @@
-.class public abstract Lh33;
+.class public final Lh33;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lz2d;
 
-# static fields
-.field public static final a:Ljava/util/logging/Logger;
+
+# instance fields
+.field public final synthetic X:Ll33;
+
+.field public final a:Ll33;
+
+.field public final b:Lx2d;
+
+.field public final c:I
+
+.field public o:Z
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(Ll33;Ll33;Lx2d;I)V
+    .locals 0
 
-    const-class v0, Lh33;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
+    iput-object p1, p0, Lh33;->X:Ll33;
 
-    move-result-object v0
+    iput-object p2, p0, Lh33;->a:Ll33;
 
-    invoke-static {v0}, Ljava/util/logging/Logger;->getLogger(Ljava/lang/String;)Ljava/util/logging/Logger;
+    iput-object p3, p0, Lh33;->b:Lx2d;
 
-    move-result-object v0
-
-    sput-object v0, Lh33;->a:Ljava/util/logging/Logger;
+    iput p4, p0, Lh33;->c:I
 
     return-void
 .end method
 
-.method public static a(Ljava/io/Closeable;)V
-    .locals 3
 
-    if-nez p0, :cond_0
+# virtual methods
+.method public final a()V
+    .locals 8
 
-    return-void
+    iget-boolean v0, p0, Lh33;->o:Z
+
+    if-nez v0, :cond_0
+
+    iget-object v0, p0, Lh33;->X:Ll33;
+
+    iget-object v1, v0, Ll33;->Z:Lz96;
+
+    iget-object v2, v0, Ll33;->b:[I
+
+    iget v3, p0, Lh33;->c:I
+
+    aget v2, v2, v3
+
+    iget-object v4, v0, Ll33;->c:[Lx46;
+
+    aget-object v3, v4, v3
+
+    const/4 v5, 0x0
+
+    iget-wide v6, v0, Ll33;->D0:J
+
+    const/4 v4, 0x0
+
+    invoke-virtual/range {v1 .. v7}, Lz96;->A(ILx46;ILjava/lang/Object;J)V
+
+    const/4 v0, 0x1
+
+    iput-boolean v0, p0, Lh33;->o:Z
 
     :cond_0
-    :try_start_0
-    invoke-interface {p0}, Ljava/io/Closeable;->close()V
-    :try_end_0
-    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
-
     return-void
+.end method
 
-    :catch_0
-    move-exception p0
-
-    sget-object v0, Ljava/util/logging/Level;->WARNING:Ljava/util/logging/Level;
-
-    const-string v1, "IOException thrown while closing Closeable."
-
-    sget-object v2, Lh33;->a:Ljava/util/logging/Logger;
-
-    invoke-virtual {v2, v0, v1, p0}, Ljava/util/logging/Logger;->log(Ljava/util/logging/Level;Ljava/lang/String;Ljava/lang/Throwable;)V
+.method public final b()V
+    .locals 0
 
     return-void
 .end method
 
-.method public static b(Ljava/io/InputStream;)V
-    .locals 1
+.method public final e()Z
+    .locals 2
 
-    :try_start_0
-    invoke-static {p0}, Lh33;->a(Ljava/io/Closeable;)V
-    :try_end_0
-    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
+    iget-object v0, p0, Lh33;->X:Ll33;
 
-    return-void
+    invoke-virtual {v0}, Ll33;->z()Z
 
-    :catch_0
-    move-exception p0
+    move-result v1
 
-    new-instance v0, Ljava/lang/AssertionError;
+    if-nez v1, :cond_0
 
-    invoke-direct {v0, p0}, Ljava/lang/AssertionError;-><init>(Ljava/lang/Object;)V
+    iget-object p0, p0, Lh33;->b:Lx2d;
 
-    throw v0
+    iget-boolean v0, v0, Ll33;->I0:Z
+
+    invoke-virtual {p0, v0}, Lx2d;->t(Z)Z
+
+    move-result p0
+
+    if-eqz p0, :cond_0
+
+    const/4 p0, 0x1
+
+    return p0
+
+    :cond_0
+    const/4 p0, 0x0
+
+    return p0
+.end method
+
+.method public final h(J)I
+    .locals 3
+
+    iget-object v0, p0, Lh33;->X:Ll33;
+
+    invoke-virtual {v0}, Ll33;->z()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    const/4 p0, 0x0
+
+    return p0
+
+    :cond_0
+    iget-boolean v1, v0, Ll33;->I0:Z
+
+    iget-object v2, p0, Lh33;->b:Lx2d;
+
+    invoke-virtual {v2, p1, p2, v1}, Lx2d;->r(JZ)I
+
+    move-result p1
+
+    iget-object p2, v0, Ll33;->F0:Lyi0;
+
+    if-eqz p2, :cond_1
+
+    iget v0, p0, Lh33;->c:I
+
+    add-int/lit8 v0, v0, 0x1
+
+    invoke-virtual {p2, v0}, Lyi0;->d(I)I
+
+    move-result p2
+
+    invoke-virtual {v2}, Lx2d;->p()I
+
+    move-result v0
+
+    sub-int/2addr p2, v0
+
+    invoke-static {p1, p2}, Ljava/lang/Math;->min(II)I
+
+    move-result p1
+
+    :cond_1
+    invoke-virtual {v2, p1}, Lx2d;->C(I)V
+
+    if-lez p1, :cond_2
+
+    invoke-virtual {p0}, Lh33;->a()V
+
+    :cond_2
+    return p1
+.end method
+
+.method public final o(Lzxc;Lga4;I)I
+    .locals 4
+
+    iget-object v0, p0, Lh33;->X:Ll33;
+
+    invoke-virtual {v0}, Ll33;->z()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    iget-object v1, v0, Ll33;->F0:Lyi0;
+
+    iget-object v2, p0, Lh33;->b:Lx2d;
+
+    if-eqz v1, :cond_1
+
+    iget v3, p0, Lh33;->c:I
+
+    add-int/lit8 v3, v3, 0x1
+
+    invoke-virtual {v1, v3}, Lyi0;->d(I)I
+
+    move-result v1
+
+    invoke-virtual {v2}, Lx2d;->p()I
+
+    move-result v3
+
+    if-gt v1, v3, :cond_1
+
+    :goto_0
+    const/4 p0, -0x3
+
+    return p0
+
+    :cond_1
+    invoke-virtual {p0}, Lh33;->a()V
+
+    iget-boolean p0, v0, Ll33;->I0:Z
+
+    invoke-virtual {v2, p1, p2, p3, p0}, Lx2d;->y(Lzxc;Lga4;IZ)I
+
+    move-result p0
+
+    return p0
 .end method

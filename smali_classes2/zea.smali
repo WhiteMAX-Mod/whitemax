@@ -1,109 +1,77 @@
-.class public abstract Lzea;
-.super Ljava/lang/Object;
+.class public final enum Lzea;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
 
 # static fields
-.field public static final a:J
+.field public static final enum a:Lzea;
 
-.field public static final b:J
-
-.field public static final c:J
-
-.field public static final d:J
-
-.field public static final e:J
-
-.field public static final f:J
-
-.field public static final g:J
-
-.field public static final h:J
-
-.field public static final i:J
-
-.field public static final j:J
-
-.field public static final k:J
-
-.field public static final l:J
+.field public static final synthetic b:[Lzea;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 2
+    .locals 5
 
-    sget v0, Lbvb;->oneme_settings_privacy_info_header:I
+    new-instance v0, Lzea;
 
-    int-to-long v0, v0
+    const-string v1, "TITLE"
 
-    sput-wide v0, Lzea;->a:J
+    const/4 v2, 0x0
 
-    sget v0, Lbvb;->oneme_settings_privacy_safe_files:I
+    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    int-to-long v0, v0
+    new-instance v1, Lzea;
 
-    sput-wide v0, Lzea;->b:J
+    const-string v2, "SUBTITLE"
 
-    sget v0, Lbvb;->oneme_settings_privacy_screen_add_me_to_chat:I
+    const/4 v3, 0x1
 
-    int-to-long v0, v0
+    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    sput-wide v0, Lzea;->c:J
+    new-instance v2, Lzea;
 
-    sget v0, Lbvb;->oneme_settings_privacy_screen_black_list:I
+    const-string v3, "NONE"
 
-    int-to-long v0, v0
+    const/4 v4, 0x2
 
-    sput-wide v0, Lzea;->d:J
+    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    sget v0, Lbvb;->oneme_settings_privacy_screen_call_me:I
+    sput-object v2, Lzea;->a:Lzea;
 
-    int-to-long v0, v0
+    filled-new-array {v0, v1, v2}, [Lzea;
 
-    sput-wide v0, Lzea;->e:J
+    move-result-object v0
 
-    sget v0, Lbvb;->oneme_settings_privacy_screen_finished_sessions:I
-
-    int-to-long v0, v0
-
-    sput-wide v0, Lzea;->f:J
-
-    sget v0, Lbvb;->oneme_settings_privacy_screen_how_session:I
-
-    int-to-long v0, v0
-
-    sput-wide v0, Lzea;->g:J
-
-    sget v0, Lbvb;->oneme_settings_privacy_screen_safe_mode:I
-
-    int-to-long v0, v0
-
-    sput-wide v0, Lzea;->h:J
-
-    sget v0, Lbvb;->oneme_settings_privacy_screen_search_by_phone:I
-
-    int-to-long v0, v0
-
-    sput-wide v0, Lzea;->i:J
-
-    sget v0, Lbvb;->oneme_settings_privacy_screen_see_online_state:I
-
-    int-to-long v0, v0
-
-    sput-wide v0, Lzea;->j:J
-
-    sget v0, Lbvb;->oneme_settings_privacy_screen_twofa:I
-
-    int-to-long v0, v0
-
-    sput-wide v0, Lzea;->k:J
-
-    sget v0, Lbvb;->oneme_settings_privacy_screen_web_apps:I
-
-    int-to-long v0, v0
-
-    sput-wide v0, Lzea;->l:J
+    sput-object v0, Lzea;->b:[Lzea;
 
     return-void
+.end method
+
+.method public static valueOf(Ljava/lang/String;)Lzea;
+    .locals 1
+
+    const-class v0, Lzea;
+
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+
+    move-result-object p0
+
+    check-cast p0, Lzea;
+
+    return-object p0
+.end method
+
+.method public static values()[Lzea;
+    .locals 1
+
+    sget-object v0, Lzea;->b:[Lzea;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, [Lzea;
+
+    return-object v0
 .end method

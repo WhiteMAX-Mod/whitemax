@@ -114,7 +114,7 @@
     throw p0
 .end method
 
-.method public setListener(Ltm5;)V
+.method public setListener(Lcs5;)V
     .locals 0
 
     return-void

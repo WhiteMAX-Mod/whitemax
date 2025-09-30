@@ -1,91 +1,44 @@
-.class public final Lf53;
-.super Landroid/view/View;
+.class public interface abstract Lf53;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
-
-# instance fields
-.field public a:Landroid/graphics/Paint;
-
-.field public b:Landroid/graphics/Paint;
-
-.field public c:I
+# interfaces
+.implements Lgtc;
 
 
 # virtual methods
-.method public getColor()I
-    .locals 0
+.method public b()Z
+    .locals 3
 
-    iget-object p0, p0, Lf53;->a:Landroid/graphics/Paint;
+    check-cast p0, Lh53;
 
-    invoke-virtual {p0}, Landroid/graphics/Paint;->getColor()I
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "app.pin_"
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {p0}, Lgad;->q()J
+
+    move-result-wide v1
+
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    const/4 v1, 0x0
+
+    iget-object p0, p0, Li3;->g:Lfl7;
+
+    invoke-virtual {p0, v0, v1}, Lfl7;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-static {p0}, Lm7g;->n(Ljava/lang/CharSequence;)Z
 
     move-result p0
 
     return p0
-.end method
-
-.method public final onDraw(Landroid/graphics/Canvas;)V
-    .locals 4
-
-    invoke-super {p0, p1}, Landroid/view/View;->onDraw(Landroid/graphics/Canvas;)V
-
-    invoke-virtual {p0}, Landroid/view/View;->getWidth()I
-
-    move-result v0
-
-    div-int/lit8 v0, v0, 0x2
-
-    invoke-virtual {p0}, Landroid/view/View;->getHeight()I
-
-    move-result v1
-
-    div-int/lit8 v1, v1, 0x2
-
-    int-to-float v0, v0
-
-    int-to-float v1, v1
-
-    invoke-virtual {p0}, Landroid/view/View;->getWidth()I
-
-    move-result v2
-
-    div-int/lit8 v2, v2, 0x2
-
-    int-to-float v2, v2
-
-    iget-object v3, p0, Lf53;->b:Landroid/graphics/Paint;
-
-    invoke-virtual {p1, v0, v1, v2, v3}, Landroid/graphics/Canvas;->drawCircle(FFFLandroid/graphics/Paint;)V
-
-    invoke-virtual {p0}, Landroid/view/View;->getWidth()I
-
-    move-result v2
-
-    iget v3, p0, Lf53;->c:I
-
-    mul-int/lit8 v3, v3, 0x2
-
-    sub-int/2addr v2, v3
-
-    div-int/lit8 v2, v2, 0x2
-
-    int-to-float v2, v2
-
-    iget-object p0, p0, Lf53;->a:Landroid/graphics/Paint;
-
-    invoke-virtual {p1, v0, v1, v2, p0}, Landroid/graphics/Canvas;->drawCircle(FFFLandroid/graphics/Paint;)V
-
-    return-void
-.end method
-
-.method public setColor(I)V
-    .locals 1
-
-    iget-object v0, p0, Lf53;->a:Landroid/graphics/Paint;
-
-    invoke-virtual {v0, p1}, Landroid/graphics/Paint;->setColor(I)V
-
-    invoke-virtual {p0}, Landroid/view/View;->invalidate()V
-
-    return-void
 .end method

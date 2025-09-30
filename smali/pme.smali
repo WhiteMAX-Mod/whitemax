@@ -1,81 +1,36 @@
-.class public final Lpme;
-.super Ln3;
+.class public abstract Lpme;
+.super Lome;
 .source "SourceFile"
 
 
-# static fields
-.field public static final CREATOR:Landroid/os/Parcelable$Creator;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Landroid/os/Parcelable$Creator<",
-            "Lpme;",
-            ">;"
-        }
-    .end annotation
-.end field
-
-
-# instance fields
-.field public final a:I
-
-.field public b:Ljava/util/List;
-
-
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public static R(Ljava/lang/String;)Ljava/lang/Double;
+    .locals 3
 
-    new-instance v0, Lmrf;
+    const/4 v0, 0x0
 
-    const/4 v1, 0x5
+    :try_start_0
+    sget-object v1, Ld7d;->a:Lmpc;
 
-    invoke-direct {v0, v1}, Lmrf;-><init>(I)V
+    invoke-virtual {v1, p0}, Lmpc;->a(Ljava/lang/CharSequence;)Z
 
-    sput-object v0, Lpme;->CREATOR:Landroid/os/Parcelable$Creator;
+    move-result v1
 
-    return-void
-.end method
+    if-eqz v1, :cond_0
 
-.method public constructor <init>(ILjava/util/List;)V
-    .locals 0
+    invoke-static {p0}, Ljava/lang/Double;->parseDouble(Ljava/lang/String;)D
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    move-result-wide v1
 
-    iput p1, p0, Lpme;->a:I
+    invoke-static {v1, v2}, Ljava/lang/Double;->valueOf(D)Ljava/lang/Double;
 
-    iput-object p2, p0, Lpme;->b:Ljava/util/List;
+    move-result-object p0
+    :try_end_0
+    .catch Ljava/lang/NumberFormatException; {:try_start_0 .. :try_end_0} :catch_0
 
-    return-void
-.end method
+    return-object p0
 
-
-# virtual methods
-.method public final writeToParcel(Landroid/os/Parcel;I)V
-    .locals 2
-
-    const/16 p2, 0x4f45
-
-    invoke-static {p1, p2}, Lq14;->B0(Landroid/os/Parcel;I)I
-
-    move-result p2
-
-    const/4 v0, 0x4
-
-    const/4 v1, 0x1
-
-    invoke-static {p1, v1, v0}, Lq14;->D0(Landroid/os/Parcel;II)V
-
-    iget v0, p0, Lpme;->a:I
-
-    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
-
-    const/4 v0, 0x2
-
-    iget-object p0, p0, Lpme;->b:Ljava/util/List;
-
-    invoke-static {p1, p0, v0}, Lq14;->A0(Landroid/os/Parcel;Ljava/util/List;I)V
-
-    invoke-static {p1, p2}, Lq14;->C0(Landroid/os/Parcel;I)V
-
-    return-void
+    :catch_0
+    :cond_0
+    return-object v0
 .end method

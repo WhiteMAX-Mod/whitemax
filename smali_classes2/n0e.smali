@@ -1,113 +1,145 @@
 .class public final Ln0e;
-.super Lqy;
+.super Landroid/animation/AnimatorListenerAdapter;
 .source "SourceFile"
 
 
 # instance fields
-.field public final X:I
+.field public final synthetic a:I
 
-.field public final Y:I
-
-.field public final Z:Ljava/lang/String;
-
-.field public final o:J
-
-.field public final o0:J
-
-.field public final p0:Ljava/lang/String;
-
-.field public final q0:Ljava/lang/String;
-
-.field public final r0:Ljava/util/List;
-
-.field public final s0:Ljava/lang/String;
-
-.field public final t0:I
-
-.field public final u0:J
-
-.field public final v0:Ljava/lang/String;
-
-.field public final w0:Z
-
-.field public final x0:I
-
-.field public final y0:Ljava/lang/String;
+.field public final synthetic b:Lq0e;
 
 
 # direct methods
-.method public constructor <init>(JIILjava/lang/String;JLjava/lang/String;Ljava/lang/String;Ljava/util/List;Ljava/lang/String;IJLjava/lang/String;ZIZZLjava/lang/String;)V
-    .locals 3
+.method public synthetic constructor <init>(Lq0e;I)V
+    .locals 0
 
-    sget-object v0, Lq00;->Z:Lq00;
+    iput p2, p0, Ln0e;->a:I
 
-    move/from16 v1, p18
+    iput-object p1, p0, Ln0e;->b:Lq0e;
 
-    move/from16 v2, p19
-
-    invoke-direct {p0, v0, v1, v2}, Lqy;-><init>(Lq00;ZZ)V
-
-    iput-wide p1, p0, Ln0e;->o:J
-
-    iput p3, p0, Ln0e;->X:I
-
-    iput p4, p0, Ln0e;->Y:I
-
-    iput-object p5, p0, Ln0e;->Z:Ljava/lang/String;
-
-    iput-wide p6, p0, Ln0e;->o0:J
-
-    iput-object p8, p0, Ln0e;->p0:Ljava/lang/String;
-
-    iput-object p9, p0, Ln0e;->q0:Ljava/lang/String;
-
-    iput-object p10, p0, Ln0e;->r0:Ljava/util/List;
-
-    iput-object p11, p0, Ln0e;->s0:Ljava/lang/String;
-
-    iput p12, p0, Ln0e;->t0:I
-
-    move-wide/from16 p1, p13
-
-    iput-wide p1, p0, Ln0e;->u0:J
-
-    move-object/from16 p1, p15
-
-    iput-object p1, p0, Ln0e;->v0:Ljava/lang/String;
-
-    move/from16 p1, p16
-
-    iput-boolean p1, p0, Ln0e;->w0:Z
-
-    move/from16 p1, p17
-
-    iput p1, p0, Ln0e;->x0:I
-
-    move-object/from16 p1, p20
-
-    iput-object p1, p0, Ln0e;->y0:Ljava/lang/String;
+    invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Ljava/util/HashMap;
-    .locals 3
+.method public final onAnimationCancel(Landroid/animation/Animator;)V
+    .locals 1
 
-    invoke-super {p0}, Lqy;->a()Ljava/util/HashMap;
+    iget p1, p0, Ln0e;->a:I
 
-    move-result-object v0
+    packed-switch p1, :pswitch_data_0
 
-    iget-wide v1, p0, Ln0e;->o:J
+    iget-object p0, p0, Ln0e;->b:Lq0e;
 
-    invoke-static {v1, v2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    iget p1, p0, Lq0e;->d1:F
 
-    move-result-object p0
+    iget v0, p0, Lq0e;->j1:F
 
-    const-string v1, "stickerId"
+    sub-float/2addr p1, v0
 
-    invoke-virtual {v0, v1, p0}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    iget v0, p0, Lq0e;->b1:F
 
-    return-object v0
+    mul-float/2addr p1, v0
+
+    iget v0, p0, Lq0e;->e1:F
+
+    div-float/2addr p1, v0
+
+    iget v0, p0, Lq0e;->b:F
+
+    add-float/2addr p1, v0
+
+    iput p1, p0, Lq0e;->o:F
+
+    const/4 p1, 0x0
+
+    iput-boolean p1, p0, Lq0e;->g1:Z
+
+    const/4 p1, 0x1
+
+    iput-boolean p1, p0, Lq0e;->n1:Z
+
+    invoke-virtual {p0}, Landroid/view/View;->invalidate()V
+
+    return-void
+
+    :pswitch_0
+    const/4 p1, 0x0
+
+    iget-object p0, p0, Ln0e;->b:Lq0e;
+
+    iput-boolean p1, p0, Lq0e;->g1:Z
+
+    invoke-virtual {p0}, Landroid/view/View;->invalidate()V
+
+    return-void
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final onAnimationEnd(Landroid/animation/Animator;)V
+    .locals 1
+
+    iget p1, p0, Ln0e;->a:I
+
+    packed-switch p1, :pswitch_data_0
+
+    iget-object p0, p0, Ln0e;->b:Lq0e;
+
+    iget p1, p0, Lq0e;->d1:F
+
+    iget v0, p0, Lq0e;->j1:F
+
+    sub-float/2addr p1, v0
+
+    iget v0, p0, Lq0e;->b1:F
+
+    mul-float/2addr p1, v0
+
+    iget v0, p0, Lq0e;->e1:F
+
+    div-float/2addr p1, v0
+
+    iget v0, p0, Lq0e;->b:F
+
+    add-float/2addr p1, v0
+
+    iput p1, p0, Lq0e;->o:F
+
+    const/4 p1, 0x0
+
+    iput-boolean p1, p0, Lq0e;->g1:Z
+
+    const/4 p1, 0x1
+
+    iput-boolean p1, p0, Lq0e;->n1:Z
+
+    invoke-virtual {p0}, Landroid/view/View;->invalidate()V
+
+    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    return-void
+
+    :pswitch_0
+    const/4 p1, 0x0
+
+    iget-object p0, p0, Ln0e;->b:Lq0e;
+
+    iput-boolean p1, p0, Lq0e;->g1:Z
+
+    invoke-virtual {p0}, Landroid/view/View;->invalidate()V
+
+    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    return-void
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

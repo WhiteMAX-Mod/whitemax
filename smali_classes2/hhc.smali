@@ -1,65 +1,97 @@
-.class public final enum Lhhc;
-.super Ljava/lang/Enum;
+.class public final synthetic Lhhc;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Landroid/animation/ValueAnimator$AnimatorUpdateListener;
 
-# static fields
-.field public static final synthetic a:[Lhhc;
 
-.field public static final synthetic b:Ln25;
+# instance fields
+.field public final synthetic a:Lzgc;
+
+.field public final synthetic b:Landroid/view/ViewGroup;
+
+.field public final synthetic c:Lbc6;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
+.method public synthetic constructor <init>(Lzgc;Landroid/view/ViewGroup;Lbc6;)V
+    .locals 0
 
-    new-instance v0, Lhhc;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const-string v1, "LIMITED_TO_REVERSE_CONTACTS"
+    iput-object p1, p0, Lhhc;->a:Lzgc;
 
-    const/4 v2, 0x0
+    iput-object p2, p0, Lhhc;->b:Landroid/view/ViewGroup;
 
-    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    filled-new-array {v0}, [Lhhc;
-
-    move-result-object v0
-
-    sput-object v0, Lhhc;->a:[Lhhc;
-
-    new-instance v1, Ln25;
-
-    invoke-direct {v1, v0}, Ln25;-><init>([Ljava/lang/Enum;)V
-
-    sput-object v1, Lhhc;->b:Ln25;
+    iput-object p3, p0, Lhhc;->c:Lbc6;
 
     return-void
 .end method
 
-.method public static valueOf(Ljava/lang/String;)Lhhc;
-    .locals 1
 
-    const-class v0, Lhhc;
+# virtual methods
+.method public final onAnimationUpdate(Landroid/animation/ValueAnimator;)V
+    .locals 4
 
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+    invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
 
-    move-result-object p0
+    move-result-object p1
 
-    check-cast p0, Lhhc;
+    check-cast p1, Ljava/lang/Integer;
 
-    return-object p0
-.end method
+    invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
 
-.method public static values()[Lhhc;
-    .locals 1
+    move-result v0
 
-    sget-object v0, Lhhc;->a:[Lhhc;
+    iget-object v1, p0, Lhhc;->a:Lzgc;
 
-    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
+    iget-object v1, v1, Lzgc;->d:Landroidx/recyclerview/widget/RecyclerView;
 
-    move-result-object v0
+    invoke-virtual {v1}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
-    check-cast v0, [Lhhc;
+    move-result-object v2
 
-    return-object v0
+    const-string v3, "null cannot be cast to non-null type android.view.ViewGroup.LayoutParams"
+
+    if-eqz v2, :cond_2
+
+    iput v0, v2, Landroid/view/ViewGroup$LayoutParams;->height:I
+
+    invoke-virtual {v1, v2}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+
+    iget-object v1, p0, Lhhc;->b:Landroid/view/ViewGroup;
+
+    invoke-virtual {v1}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+
+    move-result-object v2
+
+    if-eqz v2, :cond_1
+
+    iput v0, v2, Landroid/view/ViewGroup$LayoutParams;->height:I
+
+    invoke-virtual {v1, v2}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+
+    iget-object p0, p0, Lhhc;->c:Lbc6;
+
+    if-eqz p0, :cond_0
+
+    invoke-interface {p0, p1}, Lbc6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+
+    :cond_0
+    return-void
+
+    :cond_1
+    new-instance p0, Ljava/lang/NullPointerException;
+
+    invoke-direct {p0, v3}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
+
+    throw p0
+
+    :cond_2
+    new-instance p0, Ljava/lang/NullPointerException;
+
+    invoke-direct {p0, v3}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
+
+    throw p0
 .end method

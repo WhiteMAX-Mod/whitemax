@@ -1,106 +1,41 @@
 .class public final Lj;
-.super Ljava/lang/Object;
+.super Lcb4;
 .source "SourceFile"
-
-# interfaces
-.implements Lo64;
 
 
 # static fields
-.field public static final a:Lj;
+.field public static final b:Lj;
 
-.field public static final b:Lk;
+.field public static final c:Lxa4;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 1
+    .locals 6
 
     new-instance v0, Lj;
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {v0}, Lcb4;-><init>()V
 
-    sput-object v0, Lj;->a:Lj;
+    sput-object v0, Lj;->b:Lj;
 
-    sget-object v0, Lk;->b:Lk;
+    const/4 v1, 0x0
 
-    sput-object v0, Lj;->b:Lk;
+    new-array v2, v1, [Ljava/lang/String;
+
+    const/16 v5, 0xe
+
+    const/4 v4, 0x0
+
+    const-string v1, ":settings/aboutapp"
+
+    const/4 v3, 0x0
+
+    invoke-static/range {v0 .. v5}, Lcb4;->a(Lcb4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;II)Lxa4;
+
+    move-result-object v0
+
+    sput-object v0, Lj;->c:Lxa4;
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final a()Lv64;
-    .locals 0
-
-    sget-object p0, Lj;->b:Lk;
-
-    return-object p0
-.end method
-
-.method public final b(Ljava/lang/String;Lr64;Landroid/os/Bundle;)Ly64;
-    .locals 8
-
-    sget-object p0, Lj;->b:Lk;
-
-    iget-object p0, p0, Lv64;->a:Ljava/util/LinkedHashSet;
-
-    invoke-interface {p0, p2}, Ljava/util/Collection;->contains(Ljava/lang/Object;)Z
-
-    move-result p0
-
-    if-nez p0, :cond_0
-
-    const/4 p0, 0x0
-
-    return-object p0
-
-    :cond_0
-    sget-object p0, Lk;->c:Lr64;
-
-    invoke-virtual {p2, p0}, Lr64;->equals(Ljava/lang/Object;)Z
-
-    move-result p0
-
-    if-eqz p0, :cond_1
-
-    new-instance v6, Li;
-
-    const/4 p0, 0x0
-
-    invoke-direct {v6, p0}, Li;-><init>(I)V
-
-    new-instance v0, Ly64;
-
-    const/4 v5, 0x0
-
-    const/16 v7, 0x10
-
-    const/4 v4, 0x1
-
-    move-object v1, p1
-
-    move-object v2, p2
-
-    move-object v3, p3
-
-    invoke-direct/range {v0 .. v7}, Ly64;-><init>(Ljava/lang/String;Lr64;Landroid/os/Bundle;ILw64;Lx64;I)V
-
-    return-object v0
-
-    :cond_1
-    move-object v2, p2
-
-    new-instance p0, Ljava/lang/IllegalStateException;
-
-    const-string p1, "Unknown route="
-
-    invoke-static {p1, v2}, Lzt1;->f(Ljava/lang/String;Lr64;)Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p0
 .end method

@@ -1,54 +1,23 @@
-.class public final synthetic Lfec;
+.class public interface abstract Lfec;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ljava/lang/Runnable;
 
-
-# instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Lorg/webrtc/RenderSynchronizer;
-
-
-# direct methods
-.method public synthetic constructor <init>(Lorg/webrtc/RenderSynchronizer;I)V
+# virtual methods
+.method public log(Ljava/lang/String;Ljava/lang/String;)V
     .locals 0
-
-    iput p2, p0, Lfec;->a:I
-
-    iput-object p1, p0, Lfec;->b:Lorg/webrtc/RenderSynchronizer;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
-
-# virtual methods
-.method public final run()V
-    .locals 1
-
-    iget v0, p0, Lfec;->a:I
-
-    iget-object p0, p0, Lfec;->b:Lorg/webrtc/RenderSynchronizer;
-
-    packed-switch v0, :pswitch_data_0
-
-    invoke-static {p0}, Lorg/webrtc/RenderSynchronizer;->c(Lorg/webrtc/RenderSynchronizer;)V
+.method public logException(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    .locals 0
 
     return-void
+.end method
 
-    :pswitch_0
-    invoke-static {p0}, Lorg/webrtc/RenderSynchronizer;->a(Lorg/webrtc/RenderSynchronizer;)V
+.method public reportException(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    .locals 0
 
     return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
 .end method

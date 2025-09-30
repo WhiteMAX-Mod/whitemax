@@ -3,26 +3,22 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lv56;
+.implements Landroid/view/View$OnClickListener;
 
 
 # instance fields
 .field public final synthetic a:I
 
-.field public final synthetic b:Landroid/content/Context;
-
-.field public final synthetic c:Llo1;
+.field public final synthetic b:Lgo1;
 
 
 # direct methods
-.method public synthetic constructor <init>(Landroid/content/Context;Llo1;I)V
+.method public synthetic constructor <init>(Lgo1;I)V
     .locals 0
 
-    iput p3, p0, Leo1;->a:I
+    iput p2, p0, Leo1;->a:I
 
-    iput-object p1, p0, Leo1;->b:Landroid/content/Context;
-
-    iput-object p2, p0, Leo1;->c:Llo1;
+    iput-object p1, p0, Leo1;->b:Lgo1;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -31,128 +27,64 @@
 
 
 # virtual methods
-.method public final invoke()Ljava/lang/Object;
-    .locals 5
+.method public final onClick(Landroid/view/View;)V
+    .locals 1
 
-    iget v0, p0, Leo1;->a:I
+    iget p1, p0, Leo1;->a:I
 
-    packed-switch v0, :pswitch_data_0
+    iget-object p0, p0, Leo1;->b:Lgo1;
 
-    iget-object v0, p0, Leo1;->b:Landroid/content/Context;
+    packed-switch p1, :pswitch_data_0
 
-    iget-object p0, p0, Leo1;->c:Llo1;
+    iget-object p0, p0, Lgo1;->K0:Lfo1;
 
-    invoke-static {v0, p0}, Llo1;->u(Landroid/content/Context;Llo1;)Lgp1;
+    if-eqz p0, :cond_0
+
+    check-cast p0, Loj1;
+
+    iget-object p0, p0, Loj1;->a:Lone/me/calls/ui/ui/call/CallScreen;
+
+    sget-object p1, Lone/me/calls/ui/ui/call/CallScreen;->N0:Lad4;
+
+    invoke-virtual {p0}, Lone/me/calls/ui/ui/call/CallScreen;->I0()Lqm1;
 
     move-result-object p0
 
-    return-object p0
+    iget-object p0, p0, Lqm1;->r0:Liq1;
+
+    invoke-virtual {p0}, Liq1;->h()V
+
+    :cond_0
+    return-void
 
     :pswitch_0
-    new-instance v0, Lxkd;
+    iget-object p1, p0, Lgo1;->K0:Lfo1;
 
-    iget-object v1, p0, Leo1;->b:Landroid/content/Context;
+    if-eqz p1, :cond_1
 
-    invoke-direct {v0, v1}, Lxkd;-><init>(Landroid/content/Context;)V
+    iget-object p0, p0, Lgo1;->P0:Lxg1;
 
-    iget-object v1, v0, Lxkd;->b:Lwkd;
+    check-cast p1, Loj1;
 
-    const/4 v2, 0x0
+    iget-object p1, p1, Loj1;->a:Lone/me/calls/ui/ui/call/CallScreen;
 
-    invoke-virtual {v1, v2}, Lwkd;->d(Z)V
+    sget-object v0, Lone/me/calls/ui/ui/call/CallScreen;->N0:Lad4;
 
-    sget-object v2, Lqp4;->q0:Lap9;
+    invoke-virtual {p1}, Lone/me/calls/ui/ui/call/CallScreen;->I0()Lqm1;
 
-    iget-object p0, p0, Leo1;->c:Llo1;
+    move-result-object p1
 
-    invoke-virtual {v2, p0}, Lap9;->j(Landroid/view/View;)Lk9a;
+    iget-object p1, p1, Lqm1;->r0:Liq1;
 
-    move-result-object p0
+    invoke-virtual {p1, p0}, Liq1;->f(Lxg1;)V
 
-    iget-object p0, p0, Lk9a;->c:Lyha;
+    :cond_1
+    return-void
 
-    invoke-virtual {v0, p0}, Lxkd;->onThemeChanged(Lyha;)V
-
-    const/16 p0, 0x1e
-
-    int-to-float p0, p0
-
-    invoke-static {}, Lgk4;->d()Landroid/content/res/Resources;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
-
-    move-result-object v2
-
-    iget v2, v2, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr p0, v2
-
-    invoke-static {p0}, Lkhg;->x(F)I
-
-    move-result p0
-
-    iput p0, v0, Lxkd;->o:I
-
-    iget-object p0, v1, Lwkd;->q0:Lvkd;
-
-    sget-object v2, Lwkd;->w0:[Lbc7;
-
-    const/4 v3, 0x2
-
-    aget-object v3, v2, v3
-
-    sget-object v4, Lukd;->b:Lukd;
-
-    invoke-virtual {p0, v1, v3, v4}, Lu2;->g0(Ljava/lang/Object;Lbc7;Ljava/lang/Object;)V
-
-    iget-object p0, v1, Lwkd;->r0:Lvkd;
-
-    const/4 v3, 0x3
-
-    aget-object v2, v2, v3
-
-    const-wide/16 v3, 0x1388
-
-    invoke-static {v3, v4}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v3
-
-    invoke-virtual {p0, v1, v2, v3}, Lu2;->g0(Ljava/lang/Object;Lbc7;Ljava/lang/Object;)V
-
-    const/16 p0, 0xff
-
-    invoke-virtual {v0, p0}, Lxkd;->setAlpha(I)V
-
-    return-object v0
-
-    :pswitch_1
-    iget-object v0, p0, Leo1;->b:Landroid/content/Context;
-
-    iget-object p0, p0, Leo1;->c:Llo1;
-
-    invoke-static {v0, p0}, Llo1;->B(Landroid/content/Context;Llo1;)Landroid/widget/ImageView;
-
-    move-result-object p0
-
-    return-object p0
-
-    :pswitch_2
-    iget-object v0, p0, Leo1;->b:Landroid/content/Context;
-
-    iget-object p0, p0, Leo1;->c:Llo1;
-
-    invoke-static {v0, p0}, Llo1;->C(Landroid/content/Context;Llo1;)Landroid/widget/ImageView;
-
-    move-result-object p0
-
-    return-object p0
+    nop
 
     :pswitch_data_0
     .packed-switch 0x0
-        :pswitch_2
-        :pswitch_1
         :pswitch_0
     .end packed-switch
 .end method

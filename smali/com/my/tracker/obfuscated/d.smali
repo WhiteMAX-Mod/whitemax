@@ -126,11 +126,11 @@
     return-void
 .end method
 
-.method private a(ILcom/my/tracker/obfuscated/p0;Ljava/lang/String;Lcp;)V
+.method private a(ILcom/my/tracker/obfuscated/p0;Ljava/lang/String;Lmp;)V
     .locals 1
 
     .line 2
-    iget v0, p4, Lcp;->b:I
+    iget v0, p4, Lmp;->b:I
 
     if-eq v0, p1, :cond_0
 
@@ -139,7 +139,7 @@
 
     .line 4
     :cond_0
-    iget-object p1, p4, Lcp;->a:Ljava/lang/String;
+    iget-object p1, p4, Lmp;->a:Ljava/lang/String;
 
     .line 5
     invoke-virtual {p1, p3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -222,48 +222,48 @@
     throw p0
 .end method
 
-.method public static synthetic a(Lcom/my/tracker/obfuscated/d;ILcom/my/tracker/obfuscated/p0;Ljava/lang/String;Lcp;)V
+.method public static synthetic a(Lcom/my/tracker/obfuscated/d;ILcom/my/tracker/obfuscated/p0;Ljava/lang/String;Lmp;)V
     .locals 0
 
     .line 1
-    invoke-direct {p0, p1, p2, p3, p4}, Lcom/my/tracker/obfuscated/d;->a(ILcom/my/tracker/obfuscated/p0;Ljava/lang/String;Lcp;)V
+    invoke-direct {p0, p1, p2, p3, p4}, Lcom/my/tracker/obfuscated/d;->a(ILcom/my/tracker/obfuscated/p0;Ljava/lang/String;Lmp;)V
 
     return-void
 .end method
 
 .method private b(Landroid/content/Context;)V
-    .locals 5
+    .locals 7
 
     invoke-static {p1}, Lcom/my/tracker/obfuscated/p0;->a(Landroid/content/Context;)Lcom/my/tracker/obfuscated/p0;
 
-    move-result-object v0
+    move-result-object v3
 
-    invoke-virtual {v0}, Lcom/my/tracker/obfuscated/p0;->c()Ljava/lang/String;
+    invoke-virtual {v3}, Lcom/my/tracker/obfuscated/p0;->c()Ljava/lang/String;
 
-    move-result-object v1
+    move-result-object v4
 
-    invoke-virtual {v0}, Lcom/my/tracker/obfuscated/p0;->d()I
+    invoke-virtual {v3}, Lcom/my/tracker/obfuscated/p0;->d()I
 
     move-result v2
 
-    invoke-static {v1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+    invoke-static {v4}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
-    move-result v3
+    move-result v0
 
-    if-nez v3, :cond_0
+    if-nez v0, :cond_0
 
-    iget-object v3, p0, Lcom/my/tracker/obfuscated/d;->a:Ljava/util/concurrent/atomic/AtomicReference;
+    iget-object v0, p0, Lcom/my/tracker/obfuscated/d;->a:Ljava/util/concurrent/atomic/AtomicReference;
 
-    new-instance v4, Lcom/my/tracker/obfuscated/c;
+    new-instance v1, Lcom/my/tracker/obfuscated/c;
 
-    invoke-direct {v4, v1, v2}, Lcom/my/tracker/obfuscated/c;-><init>(Ljava/lang/String;I)V
+    invoke-direct {v1, v4, v2}, Lcom/my/tracker/obfuscated/c;-><init>(Ljava/lang/String;I)V
 
-    invoke-virtual {v3, v4}, Ljava/util/concurrent/atomic/AtomicReference;->set(Ljava/lang/Object;)V
+    invoke-virtual {v0, v1}, Ljava/util/concurrent/atomic/AtomicReference;->set(Ljava/lang/Object;)V
 
     :cond_0
-    sget-boolean v3, Lcom/my/tracker/obfuscated/d$a;->a:Z
+    sget-boolean v0, Lcom/my/tracker/obfuscated/d$a;->a:Z
 
-    if-nez v3, :cond_1
+    if-nez v0, :cond_1
 
     const-string p0, "AppSetIdProvider: app set library is not available"
 
@@ -274,9 +274,9 @@
     :cond_1
     invoke-static {}, Lcom/my/tracker/obfuscated/h;->a()Ljava/util/concurrent/Executor;
 
-    move-result-object v3
+    move-result-object v6
 
-    if-nez v3, :cond_2
+    if-nez v6, :cond_2
 
     const-string p0, "AppSetIdProvider: background executor is not found"
 
@@ -286,33 +286,55 @@
 
     :cond_2
     :try_start_0
-    new-instance v4, Lj6c;
+    new-instance v0, Lz0b;
 
-    invoke-direct {v4, p1}, Lj6c;-><init>(Landroid/content/Context;)V
+    const/16 v1, 0x14
 
-    invoke-virtual {v4}, Lj6c;->i()Lmlg;
+    invoke-direct {v0, p1, v1}, Lz0b;-><init>(Landroid/content/Context;I)V
+
+    invoke-virtual {v0}, Lz0b;->l()Lz8h;
 
     move-result-object p1
 
-    new-instance v4, Lad0;
-
-    invoke-direct {v4, p0, v2, v0, v1}, Lad0;-><init>(Ljava/lang/Object;ILjava/lang/Object;Ljava/lang/Object;)V
-
-    invoke-virtual {p1, v3, v4}, Lmlg;->d(Ljava/util/concurrent/Executor;Lo1a;)Lmlg;
+    new-instance v0, Lnc0;
     :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_1
+
+    const/4 v5, 0x5
+
+    move-object v1, p0
+
+    :try_start_1
+    invoke-direct/range {v0 .. v5}, Lnc0;-><init>(Ljava/lang/Object;ILjava/lang/Object;Ljava/lang/Object;I)V
+
+    invoke-virtual {p1, v6, v0}, Lz8h;->d(Ljava/util/concurrent/Executor;Lu9a;)Lz8h;
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    goto :goto_2
+
+    :catchall_0
+    move-exception v0
+
+    :goto_0
+    move-object p0, v0
+
+    goto :goto_1
+
+    :catchall_1
+    move-exception v0
+
+    move-object v1, p0
 
     goto :goto_0
 
-    :catchall_0
-    move-exception p1
+    :goto_1
+    const-string p1, "AppSetIdProvider: error occurred while trying to access app set id info"
 
-    const-string v0, "AppSetIdProvider: error occurred while trying to access app set id info"
+    invoke-static {p1, p0}, Lcom/my/tracker/obfuscated/y0;->a(Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    invoke-static {v0, p1}, Lcom/my/tracker/obfuscated/y0;->a(Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    :goto_0
-    invoke-direct {p0}, Lcom/my/tracker/obfuscated/d;->a()V
+    :goto_2
+    invoke-direct {v1}, Lcom/my/tracker/obfuscated/d;->a()V
 
     return-void
 .end method

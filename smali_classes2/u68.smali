@@ -1,189 +1,33 @@
-.class public final enum Lu68;
-.super Ljava/lang/Enum;
+.class public final Lu68;
+.super Lx7g;
 .source "SourceFile"
 
 
-# static fields
-.field public static final X:Ljava/util/ArrayList;
-
-.field public static final synthetic Y:[Lu68;
-
-.field public static final synthetic Z:Ln25;
-
-.field public static final o:Lisc;
-
-
 # instance fields
-.field public final a:I
+.field public final b:Lv85;
 
-.field public final b:I
-
-.field public final c:I
+.field public final c:Lv85;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 9
+.method public constructor <init>()V
+    .locals 2
 
-    new-instance v0, Lu68;
+    invoke-direct {p0}, Lx7g;-><init>()V
 
-    sget v3, Ldfa;->A:I
-
-    sget v4, Lefa;->d:I
+    new-instance v0, Lv85;
 
     const/4 v1, 0x0
 
-    const/4 v2, 0x0
+    invoke-direct {v0, v1}, Lv85;-><init>(I)V
 
-    const-string v5, "UNLIMITED"
+    iput-object v0, p0, Lu68;->b:Lv85;
 
-    invoke-direct/range {v0 .. v5}, Lu68;-><init>(IIIILjava/lang/String;)V
+    new-instance v0, Lv85;
 
-    new-instance v1, Lu68;
+    invoke-direct {v0, v1}, Lv85;-><init>(I)V
 
-    sget v4, Ldfa;->y:I
-
-    sget v5, Lefa;->c:I
-
-    const/4 v2, 0x1
-
-    const/4 v3, 0x1
-
-    const-string v6, "SIX_MONTH"
-
-    invoke-direct/range {v1 .. v6}, Lu68;-><init>(IIIILjava/lang/String;)V
-
-    new-instance v2, Lu68;
-
-    sget v5, Ldfa;->w:I
-
-    sget v6, Lefa;->a:I
-
-    const/4 v3, 0x2
-
-    const/4 v4, 0x2
-
-    const-string v7, "ONE_MONTH"
-
-    invoke-direct/range {v2 .. v7}, Lu68;-><init>(IIIILjava/lang/String;)V
-
-    new-instance v3, Lu68;
-
-    sget v6, Ldfa;->x:I
-
-    sget v7, Lefa;->b:I
-
-    const/4 v4, 0x3
-
-    const/4 v5, 0x3
-
-    const-string v8, "ONE_WEEK"
-
-    invoke-direct/range {v3 .. v8}, Lu68;-><init>(IIIILjava/lang/String;)V
-
-    filled-new-array {v0, v1, v2, v3}, [Lu68;
-
-    move-result-object v0
-
-    sput-object v0, Lu68;->Y:[Lu68;
-
-    new-instance v1, Ln25;
-
-    invoke-direct {v1, v0}, Ln25;-><init>([Ljava/lang/Enum;)V
-
-    sput-object v1, Lu68;->Z:Ln25;
-
-    new-instance v0, Lisc;
-
-    const/16 v2, 0xc
-
-    invoke-direct {v0, v2}, Lisc;-><init>(I)V
-
-    sput-object v0, Lu68;->o:Lisc;
-
-    new-instance v0, Ljava/util/ArrayList;
-
-    const/16 v2, 0xa
-
-    invoke-static {v1, v2}, Lr43;->k0(Ljava/lang/Iterable;I)I
-
-    move-result v2
-
-    invoke-direct {v0, v2}, Ljava/util/ArrayList;-><init>(I)V
-
-    new-instance v2, Lv1;
-
-    const/4 v3, 0x0
-
-    invoke-direct {v2, v3, v1}, Lv1;-><init>(ILjava/lang/Object;)V
-
-    :goto_0
-    invoke-virtual {v2}, Lv1;->hasNext()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    invoke-virtual {v2}, Lv1;->next()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lu68;
-
-    iget v1, v1, Lu68;->b:I
-
-    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    goto :goto_0
-
-    :cond_0
-    sput-object v0, Lu68;->X:Ljava/util/ArrayList;
+    iput-object v0, p0, Lu68;->c:Lv85;
 
     return-void
-.end method
-
-.method public constructor <init>(IIIILjava/lang/String;)V
-    .locals 0
-
-    invoke-direct {p0, p5, p1}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    iput p2, p0, Lu68;->a:I
-
-    iput p3, p0, Lu68;->b:I
-
-    iput p4, p0, Lu68;->c:I
-
-    return-void
-.end method
-
-.method public static valueOf(Ljava/lang/String;)Lu68;
-    .locals 1
-
-    const-class v0, Lu68;
-
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
-
-    move-result-object p0
-
-    check-cast p0, Lu68;
-
-    return-object p0
-.end method
-
-.method public static values()[Lu68;
-    .locals 1
-
-    sget-object v0, Lu68;->Y:[Lu68;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, [Lu68;
-
-    return-object v0
 .end method

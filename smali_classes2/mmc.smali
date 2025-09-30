@@ -1,78 +1,102 @@
-.class public final synthetic Lmmc;
-.super Ljava/lang/Object;
+.class public final Lmmc;
+.super Lure;
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/lang/Runnable;
+.implements Lpc6;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public synthetic X:Ljava/lang/Object;
 
-.field public final synthetic b:Lnmc;
+.field public final synthetic Y:Lmcg;
 
-.field public final synthetic c:J
+.field public final synthetic Z:Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lnmc;JI)V
+.method public constructor <init>(Lkotlin/coroutines/Continuation;Lmcg;Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;)V
     .locals 0
 
-    iput p4, p0, Lmmc;->a:I
+    iput-object p2, p0, Lmmc;->Y:Lmcg;
 
-    iput-object p1, p0, Lmmc;->b:Lnmc;
+    iput-object p3, p0, Lmmc;->Z:Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;
 
-    iput-wide p2, p0, Lmmc;->c:J
+    const/4 p2, 0x2
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p2, p1}, Lure;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
-    .locals 5
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-    iget v0, p0, Lmmc;->a:I
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-    packed-switch v0, :pswitch_data_0
-
-    new-instance v0, Lmmc;
-
-    const/4 v1, 0x0
-
-    iget-object v2, p0, Lmmc;->b:Lnmc;
-
-    iget-wide v3, p0, Lmmc;->c:J
-
-    invoke-direct {v0, v2, v3, v4, v1}, Lmmc;-><init>(Lnmc;JI)V
-
-    iget-object p0, v2, Lnmc;->f:Landroid/os/Handler;
-
-    invoke-virtual {p0, v0}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
-
-    return-void
-
-    :pswitch_0
-    iget-object v0, p0, Lmmc;->b:Lnmc;
-
-    iget-object v1, v0, Lnmc;->m:Ljava/util/LinkedList;
-
-    iget-wide v2, p0, Lmmc;->c:J
-
-    invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    invoke-virtual {p0, p1, p2}, Lmmc;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
     move-result-object p0
 
-    invoke-virtual {v1, p0}, Ljava/util/LinkedList;->offer(Ljava/lang/Object;)Z
+    check-cast p0, Lmmc;
 
-    invoke-virtual {v0}, Lnmc;->b()V
+    sget-object p1, Lylf;->a:Lylf;
 
-    return-void
+    invoke-virtual {p0, p1}, Lmmc;->o(Ljava/lang/Object;)Ljava/lang/Object;
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    return-object p1
+.end method
+
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
+
+    new-instance v0, Lmmc;
+
+    iget-object v1, p0, Lmmc;->Y:Lmcg;
+
+    iget-object p0, p0, Lmmc;->Z:Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;
+
+    invoke-direct {v0, p2, v1, p0}, Lmmc;-><init>(Lkotlin/coroutines/Continuation;Lmcg;Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;)V
+
+    iput-object p1, v0, Lmmc;->X:Ljava/lang/Object;
+
+    return-object v0
+.end method
+
+.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
+
+    invoke-static {p1}, Lqe5;->V(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Lmmc;->X:Ljava/lang/Object;
+
+    check-cast p1, Let7;
+
+    sget-object v0, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->e1:[Lxi7;
+
+    iget-object v0, p0, Lmmc;->Z:Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;
+
+    invoke-virtual {v0}, Lone/me/sdk/messagewrite/recordcontrols/RecordControlsWidget;->T0()Lwlc;
+
+    move-result-object v0
+
+    iget-object v0, v0, Lwlc;->y0:Liic;
+
+    iget-object v0, v0, Liic;->a:Lrce;
+
+    invoke-interface {v0}, Lrce;->getValue()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/Long;
+
+    iget-object p0, p0, Lmmc;->Y:Lmcg;
+
+    invoke-virtual {p0, v0, p1}, Lmcg;->e(Ljava/lang/Long;Let7;)V
+
+    sget-object p0, Lylf;->a:Lylf;
+
+    return-object p0
 .end method

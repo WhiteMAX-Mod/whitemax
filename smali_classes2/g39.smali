@@ -1,100 +1,84 @@
 .class public final Lg39;
-.super Lqde;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Ll66;
+.implements Ljava/io/Serializable;
 
 
 # instance fields
-.field public final synthetic X:Lh49;
+.field public final a:J
+
+.field public final b:Lyx8;
+
+.field public final c:Ljava/lang/String;
+
+.field public final o:Ljava/util/List;
 
 
 # direct methods
-.method public constructor <init>(Lh49;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(Ljava/lang/String;Ljava/util/ArrayList;JLyx8;)V
     .locals 0
 
-    iput-object p1, p0, Lg39;->X:Lh49;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 p1, 0x2
+    iput-object p1, p0, Lg39;->c:Ljava/lang/String;
 
-    invoke-direct {p0, p1, p2}, Lqde;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-object p2, p0, Lg39;->o:Ljava/util/List;
+
+    iput-wide p3, p0, Lg39;->a:J
+
+    iput-object p5, p0, Lg39;->b:Lyx8;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final toString()Ljava/lang/String;
+    .locals 5
 
-    check-cast p1, Lox3;
+    iget-object v0, p0, Lg39;->c:Ljava/lang/String;
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    invoke-static {v0}, Lm7g;->s(Ljava/lang/CharSequence;)Ljava/lang/String;
 
-    invoke-virtual {p0, p1, p2}, Lg39;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    move-result-object v0
+
+    iget-object v1, p0, Lg39;->o:Ljava/util/List;
+
+    invoke-static {v1}, Lf4h;->h(Ljava/util/Collection;)I
+
+    move-result v1
+
+    const-string v2, "\', highlights="
+
+    const-string v3, ", chatId=\'"
+
+    const-string v4, "{, feedback=\'"
+
+    invoke-static {v1, v4, v0, v2, v3}, Lyv7;->m(ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    iget-wide v1, p0, Lg39;->a:J
+
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    const-string v1, "\', message="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object p0, p0, Lg39;->b:Lyx8;
+
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string p0, "}"
+
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p0
-
-    check-cast p0, Lg39;
-
-    sget-object p1, Le5f;->a:Le5f;
-
-    invoke-virtual {p0, p1}, Lg39;->o(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p1
-.end method
-
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 0
-
-    new-instance p1, Lg39;
-
-    iget-object p0, p0, Lg39;->X:Lh49;
-
-    invoke-direct {p1, p0, p2}, Lg39;-><init>(Lh49;Lkotlin/coroutines/Continuation;)V
-
-    return-object p1
-.end method
-
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 2
-
-    invoke-static {p1}, Lsgg;->Z(Ljava/lang/Object;)V
-
-    sget-object p1, Lh49;->D1:[Lbc7;
-
-    iget-object p0, p0, Lg39;->X:Lh49;
-
-    iget-object p1, p0, Lh49;->E0:Lje7;
-
-    invoke-interface {p1}, Lje7;->getValue()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Lmfa;
-
-    new-instance v0, Laga;
-
-    sget v1, Lanc;->n:I
-
-    invoke-direct {v0, v1}, Laga;-><init>(I)V
-
-    invoke-virtual {p1, v0}, Lmfa;->e(Lega;)V
-
-    sget v0, Lgba;->z0:I
-
-    new-instance v1, Lhoe;
-
-    invoke-direct {v1, v0}, Lhoe;-><init>(I)V
-
-    invoke-virtual {p1, v1}, Lmfa;->g(Lmoe;)V
-
-    invoke-virtual {p0, p1}, Lh49;->L(Lmfa;)V
-
-    invoke-virtual {p1}, Lmfa;->i()Llfa;
-
-    sget-object p0, Le5f;->a:Le5f;
 
     return-object p0
 .end method

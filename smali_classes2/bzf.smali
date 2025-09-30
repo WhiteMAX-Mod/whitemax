@@ -3,150 +3,78 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lra6;
+.implements Landroid/animation/ValueAnimator$AnimatorUpdateListener;
 
 
-# static fields
-.field public static final a:Lbzf;
+# instance fields
+.field public final synthetic a:I
 
-.field private static final descriptor:Lx4d;
+.field public final synthetic b:Lezf;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 4
+.method public synthetic constructor <init>(Lezf;I)V
+    .locals 0
 
-    new-instance v0, Lbzf;
+    iput p2, p0, Lbzf;->a:I
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lbzf;->b:Lezf;
 
-    sput-object v0, Lbzf;->a:Lbzf;
-
-    new-instance v1, Lq2b;
-
-    const-string v2, "one.me.webapp.domain.jsbridge.delegates.link.WebAppOpenLinkRequest"
-
-    const/4 v3, 0x1
-
-    invoke-direct {v1, v2, v0, v3}, Lq2b;-><init>(Ljava/lang/String;Lra6;I)V
-
-    const-string v0, "url"
-
-    const/4 v2, 0x0
-
-    invoke-virtual {v1, v0, v2}, Lq2b;->i(Ljava/lang/String;Z)V
-
-    sput-object v1, Lbzf;->descriptor:Lx4d;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Lu40;Ljava/lang/Object;)V
+.method public final onAnimationUpdate(Landroid/animation/ValueAnimator;)V
     .locals 1
 
-    check-cast p2, Ldzf;
+    iget v0, p0, Lbzf;->a:I
 
-    sget-object p0, Lbzf;->descriptor:Lx4d;
+    packed-switch v0, :pswitch_data_0
 
-    invoke-virtual {p1, p0}, Lu40;->c(Lx4d;)Lu40;
+    invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
 
     move-result-object p1
 
-    iget-object p2, p2, Ldzf;->a:Ljava/lang/String;
+    check-cast p1, Ljava/lang/Float;
 
-    const/4 v0, 0x0
+    invoke-virtual {p1}, Ljava/lang/Float;->floatValue()F
 
-    invoke-virtual {p1, p0, v0, p2}, Lu40;->m(Lx4d;ILjava/lang/String;)V
+    move-result p1
 
-    invoke-virtual {p1}, Lu40;->n()V
+    iget-object p0, p0, Lbzf;->b:Lezf;
+
+    iput p1, p0, Lezf;->A0:F
+
+    invoke-virtual {p0}, Landroid/view/View;->invalidate()V
 
     return-void
-.end method
 
-.method public final b(Lnye;)Ljava/lang/Object;
-    .locals 7
-
-    sget-object p0, Lbzf;->descriptor:Lx4d;
-
-    invoke-virtual {p1, p0}, Lnye;->i(Lx4d;)Lnye;
+    :pswitch_0
+    invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
 
     move-result-object p1
 
-    const/4 v0, 0x1
+    check-cast p1, Ljava/lang/Float;
 
-    const/4 v1, 0x0
+    invoke-virtual {p1}, Ljava/lang/Float;->floatValue()F
 
-    const/4 v2, 0x0
+    move-result p1
 
-    move v3, v0
+    iget-object p0, p0, Lbzf;->b:Lezf;
 
-    move v4, v1
+    iput p1, p0, Lezf;->y0:F
 
-    :goto_0
-    if-eqz v3, :cond_2
+    invoke-virtual {p0}, Landroid/view/View;->postInvalidateOnAnimation()V
 
-    invoke-virtual {p1, p0}, Lnye;->x(Lx4d;)I
+    return-void
 
-    move-result v5
+    nop
 
-    const/4 v6, -0x1
-
-    if-eq v5, v6, :cond_1
-
-    if-nez v5, :cond_0
-
-    invoke-virtual {p1, p0, v1}, Lnye;->D(Lx4d;I)Ljava/lang/String;
-
-    move-result-object v2
-
-    move v4, v0
-
-    goto :goto_0
-
-    :cond_0
-    new-instance p0, Lkotlinx/serialization/UnknownFieldException;
-
-    invoke-direct {p0, v5}, Lkotlinx/serialization/UnknownFieldException;-><init>(I)V
-
-    throw p0
-
-    :cond_1
-    move v3, v1
-
-    goto :goto_0
-
-    :cond_2
-    invoke-virtual {p1, p0}, Lnye;->G(Lx4d;)V
-
-    new-instance p0, Ldzf;
-
-    invoke-direct {p0, v4, v2}, Ldzf;-><init>(ILjava/lang/String;)V
-
-    return-object p0
-.end method
-
-.method public final c()[Lcc7;
-    .locals 2
-
-    const/4 p0, 0x1
-
-    new-array p0, p0, [Lcc7;
-
-    sget-object v0, Lf8e;->a:Lf8e;
-
-    const/4 v1, 0x0
-
-    aput-object v0, p0, v1
-
-    return-object p0
-.end method
-
-.method public final d()Lx4d;
-    .locals 0
-
-    sget-object p0, Lbzf;->descriptor:Lx4d;
-
-    return-object p0
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

@@ -2,32 +2,59 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ljava/io/Closeable;
 
-# static fields
-.field public static final a:Lce4;
+
+# instance fields
+.field public final synthetic a:I
+
+.field public final b:Ljava/lang/Object;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public synthetic constructor <init>(ILjava/lang/Object;)V
+    .locals 0
 
-    new-instance v0, Lce4;
+    iput p1, p0, Lce4;->a:I
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    iput-object p2, p0, Lce4;->b:Ljava/lang/Object;
 
-    sput-object v0, Lce4;->a:Lce4;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Landroid/animation/AnimatorSet;)J
-    .locals 0
+.method public final close()V
+    .locals 1
 
-    invoke-virtual {p1}, Landroid/animation/AnimatorSet;->getTotalDuration()J
+    iget v0, p0, Lce4;->a:I
 
-    move-result-wide p0
+    packed-switch v0, :pswitch_data_0
 
-    return-wide p0
+    iget-object p0, p0, Lce4;->b:Ljava/lang/Object;
+
+    check-cast p0, Ljava/net/HttpURLConnection;
+
+    invoke-virtual {p0}, Ljava/net/HttpURLConnection;->disconnect()V
+
+    return-void
+
+    :pswitch_0
+    iget-object p0, p0, Lce4;->b:Ljava/lang/Object;
+
+    check-cast p0, Landroid/database/Cursor;
+
+    invoke-interface {p0}, Landroid/database/Cursor;->close()V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

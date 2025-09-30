@@ -1,27 +1,34 @@
 .class public final Lcle;
-.super Ljava/lang/Object;
+.super Lpg7;
 .source "SourceFile"
+
+# interfaces
+.implements Ldle;
+
+
+# instance fields
+.field public final c:Ljava/lang/String;
+
+.field public final d:Ljava/lang/String;
+
+.field public final e:Ljava/lang/String;
+
+.field public final f:Z
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;)V
+.method public constructor <init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Z)V
     .locals 0
 
-    sget-object p1, Lxy6;->A0:Ljava/lang/String;
+    invoke-direct {p0}, Lpg7;-><init>()V
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lcle;->c:Ljava/lang/String;
 
-    new-instance p0, Ljava/util/ArrayList;
+    iput-object p2, p0, Lcle;->d:Ljava/lang/String;
 
-    invoke-direct {p0}, Ljava/util/ArrayList;-><init>()V
+    iput-object p3, p0, Lcle;->e:Ljava/lang/String;
 
-    new-instance p0, Ljava/util/ArrayList;
-
-    invoke-direct {p0}, Ljava/util/ArrayList;-><init>()V
-
-    new-instance p0, Ljava/util/ArrayList;
-
-    invoke-direct {p0}, Ljava/util/ArrayList;-><init>()V
+    iput-boolean p4, p0, Lcle;->f:Z
 
     return-void
 .end method

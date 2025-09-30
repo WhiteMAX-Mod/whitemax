@@ -1,55 +1,82 @@
 .class public final Lrte;
-.super Lbu3;
+.super Loi0;
 .source "SourceFile"
 
 
 # instance fields
-.field public X:Lg0a;
-
-.field public Y:J
-
-.field public Z:I
-
-.field public o:Lwte;
-
-.field public synthetic o0:Ljava/lang/Object;
-
-.field public final synthetic p0:Lwte;
-
-.field public q0:I
+.field public final b:Z
 
 
 # direct methods
-.method public constructor <init>(Lwte;Lbu3;)V
+.method public constructor <init>(Z)V
     .locals 0
 
-    iput-object p1, p0, Lrte;->p0:Lwte;
+    invoke-direct {p0}, Loi0;-><init>()V
 
-    invoke-direct {p0, p2}, Lbu3;-><init>(Lkotlin/coroutines/Continuation;)V
+    iput-boolean p1, p0, Lrte;->b:Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final equals(Ljava/lang/Object;)Z
     .locals 1
 
-    iput-object p1, p0, Lrte;->o0:Ljava/lang/Object;
+    if-ne p0, p1, :cond_0
 
-    iget p1, p0, Lrte;->q0:I
+    goto :goto_1
 
-    const/high16 v0, -0x80000000
+    :cond_0
+    instance-of v0, p1, Lrte;
 
-    or-int/2addr p1, v0
+    if-nez v0, :cond_1
 
-    iput p1, p0, Lrte;->q0:I
+    goto :goto_0
 
-    iget-object p1, p0, Lrte;->p0:Lwte;
+    :cond_1
+    check-cast p1, Lrte;
 
-    const/4 v0, 0x0
+    iget-boolean p0, p0, Lrte;->b:Z
 
-    invoke-virtual {p1, v0, p0}, Lwte;->l(Lg0a;Lbu3;)Ljava/lang/Object;
+    iget-boolean p1, p1, Lrte;->b:Z
+
+    if-eq p0, p1, :cond_2
+
+    :goto_0
+    const/4 p0, 0x0
+
+    return p0
+
+    :cond_2
+    :goto_1
+    const/4 p0, 0x1
+
+    return p0
+.end method
+
+.method public final hashCode()I
+    .locals 0
+
+    iget-boolean p0, p0, Lrte;->b:Z
+
+    invoke-static {p0}, Ljava/lang/Boolean;->hashCode(Z)I
+
+    move-result p0
+
+    return p0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 2
+
+    const-string v0, "SyncMutedChatsEvent(isSuccessful="
+
+    const-string v1, ")"
+
+    iget-boolean p0, p0, Lrte;->b:Z
+
+    invoke-static {v0, v1, p0}, Lz7e;->r(Ljava/lang/String;Ljava/lang/String;Z)Ljava/lang/String;
 
     move-result-object p0
 

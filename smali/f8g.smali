@@ -1,84 +1,61 @@
 .class public final Lf8g;
-.super Landroid/os/Binder;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public final c:Lzvd;
+.field public final a:Ljava/util/LinkedHashMap;
 
 
 # direct methods
-.method public constructor <init>(Lzvd;)V
-    .locals 0
+.method public constructor <init>()V
+    .locals 1
 
-    invoke-direct {p0}, Landroid/os/Binder;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lf8g;->c:Lzvd;
+    new-instance v0, Ljava/util/LinkedHashMap;
+
+    invoke-direct {v0}, Ljava/util/LinkedHashMap;-><init>()V
+
+    iput-object v0, p0, Lf8g;->a:Ljava/util/LinkedHashMap;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Lg8g;)V
-    .locals 5
+.method public final a()V
+    .locals 2
 
-    invoke-static {}, Landroid/os/Binder;->getCallingUid()I
+    iget-object p0, p0, Lf8g;->a:Ljava/util/LinkedHashMap;
 
-    move-result v0
+    invoke-virtual {p0}, Ljava/util/LinkedHashMap;->values()Ljava/util/Collection;
 
-    invoke-static {}, Landroid/os/Process;->myUid()I
+    move-result-object v0
+
+    invoke-interface {v0}, Ljava/util/Collection;->iterator()Ljava/util/Iterator;
+
+    move-result-object v0
+
+    :goto_0
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
 
     move-result v1
 
-    if-ne v0, v1, :cond_0
+    if-eqz v1, :cond_0
 
-    iget-object v0, p1, Lg8g;->a:Landroid/content/Intent;
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    iget-object p0, p0, Lf8g;->c:Lzvd;
+    move-result-object v1
 
-    iget-object p0, p0, Lzvd;->b:Ljava/lang/Object;
+    check-cast v1, Ly7g;
 
-    check-cast p0, Lx15;
+    invoke-virtual {v1}, Ly7g;->b()V
 
-    new-instance v1, Ltle;
-
-    invoke-direct {v1}, Ltle;-><init>()V
-
-    iget-object v2, p0, Lx15;->a:Ljava/util/concurrent/ExecutorService;
-
-    new-instance v3, Ln05;
-
-    const/4 v4, 0x3
-
-    invoke-direct {v3, p0, v0, v1, v4}, Ln05;-><init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;I)V
-
-    invoke-interface {v2, v3}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
-
-    new-instance p0, Lsr;
-
-    const/4 v0, 0x2
-
-    invoke-direct {p0, v0}, Lsr;-><init>(I)V
-
-    new-instance v0, Lkpe;
-
-    const/16 v2, 0x15
-
-    invoke-direct {v0, v2, p1}, Lkpe;-><init>(ILjava/lang/Object;)V
-
-    iget-object p1, v1, Ltle;->a:Lmlg;
-
-    invoke-virtual {p1, p0, v0}, Lmlg;->b(Ljava/util/concurrent/Executor;Lf1a;)Lmlg;
-
-    return-void
+    goto :goto_0
 
     :cond_0
-    new-instance p0, Ljava/lang/SecurityException;
+    invoke-virtual {p0}, Ljava/util/LinkedHashMap;->clear()V
 
-    const-string p1, "Binding only allowed within app"
-
-    invoke-direct {p0, p1}, Ljava/lang/SecurityException;-><init>(Ljava/lang/String;)V
-
-    throw p0
+    return-void
 .end method

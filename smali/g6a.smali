@@ -1,349 +1,215 @@
-.class public abstract Lg6a;
-.super Ljava/lang/Object;
+.class public final Lg6a;
+.super Ljava/util/concurrent/atomic/AtomicInteger;
 .source "SourceFile"
 
+# interfaces
+.implements Loq4;
+.implements Ld8a;
 
-# static fields
-.field public static final A:I
 
-.field public static final B:I
+# instance fields
+.field public X:Loq4;
 
-.field public static final C:I
+.field public volatile Y:Z
 
-.field public static final D:I
+.field public final a:Lrc3;
 
-.field public static final E:I
+.field public final b:Ltx;
 
-.field public static final F:I
+.field public final c:Lqc6;
 
-.field public static final G:I
-
-.field public static final H:I
-
-.field public static final I:I
-
-.field public static final J:I
-
-.field public static final K:I
-
-.field public static final L:I
-
-.field public static final M:I
-
-.field public static final N:I
-
-.field public static final O:I
-
-.field public static final P:I
-
-.field public static final Q:I
-
-.field public static final R:I
-
-.field public static final S:I
-
-.field public static final T:I
-
-.field public static final U:I
-
-.field public static final V:I
-
-.field public static final W:I
-
-.field public static final X:I
-
-.field public static final Y:I
-
-.field public static final Z:I
-
-.field public static final a:I
-
-.field public static final a0:I
-
-.field public static final b:I
-
-.field public static final b0:I
-
-.field public static final c:I
-
-.field public static final c0:I
-
-.field public static final d:I
-
-.field public static final d0:I
-
-.field public static final e:I
-
-.field public static final f:I
-
-.field public static final g:I
-
-.field public static final h:I
-
-.field public static final i:I
-
-.field public static final j:I
-
-.field public static final k:I
-
-.field public static final l:I
-
-.field public static final m:I
-
-.field public static final n:I
-
-.field public static final o:I
-
-.field public static final p:I
-
-.field public static final q:I
-
-.field public static final r:I
-
-.field public static final s:I
-
-.field public static final t:I
-
-.field public static final u:I
-
-.field public static final v:I
-
-.field public static final w:I
-
-.field public static final x:I
-
-.field public static final y:I
-
-.field public static final z:I
+.field public final o:Lxd3;
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public constructor <init>(Lrc3;Lqc6;)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/util/concurrent/atomic/AtomicInteger;-><init>()V
+
+    iput-object p1, p0, Lg6a;->a:Lrc3;
+
+    iput-object p2, p0, Lg6a;->c:Lqc6;
+
+    new-instance p1, Ltx;
+
+    invoke-direct {p1}, Ljava/util/concurrent/atomic/AtomicReference;-><init>()V
+
+    iput-object p1, p0, Lg6a;->b:Ltx;
+
+    new-instance p1, Lxd3;
+
+    invoke-direct {p1}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lg6a;->o:Lxd3;
+
+    const/4 p1, 0x1
+
+    invoke-virtual {p0, p1}, Ljava/util/concurrent/atomic/AtomicInteger;->lazySet(I)V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final b()V
     .locals 1
 
-    sget v0, Lltb;->chat_item_view_type:I
+    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicInteger;->decrementAndGet()I
 
-    sput v0, Lg6a;->a:I
+    move-result v0
 
-    sget v0, Lltb;->chat_item_view_type_pinned:I
+    if-nez v0, :cond_0
 
-    sput v0, Lg6a;->b:I
+    iget-object v0, p0, Lg6a;->b:Ltx;
 
-    sget v0, Lltb;->chats_list_folders_container:I
+    iget-object p0, p0, Lg6a;->a:Lrc3;
 
-    sput v0, Lg6a;->c:I
+    invoke-virtual {v0, p0}, Ltx;->c(Lrc3;)V
 
-    sget v0, Lltb;->chats_list_folders_pager:I
+    :cond_0
+    return-void
+.end method
 
-    sput v0, Lg6a;->d:I
+.method public final c(Loq4;)V
+    .locals 1
 
-    sget v0, Lltb;->chats_list_folders_tabs:I
+    iget-object v0, p0, Lg6a;->X:Loq4;
 
-    sput v0, Lg6a;->e:I
+    invoke-static {v0, p1}, Lsq4;->h(Loq4;Loq4;)Z
 
-    sget v0, Lltb;->chats_list_pinbars_view:I
+    move-result v0
 
-    sput v0, Lg6a;->f:I
+    if-eqz v0, :cond_0
 
-    sget v0, Lltb;->chats_list_search_recycler_view:I
+    iput-object p1, p0, Lg6a;->X:Loq4;
 
-    sput v0, Lg6a;->g:I
+    iget-object p1, p0, Lg6a;->a:Lrc3;
 
-    sget v0, Lltb;->chats_list_search_root_view:I
+    invoke-interface {p1, p0}, Lrc3;->c(Loq4;)V
 
-    sput v0, Lg6a;->h:I
+    :cond_0
+    return-void
+.end method
 
-    sget v0, Lltb;->chats_list_search_toolbar:I
+.method public final e()V
+    .locals 1
 
-    sput v0, Lg6a;->i:I
+    const/4 v0, 0x1
 
-    sget v0, Lltb;->chats_list_toolbar:I
+    iput-boolean v0, p0, Lg6a;->Y:Z
 
-    sput v0, Lg6a;->j:I
+    iget-object v0, p0, Lg6a;->X:Loq4;
 
-    sget v0, Lltb;->chats_list_view:I
+    invoke-interface {v0}, Loq4;->e()V
 
-    sput v0, Lg6a;->k:I
+    iget-object v0, p0, Lg6a;->o:Lxd3;
 
-    sget v0, Lltb;->chats_search_chat_view_type:I
+    invoke-virtual {v0}, Lxd3;->e()V
 
-    sput v0, Lg6a;->l:I
+    iget-object p0, p0, Lg6a;->b:Ltx;
 
-    sget v0, Lltb;->chats_search_contact_view_type:I
+    invoke-virtual {p0}, Ltx;->b()V
 
-    sput v0, Lg6a;->m:I
+    return-void
+.end method
 
-    sget v0, Lltb;->chats_search_empty_view_type:I
+.method public final f()Z
+    .locals 0
 
-    sput v0, Lg6a;->n:I
+    iget-object p0, p0, Lg6a;->X:Loq4;
 
-    sget v0, Lltb;->chats_search_global_chat_view_type:I
+    invoke-interface {p0}, Loq4;->f()Z
 
-    sput v0, Lg6a;->o:I
+    move-result p0
 
-    sget v0, Lltb;->chats_search_global_contact_view_type:I
+    return p0
+.end method
 
-    sput v0, Lg6a;->p:I
+.method public final onError(Ljava/lang/Throwable;)V
+    .locals 1
 
-    sget v0, Lltb;->chats_search_loading_view_type:I
+    iget-object v0, p0, Lg6a;->b:Ltx;
 
-    sput v0, Lg6a;->q:I
+    invoke-virtual {v0, p1}, Ltx;->a(Ljava/lang/Throwable;)Z
 
-    sget v0, Lltb;->chats_search_message_view_type:I
+    move-result p1
 
-    sput v0, Lg6a;->r:I
+    if-eqz p1, :cond_0
 
-    sget v0, Lltb;->chats_search_recent_header_view_type:I
+    const/4 p1, 0x1
 
-    sput v0, Lg6a;->s:I
+    iput-boolean p1, p0, Lg6a;->Y:Z
 
-    sget v0, Lltb;->chats_search_recent_view_type:I
+    iget-object p1, p0, Lg6a;->X:Loq4;
 
-    sput v0, Lg6a;->t:I
+    invoke-interface {p1}, Loq4;->e()V
 
-    sget v0, Lltb;->fake_chat_contact_item_view_type:I
+    iget-object p1, p0, Lg6a;->o:Lxd3;
 
-    sput v0, Lg6a;->u:I
+    invoke-virtual {p1}, Lxd3;->e()V
 
-    sget v0, Lltb;->fake_chat_phone_item_view_type:I
+    iget-object p1, p0, Lg6a;->b:Ltx;
 
-    sput v0, Lg6a;->v:I
+    iget-object p0, p0, Lg6a;->a:Lrc3;
 
-    sget v0, Lltb;->oneme_chat_action_add_favorite:I
+    invoke-virtual {p1, p0}, Ltx;->c(Lrc3;)V
 
-    sput v0, Lg6a;->w:I
+    :cond_0
+    return-void
+.end method
 
-    sget v0, Lltb;->oneme_chat_action_add_to_folder:I
+.method public final s(Ljava/lang/Object;)V
+    .locals 2
 
-    sput v0, Lg6a;->x:I
+    :try_start_0
+    iget-object v0, p0, Lg6a;->c:Lqc6;
 
-    sget v0, Lltb;->oneme_chat_action_block:I
+    invoke-interface {v0, p1}, Lqc6;->apply(Ljava/lang/Object;)Ljava/lang/Object;
 
-    sput v0, Lg6a;->y:I
+    move-result-object p1
 
-    sget v0, Lltb;->oneme_chat_action_clear_chat_history:I
+    const-string v0, "The mapper returned a null CompletableSource"
 
-    sput v0, Lg6a;->z:I
+    invoke-static {p1, v0}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
-    sget v0, Lltb;->oneme_chat_action_clear_saved_messages:I
+    check-cast p1, Lhc3;
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    sput v0, Lg6a;->A:I
+    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicInteger;->getAndIncrement()I
 
-    sget v0, Lltb;->oneme_chat_action_close_channel:I
+    new-instance v0, Ljc3;
 
-    sput v0, Lg6a;->B:I
+    invoke-direct {v0, p0}, Ljc3;-><init>(Lg6a;)V
 
-    sget v0, Lltb;->oneme_chat_action_close_chat:I
+    iget-boolean v1, p0, Lg6a;->Y:Z
 
-    sput v0, Lg6a;->C:I
+    if-nez v1, :cond_0
 
-    sget v0, Lltb;->oneme_chat_action_delete_channel:I
+    iget-object p0, p0, Lg6a;->o:Lxd3;
 
-    sput v0, Lg6a;->D:I
+    invoke-virtual {p0, v0}, Lxd3;->a(Loq4;)Z
 
-    sget v0, Lltb;->oneme_chat_action_delete_chat:I
+    move-result p0
 
-    sput v0, Lg6a;->E:I
+    if-eqz p0, :cond_0
 
-    sget v0, Lltb;->oneme_chat_action_leave:I
+    invoke-virtual {p1, v0}, Lhc3;->h(Lrc3;)V
 
-    sput v0, Lg6a;->F:I
+    :cond_0
+    return-void
 
-    sget v0, Lltb;->oneme_chat_action_mark_as_read:I
+    :catchall_0
+    move-exception p1
 
-    sput v0, Lg6a;->G:I
+    invoke-static {p1}, Lzyd;->F(Ljava/lang/Throwable;)V
 
-    sget v0, Lltb;->oneme_chat_action_mark_as_unread:I
+    iget-object v0, p0, Lg6a;->X:Loq4;
 
-    sput v0, Lg6a;->H:I
+    invoke-interface {v0}, Loq4;->e()V
 
-    sget v0, Lltb;->oneme_chat_action_move_rights_and_leave:I
-
-    sput v0, Lg6a;->I:I
-
-    sget v0, Lltb;->oneme_chat_action_mute:I
-
-    sput v0, Lg6a;->J:I
-
-    sget v0, Lltb;->oneme_chat_action_remove_favorite:I
-
-    sput v0, Lg6a;->K:I
-
-    sget v0, Lltb;->oneme_chat_action_remove_from_folder:I
-
-    sput v0, Lg6a;->L:I
-
-    sget v0, Lltb;->oneme_chat_action_select:I
-
-    sput v0, Lg6a;->M:I
-
-    sget v0, Lltb;->oneme_chat_action_suspend_and_delete_bot:I
-
-    sput v0, Lg6a;->N:I
-
-    sget v0, Lltb;->oneme_chat_action_suspend_bot:I
-
-    sput v0, Lg6a;->O:I
-
-    sget v0, Lltb;->oneme_chat_action_unmute:I
-
-    sput v0, Lg6a;->P:I
-
-    sget v0, Lltb;->oneme_confirm_block:I
-
-    sput v0, Lg6a;->Q:I
-
-    sget v0, Lltb;->oneme_confirm_cancel:I
-
-    sput v0, Lg6a;->R:I
-
-    sget v0, Lltb;->oneme_confirm_delete:I
-
-    sput v0, Lg6a;->S:I
-
-    sget v0, Lltb;->oneme_confirm_delete_for_all:I
-
-    sput v0, Lg6a;->T:I
-
-    sget v0, Lltb;->oneme_confirm_leave:I
-
-    sput v0, Lg6a;->U:I
-
-    sget v0, Lltb;->oneme_confirm_mute_1_day:I
-
-    sput v0, Lg6a;->V:I
-
-    sget v0, Lltb;->oneme_confirm_mute_1_hour:I
-
-    sput v0, Lg6a;->W:I
-
-    sget v0, Lltb;->oneme_confirm_mute_4_hour:I
-
-    sput v0, Lg6a;->X:I
-
-    sget v0, Lltb;->oneme_confirm_mute_infinite:I
-
-    sput v0, Lg6a;->Y:I
-
-    sget v0, Lltb;->oneme_contacts_picker_toolbar:I
-
-    sput v0, Lg6a;->Z:I
-
-    sget v0, Lltb;->oneme_picker_chat_item_view_type:I
-
-    sput v0, Lg6a;->a0:I
-
-    sget v0, Lltb;->oneme_picker_container_chats:I
-
-    sput v0, Lg6a;->b0:I
-
-    sget v0, Lltb;->oneme_picker_main_container:I
-
-    sput v0, Lg6a;->c0:I
-
-    sget v0, Lltb;->oneme_picker_members_list_view:I
-
-    sput v0, Lg6a;->d0:I
+    invoke-virtual {p0, p1}, Lg6a;->onError(Ljava/lang/Throwable;)V
 
     return-void
 .end method

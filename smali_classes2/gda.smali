@@ -1,35 +1,67 @@
-.class public final Lgda;
-.super Lljc;
+.class public abstract synthetic Lgda;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final X:Lru/ok/tamtam/logout/a;
+# static fields
+.field public static final synthetic $EnumSwitchMapping$0:[I
 
-.field public final Y:Ljp4;
+.field public static final synthetic $EnumSwitchMapping$1:[I
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;Lru/ok/tamtam/logout/a;Ljp4;La9a;Lje7;)V
-    .locals 2
+.method static constructor <clinit>()V
+    .locals 4
 
-    new-instance v0, Lmy2;
+    invoke-static {}, Lfda;->values()[Lfda;
 
-    invoke-direct {v0, p3}, Lmy2;-><init>(Ljp4;)V
+    move-result-object v0
 
-    new-instance v1, Ln79;
+    array-length v0, v0
 
-    invoke-direct {v1, p5}, Ln79;-><init>(Lje7;)V
+    new-array v0, v0, [I
 
-    filled-new-array {v0, v1}, [Ljava/lang/Object;
+    const/4 v1, 0x1
 
-    move-result-object p5
+    const/4 v2, 0x0
 
-    invoke-direct {p0, p1, p4, p5}, Lljc;-><init>(Landroid/content/Context;La9a;[Ljava/lang/Object;)V
+    :try_start_0
+    aput v1, v0, v2
+    :try_end_0
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
 
-    iput-object p2, p0, Lgda;->X:Lru/ok/tamtam/logout/a;
+    :catch_0
+    const/4 v3, 0x2
 
-    iput-object p3, p0, Lgda;->Y:Ljp4;
+    :try_start_1
+    aput v3, v0, v1
+    :try_end_1
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
+
+    :catch_1
+    sput-object v0, Lgda;->$EnumSwitchMapping$0:[I
+
+    invoke-static {}, Leda;->values()[Leda;
+
+    move-result-object v0
+
+    array-length v0, v0
+
+    new-array v0, v0, [I
+
+    :try_start_2
+    aput v1, v0, v2
+    :try_end_2
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_2
+
+    :catch_2
+    :try_start_3
+    aput v3, v0, v1
+    :try_end_3
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_3 .. :try_end_3} :catch_3
+
+    :catch_3
+    sput-object v0, Lgda;->$EnumSwitchMapping$1:[I
 
     return-void
 .end method

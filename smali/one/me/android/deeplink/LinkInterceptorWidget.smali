@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Ljg3;
+.implements Lnj3;
 
 
 # annotations
@@ -14,16 +14,16 @@
     d2 = {
         "Lone/me/android/deeplink/LinkInterceptorWidget;",
         "Lone/me/sdk/arch/Widget;",
-        "Ljg3;",
+        "Lnj3;",
         "Landroid/os/Bundle;",
         "args",
         "<init>",
         "(Landroid/os/Bundle;)V",
         "Landroid/net/Uri;",
         "uri",
-        "Lfj7;",
+        "Ldq7;",
         "result",
-        "(Landroid/net/Uri;Lfj7;)V",
+        "(Landroid/net/Uri;Ldq7;)V",
         "oneme_playGoogleRelease"
     }
     k = 0x1
@@ -41,7 +41,7 @@
 
 
 # instance fields
-.field public final a:Lje7;
+.field public final a:Lcl7;
 
 .field public final b:Ljava/lang/Object;
 
@@ -49,40 +49,40 @@
 
 
 # direct methods
-.method public constructor <init>(Landroid/net/Uri;Lfj7;)V
+.method public constructor <init>(Landroid/net/Uri;Ldq7;)V
     .locals 2
 
-    .line 9
-    new-instance v0, Ldna;
+    .line 1
+    new-instance v0, Lpxa;
 
     const-string v1, "uri"
 
-    invoke-direct {v0, v1, p1}, Ldna;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+    invoke-direct {v0, v1, p1}, Lpxa;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
 
-    .line 10
-    new-instance p1, Ldna;
+    .line 2
+    new-instance p1, Lpxa;
 
     const-string v1, "link_result"
 
-    invoke-direct {p1, v1, p2}, Ldna;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+    invoke-direct {p1, v1, p2}, Lpxa;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
 
-    .line 11
-    filled-new-array {v0, p1}, [Ldna;
-
-    move-result-object p1
-
-    .line 12
-    invoke-static {p1}, Lp54;->d([Ldna;)Landroid/os/Bundle;
+    .line 3
+    filled-new-array {v0, p1}, [Lpxa;
 
     move-result-object p1
 
-    .line 13
+    .line 4
+    invoke-static {p1}, Lw7;->c([Lpxa;)Landroid/os/Bundle;
+
+    move-result-object p1
+
+    .line 5
     invoke-direct {p0, p1}, Lone/me/android/deeplink/LinkInterceptorWidget;-><init>(Landroid/os/Bundle;)V
 
     return-void
 .end method
 
-.method public synthetic constructor <init>(Landroid/net/Uri;Lfj7;ILl94;)V
+.method public synthetic constructor <init>(Landroid/net/Uri;Ldq7;ILld4;)V
     .locals 0
 
     and-int/lit8 p3, p3, 0x2
@@ -93,7 +93,7 @@
 
     .line 14
     :cond_0
-    invoke-direct {p0, p1, p2}, Lone/me/android/deeplink/LinkInterceptorWidget;-><init>(Landroid/net/Uri;Lfj7;)V
+    invoke-direct {p0, p1, p2}, Lone/me/android/deeplink/LinkInterceptorWidget;-><init>(Landroid/net/Uri;Ldq7;)V
 
     return-void
 .end method
@@ -107,52 +107,52 @@
 
     const/4 v2, 0x0
 
-    .line 1
-    invoke-direct {p0, p1, v2, v0, v1}, Lone/me/sdk/arch/Widget;-><init>(Landroid/os/Bundle;IILl94;)V
+    .line 6
+    invoke-direct {p0, p1, v2, v0, v1}, Lone/me/sdk/arch/Widget;-><init>(Landroid/os/Bundle;IILld4;)V
 
-    .line 2
-    new-instance p1, Lr17;
+    .line 7
+    new-instance p1, Lfr6;
 
-    const/16 v0, 0x13
+    const/16 v0, 0x1b
 
-    invoke-direct {p1, v0}, Lr17;-><init>(I)V
+    invoke-direct {p1, v0}, Lfr6;-><init>(I)V
 
-    .line 3
-    new-instance v0, Lnf3;
+    .line 8
+    new-instance v0, Lhi3;
 
-    const/16 v1, 0x16
+    const/16 v1, 0x18
 
-    invoke-direct {v0, v1, p1}, Lnf3;-><init>(ILjava/lang/Object;)V
+    invoke-direct {v0, v1, p1}, Lhi3;-><init>(ILjava/lang/Object;)V
 
-    const-class p1, Lxj7;
+    const-class p1, Lzq7;
 
-    invoke-virtual {p0, p1, v0}, Lone/me/sdk/arch/Widget;->createViewModelLazy(Ljava/lang/Class;Lv56;)Lje7;
+    invoke-virtual {p0, p1, v0}, Lone/me/sdk/arch/Widget;->createViewModelLazy(Ljava/lang/Class;Lzb6;)Lcl7;
 
     move-result-object p1
 
-    .line 4
-    iput-object p1, p0, Lone/me/android/deeplink/LinkInterceptorWidget;->a:Lje7;
+    .line 9
+    iput-object p1, p0, Lone/me/android/deeplink/LinkInterceptorWidget;->a:Lcl7;
 
-    .line 5
-    new-instance p1, Lyj7;
+    .line 10
+    new-instance p1, Lbr7;
 
     const/4 v0, 0x0
 
-    invoke-direct {p1, p0, v0}, Lyj7;-><init>(Lone/me/android/deeplink/LinkInterceptorWidget;I)V
+    invoke-direct {p1, p0, v0}, Lbr7;-><init>(Lone/me/android/deeplink/LinkInterceptorWidget;I)V
 
     const/4 v0, 0x3
 
-    .line 6
-    invoke-static {v0, p1}, Lkhg;->o(ILv56;)Lje7;
+    .line 11
+    invoke-static {v0, p1}, Lcb7;->G(ILzb6;)Lcl7;
 
     move-result-object p1
 
-    .line 7
+    .line 12
     iput-object p1, p0, Lone/me/android/deeplink/LinkInterceptorWidget;->b:Ljava/lang/Object;
 
     const/4 p1, 0x1
 
-    .line 8
+    .line 13
     iput-boolean p1, p0, Lone/me/android/deeplink/LinkInterceptorWidget;->c:Z
 
     return-void
@@ -165,13 +165,13 @@
 
     iget-object p0, p0, Lone/me/android/deeplink/LinkInterceptorWidget;->b:Ljava/lang/Object;
 
-    invoke-interface {p0}, Lje7;->getValue()Ljava/lang/Object;
+    invoke-interface {p0}, Lcl7;->getValue()Ljava/lang/Object;
 
     move-result-object p0
 
-    check-cast p0, Lhg1;
+    check-cast p0, Lih1;
 
-    invoke-virtual {p0, p1}, Lhg1;->g(I)Z
+    invoke-virtual {p0, p1}, Lih1;->g(I)Z
 
     return-void
 .end method
@@ -197,7 +197,7 @@
 
     invoke-direct {p0, p1, p2}, Landroidx/coordinatorlayout/widget/CoordinatorLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    sget p1, Lbtb;->link_interceptor_widget_view:I
+    sget p1, Ll5c;->link_interceptor_widget_view:I
 
     invoke-virtual {p0, p1}, Landroid/view/View;->setId(I)V
 
@@ -211,17 +211,17 @@
 .method public final onRequestPermissionsResult(I[Ljava/lang/String;[I)V
     .locals 0
 
-    invoke-super {p0, p1, p2, p3}, Lou3;->onRequestPermissionsResult(I[Ljava/lang/String;[I)V
+    invoke-super {p0, p1, p2, p3}, Lxx3;->onRequestPermissionsResult(I[Ljava/lang/String;[I)V
 
     iget-object p0, p0, Lone/me/android/deeplink/LinkInterceptorWidget;->b:Ljava/lang/Object;
 
-    invoke-interface {p0}, Lje7;->getValue()Ljava/lang/Object;
+    invoke-interface {p0}, Lcl7;->getValue()Ljava/lang/Object;
 
     move-result-object p0
 
-    check-cast p0, Lhg1;
+    check-cast p0, Lih1;
 
-    invoke-virtual {p0, p1, p2, p3}, Lhg1;->b(I[Ljava/lang/String;[I)Z
+    invoke-virtual {p0, p1, p2, p3}, Lih1;->b(I[Ljava/lang/String;[I)Z
 
     return-void
 .end method
@@ -229,48 +229,48 @@
 .method public final onViewCreated(Landroid/view/View;)V
     .locals 4
 
-    invoke-virtual {p0}, Lou3;->getOnBackPressedDispatcher()Ld1a;
+    invoke-virtual {p0}, Lxx3;->getOnBackPressedDispatcher()Lj9a;
 
     move-result-object p1
 
     if-eqz p1, :cond_1
 
-    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleOwner()Ldh7;
+    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleOwner()Lzn7;
 
     move-result-object v0
 
-    new-instance v1, Lns2;
+    new-instance v1, Lar7;
 
-    const/16 v2, 0x1c
+    const/4 v2, 0x0
 
-    invoke-direct {v1, v2, p0}, Lns2;-><init>(ILjava/lang/Object;)V
+    invoke-direct {v1, v2, p0}, Lar7;-><init>(ILjava/lang/Object;)V
 
-    new-instance v2, Llu3;
+    new-instance v2, Lux3;
 
     const/4 v3, 0x1
 
-    invoke-direct {v2, v3, v1}, Llu3;-><init>(ZLx56;)V
+    invoke-direct {v2, v3, v1}, Lux3;-><init>(ZLbc6;)V
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {p1, v0, v2}, Ld1a;->a(Ldh7;Lv0a;)V
+    invoke-virtual {p1, v0, v2}, Lj9a;->a(Lzn7;Lb9a;)V
 
     goto :goto_0
 
     :cond_0
-    invoke-virtual {p1, v2}, Ld1a;->b(Lv0a;)Lc1a;
+    invoke-virtual {p1, v2}, Lj9a;->b(Lb9a;)Li9a;
 
     :cond_1
     :goto_0
-    iget-object p1, p0, Lone/me/android/deeplink/LinkInterceptorWidget;->a:Lje7;
+    iget-object p1, p0, Lone/me/android/deeplink/LinkInterceptorWidget;->a:Lcl7;
 
-    invoke-interface {p1}, Lje7;->getValue()Ljava/lang/Object;
+    invoke-interface {p1}, Lcl7;->getValue()Ljava/lang/Object;
 
     move-result-object p1
 
-    check-cast p1, Lxj7;
+    check-cast p1, Lzq7;
 
-    invoke-virtual {p0}, Lou3;->getArgs()Landroid/os/Bundle;
+    invoke-virtual {p0}, Lxx3;->getArgs()Landroid/os/Bundle;
 
     move-result-object v0
 
@@ -282,7 +282,7 @@
 
     check-cast v0, Landroid/net/Uri;
 
-    invoke-virtual {p0}, Lou3;->getArgs()Landroid/os/Bundle;
+    invoke-virtual {p0}, Lxx3;->getArgs()Landroid/os/Bundle;
 
     move-result-object v1
 
@@ -292,74 +292,131 @@
 
     move-result-object v1
 
-    check-cast v1, Lfj7;
+    check-cast v1, Ldq7;
 
     invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     if-eqz v1, :cond_2
 
-    new-instance p1, Ljz0;
+    new-instance p1, Luz0;
 
-    const/16 v0, 0xc
+    const/16 v0, 0xb
 
-    invoke-direct {p1, v0, v1}, Ljz0;-><init>(ILjava/lang/Object;)V
+    invoke-direct {p1, v0, v1}, Luz0;-><init>(ILjava/lang/Object;)V
 
     goto :goto_1
 
     :cond_2
     if-nez v0, :cond_3
 
-    new-instance p1, Ljz0;
+    new-instance p1, Luz0;
 
-    const/16 v0, 0xc
+    const/16 v0, 0xb
 
-    sget-object v1, Loi7;->a:Loi7;
+    sget-object v1, Lkp7;->a:Lkp7;
 
-    invoke-direct {p1, v0, v1}, Ljz0;-><init>(ILjava/lang/Object;)V
+    invoke-direct {p1, v0, v1}, Luz0;-><init>(ILjava/lang/Object;)V
 
     goto :goto_1
 
     :cond_3
-    iget-object p1, p1, Lxj7;->b:Lje7;
+    iget-object p1, p1, Lzq7;->b:Lcl7;
 
-    invoke-interface {p1}, Lje7;->getValue()Ljava/lang/Object;
+    invoke-interface {p1}, Lcl7;->getValue()Ljava/lang/Object;
 
     move-result-object p1
 
-    check-cast p1, Lwj7;
+    check-cast p1, Lyq7;
 
-    invoke-virtual {p1, v0}, Lwj7;->e(Landroid/net/Uri;)Lon5;
+    invoke-virtual {p1, v0}, Lyq7;->e(Landroid/net/Uri;)Lus5;
 
     move-result-object p1
 
     :goto_1
-    new-instance v0, Ld04;
+    new-instance v0, Lq23;
 
     const/4 v1, 0x3
 
-    const/4 v2, 0x1
+    const/4 v2, 0x3
 
     const/4 v3, 0x0
 
-    invoke-direct {v0, v1, v3, v2}, Ld04;-><init>(ILkotlin/coroutines/Continuation;I)V
+    invoke-direct {v0, v1, v3, v2}, Lq23;-><init>(ILkotlin/coroutines/Continuation;I)V
 
-    invoke-static {p1, v0}, Lsgg;->a0(Lzm5;Ln66;)Lu32;
+    invoke-static {p1, v0}, Lo97;->Y0(Lis5;Lrc6;)Ll62;
 
     move-result-object p1
 
-    new-instance v0, Lak7;
+    new-instance v0, Ldr7;
 
-    invoke-direct {v0, p0, v3}, Lak7;-><init>(Lone/me/android/deeplink/LinkInterceptorWidget;Lkotlin/coroutines/Continuation;)V
+    invoke-direct {v0, p0, v3}, Ldr7;-><init>(Lone/me/android/deeplink/LinkInterceptorWidget;Lkotlin/coroutines/Continuation;)V
 
-    new-instance v1, Lgp5;
+    new-instance v1, Lnu5;
 
-    invoke-direct {v1, p1, v0, v2}, Lgp5;-><init>(Lzm5;Ll66;I)V
+    const/4 v2, 0x1
 
-    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleScope()Lqg7;
+    invoke-direct {v1, p1, v0, v2}, Lnu5;-><init>(Lis5;Lpc6;I)V
+
+    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getViewLifecycleScope()Lmn7;
 
     move-result-object p0
 
-    invoke-static {v1, p0}, Lsgg;->L(Lzm5;Lox3;)Ldwd;
+    invoke-static {v1, p0}, Lo97;->u0(Lis5;Ly04;)Lcae;
+
+    return-void
+.end method
+
+.method public final y0(ZLkm;II)V
+    .locals 5
+
+    new-instance v0, Lppa;
+
+    new-instance v1, Lepa;
+
+    invoke-direct {v1, p4}, Lepa;-><init>(I)V
+
+    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
+
+    move-result-object p4
+
+    invoke-static {p4, p3}, Lw7;->q(Landroid/content/Context;I)Ljava/lang/String;
+
+    move-result-object p3
+
+    new-instance p4, Lyoa;
+
+    const/4 v2, 0x0
+
+    const/4 v3, 0x6
+
+    const/4 v4, 0x2
+
+    invoke-direct {p4, v4, v2, v2, v3}, Lyoa;-><init>(IIII)V
+
+    const/4 v2, 0x0
+
+    invoke-direct {v0, v1, p3, v2, p4}, Lppa;-><init>(Ljpa;Ljava/lang/String;Ljava/lang/String;Lyoa;)V
+
+    if-eqz p1, :cond_0
+
+    sget p0, Lone/me/android/MainActivity;->b1:I
+
+    const/16 p0, 0xa
+
+    invoke-static {p2, v2, v0, v2, p0}, Lp3a;->r(Lkm;Landroid/net/Uri;Lppa;Lea;I)V
+
+    invoke-virtual {p2}, Landroid/app/Activity;->finish()V
+
+    return-void
+
+    :cond_0
+    new-instance p1, Lqoa;
+
+    invoke-direct {p1, p0}, Lqoa;-><init>(Lone/me/sdk/arch/Widget;)V
+
+    iput-object v0, p1, Lqoa;->b:Lppa;
+
+    invoke-virtual {p1}, Lqoa;->i()Lpoa;
 
     return-void
 .end method

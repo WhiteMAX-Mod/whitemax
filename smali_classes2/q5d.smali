@@ -1,64 +1,37 @@
 .class public final Lq5d;
-.super Ljava/lang/Object;
+.super Lx2;
 .source "SourceFile"
 
 
-# instance fields
-.field public a:Z
-
-.field public b:I
-
-.field public c:I
-
-.field public d:I
-
-
 # virtual methods
-.method public final toString()Ljava/lang/String;
-    .locals 2
+.method public final x0(Ljava/lang/Object;Ljava/lang/Object;)V
+    .locals 0
 
-    iget-boolean v0, p0, Lq5d;->a:Z
+    check-cast p2, Ljava/lang/Boolean;
 
-    if-eqz v0, :cond_0
+    invoke-virtual {p2}, Ljava/lang/Boolean;->booleanValue()Z
 
-    const-string p0, "ss"
+    move-result p0
 
-    return-object p0
+    check-cast p1, Ljava/lang/Boolean;
 
-    :cond_0
-    new-instance v0, Ljava/lang/StringBuilder;
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    const-string v1, "sz="
+    new-instance p1, Ljava/lang/StringBuilder;
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    const-string p2, "sendWithNotification = "
 
-    iget v1, p0, Lq5d;->b:I
+    invoke-direct {p1, p2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-virtual {p1, p0}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
-    const-string v1, "x"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget v1, p0, Lq5d;->c:I
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string v1, ":fit="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget p0, p0, Lq5d;->d:I
-
-    invoke-static {p0}, Lrqc;->b(I)Ljava/lang/String;
+    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p0
 
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    const-string p1, "ScheduledSendPickerViewModel"
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-static {p1, p0}, Ljtg;->l(Ljava/lang/String;Ljava/lang/String;)V
 
-    move-result-object p0
-
-    return-object p0
+    return-void
 .end method

@@ -1,97 +1,67 @@
-.class public final Lkdd;
-.super Lpdd;
+.class public interface abstract Lkdd;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
-
-# static fields
-.field public static final CREATOR:Landroid/os/Parcelable$Creator;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Landroid/os/Parcelable$Creator<",
-            "Lkdd;",
-            ">;"
-        }
-    .end annotation
-.end field
-
-.field public static final a:Lkdd;
-
-
-# direct methods
-.method static constructor <clinit>()V
-    .locals 2
-
-    new-instance v0, Lkdd;
-
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    sput-object v0, Lkdd;->a:Lkdd;
-
-    new-instance v0, Lo5b;
-
-    const/16 v1, 0x16
-
-    invoke-direct {v0, v1}, Lo5b;-><init>(I)V
-
-    sput-object v0, Lkdd;->CREATOR:Landroid/os/Parcelable$Creator;
-
-    return-void
-.end method
+# interfaces
+.implements Lird;
 
 
 # virtual methods
-.method public final describeContents()I
+.method public abstract a()I
+.end method
+
+.method public b()Lu2f;
     .locals 0
 
     const/4 p0, 0x0
-
-    return p0
-.end method
-
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
-
-    const/4 v0, 0x1
-
-    if-ne p0, p1, :cond_0
-
-    return v0
-
-    :cond_0
-    instance-of p0, p1, Lkdd;
-
-    if-nez p0, :cond_1
-
-    const/4 p0, 0x0
-
-    return p0
-
-    :cond_1
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 0
-
-    const p0, 0x49c7fb9b
-
-    return p0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 0
-
-    const-string p0, "Arrow"
 
     return-object p0
 .end method
 
-.method public final writeToParcel(Landroid/os/Parcel;I)V
+.method public c()Lzqd;
+    .locals 0
+
+    const/4 p0, 0x0
+
+    return-object p0
+.end method
+
+.method public d()Lu2f;
+    .locals 0
+
+    const/4 p0, 0x0
+
+    return-object p0
+.end method
+
+.method public e()Lfrd;
+    .locals 0
+
+    const/4 p0, 0x0
+
+    return-object p0
+.end method
+
+.method public f()Lll7;
+    .locals 0
+
+    const/4 p0, 0x0
+
+    return-object p0
+.end method
+
+.method public g()Z
     .locals 0
 
     const/4 p0, 0x1
 
-    invoke-virtual {p1, p0}, Landroid/os/Parcel;->writeInt(I)V
+    return p0
+.end method
 
-    return-void
+.method public getType()Lhrd;
+    .locals 0
+
+    sget-object p0, Lhrd;->b:Lhrd;
+
+    return-object p0
 .end method

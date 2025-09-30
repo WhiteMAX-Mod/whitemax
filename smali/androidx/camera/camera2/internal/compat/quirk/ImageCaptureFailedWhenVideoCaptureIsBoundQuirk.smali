@@ -192,7 +192,7 @@
 
 
 # virtual methods
-.method public final c()Z
+.method public final b()Z
     .locals 2
 
     invoke-static {}, Landroidx/camera/camera2/internal/compat/quirk/ImageCaptureFailedWhenVideoCaptureIsBoundQuirk;->e()Z
@@ -279,7 +279,7 @@
     return p0
 .end method
 
-.method public final d()Z
+.method public final c()Z
     .locals 0
 
     invoke-static {}, Landroidx/camera/camera2/internal/compat/quirk/ImageCaptureFailedWhenVideoCaptureIsBoundQuirk;->e()Z

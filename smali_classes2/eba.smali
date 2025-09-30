@@ -1,283 +1,150 @@
-.class public abstract Leba;
+.class public final synthetic Leba;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lzb6;
 
-# static fields
-.field public static final A:I
 
-.field public static final B:I
+# instance fields
+.field public final synthetic a:I
 
-.field public static final C:I
-
-.field public static final D:I
-
-.field public static final E:I
-
-.field public static final F:I
-
-.field public static final G:I
-
-.field public static final H:I
-
-.field public static final I:I
-
-.field public static final J:I
-
-.field public static final K:I
-
-.field public static final L:I
-
-.field public static final M:I
-
-.field public static final N:I
-
-.field public static final O:I
-
-.field public static final P:I
-
-.field public static final Q:I
-
-.field public static final R:I
-
-.field public static final S:I
-
-.field public static final a:I
-
-.field public static final b:I
-
-.field public static final c:I
-
-.field public static final d:I
-
-.field public static final e:I
-
-.field public static final f:I
-
-.field public static final g:I
-
-.field public static final h:I
-
-.field public static final i:I
-
-.field public static final j:I
-
-.field public static final k:I
-
-.field public static final l:I
-
-.field public static final m:I
-
-.field public static final n:I
-
-.field public static final o:I
-
-.field public static final p:I
-
-.field public static final q:I
-
-.field public static final r:I
-
-.field public static final s:I
-
-.field public static final t:I
-
-.field public static final u:I
-
-.field public static final v:I
-
-.field public static final w:I
-
-.field public static final x:I
-
-.field public static final y:I
-
-.field public static final z:I
+.field public final synthetic b:Loba;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public synthetic constructor <init>(Loba;I)V
+    .locals 0
 
-    sget v0, Ldub;->chat_screen_message_send_error_delete_action:I
+    iput p2, p0, Leba;->a:I
 
-    sput v0, Leba;->a:I
+    iput-object p1, p0, Leba;->b:Loba;
 
-    sget v0, Ldub;->chat_screen_message_send_error_resend_action_multi:I
-
-    sput v0, Leba;->b:I
-
-    sget v0, Ldub;->chat_screen_message_send_error_resend_action_solo:I
-
-    sput v0, Leba;->c:I
-
-    sget v0, Ldub;->messages_list_chat_description_view_id:I
-
-    sput v0, Leba;->d:I
-
-    sget v0, Ldub;->messages_list_chat_description_view_type:I
-
-    sput v0, Leba;->e:I
-
-    sget v0, Ldub;->messages_list_confirm_cancel:I
-
-    sput v0, Leba;->f:I
-
-    sget v0, Ldub;->messages_list_confirm_complaint_extremism:I
-
-    sput v0, Leba;->g:I
-
-    sget v0, Ldub;->messages_list_confirm_complaint_fake:I
-
-    sput v0, Leba;->h:I
-
-    sget v0, Ldub;->messages_list_confirm_complaint_other:I
-
-    sput v0, Leba;->i:I
-
-    sget v0, Ldub;->messages_list_confirm_complaint_porno:I
-
-    sput v0, Leba;->j:I
-
-    sget v0, Ldub;->messages_list_confirm_complaint_spam:I
-
-    sput v0, Leba;->k:I
-
-    sget v0, Ldub;->messages_list_confirm_complaint_threat:I
-
-    sput v0, Leba;->l:I
-
-    sget v0, Ldub;->messages_list_confirm_delete:I
-
-    sput v0, Leba;->m:I
-
-    sget v0, Ldub;->messages_list_confirm_delete_for_all:I
-
-    sput v0, Leba;->n:I
-
-    sget v0, Ldub;->messages_list_confirm_pin_with_notify:I
-
-    sput v0, Leba;->o:I
-
-    sget v0, Ldub;->messages_list_confirm_pin_without_notify:I
-
-    sput v0, Leba;->p:I
-
-    sget v0, Ldub;->messages_list_context_action_copy:I
-
-    sput v0, Leba;->q:I
-
-    sget v0, Ldub;->messages_list_context_action_copy_photo:I
-
-    sput v0, Leba;->r:I
-
-    sget v0, Ldub;->messages_list_context_action_delete:I
-
-    sput v0, Leba;->s:I
-
-    sget v0, Ldub;->messages_list_context_action_delete_for_all:I
-
-    sput v0, Leba;->t:I
-
-    sget v0, Ldub;->messages_list_context_action_edit:I
-
-    sput v0, Leba;->u:I
-
-    sget v0, Ldub;->messages_list_context_action_forward:I
-
-    sput v0, Leba;->v:I
-
-    sget v0, Ldub;->messages_list_context_action_mark_as_unread:I
-
-    sput v0, Leba;->w:I
-
-    sget v0, Ldub;->messages_list_context_action_pin:I
-
-    sput v0, Leba;->x:I
-
-    sget v0, Ldub;->messages_list_context_action_reply:I
-
-    sput v0, Leba;->y:I
-
-    sget v0, Ldub;->messages_list_context_action_report:I
-
-    sput v0, Leba;->z:I
-
-    sget v0, Ldub;->messages_list_context_action_save_to_gallery:I
-
-    sput v0, Leba;->A:I
-
-    sget v0, Ldub;->messages_list_context_action_select:I
-
-    sput v0, Leba;->B:I
-
-    sget v0, Ldub;->messages_list_context_action_unpin:I
-
-    sput v0, Leba;->C:I
-
-    sget v0, Ldub;->messages_list_context_actions_view_type:I
-
-    sput v0, Leba;->D:I
-
-    sget v0, Ldub;->messages_list_context_content_container:I
-
-    sput v0, Leba;->E:I
-
-    sget v0, Ldub;->messages_list_context_member_view_type:I
-
-    sput v0, Leba;->F:I
-
-    sget v0, Ldub;->messages_list_context_members_member_cell:I
-
-    sput v0, Leba;->G:I
-
-    sget v0, Ldub;->messages_list_context_members_member_reaction:I
-
-    sput v0, Leba;->H:I
-
-    sget v0, Ldub;->messages_list_context_reactions_container:I
-
-    sput v0, Leba;->I:I
-
-    sget v0, Ldub;->messages_list_item_alias:I
-
-    sput v0, Leba;->J:I
-
-    sget v0, Ldub;->messages_list_item_date:I
-
-    sput v0, Leba;->K:I
-
-    sget v0, Ldub;->messages_list_item_keyboard_buttons:I
-
-    sput v0, Leba;->L:I
-
-    sget v0, Ldub;->messages_list_item_single_image:I
-
-    sput v0, Leba;->M:I
-
-    sget v0, Ldub;->messages_list_item_text:I
-
-    sput v0, Leba;->N:I
-
-    sget v0, Ldub;->messages_list_item_title:I
-
-    sput v0, Leba;->O:I
-
-    sget v0, Ldub;->messages_list_item_video_duration:I
-
-    sput v0, Leba;->P:I
-
-    sget v0, Ldub;->messages_list_recycler_view:I
-
-    sput v0, Leba;->Q:I
-
-    sget v0, Ldub;->messages_list_scroll_btn:I
-
-    sput v0, Leba;->R:I
-
-    sget v0, Ldub;->messages_list_share_contact_for_bot_action:I
-
-    sput v0, Leba;->S:I
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final invoke()Ljava/lang/Object;
+    .locals 4
+
+    iget v0, p0, Leba;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    iget-object p0, p0, Leba;->b:Loba;
+
+    invoke-static {p0}, Loba;->a(Loba;)Landroid/graphics/drawable/LayerDrawable;
+
+    move-result-object p0
+
+    return-object p0
+
+    :pswitch_0
+    sget v0, Lj4c;->call_fill_16:I
+
+    sget-object v1, Lyu4;->t0:Lbx9;
+
+    iget-object p0, p0, Leba;->b:Loba;
+
+    invoke-virtual {v1, p0}, Lbx9;->l(Landroid/view/View;)Lera;
+
+    move-result-object v1
+
+    invoke-interface {v1}, Lera;->getIcon()Lqy6;
+
+    invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
+
+    move-result-object p0
+
+    invoke-static {p0, v0}, Llw3;->b(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
+
+    move-result-object p0
+
+    const/4 v0, -0x1
+
+    invoke-static {p0, v0}, Li4h;->T(Landroid/graphics/drawable/Drawable;I)V
+
+    return-object p0
+
+    :pswitch_1
+    new-instance v0, Landroid/graphics/drawable/GradientDrawable;
+
+    invoke-direct {v0}, Landroid/graphics/drawable/GradientDrawable;-><init>()V
+
+    const/4 v1, 0x2
+
+    int-to-float v1, v1
+
+    invoke-static {}, Lvo4;->d()Landroid/content/res/Resources;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object v2
+
+    iget v2, v2, Landroid/util/DisplayMetrics;->density:F
+
+    mul-float/2addr v1, v2
+
+    invoke-static {v1}, Lya6;->G(F)I
+
+    move-result v1
+
+    sget-object v2, Lyu4;->t0:Lbx9;
+
+    iget-object p0, p0, Leba;->b:Loba;
+
+    invoke-virtual {v2, p0}, Lbx9;->l(Landroid/view/View;)Lera;
+
+    move-result-object v3
+
+    invoke-interface {v3}, Lera;->b()Lie0;
+
+    move-result-object v3
+
+    iget v3, v3, Lie0;->l:I
+
+    invoke-virtual {v0, v1, v3}, Landroid/graphics/drawable/GradientDrawable;->setStroke(II)V
+
+    invoke-virtual {v2, p0}, Lbx9;->l(Landroid/view/View;)Lera;
+
+    move-result-object p0
+
+    invoke-interface {p0}, Lera;->getIcon()Lqy6;
+
+    move-result-object p0
+
+    iget p0, p0, Lqy6;->k:I
+
+    invoke-virtual {v0, p0}, Landroid/graphics/drawable/GradientDrawable;->setColor(I)V
+
+    invoke-static {}, Lvo4;->d()Landroid/content/res/Resources;
+
+    move-result-object p0
+
+    invoke-virtual {p0}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object p0
+
+    iget p0, p0, Landroid/util/DisplayMetrics;->density:F
+
+    const/high16 v1, 0x42000000    # 32.0f
+
+    mul-float/2addr p0, v1
+
+    invoke-virtual {v0, p0}, Landroid/graphics/drawable/GradientDrawable;->setCornerRadius(F)V
+
+    return-object v0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

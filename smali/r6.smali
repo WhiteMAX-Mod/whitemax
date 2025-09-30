@@ -4,7 +4,7 @@
 
 
 # instance fields
-.field public final b:Lhoe;
+.field public final b:Lp2f;
 
 .field public final c:I
 
@@ -15,19 +15,19 @@
 .method public constructor <init>()V
     .locals 3
 
-    sget v0, Ls5a;->G:I
+    sget v0, Ldea;->I:I
 
-    new-instance v1, Lhoe;
+    new-instance v1, Lp2f;
 
-    invoke-direct {v1, v0}, Lhoe;-><init>(I)V
+    invoke-direct {v1, v0}, Lp2f;-><init>(I)V
 
-    sget v0, Lo5a;->C:I
+    sget v0, Lzda;->D:I
 
-    sget v2, Lp5a;->A:I
+    sget v2, Laea;->A:I
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object v1, p0, Lr6;->b:Lhoe;
+    iput-object v1, p0, Lr6;->b:Lp2f;
 
     iput v0, p0, Lr6;->c:I
 
@@ -55,11 +55,11 @@
     :cond_1
     check-cast p1, Lr6;
 
-    iget-object v0, p0, Lr6;->b:Lhoe;
+    iget-object v0, p0, Lr6;->b:Lp2f;
 
-    iget-object v1, p1, Lr6;->b:Lhoe;
+    iget-object v1, p1, Lr6;->b:Lp2f;
 
-    invoke-static {v0, v1}, Lxq7;->d(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lvyg;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -111,10 +111,10 @@
     return p0
 .end method
 
-.method public final getName()Lmoe;
+.method public final getName()Lu2f;
     .locals 0
 
-    iget-object p0, p0, Lr6;->b:Lhoe;
+    iget-object p0, p0, Lr6;->b:Lp2f;
 
     return-object p0
 .end method
@@ -122,9 +122,9 @@
 .method public final hashCode()I
     .locals 3
 
-    iget-object v0, p0, Lr6;->b:Lhoe;
+    iget-object v0, p0, Lr6;->b:Lp2f;
 
-    iget v0, v0, Lhoe;->b:I
+    iget v0, v0, Lp2f;->b:I
 
     invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
 
@@ -136,7 +136,7 @@
 
     iget v2, p0, Lr6;->c:I
 
-    invoke-static {v2, v0, v1}, Lrqc;->e(III)I
+    invoke-static {v2, v0, v1}, Lz7e;->m(III)I
 
     move-result v0
 
@@ -160,7 +160,7 @@
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-object v1, p0, Lr6;->b:Lhoe;
+    iget-object v1, p0, Lr6;->b:Lp2f;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
@@ -180,7 +180,7 @@
 
     iget p0, p0, Lr6;->d:I
 
-    invoke-static {v0, p0, v1}, Lm26;->i(Ljava/lang/StringBuilder;ILjava/lang/String;)Ljava/lang/String;
+    invoke-static {v0, p0, v1}, Lyv7;->i(Ljava/lang/StringBuilder;ILjava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
 

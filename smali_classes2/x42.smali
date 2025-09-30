@@ -1,87 +1,82 @@
 .class public final Lx42;
-.super Ljava/lang/Object;
+.super Lure;
 .source "SourceFile"
+
+# interfaces
+.implements Lpc6;
 
 
 # instance fields
-.field public A:J
+.field public synthetic X:Ljava/lang/Object;
 
-.field public B:Ljava/util/LinkedHashMap;
+.field public final synthetic Y:La52;
 
-.field public C:Llef;
 
-.field public D:Z
+# direct methods
+.method public constructor <init>(La52;Lkotlin/coroutines/Continuation;)V
+    .locals 0
 
-.field public E:Z
+    iput-object p1, p0, Lx42;->Y:La52;
 
-.field public F:J
+    const/4 p1, 0x2
 
-.field public G:Ljava/util/LinkedHashMap;
+    invoke-direct {p0, p1, p2}, Lure;-><init>(ILkotlin/coroutines/Continuation;)V
 
-.field public H:J
+    return-void
+.end method
 
-.field public I:Z
 
-.field public J:J
+# virtual methods
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-.field public K:Ljava/lang/String;
+    check-cast p1, Ltlb;
 
-.field public L:J
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-.field public M:J
+    invoke-virtual {p0, p1, p2}, Lx42;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-.field public N:I
+    move-result-object p0
 
-.field public O:I
+    check-cast p0, Lx42;
 
-.field public a:J
+    sget-object p1, Lylf;->a:Lylf;
 
-.field public b:Ljava/lang/String;
+    invoke-virtual {p0, p1}, Lx42;->o(Ljava/lang/Object;)Ljava/lang/Object;
 
-.field public c:J
+    return-object p1
+.end method
 
-.field public d:Ljava/util/LinkedHashMap;
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 1
 
-.field public e:J
+    new-instance v0, Lx42;
 
-.field public f:Ljava/lang/String;
+    iget-object p0, p0, Lx42;->Y:La52;
 
-.field public g:Ljava/lang/String;
+    invoke-direct {v0, p0, p2}, Lx42;-><init>(La52;Lkotlin/coroutines/Continuation;)V
 
-.field public h:Ljava/lang/String;
+    iput-object p1, v0, Lx42;->X:Ljava/lang/Object;
 
-.field public i:Lfr8;
+    return-object v0
+.end method
 
-.field public j:J
+.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
-.field public k:J
+    invoke-static {p1}, Lqe5;->V(Ljava/lang/Object;)V
 
-.field public l:I
+    iget-object p1, p0, Lx42;->X:Ljava/lang/Object;
 
-.field public m:J
+    check-cast p1, Ltlb;
 
-.field public n:Ljava/lang/String;
+    iget-object p0, p0, Lx42;->Y:La52;
 
-.field public o:Lrsd;
+    iget-object p0, p0, La52;->r0:Lv85;
 
-.field public p:I
+    invoke-static {p0, p1}, Lx7g;->o(Lv85;Ljava/lang/Object;)V
 
-.field public q:Lqh6;
+    sget-object p0, Lylf;->a:Lylf;
 
-.field public r:I
-
-.field public s:Ljava/lang/String;
-
-.field public t:Llz;
-
-.field public u:I
-
-.field public v:Lyk2;
-
-.field public w:Lfr8;
-
-.field public x:Z
-
-.field public y:Z
-
-.field public z:Z
+    return-object p0
+.end method

@@ -1,349 +1,81 @@
-.class public final synthetic Lo95;
-.super Ljava/lang/Object;
+.class public final Lo95;
+.super Lf0;
 .source "SourceFile"
 
 # interfaces
-.implements Lyff;
+.implements Lt04;
 
 
-# instance fields
-.field public final synthetic a:I
+# static fields
+.field public static final a:Lo95;
 
-.field public final synthetic b:Lr95;
+.field public static final b:Ljava/lang/Object;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lr95;I)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 2
 
-    iput p2, p0, Lo95;->a:I
+    new-instance v0, Lo95;
 
-    iput-object p1, p0, Lo95;->b:Lr95;
+    sget-object v1, Lx9d;->o:Lx9d;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {v0, v1}, Lf0;-><init>(Lp04;)V
+
+    sput-object v0, Lo95;->a:Lo95;
+
+    new-instance v0, Ljava/lang/Object;
+
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    sput-object v0, Lo95;->b:Ljava/lang/Object;
+
+    new-instance v0, Ljava/util/ArrayList;
+
+    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
+
+    new-instance v0, Ljava/util/LinkedHashMap;
+
+    invoke-direct {v0}, Ljava/util/LinkedHashMap;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
-    .locals 7
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 0
 
-    iget v0, p0, Lo95;->a:I
+    instance-of p0, p1, Lo95;
 
-    packed-switch v0, :pswitch_data_0
+    if-nez p0, :cond_1
 
-    iget-object p0, p0, Lo95;->b:Lr95;
+    instance-of p0, p1, Lp95;
 
-    iget v0, p0, Lr95;->t0:I
-
-    add-int/lit8 v0, v0, 0x1
-
-    iput v0, p0, Lr95;->t0:I
-
-    invoke-virtual {p0}, Lr95;->A()V
-
-    return-void
-
-    :pswitch_0
-    iget-object p0, p0, Lo95;->b:Lr95;
-
-    iget-object v0, p0, Lr95;->o0:Landroid/graphics/SurfaceTexture;
-
-    invoke-static {}, Lq54;->a()V
-
-    iget-boolean v1, p0, Lr95;->z0:Z
-
-    if-eqz v1, :cond_0
-
-    invoke-virtual {v0}, Landroid/graphics/SurfaceTexture;->updateTexImage()V
-
-    new-instance p0, Ljava/lang/StringBuilder;
-
-    const-string v1, "Dropping frame received on SurfaceTexture after forcing EOS: "
-
-    invoke-direct {p0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v0}, Landroid/graphics/SurfaceTexture;->getTimestamp()J
-
-    move-result-wide v0
-
-    const-wide/16 v2, 0x3e8
-
-    div-long/2addr v0, v2
-
-    invoke-virtual {p0, v0, v1}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    invoke-static {p0}, Lou0;->J(Ljava/lang/String;)V
+    if-eqz p0, :cond_0
 
     goto :goto_0
 
     :cond_0
-    iget-boolean v0, p0, Lr95;->v0:Z
+    const/4 p0, 0x0
 
-    if-eqz v0, :cond_2
-
-    iget-object v0, p0, Lr95;->y0:Ljava/util/concurrent/ScheduledFuture;
-
-    if-eqz v0, :cond_1
-
-    const/4 v1, 0x0
-
-    invoke-interface {v0, v1}, Ljava/util/concurrent/Future;->cancel(Z)Z
+    return p0
 
     :cond_1
-    const/4 v0, 0x0
-
-    iput-object v0, p0, Lr95;->y0:Ljava/util/concurrent/ScheduledFuture;
-
-    iget-object v0, p0, Lr95;->r0:Ljava/util/concurrent/ScheduledExecutorService;
-
-    new-instance v1, Lka4;
-
-    const/16 v2, 0x15
-
-    invoke-direct {v1, v2, p0}, Lka4;-><init>(ILjava/lang/Object;)V
-
-    sget-wide v2, Lr95;->B0:J
-
-    sget-object v4, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;
-
-    invoke-interface {v0, v1, v2, v3, v4}, Ljava/util/concurrent/ScheduledExecutorService;->schedule(Ljava/lang/Runnable;JLjava/util/concurrent/TimeUnit;)Ljava/util/concurrent/ScheduledFuture;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lr95;->y0:Ljava/util/concurrent/ScheduledFuture;
-
-    :cond_2
-    iget v0, p0, Lr95;->u0:I
-
-    add-int/lit8 v0, v0, 0x1
-
-    iput v0, p0, Lr95;->u0:I
-
-    invoke-virtual {p0}, Lr95;->A()V
-
     :goto_0
-    return-void
+    const/4 p0, 0x1
 
-    :pswitch_1
-    iget-object p0, p0, Lo95;->b:Lr95;
+    return p0
+.end method
 
-    iget-object v0, p0, Lr95;->q0:Ljava/util/concurrent/ConcurrentLinkedQueue;
+.method public final i(Lq04;Ljava/lang/Throwable;)V
+    .locals 0
 
-    invoke-virtual {v0}, Ljava/util/concurrent/ConcurrentLinkedQueue;->isEmpty()Z
+    sget-object p0, Lo95;->b:Ljava/lang/Object;
 
-    move-result v0
+    monitor-enter p0
 
-    const/4 v1, 0x0
-
-    const/4 v2, 0x0
-
-    if-eqz v0, :cond_4
-
-    iget-object v0, p0, Lr95;->w0:Lg36;
-
-    if-nez v0, :cond_4
-
-    iget-object v0, p0, Lr95;->X:Lvd4;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    invoke-virtual {v0}, Lli0;->e()V
-
-    invoke-static {}, Lq54;->a()V
-
-    iget-object v0, p0, Lr95;->y0:Ljava/util/concurrent/ScheduledFuture;
-
-    if-eqz v0, :cond_3
-
-    invoke-interface {v0, v2}, Ljava/util/concurrent/Future;->cancel(Z)Z
-
-    :cond_3
-    iput-object v1, p0, Lr95;->y0:Ljava/util/concurrent/ScheduledFuture;
-
-    goto :goto_1
-
-    :cond_4
-    const/4 v0, 0x1
-
-    iput-boolean v0, p0, Lr95;->v0:Z
-
-    iget-object v0, p0, Lr95;->y0:Ljava/util/concurrent/ScheduledFuture;
-
-    if-eqz v0, :cond_5
-
-    invoke-interface {v0, v2}, Ljava/util/concurrent/Future;->cancel(Z)Z
-
-    :cond_5
-    iput-object v1, p0, Lr95;->y0:Ljava/util/concurrent/ScheduledFuture;
-
-    iget-object v0, p0, Lr95;->r0:Ljava/util/concurrent/ScheduledExecutorService;
-
-    new-instance v1, Lka4;
-
-    const/16 v2, 0x15
-
-    invoke-direct {v1, v2, p0}, Lka4;-><init>(ILjava/lang/Object;)V
-
-    sget-wide v2, Lr95;->B0:J
-
-    sget-object v4, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;
-
-    invoke-interface {v0, v1, v2, v3, v4}, Ljava/util/concurrent/ScheduledExecutorService;->schedule(Ljava/lang/Runnable;JLjava/util/concurrent/TimeUnit;)Ljava/util/concurrent/ScheduledFuture;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lr95;->y0:Ljava/util/concurrent/ScheduledFuture;
-
-    :goto_1
-    return-void
-
-    :pswitch_2
-    iget-object p0, p0, Lo95;->b:Lr95;
-
-    iget-object v0, p0, Lr95;->q0:Ljava/util/concurrent/ConcurrentLinkedQueue;
-
-    invoke-virtual {v0}, Ljava/util/concurrent/ConcurrentLinkedQueue;->size()I
-
-    move-result v1
-
-    sget-wide v2, Lr95;->B0:J
-
-    iget v4, p0, Lr95;->u0:I
-
-    sget-object v5, Ljava/util/Locale;->US:Ljava/util/Locale;
-
-    new-instance v5, Ljava/lang/StringBuilder;
-
-    const-string v6, "Forcing EOS after missing "
-
-    invoke-direct {v5, v6}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v5, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string v1, " frames for "
-
-    invoke-virtual {v5, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v5, v2, v3}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    const-string v1, " ms, with available frame count: "
-
-    invoke-virtual {v5, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v5, v4}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {v1}, Lou0;->J(Ljava/lang/String;)V
-
-    const/4 v1, 0x0
-
-    iput-boolean v1, p0, Lr95;->v0:Z
-
-    const/4 v1, 0x0
-
-    iput-object v1, p0, Lr95;->w0:Lg36;
-
-    const/4 v1, 0x1
-
-    iput-boolean v1, p0, Lr95;->z0:Z
-
-    :goto_2
-    iget v1, p0, Lr95;->u0:I
-
-    if-lez v1, :cond_6
-
-    add-int/lit8 v1, v1, -0x1
-
-    iput v1, p0, Lr95;->u0:I
-
-    iget-object v1, p0, Lr95;->o0:Landroid/graphics/SurfaceTexture;
-
-    invoke-virtual {v1}, Landroid/graphics/SurfaceTexture;->updateTexImage()V
-
-    invoke-interface {v0}, Ljava/util/Queue;->remove()Ljava/lang/Object;
-
-    goto :goto_2
-
-    :cond_6
-    invoke-virtual {v0}, Ljava/util/concurrent/ConcurrentLinkedQueue;->clear()V
-
-    invoke-virtual {p0}, Lr95;->z()V
+    monitor-exit p0
 
     return-void
-
-    :pswitch_3
-    iget-object p0, p0, Lo95;->b:Lr95;
-
-    const/4 v0, 0x0
-
-    iput-object v0, p0, Lr95;->w0:Lg36;
-
-    iget-boolean v1, p0, Lr95;->v0:Z
-
-    if-eqz v1, :cond_8
-
-    iget-object v1, p0, Lr95;->q0:Ljava/util/concurrent/ConcurrentLinkedQueue;
-
-    invoke-virtual {v1}, Ljava/util/concurrent/ConcurrentLinkedQueue;->isEmpty()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_8
-
-    const/4 v1, 0x0
-
-    iput-boolean v1, p0, Lr95;->v0:Z
-
-    iget-object v2, p0, Lr95;->X:Lvd4;
-
-    invoke-virtual {v2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    invoke-virtual {v2}, Lli0;->e()V
-
-    invoke-static {}, Lq54;->a()V
-
-    iget-object v2, p0, Lr95;->y0:Ljava/util/concurrent/ScheduledFuture;
-
-    if-eqz v2, :cond_7
-
-    invoke-interface {v2, v1}, Ljava/util/concurrent/Future;->cancel(Z)Z
-
-    :cond_7
-    iput-object v0, p0, Lr95;->y0:Ljava/util/concurrent/ScheduledFuture;
-
-    goto :goto_3
-
-    :cond_8
-    invoke-virtual {p0}, Lr95;->A()V
-
-    :goto_3
-    return-void
-
-    :pswitch_4
-    iget-object p0, p0, Lo95;->b:Lr95;
-
-    const/4 v0, 0x0
-
-    iput-boolean v0, p0, Lr95;->z0:Z
-
-    return-void
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_4
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
 .end method

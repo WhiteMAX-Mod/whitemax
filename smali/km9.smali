@@ -1,177 +1,99 @@
 .class public final Lkm9;
-.super Lyi3;
+.super Lb2;
 .source "SourceFile"
 
 
 # instance fields
-.field public final f:Landroid/net/ConnectivityManager;
-
-.field public final g:Lhh3;
-
-
-# direct methods
-.method public constructor <init>(Landroid/content/Context;Ljab;)V
-    .locals 0
-
-    invoke-direct {p0, p1, p2}, Lyi3;-><init>(Landroid/content/Context;Ljab;)V
-
-    iget-object p1, p0, Lyi3;->b:Ljava/lang/Object;
-
-    check-cast p1, Landroid/content/Context;
-
-    const-string p2, "connectivity"
-
-    invoke-virtual {p1, p2}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Landroid/net/ConnectivityManager;
-
-    iput-object p1, p0, Lkm9;->f:Landroid/net/ConnectivityManager;
-
-    new-instance p1, Lhh3;
-
-    const/4 p2, 0x1
-
-    invoke-direct {p1, p2, p0}, Lhh3;-><init>(ILjava/lang/Object;)V
-
-    iput-object p1, p0, Lkm9;->g:Lhh3;
-
-    return-void
-.end method
+.field public transient Y:Ljm9;
 
 
 # virtual methods
-.method public final i()Ljava/lang/Object;
+.method public final c()Lg2;
+    .locals 2
+
+    iget-object v0, p0, Lb2;->o:Ljava/util/Map;
+
+    instance-of v1, v0, Ljava/util/NavigableMap;
+
+    if-eqz v1, :cond_0
+
+    new-instance v1, Li2;
+
+    check-cast v0, Ljava/util/NavigableMap;
+
+    invoke-direct {v1, p0, v0}, Li2;-><init>(Lkm9;Ljava/util/NavigableMap;)V
+
+    return-object v1
+
+    :cond_0
+    instance-of v1, v0, Ljava/util/SortedMap;
+
+    if-eqz v1, :cond_1
+
+    new-instance v1, Ll2;
+
+    check-cast v0, Ljava/util/SortedMap;
+
+    invoke-direct {v1, p0, v0}, Ll2;-><init>(Lkm9;Ljava/util/SortedMap;)V
+
+    return-object v1
+
+    :cond_1
+    new-instance v1, Lg2;
+
+    invoke-direct {v1, p0, v0}, Lg2;-><init>(Lb2;Ljava/util/Map;)V
+
+    return-object v1
+.end method
+
+.method public final d()Ljava/util/Collection;
     .locals 0
 
-    iget-object p0, p0, Lkm9;->f:Landroid/net/ConnectivityManager;
+    iget-object p0, p0, Lkm9;->Y:Ljm9;
 
-    invoke-static {p0}, Llm9;->a(Landroid/net/ConnectivityManager;)Ljm9;
+    invoke-virtual {p0}, Ljm9;->get()Ljava/lang/Object;
 
     move-result-object p0
+
+    check-cast p0, Ljava/util/List;
 
     return-object p0
 .end method
 
-.method public final r()V
-    .locals 4
+.method public final e()Lh2;
+    .locals 2
 
-    const-string v0, "Received exception while registering network callback"
+    iget-object v0, p0, Lb2;->o:Ljava/util/Map;
 
-    :try_start_0
-    invoke-static {}, Lfc2;->p()Lfc2;
+    instance-of v1, v0, Ljava/util/NavigableMap;
 
-    move-result-object v1
+    if-eqz v1, :cond_0
 
-    sget-object v2, Llm9;->a:Ljava/lang/String;
+    new-instance v1, Lj2;
 
-    const-string v3, "Registering network callback"
+    check-cast v0, Ljava/util/NavigableMap;
 
-    invoke-virtual {v1, v2, v3}, Lfc2;->g(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v1, p0, v0}, Lj2;-><init>(Lkm9;Ljava/util/NavigableMap;)V
 
-    iget-object v1, p0, Lkm9;->f:Landroid/net/ConnectivityManager;
+    return-object v1
 
-    iget-object p0, p0, Lkm9;->g:Lhh3;
+    :cond_0
+    instance-of v1, v0, Ljava/util/SortedMap;
 
-    invoke-static {v1, p0}, Lcm9;->a(Landroid/net/ConnectivityManager;Landroid/net/ConnectivityManager$NetworkCallback;)V
-    :try_end_0
-    .catch Ljava/lang/IllegalArgumentException; {:try_start_0 .. :try_end_0} :catch_1
-    .catch Ljava/lang/SecurityException; {:try_start_0 .. :try_end_0} :catch_0
+    if-eqz v1, :cond_1
 
-    return-void
+    new-instance v1, Lm2;
 
-    :catch_0
-    move-exception p0
+    check-cast v0, Ljava/util/SortedMap;
 
-    goto :goto_0
+    invoke-direct {v1, p0, v0}, Lm2;-><init>(Lkm9;Ljava/util/SortedMap;)V
 
-    :catch_1
-    move-exception p0
+    return-object v1
 
-    goto :goto_1
+    :cond_1
+    new-instance v1, Lh2;
 
-    :goto_0
-    invoke-static {}, Lfc2;->p()Lfc2;
+    invoke-direct {v1, p0, v0}, Lh2;-><init>(Lb2;Ljava/util/Map;)V
 
-    move-result-object v1
-
-    sget-object v2, Llm9;->a:Ljava/lang/String;
-
-    invoke-virtual {v1, v2, v0, p0}, Lfc2;->o(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    goto :goto_2
-
-    :goto_1
-    invoke-static {}, Lfc2;->p()Lfc2;
-
-    move-result-object v1
-
-    sget-object v2, Llm9;->a:Ljava/lang/String;
-
-    invoke-virtual {v1, v2, v0, p0}, Lfc2;->o(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    :goto_2
-    return-void
-.end method
-
-.method public final s()V
-    .locals 4
-
-    const-string v0, "Received exception while unregistering network callback"
-
-    :try_start_0
-    invoke-static {}, Lfc2;->p()Lfc2;
-
-    move-result-object v1
-
-    sget-object v2, Llm9;->a:Ljava/lang/String;
-
-    const-string v3, "Unregistering network callback"
-
-    invoke-virtual {v1, v2, v3}, Lfc2;->g(Ljava/lang/String;Ljava/lang/String;)V
-
-    iget-object v1, p0, Lkm9;->f:Landroid/net/ConnectivityManager;
-
-    iget-object p0, p0, Lkm9;->g:Lhh3;
-
-    invoke-static {v1, p0}, Lam9;->c(Landroid/net/ConnectivityManager;Landroid/net/ConnectivityManager$NetworkCallback;)V
-    :try_end_0
-    .catch Ljava/lang/IllegalArgumentException; {:try_start_0 .. :try_end_0} :catch_1
-    .catch Ljava/lang/SecurityException; {:try_start_0 .. :try_end_0} :catch_0
-
-    return-void
-
-    :catch_0
-    move-exception p0
-
-    goto :goto_0
-
-    :catch_1
-    move-exception p0
-
-    goto :goto_1
-
-    :goto_0
-    invoke-static {}, Lfc2;->p()Lfc2;
-
-    move-result-object v1
-
-    sget-object v2, Llm9;->a:Ljava/lang/String;
-
-    invoke-virtual {v1, v2, v0, p0}, Lfc2;->o(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    goto :goto_2
-
-    :goto_1
-    invoke-static {}, Lfc2;->p()Lfc2;
-
-    move-result-object v1
-
-    sget-object v2, Llm9;->a:Ljava/lang/String;
-
-    invoke-virtual {v1, v2, v0, p0}, Lfc2;->o(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    :goto_2
-    return-void
+    return-object v1
 .end method

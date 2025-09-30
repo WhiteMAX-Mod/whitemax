@@ -1,137 +1,64 @@
-.class public Lw77;
-.super Lx87;
+.class public final Lw77;
+.super Landroid/view/inputmethod/InputConnectionWrapper;
 .source "SourceFile"
-
-# interfaces
-.implements Ll93;
 
 
 # instance fields
-.field public final a:Z
+.field public final synthetic a:Lx77;
 
 
 # direct methods
-.method public constructor <init>(Lw77;)V
-    .locals 4
+.method public constructor <init>(Landroid/view/inputmethod/InputConnection;Lx77;)V
+    .locals 0
 
-    const/4 v0, 0x1
+    iput-object p2, p0, Lw77;->a:Lx77;
 
-    invoke-direct {p0, v0}, Lx87;-><init>(Z)V
+    const/4 p2, 0x0
 
-    invoke-virtual {p0, p1}, Lx87;->initParentJob(Lv77;)V
-
-    invoke-virtual {p0}, Lx87;->getParentHandle$kotlinx_coroutines_core()Lyy2;
-
-    move-result-object p1
-
-    instance-of v1, p1, Lzy2;
-
-    const/4 v2, 0x0
-
-    if-eqz v1, :cond_0
-
-    check-cast p1, Lzy2;
-
-    goto :goto_0
-
-    :cond_0
-    move-object p1, v2
-
-    :goto_0
-    const/4 v1, 0x0
-
-    if-eqz p1, :cond_6
-
-    iget-object p1, p1, Li87;->a:Lx87;
-
-    if-eqz p1, :cond_1
-
-    goto :goto_1
-
-    :cond_1
-    move-object p1, v2
-
-    :goto_1
-    if-nez p1, :cond_2
-
-    goto :goto_4
-
-    :cond_2
-    invoke-virtual {p1}, Lx87;->getHandlesException$kotlinx_coroutines_core()Z
-
-    move-result v3
-
-    if-eqz v3, :cond_3
-
-    goto :goto_5
-
-    :cond_3
-    invoke-virtual {p1}, Lx87;->getParentHandle$kotlinx_coroutines_core()Lyy2;
-
-    move-result-object p1
-
-    instance-of v3, p1, Lzy2;
-
-    if-eqz v3, :cond_4
-
-    check-cast p1, Lzy2;
-
-    goto :goto_2
-
-    :cond_4
-    move-object p1, v2
-
-    :goto_2
-    if-eqz p1, :cond_6
-
-    iget-object p1, p1, Li87;->a:Lx87;
-
-    if-eqz p1, :cond_5
-
-    goto :goto_3
-
-    :cond_5
-    move-object p1, v2
-
-    :goto_3
-    if-nez p1, :cond_2
-
-    :cond_6
-    :goto_4
-    move v0, v1
-
-    :goto_5
-    iput-boolean v0, p0, Lw77;->a:Z
+    invoke-direct {p0, p1, p2}, Landroid/view/inputmethod/InputConnectionWrapper;-><init>(Landroid/view/inputmethod/InputConnection;Z)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final D()Z
-    .locals 1
+.method public final commitContent(Landroid/view/inputmethod/InputContentInfo;ILandroid/os/Bundle;)Z
+    .locals 3
 
-    sget-object v0, Le5f;->a:Le5f;
+    if-nez p1, :cond_0
 
-    invoke-virtual {p0, v0}, Lx87;->makeCompleting$kotlinx_coroutines_core(Ljava/lang/Object;)Z
+    const/4 v0, 0x0
 
-    move-result p0
+    goto :goto_0
 
-    return p0
-.end method
+    :cond_0
+    new-instance v0, Lq2e;
 
-.method public final getHandlesException$kotlinx_coroutines_core()Z
-    .locals 0
+    new-instance v1, Ltgd;
 
-    iget-boolean p0, p0, Lw77;->a:Z
+    const/16 v2, 0x12
 
-    return p0
-.end method
+    invoke-direct {v1, v2, p1}, Ltgd;-><init>(ILjava/lang/Object;)V
 
-.method public final getOnCancelComplete$kotlinx_coroutines_core()Z
-    .locals 0
+    invoke-direct {v0, v1}, Lq2e;-><init>(Ljava/lang/Object;)V
+
+    :goto_0
+    iget-object v1, p0, Lw77;->a:Lx77;
+
+    invoke-interface {v1, v0, p2, p3}, Lx77;->i(Lq2e;ILandroid/os/Bundle;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
 
     const/4 p0, 0x1
+
+    return p0
+
+    :cond_1
+    invoke-super {p0, p1, p2, p3}, Landroid/view/inputmethod/InputConnectionWrapper;->commitContent(Landroid/view/inputmethod/InputContentInfo;ILandroid/os/Bundle;)Z
+
+    move-result p0
 
     return p0
 .end method

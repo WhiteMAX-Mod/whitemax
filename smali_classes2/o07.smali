@@ -1,11 +1,9 @@
-.class public interface abstract Lo07;
-.super Ljava/lang/Object;
+.class public final Lo07;
+.super Lbw4;
 .source "SourceFile"
 
 
-# virtual methods
-.method public abstract a()Ljava/util/List;
-.end method
+# instance fields
+.field public g:I
 
-.method public abstract b(Landroid/content/Context;)Ljava/lang/Object;
-.end method
+.field public h:I

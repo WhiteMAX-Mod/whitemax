@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lgl;
+.implements Lql;
 
 
 # annotations
@@ -13,14 +13,14 @@
     }
     d2 = {
         "Lru/ok/android/externcalls/sdk/api/session/InMemorySessionStore;",
-        "Lgl;",
-        "Lfl;",
+        "Lql;",
+        "Lpl;",
         "sessionInfo",
         "<init>",
-        "(Lfl;)V",
-        "Lfl;",
+        "(Lpl;)V",
+        "Lpl;",
         "getSessionInfo",
-        "()Lfl;",
+        "()Lpl;",
         "setSessionInfo",
         "calls-sdk_release"
     }
@@ -35,7 +35,7 @@
 
 
 # instance fields
-.field private sessionInfo:Lfl;
+.field private sessionInfo:Lpl;
 
 
 # direct methods
@@ -47,24 +47,24 @@
 
     const/4 v1, 0x1
 
-    invoke-direct {p0, v0, v1, v0}, Lru/ok/android/externcalls/sdk/api/session/InMemorySessionStore;-><init>(Lfl;ILl94;)V
+    invoke-direct {p0, v0, v1, v0}, Lru/ok/android/externcalls/sdk/api/session/InMemorySessionStore;-><init>(Lpl;ILld4;)V
 
     return-void
 .end method
 
-.method public constructor <init>(Lfl;)V
+.method public constructor <init>(Lpl;)V
     .locals 0
 
     .line 2
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 3
-    iput-object p1, p0, Lru/ok/android/externcalls/sdk/api/session/InMemorySessionStore;->sessionInfo:Lfl;
+    iput-object p1, p0, Lru/ok/android/externcalls/sdk/api/session/InMemorySessionStore;->sessionInfo:Lpl;
 
     return-void
 .end method
 
-.method public synthetic constructor <init>(Lfl;ILl94;)V
+.method public synthetic constructor <init>(Lpl;ILld4;)V
     .locals 0
 
     and-int/lit8 p2, p2, 0x1
@@ -75,25 +75,25 @@
 
     .line 4
     :cond_0
-    invoke-direct {p0, p1}, Lru/ok/android/externcalls/sdk/api/session/InMemorySessionStore;-><init>(Lfl;)V
+    invoke-direct {p0, p1}, Lru/ok/android/externcalls/sdk/api/session/InMemorySessionStore;-><init>(Lpl;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public getSessionInfo()Lfl;
+.method public getSessionInfo()Lpl;
     .locals 0
 
-    iget-object p0, p0, Lru/ok/android/externcalls/sdk/api/session/InMemorySessionStore;->sessionInfo:Lfl;
+    iget-object p0, p0, Lru/ok/android/externcalls/sdk/api/session/InMemorySessionStore;->sessionInfo:Lpl;
 
     return-object p0
 .end method
 
-.method public setSessionInfo(Lfl;)V
+.method public setSessionInfo(Lpl;)V
     .locals 0
 
-    iput-object p1, p0, Lru/ok/android/externcalls/sdk/api/session/InMemorySessionStore;->sessionInfo:Lfl;
+    iput-object p1, p0, Lru/ok/android/externcalls/sdk/api/session/InMemorySessionStore;->sessionInfo:Lpl;
 
     return-void
 .end method

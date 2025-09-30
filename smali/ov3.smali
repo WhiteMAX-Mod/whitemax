@@ -1,124 +1,287 @@
 .class public final Lov3;
-.super Landroid/animation/AnimatorListenerAdapter;
+.super Lxi0;
 .source "SourceFile"
 
 
 # instance fields
-.field public final synthetic a:Landroid/view/View;
+.field public final A0:Lbv0;
 
-.field public final synthetic b:Z
+.field public B0:J
 
-.field public final synthetic c:Landroid/view/View;
+.field public volatile C0:Z
 
-.field public final synthetic d:Lpv3;
+.field public D0:Z
 
-.field public final synthetic e:F
+.field public final y0:I
 
-.field public final synthetic f:F
+.field public final z0:J
 
 
 # direct methods
-.method public constructor <init>(Ls12;ZLs12;Lpv3;FF)V
+.method public constructor <init>(Ld74;Lm74;Lv46;ILjava/lang/Object;JJJJJIJLbv0;)V
     .locals 0
 
-    iput-object p1, p0, Lov3;->a:Landroid/view/View;
+    invoke-direct/range {p0 .. p15}, Lxi0;-><init>(Ld74;Lm74;Lv46;ILjava/lang/Object;JJJJJ)V
 
-    iput-boolean p2, p0, Lov3;->b:Z
+    move/from16 p1, p16
 
-    iput-object p3, p0, Lov3;->c:Landroid/view/View;
+    iput p1, p0, Lov3;->y0:I
 
-    iput-object p4, p0, Lov3;->d:Lpv3;
+    move-wide/from16 p1, p17
 
-    iput p5, p0, Lov3;->e:F
+    iput-wide p1, p0, Lov3;->z0:J
 
-    iput p6, p0, Lov3;->f:F
+    move-object/from16 p1, p19
 
-    invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
+    iput-object p1, p0, Lov3;->A0:Lbv0;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onAnimationCancel(Landroid/animation/Animator;)V
+.method public final a()V
     .locals 1
 
-    iget-object p1, p0, Lov3;->a:Landroid/view/View;
+    const/4 v0, 0x1
 
-    iget v0, p0, Lov3;->e:F
-
-    invoke-virtual {p1, v0}, Landroid/view/View;->setY(F)V
-
-    iget-object p1, p0, Lov3;->c:Landroid/view/View;
-
-    iget v0, p0, Lov3;->f:F
-
-    invoke-virtual {p1, v0}, Landroid/view/View;->setY(F)V
-
-    iget-object p1, p0, Lov3;->d:Lpv3;
-
-    iget-boolean p0, p0, Lov3;->b:Z
-
-    invoke-static {p1, p0}, Lpv3;->a(Lpv3;Z)V
+    iput-boolean v0, p0, Lov3;->C0:Z
 
     return-void
 .end method
 
-.method public final onAnimationEnd(Landroid/animation/Animator;)V
+.method public final b()J
+    .locals 4
+
+    iget v0, p0, Lov3;->y0:I
+
+    int-to-long v0, v0
+
+    iget-wide v2, p0, Lud8;->t0:J
+
+    add-long/2addr v2, v0
+
+    return-wide v2
+.end method
+
+.method public final c()Z
     .locals 0
 
-    iget-object p1, p0, Lov3;->d:Lpv3;
+    iget-boolean p0, p0, Lov3;->D0:Z
 
-    iget-boolean p0, p0, Lov3;->b:Z
-
-    invoke-static {p1, p0}, Lpv3;->a(Lpv3;Z)V
-
-    return-void
+    return p0
 .end method
 
-.method public final onAnimationStart(Landroid/animation/Animator;)V
-    .locals 5
+.method public final load()V
+    .locals 11
 
-    sget p1, Lp5a;->m:I
+    iget-wide v0, p0, Lov3;->B0:J
 
-    const-string v0, "fade_out"
+    const-wide/16 v2, 0x0
 
-    const-string v1, "fade_in"
+    cmp-long v0, v0, v2
 
-    iget-boolean v2, p0, Lov3;->b:Z
+    const/4 v1, 0x0
 
-    if-eqz v2, :cond_0
+    const/4 v2, 0x1
 
-    move-object v3, v1
+    if-nez v0, :cond_4
+
+    iget-object v4, p0, Lxi0;->w0:Lbh8;
+
+    invoke-static {v4}, Lxnd;->n(Ljava/lang/Object;)V
+
+    iget-wide v5, p0, Lov3;->z0:J
+
+    iget-object v0, v4, Lbh8;->c:Ljava/lang/Object;
+
+    check-cast v0, [Lw2d;
+
+    array-length v3, v0
+
+    move v7, v1
+
+    :goto_0
+    if-ge v7, v3, :cond_1
+
+    aget-object v8, v0, v7
+
+    iget-wide v9, v8, Lw2d;->F:J
+
+    cmp-long v9, v9, v5
+
+    if-eqz v9, :cond_0
+
+    iput-wide v5, v8, Lw2d;->F:J
+
+    iput-boolean v2, v8, Lw2d;->z:Z
+
+    :cond_0
+    add-int/lit8 v7, v7, 0x1
 
     goto :goto_0
 
-    :cond_0
-    move-object v3, v0
-
-    :goto_0
-    iget-object v4, p0, Lov3;->a:Landroid/view/View;
-
-    invoke-virtual {v4, p1, v3}, Landroid/view/View;->setTag(ILjava/lang/Object;)V
-
-    if-eqz v2, :cond_1
-
-    move-object v0, v1
-
     :cond_1
-    iget-object v1, p0, Lov3;->c:Landroid/view/View;
+    iget-object v3, p0, Lov3;->A0:Lbv0;
 
-    invoke-virtual {v1, p1, v0}, Landroid/view/View;->setTag(ILjava/lang/Object;)V
+    iget-wide v5, p0, Lxi0;->u0:J
 
-    iget-object p0, p0, Lov3;->d:Lpv3;
+    const-wide v7, -0x7fffffffffffffffL    # -4.9E-324
 
-    iget-object p0, p0, Lpv3;->i:Lx56;
+    cmp-long v0, v5, v7
 
-    invoke-static {v2}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+    if-nez v0, :cond_2
 
-    move-result-object p1
+    move-wide v5, v7
 
-    invoke-interface {p0, p1}, Lx56;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    goto :goto_1
+
+    :cond_2
+    iget-wide v9, p0, Lov3;->z0:J
+
+    sub-long/2addr v5, v9
+
+    :goto_1
+    iget-wide v9, p0, Lxi0;->v0:J
+
+    cmp-long v0, v9, v7
+
+    if-nez v0, :cond_3
+
+    goto :goto_2
+
+    :cond_3
+    iget-wide v7, p0, Lov3;->z0:J
+
+    sub-long v7, v9, v7
+
+    :goto_2
+    invoke-virtual/range {v3 .. v8}, Lbv0;->a(Lbh8;JJ)V
+
+    :cond_4
+    :try_start_0
+    iget-object v0, p0, Lz23;->b:Lm74;
+
+    iget-wide v3, p0, Lov3;->B0:J
+
+    invoke-virtual {v0, v3, v4}, Lm74;->b(J)Lm74;
+
+    move-result-object v0
+
+    new-instance v3, Lef4;
+
+    iget-object v4, p0, Lz23;->s0:Laee;
+
+    iget-wide v5, v0, Lm74;->f:J
+
+    invoke-virtual {v4, v0}, Laee;->P(Lm74;)J
+
+    move-result-wide v7
+
+    invoke-direct/range {v3 .. v8}, Lef4;-><init>(Lx64;JJ)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_1
+
+    :goto_3
+    :try_start_1
+    iget-boolean v0, p0, Lov3;->C0:Z
+
+    if-nez v0, :cond_7
+
+    iget-object v0, p0, Lov3;->A0:Lbv0;
+
+    iget-object v0, v0, Lbv0;->a:Lnf5;
+
+    sget-object v4, Lbv0;->t0:Lj7;
+
+    invoke-interface {v0, v3, v4}, Lnf5;->i(Lpf5;Lj7;)I
+
+    move-result v0
+
+    if-eq v0, v2, :cond_5
+
+    move v4, v2
+
+    goto :goto_4
+
+    :cond_5
+    move v4, v1
+
+    :goto_4
+    invoke-static {v4}, Lxnd;->m(Z)V
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    if-nez v0, :cond_6
+
+    move v0, v2
+
+    goto :goto_5
+
+    :cond_6
+    move v0, v1
+
+    :goto_5
+    if-eqz v0, :cond_7
+
+    goto :goto_3
+
+    :catchall_0
+    move-exception v0
+
+    goto :goto_6
+
+    :cond_7
+    :try_start_2
+    iget-wide v0, v3, Lef4;->o:J
+
+    iget-object v3, p0, Lz23;->b:Lm74;
+
+    iget-wide v3, v3, Lm74;->f:J
+
+    sub-long/2addr v0, v3
+
+    iput-wide v0, p0, Lov3;->B0:J
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_1
+
+    iget-object v0, p0, Lz23;->s0:Laee;
+
+    invoke-static {v0}, Lya6;->g(Ld74;)V
+
+    iget-boolean v0, p0, Lov3;->C0:Z
+
+    xor-int/2addr v0, v2
+
+    iput-boolean v0, p0, Lov3;->D0:Z
 
     return-void
+
+    :catchall_1
+    move-exception v0
+
+    goto :goto_7
+
+    :goto_6
+    :try_start_3
+    iget-wide v1, v3, Lef4;->o:J
+
+    iget-object v3, p0, Lz23;->b:Lm74;
+
+    iget-wide v3, v3, Lm74;->f:J
+
+    sub-long/2addr v1, v3
+
+    iput-wide v1, p0, Lov3;->B0:J
+
+    throw v0
+    :try_end_3
+    .catchall {:try_start_3 .. :try_end_3} :catchall_1
+
+    :goto_7
+    iget-object p0, p0, Lz23;->s0:Laee;
+
+    invoke-static {p0}, Lya6;->g(Ld74;)V
+
+    throw v0
 .end method

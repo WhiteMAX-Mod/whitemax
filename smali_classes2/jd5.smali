@@ -1,47 +1,38 @@
 .class public final Ljd5;
-.super Lbu3;
+.super Ldeb;
 .source "SourceFile"
 
 
 # instance fields
-.field public final synthetic X:Lqd5;
-
-.field public Y:I
-
-.field public synthetic o:Ljava/lang/Object;
+.field public final b:Lar7;
 
 
 # direct methods
-.method public constructor <init>(Lqd5;Lbu3;)V
+.method public constructor <init>(Lar7;Lm37;)V
     .locals 0
 
-    iput-object p1, p0, Ljd5;->X:Lqd5;
+    invoke-direct {p0, p2}, Ldeb;-><init>(Ljava/lang/Iterable;)V
 
-    invoke-direct {p0, p2}, Lbu3;-><init>(Lkotlin/coroutines/Continuation;)V
+    iput-object p1, p0, Ljd5;->b:Lar7;
+
+    new-instance p0, Landroid/os/Handler;
+
+    invoke-static {}, Landroid/os/Looper;->myLooper()Landroid/os/Looper;
+
+    move-result-object p1
+
+    if-nez p1, :cond_0
+
+    invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
+
+    move-result-object p1
+
+    :cond_0
+    invoke-direct {p0, p1}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
+
+    new-instance p0, Ljava/util/LinkedList;
+
+    invoke-direct {p0}, Ljava/util/LinkedList;-><init>()V
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
-
-    iput-object p1, p0, Ljd5;->o:Ljava/lang/Object;
-
-    iget p1, p0, Ljd5;->Y:I
-
-    const/high16 v0, -0x80000000
-
-    or-int/2addr p1, v0
-
-    iput p1, p0, Ljd5;->Y:I
-
-    iget-object p1, p0, Ljd5;->X:Lqd5;
-
-    invoke-virtual {p1, p0}, Lqd5;->W0(Lbu3;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    return-object p0
 .end method

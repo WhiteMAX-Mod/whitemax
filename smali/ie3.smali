@@ -1,27 +1,44 @@
-.class public abstract Lie3;
+.class public final Lie3;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lcf9;
+
+
+# instance fields
+.field public final a:Lim4;
+
+.field public final b:Lim4;
+
 
 # direct methods
-.method public static a(Landroid/content/res/Configuration;)Landroid/os/LocaleList;
-    .locals 0
+.method public constructor <init>()V
+    .locals 3
 
-    invoke-virtual {p0}, Landroid/content/res/Configuration;->getLocales()Landroid/os/LocaleList;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    move-result-object p0
+    new-instance v0, Lim4;
 
-    return-object p0
-.end method
+    new-instance v1, Lua6;
 
-.method public static b(Landroid/content/res/Configuration;Luq7;)V
-    .locals 0
+    const/16 v2, 0xe
 
-    iget-object p1, p1, Luq7;->a:Lvq7;
+    invoke-direct {v1, v2}, Lua6;-><init>(I)V
 
-    iget-object p1, p1, Lvq7;->a:Landroid/os/LocaleList;
+    invoke-direct {v0, v1}, Lim4;-><init>(Lc58;)V
 
-    invoke-virtual {p0, p1}, Landroid/content/res/Configuration;->setLocales(Landroid/os/LocaleList;)V
+    iput-object v0, p0, Lie3;->a:Lim4;
+
+    new-instance v0, Lim4;
+
+    new-instance v1, Lc3e;
+
+    invoke-direct {v1}, Ljava/lang/Object;-><init>()V
+
+    invoke-direct {v0, v1}, Lim4;-><init>(Lc58;)V
+
+    iput-object v0, p0, Lie3;->b:Lim4;
 
     return-void
 .end method

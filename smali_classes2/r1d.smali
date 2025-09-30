@@ -1,48 +1,49 @@
-.class public final Lr1d;
-.super Lbu3;
+.class public final synthetic Lr1d;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+# interfaces
+.implements Lsc3;
+.implements Lpm3;
 
 
 # instance fields
-.field public X:I
-
-.field public final synthetic Y:Ls1d;
-
-.field public synthetic o:Ljava/lang/Object;
+.field public final synthetic a:Lc6;
 
 
 # direct methods
-.method public constructor <init>(Ls1d;Lkotlin/coroutines/Continuation;)V
+.method public synthetic constructor <init>(Lc6;)V
     .locals 0
 
-    iput-object p1, p0, Lr1d;->Y:Ls1d;
+    iput-object p1, p0, Lr1d;->a:Lc6;
 
-    invoke-direct {p0, p2}, Lbu3;-><init>(Lkotlin/coroutines/Continuation;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+.method public accept(Ljava/lang/Object;)V
+    .locals 0
 
-    iput-object p1, p0, Lr1d;->o:Ljava/lang/Object;
+    check-cast p1, Lylf;
 
-    iget p1, p0, Lr1d;->X:I
+    iget-object p0, p0, Lr1d;->a:Lc6;
 
-    const/high16 v0, -0x80000000
+    invoke-interface {p0}, Lc6;->run()V
 
-    or-int/2addr p1, v0
+    return-void
+.end method
 
-    iput p1, p0, Lr1d;->X:I
+.method public d(Ljc3;)V
+    .locals 0
 
-    iget-object p1, p0, Lr1d;->Y:Ls1d;
+    iget-object p0, p0, Lr1d;->a:Lc6;
 
-    const/4 v0, 0x0
+    invoke-interface {p0}, Lc6;->run()V
 
-    invoke-virtual {p1, v0, p0}, Ls1d;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    invoke-virtual {p1}, Ljc3;->b()V
 
-    move-result-object p0
-
-    return-object p0
+    return-void
 .end method

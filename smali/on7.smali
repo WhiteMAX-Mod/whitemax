@@ -1,35 +1,70 @@
 .class public final Lon7;
-.super Ljava/lang/Object;
+.super Lmn7;
 .source "SourceFile"
+
+# interfaces
+.implements Lrn7;
 
 
 # instance fields
-.field public final a:Lw1b;
+.field public final a:Lbo7;
 
-.field public final b:J
-
-.field public final c:F
-
-.field public final d:Z
-
-.field public final e:J
+.field public final b:Lq04;
 
 
 # direct methods
-.method public constructor <init>(Lw1b;Lqse;Lfj8;JJFZJ)V
+.method public constructor <init>(Lbo7;Lq04;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lon7;->a:Lw1b;
+    iput-object p1, p0, Lon7;->a:Lbo7;
 
-    iput-wide p6, p0, Lon7;->b:J
+    iput-object p2, p0, Lon7;->b:Lq04;
 
-    iput p8, p0, Lon7;->c:F
+    iget-object p0, p1, Lbo7;->d:Lcn7;
 
-    iput-boolean p9, p0, Lon7;->d:Z
+    sget-object p1, Lcn7;->a:Lcn7;
 
-    iput-wide p10, p0, Lon7;->e:J
+    if-ne p0, p1, :cond_0
 
+    invoke-static {p2}, Lmu0;->b(Lq04;)V
+
+    :cond_0
     return-void
+.end method
+
+
+# virtual methods
+.method public final d(Lzn7;Lbn7;)V
+    .locals 1
+
+    iget-object p1, p0, Lon7;->a:Lbo7;
+
+    iget-object p2, p1, Lbo7;->d:Lcn7;
+
+    sget-object v0, Lcn7;->a:Lcn7;
+
+    invoke-virtual {p2, v0}, Ljava/lang/Enum;->compareTo(Ljava/lang/Enum;)I
+
+    move-result p2
+
+    if-gtz p2, :cond_0
+
+    invoke-virtual {p1, p0}, Lbo7;->f(Lvn7;)V
+
+    iget-object p0, p0, Lon7;->b:Lq04;
+
+    invoke-static {p0}, Lmu0;->b(Lq04;)V
+
+    :cond_0
+    return-void
+.end method
+
+.method public final getCoroutineContext()Lq04;
+    .locals 0
+
+    iget-object p0, p0, Lon7;->b:Lq04;
+
+    return-object p0
 .end method

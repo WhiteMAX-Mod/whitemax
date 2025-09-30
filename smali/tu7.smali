@@ -1,201 +1,88 @@
-.class public final Ltu7;
-.super Lqde;
+.class public interface abstract Ltu7;
+.super Ljava/lang/Object;
 .source "SourceFile"
-
-# interfaces
-.implements Ln66;
-
-
-# instance fields
-.field public final synthetic X:I
-
-.field public synthetic Y:Ljava/util/List;
-
-.field public synthetic Z:Ljava/util/List;
-
-
-# direct methods
-.method public synthetic constructor <init>(ILkotlin/coroutines/Continuation;I)V
-    .locals 0
-
-    iput p3, p0, Ltu7;->X:I
-
-    invoke-direct {p0, p1, p2}, Lqde;-><init>(ILkotlin/coroutines/Continuation;)V
-
-    return-void
-.end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 2
-
-    iget p0, p0, Ltu7;->X:I
-
-    check-cast p1, Ljava/util/List;
-
-    check-cast p2, Ljava/util/List;
-
-    check-cast p3, Lkotlin/coroutines/Continuation;
-
-    packed-switch p0, :pswitch_data_0
-
-    new-instance p0, Ltu7;
-
-    const/4 v0, 0x3
-
-    const/4 v1, 0x3
-
-    invoke-direct {p0, v0, p3, v1}, Ltu7;-><init>(ILkotlin/coroutines/Continuation;I)V
-
-    iput-object p1, p0, Ltu7;->Y:Ljava/util/List;
-
-    iput-object p2, p0, Ltu7;->Z:Ljava/util/List;
-
-    sget-object p1, Le5f;->a:Le5f;
-
-    invoke-virtual {p0, p1}, Ltu7;->o(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    return-object p0
-
-    :pswitch_0
-    new-instance p0, Ltu7;
-
-    const/4 v0, 0x3
-
-    const/4 v1, 0x2
-
-    invoke-direct {p0, v0, p3, v1}, Ltu7;-><init>(ILkotlin/coroutines/Continuation;I)V
-
-    iput-object p1, p0, Ltu7;->Y:Ljava/util/List;
-
-    iput-object p2, p0, Ltu7;->Z:Ljava/util/List;
-
-    sget-object p1, Le5f;->a:Le5f;
-
-    invoke-virtual {p0, p1}, Ltu7;->o(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    return-object p0
-
-    :pswitch_1
-    new-instance p0, Ltu7;
-
-    const/4 v0, 0x3
-
-    const/4 v1, 0x1
-
-    invoke-direct {p0, v0, p3, v1}, Ltu7;-><init>(ILkotlin/coroutines/Continuation;I)V
-
-    iput-object p1, p0, Ltu7;->Y:Ljava/util/List;
-
-    iput-object p2, p0, Ltu7;->Z:Ljava/util/List;
-
-    sget-object p1, Le5f;->a:Le5f;
-
-    invoke-virtual {p0, p1}, Ltu7;->o(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    return-object p0
-
-    :pswitch_2
-    new-instance p0, Ltu7;
-
-    const/4 v0, 0x3
-
-    const/4 v1, 0x0
-
-    invoke-direct {p0, v0, p3, v1}, Ltu7;-><init>(ILkotlin/coroutines/Continuation;I)V
-
-    iput-object p1, p0, Ltu7;->Y:Ljava/util/List;
-
-    iput-object p2, p0, Ltu7;->Z:Ljava/util/List;
-
-    sget-object p1, Le5f;->a:Le5f;
-
-    invoke-virtual {p0, p1}, Ltu7;->o(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    return-object p0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+.method public abstract a(Lsu7;[Lpd5;)V
 .end method
 
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+.method public abstract b()Z
+.end method
 
-    iget v0, p0, Ltu7;->X:I
+.method public c()Z
+    .locals 0
 
-    packed-switch v0, :pswitch_data_0
+    const-string p0, "shouldContinuePreloading needs to be implemented when playlist preloading is enabled"
 
-    invoke-static {p1}, Lsgg;->Z(Ljava/lang/Object;)V
+    invoke-static {p0}, Lxnd;->l0(Ljava/lang/String;)V
 
-    iget-object p1, p0, Ltu7;->Y:Ljava/util/List;
+    const/4 p0, 0x0
 
-    iget-object p0, p0, Ltu7;->Z:Ljava/util/List;
+    return p0
+.end method
 
-    invoke-static {p1, p0}, Lp43;->M0(Ljava/util/Collection;Ljava/lang/Iterable;)Ljava/util/ArrayList;
+.method public d(J)Z
+    .locals 0
 
-    move-result-object p0
+    new-instance p0, Ljava/lang/IllegalStateException;
 
-    return-object p0
+    const-string p1, "shouldContinueLoading not implemented"
 
-    :pswitch_0
-    invoke-static {p1}, Lsgg;->Z(Ljava/lang/Object;)V
+    invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    iget-object p1, p0, Ltu7;->Y:Ljava/util/List;
+    throw p0
+.end method
 
-    iget-object p0, p0, Ltu7;->Z:Ljava/util/List;
+.method public abstract e(Lndb;)V
+.end method
 
-    invoke-interface {p1}, Ljava/util/Collection;->isEmpty()Z
+.method public abstract f(Lndb;)V
+.end method
 
-    move-result v0
+.method public g(JZ)Z
+    .locals 0
 
-    if-eqz v0, :cond_0
+    new-instance p0, Ljava/lang/IllegalStateException;
 
-    move-object p1, p0
+    const-string p1, "shouldStartPlayback not implemented"
 
-    :cond_0
-    return-object p1
+    invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    :pswitch_1
-    invoke-static {p1}, Lsgg;->Z(Ljava/lang/Object;)V
+    throw p0
+.end method
 
-    iget-object p1, p0, Ltu7;->Y:Ljava/util/List;
+.method public abstract h()J
+.end method
 
-    iget-object p0, p0, Ltu7;->Z:Ljava/util/List;
+.method public abstract i(Lndb;)V
+.end method
 
-    invoke-interface {p1, p0}, Ljava/util/List;->addAll(Ljava/util/Collection;)Z
+.method public j(Lsu7;)Z
+    .locals 2
 
-    return-object p1
+    iget-wide v0, p1, Lsu7;->b:J
 
-    :pswitch_2
-    invoke-static {p1}, Lsgg;->Z(Ljava/lang/Object;)V
+    invoke-interface {p0, v0, v1}, Ltu7;->d(J)Z
 
-    iget-object p1, p0, Ltu7;->Y:Ljava/util/List;
+    move-result p0
 
-    iget-object p0, p0, Ltu7;->Z:Ljava/util/List;
+    return p0
+.end method
 
-    invoke-interface {p1, p0}, Ljava/util/List;->addAll(Ljava/util/Collection;)Z
+.method public abstract k()Lib4;
+.end method
 
-    return-object p1
+.method public l(Lsu7;)Z
+    .locals 2
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    iget-wide v0, p1, Lsu7;->b:J
+
+    iget-boolean p1, p1, Lsu7;->d:Z
+
+    invoke-interface {p0, v0, v1, p1}, Ltu7;->g(JZ)Z
+
+    move-result p0
+
+    return p0
 .end method

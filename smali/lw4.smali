@@ -1,175 +1,317 @@
 .class public final Llw4;
-.super Lkhg;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Ljava/util/Comparator;
+.implements Landroid/os/Parcelable;
+
+
+# static fields
+.field public static final CREATOR:Landroid/os/Parcelable$Creator;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroid/os/Parcelable$Creator<",
+            "Llw4;",
+            ">;"
+        }
+    .end annotation
+.end field
 
 
 # instance fields
-.field public final synthetic h:Lmw4;
+.field public final a:[Ljw4;
+
+.field public b:I
+
+.field public final c:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>(Lmw4;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 2
 
+    new-instance v0, Li84;
+
+    const/4 v1, 0x6
+
+    invoke-direct {v0, v1}, Li84;-><init>(I)V
+
+    sput-object v0, Llw4;->CREATOR:Landroid/os/Parcelable$Creator;
+
+    return-void
+.end method
+
+.method public constructor <init>(Landroid/os/Parcel;)V
+    .locals 1
+
+    .line 8
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Llw4;->h:Lmw4;
+    .line 9
+    invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
+
+    move-result-object v0
+
+    iput-object v0, p0, Llw4;->c:Ljava/lang/String;
+
+    .line 10
+    sget-object v0, Ljw4;->CREATOR:Landroid/os/Parcelable$Creator;
+
+    invoke-virtual {p1, v0}, Landroid/os/Parcel;->createTypedArray(Landroid/os/Parcelable$Creator;)[Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, [Ljw4;
+
+    sget v0, Llrf;->a:I
+
+    iput-object p1, p0, Llw4;->a:[Ljw4;
+
+    .line 11
+    array-length p0, p1
+
+    return-void
+.end method
+
+.method public constructor <init>(Ljava/lang/String;Ljava/util/ArrayList;)V
+    .locals 2
+
+    const/4 v0, 0x0
+
+    .line 1
+    new-array v1, v0, [Ljw4;
+
+    invoke-virtual {p2, v1}, Ljava/util/ArrayList;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;
+
+    move-result-object p2
+
+    check-cast p2, [Ljw4;
+
+    invoke-direct {p0, p1, v0, p2}, Llw4;-><init>(Ljava/lang/String;Z[Ljw4;)V
+
+    return-void
+.end method
+
+.method public varargs constructor <init>(Ljava/lang/String;Z[Ljw4;)V
+    .locals 0
+
+    .line 2
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 3
+    iput-object p1, p0, Llw4;->c:Ljava/lang/String;
+
+    if-eqz p2, :cond_0
+
+    .line 4
+    invoke-virtual {p3}, [Ljw4;->clone()Ljava/lang/Object;
+
+    move-result-object p1
+
+    move-object p3, p1
+
+    check-cast p3, [Ljw4;
+
+    .line 5
+    :cond_0
+    iput-object p3, p0, Llw4;->a:[Ljw4;
+
+    .line 6
+    array-length p1, p3
+
+    .line 7
+    invoke-static {p3, p0}, Ljava/util/Arrays;->sort([Ljava/lang/Object;Ljava/util/Comparator;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final t(Ljava/lang/Throwable;)V
-    .locals 0
+.method public final a(Ljava/lang/String;)Llw4;
+    .locals 2
 
-    iget-object p0, p0, Llw4;->h:Lmw4;
+    iget-object v0, p0, Llw4;->c:Ljava/lang/String;
 
-    iget-object p0, p0, Lmw4;->a:Ljava/lang/Object;
+    invoke-static {v0, p1}, Llrf;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    check-cast p0, Lqw4;
+    move-result v0
 
-    invoke-virtual {p0, p1}, Lqw4;->e(Ljava/lang/Throwable;)V
+    if-eqz v0, :cond_0
 
-    return-void
-.end method
-
-.method public final u(Ll89;)V
-    .locals 7
-
-    iget-object p0, p0, Llw4;->h:Lmw4;
-
-    if-nez p1, :cond_0
-
-    iget-object p0, p0, Lmw4;->a:Ljava/lang/Object;
-
-    check-cast p0, Lqw4;
-
-    new-instance p1, Ljava/lang/IllegalArgumentException;
-
-    const-string v0, "metadataRepo cannot be null"
-
-    invoke-direct {p1, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {p0, p1}, Lqw4;->e(Ljava/lang/Throwable;)V
-
-    return-void
+    return-object p0
 
     :cond_0
-    iput-object p1, p0, Lmw4;->c:Ljava/lang/Object;
+    new-instance v0, Llw4;
 
-    new-instance v1, Lys5;
+    const/4 v1, 0x0
 
-    iget-object p1, p0, Lmw4;->c:Ljava/lang/Object;
+    iget-object p0, p0, Llw4;->a:[Ljw4;
 
-    move-object v2, p1
+    invoke-direct {v0, p1, v1, p0}, Llw4;-><init>(Ljava/lang/String;Z[Ljw4;)V
 
-    check-cast v2, Ll89;
+    return-object v0
+.end method
 
-    iget-object p1, p0, Lmw4;->a:Ljava/lang/Object;
+.method public final compare(Ljava/lang/Object;Ljava/lang/Object;)I
+    .locals 1
 
-    check-cast p1, Lqw4;
+    check-cast p1, Ljw4;
 
-    iget-object v3, p1, Lqw4;->g:Luj6;
+    check-cast p2, Ljw4;
 
-    iget-object v4, p1, Lqw4;->k:Lib4;
+    sget-object p0, Lgw0;->a:Ljava/util/UUID;
 
-    iget-object v5, p1, Lqw4;->i:[I
+    iget-object v0, p1, Ljw4;->b:Ljava/util/UUID;
 
-    sget p1, Landroid/os/Build$VERSION;->SDK_INT:I
+    invoke-virtual {p0, v0}, Ljava/util/UUID;->equals(Ljava/lang/Object;)Z
 
-    const/16 v0, 0x22
+    move-result v0
 
-    if-lt p1, v0, :cond_1
+    if-eqz v0, :cond_1
 
-    invoke-static {}, Lyw4;->a()Ljava/util/Set;
+    iget-object p1, p2, Ljw4;->b:Ljava/util/UUID;
 
-    move-result-object p1
+    invoke-virtual {p0, p1}, Ljava/util/UUID;->equals(Ljava/lang/Object;)Z
 
-    :goto_0
-    move-object v6, p1
+    move-result p0
 
-    goto :goto_1
+    if-eqz p0, :cond_0
+
+    const/4 p0, 0x0
+
+    return p0
+
+    :cond_0
+    const/4 p0, 0x1
+
+    return p0
 
     :cond_1
-    invoke-static {}, Lu7;->w()Ljava/util/Set;
+    iget-object p0, p1, Ljw4;->b:Ljava/util/UUID;
 
-    move-result-object p1
+    iget-object p1, p2, Ljw4;->b:Ljava/util/UUID;
 
-    goto :goto_0
+    invoke-virtual {p0, p1}, Ljava/util/UUID;->compareTo(Ljava/util/UUID;)I
 
-    :goto_1
-    invoke-direct/range {v1 .. v6}, Lys5;-><init>(Ll89;Luj6;Lib4;[ILjava/util/Set;)V
+    move-result p0
 
-    iput-object v1, p0, Lmw4;->b:Ljava/lang/Object;
+    return p0
+.end method
 
-    iget-object p0, p0, Lmw4;->a:Ljava/lang/Object;
+.method public final describeContents()I
+    .locals 0
 
-    check-cast p0, Lqw4;
+    const/4 p0, 0x0
 
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    return p0
+.end method
 
-    new-instance p1, Ljava/util/ArrayList;
-
-    invoke-direct {p1}, Ljava/util/ArrayList;-><init>()V
-
-    iget-object v0, p0, Lqw4;->a:Ljava/util/concurrent/locks/ReentrantReadWriteLock;
-
-    invoke-virtual {v0}, Ljava/util/concurrent/locks/ReentrantReadWriteLock;->writeLock()Ljava/util/concurrent/locks/Lock;
-
-    move-result-object v0
-
-    invoke-interface {v0}, Ljava/util/concurrent/locks/Lock;->lock()V
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
 
     const/4 v0, 0x1
 
-    :try_start_0
-    iput v0, p0, Lqw4;->c:I
+    if-ne p0, p1, :cond_0
 
-    iget-object v0, p0, Lqw4;->b:Lms;
+    return v0
 
-    invoke-virtual {p1, v0}, Ljava/util/ArrayList;->addAll(Ljava/util/Collection;)Z
+    :cond_0
+    const/4 v1, 0x0
 
-    iget-object v0, p0, Lqw4;->b:Lms;
+    if-eqz p1, :cond_2
 
-    invoke-virtual {v0}, Lms;->clear()V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    const-class v2, Llw4;
 
-    iget-object v0, p0, Lqw4;->a:Ljava/util/concurrent/locks/ReentrantReadWriteLock;
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    invoke-virtual {v0}, Ljava/util/concurrent/locks/ReentrantReadWriteLock;->writeLock()Ljava/util/concurrent/locks/Lock;
+    move-result-object v3
 
-    move-result-object v0
+    if-eq v2, v3, :cond_1
 
-    invoke-interface {v0}, Ljava/util/concurrent/locks/Lock;->unlock()V
+    goto :goto_0
 
-    iget-object v0, p0, Lqw4;->d:Landroid/os/Handler;
+    :cond_1
+    check-cast p1, Llw4;
 
-    new-instance v1, Ltn;
+    iget-object v2, p0, Llw4;->c:Ljava/lang/String;
 
-    iget p0, p0, Lqw4;->c:I
+    iget-object v3, p1, Llw4;->c:Ljava/lang/String;
 
-    const/4 v2, 0x0
+    invoke-static {v2, v3}, Llrf;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    invoke-direct {v1, p1, p0, v2}, Ltn;-><init>(Ljava/util/List;ILjava/lang/Throwable;)V
+    move-result v2
 
-    invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
+    if-eqz v2, :cond_2
+
+    iget-object p0, p0, Llw4;->a:[Ljw4;
+
+    iget-object p1, p1, Llw4;->a:[Ljw4;
+
+    invoke-static {p0, p1}, Ljava/util/Arrays;->equals([Ljava/lang/Object;[Ljava/lang/Object;)Z
+
+    move-result p0
+
+    if-eqz p0, :cond_2
+
+    return v0
+
+    :cond_2
+    :goto_0
+    return v1
+.end method
+
+.method public final hashCode()I
+    .locals 2
+
+    iget v0, p0, Llw4;->b:I
+
+    if-nez v0, :cond_1
+
+    iget-object v0, p0, Llw4;->c:Ljava/lang/String;
+
+    if-nez v0, :cond_0
+
+    const/4 v0, 0x0
+
+    goto :goto_0
+
+    :cond_0
+    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
+
+    move-result v0
+
+    :goto_0
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget-object v1, p0, Llw4;->a:[Ljw4;
+
+    invoke-static {v1}, Ljava/util/Arrays;->hashCode([Ljava/lang/Object;)I
+
+    move-result v1
+
+    add-int/2addr v0, v1
+
+    iput v0, p0, Llw4;->b:I
+
+    :cond_1
+    iget p0, p0, Llw4;->b:I
+
+    return p0
+.end method
+
+.method public final writeToParcel(Landroid/os/Parcel;I)V
+    .locals 0
+
+    iget-object p2, p0, Llw4;->c:Ljava/lang/String;
+
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
+
+    iget-object p0, p0, Llw4;->a:[Ljw4;
+
+    const/4 p2, 0x0
+
+    invoke-virtual {p1, p0, p2}, Landroid/os/Parcel;->writeTypedArray([Landroid/os/Parcelable;I)V
 
     return-void
-
-    :catchall_0
-    move-exception v0
-
-    move-object p1, v0
-
-    iget-object p0, p0, Lqw4;->a:Ljava/util/concurrent/locks/ReentrantReadWriteLock;
-
-    invoke-virtual {p0}, Ljava/util/concurrent/locks/ReentrantReadWriteLock;->writeLock()Ljava/util/concurrent/locks/Lock;
-
-    move-result-object p0
-
-    invoke-interface {p0}, Ljava/util/concurrent/locks/Lock;->unlock()V
-
-    throw p1
 .end method

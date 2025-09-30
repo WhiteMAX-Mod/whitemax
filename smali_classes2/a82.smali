@@ -3,197 +3,150 @@
 .source "SourceFile"
 
 # interfaces
-.implements Ljj3;
-.implements Lr98;
+.implements Lzb6;
 
 
 # instance fields
 .field public final synthetic a:I
 
-.field public final synthetic b:Ljava/util/List;
+.field public final synthetic b:Lone/me/profile/screens/members/ChatAdminsScreen;
 
 
 # direct methods
-.method public synthetic constructor <init>(ILddc;)V
+.method public synthetic constructor <init>(Lone/me/profile/screens/members/ChatAdminsScreen;I)V
     .locals 0
 
-    .line 1
+    iput p2, p0, La82;->a:I
+
+    iput-object p1, p0, La82;->b:Lone/me/profile/screens/members/ChatAdminsScreen;
+
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput p1, p0, La82;->a:I
-
-    iput-object p2, p0, La82;->b:Ljava/util/List;
-
-    return-void
-.end method
-
-.method public synthetic constructor <init>(Ln82;Ljava/util/List;I)V
-    .locals 0
-
-    .line 2
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p2, p0, La82;->b:Ljava/util/List;
-
-    iput p3, p0, La82;->a:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public accept(Ljava/lang/Object;)V
-    .locals 6
+.method public final invoke()Ljava/lang/Object;
+    .locals 12
 
-    check-cast p1, Ls82;
+    iget v0, p0, La82;->a:I
 
-    new-instance v0, Ljs;
+    iget-object p0, p0, La82;->b:Lone/me/profile/screens/members/ChatAdminsScreen;
 
-    const/4 v1, 0x0
+    packed-switch v0, :pswitch_data_0
 
-    invoke-direct {v0, v1}, Lbod;-><init>(I)V
+    sget-object v0, Lone/me/profile/screens/members/ChatAdminsScreen;->v0:[Lxi7;
 
-    iget-object v1, p0, La82;->b:Ljava/util/List;
+    new-instance v1, Lvv0;
 
-    invoke-interface {v1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
-
-    move-result-object v1
-
-    :goto_0
-    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v2
-
-    if-eqz v2, :cond_0
-
-    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Ljava/lang/Long;
-
-    new-instance v3, Lq82;
-
-    invoke-direct {v3}, Ljava/lang/Object;-><init>()V
-
-    invoke-virtual {v2}, Ljava/lang/Long;->longValue()J
-
-    move-result-wide v4
-
-    iput-wide v4, v3, Lq82;->b:J
-
-    iget v4, p0, La82;->a:I
-
-    iput v4, v3, Lq82;->a:I
-
-    new-instance v4, Lr82;
-
-    invoke-direct {v4, v3}, Lr82;-><init>(Lq82;)V
-
-    invoke-virtual {v0, v2, v4}, Lbod;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    goto :goto_0
-
-    :cond_0
-    iget-object p0, p1, Ls82;->R:Ljs;
-
-    invoke-virtual {p0, v0}, Ljs;->putAll(Ljava/util/Map;)V
-
-    return-void
-.end method
-
-.method public c(Lj98;)V
-    .locals 4
-
-    invoke-virtual {p1}, Lj98;->isConnected()Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    return-void
-
-    :cond_0
-    iget-object v0, p1, Lj98;->p:Lddc;
-
-    iget-object v1, p0, La82;->b:Ljava/util/List;
-
-    invoke-static {v1}, Lxw6;->j(Ljava/util/Collection;)Lxw6;
-
-    move-result-object v2
-
-    iput-object v2, p1, Lj98;->o:Lxw6;
-
-    iget-object v2, p1, Lj98;->q:Le8d;
-
-    iget-object v3, p1, Lj98;->t:Lw0b;
-
-    invoke-static {v1, v2, v3}, Lt53;->a(Ljava/util/List;Le8d;Lw0b;)Lddc;
-
-    move-result-object v1
-
-    iput-object v1, p1, Lj98;->p:Lddc;
-
-    invoke-static {v1, v0}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v0
-
-    iget-object v1, p1, Lj98;->a:Lo88;
-
-    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    invoke-static {}, Landroid/os/Looper;->myLooper()Landroid/os/Looper;
-
-    move-result-object v2
-
-    iget-object v3, v1, Lo88;->X:Landroid/os/Handler;
-
-    invoke-virtual {v3}, Landroid/os/Handler;->getLooper()Landroid/os/Looper;
+    invoke-virtual {p0}, Lone/me/profile/screens/members/ChatAdminsScreen;->y0()Lj82;
 
     move-result-object v3
 
-    if-ne v2, v3, :cond_1
+    const/4 v7, 0x0
+
+    const/4 v8, 0x5
 
     const/4 v2, 0x1
 
-    goto :goto_0
+    const-class v4, Lj82;
 
-    :cond_1
-    const/4 v2, 0x0
+    const-string v5, "getContextMenuActions"
 
-    :goto_0
-    invoke-static {v2}, Lu27;->j(Z)V
+    const-string v6, "getContextMenuActions(J)Ljava/util/List;"
 
-    iget-object v1, v1, Lo88;->o:Lm88;
+    invoke-direct/range {v1 .. v8}, Lvv0;-><init>(ILjava/lang/Object;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;II)V
 
-    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    new-instance v2, Lj11;
 
-    new-instance v2, Lx8d;
+    invoke-virtual {p0}, Lone/me/profile/screens/members/ChatAdminsScreen;->y0()Lj82;
 
-    const/4 v3, -0x6
+    move-result-object v4
 
-    invoke-direct {v2, v3}, Lx8d;-><init>(I)V
+    const/4 v8, 0x0
 
-    invoke-static {v2}, Lq46;->y(Ljava/lang/Object;)Ldw6;
+    const/16 v9, 0x9
 
-    move-result-object v2
+    const/4 v3, 0x0
 
-    if-nez v0, :cond_2
+    const-class v5, Lj82;
 
-    invoke-interface {v1}, Lm88;->h()V
+    const-string v6, "getButtonActions"
 
-    :cond_2
-    new-instance v0, Lvj1;
+    const-string v7, "getButtonActions()Lkotlinx/coroutines/flow/Flow;"
 
-    const/16 v1, 0xc
+    invoke-direct/range {v2 .. v9}, Lj11;-><init>(ILjava/lang/Object;Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;II)V
 
-    iget p0, p0, La82;->a:I
+    new-instance v3, Lz72;
 
-    invoke-direct {v0, p1, v2, p0, v1}, Lvj1;-><init>(Ljava/lang/Object;Ljava/lang/Object;II)V
+    invoke-virtual {p0}, Lone/me/profile/screens/members/ChatAdminsScreen;->z0()J
 
-    sget-object p0, Lok4;->a:Lok4;
+    move-result-wide v4
 
-    invoke-virtual {v2, v0, p0}, Ldw6;->d(Ljava/lang/Runnable;Ljava/util/concurrent/Executor;)V
+    sget-object p0, Lvlb;->a:Lvlb;
 
-    return-void
+    invoke-virtual {p0}, Lvlb;->c()Lcl7;
+
+    move-result-object v6
+
+    invoke-virtual {p0}, Lvlb;->e()Lcl7;
+
+    move-result-object v7
+
+    invoke-virtual {p0}, Lscout/Component;->getAccessor()Lz4;
+
+    move-result-object v0
+
+    const-class v8, Lygb;
+
+    invoke-virtual {v0, v8}, Lz4;->d(Ljava/lang/Class;)Lzte;
+
+    move-result-object v8
+
+    invoke-virtual {p0}, Lvlb;->d()Lcl7;
+
+    move-result-object v9
+
+    invoke-virtual {p0}, Lscout/Component;->getAccessor()Lz4;
+
+    move-result-object v0
+
+    const-class v10, Lchb;
+
+    invoke-virtual {v0, v10}, Lz4;->d(Ljava/lang/Class;)Lzte;
+
+    move-result-object v10
+
+    invoke-virtual {p0}, Lvlb;->g()Lcl7;
+
+    move-result-object v11
+
+    invoke-direct/range {v3 .. v11}, Lz72;-><init>(JLcl7;Lcl7;Lcl7;Lcl7;Lcl7;Lcl7;)V
+
+    new-instance p0, Lou8;
+
+    invoke-direct {p0, v1, v3, v2}, Lou8;-><init>(Lbc6;Lyg4;Lzb6;)V
+
+    return-object p0
+
+    :pswitch_0
+    sget-object v0, Lone/me/profile/screens/members/ChatAdminsScreen;->v0:[Lxi7;
+
+    new-instance v0, Lj82;
+
+    invoke-virtual {p0}, Lone/me/profile/screens/members/ChatAdminsScreen;->z0()J
+
+    move-result-wide v1
+
+    invoke-direct {v0, v1, v2}, Lj82;-><init>(J)V
+
+    return-object v0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

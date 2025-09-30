@@ -2,13 +2,26 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lw66;
 
+# instance fields
+.field public a:Z
 
-# virtual methods
-.method public final apply(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.field public b:I
 
-    return-object p1
-.end method
+.field public c:I
+
+.field public d:I
+
+.field public e:I
+
+.field public f:I
+
+.field public g:Ljava/lang/Object;
+
+.field public h:Ljava/lang/Object;
+
+.field public i:Ljava/lang/Object;
+
+.field public j:F
+
+.field public k:Landroid/view/View;

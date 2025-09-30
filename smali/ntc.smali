@@ -2,178 +2,94 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lgu6;
-
 
 # instance fields
-.field public final a:Lgu6;
+.field public final a:Lkb0;
 
-.field public final b:Ljava/lang/Object;
+.field public final b:Lkwe;
 
-.field public c:Z
+.field public final c:Lts1;
 
-.field public d:Luu1;
+.field public final d:Lts1;
+
+.field public e:Lqs1;
+
+.field public f:Lqs1;
+
+.field public g:Z
+
+.field public h:Z
+
+.field public i:Lz32;
 
 
 # direct methods
-.method public constructor <init>(Lgu6;)V
-    .locals 0
+.method public constructor <init>(Lkb0;Lkwe;)V
+    .locals 1
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lntc;->a:Lgu6;
+    const/4 v0, 0x0
 
-    new-instance p1, Ljava/lang/Object;
+    iput-boolean v0, p0, Lntc;->g:Z
 
-    invoke-direct {p1}, Ljava/lang/Object;-><init>()V
+    iput-boolean v0, p0, Lntc;->h:Z
 
-    iput-object p1, p0, Lntc;->b:Ljava/lang/Object;
+    iput-object p1, p0, Lntc;->a:Lkb0;
+
+    iput-object p2, p0, Lntc;->b:Lkwe;
+
+    new-instance p1, Lmtc;
+
+    const/4 p2, 0x0
+
+    invoke-direct {p1, p0, p2}, Lmtc;-><init>(Lntc;I)V
+
+    invoke-static {p1}, Lf54;->l(Lrs1;)Lts1;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lntc;->c:Lts1;
+
+    new-instance p1, Lmtc;
+
+    const/4 p2, 0x1
+
+    invoke-direct {p1, p0, p2}, Lmtc;-><init>(Lntc;I)V
+
+    invoke-static {p1}, Lf54;->l(Lrs1;)Lts1;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lntc;->d:Lts1;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(JLuu1;)V
+.method public final a()V
     .locals 2
 
-    iget-object v0, p0, Lntc;->b:Ljava/lang/Object;
+    iget-object v0, p0, Lntc;->d:Lts1;
 
-    monitor-enter v0
+    iget-object v0, v0, Lts1;->b:Lss1;
 
-    const/4 v1, 0x1
+    invoke-virtual {v0}, Lq3;->isDone()Z
 
-    :try_start_0
-    iput-boolean v1, p0, Lntc;->c:Z
+    move-result v0
 
-    iput-object p3, p0, Lntc;->d:Luu1;
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    xor-int/lit8 v0, v0, 0x1
 
-    monitor-exit v0
+    const-string v1, "The callback can only complete once."
 
-    iget-object p3, p0, Lntc;->a:Lgu6;
+    invoke-static {v1, v0}, Ln4e;->n(Ljava/lang/String;Z)V
 
-    if-eqz p3, :cond_0
+    iget-object p0, p0, Lntc;->f:Lqs1;
 
-    new-instance v0, Luu1;
+    const/4 v0, 0x0
 
-    const/4 v1, 0x1
-
-    invoke-direct {v0, v1, p0}, Luu1;-><init>(ILjava/lang/Object;)V
-
-    invoke-interface {p3, p1, p2, v0}, Lgu6;->a(JLuu1;)V
-
-    sget-object p1, Le5f;->a:Le5f;
-
-    goto :goto_0
-
-    :cond_0
-    const/4 p1, 0x0
-
-    :goto_0
-    if-nez p1, :cond_1
-
-    invoke-virtual {p0}, Lntc;->c()V
-
-    :cond_1
-    return-void
-
-    :catchall_0
-    move-exception p0
-
-    monitor-exit v0
-
-    throw p0
-.end method
-
-.method public final b()V
-    .locals 2
-
-    iget-object v0, p0, Lntc;->b:Ljava/lang/Object;
-
-    monitor-enter v0
-
-    :try_start_0
-    iget-boolean v1, p0, Lntc;->c:Z
-
-    if-eqz v1, :cond_0
-
-    iget-object v1, p0, Lntc;->a:Lgu6;
-
-    if-eqz v1, :cond_0
-
-    invoke-interface {v1}, Lgu6;->clear()V
-
-    goto :goto_0
-
-    :catchall_0
-    move-exception p0
-
-    goto :goto_1
-
-    :cond_0
-    :goto_0
-    const/4 v1, 0x0
-
-    iput-boolean v1, p0, Lntc;->c:Z
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    monitor-exit v0
-
-    return-void
-
-    :goto_1
-    monitor-exit v0
-
-    throw p0
-.end method
-
-.method public final c()V
-    .locals 2
-
-    iget-object v0, p0, Lntc;->b:Ljava/lang/Object;
-
-    monitor-enter v0
-
-    :try_start_0
-    iget-object v1, p0, Lntc;->d:Luu1;
-
-    if-eqz v1, :cond_0
-
-    invoke-virtual {v1}, Luu1;->a()V
-
-    goto :goto_0
-
-    :catchall_0
-    move-exception p0
-
-    goto :goto_1
-
-    :cond_0
-    :goto_0
-    const/4 v1, 0x0
-
-    iput-object v1, p0, Lntc;->d:Luu1;
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    monitor-exit v0
-
-    return-void
-
-    :goto_1
-    monitor-exit v0
-
-    throw p0
-.end method
-
-.method public final clear()V
-    .locals 0
-
-    invoke-virtual {p0}, Lntc;->b()V
+    invoke-virtual {p0, v0}, Lqs1;->b(Ljava/lang/Object;)Z
 
     return-void
 .end method

@@ -1,98 +1,136 @@
-.class public final synthetic Llt1;
+.class public final Llt1;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lmu;
+.implements Lhk3;
 
 
 # instance fields
-.field public final synthetic X:I
+.field public final synthetic a:I
 
-.field public final synthetic a:Lqt1;
+.field public final synthetic b:Lik3;
 
-.field public final synthetic b:Ljava/util/ArrayList;
-
-.field public final synthetic c:I
-
-.field public final synthetic o:I
+.field public final synthetic c:Ljava/lang/Object;
 
 
 # direct methods
-.method public synthetic constructor <init>(Lqt1;Ljava/util/ArrayList;III)V
+.method public synthetic constructor <init>(Lik3;Ljava/lang/Object;I)V
     .locals 0
+
+    iput p3, p0, Llt1;->a:I
+
+    iput-object p1, p0, Llt1;->b:Lik3;
+
+    iput-object p2, p0, Llt1;->c:Ljava/lang/Object;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Llt1;->a:Lqt1;
+    return-void
+.end method
 
-    iput-object p2, p0, Llt1;->b:Ljava/util/ArrayList;
-
-    iput p3, p0, Llt1;->c:I
-
-    iput p4, p0, Llt1;->o:I
-
-    iput p5, p0, Llt1;->X:I
+.method private final c()V
+    .locals 0
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final apply(Ljava/lang/Object;)Lbm7;
-    .locals 4
+.method public final a()V
+    .locals 2
 
-    check-cast p1, Ljava/lang/Void;
+    iget v0, p0, Llt1;->a:I
 
-    iget-object p1, p0, Llt1;->a:Lqt1;
+    packed-switch v0, :pswitch_data_0
 
-    iget-object p1, p1, Lqt1;->n:Lg40;
+    iget-object v0, p0, Llt1;->b:Lik3;
 
-    iget v0, p0, Llt1;->c:I
+    invoke-interface {v0}, Lik3;->f()Z
 
-    iget v1, p0, Llt1;->o:I
+    move-result v1
 
-    iget v2, p0, Llt1;->X:I
+    if-eqz v1, :cond_0
 
-    invoke-virtual {p1, v0, v1, v2}, Lg40;->f(III)Lqu1;
+    invoke-interface {v0, p0}, Lik3;->e(Lhk3;)V
 
-    move-result-object p1
+    iget-object p0, p0, Llt1;->c:Ljava/lang/Object;
 
-    invoke-virtual {p1, v1}, Lqu1;->a(I)Lbm7;
+    check-cast p0, Lf12;
 
-    move-result-object v0
+    sget-object v0, Lylf;->a:Lylf;
 
-    invoke-static {v0}, Lm76;->a(Lbm7;)Lm76;
+    invoke-virtual {p0, v0}, Lf12;->resumeWith(Ljava/lang/Object;)V
 
-    move-result-object v0
+    :cond_0
+    :pswitch_0
+    return-void
 
-    new-instance v2, Lpi0;
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
 
-    const/4 v3, 0x1
+.method public final b()V
+    .locals 2
 
-    iget-object p0, p0, Llt1;->b:Ljava/util/ArrayList;
+    iget v0, p0, Llt1;->a:I
 
-    invoke-direct {v2, p1, p0, v1, v3}, Lpi0;-><init>(Ljava/lang/Object;Ljava/lang/Object;II)V
+    packed-switch v0, :pswitch_data_0
 
-    iget-object p0, p1, Lqu1;->b:Ljava/util/concurrent/Executor;
+    iget-object v0, p0, Llt1;->b:Lik3;
 
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    invoke-interface {v0}, Lik3;->f()Z
 
-    invoke-static {v0, v2, p0}, Lu7;->X(Lbm7;Lmu;Ljava/util/concurrent/Executor;)Lg12;
+    move-result v1
 
-    move-result-object v0
+    if-eqz v1, :cond_0
 
-    new-instance v1, Lvt1;
+    invoke-interface {v0, p0}, Lik3;->e(Lhk3;)V
 
-    const/4 v2, 0x2
+    iget-object p0, p0, Llt1;->c:Ljava/lang/Object;
 
-    invoke-direct {v1, v2, p1}, Lvt1;-><init>(ILjava/lang/Object;)V
+    check-cast p0, Lf12;
 
-    invoke-virtual {v0, v1, p0}, Lm76;->d(Ljava/lang/Runnable;Ljava/util/concurrent/Executor;)V
+    sget-object v0, Lylf;->a:Lylf;
 
-    invoke-static {v0}, Lu7;->C(Lbm7;)Lbm7;
+    invoke-virtual {p0, v0}, Lf12;->resumeWith(Ljava/lang/Object;)V
 
-    move-result-object p0
+    :cond_0
+    return-void
 
-    return-object p0
+    :pswitch_0
+    iget-object v0, p0, Llt1;->b:Lik3;
+
+    invoke-interface {v0}, Lik3;->d()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    sget-object v0, Luqf;->a:Luqf;
+
+    goto :goto_0
+
+    :cond_1
+    sget-object v0, Luqf;->b:Luqf;
+
+    :goto_0
+    iget-object p0, p0, Llt1;->c:Ljava/lang/Object;
+
+    check-cast p0, Lijb;
+
+    check-cast p0, Lfjb;
+
+    invoke-virtual {p0, v0}, Lfjb;->g(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

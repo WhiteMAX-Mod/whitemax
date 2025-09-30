@@ -3,137 +3,258 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lau3;
+.implements Ljava/lang/Comparable;
+.implements Landroid/os/Parcelable;
+
+
+# static fields
+.field public static final CREATOR:Landroid/os/Parcelable$Creator;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroid/os/Parcelable$Creator<",
+            "Ljle;",
+            ">;"
+        }
+    .end annotation
+.end field
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final a:I
 
-.field public final synthetic b:Ljava/lang/Object;
+.field public final b:I
+
+.field public final c:I
 
 
 # direct methods
-.method public synthetic constructor <init>(ILjava/lang/Object;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 2
 
-    iput p1, p0, Ljle;->a:I
+    new-instance v0, Le5d;
 
-    iput-object p2, p0, Ljle;->b:Ljava/lang/Object;
+    const/16 v1, 0x14
 
+    invoke-direct {v0, v1}, Le5d;-><init>(I)V
+
+    sput-object v0, Ljle;->CREATOR:Landroid/os/Parcelable$Creator;
+
+    return-void
+.end method
+
+.method public constructor <init>()V
+    .locals 1
+
+    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    const/4 v0, -0x1
+
+    .line 2
+    iput v0, p0, Ljle;->a:I
+
+    .line 3
+    iput v0, p0, Ljle;->b:I
+
+    .line 4
+    iput v0, p0, Ljle;->c:I
+
+    return-void
+.end method
+
+.method public constructor <init>(Landroid/os/Parcel;)V
+    .locals 1
+
+    .line 5
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 6
+    invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
+
+    move-result v0
+
+    iput v0, p0, Ljle;->a:I
+
+    .line 7
+    invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
+
+    move-result v0
+
+    iput v0, p0, Ljle;->b:I
+
+    .line 8
+    invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
+
+    move-result p1
+
+    iput p1, p0, Ljle;->c:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Lbolts/Task;)Ljava/lang/Object;
-    .locals 1
+.method public final compareTo(Ljava/lang/Object;)I
+    .locals 2
+
+    check-cast p1, Ljle;
 
     iget v0, p0, Ljle;->a:I
 
-    packed-switch v0, :pswitch_data_0
+    iget v1, p1, Ljle;->a:I
 
-    iget-object p0, p0, Ljle;->b:Ljava/lang/Object;
+    sub-int/2addr v0, v1
 
-    check-cast p0, Ljava/util/Collection;
+    if-nez v0, :cond_0
 
-    invoke-interface {p0}, Ljava/util/Collection;->size()I
+    iget v0, p0, Ljle;->b:I
 
-    move-result p1
+    iget v1, p1, Ljle;->b:I
 
-    if-nez p1, :cond_0
+    sub-int/2addr v0, v1
 
-    sget-object p0, Ljava/util/Collections;->EMPTY_LIST:Ljava/util/List;
+    if-nez v0, :cond_0
 
-    goto :goto_1
+    iget p0, p0, Ljle;->c:I
+
+    iget p1, p1, Ljle;->c:I
+
+    sub-int/2addr p0, p1
+
+    return p0
 
     :cond_0
-    new-instance p1, Ljava/util/ArrayList;
+    return v0
+.end method
 
-    invoke-direct {p1}, Ljava/util/ArrayList;-><init>()V
+.method public final describeContents()I
+    .locals 0
 
-    invoke-interface {p0}, Ljava/util/Collection;->iterator()Ljava/util/Iterator;
+    const/4 p0, 0x0
 
-    move-result-object p0
+    return p0
+.end method
 
-    :goto_0
-    invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
 
-    move-result v0
+    const/4 v0, 0x1
 
-    if-eqz v0, :cond_1
+    if-ne p0, p1, :cond_0
 
-    invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    return v0
 
-    move-result-object v0
+    :cond_0
+    const/4 v1, 0x0
 
-    check-cast v0, Lbolts/Task;
+    if-eqz p1, :cond_2
 
-    invoke-virtual {v0}, Lbolts/Task;->getResult()Ljava/lang/Object;
+    const-class v2, Ljle;
 
-    move-result-object v0
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    invoke-virtual {p1, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+    move-result-object v3
+
+    if-eq v2, v3, :cond_1
 
     goto :goto_0
 
     :cond_1
-    move-object p0, p1
+    check-cast p1, Ljle;
 
-    :goto_1
-    return-object p0
+    iget v2, p0, Ljle;->a:I
 
-    :pswitch_0
-    iget-object p0, p0, Ljle;->b:Ljava/lang/Object;
+    iget v3, p1, Ljle;->a:I
 
-    check-cast p0, Lile;
+    if-ne v2, v3, :cond_2
 
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    iget v2, p0, Ljle;->b:I
 
-    iget-object p0, p0, Lile;->b:Lule;
+    iget v3, p1, Ljle;->b:I
 
-    invoke-virtual {p1}, Lbolts/Task;->isCancelled()Z
+    if-ne v2, v3, :cond_2
 
-    move-result v0
+    iget p0, p0, Ljle;->c:I
 
-    if-eqz v0, :cond_2
+    iget p1, p1, Ljle;->c:I
 
-    invoke-virtual {p0}, Lule;->a()V
+    if-ne p0, p1, :cond_2
 
-    goto :goto_2
+    return v0
 
     :cond_2
-    invoke-virtual {p1}, Lbolts/Task;->isFaulted()Z
+    :goto_0
+    return v1
+.end method
 
-    move-result v0
+.method public final hashCode()I
+    .locals 2
 
-    if-eqz v0, :cond_3
+    iget v0, p0, Ljle;->a:I
 
-    invoke-virtual {p1}, Lbolts/Task;->getError()Ljava/lang/Exception;
+    mul-int/lit8 v0, v0, 0x1f
 
-    move-result-object p1
+    iget v1, p0, Ljle;->b:I
 
-    invoke-virtual {p0, p1}, Lule;->b(Ljava/lang/Exception;)V
+    add-int/2addr v0, v1
 
-    goto :goto_2
+    mul-int/lit8 v0, v0, 0x1f
 
-    :cond_3
-    invoke-virtual {p1}, Lbolts/Task;->getResult()Ljava/lang/Object;
+    iget p0, p0, Ljle;->c:I
 
-    move-result-object p1
+    add-int/2addr v0, p0
 
-    invoke-virtual {p0, p1}, Lule;->c(Ljava/lang/Object;)V
+    return v0
+.end method
 
-    :goto_2
-    const/4 p0, 0x0
+.method public final toString()Ljava/lang/String;
+    .locals 3
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const/16 v1, 0x23
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(I)V
+
+    iget v1, p0, Ljle;->a:I
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v1, "."
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget v2, p0, Ljle;->b:I
+
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget p0, p0, Ljle;->c:I
+
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
 
     return-object p0
+.end method
 
-    nop
+.method public final writeToParcel(Landroid/os/Parcel;I)V
+    .locals 0
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    iget p2, p0, Ljle;->a:I
+
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
+
+    iget p2, p0, Ljle;->b:I
+
+    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
+
+    iget p0, p0, Ljle;->c:I
+
+    invoke-virtual {p1, p0}, Landroid/os/Parcel;->writeInt(I)V
+
+    return-void
 .end method

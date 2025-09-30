@@ -1,101 +1,87 @@
 .class public final Lbq3;
-.super Llje;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public X:I
-
-.field public o:Ljava/util/List;
+.field public final a:Lcl7;
 
 
-# virtual methods
-.method public final c(Ldx8;Ljava/lang/String;)V
-    .locals 3
+# direct methods
+.method public constructor <init>(Lcl7;)V
+    .locals 0
 
-    invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const-string v0, "result"
-
-    invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_1
-
-    const-string v0, "total"
-
-    invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result p2
-
-    if-nez p2, :cond_0
-
-    invoke-virtual {p1}, Ldx8;->B()V
-
-    return-void
-
-    :cond_0
-    invoke-virtual {p1}, Ldx8;->z0()I
-
-    move-result p1
-
-    iput p1, p0, Lbq3;->X:I
-
-    return-void
-
-    :cond_1
-    sget p2, Llz;->a:I
-
-    invoke-static {p1}, Lxq7;->V(Ldx8;)I
-
-    move-result p2
-
-    new-instance v0, Llz;
-
-    invoke-direct {v0, p2}, Ljava/util/ArrayList;-><init>(I)V
-
-    const/4 v1, 0x0
-
-    :goto_0
-    if-ge v1, p2, :cond_2
-
-    invoke-static {p1}, Ldq3;->a(Ldx8;)Ldq3;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v2}, Ljava/util/AbstractCollection;->add(Ljava/lang/Object;)Z
-
-    add-int/lit8 v1, v1, 0x1
-
-    goto :goto_0
-
-    :cond_2
-    iput-object v0, p0, Lbq3;->o:Ljava/util/List;
+    iput-object p1, p0, Lbq3;->a:Lcl7;
 
     return-void
 .end method
 
-.method public final toString()Ljava/lang/String;
-    .locals 4
 
-    iget-object v0, p0, Lbq3;->o:Ljava/util/List;
+# virtual methods
+.method public final a(Landroid/content/Context;Landroid/net/Uri;)V
+    .locals 3
 
-    invoke-static {v0}, Lzx7;->n(Ljava/util/Collection;)I
+    iget-object p0, p0, Lbq3;->a:Lcl7;
 
-    move-result v0
-
-    iget p0, p0, Lbq3;->X:I
-
-    const-string v1, ", total="
-
-    const-string v2, "}"
-
-    const-string v3, "{contacts="
-
-    invoke-static {v3, v0, v1, p0, v2}, Lpg0;->f(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/String;
+    invoke-interface {p0}, Lcl7;->getValue()Ljava/lang/Object;
 
     move-result-object p0
 
-    return-object p0
+    check-cast p0, Lxjd;
+
+    check-cast p0, Lpad;
+
+    const/4 v0, 0x0
+
+    iget-object v1, p0, Li3;->g:Lfl7;
+
+    const-string v2, "invite-long"
+
+    invoke-virtual {v1, v2, v0}, Lfl7;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    sget v0, Lx0d;->J:I
+
+    invoke-virtual {p1, v0}, Landroid/content/Context;->getString(I)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {p0}, Lpad;->n()Ljava/lang/String;
+
+    move-result-object p0
+
+    filled-new-array {p0}, [Ljava/lang/Object;
+
+    move-result-object p0
+
+    const/4 v1, 0x1
+
+    invoke-static {p0, v1}, Ljava/util/Arrays;->copyOf([Ljava/lang/Object;I)[Ljava/lang/Object;
+
+    move-result-object p0
+
+    invoke-static {v0, p0}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v0
+
+    :goto_0
+    invoke-virtual {v0}, Ljava/lang/Object;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-static {p1, p0}, Lb0b;->e(Landroid/content/Context;Ljava/lang/String;)V
+
+    sget-object p0, Lba7;->a:Ljava/lang/String;
+
+    invoke-static {p1, v0, p2}, Lba7;->d(Landroid/content/Context;Ljava/lang/CharSequence;Landroid/net/Uri;)V
+
+    return-void
 .end method

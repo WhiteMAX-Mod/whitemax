@@ -236,7 +236,7 @@
     :cond_1
     new-instance p2, Lorg/apache/http/cookie/MalformedCookieException;
 
-    invoke-static {v3, p1, v2, p0, v1}, Lrqc;->i(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v3, p1, v2, p0, v1}, Lz7e;->q(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
 
@@ -258,7 +258,7 @@
     :cond_4
     new-instance p2, Lorg/apache/http/cookie/MalformedCookieException;
 
-    invoke-static {v3, p1, v2, p0, v1}, Lrqc;->i(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v3, p1, v2, p0, v1}, Lz7e;->q(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
 

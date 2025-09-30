@@ -1,76 +1,122 @@
-.class public final synthetic Lw13;
-.super Ljava/lang/Object;
+.class public final Lw13;
+.super Ldf7;
 .source "SourceFile"
-
-# interfaces
-.implements Landroid/animation/ValueAnimator$AnimatorUpdateListener;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final synthetic b:I
 
-.field public final synthetic b:Ly13;
+.field public final c:Lf12;
 
 
 # direct methods
-.method public synthetic constructor <init>(Ly13;I)V
+.method public synthetic constructor <init>(Lf12;I)V
     .locals 0
 
-    iput p2, p0, Lw13;->a:I
+    iput p2, p0, Lw13;->b:I
 
-    iput-object p1, p0, Lw13;->b:Ly13;
+    invoke-direct {p0}, Lkotlinx/coroutines/internal/LockFreeLinkedListNode;-><init>()V
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lw13;->c:Lf12;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onAnimationUpdate(Landroid/animation/ValueAnimator;)V
+.method public final c()Z
+    .locals 0
+
+    iget p0, p0, Lw13;->b:I
+
+    packed-switch p0, :pswitch_data_0
+
+    const/4 p0, 0x0
+
+    return p0
+
+    :pswitch_0
+    const/4 p0, 0x1
+
+    return p0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final d(Ljava/lang/Throwable;)V
     .locals 1
 
-    iget v0, p0, Lw13;->a:I
+    iget p1, p0, Lw13;->b:I
 
-    iget-object p0, p0, Lw13;->b:Ly13;
+    packed-switch p1, :pswitch_data_0
 
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    iget-object p0, p0, Lw13;->c:Lf12;
 
-    packed-switch v0, :pswitch_data_0
+    sget-object p1, Lylf;->a:Lylf;
 
-    invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Ljava/lang/Float;
-
-    invoke-virtual {p1}, Ljava/lang/Float;->floatValue()F
-
-    move-result p1
-
-    iget-object p0, p0, Lg15;->d:Lcom/google/android/material/internal/CheckableImageButton;
-
-    invoke-virtual {p0, p1}, Landroid/view/View;->setScaleX(F)V
-
-    invoke-virtual {p0, p1}, Landroid/view/View;->setScaleY(F)V
+    invoke-virtual {p0, p1}, Lf12;->resumeWith(Ljava/lang/Object;)V
 
     return-void
 
     :pswitch_0
-    invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
+    iget-object p1, p0, Ldf7;->a:Lsf7;
+
+    if-eqz p1, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    const/4 p1, 0x0
+
+    :goto_0
+    iget-object p0, p0, Lw13;->c:Lf12;
+
+    invoke-virtual {p0, p1}, Lf12;->l(Lsf7;)Ljava/lang/Throwable;
 
     move-result-object p1
 
-    check-cast p1, Ljava/lang/Float;
+    invoke-virtual {p0}, Lf12;->s()Z
 
-    invoke-virtual {p1}, Ljava/lang/Float;->floatValue()F
+    move-result v0
+
+    if-nez v0, :cond_1
+
+    const/4 v0, 0x0
+
+    goto :goto_1
+
+    :cond_1
+    iget-object v0, p0, Lf12;->a:Lkotlin/coroutines/Continuation;
+
+    check-cast v0, Lkotlinx/coroutines/internal/DispatchedContinuation;
+
+    invoke-virtual {v0, p1}, Lkotlinx/coroutines/internal/DispatchedContinuation;->postponeCancellation$kotlinx_coroutines_core(Ljava/lang/Throwable;)Z
+
+    move-result v0
+
+    :goto_1
+    if-eqz v0, :cond_2
+
+    goto :goto_2
+
+    :cond_2
+    invoke-virtual {p0, p1}, Lf12;->h(Ljava/lang/Throwable;)Z
+
+    invoke-virtual {p0}, Lf12;->s()Z
 
     move-result p1
 
-    iget-object p0, p0, Lg15;->d:Lcom/google/android/material/internal/CheckableImageButton;
+    if-nez p1, :cond_3
 
-    invoke-virtual {p0, p1}, Landroid/view/View;->setAlpha(F)V
+    invoke-virtual {p0}, Lf12;->i()V
 
+    :cond_3
+    :goto_2
     return-void
 
     nop

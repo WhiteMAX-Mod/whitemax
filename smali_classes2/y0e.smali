@@ -2,36 +2,61 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lw0e;
+
 
 # instance fields
-.field public a:J
+.field public final a:Lf1e;
 
-.field public b:J
+.field public final b:Z
 
-.field public c:I
+.field public final c:Z
 
-.field public d:I
 
-.field public e:Ljava/lang/String;
+# direct methods
+.method public constructor <init>(Lf1e;ZZ)V
+    .locals 0
 
-.field public f:J
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-.field public g:Ljava/lang/String;
+    iput-object p1, p0, Ly0e;->a:Lf1e;
 
-.field public h:Ljava/lang/String;
+    iput-boolean p2, p0, Ly0e;->b:Z
 
-.field public i:Ljava/lang/String;
+    iput-boolean p3, p0, Ly0e;->c:Z
 
-.field public j:Ljava/util/List;
+    return-void
+.end method
 
-.field public k:I
 
-.field public l:J
+# virtual methods
+.method public final a()Lorg/json/JSONObject;
+    .locals 3
 
-.field public m:Ljava/lang/String;
+    new-instance v0, Lorg/json/JSONObject;
 
-.field public n:Z
+    invoke-direct {v0}, Lorg/json/JSONObject;-><init>()V
 
-.field public o:I
+    const-string v1, "command"
 
-.field public p:Ljava/lang/String;
+    const-string v2, "change-media-settings"
+
+    invoke-virtual {v0, v1, v2}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
+
+    iget-boolean v1, p0, Ly0e;->b:Z
+
+    iget-boolean v2, p0, Ly0e;->c:Z
+
+    iget-object p0, p0, Ly0e;->a:Lf1e;
+
+    invoke-static {p0, v1, v2}, Lo97;->D(Lf1e;ZZ)Lorg/json/JSONObject;
+
+    move-result-object p0
+
+    const-string v1, "mediaSettings"
+
+    invoke-virtual {v0, v1, p0}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
+
+    return-object v0
+.end method

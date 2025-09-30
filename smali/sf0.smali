@@ -1,68 +1,50 @@
 .class public final Lsf0;
-.super Ljava/lang/Object;
-.source "SourceFile"
-
-# interfaces
-.implements Lnu7;
+.super Ljx3;
 
 
 # instance fields
-.field public final a:Landroid/content/Context;
+.field public X:I
 
-.field public final b:Lbx2;
+.field public Y:Lks5;
 
-.field public final c:Lxh0;
+.field public final synthetic Z:Lwb;
 
-.field public final o:Lkotlinx/coroutines/internal/ContextScope;
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;Lbx2;Lxh0;Lrie;Lkx3;)V
+.method public constructor <init>(Lwb;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lsf0;->Z:Lwb;
 
-    iput-object p1, p0, Lsf0;->a:Landroid/content/Context;
-
-    iput-object p2, p0, Lsf0;->b:Lbx2;
-
-    iput-object p3, p0, Lsf0;->c:Lxh0;
-
-    check-cast p4, Lo7a;
-
-    invoke-virtual {p4}, Lo7a;->a()Ljx3;
-
-    move-result-object p1
-
-    const/4 p2, 0x1
-
-    const-string p3, "badge-count"
-
-    invoke-virtual {p1, p2, p3}, Ljx3;->limitedParallelism(ILjava/lang/String;)Ljx3;
-
-    move-result-object p1
-
-    invoke-virtual {p1, p5}, Le0;->plus(Lhx3;)Lhx3;
-
-    move-result-object p1
-
-    invoke-static {p1}, Lvk9;->a(Lhx3;)Lkotlinx/coroutines/internal/ContextScope;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lsf0;->o:Lkotlinx/coroutines/internal/ContextScope;
+    invoke-direct {p0, p2}, Ljx3;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final g()V
-    .locals 0
+.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    iget-object p0, p0, Lsf0;->a:Landroid/content/Context;
+    iput-object p1, p0, Lsf0;->o:Ljava/lang/Object;
 
-    invoke-static {p0}, Lme/leolin/shortcutbadger/ShortcutBadger;->removeCount(Landroid/content/Context;)Z
+    iget p1, p0, Lsf0;->X:I
 
-    return-void
+    const/high16 v0, -0x80000000
+
+    or-int/2addr p1, v0
+
+    iput p1, p0, Lsf0;->X:I
+
+    iget-object p1, p0, Lsf0;->Z:Lwb;
+
+    const/4 v0, 0x0
+
+    invoke-virtual {p1, v0, p0}, Lwb;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p0
+
+    return-object p0
 .end method

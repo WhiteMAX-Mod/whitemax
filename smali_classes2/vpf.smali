@@ -1,93 +1,125 @@
 .class public final Lvpf;
-.super Lqde;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Ll66;
+.implements Ljava/util/concurrent/Callable;
 
 
 # instance fields
-.field public final synthetic X:Landroid/widget/TextView;
+.field public final synthetic a:Ljava/lang/String;
+
+.field public final synthetic b:I
+
+.field public final synthetic c:J
+
+.field public final synthetic o:Lwpf;
 
 
 # direct methods
-.method public constructor <init>(Landroid/widget/TextView;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(Lwpf;Ljava/lang/String;IJ)V
     .locals 0
 
-    iput-object p1, p0, Lvpf;->X:Landroid/widget/TextView;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 p1, 0x2
+    iput-object p1, p0, Lvpf;->o:Lwpf;
 
-    invoke-direct {p0, p1, p2}, Lqde;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-object p2, p0, Lvpf;->a:Ljava/lang/String;
+
+    iput p3, p0, Lvpf;->b:I
+
+    iput-wide p4, p0, Lvpf;->c:J
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final call()Ljava/lang/Object;
+    .locals 6
 
-    check-cast p1, Lbn5;
+    iget-object v0, p0, Lvpf;->o:Lwpf;
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    iget-object v1, v0, Lwpf;->c:Lwwc;
 
-    invoke-virtual {p0, p1, p2}, Lvpf;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    iget-object v0, v0, Lwpf;->a:Lexc;
 
-    move-result-object p0
+    invoke-virtual {v1}, Ly2;->f()Lqqe;
 
-    check-cast p0, Lvpf;
+    move-result-object v2
 
-    sget-object p1, Le5f;->a:Le5f;
+    const/4 v3, 0x1
 
-    invoke-virtual {p0, p1}, Lvpf;->o(Ljava/lang/Object;)Ljava/lang/Object;
+    iget-object v4, p0, Lvpf;->a:Ljava/lang/String;
 
-    return-object p1
-.end method
+    if-nez v4, :cond_0
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 0
+    invoke-interface {v2, v3}, Loqe;->Z(I)V
 
-    new-instance p1, Lvpf;
-
-    iget-object p0, p0, Lvpf;->X:Landroid/widget/TextView;
-
-    invoke-direct {p1, p0, p2}, Lvpf;-><init>(Landroid/widget/TextView;Lkotlin/coroutines/Continuation;)V
-
-    return-object p1
-.end method
-
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
-
-    invoke-static {p1}, Lsgg;->Z(Ljava/lang/Object;)V
-
-    iget-object p0, p0, Lvpf;->X:Landroid/widget/TextView;
-
-    invoke-virtual {p0}, Landroid/widget/TextView;->getText()Ljava/lang/CharSequence;
-
-    move-result-object p1
-
-    if-eqz p1, :cond_0
-
-    sget-object v0, Lqp4;->q0:Lap9;
-
-    invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
-
-    move-result-object p0
-
-    invoke-virtual {v0, p0}, Lap9;->g(Landroid/content/Context;)Lqp4;
-
-    move-result-object p0
-
-    invoke-virtual {p0}, Lqp4;->k()Lyha;
-
-    move-result-object p0
-
-    invoke-static {p1, p0}, Lk3c;->f(Ljava/lang/CharSequence;Lyha;)V
+    goto :goto_0
 
     :cond_0
-    sget-object p0, Le5f;->a:Le5f;
+    invoke-interface {v2, v3, v4}, Loqe;->f(ILjava/lang/String;)V
+
+    :goto_0
+    iget v3, p0, Lvpf;->b:I
+
+    invoke-static {v3}, Lmw1;->t(I)I
+
+    move-result v3
+
+    int-to-long v3, v3
+
+    const/4 v5, 0x2
+
+    invoke-interface {v2, v5, v3, v4}, Loqe;->k(IJ)V
+
+    const/4 v3, 0x3
+
+    iget-wide v4, p0, Lvpf;->c:J
+
+    invoke-interface {v2, v3, v4, v5}, Loqe;->k(IJ)V
+
+    :try_start_0
+    invoke-virtual {v0}, Lexc;->c()V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    :try_start_1
+    invoke-interface {v2}, Lqqe;->C()I
+
+    invoke-virtual {v0}, Lexc;->q()V
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_1
+
+    :try_start_2
+    invoke-virtual {v0}, Lexc;->k()V
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_0
+
+    invoke-virtual {v1, v2}, Ly2;->u(Lqqe;)V
+
+    const/4 p0, 0x0
 
     return-object p0
+
+    :catchall_0
+    move-exception p0
+
+    goto :goto_1
+
+    :catchall_1
+    move-exception p0
+
+    :try_start_3
+    invoke-virtual {v0}, Lexc;->k()V
+
+    throw p0
+    :try_end_3
+    .catchall {:try_start_3 .. :try_end_3} :catchall_0
+
+    :goto_1
+    invoke-virtual {v1, v2}, Ly2;->u(Lqqe;)V
+
+    throw p0
 .end method

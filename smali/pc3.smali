@@ -1,505 +1,393 @@
 .class public final Lpc3;
-.super Ljava/lang/Object;
+.super Ljava/util/concurrent/atomic/AtomicReference;
 .source "SourceFile"
 
 # interfaces
-.implements Ljka;
+.implements Lrc3;
+.implements Loq4;
+.implements Ljava/lang/Runnable;
+.implements Le3e;
 
 
 # instance fields
-.field public a:Z
+.field public final synthetic a:I
+
+.field public final b:Ljava/lang/Object;
+
+.field public final c:Ljava/lang/Object;
+
+.field public o:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(I)V
+.method public constructor <init>(Le3e;Lk2e;)V
     .locals 1
 
-    packed-switch p1, :pswitch_data_0
+    const/4 v0, 0x2
 
-    .line 6
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 7
-    const-class p1, Landroidx/camera/camera2/internal/compat/quirk/StillCaptureFlashStopRepeatingQuirk;
-
-    .line 8
-    sget-object v0, Lcj4;->a:Lly4;
-
-    invoke-virtual {v0, p1}, Lly4;->g(Ljava/lang/Class;)Lkpb;
-
-    move-result-object p1
-
-    .line 9
-    check-cast p1, Landroidx/camera/camera2/internal/compat/quirk/StillCaptureFlashStopRepeatingQuirk;
-
-    if-eqz p1, :cond_0
-
-    const/4 p1, 0x1
-
-    goto :goto_0
-
-    :cond_0
-    const/4 p1, 0x0
-
-    .line 10
-    :goto_0
-    iput-boolean p1, p0, Lpc3;->a:Z
-
-    return-void
-
-    .line 11
-    :pswitch_0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 12
-    const-class p1, Landroidx/camera/camera2/internal/compat/quirk/TorchIsClosedAfterImageCapturingQuirk;
-
-    .line 13
-    sget-object v0, Lcj4;->a:Lly4;
-
-    invoke-virtual {v0, p1}, Lly4;->g(Ljava/lang/Class;)Lkpb;
-
-    move-result-object p1
-
-    if-eqz p1, :cond_1
-
-    const/4 p1, 0x1
-
-    goto :goto_1
-
-    :cond_1
-    const/4 p1, 0x0
-
-    .line 14
-    :goto_1
-    iput-boolean p1, p0, Lpc3;->a:Z
-
-    return-void
-
-    .line 15
-    :pswitch_1
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 16
-    const-class p1, Landroidx/camera/core/internal/compat/quirk/SurfaceOrderQuirk;
-
-    .line 17
-    sget-object v0, Lzi4;->a:Lly4;
-
-    invoke-virtual {v0, p1}, Lly4;->g(Ljava/lang/Class;)Lkpb;
-
-    move-result-object p1
-
-    if-eqz p1, :cond_2
-
-    const/4 p1, 0x1
-
-    goto :goto_2
-
-    :cond_2
-    const/4 p1, 0x0
-
-    .line 18
-    :goto_2
-    iput-boolean p1, p0, Lpc3;->a:Z
-
-    return-void
-
-    :pswitch_data_0
-    .packed-switch 0x4
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public constructor <init>(Lly4;I)V
-    .locals 0
-
-    packed-switch p2, :pswitch_data_0
-
-    .line 2
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 3
-    const-class p2, Landroidx/camera/camera2/internal/compat/quirk/Preview3AThreadCrashQuirk;
-
-    invoke-virtual {p1, p2}, Lly4;->f(Ljava/lang/Class;)Z
-
-    move-result p1
-
-    iput-boolean p1, p0, Lpc3;->a:Z
-
-    return-void
+    iput v0, p0, Lpc3;->a:I
 
     .line 4
-    :pswitch_0
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/util/concurrent/atomic/AtomicReference;-><init>()V
 
     .line 5
-    const-class p2, Landroidx/camera/camera2/internal/compat/quirk/UseTorchAsFlashQuirk;
+    iput-object p1, p0, Lpc3;->b:Ljava/lang/Object;
 
-    invoke-virtual {p1, p2}, Lly4;->f(Ljava/lang/Class;)Z
+    .line 6
+    iput-object p2, p0, Lpc3;->o:Ljava/lang/Object;
 
-    move-result p1
+    .line 7
+    new-instance p1, Lh12;
 
-    iput-boolean p1, p0, Lpc3;->a:Z
+    const/4 p2, 0x2
+
+    .line 8
+    invoke-direct {p1, p2}, Lh12;-><init>(I)V
+
+    .line 9
+    iput-object p1, p0, Lpc3;->c:Ljava/lang/Object;
+
+    return-void
+.end method
+
+.method public constructor <init>(Lrc3;Lhc3;)V
+    .locals 1
+
+    const/4 v0, 0x1
+
+    iput v0, p0, Lpc3;->a:I
+
+    .line 10
+    invoke-direct {p0}, Ljava/util/concurrent/atomic/AtomicReference;-><init>()V
+
+    .line 11
+    iput-object p1, p0, Lpc3;->b:Ljava/lang/Object;
+
+    .line 12
+    iput-object p2, p0, Lpc3;->o:Ljava/lang/Object;
+
+    .line 13
+    new-instance p1, Lh12;
+
+    const/4 p2, 0x2
+
+    .line 14
+    invoke-direct {p1, p2}, Lh12;-><init>(I)V
+
+    .line 15
+    iput-object p1, p0, Lpc3;->c:Ljava/lang/Object;
+
+    return-void
+.end method
+
+.method public constructor <init>(Lrc3;Lv5d;)V
+    .locals 1
+
+    const/4 v0, 0x0
+
+    iput v0, p0, Lpc3;->a:I
+
+    .line 1
+    invoke-direct {p0}, Ljava/util/concurrent/atomic/AtomicReference;-><init>()V
+
+    .line 2
+    iput-object p1, p0, Lpc3;->b:Ljava/lang/Object;
+
+    .line 3
+    iput-object p2, p0, Lpc3;->c:Ljava/lang/Object;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public a(Ljava/lang/Object;)V
+    .locals 0
+
+    iget-object p0, p0, Lpc3;->b:Ljava/lang/Object;
+
+    check-cast p0, Le3e;
+
+    invoke-interface {p0, p1}, Le3e;->a(Ljava/lang/Object;)V
+
+    return-void
+.end method
+
+.method public b()V
+    .locals 1
+
+    iget v0, p0, Lpc3;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    iget-object p0, p0, Lpc3;->b:Ljava/lang/Object;
+
+    check-cast p0, Lrc3;
+
+    invoke-interface {p0}, Lrc3;->b()V
+
+    return-void
+
+    :pswitch_0
+    iget-object v0, p0, Lpc3;->c:Ljava/lang/Object;
+
+    check-cast v0, Lv5d;
+
+    invoke-virtual {v0, p0}, Lv5d;->b(Ljava/lang/Runnable;)Loq4;
+
+    move-result-object v0
+
+    invoke-static {p0, v0}, Lsq4;->c(Ljava/util/concurrent/atomic/AtomicReference;Loq4;)Z
 
     return-void
 
     nop
 
     :pswitch_data_0
-    .packed-switch 0x6
+    .packed-switch 0x0
         :pswitch_0
     .end packed-switch
 .end method
 
-.method public synthetic constructor <init>(ZZ)V
-    .locals 0
-
-    .line 1
-    iput-boolean p1, p0, Lpc3;->a:Z
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    return-void
-.end method
-
-.method public static c(Lgz1;)Lgz1;
-    .locals 4
-
-    new-instance v0, Lg40;
-
-    invoke-direct {v0}, Lg40;-><init>()V
-
-    iget v1, p0, Lgz1;->c:I
-
-    iput v1, v0, Lg40;->c:I
-
-    iget-object v1, p0, Lgz1;->a:Ljava/util/ArrayList;
-
-    invoke-static {v1}, Ljava/util/Collections;->unmodifiableList(Ljava/util/List;)Ljava/util/List;
-
-    move-result-object v1
-
-    invoke-interface {v1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
-
-    move-result-object v1
-
-    :goto_0
-    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v2
-
-    if-eqz v2, :cond_0
-
-    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Leg4;
-
-    iget-object v3, v0, Lg40;->e:Ljava/lang/Object;
-
-    check-cast v3, Ljava/util/HashSet;
-
-    invoke-virtual {v3, v2}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
-
-    goto :goto_0
-
-    :cond_0
-    iget-object p0, p0, Lgz1;->b:Lqka;
-
-    invoke-virtual {v0, p0}, Lg40;->c(Lrc3;)V
-
-    invoke-static {}, Lzg9;->b()Lzg9;
-
-    move-result-object p0
-
-    sget-object v1, Landroid/hardware/camera2/CaptureRequest;->FLASH_MODE:Landroid/hardware/camera2/CaptureRequest$Key;
-
-    const/4 v2, 0x0
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-static {v1}, Lcv1;->W(Landroid/hardware/camera2/CaptureRequest$Key;)Ls90;
-
-    move-result-object v1
-
-    invoke-virtual {p0, v1, v2}, Lzg9;->h(Ls90;Ljava/lang/Object;)V
-
-    new-instance v1, Lcv1;
-
-    invoke-static {p0}, Lqka;->a(Lrc3;)Lqka;
-
-    move-result-object p0
-
-    const/16 v2, 0x8
-
-    invoke-direct {v1, v2, p0}, Lef6;-><init>(ILjava/lang/Object;)V
-
-    invoke-virtual {v0, v1}, Lg40;->c(Lrc3;)V
-
-    invoke-virtual {v0}, Lg40;->d()Lgz1;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-
-# virtual methods
-.method public declared-synchronized a()V
+.method public final c(Loq4;)V
     .locals 1
 
-    monitor-enter p0
+    iget v0, p0, Lpc3;->a:I
 
-    :goto_0
-    :try_start_0
-    iget-boolean v0, p0, Lpc3;->a:Z
+    packed-switch v0, :pswitch_data_0
 
-    if-nez v0, :cond_0
-
-    invoke-virtual {p0}, Ljava/lang/Object;->wait()V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    goto :goto_0
-
-    :catchall_0
-    move-exception v0
-
-    goto :goto_1
-
-    :cond_0
-    monitor-exit p0
+    invoke-static {p0, p1}, Lsq4;->g(Ljava/util/concurrent/atomic/AtomicReference;Loq4;)Z
 
     return-void
 
-    :goto_1
-    :try_start_1
-    monitor-exit p0
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    throw v0
-.end method
-
-.method public declared-synchronized b()V
-    .locals 2
-
-    monitor-enter p0
-
-    const/4 v0, 0x0
-
-    :goto_0
-    :try_start_0
-    iget-boolean v1, p0, Lpc3;->a:Z
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    if-nez v1, :cond_0
-
-    :try_start_1
-    invoke-virtual {p0}, Ljava/lang/Object;->wait()V
-    :try_end_1
-    .catch Ljava/lang/InterruptedException; {:try_start_1 .. :try_end_1} :catch_0
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    goto :goto_0
-
-    :catchall_0
-    move-exception v0
-
-    goto :goto_1
-
-    :catch_0
-    const/4 v0, 0x1
-
-    goto :goto_0
-
-    :cond_0
-    if-eqz v0, :cond_1
-
-    :try_start_2
-    invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/Thread;->interrupt()V
-    :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_0
-
-    :cond_1
-    monitor-exit p0
+    :pswitch_0
+    invoke-static {p0, p1}, Lsq4;->g(Ljava/util/concurrent/atomic/AtomicReference;Loq4;)Z
 
     return-void
 
-    :goto_1
-    :try_start_3
-    monitor-exit p0
-    :try_end_3
-    .catchall {:try_start_3 .. :try_end_3} :catchall_0
-
-    throw v0
-.end method
-
-.method public d(Ljava/util/ArrayList;Z)Z
-    .locals 0
-
-    iget-boolean p0, p0, Lpc3;->a:Z
-
-    if-eqz p0, :cond_1
-
-    if-eqz p2, :cond_1
-
-    invoke-virtual {p1}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
-
-    move-result-object p0
-
-    :cond_0
-    invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
+    :pswitch_1
+    invoke-static {p0, p1}, Lsq4;->g(Ljava/util/concurrent/atomic/AtomicReference;Loq4;)Z
 
     move-result p1
-
-    if-eqz p1, :cond_1
-
-    invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Landroid/hardware/camera2/CaptureRequest;
-
-    sget-object p2, Landroid/hardware/camera2/CaptureRequest;->FLASH_MODE:Landroid/hardware/camera2/CaptureRequest$Key;
-
-    invoke-virtual {p1, p2}, Landroid/hardware/camera2/CaptureRequest;->get(Landroid/hardware/camera2/CaptureRequest$Key;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Ljava/lang/Integer;
 
     if-eqz p1, :cond_0
 
-    invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
+    iget-object p1, p0, Lpc3;->b:Ljava/lang/Object;
 
-    move-result p1
+    check-cast p1, Lrc3;
 
-    const/4 p2, 0x2
-
-    if-ne p1, p2, :cond_0
-
-    const/4 p0, 0x1
-
-    return p0
-
-    :cond_1
-    const/4 p0, 0x0
-
-    return p0
-.end method
-
-.method public declared-synchronized e()Z
-    .locals 1
-
-    monitor-enter p0
-
-    :try_start_0
-    iget-boolean v0, p0, Lpc3;->a:Z
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    if-eqz v0, :cond_0
-
-    monitor-exit p0
-
-    const/4 p0, 0x0
-
-    return p0
+    invoke-interface {p1, p0}, Lrc3;->c(Loq4;)V
 
     :cond_0
-    const/4 v0, 0x1
+    return-void
 
-    :try_start_1
-    iput-boolean v0, p0, Lpc3;->a:Z
+    nop
 
-    invoke-virtual {p0}, Ljava/lang/Object;->notifyAll()V
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    monitor-exit p0
-
-    return v0
-
-    :catchall_0
-    move-exception v0
-
-    :try_start_2
-    monitor-exit p0
-    :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_0
-
-    throw v0
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method
 
-.method public f(Ljava/util/ArrayList;Z)Z
-    .locals 0
+.method public final e()V
+    .locals 1
 
-    iget-boolean p0, p0, Lpc3;->a:Z
+    iget v0, p0, Lpc3;->a:I
 
-    if-eqz p0, :cond_3
+    packed-switch v0, :pswitch_data_0
 
-    if-nez p2, :cond_0
+    invoke-static {p0}, Lsq4;->a(Ljava/util/concurrent/atomic/AtomicReference;)Z
+
+    iget-object p0, p0, Lpc3;->c:Ljava/lang/Object;
+
+    check-cast p0, Lh12;
+
+    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    invoke-static {p0}, Lsq4;->a(Ljava/util/concurrent/atomic/AtomicReference;)Z
+
+    return-void
+
+    :pswitch_0
+    invoke-static {p0}, Lsq4;->a(Ljava/util/concurrent/atomic/AtomicReference;)Z
+
+    iget-object p0, p0, Lpc3;->c:Ljava/lang/Object;
+
+    check-cast p0, Lh12;
+
+    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    invoke-static {p0}, Lsq4;->a(Ljava/util/concurrent/atomic/AtomicReference;)Z
+
+    return-void
+
+    :pswitch_1
+    invoke-static {p0}, Lsq4;->a(Ljava/util/concurrent/atomic/AtomicReference;)Z
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final f()Z
+    .locals 1
+
+    iget v0, p0, Lpc3;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
+
+    move-result-object p0
+
+    check-cast p0, Loq4;
+
+    invoke-static {p0}, Lsq4;->b(Loq4;)Z
+
+    move-result p0
+
+    return p0
+
+    :pswitch_0
+    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
+
+    move-result-object p0
+
+    check-cast p0, Loq4;
+
+    invoke-static {p0}, Lsq4;->b(Loq4;)Z
+
+    move-result p0
+
+    return p0
+
+    :pswitch_1
+    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
+
+    move-result-object p0
+
+    check-cast p0, Loq4;
+
+    invoke-static {p0}, Lsq4;->b(Loq4;)Z
+
+    move-result p0
+
+    return p0
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final onError(Ljava/lang/Throwable;)V
+    .locals 1
+
+    iget v0, p0, Lpc3;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    iget-object p0, p0, Lpc3;->b:Ljava/lang/Object;
+
+    check-cast p0, Le3e;
+
+    invoke-interface {p0, p1}, Le3e;->onError(Ljava/lang/Throwable;)V
+
+    return-void
+
+    :pswitch_0
+    iget-object p0, p0, Lpc3;->b:Ljava/lang/Object;
+
+    check-cast p0, Lrc3;
+
+    invoke-interface {p0, p1}, Lrc3;->onError(Ljava/lang/Throwable;)V
+
+    return-void
+
+    :pswitch_1
+    iput-object p1, p0, Lpc3;->o:Ljava/lang/Object;
+
+    iget-object p1, p0, Lpc3;->c:Ljava/lang/Object;
+
+    check-cast p1, Lv5d;
+
+    invoke-virtual {p1, p0}, Lv5d;->b(Ljava/lang/Runnable;)Loq4;
+
+    move-result-object p1
+
+    invoke-static {p0, p1}, Lsq4;->c(Ljava/util/concurrent/atomic/AtomicReference;Loq4;)Z
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final run()V
+    .locals 3
+
+    iget v0, p0, Lpc3;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    iget-object v0, p0, Lpc3;->o:Ljava/lang/Object;
+
+    check-cast v0, Lk2e;
+
+    invoke-virtual {v0, p0}, Lk2e;->k(Le3e;)V
+
+    return-void
+
+    :pswitch_0
+    iget-object v0, p0, Lpc3;->o:Ljava/lang/Object;
+
+    check-cast v0, Lhc3;
+
+    invoke-virtual {v0, p0}, Lhc3;->h(Lrc3;)V
+
+    return-void
+
+    :pswitch_1
+    iget-object v0, p0, Lpc3;->b:Ljava/lang/Object;
+
+    check-cast v0, Lrc3;
+
+    iget-object v1, p0, Lpc3;->o:Ljava/lang/Object;
+
+    check-cast v1, Ljava/lang/Throwable;
+
+    if-eqz v1, :cond_0
+
+    const/4 v2, 0x0
+
+    iput-object v2, p0, Lpc3;->o:Ljava/lang/Object;
+
+    invoke-interface {v0, v1}, Lrc3;->onError(Ljava/lang/Throwable;)V
 
     goto :goto_0
 
     :cond_0
-    invoke-virtual {p1}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
+    invoke-interface {v0}, Lrc3;->b()V
 
-    move-result-object p0
-
-    :cond_1
-    invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result p1
-
-    if-eqz p1, :cond_3
-
-    invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Landroid/hardware/camera2/CaptureRequest;
-
-    sget-object p2, Landroid/hardware/camera2/CaptureRequest;->CONTROL_AE_MODE:Landroid/hardware/camera2/CaptureRequest$Key;
-
-    invoke-virtual {p1, p2}, Landroid/hardware/camera2/CaptureRequest;->get(Landroid/hardware/camera2/CaptureRequest$Key;)Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Ljava/lang/Integer;
-
-    invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
-
-    move-result p1
-
-    const/4 p2, 0x2
-
-    if-eq p1, p2, :cond_2
-
-    const/4 p2, 0x3
-
-    if-ne p1, p2, :cond_1
-
-    :cond_2
-    const/4 p0, 0x1
-
-    return p0
-
-    :cond_3
     :goto_0
-    const/4 p0, 0x0
+    return-void
 
-    return p0
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

@@ -1,97 +1,141 @@
-.class public final Luc0;
-.super Ljava/lang/Object;
+.class public abstract Luc0;
+.super Lys9;
 .source "SourceFile"
-
-# interfaces
-.implements Lwc0;
-
-
-# instance fields
-.field public final a:Landroid/content/Intent;
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Intent;)V
+.method public constructor <init>(I)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    packed-switch p1, :pswitch_data_0
 
-    iput-object p1, p0, Luc0;->a:Landroid/content/Intent;
+    :pswitch_0
+    sget-object p1, Lylf;->a:Lylf;
+
+    invoke-direct {p0, p1}, Lys9;-><init>(Ljava/lang/Object;)V
 
     return-void
-.end method
 
+    :pswitch_1
+    sget-object p1, Lylf;->a:Lylf;
 
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 3
+    invoke-direct {p0, p1}, Lys9;-><init>(Ljava/lang/Object;)V
 
-    const/4 v0, 0x1
+    return-void
 
-    if-ne p0, p1, :cond_0
+    :pswitch_2
+    sget-object p1, Lylf;->a:Lylf;
 
-    return v0
+    invoke-direct {p0, p1}, Lys9;-><init>(Ljava/lang/Object;)V
 
-    :cond_0
-    instance-of v1, p1, Luc0;
+    return-void
 
-    const/4 v2, 0x0
+    :pswitch_3
+    sget-object p1, Lylf;->a:Lylf;
 
-    if-nez v1, :cond_1
+    invoke-direct {p0, p1}, Lys9;-><init>(Ljava/lang/Object;)V
 
-    return v2
+    return-void
 
-    :cond_1
-    check-cast p1, Luc0;
+    :pswitch_4
+    sget-object p1, Lylf;->a:Lylf;
 
-    iget-object p0, p0, Luc0;->a:Landroid/content/Intent;
+    invoke-direct {p0, p1}, Lys9;-><init>(Ljava/lang/Object;)V
 
-    iget-object p1, p1, Luc0;->a:Landroid/content/Intent;
+    return-void
 
-    invoke-static {p0, p1}, Lxq7;->d(Ljava/lang/Object;Ljava/lang/Object;)Z
+    :pswitch_5
+    sget-object p1, Lylf;->a:Lylf;
 
-    move-result p0
+    invoke-direct {p0, p1}, Lys9;-><init>(Ljava/lang/Object;)V
 
-    if-nez p0, :cond_2
+    return-void
 
-    return v2
+    :pswitch_6
+    sget-object p1, Lylf;->a:Lylf;
 
-    :cond_2
-    return v0
-.end method
+    invoke-direct {p0, p1}, Lys9;-><init>(Ljava/lang/Object;)V
 
-.method public final hashCode()I
-    .locals 0
+    return-void
 
-    iget-object p0, p0, Luc0;->a:Landroid/content/Intent;
+    :pswitch_7
+    sget-object p1, Lylf;->a:Lylf;
 
-    invoke-virtual {p0}, Ljava/lang/Object;->hashCode()I
+    invoke-direct {p0, p1}, Lys9;-><init>(Ljava/lang/Object;)V
 
-    move-result p0
+    return-void
 
-    return p0
-.end method
+    :pswitch_8
+    sget-object p1, Lylf;->a:Lylf;
 
-.method public final toString()Ljava/lang/String;
-    .locals 2
+    invoke-direct {p0, p1}, Lys9;-><init>(Ljava/lang/Object;)V
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    return-void
 
-    const-string v1, "CameraScreenIntentReady(intent="
+    :pswitch_9
+    sget-object p1, Lylf;->a:Lylf;
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-direct {p0, p1}, Lys9;-><init>(Ljava/lang/Object;)V
 
-    iget-object p0, p0, Luc0;->a:Landroid/content/Intent;
+    return-void
 
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    :pswitch_a
+    sget-object p1, Lylf;->a:Lylf;
 
-    const-string p0, ")"
+    invoke-direct {p0, p1}, Lys9;-><init>(Ljava/lang/Object;)V
 
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    return-void
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    :pswitch_b
+    sget-object p1, Lylf;->a:Lylf;
 
-    move-result-object p0
+    invoke-direct {p0, p1}, Lys9;-><init>(Ljava/lang/Object;)V
 
-    return-object p0
+    return-void
+
+    :pswitch_c
+    sget-object p1, Lylf;->a:Lylf;
+
+    invoke-direct {p0, p1}, Lys9;-><init>(Ljava/lang/Object;)V
+
+    return-void
+
+    :pswitch_d
+    sget-object p1, Lylf;->a:Lylf;
+
+    invoke-direct {p0, p1}, Lys9;-><init>(Ljava/lang/Object;)V
+
+    return-void
+
+    :pswitch_e
+    sget-object p1, Lylf;->a:Lylf;
+
+    invoke-direct {p0, p1}, Lys9;-><init>(Ljava/lang/Object;)V
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_e
+        :pswitch_d
+        :pswitch_0
+        :pswitch_c
+        :pswitch_0
+        :pswitch_b
+        :pswitch_0
+        :pswitch_a
+        :pswitch_9
+        :pswitch_0
+        :pswitch_0
+        :pswitch_8
+        :pswitch_7
+        :pswitch_6
+        :pswitch_5
+        :pswitch_4
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
+    .end packed-switch
 .end method

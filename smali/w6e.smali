@@ -1,304 +1,137 @@
 .class public final Lw6e;
-.super Ljava/lang/Object;
+.super Ltgd;
 .source "SourceFile"
-
-# interfaces
-.implements Ljava/lang/Runnable;
-
-
-# static fields
-.field public static final o:Ljava/lang/String;
 
 
 # instance fields
-.field public final a:Lw8g;
-
-.field public final b:Liyd;
-
-.field public final c:Z
-
-
-# direct methods
-.method static constructor <clinit>()V
-    .locals 1
-
-    const-string v0, "StopWorkRunnable"
-
-    invoke-static {v0}, Lfc2;->F(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    sput-object v0, Lw6e;->o:Ljava/lang/String;
-
-    return-void
-.end method
-
-.method public constructor <init>(Lw8g;Liyd;Z)V
-    .locals 0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lw6e;->a:Lw8g;
-
-    iput-object p2, p0, Lw6e;->b:Liyd;
-
-    iput-boolean p3, p0, Lw6e;->c:Z
-
-    return-void
-.end method
+.field public c:Landroid/view/View;
 
 
 # virtual methods
-.method public final run()V
-    .locals 8
+.method public final k()V
+    .locals 5
 
-    iget-boolean v0, p0, Lw6e;->c:Z
+    iget-object v0, p0, Lw6e;->c:Landroid/view/View;
 
-    if-eqz v0, :cond_1
+    if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lw6e;->a:Lw8g;
+    invoke-static {v0}, Laxa;->n(Landroid/view/View;)Landroid/view/WindowInsetsController;
 
-    iget-object v0, v0, Lw8g;->f:Lh7b;
-
-    iget-object v1, p0, Lw6e;->b:Liyd;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    const-string v2, "Processor stopping foreground work "
-
-    iget-object v1, v1, Liyd;->a:Lp8g;
-
-    iget-object v1, v1, Lp8g;->a:Ljava/lang/String;
-
-    iget-object v3, v0, Lh7b;->s0:Ljava/lang/Object;
-
-    monitor-enter v3
-
-    :try_start_0
-    invoke-static {}, Lfc2;->p()Lfc2;
-
-    move-result-object v4
-
-    sget-object v5, Lh7b;->t0:Ljava/lang/String;
-
-    new-instance v6, Ljava/lang/StringBuilder;
-
-    invoke-direct {v6, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v6, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v6}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {v4, v5, v2}, Lfc2;->g(Ljava/lang/String;Ljava/lang/String;)V
-
-    iget-object v2, v0, Lh7b;->Y:Ljava/util/HashMap;
-
-    invoke-virtual {v2, v1}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v2
-
-    check-cast v2, Lz9g;
-
-    if-eqz v2, :cond_0
-
-    iget-object v0, v0, Lh7b;->o0:Ljava/util/HashMap;
-
-    invoke-virtual {v0, v1}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
+    move-result-object v1
 
     goto :goto_0
 
-    :catchall_0
-    move-exception p0
-
-    goto :goto_1
-
     :cond_0
+    const/4 v1, 0x0
+
     :goto_0
-    monitor-exit v3
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    if-eqz v1, :cond_2
 
-    invoke-static {v1, v2}, Lh7b;->c(Ljava/lang/String;Lz9g;)Z
+    new-instance p0, Ljava/util/concurrent/atomic/AtomicBoolean;
 
-    move-result v0
+    const/4 v2, 0x0
 
-    goto/16 :goto_4
+    invoke-direct {p0, v2}, Ljava/util/concurrent/atomic/AtomicBoolean;-><init>(Z)V
 
-    :goto_1
-    :try_start_1
-    monitor-exit v3
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+    new-instance v3, Lv6e;
 
-    throw p0
+    invoke-direct {v3, p0}, Lv6e;-><init>(Ljava/util/concurrent/atomic/AtomicBoolean;)V
 
-    :cond_1
-    iget-object v0, p0, Lw6e;->a:Lw8g;
+    invoke-static {v1, v3}, Laxa;->y(Landroid/view/WindowInsetsController;Lv6e;)V
 
-    iget-object v0, v0, Lw8g;->f:Lh7b;
+    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
 
-    iget-object v1, p0, Lw6e;->b:Liyd;
+    move-result p0
 
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    if-nez p0, :cond_1
 
-    const-string v2, "Processor stopping background work "
+    if-eqz v0, :cond_1
 
-    const-string v3, "WorkerWrapper could not be found for "
-
-    iget-object v4, v1, Liyd;->a:Lp8g;
-
-    iget-object v4, v4, Lp8g;->a:Ljava/lang/String;
-
-    iget-object v5, v0, Lh7b;->s0:Ljava/lang/Object;
-
-    monitor-enter v5
-
-    :try_start_2
-    iget-object v6, v0, Lh7b;->Z:Ljava/util/HashMap;
-
-    invoke-virtual {v6, v4}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v6
-
-    check-cast v6, Lz9g;
-
-    const/4 v7, 0x0
-
-    if-nez v6, :cond_2
-
-    invoke-static {}, Lfc2;->p()Lfc2;
-
-    move-result-object v0
-
-    sget-object v1, Lh7b;->t0:Ljava/lang/String;
-
-    new-instance v2, Ljava/lang/StringBuilder;
-
-    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v2, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Lfc2;->g(Ljava/lang/String;Ljava/lang/String;)V
-
-    monitor-exit v5
-
-    :goto_2
-    move v0, v7
-
-    goto :goto_4
-
-    :catchall_1
-    move-exception p0
-
-    goto :goto_5
-
-    :cond_2
-    iget-object v3, v0, Lh7b;->o0:Ljava/util/HashMap;
-
-    invoke-virtual {v3, v4}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v3
-
-    check-cast v3, Ljava/util/Set;
-
-    if-eqz v3, :cond_4
-
-    invoke-interface {v3, v1}, Ljava/util/Set;->contains(Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_3
-
-    goto :goto_3
-
-    :cond_3
-    invoke-static {}, Lfc2;->p()Lfc2;
-
-    move-result-object v1
-
-    sget-object v3, Lh7b;->t0:Ljava/lang/String;
-
-    new-instance v7, Ljava/lang/StringBuilder;
-
-    invoke-direct {v7, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v7, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v7}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {v1, v3, v2}, Lfc2;->g(Ljava/lang/String;Ljava/lang/String;)V
-
-    iget-object v0, v0, Lh7b;->o0:Ljava/util/HashMap;
-
-    invoke-virtual {v0, v4}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
-
-    monitor-exit v5
-    :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_1
-
-    invoke-static {v4, v6}, Lh7b;->c(Ljava/lang/String;Lz9g;)Z
-
-    move-result v0
-
-    goto :goto_4
-
-    :cond_4
-    :goto_3
-    :try_start_3
-    monitor-exit v5
-    :try_end_3
-    .catchall {:try_start_3 .. :try_end_3} :catchall_1
-
-    goto :goto_2
-
-    :goto_4
-    invoke-static {}, Lfc2;->p()Lfc2;
-
-    move-result-object v1
-
-    sget-object v2, Lw6e;->o:Ljava/lang/String;
-
-    new-instance v3, Ljava/lang/StringBuilder;
-
-    const-string v4, "StopWorkRunnable for "
-
-    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object p0, p0, Lw6e;->b:Liyd;
-
-    iget-object p0, p0, Liyd;->a:Lp8g;
-
-    iget-object p0, p0, Lp8g;->a:Ljava/lang/String;
-
-    invoke-virtual {v3, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string p0, "; Processor.stopWork = "
-
-    invoke-virtual {v3, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v0}, Landroid/view/View;->getContext()Landroid/content/Context;
 
     move-result-object p0
 
-    invoke-virtual {v1, v2, p0}, Lfc2;->g(Ljava/lang/String;Ljava/lang/String;)V
+    const-string v4, "input_method"
+
+    invoke-virtual {p0, v4}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+
+    move-result-object p0
+
+    check-cast p0, Landroid/view/inputmethod/InputMethodManager;
+
+    invoke-virtual {v0}, Landroid/view/View;->getWindowToken()Landroid/os/IBinder;
+
+    move-result-object v0
+
+    invoke-virtual {p0, v0, v2}, Landroid/view/inputmethod/InputMethodManager;->hideSoftInputFromWindow(Landroid/os/IBinder;I)Z
+
+    :cond_1
+    invoke-static {v1, v3}, Laxa;->D(Landroid/view/WindowInsetsController;Lv6e;)V
+
+    invoke-static {}, Laxa;->b()I
+
+    move-result p0
+
+    invoke-static {v1, p0}, Laxa;->C(Landroid/view/WindowInsetsController;I)V
 
     return-void
 
-    :goto_5
-    :try_start_4
-    monitor-exit v5
-    :try_end_4
-    .catchall {:try_start_4 .. :try_end_4} :catchall_1
+    :cond_2
+    invoke-super {p0}, Ltgd;->k()V
 
-    throw p0
+    return-void
+.end method
+
+.method public final p()V
+    .locals 3
+
+    iget-object v0, p0, Lw6e;->c:Landroid/view/View;
+
+    if-eqz v0, :cond_0
+
+    sget v1, Landroid/os/Build$VERSION;->SDK_INT:I
+
+    const/16 v2, 0x21
+
+    if-ge v1, v2, :cond_0
+
+    invoke-virtual {v0}, Landroid/view/View;->getContext()Landroid/content/Context;
+
+    move-result-object v1
+
+    const-string v2, "input_method"
+
+    invoke-virtual {v1, v2}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Landroid/view/inputmethod/InputMethodManager;
+
+    invoke-virtual {v1}, Landroid/view/inputmethod/InputMethodManager;->isActive()Z
+
+    :cond_0
+    if-eqz v0, :cond_1
+
+    invoke-static {v0}, Laxa;->n(Landroid/view/View;)Landroid/view/WindowInsetsController;
+
+    move-result-object v0
+
+    goto :goto_0
+
+    :cond_1
+    const/4 v0, 0x0
+
+    :goto_0
+    if-eqz v0, :cond_2
+
+    invoke-static {}, Laxa;->b()I
+
+    move-result v1
+
+    invoke-static {v0, v1}, Laxa;->x(Landroid/view/WindowInsetsController;I)V
+
+    :cond_2
+    invoke-super {p0}, Ltgd;->p()V
+
+    return-void
 .end method

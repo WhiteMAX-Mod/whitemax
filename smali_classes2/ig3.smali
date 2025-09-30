@@ -1,453 +1,274 @@
 .class public final Lig3;
-.super Ljava/lang/Object;
+.super Lure;
 .source "SourceFile"
 
 # interfaces
-.implements Landroid/os/Parcelable;
-
-
-# static fields
-.field public static final CREATOR:Landroid/os/Parcelable$Creator;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Landroid/os/Parcelable$Creator<",
-            "Lig3;",
-            ">;"
-        }
-    .end annotation
-.end field
+.implements Lpc6;
 
 
 # instance fields
-.field public final X:I
+.field public X:Lch3;
 
-.field public final a:I
+.field public Y:I
 
-.field public final b:Lmoe;
+.field public final synthetic Z:Lch3;
 
-.field public final c:I
-
-.field public final o:Z
+.field public final synthetic r0:Ljava/lang/String;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
-
-    new-instance v0, Lhg3;
-
-    const/4 v1, 0x0
-
-    invoke-direct {v0, v1}, Lhg3;-><init>(I)V
-
-    sput-object v0, Lig3;->CREATOR:Landroid/os/Parcelable$Creator;
-
-    return-void
-.end method
-
-.method public synthetic constructor <init>(ILmoe;II)V
-    .locals 6
-
-    and-int/lit8 p4, p4, 0x8
-
-    if-eqz p4, :cond_0
-
-    const/4 p4, 0x0
-
-    :goto_0
-    move v4, p4
-
-    goto :goto_1
-
-    :cond_0
-    const/4 p4, 0x1
-
-    goto :goto_0
-
-    :goto_1
-    const/4 v5, 0x2
-
-    move-object v0, p0
-
-    move v1, p1
-
-    move-object v2, p2
-
-    move v3, p3
-
-    .line 1
-    invoke-direct/range {v0 .. v5}, Lig3;-><init>(ILmoe;IZI)V
-
-    return-void
-.end method
-
-.method public constructor <init>(ILmoe;IZI)V
+.method public constructor <init>(Lch3;Ljava/lang/String;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    .line 2
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Lig3;->Z:Lch3;
 
-    .line 3
-    iput p1, p0, Lig3;->a:I
+    iput-object p2, p0, Lig3;->r0:Ljava/lang/String;
 
-    .line 4
-    iput-object p2, p0, Lig3;->b:Lmoe;
+    const/4 p1, 0x2
 
-    .line 5
-    iput p3, p0, Lig3;->c:I
-
-    .line 6
-    iput-boolean p4, p0, Lig3;->o:Z
-
-    .line 7
-    iput p5, p0, Lig3;->X:I
+    invoke-direct {p0, p1, p3}, Lure;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final describeContents()I
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    const/4 p0, 0x0
+    check-cast p1, Ly04;
 
-    return p0
-.end method
+    check-cast p2, Lkotlin/coroutines/Continuation;
 
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 2
+    invoke-virtual {p0, p1, p2}, Lig3;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
 
-    if-ne p0, p1, :cond_0
+    move-result-object p0
 
-    goto :goto_1
+    check-cast p0, Lig3;
 
-    :cond_0
-    instance-of v0, p1, Lig3;
+    sget-object p1, Lylf;->a:Lylf;
 
-    if-nez v0, :cond_1
-
-    goto :goto_0
-
-    :cond_1
-    check-cast p1, Lig3;
-
-    iget v0, p0, Lig3;->a:I
-
-    iget v1, p1, Lig3;->a:I
-
-    if-eq v0, v1, :cond_2
-
-    goto :goto_0
-
-    :cond_2
-    iget-object v0, p0, Lig3;->b:Lmoe;
-
-    iget-object v1, p1, Lig3;->b:Lmoe;
-
-    invoke-static {v0, v1}, Lxq7;->d(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_3
-
-    goto :goto_0
-
-    :cond_3
-    iget v0, p0, Lig3;->c:I
-
-    iget v1, p1, Lig3;->c:I
-
-    if-eq v0, v1, :cond_4
-
-    goto :goto_0
-
-    :cond_4
-    iget-boolean v0, p0, Lig3;->o:Z
-
-    iget-boolean v1, p1, Lig3;->o:Z
-
-    if-eq v0, v1, :cond_5
-
-    goto :goto_0
-
-    :cond_5
-    iget p0, p0, Lig3;->X:I
-
-    iget p1, p1, Lig3;->X:I
-
-    if-eq p0, p1, :cond_6
-
-    :goto_0
-    const/4 p0, 0x0
-
-    return p0
-
-    :cond_6
-    :goto_1
-    const/4 p0, 0x1
-
-    return p0
-.end method
-
-.method public final hashCode()I
-    .locals 3
-
-    iget v0, p0, Lig3;->a:I
-
-    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
-
-    move-result v0
-
-    const/16 v1, 0x1f
-
-    mul-int/2addr v0, v1
-
-    iget-object v2, p0, Lig3;->b:Lmoe;
-
-    invoke-static {v0, v1, v2}, Lpg0;->c(IILmoe;)I
-
-    move-result v0
-
-    iget v2, p0, Lig3;->c:I
-
-    invoke-static {v2, v0, v1}, Lp3a;->i(III)I
-
-    move-result v0
-
-    iget-boolean v2, p0, Lig3;->o:Z
-
-    invoke-static {v0, v1, v2}, Luz1;->f(IIZ)I
-
-    move-result v0
-
-    iget p0, p0, Lig3;->X:I
-
-    invoke-static {p0}, Lzt1;->s(I)I
-
-    move-result p0
-
-    add-int/2addr p0, v0
-
-    return p0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 3
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "Button(id="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget v1, p0, Lig3;->a:I
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    const-string v1, ", caption="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lig3;->b:Lmoe;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", type="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const/4 v1, 0x1
-
-    iget v2, p0, Lig3;->c:I
-
-    if-eq v2, v1, :cond_3
-
-    const/4 v1, 0x2
-
-    if-eq v2, v1, :cond_2
-
-    const/4 v1, 0x3
-
-    if-eq v2, v1, :cond_1
-
-    const/4 v1, 0x4
-
-    if-eq v2, v1, :cond_0
-
-    const-string v1, "null"
-
-    goto :goto_0
-
-    :cond_0
-    const-string v1, "THEMED"
-
-    goto :goto_0
-
-    :cond_1
-    const-string v1, "PRIMARY"
-
-    goto :goto_0
-
-    :cond_2
-    const-string v1, "NEUTRAL"
-
-    goto :goto_0
-
-    :cond_3
-    const-string v1, "NEGATIVE"
-
-    :goto_0
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", filledButton="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-boolean v1, p0, Lig3;->o:Z
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    const-string v1, ", size="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const/4 v1, 0x1
-
-    iget p0, p0, Lig3;->X:I
-
-    if-eq p0, v1, :cond_6
-
-    const/4 v1, 0x2
-
-    if-eq p0, v1, :cond_5
-
-    const/4 v1, 0x3
-
-    if-eq p0, v1, :cond_4
-
-    const-string p0, "null"
-
-    goto :goto_1
-
-    :cond_4
-    const-string p0, "LARGE"
-
-    goto :goto_1
-
-    :cond_5
-    const-string p0, "MEDIUM"
-
-    goto :goto_1
-
-    :cond_6
-    const-string p0, "SMALL"
-
-    :goto_1
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string p0, ")"
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {p0, p1}, Lig3;->o(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p0
 
     return-object p0
 .end method
 
-.method public final writeToParcel(Landroid/os/Parcel;I)V
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
     .locals 1
 
-    iget v0, p0, Lig3;->a:I
+    new-instance p1, Lig3;
 
-    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
+    iget-object v0, p0, Lig3;->Z:Lch3;
 
-    iget-object v0, p0, Lig3;->b:Lmoe;
+    iget-object p0, p0, Lig3;->r0:Ljava/lang/String;
 
-    invoke-virtual {p1, v0, p2}, Landroid/os/Parcel;->writeParcelable(Landroid/os/Parcelable;I)V
+    invoke-direct {p1, v0, p0, p2}, Lig3;-><init>(Lch3;Ljava/lang/String;Lkotlin/coroutines/Continuation;)V
 
-    const/4 p2, 0x1
+    return-object p1
+.end method
 
-    iget v0, p0, Lig3;->c:I
+.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 13
 
-    if-eq v0, p2, :cond_3
+    iget v0, p0, Lig3;->Y:I
 
-    const/4 p2, 0x2
+    sget-object v1, Lylf;->a:Lylf;
 
-    if-eq v0, p2, :cond_2
+    iget-object v2, p0, Lig3;->r0:Ljava/lang/String;
 
-    const/4 p2, 0x3
+    const/4 v3, 0x3
 
-    if-eq v0, p2, :cond_1
+    const/4 v4, 0x2
 
-    const/4 p2, 0x4
+    iget-object v5, p0, Lig3;->Z:Lch3;
 
-    if-ne v0, p2, :cond_0
+    const/4 v6, 0x4
 
-    const-string p2, "THEMED"
+    const/4 v7, 0x1
 
-    goto :goto_0
+    sget-object v8, Lz04;->a:Lz04;
+
+    if-eqz v0, :cond_4
+
+    if-eq v0, v7, :cond_3
+
+    if-eq v0, v4, :cond_2
+
+    if-eq v0, v3, :cond_1
+
+    if-ne v0, v6, :cond_0
+
+    invoke-static {p1}, Lqe5;->V(Ljava/lang/Object;)V
+
+    return-object v1
 
     :cond_0
-    const/4 p0, 0x0
+    new-instance p0, Ljava/lang/IllegalStateException;
+
+    const-string p1, "call to \'resume\' before \'invoke\' with coroutine"
+
+    invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
     throw p0
 
     :cond_1
-    const-string p2, "PRIMARY"
+    iget-object v5, p0, Lig3;->X:Lch3;
 
-    goto :goto_0
+    invoke-static {p1}, Lqe5;->V(Ljava/lang/Object;)V
+
+    goto/16 :goto_3
 
     :cond_2
-    const-string p2, "NEUTRAL"
+    invoke-static {p1}, Lqe5;->V(Ljava/lang/Object;)V
 
-    goto :goto_0
+    goto :goto_2
 
     :cond_3
-    const-string p2, "NEGATIVE"
-
-    :goto_0
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
-
-    iget-boolean p2, p0, Lig3;->o:Z
-
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeInt(I)V
-
-    const/4 p2, 0x1
-
-    iget p0, p0, Lig3;->X:I
-
-    if-eq p0, p2, :cond_6
-
-    const/4 p2, 0x2
-
-    if-eq p0, p2, :cond_5
-
-    const/4 p2, 0x3
-
-    if-ne p0, p2, :cond_4
-
-    const-string p0, "LARGE"
+    invoke-static {p1}, Lqe5;->V(Ljava/lang/Object;)V
 
     goto :goto_1
 
     :cond_4
-    const/4 p0, 0x0
+    invoke-static {p1}, Lqe5;->V(Ljava/lang/Object;)V
 
-    throw p0
+    sget-object p1, Lch3;->K0:Ljava/lang/String;
+
+    invoke-virtual {v5}, Lch3;->p()Lxwc;
+
+    move-result-object p1
+
+    iput v7, p0, Lig3;->Y:I
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    const-string v0, "SELECT options FROM chat_folder WHERE id=? "
+
+    invoke-static {v7, v0}, Lvxc;->c(ILjava/lang/String;)Lvxc;
+
+    move-result-object v0
+
+    if-nez v2, :cond_5
+
+    invoke-virtual {v0, v7}, Lvxc;->Z(I)V
+
+    goto :goto_0
 
     :cond_5
-    const-string p0, "MEDIUM"
+    invoke-virtual {v0, v7, v2}, Lvxc;->f(ILjava/lang/String;)V
 
-    goto :goto_1
+    :goto_0
+    new-instance v9, Landroid/os/CancellationSignal;
+
+    invoke-direct {v9}, Landroid/os/CancellationSignal;-><init>()V
+
+    iget-object v10, p1, Lxwc;->a:Lru/ok/tamtam/android/db/room/OneMeRoomDatabase_Impl;
+
+    new-instance v11, Lvwc;
+
+    const/4 v12, 0x5
+
+    invoke-direct {v11, p1, v0, v12}, Lvwc;-><init>(Lxwc;Lvxc;I)V
+
+    invoke-static {v10, v9, v11, p0}, Lmu0;->h(Lexc;Landroid/os/CancellationSignal;Ljava/util/concurrent/Callable;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    if-ne p1, v8, :cond_6
+
+    goto :goto_4
 
     :cond_6
-    const-string p0, "SMALL"
-
     :goto_1
-    invoke-virtual {p1, p0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
+    check-cast p1, [B
 
-    return-void
+    invoke-static {p1}, Lx4h;->j([B)Ljava/util/Set;
+
+    move-result-object p1
+
+    sget-object v0, Lh06;->c:Lh06;
+
+    invoke-interface {p1, v0}, Ljava/util/Set;->contains(Ljava/lang/Object;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_7
+
+    sget-object p0, Lch3;->K0:Ljava/lang/String;
+
+    const-string p1, "try to delete not deleted folder!"
+
+    invoke-static {p0, p1}, Ljtg;->S(Ljava/lang/String;Ljava/lang/String;)V
+
+    return-object v1
+
+    :cond_7
+    sget-object p1, Lch3;->K0:Ljava/lang/String;
+
+    invoke-virtual {v5}, Lch3;->p()Lxwc;
+
+    move-result-object p1
+
+    invoke-static {v2}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
+
+    move-result-object v0
+
+    iput v4, p0, Lig3;->Y:I
+
+    iget-object v2, p1, Lxwc;->a:Lru/ok/tamtam/android/db/room/OneMeRoomDatabase_Impl;
+
+    new-instance v9, Lxrc;
+
+    invoke-direct {v9, p1, v4, v0}, Lxrc;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+
+    invoke-static {v2, v9, p0}, Lya6;->N(Lexc;Lbc6;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    if-ne p1, v8, :cond_8
+
+    goto :goto_4
+
+    :cond_8
+    :goto_2
+    sget-object p1, Lch3;->K0:Ljava/lang/String;
+
+    invoke-virtual {v5}, Lch3;->p()Lxwc;
+
+    move-result-object p1
+
+    iput-object v5, p0, Lig3;->X:Lch3;
+
+    iput v3, p0, Lig3;->Y:I
+
+    invoke-virtual {p1, p0}, Lxwc;->f(Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    if-ne p1, v8, :cond_9
+
+    goto :goto_4
+
+    :cond_9
+    :goto_3
+    check-cast p1, Ljava/util/List;
+
+    const/4 v0, 0x0
+
+    iput-object v0, p0, Lig3;->X:Lch3;
+
+    iput v6, p0, Lig3;->Y:I
+
+    invoke-static {v5, p1, v7, p0}, Lch3;->H(Lch3;Ljava/util/List;ZLkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object p0
+
+    if-ne p0, v8, :cond_a
+
+    :goto_4
+    return-object v8
+
+    :cond_a
+    return-object v1
 .end method

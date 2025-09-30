@@ -1584,11 +1584,11 @@
 
     invoke-virtual {v3}, Lorg/webrtc/HardwareVideoEncoder$BusyCount;->increment()V
 
-    new-instance v9, Lw30;
+    new-instance v9, Ly20;
 
     const/16 v3, 0xa
 
-    invoke-direct {v9, v5, v3, p0}, Lw30;-><init>(IILjava/lang/Object;)V
+    invoke-direct {v9, v5, v3, p0}, Ly20;-><init>(IILjava/lang/Object;)V
 
     :goto_2
     if-eqz v7, :cond_9
@@ -2151,13 +2151,13 @@
 
     const-string v0, " framerate_fps: "
 
-    invoke-static {v5, v1, p2, v2, v0}, Lv04;->p(Ljava/lang/StringBuilder;ILjava/lang/String;ILjava/lang/String;)V
+    invoke-static {v5, v1, p2, v2, v0}, Lsq3;->o(Ljava/lang/StringBuilder;ILjava/lang/String;ILjava/lang/String;)V
 
     const-string p2, " bitrate_kbps: "
 
     const-string v0, " surface mode: "
 
-    invoke-static {v5, v3, p2, p1, v0}, Lv04;->p(Ljava/lang/StringBuilder;ILjava/lang/String;ILjava/lang/String;)V
+    invoke-static {v5, v3, p2, p1, v0}, Lsq3;->o(Ljava/lang/StringBuilder;ILjava/lang/String;ILjava/lang/String;)V
 
     invoke-virtual {v5, v4}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
@@ -2259,7 +2259,7 @@
 
     const-string v0, "Unsupported colorFormat: "
 
-    invoke-static {p1, v0}, Lm26;->h(ILjava/lang/String;)Ljava/lang/String;
+    invoke-static {p1, v0}, Lyv7;->e(ILjava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 

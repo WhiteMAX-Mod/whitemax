@@ -1,36 +1,26 @@
 .class public final Lrv9;
-.super Lqde;
+.super Lure;
 .source "SourceFile"
 
 # interfaces
-.implements Ll66;
+.implements Lpc6;
 
 
 # instance fields
-.field public X:Ljava/util/List;
+.field public synthetic X:Ljava/lang/Object;
 
-.field public Y:I
-
-.field public final synthetic Z:Lvv9;
-
-.field public final synthetic o0:J
-
-.field public final synthetic p0:J
+.field public final synthetic Y:Lone/me/login/neuroavatars/NeuroAvatarsScreen;
 
 
 # direct methods
-.method public constructor <init>(Lvv9;JJLkotlin/coroutines/Continuation;)V
+.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/login/neuroavatars/NeuroAvatarsScreen;)V
     .locals 0
 
-    iput-object p1, p0, Lrv9;->Z:Lvv9;
+    iput-object p2, p0, Lrv9;->Y:Lone/me/login/neuroavatars/NeuroAvatarsScreen;
 
-    iput-wide p2, p0, Lrv9;->o0:J
+    const/4 p2, 0x2
 
-    iput-wide p4, p0, Lrv9;->p0:J
-
-    const/4 p1, 0x2
-
-    invoke-direct {p0, p1, p6}, Lqde;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0, p2, p1}, Lure;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
@@ -40,8 +30,6 @@
 .method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    check-cast p1, Lox3;
-
     check-cast p2, Lkotlin/coroutines/Continuation;
 
     invoke-virtual {p0, p1, p2}, Lrv9;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
@@ -50,257 +38,125 @@
 
     check-cast p0, Lrv9;
 
-    sget-object p1, Le5f;->a:Le5f;
+    sget-object p1, Lylf;->a:Lylf;
 
     invoke-virtual {p0, p1}, Lrv9;->o(Ljava/lang/Object;)Ljava/lang/Object;
 
-    move-result-object p0
-
-    return-object p0
+    return-object p1
 .end method
 
 .method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 7
+    .locals 1
 
     new-instance v0, Lrv9;
 
-    iget-wide v2, p0, Lrv9;->o0:J
+    iget-object p0, p0, Lrv9;->Y:Lone/me/login/neuroavatars/NeuroAvatarsScreen;
 
-    iget-wide v4, p0, Lrv9;->p0:J
+    invoke-direct {v0, p2, p0}, Lrv9;-><init>(Lkotlin/coroutines/Continuation;Lone/me/login/neuroavatars/NeuroAvatarsScreen;)V
 
-    iget-object v1, p0, Lrv9;->Z:Lvv9;
-
-    move-object v6, p2
-
-    invoke-direct/range {v0 .. v6}, Lrv9;-><init>(Lvv9;JJLkotlin/coroutines/Continuation;)V
+    iput-object p1, v0, Lrv9;->X:Ljava/lang/Object;
 
     return-object v0
 .end method
 
 .method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 13
+    .locals 4
 
-    iget v0, p0, Lrv9;->Y:I
+    invoke-static {p1}, Lqe5;->V(Ljava/lang/Object;)V
 
-    iget-object v1, p0, Lrv9;->Z:Lvv9;
+    iget-object p1, p0, Lrv9;->X:Ljava/lang/Object;
 
-    const/4 v2, 0x2
+    check-cast p1, Lyu9;
 
-    const/4 v3, 0x1
+    iget-object v0, p1, Lyu9;->b:Ljava/lang/Integer;
 
-    const-string v4, "vv9"
+    iget-object p0, p0, Lrv9;->Y:Lone/me/login/neuroavatars/NeuroAvatarsScreen;
 
-    sget-object v5, Lpx3;->a:Lpx3;
+    if-eqz v0, :cond_0
 
-    if-eqz v0, :cond_2
+    invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
 
-    if-eq v0, v3, :cond_1
+    move-result v1
 
-    if-ne v0, v2, :cond_0
+    if-ltz v1, :cond_0
 
-    iget-object p0, p0, Lrv9;->X:Ljava/util/List;
+    sget-object v1, Lone/me/login/neuroavatars/NeuroAvatarsScreen;->K0:[Lxi7;
 
-    :try_start_0
-    invoke-static {p1}, Lsgg;->Z(Ljava/lang/Object;)V
-    :try_end_0
-    .catch Ljava/util/concurrent/CancellationException; {:try_start_0 .. :try_end_0} :catch_1
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    invoke-virtual {p0}, Lone/me/login/neuroavatars/NeuroAvatarsScreen;->z0()Landroidx/recyclerview/widget/RecyclerView;
 
-    goto/16 :goto_5
+    move-result-object v1
 
-    :catchall_0
-    move-exception v0
+    invoke-virtual {v1}, Landroidx/recyclerview/widget/RecyclerView;->D0()V
 
-    move-object p1, v0
+    iget-object v1, p0, Lone/me/login/neuroavatars/NeuroAvatarsScreen;->H0:Lsv9;
 
-    goto/16 :goto_4
+    const/4 v2, 0x1
 
-    :cond_0
-    new-instance p0, Ljava/lang/IllegalStateException;
+    iput-boolean v2, v1, Lsv9;->c:Z
 
-    const-string p1, "call to \'resume\' before \'invoke\' with coroutine"
+    new-instance v1, Ltu9;
 
-    invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    invoke-virtual {p0}, Lone/me/sdk/arch/Widget;->getContext()Landroid/content/Context;
 
-    throw p0
+    move-result-object v3
 
-    :cond_1
-    :try_start_1
-    invoke-static {p1}, Lsgg;->Z(Ljava/lang/Object;)V
-    :try_end_1
-    .catch Ljava/util/concurrent/CancellationException; {:try_start_1 .. :try_end_1} :catch_0
-    .catchall {:try_start_1 .. :try_end_1} :catchall_1
+    invoke-direct {v1, v3, v2}, Ltu9;-><init>(Landroid/content/Context;I)V
 
-    goto :goto_1
+    invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
 
-    :catchall_1
-    move-exception v0
+    move-result v0
 
-    move-object p1, v0
+    iput v0, v1, Lto7;->a:I
 
-    goto :goto_0
-
-    :cond_2
-    invoke-static {p1}, Lsgg;->Z(Ljava/lang/Object;)V
-
-    iget-wide v8, p0, Lrv9;->o0:J
-
-    iget-wide v10, p0, Lrv9;->p0:J
-
-    :try_start_2
-    iget-object p1, v1, Lvv9;->b:Lje7;
-
-    invoke-interface {p1}, Lje7;->getValue()Ljava/lang/Object;
-
-    move-result-object p1
-
-    move-object v7, p1
-
-    check-cast v7, Ldd5;
-
-    iput v3, p0, Lrv9;->Y:I
-
-    iget-object p1, v7, Ldd5;->a:Lkjc;
-
-    new-instance v6, Lbd5;
-
-    invoke-direct/range {v6 .. v11}, Lbd5;-><init>(Ldd5;JJ)V
-
-    invoke-static {p1, v6, p0}, Lkhg;->F(Lkjc;Lx56;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p1
-    :try_end_2
-    .catch Ljava/util/concurrent/CancellationException; {:try_start_2 .. :try_end_2} :catch_0
-    .catchall {:try_start_2 .. :try_end_2} :catchall_1
-
-    if-ne p1, v5, :cond_3
-
-    goto :goto_2
-
-    :catch_0
-    move-exception v0
-
-    move-object p0, v0
-
-    goto :goto_7
-
-    :goto_0
-    const-string v0, "onSelfReadMarkChanged: failed to remove sent analytics entries"
-
-    invoke-static {v4, v0, p1}, Lg47;->n(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    sget-object p1, Lgz4;->a:Lgz4;
-
-    :cond_3
-    :goto_1
-    check-cast p1, Ljava/util/List;
-
-    :try_start_3
-    iget-object v0, v1, Lvv9;->d:Lje7;
-
-    invoke-interface {v0}, Lje7;->getValue()Ljava/lang/Object;
+    invoke-virtual {p0}, Lone/me/login/neuroavatars/NeuroAvatarsScreen;->z0()Landroidx/recyclerview/widget/RecyclerView;
 
     move-result-object v0
 
-    check-cast v0, Lcw9;
+    invoke-virtual {v0}, Landroidx/recyclerview/widget/RecyclerView;->getLayoutManager()Landroidx/recyclerview/widget/a;
 
-    iput-object p1, p0, Lrv9;->X:Ljava/util/List;
+    move-result-object v0
 
-    iput v2, p0, Lrv9;->Y:I
+    if-eqz v0, :cond_0
 
-    iget-object v1, v0, Lcw9;->a:Lkjc;
+    invoke-virtual {v0, v1}, Landroidx/recyclerview/widget/a;->I0(Lto7;)V
 
-    new-instance v2, Lba;
+    :cond_0
+    iget p1, p1, Lyu9;->a:I
 
-    const/16 v3, 0x17
+    if-ltz p1, :cond_1
 
-    invoke-direct {v2, v0, v3, p1}, Lba;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+    sget-object v0, Lone/me/login/neuroavatars/NeuroAvatarsScreen;->K0:[Lxi7;
 
-    invoke-static {v1, v2, p0}, Lkhg;->F(Lkjc;Lx56;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    invoke-virtual {p0}, Lone/me/login/neuroavatars/NeuroAvatarsScreen;->B0()Ltqa;
 
-    move-result-object p0
-    :try_end_3
-    .catch Ljava/util/concurrent/CancellationException; {:try_start_3 .. :try_end_3} :catch_1
-    .catchall {:try_start_3 .. :try_end_3} :catchall_2
+    move-result-object v0
 
-    if-ne p0, v5, :cond_4
+    invoke-virtual {v0}, Lcom/google/android/material/tabs/TabLayout;->getSelectedTabPosition()I
 
-    :goto_2
-    return-object v5
+    move-result v0
 
-    :cond_4
-    move-object v12, p1
+    if-eq v0, p1, :cond_1
 
-    move-object p1, p0
+    invoke-virtual {p0}, Lone/me/login/neuroavatars/NeuroAvatarsScreen;->B0()Ltqa;
 
-    move-object p0, v12
+    move-result-object v0
 
-    goto :goto_5
+    invoke-virtual {v0}, Landroid/view/View;->stopNestedScroll()V
 
-    :goto_3
-    move-object v12, p1
-
-    move-object p1, p0
-
-    move-object p0, v12
-
-    goto :goto_4
-
-    :catchall_2
-    move-exception v0
-
-    move-object p0, v0
-
-    goto :goto_3
-
-    :catch_1
-    move-exception v0
-
-    move-object p0, v0
-
-    goto :goto_6
-
-    :goto_4
-    const-string v0, "onSelfReadMarkChanged: failed to remove tracker messages"
-
-    invoke-static {v4, v0, p1}, Lg47;->n(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    new-instance p1, Ljava/lang/Integer;
-
-    const/4 v0, 0x0
-
-    invoke-direct {p1, v0}, Ljava/lang/Integer;-><init>(I)V
-
-    :goto_5
-    check-cast p1, Ljava/lang/Number;
-
-    invoke-virtual {p1}, Ljava/lang/Number;->intValue()I
-
-    move-result p1
-
-    invoke-interface {p0}, Ljava/util/List;->size()I
-
-    move-result p0
-
-    const-string v0, " analyticsEntries, "
-
-    const-string v1, " trackerMessages entries"
-
-    const-string v2, "onSelfReadMarkChanged: removed "
-
-    invoke-static {v2, p0, v0, p1, v1}, Lpg0;->f(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/String;
+    invoke-virtual {p0}, Lone/me/login/neuroavatars/NeuroAvatarsScreen;->B0()Ltqa;
 
     move-result-object p0
 
-    invoke-static {v4, p0}, Lg47;->p(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {p0, p1}, Lcom/google/android/material/tabs/TabLayout;->h(I)Luve;
 
-    sget-object p0, Le5f;->a:Le5f;
+    move-result-object p0
+
+    if-eqz p0, :cond_1
+
+    invoke-virtual {p0}, Luve;->a()V
+
+    :cond_1
+    sget-object p0, Lylf;->a:Lylf;
 
     return-object p0
-
-    :goto_6
-    throw p0
-
-    :goto_7
-    throw p0
 .end method

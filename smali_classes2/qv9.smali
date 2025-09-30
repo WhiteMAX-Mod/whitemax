@@ -1,34 +1,26 @@
 .class public final Lqv9;
-.super Lqde;
+.super Lure;
 .source "SourceFile"
 
 # interfaces
-.implements Ll66;
+.implements Lpc6;
 
 
 # instance fields
-.field public X:Lvv9;
+.field public synthetic X:Ljava/lang/Object;
 
-.field public Y:Ljava/util/ArrayList;
-
-.field public Z:I
-
-.field public final synthetic o0:Lvv9;
-
-.field public final synthetic p0:Ljava/util/ArrayList;
+.field public final synthetic Y:Lone/me/login/neuroavatars/NeuroAvatarsScreen;
 
 
 # direct methods
-.method public constructor <init>(Lvv9;Ljava/util/ArrayList;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/login/neuroavatars/NeuroAvatarsScreen;)V
     .locals 0
 
-    iput-object p1, p0, Lqv9;->o0:Lvv9;
+    iput-object p2, p0, Lqv9;->Y:Lone/me/login/neuroavatars/NeuroAvatarsScreen;
 
-    iput-object p2, p0, Lqv9;->p0:Ljava/util/ArrayList;
+    const/4 p2, 0x2
 
-    const/4 p1, 0x2
-
-    invoke-direct {p0, p1, p3}, Lqde;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0, p2, p1}, Lure;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
@@ -38,8 +30,6 @@
 .method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    check-cast p1, Lox3;
-
     check-cast p2, Lkotlin/coroutines/Continuation;
 
     invoke-virtual {p0, p1, p2}, Lqv9;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
@@ -48,249 +38,101 @@
 
     check-cast p0, Lqv9;
 
-    sget-object p1, Le5f;->a:Le5f;
+    sget-object p1, Lylf;->a:Lylf;
 
     invoke-virtual {p0, p1}, Lqv9;->o(Ljava/lang/Object;)Ljava/lang/Object;
 
-    move-result-object p0
-
-    return-object p0
+    return-object p1
 .end method
 
 .method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
     .locals 1
 
-    new-instance p1, Lqv9;
+    new-instance v0, Lqv9;
 
-    iget-object v0, p0, Lqv9;->o0:Lvv9;
+    iget-object p0, p0, Lqv9;->Y:Lone/me/login/neuroavatars/NeuroAvatarsScreen;
 
-    iget-object p0, p0, Lqv9;->p0:Ljava/util/ArrayList;
+    invoke-direct {v0, p2, p0}, Lqv9;-><init>(Lkotlin/coroutines/Continuation;Lone/me/login/neuroavatars/NeuroAvatarsScreen;)V
 
-    invoke-direct {p1, v0, p0, p2}, Lqv9;-><init>(Lvv9;Ljava/util/ArrayList;Lkotlin/coroutines/Continuation;)V
+    iput-object p1, v0, Lqv9;->X:Ljava/lang/Object;
 
-    return-object p1
+    return-object v0
 .end method
 
 .method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 20
+    .locals 1
 
-    move-object/from16 v0, p0
+    invoke-static {p1}, Lqe5;->V(Ljava/lang/Object;)V
 
-    iget v1, v0, Lqv9;->Z:I
+    iget-object p1, p0, Lqv9;->X:Ljava/lang/Object;
 
-    iget-object v2, v0, Lqv9;->p0:Ljava/util/ArrayList;
+    check-cast p1, Lys9;
 
-    iget-object v3, v0, Lqv9;->o0:Lvv9;
+    instance-of v0, p1, Ldv9;
 
-    const/4 v4, 0x3
+    if-eqz v0, :cond_0
 
-    const/4 v5, 0x2
+    sget-object p0, Lh08;->a:Lh08;
 
-    const/4 v6, 0x1
+    invoke-virtual {p0}, Lscout/Component;->getAccessor()Lz4;
 
-    sget-object v8, Lpx3;->a:Lpx3;
+    move-result-object p0
 
-    if-eqz v1, :cond_3
+    const-class p1, Lt1b;
 
-    if-eq v1, v6, :cond_2
+    invoke-virtual {p0, p1}, Lz4;->c(Ljava/lang/Class;)Ljava/lang/Object;
 
-    if-eq v1, v5, :cond_1
+    move-result-object p0
 
-    if-ne v1, v4, :cond_0
+    check-cast p0, Lt1b;
 
-    invoke-static/range {p1 .. p1}, Lsgg;->Z(Ljava/lang/Object;)V
+    invoke-virtual {p0}, Lt1b;->e()V
 
-    goto/16 :goto_9
+    sget-object p0, La18;->c:La18;
 
-    :cond_0
-    new-instance v0, Ljava/lang/IllegalStateException;
+    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    const-string v1, "call to \'resume\' before \'invoke\' with coroutine"
+    invoke-virtual {p0}, Lx2;->F0()Lza4;
 
-    invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    move-result-object p0
 
-    throw v0
+    const/4 p1, 0x0
 
-    :cond_1
-    iget-object v2, v0, Lqv9;->Y:Ljava/util/ArrayList;
+    const-string v0, ":chat-list"
 
-    iget-object v3, v0, Lqv9;->X:Lvv9;
-
-    invoke-static/range {p1 .. p1}, Lsgg;->Z(Ljava/lang/Object;)V
-
-    move-object/from16 v1, p1
-
-    goto/16 :goto_7
-
-    :cond_2
-    invoke-static/range {p1 .. p1}, Lsgg;->Z(Ljava/lang/Object;)V
-
-    goto :goto_6
-
-    :cond_3
-    invoke-static/range {p1 .. p1}, Lsgg;->Z(Ljava/lang/Object;)V
-
-    new-instance v1, Ljava/util/ArrayList;
-
-    const/16 v9, 0xa
-
-    invoke-static {v2, v9}, Lr43;->k0(Ljava/lang/Iterable;I)I
-
-    move-result v9
-
-    invoke-direct {v1, v9}, Ljava/util/ArrayList;-><init>(I)V
-
-    invoke-virtual {v2}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
-
-    move-result-object v9
-
-    :goto_0
-    invoke-interface {v9}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v10
-
-    if-eqz v10, :cond_8
-
-    invoke-interface {v9}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v10
-
-    check-cast v10, Lzv9;
-
-    new-instance v11, Law9;
-
-    iget-wide v12, v10, Lzv9;->a:J
-
-    iget-wide v14, v10, Lzv9;->b:J
-
-    iget-wide v4, v10, Lzv9;->c:J
-
-    instance-of v7, v10, Lyv9;
-
-    if-eqz v7, :cond_4
-
-    move-object v7, v10
-
-    check-cast v7, Lyv9;
-
-    goto :goto_1
-
-    :cond_4
-    const/4 v7, 0x0
-
-    :goto_1
-    if-eqz v7, :cond_5
-
-    iget-boolean v7, v7, Lyv9;->d:Z
-
-    invoke-static {v7}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
-
-    move-result-object v7
-
-    move-object/from16 v18, v7
-
-    goto :goto_2
-
-    :cond_5
-    const/16 v18, 0x0
-
-    :goto_2
-    instance-of v7, v10, Lxv9;
-
-    if-eqz v7, :cond_6
-
-    check-cast v10, Lxv9;
-
-    goto :goto_3
-
-    :cond_6
-    const/4 v10, 0x0
-
-    :goto_3
-    if-eqz v10, :cond_7
-
-    iget-object v7, v10, Lxv9;->d:Lds4;
-
-    move-object/from16 v19, v7
-
-    :goto_4
-    move-wide/from16 v16, v4
-
-    goto :goto_5
-
-    :cond_7
-    const/16 v19, 0x0
-
-    goto :goto_4
-
-    :goto_5
-    invoke-direct/range {v11 .. v19}, Law9;-><init>(JJJLjava/lang/Boolean;Lds4;)V
-
-    invoke-virtual {v1, v11}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    const/4 v4, 0x3
-
-    const/4 v5, 0x2
+    invoke-virtual {p0, v0, p1}, Lza4;->b(Ljava/lang/String;Landroid/os/Bundle;)Z
 
     goto :goto_0
 
-    :cond_8
-    iput v6, v0, Lqv9;->Z:I
+    :cond_0
+    instance-of v0, p1, Lva4;
 
-    invoke-static {v3, v1, v0}, Lvv9;->d(Lvv9;Ljava/util/ArrayList;Lbu3;)Ljava/lang/Object;
+    if-eqz v0, :cond_1
 
-    move-result-object v1
+    sget-object p0, La18;->c:La18;
 
-    if-ne v1, v8, :cond_9
+    check-cast p1, Lva4;
 
-    goto :goto_8
+    invoke-virtual {p0, p1}, Lx2;->H0(Lva4;)V
 
-    :cond_9
-    :goto_6
-    iput-object v3, v0, Lqv9;->X:Lvv9;
+    goto :goto_0
 
-    iput-object v2, v0, Lqv9;->Y:Ljava/util/ArrayList;
+    :cond_1
+    instance-of p1, p1, Lw53;
 
-    const/4 v1, 0x2
+    if-eqz p1, :cond_2
 
-    iput v1, v0, Lqv9;->Z:I
+    iget-object p0, p0, Lqv9;->Y:Lone/me/login/neuroavatars/NeuroAvatarsScreen;
 
-    invoke-static {v3, v2, v0}, Lvv9;->a(Lvv9;Ljava/util/List;Lbu3;)Ljava/lang/Object;
+    invoke-virtual {p0}, Lxx3;->getRouter()Lrzc;
 
-    move-result-object v1
+    move-result-object p0
 
-    if-ne v1, v8, :cond_a
+    invoke-virtual {p0}, Lrzc;->C()Z
 
-    goto :goto_8
+    :cond_2
+    :goto_0
+    sget-object p0, Lylf;->a:Lylf;
 
-    :cond_a
-    :goto_7
-    check-cast v1, Ljava/util/List;
-
-    const/4 v4, 0x0
-
-    iput-object v4, v0, Lqv9;->X:Lvv9;
-
-    iput-object v4, v0, Lqv9;->Y:Ljava/util/ArrayList;
-
-    const/4 v4, 0x3
-
-    iput v4, v0, Lqv9;->Z:I
-
-    const/4 v4, 0x0
-
-    invoke-static {v3, v2, v1, v4, v0}, Lvv9;->c(Lvv9;Ljava/util/List;Ljava/util/List;ZLqde;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    if-ne v0, v8, :cond_b
-
-    :goto_8
-    return-object v8
-
-    :cond_b
-    :goto_9
-    sget-object v0, Le5f;->a:Le5f;
-
-    return-object v0
+    return-object p0
 .end method

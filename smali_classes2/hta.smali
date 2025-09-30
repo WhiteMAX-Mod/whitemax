@@ -1,152 +1,58 @@
-.class public final Lhta;
+.class public final synthetic Lhta;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ljava/util/function/Supplier;
+
 
 # instance fields
-.field public final a:Lkjc;
-
-.field public final b:Llh;
-
-.field public final c:Lsa4;
-
-.field public final d:Lm09;
-
-.field public final e:Lm09;
-
-.field public final f:Lm09;
+.field public final synthetic a:Lnta;
 
 
 # direct methods
-.method public constructor <init>(Lru/ok/tamtam/android/db/room/OneMeRoomDatabase;)V
-    .locals 2
+.method public synthetic constructor <init>(Lnta;)V
+    .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lhta;->a:Lkjc;
-
-    new-instance v0, Llh;
-
-    const/16 v1, 0xf
-
-    invoke-direct {v0, p1, v1}, Llh;-><init>(Lkjc;I)V
-
-    iput-object v0, p0, Lhta;->b:Llh;
-
-    new-instance v0, Lsa4;
-
-    const/4 v1, 0x3
-
-    invoke-direct {v0, p1, v1}, Lsa4;-><init>(Lkjc;I)V
-
-    iput-object v0, p0, Lhta;->c:Lsa4;
-
-    new-instance v0, Lm09;
-
-    const/16 v1, 0x13
-
-    invoke-direct {v0, p1, v1}, Lm09;-><init>(Lkjc;I)V
-
-    iput-object v0, p0, Lhta;->d:Lm09;
-
-    new-instance v0, Lm09;
-
-    const/16 v1, 0x14
-
-    invoke-direct {v0, p1, v1}, Lm09;-><init>(Lkjc;I)V
-
-    iput-object v0, p0, Lhta;->e:Lm09;
-
-    new-instance v0, Lm09;
-
-    const/16 v1, 0x15
-
-    invoke-direct {v0, p1, v1}, Lm09;-><init>(Lkjc;I)V
-
-    iput-object v0, p0, Lhta;->f:Lm09;
+    iput-object p1, p0, Lhta;->a:Lnta;
 
     return-void
 .end method
 
-.method public static a(Lhta;Ljava/util/ArrayList;)V
-    .locals 6
 
-    invoke-virtual {p1}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
+# virtual methods
+.method public final get()Ljava/lang/Object;
+    .locals 10
 
-    move-result-object p1
+    iget-object p0, p0, Lhta;->a:Lnta;
 
-    :goto_0
-    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
+    iget-object p0, p0, Lnta;->b:Lrdb;
 
-    move-result v0
+    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    if-eqz v0, :cond_0
+    new-instance v0, Luu7;
 
-    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    iget v1, p0, Lrdb;->e:I
 
-    move-result-object v0
+    int-to-long v1, v1
 
-    check-cast v0, Ljava/lang/Number;
+    iget v3, p0, Lrdb;->f:I
 
-    invoke-virtual {v0}, Ljava/lang/Number;->longValue()J
+    int-to-long v3, v3
 
-    move-result-wide v0
+    iget v5, p0, Lrdb;->g:I
 
-    iget-object v2, p0, Lhta;->a:Lkjc;
+    int-to-long v5, v5
 
-    invoke-virtual {v2}, Lkjc;->b()V
+    iget v7, p0, Lrdb;->d:I
 
-    iget-object v3, p0, Lhta;->f:Lm09;
+    int-to-long v7, v7
 
-    invoke-virtual {v3}, Lv2;->f()Lmce;
+    iget-boolean v9, p0, Lrdb;->c:Z
 
-    move-result-object v4
+    invoke-direct/range {v0 .. v9}, Luu7;-><init>(JJJJZ)V
 
-    const/4 v5, 0x1
-
-    invoke-interface {v4, v5, v0, v1}, Lkce;->k(IJ)V
-
-    :try_start_0
-    invoke-virtual {v2}, Lkjc;->c()V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    :try_start_1
-    invoke-interface {v4}, Lmce;->C()I
-
-    invoke-virtual {v2}, Lkjc;->q()V
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_1
-
-    :try_start_2
-    invoke-virtual {v2}, Lkjc;->k()V
-    :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_0
-
-    invoke-virtual {v3, v4}, Lv2;->u(Lmce;)V
-
-    goto :goto_0
-
-    :catchall_0
-    move-exception p0
-
-    goto :goto_1
-
-    :catchall_1
-    move-exception p0
-
-    :try_start_3
-    invoke-virtual {v2}, Lkjc;->k()V
-
-    throw p0
-    :try_end_3
-    .catchall {:try_start_3 .. :try_end_3} :catchall_0
-
-    :goto_1
-    invoke-virtual {v3, v4}, Lv2;->u(Lmce;)V
-
-    throw p0
-
-    :cond_0
-    return-void
+    return-object v0
 .end method

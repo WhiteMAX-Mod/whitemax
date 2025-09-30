@@ -1,63 +1,48 @@
 .class public final Lhfd;
-.super Lca1;
-.source "SourceFile"
+.super Ljx3;
 
 
-# static fields
-.field public static final b:Lhfd;
+# instance fields
+.field public X:I
+
+.field public final synthetic Y:Lifd;
+
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public constructor <init>(Lifd;Lkotlin/coroutines/Continuation;)V
+    .locals 0
 
-    new-instance v0, Lhfd;
+    iput-object p1, p0, Lhfd;->Y:Lifd;
 
-    const/16 v1, 0xe
-
-    invoke-direct {v0, v1}, Lca1;-><init>(I)V
-
-    sput-object v0, Lhfd;->b:Lhfd;
+    invoke-direct {p0, p2}, Ljx3;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
+.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
 
-    const/4 v0, 0x1
+    iput-object p1, p0, Lhfd;->o:Ljava/lang/Object;
 
-    if-ne p0, p1, :cond_0
+    iget p1, p0, Lhfd;->X:I
 
-    return v0
+    const/high16 v0, -0x80000000
 
-    :cond_0
-    instance-of p0, p1, Lhfd;
+    or-int/2addr p1, v0
 
-    if-nez p0, :cond_1
+    iput p1, p0, Lhfd;->X:I
 
-    const/4 p0, 0x0
+    iget-object p1, p0, Lhfd;->Y:Lifd;
 
-    return p0
+    const/4 v0, 0x0
 
-    :cond_1
-    return v0
-.end method
+    invoke-virtual {p1, v0, p0}, Lifd;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
-.method public final hashCode()I
-    .locals 0
-
-    const p0, -0xc7cb8f7
-
-    return p0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 0
-
-    const-string p0, "SelectPhotoFromGallery"
+    move-result-object p0
 
     return-object p0
 .end method

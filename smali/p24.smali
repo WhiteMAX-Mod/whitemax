@@ -1,35 +1,21 @@
-.class public interface abstract Lp24;
-.super Ljava/lang/Object;
+.class public final Lp24;
+.super Lr24;
 .source "SourceFile"
 
 
-# virtual methods
-.method public abstract B()J
-.end method
+# static fields
+.field public static final b:Lp24;
 
-.method public abstract C(J)J
-.end method
 
-.method public abstract D(JJ)J
-.end method
+# direct methods
+.method static constructor <clinit>()V
+    .locals 1
 
-.method public abstract a(J)J
-.end method
+    new-instance v0, Lp24;
 
-.method public abstract e(JJ)J
-.end method
+    invoke-direct {v0}, Lr24;-><init>()V
 
-.method public abstract h(JJ)J
-.end method
+    sput-object v0, Lp24;->b:Lp24;
 
-.method public abstract j(JJ)J
-.end method
-
-.method public abstract k(J)Li2c;
-.end method
-
-.method public abstract t(JJ)J
-.end method
-
-.method public abstract z()Z
+    return-void
 .end method

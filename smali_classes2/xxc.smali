@@ -2,174 +2,81 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-
-# static fields
-.field public static final c:Lxxc;
+# interfaces
+.implements Lcee;
 
 
 # instance fields
-.field public final a:I
+.field public final a:Lfxc;
 
-.field public final b:Ljava/util/List;
+.field public final b:Lzte;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
-
-    new-instance v0, Lxxc;
-
-    const/4 v1, 0x1
-
-    sget-object v2, Lgz4;->a:Lgz4;
-
-    invoke-direct {v0, v1, v2}, Lxxc;-><init>(ILjava/util/List;)V
-
-    sput-object v0, Lxxc;->c:Lxxc;
-
-    return-void
-.end method
-
-.method public constructor <init>(ILjava/util/List;)V
-    .locals 0
+.method public constructor <init>(Ljma;)V
+    .locals 1
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput p1, p0, Lxxc;->a:I
+    iput-object p1, p0, Lxxc;->a:Lfxc;
 
-    iput-object p2, p0, Lxxc;->b:Ljava/util/List;
+    new-instance p1, Lkra;
+
+    const/16 v0, 0x1d
+
+    invoke-direct {p1, v0, p0}, Lkra;-><init>(ILjava/lang/Object;)V
+
+    new-instance v0, Lzte;
+
+    invoke-direct {v0, p1}, Lzte;-><init>(Lzb6;)V
+
+    iput-object v0, p0, Lxxc;->b:Lzte;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 2
+.method public final a(Liz7;)Ljava/lang/Object;
+    .locals 5
 
-    if-ne p0, p1, :cond_0
+    iget-object p0, p0, Lxxc;->b:Lzte;
 
-    goto :goto_1
+    invoke-virtual {p0}, Lzte;->getValue()Ljava/lang/Object;
 
-    :cond_0
-    instance-of v0, p1, Lxxc;
+    move-result-object p0
 
-    if-nez v0, :cond_1
+    check-cast p0, Lzde;
 
-    goto :goto_0
+    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    :cond_1
-    check-cast p1, Lxxc;
+    const/4 v0, 0x1
 
-    iget v0, p0, Lxxc;->a:I
+    const-string v1, "\n            SELECT * FROM stat_events\n            ORDER BY id ASC\n            LIMIT ?\n        "
 
-    iget v1, p1, Lxxc;->a:I
+    invoke-static {v0, v1}, Lvxc;->c(ILjava/lang/String;)Lvxc;
 
-    if-eq v0, v1, :cond_2
+    move-result-object v1
 
-    goto :goto_0
+    const/16 v2, 0x32
 
-    :cond_2
-    iget-object p0, p0, Lxxc;->b:Ljava/util/List;
+    int-to-long v2, v2
 
-    iget-object p1, p1, Lxxc;->b:Ljava/util/List;
+    invoke-virtual {v1, v0, v2, v3}, Lvxc;->k(IJ)V
 
-    invoke-static {p0, p1}, Lxq7;->d(Ljava/lang/Object;Ljava/lang/Object;)Z
+    new-instance v0, Landroid/os/CancellationSignal;
 
-    move-result p0
+    invoke-direct {v0}, Landroid/os/CancellationSignal;-><init>()V
 
-    if-nez p0, :cond_3
+    iget-object v2, p0, Lzde;->a:Lexc;
 
-    :goto_0
-    const/4 p0, 0x0
+    new-instance v3, Lrwc;
 
-    return p0
+    const/4 v4, 0x7
 
-    :cond_3
-    :goto_1
-    const/4 p0, 0x1
+    invoke-direct {v3, p0, v4, v1}, Lrwc;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
 
-    return p0
-.end method
-
-.method public final hashCode()I
-    .locals 1
-
-    iget v0, p0, Lxxc;->a:I
-
-    invoke-static {v0}, Lzt1;->s(I)I
-
-    move-result v0
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget-object p0, p0, Lxxc;->b:Ljava/util/List;
-
-    invoke-virtual {p0}, Ljava/lang/Object;->hashCode()I
-
-    move-result p0
-
-    add-int/2addr p0, v0
-
-    return p0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 3
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "SearchState(state="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    const/4 v1, 0x1
-
-    iget v2, p0, Lxxc;->a:I
-
-    if-eq v2, v1, :cond_2
-
-    const/4 v1, 0x2
-
-    if-eq v2, v1, :cond_1
-
-    const/4 v1, 0x3
-
-    if-eq v2, v1, :cond_0
-
-    const-string v1, "null"
-
-    goto :goto_0
-
-    :cond_0
-    const-string v1, "EMPTY"
-
-    goto :goto_0
-
-    :cond_1
-    const-string v1, "CONTENT"
-
-    goto :goto_0
-
-    :cond_2
-    const-string v1, "LOADING"
-
-    :goto_0
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", content="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object p0, p0, Lxxc;->b:Ljava/util/List;
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string p0, ")"
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-static {v2, v0, v3, p1}, Lmu0;->h(Lexc;Landroid/os/CancellationSignal;Ljava/util/concurrent/Callable;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
     move-result-object p0
 

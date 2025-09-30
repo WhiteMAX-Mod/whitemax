@@ -2,53 +2,30 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lz3g;
-
 
 # instance fields
-.field public final a:Leed;
+.field public final a:Ljava/lang/String;
 
 .field public final b:I
 
+.field public final c:I
+
+.field public final d:J
+
 
 # direct methods
-.method public constructor <init>(Leed;)V
+.method public constructor <init>(JLjava/lang/String;II)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lx3g;->a:Leed;
+    iput-object p3, p0, Lx3g;->a:Ljava/lang/String;
 
-    sget p1, Ldja;->g:I
+    iput p4, p0, Lx3g;->b:I
 
-    iput p1, p0, Lx3g;->b:I
+    iput p5, p0, Lx3g;->c:I
+
+    iput-wide p1, p0, Lx3g;->d:J
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final a()I
-    .locals 0
-
-    const/4 p0, 0x4
-
-    return p0
-.end method
-
-.method public final getItemId()J
-    .locals 2
-
-    const-wide v0, 0x7ffffffffffffffdL
-
-    return-wide v0
-.end method
-
-.method public final m()I
-    .locals 0
-
-    iget p0, p0, Lx3g;->b:I
-
-    return p0
 .end method

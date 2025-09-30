@@ -1,68 +1,111 @@
 .class public final Lhb2;
-.super Llje;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
+# static fields
+.field public static final f:Lhb2;
+
+.field public static final g:Lhb2;
+
+
 # instance fields
-.field public o:Lz42;
+.field public final a:Lnb2;
+
+.field public final b:I
+
+.field public final c:J
+
+.field public final d:J
+
+.field public final e:Ljava/util/List;
 
 
 # direct methods
-.method public constructor <init>(Ldx8;)V
+.method static constructor <clinit>()V
+    .locals 9
+
+    sget-object v7, Ljava/util/Collections;->EMPTY_LIST:Ljava/util/List;
+
+    new-instance v0, Lhb2;
+
+    const/4 v1, 0x0
+
+    const/4 v2, 0x0
+
+    const-wide/16 v3, 0x0
+
+    const-wide/16 v5, 0x0
+
+    invoke-direct/range {v0 .. v7}, Lhb2;-><init>(Lnb2;IJJLjava/util/List;)V
+
+    sput-object v0, Lhb2;->f:Lhb2;
+
+    sget-object v8, Ljava/util/Collections;->EMPTY_LIST:Ljava/util/List;
+
+    new-instance v1, Lhb2;
+
+    const/4 v2, 0x0
+
+    const/4 v3, 0x0
+
+    const-wide/16 v4, 0x0
+
+    const-wide/16 v6, 0x0
+
+    invoke-direct/range {v1 .. v8}, Lhb2;-><init>(Lnb2;IJJLjava/util/List;)V
+
+    sput-object v1, Lhb2;->g:Lhb2;
+
+    return-void
+.end method
+
+.method public constructor <init>(Lnb2;IJJLjava/util/List;)V
     .locals 0
 
-    invoke-direct {p0, p1}, Llje;-><init>(Ldx8;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lhb2;->a:Lnb2;
+
+    iput p2, p0, Lhb2;->b:I
+
+    iput-wide p3, p0, Lhb2;->c:J
+
+    iput-wide p5, p0, Lhb2;->d:J
+
+    iput-object p7, p0, Lhb2;->e:Ljava/util/List;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final c(Ldx8;Ljava/lang/String;)V
-    .locals 1
+.method public final a()Lgb2;
+    .locals 3
 
-    const-string v0, "chat"
+    new-instance v0, Lgb2;
 
-    invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    move-result p2
+    iget-object v1, p0, Lhb2;->a:Lnb2;
 
-    if-eqz p2, :cond_0
+    iput-object v1, v0, Lgb2;->o:Ljava/lang/Object;
 
-    invoke-static {p1}, Lz42;->d(Ldx8;)Lz42;
+    iget v1, p0, Lhb2;->b:I
 
-    move-result-object p1
+    iput v1, v0, Lgb2;->a:I
 
-    iput-object p1, p0, Lhb2;->o:Lz42;
+    iget-wide v1, p0, Lhb2;->c:J
 
-    return-void
+    iput-wide v1, v0, Lgb2;->b:J
 
-    :cond_0
-    invoke-virtual {p1}, Ldx8;->B()V
+    iget-wide v1, p0, Lhb2;->d:J
 
-    return-void
-.end method
+    iput-wide v1, v0, Lgb2;->c:J
 
-.method public final toString()Ljava/lang/String;
-    .locals 2
+    iget-object p0, p0, Lhb2;->e:Ljava/util/List;
 
-    iget-object p0, p0, Lhb2;->o:Lz42;
+    iput-object p0, v0, Lgb2;->X:Ljava/lang/Object;
 
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "{chat="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string p0, "}"
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
+    return-object v0
 .end method

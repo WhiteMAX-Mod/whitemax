@@ -23,7 +23,7 @@
         "Lru/ok/android/externcalls/sdk/id/ParticipantId;",
         "Lru/ok/android/externcalls/sdk/id/ExternalId;",
         "participantExternalId",
-        "Le5f;",
+        "Lylf;",
         "updateMyExternalId",
         "(Lru/ok/android/externcalls/sdk/id/ParticipantId;)V",
         "calls-sdk_release"

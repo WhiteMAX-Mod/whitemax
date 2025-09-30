@@ -1,5 +1,5 @@
 .class public final Lb3a;
-.super Ld3a;
+.super Lso;
 .source "SourceFile"
 
 
@@ -13,7 +13,7 @@
 
     new-instance v0, Lb3a;
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {v0}, Lso;-><init>()V
 
     sput-object v0, Lb3a;->a:Lb3a;
 
@@ -22,40 +22,20 @@
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
+.method public final getExecutors()Lkha;
     .locals 1
 
-    const/4 v0, 0x1
+    invoke-virtual {p0}, Lscout/Component;->getAccessor()Lz4;
 
-    if-ne p0, p1, :cond_0
+    move-result-object p0
 
-    return v0
+    const-class v0, Lkha;
 
-    :cond_0
-    instance-of p0, p1, Lb3a;
+    invoke-virtual {p0, v0}, Lz4;->c(Ljava/lang/Class;)Ljava/lang/Object;
 
-    if-nez p0, :cond_1
+    move-result-object p0
 
-    const/4 p0, 0x0
-
-    return p0
-
-    :cond_1
-    return v0
-.end method
-
-.method public final hashCode()I
-    .locals 0
-
-    const p0, -0x601c8f50
-
-    return p0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 0
-
-    const-string p0, "None"
+    check-cast p0, Lkha;
 
     return-object p0
 .end method

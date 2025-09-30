@@ -3,219 +3,132 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lol7;
+.implements Lxpe;
+.implements Ljava/io/Serializable;
 
 
 # instance fields
-.field public final a:Ljava/lang/String;
+.field public final transient a:Ljava/lang/Object;
 
-.field public final b:Ljava/lang/Boolean;
+.field public final b:Lxpe;
+
+.field public volatile transient c:Z
+
+.field public transient o:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;Ljava/lang/Boolean;)V
-    .locals 0
+.method public constructor <init>(Lxpe;)V
+    .locals 1
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lbqe;->a:Ljava/lang/String;
+    new-instance v0, Ljava/lang/Object;
 
-    iput-object p2, p0, Lbqe;->b:Ljava/lang/Boolean;
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    iput-object v0, p0, Lbqe;->a:Ljava/lang/Object;
+
+    iput-object p1, p0, Lbqe;->b:Lxpe;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
+.method public final get()Ljava/lang/Object;
+    .locals 3
 
-    const/4 v0, 0x1
+    iget-boolean v0, p0, Lbqe;->c:Z
 
-    if-ne p0, p1, :cond_0
+    if-nez v0, :cond_1
 
-    return v0
+    iget-object v0, p0, Lbqe;->a:Ljava/lang/Object;
 
-    :cond_0
-    instance-of v1, p1, Lbqe;
+    monitor-enter v0
 
-    const/4 v2, 0x0
+    :try_start_0
+    iget-boolean v1, p0, Lbqe;->c:Z
 
-    if-nez v1, :cond_1
+    if-nez v1, :cond_0
 
-    return v2
+    iget-object v1, p0, Lbqe;->b:Lxpe;
 
-    :cond_1
-    check-cast p1, Lbqe;
+    invoke-interface {v1}, Lxpe;->get()Ljava/lang/Object;
 
-    iget-object v1, p0, Lbqe;->a:Ljava/lang/String;
+    move-result-object v1
 
-    iget-object v3, p1, Lbqe;->a:Ljava/lang/String;
+    iput-object v1, p0, Lbqe;->o:Ljava/lang/Object;
 
-    invoke-static {v1, v3}, Lxq7;->d(Ljava/lang/Object;Ljava/lang/Object;)Z
+    const/4 v2, 0x1
 
-    move-result v1
+    iput-boolean v2, p0, Lbqe;->c:Z
 
-    if-nez v1, :cond_2
+    monitor-exit v0
 
-    return v2
+    return-object v1
 
-    :cond_2
-    iget-object p0, p0, Lbqe;->b:Ljava/lang/Boolean;
-
-    iget-object p1, p1, Lbqe;->b:Ljava/lang/Boolean;
-
-    invoke-static {p0, p1}, Lxq7;->d(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p0
-
-    if-nez p0, :cond_3
-
-    return v2
-
-    :cond_3
-    return v0
-.end method
-
-.method public final getItemId()J
-    .locals 2
-
-    iget-object p0, p0, Lbqe;->a:Ljava/lang/String;
-
-    invoke-virtual {p0}, Ljava/lang/String;->hashCode()I
-
-    move-result p0
-
-    int-to-long v0, p0
-
-    return-wide v0
-.end method
-
-.method public final h(Lol7;)Z
-    .locals 2
-
-    invoke-virtual {p0}, Lbqe;->getItemId()J
-
-    move-result-wide v0
-
-    invoke-interface {p1}, Lol7;->getItemId()J
-
-    move-result-wide p0
-
-    cmp-long p0, v0, p0
-
-    if-nez p0, :cond_0
-
-    const/4 p0, 0x1
-
-    return p0
-
-    :cond_0
-    const/4 p0, 0x0
-
-    return p0
-.end method
-
-.method public final hashCode()I
-    .locals 1
-
-    iget-object v0, p0, Lbqe;->a:Ljava/lang/String;
-
-    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
-
-    move-result v0
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget-object p0, p0, Lbqe;->b:Ljava/lang/Boolean;
-
-    if-nez p0, :cond_0
-
-    const/4 p0, 0x0
+    :catchall_0
+    move-exception p0
 
     goto :goto_0
 
     :cond_0
-    invoke-virtual {p0}, Ljava/lang/Object;->hashCode()I
-
-    move-result p0
-
-    :goto_0
-    add-int/2addr v0, p0
-
-    return v0
-.end method
-
-.method public final k(Lol7;)Ljava/lang/Object;
-    .locals 2
-
-    instance-of v0, p1, Lbqe;
-
-    const/4 v1, 0x0
-
-    if-eqz v0, :cond_0
-
-    check-cast p1, Lbqe;
-
-    goto :goto_0
-
-    :cond_0
-    move-object p1, v1
-
-    :goto_0
-    if-nez p1, :cond_1
+    monitor-exit v0
 
     goto :goto_1
 
+    :goto_0
+    monitor-exit v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    throw p0
+
     :cond_1
-    iget-object p1, p1, Lbqe;->b:Ljava/lang/Boolean;
-
-    iget-object p0, p0, Lbqe;->b:Ljava/lang/Boolean;
-
-    invoke-virtual {p0, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
-
-    move-result p0
-
-    if-nez p0, :cond_2
-
-    new-instance p0, Lzpe;
-
-    invoke-direct {p0, p1}, Lzpe;-><init>(Ljava/lang/Boolean;)V
+    :goto_1
+    iget-object p0, p0, Lbqe;->o:Ljava/lang/Object;
 
     return-object p0
-
-    :cond_2
-    :goto_1
-    return-object v1
-.end method
-
-.method public final m()I
-    .locals 0
-
-    const/4 p0, 0x0
-
-    return p0
 .end method
 
 .method public final toString()Ljava/lang/String;
-    .locals 2
+    .locals 3
 
     new-instance v0, Ljava/lang/StringBuilder;
 
-    const-string v1, "ThemeItem(theme="
+    const-string v1, "Suppliers.memoize("
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-object v1, p0, Lbqe;->a:Ljava/lang/String;
+    iget-boolean v1, p0, Lbqe;->c:Z
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    if-eqz v1, :cond_0
 
-    const-string v1, ", isSelected="
+    new-instance v1, Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    const-string v2, "<supplier that returned "
 
-    iget-object p0, p0, Lbqe;->b:Ljava/lang/Boolean;
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
+    iget-object p0, p0, Lbqe;->o:Ljava/lang/Object;
+
+    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string p0, ">"
+
+    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    goto :goto_0
+
+    :cond_0
+    iget-object p0, p0, Lbqe;->b:Lxpe;
+
+    :goto_0
     invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
     const-string p0, ")"

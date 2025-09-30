@@ -1,26 +1,24 @@
 .class public final Lmn9;
-.super Lqde;
+.super Lure;
 .source "SourceFile"
 
 # interfaces
-.implements Ll66;
+.implements Lpc6;
 
 
 # instance fields
-.field public synthetic X:Ljava/lang/Object;
-
-.field public final synthetic Y:Lone/me/login/neuroavatars/NeuroAvatarsScreen;
+.field public final synthetic X:Lon9;
 
 
 # direct methods
-.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/login/neuroavatars/NeuroAvatarsScreen;)V
+.method public constructor <init>(Lon9;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    iput-object p2, p0, Lmn9;->Y:Lone/me/login/neuroavatars/NeuroAvatarsScreen;
+    iput-object p1, p0, Lmn9;->X:Lon9;
 
-    const/4 p2, 0x2
+    const/4 p1, 0x2
 
-    invoke-direct {p0, p2, p1}, Lqde;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0, p1, p2}, Lure;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
@@ -30,7 +28,7 @@
 .method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    check-cast p1, Ljava/util/List;
+    check-cast p1, Ly04;
 
     check-cast p2, Lkotlin/coroutines/Continuation;
 
@@ -40,7 +38,7 @@
 
     check-cast p0, Lmn9;
 
-    sget-object p1, Le5f;->a:Le5f;
+    sget-object p1, Lylf;->a:Lylf;
 
     invoke-virtual {p0, p1}, Lmn9;->o(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -48,35 +46,50 @@
 .end method
 
 .method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 1
+    .locals 0
 
-    new-instance v0, Lmn9;
+    new-instance p1, Lmn9;
 
-    iget-object p0, p0, Lmn9;->Y:Lone/me/login/neuroavatars/NeuroAvatarsScreen;
+    iget-object p0, p0, Lmn9;->X:Lon9;
 
-    invoke-direct {v0, p2, p0}, Lmn9;-><init>(Lkotlin/coroutines/Continuation;Lone/me/login/neuroavatars/NeuroAvatarsScreen;)V
+    invoke-direct {p1, p0, p2}, Lmn9;-><init>(Lon9;Lkotlin/coroutines/Continuation;)V
 
-    iput-object p1, v0, Lmn9;->X:Ljava/lang/Object;
-
-    return-object v0
+    return-object p1
 .end method
 
 .method public final o(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 0
 
-    invoke-static {p1}, Lsgg;->Z(Ljava/lang/Object;)V
+    invoke-static {p1}, Lqe5;->V(Ljava/lang/Object;)V
 
-    iget-object p1, p0, Lmn9;->X:Ljava/lang/Object;
+    iget-object p0, p0, Lmn9;->X:Lon9;
 
-    check-cast p1, Ljava/util/List;
+    iget-object p0, p0, Lon9;->m:Ljf8;
 
-    iget-object p0, p0, Lmn9;->Y:Lone/me/login/neuroavatars/NeuroAvatarsScreen;
+    if-eqz p0, :cond_1
 
-    iget-object p0, p0, Lone/me/login/neuroavatars/NeuroAvatarsScreen;->E0:Lmv5;
+    invoke-virtual {p0}, Ljf8;->t()V
 
-    invoke-virtual {p0, p1}, Lhl7;->E(Ljava/util/List;)V
+    iget-object p0, p0, Ljf8;->c:Lif8;
 
-    sget-object p0, Le5f;->a:Le5f;
+    invoke-interface {p0}, Lif8;->isConnected()Z
+
+    move-result p1
+
+    if-nez p1, :cond_0
+
+    const-string p0, "The controller is not connected. Ignoring stop()."
+
+    invoke-static {p0}, Lxnd;->l0(Ljava/lang/String;)V
+
+    goto :goto_0
+
+    :cond_0
+    invoke-interface {p0}, Lif8;->stop()V
+
+    :cond_1
+    :goto_0
+    sget-object p0, Lylf;->a:Lylf;
 
     return-object p0
 .end method

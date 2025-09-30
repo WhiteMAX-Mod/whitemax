@@ -1,68 +1,12 @@
-.class public final synthetic Lt4c;
+.class public abstract Lt4c;
 .super Ljava/lang/Object;
-.source "SourceFile"
-
-# interfaces
-.implements Lx56;
 
 
-# instance fields
-.field public final synthetic a:Lw4c;
+# static fields
+.field public static ic_file_24:I = 0x7f0805b4
 
-.field public final synthetic b:I
+.field public static ic_geolocation_24:I = 0x7f0805db
 
-.field public final synthetic c:I
+.field public static ic_microphone_24:I = 0x7f080658
 
-
-# direct methods
-.method public synthetic constructor <init>(Lw4c;II)V
-    .locals 0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lt4c;->a:Lw4c;
-
-    iput p2, p0, Lt4c;->b:I
-
-    iput p3, p0, Lt4c;->c:I
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final invoke(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 3
-
-    check-cast p1, Ljava/lang/Integer;
-
-    invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
-
-    move-result p1
-
-    iget-object v0, p0, Lt4c;->a:Lw4c;
-
-    iget v1, v0, Lw4c;->q0:I
-
-    const/4 v2, 0x2
-
-    if-eq v1, v2, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    iget v1, p0, Lt4c;->c:I
-
-    sub-int/2addr v1, p1
-
-    const/4 v2, -0x1
-
-    iget p0, p0, Lt4c;->b:I
-
-    invoke-virtual {v0, p0, v1, v2, p1}, Landroid/widget/PopupWindow;->update(IIII)V
-
-    :goto_0
-    sget-object p0, Le5f;->a:Le5f;
-
-    return-object p0
-.end method
+.field public static picture_plus_outline_24:I = 0x7f0808de

@@ -1,53 +1,64 @@
-.class public final Ldre;
-.super Lbu3;
+.class public final synthetic Ldre;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field public X:Lbn5;
+.field public final synthetic a:I
 
-.field public synthetic Y:Ljava/lang/Object;
+.field public final synthetic b:Lhre;
 
-.field public final synthetic Z:Lcvc;
-
-.field public o:Lcvc;
-
-.field public o0:I
+.field public final synthetic c:Lhb0;
 
 
 # direct methods
-.method public constructor <init>(Lcvc;Lkotlin/coroutines/Continuation;)V
+.method public synthetic constructor <init>(Lhre;Lhb0;I)V
     .locals 0
 
-    iput-object p1, p0, Ldre;->Z:Lcvc;
+    iput p3, p0, Ldre;->a:I
 
-    invoke-direct {p0, p2}, Lbu3;-><init>(Lkotlin/coroutines/Continuation;)V
+    iput-object p1, p0, Ldre;->b:Lhre;
+
+    iput-object p2, p0, Ldre;->c:Lhb0;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
+.method public final run()V
     .locals 1
 
-    iput-object p1, p0, Ldre;->Y:Ljava/lang/Object;
+    iget v0, p0, Ldre;->a:I
 
-    iget p1, p0, Ldre;->o0:I
+    packed-switch v0, :pswitch_data_0
 
-    const/high16 v0, -0x80000000
+    iget-object v0, p0, Ldre;->b:Lhre;
 
-    or-int/2addr p1, v0
+    iget-object p0, p0, Ldre;->c:Lhb0;
 
-    iput p1, p0, Ldre;->o0:I
+    invoke-interface {v0, p0}, Lhre;->f(Lhb0;)V
 
-    iget-object p1, p0, Ldre;->Z:Lcvc;
+    return-void
 
-    const/4 v0, 0x0
+    :pswitch_0
+    iget-object v0, p0, Ldre;->b:Lhre;
 
-    invoke-virtual {p1, v0, p0}, Lcvc;->d(Lbn5;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    iget-object p0, p0, Ldre;->c:Lhb0;
 
-    sget-object p0, Lpx3;->a:Lpx3;
+    invoke-interface {v0, p0}, Lhre;->f(Lhb0;)V
 
-    return-object p0
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

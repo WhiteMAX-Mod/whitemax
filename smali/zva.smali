@@ -1,78 +1,95 @@
 .class public final Lzva;
-.super Lqde;
+.super Ljava/lang/Object;
 .source "SourceFile"
-
-# interfaces
-.implements Ll66;
 
 
 # instance fields
-.field public final synthetic X:Lone/me/chats/picker/chats/PickerChatsListWidget;
+.field public final a:Landroid/hardware/camera2/params/OutputConfiguration;
+
+.field public b:J
 
 
 # direct methods
-.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/chats/picker/chats/PickerChatsListWidget;)V
-    .locals 0
+.method public constructor <init>(Landroid/hardware/camera2/params/OutputConfiguration;)V
+    .locals 2
 
-    iput-object p2, p0, Lzva;->X:Lone/me/chats/picker/chats/PickerChatsListWidget;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 p2, 0x2
+    const-wide/16 v0, 0x1
 
-    invoke-direct {p0, p2, p1}, Lqde;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-wide v0, p0, Lzva;->b:J
+
+    iput-object p1, p0, Lzva;->a:Landroid/hardware/camera2/params/OutputConfiguration;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
 
-    check-cast p1, Ljava/util/Set;
+    instance-of v0, p1, Lzva;
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    const/4 v1, 0x0
 
-    invoke-virtual {p0, p1, p2}, Lzva;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    if-nez v0, :cond_0
 
-    move-result-object p0
+    return v1
 
-    check-cast p0, Lzva;
+    :cond_0
+    check-cast p1, Lzva;
 
-    sget-object p1, Le5f;->a:Le5f;
+    iget-object v0, p0, Lzva;->a:Landroid/hardware/camera2/params/OutputConfiguration;
 
-    invoke-virtual {p0, p1}, Lzva;->o(Ljava/lang/Object;)Ljava/lang/Object;
+    iget-object v2, p1, Lzva;->a:Landroid/hardware/camera2/params/OutputConfiguration;
 
-    return-object p1
+    invoke-static {v0, v2}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    iget-wide v2, p0, Lzva;->b:J
+
+    iget-wide p0, p1, Lzva;->b:J
+
+    cmp-long p0, v2, p0
+
+    if-nez p0, :cond_1
+
+    const/4 p0, 0x1
+
+    return p0
+
+    :cond_1
+    return v1
 .end method
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 0
+.method public final hashCode()I
+    .locals 4
 
-    new-instance p1, Lzva;
+    iget-object v0, p0, Lzva;->a:Landroid/hardware/camera2/params/OutputConfiguration;
 
-    iget-object p0, p0, Lzva;->X:Lone/me/chats/picker/chats/PickerChatsListWidget;
+    invoke-virtual {v0}, Landroid/hardware/camera2/params/OutputConfiguration;->hashCode()I
 
-    invoke-direct {p1, p2, p0}, Lzva;-><init>(Lkotlin/coroutines/Continuation;Lone/me/chats/picker/chats/PickerChatsListWidget;)V
+    move-result v0
 
-    return-object p1
-.end method
+    const/16 v1, 0x1f
 
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+    xor-int/2addr v0, v1
 
-    invoke-static {p1}, Lsgg;->Z(Ljava/lang/Object;)V
+    shl-int/lit8 v1, v0, 0x5
 
-    sget-object p1, Lone/me/chats/picker/chats/PickerChatsListWidget;->y0:[Lbc7;
+    sub-int/2addr v1, v0
 
-    iget-object p0, p0, Lzva;->X:Lone/me/chats/picker/chats/PickerChatsListWidget;
+    iget-wide v2, p0, Lzva;->b:J
 
-    invoke-virtual {p0}, Lone/me/chats/picker/chats/PickerChatsListWidget;->t0()Lone/me/sdk/lists/widgets/EndlessRecyclerView2;
+    invoke-static {v2, v3}, Ljava/lang/Long;->hashCode(J)I
 
-    move-result-object p0
+    move-result p0
 
-    invoke-virtual {p0}, Landroidx/recyclerview/widget/RecyclerView;->X()V
+    xor-int/2addr p0, v1
 
-    sget-object p0, Le5f;->a:Le5f;
-
-    return-object p0
+    return p0
 .end method

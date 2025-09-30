@@ -4,12 +4,14 @@
 
 
 # instance fields
-.field public final a:I
+.field public final a:Lke8;
+
+.field public final b:I
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/IllegalStateException;Ln78;)V
-    .locals 2
+.method public constructor <init>(Ljava/lang/IllegalStateException;Lke8;)V
+    .locals 3
 
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -21,31 +23,27 @@
 
     if-nez p2, :cond_0
 
-    move-object p2, v1
+    move-object v2, v1
 
     goto :goto_0
 
     :cond_0
-    iget-object p2, p2, Ln78;->a:Ljava/lang/String;
+    iget-object v2, p2, Lke8;->a:Ljava/lang/String;
 
     :goto_0
-    invoke-virtual {v0, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object p2
+    move-result-object v0
 
-    invoke-direct {p0, p2, p1}, Ljava/lang/Exception;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-direct {p0, v0, p1}, Ljava/lang/Exception;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    sget p2, Lpaf;->a:I
+    iput-object p2, p0, Landroidx/media3/exoplayer/mediacodec/MediaCodecDecoderException;->a:Lke8;
 
-    const/16 v0, 0x15
+    instance-of p2, p1, Landroid/media/MediaCodec$CodecException;
 
-    if-lt p2, v0, :cond_1
-
-    instance-of v0, p1, Landroid/media/MediaCodec$CodecException;
-
-    if-eqz v0, :cond_1
+    if-eqz p2, :cond_1
 
     move-object v0, p1
 
@@ -56,11 +54,11 @@
     move-result-object v1
 
     :cond_1
-    const/16 v0, 0x17
+    sget v0, Lnrf;->a:I
 
-    if-lt p2, v0, :cond_3
+    const/16 v2, 0x17
 
-    instance-of p2, p1, Landroid/media/MediaCodec$CodecException;
+    if-lt v0, v2, :cond_3
 
     if-eqz p2, :cond_2
 
@@ -78,12 +76,12 @@
     goto :goto_1
 
     :cond_3
-    invoke-static {v1}, Lpaf;->x(Ljava/lang/String;)I
+    invoke-static {v1}, Lnrf;->B(Ljava/lang/String;)I
 
     move-result p1
 
     :goto_1
-    iput p1, p0, Landroidx/media3/exoplayer/mediacodec/MediaCodecDecoderException;->a:I
+    iput p1, p0, Landroidx/media3/exoplayer/mediacodec/MediaCodecDecoderException;->b:I
 
     return-void
 .end method

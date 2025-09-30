@@ -1,122 +1,40 @@
-.class public final synthetic Ll7c;
+.class public abstract Ll7c;
 .super Ljava/lang/Object;
-.source "SourceFile"
-
-# interfaces
-.implements Lm66;
 
 
-# instance fields
-.field public final synthetic a:I
+# static fields
+.field public static oneme_settings_avatar_select_screen:I = 0x7f0a07a9
 
-.field public final synthetic b:Ln7c;
+.field public static oneme_settings_change_avatar_cancel:I = 0x7f0a07aa
 
+.field public static oneme_settings_change_avatar_remove_current:I = 0x7f0a07ab
 
-# direct methods
-.method public synthetic constructor <init>(Ln7c;I)V
-    .locals 0
+.field public static oneme_settings_change_avatar_upload_from_camera:I = 0x7f0a07ac
 
-    iput p2, p0, Ll7c;->a:I
+.field public static oneme_settings_change_avatar_upload_from_gallery:I = 0x7f0a07ad
 
-    iput-object p1, p0, Ll7c;->b:Ln7c;
+.field public static oneme_settings_change_avatar_upload_from_neuroavatars:I = 0x7f0a07ae
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+.field public static oneme_settings_collapsingstoolbar:I = 0x7f0a07af
 
-    return-void
-.end method
+.field public static oneme_settings_container:I = 0x7f0a07b0
 
+.field public static oneme_settings_list_screen_appbar:I = 0x7f0a07b7
 
-# virtual methods
-.method public final apply(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 4
+.field public static oneme_settings_list_screen_pinned_toolbar:I = 0x7f0a07b8
 
-    iget v0, p0, Ll7c;->a:I
+.field public static oneme_settings_toolbar:I = 0x7f0a0849
 
-    packed-switch v0, :pswitch_data_0
+.field public static oneme_settings_topbar:I = 0x7f0a084a
 
-    check-cast p1, Lc7c;
+.field public static oneme_settings_topbar_avatar:I = 0x7f0a084b
 
-    iget-object p0, p0, Ll7c;->b:Ln7c;
+.field public static oneme_settings_topbar_container:I = 0x7f0a084c
 
-    iget-object v0, p0, Ln7c;->b:Lh23;
+.field public static oneme_settings_topbar_dotdivider:I = 0x7f0a084d
 
-    check-cast v0, Lmwc;
+.field public static oneme_settings_topbar_name:I = 0x7f0a084e
 
-    invoke-virtual {v0}, Lmwc;->k()J
+.field public static oneme_settings_topbar_nick:I = 0x7f0a084f
 
-    move-result-wide v0
-
-    iput-wide v0, p1, Lc7c;->c:J
-
-    invoke-virtual {p0}, Ln7c;->b()Ldpd;
-
-    move-result-object p0
-
-    new-instance v0, Lax8;
-
-    const/16 v1, 0x1b
-
-    invoke-direct {v0, v1, p1}, Lax8;-><init>(ILjava/lang/Object;)V
-
-    new-instance p1, Lf93;
-
-    const/4 v1, 0x3
-
-    invoke-direct {p1, p0, v1, v0}, Lf93;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
-
-    return-object p1
-
-    :pswitch_0
-    check-cast p1, Lf7c;
-
-    iget-object p0, p0, Ll7c;->b:Ln7c;
-
-    invoke-virtual {p0}, Ln7c;->b()Ldpd;
-
-    move-result-object v0
-
-    new-instance v1, Lax8;
-
-    const/16 v2, 0x19
-
-    invoke-direct {v1, p0, p1, v2}, Lax8;-><init>(Ln7c;Ljava/lang/Object;I)V
-
-    new-instance v2, Li28;
-
-    const/4 v3, 0x2
-
-    invoke-direct {v2, v0, v3, v1}, Li28;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
-
-    const-wide/16 v0, 0x0
-
-    invoke-static {p1, v0, v1}, Lj7c;->a(Lf7c;J)Lc7c;
-
-    move-result-object p1
-
-    new-instance v0, Lw93;
-
-    const/4 v1, 0x2
-
-    invoke-direct {v0, v2, v1, p1}, Lw93;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
-
-    new-instance p1, Ll7c;
-
-    const/4 v1, 0x1
-
-    invoke-direct {p1, p0, v1}, Ll7c;-><init>(Ln7c;I)V
-
-    new-instance p0, Lf93;
-
-    const/4 v1, 0x3
-
-    invoke-direct {p0, v0, v1, p1}, Lf93;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
-
-    return-object p0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
+.field public static oneme_settings_topbar_phone:I = 0x7f0a0850

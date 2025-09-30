@@ -24,7 +24,7 @@
 
     const-string v0, "input ByteBuffer is null"
 
-    invoke-static {p1, v0}, Lus;->g(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lz48;->i(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {p1}, Ljava/nio/ByteBuffer;->slice()Ljava/nio/ByteBuffer;
 
@@ -75,7 +75,7 @@
 
     const-string v1, "input ByteBuffer is null"
 
-    invoke-static {p1, v1}, Lus;->g(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v1}, Lz48;->i(Ljava/lang/Object;Ljava/lang/String;)V
 
     invoke-virtual {p1}, Ljava/nio/ByteBuffer;->slice()Ljava/nio/ByteBuffer;
 

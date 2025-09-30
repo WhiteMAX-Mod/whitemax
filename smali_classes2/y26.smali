@@ -1,349 +1,470 @@
 .class public final Ly26;
-.super Ljava/lang/Object;
+.super Lj29;
 .source "SourceFile"
 
-# interfaces
-.implements Lorg/webrtc/EncoderCallback;
-.implements Lorg/webrtc/VideoSink;
+
+# static fields
+.field public static volatile i:[Ly26;
 
 
 # instance fields
-.field public final X:Lflc;
+.field public a:J
 
-.field public volatile Y:Lorg/webrtc/VpxEncoderWrapper;
+.field public b:Ljava/lang/String;
 
-.field public volatile Z:Lm36;
+.field public c:Ljava/lang/String;
 
-.field public final a:J
+.field public d:Ljava/lang/String;
 
-.field public final b:J
+.field public e:J
 
-.field public final c:Lgu3;
+.field public f:Ljava/lang/String;
 
-.field public final o:Ls1c;
+.field public g:Ljava/lang/String;
 
-.field public volatile o0:Lm36;
-
-.field public volatile p0:J
-
-.field public final q0:Lgse;
-
-.field public final r0:Lgse;
-
-.field public final s0:Ljava/util/concurrent/atomic/AtomicInteger;
-
-.field public volatile t0:Z
-
-.field public volatile u0:J
+.field public h:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>(Ls1c;Lflc;)V
-    .locals 4
+.method public constructor <init>()V
+    .locals 3
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Lj29;-><init>()V
 
-    sget-object v0, Ljava/util/concurrent/TimeUnit;->SECONDS:Ljava/util/concurrent/TimeUnit;
+    const-wide/16 v0, 0x0
 
-    const-wide/16 v1, 0x5
+    iput-wide v0, p0, Ly26;->a:J
 
-    invoke-virtual {v0, v1, v2}, Ljava/util/concurrent/TimeUnit;->toMillis(J)J
+    const-string v2, ""
 
-    move-result-wide v1
+    iput-object v2, p0, Ly26;->b:Ljava/lang/String;
 
-    iput-wide v1, p0, Ly26;->a:J
+    iput-object v2, p0, Ly26;->c:Ljava/lang/String;
 
-    const-wide/16 v1, 0x1
+    iput-object v2, p0, Ly26;->d:Ljava/lang/String;
 
-    invoke-virtual {v0, v1, v2}, Ljava/util/concurrent/TimeUnit;->toNanos(J)J
+    iput-wide v0, p0, Ly26;->e:J
 
-    move-result-wide v0
+    iput-object v2, p0, Ly26;->f:Ljava/lang/String;
 
-    const-wide/16 v2, 0xa
+    iput-object v2, p0, Ly26;->g:Ljava/lang/String;
 
-    div-long/2addr v0, v2
+    iput-object v2, p0, Ly26;->h:Ljava/lang/String;
 
-    iput-wide v0, p0, Ly26;->b:J
+    const/4 v0, -0x1
 
-    new-instance v0, Ljava/util/concurrent/atomic/AtomicInteger;
-
-    const/4 v1, 0x0
-
-    invoke-direct {v0, v1}, Ljava/util/concurrent/atomic/AtomicInteger;-><init>(I)V
-
-    iput-object v0, p0, Ly26;->s0:Ljava/util/concurrent/atomic/AtomicInteger;
-
-    iput-object p1, p0, Ly26;->o:Ls1c;
-
-    iput-object p2, p0, Ly26;->X:Lflc;
-
-    new-instance p1, Lgu3;
-
-    const-string p2, "SSFrameEncoder"
-
-    invoke-direct {p1, p2}, Lgu3;-><init>(Ljava/lang/String;)V
-
-    iput-object p1, p0, Ly26;->c:Lgu3;
-
-    new-instance p1, Lgse;
-
-    invoke-direct {p1}, Lgse;-><init>()V
-
-    iput-object p1, p0, Ly26;->q0:Lgse;
-
-    new-instance p1, Lgse;
-
-    invoke-direct {p1}, Lgse;-><init>()V
-
-    iput-object p1, p0, Ly26;->r0:Lgse;
+    iput v0, p0, Lj29;->cachedSize:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()V
-    .locals 1
+.method public final computeSerializedSize()I
+    .locals 7
 
-    const/4 v0, 0x0
+    iget-wide v0, p0, Ly26;->a:J
 
-    iput-boolean v0, p0, Ly26;->t0:Z
+    const-wide/16 v2, 0x0
 
-    iget-object v0, p0, Ly26;->Y:Lorg/webrtc/VpxEncoderWrapper;
+    cmp-long v4, v0, v2
 
-    if-eqz v0, :cond_0
+    if-eqz v4, :cond_0
 
-    invoke-virtual {v0}, Lorg/webrtc/VpxEncoderWrapper;->release()V
+    const/4 v4, 0x1
+
+    invoke-static {v4, v0, v1}, Lr63;->h(IJ)I
+
+    move-result v0
+
+    goto :goto_0
 
     :cond_0
     const/4 v0, 0x0
 
-    iput-object v0, p0, Ly26;->Y:Lorg/webrtc/VpxEncoderWrapper;
+    :goto_0
+    iget-object v1, p0, Ly26;->b:Ljava/lang/String;
 
-    return-void
+    const-string v4, ""
+
+    invoke-virtual {v1, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_1
+
+    const/4 v1, 0x2
+
+    iget-object v5, p0, Ly26;->b:Ljava/lang/String;
+
+    invoke-static {v1, v5}, Lr63;->l(ILjava/lang/String;)I
+
+    move-result v1
+
+    add-int/2addr v0, v1
+
+    :cond_1
+    iget-object v1, p0, Ly26;->c:Ljava/lang/String;
+
+    invoke-virtual {v1, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_2
+
+    const/4 v1, 0x3
+
+    iget-object v5, p0, Ly26;->c:Ljava/lang/String;
+
+    invoke-static {v1, v5}, Lr63;->l(ILjava/lang/String;)I
+
+    move-result v1
+
+    add-int/2addr v0, v1
+
+    :cond_2
+    iget-object v1, p0, Ly26;->d:Ljava/lang/String;
+
+    invoke-virtual {v1, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_3
+
+    const/4 v1, 0x4
+
+    iget-object v5, p0, Ly26;->d:Ljava/lang/String;
+
+    invoke-static {v1, v5}, Lr63;->l(ILjava/lang/String;)I
+
+    move-result v1
+
+    add-int/2addr v0, v1
+
+    :cond_3
+    iget-wide v5, p0, Ly26;->e:J
+
+    cmp-long v1, v5, v2
+
+    if-eqz v1, :cond_4
+
+    const/4 v1, 0x5
+
+    invoke-static {v1, v5, v6}, Lr63;->h(IJ)I
+
+    move-result v1
+
+    add-int/2addr v0, v1
+
+    :cond_4
+    iget-object v1, p0, Ly26;->f:Ljava/lang/String;
+
+    invoke-virtual {v1, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_5
+
+    const/4 v1, 0x6
+
+    iget-object v2, p0, Ly26;->f:Ljava/lang/String;
+
+    invoke-static {v1, v2}, Lr63;->l(ILjava/lang/String;)I
+
+    move-result v1
+
+    add-int/2addr v0, v1
+
+    :cond_5
+    iget-object v1, p0, Ly26;->g:Ljava/lang/String;
+
+    invoke-virtual {v1, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_6
+
+    const/4 v1, 0x7
+
+    iget-object v2, p0, Ly26;->g:Ljava/lang/String;
+
+    invoke-static {v1, v2}, Lr63;->l(ILjava/lang/String;)I
+
+    move-result v1
+
+    add-int/2addr v0, v1
+
+    :cond_6
+    iget-object v1, p0, Ly26;->h:Ljava/lang/String;
+
+    invoke-virtual {v1, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_7
+
+    const/16 v1, 0x8
+
+    iget-object p0, p0, Ly26;->h:Ljava/lang/String;
+
+    invoke-static {v1, p0}, Lr63;->l(ILjava/lang/String;)I
+
+    move-result p0
+
+    add-int/2addr p0, v0
+
+    return p0
+
+    :cond_7
+    return v0
 .end method
 
-.method public final onEncodedImage(Lorg/webrtc/EncodedImage;)V
-    .locals 4
-
-    iget-object v0, p0, Ly26;->q0:Lgse;
-
-    invoke-virtual {v0}, Lgse;->a()V
-
-    iget-object v0, p1, Lorg/webrtc/EncodedImage;->frameType:Lorg/webrtc/EncodedImage$FrameType;
-
-    sget-object v1, Lorg/webrtc/EncodedImage$FrameType;->VideoFrameKey:Lorg/webrtc/EncodedImage$FrameType;
-
-    if-ne v0, v1, :cond_0
-
-    invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
-
-    move-result-wide v2
-
-    iput-wide v2, p0, Ly26;->p0:J
+.method public final mergeFrom(Lq63;)Lj29;
+    .locals 2
 
     :cond_0
-    iget-object v0, p0, Ly26;->Z:Lm36;
+    :goto_0
+    invoke-virtual {p1}, Lq63;->s()I
 
-    if-eqz v0, :cond_3
+    move-result v0
 
-    iget-object p0, p0, Ly26;->Z:Lm36;
+    if-eqz v0, :cond_9
 
-    iget-boolean v0, p0, Lm36;->a:Z
+    const/16 v1, 0x8
+
+    if-eq v0, v1, :cond_8
+
+    const/16 v1, 0x12
+
+    if-eq v0, v1, :cond_7
+
+    const/16 v1, 0x1a
+
+    if-eq v0, v1, :cond_6
+
+    const/16 v1, 0x22
+
+    if-eq v0, v1, :cond_5
+
+    const/16 v1, 0x28
+
+    if-eq v0, v1, :cond_4
+
+    const/16 v1, 0x32
+
+    if-eq v0, v1, :cond_3
+
+    const/16 v1, 0x3a
+
+    if-eq v0, v1, :cond_2
+
+    const/16 v1, 0x42
+
+    if-eq v0, v1, :cond_1
+
+    invoke-virtual {p1, v0}, Lq63;->u(I)Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    goto :goto_1
+
+    :cond_1
+    invoke-virtual {p1}, Lq63;->r()Ljava/lang/String;
+
+    move-result-object v0
+
+    iput-object v0, p0, Ly26;->h:Ljava/lang/String;
+
+    goto :goto_0
+
+    :cond_2
+    invoke-virtual {p1}, Lq63;->r()Ljava/lang/String;
+
+    move-result-object v0
+
+    iput-object v0, p0, Ly26;->g:Ljava/lang/String;
+
+    goto :goto_0
+
+    :cond_3
+    invoke-virtual {p1}, Lq63;->r()Ljava/lang/String;
+
+    move-result-object v0
+
+    iput-object v0, p0, Ly26;->f:Ljava/lang/String;
+
+    goto :goto_0
+
+    :cond_4
+    invoke-virtual {p1}, Lq63;->q()J
+
+    move-result-wide v0
+
+    iput-wide v0, p0, Ly26;->e:J
+
+    goto :goto_0
+
+    :cond_5
+    invoke-virtual {p1}, Lq63;->r()Ljava/lang/String;
+
+    move-result-object v0
+
+    iput-object v0, p0, Ly26;->d:Ljava/lang/String;
+
+    goto :goto_0
+
+    :cond_6
+    invoke-virtual {p1}, Lq63;->r()Ljava/lang/String;
+
+    move-result-object v0
+
+    iput-object v0, p0, Ly26;->c:Ljava/lang/String;
+
+    goto :goto_0
+
+    :cond_7
+    invoke-virtual {p1}, Lq63;->r()Ljava/lang/String;
+
+    move-result-object v0
+
+    iput-object v0, p0, Ly26;->b:Ljava/lang/String;
+
+    goto :goto_0
+
+    :cond_8
+    invoke-virtual {p1}, Lq63;->q()J
+
+    move-result-wide v0
+
+    iput-wide v0, p0, Ly26;->a:J
+
+    goto :goto_0
+
+    :cond_9
+    :goto_1
+    return-object p0
+.end method
+
+.method public final writeTo(Lr63;)V
+    .locals 6
+
+    iget-wide v0, p0, Ly26;->a:J
+
+    const-wide/16 v2, 0x0
+
+    cmp-long v4, v0, v2
+
+    if-eqz v4, :cond_0
+
+    const/4 v4, 0x1
+
+    invoke-virtual {p1, v4, v0, v1}, Lr63;->x(IJ)V
+
+    :cond_0
+    iget-object v0, p0, Ly26;->b:Ljava/lang/String;
+
+    const-string v1, ""
+
+    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
 
     if-nez v0, :cond_1
 
-    invoke-virtual {p1}, Lorg/webrtc/EncodedImage;->release()V
+    const/4 v0, 0x2
 
-    return-void
+    iget-object v4, p0, Ly26;->b:Ljava/lang/String;
 
-    :cond_1
-    iget-object v0, p1, Lorg/webrtc/EncodedImage;->frameType:Lorg/webrtc/EncodedImage$FrameType;
-
-    if-ne v0, v1, :cond_2
-
-    const/4 v0, 0x0
-
-    iput-boolean v0, p0, Lm36;->h:Z
-
-    :cond_2
-    iget-object v0, p0, Lm36;->c:Ljava/util/concurrent/ConcurrentLinkedQueue;
-
-    invoke-virtual {v0, p1}, Ljava/util/concurrent/ConcurrentLinkedQueue;->add(Ljava/lang/Object;)Z
-
-    iget-object v0, p0, Lm36;->d:Ljava/util/concurrent/atomic/AtomicInteger;
-
-    iget-object p1, p1, Lorg/webrtc/EncodedImage;->buffer:Ljava/nio/ByteBuffer;
-
-    invoke-virtual {p1}, Ljava/nio/Buffer;->remaining()I
-
-    move-result p1
-
-    invoke-virtual {v0, p1}, Ljava/util/concurrent/atomic/AtomicInteger;->addAndGet(I)I
-
-    iget-object p0, p0, Lm36;->g:Lbcg;
-
-    invoke-static {p0}, Lm36;->b(Lbcg;)V
-
-    :cond_3
-    return-void
-.end method
-
-.method public final onFrame(Lorg/webrtc/VideoFrame;)V
-    .locals 9
-
-    const-string v0, "SSFrameEncoder"
-
-    const-string v1, "rotation angle = "
-
-    iget-object v2, p0, Ly26;->o0:Lm36;
-
-    invoke-static {}, Landroid/os/SystemClock;->elapsedRealtimeNanos()J
-
-    move-result-wide v3
-
-    iget-wide v5, p0, Ly26;->u0:J
-
-    iget-wide v7, p0, Ly26;->b:J
-
-    add-long/2addr v5, v7
-
-    cmp-long v5, v3, v5
-
-    if-gez v5, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    if-eqz v2, :cond_1
-
-    iget-object v5, v2, Lm36;->c:Ljava/util/concurrent/ConcurrentLinkedQueue;
-
-    invoke-virtual {v5}, Ljava/util/concurrent/ConcurrentLinkedQueue;->size()I
-
-    move-result v5
-
-    const/16 v6, 0xf
-
-    if-gt v5, v6, :cond_2
-
-    iget-object v5, v2, Lm36;->d:Ljava/util/concurrent/atomic/AtomicInteger;
-
-    invoke-virtual {v5}, Ljava/util/concurrent/atomic/AtomicInteger;->get()I
-
-    move-result v5
-
-    const v6, 0x3d0900
-
-    if-le v5, v6, :cond_1
-
-    goto :goto_0
+    invoke-virtual {p1, v0, v4}, Lr63;->E(ILjava/lang/String;)V
 
     :cond_1
-    iget-object v5, p0, Ly26;->s0:Ljava/util/concurrent/atomic/AtomicInteger;
+    iget-object v0, p0, Ly26;->c:Ljava/lang/String;
 
-    invoke-virtual {v5}, Ljava/util/concurrent/atomic/AtomicInteger;->get()I
+    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    move-result v5
+    move-result v0
 
-    const/4 v6, 0x5
+    if-nez v0, :cond_2
 
-    if-lt v5, v6, :cond_3
+    const/4 v0, 0x3
+
+    iget-object v4, p0, Ly26;->c:Ljava/lang/String;
+
+    invoke-virtual {p1, v0, v4}, Lr63;->E(ILjava/lang/String;)V
 
     :cond_2
-    :goto_0
-    return-void
+    iget-object v0, p0, Ly26;->d:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_3
+
+    const/4 v0, 0x4
+
+    iget-object v4, p0, Ly26;->d:Ljava/lang/String;
+
+    invoke-virtual {p1, v0, v4}, Lr63;->E(ILjava/lang/String;)V
 
     :cond_3
-    :try_start_0
-    invoke-virtual {p1}, Lorg/webrtc/VideoFrame;->getBuffer()Lorg/webrtc/VideoFrame$Buffer;
+    iget-wide v4, p0, Ly26;->e:J
 
-    move-result-object v5
+    cmp-long v0, v4, v2
 
-    invoke-interface {v5}, Lorg/webrtc/VideoFrame$Buffer;->toI420()Lorg/webrtc/VideoFrame$I420Buffer;
+    if-eqz v0, :cond_4
 
-    move-result-object v5
+    const/4 v0, 0x5
 
-    invoke-virtual {p1}, Lorg/webrtc/VideoFrame;->getRotation()I
+    invoke-virtual {p1, v0, v4, v5}, Lr63;->x(IJ)V
 
-    move-result v6
+    :cond_4
+    iget-object v0, p0, Ly26;->f:Ljava/lang/String;
 
-    add-int/lit16 v6, v6, 0x168
+    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    int-to-float v6, v6
+    move-result v0
 
-    iget-object v7, p0, Ly26;->X:Lflc;
+    if-nez v0, :cond_5
 
-    invoke-virtual {v7}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    const/4 v0, 0x6
 
-    const/4 v7, 0x0
+    iget-object v2, p0, Ly26;->f:Ljava/lang/String;
 
-    add-float/2addr v6, v7
+    invoke-virtual {p1, v0, v2}, Lr63;->E(ILjava/lang/String;)V
 
-    const/high16 v7, 0x43b40000    # 360.0f
+    :cond_5
+    iget-object v0, p0, Ly26;->g:Ljava/lang/String;
 
-    rem-float/2addr v6, v7
+    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    iget-object v7, p0, Ly26;->o:Ls1c;
+    move-result v0
 
-    new-instance v8, Ljava/lang/StringBuilder;
+    if-nez v0, :cond_6
 
-    invoke-direct {v8, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    const/4 v0, 0x7
 
-    invoke-virtual {v8, v6}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
+    iget-object v2, p0, Ly26;->g:Ljava/lang/String;
 
-    invoke-virtual {v8}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {p1, v0, v2}, Lr63;->E(ILjava/lang/String;)V
 
-    move-result-object v1
+    :cond_6
+    iget-object v0, p0, Ly26;->h:Ljava/lang/String;
 
-    invoke-interface {v7, v0, v1}, Ls1c;->log(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    new-instance v1, Lorg/webrtc/VideoFrame;
+    move-result v0
 
-    float-to-int v6, v6
+    if-nez v0, :cond_7
 
-    invoke-virtual {p1}, Lorg/webrtc/VideoFrame;->getTimestampNs()J
+    const/16 v0, 0x8
 
-    move-result-wide v7
+    iget-object p0, p0, Ly26;->h:Ljava/lang/String;
 
-    invoke-direct {v1, v5, v6, v7, v8}, Lorg/webrtc/VideoFrame;-><init>(Lorg/webrtc/VideoFrame$Buffer;IJ)V
-    :try_end_0
-    .catch Lorg/webrtc/GlUtil$GlOutOfMemoryException; {:try_start_0 .. :try_end_0} :catch_0
+    invoke-virtual {p1, v0, p0}, Lr63;->E(ILjava/lang/String;)V
 
-    iput-wide v3, p0, Ly26;->u0:J
-
-    iget-object p1, p0, Ly26;->s0:Ljava/util/concurrent/atomic/AtomicInteger;
-
-    invoke-virtual {p1}, Ljava/util/concurrent/atomic/AtomicInteger;->incrementAndGet()I
-
-    iget-object p1, p0, Ly26;->c:Lgu3;
-
-    new-instance v0, Ln05;
-
-    const/16 v3, 0x8
-
-    invoke-direct {v0, p0, v2, v1, v3}, Ln05;-><init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;I)V
-
-    invoke-virtual {p1, v0}, Lgu3;->c(Ljava/lang/Runnable;)V
-
-    return-void
-
-    :catch_0
-    iget-object p0, p0, Ly26;->o:Ls1c;
-
-    const-string p1, "gl oom @ toI420, skipping"
-
-    invoke-interface {p0, v0, p1}, Ls1c;->log(Ljava/lang/String;Ljava/lang/String;)V
-
-    return-void
-.end method
-
-.method public final onFrameDropped(I)V
-    .locals 0
-
-    iget-object p0, p0, Ly26;->r0:Lgse;
-
-    invoke-virtual {p0}, Lgse;->a()V
-
+    :cond_7
     return-void
 .end method

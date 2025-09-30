@@ -1,110 +1,87 @@
-.class public final synthetic Ldc3;
-.super Ljava/lang/Object;
+.class public final Ldc3;
+.super Lv3e;
 .source "SourceFile"
 
-# interfaces
-.implements Ljava/util/concurrent/ThreadFactory;
 
-
-# instance fields
-.field public final synthetic a:I
-
-.field public final synthetic b:Ljava/io/Serializable;
+# static fields
+.field public static final b:Ldc3;
 
 
 # direct methods
-.method public synthetic constructor <init>(ILjava/io/Serializable;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
-    iput p1, p0, Ldc3;->a:I
+    new-instance v0, Ldc3;
 
-    iput-object p2, p0, Ldc3;->b:Ljava/io/Serializable;
+    invoke-direct {v0}, Lv3e;-><init>()V
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    sput-object v0, Ldc3;->b:Ldc3;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final newThread(Ljava/lang/Runnable;)Ljava/lang/Thread;
+.method public final c()Ldb4;
     .locals 3
 
-    iget v0, p0, Ldc3;->a:I
+    new-instance p0, Ldb4;
 
-    iget-object p0, p0, Ldc3;->b:Ljava/io/Serializable;
+    new-instance v0, Lxb3;
 
-    packed-switch v0, :pswitch_data_0
+    const/4 v1, 0x1
 
-    check-cast p0, Ljava/util/concurrent/atomic/AtomicInteger;
+    invoke-direct {v0, v1}, Lxb3;-><init>(I)V
 
-    new-instance v0, Ljava/lang/Thread;
+    new-instance v1, Lxb3;
 
-    new-instance v1, Ljava/lang/StringBuilder;
+    const/4 v2, 0x2
 
-    const-string v2, "tracer-io-"
+    invoke-direct {v1, v2}, Lxb3;-><init>(I)V
 
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-direct {p0, v0, v1}, Ldb4;-><init>(Lzb6;Lzb6;)V
 
-    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicInteger;->getAndIncrement()I
+    return-object p0
+.end method
 
-    move-result p0
+.method public final d(Landroid/os/Bundle;)Leb4;
+    .locals 2
 
-    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    const-string p0, "chat_id"
 
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-static {p0, p1}, Lkua;->z(Ljava/lang/String;Landroid/os/Bundle;)J
 
-    move-result-object p0
+    move-result-wide p0
 
-    invoke-direct {v0, p1, p0}, Ljava/lang/Thread;-><init>(Ljava/lang/Runnable;Ljava/lang/String;)V
+    new-instance v0, Ld81;
 
-    return-object v0
+    const/4 v1, 0x1
 
-    :pswitch_0
-    check-cast p0, Ljava/lang/String;
-
-    new-instance v0, Ljava/lang/Thread;
-
-    invoke-direct {v0, p1, p0}, Ljava/lang/Thread;-><init>(Ljava/lang/Runnable;Ljava/lang/String;)V
+    invoke-direct {v0, p0, p1, v1}, Ld81;-><init>(JI)V
 
     return-object v0
+.end method
 
-    :pswitch_1
-    check-cast p0, Ljava/lang/String;
+.method public final e(Lu3e;)V
+    .locals 6
 
-    new-instance v0, Ljava/lang/Thread;
+    const-string p0, "chat_id"
 
-    invoke-direct {v0, p1, p0}, Ljava/lang/Thread;-><init>(Ljava/lang/Runnable;Ljava/lang/String;)V
+    filled-new-array {p0}, [Ljava/lang/String;
 
-    return-object v0
+    move-result-object v2
 
-    :pswitch_2
-    check-cast p0, Ljava/lang/String;
+    const/16 v5, 0xe
 
-    new-instance v0, Ljava/lang/Thread;
+    const/4 v4, 0x0
 
-    invoke-direct {v0, p1, p0}, Ljava/lang/Thread;-><init>(Ljava/lang/Runnable;Ljava/lang/String;)V
+    const-string v1, ":complaint"
 
-    return-object v0
+    const/4 v3, 0x0
 
-    :pswitch_3
-    check-cast p0, Ljava/lang/String;
+    move-object v0, p1
 
-    new-instance v0, Ljava/lang/Thread;
+    invoke-static/range {v0 .. v5}, Lcb4;->a(Lcb4;Ljava/lang/String;[Ljava/lang/String;Ljava/util/Set;II)Lxa4;
 
-    invoke-direct {v0, p1, p0}, Ljava/lang/Thread;-><init>(Ljava/lang/Runnable;Ljava/lang/String;)V
-
-    const/16 p0, 0xa
-
-    invoke-virtual {v0, p0}, Ljava/lang/Thread;->setPriority(I)V
-
-    return-object v0
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_3
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    return-void
 .end method

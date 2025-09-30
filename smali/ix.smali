@@ -1,158 +1,135 @@
 .class public final Lix;
-.super Ljava/lang/Thread;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Layb;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final a:I
 
 
 # direct methods
-.method public synthetic constructor <init>(Ljava/lang/String;)V
-    .locals 1
+.method public constructor <init>(I)V
+    .locals 0
 
-    .line 1
-    const/4 v0, 0x0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput v0, p0, Lix;->a:I
-
-    invoke-direct {p0, p1}, Ljava/lang/Thread;-><init>(Ljava/lang/String;)V
-
-    return-void
-.end method
-
-.method public synthetic constructor <init>(Ljava/lang/String;Ljava/lang/Runnable;)V
-    .locals 1
-
-    .line 2
-    const/4 v0, 0x1
-
-    iput v0, p0, Lix;->a:I
-
-    invoke-direct {p0, p2, p1}, Ljava/lang/Thread;-><init>(Ljava/lang/Runnable;Ljava/lang/String;)V
-
-    return-void
-.end method
-
-.method public synthetic constructor <init>(Ljava/lang/ThreadGroup;Ljava/lang/String;)V
-    .locals 1
-
-    .line 3
-    const/4 v0, 0x2
-
-    iput v0, p0, Lix;->a:I
-
-    invoke-direct {p0, p1, p2}, Ljava/lang/Thread;-><init>(Ljava/lang/ThreadGroup;Ljava/lang/String;)V
+    iput p1, p0, Lix;->a:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public run()V
-    .locals 2
+.method public final annotationType()Ljava/lang/Class;
+    .locals 0
 
-    iget v0, p0, Lix;->a:I
+    const-class p0, Layb;
 
-    packed-switch v0, :pswitch_data_0
+    return-object p0
+.end method
 
-    :pswitch_0
-    invoke-super {p0}, Ljava/lang/Thread;->run()V
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 1
 
-    return-void
-
-    :pswitch_1
-    const/16 v0, 0x13
-
-    invoke-static {v0}, Landroid/os/Process;->setThreadPriority(I)V
-
-    monitor-enter p0
-
-    :goto_0
-    :try_start_0
-    invoke-virtual {p0}, Ljava/lang/Object;->wait()V
-    :try_end_0
-    .catch Ljava/lang/InterruptedException; {:try_start_0 .. :try_end_0} :catch_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    if-ne p0, p1, :cond_0
 
     goto :goto_0
 
-    :catchall_0
-    move-exception v0
+    :cond_0
+    instance-of v0, p1, Layb;
+
+    if-nez v0, :cond_1
 
     goto :goto_1
 
-    :catch_0
-    :try_start_1
-    monitor-exit p0
-
-    return-void
-
-    :goto_1
-    monitor-exit p0
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    throw v0
-
-    :catch_1
-    :cond_0
-    :goto_2
-    :pswitch_2
-    :try_start_2
-    const-class p0, Llx;
-
-    monitor-enter p0
-    :try_end_2
-    .catch Ljava/lang/InterruptedException; {:try_start_2 .. :try_end_2} :catch_1
-
-    :try_start_3
-    sget-object v0, Llx;->j:Llx;
-
-    invoke-static {}, Lg47;->e()Llx;
-
-    move-result-object v0
-
-    sget-object v1, Llx;->j:Llx;
-
-    if-ne v0, v1, :cond_1
-
-    const/4 v0, 0x0
-
-    sput-object v0, Llx;->j:Llx;
-    :try_end_3
-    .catchall {:try_start_3 .. :try_end_3} :catchall_1
-
-    :try_start_4
-    monitor-exit p0
-
-    return-void
-
-    :catchall_1
-    move-exception v0
-
-    goto :goto_3
-
     :cond_1
-    monitor-exit p0
+    check-cast p1, Layb;
 
-    if-eqz v0, :cond_0
+    check-cast p1, Lix;
 
-    invoke-virtual {v0}, Llx;->k()V
+    iget v0, p1, Lix;->a:I
 
-    goto :goto_2
+    iget p0, p0, Lix;->a:I
 
-    :goto_3
-    monitor-exit p0
+    if-ne p0, v0, :cond_2
 
-    throw v0
-    :try_end_4
-    .catch Ljava/lang/InterruptedException; {:try_start_4 .. :try_end_4} :catch_1
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_2
-        :pswitch_0
-        :pswitch_1
-    .end packed-switch
+    sget-object p0, Lzxb;->a:Lzxb;
+
+    invoke-virtual {p0, p0}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+
+    move-result p0
+
+    if-eqz p0, :cond_2
+
+    :goto_0
+    const/4 p0, 0x1
+
+    return p0
+
+    :cond_2
+    :goto_1
+    const/4 p0, 0x0
+
+    return p0
+.end method
+
+.method public final hashCode()I
+    .locals 2
+
+    const v0, 0xde0d66
+
+    iget p0, p0, Lix;->a:I
+
+    xor-int/2addr p0, v0
+
+    sget-object v0, Lzxb;->a:Lzxb;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
+
+    move-result v0
+
+    const v1, 0x79ad669e
+
+    xor-int/2addr v0, v1
+
+    add-int/2addr p0, v0
+
+    return p0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 2
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "@com.google.firebase.encoders.proto.Protobuf(tag="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget p0, p0, Lix;->a:I
+
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string p0, "intEncoding="
+
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    sget-object p0, Lzxb;->a:Lzxb;
+
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const/16 p0, 0x29
+
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    return-object p0
 .end method

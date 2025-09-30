@@ -1,39 +1,55 @@
 .class public final Lqu3;
-.super Ljava/lang/Object;
+.super Lx2;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:Lou3;
-
-.field public final b:Lou3;
-
-.field public final c:Z
-
-.field public final d:Landroid/view/ViewGroup;
-
-.field public final e:Ltu3;
-
-.field public final f:Ljava/util/ArrayList;
+# static fields
+.field public static final c:Lqu3;
 
 
 # direct methods
-.method public constructor <init>(Lou3;Lou3;ZLandroid/view/ViewGroup;Ltu3;Ljava/util/ArrayList;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 2
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lqu3;
 
-    iput-object p1, p0, Lqu3;->a:Lou3;
+    const/16 v1, 0x8
 
-    iput-object p2, p0, Lqu3;->b:Lou3;
+    invoke-direct {v0, v1}, Lx2;-><init>(I)V
 
-    iput-boolean p3, p0, Lqu3;->c:Z
+    sput-object v0, Lqu3;->c:Lqu3;
 
-    iput-object p4, p0, Lqu3;->d:Landroid/view/ViewGroup;
+    return-void
+.end method
 
-    iput-object p5, p0, Lqu3;->e:Ltu3;
 
-    iput-object p6, p0, Lqu3;->f:Ljava/util/ArrayList;
+# virtual methods
+.method public final W0(JZ)V
+    .locals 2
+
+    invoke-virtual {p0}, Lx2;->F0()Lza4;
+
+    move-result-object p0
+
+    const-string v0, ":call-user?opponent_id="
+
+    const-string v1, "&video_enabled="
+
+    invoke-static {p1, p2, v0, v1, p3}, Lsg0;->i(JLjava/lang/String;Ljava/lang/String;Z)Ljava/lang/StringBuilder;
+
+    move-result-object p1
+
+    const-string p2, "&microphone_enabled=true"
+
+    invoke-virtual {p1, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    const/4 p2, 0x0
+
+    invoke-virtual {p0, p1, p2}, Lza4;->b(Ljava/lang/String;Landroid/os/Bundle;)Z
 
     return-void
 .end method

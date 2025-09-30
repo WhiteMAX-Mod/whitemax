@@ -1,21 +1,8 @@
-.class public final Lv4e;
-.super Lio;
+.class public interface abstract Lv4e;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:Lv4e;
-
-
-# direct methods
-.method static constructor <clinit>()V
-    .locals 1
-
-    new-instance v0, Lv4e;
-
-    invoke-direct {v0}, Lio;-><init>()V
-
-    sput-object v0, Lv4e;->a:Lv4e;
-
-    return-void
+# virtual methods
+.method public abstract a(I)V
 .end method

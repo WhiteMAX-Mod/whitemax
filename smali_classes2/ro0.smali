@@ -1,220 +1,221 @@
-.class public final Lro0;
+.class public final synthetic Lro0;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lol7;
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field public final a:J
+.field public final synthetic X:[La37;
 
-.field public final b:Ljava/lang/String;
+.field public final synthetic Y:I
 
-.field public final c:Ljava/lang/String;
+.field public final synthetic Z:Ljava/io/RandomAccessFile;
 
-.field public final o:Ljava/lang/CharSequence;
+.field public final synthetic a:Lvo0;
+
+.field public final synthetic b:Ljava/util/concurrent/atomic/AtomicBoolean;
+
+.field public final synthetic c:[Landroid/graphics/Bitmap;
+
+.field public final synthetic o:I
+
+.field public final synthetic r0:Ljava/util/ArrayList;
+
+.field public final synthetic s0:[Ljava/util/concurrent/CountDownLatch;
 
 
 # direct methods
-.method public constructor <init>(JLjava/lang/String;Ljava/lang/String;Ljava/lang/CharSequence;)V
+.method public synthetic constructor <init>(Lvo0;Ljava/util/concurrent/atomic/AtomicBoolean;[Landroid/graphics/Bitmap;I[La37;ILjava/io/RandomAccessFile;Ljava/util/ArrayList;[Ljava/util/concurrent/CountDownLatch;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-wide p1, p0, Lro0;->a:J
+    iput-object p1, p0, Lro0;->a:Lvo0;
 
-    iput-object p3, p0, Lro0;->b:Ljava/lang/String;
+    iput-object p2, p0, Lro0;->b:Ljava/util/concurrent/atomic/AtomicBoolean;
 
-    iput-object p4, p0, Lro0;->c:Ljava/lang/String;
+    iput-object p3, p0, Lro0;->c:[Landroid/graphics/Bitmap;
 
-    iput-object p5, p0, Lro0;->o:Ljava/lang/CharSequence;
+    iput p4, p0, Lro0;->o:I
+
+    iput-object p5, p0, Lro0;->X:[La37;
+
+    iput p6, p0, Lro0;->Y:I
+
+    iput-object p7, p0, Lro0;->Z:Ljava/io/RandomAccessFile;
+
+    iput-object p8, p0, Lro0;->r0:Ljava/util/ArrayList;
+
+    iput-object p9, p0, Lro0;->s0:[Ljava/util/concurrent/CountDownLatch;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
+.method public final run()V
+    .locals 11
 
-    if-ne p0, p1, :cond_0
+    iget-object v0, p0, Lro0;->a:Lvo0;
+
+    iget-object v1, p0, Lro0;->b:Ljava/util/concurrent/atomic/AtomicBoolean;
+
+    iget-object v2, p0, Lro0;->c:[Landroid/graphics/Bitmap;
+
+    iget v3, p0, Lro0;->o:I
+
+    iget-object v4, p0, Lro0;->X:[La37;
+
+    iget v5, p0, Lro0;->Y:I
+
+    iget-object v6, p0, Lro0;->Z:Ljava/io/RandomAccessFile;
+
+    iget-object v7, p0, Lro0;->r0:Ljava/util/ArrayList;
+
+    iget-object p0, p0, Lro0;->s0:[Ljava/util/concurrent/CountDownLatch;
+
+    iget-object v8, v0, Lvo0;->o:Ljava/util/concurrent/atomic/AtomicBoolean;
+
+    invoke-virtual {v8}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
+
+    move-result v8
+
+    if-nez v8, :cond_1
+
+    invoke-virtual {v1}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
+
+    move-result v8
+
+    if-eqz v8, :cond_0
+
+    goto :goto_2
+
+    :cond_0
+    sget-object v8, Landroid/graphics/Bitmap$CompressFormat;->WEBP:Landroid/graphics/Bitmap$CompressFormat;
+
+    aget-object v2, v2, v3
+
+    iget v9, v0, Lvo0;->l:I
+
+    aget-object v10, v4, v3
+
+    invoke-virtual {v2, v8, v9, v10}, Landroid/graphics/Bitmap;->compress(Landroid/graphics/Bitmap$CompressFormat;ILjava/io/OutputStream;)Z
+
+    aget-object v2, v4, v3
+
+    iget v2, v2, La37;->b:I
+
+    :try_start_0
+    iget-object v0, v0, Lvo0;->h:Ljava/lang/Object;
+
+    monitor-enter v0
+    :try_end_0
+    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
+
+    :try_start_1
+    new-instance v8, Luo0;
+
+    invoke-direct {v8, v5}, Luo0;-><init>(I)V
+
+    invoke-virtual {v6}, Ljava/io/RandomAccessFile;->length()J
+
+    move-result-wide v9
+
+    long-to-int v5, v9
+
+    iput v5, v8, Luo0;->c:I
+
+    invoke-virtual {v7, v8}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    aget-object v5, v4, v3
+
+    iget-object v5, v5, La37;->a:[B
+
+    const/4 v7, 0x0
+
+    invoke-virtual {v6, v5, v7, v2}, Ljava/io/RandomAccessFile;->write([BII)V
+
+    iput v2, v8, Luo0;->b:I
+
+    aget-object v2, v4, v3
+
+    monitor-enter v2
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    :try_start_2
+    iput v7, v2, La37;->b:I
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_1
+
+    :try_start_3
+    monitor-exit v2
+
+    monitor-exit v0
+    :try_end_3
+    .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
     goto :goto_1
 
-    :cond_0
-    instance-of v0, p1, Lro0;
-
-    if-nez v0, :cond_1
+    :catchall_0
+    move-exception v2
 
     goto :goto_0
+
+    :catchall_1
+    move-exception v4
+
+    :try_start_4
+    monitor-exit v2
+    :try_end_4
+    .catchall {:try_start_4 .. :try_end_4} :catchall_1
+
+    :try_start_5
+    throw v4
+
+    :goto_0
+    monitor-exit v0
+    :try_end_5
+    .catchall {:try_start_5 .. :try_end_5} :catchall_0
+
+    :try_start_6
+    throw v2
+    :try_end_6
+    .catch Ljava/io/IOException; {:try_start_6 .. :try_end_6} :catch_0
+
+    :catch_0
+    move-exception v0
+
+    invoke-virtual {v0}, Ljava/lang/Throwable;->printStackTrace()V
+
+    const/4 v0, 0x1
+
+    :try_start_7
+    invoke-virtual {v6}, Ljava/io/RandomAccessFile;->close()V
+    :try_end_7
+    .catch Ljava/lang/Exception; {:try_start_7 .. :try_end_7} :catch_1
+    .catchall {:try_start_7 .. :try_end_7} :catchall_2
+
+    :catch_1
+    invoke-virtual {v1, v0}, Ljava/util/concurrent/atomic/AtomicBoolean;->set(Z)V
+
+    goto :goto_1
+
+    :catchall_2
+    move-exception p0
+
+    invoke-virtual {v1, v0}, Ljava/util/concurrent/atomic/AtomicBoolean;->set(Z)V
+
+    throw p0
+
+    :goto_1
+    aget-object p0, p0, v3
+
+    invoke-virtual {p0}, Ljava/util/concurrent/CountDownLatch;->countDown()V
 
     :cond_1
-    check-cast p1, Lro0;
-
-    iget-wide v0, p0, Lro0;->a:J
-
-    iget-wide v2, p1, Lro0;->a:J
-
-    cmp-long v0, v0, v2
-
-    if-eqz v0, :cond_2
-
-    goto :goto_0
-
-    :cond_2
-    iget-object v0, p0, Lro0;->b:Ljava/lang/String;
-
-    iget-object v1, p1, Lro0;->b:Ljava/lang/String;
-
-    invoke-static {v0, v1}, Lxq7;->d(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_3
-
-    goto :goto_0
-
-    :cond_3
-    iget-object v0, p0, Lro0;->c:Ljava/lang/String;
-
-    iget-object v1, p1, Lro0;->c:Ljava/lang/String;
-
-    invoke-virtual {v0, v1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_4
-
-    goto :goto_0
-
-    :cond_4
-    iget-object p0, p0, Lro0;->o:Ljava/lang/CharSequence;
-
-    iget-object p1, p1, Lro0;->o:Ljava/lang/CharSequence;
-
-    invoke-static {p0, p1}, Lxq7;->d(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p0
-
-    if-nez p0, :cond_5
-
-    :goto_0
-    const/4 p0, 0x0
-
-    return p0
-
-    :cond_5
-    :goto_1
-    const/4 p0, 0x1
-
-    return p0
-.end method
-
-.method public final getItemId()J
-    .locals 2
-
-    iget-wide v0, p0, Lro0;->a:J
-
-    return-wide v0
-.end method
-
-.method public final hashCode()I
-    .locals 2
-
-    iget-wide v0, p0, Lro0;->a:J
-
-    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
-
-    move-result v0
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget-object v1, p0, Lro0;->b:Ljava/lang/String;
-
-    if-nez v1, :cond_0
-
-    const/4 v1, 0x0
-
-    goto :goto_0
-
-    :cond_0
-    invoke-virtual {v1}, Ljava/lang/String;->hashCode()I
-
-    move-result v1
-
-    :goto_0
-    add-int/2addr v0, v1
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget-object v1, p0, Lro0;->c:Ljava/lang/String;
-
-    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
-
-    move-result v1
-
-    add-int/2addr v1, v0
-
-    mul-int/lit8 v1, v1, 0x1f
-
-    iget-object p0, p0, Lro0;->o:Ljava/lang/CharSequence;
-
-    invoke-virtual {p0}, Ljava/lang/Object;->hashCode()I
-
-    move-result p0
-
-    add-int/2addr p0, v1
-
-    return p0
-.end method
-
-.method public final m()I
-    .locals 0
-
-    const/4 p0, 0x0
-
-    return p0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 5
-
-    const-string v0, "BlackListItem(itemId="
-
-    const-string v1, ", avatar="
-
-    iget-wide v2, p0, Lro0;->a:J
-
-    iget-object v4, p0, Lro0;->b:Ljava/lang/String;
-
-    invoke-static {v0, v2, v3, v1, v4}, Lp3a;->k(Ljava/lang/String;JLjava/lang/String;Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    const-string v1, ", name="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v1, p0, Lro0;->c:Ljava/lang/String;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", abbreviation="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object p0, p0, Lro0;->o:Ljava/lang/CharSequence;
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string p0, ")"
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
+    :goto_2
+    return-void
 .end method

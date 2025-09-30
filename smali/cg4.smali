@@ -1,124 +1,185 @@
-.class public final synthetic Lcg4;
+.class public abstract Lcg4;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ljq1;
 
+# static fields
+.field public static final a:Le17;
 
-# instance fields
-.field public final synthetic a:I
+.field public static final b:Le17;
 
-.field public final synthetic b:Leg4;
+.field public static final c:Le17;
+
+.field public static final d:Le17;
+
+.field public static final e:Le17;
+
+.field public static final f:Le17;
+
+.field public static final g:Le17;
+
+.field public static final h:Le17;
+
+.field public static final i:Le17;
+
+.field public static final j:Le17;
+
+.field public static final k:Le17;
+
+.field public static final l:Le17;
+
+.field public static final m:Le17;
+
+.field public static final n:Le17;
 
 
 # direct methods
-.method public synthetic constructor <init>(Leg4;I)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 15
 
-    iput p2, p0, Lcg4;->a:I
+    new-instance v0, Le17;
 
-    iput-object p1, p0, Lcg4;->b:Leg4;
+    const-string v1, "JPEG"
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const-string v2, "jpeg"
+
+    invoke-direct {v0, v1, v2}, Le17;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+
+    sput-object v0, Lcg4;->a:Le17;
+
+    new-instance v1, Le17;
+
+    const-string v2, "PNG"
+
+    const-string v3, "png"
+
+    invoke-direct {v1, v2, v3}, Le17;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+
+    sput-object v1, Lcg4;->b:Le17;
+
+    new-instance v2, Le17;
+
+    const-string v3, "GIF"
+
+    const-string v4, "gif"
+
+    invoke-direct {v2, v3, v4}, Le17;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+
+    sput-object v2, Lcg4;->c:Le17;
+
+    new-instance v3, Le17;
+
+    const-string v4, "BMP"
+
+    const-string v5, "bmp"
+
+    invoke-direct {v3, v4, v5}, Le17;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+
+    sput-object v3, Lcg4;->d:Le17;
+
+    new-instance v4, Le17;
+
+    const-string v5, "ICO"
+
+    const-string v6, "ico"
+
+    invoke-direct {v4, v5, v6}, Le17;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+
+    sput-object v4, Lcg4;->e:Le17;
+
+    new-instance v5, Le17;
+
+    const-string v6, "WEBP_SIMPLE"
+
+    const-string v7, "webp"
+
+    invoke-direct {v5, v6, v7}, Le17;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+
+    sput-object v5, Lcg4;->f:Le17;
+
+    new-instance v6, Le17;
+
+    const-string v8, "WEBP_LOSSLESS"
+
+    invoke-direct {v6, v8, v7}, Le17;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+
+    sput-object v6, Lcg4;->g:Le17;
+
+    move-object v8, v7
+
+    new-instance v7, Le17;
+
+    const-string v9, "WEBP_EXTENDED"
+
+    invoke-direct {v7, v9, v8}, Le17;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+
+    sput-object v7, Lcg4;->h:Le17;
+
+    move-object v9, v8
+
+    new-instance v8, Le17;
+
+    const-string v10, "WEBP_EXTENDED_WITH_ALPHA"
+
+    invoke-direct {v8, v10, v9}, Le17;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+
+    sput-object v8, Lcg4;->i:Le17;
+
+    move-object v10, v9
+
+    new-instance v9, Le17;
+
+    const-string v11, "WEBP_ANIMATED"
+
+    invoke-direct {v9, v11, v10}, Le17;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+
+    sput-object v9, Lcg4;->j:Le17;
+
+    new-instance v10, Le17;
+
+    const-string v11, "HEIF"
+
+    const-string v12, "heif"
+
+    invoke-direct {v10, v11, v12}, Le17;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+
+    sput-object v10, Lcg4;->k:Le17;
+
+    new-instance v11, Le17;
+
+    const-string v12, "DNG"
+
+    const-string v13, "dng"
+
+    invoke-direct {v11, v12, v13}, Le17;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+
+    sput-object v11, Lcg4;->l:Le17;
+
+    new-instance v11, Le17;
+
+    const-string v12, "BINARY_XML"
+
+    const-string v13, "xml"
+
+    invoke-direct {v11, v12, v13}, Le17;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+
+    sput-object v11, Lcg4;->m:Le17;
+
+    new-instance v12, Le17;
+
+    const-string v13, "AVIF"
+
+    const-string v14, "avif"
+
+    invoke-direct {v12, v13, v14}, Le17;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+
+    sput-object v12, Lcg4;->n:Le17;
+
+    filled-new-array/range {v0 .. v12}, [Le17;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lr73;->I([Ljava/lang/Object;)Ljava/util/List;
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final L(Liq1;)Ljava/lang/String;
-    .locals 1
-
-    iget v0, p0, Lcg4;->a:I
-
-    iget-object p0, p0, Lcg4;->b:Leg4;
-
-    packed-switch v0, :pswitch_data_0
-
-    iget-object v0, p0, Leg4;->a:Ljava/lang/Object;
-
-    monitor-enter v0
-
-    :try_start_0
-    iput-object p1, p0, Leg4;->f:Liq1;
-
-    monitor-exit v0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    new-instance p1, Ljava/lang/StringBuilder;
-
-    const-string v0, "DeferrableSurface-close("
-
-    invoke-direct {p1, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {p1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string p0, ")"
-
-    invoke-virtual {p1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
-
-    :catchall_0
-    move-exception p0
-
-    :try_start_1
-    monitor-exit v0
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    throw p0
-
-    :pswitch_0
-    iget-object v0, p0, Leg4;->a:Ljava/lang/Object;
-
-    monitor-enter v0
-
-    :try_start_2
-    iput-object p1, p0, Leg4;->d:Liq1;
-
-    monitor-exit v0
-    :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_1
-
-    new-instance p1, Ljava/lang/StringBuilder;
-
-    const-string v0, "DeferrableSurface-termination("
-
-    invoke-direct {p1, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {p1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string p0, ")"
-
-    invoke-virtual {p1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
-
-    :catchall_1
-    move-exception p0
-
-    :try_start_3
-    monitor-exit v0
-    :try_end_3
-    .catchall {:try_start_3 .. :try_end_3} :catchall_1
-
-    throw p0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
 .end method

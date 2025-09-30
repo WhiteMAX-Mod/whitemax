@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lzke;
+.implements Lgze;
 
 
 # annotations
@@ -14,7 +14,7 @@
     d2 = {
         "Lru/ok/TamBottomSheetDialogFragment;",
         "Lcom/google/android/material/bottomsheet/BottomSheetDialogFragment;",
-        "Lzke;",
+        "Lgze;",
         "ui-utils_release"
     }
     k = 0x1
@@ -28,7 +28,7 @@
 
 
 # instance fields
-.field public final y1:I
+.field public final B1:I
 
 
 # direct methods
@@ -37,7 +37,7 @@
 
     invoke-direct {p0}, Lcom/google/android/material/bottomsheet/BottomSheetDialogFragment;-><init>()V
 
-    iput p1, p0, Lru/ok/TamBottomSheetDialogFragment;->y1:I
+    iput p1, p0, Lru/ok/TamBottomSheetDialogFragment;->B1:I
 
     return-void
 .end method
@@ -47,7 +47,7 @@
 .method public final U0()I
     .locals 0
 
-    sget p0, Ll0c;->UiUtils_LightBottomSheetDialog:I
+    sget p0, Lycc;->UiUtils_LightBottomSheetDialog:I
 
     return p0
 .end method
@@ -55,7 +55,7 @@
 .method public final m0(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;
     .locals 1
 
-    iget-object p3, p0, Landroidx/fragment/app/DialogFragment;->s1:Landroid/app/Dialog;
+    iget-object p3, p0, Landroidx/fragment/app/DialogFragment;->v1:Landroid/app/Dialog;
 
     if-eqz p3, :cond_0
 
@@ -70,7 +70,7 @@
     invoke-virtual {p3, v0}, Landroid/view/Window;->setBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
 
     :cond_0
-    iget p0, p0, Lru/ok/TamBottomSheetDialogFragment;->y1:I
+    iget p0, p0, Lru/ok/TamBottomSheetDialogFragment;->B1:I
 
     const/4 p3, 0x0
 

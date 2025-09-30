@@ -1,75 +1,48 @@
 .class public final Ll21;
-.super Ljava/lang/Object;
-.source "SourceFile"
+.super Ljx3;
 
 
 # instance fields
-.field public final a:Lje7;
+.field public X:I
+
+.field public final synthetic Y:Lmv;
+
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Lje7;)V
+.method public constructor <init>(Lmv;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p1, p0, Ll21;->Y:Lmv;
 
-    iput-object p1, p0, Ll21;->a:Lje7;
+    invoke-direct {p0, p2}, Ljx3;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Lru/ok/android/externcalls/sdk/video/CameraManager;
-    .locals 0
+.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    iget-object p0, p0, Ll21;->a:Lje7;
+    iput-object p1, p0, Ll21;->o:Ljava/lang/Object;
 
-    invoke-interface {p0}, Lje7;->getValue()Ljava/lang/Object;
+    iget p1, p0, Ll21;->X:I
 
-    move-result-object p0
+    const/high16 v0, -0x80000000
 
-    check-cast p0, Law3;
+    or-int/2addr p1, v0
 
-    invoke-virtual {p0}, Law3;->a()Lru/ok/android/externcalls/sdk/Conversation;
+    iput p1, p0, Ll21;->X:I
 
-    move-result-object p0
-
-    if-eqz p0, :cond_0
-
-    invoke-interface {p0}, Lru/ok/android/externcalls/sdk/Conversation;->getCameraManager()Lru/ok/android/externcalls/sdk/video/CameraManager;
-
-    move-result-object p0
-
-    return-object p0
-
-    :cond_0
-    const/4 p0, 0x0
-
-    return-object p0
-.end method
-
-.method public final b()Z
-    .locals 2
-
-    invoke-virtual {p0}, Ll21;->a()Lru/ok/android/externcalls/sdk/video/CameraManager;
-
-    move-result-object p0
+    iget-object p1, p0, Ll21;->Y:Lmv;
 
     const/4 v0, 0x0
 
-    if-eqz p0, :cond_0
+    invoke-virtual {p1, v0, p0}, Lmv;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
-    invoke-interface {p0}, Lru/ok/android/externcalls/sdk/video/CameraManager;->isCapturingFromFrontCamera()Z
+    move-result-object p0
 
-    move-result p0
-
-    const/4 v1, 0x1
-
-    if-ne p0, v1, :cond_0
-
-    return v1
-
-    :cond_0
-    return v0
+    return-object p0
 .end method

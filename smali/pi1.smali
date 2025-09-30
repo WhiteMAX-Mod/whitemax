@@ -1,101 +1,48 @@
-.class public abstract Lpi1;
-.super Ljava/lang/Object;
-.source "SourceFile"
+.class public final Lpi1;
+.super Ljx3;
 
 
-# static fields
-.field public static final a:Lje7;
+# instance fields
+.field public X:I
+
+.field public final synthetic Y:Lmv;
+
+.field public synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public constructor <init>(Lmv;Lkotlin/coroutines/Continuation;)V
+    .locals 0
 
-    sget-object v0, Lqi1;->a:Lqi1;
+    iput-object p1, p0, Lpi1;->Y:Lmv;
 
-    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lu4;
-
-    move-result-object v0
-
-    const-class v1, Lbx2;
-
-    invoke-virtual {v0, v1}, Lu4;->d(Ljava/lang/Class;)Lwfe;
-
-    move-result-object v0
-
-    sput-object v0, Lpi1;->a:Lje7;
+    invoke-direct {p0, p2}, Ljx3;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
-.method public static a()Lje7;
-    .locals 2
 
-    sget-object v0, Lqi1;->a:Lqi1;
+# virtual methods
+.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lu4;
+    iput-object p1, p0, Lpi1;->o:Ljava/lang/Object;
 
-    move-result-object v0
+    iget p1, p0, Lpi1;->X:I
 
-    const-class v1, Lxy0;
+    const/high16 v0, -0x80000000
 
-    invoke-virtual {v0, v1}, Lu4;->d(Ljava/lang/Class;)Lwfe;
+    or-int/2addr p1, v0
 
-    move-result-object v0
+    iput p1, p0, Lpi1;->X:I
 
-    return-object v0
-.end method
+    iget-object p1, p0, Lpi1;->Y:Lmv;
 
-.method public static b()Lje7;
-    .locals 2
+    const/4 v0, 0x0
 
-    sget-object v0, Lqi1;->a:Lqi1;
+    invoke-virtual {p1, v0, p0}, Lmv;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
-    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lu4;
+    move-result-object p0
 
-    move-result-object v0
-
-    const-class v1, Lzm1;
-
-    invoke-virtual {v0, v1}, Lu4;->d(Ljava/lang/Class;)Lwfe;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public static c()Lje7;
-    .locals 2
-
-    sget-object v0, Lqi1;->a:Lqi1;
-
-    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lu4;
-
-    move-result-object v0
-
-    const-class v1, Lys1;
-
-    invoke-virtual {v0, v1}, Lu4;->d(Ljava/lang/Class;)Lwfe;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public static d()Lje7;
-    .locals 2
-
-    sget-object v0, Lqi1;->a:Lqi1;
-
-    invoke-virtual {v0}, Lscout/Component;->getAccessor()Lu4;
-
-    move-result-object v0
-
-    const-class v1, Lzd5;
-
-    invoke-virtual {v0, v1}, Lu4;->d(Ljava/lang/Class;)Lwfe;
-
-    move-result-object v0
-
-    return-object v0
+    return-object p0
 .end method

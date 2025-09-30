@@ -1,91 +1,157 @@
 .class public final Laz5;
-.super Ljava/lang/Object;
+.super Lcz5;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:Ljava/util/concurrent/ConcurrentSkipListSet;
+.field public final a:Ljava/lang/CharSequence;
 
-.field public final b:Lzy5;
-
-.field public final c:Ljava/util/ArrayList;
+.field public final b:Z
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 1
+.method public synthetic constructor <init>()V
+    .locals 2
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/4 v0, 0x0
 
-    new-instance v0, Ljava/util/concurrent/ConcurrentSkipListSet;
+    const/4 v1, 0x0
 
-    invoke-direct {v0}, Ljava/util/concurrent/ConcurrentSkipListSet;-><init>()V
-
-    iput-object v0, p0, Laz5;->a:Ljava/util/concurrent/ConcurrentSkipListSet;
-
-    new-instance v0, Lzy5;
-
-    invoke-direct {v0, p0}, Lzy5;-><init>(Laz5;)V
-
-    iput-object v0, p0, Laz5;->b:Lzy5;
-
-    new-instance v0, Ljava/util/ArrayList;
-
-    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
-
-    iput-object v0, p0, Laz5;->c:Ljava/util/ArrayList;
+    .line 4
+    invoke-direct {p0, v0, v1}, Laz5;-><init>(Ljava/lang/CharSequence;Z)V
 
     return-void
 .end method
 
-.method public static synthetic b(Laz5;Ljava/lang/String;Lv56;)Lxy5;
-    .locals 1
+.method public constructor <init>(Ljava/lang/CharSequence;Z)V
+    .locals 0
 
-    sget-object v0, Lgz4;->a:Lgz4;
+    .line 1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-virtual {p0, p1, v0, p2}, Laz5;->a(Ljava/lang/String;Ljava/lang/Iterable;Lv56;)Lxy5;
+    .line 2
+    iput-object p1, p0, Laz5;->a:Ljava/lang/CharSequence;
 
-    move-result-object p0
+    .line 3
+    iput-boolean p2, p0, Laz5;->b:Z
 
-    return-object p0
+    return-void
 .end method
 
 
 # virtual methods
-.method public final a(Ljava/lang/String;Ljava/lang/Iterable;Lv56;)Lxy5;
-    .locals 7
+.method public final a()Ljava/lang/CharSequence;
+    .locals 0
 
-    new-instance v0, Lxy5;
+    iget-object p0, p0, Laz5;->a:Ljava/lang/CharSequence;
 
-    new-instance v1, Lvg3;
+    return-object p0
+.end method
 
-    const/4 v6, 0x2
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
 
-    move-object v4, p0
+    const/4 v0, 0x1
 
-    move-object v5, p1
+    if-ne p0, p1, :cond_0
 
-    move-object v2, p2
+    return v0
 
-    move-object v3, p3
+    :cond_0
+    instance-of v1, p1, Laz5;
 
-    invoke-direct/range {v1 .. v6}, Lvg3;-><init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;I)V
+    const/4 v2, 0x0
 
-    invoke-direct {v0, v5, v1}, Lxy5;-><init>(Ljava/lang/String;Lvg3;)V
+    if-nez v1, :cond_1
 
-    iget-object p0, v4, Laz5;->c:Ljava/util/ArrayList;
+    return v2
 
-    const/4 p1, 0x0
+    :cond_1
+    check-cast p1, Laz5;
 
-    iget-object p2, v0, Lxy5;->b:Lyy5;
+    iget-object v1, p0, Laz5;->a:Ljava/lang/CharSequence;
 
-    invoke-virtual {p0, p1, p2}, Ljava/util/ArrayList;->add(ILjava/lang/Object;)V
+    iget-object v3, p1, Laz5;->a:Ljava/lang/CharSequence;
 
-    invoke-static {}, Ljava/util/concurrent/ForkJoinPool;->commonPool()Ljava/util/concurrent/ForkJoinPool;
+    invoke-static {v1, v3}, Lvyg;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_2
+
+    return v2
+
+    :cond_2
+    iget-boolean p0, p0, Laz5;->b:Z
+
+    iget-boolean p1, p1, Laz5;->b:Z
+
+    if-eq p0, p1, :cond_3
+
+    return v2
+
+    :cond_3
+    return v0
+.end method
+
+.method public final hashCode()I
+    .locals 1
+
+    iget-object v0, p0, Laz5;->a:Ljava/lang/CharSequence;
+
+    if-nez v0, :cond_0
+
+    const/4 v0, 0x0
+
+    goto :goto_0
+
+    :cond_0
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
+
+    move-result v0
+
+    :goto_0
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget-boolean p0, p0, Laz5;->b:Z
+
+    invoke-static {p0}, Ljava/lang/Boolean;->hashCode(Z)I
+
+    move-result p0
+
+    add-int/2addr p0, v0
+
+    return p0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 2
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "Creation(name="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v1, p0, Laz5;->a:Ljava/lang/CharSequence;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v1, ", isCreateButtonEnabled="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-boolean p0, p0, Laz5;->b:Z
+
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    const-string p0, ")"
+
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p0
 
-    invoke-virtual {p0, p2}, Ljava/util/concurrent/ForkJoinPool;->execute(Ljava/util/concurrent/ForkJoinTask;)V
-
-    return-object v0
+    return-object p0
 .end method

@@ -7,8 +7,8 @@
 .method public abstract a()V
 .end method
 
-.method public abstract b(ILpna;)V
+.method public abstract getState()[I
 .end method
 
-.method public abstract d(Lxse;Laa5;Lk1f;)V
+.method public abstract onStateChange([I)Z
 .end method

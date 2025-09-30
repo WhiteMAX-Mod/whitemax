@@ -1,56 +1,80 @@
 .class public final Lnjd;
-.super Ld46;
+.super Lure;
 .source "SourceFile"
+
+# interfaces
+.implements Lpc6;
 
 
 # instance fields
-.field public final synthetic h:I
+.field public synthetic X:Ljava/lang/Object;
 
-.field public final synthetic i:Landroid/graphics/Rect;
+.field public final synthetic Y:Lone/me/devmenu/server/ServerHostBottomSheet;
 
 
 # direct methods
-.method public synthetic constructor <init>(ILandroid/graphics/Rect;)V
+.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/devmenu/server/ServerHostBottomSheet;)V
     .locals 0
 
-    iput p1, p0, Lnjd;->h:I
+    iput-object p2, p0, Lnjd;->Y:Lone/me/devmenu/server/ServerHostBottomSheet;
 
-    iput-object p2, p0, Lnjd;->i:Landroid/graphics/Rect;
+    const/4 p2, 0x2
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p2, p1}, Lure;-><init>(ILkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final C()Landroid/graphics/Rect;
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
+
+    check-cast p2, Lkotlin/coroutines/Continuation;
+
+    invoke-virtual {p0, p1, p2}, Lnjd;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+
+    move-result-object p0
+
+    check-cast p0, Lnjd;
+
+    sget-object p1, Lylf;->a:Lylf;
+
+    invoke-virtual {p0, p1}, Lnjd;->o(Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-object p1
+.end method
+
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
     .locals 1
 
-    iget v0, p0, Lnjd;->h:I
+    new-instance v0, Lnjd;
 
-    packed-switch v0, :pswitch_data_0
+    iget-object p0, p0, Lnjd;->Y:Lone/me/devmenu/server/ServerHostBottomSheet;
 
-    iget-object p0, p0, Lnjd;->i:Landroid/graphics/Rect;
+    invoke-direct {v0, p2, p0}, Lnjd;-><init>(Lkotlin/coroutines/Continuation;Lone/me/devmenu/server/ServerHostBottomSheet;)V
+
+    iput-object p1, v0, Lnjd;->X:Ljava/lang/Object;
+
+    return-object v0
+.end method
+
+.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
+
+    invoke-static {p1}, Lqe5;->V(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Lnjd;->X:Ljava/lang/Object;
+
+    check-cast p1, Ljava/util/List;
+
+    iget-object p0, p0, Lnjd;->Y:Lone/me/devmenu/server/ServerHostBottomSheet;
+
+    iget-object p0, p0, Lone/me/devmenu/server/ServerHostBottomSheet;->B0:Lv06;
+
+    invoke-virtual {p0, p1}, Lls7;->E(Ljava/util/List;)V
+
+    sget-object p0, Lylf;->a:Lylf;
 
     return-object p0
-
-    :pswitch_0
-    iget-object p0, p0, Lnjd;->i:Landroid/graphics/Rect;
-
-    invoke-virtual {p0}, Landroid/graphics/Rect;->isEmpty()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    const/4 p0, 0x0
-
-    :cond_0
-    return-object p0
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
 .end method

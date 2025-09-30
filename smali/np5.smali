@@ -1,37 +1,20 @@
-.class public final Lnp5;
-.super Lbu3;
+.class public abstract Lnp5;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public X:Lkp5;
-
-.field public synthetic Y:Ljava/lang/Object;
-
-.field public Z:I
-
-.field public o:Lkcc;
-
-
-# virtual methods
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
+# direct methods
+.method public static a(Landroid/graphics/drawable/Drawable;)V
     .locals 1
 
-    iput-object p1, p0, Lnp5;->Y:Ljava/lang/Object;
+    instance-of v0, p0, Landroid/graphics/drawable/AnimatedVectorDrawable;
 
-    iget p1, p0, Lnp5;->Z:I
+    if-eqz v0, :cond_0
 
-    const/high16 v0, -0x80000000
+    check-cast p0, Landroid/graphics/drawable/AnimatedVectorDrawable;
 
-    or-int/2addr p1, v0
+    invoke-virtual {p0}, Landroid/graphics/drawable/AnimatedVectorDrawable;->start()V
 
-    iput p1, p0, Lnp5;->Z:I
-
-    const/4 p1, 0x0
-
-    invoke-static {p1, p0}, Lsgg;->s(Lzm5;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    return-object p0
+    :cond_0
+    return-void
 .end method

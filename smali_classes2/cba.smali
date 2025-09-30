@@ -3,109 +3,107 @@
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:Lje7;
+# static fields
+.field public static final a:Lzb0;
+
+.field public static final b:Lac0;
 
 
 # direct methods
-.method public constructor <init>(Lje7;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 2
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    new-instance v0, Lzb0;
 
-    iput-object p1, p0, Lcba;->a:Lje7;
+    const/4 v1, 0x0
+
+    invoke-direct {v0, v1}, Lzb0;-><init>(I)V
+
+    sput-object v0, Lcba;->a:Lzb0;
+
+    new-instance v0, Lac0;
+
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    sput-object v0, Lcba;->b:Lac0;
 
     return-void
 .end method
 
+.method public static a(Liba;)Llj0;
+    .locals 1
 
-# virtual methods
-.method public final a(JLbu3;Ljava/util/List;)Ljava/lang/Object;
-    .locals 4
-
-    instance-of v0, p3, Lbba;
+    instance-of v0, p0, Lfba;
 
     if-eqz v0, :cond_0
 
-    move-object v0, p3
-
-    check-cast v0, Lbba;
-
-    iget v1, v0, Lbba;->Y:I
-
-    const/high16 v2, -0x80000000
-
-    and-int v3, v1, v2
-
-    if-eqz v3, :cond_0
-
-    sub-int/2addr v1, v2
-
-    iput v1, v0, Lbba;->Y:I
-
-    goto :goto_0
-
-    :cond_0
-    new-instance v0, Lbba;
-
-    invoke-direct {v0, p0, p3}, Lbba;-><init>(Lcba;Lbu3;)V
-
-    :goto_0
-    iget-object p3, v0, Lbba;->o:Ljava/lang/Object;
-
-    iget v1, v0, Lbba;->Y:I
-
-    const/4 v2, 0x1
-
-    if-eqz v1, :cond_2
-
-    if-ne v1, v2, :cond_1
-
-    invoke-static {p3}, Lsgg;->Z(Ljava/lang/Object;)V
-
-    goto :goto_1
-
-    :cond_1
-    new-instance p0, Ljava/lang/IllegalStateException;
-
-    const-string p1, "call to \'resume\' before \'invoke\' with coroutine"
-
-    invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p0
-
-    :cond_2
-    invoke-static {p3}, Lsgg;->Z(Ljava/lang/Object;)V
-
-    iget-object p0, p0, Lcba;->a:Lje7;
-
-    invoke-interface {p0}, Lje7;->getValue()Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, Lrke;
-
-    new-instance p3, Lnb2;
-
-    invoke-direct {p3, p1, p2, p4}, Lnb2;-><init>(JLjava/util/List;)V
-
-    iput v2, v0, Lbba;->Y:I
-
-    invoke-virtual {p0, p3, v0}, Lrke;->e(Lije;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p3
-
-    sget-object p0, Lpx3;->a:Lpx3;
-
-    if-ne p3, p0, :cond_3
+    sget-object p0, Lcba;->a:Lzb0;
 
     return-object p0
 
-    :cond_3
-    :goto_1
-    check-cast p3, Lkd9;
+    :cond_0
+    instance-of v0, p0, Lhba;
 
-    iget-object p0, p3, Lkd9;->X:Ljava/util/List;
+    if-eqz v0, :cond_1
+
+    sget-object p0, Lcba;->b:Lac0;
+
+    return-object p0
+
+    :cond_1
+    sget-object v0, Lgba;->a:Lgba;
+
+    invoke-virtual {p0, v0}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+
+    move-result p0
+
+    if-eqz p0, :cond_2
+
+    const/4 p0, 0x0
+
+    return-object p0
+
+    :cond_2
+    new-instance p0, Lkotlin/NoWhenBranchMatchedException;
+
+    invoke-direct {p0}, Lkotlin/NoWhenBranchMatchedException;-><init>()V
+
+    throw p0
+.end method
+
+.method public static b(Ljava/lang/String;Liba;)Li27;
+    .locals 1
+
+    invoke-static {p0}, Lsu0;->d(Ljava/lang/String;)Landroid/net/Uri;
+
+    move-result-object p0
+
+    if-nez p0, :cond_0
+
+    sget-object p0, Landroid/net/Uri;->EMPTY:Landroid/net/Uri;
+
+    :cond_0
+    invoke-static {p0}, Lj27;->d(Landroid/net/Uri;)Lj27;
+
+    move-result-object p0
+
+    sget-object v0, Lg27;->b:Lg27;
+
+    iput-object v0, p0, Lj27;->g:Lg27;
+
+    invoke-static {p1}, Lcba;->a(Liba;)Llj0;
+
+    move-result-object p1
+
+    iput-object p1, p0, Lj27;->k:Lvfb;
+
+    sget-object p1, Ldib;->c:Ldib;
+
+    iput-object p1, p0, Lj27;->j:Ldib;
+
+    invoke-virtual {p0}, Lj27;->a()Li27;
+
+    move-result-object p0
 
     return-object p0
 .end method

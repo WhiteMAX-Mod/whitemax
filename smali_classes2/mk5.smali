@@ -2,130 +2,257 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ly9a;
+
 
 # instance fields
-.field public a:J
+.field public final a:Lfo8;
 
-.field public b:J
+.field public final b:Ljava/util/concurrent/locks/ReentrantLock;
 
-.field public c:Z
-
-.field public final d:Llk5;
+.field public c:J
 
 
 # direct methods
-.method public constructor <init>(Lfqa;)V
-    .locals 1
+.method public constructor <init>(Lfo8;Ljava/util/concurrent/locks/ReentrantLock;Ljava/lang/String;)V
+    .locals 2
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 v0, 0x0
+    const-wide/16 v0, -0x1
 
-    iput-boolean v0, p0, Lmk5;->c:Z
+    iput-wide v0, p0, Lmk5;->c:J
 
-    iput-object p1, p0, Lmk5;->d:Llk5;
+    iput-object p1, p0, Lmk5;->a:Lfo8;
+
+    iput-object p2, p0, Lmk5;->b:Ljava/util/concurrent/locks/ReentrantLock;
 
     return-void
 .end method
 
-.method public static a(Ljava/lang/String;)J
-    .locals 7
 
-    const-string v0, "\n"
+# virtual methods
+.method public final a()V
+    .locals 5
 
-    invoke-virtual {p0, v0}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
+    iget-object v0, p0, Lmk5;->b:Ljava/util/concurrent/locks/ReentrantLock;
 
-    move-result-object p0
+    iget-object v1, p0, Lmk5;->a:Lfo8;
 
-    array-length v0, p0
+    invoke-virtual {v1}, Lfo8;->get()Ljava/lang/Object;
 
-    const/4 v1, 0x0
+    move-result-object v1
 
-    const/4 v2, 0x0
+    check-cast v1, Ljava/io/File;
+
+    :try_start_0
+    invoke-virtual {v0}, Ljava/util/concurrent/locks/ReentrantLock;->lock()V
+
+    invoke-virtual {v1}, Ljava/io/File;->exists()Z
+
+    move-result v2
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    if-nez v2, :cond_0
 
     :goto_0
-    const/4 v3, 0x1
+    invoke-virtual {v1}, Ljava/io/File;->length()J
 
-    if-ge v2, v0, :cond_1
+    move-result-wide v1
 
-    aget-object v4, p0, v2
+    iput-wide v1, p0, Lmk5;->c:J
 
-    const-string v5, "a=fingerprint"
+    invoke-virtual {v0}, Ljava/util/concurrent/locks/ReentrantLock;->unlock()V
 
-    invoke-virtual {v4, v5}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
-
-    move-result v5
-
-    if-eqz v5, :cond_0
-
-    const-string v5, " "
-
-    invoke-virtual {v4, v5}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
-
-    move-result-object v4
-
-    array-length v5, v4
-
-    const/4 v6, 0x2
-
-    if-ne v5, v6, :cond_0
-
-    aget-object v1, v4, v3
+    return-void
 
     :cond_0
-    add-int/lit8 v2, v2, 0x1
+    :try_start_1
+    invoke-static {v1}, Lbp5;->b(Ljava/io/File;)V
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
     goto :goto_0
 
-    :cond_1
-    if-eqz v1, :cond_3
+    :catchall_0
+    move-exception v2
 
-    const-string p0, ":"
+    invoke-virtual {v1}, Ljava/io/File;->length()J
 
-    invoke-virtual {v1, p0}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
+    move-result-wide v3
 
-    move-result-object p0
+    iput-wide v3, p0, Lmk5;->c:J
 
-    array-length v0, p0
+    invoke-virtual {v0}, Ljava/util/concurrent/locks/ReentrantLock;->unlock()V
 
-    sub-int/2addr v0, v3
+    throw v2
+.end method
 
-    const/4 v1, 0x7
+.method public final b()J
+    .locals 5
 
-    invoke-static {v1, v0}, Ljava/lang/Math;->min(II)I
+    iget-object v0, p0, Lmk5;->b:Ljava/util/concurrent/locks/ReentrantLock;
 
-    move-result v0
+    iget-wide v1, p0, Lmk5;->c:J
 
-    const-wide/16 v1, 0x0
+    const-wide/16 v3, 0x0
+
+    cmp-long v3, v1, v3
+
+    if-ltz v3, :cond_0
+
+    return-wide v1
+
+    :cond_0
+    iget-object v1, p0, Lmk5;->a:Lfo8;
+
+    invoke-virtual {v1}, Lfo8;->get()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Ljava/io/File;
+
+    :try_start_0
+    invoke-virtual {v0}, Ljava/util/concurrent/locks/ReentrantLock;->lock()V
+
+    invoke-virtual {v1}, Ljava/io/File;->length()J
+
+    move-result-wide v1
+
+    iput-wide v1, p0, Lmk5;->c:J
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    invoke-virtual {v0}, Ljava/util/concurrent/locks/ReentrantLock;->unlock()V
+
+    iget-wide v0, p0, Lmk5;->c:J
+
+    return-wide v0
+
+    :catchall_0
+    move-exception p0
+
+    invoke-virtual {v0}, Ljava/util/concurrent/locks/ReentrantLock;->unlock()V
+
+    throw p0
+.end method
+
+.method public final c(Lbaa;)V
+    .locals 7
+
+    iget-object v0, p0, Lmk5;->b:Ljava/util/concurrent/locks/ReentrantLock;
+
+    iget-object v1, p0, Lmk5;->a:Lfo8;
+
+    invoke-virtual {v1}, Lfo8;->get()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Ljava/io/File;
+
+    :try_start_0
+    invoke-virtual {v0}, Ljava/util/concurrent/locks/ReentrantLock;->lock()V
+
+    invoke-static {v1}, Lbp5;->d(Ljava/io/File;)V
+
+    new-instance v2, Ljava/io/FileOutputStream;
+
+    const/4 v3, 0x1
+
+    invoke-direct {v2, v1, v3}, Ljava/io/FileOutputStream;-><init>(Ljava/io/File;Z)V
+    :try_end_0
+    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_1
+
+    :try_start_1
+    invoke-virtual {v1}, Ljava/io/File;->length()J
+
+    move-result-wide v3
+
+    const-wide/16 v5, 0x0
+
+    cmp-long v3, v3, v5
+
+    if-lez v3, :cond_0
+
+    sget-object v3, Lbp5;->a:[B
+
+    invoke-virtual {v2, v3}, Ljava/io/FileOutputStream;->write([B)V
+
+    goto :goto_0
+
+    :catchall_0
+    move-exception p1
+
+    goto :goto_2
+
+    :cond_0
+    :goto_0
+    new-instance v3, Lcwa;
+
+    invoke-direct {v3, v2}, Lcwa;-><init>(Ljava/io/OutputStream;)V
+
+    invoke-static {p1, v3}, Lw7;->k(Lbaa;Ljava/io/Writer;)V
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    :try_start_2
+    invoke-virtual {v2}, Ljava/io/FileOutputStream;->close()V
+
+    invoke-static {p1}, Lw7;->j(Lbaa;)V
+    :try_end_2
+    .catch Ljava/io/IOException; {:try_start_2 .. :try_end_2} :catch_0
+    .catchall {:try_start_2 .. :try_end_2} :catchall_1
 
     :goto_1
-    if-ltz v0, :cond_2
+    invoke-virtual {v1}, Ljava/io/File;->length()J
 
-    aget-object v3, p0, v0
+    move-result-wide v1
 
-    const/16 v4, 0x10
+    iput-wide v1, p0, Lmk5;->c:J
 
-    invoke-static {v3, v4}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;I)I
+    invoke-virtual {v0}, Ljava/util/concurrent/locks/ReentrantLock;->unlock()V
 
-    move-result v3
+    return-void
 
-    const/16 v4, 0x8
+    :catchall_1
+    move-exception p1
 
-    shl-long/2addr v1, v4
+    goto :goto_3
 
-    int-to-long v3, v3
+    :goto_2
+    :try_start_3
+    invoke-virtual {v2}, Ljava/io/FileOutputStream;->close()V
 
-    or-long/2addr v1, v3
+    throw p1
+    :try_end_3
+    .catch Ljava/io/IOException; {:try_start_3 .. :try_end_3} :catch_0
+    .catchall {:try_start_3 .. :try_end_3} :catchall_1
 
-    add-int/lit8 v0, v0, -0x1
+    :catch_0
+    :try_start_4
+    invoke-virtual {v1}, Ljava/io/File;->delete()Z
+    :try_end_4
+    .catchall {:try_start_4 .. :try_end_4} :catchall_1
 
     goto :goto_1
 
-    :cond_2
-    return-wide v1
+    :goto_3
+    invoke-virtual {v1}, Ljava/io/File;->length()J
 
-    :cond_3
-    const-wide/16 v0, -0x1
+    move-result-wide v1
 
-    return-wide v0
+    iput-wide v1, p0, Lmk5;->c:J
+
+    invoke-virtual {v0}, Ljava/util/concurrent/locks/ReentrantLock;->unlock()V
+
+    throw p1
+.end method
+
+.method public final flush()V
+    .locals 0
+
+    return-void
 .end method

@@ -1,219 +1,204 @@
-.class public abstract Lq0c;
+.class public final Lq0c;
 .super Ljava/lang/Object;
+.source "SourceFile"
+
+# interfaces
+.implements Lqqe;
 
 
-# static fields
-.field public static GenericDraweeHierarchy:[I = null
+# instance fields
+.field public final a:Lqqe;
 
-.field public static GenericDraweeHierarchy_actualImageScaleType:I = 0x0
+.field public final b:Ljava/util/concurrent/Executor;
 
-.field public static GenericDraweeHierarchy_backgroundImage:I = 0x1
+.field public final c:Lh2a;
 
-.field public static GenericDraweeHierarchy_fadeDuration:I = 0x2
-
-.field public static GenericDraweeHierarchy_failureImage:I = 0x3
-
-.field public static GenericDraweeHierarchy_failureImageScaleType:I = 0x4
-
-.field public static GenericDraweeHierarchy_overlayImage:I = 0x5
-
-.field public static GenericDraweeHierarchy_placeholderImage:I = 0x6
-
-.field public static GenericDraweeHierarchy_placeholderImageScaleType:I = 0x7
-
-.field public static GenericDraweeHierarchy_pressedStateOverlayImage:I = 0x8
-
-.field public static GenericDraweeHierarchy_progressBarAutoRotateInterval:I = 0x9
-
-.field public static GenericDraweeHierarchy_progressBarImage:I = 0xa
-
-.field public static GenericDraweeHierarchy_progressBarImageScaleType:I = 0xb
-
-.field public static GenericDraweeHierarchy_retryImage:I = 0xc
-
-.field public static GenericDraweeHierarchy_retryImageScaleType:I = 0xd
-
-.field public static GenericDraweeHierarchy_roundAsCircle:I = 0xe
-
-.field public static GenericDraweeHierarchy_roundBottomEnd:I = 0xf
-
-.field public static GenericDraweeHierarchy_roundBottomLeft:I = 0x10
-
-.field public static GenericDraweeHierarchy_roundBottomRight:I = 0x11
-
-.field public static GenericDraweeHierarchy_roundBottomStart:I = 0x12
-
-.field public static GenericDraweeHierarchy_roundTopEnd:I = 0x13
-
-.field public static GenericDraweeHierarchy_roundTopLeft:I = 0x14
-
-.field public static GenericDraweeHierarchy_roundTopRight:I = 0x15
-
-.field public static GenericDraweeHierarchy_roundTopStart:I = 0x16
-
-.field public static GenericDraweeHierarchy_roundWithOverlayColor:I = 0x17
-
-.field public static GenericDraweeHierarchy_roundedCornerRadius:I = 0x18
-
-.field public static GenericDraweeHierarchy_roundingBorderColor:I = 0x19
-
-.field public static GenericDraweeHierarchy_roundingBorderPadding:I = 0x1a
-
-.field public static GenericDraweeHierarchy_roundingBorderWidth:I = 0x1b
-
-.field public static GenericDraweeHierarchy_viewAspectRatio:I = 0x1c
-
-.field public static SimpleDraweeView:[I = null
-
-.field public static SimpleDraweeView_actualImageResource:I = 0x0
-
-.field public static SimpleDraweeView_actualImageUri:I = 0x1
-
-.field public static SimpleDraweeView_backgroundImage:I = 0x2
-
-.field public static SimpleDraweeView_fadeDuration:I = 0x3
-
-.field public static SimpleDraweeView_failureImage:I = 0x4
-
-.field public static SimpleDraweeView_failureImageScaleType:I = 0x5
-
-.field public static SimpleDraweeView_overlayImage:I = 0x6
-
-.field public static SimpleDraweeView_placeholderImage:I = 0x7
-
-.field public static SimpleDraweeView_placeholderImageScaleType:I = 0x8
-
-.field public static SimpleDraweeView_pressedStateOverlayImage:I = 0x9
-
-.field public static SimpleDraweeView_progressBarAutoRotateInterval:I = 0xa
-
-.field public static SimpleDraweeView_progressBarImage:I = 0xb
-
-.field public static SimpleDraweeView_progressBarImageScaleType:I = 0xc
-
-.field public static SimpleDraweeView_retryImage:I = 0xd
-
-.field public static SimpleDraweeView_retryImageScaleType:I = 0xe
-
-.field public static SimpleDraweeView_roundAsCircle:I = 0xf
-
-.field public static SimpleDraweeView_roundBottomEnd:I = 0x10
-
-.field public static SimpleDraweeView_roundBottomLeft:I = 0x11
-
-.field public static SimpleDraweeView_roundBottomRight:I = 0x12
-
-.field public static SimpleDraweeView_roundBottomStart:I = 0x13
-
-.field public static SimpleDraweeView_roundTopEnd:I = 0x14
-
-.field public static SimpleDraweeView_roundTopLeft:I = 0x15
-
-.field public static SimpleDraweeView_roundTopRight:I = 0x16
-
-.field public static SimpleDraweeView_roundTopStart:I = 0x17
-
-.field public static SimpleDraweeView_roundWithOverlayColor:I = 0x18
-
-.field public static SimpleDraweeView_roundedCornerRadius:I = 0x19
-
-.field public static SimpleDraweeView_roundingBorderColor:I = 0x1a
-
-.field public static SimpleDraweeView_roundingBorderPadding:I = 0x1b
-
-.field public static SimpleDraweeView_roundingBorderWidth:I = 0x1c
-
-.field public static SimpleDraweeView_viewAspectRatio:I = 0x1d
+.field public final o:Ljava/util/ArrayList;
 
 
 # direct methods
-.method public static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(Lqqe;Ljava/lang/String;Ljava/util/concurrent/Executor;Lh2a;)V
+    .locals 0
 
-    const/16 v0, 0x1d
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    new-array v0, v0, [I
+    iput-object p1, p0, Lq0c;->a:Lqqe;
 
-    fill-array-data v0, :array_0
+    iput-object p3, p0, Lq0c;->b:Ljava/util/concurrent/Executor;
 
-    sput-object v0, Lq0c;->GenericDraweeHierarchy:[I
+    iput-object p4, p0, Lq0c;->c:Lh2a;
 
-    const/16 v0, 0x1e
+    new-instance p1, Ljava/util/ArrayList;
 
-    new-array v0, v0, [I
+    invoke-direct {p1}, Ljava/util/ArrayList;-><init>()V
 
-    fill-array-data v0, :array_1
-
-    sput-object v0, Lq0c;->SimpleDraweeView:[I
+    iput-object p1, p0, Lq0c;->o:Ljava/util/ArrayList;
 
     return-void
+.end method
 
-    nop
 
-    :array_0
-    .array-data 4
-        0x7f04002b
-        0x7f04005d
-        0x7f0403ad
-        0x7f0403ae
-        0x7f0403af
-        0x7f0406c2
-        0x7f0406df
-        0x7f0406e0
-        0x7f0406fd
-        0x7f040700
-        0x7f040701
-        0x7f040702
-        0x7f04071c
-        0x7f04071d
-        0x7f040722
-        0x7f040723
-        0x7f040724
-        0x7f040725
-        0x7f040726
-        0x7f040729
-        0x7f04072a
-        0x7f04072b
-        0x7f04072c
-        0x7f04072d
-        0x7f04072e
-        0x7f04072f
-        0x7f040730
-        0x7f040731
-        0x7f0408d9
-    .end array-data
+# virtual methods
+.method public final C()I
+    .locals 2
 
-    :array_1
-    .array-data 4
-        0x7f04002a
-        0x7f04002c
-        0x7f04005d
-        0x7f0403ad
-        0x7f0403ae
-        0x7f0403af
-        0x7f0406c2
-        0x7f0406df
-        0x7f0406e0
-        0x7f0406fd
-        0x7f040700
-        0x7f040701
-        0x7f040702
-        0x7f04071c
-        0x7f04071d
-        0x7f040722
-        0x7f040723
-        0x7f040724
-        0x7f040725
-        0x7f040726
-        0x7f040729
-        0x7f04072a
-        0x7f04072b
-        0x7f04072c
-        0x7f04072d
-        0x7f04072e
-        0x7f04072f
-        0x7f040730
-        0x7f040731
-        0x7f0408d9
-    .end array-data
+    new-instance v0, Lp0c;
+
+    const/4 v1, 0x1
+
+    invoke-direct {v0, p0, v1}, Lp0c;-><init>(Lq0c;I)V
+
+    iget-object v1, p0, Lq0c;->b:Ljava/util/concurrent/Executor;
+
+    invoke-interface {v1, v0}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
+
+    iget-object p0, p0, Lq0c;->a:Lqqe;
+
+    invoke-interface {p0}, Lqqe;->C()I
+
+    move-result p0
+
+    return p0
+.end method
+
+.method public final Z(I)V
+    .locals 1
+
+    const/4 v0, 0x0
+
+    invoke-virtual {p0, p1, v0}, Lq0c;->c(ILjava/lang/Object;)V
+
+    iget-object p0, p0, Lq0c;->a:Lqqe;
+
+    invoke-interface {p0, p1}, Loqe;->Z(I)V
+
+    return-void
+.end method
+
+.method public final c(ILjava/lang/Object;)V
+    .locals 3
+
+    add-int/lit8 p1, p1, -0x1
+
+    iget-object p0, p0, Lq0c;->o:Ljava/util/ArrayList;
+
+    invoke-virtual {p0}, Ljava/util/ArrayList;->size()I
+
+    move-result v0
+
+    if-lt p1, v0, :cond_0
+
+    invoke-virtual {p0}, Ljava/util/ArrayList;->size()I
+
+    move-result v0
+
+    sub-int v0, p1, v0
+
+    add-int/lit8 v0, v0, 0x1
+
+    const/4 v1, 0x0
+
+    :goto_0
+    if-ge v1, v0, :cond_0
+
+    const/4 v2, 0x0
+
+    invoke-virtual {p0, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    add-int/lit8 v1, v1, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    invoke-virtual {p0, p1, p2}, Ljava/util/ArrayList;->set(ILjava/lang/Object;)Ljava/lang/Object;
+
+    return-void
+.end method
+
+.method public final close()V
+    .locals 0
+
+    iget-object p0, p0, Lq0c;->a:Lqqe;
+
+    invoke-interface {p0}, Ljava/io/Closeable;->close()V
+
+    return-void
+.end method
+
+.method public final f(ILjava/lang/String;)V
+    .locals 0
+
+    invoke-virtual {p0, p1, p2}, Lq0c;->c(ILjava/lang/Object;)V
+
+    iget-object p0, p0, Lq0c;->a:Lqqe;
+
+    invoke-interface {p0, p1, p2}, Loqe;->f(ILjava/lang/String;)V
+
+    return-void
+.end method
+
+.method public final g(ID)V
+    .locals 1
+
+    invoke-static {p2, p3}, Ljava/lang/Double;->valueOf(D)Ljava/lang/Double;
+
+    move-result-object v0
+
+    invoke-virtual {p0, p1, v0}, Lq0c;->c(ILjava/lang/Object;)V
+
+    iget-object p0, p0, Lq0c;->a:Lqqe;
+
+    invoke-interface {p0, p1, p2, p3}, Loqe;->g(ID)V
+
+    return-void
+.end method
+
+.method public final k(IJ)V
+    .locals 1
+
+    invoke-static {p2, p3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v0
+
+    invoke-virtual {p0, p1, v0}, Lq0c;->c(ILjava/lang/Object;)V
+
+    iget-object p0, p0, Lq0c;->a:Lqqe;
+
+    invoke-interface {p0, p1, p2, p3}, Loqe;->k(IJ)V
+
+    return-void
+.end method
+
+.method public final l(I[B)V
+    .locals 0
+
+    invoke-virtual {p0, p1, p2}, Lq0c;->c(ILjava/lang/Object;)V
+
+    iget-object p0, p0, Lq0c;->a:Lqqe;
+
+    invoke-interface {p0, p1, p2}, Loqe;->l(I[B)V
+
+    return-void
+.end method
+
+.method public final n0()J
+    .locals 2
+
+    new-instance v0, Lp0c;
+
+    const/4 v1, 0x0
+
+    invoke-direct {v0, p0, v1}, Lp0c;-><init>(Lq0c;I)V
+
+    iget-object v1, p0, Lq0c;->b:Ljava/util/concurrent/Executor;
+
+    invoke-interface {v1, v0}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
+
+    iget-object p0, p0, Lq0c;->a:Lqqe;
+
+    invoke-interface {p0}, Lqqe;->n0()J
+
+    move-result-wide v0
+
+    return-wide v0
 .end method

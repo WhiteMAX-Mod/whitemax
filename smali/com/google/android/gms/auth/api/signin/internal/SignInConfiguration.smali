@@ -1,5 +1,5 @@
 .class public final Lcom/google/android/gms/auth/api/signin/internal/SignInConfiguration;
-.super Ln3;
+.super Lr3;
 .source "SourceFile"
 
 # interfaces
@@ -28,11 +28,11 @@
 .method static constructor <clinit>()V
     .locals 2
 
-    new-instance v0, Ltgg;
+    new-instance v0, Lp3h;
 
-    const/16 v1, 0x17
+    const/16 v1, 0x1d
 
-    invoke-direct {v0, v1}, Ltgg;-><init>(I)V
+    invoke-direct {v0, v1}, Lp3h;-><init>(I)V
 
     sput-object v0, Lcom/google/android/gms/auth/api/signin/internal/SignInConfiguration;->CREATOR:Landroid/os/Parcelable$Creator;
 
@@ -44,7 +44,7 @@
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-static {p1}, Lkhg;->g(Ljava/lang/String;)V
+    invoke-static {p1}, Ljk7;->p(Ljava/lang/String;)V
 
     iput-object p1, p0, Lcom/google/android/gms/auth/api/signin/internal/SignInConfiguration;->a:Ljava/lang/String;
 
@@ -154,7 +154,7 @@
 
     const/16 v0, 0x4f45
 
-    invoke-static {p1, v0}, Lq14;->B0(Landroid/os/Parcel;I)I
+    invoke-static {p1, v0}, Ljs9;->U(Landroid/os/Parcel;I)I
 
     move-result v0
 
@@ -162,15 +162,15 @@
 
     iget-object v2, p0, Lcom/google/android/gms/auth/api/signin/internal/SignInConfiguration;->a:Ljava/lang/String;
 
-    invoke-static {p1, v1, v2}, Lq14;->y0(Landroid/os/Parcel;ILjava/lang/String;)V
+    invoke-static {p1, v1, v2}, Ljs9;->P(Landroid/os/Parcel;ILjava/lang/String;)V
 
     const/4 v1, 0x5
 
     iget-object p0, p0, Lcom/google/android/gms/auth/api/signin/internal/SignInConfiguration;->b:Lcom/google/android/gms/auth/api/signin/GoogleSignInOptions;
 
-    invoke-static {p1, v1, p0, p2}, Lq14;->x0(Landroid/os/Parcel;ILandroid/os/Parcelable;I)V
+    invoke-static {p1, v1, p0, p2}, Ljs9;->O(Landroid/os/Parcel;ILandroid/os/Parcelable;I)V
 
-    invoke-static {p1, v0}, Lq14;->C0(Landroid/os/Parcel;I)V
+    invoke-static {p1, v0}, Ljs9;->V(Landroid/os/Parcel;I)V
 
     return-void
 .end method

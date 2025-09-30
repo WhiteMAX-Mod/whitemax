@@ -1,21 +1,31 @@
-.class public final Lir8;
+.class public abstract Lir8;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final a:Lir8;
+# instance fields
+.field public final a:J
+
+.field public final b:J
+
+.field public final c:Lcr8;
+
+.field public final d:Ljr8;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(JJLcr8;Ljr8;)V
+    .locals 0
 
-    new-instance v0, Lir8;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    iput-wide p1, p0, Lir8;->a:J
 
-    sput-object v0, Lir8;->a:Lir8;
+    iput-wide p3, p0, Lir8;->b:J
+
+    iput-object p5, p0, Lir8;->c:Lcr8;
+
+    iput-object p6, p0, Lir8;->d:Ljr8;
 
     return-void
 .end method

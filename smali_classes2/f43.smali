@@ -1,64 +1,27 @@
 .class public final Lf43;
-.super Ljava/lang/Object;
+.super Lzoc;
 .source "SourceFile"
-
-# interfaces
-.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public final E0:Landroidx/appcompat/widget/AppCompatCheckBox;
 
-.field public final synthetic b:Li43;
+.field public final F0:Landroidx/appcompat/widget/AppCompatTextView;
 
-.field public final synthetic c:Landroid/graphics/drawable/Drawable;
+.field public final G0:Landroidx/appcompat/widget/AppCompatTextView;
 
 
 # direct methods
-.method public synthetic constructor <init>(Li43;Landroid/graphics/drawable/Drawable;I)V
+.method public constructor <init>(Landroid/widget/LinearLayout;Landroidx/appcompat/widget/AppCompatCheckBox;Landroidx/appcompat/widget/AppCompatTextView;Landroidx/appcompat/widget/AppCompatTextView;)V
     .locals 0
 
-    iput p3, p0, Lf43;->a:I
+    invoke-direct {p0, p1}, Lzoc;-><init>(Landroid/view/View;)V
 
-    iput-object p1, p0, Lf43;->b:Li43;
+    iput-object p2, p0, Lf43;->E0:Landroidx/appcompat/widget/AppCompatCheckBox;
 
-    iput-object p2, p0, Lf43;->c:Landroid/graphics/drawable/Drawable;
+    iput-object p3, p0, Lf43;->F0:Landroidx/appcompat/widget/AppCompatTextView;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final run()V
-    .locals 1
-
-    iget v0, p0, Lf43;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    iget-object v0, p0, Lf43;->b:Li43;
-
-    iget-object p0, p0, Lf43;->c:Landroid/graphics/drawable/Drawable;
-
-    invoke-static {v0, p0}, Li43;->A(Li43;Landroid/graphics/drawable/Drawable;)V
+    iput-object p4, p0, Lf43;->G0:Landroidx/appcompat/widget/AppCompatTextView;
 
     return-void
-
-    :pswitch_0
-    iget-object v0, p0, Lf43;->b:Li43;
-
-    iget-object p0, p0, Lf43;->c:Landroid/graphics/drawable/Drawable;
-
-    invoke-static {v0, p0}, Li43;->y(Li43;Landroid/graphics/drawable/Drawable;)V
-
-    return-void
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
 .end method

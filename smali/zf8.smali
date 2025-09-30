@@ -1,35 +1,53 @@
-.class public final Lzf8;
+.class public final synthetic Lzf8;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lpt7;
+.implements Lom3;
+
 
 # instance fields
-.field public final a:Lif8;
-
-.field public final b:I
-
-.field public final c:Z
-
-.field public final d:Z
-
-.field public final e:Z
+.field public final synthetic a:Ldcb;
 
 
 # direct methods
-.method public constructor <init>(Lif8;IZZZ)V
+.method public synthetic constructor <init>(Ldcb;)V
     .locals 0
+
+    iput-object p1, p0, Lzf8;->a:Ldcb;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lzf8;->a:Lif8;
+    return-void
+.end method
 
-    iput p2, p0, Lzf8;->b:I
 
-    iput-boolean p3, p0, Lzf8;->c:Z
+# virtual methods
+.method public accept(Ljava/lang/Object;)V
+    .locals 0
 
-    iput-boolean p4, p0, Lzf8;->d:Z
+    check-cast p1, Lbeb;
 
-    iput-boolean p5, p0, Lzf8;->e:Z
+    invoke-virtual {p1}, Lbeb;->p0()V
+
+    iget-object p1, p1, Lbeb;->a:Ltc5;
+
+    iget-object p0, p0, Lzf8;->a:Ldcb;
+
+    invoke-virtual {p1, p0}, Ltc5;->z1(Ldcb;)V
+
+    return-void
+.end method
+
+.method public invoke(Ljava/lang/Object;)V
+    .locals 0
+
+    iget-object p0, p0, Lzf8;->a:Ldcb;
+
+    check-cast p1, Lscb;
+
+    invoke-interface {p1, p0}, Lscb;->y0(Ldcb;)V
 
     return-void
 .end method

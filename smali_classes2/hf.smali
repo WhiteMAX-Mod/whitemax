@@ -1,131 +1,144 @@
-.class public final Lhf;
+.class public final synthetic Lhf;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Landroid/animation/ValueAnimator$AnimatorUpdateListener;
+
 
 # instance fields
-.field public final a:Ljava/lang/Float;
+.field public final synthetic a:I
 
-.field public final b:Ljava/lang/Float;
+.field public final synthetic b:F
+
+.field public final synthetic c:Ljava/lang/Object;
+
+.field public final synthetic o:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/Float;Ljava/lang/Float;)V
+.method public synthetic constructor <init>(Ljava/lang/Object;Ljava/lang/Object;FI)V
     .locals 0
 
+    iput p4, p0, Lhf;->a:I
+
+    iput-object p1, p0, Lhf;->c:Ljava/lang/Object;
+
+    iput-object p2, p0, Lhf;->o:Ljava/lang/Object;
+
+    iput p3, p0, Lhf;->b:F
+
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lhf;->a:Ljava/lang/Float;
-
-    iput-object p2, p0, Lhf;->b:Ljava/lang/Float;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 2
+.method public final onAnimationUpdate(Landroid/animation/ValueAnimator;)V
+    .locals 4
 
-    if-ne p0, p1, :cond_0
+    iget v0, p0, Lhf;->a:I
 
-    goto :goto_1
+    packed-switch v0, :pswitch_data_0
 
-    :cond_0
-    instance-of v0, p1, Lhf;
+    iget-object v0, p0, Lhf;->c:Ljava/lang/Object;
 
-    if-nez v0, :cond_1
+    check-cast v0, Ljte;
 
-    goto :goto_0
+    iget-object v1, p0, Lhf;->o:Ljava/lang/Object;
 
-    :cond_1
-    check-cast p1, Lhf;
+    check-cast v1, Lpc6;
 
-    iget-object v0, p0, Lhf;->a:Ljava/lang/Float;
+    invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
 
-    iget-object v1, p1, Lhf;->a:Ljava/lang/Float;
+    move-result-object v2
 
-    invoke-virtual {v0, v1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+    check-cast v2, Ljava/lang/Integer;
 
-    move-result v0
+    invoke-virtual {v2}, Ljava/lang/Integer;->intValue()I
 
-    if-nez v0, :cond_2
+    move-result v2
 
-    goto :goto_0
+    invoke-interface {v0}, Ljte;->g()I
 
-    :cond_2
-    iget-object p0, p0, Lhf;->b:Ljava/lang/Float;
+    move-result v3
 
-    iget-object p1, p1, Lhf;->b:Ljava/lang/Float;
+    sub-int/2addr v2, v3
 
-    invoke-virtual {p0, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+    invoke-interface {v0}, Ljte;->l()Landroid/view/View;
 
-    move-result p0
+    move-result-object v0
 
-    if-nez p0, :cond_3
+    invoke-virtual {v0, v2}, Landroid/view/View;->offsetTopAndBottom(I)V
 
-    :goto_0
-    const/4 p0, 0x0
+    invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedFraction()F
 
-    return p0
+    move-result p1
 
-    :cond_3
-    :goto_1
-    const/4 p0, 0x1
+    invoke-static {p1}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
 
-    return p0
-.end method
+    move-result-object p1
 
-.method public final hashCode()I
-    .locals 1
+    iget p0, p0, Lhf;->b:F
 
-    iget-object v0, p0, Lhf;->a:Ljava/lang/Float;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
-
-    move-result v0
-
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget-object p0, p0, Lhf;->b:Ljava/lang/Float;
-
-    invoke-virtual {p0}, Ljava/lang/Object;->hashCode()I
-
-    move-result p0
-
-    add-int/2addr p0, v0
-
-    return p0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 2
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "AnimatedValues(start="
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v1, p0, Lhf;->a:Ljava/lang/Float;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", finish="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object p0, p0, Lhf;->b:Ljava/lang/Float;
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    const-string p0, ")"
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-static {p0}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
 
     move-result-object p0
 
-    return-object p0
+    invoke-interface {v1, p1, p0}, Lpc6;->invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    return-void
+
+    :pswitch_0
+    iget-object v0, p0, Lhf;->c:Ljava/lang/Object;
+
+    check-cast v0, Llfb;
+
+    iget-object v1, p0, Lhf;->o:Ljava/lang/Object;
+
+    check-cast v1, Lpc6;
+
+    iget p0, p0, Lhf;->b:F
+
+    invoke-static {v0, v1, p0, p1}, Llfb;->d(Llfb;Lpc6;FLandroid/animation/ValueAnimator;)V
+
+    return-void
+
+    :pswitch_1
+    iget-object v0, p0, Lhf;->c:Ljava/lang/Object;
+
+    check-cast v0, Lone/me/sdk/uikit/common/button/OneMeButton;
+
+    iget-object v1, p0, Lhf;->o:Ljava/lang/Object;
+
+    check-cast v1, Lone/me/sdk/uikit/common/button/OneMeButton;
+
+    invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
+
+    move-result-object p1
+
+    check-cast p1, Ljava/lang/Float;
+
+    invoke-virtual {p1}, Ljava/lang/Float;->floatValue()F
+
+    move-result p1
+
+    invoke-virtual {v0, p1}, Landroid/view/View;->setTranslationY(F)V
+
+    iget p0, p0, Lhf;->b:F
+
+    neg-float p0, p0
+
+    add-float/2addr p0, p1
+
+    invoke-virtual {v1, p0}, Landroid/view/View;->setTranslationY(F)V
+
+    return-void
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

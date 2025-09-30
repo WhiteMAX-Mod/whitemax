@@ -2,191 +2,323 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Landroid/hardware/SensorEventListener;
-
 
 # instance fields
-.field public final a:[F
+.field public final a:Lcl7;
 
-.field public final b:[F
+.field public final b:Lcl7;
 
-.field public final c:[F
+.field public final c:Lcl7;
 
-.field public final d:[F
-
-.field public final e:Landroid/view/Display;
-
-.field public final f:[Lvka;
-
-.field public g:Z
+.field public final d:Lcl7;
 
 
 # direct methods
-.method public varargs constructor <init>(Landroid/view/Display;[Lvka;)V
-    .locals 2
+.method public constructor <init>(Lcl7;Lcl7;Lcl7;Lcl7;)V
+    .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/16 v0, 0x10
+    iput-object p1, p0, Lwka;->a:Lcl7;
 
-    new-array v1, v0, [F
+    iput-object p2, p0, Lwka;->b:Lcl7;
 
-    iput-object v1, p0, Lwka;->a:[F
+    iput-object p3, p0, Lwka;->c:Lcl7;
 
-    new-array v1, v0, [F
-
-    iput-object v1, p0, Lwka;->b:[F
-
-    new-array v0, v0, [F
-
-    iput-object v0, p0, Lwka;->c:[F
-
-    const/4 v0, 0x3
-
-    new-array v0, v0, [F
-
-    iput-object v0, p0, Lwka;->d:[F
-
-    iput-object p1, p0, Lwka;->e:Landroid/view/Display;
-
-    iput-object p2, p0, Lwka;->f:[Lvka;
+    iput-object p4, p0, Lwka;->d:Lcl7;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onAccuracyChanged(Landroid/hardware/Sensor;I)V
-    .locals 0
+.method public final a(J)V
+    .locals 5
 
-    return-void
-.end method
+    invoke-virtual {p0}, Lwka;->b()Le94;
 
-.method public final onSensorChanged(Landroid/hardware/SensorEvent;)V
-    .locals 10
+    move-result-object p0
 
-    iget-object p1, p1, Landroid/hardware/SensorEvent;->values:[F
+    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    iget-object v0, p0, Lwka;->a:[F
+    sget-object v0, Le94;->k:Ljava/lang/String;
 
-    invoke-static {v0, p1}, Landroid/hardware/SensorManager;->getRotationMatrixFromVector([F[F)V
+    sget-object v1, Ljtg;->g:Loja;
 
-    iget-object p1, p0, Lwka;->e:Landroid/view/Display;
+    const/4 v2, 0x0
 
-    invoke-virtual {p1}, Landroid/view/Display;->getRotation()I
-
-    move-result p1
-
-    iget-object v6, p0, Lwka;->b:[F
-
-    const/4 v7, 0x0
-
-    const/4 v8, 0x2
-
-    const/4 v9, 0x1
-
-    if-eqz p1, :cond_3
-
-    const/16 v1, 0x81
-
-    if-eq p1, v9, :cond_1
-
-    const/16 v2, 0x82
-
-    if-eq p1, v8, :cond_2
-
-    const/4 v1, 0x3
-
-    if-ne p1, v1, :cond_0
-
-    move v1, v2
-
-    move v2, v9
+    if-nez v1, :cond_0
 
     goto :goto_0
 
     :cond_0
-    new-instance p0, Ljava/lang/IllegalStateException;
+    sget-object v3, Lqz7;->o:Lqz7;
 
-    invoke-direct {p0}, Ljava/lang/IllegalStateException;-><init>()V
+    invoke-virtual {v1, v3}, Loja;->a(Lqz7;)Z
 
-    throw p0
+    move-result v4
+
+    if-eqz v4, :cond_1
+
+    const-string v4, "cancelServerChatId "
+
+    invoke-static {p1, p2, v4}, Lbg9;->i(JLjava/lang/String;)Ljava/lang/String;
+
+    move-result-object v4
+
+    invoke-virtual {v1, v3, v0, v4, v2}, Loja;->b(Lqz7;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
     :cond_1
-    move v2, v1
-
-    move v1, v8
-
-    :cond_2
     :goto_0
-    array-length p1, v6
+    new-instance v0, Lx84;
 
-    invoke-static {v0, v7, v6, v7, p1}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
+    invoke-direct {v0, p1, p2, p0, v2}, Lx84;-><init>(JLe94;Lkotlin/coroutines/Continuation;)V
 
-    invoke-static {v6, v1, v2, v0}, Landroid/hardware/SensorManager;->remapCoordinateSystem([FII[F)Z
+    invoke-virtual {p0, v0}, Le94;->c(Lbc6;)V
 
-    :cond_3
-    const/16 p1, 0x83
+    return-void
+.end method
 
-    invoke-static {v0, v9, p1, v6}, Landroid/hardware/SensorManager;->remapCoordinateSystem([FII[F)Z
+.method public final b()Le94;
+    .locals 0
 
-    iget-object p1, p0, Lwka;->d:[F
+    iget-object p0, p0, Lwka;->d:Lcl7;
 
-    invoke-static {v6, p1}, Landroid/hardware/SensorManager;->getOrientation([F[F)[F
+    invoke-interface {p0}, Lcl7;->getValue()Ljava/lang/Object;
 
-    aget p1, p1, v8
+    move-result-object p0
 
-    const/4 v4, 0x0
+    check-cast p0, Le94;
 
-    const/4 v5, 0x0
+    return-object p0
+.end method
 
-    const/4 v1, 0x0
+.method public final c()V
+    .locals 6
 
-    const/high16 v2, 0x42b40000    # 90.0f
+    invoke-virtual {p0}, Lwka;->b()Le94;
 
-    const/high16 v3, 0x3f800000    # 1.0f
+    move-result-object v0
 
-    invoke-static/range {v0 .. v5}, Landroid/opengl/Matrix;->rotateM([FIFFFF)V
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    iget-boolean v1, p0, Lwka;->g:Z
+    sget-object v1, Le94;->k:Ljava/lang/String;
 
-    iget-object v4, p0, Lwka;->c:[F
-
-    if-nez v1, :cond_4
-
-    invoke-static {v4, v0}, Lh46;->k([F[F)V
-
-    iput-boolean v9, p0, Lwka;->g:Z
-
-    :cond_4
-    array-length v1, v6
-
-    invoke-static {v0, v7, v6, v7, v1}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
+    sget-object v2, Ljtg;->g:Loja;
 
     const/4 v3, 0x0
 
-    const/4 v5, 0x0
+    if-nez v2, :cond_0
 
-    const/4 v1, 0x0
+    goto :goto_0
 
-    move-object v2, v6
+    :cond_0
+    sget-object v4, Lqz7;->o:Lqz7;
 
-    invoke-static/range {v0 .. v5}, Landroid/opengl/Matrix;->multiplyMM([FI[FI[FI)V
+    invoke-virtual {v2, v4}, Loja;->a(Lqz7;)Z
 
-    :goto_1
-    if-ge v7, v8, :cond_5
+    move-result v5
 
-    iget-object v1, p0, Lwka;->f:[Lvka;
+    if-eqz v5, :cond_1
 
-    aget-object v1, v1, v7
+    const-string v5, "notifyAllChats"
 
-    invoke-interface {v1, v0, p1}, Lvka;->a([FF)V
+    invoke-virtual {v2, v4, v1, v5, v3}, Loja;->b(Lqz7;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    add-int/lit8 v7, v7, 0x1
+    :cond_1
+    :goto_0
+    new-instance v1, Lw84;
+
+    const/4 v2, 0x3
+
+    invoke-direct {v1, v0, v3, v2}, Lw84;-><init>(Le94;Lkotlin/coroutines/Continuation;I)V
+
+    invoke-virtual {v0, v1}, Le94;->c(Lbc6;)V
+
+    invoke-virtual {p0}, Lwka;->g()V
+
+    return-void
+.end method
+
+.method public final d(J)V
+    .locals 6
+
+    invoke-virtual {p0}, Lwka;->b()Le94;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    sget-object v1, Le94;->k:Ljava/lang/String;
+
+    sget-object v2, Ljtg;->g:Loja;
+
+    const/4 v3, 0x0
+
+    if-nez v2, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    sget-object v4, Lqz7;->o:Lqz7;
+
+    invoke-virtual {v2, v4}, Loja;->a(Lqz7;)Z
+
+    move-result v5
+
+    if-eqz v5, :cond_1
+
+    const-string v5, "notify #"
+
+    invoke-static {p1, p2, v5}, Lbg9;->i(JLjava/lang/String;)Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-virtual {v2, v4, v1, p1, v3}, Loja;->b(Lqz7;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    :cond_1
+    :goto_0
+    new-instance p1, Lw84;
+
+    const/4 p2, 0x1
+
+    invoke-direct {p1, v0, v3, p2}, Lw84;-><init>(Le94;Lkotlin/coroutines/Continuation;I)V
+
+    invoke-virtual {v0, p1}, Le94;->c(Lbc6;)V
+
+    invoke-virtual {p0}, Lwka;->g()V
+
+    return-void
+.end method
+
+.method public final e(J)V
+    .locals 6
+
+    invoke-virtual {p0}, Lwka;->b()Le94;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    sget-object v1, Le94;->k:Ljava/lang/String;
+
+    sget-object v2, Ljtg;->g:Loja;
+
+    const/4 v3, 0x0
+
+    if-nez v2, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    sget-object v4, Lqz7;->o:Lqz7;
+
+    invoke-virtual {v2, v4}, Loja;->a(Lqz7;)Z
+
+    move-result v5
+
+    if-eqz v5, :cond_1
+
+    const-string v5, "notifyServerChatIds #"
+
+    invoke-static {p1, p2, v5}, Lbg9;->i(JLjava/lang/String;)Ljava/lang/String;
+
+    move-result-object v5
+
+    invoke-virtual {v2, v4, v1, v5, v3}, Loja;->b(Lqz7;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    :cond_1
+    :goto_0
+    new-instance v1, Lx84;
+
+    invoke-direct {v1, v0, p1, p2, v3}, Lx84;-><init>(Le94;JLkotlin/coroutines/Continuation;)V
+
+    invoke-virtual {v0, v1}, Le94;->c(Lbc6;)V
+
+    invoke-virtual {p0}, Lwka;->g()V
+
+    return-void
+.end method
+
+.method public final f(Lao9;)V
+    .locals 7
+
+    invoke-virtual {p0}, Lwka;->b()Le94;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    sget-object v1, Le94;->k:Ljava/lang/String;
+
+    sget-object v2, Ljtg;->g:Loja;
+
+    const/4 v3, 0x0
+
+    if-nez v2, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    sget-object v4, Lqz7;->o:Lqz7;
+
+    invoke-virtual {v2, v4}, Loja;->a(Lqz7;)Z
+
+    move-result v5
+
+    if-eqz v5, :cond_1
+
+    const/16 v5, 0x1f
+
+    invoke-static {p1, v5}, Lao9;->k(Lao9;I)Ljava/lang/String;
+
+    move-result-object v5
+
+    const-string v6, "notifyServerChatIds "
+
+    invoke-virtual {v6, v5}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v5
+
+    invoke-virtual {v2, v4, v1, v5, v3}, Loja;->b(Lqz7;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    :cond_1
+    :goto_0
+    invoke-virtual {p1}, Lao9;->i()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_2
 
     goto :goto_1
 
-    :cond_5
+    :cond_2
+    new-instance v1, Lc94;
+
+    const/4 v2, 0x0
+
+    invoke-direct {v1, v0, p1, v3, v2}, Lc94;-><init>(Ljava/lang/Object;Ljava/lang/Object;Lkotlin/coroutines/Continuation;I)V
+
+    invoke-virtual {v0, v1}, Le94;->c(Lbc6;)V
+
+    :goto_1
+    invoke-virtual {p0}, Lwka;->g()V
+
+    return-void
+.end method
+
+.method public final g()V
+    .locals 0
+
+    iget-object p0, p0, Lwka;->c:Lcl7;
+
+    invoke-interface {p0}, Lcl7;->getValue()Ljava/lang/Object;
+
+    move-result-object p0
+
+    check-cast p0, Ldzd;
+
+    invoke-virtual {p0}, Ldzd;->C()V
+
     return-void
 .end method

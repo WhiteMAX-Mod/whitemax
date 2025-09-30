@@ -1,518 +1,212 @@
-.class public final Leg8;
+.class public final synthetic Leg8;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Ls04;
+.implements Lpt7;
 
 
 # instance fields
-.field public a:Ljava/util/ArrayList;
+.field public final synthetic a:I
+
+.field public final synthetic b:Le30;
+
+
+# direct methods
+.method public synthetic constructor <init>(Le30;I)V
+    .locals 0
+
+    iput p2, p0, Leg8;->a:I
+
+    iput-object p1, p0, Leg8;->b:Le30;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
 
 
 # virtual methods
-.method public a(J)J
-    .locals 11
+.method public final invoke(Ljava/lang/Object;)V
+    .locals 1
 
-    iget-object p0, p0, Leg8;->a:Ljava/util/ArrayList;
+    iget v0, p0, Leg8;->a:I
 
-    invoke-virtual {p0}, Ljava/util/ArrayList;->isEmpty()Z
+    check-cast p1, Lscb;
 
-    move-result v0
+    packed-switch v0, :pswitch_data_0
 
-    const-wide/high16 v1, -0x8000000000000000L
+    iget-object p0, p0, Leg8;->b:Le30;
 
-    if-eqz v0, :cond_0
+    iget-object p0, p0, Le30;->a:Ljava/lang/Object;
 
-    return-wide v1
+    check-cast p0, Lqdb;
 
-    :cond_0
-    const/4 v0, 0x0
+    iget-boolean p0, p0, Lqdb;->i:Z
 
-    invoke-virtual {p0, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
-
-    move-result-object v3
-
-    check-cast v3, Lt04;
-
-    iget-wide v3, v3, Lt04;->b:J
-
-    cmp-long v3, p1, v3
-
-    if-gez v3, :cond_1
-
-    invoke-virtual {p0, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, Lt04;
-
-    iget-wide p0, p0, Lt04;->b:J
-
-    return-wide p0
-
-    :cond_1
-    const/4 v0, 0x1
-
-    move v3, v0
-
-    :goto_0
-    invoke-virtual {p0}, Ljava/util/ArrayList;->size()I
-
-    move-result v4
-
-    const-wide v5, -0x7fffffffffffffffL    # -4.9E-324
-
-    if-ge v3, v4, :cond_4
-
-    invoke-virtual {p0, v3}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
-
-    move-result-object v4
-
-    check-cast v4, Lt04;
-
-    iget-wide v7, v4, Lt04;->b:J
-
-    iget-wide v9, v4, Lt04;->b:J
-
-    cmp-long v4, p1, v7
-
-    if-gez v4, :cond_3
-
-    sub-int/2addr v3, v0
-
-    invoke-virtual {p0, v3}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, Lt04;
-
-    iget-wide v0, p0, Lt04;->d:J
-
-    cmp-long p0, v0, v5
-
-    if-eqz p0, :cond_2
-
-    cmp-long p0, v0, p1
-
-    if-lez p0, :cond_2
-
-    cmp-long p0, v0, v9
-
-    if-gez p0, :cond_2
-
-    return-wide v0
-
-    :cond_2
-    return-wide v9
-
-    :cond_3
-    add-int/lit8 v3, v3, 0x1
-
-    goto :goto_0
-
-    :cond_4
-    invoke-static {p0}, Lqo8;->n(Ljava/lang/Iterable;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, Lt04;
-
-    iget-wide v3, p0, Lt04;->d:J
-
-    cmp-long p0, v3, v5
-
-    if-eqz p0, :cond_5
-
-    cmp-long p0, p1, v3
-
-    if-gez p0, :cond_5
-
-    return-wide v3
-
-    :cond_5
-    return-wide v1
-.end method
-
-.method public b(Lt04;J)Z
-    .locals 9
-
-    iget-object p0, p0, Leg8;->a:Ljava/util/ArrayList;
-
-    iget-wide v0, p1, Lt04;->b:J
-
-    const-wide v2, -0x7fffffffffffffffL    # -4.9E-324
-
-    cmp-long v4, v0, v2
-
-    const/4 v5, 0x0
-
-    const/4 v6, 0x1
-
-    if-eqz v4, :cond_0
-
-    move v4, v6
-
-    goto :goto_0
-
-    :cond_0
-    move v4, v5
-
-    :goto_0
-    invoke-static {v4}, Lu27;->f(Z)V
-
-    cmp-long v4, v0, p2
-
-    if-gtz v4, :cond_2
-
-    iget-wide v7, p1, Lt04;->d:J
-
-    cmp-long v2, v7, v2
-
-    if-eqz v2, :cond_1
-
-    cmp-long v2, p2, v7
-
-    if-gez v2, :cond_2
-
-    :cond_1
-    move v2, v6
-
-    goto :goto_1
-
-    :cond_2
-    move v2, v5
-
-    :goto_1
-    invoke-virtual {p0}, Ljava/util/ArrayList;->size()I
-
-    move-result v3
-
-    sub-int/2addr v3, v6
-
-    :goto_2
-    if-ltz v3, :cond_5
-
-    invoke-virtual {p0, v3}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
-
-    move-result-object v4
-
-    check-cast v4, Lt04;
-
-    iget-wide v7, v4, Lt04;->b:J
-
-    cmp-long v4, v0, v7
-
-    if-ltz v4, :cond_3
-
-    add-int/2addr v3, v6
-
-    invoke-virtual {p0, v3, p1}, Ljava/util/ArrayList;->add(ILjava/lang/Object;)V
-
-    return v2
-
-    :cond_3
-    invoke-virtual {p0, v3}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
-
-    move-result-object v4
-
-    check-cast v4, Lt04;
-
-    iget-wide v7, v4, Lt04;->b:J
-
-    cmp-long v4, v7, p2
-
-    if-gtz v4, :cond_4
-
-    move v2, v5
-
-    :cond_4
-    add-int/lit8 v3, v3, -0x1
-
-    goto :goto_2
-
-    :cond_5
-    invoke-virtual {p0, v5, p1}, Ljava/util/ArrayList;->add(ILjava/lang/Object;)V
-
-    return v2
-.end method
-
-.method public c(J)Lxw6;
-    .locals 4
-
-    invoke-virtual {p0, p1, p2}, Leg8;->g(J)I
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    sget-object p0, Lxw6;->b:Las5;
-
-    sget-object p0, Lddc;->X:Lddc;
-
-    return-object p0
-
-    :cond_0
-    iget-object p0, p0, Leg8;->a:Ljava/util/ArrayList;
-
-    add-int/lit8 v0, v0, -0x1
-
-    invoke-virtual {p0, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, Lt04;
-
-    iget-wide v0, p0, Lt04;->d:J
-
-    const-wide v2, -0x7fffffffffffffffL    # -4.9E-324
-
-    cmp-long v2, v0, v2
-
-    if-eqz v2, :cond_2
-
-    cmp-long p1, p1, v0
-
-    if-gez p1, :cond_1
-
-    goto :goto_0
-
-    :cond_1
-    sget-object p0, Lxw6;->b:Las5;
-
-    sget-object p0, Lddc;->X:Lddc;
-
-    return-object p0
-
-    :cond_2
-    :goto_0
-    iget-object p0, p0, Lt04;->a:Lxw6;
-
-    return-object p0
-.end method
-
-.method public clear()V
-    .locals 0
-
-    iget-object p0, p0, Leg8;->a:Ljava/util/ArrayList;
-
-    invoke-virtual {p0}, Ljava/util/ArrayList;->clear()V
+    invoke-interface {p1, p0}, Lscb;->S(Z)V
 
     return-void
-.end method
 
-.method public d(J)J
-    .locals 7
+    :pswitch_0
+    iget-object p0, p0, Leg8;->b:Le30;
 
-    iget-object p0, p0, Leg8;->a:Ljava/util/ArrayList;
+    iget-object p0, p0, Le30;->a:Ljava/lang/Object;
 
-    invoke-virtual {p0}, Ljava/util/ArrayList;->isEmpty()Z
+    check-cast p0, Lqdb;
 
-    move-result v0
+    iget p0, p0, Lqdb;->h:I
 
-    const-wide v1, -0x7fffffffffffffffL    # -4.9E-324
+    invoke-interface {p1, p0}, Lscb;->onRepeatModeChanged(I)V
 
-    if-nez v0, :cond_7
-
-    const/4 v0, 0x0
-
-    invoke-virtual {p0, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lt04;
-
-    iget-wide v3, v0, Lt04;->b:J
-
-    cmp-long v0, p1, v3
-
-    if-gez v0, :cond_0
-
-    goto :goto_2
-
-    :cond_0
-    const/4 v0, 0x1
-
-    move v3, v0
-
-    :goto_0
-    invoke-virtual {p0}, Ljava/util/ArrayList;->size()I
-
-    move-result v4
-
-    if-ge v3, v4, :cond_4
-
-    invoke-virtual {p0, v3}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
-
-    move-result-object v4
-
-    check-cast v4, Lt04;
-
-    iget-wide v4, v4, Lt04;->b:J
-
-    cmp-long v6, p1, v4
-
-    if-nez v6, :cond_1
-
-    return-wide v4
-
-    :cond_1
-    if-gez v6, :cond_3
-
-    sub-int/2addr v3, v0
-
-    invoke-virtual {p0, v3}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, Lt04;
-
-    iget-wide v3, p0, Lt04;->d:J
-
-    cmp-long v0, v3, v1
-
-    if-eqz v0, :cond_2
-
-    cmp-long p1, v3, p1
-
-    if-gtz p1, :cond_2
-
-    return-wide v3
-
-    :cond_2
-    iget-wide p0, p0, Lt04;->b:J
-
-    return-wide p0
-
-    :cond_3
-    add-int/lit8 v3, v3, 0x1
-
-    goto :goto_0
-
-    :cond_4
-    invoke-static {p0}, Lqo8;->n(Ljava/lang/Iterable;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, Lt04;
-
-    iget-wide v3, p0, Lt04;->d:J
-
-    cmp-long v0, v3, v1
-
-    if-eqz v0, :cond_6
-
-    cmp-long p1, p1, v3
-
-    if-gez p1, :cond_5
-
-    goto :goto_1
-
-    :cond_5
-    return-wide v3
-
-    :cond_6
-    :goto_1
-    iget-wide p0, p0, Lt04;->b:J
-
-    return-wide p0
-
-    :cond_7
-    :goto_2
-    return-wide v1
-.end method
-
-.method public e(J)V
-    .locals 0
-
-    invoke-virtual {p0, p1, p2}, Leg8;->g(J)I
-
-    move-result p1
-
-    if-lez p1, :cond_0
-
-    iget-object p0, p0, Leg8;->a:Ljava/util/ArrayList;
-
-    const/4 p2, 0x0
-
-    invoke-virtual {p0, p2, p1}, Ljava/util/ArrayList;->subList(II)Ljava/util/List;
-
-    move-result-object p0
-
-    invoke-interface {p0}, Ljava/util/List;->clear()V
-
-    :cond_0
     return-void
-.end method
 
-.method public f()Lfg8;
-    .locals 3
+    :pswitch_1
+    iget-object p0, p0, Leg8;->b:Le30;
 
-    iget-object v0, p0, Leg8;->a:Ljava/util/ArrayList;
+    iget-object p0, p0, Le30;->a:Ljava/lang/Object;
 
-    if-nez v0, :cond_0
+    check-cast p0, Lqdb;
 
-    sget-object p0, Lfg8;->c:Lfg8;
+    iget-object p0, p0, Lqdb;->g:Ldcb;
 
-    return-object p0
+    invoke-interface {p1, p0}, Lscb;->y0(Ldcb;)V
 
-    :cond_0
-    new-instance v0, Landroid/os/Bundle;
+    return-void
 
-    invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
+    :pswitch_2
+    iget-object p0, p0, Leg8;->b:Le30;
 
-    const-string v1, "controlCategories"
+    iget-object p0, p0, Le30;->a:Ljava/lang/Object;
 
-    iget-object v2, p0, Leg8;->a:Ljava/util/ArrayList;
+    check-cast p0, Lqdb;
 
-    invoke-virtual {v0, v1, v2}, Landroid/os/Bundle;->putStringArrayList(Ljava/lang/String;Ljava/util/ArrayList;)V
+    iget-boolean p0, p0, Lqdb;->v:Z
 
-    new-instance v1, Lfg8;
+    invoke-interface {p1, p0}, Lscb;->q(Z)V
 
-    iget-object p0, p0, Leg8;->a:Ljava/util/ArrayList;
+    return-void
 
-    invoke-direct {v1, v0, p0}, Lfg8;-><init>(Landroid/os/Bundle;Ljava/util/ArrayList;)V
+    :pswitch_3
+    iget-object p0, p0, Leg8;->b:Le30;
 
-    return-object v1
-.end method
+    iget-object p0, p0, Le30;->a:Ljava/lang/Object;
 
-.method public g(J)I
-    .locals 3
+    check-cast p0, Lqdb;
 
-    iget-object p0, p0, Leg8;->a:Ljava/util/ArrayList;
+    iget-boolean p0, p0, Lqdb;->t:Z
 
-    const/4 v0, 0x0
+    const/4 v0, 0x4
 
-    :goto_0
-    invoke-virtual {p0}, Ljava/util/ArrayList;->size()I
+    invoke-interface {p1, v0, p0}, Lscb;->i(IZ)V
 
-    move-result v1
+    return-void
 
-    if-ge v0, v1, :cond_1
+    :pswitch_4
+    iget-object p0, p0, Leg8;->b:Le30;
 
-    invoke-virtual {p0, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+    iget-object p0, p0, Le30;->a:Ljava/lang/Object;
 
-    move-result-object v1
+    check-cast p0, Lqdb;
 
-    check-cast v1, Lt04;
+    iget p0, p0, Lqdb;->y:I
 
-    iget-wide v1, v1, Lt04;->b:J
+    invoke-interface {p1, p0}, Lscb;->k(I)V
 
-    cmp-long v1, p1, v1
+    return-void
 
-    if-gez v1, :cond_0
+    :pswitch_5
+    iget-object p0, p0, Leg8;->b:Le30;
 
-    return v0
+    iget-object p0, p0, Le30;->a:Ljava/lang/Object;
 
-    :cond_0
-    add-int/lit8 v0, v0, 0x1
+    check-cast p0, Lqdb;
 
-    goto :goto_0
+    iget-object p0, p0, Lqdb;->m:Lmj8;
 
-    :cond_1
-    invoke-virtual {p0}, Ljava/util/ArrayList;->size()I
+    invoke-interface {p1, p0}, Lscb;->h0(Lmj8;)V
 
-    move-result p0
+    return-void
 
-    return p0
+    :pswitch_6
+    iget-object p0, p0, Leg8;->b:Le30;
+
+    iget-object p0, p0, Le30;->a:Ljava/lang/Object;
+
+    check-cast p0, Lqdb;
+
+    iget-object v0, p0, Lqdb;->j:Lp6f;
+
+    iget p0, p0, Lqdb;->k:I
+
+    invoke-interface {p1, v0, p0}, Lscb;->k0(Lp6f;I)V
+
+    return-void
+
+    :pswitch_7
+    iget-object p0, p0, Leg8;->b:Le30;
+
+    iget-object p0, p0, Le30;->c:Ljava/lang/Object;
+
+    check-cast p0, Lpcb;
+
+    invoke-interface {p1, p0}, Lscb;->z0(Lpcb;)V
+
+    return-void
+
+    :pswitch_8
+    iget-object p0, p0, Leg8;->b:Le30;
+
+    iget-object p0, p0, Le30;->a:Ljava/lang/Object;
+
+    check-cast p0, Lqdb;
+
+    iget v0, p0, Lqdb;->r:I
+
+    iget-boolean p0, p0, Lqdb;->s:Z
+
+    invoke-interface {p1, v0, p0}, Lscb;->l(IZ)V
+
+    return-void
+
+    :pswitch_9
+    iget-object p0, p0, Leg8;->b:Le30;
+
+    iget-object p0, p0, Le30;->a:Ljava/lang/Object;
+
+    check-cast p0, Lqdb;
+
+    iget-object p0, p0, Lqdb;->q:Lnn4;
+
+    invoke-interface {p1, p0}, Lscb;->C0(Lnn4;)V
+
+    return-void
+
+    :pswitch_a
+    iget-object p0, p0, Leg8;->b:Le30;
+
+    iget-object p0, p0, Le30;->a:Ljava/lang/Object;
+
+    check-cast p0, Lqdb;
+
+    iget-object p0, p0, Lqdb;->o:Lx10;
+
+    invoke-interface {p1, p0}, Lscb;->x(Lx10;)V
+
+    return-void
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_a
+        :pswitch_9
+        :pswitch_8
+        :pswitch_7
+        :pswitch_6
+        :pswitch_5
+        :pswitch_4
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

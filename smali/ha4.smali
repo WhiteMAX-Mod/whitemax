@@ -1,29 +1,17 @@
-.class public final Lha4;
-.super Ljava/lang/Object;
+.class public abstract Lha4;
+.super Llx;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:J
+.field public c:J
 
-.field public final b:Z
-
-.field public final c:Ljava/lang/Object;
-
-.field public d:I
+.field public o:Z
 
 
-# direct methods
-.method public constructor <init>(JZJLjava/lang/Object;)V
-    .locals 0
+# virtual methods
+.method public abstract u()V
+.end method
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-wide p1, p0, Lha4;->a:J
-
-    iput-boolean p3, p0, Lha4;->b:Z
-
-    iput-object p6, p0, Lha4;->c:Ljava/lang/Object;
-
-    return-void
+.method public abstract v()V
 .end method

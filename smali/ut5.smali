@@ -1,106 +1,54 @@
-.class public final synthetic Lut5;
-.super Ljava/lang/Object;
-.source "SourceFile"
-
-# interfaces
-.implements Ljava/util/function/Predicate;
+.class public final Lut5;
+.super Ljx3;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public X:I
 
-.field public final synthetic b:Lx56;
+.field public final synthetic Y:Lus5;
+
+.field public Z:Lus5;
+
+.field public synthetic o:Ljava/lang/Object;
+
+.field public r0:Lks5;
+
+.field public s0:Ly1d;
 
 
 # direct methods
-.method public synthetic constructor <init>(ILx56;)V
+.method public constructor <init>(Lus5;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    iput p1, p0, Lut5;->a:I
+    iput-object p1, p0, Lut5;->Y:Lus5;
 
-    iput-object p2, p0, Lut5;->b:Lx56;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p2}, Ljx3;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final test(Ljava/lang/Object;)Z
+.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
 
-    iget v0, p0, Lut5;->a:I
+    iput-object p1, p0, Lut5;->o:Ljava/lang/Object;
 
-    iget-object p0, p0, Lut5;->b:Lx56;
+    iget p1, p0, Lut5;->X:I
 
-    packed-switch v0, :pswitch_data_0
+    const/high16 v0, -0x80000000
 
-    check-cast p0, Lzf2;
+    or-int/2addr p1, v0
 
-    invoke-virtual {p0, p1}, Lzf2;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    iput p1, p0, Lut5;->X:I
 
-    move-result-object p0
+    iget-object p1, p0, Lut5;->Y:Lus5;
 
-    check-cast p0, Ljava/lang/Boolean;
+    const/4 v0, 0x0
 
-    invoke-virtual {p0}, Ljava/lang/Boolean;->booleanValue()Z
-
-    move-result p0
-
-    return p0
-
-    :pswitch_0
-    check-cast p0, Llp;
-
-    invoke-virtual {p0, p1}, Llp;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {p1, v0, p0}, Lus5;->d(Lks5;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
     move-result-object p0
 
-    check-cast p0, Ljava/lang/Boolean;
-
-    invoke-virtual {p0}, Ljava/lang/Boolean;->booleanValue()Z
-
-    move-result p0
-
-    return p0
-
-    :pswitch_1
-    check-cast p0, Lxu;
-
-    invoke-virtual {p0, p1}, Lxu;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, Ljava/lang/Boolean;
-
-    invoke-virtual {p0}, Ljava/lang/Boolean;->booleanValue()Z
-
-    move-result p0
-
-    return p0
-
-    :pswitch_2
-    check-cast p0, Lzf2;
-
-    invoke-virtual {p0, p1}, Lzf2;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, Ljava/lang/Boolean;
-
-    invoke-virtual {p0}, Ljava/lang/Boolean;->booleanValue()Z
-
-    move-result p0
-
-    return p0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    return-object p0
 .end method

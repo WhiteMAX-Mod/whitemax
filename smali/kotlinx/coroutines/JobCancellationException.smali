@@ -3,14 +3,14 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lbx3;
+.implements Lk04;
 
 
 # annotations
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Ljava/util/concurrent/CancellationException;",
-        "Lbx3;"
+        "Lk04;"
     }
 .end annotation
 
@@ -22,7 +22,7 @@
         "Lkotlinx/coroutines/JobCancellationException;",
         "Ljava/util/concurrent/CancellationException;",
         "Lkotlinx/coroutines/CancellationException;",
-        "Lbx3;",
+        "Lk04;",
         "kotlinx-coroutines-core"
     }
     k = 0x1
@@ -36,16 +36,16 @@
 
 
 # instance fields
-.field public final transient a:Lv77;
+.field public final transient a:Lqe7;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;Ljava/lang/Throwable;Lv77;)V
+.method public constructor <init>(Ljava/lang/String;Ljava/lang/Throwable;Lqe7;)V
     .locals 0
 
     invoke-direct {p0, p1}, Ljava/util/concurrent/CancellationException;-><init>(Ljava/lang/String;)V
 
-    iput-object p3, p0, Lkotlinx/coroutines/JobCancellationException;->a:Lv77;
+    iput-object p3, p0, Lkotlinx/coroutines/JobCancellationException;->a:Lqe7;
 
     if-eqz p2, :cond_0
 
@@ -84,17 +84,17 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lxq7;->d(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lvyg;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p1, Lkotlinx/coroutines/JobCancellationException;->a:Lv77;
+    iget-object v0, p1, Lkotlinx/coroutines/JobCancellationException;->a:Lqe7;
 
-    iget-object v1, p0, Lkotlinx/coroutines/JobCancellationException;->a:Lv77;
+    iget-object v1, p0, Lkotlinx/coroutines/JobCancellationException;->a:Lqe7;
 
-    invoke-static {v0, v1}, Lxq7;->d(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, v1}, Lvyg;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -108,7 +108,7 @@
 
     move-result-object p0
 
-    invoke-static {p1, p0}, Lxq7;->d(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {p1, p0}, Lvyg;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result p0
 
@@ -153,7 +153,7 @@
 
     mul-int/lit8 v0, v0, 0x1f
 
-    iget-object v1, p0, Lkotlinx/coroutines/JobCancellationException;->a:Lv77;
+    iget-object v1, p0, Lkotlinx/coroutines/JobCancellationException;->a:Lqe7;
 
     invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
 
@@ -201,7 +201,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object p0, p0, Lkotlinx/coroutines/JobCancellationException;->a:Lv77;
+    iget-object p0, p0, Lkotlinx/coroutines/JobCancellationException;->a:Lqe7;
 
     invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 

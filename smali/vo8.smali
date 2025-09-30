@@ -1,86 +1,128 @@
 .class public final Lvo8;
-.super Lqde;
+.super Ljava/lang/Object;
 .source "SourceFile"
-
-# interfaces
-.implements Ll66;
 
 
 # instance fields
-.field public final synthetic X:Ljava/lang/Object;
+.field public final a:Ljava/lang/String;
 
-.field public final synthetic Y:Ljwa;
+.field public final b:I
+
+.field public final c:I
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/Object;Lkotlin/coroutines/Continuation;Ljwa;)V
+.method public constructor <init>(Ljava/lang/String;II)V
     .locals 0
 
-    iput-object p1, p0, Lvo8;->X:Ljava/lang/Object;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p3, p0, Lvo8;->Y:Ljwa;
+    iput-object p1, p0, Lvo8;->a:Ljava/lang/String;
 
-    const/4 p1, 0x2
+    iput p2, p0, Lvo8;->b:I
 
-    invoke-direct {p0, p1, p2}, Lqde;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput p3, p0, Lvo8;->c:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 5
 
-    check-cast p1, Lox3;
+    const/4 v0, 0x1
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    if-ne p0, p1, :cond_0
 
-    invoke-virtual {p0, p1, p2}, Lvo8;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    return v0
 
-    move-result-object p0
+    :cond_0
+    instance-of v1, p1, Lvo8;
 
-    check-cast p0, Lvo8;
+    const/4 v2, 0x0
 
-    sget-object p1, Le5f;->a:Le5f;
+    if-nez v1, :cond_1
 
-    invoke-virtual {p0, p1}, Lvo8;->o(Ljava/lang/Object;)Ljava/lang/Object;
+    return v2
 
-    move-result-object p0
+    :cond_1
+    check-cast p1, Lvo8;
 
-    return-object p0
+    iget v1, p0, Lvo8;->c:I
+
+    iget-object v3, p0, Lvo8;->a:Ljava/lang/String;
+
+    iget p0, p0, Lvo8;->b:I
+
+    if-ltz p0, :cond_4
+
+    iget v4, p1, Lvo8;->b:I
+
+    if-gez v4, :cond_2
+
+    goto :goto_0
+
+    :cond_2
+    iget-object v4, p1, Lvo8;->a:Ljava/lang/String;
+
+    invoke-static {v3, v4}, Landroid/text/TextUtils;->equals(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
+
+    move-result v3
+
+    if-eqz v3, :cond_3
+
+    iget v3, p1, Lvo8;->b:I
+
+    if-ne p0, v3, :cond_3
+
+    iget p0, p1, Lvo8;->c:I
+
+    if-ne v1, p0, :cond_3
+
+    return v0
+
+    :cond_3
+    return v2
+
+    :cond_4
+    :goto_0
+    iget-object p0, p1, Lvo8;->a:Ljava/lang/String;
+
+    invoke-static {v3, p0}, Landroid/text/TextUtils;->equals(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
+
+    move-result p0
+
+    if-eqz p0, :cond_5
+
+    iget p0, p1, Lvo8;->c:I
+
+    if-ne v1, p0, :cond_5
+
+    return v0
+
+    :cond_5
+    return v2
 .end method
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+.method public final hashCode()I
     .locals 1
 
-    new-instance p1, Lvo8;
+    iget v0, p0, Lvo8;->c:I
 
-    iget-object v0, p0, Lvo8;->X:Ljava/lang/Object;
+    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    iget-object p0, p0, Lvo8;->Y:Ljwa;
+    move-result-object v0
 
-    invoke-direct {p1, v0, p2, p0}, Lvo8;-><init>(Ljava/lang/Object;Lkotlin/coroutines/Continuation;Ljwa;)V
+    iget-object p0, p0, Lvo8;->a:Ljava/lang/String;
 
-    return-object p1
-.end method
-
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
-
-    invoke-static {p1}, Lsgg;->Z(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Lvo8;->X:Ljava/lang/Object;
-
-    check-cast p1, Lnj3;
-
-    iget-object p0, p0, Lvo8;->Y:Ljwa;
-
-    const/4 v0, 0x0
-
-    invoke-virtual {p0, p1, v0}, Ljwa;->a(Lnj3;Z)Ldva;
+    filled-new-array {p0, v0}, [Ljava/lang/Object;
 
     move-result-object p0
 
-    return-object p0
+    invoke-static {p0}, Ljava/util/Objects;->hash([Ljava/lang/Object;)I
+
+    move-result p0
+
+    return p0
 .end method

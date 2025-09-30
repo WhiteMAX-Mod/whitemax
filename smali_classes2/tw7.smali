@@ -1,84 +1,53 @@
 .class public final Ltw7;
-.super Lqde;
+.super Ljx3;
 .source "SourceFile"
-
-# interfaces
-.implements Ll66;
 
 
 # instance fields
-.field public final synthetic X:Lvw7;
+.field public X:I
+
+.field public synthetic Y:Ljava/lang/Object;
+
+.field public final synthetic Z:Lvw7;
+
+.field public o:Lvw7;
+
+.field public r0:I
 
 
 # direct methods
-.method public constructor <init>(Lvw7;Lkotlin/coroutines/Continuation;)V
+.method public constructor <init>(Lvw7;Ljx3;)V
     .locals 0
 
-    iput-object p1, p0, Ltw7;->X:Lvw7;
+    iput-object p1, p0, Ltw7;->Z:Lvw7;
 
-    const/4 p1, 0x2
-
-    invoke-direct {p0, p1, p2}, Lqde;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0, p2}, Ljx3;-><init>(Lkotlin/coroutines/Continuation;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
-
-    check-cast p1, Lox3;
-
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Ltw7;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-
-    move-result-object p0
-
-    check-cast p0, Ltw7;
-
-    sget-object p1, Le5f;->a:Le5f;
-
-    invoke-virtual {p0, p1}, Ltw7;->o(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p1
-.end method
-
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 0
-
-    new-instance p1, Ltw7;
-
-    iget-object p0, p0, Ltw7;->X:Lvw7;
-
-    invoke-direct {p1, p0, p2}, Ltw7;-><init>(Lvw7;Lkotlin/coroutines/Continuation;)V
-
-    return-object p1
-.end method
-
 .method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+    .locals 2
 
-    invoke-static {p1}, Lsgg;->Z(Ljava/lang/Object;)V
+    iput-object p1, p0, Ltw7;->Y:Ljava/lang/Object;
 
-    iget-object p0, p0, Ltw7;->X:Lvw7;
+    iget p1, p0, Ltw7;->r0:I
 
-    iget-object p0, p0, Lvw7;->c:Lje7;
+    const/high16 v0, -0x80000000
 
-    invoke-interface {p0}, Lje7;->getValue()Ljava/lang/Object;
+    or-int/2addr p1, v0
+
+    iput p1, p0, Ltw7;->r0:I
+
+    iget-object p1, p0, Ltw7;->Z:Lvw7;
+
+    const-wide/16 v0, 0x0
+
+    invoke-virtual {p1, v0, v1, p0}, Lvw7;->c(JLkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
     move-result-object p0
-
-    check-cast p0, Lyqa;
-
-    const/4 p1, 0x2
-
-    const/4 v0, 0x1
-
-    invoke-virtual {p0, p1, v0}, Lyqa;->e(II)V
-
-    sget-object p0, Le5f;->a:Le5f;
 
     return-object p0
 .end method

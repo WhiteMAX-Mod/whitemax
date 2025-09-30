@@ -1,5 +1,5 @@
 .class public final Lru/ok/tamtam/nano/Protos$MessagePreview;
-.super Lnv8;
+.super Lj29;
 .source "SourceFile"
 
 
@@ -28,7 +28,7 @@
 .method public constructor <init>()V
     .locals 0
 
-    invoke-direct {p0}, Lnv8;-><init>()V
+    invoke-direct {p0}, Lj29;-><init>()V
 
     invoke-virtual {p0}, Lru/ok/tamtam/nano/Protos$MessagePreview;->clear()Lru/ok/tamtam/nano/Protos$MessagePreview;
 
@@ -42,7 +42,7 @@
 
     if-nez v0, :cond_1
 
-    sget-object v0, Lr37;->b:Ljava/lang/Object;
+    sget-object v0, Lla7;->b:Ljava/lang/Object;
 
     monitor-enter v0
 
@@ -84,7 +84,7 @@
     return-object v0
 .end method
 
-.method public static parseFrom(Lp33;)Lru/ok/tamtam/nano/Protos$MessagePreview;
+.method public static parseFrom(Lq63;)Lru/ok/tamtam/nano/Protos$MessagePreview;
     .locals 1
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -97,7 +97,7 @@
 
     invoke-direct {v0}, Lru/ok/tamtam/nano/Protos$MessagePreview;-><init>()V
 
-    invoke-virtual {v0, p0}, Lru/ok/tamtam/nano/Protos$MessagePreview;->mergeFrom(Lp33;)Lru/ok/tamtam/nano/Protos$MessagePreview;
+    invoke-virtual {v0, p0}, Lru/ok/tamtam/nano/Protos$MessagePreview;->mergeFrom(Lq63;)Lru/ok/tamtam/nano/Protos$MessagePreview;
 
     move-result-object p0
 
@@ -117,7 +117,7 @@
 
     invoke-direct {v0}, Lru/ok/tamtam/nano/Protos$MessagePreview;-><init>()V
 
-    invoke-static {v0, p0}, Lnv8;->mergeFrom(Lnv8;[B)Lnv8;
+    invoke-static {v0, p0}, Lj29;->mergeFrom(Lj29;[B)Lj29;
 
     move-result-object p0
 
@@ -141,7 +141,7 @@
 
     const/4 v0, -0x1
 
-    iput v0, p0, Lnv8;->cachedSize:I
+    iput v0, p0, Lj29;->cachedSize:I
 
     return-object p0
 .end method
@@ -163,7 +163,7 @@
 
     iget-object v1, p0, Lru/ok/tamtam/nano/Protos$MessagePreview;->text:Ljava/lang/String;
 
-    invoke-static {v0, v1}, Lq33;->l(ILjava/lang/String;)I
+    invoke-static {v0, v1}, Lr63;->l(ILjava/lang/String;)I
 
     move-result v0
 
@@ -179,7 +179,7 @@
 
     const/4 v1, 0x2
 
-    invoke-static {v1, p0}, Lq33;->i(ILnv8;)I
+    invoke-static {v1, p0}, Lr63;->i(ILj29;)I
 
     move-result p0
 
@@ -191,7 +191,7 @@
     return v0
 .end method
 
-.method public bridge synthetic mergeFrom(Lp33;)Lnv8;
+.method public bridge synthetic mergeFrom(Lq63;)Lj29;
     .locals 0
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -200,14 +200,14 @@
     .end annotation
 
     .line 1
-    invoke-virtual {p0, p1}, Lru/ok/tamtam/nano/Protos$MessagePreview;->mergeFrom(Lp33;)Lru/ok/tamtam/nano/Protos$MessagePreview;
+    invoke-virtual {p0, p1}, Lru/ok/tamtam/nano/Protos$MessagePreview;->mergeFrom(Lq63;)Lru/ok/tamtam/nano/Protos$MessagePreview;
 
     move-result-object p0
 
     return-object p0
 .end method
 
-.method public mergeFrom(Lp33;)Lru/ok/tamtam/nano/Protos$MessagePreview;
+.method public mergeFrom(Lq63;)Lru/ok/tamtam/nano/Protos$MessagePreview;
     .locals 2
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -218,7 +218,7 @@
     .line 2
     :cond_0
     :goto_0
-    invoke-virtual {p1}, Lp33;->s()I
+    invoke-virtual {p1}, Lq63;->s()I
 
     move-result v0
 
@@ -233,7 +233,7 @@
     if-eq v0, v1, :cond_1
 
     .line 3
-    invoke-virtual {p1, v0}, Lp33;->u(I)Z
+    invoke-virtual {p1, v0}, Lq63;->u(I)Z
 
     move-result v0
 
@@ -258,13 +258,13 @@
     :cond_2
     iget-object v0, p0, Lru/ok/tamtam/nano/Protos$MessagePreview;->attaches:Lru/ok/tamtam/nano/Protos$Attaches;
 
-    invoke-virtual {p1, v0}, Lp33;->j(Lnv8;)V
+    invoke-virtual {p1, v0}, Lq63;->j(Lj29;)V
 
     goto :goto_0
 
     .line 7
     :cond_3
-    invoke-virtual {p1}, Lp33;->r()Ljava/lang/String;
+    invoke-virtual {p1}, Lq63;->r()Ljava/lang/String;
 
     move-result-object v0
 
@@ -277,7 +277,7 @@
     return-object p0
 .end method
 
-.method public writeTo(Lq33;)V
+.method public writeTo(Lr63;)V
     .locals 2
     .annotation system Ldalvik/annotation/Throws;
         value = {
@@ -299,7 +299,7 @@
 
     iget-object v1, p0, Lru/ok/tamtam/nano/Protos$MessagePreview;->text:Ljava/lang/String;
 
-    invoke-virtual {p1, v0, v1}, Lq33;->E(ILjava/lang/String;)V
+    invoke-virtual {p1, v0, v1}, Lr63;->E(ILjava/lang/String;)V
 
     :cond_0
     iget-object p0, p0, Lru/ok/tamtam/nano/Protos$MessagePreview;->attaches:Lru/ok/tamtam/nano/Protos$Attaches;
@@ -308,7 +308,7 @@
 
     const/4 v0, 0x2
 
-    invoke-virtual {p1, v0, p0}, Lq33;->y(ILnv8;)V
+    invoke-virtual {p1, v0, p0}, Lr63;->y(ILj29;)V
 
     :cond_1
     return-void

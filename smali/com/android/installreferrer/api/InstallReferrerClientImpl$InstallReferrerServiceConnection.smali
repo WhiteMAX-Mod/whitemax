@@ -72,7 +72,7 @@
 
     iget-object p1, p0, Lcom/android/installreferrer/api/InstallReferrerClientImpl$InstallReferrerServiceConnection;->this$0:Lcom/android/installreferrer/api/InstallReferrerClientImpl;
 
-    sget v0, Ljr6;->c:I
+    sget v0, Lxx6;->c:I
 
     if-nez p2, :cond_0
 
@@ -87,25 +87,25 @@
 
     move-result-object v0
 
-    instance-of v1, v0, Lkr6;
+    instance-of v1, v0, Lyx6;
 
     if-eqz v1, :cond_1
 
     move-object p2, v0
 
-    check-cast p2, Lkr6;
+    check-cast p2, Lyx6;
 
     goto :goto_0
 
     :cond_1
-    new-instance v0, Lir6;
+    new-instance v0, Lwx6;
 
-    invoke-direct {v0, p2}, Lir6;-><init>(Landroid/os/IBinder;)V
+    invoke-direct {v0, p2}, Lwx6;-><init>(Landroid/os/IBinder;)V
 
     move-object p2, v0
 
     :goto_0
-    invoke-static {p1, p2}, Lcom/android/installreferrer/api/InstallReferrerClientImpl;->access$102(Lcom/android/installreferrer/api/InstallReferrerClientImpl;Lkr6;)Lkr6;
+    invoke-static {p1, p2}, Lcom/android/installreferrer/api/InstallReferrerClientImpl;->access$102(Lcom/android/installreferrer/api/InstallReferrerClientImpl;Lyx6;)Lyx6;
 
     iget-object p1, p0, Lcom/android/installreferrer/api/InstallReferrerClientImpl$InstallReferrerServiceConnection;->this$0:Lcom/android/installreferrer/api/InstallReferrerClientImpl;
 
@@ -135,7 +135,7 @@
 
     const/4 v0, 0x0
 
-    invoke-static {p1, v0}, Lcom/android/installreferrer/api/InstallReferrerClientImpl;->access$102(Lcom/android/installreferrer/api/InstallReferrerClientImpl;Lkr6;)Lkr6;
+    invoke-static {p1, v0}, Lcom/android/installreferrer/api/InstallReferrerClientImpl;->access$102(Lcom/android/installreferrer/api/InstallReferrerClientImpl;Lyx6;)Lyx6;
 
     iget-object p1, p0, Lcom/android/installreferrer/api/InstallReferrerClientImpl$InstallReferrerServiceConnection;->this$0:Lcom/android/installreferrer/api/InstallReferrerClientImpl;
 

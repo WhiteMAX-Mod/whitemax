@@ -1,68 +1,37 @@
-.class public final synthetic Ltu5;
-.super Ljava/lang/Object;
+.class public final Ltu5;
+.super Ljx3;
 .source "SourceFile"
-
-# interfaces
-.implements Lv56;
 
 
 # instance fields
-.field public final synthetic a:I
+.field public X:Lqu5;
 
-.field public final synthetic b:Lvu5;
+.field public synthetic Y:Ljava/lang/Object;
 
+.field public Z:I
 
-# direct methods
-.method public synthetic constructor <init>(Lvu5;I)V
-    .locals 0
-
-    iput p2, p0, Ltu5;->a:I
-
-    iput-object p1, p0, Ltu5;->b:Lvu5;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    return-void
-.end method
+.field public o:Lipc;
 
 
 # virtual methods
-.method public final invoke()Ljava/lang/Object;
+.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
 
-    iget v0, p0, Ltu5;->a:I
+    iput-object p1, p0, Ltu5;->Y:Ljava/lang/Object;
 
-    iget-object p0, p0, Ltu5;->b:Lvu5;
+    iget p1, p0, Ltu5;->Z:I
 
-    packed-switch v0, :pswitch_data_0
+    const/high16 v0, -0x80000000
 
-    iget-object p0, p0, Lvu5;->i:Lx2;
+    or-int/2addr p1, v0
 
-    if-eqz p0, :cond_0
+    iput p1, p0, Ltu5;->Z:I
 
-    invoke-virtual {p0}, Lx2;->invoke()Ljava/lang/Object;
+    const/4 p1, 0x0
 
-    :cond_0
-    sget-object p0, Le5f;->a:Le5f;
+    invoke-static {p1, p0}, Lo97;->Z(Lis5;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
 
-    return-object p0
-
-    :pswitch_0
-    iget-object p0, p0, Lvu5;->h:Lcd1;
-
-    if-eqz p0, :cond_1
-
-    invoke-virtual {p0}, Lcd1;->invoke()Ljava/lang/Object;
-
-    :cond_1
-    sget-object p0, Le5f;->a:Le5f;
+    move-result-object p0
 
     return-object p0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
 .end method

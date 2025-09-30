@@ -1,15 +1,23 @@
-.class public abstract Las9;
+.class public final Las9;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
+# instance fields
+.field public final a:I
+
+.field public final b:Z
+
+
 # direct methods
-.method public static a(Landroid/app/Notification$Action;)I
+.method public constructor <init>(IIZ)V
     .locals 0
 
-    invoke-virtual {p0}, Landroid/app/Notification$Action;->getSemanticAction()I
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    move-result p0
+    iput p2, p0, Las9;->a:I
 
-    return p0
+    iput-boolean p3, p0, Las9;->b:Z
+
+    return-void
 .end method

@@ -1,87 +1,120 @@
-.class public final Lsd2;
+.class public final synthetic Lsd2;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lyd2;
+.implements Lrm3;
 
 
 # instance fields
-.field public final a:J
+.field public final synthetic a:I
+
+.field public final synthetic b:J
+
+.field public final synthetic c:Ljava/lang/Object;
 
 
 # direct methods
-.method public constructor <init>(J)V
+.method public synthetic constructor <init>(Ljava/lang/Object;JI)V
     .locals 0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput p4, p0, Lsd2;->a:I
 
-    iput-wide p1, p0, Lsd2;->a:J
+    iput-object p1, p0, Lsd2;->c:Ljava/lang/Object;
+
+    iput-wide p2, p0, Lsd2;->b:J
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 5
+.method public final accept(Ljava/lang/Object;)V
+    .locals 10
 
-    const/4 v0, 0x1
+    iget v0, p0, Lsd2;->a:I
 
-    if-ne p0, p1, :cond_0
+    iget-object v1, p0, Lsd2;->c:Ljava/lang/Object;
 
-    return v0
+    packed-switch v0, :pswitch_data_0
+
+    check-cast v1, Ltxc;
+
+    check-cast p1, Ljava/util/List;
+
+    invoke-interface {p1}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
+
+    move-result-object p1
+
+    :goto_0
+    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lqva;
+
+    iget-wide v2, p0, Lsd2;->b:J
+
+    invoke-virtual {v1, v0, v2, v3}, Ltxc;->g(Lqva;J)V
+
+    goto :goto_0
 
     :cond_0
-    instance-of v1, p1, Lsd2;
+    return-void
 
-    const/4 v2, 0x0
+    :pswitch_0
+    move-object v5, v1
 
-    if-nez v1, :cond_1
+    check-cast v5, Ltd2;
 
-    return v2
+    move-object v8, p1
 
-    :cond_1
-    check-cast p1, Lsd2;
+    check-cast v8, Ljava/util/Collection;
 
-    iget-wide v3, p0, Lsd2;->a:J
+    invoke-virtual {v5}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    iget-wide p0, p1, Lsd2;->a:J
+    invoke-interface {v8}, Ljava/util/Collection;->size()I
 
-    cmp-long p0, v3, p0
+    move-result p1
 
-    if-eqz p0, :cond_2
+    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    return v2
+    move-result-object p1
 
-    :cond_2
-    return v0
-.end method
+    filled-new-array {p1}, [Ljava/lang/Object;
 
-.method public final hashCode()I
-    .locals 2
+    move-result-object p1
 
-    iget-wide v0, p0, Lsd2;->a:J
+    const-string v0, "td2"
 
-    invoke-static {v0, v1}, Ljava/lang/Long;->hashCode(J)I
+    const-string v1, "ValidateMessagesTimeUseCase found some items for delete, size = %d"
 
-    move-result p0
+    invoke-static {v0, v1, p1}, Ljtg;->k(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    return p0
-.end method
+    iget-object p1, v5, Ltd2;->h:Lv5d;
 
-.method public final toString()Ljava/lang/String;
-    .locals 4
+    new-instance v4, Lrd2;
 
-    const-string v0, "Add(messageId="
+    const/4 v9, 0x0
 
-    const-string v1, ")"
+    iget-wide v6, p0, Lsd2;->b:J
 
-    iget-wide v2, p0, Lsd2;->a:J
+    invoke-direct/range {v4 .. v9}, Lrd2;-><init>(Ljava/lang/Object;JLjava/lang/Object;I)V
 
-    invoke-static {v2, v3, v0, v1}, Lu88;->i(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {p1, v4}, Lv5d;->b(Ljava/lang/Runnable;)Loq4;
 
-    move-result-object p0
+    return-void
 
-    return-object p0
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

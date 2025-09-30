@@ -1,128 +1,192 @@
 .class public final Ldn5;
-.super Lqde;
+.super Ljava/lang/Object;
 .source "SourceFile"
-
-# interfaces
-.implements Ll66;
 
 
 # instance fields
-.field public X:I
+.field public final a:Ljava/lang/String;
 
-.field public synthetic Y:Ljava/lang/Object;
-
-.field public final synthetic Z:Lqde;
-
-.field public final synthetic o0:Lbn5;
+.field public final b:Ljava/util/HashMap;
 
 
 # direct methods
-.method public constructor <init>(Ln66;Lbn5;Lkotlin/coroutines/Continuation;)V
-    .locals 0
+.method public constructor <init>(Ljava/lang/String;)V
+    .locals 1
 
-    check-cast p1, Lqde;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Ldn5;->Z:Lqde;
+    new-instance v0, Ljava/util/HashMap;
 
-    iput-object p2, p0, Ldn5;->o0:Lbn5;
+    invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
-    const/4 p1, 0x2
+    iput-object v0, p0, Ldn5;->b:Ljava/util/HashMap;
 
-    invoke-direct {p0, p1, p3}, Lqde;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-object p1, p0, Ldn5;->a:Ljava/lang/String;
 
     return-void
 .end method
 
+.method public static a(Ljava/lang/String;Ljava/lang/String;)Z
+    .locals 1
 
-# virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
-
-    check-cast p1, Lox3;
-
-    check-cast p2, Lkotlin/coroutines/Continuation;
-
-    invoke-virtual {p0, p1, p2}, Ldn5;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    invoke-static {p0}, Landroidx/core/content/FileProvider;->a(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
 
-    check-cast p0, Ldn5;
+    invoke-static {p1}, Landroidx/core/content/FileProvider;->a(Ljava/lang/String;)Ljava/lang/String;
 
-    sget-object p1, Le5f;->a:Le5f;
+    move-result-object p1
 
-    invoke-virtual {p0, p1}, Ldn5;->o(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {p0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    move-result-object p0
+    move-result v0
 
-    return-object p0
-.end method
+    if-nez v0, :cond_1
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 2
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    new-instance v0, Ldn5;
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    iget-object v1, p0, Ldn5;->Z:Lqde;
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object p0, p0, Ldn5;->o0:Lbn5;
+    const/16 p1, 0x2f
 
-    invoke-direct {v0, v1, p0, p2}, Ldn5;-><init>(Ln66;Lbn5;Lkotlin/coroutines/Continuation;)V
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    iput-object p1, v0, Ldn5;->Y:Ljava/lang/Object;
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    return-object v0
-.end method
+    move-result-object p1
 
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 2
+    invoke-virtual {p0, p1}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
-    iget v0, p0, Ldn5;->X:I
+    move-result p0
 
-    const/4 v1, 0x1
-
-    if-eqz v0, :cond_1
-
-    if-ne v0, v1, :cond_0
-
-    invoke-static {p1}, Lsgg;->Z(Ljava/lang/Object;)V
+    if-eqz p0, :cond_0
 
     goto :goto_0
 
     :cond_0
-    new-instance p0, Ljava/lang/IllegalStateException;
+    const/4 p0, 0x0
 
-    const-string p1, "call to \'resume\' before \'invoke\' with coroutine"
+    return p0
 
-    invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    :cond_1
+    :goto_0
+    const/4 p0, 0x1
+
+    return p0
+.end method
+
+
+# virtual methods
+.method public final b(Landroid/net/Uri;)Ljava/io/File;
+    .locals 4
+
+    invoke-virtual {p1}, Landroid/net/Uri;->getEncodedPath()Ljava/lang/String;
+
+    move-result-object v0
+
+    const/16 v1, 0x2f
+
+    const/4 v2, 0x1
+
+    invoke-virtual {v0, v1, v2}, Ljava/lang/String;->indexOf(II)I
+
+    move-result v1
+
+    invoke-virtual {v0, v2, v1}, Ljava/lang/String;->substring(II)Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-static {v3}, Landroid/net/Uri;->decode(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v3
+
+    add-int/2addr v1, v2
+
+    invoke-virtual {v0, v1}, Ljava/lang/String;->substring(I)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v0}, Landroid/net/Uri;->decode(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    iget-object p0, p0, Ldn5;->b:Ljava/util/HashMap;
+
+    invoke-virtual {p0, v3}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p0
+
+    check-cast p0, Ljava/io/File;
+
+    if-eqz p0, :cond_1
+
+    new-instance p1, Ljava/io/File;
+
+    invoke-direct {p1, p0, v0}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
+
+    :try_start_0
+    invoke-virtual {p1}, Ljava/io/File;->getCanonicalFile()Ljava/io/File;
+
+    move-result-object p1
+    :try_end_0
+    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
+
+    invoke-virtual {p1}, Ljava/io/File;->getPath()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {p0}, Ljava/io/File;->getPath()Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-static {v0, p0}, Ldn5;->a(Ljava/lang/String;Ljava/lang/String;)Z
+
+    move-result p0
+
+    if-eqz p0, :cond_0
+
+    return-object p1
+
+    :cond_0
+    new-instance p0, Ljava/lang/SecurityException;
+
+    const-string p1, "Resolved path jumped beyond configured root"
+
+    invoke-direct {p0, p1}, Ljava/lang/SecurityException;-><init>(Ljava/lang/String;)V
+
+    throw p0
+
+    :catch_0
+    new-instance p0, Ljava/lang/IllegalArgumentException;
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "Failed to resolve canonical path for "
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-direct {p0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
     throw p0
 
     :cond_1
-    invoke-static {p1}, Lsgg;->Z(Ljava/lang/Object;)V
+    new-instance p0, Ljava/lang/IllegalArgumentException;
 
-    iget-object p1, p0, Ldn5;->Y:Ljava/lang/Object;
+    const-string v0, "Unable to find configured root for "
 
-    check-cast p1, Lox3;
+    invoke-static {p1, v0}, Lz7e;->p(Landroid/net/Uri;Ljava/lang/String;)Ljava/lang/String;
 
-    iput v1, p0, Ldn5;->X:I
+    move-result-object p1
 
-    iget-object v0, p0, Ldn5;->Z:Lqde;
+    invoke-direct {p0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
-    iget-object v1, p0, Ldn5;->o0:Lbn5;
-
-    invoke-interface {v0, p1, v1, p0}, Ln66;->invoke(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    sget-object p1, Lpx3;->a:Lpx3;
-
-    if-ne p0, p1, :cond_2
-
-    return-object p1
-
-    :cond_2
-    :goto_0
-    sget-object p0, Le5f;->a:Le5f;
-
-    return-object p0
+    throw p0
 .end method

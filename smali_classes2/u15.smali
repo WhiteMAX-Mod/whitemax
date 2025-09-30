@@ -1,49 +1,88 @@
-.class public final Lu15;
+.class public final synthetic Lu15;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ljava/util/function/IntPredicate;
+
 
 # instance fields
-.field public final a:Lone/me/sdk/richvector/EnhancedAnimatedVectorDrawable;
-
-.field public final b:Landroid/animation/AnimatorSet;
-
-.field public final c:Z
+.field public final synthetic a:I
 
 
 # direct methods
-.method public constructor <init>(Lone/me/sdk/richvector/EnhancedAnimatedVectorDrawable;Landroid/animation/AnimatorSet;)V
-    .locals 2
+.method public synthetic constructor <init>(I)V
+    .locals 0
+
+    iput p1, p0, Lu15;->a:I
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lu15;->a:Lone/me/sdk/richvector/EnhancedAnimatedVectorDrawable;
+    return-void
+.end method
 
-    invoke-virtual {p2}, Landroid/animation/AnimatorSet;->clone()Landroid/animation/AnimatorSet;
 
-    move-result-object p1
+# virtual methods
+.method public final test(I)Z
+    .locals 0
 
-    iput-object p1, p0, Lu15;->b:Landroid/animation/AnimatorSet;
+    iget p0, p0, Lu15;->a:I
 
-    invoke-virtual {p1}, Landroid/animation/AnimatorSet;->getTotalDuration()J
+    packed-switch p0, :pswitch_data_0
 
-    move-result-wide p1
+    invoke-static {p1}, Lv15;->a(I)Z
 
-    const-wide/16 v0, -0x1
+    move-result p0
 
-    cmp-long p1, p1, v0
+    if-nez p0, :cond_2
 
-    if-nez p1, :cond_0
+    const/16 p0, 0x200d
 
-    const/4 p1, 0x1
+    if-ne p1, p0, :cond_0
 
     goto :goto_0
 
     :cond_0
-    const/4 p1, 0x0
+    const/16 p0, 0x20e3
 
+    if-ne p1, p0, :cond_1
+
+    goto :goto_0
+
+    :cond_1
+    const/4 p0, 0x0
+
+    goto :goto_1
+
+    :cond_2
     :goto_0
-    iput-boolean p1, p0, Lu15;->c:Z
+    const/4 p0, 0x1
 
-    return-void
+    :goto_1
+    return p0
+
+    :pswitch_0
+    invoke-static {p1}, Lv15;->c(I)Z
+
+    move-result p0
+
+    :goto_2
+    xor-int/lit8 p0, p0, 0x1
+
+    return p0
+
+    :pswitch_1
+    invoke-static {p1}, Lv15;->c(I)Z
+
+    move-result p0
+
+    goto :goto_2
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

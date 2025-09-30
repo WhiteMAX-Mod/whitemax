@@ -1,178 +1,94 @@
-.class public abstract Lzh4;
+.class public final Lzh4;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Landroid/view/animation/Animation$AnimationListener;
 
-# static fields
-.field public static final a:Ljava/lang/ThreadLocal;
 
-.field public static final b:Ljava/lang/ThreadLocal;
+# instance fields
+.field public final synthetic a:Ly7e;
+
+.field public final synthetic b:Landroid/view/ViewGroup;
+
+.field public final synthetic c:Landroid/view/View;
+
+.field public final synthetic d:Lai4;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>(Ly7e;Landroid/view/ViewGroup;Landroid/view/View;Lai4;)V
+    .locals 0
 
-    new-instance v0, Ljava/lang/ThreadLocal;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0}, Ljava/lang/ThreadLocal;-><init>()V
+    iput-object p1, p0, Lzh4;->a:Ly7e;
 
-    sput-object v0, Lzh4;->a:Ljava/lang/ThreadLocal;
+    iput-object p2, p0, Lzh4;->b:Landroid/view/ViewGroup;
 
-    new-instance v0, Ljava/lang/ThreadLocal;
+    iput-object p3, p0, Lzh4;->c:Landroid/view/View;
 
-    invoke-direct {v0}, Ljava/lang/ThreadLocal;-><init>()V
-
-    sput-object v0, Lzh4;->b:Ljava/lang/ThreadLocal;
+    iput-object p4, p0, Lzh4;->d:Lai4;
 
     return-void
 .end method
 
-.method public static a(Landroid/view/ViewParent;Landroid/view/View;Landroid/graphics/Matrix;)V
-    .locals 2
 
-    invoke-virtual {p1}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
+# virtual methods
+.method public final onAnimationEnd(Landroid/view/animation/Animation;)V
+    .locals 4
 
-    move-result-object v0
+    new-instance p1, Lj5;
 
-    instance-of v1, v0, Landroid/view/View;
+    const/16 v0, 0x11
 
-    if-eqz v1, :cond_0
+    iget-object v1, p0, Lzh4;->b:Landroid/view/ViewGroup;
 
-    if-eq v0, p0, :cond_0
+    iget-object v2, p0, Lzh4;->c:Landroid/view/View;
 
-    check-cast v0, Landroid/view/View;
+    iget-object v3, p0, Lzh4;->d:Lai4;
 
-    invoke-static {p0, v0, p2}, Lzh4;->a(Landroid/view/ViewParent;Landroid/view/View;Landroid/graphics/Matrix;)V
+    invoke-direct {p1, v1, v2, v3, v0}, Lj5;-><init>(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;I)V
 
-    invoke-virtual {v0}, Landroid/view/View;->getScrollX()I
+    invoke-virtual {v1, p1}, Landroid/view/View;->post(Ljava/lang/Runnable;)Z
 
-    move-result p0
+    const/4 p1, 0x2
 
-    neg-int p0, p0
+    invoke-static {p1}, Landroidx/fragment/app/c;->K(I)Z
 
-    int-to-float p0, p0
+    move-result p1
 
-    invoke-virtual {v0}, Landroid/view/View;->getScrollY()I
+    if-eqz p1, :cond_0
 
-    move-result v0
+    iget-object p0, p0, Lzh4;->a:Ly7e;
 
-    neg-int v0, v0
-
-    int-to-float v0, v0
-
-    invoke-virtual {p2, p0, v0}, Landroid/graphics/Matrix;->preTranslate(FF)Z
+    invoke-static {p0}, Ljava/util/Objects;->toString(Ljava/lang/Object;)Ljava/lang/String;
 
     :cond_0
-    invoke-virtual {p1}, Landroid/view/View;->getLeft()I
-
-    move-result p0
-
-    int-to-float p0, p0
-
-    invoke-virtual {p1}, Landroid/view/View;->getTop()I
-
-    move-result v0
-
-    int-to-float v0, v0
-
-    invoke-virtual {p2, p0, v0}, Landroid/graphics/Matrix;->preTranslate(FF)Z
-
-    invoke-virtual {p1}, Landroid/view/View;->getMatrix()Landroid/graphics/Matrix;
-
-    move-result-object p0
-
-    invoke-virtual {p0}, Landroid/graphics/Matrix;->isIdentity()Z
-
-    move-result p0
-
-    if-nez p0, :cond_1
-
-    invoke-virtual {p1}, Landroid/view/View;->getMatrix()Landroid/graphics/Matrix;
-
-    move-result-object p0
-
-    invoke-virtual {p2, p0}, Landroid/graphics/Matrix;->preConcat(Landroid/graphics/Matrix;)Z
-
-    :cond_1
     return-void
 .end method
 
-.method public static b(Landroid/view/ViewGroup;Landroid/view/View;Landroid/graphics/Rect;)V
-    .locals 3
+.method public final onAnimationRepeat(Landroid/view/animation/Animation;)V
+    .locals 0
 
-    sget-object v0, Lzh4;->a:Ljava/lang/ThreadLocal;
+    return-void
+.end method
 
-    invoke-virtual {v0}, Ljava/lang/ThreadLocal;->get()Ljava/lang/Object;
+.method public final onAnimationStart(Landroid/view/animation/Animation;)V
+    .locals 0
 
-    move-result-object v1
+    const/4 p1, 0x2
 
-    check-cast v1, Landroid/graphics/Matrix;
+    invoke-static {p1}, Landroidx/fragment/app/c;->K(I)Z
 
-    if-nez v1, :cond_0
+    move-result p1
 
-    new-instance v1, Landroid/graphics/Matrix;
+    if-eqz p1, :cond_0
 
-    invoke-direct {v1}, Landroid/graphics/Matrix;-><init>()V
+    iget-object p0, p0, Lzh4;->a:Ly7e;
 
-    invoke-virtual {v0, v1}, Ljava/lang/ThreadLocal;->set(Ljava/lang/Object;)V
-
-    goto :goto_0
+    invoke-static {p0}, Ljava/util/Objects;->toString(Ljava/lang/Object;)Ljava/lang/String;
 
     :cond_0
-    invoke-virtual {v1}, Landroid/graphics/Matrix;->reset()V
-
-    :goto_0
-    invoke-static {p0, p1, v1}, Lzh4;->a(Landroid/view/ViewParent;Landroid/view/View;Landroid/graphics/Matrix;)V
-
-    sget-object p0, Lzh4;->b:Ljava/lang/ThreadLocal;
-
-    invoke-virtual {p0}, Ljava/lang/ThreadLocal;->get()Ljava/lang/Object;
-
-    move-result-object p1
-
-    check-cast p1, Landroid/graphics/RectF;
-
-    if-nez p1, :cond_1
-
-    new-instance p1, Landroid/graphics/RectF;
-
-    invoke-direct {p1}, Landroid/graphics/RectF;-><init>()V
-
-    invoke-virtual {p0, p1}, Ljava/lang/ThreadLocal;->set(Ljava/lang/Object;)V
-
-    :cond_1
-    invoke-virtual {p1, p2}, Landroid/graphics/RectF;->set(Landroid/graphics/Rect;)V
-
-    invoke-virtual {v1, p1}, Landroid/graphics/Matrix;->mapRect(Landroid/graphics/RectF;)Z
-
-    iget p0, p1, Landroid/graphics/RectF;->left:F
-
-    const/high16 v0, 0x3f000000    # 0.5f
-
-    add-float/2addr p0, v0
-
-    float-to-int p0, p0
-
-    iget v1, p1, Landroid/graphics/RectF;->top:F
-
-    add-float/2addr v1, v0
-
-    float-to-int v1, v1
-
-    iget v2, p1, Landroid/graphics/RectF;->right:F
-
-    add-float/2addr v2, v0
-
-    float-to-int v2, v2
-
-    iget p1, p1, Landroid/graphics/RectF;->bottom:F
-
-    add-float/2addr p1, v0
-
-    float-to-int p1, p1
-
-    invoke-virtual {p2, p0, v1, v2, p1}, Landroid/graphics/Rect;->set(IIII)V
-
     return-void
 .end method

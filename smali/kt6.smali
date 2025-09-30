@@ -1,245 +1,237 @@
 .class public final Lkt6;
-.super Ljava/lang/Object;
+.super Lmt6;
 .source "SourceFile"
 
 
-# static fields
-.field public static final d:Lkt6;
-
-
 # instance fields
-.field public final a:Ljava/util/List;
+.field public final v0:Ljava/lang/String;
 
-.field public final b:Ljava/util/List;
-
-.field public final c:Ljava/util/List;
+.field public final w0:Ll37;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public constructor <init>(JJLjava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    .locals 19
 
-    new-instance v0, Lkt6;
+    .line 1
+    sget-object v0, Ll37;->b:Lgx5;
 
-    sget-object v1, Lgz4;->a:Lgz4;
+    .line 2
+    sget-object v18, Llqc;->X:Llqc;
 
-    invoke-direct {v0, v1, v1, v1}, Lkt6;-><init>(Ljava/util/List;Ljava/util/List;Ljava/util/List;)V
+    const/4 v3, 0x0
 
-    sput-object v0, Lkt6;->d:Lkt6;
+    .line 3
+    const-string v4, ""
+
+    const-wide/16 v5, 0x0
+
+    const/4 v7, -0x1
+
+    const-wide v8, -0x7fffffffffffffffL    # -4.9E-324
+
+    const/4 v10, 0x0
+
+    const/16 v17, 0x0
+
+    move-object/from16 v1, p0
+
+    move-wide/from16 v13, p1
+
+    move-wide/from16 v15, p3
+
+    move-object/from16 v2, p5
+
+    move-object/from16 v11, p6
+
+    move-object/from16 v12, p7
+
+    invoke-direct/range {v1 .. v18}, Lkt6;-><init>(Ljava/lang/String;Lkt6;Ljava/lang/String;JIJLmw4;Ljava/lang/String;Ljava/lang/String;JJZLjava/util/List;)V
 
     return-void
 .end method
 
-.method public constructor <init>(Ljava/util/List;Ljava/util/List;Ljava/util/List;)V
-    .locals 0
+.method public constructor <init>(Ljava/lang/String;Lkt6;Ljava/lang/String;JIJLmw4;Ljava/lang/String;Ljava/lang/String;JJZLjava/util/List;)V
+    .locals 16
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    move-object/from16 v0, p0
 
-    iput-object p1, p0, Lkt6;->a:Ljava/util/List;
+    move-object/from16 v1, p1
 
-    iput-object p2, p0, Lkt6;->b:Ljava/util/List;
+    move-object/from16 v2, p2
 
-    iput-object p3, p0, Lkt6;->c:Ljava/util/List;
+    move-wide/from16 v3, p4
+
+    move/from16 v5, p6
+
+    move-wide/from16 v6, p7
+
+    move-object/from16 v8, p9
+
+    move-object/from16 v9, p10
+
+    move-object/from16 v10, p11
+
+    move-wide/from16 v11, p12
+
+    move-wide/from16 v13, p14
+
+    move/from16 v15, p16
+
+    .line 4
+    invoke-direct/range {v0 .. v15}, Lmt6;-><init>(Ljava/lang/String;Lkt6;JIJLmw4;Ljava/lang/String;Ljava/lang/String;JJZ)V
+
+    move-object/from16 v1, p3
+
+    .line 5
+    iput-object v1, v0, Lkt6;->v0:Ljava/lang/String;
+
+    .line 6
+    invoke-static/range {p17 .. p17}, Ll37;->j(Ljava/util/Collection;)Ll37;
+
+    move-result-object v1
+
+    iput-object v1, v0, Lkt6;->w0:Ll37;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
+.method public final a(IJ)Lkt6;
+    .locals 24
 
-    const/4 v0, 0x1
+    move-object/from16 v0, p0
 
-    if-ne p0, p1, :cond_0
+    new-instance v1, Ljava/util/ArrayList;
 
-    return v0
-
-    :cond_0
-    instance-of v1, p1, Lkt6;
+    invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
     const/4 v2, 0x0
 
-    if-nez v1, :cond_1
+    move-wide/from16 v9, p2
 
-    return v2
+    :goto_0
+    iget-object v3, v0, Lkt6;->w0:Ll37;
 
-    :cond_1
-    check-cast p1, Lkt6;
+    invoke-interface {v3}, Ljava/util/List;->size()I
 
-    iget-object v1, p0, Lkt6;->a:Ljava/util/List;
+    move-result v4
 
-    iget-object v3, p1, Lkt6;->a:Ljava/util/List;
+    if-ge v2, v4, :cond_0
 
-    invoke-static {v1, v3}, Lxq7;->d(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-interface {v3, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
-    move-result v1
+    move-result-object v3
 
-    if-nez v1, :cond_2
+    check-cast v3, Lgt6;
 
-    return v2
+    new-instance v4, Lgt6;
 
-    :cond_2
-    iget-object v1, p0, Lkt6;->b:Ljava/util/List;
+    move-object v5, v4
 
-    iget-object v3, p1, Lkt6;->b:Ljava/util/List;
+    iget-object v4, v3, Lmt6;->a:Ljava/lang/String;
 
-    invoke-static {v1, v3}, Lxq7;->d(Ljava/lang/Object;Ljava/lang/Object;)Z
+    move-object v6, v5
 
-    move-result v1
+    iget-object v5, v3, Lmt6;->b:Lkt6;
 
-    if-nez v1, :cond_3
+    move-object v8, v6
 
-    return v2
+    iget-wide v6, v3, Lmt6;->c:J
 
-    :cond_3
-    iget-object p0, p0, Lkt6;->c:Ljava/util/List;
+    iget-object v11, v3, Lmt6;->Y:Lmw4;
 
-    iget-object p1, p1, Lkt6;->c:Ljava/util/List;
+    iget-object v12, v3, Lmt6;->Z:Ljava/lang/String;
 
-    invoke-static {p0, p1}, Lxq7;->d(Ljava/lang/Object;Ljava/lang/Object;)Z
+    iget-object v13, v3, Lmt6;->r0:Ljava/lang/String;
 
-    move-result p0
+    iget-wide v14, v3, Lmt6;->s0:J
 
-    if-nez p0, :cond_4
+    move-object/from16 v16, v4
 
-    return v2
+    move-object/from16 v17, v5
 
-    :cond_4
-    return v0
-.end method
+    iget-wide v4, v3, Lmt6;->t0:J
 
-.method public final hashCode()I
-    .locals 3
+    move/from16 v21, v2
 
-    iget-object v0, p0, Lkt6;->a:Ljava/util/List;
+    iget-boolean v2, v3, Lmt6;->u0:Z
 
-    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
+    move/from16 v18, v2
 
-    move-result v0
+    iget-boolean v2, v3, Lgt6;->v0:Z
 
-    const/16 v1, 0x1f
+    move/from16 v19, v2
 
-    mul-int/2addr v0, v1
+    iget-boolean v2, v3, Lgt6;->w0:Z
 
-    iget-object v2, p0, Lkt6;->b:Ljava/util/List;
+    move/from16 v20, v2
 
-    invoke-static {v2, v0, v1}, Lzge;->n(Ljava/util/List;II)I
+    move-object v2, v3
 
-    move-result v0
+    move-object v3, v8
 
-    iget-object p0, p0, Lkt6;->c:Ljava/util/List;
+    move/from16 v8, p1
 
-    invoke-virtual {p0}, Ljava/lang/Object;->hashCode()I
+    move-wide/from16 v22, v4
 
-    move-result p0
+    move-object/from16 v4, v16
 
-    add-int/2addr p0, v0
+    move-object/from16 v5, v17
 
-    return p0
-.end method
+    move-wide/from16 v16, v22
 
-.method public final toString()Ljava/lang/String;
-    .locals 8
+    invoke-direct/range {v3 .. v20}, Lgt6;-><init>(Ljava/lang/String;Lkt6;JIJLmw4;Ljava/lang/String;Ljava/lang/String;JJZZZ)V
 
-    sget-object v0, Lkt6;->d:Lkt6;
+    invoke-virtual {v1, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    if-ne p0, v0, :cond_0
+    iget-wide v2, v2, Lmt6;->c:J
 
-    const-class p0, Lkt6;
+    add-long/2addr v9, v2
 
-    invoke-virtual {p0}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
+    add-int/lit8 v2, v21, 0x1
 
-    move-result-object p0
-
-    const-string v0, ".INITIAL"
-
-    invoke-virtual {p0, v0}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
+    goto :goto_0
 
     :cond_0
-    new-instance v0, Ljava/lang/StringBuilder;
+    new-instance v2, Lkt6;
 
-    const-string v1, "IdleSearchData(recentContacts="
+    iget-wide v14, v0, Lmt6;->t0:J
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    iget-boolean v3, v0, Lmt6;->u0:Z
 
-    new-instance v6, Lvy2;
+    move-object/from16 v17, v1
 
-    const/16 v1, 0x17
+    iget-object v1, v0, Lmt6;->a:Ljava/lang/String;
 
-    invoke-direct {v6, v1}, Lvy2;-><init>(I)V
+    move-object v4, v2
 
-    const/16 v7, 0x18
+    iget-object v2, v0, Lmt6;->b:Lkt6;
 
-    iget-object v2, p0, Lkt6;->a:Ljava/util/List;
+    move/from16 v16, v3
 
-    const-string v3, ","
+    iget-object v3, v0, Lkt6;->v0:Ljava/lang/String;
 
-    const-string v4, "["
+    move-object v6, v4
 
-    const-string v5, "]"
+    iget-wide v4, v0, Lmt6;->c:J
 
-    invoke-static/range {v2 .. v7}, Lp43;->G0(Ljava/lang/Iterable;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lx56;I)Ljava/lang/String;
+    iget-object v9, v0, Lmt6;->Y:Lmw4;
 
-    move-result-object v1
+    iget-object v10, v0, Lmt6;->Z:Ljava/lang/String;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    iget-object v11, v0, Lmt6;->r0:Ljava/lang/String;
 
-    const-string v1, ", recentSearch="
+    iget-wide v12, v0, Lmt6;->s0:J
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    move-wide/from16 v7, p2
 
-    new-instance v6, Lvy2;
+    move-object v0, v6
 
-    const/16 v1, 0x18
+    move/from16 v6, p1
 
-    invoke-direct {v6, v1}, Lvy2;-><init>(I)V
+    invoke-direct/range {v0 .. v17}, Lkt6;-><init>(Ljava/lang/String;Lkt6;Ljava/lang/String;JIJLmw4;Ljava/lang/String;Ljava/lang/String;JJZLjava/util/List;)V
 
-    iget-object v2, p0, Lkt6;->b:Ljava/util/List;
-
-    const-string v3, ","
-
-    const-string v4, "["
-
-    const-string v5, "]"
-
-    invoke-static/range {v2 .. v7}, Lp43;->G0(Ljava/lang/Iterable;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lx56;I)Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string v1, ", allContacts="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    new-instance v6, Lvy2;
-
-    const/16 v1, 0x19
-
-    invoke-direct {v6, v1}, Lvy2;-><init>(I)V
-
-    iget-object v2, p0, Lkt6;->c:Ljava/util/List;
-
-    const-string v3, ","
-
-    const-string v4, "["
-
-    const-string v5, "]"
-
-    invoke-static/range {v2 .. v7}, Lp43;->G0(Ljava/lang/Iterable;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lx56;I)Ljava/lang/String;
-
-    move-result-object p0
-
-    const-string v1, ")"
-
-    invoke-static {v0, p0, v1}, Lm26;->j(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
+    return-object v0
 .end method

@@ -135,11 +135,11 @@
     invoke-direct {v1, v0}, Lorg/webrtc/EglThread$HandlerWithExceptionCallbacks;-><init>(Landroid/os/Looper;)V
 
     .line 5
-    new-instance v0, Lj34;
+    new-instance v0, Lh74;
 
     const/4 v2, 0x2
 
-    invoke-direct {v0, p1, v2, p2}, Lj34;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
+    invoke-direct {v0, p1, v2, p2}, Lh74;-><init>(Ljava/lang/Object;ILjava/lang/Object;)V
 
     invoke-static {v1, v0}, Lorg/webrtc/ThreadUtils;->invokeAtFrontUninterruptibly(Landroid/os/Handler;Ljava/util/concurrent/Callable;)Ljava/lang/Object;
 
@@ -156,11 +156,11 @@
 
     .line 7
     :cond_0
-    new-instance p0, Lte4;
+    new-instance p0, Lqj4;
 
-    const/16 v0, 0x8
+    const/4 v0, 0x6
 
-    invoke-direct {p0, v0}, Lte4;-><init>(I)V
+    invoke-direct {p0, v0}, Lqj4;-><init>(I)V
 
     :goto_0
     invoke-direct {p2, p0, v1, p1, p3}, Lorg/webrtc/EglThread;-><init>(Lorg/webrtc/EglThread$ReleaseMonitor;Lorg/webrtc/EglThread$HandlerWithExceptionCallbacks;Lorg/webrtc/EglBase$EglConnection;Lorg/webrtc/RenderSynchronizer;)V
@@ -295,11 +295,11 @@
 
     iget-object v0, p0, Lorg/webrtc/EglThread;->handler:Lorg/webrtc/EglThread$HandlerWithExceptionCallbacks;
 
-    new-instance v1, Lvv4;
+    new-instance v1, Le15;
 
     const/4 v2, 0x1
 
-    invoke-direct {v1, p0, v2}, Lvv4;-><init>(Lorg/webrtc/EglThread;I)V
+    invoke-direct {v1, p0, v2}, Le15;-><init>(Lorg/webrtc/EglThread;I)V
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
@@ -311,11 +311,11 @@
 
     iget-object v0, p0, Lorg/webrtc/EglThread;->handler:Lorg/webrtc/EglThread$HandlerWithExceptionCallbacks;
 
-    new-instance v1, Lvv4;
+    new-instance v1, Le15;
 
     const/4 v2, 0x0
 
-    invoke-direct {v1, p0, v2}, Lvv4;-><init>(Lorg/webrtc/EglThread;I)V
+    invoke-direct {v1, p0, v2}, Le15;-><init>(Lorg/webrtc/EglThread;I)V
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
@@ -349,11 +349,11 @@
 
     invoke-static {v1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    new-instance v2, Lka4;
+    new-instance v2, Lje4;
 
-    const/16 v3, 0xd
+    const/16 v3, 0xf
 
-    invoke-direct {v2, v3, v1}, Lka4;-><init>(ILjava/lang/Object;)V
+    invoke-direct {v2, v3, v1}, Lje4;-><init>(ILjava/lang/Object;)V
 
     invoke-virtual {v0, v2}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 

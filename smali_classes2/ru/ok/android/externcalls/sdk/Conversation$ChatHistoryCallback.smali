@@ -21,11 +21,11 @@
         "Lru/ok/android/externcalls/sdk/Conversation$ChatHistoryCallback;",
         "",
         "",
-        "Lfnd;",
+        "Lv0e;",
         "data",
-        "Le5f;",
+        "Lylf;",
         "onResponse",
-        "([Lfnd;)V",
+        "([Lv0e;)V",
         "calls-sdk_release"
     }
     k = 0x1
@@ -39,5 +39,5 @@
 
 
 # virtual methods
-.method public abstract onResponse([Lfnd;)V
+.method public abstract onResponse([Lv0e;)V
 .end method

@@ -1,47 +1,21 @@
 .class public final Lv8b;
-.super Lbu3;
+.super Lso;
 .source "SourceFile"
 
 
-# instance fields
-.field public final synthetic X:Lw8b;
-
-.field public Y:I
-
-.field public synthetic o:Ljava/lang/Object;
+# static fields
+.field public static final a:Lv8b;
 
 
 # direct methods
-.method public constructor <init>(Lw8b;Lbu3;)V
-    .locals 0
-
-    iput-object p1, p0, Lv8b;->X:Lw8b;
-
-    invoke-direct {p0, p2}, Lbu3;-><init>(Lkotlin/coroutines/Continuation;)V
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
+.method static constructor <clinit>()V
     .locals 1
 
-    iput-object p1, p0, Lv8b;->o:Ljava/lang/Object;
+    new-instance v0, Lv8b;
 
-    iget p1, p0, Lv8b;->Y:I
+    invoke-direct {v0}, Lso;-><init>()V
 
-    const/high16 v0, -0x80000000
+    sput-object v0, Lv8b;->a:Lv8b;
 
-    or-int/2addr p1, v0
-
-    iput p1, p0, Lv8b;->Y:I
-
-    iget-object p1, p0, Lv8b;->X:Lw8b;
-
-    invoke-virtual {p1, p0}, Lw8b;->f(Lbu3;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    return-object p0
+    return-void
 .end method

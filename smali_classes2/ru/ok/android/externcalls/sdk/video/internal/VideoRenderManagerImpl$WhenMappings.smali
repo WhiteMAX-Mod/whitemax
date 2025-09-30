@@ -32,7 +32,7 @@
 .method static constructor <clinit>()V
     .locals 3
 
-    invoke-static {}, Lgmf;->values()[Lgmf;
+    invoke-static {}, Lv5g;->values()[Lv5g;
 
     move-result-object v0
 

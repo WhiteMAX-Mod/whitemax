@@ -4,22 +4,16 @@
 
 # interfaces
 .implements Landroid/graphics/drawable/Animatable;
-.implements Lwbf;
+.implements Latf;
 
 
 # annotations
-.annotation build Landroid/annotation/SuppressLint;
-    value = {
-        "ResourceType"
-    }
-.end annotation
-
 .annotation build Landroidx/annotation/Keep;
 .end annotation
 
 .annotation runtime Lkotlin/Metadata;
     d1 = {
-        "\u0000\u00b8\u0001\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0008\n\u0002\u0008\u0003\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0007\n\u0002\u0018\u0002\n\u0002\u0008\u0005\n\u0002\u0018\u0002\n\u0002\u0008\u0003\n\u0002\u0018\u0002\n\u0002\u0008\u0006\n\u0002\u0018\u0002\n\u0002\u0008\u0003\n\u0002\u0010\u0015\n\u0000\n\u0002\u0010\u000b\n\u0002\u0008\u0013\n\u0002\u0018\u0002\n\u0002\u0008\u0006\n\u0002\u0010\u000e\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0004\n\u0002\u0018\u0002\n\u0002\u0008\u0003\n\u0002\u0018\u0002\n\u0002\u0008\u0007\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0004\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0008\u0006\n\u0002\u0010!\n\u0002\u0008\u0005*\u0002Yj\u0008\u0007\u0018\u0000 s2\u00020\u00012\u00020\u00022\u00020\u00032\u00020\u0003:\u0002gtB\u0019\u0012\u0006\u0010\u0005\u001a\u00020\u0004\u0012\u0008\u0008\u0001\u0010\u0007\u001a\u00020\u0006\u00a2\u0006\u0004\u0008\u0008\u0010\tJ\u0017\u0010\r\u001a\u00020\u000c2\u0006\u0010\u000b\u001a\u00020\nH\u0016\u00a2\u0006\u0004\u0008\r\u0010\u000eJ\u000f\u0010\u000f\u001a\u00020\u0006H\u0016\u00a2\u0006\u0004\u0008\u000f\u0010\u0010J\u0017\u0010\u0012\u001a\u00020\u000c2\u0006\u0010\u0011\u001a\u00020\u0006H\u0016\u00a2\u0006\u0004\u0008\u0012\u0010\u0013J\u0019\u0010\u0016\u001a\u00020\u000c2\u0008\u0010\u0015\u001a\u0004\u0018\u00010\u0014H\u0016\u00a2\u0006\u0004\u0008\u0016\u0010\u0017J\u0011\u0010\u0018\u001a\u0004\u0018\u00010\u0014H\u0016\u00a2\u0006\u0004\u0008\u0018\u0010\u0019J\u0019\u0010\u001c\u001a\u00020\u000c2\u0008\u0010\u001b\u001a\u0004\u0018\u00010\u001aH\u0016\u00a2\u0006\u0004\u0008\u001c\u0010\u001dJ\u0019\u0010 \u001a\u00020\u000c2\u0008\u0010\u001f\u001a\u0004\u0018\u00010\u001eH\u0016\u00a2\u0006\u0004\u0008 \u0010!J\u000f\u0010\"\u001a\u00020\u000cH\u0016\u00a2\u0006\u0004\u0008\"\u0010#J\u000f\u0010$\u001a\u00020\u0006H\u0016\u00a2\u0006\u0004\u0008$\u0010\u0010J\u0017\u0010\'\u001a\u00020\u000c2\u0006\u0010&\u001a\u00020%H\u0014\u00a2\u0006\u0004\u0008\'\u0010(J\u0017\u0010,\u001a\u00020+2\u0006\u0010*\u001a\u00020)H\u0014\u00a2\u0006\u0004\u0008,\u0010-J\u0017\u0010/\u001a\u00020+2\u0006\u0010.\u001a\u00020\u0006H\u0014\u00a2\u0006\u0004\u0008/\u00100J\u001f\u00103\u001a\u00020+2\u0006\u00101\u001a\u00020+2\u0006\u00102\u001a\u00020+H\u0016\u00a2\u0006\u0004\u00083\u00104J\u000f\u00105\u001a\u00020%H\u0016\u00a2\u0006\u0004\u00085\u00106J\u000f\u00107\u001a\u00020\u0006H\u0016\u00a2\u0006\u0004\u00087\u0010\u0010J\u000f\u00108\u001a\u00020\u0006H\u0016\u00a2\u0006\u0004\u00088\u0010\u0010J\u000f\u00109\u001a\u00020\u0006H\u0016\u00a2\u0006\u0004\u00089\u0010\u0010J\u000f\u0010:\u001a\u00020\u0006H\u0016\u00a2\u0006\u0004\u0008:\u0010\u0010J\u000f\u0010;\u001a\u00020\u000cH\u0016\u00a2\u0006\u0004\u0008;\u0010#J\u000f\u0010<\u001a\u00020\u000cH\u0016\u00a2\u0006\u0004\u0008<\u0010#J\u000f\u0010=\u001a\u00020+H\u0016\u00a2\u0006\u0004\u0008=\u0010>J\u0017\u0010A\u001a\u00020\u000c2\u0006\u0010@\u001a\u00020?H\u0016\u00a2\u0006\u0004\u0008A\u0010BJ\u0017\u0010C\u001a\u00020+2\u0006\u0010@\u001a\u00020?H\u0016\u00a2\u0006\u0004\u0008C\u0010DJ\u000f\u0010E\u001a\u00020\u000cH\u0016\u00a2\u0006\u0004\u0008E\u0010#J\u0019\u0010I\u001a\u0004\u0018\u00010H2\u0006\u0010G\u001a\u00020FH\u0016\u00a2\u0006\u0004\u0008I\u0010JJ\u000f\u0010K\u001a\u00020\u000cH\u0016\u00a2\u0006\u0004\u0008K\u0010#J\u0019\u0010N\u001a\u0004\u0018\u00010M2\u0006\u0010L\u001a\u00020FH\u0016\u00a2\u0006\u0004\u0008N\u0010OJ\u000f\u0010P\u001a\u00020\u000cH\u0016\u00a2\u0006\u0004\u0008P\u0010#J\u0017\u0010S\u001a\u00020\u000c2\u0006\u0010R\u001a\u00020QH\u0002\u00a2\u0006\u0004\u0008S\u0010TJ\u0017\u0010V\u001a\u00020H2\u0006\u0010U\u001a\u00020\u0006H\u0002\u00a2\u0006\u0004\u0008V\u0010WR\u0014\u0010\u0007\u001a\u00020\u00068\u0002X\u0082\u0004\u00a2\u0006\u0006\n\u0004\u0008\u0007\u0010XR\u0014\u0010@\u001a\u00020Y8\u0002X\u0082\u0004\u00a2\u0006\u0006\n\u0004\u0008@\u0010ZR\u0014\u0010\\\u001a\u00020[8\u0002X\u0082\u0004\u00a2\u0006\u0006\n\u0004\u0008\\\u0010]R$\u0010`\u001a\u0012\u0012\u0004\u0012\u00020H0^j\u0008\u0012\u0004\u0012\u00020H`_8\u0002X\u0082\u0004\u00a2\u0006\u0006\n\u0004\u0008`\u0010aR \u0010c\u001a\u000e\u0012\u0004\u0012\u00020H\u0012\u0004\u0012\u00020F0b8\u0002X\u0082\u0004\u00a2\u0006\u0006\n\u0004\u0008c\u0010dR\u0016\u0010e\u001a\u00020Q8\u0002@\u0002X\u0082\u000e\u00a2\u0006\u0006\n\u0004\u0008e\u0010fR\u0016\u0010h\u001a\u00020g8\u0002@\u0002X\u0082\u000e\u00a2\u0006\u0006\n\u0004\u0008h\u0010iR\u001b\u0010o\u001a\u00020j8BX\u0082\u0084\u0002\u00a2\u0006\u000c\n\u0004\u0008k\u0010l\u001a\u0004\u0008m\u0010nR\u001c\u0010q\u001a\u0008\u0012\u0004\u0012\u00020?0p8\u0002@\u0002X\u0082\u000e\u00a2\u0006\u0006\n\u0004\u0008q\u0010r\u00a8\u0006u"
+        "\u0000\u00b0\u0001\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0008\n\u0002\u0008\u0003\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0007\n\u0002\u0018\u0002\n\u0002\u0008\u0005\n\u0002\u0018\u0002\n\u0002\u0008\u0003\n\u0002\u0018\u0002\n\u0002\u0008\u0006\n\u0002\u0018\u0002\n\u0002\u0008\u0003\n\u0002\u0010\u0015\n\u0000\n\u0002\u0010\u000b\n\u0002\u0008\u0013\n\u0002\u0018\u0002\n\u0002\u0008\u0006\n\u0002\u0010\u000e\n\u0000\n\u0002\u0018\u0002\n\u0002\u0008\u0004\n\u0002\u0018\u0002\n\u0002\u0008\u0003\n\u0002\u0018\u0002\n\u0002\u0008\u0007\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0002\n\u0002\u0018\u0002\n\u0002\u0008\u0004\n\u0002\u0018\u0002\n\u0002\u0008\u0003\n\u0002\u0008\u0006*\u0002Yk\u0008\u0007\u0018\u0000 n2\u00020\u00012\u00020\u00022\u00020\u00032\u00020\u0003:\u0002goB\u0019\u0012\u0006\u0010\u0005\u001a\u00020\u0004\u0012\u0008\u0008\u0001\u0010\u0007\u001a\u00020\u0006\u00a2\u0006\u0004\u0008\u0008\u0010\tJ\u0017\u0010\r\u001a\u00020\u000c2\u0006\u0010\u000b\u001a\u00020\nH\u0016\u00a2\u0006\u0004\u0008\r\u0010\u000eJ\u000f\u0010\u000f\u001a\u00020\u0006H\u0016\u00a2\u0006\u0004\u0008\u000f\u0010\u0010J\u0017\u0010\u0012\u001a\u00020\u000c2\u0006\u0010\u0011\u001a\u00020\u0006H\u0016\u00a2\u0006\u0004\u0008\u0012\u0010\u0013J\u0019\u0010\u0016\u001a\u00020\u000c2\u0008\u0010\u0015\u001a\u0004\u0018\u00010\u0014H\u0016\u00a2\u0006\u0004\u0008\u0016\u0010\u0017J\u0011\u0010\u0018\u001a\u0004\u0018\u00010\u0014H\u0016\u00a2\u0006\u0004\u0008\u0018\u0010\u0019J\u0019\u0010\u001c\u001a\u00020\u000c2\u0008\u0010\u001b\u001a\u0004\u0018\u00010\u001aH\u0016\u00a2\u0006\u0004\u0008\u001c\u0010\u001dJ\u0019\u0010 \u001a\u00020\u000c2\u0008\u0010\u001f\u001a\u0004\u0018\u00010\u001eH\u0016\u00a2\u0006\u0004\u0008 \u0010!J\u000f\u0010\"\u001a\u00020\u000cH\u0016\u00a2\u0006\u0004\u0008\"\u0010#J\u000f\u0010$\u001a\u00020\u0006H\u0016\u00a2\u0006\u0004\u0008$\u0010\u0010J\u0017\u0010\'\u001a\u00020\u000c2\u0006\u0010&\u001a\u00020%H\u0014\u00a2\u0006\u0004\u0008\'\u0010(J\u0017\u0010,\u001a\u00020+2\u0006\u0010*\u001a\u00020)H\u0014\u00a2\u0006\u0004\u0008,\u0010-J\u0017\u0010/\u001a\u00020+2\u0006\u0010.\u001a\u00020\u0006H\u0014\u00a2\u0006\u0004\u0008/\u00100J\u001f\u00103\u001a\u00020+2\u0006\u00101\u001a\u00020+2\u0006\u00102\u001a\u00020+H\u0016\u00a2\u0006\u0004\u00083\u00104J\u000f\u00105\u001a\u00020%H\u0016\u00a2\u0006\u0004\u00085\u00106J\u000f\u00107\u001a\u00020\u0006H\u0016\u00a2\u0006\u0004\u00087\u0010\u0010J\u000f\u00108\u001a\u00020\u0006H\u0016\u00a2\u0006\u0004\u00088\u0010\u0010J\u000f\u00109\u001a\u00020\u0006H\u0016\u00a2\u0006\u0004\u00089\u0010\u0010J\u000f\u0010:\u001a\u00020\u0006H\u0016\u00a2\u0006\u0004\u0008:\u0010\u0010J\u000f\u0010;\u001a\u00020\u000cH\u0016\u00a2\u0006\u0004\u0008;\u0010#J\u000f\u0010<\u001a\u00020\u000cH\u0016\u00a2\u0006\u0004\u0008<\u0010#J\u000f\u0010=\u001a\u00020+H\u0016\u00a2\u0006\u0004\u0008=\u0010>J\u0017\u0010A\u001a\u00020\u000c2\u0006\u0010@\u001a\u00020?H\u0016\u00a2\u0006\u0004\u0008A\u0010BJ\u0017\u0010C\u001a\u00020+2\u0006\u0010@\u001a\u00020?H\u0016\u00a2\u0006\u0004\u0008C\u0010DJ\u000f\u0010E\u001a\u00020\u000cH\u0016\u00a2\u0006\u0004\u0008E\u0010#J\u0019\u0010I\u001a\u0004\u0018\u00010H2\u0006\u0010G\u001a\u00020FH\u0016\u00a2\u0006\u0004\u0008I\u0010JJ\u000f\u0010K\u001a\u00020\u000cH\u0016\u00a2\u0006\u0004\u0008K\u0010#J\u0019\u0010N\u001a\u0004\u0018\u00010M2\u0006\u0010L\u001a\u00020FH\u0016\u00a2\u0006\u0004\u0008N\u0010OJ\u000f\u0010P\u001a\u00020\u000cH\u0016\u00a2\u0006\u0004\u0008P\u0010#J\u0017\u0010S\u001a\u00020\u000c2\u0006\u0010R\u001a\u00020QH\u0002\u00a2\u0006\u0004\u0008S\u0010TJ\u0017\u0010V\u001a\u00020H2\u0006\u0010U\u001a\u00020\u0006H\u0002\u00a2\u0006\u0004\u0008V\u0010WR\u0014\u0010\u0007\u001a\u00020\u00068\u0002X\u0082\u0004\u00a2\u0006\u0006\n\u0004\u0008\u0007\u0010XR\u0014\u0010@\u001a\u00020Y8\u0002X\u0082\u0004\u00a2\u0006\u0006\n\u0004\u0008@\u0010ZR\u0014\u0010\\\u001a\u00020[8\u0002X\u0082\u0004\u00a2\u0006\u0006\n\u0004\u0008\\\u0010]R$\u0010`\u001a\u0012\u0012\u0004\u0012\u00020H0^j\u0008\u0012\u0004\u0012\u00020H`_8\u0002X\u0082\u0004\u00a2\u0006\u0006\n\u0004\u0008`\u0010aR \u0010c\u001a\u000e\u0012\u0004\u0012\u00020H\u0012\u0004\u0012\u00020F0b8\u0002X\u0082\u0004\u00a2\u0006\u0006\n\u0004\u0008c\u0010dR\u0016\u0010e\u001a\u00020Q8\u0002@\u0002X\u0082\u000e\u00a2\u0006\u0006\n\u0004\u0008e\u0010fR\u0016\u0010h\u001a\u00020g8\u0002@\u0002X\u0082\u000e\u00a2\u0006\u0006\n\u0004\u0008h\u0010iR\u001a\u0010j\u001a\u0008\u0012\u0004\u0012\u00020?0^8\u0002X\u0082\u0004\u00a2\u0006\u0006\n\u0004\u0008j\u0010aR\u0014\u0010l\u001a\u00020k8\u0002X\u0082\u0004\u00a2\u0006\u0006\n\u0004\u0008l\u0010m\u00a8\u0006p"
     }
     d2 = {
         "Lone/me/sdk/richvector/EnhancedAnimatedVectorDrawable;",
@@ -34,7 +28,7 @@
         "(Landroid/content/Context;I)V",
         "Landroid/graphics/Canvas;",
         "canvas",
-        "Le5f;",
+        "Lylf;",
         "draw",
         "(Landroid/graphics/Canvas;)V",
         "getAlpha",
@@ -85,12 +79,12 @@
         "stop",
         "isRunning",
         "()Z",
-        "Lde;",
+        "Lie;",
         "callback",
         "registerAnimationCallback",
-        "(Lde;)V",
+        "(Lie;)V",
         "unregisterAnimationCallback",
-        "(Lde;)Z",
+        "(Lie;)Z",
         "clearAnimationCallbacks",
         "",
         "targetName",
@@ -111,8 +105,8 @@
         "prepareLocalAnimator",
         "(I)Landroid/animation/Animator;",
         "I",
-        "w15",
-        "Lw15;",
+        "h75",
+        "Lh75;",
         "Lone/me/sdk/richvector/EnhancedVectorDrawable;",
         "drawable",
         "Lone/me/sdk/richvector/EnhancedVectorDrawable;",
@@ -125,20 +119,15 @@
         "Landroid/util/ArrayMap;",
         "animatorSetFromXml",
         "Landroid/animation/AnimatorSet;",
-        "Lu15;",
+        "Lf75;",
         "animator",
-        "Lu15;",
-        "v15",
-        "animatorListener$delegate",
-        "Lje7;",
-        "getAnimatorListener",
-        "()Lv15;",
-        "animatorListener",
-        "",
+        "Lf75;",
         "animationCallbacks",
-        "Ljava/util/List;",
+        "g75",
+        "animatorListener",
+        "Lg75;",
         "Companion",
-        "t15",
+        "e75",
         "rich-vector_release"
     }
     k = 0x1
@@ -152,7 +141,7 @@
 
 
 # static fields
-.field private static final Companion:Lt15;
+.field private static final Companion:Le75;
 
 .field public static final SHOULD_IGNORE_INVALID_ANIMATION:Z = true
     .annotation runtime Ljava/lang/Deprecated;
@@ -161,19 +150,19 @@
 
 
 # instance fields
-.field private animationCallbacks:Ljava/util/List;
+.field private final animationCallbacks:Ljava/util/ArrayList;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Ljava/util/List<",
-            "Lde;",
+            "Ljava/util/ArrayList<",
+            "Lie;",
             ">;"
         }
     .end annotation
 .end field
 
-.field private animator:Lu15;
+.field private animator:Lf75;
 
-.field private final animatorListener$delegate:Lje7;
+.field private final animatorListener:Lg75;
 
 .field private animatorSetFromXml:Landroid/animation/AnimatorSet;
 
@@ -187,7 +176,7 @@
     .end annotation
 .end field
 
-.field private final callback:Lw15;
+.field private final callback:Lh75;
 
 .field private final drawable:Lone/me/sdk/richvector/EnhancedVectorDrawable;
 
@@ -209,11 +198,11 @@
 .method static constructor <clinit>()V
     .locals 1
 
-    new-instance v0, Lt15;
+    new-instance v0, Le75;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    sput-object v0, Lone/me/sdk/richvector/EnhancedAnimatedVectorDrawable;->Companion:Lt15;
+    sput-object v0, Lone/me/sdk/richvector/EnhancedAnimatedVectorDrawable;->Companion:Le75;
 
     return-void
 .end method
@@ -229,39 +218,33 @@
 
     iput v1, v0, Lone/me/sdk/richvector/EnhancedAnimatedVectorDrawable;->resId:I
 
-    new-instance v2, Lw15;
+    new-instance v2, Lh75;
 
-    invoke-direct {v2, v0}, Lw15;-><init>(Lone/me/sdk/richvector/EnhancedAnimatedVectorDrawable;)V
+    invoke-direct {v2, v0}, Lh75;-><init>(Lone/me/sdk/richvector/EnhancedAnimatedVectorDrawable;)V
 
-    iput-object v2, v0, Lone/me/sdk/richvector/EnhancedAnimatedVectorDrawable;->callback:Lw15;
-
-    new-instance v2, Lur3;
-
-    const/16 v3, 0xc
-
-    invoke-direct {v2, v3, v0}, Lur3;-><init>(ILjava/lang/Object;)V
-
-    new-instance v3, Lwfe;
-
-    invoke-direct {v3, v2}, Lwfe;-><init>(Lv56;)V
-
-    iput-object v3, v0, Lone/me/sdk/richvector/EnhancedAnimatedVectorDrawable;->animatorListener$delegate:Lje7;
+    iput-object v2, v0, Lone/me/sdk/richvector/EnhancedAnimatedVectorDrawable;->callback:Lh75;
 
     new-instance v2, Ljava/util/ArrayList;
 
     invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
 
-    iput-object v2, v0, Lone/me/sdk/richvector/EnhancedAnimatedVectorDrawable;->animationCallbacks:Ljava/util/List;
+    iput-object v2, v0, Lone/me/sdk/richvector/EnhancedAnimatedVectorDrawable;->animationCallbacks:Ljava/util/ArrayList;
 
-    new-instance v2, Lof;
+    new-instance v2, Lg75;
+
+    invoke-direct {v2, v0}, Lg75;-><init>(Lone/me/sdk/richvector/EnhancedAnimatedVectorDrawable;)V
+
+    iput-object v2, v0, Lone/me/sdk/richvector/EnhancedAnimatedVectorDrawable;->animatorListener:Lg75;
+
+    new-instance v2, Ltf;
 
     move-object/from16 v3, p1
 
-    invoke-direct {v2, v3}, Lof;-><init>(Landroid/content/Context;)V
+    invoke-direct {v2, v3}, Ltf;-><init>(Landroid/content/Context;)V
 
-    sget-object v3, Lof;->c:Lzvd;
+    sget-object v3, Ltf;->c:Leuc;
 
-    iget-object v4, v3, Lzvd;->b:Ljava/lang/Object;
+    iget-object v4, v3, Leuc;->b:Ljava/lang/Object;
 
     check-cast v4, Landroid/util/LruCache;
 
@@ -273,76 +256,83 @@
 
     move-result-object v4
 
-    check-cast v4, Lnf;
+    check-cast v4, Lsf;
 
-    if-eqz v4, :cond_1
+    const/4 v6, 0x0
 
-    new-instance v6, Ljava/util/ArrayList;
+    if-eqz v4, :cond_2
 
-    invoke-direct {v6}, Ljava/util/ArrayList;-><init>()V
+    new-instance v7, Ljava/util/ArrayList;
 
-    new-instance v7, Landroid/util/ArrayMap;
+    invoke-direct {v7}, Ljava/util/ArrayList;-><init>()V
 
-    invoke-direct {v7}, Landroid/util/ArrayMap;-><init>()V
+    new-instance v8, Landroid/util/ArrayMap;
 
-    iget-object v8, v4, Lnf;->b:Ljava/util/ArrayList;
+    invoke-direct {v8}, Landroid/util/ArrayMap;-><init>()V
 
-    invoke-virtual {v8}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
+    iget-object v9, v4, Lsf;->b:Ljava/util/ArrayList;
 
-    move-result-object v8
+    invoke-static {v9}, Lr73;->H(Ljava/util/List;)I
+
+    move-result v10
+
+    if-ltz v10, :cond_1
+
+    move v11, v6
 
     :goto_0
-    invoke-interface {v8}, Ljava/util/Iterator;->hasNext()Z
+    invoke-static {v11, v9}, Lq73;->h0(ILjava/util/List;)Ljava/lang/Object;
 
-    move-result v9
+    move-result-object v12
 
-    if-eqz v9, :cond_0
+    if-eqz v12, :cond_0
 
-    invoke-interface {v8}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    check-cast v12, Landroid/animation/Animator;
 
-    move-result-object v9
+    invoke-virtual {v12}, Landroid/animation/Animator;->clone()Landroid/animation/Animator;
 
-    check-cast v9, Landroid/animation/Animator;
+    move-result-object v13
 
-    invoke-virtual {v9}, Landroid/animation/Animator;->clone()Landroid/animation/Animator;
+    invoke-virtual {v7, v13}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    move-result-object v10
+    iget-object v14, v4, Lsf;->c:Landroid/util/ArrayMap;
 
-    invoke-virtual {v6, v10}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+    invoke-virtual {v14, v12}, Landroid/util/ArrayMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
-    iget-object v11, v4, Lnf;->c:Landroid/util/ArrayMap;
+    move-result-object v12
 
-    invoke-virtual {v11, v9}, Landroid/util/ArrayMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v8, v13, v12}, Landroid/util/ArrayMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    move-result-object v9
+    :cond_0
+    if-eq v11, v10, :cond_1
 
-    invoke-virtual {v7, v10, v9}, Landroid/util/ArrayMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    add-int/lit8 v11, v11, 0x1
 
     goto :goto_0
 
-    :cond_0
-    new-instance v8, Lnf;
+    :cond_1
+    new-instance v9, Lsf;
 
-    new-instance v9, Lone/me/sdk/richvector/EnhancedVectorDrawable;
+    new-instance v10, Lone/me/sdk/richvector/EnhancedVectorDrawable;
 
-    iget-object v4, v4, Lnf;->a:Lone/me/sdk/richvector/EnhancedVectorDrawable;
+    iget-object v4, v4, Lsf;->a:Lone/me/sdk/richvector/EnhancedVectorDrawable;
 
-    invoke-direct {v9, v4}, Lone/me/sdk/richvector/EnhancedVectorDrawable;-><init>(Lone/me/sdk/richvector/EnhancedVectorDrawable;)V
+    invoke-direct {v10, v4}, Lone/me/sdk/richvector/EnhancedVectorDrawable;-><init>(Lone/me/sdk/richvector/EnhancedVectorDrawable;)V
 
-    invoke-direct {v8, v9, v6, v7}, Lnf;-><init>(Lone/me/sdk/richvector/EnhancedVectorDrawable;Ljava/util/ArrayList;Landroid/util/ArrayMap;)V
+    invoke-direct {v9, v10, v7, v8}, Lsf;-><init>(Lone/me/sdk/richvector/EnhancedVectorDrawable;Ljava/util/ArrayList;Landroid/util/ArrayMap;)V
 
     goto :goto_1
 
-    :cond_1
-    const/4 v8, 0x0
+    :cond_2
+    const/4 v9, 0x0
 
     :goto_1
-    if-eqz v8, :cond_2
+    if-eqz v9, :cond_3
 
     goto/16 :goto_7
 
-    :cond_2
-    iget-object v4, v2, Lof;->b:Landroid/content/res/Resources;
+    :cond_3
+    iget-object v4, v2, Ltf;->b:Landroid/content/res/Resources;
 
     invoke-virtual {v4, v1}, Landroid/content/res/Resources;->getXml(I)Landroid/content/res/XmlResourceParser;
 
@@ -350,64 +340,64 @@
 
     invoke-interface {v4}, Lorg/xmlpull/v1/XmlPullParser;->next()I
 
-    move-result v6
+    move-result v7
 
     :goto_2
-    const/4 v7, 0x2
+    const/4 v8, 0x2
 
-    const/4 v8, 0x1
+    const/4 v9, 0x1
 
-    if-eq v6, v7, :cond_3
+    if-eq v7, v8, :cond_4
 
-    if-eq v6, v8, :cond_3
+    if-eq v7, v9, :cond_4
 
     invoke-interface {v4}, Lorg/xmlpull/v1/XmlPullParser;->next()I
 
-    move-result v6
+    move-result v7
 
     goto :goto_2
 
-    :cond_3
-    if-ne v6, v7, :cond_d
+    :cond_4
+    if-ne v7, v8, :cond_e
 
-    new-instance v6, Ljava/util/ArrayList;
+    new-instance v7, Ljava/util/ArrayList;
 
-    invoke-direct {v6}, Ljava/util/ArrayList;-><init>()V
+    invoke-direct {v7}, Ljava/util/ArrayList;-><init>()V
 
-    new-instance v9, Landroid/util/ArrayMap;
+    new-instance v10, Landroid/util/ArrayMap;
 
-    invoke-direct {v9}, Landroid/util/ArrayMap;-><init>()V
+    invoke-direct {v10}, Landroid/util/ArrayMap;-><init>()V
 
     :try_start_0
     invoke-interface {v4}, Lorg/xmlpull/v1/XmlPullParser;->getEventType()I
 
-    move-result v10
-
-    invoke-interface {v4}, Lorg/xmlpull/v1/XmlPullParser;->getDepth()I
-
     move-result v11
 
-    const/4 v12, 0x0
+    invoke-interface {v4}, Lorg/xmlpull/v1/XmlPullParser;->getDepth()I
+
+    move-result v12
+
+    const/4 v13, 0x0
 
     :goto_3
-    if-eq v10, v8, :cond_b
+    if-eq v11, v9, :cond_c
 
     invoke-interface {v4}, Lorg/xmlpull/v1/XmlPullParser;->getDepth()I
 
-    move-result v13
+    move-result v14
 
-    if-ge v13, v11, :cond_4
+    if-ge v14, v12, :cond_5
 
-    const/4 v13, 0x3
+    const/4 v14, 0x3
 
-    if-eq v10, v13, :cond_b
+    if-eq v11, v14, :cond_c
 
-    :cond_4
-    if-eq v10, v7, :cond_5
+    :cond_5
+    if-eq v11, v8, :cond_6
 
     invoke-interface {v4}, Lorg/xmlpull/v1/XmlPullParser;->next()I
 
-    move-result v10
+    move-result v11
 
     goto :goto_3
 
@@ -426,62 +416,60 @@
 
     goto/16 :goto_9
 
-    :cond_5
+    :cond_6
     invoke-interface {v4}, Lorg/xmlpull/v1/XmlPullParser;->getName()Ljava/lang/String;
 
-    move-result-object v10
+    move-result-object v11
 
-    const-string v13, "animated-vector"
+    const-string v14, "animated-vector"
 
-    invoke-static {v10, v13}, Lxq7;->d(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v11, v14}, Lvyg;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    move-result v13
+    move-result v14
 
-    if-eqz v13, :cond_6
+    if-eqz v14, :cond_7
 
-    invoke-virtual {v2, v4}, Lof;->b(Landroid/content/res/XmlResourceParser;)Lone/me/sdk/richvector/EnhancedVectorDrawable;
+    invoke-virtual {v2, v4}, Ltf;->b(Landroid/content/res/XmlResourceParser;)Lone/me/sdk/richvector/EnhancedVectorDrawable;
 
-    move-result-object v10
+    move-result-object v11
 
-    invoke-virtual {v10}, Lone/me/sdk/richvector/EnhancedVectorDrawable;->getPixelSize()F
+    invoke-virtual {v11}, Lone/me/sdk/richvector/EnhancedVectorDrawable;->getPixelSize()F
 
-    move-object v12, v10
+    move-object v13, v11
 
     goto :goto_6
 
-    :cond_6
-    const-string v13, "target"
+    :cond_7
+    const-string v14, "target"
 
-    invoke-static {v10, v13}, Lxq7;->d(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v11, v14}, Lvyg;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    move-result v10
+    move-result v11
 
-    if-eqz v10, :cond_a
+    if-eqz v11, :cond_b
 
     invoke-interface {v4}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeCount()I
 
-    move-result v10
+    move-result v11
 
-    const/4 v13, 0x0
-
-    move v14, v13
+    move v14, v6
 
     const/4 v15, 0x0
 
     :goto_4
-    if-ge v14, v10, :cond_a
+    if-ge v14, v11, :cond_b
 
     invoke-interface {v4, v14}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeName(I)Ljava/lang/String;
 
     move-result-object v5
 
-    const-string v7, "name"
+    const-string v8, "name"
 
-    invoke-static {v5, v7}, Lxq7;->d(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v5, v8}, Lvyg;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    move-result v7
+    move-result v8
 
-    if-eqz v7, :cond_7
+    if-eqz v8, :cond_8
 
     invoke-interface {v4, v14}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeValue(I)Ljava/lang/String;
 
@@ -489,74 +477,74 @@
 
     goto :goto_5
 
-    :cond_7
-    const-string v7, "animation"
+    :cond_8
+    const-string v8, "animation"
 
-    invoke-static {v5, v7}, Lxq7;->d(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v5
-
-    if-eqz v5, :cond_9
-
-    invoke-interface {v4, v14, v13}, Landroid/util/AttributeSet;->getAttributeResourceValue(II)I
+    invoke-static {v5, v8}, Lvyg;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v5
 
-    if-eqz v5, :cond_9
+    if-eqz v5, :cond_a
 
-    iget-object v7, v2, Lof;->a:Landroid/content/Context;
+    invoke-interface {v4, v14, v6}, Landroid/util/AttributeSet;->getAttributeResourceValue(II)I
 
-    invoke-static {v7, v5}, Landroid/animation/AnimatorInflater;->loadAnimator(Landroid/content/Context;I)Landroid/animation/Animator;
+    move-result v5
 
-    move-result-object v7
+    if-eqz v5, :cond_a
 
-    invoke-static {v7}, Lof;->c(Landroid/animation/Animator;)Z
+    iget-object v8, v2, Ltf;->a:Landroid/content/Context;
+
+    invoke-static {v8, v5}, Landroid/animation/AnimatorInflater;->loadAnimator(Landroid/content/Context;I)Landroid/animation/Animator;
+
+    move-result-object v8
+
+    invoke-static {v8}, Ltf;->c(Landroid/animation/Animator;)Z
 
     move-result v16
 
-    if-eqz v16, :cond_8
+    if-eqz v16, :cond_9
 
-    invoke-virtual {v2, v5}, Lof;->a(I)Landroid/animation/Animator;
+    invoke-virtual {v2, v5}, Ltf;->a(I)Landroid/animation/Animator;
 
-    move-result-object v7
-
-    :cond_8
-    invoke-virtual {v6, v7}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    invoke-virtual {v9, v7, v15}, Landroid/util/ArrayMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    move-result-object v8
 
     :cond_9
+    invoke-virtual {v7, v8}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    invoke-virtual {v10, v8, v15}, Landroid/util/ArrayMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    :cond_a
     :goto_5
     add-int/lit8 v14, v14, 0x1
 
-    const/4 v7, 0x2
+    const/4 v8, 0x2
 
     goto :goto_4
 
-    :cond_a
+    :cond_b
     :goto_6
     invoke-interface {v4}, Lorg/xmlpull/v1/XmlPullParser;->next()I
 
-    move-result v10
+    move-result v11
     :try_end_0
     .catch Lorg/xmlpull/v1/XmlPullParserException; {:try_start_0 .. :try_end_0} :catch_1
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    const/4 v7, 0x2
+    const/4 v8, 0x2
 
     goto :goto_3
 
-    :cond_b
+    :cond_c
     invoke-interface {v4}, Landroid/content/res/XmlResourceParser;->close()V
 
-    if-eqz v12, :cond_c
+    if-eqz v13, :cond_d
 
-    new-instance v8, Lnf;
+    new-instance v9, Lsf;
 
-    invoke-direct {v8, v12, v6, v9}, Lnf;-><init>(Lone/me/sdk/richvector/EnhancedVectorDrawable;Ljava/util/ArrayList;Landroid/util/ArrayMap;)V
+    invoke-direct {v9, v13, v7, v10}, Lsf;-><init>(Lone/me/sdk/richvector/EnhancedVectorDrawable;Ljava/util/ArrayList;Landroid/util/ArrayMap;)V
 
-    iget-object v2, v3, Lzvd;->b:Ljava/lang/Object;
+    iget-object v2, v3, Leuc;->b:Ljava/lang/Object;
 
     check-cast v2, Landroid/util/LruCache;
 
@@ -564,22 +552,22 @@
 
     move-result-object v1
 
-    invoke-virtual {v2, v1, v8}, Landroid/util/LruCache;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v2, v1, v9}, Landroid/util/LruCache;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     :goto_7
-    iget-object v1, v8, Lnf;->a:Lone/me/sdk/richvector/EnhancedVectorDrawable;
+    iget-object v1, v9, Lsf;->a:Lone/me/sdk/richvector/EnhancedVectorDrawable;
 
-    iget-object v2, v0, Lone/me/sdk/richvector/EnhancedAnimatedVectorDrawable;->callback:Lw15;
+    iget-object v2, v0, Lone/me/sdk/richvector/EnhancedAnimatedVectorDrawable;->callback:Lh75;
 
     invoke-virtual {v1, v2}, Landroid/graphics/drawable/Drawable;->setCallback(Landroid/graphics/drawable/Drawable$Callback;)V
 
     iput-object v1, v0, Lone/me/sdk/richvector/EnhancedAnimatedVectorDrawable;->drawable:Lone/me/sdk/richvector/EnhancedVectorDrawable;
 
-    iget-object v1, v8, Lnf;->b:Ljava/util/ArrayList;
+    iget-object v1, v9, Lsf;->b:Ljava/util/ArrayList;
 
     iput-object v1, v0, Lone/me/sdk/richvector/EnhancedAnimatedVectorDrawable;->animators:Ljava/util/ArrayList;
 
-    iget-object v1, v8, Lnf;->c:Landroid/util/ArrayMap;
+    iget-object v1, v9, Lsf;->c:Landroid/util/ArrayMap;
 
     iput-object v1, v0, Lone/me/sdk/richvector/EnhancedAnimatedVectorDrawable;->targetNameMap:Landroid/util/ArrayMap;
 
@@ -591,15 +579,15 @@
 
     iput-object v1, v0, Lone/me/sdk/richvector/EnhancedAnimatedVectorDrawable;->animatorSetFromXml:Landroid/animation/AnimatorSet;
 
-    new-instance v2, Lu15;
+    new-instance v2, Lf75;
 
-    invoke-direct {v2, v0, v1}, Lu15;-><init>(Lone/me/sdk/richvector/EnhancedAnimatedVectorDrawable;Landroid/animation/AnimatorSet;)V
+    invoke-direct {v2, v0, v1}, Lf75;-><init>(Lone/me/sdk/richvector/EnhancedAnimatedVectorDrawable;Landroid/animation/AnimatorSet;)V
 
-    iput-object v2, v0, Lone/me/sdk/richvector/EnhancedAnimatedVectorDrawable;->animator:Lu15;
+    iput-object v2, v0, Lone/me/sdk/richvector/EnhancedAnimatedVectorDrawable;->animator:Lf75;
 
     return-void
 
-    :cond_c
+    :cond_d
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     const-string v1, "VectorDrawable was not found in XML"
@@ -626,7 +614,7 @@
 
     throw v0
 
-    :cond_d
+    :cond_e
     new-instance v0, Lorg/xmlpull/v1/XmlPullParserException;
 
     const-string v1, "No start tag found"
@@ -636,44 +624,10 @@
     throw v0
 .end method
 
-.method public static synthetic a(Lone/me/sdk/richvector/EnhancedAnimatedVectorDrawable;)Lv15;
+.method public static final synthetic access$getAnimationCallbacks$p(Lone/me/sdk/richvector/EnhancedAnimatedVectorDrawable;)Ljava/util/ArrayList;
     .locals 0
 
-    invoke-static {p0}, Lone/me/sdk/richvector/EnhancedAnimatedVectorDrawable;->animatorListener_delegate$lambda$0(Lone/me/sdk/richvector/EnhancedAnimatedVectorDrawable;)Lv15;
-
-    move-result-object p0
-
-    return-object p0
-.end method
-
-.method public static final synthetic access$getAnimationCallbacks$p(Lone/me/sdk/richvector/EnhancedAnimatedVectorDrawable;)Ljava/util/List;
-    .locals 0
-
-    iget-object p0, p0, Lone/me/sdk/richvector/EnhancedAnimatedVectorDrawable;->animationCallbacks:Ljava/util/List;
-
-    return-object p0
-.end method
-
-.method private static final animatorListener_delegate$lambda$0(Lone/me/sdk/richvector/EnhancedAnimatedVectorDrawable;)Lv15;
-    .locals 1
-
-    new-instance v0, Lv15;
-
-    invoke-direct {v0, p0}, Lv15;-><init>(Lone/me/sdk/richvector/EnhancedAnimatedVectorDrawable;)V
-
-    return-object v0
-.end method
-
-.method private final getAnimatorListener()Lv15;
-    .locals 0
-
-    iget-object p0, p0, Lone/me/sdk/richvector/EnhancedAnimatedVectorDrawable;->animatorListener$delegate:Lje7;
-
-    invoke-interface {p0}, Lje7;->getValue()Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, Lv15;
+    iget-object p0, p0, Lone/me/sdk/richvector/EnhancedAnimatedVectorDrawable;->animationCallbacks:Ljava/util/ArrayList;
 
     return-object p0
 .end method
@@ -767,7 +721,7 @@
 
     const-string v1, "\" cannot be found in the VectorDrawable to be animated."
 
-    invoke-static {v0, p1, v1}, Lu88;->k(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0, p1, v1}, Lyv7;->h(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
@@ -821,19 +775,17 @@
 .method public clearAnimationCallbacks()V
     .locals 2
 
-    iget-object v0, p0, Lone/me/sdk/richvector/EnhancedAnimatedVectorDrawable;->animator:Lu15;
+    iget-object v0, p0, Lone/me/sdk/richvector/EnhancedAnimatedVectorDrawable;->animator:Lf75;
 
-    invoke-direct {p0}, Lone/me/sdk/richvector/EnhancedAnimatedVectorDrawable;->getAnimatorListener()Lv15;
+    iget-object v1, p0, Lone/me/sdk/richvector/EnhancedAnimatedVectorDrawable;->animatorListener:Lg75;
 
-    move-result-object v1
-
-    iget-object v0, v0, Lu15;->b:Landroid/animation/AnimatorSet;
+    iget-object v0, v0, Lf75;->b:Landroid/animation/AnimatorSet;
 
     invoke-virtual {v0, v1}, Landroid/animation/Animator;->removeListener(Landroid/animation/Animator$AnimatorListener;)V
 
-    iget-object p0, p0, Lone/me/sdk/richvector/EnhancedAnimatedVectorDrawable;->animationCallbacks:Ljava/util/List;
+    iget-object p0, p0, Lone/me/sdk/richvector/EnhancedAnimatedVectorDrawable;->animationCallbacks:Ljava/util/ArrayList;
 
-    invoke-interface {p0}, Ljava/util/List;->clear()V
+    invoke-virtual {p0}, Ljava/util/ArrayList;->clear()V
 
     return-void
 .end method
@@ -841,9 +793,9 @@
 .method public draw(Landroid/graphics/Canvas;)V
     .locals 2
 
-    iget-object v0, p0, Lone/me/sdk/richvector/EnhancedAnimatedVectorDrawable;->animator:Lu15;
+    iget-object v0, p0, Lone/me/sdk/richvector/EnhancedAnimatedVectorDrawable;->animator:Lf75;
 
-    iget-object v1, v0, Lu15;->b:Landroid/animation/AnimatorSet;
+    iget-object v1, v0, Lf75;->b:Landroid/animation/AnimatorSet;
 
     invoke-virtual {v1}, Landroid/animation/AnimatorSet;->isStarted()Z
 
@@ -851,7 +803,7 @@
 
     if-eqz v1, :cond_0
 
-    iget-object v0, v0, Lu15;->a:Lone/me/sdk/richvector/EnhancedAnimatedVectorDrawable;
+    iget-object v0, v0, Lf75;->a:Lone/me/sdk/richvector/EnhancedAnimatedVectorDrawable;
 
     invoke-virtual {v0}, Landroid/graphics/drawable/Drawable;->invalidateSelf()V
 
@@ -872,7 +824,7 @@
 
     move-result-object v0
 
-    invoke-static {v0, p1}, Lp43;->D0(Ljava/lang/Iterable;Ljava/lang/Object;)I
+    invoke-static {v0, p1}, Lq73;->i0(Ljava/lang/Iterable;Ljava/lang/Object;)I
 
     move-result p1
 
@@ -1029,40 +981,36 @@
 
     iput-object v0, p0, Lone/me/sdk/richvector/EnhancedAnimatedVectorDrawable;->animatorSetFromXml:Landroid/animation/AnimatorSet;
 
-    iget-object v0, p0, Lone/me/sdk/richvector/EnhancedAnimatedVectorDrawable;->animator:Lu15;
+    iget-object v0, p0, Lone/me/sdk/richvector/EnhancedAnimatedVectorDrawable;->animator:Lf75;
 
-    invoke-direct {p0}, Lone/me/sdk/richvector/EnhancedAnimatedVectorDrawable;->getAnimatorListener()Lv15;
+    iget-object v1, p0, Lone/me/sdk/richvector/EnhancedAnimatedVectorDrawable;->animatorListener:Lg75;
 
-    move-result-object v1
-
-    iget-object v0, v0, Lu15;->b:Landroid/animation/AnimatorSet;
+    iget-object v0, v0, Lf75;->b:Landroid/animation/AnimatorSet;
 
     invoke-virtual {v0, v1}, Landroid/animation/Animator;->removeListener(Landroid/animation/Animator$AnimatorListener;)V
 
-    new-instance v0, Lu15;
+    new-instance v0, Lf75;
 
     iget-object v1, p0, Lone/me/sdk/richvector/EnhancedAnimatedVectorDrawable;->animatorSetFromXml:Landroid/animation/AnimatorSet;
 
-    invoke-direct {v0, p0, v1}, Lu15;-><init>(Lone/me/sdk/richvector/EnhancedAnimatedVectorDrawable;Landroid/animation/AnimatorSet;)V
+    invoke-direct {v0, p0, v1}, Lf75;-><init>(Lone/me/sdk/richvector/EnhancedAnimatedVectorDrawable;Landroid/animation/AnimatorSet;)V
 
-    iget-object v1, p0, Lone/me/sdk/richvector/EnhancedAnimatedVectorDrawable;->animationCallbacks:Ljava/util/List;
+    iget-object v1, p0, Lone/me/sdk/richvector/EnhancedAnimatedVectorDrawable;->animationCallbacks:Ljava/util/ArrayList;
 
-    invoke-interface {v1}, Ljava/util/List;->size()I
+    invoke-virtual {v1}, Ljava/util/ArrayList;->size()I
 
     move-result v1
 
     if-eqz v1, :cond_0
 
-    invoke-direct {p0}, Lone/me/sdk/richvector/EnhancedAnimatedVectorDrawable;->getAnimatorListener()Lv15;
+    iget-object v1, p0, Lone/me/sdk/richvector/EnhancedAnimatedVectorDrawable;->animatorListener:Lg75;
 
-    move-result-object v1
-
-    iget-object v2, v0, Lu15;->b:Landroid/animation/AnimatorSet;
+    iget-object v2, v0, Lf75;->b:Landroid/animation/AnimatorSet;
 
     invoke-virtual {v2, v1}, Landroid/animation/Animator;->addListener(Landroid/animation/Animator$AnimatorListener;)V
 
     :cond_0
-    iput-object v0, p0, Lone/me/sdk/richvector/EnhancedAnimatedVectorDrawable;->animator:Lu15;
+    iput-object v0, p0, Lone/me/sdk/richvector/EnhancedAnimatedVectorDrawable;->animator:Lf75;
 
     return-void
 .end method
@@ -1078,9 +1026,9 @@
 .method public isRunning()Z
     .locals 0
 
-    iget-object p0, p0, Lone/me/sdk/richvector/EnhancedAnimatedVectorDrawable;->animator:Lu15;
+    iget-object p0, p0, Lone/me/sdk/richvector/EnhancedAnimatedVectorDrawable;->animator:Lf75;
 
-    iget-object p0, p0, Lu15;->b:Landroid/animation/AnimatorSet;
+    iget-object p0, p0, Lf75;->b:Landroid/animation/AnimatorSet;
 
     invoke-virtual {p0}, Landroid/animation/AnimatorSet;->isRunning()Z
 
@@ -1092,9 +1040,9 @@
 .method public jumpToCurrentState()V
     .locals 0
 
-    iget-object p0, p0, Lone/me/sdk/richvector/EnhancedAnimatedVectorDrawable;->animator:Lu15;
+    iget-object p0, p0, Lone/me/sdk/richvector/EnhancedAnimatedVectorDrawable;->animator:Lf75;
 
-    iget-object p0, p0, Lu15;->b:Landroid/animation/AnimatorSet;
+    iget-object p0, p0, Lf75;->b:Landroid/animation/AnimatorSet;
 
     invoke-virtual {p0}, Landroid/animation/AnimatorSet;->end()V
 
@@ -1137,39 +1085,37 @@
     return p0
 .end method
 
-.method public registerAnimationCallback(Lde;)V
+.method public registerAnimationCallback(Lie;)V
     .locals 2
 
-    iget-object v0, p0, Lone/me/sdk/richvector/EnhancedAnimatedVectorDrawable;->animationCallbacks:Ljava/util/List;
+    iget-object v0, p0, Lone/me/sdk/richvector/EnhancedAnimatedVectorDrawable;->animationCallbacks:Ljava/util/ArrayList;
 
-    invoke-interface {v0}, Ljava/util/List;->size()I
+    invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    iget-object v0, p0, Lone/me/sdk/richvector/EnhancedAnimatedVectorDrawable;->animator:Lu15;
+    iget-object v0, p0, Lone/me/sdk/richvector/EnhancedAnimatedVectorDrawable;->animator:Lf75;
 
-    invoke-direct {p0}, Lone/me/sdk/richvector/EnhancedAnimatedVectorDrawable;->getAnimatorListener()Lv15;
+    iget-object v1, p0, Lone/me/sdk/richvector/EnhancedAnimatedVectorDrawable;->animatorListener:Lg75;
 
-    move-result-object v1
-
-    iget-object v0, v0, Lu15;->b:Landroid/animation/AnimatorSet;
+    iget-object v0, v0, Lf75;->b:Landroid/animation/AnimatorSet;
 
     invoke-virtual {v0, v1}, Landroid/animation/Animator;->addListener(Landroid/animation/Animator$AnimatorListener;)V
 
     :cond_0
-    iget-object v0, p0, Lone/me/sdk/richvector/EnhancedAnimatedVectorDrawable;->animationCallbacks:Ljava/util/List;
+    iget-object v0, p0, Lone/me/sdk/richvector/EnhancedAnimatedVectorDrawable;->animationCallbacks:Ljava/util/ArrayList;
 
-    invoke-interface {v0, p1}, Ljava/util/List;->contains(Ljava/lang/Object;)Z
+    invoke-virtual {v0, p1}, Ljava/util/ArrayList;->contains(Ljava/lang/Object;)Z
 
     move-result v0
 
     if-nez v0, :cond_1
 
-    iget-object p0, p0, Lone/me/sdk/richvector/EnhancedAnimatedVectorDrawable;->animationCallbacks:Ljava/util/List;
+    iget-object p0, p0, Lone/me/sdk/richvector/EnhancedAnimatedVectorDrawable;->animationCallbacks:Ljava/util/ArrayList;
 
-    invoke-interface {p0, p1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+    invoke-virtual {p0, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     :cond_1
     return-void
@@ -1218,13 +1164,13 @@
 .method public setVisible(ZZ)Z
     .locals 2
 
-    iget-object v0, p0, Lone/me/sdk/richvector/EnhancedAnimatedVectorDrawable;->animator:Lu15;
+    iget-object v0, p0, Lone/me/sdk/richvector/EnhancedAnimatedVectorDrawable;->animator:Lf75;
 
-    iget-boolean v1, v0, Lu15;->c:Z
+    iget-boolean v1, v0, Lf75;->c:Z
 
     if-eqz v1, :cond_1
 
-    iget-object v0, v0, Lu15;->b:Landroid/animation/AnimatorSet;
+    iget-object v0, v0, Lf75;->b:Landroid/animation/AnimatorSet;
 
     invoke-virtual {v0}, Landroid/animation/AnimatorSet;->isStarted()Z
 
@@ -1234,18 +1180,18 @@
 
     if-eqz p1, :cond_0
 
-    iget-object v0, p0, Lone/me/sdk/richvector/EnhancedAnimatedVectorDrawable;->animator:Lu15;
+    iget-object v0, p0, Lone/me/sdk/richvector/EnhancedAnimatedVectorDrawable;->animator:Lf75;
 
-    iget-object v0, v0, Lu15;->b:Landroid/animation/AnimatorSet;
+    iget-object v0, v0, Lf75;->b:Landroid/animation/AnimatorSet;
 
     invoke-virtual {v0}, Landroid/animation/AnimatorSet;->resume()V
 
     goto :goto_0
 
     :cond_0
-    iget-object v0, p0, Lone/me/sdk/richvector/EnhancedAnimatedVectorDrawable;->animator:Lu15;
+    iget-object v0, p0, Lone/me/sdk/richvector/EnhancedAnimatedVectorDrawable;->animator:Lf75;
 
-    iget-object v0, v0, Lu15;->b:Landroid/animation/AnimatorSet;
+    iget-object v0, v0, Lf75;->b:Landroid/animation/AnimatorSet;
 
     invoke-virtual {v0}, Landroid/animation/AnimatorSet;->pause()V
 
@@ -1265,9 +1211,9 @@
 .method public start()V
     .locals 2
 
-    iget-object p0, p0, Lone/me/sdk/richvector/EnhancedAnimatedVectorDrawable;->animator:Lu15;
+    iget-object p0, p0, Lone/me/sdk/richvector/EnhancedAnimatedVectorDrawable;->animator:Lf75;
 
-    iget-object v0, p0, Lu15;->b:Landroid/animation/AnimatorSet;
+    iget-object v0, p0, Lf75;->b:Landroid/animation/AnimatorSet;
 
     invoke-virtual {v0}, Landroid/animation/AnimatorSet;->isStarted()Z
 
@@ -1277,7 +1223,7 @@
 
     invoke-virtual {v0}, Landroid/animation/AnimatorSet;->start()V
 
-    iget-object p0, p0, Lu15;->a:Lone/me/sdk/richvector/EnhancedAnimatedVectorDrawable;
+    iget-object p0, p0, Lf75;->a:Lone/me/sdk/richvector/EnhancedAnimatedVectorDrawable;
 
     invoke-virtual {p0}, Landroid/graphics/drawable/Drawable;->invalidateSelf()V
 
@@ -1288,39 +1234,37 @@
 .method public stop()V
     .locals 0
 
-    iget-object p0, p0, Lone/me/sdk/richvector/EnhancedAnimatedVectorDrawable;->animator:Lu15;
+    iget-object p0, p0, Lone/me/sdk/richvector/EnhancedAnimatedVectorDrawable;->animator:Lf75;
 
-    iget-object p0, p0, Lu15;->b:Landroid/animation/AnimatorSet;
+    iget-object p0, p0, Lf75;->b:Landroid/animation/AnimatorSet;
 
     invoke-virtual {p0}, Landroid/animation/AnimatorSet;->end()V
 
     return-void
 .end method
 
-.method public unregisterAnimationCallback(Lde;)Z
+.method public unregisterAnimationCallback(Lie;)Z
     .locals 1
 
-    iget-object v0, p0, Lone/me/sdk/richvector/EnhancedAnimatedVectorDrawable;->animationCallbacks:Ljava/util/List;
+    iget-object v0, p0, Lone/me/sdk/richvector/EnhancedAnimatedVectorDrawable;->animationCallbacks:Ljava/util/ArrayList;
 
-    invoke-interface {v0, p1}, Ljava/util/List;->remove(Ljava/lang/Object;)Z
+    invoke-virtual {v0, p1}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
 
     move-result p1
 
-    iget-object v0, p0, Lone/me/sdk/richvector/EnhancedAnimatedVectorDrawable;->animationCallbacks:Ljava/util/List;
+    iget-object v0, p0, Lone/me/sdk/richvector/EnhancedAnimatedVectorDrawable;->animationCallbacks:Ljava/util/ArrayList;
 
-    invoke-interface {v0}, Ljava/util/List;->size()I
+    invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    iget-object v0, p0, Lone/me/sdk/richvector/EnhancedAnimatedVectorDrawable;->animator:Lu15;
+    iget-object v0, p0, Lone/me/sdk/richvector/EnhancedAnimatedVectorDrawable;->animator:Lf75;
 
-    invoke-direct {p0}, Lone/me/sdk/richvector/EnhancedAnimatedVectorDrawable;->getAnimatorListener()Lv15;
+    iget-object p0, p0, Lone/me/sdk/richvector/EnhancedAnimatedVectorDrawable;->animatorListener:Lg75;
 
-    move-result-object p0
-
-    iget-object v0, v0, Lu15;->b:Landroid/animation/AnimatorSet;
+    iget-object v0, v0, Lf75;->b:Landroid/animation/AnimatorSet;
 
     invoke-virtual {v0, p0}, Landroid/animation/Animator;->removeListener(Landroid/animation/Animator$AnimatorListener;)V
 

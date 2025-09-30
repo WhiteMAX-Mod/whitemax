@@ -1,64 +1,51 @@
-.class public final Lef5;
+.class public abstract Lef5;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lhf5;
-
-
-# static fields
-.field public static final a:Lef5;
-
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public static a([B)Lff5;
+    .locals 10
 
-    new-instance v0, Lef5;
+    new-instance v0, Lru/ok/tamtam/nano/Tasks$ExternalVideoSend;
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {v0}, Lru/ok/tamtam/nano/Tasks$ExternalVideoSend;-><init>()V
 
-    sput-object v0, Lef5;->a:Lef5;
+    :try_start_0
+    invoke-static {v0, p0}, Lj29;->mergeFrom(Lj29;[B)Lj29;
 
-    return-void
-.end method
+    move-result-object p0
 
+    check-cast p0, Lru/ok/tamtam/nano/Tasks$ExternalVideoSend;
+    :try_end_0
+    .catch Lcom/google/protobuf/nano/InvalidProtocolBufferNanoException; {:try_start_0 .. :try_end_0} :catch_0
 
-# virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
+    new-instance v0, Lff5;
 
-    const/4 v0, 0x1
+    iget-wide v1, p0, Lru/ok/tamtam/nano/Tasks$ExternalVideoSend;->requestId:J
 
-    if-ne p0, p1, :cond_0
+    iget-object v5, p0, Lru/ok/tamtam/nano/Tasks$ExternalVideoSend;->externalUrl:Ljava/lang/String;
 
-    return v0
+    iget-object v8, p0, Lru/ok/tamtam/nano/Tasks$ExternalVideoSend;->attachLocalId:Ljava/lang/String;
 
-    :cond_0
-    instance-of p0, p1, Lef5;
+    iget-wide v3, p0, Lru/ok/tamtam/nano/Tasks$ExternalVideoSend;->messageId:J
 
-    if-nez p0, :cond_1
+    iget-wide v6, p0, Lru/ok/tamtam/nano/Tasks$ExternalVideoSend;->chatId:J
 
-    const/4 p0, 0x0
+    iget-object v9, p0, Lru/ok/tamtam/nano/Tasks$ExternalVideoSend;->stickerId:Ljava/lang/String;
 
-    return p0
+    invoke-direct/range {v0 .. v9}, Lff5;-><init>(JJLjava/lang/String;JLjava/lang/String;Ljava/lang/String;)V
 
-    :cond_1
-    return v0
-.end method
+    return-object v0
 
-.method public final hashCode()I
-    .locals 0
+    :catch_0
+    move-exception v0
 
-    const p0, 0x5c90e18e
+    move-object p0, v0
 
-    return p0
-.end method
+    new-instance v0, Lru/ok/tamtam/nano/ProtoException;
 
-.method public final toString()Ljava/lang/String;
-    .locals 0
+    invoke-direct {v0, p0}, Ljava/io/IOException;-><init>(Ljava/lang/Throwable;)V
 
-    const-string p0, "Downloaded"
-
-    return-object p0
+    throw v0
 .end method

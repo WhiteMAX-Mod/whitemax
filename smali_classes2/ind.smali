@@ -2,61 +2,57 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lgnd;
-
 
 # instance fields
-.field public final a:Lpnd;
-
-.field public final b:Z
-
-.field public final c:Z
+.field public final a:Lhze;
 
 
 # direct methods
-.method public constructor <init>(Lpnd;ZZ)V
-    .locals 0
+.method public constructor <init>(Lize;)V
+    .locals 1
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lind;->a:Lpnd;
+    instance-of v0, p1, Lhze;
 
-    iput-boolean p2, p0, Lind;->b:Z
+    if-eqz v0, :cond_0
 
-    iput-boolean p3, p0, Lind;->c:Z
+    move-object v0, p1
+
+    check-cast v0, Lhze;
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    :goto_0
+    if-nez v0, :cond_1
+
+    new-instance v0, Lhze;
+
+    invoke-direct {v0, p1}, Lhze;-><init>(Lize;)V
+
+    :cond_1
+    iput-object v0, p0, Lind;->a:Lhze;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Lorg/json/JSONObject;
-    .locals 3
+.method public final a(Ljava/lang/String;Ljava/lang/Runnable;)Ljava/lang/Thread;
+    .locals 0
 
-    new-instance v0, Lorg/json/JSONObject;
+    iget-object p0, p0, Lind;->a:Lhze;
 
-    invoke-direct {v0}, Lorg/json/JSONObject;-><init>()V
-
-    const-string v1, "command"
-
-    const-string v2, "change-media-settings"
-
-    invoke-virtual {v0, v1, v2}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
-
-    iget-boolean v1, p0, Lind;->b:Z
-
-    iget-boolean v2, p0, Lind;->c:Z
-
-    iget-object p0, p0, Lind;->a:Lpnd;
-
-    invoke-static {p0, v1, v2}, Lcu0;->n(Lpnd;ZZ)Lorg/json/JSONObject;
+    invoke-virtual {p0, p1}, Lhze;->a(Ljava/lang/String;)Ljava/util/concurrent/ThreadFactory;
 
     move-result-object p0
 
-    const-string v1, "mediaSettings"
+    invoke-interface {p0, p2}, Ljava/util/concurrent/ThreadFactory;->newThread(Ljava/lang/Runnable;)Ljava/lang/Thread;
 
-    invoke-virtual {v0, v1, p0}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
+    move-result-object p0
 
-    return-object v0
+    return-object p0
 .end method

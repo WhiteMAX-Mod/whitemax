@@ -1,16 +1,43 @@
-.class public final synthetic Lvi8;
+.class public final Lvi8;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lwg3;
+
+# instance fields
+.field public final a:I
+
+.field public final b:I
+
+.field public final c:I
+
+.field public final d:Ljava/lang/Object;
+
+.field public final e:J
+
+.field public final f:J
+
+.field public final g:Ljava/lang/Object;
 
 
-# virtual methods
-.method public final run()Lbm7;
+# direct methods
+.method public synthetic constructor <init>(IILjava/lang/Object;ILjava/lang/Object;JJ)V
     .locals 0
 
-    sget-object p0, Ldw6;->b:Ldw6;
+    iput p1, p0, Lvi8;->a:I
 
-    return-object p0
+    iput p2, p0, Lvi8;->b:I
+
+    iput-object p3, p0, Lvi8;->g:Ljava/lang/Object;
+
+    iput p4, p0, Lvi8;->c:I
+
+    iput-object p5, p0, Lvi8;->d:Ljava/lang/Object;
+
+    iput-wide p6, p0, Lvi8;->e:J
+
+    iput-wide p8, p0, Lvi8;->f:J
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
 .end method

@@ -1,542 +1,462 @@
 .class public abstract Lbk0;
-.super Landroid/widget/FrameLayout;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
-
-# static fields
-.field public static final s0:Lckf;
+# interfaces
+.implements Lod5;
 
 
 # instance fields
-.field public final a:Lshd;
+.field public final a:Ltbf;
 
-.field public b:I
+.field public final b:I
 
-.field public final c:F
+.field public final c:[I
 
-.field public final o:F
+.field public final d:[Lv46;
 
-.field public final o0:I
+.field public final e:[J
 
-.field public final p0:I
-
-.field public q0:Landroid/content/res/ColorStateList;
-
-.field public r0:Landroid/graphics/PorterDuff$Mode;
+.field public f:I
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public constructor <init>(Ltbf;[I)V
+    .locals 5
 
-    new-instance v0, Lckf;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 v1, 0x1
+    array-length v0, p2
 
-    invoke-direct {v0, v1}, Lckf;-><init>(I)V
+    const/4 v1, 0x0
 
-    sput-object v0, Lbk0;->s0:Lckf;
+    if-lez v0, :cond_0
 
-    return-void
-.end method
-
-.method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
-    .locals 4
-
-    const/4 v0, 0x0
-
-    invoke-static {p1, p2, v0, v0}, Lt18;->a(Landroid/content/Context;Landroid/util/AttributeSet;II)Landroid/content/Context;
-
-    move-result-object p1
-
-    invoke-direct {p0, p1, p2}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
-
-    invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
-
-    move-result-object p1
-
-    sget-object v1, Lt0c;->SnackbarLayout:[I
-
-    invoke-virtual {p1, p2, v1}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[I)Landroid/content/res/TypedArray;
-
-    move-result-object v1
-
-    sget v2, Lt0c;->SnackbarLayout_elevation:I
-
-    invoke-virtual {v1, v2}, Landroid/content/res/TypedArray;->hasValue(I)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_0
-
-    sget v2, Lt0c;->SnackbarLayout_elevation:I
-
-    invoke-virtual {v1, v2, v0}, Landroid/content/res/TypedArray;->getDimensionPixelSize(II)I
-
-    move-result v2
-
-    int-to-float v2, v2
-
-    sget-object v3, Ltnf;->a:Ljava/util/WeakHashMap;
-
-    invoke-static {p0, v2}, Linf;->s(Landroid/view/View;F)V
-
-    :cond_0
-    sget v2, Lt0c;->SnackbarLayout_animationMode:I
-
-    invoke-virtual {v1, v2, v0}, Landroid/content/res/TypedArray;->getInt(II)I
-
-    move-result v2
-
-    iput v2, p0, Lbk0;->b:I
-
-    sget v2, Lt0c;->SnackbarLayout_shapeAppearance:I
-
-    invoke-virtual {v1, v2}, Landroid/content/res/TypedArray;->hasValue(I)Z
-
-    move-result v2
-
-    if-nez v2, :cond_1
-
-    sget v2, Lt0c;->SnackbarLayout_shapeAppearanceOverlay:I
-
-    invoke-virtual {v1, v2}, Landroid/content/res/TypedArray;->hasValue(I)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_2
-
-    :cond_1
-    invoke-static {p1, p2, v0, v0}, Lshd;->b(Landroid/content/Context;Landroid/util/AttributeSet;II)Lm9g;
-
-    move-result-object p2
-
-    invoke-virtual {p2}, Lm9g;->f()Lshd;
-
-    move-result-object p2
-
-    iput-object p2, p0, Lbk0;->a:Lshd;
-
-    :cond_2
-    sget p2, Lt0c;->SnackbarLayout_backgroundOverlayColorAlpha:I
-
-    const/high16 v2, 0x3f800000    # 1.0f
-
-    invoke-virtual {v1, p2, v2}, Landroid/content/res/TypedArray;->getFloat(IF)F
-
-    move-result p2
-
-    iput p2, p0, Lbk0;->c:F
-
-    sget p2, Lt0c;->SnackbarLayout_backgroundTint:I
-
-    invoke-static {p1, v1, p2}, Lsgg;->B(Landroid/content/Context;Landroid/content/res/TypedArray;I)Landroid/content/res/ColorStateList;
-
-    move-result-object p1
-
-    invoke-virtual {p0, p1}, Lbk0;->setBackgroundTintList(Landroid/content/res/ColorStateList;)V
-
-    sget p1, Lt0c;->SnackbarLayout_backgroundTintMode:I
-
-    const/4 p2, -0x1
-
-    invoke-virtual {v1, p1, p2}, Landroid/content/res/TypedArray;->getInt(II)I
-
-    move-result p1
-
-    sget-object v3, Landroid/graphics/PorterDuff$Mode;->SRC_IN:Landroid/graphics/PorterDuff$Mode;
-
-    invoke-static {p1, v3}, Liz7;->t(ILandroid/graphics/PorterDuff$Mode;)Landroid/graphics/PorterDuff$Mode;
-
-    move-result-object p1
-
-    invoke-virtual {p0, p1}, Lbk0;->setBackgroundTintMode(Landroid/graphics/PorterDuff$Mode;)V
-
-    sget p1, Lt0c;->SnackbarLayout_actionTextColorAlpha:I
-
-    invoke-virtual {v1, p1, v2}, Landroid/content/res/TypedArray;->getFloat(IF)F
-
-    move-result p1
-
-    iput p1, p0, Lbk0;->o:F
-
-    sget p1, Lt0c;->SnackbarLayout_android_maxWidth:I
-
-    invoke-virtual {v1, p1, p2}, Landroid/content/res/TypedArray;->getDimensionPixelSize(II)I
-
-    move-result p1
-
-    iput p1, p0, Lbk0;->o0:I
-
-    sget p1, Lt0c;->SnackbarLayout_maxActionInlineWidth:I
-
-    invoke-virtual {v1, p1, p2}, Landroid/content/res/TypedArray;->getDimensionPixelSize(II)I
-
-    move-result p1
-
-    iput p1, p0, Lbk0;->p0:I
-
-    invoke-virtual {v1}, Landroid/content/res/TypedArray;->recycle()V
-
-    sget-object p1, Lbk0;->s0:Lckf;
-
-    invoke-virtual {p0, p1}, Landroid/view/View;->setOnTouchListener(Landroid/view/View$OnTouchListener;)V
-
-    const/4 p1, 0x1
-
-    invoke-virtual {p0, p1}, Landroid/view/View;->setFocusable(Z)V
-
-    invoke-virtual {p0}, Landroid/view/View;->getBackground()Landroid/graphics/drawable/Drawable;
-
-    move-result-object p1
-
-    if-nez p1, :cond_5
-
-    sget p1, Liqb;->colorSurface:I
-
-    sget p2, Liqb;->colorOnSurface:I
-
-    invoke-virtual {p0}, Lbk0;->getBackgroundOverlayColorAlpha()F
-
-    move-result v1
-
-    invoke-static {p0, p1}, Lsbg;->q(Landroid/view/View;I)I
-
-    move-result p1
-
-    invoke-static {p0, p2}, Lsbg;->q(Landroid/view/View;I)I
-
-    move-result p2
-
-    invoke-static {p1, v1, p2}, Lsbg;->A(IFI)I
-
-    move-result p1
-
-    iget-object p2, p0, Lbk0;->a:Lshd;
-
-    if-eqz p2, :cond_3
-
-    sget v0, Lck0;->a:I
-
-    new-instance v0, Ll18;
-
-    invoke-direct {v0, p2}, Ll18;-><init>(Lshd;)V
-
-    invoke-static {p1}, Landroid/content/res/ColorStateList;->valueOf(I)Landroid/content/res/ColorStateList;
-
-    move-result-object p1
-
-    invoke-virtual {v0, p1}, Ll18;->k(Landroid/content/res/ColorStateList;)V
+    const/4 v0, 0x1
 
     goto :goto_0
 
-    :cond_3
-    invoke-virtual {p0}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
-
-    move-result-object p2
-
-    sget v1, Lck0;->a:I
-
-    sget v1, Lhrb;->mtrl_snackbar_background_corner_radius:I
-
-    invoke-virtual {p2, v1}, Landroid/content/res/Resources;->getDimension(I)F
-
-    move-result p2
-
-    new-instance v1, Landroid/graphics/drawable/GradientDrawable;
-
-    invoke-direct {v1}, Landroid/graphics/drawable/GradientDrawable;-><init>()V
-
-    invoke-virtual {v1, v0}, Landroid/graphics/drawable/GradientDrawable;->setShape(I)V
-
-    invoke-virtual {v1, p2}, Landroid/graphics/drawable/GradientDrawable;->setCornerRadius(F)V
-
-    invoke-virtual {v1, p1}, Landroid/graphics/drawable/GradientDrawable;->setColor(I)V
-
-    move-object v0, v1
+    :cond_0
+    move v0, v1
 
     :goto_0
-    iget-object p1, p0, Lbk0;->q0:Landroid/content/res/ColorStateList;
+    invoke-static {v0}, Lxnd;->m(Z)V
 
-    if-eqz p1, :cond_4
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    invoke-static {v0, p1}, Laq4;->h(Landroid/graphics/drawable/Drawable;Landroid/content/res/ColorStateList;)V
+    iput-object p1, p0, Lbk0;->a:Ltbf;
 
-    :cond_4
-    sget-object p1, Ltnf;->a:Ljava/util/WeakHashMap;
+    array-length v0, p2
 
-    invoke-virtual {p0, v0}, Lbk0;->setBackground(Landroid/graphics/drawable/Drawable;)V
+    iput v0, p0, Lbk0;->b:I
 
-    :cond_5
-    return-void
-.end method
+    new-array v0, v0, [Lv46;
 
-.method private setBaseTransientBottomBar(Lck0;)V
-    .locals 0
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Lck0;",
-            ")V"
-        }
-    .end annotation
+    iput-object v0, p0, Lbk0;->d:[Lv46;
+
+    move v0, v1
+
+    :goto_1
+    array-length v2, p2
+
+    if-ge v0, v2, :cond_1
+
+    iget-object v2, p0, Lbk0;->d:[Lv46;
+
+    aget v3, p2, v0
+
+    iget-object v4, p1, Ltbf;->c:[Lv46;
+
+    aget-object v3, v4, v3
+
+    aput-object v3, v2, v0
+
+    add-int/lit8 v0, v0, 0x1
+
+    goto :goto_1
+
+    :cond_1
+    iget-object p2, p0, Lbk0;->d:[Lv46;
+
+    new-instance v0, Lrz;
+
+    const/4 v2, 0x1
+
+    invoke-direct {v0, v2}, Lrz;-><init>(I)V
+
+    invoke-static {p2, v0}, Ljava/util/Arrays;->sort([Ljava/lang/Object;Ljava/util/Comparator;)V
+
+    iget p2, p0, Lbk0;->b:I
+
+    new-array p2, p2, [I
+
+    iput-object p2, p0, Lbk0;->c:[I
+
+    :goto_2
+    iget p2, p0, Lbk0;->b:I
+
+    if-ge v1, p2, :cond_2
+
+    iget-object p2, p0, Lbk0;->c:[I
+
+    iget-object v0, p0, Lbk0;->d:[Lv46;
+
+    aget-object v0, v0, v1
+
+    invoke-virtual {p1, v0}, Ltbf;->a(Lv46;)I
+
+    move-result v0
+
+    aput v0, p2, v1
+
+    add-int/lit8 v1, v1, 0x1
+
+    goto :goto_2
+
+    :cond_2
+    new-array p1, p2, [J
+
+    iput-object p1, p0, Lbk0;->e:[J
 
     return-void
 .end method
 
 
 # virtual methods
-.method public getActionTextColorAlpha()F
+.method public final a()Ltbf;
     .locals 0
 
-    iget p0, p0, Lbk0;->o:F
+    iget-object p0, p0, Lbk0;->a:Ltbf;
 
-    return p0
+    return-object p0
 .end method
 
-.method public getAnimationMode()I
+.method public final d(I)Lv46;
     .locals 0
 
-    iget p0, p0, Lbk0;->b:I
+    iget-object p0, p0, Lbk0;->d:[Lv46;
 
-    return p0
+    aget-object p0, p0, p1
+
+    return-object p0
 .end method
 
-.method public getBackgroundOverlayColorAlpha()F
+.method public e()V
     .locals 0
-
-    iget p0, p0, Lbk0;->c:F
-
-    return p0
-.end method
-
-.method public getMaxInlineActionWidth()I
-    .locals 0
-
-    iget p0, p0, Lbk0;->p0:I
-
-    return p0
-.end method
-
-.method public getMaxWidth()I
-    .locals 0
-
-    iget p0, p0, Lbk0;->o0:I
-
-    return p0
-.end method
-
-.method public final onAttachedToWindow()V
-    .locals 1
-
-    invoke-super {p0}, Landroid/view/View;->onAttachedToWindow()V
-
-    sget-object v0, Ltnf;->a:Ljava/util/WeakHashMap;
-
-    invoke-static {p0}, Lgnf;->c(Landroid/view/View;)V
 
     return-void
 .end method
 
-.method public final onDetachedFromWindow()V
-    .locals 0
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 4
 
-    invoke-super {p0}, Landroid/view/View;->onDetachedFromWindow()V
+    const/4 v0, 0x1
 
-    return-void
-.end method
+    if-ne p0, p1, :cond_0
 
-.method public final onLayout(ZIIII)V
-    .locals 0
-
-    invoke-super/range {p0 .. p5}, Landroid/widget/FrameLayout;->onLayout(ZIIII)V
-
-    return-void
-.end method
-
-.method public onMeasure(II)V
-    .locals 1
-
-    invoke-super {p0, p1, p2}, Landroid/widget/FrameLayout;->onMeasure(II)V
-
-    iget p1, p0, Lbk0;->o0:I
-
-    if-lez p1, :cond_0
-
-    invoke-virtual {p0}, Landroid/view/View;->getMeasuredWidth()I
-
-    move-result v0
-
-    if-le v0, p1, :cond_0
-
-    const/high16 v0, 0x40000000    # 2.0f
-
-    invoke-static {p1, v0}, Landroid/view/View$MeasureSpec;->makeMeasureSpec(II)I
-
-    move-result p1
-
-    invoke-super {p0, p1, p2}, Landroid/widget/FrameLayout;->onMeasure(II)V
+    return v0
 
     :cond_0
-    return-void
-.end method
+    const/4 v1, 0x0
 
-.method public setAnimationMode(I)V
-    .locals 0
+    if-eqz p1, :cond_2
 
-    iput p1, p0, Lbk0;->b:I
+    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    return-void
-.end method
+    move-result-object v2
 
-.method public setBackground(Landroid/graphics/drawable/Drawable;)V
-    .locals 0
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    invoke-virtual {p0, p1}, Lbk0;->setBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
+    move-result-object v3
 
-    return-void
-.end method
-
-.method public setBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
-    .locals 1
-
-    if-eqz p1, :cond_0
-
-    iget-object v0, p0, Lbk0;->q0:Landroid/content/res/ColorStateList;
-
-    if-eqz v0, :cond_0
-
-    invoke-virtual {p1}, Landroid/graphics/drawable/Drawable;->mutate()Landroid/graphics/drawable/Drawable;
-
-    move-result-object p1
-
-    iget-object v0, p0, Lbk0;->q0:Landroid/content/res/ColorStateList;
-
-    invoke-static {p1, v0}, Laq4;->h(Landroid/graphics/drawable/Drawable;Landroid/content/res/ColorStateList;)V
-
-    iget-object v0, p0, Lbk0;->r0:Landroid/graphics/PorterDuff$Mode;
-
-    invoke-static {p1, v0}, Laq4;->i(Landroid/graphics/drawable/Drawable;Landroid/graphics/PorterDuff$Mode;)V
-
-    :cond_0
-    invoke-super {p0, p1}, Landroid/view/View;->setBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
-
-    return-void
-.end method
-
-.method public setBackgroundTintList(Landroid/content/res/ColorStateList;)V
-    .locals 1
-
-    iput-object p1, p0, Lbk0;->q0:Landroid/content/res/ColorStateList;
-
-    invoke-virtual {p0}, Landroid/view/View;->getBackground()Landroid/graphics/drawable/Drawable;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_0
-
-    invoke-virtual {p0}, Landroid/view/View;->getBackground()Landroid/graphics/drawable/Drawable;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/graphics/drawable/Drawable;->mutate()Landroid/graphics/drawable/Drawable;
-
-    move-result-object v0
-
-    invoke-static {v0, p1}, Laq4;->h(Landroid/graphics/drawable/Drawable;Landroid/content/res/ColorStateList;)V
-
-    iget-object p1, p0, Lbk0;->r0:Landroid/graphics/PorterDuff$Mode;
-
-    invoke-static {v0, p1}, Laq4;->i(Landroid/graphics/drawable/Drawable;Landroid/graphics/PorterDuff$Mode;)V
-
-    invoke-virtual {p0}, Landroid/view/View;->getBackground()Landroid/graphics/drawable/Drawable;
-
-    move-result-object p1
-
-    if-eq v0, p1, :cond_0
-
-    invoke-super {p0, v0}, Landroid/view/View;->setBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
-
-    :cond_0
-    return-void
-.end method
-
-.method public setBackgroundTintMode(Landroid/graphics/PorterDuff$Mode;)V
-    .locals 1
-
-    iput-object p1, p0, Lbk0;->r0:Landroid/graphics/PorterDuff$Mode;
-
-    invoke-virtual {p0}, Landroid/view/View;->getBackground()Landroid/graphics/drawable/Drawable;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_0
-
-    invoke-virtual {p0}, Landroid/view/View;->getBackground()Landroid/graphics/drawable/Drawable;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/graphics/drawable/Drawable;->mutate()Landroid/graphics/drawable/Drawable;
-
-    move-result-object v0
-
-    invoke-static {v0, p1}, Laq4;->i(Landroid/graphics/drawable/Drawable;Landroid/graphics/PorterDuff$Mode;)V
-
-    invoke-virtual {p0}, Landroid/view/View;->getBackground()Landroid/graphics/drawable/Drawable;
-
-    move-result-object p1
-
-    if-eq v0, p1, :cond_0
-
-    invoke-super {p0, v0}, Landroid/view/View;->setBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
-
-    :cond_0
-    return-void
-.end method
-
-.method public setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
-    .locals 3
-
-    invoke-super {p0, p1}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
-
-    instance-of p0, p1, Landroid/view/ViewGroup$MarginLayoutParams;
-
-    if-eqz p0, :cond_0
-
-    check-cast p1, Landroid/view/ViewGroup$MarginLayoutParams;
-
-    new-instance p0, Landroid/graphics/Rect;
-
-    iget v0, p1, Landroid/view/ViewGroup$MarginLayoutParams;->leftMargin:I
-
-    iget v1, p1, Landroid/view/ViewGroup$MarginLayoutParams;->topMargin:I
-
-    iget v2, p1, Landroid/view/ViewGroup$MarginLayoutParams;->rightMargin:I
-
-    iget p1, p1, Landroid/view/ViewGroup$MarginLayoutParams;->bottomMargin:I
-
-    invoke-direct {p0, v0, v1, v2, p1}, Landroid/graphics/Rect;-><init>(IIII)V
-
-    :cond_0
-    return-void
-.end method
-
-.method public setOnClickListener(Landroid/view/View$OnClickListener;)V
-    .locals 1
-
-    if-eqz p1, :cond_0
-
-    const/4 v0, 0x0
+    if-eq v2, v3, :cond_1
 
     goto :goto_0
 
-    :cond_0
-    sget-object v0, Lbk0;->s0:Lckf;
+    :cond_1
+    check-cast p1, Lbk0;
 
+    iget-object v2, p0, Lbk0;->a:Ltbf;
+
+    iget-object v3, p1, Lbk0;->a:Ltbf;
+
+    if-ne v2, v3, :cond_2
+
+    iget-object p0, p0, Lbk0;->c:[I
+
+    iget-object p1, p1, Lbk0;->c:[I
+
+    invoke-static {p0, p1}, Ljava/util/Arrays;->equals([I[I)Z
+
+    move-result p0
+
+    if-eqz p0, :cond_2
+
+    return v0
+
+    :cond_2
     :goto_0
-    invoke-virtual {p0, v0}, Landroid/view/View;->setOnTouchListener(Landroid/view/View$OnTouchListener;)V
+    return v1
+.end method
 
-    invoke-super {p0, p1}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+.method public final f(I)I
+    .locals 0
+
+    iget-object p0, p0, Lbk0;->c:[I
+
+    aget p0, p0, p1
+
+    return p0
+.end method
+
+.method public g(JLjava/util/List;)I
+    .locals 0
+
+    invoke-interface {p3}, Ljava/util/List;->size()I
+
+    move-result p0
+
+    return p0
+.end method
+
+.method public h()V
+    .locals 0
 
     return-void
+.end method
+
+.method public final hashCode()I
+    .locals 2
+
+    iget v0, p0, Lbk0;->f:I
+
+    if-nez v0, :cond_0
+
+    iget-object v0, p0, Lbk0;->a:Ltbf;
+
+    invoke-static {v0}, Ljava/lang/System;->identityHashCode(Ljava/lang/Object;)I
+
+    move-result v0
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget-object v1, p0, Lbk0;->c:[I
+
+    invoke-static {v1}, Ljava/util/Arrays;->hashCode([I)I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    iput v1, p0, Lbk0;->f:I
+
+    :cond_0
+    iget p0, p0, Lbk0;->f:I
+
+    return p0
+.end method
+
+.method public final i()I
+    .locals 1
+
+    iget-object v0, p0, Lbk0;->c:[I
+
+    invoke-interface {p0}, Lod5;->b()I
+
+    move-result p0
+
+    aget p0, v0, p0
+
+    return p0
+.end method
+
+.method public final j()Lv46;
+    .locals 1
+
+    iget-object v0, p0, Lbk0;->d:[Lv46;
+
+    invoke-interface {p0}, Lod5;->b()I
+
+    move-result p0
+
+    aget-object p0, v0, p0
+
+    return-object p0
+.end method
+
+.method public l(F)V
+    .locals 0
+
+    return-void
+.end method
+
+.method public final length()I
+    .locals 0
+
+    iget-object p0, p0, Lbk0;->c:[I
+
+    array-length p0, p0
+
+    return p0
+.end method
+
+.method public final p(I)I
+    .locals 2
+
+    const/4 v0, 0x0
+
+    :goto_0
+    iget v1, p0, Lbk0;->b:I
+
+    if-ge v0, v1, :cond_1
+
+    iget-object v1, p0, Lbk0;->c:[I
+
+    aget v1, v1, v0
+
+    if-ne v1, p1, :cond_0
+
+    return v0
+
+    :cond_0
+    add-int/lit8 v0, v0, 0x1
+
+    goto :goto_0
+
+    :cond_1
+    const/4 p0, -0x1
+
+    return p0
+.end method
+
+.method public final q(Lv46;)I
+    .locals 2
+
+    const/4 v0, 0x0
+
+    :goto_0
+    iget v1, p0, Lbk0;->b:I
+
+    if-ge v0, v1, :cond_1
+
+    iget-object v1, p0, Lbk0;->d:[Lv46;
+
+    aget-object v1, v1, v0
+
+    if-ne v1, p1, :cond_0
+
+    return v0
+
+    :cond_0
+    add-int/lit8 v0, v0, 0x1
+
+    goto :goto_0
+
+    :cond_1
+    const/4 p0, -0x1
+
+    return p0
+.end method
+
+.method public final r(IJ)Z
+    .locals 7
+
+    invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
+
+    move-result-wide v0
+
+    invoke-virtual {p0, p1, v0, v1}, Lbk0;->s(IJ)Z
+
+    move-result v2
+
+    const/4 v3, 0x0
+
+    move v4, v3
+
+    :goto_0
+    iget v5, p0, Lbk0;->b:I
+
+    const/4 v6, 0x1
+
+    if-ge v4, v5, :cond_1
+
+    if-nez v2, :cond_1
+
+    if-eq v4, p1, :cond_0
+
+    invoke-virtual {p0, v4, v0, v1}, Lbk0;->s(IJ)Z
+
+    move-result v2
+
+    if-nez v2, :cond_0
+
+    move v2, v6
+
+    goto :goto_1
+
+    :cond_0
+    move v2, v3
+
+    :goto_1
+    add-int/lit8 v4, v4, 0x1
+
+    goto :goto_0
+
+    :cond_1
+    if-nez v2, :cond_2
+
+    return v3
+
+    :cond_2
+    iget-object p0, p0, Lbk0;->e:[J
+
+    aget-wide v2, p0, p1
+
+    sget v4, Llrf;->a:I
+
+    add-long v4, v0, p2
+
+    xor-long/2addr v0, v4
+
+    xor-long/2addr p2, v4
+
+    and-long/2addr p2, v0
+
+    const-wide/16 v0, 0x0
+
+    cmp-long p2, p2, v0
+
+    if-gez p2, :cond_3
+
+    const-wide v4, 0x7fffffffffffffffL
+
+    :cond_3
+    invoke-static {v2, v3, v4, v5}, Ljava/lang/Math;->max(JJ)J
+
+    move-result-wide p2
+
+    aput-wide p2, p0, p1
+
+    return v6
+.end method
+
+.method public final s(IJ)Z
+    .locals 0
+
+    iget-object p0, p0, Lbk0;->e:[J
+
+    aget-wide p0, p0, p1
+
+    cmp-long p0, p0, p2
+
+    if-lez p0, :cond_0
+
+    const/4 p0, 0x1
+
+    return p0
+
+    :cond_0
+    const/4 p0, 0x0
+
+    return p0
 .end method

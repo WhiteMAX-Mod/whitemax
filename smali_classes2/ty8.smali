@@ -1,48 +1,25 @@
 .class public final Lty8;
-.super Lbu3;
+.super Landroid/view/ViewGroup$MarginLayoutParams;
+.source "SourceFile"
 
 
 # instance fields
-.field public X:I
-
-.field public final synthetic Y:Lff7;
-
-.field public synthetic o:Ljava/lang/Object;
+.field public a:Z
 
 
 # direct methods
-.method public constructor <init>(Lff7;Lkotlin/coroutines/Continuation;)V
-    .locals 0
+.method public constructor <init>()V
+    .locals 2
 
-    iput-object p1, p0, Lty8;->Y:Lff7;
+    const/4 v0, -0x1
 
-    invoke-direct {p0, p2}, Lbu3;-><init>(Lkotlin/coroutines/Continuation;)V
+    const/4 v1, -0x2
+
+    invoke-direct {p0, v0, v1}, Landroid/view/ViewGroup$MarginLayoutParams;-><init>(II)V
+
+    const/4 v0, 0x1
+
+    iput-boolean v0, p0, Lty8;->a:Z
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
-
-    iput-object p1, p0, Lty8;->o:Ljava/lang/Object;
-
-    iget p1, p0, Lty8;->X:I
-
-    const/high16 v0, -0x80000000
-
-    or-int/2addr p1, v0
-
-    iput p1, p0, Lty8;->X:I
-
-    iget-object p1, p0, Lty8;->Y:Lff7;
-
-    const/4 v0, 0x0
-
-    invoke-virtual {p1, v0, p0}, Lff7;->a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    return-object p0
 .end method

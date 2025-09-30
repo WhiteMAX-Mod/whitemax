@@ -1,43 +1,80 @@
-.class public abstract Lsr9;
+.class public final Lsr9;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements La9a;
+
+
+# static fields
+.field public static final a:Lsr9;
+
+.field public static final b:Lkotlinx/coroutines/internal/ContextScope;
+
+.field public static final c:Lnxd;
+
+.field public static final d:Lhic;
+
 
 # direct methods
-.method public static a(Landroid/app/NotificationChannel;)Ljava/lang/String;
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 3
 
-    invoke-virtual {p0}, Landroid/app/NotificationChannel;->getConversationId()Ljava/lang/String;
+    new-instance v0, Lsr9;
 
-    move-result-object p0
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    return-object p0
-.end method
+    sput-object v0, Lsr9;->a:Lsr9;
 
-.method public static b(Landroid/app/NotificationChannel;)Ljava/lang/String;
-    .locals 0
+    sget-object v0, Lone/me/android/di/ConcurrentComponent;->INSTANCE:Lone/me/android/di/ConcurrentComponent;
 
-    invoke-virtual {p0}, Landroid/app/NotificationChannel;->getParentChannelId()Ljava/lang/String;
+    invoke-virtual {v0}, Lone/me/android/di/ConcurrentComponent;->getDispatchers()Lxwe;
 
-    move-result-object p0
+    move-result-object v0
 
-    return-object p0
-.end method
+    check-cast v0, Laga;
 
-.method public static c(Landroid/app/NotificationChannel;)Z
-    .locals 0
+    invoke-virtual {v0}, Laga;->a()Ls04;
 
-    invoke-virtual {p0}, Landroid/app/NotificationChannel;->isImportantConversation()Z
+    move-result-object v0
 
-    move-result p0
+    const-string v1, "mytracker"
 
-    return p0
-.end method
+    const/4 v2, 0x1
 
-.method public static d(Landroid/app/NotificationChannel;Ljava/lang/String;Ljava/lang/String;)V
-    .locals 0
+    invoke-virtual {v0, v2, v1}, Ls04;->limitedParallelism(ILjava/lang/String;)Ls04;
 
-    invoke-virtual {p0, p1, p2}, Landroid/app/NotificationChannel;->setConversationId(Ljava/lang/String;Ljava/lang/String;)V
+    move-result-object v0
+
+    invoke-static {}, Lmu0;->a()Lre7;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Lf0;->plus(Lq04;)Lq04;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lb0b;->a(Lq04;)Lkotlinx/coroutines/internal/ContextScope;
+
+    move-result-object v0
+
+    sput-object v0, Lsr9;->b:Lkotlinx/coroutines/internal/ContextScope;
+
+    const/4 v0, 0x0
+
+    const/4 v1, 0x2
+
+    invoke-static {v2, v0, v1}, Loxd;->b(III)Lnxd;
+
+    move-result-object v0
+
+    sput-object v0, Lsr9;->c:Lnxd;
+
+    new-instance v1, Lhic;
+
+    invoke-direct {v1, v0}, Lhic;-><init>(Lqo9;)V
+
+    sput-object v1, Lsr9;->d:Lhic;
 
     return-void
 .end method

@@ -1,146 +1,81 @@
-.class public final enum Li54;
-.super Ljava/lang/Enum;
+.class public final Li54;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final X:[Li54;
-
-.field public static final synthetic Y:[Li54;
-
-.field public static final enum b:Li54;
-
-.field public static final enum c:Li54;
-
-.field public static final enum o:Li54;
-
-
 # instance fields
-.field public final a:I
+.field public final a:Ljava/lang/String;
+
+.field public final b:J
+
+.field public c:J
+
+.field public d:J
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 6
+.method public constructor <init>(Ljava/lang/String;J)V
+    .locals 2
 
-    new-instance v0, Li54;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const-string v1, "DISABLED"
+    const-wide/16 v0, 0xc8
 
-    const/4 v2, 0x0
+    iput-wide v0, p0, Li54;->c:J
 
-    invoke-direct {v0, v1, v2, v2}, Li54;-><init>(Ljava/lang/String;II)V
+    iput-object p1, p0, Li54;->a:Ljava/lang/String;
 
-    sput-object v0, Li54;->b:Li54;
-
-    new-instance v1, Li54;
-
-    const-string v2, "LOGS"
-
-    const/4 v3, 0x1
-
-    invoke-direct {v1, v2, v3, v3}, Li54;-><init>(Ljava/lang/String;II)V
-
-    new-instance v2, Li54;
-
-    const-string v3, "FILE_LOGS"
-
-    const/4 v4, 0x2
-
-    invoke-direct {v2, v3, v4, v4}, Li54;-><init>(Ljava/lang/String;II)V
-
-    sput-object v2, Li54;->c:Li54;
-
-    new-instance v3, Li54;
-
-    const-string v4, "DEV_OPTIONS_MENU"
-
-    const/4 v5, 0x3
-
-    invoke-direct {v3, v4, v5, v5}, Li54;-><init>(Ljava/lang/String;II)V
-
-    sput-object v3, Li54;->o:Li54;
-
-    filled-new-array {v0, v1, v2, v3}, [Li54;
-
-    move-result-object v0
-
-    sput-object v0, Li54;->Y:[Li54;
-
-    invoke-static {}, Li54;->values()[Li54;
-
-    move-result-object v0
-
-    sput-object v0, Li54;->X:[Li54;
+    iput-wide p2, p0, Li54;->b:J
 
     return-void
 .end method
 
-.method public constructor <init>(Ljava/lang/String;II)V
-    .locals 0
 
-    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+# virtual methods
+.method public final toString()Ljava/lang/String;
+    .locals 3
 
-    iput p3, p0, Li54;->a:I
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    return-void
-.end method
+    const-string v1, "Command{seq:"
 
-.method public static a(I)Li54;
-    .locals 5
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    sget-object v0, Li54;->X:[Li54;
+    iget-wide v1, p0, Li54;->b:J
 
-    array-length v1, v0
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
-    const/4 v2, 0x0
+    const-string v1, "|retry count:"
 
-    :goto_0
-    if-ge v2, v1, :cond_1
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    aget-object v3, v0, v2
+    iget-wide v1, p0, Li54;->d:J
 
-    iget v4, v3, Li54;->a:I
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
-    if-ne v4, p0, :cond_0
+    const-string v1, "|retry timeout:"
 
-    return-object v3
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    :cond_0
-    add-int/lit8 v2, v2, 0x1
+    iget-wide v1, p0, Li54;->c:J
 
-    goto :goto_0
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
-    :cond_1
-    sget-object p0, Li54;->b:Li54;
+    const/16 v1, 0x7c
 
-    return-object p0
-.end method
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-.method public static valueOf(Ljava/lang/String;)Li54;
-    .locals 1
+    iget-object p0, p0, Li54;->a:Ljava/lang/String;
 
-    const-class v0, Li54;
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+    const/16 p0, 0x7d
+
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p0
 
-    check-cast p0, Li54;
-
     return-object p0
-.end method
-
-.method public static values()[Li54;
-    .locals 1
-
-    sget-object v0, Li54;->Y:[Li54;
-
-    invoke-virtual {v0}, [Li54;->clone()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, [Li54;
-
-    return-object v0
 .end method

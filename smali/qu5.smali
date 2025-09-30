@@ -1,114 +1,87 @@
 .class public final Lqu5;
-.super Lqde;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Ll66;
+.implements Lks5;
 
 
 # instance fields
-.field public synthetic X:Ljava/lang/Object;
+.field public final synthetic a:I
 
-.field public final synthetic Y:Lone/me/folders/picker/FolderMemberPickerScreen;
+.field public final synthetic b:Lipc;
 
 
 # direct methods
-.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/folders/picker/FolderMemberPickerScreen;)V
+.method public synthetic constructor <init>(Lipc;I)V
     .locals 0
 
-    iput-object p2, p0, Lqu5;->Y:Lone/me/folders/picker/FolderMemberPickerScreen;
+    iput p2, p0, Lqu5;->a:I
 
-    const/4 p2, 0x2
+    iput-object p1, p0, Lqu5;->b:Lipc;
 
-    invoke-direct {p0, p2, p1}, Lqde;-><init>(ILkotlin/coroutines/Continuation;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final a(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+    .locals 2
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    iget p2, p0, Lqu5;->a:I
 
-    invoke-virtual {p0, p1, p2}, Lqu5;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    packed-switch p2, :pswitch_data_0
 
-    move-result-object p0
+    iget-object p2, p0, Lqu5;->b:Lipc;
 
-    check-cast p0, Lqu5;
+    iget-object v0, p2, Lipc;->a:Ljava/lang/Object;
 
-    sget-object p1, Le5f;->a:Le5f;
+    sget-object v1, Lh4a;->a:Lkotlinx/coroutines/internal/Symbol;
 
-    invoke-virtual {p0, p1}, Lqu5;->o(Ljava/lang/Object;)Ljava/lang/Object;
+    if-ne v0, v1, :cond_0
 
-    return-object p1
-.end method
+    iput-object p1, p2, Lipc;->a:Ljava/lang/Object;
 
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 1
-
-    new-instance v0, Lqu5;
-
-    iget-object p0, p0, Lqu5;->Y:Lone/me/folders/picker/FolderMemberPickerScreen;
-
-    invoke-direct {v0, p2, p0}, Lqu5;-><init>(Lkotlin/coroutines/Continuation;Lone/me/folders/picker/FolderMemberPickerScreen;)V
-
-    iput-object p1, v0, Lqu5;->X:Ljava/lang/Object;
-
-    return-object v0
-.end method
-
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 3
-
-    invoke-static {p1}, Lsgg;->Z(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Lqu5;->X:Ljava/lang/Object;
-
-    check-cast p1, Ljava/util/Set;
-
-    invoke-interface {p1}, Ljava/util/Collection;->isEmpty()Z
-
-    move-result p1
-
-    iget-object p0, p0, Lqu5;->Y:Lone/me/folders/picker/FolderMemberPickerScreen;
-
-    if-nez p1, :cond_0
-
-    sget-object p1, Lone/me/folders/picker/FolderMemberPickerScreen;->v0:[Lbc7;
-
-    invoke-virtual {p0}, Lone/me/chats/picker/AbstractPickerScreen;->x0()Lvia;
-
-    move-result-object p1
-
-    new-instance v0, Lfia;
-
-    new-instance v1, Lwz0;
-
-    const/4 v2, 0x3
-
-    invoke-direct {v1, v2, p0}, Lwz0;-><init>(ILjava/lang/Object;)V
-
-    invoke-direct {v0, v1}, Lfia;-><init>(Lx56;)V
-
-    invoke-virtual {p1, v0}, Lvia;->setRightActions(Llia;)V
-
-    goto :goto_0
-
-    :cond_0
-    sget-object p1, Lone/me/folders/picker/FolderMemberPickerScreen;->v0:[Lbc7;
-
-    invoke-virtual {p0}, Lone/me/chats/picker/AbstractPickerScreen;->x0()Lvia;
-
-    move-result-object p0
-
-    sget-object p1, Lgia;->a:Lgia;
-
-    invoke-virtual {p0, p1}, Lvia;->setRightActions(Llia;)V
-
-    :goto_0
-    sget-object p0, Le5f;->a:Le5f;
+    sget-object p0, Lylf;->a:Lylf;
 
     return-object p0
+
+    :cond_0
+    iput-object v1, p2, Lipc;->a:Ljava/lang/Object;
+
+    new-instance p1, Lkotlinx/coroutines/flow/internal/AbortFlowException;
+
+    invoke-direct {p1, p0}, Lkotlinx/coroutines/flow/internal/AbortFlowException;-><init>(Ljava/lang/Object;)V
+
+    throw p1
+
+    :pswitch_0
+    iget-object p2, p0, Lqu5;->b:Lipc;
+
+    iput-object p1, p2, Lipc;->a:Ljava/lang/Object;
+
+    new-instance p1, Lkotlinx/coroutines/flow/internal/AbortFlowException;
+
+    invoke-direct {p1, p0}, Lkotlinx/coroutines/flow/internal/AbortFlowException;-><init>(Ljava/lang/Object;)V
+
+    throw p1
+
+    :pswitch_1
+    iget-object p2, p0, Lqu5;->b:Lipc;
+
+    iput-object p1, p2, Lipc;->a:Ljava/lang/Object;
+
+    new-instance p1, Lkotlinx/coroutines/flow/internal/AbortFlowException;
+
+    invoke-direct {p1, p0}, Lkotlinx/coroutines/flow/internal/AbortFlowException;-><init>(Ljava/lang/Object;)V
+
+    throw p1
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

@@ -1,23 +1,8 @@
-.class public final Lpy0;
+.class public interface abstract Lpy0;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field public final a:Ljava/util/Collection;
-
-.field public final b:Ljava/util/Collection;
-
-
-# direct methods
-.method public constructor <init>(Ljava/util/List;Ljava/util/Collection;)V
-    .locals 0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput-object p1, p0, Lpy0;->a:Ljava/util/Collection;
-
-    iput-object p2, p0, Lpy0;->b:Ljava/util/Collection;
-
-    return-void
+# virtual methods
+.method public abstract onCustomData(Lsg1;Lorg/json/JSONObject;)V
 .end method

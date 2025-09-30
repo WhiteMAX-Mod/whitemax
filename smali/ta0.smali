@@ -1,31 +1,84 @@
 .class public final Lta0;
-.super Lfm9;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field public final a:Lem9;
+.field public final a:J
 
-.field public final b:Ldm9;
+.field public final b:J
+
+.field public final c:Ls80;
 
 
 # direct methods
-.method public constructor <init>(Lem9;Ldm9;)V
+.method public constructor <init>(JJLs80;)V
     .locals 0
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p1, p0, Lta0;->a:Lem9;
+    iput-wide p1, p0, Lta0;->a:J
 
-    iput-object p2, p0, Lta0;->b:Ldm9;
+    iput-wide p3, p0, Lta0;->b:J
+
+    iput-object p5, p0, Lta0;->c:Ls80;
 
     return-void
+.end method
+
+.method public static a(JJLs80;)Lta0;
+    .locals 10
+
+    const-wide/16 v0, 0x0
+
+    cmp-long v2, p0, v0
+
+    const/4 v3, 0x0
+
+    const/4 v4, 0x1
+
+    if-ltz v2, :cond_0
+
+    move v2, v4
+
+    goto :goto_0
+
+    :cond_0
+    move v2, v3
+
+    :goto_0
+    const-string v5, "duration must be positive value."
+
+    invoke-static {v5, v2}, Ln4e;->h(Ljava/lang/String;Z)V
+
+    cmp-long v0, p2, v0
+
+    if-ltz v0, :cond_1
+
+    move v3, v4
+
+    :cond_1
+    const-string v0, "bytes must be positive value."
+
+    invoke-static {v0, v3}, Ln4e;->h(Ljava/lang/String;Z)V
+
+    new-instance v4, Lta0;
+
+    move-wide v5, p0
+
+    move-wide v7, p2
+
+    move-object v9, p4
+
+    invoke-direct/range {v4 .. v9}, Lta0;-><init>(JJLs80;)V
+
+    return-object v4
 .end method
 
 
 # virtual methods
 .method public final equals(Ljava/lang/Object;)Z
-    .locals 4
+    .locals 7
 
     const/4 v0, 0x1
 
@@ -34,132 +87,114 @@
     return v0
 
     :cond_0
-    instance-of v1, p1, Lfm9;
+    instance-of v1, p1, Lta0;
 
     const/4 v2, 0x0
 
-    if-eqz v1, :cond_3
+    if-eqz v1, :cond_1
 
-    check-cast p1, Lfm9;
+    check-cast p1, Lta0;
 
-    iget-object v1, p0, Lta0;->a:Lem9;
+    iget-wide v3, p0, Lta0;->a:J
+
+    iget-wide v5, p1, Lta0;->a:J
+
+    cmp-long v1, v3, v5
 
     if-nez v1, :cond_1
 
-    move-object v1, p1
+    iget-wide v3, p0, Lta0;->b:J
 
-    check-cast v1, Lta0;
+    iget-wide v5, p1, Lta0;->b:J
 
-    iget-object v1, v1, Lta0;->a:Lem9;
+    cmp-long v1, v3, v5
 
-    if-nez v1, :cond_3
+    if-nez v1, :cond_1
 
-    goto :goto_0
+    iget-object p0, p0, Lta0;->c:Ls80;
 
-    :cond_1
-    move-object v3, p1
+    iget-object p1, p1, Lta0;->c:Ls80;
 
-    check-cast v3, Lta0;
-
-    iget-object v3, v3, Lta0;->a:Lem9;
-
-    invoke-virtual {v1, v3}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_3
-
-    :goto_0
-    iget-object p0, p0, Lta0;->b:Ldm9;
-
-    if-nez p0, :cond_2
-
-    check-cast p1, Lta0;
-
-    iget-object p0, p1, Lta0;->b:Ldm9;
-
-    if-nez p0, :cond_3
-
-    goto :goto_1
-
-    :cond_2
-    check-cast p1, Lta0;
-
-    iget-object p1, p1, Lta0;->b:Ldm9;
-
-    invoke-virtual {p0, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {p0, p1}, Ls80;->equals(Ljava/lang/Object;)Z
 
     move-result p0
 
-    if-eqz p0, :cond_3
+    if-eqz p0, :cond_1
 
-    :goto_1
     return v0
 
-    :cond_3
+    :cond_1
     return v2
 .end method
 
 .method public final hashCode()I
-    .locals 3
+    .locals 7
 
-    const/4 v0, 0x0
+    iget-wide v0, p0, Lta0;->a:J
 
-    iget-object v1, p0, Lta0;->a:Lem9;
+    const/16 v2, 0x20
 
-    if-nez v1, :cond_0
+    ushr-long v3, v0, v2
 
-    move v1, v0
+    xor-long/2addr v0, v3
 
-    goto :goto_0
+    long-to-int v0, v0
 
-    :cond_0
-    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
+    const v1, 0xf4243
 
-    move-result v1
+    xor-int/2addr v0, v1
 
-    :goto_0
-    const v2, 0xf4243
+    mul-int/2addr v0, v1
 
-    xor-int/2addr v1, v2
+    iget-wide v3, p0, Lta0;->b:J
 
-    mul-int/2addr v1, v2
+    ushr-long v5, v3, v2
 
-    iget-object p0, p0, Lta0;->b:Ldm9;
+    xor-long v2, v5, v3
 
-    if-nez p0, :cond_1
+    long-to-int v2, v2
 
-    goto :goto_1
+    xor-int/2addr v0, v2
 
-    :cond_1
-    invoke-virtual {p0}, Ljava/lang/Object;->hashCode()I
+    mul-int/2addr v0, v1
 
-    move-result v0
+    iget-object p0, p0, Lta0;->c:Ls80;
 
-    :goto_1
-    xor-int p0, v1, v0
+    invoke-virtual {p0}, Ls80;->hashCode()I
+
+    move-result p0
+
+    xor-int/2addr p0, v0
 
     return p0
 .end method
 
 .method public final toString()Ljava/lang/String;
-    .locals 2
+    .locals 3
 
     new-instance v0, Ljava/lang/StringBuilder;
 
-    const-string v1, "NetworkConnectionInfo{networkType="
+    const-string v1, "RecordingStats{recordedDurationNanos="
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-object v1, p0, Lta0;->a:Lem9;
+    iget-wide v1, p0, Lta0;->a:J
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
-    const-string v1, ", mobileSubtype="
+    const-string v1, ", numBytesRecorded="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object p0, p0, Lta0;->b:Ldm9;
+    iget-wide v1, p0, Lta0;->b:J
+
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    const-string v1, ", audioStats="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object p0, p0, Lta0;->c:Ls80;
 
     invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 

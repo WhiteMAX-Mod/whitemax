@@ -1,167 +1,150 @@
-.class public abstract Llk;
-.super Ljava/lang/Object;
+.class public final Llk;
+.super Lure;
 .source "SourceFile"
+
+# interfaces
+.implements Lpc6;
+
+
+# instance fields
+.field public X:I
+
+.field public synthetic Y:Ljava/lang/Object;
+
+.field public final synthetic Z:Lcxc;
 
 
 # direct methods
-.method public static a(Landroid/media/EncoderProfiles;)Ly90;
-    .locals 17
-
-    invoke-virtual/range {p0 .. p0}, Landroid/media/EncoderProfiles;->getDefaultDurationSeconds()I
-
-    move-result v0
-
-    invoke-virtual/range {p0 .. p0}, Landroid/media/EncoderProfiles;->getRecommendedFileFormat()I
-
-    move-result v1
-
-    invoke-virtual/range {p0 .. p0}, Landroid/media/EncoderProfiles;->getAudioProfiles()Ljava/util/List;
-
-    move-result-object v2
-
-    new-instance v3, Ljava/util/ArrayList;
-
-    invoke-direct {v3}, Ljava/util/ArrayList;-><init>()V
-
-    invoke-interface {v2}, Ljava/util/List;->iterator()Ljava/util/Iterator;
-
-    move-result-object v2
-
-    :goto_0
-    invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v4
-
-    if-eqz v4, :cond_0
-
-    invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v4
-
-    check-cast v4, Landroid/media/EncoderProfiles$AudioProfile;
-
-    invoke-virtual {v4}, Landroid/media/EncoderProfiles$AudioProfile;->getCodec()I
-
-    move-result v6
-
-    invoke-virtual {v4}, Landroid/media/EncoderProfiles$AudioProfile;->getMediaType()Ljava/lang/String;
-
-    move-result-object v11
-
-    invoke-virtual {v4}, Landroid/media/EncoderProfiles$AudioProfile;->getBitrate()I
-
-    move-result v7
-
-    invoke-virtual {v4}, Landroid/media/EncoderProfiles$AudioProfile;->getSampleRate()I
-
-    move-result v8
-
-    invoke-virtual {v4}, Landroid/media/EncoderProfiles$AudioProfile;->getChannels()I
-
-    move-result v9
-
-    invoke-virtual {v4}, Landroid/media/EncoderProfiles$AudioProfile;->getProfile()I
-
-    move-result v10
-
-    new-instance v5, Lx90;
-
-    invoke-direct/range {v5 .. v11}, Lx90;-><init>(IIIIILjava/lang/String;)V
-
-    invoke-virtual {v3, v5}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    goto :goto_0
-
-    :cond_0
-    invoke-virtual/range {p0 .. p0}, Landroid/media/EncoderProfiles;->getVideoProfiles()Ljava/util/List;
-
-    move-result-object v2
-
-    new-instance v4, Ljava/util/ArrayList;
-
-    invoke-direct {v4}, Ljava/util/ArrayList;-><init>()V
-
-    invoke-interface {v2}, Ljava/util/List;->iterator()Ljava/util/Iterator;
-
-    move-result-object v2
-
-    :goto_1
-    invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v5
-
-    if-eqz v5, :cond_1
-
-    invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v5
-
-    check-cast v5, Landroid/media/EncoderProfiles$VideoProfile;
-
-    invoke-virtual {v5}, Landroid/media/EncoderProfiles$VideoProfile;->getCodec()I
-
-    move-result v7
-
-    invoke-virtual {v5}, Landroid/media/EncoderProfiles$VideoProfile;->getMediaType()Ljava/lang/String;
-
-    move-result-object v8
-
-    invoke-virtual {v5}, Landroid/media/EncoderProfiles$VideoProfile;->getBitrate()I
-
-    move-result v9
-
-    invoke-virtual {v5}, Landroid/media/EncoderProfiles$VideoProfile;->getFrameRate()I
-
-    move-result v10
-
-    invoke-virtual {v5}, Landroid/media/EncoderProfiles$VideoProfile;->getWidth()I
-
-    move-result v11
-
-    invoke-virtual {v5}, Landroid/media/EncoderProfiles$VideoProfile;->getHeight()I
-
-    move-result v12
-
-    invoke-virtual {v5}, Landroid/media/EncoderProfiles$VideoProfile;->getProfile()I
-
-    move-result v13
-
-    new-instance v6, Lz90;
-
-    const/16 v14, 0x8
-
-    const/4 v15, 0x0
-
-    const/16 v16, 0x0
-
-    invoke-direct/range {v6 .. v16}, Lz90;-><init>(ILjava/lang/String;IIIIIIII)V
-
-    invoke-virtual {v4, v6}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    goto :goto_1
-
-    :cond_1
-    invoke-static {v0, v1, v3, v4}, Ly90;->e(IILjava/util/List;Ljava/util/List;)Ly90;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public static b(ILjava/lang/String;)Landroid/media/EncoderProfiles;
+.method public constructor <init>(Lcxc;Lkotlin/coroutines/Continuation;)V
     .locals 0
 
-    invoke-static {p1, p0}, Landroid/media/CamcorderProfile;->getAll(Ljava/lang/String;I)Landroid/media/EncoderProfiles;
+    iput-object p1, p0, Llk;->Z:Lcxc;
+
+    const/4 p1, 0x2
+
+    invoke-direct {p0, p1, p2}, Lure;-><init>(ILkotlin/coroutines/Continuation;)V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
+
+    check-cast p1, Ly04;
+
+    check-cast p2, Lkotlin/coroutines/Continuation;
+
+    invoke-virtual {p0, p1, p2}, Llk;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+
+    move-result-object p0
+
+    check-cast p0, Llk;
+
+    sget-object p1, Lylf;->a:Lylf;
+
+    invoke-virtual {p0, p1}, Llk;->o(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p0
 
     return-object p0
 .end method
 
-.method public static c(Landroid/media/AudioRecord$Builder;Landroid/content/Context;)V
-    .locals 0
+.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 1
 
-    invoke-virtual {p0, p1}, Landroid/media/AudioRecord$Builder;->setContext(Landroid/content/Context;)Landroid/media/AudioRecord$Builder;
+    new-instance v0, Llk;
 
-    return-void
+    iget-object p0, p0, Llk;->Z:Lcxc;
+
+    invoke-direct {v0, p0, p2}, Llk;-><init>(Lcxc;Lkotlin/coroutines/Continuation;)V
+
+    iput-object p1, v0, Llk;->Y:Ljava/lang/Object;
+
+    return-object v0
+.end method
+
+.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 3
+
+    iget v0, p0, Llk;->X:I
+
+    const/4 v1, 0x1
+
+    if-eqz v0, :cond_1
+
+    if-ne v0, v1, :cond_0
+
+    iget-object p0, p0, Llk;->Y:Ljava/lang/Object;
+
+    check-cast p0, Ly04;
+
+    invoke-static {p1}, Lqe5;->V(Ljava/lang/Object;)V
+
+    goto :goto_0
+
+    :cond_0
+    new-instance p0, Ljava/lang/IllegalStateException;
+
+    const-string p1, "call to \'resume\' before \'invoke\' with coroutine"
+
+    invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p0
+
+    :cond_1
+    invoke-static {p1}, Lqe5;->V(Ljava/lang/Object;)V
+
+    iget-object p1, p0, Llk;->Y:Ljava/lang/Object;
+
+    check-cast p1, Ly04;
+
+    iput-object p1, p0, Llk;->Y:Ljava/lang/Object;
+
+    iput v1, p0, Llk;->X:I
+
+    new-instance v0, Lf12;
+
+    invoke-static {p0}, Lf4h;->x(Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+
+    move-result-object v2
+
+    invoke-direct {v0, v1, v2}, Lf12;-><init>(ILkotlin/coroutines/Continuation;)V
+
+    invoke-virtual {v0}, Lf12;->o()V
+
+    iget-object p0, p0, Llk;->Z:Lcxc;
+
+    iget-object p0, p0, Lcxc;->b:Ljava/lang/Object;
+
+    check-cast p0, Lt38;
+
+    invoke-interface {p1}, Ly04;->getCoroutineContext()Lq04;
+
+    move-result-object p1
+
+    new-instance v1, Loe;
+
+    const/4 v2, 0x2
+
+    invoke-direct {v1, v2, v0}, Loe;-><init>(ILjava/lang/Object;)V
+
+    invoke-virtual {p0, p1, v1}, Ls04;->dispatch(Lq04;Ljava/lang/Runnable;)V
+
+    invoke-virtual {v0}, Lf12;->m()Ljava/lang/Object;
+
+    move-result-object p0
+
+    sget-object p1, Lz04;->a:Lz04;
+
+    if-ne p0, p1, :cond_2
+
+    return-object p1
+
+    :cond_2
+    :goto_0
+    sget-object p0, Lylf;->a:Lylf;
+
+    return-object p0
 .end method

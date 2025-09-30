@@ -1,125 +1,107 @@
-.class public final Leq5;
+.class public final synthetic Leq5;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lzm5;
+.implements Lu9a;
 
 
 # instance fields
 .field public final synthetic a:I
 
-.field public final synthetic b:[Lzm5;
-
-.field public final synthetic c:Lqde;
+.field public final synthetic b:Lcom/google/firebase/messaging/FirebaseMessaging;
 
 
 # direct methods
-.method public constructor <init>([Lzm5;Lr66;)V
-    .locals 1
+.method public synthetic constructor <init>(Lcom/google/firebase/messaging/FirebaseMessaging;I)V
+    .locals 0
 
-    const/4 v0, 0x0
+    iput p2, p0, Leq5;->a:I
 
-    iput v0, p0, Leq5;->a:I
+    iput-object p1, p0, Leq5;->b:Lcom/google/firebase/messaging/FirebaseMessaging;
 
-    .line 1
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 2
-    iput-object p1, p0, Leq5;->b:[Lzm5;
-
-    check-cast p2, Lqde;
-
-    iput-object p2, p0, Leq5;->c:Lqde;
-
-    return-void
-.end method
-
-.method public constructor <init>([Lzm5;Ls66;)V
-    .locals 1
-
-    const/4 v0, 0x1
-
-    iput v0, p0, Leq5;->a:I
-
-    .line 3
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 4
-    iput-object p1, p0, Leq5;->b:[Lzm5;
-
-    check-cast p2, Lqde;
-
-    iput-object p2, p0, Leq5;->c:Lqde;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final d(Lbn5;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-    .locals 4
+.method public final a(Ljava/lang/Object;)V
+    .locals 2
 
     iget v0, p0, Leq5;->a:I
 
+    iget-object p0, p0, Leq5;->b:Lcom/google/firebase/messaging/FirebaseMessaging;
+
     packed-switch v0, :pswitch_data_0
 
-    sget-object v0, Lvu3;->Z:Lvu3;
+    check-cast p1, Li63;
 
-    new-instance v1, Ldq5;
+    sget-object v0, Lcom/google/firebase/messaging/FirebaseMessaging;->k:Leuc;
 
-    const/4 v2, 0x0
+    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    iget-object v3, p0, Leq5;->c:Lqde;
+    if-eqz p1, :cond_0
 
-    invoke-direct {v1, v2, v3}, Ldq5;-><init>(Lkotlin/coroutines/Continuation;Ls66;)V
+    iget-object p1, p1, Li63;->a:Landroid/content/Intent;
 
-    iget-object p0, p0, Leq5;->b:[Lzm5;
+    invoke-static {p1}, Lb0b;->u(Landroid/content/Intent;)V
 
-    invoke-static {p1, v0, v1, p2, p0}, Lild;->e(Lbn5;Lv56;Ln66;Lkotlin/coroutines/Continuation;[Lzm5;)Ljava/lang/Object;
+    invoke-virtual {p0}, Lcom/google/firebase/messaging/FirebaseMessaging;->f()V
+
+    :cond_0
+    return-void
+
+    :pswitch_0
+    check-cast p1, Lw9f;
+
+    iget-object p0, p0, Lcom/google/firebase/messaging/FirebaseMessaging;->e:Lqa6;
+
+    invoke-virtual {p0}, Lqa6;->m()Z
+
+    move-result p0
+
+    if-eqz p0, :cond_1
+
+    iget-object p0, p1, Lw9f;->h:Lu9f;
+
+    invoke-virtual {p0}, Lu9f;->a()Lt9f;
 
     move-result-object p0
 
-    sget-object p1, Lpx3;->a:Lpx3;
+    if-eqz p0, :cond_1
 
-    if-ne p0, p1, :cond_0
+    monitor-enter p1
+
+    :try_start_0
+    iget-boolean p0, p1, Lw9f;->g:Z
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    monitor-exit p1
+
+    if-nez p0, :cond_1
+
+    const-wide/16 v0, 0x0
+
+    invoke-virtual {p1, v0, v1}, Lw9f;->f(J)V
 
     goto :goto_0
 
-    :cond_0
-    sget-object p0, Le5f;->a:Le5f;
+    :catchall_0
+    move-exception p0
 
-    :goto_0
-    return-object p0
+    :try_start_1
+    monitor-exit p1
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    :pswitch_0
-    sget-object v0, Lvu3;->Z:Lvu3;
-
-    new-instance v1, Ldq5;
-
-    const/4 v2, 0x0
-
-    iget-object v3, p0, Leq5;->c:Lqde;
-
-    invoke-direct {v1, v2, v3}, Ldq5;-><init>(Lkotlin/coroutines/Continuation;Lr66;)V
-
-    iget-object p0, p0, Leq5;->b:[Lzm5;
-
-    invoke-static {p1, v0, v1, p2, p0}, Lild;->e(Lbn5;Lv56;Ln66;Lkotlin/coroutines/Continuation;[Lzm5;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    sget-object p1, Lpx3;->a:Lpx3;
-
-    if-ne p0, p1, :cond_1
-
-    goto :goto_1
+    throw p0
 
     :cond_1
-    sget-object p0, Le5f;->a:Le5f;
-
-    :goto_1
-    return-object p0
+    :goto_0
+    return-void
 
     nop
 

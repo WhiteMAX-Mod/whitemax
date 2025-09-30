@@ -1,85 +1,76 @@
-.class public interface abstract La85;
-.super Ljava/lang/Object;
+.class public La85;
+.super Landroid/app/DialogFragment;
 .source "SourceFile"
 
 
+# instance fields
+.field public a:Landroid/app/Dialog;
+
+.field public b:Landroid/content/DialogInterface$OnCancelListener;
+
+.field public c:Landroid/app/AlertDialog;
+
+
+# direct methods
+.method public constructor <init>()V
+    .locals 0
+
+    invoke-direct {p0}, Landroid/app/DialogFragment;-><init>()V
+
+    return-void
+.end method
+
+
 # virtual methods
-.method public abstract a()Luxe;
-.end method
-
-.method public abstract b()I
-.end method
-
-.method public c(Z)V
+.method public final onCancel(Landroid/content/DialogInterface;)V
     .locals 0
 
+    iget-object p0, p0, La85;->b:Landroid/content/DialogInterface$OnCancelListener;
+
+    if-eqz p0, :cond_0
+
+    invoke-interface {p0, p1}, Landroid/content/DialogInterface$OnCancelListener;->onCancel(Landroid/content/DialogInterface;)V
+
+    :cond_0
     return-void
 .end method
 
-.method public abstract d(I)Lfz5;
-.end method
+.method public final onCreateDialog(Landroid/os/Bundle;)Landroid/app/Dialog;
+    .locals 1
 
-.method public abstract e()V
-.end method
+    iget-object p1, p0, La85;->a:Landroid/app/Dialog;
 
-.method public abstract f(I)I
-.end method
+    if-nez p1, :cond_1
 
-.method public abstract g(JLjava/util/List;)I
-.end method
+    const/4 p1, 0x0
 
-.method public abstract h()V
-.end method
+    invoke-virtual {p0, p1}, Landroid/app/DialogFragment;->setShowsDialog(Z)V
 
-.method public abstract i()I
-.end method
+    iget-object p1, p0, La85;->c:Landroid/app/AlertDialog;
 
-.method public abstract j()Lfz5;
-.end method
+    if-nez p1, :cond_0
 
-.method public abstract k()I
-.end method
+    new-instance p1, Landroid/app/AlertDialog$Builder;
 
-.method public abstract l(F)V
-.end method
+    invoke-virtual {p0}, Landroid/app/Fragment;->getActivity()Landroid/app/Activity;
 
-.method public abstract length()I
-.end method
+    move-result-object v0
 
-.method public abstract m()Ljava/lang/Object;
-.end method
+    invoke-static {v0}, Ljk7;->t(Ljava/lang/Object;)V
 
-.method public n()V
-    .locals 0
+    invoke-direct {p1, v0}, Landroid/app/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
 
-    return-void
-.end method
+    invoke-virtual {p1}, Landroid/app/AlertDialog$Builder;->create()Landroid/app/AlertDialog;
 
-.method public o()V
-    .locals 0
+    move-result-object p1
 
-    return-void
-.end method
+    iput-object p1, p0, La85;->c:Landroid/app/AlertDialog;
 
-.method public abstract p(I)I
-.end method
+    :cond_0
+    iget-object p0, p0, La85;->c:Landroid/app/AlertDialog;
 
-.method public abstract q(IJ)Z
-.end method
+    return-object p0
 
-.method public abstract r(JJJLjava/util/List;[Ly68;)V
-.end method
-
-.method public abstract s(Lfz5;)I
-.end method
-
-.method public t(JLc03;Ljava/util/List;)Z
-    .locals 0
-
-    const/4 p0, 0x0
-
-    return p0
-.end method
-
-.method public abstract u(IJ)Z
+    :cond_1
+    return-object p1
 .end method

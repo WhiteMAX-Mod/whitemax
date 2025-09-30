@@ -1,5 +1,5 @@
 .class final Landroidx/fragment/app/FragmentManagerViewModel;
-.super Lkof;
+.super Ly7g;
 .source "SourceFile"
 
 
@@ -37,7 +37,7 @@
 .method public constructor <init>(Z)V
     .locals 1
 
-    invoke-direct {p0}, Lkof;-><init>()V
+    invoke-direct {p0}, Ly7g;-><init>()V
 
     new-instance v0, Ljava/util/HashMap;
 
@@ -75,7 +75,7 @@
 
     const/4 v0, 0x3
 
-    invoke-static {v0}, Landroidx/fragment/app/c;->L(I)Z
+    invoke-static {v0}, Landroidx/fragment/app/c;->K(I)Z
 
     move-result v0
 
@@ -120,7 +120,7 @@
 
     const/4 p0, 0x2
 
-    invoke-static {p0}, Landroidx/fragment/app/c;->L(I)Z
+    invoke-static {p0}, Landroidx/fragment/app/c;->K(I)Z
 
     move-result p0
 
@@ -259,11 +259,11 @@
 
     move-result-object p2
 
-    check-cast p2, Lrof;
+    check-cast p2, Lf8g;
 
     if-eqz p2, :cond_2
 
-    invoke-virtual {p2}, Lrof;->a()V
+    invoke-virtual {p2}, Lf8g;->a()V
 
     invoke-virtual {p0, p1}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -293,7 +293,7 @@
 
     const/4 p0, 0x2
 
-    invoke-static {p0}, Landroidx/fragment/app/c;->L(I)Z
+    invoke-static {p0}, Landroidx/fragment/app/c;->K(I)Z
 
     move-result p0
 

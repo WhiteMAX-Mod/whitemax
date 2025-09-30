@@ -1,282 +1,82 @@
 .class public final Lso7;
-.super Lip7;
+.super Lrj0;
 .source "SourceFile"
 
 
 # instance fields
-.field public final synthetic c:I
+.field public h:I
 
-.field public final d:Ljava/lang/Object;
+.field public i:I
 
+.field public j:Z
 
-# direct methods
-.method static synthetic constructor <clinit>()V
-    .locals 0
-
-    return-void
-.end method
-
-.method public synthetic constructor <init>(Ljava/util/concurrent/Executor;Lb9g;Ljava/lang/Object;I)V
-    .locals 0
-
-    iput p4, p0, Lso7;->c:I
-
-    invoke-direct {p0, p1, p2}, Lip7;-><init>(Ljava/util/concurrent/Executor;Lb9g;)V
-
-    iput-object p3, p0, Lso7;->d:Ljava/lang/Object;
-
-    return-void
-.end method
+.field public k:I
 
 
 # virtual methods
-.method public final d(Lvv6;)La05;
-    .locals 6
+.method public final a()V
+    .locals 1
 
-    iget v0, p0, Lso7;->c:I
+    invoke-super {p0}, Lrj0;->a()V
 
-    packed-switch v0, :pswitch_data_0
+    iget v0, p0, Lso7;->k:I
 
-    iget-object v0, p0, Lso7;->d:Ljava/lang/Object;
+    if-ltz v0, :cond_4
 
-    check-cast v0, Landroid/content/res/Resources;
+    iget v0, p0, Lso7;->h:I
 
-    iget-object v1, p1, Lvv6;->b:Landroid/net/Uri;
+    if-nez v0, :cond_3
 
-    invoke-virtual {v1}, Landroid/net/Uri;->getPath()Ljava/lang/String;
+    iget v0, p0, Lrj0;->b:I
 
-    move-result-object v1
+    if-lez v0, :cond_1
 
-    const-string v2, "Required value was null."
+    iget v0, p0, Lrj0;->g:I
 
-    if-eqz v1, :cond_3
-
-    const/4 v3, 0x1
-
-    invoke-virtual {v1, v3}, Ljava/lang/String;->substring(I)Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {v1}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
-
-    move-result v1
-
-    invoke-virtual {v0, v1}, Landroid/content/res/Resources;->openRawResource(I)Ljava/io/InputStream;
-
-    move-result-object v1
-
-    const/4 v4, 0x0
-
-    :try_start_0
-    iget-object p1, p1, Lvv6;->b:Landroid/net/Uri;
-
-    invoke-virtual {p1}, Landroid/net/Uri;->getPath()Ljava/lang/String;
-
-    move-result-object p1
-
-    if-eqz p1, :cond_0
-
-    invoke-virtual {p1, v3}, Ljava/lang/String;->substring(I)Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-static {p1}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
-
-    move-result p1
-
-    invoke-virtual {v0, p1}, Landroid/content/res/Resources;->openRawResourceFd(I)Landroid/content/res/AssetFileDescriptor;
-
-    move-result-object v4
-
-    invoke-virtual {v4}, Landroid/content/res/AssetFileDescriptor;->getLength()J
-
-    move-result-wide v2
-    :try_end_0
-    .catch Landroid/content/res/Resources$NotFoundException; {:try_start_0 .. :try_end_0} :catch_1
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    long-to-int p1, v2
-
-    :try_start_1
-    invoke-virtual {v4}, Landroid/content/res/AssetFileDescriptor;->close()V
-    :try_end_1
-    .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_3
-
-    goto :goto_1
-
-    :catchall_0
-    move-exception p0
+    if-eqz v0, :cond_0
 
     goto :goto_0
 
     :cond_0
-    :try_start_2
-    new-instance p1, Ljava/lang/IllegalStateException;
+    new-instance p0, Ljava/lang/IllegalArgumentException;
 
-    invoke-direct {p1, v2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    const-string v0, "Rounded corners without gap are not supported in contiguous indeterminate animation."
 
-    throw p1
-    :try_end_2
-    .catch Landroid/content/res/Resources$NotFoundException; {:try_start_2 .. :try_end_2} :catch_1
-    .catchall {:try_start_2 .. :try_end_2} :catchall_0
+    invoke-direct {p0, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
-    :goto_0
-    if-eqz v4, :cond_1
-
-    :try_start_3
-    invoke-virtual {v4}, Landroid/content/res/AssetFileDescriptor;->close()V
-    :try_end_3
-    .catch Ljava/io/IOException; {:try_start_3 .. :try_end_3} :catch_0
-
-    :catch_0
-    :cond_1
     throw p0
 
-    :catch_1
-    if-eqz v4, :cond_2
+    :cond_1
+    :goto_0
+    iget-object p0, p0, Lrj0;->c:[I
 
-    :try_start_4
-    invoke-virtual {v4}, Landroid/content/res/AssetFileDescriptor;->close()V
-    :try_end_4
-    .catch Ljava/io/IOException; {:try_start_4 .. :try_end_4} :catch_2
+    array-length p0, p0
 
-    :catch_2
+    const/4 v0, 0x3
+
+    if-lt p0, v0, :cond_2
+
+    goto :goto_1
+
     :cond_2
-    const/4 p1, -0x1
+    new-instance p0, Ljava/lang/IllegalArgumentException;
 
-    :catch_3
-    :goto_1
-    invoke-virtual {p0, v1, p1}, Lip7;->c(Ljava/io/InputStream;I)La05;
+    const-string v0, "Contiguous indeterminate animation must be used with 3 or more indicator colors."
 
-    move-result-object p0
+    invoke-direct {p0, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
-    return-object p0
+    throw p0
 
     :cond_3
-    new-instance p0, Ljava/lang/IllegalStateException;
+    :goto_1
+    return-void
 
-    invoke-direct {p0, v2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw p0
-
-    :pswitch_0
-    iget-object v0, p0, Lso7;->d:Ljava/lang/Object;
-
-    check-cast v0, Landroid/content/res/AssetManager;
-
-    iget-object v1, p1, Lvv6;->b:Landroid/net/Uri;
-
-    invoke-virtual {v1}, Landroid/net/Uri;->getPath()Ljava/lang/String;
-
-    move-result-object v1
-
-    const/4 v2, 0x1
-
-    invoke-virtual {v1, v2}, Ljava/lang/String;->substring(I)Ljava/lang/String;
-
-    move-result-object v1
-
-    const/4 v3, 0x2
-
-    invoke-virtual {v0, v1, v3}, Landroid/content/res/AssetManager;->open(Ljava/lang/String;I)Ljava/io/InputStream;
-
-    move-result-object v1
-
-    const/4 v3, 0x0
-
-    :try_start_5
-    iget-object p1, p1, Lvv6;->b:Landroid/net/Uri;
-
-    invoke-virtual {p1}, Landroid/net/Uri;->getPath()Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-virtual {p1, v2}, Ljava/lang/String;->substring(I)Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-virtual {v0, p1}, Landroid/content/res/AssetManager;->openFd(Ljava/lang/String;)Landroid/content/res/AssetFileDescriptor;
-
-    move-result-object v3
-
-    invoke-virtual {v3}, Landroid/content/res/AssetFileDescriptor;->getLength()J
-
-    move-result-wide v4
-    :try_end_5
-    .catch Ljava/io/IOException; {:try_start_5 .. :try_end_5} :catch_5
-    .catchall {:try_start_5 .. :try_end_5} :catchall_1
-
-    long-to-int p1, v4
-
-    :try_start_6
-    invoke-virtual {v3}, Landroid/content/res/AssetFileDescriptor;->close()V
-    :try_end_6
-    .catch Ljava/io/IOException; {:try_start_6 .. :try_end_6} :catch_7
-
-    goto :goto_2
-
-    :catchall_1
-    move-exception p0
-
-    if-eqz v3, :cond_4
-
-    :try_start_7
-    invoke-virtual {v3}, Landroid/content/res/AssetFileDescriptor;->close()V
-    :try_end_7
-    .catch Ljava/io/IOException; {:try_start_7 .. :try_end_7} :catch_4
-
-    :catch_4
     :cond_4
+    new-instance p0, Ljava/lang/IllegalArgumentException;
+
+    const-string v0, "Stop indicator size must be >= 0."
+
+    invoke-direct {p0, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
     throw p0
-
-    :catch_5
-    if-eqz v3, :cond_5
-
-    :try_start_8
-    invoke-virtual {v3}, Landroid/content/res/AssetFileDescriptor;->close()V
-    :try_end_8
-    .catch Ljava/io/IOException; {:try_start_8 .. :try_end_8} :catch_6
-
-    :catch_6
-    :cond_5
-    const/4 p1, -0x1
-
-    :catch_7
-    :goto_2
-    invoke-virtual {p0, v1, p1}, Lip7;->c(Ljava/io/InputStream;I)La05;
-
-    move-result-object p0
-
-    return-object p0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public final e()Ljava/lang/String;
-    .locals 0
-
-    iget p0, p0, Lso7;->c:I
-
-    packed-switch p0, :pswitch_data_0
-
-    const-string p0, "LocalResourceFetchProducer"
-
-    return-object p0
-
-    :pswitch_0
-    const-string p0, "LocalAssetFetchProducer"
-
-    return-object p0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
 .end method

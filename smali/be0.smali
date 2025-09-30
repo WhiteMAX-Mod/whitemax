@@ -2,85 +2,94 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Landroid/os/Parcelable;
-
-
-# static fields
-.field public static final CREATOR:Landroid/os/Parcelable$Creator;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Landroid/os/Parcelable$Creator<",
-            "Lbe0;",
-            ">;"
-        }
-    .end annotation
-.end field
-
 
 # instance fields
-.field public final a:Ljava/util/ArrayList;
+.field public final a:F
 
-.field public final b:Ljava/util/ArrayList;
+.field public final b:F
+
+.field public final c:F
+
+.field public final d:I
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public constructor <init>(Landroid/window/BackEvent;)V
+    .locals 4
 
-    new-instance v0, Lx7;
+    sget-object v0, Lvk;->a:Lvk;
 
-    const/16 v1, 0x8
+    invoke-virtual {v0, p1}, Lvk;->d(Landroid/window/BackEvent;)F
 
-    invoke-direct {v0, v1}, Lx7;-><init>(I)V
+    move-result v1
 
-    sput-object v0, Lbe0;->CREATOR:Landroid/os/Parcelable$Creator;
+    invoke-virtual {v0, p1}, Lvk;->e(Landroid/window/BackEvent;)F
 
-    return-void
-.end method
+    move-result v2
 
-.method public constructor <init>(Landroid/os/Parcel;)V
-    .locals 1
+    invoke-virtual {v0, p1}, Lvk;->b(Landroid/window/BackEvent;)F
+
+    move-result v3
+
+    invoke-virtual {v0, p1}, Lvk;->c(Landroid/window/BackEvent;)I
+
+    move-result p1
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-virtual {p1}, Landroid/os/Parcel;->createStringArrayList()Ljava/util/ArrayList;
+    iput v1, p0, Lbe0;->a:F
 
-    move-result-object v0
+    iput v2, p0, Lbe0;->b:F
 
-    iput-object v0, p0, Lbe0;->a:Ljava/util/ArrayList;
+    iput v3, p0, Lbe0;->c:F
 
-    sget-object v0, Lae0;->CREATOR:Landroid/os/Parcelable$Creator;
-
-    invoke-virtual {p1, v0}, Landroid/os/Parcel;->createTypedArrayList(Landroid/os/Parcelable$Creator;)Ljava/util/ArrayList;
-
-    move-result-object p1
-
-    iput-object p1, p0, Lbe0;->b:Ljava/util/ArrayList;
+    iput p1, p0, Lbe0;->d:I
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final describeContents()I
-    .locals 0
+.method public final toString()Ljava/lang/String;
+    .locals 2
 
-    const/4 p0, 0x0
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    return p0
-.end method
+    const-string v1, "BackEventCompat{touchX="
 
-.method public final writeToParcel(Landroid/os/Parcel;I)V
-    .locals 0
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-object p2, p0, Lbe0;->a:Ljava/util/ArrayList;
+    iget v1, p0, Lbe0;->a:F
 
-    invoke-virtual {p1, p2}, Landroid/os/Parcel;->writeStringList(Ljava/util/List;)V
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
 
-    iget-object p0, p0, Lbe0;->b:Ljava/util/ArrayList;
+    const-string v1, ", touchY="
 
-    invoke-virtual {p1, p0}, Landroid/os/Parcel;->writeTypedList(Ljava/util/List;)V
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    return-void
+    iget v1, p0, Lbe0;->b:F
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
+
+    const-string v1, ", progress="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget v1, p0, Lbe0;->c:F
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(F)Ljava/lang/StringBuilder;
+
+    const-string v1, ", swipeEdge="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget p0, p0, Lbe0;->d:I
+
+    const/16 v1, 0x7d
+
+    invoke-static {v0, p0, v1}, Lmw1;->i(Ljava/lang/StringBuilder;IC)Ljava/lang/String;
+
+    move-result-object p0
+
+    return-object p0
 .end method

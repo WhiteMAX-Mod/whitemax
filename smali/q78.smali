@@ -1,36 +1,17 @@
-.class public abstract Lq78;
+.class public interface abstract Lq78;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# direct methods
-.method public static a(Lc78;Lv1b;)V
-    .locals 1
+# virtual methods
+.method public abstract a()V
+.end method
 
-    iget-object p1, p1, Lv1b;->a:Lt1b;
+.method public abstract b(Lbe0;)V
+.end method
 
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+.method public abstract c(Lbe0;)V
+.end method
 
-    iget-object p1, p1, Lt1b;->a:Landroid/media/metrics/LogSessionId;
-
-    invoke-static {}, Lps3;->f()Landroid/media/metrics/LogSessionId;
-
-    invoke-static {p1}, Lps3;->w(Landroid/media/metrics/LogSessionId;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    iget-object p0, p0, Lc78;->b:Landroid/media/MediaFormat;
-
-    const-string v0, "log-session-id"
-
-    invoke-static {p1}, Lps3;->n(Landroid/media/metrics/LogSessionId;)Ljava/lang/String;
-
-    move-result-object p1
-
-    invoke-virtual {p0, v0, p1}, Landroid/media/MediaFormat;->setString(Ljava/lang/String;Ljava/lang/String;)V
-
-    :cond_0
-    return-void
+.method public abstract d()V
 .end method

@@ -1,145 +1,97 @@
 .class public final Lw49;
-.super Lqde;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Ll66;
+.implements Lz49;
 
 
 # instance fields
-.field public synthetic X:Ljava/lang/Object;
-
-.field public final synthetic Y:Lone/me/messages/list/ui/MessagesListWidget;
+.field public final a:Landroid/net/Uri;
 
 
 # direct methods
-.method public constructor <init>(Lkotlin/coroutines/Continuation;Lone/me/messages/list/ui/MessagesListWidget;)V
+.method public constructor <init>(Landroid/net/Uri;)V
     .locals 0
 
-    iput-object p2, p0, Lw49;->Y:Lone/me/messages/list/ui/MessagesListWidget;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 p2, 0x2
-
-    invoke-direct {p0, p2, p1}, Lqde;-><init>(ILkotlin/coroutines/Continuation;)V
+    iput-object p1, p0, Lw49;->a:Landroid/net/Uri;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 0
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 3
 
-    check-cast p2, Lkotlin/coroutines/Continuation;
+    const/4 v0, 0x1
 
-    invoke-virtual {p0, p1, p2}, Lw49;->m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    if-ne p0, p1, :cond_0
 
-    move-result-object p0
-
-    check-cast p0, Lw49;
-
-    sget-object p1, Le5f;->a:Le5f;
-
-    invoke-virtual {p0, p1}, Lw49;->o(Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-object p1
-.end method
-
-.method public final m(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
-    .locals 1
-
-    new-instance v0, Lw49;
-
-    iget-object p0, p0, Lw49;->Y:Lone/me/messages/list/ui/MessagesListWidget;
-
-    invoke-direct {v0, p2, p0}, Lw49;-><init>(Lkotlin/coroutines/Continuation;Lone/me/messages/list/ui/MessagesListWidget;)V
-
-    iput-object p1, v0, Lw49;->X:Ljava/lang/Object;
-
-    return-object v0
-.end method
-
-.method public final o(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 5
-
-    invoke-static {p1}, Lsgg;->Z(Ljava/lang/Object;)V
-
-    iget-object p1, p0, Lw49;->X:Ljava/lang/Object;
-
-    check-cast p1, Lzuc;
-
-    iget-object p0, p0, Lw49;->Y:Lone/me/messages/list/ui/MessagesListWidget;
-
-    iget-object v0, p0, Lone/me/messages/list/ui/MessagesListWidget;->a:Ljava/lang/String;
-
-    sget-object v1, Lg47;->m:Llr6;
-
-    if-nez v1, :cond_0
-
-    goto :goto_0
+    return v0
 
     :cond_0
-    invoke-interface {v1}, Llr6;->c()Z
+    instance-of v1, p1, Lw49;
 
-    move-result v2
+    const/4 v2, 0x0
 
-    if-eqz v2, :cond_1
+    if-nez v1, :cond_1
 
-    sget-object v2, Lqs7;->o:Lqs7;
-
-    new-instance v3, Ljava/lang/StringBuilder;
-
-    const-string v4, "Got new scrollEvent="
-
-    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v3, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v3
-
-    const/4 v4, 0x0
-
-    invoke-interface {v1, v2, v0, v3, v4}, Llr6;->d(Lqs7;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+    return v2
 
     :cond_1
-    :goto_0
-    iget-boolean p1, p1, Lzuc;->b:Z
+    check-cast p1, Lw49;
 
-    if-eqz p1, :cond_2
+    iget-object p0, p0, Lw49;->a:Landroid/net/Uri;
 
-    invoke-virtual {p0}, Lone/me/messages/list/ui/MessagesListWidget;->v0()Lone/me/messages/list/ui/recycler/MessagesLayoutManager;
+    iget-object p1, p1, Lw49;->a:Landroid/net/Uri;
 
-    move-result-object p1
+    invoke-static {p0, p1}, Lvyg;->b(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    const-string v0, "ScrollEvent"
+    move-result p0
 
-    invoke-virtual {p1, v0}, Lone/me/messages/list/ui/recycler/MessagesLayoutManager;->t1(Ljava/lang/String;)V
+    if-nez p0, :cond_2
 
-    invoke-virtual {p0}, Lone/me/messages/list/ui/MessagesListWidget;->w0()Le79;
-
-    move-result-object p0
-
-    invoke-virtual {p0}, Le79;->b()Z
-
-    goto :goto_1
+    return v2
 
     :cond_2
-    invoke-virtual {p0}, Lone/me/messages/list/ui/MessagesListWidget;->v0()Lone/me/messages/list/ui/recycler/MessagesLayoutManager;
+    return v0
+.end method
 
-    move-result-object p1
+.method public final hashCode()I
+    .locals 0
 
-    new-instance v0, Lt49;
+    iget-object p0, p0, Lw49;->a:Landroid/net/Uri;
 
-    const/4 v1, 0x0
+    invoke-virtual {p0}, Landroid/net/Uri;->hashCode()I
 
-    invoke-direct {v0, p0, v1}, Lt49;-><init>(Lone/me/messages/list/ui/MessagesListWidget;I)V
+    move-result p0
 
-    invoke-virtual {p1, v0}, Lone/me/messages/list/ui/recycler/MessagesLayoutManager;->s1(Lw09;)V
+    return p0
+.end method
 
-    :goto_1
-    sget-object p0, Le5f;->a:Le5f;
+.method public final toString()Ljava/lang/String;
+    .locals 2
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "SendImage(mediaUri="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object p0, p0, Lw49;->a:Landroid/net/Uri;
+
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string p0, ")"
+
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
 
     return-object p0
 .end method

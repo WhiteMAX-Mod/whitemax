@@ -1,385 +1,1020 @@
-.class public abstract Li6a;
-.super Ljava/lang/Object;
+.class public final Li6a;
+.super Ljava/util/concurrent/atomic/AtomicInteger;
 .source "SourceFile"
 
+# interfaces
+.implements Ld8a;
+.implements Loq4;
 
-# static fields
-.field public static final A:I
 
-.field public static final B:I
+# instance fields
+.field public final X:Ltx;
 
-.field public static final C:I
+.field public final Y:Ljava/lang/Object;
 
-.field public static final D:I
+.field public final Z:Ljava/util/concurrent/atomic/AtomicReference;
 
-.field public static final E:I
+.field public final synthetic a:I
 
-.field public static final F:I
+.field public final b:Ld8a;
 
-.field public static final G:I
+.field public final c:Ljava/lang/Object;
 
-.field public static final H:I
+.field public final o:Ljava/util/concurrent/atomic/AtomicInteger;
 
-.field public static final I:I
+.field public r0:Ljava/lang/Object;
 
-.field public static final J:I
-
-.field public static final K:I
-
-.field public static final L:I
-
-.field public static final M:I
-
-.field public static final N:I
-
-.field public static final O:I
-
-.field public static final P:I
-
-.field public static final Q:I
-
-.field public static final R:I
-
-.field public static final S:I
-
-.field public static final T:I
-
-.field public static final U:I
-
-.field public static final V:I
-
-.field public static final W:I
-
-.field public static final X:I
-
-.field public static final Y:I
-
-.field public static final Z:I
-
-.field public static final a:I
-
-.field public static final a0:I
-
-.field public static final b:I
-
-.field public static final b0:I
-
-.field public static final c:I
-
-.field public static final c0:I
-
-.field public static final d:I
-
-.field public static final d0:I
-
-.field public static final e:I
-
-.field public static final e0:I
-
-.field public static final f:I
-
-.field public static final f0:I
-
-.field public static final g:I
-
-.field public static final g0:I
-
-.field public static final h:I
-
-.field public static final h0:I
-
-.field public static final i:I
-
-.field public static final i0:I
-
-.field public static final j:I
-
-.field public static final j0:I
-
-.field public static final k:I
-
-.field public static final l:I
-
-.field public static final m:I
-
-.field public static final n:I
-
-.field public static final o:I
-
-.field public static final p:I
-
-.field public static final q:I
-
-.field public static final r:I
-
-.field public static final s:I
-
-.field public static final t:I
-
-.field public static final u:I
-
-.field public static final v:I
-
-.field public static final w:I
-
-.field public static final x:I
-
-.field public static final y:I
-
-.field public static final z:I
+.field public volatile s0:Z
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public constructor <init>(Ld8a;Lajd;Lt7a;)V
     .locals 1
 
-    sget v0, Lcyb;->cancel:I
+    const/4 v0, 0x2
 
-    sput v0, Li6a;->a:I
+    iput v0, p0, Li6a;->a:I
 
-    sget v0, Lcyb;->channel_close_title:I
+    .line 23
+    invoke-direct {p0}, Ljava/util/concurrent/atomic/AtomicInteger;-><init>()V
 
-    sput v0, Li6a;->b:I
+    .line 24
+    iput-object p1, p0, Li6a;->b:Ld8a;
 
-    sget v0, Lcyb;->channel_delete_for_all:I
+    .line 25
+    iput-object p2, p0, Li6a;->c:Ljava/lang/Object;
 
-    sput v0, Li6a;->c:I
+    .line 26
+    iput-object p3, p0, Li6a;->r0:Ljava/lang/Object;
 
-    sget v0, Lcyb;->channel_delete_title:I
+    .line 27
+    new-instance p1, Ljava/util/concurrent/atomic/AtomicInteger;
 
-    sput v0, Li6a;->d:I
+    invoke-direct {p1}, Ljava/util/concurrent/atomic/AtomicInteger;-><init>()V
 
-    sget v0, Lcyb;->channel_leave_title:I
+    iput-object p1, p0, Li6a;->o:Ljava/util/concurrent/atomic/AtomicInteger;
 
-    sput v0, Li6a;->e:I
+    .line 28
+    new-instance p1, Ltx;
 
-    sget v0, Lcyb;->channel_move_rights_and_leave:I
+    .line 29
+    invoke-direct {p1}, Ljava/util/concurrent/atomic/AtomicReference;-><init>()V
 
-    sput v0, Li6a;->f:I
+    .line 30
+    iput-object p1, p0, Li6a;->X:Ltx;
 
-    sget v0, Lcyb;->chat_clear_history_snackbar_title:I
+    .line 31
+    new-instance p1, Lwv5;
 
-    sput v0, Li6a;->g:I
+    invoke-direct {p1, p0}, Lwv5;-><init>(Li6a;)V
 
-    sget v0, Lcyb;->chat_delete_confirm:I
+    iput-object p1, p0, Li6a;->Y:Ljava/lang/Object;
 
-    sput v0, Li6a;->h:I
+    .line 32
+    new-instance p1, Ljava/util/concurrent/atomic/AtomicReference;
 
-    sget v0, Lcyb;->chat_delete_for_all:I
+    invoke-direct {p1}, Ljava/util/concurrent/atomic/AtomicReference;-><init>()V
 
-    sput v0, Li6a;->i:I
-
-    sget v0, Lcyb;->chat_delete_for_all_title:I
-
-    sput v0, Li6a;->j:I
-
-    sget v0, Lcyb;->chat_delete_for_both:I
-
-    sput v0, Li6a;->k:I
-
-    sget v0, Lcyb;->chat_delete_for_self:I
-
-    sput v0, Li6a;->l:I
-
-    sget v0, Lcyb;->chat_delete_title:I
-
-    sput v0, Li6a;->m:I
-
-    sget v0, Lcyb;->chat_leave_cancel:I
-
-    sput v0, Li6a;->n:I
-
-    sget v0, Lcyb;->chat_leave_title:I
-
-    sput v0, Li6a;->o:I
-
-    sget v0, Lcyb;->chat_list_toolbar_title:I
-
-    sput v0, Li6a;->p:I
-
-    sget v0, Lcyb;->chat_list_toolbar_transition_name:I
-
-    sput v0, Li6a;->q:I
-
-    sget v0, Lcyb;->chat_move_rights_and_leave:I
-
-    sput v0, Li6a;->r:I
-
-    sget v0, Lcyb;->chat_suspend_and_delete_bot_snackbar_title:I
-
-    sput v0, Li6a;->s:I
-
-    sget v0, Lcyb;->chat_suspend_bot_snackbar_title:I
-
-    sput v0, Li6a;->t:I
-
-    sget v0, Lcyb;->chats_list_search_clear_recent_dialog_cancel_text:I
-
-    sput v0, Li6a;->u:I
-
-    sget v0, Lcyb;->chats_list_search_clear_recent_dialog_confirm_text:I
-
-    sput v0, Li6a;->v:I
-
-    sget v0, Lcyb;->chats_list_search_clear_recent_dialog_title:I
-
-    sput v0, Li6a;->w:I
-
-    sget v0, Lcyb;->chats_list_search_contacts_header:I
-
-    sput v0, Li6a;->x:I
-
-    sget v0, Lcyb;->chats_list_search_hint:I
-
-    sput v0, Li6a;->y:I
-
-    sget v0, Lcyb;->chats_list_search_messages_header:I
-
-    sput v0, Li6a;->z:I
-
-    sget v0, Lcyb;->confirmation_block:I
-
-    sput v0, Li6a;->A:I
-
-    sget v0, Lcyb;->confirmation_close_channel:I
-
-    sput v0, Li6a;->B:I
-
-    sget v0, Lcyb;->confirmation_leave_channel:I
-
-    sput v0, Li6a;->C:I
-
-    sget v0, Lcyb;->confirmation_leave_chat:I
-
-    sput v0, Li6a;->D:I
-
-    sget v0, Lcyb;->contact_block_title:I
-
-    sput v0, Li6a;->E:I
-
-    sget v0, Lcyb;->contact_blocked_snackbar_title:I
-
-    sput v0, Li6a;->F:I
-
-    sget v0, Lcyb;->contact_empty_last_seen:I
-
-    sput v0, Li6a;->G:I
-
-    sget v0, Lcyb;->contacts_picker_search_hint:I
-
-    sput v0, Li6a;->H:I
-
-    sget v0, Lcyb;->contacts_picker_send_btn_title:I
-
-    sput v0, Li6a;->I:I
-
-    sget v0, Lcyb;->contacts_picker_toolbar_title:I
-
-    sput v0, Li6a;->J:I
-
-    sget v0, Lcyb;->dialog_delete_title:I
-
-    sput v0, Li6a;->K:I
-
-    sget v0, Lcyb;->notifications_1_day:I
-
-    sput v0, Li6a;->L:I
-
-    sget v0, Lcyb;->notifications_1_hour:I
-
-    sput v0, Li6a;->M:I
-
-    sget v0, Lcyb;->notifications_4_hour:I
-
-    sput v0, Li6a;->N:I
-
-    sget v0, Lcyb;->notifications_disable:I
-
-    sput v0, Li6a;->O:I
-
-    sget v0, Lcyb;->notifications_infinite:I
-
-    sput v0, Li6a;->P:I
-
-    sget v0, Lcyb;->picker_chats_add_button:I
-
-    sput v0, Li6a;->Q:I
-
-    sget v0, Lcyb;->picker_chats_adding_disabled_bot:I
-
-    sput v0, Li6a;->R:I
-
-    sget v0, Lcyb;->picker_chats_adding_disabled_default:I
-
-    sput v0, Li6a;->S:I
-
-    sget v0, Lcyb;->picker_chats_adding_disabled_to_channel_bot:I
-
-    sput v0, Li6a;->T:I
-
-    sget v0, Lcyb;->picker_chats_adding_disabled_to_channel_default:I
-
-    sput v0, Li6a;->U:I
-
-    sget v0, Lcyb;->picker_chats_creating_disabled_bot:I
-
-    sput v0, Li6a;->V:I
-
-    sget v0, Lcyb;->picker_chats_creating_disabled_channel_bot:I
-
-    sput v0, Li6a;->W:I
-
-    sget v0, Lcyb;->picker_chats_creating_disabled_channel_default:I
-
-    sput v0, Li6a;->X:I
-
-    sget v0, Lcyb;->picker_chats_creating_disabled_default:I
-
-    sput v0, Li6a;->Y:I
-
-    sget v0, Lcyb;->picker_chats_forward_disabled_bot:I
-
-    sput v0, Li6a;->Z:I
-
-    sget v0, Lcyb;->picker_chats_forward_disabled_channel:I
-
-    sput v0, Li6a;->a0:I
-
-    sget v0, Lcyb;->picker_chats_forward_disabled_default:I
-
-    sput v0, Li6a;->b0:I
-
-    sget v0, Lcyb;->picker_chats_forward_from_self:I
-
-    sput v0, Li6a;->c0:I
-
-    sget v0, Lcyb;->picker_chats_forward_from_somebody:I
-
-    sput v0, Li6a;->d0:I
-
-    sget v0, Lcyb;->picker_chats_forward_quote_title:I
-
-    sput v0, Li6a;->e0:I
-
-    sget v0, Lcyb;->picker_chats_forward_title:I
-
-    sput v0, Li6a;->f0:I
-
-    sget v0, Lcyb;->picker_chats_list_share_contact:I
-
-    sput v0, Li6a;->g0:I
-
-    sget v0, Lcyb;->picker_chats_list_share_link:I
-
-    sput v0, Li6a;->h0:I
-
-    sget v0, Lcyb;->picker_chats_search_hint:I
-
-    sput v0, Li6a;->i0:I
-
-    sget v0, Lcyb;->picker_chats_toolbar_title:I
-
-    sput v0, Li6a;->j0:I
+    iput-object p1, p0, Li6a;->Z:Ljava/util/concurrent/atomic/AtomicReference;
 
     return-void
+.end method
+
+.method public constructor <init>(Ld8a;Lqc6;I)V
+    .locals 0
+
+    iput p3, p0, Li6a;->a:I
+
+    packed-switch p3, :pswitch_data_0
+
+    .line 1
+    invoke-direct {p0}, Ljava/util/concurrent/atomic/AtomicInteger;-><init>()V
+
+    .line 2
+    iput-object p1, p0, Li6a;->b:Ld8a;
+
+    .line 3
+    iput-object p2, p0, Li6a;->Y:Ljava/lang/Object;
+
+    .line 4
+    new-instance p1, Lxd3;
+
+    .line 5
+    invoke-direct {p1}, Ljava/lang/Object;-><init>()V
+
+    .line 6
+    iput-object p1, p0, Li6a;->c:Ljava/lang/Object;
+
+    .line 7
+    new-instance p1, Ltx;
+
+    .line 8
+    invoke-direct {p1}, Ljava/util/concurrent/atomic/AtomicReference;-><init>()V
+
+    .line 9
+    iput-object p1, p0, Li6a;->X:Ltx;
+
+    .line 10
+    new-instance p1, Ljava/util/concurrent/atomic/AtomicInteger;
+
+    const/4 p2, 0x1
+
+    invoke-direct {p1, p2}, Ljava/util/concurrent/atomic/AtomicInteger;-><init>(I)V
+
+    iput-object p1, p0, Li6a;->o:Ljava/util/concurrent/atomic/AtomicInteger;
+
+    .line 11
+    new-instance p1, Ljava/util/concurrent/atomic/AtomicReference;
+
+    invoke-direct {p1}, Ljava/util/concurrent/atomic/AtomicReference;-><init>()V
+
+    iput-object p1, p0, Li6a;->Z:Ljava/util/concurrent/atomic/AtomicReference;
+
+    return-void
+
+    .line 12
+    :pswitch_0
+    invoke-direct {p0}, Ljava/util/concurrent/atomic/AtomicInteger;-><init>()V
+
+    .line 13
+    iput-object p1, p0, Li6a;->b:Ld8a;
+
+    .line 14
+    iput-object p2, p0, Li6a;->Y:Ljava/lang/Object;
+
+    .line 15
+    new-instance p1, Lxd3;
+
+    .line 16
+    invoke-direct {p1}, Ljava/lang/Object;-><init>()V
+
+    .line 17
+    iput-object p1, p0, Li6a;->c:Ljava/lang/Object;
+
+    .line 18
+    new-instance p1, Ltx;
+
+    .line 19
+    invoke-direct {p1}, Ljava/util/concurrent/atomic/AtomicReference;-><init>()V
+
+    .line 20
+    iput-object p1, p0, Li6a;->X:Ltx;
+
+    .line 21
+    new-instance p1, Ljava/util/concurrent/atomic/AtomicInteger;
+
+    const/4 p2, 0x1
+
+    invoke-direct {p1, p2}, Ljava/util/concurrent/atomic/AtomicInteger;-><init>(I)V
+
+    iput-object p1, p0, Li6a;->o:Ljava/util/concurrent/atomic/AtomicInteger;
+
+    .line 22
+    new-instance p1, Ljava/util/concurrent/atomic/AtomicReference;
+
+    invoke-direct {p1}, Ljava/util/concurrent/atomic/AtomicReference;-><init>()V
+
+    iput-object p1, p0, Li6a;->Z:Ljava/util/concurrent/atomic/AtomicReference;
+
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_0
+    .end packed-switch
+.end method
+
+
+# virtual methods
+.method public a()V
+    .locals 8
+
+    iget v0, p0, Li6a;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    iget-object v0, p0, Li6a;->b:Ld8a;
+
+    iget-object v1, p0, Li6a;->o:Ljava/util/concurrent/atomic/AtomicInteger;
+
+    iget-object v2, p0, Li6a;->Z:Ljava/util/concurrent/atomic/AtomicReference;
+
+    const/4 v3, 0x1
+
+    move v4, v3
+
+    :cond_0
+    :goto_0
+    iget-boolean v5, p0, Li6a;->s0:Z
+
+    if-eqz v5, :cond_1
+
+    iget-object p0, p0, Li6a;->Z:Ljava/util/concurrent/atomic/AtomicReference;
+
+    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
+
+    move-result-object p0
+
+    check-cast p0, Lv8e;
+
+    if-eqz p0, :cond_8
+
+    invoke-virtual {p0}, Lv8e;->clear()V
+
+    goto :goto_3
+
+    :cond_1
+    iget-object v5, p0, Li6a;->X:Ltx;
+
+    invoke-virtual {v5}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
+
+    move-result-object v5
+
+    check-cast v5, Ljava/lang/Throwable;
+
+    if-eqz v5, :cond_3
+
+    iget-object v1, p0, Li6a;->Z:Ljava/util/concurrent/atomic/AtomicReference;
+
+    invoke-virtual {v1}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lv8e;
+
+    if-eqz v1, :cond_2
+
+    invoke-virtual {v1}, Lv8e;->clear()V
+
+    :cond_2
+    iget-object p0, p0, Li6a;->X:Ltx;
+
+    invoke-virtual {p0, v0}, Ltx;->d(Ld8a;)V
+
+    goto :goto_3
+
+    :cond_3
+    invoke-virtual {v1}, Ljava/util/concurrent/atomic/AtomicInteger;->get()I
+
+    move-result v5
+
+    const/4 v6, 0x0
+
+    if-nez v5, :cond_4
+
+    move v5, v3
+
+    goto :goto_1
+
+    :cond_4
+    move v5, v6
+
+    :goto_1
+    invoke-virtual {v2}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
+
+    move-result-object v7
+
+    check-cast v7, Lv8e;
+
+    if-eqz v7, :cond_5
+
+    invoke-virtual {v7}, Lv8e;->poll()Ljava/lang/Object;
+
+    move-result-object v7
+
+    goto :goto_2
+
+    :cond_5
+    const/4 v7, 0x0
+
+    :goto_2
+    if-nez v7, :cond_6
+
+    move v6, v3
+
+    :cond_6
+    if-eqz v5, :cond_7
+
+    if-eqz v6, :cond_7
+
+    iget-object v0, p0, Li6a;->X:Ltx;
+
+    iget-object p0, p0, Li6a;->b:Ld8a;
+
+    invoke-virtual {v0, p0}, Ltx;->d(Ld8a;)V
+
+    goto :goto_3
+
+    :cond_7
+    if-eqz v6, :cond_9
+
+    neg-int v4, v4
+
+    invoke-virtual {p0, v4}, Ljava/util/concurrent/atomic/AtomicInteger;->addAndGet(I)I
+
+    move-result v4
+
+    if-nez v4, :cond_0
+
+    :cond_8
+    :goto_3
+    return-void
+
+    :cond_9
+    invoke-interface {v0, v7}, Ld8a;->s(Ljava/lang/Object;)V
+
+    goto :goto_0
+
+    :pswitch_0
+    iget-object v0, p0, Li6a;->b:Ld8a;
+
+    iget-object v1, p0, Li6a;->o:Ljava/util/concurrent/atomic/AtomicInteger;
+
+    iget-object v2, p0, Li6a;->Z:Ljava/util/concurrent/atomic/AtomicReference;
+
+    const/4 v3, 0x1
+
+    move v4, v3
+
+    :cond_a
+    :goto_4
+    iget-boolean v5, p0, Li6a;->s0:Z
+
+    if-eqz v5, :cond_b
+
+    iget-object p0, p0, Li6a;->Z:Ljava/util/concurrent/atomic/AtomicReference;
+
+    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
+
+    move-result-object p0
+
+    check-cast p0, Lv8e;
+
+    if-eqz p0, :cond_12
+
+    invoke-virtual {p0}, Lv8e;->clear()V
+
+    goto :goto_7
+
+    :cond_b
+    iget-object v5, p0, Li6a;->X:Ltx;
+
+    invoke-virtual {v5}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
+
+    move-result-object v5
+
+    check-cast v5, Ljava/lang/Throwable;
+
+    if-eqz v5, :cond_d
+
+    iget-object v1, p0, Li6a;->Z:Ljava/util/concurrent/atomic/AtomicReference;
+
+    invoke-virtual {v1}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lv8e;
+
+    if-eqz v1, :cond_c
+
+    invoke-virtual {v1}, Lv8e;->clear()V
+
+    :cond_c
+    iget-object p0, p0, Li6a;->X:Ltx;
+
+    invoke-virtual {p0, v0}, Ltx;->d(Ld8a;)V
+
+    goto :goto_7
+
+    :cond_d
+    invoke-virtual {v1}, Ljava/util/concurrent/atomic/AtomicInteger;->get()I
+
+    move-result v5
+
+    const/4 v6, 0x0
+
+    if-nez v5, :cond_e
+
+    move v5, v3
+
+    goto :goto_5
+
+    :cond_e
+    move v5, v6
+
+    :goto_5
+    invoke-virtual {v2}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
+
+    move-result-object v7
+
+    check-cast v7, Lv8e;
+
+    if-eqz v7, :cond_f
+
+    invoke-virtual {v7}, Lv8e;->poll()Ljava/lang/Object;
+
+    move-result-object v7
+
+    goto :goto_6
+
+    :cond_f
+    const/4 v7, 0x0
+
+    :goto_6
+    if-nez v7, :cond_10
+
+    move v6, v3
+
+    :cond_10
+    if-eqz v5, :cond_11
+
+    if-eqz v6, :cond_11
+
+    iget-object p0, p0, Li6a;->X:Ltx;
+
+    invoke-virtual {p0, v0}, Ltx;->d(Ld8a;)V
+
+    goto :goto_7
+
+    :cond_11
+    if-eqz v6, :cond_13
+
+    neg-int v4, v4
+
+    invoke-virtual {p0, v4}, Ljava/util/concurrent/atomic/AtomicInteger;->addAndGet(I)I
+
+    move-result v4
+
+    if-nez v4, :cond_a
+
+    :cond_12
+    :goto_7
+    return-void
+
+    :cond_13
+    invoke-interface {v0, v7}, Ld8a;->s(Ljava/lang/Object;)V
+
+    goto :goto_4
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final b()V
+    .locals 1
+
+    iget v0, p0, Li6a;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    iget-object v0, p0, Li6a;->Y:Ljava/lang/Object;
+
+    check-cast v0, Lwv5;
+
+    invoke-static {v0}, Lsq4;->a(Ljava/util/concurrent/atomic/AtomicReference;)Z
+
+    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicInteger;->getAndIncrement()I
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    iget-object v0, p0, Li6a;->X:Ltx;
+
+    iget-object p0, p0, Li6a;->b:Ld8a;
+
+    invoke-virtual {v0, p0}, Ltx;->d(Ld8a;)V
+
+    :cond_0
+    return-void
+
+    :pswitch_0
+    iget-object v0, p0, Li6a;->o:Ljava/util/concurrent/atomic/AtomicInteger;
+
+    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicInteger;->decrementAndGet()I
+
+    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicInteger;->getAndIncrement()I
+
+    move-result v0
+
+    if-nez v0, :cond_1
+
+    invoke-virtual {p0}, Li6a;->a()V
+
+    :cond_1
+    return-void
+
+    :pswitch_1
+    iget-object v0, p0, Li6a;->o:Ljava/util/concurrent/atomic/AtomicInteger;
+
+    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicInteger;->decrementAndGet()I
+
+    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicInteger;->getAndIncrement()I
+
+    move-result v0
+
+    if-nez v0, :cond_2
+
+    invoke-virtual {p0}, Li6a;->a()V
+
+    :cond_2
+    return-void
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final c(Loq4;)V
+    .locals 1
+
+    iget v0, p0, Li6a;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    iget-object p0, p0, Li6a;->Z:Ljava/util/concurrent/atomic/AtomicReference;
+
+    invoke-static {p0, p1}, Lsq4;->c(Ljava/util/concurrent/atomic/AtomicReference;Loq4;)Z
+
+    return-void
+
+    :pswitch_0
+    iget-object v0, p0, Li6a;->r0:Ljava/lang/Object;
+
+    check-cast v0, Loq4;
+
+    invoke-static {v0, p1}, Lsq4;->h(Loq4;Loq4;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    iput-object p1, p0, Li6a;->r0:Ljava/lang/Object;
+
+    iget-object p1, p0, Li6a;->b:Ld8a;
+
+    invoke-interface {p1, p0}, Ld8a;->c(Loq4;)V
+
+    :cond_0
+    return-void
+
+    :pswitch_1
+    iget-object v0, p0, Li6a;->r0:Ljava/lang/Object;
+
+    check-cast v0, Loq4;
+
+    invoke-static {v0, p1}, Lsq4;->h(Loq4;Loq4;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    iput-object p1, p0, Li6a;->r0:Ljava/lang/Object;
+
+    iget-object p1, p0, Li6a;->b:Ld8a;
+
+    invoke-interface {p1, p0}, Ld8a;->c(Loq4;)V
+
+    :cond_1
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public d()V
+    .locals 1
+
+    iget-object v0, p0, Li6a;->o:Ljava/util/concurrent/atomic/AtomicInteger;
+
+    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicInteger;->getAndIncrement()I
+
+    move-result v0
+
+    if-nez v0, :cond_3
+
+    :cond_0
+    invoke-virtual {p0}, Li6a;->f()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    goto :goto_0
+
+    :cond_1
+    iget-boolean v0, p0, Li6a;->s0:Z
+
+    if-nez v0, :cond_2
+
+    const/4 v0, 0x1
+
+    iput-boolean v0, p0, Li6a;->s0:Z
+
+    iget-object v0, p0, Li6a;->r0:Ljava/lang/Object;
+
+    check-cast v0, Lt7a;
+
+    invoke-interface {v0, p0}, Lt7a;->a(Ld8a;)V
+
+    :cond_2
+    iget-object v0, p0, Li6a;->o:Ljava/util/concurrent/atomic/AtomicInteger;
+
+    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicInteger;->decrementAndGet()I
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    :cond_3
+    :goto_0
+    return-void
+.end method
+
+.method public final e()V
+    .locals 1
+
+    iget v0, p0, Li6a;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    iget-object v0, p0, Li6a;->Z:Ljava/util/concurrent/atomic/AtomicReference;
+
+    invoke-static {v0}, Lsq4;->a(Ljava/util/concurrent/atomic/AtomicReference;)Z
+
+    iget-object p0, p0, Li6a;->Y:Ljava/lang/Object;
+
+    check-cast p0, Lwv5;
+
+    invoke-static {p0}, Lsq4;->a(Ljava/util/concurrent/atomic/AtomicReference;)Z
+
+    return-void
+
+    :pswitch_0
+    const/4 v0, 0x1
+
+    iput-boolean v0, p0, Li6a;->s0:Z
+
+    iget-object v0, p0, Li6a;->r0:Ljava/lang/Object;
+
+    check-cast v0, Loq4;
+
+    invoke-interface {v0}, Loq4;->e()V
+
+    iget-object v0, p0, Li6a;->c:Ljava/lang/Object;
+
+    check-cast v0, Lxd3;
+
+    invoke-virtual {v0}, Lxd3;->e()V
+
+    iget-object p0, p0, Li6a;->X:Ltx;
+
+    invoke-virtual {p0}, Ltx;->b()V
+
+    return-void
+
+    :pswitch_1
+    const/4 v0, 0x1
+
+    iput-boolean v0, p0, Li6a;->s0:Z
+
+    iget-object v0, p0, Li6a;->r0:Ljava/lang/Object;
+
+    check-cast v0, Loq4;
+
+    invoke-interface {v0}, Loq4;->e()V
+
+    iget-object v0, p0, Li6a;->c:Ljava/lang/Object;
+
+    check-cast v0, Lxd3;
+
+    invoke-virtual {v0}, Lxd3;->e()V
+
+    iget-object p0, p0, Li6a;->X:Ltx;
+
+    invoke-virtual {p0}, Ltx;->b()V
+
+    return-void
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final f()Z
+    .locals 1
+
+    iget v0, p0, Li6a;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    iget-object p0, p0, Li6a;->Z:Ljava/util/concurrent/atomic/AtomicReference;
+
+    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
+
+    move-result-object p0
+
+    check-cast p0, Loq4;
+
+    invoke-static {p0}, Lsq4;->b(Loq4;)Z
+
+    move-result p0
+
+    return p0
+
+    :pswitch_0
+    iget-boolean p0, p0, Li6a;->s0:Z
+
+    return p0
+
+    :pswitch_1
+    iget-boolean p0, p0, Li6a;->s0:Z
+
+    return p0
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final onError(Ljava/lang/Throwable;)V
+    .locals 2
+
+    iget v0, p0, Li6a;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    iget-object v0, p0, Li6a;->Z:Ljava/util/concurrent/atomic/AtomicReference;
+
+    const/4 v1, 0x0
+
+    invoke-static {v0, v1}, Lsq4;->c(Ljava/util/concurrent/atomic/AtomicReference;Loq4;)Z
+
+    const/4 v0, 0x0
+
+    iput-boolean v0, p0, Li6a;->s0:Z
+
+    iget-object p0, p0, Li6a;->c:Ljava/lang/Object;
+
+    check-cast p0, Lajd;
+
+    invoke-virtual {p0, p1}, Lajd;->s(Ljava/lang/Object;)V
+
+    return-void
+
+    :pswitch_0
+    iget-object v0, p0, Li6a;->o:Ljava/util/concurrent/atomic/AtomicInteger;
+
+    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicInteger;->decrementAndGet()I
+
+    iget-object v0, p0, Li6a;->X:Ltx;
+
+    invoke-virtual {v0, p1}, Ltx;->a(Ljava/lang/Throwable;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_0
+
+    iget-object p1, p0, Li6a;->c:Ljava/lang/Object;
+
+    check-cast p1, Lxd3;
+
+    invoke-virtual {p1}, Lxd3;->e()V
+
+    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicInteger;->getAndIncrement()I
+
+    move-result p1
+
+    if-nez p1, :cond_0
+
+    invoke-virtual {p0}, Li6a;->a()V
+
+    :cond_0
+    return-void
+
+    :pswitch_1
+    iget-object v0, p0, Li6a;->o:Ljava/util/concurrent/atomic/AtomicInteger;
+
+    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicInteger;->decrementAndGet()I
+
+    iget-object v0, p0, Li6a;->X:Ltx;
+
+    invoke-virtual {v0, p1}, Ltx;->a(Ljava/lang/Throwable;)Z
+
+    move-result p1
+
+    if-eqz p1, :cond_1
+
+    iget-object p1, p0, Li6a;->c:Ljava/lang/Object;
+
+    check-cast p1, Lxd3;
+
+    invoke-virtual {p1}, Lxd3;->e()V
+
+    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicInteger;->getAndIncrement()I
+
+    move-result p1
+
+    if-nez p1, :cond_1
+
+    invoke-virtual {p0}, Li6a;->a()V
+
+    :cond_1
+    return-void
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final s(Ljava/lang/Object;)V
+    .locals 4
+
+    iget v0, p0, Li6a;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    iget-object v0, p0, Li6a;->b:Ld8a;
+
+    iget-object v1, p0, Li6a;->X:Ltx;
+
+    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicInteger;->get()I
+
+    move-result v2
+
+    if-nez v2, :cond_0
+
+    const/4 v2, 0x0
+
+    const/4 v3, 0x1
+
+    invoke-virtual {p0, v2, v3}, Ljava/util/concurrent/atomic/AtomicInteger;->compareAndSet(II)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_0
+
+    invoke-interface {v0, p1}, Ld8a;->s(Ljava/lang/Object;)V
+
+    invoke-virtual {p0}, Ljava/util/concurrent/atomic/AtomicInteger;->decrementAndGet()I
+
+    move-result p0
+
+    if-eqz p0, :cond_0
+
+    invoke-virtual {v1, v0}, Ltx;->d(Ld8a;)V
+
+    :cond_0
+    return-void
+
+    :pswitch_0
+    :try_start_0
+    iget-object v0, p0, Li6a;->Y:Ljava/lang/Object;
+
+    check-cast v0, Lqc6;
+
+    invoke-interface {v0, p1}, Lqc6;->apply(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    const-string v0, "The mapper returned a null SingleSource"
+
+    invoke-static {p1, v0}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
+
+    check-cast p1, Lk2e;
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    iget-object v0, p0, Li6a;->o:Ljava/util/concurrent/atomic/AtomicInteger;
+
+    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicInteger;->getAndIncrement()I
+
+    new-instance v0, Ll5a;
+
+    const/4 v1, 0x2
+
+    invoke-direct {v0, p0, v1}, Ll5a;-><init>(Ljava/util/concurrent/atomic/AtomicInteger;I)V
+
+    iget-boolean v1, p0, Li6a;->s0:Z
+
+    if-nez v1, :cond_1
+
+    iget-object p0, p0, Li6a;->c:Ljava/lang/Object;
+
+    check-cast p0, Lxd3;
+
+    invoke-virtual {p0, v0}, Lxd3;->a(Loq4;)Z
+
+    move-result p0
+
+    if-eqz p0, :cond_1
+
+    invoke-virtual {p1, v0}, Lk2e;->k(Le3e;)V
+
+    goto :goto_0
+
+    :catchall_0
+    move-exception p1
+
+    invoke-static {p1}, Lzyd;->F(Ljava/lang/Throwable;)V
+
+    iget-object v0, p0, Li6a;->r0:Ljava/lang/Object;
+
+    check-cast v0, Loq4;
+
+    invoke-interface {v0}, Loq4;->e()V
+
+    invoke-virtual {p0, p1}, Li6a;->onError(Ljava/lang/Throwable;)V
+
+    :cond_1
+    :goto_0
+    return-void
+
+    :pswitch_1
+    :try_start_1
+    iget-object v0, p0, Li6a;->Y:Ljava/lang/Object;
+
+    check-cast v0, Lqc6;
+
+    invoke-interface {v0, p1}, Lqc6;->apply(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    const-string v0, "The mapper returned a null MaybeSource"
+
+    invoke-static {p1, v0}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
+
+    check-cast p1, Ly98;
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_1
+
+    iget-object v0, p0, Li6a;->o:Ljava/util/concurrent/atomic/AtomicInteger;
+
+    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicInteger;->getAndIncrement()I
+
+    new-instance v0, Le98;
+
+    invoke-direct {v0, p0}, Le98;-><init>(Li6a;)V
+
+    iget-boolean v1, p0, Li6a;->s0:Z
+
+    if-nez v1, :cond_2
+
+    iget-object p0, p0, Li6a;->c:Ljava/lang/Object;
+
+    check-cast p0, Lxd3;
+
+    invoke-virtual {p0, v0}, Lxd3;->a(Loq4;)Z
+
+    move-result p0
+
+    if-eqz p0, :cond_2
+
+    invoke-interface {p1, v0}, Ly98;->a(Lt98;)V
+
+    goto :goto_1
+
+    :catchall_1
+    move-exception p1
+
+    invoke-static {p1}, Lzyd;->F(Ljava/lang/Throwable;)V
+
+    iget-object v0, p0, Li6a;->r0:Ljava/lang/Object;
+
+    check-cast v0, Loq4;
+
+    invoke-interface {v0}, Loq4;->e()V
+
+    invoke-virtual {p0, p1}, Li6a;->onError(Ljava/lang/Throwable;)V
+
+    :cond_2
+    :goto_1
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
 .end method

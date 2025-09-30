@@ -1,142 +1,85 @@
-.class public final Lz04;
-.super Landroid/database/DataSetObserver;
+.class public final enum Lz04;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
 
-# instance fields
-.field public final synthetic a:I
+# static fields
+.field public static final enum a:Lz04;
 
-.field public final synthetic b:Ljava/lang/Object;
+.field public static final enum b:Lz04;
+
+.field public static final enum c:Lz04;
+
+.field public static final synthetic o:[Lz04;
 
 
 # direct methods
-.method public synthetic constructor <init>(ILjava/lang/Object;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 5
 
-    iput p1, p0, Lz04;->a:I
+    new-instance v0, Lz04;
 
-    iput-object p2, p0, Lz04;->b:Ljava/lang/Object;
+    const-string v1, "COROUTINE_SUSPENDED"
 
-    invoke-direct {p0}, Landroid/database/DataSetObserver;-><init>()V
+    const/4 v2, 0x0
+
+    invoke-direct {v0, v1, v2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Lz04;->a:Lz04;
+
+    new-instance v1, Lz04;
+
+    const-string v2, "UNDECIDED"
+
+    const/4 v3, 0x1
+
+    invoke-direct {v1, v2, v3}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v1, Lz04;->b:Lz04;
+
+    new-instance v2, Lz04;
+
+    const-string v3, "RESUMED"
+
+    const/4 v4, 0x2
+
+    invoke-direct {v2, v3, v4}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    sput-object v2, Lz04;->c:Lz04;
+
+    filled-new-array {v0, v1, v2}, [Lz04;
+
+    move-result-object v0
+
+    sput-object v0, Lz04;->o:[Lz04;
 
     return-void
 .end method
 
-
-# virtual methods
-.method public final onChanged()V
+.method public static valueOf(Ljava/lang/String;)Lz04;
     .locals 1
 
-    iget v0, p0, Lz04;->a:I
+    const-class v0, Lz04;
 
-    packed-switch v0, :pswitch_data_0
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
 
-    iget-object p0, p0, Lz04;->b:Ljava/lang/Object;
+    move-result-object p0
 
-    check-cast p0, Landroidx/viewpager/widget/ViewPager;
+    check-cast p0, Lz04;
 
-    invoke-virtual {p0}, Landroidx/viewpager/widget/ViewPager;->f()V
-
-    return-void
-
-    :pswitch_0
-    iget-object p0, p0, Lz04;->b:Ljava/lang/Object;
-
-    check-cast p0, Lcom/google/android/material/tabs/TabLayout;
-
-    invoke-virtual {p0}, Lcom/google/android/material/tabs/TabLayout;->j()V
-
-    return-void
-
-    :pswitch_1
-    iget-object p0, p0, Lz04;->b:Ljava/lang/Object;
-
-    check-cast p0, Lwl7;
-
-    iget-object v0, p0, Lwl7;->G0:Lbn;
-
-    invoke-virtual {v0}, Landroid/widget/PopupWindow;->isShowing()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    invoke-virtual {p0}, Lwl7;->g()V
-
-    :cond_0
-    return-void
-
-    :pswitch_2
-    iget-object p0, p0, Lz04;->b:Ljava/lang/Object;
-
-    check-cast p0, Lcbe;
-
-    const/4 v0, 0x1
-
-    iput-boolean v0, p0, La14;->a:Z
-
-    invoke-virtual {p0}, Lcbe;->notifyDataSetChanged()V
-
-    return-void
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    return-object p0
 .end method
 
-.method public final onInvalidated()V
+.method public static values()[Lz04;
     .locals 1
 
-    iget v0, p0, Lz04;->a:I
+    sget-object v0, Lz04;->o:[Lz04;
 
-    packed-switch v0, :pswitch_data_0
+    invoke-virtual {v0}, Ljava/lang/Object;->clone()Ljava/lang/Object;
 
-    iget-object p0, p0, Lz04;->b:Ljava/lang/Object;
+    move-result-object v0
 
-    check-cast p0, Landroidx/viewpager/widget/ViewPager;
+    check-cast v0, [Lz04;
 
-    invoke-virtual {p0}, Landroidx/viewpager/widget/ViewPager;->f()V
-
-    return-void
-
-    :pswitch_0
-    iget-object p0, p0, Lz04;->b:Ljava/lang/Object;
-
-    check-cast p0, Lcom/google/android/material/tabs/TabLayout;
-
-    invoke-virtual {p0}, Lcom/google/android/material/tabs/TabLayout;->j()V
-
-    return-void
-
-    :pswitch_1
-    iget-object p0, p0, Lz04;->b:Ljava/lang/Object;
-
-    check-cast p0, Lwl7;
-
-    invoke-virtual {p0}, Lwl7;->dismiss()V
-
-    return-void
-
-    :pswitch_2
-    iget-object p0, p0, Lz04;->b:Ljava/lang/Object;
-
-    check-cast p0, Lcbe;
-
-    const/4 v0, 0x0
-
-    iput-boolean v0, p0, La14;->a:Z
-
-    invoke-virtual {p0}, Lcbe;->notifyDataSetInvalidated()V
-
-    return-void
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_2
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    return-object v0
 .end method

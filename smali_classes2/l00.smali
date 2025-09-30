@@ -1,72 +1,211 @@
-.class public final synthetic Ll00;
+.class public final Ll00;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ljj3;
-.implements Lx28;
-
 
 # instance fields
-.field public final synthetic a:I
+.field public a:J
 
-.field public final synthetic b:Ln00;
+.field public b:J
 
-.field public final synthetic c:Lw10;
+.field public c:Ljava/lang/Object;
 
+.field public d:Ljava/lang/Object;
 
-# direct methods
-.method public synthetic constructor <init>(Ln00;Lw10;I)V
-    .locals 0
-
-    iput p3, p0, Ll00;->a:I
-
-    iput-object p1, p0, Ll00;->b:Ln00;
-
-    iput-object p2, p0, Ll00;->c:Lw10;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    return-void
-.end method
+.field public e:Ljava/lang/Object;
 
 
 # virtual methods
-.method public accept(Ljava/lang/Object;)V
-    .locals 1
+.method public a()V
+    .locals 8
 
-    iget v0, p0, Ll00;->a:I
+    iget-object v0, p0, Ll00;->e:Ljava/lang/Object;
 
-    check-cast p1, Landroid/net/Uri;
+    check-cast v0, Lpa5;
+
+    iget-object v1, v0, Lpa5;->a:Ljava/util/concurrent/ExecutorService;
+
+    invoke-interface {v1}, Ljava/util/concurrent/ExecutorService;->isTerminated()Z
+
+    move-result v2
+
+    if-nez v2, :cond_6
+
+    invoke-interface {v1}, Ljava/util/concurrent/ExecutorService;->isShutdown()Z
+
+    move-result v1
+
+    if-nez v1, :cond_6
+
+    iget-object v1, p0, Ll00;->c:Ljava/lang/Object;
+
+    check-cast v1, Ljava/util/concurrent/atomic/AtomicBoolean;
+
+    const/4 v2, 0x1
+
+    const/4 v3, 0x0
+
+    invoke-virtual {v1, v2, v3}, Ljava/util/concurrent/atomic/AtomicBoolean;->compareAndSet(ZZ)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    invoke-virtual {v0}, Lpa5;->g()J
+
+    move-result-wide v1
+
+    iget-wide v3, p0, Ll00;->a:J
+
+    invoke-static {v1, v2, v3, v4}, Lpa5;->c(JJ)J
+
+    move-result-wide v1
+
+    iput-wide v1, p0, Ll00;->b:J
+
+    :try_start_0
+    iget-object p0, p0, Ll00;->d:Ljava/lang/Object;
+
+    check-cast p0, Lje4;
+
+    invoke-virtual {v0, p0}, Lpa5;->execute(Ljava/lang/Runnable;)V
+    :try_end_0
+    .catch Ljava/util/concurrent/RejectedExecutionException; {:try_start_0 .. :try_end_0} :catch_0
+
+    return-void
+
+    :cond_0
+    invoke-virtual {v0}, Lpa5;->g()J
+
+    move-result-wide v4
+
+    iget-wide v6, p0, Ll00;->b:J
+
+    invoke-static {v4, v5, v6, v7}, Lfy4;->c(JJ)I
+
+    move-result v1
+
+    if-lez v1, :cond_6
+
+    sget-wide v4, Lfy4;->b:J
+
+    iput-wide v4, p0, Ll00;->b:J
+
+    iget-object p0, v0, Lpa5;->b:Ljha;
+
+    iget-object v1, v0, Lpa5;->Y:Lm28;
+
+    iget-object v0, v0, Lpa5;->Z:Ljava/util/concurrent/locks/ReentrantReadWriteLock;
+
+    invoke-virtual {v0}, Ljava/util/concurrent/locks/ReentrantReadWriteLock;->readLock()Ljava/util/concurrent/locks/ReentrantReadWriteLock$ReadLock;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/util/concurrent/locks/ReentrantReadWriteLock$ReadLock;->lock()V
+
+    :try_start_1
+    iget v4, v1, Lm28;->f:I
+
+    if-nez v4, :cond_1
+
+    goto :goto_0
+
+    :cond_1
+    move v2, v3
+
+    :goto_0
+    if-eqz v2, :cond_2
+
+    sget-object v1, Lp45;->a:Lp45;
+
+    goto :goto_3
+
+    :catchall_0
+    move-exception p0
+
+    goto :goto_5
+
+    :cond_2
+    iget-object v1, v1, Lm28;->d:[Ljava/lang/Object;
+
+    new-instance v2, Ljava/util/ArrayList;
+
+    invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
+
+    array-length v4, v1
+
+    :goto_1
+    if-ge v3, v4, :cond_5
+
+    aget-object v5, v1, v3
+
+    instance-of v6, v5, Lvbg;
+
+    if-eqz v6, :cond_3
+
+    check-cast v5, Lvbg;
+
+    goto :goto_2
+
+    :cond_3
+    const/4 v5, 0x0
+
+    :goto_2
+    if-eqz v5, :cond_4
+
+    invoke-virtual {v2, v5}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    :cond_4
+    add-int/lit8 v3, v3, 0x1
+
+    goto :goto_1
+
+    :cond_5
+    move-object v1, v2
+
+    :goto_3
+    invoke-virtual {v0}, Ljava/util/concurrent/locks/ReentrantReadWriteLock$ReadLock;->unlock()V
+
+    iget v0, p0, Ljha;->a:I
 
     packed-switch v0, :pswitch_data_0
 
-    iget-object v0, p0, Ll00;->b:Ln00;
+    iget-object p0, p0, Ljha;->d:Lkha;
 
-    iget-object v0, v0, Ln00;->d:Lz18;
+    iget-object p0, p0, Lkha;->a:Lln8;
 
-    iget-object p0, p0, Ll00;->c:Lw10;
+    iget-object p0, p0, Lln8;->Y:Ljava/lang/Object;
 
-    iget-object p0, p0, Lw10;->r:Ljava/lang/String;
+    check-cast p0, Lbc6;
 
-    invoke-virtual {v0, p0, p1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {p0, v1}, Lbc6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
-    return-void
+    goto :goto_4
 
     :pswitch_0
-    iget-object v0, p0, Ll00;->b:Ln00;
+    iget-object p0, p0, Ljha;->d:Lkha;
 
-    iget-object v0, v0, Ln00;->d:Lz18;
+    iget-object p0, p0, Lkha;->a:Lln8;
 
-    iget-object p0, p0, Ll00;->c:Lw10;
+    iget-object p0, p0, Lln8;->Y:Ljava/lang/Object;
 
-    iget-object p0, p0, Lw10;->r:Ljava/lang/String;
+    check-cast p0, Lbc6;
 
-    invoke-virtual {v0, p0, p1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {p0, v1}, Lbc6;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
 
+    :goto_4
     return-void
 
-    nop
+    :goto_5
+    invoke-virtual {v0}, Ljava/util/concurrent/locks/ReentrantReadWriteLock$ReadLock;->unlock()V
+
+    throw p0
+
+    :catch_0
+    :cond_6
+    return-void
 
     :pswitch_data_0
     .packed-switch 0x0
@@ -74,112 +213,33 @@
     .end packed-switch
 .end method
 
-.method public b(Lf28;)V
-    .locals 6
+.method public b(Z)Ljrg;
+    .locals 0
 
-    iget-object v0, p0, Ll00;->b:Ln00;
+    if-eqz p1, :cond_0
 
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    iget-object p0, p0, Ll00;->e:Ljava/lang/Object;
 
-    sget-object v1, Ljava/util/Locale;->ENGLISH:Ljava/util/Locale;
+    check-cast p0, Lzte;
 
-    iget-object p0, p0, Ll00;->c:Lw10;
-
-    iget-object p0, p0, Lw10;->r:Ljava/lang/String;
-
-    const-string v1, "preview_"
-
-    const-string v2, "_.png"
-
-    invoke-static {v1, p0, v2}, Lu88;->k(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {p0}, Lzte;->getValue()Ljava/lang/Object;
 
     move-result-object p0
 
-    iget-object v0, v0, Ln00;->c:Lhi5;
+    check-cast p0, Lerg;
 
-    check-cast v0, Lvj5;
-
-    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    invoke-virtual {v0}, Lvj5;->b()Ljava/lang/String;
-
-    move-result-object v0
-
-    const-string v1, "previewVideoCache"
-
-    invoke-static {v0, v1}, Lvj5;->g(Ljava/lang/String;Ljava/lang/String;)Ljava/io/File;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lmna;->g(Ljava/io/File;)Z
-
-    move-result v1
-
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_0
-
-    goto :goto_1
+    return-object p0
 
     :cond_0
-    invoke-virtual {v0}, Ljava/io/File;->listFiles()[Ljava/io/File;
+    iget-object p0, p0, Ll00;->d:Ljava/lang/Object;
 
-    move-result-object v0
+    check-cast p0, Lzte;
 
-    if-eqz v0, :cond_3
+    invoke-virtual {p0}, Lzte;->getValue()Ljava/lang/Object;
 
-    array-length v1, v0
+    move-result-object p0
 
-    if-nez v1, :cond_1
+    check-cast p0, Ldrg;
 
-    goto :goto_1
-
-    :cond_1
-    array-length v1, v0
-
-    const/4 v3, 0x0
-
-    :goto_0
-    if-ge v3, v1, :cond_3
-
-    aget-object v4, v0, v3
-
-    invoke-virtual {v4}, Ljava/io/File;->getName()Ljava/lang/String;
-
-    move-result-object v5
-
-    invoke-static {v5, p0}, Lxja;->a(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
-
-    move-result v5
-
-    if-eqz v5, :cond_2
-
-    move-object v2, v4
-
-    goto :goto_1
-
-    :cond_2
-    add-int/lit8 v3, v3, 0x1
-
-    goto :goto_0
-
-    :cond_3
-    :goto_1
-    invoke-virtual {p1}, Lf28;->g()Z
-
-    move-result p0
-
-    if-nez p0, :cond_5
-
-    if-nez v2, :cond_4
-
-    invoke-virtual {p1}, Lf28;->b()V
-
-    return-void
-
-    :cond_4
-    invoke-virtual {p1, v2}, Lf28;->a(Ljava/lang/Object;)V
-
-    :cond_5
-    return-void
+    return-object p0
 .end method

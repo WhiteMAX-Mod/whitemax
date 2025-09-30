@@ -1,11 +1,13 @@
-.class public final Ldte;
-.super Ljava/lang/Exception;
+.class public interface abstract Ldte;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # virtual methods
-.method public final fillInStackTrace()Ljava/lang/Throwable;
+.method public b0()Z
     .locals 0
 
-    return-object p0
+    const/4 p0, 0x1
+
+    return p0
 .end method

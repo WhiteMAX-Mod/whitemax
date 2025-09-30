@@ -2,938 +2,139 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Ls05;
+
 
 # instance fields
-.field public final A:I
+.field public final a:Landroid/graphics/drawable/Drawable;
 
-.field public final B:I
+.field public final b:Landroid/graphics/Rect;
 
-.field public final C:I
+.field public c:I
 
-.field public final D:I
-
-.field public final E:I
-
-.field public final F:I
-
-.field public final G:I
-
-.field public final H:I
-
-.field public final a:I
-
-.field public final b:I
-
-.field public final c:I
-
-.field public final d:I
-
-.field public final e:I
-
-.field public final f:I
-
-.field public final g:I
-
-.field public final h:I
-
-.field public final i:I
-
-.field public final j:I
-
-.field public final k:I
-
-.field public final l:I
-
-.field public final m:I
-
-.field public final n:I
-
-.field public final o:I
-
-.field public final p:I
-
-.field public final q:I
-
-.field public final r:I
-
-.field public final s:I
-
-.field public final t:I
-
-.field public final u:I
-
-.field public final v:I
-
-.field public final w:I
-
-.field public final x:I
-
-.field public final y:I
-
-.field public final z:I
+.field public d:I
 
 
 # direct methods
-.method public constructor <init>(IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII)V
-    .locals 0
+.method public constructor <init>(Landroid/graphics/drawable/Drawable;)V
+    .locals 1
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput p1, p0, Loe0;->a:I
+    new-instance v0, Landroid/graphics/Rect;
 
-    iput p2, p0, Loe0;->b:I
+    invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
 
-    iput p3, p0, Loe0;->c:I
+    iput-object v0, p0, Loe0;->b:Landroid/graphics/Rect;
 
-    iput p4, p0, Loe0;->d:I
+    iput-object p1, p0, Loe0;->a:Landroid/graphics/drawable/Drawable;
 
-    iput p5, p0, Loe0;->e:I
+    invoke-virtual {p1}, Landroid/graphics/drawable/Drawable;->getIntrinsicWidth()I
 
-    iput p6, p0, Loe0;->f:I
+    move-result v0
 
-    iput p7, p0, Loe0;->g:I
+    iput v0, p0, Loe0;->c:I
 
-    iput p8, p0, Loe0;->h:I
+    invoke-virtual {p1}, Landroid/graphics/drawable/Drawable;->getIntrinsicHeight()I
 
-    iput p9, p0, Loe0;->i:I
+    move-result p1
 
-    iput p10, p0, Loe0;->j:I
+    iput p1, p0, Loe0;->d:I
 
-    iput p11, p0, Loe0;->k:I
+    return-void
+.end method
 
-    iput p12, p0, Loe0;->l:I
+.method public static a(Loe0;IILandroid/graphics/Rect;)V
+    .locals 4
 
-    iput p13, p0, Loe0;->m:I
+    int-to-float v0, p1
 
-    iput p14, p0, Loe0;->n:I
+    iget v1, p0, Loe0;->d:I
 
-    iput p15, p0, Loe0;->o:I
+    int-to-float v2, v1
 
-    move/from16 p1, p16
+    iget p0, p0, Loe0;->c:I
 
-    iput p1, p0, Loe0;->p:I
+    int-to-float v3, p0
 
-    move/from16 p1, p17
+    div-float/2addr v2, v3
 
-    iput p1, p0, Loe0;->q:I
+    mul-float/2addr v2, v0
 
-    move/from16 p1, p18
+    float-to-int v0, v2
 
-    iput p1, p0, Loe0;->r:I
+    if-le v0, p2, :cond_0
 
-    move/from16 p1, p19
+    int-to-float v0, p2
 
-    iput p1, p0, Loe0;->s:I
+    int-to-float p0, p0
 
-    move/from16 p1, p20
+    int-to-float v1, v1
 
-    iput p1, p0, Loe0;->t:I
+    div-float/2addr p0, v1
 
-    move/from16 p1, p21
+    mul-float/2addr p0, v0
 
-    iput p1, p0, Loe0;->u:I
+    float-to-int p0, p0
 
-    move/from16 p1, p22
+    move v0, p2
 
-    iput p1, p0, Loe0;->v:I
+    goto :goto_0
 
-    move/from16 p1, p23
+    :cond_0
+    move p0, p1
 
-    iput p1, p0, Loe0;->w:I
+    :goto_0
+    sub-int/2addr p2, v0
 
-    move/from16 p1, p24
+    int-to-float p2, p2
 
-    iput p1, p0, Loe0;->x:I
+    const/high16 v1, 0x40000000    # 2.0f
 
-    move/from16 p1, p25
+    div-float/2addr p2, v1
 
-    iput p1, p0, Loe0;->y:I
+    float-to-int p2, p2
 
-    move/from16 p1, p26
+    sub-int/2addr p1, p0
 
-    iput p1, p0, Loe0;->z:I
+    int-to-float p1, p1
 
-    move/from16 p1, p27
+    div-float/2addr p1, v1
 
-    iput p1, p0, Loe0;->A:I
+    float-to-int p1, p1
 
-    move/from16 p1, p28
+    add-int/2addr p0, p1
 
-    iput p1, p0, Loe0;->B:I
+    add-int/2addr v0, p2
 
-    move/from16 p1, p29
-
-    iput p1, p0, Loe0;->C:I
-
-    move/from16 p1, p30
-
-    iput p1, p0, Loe0;->D:I
-
-    move/from16 p1, p31
-
-    iput p1, p0, Loe0;->E:I
-
-    move/from16 p1, p32
-
-    iput p1, p0, Loe0;->F:I
-
-    move/from16 p1, p33
-
-    iput p1, p0, Loe0;->G:I
-
-    move/from16 p1, p34
-
-    iput p1, p0, Loe0;->H:I
+    invoke-virtual {p3, p1, p2, p0, v0}, Landroid/graphics/Rect;->set(IIII)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 2
-
-    if-ne p0, p1, :cond_0
-
-    goto/16 :goto_1
-
-    :cond_0
-    instance-of v0, p1, Loe0;
-
-    if-nez v0, :cond_1
-
-    goto/16 :goto_0
-
-    :cond_1
-    check-cast p1, Loe0;
-
-    iget v0, p0, Loe0;->a:I
-
-    iget v1, p1, Loe0;->a:I
-
-    if-eq v0, v1, :cond_2
-
-    goto/16 :goto_0
-
-    :cond_2
-    iget v0, p0, Loe0;->b:I
-
-    iget v1, p1, Loe0;->b:I
-
-    if-eq v0, v1, :cond_3
-
-    goto/16 :goto_0
-
-    :cond_3
-    iget v0, p0, Loe0;->c:I
-
-    iget v1, p1, Loe0;->c:I
-
-    if-eq v0, v1, :cond_4
-
-    goto/16 :goto_0
-
-    :cond_4
-    iget v0, p0, Loe0;->d:I
-
-    iget v1, p1, Loe0;->d:I
-
-    if-eq v0, v1, :cond_5
-
-    goto/16 :goto_0
-
-    :cond_5
-    iget v0, p0, Loe0;->e:I
-
-    iget v1, p1, Loe0;->e:I
-
-    if-eq v0, v1, :cond_6
-
-    goto/16 :goto_0
-
-    :cond_6
-    iget v0, p0, Loe0;->f:I
-
-    iget v1, p1, Loe0;->f:I
-
-    if-eq v0, v1, :cond_7
-
-    goto/16 :goto_0
-
-    :cond_7
-    iget v0, p0, Loe0;->g:I
-
-    iget v1, p1, Loe0;->g:I
-
-    if-eq v0, v1, :cond_8
-
-    goto/16 :goto_0
-
-    :cond_8
-    iget v0, p0, Loe0;->h:I
-
-    iget v1, p1, Loe0;->h:I
-
-    if-eq v0, v1, :cond_9
-
-    goto/16 :goto_0
-
-    :cond_9
-    iget v0, p0, Loe0;->i:I
-
-    iget v1, p1, Loe0;->i:I
-
-    if-eq v0, v1, :cond_a
-
-    goto/16 :goto_0
-
-    :cond_a
-    iget v0, p0, Loe0;->j:I
-
-    iget v1, p1, Loe0;->j:I
-
-    if-eq v0, v1, :cond_b
-
-    goto/16 :goto_0
-
-    :cond_b
-    iget v0, p0, Loe0;->k:I
-
-    iget v1, p1, Loe0;->k:I
-
-    if-eq v0, v1, :cond_c
-
-    goto/16 :goto_0
-
-    :cond_c
-    iget v0, p0, Loe0;->l:I
-
-    iget v1, p1, Loe0;->l:I
-
-    if-eq v0, v1, :cond_d
-
-    goto/16 :goto_0
-
-    :cond_d
-    iget v0, p0, Loe0;->m:I
-
-    iget v1, p1, Loe0;->m:I
-
-    if-eq v0, v1, :cond_e
-
-    goto/16 :goto_0
-
-    :cond_e
-    iget v0, p0, Loe0;->n:I
-
-    iget v1, p1, Loe0;->n:I
-
-    if-eq v0, v1, :cond_f
-
-    goto/16 :goto_0
-
-    :cond_f
-    iget v0, p0, Loe0;->o:I
-
-    iget v1, p1, Loe0;->o:I
-
-    if-eq v0, v1, :cond_10
-
-    goto/16 :goto_0
-
-    :cond_10
-    iget v0, p0, Loe0;->p:I
-
-    iget v1, p1, Loe0;->p:I
-
-    if-eq v0, v1, :cond_11
-
-    goto/16 :goto_0
-
-    :cond_11
-    iget v0, p0, Loe0;->q:I
-
-    iget v1, p1, Loe0;->q:I
-
-    if-eq v0, v1, :cond_12
-
-    goto/16 :goto_0
-
-    :cond_12
-    iget v0, p0, Loe0;->r:I
-
-    iget v1, p1, Loe0;->r:I
-
-    if-eq v0, v1, :cond_13
-
-    goto/16 :goto_0
-
-    :cond_13
-    iget v0, p0, Loe0;->s:I
-
-    iget v1, p1, Loe0;->s:I
-
-    if-eq v0, v1, :cond_14
-
-    goto/16 :goto_0
-
-    :cond_14
-    iget v0, p0, Loe0;->t:I
-
-    iget v1, p1, Loe0;->t:I
-
-    if-eq v0, v1, :cond_15
-
-    goto/16 :goto_0
-
-    :cond_15
-    iget v0, p0, Loe0;->u:I
-
-    iget v1, p1, Loe0;->u:I
-
-    if-eq v0, v1, :cond_16
-
-    goto/16 :goto_0
-
-    :cond_16
-    iget v0, p0, Loe0;->v:I
-
-    iget v1, p1, Loe0;->v:I
-
-    if-eq v0, v1, :cond_17
-
-    goto :goto_0
-
-    :cond_17
-    iget v0, p0, Loe0;->w:I
-
-    iget v1, p1, Loe0;->w:I
-
-    if-eq v0, v1, :cond_18
-
-    goto :goto_0
-
-    :cond_18
-    iget v0, p0, Loe0;->x:I
-
-    iget v1, p1, Loe0;->x:I
-
-    if-eq v0, v1, :cond_19
-
-    goto :goto_0
-
-    :cond_19
-    iget v0, p0, Loe0;->y:I
-
-    iget v1, p1, Loe0;->y:I
-
-    if-eq v0, v1, :cond_1a
-
-    goto :goto_0
-
-    :cond_1a
-    iget v0, p0, Loe0;->z:I
-
-    iget v1, p1, Loe0;->z:I
-
-    if-eq v0, v1, :cond_1b
-
-    goto :goto_0
-
-    :cond_1b
-    iget v0, p0, Loe0;->A:I
-
-    iget v1, p1, Loe0;->A:I
-
-    if-eq v0, v1, :cond_1c
-
-    goto :goto_0
-
-    :cond_1c
-    iget v0, p0, Loe0;->B:I
-
-    iget v1, p1, Loe0;->B:I
-
-    if-eq v0, v1, :cond_1d
-
-    goto :goto_0
-
-    :cond_1d
-    iget v0, p0, Loe0;->C:I
-
-    iget v1, p1, Loe0;->C:I
-
-    if-eq v0, v1, :cond_1e
-
-    goto :goto_0
-
-    :cond_1e
-    iget v0, p0, Loe0;->D:I
-
-    iget v1, p1, Loe0;->D:I
-
-    if-eq v0, v1, :cond_1f
-
-    goto :goto_0
-
-    :cond_1f
-    iget v0, p0, Loe0;->E:I
-
-    iget v1, p1, Loe0;->E:I
-
-    if-eq v0, v1, :cond_20
-
-    goto :goto_0
-
-    :cond_20
-    iget v0, p0, Loe0;->F:I
-
-    iget v1, p1, Loe0;->F:I
-
-    if-eq v0, v1, :cond_21
-
-    goto :goto_0
-
-    :cond_21
-    iget v0, p0, Loe0;->G:I
-
-    iget v1, p1, Loe0;->G:I
-
-    if-eq v0, v1, :cond_22
-
-    goto :goto_0
-
-    :cond_22
-    iget p0, p0, Loe0;->H:I
-
-    iget p1, p1, Loe0;->H:I
-
-    if-eq p0, p1, :cond_23
-
-    :goto_0
-    const/4 p0, 0x0
-
-    return p0
-
-    :cond_23
-    :goto_1
-    const/4 p0, 0x1
-
-    return p0
-.end method
-
-.method public final hashCode()I
+.method public final draw(Landroid/graphics/Canvas;)V
     .locals 3
 
-    iget v0, p0, Loe0;->a:I
-
-    invoke-static {v0}, Ljava/lang/Integer;->hashCode(I)I
+    invoke-virtual {p1}, Landroid/graphics/Canvas;->getWidth()I
 
     move-result v0
 
-    const/16 v1, 0x1f
+    invoke-virtual {p1}, Landroid/graphics/Canvas;->getHeight()I
 
-    mul-int/2addr v0, v1
+    move-result v1
 
-    iget v2, p0, Loe0;->b:I
+    iget-object v2, p0, Loe0;->b:Landroid/graphics/Rect;
 
-    invoke-static {v2, v0, v1}, Lrqc;->e(III)I
+    invoke-static {p0, v0, v1, v2}, Loe0;->a(Loe0;IILandroid/graphics/Rect;)V
 
-    move-result v0
+    iget-object p0, p0, Loe0;->a:Landroid/graphics/drawable/Drawable;
 
-    iget v2, p0, Loe0;->c:I
+    invoke-virtual {p0, v2}, Landroid/graphics/drawable/Drawable;->setBounds(Landroid/graphics/Rect;)V
 
-    invoke-static {v2, v0, v1}, Lrqc;->e(III)I
+    invoke-virtual {p0, p1}, Landroid/graphics/drawable/Drawable;->draw(Landroid/graphics/Canvas;)V
 
-    move-result v0
-
-    iget v2, p0, Loe0;->d:I
-
-    invoke-static {v2, v0, v1}, Lrqc;->e(III)I
-
-    move-result v0
-
-    iget v2, p0, Loe0;->e:I
-
-    invoke-static {v2, v0, v1}, Lrqc;->e(III)I
-
-    move-result v0
-
-    const v2, -0xef86c1
-
-    invoke-static {v2, v0, v1}, Lrqc;->e(III)I
-
-    move-result v0
-
-    iget v2, p0, Loe0;->f:I
-
-    invoke-static {v2, v0, v1}, Lrqc;->e(III)I
-
-    move-result v0
-
-    iget v2, p0, Loe0;->g:I
-
-    invoke-static {v2, v0, v1}, Lrqc;->e(III)I
-
-    move-result v0
-
-    iget v2, p0, Loe0;->h:I
-
-    invoke-static {v2, v0, v1}, Lrqc;->e(III)I
-
-    move-result v0
-
-    iget v2, p0, Loe0;->i:I
-
-    invoke-static {v2, v0, v1}, Lrqc;->e(III)I
-
-    move-result v0
-
-    iget v2, p0, Loe0;->j:I
-
-    invoke-static {v2, v0, v1}, Lrqc;->e(III)I
-
-    move-result v0
-
-    iget v2, p0, Loe0;->k:I
-
-    invoke-static {v2, v0, v1}, Lrqc;->e(III)I
-
-    move-result v0
-
-    iget v2, p0, Loe0;->l:I
-
-    invoke-static {v2, v0, v1}, Lrqc;->e(III)I
-
-    move-result v0
-
-    iget v2, p0, Loe0;->m:I
-
-    invoke-static {v2, v0, v1}, Lrqc;->e(III)I
-
-    move-result v0
-
-    iget v2, p0, Loe0;->n:I
-
-    invoke-static {v2, v0, v1}, Lrqc;->e(III)I
-
-    move-result v0
-
-    iget v2, p0, Loe0;->o:I
-
-    invoke-static {v2, v0, v1}, Lrqc;->e(III)I
-
-    move-result v0
-
-    iget v2, p0, Loe0;->p:I
-
-    invoke-static {v2, v0, v1}, Lrqc;->e(III)I
-
-    move-result v0
-
-    const v2, -0x63d850
-
-    invoke-static {v2, v0, v1}, Lrqc;->e(III)I
-
-    move-result v0
-
-    iget v2, p0, Loe0;->q:I
-
-    invoke-static {v2, v0, v1}, Lrqc;->e(III)I
-
-    move-result v0
-
-    iget v2, p0, Loe0;->r:I
-
-    invoke-static {v2, v0, v1}, Lrqc;->e(III)I
-
-    move-result v0
-
-    iget v2, p0, Loe0;->s:I
-
-    invoke-static {v2, v0, v1}, Lrqc;->e(III)I
-
-    move-result v0
-
-    iget v2, p0, Loe0;->t:I
-
-    invoke-static {v2, v0, v1}, Lrqc;->e(III)I
-
-    move-result v0
-
-    iget v2, p0, Loe0;->u:I
-
-    invoke-static {v2, v0, v1}, Lrqc;->e(III)I
-
-    move-result v0
-
-    iget v2, p0, Loe0;->v:I
-
-    invoke-static {v2, v0, v1}, Lrqc;->e(III)I
-
-    move-result v0
-
-    iget v2, p0, Loe0;->w:I
-
-    invoke-static {v2, v0, v1}, Lrqc;->e(III)I
-
-    move-result v0
-
-    const v2, -0xe4a142
-
-    invoke-static {v2, v0, v1}, Lrqc;->e(III)I
-
-    move-result v0
-
-    iget v2, p0, Loe0;->x:I
-
-    invoke-static {v2, v0, v1}, Lrqc;->e(III)I
-
-    move-result v0
-
-    iget v2, p0, Loe0;->y:I
-
-    invoke-static {v2, v0, v1}, Lrqc;->e(III)I
-
-    move-result v0
-
-    iget v2, p0, Loe0;->z:I
-
-    invoke-static {v2, v0, v1}, Lrqc;->e(III)I
-
-    move-result v0
-
-    iget v2, p0, Loe0;->A:I
-
-    invoke-static {v2, v0, v1}, Lrqc;->e(III)I
-
-    move-result v0
-
-    iget v2, p0, Loe0;->B:I
-
-    invoke-static {v2, v0, v1}, Lrqc;->e(III)I
-
-    move-result v0
-
-    iget v2, p0, Loe0;->C:I
-
-    invoke-static {v2, v0, v1}, Lrqc;->e(III)I
-
-    move-result v0
-
-    iget v2, p0, Loe0;->D:I
-
-    invoke-static {v2, v0, v1}, Lrqc;->e(III)I
-
-    move-result v0
-
-    iget v2, p0, Loe0;->E:I
-
-    invoke-static {v2, v0, v1}, Lrqc;->e(III)I
-
-    move-result v0
-
-    iget v2, p0, Loe0;->F:I
-
-    invoke-static {v2, v0, v1}, Lrqc;->e(III)I
-
-    move-result v0
-
-    iget v2, p0, Loe0;->G:I
-
-    invoke-static {v2, v0, v1}, Lrqc;->e(III)I
-
-    move-result v0
-
-    iget p0, p0, Loe0;->H:I
-
-    invoke-static {p0}, Ljava/lang/Integer;->hashCode(I)I
-
-    move-result p0
-
-    add-int/2addr p0, v0
-
-    return p0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 5
-
-    const-string v0, ", archiveBkg="
-
-    const-string v1, ", archiveElement="
-
-    const-string v2, "BackgroundLocalFileTypeColors(archiveBadge="
-
-    iget v3, p0, Loe0;->a:I
-
-    iget v4, p0, Loe0;->b:I
-
-    invoke-static {v2, v3, v0, v4, v1}, Lpg0;->j(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    const-string v1, ", archiveIcon="
-
-    const-string v2, ", background="
-
-    iget v3, p0, Loe0;->c:I
-
-    iget v4, p0, Loe0;->d:I
-
-    invoke-static {v0, v3, v1, v4, v2}, Lv04;->p(Ljava/lang/StringBuilder;ILjava/lang/String;ILjava/lang/String;)V
-
-    const-string v1, ", dataBadge=-15697601, dataBkg="
-
-    const-string v2, ", dataElement="
-
-    iget v3, p0, Loe0;->e:I
-
-    iget v4, p0, Loe0;->f:I
-
-    invoke-static {v0, v3, v1, v4, v2}, Lv04;->p(Ljava/lang/StringBuilder;ILjava/lang/String;ILjava/lang/String;)V
-
-    const-string v1, ", dataIcon="
-
-    const-string v2, ", imageBadge="
-
-    iget v3, p0, Loe0;->g:I
-
-    iget v4, p0, Loe0;->h:I
-
-    invoke-static {v0, v3, v1, v4, v2}, Lv04;->p(Ljava/lang/StringBuilder;ILjava/lang/String;ILjava/lang/String;)V
-
-    const-string v1, ", imageBkg="
-
-    const-string v2, ", imageElement="
-
-    iget v3, p0, Loe0;->i:I
-
-    iget v4, p0, Loe0;->j:I
-
-    invoke-static {v0, v3, v1, v4, v2}, Lv04;->p(Ljava/lang/StringBuilder;ILjava/lang/String;ILjava/lang/String;)V
-
-    const-string v1, ", imageIcon="
-
-    const-string v2, ", musicBadge="
-
-    iget v3, p0, Loe0;->k:I
-
-    iget v4, p0, Loe0;->l:I
-
-    invoke-static {v0, v3, v1, v4, v2}, Lv04;->p(Ljava/lang/StringBuilder;ILjava/lang/String;ILjava/lang/String;)V
-
-    const-string v1, ", musicBkg="
-
-    const-string v2, ", musicElement="
-
-    iget v3, p0, Loe0;->m:I
-
-    iget v4, p0, Loe0;->n:I
-
-    invoke-static {v0, v3, v1, v4, v2}, Lv04;->p(Ljava/lang/StringBuilder;ILjava/lang/String;ILjava/lang/String;)V
-
-    const-string v1, ", musicIcon="
-
-    const-string v2, ", presentationBadge=-6543440, presentationBkg="
-
-    iget v3, p0, Loe0;->o:I
-
-    iget v4, p0, Loe0;->p:I
-
-    invoke-static {v0, v3, v1, v4, v2}, Lv04;->p(Ljava/lang/StringBuilder;ILjava/lang/String;ILjava/lang/String;)V
-
-    const-string v1, ", presentationElement="
-
-    const-string v2, ", presentationIcon="
-
-    iget v3, p0, Loe0;->q:I
-
-    iget v4, p0, Loe0;->r:I
-
-    invoke-static {v0, v3, v1, v4, v2}, Lv04;->p(Ljava/lang/StringBuilder;ILjava/lang/String;ILjava/lang/String;)V
-
-    const-string v1, ", programBadge="
-
-    const-string v2, ", programBkg="
-
-    iget v3, p0, Loe0;->s:I
-
-    iget v4, p0, Loe0;->t:I
-
-    invoke-static {v0, v3, v1, v4, v2}, Lv04;->p(Ljava/lang/StringBuilder;ILjava/lang/String;ILjava/lang/String;)V
-
-    const-string v1, ", programElement="
-
-    const-string v2, ", programIcon="
-
-    iget v3, p0, Loe0;->u:I
-
-    iget v4, p0, Loe0;->v:I
-
-    invoke-static {v0, v3, v1, v4, v2}, Lv04;->p(Ljava/lang/StringBuilder;ILjava/lang/String;ILjava/lang/String;)V
-
-    const-string v1, ", textBadge=-14983490, textBkg="
-
-    const-string v2, ", textElement="
-
-    iget v3, p0, Loe0;->w:I
-
-    iget v4, p0, Loe0;->x:I
-
-    invoke-static {v0, v3, v1, v4, v2}, Lv04;->p(Ljava/lang/StringBuilder;ILjava/lang/String;ILjava/lang/String;)V
-
-    const-string v1, ", textIcon="
-
-    const-string v2, ", unknownBadge="
-
-    iget v3, p0, Loe0;->y:I
-
-    iget v4, p0, Loe0;->z:I
-
-    invoke-static {v0, v3, v1, v4, v2}, Lv04;->p(Ljava/lang/StringBuilder;ILjava/lang/String;ILjava/lang/String;)V
-
-    const-string v1, ", unknownBkg="
-
-    const-string v2, ", unknownElement="
-
-    iget v3, p0, Loe0;->A:I
-
-    iget v4, p0, Loe0;->B:I
-
-    invoke-static {v0, v3, v1, v4, v2}, Lv04;->p(Ljava/lang/StringBuilder;ILjava/lang/String;ILjava/lang/String;)V
-
-    const-string v1, ", unknownIcon="
-
-    const-string v2, ", videoBadge="
-
-    iget v3, p0, Loe0;->C:I
-
-    iget v4, p0, Loe0;->D:I
-
-    invoke-static {v0, v3, v1, v4, v2}, Lv04;->p(Ljava/lang/StringBuilder;ILjava/lang/String;ILjava/lang/String;)V
-
-    const-string v1, ", videoBkg="
-
-    const-string v2, ", videoElement="
-
-    iget v3, p0, Loe0;->E:I
-
-    iget v4, p0, Loe0;->F:I
-
-    invoke-static {v0, v3, v1, v4, v2}, Lv04;->p(Ljava/lang/StringBuilder;ILjava/lang/String;ILjava/lang/String;)V
-
-    const-string v1, ", videoIcon="
-
-    const-string v2, ")"
-
-    iget v3, p0, Loe0;->G:I
-
-    iget p0, p0, Loe0;->H:I
-
-    invoke-static {v0, v3, v1, p0, v2}, Lpg0;->h(Ljava/lang/StringBuilder;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/String;
-
-    move-result-object p0
-
-    return-object p0
+    return-void
 .end method

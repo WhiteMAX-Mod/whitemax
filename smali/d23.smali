@@ -1,158 +1,139 @@
 .class public final Ld23;
-.super Ln3;
+.super Lrde;
 .source "SourceFile"
 
 
-# static fields
-.field public static final CREATOR:Landroid/os/Parcelable$Creator;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Landroid/os/Parcelable$Creator<",
-            "Ld23;",
-            ">;"
-        }
-    .end annotation
-.end field
-
-
 # instance fields
-.field public final a:I
+.field public final synthetic e:I
 
-.field public final b:Ljava/lang/String;
+.field public final synthetic f:Ljava/lang/Object;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method public synthetic constructor <init>(ILjava/lang/Object;)V
+    .locals 0
 
-    new-instance v0, Lmrf;
+    iput p1, p0, Ld23;->e:I
 
-    const/4 v1, 0x4
+    iput-object p2, p0, Ld23;->f:Ljava/lang/Object;
 
-    invoke-direct {v0, v1}, Lmrf;-><init>(I)V
-
-    sput-object v0, Ld23;->CREATOR:Landroid/os/Parcelable$Creator;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
-.method public constructor <init>(ILjava/lang/String;)V
+.method private final I(I)V
     .locals 0
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    iput p1, p0, Ld23;->a:I
-
-    iput-object p2, p0, Ld23;->b:Ljava/lang/String;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
-
-    const/4 v0, 0x1
-
-    if-ne p1, p0, :cond_0
-
-    return v0
-
-    :cond_0
-    instance-of v1, p1, Ld23;
-
-    const/4 v2, 0x0
-
-    if-nez v1, :cond_1
-
-    return v2
-
-    :cond_1
-    check-cast p1, Ld23;
-
-    iget v1, p1, Ld23;->a:I
-
-    iget v3, p0, Ld23;->a:I
-
-    if-ne v1, v3, :cond_2
-
-    iget-object p1, p1, Ld23;->b:Ljava/lang/String;
-
-    iget-object p0, p0, Ld23;->b:Ljava/lang/String;
-
-    invoke-static {p1, p0}, Lgr0;->j(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result p0
-
-    if-eqz p0, :cond_2
-
-    return v0
-
-    :cond_2
-    return v2
-.end method
-
-.method public final hashCode()I
+.method public final q(I)V
     .locals 0
 
-    iget p0, p0, Ld23;->a:I
+    iget p1, p0, Ld23;->e:I
 
-    return p0
-.end method
+    packed-switch p1, :pswitch_data_0
 
-.method public final toString()Ljava/lang/String;
-    .locals 2
+    iget-object p0, p0, Ld23;->f:Ljava/lang/Object;
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    check-cast p0, Ln1f;
 
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+    const/4 p1, 0x1
 
-    iget v1, p0, Ld23;->a:I
+    iput-boolean p1, p0, Ln1f;->e:Z
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    iget-object p0, p0, Ln1f;->f:Ljava/lang/ref/WeakReference;
 
-    const-string v1, ":"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object p0, p0, Ld23;->b:Ljava/lang/String;
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {p0}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
 
     move-result-object p0
 
-    return-object p0
+    check-cast p0, Lm1f;
+
+    if-eqz p0, :cond_0
+
+    invoke-interface {p0}, Lm1f;->a()V
+
+    :cond_0
+    :pswitch_0
+    return-void
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method
 
-.method public final writeToParcel(Landroid/os/Parcel;I)V
-    .locals 2
+.method public final r(Landroid/graphics/Typeface;Z)V
+    .locals 0
 
-    const/16 p2, 0x4f45
+    iget p1, p0, Ld23;->e:I
 
-    invoke-static {p1, p2}, Lq14;->B0(Landroid/os/Parcel;I)I
+    packed-switch p1, :pswitch_data_0
 
-    move-result p2
+    if-eqz p2, :cond_0
 
-    const/4 v0, 0x1
+    goto :goto_0
 
-    const/4 v1, 0x4
+    :cond_0
+    iget-object p0, p0, Ld23;->f:Ljava/lang/Object;
 
-    invoke-static {p1, v0, v1}, Lq14;->D0(Landroid/os/Parcel;II)V
+    check-cast p0, Ln1f;
 
-    iget v0, p0, Ld23;->a:I
+    const/4 p1, 0x1
 
-    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
+    iput-boolean p1, p0, Ln1f;->e:Z
 
-    const/4 v0, 0x2
+    iget-object p0, p0, Ln1f;->f:Ljava/lang/ref/WeakReference;
 
-    iget-object p0, p0, Ld23;->b:Ljava/lang/String;
+    invoke-virtual {p0}, Ljava/lang/ref/Reference;->get()Ljava/lang/Object;
 
-    invoke-static {p1, v0, p0}, Lq14;->y0(Landroid/os/Parcel;ILjava/lang/String;)V
+    move-result-object p0
 
-    invoke-static {p1, p2}, Lq14;->C0(Landroid/os/Parcel;I)V
+    check-cast p0, Lm1f;
+
+    if-eqz p0, :cond_1
+
+    invoke-interface {p0}, Lm1f;->a()V
+
+    :cond_1
+    :goto_0
+    return-void
+
+    :pswitch_0
+    iget-object p0, p0, Ld23;->f:Ljava/lang/Object;
+
+    check-cast p0, Lcom/google/android/material/chip/Chip;
+
+    iget-object p1, p0, Lcom/google/android/material/chip/Chip;->r0:Lh23;
+
+    iget-boolean p2, p1, Lh23;->N1:Z
+
+    if-eqz p2, :cond_2
+
+    iget-object p1, p1, Lh23;->P0:Ljava/lang/CharSequence;
+
+    goto :goto_1
+
+    :cond_2
+    invoke-virtual {p0}, Landroid/widget/TextView;->getText()Ljava/lang/CharSequence;
+
+    move-result-object p1
+
+    :goto_1
+    invoke-virtual {p0, p1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+
+    invoke-virtual {p0}, Landroid/view/View;->requestLayout()V
+
+    invoke-virtual {p0}, Landroid/view/View;->invalidate()V
 
     return-void
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

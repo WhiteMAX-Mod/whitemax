@@ -3,62 +3,36 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lc51;
-
-
-# static fields
-.field public static final a:Lx41;
-
-
-# direct methods
-.method static constructor <clinit>()V
-    .locals 1
-
-    new-instance v0, Lx41;
-
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
-
-    sput-object v0, Lx41;->a:Lx41;
-
-    return-void
-.end method
+.implements Leb4;
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 1
+.method public final a()Ljava/lang/Object;
+    .locals 3
 
-    const/4 v0, 0x1
+    sget-object p0, Lone/me/calls/ui/ui/call/CallScreen;->N0:Lad4;
 
-    if-ne p0, p1, :cond_0
+    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    return v0
+    new-instance p0, Lone/me/calls/ui/ui/call/CallScreen;
 
-    :cond_0
-    instance-of p0, p1, Lx41;
+    new-instance v0, Lpxa;
 
-    if-nez p0, :cond_1
+    const-string v1, "type"
 
-    const/4 p0, 0x0
+    const-string v2, "ACTIVE"
 
-    return p0
+    invoke-direct {v0, v1, v2}, Lpxa;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
 
-    :cond_1
-    return v0
-.end method
+    filled-new-array {v0}, [Lpxa;
 
-.method public final hashCode()I
-    .locals 0
+    move-result-object v0
 
-    const p0, -0x7c56e03f
+    invoke-static {v0}, Lw7;->c([Lpxa;)Landroid/os/Bundle;
 
-    return p0
-.end method
+    move-result-object v0
 
-.method public final toString()Ljava/lang/String;
-    .locals 0
-
-    const-string p0, "Finished"
+    invoke-direct {p0, v0}, Lone/me/calls/ui/ui/call/CallScreen;-><init>(Landroid/os/Bundle;)V
 
     return-object p0
 .end method

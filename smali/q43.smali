@@ -1,161 +1,117 @@
-.class public abstract Lq43;
-.super Lxja;
+.class public final synthetic Lq43;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Landroid/view/View$OnClickListener;
+
+
+# instance fields
+.field public final synthetic a:I
+
+.field public final synthetic b:Lone/me/chats/search/views/ClearRecentSearchBottomSheet;
 
 
 # direct methods
-.method public static d0(Ljava/util/List;)I
+.method public synthetic constructor <init>(Lone/me/chats/search/views/ClearRecentSearchBottomSheet;I)V
     .locals 0
 
-    invoke-interface {p0}, Ljava/util/List;->size()I
+    iput p2, p0, Lq43;->a:I
 
-    move-result p0
+    iput-object p1, p0, Lq43;->b:Lone/me/chats/search/views/ClearRecentSearchBottomSheet;
 
-    add-int/lit8 p0, p0, -0x1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    return p0
+    return-void
 .end method
 
-.method public static varargs e0([Ljava/lang/Object;)Ljava/util/List;
-    .locals 1
 
-    array-length v0, p0
-
-    if-lez v0, :cond_0
-
-    invoke-static {p0}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
-
-    move-result-object p0
-
-    return-object p0
-
-    :cond_0
-    sget-object p0, Lgz4;->a:Lgz4;
-
-    return-object p0
-.end method
-
-.method public static varargs f0([Ljava/lang/Object;)Ljava/util/ArrayList;
-    .locals 3
-
-    array-length v0, p0
-
-    if-nez v0, :cond_0
-
-    new-instance p0, Ljava/util/ArrayList;
-
-    invoke-direct {p0}, Ljava/util/ArrayList;-><init>()V
-
-    return-object p0
-
-    :cond_0
-    new-instance v0, Ljava/util/ArrayList;
-
-    new-instance v1, Lwr;
-
-    const/4 v2, 0x1
-
-    invoke-direct {v1, p0, v2}, Lwr;-><init>([Ljava/lang/Object;Z)V
-
-    invoke-direct {v0, v1}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
-
-    return-object v0
-.end method
-
-.method public static final g0(Ljava/util/List;)Ljava/util/List;
-    .locals 2
-
-    invoke-interface {p0}, Ljava/util/List;->size()I
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    const/4 v1, 0x1
-
-    if-eq v0, v1, :cond_0
-
-    return-object p0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    invoke-interface {p0, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    move-result-object p0
-
-    invoke-static {p0}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
-
-    move-result-object p0
-
-    return-object p0
-
-    :cond_1
-    sget-object p0, Lgz4;->a:Lgz4;
-
-    return-object p0
-.end method
-
-.method public static final h0(II)V
+# virtual methods
+.method public final onClick(Landroid/view/View;)V
     .locals 4
 
-    const-string v0, ")."
+    iget p1, p0, Lq43;->a:I
 
-    if-ltz p1, :cond_1
+    packed-switch p1, :pswitch_data_0
 
-    if-gt p1, p0, :cond_0
+    iget-object p0, p0, Lq43;->b:Lone/me/chats/search/views/ClearRecentSearchBottomSheet;
+
+    const/4 p1, 0x1
+
+    invoke-virtual {p0, p1}, Lone/me/sdk/bottomsheet/BaseBottomSheetWidget;->E0(Z)V
 
     return-void
 
-    :cond_0
-    new-instance v1, Ljava/lang/IndexOutOfBoundsException;
+    :pswitch_0
+    iget-object p0, p0, Lq43;->b:Lone/me/chats/search/views/ClearRecentSearchBottomSheet;
 
-    const-string v2, "toIndex ("
+    const/4 p1, 0x1
 
-    const-string v3, ") is greater than size ("
+    invoke-virtual {p0, p1}, Lone/me/sdk/bottomsheet/BaseBottomSheetWidget;->E0(Z)V
 
-    invoke-static {v2, p1, v3, p0, v0}, Lpg0;->f(Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)Ljava/lang/String;
+    invoke-virtual {p0}, Lxx3;->getTargetController()Lxx3;
 
     move-result-object p0
 
-    invoke-direct {v1, p0}, Ljava/lang/IndexOutOfBoundsException;-><init>(Ljava/lang/String;)V
+    instance-of v0, p0, Lp43;
 
-    throw v1
+    const/4 v1, 0x0
+
+    if-eqz v0, :cond_0
+
+    check-cast p0, Lp43;
+
+    goto :goto_0
+
+    :cond_0
+    move-object p0, v1
+
+    :goto_0
+    if-eqz p0, :cond_2
+
+    check-cast p0, Lone/me/chats/search/ChatsListSearchScreen;
+
+    invoke-virtual {p0}, Lone/me/chats/search/ChatsListSearchScreen;->z0()Lyx2;
+
+    move-result-object p0
+
+    iget-object v0, p0, Lyx2;->Q0:Lcae;
+
+    if-eqz v0, :cond_1
+
+    invoke-virtual {v0}, Le0;->isActive()Z
+
+    move-result v0
+
+    if-ne v0, p1, :cond_1
+
+    goto :goto_1
 
     :cond_1
-    new-instance p0, Ljava/lang/IllegalArgumentException;
+    iget-object p1, p0, Lx7g;->a:Lkotlinx/coroutines/internal/ContextScope;
 
-    const-string v1, "fromIndex (0) is greater than toIndex ("
+    iget-object v0, p0, Lyx2;->N0:Ls04;
 
-    invoke-static {p1, v1, v0}, Lpg0;->e(ILjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    new-instance v2, Lhx2;
+
+    invoke-direct {v2, p0, v1}, Lhx2;-><init>(Lyx2;Lkotlin/coroutines/Continuation;)V
+
+    const/4 v3, 0x2
+
+    invoke-static {p1, v0, v1, v2, v3}, Lvyg;->u(Ly04;Lq04;Lb14;Lpc6;I)Lcae;
 
     move-result-object p1
 
-    invoke-direct {p0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+    iput-object p1, p0, Lyx2;->Q0:Lcae;
 
-    throw p0
-.end method
+    :cond_2
+    :goto_1
+    return-void
 
-.method public static i0()V
-    .locals 2
+    nop
 
-    new-instance v0, Ljava/lang/ArithmeticException;
-
-    const-string v1, "Count overflow has happened."
-
-    invoke-direct {v0, v1}, Ljava/lang/ArithmeticException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-.end method
-
-.method public static j0()V
-    .locals 2
-
-    new-instance v0, Ljava/lang/ArithmeticException;
-
-    const-string v1, "Index overflow has happened."
-
-    invoke-direct {v0, v1}, Ljava/lang/ArithmeticException;-><init>(Ljava/lang/String;)V
-
-    throw v0
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

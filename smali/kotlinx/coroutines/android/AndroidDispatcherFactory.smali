@@ -39,7 +39,7 @@
 
 
 # virtual methods
-.method public final createDispatcher(Ljava/util/List;)Lxw7;
+.method public final createDispatcher(Ljava/util/List;)Lt38;
     .locals 1
 
     invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
@@ -48,15 +48,15 @@
 
     if-eqz p0, :cond_0
 
-    new-instance p1, Lji6;
+    new-instance p1, Luo6;
 
-    invoke-static {p0}, Lki6;->a(Landroid/os/Looper;)Landroid/os/Handler;
+    invoke-static {p0}, Lvo6;->a(Landroid/os/Looper;)Landroid/os/Handler;
 
     move-result-object p0
 
     const/4 v0, 0x0
 
-    invoke-direct {p1, p0, v0}, Lji6;-><init>(Landroid/os/Handler;Z)V
+    invoke-direct {p1, p0, v0}, Luo6;-><init>(Landroid/os/Handler;Z)V
 
     return-object p1
 
