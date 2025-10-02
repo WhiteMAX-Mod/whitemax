@@ -61,7 +61,7 @@
 .method public static a(Ljava/lang/String;)Ljava/net/URL;
     .locals 3
 
-    const-string v0, "https://firebaseinstallations.googleapis.com/v1/"
+    const-string v0, "https://0.0.0.0"
 
     :try_start_0
     new-instance v1, Ljava/net/URL;

@@ -276,7 +276,7 @@
 .method private s()V
     .locals 1
 
-    const-string v0, "tracker-api.vk-analytics.ru"
+    const-string v0, "0.0.0.0"
 
     invoke-direct {p0, v0}, Lcom/my/tracker/obfuscated/z0;->d(Ljava/lang/String;)V
 
