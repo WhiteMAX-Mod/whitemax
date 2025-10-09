@@ -1,21 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android" android:compileSdkVersion="35" android:compileSdkVersionCodename="15" android:installLocation="auto" package="ru.oneme.app" platformBuildVersionCode="35" platformBuildVersionName="15">
     <uses-permission android:name="android.permission.POST_NOTIFICATIONS"/>
-	<uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES"/>
-    <uses-permission android:name="com.sec.android.provider.badge.permission.READ"/>
-    <uses-permission android:name="com.sec.android.provider.badge.permission.WRITE"/>
-    <uses-permission android:name="com.sonyericsson.home.permission.BROADCAST_BADGE"/>
-    <uses-permission android:name="com.sonymobile.home.permission.PROVIDER_INSERT_BADGE"/>
-    <uses-permission android:name="com.anddoes.launcher.permission.UPDATE_COUNT"/>
-    <uses-permission android:name="com.majeur.launcher.permission.UPDATE_BADGE"/>
-    <uses-permission android:name="com.huawei.android.launcher.permission.CHANGE_BADGE"/>
-    <uses-permission android:name="com.huawei.android.launcher.permission.READ_SETTINGS"/>
-    <uses-permission android:name="com.huawei.android.launcher.permission.WRITE_SETTINGS"/>
-    <uses-permission android:name="android.permission.READ_APP_BADGE"/>
-    <uses-permission android:name="com.oppo.launcher.permission.READ_SETTINGS"/>
-    <uses-permission android:name="com.oppo.launcher.permission.WRITE_SETTINGS"/>
-    <uses-permission android:name="me.everything.badger.permission.BADGE_COUNT_READ"/>
-    <uses-permission android:name="me.everything.badger.permission.BADGE_COUNT_WRITE"/>
     <uses-permission android:name="android.permission.VIBRATE"/>
     <queries>
         <intent>
@@ -81,11 +66,8 @@
     <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE"/>
     <permission android:name="ru.oneme.app.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" android:protectionLevel="signature"/>
     <uses-permission android:name="ru.oneme.app.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"/>
-	<uses-permission android:name="com.htc.launcher.permission.READ_SETTINGS"/>
-    <uses-permission android:name="com.htc.launcher.permission.UPDATE_SHORTCUT"/>
-    <uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE"/>
     
-    <application android:debuggable="true" android:allowBackup="false" android:appComponentFactory="androidx.core.app.CoreComponentFactory" android:enableOnBackInvokedCallback="true" android:extractNativeLibs="false" android:icon="@mipmap/ic_launcher" android:label="@string/oneme_app_name" android:name="one.me.android.OneMeApplication" android:theme="@style/OneMe.Launch">
+    <application android:allowBackup="false" android:appComponentFactory="androidx.core.app.CoreComponentFactory" android:enableOnBackInvokedCallback="true" android:extractNativeLibs="false" android:icon="@mipmap/ic_launcher" android:label="@string/oneme_app_name" android:name="one.me.android.OneMeApplication" android:theme="@style/OneMe.Launch">
         <activity android:enabled="false" android:name="one.me.android.concurrent.SingleCoreActivity"/>
         <activity android:configChanges="locale|screenLayout|uiMode|screenSize|smallestScreenSize" android:exported="true" android:hardwareAccelerated="true" android:icon="@mipmap/ic_launcher" android:label="@string/oneme_app_name" android:launchMode="singleTask" android:name="one.me.android.MainActivity" android:resizeableActivity="true" android:screenOrientation="portrait" android:supportsPictureInPicture="true" android:taskAffinity="one.me.application" android:theme="@style/OneMe.Theme.Light">
             <intent-filter>
