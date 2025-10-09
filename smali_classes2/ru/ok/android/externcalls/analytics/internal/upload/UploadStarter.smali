@@ -101,7 +101,33 @@
 
 # virtual methods
 .method public final startUpload(Ljava/lang/String;)V
-    .locals 0
+    .locals 2
+
+    sget-object p0, Lru/ok/android/externcalls/analytics/internal/config/CallAnalyticsConfigStorage;->INSTANCE:Lru/ok/android/externcalls/analytics/internal/config/CallAnalyticsConfigStorage;
+
+    invoke-virtual {p0}, Lru/ok/android/externcalls/analytics/internal/config/CallAnalyticsConfigStorage;->getUpload()Lru/ok/android/externcalls/analytics/config/UploadConfig;
+
+    move-result-object p0
+
+    invoke-virtual {p0}, Lru/ok/android/externcalls/analytics/config/UploadConfig;->getUploadExecutor()Ljava/util/concurrent/Executor;
+
+    move-result-object p0
+
+    if-nez p0, :cond_0
+
+    invoke-static {p1}, Lru/ok/android/externcalls/analytics/internal/upload/UploadService;->startUpload(Ljava/lang/String;)V
+
+    return-void
+
+    :cond_0
+    new-instance v0, Lsle;
+
+    const/16 v1, 0xf
+
+    invoke-direct {v0, v1, p1}, Lsle;-><init>(ILjava/lang/Object;)V
+
+    invoke-interface {p0, v0}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
+
     return-void
 .end method
 
@@ -112,5 +138,12 @@
             Ljava/io/IOException;
         }
     .end annotation
+
+    invoke-static {p1}, Lru/ok/android/externcalls/analytics/internal/event/EventQueueCollector;->getInstance(Ljava/lang/String;)Lru/ok/android/externcalls/analytics/internal/event/EventQueueCollector;
+
+    move-result-object p0
+
+    invoke-virtual {p0}, Lru/ok/android/externcalls/analytics/internal/event/EventQueueCollector;->upload()V
+
     return-void
 .end method
